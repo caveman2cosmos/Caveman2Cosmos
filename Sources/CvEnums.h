@@ -685,25 +685,30 @@ enum WorldSizeTypes
 	NUM_WORLDSIZE_TYPES
 };
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-
 enum MapTypes
 {
 	NO_MAP = -1,
-	MAP_INITIAL,
-	MAX_MAPS = 10,
-};
 
-enum MapSwitchTypes
-{
-	NO_MAPSWITCH = -1,
-};
+	MAP_EARTH,
+	MAP_SUBTERRANEAN,
+	MAP_AQUATIC,
+	MAP_CISLUNAR,
+	MAP_LUNAR,
+	MAP_SOLAR_SYSTEM,
+	MAP_MARTIAN,
+	MAP_VENUSIAN,
+	MAP_JOVIAN,
+	MAP_TITANIC,
+	MAP_INTERSTELLAR,
+	MAP_PLASMA,
+	MAP_GALACTIC,
+	MAP_MILKY_WAY,
+	MAP_UNIVERSAL,
+	MAP_DISTANT,
+	MAP_HYPERSPACE,
 
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+	NUM_MAPS
+};
 
 // This is our current relationship with each
 // one of our connected network peers
@@ -1408,15 +1413,10 @@ enum UnitCombatTypes
 {
 	NO_UNITCOMBAT = -1,
 };
-//TB Promotion Line Mod begin
+
 enum PromotionLineTypes
 {
 	NO_PROMOTIONLINE = -1,
-};
-
-enum MapCategoryTypes
-{
-	NO_MAPCATEGORY = -1,
 };
 
 enum IdeaClassTypes

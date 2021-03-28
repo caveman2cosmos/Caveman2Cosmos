@@ -279,8 +279,8 @@ int CvFractal::getHeight(int iX, int iY)
 	int iLowY;
 	int iI;
 
-	FAssertMsg(0 <= iX && iX < m_iXs, "iX out of range");
-	FAssertMsg(0 <= iY && iY < m_iYs, "iY out of range");
+	FASSERT_BOUNDS(0, m_iXs, iX)
+	FASSERT_BOUNDS(0, m_iYs, iY)
 	iLowX = ((m_iXInc * iX) / FLOAT_PRECISION);
 	if (iLowX > m_iFracX - 1)
 	{

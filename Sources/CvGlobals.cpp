@@ -416,7 +416,7 @@ void cvInternalGlobals::init()
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	m_maps.push_back(new CvMap(MAP_INITIAL));
+	m_maps.push_back(new CvMap(MAP_EARTH));
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
@@ -622,21 +622,10 @@ int cvInternalGlobals::getNumMapInfos() const
 	return multiMapsEnabled() ? m_paMapInfo.size() : 1;
 }
 
-int cvInternalGlobals::getNumMapSwitchInfos() const
-{
-	return m_paMapSwitchInfo.size();
-}
-
 CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap)
 	return *(m_paMapInfo[eMap]);
-}
-
-CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(MapSwitchTypes eMapSwitch) const
-{
-	FASSERT_BOUNDS(0, GC.getNumMapSwitchInfos(), eMapSwitch)
-	return *(m_paMapSwitchInfo[eMapSwitch]);
 }
 
 void cvInternalGlobals::updateMaps()
@@ -1347,7 +1336,6 @@ CvInfoBase& cvInternalGlobals::getDomainInfo(DomainTypes e) const
 	return *(m_paDomainInfo[e]);
 }
 
-//TB Promotion Line Mod begin
 int cvInternalGlobals::getNumPromotionLineInfos() const
 {
 	return (int)m_paPromotionLineInfo.size();
@@ -1357,18 +1345,6 @@ CvPromotionLineInfo& cvInternalGlobals::getPromotionLineInfo(PromotionLineTypes 
 {
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), e)
 	return *(m_paPromotionLineInfo[e]);
-}
-//TB Promotion Line Mod end
-
-int cvInternalGlobals::getNumMapCategoryInfos() const
-{
-	return (int)m_paMapCategoryInfo.size();
-}
-
-CvMapCategoryInfo& cvInternalGlobals::getMapCategoryInfo(MapCategoryTypes e) const
-{
-	FASSERT_BOUNDS(0, GC.getNumMapCategoryInfos(), e)
-	return *(m_paMapCategoryInfo[e]);
 }
 
 int cvInternalGlobals::getNumIdeaClassInfos() const
@@ -2725,10 +2701,7 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paDenialInfo);
 	deleteInfoArray(m_paInvisibleInfo);
 	deleteInfoArray(m_paUnitCombatInfo);
-	//TB Promotion Line mod begin
 	deleteInfoArray(m_paPromotionLineInfo);
-	//TB Promotion Line mod end
-	deleteInfoArray(m_paMapCategoryInfo);
 	deleteInfoArray(m_paIdeaClassInfo);
 	deleteInfoArray(m_paIdeaInfo);
 	//deleteInfoArray(m_paTraitOptionEditsInfo);
@@ -2913,7 +2886,7 @@ void cvInternalGlobals::cacheInfoTypes()
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap);
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap);
 	FAssert(eMap != CURRENT_MAP);
 
 	GC.getMap().beforeSwitch();
@@ -2958,7 +2931,7 @@ CvMapExternal& cvInternalGlobals::getMapExternal() const
 
 CvMap& cvInternalGlobals::getMapByIndex(MapTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eIndex)
+	FASSERT_BOUNDS(0, NUM_MAPS, eIndex)
 	return *m_maps[eIndex];
 }
 

@@ -33,11 +33,10 @@
 
 #pragma warning( disable : 4355 )
 CvGame::CvGame()
-: m_GameObject()
-, m_Properties(this)
-, m_iChokePointCalculationVersion(0)
-, m_eCurrentMap(MAP_INITIAL)
-
+	: m_GameObject()
+	, m_Properties(this)
+	, m_iChokePointCalculationVersion(0)
+	, m_eCurrentMap(MAP_EARTH)
 {
 	m_aiRankPlayer = new int[MAX_PLAYERS];        // Ordered by rank...
 	m_aiPlayerRank = new int[MAX_PLAYERS];        // Ordered by player ID...
@@ -2718,8 +2717,8 @@ bool CvGame::selectionListIgnoreBuildingDefense() const
 
 void CvGame::implementDeal(PlayerTypes eWho, PlayerTypes eOtherWho, CLinkList<TradeData>* pOurList, CLinkList<TradeData>* pTheirList, bool bForce)
 {
-	FAssertMsg(eWho != NO_PLAYER, "Who is not assigned a valid value");
-	FAssertMsg(eOtherWho != NO_PLAYER, "OtherWho is not assigned a valid value");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eWho)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eOtherWho)
 	FAssertMsg(eWho != eOtherWho, "eWho is not expected to be equal with eOtherWho");
 
 	CvDeal* pDeal = addDeal();
@@ -3429,7 +3428,7 @@ void CvGame::setGameTurn(int iNewValue)
 	if (getGameTurn() != iNewValue)
 	{
 		GC.getInitCore().setGameTurn(iNewValue);
-		FAssert(getGameTurn() >= 0);
+		FASSERT_NOT_NEGATIVE(getGameTurn())
 
 		if (m_iDateTurn == iNewValue - 1)
 		{
@@ -3501,7 +3500,7 @@ int CvGame::getMaxTurns() const
 void CvGame::setMaxTurns(int iNewValue)
 {
 	GC.getInitCore().setMaxTurns(iNewValue);
-	FAssert(getMaxTurns() >= 0);
+	FASSERT_NOT_NEGATIVE(getMaxTurns())
 }
 
 
@@ -3520,7 +3519,7 @@ int CvGame::getMaxCityElimination() const
 void CvGame::setMaxCityElimination(int iNewValue)
 {
 	GC.getInitCore().setMaxCityElimination(iNewValue);
-	FAssert(getMaxCityElimination() >= 0);
+	FASSERT_NOT_NEGATIVE(getMaxCityElimination())
 }
 
 int CvGame::getNumAdvancedStartPoints() const
@@ -3532,7 +3531,7 @@ int CvGame::getNumAdvancedStartPoints() const
 void CvGame::setNumAdvancedStartPoints(int iNewValue)
 {
 	GC.getInitCore().setNumAdvancedStartPoints(iNewValue);
-	FAssert(getNumAdvancedStartPoints() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumAdvancedStartPoints())
 }
 
 int CvGame::getStartTurn() const
@@ -3687,7 +3686,7 @@ int CvGame::getTargetScore() const
 void CvGame::setTargetScore(int iNewValue)
 {
 	GC.getInitCore().setTargetScore(iNewValue);
-	FAssert(getTargetScore() >= 0);
+	FASSERT_NOT_NEGATIVE(getTargetScore())
 }
 
 
@@ -3714,7 +3713,7 @@ int CvGame::countNumHumanGameTurnActive() const
 void CvGame::changeNumGameTurnActive(int iChange)
 {
 	m_iNumGameTurnActive += iChange;
-	FAssert(m_iNumGameTurnActive >= 0);
+	FASSERT_NOT_NEGATIVE(m_iNumGameTurnActive)
 }
 
 
@@ -3725,7 +3724,7 @@ int CvGame::getNumCities() const
 void CvGame::changeNumCities(int iChange)
 {
 	m_iNumCities += iChange;
-	FAssert(m_iNumCities >= 0);
+	FASSERT_NOT_NEGATIVE(m_iNumCities)
 }
 
 
@@ -3771,7 +3770,7 @@ int CvGame::getTotalPopulation() const
 void CvGame::changeTotalPopulation(int iChange)
 {
 	m_iTotalPopulation += iChange;
-	FAssert(m_iTotalPopulation >= 0);
+	FASSERT_NOT_NEGATIVE(m_iTotalPopulation)
 }
 
 
@@ -3786,7 +3785,7 @@ void CvGame::changeTradeRoutes(int iChange)
 	if (iChange != 0)
 	{
 		m_iTradeRoutes += iChange;
-		FAssert(getTradeRoutes() >= 0);
+		FASSERT_NOT_NEGATIVE(getTradeRoutes())
 
 		updateTradeRoutes();
 	}
@@ -3810,7 +3809,7 @@ void CvGame::changeFreeTradeCount(int iChange)
 		const bool bOldFreeTrade = isFreeTrade();
 
 		m_iFreeTradeCount += iChange;
-		FAssert(m_iFreeTradeCount >= 0);
+		FASSERT_NOT_NEGATIVE(m_iFreeTradeCount)
 
 		if (bOldFreeTrade != isFreeTrade())
 		{
@@ -3833,7 +3832,7 @@ bool CvGame::isNoNukes() const
 void CvGame::changeNoNukesCount(int iChange)
 {
 	m_iNoNukesCount += iChange;
-	FAssert(m_iNoNukesCount >= 0);
+	FASSERT_NOT_NEGATIVE(m_iNoNukesCount)
 }
 
 
@@ -3848,7 +3847,7 @@ void CvGame::setSecretaryGeneralTimer(VoteSourceTypes eVoteSource, int iNewValue
 {
 	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource)
 	m_aiSecretaryGeneralTimer[eVoteSource] = iNewValue;
-	FAssert(getSecretaryGeneralTimer(eVoteSource) >= 0);
+	FASSERT_NOT_NEGATIVE(getSecretaryGeneralTimer(eVoteSource))
 }
 
 
@@ -3869,7 +3868,7 @@ void CvGame::setVoteTimer(VoteSourceTypes eVoteSource, int iNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource)
 	m_aiVoteTimer[eVoteSource] = iNewValue;
-	FAssert(getVoteTimer(eVoteSource) >= 0);
+	FASSERT_NOT_NEGATIVE(getVoteTimer(eVoteSource))
 }
 
 
@@ -4005,7 +4004,8 @@ int CvGame::getAIAutoPlay(PlayerTypes iPlayer) const
 
 void CvGame::setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 {
-	FAssert(iNewValue >= 0);
+	FASSERT_NOT_NEGATIVE(iNewValue)
+
 	if (isForcedAIAutoPlay(iPlayer) && !bForced)
 	{
 		return;
@@ -4043,7 +4043,7 @@ void CvGame::changeAIAutoPlay(PlayerTypes iPlayer, int iChange)
 
 bool CvGame::isForcedAIAutoPlay(PlayerTypes iPlayer) const
 {
-	FAssert(getForcedAIAutoPlay(iPlayer) >= 0)
+	FASSERT_NOT_NEGATIVE(getForcedAIAutoPlay(iPlayer))
 	return getForcedAIAutoPlay(iPlayer) > 0;
 }
 
@@ -4054,7 +4054,7 @@ int CvGame::getForcedAIAutoPlay(PlayerTypes iPlayer) const
 
 void CvGame::setForcedAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 {
-	FAssert(iNewValue >= 0);
+	FASSERT_NOT_NEGATIVE(iNewValue)
 
 	if (!bForced)
 	{
@@ -4202,7 +4202,7 @@ void CvGame::changeDiploVote(VoteSourceTypes eVoteSource, int iChange)
 		}
 
 		m_aiDiploVote[eVoteSource] += iChange;
-		FAssert(getDiploVoteCount(eVoteSource) >= 0);
+		FASSERT_NOT_NEGATIVE(getDiploVoteCount(eVoteSource))
 
 		if (!m_bRecalculatingModifiers)
 		{
@@ -4977,7 +4977,7 @@ void CvGame::setPlayerRank(PlayerTypes ePlayer, int iRank)
 		}
 	}
 	m_aiPlayerRank[ePlayer] = iRank;
-	FAssert(getPlayerRank(ePlayer) >= 0);
+	FASSERT_NOT_NEGATIVE(getPlayerRank(ePlayer))
 }
 
 
@@ -4995,7 +4995,7 @@ void CvGame::setPlayerScore(PlayerTypes ePlayer, int iScore)
 	if (getPlayerScore(ePlayer) != iScore)
 	{
 		m_aiPlayerScore[ePlayer] = iScore;
-		FAssert(getPlayerScore(ePlayer) >= 0);
+		FASSERT_NOT_NEGATIVE(getPlayerScore(ePlayer))
 
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 	}
@@ -5033,7 +5033,7 @@ void CvGame::setTeamRank(TeamTypes eTeam, int iRank)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 	m_aiTeamRank[eTeam] = iRank;
-	FAssert(getTeamRank(eTeam) >= 0);
+	FASSERT_NOT_NEGATIVE(getTeamRank(eTeam))
 }
 
 
@@ -5048,7 +5048,7 @@ void CvGame::setTeamScore(TeamTypes eTeam, int iScore)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 	m_aiTeamScore[eTeam] = iScore;
-	FAssert(getTeamScore(eTeam) >= 0);
+	FASSERT_NOT_NEGATIVE(getTeamScore(eTeam))
 }
 
 
@@ -5214,7 +5214,7 @@ void CvGame::changeForceCivicCount(CivicTypes eIndex, int iChange)
 		const bool bOldForceCivic = isForceCivic(eIndex);
 
 		m_paiForceCivicCount[eIndex] += iChange;
-		FAssert(getForceCivicCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getForceCivicCount(eIndex))
 
 		if (bOldForceCivic != isForceCivic(eIndex))
 		{
@@ -5808,7 +5808,7 @@ void CvGame::setName(const TCHAR* szName)
 
 bool CvGame::isDestroyedCityName(CvWString& szName) const
 {
-	return std::contains(m_aszDestroyedCities, szName);
+	return algo::contains(m_aszDestroyedCities, szName);
 }
 
 void CvGame::addDestroyedCityName(const CvWString& szName)
@@ -5819,7 +5819,7 @@ void CvGame::addDestroyedCityName(const CvWString& szName)
 
 bool CvGame::isGreatPersonBorn(CvWString& szName) const
 {
-	return std::contains(m_aszGreatPeopleBorn, szName);
+	return algo::contains(m_aszGreatPeopleBorn, szName);
 }
 
 void CvGame::addGreatPersonBornName(const CvWString& szName)
@@ -6345,14 +6345,14 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			//TB Spawn Modification End
 
 
-			//Actually, here the unit is selected already based on the spawn info itself.  Derive that then derive the MapCategoryTypes
-			//of the unit and ensure that pPlot has the MapCategoryType of the unit.  Easy... no need to include MapCategoryTypes on the
+			//Actually, here the unit is selected already based on the spawn info itself.  Derive that then derive the MapTypes
+			//of the unit and ensure that pPlot has the MapType of the unit.  Easy... no need to include MapTypes on the
 			//Spawn Info file.
-			const int iCount = GC.getUnitInfo(spawnInfo.getUnitType()).getNumMapCategoryTypes();
+			const int iCount = GC.getUnitInfo(spawnInfo.getUnitType()).getNumMapTypes();
 			bool bFound = (iCount < 1);
 			for (int iI = 0; iI < iCount; iI++)
 			{
-				if (pPlot->isMapCategoryType((MapCategoryTypes)GC.getUnitInfo(spawnInfo.getUnitType()).getMapCategoryType(iI)))
+				if (pPlot->isMapType((MapTypes)GC.getUnitInfo(spawnInfo.getUnitType()).getMapType(iI)))
 				{
 					bFound = true;
 				}
@@ -6361,7 +6361,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			{
 				continue;
 			}
-			//Note: correct MapCategoryType checks throughout the code so that if one is valid that gets checked later, the validation is still there!
+			//Note: correct MapType checks throughout the code so that if one is valid that gets checked later, the validation is still there!
 
 			// Safety valve - if there are over a certain number of total barbarian units in existance halt all spawns
 			// else the game can run into fatal issues when it uses up the entire id space of units (8191 at once per player)
@@ -6622,7 +6622,7 @@ void CvGame::doGlobalWarming()
 				continue;
 			}
 			// Toffer - Multimap note - Need to make this whole thing specific to which map global warming is happening on.
-			// For now we could restrict these effects to earth mapcategory terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
+			// For now we could restrict these effects to earth maptype terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
 			CvPlot* pPlot = GC.getMap().syncRandPlot(RANDPLOT_NOT_CITY); // GWMod removed check for water tile M.A.
 
 			if (pPlot == NULL)
@@ -6736,7 +6736,7 @@ void CvGame::doGlobalWarming()
 				continue;
 			}
 			// Toffer - Multimap note - Need to make this whole thing specific to which map the nukes were used on.
-			// For now we could restrict these effects to earth mapcategory terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
+			// For now we could restrict these effects to earth maptype terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
 			CvPlot* pPlot = GC.getMap().syncRandPlot(RANDPLOT_LAND | RANDPLOT_NOT_CITY);
 
 			if (pPlot == NULL)
@@ -7009,7 +7009,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	}
 
 	// Find plot
-	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
+	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
 	const int iUnownedTilesThreshold = GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity();
 
 	int iBestValue = 0;
@@ -7019,7 +7019,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-		if (pLoopPlot->isMapCategoryType(earth) && !pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
+		if (pLoopPlot->isMapType(earth) && !pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
 		{
 			int iTargetCities = pLoopPlot->area()->getNumUnownedTiles();
 
@@ -7438,7 +7438,7 @@ void CvGame::testAlive()
 {
 	PROFILE_FUNC();
 
-	if (m_eCurrentMap != MAP_INITIAL)	// XXX - Currently players are killed after switching to a new map.
+	if (m_eCurrentMap != MAP_EARTH)	// XXX - Currently players are killed after switching to a new map.
 		return;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -10050,7 +10050,7 @@ void CvGame::doVoteSelection()
 
 bool CvGame::isEventActive(EventTriggerTypes eTrigger) const
 {
-	return !std::contains(m_aeInactiveTriggers, eTrigger);
+	return !algo::contains(m_aeInactiveTriggers, eTrigger);
 }
 
 void CvGame::initEvents()
@@ -10121,12 +10121,12 @@ bool CvGame::foundBarbarianCity()
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
 
-	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
+	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
 
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
 		CvPlot* plotX = GC.getMap().plotByIndex(iPlot);
-		if (plotX->isWater() || plotX->isImpassable() || plotX->isCity() || plotX->getImprovementType() != NO_IMPROVEMENT || !plotX->isMapCategoryType(earth))
+		if (plotX->isWater() || plotX->isImpassable() || plotX->isCity() || plotX->getImprovementType() != NO_IMPROVEMENT || !plotX->isMapType(earth))
 		{
 			continue;
 		}
@@ -11883,13 +11883,13 @@ const CvProperties* CvGame::getPropertiesConst() const
 
 MapTypes CvGame::getCurrentMap() const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), m_eCurrentMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, m_eCurrentMap)
 	return m_eCurrentMap;
 }
 
 void CvGame::setCurrentMap(MapTypes eNewMap)
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eNewMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, eNewMap)
 	m_eCurrentMap = eNewMap;
 }
 
@@ -12015,7 +12015,7 @@ void CvGame::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex)
 	m_paiImprovementCount[eIndex] += iChange;
-	FAssert(getImprovementCount(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getImprovementCount(eIndex))
 }
 
 bool CvGame::isValidByGameOption(const CvUnitCombatInfo& info) const

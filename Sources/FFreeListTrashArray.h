@@ -392,7 +392,7 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 
 	int iIndex = (iID & FLTA_INDEX_MASK);
 
-	FAssert(iIndex >= 0);
+	FASSERT_NOT_NEGATIVE(iIndex)
 
 	if ((iIndex <= m_iLastIndex) && 
 		(m_pArray[iIndex].pData != NULL))

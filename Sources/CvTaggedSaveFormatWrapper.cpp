@@ -656,7 +656,6 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
-		//TB Promotion Line Mod begin
 	case REMAPPED_CLASS_TYPE_PROMOTIONLINES:
 		entry.numClasses = GC.getNumPromotionLineInfos();
 		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
@@ -668,13 +667,12 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
-		//TB Promotion Line Mod end
-	case REMAPPED_CLASS_TYPE_MAPCATEGORIES:
-		entry.numClasses = GC.getNumMapCategoryInfos();
+	case REMAPPED_CLASS_TYPE_MAPS:
+		entry.numClasses = GC.getNumMapInfos();
 		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			const CvMapCategoryInfo& info = GC.getMapCategoryInfo((MapCategoryTypes)i);
+			const CvMapInfo& info = GC.getMapInfo((MapTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1076,7 +1074,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_COMBATINFOS);
 	//TB Promotion Line Mod begin
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_PROMOTIONLINES);
-	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MAPCATEGORIES);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MAPS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_IDEACLASSES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_IDEAS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_TRAITS);
@@ -1154,13 +1152,11 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 		case REMAPPED_CLASS_TYPE_COMBATINFOS:
 			result = GC.getNumUnitCombatInfos();
 			break;
-			//TB Promotion Line Mod begin
 		case REMAPPED_CLASS_TYPE_PROMOTIONLINES:
 			result = GC.getNumPromotionLineInfos();
 			break;
-			//TB Promotion Line Mod end
-		case REMAPPED_CLASS_TYPE_MAPCATEGORIES:
-			result = GC.getNumMapCategoryInfos();
+		case REMAPPED_CLASS_TYPE_MAPS:
+			result = GC.getNumMapInfos();
 			break;
 		case REMAPPED_CLASS_TYPE_IDEACLASSES:
 			result = GC.getNumIdeaClassInfos();

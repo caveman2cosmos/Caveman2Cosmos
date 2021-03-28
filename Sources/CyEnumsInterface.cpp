@@ -1046,14 +1046,8 @@ void CyEnumsPythonInterface()
 		.value("NO_UNITCOMBAT", NO_UNITCOMBAT)
 		;
 
-	//TB Promotion Line Mod begin
 	python::enum_<PromotionLineTypes>("PromotionLineTypes")
 		.value("NO_PROMOTIONLINE", NO_PROMOTIONLINE)
-		;
-	//TB Promotion Line Mod end
-
-	python::enum_<MapCategoryTypes>("MapCategoryTypes")
-		.value("NO_MAPCATEGORY", NO_MAPCATEGORY)
 		;
 
 	python::enum_<IdeaClassTypes>("IdeaClassTypes")

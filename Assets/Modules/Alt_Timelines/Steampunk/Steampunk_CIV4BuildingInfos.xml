@@ -417,6 +417,7 @@
 			<Bonus>BONUS_STEAMPUNK</Bonus>
 			<FreePromotion>PROMOTION_NAVIGATION2</FreePromotion>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3930</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>

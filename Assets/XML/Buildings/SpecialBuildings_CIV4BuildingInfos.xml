@@ -341,6 +341,7 @@
 			<Strategy>TXT_KEY_BUILDING_SEAFARING_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<GlobalSeaPlotYieldChanges>
 				<iYield>1</iYield>
@@ -10231,6 +10232,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_STILT_HUT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STILT_HUT_STRATEGY</Strategy>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BAMBOO</Bonus>
@@ -13925,7 +13927,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VALLEY_KINGS</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -13948,6 +13950,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<ObsoleteTech>TECH_ARCHITECTURE</ObsoleteTech>
 			<iHealth>4</iHealth>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15127,6 +15130,7 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>

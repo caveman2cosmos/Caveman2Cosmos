@@ -2442,11 +2442,11 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 		}
 	}
 
-	int iCount = bonus.getNumMapCategoryTypes();
+	const int iCount = bonus.getNumMapTypes();
 	bool bFound = (iCount < 1);
 	for (int iI = 0; iI < iCount; iI++)
 	{
-		if (isMapCategoryType((MapCategoryTypes)bonus.getMapCategoryType(iI)))
+		if (isMapType((MapTypes)bonus.getMapType(iI)))
 		{
 			bFound = true;
 			break;
@@ -2524,13 +2524,13 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 		return false;
 	}
 
-	// Map Category
-	int iCount = pInfo.getNumMapCategoryTypes();
+	// Map Type
+	const int iCount = pInfo.getNumMapTypes();
 	bool bValid = iCount < 1;
 
 	for (int iI = 0; iI < iCount; iI++)
 	{
-		if (isMapCategoryType((MapCategoryTypes)pInfo.getMapCategoryType(iI)))
+		if (isMapType((MapTypes)pInfo.getMapType(iI)))
 		{
 			bValid = true;
 			break;
@@ -2847,7 +2847,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			(
 				obj.bRequiresAccess && !GET_PLAYER(getOwner()).hasBonus(obj.eBonus)
 			||
-				obj.ePrereqMapCategory != NO_MAPCATEGORY && !isMapCategoryType(obj.ePrereqMapCategory)
+				obj.ePrereqMap != NO_MAP && !isMapType(obj.ePrereqMap)
 			||
 				obj.ePrereqTech != NO_TECH && !GET_TEAM(getTeam()).isHasTech(obj.ePrereqTech)
 			||
@@ -2878,11 +2878,11 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 	}
 
 	{
-		const int iCount = info.getNumMapCategoryTypes();
+		const int iCount = info.getNumMapTypes();
 		bool bFound = (iCount < 1);
 		for (int iI = 0; iI < iCount; iI++)
 		{
-			if (isMapCategoryType((MapCategoryTypes)info.getMapCategoryType(iI)))
+			if (isMapType((MapTypes)info.getMapType(iI)))
 			{
 				bFound = true;
 				break;
@@ -3041,11 +3041,11 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			return false;
 		}
 
-		const int iCount = GC.getFeatureInfo(eFeature).getNumMapCategoryTypes();
+		const int iCount = GC.getFeatureInfo(eFeature).getNumMapTypes();
 		bool bFound = (iCount < 1);
 		for (int iI = 0; iI < iCount; iI++)
 		{
-			if (isMapCategoryType((MapCategoryTypes)GC.getFeatureInfo(eFeature).getMapCategoryType(iI)))
+			if (isMapType((MapTypes)GC.getFeatureInfo(eFeature).getMapType(iI)))
 			{
 				bFound = true;
 				break;
@@ -4271,7 +4271,7 @@ int CvPlot::getNumCultureRangeCities(PlayerTypes ePlayer) const
 bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb ) const
 {
 	PROFILE_FUNC();
-	FAssert(eAttackerTeam != NO_TEAM);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eAttackerTeam)
 
 	if (area()->getNumCities() - GET_TEAM(eAttackerTeam).countNumCitiesByArea(area()) == 0)
 	{
@@ -4340,8 +4340,8 @@ bool CvPlot::isHasPathToPlayerCity(TeamTypes eMoveTeam, PlayerTypes eOtherPlayer
 {
 	PROFILE_FUNC();
 
-	FAssert(eMoveTeam != NO_TEAM);
-	FAssert(eOtherPlayer != NO_PLAYER);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eMoveTeam)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eOtherPlayer)
 
 	if (area()->getCitiesPerPlayer(eOtherPlayer) == 0)
 	{
@@ -4378,7 +4378,7 @@ int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) 
 {
 	PROFILE_FUNC();
 
-	FAssert(eTeam != NO_TEAM);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if( pTargetPlot->area() != area() )
 	{
@@ -5811,7 +5811,7 @@ void CvPlot::setArea(int iNewValue)
 int CvPlot::getFeatureVariety() const
 {
 	FAssert((getFeatureType() == NO_FEATURE) || (m_iFeatureVariety < GC.getFeatureInfo(getFeatureType()).getArtInfo()->getNumVarieties()));
-	FAssert(m_iFeatureVariety >= 0);
+	FASSERT_NOT_NEGATIVE(m_iFeatureVariety)
 	return m_iFeatureVariety;
 }
 
@@ -5835,7 +5835,7 @@ void CvPlot::setOwnershipDuration(int iNewValue)
 		const bool bOldOwnershipScore = isOwnershipScore();
 
 		m_iOwnershipDuration = iNewValue;
-		FAssert(getOwnershipDuration() >= 0);
+		FASSERT_NOT_NEGATIVE(getOwnershipDuration())
 
 		if (bOldOwnershipScore != isOwnershipScore() && isOwned() && !isWater())
 		{
@@ -5860,7 +5860,7 @@ int CvPlot::getImprovementDuration() const
 void CvPlot::setImprovementDuration(int iNewValue)
 {
 	m_iImprovementDuration = iNewValue;
-	FAssert(getImprovementDuration() >= 0);
+	FASSERT_NOT_NEGATIVE(getImprovementDuration())
 }
 
 
@@ -5902,7 +5902,7 @@ int CvPlot::getImprovementUpgradeProgress() const
 void CvPlot::setImprovementUpgradeProgress(int iNewValue)
 {
 	m_iUpgradeProgress = iNewValue;
-	FAssert(m_iUpgradeProgress >= 0);
+	FASSERT_NOT_NEGATIVE(m_iUpgradeProgress)
 }
 
 void CvPlot::changeImprovementUpgradeProgress(int iChange)
@@ -5920,14 +5920,14 @@ bool CvPlot::isForceUnowned() const
 void CvPlot::setForceUnownedTimer(int iNewValue)
 {
 	m_iForceUnownedTimer = iNewValue;
-	FAssert(m_iForceUnownedTimer >= 0);
+	FASSERT_NOT_NEGATIVE(m_iForceUnownedTimer)
 }
 
 
 void CvPlot::changeForceUnownedTimer(int iChange)
 {
 	m_iForceUnownedTimer += iChange;
-	FAssert(m_iForceUnownedTimer >= 0);
+	FASSERT_NOT_NEGATIVE(m_iForceUnownedTimer)
 }
 
 
@@ -5946,7 +5946,7 @@ int CvPlot::isCityRadius() const
 void CvPlot::changeCityRadiusCount(int iChange)
 {
 	m_iCityRadiusCount += iChange;
-	FAssert(getCityRadiusCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getCityRadiusCount())
 }
 
 
@@ -7054,7 +7054,7 @@ BonusTypes CvPlot::getBonusType(TeamTypes eTeam) const
 
 BonusTypes CvPlot::getNonObsoleteBonusType(TeamTypes eTeam) const
 {
-	FAssert(eTeam != NO_TEAM);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if (m_eBonusType != NO_BONUS && GET_TEAM(eTeam).isBonusObsolete((BonusTypes)m_eBonusType))
 	{
@@ -7763,7 +7763,7 @@ int CvPlot::getReconCount() const
 void CvPlot::changeReconCount(int iChange)
 {
 	m_iReconCount += iChange;
-	FAssert(getReconCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getReconCount())
 }
 
 
@@ -7776,7 +7776,7 @@ int CvPlot::getRiverCrossingCount() const
 void CvPlot::changeRiverCrossingCount(int iChange)
 {
 	m_iRiverCrossingCount += iChange;
-	FAssert(getRiverCrossingCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getRiverCrossingCount())
 }
 
 
@@ -8116,7 +8116,7 @@ void CvPlot::updateYield()
 			iOldYield = getYield((YieldTypes)iI);
 
 			m_aiYield[iI] = iNewYield;
-			FAssert(getYield((YieldTypes)iI) >= 0);
+			FASSERT_NOT_NEGATIVE(getYield((YieldTypes)iI))
 
 			pWorkingCity = getWorkingCity();
 
@@ -8291,7 +8291,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 		{
 			(*itr).second = iNewValue;
 		}
-		FAssert(getCulture(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getCulture(eIndex))
 
 		if (bUpdate)
 		{
@@ -8383,7 +8383,7 @@ void CvPlot::clearFoundValue(PlayerTypes eIndex)
 void CvPlot::setFoundValue(PlayerTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
-	FAssert(iNewValue >= 0);
+	FASSERT_NOT_NEGATIVE(iNewValue)
 
 	MEMORY_TRACK_EXEMPT();
 
@@ -8398,7 +8398,7 @@ void CvPlot::setFoundValue(PlayerTypes eIndex, int iNewValue)
 
 	if (NULL != m_aiFoundValue)
 	{
-		FAssert(iNewValue >= 0);
+		FASSERT_NOT_NEGATIVE(iNewValue)
 		m_aiFoundValue[eIndex] = (unsigned int)iNewValue;
 	}
 }
@@ -8434,7 +8434,7 @@ void CvPlot::changePlayerCityRadiusCount(PlayerTypes eIndex, int iChange)
 		}
 
 		m_aiPlayerCityRadiusCount[eIndex] += iChange;
-		FAssert(getPlayerCityRadiusCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getPlayerCityRadiusCount(eIndex))
 	}
 }
 
@@ -8899,7 +8899,7 @@ void CvPlot::changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes 
 		if (eSeeInvisible == NO_INVISIBLE || !GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
 			m_aiVisibilityCount[eTeam] += iChange;
-			FAssert(getVisibilityCount(eTeam) >= 0);
+			FASSERT_NOT_NEGATIVE(getVisibilityCount(eTeam))
 		}
 
 		//	Should never happen, but if it does better to cap it below at 0
@@ -8991,7 +8991,7 @@ void CvPlot::changeStolenVisibilityCount(TeamTypes eTeam, int iChange)
 		const bool bOldVisible = isVisible(eTeam, false);
 
 		m_aiStolenVisibilityCount[eTeam] += iChange;
-		FAssert(getStolenVisibilityCount(eTeam) >= 0);
+		FASSERT_NOT_NEGATIVE(getStolenVisibilityCount(eTeam))
 
 		if (bOldVisible != isVisible(eTeam, false))
 		{
@@ -9636,7 +9636,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 		}
 
 		m_paiBuildProgress[eBuild] += iChange;
-		FAssert(getBuildProgress(eBuild) >= 0);
+		FASSERT_NOT_NEGATIVE(getBuildProgress(eBuild))
 
 		BonusTypes eBonusPlaced = NO_BONUS;
 		if (getBuildProgress(eBuild) >= getBuildTime(eBuild))
@@ -9664,13 +9664,13 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 					{
 						bAccessFound = true;
 					}
-					//Check MapCategoryType
+					//Check MapType
 					if (bAccessFound)
 					{
-						if (GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqMapCategory != NO_MAPCATEGORY)
+						if (GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqMap != NO_MAP)
 						{
 							bAccessFound = false;
-							if (isMapCategoryType(GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqMapCategory))
+							if (isMapType(GC.getBuildInfo(eBuild).getPlaceBonusType(iI).ePrereqMap))
 							{
 								bAccessFound = true;
 							}
@@ -12408,11 +12408,11 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 		}
 	}
 
-	const int iCount = kUnit.getNumMapCategoryTypes();
+	const int iCount = kUnit.getNumMapTypes();
 	bool bFound = (iCount < 1);
 	for (int iI = 0; iI < iCount; iI++)
 	{
-		if (isMapCategoryType((MapCategoryTypes)kUnit.getMapCategoryType(iI)))
+		if (isMapType((MapTypes)kUnit.getMapType(iI)))
 		{
 			bFound = true;
 			break;
@@ -13599,13 +13599,13 @@ void CvPlot::unitGameStateCorrections()
 	}
 }
 
-bool CvPlot::isMapCategoryType(MapCategoryTypes eIndex) const
+bool CvPlot::isMapType(MapTypes eIndex) const
 {
 	const CvTerrainInfo& kTerrain = GC.getTerrainInfo(getTerrainType());
-	int iNumTypes = kTerrain.getNumMapCategoryTypes();
+	int iNumTypes = kTerrain.getNumMapTypes();
 	if (iNumTypes > 0)
 	{
-		if (!kTerrain.isMapCategoryType((int)eIndex))
+		if (!kTerrain.isMapType((int)eIndex))
 		{
 			return false;
 		}

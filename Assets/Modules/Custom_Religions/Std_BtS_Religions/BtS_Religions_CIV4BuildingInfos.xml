@@ -178,10 +178,10 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1920</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>

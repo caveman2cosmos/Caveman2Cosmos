@@ -4879,7 +4879,6 @@
 			<Strategy>TXT_KEY_BUILDING_SPICE_VOYAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SPICE_VOYAGE</ArtDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -4887,6 +4886,7 @@
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<iCost>455</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
@@ -7627,7 +7627,6 @@
 			<Strategy>TXT_KEY_BUILDING_UNDERWATER_DATA_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UNDERWATER_DATA_CENTER</ArtDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -7636,6 +7635,7 @@
 			<iCost>2005</iCost>
 			<ObsoleteTech>TECH_OPTRONICS</ObsoleteTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -12058,7 +12058,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRANSATLANTIC_TUNNEL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRANSATLANTIC_TUNNEL</MovieDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12066,6 +12065,7 @@
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 			<iCost>24870</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -12624,7 +12624,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FUTURE_VENICE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FUTURE_VENICE</MovieDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12632,6 +12631,7 @@
 			<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
 			<iCost>19470</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
@@ -12669,7 +12669,6 @@
 			<Strategy>TXT_KEY_BUILDING_ARTIFICIAL_REEF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARTIFICIAL_REEF</ArtDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12677,6 +12676,7 @@
 			<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
 			<iCost>3245</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -12777,7 +12777,6 @@
 			<Strategy>TXT_KEY_BUILDING_ADVANCED_FLOODWALL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ADVANCED_FLOODWALL</ArtDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12785,6 +12784,7 @@
 			<PrereqTech>TECH_WARMACHINES</PrereqTech>
 			<iCost>3975</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
@@ -18478,7 +18478,6 @@
 			<Strategy>TXT_KEY_BUILDING_GREEN_FLOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GREEN_FLOAT</ArtDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18486,6 +18485,7 @@
 			<PrereqTech>TECH_BOTANICAL_ALCHEMY</PrereqTech>
 			<iCost>5655</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -18542,7 +18542,6 @@
 			<Strategy>TXT_KEY_BUILDING_DEEP_SEA_MINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SEA_MINE</ArtDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18550,6 +18549,7 @@
 			<PrereqTech>TECH_UNMANNED_NAVAL_VEHICLES</PrereqTech>
 			<iCost>2005</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -18576,7 +18576,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALM_ISLANDS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PALM_ISLANDS</MovieDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18584,6 +18583,7 @@
 			<PrereqTech>TECH_UNMANNED_NAVAL_VEHICLES</PrereqTech>
 			<iCost>12030</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18615,7 +18615,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KHAZAR_ISLANDS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KHAZAR_ISLANDS</MovieDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18623,6 +18622,7 @@
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iCost>17190</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18655,7 +18655,6 @@
 			<Strategy>TXT_KEY_BUILDING_SEASTEAD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEASTEAD</ArtDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18663,6 +18662,7 @@
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iCost>2865</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -18710,7 +18710,6 @@
 			<Strategy>TXT_KEY_BUILDING_OCEAN_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OCEAN_COLONY</ArtDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18718,6 +18717,7 @@
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iCost>2865</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 				<iCommerce>3</iCommerce>
@@ -18778,7 +18778,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OCEAN_SPIRAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_OCEAN_SPIRAL</MovieDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18786,6 +18785,7 @@
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iCost>17190</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>8</iCommerce>
 				<iCommerce>8</iCommerce>
@@ -18813,7 +18813,6 @@
 			<Strategy>TXT_KEY_BUILDING_ENERGY_ISLAND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENERGY_ISLAND</ArtDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18821,6 +18820,7 @@
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iCost>2865</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<YieldChanges>
 				<iYield>5</iYield>
 				<iYield>25</iYield>
@@ -18843,7 +18843,6 @@
 			<Strategy>TXT_KEY_BUILDING_OCEAN_ARCOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OCEAN_ARCOLOGY</ArtDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18851,6 +18850,7 @@
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iCost>5455</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -18872,7 +18872,6 @@
 			<Strategy>TXT_KEY_BUILDING_OCEAN_FLOOR_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OCEAN_FLOOR_CITY</ArtDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18880,6 +18879,7 @@
 			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
 			<iCost>5905</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>4</iCommerce>
 				<iCommerce>4</iCommerce>
@@ -18919,7 +18919,6 @@
 			<Strategy>TXT_KEY_BUILDING_BLITZBALL_ARENA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BLITZBALL_ARENA</ArtDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18927,6 +18926,7 @@
 			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
 			<iCost>5905</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -19384,7 +19384,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIONIC_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BIONIC_TOWER</MovieDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19392,6 +19391,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iCost>19470</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -19421,7 +19421,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AEROPOLIS_2001</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_AEROPOLIS_2001</MovieDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19429,6 +19428,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iCost>19470</iCost>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>10</iYield>
