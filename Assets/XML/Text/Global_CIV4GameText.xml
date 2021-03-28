@@ -2711,6 +2711,12 @@
 		<Russian>[ICON_BULLET]Отряды получают %D1%% к отражению при защите города.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_RESTORED_BUILDINGS</Tag>
+		<English>The City of %s1 has had its [COLOR_BUILDING_TEXT]%s2[COLOR_REVERT] restored and in working condition again.</English>
+		<French>Le bâtiment [COLOR_BUILDING_TEXT]%s2[COLOR_REVERT] de %s1 est à nouveau fonctionnel.</French>
+		<Polish>Miasto %s1 przywróciło %s2 do pracy.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_SCREEN_CONCEPTUAL</Tag>
 		<English>Conceptual</English>
 		<French>Effets</French>
