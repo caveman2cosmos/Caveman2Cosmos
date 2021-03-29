@@ -42672,7 +42672,7 @@ bool CvUnit::canGoToMap(const CvMissionInfo& info) const
 		return true;
 
 	const CvCity* city = plot()->getPlotCity();
-	return city && city->getNumBuilding(requiredBuilding);
+	return city && city->hasFullyActiveBuilding(requiredBuilding);
 }
 
 void CvUnit::goToMap(MapTypes eMap)

@@ -9632,8 +9632,8 @@ void CvPlayer::setStartingPlot(CvPlot* newPlot, const bool bUpdateStartDist)
 
 		if (newPlot == NULL)
 		{
-			m_iStartingX[CURRENT_MAP] = INVALID_PLOT_COORD;
-			m_iStartingY[CURRENT_MAP] = INVALID_PLOT_COORD;
+			m_vStartingX[CURRENT_MAP] = INVALID_PLOT_COORD;
+			m_vStartingY[CURRENT_MAP] = INVALID_PLOT_COORD;
 
 			if (bUpdateStartDist && oldPlot != NULL)
 			{
@@ -9644,8 +9644,8 @@ void CvPlayer::setStartingPlot(CvPlot* newPlot, const bool bUpdateStartDist)
 		{
 			newPlot->setStartingPlot(true);
 
-			m_iStartingX[CURRENT_MAP] = newPlot->getX();
-			m_iStartingY[CURRENT_MAP] = newPlot->getY();
+			m_vStartingX[CURRENT_MAP] = newPlot->getX();
+			m_vStartingY[CURRENT_MAP] = newPlot->getY();
 
 			getStartingPlot()->area()->changeNumStartingPlots(1);
 
