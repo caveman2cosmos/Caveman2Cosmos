@@ -2032,7 +2032,7 @@ int CvPlayer::startingPlotRange() const
 	iRange += std::min((GC.getMap().getNumAreas() + 1) / 2, GC.getGame().countCivPlayersAlive());
 
 	int iResult = 0;
-	if (Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "minStartingDistanceModifier", iResult))
+	if (Cy::call_optional(GC.getMap().getMapScript(), "minStartingDistanceModifier", iResult))
 	{
 		iRange *= std::max<int>(0, iResult + 100);
 		iRange /= 100;
@@ -2125,7 +2125,7 @@ int CvPlayer::findStartingArea() const
 	PROFILE_FUNC();
 
 	int result = -1;
-	if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingArea", Cy::Args() << getID(), result))
+	if (Cy::call_override(GC.getMap().getMapScript(), "findStartingArea", Cy::Args() << getID(), result))
 	{
 		if (result == -1 || GC.getMap().getArea(result) != NULL)
 		{
@@ -2148,7 +2148,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 	PROFILE_FUNC();
 	{
 		int result = -1;
-		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingPlot", Cy::Args() << getID(), result))
+		if (Cy::call_override(GC.getMap().getMapScript(), "findStartingPlot", Cy::Args() << getID(), result))
 		{
 			CvPlot *pPlot = GC.getMap().plotByIndex(result);
 			if (pPlot != NULL)
