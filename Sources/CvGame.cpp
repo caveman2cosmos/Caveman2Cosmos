@@ -1156,7 +1156,7 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 	{
 		// Python override - Most mapscripts overide
 		bool bAssignStartingPlots = false;
-		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "assignStartingPlots", bAssignStartingPlots)
+		if (Cy::call_override(GC.getMap().getMapScript(), "assignStartingPlots", bAssignStartingPlots)
 		&& bAssignStartingPlots)
 		{
 			return;
@@ -2101,7 +2101,7 @@ void CvGame::normalizeStartingPlots()
 	PROFILE_FUNC();
 
 	if ((!GC.getInitCore().getWBMapScript() || GC.getInitCore().getWBMapNoPlayers())
-	&& !Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeStartingPlotLocations")
+	&& !Cy::call_override(GC.getMap().getMapScript(), "normalizeStartingPlotLocations")
 	&& !isOption(GAMEOPTION_CULTURALLY_LINKED_STARTS))
 	{
 		normalizeStartingPlotLocations();
@@ -2112,42 +2112,42 @@ void CvGame::normalizeStartingPlots()
 		return;
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddRiver")  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeAddRiver")  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
 	{
 		normalizeAddRiver();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemovePeaks"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeRemovePeaks"))
 	{
 		normalizeRemovePeaks();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddLakes"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeAddLakes"))
 	{
 		normalizeAddLakes();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemoveBadFeatures"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeRemoveBadFeatures"))
 	{
 		normalizeRemoveBadFeatures();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemoveBadTerrain"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeRemoveBadTerrain"))
 	{
 		normalizeRemoveBadTerrain();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddFoodBonuses"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeAddFoodBonuses"))
 	{
 		normalizeAddFoodBonuses();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddGoodTerrain"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeAddGoodTerrain"))
 	{
 		normalizeAddGoodTerrain();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddExtras"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeAddExtras"))
 	{
 		normalizeAddExtras();
 	}
@@ -10108,7 +10108,7 @@ void CvGame::processBuilding(BuildingTypes eBuilding, int iChange)
 bool CvGame::pythonIsBonusIgnoreLatitudes() const
 {
 	bool lResult = false;
-	if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "isBonusIgnoreLatitude", lResult))
+	if (Cy::call_override(GC.getMap().getMapScript(), "isBonusIgnoreLatitude", lResult))
 	{
 		return lResult;
 	}
