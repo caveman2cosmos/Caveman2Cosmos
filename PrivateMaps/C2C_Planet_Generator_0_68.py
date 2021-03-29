@@ -118,6 +118,7 @@ try:
 	import cPickle as pickle
 except:
 	import pickle
+	
 
 VERSION = "0_68"
 
@@ -3730,37 +3731,14 @@ def getRand(dice):
 import os
 import os.path
 
-if (sys.platform == 'darwin'):
-	def civFilePath():
-		try:
-			civ4Dir = os.path.basename(os.getcwd())
-			if "Warlords" in civ4Dir:
-				civ4Dir = "Civilization IV Warlords"
-			myDocuments = os.path.join(os.environ['HOME'], "Documents")
-			finalFolder =  os.path.join(myDocuments, civ4Dir)
-			return finalFolder
-		except:
-			return ""
-else:
-	import _winreg
-	def regRead(registry, path, field):
-		try:
-			pathKey = _winreg.OpenKey(registry, path)
-			fieldValue = _winreg.QueryValueEx(pathKey, field)
-			return fieldValue[0]
-		finally:
-			pathKey.Close()
-	def civFilePath():
-		try:
-			userFolder = regRead(_winreg.HKEY_CURRENT_USER,"Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders","Personal")
-			#print "	userFolder",userFolder
-			civFolder = os.path.basename(regRead(_winreg.HKEY_LOCAL_MACHINE,"Software\\Firaxis Games\\Sid Meier's Civilization 4","INSTALLDIR"))
-			#print "	civFolder",civFolder
-			finalFolder = os.path.join(os.path.join(userFolder, "My Games"), civFolder)
-			#print "	finalFolder",finalFolder
-			return finalFolder
-		except:
-			return ""
+def civFilePath():
+	try:
+		folder = os.path.dirname(os.path.realpath(__file__))
+		folder = os.path.join(folder[:-6], "Mods\Caveman2Cosmos\UserSettings")
+		return folder
+	except:
+		return ""
+			
 #----------------------------------------------
 """Other functions"""
 #----------------------------------------------

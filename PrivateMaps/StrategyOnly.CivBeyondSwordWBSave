@@ -9,6 +9,7 @@ BeginMap
 	world size=WORLDSIZE_LARGE
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
+	Randomize Resources=1
 EndMap
 BeginPlayer
 	StartingX=66, StartingY=12

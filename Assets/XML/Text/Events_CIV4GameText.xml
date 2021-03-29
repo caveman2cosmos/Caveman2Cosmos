@@ -3725,7 +3725,7 @@
 		<French>Accéder à leurs demandes, il est temps de faire changer les choses!</French>
 		<Spanish>¡Acceded a sus demandas, es hora de cambiar las cosas!</Spanish>
 		<Polish>Dać im to co chcą, czas na zmiany!</Polish>
-		<Russian>Give into their demands, it's time for change!</Russian>
+		<Russian>Удовлетворите их требования - настало время перемен!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DOCK_WORKERS_STRIKE_2</Tag>
@@ -3733,7 +3733,7 @@
 		<French>Une petite enveloppe devrait les remettre au travail.</French>
 		<Spanish>Un pequeño soborno debería hacer que volvieran al trabajo.</Spanish>
 		<Polish>Mała łapówka i wrócą do pracy.</Polish>
-		<Russian>A little bribary should get them back to work.</Russian>
+		<Russian>Подкуп лидеров протеста должен вернуть их к работе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DOCK_WORKERS_STRIKE_3</Tag>
@@ -3741,7 +3741,7 @@
 		<French>Bah, qui a besoin de tant de travailleurs actuellement? Qu'on les remplace par des grues et des palans!</French>
 		<Spanish>Bah, ¿quién necesita tantos trabajadores en este momento? ¡Sustituidlos por grúas y elevadores!</Spanish>
 		<Polish>Kto potrzebuje tak wielu pracowników? Zamieńmy ich na dźwigi i wózki widłowe!</Polish>
-		<Russian>Bah, who needs so many workers anyway? Let's replace them with cranes and forklifts!</Russian>
+		<Russian>Да кому вообще нужно столько рабочих? Заменим их кранами и автопогрузчиками!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DOCK_WORKERS_STRIKE_4</Tag>
@@ -3749,7 +3749,7 @@
 		<French>Des demandes? Je suis le Seul à formuler des demandes!</French>
 		<Spanish>¿Demandas? ¡Aquí el único que demanda soy YO!</Spanish>
 		<Polish>Żądania? Tylko ja mogę żądać!</Polish>
-		<Russian>Demands? Only I can make demands!</Russian>
+		<Russian>Требования? Только я вправе требовать!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DOOMED_OPTION</Tag>
@@ -3766,7 +3766,7 @@
 		<Italian>Appena in tempo.</Italian>
 		<Spanish>Justo a tiempo.</Spanish>
 		<Polish>W samą porę.</Polish>
-		<Russian>Just in Time.</Russian>
+		<Russian>Вовремя.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKERS_HELP_1_HELP</Tag>
@@ -5877,7 +5877,7 @@
 		<Italian>I nobili locali non sono d'accordo con la nostra gestione del tesoro e credono di avere diritto a una parte della ricchezza. Richiedono alcune compensazioni!</Italian>
 		<Spanish>A los nobles locales no les gusta nuestro rígido control sobre el tesoro, y creen que merecen obtener una parte. ¡Exigen una compensación!</Spanish>
 		<Polish>Lokalna szlachta narzeka na naszą ścisłą kontrolę nad skarbcem i domaga się udziału w bogactwie. Żądają zadośćuczynienia za lata poświęceń!</Polish>
-		<Russian>Local nobles are dismayed at our rigid control over the treasury and believe they deserve a share of the wealth. They are demanding compensation!</Russian>
+		<Russian>Местная знать обеспокоена нашим жестким контролем над казначейством и считает, что заслуживает доли богатства. Они требуют компенсации!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NOBLES_DEMAND_COMPENSATION_1</Tag>
@@ -5887,7 +5887,7 @@
 		<Italian>Accetta le loro richieste.</Italian>
 		<Spanish>Aceptar sus legítimas reclamaciones.</Spanish>
 		<Polish>Zaakceptujcie ich uzasadnione roszczenia.</Polish>
-		<Russian>Accept their rightful claims.</Russian>
+		<Russian>Мы примем их законные требования.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NOBLES_DEMAND_COMPENSATION_2</Tag>
@@ -5897,7 +5897,7 @@
 		<Italian>Ignora le loro richieste.</Italian>
 		<Spanish>Ignorar sus demandas.</Spanish>
 		<Polish>Zignorujcie ich żądania.</Polish>
-		<Russian>Ignore their demands.</Russian>
+		<Russian>Игнорируйте их требования.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NOBLE_KNIGHTS_HELP_1</Tag>
@@ -6003,7 +6003,7 @@
 		<Italian>Lo so. Ordinerò di costruire delle difese migliori in futuro.</Italian>
 		<Spanish>Lo sé. Mandaré a construir mejores defensas en el futuro.</Spanish>
 		<Polish>Wiem. Rozkażę budowę lepszej obrony.</Polish>
-		<Russian>I know. I'll order to build better defenses later.</Russian>
+		<Russian>Ясно. Я позже распоряжусь насчет усиления нашей обороны.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_OVERFISHING</Tag>
@@ -6013,7 +6013,7 @@
 		<Italian>Anni di richieste da parte dei nostri cittadini hanno causato una pesca selvaggia in quest'area. Non otterremo più le stesse rese.</Italian>
 		<Spanish>Tras años satisfaciendo las demandas de nuestro pueblo, esta zona se ha sobreexplotado demasiado. No volveremos a obtener el mismo número de capturas.</Spanish>
 		<Polish>Chęć sprostania zapotrzebowania na ryby dla naszych obywateli doprowadziły do prawie całkowiteogo wyniszczenia ekosystemu pobliskich wód.</Polish>
-		<Russian>Years of meeting the demands of our people have resulted in overfishing in this area. We just aren't getting the same yields.</Russian>
+		<Russian>Многолетний хищнический промысел в наших водах привел к чрезмерному вылову рыбы в этом районе. Ныне мы не имеем прежнего улова.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_OVERFISHING_1</Tag>
@@ -6023,7 +6023,7 @@
 		<Italian>Che brutta notizia.</Italian>
 		<Spanish>Es una mala noticia.</Spanish>
 		<Polish>Jaka szkoda.</Polish>
-		<Russian>That's too bad.</Russian>
+		<Russian>Скверные известия.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PALISADES_OBSOLETE_HELP_1</Tag>
@@ -6693,7 +6693,7 @@
 		<Italian>Consegna alle nostre truppe quante più armature a piastre possibili.</Italian>
 		<Spanish>Expedid tantas armaduras segmentadas a nuestras tropas como nos sea posible.</Spanish>
 		<Polish>Wprowadź nowy rodzaj zbroi dla naszego wojska na tyle, na ile pozwalają środki.</Polish>
-		<Russian>Issue segmented armors to our troops as supplies permit.</Russian>
+		<Russian>Экипируйте наши войска сегментированные доспехи, если позволяют средства.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SHAMAN_TEMPLE_APPRENTICE_1</Tag>
@@ -6701,7 +6701,7 @@
 		<Italian>Ma... è ancora molto piccolo. Facciamolo diventare l'apprendista del nostro migliore sciamano. Questo migliorerà le sue abilità.</Italian>
 		<Spanish>Pero... todavía es demasiado joven. Hagamos que sea el aprendiz de nuestro mejor Chamán. Eso mejorará sus habilidades.</Spanish>
 		<Polish>Ale... jest wciąż bardzo młody. Pozwólmy mu spotkać się z najlepszym szamanem. To ulepszy jego zdolności.</Polish>
-		<Russian>But... he is still very young. Let him become the apprentice of our Best Shaman. That will improve his skills.</Russian>
+		<Russian>Но... он еще слишком молод. Лучше пусть он станет учеником нашего Верховного Шамана. Это улучшит его навыки.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SHAMAN_TEMPLE_APPRENTICE_2</Tag>
@@ -6709,7 +6709,7 @@
 		<Italian>Fantastico. Ha anche esperienza nel guarire i nostri guerrieri in combattimento. Promuoviamolo a Sciamano in modo che possa diventare una vera ispirazione per i giovani della nostra tribù.</Italian>
 		<Spanish>Excelente. También tiene experiencia curando a nuestros guerreros en combate. Ascendámoslo a Chamán para que así pueda volverse una verdadera inspiración para los jóvenes de nuestra tribu.</Spanish>
 		<Polish>Świetnie. Ma doświadczenie by leczyć naszych wojowników w boju. Wypromujmy go na szamana będzie prawdziwą inspiracją dla innych.</Polish>
-		<Russian>Awesome. He also has experience healing our warriors in combat. Let's promote him to Shaman so he can become a real inspiration for all our young tribespeople.</Russian>
+		<Russian>Потрясающе. У него также есть опыт исцеления наших воинов в бою. Давайте обучим его до Шамана, чтобы он стал настоящей опорой для всех наших молодых соплеменников.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SHAMAN_TEMPLE_APPRENTICE_HELP_CANNOT</Tag>
@@ -6717,7 +6717,7 @@
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Si applica a tutte le città che hanno già un Tempio dello sciamano.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_REVERT][COLOR_UNIT_TEXT]Richiede un'unità di Sciamano[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Se aplica a todas las ciudades que tengan una Cabaña del chamán.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Requiere de un Chamán[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Dotyczy wszystkich miast w których znajduje się Świątynia Szamanów.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Wymaga Szamana[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Applies to all cities that already have a Shaman Temple.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Requires a Shaman Unit[COLOR_REVERT]</Russian>
+		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Применимо ко всем городам, в которых уже есть Храм Шамана.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Требуется Шаман[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SHAMAN_TEMPLE_APPRENTICE_HELP_OK</Tag>
@@ -6725,14 +6725,14 @@
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Si applica a tutte le città che hanno già un Tempio dello sciamano.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_REVERT][COLOR_UNIT_TEXT]Hai già un'unità di Sciamano[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Se aplica a todas las ciudades que tengan una Cabaña del chamán.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_REVERT][COLOR_UNIT_TEXT]Ya cuentas con un Chamán[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Dotyczy wszystkich miast w których znajduje się Świątynia Szamanów.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_REVERT][COLOR_UNIT_TEXT]Już posiadasz jednostkę Szamana[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Applies to all cities that already have a Shaman Temple.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_REVERT][COLOR_UNIT_TEXT]You already have a Shaman Unit[COLOR_REVERT]</Russian>
+		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Применимо ко всем городам, в которых уже есть Храм Шамана.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_REVERT][COLOR_UNIT_TEXT]У вас уже есть Шаман[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SHERIFF_1</Tag>
 		<English>I am sure he'll manage on his own.</English>
 		<French>Je suis sûr qu'il s'en sortira bien tout seul.</French>
 		<Polish>Jestem pewny, że sobie poradzi.</Polish>
-		<Russian>I am sure he'll manage on his own.</Russian>
+		<Russian>Я уверен, что он справится сам.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SHERIFF_2</Tag>
@@ -6742,26 +6742,27 @@
 		<Italian>Help him clean up the town</Italian>
 		<Spanish>Help him clean up the town</Spanish>
 		<Polish>Pomóż mu posprzątać miasto.</Polish>
-		<Russian>Help him clean up the town.</Russian>
+		<Russian>Помогите ему очистить город.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SHERIFF_3</Tag>
 		<English>Supply him with all help he needs to do his job.</English>
 		<French>Fournissez-lui toute l'aide qui lui sera nécessaire pour faire son travail.</French>
 		<Polish>Wyślij wszelkie wsparcie jaki mu sie przyda przy tej pracy.</Polish>
-		<Russian>Supply him with all help he needs to do his job.</Russian>
+		<Russian>Окажите ему всю помощь, необходимую в его работе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SHERIFF_4</Tag>
 		<English>Recruit him to the military, we need people like him, the town will cope.</English>
 		<French>Recrutez-le pour ntre armée, nous avons besoin d'hommes comme lui. La ville s'en sortia.</French>
 		<Polish>Zwerbujcie go do wojska. Potrzebujemy takich ludzi jak on. Miasto sobie poradzi.</Polish>
-		<Russian>Recruit him to the military, we need people like him, the town will cope.</Russian>
+		<Russian>Зачислите его в армию, нам нужны такие люди, как он, а город справится.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SILKWORM_GOING_EXTINCT</Tag>
 		<English>Silkworms are endangered</English>
 		<French>Les vers à soie sont menacés</French>
+		<Russian>Шелкопряды находятся под угрозой исчезновения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SILKWORM_GOING_EXTINCT_1</Tag>
@@ -7401,7 +7402,7 @@
 		<Italian>Augurategli buona fortuna.</Italian>
 		<Spanish>Deseadles buena suerte.</Spanish>
 		<Polish>Życz im powodzenia.</Polish>
-		<Russian>Wish them good luck.</Russian>
+		<Russian>Пожелайте им удачи.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRAITOR_1</Tag>
@@ -7409,7 +7410,7 @@
 		<Italian>Non si preoccupa di tradire la propria tribù? Allora non dobbiamo fidarci di lui. Digli che non accettiamo.</Italian>
 		<Spanish>¿Y no le importa traicionar a su tribu? No es de fiar. Decidle que no aceptamos.</Spanish>
 		<Polish>Nie obchodzi go że zdradza swoich? Nie jest godny zaufania. Powiedz mu żeby odszedł.</Polish>
-		<Russian>He doesn't care about betraying his tribe? He is not trustworthy. Tell him we don't accept.</Russian>
+		<Russian>Значит, этому предателю плевать на соплеменников? Он не заслуживает доверия. Передайте ему, что мы его не примем.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRAITOR_2</Tag>
@@ -7417,7 +7418,7 @@
 		<Italian>Sembra che abbiamo un nuovo membro. Presentiamolo al resto della tribù.</Italian>
 		<Spanish>Parece que tenemos un nuevo miembro. Presentémoslo ante el resto de la tribu.</Spanish>
 		<Polish>Wygląda na to, że mamy nowych członków plemienia. Przedstawmy ich reszcie.</Polish>
-		<Russian>Sounds like we have a new member. Let's introduce him to the rest of the tribe.</Russian>
+		<Russian>Похоже, у нас появился новый товарищ. Давайте познакомим его с остальным племенем.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRAITOR_HELP_1</Tag>
@@ -7425,7 +7426,7 @@
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Gli stranieri potrebbero arrabbiarsi con noi.[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Los extranjeros podrían disgustarse con nosotros.[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Nieznajomi mogą się na nas zdenerwować.[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Strangers may get upset with us.[COLOR_REVERT]</Russian>
+		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Незнакомцы могут на нас обидеться.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRAITOR_REVENGE_HELP_1</Tag>
@@ -7433,7 +7434,7 @@
 		<Italian>[ICON_BULLET]+3 [COLOR_UNIT_TEXT]Giavellottieri[COLOR_REVERT] nemici vicino a [COLOR_HIGHLIGHT_TEXT]%s1_city[COLOR_REVERT].</Italian>
 		<Spanish>[ICON_BULLET]+3 [COLOR_UNIT_TEXT]Jabalineros[COLOR_REVERT] enemigos cerca de [COLOR_HIGHLIGHT_TEXT]%s1_city[COLOR_REVERT].</Spanish>
 		<Polish>[ICON_BULLET]+3 wrogich [COLOR_UNIT_TEXT]Prymitywnych Oszczepników[COLOR_REVERT] w pobliżu [COLOR_HIGHLIGHT_TEXT]%s1_city[COLOR_REVERT].</Polish>
-		<Russian>[ICON_BULLET]+3 enemy [COLOR_UNIT_TEXT]Javelineer[COLOR_REVERT] units near [COLOR_HIGHLIGHT_TEXT]%s1_city[COLOR_REVERT].</Russian>
+		<Russian>[ICON_BULLET]+3 вражеских отрядов [COLOR_UNIT_TEXT]Метателей[COLOR_REVERT] около [COLOR_HIGHLIGHT_TEXT]%s1_city[COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRAITOR_REVENGE_HELP_2</Tag>
@@ -7441,7 +7442,7 @@
 		<Italian>[ICON_BULLET]+3 [COLOR_UNIT_TEXT]Guerrieri con clava[COLOR_REVERT] nemici vicino a [COLOR_HIGHLIGHT_TEXT]%s1_city[COLOR_REVERT].</Italian>
 		<Spanish>[ICON_BULLET]+3 [COLOR_UNIT_TEXT]Guerreros con garrote[COLOR_REVERT] enemigos cerca de [COLOR_HIGHLIGHT_TEXT]%s1_city[COLOR_REVERT].</Spanish>
 		<Polish>[ICON_BULLET]+3 wrogich [COLOR_UNIT_TEXT]Pałkarzy[COLOR_REVERT] w pobliżu [COLOR_HIGHLIGHT_TEXT]%s1_city[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET]+3 enemy [COLOR_UNIT_TEXT]Clubman[COLOR_REVERT] units near [COLOR_HIGHLIGHT_TEXT]%s1_city[COLOR_REVERT].</Russian>
+		<Russian>[ICON_BULLET]+3 вражеских отрядов [COLOR_UNIT_TEXT]Булавоносцев[COLOR_REVERT] около [COLOR_HIGHLIGHT_TEXT]%s1_city[COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TREASURY_PLUNDERED_1</Tag>
@@ -7451,7 +7452,7 @@
 		<Italian>Nessun ladro è stato catturato? Mettete una taglia sulla loro testa e aumentate le tasse per coprire le perdite!</Italian>
 		<Spanish>¿Ninguno de ellos fue capturado? ¡Ponedles precio a sus cabezas y subid los impuestos de la ciudad para cubrir las pérdidas!</Spanish>
 		<Polish>Żaden z tych złodziei nie został schwytany? Wyznacz nagrodę za ich głowy i podwyższ podatki w mieście, aby pokryć straty!</Polish>
-		<Russian>None of the thieves were captured? Issue price on their heads and increase city taxes to cover the losses!</Russian>
+		<Russian>До сих пор никого не поймали из этих воров? Объявите награду за их головы и увеличьте городские налоги, дабы покрыть убытки!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TREASURY_PLUNDERED_2</Tag>
@@ -7461,7 +7462,7 @@
 		<Italian>Voglio che questi ladri siano portati davanti alla giustizia, vivi o morti! Mandate i soldati a perlustrare i paesi vicini e corrompete le persone per ottenere più informazioni possibili su questo gruppo di ladri; quando li catturate, giustiziateli pubblicamente! Inoltre assoldate nuove spie in modo che non possa più accadere una cosa del genere!</Italian>
 		<Spanish>¡Quiero ver a esos ladrones ante la justicia, vivos o muertos! Enviad soldados a buscar por los pueblos cercanos, sobornad a quien haga falta para obtener toda la información posible sobre este grupo de ladrones, y cuando sean capturados, ¡ejecutadlos en público! Contratad también nuevos espías para que esto no vuelva a suceder.</Spanish>
 		<Polish>Chcę żeby ci złodzieje zostali schwytani żywi lub martwi! Wyślij wojska, aby przeszukać pobliskie miasta i zdobyć tak dużo informacji o tej grupie złodziei jak tylko będzie to konieczne. Po ich schwytaniu dokonaj publicznej egzekucji! Zatrudnij nowych szpiegów, aby więcej się to już nie powtórzyło!</Polish>
-		<Russian>I want those thieves brought to justice dead or alive! Send troops to search the nearby towns and bribe people to get as much information about this thief group as possible and when captured, publicly execute them! Hire new spies as well so that this can't happen again!</Russian>
+		<Russian>Я хочу, чтобы правосудие восторжествовало над этими ворами, живыми или мертвыми! Отправьте солдат для обыска близлежащих городов и заплатите осведомителям для получения нужной информации об этой шайке, а когда их поймают, казните их публично! Нанимайте новых шпионов, дабы впредь подобного не повторилось!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_ACADEMIC_FUNDING</Tag>
@@ -7471,7 +7472,7 @@
 		<Italian>Alcuni ricchi uomini d'affari hanno fondato un'associazione per sovvenzioanre i progetti all'accademia locale, rendendo disponibili per la ricerca grandi quantità di denaro.</Italian>
 		<Spanish>Algunos empresarios adinerados han formado una asociación para financiar proyectos en la Academia local, dejando una gran cantidad de dinero disponible para proyectos de investigación.</Spanish>
 		<Polish>Bogaty przedsiębiorca sformował koalicję na rzecz wspierania rozwoju technologicznego w pobliskiej akademii. Koalicja dostarczyła olbrzymich pieniędzy na badania naukowe.</Polish>
-		<Russian>Wealthy businessmen have formed a coalition to fund research projects at the local academy, making large amounts of money available for research projects.</Russian>
+		<Russian>Состоятельные бизнесмены основали венчурный фонд для финансирования исследовательских проектов в местной академии, выделяя для этого крупные инвестиции.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_ALTERNATIVE_ENERGY</Tag>
@@ -7481,7 +7482,7 @@
 		<Italian>La gente sta protestando per il fumo nero che viene dalle nostre centrali che bruciano combustibili fossili. Alcuni dei nostri scienziati e ingengneri sostengono che una catena decentralizzata [di COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] e [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT] ridurrebbero sia l'inquinamento atmosferico che la nostra dipendenza dai combustibili fossili.</Italian>
 		<Spanish>La gente está preocupada por el repugnante humo negro feo procedente de nuestras centrales eléctricas de combustibles fósiles. Algunos de nuestros científicos e ingenieros creen que una serie de [COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] y [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT] reduciría tanto la contaminación atmosférica como nuestra dependencia de los combustibles fósiles.</Spanish>
 		<Polish>Ludzie narzekają na czarny dym wydobywający się z naszych elektrowni spalających paliwa kopalne. Niektórzy inżynierowie i naukowcy sądzą, że budowa zdecentralizowanego łańcucha [COLOR_BUILDING_TEXT]Elektrowni Wodnych[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Elektrowni Nuklearnych[COLOR_REVERT] ograniczy zarówno emisję zanieczyszczeń, jak również zwiększy naszą niezależność energetyczną.</Polish>
-		<Russian>The people are complaining about the ugly black smoke coming from our fossil fuel-burning power plants. Some of our scientists and engineers argue that a decentralized chain of [COLOR_BUILDING_TEXT]Hydro Plants[COLOR_REVERT] and [COLOR_BUILDING_TEXT]Nuclear Plants[COLOR_REVERT] would reduce both atmospheric pollution and our dependence on fossil fuels.</Russian>
+		<Russian>Граждане жалуются на уродливый черный дым, исходящий от наших электростанций, работающих на ископаемом топливе. Часть из наших ученых и инженеров утверждает, что децентрализованная цепочка [COLOR_BUILDING_TEXT]гидроэлектростанций[COLOR_REVERT] и [COLOR_BUILDING_TEXT]АЭС[COLOR_REVERT] сократит как загрязнение атмосферы, так и нашу зависимость от ископаемого топлива.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_ALTERNATIVE_ENERGY_DONE</Tag>
@@ -7491,7 +7492,7 @@
 		<Italian>Congratulazioni! Hai costruito abbastanza [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] e [COLOR_BUILDING_TEXT]Centrali Nucleari[COLOR_REVERT] per completare l'impresa dell'Energia alternativa. Scegli una ricompensa.</Italian>
 		<Spanish>¡Felicidades! Has construido suficientes [COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] y [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT] para cumplir los objetivos de la misión "Energía alternativa". Por favor, elige tu recompensa.</Spanish>
 		<Polish>Gratulacje! Zbudowałeś wystarczająco dużo [COLOR_BUILDING_TEXT]Elektrowni Wodnych[COLOR_REVERT] oraz [COLOR_BUILDING_TEXT]Nuklearnych[COLOR_REVERT], aby ukończyć zadanie "Alternatywne Źródła Energii". Wybierz swoją nagrodę.</Polish>
-		<Russian>Congratulations! You have built enough [COLOR_BUILDING_TEXT]Hydro Plants[COLOR_REVERT] and [COLOR_BUILDING_TEXT]Nuclear Plants[COLOR_REVERT] to meet the goals of the quest for Alternative Energy. Please choose a reward.</Russian>
+		<Russian>Поздравляем! Вы построили достаточно [COLOR_BUILDING_TEXT]гидроэлектростанций[COLOR_REVERT] и [COLOR_BUILDING_TEXT]АЭС[COLOR_REVERT] для выполнения задачи поиска альтернативной энергии. Теперь выберите награду.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_ARCHERY_FOUNDED_1</Tag>
@@ -7501,7 +7502,7 @@
 		<Italian>I cacciatori di %s2_city hanno iniziato ad equipaggiarsi con archi e freccie - la nostra città ottiene 1 arciere gratuito.</Italian>
 		<Spanish>Los cazadores de %s2_city se han equipado ahora con arcos y flechas; nuestra ciudad ha obtenido un Arquero gratis.</Spanish>
 		<Polish>Myśliwi w mieście %s2_city zostali zaopatrzeni w nowe łuki i strzały - miasto otrzymuje jednego darmowego łucznika.</Polish>
-		<Russian>Hunters in %s2_city have equipped themselves now with bows and arrows - our city gets 1 free archer unit.</Russian>
+		<Russian>Охотники из %s2_city теперь вооружены луками и стрелами - наш город получает 1 бесплатный отряд лучников.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_ARTIFICIAL_ELEMENT_1</Tag>
@@ -7511,7 +7512,7 @@
 		<Italian>Gli scienziati di %s2_city hanno scoperto il primo elemento artificiale all'interno del loro acceleratore! È possibile che in futuro vengano scoperti altri elementi, ora che il metodo per crearli è stato provato.</Italian>
 		<Spanish>Los científicos de %s2_city han descubierto el primer elemento artificial dentro de su acelerador de partículas. Es posible que se encuentren más elementos en el futuro ahora que se han probado con éxito los métodos para crearlos.</Spanish>
 		<Polish>Naukowcy w mieście %s2_city odkryli pierwszy sztuczny pierwiastek w ich akceleratorze! Więcej pierwiastków może być odkrytych w niedalekiej przyszłości, gdyż znają już metody ich tworzenia.</Polish>
-		<Russian>The scientists in %s2_city have discovered first artificial element with the accelerator! More elements might be found in near future now that the methods to create them have been proven.</Russian>
+		<Russian>Ученые в городе %s2_city обнаружили первый искусственный элемент с ускорителем! В ближайшем будущем могут быть обнаружены другие элементы, поскольку методы их создания были уже апробированы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_BARBARIAN_ASSAULT_1</Tag>
@@ -8088,7 +8089,7 @@
 		<Italian>Uno dei nostri falconieri ha sviluppato grandi capacità nell'addestramento dei falchi. Dice di volerci aiutare.</Italian>
 		<Spanish>Uno de nuestros halconeros ha desarrollado una gran habilidad en el entrenamiento de Halcones. Dice estar dispuesto a ayudarnos.</Spanish>
 		<Polish>Jeden z naszych sokolników osiągnął doskonałe wyniki przy szkoleniu sokoła. Twierdzi że jest gotów do pomocy.</Polish>
-		<Russian>One of our Hawkers has developed great skills in trainning Hawks. He says he is willing to help us.</Russian>
+		<Russian>Один из наших Сокольничьих развил большие навыки в дрессировке Ястребов. Он готов нам предложить свои услуги.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HENRY_MORGAN</Tag>
@@ -8098,7 +8099,7 @@
 		<Italian>Il pirata malfamato [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] sta facendo rotta per le nostre acque! La sua flotta è appena sopra l'orizzonte!</Italian>
 		<Spanish>¡El famoso pirata [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] ha fijado el rumbo hacia nuestras aguas, buscando saquear y causar alboroto! ¡Su flotilla se divisa sobre el horizonte!</Spanish>
 		<Polish>Osławiony pirat [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] zmierza ku naszych wodom w celu rozpętania chaosu! Jego flotylla jest tuż za horyzontem!</Polish>
-		<Russian>The notorious Pirate [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] has set sail for our waters, seeking plunder and mayhem! His flotilla is just over the horizon!</Russian>
+		<Russian>Печально известный пират [COLOR_NEGATIVE_TEXT]Генри Морган[COLOR_REVERT] направился в наши воды в поисках богатой добычи и легкой наживы! Его флотилия уже на подходе!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HERETICAL_RESEARCH2_1</Tag>
@@ -8108,7 +8109,7 @@
 		<Italian>I nostri sacerdoti hanno apostrofato come eretici i nostri progetti di ricerca, e lo ripetono nei loro discorsi pubblici.</Italian>
 		<Spanish>Nuestros sacerdotes han declarado "herejía" nuestra investigación actual, y lo han denunciado en sermones públicos.</Spanish>
 		<Polish>Nasi kapłani uznali obecnie rozwijaną technologię za herezję i potępiają ją w swoich kazaniach.</Polish>
-		<Russian>Our priests have declared our current research heretical and have denounced it in public sermons.</Russian>
+		<Russian>Наши священники объявили наше текущее исследование еретическим и осудили его в публичных проповедях.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HERETICAL_RESEARCH_1</Tag>
@@ -8118,7 +8119,7 @@
 		<Italian>I nostri sacerdoti hanno apostrofato come eretici i nostri progetti di ricerca, e lo ripetono nei loro discorsi pubblici.</Italian>
 		<Spanish>Nuestros sacerdotes han declarado "herejía" nuestra investigación actual, y lo han denunciado en sermones públicos.</Spanish>
 		<Polish>Nasi kapłani uznali obecnie rozwijaną technologię za herezję i potępiają ją w swoich kazaniach.</Polish>
-		<Russian>Our priests have declared our current research heretical and have denounced it in public sermons.</Russian>
+		<Russian>Наши священники объявили наше текущее исследование еретическим и осудили его в публичных проповедях.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HERO_SPAWN_1</Tag>
@@ -8237,7 +8238,7 @@
 		<Italian>Le nostre navi sono state attaccate dai pirati della Malesia! Stanno utilizzando la loro flotta di navi dirottate per depredare le nostre rotte commerciali sotto i nostri nasi.</Italian>
 		<Spanish>¡Nuestros navíos han sido objeto de un ataque de los [COLOR_NEGATIVE_TEXT]Piratas de Malaca[COLOR_REVERT]! Están utilizando su flota de barcos secuestrados para aprovecharse de los comerciantes en nuestras narices.</Spanish>
 		<Polish>Nasze statki zostały zaatakowane przez [COLOR_NEGATIVE_TEXT]Malakańskich Piratów[COLOR_REVERT]! Piraci używają swojej floty porwanych okrętów do łupienia handlowców pod ich własnym nosem.</Polish>
-		<Russian>Our ships have come under attack by the [COLOR_NEGATIVE_TEXT]Malaccan Pirates[COLOR_REVERT]! They are using their fleet of hijacked ships to prey on commercial traders right under our noses.</Russian>
+		<Russian>Наши суда подверглись атаке [COLOR_NEGATIVE_TEXT]Малайских пиратов[COLOR_REVERT]! Они используют свой флот угнанных кораблей, чтобы охотиться на купеческие суда прямо у нас под носом.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MAMMOTH_1</Tag>
@@ -8245,7 +8246,7 @@
 		<Italian>I nostri cacciatori hanno trovato un branco di mammuth all'interno dei nostri territori.</Italian>
 		<Spanish>Nuestros cazadores han encontrado una manada de Mamuts dentro de nuestras fronteras.</Spanish>
 		<Polish>Nasi Łowcy znaleźli Stado Mamutów w naszym imperium.</Polish>
-		<Russian>Our hunters have found a herd of Mammoths within our borders.</Russian>
+		<Russian>Наши охотники обнаружили стадо мамонтов в наших землях.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MERCENARIES_ANCIENT_1</Tag>
@@ -8255,7 +8256,7 @@
 		<Italian>Dei mercenari senza scrupoli si avvicinano a te con una minaccia: Chiedono 100 oro dal nostro tesoro; se non accetteremo, attaccheranno.</Italian>
 		<Spanish>Unos mercenarios despiadados nos han contactado con una amenaza: reclaman 100 de oro de nuestro tesoro, si no se lo damos, nos atacarán.</Spanish>
 		<Polish>Bezwzględni najemnicy przybyli do ciebie z groźbą: żądają 100 złota z naszego skarbca, jeśli odmówimy zaatakują nas.</Polish>
-		<Russian>Ruthless mercenaries approach you with a threat: They demand 100 gold from our treasury and if not given, they'll attack us.</Russian>
+		<Russian>Безжалостные наемники угрожают нам, требуя 100 золотых из нашей казны и, в случае отказа, нападут на нас.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MERCENARIES_CLASSICAL_1</Tag>
@@ -8265,7 +8266,7 @@
 		<Italian>Dei mercenari senza scrupoli si avvicinano a te con una minaccia: Chiedono 200 oro dal nostro tesoro; se non accetteremo, attaccheranno.</Italian>
 		<Spanish>Unos mercenarios despiadados nos han contactado con una amenaza: reclaman 200 de oro de nuestro tesoro, si no se lo damos, nos atacarán.</Spanish>
 		<Polish>Bezwzględni najemnicy przybyli do ciebie z groźbą: żądają 200 złota z naszego skarbca, jeśli odmówimy zaatakują nas.</Polish>
-		<Russian>Ruthless mercenaries approach you with a threat: They demand 200 gold from our treasury and if not given, they'll attack us.</Russian>
+		<Russian>Безжалостные наемники угрожают нам, требуя 200 золотых из нашей казны и, в случае отказа, нападут на нас.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MERCENARIES_MEDIEVAL_1</Tag>
@@ -8275,7 +8276,7 @@
 		<Italian>Dei mercenari senza scrupoli si avvicinano a te con una minaccia: Chiedono 300 oro dal nostro tesoro; se non accetteremo, attaccheranno.</Italian>
 		<Spanish>Unos mercenarios despiadados nos han contactado con una amenaza: reclaman 300 de oro de nuestro tesoro, si no se lo damos, nos atacarán.</Spanish>
 		<Polish>Bezwzględni najemnicy przybyli do ciebie z groźbą: żądają 300 złota z naszego skarbca, jeśli odmówimy zaatakują nas.</Polish>
-		<Russian>Ruthless mercanaries approach you with a threat: They demand 300 gold from our treasury and if not given, they'll attack us.</Russian>
+		<Russian>Безжалостные наемники угрожают нам, требуя 300 золотых из нашей казны и, в случае отказа, нападут на нас.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MESSED_PAINTING_1</Tag>
@@ -8284,7 +8285,7 @@
 		<Italian>Alcuni bambini della nostra tribù sono stati scoperti mentre rovinavano i nostri dipinti rupestri. Questa fonte d'ispirazione è ora perduta.</Italian>
 		<Spanish>Hemos pillado a algunos niños de nuestra tribu causando desastres en nuestras Pinturas rupestres. Ahora, estas fuentes de inspiración se han perdido.</Spanish>
 		<Polish>Dzieci z naszego plemienia zniszczyły malunki w naszej jaskini. Źródła Inspiracji zostały utracone.</Polish>
-		<Russian>Some children from our tribe were caught messing up our Cave Paintings. This source of inspiration is now lost.</Russian>
+		<Russian>Несколько сорванцов из нашего племени попалось за порчей наших наскальных рисунков. Этот источник вдохновения теперь утерян.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MESSED_PAINTING_2</Tag>
@@ -8293,7 +8294,7 @@
 		<Italian>Un giovane cacciatore della nostra tribù ha rovinato i nostri dipinti rupestri mentre cercava di rappresentare le proprie avventure di caccia. Queste fonti di ispirazione sono ora perdute.</Italian>
 		<Spanish>Un joven cazador de nuestra tribu ha estropeado accidentalmente nuestras Pinturas rupestres al tratar de representar sus aventuras como cazador en ellas. Ahora, estas fuentes de inspiración se han perdido.</Spanish>
 		<Polish>Młody Łowca naszego plemienia zawiódł przy malowaniu swojego udanego polowania. Źródła Inspiracji zostały utracone.</Polish>
-		<Russian>A young hunter of our tribe has accidentally messed up our Cave Paintings while trying to depict his hunting adventures on them. These sources of inspiration are now lost.</Russian>
+		<Russian>Молодой охотник из нашего племени случайно испортил наши наскальные рисунки, пытаясь намалевать поверх них свои охотничьи «подвиги». Эти источники вдохновения теперь утрачены.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MICROLITH_BUILDING_DESTROYED</Tag>
@@ -8301,7 +8302,7 @@
 		<Italian>Uno dei nostri migliori artigiani ha lasciato la città di %s2_city. Ha portato con se tutti i propri microliti.</Italian>
 		<Spanish>Uno de nuestros mejores artistas ha dejado la ciudad de %s2_city. Se ha llevado consigo todas nuestras herramientas para microlitos.</Spanish>
 		<Polish>Jeden z najlepszych rzemieślników opuszcza %s2_city. Zabrał wszystkie narzędzia.</Polish>
-		<Russian>One of our Best Craftspeople has left our city of %s2_city. He has taken with him all our Microlith Tools.</Russian>
+		<Russian>Один из наших лучших мастеров покинул наш город %s2_city. Он унес с собой все наши орудия из мастерской Микролитов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MICROLITH_WORKSHOP_ACCIDENT_1</Tag>
@@ -8309,7 +8310,7 @@
 		<Italian>Uno dei nostri artigiani ha lasciato la tribù. Ha portato con sè tutti gli attrezzi che aveva nell'atelier.</Italian>
 		<Spanish>Uno de nuestros artesanos ha dejado la tribu. Se ha llevado consigo todo el material que tenía en su taller.</Spanish>
 		<Polish>Jeden z naszych rzemieślników opuścił plemię. Zabrał wszystko ze swojego warsztatu.</Polish>
-		<Russian>One of our craftspeople has left our tribe. He took with him all the stuff at his workshop.</Russian>
+		<Russian>Один из наших мастеров покинул наше племя и унес с собой все вещи из своей мастерской.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MIGANTS_1</Tag>
@@ -8317,7 +8318,7 @@
 		<Italian>A causa della cattiva situazione a %s1_city, alcune persone hanno lasciato la nostra tribù cercandone una nuova.</Italian>
 		<Spanish>Debido a la mala situación en %s1_city, algunos miembros han dejado nuestra tribu en busca de otra mejor.</Spanish>
 		<Polish>Ze względu na złą sytuację w %s1_city, niektórzy współplemieńcy odchodzą w poszukiwaniu lepszego życia.</Polish>
-		<Russian>Because of the bad situation in %s1_city, some tribespeople have left our tribe looking for a better one.</Russian>
+		<Russian>Из-за скверных условий жизни в городе %s1_city некоторые соплеменники покинули наше племя в поисках лучшей доли.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MORE_FIAT_MONEY</Tag>
@@ -8510,7 +8511,7 @@
 		<Italian>Dato che ci siamo lasciati alle spalle il Barbarismo, una delle nostre unità barbariche sta pianificando di ritirarsi. Ci ha richiesto dell'oro come simbolo di gratitudine per la sua lealtà.</Italian>
 		<Spanish>Al haber dejado la Barbarie atrás, una de nuestras unidades bárbaras planea su retirada. Nos ha solicitado un poco de oro como símbolo de gratitud por su lealtad.</Spanish>
 		<Polish>Ponieważ odrzuciliśmy barbarzyństwo, jedna z jednostek planuje ucieczkę. Prosi nas o złoto jako symbol lojalności.</Polish>
-		<Russian>Because we left Barbarism behind, one of our Barbarian units is planning to retire. He has requested us some gold as a symbol of our gratitude for his loyalty.</Russian>
+		<Russian>Поскольку мы оставили варварский образ жизни, один из наших наемных отрядов варваров собирается покинуть службу. Его командир попросил у нас немного золота в знак нашей благодарности за его преданность.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_RICE_DISCOVERED_1</Tag>
@@ -8557,7 +8558,7 @@
 		<Italian>Uno dei nostri raccoglitori ha lasciato la tribù. Ha portato con sè tutto il suo raccolto.</Italian>
 		<Spanish>Uno de nuestros recolectores de granos ha dejado la tribu. Se ha llevado consigo todas las semillas que recotectó.</Spanish>
 		<Polish>Jedne ze zbieraczy ziarna opuścił nasze plemię. Zabrał ze sobą całe swoje żniwo.</Polish>
-		<Russian>One of our grain gatherers has left our tribe. He took with him all his harvest.</Russian>
+		<Russian>Один из наших собирателей зерна покинул наше племя и унес с собой весь собранный урожай.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SEED_CAMP_LOST_2</Tag>
@@ -8566,7 +8567,7 @@
 		<Italian>Mentre stava giocando in uno dei nostri campi un bambino ha lasciato cadere un carbone ardente, bruciando il campo. Abbiamo perso tutto il raccolto.</Italian>
 		<Spanish>Mientras jugaba alrededor de uno de nuestros campos de smillas, un niño dejó caer por accidente una antorcha y quemó nuestro Campo de semillas. Hemos perdido toda nuestra cosecha.</Spanish>
 		<Polish>Dziecko bawiące się przy magazynach żywności bawiło się palącym patykiem i przypadkiem upuściło go na ziemię. Spłoneły całe zapasy.</Polish>
-		<Russian>While playing around one of our seed camps, a child has accidentally dropped a flaming stick and burned the seed camp. We have lost all our harvest.</Russian>
+		<Russian>Играя в одном из наших лагерей собирателей, один сорванец случайно уронил горящую лучину и поджег весь лагерь. Мы лишились всего урожая.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SEGMENTED_ARMOR_1</Tag>
@@ -8576,7 +8577,7 @@
 		<Italian>L'invenzione dell'armatura a piastre ha fornito ai nostri soldati a piedi una certa protezione contro gli arcieri.</Italian>
 		<Spanish>La invención de la armadura segmentada ha proporcionado a nuestros soldados terrestres mayor protección contra los arqueros.</Spanish>
 		<Polish>Wynalazek zbroi segmentowej poprawi ochronę naszych pieszych żołnierzy przed strzałami łuczników.</Polish>
-		<Russian>Invention of the segmented armor has provided our foot soldiers with some protection against archers.</Russian>
+		<Russian>Изобретение сегментированной брони обеспечило нашей пехоте некоторую защиту от лучников.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SHAMAN_APPRENTICE_1</Tag>
@@ -8584,14 +8585,14 @@
 		<Italian>Un giovane apprendista di un Tempio dello sciamano %s1_civ_adjective si è distinto fra i suoi simili. Sembra essere un'inspirazione per i giovani sciamani.</Italian>
 		<Spanish>Un joven aprendiz proveniente de la Cabaña del chamán %s1:2_civ_adjective ha destacado entre sus compañeros. Parece ser una inspiración para los jóvenes aspirantes.</Spanish>
 		<Polish>Młody adept z plemienia %s1_civ_adjective jest wśród swoich w Świątyni. Wydaje się być inspiracją dla innych.</Polish>
-		<Russian>A young apprentice from the %s1_civ_adjective Shaman Temple has stood out among his partners. He seems to be an inspiration for young applicants.</Russian>
+		<Russian>Среди своих сверстников выделился юный адепт из Храма шамана народа %s1_civ_adjective. Похоже, он вдохновляет своим примером других соискателей.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SHERIFF</Tag>
 		<English>There is a new Sheriff in %s2_city who is doing a great job, but could use some help to deal with the criminals controling large parts of the town.</English>
 		<French>Il y a un nouveau Shérif dans la ville de %s2_city qui fait du bon travail, mais pourrait avoir besoin d'aide avec les criminels qui contrôlent une bonne partie de la ville.</French>
 		<Polish>W mieście %s2_city pojawił się nowy szeryf, który wykonuje świetną robotę. Przydała by mu się jednak pomoc w usuwaniu przestępców z najbiedniejszych częsci miasta.</Polish>
-		<Russian>There is a new Sheriff in %s2_city who is doing a great job, but could use some help to deal with the criminals controling large parts of the town.</Russian>
+		<Russian>В городе %s2_city появился новый шериф, который отлично справляется со своей работой, но ему нужна помощь, чтобы разобраться с преступниками, контролирующими большую часть города.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SILKWORM_GOING_EXTINCT</Tag>

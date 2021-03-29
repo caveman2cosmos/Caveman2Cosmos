@@ -1252,7 +1252,7 @@
 		<Tag>TXT_KEY_BUILD_WATERMILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_WATERMILL]Watermill[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_WATERMILL]Moulin à eau[\LINK]</French>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WATERMILL]Âäÿíóþ ìåëüíèöó[\LINK]</Russian>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WATERMILL]Âîäÿíóþ ìåëüíèöó[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WETLANDS_CAMP</Tag>

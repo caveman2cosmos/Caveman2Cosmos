@@ -336,9 +336,9 @@ namespace algo {
 	// Custom
 	// FUNCTION TEMPLATE contains
 	// test if an element exists in a range
-	template <class T>
-	bool contains(const std::vector<T>& vector, const T& item) {
-		foreach_(const T& element, vector)
+	template<class Item_>
+	bool contains(const std::vector<Item_>& vector, const Item_& item) {
+		foreach_(const Item_& element, vector)
 			if (element == item)
 				return true;
 		return false;

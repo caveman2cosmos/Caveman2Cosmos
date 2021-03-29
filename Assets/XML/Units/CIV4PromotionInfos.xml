@@ -24756,7 +24756,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING5_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DEPUTIZATION</TechPrereq>
-			<MinEraType>C2C_ERA_RENAISSANCE</MinEraType>
+			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iInvestigationChange>5</iInvestigationChange>
@@ -25099,7 +25099,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_ELIXIRS_AND_TONICS</TechPrereq>
-			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
+			<MinEraType>C2C_ERA_RENAISSANCE</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl5Promotion.dds</Button>
@@ -30399,7 +30399,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_SECURITY3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_PHOTOGRAPHY</TechPrereq>
-			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
+			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SECURITY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iVisibilityChange>0</iVisibilityChange>

@@ -188,6 +188,7 @@ enum AssertScopeTypes
 #define FAssertNotInScope(_id_)
 
 #define FASSERT_BOUNDS(lower, upper, index)
+#define FASSERT_NOT_NEGATIVE(value)
 
 #endif
 

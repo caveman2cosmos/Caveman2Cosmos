@@ -248,6 +248,7 @@ public:
 	int countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlot = NULL) const;
 	int countCityFeatures(FeatureTypes eFeature) const;
 	int countNumBuildings(BuildingTypes eBuilding) const;
+	bool hasBuilding(const BuildingTypes eBuilding) const;
 	int countNumCitiesConnectedToCapital() const;
 	int countPotentialForeignTradeCities(const CvArea* pIgnoreArea = NULL) const;
 	int countPotentialForeignTradeCitiesConnected() const;
@@ -384,7 +385,7 @@ public:
 	int specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
 
 	CvPlot* getStartingPlot() const;
-	void setStartingPlot(const CvPlot* pNewValue, bool bUpdateStartDist);
+	void setStartingPlot(CvPlot* pNewValue, const bool bUpdateStartDist);
 
 	int getTotalPopulation() const;
 	int getAveragePopulation() const;
@@ -1705,7 +1706,7 @@ public:
 	virtual int AI_totalUnitAIs(UnitAITypes eUnitAI) const = 0;
 	virtual int AI_totalAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0;
 	virtual int AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0;
-	virtual int AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const = 0;
+	virtual int AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const = 0;
 	virtual int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const = 0;
 
 	virtual int AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum = false, CivicTypes* paeSelectedCivics = NULL) const = 0;
@@ -2247,7 +2248,6 @@ public:
 
 	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
-	bool isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding) const;
 
 	void doGoldenAgebyPercentage(int iPercent);
 	//TB Traits end
