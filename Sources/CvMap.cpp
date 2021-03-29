@@ -1510,17 +1510,6 @@ void CvMap::afterSwitch()
 	gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
 }
 
-const char* CvMap::getMapScript() const
-{
-	if (m_eType > MAP_EARTH)
-	{
-		const CvString& module = GC.getMapInfo(m_eType).getMapScript();
-		if (module.GetLength() > 0)
-			return module.c_str();
-	}
-	return gDLL->getPythonIFace()->getMapScriptModule();
-}
-
 int	CvMap::getNumViewports() const
 {
 	return m_viewports.size();
@@ -1595,6 +1584,17 @@ bool CvMap::plotsInitialized() const
 	return m_pMapPlots != nullptr;
 }
 #endif
+
+const char* CvMap::getMapScript() const
+{
+	if (m_eType > MAP_EARTH)
+	{
+		const CvString& module = GC.getMapInfo(m_eType).getMapScript();
+		if (module.GetLength() > 0)
+			return module.c_str();
+	}
+	return gDLL->getPythonIFace()->getMapScriptModule();
+}
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/

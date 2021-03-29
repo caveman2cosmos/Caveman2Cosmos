@@ -1150,7 +1150,7 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 	{
 		// Python override - Most mapscripts overide
 		bool bAssignStartingPlots = false;
-		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "assignStartingPlots", bAssignStartingPlots)
+		if (Cy::call_override(GC.getMap().getMapScript(), "assignStartingPlots", bAssignStartingPlots)
 		&& bAssignStartingPlots)
 		{
 			return;

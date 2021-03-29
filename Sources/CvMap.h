@@ -73,8 +73,6 @@ public:
 
 	bool plotsInitialized() const;
 
-	const char* getMapScript() const;
-
 	//	Viewports are owned by their underlying maps
 	int	getNumViewports() const;
 	CvViewport* getViewport(int iIndex) const;
@@ -82,6 +80,8 @@ public:
 	void deleteViewport(int iIndex);
 	void setCurrentViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
+
+	const char* getMapScript() const;
 
 	void erasePlots();
 	void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);
