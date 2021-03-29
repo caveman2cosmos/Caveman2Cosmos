@@ -49,14 +49,6 @@ public:
 
 	void setPlotTypes(const int* paiPlotTypes);
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	void setUseDefaultMapScript(bool bTrue);
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
-
 protected:
 
 	// Utility functions for roughenHeights()
@@ -65,13 +57,7 @@ protected:
 
 private:
 	static CvMapGenerator* m_pInst;
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	bool m_bUseDefaultMapScript;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+
 	void setBonusClusterValues(const CvBonusInfo& bonus, const int iWorldSize, int& iGroupRange, int& iGroupRand, int& iMaxCluster);
 	void placeBonusWithCluster(const BonusTypes eBonus, const int iGroupRange, const int iGroupRand, const int iMaxCluster, const bool bIgnoreLatitude, int& iBonusCount, const CvArea *pBestArea=NULL);
 };

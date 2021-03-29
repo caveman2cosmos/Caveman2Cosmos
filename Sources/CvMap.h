@@ -76,6 +76,8 @@ public:
 	void deleteViewport(int iIndex);
 	void setCurrentViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
+
+	const char* getMapScript() const;
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
