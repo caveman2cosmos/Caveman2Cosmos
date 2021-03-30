@@ -178,7 +178,7 @@ public:
 /***** Parallel Maps - Begin *****/
 /*********************************/
 	CvMap& getMap() const;
-	const std::vector<CvMap*>& getMaps() const { return m_maps; }
+	const bst::array<CvMap*, NUM_MAPS>& getMaps() const { return m_maps; }
 
 	CvViewport* getCurrentViewport() const;
 	int	getViewportSizeX() const;
@@ -819,8 +819,8 @@ protected:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	std::vector<CvMap*> m_maps;
-	bool	m_bResourceLayerOn;
+	bst::array<CvMap*, NUM_MAPS> m_maps;
+	bool m_bResourceLayerOn;
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/

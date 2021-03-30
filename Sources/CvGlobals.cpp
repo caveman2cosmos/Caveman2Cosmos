@@ -414,7 +414,7 @@ void cvInternalGlobals::init()
 	
 	for (int i = 0; i < NUM_MAPS; i++)
 	{
-		m_maps.push_back(new CvMap((MapTypes)i));
+		m_maps[i] = new CvMap((MapTypes)i);
 	}
 
 	CvPlayerAI::initStatics();
@@ -458,17 +458,10 @@ void cvInternalGlobals::uninit()
 
 	SAFE_DELETE(m_game);
 	
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	foreach_(const CvMap* map, m_maps)
 	{
 		SAFE_DELETE(map);
 	}
-	m_maps.clear();
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 	CvPlayerAI::freeStatics();
 	CvTeamAI::freeStatics();
