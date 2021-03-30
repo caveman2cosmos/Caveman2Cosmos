@@ -173,15 +173,12 @@ public:
 	CvStatsReporter* getStatsReporterPtr() const 		{ return m_statsReporter; }
 	CvInterface& getInterface() const 					{ return *m_interface; }
 	CvInterface* getInterfacePtr() const 				{ return m_interface; }
-	
+
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	inline CvMap& getMap() const;
-	CvMap& getMapByIndex(MapTypes eIndex) const;
-	//int getNumMaps() const						{ return m_maps.size(); }
-	std::vector<CvMap*>& getMaps()				{ return m_maps; }
-	const std::vector<CvMap*>& getMaps() const	{ return m_maps; }
+	CvMap& getMap() const;
+	const bst::array<CvMap*, NUM_MAPS>& getMaps() const { return m_maps; }
 
 	CvViewport* getCurrentViewport() const;
 	int	getViewportSizeX() const;
@@ -197,9 +194,7 @@ public:
 	CvMapInfo& getMapInfo(MapTypes eMap) const;
 
 	void switchMap(MapTypes eMap);
-protected:
-	void updateMaps();
-public:
+	CvMap& getMapByIndex(MapTypes eIndex) const;
 	void clearSigns();
 	void reprocessSigns();
 	void setResourceLayer(bool bOn);
@@ -208,7 +203,7 @@ public:
 /***** Parallel Maps - End *****/
 /*******************************/
 
-	inline CvGameAI& getGame() const 			{ return *m_game; }
+	CvGameAI& getGame() const 					{ return *m_game; }
 	CvGameAI* getGamePointer();
 	CvRandom& getASyncRand() const 				{ return *m_asyncRand; }
 	CMessageQueue& getMessageQueue() const 		{ return *m_messageQueue; }
@@ -824,8 +819,8 @@ protected:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	std::vector<CvMap*> m_maps;
-	bool	m_bResourceLayerOn;
+	bst::array<CvMap*, NUM_MAPS> m_maps;
+	bool m_bResourceLayerOn;
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/

@@ -28,16 +28,10 @@ public:
 	CyGame* getCyGame() const;
 	CyMap* getCyMap() const;
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	void switchMap(int iMap);
-	int getNumMapInfos() const;
 	CvMapInfo* getMapInfo(int iMap) const;
 	CyMap* getMapByIndex(int iIndex);
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/	
+
 	void setIsInPedia(bool isInPedia);
 	bool isShiftDown() const;
 	bool isAltDown() const;

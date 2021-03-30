@@ -15130,7 +15130,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>

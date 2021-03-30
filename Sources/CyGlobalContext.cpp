@@ -54,17 +54,9 @@ CyMap* CyGlobalContext::getCyMap() const
 	return &cyMap;
 }
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 void CyGlobalContext::switchMap(int iMap)
 {
 	GC.switchMap((MapTypes)iMap);
-}
-
-int CyGlobalContext::getNumMapInfos() const
-{
-	return GC.getNumMapInfos();
 }
 
 CvMapInfo* CyGlobalContext::getMapInfo(int iMap) const
@@ -78,9 +70,6 @@ CyMap* CyGlobalContext::getMapByIndex(int iIndex)
 	cyMap = GC.getMapByIndex((MapTypes)iIndex);
 	return &cyMap;
 }
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/	
 
 void CyGlobalContext::setIsInPedia(bool isInPedia)
 {

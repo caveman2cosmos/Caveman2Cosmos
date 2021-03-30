@@ -192,18 +192,27 @@ CvPlot* CvMapExternal::pointToPlot(float fX, float fY)
 // Serialization:
 void CvMapExternal::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	PROFILE_FUNC();
+
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", bMultiMapFormat, SAVE_VALUE_TYPE_BOOL)
+#ifndef BREAK_SAVES
+	bool bMultiMapFormat = false;
+
+	WRAPPER_READ(wrapper, "CvMapExternal", &bMultiMapFormat);
+#endif
 
 	foreach_(CvMap* map, GC.getMaps())
 	{
 		bool bInitialized = false;
-		WRAPPER_READ(wrapper, "CvMapExternal", &bInitialized)
+		WRAPPER_READ(wrapper, "CvMapExternal", &bInitialized);
+
 		if (bInitialized)
+		{
 			map->read(pStream);
+		}
 	}
 
 	GC.getCurrentViewport()->setActionState(VIEWPORT_ACTION_STATE_LOADING);
@@ -211,15 +220,27 @@ void CvMapExternal::read(FDataStreamBase* pStream)
 
 void CvMapExternal::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	PROFILE_FUNC();
+
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
+
+#ifndef BREAK_SAVES
+	bool bMultiMapFormat = true;	//	Always save in multimap format
+
+	WRAPPER_WRITE(wrapper, "CvMapExternal", bMultiMapFormat);
+#endif
 
 	foreach_(CvMap* map, GC.getMaps())
 	{
 		const bool bInitialized = map->plotsInitialized();
-		WRAPPER_WRITE(wrapper, "CvMapExternal", bInitialized)
+
+		WRAPPER_WRITE(wrapper, "CvMapExternal", bInitialized);
+
 		if (bInitialized)
+		{
 			map->write(pStream);
+		}
 	}
 }

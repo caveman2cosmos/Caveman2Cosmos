@@ -11415,7 +11415,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
@@ -12151,7 +12150,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WALRUS</VicinityBonus>
@@ -12397,7 +12395,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CLAM</VicinityBonus>
@@ -15041,6 +15038,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<bRiver>1</bRiver>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -56367,7 +56365,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WALRUS</VicinityBonus>
@@ -70102,7 +70099,6 @@
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_LEATHER</Bonus>
@@ -70147,7 +70143,6 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqBonuses>
 				<Bonus>BONUS_LEATHER</Bonus>
 				<Bonus>BONUS_CLOTH</Bonus>
@@ -70298,7 +70293,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SALT_PROCESSING</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iMaxLatitude>35</iMaxLatitude>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -70331,7 +70325,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SALT_PROCESSING</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqBonuses>
 				<Bonus>BONUS_COPPER_WARES</Bonus>
 				<Bonus>BONUS_IRON_WARES</Bonus>
@@ -70464,7 +70457,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iCost>35</iCost>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<CommerceChanges>
@@ -71485,7 +71477,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CLAM</VicinityBonus>

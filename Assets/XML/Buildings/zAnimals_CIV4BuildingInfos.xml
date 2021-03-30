@@ -221,7 +221,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -1093,7 +1092,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -15946,7 +15944,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SEAL_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15993,7 +15990,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WALRUS_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20270,7 +20266,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -20417,7 +20412,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -20564,7 +20558,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -20711,7 +20704,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
@@ -20859,7 +20851,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -23682,7 +23673,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -23738,7 +23728,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -23794,7 +23783,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>

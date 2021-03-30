@@ -19,9 +19,6 @@ public:
 	void setMap(CvMap& map);
 	//const CvMapInterfaceBase* getMap() const { return m_pMap; } // Call from C++
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	int getType();
 	CyMap& operator = (CvMap& kMap);
 
@@ -38,9 +35,6 @@ public:
 
 	void closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom);
 	void bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity);
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 	void verifyUnitValidPlot();
 

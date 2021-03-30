@@ -2426,7 +2426,8 @@ void CyEnumsPythonInterface()
 		;
 
 	python::enum_<MapTypes>("MapTypes")
-		//.value("NO_MAP", NO_MAP)
+/*
+		.value("NO_MAP", NO_MAP)
 		.value("MAP_EARTH", MAP_EARTH)
 		.value("MAP_SUBTERRANEAN", MAP_SUBTERRANEAN)
 		.value("MAP_AQUATIC", MAP_AQUATIC)
@@ -2444,7 +2445,7 @@ void CyEnumsPythonInterface()
 		.value("MAP_UNIVERSAL", MAP_UNIVERSAL)
 		.value("MAP_DISTANT", MAP_DISTANT)
 		.value("MAP_HYPERSPACE", MAP_HYPERSPACE)
+*/
 		.value("NUM_MAPS", NUM_MAPS)
 	;
-
 }

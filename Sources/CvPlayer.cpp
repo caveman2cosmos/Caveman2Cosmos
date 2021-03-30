@@ -325,7 +325,7 @@ CvPlayer::~CvPlayer()
 
 	SAFE_DELETE_ARRAY(m_cachedBonusCount);
 
-	for (int i = 0, num = m_groupCycles.size(); i < num; i++)
+	for (int i = 0; i < NUM_MAPS; i++)
 	{
 		SAFE_DELETE(m_groupCycles[i]);
 		SAFE_DELETE(m_plotGroups[i]);
@@ -349,7 +349,8 @@ void CvPlayer::init(PlayerTypes eID)
 		m_cities[i]->init();
 		m_units[i]->init();
 		m_selectionGroups[i]->init(); 
-	}	m_eventsTriggered.init();
+	}
+	m_eventsTriggered.init();
 	//--------------------------------
 	// Init non-saved data
 	setupGraphical();
@@ -757,7 +758,7 @@ void CvPlayer::uninit()
 
 	m_contractBroker.reset();
 
-	for (int i = 0, num = m_groupCycles.size(); i < num; i++)
+	for (int i = 0; i < NUM_MAPS; i++)
 	{
 		m_groupCycles[i]->clear();
 		m_plotGroups[i]->uninit();
@@ -1476,7 +1477,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_aUnitExtraCosts.clear();
 		m_triggersFired.clear();
 	}
-	for (int i = 0, num = m_groupCycles.size(); i < num; i++)
+	for (int i = 0; i < NUM_MAPS; i++)
 	{
 		m_plotGroups[i]->removeAll();
 		m_cities[i]->removeAll();
@@ -15662,33 +15663,6 @@ CLLNode<CvWString>* CvPlayer::headCityNameNode() const
 }
 
 
-void CvPlayer::addContainersForEachMap()
-{
-	for (int i = m_groupCycles.size(); i < NUM_MAPS; i++)
-	{
-		m_groupCycles.push_back(new CLinkList<int>);
-		m_plotGroups.push_back(new FFreeListTrashArray<CvPlotGroup>);
-		m_cities.push_back(new FFreeListTrashArray<CvCityAI>);
-		m_units.push_back(new FFreeListTrashArray<CvUnitAI>);
-		m_selectionGroups.push_back(new FFreeListTrashArray<CvSelectionGroupAI>);
-
-		m_plotGroups[i]->init();
-		m_cities[i]->init();
-		m_units[i]->init();
-		m_selectionGroups[i]->init(); 
-	}
-}
-
-void CvPlayer::initContainersForMap(MapTypes mapIndex)
-{
-	//const int index = static_cast<int>(mapIndex);
-	m_plotGroups[mapIndex]->init();
-	m_cities[mapIndex]->init();
-	m_units[mapIndex]->init();
-	m_selectionGroups[mapIndex]->init(); 
-}
-
-
 CvPlotGroup* CvPlayer::firstPlotGroup(int *pIterIdx, bool bRev) const
 {
 	return !bRev ? m_plotGroups[CURRENT_MAP]->beginIter(pIterIdx) : m_plotGroups[CURRENT_MAP]->endIter(pIterIdx);
@@ -19978,8 +19952,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				m_cityNames.insertAtEnd(szBuffer);
 			}
 		}
-
-		for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+#ifdef BREAK_SAVES
+		for (int i = 0; i < NUM_MAPS; i++)
+#else
+		for (int i = 0; i < 1; i++)
+#endif
 		{
 			m_groupCycles[i]->Read(pStream);
 			ReadStreamableFFreeListTrashArray(*m_plotGroups[i], pStream);
@@ -21021,7 +20998,11 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 		}
 
-		for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+#ifdef BREAK_SAVES
+		for (int i = 0; i < NUM_MAPS; i++)
+#else
+		for (int i = 0; i < 1; i++)
+#endif
 		{
 			m_groupCycles[i]->Write(pStream);
 			WriteStreamableFFreeListTrashArray(*m_plotGroups[i], pStream);
