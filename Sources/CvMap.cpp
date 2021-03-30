@@ -392,8 +392,7 @@ void CvMap::updateIncomingUnits()
 				FErrorMsg("CvPlayer::initUnit returned NULL");
 				continue;
 			}
-			//onMapUnit.setXY(startingPlot->getX(), startingPlot->getY());
-			//onMapUnit.reloadEntity(true);
+			*onMapUnit = offMapUnit;
 			m_IncomingUnits.erase(itr);
 		}
 	}
