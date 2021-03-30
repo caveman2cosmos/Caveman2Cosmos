@@ -269,11 +269,15 @@ m_cachedBonusCount(NULL)
 	{
 		m_cachedTotalCityBaseCommerceRate[i] = MAX_INT;
 	}
-	m_groupCycles.push_back(new CLinkList<int>);
-	m_plotGroups.push_back(new FFreeListTrashArray<CvPlotGroup>);
-	m_cities.push_back(new FFreeListTrashArray<CvCityAI>);
-	m_units.push_back(new FFreeListTrashArray<CvUnitAI>);
-	m_selectionGroups.push_back(new FFreeListTrashArray<CvSelectionGroupAI>);
+
+	for (int i = 0; i < NUM_MAPS; i++)
+	{
+		m_groupCycles.push_back(new CLinkList<int>);
+		m_plotGroups.push_back(new FFreeListTrashArray<CvPlotGroup>);
+		m_cities.push_back(new FFreeListTrashArray<CvCityAI>);
+		m_units.push_back(new FFreeListTrashArray<CvUnitAI>);
+		m_selectionGroups.push_back(new FFreeListTrashArray<CvSelectionGroupAI>);
+	}
 
 	reset(NO_PLAYER, true);
 }
@@ -320,7 +324,7 @@ CvPlayer::~CvPlayer()
 
 	SAFE_DELETE_ARRAY(m_cachedBonusCount);
 
-	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+	for (int i = 0; i < NUM_MAPS; i++)
 	{
 		SAFE_DELETE(m_groupCycles[i]);
 		SAFE_DELETE(m_plotGroups[i]);
@@ -338,7 +342,13 @@ void CvPlayer::init(PlayerTypes eID)
 	reset(eID);
 	//--------------------------------
 	// Init containers
-	initContainersForMap(MAP_EARTH);
+	for (int i = 0; i < NUM_MAPS; i++)
+	{
+		m_plotGroups[i]->init();
+		m_cities[i]->init();
+		m_units[i]->init();
+		m_selectionGroups[i]->init(); 
+	}
 	m_eventsTriggered.init();
 	//--------------------------------
 	// Init non-saved data
@@ -466,12 +476,12 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 
 	//--------------------------------
 	// Init containers
-	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+	for (int i = 0; i < NUM_MAPS; i++)
 	{
-		if (GC.mapInitialized((MapTypes)i))
-		{
-			initContainersForMap((MapTypes)i);
-		}
+		m_plotGroups[i]->init();
+		m_cities[i]->init();
+		m_units[i]->init();
+		m_selectionGroups[i]->init(); 
 	}
 	m_eventsTriggered.init();
 
@@ -747,7 +757,7 @@ void CvPlayer::uninit()
 
 	m_contractBroker.reset();
 
-	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+	for (int i = 0; i < NUM_MAPS; i++)
 	{
 		m_groupCycles[i]->clear();
 		m_plotGroups[i]->uninit();
@@ -779,8 +789,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	//--------------------------------
 	// Uninit class
 	uninit();
-
-	addContainersForEachMap();
 
 	m_iMADDeterrent = 0;
 	m_iMADIncoming = 0;
@@ -1468,7 +1476,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_aUnitExtraCosts.clear();
 		m_triggersFired.clear();
 	}
-	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+	for (int i = 0; i < NUM_MAPS; i++)
 	{
 		m_plotGroups[i]->removeAll();
 		m_cities[i]->removeAll();
@@ -2032,7 +2040,7 @@ int CvPlayer::startingPlotRange() const
 	iRange += std::min((GC.getMap().getNumAreas() + 1) / 2, GC.getGame().countCivPlayersAlive());
 
 	int iResult = 0;
-	if (Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "minStartingDistanceModifier", iResult))
+	if (Cy::call_optional(GC.getMap().getMapScript(), "minStartingDistanceModifier", iResult))
 	{
 		iRange *= std::max<int>(0, iResult + 100);
 		iRange /= 100;
@@ -2125,7 +2133,7 @@ int CvPlayer::findStartingArea() const
 	PROFILE_FUNC();
 
 	int result = -1;
-	if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingArea", Cy::Args() << getID(), result))
+	if (Cy::call_override(GC.getMap().getMapScript(), "findStartingArea", Cy::Args() << getID(), result))
 	{
 		if (result == -1 || GC.getMap().getArea(result) != NULL)
 		{
@@ -2148,7 +2156,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 	PROFILE_FUNC();
 	{
 		int result = -1;
-		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingPlot", Cy::Args() << getID(), result))
+		if (Cy::call_override(GC.getMap().getMapScript(), "findStartingPlot", Cy::Args() << getID(), result))
 		{
 			CvPlot *pPlot = GC.getMap().plotByIndex(result);
 			if (pPlot != NULL)
@@ -15639,28 +15647,6 @@ CLLNode<CvWString>* CvPlayer::headCityNameNode() const
 }
 
 
-void CvPlayer::addContainersForEachMap()
-{
-	while ((int)m_groupCycles.size() < GC.getNumMapInfos())
-	{
-		m_groupCycles.push_back(new CLinkList<int>);
-		m_plotGroups.push_back(new FFreeListTrashArray<CvPlotGroup>);
-		m_cities.push_back(new FFreeListTrashArray<CvCityAI>);
-		m_units.push_back(new FFreeListTrashArray<CvUnitAI>);
-		m_selectionGroups.push_back(new FFreeListTrashArray<CvSelectionGroupAI>);
-	}
-}
-
-void CvPlayer::initContainersForMap(MapTypes mapIndex)
-{
-	int index = static_cast<int>(mapIndex);
-	m_plotGroups[index]->init();
-	m_cities[index]->init();
-	m_units[index]->init();
-	m_selectionGroups[index]->init(); 
-}
-
-
 CvPlotGroup* CvPlayer::firstPlotGroup(int *pIterIdx, bool bRev) const
 {
 	return !bRev ? m_plotGroups[CURRENT_MAP]->beginIter(pIterIdx) : m_plotGroups[CURRENT_MAP]->endIter(pIterIdx);
@@ -19936,8 +19922,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				m_cityNames.insertAtEnd(szBuffer);
 			}
 		}
-
-		for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+#ifdef BREAK_SAVES
+		for (int i = 0; i < NUM_MAPS; i++)
+#else
+		for (int i = 0; i < 1; i++)
+#endif
 		{
 			m_groupCycles[i]->Read(pStream);
 			ReadStreamableFFreeListTrashArray(*m_plotGroups[i], pStream);
@@ -20979,7 +20968,11 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 		}
 
-		for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+#ifdef BREAK_SAVES
+		for (int i = 0; i < NUM_MAPS; i++)
+#else
+		for (int i = 0; i < 1; i++)
+#endif
 		{
 			m_groupCycles[i]->Write(pStream);
 			WriteStreamableFFreeListTrashArray(*m_plotGroups[i], pStream);

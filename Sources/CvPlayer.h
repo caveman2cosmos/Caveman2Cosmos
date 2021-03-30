@@ -1054,9 +1054,6 @@ public:
 	CLLNode<CvWString>* nextCityNameNode(CLLNode<CvWString>* pNode) const;
 	CLLNode<CvWString>* headCityNameNode() const;
 
-	void addContainersForEachMap();
-	void initContainersForMap(MapTypes mapIndex);
-
 	// plot groups iteration
 	DECLARE_INDEX_ITERATOR(const CvPlayer, CvPlotGroup, plot_group_iterator, firstPlotGroup, nextPlotGroup);
 	plot_group_iterator beginPlotGroups() const { return plot_group_iterator(this); }

@@ -61,9 +61,6 @@ protected:
 	void setup();
 
 public:
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	MapTypes getType() const;
 
 	void beforeSwitch();
@@ -76,9 +73,10 @@ public:
 	void deleteViewport(int iIndex);
 	void setCurrentViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+
+	const char* getMapScript() const;
+
+	bool plotsInitialized() const;
 
 	void erasePlots();
 	void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);
