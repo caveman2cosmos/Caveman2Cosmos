@@ -668,7 +668,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		}
 		break;
 	case REMAPPED_CLASS_TYPE_MAPS:
-		entry.numClasses = GC.getNumMapInfos();
+		entry.numClasses = NUM_MAPS;
 		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
@@ -1156,7 +1156,7 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 			result = GC.getNumPromotionLineInfos();
 			break;
 		case REMAPPED_CLASS_TYPE_MAPS:
-			result = GC.getNumMapInfos();
+			result = NUM_MAPS;
 			break;
 		case REMAPPED_CLASS_TYPE_IDEACLASSES:
 			result = GC.getNumIdeaClassInfos();

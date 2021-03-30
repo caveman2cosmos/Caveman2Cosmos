@@ -654,7 +654,6 @@
 			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iCost>45</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

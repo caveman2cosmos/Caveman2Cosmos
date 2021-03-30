@@ -2425,4 +2425,27 @@ void CyEnumsPythonInterface()
 		.value("UNIT_SORT_POWER", UNIT_SORT_POWER)
 		;
 
+	python::enum_<MapTypes>("MapTypes")
+/*
+		.value("NO_MAP", NO_MAP)
+		.value("MAP_EARTH", MAP_EARTH)
+		.value("MAP_SUBTERRANEAN", MAP_SUBTERRANEAN)
+		.value("MAP_AQUATIC", MAP_AQUATIC)
+		.value("MAP_CISLUNAR", MAP_CISLUNAR)
+		.value("MAP_LUNAR", MAP_LUNAR)
+		.value("MAP_SOLAR_SYSTEM", MAP_SOLAR_SYSTEM)
+		.value("MAP_MARTIAN", MAP_MARTIAN)
+		.value("MAP_VENUSIAN", MAP_VENUSIAN)
+		.value("MAP_JOVIAN", MAP_JOVIAN)
+		.value("MAP_TITANIC", MAP_TITANIC)
+		.value("MAP_INTERSTELLAR", MAP_INTERSTELLAR)
+		.value("MAP_PLASMA", MAP_PLASMA)
+		.value("MAP_GALACTIC", MAP_GALACTIC)
+		.value("MAP_MILKY_WAY", MAP_MILKY_WAY)
+		.value("MAP_UNIVERSAL", MAP_UNIVERSAL)
+		.value("MAP_DISTANT", MAP_DISTANT)
+		.value("MAP_HYPERSPACE", MAP_HYPERSPACE)
+*/
+		.value("NUM_MAPS", NUM_MAPS)
+	;
 }

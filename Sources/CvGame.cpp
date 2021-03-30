@@ -652,18 +652,12 @@ void CvGame::uninit()
 
 	if ( CvPlayerAI::areStaticsInitialized() )
 	{
-		for (int i = 0; i < GC.getNumMapInfos(); i++)
-		{
-			if ( GC.mapInitialized((MapTypes)i) )
-			{
-				// Cast to the internal class
-				CvMap&	map = GC.getMapByIndex((MapTypes)i);
+		CvMapInitData defaultMapData;
 
-				CvMapInitData defaultMapData;
-
-				map.reset(&defaultMapData);
-			}
-		}
+		algo::for_each(GC.getMaps()
+			| filtered(bind(CvMap::plotsInitialized, _1))
+			, bind(CvMap::reset, _1, &defaultMapData)
+		);
 
 		for(int i = 0; i < MAX_PLAYERS; i++)
 		{
