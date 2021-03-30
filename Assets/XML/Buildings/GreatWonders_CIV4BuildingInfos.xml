@@ -2931,11 +2931,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PORTUGAL_FEITORIA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PORTUGAL_FEITORIA</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
 			</PrereqInCityBuildings>
@@ -3170,6 +3170,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ECOSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
@@ -5481,6 +5482,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SKINNING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>160</iCost>
 			<YieldChanges>
@@ -6346,11 +6348,11 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAGELLAN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAGELLAN</MovieDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_NAVIGATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHIPYARD</BuildingType>
 			</PrereqInCityBuildings>
@@ -6636,6 +6638,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SKINNING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>160</iCost>
 			<YieldChanges>
@@ -6765,6 +6768,7 @@
 			<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqBonuses>
 				<Bonus>BONUS_NANOTUBES</Bonus>
 				<Bonus>BONUS_TITANIUM_WARES</Bonus>
@@ -6840,10 +6844,10 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MOAI_STATUES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MO</MovieDefineTag>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<Bonus>BONUS_STONE</Bonus>
 			<iCost>624</iCost>
 			<SeaPlotYieldChanges>
@@ -8172,6 +8176,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANIMISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>296</iCost>
 			<YieldChanges>
@@ -9411,6 +9416,7 @@
 			<PrereqTech>TECH_REALISM</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
@@ -9833,11 +9839,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_COLOSSUS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COLOSSUS</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_COLOSSUS</ConstructSound>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
@@ -10249,11 +10255,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_LIGHTHOUSE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GREAT_LIGHTHOUSE</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_LIGHTHOUSE</ConstructSound>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
@@ -11313,6 +11319,7 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
@@ -12184,10 +12191,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_VENETIAN_ARSENAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_VENETIAN_ARSENAL</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_DRYDOCK</ConstructSound>
-			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHIPYARD</BuildingType>
 			</PrereqInCityBuildings>
@@ -12929,6 +12936,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HARBORMASTER_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
@@ -15320,6 +15328,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WAVES</ArtDefineTag>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
@@ -16179,10 +16188,10 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iConquestProb>100</iConquestProb>
 			<iForeignTradeRouteModifier>50</iForeignTradeRouteModifier>
 			<iAsset>10</iAsset>
@@ -16713,6 +16722,7 @@
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -17788,6 +17798,7 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3780</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -18877,6 +18888,7 @@
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -19233,6 +19245,7 @@
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>

@@ -337,6 +337,7 @@
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1566</iCost>
 			<iConquestProb>100</iConquestProb>

@@ -4096,7 +4096,7 @@ int CvPromotionInfo::getNumMapTypes() const
 
 bool CvPromotionInfo::isMapType(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), i)
+	FASSERT_BOUNDS(0, NUM_MAPS, i)
 	return algo::contains(m_aiMapTypes, i);
 }
 //Arrays
@@ -14183,7 +14183,7 @@ int CvBuildInfo::getNumMapTypes() const
 
 bool CvBuildInfo::isMapType(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), i)
+	FASSERT_BOUNDS(0, NUM_MAPS, i)
 	return algo::contains(m_aiMapTypes, i);
 }
 
@@ -14574,7 +14574,7 @@ int CvGoodyInfo::getNumMapTypes() const
 
 bool CvGoodyInfo::isMapType(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), i)
+	FASSERT_BOUNDS(0, NUM_MAPS, i)
 	return algo::contains(m_aiMapTypes, i);
 }
 
@@ -15470,7 +15470,7 @@ int CvImprovementInfo::getNumMapTypes() const
 
 bool CvImprovementInfo::isMapType(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), i)
+	FASSERT_BOUNDS(0, NUM_MAPS, i)
 	return algo::contains(m_aiMapTypes, i);
 }
 
@@ -16621,7 +16621,7 @@ int CvBonusInfo::getNumMapTypes() const
 
 bool CvBonusInfo::isMapType(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), i)
+	FASSERT_BOUNDS(0, NUM_MAPS, i)
 	return algo::contains(m_aiMapTypes, i);
 }
 
@@ -17215,7 +17215,7 @@ int CvFeatureInfo::getNumMapTypes() const
 
 bool CvFeatureInfo::isMapType(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), i)
+	FASSERT_BOUNDS(0, NUM_MAPS, i)
 	return algo::contains(m_aiMapTypes, i);
 }
 
@@ -18075,7 +18075,7 @@ int CvTerrainInfo::getNumMapTypes() const
 
 bool CvTerrainInfo::isMapType(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), i)
+	FASSERT_BOUNDS(0, NUM_MAPS, i)
 	return algo::contains(m_aiMapTypes, i);
 }
 
@@ -21083,7 +21083,7 @@ int CvProjectInfo::getNumMapTypes() const
 
 bool CvProjectInfo::isMapType(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), i)
+	FASSERT_BOUNDS(0, NUM_MAPS, i)
 	return algo::contains(m_aiMapTypes, i);
 }
 
