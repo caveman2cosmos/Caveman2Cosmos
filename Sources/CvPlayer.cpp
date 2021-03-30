@@ -2181,9 +2181,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 	{
 		iBestArea = findStartingArea();
 	}
-#ifndef PARALLEL_MAPS
-	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
-#endif
+
 	for (int iPass = 0; iPass < 2; iPass++)
 	{
 		CvPlot *pBestPlot = NULL;
@@ -2194,9 +2192,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 			CvPlot* plot = GC.getMap().plotByIndex(iI);
 
 			if (plot->isStartingPlot()
-#ifndef PARALLEL_MAPS
-			|| !plot->isMapType(earth)
-#endif
+			|| (!GC.getENABLE_MULTI_MAPS() && !plot->isMapType(GC.getMAPCATEGORY_EARTH()))
 			|| iBestArea != -1 && plot->getArea() != iBestArea)
 			{
 				continue;

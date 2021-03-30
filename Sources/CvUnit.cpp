@@ -42656,6 +42656,9 @@ ReligionTypes CvUnit::getReligion() const
 
 bool CvUnit::canGoToMap(const CvMissionInfo& info) const
 {
+	if (!GC.getENABLE_MULTI_MAPS())
+		return false;
+
 	const TechTypes requiredTech = info.getTechRequired();
 	if (requiredTech != NO_TECH && !GET_TEAM(getTeam()).isHasTech(requiredTech))
 		return false;
