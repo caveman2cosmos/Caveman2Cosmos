@@ -23,10 +23,6 @@ CyMap::CyMap(CvMap* pMap) : m_pMap(pMap)
 {
 }
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-
 int CyMap::getType()
 {
 	return m_pMap ? m_pMap->getType() : NO_MAP;
@@ -36,6 +32,11 @@ CyMap& CyMap::operator=(CvMap& kMap)
 {
 	m_pMap = &kMap;
 	return *this;
+}
+
+bool CyMap::plotsInitialized() const
+{
+	return m_pMap->plotsInitialized();
 }
 
 bool CyMap::viewportsEnabled()
@@ -87,10 +88,6 @@ void CyMap::bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool 
 {
 	GC.getCurrentViewport()->bringIntoView(iX, iY, NULL, bLookAt, bForceCenter, bDisplayCityScreen, bSelectCity, bAddSelectedCity);
 }
-
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 void CyMap::erasePlots()
 {
