@@ -652,12 +652,12 @@ void CvGame::uninit()
 
 	if ( CvPlayerAI::areStaticsInitialized() )
 	{
-		foreach_(CvMap* map, GC.getMaps()
-		| filtered(bind(CvMap::plotsInitialized, _1)))
-		{
-			CvMapInitData defaultMapData;
-			map->reset(&defaultMapData);
-		}
+		CvMapInitData defaultMapData;
+
+		algo::for_each(GC.getMaps()
+			| filtered(bind(CvMap::plotsInitialized, _1))
+			, bind(CvMap::reset, _1, &defaultMapData)
+		);
 
 		for(int i = 0; i < MAX_PLAYERS; i++)
 		{
