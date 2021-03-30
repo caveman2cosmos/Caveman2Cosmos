@@ -1111,6 +1111,7 @@ public:
 	DllExport int getNumUnits() const;
 	CvUnit* getUnit(int iID) const;
 	CvUnit* addUnit();
+	CvUnit& addUnit(CvUnit& unit);
 	void deleteUnit(int iID);
 
 	// selection groups iteration
@@ -1725,8 +1726,8 @@ public:
 	virtual int AI_maxGoldTrade(PlayerTypes ePlayer) const = 0;
 protected:
 
-	int m_iStartingX;
-	int m_iStartingY;
+	std::vector<int> m_vStartingX;
+	std::vector<int> m_vStartingY;
 	int m_iTotalPopulation;
 	int m_iTotalLand;
 	int m_iTotalLandScored;
