@@ -2854,24 +2854,6 @@ bool cvInternalGlobals::getReprocessGreatWallDynamically() const
 	return m_bViewportsEnabled || getDefineBOOL("DYNAMIC_GREAT_WALL");
 }
 
-void cvInternalGlobals::updateMaps()
-{
-	if (getDefineINT("ENABLE_MULTI_MAPS"))
-	{
-		for (int i = 1; i < NUM_MAPS; i++)
-		{
-			m_maps.push_back(new CvMap((MapTypes)i));
-		}
-
-		FAssert(m_maps.size() == NUM_MAPS);
-
-		for (int i = 0; i < MAX_PLAYERS; i++)
-		{
-			GET_PLAYER((PlayerTypes)i).addContainersForEachMap();
-		}
-	}
-}
-
 void cvInternalGlobals::setResourceLayer(bool bOn)
 {
 	m_bResourceLayerOn = bOn;

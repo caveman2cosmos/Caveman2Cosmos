@@ -83,8 +83,6 @@ public:
 
 	const char* getMapScript() const;
 
-	bool plotsInitialized() const;
-
 	void erasePlots();
 	void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);
 	void resetRevealedPlots(TeamTypes eTeam);
