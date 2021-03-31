@@ -31480,7 +31480,6 @@
 			<PrereqTech>TECH_FIRE_SUPPRESSION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
@@ -62323,7 +62322,6 @@
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HARBORMASTER_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
@@ -65613,7 +65611,6 @@
 			<PrereqTech>TECH_PSYCHOLOGY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iCost>830</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -71238,7 +71235,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MARINE_BIOLOGY</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iCost>630</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -84008,7 +84004,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 			</PrereqInCityBuildings>
@@ -87573,7 +87568,6 @@
 			<PrereqTech>TECH_SEXTANT</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARINA</BuildingType>
 			</PrereqInCityBuildings>
