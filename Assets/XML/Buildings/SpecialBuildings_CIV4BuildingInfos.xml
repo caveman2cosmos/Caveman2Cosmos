@@ -10232,7 +10232,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_STILT_HUT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STILT_HUT_STRATEGY</Strategy>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BAMBOO</Bonus>
