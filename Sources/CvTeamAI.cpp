@@ -3953,14 +3953,6 @@ void CvTeamAI::AI_doWar()
 		return;
 	}
 
-	if (GC.getUSE_AI_CAN_DO_WARPLANS_CALLBACK())
-	{
-		// allow python to handle it
-		if (Cy::call<bool>(PYGameModule, "AI_doWar", Cy::Args() << getID()))
-		{
-			return;
-		}
-	}
 	const int iEnemyPowerPercent = AI_getEnemyPowerPercent();
 
 	int iExtraWarExpenses = GC.getDefineINT("ESTIMATED_EXTRA_WAR_COSTS_PER_ERA", 15) * (1 + GET_PLAYER(getLeaderID()).getCurrentEra());
