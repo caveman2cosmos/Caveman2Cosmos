@@ -4398,7 +4398,7 @@ void CvTeamAI::AI_doWar()
 				logBBAI("  Team %d (%S) estimating DOGPILE warplan financial costs, iExtraWarExpenses: %d, iDogPileFundedPercent: %d, iSafePercent: %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iExtraWarExpenses / 3, iDogPileFundedPercent, iSafePercent);
 			}
 			// Finances oppose war if we can't afford any of em
-			bFinancesOpposeWar = !bFinancesProDogpileWar && !bFinancesProLimitedWar && !bFinancesProTotalWar;
+			bFinancesOpposeWar = !bFinancesProDogpileWar && !bFinancesProLimitedWar;
 		}
 
 		// Afforess - Resume normal BTS warplanning
