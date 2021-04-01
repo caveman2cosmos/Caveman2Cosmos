@@ -4282,7 +4282,7 @@ void CvTeamAI::AI_doWar()
 	if (getAnyWarPlanCount(true) == 0 || iEnemyPowerPercent < 45)
 	{
 		bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
-		int iFinancialTroubleCount = 0;
+		//int iFinancialTroubleCount = 0;
 		int iDaggerCount = 0;
 		int iGetBetterUnitsCount = 0;
 		for (iI = 0; iI < MAX_PLAYERS; iI++)
@@ -4301,10 +4301,12 @@ void CvTeamAI::AI_doWar()
 				{
 					iGetBetterUnitsCount++;
 				}
+				/* Toffer - Unused Variable
 				if (playerX.AI_isFinancialTrouble())
 				{
 					iFinancialTroubleCount++;
 				}
+				*/
 			}
 		}
 
@@ -4384,20 +4386,17 @@ void CvTeamAI::AI_doWar()
 		{
 			// Afforess - It is possible a more limited war could be cheaper
 			// Account for that here
-			int iLimitedWarFundedPercent = kTeamLeader.AI_profitMargin(iExtraWarExpenses / 2);
+			const int iLimitedWarFundedPercent = kTeamLeader.AI_profitMargin(iExtraWarExpenses / 2);
+			bFinancesProLimitedWar = iLimitedWarFundedPercent > iSafePercent;
+
+			const int iDogPileFundedPercent = kTeamLeader.AI_profitMargin(iExtraWarExpenses / 3);
+			bFinancesProDogpileWar = iDogPileFundedPercent > iSafePercent;
+
 			if (gTeamLogLevel >= 1)
 			{
 				logBBAI("  Team %d (%S) estimating LIMITED warplan financial costs, iExtraWarExpenses: %d, iLimitedWarFundedPercent: %d, iSafePercent: %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iExtraWarExpenses / 2, iLimitedWarFundedPercent, iSafePercent);
-			}
-			bFinancesProLimitedWar = iLimitedWarFundedPercent > iSafePercent;
-
-			int iDogPileFundedPercent = kTeamLeader.AI_profitMargin(iExtraWarExpenses / 3);
-			if (gTeamLogLevel >= 1)
-			{
 				logBBAI("  Team %d (%S) estimating DOGPILE warplan financial costs, iExtraWarExpenses: %d, iDogPileFundedPercent: %d, iSafePercent: %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iExtraWarExpenses / 3, iDogPileFundedPercent, iSafePercent);
 			}
-			bFinancesProDogpileWar = iLimitedWarFundedPercent > iSafePercent;
-
 			// Finances oppose war if we can't afford any of em
 			bFinancesOpposeWar = !bFinancesProDogpileWar && !bFinancesProLimitedWar && !bFinancesProTotalWar;
 		}
