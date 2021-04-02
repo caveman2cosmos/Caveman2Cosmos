@@ -2158,9 +2158,10 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 		int result = -1;
 		if (Cy::call_override(GC.getMap().getMapScript(), "findStartingPlot", Cy::Args() << getID(), result))
 		{
-			if (result > -1 && result < GC.getMap().numPlots())
+			CvPlot *pPlot = GC.getMap().plotByIndex(result);
+			if (pPlot != NULL)
 			{
-				return GC.getMap().plotByIndex(result);
+				return pPlot;
 			}
 			FErrorMsg("python findStartingPlot() returned an invalid plot index!");
 		}
