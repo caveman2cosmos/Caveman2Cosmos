@@ -1452,14 +1452,14 @@ public:
 	virtual ~CvMissionInfo();
 
 	DllExport int getTime() const;
-
 	bool isSound() const;
 	DllExport bool isTarget() const;
 	bool isBuild() const;
 	bool getVisible() const;
 	DllExport EntityEventTypes getEntityEvent() const;
-
-	const TCHAR* getWaypoint() const;		// effect type, Exposed to Python
+	const TCHAR* getWaypoint() const;		// effect type
+	TechTypes getTechRequired() const { return NO_TECH; }
+	BuildingTypes getBuildingRequired() const { return NO_BUILDING; }
 
 	bool read(CvXMLLoadUtility* pXML);
 
