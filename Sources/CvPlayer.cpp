@@ -1,6 +1,5 @@
 // player.cpp
 
-#include "CvGameAI.h"
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
@@ -25,7 +24,7 @@
 #include "CvSelectionGroupAI.h"
 #include "CvTalkingHeadMessage.h"
 #include "CvTeamAI.h"
-#include "CvUnitAI.h"
+#include "CvUnit.h"
 #include "CvViewport.h"
 #include "CyCity.h"
 #include "CvDLLFAStarIFaceBase.h"
@@ -800,8 +799,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_bMADTrigger[iI] = false;
 	}
 
-	m_vStartingX = std::vector<int>(NUM_MAPS, INVALID_PLOT_COORD);
-	m_vStartingY = std::vector<int>(NUM_MAPS, INVALID_PLOT_COORD);
+	m_iStartingX = INVALID_PLOT_COORD;
+	m_iStartingY = INVALID_PLOT_COORD;
 	m_iTotalPopulation = 0;
 	m_iTotalLand = 0;
 	m_iTotalLandScored = 0;
@@ -2151,6 +2150,7 @@ int CvPlayer::findStartingArea() const
 	return bestStartingArea ? bestStartingArea->getID() : -1;
 }
 
+
 CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 {
 	PROFILE_FUNC();
@@ -2183,6 +2183,8 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 		iBestArea = findStartingArea();
 	}
 
+	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
+
 	for (int iPass = 0; iPass < 2; iPass++)
 	{
 		CvPlot *pBestPlot = NULL;
@@ -2193,7 +2195,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 			CvPlot* plot = GC.getMap().plotByIndex(iI);
 
 			if (plot->isStartingPlot()
-			|| (!GC.getENABLE_MULTI_MAPS() && !plot->isMapType(GC.getMAPCATEGORY_EARTH()))
+			|| !plot->isMapType(earth)
 			|| iBestArea != -1 && plot->getArea() != iBestArea)
 			{
 				continue;
@@ -3063,7 +3065,7 @@ CvUnit* CvPlayer::initUnit(UnitTypes eUnit, int iX, int iY, UnitAITypes eUnitAI,
 {
 	PROFILE_FUNC();
 
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
+	FAssertMsg(eUnit != NO_UNIT, "Unit is not assigned a valid value");
 
 	CvUnit* pUnit = addUnit();
 	FAssertMsg(pUnit != NULL, "Unit is not assigned a valid value");
@@ -9636,7 +9638,7 @@ int CvPlayer::specialistCommerceTimes100(SpecialistTypes eSpecialist, CommerceTy
 
 CvPlot* CvPlayer::getStartingPlot() const
 {
-	return GC.getMap().plotSorenINLINE(m_vStartingX[CURRENT_MAP], m_vStartingY[CURRENT_MAP]);
+	return GC.getMap().plotSorenINLINE(m_iStartingX, m_iStartingY);
 }
 
 
@@ -9664,8 +9666,8 @@ void CvPlayer::setStartingPlot(CvPlot* newPlot, const bool bUpdateStartDist)
 
 		if (newPlot == NULL)
 		{
-			m_vStartingX[CURRENT_MAP] = INVALID_PLOT_COORD;
-			m_vStartingY[CURRENT_MAP] = INVALID_PLOT_COORD;
+			m_iStartingX = INVALID_PLOT_COORD;
+			m_iStartingY = INVALID_PLOT_COORD;
 
 			if (bUpdateStartDist && oldPlot != NULL)
 			{
@@ -9676,8 +9678,8 @@ void CvPlayer::setStartingPlot(CvPlot* newPlot, const bool bUpdateStartDist)
 		{
 			newPlot->setStartingPlot(true);
 
-			m_vStartingX[CURRENT_MAP] = newPlot->getX();
-			m_vStartingY[CURRENT_MAP] = newPlot->getY();
+			m_iStartingX = newPlot->getX();
+			m_iStartingY = newPlot->getY();
 
 			getStartingPlot()->area()->changeNumStartingPlots(1);
 
@@ -12421,14 +12423,6 @@ void CvPlayer::setNewPlayerAlive(bool bNewValue)
 	}
 }
 
-template <class T>
-bool hasAny(const std::vector<FFreeListTrashArray<T>*>& vector)
-{
-	foreach_(const FFreeListTrashArray<T>* container, vector)
-		if (container->getCount() > 0)
-			return true;
-	return false;
-}
 
 void CvPlayer::verifyAlive()
 {
@@ -12442,10 +12436,10 @@ void CvPlayer::verifyAlive()
 		// Check if player is defeated
 		if (
 			// No city nor units is always defeat
-			!hasAny(m_cities)
+			getNumCities() == 0
 		&&
 			( // No city confirmed
-				!hasAny(m_units)
+				getNumUnits() == 0
 				||
 				// Are units enough to stay alive?
 				!GC.getGame().isOption(GAMEOPTION_COMPLETE_KILLS) // If option is active, YES.
@@ -12482,7 +12476,7 @@ void CvPlayer::verifyAlive()
 			}
 		}
 	}
-	else if (hasAny(m_cities) || hasAny(m_units))
+	else if (getNumCities() > 0 || getNumUnits() > 0)
 	{
 		setAlive(true);
 	}
@@ -15780,6 +15774,7 @@ int CvPlayer::getNumCities() const
 	return m_cities[CURRENT_MAP]->getCount();
 }
 
+
 CvCity* CvPlayer::getCity(int iID) const
 {
 	return m_cities[CURRENT_MAP]->getAt(iID);
@@ -15863,18 +15858,12 @@ CvUnit* CvPlayer::addUnit()
 	return m_units[CURRENT_MAP]->add();
 }
 
-CvUnit& CvPlayer::addUnit(CvUnit& unit)
-{
-	CvUnit& newUnit = *addUnit();
-	newUnit = unit;
-	return newUnit;
-}
 
 void CvPlayer::deleteUnit(int iID)
 {
 	if (getUnit(iID)->isCommander())
 	{
-		for (uint32_t i = 0; i < Commanders.size(); i++)
+		for (int i=0; i < (int)Commanders.size(); i++)
 		{
 			if (Commanders[i]->getID() == iID)
 			{
@@ -19302,19 +19291,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMADIncoming);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMADOutgoing);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMADNukesCount);
-#ifdef BREAK_SAVES
-		//algo::read(m_vStartingX, wrapper);
-		//algo::read(m_vStartingY, wrapper);
-#else
-		int m_iStartingX;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingX);
-		m_vStartingX[0] = m_iStartingX;
-
-		int m_iStartingY;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingY);
-		m_vStartingY[0] = m_iStartingY;
-#endif
-
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalPopulation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLand);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLandScored);
@@ -20628,17 +20606,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMADIncoming);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMADOutgoing);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMADNukesCount);
-
-#ifdef BREAK_SAVES
-		//algo::write(m_vStartingX, wrapper);
-		//algo::write(m_vStartingY, wrapper);
-#else
-		const int m_iStartingX = m_vStartingX[0];
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStartingX);
-
-		const int m_iStartingY = m_vStartingY[0];
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStartingY);
-#endif
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalPopulation);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalLand);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalLandScored);

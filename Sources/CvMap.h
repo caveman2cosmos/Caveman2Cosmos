@@ -19,7 +19,6 @@ class CvArea;
 class CvCity;
 class CvPlotGroup;
 class CvSelectionGroup;
-class CvUnitAI;
 class CvViewport;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
@@ -47,7 +46,7 @@ class CvMap : public CvMapInterfaceBase
 	friend class CyMap;
 
 public:
-	explicit CvMap(MapTypes eMap);
+	explicit CvMap(/* Parallel Maps */ MapTypes eMap);
 	virtual ~CvMap();
 
 	CvMapInterfaceBase*	getUnderlyingMap() const { return const_cast<CvMap*>(this); }
@@ -66,9 +65,6 @@ public:
 
 	void beforeSwitch();
 	void afterSwitch();
-
-	void updateIncomingUnits();
-	void addIncomingUnit(CvUnitAI& unit, int numTravelTurns);
 
 	//	Viewports are owned by their underlying maps
 	int	getNumViewports() const;
@@ -273,9 +269,6 @@ protected:
 	CvPlot* m_pMapPlots;
 
 	FFreeListTrashArray<CvArea> m_areas;
-
-	typedef std::pair<CvUnitAI, int> IncomingUnit;
-	std::vector<IncomingUnit> m_IncomingUnits;
 
 	void calculateAreas();
 };

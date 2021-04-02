@@ -456,13 +456,10 @@ class CvUnit : public CvDLLEntity
 public:
 
 	CvUnit(bool bIsDummy = false);
-	CvUnit(const CvUnit& other);
 	virtual ~CvUnit();
 
 	CvGameObjectUnit* getGameObject() { return &m_GameObject; }
 	const CvGameObjectUnit* getGameObject() const { return &m_GameObject; }
-
-	CvUnit& operator=(const CvUnit& other);
 
 	// Comparison operators
 	// Use address identity for now (more than one map means x/y compare wouldn't work)
@@ -564,6 +561,7 @@ public:
 	void scrap();
 
 	bool canTradeUnit(PlayerTypes eReceivingPlayer) const;
+
 	void tradeUnit(PlayerTypes eReceivingPlayer);
 	bool spyNuke(int iX, int iY, bool bCaught);
 	bool spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const;
@@ -573,9 +571,6 @@ public:
 	int getHurryFood(const CvPlot* pPlot) const;
 	bool canHurryFood(const CvPlot* pPlot) const;
 	bool hurryFood();
-
-	bool canGoToMap(const CvMissionInfo& info) const;
-	void goToMap(MapTypes eMap);
 
 	bool canPerformInquisition(const CvPlot* pPlot) const;
 	bool performInquisition();
