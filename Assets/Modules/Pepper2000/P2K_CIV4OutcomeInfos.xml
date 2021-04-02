@@ -225,7 +225,7 @@
 			<Type>OUTCOME_UPGRADE_TO_PLANET_SETTLER</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_PLANET_SETTLER</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_PLANET_SETTLER_MESSAGE</Message>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
@@ -297,7 +297,7 @@
 			<Type>OUTCOME_SAMPLE_STUDY</Type>
 			<Description>TXT_KEY_OUTCOME_SAMPLE_STUDY</Description>
 			<Message>TXT_KEY_OUTCOME_SAMPLE_STUDY_MESSAGE</Message>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_SATELLITES</PrereqTech>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
