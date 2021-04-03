@@ -1085,12 +1085,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RITUALISM</PrereqTech>
 			<RawVicinityBonus>BONUS_KANGAROO</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
@@ -1457,12 +1457,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<RawVicinityBonus>BONUS_TURQUOISE</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
@@ -1494,12 +1494,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<RawVicinityBonus>BONUS_PEYOTE</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
@@ -1531,12 +1531,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
@@ -1865,12 +1865,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_SPICES</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
@@ -2172,12 +2172,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
@@ -2418,12 +2418,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
 			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -2536,12 +2536,12 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_MUREX</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
@@ -3270,12 +3270,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<RawVicinityBonus>BONUS_SEA_LION_AND_SEAL</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -3397,12 +3397,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
@@ -3593,12 +3593,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<RawVicinityBonus>BONUS_COFFEE</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -4246,12 +4246,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<RawVicinityBonus>BONUS_BISON</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
@@ -4363,12 +4363,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<RawVicinityBonus>BONUS_CORN</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
@@ -4572,12 +4572,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_POTATOES</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
@@ -4825,12 +4825,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MONOTHEISM</PrereqTech>
 			<RawVicinityBonus>BONUS_SALT</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
@@ -5076,12 +5076,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<RawVicinityBonus>BONUS_NATURAL_GAS</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
@@ -5284,12 +5284,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<RawVicinityBonus>BONUS_BANANA</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
@@ -5819,12 +5819,12 @@
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_RICE</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_HILL</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
@@ -5995,12 +5995,12 @@
 			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_TURQUOISE</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
@@ -6215,12 +6215,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
@@ -6252,12 +6252,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<RawVicinityBonus>BONUS_COCA</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
@@ -6315,12 +6315,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<RawVicinityBonus>BONUS_HEMP</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
@@ -7020,12 +7020,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_LLAMA</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
@@ -7235,12 +7235,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -7391,12 +7391,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<RawVicinityBonus>BONUS_SILK</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
@@ -7459,12 +7459,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
 			<RawVicinityBonus>BONUS_SEA_LION_AND_SEAL</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_HILL</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
@@ -7534,12 +7534,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<RawVicinityBonus>BONUS_SHRIMP</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_MARSH</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
@@ -7649,12 +7649,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<RawVicinityBonus>BONUS_MAMMOTH</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
@@ -7855,12 +7855,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<RawVicinityBonus>BONUS_NATURAL_GAS</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -8077,12 +8077,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
@@ -8361,12 +8361,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEDITATION</PrereqTech>
 			<RawVicinityBonus>BONUS_COW</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
@@ -8622,12 +8622,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			<RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DUNES</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
@@ -8858,12 +8858,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -9140,12 +9140,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
