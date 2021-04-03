@@ -8309,7 +8309,7 @@ int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 
 
 int64_t CvPlayer::calculatePreInflatedCosts() const
-{ 
+{
 	if (isAnarchy())
 	{
 		return 0;
@@ -8370,12 +8370,51 @@ int CvPlayer::calculateInflationRate() const
 int64_t CvPlayer::getInflationCost() const
 {
 	const int64_t iPreInflatedCost = calculatePreInflatedCosts();
-	return iPreInflatedCost * getInflationMod10000() / 10000 - iPreInflatedCost;
+	return isAnarchy() ? 0 : iPreInflatedCost * getInflationMod10000() / 10000 - iPreInflatedCost;
 }
 
 int64_t CvPlayer::getFinalExpense() const
 {
-	return calculatePreInflatedCosts() * getInflationMod10000() / 10000;
+	return isAnarchy() ? 0 : calculatePreInflatedCosts() * getInflationMod10000() / 10000;
+}
+
+short CvPlayer::getProfitMargin(int &iTotalCommerce, int64_t &iNetIncome, int64_t &iNetExpenses, int iExtraExpense, int iExtraExpenseMod) const
+{
+	PROFILE_FUNC();
+	if (isAnarchy())
+	{
+		return 100;
+	}
+	iTotalCommerce = calculateTotalYield(YIELD_COMMERCE);
+	iNetIncome = getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
+
+	// Afforess - iExtraExpense lets us "extrapolate" our cost percents if we have extra future expenses
+	// iExtraExpense should be between 0 (default) and some positive extra gold per turn cost to us
+	iNetExpenses = getFinalExpense() + std::max(0, iExtraExpense);
+
+	if (iExtraExpenseMod > 0)
+	{
+		iNetExpenses *= 100 + iExtraExpenseMod;
+		iNetExpenses /= 100;
+	}
+	// Mainly gold per turn from trade.
+	iNetExpenses += std::max(0, -getGoldPerTurn());
+
+	// Toffer - Profit margin at 100% taxation
+	const int64_t iMaxTaxIncome = iNetIncome + (100 - getCommercePercent(COMMERCE_GOLD)) * iTotalCommerce / 100;
+	if (iNetExpenses >= iMaxTaxIncome)
+	{
+		return 0;
+	}
+	return static_cast<short>(100 - 100 * iNetExpenses / std::max<int64_t>(1, iMaxTaxIncome));
+}
+
+short CvPlayer::getProfitMargin(int iExtraExpense, int iExtraExpenseMod) const
+{
+	int iTotalCommerce;
+	int64_t iNetIncome;
+	int64_t iNetExpenses;
+	return getProfitMargin(iTotalCommerce, iNetIncome, iNetExpenses, iExtraExpense, iExtraExpenseMod);
 }
 
 int64_t CvPlayer::calculateBaseNetGold() const

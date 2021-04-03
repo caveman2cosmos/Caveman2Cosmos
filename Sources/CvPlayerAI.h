@@ -152,8 +152,8 @@ public:
 
 	bool AI_avoidScience() const;
 	bool AI_isFinancialTrouble() const;
-	int AI_profitMargin(int iExtraCost = 0) const;
-	int AI_safeProfitMargin() const;
+	short AI_fundingHealth(int iExtraExpense = 0, int iExtraExpenseMod = 0) const;
+	short AI_safeFunding() const;
 	int AI_goldTarget() const;
 	int AI_goldValueAssessmentModifier() const;
 

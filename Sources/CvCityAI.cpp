@@ -1803,17 +1803,13 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	// Afforess - don't wait until we are in trouble, preventative medicine is best
-	int iFundedPercent = player.AI_profitMargin();
-	int iSafePercent = player.AI_safeProfitMargin();
-	// if ( bFinancialTrouble )
-	if (iFundedPercent < iSafePercent - 10)
+	if (bFinancialTrouble && AI_chooseBuilding(BUILDINGFOCUS_GOLD, 10))
 	{
-		if (AI_chooseBuilding(BUILDINGFOCUS_GOLD, 10))
+		if (gCityLogLevel >= 2)
 		{
-			if( gCityLogLevel >= 2 ) logBBAI("      City %S uses financial difficulty resolution", getName().GetCString());
-			return;
+			logBBAI("      City %S uses financial difficulty resolution", getName().GetCString());
 		}
+		return;
 	}
 
 	m_iTempBuildPriority--;
@@ -8095,16 +8091,18 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 	{
 		//probably a good candidate for a wonder pump
 		iProductionMultiplier += 40;
-		iCommerceMultiplier += (kPlayer.AI_isFinancialTrouble()) ? 0 : -40;
+
+		if (kPlayer.AI_isFinancialTrouble())
+		{
+			iCommerceMultiplier -= 40;
+		}
 	}
 
-	const int iNetCommerce = 1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH) + std::max(0, kPlayer.getGoldPerTurn());
-	const int64_t iNetExpenses = kPlayer.getFinalExpense() + std::max(0, -kPlayer.getGoldPerTurn());
-	const int iRatio = static_cast<int>(100 * iNetExpenses / std::max(1, iNetCommerce));
+	const short iProfitMargin = kPlayer.getProfitMargin();
 
-	if (iRatio > 40)
+	if (iProfitMargin < 50)
 	{
-		iCommerceMultiplier += (33 * (iRatio - 40)) / 60;
+		iCommerceMultiplier += (50 - iProfitMargin) * 33/50;
 	}
 	// AI no longer uses emphasis except for short term boosts.
 	if (isHuman())
@@ -8623,19 +8621,11 @@ void CvCityAI::AI_updateBestBuild()
 	}
 
 
-	const int iNetCommerce =
-	(
-		1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH)
-		+
-		std::max(0, kPlayer.getGoldPerTurn())
-	);
-	const int64_t iNetExpenses = kPlayer.getFinalExpense() + std::max(0, -kPlayer.getGoldPerTurn());
+	const short iProfitMargin = kPlayer.getProfitMargin();
 
-	const int iRatio = static_cast<int>(100 * iNetExpenses / std::max(1, iNetCommerce));
-
-	if (iRatio > 40)
+	if (iProfitMargin < 50)
 	{
-		iCommerceMultiplier += (iRatio - 40) * 33 / 60;
+		iCommerceMultiplier += (50 - iProfitMargin) * 33/50;
 	}
 
 	// AI no longer uses emphasis except for short term boosts.
@@ -12704,31 +12694,21 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 			}
 		}
 
-		const int iIncome = 1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH) + std::max(0, kPlayer.getGoldPerTurn());
-		const int64_t iExpenses = 1 + kPlayer.getFinalExpense() - std::min(0, kPlayer.getGoldPerTurn());
-		FAssert(iIncome > 0);
 
-		const int iRatio = static_cast<int>((100 * iExpenses) / std::max(1, iIncome));
+		const short iProfitMargin = kPlayer.getProfitMargin();
 
-		//Gold -> Production Reduced To
-		// 40- -> 100%
-		// 60 -> 83%
-		// 100 -> 28%
-		// 110+ -> 14%
-		m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] += 100;
-		if (iRatio > 60)
+		if (iProfitMargin <= 40)
 		{
 			//Greatly decrease production weight
-			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] *= std::max(10, 120 - iRatio);
-			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] /= 72;
+			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] *= (40 + iProfitMargin * 5) / 4; // range from 10 to 60
+			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] /= 80; // 0.125 - 0.75
 		}
-		else if (iRatio > 40)
+		else if (iProfitMargin <= 60)
 		{
 			//Slightly decrease production weight.
-			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] *= 160 - iRatio;
-			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] /= 120;
+			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] *= 110 + iProfitMargin * 4; // range from 274 to 350
+			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] /= 360; // 0.761 - 0.972
 		}
-		m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] -= 100;
 	}
 }
 

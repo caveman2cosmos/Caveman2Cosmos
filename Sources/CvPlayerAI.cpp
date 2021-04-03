@@ -4038,9 +4038,9 @@ bool CvPlayerAI::AI_avoidScience() const
 	return false;
 }
 
-int CvPlayerAI::AI_safeProfitMargin() const
+short CvPlayerAI::AI_safeFunding() const
 {
-	int iSafePercent = GC.getDefineINT("SAFE_PROFIT_MARGIN_BASE_PERCENT");
+	short iSafePercent = GC.getDefineINT("SAFE_PROFIT_MARGIN_BASE_PERCENT");
 
 	if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 	{
@@ -4091,27 +4091,31 @@ int CvPlayerAI::AI_safeProfitMargin() const
 	return iSafePercent;
 }
 
-int CvPlayerAI::AI_profitMargin(int iExtraCost) const
+// Toffer - Output mainly range from 0 to 100
+//	Values above can signify particulary good funding levels,
+//	either from a very large treasury or from positive income at 0-10% taxation.
+short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) const
 {
 	PROFILE_FUNC();
-
-	const int iTotalCommerce = calculateTotalYield(YIELD_COMMERCE);
-	const int iBaseNetCommerce = getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
-
-	// Afforess - iExtraCost lets us "extrapolate" our cost percents if we have extra future expenses
-	// iExtraCost should be between 0 (default) and some positive extra gold per turn cost to us
-	const int64_t iNetExpenses = getFinalExpense() + std::max(0, -getGoldPerTurn()) + std::max(0, iExtraCost);
-
-	// Koshling - if we can fund our ongoing expenses with no tax we never consider ourselves to be in financial difficulties
-	if (iBaseNetCommerce - getCommercePercent(COMMERCE_GOLD)*iTotalCommerce/100 > iNetExpenses)
+	if (isAnarchy())
 	{
 		return 100;
 	}
-	const int iNetCommerce = iBaseNetCommerce + (100 - getCommercePercent(COMMERCE_GOLD)) * iTotalCommerce / 100;
+	int iTotalCommerce;
+	int64_t iNetIncome;
+	int64_t iNetExpenses;
+	short iProfitMargin = getProfitMargin(iTotalCommerce, iNetIncome, iNetExpenses, iExtraExpense, iExtraExpenseMod);
 
-	// Don't exempt it if we're forcing science below 50 to achieve this
-	if (AI_avoidScience() || getCommercePercent(COMMERCE_RESEARCH) > 50)
+	// Koshling - Never in financial difficulties if we can fund our ongoing expenses with zero taxation
+	if (iNetIncome - getCommercePercent(COMMERCE_GOLD)*iTotalCommerce/100 > iNetExpenses)
 	{
+		return 10001; // A magic number in case we want this state to have some kind of significance.
+	}
+
+	// Toffer - At low tax levels, and with some profit margin to go on, evaluate treasury rather than profit margin.
+	if (iProfitMargin > 16 && getCommercePercent(COMMERCE_GOLD) < 50)
+	{
+		int64_t iValue = 0;
 		// Toffer - Gamespeed (GS) influence the value of gold, so scale gold treshold to GS, era is exponential factor.
 		//	Prehistoric: 25 gold (ultrafast); 100 gold (normal); 1000 gold (eternity)
 		//	Ancient: 50 gold (ultrafast); 200 gold (normal); 2000 gold (eternity)
@@ -4119,54 +4123,47 @@ int CvPlayerAI::AI_profitMargin(int iExtraCost) const
 		const int iModGS = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
 		const int iEra = GC.getGame().getCurrentEra();
 		const int iEraGoldThreshold = (1 + iEra * iEra) * iModGS / 2;
-		if (iNetCommerce - iNetExpenses >= 0
-		// Losing gold per turn, can we keep this up for X number of turns without going below era treshold
-		// X is: 2 (ultrafast); 10 (normal); 100 (eternity). Need more time to react on  slower GS.
-		// Koshling - we're never in financial trouble if we can run at current deficits for more than
-		//	X (GS scaled) turns and stay in healthy territory, so claim full or even excess funding in such a case!
-		|| getGold() + (iNetCommerce - iNetExpenses) * iModGS / 10 > iEraGoldThreshold)
+
+		if (iNetIncome - iNetExpenses >= 0)
 		{
-			int64_t iValue = 100 + getGold() / iEraGoldThreshold;
-
-			if (iNetCommerce < iNetExpenses)
-			{
-				//	Each 10 turns we can fund entirely out of treasury, even with the deficit, add 1%
-				const int64_t iFundableTurns = (getGold() - iEraGoldThreshold) / (iNetExpenses - iNetCommerce);
-
-				//	Turns under 100 fundable slightly reduce over funding reported
-				if (iFundableTurns < 100)
-				{
-					iValue -= (100 - iFundableTurns);
-					if (iValue < 100)
-					{
-						// We know we are still at least fully funded - its only over-funding we're reducing
-						iValue = 100;
-					}
-				}
-			}
-			if (iValue > MAX_INT)
-			{
-				FAssert(false);
-				return MAX_INT;
-			}
-			return static_cast<int>(iValue);
+			iValue = 100 * getGold() / iEraGoldThreshold;
 		}
+		else
+		{
+			// Losing gold per turn, can we keep this up for X number of turns without going below era treshold.
+			// X is: 2 (ultrafast); 10 (normal); 100 (eternity). Need more time to react on  slower GS.
+			// Koshling - we're never in financial trouble if we can run at current deficits for more than
+			//	Toffer - X (GS scaled) turns and stay in healthy territory, so claim full or even excess funding in such a case!
+			const int64_t iFutureGoldPrognosis = getGold() + (iNetIncome - iNetExpenses) * iModGS / 10;
+			iValue = 100 * iFutureGoldPrognosis / iEraGoldThreshold;
+		}
+		if (iValue > 9999)
+		{
+			return 10000; // Funding level at 10 000% will be more than adequate to conclude that funding is a non-issue.
+		}
+		return static_cast<short>(iValue);
 	}
-	return static_cast<int>(100 * (iNetCommerce - iNetExpenses) / std::max(1, iNetCommerce));
+	// Toffer - Finances are pretty poor if this point is reached, iProfitMargin is hard to get to a value above 50 in any scenario,
+	//	if it is zero it means your expenditure is equal to, or greater than, your income at 100% taxation
+	//	if it is *50* it means your expenditure is half the size of your income at 100% taxation.
+	//	A value of 100 is close to impossible to reach, as that either means expenditure is zero, or that income is severeal orders of magnitude greater than your expenditure.
+	//	Tripling its value may not be needed, but it is to signify that 10% iProfitMargin is not actually all that bad.
+	return iProfitMargin * 3;
 }
+
 
 // Calculate a (percentage) modifier the AI can apply to gold to determine how to value it
 int CvPlayerAI::AI_goldValueAssessmentModifier() const
 {
 	// If we're only just funding at the safety level that's not good - rate that as 150% valuation for gold
-	return 150 * AI_safeProfitMargin() / std::max(1, AI_profitMargin());
+	return 150 * AI_safeFunding() / std::max<short>(1, AI_fundingHealth());
 }
 
 
 bool CvPlayerAI::AI_isFinancialTrouble() const
 {
 	PROFILE_FUNC();
-	return !isNPC() && AI_profitMargin() < AI_safeProfitMargin();
+	return !isNPC() && AI_fundingHealth() < AI_safeFunding();
 }
 
 int CvPlayerAI::AI_goldTarget() const
@@ -17843,39 +17840,43 @@ void CvPlayerAI::AI_doMilitary()
 	PROFILE_FUNC();
 
 	// Afforess - add multiple passes
-	if (AI_isFinancialTrouble())
+	if (AI_isFinancialTrouble() && GET_TEAM(getTeam()).getAnyWarPlanCount(true) == 0)
 	{
-		if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) == 0)
+		const short iSafePercent = AI_safeFunding();
+		int iTotalCommerce;
+		int64_t iNetIncome;
+		int64_t iNetExpenses;
+
+		for (int iPass = 0; iPass < 4; iPass++)
 		{
-			for (int iPass = 0; iPass < 4; iPass++)
+			short iProfitMargin = getProfitMargin(iTotalCommerce, iNetIncome, iNetExpenses);
+
+			while (iNetIncome < iNetExpenses && iProfitMargin < iSafePercent && getUnitUpkeepMilitaryNet() > 0)
 			{
-				int iFundedPercent = AI_profitMargin();
-				int iSafePercent = AI_safeProfitMargin();
-				int iSafeBuffer = (1 + iPass) * 5; // this prevents the AI from disbanding their elite units unless the financial trouble is very severe
-				while (iFundedPercent < iSafePercent-iSafeBuffer && getUnitUpkeepMilitaryNet() > 0)
+				int iExperienceThreshold;
+				switch (iPass)
 				{
-					int iExperienceThreshold;
-					switch (iPass)
-					{
 					case 0: iExperienceThreshold = 1; break;
-					case 1: iExperienceThreshold = 3; break;
-					case 2: iExperienceThreshold = 5; break;
+					case 1: iExperienceThreshold = 6; break;
+					case 2: iExperienceThreshold = 12; break;
 					case 3: iExperienceThreshold = -1; break;
-					}
-					if (!AI_disbandUnit(iExperienceThreshold, false))
-					{
-						break;
-					}
-					//Recalculate funding
-					iFundedPercent = AI_profitMargin();
 				}
+				// Toffer - Minor problem, I don't think AI_disbandUnit only disbands military units...
+				//	It should also have a boolean telling it to only disband units with upkeep cost.
+				if (!AI_disbandUnit(iExperienceThreshold, false))
+				{
+					break;
+				}
+				// Recalculate funding
+				iProfitMargin = getProfitMargin(iTotalCommerce, iNetIncome, iNetExpenses);
 			}
 		}
 	}
-
-	AI_setAttackOddsChange(GC.getLeaderHeadInfo(getPersonalityType()).getBaseAttackOddsChange() +
-		GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getAttackOddsChangeRand(), "AI Attack Odds Change #1") +
-		GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getAttackOddsChangeRand(), "AI Attack Odds Change #2"));
+	AI_setAttackOddsChange(
+		  GC.getLeaderHeadInfo(getPersonalityType()).getBaseAttackOddsChange()
+		+ GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getAttackOddsChangeRand(), "AI Attack Odds Change #1")
+		+ GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getAttackOddsChangeRand(), "AI Attack Odds Change #2")
+	);
 }
 
 
