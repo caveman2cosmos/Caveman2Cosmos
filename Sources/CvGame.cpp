@@ -5849,7 +5849,10 @@ void CvGame::doTurn()
 		}
 	}
 
-	GC.getMap().doTurn();
+	foreach_(CvMap* map, GC.getMaps())
+	{
+		map->doTurn();
+	}
 
 	createBarbarianCities(false);
 	if (isOption(GAMEOPTION_NEANDERTHAL_CITIES))
@@ -5963,6 +5966,7 @@ void CvGame::doTurn()
 			}
 		}
 	}
+
 	doIncreasingDifficulty();
 	doFlexibleDifficulty();
 	doFinalFive();

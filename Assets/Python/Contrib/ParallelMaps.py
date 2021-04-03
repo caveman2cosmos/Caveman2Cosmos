@@ -16,7 +16,8 @@ class ParallelMaps:
 		i = argsList[1] -2
 		if BugEventManager.g_eventManager.bAlt \
 		and i < MapTypes.NUM_MAPS \
-		and i != GC.getGame().getCurrentMap():
+		and i != GC.getGame().getCurrentMap() \
+		and GC.getMapByIndex(i).plotsInitialized():
 			global bIsSwitchingMap
 			bIsSwitchingMap = True
 			GC.switchMap(i)

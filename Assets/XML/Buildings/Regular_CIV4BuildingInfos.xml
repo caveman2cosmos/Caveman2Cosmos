@@ -1115,7 +1115,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iCost>1845</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -3729,7 +3728,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iCost>1845</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -15038,7 +15036,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<bRiver>1</bRiver>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -19952,7 +19949,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iCost>680</iCost>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -20745,7 +20741,6 @@
 			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
@@ -22211,7 +22206,6 @@
 				<PrereqTech>TECH_FISHING</PrereqTech>
 			</TechTypes>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FISH</VicinityBonus>
@@ -23634,7 +23628,6 @@
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
@@ -24331,7 +24324,6 @@
 			<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqBonuses>
 				<Bonus>BONUS_NANOTUBES</Bonus>
 				<Bonus>BONUS_TITANIUM_WARES</Bonus>
@@ -24677,7 +24669,6 @@
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
 			</PrereqInCityBuildings>
@@ -26606,7 +26597,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iCost>15</iCost>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<YieldChanges>
@@ -26885,7 +26875,6 @@
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
@@ -31491,7 +31480,6 @@
 			<PrereqTech>TECH_FIRE_SUPPRESSION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
@@ -31944,7 +31932,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_BASKETS</Bonus>
 			<iCost>45</iCost>
@@ -32000,7 +31987,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<Bonus>BONUS_ROPE</Bonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_FISH</VicinityBonus>
@@ -32093,7 +32079,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqBonuses>
 				<Bonus>BONUS_RAW_FISH</Bonus>
 				<Bonus>BONUS_SHELLFISH</Bonus>
@@ -37948,7 +37933,6 @@
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -38021,7 +38005,6 @@
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HARBOR</BuildingType>
 				<BuildingType>BUILDING_PORT</BuildingType>
@@ -42348,7 +42331,6 @@
 			<PrereqTech>TECH_LOGISTICS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
@@ -46931,7 +46913,6 @@
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
@@ -49040,7 +49021,6 @@
 			<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqOrImprovement>
 				<PrereqImprovement>
 					<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
@@ -49108,7 +49088,6 @@
 			<PrereqTech>TECH_MARINE_BIOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
@@ -56550,7 +56529,6 @@
 			<PrereqTech>TECH_NAVAL_TACTICS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
@@ -56603,7 +56581,6 @@
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HARBORMASTER_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
@@ -56640,7 +56617,6 @@
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
 				<BuildingType>BUILDING_HARBORMASTER_OFFICE</BuildingType>
@@ -57969,7 +57945,6 @@
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -62347,7 +62322,6 @@
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HARBORMASTER_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
@@ -64339,7 +64313,6 @@
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqBonuses>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
@@ -65638,7 +65611,6 @@
 			<PrereqTech>TECH_PSYCHOLOGY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iCost>830</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -71263,7 +71235,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MARINE_BIOLOGY</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<iCost>630</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -72607,7 +72578,6 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<Bonus>BONUS_ROPE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_SAILS</Bonus>
@@ -72656,7 +72626,6 @@
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 				<BuildingType>BUILDING_HARBORMASTER_OFFICE</BuildingType>
@@ -75543,7 +75512,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
@@ -75580,7 +75548,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
@@ -84037,7 +84004,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 			</PrereqInCityBuildings>
@@ -86067,7 +86033,6 @@
 			<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -87603,7 +87568,6 @@
 			<PrereqTech>TECH_SEXTANT</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARINA</BuildingType>
 			</PrereqInCityBuildings>

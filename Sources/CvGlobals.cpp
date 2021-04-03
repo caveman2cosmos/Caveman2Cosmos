@@ -17,6 +17,7 @@
 #include "CvTeamAI.h"
 #include "CvViewport.h"
 #include "CvXMLLoadUtility.h"
+#include "CyGlobalContext.h"
 #include "FVariableSystem.h"
 #include <time.h> 
 #include <sstream>
@@ -588,19 +589,6 @@ DirectionTypes cvInternalGlobals::getXYDirection(int i, int j) const
 	return m_aaeXYDirection[i][j];
 }
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-bool cvInternalGlobals::viewportsEnabled() const
-{
-	return m_bViewportsEnabled;
-}
-
-bool cvInternalGlobals::getReprocessGreatWallDynamically() const
-{
-	return m_bViewportsEnabled || (getDefineBOOL("DYNAMIC_GREAT_WALL") != 0);
-}
-
 int cvInternalGlobals::getNumMapInfos() const
 {
 	return m_paMapInfo.size();
@@ -611,22 +599,6 @@ CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap) const
 	FASSERT_BOUNDS(0, NUM_MAPS, eMap)
 	return *(m_paMapInfo[eMap]);
 }
-
-void cvInternalGlobals::setResourceLayer(bool bOn)
-{
-	m_bResourceLayerOn = bOn;
-
-	gDLL->getEngineIFace()->setResourceLayer(bOn);
-}
-
-bool cvInternalGlobals::getResourceLayer() const
-{
-	return m_bResourceLayerOn;
-}
-
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 int cvInternalGlobals::getNumWorldInfos() const
 {
@@ -1703,6 +1675,23 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_BUILD_DOMESTICATED_HERD);
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER);
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_EARTH);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_SUBTERRANEAN);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_AQUATIC);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_CISLUNAR);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_LUNAR);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_SOLAR_SYSTEM);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_MARTIAN);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_VENUSIAN);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_JOVIAN);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_TITANIC);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_INTERSTELLAR);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_PLASMA);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_GALACTIC);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_MILKY_WAY);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_UNIVERSAL);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_DISTANT);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_HYPERSPACE);
 }
 
 CvInfoBase& cvInternalGlobals::getAttitudeInfo(AttitudeTypes eAttitudeNum) const
@@ -2853,15 +2842,39 @@ void cvInternalGlobals::cacheInfoTypes()
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+bool cvInternalGlobals::viewportsEnabled() const
+{
+	return m_bViewportsEnabled;
+}
+
+bool cvInternalGlobals::getReprocessGreatWallDynamically() const
+{
+	return m_bViewportsEnabled || getDefineBOOL("DYNAMIC_GREAT_WALL");
+}
+
+void cvInternalGlobals::setResourceLayer(bool bOn)
+{
+	m_bResourceLayerOn = bOn;
+
+	gDLL->getEngineIFace()->setResourceLayer(bOn);
+}
+
+bool cvInternalGlobals::getResourceLayer() const
+{
+	return m_bResourceLayerOn;
+}
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
-	FASSERT_BOUNDS(0, NUM_MAPS, eMap);
-	FAssert(eMap != CURRENT_MAP);
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap)
 
-	GC.getMap().beforeSwitch();
-	GC.getGame().setCurrentMap(eMap);
-	GC.getMap().afterSwitch();
+	if (eMap != CURRENT_MAP)
+	{
+		getMap().beforeSwitch();
+		getGame().setCurrentMap(eMap);
+		*CyGlobalContext::getInstance().getCyMap() = getMap();
+		getMap().afterSwitch();
+	}
 }
 
 CvViewport* cvInternalGlobals::getCurrentViewport() const
