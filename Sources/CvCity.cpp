@@ -3065,7 +3065,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			return false;
 		}
 
-		if (kBuilding.isBuildOnlyOnPeaks() && !plot()->isAsPeak())
+		if (!plot()->isAsPeak())
 		{
 			return false;
 		}

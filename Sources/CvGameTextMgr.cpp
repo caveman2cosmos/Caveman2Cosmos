@@ -24223,7 +24223,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			szBuffer.append(gDLL->getText("TXT_KEY_MAX_LATITUDE", kBuilding.getMaxLatitude()));
 		}
 
-		if (kBuilding.isBuildOnlyOnPeaks() && (pCity == NULL || !pCity->plot()->isAsPeak()))
+		if (pCity == NULL || !pCity->plot()->isAsPeak())
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_MOUNTAIN"));
