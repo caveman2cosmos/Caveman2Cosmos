@@ -2573,7 +2573,7 @@ class CvEventManager:
 						bActive = True
 					else:
 						bActive = False
-					eColor = ColorTypes(GC.getInfoTypeForString("COLOR_RED"))
+					eColor = ColorTypes(GC.getInfoTypeForString("COLOR_WARNING_TEXT"))
 					szPlayerName = GC.getPlayer(iPlayer).getName()
 					iX = CyCity.getX()
 					iY = CyCity.getY()
@@ -2585,7 +2585,7 @@ class CvEventManager:
 						if CvBuildingInfo.getMaxGlobalInstances() == 1:
 
 							if bActive:
-								szTxt = TRNSLTR.getText("TXT_KEY_MSG_WONDER_DESTROYED_YOU", (0, CvBuildingInfo.getDescription()))
+								szTxt = TRNSLTR.getText("TXT_KEY_MSG_WONDER_DESTROYED_YOU", (CvBuildingInfo.getDescription(),))
 							else:
 								szTxt = TRNSLTR.getText("TXT_KEY_MSG_WONDER_DESTROYED", (szPlayerName, CvBuildingInfo.getDescription()))
 

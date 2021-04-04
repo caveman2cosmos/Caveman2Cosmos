@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<!-- Messages meant for the message box. -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_MSG_BIODOME</Tag>
@@ -213,25 +214,25 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_WONDER_DESTROYED</Tag>
-		<English>%s1 has destroyed the wonder %s2!</English>
-		<French>%s1 a détruit la merveille: %s2!</French>
-		<German>%s1 hat das Wunder %s2 zerstört!</German>
-		<Italian>%s1 ha distrutto la meraviglia %s2!</Italian>
-		<Russian>%s1 уничтожил Чудо %s2!</Russian>
+		<English>[COLOR_SELECTED_TEXT]%s1[COLOR_WARNING_TEXT] has destroyed the wonder [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_WARNING_TEXT]!</English>
+		<French>[COLOR_SELECTED_TEXT]%s1[COLOR_WARNING_TEXT] a détruit la merveille: [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_WARNING_TEXT]!</French>
+		<German>[COLOR_SELECTED_TEXT]%s1[COLOR_WARNING_TEXT] hat das Wunder [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_WARNING_TEXT] zerstört!</German>
+		<Italian>[COLOR_SELECTED_TEXT]%s1[COLOR_WARNING_TEXT] ha distrutto la meraviglia [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_WARNING_TEXT]!</Italian>
+		<Russian>[COLOR_SELECTED_TEXT]%s1[COLOR_WARNING_TEXT] уничтожил Чудо [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_WARNING_TEXT]!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_WONDER_DESTROYED_YOU</Tag>
-		<English>You have destroyed the wonder %s1!</English>
-		<French>Vous avez détruit la merveille: %s1!</French>
-		<German>Ihr habt das Wunder %s1 zerstört!</German>
-		<Italian>Hai distrutto la meraviglia %s1!</Italian>
-		<Russian>Вы уничтожили Чудо %s1!</Russian>
+		<English>You have destroyed the wonder [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_WARNING_TEXT]!</English>
+		<French>Vous avez détruit la merveille: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_WARNING_TEXT]!</French>
+		<German>Ihr habt das Wunder [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_WARNING_TEXT] zerstört!</German>
+		<Italian>Hai distrutto la meraviglia [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_WARNING_TEXT]!</Italian>
+		<Russian>Вы уничтожили Чудо [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_WARNING_TEXT]!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_ZIZKOV_JAM</Tag>
-		<English>[COLOR_UNIT_TEXT]Zizkov Television Tower[COLOR_SELECTED_TEXT] has jammed the radio signals all over the world![COLOR_REVERT]</English>
-		<French>La[COLOR_UNIT_TEXT]Tour de Télévision de Zizkov[COLOR_SELECTED_TEXT] a brouillé tous les signaux radio![COLOR_REVERT]</French>
-		<Polish>[COLOR_UNIT_TEXT]Wieza Telewizyjna Zizkov[COLOR_SELECTED_TEXT] zaklócila sygnaly radiowe na calym swiecie![COLOR_REVERT]</Polish>
-		<Russian>[COLOR_UNIT_TEXT]Жижковская телебашня[COLOR_SELECTED_TEXT] заблокировала радиосигналы по всему миру![COLOR_REVERT]</Russian>
+		<English>[COLOR_UNIT_TEXT]Zizkov Television Tower[COLOR_SELECTED_TEXT] has jammed the radio signals all over the world!</English>
+		<French>La[COLOR_UNIT_TEXT]Tour de Télévision de Zizkov[COLOR_SELECTED_TEXT] a brouillé tous les signaux radio!</French>
+		<Polish>[COLOR_UNIT_TEXT]Wieza Telewizyjna Zizkov[COLOR_SELECTED_TEXT] zaklócila sygnaly radiowe na calym swiecie!</Polish>
+		<Russian>[COLOR_UNIT_TEXT]Жижковская телебашня[COLOR_SELECTED_TEXT] заблокировала радиосигналы по всему миру!</Russian>
 	</TEXT>
 </Civ4GameText>
