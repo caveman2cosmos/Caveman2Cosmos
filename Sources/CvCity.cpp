@@ -3065,11 +3065,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			return false;
 		}
 
-		if (!plot()->isAsPeak())
-		{
-			return false;
-		}
-
 		const int iPrereqPopulation = (
 			std::max(
 				kBuilding.getPrereqPopulation(),
