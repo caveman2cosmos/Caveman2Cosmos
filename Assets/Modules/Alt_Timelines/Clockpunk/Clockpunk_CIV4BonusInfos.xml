@@ -11,7 +11,7 @@
 		<Type>BONUS_CLOCKPUNK</Type>
 		<Description>TXT_KEY_BONUS_CLOCKPUNK</Description>
 		<Civilopedia>TXT_KEY_BONUS_CLOCKPUNK_PEDIA</Civilopedia>
-		<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+		<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 		<ArtDefineTag>ART_DEF_BONUS_CLOCKPUNK</ArtDefineTag>
 		<TechReveal>TECH_CLOCKPUNK</TechReveal>
 		<TechCityTrade>TECH_CLOCKPUNK</TechCityTrade>

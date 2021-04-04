@@ -11,7 +11,7 @@
 		<Type>BONUS_STEAMPUNK</Type>
 		<Description>TXT_KEY_BONUS_STEAMPUNK</Description>
 		<Civilopedia>TXT_KEY_BONUS_STEAMPUNK_PEDIA</Civilopedia>
-		<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+		<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 		<ArtDefineTag>ART_DEF_BONUS_STEAMPUNK</ArtDefineTag>
 		<TechReveal>TECH_STEAMPUNK</TechReveal>
 		<TechCityTrade>TECH_STEAMPUNK</TechCityTrade>

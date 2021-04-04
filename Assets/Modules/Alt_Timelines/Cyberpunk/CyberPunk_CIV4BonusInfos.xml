@@ -11,7 +11,7 @@
 		<Type>BONUS_CYBERPUNK</Type>
 		<Description>TXT_KEY_BONUS_CYBERPUNK</Description>
 		<Civilopedia>TXT_KEY_BONUS_CYBERPUNK_PEDIA</Civilopedia>
-		<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+		<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 		<ArtDefineTag>ART_DEF_BONUS_CYBERPUNK</ArtDefineTag>
 		<TechReveal>TECH_CYBERPUNK</TechReveal>
 		<TechCityTrade>TECH_CYBERPUNK</TechCityTrade>
