@@ -3271,10 +3271,29 @@ bool CvPlayerAI::AI_isPrimaryArea(const CvArea* pArea) const
 		return false;
 	}
 
-	if (pArea->getCitiesPerPlayer(getID()) > 2)
+	// Toffer
+	const int iNumAreaCities = pArea->getCitiesPerPlayer(getID());
+	if (iNumAreaCities < 1)
+	{
+		return false;
+	}
+	if (iNumAreaCities > 1 + GC.getMap().getWorldSize())
 	{
 		return true;
 	}
+	const int iNumCities = getNumCities();
+
+	 // Even 1 of 6 should be enough for it to be primary.
+	if (iNumCities < 7)
+	{
+		return true;
+	}
+	// If 17% or more of my cities are on the landmass, then the landmass is a primary area.
+	if (16 < 100 * iNumAreaCities / iNumCities)
+	{
+		return true;
+	}
+	// ! Toffer
 
 	const CvCity* pCapitalCity = getCapitalCity();
 	return pCapitalCity ? pCapitalCity->area() == pArea : false;
