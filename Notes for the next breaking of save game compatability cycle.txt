@@ -17,29 +17,6 @@ CODE CHANGES
 
 Mark up sections of code with the @SAVEBREAK tag to indicate changes that should happen to code:
 
-    // @SAVEBREAK DELETE 8/7/2018
-    // Delete this code at the next save break.
-    // Legacy for FreeTradeRegionBuilding. We need to write out something here to keep save compatibility, so just write out the free area building one again
-    WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumFreeAreaBuilding);
-    // SAVEBREAK@
-
-    // @SAVEBREAK REPLACE 8/7/2018
-    // Update this code at the next save break.
-    // We determined that the answer was not what we thought, there could be galactic consequences.
-    m_fragileSaveData = 42;
-    // REPLACE WITH
-    // m_fragileSaveData = "towel";
-    // SAVEBREAK@
-
-    // @SAVEBREAK ADD 8/7/2018
-    // Add this code at the next save break.
-    // WRITE_SAVE_DATA(m_newData);
-    // SAVEBREAK@
-
-    // @SAVEBREAK EVALUATE 8/7/2018
-    // Review this code at the next save break, required change will likely break saves.
-    // if (code == messy) new code(tidy);
-    // SAVEBREAK@
 
 When it comes times to break the save we need to apply all the changes that are marked like this.
 
