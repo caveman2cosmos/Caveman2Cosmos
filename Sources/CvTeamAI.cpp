@@ -4792,27 +4792,21 @@ bool CvTeamAI::AI_isWaterAreaRelevant(const CvArea* pArea) const
 {
 	PROFILE_FUNC();
 
-	int iTeamCities = 0;
-	int iOtherTeamCities = 0;
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/15/09                                jdog5000      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
 	const CvArea* pBiggestArea = GC.getMap().findBiggestArea(true);
 	if (pBiggestArea == pArea)
 	{
 		return true;
 	}
+	int iTeamCities = 0;
+	int iOtherTeamCities = 0;
 
 	// An area is deemed relevant if it has at least 2 cities of our and different teams.
 	// Also count lakes which are connected to ocean by a bridge city
 	for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; iPlayer++)
 	{
-		const CvPlayerAI& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 
-		if ((iTeamCities < 2 && (kPlayer.getTeam() == getID())) || (iOtherTeamCities < 2 && (kPlayer.getTeam() != getID())))
+		if (iTeamCities < 2 && kPlayer.getTeam() == getID() || iOtherTeamCities < 2 && kPlayer.getTeam() != getID())
 		{
 			foreach_(const CvCity* pLoopCity, kPlayer.cities())
 			{
@@ -4822,7 +4816,7 @@ bool CvTeamAI::AI_isWaterAreaRelevant(const CvArea* pArea) const
 					{
 						iTeamCities++;
 
-						if( pLoopCity->waterArea() == pBiggestArea )
+						if (pLoopCity->waterArea() == pBiggestArea)
 						{
 							return true;
 						}
@@ -4843,10 +4837,6 @@ bool CvTeamAI::AI_isWaterAreaRelevant(const CvArea* pArea) const
 			return true;
 		}
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-
 	return false;
 }
 
@@ -4895,12 +4885,7 @@ DenialTypes CvTeamAI::AI_LimitedBordersTrade(TeamTypes eTeam) const
 DenialTypes CvTeamAI::AI_contactTrade(TeamTypes eContactTeam, TeamTypes eTeam) const
 {
 
-	if (isHuman())
-	{
-		return NO_DENIAL;
-	}
-
-	if (isVassal(eTeam))
+	if (isHuman() || isVassal(eTeam))
 	{
 		return NO_DENIAL;
 	}
@@ -4917,21 +4902,15 @@ DenialTypes CvTeamAI::AI_contactTrade(TeamTypes eContactTeam, TeamTypes eTeam) c
 
 	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 	{
-		//Planning war against the team , no need to complicate matters
+		//Planning war against the team, no need to complicate matters
 		if (AI_getWarPlan(eContactTeam) != NO_WARPLAN)
 		{
-			int iRand = GC.getGame().getElapsedGameTurns() % 3;
-			switch(iRand)
+			const int iRand = GC.getGame().getElapsedGameTurns() % 3;
+			switch (iRand)
 			{
-				case 0:
-					return DENIAL_MYSTERY;
-					break;
-				case 1:
-					return DENIAL_JOKING;
-					break;
-				case 2:
-					return DENIAL_NO_GAIN;
-					break;
+				case 0: return DENIAL_MYSTERY;
+				case 1: return DENIAL_JOKING;
+				case 2: return DENIAL_NO_GAIN;
 			}
 		}
 	}
@@ -4941,27 +4920,12 @@ DenialTypes CvTeamAI::AI_contactTrade(TeamTypes eContactTeam, TeamTypes eTeam) c
 
 int CvTeamAI::AI_embassyTradeVal(TeamTypes eTeam) const
 {
-	int iValue = 0;
-
-	iValue = (getNumCities() + GET_TEAM(eTeam).getNumCities());;
-
-	iValue *= 7;
-	iValue /= 5;
-
-	return std::max(0, iValue);
+	return (getNumCities() + GET_TEAM(eTeam).getNumCities()) * 7/5;
 }
-
 
 int CvTeamAI::AI_LimitedBordersTradeVal(TeamTypes eTeam) const
 {
-	int iValue = 0;
-
-	iValue = (getNumCities() + GET_TEAM(eTeam).getNumCities());
-
-	iValue *= 2;
-	iValue /= 5;
-
-	return std::max(0, iValue);
+	return (getNumCities() + GET_TEAM(eTeam).getNumCities()) * 2/5;
 }
 
 

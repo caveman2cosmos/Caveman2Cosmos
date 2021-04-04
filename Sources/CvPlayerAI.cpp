@@ -8543,15 +8543,13 @@ bool CvPlayerAI::AI_goldDeal(const CLinkList<TradeData>* pList) const
 /// considering proposals from the human player made in the diplomacy window as well as a couple other places.
 bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData>* pTheirList, const CLinkList<TradeData>* pOurList, int iChange) const
 {
-	CLLNode<TradeData>* pNode;
-	int iThreshold;
-
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 
 	if (AI_goldDeal(pTheirList) && AI_goldDeal(pOurList))
 	{
 		return false;
 	}
+	CLLNode<TradeData>* pNode;
 
 	if (iChange > -1)
 	{
@@ -8563,169 +8561,118 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 			}
 		}
 	}
+	const CvPlayerAI& dealer = GET_PLAYER(ePlayer);
 
-	if (GET_PLAYER(ePlayer).getTeam() == getTeam())
+	if (dealer.getTeam() == getTeam())
 	{
 		return true;
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 04/02/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	for (pNode = pOurList->head(); pNode; pNode = pOurList->next(pNode))
 	{
-		if( pNode->m_data.m_eItemType == TRADE_CORPORATION )
+		if (pNode->m_data.m_eItemType == TRADE_CORPORATION && pTheirList->getLength() == 0)
 		{
-			if (pTheirList->getLength() == 0)
-			{
-				return false;
-			}
+			return false;
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  10/23/09								jdog5000	  */
-/*																							  */
-/* Diplomacy AI																				 */
-/************************************************************************************************/
+	const CvTeamAI myTeam = GET_TEAM(getTeam());
+
 	// Don't always accept giving deals, TRADE_VASSAL and TRADE_SURRENDER come with strings attached
 	bool bVassalTrade = false;
 	for (pNode = pTheirList->head(); pNode; pNode = pTheirList->next(pNode))
 	{
-		if( pNode->m_data.m_eItemType == TRADE_VASSAL )
+		if (pNode->m_data.m_eItemType == TRADE_VASSAL)
 		{
 			bVassalTrade = true;
 
 			for (int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++)
 			{
-				if (GET_TEAM((TeamTypes)iTeam).isAlive())
+				if (GET_TEAM((TeamTypes)iTeam).isAlive() && iTeam != getTeam() && iTeam != dealer.getTeam()
+				&& atWar(dealer.getTeam(), (TeamTypes)iTeam) && !atWar(getTeam(), (TeamTypes)iTeam)
+				&& myTeam.AI_declareWarTrade((TeamTypes)iTeam, dealer.getTeam(), false) != NO_DENIAL)
 				{
-					if (iTeam != getTeam() && iTeam != GET_PLAYER(ePlayer).getTeam() && atWar(GET_PLAYER(ePlayer).getTeam(), (TeamTypes)iTeam) && !atWar(getTeam(), (TeamTypes)iTeam))
-					{
-						if (GET_TEAM(getTeam()).AI_declareWarTrade((TeamTypes)iTeam, GET_PLAYER(ePlayer).getTeam(), false) != NO_DENIAL)
-						{
-							return false;
-						}
-					}
+					return false;
 				}
 			}
 		}
-		else if( pNode->m_data.m_eItemType == TRADE_SURRENDER )
+		else if (pNode->m_data.m_eItemType == TRADE_SURRENDER)
 		{
 			bVassalTrade = true;
 
-			if( !(GET_TEAM(getTeam()).AI_acceptSurrender(GET_PLAYER(ePlayer).getTeam())) )
+			if (!myTeam.AI_acceptSurrender(dealer.getTeam()))
 			{
 				return false;
 			}
 		}
 	}
-
-	if( !bVassalTrade )
+	if (!bVassalTrade && pOurList->getLength() == 0 && pTheirList->getLength() > 0)
 	{
-		if ((pOurList->getLength() == 0) && (pTheirList->getLength() > 0))
-		{
-			return true;
-		}
+		return true;
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
-	int iOurValue = GET_PLAYER(ePlayer).AI_dealVal(getID(), pOurList, false, iChange);
-	int iTheirValue = AI_dealVal(ePlayer, pTheirList, false, iChange);
-/************************************************************************************************/
-/* Afforess					  Start		 5/30/11												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+	int iOurValue = dealer.AI_dealVal(getID(), pOurList, false, iChange);
+	const int iTheirValue = AI_dealVal(ePlayer, pTheirList, false, iChange);
+
 	for (pNode = pOurList->head(); pNode; pNode = pOurList->next(pNode))
 	{
-		if( pNode->m_data.m_eItemType == TRADE_CITIES )
+		if (pNode->m_data.m_eItemType == TRADE_CITIES)
 		{
 			if (pTheirList->getLength() == 0)
 			{
 				return false;
 			}
-			else
+			//only accept 1 time lump sums, continuing gold per turn or resource per turn could be backstabbed
+			for (CLLNode<TradeData>* pTheirNode = pTheirList->head(); pTheirNode; pTheirNode = pTheirList->next(pTheirNode))
 			{
-				//only accept 1 time lump sums, continuing gold per turn or resource per turn could be backstabbed
-				for (CLLNode<TradeData>* pTheirNode = pTheirList->head(); pTheirNode; pTheirNode = pTheirList->next(pTheirNode))
-				{
-					if( pNode->m_data.m_eItemType == TRADE_GOLD_PER_TURN ||  pNode->m_data.m_eItemType == TRADE_DEFENSIVE_PACT || pNode->m_data.m_eItemType == TRADE_RESOURCES)
-					{
-						return false;
-					}
-				}
-			}
-		}
-	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-	if (iOurValue > 0 && 0 == pTheirList->getLength() && 0 == iTheirValue)
-	{
-		if (GET_TEAM(getTeam()).isVassal(GET_PLAYER(ePlayer).getTeam()) && CvDeal::isVassalTributeDeal(pOurList))
-		{
-			if (AI_getAttitude(ePlayer, false) > GC.getLeaderHeadInfo(getPersonalityType()).getVassalRefuseAttitudeThreshold()
-			|| GET_TEAM(getTeam()).isAtWar()
-			|| GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getDefensivePactCount() != 0)
-			{
-				return true;
-			}
-			iOurValue *= (GET_TEAM(getTeam()).getPower(false) + 10);
-			iOurValue /= (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getPower(false) + 10);
-		}
-		else
-		{
-			if (AI_getAttitude(ePlayer) < ATTITUDE_PLEASED)
-			{
-				if (GET_TEAM(getTeam()).getPower(false) > ((GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getPower(false) * 4) / 3))
+				if (pNode->m_data.m_eItemType == TRADE_GOLD_PER_TURN || pNode->m_data.m_eItemType == TRADE_DEFENSIVE_PACT || pNode->m_data.m_eItemType == TRADE_RESOURCES)
 				{
 					return false;
 				}
 			}
+		}
+	}
 
-			if (AI_getMemoryCount(ePlayer, MEMORY_MADE_DEMAND_RECENT) > 0)
+	if (iOurValue > 0 && 0 == pTheirList->getLength() && 0 == iTheirValue)
+	{
+		const CvTeamAI dealerTeam = GET_TEAM(getTeam());
+
+		if (myTeam.isVassal(dealer.getTeam()) && CvDeal::isVassalTributeDeal(pOurList))
+		{
+			if (AI_getAttitude(ePlayer, false) > GC.getLeaderHeadInfo(getPersonalityType()).getVassalRefuseAttitudeThreshold()
+			// OR I'm at war OR dealer has any defensive pact
+			|| myTeam.isAtWar() || dealerTeam.getDefensivePactCount() != 0)
 			{
-				return false;
+				return true;
 			}
+			iOurValue *= 10 + myTeam.getPower(false);
+			iOurValue /= 10 + dealerTeam.getPower(false);
+		}
+		else if (AI_getMemoryCount(ePlayer, MEMORY_MADE_DEMAND_RECENT) > 0
+		|| AI_getAttitude(ePlayer) < ATTITUDE_PLEASED && myTeam.getPower(false) > dealerTeam.getPower(false) * 4/3)
+		{
+			return false;
 		}
 
-		iThreshold = (GET_TEAM(getTeam()).AI_getHasMetCounter(GET_PLAYER(ePlayer).getTeam()) + 50);
+		int iThreshold = 2 * (myTeam.AI_getHasMetCounter(dealer.getTeam()) + 50);
 
-		iThreshold *= 2;
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  06/12/10								jdog5000	  */
-/*																							  */
-/* Diplomacy AI																				 */
-/************************************************************************************************/
-		if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_isLandTarget(getTeam()))
+		if (dealerTeam.AI_isLandTarget(getTeam()))
 		{
 			iThreshold *= 3;
 		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
-		iThreshold *= (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getPower(false) + 100);
-		iThreshold /= (GET_TEAM(getTeam()).getPower(false) + 100);
+		iThreshold *= 100 + dealerTeam.getPower(false);
+		iThreshold /= 100 + myTeam.getPower(false);
 
-		iThreshold -= GET_PLAYER(ePlayer).AI_getPeacetimeGrantValue(getID());
+		iThreshold -= dealer.AI_getPeacetimeGrantValue(getID());
 
-		return (iOurValue < iThreshold);
+		return iOurValue < iThreshold;
 	}
 
 	if (iChange < 0)
 	{
-		return (iTheirValue * 110 >= iOurValue * 100);
+		return iTheirValue * 110 >= iOurValue * 100;
 	}
-
-	return (iTheirValue >= iOurValue);
+	return iTheirValue >= iOurValue;
 }
 
 
