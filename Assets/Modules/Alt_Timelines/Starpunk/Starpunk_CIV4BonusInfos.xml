@@ -11,7 +11,7 @@
 		<Type>BONUS_STARPUNK</Type>
 		<Description>TXT_KEY_BONUS_STARPUNK</Description>
 		<Civilopedia>TXT_KEY_BONUS_STARPUNK_PEDIA</Civilopedia>
-		<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+		<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 		<ArtDefineTag>ART_DEF_BONUS_STARPUNK</ArtDefineTag>
 		<TechReveal>TECH_STARPUNK</TechReveal>
 		<TechCityTrade>TECH_STARPUNK</TechCityTrade>

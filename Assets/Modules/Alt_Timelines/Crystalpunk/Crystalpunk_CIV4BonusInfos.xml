@@ -11,7 +11,7 @@
 		<Type>BONUS_CRYSTALPUNK</Type>
 		<Description>TXT_KEY_BONUS_CRYSTALPUNK</Description>
 		<Civilopedia>TXT_KEY_BONUS_CRYSTALPUNK_PEDIA</Civilopedia>
-		<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+		<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 		<ArtDefineTag>ART_DEF_BONUS_CRYSTALPUNK</ArtDefineTag>
 		<TechReveal>TECH_CRYSTALPUNK</TechReveal>
 		<TechCityTrade>TECH_CRYSTALPUNK</TechCityTrade>
