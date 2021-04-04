@@ -2841,51 +2841,45 @@ void CvTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 				logging::logMsg("C2C.log", "Switching minor team %d to full\n", getID());
 			}
 		}
+		else if (bNewValue)
+		{
+			logging::logMsg("C2C.log", "Setting non-alive team %d to minor\n", getID());
+		}
 		else
 		{
-			if (bNewValue)
-			{
-				logging::logMsg("C2C.log", "Setting non-alive team %d to minor\n", getID());
-			}
-			else
-			{
-				logging::logMsg("C2C.log", "Setting non-alive minor team %d to full\n", getID());
-			}
+			logging::logMsg("C2C.log", "Setting non-alive minor team %d to full\n", getID());
 		}
-		bool abHasMet[MAX_TEAMS];
-		TeamTypes eBarbCivVictim = NO_TEAM;
+		bool abHasMet[MAX_PC_TEAMS];
 
 		// Have to check hasMet status first because of vassal states ... dow on master causes hasMet for vassal
-		for (int iI = 0; iI < MAX_TEAMS; iI++)
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
 			abHasMet[iI] = isHasMet((TeamTypes)iI);
 		}
+		TeamTypes eBarbCivVictim = NO_TEAM;
 
-		if (isAlive())
+		if (bDoBarbCivCheck && !bNewValue && isAlive())
 		{
-			if (bDoBarbCivCheck && !bNewValue)
+			int iMaxVal = 0;
+			for (int iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
 			{
-				int iMaxVal = 0;
-				for (int iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
+				if (iJ != getID())
 				{
-					if (iJ != getID())
+					int iValue = GET_TEAM(getID()).AI_getBarbarianCivWarVal((TeamTypes)iJ, 12);
+					if (iValue > iMaxVal)
 					{
-						int iValue = GET_TEAM(getID()).AI_getBarbarianCivWarVal((TeamTypes)iJ, 12);
-						if (iValue > iMaxVal)
-						{
-							logging::logMsg("C2C.log", "    BarbCiv team %d is considering declaring war against victim Team %d\n", getID(), iJ);
-							CvCity* pCapital = GET_PLAYER(getLeaderID()).getCapitalCity();
+						logging::logMsg("C2C.log", "    BarbCiv team %d is considering declaring war against victim Team %d\n", getID(), iJ);
+						CvCity* pCapital = GET_PLAYER(getLeaderID()).getCapitalCity();
 
-							if (pCapital == NULL || pCapital->plot()->isHasPathToPlayerCity(getID(), GET_TEAM((TeamTypes)iJ).getLeaderID()))
-							{
-								iMaxVal = iValue;
-								eBarbCivVictim = (TeamTypes)iJ;
-							}
+						if (pCapital == NULL || pCapital->plot()->isHasPathToPlayerCity(getID(), GET_TEAM((TeamTypes)iJ).getLeaderID()))
+						{
+							iMaxVal = iValue;
+							eBarbCivVictim = (TeamTypes)iJ;
 						}
 					}
 				}
-				logging::logMsg("C2C.log", "    BarbCiv team %d will declare war against victim Team %d\n", getID(), eBarbCivVictim);
 			}
+			logging::logMsg("C2C.log", "    BarbCiv team %d will declare war against victim Team %d\n", getID(), eBarbCivVictim);
 		}
 
 		if (bNewValue)
@@ -2910,14 +2904,7 @@ void CvTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 				{
 					if (abHasMet[iI])
 					{
-						if (GC.getGame().isOption(GAMEOPTION_START_AS_MINORS))
-						{
-							if (isAlive() && !isAtWar((TeamTypes)iI))
-							{
-								declareWar((TeamTypes)iI, true, NO_WARPLAN);
-							}
-						}
-						else
+						if (!GC.getGame().isOption(GAMEOPTION_START_AS_MINORS))
 						{
 							// Does other player want to keep war with us?
 							bool bPeace = true;
@@ -2940,27 +2927,19 @@ void CvTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 									bPeace = false;
 								}
 							}
-							else
+							else if (!isAtWar((TeamTypes)iI))
 							{
-								if (!isAtWar((TeamTypes)iI))
+								FErrorMsg("!isAtWar((TeamTypes)iI); Shouldn't happen here");
+								bPeace = false;
+							}
+							else if (GET_TEAM((TeamTypes)iI).AI_minorKeepWarVal(getID()) > 0
+							&& GET_TEAM((TeamTypes)iI).AI_endWarVal(getID()) < GET_TEAM(getID()).AI_endWarVal((TeamTypes)iI) / 2)
+							{
+								if (iCount > 2 || GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > GC.getWAR_SUCCESS_CITY_CAPTURING())
 								{
-									FErrorMsg("!isAtWar((TeamTypes)iI); Shouldn't happen here");
 									bPeace = false;
 								}
-								else if (GET_TEAM((TeamTypes)iI).AI_minorKeepWarVal(getID()) > 0)
-								{
-									if (GET_TEAM((TeamTypes)iI).AI_endWarVal(getID()) < GET_TEAM(getID()).AI_endWarVal((TeamTypes)iI) / 2)
-									{
-										if (iCount > 2 || GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > GC.getWAR_SUCCESS_CITY_CAPTURING())
-										{
-											bPeace = false;
-										}
-										else
-										{
-											bPlanWar = true;
-										}
-									}
-								}
+								else bPlanWar = true;
 							}
 
 							if (bPeace)
@@ -2976,20 +2955,18 @@ void CvTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 									logging::logMsg("C2C.log", "    Team %d decides to plan war against ex-minor\n", iI);
 								}
 							}
-							else
-							{
-								logging::logMsg("C2C.log", "    Team %d decides to keep war against ex-minor\n", iI);
-							}
+							else logging::logMsg("C2C.log", "    Team %d decides to keep war against ex-minor\n", iI);
+						}
+						else if (isAlive() && !isAtWar((TeamTypes)iI))
+						{
+							declareWar((TeamTypes)iI, true, NO_WARPLAN);
 						}
 					}
-					else
+					else if (isAtWar((TeamTypes)iI) && !GET_TEAM((TeamTypes)iI).isMinorCiv())
 					{
-						if (isAtWar((TeamTypes)iI) && !GET_TEAM((TeamTypes)iI).isMinorCiv())
-						{
-							makePeace((TeamTypes)iI, false);
-							setHasMet((TeamTypes)iI, false);
-							GET_TEAM((TeamTypes)iI).setHasMet(getID(), false);
-						}
+						makePeace((TeamTypes)iI, false);
+						setHasMet((TeamTypes)iI, false);
+						GET_TEAM((TeamTypes)iI).setHasMet(getID(), false);
 					}
 
 					if (isAtWar((TeamTypes)iI))
@@ -3002,35 +2979,32 @@ void CvTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 
 			if (eBarbCivVictim != NO_TEAM)
 			{
-				if (!isAtWar(eBarbCivVictim))
-				{
-					if (getAnyWarPlanCount(true) == 0)
-					{
-						int iCount = 0;
-						foreach_(const CvUnit* pLoopUnit, GET_PLAYER(getLeaderID()).units())
-						{
-							if (pLoopUnit->plot()->getTeam() == eBarbCivVictim)
-							{
-								iCount++;
-							}
-						}
-
-						if (iCount > 2 || GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > GC.getWAR_SUCCESS_CITY_CAPTURING())
-						{
-							logging::logMsg("C2C.log", "  Barb civ %d decides to keep war on victim Team %d\n", getID(), eBarbCivVictim);
-							declareWar((TeamTypes)iI, true, WARPLAN_TOTAL);
-						}
-						else
-						{
-							logging::logMsg("C2C.log", "  Barb civ %d begins preparing for war on victim Team %d\n", getID(), eBarbCivVictim);
-							// Prepare for war with victim
-							AI_setWarPlan(eBarbCivVictim,WARPLAN_TOTAL);
-						}
-					}
-				}
-				else
+				if (isAtWar(eBarbCivVictim))
 				{
 					AI_setWarPlan(eBarbCivVictim, WARPLAN_TOTAL, true);
+				}
+				else if (getAnyWarPlanCount(true) == 0)
+				{
+					int iCount = 0;
+					foreach_(const CvUnit* pLoopUnit, GET_PLAYER(getLeaderID()).units())
+					{
+						if (pLoopUnit->plot()->getTeam() == eBarbCivVictim)
+						{
+							iCount++;
+						}
+					}
+
+					if (iCount > 2 || GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > GC.getWAR_SUCCESS_CITY_CAPTURING())
+					{
+						logging::logMsg("C2C.log", "  Barb civ %d decides to keep war on victim Team %d\n", getID(), eBarbCivVictim);
+						declareWar((TeamTypes)iI, true, WARPLAN_TOTAL);
+					}
+					else
+					{
+						logging::logMsg("C2C.log", "  Barb civ %d begins preparing for war on victim Team %d\n", getID(), eBarbCivVictim);
+						// Prepare for war with victim
+						AI_setWarPlan(eBarbCivVictim, WARPLAN_TOTAL);
+					}
 				}
 			}
 
@@ -3058,25 +3032,25 @@ void CvTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 
 void CvTeam::declareWarAsMinor()
 {
-	if ( isAlive() )
+	if (isAlive())
 	{
 		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
 			// Declare war on everyone except barbs, barbs always do their own declaring
-			if( iI != getID() && !isAtWar((TeamTypes)iI) )
+			if (iI != getID() && !isAtWar((TeamTypes)iI))
 			{
 				bool bHasMet = isHasMet((TeamTypes)iI);
 
 				declareWar((TeamTypes)iI, false, WARPLAN_LIMITED);
-				if( !bHasMet )
+				if (!bHasMet)
 				{
 					// Declaring war creates contacts, remove those the player didn't have already
-					setHasMet( (TeamTypes)iI, false );
-					GET_TEAM((TeamTypes)iI).setHasMet( getID(), false );
+					setHasMet((TeamTypes)iI, false);
+					GET_TEAM((TeamTypes)iI).setHasMet(getID(), false);
 				}
 			}
 
-			if( isAtWar((TeamTypes)iI) )
+			if (isAtWar((TeamTypes)iI))
 			{
 				AI_setWarPlan((TeamTypes)iI, WARPLAN_LIMITED, true);
 				GET_TEAM((TeamTypes)iI).AI_setWarPlan(getID(), WARPLAN_LIMITED, true);
@@ -3168,7 +3142,7 @@ int CvTeam::getNumMembers() const
 void CvTeam::changeNumMembers(int iChange)
 {
 	m_iNumMembers += iChange;
-	FASSERT_NOT_NEGATIVE(getNumMembers())
+	FASSERT_NOT_NEGATIVE(m_iNumMembers)
 }
 
 
@@ -3177,17 +3151,15 @@ int CvTeam::getAliveCount() const
 	return m_iAliveCount;
 }
 
-
 int CvTeam::isAlive() const
 {
-	return (getAliveCount() > 0);
+	return m_iAliveCount > 0;
 }
-
 
 void CvTeam::changeAliveCount(int iChange)
 {
 	m_iAliveCount += iChange;
-	FASSERT_NOT_NEGATIVE(getAliveCount())
+	FASSERT_NOT_NEGATIVE(m_iAliveCount)
 
 	// free vassals
 	if (0 == m_iAliveCount)
@@ -3207,22 +3179,15 @@ void CvTeam::changeAliveCount(int iChange)
 }
 
 
-int CvTeam::getEverAliveCount() const
-{
-	return m_iEverAliveCount;
-}
-
-
 int CvTeam::isEverAlive() const
 {
-	return (getEverAliveCount() > 0);
+	return m_iEverAliveCount > 0;
 }
-
 
 void CvTeam::changeEverAliveCount(int iChange)
 {
 	m_iEverAliveCount += iChange;
-	FASSERT_NOT_NEGATIVE(getEverAliveCount())
+	FASSERT_NOT_NEGATIVE(m_iEverAliveCount)
 }
 
 
@@ -3231,41 +3196,30 @@ int CvTeam::getNumCities() const
 	return m_iNumCities;
 }
 
-
 void CvTeam::changeNumCities(int iChange)
 {
 	m_iNumCities += iChange;
-	FASSERT_NOT_NEGATIVE(getNumCities())
+	FASSERT_NOT_NEGATIVE(m_iNumCities)
 }
 
 
 int CvTeam::getTotalPopulation(bool bCheckVassals) const
 {
+	if (isNPC() || !bCheckVassals)
+	{
+		return m_iTotalPopulation;
+	}
 	int iVassalPop = 0;
 
-	if (bCheckVassals)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (isAVassal())
+		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID() && GET_TEAM((TeamTypes)iI).isVassal(getID()))
 		{
-			return m_iTotalPopulation / 2;
-		}
-
-		for (int iI = 0; iI < MAX_TEAMS; iI++)
-		{
-			if ((TeamTypes)iI != getID())
-			{
-				CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
-				if (kLoopTeam.isAlive() && kLoopTeam.isVassal(getID()))
-				{
-					iVassalPop += kLoopTeam.getTotalPopulation(false) / 2;
-				}
-			}
+			iVassalPop += GET_TEAM((TeamTypes)iI).getTotalPopulation(false) / 2;
 		}
 	}
-
-	return (m_iTotalPopulation + iVassalPop);
+	return m_iTotalPopulation + iVassalPop;
 }
-
 
 void CvTeam::changeTotalPopulation(int iChange)
 {
@@ -3276,31 +3230,25 @@ void CvTeam::changeTotalPopulation(int iChange)
 
 int CvTeam::getTotalLand(bool bCheckVassals) const
 {
+	if (isNPC() || !bCheckVassals)
+	{
+		return m_iTotalLand;
+	}
 	int iVassalLand = 0;
 
-	if (bCheckVassals)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
-		if (isAVassal())
+		if ((TeamTypes)iI != getID())
 		{
-			return m_iTotalLand / 2;
-		}
-
-		for (int iI = 0; iI < MAX_TEAMS; iI++)
-		{
-			if ((TeamTypes)iI != getID())
+			CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
+			if (kLoopTeam.isAlive() && kLoopTeam.isVassal(getID()))
 			{
-				CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
-				if (kLoopTeam.isAlive() && kLoopTeam.isVassal(getID()))
-				{
-					iVassalLand += kLoopTeam.getTotalLand(false) / 2;
-				}
+				iVassalLand += kLoopTeam.getTotalLand(false) / 2;
 			}
 		}
 	}
-
-	return (m_iTotalLand + iVassalLand);
+	return m_iTotalLand + iVassalLand;
 }
-
 
 void CvTeam::changeTotalLand(int iChange)
 {
@@ -3314,11 +3262,10 @@ int CvTeam::getNukeInterception() const
 	return m_iNukeInterception;
 }
 
-
 void CvTeam::changeNukeInterception(int iChange)
 {
 	m_iNukeInterception += iChange;
-	FASSERT_NOT_NEGATIVE(getNukeInterception())
+	FASSERT_NOT_NEGATIVE(m_iNukeInterception)
 }
 
 
@@ -3330,7 +3277,7 @@ int CvTeam::getForceTeamVoteEligibilityCount(VoteSourceTypes eVoteSource) const
 
 bool CvTeam::isForceTeamVoteEligible(VoteSourceTypes eVoteSource) const
 {
-	return ((getForceTeamVoteEligibilityCount(eVoteSource) > 0) && !isMinorCiv());
+	return getForceTeamVoteEligibilityCount(eVoteSource) > 0 && !isMinorCiv();
 }
 
 
@@ -3346,12 +3293,10 @@ int CvTeam::getExtraWaterSeeFromCount() const
 	return m_iExtraWaterSeeFromCount;
 }
 
-
 bool CvTeam::isExtraWaterSeeFrom() const
 {
-	return (getExtraWaterSeeFromCount() > 0);
+	return m_iExtraWaterSeeFromCount > 0;
 }
-
 
 void CvTeam::changeExtraWaterSeeFromCount(int iChange)
 {
@@ -3360,7 +3305,7 @@ void CvTeam::changeExtraWaterSeeFromCount(int iChange)
 		GC.getMap().updateSight(false);
 
 		m_iExtraWaterSeeFromCount += iChange;
-		FASSERT_NOT_NEGATIVE(getExtraWaterSeeFromCount())
+		FASSERT_NOT_NEGATIVE(m_iExtraWaterSeeFromCount)
 
 		GC.getMap().updateSight(true);
 	}
@@ -3372,17 +3317,15 @@ int CvTeam::getMapTradingCount() const
 	return m_iMapTradingCount;
 }
 
-
 bool CvTeam::isMapTrading()	const
 {
-	return (getMapTradingCount() > 0);
+	return m_iMapTradingCount > 0;
 }
-
 
 void CvTeam::changeMapTradingCount(int iChange)
 {
 	m_iMapTradingCount += iChange;
-	FASSERT_NOT_NEGATIVE(getMapTradingCount())
+	FASSERT_NOT_NEGATIVE(m_iMapTradingCount)
 }
 
 
@@ -3391,17 +3334,15 @@ int CvTeam::getTechTradingCount() const
 	return m_iTechTradingCount;
 }
 
-
 bool CvTeam::isTechTrading() const
 {
-	return (getTechTradingCount() > 0);
+	return m_iTechTradingCount > 0;
 }
-
 
 void CvTeam::changeTechTradingCount(int iChange)
 {
 	m_iTechTradingCount += iChange;
-	FASSERT_NOT_NEGATIVE(getTechTradingCount())
+	FASSERT_NOT_NEGATIVE(m_iTechTradingCount)
 }
 
 
@@ -3410,17 +3351,15 @@ int CvTeam::getGoldTradingCount() const
 	return m_iGoldTradingCount;
 }
 
-
 bool CvTeam::isGoldTrading() const
 {
-	return (getGoldTradingCount() > 0);
+	return m_iGoldTradingCount > 0;
 }
-
 
 void CvTeam::changeGoldTradingCount(int iChange)
 {
 	m_iGoldTradingCount += iChange;
-	FASSERT_NOT_NEGATIVE(getGoldTradingCount())
+	FASSERT_NOT_NEGATIVE(m_iGoldTradingCount)
 }
 
 
@@ -3429,35 +3368,32 @@ int CvTeam::getOpenBordersTradingCount() const
 	return m_iOpenBordersTradingCount;
 }
 
-
 bool CvTeam::isOpenBordersTrading() const
 {
-	return (getOpenBordersTradingCount() > 0);
+	return m_iOpenBordersTradingCount > 0;
 }
-
 
 void CvTeam::changeOpenBordersTradingCount(int iChange)
 {
 	m_iOpenBordersTradingCount += iChange;
-	FASSERT_NOT_NEGATIVE(getOpenBordersTradingCount())
+	FASSERT_NOT_NEGATIVE(m_iOpenBordersTradingCount)
 }
+
 
 int CvTeam::getDefensivePactTradingCount() const
 {
 	return m_iDefensivePactTradingCount;
 }
 
-
 bool CvTeam::isDefensivePactTrading() const
 {
-	return (getDefensivePactTradingCount() > 0);
+	return m_iDefensivePactTradingCount > 0;
 }
-
 
 void CvTeam::changeDefensivePactTradingCount(int iChange)
 {
 	m_iDefensivePactTradingCount += iChange;
-	FASSERT_NOT_NEGATIVE(getDefensivePactTradingCount())
+	FASSERT_NOT_NEGATIVE(m_iDefensivePactTradingCount)
 }
 
 
@@ -3466,17 +3402,15 @@ int CvTeam::getPermanentAllianceTradingCount() const
 	return m_iPermanentAllianceTradingCount;
 }
 
-
 bool CvTeam::isPermanentAllianceTrading() const
 {
-	return GC.getGame().isOption(GAMEOPTION_PERMANENT_ALLIANCES) && getPermanentAllianceTradingCount() > 0;
+	return GC.getGame().isOption(GAMEOPTION_PERMANENT_ALLIANCES) && m_iPermanentAllianceTradingCount > 0;
 }
-
 
 void CvTeam::changePermanentAllianceTradingCount(int iChange)
 {
 	m_iPermanentAllianceTradingCount += iChange;
-	FASSERT_NOT_NEGATIVE(getPermanentAllianceTradingCount())
+	FASSERT_NOT_NEGATIVE(m_iPermanentAllianceTradingCount)
 }
 
 
@@ -3485,17 +3419,15 @@ int CvTeam::getVassalTradingCount() const
 	return m_iVassalTradingCount;
 }
 
-
 bool CvTeam::isVassalStateTrading() const
 {
-	return !GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES) && getVassalTradingCount() > 0;
+	return !GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES) && m_iVassalTradingCount > 0;
 }
-
 
 void CvTeam::changeVassalTradingCount(int iChange)
 {
 	m_iVassalTradingCount += iChange;
-	FASSERT_NOT_NEGATIVE(getVassalTradingCount())
+	FASSERT_NOT_NEGATIVE(m_iVassalTradingCount)
 }
 
 
@@ -3504,19 +3436,17 @@ int CvTeam::getBridgeBuildingCount() const
 	return m_iBridgeBuildingCount;
 }
 
-
 bool CvTeam::isBridgeBuilding()	const
 {
-	return (getBridgeBuildingCount() > 0);
+	return m_iBridgeBuildingCount > 0;
 }
-
 
 void CvTeam::changeBridgeBuildingCount(int iChange)
 {
 	if (iChange != 0)
 	{
 		m_iBridgeBuildingCount += iChange;
-		FASSERT_NOT_NEGATIVE(getBridgeBuildingCount())
+		FASSERT_NOT_NEGATIVE(m_iBridgeBuildingCount)
 
 		if (GC.IsGraphicsInitialized())
 		{
@@ -3531,19 +3461,17 @@ int CvTeam::getIrrigationCount() const
 	return m_iIrrigationCount;
 }
 
-
 bool CvTeam::isIrrigation() const
 {
-	return (getIrrigationCount() > 0);
+	return m_iIrrigationCount > 0;
 }
-
 
 void CvTeam::changeIrrigationCount(int iChange)
 {
 	if (iChange != 0)
 	{
 		m_iIrrigationCount += iChange;
-		FASSERT_NOT_NEGATIVE(getIrrigationCount())
+		FASSERT_NOT_NEGATIVE(m_iIrrigationCount)
 
 		GC.getMap().updateIrrigated();
 	}
@@ -3555,17 +3483,15 @@ int CvTeam::getIgnoreIrrigationCount() const
 	return m_iIgnoreIrrigationCount;
 }
 
-
 bool CvTeam::isIgnoreIrrigation() const
 {
-	return (getIgnoreIrrigationCount() > 0);
+	return m_iIgnoreIrrigationCount > 0;
 }
-
 
 void CvTeam::changeIgnoreIrrigationCount(int iChange)
 {
 	m_iIgnoreIrrigationCount += iChange;
-	FASSERT_NOT_NEGATIVE(getIgnoreIrrigationCount())
+	FASSERT_NOT_NEGATIVE(m_iIgnoreIrrigationCount)
 }
 
 
@@ -3574,23 +3500,22 @@ int CvTeam::getWaterWorkCount() const
 	return m_iWaterWorkCount;
 }
 
-
 bool CvTeam::isWaterWork() const
 {
-	return (getWaterWorkCount() > 0);
+	return m_iWaterWorkCount > 0;
 }
-
 
 void CvTeam::changeWaterWorkCount(int iChange)
 {
 	if (iChange != 0)
 	{
 		m_iWaterWorkCount += iChange;
-		FASSERT_NOT_NEGATIVE(getWaterWorkCount())
+		FASSERT_NOT_NEGATIVE(m_iWaterWorkCount)
 
 		AI_makeAssignWorkDirty();
 	}
 }
+
 
 int CvTeam::getVassalPower() const
 {
@@ -3612,6 +3537,7 @@ void CvTeam::setMasterPower(int iPower)
 	m_iMasterPower = iPower;
 }
 
+
 int CvTeam::getEnemyWarWearinessModifier() const
 {
 	int iEnemyWarWearinessTotal = m_iEnemyWarWearinessModifier;
@@ -3630,15 +3556,15 @@ void CvTeam::changeEnemyWarWearinessModifier(int iChange)
 	m_iEnemyWarWearinessModifier += iChange;
 }
 
+
 bool CvTeam::isMapCentering() const
 {
 	return m_bMapCentering;
 }
 
-
 void CvTeam::setMapCentering(bool bNewValue)
 {
-	if (isMapCentering() != bNewValue)
+	if (m_bMapCentering != bNewValue)
 	{
 		m_bMapCentering = bNewValue;
 
@@ -3663,14 +3589,12 @@ int CvTeam::getStolenVisibilityTimer(TeamTypes eIndex) const
 	return m_aiStolenVisibilityTimer[eIndex];
 }
 
-
 bool CvTeam::isStolenVisibility(TeamTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 
 	return (getStolenVisibilityTimer(eIndex) > 0);
 }
-
 
 void CvTeam::setStolenVisibilityTimer(TeamTypes eIndex, int iNewValue)
 {
@@ -3698,7 +3622,6 @@ void CvTeam::setStolenVisibilityTimer(TeamTypes eIndex, int iNewValue)
 	}
 }
 
-
 void CvTeam::changeStolenVisibilityTimer(TeamTypes eIndex, int iChange)
 {
 	setStolenVisibilityTimer(eIndex, (getStolenVisibilityTimer(eIndex) + iChange));
@@ -3716,7 +3639,6 @@ int CvTeam::getWarWearinessTimes100(TeamTypes eIndex) const
 	return m_aiWarWearinessTimes100[eIndex];
 }
 
-
 void CvTeam::setWarWeariness(TeamTypes eIndex, int iNewValue)
 {
 	setWarWearinessTimes100(eIndex, 100*iNewValue);
@@ -3727,7 +3649,6 @@ void CvTeam::setWarWearinessTimes100(TeamTypes eIndex, int iNewValue)
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiWarWearinessTimes100[eIndex] = std::max(0, iNewValue);
 }
-
 
 void CvTeam::changeWarWeariness(TeamTypes eIndex, int iChange)
 {
@@ -3755,7 +3676,7 @@ void CvTeam::changeWarWearinessTimes100(TeamTypes eOtherTeam, const CvPlot& kPlo
 	int iRatio = 100;
 	if (0 != iOurCulture + iTheirCulture)
 	{
-		iRatio = (100 * iTheirCulture) / (iOurCulture + iTheirCulture);
+		iRatio = 100 * iTheirCulture / (iOurCulture + iTheirCulture);
 	}
 	// Rebels don't feel as if they are fighting on foreign soil
 	if (isRebelAgainst(eOtherTeam))
@@ -3770,18 +3691,11 @@ void CvTeam::changeWarWearinessTimes100(TeamTypes eOtherTeam, const CvPlot& kPlo
 }
 
 
-int CvTeam::getTechShareCount(int iIndex) const
-{
-	FASSERT_BOUNDS(0, MAX_TEAMS, iIndex)
-	return m_aiTechShareCount[iIndex];
-}
-
-
 bool CvTeam::isTechShare(int iIndex) const
 {
-	return (getTechShareCount(iIndex) > 0);
+	FASSERT_BOUNDS(0, MAX_TEAMS, iIndex)
+	return m_aiTechShareCount[iIndex] > 0;
 }
-
 
 void CvTeam::changeTechShareCount(int iIndex, int iChange)
 {
@@ -3790,7 +3704,7 @@ void CvTeam::changeTechShareCount(int iIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiTechShareCount[iIndex] += iChange;
-		FASSERT_NOT_NEGATIVE(getTechShareCount(iIndex))
+		FASSERT_NOT_NEGATIVE(m_aiTechShareCount[iIndex])
 
 		if (isTechShare(iIndex))
 		{
@@ -3806,12 +3720,10 @@ int CvTeam::getCommerceFlexibleCount(CommerceTypes eIndex) const
 	return m_aiCommerceFlexibleCount[eIndex];
 }
 
-
 bool CvTeam::isCommerceFlexible(CommerceTypes eIndex) const
 {
-	return (getCommerceFlexibleCount(eIndex) > 0);
+	return getCommerceFlexibleCount(eIndex) > 0;
 }
-
 
 void CvTeam::changeCommerceFlexibleCount(CommerceTypes eIndex, int iChange)
 {
@@ -3820,7 +3732,7 @@ void CvTeam::changeCommerceFlexibleCount(CommerceTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiCommerceFlexibleCount[eIndex] += iChange;
-		FASSERT_NOT_NEGATIVE(getCommerceFlexibleCount(eIndex))
+		FASSERT_NOT_NEGATIVE(m_aiCommerceFlexibleCount[eIndex])
 
 		if (getID() == GC.getGame().getActiveTeam())
 		{
@@ -3837,12 +3749,11 @@ int CvTeam::getExtraMoves(DomainTypes eIndex) const
 	return m_aiExtraMoves[eIndex];
 }
 
-
 void CvTeam::changeExtraMoves(DomainTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
 	m_aiExtraMoves[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(getExtraMoves(eIndex))
+	FASSERT_NOT_NEGATIVE(m_aiExtraMoves[eIndex])
 }
 
 
@@ -3853,8 +3764,8 @@ bool CvTeam::isHasMet(TeamTypes eIndex)	const
 	return m_abHasMet[eIndex];
 }
 
-// For barbarian and minor civs
-void CvTeam::setHasMet( TeamTypes eIndex, bool bNewValue )
+// For minor civs
+void CvTeam::setHasMet(TeamTypes eIndex, bool bNewValue)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	if (bNewValue != isHasMet(eIndex)) m_abHasMet[eIndex] = bNewValue;
