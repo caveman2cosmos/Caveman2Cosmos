@@ -474,7 +474,6 @@
 	<ElementType name="FreePromotion_3" content="textOnly"/>
 	<ElementType name="PrereqGameOption" content="textOnly"/>
 	<ElementType name="NotGameOption" content="textOnly"/>
-	<ElementType name="bBuildOnlyOnPeaks" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bApplyFreePromotionOnMove" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bForceNoPrereqScaling" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bProvidesFreshWater" content="textOnly" dt:type="boolean"/>
@@ -914,7 +913,6 @@
 		<element type="FreePromotion_3" minOccurs="0"/>
 		<element type="PrereqGameOption" minOccurs="0"/>
 		<element type="NotGameOption" minOccurs="0"/>
-		<element type="bBuildOnlyOnPeaks" minOccurs="0"/>
 		<element type="bApplyFreePromotionOnMove" minOccurs="0"/>
 		<element type="bProvidesFreshWater" minOccurs="0"/>
 		<element type="bForceAllTradeRoutes" minOccurs="0"/>

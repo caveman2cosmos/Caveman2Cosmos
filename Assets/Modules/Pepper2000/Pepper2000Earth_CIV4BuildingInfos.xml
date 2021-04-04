@@ -4886,7 +4886,6 @@
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<iCost>455</iCost>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
@@ -12676,7 +12675,6 @@
 			<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
 			<iCost>3245</iCost>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -18717,7 +18715,6 @@
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iCost>2865</iCost>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 				<iCommerce>3</iCommerce>
@@ -18850,7 +18847,6 @@
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iCost>5455</iCost>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -18879,7 +18875,6 @@
 			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
 			<iCost>5905</iCost>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
 				<iCommerce>4</iCommerce>
 				<iCommerce>4</iCommerce>

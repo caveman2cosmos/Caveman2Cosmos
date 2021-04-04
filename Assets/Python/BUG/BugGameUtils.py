@@ -178,7 +178,6 @@ class Dispatcher:
 		self._setDefault("AI_chooseTech", TechTypes.NO_TECH)
 		self._setDefault("AI_chooseProduction", False)
 		self._setDefault("AI_unitUpdate", False)
-		self._setDefault("AI_doWar", False)
 		self._setDefault("AI_doDiplo", False)
 		self._setDefault("doHolyCity", False)
 		self._setDefault("doResearch", False)

@@ -11,7 +11,7 @@
 		<Type>BONUS_SPACEPUNK</Type>
 		<Description>TXT_KEY_BONUS_SPACEPUNK</Description>
 		<Civilopedia>TXT_KEY_BONUS_SPACEPUNK_PEDIA</Civilopedia>
-		<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+		<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 		<ArtDefineTag>ART_DEF_BONUS_SPACEPUNK</ArtDefineTag>
 		<TechReveal>TECH_SPACEPUNK</TechReveal>
 		<TechCityTrade>TECH_SPACEPUNK</TechCityTrade>

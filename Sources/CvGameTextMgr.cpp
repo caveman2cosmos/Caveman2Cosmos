@@ -8616,12 +8616,14 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		{
 			const int iCulture = GC.getInfoTypeForString("BONUSCLASS_CULTURE");
 			const int iProduce = GC.getInfoTypeForString("BONUSCLASS_MANUFACTURED");
+			const int iGenmod = GC.getInfoTypeForString("BONUSCLASS_GENMODS");
 			bool bFirst = true;
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
 				if (pPlot->isPlotGroupConnectedBonus(pPlot->getOwner(), ((BonusTypes)iI))
 				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iCulture
-				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iProduce)
+				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iProduce
+				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iGenmod)
 				{
 					if (bFirst)
 					{
@@ -24221,12 +24223,6 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MAX_LATITUDE", kBuilding.getMaxLatitude()));
-		}
-
-		if (kBuilding.isBuildOnlyOnPeaks() && (pCity == NULL || !pCity->plot()->isAsPeak()))
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_MOUNTAIN"));
 		}
 
 		if (kBuilding.needStateReligionInCity()

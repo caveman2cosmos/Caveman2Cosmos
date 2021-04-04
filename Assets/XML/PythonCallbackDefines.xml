@@ -153,9 +153,5 @@
 		<DefineName>USE_AI_BESTTECH_CALLBACK</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
-	<Define>
-		<DefineName>USE_AI_CAN_DO_WARPLANS_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
 	<!--Afforess Additions End -->
 </Civ4Defines>

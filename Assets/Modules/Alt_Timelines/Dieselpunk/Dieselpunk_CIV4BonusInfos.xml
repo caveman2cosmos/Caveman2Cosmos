@@ -11,7 +11,7 @@
 		<Type>BONUS_DIESELPUNK</Type>
 		<Description>TXT_KEY_BONUS_DIESELPUNK</Description>
 		<Civilopedia>TXT_KEY_BONUS_DIESELPUNK_PEDIA</Civilopedia>
-		<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+		<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 		<ArtDefineTag>ART_DEF_BONUS_DIESELPUNK</ArtDefineTag>
 		<TechReveal>TECH_DIESELPUNK</TechReveal>
 		<TechCityTrade>TECH_DIESELPUNK</TechCityTrade>
