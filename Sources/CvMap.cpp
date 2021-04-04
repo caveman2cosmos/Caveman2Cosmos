@@ -231,9 +231,7 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	//Koshling - why do we ignore the map size in MapInfos if there is only 1???  Changed that for now
-	//if (GC.getNumMapInfos() > 1)
-	if (GC.multiMapsEnabled() /*&& GC.getMapInfos().size() > 0*/)
+	if (m_eType > MAP_EARTH && GC.getNumMapInfos() > 0)
 	{
 		if (GC.getMapInfo(getType()).getGridWidth() > 0 && GC.getMapInfo(getType()).getGridHeight() > 0)
 		{
@@ -1540,10 +1538,11 @@ const char* CvMap::getMapScript() const
 	}
 	return gDLL->getPythonIFace()->getMapScriptModule();
 }
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
+bool CvMap::plotsInitialized() const
+{
+	return m_pMapPlots != NULL;
+}
 
 //
 // used for loading WB maps

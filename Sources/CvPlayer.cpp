@@ -269,11 +269,15 @@ m_cachedBonusCount(NULL)
 	{
 		m_cachedTotalCityBaseCommerceRate[i] = MAX_INT;
 	}
-	m_groupCycles.push_back(new CLinkList<int>);
-	m_plotGroups.push_back(new FFreeListTrashArray<CvPlotGroup>);
-	m_cities.push_back(new FFreeListTrashArray<CvCityAI>);
-	m_units.push_back(new FFreeListTrashArray<CvUnitAI>);
-	m_selectionGroups.push_back(new FFreeListTrashArray<CvSelectionGroupAI>);
+
+	for (int i = 0; i < NUM_MAPS; i++)
+	{
+		m_groupCycles.push_back(new CLinkList<int>);
+		m_plotGroups.push_back(new FFreeListTrashArray<CvPlotGroup>);
+		m_cities.push_back(new FFreeListTrashArray<CvCityAI>);
+		m_units.push_back(new FFreeListTrashArray<CvUnitAI>);
+		m_selectionGroups.push_back(new FFreeListTrashArray<CvSelectionGroupAI>);
+	}
 
 	reset(NO_PLAYER, true);
 }
@@ -320,7 +324,7 @@ CvPlayer::~CvPlayer()
 
 	SAFE_DELETE_ARRAY(m_cachedBonusCount);
 
-	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+	for (int i = 0; i < NUM_MAPS; i++)
 	{
 		SAFE_DELETE(m_groupCycles[i]);
 		SAFE_DELETE(m_plotGroups[i]);
@@ -338,7 +342,13 @@ void CvPlayer::init(PlayerTypes eID)
 	reset(eID);
 	//--------------------------------
 	// Init containers
-	initContainersForMap(MAP_EARTH);
+	for (int i = 0; i < NUM_MAPS; i++)
+	{
+		m_plotGroups[i]->init();
+		m_cities[i]->init();
+		m_units[i]->init();
+		m_selectionGroups[i]->init(); 
+	}
 	m_eventsTriggered.init();
 	//--------------------------------
 	// Init non-saved data
@@ -466,12 +476,12 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 
 	//--------------------------------
 	// Init containers
-	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+	for (int i = 0; i < NUM_MAPS; i++)
 	{
-		if (GC.mapInitialized((MapTypes)i))
-		{
-			initContainersForMap((MapTypes)i);
-		}
+		m_plotGroups[i]->init();
+		m_cities[i]->init();
+		m_units[i]->init();
+		m_selectionGroups[i]->init(); 
 	}
 	m_eventsTriggered.init();
 
@@ -747,7 +757,7 @@ void CvPlayer::uninit()
 
 	m_contractBroker.reset();
 
-	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+	for (int i = 0; i < NUM_MAPS; i++)
 	{
 		m_groupCycles[i]->clear();
 		m_plotGroups[i]->uninit();
@@ -779,8 +789,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	//--------------------------------
 	// Uninit class
 	uninit();
-
-	addContainersForEachMap();
 
 	m_iMADDeterrent = 0;
 	m_iMADIncoming = 0;
@@ -1468,7 +1476,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_aUnitExtraCosts.clear();
 		m_triggersFired.clear();
 	}
-	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+	for (int i = 0; i < NUM_MAPS; i++)
 	{
 		m_plotGroups[i]->removeAll();
 		m_cities[i]->removeAll();
@@ -8303,7 +8311,7 @@ int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 
 
 int64_t CvPlayer::calculatePreInflatedCosts() const
-{ 
+{
 	if (isAnarchy())
 	{
 		return 0;
@@ -8364,12 +8372,51 @@ int CvPlayer::calculateInflationRate() const
 int64_t CvPlayer::getInflationCost() const
 {
 	const int64_t iPreInflatedCost = calculatePreInflatedCosts();
-	return iPreInflatedCost * getInflationMod10000() / 10000 - iPreInflatedCost;
+	return isAnarchy() ? 0 : iPreInflatedCost * getInflationMod10000() / 10000 - iPreInflatedCost;
 }
 
 int64_t CvPlayer::getFinalExpense() const
 {
-	return calculatePreInflatedCosts() * getInflationMod10000() / 10000;
+	return isAnarchy() ? 0 : calculatePreInflatedCosts() * getInflationMod10000() / 10000;
+}
+
+short CvPlayer::getProfitMargin(int &iTotalCommerce, int64_t &iNetIncome, int64_t &iNetExpenses, int iExtraExpense, int iExtraExpenseMod) const
+{
+	PROFILE_FUNC();
+	if (isAnarchy())
+	{
+		return 100;
+	}
+	iTotalCommerce = calculateTotalYield(YIELD_COMMERCE);
+	iNetIncome = getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
+
+	// Afforess - iExtraExpense lets us "extrapolate" our cost percents if we have extra future expenses
+	// iExtraExpense should be between 0 (default) and some positive extra gold per turn cost to us
+	iNetExpenses = getFinalExpense() + std::max(0, iExtraExpense);
+
+	if (iExtraExpenseMod > 0)
+	{
+		iNetExpenses *= 100 + iExtraExpenseMod;
+		iNetExpenses /= 100;
+	}
+	// Mainly gold per turn from trade.
+	iNetExpenses += std::max(0, -getGoldPerTurn());
+
+	// Toffer - Profit margin at 100% taxation
+	const int64_t iMaxTaxIncome = iNetIncome + (100 - getCommercePercent(COMMERCE_GOLD)) * iTotalCommerce / 100;
+	if (iNetExpenses >= iMaxTaxIncome)
+	{
+		return 0;
+	}
+	return static_cast<short>(100 - 100 * iNetExpenses / std::max<int64_t>(1, iMaxTaxIncome));
+}
+
+short CvPlayer::getProfitMargin(int iExtraExpense, int iExtraExpenseMod) const
+{
+	int iTotalCommerce;
+	int64_t iNetIncome;
+	int64_t iNetExpenses;
+	return getProfitMargin(iTotalCommerce, iNetIncome, iNetExpenses, iExtraExpense, iExtraExpenseMod);
 }
 
 int64_t CvPlayer::calculateBaseNetGold() const
@@ -15639,28 +15686,6 @@ CLLNode<CvWString>* CvPlayer::headCityNameNode() const
 }
 
 
-void CvPlayer::addContainersForEachMap()
-{
-	while ((int)m_groupCycles.size() < GC.getNumMapInfos())
-	{
-		m_groupCycles.push_back(new CLinkList<int>);
-		m_plotGroups.push_back(new FFreeListTrashArray<CvPlotGroup>);
-		m_cities.push_back(new FFreeListTrashArray<CvCityAI>);
-		m_units.push_back(new FFreeListTrashArray<CvUnitAI>);
-		m_selectionGroups.push_back(new FFreeListTrashArray<CvSelectionGroupAI>);
-	}
-}
-
-void CvPlayer::initContainersForMap(MapTypes mapIndex)
-{
-	int index = static_cast<int>(mapIndex);
-	m_plotGroups[index]->init();
-	m_cities[index]->init();
-	m_units[index]->init();
-	m_selectionGroups[index]->init(); 
-}
-
-
 CvPlotGroup* CvPlayer::firstPlotGroup(int *pIterIdx, bool bRev) const
 {
 	return !bRev ? m_plotGroups[CURRENT_MAP]->beginIter(pIterIdx) : m_plotGroups[CURRENT_MAP]->endIter(pIterIdx);
@@ -19936,8 +19961,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				m_cityNames.insertAtEnd(szBuffer);
 			}
 		}
-
-		for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+#ifdef BREAK_SAVES
+		for (int i = 0; i < NUM_MAPS; i++)
+#else
+		for (int i = 0; i < 1; i++)
+#endif
 		{
 			m_groupCycles[i]->Read(pStream);
 			ReadStreamableFFreeListTrashArray(*m_plotGroups[i], pStream);
@@ -20979,7 +21007,11 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 		}
 
-		for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+#ifdef BREAK_SAVES
+		for (int i = 0; i < NUM_MAPS; i++)
+#else
+		for (int i = 0; i < 1; i++)
+#endif
 		{
 			m_groupCycles[i]->Write(pStream);
 			WriteStreamableFFreeListTrashArray(*m_plotGroups[i], pStream);

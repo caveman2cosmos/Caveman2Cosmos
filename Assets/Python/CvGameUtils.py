@@ -238,10 +238,6 @@ class CvGameUtils:
 		pUnit = argsList[0]
 		return False
 
-	def AI_doWar(self, argsList):
-		eTeam = argsList[0]
-		return False
-
 	def AI_doDiplo(self, argsList):
 		ePlayer = argsList[0]
 		return False

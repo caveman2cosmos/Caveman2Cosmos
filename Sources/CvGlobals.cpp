@@ -132,7 +132,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_Profiler(NULL)
 	, m_VarSystem(NULL)
 	, m_fPLOT_SIZE(0)
-	, m_bMultimapsEnabled(false)
 	, m_bViewportsEnabled(false)
 	, m_iViewportFocusBorder(0)
 	, m_iViewportCenterOnSelectionCenterBorder(5)
@@ -413,13 +412,10 @@ void cvInternalGlobals::init()
 
 	m_game = new CvGameAI;
 	
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	m_maps.push_back(new CvMap(MAP_EARTH));
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+	for (int i = 0; i < NUM_MAPS; i++)
+	{
+		m_maps[i] = new CvMap((MapTypes)i);
+	}
 
 	CvPlayerAI::initStatics();
 	CvTeamAI::initStatics();
@@ -462,17 +458,10 @@ void cvInternalGlobals::uninit()
 
 	SAFE_DELETE(m_game);
 	
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	foreach_(const CvMap* map, m_maps)
 	{
 		SAFE_DELETE(map);
 	}
-	m_maps.clear();
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 	CvPlayerAI::freeStatics();
 	CvTeamAI::freeStatics();
@@ -602,11 +591,6 @@ DirectionTypes cvInternalGlobals::getXYDirection(int i, int j) const
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-bool cvInternalGlobals::multiMapsEnabled() const
-{
-	return m_bMultimapsEnabled;
-}
-
 bool cvInternalGlobals::viewportsEnabled() const
 {
 	return m_bViewportsEnabled;
@@ -619,27 +603,13 @@ bool cvInternalGlobals::getReprocessGreatWallDynamically() const
 
 int cvInternalGlobals::getNumMapInfos() const
 {
-	return multiMapsEnabled() ? m_paMapInfo.size() : 1;
+	return m_paMapInfo.size();
 }
 
 CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap) const
 {
 	FASSERT_BOUNDS(0, NUM_MAPS, eMap)
 	return *(m_paMapInfo[eMap]);
-}
-
-void cvInternalGlobals::updateMaps()
-{
-	for (int i = 1; i < GC.getNumMapInfos(); i++)
-	{
-		m_maps.push_back(NULL);
-	}
-	FAssert(m_maps.size() == GC.getNumMapInfos());
-
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		GET_PLAYER((PlayerTypes)i).addContainersForEachMap();
-	}
 }
 
 void cvInternalGlobals::setResourceLayer(bool bOn)
@@ -2950,36 +2920,9 @@ void cvInternalGlobals::reprocessSigns()
 		m_bSignsCleared = false;
 	}
 }
-
-void cvInternalGlobals::initializeMap(MapTypes eMap)
-{
-	OutputDebugString("Initializing Map: Start\n");
-	while ( m_maps.size() < (size_t)eMap )
-	{
-		//	Sparse or out of order initialization
-		m_maps.push_back(NULL);
-	}
-
-	FAssertMsg(m_maps[eMap] == NULL, "Memory leak allocating a map that already exists");
-
-	m_maps[eMap] = new CvMap(eMap);
-
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		GET_PLAYER((PlayerTypes)i).initContainersForMap(eMap);
-	}
-	OutputDebugString("Initializing Map: End\n");
-}
-
-bool cvInternalGlobals::mapInitialized(MapTypes eMap) const
-{
-	return (m_maps.size() > (size_t)eMap && m_maps[eMap] != NULL);
-}
-
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
-
 
 void cvInternalGlobals::addDelayedResolution(int *pType, CvString szString)
 {

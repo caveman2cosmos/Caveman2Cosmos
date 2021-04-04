@@ -1265,12 +1265,12 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MOTORSPORTS</PrereqTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>5220</iCost>
 			<iHappiness>1</iHappiness>
@@ -10329,12 +10329,12 @@
 			<PrereqTech>TECH_ALGEBRA</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<iCost>2280</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -16055,12 +16055,12 @@
 				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
