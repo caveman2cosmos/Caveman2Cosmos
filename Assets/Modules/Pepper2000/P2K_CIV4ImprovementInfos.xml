@@ -2210,7 +2210,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CISLUNAR_BASE</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
-			
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iAirBombDefense>20</iAirBombDefense>
@@ -2238,7 +2237,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SOLAR_SYSTEM_BASE</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
-			
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iAirBombDefense>20</iAirBombDefense>
@@ -2274,7 +2272,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERSTELLAR_BASE</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
-			
 			<PrereqTech>TECH_WEAPONIZED_GRAVITY_FIELDS</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iAirBombDefense>20</iAirBombDefense>
@@ -2310,7 +2307,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERGALACTIC_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERGALACTIC_BASE</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
-			
 			<PrereqTech>TECH_EXTREME_ENERGY_WEAPONS</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iAirBombDefense>20</iAirBombDefense>
@@ -2354,7 +2350,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HYPERSPACE_BUNKER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYPERSPACE_BUNKER</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
-			
 			<PrereqTech>TECH_COSMIC_WARFARE</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iAirBombDefense>20</iAirBombDefense>
