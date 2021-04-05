@@ -442,7 +442,6 @@
 	<ElementType name="FeatureTerrainBooleans" content="eltOnly">
 		<element type="FeatureTerrainBoolean" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bUseLSystem" content="textOnly" dt:type="boolean"/>
 	<ElementType name="BonusInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
@@ -488,7 +487,6 @@
 		<element type="TerrainBooleans" minOccurs="0"/>
 		<element type="FeatureBooleans" minOccurs="0"/>
 		<element type="FeatureTerrainBooleans" minOccurs="0"/>
-		<element type="bUseLSystem" minOccurs="0"/>
 		<element type="AfflictionCommunicabilityTypes" minOccurs="0"/>
 		<element type="PropertyManipulators" minOccurs="0"/>
 	</ElementType>
@@ -725,7 +723,6 @@
 		<element type="bWaterImprovement" minOccurs="0"/>
 		<element type="bGoody" minOccurs="0"/>
 		<element type="bPermanent" minOccurs="0"/>
-		<element type="bUseLSystem" minOccurs="0"/>
 		<element type="iAdvancedStartCost" minOccurs="0"/>
 		<element type="iTilesPerGoody" minOccurs="0"/>
 		<element type="iGoodyRange" minOccurs="0"/>
