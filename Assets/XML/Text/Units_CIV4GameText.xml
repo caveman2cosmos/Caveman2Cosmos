@@ -30249,25 +30249,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORD_VASSAL</Tag>
-		<English>Warlord Vassal</English>
-		<French>Vassal combattant</French>
-		<German>
-			<Text>Warlord Vassal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Vassallo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Vasallo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Dowódca Wasal</Polish>
-		<Russian>Âàññàë</Russian>
+		<English>Aristocrat</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORD_VASSAL_PEDIA</Tag>
