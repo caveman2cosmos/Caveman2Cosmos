@@ -3457,7 +3457,6 @@
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
-			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>20</iAirBombDefense>
 			<iDefenseModifier>50</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -3486,7 +3485,6 @@
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
-			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>20</iAirBombDefense>
 			<iDefenseModifier>50</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -3523,7 +3521,6 @@
 			<PrereqTech>TECH_WEAPONIZED_GRAVITY_FIELDS</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
-			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>20</iAirBombDefense>
 			<iDefenseModifier>50</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -3560,7 +3557,6 @@
 			<PrereqTech>TECH_EXTREME_ENERGY_WEAPONS</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
-			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>20</iAirBombDefense>
 			<iDefenseModifier>50</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -3605,7 +3601,6 @@
 			<PrereqTech>TECH_COSMIC_WARFARE</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
-			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>20</iAirBombDefense>
 			<iDefenseModifier>50</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
