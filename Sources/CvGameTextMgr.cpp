@@ -18070,7 +18070,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			if (kUnit.getDomainModifier(iI) != 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_MOD_VS_TYPE_NO_LINK", kUnit.getDomainModifier(iI), CvWString(GC.getDomainInfo((DomainTypes)iI).getType()).GetCString(), GC.getDomainInfo((DomainTypes)iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_MOD_VS_TYPE_NO_LINK", kUnit.getDomainModifier(iI),  GC.getDomainInfo((DomainTypes)iI).getTextKeyWide()));
 			}
 		}
 
