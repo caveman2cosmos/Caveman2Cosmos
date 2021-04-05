@@ -3634,21 +3634,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVIIIS</Tag>
-		<English>Great Overlord</English>
-		<French>Suzerain spatial illustre</French>
-		<Russian>Âåëèêèé Ýêçàðõ</Russian>
+		<English>Captured Overlord</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVIIS</Tag>
-		<English>Great Marshal</English>
-		<French>Maréchal Spatial illustre</French>
-		<Russian>Ãðàíä-ìàðøàë</Russian>
+		<English>Captured Marshal</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVIS</Tag>
-		<English>Great General</English>
-		<French>Général spatial Illustre</French>
-		<Russian>Âåëèêèé ãåíåðàë</Russian>
+		<English>Captured General</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP</Tag>

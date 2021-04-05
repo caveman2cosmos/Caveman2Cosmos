@@ -30185,69 +30185,15 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIIIS</Tag>
-		<English>Great Corporal</English>
-		<French>Caporal Illustre</French>
-		<German>
-			<Text>Great Corporal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Caporale illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran alférez</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Kapral</Polish>
-		<Russian>Âåëèêèé êàïðàë</Russian>
+		<English>Captured Corporal</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIIS</Tag>
-		<English>Great Captain</English>
-		<French>Capitaine Illustre</French>
-		<German>
-			<Text>Great Captain</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Capitano illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran capitán</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Kapitan</Polish>
-		<Russian>Âåëèêèé ïîëêîâîäåö</Russian>
+		<English>Captured Captain</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIS</Tag>
-		<English>Great Chief</English>
-		<French>Chef Illustre</French>
-		<German>
-			<Text>Great Chief</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Capo illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran cabo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Wódz</Polish>
-		<Russian>Âåëèêèé âîæäü</Russian>
+		<English>Captured Chief</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIV</Tag>
@@ -30273,25 +30219,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIVS</Tag>
-		<English>Great Colonel</English>
-		<French>Colonel Illustre</French>
-		<German>
-			<Text>Great Colonel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Colonnello illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran coronel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Pułkownik</Polish>
-		<Russian>Âåëèêèé ïîëêîâíèê</Russian>
+		<English>Captured Colonel</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDV</Tag>
@@ -30317,25 +30245,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVS</Tag>
-		<English>Great Commander</English>
-		<French>Commandant Illustre</French>
-		<German>
-			<Text>Great Commander</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Comandante illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran comandante</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Komandor</Polish>
-		<Russian>Âåëèêèé êîìàíäèð</Russian>
+		<English>Captured Commander</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORD_VASSAL</Tag>
