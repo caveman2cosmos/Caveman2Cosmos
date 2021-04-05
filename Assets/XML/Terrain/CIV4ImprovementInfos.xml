@@ -10627,7 +10627,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_COMMAND_CENTER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_CENTER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_CENTER</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_COMMAND_BUNKER</ImprovementPillage>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
@@ -10720,7 +10719,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_BUNKER</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -10815,7 +10813,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_FORT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORT</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -10911,7 +10908,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ArtDefineTag>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
-			<bActsAsCity>1</bActsAsCity>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>90</iAirBombDefense>
@@ -10937,7 +10933,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -10962,7 +10957,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_PALISADE</ArtDefineTag>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<bActsAsCity>1</bActsAsCity>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -11051,7 +11045,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_ABATIS_THORN_HEDGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ABATIS_THORN_HEDGE</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>5</iUpgradeTime>
@@ -12752,7 +12745,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_AQUATIC_FORCEFIELD</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
