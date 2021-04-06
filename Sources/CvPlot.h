@@ -728,15 +728,18 @@ public:
 	int getRiverCrossingCount() const;
 	void changeRiverCrossingCount(int iChange);
 
+	int getBaseYield(const YieldTypes eIndex) const;
+	void changeBaseYield(const short* pYieldChange);
+
 	short* getYield() const;
+	void updateYield();
+	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;
 	DllExport int getYield(YieldTypes eIndex) const;
 	int calculateNatureYield(YieldTypes eIndex, TeamTypes eTeam, bool bIgnoreFeature = false) const;
 	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const;
 	int calculateTotalBestNatureYield(TeamTypes eTeam) const;
 	int calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal = false, bool bBestRoute = false) const;
-	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;
 	bool hasYield() const;
-	void updateYield();
 	int calculateMaxYield(YieldTypes eYield) const;
 	int getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUpgrade) const;
 
@@ -1007,6 +1010,7 @@ protected:
 	//short* m_aiCultureRangeForts;
 	// Super Forts end
 
+	short* m_baseYields;
 	short* m_aiYield;
 	std::vector<std::pair<PlayerTypes,int> > m_aiCulture;
 	std::vector<PlotTeamVisibilityIntensity> m_aPlotTeamVisibilityIntensity;
