@@ -31251,7 +31251,6 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 		setYieldChangeHelp(szBuffer, L", ", L"", L"", info.getYieldChangeArray(), false, false);
 
 		setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_MISC_WITH_IRRIGATION").c_str(), info.getIrrigatedYieldChangeArray());
-		setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_MISC_ON_HILLS").c_str(), info.getHillsYieldChangeArray());
 		setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_MISC_ALONG_RIVER").c_str(), info.getRiverSideYieldChangeArray());
 
 		for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
@@ -32361,11 +32360,6 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 	}
 	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_TERRAIN_NEXT_TO_RIVER"), aiYields);
 
-	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
-	{
-		aiYields[iI] = feature.getHillsYieldChange(iI);
-	}
-	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_TERRAIN_ON_HILLS"), aiYields);
 
 	if (feature.getMovementCost() != 0)
 	{
@@ -32466,12 +32460,6 @@ void CvGameTextMgr::setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerr
 		aiYields[iI] = terrain.getRiverYieldChange(iI);
 	}
 	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_TERRAIN_NEXT_TO_RIVER"), aiYields);
-
-	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
-	{
-		aiYields[iI] = terrain.getHillsYieldChange(iI);
-	}
-	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_TERRAIN_ON_HILLS"), aiYields);
 
 	if (terrain.getMovementCost() != 0)
 	{

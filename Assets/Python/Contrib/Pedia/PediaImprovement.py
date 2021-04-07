@@ -124,13 +124,6 @@ class PediaImprovement:
 				else:
 					szYield += " (<color=0,230,0,255>+"
 				szYield += str(iRiverYieldChange) + szChar + "</color>River)"
-			iHillsYieldChange = CvTheImproveInfo.getHillsYieldChange(k)
-			if iHillsYieldChange:
-				if iHillsYieldChange < 0:
-					szYield += " (<color=255,0,0,255>"
-				else:
-					szYield += " (<color=0,230,0,255>+"
-				szYield += str(iHillsYieldChange) + szChar + "</color>Hill)"
 			iFreshwaterYieldChange = CvTheImproveInfo.getIrrigatedYieldChange(k)
 			if iFreshwaterYieldChange:
 				if iFreshwaterYieldChange < 0:

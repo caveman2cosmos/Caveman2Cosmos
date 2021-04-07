@@ -192,7 +192,6 @@ void CyInfoPythonInterface2()
 		.def("getPrereqNatureYield", &CvImprovementInfo::getPrereqNatureYield, "int (int i)")
 		.def("getYieldChange", &CvImprovementInfo::getYieldChange, "int (int i)")
 		.def("getRiverSideYieldChange", &CvImprovementInfo::getRiverSideYieldChange, "int (int i)")
-		.def("getHillsYieldChange", &CvImprovementInfo::getHillsYieldChange, "int (int i)")
 		.def("getIrrigatedYieldChange", &CvImprovementInfo::getIrrigatedYieldChange, "int (int i)")
 
 		.def("getTerrainMakesValid", &CvImprovementInfo::getTerrainMakesValid, "bool (int i)")
@@ -278,7 +277,6 @@ void CyInfoPythonInterface2()
 		// Arrays
 		.def("getYieldChange", &CvFeatureInfo::getYieldChange, "int (int i)")
 		.def("getRiverYieldChange", &CvFeatureInfo::getRiverYieldChange, "int (int i)")
-		.def("getHillsYieldChange", &CvFeatureInfo::getHillsYieldChange, "int (int i)")
 
 		.def("isTerrain", &CvFeatureInfo::isTerrain, "bool (int i)")
 	;

@@ -28,7 +28,6 @@ void CyInfoPythonInterface3()
 		// Arrays
 		.def("getYield", &CvTerrainInfo::getYield, "int (int i)")
 		.def("getRiverYieldChange", &CvTerrainInfo::getRiverYieldChange, "int (int i)")
-		.def("getHillsYieldChange", &CvTerrainInfo::getHillsYieldChange, "int (int i)")
 	;
 
 

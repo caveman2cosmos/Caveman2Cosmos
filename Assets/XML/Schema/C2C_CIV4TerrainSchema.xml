@@ -155,9 +155,6 @@
 	<ElementType name="RiverYieldChange" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="HillsYieldChange" content="eltOnly">
-		<element type="iYield" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="bWaterTerrain" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bImpassable" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFound" content="textOnly" dt:type="boolean"/>
@@ -202,7 +199,6 @@
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="Yields" minOccurs="0"/>
 		<element type="RiverYieldChange" minOccurs="0"/>
-		<element type="HillsYieldChange" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
 		<element type="bWaterTerrain" minOccurs="0"/>
 		<element type="bImpassable" minOccurs="0"/>
@@ -328,7 +324,6 @@
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="YieldChanges" minOccurs="0"/>
 		<element type="RiverYieldChange" minOccurs="0"/>
-		<element type="HillsYieldChange" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
 		<element type="iMovement" minOccurs="0"/>
 		<element type="iSeeThrough" minOccurs="0"/>
@@ -701,7 +696,6 @@
 		<element type="PrereqNatureYields" minOccurs="0"/>
 		<element type="YieldChanges" minOccurs="0"/>
 		<element type="RiverSideYieldChange" minOccurs="0"/>
-		<element type="HillsYieldChange" minOccurs="0"/>
 		<element type="IrrigatedYieldChange" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
 		<element type="bActsAsCity" minOccurs="0"/>
