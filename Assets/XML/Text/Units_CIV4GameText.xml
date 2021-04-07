@@ -291,7 +291,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADVENTURER_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADVENTURER_STRATEGY</Tag>
@@ -3651,7 +3650,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLIMP_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLIMP_STRATEGY</Tag>
@@ -5212,7 +5210,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_CHEROKEE_RIFLEMAN_PEDIA</Tag>
 		<English>TBD</English>
 		<French>A compléter</French>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHEYENNE_RIDER</Tag>
@@ -5603,12 +5600,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLUBMAN_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLUBMAN_STRATEGY</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COBRA</Tag>
@@ -7260,7 +7255,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROPSHIP_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROPSHIP_STRATEGY</Tag>

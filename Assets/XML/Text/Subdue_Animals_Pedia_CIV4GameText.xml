@@ -43,7 +43,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ANIMALS_TEXT</Tag>
@@ -65,7 +64,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_HERD_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_TRAINER_PEDIA</Tag>
@@ -77,7 +75,6 @@
 		<English>TBD</English>
 		<Italian>Solo i cammelli addomesticati possono costruire il Branco - Cammelli; fornisce una risorsa di cammelli.</Italian>
 		<Polish>Wielbłąd (Camelus) rodzaj dużych ssaków z rodziny wielbłądowatych. Fizjologicznie przystosowane do życia w warunkach suchego i gorącego klimatu, są w wielu krajach wykorzystywane jako zwierzęta użytkowe.</Polish>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARNIVAL_PEDIA</Tag>
@@ -93,14 +90,12 @@
 		<English>TBD</English>
 		<Italian>Un centro specializzato nello studio dei cefalopodi. I cefalopodi (Cephalopoda, dal greco kephale, testa e pous, podos, piede) sono molluschi esclusivamente marini, tra i più evoluti, con conchiglia ridotta internamente o del tutto assente, prettamente nectonici (come le seppie e i calamari) o bentonici (come il polpo e il moscardino). Si svilupparono in una grande moltitudine di forme durante il Mesozoico, colonizzando praticamente tutti gli ambienti marini con i gruppi dei nautiloidi, ammonoidea e belemnoidi, gli ultimi due totalmente estinti. Ipotesi recenti considerano i cefalopodi derivati direttamente da monoplacofori con conchiglia a spiralizzazione più accentuata; si suppone che la regione apicale del sacco dei visceri di questi molluschi si ritirasse di tanto in tanto e il mantello che li ricopriva formasse una serie successiva di setti calcarei interni, delimitando cavità ripiene di gas. Ciò produsse una sempre maggiore leggerezza, caratteristica questa che permise loro di acquisire un galleggiamento neutro per potersi spostare nel liquido con minor sforzo. Durante questi primi stadi evolutivi, i cefalopodi acquisirono velocità e capacità di predazione, sviluppando un capo dotato di lobi prensili, derivati da tentacoli semplici di monoplacofori ancestrali. Le dimensioni sono molto variabili, da pochi millimetri a vari metri nel caso del calamaro gigante, che è il secondo mollusco più grande, oltre ad essere anche il secondo animale più grande tra tutti gli invertebrati attuali. Nelle dimensioni è superato solamente dal calamaro colossale, Mesonychoteuthis hamiltoni, che può avere un mantello lungo quasi il doppio del suo. Alcuni cefalopodi estinti, come il vampiromorfo cretaceo Tusoteuthis ed il nautiloide ordoviciano Cameroceras potevano raggiungere dimensioni perfino più grandi.</Italian>
 		<Polish>Sieci na ryby były konstruowane przez bogatych by dostarczać im ciągle świeżych i egzotycznych gatunków ryb na ich wykwintne uczty.</Polish>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CETAEA_INSTITUTE_PEDIA</Tag>
 		<English>TBD</English>
 		<Italian>Un centro specializzato nello studio dei cetacei. I Cetacei sono un ordine di mammiferi euplacentati, completamente adattatisi alla vita acquatica. Il nome cetaceo deriva dal greco e significa balena o mostro marino; fu introdotto da Aristotele per designare gli animali acquatici dotati di respirazione polmonare. Presentano un corpo fusiforme, simile a quello dei pesci, che assicura loro una maggiore idrodinamicità. Gli arti anteriori sono modificati in pinne; gli arti posteriori come tali sono assenti; rimangono solo alcune piccole ossa vestigiali, nascoste dentro al corpo, e non collegate alla spina dorsale per l'assenza del bacino. La pinna caudale è disposta orizzontalmente e divisa in due lobi. Sono generalmente privi di peli e sono isolati termicamente da uno spesso strato di grasso. L'ordine Cetacea comprende circa 85 specie, quasi tutte marine tranne 5 specie di delfini di acqua dolce. Le specie sono suddivise in due sottordini: Mysticeti ed Odontoceti. Esiste un terzo sottordine, Archaeoceti, cui appartengono solo specie estinte. Tra i misticeti si trovano gli animali comunemente chiamati balene, i più grandi conosciuti al mondo: in particolare la balenottera azzurra è il più grande animale oggi esistente sulla Terra. Tra gli odontoceti, invece, si trovano delfini e orche, spesso allevati e addestrati nei delfinari.</Italian>
 		<Polish>Instytut Morski jednostka naukowo-badawcza. Placówka wykonuje prace naukowe, badawcze i wdrożeniowe: m.in. zajmuje się modernizacją i eksploatacją portów, oceanografią operacyjną, czy problematyką zagospodarowania regionu nadmorskiego. Misją Instytutu jest dbałość o zachowanie wartości morza i zrównoważony rozwój polskiej gospodarki morskiej. Instytut opracowuje studia wykonalności i eksperyzy oraz udziela konsultacji w zakresie: hydrotechniki morskiej, geotechniki, oceanografii operacyjnej, ochrony środowiska (badania chemiczne i biologiczne), transportu, logistyki, zagospodarowania przestrzennego regionu nadmorskiego, modernizacji i eksploatacji portów, żeglugi śródlądowej, turystyki, bezpieczeństwa przeciwpowodziowego, elektroniki morskiej, a także tworzenia baz danych i monitoringu zjawisk ciągłych.</Polish>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM_PEDIA</Tag>
@@ -114,13 +109,11 @@
 		<English>TBD</English>
 		<Italian>Solo i bovini addomesticati possono costruire il Branco - Bovini; fornisce una risorsa di bovini. Basato su un'idea di Sarkyn.</Italian>
 		<Polish>Bydło domowe (Bos taurus) gatunek zwierząt z rodziny wołowatych, rzędu parzystokopytnych. Gatunek ten pochodzi od tura wielkiego i tura krótkorogiego.</Polish>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS_PEDIA</Tag>
 		<English>TBD</English>
 		<Polish>Kraby (Brachyura, z języka greckiego krótki odwłok/ogon) grupa[a] krótkoodwłokowych skorupiaków z rzędu dziesięcionogów (Decapoda). Kraby są najliczniejszą (opisano 10 500 gatunków) grupą dziesięcionogów, u której pierwsza para odnóży krocznych przekształciła się w szczypce. Wielkość ciała bardzo zróżnicowana, o rozpiętości odnóży od kilku milimetrów (Pinnotheres pisum) do prawie 4 m (japoński krab pacyficzny).</Polish>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_TAMED_ANIMALS_TEXT</Tag>
@@ -233,12 +226,10 @@
 		<Tag>TXT_KEY_BUILDING_LLAMA_HERD_PEDIA</Tag>
 		<English>TBD</English>
 		<Polish>Udomowienie lamy miało miejsce około 4000 5000 lat p.n.e. na terenach andyjskiej puny, prawdopodobnie w okolicach jeziora Titicaca. W czasach przedinkaskich, przedstawiciele kultury Mochica umieszczali szczątki lam w grobach, przedstawiali je także na swojej ceramice. Lamy i alpaki były podstawowym zwierzęciem w Państwie Inków, jako żywność, źródło paliwa, włókien na ubrania, jako zwierzęta juczne. Były także wykorzystywane w ceremoniach religijnych, jako zwierzęta ofiarne. Po podboju Państwa Inków przez konkwistadorów znaczenie lam znacznie spadło, gdyż konkwistadorzy sprowadzili własne zwierzęta juczne. Mimo tego lamy i alpaki pozostały ważnymi zwierzętami w Ameryce Południowej, głównie na terenach wysokogórskich. Państwa południowoamerykańskie na początku XX wieku wprowadziły zakaz eksportu tych zwierząt. Zakaz ten został ostatecznie zniesiony dla lam i alpak w latach 80. XX wieku.</Polish>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_PEDIA</Tag>
@@ -267,7 +258,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Tag>
@@ -285,7 +275,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POULTRY_HERD_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATITE_HERD_PEDIA</Tag>
@@ -297,7 +286,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROO_HERD_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE_PEDIA</Tag>
@@ -309,7 +297,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHEEP_HERD_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER_PEDIA</Tag>
@@ -335,7 +322,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Tag>
@@ -354,7 +340,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_HERD_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES_PEDIA</Tag>

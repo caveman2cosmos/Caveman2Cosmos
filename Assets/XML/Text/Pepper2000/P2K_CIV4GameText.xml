@@ -821,7 +821,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINE</Tag>
@@ -2383,12 +2382,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
 		<English>Space worker used to build earliest improvements on Moon, Mars and Venus.</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_STRATEGY</Tag>
 		<English>Use this unit to build Lunar Outpost improvement - place, where you can send Lunar settlers to build Lunar cities</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
@@ -3469,12 +3466,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_PEDIA</Tag>
 		<English>Early space unit dedicated to supply of Lunar colonies. It also can be transformed to Lunar bulldozer to build lunar mines.</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_STRATEGY</Tag>
 		<English>Use this unit to build buildings in Lunar colonies, and to turn it to lunar bulldozer (requires Lunar Bases tech).</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TITAN_REWARD</Tag>
