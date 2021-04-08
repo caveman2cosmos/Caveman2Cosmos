@@ -11097,42 +11097,36 @@ void CvGame::addLandmarkSigns()
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 		if (pLoopPlot->getLandmarkType() != NO_LANDMARK)
 		{
-			szTextKey = "TXT_KEY_LANDMARK";
 			szSign.clear();
 			szName.clear();
 			switch (pLoopPlot->getLandmarkType())
 			{
 				case LANDMARK_BAY:
-					szTextKey.append((CvWString)"_BAY");
+					szTextKey = "TXT_KEY_LANDMARK_BAY";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_BAY_NAMES"), "Landmark Naming"))));
 					break;
-				case LANDMARK_ISLAND:
-					break;
 				case LANDMARK_FOREST:
-					szTextKey.append((CvWString)"_FOREST");
+					szTextKey = "TXT_KEY_LANDMARK_FOREST";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_FOREST_NAMES"), "Landmark Naming"))));
 					break;
 				case LANDMARK_JUNGLE:
-					szTextKey.append((CvWString)"_JUNGLE");
+					szTextKey = "TXT_KEY_LANDMARK_JUNGLE";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_JUNGLE_NAMES"), "Landmark Naming"))));
 					break;
 				case LANDMARK_PEAK:
-					szTextKey.append((CvWString)"_PEAK");
+					szTextKey = "TXT_KEY_LANDMARK_PEAK";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_PEAK_NAMES"), "Landmark Naming"))));
 					break;
 				case LANDMARK_MOUNTAIN_RANGE:
-					szTextKey.append((CvWString)"_MOUNTAINS");
+					szTextKey = "TXT_KEY_LANDMARK_MOUNTAINS";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_MOUNTAINS_NAMES"), "Landmark Naming"))));
 					break;
-				case LANDMARK_PLAINS:
-					break;
 				case LANDMARK_DESERT:
-					szTextKey.append((CvWString)"_DESERT");
+					szTextKey = "TXT_KEY_LANDMARK_DESERT";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_DESERT_NAMES"), "Landmark Naming"))));
 					break;
-				case LANDMARK_OCEAN:
 				case LANDMARK_LAKE:
-					szTextKey.append((CvWString)"_LAKE");
+					szTextKey = "TXT_KEY_LANDMARK_LAKE";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_LAKE_NAMES"), "Landmark Naming"))));
 					break;
 				default:
@@ -11150,7 +11144,7 @@ void CvGame::addLandmarkSigns()
 	}
 }
 
-//Marks nearby tiles as counted so that they will not recieve multiple signs
+//Marks nearby tiles as counted so that they will not receive multiple signs
 void CvGame::markBayPlots(const CvPlot* pPlot)
 {
 	//Marks all plots around the given plot, and all plots around the adjacent plots as counted
