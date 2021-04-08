@@ -378,7 +378,7 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 void CvMap::doTurn()
 {
 	MEMORY_TRACE_FUNCTION();
-	PROFILE("CvMap::doTurn()")
+	PROFILE("CvMap::doTurn()");
 
 	for (int iI = 0; iI < numPlots(); iI++)
 	{

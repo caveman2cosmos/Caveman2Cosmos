@@ -4289,7 +4289,7 @@ void CvPlayer::doTurnUnits()
 
 void CvPlayer::verifyCivics()
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	if (!isAnarchy())
 	{
@@ -4516,7 +4516,7 @@ void CvPlayer::updateCitySight(bool bIncrement, bool bUpdatePlotGroups)
 
 void CvPlayer::updateTradeRoutes()
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	CLLNode<int>* pCityNode;
 	CLinkList<int> cityList;
@@ -11375,7 +11375,7 @@ int CvPlayer::getWarWearinessPercentAnger() const
 
 void CvPlayer::updateWarWearinessPercentAnger()
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	int iNewWarWearinessPercentAnger = 0;
 	int iEquation = 0;
@@ -15363,7 +15363,7 @@ void CvPlayer::constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pat
 //	Finds the path length from this tech type to one you already know
 int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 {
-	MEMORY_TRACK()
+	MEMORY_TRACK();
 	PROFILE_FUNC();
 
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
@@ -16246,7 +16246,7 @@ void CvPlayer::setSmtpHost(const char* szHost)
 
 void CvPlayer::doGold()
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	changeGold(calculateGoldRate());
 
@@ -16281,7 +16281,7 @@ void CvPlayer::doGold()
 
 void CvPlayer::doResearch()
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	bool bForceResearchChoice;
 	int iOverflowResearch;
@@ -16348,7 +16348,7 @@ void CvPlayer::doResearch()
 
 void CvPlayer::doEspionageOneOffPoints(int iChange)
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	if (iChange > 0)
 	{
@@ -18900,7 +18900,7 @@ void CvPlayer::doWarnings()
 
 void CvPlayer::verifyGoldCommercePercent()
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	while (getGold() + calculateGoldRate() < 0)
 	{
@@ -28090,7 +28090,7 @@ int CvPlayer::getResourceConsumption(BonusTypes eBonus) const
 //units, etc... UNLESS they are generating income from the resource.
 void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	if (!hasBonus(eBonus))
 	{
@@ -28712,7 +28712,7 @@ int CvPlayer::getLaborFreedom() const
 
 void CvPlayer::doTaxes()
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	const int iOldTaxes = getCorporateTaxIncome();
 	changeCorporateTaxIncome(-iOldTaxes);
@@ -28771,7 +28771,7 @@ int CvPlayer::getScoreComponent(int iRawScore, int iInitial, int iMax, int iFact
 
 void CvPlayer::doAdvancedEconomy()
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	if (getHurriedCount() > 0)
 	{
@@ -31657,14 +31657,14 @@ void CvPlayer::changeExtraNonStateReligionSpreadModifier(int iChange)
 
 void CvPlayer::updateTechHappinessandHealth()
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	for_each(cities(), CvCity::fn::updateTechHappinessandHealth());
 }
 
 void CvPlayer::checkReligiousDisablingAllBuildings()
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	for_each(cities(), CvCity::fn::checkReligiousDisablingAllBuildings());
 }

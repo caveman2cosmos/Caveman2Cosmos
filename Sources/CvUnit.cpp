@@ -1444,7 +1444,7 @@ void CvUnit::NotifyEntity(MissionTypes eMission)
 
 void CvUnit::doTurn()
 {
-	PROFILE("CvUnit::doTurn()")
+	PROFILE("CvUnit::doTurn()");
 
 	FAssertMsg(!isDead(), "isDead did not return false as expected");
 	FAssertMsg(getGroup() != NULL, "getGroup() is not expected to be equal with NULL");
