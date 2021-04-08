@@ -32455,11 +32455,6 @@ void CvGameTextMgr::setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerr
 		}
 		setYieldChangeHelp(szBuffer, L"", L"", L"", aiYields);
 	}
-	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
-	{
-		aiYields[iI] = terrain.getRiverYieldChange(iI);
-	}
-	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_TERRAIN_NEXT_TO_RIVER"), aiYields);
 
 	if (terrain.getMovementCost() != 0)
 	{

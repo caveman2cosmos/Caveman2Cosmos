@@ -6577,7 +6577,7 @@ bool CvPlot::isAsPeak() const
 
 void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGraphics)
 {
-	PlotTypes eOldPlotType = getPlotType();
+	const PlotTypes eOldPlotType = getPlotType();
 
 	if (eOldPlotType == eNewValue)
 	{
@@ -6604,9 +6604,29 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 
 	m_ePlotType = eNewValue;
 
-	updateYield();
-	updatePlotGroup();
+	short yieldChange[NUM_YIELD_TYPES] = {};
+	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+	{
+		if (eNewValue == PLOT_PEAK)
+		{
+			yieldChange[iI] += GC.getYieldInfo((YieldTypes)iI).getPeakChange();
+		}
+		else if (eNewValue == PLOT_HILLS)
+		{
+			yieldChange[iI] += GC.getYieldInfo((YieldTypes)iI).getHillsChange();
+		}
+		if (eOldPlotType == PLOT_PEAK)
+		{
+			yieldChange[iI] -= GC.getYieldInfo((YieldTypes)iI).getPeakChange();
+		}
+		else if (eOldPlotType == PLOT_HILLS)
+		{
+			yieldChange[iI] -= GC.getYieldInfo((YieldTypes)iI).getHillsChange();
+		}
+	}
+	changeBaseYield(yieldChange);
 
+	updatePlotGroup();
 	updateSeeFromSight(true, true);
 
 	if (getTerrainType() == NO_TERRAIN || GC.getTerrainInfo(getTerrainType()).isWaterTerrain() != isWater())
@@ -6857,14 +6877,11 @@ void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bReb
 
 FeatureTypes CvPlot::getFeatureTypeExternal() const
 {
-	if ( !GC.viewportsEnabled() || isRevealed(GC.getGame().getActiveTeam(), true) )
+	if (!GC.viewportsEnabled() || isRevealed(GC.getGame().getActiveTeam(), true))
 	{
 		return (FeatureTypes)m_eFeatureType;
 	}
-	else
-	{
-		return NO_FEATURE;
-	}
+	return NO_FEATURE;
 }
 
 FeatureTypes CvPlot::getFeatureType() const
@@ -6956,10 +6973,20 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 			if (eNewValue != NO_FEATURE)
 			{
 				yieldChange[iI] += GC.getFeatureInfo(eNewValue).getYieldChange((YieldTypes)iI);
+
+				if (isRiver())
+				{
+					yieldChange[iI] += GC.getFeatureInfo(eNewValue).getRiverYieldChange((YieldTypes)iI);
+				}
 			}
 			if (eOldFeature != NO_FEATURE)
 			{
-				yieldChange[iI] -= GC.getFeatureInfo(eNewValue).getYieldChange((YieldTypes)iI);
+				yieldChange[iI] -= GC.getFeatureInfo(eOldFeature).getYieldChange((YieldTypes)iI);
+
+				if (isRiver())
+				{
+					yieldChange[iI] -= GC.getFeatureInfo(eOldFeature).getRiverYieldChange((YieldTypes)iI);
+				}
 			}
 		}
 		changeBaseYield(yieldChange);
@@ -7792,8 +7819,50 @@ int CvPlot::getRiverCrossingCount() const
 
 void CvPlot::changeRiverCrossingCount(int iChange)
 {
+	const bool bWasRiver = m_iRiverCrossingCount > 0;
 	m_iRiverCrossingCount += iChange;
-	FASSERT_NOT_NEGATIVE(getRiverCrossingCount())
+	FASSERT_NOT_NEGATIVE(m_iRiverCrossingCount)
+
+	bool bNewRiverPlot = false;
+	bool bRiverRemoved = false;
+	if (bWasRiver)
+	{
+		if (m_iRiverCrossingCount < 1)
+		{
+			bRiverRemoved = true;
+		}
+	}
+	else if (m_iRiverCrossingCount > 0)
+	{
+		bNewRiverPlot = true;
+	}
+	if (bNewRiverPlot || bRiverRemoved)
+	{
+		const FeatureTypes eFeature = getFeatureType();
+		short yieldChange[NUM_YIELD_TYPES] = {};
+		for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+		{
+			if (bNewRiverPlot)
+			{
+				yieldChange[iI] += GC.getYieldInfo((YieldTypes)iI).getRiverChange();
+
+				if (eFeature != NO_FEATURE)
+				{
+					yieldChange[iI] += GC.getFeatureInfo(eFeature).getRiverYieldChange((YieldTypes)iI);
+				}
+			}
+			else if (bRiverRemoved)
+			{
+				yieldChange[iI] -= GC.getYieldInfo((YieldTypes)iI).getRiverChange();
+
+				if (eFeature != NO_FEATURE)
+				{
+					yieldChange[iI] -= GC.getFeatureInfo(eFeature).getRiverYieldChange((YieldTypes)iI);
+				}
+			}
+		}
+		changeBaseYield(yieldChange);
+	}
 }
 
 
@@ -7805,6 +7874,8 @@ int CvPlot::getBaseYield(const YieldTypes eIndex) const
 
 void CvPlot::changeBaseYield(const short* pYieldChange)
 {
+	CvCity* pWorkingCity = getWorkingCity();
+	const bool bWorked = pWorkingCity != NULL ? isBeingWorked() : false;
 	bool bChange = false;
 
 	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
@@ -7813,11 +7884,9 @@ void CvPlot::changeBaseYield(const short* pYieldChange)
 		{
 			m_baseYields[iI] += pYieldChange[iI];
 
-			CvCity* pWorkingCity = getWorkingCity();
-
 			if (pWorkingCity != NULL)
 			{
-				if (isBeingWorked())
+				if (bWorked)
 				{
 					pWorkingCity->changeBaseYieldRate((YieldTypes)iI, pYieldChange[iI]);
 				}
@@ -7828,6 +7897,10 @@ void CvPlot::changeBaseYield(const short* pYieldChange)
 	}
 	if (bChange)
 	{
+		if (pWorkingCity != NULL)
+		{
+			pWorkingCity->AI_setAssignWorkDirty(true);
+		}
 		updateSymbols();
 	}
 }
@@ -7906,28 +7979,17 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 
 	int iYield = getBaseYield(eYield);
 
-	if (isAsPeak())
-	{ // Ignore yield from terrain for peaks
-		iYield += GC.getYieldInfo(eYield).getPeakChange();
-		iYield -= GC.getTerrainInfo(getTerrainType()).getYield(eYield);
-	}
-	else if (isHills())
-	{
-		iYield += GC.getYieldInfo(eYield).getHillsChange();
-	}
-
 	if (eTeam != NO_TEAM && getBonusType(eTeam) != NO_BONUS)
 	{
 		iYield += GC.getBonusInfo(getBonusType(eTeam)).getYieldChange(eYield);
 	}
 
-	if (isRiver())
-	{
-		iYield += ((bIgnoreFeature || getFeatureType() == NO_FEATURE) ? GC.getTerrainInfo(getTerrainType()).getRiverYieldChange(eYield) : GC.getFeatureInfo(getFeatureType()).getRiverYieldChange(eYield));
-	}
-
 	if (bIgnoreFeature && getFeatureType() != NO_FEATURE)
 	{
+		if (isRiver())
+		{
+			iYield -= GC.getFeatureInfo(getFeatureType()).getRiverYieldChange(eYield);
+		}
 		iYield -= GC.getFeatureInfo(getFeatureType()).getYieldChange(eYield);
 	}
 	return std::max(0, iYield);
@@ -11083,8 +11145,6 @@ void CvPlot::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_aiYield);
 
-	m_baseYields = new short[NUM_YIELD_TYPES]();
-
 	m_bIsActivePlayerNoDangerCache = false;
 	m_bIsActivePlayerHasDangerCache = false;
 	invalidateIsTeamBorderCache();
@@ -11409,33 +11469,10 @@ void CvPlot::read(FDataStreamBase* pStream)
 			m_aPlotTeamVisibilityIntensity[iI].iIntensity = iType4;
 		}
 	}
-/*
-	if (NULL != m_apaiCachedHighestTeamInvisibilityIntensity)
-	{
-		for (int iI = 0; iI < MAX_TEAMS; ++iI)
-		{
-			SAFE_DELETE_ARRAY(m_apaiCachedHighestTeamInvisibilityIntensity[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_apaiCachedHighestTeamInvisibilityIntensity);
-	}
-	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &cCount, "cConditional");
-	if (cCount > 0)
-	{
-		m_apaiCachedHighestTeamInvisibilityIntensity = new short*[cCount];
-		for (iI = 0; iI < cCount; ++iI)
-		{
-			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iCount, "CachedHighestTeamInvisibilityIntensity");
-			if (iCount > 0)
-			{
-				m_apaiCachedHighestTeamInvisibilityIntensity[iI] = new short[iCount];
-				WRAPPER_READ_ARRAY(wrapper, "CvPlot", iCount, m_apaiCachedHighestTeamInvisibilityIntensity[iI]);
-			}
-			else
-			{
-				m_apaiCachedHighestTeamInvisibilityIntensity[iI] = NULL;
-			}
-		}
-	}*///skipped when this was the last element - you can safely do that.
+
+	// Toffer - ToDo - Add recalc for m_baseYields.
+	WRAPPER_READ_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_baseYields);
+
 	//Example of how to Skip Element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_bPeaks, SAVE_VALUE_ANY);
 	WRAPPER_READ_OBJECT_END(wrapper);
@@ -11805,28 +11842,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE(wrapper, "CvPlot", iType4);
 		}
 	}
-
-	//if (NULL == m_apaiCachedHighestTeamInvisibilityIntensity)
-	//{
-	//	WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)0, "cConditional");
-	//}
-	//else
-	//{
-	//	WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_TEAMS, "cConditional");
-	//	for (iI=0; iI < MAX_TEAMS; ++iI)
-	//	{
-	//		if (NULL == m_apaiCachedHighestTeamInvisibilityIntensity[iI])
-	//		{
-	//			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (int)0, "CachedHighestTeamInvisibilityIntensity");
-	//		}
-	//		else
-	//		{
-	//			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", GC.getNumInvisibleInfos(), "CachedHighestTeamInvisibilityIntensity");
-	//			WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", GC.getNumInvisibleInfos(), m_apaiCachedHighestTeamInvisibilityIntensity[iI]);
-	//		}
-	//	}
-	//}
-
+	WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_baseYields);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }

@@ -38,6 +38,8 @@
 		<YieldInfo>
 			<Type>YIELD_COMMERCE</Type>
 			<Description>TXT_KEY_YIELD_COMMERCE</Description>
+			<iPeakChange>-1</iPeakChange>
+			<iRiverChange>1</iRiverChange>
 			<iMinCity>1</iMinCity>
 			<iTradeModifier>100</iTradeModifier>
 			<iGoldenAgeYield>1</iGoldenAgeYield>

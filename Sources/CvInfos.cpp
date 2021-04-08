@@ -17649,6 +17649,7 @@ CvYieldInfo::CvYieldInfo() :
 m_iChar(0),
 m_iHillsChange(0),
 m_iPeakChange(0),
+m_iRiverChange(0),
 m_iCityChange(0),
 m_iPopulationChangeOffset(0),
 m_iPopulationChangeDivisor(0),
@@ -17693,6 +17694,11 @@ int CvYieldInfo::getHillsChange() const
 int CvYieldInfo::getPeakChange() const
 {
 	return m_iPeakChange;
+}
+
+int CvYieldInfo::getRiverChange() const
+{
+	return m_iRiverChange;
 }
 
 int CvYieldInfo::getCityChange() const
@@ -17762,6 +17768,7 @@ bool CvYieldInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(&m_iHillsChange, L"iHillsChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPeakChange, L"iPeakChange");
+	pXML->GetOptionalChildXmlValByName(&m_iRiverChange, L"iRiverChange");
 	pXML->GetOptionalChildXmlValByName(&m_iCityChange, L"iCityChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChangeOffset, L"iPopulationChangeOffset");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChangeDivisor, L"iPopulationChangeDivisor");
@@ -17823,6 +17830,7 @@ void CvYieldInfo::copyNonDefaults(const CvYieldInfo* pClassInfo)
 
 	if (getHillsChange() == iDefault) m_iHillsChange = pClassInfo->getHillsChange();
 	if (getPeakChange() == iDefault) m_iPeakChange = pClassInfo->getPeakChange();
+	if (m_iRiverChange == iDefault) m_iRiverChange = pClassInfo->getRiverChange();
 	if (getCityChange() == iDefault) m_iCityChange = pClassInfo->getCityChange();
 	if (getPopulationChangeOffset() == iDefault) m_iPopulationChangeOffset = pClassInfo->getPopulationChangeOffset();
 	if (getPopulationChangeDivisor() == iDefault) m_iPopulationChangeDivisor = pClassInfo->getPopulationChangeDivisor();
@@ -17846,6 +17854,7 @@ void CvYieldInfo::getCheckSum(unsigned int& iSum) const
 {
 	CheckSum(iSum, m_iHillsChange);
 	CheckSum(iSum, m_iPeakChange);
+	CheckSum(iSum, m_iRiverChange);
 	CheckSum(iSum, m_iCityChange);
 	CheckSum(iSum, m_iPopulationChangeOffset);
 	CheckSum(iSum, m_iPopulationChangeDivisor);
@@ -17879,7 +17888,6 @@ m_bFoundFreshWater(false),
 m_bFreshWaterTerrain(false),
 m_iWorldSoundscapeScriptId(0),
 m_piYields(NULL),
-m_piRiverYieldChange(NULL),
 m_pi3DAudioScriptFootstepIndex(NULL)
 ,m_iCultureDistance(0)
 ,m_iHealthPercent(0)
@@ -17901,7 +17909,6 @@ m_bColdDamage(false)
 CvTerrainInfo::~CvTerrainInfo()
 {
 	SAFE_DELETE_ARRAY(m_piYields);
-	SAFE_DELETE_ARRAY(m_piRiverYieldChange);
 	SAFE_DELETE_ARRAY(m_pi3DAudioScriptFootstepIndex);
 
 }
@@ -17967,12 +17974,6 @@ int CvTerrainInfo::getYield(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
 	return m_piYields ? m_piYields[i] : 0;
-}
-
-int CvTerrainInfo::getRiverYieldChange(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-	return m_piRiverYieldChange ? m_piRiverYieldChange[i] : 0;
 }
 
 int CvTerrainInfo::get3DAudioScriptFootstepIndex(int i) const
@@ -18051,16 +18052,7 @@ bool CvTerrainInfo::read(CvXMLLoadUtility* pXML)
 		pXML->SetYields(&m_piYields);
 		pXML->MoveToXmlParent();
 	}
-	else
-		SAFE_DELETE_ARRAY(m_piYields);
-
-	if (pXML->TryMoveToXmlFirstChild(L"RiverYieldChange"))
-	{
-		pXML->SetYields(&m_piRiverYieldChange);
-		pXML->MoveToXmlParent();
-	}
-	else
-		SAFE_DELETE_ARRAY(m_piRiverYieldChange);
+	else SAFE_DELETE_ARRAY(m_piYields);
 
 	pXML->GetOptionalChildXmlValByName(&m_bWaterTerrain, L"bWaterTerrain");
 	pXML->GetOptionalChildXmlValByName(&m_bImpassable, L"bImpassable");
@@ -18146,19 +18138,6 @@ void CvTerrainInfo::copyNonDefaults(const CvTerrainInfo* pClassInfo)
 		{
 			m_piYields[i] = pClassInfo->getYield(i);
 		}
-
-		if (!m_piRiverYieldChange)
-		{
-			if (pClassInfo->getRiverYieldChange(i))
-			{
-				CvXMLLoadUtility::InitList(&m_piRiverYieldChange, NUM_YIELD_TYPES);
-			}
-		}
-
-		if (m_piRiverYieldChange && (m_piRiverYieldChange[i] == iDefault))
-		{
-			m_piRiverYieldChange[i] = pClassInfo->getRiverYieldChange(i);
-		}
 	}
 	if (isWaterTerrain() == bDefault) m_bWaterTerrain = pClassInfo->isWaterTerrain();
 	if (isImpassable() == bDefault) m_bImpassable = pClassInfo->isImpassable();
@@ -18213,7 +18192,6 @@ void CvTerrainInfo::getCheckSum(unsigned int &iSum) const
 	// Arrays
 
 	CheckSum(iSum, m_piYields, NUM_YIELD_TYPES);
-	CheckSum(iSum, m_piRiverYieldChange, NUM_YIELD_TYPES);
 
 	CheckSum(iSum, m_iCultureDistance);
 	CheckSum(iSum, m_iHealthPercent);

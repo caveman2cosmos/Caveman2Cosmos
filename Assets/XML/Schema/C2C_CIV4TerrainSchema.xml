@@ -198,7 +198,6 @@
 		<element type="Help" minOccurs="0"/>
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="Yields" minOccurs="0"/>
-		<element type="RiverYieldChange" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
 		<element type="bWaterTerrain" minOccurs="0"/>
 		<element type="bImpassable" minOccurs="0"/>
@@ -231,6 +230,7 @@
 	<ElementType name="Description" content="textOnly"/>
 	<ElementType name="iHillsChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iPeakChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iRiverChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iCityChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iPopulationChangeOffset" content="textOnly" dt:type="int"/>
 	<ElementType name="iPopulationChangeDivisor" content="textOnly" dt:type="int"/>
@@ -256,6 +256,7 @@
 		<element type="Description" minOccurs="0"/>
 		<element type="iHillsChange" minOccurs="0"/>
 		<element type="iPeakChange" minOccurs="0"/>
+		<element type="iRiverChange" minOccurs="0"/>
 		<element type="iCityChange" minOccurs="0"/>
 		<element type="iPopulationChangeOffset" minOccurs="0"/>
 		<element type="iPopulationChangeDivisor" minOccurs="0"/>

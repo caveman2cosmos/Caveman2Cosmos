@@ -4853,6 +4853,7 @@ public:
 	void setChar(int i);
 	int getHillsChange() const;
 	int getPeakChange() const;
+	int getRiverChange() const;
 	int getCityChange() const;
 	int getPopulationChangeOffset() const;
 	int getPopulationChangeDivisor() const;
@@ -4879,6 +4880,7 @@ protected:
 	int m_iChar;
 	int m_iHillsChange;
 	int m_iPeakChange;
+	int m_iRiverChange;
 	int m_iCityChange;
 	int m_iPopulationChangeOffset;
 	int m_iPopulationChangeDivisor;
@@ -4929,7 +4931,6 @@ public:
 	// Arrays
 
 	int getYield(int i) const;
-	int getRiverYieldChange(int i) const;
 	int get3DAudioScriptFootstepIndex(int i) const;
 
 	int getMapType(int i) const;
@@ -4986,7 +4987,6 @@ protected:
 
 	// Arrays
 	int* m_piYields;
-	int* m_piRiverYieldChange;
 	int* m_pi3DAudioScriptFootstepIndex;
 
 	std::vector<int> m_aiMapTypes;
