@@ -51,7 +51,7 @@ struct StackCompare
 };
 DECLARE_FLAGS(StackCompare::flags);
 
-class CvSelectionGroup
+class CvSelectionGroup : bst::noncopyable
 {
 
 public:

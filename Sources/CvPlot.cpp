@@ -7785,11 +7785,50 @@ short* CvPlot::getYield() const
 	return m_aiYield;
 }
 
-
 int CvPlot::getYield(YieldTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	return m_aiYield[eIndex];
+}
+
+void CvPlot::updateYield()
+{
+	PROFILE_FUNC();
+
+	if (area() == NULL)
+	{
+		return;
+	}
+	bool bChange = false;
+
+	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+	{
+		const int iNewYield = calculateYield((YieldTypes)iI);
+		const int iOldYield = getYield((YieldTypes)iI);
+
+		if (iOldYield != iNewYield)
+		{
+			FASSERT_NOT_NEGATIVE(iNewYield)
+
+			m_aiYield[iI] = iNewYield;
+
+			CvCity* pWorkingCity = getWorkingCity();
+
+			if (pWorkingCity != NULL)
+			{
+				if (isBeingWorked())
+				{
+					pWorkingCity->changeBaseYieldRate((YieldTypes)iI, iNewYield - iOldYield);
+				}
+				pWorkingCity->AI_setAssignWorkDirty(true);
+			}
+			bChange = true;
+		}
+	}
+	if (bChange)
+	{
+		updateSymbols();
+	}
 }
 
 
@@ -8088,56 +8127,6 @@ bool CvPlot::hasYield() const
 		}
 	}
 	return false;
-}
-
-void CvPlot::updateYield()
-{
-	PROFILE_FUNC();
-
-	CvCity* pWorkingCity;
-	bool bChange;
-	int iNewYield;
-	int iOldYield;
-	int iI;
-
-	if (area() == NULL)
-	{
-		return;
-	}
-
-	bChange = false;
-
-	for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
-	{
-		iNewYield = calculateYield((YieldTypes)iI);
-
-		if (getYield((YieldTypes)iI) != iNewYield)
-		{
-			iOldYield = getYield((YieldTypes)iI);
-
-			m_aiYield[iI] = iNewYield;
-			FASSERT_NOT_NEGATIVE(getYield((YieldTypes)iI))
-
-			pWorkingCity = getWorkingCity();
-
-			if (pWorkingCity != NULL)
-			{
-				if (isBeingWorked())
-				{
-					pWorkingCity->changeBaseYieldRate(((YieldTypes)iI), (getYield((YieldTypes)iI) - iOldYield));
-				}
-
-				pWorkingCity->AI_setAssignWorkDirty(true);
-			}
-
-			bChange = true;
-		}
-	}
-
-	if (bChange)
-	{
-		updateSymbols();
-	}
 }
 
 

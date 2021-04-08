@@ -2626,11 +2626,6 @@
 		<Russian>Чума поразила город %s1_city.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_BLANK</Tag>
-		<English />
-		<Russian></Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENT_BONUS_UNIT</Tag>
 		<English>[ICON_BULLET]Receive %d1 [COLOR_UNIT_TEXT]%s2_units[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Obtenir [NUM1:un:une:%d1:%d1] [COLOR_UNIT_TEXT]%s2_UnitName[COLOR_REVERT]</French>

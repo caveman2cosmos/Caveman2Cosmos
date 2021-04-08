@@ -8575,7 +8575,7 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 			return false;
 		}
 	}
-	const CvTeamAI myTeam = GET_TEAM(getTeam());
+	const CvTeamAI& myTeam = GET_TEAM(getTeam());
 
 	// Don't always accept giving deals, TRADE_VASSAL and TRADE_SURRENDER come with strings attached
 	bool bVassalTrade = false;
@@ -8634,7 +8634,7 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 
 	if (iOurValue > 0 && 0 == pTheirList->getLength() && 0 == iTheirValue)
 	{
-		const CvTeamAI dealerTeam = GET_TEAM(getTeam());
+		const CvTeamAI& dealerTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam());
 
 		if (myTeam.isVassal(dealer.getTeam()) && CvDeal::isVassalTributeDeal(pOurList))
 		{

@@ -18,10 +18,6 @@
 		<English>[ICON_BULLET]Gives terrain a lower chance to spread</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LANDMARK</Tag>
-		<English></English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT_HIDDEN</Tag>
 		<English>TBD</English>
 	</TEXT>
@@ -21335,5 +21331,21 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_MISC_ENEMY_TROOPS_SPOTTED</Tag>
 		<English>The enemy has been spotted near %s1_CityName!</English>
 		<Russian>Враг был замечен рядом с %s1_CityName!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMAIN_SEA</Tag>
+		<English>Water Units</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMAIN_AIR</Tag>
+		<English>Air Units</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMAIN_LAND</Tag>
+		<English>Land Units</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMAIN_IMMOBILE</Tag>
+		<English>Immobile Units</English>
 	</TEXT>
 </Civ4GameText>

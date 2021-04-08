@@ -2,10 +2,10 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_CHANGE_NOT_SPECIAL_CARGO</Tag>
-		<English>[ICON_BULLET]Does not allow transport of %s1 Units</English>
-		<French>[ICON_BULLET]Ne permet pas le transport de %s1 Unités</French>
-		<Polish>[ICON_BULLET]Nie pozwala na transport %s1</Polish>
-		<Russian>[ICON_BULLET]Не способен перевозить %s1 юнитов</Russian>
+		<English>[NEWLINE][ICON_BULLET]Does not allow transport of %s1 Units</English>
+		<French>[NEWLINE][ICON_BULLET]Ne permet pas le transport de %s1 Unités</French>
+		<Polish>[NEWLINE][ICON_BULLET]Nie pozwala na transport %s1</Polish>
+		<Russian>[NEWLINE][ICON_BULLET]Не способен перевозить %s1 юнитов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_CHANGE_SPECIAL_UNIT</Tag>
