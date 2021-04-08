@@ -5673,7 +5673,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__PLOTWORKINGCITY_HOVER</Tag>
 		<English>When checked, hovering over a tile your team owns shows which city controls it, in cyan if it is being worked.</English>
-		<French>Lorsque activé, en visionnant une case de votre équipe, apparaît le nom de la ville qui la contrôel, et en cyan lorsqu'elle est utilisée.</French>
+		<French>Lorsque activé, en visionnant une case de votre équipe, apparaît le nom de la ville qui la contrôle, et en cyan lorsqu'elle est utilisée.</French>
 		<German>Zeigt, wenn der Mauszeiger über ein Geländefeld im Bereich mehrerer Städte bewegt wird, an, welche Stadt es kontrolliert (erscheint in Cyan, falls es auch bearbeitet wird)</German>
 		<Spanish>Cuando se activa, situando el ratón encima de una casilla de tu equipo, muestra la ciudad que la controla, en turquesa si está siendo trabajada.</Spanish>
 		<Russian>Êîãäà óñòàíîâëåí, ïåðåìåùåíèå ïîâåðõ êëåòêè, ïðèíàäëåæàùåé âàøåé êîìàíäå, îòîáðàæàåò êàêîé ãîðîä óïðàâëÿåò åé, â çåëåíîâàòîì åñëè îíà ðàáî÷àÿ.</Russian>
@@ -5786,7 +5786,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__UPDATEUNITNAMEONUPGRADE_HOVER</Tag>
 		<English>When checked, if a unit's name contains its type (e.g. "Swordsman 5 of London"), it is replaced by the new type when upgrading (e.g. "Maceman 5 of London").</English>
 		<French>Lorsque activé, les Noms des unités sont mis à jour, s'ils contiennent le type d'unité (exemple: "Spadassin 5 de Londres" va être remplacé par "Soldat avec Masse 5 de Londres").</French>
-		<German>Falls der Einheitentyp im Namen einer Einheit vorkommt, wird dieser bei einer Modernisierung mit der neuen Bezeichnung ersetzt (beispielsweise wird aus "Schwertkämpfer 5 aus London" dann "Axtkämpfer 5 aus London")</German>
+		<German>Falls der Einseitentyp im Namen einer Einheit vorkommt, wird dieser bei einer Modernisierung mit der neuen Bezeichnung ersetzt (beispielsweise wird aus "Schwertkämpfer 5 aus London" dann "Axtkämpfer 5 aus London")</German>
 		<Italian>Quando è selezionato, se il nome di una Unità contiene il suo tipo (p. es. "Arciere I di Roma"), questo viene rimpiazzato dal nuovo tipo quando l'Unità viene aggiornata (p. es. "Balestriere I di Roma").</Italian>
 		<Spanish>Cuando se activa, si el nombre de una unidad contiene su tipo (por ejemplo, 'Arquero 5 de Londres'), se reemplaza por el nuevo tipo cuando se mejora (por ejemplo, 'Ballestero 5 de Londres').</Spanish>
 		<Russian>Êîãäà óñòàíîâëåí, åñëè íàçâàíèå þíèòà ñîäåðæèò åãî òèï (íàïðèìåð "Ìå÷íèê 5 èç Ëîíäîíà"), îíî çàìåíÿåòñÿ íîâûì òèïîì ïðè óëó÷øåíèè (íàïðèìåð "Áóëàâîíîñåö 5 èç Ëîíäîíà").</Russian>
@@ -6018,7 +6018,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MORECIV4LERTS__SURRENDERTRADE_HOVER</Tag>
 		<English>When checked, displays an alert when a civilization is willing to capitulate during war.</English>
-		<French>Lorsque activé, affiche un avertissement lorsqu'un civilisation est ptrêt à caputiler pour mettre fin à la Guerre.</French>
+		<French>Lorsque activé, affiche un avertissement lorsqu'un civilisation est prête à capituler pour mettre fin à la guerre.</French>
 		<German>Lässt eine Warnung erscheinen, wenn eine Zivilisation bereit ist, einen Krieg durch eine Kapitulation zu beenden</German>
 		<Italian>Quando è selezionato, viene visualizzato un avviso quando una Civiltà è disponibile a firmare un Atto di Capitolazione</Italian>
 		<Spanish>Cuando se activa, muestra una alerta si una civilización está dispuesta a capitular durante la guerra.</Spanish>
@@ -6069,7 +6069,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NEANDERTHALSPAWN__ENABLED_HOVER</Tag>
 		<English>Enable Neanderthal barbarian units to spawn.</English>
-		<Italian>Permette agli uomi di neanderthal di comparire sulla mappa</Italian>
+		<Italian>Permette ai Neanderthal di comparire sulla mappa.</Italian>
 		<Spanish>Activa la aparición de unidades bárbaras neandertales.</Spanish>
 		<Russian>Âêëþ÷èòü Íåàíäåðòàëüñêèõ âàðâàðîâ.</Russian>
 	</TEXT>
@@ -6085,7 +6085,7 @@
 		<English>When checked, the game clock switches between two views: standard and alternate.</English>
 		<French>Lorsque activé, l'horloge alterne régulièrement entre la vue standard et la vue alternative.</French>
 		<German>Lässt die Zeitanzeige zwischen den beiden Ansichten "Standard" und "Alternativ" wechseln</German>
-		<Italian>Quando è selezionato, l'orologio alterna due visualizzazioni, normale ed alternativa.</Italian>
+		<Italian>Quando è selezionato, l'orologio alterna due visualizzazioni, normale e alternativa.</Italian>
 		<Spanish>Cuando se activa, el reloj irá cambiando entre la vista estándar y la alternativa.</Spanish>
 		<Russian>Êîãäà óñòàíîâëåí, âðåìÿ èãðû ïåðåêëþ÷àåòñÿ ìåæäó äâóìÿ âèäàìè: ñòàíäàðòíûì è àëüòåðíàòèâíûì.</Russian>
 	</TEXT>
@@ -6103,7 +6103,7 @@
 		<English>Select the time each view of the game clock is displayed when alternating is enabled.</English>
 		<French>Sélectionnez la période en secondes à laquelle l'horloge alterne entre les deux vues.</French>
 		<German>Legt den Zeitabstand fest, in dem die Zeitanzeige zwischen den beiden Ansichten wechselt, wenn die entsprechende Option gewählt wurde</German>
-		<Italian>Determina perr quanti secondi viene visualizzata ciascuna delle due versioni dell'orologio (se la visualizzazione alternativa è abilitata).</Italian>
+		<Italian>Determina per quanti secondi viene visualizzata ciascuna delle due versioni dell'orologio (se la visualizzazione alternativa è abilitata).</Italian>
 		<Spanish>Selecciona el tiempo durante el que se muestra cada tipo de vista cuando la opción "Alternar vista de reloj" está activada.</Spanish>
 		<Russian>Âûáåðèòå âðåìÿ îòîáðàæåíèÿ êàæäîãî âèäà âðåìåíè èãðû êîãäà àëüòåðíàòèâà âêëþ÷åíà.</Russian>
 	</TEXT>
@@ -6392,7 +6392,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_OPP_FIRE_HOVER</Tag>
-		<English>Enables sentry siege the possibilty to inflict damage through opportunity volleying</English>
+		<English>Enables sentry siege the possibility to inflict damage through opportunity volleying</English>
 		<French>Permet aux unités en sentinelles d'infliger des dégâts préliminaires de par l'opportunité de leur positionnement.</French>
 		<German>Ermöglicht Belagerungswaffen, Schaden durch Gelegenheitstreffer (engl. opportunity fire) zu erzeugen</German>
 		<Spanish>Habilita que las unidades de asedio en posición de vigía puedan infringir daño a través de asedio a distancia de oportunidad.</Spanish>
@@ -6473,7 +6473,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_NO_NAVAL_INFLUENCE_HOVER</Tag>
 		<English>Battles between naval units have no effect on tile cultural control</English>
-		<French>Lorsque activé (conjointement aec IDW), les Batailles navales ne vont pas avoir d'effet sur les frontières</French>
+		<French>Lorsque activé (conjointement avec IDW), les Batailles navales ne vont pas avoir d'effet sur les frontières</French>
 		<German>Kämpfe zwischen Marineeinheiten haben keinen Einfluss auf den Kulturwert des Geländefeldes</German>
 		<Spanish>Las batallas entre unidades navales no influirán en la influencia cultural en el territorio.</Spanish>
 		<Russian>Ñðàæåíèÿ ìåæäó ìîðñêèìè îòðÿäàìè òåïåðü íå èìåþò íèêàêîãî ýôôåêòà íà êóëüòóðíîå âëèÿíèå íà äàííîé êëåòêå.</Russian>
@@ -6583,7 +6583,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__RISING_SEAS_HOVER</Tag>
 		<English>Global warming can raise sea level.</English>
-		<French>Le rechauffement global peut soulever le niveau de la mer.</French>
+		<French>Le réchauffement global peut soulever le niveau de la mer.</French>
 		<German>Die globale Erwärmung kann Meeresspiegel anheben.</German>
 		<Italian>Il riscaldamento globale può alzare il livello del mare.</Italian>
 		<Spanish>El calentamiento global puede elevar el nivel del mar.</Spanish>
@@ -6598,8 +6598,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__SS_ASSASSINATE_HOVER</Tag>
-		<English>Spies can assassinate settled great people</English>
-		<French>Les Espions peuvent assassiner des Personnages Illustres établits dans une ville</French>
+		<English>Spies can assassinate settled Great People</English>
+		<French>Les Espions peuvent assassiner des Personnages Illustres installées dans une ville</French>
 		<German>Spione können Attentate auf große Persönlichkeiten durchführen, die sich einer Stadt angeschlossen haben</German>
 		<Spanish>Los espías pueden asesinar a los grandes personajes situados en una ciudad.</Spanish>
 		<Russian>Øïèîíû ìîãóò ëèêâèäèðîâàòü Âåëèêèõ ëþäåé, ïîäñåëåííûõ â ãîðîäàõ.</Russian>
@@ -6726,7 +6726,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ALLOWSMALLBARBREVS_TEXT</Tag>
-		<English>Unorganized Rebolutions</English>
+		<English>Unorganized Revolutions</English>
 		<Spanish>Revoluciones desorganizadas</Spanish>
 		<Russian>Ñòèõèéíûå áóíòû</Russian>
 	</TEXT>
@@ -6935,14 +6935,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CLOSEDIST_HOVER</Tag>
-		<English>Plot distance between capitals that qualifies another civ as a local neighbour to the emerging civ.
-The other civ must have a city on the same landmass as the emerging civ for it to be considered a neighbour.
-Civs emerging from barbarians adapt to their local neighbours in many different ways, e.g. tech level.
-
-A low value will make each such civ generation more generic.
-A high value can impact performance slightly, especially on large maps.
-The value set here is the value used for a 'Duel' world size.
-The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
+		<English>Plot distance between capitals that qualifies another civ as a local neighbour to the emerging civ. The other civ must have a city on the same landmass as the emerging civ for it to be considered a neighbour. Civs emerging from barbarians adapt to their local neighbours in many different ways, e.g. tech level.  A low value will make each such civ generation more generic. A high value can impact performance slightly, especially on large maps. The value set here is the value used for a 'Duel' world size. The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CLOSEDIST_TEXT</Tag>
@@ -6951,7 +6944,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CLOSERADIUS_HOVER</Tag>
-		<English>Limiting distance for colony negative revolutionary effects, and distance rebeling cities can effect and draw in other cities.</English>
+		<English>Limiting distance for colony negative revolutionary effects, and distance rebelling cities can effect and draw in other cities.</English>
 		<Spanish>Distancia límite para efectos revolucionarios negativos en colonias, y distancia a la que las ciudades rebeladas pueden impresionar y atraer a otras ciudades.</Spanish>
 		<Russian>Ограничение расстояния для колонии негативными революционными эффектами, а расстояния повстанческих городов могут влиять и привлекать другие города.</Russian>
 	</TEXT>
@@ -7099,7 +7092,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__HUMANWARNFRAC_HOVER</Tag>
-		<English>Fraction of RevIdx used to warn a Human Player of an indpending Revolutionary issue in a city (1.0 equates to a RevIdx of 1000)</English>
+		<English>Fraction of RevIdx used to warn a Human Player of an impending Revolutionary issue in a city (1.0 equates to a RevIdx of 1000)</English>
 		<Spanish>Fracción del RevIndex para avisar al jugador humano de un problema de revolución independentista en una ciudad (1.0 equivale a un RevIndex de 1000).</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7218,7 +7211,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MINREINFORCEMENTTURNS_HOVER</Tag>
-		<English>Minumum number of turns that must pass between reinforcements</English>
+		<English>Minimum number of turns that must pass between reinforcements</English>
 		<Spanish>Número mínimo de turnos que deben pasar entre refuerzos a rebeldes.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7284,7 +7277,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__OFFERDEFECTTOREVS_HOVER</Tag>
-		<English>Offer human players with a rebelion the choice to defect and lead the rebels.</English>
+		<English>Offer human players with a rebellion the choice to defect and lead the rebels.</English>
 		<Spanish>Ofrece a los jugadores humanos afectados por una rebelión la posibilidad de desertar y liderar a los rebeldes.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7294,7 +7287,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REBELTYPES_HOVER</Tag>
-		<English>Use RebelTypes file when setting up rebelions</English>
+		<English>Use RebelTypes file when setting up rebellions</English>
 		<Spanish>Usa el archivo de RebelTypes al generar rebeliones.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7445,7 +7438,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__WARNTURNS_HOVER</Tag>
-		<English>Mininum number of turns waited before repeating an inpending revolution warning</English>
+		<English>Minimum number of turns waited before repeating an impending revolution warning</English>
 		<Spanish>Número mínimo de turnos de espera antes de repetir una alerta de revolución independentista.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7485,7 +7478,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<English>Units that preform particularly well in combat may earn a promotion in the midst of battle instead of XP.</English>
 		<French>Les Unités qui se distinguent particulièrement au combat peuvent obtenir des promotions pendant le combat, à la place de l'EXP.</French>
 		<German>Einheiten, die besonders erfolgreich kämpfen, können direkt in der Schlacht eine Beförderung erhalten (statt Erfahrungspunkten).</German>
-		<Italian>Le unità che agiscono particolarmente bene in batttaglia potrebbero ottenere delle promozioni, invece che XP.</Italian>
+		<Italian>Le unità che agiscono particolarmente bene in battaglia potrebbero ottenere delle promozioni, invece che XP.</Italian>
 		<Spanish>Las unidades que luchen particularmente bien en combate podrían obtener un ascenso al finalizar, en lugar de experiencia.</Spanish>
 		<Russian>Òåïåðü íåïðîêà÷àííûå îòðÿäû â áîþ ìîãóò ïîëó÷èòü ñðàçó äîï. Êâàëèôèêàöèþ âìåñòî îïûòà.</Russian>
 	</TEXT>
@@ -7521,7 +7514,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<English>With Fixed Borders, units will be unable to claim water tiles</English>
 		<French>Avec Frontières Fixes, les Unités seront incapables de réclamer les case d'eau</French>
 		<German>Bei "festen Grenzen" können keine Wasserfelder durch Militäreinheiten übernommen werden.</German>
-		<Italian>Con confini fissi, le unità non potranno reclamre le caselle d'acqua</Italian>
+		<Italian>Con confini fissi, le unità non potranno reclamare le caselle d'acqua</Italian>
 		<Spanish>Con "Fronteras fijables", las unidades no podrán reclamar casillas acuáticas.</Spanish>
 		<Russian>Ñ ôèêñèðîâàííûìè ãðàíèöàìè, îòðÿäû íå ñìîãóò ïåðåñåêàòü âîäíûå êëåòêè</Russian>
 	</TEXT>
@@ -7545,7 +7538,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__CURRENTDIFFICULTY_LIST</Tag>
-		<English>Current Difficulty|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
+		<English>Current Difficulty|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
 		<French>Difficulté actuelle|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
 		<German>Aktueller Schwierigkeitsgrad|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
 		<Italian>Difficoltà corrente|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Nightmare</Italian>
@@ -7584,14 +7577,14 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<English>Allows non-renewable resources to naturally deplete, based on the level of consumption</English>
 		<French>Permet aux ressources non-renouvelables de s'épuiser naturellement, basé sur le niveau de consommation</French>
 		<German>Nicht erneuerbare Ressourcen werden nun mit der Zeit, besonders bei exzessiver Nutzung, aufgebraucht und verschwinden, wenn sie erschöpft sind, von der Karte.</German>
-		<Italian>Permette alle risorse non rinnovabili di esaurirsi naturalmente, basandosisul livello di consumo</Italian>
+		<Italian>Permette alle risorse non rinnovabili di esaurirsi naturalmente, basandosi sul livello di consumo</Italian>
 		<Spanish>Hace que los recursos no renovables se agoten naturalmente según el nivel de consumo.</Spanish>
 		<Russian>Íåâîçîáíîâëÿåìûå ðåñóðñû áóäóò èñòîùàòüñÿ åñòåñòâåííûì ïóòåì, èñõîäÿ èç èõ óðîâíÿ ïîòðåáëåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__DEPLETIONMOD_TEXT</Tag>
 		<English>Resource Depletion</English>
-		<French>Epuisement des Ressources</French>
+		<French>Épuisement des Ressources</French>
 		<German>Ressourcenverbrauch</German>
 		<Italian>Esaurimento delle risorse</Italian>
 		<Spanish>Agotamiento de recursos</Spanish>
@@ -7620,7 +7613,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<English>Random Events will display an image with them.</English>
 		<French>Les Evénements aléatoires sont affichés avec une image.</French>
 		<German>Bei Zufallsereignissen wird zusätzlich ein Bild angezeigt.</German>
-		<Italian>Gli eventi casuali verrano mostrati con un'immagine.</Italian>
+		<Italian>Gli eventi casuali verranno mostrati con un'immagine.</Italian>
 		<Spanish>Los eventos aleatorios se mostrarán con una imagen.</Spanish>
 		<Russian>Ñëó÷àéíûå ñîáûòèÿ áóäóò ñîïðîâîæäàòüñÿ èçîáðàæåíèåì äëÿ íèõ.</Russian>
 	</TEXT>
@@ -7654,7 +7647,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMAXIMUMDIFF_LIST</Tag>
-		<English>No Maximum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
+		<English>No Maximum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
 		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
 		<German>Kein Maximum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
 		<Italian>No Massimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Nightmare</Italian>
@@ -7698,7 +7691,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMINIMUMDIFF_LIST</Tag>
-		<English>No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
+		<English>No Minimum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
 		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
 		<German>Kein Minimum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
 		<Italian>No Minimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Nightmare</Italian>
@@ -7751,7 +7744,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEREPLACEDBUILDINGS_HOVER</Tag>
-		<English>Hides any buildings from the city contruct queue if their upgraded form can be built immediately. (e.g The harbor will be hidden if the Port is available).</English>
+		<English>Hides any buildings from the city construct queue if their upgraded form can be built immediately. (e.g The harbor will be hidden if the Port is available).</English>
 		<French>Masque tous les bâtiments de la liste de production si la version améliorée de ces bâtiments est déjà disponible (example: sera masqué si le Port est disponible).</French>
 		<German>Blendet Gebäude in der Produktionsliste der Stadt aus, sobald eine verbesserte Version errichtet werden kann (z.B. wird der Hafen ausgeblendet, wenn der Handelshafen verfügbar ist).</German>
 		<Italian>Nasconde dalla coda di produzione della città tutti gli edifici, se è disponibile una loro versione migliorata (ad esempio, il Porticciolo sarà nascosto se il Porto è disponibile).</Italian>
@@ -7765,7 +7758,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<German>Veraltete Gebäude ausblenden</German>
 		<Italian>Nascondi edifici sostituibili</Italian>
 		<Spanish>Ocultar edificios reemplazados</Spanish>
-		<Russian>Ñêðûòü çàìåíÿåìûå  çäàíèÿ</Russian>
+		<Russian>Ñêðûòü çàìåíÿåìûå çäàíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEUNAVAILABLEBUILDS_HOVER</Tag>
@@ -7834,7 +7827,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MAXBOMBARDDEFENSE_HOVER</Tag>
-		<English>The Maximum Bombard Defense a City may have. 100% may cause cities to become unsiegable. 75% is recommended</English>
+		<English>The Maximum Bombard Defense a City may have. 100% may cause cities to become unsiegeable. 75% is recommended</English>
 		<French>La Valeur maximale de Défense contre les Bombardements qu'une Ville peut avoir. 100% rend les Ville imprenables. 75% est recommandé</French>
 		<German>Die maximale Verteidigungsstärke, die eine Stadt gegenüber Bombardierung haben kann. Bei 100% können Städte nicht mehr belagert werden, 75% sind empfohlen.</German>
 		<Italian>Il massimo danno da bombardamento che una città può avere. 100% significa che la città non è assediabile. 75% è raccomandato</Italian>
@@ -7871,7 +7864,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MAXUNITSPERTILE_HOVER</Tag>
 		<English>Can force a maximum amount of units per tile. 0 indicates no maximum. Not recommended for normal gameplay.</English>
-		<French>Peut forcer un nombre maximum d'unité par Case. 0 signifie pas de maximum. non recommendé pour un 'gameplay' normal.</French>
+		<French>Peut forcer un nombre maximum d'unité par Case. 0 signifie pas de maximum. Non recommandé pour un jeu normal.</French>
 		<German>Eine Maximalzahl an Einheiten pro Geländefeld kann festgelegt werden. "0" bedeutet keine Begrenzung. Für normales Gameplay nicht empfohlen.</German>
 		<Italian>Può forzare un numero massimo di unità per casella. 0 indica nessun limite massimo. Non raccomandato per un gameplay normale.</Italian>
 		<Spanish>Puede forzar un número máximo de unidades por casilla. 0 indica que no hay límite. No recomendado para jugar normalmente.</Spanish>
@@ -8026,7 +8019,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<English>Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark Pink|Dark Purple|Dark Red|Dark Yellow|Grey|Green|Orange|Peach|Pink|Purple|Red|White|Yellow|Light Green|Light Blue|Light Yellow|Light Purple|Light Orange|Golden Purple|Dark Grey|Cyan Green|Dark Lemon|Navy Blue|Maroon|Light Brown|Dark Orange|Forest Green|Dark Indigo|Red - Gold|Gold - Black|Green - Black</English>
 		<French>Couleur actuelle|Noir|Bleu|Brun|Cyan|Bleu foncé|Cyan foncé|Vert foncé|Rose foncé|Violet foncé|Rouge foncé|Jaune foncé|Gris|Vert|Orange|Pêche|Rose|Violet|Rouge|Blanc|Jaune|Vert Clair|Bleu Clair|Jaune Clair|Violet Clair|Orange Clair|Pourpre doré|Gris foncé|Bleu-Vert|Citron-Foncé|Bleu Marine|Marron|Brun clair|Orange foncé|Vert Forêt|Indigo foncé|Rouge - Or|Or - Noir|Vert - Noir</French>
 		<German>Aktuelle Farbe|Schwarz|Blau|Braun|Zyan|Dunkelblau|Dunkles Zyan|Dunkelgrün|Dunkelrosa|Dunkelviolett|Dunkelrot|Dunkelgelb|Grau|Grün|Orange|Pfirsich|Rosa|Violett|Rot|Weiß|Gelb|Hellgrün|Hellblau|Hellgelb|Hellviolett|Hellorange|Gold-Violett|Dunkelgrau|Zyangrün|Dunkelzitron|Marineblau|Rotbraun|Hellbraun|Dunkelorange|Blattgrün|Dunkles Indigo|Rot - Gold|Gold - Schwarz|Grün - Schwarz</German>
-		<Italian>Colore corrente|Nero|Blu|Marrone|Ciano|Blu scuro|Ciano scuro|Verde scuro|Rosa scuro|Viola scuro|Rosso scuro|Giallo scuro|Grigio|Verde|Arancione|Pesca|Rosa|Viola|Rosso|Bianco|Giallo|Verde chiaro|Azzurro|Giallo Chiaro|Viola chairo|Arancione chiaro|Viola oro|Grigio Scuro|Verde ciano|Limone scuro|Blu marina|Maroo|Marrone chiaro|Arancione scuro|Verde foresta|Indaco scuro|Rosso-Oro|Oro-Nero|Verde-Nero</Italian>
+		<Italian>Colore corrente|Nero|Blu|Marrone|Ciano|Blu scuro|Ciano scuro|Verde scuro|Rosa scuro|Viola scuro|Rosso scuro|Giallo scuro|Grigio|Verde|Arancione|Pesca|Rosa|Viola|Rosso|Bianco|Giallo|Verde chiaro|Azzurro|Giallo Chiaro|Viola chairo|Arancione chiaro|Viola oro|Grigio Scuro|Verde ciano|Limone scuro|Blu marina|Marrone|Marrone chiaro|Arancione scuro|Verde foresta|Indaco scuro|Rosso-Oro|Oro-Nero|Verde-Nero</Italian>
 		<Spanish>Color actual|Negro|Azul|Marrón|Turquesa|Azul oscuro|Turquesa oscuro|Verde oscuro|Rosa oscuro|Violeta oscuro|Rojo oscuro|Amarillo oscuro|Gris|Verde|Naranja|Rosado|Rosa|Violeta|Rojo|Blanco|Amarillo|Verde claro|Azul claro|Amarillo claro|Violeta claro|Naranja claro|Violeta dorado|Gris oscuro|Verde azulado|Limón oscuro|Azul marino|Carmesí|Marrón claro|Naranja oscuro|Verde boscoso|Añil oscuro|Rojo-Oro|Oro-Negro|Verde-Negro</Spanish>
 		<Russian>Òåêóùèé Öâåò|×åðíûé|Ñèíèé|Êîðè÷íåâûé|Ãîëóáîé|Òåìíî-Ñèíèé|Òåìíî-Ãîëóáîé|Òåìíî-Çåëåíûé|Òåìíî-Ðîçîâûé|Òåìíî-Ôèîëåòîâûé|Òåìíî-Êðàñíûé|Òåìíî-Æåëòûé|Ñåðûé|Çåëåíûé|Îðàíæåâûé|Ïåðñèê|Ðîçîâûé|Ôèîëåòîâûé|Êðàñíûé|Áåëûé|Æåëòûé|Ñâåòëî-Çåëåíûé|Ñâåòëî-Ãîëóáîé|Ñâåòëî-Æåëòûé|Ñâåòëî-Ôèîëåòîâûé|Ñâåòëî-Îðàíæåâûé|Çîëîòèñòî-Ôèîëåòîâûé|Òåìíî-Ñåðûé|Ñèíå-Çåëåíûé|Òåìíî-Ëèìîííûé|Òåìíî-Ñèíèé|Òåìíî-Áîðäîâûé|Ñâåòëî-Êîðè÷íåâûé|Òåìíî-Îðàíæåâûé|Òåìíî-Çåëåíûé|Òåìíûé Èíäèãî|Êðàñíî - Çîëîòîé|Çîëîòî - ×åðíûé|Çåëåíûé - ×åðíûé</Russian>
 	</TEXT>
@@ -8041,7 +8034,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__PLAYWAITINGALERTSOUNDTIMER_HOVER</Tag>
-		<English>Sets the time inbetween the next alert notification sound effect, in seconds.</English>
+		<English>Sets the time in between the next alert notification sound effect, in seconds.</English>
 		<French>Définit le temps entre deux avertissements sonore d'attente, en secondes.</French>
 		<German>Legt die Zeit zwischen 2 Alarmsignalen in Sekunden fest.</German>
 		<Italian>Stabilisce l'intervallo tra le notifiche di allerta, in secondi.</Italian>
@@ -8058,7 +8051,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__PLAYWAITINGALERTSOUND_HOVER</Tag>
 		<English>The game will play an alert sound when the game is waiting for you to finish your turn before the next turn can proceed.</English>
-		<French>Le Jeu émettra un avertissement sonore lorsque le tour nécessite encore une intevention de la part du Joueur avant de pouvoir passer au tour suivant.</French>
+		<French>Le Jeu émettra un avertissement sonore lorsque le tour nécessite encore une intervention de la part du Joueur avant de pouvoir passer au tour suivant.</French>
 		<German>Das Spiel spielt einen Warnton ab, wenn es darauf wartet, dass Sie die Runde beenden, um die nächste Runde beginnen zu können.</German>
 		<Italian>Il gioco emetterà un suono di allerta quando aspetta che tu finisca il turno per passare al turno successivo.</Italian>
 		<Spanish>El juego emitirá un sonido de alerta cuando esté esperando la orden para finalizar tu turno antes de proceder al siguiente.</Spanish>
@@ -8075,7 +8068,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__REALISITICDIPLOMACY_HOVER</Tag>
-		<English>Realisitic Diplomacy decreases the amount of time it takes for the AI to forget past transgressions, and removes the AI favoritism bias that many leaders have.</English>
+		<English>Realistic Diplomacy decreases the amount of time it takes for the AI to forget past transgressions, and removes the AI favoritism bias that many leaders have.</English>
 		<French>Supprime l'attirance non justifiée que les IAs ont envers les autres IAs.</French>
 		<German>Durch "Realistische Diplomatie" verkürzt sich die Zeitspanne, die die KI braucht, um frühere Verfehlungen ihrer Gegner zu vergessen. Außerdem wird die unfaire Bevorzugung von anderen KI-Spielern entfernt.</German>
 		<Italian>Diplomazia realistica diminuisce il tempo che l'IA impiega per dimenticare i tradimenti passati, e rimuove i favoritismi dell'IA che molti leader hanno.</Italian>
@@ -8129,7 +8122,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SEATUNNELS_HOVER</Tag>
 		<English>Allows the construction of sea tunnels after the player has researched Civil Engineering. Sea tunnels allow troops to move across water unaided by any transports.</English>
-		<French>Lorsque activé, Permet la construction de tunnels aquatiques après la découverte de l'Ingénierie Civile. Ces tunnesl permettent aux troupes terrestres de se déplacer à travers l'eau sans avoir à utiliser de transports.</French>
+		<French>Lorsque activé, Permet la construction de tunnels aquatiques après la découverte de l'Ingénierie Civile. Ces tunnels permettent aux troupes terrestres de se déplacer à travers l'eau sans avoir à utiliser de transports.</French>
 		<German>Erlaubt den Bau von Meerestunneln nach der Erforschung des Bauingenieurwesens. Durch Meerestunnel können Landeinheiten Wasserflächen ohne Transporter passieren.</German>
 		<Italian>Permette la costruzione di tunnel sottomarini dopo che il giocatore ha ricercato Ingegneria civile. I tunnel sottomarini permettono alle unità di muoversi attraverso l'acqua senza l'aiuto di trasporti.</Italian>
 		<Spanish>Permite la construcción de túneles submarinos después de investigar la Ingeniería civil. Los túneles submarinos permiten a las tropas terrestres cruzar el agua sin necesidad de transportes.</Spanish>
@@ -8167,7 +8160,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<English>Shows detailed RevIndex values for civics. If disabled, generic descriptions will be used instead.</English>
 		<French>Affiche les valeurs détaillées de RevIndex. Si désactivé, les descriptions générales seront utilisées à la place.</French>
 		<German>Es werden detaillierte RevIndex-Werte für Gesellschaftsformen angezeigt. Bei deaktivierter Funktion werden die Standardbeschreibungen verwendet.</German>
-		<Italian>Mostra valori RevIndex dettagliati per le forme di governo. Se disattivato, verrano visualizzate informazioni generiche.</Italian>
+		<Italian>Mostra valori RevIndex dettagliati per le forme di governo. Se disattivato, verranno visualizzate informazioni generiche.</Italian>
 		<Spanish>Muestra valores detallados del RevIndex para los principios. Si está desactivada, se usarán descripciones genéricas en su lugar.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8181,7 +8174,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__STRATEGICEVENTS_HOVER</Tag>
 		<English>Strategic Events are random events that force players to make decisions that are strategically important, and could alter the course of the game. They can be more negative than standard events, but also more positive.</English>
-		<French>Les Evénements stratéqiues sont des événements aléatoires qui obligent les joueurs à prendre des décisions importantes au niveau stratégique, et qui peuvent changer le cours du Jeu. Ces événements ont beaucoup plus d'incidence, en bien ou en mal.</French>
+		<French>Les Événements stratégiques sont des événements aléatoires qui obligent les joueurs à prendre des décisions importantes au niveau stratégique, et qui peuvent changer le cours du Jeu. Ces événements ont beaucoup plus d'incidence, en bien ou en mal.</French>
 		<German>Strategische Ereignisse sind Zufallsereignisse, die den Spieler dazu zwingen, strategisch wichtige Entscheidungen zu treffen, die den Verlauf des Spiels maßgeblich beeinflussen können. Sie können negativere, aber auch positivere Auswirkungen als Standardereignisse haben.</German>
 		<Italian>Gli eventi strategici sono eventi casuali che costringono i giocatori a decisioni strategicamente importanti, e potrebbero alterare il corso della partita. Possono essere molto peggiori degli eventi standard, ma anche molto peggiori.</Italian>
 		<Spanish>Los eventos estratégicos son eventos aleatorios que fuerzan al jugador a tomar decisiones estratégicamente importantes que podrían alterar el curso de la partida. Pueden ser más perjudiciales que los eventos normales, pero también más beneficiosos.</Spanish>
@@ -8190,7 +8183,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__STRATEGICEVENTS_TEXT</Tag>
 		<English>Strategic Events</English>
-		<French>Evénements Stratégiques</French>
+		<French>Événements Stratégiques</French>
 		<German>Strategische Ereignisse</German>
 		<Italian>Eventi strategici</Italian>
 		<Spanish>Eventos estratégicos</Spanish>
@@ -8229,7 +8222,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<English>Cities will be named after nearby landmarks, instead of using the standard list of names. If no landmark is nearby, a standard name is used.</English>
 		<French>Les Noms des Villes proposés correspondront à des repères de terrains aux alentours, à la place de la liste standard de la civ. S'il n'y a pas de repère à proximité, un nom standard est proposé.</French>
 		<German>Anstatt die Namen aus der Standardliste zu verwenden, werden Städte nach naheliegenden Geländemerkmalen benannt. Wenn es keine in der Nähe gibt, wird ein Standardname genommen.</German>
-		<Italian>Le città verrano chiamate secondo i punti di riferimento nelle vicinanze, invece di usare la lista standard dei nomi. Se nelle vicinanze non c'è alcun punto di riferimento, viene usato un nome standard.</Italian>
+		<Italian>Le città verranno chiamate secondo i punti di riferimento nelle vicinanze, invece di usare la lista standard dei nomi. Se nelle vicinanze non c'è alcun punto di riferimento, viene usato un nome standard.</Italian>
 		<Spanish>Las ciudades serán nombradas según los marcadores cercanos, en lugar de usar la lista de nombres estándar. Si no hay marcadores cerca, se usará un nombre estándar.</Spanish>
 		<Russian>Города будут названы в честь ближайших достопримечательностей, вместо использования стандартного списка названий. Если поблизости нет ориентира, используется стандартное название.</Russian>
 	</TEXT>
@@ -8380,9 +8373,8 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_SCORES__DISPLAYNAME_LIST</Tag>
 		<English>Leader|Civilization|Civ Description|Leader / Civ|Leader / Civ Desc</English>
-		<French>Leader|Civilisation|Civ Description|Leader / Civ|Leader / Civ Desc</French>
 		<German>Oberhaupt|Zivilisation|Ziv-Beschreibung|Oberhaupt / Zivilisation|Oberhaupt / Ziv-Beschreibung</German>
-		<Italian>Leader|Civiltà|Short Civ|Leader + Civ|Leader + Short Civ</Italian>
+		<Italian>Leader|Civiltà|Descrizione|Leader + Civ|Leader + Descrizione</Italian>
 		<Spanish>Líder|Civilización|Descripción|Líder / Civ.|Líder / Desc.</Spanish>
 		<Russian>Ëèäåð|Öèâèëèçàöèÿ|Îïèñàíèå öèâ.|Ëèäåð / Öèâ.|Ëèäåð / Îïèñ. öèâ.</Russian>
 	</TEXT>
@@ -8452,7 +8444,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_SCORES__LEFTALIGNNAME_HOVER</Tag>
 		<English>When checked, the civ/leader name is left-aligned instead of right-aligned.</English>
-		<French>Lorsque activé, le nom du dirigeant et/ou de la cvilisation est aligné à gauche au lieu d'à droite.</French>
+		<French>Lorsque activé, le nom du dirigeant et/ou de la civilisation est aligné à gauche au lieu d'à droite.</French>
 		<German>Zeigt den Namen von Zivilisationen/Oberhäuptern linksbündig statt rechtsbündig an</German>
 		<Italian>Quando è selezionato, il nome della Civiltà/del Leader nel Pannello del Punteggio viene allineato a sinistra invece che a destra.</Italian>
 		<Spanish>Cuando se activa, el nombre de la civilización o del líder se alinean a la izquierda en vez de a la derecha.</Spanish>
@@ -8506,7 +8498,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_SCORES__POWERCOLOR_HOVER</Tag>
 		<English>Color used by default for power ratios.</English>
-		<French>Couleur utilisaée par défaut pour les pro-rata de pouvoir.</French>
+		<French>Couleur utilisée par défaut pour les pro-rata de pouvoir.</French>
 		<German>Bestimmt die Standardfarbe, in der das Machtverhältnis erscheint</German>
 		<Italian>Colore predefinito per i Rapporti di Forza.</Italian>
 		<Spanish>Color usado por defecto para mostrar la relación de poder.</Spanish>
@@ -8767,7 +8759,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_SCORES__WORSTENEMY_HOVER</Tag>
 		<English>When checked, shows an angry person icon when you are an AI's worst enemy.</English>
-		<French>Lorsque activé, une icône de citoyen faché montrera quand vous êtes le pire ennemi d'une IA.</French>
+		<French>Lorsque activé, une icône de citoyen facheé montrera quand vous êtes le pire ennemi d'une IA.</French>
 		<German>Zeigt das Symbol eines wütenden Bürgers an, wenn eine Zivilisation der Erzfeind der eigenen Zivilisation ist</German>
 		<Italian>Quando è selezionato, mostra un'apposita icona quando sei il Peggior Nemico di quella Civiltà.</Italian>
 		<Spanish>Cuando se activa, muestra un icono de ciudadano enfadado cuando eres el peor enemigo de alguna IA.</Spanish>
@@ -8856,7 +8848,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Tag>TXT_KEY_BUG_OPT_TECHWINDOW__CIVILOPEDIATEXT_HOVER</Tag>
 		<English>When checked, includes the Civilopedia text after the quote for the discovered technology.</English>
 		<French>Lorsque sélectionné, ajoute le texte de la Civilopedia après la citation de la technologie découverte.</French>
-		<German>Zeigt den kompletten Eintrag einer erforschten oder erworbenen Technolgie aus der Civilopedia zusätzlich zu deren Zitat an</German>
+		<German>Zeigt den kompletten Eintrag einer erforschten oder erworbenen Technologie aus der Civilopedia zusätzlich zu deren Zitat an</German>
 		<Italian>Quando è selezionato, include il testo della Civilopedia dopo la citazione per la tecnologia scoperta.</Italian>
 		<Spanish>Cuando se activa, incluye el texto de la Civilopedia después de la cita sobre la tecnología descubierta.</Spanish>
 		<Russian>Êîãäà óñòàíîâëåí, âêëþ÷àåò òåêñò öèâèëîïåäèè ïîñëå ññûëêè íà îòêðûòóþ òåõíîëîãèþ.</Russian>
@@ -25155,7 +25147,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_RELIGIOUS_MONASTARY</Tag>
-		<English>Monastaries:</English>
+		<English>Monasteries:</English>
 		<French>Monastères:</French>
 		<German>Klöster:</German>
 		<Italian>Monasteri:</Italian>
@@ -25215,7 +25207,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_TRADE_HEADING</Tag>
 		<English>Trade</English>
-		<French>Echanges</French>
+		<French>Échanges</French>
 		<German>Handel</German>
 		<Italian>Commercio</Italian>
 		<Spanish>Comercio</Spanish>
@@ -25311,7 +25303,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_VICTORY_VASSALED</Tag>
-		<English>%d1 vassaled</English>
+		<English>%d1 vassalled</English>
 		<French>%d1 des Vassaux</French>
 		<German>Vasallen: %d1</German>
 		<Italian>%d1 vassallo</Italian>
