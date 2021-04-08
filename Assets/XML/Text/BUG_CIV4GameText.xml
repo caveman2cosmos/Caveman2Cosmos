@@ -5786,7 +5786,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__UPDATEUNITNAMEONUPGRADE_HOVER</Tag>
 		<English>When checked, if a unit's name contains its type (e.g. "Swordsman 5 of London"), it is replaced by the new type when upgrading (e.g. "Maceman 5 of London").</English>
 		<French>Lorsque activé, les Noms des unités sont mis à jour, s'ils contiennent le type d'unité (exemple: "Spadassin 5 de Londres" va être remplacé par "Soldat avec Masse 5 de Londres").</French>
-		<German>Falls der Einseitentyp im Namen einer Einheit vorkommt, wird dieser bei einer Modernisierung mit der neuen Bezeichnung ersetzt (beispielsweise wird aus "Schwertkämpfer 5 aus London" dann "Axtkämpfer 5 aus London")</German>
+		<German>Falls der Einheitstyp im Namen einer Einheit vorkommt, wird dieser bei einer Modernisierung mit der neuen Bezeichnung ersetzt (beispielsweise wird aus "Schwertkämpfer 5 aus London" dann "Axtkämpfer 5 aus London")</German>
 		<Italian>Quando è selezionato, se il nome di una Unità contiene il suo tipo (p. es. "Arciere I di Roma"), questo viene rimpiazzato dal nuovo tipo quando l'Unità viene aggiornata (p. es. "Balestriere I di Roma").</Italian>
 		<Spanish>Cuando se activa, si el nombre de una unidad contiene su tipo (por ejemplo, 'Arquero 5 de Londres'), se reemplaza por el nuevo tipo cuando se mejora (por ejemplo, 'Ballestero 5 de Londres').</Spanish>
 		<Russian>Êîãäà óñòàíîâëåí, åñëè íàçâàíèå þíèòà ñîäåðæèò åãî òèï (íàïðèìåð "Ìå÷íèê 5 èç Ëîíäîíà"), îíî çàìåíÿåòñÿ íîâûì òèïîì ïðè óëó÷øåíèè (íàïðèìåð "Áóëàâîíîñåö 5 èç Ëîíäîíà").</Russian>
@@ -25077,7 +25077,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__ENABLED_HOVER</Tag>
 		<English>When checked, uses the formats on this tab and in the INI file to name the player's units.</English>
-		<French>Lorsque activé,utilise les formats spécifiés içi et dans le fichier INI pour nommer vos unités.</French>
+		<French>Lorsque activé, utilise les formats spécifiés ici et dans le fichier INI pour nommer vos unités.</French>
 		<German>Aktiviert die Benennung eigener Einheiten mit diesen Regeln und der INI-Datei.</German>
 		<Italian>Quando è selezionato, vengono utilizzati i formati in questa tabella e nel file 'Adv Unit Naming.ini' per denominare le Unità del giocatore. I nomi possono essere costruiti combinando testo semplice e codici (che devono essere posti fra accenti circonflessi: ^).[NEWLINE]Ad esempio: "^cv^ ^ut^ di ^ct^" --&gt; "Arciere Americano di Boston".</Italian>
 		<Spanish>Si se activa, se utilizará el formato definido en esta página y en el fichero INI para nombrar a las unidades del jugador.</Spanish>

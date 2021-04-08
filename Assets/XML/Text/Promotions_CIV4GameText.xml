@@ -169,7 +169,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ARROW_BARRAGE</Tag>
 		<English>Arrow Barrage Promotion Line</English>
-		<French>Spécialisation Barrage de flêches</French>
+		<French>Spécialisation Barrage de fléchés</French>
 		<Polish>Linia Promocji: Grad Strzał</Polish>
 		<Russian>Øêâàë ñòðåë</Russian>
 	</TEXT>
@@ -424,7 +424,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_ESCAPE_PLANS</Tag>
 		<English>Build Up (Escape Plans) Promotion Line</English>
-		<French>Spécialisation Echappatoire</French>
+		<French>Spécialisation Échappatoire</French>
 		<Polish>Linia Promocji: Koncentracja (Plany ucieczki)</Polish>
 		<Russian>Ïëàíû ïîáåãà</Russian>
 	</TEXT>
@@ -483,7 +483,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY_HELP</Tag>
-		<English>Each Round spent building up Fortifcations improves the unit's [COLOR_HIGHLIGHT_TEXT]Combat Modifier[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each Round spent building up Fortifications improves the unit's [COLOR_HIGHLIGHT_TEXT]Combat Modifier[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
 		<French>A chaque tour la Spécialisation Fortifications augmente [COLOR_HIGHLIGHT_TEXT]la valeur de défense[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<German>Das Befestigungstraining erhöht jede Runde die [COLOR_HIGHLIGHT_TEXT]Verteidigung[COLOR_REVERT] der Einheit um 5% (maximal 25%).</German>
 	</TEXT>
@@ -558,7 +558,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_PATRIOTISM_HELP</Tag>
 		<English>Each round spent building up Patriotism, the unit gains +2% [COLOR_HIGHLIGHT_TEXT]Revolt Protection[COLOR_REVERT] (to make a cultural revolution less likely in cities where the national culture isn't a majority for the owner) up to a maximum of +10%, provided each promotion level is qualified for by the unit.</English>
-		<French>Pour chaque tour dépensé en rentranchement Patriotisme, L'unité gagne +2% [COLOR_HIGHLIGHT_TEXT]Protection contre les Révoltes[COLOR_REVERT] (pour rendre une révolution culturelle moins probable dans les villes où la culture nationale n'est pas majoritaire pour le propriétaire) jusqu'à un maximum de +10%, à condition que chaque niveau de promotion soit qualifié par l'unité.</French>
+		<French>Chaque tour passé à construire le patriotisme, l'unité gagne +2% [COLOR_HIGHLIGHT_TEXT]Protection contre les Révoltes[COLOR_REVERT] (pour rendre une révolution culturelle moins probable dans les villes où la culture nationale n'est pas majoritaire pour le propriétaire) jusqu'à un maximum de +10%, à condition que chaque niveau de promotion soit qualifié par l'unité.</French>
 		<Russian>За каждый ход, потраченный на эту квалификацию, отряд получает +2% к [COLOR_HIGHLIGHT_TEXT]Лояльности[COLOR_REVERT] (чтобы сделать культурную революцию менее вероятной в городах, где национальная культура цивилизации игрока в меньшинстве) до максимум +10%, при условии, что каждый следующий уровень квалификации выполняется отрядом.</Russian>
 	</TEXT>
 	<TEXT>
@@ -971,7 +971,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ELECTROMAGNETIC_ARMOR</Tag>
 		<English>Electromagnetic Armor Promotion Line</English>
-		<French>Spécialisation Armure Electromagnetique</French>
+		<French>Spécialisation Armure Électromagnétique</French>
 		<Italian>Armatura elettromagnetica</Italian>
 		<Polish>Linia Promocji: Pancerz Elektromagnetyczny</Polish>
 		<Russian>Ýëåêòðîìàãíèòíàÿ áðîíÿ</Russian>
@@ -1015,7 +1015,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EPIC_MIGHT</Tag>
 		<English>Epic Might Promotion Line</English>
-		<French>Spécialisation Force Epique</French>
+		<French>Spécialisation Force Épique</French>
 		<German>Monumentale Stärke</German>
 		<Polish>Linia Promocji: Epicka Moc</Polish>
 	</TEXT>
@@ -1058,14 +1058,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EXCEPTIONAL_MIGHT</Tag>
 		<English>Exceptional Might Promotion Line</English>
-		<French>Spécialisation Force Exceptionelle</French>
+		<French>Spécialisation Force exceptionnelle</French>
 		<German>Außergewöhnliche Stärke</German>
 		<Polish>Linia Promocji: Wyjątkowa Moc</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EXCESSIVE</Tag>
 		<English>Excessive Promotion Line</English>
-		<French>Spécialisation Exces</French>
+		<French>Spécialisation Excessif</French>
 		<Italian>Eccessivo</Italian>
 		<Polish>Linia Promocji: Przesadny</Polish>
 		<Russian>Íåñíîñíûé</Russian>
@@ -1179,7 +1179,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FOREIGN</Tag>
 		<English>Foreign Promotion Line</English>
-		<French>Spécialisation Etranger</French>
+		<French>Spécialisation Étranger</French>
 		<Italian>Straniero</Italian>
 		<Polish>Linia Promocji: Wyobcowany</Polish>
 		<Russian>Êñåíîôèë</Russian>
@@ -1256,7 +1256,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_HAIL_OF_STONES</Tag>
 		<English>Hail of Stones Promotion Line</English>
-		<French>Spécialisation Grelons</French>
+		<French>Spécialisation Grêle de pierres</French>
 		<Polish>Linia Promocji: Grad Kamieni</Polish>
 		<Russian>Ãðàä êàìíåé</Russian>
 	</TEXT>
@@ -1487,7 +1487,6 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_LIVE</Tag>
 		<English>Live Promotion Line</English>
 		<French>Spécialisation Vie</French>
-		<Italian>Respawn</Italian>
 		<Polish>Linia Promocji: Odrodzenie</Polish>
 		<Russian>Æèçíü</Russian>
 	</TEXT>
@@ -1536,7 +1535,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MARKSMAN</Tag>
 		<English>Marksman Promotion Line</English>
-		<French>Spécialisation Tireur d'elite</French>
+		<French>Spécialisation Tireur d'élite</French>
 		<German>Scharfschütze</German>
 		<Italian>Tiratore scelto</Italian>
 		<Spanish>Punterea</Spanish>
@@ -1555,7 +1554,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MEDIC</Tag>
 		<English>Medic Promotion Line</English>
-		<French>Spécialisation Médic</French>
+		<French>Spécialisation Medic</French>
 		<Italian>Medico</Italian>
 		<Polish>Linia Promocji: Medyk</Polish>
 		<Russian>Ìåäèê</Russian>
@@ -1563,7 +1562,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MEGALOMANIAC</Tag>
 		<English>Megalomaniac Promotion Line</English>
-		<French>Spécialisation Megalomaniaque</French>
+		<French>Spécialisation Mégalomane</French>
 		<Italian>Megalomane</Italian>
 		<Polish>Linia Promocji: Megaloman</Polish>
 		<Russian>Ìåãàëîìàíüÿê</Russian>
@@ -1641,7 +1640,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_NON_LETHAL_FORCE</Tag>
 		<English>Non-Lethal Force Promotion Line</English>
-		<French>Spécialisation Armes non-léthales</French>
+		<French>Spécialisation Armes non létale</French>
 		<German>Am Leben lassen</German>
 		<Polish>Linia Promocji: Nie-Śmiercionośny</Polish>
 	</TEXT>
@@ -1726,7 +1725,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_POLAR_WORKER</Tag>
 		<English>Polar Worker Promotion Line</English>
 		<French>Spécialisation Ouvrier polaire</French>
-		<Spanish>Trabajador ertico</Spanish>
+		<Spanish>Trabajador artico</Spanish>
 		<Polish>Linia Promocji: Polarny Robotnik</Polish>
 		<Russian>Ïîëÿðíûé ðàáîòíèê</Russian>
 	</TEXT>
@@ -1769,7 +1768,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_POWER_SOURCE_UPGRADE</Tag>
 		<English>Power Source Upgrade Promotion Line</English>
-		<French>Spécialisation Source d'energie</French>
+		<French>Spécialisation Source d’énergie</French>
 		<Italian>Generatore di energia</Italian>
 		<Polish>Linia Promocji: Ulepszone Źródło Zasilania</Polish>
 		<Russian>Óëó÷øåííûé äâèãàòåëü</Russian>
@@ -1831,7 +1830,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_RAM_SMASH</Tag>
 		<English>Ram Smash Promotion Line</English>
-		<French>Spécialisation Ecrasement</French>
+		<French>Spécialisation Écrasement</French>
 		<Polish>Linia Promocji: Uderzenie Tarana</Polish>
 		<Russian>Òàðàí</Russian>
 	</TEXT>
@@ -1853,7 +1852,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_RAPID_DEPLOYMENT</Tag>
 		<English>Rapid Deployment Promotion Line</English>
-		<French>Spécialisation Deploiement rapide</French>
+		<French>Spécialisation Déploiement rapide</French>
 		<Italian>Dispiegamento rapido</Italian>
 		<Polish>Linia Promocji: Szybkie Rozmieszczenie</Polish>
 		<Russian>Áûñòðîå ðàçâåðòûâàíèå</Russian>
@@ -1913,7 +1912,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_REVOLUTIONARY</Tag>
 		<English>Revolutionary Promotion Line</English>
-		<French>Spécialisation Revolutionaire</French>
+		<French>Spécialisation Révolutionnaire</French>
 		<Italian>Rivoluzionario</Italian>
 		<Polish>Linia Promocji: Rewolucyjny</Polish>
 		<Russian>Ðåâîëþöèîíåð</Russian>
@@ -1999,7 +1998,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SECURITY</Tag>
 		<English>Security Promotion Line</English>
-		<French>Spécialisation Securité</French>
+		<French>Spécialisation Sécurité</French>
 		<Italian>Vigilanza</Italian>
 		<Polish>Linia Promocji: Bezpieczeństwo</Polish>
 		<Russian>Íàöèîíàëüíàÿ áåçîïàñíîñòü</Russian>
@@ -2194,7 +2193,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_STEALTH</Tag>
 		<English>Stealth Promotion Line</English>
-		<French>Spécialisation Furtivite</French>
+		<French>Spécialisation Furtivité</French>
 		<Italian>Stealth</Italian>
 		<Polish>Linia Promocji: Niewidzialność</Polish>
 		<Russian>Ñòåëñ-òåõíîëîãèÿ</Russian>
@@ -2279,7 +2278,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_TEST_EQUIPMENT</Tag>
 		<English>Test Equipment Promotion Line</English>
-		<French>Spécialisation Equipement de Test</French>
+		<French>Spécialisation Équipement de Test</French>
 		<Italian>Equipaggiamento prototipo</Italian>
 		<Polish>Linia Promocji: Testowy Ekwipunek</Polish>
 		<Russian>Òåñòîâîå ñíàðÿæåíèå</Russian>
@@ -18428,7 +18427,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UNYIELDING_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Unyielding value vs Knockback/Repel.</English>
-		<French>[ICON_BULLET]%D1_Change%% Inflexible contre l'Expulsion/Ecrasement.</French>
+		<French>[ICON_BULLET]%D1_Change%% Inflexible contre l'Expulsion/Écrasement.</French>
 		<Italian>[ICON_BULLET]%D1_Change%% al valore di Inflessibile contro sbaraglio/respinta.</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% Nieustępliwości przeciwko Odepchnięcia/Odrzutu.</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%% к Стойкости против Оглушения/Отражения.</Russian>
@@ -18559,7 +18558,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_VICTORY_HEAL_TEXT</Tag>
 		<English>[ICON_BULLET]+%d1%% Chance to Heal on Combat Victory</English>
-		<French>[ICON_BULLET]+%d1%% Chance pour Guerir en cas de Victoire</French>
+		<French>[ICON_BULLET]+%d1%% Chance pour guarir en cas de Victoire</French>
 		<German>[ICON_BULLET]+%d1%% Chance sich nach erfolgreichem Kampf zu heilen</German>
 		<Spanish>[ICON_BULLET]Probabilidad del %d1%% de curarse en cada victoria</Spanish>
 		<Polish>[ICON_BULLET]+%d1%% szansy na uleczenie po wygranej walce</Polish>
@@ -18921,7 +18920,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WEAROFF_TEXT</Tag>
 		<English>[ICON_BULLET]Wears off: Adds cumulative %D1_Change%% to Overcome each turn</English>
-		<French>[ICON_BULLET]Perturbé: Ajoute %D1_Change%% cumulable en supématie à chaque tour</French>
+		<French>[ICON_BULLET]Perturbé: Ajoute %D1_Change%% cumulable en suprématie à chaque tour</French>
 		<Italian>[ICON_BULLET]Affievolimento: le chance di Superamento aumentano di %D1_Change%% ogni turno</Italian>
 		<Polish>[ICON_BULLET]Słabość: Dodaje %D1_Change%% do wyleczenia w każdej turze</Polish>
 	</TEXT>
