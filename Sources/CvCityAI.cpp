@@ -10139,7 +10139,7 @@ bool CvCityAI::AI_removeWorstCitizen(SpecialistTypes eIgnoreSpecialist)
 
 void CvCityAI::AI_juggleCitizens()
 {
-	MEMORY_TRACK()
+	MEMORY_TRACK();
 
 	bool bAvoidGrowth = AI_avoidGrowth();
 	bool bIgnoreGrowth = AI_ignoreGrowth();
@@ -10522,7 +10522,7 @@ int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoi
 
 int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization)
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	const int iBaseProductionValue = 15;
 	const int iBaseCommerceValue[NUM_COMMERCE_TYPES] = {7,10,7,7};	//	Koshling - boost science a bit
@@ -14555,7 +14555,7 @@ void CvCityAI::AI_FlushBuildingValueCache(bool bRetainValues)
 
 void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	// KOSHLING optimisation - moved what we could outside of the building loop
 	const PlayerTypes ePlayer = getOwner();

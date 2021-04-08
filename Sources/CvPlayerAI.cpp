@@ -4260,7 +4260,7 @@ int CvPlayerAI::AI_goldTarget() const
 /************************************************************************************************/
 TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAsync, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor) const
 {
-	MEMORY_TRACK()
+	MEMORY_TRACK();
 
 	PROFILE("CvPlayerAI::AI_bestTech");
 
@@ -4593,7 +4593,7 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusCl
 
 		if (!bAsync)
 		{
-			MEMORY_TRACK_EXEMPT()
+			MEMORY_TRACK_EXEMPT();
 			m_cachedTechValues[eTech] = iValue;
 		}
 	}
@@ -4769,7 +4769,7 @@ TechTypes CvPlayerAI::findStartTech(techPath* path) const
 
 int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const
 {
-	MEMORY_TRACK()
+	MEMORY_TRACK();
 
 	PROFILE_FUNC();
 
@@ -5912,7 +5912,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bEnablesWonder ) const
 {
-	MEMORY_TRACK()
+	MEMORY_TRACK();
 
 	PROFILE_FUNC();
 
@@ -6302,7 +6302,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 
 int CvPlayerAI::AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnablesUnitWonder ) const
 {
-	MEMORY_TRACK()
+	MEMORY_TRACK();
 
 	bool bWarPlan = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
 	if (!bWarPlan)
@@ -13238,7 +13238,7 @@ int CvPlayerAI::AI_executiveValue(const CvArea* pArea, CorporationTypes eCorpora
 //Returns approximately 100 x gpt value of the corporation.
 int CvPlayerAI::AI_corporationValue(CorporationTypes eCorporation, const CvCity* pCity) const
 {
-	MEMORY_TRACK()
+	MEMORY_TRACK();
 
 	if (pCity == NULL)
 	{
@@ -22613,7 +22613,7 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold, bool bObsolete)
 
 int CvPlayerAI::AI_cultureVictoryTechValue(TechTypes eTech) const
 {
-	MEMORY_TRACK()
+	MEMORY_TRACK();
 
 	if (eTech == NO_TECH)
 	{
@@ -28361,7 +28361,7 @@ int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 //Slightly altered form of CvUnitAI::AI_promotionValue()
 int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, const CvUnit* pUnit, UnitAITypes eUnitAI, bool bForBuildUp) const
 {
-	MEMORY_TRACK()
+	MEMORY_TRACK();
 
 	int iTemp;
 	int iExtra;
@@ -33695,7 +33695,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 
 int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit, const CvUnit* pUnit, UnitAITypes eUnitAI) const
 {
-	MEMORY_TRACK()
+	MEMORY_TRACK();
 
 	int iValue;
 	int iTemp;

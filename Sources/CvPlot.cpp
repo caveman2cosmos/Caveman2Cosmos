@@ -4490,7 +4490,7 @@ CvCity* CvPlot::getAdjacentCity(PlayerTypes eplayer) const
 
 PlayerTypes CvPlot::calculateCulturalOwner() const
 {
-	PROFILE("CvPlot::calculateCulturalOwner()")
+	PROFILE("CvPlot::calculateCulturalOwner()");
 
 	CvCity* pLoopCity;
 	CvCity* pBestCity;
@@ -10629,7 +10629,7 @@ void CvPlot::setScriptData(const char* szNewValue)
 
 void CvPlot::doFeature()
 {
-	PROFILE("CvPlot::doFeature()")
+	PROFILE("CvPlot::doFeature()");
 
 	if (getFeatureType() != NO_FEATURE)
 	{
@@ -10720,7 +10720,7 @@ void CvPlot::doFeature()
 
 void CvPlot::doCulture()
 {
-	PROFILE("CvPlot::doCulture()")
+	PROFILE("CvPlot::doCulture()");
 
 	doImprovementCulture();
 

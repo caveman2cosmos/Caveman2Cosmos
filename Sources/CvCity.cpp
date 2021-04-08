@@ -2120,7 +2120,7 @@ int CvCity::findBaseYieldRateRank(YieldTypes eYield) const
 
 int CvCity::findYieldRateRank(YieldTypes eYield) const
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	if (!m_abYieldRankValid[eYield])
 	{
@@ -2764,7 +2764,7 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 
 		if (m_bCanConstruct == NULL)
 		{
-			MEMORY_TRACK_EXEMPT()
+			MEMORY_TRACK_EXEMPT();
 
 			m_bCanConstruct = new std::map<int, bool>();
 			bHaveCachedResult = false;
@@ -2795,11 +2795,11 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 		{
 			bResult = canConstructInternal(eBuilding, bContinue, bTestVisible, bIgnoreCost, bIgnoreAmount, NO_BUILDING, bIgnoreBuildings, eIgnoreTechReq, NULL, bAffliction, bExposed);
 			{
-				MEMORY_TRACK_EXEMPT() // Toffer - why are all these MEMORY_TRACK_EXEMPT in this function?
+				MEMORY_TRACK_EXEMPT(); // Toffer - why are all these MEMORY_TRACK_EXEMPT in this function?
 
 				if (m_bCanConstruct == NULL)
 				{
-					MEMORY_TRACK_EXEMPT()
+					MEMORY_TRACK_EXEMPT();
 
 					m_bCanConstruct = new std::map<int, bool>();
 				}
@@ -2815,7 +2815,7 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 
 bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreAmount, BuildingTypes withExtraBuilding, bool bIgnoreBuildings, TechTypes eIgnoreTechReq, int* probabilityEverConstructable, bool bAffliction, bool bExposed) const
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	if (probabilityEverConstructable != NULL)
 	{
