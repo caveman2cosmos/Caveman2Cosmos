@@ -1046,7 +1046,7 @@ void CvTeam::processBuilding(BuildingTypes eBuilding, int iChange, bool bReligio
 void CvTeam::doTurn()
 {
 	MEMORY_TRACE_FUNCTION();
-	PROFILE("CvTeam::doTurn()")
+	PROFILE("CvTeam::doTurn()");
 
 	FAssertMsg(isAlive(), "isAlive is expected to be true");
 
