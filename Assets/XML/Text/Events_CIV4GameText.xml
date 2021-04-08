@@ -1937,7 +1937,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_ACTIVITY_1_HELP</Tag>
-		<English>[ICON_BULLET]Recieve [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] relation hit with [COLOR_HIGHLIGHT_TEXT]all known leaders[COLOR_REVERT].</English>
+		<English>[ICON_BULLET]Receive [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] relation hit with [COLOR_HIGHLIGHT_TEXT]all known leaders[COLOR_REVERT].</English>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] en relation avec [COLOR_HIGHLIGHT_TEXT]tous les autres leaders[COLOR_REVERT].</French>
 		<Spanish>[ICON_BULLET]Recibes [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] en las relaciones con [COLOR_HIGHLIGHT_TEXT]todos los líderes conocidos[COLOR_REVERT].</Spanish>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] do relacji ze [COLOR_HIGHLIGHT_TEXT]wszystkimi przywódcami[COLOR_REVERT].</Polish>
@@ -2031,7 +2031,6 @@
 		<Italian>[ICON_BULLET]Adotterà automaticamente il [COLOR_BUILDING_TEXT]Barbarismo[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] alle relazioni con [COLOR_BUILDING_TEXT]tutti i leader conosciuti[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Tu principio cambiará automáticamente a la [COLOR_BUILDING_TEXT]Barbarie[COLOR_REVERT][NEWLINE][ICON_BULLET]Sufres [COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] en las relaciones con [COLOR_BUILDING_TEXT]todos los líderes conocidos[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET]Automatyczna zmiana doktryny na [COLOR_BUILDING_TEXT]Barbarzyństwo[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] do relacji ze [COLOR_BUILDING_TEXT]wszystkimi znanymi przywódcami[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET]Will automatically change to [COLOR_BUILDING_TEXT]Barbarism Civic[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] relation hit with [COLOR_BUILDING_TEXT]all known leaders[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_ATTEMPT_HELP_3</Tag>
@@ -2049,15 +2048,13 @@
 		<Italian>Non dovremmo avere dei cattivi rapporti con loro. Chiediamo loro scusa e facciamo in modo che sappiano che abbiamo cambiato atteggiamento.</Italian>
 		<Spanish>No nos conviene mantener malas relaciones con ellos. Pidámosle disculpas y hagámosle saber que cambiaremos nuestra actitud.</Spanish>
 		<Polish>Nie mam złych relacji z tym plemieniem. Wybaczmy w nadziei że się poprawią.</Polish>
-		<Russian>We should not have a bad relationship with them. Let's apologize to them and let them know we will change our attitude.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_ATTITUDE_1_HELP</Tag>
-		<English>[ICON_BULLET]Recieve [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] relation hit with [COLOR_HIGHLIGHT_TEXT]all known leaders[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]The Barbarian unit will return[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Receive [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] relation hit with [COLOR_HIGHLIGHT_TEXT]all known leaders[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]The Barbarian unit will return[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] en relation avec[COLOR_HIGHLIGHT_TEXT]tous les leaders[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]L'unité barbare se retire[COLOR_REVERT]</French>
 		<Spanish>[ICON_BULLET]Recibes [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] en las relaciones con [COLOR_HIGHLIGHT_TEXT]todos los líderes conocidos[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]La unidad bárbara volverá[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] do relacji ze wszystkimi [COLOR_HIGHLIGHT_TEXT]znanymi przywódcami[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Jednostka barbarzyńców powróci[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET]Recieve [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] relation hit with [COLOR_HIGHLIGHT_TEXT]all known leaders[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]The Barbarian unit will return[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_ATTITUDE_2</Tag>
@@ -2066,7 +2063,6 @@
 		<Italian>Quindi ci chiedono un cambiamento di atteggiamento? Continueremo così, invece. Non cambieremo solo perché loro ci chiedono di farlo.</Italian>
 		<Spanish>¿Dices que nos están exigiendo que cambiemos de actitud? Entonces sigamos con esto. No vamos a cambiar simplemente porque a ellos no les guste.</Spanish>
 		<Polish>Obiecali poprawę? Dobrze ale niech wiedzą że nam się to nie podoba.</Polish>
-		<Russian>You say they are demanding that we change our attitude? Go on with it. We won't change anything just because they don't like it.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_ATTITUDE_3</Tag>
@@ -5108,7 +5104,6 @@
 		<Italian>Preferisco non fidarmi degli estranei. Dì loro che non li accoglieremo.</Italian>
 		<Spanish>Prefiero no confiar en extraños. Decidles que no los acogeremos.</Spanish>
 		<Polish>Nie ufam nieznajomym. Powiedz by odeszli.</Polish>
-		<Russian>I prefer not to trust strangers. Tell them we won't receive them.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_IMMIGRANTS_ARRIVAL_2</Tag>
@@ -5116,7 +5111,6 @@
 		<Italian>Bene. Siamo sempre desiderosi di accogliere altre tribù.</Italian>
 		<Spanish>Bien. Siempre estamos dispuestos a acoger a otras tribus.</Spanish>
 		<Polish>Dobrze. Zawsze chętnie przyjmujemy nowych.</Polish>
-		<Russian>Good. We are always willing to let other tribes join us.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_IMMIGRANT_BETRAYER_HELP_1</Tag>
@@ -5124,7 +5118,6 @@
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Gli stranieri potrebbero pianificare di rubare il nostro oro.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Perdi la popolazione appena ricevuta.[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Los extraños podrían estar planeando el robo de nuestro tesoro.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Pierdes la población obtenida.[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Nieznajomi mogą planować kradzież naszego złota.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Ludność otrzymuje promocję.[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Strangers could be planning to steal our gold.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Loses the population bonus received.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_IMMIGRANT_BETRAYER_TAG</Tag>
@@ -5132,7 +5125,6 @@
 		<Italian>La tribù che abbiamo appena accolto ha rubato il nostro oro ed è scappata!</Italian>
 		<Spanish>¡Los miembros que recientemente se nos unieron han robado nuestro oro y han escapado de nuestra tribu!</Spanish>
 		<Polish>Ludzie, którzy właśnie dołączyli skradli nasze złoto i uciekli!</Polish>
-		<Russian>The tribespeople who have recently joined us have stolen our gold and escaped from our tribe!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_IMMOBILE_UNIT</Tag>

@@ -288,7 +288,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOLOG_EVENTS</Tag>
 		<English>Events:</English>
-		<French>Evènements:</French>
+		<French>Évènements:</French>
 		<German>Ereignisse:</German>
 		<Italian>Eventi:</Italian>
 		<Spanish>Eventos:</Spanish>
@@ -800,7 +800,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_REVDCM_INFO1</Tag>
 		<English>This options screen covers the basic RevolutionDCM options only.</English>
-		<French>Cet écran d'options présente uniqement les options de base de RevolutionDCM.</French>
+		<French>Cet écran d'options présente uniquement les options de base de RevolutionDCM.</French>
 		<Spanish>Esta lista de opciones solo incorpora la configuración básica de RevolutionDCM.</Spanish>
 		<Russian>Ýòîò ýêðàí îïöèé îõâàòûâàåò îñíîâíûå âàðèàíòû òîëüêî äëÿ ïëàãèíà RevolutionDCM.</Russian>
 	</TEXT>
@@ -966,7 +966,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_SCORES_DEAD_CIVS</Tag>
 		<English>Dead Civilizations:</English>
-		<French>Civilisations Eteintes:</French>
+		<French>Civilisations Éteintes:</French>
 		<German>Ausgelöschte Zivilisationen:</German>
 		<Italian>Civiltà scomparse:</Italian>
 		<Spanish>Civilizaciones eliminadas:</Spanish>
@@ -1152,7 +1152,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTTAB_CITYSCREEN</Tag>
 		<English>City Screen</English>
-		<French>Ecran des Villes</French>
+		<French>Écran des Villes</French>
 		<German>Stadt-Bildschirm</German>
 		<Italian>Città</Italian>
 		<Spanish>Vista de ciudad</Spanish>
@@ -1334,7 +1334,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWATTACKERHEALTHBARS_HOVER</Tag>
 		<English>Select when to show the probability bars of each possible ending health for the attacker.</English>
-		<French>Sélectionner dans quelle condition afficher les différentes barres de probabilité correpondantes à la santé de l'attaquant à l'issue du Combat.</French>
+		<French>Sélectionner dans quelle condition afficher les différentes barres de probabilité correspondantes à la santé de l'attaquant à l'issue du Combat.</French>
 		<German>Bestimmt, wann die Wahrscheinlichkeitsbalken für die jeweils erwartete Gesundheit des Angreifers nach dem Kampf angezeigt werden</German>
 		<Italian>Quando è selezionato, mostra le barre di probabilità per ogni valore finale di PV dell'attaccante.</Italian>
 		<Spanish>Indica cuándo mostrar las barras de probabilidad de cada posible salud final del atacante.</Spanish>
@@ -1431,7 +1431,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWDEFENDERINFO_HOVER</Tag>
 		<English>Select when to show the defending unit's information.</English>
-		<French>Sélectionner dans quelle condition afficher les informations de l'unité défendante.</French>
+		<French>Sélectionner dans quelle condition afficher les informations de l'unité défendant.</French>
 		<German>Bestimmt, wann die Informationen über die verteidigende Einheit angezeigt werden</German>
 		<Italian>Quando è selezionato, mostra le informazioni dell'unità in difesa.</Italian>
 		<Spanish>Indica cuándo mostrar la información sobre la unidad defensora.</Spanish>
@@ -1476,7 +1476,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWEXPERIENCERANGE_TEXT</Tag>
 		<English>XP Range</English>
-		<French>Etendue d'EXP</French>
+		<French>Étendue d'EXP</French>
 		<German>EP-Spanne</German>
 		<Italian>Intervallo XP</Italian>
 		<Spanish>Intervalo de PX</Spanish>
@@ -1701,13 +1701,13 @@
 		<French>Lorsque activé, affiche les échelles des graphiques sous forme Logarithmique.</French>
 		<German>Zeigt Diagramme in einer logarithmischen Darstellung an</German>
 		<Italian>Quando è selezionato, mostra i Grafici in scala logaritmica (su base 10).</Italian>
-		<Spanish>Cuando se activa, muestra los graficos en escala Log(10).</Spanish>
+		<Spanish>Cuando se activa, muestra los gráficos en escala Log(10).</Spanish>
 		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàåò ïîêàçûâàåìûå ãðàôèêè â ìàñøòàáå Log(10).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGGRAPHSLOGSCALE_TEXT</Tag>
 		<English>Graphs Log Scale</English>
-		<French>Echelle Log</French>
+		<French>Échelle logarithmique</French>
 		<German>Log-Skala</German>
 		<Italian>Scala logaritmica</Italian>
 		<Spanish>Escala logarítmica</Spanish>
@@ -1718,7 +1718,7 @@
 		<English>When checked, displays wonders on the BUG version of the Wonders tab using the owning player's color.</English>
 		<French>Lorsque activé, affiche les Merveilles en utilisant la couleur de joueur l'ayant construite (mode Onglet des Merveille de BUG).</French>
 		<German>Färbt die Wundernamen auf der von BUG veränderten Wunder-Seite in der Farbe des jeweiligen Spielers ein</German>
-		<Italian>Quando è selezionato, mostra le meraviglie nella versione migliorata del BUG Mod della Scheda delle Meraviglie, evidenzandole con il colore del giocatore.</Italian>
+		<Italian>Quando è selezionato, mostra le meraviglie nella versione migliorata del BUG Mod della Scheda delle Meraviglie, evidenziandole con il colore del giocatore.</Italian>
 		<Spanish>Cuando se activa, muestra las maravillas en la versión BUG de la pestaña de Maravillas usando el color del jugador que las posee.</Spanish>
 		<Russian>Êîãäà óñòàíîâëåí, ïîêàçûâàåò ÷óäåñà â âåðñèè BUG âêëàäêè ÷óäåñ èñïîëüçóÿ öâåò èãðîêà.</Russian>
 	</TEXT>
@@ -1733,7 +1733,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGMA_HOVER</Tag>
-		<English>When checked, uses the BUG Militiary Advisor (requires restart).</English>
+		<English>When checked, uses the BUG Military Advisor (requires restart).</English>
 		<French>Lorsque activé, utilise le Conseiller Militaire BUG (nécessite le redémarrage du Jeu).</French>
 		<German>Aktiviert den verbesserten Militärberater der BUG Mod (erfordert Neustart)</German>
 		<Italian>Quando è selezionato, utilizza il Consigliere Militare del BUG Mod (è richiesto un riavvio perché il cambiamento abbia effetto).</Italian>
@@ -1745,14 +1745,14 @@
 		<English>BUG Military Advisor</English>
 		<French>Conseiller Militaire BUG</French>
 		<German>BUG Militärberater</German>
-		<Italian>Evoluto</Italian>
+		<Italian>Consigliere militare BUG</Italian>
 		<Spanish>Consejero Militar BUG</Spanish>
 		<Russian>BUG Âîåííûé ñîâåòíèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGMEMBERSTAB_HOVER</Tag>
 		<English>When checked, displays extra information on the Members tab.</English>
-		<French>Lorsque activé, affiche des informations supplémentaire sur l'onglet 'Membres' de l'Ecran des Conditions de Victoire.</French>
+		<French>Lorsque activé, affiche des informations supplémentaire sur l'onglet 'Membres' de l'Écran des Conditions de Victoire.</French>
 		<German>Zeigt zusätzliche Informationen auf der entsprechenden Seite des Sieg-Bildschirms an</German>
 		<Italian>Quando è selezionato, mostra informazioni aggiuntive nella Scheda dei Membri della Schermata Condizioni di Vittoria.</Italian>
 		<Spanish>Cuando se activa, muestra información adicional en la pestaña de Miembros.</Spanish>
@@ -1806,7 +1806,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGVICTORIESTAB_HOVER</Tag>
 		<English>When checked, displays extra information on the Victories tab.</English>
-		<French>Lorsque activé, affiche des informations supplémentaires sur l'Ecran des Conditions de Victoire.</French>
+		<French>Lorsque activé, affiche des informations supplémentaires sur l'Écran des Conditions de Victoire.</French>
 		<German>Zeigt zusätzliche Informationen auf der entsprechenden Seite des Sieg-Bildschirms an</German>
 		<Italian>Quando è selezionato, mostra informazioni aggiuntive nella Scheda delle Vittorie della Schermata Condizioni di Vittoria.</Italian>
 		<Spanish>Cuando se activa, muestra información adicional en la pestaña de Victoria.</Spanish>
@@ -1815,7 +1815,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGVICTORIESTAB_TEXT</Tag>
 		<English>Victories tab</English>
-		<French>Ecran Victoires</French>
+		<French>Écran Victoires</French>
 		<German>BUG Siegbedingungen</German>
 		<Italian>Scheda Vittorie</Italian>
 		<Spanish>Pestaña de Victoria</Spanish>
@@ -1868,7 +1868,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__EFAGLANCETAB_HOVER</Tag>
 		<English>When checked, displays the 'Glance' tab on the Exotic Foreign Advisor screen.</English>
-		<French>Lorsque activé, affiche un onglet 'Aperçu' sur l'écran du Conseiller des Relations Etrangères.</French>
+		<French>Lorsque activé, affiche un onglet 'Aperçu' sur l'écran du Conseiller des Relations Étrangères.</French>
 		<German>Zeigt einen zusätzlichen Kurzüberblick im Bildschirm des Auslandsberaters an</German>
 		<Italian>Quando è selezionato, visualizza la tabella "Occhiata" nella schermata del Consigliere Estero (utilizzando l'Exotic Foreign Advisor Mod).</Italian>
 		<Spanish>Cuando se activa, muestra la pestaña "Mirar" en la pantalla del Consejero de Exteriores exótico.</Spanish>
@@ -1886,7 +1886,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__EFAIMPROVEDINFO_HOVER</Tag>
 		<English>When checked, uses improved Foreign Advisor 'Info' tab instead of default.</English>
-		<French>Lorsque activé, utilise l'onglet 'Info' de BUG pour le Conseiller des Relations Etrangères en remplacement de l'écran par défaut.</French>
+		<French>Lorsque activé, utilise l'onglet 'Info' de BUG pour le Conseiller des Relations Étrangères en remplacement de l'écran par défaut.</French>
 		<German>Zeigt die Informationen auf der entsprechenden Seite des Auslandsberaters übersichtlicher an</German>
 		<Italian>Quando è selezionato, utilizza la versione migliorata della scheda Informazioni del Consigliere Estero al posto di quella standard.</Italian>
 		<Spanish>Cuando se activa, utiliza una versión mejorada de la pestaña "Info" del Consejero de Exteriores, en lugar de la normal.</Spanish>
@@ -1994,7 +1994,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__WIDETECHSCREEN_TEXT</Tag>
 		<English>Widescreen</English>
-		<French>Ecran Large</French>
+		<French>Écran Large</French>
 		<German>Breitbild</German>
 		<Italian>Schermo ampio</Italian>
 		<Spanish>Pantalla completa</Spanish>
@@ -2272,7 +2272,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGCITYOWNER_HOVER</Tag>
 		<English>When checked, will log when you acquire or lose a city through conquest or trade.</English>
-		<French>Lorsque activé, l'aquisition ou la perte d'une ville par la conquête ou le commerce sera noté dans le log.</French>
+		<French>Lorsque activé, l'acquisition ou la perte d'une ville par la conquête ou le commerce sera noté dans le log.</French>
 		<German>Protokolliert den Erwerb oder Verlust von Städten durch Eroberung oder Verhandlung</German>
 		<Italian>Quando è selezionato, il Registro Automatico registra quando acquisisci una città mediante conquista o diplomazia.</Italian>
 		<Spanish>Cuando se activa, se grabará en el registro la pérdida o la toma de posesión de una ciudad a través de una conquista o un intercambio.</Spanish>
@@ -2904,7 +2904,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AVOIDBARBARIANCITIES_TEXT</Tag>
 		<English>Avoid Barbarian Cities</English>
-		<French>Eviter les Villes Barbares</French>
+		<French>Éviter les Villes Barbares</French>
 		<German>Barbarenstädte umgehen</German>
 		<Spanish>Evitar ciudades bárbaras</Spanish>
 		<Russian>Èçáåãàòü âàðâ. ãîðîäîâ</Russian>
@@ -2960,7 +2960,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAIRAUTOMATIONS_HOVER</Tag>
 		<English>Hides the Automate Air Strike and Automate Air Bomb icons from the unit interface.</English>
-		<French>Masque l'icone des Opérations Aériennes automatisées de la liste des actions des unités.</French>
+		<French>Masque l’icône des Opérations Aériennes automatisées de la liste des actions des unités.</French>
 		<German>Die Auto-Luftschlag- und Auto-Bombardierungs-Icons werden im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta los botones de "Ataque aéreo automatizado" y "Bombardeo aéreo automatizado" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò ëþáûå äåéñòâèÿ ñâÿçàííûå ñ àâòî-âîçä. íàëåòîì è àâòî-áîìáàðäèðîâêîé â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -2976,7 +2976,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOCARAVAN_HOVER</Tag>
 		<English>Hides the Automate Caravan icon from the unit interface.</English>
-		<French>Masque l'icone des Caravanes automatisées de la liste des actions des unités.</French>
+		<French>Masque l’icône des Caravanes automatisées de la liste des actions des unités.</French>
 		<German>Das Auto-Transport-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Caravana automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò äåéñòâèå àâòî-êîíâîèðîâàíèÿ â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -2992,7 +2992,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOEXPLORE_HOVER</Tag>
 		<English>Hides the Automate Explore icon from the unit interface.</English>
-		<French>Masque l'icone de l'exploration automatisée de la liste des actions des unités.</French>
+		<French>Masque l’icône de l'exploration automatisée de la liste des actions des unités.</French>
 		<German>Das Auto-Erkundungs-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Explorar (automatizado)" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûòü äåéñòâèå àâòî-ðàçâåäêè â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -3008,7 +3008,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOMATEDEFENSE_HOVER</Tag>
 		<English>Hides the Automate City Defense icon from the unit interface.</English>
-		<French>Masque l'icone de Défense automatisée de la liste des actions des unités.</French>
+		<French>Masque l’icône de Défense automatisée de la liste des actions des unités.</French>
 		<German>Das Auto-Stadtverteidigungs-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Defensa de ciudad automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò àâòî-çàùèòó ãîðîäà èç ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -3024,7 +3024,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOMATEHUNT_HOVER</Tag>
 		<English>Hides the Automate Hunt icon from the unit interface.</English>
-		<French>Masque l'icone de Traque automatisée de la liste des actions des unités.</French>
+		<French>Masque l’icône de Traque automatisée de la liste des actions des unités.</French>
 		<German>Das Auto-Jagd-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Caza automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûòü àâòî-îõîòó èç ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -3040,7 +3040,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOMATEPATROL_HOVER</Tag>
 		<English>Hides the Automate Patrol icon from the unit interface.</English>
-		<French>Masque l'icone de patrouille automatisée de la liste des actions des unités.</French>
+		<French>Masque l’icône de patrouille automatisée de la liste des actions des unités.</French>
 		<German>Das Auto-Patrouille-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Patrulla automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûòü àâòî-ïàòðóëèðîâàíèå èç ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -3056,7 +3056,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOMATEPILLAGE_HOVER</Tag>
 		<English>Hides the Automate Pillage icon from the unit interface.</English>
-		<French>Masque l'icone de Pillage automatisé de la liste des actions des unités.</French>
+		<French>Masque l’icône de Pillage automatisé de la liste des actions des unités.</French>
 		<German>Das Auto-Plündern-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Saqueo automatizado" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûòü àâòî-ãðàáåæ íà ïàíåëè äåéñòâèé äëÿ þíèòîâ.</Russian>
@@ -3072,7 +3072,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOPIRATE_HOVER</Tag>
 		<English>Hides the Automate Pirate icon from the unit interface.</English>
-		<French>Masque l'icone de piratage automatisé de la liste des actions des unités.</French>
+		<French>Masque l’icône de piratage automatisé de la liste des actions des unités.</French>
 		<German>Das Auto-Piraterie-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Piratería automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûòü äåéñòâèÿ, ñâÿçàííûå ñ àâòî-ïèðàòñòâîì è ãðàáåæîì ìîðñêèõ óëó÷øåíèé â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -3088,7 +3088,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOPROMOTE_HOVER</Tag>
 		<English>Hides the Automate Promote icon from the unit interface.</English>
-		<French>Masquer l'icone de Promotion automatisée de la liste des Actions des unités.</French>
+		<French>Masquer l’icône de Promotion automatisée de la liste des Actions des unités.</French>
 		<German>Das Auto-Beförderungs-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Ascenso automatizado" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò äåéñòâèÿ ïî àâòî-àïãðåéäó êâàëèôèêàöèé â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -3104,7 +3104,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOPROTECT_HOVER</Tag>
 		<English>Hides the Automate Protect icon from the unit interface.</English>
-		<French>Masque l'icone de Protection automatisée de la liste des actions des unités.</French>
+		<French>Masque l’icône de Protection automatisée de la liste des actions des unités.</French>
 		<German>Das Auto-Verteidigungs-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Protección automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò äåéñòâèå àâòî-îáîðîíû â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -3119,8 +3119,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOSPREAD_HOVER</Tag>
-		<English>Hides the Automate Missionary and Automate Corporation Spead icons from the unit interface.</English>
-		<French>Masque l'icone de la Propagation automatisée de la liste des actions des unités.</French>
+		<English>Hides the Automate Missionary and Automate Corporation Spread icons from the unit interface.</English>
+		<French>Masque l’icône de la Propagation automatisée de la liste des actions des unités.</French>
 		<German>Die Auto-Missionierungs- und Auto-Expandierungs-Icons werden im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta los botones de "Expandir religión (automatizado)" y "Expandir corporación (automatizado)" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò ëþáûå äåéñòâèÿ â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ, çàòðàãèâàþùèå àâòî-ðàñïðîñòðàíåíèå ðåëèãèé ìèññèîíåðàìè, ëèáî àâòî-îñíîâàíèå îôèñîâ êîðïîðàöèé èõ ìåíåäæåðàìè è àãåíòàìè.</Russian>
@@ -3136,7 +3136,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOUPGRADE_HOVER</Tag>
 		<English>Hides the Automate Upgrade icon from the unit interface.</English>
-		<French>Masque l'icone d'amélioration automatisé de la liste des actions des unités.</French>
+		<French>Masque l’icône d'amélioration automatisé de la liste des actions des unités.</French>
 		<German>Das Auto-Upgrade-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Mejora automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò äåéñòâèå àâòî-àïãðåéäà óñòàðåâøèõ îòðÿäîâ äî íîâûõ â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -3232,7 +3232,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__SHOWCITYAUTOMATIONS_HOVER</Tag>
 		<English>Shows the worker automation settings for individual settings. Close and reopen the menu to see the changes take affect.</English>
-		<French>Affiche les paramètres individuels d'automatisation pour les Ouvriers. Fermer et réouvrir le menu pour voir les changements.</French>
+		<French>Affiche les paramètres individuels d'automatisation pour les Ouvriers. Fermer et ré-ouvrir le menu pour voir les changements.</French>
 		<German>Zeigt die individuellen Bautruppeinstellungen an. Das Menü muss nach dem Aktivieren dieser Einstellungen geschlossen und neu geöffnet werden.</German>
 		<Spanish>Mostrar la configuración de Trabajador automatizado para configurar individualmente. Cierra y vuelve a abrir este menú para que los cambios surtan efecto.</Spanish>
 		<Russian>Ïîêàçûâàåò äåéñòâóþùèå àâòî-îïöèè äëÿ ñîáñòâåííûõ íàñòðîåê. ×òîáû èçìåíåíèÿ âñòóïèëè â ñèëó, ñíà÷àëà çàêðîéòå, à çàòåì ñíîâà îòêðîéòå ìåíþ.</Russian>
@@ -3333,7 +3333,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__AIRPORTICONS_TEXT</Tag>
 		<English>Airport Icons</English>
-		<French>Icones d'Aéroport</French>
+		<French>Icônes d'Aéroport</French>
 		<German>Flughafen-Symbol</German>
 		<Italian>Icone Aeroporto</Italian>
 		<Spanish>Iconos de aeropuerto</Spanish>
@@ -3392,7 +3392,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__BUILDINGICONS_HOVER</Tag>
 		<English>When checked, the list of buildings is shown using icons instead of their names.</English>
-		<French>Lorsque activé, la Liste des Bâtiments est affichée sous forme d'icones à la place de leur noms.</French>
+		<French>Lorsque activé, la Liste des Bâtiments est affichée sous forme d'icônes à la place de leur noms.</French>
 		<German>Zeigt die Liste der Gebäude mit Symbolen statt Text an</German>
 		<Italian>Quando è selezionato, la lista degli edifici viene visualizzata con le rispettive icone invece dei nomi.</Italian>
 		<Spanish>Cuando se activa, se muestra la lista de edificios mediante el uso de iconos en lugar de sus nombres.</Spanish>
@@ -3401,7 +3401,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__BUILDINGICONS_TEXT</Tag>
 		<English>Building Icons</English>
-		<French>Icones pour les bâtiments</French>
+		<French>Icônes pour les bâtiments</French>
 		<German>Gebäude-Symbole</German>
 		<Italian>Icone di edifici</Italian>
 		<Spanish>Iconos de edificio</Spanish>
@@ -4556,7 +4556,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CUSTDOMADV__PRODUCTIONGROUPING_HOVER</Tag>
 		<English>Select grouping options for the production list on the Customizable Domestic Advisor screen:[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]None[COLOR_REVERT] - No special grouping.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Icons[COLOR_REVERT] - Production items prefaced by icons denoting the type of item which keeps them grouped together when sorting.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Colors[COLOR_REVERT] - Production items colored based on the type of item.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Both[COLOR_REVERT] - Production items prefaced by icons and colored based on the type of item.</English>
-		<French>Sélectionne les options de regroupement pour la liste de production de l'écran du Conseiller 'CDA':[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Aucun[COLOR_REVERT] - Pas de regroupement.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Icones[COLOR_REVERT] - Les noms des productions sont précédés d'icones symbolisant leur type, permettant ainsi un tri par type de production.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Couleurs[COLOR_REVERT] - Les productions sont mis en valeur par des couleurs symbolisant le type de production.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Les deux[COLOR_REVERT] - Les Productions sont précédés d'icones de type, et sont mis en valeurs par des couleurs spécifiquesen fonction du type de production.</French>
+		<French>Sélectionne les options de regroupement pour la liste de production de l'écran du Conseiller 'CDA':[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Aucun[COLOR_REVERT] - Pas de regroupement.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Icônes[COLOR_REVERT] - Les noms des productions sont précédés d'icônes symbolisant leur type, permettant ainsi un tri par type de production.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Couleurs[COLOR_REVERT] - Les productions sont mis en valeur par des couleurs symbolisant le type de production.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Les deux[COLOR_REVERT] - Les Productions sont précédés d'icônes de type, et sont mis en valeurs par des couleurs spécifiquement pour fonction du type de production.</French>
 		<German>Bestimmt die Gruppierungseinstellungen für die Spalte "Produktion" im "Customizable Domestic Advisor" (CDA):[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Keine[COLOR_REVERT] - Keine besondere Gruppierung[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Symbole[COLOR_REVERT] - Produzierte Objekte erhalten entsprechend ihrer Art vorangestellte Symbole, wobei die Gruppierung auch nach einer Sortierung erhalten bleibt[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Farben[COLOR_REVERT] - Produzierte Objekte werden entsprechend ihrer Art eingefärbt[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Beides[COLOR_REVERT] - Produzierte Objekte erhalten entsprechend ihrer Art vorangestellte Symbole und werden gleichzeitig eingefärbt</German>
 		<Italian>Seleziona l'opzione di raggruppamento per la lista di produzione nella schermata del Consigliere Interno Personalizzabile (CDA):[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Nulla[COLOR_REVERT] - Nessun raggruppamento.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Icone[COLOR_REVERT] - Gli oggetti in produzione vengono preceduti da icone che mostrano il tipo di oggetto e mantengono insieme gli oggetti dello stesso tipo quando il Pannello del Punteggio viene ordinato in base a questo parametro.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Colori[COLOR_REVERT] - Il nome degli oggetti in produzione viene colorato in base al tipo di oggetto.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Entrambi[COLOR_REVERT] - Il nome degli oggetti in produzione viene colorato in base al tipo dell'oggetto e preceduto da una icona opportuna.</Italian>
 		<Spanish>Escoge las opciones de agrupación de la lista de producción de la Vista del Consejero de Interior personalizable:[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Ninguno[COLOR_REVERT] - Sin agrupación especial.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Iconos[COLOR_REVERT] - Los elementos de producción van precedidos de los iconos que denotan el tipo de elemento que los mantiene agrupados al ordenar.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Colores[COLOR_REVERT] - Los elementos de producción están coloreados basándose en el tipo de producción.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Ambos[COLOR_REVERT] - Los elementos de producción van precedidos por iconos y están coloreados en base al tipo de elemento.</Spanish>
@@ -4565,7 +4565,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CUSTDOMADV__PRODUCTIONGROUPING_LIST</Tag>
 		<English>None|Icons|Colors|Both</English>
-		<French>Aucun|Icones|Couleurs|Les deux</French>
+		<French>Aucun|Icônes|Couleurs|Les deux</French>
 		<German>Keine|Symbole|Farben|Beides</German>
 		<Italian>Nulla|Icone|Colori|Entrambi</Italian>
 		<Spanish>Ninguno|Iconos|Colores|Ambos</Spanish>
@@ -4582,7 +4582,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_DIPLOMACYSETTINGS__ADVANCEDDIPLOMACY_HOVER</Tag>
-		<English>Enables or Disables the Advanced Diplomacy Gameoption, which allows embassies, right of passages, worker and military unit trading, and a more diplomacy options.</English>
+		<English>Enables or Disables the Advanced Diplomacy Game option, which allows embassies, right of passages, worker and military unit trading, and a more diplomacy options.</English>
 		<French>Active ou désactive l'option Diplomatie avancée, qui permet les ambassades, droits de passage, l'échange d'unité militaire et ouvrières...</French>
 		<German>Aktiviert oder deaktiviert die Verbesserte Diplomatie, über die der Bau von Botschaften, das Vergeben einer Durchreiseerlaubnis, der Handel mit Bautrupps und Militäreinheiten und weitere diplomatische Möglichkeiten gegeben werden.</German>
 		<Italian>Attiva o disattiva l'opzione Diplomazia avanzata, che permette ambasciate, diritti di passaggio,commercio di lavoratori e unità militari, e altre opzioni diplomatiche.</Italian>
@@ -4801,7 +4801,7 @@
 		<English>Players Can Establish Right of Passage with other nations</English>
 		<French>Les Joueurs peuvent établir un Droit de passage avec les autres nations</French>
 		<German>Spieler können anderen Nationen eine Durchreiseerlaubnis erteilen.</German>
-		<Italian>Può satbilire un Diritto di passaggio con anazioni straniere</Italian>
+		<Italian>Può stabilire un Diritto di passaggio con nazioni straniere</Italian>
 		<Spanish>Los jugadores pueden establecer acuerdos de derecho de paso.</Spanish>
 		<Russian>Èãðîêè ìîãóò ïðåäîñòàâëÿòü ïðàâî ïðîõîäà.</Russian>
 	</TEXT>
@@ -4999,7 +4999,7 @@
 		<English>When checked, places signs on plots whose yields have changed because of random events.</English>
 		<French>Lorsque sÉlectionnÉ, place un panneau Â l'emplacement de modifications liÉes Â un Événement alÉatoire.</French>
 		<German>Markiert Geländefelder, deren Erträge sich durch zufällige Ereignisse verändert haben, auf der Karte mit einem Hinweis</German>
-		<Italian>Quando è selezionato, le caselle che hanno avuto la propria resa produttiva modificata da un evento casuale vengono marcate sulla mappa con una indicazionedom di tale modifica.</Italian>
+		<Italian>Quando è selezionato, le caselle che hanno avuto la propria resa produttiva modificata da un evento casuale vengono marcate sulla mappa con una indicazione di tale modifica.</Italian>
 		<Spanish>Cuando se activa, coloca marcas en las casillas cuyo rendimiento haya sido modificado debido a un evento aleatorio.</Spanish>
 		<Russian>Êîãäà óñòàíîâëåí, ðàçìåùàåò çíàêè íà ó÷àñòêå ÷üÿ âûðàáîòêà èçìåíèëàñü èç-çà ñëó÷àéíûõ ñîáûòèé.</Russian>
 	</TEXT>
@@ -5090,7 +5090,7 @@
 		<English>Remember Field of View</English>
 		<French>Sauvegarde du Champ de Vision</French>
 		<German>Sichtfeld-Einstellung merken</German>
-		<Italian>Conseva il Campo visuale</Italian>
+		<Italian>Conserva il Campo visuale</Italian>
 		<Spanish>Recordar Campo de visión</Spanish>
 		<Russian>Çàïîìèíàòü âèäèìóþ îáëàñòü</Russian>
 	</TEXT>
@@ -5115,7 +5115,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__GPBAR_TYPES_HOVER</Tag>
 		<English>Determines how many GP types to display in the GP Progress Bar. The [COLOR_HIGHLIGHT_TEXT]Max[COLOR_REVERT] setting also displays the percent chance for each.</English>
-		<French>Détermine combien de types de Personnages Illustres (PI) doivent être montrés dans la Barre de Progresssion. L'Option [COLOR_HIGHLIGHT_TEXT]Maximum[COLOR_REVERT] affiche également les probabilités de chaque type.</French>
+		<French>Détermine combien de types de Personnages Illustres (PI) doivent être montrés dans la Barre de Progression. L'Option [COLOR_HIGHLIGHT_TEXT]Maximum[COLOR_REVERT] affiche également les probabilités de chaque type.</French>
 		<German>Bestimmt die Anzahl der Typen von Großen Persönlichkeiten, die im Fortschrittsbalken angezeigt werden (die Einstellung [COLOR_HIGHLIGHT_TEXT]Maximal[COLOR_REVERT] zeigt zusätzlich die prozentuale Chance für jede einzelne an)</German>
 		<Italian>Determina quanti tipi di Grandi Personaggi devono essere mostrati nella Barra dei Grandi Personaggi. L'impostazione [COLOR_HIGHLIGHT_TEXT]Massimo[COLOR_REVERT] mostra anche la possibilità percentuale di ognuna.</Italian>
 		<Spanish>Determina cuántos tipos de GP se mostrarán en la barra de progreso de GP. La opción [COLOR_HIGHLIGHT_TEXT]Máximo[COLOR_REVERT] también muestra el porcentaje para cada uno.</Spanish>
@@ -5178,7 +5178,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__UNITICONSIZE_TEXT</Tag>
 		<English>Action Icon Size</English>
-		<French>Taille des Icones d'action</French>
+		<French>Taille des Icônes d'action</French>
 		<German>Größe der Befehlssymbole</German>
 		<Spanish>Tamaño de iconos de Acción</Spanish>
 		<Russian>Размер значка действия</Russian>
@@ -5203,7 +5203,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__USEAIPATHING_HOVER</Tag>
-		<English>When checked, human units will follow AI-weighted paths to their specifid destinations.</English>
+		<English>When checked, human units will follow AI-weighted paths to their specific destinations.</English>
 		<French>Lorsque activé, les Unités du joueurs utilisent le système de Pathfinder de l'IA.</French>
 		<Spanish>Cuando se activa, las unidades del jugador humano seguirán trayectorias usadas por la IA para llegar al destino especificado.</Spanish>
 		<Russian>Ïðè âêëþ÷åíèè îòðÿäû èãðîêà áóäóò ñëåäîâàòü îïòèìàëüíûì ìàðøðóòàì ÈÈ èõ ñïåöèôè÷åñêèì íàïðàâëåíèÿì.</Russian>
@@ -5303,7 +5303,7 @@
 		<English>Resource Trade Denial</English>
 		<French>Refus d'échange de Ressources</French>
 		<German>Verweigerung von Ressourcen</German>
-		<Italian>Rifiuto di commercio di Risosre</Italian>
+		<Italian>Rifiuto di commercio di Risorse</Italian>
 		<Spanish>Rechazo a comerciar recurso</Spanish>
 		<Russian>Îòêàç òîðãîâëè ðåñóðñàìè</Russian>
 	</TEXT>
@@ -6811,7 +6811,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BASEREINFORCEMENTTURNS_HOVER</Tag>
-		<English>Average number of turns that pass before rebellions recieve reinforcements</English>
+		<English>Average number of turns that pass before rebellions receive reinforcements</English>
 		<Spanish>Número medio de turnos que pasarán antes de que las rebeliones reciban refuerzos.</Spanish>
 		<Russian>Ñðåäíåå ÷èñëî õîäîâ, ìåæäó êîòîðûìè ïîâòàíöû ìîãóò ïîëó÷àòü ïîäêðåïëåíèÿ.</Russian>
 	</TEXT>
@@ -7787,7 +7787,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IGNOREDISABLEDBUILDINGALERTS_HOVER</Tag>
-		<English>When resources, civics, or other factors cause a building to be disabled in one of your cities, you will not recieve a notification of the event.</English>
+		<English>When resources, civics, or other factors cause a building to be disabled in one of your cities, you will not receive a notification of the event.</English>
 		<German>Wenn Gebäude aufgrund fehlender Ressourcen, durch eine gewählte Gesellschaftsform oder durch andere Faktoren abgeschaltet werden, wird keine Hinweismeldung mehr angezeigt.</German>
 		<Italian>Quando le risorse, le forme di governo o altri fattori disabilitano un edificio in una delle tue città, non riceverai una notifica dell'evento.</Italian>
 		<Spanish>Cuando recursos, principios u otros factores hagan que un edificio deje de funcionar en una de tus ciudades, no recibirás una notificación del evento.</Spanish>
