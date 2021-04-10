@@ -36975,7 +36975,7 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 							strHelp.clear();
 							if (pShadowUnit != NULL)
 							{
-								const int iValidShadowUnits = algo::count_if(pMouseOverPlot->units(), bind(CvUnit::canShadowAt, _1, pMouseOverPlot, _1));
+								const int iValidShadowUnits = algo::count_if(pMouseOverPlot->units(), bind(CvUnit::canShadowAt, pHeadSelectedUnit, pMouseOverPlot, _1));
 								if (iValidShadowUnits == 0)
 								{
 									bool bFirst = true;
