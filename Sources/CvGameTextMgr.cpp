@@ -8336,16 +8336,9 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			if (bShift && !bAlt && pPlot->headUnitNode() == NULL)
 			{
 				const int iBonusClasses = GC.getNumBonusClassInfos();
-				int* paiBonusClassRevealed = new int[iBonusClasses];
-				int* paiBonusClassUnrevealed = new int[iBonusClasses];
-				int* paiBonusClassHave = new int[iBonusClasses];
-
-				for (int iI = 0; iI < iBonusClasses; iI++)
-				{
-					paiBonusClassRevealed[iI] = 0;
-					paiBonusClassUnrevealed[iI] = 0;
-					paiBonusClassHave[iI] = 0;
-				}
+				std::vector<int> paiBonusClassRevealed(iBonusClasses, 0);
+				std::vector<int> paiBonusClassUnrevealed(iBonusClasses, 0);
+				std::vector<int> paiBonusClassHave(iBonusClasses, 0);
 
 				for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 				{
