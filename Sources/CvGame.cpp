@@ -2203,7 +2203,6 @@ int CvGame::getTeamClosenessScore(int** aaiDistances, int* aiStartingLocs)
 
 void CvGame::update()
 {
-	MEMORY_TRACE_FUNCTION();
 
 #ifdef LOG_AI
 	gPlayerLogLevel = getBugOptionINT("Autolog__BBAILevel", 0);
@@ -2386,7 +2385,6 @@ void CvGame::updateScore(bool bForce)
 {
 	PROFILE_FUNC();
 
-	MEMORY_TRACE_FUNCTION();
 
 	bool abPlayerScored[MAX_PC_PLAYERS];
 	bool abTeamScored[MAX_PC_TEAMS];
@@ -5466,7 +5464,6 @@ void CvGame::makeSpecialBuildingValid(SpecialBuildingTypes eIndex, bool bAnnounc
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 				{
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(
 						(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_SPECIAL_BUILDING_VALID", GC.getSpecialBuildingInfo(eIndex).getTextKeyWide()),
@@ -5558,7 +5555,6 @@ void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAn
 				{
 					if (pHolyCity->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 					{
-						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME_LONG(),
 							gDLL->getText(
@@ -5572,7 +5568,6 @@ void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAn
 					}
 					else
 					{
-						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME_LONG(),
 							gDLL->getText(
@@ -5686,7 +5681,6 @@ void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bA
 					{
 						if (pHeadquarters->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 						{
-							MEMORY_TRACK_EXEMPT();
 							AddDLLMessage(
 								(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME_LONG(),
 								szBuffer, GC.getCorporationInfo(eIndex).getSound(),
@@ -5696,7 +5690,6 @@ void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bA
 						}
 						else
 						{
-							MEMORY_TRACK_EXEMPT();
 							AddDLLMessage(
 								(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME_LONG(),
 								gDLL->getText("TXT_KEY_MISC_CORPORATION_FOUNDED_UNKNOWN", GC.getCorporationInfo(eIndex).getTextKeyWide()),
@@ -5826,7 +5819,6 @@ void CvGame::addGreatPersonBornName(const CvWString& szName)
 
 void CvGame::doTurn()
 {
-	MEMORY_TRACE_FUNCTION();
 	PROFILE_BEGIN("CvGame::doTurn()");
 
 	// END OF TURN
@@ -5992,7 +5984,6 @@ void CvGame::doTurn()
 
 void CvGame::doDeals()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	verifyDeals();
 
@@ -6209,7 +6200,6 @@ namespace Game {
 
 void CvGame::doSpawns(PlayerTypes ePlayer)
 {
-	MEMORY_TRACE_FUNCTION();
 	PROFILE_FUNC();
 
 	std::vector<std::vector<CvPlot*> > validPlots;
@@ -6515,7 +6505,6 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 #ifdef GLOBAL_WARMING
 void CvGame::doGlobalWarming()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	// Loop to look for environmentalism written by EmperorFool
 	bool abTreeHugger[MAX_PC_PLAYERS];
@@ -6706,7 +6695,6 @@ void CvGame::doGlobalWarming()
 
 				if (pCity != NULL && pPlot->isVisible(pCity->getTeam(), false))
 				{
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(
 						pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_MISC_GLOBAL_WARMING_NEAR_CITY", pCity->getNameKey()),
@@ -6769,7 +6757,6 @@ void CvGame::doGlobalWarming()
 
 				if (pCity != NULL && pPlot->isVisible(pCity->getTeam(), false))
 				{
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(
 						pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_MISC_NUCLEAR_WINTER_NEAR_CITY", pCity->getNameKey()),
@@ -6786,7 +6773,6 @@ void CvGame::doGlobalWarming()
 
 void CvGame::doHeadquarters()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (Cy::call_optional(PYGameModule, "doHeadquarters"))
 	{
@@ -6886,7 +6872,6 @@ void CvGame::doHeadquarters()
 
 void CvGame::doDiploVote()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	doVoteResults();
 	doVoteSelection();
@@ -6895,7 +6880,6 @@ void CvGame::doDiploVote()
 
 void CvGame::createBarbarianCities(bool bNeanderthal)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (
 		getMaxCityElimination() > 0
@@ -7146,7 +7130,6 @@ namespace {
 
 void CvGame::createBarbarianUnits()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (Cy::call<bool>(PYGameModule, "createBarbarianUnits"))
 	{
@@ -7286,7 +7269,6 @@ void CvGame::createBarbarianUnits()
 void CvGame::updateMoves()
 {
 	PROFILE_FUNC();
-	MEMORY_TRACE_FUNCTION();
 
 	int aiShuffle[MAX_PLAYERS];
 
@@ -7631,7 +7613,6 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 void CvGame::testVictory()
 {
 	PROFILE_FUNC();
-	MEMORY_TRACE_FUNCTION();
 
 	if (getVictory() != NO_VICTORY || getGameState() == GAMESTATE_EXTENDED || !Cy::call<bool>(PYGameModule, "isVictoryTest"))
 	{
@@ -7733,7 +7714,6 @@ void CvGame::testVictory()
 						{
 							if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 							{
-								MEMORY_TRACK_EXEMPT();
 
 								if (GET_PLAYER((PlayerTypes)iI).getTeam() == eBestTeam)
 								{
@@ -7764,7 +7744,6 @@ void CvGame::testVictory()
 							{
 								if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 								{
-									MEMORY_TRACK_EXEMPT();
 
 									if (GET_PLAYER((PlayerTypes)iI).getTeam() == eBestTeam)
 									{
@@ -7796,7 +7775,6 @@ void CvGame::testVictory()
 					{
 						if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 						{
-							MEMORY_TRACK_EXEMPT();
 							AddDLLMessage(
 								(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
 								gDLL->getText("TXT_KEY_MERCY_RULE_ABORTED").GetCString(),
@@ -9380,7 +9358,6 @@ void CvGame::setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eR
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
-				MEMORY_TRACK_EXEMPT();
 				AddDLLMessage(
 					(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
 					szBuffer, GC.getReligionInfo(eReligion).getSound(),
@@ -9503,7 +9480,6 @@ int CvGame::getCultureThreshold(CultureLevelTypes eLevel) const
 
 void CvGame::doUpdateCacheOnTurn()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	// reset shrine count
 	m_iShrineBuildingCount = 0;
@@ -9763,7 +9739,6 @@ void CvGame::doVoteResults()
 				if (GET_PLAYER((PlayerTypes) iI).isAlive()
 				&& GET_PLAYER((PlayerTypes) iI).isVotingMember(eVoteSource))
 				{
-					MEMORY_TRACK_EXEMPT();
 					CvWString szMessage;
 					szMessage.Format(L"%s: %s", gDLL->getText("TXT_KEY_ELECTION_CANCELLED").GetCString(), GC.getVoteInfo(eVote).getDescription());
 					AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_NEW_ERA", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
@@ -9935,7 +9910,6 @@ void CvGame::doVoteResults()
 
 					if (bShow && bPassed)
 					{
-						MEMORY_TRACK_EXEMPT();
 
 						const CvWString szMessage = gDLL->getText("TXT_KEY_VOTE_RESULTS", GC.getVoteSourceInfo(eVoteSource).getTextKeyWide(), pVoteTriggered->kVoteOption.szText.GetCString());
 						AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_NEW_ERA", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
@@ -10237,7 +10211,6 @@ void CvGame::changeIncreasingDifficultyCounter(int iChange)
 
 void CvGame::doFinalFive()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 5)
 	{
@@ -10251,7 +10224,6 @@ void CvGame::doFinalFive()
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 				{
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(
 						(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_LOW_PLAYER_DROPPED").GetCString(),
@@ -10265,7 +10237,6 @@ void CvGame::doFinalFive()
 
 void CvGame::doHightoLow()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_HIGH_TO_LOW)
 	&& getGameTurn() >= GC.getDefineINT("HIGH_TO_LOW_FIRST_TURN_CHECK")
@@ -10278,7 +10249,6 @@ void CvGame::doHightoLow()
 				GC.getInitCore().reassignPlayerAdvanced((PlayerTypes)iI, getRankPlayer(countCivPlayersAlive() -1));
 				changeHighToLowCounter(1);
 
-				MEMORY_TRACK_EXEMPT();
 				AddDLLMessage(
 					(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
 					gDLL->getText("TXT_KEY_PLAYER_REASSIGNED").GetCString(),
@@ -10291,7 +10261,6 @@ void CvGame::doHightoLow()
 
 void CvGame::doIncreasingDifficulty()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (isOption(GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY))
 	{
@@ -10310,7 +10279,6 @@ void CvGame::doIncreasingDifficulty()
 					GET_PLAYER((PlayerTypes)iI).AI_makeAssignWorkDirty();
 					algo::for_each(GET_PLAYER((PlayerTypes)iI).cities(), CvCity::fn::setInfoDirty(true));
 
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(
 						(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_DIFFICULTY_INCREASED").GetCString(),
@@ -10324,7 +10292,6 @@ void CvGame::doIncreasingDifficulty()
 
 void CvGame::doFlexibleDifficulty()
 {
-	MEMORY_TRACE_FUNCTION();
 	logging::logMsg("C2C.log", "doFlexibleDifficulty");
 
 	const bool bFlexDiffForAI = isModderGameOption(MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY);
@@ -10488,7 +10455,6 @@ void CvGame::doFlexibleDifficulty()
 					{
 						if (iJ == iI) // Difficulty increased for us
 						{
-							MEMORY_TRACK_EXEMPT();
 							AddDLLMessage(
 								ePlayer, true, GC.getEVENT_MESSAGE_TIME(),
 								gDLL->getText(
@@ -10504,7 +10470,6 @@ void CvGame::doFlexibleDifficulty()
 						}
 						else // Difficulty increased for someone else
 						{
-							MEMORY_TRACK_EXEMPT();
 							AddDLLMessage(
 								(PlayerTypes)iJ, true, GC.getEVENT_MESSAGE_TIME(),
 								gDLL->getText(
@@ -11247,7 +11212,6 @@ void CvGame::setModderGameOption(ModderGameOptionTypes eIndex, bool bNewValue)
 
 void CvGame::doFoundCorporations()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{

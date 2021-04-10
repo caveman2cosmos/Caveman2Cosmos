@@ -558,7 +558,6 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 
 		if ( bPotentialEnemy && !bForce )
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			(*g_attackOddsCache)[pPlot] = (iResult & ODDS_CACHE_VALUE_MASK) + (bIsWin ? ODDS_CACHE_WIN_BIT : 0);
 		}

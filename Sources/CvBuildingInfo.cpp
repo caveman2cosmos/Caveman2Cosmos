@@ -2336,7 +2336,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 //
 bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 

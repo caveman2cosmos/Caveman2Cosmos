@@ -161,7 +161,6 @@ inline void CLinkList<tVARTYPE>::insertAtBeginning(const tVARTYPE& val)
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertAtEnd(const tVARTYPE& val)
 {	
-	MEMORY_TRACK_EXEMPT();
 
 	FAssert(m_pHead == NULL || m_iLength > 0);
 
@@ -187,7 +186,6 @@ inline void CLinkList<tVARTYPE>::insertAtEnd(const tVARTYPE& val)
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertBefore(const tVARTYPE& val, CLLNode<tVARTYPE>* pThisNode)
 {
-	MEMORY_TRACK_EXEMPT();
 
 	FAssert(m_pHead == NULL || m_iLength > 0);
 
@@ -212,7 +210,6 @@ inline void CLinkList<tVARTYPE>::insertBefore(const tVARTYPE& val, CLLNode<tVART
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertAfter(const tVARTYPE& val, CLLNode<tVARTYPE>* pThisNode)
 {
-	MEMORY_TRACK_EXEMPT();
 
 	FAssert(m_pHead == NULL || m_iLength > 0);
 

@@ -111,7 +111,6 @@ const wchar_t* CvInfoBase::getDescription(uint uiForm) const
 {
 	while(m_aCachedDescriptions.size() <= uiForm)
 	{
-		MEMORY_TRACK_EXEMPT();
 
 		m_aCachedDescriptions.push_back(gDLL->getObjectText(m_szTextKey, m_aCachedDescriptions.size()));
 	}
@@ -879,7 +878,6 @@ const UnitCombatModifier& CvSpecialistInfo::getUnitCombatExperienceType(int iUni
 //
 bool CvSpecialistInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvHotkeyInfo::read(pXML))
@@ -1668,7 +1666,6 @@ bool CvTechInfo::isGlobal() const
 
 bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -5228,7 +5225,6 @@ bool CvPromotionInfo::hasNegativeEffects() const
 
 bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 	OutputDebugString("Reading PromotionInfo");
 
 	CvString szTextVal;
@@ -7359,7 +7355,6 @@ EntityEventTypes CvMissionInfo::getEntityEvent() const
 
 bool CvMissionInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTmp;
 	if (!CvHotkeyInfo::read(pXML))
@@ -8103,7 +8098,6 @@ CvSpawnInfo::~CvSpawnInfo()
 
 bool CvSpawnInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	CvString szTextVal2;
@@ -8605,7 +8599,6 @@ const CvUnitEntry &CvUnitFormationInfo::getSiegeUnitEntry(int index) const
 //------------------------------------------------------------------------------------------------------
 bool CvUnitFormationInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	int iIndex;
@@ -8780,7 +8773,6 @@ bool CvSpecialUnitInfo::isCarrierUnitAIType(int i) const
 
 bool CvSpecialUnitInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -8877,7 +8869,6 @@ bool CvCivicOptionInfo::isPolicy() const
 
 bool CvCivicOptionInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -10069,7 +10060,6 @@ void CvCivicInfo::getCheckSum(unsigned int& iSum) const
 
 bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -11250,7 +11240,6 @@ const TCHAR* CvDiplomacyInfo::getDiplomacyText(int i, int j) const
 
 bool CvDiplomacyInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	int i;
 
@@ -11668,7 +11657,6 @@ bool CvSpecialBuildingInfo::isValid( void ) const
 
 bool CvSpecialBuildingInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -12207,7 +12195,6 @@ void CvCivilizationInfo::getCheckSum(unsigned int& iSum) const
 
 bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -12604,7 +12591,6 @@ bool CvVictoryInfo::isTotalVictory() const
 //
 bool CvVictoryInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -12733,7 +12719,6 @@ bool CvHurryInfo::isAnger() const
 
 bool CvHurryInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -13242,7 +13227,6 @@ void CvHandicapInfo::getCheckSum(unsigned int& iSum) const
 
 bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -13714,7 +13698,6 @@ int CvGameSpeedInfo::getPercent(int iID) const
 
 bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -13932,7 +13915,6 @@ int CvTurnTimerInfo::getFirstTurnMultiplier() const
 
 bool CvTurnTimerInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -14210,7 +14192,6 @@ const PlaceBonusTypes& CvBuildInfo::getPlaceBonusType(int iIndex) const
 
 bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	CvString szTextVal2;
@@ -14585,7 +14566,6 @@ const TCHAR* CvGoodyInfo::getSound() const
 
 bool CvGoodyInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -14788,7 +14768,6 @@ int CvRouteInfo::getPrereqOrBonus(int i) const
 
 bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	//shouldHaveType = true;
@@ -15742,7 +15721,6 @@ void CvImprovementInfo::getCheckSum(unsigned int &iSum) const
 
 bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -16724,7 +16702,6 @@ void CvBonusInfo::getCheckSum(unsigned int &iSum) const
 
 bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -17312,7 +17289,6 @@ PromotionLineAfflictionModifier CvFeatureInfo::getAfflictionCommunicabilityType(
 
 bool CvFeatureInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -17654,7 +17630,6 @@ bool CvCommerceInfo::isFlexiblePercent() const
 
 bool CvCommerceInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -17808,7 +17783,6 @@ const TCHAR* CvYieldInfo::getSymbolPath(int i) const
 
 bool CvYieldInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -18102,7 +18076,6 @@ PromotionLineAfflictionModifier CvTerrainInfo::getAfflictionCommunicabilityType(
 
 bool CvTerrainInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -18410,7 +18383,6 @@ bool CvInterfaceModeInfo::getSelectAll() const
 
 bool CvInterfaceModeInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvHotkeyInfo::read(pXML))
@@ -18500,7 +18472,6 @@ int CvAdvisorInfo::getDisableCode(uint32_t uiCode) const
 
 bool CvAdvisorInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -19367,7 +19338,6 @@ const CvArtInfoLeaderhead* CvLeaderHeadInfo::getArtInfo() const
 
 bool CvLeaderHeadInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -20126,7 +20096,6 @@ int CvWorldInfo::getPercent(int iID) const
 
 bool CvWorldInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -20379,7 +20348,6 @@ float CvClimateInfo::getRandIceLatitude() const
 
 bool CvClimateInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -20447,7 +20415,6 @@ int CvSeaLevelInfo::getSeaLevelChange() const
 
 bool CvSeaLevelInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -20512,7 +20479,6 @@ int CvProcessInfo::getProductionToCommerceModifier(int i) const
 
 bool CvProcessInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -20708,7 +20674,6 @@ bool CvVoteInfo::isVoteSourceType(int i) const
 
 bool CvVoteInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -21094,7 +21059,6 @@ int CvProjectInfo::getProjectsNeededValuesVectorElement(int i) const		{ return m
 
 bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -21613,7 +21577,6 @@ int CvReligionInfo::getFlavorValue(int i) const
 //
 bool CvReligionInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvHotkeyInfo::read(pXML))
@@ -22072,7 +22035,6 @@ int* CvCorporationInfo::getYieldProducedArray() const
 //
 bool CvCorporationInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvHotkeyInfo::read(pXML))
@@ -25489,7 +25451,6 @@ BonusModifier CvTraitInfo::getBonusHappinessChange(int iBonus) const
 
 bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	CvString szTextVal2;
@@ -28508,7 +28469,6 @@ CvEntityEventInfo::~CvEntityEventInfo()
 
 bool CvEntityEventInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTmp, szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -28959,7 +28919,6 @@ float CvArtInfoUnit::getBankRate() const
 
 bool CvArtInfoUnit::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvArtInfoScalableAsset::read(pXML))
 	{
@@ -29091,7 +29050,6 @@ const TCHAR* CvArtInfoBuilding::getLSystemName() const
 
 bool CvArtInfoBuilding::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvArtInfoScalableAsset::read(pXML))
 	{
@@ -29168,7 +29126,6 @@ void CvArtInfoLeaderhead::setBackgroundKFM( const TCHAR* szKFM)
 
 bool CvArtInfoLeaderhead::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvArtInfoAsset::read(pXML))
@@ -29407,7 +29364,6 @@ LightTypes CvArtInfoFeature::getLightType() const
 
 bool CvArtInfoFeature::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvArtInfoScalableAsset::read(pXML))
 	{
@@ -29729,7 +29685,6 @@ int CvEmphasizeInfo::getCommerceChange(int i) const
 //
 bool CvEmphasizeInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -29826,7 +29781,6 @@ int CvUpkeepInfo::getCityPercent() const
 
 bool CvUpkeepInfo::read(CvXMLLoadUtility* pXml)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXml))
 	{
@@ -29936,7 +29890,6 @@ int CvCultureLevelInfo::getPrereqGameOption() const
 
 bool CvCultureLevelInfo::read(CvXMLLoadUtility* pXml)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXml))
 	{
@@ -30217,7 +30170,6 @@ int CvEraInfo::getCitySoundscapeSciptId(int i) const
 
 bool CvEraInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -30422,7 +30374,6 @@ const NiColorA& CvColorInfo::getColor() const
 
 bool CvColorInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -30493,7 +30444,6 @@ int CvPlayerColorInfo::getTextColorType() const
 
 bool CvPlayerColorInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -30645,7 +30595,6 @@ bool CvLandscapeInfo::isRandomMap() const
 //
 bool CvLandscapeInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -30761,7 +30710,6 @@ void CvGameText::setText(const wchar_t* szText)
 
 bool CvGameText::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -30972,7 +30920,6 @@ const TCHAR* CvDiplomacyTextInfo::getDiplomacyText(int i, int j) const
 
 bool CvDiplomacyTextInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -31040,7 +30987,6 @@ CvEffectInfo::~CvEffectInfo() {}
 
 bool CvEffectInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -31103,7 +31049,6 @@ CvAttachableInfo::~CvAttachableInfo()
 
 bool CvAttachableInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -31258,7 +31203,6 @@ void CvQuestInfo::setQuestScript(const TCHAR* szText)
 
 bool CvQuestInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -31450,7 +31394,6 @@ const TCHAR* CvTutorialMessage::getTutorialScriptByIndex(int i) const
 
 bool CvTutorialMessage::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 
@@ -31622,7 +31565,6 @@ CvGameOptionInfo::~CvGameOptionInfo()
 
 bool CvGameOptionInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -32493,7 +32435,6 @@ void CvEventTriggerInfo::getCheckSum(unsigned int& iSum) const
 
 bool CvEventTriggerInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 
@@ -33669,7 +33610,6 @@ void CvEventInfo::getCheckSum(unsigned int& iSum) const
 
 bool CvEventInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 
@@ -34733,7 +34673,6 @@ int CvEspionageMissionInfo::getRemoveCorporationsCostFactor() const
 
 bool CvEspionageMissionInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -35165,7 +35104,6 @@ bool CvUnitArtStyleTypeInfo::read(CvXMLLoadUtility* pXML)
 	int iIndex; // UnitIndex
 	int iMesh;  // Mesh Index
 
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -35368,7 +35306,6 @@ const CvWString CvVoteSourceInfo::getSecretaryGeneralText() const
 
 bool CvVoteSourceInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -35674,7 +35611,6 @@ CvPropertyInfo::~CvPropertyInfo()
 
 bool CvPropertyInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -36094,7 +36030,6 @@ CvOutcomeInfo::~CvOutcomeInfo()
 
 bool CvOutcomeInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -36386,7 +36321,6 @@ CvPromotionLineInfo::~CvPromotionLineInfo()
 
 bool CvPromotionLineInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -39042,7 +38976,6 @@ const AfflictionLineChanges& CvUnitCombatInfo::getDistanceAttackCommunicabilityT
 
 bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	CvString szTextVal2;
@@ -41426,7 +41359,6 @@ CvIdeaClassInfo::~CvIdeaClassInfo()
 
 bool CvIdeaClassInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -41498,7 +41430,6 @@ IdeaClassTypes CvIdeaInfo::getIdeaClass() const
 
 bool CvIdeaInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{
@@ -41573,7 +41504,6 @@ CvInvisibleInfo::~CvInvisibleInfo()
 
 bool CvInvisibleInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!CvInfoBase::read(pXML))
 	{

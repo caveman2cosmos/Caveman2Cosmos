@@ -573,7 +573,6 @@ void CvTeam::addTeam(TeamTypes eTeam)
 		&& isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam())
 		&& GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(eTeam))
 		{
-			MEMORY_TRACK_EXEMPT();
 			AddDLLMessage(
 				(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
 				gDLL->getText(
@@ -1045,7 +1044,6 @@ void CvTeam::processBuilding(BuildingTypes eBuilding, int iChange, bool bReligio
 
 void CvTeam::doTurn()
 {
-	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvTeam::doTurn()");
 
 	FAssertMsg(isAlive(), "isAlive is expected to be true");
@@ -1571,7 +1569,6 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 				{
 					if (GET_PLAYER((PlayerTypes)iI).isAlive())
 					{
-						MEMORY_TRACK_EXEMPT();
 
 						if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 						{
@@ -1814,7 +1811,6 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 				{
 					if (GET_PLAYER((PlayerTypes)iI).isAlive())
 					{
-						MEMORY_TRACK_EXEMPT();
 
 						if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 						{
@@ -4006,7 +4002,6 @@ void CvTeam::setDefensivePact(TeamTypes eIndex, bool bNewValue)
 				CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
 				if (kPlayer.isAlive() && isHasMet(kPlayer.getTeam()) && GET_TEAM(eIndex).isHasMet(kPlayer.getTeam()))
 				{
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WELOVEKING", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
 				}
 			}
@@ -4280,7 +4275,6 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 					const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
 					if (kPlayer.isAlive() && isHasMet(kPlayer.getTeam()) && GET_TEAM(eIndex).isHasMet(kPlayer.getTeam()))
 					{
-						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szReplayMessage,
 							"AS2D_WELOVEKING", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT()
@@ -4319,7 +4313,6 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 
 						if (!szBuffer.empty())
 						{
-							MEMORY_TRACK_EXEMPT();
 
 							AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_REVOLTSTART", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
 						}
@@ -4605,7 +4598,6 @@ void CvTeam::changeProjectCount(ProjectTypes eIndex, int iChange)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive())
 				{
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(
 						(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_MISC_SOMEONE_HAS_COMPLETED", getName().GetCString(), kProject.getTextKeyWide()),
@@ -5123,7 +5115,6 @@ void CvTeam::resetVictoryProgress()
 					const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iJ);
 					if (kPlayer.isAlive())
 					{
-						MEMORY_TRACK_EXEMPT();
 
 						AddDLLMessage(((PlayerTypes)iJ), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_MELTDOWN", MESSAGE_TYPE_MAJOR_EVENT);
 
@@ -5180,7 +5171,6 @@ void CvTeam::announceTechToPlayers(TechTypes eIndex, bool bPartial)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 		{
-			MEMORY_TRACK_EXEMPT();
 			AddDLLMessage(
 				(PlayerTypes)iI, false, (bSound ? GC.getEVENT_MESSAGE_TIME() : -1),
 				gDLL->getText(
@@ -5491,7 +5481,6 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 					{
 						if (GET_PLAYER((PlayerTypes)iI).isAlive())
 						{
-							MEMORY_TRACK_EXEMPT();
 
 							if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 							{
@@ -5542,7 +5531,6 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 								if (pCity != NULL)
 								{
-									MEMORY_TRACK_EXEMPT();
 
 									const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DISCOVERED_BONUS", GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey());
 									AddDLLMessage(pLoopPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_INFO,
@@ -5808,7 +5796,6 @@ void CvTeam::testCircumnavigated()
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			if (getID() == GET_PLAYER((PlayerTypes)iI).getTeam())
 			{
