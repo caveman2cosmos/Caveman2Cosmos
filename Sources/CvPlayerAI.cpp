@@ -4784,17 +4784,19 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	int iBonusValue;
 	int iI, iJ;
 
+	const CvTechInfo& kTech = GC.getTechInfo(eTech);
+
 	if ( gPlayerLogLevel > 2 )
 	{
 		logBBAI("Player %d (%S) calculate value for tech %S",
 				getID(),
 				getCivilizationDescription(0),
-				GC.getTechInfo(eTech).getDescription());
+				kTech.getDescription());
 	}
 
 	pCapitalCity = getCapitalCity();
 
-	CvTeam& kTeam = GET_TEAM(getTeam());
+	const CvTeam& kTeam = GET_TEAM(getTeam());
 
 	//bool bWarPlan = (kTeam.getAnyWarPlanCount(true) > 0);
 	bool bCapitalAlone = (GC.getGame().getElapsedGameTurns() > 0) ? AI_isCapitalAreaAlone() : false;
@@ -4805,7 +4807,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	int iCoastalCities = countNumCoastalCities();
 	int iConnectedForeignCities = countPotentialForeignTradeCitiesConnected();
 
-	int iCityCount = getNumCities();
+	const int iCityCount = getNumCities();
 	//int iTeamCityCount = kTeam.getNumCities();
 
 	iValue = 0;
@@ -4814,7 +4816,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	//iValue += iRandomFactor;
 
 	// Map stuff
-	if (GC.getTechInfo(eTech).isExtraWaterSeeFrom())
+	if (kTech.isExtraWaterSeeFrom())
 	{
 		if (iCoastalCities > 0)
 		{
@@ -4827,12 +4829,12 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isMapCentering())
+	if (kTech.isMapCentering())
 	{
 		iValue += 100;
 	}
 
-	if (GC.getTechInfo(eTech).isMapVisible())
+	if (kTech.isMapVisible())
 	{
 		iValue += 100;
 
@@ -4843,7 +4845,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	}
 
 	// Expand trading options
-	if (GC.getTechInfo(eTech).isMapTrading())
+	if (kTech.isMapTrading())
 	{
 		iValue += 100;
 
@@ -4853,14 +4855,14 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isTechTrading() && !GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
+	if (kTech.isTechTrading() && !GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
 	{
 		iValue += 500;
 
 		iValue += 500 * iHasMetCount;
 	}
 
-	if (GC.getTechInfo(eTech).isGoldTrading())
+	if (kTech.isGoldTrading())
 	{
 		iValue += 200;
 
@@ -4870,7 +4872,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isOpenBordersTrading())
+	if (kTech.isOpenBordersTrading())
 	{
 		if (iHasMetCount > 0)
 		{
@@ -4895,43 +4897,42 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isDefensivePactTrading())
+	if (kTech.isDefensivePactTrading())
 	{
 		iValue += 400;
 	}
 
-	if (GC.getTechInfo(eTech).isPermanentAllianceTrading() && (GC.getGame().isOption(GAMEOPTION_PERMANENT_ALLIANCES)))
+	if (kTech.isPermanentAllianceTrading() && GC.getGame().isOption(GAMEOPTION_PERMANENT_ALLIANCES))
 	{
 		iValue += 200;
 	}
 
-	if (GC.getTechInfo(eTech).isVassalStateTrading() && !(GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES)))
+	if (kTech.isVassalStateTrading() && !GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES))
 	{
 		iValue += 200;
 	}
 
 	// Tile improvement abilities
-	if (GC.getTechInfo(eTech).isBridgeBuilding())
+	if (kTech.isBridgeBuilding())
 	{
 		iValue += 400;
 	}
 
-	if (GC.getTechInfo(eTech).isIrrigation())
+	if (kTech.isIrrigation())
 	{
 		iValue += 400;
 	}
 
-	if (GC.getTechInfo(eTech).isIgnoreIrrigation())
+	if (kTech.isIgnoreIrrigation())
 	{
 		iValue += 500;
 	}
 
-	if (GC.getTechInfo(eTech).isWaterWork())
+	if (kTech.isWaterWork())
 	{
 		iValue += (600 * iCoastalCities);
 	}
 
-	const CvTechInfo& kTech = GC.getTechInfo(eTech);
 	iTempValue = 0;
 	if (kTech.isCanPassPeaks())
 	{
@@ -5021,17 +5022,17 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	iValue += (GC.getTechInfo(eTech).getFeatureProductionModifier() * 2);
-	iValue += (GC.getTechInfo(eTech).getWorkerSpeedModifier() * 4);
-	iValue += (GC.getTechInfo(eTech).getTradeRoutes() * (std::max((getNumCities() + 2), iConnectedForeignCities) + 1) * ((bFinancialTrouble) ? 200 : 100));
+	iValue += (kTech.getFeatureProductionModifier() * 2);
+	iValue += (kTech.getWorkerSpeedModifier() * 4);
+	iValue += (kTech.getTradeRoutes() * (std::max((getNumCities() + 2), iConnectedForeignCities) + 1) * ((bFinancialTrouble) ? 200 : 100));
 
 	if ( AI_isDoVictoryStrategy(AI_VICTORY_DOMINATION4) )
 	{
-		iValue += (GC.getTechInfo(eTech).getHealth() * 350);
+		iValue += (kTech.getHealth() * 350);
 	}
 	else
 	{
-		iValue += (GC.getTechInfo(eTech).getHealth() * 200);
+		iValue += (kTech.getHealth() * 200);
 	}
 
 	for (iJ = 0; iJ < GC.getNumRouteInfos(); iJ++)
@@ -5041,12 +5042,12 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	for (iJ = 0; iJ < NUM_DOMAIN_TYPES; iJ++)
 	{
-		iValue += (GC.getTechInfo(eTech).getDomainExtraMoves(iJ) * 200);
+		iValue += (kTech.getDomainExtraMoves(iJ) * 200);
 	}
 
 	for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 	{
-		if (GC.getTechInfo(eTech).isCommerceFlexible(iJ))
+		if (kTech.isCommerceFlexible(iJ))
 		{
 			iValue += 100;
 			if ((iJ == COMMERCE_CULTURE) && (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2)))
@@ -5058,7 +5059,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	for (iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
 	{
-		if (GC.getTechInfo(eTech).isTerrainTrade(iJ))
+		if (kTech.isTerrainTrade(iJ))
 		{
 			if (GC.getTerrainInfo((TerrainTypes)iJ).isWaterTerrain())
 			{
@@ -5081,7 +5082,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isRiverTrade())
+	if (kTech.isRiverTrade())
 	{
 		iValue += 1000;
 	}
@@ -5119,13 +5120,13 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	//ls612: Tech Commerce Modifiers
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		if (GC.getTechInfo(eTech).getCommerceModifier(iI) != 0)
+		if (kTech.getCommerceModifier(iI) != 0)
 		{
-			iValue += (GC.getTechInfo(eTech).getCommerceModifier(iI) * 100);
+			iValue += (kTech.getCommerceModifier(iI) * 100);
 		}
 
 		//Extra check for financially challenged AIs
-		if (iI == 0 && GC.getTechInfo(eTech).getCommerceModifier(iI) < 0)
+		if (iI == 0 && kTech.getCommerceModifier(iI) < 0)
 		{
 			if (AI_isFinancialTrouble())
 			{
@@ -5641,7 +5642,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 				{
 					logBBAI("Player %d - tech %S enabled civic %S with value %d vs current %d - additional tech value %d",
 							getID(),
-							GC.getTechInfo(eTech).getDescription(),
+							kTech.getDescription(),
 							GC.getCivicInfo((CivicTypes)iJ).getDescription(),
 							iNewCivicValue,
 							iCurrentCivicValue,
@@ -5659,7 +5660,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 			int iPotentialReligions = 0;
 			for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 			{
-				TechTypes eReligionTech = (TechTypes)GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
+				const TechTypes eReligionTech = (TechTypes)GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
 				if (kTeam.isHasTech(eReligionTech))
 				{
 					if (!(GC.getGame().isReligionSlotTaken((ReligionTypes)iJ)))
@@ -5692,7 +5693,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 /************************************************************************************************/
 							if(canFoundReligion())
 							{
-								ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(getLeaderType()).getFavoriteReligion();
+								const ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(getLeaderType()).getFavoriteReligion();
 								if (eFavorite != NO_RELIGION)
 								{
 									if (iJ == eFavorite)
@@ -5786,7 +5787,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 			int iFreeStuffValue = 0;
 
-			if ((UnitTypes)GC.getTechInfo(eTech).getFirstFreeUnit() != NO_UNIT)
+			if ((UnitTypes)kTech.getFirstFreeUnit() != NO_UNIT)
 			{
 				int iGreatPeopleRandom = ((bAsync) ? GC.getASyncRand().get(3200, "AI Research Great People ASYNC") : GC.getGame().getSorenRandNum(3200, "AI Research Great People"));
 				iFreeStuffValue += iGreatPeopleRandom;
@@ -5804,9 +5805,9 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 			//	Free techs are REALLY valuable - as an estimate we assume they are at least as valuable as the enabling tech
 			//	since we'll be able to choose anything accessible once it is researched and up to twice as much as that on a
 			//	random scale
-			if ( GC.getTechInfo(eTech).getFirstFreeTechs() > 0 )
+			if ( kTech.getFirstFreeTechs() > 0 )
 			{
-				int	iPercentageMultiplier = GC.getTechInfo(eTech).getFirstFreeTechs()*((bCapitalAlone ? 150 : 100) + (bAsync ? GC.getASyncRand().get(100, "AI Research Free Tech ASYNC") : GC.getGame().getSorenRandNum(100, "AI Research Free Tech")));
+				int	iPercentageMultiplier = kTech.getFirstFreeTechs()*((bCapitalAlone ? 150 : 100) + (bAsync ? GC.getASyncRand().get(100, "AI Research Free Tech ASYNC") : GC.getGame().getSorenRandNum(100, "AI Research Free Tech")));
 
 				iFreeStuffValue += (iValue*iPercentageMultiplier)/100;
 			}
@@ -5826,17 +5827,17 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	iValue += GC.getTechInfo(eTech).getAIWeight();
+	iValue += kTech.getAIWeight();
 
 	if (!isHuman() && iValue > 0)
 	{
 		for (int iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
 		{
-			iValue += (AI_getFlavorValue((FlavorTypes)iJ) * GC.getTechInfo(eTech).getFlavorValue(iJ) * 20);
+			iValue += (AI_getFlavorValue((FlavorTypes)iJ) * kTech.getFlavorValue(iJ) * 20);
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isRepeat())
+	if (kTech.isRepeat())
 	{
 		iValue /= 10;
 	}
@@ -5846,7 +5847,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		logBBAI("Player %d (%S) raw value for tech %S is %d",
 				getID(),
 				getCivilizationDescription(0),
-				GC.getTechInfo(eTech).getDescription(),
+				kTech.getDescription(),
 				iValue);
 	}
 
@@ -5859,7 +5860,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	//Tech Whore
 	if (!GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
 	{
-		if (GC.getTechInfo(eTech).isTechTrading() || kTeam.isTechTrading())
+		if (kTech.isTechTrading() || kTeam.isTechTrading())
 		{
 			if (((bAsync) ? GC.getASyncRand().get(100, "AI Tech Whore ASYNC") : GC.getGame().getSorenRandNum(100, "AI Tech Whore")) < (GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING) ? 20 : 10))
 			{
@@ -5974,16 +5975,12 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 				{
 					iBuildingValue += (15 * kLoopBuilding.getFoodKept());
 				}
-/************************************************************************************************/
-/* Afforess & Fuyu			Start		 16.07.2010											 */
-/************************************************************************************************/
+
 				if (kLoopBuilding.getAirlift() > 0)
 				{
 					iValue += 300;
 				}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 				if (kLoopBuilding.getMaintenanceModifier() < 0)
 				{
 					int iCount = 0;
@@ -6030,7 +6027,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 				}
 
 				// if this is a religious building, its not as useful
-				ReligionTypes eReligion = (ReligionTypes) kLoopBuilding.getReligionType();
+				const ReligionTypes eReligion = (ReligionTypes) kLoopBuilding.getReligionType();
 				if (eReligion != NO_RELIGION)
 				{
 
@@ -6204,15 +6201,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 					iExistingCultureBuildingCount++;
 				}
 
-				int iNumExisting = 0;
-
-				foreach_(const CvCity* pLoopCity, cities())
-				{
-					if (pLoopCity->getNumRealBuilding(eLoopBuilding))
-					{
-						iNumExisting++;
-					}
-				}
+				const int iNumExisting = algo::count_if(cities(), bind(CvCity::getNumRealBuilding, _1, eLoopBuilding));
 
 				if (iNumExisting > 0)
 				{
