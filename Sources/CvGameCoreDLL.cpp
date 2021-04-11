@@ -688,3 +688,8 @@ int intPow(const int x, const int p)
 	return static_cast<int>(iResult);
 }
 // ! Toffer
+
+const std::string getModDir()
+{
+	return modDir;
+}

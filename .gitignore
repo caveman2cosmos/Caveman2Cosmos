@@ -61,5 +61,5 @@ Sources/profile.json
 
 FPKTemp/
 
-*.log
-Logs
+Logs/
+UserSettings/
