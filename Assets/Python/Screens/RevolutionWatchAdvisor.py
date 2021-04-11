@@ -54,11 +54,10 @@ import CvScreenEnums
 import CvEventInterface
 import Popup as PyPopup
 
-import BugPath
 import BugConfigTracker
 
 import math
-import os.path
+import SystemPaths as SP
 
 # BUG - Options
 import BugCore
@@ -2378,8 +2377,8 @@ class RevolutionWatchAdvisor:
 				self.listSelectedCities.append(screen.getTableText(page, 1, i))
 
 	def save(self, inputClass):
-		name = BugPath.findSettingsFile("CustomRevAdv.txt", "CustomRevAdv")
-		if (name):
+		name = SP.joinModDir("UserSettings", "CustomRevAdv", "CustomRevAdv.txt")
+		if SP.isfile(name):
 			file = open(name, 'w')
 
 			if(file != 0):
@@ -2717,10 +2716,10 @@ class RevolutionWatchAdvisor:
 	def loadPages(self):
 
 		self.PAGES = None
-		name = BugPath.findSettingsFile("CustomRevAdv.txt", "CustomRevAdv")
-		if (not name):
-			name = BugPath.findSettingsFile("CustomRevAdv.txt")
-		if (name):
+		name = SP.joinModDir("UserSettings", "CustomRevAdv", "CustomRevAdv.txt")
+		if not SP.isfile(name):
+			name = SP.joinModDir("UserSettings", "CustomRevAdv.txt")
+		if SP.isfile(name):
 			BugConfigTracker.add("CDA_Config", name)
 			try:
 				file = open(name, 'r')
