@@ -26284,8 +26284,8 @@ void CvPlayer::getTradeLayerColors(std::vector<NiColorA>& aColors, std::vector<C
 	PlotGroupMap mapPlotGroups;
 	for (int iI = 0; iI < GC.getCurrentViewport()->numPlots(); ++iI)
 	{
-		CvPlot* pLoopPlot = GC.getCurrentViewport()->plotByIndex(iI);
-		CvPlotGroup* pPlotGroup = pLoopPlot->getPlotGroup(getID());
+		const CvPlot* pLoopPlot = GC.getCurrentViewport()->plotByIndex(iI);
+		const CvPlotGroup* pPlotGroup = pLoopPlot->getPlotGroup(getID());
 		if (pPlotGroup != NULL && pLoopPlot->isRevealed(getTeam(), true) && pLoopPlot->getTeam() == getTeam())
 		{
 			mapPlotGroups[pPlotGroup->getID()].push_back(iI);
@@ -26297,10 +26297,9 @@ void CvPlayer::getTradeLayerColors(std::vector<NiColorA>& aColors, std::vector<C
 	for (PlotGroupMap::iterator it = mapPlotGroups.begin(); it != mapPlotGroups.end(); ++it)
 	{
 		NiColorA kColor(kRandom.getFloat(), kRandom.getFloat(), kRandom.getFloat(), 0.8f);
-		std::vector<int>& aPlots = it->second;
-		for (size_t i = 0; i < aPlots.size(); i++)
+		foreach_(const int plotIndex, it->second)
 		{
-			aColors[aPlots[i]] = kColor;
+			aColors[plotIndex] = kColor;
 		}
 	}
 }
@@ -26407,10 +26406,10 @@ void CvPlayer::getUnitLayerColors(GlobeLayerUnitOptionTypes eOption, std::vector
 
 					if (bShowIndicator)
 					{
-						CvUnit* pUnit = pLoopPlot->getBestDefender(NO_PLAYER);
+						const CvUnit* pUnit = pLoopPlot->getBestDefender(NO_PLAYER);
 						if (pUnit != NULL)
 						{
-							PlayerColorTypes eUnitColor = GET_PLAYER(pUnit->getVisualOwner()).getPlayerColor();
+							const PlayerColorTypes eUnitColor = GET_PLAYER(pUnit->getVisualOwner()).getPlayerColor();
 							const NiColorA& kColor = GC.getColorInfo((ColorTypes) GC.getPlayerColorInfo(eUnitColor).getColorTypePrimary()).getColor();
 
 							szBuffer.clear();
@@ -26463,18 +26462,18 @@ void CvPlayer::getUnitLayerColors(GlobeLayerUnitOptionTypes eOption, std::vector
 		{
 			if (GET_PLAYER((PlayerTypes)iPlayer).isAlive())
 			{
-				PlayerColorTypes eCurPlayerColor = GET_PLAYER((PlayerTypes) iPlayer).getPlayerColor();
+				const PlayerColorTypes eCurPlayerColor = GET_PLAYER((PlayerTypes) iPlayer).getPlayerColor();
 				const NiColorA& kColor = GC.getColorInfo((ColorTypes) GC.getPlayerColorInfo(eCurPlayerColor).getColorTypePrimary()).getColor();
 
 				for (int iI = 0; iI < GC.getCurrentViewport()->numPlots(); iI++)
 				{
-					CvPlot* pLoopPlot = GC.getCurrentViewport()->plotByIndex(iI);
+					const CvPlot* pLoopPlot = GC.getCurrentViewport()->plotByIndex(iI);
 					if (pLoopPlot->isVisible(getTeam(), true))
 					{
-						float fPlotStrength = aafPlayerPlotStrength[iPlayer][iI];
+						const float fPlotStrength = aafPlayerPlotStrength[iPlayer][iI];
 						if (fPlotStrength > 0)
 						{
-							float fAlpha = (fPlotStrength / fMaxPlotStrength * 0.75f + 0.25f) * 0.8f;
+							const float fAlpha = (fPlotStrength / fMaxPlotStrength * 0.75f + 0.25f) * 0.8f;
 							if (fAlpha > aColors[iI].a)
 							{
 								aColors[iI] = kColor;
@@ -26711,7 +26710,7 @@ void CvPlayer::getCultureLayerColors(std::vector<NiColorA>& aColors, std::vector
 	// find culture percentages
 	for (int iI = 0; iI < GC.getCurrentViewport()->numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getCurrentViewport()->plotByIndex(iI);
+		const CvPlot* pLoopPlot = GC.getCurrentViewport()->plotByIndex(iI);
 		//PlayerTypes eOwner = pLoopPlot->getRevealedOwner(getTeam(), true);
 
 		// how many people own this plot?
@@ -26797,7 +26796,7 @@ void CvPlayer::changeEnslavementChance(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iEnslavementChance = (m_iEnslavementChance + iChange);
+		m_iEnslavementChance += iChange;
 	}
 }
 
@@ -26989,7 +26988,6 @@ DenialTypes CvPlayer::AI_pledgeVoteTrade(VoteTriggeredData* kData, PlayerVoteTyp
 
 DenialTypes CvPlayer::AI_corporationTrade(CorporationTypes eCorporation, PlayerTypes ePlayer) const
 {
-
 	if (isNoCorporations())
 	{
 		return DENIAL_NO_GAIN;

@@ -3627,7 +3627,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 {
 	PROFILE_FUNC();
 
-	int numPromotionInfos = GC.getNumPromotionInfos();
+	const int numPromotionInfos = GC.getNumPromotionInfos();
 
 	// if cheatmode and ctrl, display grouping info instead
 	if ((gDLL->getChtLvl() > 0) && gDLL->ctrlKey())
@@ -3636,14 +3636,10 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 		{
 			CvWString szTempString;
 
-			CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-			while(pUnitNode != NULL)
+			foreach_(const CvUnit* pHeadUnit, pPlot->units())
 			{
-				CvUnit* pHeadUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
 				// is this unit the head of a group, not cargo, and visible?
-				if (pHeadUnit && pHeadUnit->isGroupHead() && !pHeadUnit->isCargo() && !pHeadUnit->isInvisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
+				if (pHeadUnit->isGroupHead() && !pHeadUnit->isCargo() && !pHeadUnit->isInvisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
 				{
 					// head unit name and unitai
 					szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, 255,190,0,255, pHeadUnit->getName().GetCString()));
@@ -3676,12 +3672,8 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 
 						// get average damage
 						int iAverageDamage = 0;
-						CLLNode<IDInfo>* pUnitNode = pHeadGroup->headUnitNode();
-						while (pUnitNode != NULL)
+						foreach_(const CvUnit* pLoopUnit, pHeadGroup->units())
 						{
-							CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-							pUnitNode = pHeadGroup->nextUnitNode(pUnitNode);
-
 							iAverageDamage += (pLoopUnit->getDamage() * 100) / pLoopUnit->maxHitPoints();
 						}
 						iAverageDamage /= pHeadGroup->getNumUnits();
@@ -3790,7 +3782,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 						}
 
 						// activity
-						ActivityTypes eActivityType = (ActivityTypes) pHeadGroup->getActivityType();
+						const ActivityTypes eActivityType = (ActivityTypes) pHeadGroup->getActivityType();
 						if (eActivityType != NO_ACTIVITY)
 						{
 							getActivityTypeString(szTempString, eActivityType);
@@ -3803,9 +3795,8 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 						// display cargo for head unit
 						std::vector<CvUnit*> aCargoUnits;
 						pHeadUnit->getCargoUnits(aCargoUnits);
-						for (uint i = 0; i < aCargoUnits.size(); i++)
+						foreach_(const CvUnit* pCargoUnit, aCargoUnits)
 						{
-							CvUnit* pCargoUnit = aCargoUnits[i];
 							if (!pCargoUnit->isInvisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
 							{
 								// name and unitai
@@ -3827,14 +3818,10 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 						}
 
 						// display grouped units
-						CLLNode<IDInfo>* pUnitNode3 = pPlot->headUnitNode();
-						while(pUnitNode3 != NULL)
+						foreach_(const CvUnit* pUnit, pPlot->units())
 						{
-							CvUnit* pUnit = ::getUnit(pUnitNode3->m_data);
-							pUnitNode3 = pPlot->nextUnitNode(pUnitNode3);
-
 							// is this unit not head, in head's group and visible?
-							if (pUnit && (pUnit != pHeadUnit) && (pUnit->getGroupID() == pHeadUnit->getGroupID()) && !pUnit->isInvisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
+							if (pUnit != pHeadUnit && pUnit->getGroupID() == pHeadUnit->getGroupID() && !pUnit->isInvisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
 							{
 								FAssertMsg(!pUnit->isCargo(), "unit is cargo but head unit is not cargo");
 								// name and unitai
@@ -3856,9 +3843,8 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 								// display cargo for loop unit
 								std::vector<CvUnit*> aLoopCargoUnits;
 								pUnit->getCargoUnits(aLoopCargoUnits);
-								for (uint i = 0; i < aLoopCargoUnits.size(); i++)
+								foreach_(const CvUnit* pCargoUnit, aLoopCargoUnits)
 								{
-									CvUnit* pCargoUnit = aLoopCargoUnits[i];
 									if (!pCargoUnit->isInvisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
 									{
 										// name and unitai
@@ -4056,19 +4042,8 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 	int iNumVisibleUnits = 0;
 	if (pPlot->isVisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
 	{
-		CLLNode<IDInfo>* pUnitNode5 = pPlot->headUnitNode();
-		while(pUnitNode5 != NULL)
-		{
-			CvUnit* pUnit = ::getUnit(pUnitNode5->m_data);
-			pUnitNode5 = pPlot->nextUnitNode(pUnitNode5);
-
-			if (pUnit && !pUnit->isInvisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
-			{
-				++iNumVisibleUnits;
-			}
-		}
+		iNumVisibleUnits = algo::count_if(pPlot->units(), !bind(&CvUnit::isInvisible, _1, GC.getGame().getActiveTeam(), GC.getGame().isDebugMode(), true));
 	}
-
 
 	if (iNumVisibleUnits > 0)
 	{
@@ -4265,7 +4240,6 @@ namespace {
 			}
 		}
 	}
-
 }
 
 // Returns true if help was given...
@@ -4340,8 +4314,8 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 	}
 
 	int iOdds;
-	PlayerTypes eAmbushingPlayer = GC.getGame().getActivePlayer();
-	CvPlayerAI& kAmbushingPlayer = GET_PLAYER(eAmbushingPlayer);
+	const PlayerTypes eAmbushingPlayer = GC.getGame().getActivePlayer();
+	const CvPlayerAI& kAmbushingPlayer = GET_PLAYER(eAmbushingPlayer);
 	CvUnit* pAmbusher = NULL;
 	if (eAmbushingPlayer != NO_PLAYER)
 	{
@@ -8362,16 +8336,9 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			if (bShift && !bAlt && pPlot->headUnitNode() == NULL)
 			{
 				const int iBonusClasses = GC.getNumBonusClassInfos();
-				int* paiBonusClassRevealed = new int[iBonusClasses];
-				int* paiBonusClassUnrevealed = new int[iBonusClasses];
-				int* paiBonusClassHave = new int[iBonusClasses];
-
-				for (int iI = 0; iI < iBonusClasses; iI++)
-				{
-					paiBonusClassRevealed[iI] = 0;
-					paiBonusClassUnrevealed[iI] = 0;
-					paiBonusClassHave[iI] = 0;
-				}
+				std::vector<int> paiBonusClassRevealed(iBonusClasses, 0);
+				std::vector<int> paiBonusClassUnrevealed(iBonusClasses, 0);
+				std::vector<int> paiBonusClassHave(iBonusClasses, 0);
 
 				for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 				{
@@ -8460,8 +8427,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				bool bFirst = true;
 				for (int iI = 0; iI < MAX_PLAYERS; iI++)
 				{
-					PlayerTypes ePlayer = (PlayerTypes)iI;
-					CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
+					const PlayerTypes ePlayer = (PlayerTypes)iI;
+					const CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
 
 					if (kPlayer.isAlive())
 					{
@@ -8550,20 +8517,20 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					vecUnitAIs.push_back(UNITAI_COUNTER);
 				}
 
-				CvCity* pCloseCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, true);
+				const CvCity* pCloseCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, true);
 
 				if( pCloseCity != NULL )
 				{
-					for (uint iI = 0; iI < vecUnitAIs.size(); iI++)
+					foreach_(const UnitAITypes unitAI, vecUnitAIs)
 					{
 						CvWString szTempString;
-						getUnitAIString(szTempString, vecUnitAIs[iI]);
+						getUnitAIString(szTempString, unitAI);
 						szString.append(CvWString::format(L"\n  %s  ", szTempString.GetCString()));
 						for (int iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
 						{
 							if (pCloseCity->canTrain((UnitTypes)iJ))
 							{
-								const int iValue = GET_PLAYER(pPlot->getOwner()).AI_unitValue((UnitTypes)iJ, vecUnitAIs[iI], pPlot->area());
+								const int iValue = GET_PLAYER(pPlot->getOwner()).AI_unitValue((UnitTypes)iJ, unitAI, pPlot->area());
 								if (iValue > 0)
 								{
 									szString.append(CvWString::format(L"\n %s = %d", GC.getUnitInfo((UnitTypes)iJ).getDescription(), iValue));
@@ -8730,7 +8697,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				szString.append(szTempBuffer);
 
 				const int iPlotIndex = pWorkingCity->getCityPlotIndex(pPlot);
-				BuildTypes eBestBuild = pWorkingCity->AI_getBestBuild(iPlotIndex);
+				const BuildTypes eBestBuild = pWorkingCity->AI_getBestBuild(iPlotIndex);
 
 				if (NO_BUILD != eBestBuild)
 				{
@@ -8796,7 +8763,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				szTempBuffer.Format(L"\nWater World Percent = %d", pCity->AI_calculateWaterWorldPercent());
 				szString.append(szTempBuffer);
 
-				CvPlayerAI& kPlayer = GET_PLAYER(pCity->getOwner());
+				const CvPlayerAI& kPlayer = GET_PLAYER(pCity->getOwner());
 				const int64_t iUnitUpkeep = kPlayer.getFinalUnitUpkeep();
 				int64_t iTotalCosts = kPlayer.calculatePreInflatedCosts();
 				int64_t iUnitCostPercentage = iUnitUpkeep * 100 / std::max<int64_t>(1, iTotalCosts);
@@ -9214,7 +9181,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 
 				if (getBugOptionBOOL("MiscHover__PlotWorkingCity", true, "BUG_PLOT_HOVER_WORKING_CITY"))
 				{
-					CvCity* pWorkingCity = pPlot->getWorkingCity();
+					const CvCity* pWorkingCity = pPlot->getWorkingCity();
 
 					if (pWorkingCity != NULL && pWorkingCity->getOwner() == GC.getGame().getActivePlayer())
 					{
@@ -10404,7 +10371,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 // BUG - Revolt Chance - start
 	if (getBugOptionBOOL("CityBar__RevoltChance", true, "BUG_CITYBAR_REVOLT_CHANCE"))
 	{
-		PlayerTypes eCulturalOwner = pCity->plot()->calculateCulturalOwner();
+		const PlayerTypes eCulturalOwner = pCity->plot()->calculateCulturalOwner();
 
 		if (eCulturalOwner != NO_PLAYER)
 		{
@@ -36391,7 +36358,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 				}
 			}
 
-			ReligionTypes eReligion = kPlayer.getStateReligion();
+			const ReligionTypes eReligion = kPlayer.getStateReligion();
 			if (NO_RELIGION != eReligion && pCity->isHasReligion(eReligion))
 			{
 				iTempModifier = 0;
@@ -36440,7 +36407,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 		{
 			int iDistance = GC.getMap().maxPlotDistance();
 
-			CvCity* pOurCapital = kPlayer.getCapitalCity();
+			const CvCity* pOurCapital = kPlayer.getCapitalCity();
 			if (NULL != pOurCapital)
 			{
 				if (kMission.isSelectPlot() || kMission.isTargetsCity())
@@ -36449,7 +36416,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 				}
 				else
 				{
-					CvCity* pTheirCapital = GET_PLAYER(eTargetPlayer).getCapitalCity();
+					const CvCity* pTheirCapital = GET_PLAYER(eTargetPlayer).getCapitalCity();
 					if (NULL != pTheirCapital)
 					{
 						iDistance = plotDistance(pOurCapital->getX(), pOurCapital->getY(), pTheirCapital->getX(), pTheirCapital->getY());
@@ -36830,7 +36797,7 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 	{
 		if (pMouseOverPlot != NULL)
 		{
-			CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
+			const CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 			if (pHeadSelectedCity != NULL)
 			{
 				if (pMouseOverPlot->getWorkingCity() == pHeadSelectedCity)
@@ -36981,7 +36948,7 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 			}
 		}
 
-		InterfaceModeTypes eInterfaceMode = gDLL->getInterfaceIFace()->getInterfaceMode();
+		const InterfaceModeTypes eInterfaceMode = gDLL->getInterfaceIFace()->getInterfaceMode();
 		if (eInterfaceMode != INTERFACEMODE_SELECTION)
 		{
 			CvWString szTempBuffer;
@@ -36999,28 +36966,16 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 
 			case INTERFACEMODE_SHADOW_UNIT:
 				{
-					CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+					const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 					if (NULL != pHeadSelectedUnit && pMouseOverPlot != NULL)
 					{
-						CvUnit* pShadowUnit = pMouseOverPlot->getCenterUnit();
+						const CvUnit* pShadowUnit = pMouseOverPlot->getCenterUnit();
 						if (!pHeadSelectedUnit->getGroup()->canDoInterfaceModeAt(eInterfaceMode, pMouseOverPlot))
 						{
 							strHelp.clear();
 							if (pShadowUnit != NULL)
 							{
-								CvUnit* pLoopShadow = NULL;
-								CLLNode<IDInfo>* pUnitShadowNode = NULL;
-								int iValidShadowUnits = 0;
-								pUnitShadowNode = pMouseOverPlot->headUnitNode();
-								while (pUnitShadowNode != NULL)
-								{
-									pLoopShadow = ::getUnit(pUnitShadowNode->m_data);
-									pUnitShadowNode = pMouseOverPlot->nextUnitNode(pUnitShadowNode);
-									if (pHeadSelectedUnit->canShadowAt(pMouseOverPlot, pLoopShadow))
-									{
-										iValidShadowUnits++;
-									}
-								}
+								const int iValidShadowUnits = algo::count_if(pMouseOverPlot->units(), bind(CvUnit::canShadowAt, pHeadSelectedUnit, pMouseOverPlot, _1));
 								if (iValidShadowUnits == 0)
 								{
 									bool bFirst = true;
