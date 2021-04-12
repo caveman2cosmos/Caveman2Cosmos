@@ -13215,12 +13215,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<Bonus>BONUS_BISON</Bonus>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_HILL</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
@@ -17877,12 +17877,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<bRiver>1</bRiver>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_MARSH</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<iCost>252</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -36870,12 +36870,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
 			<bRiver>1</bRiver>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_MARSH</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHINAMPA</BuildingType>
 			</PrereqInCityBuildings>
@@ -55248,12 +55248,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
-			<PrereqAndTerrain>
+			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-			</PrereqAndTerrain>
+			</PrereqOrTerrain>
 			<iCost>368</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>

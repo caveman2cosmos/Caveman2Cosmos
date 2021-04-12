@@ -3275,7 +3275,7 @@
 		<English>Greetings to you, [CT_NAME]. A word of advice - if you have a tail of straw, then keep it away from the fire.</English>
 		<French>Salutations à vous, [CT_NAME]. Un conseil - si vous avez une pièce de tissu à conserver, alors laissez-la loin du feu.</French>
 		<German>Sei gegrüßt, [CT_NAME]. Ein guter Rat - wenn Du einen Schwanz aus Stroh hast, so halte ihn vom Feuer fern.</German>
-		<Italian>Salute a te, [CT_NAME]. Un consiglio - se hai una coda di paglia, ti conviene tenrla lontana dal fuoco.</Italian>
+		<Italian>Salute a te, [CT_NAME]. Un consiglio - se hai una coda di paglia, ti conviene tenerla lontana dal fuoco.</Italian>
 		<Polish>Pozdrawiam Cię, [CT_NAME]. Dam Ci rade - jeżeli masz ogon ze słomy, trzymaj go daleko od ognia.</Polish>
 		<Spanish>Saludos a vos, [CT_NAME]. Un consejo: si tienes una pila de paja, lo mejor es mantenerla lejos del fuego.</Spanish>
 		<Russian>Ïðèâåòñòâóþ òåáÿ, [CT_NAME]. Íåáîëüøîé ñîâåò - åñëè ó âàñ åñòü õâîñò èç ñîëîìû, òîãäà äåðæèòå åãî ïîäàëüøå îò îãíÿ.</Russian>
@@ -3400,7 +3400,7 @@
 		<English>Greetings, [CT_NAME]. Tell me who your friends are, so I can tell who you are.</English>
 		<French>Salutations, [CT_NAME]. Dites-moi qui sont vos amis, je vous dirai qui vous êtes.</French>
 		<German>Grüße, [CT_NAME]. Sage mir, wer Deine Freunde sind, und ich sage Dir, wer Du bist.</German>
-		<Italian>Saluti, [CT_NAME]. Dimmi quali sono i tuoi amici, in modo che possa dirti che sono.</Italian>
+		<Italian>Saluti, [CT_NAME]. Dimmi quali sono i tuoi amici, in modo che possa capire chi tu sia.</Italian>
 		<Polish>Pozdrowienia, [CT_NAME]. Powiedz mi kim są Twoi przyjaciele a ja Ci powiem kim jesteś.</Polish>
 		<Spanish>Saludos, [CT_NAME]. Dime quiénes son tus amigos, y te podré decir quién eres.</Spanish>
 		<Russian>Ïîêëîí òåáå, [CT_NAME]. Ñêàæè ìíå êòî òâîè äðóçüÿ è ÿ ñêàæó êòî òû.</Russian>
@@ -3410,7 +3410,7 @@
 		<English>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. Before you come to me, always remember: no labour, no oilcakes.</English>
 		<French>Bonjour! Je suis [OUR_NAME] de la [OUR_EMPIRE]. Avant de venir à moi, toujours se rappeler: pas de travail, pas de oilcakes.</French>
 		<German>Grüße! Ich bin [OUR_NAME] vom [OUR_EMPIRE]. Bevor Du zu mir kommst, denke immer daran: keine Arbeit, kein Ölkuchen.</German>
-		<Italian>Saluti! Sono [OUR_NAME] del [OUR_EMPIRE]. Prima di venire a me, ricordate sempre: nessun lavoro, nessuna panelli.</Italian>
+		<Italian>Saluti! Sono [OUR_NAME] del [OUR_EMPIRE]. Prima di venire da me, ricordate sempre: niente lavoro, niente pane.</Italian>
 		<Polish>Pozdrowienia! Jestem [OUR_NAME] z [OUR_EMPIRE]. Zamin do mnie przybędziesz pamiętaj żadnej harówki oraz żadnych ciast</Polish>
 		<Spanish>¡Saludos! Soy [OUR_NAME] del [OUR_EMPIRE]. Antes de venir, recuerda siempre: no hay trabajo, no hay tortas de aceite.</Spanish>
 		<Russian>Àõ, äà ýòî æå [CT_NAME] èç [CT_EMPIRE]! Èñòèíó ãîâîðÿò, ÷òî ñ âîëêàìè æèòü - ïî-âîë÷üè âûòü!</Russian>

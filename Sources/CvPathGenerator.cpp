@@ -555,7 +555,6 @@ void CvPathGenerator::AdjustChildTreeCosts(CvPathNode* node, int iAmount, bool b
 				{
 					OutputDebugString(CvString::format("Requeue in cost adjustment (%d,%d) with new cost %d\n", node->m_plot->getX(), node->m_plot->getY(), node->m_iCostTo).c_str());
 				}
-				MEMORY_TRACK_EXEMPT();
 
 				priorityQueueEntry	entry;
 
@@ -664,7 +663,6 @@ void CvPathGenerator::DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot)
 					{
 						OutputDebugString(CvString::format("Requeue after subtree deletion (%d,%d) with cost %d\n", pAdjacentInfo->pNode->m_plot->getX(), pAdjacentInfo->pNode->m_plot->getY(), pAdjacentInfo->pNode->m_iCostTo).c_str());
 					}
-					MEMORY_TRACK_EXEMPT();
 
 					priorityQueueEntry	entry;
 
@@ -1129,7 +1127,6 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 					if (m_pBestTerminalNode == NULL || !m_pBestTerminalNode->m_bIsKnownRoute)
 					{
-						MEMORY_TRACK_EXEMPT();
 
 						priorityQueueEntry entry;
 
@@ -1722,7 +1719,6 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 												newNode->m_iPathSeq = m_iSeq;
 
 												{
-													MEMORY_TRACK_EXEMPT();
 
 													priorityQueueEntry	entry;
 

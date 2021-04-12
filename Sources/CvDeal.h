@@ -8,7 +8,7 @@
 #include "LinkedList.h"
 //#include "CvStructs.h"
 
-class CvDeal
+class CvDeal : bst::noncopyable
 {
 public:
 	CvDeal();

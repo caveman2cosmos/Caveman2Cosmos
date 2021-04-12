@@ -1741,23 +1741,6 @@ enum MissionTypes
 	MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER,
 	MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER,
 	//TB Combat Mod and Mission fix end
-	MISSION_GO_TO_MAP_EARTH,
-	MISSION_GO_TO_MAP_SUBTERRANEAN,
-	MISSION_GO_TO_MAP_AQUATIC,
-	MISSION_GO_TO_MAP_CISLUNAR,
-	MISSION_GO_TO_MAP_LUNAR,
-	MISSION_GO_TO_MAP_SOLAR_SYSTEM,
-	MISSION_GO_TO_MAP_MARTIAN,
-	MISSION_GO_TO_MAP_VENUSIAN,
-	MISSION_GO_TO_MAP_JOVIAN,
-	MISSION_GO_TO_MAP_TITANIC,
-	MISSION_GO_TO_MAP_INTERSTELLAR,
-	MISSION_GO_TO_MAP_PLASMA,
-	MISSION_GO_TO_MAP_GALACTIC,
-	MISSION_GO_TO_MAP_MILKY_WAY,
-	MISSION_GO_TO_MAP_UNIVERSAL,
-	MISSION_GO_TO_MAP_DISTANT,
-	MISSION_GO_TO_MAP_HYPERSPACE,
 };
 
 enum MissionAITypes
@@ -3172,11 +3155,6 @@ enum CivilopediaWidgetShowTypes
 	CIVILOPEDIA_WIDGET_SHOW_WATER,
 };
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 enum RankingTypes
 {
 	RANKING_POWER,
@@ -3193,14 +3171,11 @@ enum LandmarkTypes
 {
 	NO_LANDMARK = -1,
 	LANDMARK_BAY,
-	LANDMARK_ISLAND,
 	LANDMARK_FOREST,
 	LANDMARK_JUNGLE,
 	LANDMARK_PEAK,
 	LANDMARK_MOUNTAIN_RANGE,
-	LANDMARK_PLAINS,
 	LANDMARK_DESERT,
-	LANDMARK_OCEAN,
 	LANDMARK_LAKE,
 	NUM_LANDMARK_TYPES
 };
@@ -3285,9 +3260,6 @@ enum ModderGameOptionTypes
 
 	NUM_MODDERGAMEOPTION_TYPES
 };
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 // AIAndy: Game object types
 enum GameObjectTypes

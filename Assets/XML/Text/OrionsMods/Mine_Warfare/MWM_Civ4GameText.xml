@@ -119,7 +119,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_LAND_MINE_MESSAGE</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_MINE_LAND</Tag>
@@ -144,7 +143,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_SEA_MINE_MESSAGE</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_FIELD_HELP</Tag>

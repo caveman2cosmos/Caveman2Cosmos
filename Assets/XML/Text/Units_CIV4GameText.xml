@@ -291,7 +291,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADVENTURER_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADVENTURER_STRATEGY</Tag>
@@ -3651,7 +3650,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLIMP_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLIMP_STRATEGY</Tag>
@@ -5212,7 +5210,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_CHEROKEE_RIFLEMAN_PEDIA</Tag>
 		<English>TBD</English>
 		<French>A compléter</French>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHEYENNE_RIDER</Tag>
@@ -5603,12 +5600,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLUBMAN_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLUBMAN_STRATEGY</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COBRA</Tag>
@@ -7260,7 +7255,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROPSHIP_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROPSHIP_STRATEGY</Tag>
@@ -18976,7 +18970,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NARBONA_PEDIA</Tag>
-		<English>[H1]Narbona[\H1][NEWLINE][BOLD]Navajo Chieftan[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] c. 1766 - August 31, 1849[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Narbona was one of the wealthiest Navajo of his time due to the amount of sheep and horses his outfit, or extended family group, owned. He was not a "chief" of all of the Navajo, the independent minded Navajo having no central authority, but he was very influential due to his status in the tribe, gained from both his wealth, high personal reputation and age at the time he negotiated with the Americans.[PARAGRAPH:1]Narbona had become one of the most prominent leaders in the aftermath of the massacre of 24 Navajo leaders in March 1822 at Jemez Pueblo who had been travelling under flag of truce to a peace conference with the new Mexican government. In February 1829 he lead the Navajo in battle against a Mexican expedition into the Chuska Mountains led by Captain Blas de Hinojos and defeated it utterly. The site of the battle, Copper Pass (Beesh Lichii'I Bigiizh), is now known as Narbona Pass.[PARAGRAPH:1]In 1849, Narbona had ridden with several hundred of his warriors to meet with a delegation led by Col. John M. Washington to discuss terms for peace between the Navajo and the "New Men", Americans who had driven the Mexicans from what is now the Southwestern United States. The US party was composed of both US Regulars and local New Mexican auxiliaries.[PARAGRAPH:1]After several misunderstandings, translators managed to work out an acceptable list of terms for peace between the two parties. As the peace council broke up, Sadoval, a young Navajo warrior of some distinction, began riding his horse to and fro, exhorting the 200-300 Navajo warriors in attendance to break the new treaty immediately, starting with the massacre of Col. Washington's command. At this point, a New Mexican officer claimed that he noticed a horse that belonged to him being ridden by one of the Navajo warriors. Navajos were great raiders of livestock, so it is entirely possible that this horse did indeed belong to the Americans. Washington, put in the position of backing one of his troopers, demanded that the horse be immediately turned over. The Navajo refused, and the horse and its rider departed.[PARAGRAPH:1]Washington commanded his troops to unlimber their cannon and prepare to fire if the Navajo refused to return the, now absent, property the Americans were claiming was stolen. The Navajo again denied his request, and the cannon as well as some rifles were fired.[PARAGRAPH:1]Narbona was mortally wounded in the fusillade. As a final indignity, according to eyewitnesses, he was also scalped by one of the New Mexico militiamen. He was buried by his sons in the traditional Navajo fashion, bound in a "death knotted" blanket and cast into a crevice. Two of his finest horses were slaughtered to ensure he would not walk to the afterlife.</English>
+		<English>[H1]Narbona[\H1][NEWLINE][BOLD]Navajo Chieftain[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] c. 1766 - August 31, 1849[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Narbona was one of the wealthiest Navajo of his time due to the amount of sheep and horses his outfit, or extended family group, owned. He was not a "chief" of all of the Navajo, the independent minded Navajo having no central authority, but he was very influential due to his status in the tribe, gained from both his wealth, high personal reputation and age at the time he negotiated with the Americans.[PARAGRAPH:1]Narbona had become one of the most prominent leaders in the aftermath of the massacre of 24 Navajo leaders in March 1822 at Jemez Pueblo who had been travelling under flag of truce to a peace conference with the new Mexican government. In February 1829 he lead the Navajo in battle against a Mexican expedition into the Chuska Mountains led by Captain Blas de Hinojos and defeated it utterly. The site of the battle, Copper Pass (Beesh Lichii'I Bigiizh), is now known as Narbona Pass.[PARAGRAPH:1]In 1849, Narbona had ridden with several hundred of his warriors to meet with a delegation led by Col. John M. Washington to discuss terms for peace between the Navajo and the "New Men", Americans who had driven the Mexicans from what is now the Southwestern United States. The US party was composed of both US Regulars and local New Mexican auxiliaries.[PARAGRAPH:1]After several misunderstandings, translators managed to work out an acceptable list of terms for peace between the two parties. As the peace council broke up, Sadoval, a young Navajo warrior of some distinction, began riding his horse to and fro, exhorting the 200-300 Navajo warriors in attendance to break the new treaty immediately, starting with the massacre of Col. Washington's command. At this point, a New Mexican officer claimed that he noticed a horse that belonged to him being ridden by one of the Navajo warriors. Navajos were great raiders of livestock, so it is entirely possible that this horse did indeed belong to the Americans. Washington, put in the position of backing one of his troopers, demanded that the horse be immediately turned over. The Navajo refused, and the horse and its rider departed.[PARAGRAPH:1]Washington commanded his troops to unlimber their cannon and prepare to fire if the Navajo refused to return the, now absent, property the Americans were claiming was stolen. The Navajo again denied his request, and the cannon as well as some rifles were fired.[PARAGRAPH:1]Narbona was mortally wounded in the fusillade. As a final indignity, according to eyewitnesses, he was also scalped by one of the New Mexico militiamen. He was buried by his sons in the traditional Navajo fashion, bound in a "death knotted" blanket and cast into a crevice. Two of his finest horses were slaughtered to ensure he would not walk to the afterlife.</English>
 		<Polish>Narbona - wódz indian Navajo z przełomu XVIII i XIX wieku.</Polish>
 	</TEXT>
 	<TEXT>
@@ -19047,7 +19041,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAJO_RIFLEMAN_PEDIA</Tag>
-		<English>[COLOR_UNIT_TEXT]Navajo Riflemans[COLOR_REVERT] are Navajo culture unit. With hidden nationality and "stealth" they are excelent strike units. They got bonus when fighting with mounted units and in desert terrain.</English>
+		<English>[COLOR_UNIT_TEXT]Navajo Riflemen[COLOR_REVERT] are Navajo culture unit. With hidden nationality and "stealth" they are excellent strike units. They got bonus when fighting with mounted units and in desert terrain.</English>
 		<Polish>Nawahowie, Nawaho - największe plemię indiańskie Ameryki Północnej liczące blisko 300 tys. osób (2000 r.). Większość z nich (około 173 tys.) zamieszkuje rezerwat położony na terenie stanów Arizona, Nowy Meksyk oraz Utah. Rezerwat (ang. The Navajo Indian Reservation) ma powierzchnię ponad 70 tys. km2, czyli równą powierzchni np. Czech. Dine Bikeyah, a więc Kraj Nawahów jest większy niż 10 z 50 stanów USA. Siedziba władz Kraju Nawaho znajduje się w Window Rock.</Polish>
 	</TEXT>
 	<TEXT>
@@ -19098,7 +19092,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NDLELA_PEDIA</Tag>
-		<English>Ndlela kaSompisi (died Feb 1840) was a key general to Zulu Kings Shaka and Dingane, and also served as Dingane's induna - his chief advisor. Senzangakona, Shaka and Dingane's father, was married to Bibi, a sister of Ndlela. Mpande was married to Ndlela's daughter Msukilethe. He was general of Dingane's forces at the Battle of Blood River, a significant defeat for the Zulus as the spears and large numbers of Zulus were unable to breach the Boer laager of Andries Pretorius defended with muskets. Neither Shaka nor Dingane had children. Mindful of the lineage of the Zulu kings, Ndlela repeatedly defied Dingane's request that he assassinate Mpande, half-brother of Shaka and Dingane as he was a threat to Dingane's power. He argued that it would diminish his greatness and that, in any case, Mpande did not aspire to the throne. The Battle of Maqongqe where the forces of Mpande and Dingane clashed in 1840 culminated in Dingane calling Ndlele a traitor. Dingane ordered his death through slow strangling with a cow hide throng, but by Ndlela's inaction he had preserved the blood line of the Zulu monarchy, as Mpande succeeded Dingane and Mpande's son Cetshwayo in turn succeeded him. All subsequent Zulu monarchs are descended from Mpande. Regardless, Ndlela is considered by Zulus to be one of their great leaders who tried his best to keep the state together.</English>
+		<English>Ndlela kaSompisi (died Feb 1840) was a key general to Zulu Kings Shaka and Dingane, and also served as Dingane's induna - his chief advisor. Senzangakona, Shaka and Dingane's father, was married to Bibi, a sister of Ndlela. Mpande was married to Ndlela's daughter Msukilethe. He was general of Dingane's forces at the Battle of Blood River, a significant defeat for the Zulus as the spears and large numbers of Zulus were unable to breach the Boer lager of Andries Pretorius defended with muskets. Neither Shaka nor Dingane had children. Mindful of the lineage of the Zulu kings, Ndlela repeatedly defied Dingane's request that he assassinate Mpande, half-brother of Shaka and Dingane as he was a threat to Dingane's power. He argued that it would diminish his greatness and that, in any case, Mpande did not aspire to the throne. The Battle of Maqongqe where the forces of Mpande and Dingane clashed in 1840 culminated in Dingane calling Ndlele a traitor. Dingane ordered his death through slow strangling with a cow hide throng, but by Ndlela's inaction he had preserved the blood line of the Zulu monarchy, as Mpande succeeded Dingane and Mpande's son Cetshwayo in turn succeeded him. All subsequent Zulu monarchs are descended from Mpande. Regardless, Ndlela is considered by Zulus to be one of their great leaders who tried his best to keep the state together.</English>
 		<Polish>Ndlela kaSompisi (zm. luty 1840) był głównym generałem na służbie królów Zulusów Czaki i Dingane, słuzył również jako główny doradca Dingany. Senzangakona, ojciec Czaki i Dingane był żonaty z Bibi, siostrą Ndleli. Był głównodowodzącym siłami zuluskim w bitwie pod Krwawą Rzeką, która przyniosła zwycięstwo Burom i śmierć trzech tysięcy zuluskich wojowników.</Polish>
 	</TEXT>
 	<TEXT>
@@ -30185,69 +30179,15 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIIIS</Tag>
-		<English>Great Corporal</English>
-		<French>Caporal Illustre</French>
-		<German>
-			<Text>Great Corporal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Caporale illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran alférez</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Kapral</Polish>
-		<Russian>Âåëèêèé êàïðàë</Russian>
+		<English>Captured Corporal</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIIS</Tag>
-		<English>Great Captain</English>
-		<French>Capitaine Illustre</French>
-		<German>
-			<Text>Great Captain</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Capitano illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran capitán</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Kapitan</Polish>
-		<Russian>Âåëèêèé ïîëêîâîäåö</Russian>
+		<English>Captured Captain</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIS</Tag>
-		<English>Great Chief</English>
-		<French>Chef Illustre</French>
-		<German>
-			<Text>Great Chief</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Capo illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran cabo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Wódz</Polish>
-		<Russian>Âåëèêèé âîæäü</Russian>
+		<English>Captured Chief</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIV</Tag>
@@ -30273,25 +30213,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIVS</Tag>
-		<English>Great Colonel</English>
-		<French>Colonel Illustre</French>
-		<German>
-			<Text>Great Colonel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Colonnello illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran coronel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Pułkownik</Polish>
-		<Russian>Âåëèêèé ïîëêîâíèê</Russian>
+		<English>Captured Colonel</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDV</Tag>
@@ -30317,47 +30239,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVS</Tag>
-		<English>Great Commander</English>
-		<French>Commandant Illustre</French>
-		<German>
-			<Text>Great Commander</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Comandante illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran comandante</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Komandor</Polish>
-		<Russian>Âåëèêèé êîìàíäèð</Russian>
+		<English>Captured Commander</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORD_VASSAL</Tag>
-		<English>Warlord Vassal</English>
-		<French>Vassal combattant</French>
-		<German>
-			<Text>Warlord Vassal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Vassallo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Vasallo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Dowódca Wasal</Polish>
-		<Russian>Âàññàë</Russian>
+		<English>Aristocrat</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORD_VASSAL_PEDIA</Tag>

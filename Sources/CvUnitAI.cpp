@@ -80,35 +80,11 @@ CvUnitAI::CvUnitAI(bool bIsDummy) : CvUnit(bIsDummy)
 }
 
 
-CvUnitAI::CvUnitAI(const CvUnitAI& other) : CvUnit(other)
-{
-	*this = other;
-}
-
-
 CvUnitAI::~CvUnitAI()
 {
 	AI_uninit();
 }
 
-CvUnitAI& CvUnitAI::operator=(const CvUnitAI& other)
-{
-	m_iBirthmark = other.m_iBirthmark;
-	m_eUnitAIType = other.m_eUnitAIType;
-	m_iAutomatedAbortTurn = other.m_iAutomatedAbortTurn;
-	m_iGroupLeadOverride = other.m_iGroupLeadOverride;
-	m_contractsLastEstablishedTurn = other.m_contractsLastEstablishedTurn;
-	m_contractualState = other.m_contractualState;
-	m_eIntendedConstructBuilding = other.m_eIntendedConstructBuilding;
-	m_iPredictedHitPoints = other.m_iPredictedHitPoints;
-	m_bHasAttacked = other.m_bHasAttacked;
-	m_bWaitingOnUnitAIAny = other.m_bWaitingOnUnitAIAny;
-	m_iGarrisonCity = other.m_iGarrisonCity;
-	m_iGenericValue = other.m_iGenericValue;
-	m_aiWaitingOnUnitAITypes = other.m_aiWaitingOnUnitAITypes;
-
-	return *this;
-}
 
 void CvUnitAI::AI_init(UnitAITypes eUnitAI, int iBirthmark)
 {
@@ -161,7 +137,6 @@ void CvUnitAI::AI_reset(UnitAITypes eUnitAI, bool bConstructorCall)
 bool CvUnitAI::AI_update()
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK();
 
 	logBBAI("AI_Update for unit %d of owner %d\n", m_iID, m_eOwner);
 
@@ -7385,7 +7360,6 @@ void CvUnitAI::AI_pirateSeaMove()
 void CvUnitAI::AI_attackSeaMove()
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK();
 
 	if (AI_selectStatus(true))
 	{
@@ -18601,7 +18575,6 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool bAllowCities, bool bFollow)
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK();
 
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;
@@ -18818,7 +18791,6 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 bool CvUnitAI::AI_attackTargets(int iRange, int iOddsThreshold, int iMinStack, bool bAllowCities, bool bFollow)
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK();
 
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;

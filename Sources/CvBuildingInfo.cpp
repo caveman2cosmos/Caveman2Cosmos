@@ -231,7 +231,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iHappinessPercentPerPopulation(0)
 //New Booleans
 ,m_bApplyFreePromotionOnMove(false)
-,m_bBuildOnlyOnPeaks(false)
 ,m_bPrereqPower(false)
 ,m_bNoEnemyPillagingIncome(false)
 ,m_bProvidesFreshWater(false)
@@ -2136,7 +2135,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 
 	CheckSum(iSum, m_bApplyFreePromotionOnMove);
 	CheckSum(iSum, m_bProtectedCulture);
-	CheckSum(iSum, m_bBuildOnlyOnPeaks);
 	CheckSum(iSum, m_bPrereqPower);
 	CheckSum(iSum, m_bNoEnemyPillagingIncome);
 	CheckSum(iSum, m_bProvidesFreshWater);
@@ -2338,7 +2336,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 //
 bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 
@@ -3038,7 +3035,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bForceAllTradeRoutes, L"bForceAllTradeRoutes");
 	pXML->GetOptionalChildXmlValByName(&m_iPillageGoldModifier, L"iPillageGoldModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iWorldTradeRoutes, L"iWorldTradeRoutes");
-	pXML->GetOptionalChildXmlValByName(&m_bBuildOnlyOnPeaks, L"bBuildOnlyOnPeaks");
 	pXML->GetOptionalChildXmlValByName(&m_bPrereqPower, L"bPrereqPower");
 	pXML->GetOptionalChildXmlValByName(&m_bForceNoPrereqScaling, L"bForceNoPrereqScaling");
 	pXML->GetOptionalChildXmlValByName(&m_bPrereqWar, L"bPrereqWar");
@@ -4600,7 +4596,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (isForceAllTradeRoutes() == bDefault) m_bForceAllTradeRoutes = pClassInfo->isForceAllTradeRoutes();
 	if (getPillageGoldModifier() == iDefault) m_iPillageGoldModifier = pClassInfo->getPillageGoldModifier();
 	if (getWorldTradeRoutes() == iDefault) m_iWorldTradeRoutes = pClassInfo->getWorldTradeRoutes();
-	if (isBuildOnlyOnPeaks() == bDefault) m_bBuildOnlyOnPeaks = pClassInfo->isBuildOnlyOnPeaks();
 	if (isForceNoPrereqScaling() == bDefault) m_bForceNoPrereqScaling = pClassInfo->isForceNoPrereqScaling();
 	if (isPrereqWar() == bDefault) m_bPrereqWar = pClassInfo->isPrereqWar();
 	if (isRequiresActiveCivics() == bDefault) m_bRequiresActiveCivics = pClassInfo->isRequiresActiveCivics();

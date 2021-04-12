@@ -87,7 +87,7 @@ typedef struct
 //			to do what is asked of it (move to a location, join a group being current options)
 //		4)	If no suitable work is available continue with its own unit AI for low priority actions
 //
-class CvContractBroker
+class CvContractBroker : bst::noncopyable
 {
 public:
 	CvContractBroker();

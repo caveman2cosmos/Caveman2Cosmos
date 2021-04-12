@@ -99,7 +99,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CANAANISM_STRATEGY</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CANAANISM_QUOTE</Tag>
@@ -131,6 +130,5 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANAANITE_MISSIONARY_STRATEGY</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 </Civ4GameText>

@@ -524,4 +524,12 @@
 		<DefineName>MIN_POP_CONSIDER_INQUISITORS</DefineName>
 		<iDefineIntVal>7</iDefineIntVal>
 	</Define>
+	<Define>
+		<!-- Toffer
+			Used when evaluating if player is well enough funded to start planning a war.
+			Value divided by 2 for limited war plan, and divided by 3 for dogpile war plan.
+		-->
+		<DefineName>ESTIMATED_EXTRA_WAR_EXPENSE_PERCENT</DefineName>
+		<iDefineIntVal>12</iDefineIntVal>
+	</Define>
 </Civ4Defines>

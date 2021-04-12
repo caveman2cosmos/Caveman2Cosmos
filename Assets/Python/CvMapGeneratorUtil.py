@@ -1604,7 +1604,7 @@ def c2CMapReport(sWhen):
 	# Display actual Mod-Resources
 	# countResource.sort()
 	boni = 0
-	dontReportBonusClass = [GC.getInfoTypeForString("BONUSCLASS_CULTURE"), GC.getInfoTypeForString("BONUSCLASS_MANUFACTURED")]
+	dontReportBonusClass = [GC.getInfoTypeForString("BONUSCLASS_CULTURE"), GC.getInfoTypeForString("BONUSCLASS_MANUFACTURED"), GC.getInfoTypeForString("BONUSCLASS_GENMODS")]
 	while boni < GC.getNumBonusInfos():
 		type_string = GC.getBonusInfo(boni).getType()
 		class_int = GC.getBonusInfo(boni).getBonusClassType()

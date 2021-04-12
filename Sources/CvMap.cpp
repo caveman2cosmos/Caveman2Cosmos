@@ -374,46 +374,14 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 }
 
 
-void CvMap::updateIncomingUnits()
-{
-	for (std::vector<IncomingUnit>::iterator itr = m_IncomingUnits.begin(), itrEnd = m_IncomingUnits.end(); itr != itrEnd; ++itr)
-	{
-		(*itr).second--;
-		if ((*itr).second <= 0)
-		{
-			GC.switchMap(m_eType);
-
-			CvUnit& offMapUnit = (*itr).first;
-			CvPlayer& owner = GET_PLAYER(offMapUnit.getOwner());
-			CvPlot* startingPlot = owner.findStartingPlot();
-			CvUnit* onMapUnit = owner.initUnit(offMapUnit.getUnitType(), startingPlot->getX(), startingPlot->getY(), offMapUnit.AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-			if (onMapUnit == NULL)
-			{
-				FErrorMsg("CvPlayer::initUnit returned NULL");
-				continue;
-			}
-			*onMapUnit = offMapUnit;
-			m_IncomingUnits.erase(itr);
-		}
-	}
-}
-
-
+// XXX generalize these funcs? (macro?)
 void CvMap::doTurn()
 {
-	MEMORY_TRACE_FUNCTION();
-	PROFILE("CvMap::doTurn()")
+	PROFILE("CvMap::doTurn()");
 
-	updateIncomingUnits();
-
-	if (plotsInitialized())
+	for (int iI = 0; iI < numPlots(); iI++)
 	{
-		GC.switchMap(m_eType);
-
-		for (int iI = 0; iI < numPlots(); iI++)
-		{
-			plotByIndex(iI)->doTurn();
-		}
+		plotByIndex(iI)->doTurn();
 	}
 }
 
@@ -1237,7 +1205,7 @@ void CvMap::invalidateIsTeamBorderCache(TeamTypes eTeam)
 //
 void CvMap::read(FDataStreamBase* pStream)
 {
-	OutputDebugString("Reading Map: Start\n");
+	OutputDebugString("Reading Map: Start");
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -1282,20 +1250,9 @@ void CvMap::read(FDataStreamBase* pStream)
 
 	setup();
 
-#ifdef BREAK_SAVES
-	size_t numUnits;
-	WRAPPER_READ_DECORATED(wrapper, "CvMap", &numUnits, "numUnits")
-	for (uint32_t i = 0; i < numUnits; i++)
-	{
-		int turns;
-		WRAPPER_READ_DECORATED(wrapper, "CvMap", &turns, "turns")
-		m_IncomingUnits.push_back(std::make_pair(CvUnitAI(), turns));
-		m_IncomingUnits[i].first.read(pStream);
-	}
-#endif
 	WRAPPER_READ_OBJECT_END(wrapper);
 
-	OutputDebugString("Reading Map: End\n");
+	OutputDebugString("Reading Map: End");
 }
 
 // save object to a stream
@@ -1332,14 +1289,6 @@ void CvMap::write(FDataStreamBase* pStream)
 	// call the read of the free list CvArea class allocations
 	WriteStreamableFFreeListTrashArray(m_areas, pStream);
 
-#ifdef BREAK_SAVES
-	WRAPPER_WRITE_DECORATED(wrapper, "CvMap", m_IncomingUnits.size(), "numUnits")
-	foreach_(IncomingUnit& incomingUnit, m_IncomingUnits)
-	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvMap", incomingUnit.second, "turns")
-		incomingUnit.first.write(pStream);
-	}
-#endif
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -1572,15 +1521,10 @@ CvViewport* CvMap::getCurrentViewport() const
 
 	return (m_iCurrentViewportIndex == -1 ? NULL : m_viewports[m_iCurrentViewportIndex]);
 }
-
+	
 MapTypes CvMap::getType() const
 {
 	return m_eType;
-}
-
-void CvMap::addIncomingUnit(CvUnitAI& unit, int numTravelTurns)
-{
-	m_IncomingUnits.push_back(std::make_pair(unit, numTravelTurns));
 }
 
 const char* CvMap::getMapScript() const
@@ -1662,7 +1606,6 @@ void CvMap::toggleCitiesDisplay()
 			}
 		}
 	}
-	MEMORY_TRACK_EXEMPT();
 	AddDLLMessage(
 		GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(),
 		m_bCitiesDisplayed ? "City entities visible" : "City entities hidden",
@@ -1798,7 +1741,6 @@ void CvMap::toggleUnitsDisplay()
 	if (m_bUnitsDisplayed)
 		szBuffer = "Unit entities created";
 			
-	MEMORY_TRACK_EXEMPT();
 
 	AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
 }

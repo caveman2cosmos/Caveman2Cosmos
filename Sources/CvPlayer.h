@@ -51,7 +51,7 @@ typedef std::vector< std::pair<UnitTypes, PromotionTypes> > UnitPromotionArray;
 typedef std::vector< std::pair<CivilizationTypes, LeaderHeadTypes> > CivLeaderArray;
 typedef std::vector<TechTypes> techPath;
 
-class CvPlayer
+class CvPlayer : bst::noncopyable
 {
 public:
 	CvPlayer();
@@ -329,6 +329,8 @@ public:
 	int getInflationMod10000() const;
 	int64_t getInflationCost() const;
 	int64_t getFinalExpense() const;
+	short getProfitMargin(int &iTotalCommerce, int64_t &iNetIncome, int64_t &iNetExpenses, int iExtraExpense=0, int iExtraExpenseMod=0) const;
+	short getProfitMargin(int iExtraExpense=0, int iExtraExpenseMod=0) const;
 
 	int64_t calculateBaseNetGold() const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const;
@@ -1111,7 +1113,6 @@ public:
 	DllExport int getNumUnits() const;
 	CvUnit* getUnit(int iID) const;
 	CvUnit* addUnit();
-	CvUnit& addUnit(CvUnit& unit);
 	void deleteUnit(int iID);
 
 	// selection groups iteration
@@ -1726,8 +1727,8 @@ public:
 	virtual int AI_maxGoldTrade(PlayerTypes ePlayer) const = 0;
 protected:
 
-	std::vector<int> m_vStartingX;
-	std::vector<int> m_vStartingY;
+	int m_iStartingX;
+	int m_iStartingY;
 	int m_iTotalPopulation;
 	int m_iTotalLand;
 	int m_iTotalLandScored;

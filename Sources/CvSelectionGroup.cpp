@@ -195,7 +195,7 @@ bool CvSelectionGroup::sentryAlertSameDomainType() const
 
 void CvSelectionGroup::doTurn()
 {
-	PROFILE("CvSelectionGroup::doTurn()")
+	PROFILE("CvSelectionGroup::doTurn()");
 
 	FAssert(getOwner() != NO_PLAYER);
 
@@ -338,7 +338,7 @@ void CvSelectionGroup::doTurn()
 
 void CvSelectionGroup::resetHealing()
 {
-	PROFILE("CvSelectionGroup::resetHealing()")
+	PROFILE("CvSelectionGroup::resetHealing()");
 
 	algo::for_each(units(), CvUnit::fn::setHealSupportUsed(0));
 }
@@ -1245,75 +1245,6 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				return true;
 			}
 			break;
-
-		case MISSION_GO_TO_MAP_EARTH:
-			return CURRENT_MAP != MAP_EARTH
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_SUBTERRANEAN:
-			return CURRENT_MAP != MAP_SUBTERRANEAN
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_AQUATIC:
-			return CURRENT_MAP != MAP_AQUATIC
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_CISLUNAR:
-			return CURRENT_MAP != MAP_CISLUNAR
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_LUNAR:
-			return CURRENT_MAP != MAP_LUNAR
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_SOLAR_SYSTEM:
-			return CURRENT_MAP != MAP_SOLAR_SYSTEM
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_MARTIAN:
-			return CURRENT_MAP != MAP_MARTIAN
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_VENUSIAN:
-			return CURRENT_MAP != MAP_VENUSIAN
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_JOVIAN:
-			return CURRENT_MAP != MAP_JOVIAN
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_TITANIC:
-			return CURRENT_MAP != MAP_TITANIC
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_INTERSTELLAR:
-			return CURRENT_MAP != MAP_INTERSTELLAR
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_PLASMA:
-			return CURRENT_MAP != MAP_PLASMA
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_GALACTIC:
-			return CURRENT_MAP != MAP_GALACTIC
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_MILKY_WAY:
-			return CURRENT_MAP != MAP_MILKY_WAY
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_UNIVERSAL:
-			return CURRENT_MAP != MAP_UNIVERSAL
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_DISTANT:
-			return CURRENT_MAP != MAP_DISTANT
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_HYPERSPACE:
-			return CURRENT_MAP != MAP_HYPERSPACE
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
 		default:
 			// AIAndy: Assumed to be an outcome mission
 			// FAssert(false);
@@ -2079,108 +2010,6 @@ bool CvSelectionGroup::startMission()
 						}
 						break;
 
-					case MISSION_GO_TO_MAP_EARTH:
-						pLoopUnit->goToMap(MAP_EARTH);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_SUBTERRANEAN:
-						pLoopUnit->goToMap(MAP_SUBTERRANEAN);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_AQUATIC:
-						pLoopUnit->goToMap(MAP_AQUATIC);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_CISLUNAR:
-						pLoopUnit->goToMap(MAP_CISLUNAR);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_LUNAR:
-						pLoopUnit->goToMap(MAP_LUNAR);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_SOLAR_SYSTEM:
-						pLoopUnit->goToMap(MAP_SOLAR_SYSTEM);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_MARTIAN:
-						pLoopUnit->goToMap(MAP_MARTIAN);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_VENUSIAN:
-						pLoopUnit->goToMap(MAP_VENUSIAN);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_JOVIAN:
-						pLoopUnit->goToMap(MAP_JOVIAN);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_TITANIC:
-						pLoopUnit->goToMap(MAP_TITANIC);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_INTERSTELLAR:
-						pLoopUnit->goToMap(MAP_INTERSTELLAR);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_PLASMA:
-						pLoopUnit->goToMap(MAP_PLASMA);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_GALACTIC:
-						pLoopUnit->goToMap(MAP_GALACTIC);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_MILKY_WAY:
-						pLoopUnit->goToMap(MAP_MILKY_WAY);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_UNIVERSAL:
-						pLoopUnit->goToMap(MAP_UNIVERSAL);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_DISTANT:
-						pLoopUnit->goToMap(MAP_DISTANT);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_HYPERSPACE:
-						pLoopUnit->goToMap(MAP_HYPERSPACE);
-						bAction = true;
-						bDelete = true;
-						break;
-
 					default:
 						// AIAndy: Assumed to be an outcome mission
 						// FAssert(false);
@@ -2710,23 +2539,6 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			case MISSION_WAIT_FOR_TECH:
 			case MISSION_AMBUSH:
 			case MISSION_ASSASSINATE:
-			case MISSION_GO_TO_MAP_EARTH:
-			case MISSION_GO_TO_MAP_SUBTERRANEAN:
-			case MISSION_GO_TO_MAP_AQUATIC:
-			case MISSION_GO_TO_MAP_CISLUNAR:
-			case MISSION_GO_TO_MAP_LUNAR:
-			case MISSION_GO_TO_MAP_SOLAR_SYSTEM:
-			case MISSION_GO_TO_MAP_MARTIAN:
-			case MISSION_GO_TO_MAP_VENUSIAN:
-			case MISSION_GO_TO_MAP_JOVIAN:
-			case MISSION_GO_TO_MAP_TITANIC:
-			case MISSION_GO_TO_MAP_INTERSTELLAR:
-			case MISSION_GO_TO_MAP_PLASMA:
-			case MISSION_GO_TO_MAP_GALACTIC:
-			case MISSION_GO_TO_MAP_MILKY_WAY:
-			case MISSION_GO_TO_MAP_UNIVERSAL:
-			case MISSION_GO_TO_MAP_DISTANT:
-			case MISSION_GO_TO_MAP_HYPERSPACE:
 				bDone = true;
 				break;
 
@@ -4657,7 +4469,6 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 
 				if (iProduction > 0)
 				{
-					MEMORY_TRACK_EXEMPT();
 
 					CvWString szBuffer = gDLL->getText("TXT_KEY_BUG_PRECLEARING_FEATURE_BONUS", GC.getFeatureInfo(eFeature).getTextKeyWide(), iProduction, pCity->getNameKey());
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getFeatureInfo(eFeature).getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
@@ -5523,7 +5334,7 @@ bool CvSelectionGroup::generatePath(const CvPlot* pFromPlot, const CvPlot* pToPl
 {
 	bool bSuccess;
 
-	PROFILE("CvSelectionGroup::generatePath()")
+	PROFILE("CvSelectionGroup::generatePath()");
 
 #ifdef USE_OLD_PATH_GENERATOR
 
@@ -5731,7 +5542,6 @@ bool CvSelectionGroup::HaveCachedPathEdgeCosts(const CvPlot* pFromPlot, const Cv
 
 void CvSelectionGroup::CachePathEdgeCosts(const CvPlot* pFromPlot, const CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost) const
 {
-	MEMORY_TRACK_EXEMPT();
 
 	if (this == m_pCachedMovementGroup)
 	{

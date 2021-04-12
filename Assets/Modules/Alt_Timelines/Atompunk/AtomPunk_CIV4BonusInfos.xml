@@ -11,17 +11,11 @@
 		<Type>BONUS_ATOMPUNK</Type>
 		<Description>TXT_KEY_BONUS_ATOMPUNK</Description>
 		<Civilopedia>TXT_KEY_BONUS_ATOMPUNK_PEDIA</Civilopedia>
-		<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+		<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 		<ArtDefineTag>ART_DEF_BONUS_ATOMPUNK</ArtDefineTag>
 		<TechReveal>TECH_ATOMPUNK</TechReveal>
 		<TechCityTrade>TECH_ATOMPUNK</TechCityTrade>
-		<TechObsolete>NONE</TechObsolete>
-		<iAITradeModifier>0</iAITradeModifier>
-		<iAIObjective>0</iAIObjective>
-		<iHealth>0</iHealth>
-		<iHappiness>0</iHappiness>
 		<iPlacementOrder>-1</iPlacementOrder>
-		<iConstAppearance>0</iConstAppearance>
 	</BonusInfo>
 </BonusInfos>
 </Civ4BonusInfos>

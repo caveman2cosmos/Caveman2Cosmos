@@ -4229,7 +4229,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 //
 bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
 	CvString szTextVal2;

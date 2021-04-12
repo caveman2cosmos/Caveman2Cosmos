@@ -11,17 +11,11 @@
 		<Type>BONUS_DIESELPUNK</Type>
 		<Description>TXT_KEY_BONUS_DIESELPUNK</Description>
 		<Civilopedia>TXT_KEY_BONUS_DIESELPUNK_PEDIA</Civilopedia>
-		<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+		<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 		<ArtDefineTag>ART_DEF_BONUS_DIESELPUNK</ArtDefineTag>
 		<TechReveal>TECH_DIESELPUNK</TechReveal>
 		<TechCityTrade>TECH_DIESELPUNK</TechCityTrade>
-		<TechObsolete>NONE</TechObsolete>
-		<iAITradeModifier>0</iAITradeModifier>
-		<iAIObjective>0</iAIObjective>
-		<iHealth>0</iHealth>
-		<iHappiness>0</iHappiness>
 		<iPlacementOrder>-1</iPlacementOrder>
-		<iConstAppearance>0</iConstAppearance>
 	</BonusInfo>
 <!-- Theremin -->
 <!-- by Faustmouse -->
@@ -33,13 +27,8 @@
 		<ArtDefineTag>ART_DEF_BONUS_THEREMIN</ArtDefineTag>
 		<TechReveal>TECH_ELECTRONICS</TechReveal>
 		<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
-		<TechObsolete>NONE</TechObsolete>
-		<iAITradeModifier>0</iAITradeModifier>
-		<iAIObjective>0</iAIObjective>
-		<iHealth>0</iHealth>
 		<iHappiness>1</iHappiness>
 		<iPlacementOrder>-1</iPlacementOrder>
-		<iConstAppearance>0</iConstAppearance>
 	</BonusInfo>
 </BonusInfos>
 </Civ4BonusInfos>

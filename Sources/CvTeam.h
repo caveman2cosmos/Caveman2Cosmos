@@ -10,7 +10,7 @@
 class CvArea;
 class CvProperties;
 
-class CvTeam
+class CvTeam : bst::noncopyable
 {
 public:
 	CvTeam();
@@ -136,7 +136,6 @@ public:
 	int isAlive() const;
 	void changeAliveCount(int iChange);
 
-	int getEverAliveCount() const;
 	int isEverAlive() const;
 	void changeEverAliveCount(int iChange);
 
@@ -324,7 +323,6 @@ public:
 	void changeWarWeariness(TeamTypes eIndex, int iChange);
 	void changeWarWearinessTimes100(TeamTypes eIndex, int iChange);
 
-	int getTechShareCount(int iIndex) const;
 	bool isTechShare(int iIndex) const;
 	void changeTechShareCount(int iIndex, int iChange);
 

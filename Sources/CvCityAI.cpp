@@ -1803,17 +1803,13 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	// Afforess - don't wait until we are in trouble, preventative medicine is best
-	int iFundedPercent = player.AI_profitMargin();
-	int iSafePercent = player.AI_safeProfitMargin();
-	// if ( bFinancialTrouble )
-	if (iFundedPercent < iSafePercent - 10)
+	if (bFinancialTrouble && AI_chooseBuilding(BUILDINGFOCUS_GOLD, 10))
 	{
-		if (AI_chooseBuilding(BUILDINGFOCUS_GOLD, 10))
+		if (gCityLogLevel >= 2)
 		{
-			if( gCityLogLevel >= 2 ) logBBAI("      City %S uses financial difficulty resolution", getName().GetCString());
-			return;
+			logBBAI("      City %S uses financial difficulty resolution", getName().GetCString());
 		}
+		return;
 	}
 
 	m_iTempBuildPriority--;
@@ -4686,7 +4682,6 @@ int CvCityAI::AI_buildingValueThresholdOriginal(BuildingTypes eBuilding, int iFo
 int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding, int iFocusFlags, int iThreshold, bool bMaximizeFlaggedValue, bool bIgnoreCanBuildReplacement, bool bForTech)
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK();
 
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	const CvTeamAI& kTeam = GET_TEAM(getTeam());
@@ -8095,16 +8090,18 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 	{
 		//probably a good candidate for a wonder pump
 		iProductionMultiplier += 40;
-		iCommerceMultiplier += (kPlayer.AI_isFinancialTrouble()) ? 0 : -40;
+
+		if (kPlayer.AI_isFinancialTrouble())
+		{
+			iCommerceMultiplier -= 40;
+		}
 	}
 
-	const int iNetCommerce = 1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH) + std::max(0, kPlayer.getGoldPerTurn());
-	const int64_t iNetExpenses = kPlayer.getFinalExpense() + std::max(0, -kPlayer.getGoldPerTurn());
-	const int iRatio = static_cast<int>(100 * iNetExpenses / std::max(1, iNetCommerce));
+	const short iProfitMargin = kPlayer.getProfitMargin();
 
-	if (iRatio > 40)
+	if (iProfitMargin < 50)
 	{
-		iCommerceMultiplier += (33 * (iRatio - 40)) / 60;
+		iCommerceMultiplier += (50 - iProfitMargin) * 33/50;
 	}
 	// AI no longer uses emphasis except for short term boosts.
 	if (isHuman())
@@ -8623,19 +8620,11 @@ void CvCityAI::AI_updateBestBuild()
 	}
 
 
-	const int iNetCommerce =
-	(
-		1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH)
-		+
-		std::max(0, kPlayer.getGoldPerTurn())
-	);
-	const int64_t iNetExpenses = kPlayer.getFinalExpense() + std::max(0, -kPlayer.getGoldPerTurn());
+	const short iProfitMargin = kPlayer.getProfitMargin();
 
-	const int iRatio = static_cast<int>(100 * iNetExpenses / std::max(1, iNetCommerce));
-
-	if (iRatio > 40)
+	if (iProfitMargin < 50)
 	{
-		iCommerceMultiplier += (iRatio - 40) * 33 / 60;
+		iCommerceMultiplier += (50 - iProfitMargin) * 33/50;
 	}
 
 	// AI no longer uses emphasis except for short term boosts.
@@ -10149,7 +10138,6 @@ bool CvCityAI::AI_removeWorstCitizen(SpecialistTypes eIgnoreSpecialist)
 
 void CvCityAI::AI_juggleCitizens()
 {
-	MEMORY_TRACK()
 
 	bool bAvoidGrowth = AI_avoidGrowth();
 	bool bIgnoreGrowth = AI_ignoreGrowth();
@@ -10532,7 +10520,7 @@ int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoi
 
 int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization)
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	const int iBaseProductionValue = 15;
 	const int iBaseCommerceValue[NUM_COMMERCE_TYPES] = {7,10,7,7};	//	Koshling - boost science a bit
@@ -12704,31 +12692,21 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 			}
 		}
 
-		const int iIncome = 1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH) + std::max(0, kPlayer.getGoldPerTurn());
-		const int64_t iExpenses = 1 + kPlayer.getFinalExpense() - std::min(0, kPlayer.getGoldPerTurn());
-		FAssert(iIncome > 0);
 
-		const int iRatio = static_cast<int>((100 * iExpenses) / std::max(1, iIncome));
+		const short iProfitMargin = kPlayer.getProfitMargin();
 
-		//Gold -> Production Reduced To
-		// 40- -> 100%
-		// 60 -> 83%
-		// 100 -> 28%
-		// 110+ -> 14%
-		m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] += 100;
-		if (iRatio > 60)
+		if (iProfitMargin <= 40)
 		{
 			//Greatly decrease production weight
-			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] *= std::max(10, 120 - iRatio);
-			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] /= 72;
+			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] *= (40 + iProfitMargin * 5) / 4; // range from 10 to 60
+			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] /= 80; // 0.125 - 0.75
 		}
-		else if (iRatio > 40)
+		else if (iProfitMargin <= 60)
 		{
 			//Slightly decrease production weight.
-			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] *= 160 - iRatio;
-			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] /= 120;
+			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] *= 110 + iProfitMargin * 4; // range from 274 to 350
+			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] /= 360; // 0.761 - 0.972
 		}
-		m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] -= 100;
 	}
 }
 
@@ -13921,7 +13899,6 @@ public:
 
 	void AccumulateTo(int iFocusIndex, int value, bool isThresholdSet)
 	{
-		MEMORY_TRACK_EXEMPT();
 
 		if ( isThresholdSet )
 		{
@@ -14073,7 +14050,6 @@ public:
 		std::map<int,OneBuildingValueCache*>::const_iterator itr = m_buildingValues.find(eBuilding);
 		if ( itr == m_buildingValues.end() )
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			//	New entry
 			result = new OneBuildingValueCache();
@@ -14494,7 +14470,6 @@ int	CvCityAI::GetBuildingValue(BuildingTypes eBuilding, int iFocusFlags, int iTh
 	{
 		if (cachedBuildingValues == NULL)
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			OutputDebugString(CvString::format("Rebuilding building value cache for City %S\n", getName().GetCString()).c_str());
 			cachedBuildingValues = new BuildingValueCache(this);
@@ -14575,7 +14550,7 @@ void CvCityAI::AI_FlushBuildingValueCache(bool bRetainValues)
 
 void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	// KOSHLING optimisation - moved what we could outside of the building loop
 	const PlayerTypes ePlayer = getOwner();

@@ -152,19 +152,19 @@ public:
 
 	bool AI_avoidScience() const;
 	bool AI_isFinancialTrouble() const;
-	int AI_profitMargin(int iExtraCost = 0) const;
-	int AI_safeProfitMargin() const;
+	short AI_fundingHealth(int iExtraExpense = 0, int iExtraExpenseMod = 0) const;
+	short AI_safeFunding() const;
 	int AI_goldTarget() const;
 	int AI_goldValueAssessmentModifier() const;
 
 	TechTypes AI_bestTech(int iMaxPathLength = 1, bool bIgnoreCost = false, bool bAsync = false, TechTypes eIgnoreTech = NO_TECH, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR) const;
 
-	int AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
+	int AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const;
 	int AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bEnablesWonder ) const;
 	int AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnablesUnitWonder ) const;
 
-	int  AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave, bool considerFollowOns = false) const;
-	int AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
+	int  AI_TechValueCached(TechTypes eTech, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave, bool considerFollowOns = false) const;
+	int AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const;
 	void AI_chooseFreeTech();
 	void AI_chooseResearch();
 	void AI_startGoldenAge();
@@ -639,8 +639,8 @@ private:
 	static int plotDangerCacheReads;
 #endif
 
-	techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
-	int	 techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
+	techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const;
+	int	 techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const;
 	TechTypes findStartTech(techPath* path) const;
 
 	typedef stdext::hash_map<TechTypes, int> TechTypesValueMap;

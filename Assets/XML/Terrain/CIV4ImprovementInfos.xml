@@ -2757,7 +2757,6 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
-			<iUpgradeTime>32</iUpgradeTime>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_CRATER</FeatureType>
@@ -2995,7 +2994,6 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
-			<iUpgradeTime>10</iUpgradeTime>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
@@ -7968,7 +7966,6 @@
 			<PrereqTech>TECH_GAS_LIGHTING</PrereqTech>
 			<iHealthPercent>-100</iHealthPercent>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iUpgradeTime>50</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>120</iPillageGold>
 			<TerrainMakesValids>
@@ -9163,7 +9160,6 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_WINDMILL</ImprovementPillage>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
-			<iUpgradeTime>20</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>30</iPillageGold>
 			<TerrainMakesValids>
@@ -9333,7 +9329,6 @@
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iAdvancedStartCost>35</iAdvancedStartCost>
-			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>10</iPillageGold>
 			<TerrainMakesValids>
@@ -9429,7 +9424,6 @@
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
 			<iFeatureGrowth>64</iFeatureGrowth>
-			<iUpgradeTime>32</iUpgradeTime>
 			<iAirBombDefense>20</iAirBombDefense>
 			<iHealthPercent>25</iHealthPercent>
 			<FeatureMakesValids>
@@ -9570,7 +9564,6 @@
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
-			<iUpgradeTime>4</iUpgradeTime>
 			<iPillageGold>8</iPillageGold>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
@@ -9594,7 +9587,6 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_SEED_CAMP</ImprovementPillage>
 			<bRequiresFeature>1</bRequiresFeature>
-			<iUpgradeTime>10</iUpgradeTime>
 			<iPillageGold>8</iPillageGold>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
@@ -10274,7 +10266,6 @@
 			<ImprovementPillage>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementPillage>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>400</iAdvancedStartCost>
-			<iUpgradeTime>25</iUpgradeTime>
 			<iAirBombDefense>15</iAirBombDefense>
 			<iDefenseModifier>20</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -10636,7 +10627,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_COMMAND_CENTER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_CENTER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_CENTER</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_COMMAND_BUNKER</ImprovementPillage>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
@@ -10729,7 +10719,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_BUNKER</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -10824,7 +10813,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_FORT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORT</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -10920,7 +10908,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ArtDefineTag>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
-			<bActsAsCity>1</bActsAsCity>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>90</iAirBombDefense>
@@ -10946,7 +10933,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -10971,7 +10957,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_PALISADE</ArtDefineTag>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<bActsAsCity>1</bActsAsCity>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -11060,7 +11045,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_ABATIS_THORN_HEDGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ABATIS_THORN_HEDGE</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>5</iUpgradeTime>
@@ -11813,13 +11797,13 @@
 			<iUpgradeTime>2</iUpgradeTime>
 			<ImprovementUpgrade>IMPROVEMENT_FISHING_BOATS</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
-				<ImprovementUpgrade>IMPROVEMENT_WHALING_BOATS</ImprovementUpgrade>
-				<ImprovementUpgrade>IMPROVEMENT_HARVEST_KELP</ImprovementUpgrade>
-				<ImprovementUpgrade>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementUpgrade>
-				<ImprovementUpgrade>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementUpgrade>
-				<ImprovementUpgrade>IMPROVEMENT_MARINE_PRESERVE</ImprovementUpgrade>
-				<ImprovementUpgrade>IMPROVEMENT_SEA_MILL</ImprovementUpgrade>
-				<ImprovementUpgrade>IMPROVEMENT_TIDAL_HARNESS</ImprovementUpgrade>
+				<ImprovementType>IMPROVEMENT_WHALING_BOATS</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HARVEST_KELP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
+				<ImprovementType>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementType>
+				<ImprovementType>IMPROVEMENT_MARINE_PRESERVE</ImprovementType>
+				<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
+				<ImprovementType>IMPROVEMENT_TIDAL_HARNESS</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
@@ -12095,7 +12079,6 @@
 			<bRequiresFeature>1</bRequiresFeature>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
-			<iUpgradeTime>32</iUpgradeTime>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
@@ -12762,7 +12745,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_AQUATIC_FORCEFIELD</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
