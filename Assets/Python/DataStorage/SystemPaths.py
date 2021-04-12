@@ -59,3 +59,6 @@ def initUserSettingsDir():
 
 def isFile(aPath):
 	return path.isfile(aPath)
+
+def joinModDir(*paths):
+	return path.join(modDir, *paths)
