@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvDLLIniParserIFaceBase.h"
 #include "logging.h"
 
 namespace logging
@@ -20,14 +21,13 @@ namespace logging
 
 	void logMsg(const char* file, const char* msg, ...)
 	{
-		if (GC.isXMLLogging())
+		if (GC.getLogging())
 		{
 			static char buf[2048];
 			_vsnprintf(buf, 2048 -4, msg, (char*)(&msg +1));
 			strcat(buf, "\n");
 
-			const std::string path = getModDir() + "\\Logs\\" + file;
-			std::fstream stream(path.c_str(), std::ios::out | std::ios::app);
+			std::ofstream stream((getModDir() + "\\Logs\\" + file).c_str(), std::ios::app);
 			FAssert(stream.is_open())
 			stream << buf;
 			stream.close();
@@ -38,7 +38,7 @@ namespace logging
 
 	void logMsgW(const char* file, const wchar_t* msg, ...)
 	{
-		if (GC.isXMLLogging())
+		if (GC.getLogging())
 		{
 			static wchar_t buf[2048];
 			_vsnwprintf(buf, 2048 -4, msg, (char*)(&msg +1));
@@ -46,8 +46,7 @@ namespace logging
 			wcstombs(buf2, buf, 2048 -4);
 			strcat(buf2, "\n");
 
-			const std::string path = getModDir() + "\\Logs\\" + file;
-			std::fstream stream(path.c_str(), std::ios::out | std::ios::app);
+			std::ofstream stream((getModDir() + "\\Logs\\" + file).c_str(), std::ios::app);
 			FAssert(stream.is_open())
 			stream << buf2;
 			stream.close();
@@ -56,24 +55,29 @@ namespace logging
 		}
 	}
 
+	void setOption(bool& option)
+	{
+		FIniParser* parser = gDLL->getIniParserIFace()->create((getModDir() + "\\Caveman2Cosmos.ini").c_str());
+		const bool sectionSet = gDLL->getIniParserIFace()->SetGroupKey(parser, "CONFIG");
+		const bool optionFound = gDLL->getIniParserIFace()->GetKeyValue(parser, "EnableLogging", &option);
+		FAssert(sectionSet && optionFound);
+		gDLL->getIniParserIFace()->destroy(parser);
+	}
+
 	void createLogsFolder()
 	{
-		const std::string logsDir = getModDir() + "\\Logs";
-		CreateDirectory(logsDir.c_str(), NULL);
+		CreateDirectory((getModDir() + "\\Logs").c_str(), NULL);
 	}
 
 	void deleteLogs()
 	{
-		const std::string path = getModDir() + "\\Logs\\*.*";
-		WIN32_FIND_DATA FileInformation;
-		HANDLE hFile = FindFirstFile(path.c_str(), &FileInformation);
+		WIN32_FIND_DATA FileInfo;
+		const HANDLE hFile = FindFirstFile((getModDir() + "\\Logs\\*.*").c_str(), &FileInfo);
 		if (hFile != INVALID_HANDLE_VALUE)
 		{
 			do {
-				const std::string cFile = getModDir() + "\\Logs\\" + FileInformation.cFileName;
-				const bool deleted = DeleteFile(cFile.c_str());
-				//FAssert(deleted)
-			} while (FindNextFile(hFile, &FileInformation));
+				DeleteFile((getModDir() + "\\Logs\\" + FileInfo.cFileName).c_str());
+			} while (FindNextFile(hFile, &FileInfo));
 		}
 	}
 }

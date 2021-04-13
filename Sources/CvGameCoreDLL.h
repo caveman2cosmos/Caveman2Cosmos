@@ -182,7 +182,8 @@ int64_t intSqrt64(const uint64_t iValue);
 int intPow(const int x, const int p);
 int64_t intPow64(const int64_t x, const int p);
 
-const std::string getModDir();
+std::string getModDir();
+
 //
 // Python
 //
@@ -289,6 +290,7 @@ namespace python = boost::python;
 //
 // Our code
 //
+#include "CvDLLIniParserIFaceBase.h"
 #include "copy_iterator.h"
 #include "index_iterator_base.h"
 #include "logging.h"

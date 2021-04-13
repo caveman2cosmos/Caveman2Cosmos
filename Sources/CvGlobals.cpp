@@ -283,7 +283,7 @@ LONG WINAPI CustomFilter(EXCEPTION_POINTERS *ExceptionInfo)
 //
 void cvInternalGlobals::init()
 {
-	OutputDebugString("Initializing Internal Globals: Start");
+	OutputDebugString("Initializing Internal Globals: Start\n");
 
 #ifdef MINIDUMP
 	/* Enable our custom exception that will write the minidump for us. */
@@ -402,6 +402,10 @@ void cvInternalGlobals::init()
 
 	FAssertMsg(gDLL != NULL, "Civ app needs to set gDLL");
 
+	logging::setOption(m_bLogging);
+	logging::createLogsFolder();
+	logging::deleteLogs();
+
 	m_VarSystem = new FVariableSystem;
 	m_asyncRand = new CvRandom;
 	m_initCore = new CvInitCore;
@@ -432,10 +436,7 @@ void cvInternalGlobals::init()
 	memcpy(m_aaiXYCityPlot, aaiXYCityPlot, sizeof(m_aaiXYCityPlot));
 	memcpy(m_aaeXYDirection, aaeXYDirection,sizeof(m_aaeXYDirection));
 
-	m_bSignsCleared = false;
-	m_bResourceLayerOn = false;
-
-	OutputDebugString("Initializing Internal Globals: End");
+	OutputDebugString("Initializing Internal Globals: End\n");
 }
 
 //

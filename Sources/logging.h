@@ -94,6 +94,7 @@ namespace logging
 	void logMsg(const char* file, const char* msg, ...);
 	void logMsgW(const char* file, const wchar_t* msg, ...);
 
+	void setOption(bool& option);
 	void createLogsFolder();
 	void deleteLogs();
 }
@@ -101,7 +102,7 @@ namespace logging
 #ifdef _DEBUG
 #define DEBUG_LOG logging::logMsg
 #else
-#define DEBUG_LOG ;
+#define DEBUG_LOG
 #endif
 
 #endif // logging_h__

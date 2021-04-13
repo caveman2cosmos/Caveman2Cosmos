@@ -91,8 +91,6 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				}
 			}
 		}
-		logging::createLogsFolder();
-		logging::deleteLogs();
 		}
 		break;
 	case DLL_THREAD_ATTACH:
@@ -689,7 +687,7 @@ int intPow(const int x, const int p)
 }
 // ! Toffer
 
-const std::string getModDir()
+std::string getModDir()
 {
 	return modDir;
 }
