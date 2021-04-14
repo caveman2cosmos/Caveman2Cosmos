@@ -32,8 +32,8 @@ def init():
 
 	dirBtS = path.dirname(sys.executable).encode('utf-8')
 
-	#modDir = dirBtS + "\\Mods\\Caveman2Cosmos"
-	modDir = getModDir()
+	modDir = dirBtS + "\\Mods\\Caveman2Cosmos"
+	#modDir = getModDir()
 
 	# Create UserSettings folders if missing.
 	userSettingsDir = modDir + "\\UserSettings"
@@ -44,6 +44,7 @@ def init():
 	sprint = "------------------------ SystemPaths.init ---------------------------\n"
 	sprint += " The following paths are now stored here with these variable names\n"
 	sprint += "---------------------------------------------------------------------\nCaveman2Cosmos\n"
+	sprint += "         dirBtS: %s\n" %dirBtS
 	sprint += "        userDir: %s\n" %userDir
 	sprint += "         modDir: %s\n" %modDir
 	sprint += "userSettingsDir: %s\n" %userSettingsDir
