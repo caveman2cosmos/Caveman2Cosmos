@@ -474,12 +474,25 @@ void CvGame::updateColoredPlots()
 
 			if (iMaxAirRange > 0)
 			{
+				const CvPlot* pFromPlot = pHeadSelectedUnit->plot();
+				const CvSelectionGroup* pGroup = pHeadSelectedUnit->getGroup();
+
 				foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iMaxAirRange, iMaxAirRange))
 				{
-					if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
+					if (pLoopPlot->isVisible(pHeadSelectedUnit->getTeam(), false) && plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
 					{
-						NiColorA color(GC.getColorInfo(GC.getCOLOR_WHITE()).getColor());
-						color.a = 0.4f;
+						NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
+						if (pGroup->canBombardAtRanged(pFromPlot, pLoopPlot->getX(), pLoopPlot->getY()))
+						{
+							if (pLoopPlot->getNumVisibleEnemyCombatUnits(pHeadSelectedUnit->getOwner()))
+							{
+								color.r = 0.0f;
+								color.b = 0.0f;
+							}
+							else color.b = 0.0f;
+						}
+						else color.a = 0.33f;
+
 						gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, PLOT_STYLE_TARGET, PLOT_LANDSCAPE_LAYER_BASE);
 					}
 				}
