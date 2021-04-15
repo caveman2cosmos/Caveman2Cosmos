@@ -31,9 +31,9 @@ Valid NPC players for spawns:
 	Translated to <iTurns>: iTurns = (iGlobalTurns / 100) * iValidPlots
 	iValidPlots = Number of Valid spawn plots on entire map
 Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
-  The smallest, after converting iGlobalTurns to iTurns, will set the minimum spawn frequency.
-  The biggest can only increase that spawn frequency above the minimum set by the smallest one.
-  The bigger the other is the less it will increase the frequency set by the smallest one.
+ The smallest, after converting iGlobalTurns to iTurns, will set the minimum spawn frequency.
+ The biggest can only increase that spawn frequency above the minimum set by the smallest one.
+ The bigger the other is the less it will increase the frequency set by the smallest one.
 -->
 <Civ4SpawnInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<SpawnInfos>

@@ -348,7 +348,7 @@
 		<English>The unit establishes a base of operations for healing and repair support. A unit that heals gets a 2%% bonus to any type of healing support abilities it already has for each turn it is Establishing Operations, to a maximum bonus of 10%%.</English>
 		<Polish>Jednostka utworzyła bazę operacyjna dla wsparcia medycznego i naprawczego. Za każdą turę przebywania w bazie, jednostka dostaje bonus 2% do leczenia/naprawy (max 10%).</Polish>
 		<French>L'unité établit une base d'opérations pour le soutien de guérison et de réparation. Une unité qui soigne obtient un bonus de 2%% pour tout type de capacités de soutien de guérison qu'elle a déjà pour chaque tour où elle établit des opérations, jusqu'à un bonus maximum de 10%%.</French>
-		<Russian>Подразделение создает базу для операций по лечению и восстановлению. Исцеляющий отряд получает бонус 2%% на каждый ход  к любому типу навыков исцеления, уже изученным им, а также операции по установлению, с максимальным бонусом в 10%%.</Russian>
+		<Russian>Подразделение создает базу для операций по лечению и восстановлению. Исцеляющий отряд получает бонус 2%% на каждый ход к любому типу навыков исцеления, уже изученным им, а также операции по установлению, с максимальным бонусом в 10%%.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FENGAGE</Tag>

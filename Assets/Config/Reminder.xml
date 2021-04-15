@@ -20,7 +20,7 @@
 					get="isEnabled" set="setEnabled" 
 					label="Enable Reminders [ALT + M]" 
 					help="Turn on eotinb's Reminders mod."/>
-			<list   id="DisplayMethod" key="Display Method" 
+			<list id="DisplayMethod" key="Display Method" 
 					type="int" default="2" listType="string" 
 					get="getDisplayMethod" set="setDisplayMethod">
 				<choice id="Message" get="isShowMessage"/>

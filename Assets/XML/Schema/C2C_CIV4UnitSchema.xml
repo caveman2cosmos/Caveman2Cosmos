@@ -2353,7 +2353,7 @@
 		<element type="bNoSelfHeal" minOccurs="0"/>
 		<element type="iSelfHealModifier" minOccurs="0"/>
 		<element type="iNumHealSupport" minOccurs="0"/>
-		<!--TB SubCombat Mod begin  TB Combat Mod begin-->
+		<!--TB SubCombat Mod begin TB Combat Mod begin-->
 		<element type="PromotionLine" minOccurs="0"/>
 		<element type="iLinePriority" minOccurs="0"/>
 		<element type="SubCombatChangeTypes" minOccurs="0"/>
@@ -2391,7 +2391,7 @@
 		<element type="bZeroesXP" minOccurs="0"/>
 		<element type="bForOffset" minOccurs="0"/>
 		<element type="SetSpecialUnit" minOccurs="0"/>
-		<!--TB SubCombat Mod end  TB Combat Mod end-->
+		<!--TB SubCombat Mod end TB Combat Mod end-->
 		<element type="bBlitz" minOccurs="0"/>
 		<element type="bAmphib" minOccurs="0"/>
 		<element type="bRiver" minOccurs="0"/>

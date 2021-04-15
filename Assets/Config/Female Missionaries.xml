@@ -3,5 +3,5 @@
 	Female Missionaries
 -->
 <mod id="FemaleMissionaries" module="FemaleMissionaries">
-   	<event type="unitBuilt" function="onUnitBuilt"/>
+ 	<event type="unitBuilt" function="onUnitBuilt"/>
 </mod>

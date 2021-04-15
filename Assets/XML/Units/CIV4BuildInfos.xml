@@ -9,14 +9,14 @@
 		</FeatureStructs>
 
 	- FeatureChange and TerrainChange make it so that the "improvement" is not placed; instead,
-	  the build action will replace any existing feature/terrain with the corresponding entered value.
-	  bRemove should be used in necessary FeatureStructs to make UI work properly for replacing features.
+	 the build action will replace any existing feature/terrain with the corresponding entered value.
+	 bRemove should be used in necessary FeatureStructs to make UI work properly for replacing features.
 	- Non-kill builds generally obsolete on researching the next era after their upgrade, or the 3rd upgrade for routes.
 	- Kill builds usually don't obsolete, as only gatherers will have them and helps adjust workforce toward workers.
 	- Builds are organized first by type rarity*importance (Routes, bonus exploitation, feature exploitation,
-	  common chains, unique buildings, defensive & terraforming), then within in that by reverse unlock order.
-	  This makes the most recent, most important builds show first in the worker build options main gameplay UI,
-	  and keeps fairly consistent location for where builds of a type go on the bar.
+	 common chains, unique buildings, defensive & terraforming), then within in that by reverse unlock order.
+	 This makes the most recent, most important builds show first in the worker build options main gameplay UI,
+	 and keeps fairly consistent location for where builds of a type go on the bar.
 -->
 <Civ4BuildInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>

@@ -275,7 +275,7 @@
 		<Italian>In Civilization IV, il tempio è un edificio all'interno del quale i fedeli si recano a pregare. I Cristiani chiamano i loro templi "chiese", i Musulmani "moschee", gli Ebrei semplicemente "templi". I templi sono più comuni delle cattedrali, ma sono più piccoli e poco fastosi. Anche il villaggio più piccolo ospita un tempio.</Italian>
 		<Spanish>En Civilization IV, un templo se define como un lugar al que los fieles acuden a venerar. Los cristianos llaman a sus templos "iglesias", mientras que para los musulmanes son "mezquitas" y para los judíos, sencillamente, "templos". Son mucho más comunes que las catedrales, pero también mucho más pequeños y humildes. Hasta la más pequeña aldea puede poseer uno.</Spanish>
 		<Polish>Swiątynia - miejsce kultu religijnego. W sensie szerszym, jest to każda budowla wzniesiona w celu sprawowania w niej wszelkiego rodzaju obrzędów religijnych. W sensie węższym, świątynią może być tylko taka budowla, która spełnia przynajmniej niektóre wyższe funkcje kultowe (np. składanie ofiar), sprawowane jedynie przez kapłanów.</Polish>
-		<Russian>[TAB]Â Öèâèëèçàöèè IV, ïîä õðàìîì ïîäðàçóìåâàåòñÿ çäàíèå, êóäà âåðóþùèå ïðèõîäÿò ñîâåðøàòü áîãîñëóæåíèå. Õðèñòèàíå íàçûâàþò ñâîè õðàìû ''öåðêâÿìè'', òîãäà êàê ìóñóëüìàíå íàçûâàþò èõ ''ìå÷åòÿìè'',  à åâðåè íàçûâàþò èõ, ïðîñòî, ''õðàìàìè.'' Õðàìû íàìíîãî áîëüøå ðàñïðîñòðàíåíû, ÷åì ñîáîðû, íî îñòàþòñÿ ãîðàçäî ìåíåå êðóïíûìè è ñêðîìíûìè óáðàíñòâîì. Õðàì ìîæåò ðàñïîëàãàòüñÿ äàæå â ñàìîé çàõóäàëîé äåðåâóøêå.</Russian>
+		<Russian>[TAB]Â Öèâèëèçàöèè IV, ïîä õðàìîì ïîäðàçóìåâàåòñÿ çäàíèå, êóäà âåðóþùèå ïðèõîäÿò ñîâåðøàòü áîãîñëóæåíèå. Õðèñòèàíå íàçûâàþò ñâîè õðàìû ''öåðêâÿìè'', òîãäà êàê ìóñóëüìàíå íàçûâàþò èõ ''ìå÷åòÿìè'', à åâðåè íàçûâàþò èõ, ïðîñòî, ''õðàìàìè.'' Õðàìû íàìíîãî áîëüøå ðàñïðîñòðàíåíû, ÷åì ñîáîðû, íî îñòàþòñÿ ãîðàçäî ìåíåå êðóïíûìè è ñêðîìíûìè óáðàíñòâîì. Õðàì ìîæåò ðàñïîëàãàòüñÿ äàæå â ñàìîé çàõóäàëîé äåðåâóøêå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHAMAN_TEMPLE_PIG</Tag>
@@ -429,7 +429,7 @@
 		<German>Verbreitet den Schamanismus. Haben Sie den Felsen der Visionen, erhöhen sich dadurch Ihre Einnahmen.</German>
 		<Italian>Usa questo missionario per diffondere velocemente lo [COLOR_HIGHLIGHT_TEXT]Sciamanismo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]). Questo incrementerà i tuoi introiti se controlli la [COLOR_BUILDING_TEXT]Pietra delle visioni[COLOR_REVERT].</Italian>
 		<Spanish>Construye un [COLOR_BUILDING_TEXT]Templo del chamán[COLOR_REVERT] para permitir el entrenamiento de [COLOR_UNIT_TEXT]Chamanes[COLOR_REVERT]. También sirve para aumentar la producción de oro tus ciudades.</Spanish>
-		<Russian>[TAB]Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ [COLOR_HIGHLIGHT_TEXT]Øàìàíèçìà[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü  [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]). Ýòî ïîâûøàåò ïðèðîñò êóëüòóðû â ãîðîäàõ, åñëè ó âàñ èìååòñÿ ïîñòðîéêà [COLOR_BUILDING_TEXT]Ðàçãîâîð ñ äóõàìè[COLOR_REVERT].</Russian>
+		<Russian>[TAB]Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ [COLOR_HIGHLIGHT_TEXT]Øàìàíèçìà[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]). Ýòî ïîâûøàåò ïðèðîñò êóëüòóðû â ãîðîäàõ, åñëè ó âàñ èìååòñÿ ïîñòðîéêà [COLOR_BUILDING_TEXT]Ðàçãîâîð ñ äóõàìè[COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAMAN_PEDIA</Tag>

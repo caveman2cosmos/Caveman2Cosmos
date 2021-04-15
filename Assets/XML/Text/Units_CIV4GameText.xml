@@ -4057,7 +4057,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Italian>Il maggiore uso delle armi da fuoco automatiche e semiautomatiche nel tardo XIX secolo e all'inizio del XX secolo portò alla fine della cavalleria. Di conseguenza, gli attaccanti persero un vantaggio significativo sia dal punto di vista dell'esplorazione che nello spiegamento. Fu solo con lo sviluppo dei carri armati, veicoli d'attacco corazzati dotati di cannoni di grosso calibro, che venne trovata un'arma che potesse nuovamente aprire una breccia nelle truppe nemiche. Apparsi per la prima volta nella Prima Guerra Mondiale, i veicoli d'attacco corazzato si muovevano rapidamente e attaccavano con efficacia, riuscendo nel contempo a difendersi validamente. I carri armati sono potenti armi contro qualsiasi tipo di unità di terra.</Italian>
 		<Spanish>El triunfo de las armas de fuego automáticas y semiautomáticas, a finales del XIX y principios del XX, provocó el declive de la caballería. Como consecuencia, los atacantes perdieron una ventaja significativa en la exploración y el despliegue de tropas. Hasta la aparición de los tanques, vehículos blindados de ataque equipados con cañones de gran calibre, no volvió a verse un arma capaz de abrir una brecha en las líneas enemigas. Los vehículos ofensivos blindados, dotados de gran movilidad sin menoscabo de su capacidad defensiva, aparecieron por primera vez en la Primera Guerra Mundial. Los tanques son armas poderosas contra cualquier unidad de tierra.</Spanish>
 		<Polish>BTR-80 to współczesny rosyjski transporter opancerzony. W 1976 roku rozpoczęto produkcję transportera opancerzonego BTR-70. W następnych latach stał się on podstawowym pojazdem jednostek piechoty zmechanizowanej operujących w Afganistanie. BTR-70 był wozem lepszym niż BTR-60 którego zastąpił, ale okazało się że nadal posiada pewne wady. Pojazd posiadał skomplikowany system napędowy składający się z dwóch silników co zwiększało prawdopodobieństwo awarii. Krytycznie oceniano rozmieszczenie włazów do przedziału desantowego i ich niewielkie rozmiary. Dodatkowo okazało się że maksymalny kąt podniesienia uzbrojenia jest zbyt niski i niemożliwe jest zwalczanie celów położonych na stokach gór, czy dachach budynków. Napływające z Afganistanu meldunki spowodowały opracowanie zmodernizowanej wieży dla BTR-70 w której maksymalny kąt podniesienia karabinów maszynowych zwiększono do 60o, oraz rozpoczęcie prac nad jego głęboko zmodernizowana wersją pozbawioną pozostałych wad. Pierwsze prototypy nowego wozu powstały na przełomie lat 70. i 80. XX wieku. W następnych latach trwało udoskonalanie pojazdu i w 1984 roku rozpoczęto produkcję nowego transportera który otrzymał wojskowe oznaczenie BTR-80. BTR-80 jest napędzany pojedynczym silnikiem wysokoprężnym. Uzbrojenie jest umieszczone wieży identycznej z zastosowaną w późnych BTR-70. BTR-80 jest pierwszym radzieckim ośmiokołowym transporterem opancerzonym który otrzymał duże boczne drzwi przedziału desantowego. Obecnie BTR-80 jest używany w państwach powstałych po rozpadzie ZSRR.</Polish>
-		<Russian>Рост использования полуавтоматического и автоматического огнестрельного оружия в конце 19-го и начале 20-го века привел к упадку кавалерии. В результате атакующая сторона потеряла  на тот момент значительное преимущество как в разведке, так и в развертывании. Лишь с развитием танков и бронетранспортеров, оснащенных крупнокалиберными орудиями, было найдено оружие, которое могло снова пробить брешь в полевых силах противника. Впервые появившись в Первой мировой войне, броневики движутся быстро и наносят мощный удар, сохраняя при этом эффективную защиту. Танки - наиболее эффективное оружие против любого наземного отряда.</Russian>
+		<Russian>Рост использования полуавтоматического и автоматического огнестрельного оружия в конце 19-го и начале 20-го века привел к упадку кавалерии. В результате атакующая сторона потеряла на тот момент значительное преимущество как в разведке, так и в развертывании. Лишь с развитием танков и бронетранспортеров, оснащенных крупнокалиберными орудиями, было найдено оружие, которое могло снова пробить брешь в полевых силах противника. Впервые появившись в Первой мировой войне, броневики движутся быстро и наносят мощный удар, сохраняя при этом эффективную защиту. Танки - наиболее эффективное оружие против любого наземного отряда.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BTR80_STRATEGY</Tag>
@@ -4274,7 +4274,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_CAMEL_CAVALRY_PEDIA</Tag>
 		<English>Even in the age of the rifle, desert civilizations, especially those of the Sahara, found that the camel's endurance - and its sand-adapted hooves - gave it a slight edge over the horse as a mount for desert campaigns. Of course it has its disadvantages, but if camels are all that is readily available to you, you find them a very competitive substitute.</English>
 		<French>Même à l'âge du fusil, les civilisations du désert, en particulier celles du Sahara, ont constaté que l'endurance du chameau - et ses sabots adaptés au sable - lui donnait un léger avantage sur le cheval comme monture pour les campagnes dans le désert. Bien sûr, il a ses inconvénients, mais si les chameaux sont tout ce qui est à votre disposition, vous les trouvez comme un substitut très compétitif.</French>
-		<Russian>Даже в эпоху винтовок цивилизации пустынь, особенно в Сахаре, обнаружили, что выносливость верблюда и его адаптированные к песку копыта давали ему небольшое преимущество над лошадью в качестве ездового животного для походов в пустыне. Конечно, у него есть  и свои недостатки, но если верблюды - это все, что вам легко доступно, вы найдете их очень конкурентоспособной заменой.</Russian>
+		<Russian>Даже в эпоху винтовок цивилизации пустынь, особенно в Сахаре, обнаружили, что выносливость верблюда и его адаптированные к песку копыта давали ему небольшое преимущество над лошадью в качестве ездового животного для походов в пустыне. Конечно, у него есть и свои недостатки, но если верблюды - это все, что вам легко доступно, вы найдете их очень конкурентоспособной заменой.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_CAVALRY_STRATEGY</Tag>
@@ -5369,7 +5369,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROME_INFANTRY_STRATEGY</Tag>
 		<English>The Chrome Infantry is the first genetically-enhanced infantry unit of the Transhuman era. You can expect them to give you an edge over the Modern Infantry of your rivals. Welcome... to the Future!</English>
-		<Russian>Õðîìîâàÿ ïåõîòà ÿâëÿåòñÿ ïåðâûì ãåíåòè÷åñêè óñèëåííûì ïåõîòíûì îòðäîì â  ýïîõå Òðàíñ÷åëîâåê. Âû ìîæåòå ðàññ÷èòûâàòü, ÷òî îíè äàäóò âàì ïðåèìóùåñòâî íàä ñîâðåìåííîé ïåõîòîé âàøèõ ñîïåðíèêîâ. ... Äîáðî ïîæàëîâàòü â áóäóùåå!...</Russian>
+		<Russian>Õðîìîâàÿ ïåõîòà ÿâëÿåòñÿ ïåðâûì ãåíåòè÷åñêè óñèëåííûì ïåõîòíûì îòðäîì â ýïîõå Òðàíñ÷åëîâåê. Âû ìîæåòå ðàññ÷èòûâàòü, ÷òî îíè äàäóò âàì ïðåèìóùåñòâî íàä ñîâðåìåííîé ïåõîòîé âàøèõ ñîïåðíèêîâ. ... Äîáðî ïîæàëîâàòü â áóäóùåå!...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHULALONGKORN</Tag>
@@ -10299,7 +10299,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Òàíê  «Ïàíòåðà»</Russian>
+		<Russian>Òàíê «Ïàíòåðà»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GERONIMO</Tag>
@@ -10701,7 +10701,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[ICON_BULLET]Tech: %s1_Tech Grid X: %d2_Value</English>
 		<French>[ICON_BULLET]Tech: %s1_Tech Grille X: %d2_Value</French>
 		<Polish>[ICON_BULLET]Tech: %s1_Tech Siatka X: %d2_Value</Polish>
-		<Russian>[ICON_BULLET]Техн.: %s1_Tech  Сеть X: %d2_Value</Russian>
+		<Russian>[ICON_BULLET]Техн.: %s1_Tech Сеть X: %d2_Value</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GRIVPANVAR</Tag>
@@ -19517,7 +19517,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NLOS_CANNON_PEDIA</Tag>
 		<English>The XM1203 Non-Line-of-Sight Cannon (NLOS Cannon) was a mobile 155 mm cannon intended to provide improved responsiveness and lethality to the "unit of action" (UA) commander as part of the US Army's Future Combat Systems project. This self-propelled armored artillery piece provided networked, extended-range targeting, and precision attack of point and area targets in support of other combat units with a suite of munitions that include special purpose capabilities. The Non-Line-of-Sight Cannon provided sustained fire for close support and destructive fire for tactical standoff engagement. The NLOS Cannon used technology from the canceled XM2001 Crusader.</English>
-		<Russian>Пушка XM1203 Non-Line-of-Sight Cannon (САУ NLOS) является самоходной 155-мм гаубицей, предназначенной для обеспечения повышенной точности и летальности «боевого расчета» (АЕ) в рамках проекта «Боевые Системы Будущего» армии США. Эта самоходная артиллерийская установка обеспечивала сетевое целеуказание с увеличенной дальностью и высокоточную атаку точечных и площадных целей в поддержку других боевых единиц с помощью набора боеприпасов, которые включают средства специального назначения. Пушка вне зоны видимости обеспечивала непрерывный огонь для непосредственной поддержки и разрушительный огонь для тактического противостояния. Для САУ NLOS  использовалась технология устаревшей гаубицы XM2001 Crusader.</Russian>
+		<Russian>Пушка XM1203 Non-Line-of-Sight Cannon (САУ NLOS) является самоходной 155-мм гаубицей, предназначенной для обеспечения повышенной точности и летальности «боевого расчета» (АЕ) в рамках проекта «Боевые Системы Будущего» армии США. Эта самоходная артиллерийская установка обеспечивала сетевое целеуказание с увеличенной дальностью и высокоточную атаку точечных и площадных целей в поддержку других боевых единиц с помощью набора боеприпасов, которые включают средства специального назначения. Пушка вне зоны видимости обеспечивала непрерывный огонь для непосредственной поддержки и разрушительный огонь для тактического противостояния. Для САУ NLOS использовалась технология устаревшей гаубицы XM2001 Crusader.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NLOS_CANNON_STRATEGY</Tag>
@@ -24817,7 +24817,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_SIEGE_DROID_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Siege Droid[COLOR_REVERT] its powerful version of Assault Droid, unit which is specialized in siege. Can bombard cities and cause collateral damage.</English>
 		<French>Le [COLOR_UNIT_TEXT]Droïde de Siège[COLOR_REVERT] est une puissante version du Droïde d'Assaut, unité spécialisée dans le siège. Peut bombarder des villes et causer des dommages collatéraux.</French>
-		<Russian>[COLOR_UNIT_TEXT]Осадный дроид[COLOR_REVERT] - более мощная версия Штурмового дроида,  специализирующаяся на осаде. Может обстреливать города и нанести побочный ущерб окопавшемуся противнику.</Russian>
+		<Russian>[COLOR_UNIT_TEXT]Осадный дроид[COLOR_REVERT] - более мощная версия Штурмового дроида, специализирующаяся на осаде. Может обстреливать города и нанести побочный ущерб окопавшемуся противнику.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIEGE_ELEPHANT</Tag>
@@ -26591,7 +26591,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
-		<Russian>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Emu[NEWLINE][ICON_BULLET]Myths of Sky, Flightless Birds and Birds[NEWLINE][ICON_BULLET]Êëåòêè è âîëüåðû ñ ïòèöàìè[NEWLINE][ICON_BULLET]Ratite Flock and Feather Worker</Russian>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Emu[NEWLINE][ICON_BULLET]Myths of Sky, Flightless Birds and Birds[NEWLINE][ICON_BULLET]Êëåòêè è âîëüåðû ñ ïòèöàìè[NEWLINE][ICON_BULLET]Ratite Flock and Feather Worker</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN</Tag>

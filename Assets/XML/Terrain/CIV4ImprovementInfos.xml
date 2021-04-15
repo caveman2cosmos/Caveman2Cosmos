@@ -12866,7 +12866,7 @@
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-		<!-- City Ruins (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_CITY_RUINS)  -->
+		<!-- City Ruins (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_CITY_RUINS) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CITY_RUINS</Type>
 			<Description>TXT_KEY_IMPROVEMENT_CITY_RUINS</Description>
@@ -12878,7 +12878,7 @@
 			<iDefenseModifier>15</iDefenseModifier>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-		<!-- City Ruins Arcology (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_ARCOLOGY_RUINS)  -->
+		<!-- City Ruins Arcology (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_ARCOLOGY_RUINS) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CITY_RUINS_ARCOLOGY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_CITY_RUINS</Description>

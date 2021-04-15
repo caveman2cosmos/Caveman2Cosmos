@@ -87,7 +87,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-	   <BuildingInfo>
+	 <BuildingInfo>
 			<Type>BUILDING_NARA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NARA</Description>

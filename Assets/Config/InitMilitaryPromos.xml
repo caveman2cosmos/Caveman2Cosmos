@@ -3,7 +3,7 @@
 	Initial Military Promotions python
 -->
 <mod id="InitMilitaryPromos" module="InitMilitaryPromos">
-   	<event type="unitBuilt" function="onUnitBuilt"/>
+ 	<event type="unitBuilt" function="onUnitBuilt"/>
 
 	<init/>
 </mod>

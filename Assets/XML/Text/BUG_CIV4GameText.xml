@@ -6538,7 +6538,7 @@
 		<French>Permet aux Inquisiteurs des Purger les Villes Saintes. Dans le cas où la civilisation possède une autre ville où la religion est établie, la Ville Sainte va être déplacée.</French>
 		<German>Erlaubt es Inquisitionen Heilige Städte auszulöschen; wenn eine Zivilisation mit 2 Städten dieser Religion existiert, so wird die Heilige Stadt dorthin versetzt</German>
 		<Spanish>Permite a los inquisidores actuar en Ciudades Santas; si existe una civilización qué tenga al menos dos ciudades con la religión de la Ciudad Santa afectada, ésta se reubicará.</Spanish>
-		<Russian>Ïîçâîëÿåò èíêâèçèòîðàì çà÷èùàòü Ñâÿùåííûå ãîðîäà; åñëè  öèâèëèçàöèÿ èìååò äâà è áîëåå ãîðîäà ñ òàêîé æå ðåëèãèåé, ÷òî çà÷èñòèëè â Ñâÿù. ãîðîäå, òî Ñâÿù. ãîðîä ïåðååäåò â îäèí èç íèõ.</Russian>
+		<Russian>Ïîçâîëÿåò èíêâèçèòîðàì çà÷èùàòü Ñâÿùåííûå ãîðîäà; åñëè öèâèëèçàöèÿ èìååò äâà è áîëåå ãîðîäà ñ òàêîé æå ðåëèãèåé, ÷òî çà÷èñòèëè â Ñâÿù. ãîðîäå, òî Ñâÿù. ãîðîä ïåðååäåò â îäèí èç íèõ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__OC_RESPAWN_HOLY_CITIES_TEXT</Tag>
@@ -6618,7 +6618,7 @@
 		<French>Les Espions peuvent soudoyer et corrompre les Ouvriers, les incitant à quitter leur civilisation pour rejoindre celle de l'Espion.</French>
 		<German>Spione können Bautrupps bestechen, sich ihrer Nation anzuschließen</German>
 		<Spanish>Los espías pueden sobornar a trabajadores para unirse a la civilización del propietario del espía y abandonar a su nación actual.</Spanish>
-		<Russian>Øïèîíû ìîãóò ïîäêóïàòü ðàáî÷èõ  öåëüþ èõ ïåðåõîäà ê åãî öèâèëèçàöèè è óõîäà îò ïðåæíåãî âëàäåëüöà.</Russian>
+		<Russian>Øïèîíû ìîãóò ïîäêóïàòü ðàáî÷èõ öåëüþ èõ ïåðåõîäà ê åãî öèâèëèçàöèè è óõîäà îò ïðåæíåãî âëàäåëüöà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__SS_BRIBE_TEXT</Tag>
@@ -6634,7 +6634,7 @@
 		<French>Permet aux Espions d'acquérir de l'Expérience et d'obtenir des promotions comme les autres unités</French>
 		<German>Ermöglicht Spionen Erfahrungspunkte zu sammeln und befördert zu werden</German>
 		<Spanish>Permite a los espías obtener experiencia y conseguir ascensos.</Spanish>
-		<Russian>Ïîçâîëÿåò øïèîíàì  íàáèðàòüñÿ îïûòà è ïîëó÷àòü Êâàëèôèêàöèè.</Russian>
+		<Russian>Ïîçâîëÿåò øïèîíàì íàáèðàòüñÿ îïûòà è ïîëó÷àòü Êâàëèôèêàöèè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__SS_ENABLED_TEXT</Tag>
@@ -6935,7 +6935,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CLOSEDIST_HOVER</Tag>
-		<English>Plot distance between capitals that qualifies another civ as a local neighbour to the emerging civ. The other civ must have a city on the same landmass as the emerging civ for it to be considered a neighbour. Civs emerging from barbarians adapt to their local neighbours in many different ways, e.g. tech level.  A low value will make each such civ generation more generic. A high value can impact performance slightly, especially on large maps. The value set here is the value used for a 'Duel' world size. The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
+		<English>Plot distance between capitals that qualifies another civ as a local neighbour to the emerging civ. The other civ must have a city on the same landmass as the emerging civ for it to be considered a neighbour. Civs emerging from barbarians adapt to their local neighbours in many different ways, e.g. tech level. A low value will make each such civ generation more generic. A high value can impact performance slightly, especially on large maps. The value set here is the value used for a 'Duel' world size. The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CLOSEDIST_TEXT</Tag>
@@ -7629,7 +7629,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAI_HOVER</Tag>
 		<English>All AI players will also use Flexible Difficulty, and human players will be alerted when AI difficulty changes.</English>
-		<Russian>Âñå èãðîêè ÈÈ  áóäóò èñïîëüçîâàòü ãèáêóþ ñëîæíîñòü, à ÷åëîâå÷åñêèå èãðîêè áóäóò îïîâåùåíû, êîãäà èçìåíèòñÿ óðîâåíü ñëîæíîñòè äëÿ ÈÈ.</Russian>
+		<Russian>Âñå èãðîêè ÈÈ áóäóò èñïîëüçîâàòü ãèáêóþ ñëîæíîñòü, à ÷åëîâå÷åñêèå èãðîêè áóäóò îïîâåùåíû, êîãäà èçìåíèòñÿ óðîâåíü ñëîæíîñòè äëÿ ÈÈ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAI_TEXT</Tag>
@@ -7958,7 +7958,7 @@
 		<German>Militäreinheiten können nicht gehandelt werden. Nur bei aktivierter Option "Verbesserte Diplomatie".</German>
 		<Italian>Rimuove la possibilità di commerciare unità militari. Funziona solo se diplomazia avanzata è attivato.</Italian>
 		<Spanish>Elimina la capacidad de comerciar con unidades militares. Solo funciona si la opción "Diplomacia avanzada" está activada.</Spanish>
-		<Russian>Óäàëÿåò âîçìîæíîñòü òîðãîâàòü þíèòàìè. Ðàáîòàåò, åñëè  çàäåéñòâîâàíà îïöèÿ Advanced Diplomacy.</Russian>
+		<Russian>Óäàëÿåò âîçìîæíîñòü òîðãîâàòü þíèòàìè. Ðàáîòàåò, åñëè çàäåéñòâîâàíà îïöèÿ Advanced Diplomacy.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NOMILITARYTRADING_TEXT</Tag>
@@ -8242,7 +8242,7 @@
 		<German>Schiffe sinken nicht automatisch nach einem Kampf. Stattdessen können sie mit etwas Glück gekapert und übernommen werden. Gekaperte Transporter führen außerdem manchmal Gold mit sich, das geplündert werden kann.</German>
 		<Italian>Quando le navi nemiche vengono attaccate, c'è una chance che vengano catturate invece che affondate. Se la nave catturata è un trasporto, c'è una certà probabilità di ricavarne una certa quantità di oro.</Italian>
 		<Spanish>Cuando se derroten barcos enemigos, habrá posibilidades de que sean capturados en vez de hundirse siempre. Si el barco capturado es un transporte, también habrá posibilidades de obtener oro del barco enemigo.</Spanish>
-		<Russian>Êîãäà âðàæåñêèå êîðàáëè àòàêîâàíû, òî åñòü øàíñ, ÷òî îíè áóäóò çàõâà÷åíû âìåñòî òîãî, ÷òîáû áûòü ïîòîïëåííûìè. Åñëè ýòî ñóäíî îêàæåòñÿ òðàíñïîðòîì, ñóùåñòâóåò òàêæå øàíñ íà ïîëó÷åíèå çîëîòà  ñ âðàæåñêîãî êîðàáëÿ.</Russian>
+		<Russian>Êîãäà âðàæåñêèå êîðàáëè àòàêîâàíû, òî åñòü øàíñ, ÷òî îíè áóäóò çàõâà÷åíû âìåñòî òîãî, ÷òîáû áûòü ïîòîïëåííûìè. Åñëè ýòî ñóäíî îêàæåòñÿ òðàíñïîðòîì, ñóùåñòâóåò òàêæå øàíñ íà ïîëó÷åíèå çîëîòà ñ âðàæåñêîãî êîðàáëÿ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__WARPRIZES_TEXT</Tag>

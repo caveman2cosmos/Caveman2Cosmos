@@ -33,7 +33,7 @@
 				 <PropertySource>
 					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
-					   <iAmountPerTurn>1</iAmountPerTurn>
+					 <iAmountPerTurn>1</iAmountPerTurn>
 				 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -67,11 +67,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
+			 <PropertySource>
 				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 				<PropertyType>PROPERTY_EDUCATION</PropertyType>
 				<iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+			 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -99,7 +99,7 @@
 				 <PropertySource>
 					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
-					   <iAmountPerTurn>1</iAmountPerTurn>
+					 <iAmountPerTurn>1</iAmountPerTurn>
 				 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -135,7 +135,7 @@
 				 <PropertySource>
 					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
-					   <iAmountPerTurn>1</iAmountPerTurn>
+					 <iAmountPerTurn>1</iAmountPerTurn>
 				 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -169,11 +169,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
+			 <PropertySource>
 				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 				<PropertyType>PROPERTY_EDUCATION</PropertyType>
 				<iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+			 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -201,7 +201,7 @@
 				 <PropertySource>
 					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
-					   <iAmountPerTurn>1</iAmountPerTurn>
+					 <iAmountPerTurn>1</iAmountPerTurn>
 				 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -236,7 +236,7 @@
 				 <PropertySource>
 					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
-					   <iAmountPerTurn>1</iAmountPerTurn>
+					 <iAmountPerTurn>1</iAmountPerTurn>
 				 </PropertySource>
 				 <PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -244,8 +244,8 @@
 					<iAmountPerTurn>-1</iAmountPerTurn>
 					<Active>
 					<Has>
-			   			<GOMType>GOM_TECH</GOMType>
-			   			<ID>TECH_PALEONTOLOGY</ID>
+			 			<GOMType>GOM_TECH</GOMType>
+			 			<ID>TECH_PALEONTOLOGY</ID>
 					</Has>
 				</Active>
 				</PropertySource>
@@ -280,11 +280,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
+			 <PropertySource>
 				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 				<PropertyType>PROPERTY_EDUCATION</PropertyType>
 				<iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+			 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -311,7 +311,7 @@
 				 <PropertySource>
 					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
-					   <iAmountPerTurn>1</iAmountPerTurn>
+					 <iAmountPerTurn>1</iAmountPerTurn>
 				 </PropertySource>
 				 <PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -319,8 +319,8 @@
 					<iAmountPerTurn>-1</iAmountPerTurn>
 					<Active>
 					<Has>
-			   			<GOMType>GOM_TECH</GOMType>
-			   			<ID>TECH_PALEONTOLOGY</ID>
+			 			<GOMType>GOM_TECH</GOMType>
+			 			<ID>TECH_PALEONTOLOGY</ID>
 					</Has>
 					</Active>
 				</PropertySource>
@@ -392,11 +392,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
+			 <PropertySource>
 				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 				<PropertyType>PROPERTY_EDUCATION</PropertyType>
 				<iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+			 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>

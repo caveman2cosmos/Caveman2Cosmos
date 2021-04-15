@@ -3906,7 +3906,7 @@ Time Frame: 2050 AD - 2150 AD</English>
 		<French>L'ère Nanotech est une évolution logique de l'ère de l'information précédente. Les ordinateurs deviennent sensibles et les robots sensibles commencent à apparaître. Les nanites sont capables de fournir une capacité de construction presque illimitée, et les petites nano-usines trouvent leur place d'abord dans les foyers des pays développés, puis dans les pays en développement. La pauvreté telle que nous la connaissons commence à disparaître et les systèmes de gouvernement et de société existants sont ébranlés. Le capitalisme commence à céder la place à une économie post-pénurie. Cependant tout n'est pas tout apporter. La nanotechnologie et la robotique sont également utilisées comme armes mortelles. Des guerres féroces sont menées alors que les gouvernements totalitaires traditionnels se battent pour maintenir le contrôle sur des populations soudainement capables de produire presque tout. La destruction MAD ou mutuellement assurée est rendue obsolète en raison des nanotechnologies. Avec la suppression de la dissuasion nucléaire, de nombreux pays puissants se tournent à nouveau vers la conquête, mais le spectre sombre des nanotechnologies plane sur le monde, car le potentiel de la fin du monde est bien plus grand que l'ère des échanges nucléaires. Les gouvernements de machines deviennent possibles, et de nombreuses IA sophistiquées tentent de dominer afin de protéger l'humanité d'elle-même.
 
 Calendrier: 2050 AD - 2150 AD</French>
-		<Russian>Нанотехнологическая эра - это логическое продолжение предыдущей информационной эпохи. Компьютеры становятся подобны живым организмам и впервые появляются познающие роботы. Наниты могут обеспечить почти безграничную емкость для строительства, а небольшие нано-фабрики находят место впервые в домах  жителей развитых стран, а затем и в развивающихся странах. Бедность, какую мы знаем, начинает постепенно исчезать, как и существующие системы правительства и общества. Капитализм начинает уходить в прошлое, уступая дорогу бездефицитной экономике. Однако новые технологии вместе с благами таят в себе большие угрозы. Нанотех и робототехника также становятся смертоносным оружием. Все активнее внедряется генетическое оружие и наноботы, как средство и орудие ведения войны и контроля численности населения. Тоталитарные правительства и мощные международные синдикаты ведут яростную борьбу за передел сфер влияния, прибегая к технологиям тотального контроля. С приходом Нанотеха исчезают прежние механизмы сдерживания. Устаревают прежние гарантии взаимного уничтожения. С ослаблением ядерного сдерживания многие мощные державы снова обращаются к завоеваниям, но темный призрак нанотеха нависает над всем миром, поскольку потенциал для совета директоров мегакорпораций возрос по сравнению с Ядерной эрой. Становится реальностью участие ИИ в управлении, как и многие изысканные попытки ИИ на доминирование, чтобы защитить человечество от самого себя.[NEWLINE]2050 - 2150 гг.</Russian>
+		<Russian>Нанотехнологическая эра - это логическое продолжение предыдущей информационной эпохи. Компьютеры становятся подобны живым организмам и впервые появляются познающие роботы. Наниты могут обеспечить почти безграничную емкость для строительства, а небольшие нано-фабрики находят место впервые в домах жителей развитых стран, а затем и в развивающихся странах. Бедность, какую мы знаем, начинает постепенно исчезать, как и существующие системы правительства и общества. Капитализм начинает уходить в прошлое, уступая дорогу бездефицитной экономике. Однако новые технологии вместе с благами таят в себе большие угрозы. Нанотех и робототехника также становятся смертоносным оружием. Все активнее внедряется генетическое оружие и наноботы, как средство и орудие ведения войны и контроля численности населения. Тоталитарные правительства и мощные международные синдикаты ведут яростную борьбу за передел сфер влияния, прибегая к технологиям тотального контроля. С приходом Нанотеха исчезают прежние механизмы сдерживания. Устаревают прежние гарантии взаимного уничтожения. С ослаблением ядерного сдерживания многие мощные державы снова обращаются к завоеваниям, но темный призрак нанотеха нависает над всем миром, поскольку потенциал для совета директоров мегакорпораций возрос по сравнению с Ядерной эрой. Становится реальностью участие ИИ в управлении, как и многие изысканные попытки ИИ на доминирование, чтобы защитить человечество от самого себя.[NEWLINE]2050 - 2150 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_PREHISTORIC</Tag>
@@ -5904,7 +5904,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Mostra solo edifici che danno cibo</Italian>
 		<Spanish>Mostrar solo edificios que proporcionen alimentos</Spanish>
 		<Polish>Pokaż tylko budynki które dostarczają żywność</Polish>
-		<Russian>Îòîáðàæàòü  ïèùåâûå ïîñòðîéêè</Russian>
+		<Russian>Îòîáðàæàòü ïèùåâûå ïîñòðîéêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LIST_BUILDING_FILTER_SHOW_GOLD</Tag>
@@ -7274,7 +7274,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>La défense de la ville se répare à %D1%% de son taux usuel.</French>
 		<Italian>Le difese cittadine si rigenerano al %D1%% della velocità usuale.</Italian>
 		<Polish>Obrona miasta odzyskuje na %D1%% swoją standardową szybkości.</Polish>
-		<Russian>Îáîðîíà ãîðîäà âîññòàíîâèëàñü íà  %D1%% îò íîðìû.</Russian>
+		<Russian>Îáîðîíà ãîðîäà âîññòàíîâèëàñü íà %D1%% îò íîðìû.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_WAS_CAPTURED_BY</Tag>
@@ -8707,7 +8707,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Général, Notre %s1 est revenu avec un tribut qu'ils ont récupéré en détruisant l'unité %s2 ennemie. ces troupes ont beau être turbulents, malodorants, violents, mais ils savent comment faire le travail!</French>
 		<Spanish>General, [NUM1:nuestro:nuestra:nuestros:nuestras] %s2 [NUM1:ha:ha:han:han] retornado con algunos objetos que [NUM1:ha:ha:han:han] encontrado mientras [NUM1:destrozaba:destrozaba:destrozaban:destrozaban] [NUM2:un:una:unos:unas] %s2 [NUM2:enemigo:enemiga:enemigos:enemigas]. Posiblemente haya sido una tarea violenta, maloliente y ruidosa, pero ten por seguro que han sabido hacerla.</Spanish>
 		<Polish>Generale, nasza jednostka: %s1 zwraca skarby które znalazła po zniszczeniu %s2.</Polish>
-		<Russian>Âàøå Ïðåâîñõîäèòåëüñòâî, íàø %s1 âåðíóëñÿ ñ âîåííûìè òðîôåÿìè ïîñëå ïîáåäû íàä ïðåâîñõîäÿùèì ïðîòèâíèêîì %s2.  Îíè, êîíå÷íî, øóìíûå, ãðÿçíûå, èçëèøíå æåñòîêèå, íî îíè íàñòîÿùèå ïðîôè â ñâîåì ðåìåñëå!</Russian>
+		<Russian>Âàøå Ïðåâîñõîäèòåëüñòâî, íàø %s1 âåðíóëñÿ ñ âîåííûìè òðîôåÿìè ïîñëå ïîáåäû íàä ïðåâîñõîäÿùèì ïðîòèâíèêîì %s2. Îíè, êîíå÷íî, øóìíûå, ãðÿçíûå, èçëèøíå æåñòîêèå, íî îíè íàñòîÿùèå ïðîôè â ñâîåì ðåìåñëå!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_MARAUDERS_PLUNDERED_VICTIMS</Tag>
@@ -8715,7 +8715,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Général, notre %s2 est revenu avec un tribut qu'ils ont récupéré en anéantissant ses ennemis. ces troupes ont beau être turbulents, malodorants, violents, mais ils savent comment faire le travail! (+%d1 [ICON_GOLD])</French>
 		<Spanish>General, [NUM1:nuestro:nuestra:nuestros:nuestras] %s2 [NUM1:ha:ha:han:han] retornado con algunos objetos que portaban los cuerpos de los enemigos vencidos. Posiblemente haya sido una tarea violenta, maloliente y ruidosa, pero nada de valor potencial ha escapado a su atención. (+%d1[ICON_GOLD])</Spanish>
 		<Polish>Generale, nasza jednostka: %s2 zwróciła zdobycze z poległych wrogów. Może być trochę śmierdzące ale nic nie umknęło wartego ich uwagi (+%d1 [ICON_GOLD])</Polish>
-		<Russian>Âàøå Ïðåâîñõîäèòåëüñòâî, íàø %s2 äîáûë áîãàòûå òðîôåè ñ òðóïîâ ïîâåðæåííûõ âðàãîâ.  Ïóñòü îíè è øóìíûå, ñìðàäíûå, áåñ÷åëîâå÷íûå, íî îò èõ çîðêîãî ãëàçà íè÷òî öåííîå íå óñêîëüçíåò (+%d1 [ICON_GOLD])</Russian>
+		<Russian>Âàøå Ïðåâîñõîäèòåëüñòâî, íàø %s2 äîáûë áîãàòûå òðîôåè ñ òðóïîâ ïîâåðæåííûõ âðàãîâ. Ïóñòü îíè è øóìíûå, ñìðàäíûå, áåñ÷åëîâå÷íûå, íî îò èõ çîðêîãî ãëàçà íè÷òî öåííîå íå óñêîëüçíåò (+%d1 [ICON_GOLD])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_MINIMUM_DEFENSE_LEVEL_HOVER</Tag>
@@ -9374,7 +9374,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Valeur d'Expulsion pour les Défenseurs %s1_UnitCombat: %D2%%</French>
 		<Italian>Valore di Respinta per %s1_UnitCombat in difesa: %D2%%</Italian>
 		<Polish>Wartość Odepchnięcia dla Obrońców typu: %s1_UnitCombat: %D2%%</Polish>
-		<Russian>Модиф. Отражения для %s1_UnitCombat  в обороне: D2%%</Russian>
+		<Russian>Модиф. Отражения для %s1_UnitCombat в обороне: D2%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_RESOURCE_DEFENSE_HOVER</Tag>
@@ -9738,7 +9738,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_TRAP_TRIGGERED_AFFLICTION_SUFFERED</Tag>
 		<English>Your %s1_UnitName has suffered a %s2_Affliction affliction from a triggered %s3_UnitName!</English>
 		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName a contracté une afflication %s2_Affliction provenant de l'unité %s3_UnitName ennemie!</French>
-		<Russian>Ваш  %s1_UnitName получил  урон %s2_Affliction affliction от действий %s3_UnitName!</Russian>
+		<Russian>Ваш %s1_UnitName получил урон %s2_Affliction affliction от действий %s3_UnitName!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_TRAP_TRIGGERED_ALSO_AFFLICTION_INFLICTED</Tag>
@@ -15059,7 +15059,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	S	[COLOR_REVERT]-&gt; Sentry[COLOR_HIGHLIGHT_TEXT]
 	U	[COLOR_REVERT]-&gt; Unload from ship[COLOR_HIGHLIGHT_TEXT]
 	W	[COLOR_REVERT]-&gt; Wait (move later in turn)[COLOR_HIGHLIGHT_TEXT]
-  Space	[COLOR_REVERT]-&gt; Skip turn[COLOR_HIGHLIGHT_TEXT]
+ Space	[COLOR_REVERT]-&gt; Skip turn[COLOR_HIGHLIGHT_TEXT]
  Delete	[COLOR_REVERT]-&gt; Delete selected unit(s)[COLOR_HIGHLIGHT_TEXT]
 
  Ctrl +

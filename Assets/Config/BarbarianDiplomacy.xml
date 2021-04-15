@@ -3,8 +3,8 @@
 	Beast Master
 -->
 <mod id="BarbarianDiplomacy" module="BarbarianDiplomacy">
-   	<event type="goodyReceived" function="onGoodyReceived"/>
-   	<event type="improvementDestroyed" function="onImprovementDestroyed"/>
+ 	<event type="goodyReceived" function="onGoodyReceived"/>
+ 	<event type="improvementDestroyed" function="onImprovementDestroyed"/>
 
 	<init/>
 </mod>

@@ -3,9 +3,9 @@
 	Sneak Promotion 
 -->
 <mod id="SneakPromotion" module="SneakPromotion">
-   	<event type="combatResult" function="onCombatResult"/>
-   	<event type="unitPromoted" function="onUnitPromoted"/>
-   	<!--event type="CivicChanged" function="onCivicChanged"/-->
+ 	<event type="combatResult" function="onCombatResult"/>
+ 	<event type="unitPromoted" function="onUnitPromoted"/>
+ 	<!--event type="CivicChanged" function="onCivicChanged"/-->
 
 <!--	<init/> -->
 </mod>

@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<!--  -->
+<!-- -->
 <!-- Dependencies between Leaders and Religions -->
-<!--  -->
+<!-- -->
 <!-- The religion are in increasing order of importance. -->
-<!--  -->
+<!-- -->
 <!-- The last valid one for a leader will be the one used. -->
-<!--  -->
+<!-- -->
 <!-- E.G. Ragnar will have Druidism as his favorite religion if Asatru is not in game. -->
-<!--  -->
+<!-- -->
 <Civ4LeaderHeadInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
 <LeaderHeadInfos>
 	<LeaderHeadInfo>

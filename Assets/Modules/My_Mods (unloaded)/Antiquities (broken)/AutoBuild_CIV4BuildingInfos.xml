@@ -55,7 +55,7 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_MDHW</BuildingType>
 					<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
-			   </PrereqOrBuildings>
+			 </PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 	</BuildingInfos>

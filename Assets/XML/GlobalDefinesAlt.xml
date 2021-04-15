@@ -516,7 +516,7 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Dynamic Civ Names   NOTE turned off in C2C code-->
+		<!-- Dynamic Civ Names NOTE turned off in C2C code-->
 		<DefineName>DYNAMIC_CIV_NAMES</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>

@@ -3,9 +3,9 @@
 	Capture Slaves 
 -->
 <mod id="CaptureSlaves" module="CaptureSlaves">
-   	<event type="combatResult" function="onCombatResult"/>
-   	<event type="cityRazed" function="onCityRazed"/>
-   	<!--event type="CivicChanged" function="onCivicChanged"/-->
+ 	<event type="combatResult" function="onCombatResult"/>
+ 	<event type="cityRazed" function="onCityRazed"/>
+ 	<!--event type="CivicChanged" function="onCivicChanged"/-->
 
 	<init/>
 </mod>

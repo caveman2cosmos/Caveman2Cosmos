@@ -396,10 +396,10 @@
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>570</iCost>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
-			<!-- RevolutionDCM Building Effects  -->
+			<!-- RevolutionDCM Building Effects -->
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iRevIdxNational>-5</iRevIdxNational>
-			<!-- RevolutionDCM End  -->
+			<!-- RevolutionDCM End -->
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<CommerceChanges>
@@ -1199,10 +1199,10 @@
 			</ConstructCondition>
 			<iCost>870</iCost>
 			<iConquestProb>60</iConquestProb>
-			<!-- RevolutionDCM Building Effects  -->
+			<!-- RevolutionDCM Building Effects -->
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iRevIdxNational>-5</iRevIdxNational>
-			<!-- RevolutionDCM End  -->
+			<!-- RevolutionDCM End -->
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>

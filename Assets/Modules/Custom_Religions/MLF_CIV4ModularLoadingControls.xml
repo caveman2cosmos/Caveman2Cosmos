@@ -25,107 +25,107 @@
 				<Module>
 					<Directory>Std_BtS_Religions</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  No. Work has not started on making these modular<-->
+					<!--> Modular? No. Work has not started on making these modular<-->
 				</Module>
 				<Module>
 					<Directory>Std_RoM_Religions</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  No. Work has not started on making these modular<-->
+					<!--> Modular? No. Work has not started on making these modular<-->
 				</Module>
 				<Module>
 					<Directory>Andean</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Asatru</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Bahai</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Canaanism</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Caodai</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Druid</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Jainism</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Mesopotamian</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Mormon</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? No  Work has started on a new version which will be modfular<-->
+					<!--> Modular? No Work has started on a new version which will be modfular<-->
 				</Module>
 				<Module>
 					<Directory>Ngai</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Rodnovery</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Scientology</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?   No   work not started<-->
+					<!--> Modular? No work not started<-->
 				</Module>
 				<Module>
 					<Directory>Shaman</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Shinto</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?   No   work not started<-->
+					<!--> Modular? No work not started<-->
 				</Module>
 				<Module>
 					<Directory>Sikh</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?   No   work not started<-->
+					<!--> Modular? No work not started<-->
 				</Module>
 				<Module>
 					<Directory>Tengri</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Yoruba</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Voodoo</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?   No   work not started<-->
+					<!--> Modular? No work not started<-->
 				</Module>
 				<Module>
 					<Directory>Female_Missionaries</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 			</Modules>
 		</ConfigurationInfo>

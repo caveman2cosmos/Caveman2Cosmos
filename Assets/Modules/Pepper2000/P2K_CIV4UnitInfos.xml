@@ -711,10 +711,10 @@
 					<TerrainType>TERRAIN_TITAN</TerrainType>
 					<PassableTech>TECH_ABYSS_COLONIZATION</PassableTech>
 				</TerrainPassableTech>
-			  <TerrainPassableTech>
+			 <TerrainPassableTech>
 				<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 				<PassableTech>TECH_SOLAR_ORDNANCE</PassableTech>
-			  </TerrainPassableTech>
+			 </TerrainPassableTech>
 			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ONEILLSETTLER</Description>

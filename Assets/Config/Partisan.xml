@@ -3,6 +3,6 @@
 	GIR mod Partisan
 -->
 <mod id="Partisan" module="Partisan">
-   	<event type="cityAcquired" function="onCityAcquired"/>
-   	<event type="combatResult" function="onCombatResult"/>
+ 	<event type="cityAcquired" function="onCityAcquired"/>
+ 	<event type="combatResult" function="onCombatResult"/>
 </mod>

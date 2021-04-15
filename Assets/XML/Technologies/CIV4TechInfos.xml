@@ -7,7 +7,7 @@
 
 Current techs which are not in this file:-
 	Modules\Custom_Religions
-	(   X,  Y ) TECH_Z
+	( X, Y ) TECH_Z
 	( 014, 17 ) TECH_SHAMANISM
 	( 014, 19 ) TECH_DRUIDIC_TRADITIONS
 	( 017, 05 ) TECH_TENGRIISM

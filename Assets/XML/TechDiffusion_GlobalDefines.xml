@@ -21,7 +21,7 @@
 		<iDefineIntVal>90</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Tech Diffusion: Power of tech welfare assitance.  BBAI default: 30, for plain BTS: 0 -->
+		<!-- Tech Diffusion: Power of tech welfare assitance. BBAI default: 30, for plain BTS: 0 -->
 		<DefineName>TECH_DIFFUSION_WELFARE_MODIFIER</DefineName>
 		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
