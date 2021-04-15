@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- Master Load File -->
-<!-- -->
 <!-- If bLoad =1 the folder will beloaded. If it is 0 then the folder wont be loaded -->
-<!-- -->
 <!-- The order the folders are listed in are the order they are loaded. This should not be changed unless you are aware of the consequences. -->
 <!-- For example the female Missionaries should be last -->
-<!-- -->
 <!-- C2C Notes -->
 <!-- Std_BtS_Religions contains extra wonders for the religions that come with BtS -->
 <!-- Std_RoM_Religions contains extra wonders for the religions that are in the core of C2C -->

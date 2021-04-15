@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- -->
 <!-- Better BTS AI variables to allow easy AI tweaking -->
 <!-- by jdog5000 -->
-<!-- -->
 <Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
 	<Define>
 		<!-- War success value of capturing a city. BBAI default: 25, BTS 10 -->

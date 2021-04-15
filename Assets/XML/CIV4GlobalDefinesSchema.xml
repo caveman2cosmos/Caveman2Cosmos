@@ -2,7 +2,6 @@
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- Modified by the World of Civilization Team -->
 <!-- Global Defines Schema -->
-<!-- -->
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
 	<ElementType name="DefineName" content="textOnly"/>
 	<ElementType name="iDefineIntVal" content="textOnly" dt:type="int"/>
