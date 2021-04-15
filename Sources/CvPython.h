@@ -249,6 +249,7 @@ namespace Cy
 	inline bool call_override(const char* const moduleName, const char* const functionName)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		return gDLL->getPythonIFace()->callFunction(moduleName, functionName)
 			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl();
 	}
@@ -258,6 +259,7 @@ namespace Cy
 	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName, bool* bSucceeded = NULL)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy = PythonReturnVarMapping<ReturnValueTy_>::default_value;
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy);
 		FPythonAssert(bOK, moduleName, functionName);
