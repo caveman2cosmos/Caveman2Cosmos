@@ -260,6 +260,8 @@ static const CvString gSessionID = create_session_id();
 
 bool postEvent(EventArgs eventData, const char* eventName)
 {
+	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "onEvent");
+
 	if (eventData.toJson)
 	{
 		eventData.jsonArgs << logging::JsonValue("game_name", GC.getInitCore().getGameName());
@@ -319,8 +321,6 @@ bool postEvent(EventArgs eventData, const char* eventName)
 
 bool CvDllPythonEvents::reportKbdEvent(int evt, int key, int iCursorX, int iCursorY)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "kbdEvent");
-
 	NiPoint3 pt3Location;
 	const CvPlot* pPlot = gDLL->getEngineIFace()->pickPlot(iCursorX, iCursorY, pt3Location);
 	EventArgs eventData;
@@ -338,8 +338,6 @@ bool CvDllPythonEvents::reportKbdEvent(int evt, int key, int iCursorX, int iCurs
 
 bool CvDllPythonEvents::reportMouseEvent(int evt, int iCursorX, int iCursorY, bool bInterfaceConsumed)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "");
-
 	NiPoint3 pt3Location;
 	const CvPlot* pPlot = gDLL->getEngineIFace()->pickPlot(iCursorX, iCursorY, pt3Location);
 	// add list of active screens
@@ -360,8 +358,6 @@ bool CvDllPythonEvents::reportMouseEvent(int evt, int iCursorX, int iCursorY, bo
 
 void CvDllPythonEvents::reportModNetMessage(int iData1, int iData2, int iData3, int iData4, int iData5)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "");
-
 	EventArgs eventData;
 	eventData
 		.no_json()
@@ -376,8 +372,6 @@ void CvDllPythonEvents::reportModNetMessage(int iData1, int iData2, int iData3, 
 
 void CvDllPythonEvents::reportInit()
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "Init");
@@ -386,8 +380,6 @@ void CvDllPythonEvents::reportInit()
 
 void CvDllPythonEvents::reportUpdate(float fDeltaTime)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "");
-
 	if (GC.getUSE_ON_UPDATE_CALLBACK())
 	{
 		EventArgs eventData;
@@ -401,8 +393,6 @@ void CvDllPythonEvents::reportUpdate(float fDeltaTime)
 
 void CvDllPythonEvents::reportUnInit()
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "UnInit");
@@ -411,8 +401,6 @@ void CvDllPythonEvents::reportUnInit()
 
 void CvDllPythonEvents::reportGameStart()
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "GameStart");
@@ -421,8 +409,6 @@ void CvDllPythonEvents::reportGameStart()
 
 void CvDllPythonEvents::reportGameEnd(int iGameTurn)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "GameEnd")
@@ -433,8 +419,6 @@ void CvDllPythonEvents::reportGameEnd(int iGameTurn)
 
 void CvDllPythonEvents::reportWindowActivation(bool bActive)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "windowActivation")
@@ -445,18 +429,15 @@ void CvDllPythonEvents::reportWindowActivation(bool bActive)
 
 void CvDllPythonEvents::reportMapRegen()
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "MapRegen");
-
 	EventArgs eventData;
-	eventData.arg("event", "MapRegen");
+	eventData
+		.arg("event", "MapRegen");
 	postEvent(eventData, "MapRegen");
 }
 
 
 void CvDllPythonEvents::reportBeginGameTurn(int iGameTurn)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "BeginGameTurn");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "BeginGameTurn")
@@ -481,8 +462,6 @@ void CvDllPythonEvents::reportEndGameTurn(int iGameTurn)
 /************************************************************************************************/
 void CvDllPythonEvents::reportPreEndGameTurn(int iGameTurn)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "PreEndGameTurn");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "PreEndGameTurn")
@@ -495,8 +474,6 @@ void CvDllPythonEvents::reportPreEndGameTurn(int iGameTurn)
 
 void CvDllPythonEvents::reportBeginPlayerTurn(int iGameTurn, PlayerTypes ePlayer)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "BeginPlayerTurn");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "BeginPlayerTurn")
@@ -507,8 +484,6 @@ void CvDllPythonEvents::reportBeginPlayerTurn(int iGameTurn, PlayerTypes ePlayer
 
 void CvDllPythonEvents::reportEndPlayerTurn(int iGameTurn, PlayerTypes ePlayer)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "EndPlayerTurn");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "EndPlayerTurn")
@@ -519,8 +494,6 @@ void CvDllPythonEvents::reportEndPlayerTurn(int iGameTurn, PlayerTypes ePlayer)
 
 void CvDllPythonEvents::reportFirstContact(TeamTypes eTeamID1, TeamTypes eTeamID2)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "firstContact");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "firstContact")
@@ -531,8 +504,6 @@ void CvDllPythonEvents::reportFirstContact(TeamTypes eTeamID1, TeamTypes eTeamID
 
 void CvDllPythonEvents::reportCombatResult(CvUnit* pWinner, CvUnit* pLoser)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "combatResult");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "combatResult")
@@ -544,8 +515,6 @@ void CvDllPythonEvents::reportCombatResult(CvUnit* pWinner, CvUnit* pLoser)
 // BUG - Combat Events - start
 void CvDllPythonEvents::reportCombatRetreat(CvUnit* pAttacker, CvUnit* pDefender)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "combatRetreat");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "combatRetreat")
@@ -556,8 +525,6 @@ void CvDllPythonEvents::reportCombatRetreat(CvUnit* pAttacker, CvUnit* pDefender
 
 void CvDllPythonEvents::reportCombatWithdrawal(CvUnit* pAttacker, CvUnit* pDefender)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "combatWithdrawal");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "combatWithdrawal")
@@ -568,8 +535,6 @@ void CvDllPythonEvents::reportCombatWithdrawal(CvUnit* pAttacker, CvUnit* pDefen
 
 void CvDllPythonEvents::reportCombatLogCollateral(CvUnit* pAttacker, CvUnit* pDefender, int iDamage)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "combatLogCollateral")
@@ -581,8 +546,6 @@ void CvDllPythonEvents::reportCombatLogCollateral(CvUnit* pAttacker, CvUnit* pDe
 
 void CvDllPythonEvents::reportCombatLogFlanking(CvUnit* pAttacker, CvUnit* pDefender, int iDamage)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "combatLogFlanking");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "combatLogFlanking")
@@ -595,8 +558,6 @@ void CvDllPythonEvents::reportCombatLogFlanking(CvUnit* pAttacker, CvUnit* pDefe
 
 void CvDllPythonEvents::reportImprovementBuilt(int iImprovementType, int iX, int iY)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "improvementBuilt");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "improvementBuilt")
@@ -607,8 +568,6 @@ void CvDllPythonEvents::reportImprovementBuilt(int iImprovementType, int iX, int
 
 void CvDllPythonEvents::reportImprovementDestroyed(int iImprovementType, int iPlayer, int iX, int iY)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "improvementDestroyed");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "improvementDestroyed")
@@ -620,8 +579,6 @@ void CvDllPythonEvents::reportImprovementDestroyed(int iImprovementType, int iPl
 
 void CvDllPythonEvents::reportRouteBuilt(int iRouteType, int iX, int iY)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "routeBuilt");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "routeBuilt")
@@ -632,8 +589,6 @@ void CvDllPythonEvents::reportRouteBuilt(int iRouteType, int iX, int iY)
 
 void CvDllPythonEvents::reportChat(CvWString szString)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "chat");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "chat")
@@ -643,8 +598,6 @@ void CvDllPythonEvents::reportChat(CvWString szString)
 
 void CvDllPythonEvents::reportPlotRevealed(CvPlot *pPlot, TeamTypes eTeam)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "plotRevealed");
-
 	EventArgs eventData;
 	eventData
 		.no_json()
@@ -656,8 +609,6 @@ void CvDllPythonEvents::reportPlotRevealed(CvPlot *pPlot, TeamTypes eTeam)
 
 void CvDllPythonEvents::reportPlotFeatureRemoved(CvPlot *pPlot, FeatureTypes eFeature, CvCity* pCity)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "plotFeatureRemoved");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "plotFeatureRemoved")
@@ -669,8 +620,6 @@ void CvDllPythonEvents::reportPlotFeatureRemoved(CvPlot *pPlot, FeatureTypes eFe
 
 void CvDllPythonEvents::reportPlotPicked(CvPlot *pPlot)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "plotPicked");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "plotPicked")
@@ -680,8 +629,6 @@ void CvDllPythonEvents::reportPlotPicked(CvPlot *pPlot)
 
 void CvDllPythonEvents::reportNukeExplosion(CvPlot *pPlot, CvUnit* pNukeUnit)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "nukeExplosion");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "nukeExplosion")
@@ -692,8 +639,6 @@ void CvDllPythonEvents::reportNukeExplosion(CvPlot *pPlot, CvUnit* pNukeUnit)
 
 void CvDllPythonEvents::reportGotoPlotSet(CvPlot *pPlot, PlayerTypes ePlayer)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "gotoPlotSet");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "gotoPlotSet")
@@ -704,8 +649,6 @@ void CvDllPythonEvents::reportGotoPlotSet(CvPlot *pPlot, PlayerTypes ePlayer)
 
 void CvDllPythonEvents::reportCityBuilt( CvCity *pCity, CvUnit *pUnit )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityBuilt");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityBuilt")
@@ -716,8 +659,6 @@ void CvDllPythonEvents::reportCityBuilt( CvCity *pCity, CvUnit *pUnit )
 
 void CvDllPythonEvents::reportCityRazed( CvCity *pCity, PlayerTypes ePlayer )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityRazed");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityRazed")
@@ -728,8 +669,6 @@ void CvDllPythonEvents::reportCityRazed( CvCity *pCity, PlayerTypes ePlayer )
 
 void CvDllPythonEvents::reportCityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pOldCity, bool bConquest, bool bTrade)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityAcquired");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityAcquired")
@@ -743,8 +682,6 @@ void CvDllPythonEvents::reportCityAcquired(PlayerTypes eOldOwner, PlayerTypes eP
 
 void CvDllPythonEvents::reportCityAcquiredAndKept(PlayerTypes ePlayer, CvCity* pOldCity)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityAcquiredAndKept");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityAcquiredAndKept")
@@ -755,8 +692,6 @@ void CvDllPythonEvents::reportCityAcquiredAndKept(PlayerTypes ePlayer, CvCity* p
 
 void CvDllPythonEvents::reportCityLost(CvCity* pCity)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityLost");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityLost")
@@ -766,8 +701,6 @@ void CvDllPythonEvents::reportCityLost(CvCity* pCity)
 
 void CvDllPythonEvents::reportCultureExpansion( CvCity *pCity, PlayerTypes ePlayer )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cultureExpansion");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "cultureExpansion")
@@ -778,8 +711,6 @@ void CvDllPythonEvents::reportCultureExpansion( CvCity *pCity, PlayerTypes ePlay
 
 void CvDllPythonEvents::reportCityGrowth( CvCity *pCity, PlayerTypes ePlayer )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityGrowth");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityGrowth")
@@ -790,8 +721,6 @@ void CvDllPythonEvents::reportCityGrowth( CvCity *pCity, PlayerTypes ePlayer )
 
 void CvDllPythonEvents::reportCityProduction( CvCity *pCity, PlayerTypes ePlayer )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityDoTurn");
-
 	EventArgs eventData;
 	eventData
 		.no_json()
@@ -803,8 +732,6 @@ void CvDllPythonEvents::reportCityProduction( CvCity *pCity, PlayerTypes ePlayer
 
 void CvDllPythonEvents::reportCityBuildingUnit( CvCity *pCity, UnitTypes eUnitType )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityBuildingUnit");
-
 	EventArgs eventData;
 	eventData
 		.no_json()
@@ -816,8 +743,6 @@ void CvDllPythonEvents::reportCityBuildingUnit( CvCity *pCity, UnitTypes eUnitTy
 
 void CvDllPythonEvents::reportCityBuildingBuilding( CvCity *pCity, BuildingTypes eBuildingType )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityBuildingBuilding");
-
 	EventArgs eventData;
 	eventData
 		.no_json()
@@ -830,8 +755,6 @@ void CvDllPythonEvents::reportCityBuildingBuilding( CvCity *pCity, BuildingTypes
 // BUG - Project Started Event - start
 void CvDllPythonEvents::reportCityBuildingProject( CvCity* pCity, ProjectTypes eProjectType )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityBuildingProject");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityBuildingProject")
@@ -844,8 +767,6 @@ void CvDllPythonEvents::reportCityBuildingProject( CvCity* pCity, ProjectTypes e
 // BUG - Process Started Event - start
 void CvDllPythonEvents::reportCityBuildingProcess( CvCity* pCity, ProcessTypes eProcessType )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityBuildingProcess");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityBuildingProcess")
@@ -857,8 +778,6 @@ void CvDllPythonEvents::reportCityBuildingProcess( CvCity* pCity, ProcessTypes e
 
 void CvDllPythonEvents::reportCityRename( CvCity *pCity )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityRename");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityRename")
@@ -868,8 +787,6 @@ void CvDllPythonEvents::reportCityRename( CvCity *pCity )
 
 void CvDllPythonEvents::reportCityHurry( CvCity *pCity, HurryTypes eHurry )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "cityHurry");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityHurry")
@@ -884,8 +801,6 @@ void CvDllPythonEvents::reportSelectionGroupPushMission(CvSelectionGroup* pSelec
 	{
 		return;
 	}
-
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "selectionGroupPushMission");
 
 	std::vector<int> aiUnitIds;
 
@@ -905,8 +820,6 @@ void CvDllPythonEvents::reportSelectionGroupPushMission(CvSelectionGroup* pSelec
 
 void CvDllPythonEvents::reportUnitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitMove");
-
 	EventArgs eventData;
 	eventData
 		.no_json()
@@ -919,8 +832,6 @@ void CvDllPythonEvents::reportUnitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOl
 
 void CvDllPythonEvents::reportUnitSetXY(CvPlot* pPlot, CvUnit* pUnit)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitSetXY");
-
 	if (GC.getUSE_ON_UNIT_SET_XY_CALLBACK())
 	{
 		EventArgs eventData;
@@ -934,8 +845,6 @@ void CvDllPythonEvents::reportUnitSetXY(CvPlot* pPlot, CvUnit* pUnit)
 
 void CvDllPythonEvents::reportUnitCreated(CvUnit* pUnit)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitCreated");
-
 	if (GC.getUSE_ON_UNIT_CREATED_CALLBACK())
 	{
 		EventArgs eventData;
@@ -948,8 +857,6 @@ void CvDllPythonEvents::reportUnitCreated(CvUnit* pUnit)
 
 void CvDllPythonEvents::reportUnitBuilt(CvCity *pCity, CvUnit* pUnit)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitBuilt");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "unitBuilt")
@@ -960,8 +867,6 @@ void CvDllPythonEvents::reportUnitBuilt(CvCity *pCity, CvUnit* pUnit)
 
 void CvDllPythonEvents::reportUnitKilled(CvUnit* pUnit, PlayerTypes eAttacker)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitKilled");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "unitKilled")
@@ -973,8 +878,6 @@ void CvDllPythonEvents::reportUnitKilled(CvUnit* pUnit, PlayerTypes eAttacker)
 // BUG - Unit Captured Event - start
 void CvDllPythonEvents::reportUnitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitCaptured");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "unitCaptured")
@@ -987,8 +890,6 @@ void CvDllPythonEvents::reportUnitCaptured(PlayerTypes eFromPlayer, UnitTypes eU
 
 void CvDllPythonEvents::reportUnitLost(CvUnit* pUnit)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitLost");
-
 	if (GC.getUSE_ON_UNIT_LOST_CALLBACK())
 	{
 		EventArgs eventData;
@@ -1001,8 +902,6 @@ void CvDllPythonEvents::reportUnitLost(CvUnit* pUnit)
 
 void CvDllPythonEvents::reportUnitPromoted(CvUnit* pUnit, PromotionTypes ePromotion)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitPromoted");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "unitPromoted")
@@ -1014,8 +913,6 @@ void CvDllPythonEvents::reportUnitPromoted(CvUnit* pUnit, PromotionTypes ePromot
 // BUG - Upgrade Unit Event - start
 void CvDllPythonEvents::reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, int iPrice)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitUpgraded");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "unitUpgraded")
@@ -1028,8 +925,6 @@ void CvDllPythonEvents::reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, i
 
 void CvDllPythonEvents::reportUnitSelected(CvUnit* pUnit)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitSelected");
-
 	if (GC.getUSE_ON_UNIT_SELECTED_CALLBACK())
 	{
 		EventArgs eventData;
@@ -1042,8 +937,6 @@ void CvDllPythonEvents::reportUnitSelected(CvUnit* pUnit)
 
 void CvDllPythonEvents::reportUnitRename(CvUnit *pUnit)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "UnitRename");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "UnitRename")
@@ -1053,8 +946,6 @@ void CvDllPythonEvents::reportUnitRename(CvUnit *pUnit)
 
 void CvDllPythonEvents::reportUnitPillage(CvUnit* pUnit, ImprovementTypes eImprovement, RouteTypes eRoute, PlayerTypes ePlayer)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitPillage");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "unitPillage")
@@ -1068,8 +959,6 @@ void CvDllPythonEvents::reportUnitPillage(CvUnit* pUnit, ImprovementTypes eImpro
 
 void CvDllPythonEvents::reportUnitSpreadReligionAttempt(CvUnit* pUnit, ReligionTypes eReligion, bool bSuccess)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitSpreadReligionAttempt");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "unitSpreadReligionAttempt")
@@ -1081,8 +970,6 @@ void CvDllPythonEvents::reportUnitSpreadReligionAttempt(CvUnit* pUnit, ReligionT
 
 void CvDllPythonEvents::reportUnitGifted(CvUnit* pUnit, PlayerTypes eGiftingPlayer, CvPlot* pPlotLocation)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitGifted");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "unitGifted")
@@ -1094,8 +981,6 @@ void CvDllPythonEvents::reportUnitGifted(CvUnit* pUnit, PlayerTypes eGiftingPlay
 
 void CvDllPythonEvents::reportUnitBuildImprovement(CvUnit* pUnit, BuildTypes eBuild, bool bFinished)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "unitBuildImprovement");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "unitBuildImprovement")
@@ -1107,8 +992,6 @@ void CvDllPythonEvents::reportUnitBuildImprovement(CvUnit* pUnit, BuildTypes eBu
 
 void CvDllPythonEvents::reportGoodyReceived(PlayerTypes ePlayer, CvPlot *pGoodyPlot, CvUnit *pGoodyUnit, GoodyTypes eGoodyType)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "goodyReceived");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "goodyReceived")
@@ -1121,8 +1004,6 @@ void CvDllPythonEvents::reportGoodyReceived(PlayerTypes ePlayer, CvPlot *pGoodyP
 
 void CvDllPythonEvents::reportGreatPersonBorn( CvUnit *pUnit, PlayerTypes ePlayer, CvCity *pCity )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "greatPersonBorn");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "greatPersonBorn")
@@ -1134,8 +1015,6 @@ void CvDllPythonEvents::reportGreatPersonBorn( CvUnit *pUnit, PlayerTypes ePlaye
 
 void CvDllPythonEvents::reportCivicChanged(PlayerTypes ePlayer, CivicTypes eOldCivic, CivicTypes eNewCivic)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "civicChanged");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "civicChanged")
@@ -1147,8 +1026,6 @@ void CvDllPythonEvents::reportCivicChanged(PlayerTypes ePlayer, CivicTypes eOldC
 
 void CvDllPythonEvents::reportBuildingBuilt(CvCity *pCity, BuildingTypes eBuilding)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "buildingBuilt");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "buildingBuilt")
@@ -1159,8 +1036,6 @@ void CvDllPythonEvents::reportBuildingBuilt(CvCity *pCity, BuildingTypes eBuildi
 
 void CvDllPythonEvents::reportProjectBuilt(CvCity *pCity, ProjectTypes eProject)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "projectBuilt");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "projectBuilt")
@@ -1171,8 +1046,6 @@ void CvDllPythonEvents::reportProjectBuilt(CvCity *pCity, ProjectTypes eProject)
 
 void CvDllPythonEvents::reportTechAcquired(TechTypes eType, TeamTypes eTeam, PlayerTypes ePlayer, bool bAnnounce)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "techAcquired");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "techAcquired")
@@ -1185,8 +1058,6 @@ void CvDllPythonEvents::reportTechAcquired(TechTypes eType, TeamTypes eTeam, Pla
 
 void CvDllPythonEvents::reportTechSelected(TechTypes eTech, PlayerTypes ePlayer)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "techSelected");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "techSelected")
@@ -1197,8 +1068,6 @@ void CvDllPythonEvents::reportTechSelected(TechTypes eTech, PlayerTypes ePlayer)
 
 void CvDllPythonEvents::reportReligionFounded(ReligionTypes eType, PlayerTypes ePlayer)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "religionFounded");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "religionFounded")
@@ -1209,8 +1078,6 @@ void CvDllPythonEvents::reportReligionFounded(ReligionTypes eType, PlayerTypes e
 
 void CvDllPythonEvents::reportReligionSpread(ReligionTypes eType, PlayerTypes ePlayer, CvCity* pSpreadCity)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "religionSpread");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "religionSpread")
@@ -1222,8 +1089,6 @@ void CvDllPythonEvents::reportReligionSpread(ReligionTypes eType, PlayerTypes eP
 
 void CvDllPythonEvents::reportReligionRemove(ReligionTypes eType, PlayerTypes ePlayer, CvCity* pSpreadCity)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "religionRemove");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "religionRemove")
@@ -1235,8 +1100,6 @@ void CvDllPythonEvents::reportReligionRemove(ReligionTypes eType, PlayerTypes eP
 
 void CvDllPythonEvents::reportCorporationFounded(CorporationTypes eType, PlayerTypes ePlayer)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "corporationFounded");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "corporationFounded")
@@ -1247,8 +1110,6 @@ void CvDllPythonEvents::reportCorporationFounded(CorporationTypes eType, PlayerT
 
 void CvDllPythonEvents::reportCorporationSpread(CorporationTypes eType, PlayerTypes ePlayer, CvCity* pSpreadCity)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "corporationSpread");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "corporationSpread")
@@ -1260,8 +1121,6 @@ void CvDllPythonEvents::reportCorporationSpread(CorporationTypes eType, PlayerTy
 
 void CvDllPythonEvents::reportCorporationRemove(CorporationTypes eType, PlayerTypes ePlayer, CvCity* pSpreadCity)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "corporationRemove");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "corporationRemove")
@@ -1273,8 +1132,6 @@ void CvDllPythonEvents::reportCorporationRemove(CorporationTypes eType, PlayerTy
 
 void CvDllPythonEvents::reportGoldenAge(PlayerTypes ePlayer)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "goldenAge");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "goldenAge")
@@ -1284,8 +1141,6 @@ void CvDllPythonEvents::reportGoldenAge(PlayerTypes ePlayer)
 
 void CvDllPythonEvents::reportEndGoldenAge(PlayerTypes ePlayer)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "endGoldenAge");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "endGoldenAge")
@@ -1295,8 +1150,6 @@ void CvDllPythonEvents::reportEndGoldenAge(PlayerTypes ePlayer)
 
 void CvDllPythonEvents::reportChangeWar(bool bWar, TeamTypes eTeam, TeamTypes eOtherTeam)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "changeWar");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "changeWar")
@@ -1308,8 +1161,6 @@ void CvDllPythonEvents::reportChangeWar(bool bWar, TeamTypes eTeam, TeamTypes eO
 
 void CvDllPythonEvents::reportVictory(TeamTypes eNewWinner, VictoryTypes eNewVictory)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "victory");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "victory")
@@ -1320,8 +1171,6 @@ void CvDllPythonEvents::reportVictory(TeamTypes eNewWinner, VictoryTypes eNewVic
 
 void CvDllPythonEvents::reportVassalState(TeamTypes eMaster, TeamTypes eVassal, bool bVassal)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "vassalState");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "vassalState")
@@ -1333,8 +1182,6 @@ void CvDllPythonEvents::reportVassalState(TeamTypes eMaster, TeamTypes eVassal, 
 
 void CvDllPythonEvents::reportSetPlayerAlive( PlayerTypes ePlayerID, bool bNewValue )
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "setPlayerAlive");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "setPlayerAlive")
@@ -1345,8 +1192,6 @@ void CvDllPythonEvents::reportSetPlayerAlive( PlayerTypes ePlayerID, bool bNewVa
 
 void CvDllPythonEvents::reportPlayerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "playerChangeStateReligion");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "playerChangeStateReligion")
@@ -1359,8 +1204,6 @@ void CvDllPythonEvents::reportPlayerChangeStateReligion(PlayerTypes ePlayerID, R
 
 void CvDllPythonEvents::reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "playerGoldTrade");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "playerGoldTrade")
@@ -1373,8 +1216,6 @@ void CvDllPythonEvents::reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTyp
 // BUG - Revolution Event - start
 void CvDllPythonEvents::reportPlayerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "playerRevolution");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "playerRevolution")
@@ -1388,8 +1229,6 @@ void CvDllPythonEvents::reportPlayerRevolution(PlayerTypes ePlayerID, int iAnarc
 
 void CvDllPythonEvents::reportGenericEvent(const char* szEventName, void *pyArgs)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", szEventName);
-
 	EventArgs eventData;
 	eventData
 		.no_json()
@@ -1400,8 +1239,6 @@ void CvDllPythonEvents::reportGenericEvent(const char* szEventName, void *pyArgs
 
 void CvDllPythonEvents::preSave()
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "OnPreSave");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "OnPreSave");
@@ -1411,8 +1248,6 @@ void CvDllPythonEvents::preSave()
 
 void CvDllPythonEvents::reportChangeTeam(TeamTypes eOld, TeamTypes eNew)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "changeTeam");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "changeTeam")
