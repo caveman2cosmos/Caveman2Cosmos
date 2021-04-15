@@ -6,13 +6,13 @@
 	Copyright (c) 2009 The BUG Mod.
 -->
 <mod id="CityBar" 
-	 name="BULL City Bar" 
-	 author="EmperorFool" 
-	 version="1.0" 
-	 date="04/20/2009"
-	 url="http://forums.civfanatics.com/showthread.php?t=307951"
-	 dll="1">
-	 
+	name="BULL City Bar" 
+	author="EmperorFool" 
+	version="1.0" 
+	date="04/20/2009"
+	url="http://forums.civfanatics.com/showthread.php?t=307951"
+	dll="1">
+	
 	<options id="CityBar" file="BUG City Bar.ini">
 		<section id="Bar">
 			<option id="AirportIcons" key="Airport Icons" 

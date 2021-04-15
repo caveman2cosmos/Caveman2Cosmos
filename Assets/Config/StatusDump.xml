@@ -6,12 +6,12 @@
 	Copyright (c) 2008 The BUG Mod.
 -->
 <mod id="StatusDump" 
-	 name="StatusDump Mod" 
-	 author="Ruff_Hi" 
-	 version="1.0" 
-	 date="02/11/2005"
-	 url="http://forums.civfanatics.com/showthread.php?t=141164">
-	 
+	name="StatusDump Mod" 
+	author="Ruff_Hi" 
+	version="1.0" 
+	date="02/11/2005"
+	url="http://forums.civfanatics.com/showthread.php?t=141164">
+	
 	<options id="StatusDump" file="StatusDump.ini">
 		<section id="StatusDump">
 			<!-- Move this outside of INI once Mod objects hold options -->

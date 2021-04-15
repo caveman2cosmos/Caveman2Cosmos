@@ -206,7 +206,7 @@
 		<Italian>Dopo un'accesa votazione, il tuo rivale %s1 è riuscito a soffiarti la vittoria con il %d1% dei voti!</Italian>
 		<Polish>W zaciętych wyborach Twój przeciwnik %s1 zdołał zwyciężyć w wyborach z ilością głosów %d1%!</Polish>
 		<Spanish>¡Tu oponente %s1 ha logrado arrebatarte la victoria en las últimas elecciones, con el %d1% de los votos!</Spanish>
-		 <Russian>В жарких выборах ваш оппонент %s1 сумел вырвать у вас победу с %d1% голосами!</Russian>
+		<Russian>В жарких выборах ваш оппонент %s1 сумел вырвать у вас победу с %d1% голосами!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_ELECTION_VICTORY</Tag>

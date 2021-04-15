@@ -6,13 +6,13 @@
 	Copyright (c) 2009 The BUG Mod.
 -->
 <mod id="MiscHover" 
-	 name="BULL Miscellaneous Hovers" 
-	 author="EmperorFool" 
-	 version="1.0" 
-	 date="04/20/2009"
-	 url="http://forums.civfanatics.com/showthread.php?t=307951"
-	 dll="1">
-	 
+	name="BULL Miscellaneous Hovers" 
+	author="EmperorFool" 
+	version="1.0" 
+	date="04/20/2009"
+	url="http://forums.civfanatics.com/showthread.php?t=307951"
+	dll="1">
+	
 	<options id="MiscHover" file="BUG Misc Hovers.ini">
 		<section id="Leaderhead">
 			<option id="LeaderheadHiddenAttitude" key="Show Hidden Attitude" 

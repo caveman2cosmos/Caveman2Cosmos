@@ -5,8 +5,8 @@
 		<UnitInfo>
 			<Type>UNIT_BARD</Type>
 			<AndDependencyTypes>
-						<DependencyType>UNIT_BARD</DependencyType>
-					 	<DependencyType>BUILDING_CROW_STORY</DependencyType>
+				<DependencyType>UNIT_BARD</DependencyType>
+				<DependencyType>BUILDING_CROW_STORY</DependencyType>
  			</AndDependencyTypes>
 			<Buildings>
 				<BuildingType>BUILDING_CROW_STORY</BuildingType>

@@ -6,13 +6,13 @@
 	Copyright (c) 2008 The BUG Mod.
 -->
 <mod id="Reminder" 
-	 module="ReminderEventManager" 
-	 name="Reminder" 
-	 author="eotinb, EmperorFool, Ruff_Hi" 
-	 version="1.0" 
-	 date="11/29/2005"
-	 url="http://forums.civfanatics.com/showthread.php?t=144612">
-	 
+	module="ReminderEventManager" 
+	name="Reminder" 
+	author="eotinb, EmperorFool, Ruff_Hi" 
+	version="1.0" 
+	date="11/29/2005"
+	url="http://forums.civfanatics.com/showthread.php?t=144612">
+	
 	<options id="Reminder" file="Reminder.ini">
 		<section id="Reminder">
 			<option id="Enabled" 

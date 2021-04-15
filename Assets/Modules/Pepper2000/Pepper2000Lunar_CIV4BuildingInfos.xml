@@ -1553,29 +1553,29 @@
 			</SpecialistCounts>
 			<UnitCombatProdModifiers>
  				<UnitCombatProdModifier>
-		 				<UnitCombatProd>UNITCOMBAT_ORBITAL_AIRCRAFT</UnitCombatProd>
-	 				 		<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
-	 				</UnitCombatProdModifier>
-	 				<UnitCombatProdModifier>
-		 				<UnitCombatProd>UNITCOMBAT_EARLY_SPACESHIP</UnitCombatProd>
-		 				<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
-	 				</UnitCombatProdModifier>
-	 				<UnitCombatProdModifier>
-		 				<UnitCombatProd>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</UnitCombatProd>
-		 				<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
-	 				</UnitCombatProdModifier>
-	 				<UnitCombatProdModifier>
-		 				<UnitCombatProd>UNITCOMBAT_NUCLEAR_SPACESHIP</UnitCombatProd>
-		 				<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
-	 				</UnitCombatProdModifier>
-	 				<UnitCombatProdModifier>
-		 				<UnitCombatProd>UNITCOMBAT_ANTIMATTER_SPACESHIP</UnitCombatProd>
-		 				<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
-	 				</UnitCombatProdModifier>
-	 				<UnitCombatProdModifier>
-		 				<UnitCombatProd>UNITCOMBAT_WORMHOLE_SPACESHIP</UnitCombatProd>
-		 				<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
-	 				</UnitCombatProdModifier>
+					<UnitCombatProd>UNITCOMBAT_ORBITAL_AIRCRAFT</UnitCombatProd>
+					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
+				</UnitCombatProdModifier>
+				<UnitCombatProdModifier>
+					<UnitCombatProd>UNITCOMBAT_EARLY_SPACESHIP</UnitCombatProd>
+					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
+				</UnitCombatProdModifier>
+				<UnitCombatProdModifier>
+					<UnitCombatProd>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</UnitCombatProd>
+					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
+				</UnitCombatProdModifier>
+				<UnitCombatProdModifier>
+					<UnitCombatProd>UNITCOMBAT_NUCLEAR_SPACESHIP</UnitCombatProd>
+					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
+				</UnitCombatProdModifier>
+				<UnitCombatProdModifier>
+					<UnitCombatProd>UNITCOMBAT_ANTIMATTER_SPACESHIP</UnitCombatProd>
+					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
+				</UnitCombatProdModifier>
+				<UnitCombatProdModifier>
+					<UnitCombatProd>UNITCOMBAT_WORMHOLE_SPACESHIP</UnitCombatProd>
+					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
+				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>

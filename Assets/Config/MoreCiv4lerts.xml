@@ -6,12 +6,12 @@
 	Copyright (c) 2008 The BUG Mod.
 -->
 <mod id="MoreCiv4lerts" 
-	 name="MoreCiv4lerts" 
-	 author="HOF Team, EmperorFool" 
-	 version="1.61.001" 
-	 date="06/09/2006" 
-	 url="http://hof.civfanatics.net/civ4/mod.php">
-	 
+	name="MoreCiv4lerts" 
+	author="HOF Team, EmperorFool" 
+	version="1.61.001" 
+	date="06/09/2006" 
+	url="http://hof.civfanatics.net/civ4/mod.php">
+	
 	<link id="Enabled" to="Civ4lerts__Enabled"/>
 	
 	<options id="MoreCiv4lerts" file="MoreCiv4lerts.ini">

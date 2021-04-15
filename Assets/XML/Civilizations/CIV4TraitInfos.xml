@@ -762,7 +762,7 @@
 				</ImprovementYieldChange>
 			</ImprovementYieldChanges>
 			<PropertyManipulators>
-				 <PropertySource>
+				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>

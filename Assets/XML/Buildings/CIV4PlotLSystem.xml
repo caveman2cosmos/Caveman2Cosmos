@@ -8,12 +8,12 @@
 					bZMode_Ground	- if set, the builder will try to force the art to not z-write nor z-test
 					bIsPartOfImprovement, bIsPartOfBonus -	when provided once during a plot build on any placed artref,
 															this will prevent the LSystem from falling back to a fixed placement alg
-	 On nodes:
+	On nodes:
 		* RegionTest - if value is 1, then the node will be tested against cut regions when expanded
-					 - if value is 0, then this won't happen
-					 - if value is 0NW, then the node won't be region tested or water tested
-					 - if value is 1NW, then the node will be region tested but won't be water tested
-	 On productions:
+		- if value is 0, then this won't happen
+		- if value is 0NW, then the node won't be region tested or water tested
+		- if value is 1NW, then the node will be region tested but won't be water tested
+	On productions:
 		* Bonus - can be multiple, if any met constraint met, then production is expandable
 		* Improvement - as with bonus
 		* Scalars:

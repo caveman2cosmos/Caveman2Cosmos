@@ -5666,8 +5666,8 @@
 			<Description>TXT_KEY_EVENT_HARDY_CROPS_1</Description>
 			<PlotExtraYields>
 				<PlotExtraYield>
-					 <YieldType>YIELD_FOOD</YieldType>
-					 <iExtraYield>2</iExtraYield>
+					<YieldType>YIELD_FOOD</YieldType>
+					<iExtraYield>2</iExtraYield>
 				</PlotExtraYield>
 			</PlotExtraYields>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>

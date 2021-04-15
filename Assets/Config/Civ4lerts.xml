@@ -6,14 +6,14 @@
 	Copyright (c) 2008 The BUG Mod.
 -->
 <mod id="Civ4lerts" 
-	 name="Civ4lerts" 
-	 author="Dr. Elmer Jiggle, EmperorFool" 
-	 version="1.4" 
-	 date="08/11/2006"
-	 url="http://forums.civfanatics.com/showthread.php?t=157088">
-	 
+	name="Civ4lerts" 
+	author="Dr. Elmer Jiggle, EmperorFool" 
+	version="1.4" 
+	date="08/11/2006"
+	url="http://forums.civfanatics.com/showthread.php?t=157088">
+	
 	<link id="WhipAssistOverflowCountCurrentProduction" 
-		 to="CityScreen__WhipAssistOverflowCountCurrentProduction"/>
+		to="CityScreen__WhipAssistOverflowCountCurrentProduction"/>
 	
 	<options id="Civ4lerts" file="Civ4lerts.ini">
 		<section id="Civ4lerts">
