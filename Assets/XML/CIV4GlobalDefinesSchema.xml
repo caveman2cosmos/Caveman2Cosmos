@@ -6,7 +6,7 @@
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
 	<ElementType name="DefineName" content="textOnly"/>
 	<ElementType name="iDefineIntVal" content="textOnly" dt:type="int"/>
-<!--	MOD COMPONENT CONTROL	08/14/2007 	MRGENIE	-->
+<!--	MOD COMPONENT CONTROL	08/14/2007	MRGENIE	-->
 	<ElementType name="bDefineBoolVal" content="textOnly" dt:type="boolean"/>
 <!--	MOD COMPONENT CONTROL	END					-->
 	<ElementType name="fDefineFloatVal" content="textOnly" dt:type="float"/>
@@ -14,7 +14,7 @@
 	<ElementType name="Define" content="eltOnly">
 		<element type="DefineName"/>
 		<element type="iDefineIntVal" minOccurs="0"/>
-<!--	MOD COMPONENT CONTROL	08/14/2007 	MRGENIE	-->
+<!--	MOD COMPONENT CONTROL	08/14/2007	MRGENIE	-->
 		<element type="bDefineBoolVal" minOccurs="0"/>
 <!--	MOD COMPONENT CONTROL	END					-->
 		<element type="fDefineFloatVal" minOccurs="0"/>

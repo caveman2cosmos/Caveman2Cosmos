@@ -1552,7 +1552,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<UnitCombatProdModifiers>
- 				<UnitCombatProdModifier>
+				<UnitCombatProdModifier>
 					<UnitCombatProd>UNITCOMBAT_ORBITAL_AIRCRAFT</UnitCombatProd>
 					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
 				</UnitCombatProdModifier>

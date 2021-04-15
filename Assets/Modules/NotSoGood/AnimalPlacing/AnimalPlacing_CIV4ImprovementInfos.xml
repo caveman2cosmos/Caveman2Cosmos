@@ -205,7 +205,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
- 		<ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_POMEGRANATE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_BONUS_POMEGRANATE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
@@ -214,7 +214,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
- 		<ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_KAVA</Type>
 			<Description>TXT_KEY_IMPROVEMENT_BONUS_KAVA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>

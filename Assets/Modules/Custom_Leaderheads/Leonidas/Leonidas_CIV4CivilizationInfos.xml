@@ -4,7 +4,7 @@
 <!-- -->
 <Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
 	<CivilizationInfos>
- 		<CivilizationInfo>
+		<CivilizationInfo>
 			<Type>CIVILIZATION_GREECE</Type>
 			<Leaders>
 				<Leader>

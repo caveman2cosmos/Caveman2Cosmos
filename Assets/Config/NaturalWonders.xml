@@ -3,9 +3,9 @@
 	PlatyPing's natural wonders
 -->
 <mod id="NaturalWonders" module="NaturalWonder_EM">
- 	<event type="plotRevealed" function="onPlotRevealed"/>
-<!-- 	<event type="cityBuilt" function="onCityBuilt"/>
- 	<event type="cityRazed" function="onCityRazed"/>
+	<event type="plotRevealed" function="onPlotRevealed"/>
+<!--	<event type="cityBuilt" function="onCityBuilt"/>
+	<event type="cityRazed" function="onCityRazed"/>
 -->
 </mod>
 

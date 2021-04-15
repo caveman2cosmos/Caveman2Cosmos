@@ -16175,7 +16175,7 @@
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-2</iCaptureResistanceModifierChange>
 		</PromotionInfo>
-<!-- 	<PromotionInfo>
+<!--	<PromotionInfo>
 			<Type>PROMOTION_STONE_WEAPONS</Type>
 			<Description>TXT_KEY_PROMOTION_STONE_WEAPONS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>

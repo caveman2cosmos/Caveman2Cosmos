@@ -55,7 +55,7 @@
 			<Type>BUILDING_HORSE_MYTH</Type>
 			<AndDependencyTypes>
 				<DependencyType>BUILDING_HORSE_MYTH</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_EJE_SONG</BuildingType>

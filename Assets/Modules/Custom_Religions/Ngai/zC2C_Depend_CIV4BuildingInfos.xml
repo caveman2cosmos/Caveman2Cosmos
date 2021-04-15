@@ -31,7 +31,7 @@
 			<Type>BUILDING_BULL_MYTH</Type>
 			<AndDependencyTypes>
 				<DependencyType>BUILDING_BULL_MYTH</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_NAITERUKOB</BuildingType>

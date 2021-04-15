@@ -32,7 +32,7 @@
 			<AndDependencyTypes>
 				<DependencyType>BUILDING_DEER_MYTH</DependencyType>
 				<DependencyType>RELIGION_SHAMANISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SHAMAN_CATHEDRAL2</BuildingType>
