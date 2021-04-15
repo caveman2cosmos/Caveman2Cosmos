@@ -7,7 +7,6 @@
 				<PrereqTech>TECH_DUMMY</PrereqTech>
 			</FeatureStruct>
 		</FeatureStructs>
-
 	- FeatureChange and TerrainChange make it so that the "improvement" is not placed; instead,
 	the build action will replace any existing feature/terrain with the corresponding entered value.
 	bRemove should be used in necessary FeatureStructs to make UI work properly for replacing features.
@@ -620,7 +619,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildPath.dds</Button>
 		</BuildInfo>
-
 		<!-- DEALING WITH HUMANITIES' S**T -->
 		<!-- Sanitize -->
 		<BuildInfo>
@@ -726,7 +724,6 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildScrubFallout.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,8</Button>
 		</BuildInfo>
-
 		<!-- MAPBONUS-ONLY* EXPLOITATION (*mostly) -->
 		<!-- Wildlife Sanctuary | End -->
 		<BuildInfo>
@@ -920,7 +917,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/scavenging_camp.dds</Button>
 		</BuildInfo>
-
 		<!-- Winery -> Vertical Farm -->
 		<BuildInfo>
 			<Type>BUILD_WINERY</Type>
@@ -1545,7 +1541,6 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildPlantation.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,9</Button>
 		</BuildInfo>
-
 		<!-- Geothermal Factory | Independent -->
 		<BuildInfo>
 			<Type>BUILD_GEOTHERMAL_FACTORY</Type>
@@ -1575,7 +1570,6 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Build_acheological_site.dds</Button>
 		</BuildInfo>
-
 		<!-- Hydrocarbon Well* | End -->
 		<BuildInfo>
 			<Type>BUILD_HYDROCARBON_WELL</Type>
@@ -1910,7 +1904,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
 		</BuildInfo>
-
 		<!-- INCIDENTIAL MAPBONUS-EXPLOITING -->
 		<!-- Vertical Farm | End -->
 		<BuildInfo>
@@ -2498,7 +2491,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
 		</BuildInfo>
-
 		<!-- Mountain Mine | End -->
 		<BuildInfo>
 			<Type>BUILD_MOUNTAIN_MINE</Type>
@@ -2532,7 +2524,6 @@
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
 			<bMine>1</bMine>
 		</BuildInfo>
-
 		<!-- Core Mine | End -->
 		<BuildInfo>
 			<Type>BUILD_CORE_MINE</Type>
@@ -3314,7 +3305,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
 		</BuildInfo>
-
 		<!-- Hybrid Forest | End -->
 		<BuildInfo>
 			<Type>BUILD_HYBRID_FOREST</Type>
@@ -3391,7 +3381,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_WoodGather.dds</Button>
 		</BuildInfo>
-
 		<!-- MAIN CHAINS -->
 		<!-- Suburb | End -->
 		<BuildInfo>
@@ -4298,7 +4287,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
 		</BuildInfo>
-
 		<!-- Manufacturing Complex | End -->
 		<BuildInfo>
 			<Type>BUILD_MANUFACTURING_COMPLEX</Type>
@@ -4955,7 +4943,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWorkshop.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,8,8</Button>
 		</BuildInfo>
-
 		<!-- Hydro Dam | End -->
 		<BuildInfo>
 			<Type>BUILD_HYDRO_DAM</Type>
@@ -4987,7 +4974,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWaterMill.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,8</Button>
 		</BuildInfo>
-
 		<!-- Modern Windmill | End -->
 		<BuildInfo>
 			<Type>BUILD_MODERN_WINDMILL</Type>
@@ -5191,7 +5177,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWindMill.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,8</Button>
 		</BuildInfo>
-
 		<!-- MISC / OTHER / 1-OFFS -->
 		<!-- Radio Tower | Independent -->
 		<BuildInfo>
@@ -5767,7 +5752,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/moaiimprovement.dds</Button>
 		</BuildInfo>
-
 		<!-- PREHISTORIC CAMPS -->
 		<!-- Jungle Camp (No Kill) | End - Information Lifestyle -->
 		<BuildInfo>
@@ -5847,7 +5831,6 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<Button>Art/Interface/Buttons/Builds/wetlands_camp.dds</Button>
 		</BuildInfo>
-
 		<!-- FEATURE REMOVAL -->
 		<!-- Reclaim Land | End -->
 		<BuildInfo>
@@ -6449,7 +6432,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildChopDown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,8</Button>
 		</BuildInfo>
-
 		<!-- DEFENSIVE IMPROVEMENTS (LAND) -->
 		<!-- Listening Node | Independent -->
 		<BuildInfo>
@@ -6551,7 +6533,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/tower/art/wooden_tower.dds</Button>
 		</BuildInfo>
-
 		<!-- Command Center | End -->
 		<BuildInfo>
 			<Type>BUILD_COMMAND_CENTER</Type>
@@ -6695,7 +6676,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/Abatis/abatis.dds</Button>
 		</BuildInfo>
-
 		<!-- FEATUREFORMING / TERRAFORMING -->
 		<!-- Plant Forest -->
 		<BuildInfo>
@@ -10414,7 +10394,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/tundra.dds</Button>
 		</BuildInfo>
-
 		<!-- NAVAL IMPROVEMENTS -->
 		<!-- Tunnel -->
 		<BuildInfo>

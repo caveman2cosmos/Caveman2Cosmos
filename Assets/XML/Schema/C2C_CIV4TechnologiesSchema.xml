@@ -253,7 +253,6 @@
 	<ElementType name="PrereqOrBuildings" content="eltOnly">
 		<element type="PrereqOrBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="SpecialistType" content="textOnly"/>
 	<ElementType name="iFreeSpecialistCount" content="textOnly" dt:type="int"/>
 	<ElementType name="FreeSpecialistCount" content="eltOnly">

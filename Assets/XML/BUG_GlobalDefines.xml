@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!--
 	BULL User Settings
-
 	This file is used only when BULL is running without BUG, but it will cause no harm to include it with BUG.
-
 	Copyright (c) 2009 The BUG Mod.
 -->
 <Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">

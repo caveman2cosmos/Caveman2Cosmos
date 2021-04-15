@@ -320,7 +320,6 @@
 	<ElementType name="CommerceModifiers" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<!--AIAndy: Adding tags for generic properties-->
 	<ElementType name="PropertyType" content="textOnly"/>
 	<ElementType name="iPropertyValue" content="textOnly" dt:type="int"/>
@@ -346,12 +345,10 @@
 	<ElementType name="PrereqPlayerMaxProperties" content="eltOnly">
 		<element type="Property" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="iYield" content="textOnly" dt:type="int"/>
 	<ElementType name="YieldModifiers" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<!--TB's Tags-->
 	<ElementType name="GameOptionType" content="textOnly"/>
 	<ElementType name="OnGameOptions" content="eltOnly">
@@ -439,7 +436,6 @@
 		<element type="PrereqMaxProperties" minOccurs="0"/>
 		<element type="PrereqPlayerMinProperties" minOccurs="0"/>
 		<element type="PrereqPlayerMaxProperties" minOccurs="0"/>
-
 		<element type="PythonCanDo" minOccurs="0"/>
 		<element type="PythonCanDoCity" minOccurs="0"/>
 		<element type="PythonCanDoUnit" minOccurs="0"/>

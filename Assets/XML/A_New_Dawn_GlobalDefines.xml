@@ -92,7 +92,6 @@
 	<Define>
 		<!-- Afforess:
 	Sets a Maximum Airlift and Rebase range for aircraft. -1 for no limit to range or rebase.
-
 	Toffer: This is only used for the AI perceived value of a tech; and for wheter to display the can rebase anywhere information for air units.
 	A dll modder will need to decide if it should be removed from the dll or implemented to actually influence the max re-base range for air units.
 -->

@@ -4,7 +4,6 @@
 	<!-- Art Defines Building -->
 	<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<BuildingArtInfos>
-
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HORSE_STORY</Type>
 			<LSystem/>
@@ -27,6 +26,5 @@
 			<Button>Art/Interface/Buttons/Units/horse.dds</Button>
 			<!--Button>Art/Interface/Buttons/Buildings/stories_horse.dds</Button-->
 		</BuildingArtInfo>
-
 	</BuildingArtInfos>
 </Civ4ArtDefines>

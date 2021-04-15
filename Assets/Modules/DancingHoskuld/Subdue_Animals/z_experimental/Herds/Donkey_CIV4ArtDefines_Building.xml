@@ -15,7 +15,6 @@
 			<Button>Art/Interface/Buttons/Units/Donkey.dds</Button>
 			<!--Button>Art/Interface/Buttons/Buildings/myth_Donkey.dds</Button-->
 		</BuildingArtInfo>
-
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DONKEY_STORY</Type>
 			<LSystem/>
@@ -38,6 +37,5 @@
 			<Button>Art/Interface/Buttons/Units/Donkey.dds</Button>
 			<!--Button>Art/Interface/Buttons/Buildings/stories_Donkey.dds</Button-->
 		</BuildingArtInfo>
-
 	</BuildingArtInfos>
 </Civ4ArtDefines>

@@ -45,7 +45,6 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/BurialGoods.dds</Button>
 		</BuildingArtInfo>
-
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GRAVE_GOODS</Type>
 			<LSystem/>
