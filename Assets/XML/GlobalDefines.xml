@@ -84,7 +84,7 @@
 
 	<!--
  Default uses the normal tag for the language set in Civ4's option dialog.
-	     All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
+		 All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
 	-->
 	<Define>
 		<DefineName>LANGUAGE</DefineName>
@@ -1100,11 +1100,11 @@
 	</Define>
 	<!--
  How is visual city size computed from the real city size?
-	     Two approaches are possible:
-	         METHOD_EXPONENTIAL
-	         METHOD_LINMAP
-	     Set the following GAME_CITY_SIZE_METHOD to one of the above tags
-	     to control how big your cities look in the game world.
+		 Two approaches are possible:
+			 METHOD_EXPONENTIAL
+			 METHOD_LINMAP
+		 Set the following GAME_CITY_SIZE_METHOD to one of the above tags
+		 to control how big your cities look in the game world.
 	-->
 	<Define>
 		<DefineName>GAME_CITY_SIZE_METHOD</DefineName>
@@ -1220,9 +1220,9 @@
 	</Define>
 	<!--
  Controlling the camera's maximum distance is a bit tricky since differently-sized maps need the camera to move back different amounts
-	     There is a lower-bound on the maximum distance, specified below. Thus, the camera will never get any closer than 7000 units.
-	     To actually tweak the apparent-size of the globe when fully-back, you need to go into CIV4DetailManager.XML  and adjust the
-	     CAMERA_MAX_DISTANCE_FADER value. Because this variable is in the DetailManager XML, your changes will go into effect without restarting the game.
+		 There is a lower-bound on the maximum distance, specified below. Thus, the camera will never get any closer than 7000 units.
+		 To actually tweak the apparent-size of the globe when fully-back, you need to go into CIV4DetailManager.XML  and adjust the
+		 CAMERA_MAX_DISTANCE_FADER value. Because this variable is in the DetailManager XML, your changes will go into effect without restarting the game.
 	-->
 	<Define>
 		<DefineName>CAMERA_SMALLEST_MAX_DISTANCE</DefineName>

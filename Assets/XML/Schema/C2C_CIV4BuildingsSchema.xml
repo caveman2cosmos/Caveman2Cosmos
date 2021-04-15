@@ -203,7 +203,7 @@
 	<!-- Expression System tags -->
 	<ElementType name="FreePromotionCondition"/>
 	<!-- TB's Tags End -->
-    <!-- Replacements added by AIAndy -->
+	<!-- Replacements added by AIAndy -->
 	<ElementType name="ReplacementCondition"/>
 	<ElementType name="ReplacementID"/>
   <!-- Expressions added by AIAndy -->
@@ -220,8 +220,8 @@
   <ElementType name="GOMType" content="textOnly"/>
   <ElementType name="ID" content="textOnly"/>
   <ElementType name="Has" content="eltOnly">
-    <element type="GOMType" minOccurs="1" maxOccurs="*"/>
-    <element type="ID" minOccurs="1" maxOccurs="*"/>
+	<element type="GOMType" minOccurs="1" maxOccurs="*"/>
+	<element type="ID" minOccurs="1" maxOccurs="*"/>
   </ElementType>
   <ElementType name="Greater"/>
   <ElementType name="GreaterEqual"/>
@@ -300,8 +300,8 @@
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="PropertyManipulators" content="eltOnly" order="many">
-    <element type="PropertySource" minOccurs="0" maxOccurs="*"/>
-    <element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
+	<element type="PropertySource" minOccurs="0" maxOccurs="*"/>
+	<element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
 		<element type="PropertyPropagator" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="Type" content="textOnly"/>

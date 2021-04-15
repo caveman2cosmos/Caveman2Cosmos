@@ -15,7 +15,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-            <Bonus>BONUS_DEER</Bonus>
+			<Bonus>BONUS_DEER</Bonus>
 			<iCost>624</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iMinLatitude>45</iMinLatitude>

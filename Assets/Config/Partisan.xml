@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!--
-    GIR mod Partisan
+	GIR mod Partisan
 -->
 <mod id="Partisan" module="Partisan">
    	<event type="cityAcquired" function="onCityAcquired"/>

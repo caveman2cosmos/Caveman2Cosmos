@@ -225,12 +225,12 @@
 		<Value>0</Value>
 	</Fader>
 	<!-- the following three parameters control how the Civ4 globe is lit.
-	     Since the size and position of the globe varies from map to map, it is necessary
-	     for these values to vary somewhat from map-to-map. This is accomplished with a fader whose
-	     X values are the "world size" and the Y values are the resulting value for that world size.
-	     Generally speaking, common values for world sizes are 7000 in the case of small maps to 15000 for large maps.
-	     The general rule, however, is hand-tuning: just tweak these numbers for different keyings to get the effect you want
-	     -->
+		 Since the size and position of the globe varies from map to map, it is necessary
+		 for these values to vary somewhat from map-to-map. This is accomplished with a fader whose
+		 X values are the "world size" and the Y values are the resulting value for that world size.
+		 Generally speaking, common values for world sizes are 7000 in the case of small maps to 15000 for large maps.
+		 The general rule, however, is hand-tuning: just tweak these numbers for different keyings to get the effect you want
+		 -->
 	<Fader>
 		<!-- maps from current globe radius to lighting angle -->
 		<Name>GLOBE_SPOTLIGHT_ANGLE</Name>

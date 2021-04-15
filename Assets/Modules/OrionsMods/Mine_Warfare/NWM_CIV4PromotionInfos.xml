@@ -19,7 +19,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-                    <iMovesChange>-5</iMovesChange>
+					<iMovesChange>-5</iMovesChange>
 			<Button>Art/Interface/Buttons/Promotions/Mine.dds</Button>
 		</PromotionInfo>
 	</PromotionInfos>

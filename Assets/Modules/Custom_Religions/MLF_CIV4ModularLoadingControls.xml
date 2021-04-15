@@ -8,12 +8,12 @@
 <!-- For example the female Missionaries should be last -->
 <!-- -->
 <!-- C2C Notes -->
-<!--    Std_BtS_Religions contains extra wonders for the religions that come with BtS -->
-<!--    Std_RoM_Religions contains extra wonders for the religions that are in the core of C2C -->
+<!--	Std_BtS_Religions contains extra wonders for the religions that come with BtS -->
+<!--	Std_RoM_Religions contains extra wonders for the religions that are in the core of C2C -->
 <!-- -->
-<!--    Female_Missionaries contains female versions of the missionaries and is optional. In game when a missionary is built there is a chance that a female one will be built instead. -->
+<!--	Female_Missionaries contains female versions of the missionaries and is optional. In game when a missionary is built there is a chance that a female one will be built instead. -->
 <!-- -->
-<!--    All the other folders contain the religion of the same name and are optional -->
+<!--	All the other folders contain the religion of the same name and are optional -->
 <!-- -->
 <Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<DefaultConfiguration>Custom_Religions_1</DefaultConfiguration>

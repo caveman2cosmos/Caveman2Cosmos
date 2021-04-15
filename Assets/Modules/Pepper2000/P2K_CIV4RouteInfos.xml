@@ -58,7 +58,7 @@
 			<TechMovementChanges/>
 			<Button>art/interface/buttons/improvements/cislunar_trajectory.dds</Button>
 		</RouteInfo>
-        <RouteInfo>
+		<RouteInfo>
 			<Type>ROUTE_SOLAR_TRAJECTORY</Type>
 			<Description>TXT_KEY_ROUTE_SOLAR_TRAJECTORY</Description>
 			<iValue>6</iValue>
@@ -75,7 +75,7 @@
 			<TechMovementChanges/>
 			<Button>art/interface/buttons/improvements/solar_trajectory.dds</Button>
 		</RouteInfo>
-        <RouteInfo>
+		<RouteInfo>
 			<Type>ROUTE_WORMHOLE</Type>
 			<Description>TXT_KEY_ROUTE_WORMHOLE</Description>
 			<iValue>7</iValue>
@@ -92,7 +92,7 @@
 			<TechMovementChanges/>
 			<Button>art/interface/buttons/improvements/wormhole.dds</Button>
 		</RouteInfo>
-        <RouteInfo>
+		<RouteInfo>
 			<Type>ROUTE_COMPACT_WORMHOLE</Type>
 			<Description>TXT_KEY_ROUTE_COMPACT_WORMHOLE</Description>
 			<iValue>8</iValue>
@@ -109,7 +109,7 @@
 			<TechMovementChanges/>
 			<Button>art/interface/buttons/improvements/microwormhole.dds</Button>
 		</RouteInfo>
-        <RouteInfo>
+		<RouteInfo>
 			<Type>ROUTE_MEGAWORMHOLE</Type>
 			<Description>TXT_KEY_ROUTE_MEGAWORMHOLE</Description>
 			<iValue>8</iValue>
@@ -126,7 +126,7 @@
 			<TechMovementChanges/>
 			<Button>art/interface/buttons/improvements/megawormhole_route.dds</Button>
 		</RouteInfo>
-        <RouteInfo>
+		<RouteInfo>
 			<Type>ROUTE_HYPERLANE</Type>
 			<Description>TXT_KEY_ROUTE_HYPERLANE</Description>
 			<iValue>5</iValue>
@@ -143,7 +143,7 @@
 			<TechMovementChanges/>
 			<Button>art/interface/buttons/improvements/hyperlane.dds</Button>
 		</RouteInfo>
-        <RouteInfo>
+		<RouteInfo>
 			<Type>ROUTE_ASPATIAL_ROUTE</Type>
 			<Description>TXT_KEY_ROUTE_ASPATIAL_ROUTE</Description>
 			<iValue>9</iValue>

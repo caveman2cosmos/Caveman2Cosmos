@@ -4128,7 +4128,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>------------------------
 		[NEWLINE]%s1[ICON_GOLD]: Distance de la Capitale</French>
 		<Russian>------------------------
-                [NEWLINE]%s1[ICON_GOLD]: Расстояние до столицы</Russian>
+				[NEWLINE]%s1[ICON_GOLD]: Расстояние до столицы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_TOTAL</Tag>
@@ -4137,7 +4137,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>------------------------
 		[NEWLINE]COUT TOTAL DE L'ENTRETIEN DES VILLES : %d1[ICON_GOLD]</French>
 		<Russian>------------------------
-                [NEWLINE]ОБЩАЯ СТОИМОСТЬ СОДЕРЖАНИЯ ГОРОДА: %d1[ICON_GOLD]</Russian>
+				[NEWLINE]ОБЩАЯ СТОИМОСТЬ СОДЕРЖАНИЯ ГОРОДА: %d1[ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_0</Tag>
@@ -14684,7 +14684,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	100
 	Tooltip	[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl/Shift/Alt[COLOR_REVERT][\BOLD]</English>
 		<Russian>[H1]Фин. контроль распределения[\H1]
-        Левая кнопка мыши:
+		Левая кнопка мыши:
 		1		[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl[COLOR_REVERT][\BOLD]
 		4		[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Shift[COLOR_REVERT][\BOLD]
 		5

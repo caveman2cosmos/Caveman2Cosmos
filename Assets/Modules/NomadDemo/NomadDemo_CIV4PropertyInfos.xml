@@ -21,14 +21,14 @@
 			<iOperationalRangeMin>0</iOperationalRangeMin>
 			<iOperationalRangeMax>1000</iOperationalRangeMax>
 			<FontButtonIndex>5</FontButtonIndex>
-      <PropertyManipulators>
-        <PropertySource>
-          <PropertySourceType>PROPERTYSOURCE_DECAY</PropertySourceType>
-          <PropertyType>PROPERTY_FRUIT</PropertyType>
-          <GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-          <iPercent>2</iPercent>
-        </PropertySource>
-      </PropertyManipulators>
+	  <PropertyManipulators>
+		<PropertySource>
+		  <PropertySourceType>PROPERTYSOURCE_DECAY</PropertySourceType>
+		  <PropertyType>PROPERTY_FRUIT</PropertyType>
+		  <GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+		  <iPercent>2</iPercent>
+		</PropertySource>
+	  </PropertyManipulators>
 		</PropertyInfo>
 		<PropertyInfo>
 			<Type>PROPERTY_HUNT</Type>
@@ -45,14 +45,14 @@
 			<iOperationalRangeMin>0</iOperationalRangeMin>
 			<iOperationalRangeMax>1000</iOperationalRangeMax>
 			<FontButtonIndex>6</FontButtonIndex>
-      <PropertyManipulators>
-        <PropertySource>
-          <PropertySourceType>PROPERTYSOURCE_DECAY</PropertySourceType>
-          <PropertyType>PROPERTY_HUNT</PropertyType>
-          <GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-          <iPercent>2</iPercent>
-        </PropertySource>
-      </PropertyManipulators>
+	  <PropertyManipulators>
+		<PropertySource>
+		  <PropertySourceType>PROPERTYSOURCE_DECAY</PropertySourceType>
+		  <PropertyType>PROPERTY_HUNT</PropertyType>
+		  <GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+		  <iPercent>2</iPercent>
+		</PropertySource>
+	  </PropertyManipulators>
 		</PropertyInfo>
 		<PropertyInfo>
 			<Type>PROPERTY_MATERIAL</Type>
@@ -69,14 +69,14 @@
 			<iOperationalRangeMin>0</iOperationalRangeMin>
 			<iOperationalRangeMax>1000</iOperationalRangeMax>
 			<FontButtonIndex>7</FontButtonIndex>
-      <PropertyManipulators>
-        <PropertySource>
-          <PropertySourceType>PROPERTYSOURCE_DECAY</PropertySourceType>
-          <PropertyType>PROPERTY_MATERIAL</PropertyType>
-          <GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-          <iPercent>2</iPercent>
-        </PropertySource>
-      </PropertyManipulators>
+	  <PropertyManipulators>
+		<PropertySource>
+		  <PropertySourceType>PROPERTYSOURCE_DECAY</PropertySourceType>
+		  <PropertyType>PROPERTY_MATERIAL</PropertyType>
+		  <GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+		  <iPercent>2</iPercent>
+		</PropertySource>
+	  </PropertyManipulators>
 		</PropertyInfo>
 		<PropertyInfo>
 			<Type>PROPERTY_LORE</Type>
@@ -93,14 +93,14 @@
 			<iOperationalRangeMin>0</iOperationalRangeMin>
 			<iOperationalRangeMax>1000</iOperationalRangeMax>
 			<FontButtonIndex>8</FontButtonIndex>
-      <PropertyManipulators>
-        <PropertySource>
-          <PropertySourceType>PROPERTYSOURCE_DECAY</PropertySourceType>
-          <PropertyType>PROPERTY_LORE</PropertyType>
-          <GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-          <iPercent>1</iPercent>
-        </PropertySource>
-      </PropertyManipulators>
+	  <PropertyManipulators>
+		<PropertySource>
+		  <PropertySourceType>PROPERTYSOURCE_DECAY</PropertySourceType>
+		  <PropertyType>PROPERTY_LORE</PropertyType>
+		  <GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+		  <iPercent>1</iPercent>
+		</PropertySource>
+	  </PropertyManipulators>
 		</PropertyInfo>
 	</PropertyInfos>
 </Civ4PropertyInfos>

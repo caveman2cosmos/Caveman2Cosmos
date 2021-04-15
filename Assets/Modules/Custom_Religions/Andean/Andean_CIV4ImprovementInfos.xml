@@ -20,12 +20,12 @@
 			<bPermanent>1</bPermanent>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
-                    <TerrainMakesValids>
-                        <TerrainMakesValid>
-                            <TerrainType>TERRAIN_PEAK</TerrainType>
-                            <bMakesValid>1</bMakesValid>
-                        </TerrainMakesValid>
-                    </TerrainMakesValids>
+					<TerrainMakesValids>
+						<TerrainMakesValid>
+							<TerrainType>TERRAIN_PEAK</TerrainType>
+							<bMakesValid>1</bMakesValid>
+						</TerrainMakesValid>
+					</TerrainMakesValids>
 		</ImprovementInfo>
 	</ImprovementInfos>
 </Civ4ImprovementInfos>

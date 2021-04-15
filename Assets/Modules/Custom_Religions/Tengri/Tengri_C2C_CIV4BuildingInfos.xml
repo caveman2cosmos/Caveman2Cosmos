@@ -54,7 +54,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_HORSE_MYTH</Type>
 			<AndDependencyTypes>
-             	<DependencyType>BUILDING_HORSE_MYTH</DependencyType>
+			 	<DependencyType>BUILDING_HORSE_MYTH</DependencyType>
  			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>

@@ -30,11 +30,11 @@
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
+				 <PropertySource>
+					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
+					   <iAmountPerTurn>1</iAmountPerTurn>
+				 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -68,9 +68,9 @@
 			</Flavors>
 			<PropertyManipulators>
 			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
+				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+				<PropertyType>PROPERTY_EDUCATION</PropertyType>
+				<iAmountPerTurn>1</iAmountPerTurn>
 			  </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -96,11 +96,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
+				 <PropertySource>
+					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
+					   <iAmountPerTurn>1</iAmountPerTurn>
+				 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -132,11 +132,11 @@
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
+				 <PropertySource>
+					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
+					   <iAmountPerTurn>1</iAmountPerTurn>
+				 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -170,9 +170,9 @@
 			</Flavors>
 			<PropertyManipulators>
 			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
+				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+				<PropertyType>PROPERTY_EDUCATION</PropertyType>
+				<iAmountPerTurn>1</iAmountPerTurn>
 			  </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -198,11 +198,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
+				 <PropertySource>
+					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
+					   <iAmountPerTurn>1</iAmountPerTurn>
+				 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -233,22 +233,22 @@
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
-			     <PropertySource>
-				    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-				    <iAmountPerTurn>-1</iAmountPerTurn>
-				    <Active>
+				 <PropertySource>
+					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
+					   <iAmountPerTurn>1</iAmountPerTurn>
+				 </PropertySource>
+				 <PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+					<Active>
 					<Has>
 			   			<GOMType>GOM_TECH</GOMType>
 			   			<ID>TECH_PALEONTOLOGY</ID>
 					</Has>
 				</Active>
-    			</PropertySource>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -281,9 +281,9 @@
 			</Flavors>
 			<PropertyManipulators>
 			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
+				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+				<PropertyType>PROPERTY_EDUCATION</PropertyType>
+				<iAmountPerTurn>1</iAmountPerTurn>
 			  </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -308,22 +308,22 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
-			     <PropertySource>
-				    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-				    <iAmountPerTurn>-1</iAmountPerTurn>
-				    <Active>
+				 <PropertySource>
+					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
+					   <iAmountPerTurn>1</iAmountPerTurn>
+				 </PropertySource>
+				 <PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+					<Active>
 					<Has>
 			   			<GOMType>GOM_TECH</GOMType>
 			   			<ID>TECH_PALEONTOLOGY</ID>
 					</Has>
 					</Active>
-    			</PropertySource>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -355,11 +355,11 @@
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			         <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
+				 <PropertySource>
+					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
+					 <iAmountPerTurn>1</iAmountPerTurn>
+				 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -393,9 +393,9 @@
 			</Flavors>
 			<PropertyManipulators>
 			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
+				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+				<PropertyType>PROPERTY_EDUCATION</PropertyType>
+				<iAmountPerTurn>1</iAmountPerTurn>
 			  </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -421,11 +421,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			         <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
+				 <PropertySource>
+					 <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					 <PropertyType>PROPERTY_EDUCATION</PropertyType>
+					 <iAmountPerTurn>1</iAmountPerTurn>
+				 </PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 	</BuildingInfos>

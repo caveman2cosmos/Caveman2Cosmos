@@ -6,7 +6,7 @@
 <!-- Terrain art path information -->
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<TerrainArtInfos>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_MERCURY</Type>
 			<Path>Art/Terrain/Textures/mercuryblend.dds</Path>
 			<Grid>Art/Terrain/Textures/mercuryblend.dds</Grid>
@@ -54,7 +54,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_VENUS_LOWLANDS</Type>
 			<Path>Art/Terrain/Textures/venus2.dds</Path>
 			<Grid>Art/Terrain/Textures/venus2.dds</Grid>
@@ -78,7 +78,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_VENUS_HIGHLANDS</Type>
 			<Path>Art/Terrain/Textures/venus3.dds</Path>
 			<Grid>Art/Terrain/Textures/venus3.dds</Grid>
@@ -102,7 +102,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_ASTEROID_SURFACE</Type>
 			<Path>Art/Terrain/Textures/asteroid_surface.dds</Path>
 			<Grid>Art/Terrain/Textures/asteroid_surface.dds</Grid>
@@ -126,7 +126,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_JUPITER</Type>
 			<Path>Art/Terrain/Textures/jupiter.dds</Path>
 			<Grid>Art/Terrain/Textures/jupiter.dds</Grid>
@@ -150,7 +150,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_IO</Type>
 			<Path>Art/Terrain/Textures/io.dds</Path>
 			<Grid>Art/Terrain/Textures/io.dds</Grid>
@@ -174,7 +174,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_GANYMEDE</Type>
 			<Path>Art/Terrain/Textures/ganymede.dds</Path>
 			<Grid>Art/Terrain/Textures/ganymede.dds</Grid>
@@ -198,7 +198,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_EUROPA</Type>
 			<Path>Art/Terrain/Textures/europa.dds</Path>
 			<Grid>Art/Terrain/Textures/europa.dds</Grid>
@@ -222,7 +222,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_CALLISTO</Type>
 			<Path>Art/Terrain/Textures/IceBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/IceGrids.dds</Grid>
@@ -246,7 +246,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_SATURN</Type>
 			<Path>Art/Terrain/Textures/saturnblend.dds</Path>
 			<Grid>Art/Terrain/Textures/saturnblend.dds</Grid>
@@ -270,7 +270,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_TITAN</Type>
 			<Path>Art/Terrain/Textures/titan.dds</Path>
 			<Grid>Art/Terrain/Textures/titan.dds</Grid>
@@ -294,7 +294,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_METHANE_OCEAN</Type>
 			<Path>Art/Terrain/Textures/MethaneBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/MethaneGrids.dds</Grid>
@@ -304,7 +304,7 @@
 			<AlphaShader>0</AlphaShader>
 			<TextureBlend01>1,180 5,270 9,180  13,270 17,180 21,270 26,270</TextureBlend01>
 			<TextureBlend02>1,270 5,0   9,270  13,0   17,270 21,0   26,0</TextureBlend02>
-			<TextureBlend04>1,0   5,90  9,0    13,90  17,0   21,90  26,90</TextureBlend04>
+			<TextureBlend04>1,0   5,90  9,0	13,90  17,0   21,90  26,90</TextureBlend04>
 			<TextureBlend08>1,90  5,180 9,90   13,180 17,90  21,180 26,180</TextureBlend08>
 			<TextureBlend03>3,0   7,180 11,0   15,180 19,0   23,180 27,0   31,180</TextureBlend03>
 			<TextureBlend06>3,90  7,270 11,90  15,270 19,90  23,270 27,90  31,270</TextureBlend06>
@@ -318,7 +318,7 @@
 			<TextureBlend05>2,90  6,0   10,90  14,0   18,90  22,0</TextureBlend05>
 			<TextureBlend15>29,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_LAVA_OCEAN</Type>
 			<Path>Art/Terrain/Textures/LavaBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/LavaGrids.dds</Grid>
@@ -328,7 +328,7 @@
 			<AlphaShader>0</AlphaShader>
 			<TextureBlend01>1,180 5,270 9,180  13,270 17,180 21,270 26,270</TextureBlend01>
 			<TextureBlend02>1,270 5,0   9,270  13,0   17,270 21,0   26,0</TextureBlend02>
-			<TextureBlend04>1,0   5,90  9,0    13,90  17,0   21,90  26,90</TextureBlend04>
+			<TextureBlend04>1,0   5,90  9,0	13,90  17,0   21,90  26,90</TextureBlend04>
 			<TextureBlend08>1,90  5,180 9,90   13,180 17,90  21,180 26,180</TextureBlend08>
 			<TextureBlend03>3,0   7,180 11,0   15,180 19,0   23,180 27,0   31,180</TextureBlend03>
 			<TextureBlend06>3,90  7,270 11,90  15,270 19,90  23,270 27,90  31,270</TextureBlend06>
@@ -342,7 +342,7 @@
 			<TextureBlend05>2,90  6,0   10,90  14,0   18,90  22,0</TextureBlend05>
 			<TextureBlend15>29,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_SUBSURFACE_OCEAN</Type>
 			<Path>Art/Terrain/Textures/OceanBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/OceanGrids.dds</Grid>
@@ -352,7 +352,7 @@
 			<AlphaShader>0</AlphaShader>
 			<TextureBlend01>1,180 5,270 9,180  13,270 17,180 21,270 26,270</TextureBlend01>
 			<TextureBlend02>1,270 5,0   9,270  13,0   17,270 21,0   26,0</TextureBlend02>
-			<TextureBlend04>1,0   5,90  9,0    13,90  17,0   21,90  26,90</TextureBlend04>
+			<TextureBlend04>1,0   5,90  9,0	13,90  17,0   21,90  26,90</TextureBlend04>
 			<TextureBlend08>1,90  5,180 9,90   13,180 17,90  21,180 26,180</TextureBlend08>
 			<TextureBlend03>3,0   7,180 11,0   15,180 19,0   23,180 27,0   31,180</TextureBlend03>
 			<TextureBlend06>3,90  7,270 11,90  15,270 19,90  23,270 27,90  31,270</TextureBlend06>
@@ -366,7 +366,7 @@
 			<TextureBlend05>2,90  6,0   10,90  14,0   18,90  22,0</TextureBlend05>
 			<TextureBlend15>29,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_ENCELADUS</Type>
 			<Path>Art/Terrain/Textures/enceladus.dds</Path>
 			<Grid>Art/Terrain/Textures/enceladus.dds</Grid>
@@ -390,7 +390,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_URANUS</Type>
 			<Path>Art/Terrain/Textures/uranusblend.dds</Path>
 			<Grid>Art/Terrain/Textures/uranusblend.dds</Grid>
@@ -414,7 +414,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_UMBRIEL</Type>
 			<Path>Art/Terrain/Textures/umbriel.dds</Path>
 			<Grid>Art/Terrain/Textures/umbriel.dds</Grid>
@@ -438,7 +438,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_NEPTUNE</Type>
 			<Path>Art/Terrain/Textures/neptune.dds</Path>
 			<Grid>Art/Terrain/Textures/neptune.dds</Grid>
@@ -462,7 +462,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_TRITON</Type>
 			<Path>Art/Terrain/Textures/triton.dds</Path>
 			<Grid>Art/Terrain/Textures/grid.dds</Grid>
@@ -486,7 +486,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_KUIPER_BELT_OBJECT</Type>
 			<Path>Art/Terrain/Textures/kbo.dds</Path>
 			<Grid>Art/Terrain/Textures/kbo.dds</Grid>
@@ -510,7 +510,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_SUN</Type>
 			<Path>Art/Terrain/Textures/g_type.dds</Path>
 			<Grid>Art/Terrain/Textures/g_type.dds</Grid>
@@ -534,7 +534,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_INNER_SOLAR_SYSTEM</Type>
 			<Path>Art/Terrain/Textures/Space/SpaceBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Space/SpaceGrid.dds</Grid>
@@ -558,7 +558,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_OUTER_SOLAR_SYSTEM</Type>
 			<Path>Art/Terrain/Textures/Space/SpaceBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Space/SpaceGrid.dds</Grid>
@@ -582,7 +582,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_TRANSNEPTUNIAN_SPACE</Type>
 			<Path>Art/Terrain/Textures/Space/SpaceBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Space/SpaceGrid.dds</Grid>
@@ -606,7 +606,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_TRANSTELLAR_SPACE</Type>
 			<Path>Art/Terrain/Textures/transtellar.dds</Path>
 			<Grid>Art/Terrain/Textures/transtellar.dds</Grid>
@@ -630,7 +630,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_RED_DWARF</Type>
 			<Path>Art/Terrain/Textures/red_dwarf.dds</Path>
 			<Grid>Art/Terrain/Textures/red_dwarf.dds</Grid>
@@ -654,7 +654,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_SUN_LIKE_STAR</Type>
 			<Path>Art/Terrain/Textures/g_type.dds</Path>
 			<Grid>Art/Terrain/Textures/g_type.dds</Grid>
@@ -678,7 +678,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_RED_GIANT</Type>
 			<Path>Art/Terrain/Textures/red_giant.dds</Path>
 			<Grid>Art/Terrain/Textures/red_giant.dds</Grid>
@@ -702,7 +702,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_ORION_ARM</Type>
 			<Path>Art/Terrain/Textures/starfield.dds</Path>
 			<Grid>Art/Terrain/Textures/starfield.dds</Grid>
@@ -726,7 +726,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_MILKY_WAY</Type>
 			<Path>Art/Terrain/Textures/milkyway.dds</Path>
 			<Grid>Art/Terrain/Textures/milkyway.dds</Grid>
@@ -750,7 +750,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_NEUTRON_STAR</Type>
 			<Path>Art/Terrain/Textures/neutron_star.dds</Path>
 			<Grid>Art/Terrain/Textures/neutron_star.dds</Grid>
@@ -774,7 +774,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_NEBULA</Type>
 			<Path>Art/Terrain/Textures/nebula.dds</Path>
 			<Grid>Art/Terrain/Textures/nebula.dds</Grid>
@@ -798,7 +798,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_STAR_CLUSTER</Type>
 			<Path>Art/Terrain/Textures/star_cluster.dds</Path>
 			<Grid>Art/Terrain/Textures/star_cluster.dds</Grid>
@@ -822,7 +822,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_GALACTIC_CORE</Type>
 			<Path>Art/Terrain/Textures/core.dds</Path>
 			<Grid>Art/Terrain/Textures/core.dds</Grid>
@@ -846,7 +846,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_LOCAL_GROUP</Type>
 			<Path>Art/Terrain/Textures/oort_cloud.dds</Path>
 			<Grid>Art/Terrain/Textures/oort_cloud.dds</Grid>
@@ -870,7 +870,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_VIRGO_SUPERCLUSTER</Type>
 			<Path>Art/Terrain/Textures/virgo.dds</Path>
 			<Grid>Art/Terrain/Textures/virgo.dds</Grid>
@@ -894,7 +894,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_OBSERVABLE_UNIVERSE</Type>
 			<Path>Art/Terrain/Textures/cosmos.dds</Path>
 			<Grid>Art/Terrain/Textures/cosmos.dds</Grid>
@@ -918,7 +918,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_INTERGALACTIC_VOID</Type>
 			<Path>Art/Terrain/Textures/Space/SpaceBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Space/SpaceGrid.dds</Grid>
@@ -942,7 +942,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_DISTANT_COSMOS</Type>
 			<Path>Art/Terrain/Textures/distant_cosmos.dds</Path>
 			<Grid>Art/Terrain/Textures/distant_cosmos.dds</Grid>
@@ -966,7 +966,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_HYPERSPACE</Type>
 			<Path>Art/Terrain/Textures/hyperspace.dds</Path>
 			<Grid>Art/Terrain/Textures/hyperspace.dds</Grid>
@@ -990,7 +990,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_DISTANT_PAST</Type>
 			<Path>Art/Terrain/Textures/distant_past.dds</Path>
 			<Grid>Art/Terrain/Textures/distant_past.dds</Grid>
@@ -1014,7 +1014,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_DISTANT_FUTURE</Type>
 			<Path>Art/Terrain/Textures/distant_future.dds</Path>
 			<Grid>Art/Terrain/Textures/distant_future.dds</Grid>
@@ -1038,7 +1038,7 @@
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
-        <TerrainArtInfo>
+		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_BRANESPACE</Type>
 			<Path>Art/Terrain/Textures/branespace.dds</Path>
 			<Grid>Art/Terrain/Textures/branespace.dds</Grid>

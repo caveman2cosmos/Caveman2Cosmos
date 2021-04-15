@@ -14,7 +14,7 @@
 			<Strategy>TXT_KEY_BUILDING_RHINO_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER</ArtDefineTag>
- 		     <MovieDefineTag>ART_DEF_MOVIE_RHINO_TRAINER</MovieDefineTag>
+ 			 <MovieDefineTag>ART_DEF_MOVIE_RHINO_TRAINER</MovieDefineTag>
 			<ObsoleteTech>TECH_ARMORED_CAVALRY</ObsoleteTech>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
@@ -73,7 +73,7 @@
 			<FreeBuilding>BUILDING_RHINO_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
-        		<iAsset>4</iAsset>
+				<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>

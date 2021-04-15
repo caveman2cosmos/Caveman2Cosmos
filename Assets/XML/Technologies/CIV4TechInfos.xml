@@ -15777,7 +15777,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_ANTIBIOTICS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/antibiotics.dds</Button>
 		</TechInfo>
-        <TechInfo>
+		<TechInfo>
 			<Type>TECH_INCANDESCENT_LIGHTING</Type>
 			<Description>TXT_KEY_TECH_INCANDESCENT_LIGHTING</Description>
 			<Civilopedia>TXT_KEY_TECH_INCANDESCENT_LIGHTING_PEDIA</Civilopedia>
@@ -16255,7 +16255,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_METEOROLOGY</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/Meteorology.dds</Button>
 		</TechInfo>
-        <TechInfo>
+		<TechInfo>
 			<Type>TECH_TELEPHONE</Type>
 			<Description>TXT_KEY_TECH_TELEPHONE</Description>
 			<Civilopedia>TXT_KEY_TECH_TELEPHONE_PEDIA</Civilopedia>
@@ -16289,7 +16289,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/telephone.dds</Button>
 		</TechInfo>
-        <TechInfo>
+		<TechInfo>
 			<Type>TECH_MANAGEMENT</Type>
 			<Description>TXT_KEY_TECH_MANAGEMENT</Description>
 			<Civilopedia>TXT_KEY_TECH_MANAGEMENT_PEDIA</Civilopedia>
@@ -18695,7 +18695,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_RADAR</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Radar.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,1,15</Button>
 		</TechInfo>
-        <TechInfo>
+		<TechInfo>
 			<Type>TECH_COMPUTER_SCIENCE</Type>
 			<Description>TXT_KEY_TECH_COMPUTER_SCIENCE</Description>
 			<Civilopedia>TXT_KEY_TECH_COMPUTER_SCIENCE_PEDIA</Civilopedia>
@@ -21060,7 +21060,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_MP_SUPERCONDUCTOR</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Superconductor.dds,Art/Interface/Buttons/TechTree_Atlas.dds,3,12</Button>
 		</TechInfo>
-        <TechInfo>
+		<TechInfo>
 			<Type>TECH_CHAOS_THEORY</Type>
 			<Description>TXT_KEY_TECH_CHAOS_THEORY</Description>
 			<Civilopedia>TXT_KEY_TECH_CHAOS_THEORY_PEDIA</Civilopedia>
@@ -21350,7 +21350,7 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_FIBER_OPTICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-                <PrereqTech>TECH_CHAOS_THEORY</PrereqTech>
+				<PrereqTech>TECH_CHAOS_THEORY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_COMMUNICATION_NETWORKS_QUOTE</Quote>
 			<Sound>AS2D_TECH_COMMUNICATION_NETWORKS</Sound>
@@ -22578,7 +22578,7 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_IMAGINARY_PHYSICS</PrereqTech>
 			</OrPreReqs>
-            <AndPreReqs>
+			<AndPreReqs>
 				<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
 				<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
 			</AndPreReqs>
@@ -22955,7 +22955,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_METAMATERIALS</SoundMP>
 			<Button>Art/Interface/Buttons/Techtree/Metamaterials.dds</Button>
 		</TechInfo>
-        <TechInfo>
+		<TechInfo>
 			<Type>TECH_AUTONOMOUS_VEHICLES</Type>
 			<Description>TXT_KEY_TECH_AUTONOMOUS_VEHICLES</Description>
 			<Civilopedia>TXT_KEY_TECH_AUTONOMOUS_VEHICLES_PEDIA</Civilopedia>
@@ -22998,7 +22998,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/autonomous_vehicles.dds</Button>
 		</TechInfo>
-        <TechInfo>
+		<TechInfo>
 			<Type>TECH_COMPUTATIONAL_SOCIOLOGY</Type>
 			<Description>TXT_KEY_TECH_COMPUTATIONAL_SOCIOLOGY</Description>
 			<Civilopedia>TXT_KEY_TECH_COMPUTATIONAL_SOCIOLOGY_PEDIA</Civilopedia>
@@ -23251,7 +23251,7 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-                <PrereqTech>TECH_AUTONOMOUS_VEHICLES</PrereqTech>
+				<PrereqTech>TECH_AUTONOMOUS_VEHICLES</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MEGACITIES_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -23463,7 +23463,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_MICROMECHANICS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Micromechanics.dds</Button>
 		</TechInfo>
-        <TechInfo>
+		<TechInfo>
 			<Type>TECH_POWERED_EXOSKELETON</Type>
 			<Description>TXT_KEY_TECH_POWERED_EXOSKELETON</Description>
 			<Civilopedia>TXT_KEY_TECH_POWERED_EXOSKELETON_PEDIA</Civilopedia>
@@ -24393,7 +24393,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_UBIQUITOUS_COMPUTING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/melectronics2.dds</Button>
 		</TechInfo>
-        <TechInfo>
+		<TechInfo>
 			<Type>TECH_AUTOMATED_TRAFFIC</Type>
 			<Description>TXT_KEY_TECH_AUTOMATED_TRAFFIC</Description>
 			<Civilopedia>TXT_KEY_TECH_AUTOMATED_TRAFFIC_PEDIA</Civilopedia>
@@ -24675,7 +24675,7 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_UBIQUITOUS_COMPUTING</PrereqTech>
 			</OrPreReqs>
-            <AndPreReqs>
+			<AndPreReqs>
 				<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_HYPERSONIC_FLIGHT_QUOTE</Quote>
@@ -25061,7 +25061,7 @@ Current techs which are not in this file:-
 			<AndPreReqs>
 				<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 				<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
-                <PrereqTech>TECH_AUTOMATED_TRAFFIC</PrereqTech>
+				<PrereqTech>TECH_AUTOMATED_TRAFFIC</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_AUTOMATED_ROBOTICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_AUTOMATED_ROBOTICS</Sound>
@@ -32973,7 +32973,7 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_ASTROENGINEERING</PrereqTech>
 			</OrPreReqs>
-            <AndPreReqs>
+			<AndPreReqs>
 				<PrereqTech>TECH_JOVIAN_TERRAFORMING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_STELLAR_COMPUTING_QUOTE</Quote>

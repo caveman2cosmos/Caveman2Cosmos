@@ -6,7 +6,7 @@
 	- This whole effort might be obsoleted if Flabbert gets a converted database structure working, but oh well.
 -->
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
-    <UnitInfos>
+	<UnitInfos>
 		<!-- ::::LAND:::: -->
 		<!-- Gatherer -->
 		<UnitInfo>
@@ -4909,5 +4909,5 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
-    </UnitInfos>
+	</UnitInfos>
 </Civ4UnitInfos>

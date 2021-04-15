@@ -2103,7 +2103,7 @@
 		[ICON_BULLET] Arcology upgrades to Arcology Shielding and finally to Advanced Shielding. Building Arcology also obsoletes Anti-Missile Batteries which is removed from city</English>
 		<French>[H1]Chaînes d'Amélioration des Bâtiments[\H1][PARAGRAPH:2]Caveman2Cosmos introduit des chaînes d'amélioration des bâtiments qui permet de remplacer des bâtiments obsolètes par de nouveaux à la suite de nouvelles découvertes technologiques. Les nouveaux bâtiments cumulents ainsi les effets des bâtiments précédents, qui sont alors supprimés.</French>
 		<Russian>[H1]Линии улучшений зданий[\H1]
-        Caveman2Cosmos вводит возможность улучшать постройки, позволяя игроку обновлять старые здания до новых и более качественных после того, как вы открыли новые технологии. Модернизированные здания имеют эффекты предыдущего здания и некоторые новые эффекты. Старое здание при этом будет снесено. Если город будет завоеван, то некоторые его здания могут быть разрушены, и вам придется начинать модернизацию снова с первого здания.
+		Caveman2Cosmos вводит возможность улучшать постройки, позволяя игроку обновлять старые здания до новых и более качественных после того, как вы открыли новые технологии. Модернизированные здания имеют эффекты предыдущего здания и некоторые новые эффекты. Старое здание при этом будет снесено. Если город будет завоеван, то некоторые его здания могут быть разрушены, и вам придется начинать модернизацию снова с первого здания.
 
 В игре есть следующие линии для улучшения:
 	[ICON_BULLET]Обновление гавани до порта, затем до торгового порта и, наконец, до международного порта;
@@ -3174,7 +3174,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		New features include [LINK=FEATURE_REEF]Reefs[\LINK], [LINK=FEATURE_CORAL_REEF]Coral Reefs[\LINK], [LINK=FEATURE_KELP]Kelp[\LINK] and [LINK=FEATURE_SEA_GRASS]Sea Grass[\LINK] beds appearing in coastal waters, alongside the natural wonder the [LINK=FEATURE_PLATY_GREAT_BARRIER]Great Barrier Reef[\LINK]. Each of these slow the movement of water units that pass through them. Reefs and coral will also damage units that end their turn in the plot. Damage and movement reduction can be mitigated on reefs and coral by building [LINK=IMPROVEMENT_BEACON_CORAL]beacons[\LINK] and [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]lighthouses[\LINK]. The [BOLD]depth[\BOLD] will affect when improvements can be built and the type and style of combat that can occur.</English>
 		<Russian>C2C добавляет в игру водные ландшафты для улучшения навигации, появления мест обитания водной фауны, а также для улучшения боевых действий на море. Всего есть 8 базовых типов водных участков: -
 
-        [ICON_BULLET]Берег озера - кусочек пресноводных озер, ближайший к суше.
+		[ICON_BULLET]Берег озера - кусочек пресноводных озер, ближайший к суше.
 	[ICON_BULLET]Озеро - части пресноводных озер, не прилегающие к суше.
 
 	[ICON_BULLET]Побережье - мелководье рядом с сушей, представляющая участок материкового шельфа

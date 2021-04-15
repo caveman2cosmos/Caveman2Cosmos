@@ -292,7 +292,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-         <BuildingInfo>
+		 <BuildingInfo>
 			<Type>BUILDING_FREYA_SANCTUARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_FREYA_SANCTUARY</Description>
@@ -362,7 +362,7 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
-        <BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_HEIMDALL_SANCTUARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HEIMDALL_SANCTUARY</Description>

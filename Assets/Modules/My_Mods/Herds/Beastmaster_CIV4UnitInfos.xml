@@ -107,7 +107,7 @@
 			<Help>TXT_KEY_UNIT_TAMED_HORSE_PAIR_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitAIs>
-       			<UnitAI>
+	   			<UnitAI>
 					<UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
 				   <bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -205,11 +205,11 @@
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-       			<UnitAI>
+	   			<UnitAI>
 					<UnitAIType>UNITAI_PILLAGE_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				 </UnitAI>
-       			 <UnitAI>
+	   			 <UnitAI>
 					<UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>

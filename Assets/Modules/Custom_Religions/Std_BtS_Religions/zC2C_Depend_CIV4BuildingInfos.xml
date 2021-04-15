@@ -4,7 +4,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CROCODILE_MYTH</Type>
 			<AndDependencyTypes>
-             	<DependencyType>RELIGION_KEMETISM</DependencyType>
+			 	<DependencyType>RELIGION_KEMETISM</DependencyType>
  			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -16,8 +16,8 @@
 		<BuildingInfo>
 			<Type>BUILDING_SPOTTED_CAT_MYTH</Type>
 			<AndDependencyTypes>
-             	<DependencyType>BUILDING_SPOTTED_CAT_MYTH</DependencyType>
-             	<DependencyType>RELIGION_KEMETISM</DependencyType>
+			 	<DependencyType>BUILDING_SPOTTED_CAT_MYTH</DependencyType>
+			 	<DependencyType>RELIGION_KEMETISM</DependencyType>
  			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -33,8 +33,8 @@
 		<BuildingInfo>
 			<Type>BUILDING_BULL_MYTH</Type>
 			<AndDependencyTypes>
-             	<DependencyType>BUILDING_BULL_MYTH</DependencyType>
-             	<DependencyType>RELIGION_HINDUISM</DependencyType>
+			 	<DependencyType>BUILDING_BULL_MYTH</DependencyType>
+			 	<DependencyType>RELIGION_HINDUISM</DependencyType>
  			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -50,8 +50,8 @@
 		<BuildingInfo>
 			<Type>BUILDING_ELEPHANT_MYTH</Type>
 			<AndDependencyTypes>
-             	<DependencyType>BUILDING_ELEPHANT_MYTH</DependencyType>
-             	<DependencyType>RELIGION_HINDUISM</DependencyType>
+			 	<DependencyType>BUILDING_ELEPHANT_MYTH</DependencyType>
+			 	<DependencyType>RELIGION_HINDUISM</DependencyType>
  			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>

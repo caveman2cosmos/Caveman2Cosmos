@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Civ4TerrainInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<TerrainInfos>
-        <TerrainInfo>
+		<TerrainInfo>
 			<Type>TERRAIN_INFECTED_WATER</Type>
 			<Description>TXT_KEY_TERRAIN_INFECTED_WATER</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_INFECTED_WATER_PEDIA</Civilopedia>
@@ -283,7 +283,7 @@
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OCEAN_SELECT_AMB</WorldSoundscapeAudioScript>
 		</TerrainInfo>
-        <TerrainInfo>
+		<TerrainInfo>
 			<Type>TERRAIN_PEAK</Type>
 			<Description>TXT_KEY_TERRAIN_PEAK</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_PEAK_PEDIA</Civilopedia>
