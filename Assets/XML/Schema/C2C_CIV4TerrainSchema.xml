@@ -189,13 +189,13 @@
 	<ElementType name="bGlobal" content="textOnly" dt:type="boolean"/>
 	<ElementType name="TerrainInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
@@ -250,13 +250,13 @@
 	</ElementType>
 	<ElementType name="YieldInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="iHillsChange" minOccurs="0"/>
 		<element type="iPeakChange" minOccurs="0"/>
@@ -315,13 +315,13 @@
 	<ElementType name="OnUnitChangeTo" content="textOnly"/>
 	<ElementType name="FeatureInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
@@ -376,13 +376,13 @@
 	</ElementType>
 	<ElementType name="BonusClassInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+<!-- XMLCOPY				END					MRGENIE -->
 		<element type="iUniqueRange" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="BonusClassInfos" content="eltOnly">
@@ -444,13 +444,13 @@
 	</ElementType>
 	<ElementType name="BonusInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
@@ -516,7 +516,7 @@
 	</ElementType>
 	<ElementType name="ArtDefineTag" content="textOnly"/>
 	<ElementType name="Type" content="textOnly"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+<!-- XMLCOPY				02/20/2008			MRGENIE -->
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
@@ -527,7 +527,7 @@
 	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bForceDelete" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iForceInsertLocation" content="textOnly" dt:type="int"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+<!-- XMLCOPY				END					MRGENIE -->
 	<ElementType name="iWaterHeight" content="textOnly" dt:type="int"/>
 	<ElementType name="bRandomMap" content="textOnly" dt:type="boolean"/>
 	<ElementType name="HeightMap" content="textOnly"/>
@@ -551,13 +551,13 @@
 	<ElementType name="fHillScale" content="textOnly"/>
 	<ElementType name="TerrainTextureInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description"/>
 		<element type="ArtDefineTag"/>
 	</ElementType>
@@ -687,13 +687,13 @@
  <!-- Super forts C2C adaptation end -->
  <ElementType name="ImprovementInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
@@ -771,13 +771,13 @@
 	</ElementType>
 	<ElementType name="LandscapeInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+<!-- XMLCOPY				END					MRGENIE -->
 		<element type="iWaterHeight" minOccurs="0"/>
 		<element type="bRandomMap" minOccurs="0"/>
 		<element type="HeightMap" minOccurs="0"/>

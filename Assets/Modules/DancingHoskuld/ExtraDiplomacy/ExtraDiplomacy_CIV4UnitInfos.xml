@@ -72,7 +72,8 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<!--Actions>
+			<!--
+			<Actions>
 				<Action>
 					<MissionType>MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE</MissionType>
 					<iCost>20</iCost>
@@ -221,9 +222,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<!--
-iCost>150</iCost
-			-->
+			<!-- iCost>150</iCost -->
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
@@ -298,9 +297,7 @@ iCost>150</iCost
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<!--
-iCost>300</iCost
-			-->
+			<!-- iCost>300</iCost -->
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<iPower>6</iPower>
@@ -372,9 +369,7 @@ iCost>300</iCost
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<!--
-iCost>450</iCost
-			-->
+			<!-- iCost>450</iCost -->
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>

@@ -7,5 +7,5 @@
 	<event type="unitPromoted" function="onUnitPromoted"/>
 	<!--event type="CivicChanged" function="onCivicChanged"/-->
 
-<!--	<init/> -->
+<!-- <init/> -->
 </mod>

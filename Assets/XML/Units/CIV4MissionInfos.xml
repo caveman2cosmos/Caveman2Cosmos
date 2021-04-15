@@ -1690,7 +1690,7 @@
 			<Button>Art/Interface/MainScreen/CityScreen/slave_tutor.dds</Button>
 		</MissionInfo>
 		<!--
- Removed until they can only speed up military production
+		Removed until they can only speed up military production
 		<MissionInfo>
 			<Type>MISSION_JOIN_CITY_AS_SLAVE_MILITARY</Type>
 			<Description>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_MILITARY</Description>
@@ -1704,7 +1704,7 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_military.dds</Button>
 		</MissionInfo>
-		-->
+ 		-->
 		<MissionInfo>
 			<Type>MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Type>
 			<Description>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Description>

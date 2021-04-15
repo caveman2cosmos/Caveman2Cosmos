@@ -3165,8 +3165,8 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_NOCTURNALISM</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Button_Nocturnalism.dds</Button>
 		</TechInfo>
-<!--	(014, 17) TECH_SHAMANISM	-->
-<!--	(014, 19) TECH_DRUIDIC_TRADITIONS		-->
+		<!-- (014, 17) TECH_SHAMANISM -->
+		<!-- (014, 19) TECH_DRUIDIC_TRADITIONS -->
 		<TechInfo>
 			<Type>TECH_HARPOON_MAKING</Type>
 			<Description>TXT_KEY_TECH_HARPOON_MAKING</Description>
@@ -3651,7 +3651,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Horseback_Riding.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,4</Button>
 		</TechInfo>
-<!--	(017, 05) TECH_TENGRIISM	-->
+		<!-- (017, 05) TECH_TENGRIISM -->
 		<TechInfo>
 			<Type>TECH_MYSTICISM</Type>
 			<Description>TXT_KEY_TECH_MYSTICISM</Description>
@@ -4490,7 +4490,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_ANCESTOR_WORSHIP</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/ancestorworship.dds</Button>
 		</TechInfo>
-<!--	(022, 19) TECH_MESOPOTAMISM	-->
+		<!-- (022, 19) TECH_MESOPOTAMISM -->
 		<TechInfo>
 			<Type>TECH_ORCHARDS</Type>
 			<Description>TXT_KEY_TECH_ORCHARDS</Description>
@@ -5629,7 +5629,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_SCULPTURE</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Stone_working.dds,Art/Interface/Buttons/RoM_Techtree_Atlas2.dds,5,1</Button>
 		</TechInfo>
-<!--	(026, 15) TECH_YORUBA	-->
+		<!-- (026, 15) TECH_YORUBA -->
 		<TechInfo>
 			<Type>TECH_PRIESTHOOD</Type>
 			<Description>TXT_KEY_TECH_PRIESTHOOD</Description>
@@ -5979,7 +5979,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_CANDLE_MAKING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/candlemaking.dds</Button>
 		</TechInfo>
-<!--	(028, 03) TECH_SHINTO	-->
+		<!-- (028, 03) TECH_SHINTO -->
 		<TechInfo>
 			<Type>TECH_SPECIALIZATION</Type>
 			<Description>TXT_KEY_TECH_SPECIALIZATION</Description>
@@ -6144,7 +6144,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_MP_WRITING</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Writing.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,12</Button>
 		</TechInfo>
-<!--	(028, 13) TECH_NGAIISM	-->
+		<!-- (028, 13) TECH_NGAIISM -->
 		<TechInfo>
 			<Type>TECH_MATRIARCHY</Type>
 			<Description>TXT_KEY_TECH_MATRIARCHY</Description>
@@ -6179,7 +6179,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_MATRIARCHY</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/matriarchy.dds</Button>
 		</TechInfo>
-<!--	(028, 17) TECH_ANDEANISM	-->
+		<!-- (028, 17) TECH_ANDEANISM -->
 		<TechInfo>
 			<Type>TECH_RESURRECTION</Type>
 			<Description>TXT_KEY_TECH_RESURRECTION</Description>
@@ -6896,7 +6896,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_KARMA</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/karma.dds</Button>
 		</TechInfo>
-<!--	(030, 17) TECH_CANAANISM	-->
+		<!-- (030, 17) TECH_CANAANISM -->
 		<TechInfo>
 			<Type>TECH_KEMETISM</Type>
 			<Description>TXT_KEY_TECH_KEMETISM</Description>
@@ -7559,7 +7559,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_MP_ALPHABET</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Alphabet.dds,Art/Interface/Buttons/TechTree_Atlas.dds,2,1</Button>
 		</TechInfo>
-<!--	(033, 17) TECH_RODNOVERA	-->
+		<!-- (033, 17) TECH_RODNOVERA -->
 		<TechInfo>
 			<Type>TECH_MEDITATION</Type>
 			<Description>TXT_KEY_TECH_MEDITATION</Description>
@@ -7597,7 +7597,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_MP_MEDITATION</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Meditation.dds,Art/Interface/Buttons/TechTree_Atlas.dds,5,5</Button>
 		</TechInfo>
-<!--	(034, 01) TECH_ASATRU	-->
+		<!-- (034, 01) TECH_ASATRU -->
 		<TechInfo>
 			<Type>TECH_HORSE_BREEDING</Type>
 			<Description>TXT_KEY_TECH_HORSE_BREEDING</Description>
@@ -9085,7 +9085,7 @@ Current techs which are not in this file:-
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Taoism.dds</Button>
 		</TechInfo>
-<!--	(039, 03) TECH_JAINISM	-->
+		<!-- (039, 03) TECH_JAINISM -->
 		<TechInfo>
 			<Type>TECH_DRAMA</Type>
 			<Description>TXT_KEY_TECH_DRAMA</Description>
@@ -10182,7 +10182,7 @@ Current techs which are not in this file:-
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Islam.dds</Button>
 		</TechInfo>
-<!--	(044, 03) TECH_VOODOO	-->
+		<!-- (044, 03) TECH_VOODOO -->
 		<TechInfo>
 			<Type>TECH_ALCHEMY</Type>
 			<Description>TXT_KEY_TECH_ALCHEMY</Description>
@@ -11509,7 +11509,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_COAL_MINING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/coalmining.dds</Button>
 		</TechInfo>
-<!--	(049, 01) TECH_CLOCKPUNK	-->
+		<!-- (049, 01) TECH_CLOCKPUNK -->
 		<TechInfo>
 			<Type>TECH_TOURNAMENTS</Type>
 			<Description>TXT_KEY_TECH_TOURNAMENTS</Description>
@@ -12115,7 +12115,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_POLITICAL_PHILOSOPHY</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Diplomacy.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,3,5</Button>
 		</TechInfo>
-<!--	(052, 11) TECH_SIKHISM	-->
+		<!-- (052, 11) TECH_SIKHISM -->
 		<TechInfo>
 			<Type>TECH_ASTRONOMY</Type>
 			<Description>TXT_KEY_TECH_ASTRONOMY</Description>
@@ -14338,7 +14338,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_MP_STEAMPOWER</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Steam_Power.dds,Art/Interface/Buttons/TechTree_Atlas.dds,1,12</Button>
 		</TechInfo>
-<!--	(062, 13) TECH_BAHAI	-->
+		<!-- (062, 13) TECH_BAHAI -->
 		<TechInfo>
 			<Type>TECH_MILITARY_SCIENCE</Type>
 			<Description>TXT_KEY_TECH_MILITARY_SCIENCE</Description>
@@ -14568,7 +14568,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_FOOD_PRESERVATION</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Foodp.dds</Button>
 		</TechInfo>
-<!--	(063, 13) TECH_STEAMPUNK	-->
+		<!-- (063, 13) TECH_STEAMPUNK -->
 		<TechInfo>
 			<Type>TECH_SCREW_PROPELLER</Type>
 			<Description>TXT_KEY_TECH_SCREW_PROPELLER</Description>
@@ -15361,7 +15361,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_MP_MEDICINE</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Medicine.dds,Art/Interface/Buttons/TechTree_Atlas.dds,4,5</Button>
 		</TechInfo>
-<!--	(067, 03) TECH_MORMON	-->
+		<!-- (067, 03) TECH_MORMON -->
 		<TechInfo>
 			<Type>TECH_BARBED_WIRE</Type>
 			<Description>TXT_KEY_TECH_BARBED_WIRE</Description>
@@ -16778,7 +16778,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_ATOMIC_LIFESTYLE</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/modernlifestyle.dds</Button>
 		</TechInfo>
-<!--	(072, 01) TECH_CAO_DAI	-->
+		<!-- (072, 01) TECH_CAO_DAI -->
 		<TechInfo>
 			<Type>TECH_ABSTRACT_MATHEMATICS</Type>
 			<Description>TXT_KEY_TECH_ABSTRACT_MATHEMATICS</Description>
@@ -17977,7 +17977,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_ELECTRONICS</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/electronics.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,3,6</Button>
 		</TechInfo>
-<!--	(075, 17) TECH_DIESELPUNK	-->
+		<!-- (075, 17) TECH_DIESELPUNK -->
 		<TechInfo>
 			<Type>TECH_AMPHIBIOUS_WARFARE</Type>
 			<Description>TXT_KEY_TECH_AMPHIBIOUS_WARFARE</Description>
@@ -18560,7 +18560,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_MANUFACTURING</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Automatization.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,8,2</Button>
 		</TechInfo>
-<!--	(077, 07) TECH_SCIENTOLOGY	-->
+		<!-- (077, 07) TECH_SCIENTOLOGY -->
 		<TechInfo>
 			<Type>TECH_BIOLOGICAL_WARFARE</Type>
 			<Description>TXT_KEY_TECH_BIOLOGICAL_WARFARE</Description>
@@ -19431,7 +19431,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_ADVANCED_ROCKETRY</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Advanced_Rocketry.dds,Art/Interface/Buttons/RoM_Techtree_Atlas2.dds,8,3</Button>
 		</TechInfo>
-<!--	(080, 13) TECH_ATOMPUNK	-->
+		<!-- (080, 13) TECH_ATOMPUNK -->
 		<TechInfo>
 			<Type>TECH_DEEP_SEA_EXPLORATION</Type>
 			<Description>TXT_KEY_TECH_DEEP_SEA_EXPLORATION</Description>
@@ -24986,7 +24986,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_AUGMENTED_CONSUMABLES</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/augmentconsumables.dds</Button>
 		</TechInfo>
-<!--	(102, 11) TECH_NANOPUNK	-->
+		<!-- (102, 11) TECH_NANOPUNK -->
 		<TechInfo>
 			<Type>TECH_ACOUSTIC_WEAPONRY</Type>
 			<Description>TXT_KEY_TECH_ACOUSTIC_WEAPONRY</Description>
@@ -25365,7 +25365,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_PLASTIC_ELECTRONICS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/wearable_computer.dds</Button>
 		</TechInfo>
-<!--	(103, 11) TECH_BIOPUNK	-->
+		<!-- (103, 11) TECH_BIOPUNK -->
 		<TechInfo>
 			<Type>TECH_INTERNAL_SHOCKWAVE_ENGINE</Type>
 			<Description>TXT_KEY_TECH_INTERNAL_SHOCKWAVE_ENGINE</Description>
@@ -28419,7 +28419,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_SYNERGETICS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/synergetics.dds</Button>
 		</TechInfo>
-<!--	(113, 07) TECH_CYBERPUNK	-->
+		<!-- (113, 07) TECH_CYBERPUNK -->
 		<TechInfo>
 			<Type>TECH_SMART_DUST</Type>
 			<Description>TXT_KEY_TECH_SMART_DUST</Description>

@@ -16270,12 +16270,6 @@
 					<BuildType>BUILD_SOLAR_PANELS</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -17287,12 +17281,6 @@
 					<BuildType>BUILD_SOLAR_PANELS</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -28832,56 +28820,6 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<!-- <ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange> -->
-				<!-- Modularize
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -28912,24 +28850,6 @@
 					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
-				<!-- Modularize
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				-->
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -29000,28 +28920,6 @@
 					<BuildType>BUILD_SUBMERGED_TOWN</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 			</BuildWorkerSpeedModifierTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -29724,104 +29622,12 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<!-- <ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange> -->
-				<!-- Modularize
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				-->
 			</ImprovementYieldChanges>
-			<ImprovementUpgradeModifierTypes>
-			<!-- Modularize
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				-->
-			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SUBMERGED_TOWN</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 			</BuildWorkerSpeedModifierTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -30118,56 +29924,6 @@
 						<iYield>-1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<!-- <ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange> -->
-				<!-- Modularize
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -30198,24 +29954,6 @@
 					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
-				<!-- Modularize
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				-->
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -30286,28 +30024,6 @@
 					<BuildType>BUILD_SUBMERGED_TOWN</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 			</BuildWorkerSpeedModifierTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -30985,104 +30701,12 @@
 						<iYield>-1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<!-- <ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange> -->
-				<!-- Modularize
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				-->
 			</ImprovementYieldChanges>
-			<ImprovementUpgradeModifierTypes>
-				<!-- Modularize
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				-->
-			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SUBMERGED_TOWN</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 			</BuildWorkerSpeedModifierTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -31341,16 +30965,6 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<!-- Modularize
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -31455,28 +31069,6 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -31910,16 +31502,6 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<!-- Modularize
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -32024,28 +31606,6 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -32413,16 +31973,6 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<!-- Modularize
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -32527,28 +32077,6 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -32865,16 +32393,6 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<!-- Modularize
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -32979,28 +32497,6 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -33329,16 +32825,6 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<!-- Modularize
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -33443,28 +32929,6 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
@@ -33872,16 +33336,6 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<!-- Modularize
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -33986,28 +33440,6 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
@@ -34344,16 +33776,6 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<!-- Modularize
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -34458,28 +33880,6 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
@@ -34773,16 +34173,6 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<!-- Modularize
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -34887,28 +34277,6 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!-- Modularize
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>

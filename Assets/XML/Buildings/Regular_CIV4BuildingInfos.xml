@@ -14603,13 +14603,6 @@
 					<iPropertyValue>3</iPropertyValue>
 				</Property>
 			</Properties>
-		<!--	<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>-->
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CANDY_STORE</Type>
