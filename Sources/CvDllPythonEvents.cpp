@@ -447,8 +447,6 @@ void CvDllPythonEvents::reportBeginGameTurn(int iGameTurn)
 
 void CvDllPythonEvents::reportEndGameTurn(int iGameTurn)
 {
-	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "EndGameTurn");
-
 	EventArgs eventData;
 	eventData
 		.arg("event", "EndGameTurn")
