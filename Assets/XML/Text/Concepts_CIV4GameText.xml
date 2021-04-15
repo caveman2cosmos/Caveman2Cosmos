@@ -2104,8 +2104,7 @@
 		<French>[H1]Chaînes d'Amélioration des Bâtiments[\H1][PARAGRAPH:2]Caveman2Cosmos introduit des chaînes d'amélioration des bâtiments qui permet de remplacer des bâtiments obsolètes par de nouveaux à la suite de nouvelles découvertes technologiques. Les nouveaux bâtiments cumulents ainsi les effets des bâtiments précédents, qui sont alors supprimés.</French>
 		<Russian>[H1]Линии улучшений зданий[\H1]
 		Caveman2Cosmos вводит возможность улучшать постройки, позволяя игроку обновлять старые здания до новых и более качественных после того, как вы открыли новые технологии. Модернизированные здания имеют эффекты предыдущего здания и некоторые новые эффекты. Старое здание при этом будет снесено. Если город будет завоеван, то некоторые его здания могут быть разрушены, и вам придется начинать модернизацию снова с первого здания.
-
-В игре есть следующие линии для улучшения:
+	[NEWLINE]В игре есть следующие линии для улучшения:
 	[ICON_BULLET]Обновление гавани до порта, затем до торгового порта и, наконец, до международного порта;
 	[ICON_BULLET]Речной порт обновляется до гавани. Обратите внимание, что вы можете построить речной порт также в городах, которые находятся рядом с рекой, но не являются прибрежными. В этих городах речной порт не может быть модернизирован (суда не могут путешествовать по рекам);
 	[ICON_BULLET]Обновление частокола до стен;
@@ -3173,28 +3172,20 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		[BOLD]Features, Bonuses and Improvements:[\BOLD]
 		New features include [LINK=FEATURE_REEF]Reefs[\LINK], [LINK=FEATURE_CORAL_REEF]Coral Reefs[\LINK], [LINK=FEATURE_KELP]Kelp[\LINK] and [LINK=FEATURE_SEA_GRASS]Sea Grass[\LINK] beds appearing in coastal waters, alongside the natural wonder the [LINK=FEATURE_PLATY_GREAT_BARRIER]Great Barrier Reef[\LINK]. Each of these slow the movement of water units that pass through them. Reefs and coral will also damage units that end their turn in the plot. Damage and movement reduction can be mitigated on reefs and coral by building [LINK=IMPROVEMENT_BEACON_CORAL]beacons[\LINK] and [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]lighthouses[\LINK]. The [BOLD]depth[\BOLD] will affect when improvements can be built and the type and style of combat that can occur.</English>
 		<Russian>C2C добавляет в игру водные ландшафты для улучшения навигации, появления мест обитания водной фауны, а также для улучшения боевых действий на море. Всего есть 8 базовых типов водных участков: -
-
-		[ICON_BULLET]Берег озера - кусочек пресноводных озер, ближайший к суше.
+	[NEWLINE][ICON_BULLET]Берег озера - кусочек пресноводных озер, ближайший к суше.
 	[ICON_BULLET]Озеро - части пресноводных озер, не прилегающие к суше.
-
-	[ICON_BULLET]Побережье - мелководье рядом с сушей, представляющая участок материкового шельфа
+	[NEWLINE][ICON_BULLET]Побережье - мелководье рядом с сушей, представляющая участок материкового шельфа
 	[ICON_BULLET]Глубокое побережье - участок рядом с сушей, где отсутствует материковый шельф у берега
 	[ICON_BULLET]Море - область между побережьями и водами океана, представляет собой удаленную часть материкового шельфа
 	[ICON_BULLET]Открытое море - то же самое, но без материкового шельфа
 	[ICON_BULLET]Океан - опасные и глубокие воды
 	[ICON_BULLET]Котловина - опасна для плавания, как и океан, и более глубокая.
-
-	С точки зрения навигации побережья и берега озер представляют собой те области, которые могут пересечь ваши самые ранние и примитивные лодки. Море и крупные озера требуют паруса для пересечения, а океаны и котловины требуют сложных навигационных инструментов.
-
-	[BOLD]Нерест и движение диких животных[\BOLD] напрямую зависит от климата, который начинается с названия местности полярного, тропического и, если без префикса, умеренного климата.
-
-	[BOLD]Особенности, бонусы и улучшения[\BOLD]Новые особенности: [LINK=FEATURE_REEF]Рифы[\LINK], [LINK=FEATURE_CORAL]Коралловые рифы[\LINK], [LINK=FEATURE_KELP]Водоросли[\LINK] и [LINK=FEATURE_SEAGRASS]Морская трава[\LINK] и пр. типы дна были добавлены на побережье. [LINK=FEATURE_PLATY_GREAT_BARRIER]Большой Барьерный риф[\LINK] может также появиться в прибрежных водах. Каждый из них замедляет движение водных единиц, которые проходят через них. Рифы и кораллы также наносят урон судам, которые заканчивают свой ход на их клетке. Эти негативные эффекты на клетках с рифами и кораллами можно смягчить путем строительства [LINK=IMPROVEMENT_BEACON_CORAL]бакенов[\LINK] и [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]маяков[\LINK].
-
-	В морях также доступна постройка [LINK=CONCEPT_SEA_TUNNELS]Морских тоннелей.[\LINK]
-
-	[BOLD]Сражения[\BOLD]
-
-	[BOLD]Глубина[\BOLD] будет влиять на то, когда и какие улучшения могут быть построены, а также на тип и стиль морского боя, который может произойти по ходу игры.</Russian>
+	[NEWLINE]С точки зрения навигации побережья и берега озер представляют собой те области, которые могут пересечь ваши самые ранние и примитивные лодки. Море и крупные озера требуют паруса для пересечения, а океаны и котловины требуют сложных навигационных инструментов.
+	[NEWLINE][BOLD]Нерест и движение диких животных[\BOLD] напрямую зависит от климата, который начинается с названия местности полярного, тропического и, если без префикса, умеренного климата.
+	[NEWLINE][BOLD]Особенности, бонусы и улучшения[\BOLD]Новые особенности: [LINK=FEATURE_REEF]Рифы[\LINK], [LINK=FEATURE_CORAL]Коралловые рифы[\LINK], [LINK=FEATURE_KELP]Водоросли[\LINK] и [LINK=FEATURE_SEAGRASS]Морская трава[\LINK] и пр. типы дна были добавлены на побережье. [LINK=FEATURE_PLATY_GREAT_BARRIER]Большой Барьерный риф[\LINK] может также появиться в прибрежных водах. Каждый из них замедляет движение водных единиц, которые проходят через них. Рифы и кораллы также наносят урон судам, которые заканчивают свой ход на их клетке. Эти негативные эффекты на клетках с рифами и кораллами можно смягчить путем строительства [LINK=IMPROVEMENT_BEACON_CORAL]бакенов[\LINK] и [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]маяков[\LINK].
+	[NEWLINE]В морях также доступна постройка [LINK=CONCEPT_SEA_TUNNELS]Морских тоннелей.[\LINK]
+	[NEWLINE][BOLD]Сражения[\BOLD]
+	[NEWLINE][BOLD]Глубина[\BOLD] будет влиять на то, когда и какие улучшения могут быть построены, а также на тип и стиль морского боя, который может произойти по ходу игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WATER_TERRAINS_TEXT</Tag>
