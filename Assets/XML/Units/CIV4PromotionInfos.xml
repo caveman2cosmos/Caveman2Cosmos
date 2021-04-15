@@ -16175,7 +16175,7 @@
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-2</iCaptureResistanceModifierChange>
 		</PromotionInfo>
-<!-- 	<PromotionInfo>
+		<!-- <PromotionInfo>
 			<Type>PROMOTION_STONE_WEAPONS</Type>
 			<Description>TXT_KEY_PROMOTION_STONE_WEAPONS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
@@ -30398,7 +30398,7 @@
 			<iInterceptChange>5</iInterceptChange>
 			<Button>,Art/Interface/Buttons/Promotions/Security4BuildUp.dds</Button>
 		</PromotionInfo>
-<!--		<PromotionInfo>
+		<!-- <PromotionInfo>
 			<Type>PROMOTION_BUILD_UP_SECURITY5</Type>
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_SECURITY5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>

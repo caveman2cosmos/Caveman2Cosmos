@@ -2094,7 +2094,7 @@
 			<TechCityTrade>TECH_STELLAR_COMPUTING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
- 		<BonusInfo>
+		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_ALIEN_HYBRID</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
@@ -2104,7 +2104,7 @@
 			<TechCityTrade>TECH_SPECIES_AMALGAMATION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
- 		<BonusInfo>
+		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_IMMORTAL</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_IMMORTAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
@@ -2164,7 +2164,7 @@
 			<TechCityTrade>TECH_SPATIAL_TRANSCENDENCE</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
- 		<BonusInfo>
+		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_METAPHYSICAL</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_METAPHYSICAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>

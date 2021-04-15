@@ -3,8 +3,7 @@
 	<!-- Sid Meier's Civilization 4 -->
 	<!-- Copyright Firaxis Games 2005 -->
 	<!-- ReModified by Strategyonly -->
-	<!-- -->
-	<!-- Improvement art path information -->
+		<!-- Improvement art path information -->
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<ImprovementArtInfos>
 		<ImprovementArtInfo>

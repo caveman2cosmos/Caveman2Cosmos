@@ -3180,7 +3180,7 @@
 		<Italian>Benvenuti in questa bella terra, [CT_NAME]. Spero che lei portare la pace con voi, per lui che saluta con un bastone, verrà risposto con un club.</Italian>
 		<Polish>Witam na tych pięknych ziemiach, [CT_NAME]. Mam nadzieję, że przynosisz pokój ze sobą.</Polish>
 		<Spanish>Bienvenidos a esta hermosa tierra, [CT_NAME]. Espero que traigas paz contigo, porque aquel que salude con un palo, será respondido con un garrote.</Spanish>
-		<Russian>Äîáðî ïîæàëîâàòü â ýòîò ïðåêðàñíûé êðàé, [CT_NAME].  ß íàäåþñü, ÷òî âû ïðèíåñåòå ìèð ñ ñîáîé, èáî òîò, êòî çäîðîâàåòñÿ ñ ïàëêîé, îáðåòàåò îòâåò ïàëèöåé.</Russian>
+		<Russian>Äîáðî ïîæàëîâàòü â ýòîò ïðåêðàñíûé êðàé, [CT_NAME]. ß íàäåþñü, ÷òî âû ïðèíåñåòå ìèð ñ ñîáîé, èáî òîò, êòî çäîðîâàåòñÿ ñ ïàëêîé, îáðåòàåò îòâåò ïàëèöåé.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MEHAI_1</Tag>
@@ -3268,7 +3268,7 @@
 		<German>Es war schon zu oft zu einfach für Herrscher und Regierungen die Menschen zum Krieg anzustiften, [CT_NAME]. Lass uns die [CT_CIV_ADJ] und die [OUR_CIV_ADJ] Völker zu einem gemeinsamen Leben in Frieden führen.</German>
 		<Polish>To często zbyt łatwe dla władców i rządów, by pobudzić mężczyznę do wojny, [CT_NAME]. Skierujmy [CT_CIV_ADJ] i [OUR_CIV_ADJ] by żyły w pokoju na zawsze.</Polish>
 		<Spanish>Casi siempre ha resultado demasiado fácil a los mandatarios y gobernantes incitar a los hombres a la guerra, [CT_NAME]. Déjanos orientar a los pueblos [CT_CIV_ADJ] y [OUR_CIV_ADJ] hacia una coexistencia más pacífica.</Spanish>
-		<Russian>Ñëèøêîì ëåãêî äëÿ âëàñòèòåëåé è ïðàâèòåëüñòâ ïîäñòðåêàòü íàðîä ê âîéíå, [CT_NAME]. Äàâàéòå æå íàïðàâëÿòü íàðîäû [CT_CIV_ADJ] è [OUR_CIV_ADJ]   ê ìèðíîìó ñîñóùåñòâîâàíèþ.</Russian>
+		<Russian>Ñëèøêîì ëåãêî äëÿ âëàñòèòåëåé è ïðàâèòåëüñòâ ïîäñòðåêàòü íàðîä ê âîéíå, [CT_NAME]. Äàâàéòå æå íàïðàâëÿòü íàðîäû [CT_CIV_ADJ] è [OUR_CIV_ADJ] ê ìèðíîìó ñîñóùåñòâîâàíèþ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PERON_1</Tag>
@@ -3506,7 +3506,7 @@
 		<German>Grüße, ich bin [OUR_NAME] vom mächtigen [OUR_EMPIRE]. Lass uns uns gegenseitig helfen, [CT_NAME]. Wenn man Schläge gut austeilen kann, so kann man sie auch gut ertragen.</German>
 		<Polish>Pozdrowienia. Jestem [OUR_NAME] z potężnej [OUR_EMPIRE]. Pomóżmy sobie, [CT_NAME]. Jeśli jesteście skłonni dać to jesteście godni otrzymać.</Polish>
 		<Spanish>Saludos. Soy [OUR_NAME] del poderoso [OUR_EMPIRE]. Ayudémonos los unos a los otros, [CT_NAME]. Si los golpes son buenos para dar, también son buenos para recibir.</Spanish>
-		<Russian> Ïðèâåòñòâóþ. ß - [OUR_NAME] ïðàâèòåëü ìîãóùåñòâåííîé [OUR_EMPIRE]. Äàâàéòå ïîìîãàòü äðóã äðóãó, [CT_NAME]. Èáî ãîâîðÿò, ÷òî ëþáîé øåäåâð âûðàñòàåò èç ìíîæåñòâà  õîðîøèõ ìàçêîâ êèñòüþ.</Russian>
+		<Russian> Ïðèâåòñòâóþ. ß - [OUR_NAME] ïðàâèòåëü ìîãóùåñòâåííîé [OUR_EMPIRE]. Äàâàéòå ïîìîãàòü äðóã äðóãó, [CT_NAME]. Èáî ãîâîðÿò, ÷òî ëþáîé øåäåâð âûðàñòàåò èç ìíîæåñòâà õîðîøèõ ìàçêîâ êèñòüþ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_TOPILTZIN_1</Tag>
@@ -7499,7 +7499,7 @@
 		<Italian>[OUR_CIV_SHORT:1] saluta la piccola nazione [CT_CIV_SHORT:4].</Italian>
 		<Polish>Naród [OUR_CIV_ADJ] salutuje swemu przyjacielowi, malutkiemu narodowi [CT_CIV_ADJ].</Polish>
 		<Spanish>[OUR_CIV_SHORT] saluda a su amiga, la pequeña nación de [CT_CIV_SHORT].</Spanish>
-		<Russian>[OUR_CIV_SHORT] ïðèâåòñòâóþò âàñ,  [CT_CIV_SHORT].</Russian>
+		<Russian>[OUR_CIV_SHORT] ïðèâåòñòâóþò âàñ, [CT_CIV_SHORT].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_THANKS_40</Tag>

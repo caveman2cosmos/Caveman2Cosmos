@@ -135,7 +135,7 @@
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
-        <MapInfo>
+		<MapInfo>
 			<Type>MAPCATEGORY_MILKY_WAY</Type>
 			<Description>TXT_KEY_MAPCATEGORY_MILKY_WAY</Description>
 			<iGridWidth>0</iGridWidth>
@@ -145,7 +145,7 @@
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
-        <MapInfo>
+		<MapInfo>
 			<Type>MAPCATEGORY_UNIVERSAL</Type>
 			<Description>TXT_KEY_MAPCATEGORY_UNIVERSAL</Description>
 			<iGridWidth>0</iGridWidth>
@@ -155,7 +155,7 @@
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
-        <MapInfo>
+		<MapInfo>
 			<Type>MAPCATEGORY_DISTANT</Type>
 			<Description>TXT_KEY_MAPCATEGORY_DISTANT</Description>
 			<iGridWidth>0</iGridWidth>
