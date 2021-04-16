@@ -666,17 +666,17 @@ class MapConstants :
 			self.ForestTemp = .35 # added
 			self.JungleTemp = .50 # added
 			# End q3max changes
-		self.iceSlope = 0.33 # Less ice
+			self.iceSlope = 0.33 # Less ice
 		elif clim == 2: # Arid
 			self.DesertPercent = 0.40
 			self.PlainsPercent = 0.82
-		self.iceSlope = 0.33 # Less ice
+			self.iceSlope = 0.33 # Less ice
 		elif clim == 3: # Rocky
 			self.PeakPercent = 0.24
 			self.HillPercent = 0.70
 			self.HillChanceAtOne = 0.70
 			self.PeakChanceAtOne = 0.43
-		self.iceSlope = 0.75 # Some more ice
+			self.iceSlope = 0.75 # Some more ice
 			self.iceRange = 6
 		elif clim == 4: # Cold
 			self.tropicsLatitude = 0
@@ -686,10 +686,10 @@ class MapConstants :
 			self.JungleTemp = .99
 			self.iceRange = 12
 			self.iceChance = 1.2
-		self.iceSlope = 0.87 # Lots of ice
+			self.iceSlope = 0.87 # Lots of ice
 
-		self.serviceFlags <<= 3
-		self.serviceFlags |= (clim & 7) # 3 bits; total 5
+			self.serviceFlags <<= 3
+			self.serviceFlags |= (clim & 7) # 3 bits; total 5
 
 		#New World Rules
 		selectionID = mmap.getCustomMapOption(OPTION_NewWorld)
@@ -719,7 +719,7 @@ class MapConstants :
 		patience = mmap.getCustomMapOption(OPTION_Patience)
 		patience += 1 # Patience at 0 is broken
 
-	# This allows me to have one final usable bit in the service tag
+		# This allows me to have one final usable bit in the service tag
 		self.serviceFlags <<= 3
 		self.serviceFlags |= (patience & 3) # 2 bits; total 10
 
