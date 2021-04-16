@@ -13,7 +13,6 @@ Assets/Python/BUG/BugInit.py
 Assets/Python/BUG/BugOptions.py
 Assets/Python/BUG/BugOptionsScreen.py
 Assets/Python/BUG/BugOptionsTab.py
-Assets/Python/BUG/BugPath.py
 Assets/Python/BUG/BugScreen.py
 Assets/Python/BUG/BugTypes.py
 Assets/Python/BUG/BugUtil.py
@@ -188,6 +187,7 @@ Assets/Python/Screens/Forgetful.py
 Assets/Python/Screens/IconGrid_BUG.py
 Assets/Python/Screens/IconGrid.py
 Assets/Python/Screens/RevolutionWatchAdvisor.py
+Assets/Python/Screens/ExtensionScreens/CityOptions.py
 Assets/Python/Screens/SimpleScreens/CvAdvancedStartScreen.py
 Assets/Python/Screens/SimpleScreens/GameFontScreen.py
 Assets/Python/Screens/SimpleScreens/TimeKeeper.py
