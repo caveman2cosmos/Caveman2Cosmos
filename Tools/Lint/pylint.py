@@ -55,10 +55,10 @@ def _python_2_modules() -> Tuple[Path, ...]:
     #).read_text()
     #return tuple(Path(item) for item in python_2_list_content.split("\n") if item)
 
-    return tuple(
+    return tuple((
         path for path in _python_folder_path().rglob("*.py"),
         path for path in ((Path(__file__).parents[2]).resolve() / "PrivateMaps").rglob("*.py")
-    )
+    ))
 
 
 def _python_3_modules() -> Tuple[Path, ...]:
