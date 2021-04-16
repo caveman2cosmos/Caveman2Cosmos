@@ -238,4 +238,5 @@ PrivateMaps/C2C_SmartMap.py
 PrivateMaps/C2C_Tectonics.py
 PrivateMaps/C2C_Terra.py
 PrivateMaps/C2C_Tilted_Axis.py
+PrivateMaps/C2C_Totestra.py
 PrivateMaps/C2C_World.py
