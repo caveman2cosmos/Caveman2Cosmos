@@ -331,17 +331,18 @@ def a91a15d7(x):
         return out & 3
 
 class MapConstants :
-    def __init__(self):
-        self.totestra = 0
-        self.hmWidth  = 0
-        self.hmHeight = 0
-	self.noRotate = 0
-	self.smoothPeaks = 1
-        self.serviceFlags = 0 # Used for concise description of flags
-	self.xtraFlags = 0 # We're running out of bits :(
-	self.AllowPangeas = False
-	self.serviceString = "MP No Tag" # No cheating in multiplayer!
-        return
+	def __init__(self):
+		self.totestra = 0
+		self.hmWidth  = 0
+		self.hmHeight = 0
+		self.noRotate = 0
+		self.smoothPeaks = 1
+		self.serviceFlags = 0 # Used for concise description of flags
+		self.xtraFlags = 0 # We're running out of bits :(
+		self.AllowPangeas = False
+		self.serviceString = "MP No Tag" # No cheating in multiplayer!
+		return
+
     def initialize(self):
         print "Initializing map constants"
 ##############################################################################
