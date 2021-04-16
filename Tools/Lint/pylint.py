@@ -3,6 +3,7 @@ from enum import Enum
 from pathlib import Path
 from subprocess import check_call
 from typing import Sequence, Tuple
+from glob import glob
 
 
 class _PythonVersion(Enum):
@@ -49,10 +50,12 @@ def _python_modules_for_python_version(version: _PythonVersion) -> Tuple[Path, .
 
 
 def _python_2_modules() -> Tuple[Path, ...]:
-    python_2_list_content = (
-        _root_path() / "Tools" / "Lint" / "python2_modules.txt"
-    ).read_text()
-    return tuple(Path(item) for item in python_2_list_content.split("\n") if item)
+    #python_2_list_content = (
+    #    _root_path() / "Tools" / "Lint" / "python2_modules.txt"
+    #).read_text()
+    #return tuple(Path(item) for item in python_2_list_content.split("\n") if item)
+
+    return tuple(Path(item) for item in glob(_root_path() / "Assets" / "Python" / "**" / "*.py", True) if item)
 
 
 def _python_3_modules() -> Tuple[Path, ...]:
