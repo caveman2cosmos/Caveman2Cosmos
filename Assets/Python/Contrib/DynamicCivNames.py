@@ -26,10 +26,11 @@ g_DynamicCivNames = None
 
 class DynamicCivNames:
 
-	def __init__(self, customEM):
+	def __init__(self, customEM, RevOpt):
 		global g_DynamicCivNames
 		g_DynamicCivNames = self
 
+		self.RevOpt = RevOpt
 		self.customEM = customEM
 
 		#self.bTeamNaming = True #RevOpt.isTeamNaming()
