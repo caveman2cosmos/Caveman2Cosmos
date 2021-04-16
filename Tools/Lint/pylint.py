@@ -55,8 +55,7 @@ def _python_2_modules() -> Tuple[Path, ...]:
     #).read_text()
     #return tuple(Path(item) for item in python_2_list_content.split("\n") if item)
 
-    return tuple(Path(item) for item in glob(_root_path() / "Assets" / "Python" / "**" / "*.py") if item)
-
+    return tuple(path for path in _python_folder_path.rglob("*.py"))
 
 def _python_3_modules() -> Tuple[Path, ...]:
     root_path = _root_path()
@@ -71,6 +70,9 @@ def _python_3_modules() -> Tuple[Path, ...]:
 def _root_path() -> Path:
     return (Path(__file__).parents[2]).resolve()
 
+
+def _python_folder_path() -> Path:
+    return _root_path() / "Assets" / "Python"
 
 def _assert_valid_python_version(version: _PythonVersion) -> None:
     if version not in tuple(_PythonVersion):
