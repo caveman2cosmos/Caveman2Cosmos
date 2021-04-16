@@ -600,10 +600,10 @@ class MapConstants :
 			self.landPercent = 0.19
 
 		self.serviceFlags = 0 # Used for concise description of flags
-	if(seaLevel != 0):
-			self.serviceFlags |= (seaLevel & 3) # 2 bits; total 2
+	if seaLevel != 0:
+		self.serviceFlags |= (seaLevel & 3) # 2 bits; total 2
 	else:
-			self.serviceFlags |= 3 # Make sure Service Tag is always 21 digits
+		self.serviceFlags |= 3 # Make sure Service Tag is always 21 digits
 
 		# Have climate affect the maps
 		# This is increased for a "tropical" climate
