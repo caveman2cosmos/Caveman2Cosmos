@@ -62,8 +62,10 @@ def _python_3_modules() -> Tuple[Path, ...]:
 
     return tuple(
         path
-        for path in root_path.rglob("*.py")
-        if path.relative_to(root_path) not in _python_2_modules()
+        #for path in root_path.rglob("*.py")
+        #if path.relative_to(root_path) not in _python_2_modules()
+        #if path not in _python_2_modules()
+        for path in (Path(__file__).parents[1]).resolve().rglob("*.py")
     )
 
 
