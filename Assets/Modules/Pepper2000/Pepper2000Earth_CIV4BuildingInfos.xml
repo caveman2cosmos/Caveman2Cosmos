@@ -14635,7 +14635,7 @@
 			<Type>BUILDING_POLICE_CAT</Type>
 			<AndDependencyTypes>
 				<DependencyType>BUILDING_POLICE_CAT</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15866,7 +15866,7 @@
 			<Type>BUILDING_FARNSWORTH_LAB</Type>
 			<AndDependencyTypes>
 				<DependencyType>BUILDING_FARNSWORTH_LAB</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<ObsoleteTech>TECH_CLOUD_COMPUTING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17880,7 +17880,7 @@
 			<Type>BUILDING_RADIOPLEX</Type>
 			<AndDependencyTypes>
 				<DependencyType>BUILDING_RADIOPLEX</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -19818,7 +19818,7 @@
 			<Strategy>TXT_KEY_BUILDING_ARCONIC_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARCONIC_TOWER</ArtDefineTag>
- 			<MovieDefineTag>ART_DEF_MOVIE_ARCONIC_TOWER</MovieDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ARCONIC_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

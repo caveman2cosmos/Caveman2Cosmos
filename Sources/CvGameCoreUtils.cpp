@@ -1463,8 +1463,8 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 	if ( itr == g_discoveryTechCache[ePlayer].end() )
 #endif // DISCOVERY_TECH_CACHE
 	{
-		CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
-		CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
+		const CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
+		const CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
 
 		int iBestValue = 0;
 
@@ -1524,7 +1524,7 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 						}
 					}
 
-					if (kPlayer.AI_techValue((TechTypes)iI, 1, true, kPlayer.isHuman(), &paiBonusClassRevealed[0], &paiBonusClassUnrevealed[0], &paiBonusClassHave[0]) > 1)
+					if (kPlayer.AI_techValue((TechTypes)iI, 1, true, kPlayer.isHuman(), paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave) > 1)
 					{
 						iBestValue = iValue;
 						eBestTech = ((TechTypes)iI);

@@ -792,6 +792,14 @@
 		<Russian>[ICON_BULLET]%D1_Change%% против [LINK=%s2_AgainstType]%s3_Type[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MOD_VS_TYPE_NO_LINK</Tag>
+		<English>[ICON_BULLET]%D1_Change%% vs. %s2_Type</English>
+		<French>[ICON_BULLET]%D1_Change%% contre : %s2_Type</French>
+		<German>[ICON_BULLET]%D1_Change%% gegen %s2_Type</German>
+		<Italian>[ICON_BULLET]%D1_Change%% contro %s2:2_Type</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% contra %s2:2_Type</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_WITHDRAWL_PROBABILITY</Tag>
 		<English>[ICON_BULLET]Can Withdraw from Combat (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut rompre le combat (%d1_Amount%% de chance)</French>

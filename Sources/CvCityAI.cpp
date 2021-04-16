@@ -4682,7 +4682,6 @@ int CvCityAI::AI_buildingValueThresholdOriginal(BuildingTypes eBuilding, int iFo
 int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding, int iFocusFlags, int iThreshold, bool bMaximizeFlaggedValue, bool bIgnoreCanBuildReplacement, bool bForTech)
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK();
 
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	const CvTeamAI& kTeam = GET_TEAM(getTeam());
@@ -10139,7 +10138,6 @@ bool CvCityAI::AI_removeWorstCitizen(SpecialistTypes eIgnoreSpecialist)
 
 void CvCityAI::AI_juggleCitizens()
 {
-	MEMORY_TRACK()
 
 	bool bAvoidGrowth = AI_avoidGrowth();
 	bool bIgnoreGrowth = AI_ignoreGrowth();
@@ -10522,7 +10520,7 @@ int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoi
 
 int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization)
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	const int iBaseProductionValue = 15;
 	const int iBaseCommerceValue[NUM_COMMERCE_TYPES] = {7,10,7,7};	//	Koshling - boost science a bit
@@ -13901,7 +13899,6 @@ public:
 
 	void AccumulateTo(int iFocusIndex, int value, bool isThresholdSet)
 	{
-		MEMORY_TRACK_EXEMPT();
 
 		if ( isThresholdSet )
 		{
@@ -14053,7 +14050,6 @@ public:
 		std::map<int,OneBuildingValueCache*>::const_iterator itr = m_buildingValues.find(eBuilding);
 		if ( itr == m_buildingValues.end() )
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			//	New entry
 			result = new OneBuildingValueCache();
@@ -14474,7 +14470,6 @@ int	CvCityAI::GetBuildingValue(BuildingTypes eBuilding, int iFocusFlags, int iTh
 	{
 		if (cachedBuildingValues == NULL)
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			OutputDebugString(CvString::format("Rebuilding building value cache for City %S\n", getName().GetCString()).c_str());
 			cachedBuildingValues = new BuildingValueCache(this);
@@ -14555,7 +14550,7 @@ void CvCityAI::AI_FlushBuildingValueCache(bool bRetainValues)
 
 void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	// KOSHLING optimisation - moved what we could outside of the building loop
 	const PlayerTypes ePlayer = getOwner();

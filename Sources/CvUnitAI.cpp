@@ -137,7 +137,6 @@ void CvUnitAI::AI_reset(UnitAITypes eUnitAI, bool bConstructorCall)
 bool CvUnitAI::AI_update()
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK();
 
 	logBBAI("AI_Update for unit %d of owner %d\n", m_iID, m_eOwner);
 
@@ -7361,7 +7360,6 @@ void CvUnitAI::AI_pirateSeaMove()
 void CvUnitAI::AI_attackSeaMove()
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK();
 
 	if (AI_selectStatus(true))
 	{
@@ -18577,7 +18575,6 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool bAllowCities, bool bFollow)
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK();
 
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;
@@ -18794,7 +18791,6 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 bool CvUnitAI::AI_attackTargets(int iRange, int iOddsThreshold, int iMinStack, bool bAllowCities, bool bFollow)
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK();
 
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;

@@ -8,9 +8,9 @@ from CvPythonExtensions import *
 import BugConfigTracker
 import BugCore
 import BugOptions
-import BugPath
+import SystemPaths as SP
 import codecs
-import os.path
+import os
 import time
 
 AutologOpt = BugCore.game.Autolog
@@ -41,7 +41,9 @@ class autologInstance:
 			AutologOpt.setFilePath(LogFilePath)
 			BugOptions.write()
 		if not LogFilePath or LogFilePath == "Default":
-			LogFilePath = BugPath.findOrMakeDir("Autolog")
+			LogFilePath = SP.joinModDir("Autolog")
+		if not os.path.isdir(LogFilePath):
+			os.makedirs(LogFilePath)
 		self.LogFilePath = LogFilePath
 		self.updateLogFile()
 

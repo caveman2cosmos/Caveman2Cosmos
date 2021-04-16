@@ -25140,6 +25140,71 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
+			<Type>UNIT_TRIBAL_GUARDIAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_TRIBAL_GUARDIAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TRIBAL_GUARDIAN_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_IMMOBILE</Domain>
+			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<bOnlyDefensive>1</bOnlyDefensive>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<UnitUpgrades>
+				<UnitType>UNIT_ENFORCERS</UnitType>
+				<UnitType>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</UnitType>
+			</UnitUpgrades>
+			<iCost>-1</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>1</iMoves>
+			<iCombat>2</iCombat>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
+			<iCityDefense>200</iCityDefense>
+			<iAsset>1</iAsset>
+			<iPower>3</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>3</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>3</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>2</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_TRIBAL_GUARDIAN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
 			<Type>UNIT_WATCHER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
@@ -25262,7 +25327,7 @@
 					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		</UnitInfo>
+		</UnitInfo>		
 		<UnitInfo>
 			<Type>UNIT_ENFORCERS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
