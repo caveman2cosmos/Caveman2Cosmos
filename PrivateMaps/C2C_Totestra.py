@@ -600,10 +600,10 @@ class MapConstants :
 			self.landPercent = 0.19
 
 		self.serviceFlags = 0 # Used for concise description of flags
-	if seaLevel != 0:
-		self.serviceFlags |= (seaLevel & 3) # 2 bits; total 2
-	else:
-		self.serviceFlags |= 3 # Make sure Service Tag is always 21 digits
+		if seaLevel != 0:
+			self.serviceFlags |= (seaLevel & 3) # 2 bits; total 2
+		else:
+			self.serviceFlags |= 3 # Make sure Service Tag is always 21 digits
 
 		# Have climate affect the maps
 		# This is increased for a "tropical" climate
@@ -694,14 +694,14 @@ class MapConstants :
 		#New World Rules
 		selectionID = mmap.getCustomMapOption(OPTION_NewWorld)
 		self.AllowNewWorld = True
-	self.ShareContinent = False
+		self.ShareContinent = False
 		if selectionID == 1:
 			self.AllowNewWorld = False
-	elif selectionID == 2:
-		self.ShareContinent = True
+		elif selectionID == 2:
+			self.ShareContinent = True
 
-	self.xtraFlags = 0
-	self.xtraFlags |= ((self.ShareContinent & 1) << 4)
+		self.xtraFlags = 0
+		self.xtraFlags |= ((self.ShareContinent & 1) << 4)
 
 		self.serviceFlags <<= 1
 		self.serviceFlags |= (self.AllowNewWorld & 1) # 1 bit; total 6
@@ -746,36 +746,36 @@ class MapConstants :
 		# slower the map generation process
 
 		# X and Y values for the map's aspect ratio
-	ratioValue = mmap.getCustomMapOption(OPTION_MapRatio)
-	if 1 == 2: # Dummy, does nothing, so we don't get elif problems
-		self.ratioX = 3
-		self.ratioY = 2
+		ratioValue = mmap.getCustomMapOption(OPTION_MapRatio)
+		if 1 == 2: # Dummy, does nothing, so we don't get elif problems
+			self.ratioX = 3
+			self.ratioY = 2
 		elif ratioValue == 0: # 2:3
-		self.ratioX = 2
-		self.ratioY = 3
+			self.ratioX = 2
+			self.ratioY = 3
 		elif ratioValue == 1: # 1:1
-		self.ratioX = 2
-		self.ratioY = 2
-	elif ratioValue == 2: # 3:2
-		self.ratioX = 3
-		self.ratioY = 2
-	elif ratioValue == 3: # 2:1
-		self.ratioX = 4
-		self.ratioY = 2
-	elif ratioValue == 4: # 7:1, Ringworld
-		self.ratioX = 7
-		self.ratioY = 1
-	elif ratioValue == 5: # 3:3, Big square (untested)
-		self.ratioX = 3
-		self.ratioY = 3
-	elif ratioValue == 6: # 3:2 but twice the size
-		self.ratioX = 6
-		self.ratioY = 4
+			self.ratioX = 2
+			self.ratioY = 2
+		elif ratioValue == 2: # 3:2
+			self.ratioX = 3
+			self.ratioY = 2
+		elif ratioValue == 3: # 2:1
+			self.ratioX = 4
+			self.ratioY = 2
+		elif ratioValue == 4: # 7:1, Ringworld
+			self.ratioX = 7
+			self.ratioY = 1
+		elif ratioValue == 5: # 3:3, Big square (untested)
+			self.ratioX = 3
+			self.ratioY = 3
+		elif ratioValue == 6: # 3:2 but twice the size
+			self.ratioX = 6
+			self.ratioY = 4
 		elif ratioValue == 7: # 1:2; down here because it's buggy
-		self.ratioX = 2
-		self.ratioY = 4
+			self.ratioX = 2
+			self.ratioY = 4
 
-	if patience < 2:
+		if patience < 2:
 			self.ratioX = 3 # One less thing to SQA
 			self.ratioY = 2
 
@@ -787,9 +787,9 @@ class MapConstants :
 		self.serviceFlags <<= 2
 		self.serviceFlags |= (selectionID & 3) # Island factor
 
-	# If they want a fast map, don't allow them to select more islands
-	if(patience < 2):
-		selectionID = 0
+		# If they want a fast map, don't allow them to select more islands
+		if patience < 2:
+			selectionID = 0
 
 		heightmap_size_factor = 3 + selectionID
 		self.hmWidth  = (self.hmMaxGrain * self.ratioX *
@@ -804,18 +804,18 @@ class MapConstants :
 		#Wrap options
 		selectionID = mmap.getCustomMapOption(OPTION_Wrap)
 		wrapString = "Cylindrical"
-	self.WrapX = True
-	self.WrapY = False
+		self.WrapX = True
+		self.WrapY = False
 
 		self.serviceFlags <<= 2
 		self.serviceFlags |= (selectionID & 3) # Map wrap; 2 bits total 15
 		self.serviceFlags <<= 6 # 6 bits so we know the map size total 21
 
-	# handicap of 0 means player is equal to AI and may get a
-	# starting position that can not be won at higher difficulty
-	# settings.	 Values of 1, 2, or 3 make it easier for the player
-	handicap = mmap.getCustomMapOption(OPTION_Handicap)
-	self.xtraFlags |= ((handicap & 3) << 5)
+		# handicap of 0 means player is equal to AI and may get a
+		# starting position that can not be won at higher difficulty
+		# settings.	 Values of 1, 2, or 3 make it easier for the player
+		handicap = mmap.getCustomMapOption(OPTION_Handicap)
+		self.xtraFlags |= ((handicap & 3) << 5)
 
 		#Bonus resources to add depending on difficulty settings
 		self.SettlerBonus = handicap
@@ -828,25 +828,25 @@ class MapConstants :
 		self.ImmortalBonus = handicap
 		self.DeityBonus = handicap
 
-	# Now that we have calculated the player's bonus resources, how many
-	# resources should the map as a whole have?
+		# Now that we have calculated the player's bonus resources, how many
+		# resources should the map as a whole have?
 
 		#This variable adjusts the amount of bonuses on the map. Values above 1.0 will add bonus
 		#bonuses. People often want lots of bonuses, and for those people, this variable is definately
 		#a bonus.
 		self.BonusBonus = 1.0
-	self.spreadResources = False
-	bonus_add = mmap.getCustomMapOption(OPTION_MapResources)
-	if bonus_add == 1: # More evenly spread out
-		self.BonusBonus = 0.7 # Compensate for spread's increase
-		self.spreadResources = True # Increases resources
-	if bonus_add == 2: # Full of resources
-		self.BonusBonus = 1.5 # Increases resources
-		self.spreadResources = True # Increases resources more
-	self.xtraFlags |= ((bonus_add & 3) << 2)
+		self.spreadResources = False
+		bonus_add = mmap.getCustomMapOption(OPTION_MapResources)
+		if bonus_add == 1: # More evenly spread out
+			self.BonusBonus = 0.7 # Compensate for spread's increase
+			self.spreadResources = True # Increases resources
+		if bonus_add == 2: # Full of resources
+			self.BonusBonus = 1.5 # Increases resources
+			self.spreadResources = True # Increases resources more
+		self.xtraFlags |= ((bonus_add & 3) << 2)
 
 		self.noRotate = mmap.getCustomMapOption(OPTION_NoRotate)
-	self.smoothPeaks = mmap.getCustomMapOption(OPTION_SmoothPeaks)
+		self.smoothPeaks = mmap.getCustomMapOption(OPTION_SmoothPeaks)
 
 		#After generating the heightmap, bands of ocean can be added to the map
 		#to allow a more consistent climate generation. These bands are useful
@@ -868,7 +868,7 @@ class MapConstants :
 			self.hmHeight -= 1
 			self.WrapY = True
 		if selectionID == 1:
-				self.iceChance *= 0.1
+			self.iceChance *= 0.1
 			self.northWaterBand = 0
 			self.northCrop = 0
 			self.southWaterBand = 0
@@ -891,12 +891,12 @@ class MapConstants :
 			self.totestra = 4316490043753041 # Cephalo
 		elif selectionID == 3:
 			self.totestra = 8939185639133313 # Caulixtla
-	elif selectionID == 4:
+		elif selectionID == 4:
 			self.totestra = 0x8f3d2735334af
-	elif selectionID == 5:
-		self.totestra = 0x1fcdc6f76b8c1b
-	elif selectionID == 6:
-		self.totestra = 0x1e52818fad64 # Atlixco
+		elif selectionID == 5:
+			self.totestra = 0x1fcdc6f76b8c1b
+		elif selectionID == 6:
+			self.totestra = 0x1e52818fad64 # Atlixco
 		elif selectionID > 0:
 			self.totestra = 8939185639133313 # Caulixtla
 
