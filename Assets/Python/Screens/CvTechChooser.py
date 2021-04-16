@@ -107,8 +107,7 @@ class CvTechChooser:
 		self.iCurrentEra = self.CyPlayer.getCurrentEra()
 		self.currentTechState = [self.getTechState(iTech) for iTech in xrange(self.iNumTechs)]
 
-		import PythonToolTip
-		self.tooltip = PythonToolTip.PythonToolTip()
+		self.tooltip = pyTT.PythonToolTip()
 
 		self.iUnitTT = None
 		self.bUnitTT = False
