@@ -3621,9 +3621,7 @@ def OutputMessage(message):
 	NiTextOut(message)
 	print message
 
-import os
 import os.path
-import _winreg
 
 def regRead(registry, path, field):
 	pathKey = _winreg.OpenKey(registry, path)
