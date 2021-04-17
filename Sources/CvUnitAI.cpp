@@ -1320,27 +1320,27 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 
 
 // Returns true if the unit found a build for this city...
-bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildTypes* peBestBuild, const CvPlot* pIgnorePlot, const CvUnit* pUnit)
+bool CvUnitAI::AI_bestCityBuild(const CvCity *pCity, CvPlot **ppBestPlot, BuildTypes *peBestBuild, const CvPlot *pIgnorePlot, const CvUnit *pUnit)
 {
 	PROFILE_FUNC();
 
-	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+	const CvPlayerAI &kOwner = GET_PLAYER(getOwner());
 	const ImprovementTypes eRuins = GC.getIMPROVEMENT_CITY_RUINS();
 	const bool bSafeAutomation = kOwner.isOption(PLAYEROPTION_SAFE_AUTOMATION);
 
 	BuildTypes eBestBuild = NO_BUILD;
-	CvPlot* pBestPlot = NULL;
+	CvPlot *pBestPlot = NULL;
 	int iBestValue = 0;
 
 	for (int iPass = 0; iPass < 2; iPass++)
 	{
 		for (int iI = 0; iI < pCity->getNumCityPlots(); iI++)
 		{
-			CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
+			CvPlot *pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
 
 			if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == pCity && AI_plotValid(pLoopPlot) && pLoopPlot != pIgnorePlot
 
-			&& (!bSafeAutomation || pLoopPlot->getImprovementType() == NO_IMPROVEMENT || pLoopPlot->getImprovementType() == eRuins))
+				&& (!bSafeAutomation || pLoopPlot->getImprovementType() == NO_IMPROVEMENT || pLoopPlot->getImprovementType() == eRuins))
 			{
 				int iValue = pCity->AI_getBestBuildValue(iI);
 
@@ -1361,8 +1361,7 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 					}
 					// Second pass
 					int iPathTurns;
-					if ((!pBestPlot->isVisible(getTeam(),false) || !pBestPlot->isVisibleEnemyUnit(this))
-					&& generatePath(pBestPlot, 0, true, &iPathTurns))
+					if ((!pBestPlot->isVisible(getTeam(), false) || !pBestPlot->isVisibleEnemyUnit(this)) && generatePath(pBestPlot, 0, true, &iPathTurns))
 					{
 						// XXX take advantage of range (warning... this could lead to some units doing nothing...)
 						int iMaxWorkers = 1;
@@ -1383,10 +1382,12 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 							// XXX - This could be improved greatly by looking at the real build time
 							//	and other factors when deciding whether to stack.
 							iValue /= 1 + iPathTurns;
-
-							iBestValue = iValue;
-							pBestPlot = pLoopPlot;
-							eBestBuild = eBuild;
+							if (iValue > iBestValue)
+							{
+								iBestValue = iValue;
+								pBestPlot = pLoopPlot;
+								eBestBuild = eBuild;
+							}
 						}
 					}
 				}
@@ -1395,8 +1396,7 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 		if (0 == iPass && eBestBuild != NO_BUILD)
 		{
 			int iPathTurns;
-			if ((!pBestPlot->isVisible(getTeam(),false) || !pBestPlot->isVisibleEnemyUnit(this))
-			&& generatePath(pBestPlot, 0, true, &iPathTurns))
+			if ((!pBestPlot->isVisible(getTeam(), false) || !pBestPlot->isVisibleEnemyUnit(this)) && generatePath(pBestPlot, 0, true, &iPathTurns))
 			{
 				int iMaxWorkers = 1;
 				if (getPathMovementRemaining() == 0)
@@ -1435,7 +1435,6 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 	}
 	return (NO_BUILD != eBestBuild);
 }
-
 
 bool CvUnitAI::AI_isCityAIType() const
 {
@@ -1956,7 +1955,7 @@ int CvUnitAI::AI_minSettlerDefense() const
 		*
 		(
 			// One defender if game-start settler(s), else 4.
-			1 + 3 * (getGameTurnCreated() > 0)
+			1 + 1 * (getGameTurnCreated() > 0)
 			+ // Two more if at war (ignore minor civ).
 			2 * GET_TEAM(getTeam()).isAtWar()
 		)
@@ -1976,13 +1975,12 @@ void CvUnitAI::AI_workerMove()
 	if (!getGroup()->canDefend() && plot()->getOwner() != getOwner())
 	{
 		// Look for a local group we can join to be safe!
-		AI_setLeaderPriority(LEADER_PRIORITY_MIN); // We don't want to take control
-
-		if (AI_group(GroupingParams().withUnitAI(UNITAI_HUNTER).ignoreOwnUnitType().maxPathTurns(1)))
+		AI_setLeaderPriority(LEADER_PRIORITY_MAX); // We don't want to take control
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
 		{
 			return;
 		}
-		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_HUNTER).ignoreOwnUnitType().maxPathTurns(1)))
 		{
 			return;
 		}
@@ -2103,7 +2101,7 @@ void CvUnitAI::AI_workerMove()
 	{
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
-		if (iWorkers > 3 && iWorkers > GET_PLAYER(getOwner()).getNumCities()
+		if (iWorkers > 3 && iWorkers > 5 * GET_PLAYER(getOwner()).getNumCities()
 		&& GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
 		{
 			if (gUnitLogLevel > 2)
@@ -2113,7 +2111,10 @@ void CvUnitAI::AI_workerMove()
 					GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY()
 				);
 			}
-			scrap();
+			if(getUpkeep100() > 100){
+				scrap();
+			}
+
 			return;
 		}
 	}
@@ -2163,22 +2164,6 @@ void CvUnitAI::AI_workerMove()
 	if (AI_improveLocalPlot(2, pCity))
 	{
 		return;
-	}
-
-	bool bBuildFort = false;
-
-	// Super Forts begin *canal* *choke*
-	if (0 == GC.getGame().getSorenRandNum(5, "AI Worker build Fort with Priority"))
-	{
-		const CvPlayerAI& player = GET_PLAYER(getOwner());
-		const bool bCanal = player.countNumCoastalCities() > 0;
-		const bool bAirbase = player.AI_totalUnitAIs(UNITAI_PARADROP) || player.AI_totalUnitAIs(UNITAI_ATTACK_AIR) || player.AI_totalUnitAIs(UNITAI_MISSILE_AIR);
-
-		if (AI_fortTerritory(bCanal, bAirbase))
-		{
-			return;
-		}
-		bBuildFort = bCanal && bAirbase;
 	}
 	// Super Forts end
 
@@ -2239,9 +2224,24 @@ void CvUnitAI::AI_workerMove()
 		}
 	}
 
-	if (AI_irrigateTerritory())
+	// if (AI_irrigateTerritory())
+	// {
+	// 	return;
+	// }
+		bool bBuildFort = false;
+
+	// Super Forts begin *canal* *choke*
+	if (0 == GC.getGame().getSorenRandNum(5, "AI Worker build Fort with Priority"))
 	{
-		return;
+		const CvPlayerAI& player = GET_PLAYER(getOwner());
+		const bool bCanal = player.countNumCoastalCities() > 0;
+		const bool bAirbase = player.AI_totalUnitAIs(UNITAI_PARADROP) || player.AI_totalUnitAIs(UNITAI_ATTACK_AIR) || player.AI_totalUnitAIs(UNITAI_MISSILE_AIR);
+
+		if (AI_fortTerritory(bCanal, bAirbase))
+		{
+			return;
+		}
+		bBuildFort = bCanal && bAirbase;
 	}
 
 	// Super Forts begin *canal* *choke*
@@ -2302,7 +2302,7 @@ void CvUnitAI::AI_workerMove()
 	{
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
-		if (iWorkers > 3 && iWorkers > GET_PLAYER(getOwner()).getNumCities()
+		if (iWorkers > 3 && iWorkers > 5* GET_PLAYER(getOwner()).getNumCities()
 		&& GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
 		{
 			if (gUnitLogLevel > 2)
@@ -22401,7 +22401,7 @@ bool CvUnitAI::AI_irrigateTerritory()
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-		if (AI_plotValid(pLoopPlot) && pLoopPlot->area() == area() && pLoopPlot->getOwner() == getOwner() /* XXX team??? */ && pLoopPlot->getWorkingCity() == NULL)
+		if (AI_plotValid(pLoopPlot) && pLoopPlot->area() == area() && pLoopPlot->getOwner() == getOwner() && pLoopPlot->getWorkingCity() == NULL)
 		{
 			const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
 
