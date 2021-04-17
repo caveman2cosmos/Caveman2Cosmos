@@ -8,11 +8,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -36,11 +31,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
-			<YieldChanges>
-				<iYield>2</iYield>
-				<iYield>1</iYield>
-				<iYield>4</iYield>
-			</YieldChanges>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<FeatureMakesValids>

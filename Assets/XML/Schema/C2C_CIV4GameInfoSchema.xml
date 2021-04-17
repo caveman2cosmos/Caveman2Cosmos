@@ -162,19 +162,10 @@
 	<ElementType name="iInitialCityMaintenancePercent" content="textOnly" dt:type="int"/>
 	<!-- Parallel Maps XML info classes begin -->
 	<!-- MapInfos -->
-	<ElementType name="Map" content="textOnly"/>
-	<ElementType name="bContactable" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bWrapX" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bWrapY" content="textOnly" dt:type="boolean"/>
 	<ElementType name="InitialWBMap" content="textOnly"/>
 	<ElementType name="MapScript" content="textOnly"/>
-	<ElementType name="MapInteraction" content="eltOnly">
-		<element type="Map"/>
-		<element type="bContactable"/>
-		<element type="iDistance"/>
-	</ElementType>
-	<ElementType name="StartingEvent" content="textOnly"/>
-	<ElementType name="SwitchType" content="textOnly"/>
 	<ElementType name="MapInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="Description"/>
@@ -185,32 +176,12 @@
 		<element type="bWrapY"/>
 		<element type="InitialWBMap"/>
 		<element type="MapScript"/>
-		<element type="MapInteraction" minOccurs="0"/>
-		<element type="StartingEvent"/>
-		<element type="SwitchType" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="MapInfos" content="eltOnly">
 		<element type="MapInfo" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="Civ4MapInfos" content="eltOnly">
 		<element type="MapInfos"/>
-	</ElementType>
-	<!-- MapSwitchInfos -->
-	<ElementType name="SwitchEvent" content="textOnly"/>
-	<ElementType name="bManual" content="textOnly" dt:type="boolean"/>
-	<ElementType name="MapSwitchInfo" content="eltOnly">
-		<element type="Type"/>
-		<element type="Description"/>
-		<element type="Help"/>
-		<element type="Map"/>
-		<element type="SwitchEvent"/>
-		<element type="bManual"/>
-	</ElementType>
-	<ElementType name="MapSwitchInfos" content="eltOnly">
-		<element type="MapSwitchInfo" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="Civ4MapSwitchInfos" content="eltOnly">
-		<element type="MapSwitchInfos"/>
 	</ElementType>
 	<!-- Parallel Maps end -->
 	<ElementType name="WorldSize" content="textOnly"/>

@@ -36,9 +36,8 @@ def onUnitBuilt(argsList):
 						CyUnit.getGroup().pushMission(MissionTypes.MISSION_MOVE_TO, rallyPlot.getX(), rallyPlot.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, CyUnit.plot(), CyUnit)
 
 				# Fa Men Si
-				FA_MEN_SI = GC.getInfoTypeForString("BUILDING_FA_MEN_SI")
-				if FA_MEN_SI > -1 and CyPlayer.countNumBuildings(FA_MEN_SI):
-					CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_FA_MEN_SI_INSPIRED"),True)
+				if CyPlayer.hasBuilding(GC.getInfoTypeForString("BUILDING_FA_MEN_SI")):
+					CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_FA_MEN_SI_INSPIRED"), True)
 				return
 
 	# Beastmaster

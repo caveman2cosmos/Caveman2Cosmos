@@ -8,6 +8,7 @@
 		<Italian>Dopo la fine del turno:</Italian>
 		<Spanish>Después del final de turno:</Spanish>
 		<Polish>Po Zakończeniu Tury:</Polish>
+		<Russian>После завершения хода:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_ANOTHER_CIV_ELIMINATED</Tag>
@@ -17,6 +18,7 @@
 		<Italian>Un'altra civiltà è stata eliminata</Italian>
 		<Spanish>Una civilización ha sido eliminada</Spanish>
 		<Polish>Inna cywilizacja została wyeliminowana</Polish>
+		<Russian>Другая цивилизация была уничтожена</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_ATTITUDE_CHANGE</Tag>
@@ -26,6 +28,7 @@
 		<Italian>%s1 ha mutato il suo atteggiamento nei confronti di %s2 da '%s3' a '%s4'</Italian>
 		<Spanish>Cambio de actitud de %s1 hacia %s2, de '%s3' a '%s4'</Spanish>
 		<Polish>Zmiana Relacji: %s1 do %s2, z '%s3' na '%s4</Polish>
+		<Russian>Изменение отношения: %s1 к %s2, с '%s3' на '%s4'</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_BATTLE_STATS</Tag>
@@ -35,6 +38,7 @@
 		<Italian>Statistiche di combattimento:</Italian>
 		<Spanish>Estadísticas de batalla:</Spanish>
 		<Polish>Statystyki Bitwy:</Polish>
+		<Russian>Статистика боя:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_BATTLE_STATS_WRITTEN</Tag>
@@ -44,6 +48,7 @@
 		<Italian>Statistiche di combattimento inserite nel registro e resettate</Italian>
 		<Spanish>Estadísticas de batalla inscritas en el registro</Spanish>
 		<Polish>Statystyki bitwy zostały zapisane do rejestru i zresetowane</Polish>
+		<Russian>Статистика боя записывается в журнал и сбрасывается</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CITY_CAPTURED</Tag>
@@ -53,6 +58,7 @@
 		<Italian>%s1 (%s2) è stata conquistata</Italian>
 		<Spanish>%s1 (%s2) ha sido capturada</Spanish>
 		<Polish>Zdobyto miasto: %s1 (%s2)</Polish>
+		<Russian>Захвачен %s1 (%s2)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CITY_EXPANDED</Tag>
@@ -62,6 +68,7 @@
 		<Italian>I confini culturali di %s1 si sono espansi</Italian>
 		<Spanish>Las fronteras de %s1 se han expandido</Spanish>
 		<Polish>Rozszerzyły się granice miasta: %s1</Polish>
+		<Russian>Расширились границы %s1"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CITY_FLIPPED</Tag>
@@ -71,6 +78,7 @@
 		<Italian>%s1 (%s2) ha subito l'influsso di una cultura straniera</Italian>
 		<Spanish>%s1 (%s2) cayó bajo la influencia de una cultura extranjera</Spanish>
 		<Polish>Miasto: %s1 (%s2) zostało przejęte poprzez wysoką kulturę</Polish>
+		<Russian>%s1 (%s2) культурный переворот</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CITY_FOUNDED</Tag>
@@ -80,6 +88,7 @@
 		<Italian>%s1 è stata fondata</Italian>
 		<Spanish>%s1 fundada</Spanish>
 		<Polish>Założono miasto: %s1</Polish>
+		<Russian>Основан %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CITY_GROWS</Tag>
@@ -89,6 +98,7 @@
 		<Italian>La popolazione di %s1 è cresciuta fino a %d2</Italian>
 		<Spanish>%s1 creció a tamaño %d2</Spanish>
 		<Polish>Miasto: %s1 wzrasta do wielkości: %d2</Polish>
+		<Russian>%s1 растет до размеров %d2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CITY_LOST</Tag>
@@ -98,6 +108,7 @@
 		<Italian>%s1 è stata persa</Italian>
 		<Spanish>%s1 se ha perdido</Spanish>
 		<Polish>Stracono miasto: %s1</Polish>
+		<Russian>Потерян %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CITY_PRODUCES_BUILDING</Tag>
@@ -107,6 +118,7 @@
 		<Italian>%s1 ha iniziato a produrre %s2 (necessari %d3 [NUM3:turno:turni])</Italian>
 		<Spanish>%s1 comienza la producción: %s2 (%d3 turnos)</Spanish>
 		<Polish>Miasto: %s1 rozpoczyna budowę: %s2 (%d3 tur)</Polish>
+		<Russian>Строится %s1: %s2 (%d3 ходов)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CITY_PRODUCES_UNIT</Tag>
@@ -116,6 +128,7 @@
 		<Italian>%s1 ha iniziato a produrre %s2 (necessari %d3 [NUM3:turno:turni])</Italian>
 		<Spanish>%s1 comienza la producción de: %s2 (%d3 turnos)</Spanish>
 		<Polish>Miasto: %s1 rozpoczyna budowę: %s2 (%d3 tur)</Polish>
+		<Russian>Строится %s1: %s2 (%d3 ходов)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CITY_RAZED</Tag>
@@ -125,6 +138,7 @@
 		<Italian>%s1 è stata rasa al suolo</Italian>
 		<Spanish>%s1 ha sido arrasada</Spanish>
 		<Polish>Zburzono miasto: %s1</Polish>
+		<Russian>%s1 разрушен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CITY_RAZED_BY</Tag>
@@ -134,6 +148,7 @@
 		<Italian>%s1 è stata rasa al suolo da %s2</Italian>
 		<Spanish>%s1 ha sido arrasada por %s2</Spanish>
 		<Polish>Miasto: %s1 zostało zburzone przez: %s2</Polish>
+		<Russian>%s1 разрушен %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CITY_TRADED</Tag>
@@ -143,6 +158,7 @@
 		<Italian>%s1 (%s2) è stata ceduta diplomaticamente</Italian>
 		<Spanish>%s1 (%s2) ha sido intercambiada a través del comercio</Spanish>
 		<Polish>Miasto: %s1 (%s2) zostało przejęte poprzez umowę handlową</Polish>
+		<Russian>Продан(о) за %s1 (%s2)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CIVIC_CHANGE</Tag>
@@ -152,6 +168,7 @@
 		<Italian>%s1 ha cambiato la forma di Governo da '%s2' a '%s3'</Italian>
 		<Spanish>Cambio de principios de %s1, de '%s2' a '%s3'</Spanish>
 		<Polish>Zmiana Doktryny: %s1 z '%s2' na '%s3</Polish>
+		<Russian>Смена парадигмы: %s1 с '%s2' на '%s3'</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CIV_ELIMINATED</Tag>
@@ -161,6 +178,7 @@
 		<Italian>La civiltà %s1 è stata eliminata</Italian>
 		<Spanish>%s1 ha sido eliminada</Spanish>
 		<Polish>Wyeliminowano: %s1</Polish>
+		<Russian>Держава %s1 была уничтожена</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_COMMERCE_GOLD_SLIDERS</Tag>
@@ -170,6 +188,7 @@
 		<Italian>%d1%% %s2: %d3 per turno, %d4 in banca</Italian>
 		<Spanish>%d1%% %s2: %d3 por turno, %d4 en el banco</Spanish>
 		<Polish>%d1%% %s2: %d3 na turę, %d4 w banku</Polish>
+		<Russian>%d1%% %s2: %d3 за ход, %d4 в банке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_COMMERCE_OTHER_SLIDERS</Tag>
@@ -179,6 +198,7 @@
 		<Italian>%d1%% %s2: %d3 per turno</Italian>
 		<Spanish>%d1%% %s2: %d3 por turno</Spanish>
 		<Polish>%d1%% %s2: %d3 na turę</Polish>
+		<Russian>%d1%% %s2: %d3 за ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CONSCRIPT</Tag>
@@ -188,6 +208,7 @@
 		<Italian>Un'unità %s1 è stata arruolata a %s2</Italian>
 		<Spanish>La unidad %s1 fue reclutada en %s2</Spanish>
 		<Polish>Zastosowano pobór: %s1 w mieście: %s2</Polish>
+		<Russian>%s1 был призван в %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CORP_FOUNDED</Tag>
@@ -197,6 +218,7 @@
 		<Italian>%s1 è stata costituita a %s2</Italian>
 		<Spanish>%s1 se ha fundado en %s2</Spanish>
 		<Polish>%s1 założono w mieście: %s2</Polish>
+		<Russian>Основана корпорация %s1 в %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CORP_REMOVED_IN</Tag>
@@ -206,6 +228,7 @@
 		<Italian>%s1 è stata soppressa a %s2</Italian>
 		<Spanish>%s1 ha sido eliminada de: %s2</Spanish>
 		<Polish>%s1 wycofuje się z miasta: %s2</Polish>
+		<Russian>%s1 прекратила бизнес: %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CORP_REMOVED_OUT</Tag>
@@ -215,6 +238,7 @@
 		<Italian>%s1 è stata soppressa a %s2 (%s3)</Italian>
 		<Spanish>%s1 ha sido eliminada de: %s2 (%s3)</Spanish>
 		<Polish>%s1 wycofuje się z miasta: %s2 (%s3)</Polish>
+		<Russian>%s1 прекратила бизнес: %s2 (%s3)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CORP_SPREAD_IN</Tag>
@@ -224,6 +248,7 @@
 		<Italian>%s1 ha aperto una filiale a %s2</Italian>
 		<Spanish>%s1 se ha expandido a: %s2</Spanish>
 		<Polish>%s1 rozprzestrzenia się w mieście: %s2</Polish>
+		<Russian>%s1 открыла филиал: %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CORP_SPREAD_OUT</Tag>
@@ -233,6 +258,7 @@
 		<Italian>%s1 ha aperto una filiale a %s2 (%s3)</Italian>
 		<Spanish>%s1 se ha expandido a: %s2 (%s3)</Spanish>
 		<Polish>%s1 rozprzestrzenia się w mieście: %s2 (%s3)</Polish>
+		<Russian>%s1 открыла филиал: %s2 (%s3)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CUSTOM_ENTRY</Tag>
@@ -242,6 +268,7 @@
 		<Italian>Inserisci una nota personalizzata nel registro</Italian>
 		<Spanish>Introduce una entrada personal en el registro</Spanish>
 		<Polish>Wprowadź własny wpis</Polish>
+		<Russian>Введите пользовательскую запись журнала</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DECLARES_WAR</Tag>
@@ -251,6 +278,7 @@
 		<Italian>%s1 ha dichiarato guerra a %s2</Italian>
 		<Spanish>%s1 ha declarado la guerra a %s2</Spanish>
 		<Polish>%s1 wypowiada wojnę przeciwko: %s2</Polish>
+		<Russian>%s1 объявляет войну %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_CITY_OFFER</Tag>
@@ -260,6 +288,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha offerto %s3 a %s4 (%s5)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) ofrece renunciar a la ciudad %s3 a %s4 (%s5)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) oferuje: przekazanie miasta: %s3 dla: %s4 (%s5)</Polish>
+		<Russian>Diplomacy: %s1 (%s2) offers to give the city %s3 to %s4 (%s5)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_CIVIC_DEMAND</Tag>
@@ -269,6 +298,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha chiesto a %s3 (%s4) di passare alla forma di Governo %s5</Italian>
 		<Spanish>Diplomacia (Solicitud de principios): %s1 (%s2) pide a %s3 (%s4) que cambie [NUM5:al:a la:a los:a las] %s5</Spanish>
 		<Polish>Dyplomacja (Żądanie Doktryny): %s1 (%s2) pyta: %s3 (%s4) o przejście na: %s5</Polish>
+		<Russian>Diplomacy (Civic Request): %s1 (%s2) asks %s3 (%s4) to switch to %s5</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_DEAL_ACCEPT</Tag>
@@ -278,6 +308,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha accettato di scambiare con %s4 (%s5) %s3 in cambio di %s6</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) acepta el trato de %s3 a %s4 (%s5) por %s6</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) akceptuje: handel %s3 z %s4 (%s5) za: %s6</Polish>
+		<Russian>Diplomacy: %s1 (%s2) accepts trade of %s3 to %s4 (%s5) for %s6</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_DEAL_CANCEL</Tag>
@@ -287,6 +318,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha interrotto lo scambio con %s4 (%s5) di %s3 con %s6</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) cancela el trato de %s3 a %s4 (%s5) por %s6</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) anuluje: handel %s3 z: %s4 (%s5) za: %s6</Polish>
+		<Russian>Diplomacy: %s1 (%s2) cancels trade of %s3 to %s4 (%s5) for %s6</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_DEAL_OFFER</Tag>
@@ -296,6 +328,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha offerto a %s4 (%s5) di scambiare %s3 con %s6</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) ofrece %s3 a %s4 (%s5) por %s6</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) oferuje: %s3 dla %s4 (%s5) za: %s6</Polish>
+		<Russian>Diplomacy: %s1 (%s2) offers to trade %s3 to %s4 (%s5) for %s6</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_DEAL_REJECT</Tag>
@@ -305,6 +338,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha rifiutato di scambiare con %s4 (%s5) %s3 in cambio di %s6</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) rechaza el trato de %s3 a %s4 (%s5) por %s6</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) odrzuca: handel %s3 z %s4 (%s5) za: %s6</Polish>
+		<Russian>Diplomacy: %s1 (%s2) rejects trade of %s3 to %s4 (%s5) for %s6</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_EMBARGO_DEMAND</Tag>
@@ -314,6 +348,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha chiesto a %s3 (%s4) di cessare ogni scambio commerciale con %s5 (%s6)</Italian>
 		<Spanish>Diplomacia (Solicitud de embargo): %s1 (%s2) solicita que %s3 (%s4) cancele las relaciones comerciales con %s5 (%s6)</Spanish>
 		<Polish>Dyplomacja (Żądanie Embarga): %s1 (%s2) pyta: %s3 (%s4) o przerwanie handlu z: %s5 (%s6)</Polish>
+		<Russian>Diplomacy (Embargo Request): %s1 (%s2) asks %s3 (%s4) to stop trading with %s5 (%s6)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_GENERIC_ACCEPT</Tag>
@@ -323,6 +358,7 @@
 		<Italian>; %s1 HA ACCETTATO.</Italian>
 		<Spanish>; %s1 ACEPTA.</Spanish>
 		<Polish>; %s1 AKCEPTUJE.</Polish>
+		<Russian>; %s1 AGREES.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_GENERIC_REJECT</Tag>
@@ -332,6 +368,7 @@
 		<Italian>; %s1 HA RIFIUTATO.</Italian>
 		<Spanish>; %s1 RECHAZA.</Spanish>
 		<Polish>; %s1 ODRZUCA.</Polish>
+		<Russian>; %s1 REFUSES.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_GIFT_ACCEPT</Tag>
@@ -341,6 +378,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha accettato la donazione di %s3 da parte di %s4 (%s5)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) acepta el regalo de %s3 por parte de %s4 (%s5)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) akceptuje: podarunek %s3 od: %s4 (%s5)</Polish>
+		<Russian>Diplomacy: %s1 (%s2) accepts gift of %s3 from %s4 (%s5)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_GIFT_CANCEL</Tag>
@@ -350,6 +388,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha cancellato la sua donazione di %s3 a %s4 (%s5)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) cancela el regalo de %s3 a %s4 (%s5)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) anuluje: podarunek %s3 dla: %s4 (%s5)</Polish>
+		<Russian>Diplomacy: %s1 (%s2) cancels gift of %s3 to %s4 (%s5)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_GIFT_REJECT</Tag>
@@ -359,6 +398,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha rifiutato la donazione di %s3 da parte di %s4 (%s5)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) rechaza el regalo de %s3 de %s4 (%s5)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) odrzuca: podarunek %s3 od: %s4 (%s5)</Polish>
+		<Russian>Diplomacy: %s1 (%s2) rejects gift of %s3 from %s4 (%s5)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_HELP_DEMAND</Tag>
@@ -368,6 +408,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha supplicato %s3 (%s4) di aiutarlo donandogli %s5</Italian>
 		<Spanish>Diplomacia (solicitud de ayuda): %s1 (%s2) pide a %s3 (%s4) por %s5</Spanish>
 		<Polish>Dyplomacja (Prośba o Pomoc): %s1 (%s2) pyta: %s3 (%s4) o %s5</Polish>
+		<Russian>Diplomacy (Help Request): %s1 (%s2) asks %s3 (%s4) for %s5</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_HELP_OFFER</Tag>
@@ -377,6 +418,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha offerto il suo aiuto (%s3) a %s4 (%s5)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) ofrece ayudar con (%s3) a %s4 (%s5)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) oferuje: udzielenie pomocy (%s3) dla: %s4 (%s5)</Polish>
+		<Russian>Diplomacy: %s1 (%s2) offers to give help (%s3) to %s4 (%s5)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_PEACE_OFFER</Tag>
@@ -386,6 +428,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha fatto una proposta di pace a %s3 (%s4)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) pide hacer las paces con %s3 (%s4)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) oferuje: podpisanie pokoju z: %s3 (%s4)</Polish>
+		<Russian>Diplomacy: %s1 (%s2) offers to make peace with %s3 (%s4)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_RELIGION_DEMAND</Tag>
@@ -395,6 +438,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha chiesto a %s3 (%s4) di convertirsi al %s5</Italian>
 		<Spanish>Diplomacia (solicitud religiosa): %s1 (%s2) pide a %s3 (%s4) se convierta [NUM5:al:a la:a los:a las] %s5</Spanish>
 		<Polish>Dyplomacja (Żądanie Religijne): %s1 (%s2) pyta: %s3 (%s4) o nawrócenie się na %s5</Polish>
+		<Russian>Diplomacy (Religion Request): %s1 (%s2) asks %s3 (%s4) to convert to %s5</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_TRIBUTE_DEMAND</Tag>
@@ -404,6 +448,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha chiesto a %s3 (%s4) che gli dia %s5 come tributo</Italian>
 		<Spanish>Diplomacia (demanda de tributo): %s1 (%s2) exige que %s3 (%s4) le dé %s5</Spanish>
 		<Polish>Dyplomacja (Żądanie Zapłaty): %s1 (%s2) żąda od: %s3 (%s4) przekazania: %s5</Polish>
+		<Russian>Diplomacy (Tribute Demand): %s1 (%s2) demands that %s3 (%s4) gives %s5</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_VASSAL_OFFER</Tag>
@@ -413,6 +458,7 @@
 		<Italian>Diplomazia: %s1 (%s2) si è offerto di diventare vassallo di %s3 (%s4)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) ofrece convertirse en vasallo de %s3 (%s4)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) oferuje: swoje wasalstwo %s3 (%s4)</Polish>
+		<Russian>Diplomacy: %s1 (%s2) offers to become a vassal of %s3 (%s4)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_WAR_DEMAND</Tag>
@@ -422,6 +468,7 @@
 		<Italian>Diplomazia: %s1 (%s2) ha chiesto a %s3 (%s4) di dichiarare guerra a %s5 (%s6)</Italian>
 		<Spanish>Diplomacia (Solicitud militar): %s1 (%s2) solicita que %s3 (%s4) declare la guerra a %s5 (%s6)</Spanish>
 		<Polish>Dyplomacja (Żądanie Wojny): %s1 (%s2) pyta: %s3 (%s4) o wypowiedzenie wojny: %s5 (%s6)</Polish>
+		<Russian>Diplomacy (War Request): %s1 (%s2) asks %s3 (%s4) to declare war on %s5 (%s6)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DISTANT_LAND</Tag>
@@ -431,6 +478,7 @@
 		<Italian>una terra lontana</Italian>
 		<Spanish>en tierras lejanas</Spanish>
 		<Polish>w odległym kraju</Polish>
+		<Russian>далекая земля</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DRAFT_ANGER_DECREASED</Tag>
@@ -440,6 +488,7 @@
 		<Italian>I malumori da coscrizione sono diminuiti a %s1</Italian>
 		<Spanish>El malestar por reclutamiento decreció en %s1</Spanish>
 		<Polish>Niezadowolenie z poboru zmalało w mieście: %s1</Polish>
+		<Russian>Недовольство призывом уменьшилось в %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_ENTER_LOG_NAME</Tag>
@@ -449,6 +498,7 @@
 		<Italian>Inserisci il nome di un file (nuovo o già esistente) per il registro</Italian>
 		<Spanish>Introduce un nombre de fichero (nuevo o existente)</Spanish>
 		<Polish>Wpisz nową lub istniejącą nazwę pliku</Polish>
+		<Russian>Введите имя нового или существующего файла журнала</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_FINISH_BUILDING</Tag>
@@ -458,6 +508,7 @@
 		<Italian>%s1 ha completato %s2</Italian>
 		<Spanish>%s1 ha completado: %s2</Spanish>
 		<Polish>W mieście: %s1 ukończono budynek: %s2</Polish>
+		<Russian>%s1 завершен(а): %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_FINISH_PROJECT</Tag>
@@ -467,6 +518,7 @@
 		<Italian>%s1 ha completato %s2</Italian>
 		<Spanish>%s1 ha completado: %s2</Spanish>
 		<Polish>W mieście: %s1 ukończono projekt: %s2</Polish>
+		<Russian>%s1 завершен: %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_FINISH_UNIT</Tag>
@@ -476,6 +528,7 @@
 		<Italian>%s1 ha completato %s2</Italian>
 		<Spanish>%s1 ha completado: %s2</Spanish>
 		<Polish>W mieście: %s1 ukończono jednostkę: %s2</Polish>
+		<Russian>%s1 завершен: %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_FIRST_CONTACT_PLAYER</Tag>
@@ -485,6 +538,7 @@
 		<Italian>Contatto con il giocatore: %s1 (%s2)</Italian>
 		<Spanish>Contacto con el jugador: %s1 de %s2</Spanish>
 		<Polish>Kontakt nawiązany(Gracz): %s1 of %s2</Polish>
+		<Russian>Установлен контакт с игроком: %s1 из %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_FIRST_CONTACT_TEAM</Tag>
@@ -494,6 +548,7 @@
 		<Italian>Contatto con la squadra: %s1</Italian>
 		<Spanish>Contacto con el equipo: %s1</Spanish>
 		<Polish>Kontakt nawiązany(Grupa): %s1</Polish>
+		<Russian>Установлен контакт с командой: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_GOLDENAGE_BEGINS</Tag>
@@ -503,6 +558,7 @@
 		<Italian>Inizia l'Età dell'oro</Italian>
 		<Spanish>La Edad de Oro comienza</Spanish>
 		<Polish>Rozpoczyna się Złoty Wiek</Polish>
+		<Russian>Наступил Золотой Век</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_GOLDENAGE_ENDS</Tag>
@@ -512,6 +568,7 @@
 		<Italian>L'Età dell'oro è finita</Italian>
 		<Spanish>La Edad de Oro termina</Spanish>
 		<Polish>Kończy się Złoty Wiek</Polish>
+		<Russian>Золотой Век окончился</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_GP_BORN</Tag>
@@ -521,6 +578,7 @@
 		<Italian>%s1 è nato a %s2</Italian>
 		<Spanish>%s1 nació en %s2</Spanish>
 		<Polish>%s1 narodził się w %s2</Polish>
+		<Russian>%s1 появился в %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_IMPROVEMENT</Tag>
@@ -530,6 +588,7 @@
 		<Italian>[NUM1:Un:Una] %s1</Italian>
 		<Spanish>[NUM1:Un:Una:Unos:Unas] %s1</Spanish>
 		<Polish>%s1</Polish>
+		<Russian>%s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_IMPROVEMENT_BUILT</Tag>
@@ -539,6 +598,7 @@
 		<Italian>È stato costruito [NUM1:un:una] %s1</Italian>
 		<Spanish>Se ha construido [NUM1:un:una:unos:unas] %s1</Spanish>
 		<Polish>Zbudowano: %s1</Polish>
+		<Russian>Завершено строительство %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_IMPROVEMENT_DESTROYED</Tag>
@@ -548,6 +608,7 @@
 		<Italian>È stato distrutto [NUM1:un:una] %s1</Italian>
 		<Spanish>Se ha destruido [NUM1:un:una:unos:unas] %s1</Spanish>
 		<Polish>Zniszczono: %s1</Polish>
+		<Russian>%s1 уничтожен(о)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_IMPROVEMENT_DESTROYED_BY_GOLD</Tag>
@@ -557,6 +618,7 @@
 		<Italian>[SPACE]è stato distrutto da %s2 %s1 (%d3 oro)</Italian>
 		<Spanish>[SPACE]fue destruido por %s1 %s2 (%d3 oro)</Spanish>
 		<Polish>[SPACE]zostało zniszczone przez %s1 %s2 (%d3 gold)</Polish>
+		<Russian>[SPACE]был уничтожен %s1 %s2 (%d3 золотых)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_IMPROVEMENT_DESTROYED_BY_NOGOLD</Tag>
@@ -566,6 +628,7 @@
 		<Italian>[SPACE]è stato distrutto da %s2 %s1</Italian>
 		<Spanish>[SPACE]fue destruido por %s1 %s2</Spanish>
 		<Polish>[SPACE]zostało zniszczone przez %s1 %s2</Polish>
+		<Russian>[SPACE]был уничтожен %s1 %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_IMPROVEMENT_UNKNOWN</Tag>
@@ -575,6 +638,7 @@
 		<Italian>Un miglioramento</Italian>
 		<Spanish>Una mejora</Spanish>
 		<Polish>Udoskonalenie</Polish>
+		<Russian>Улучшение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_IN_TERRITORY</Tag>
@@ -584,6 +648,7 @@
 		<Italian>in territorio %s1</Italian>
 		<Spanish>en territorio %s1</Spanish>
 		<Polish>na terytorium: %s1</Polish>
+		<Russian>на земле %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_IN_TERRITORY_AT</Tag>
@@ -593,6 +658,7 @@
 		<Italian>%s1, a %s2</Italian>
 		<Spanish>%s1 en %s2</Spanish>
 		<Polish>%s1 przy %s2</Polish>
+		<Russian>%s1 в %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_IN_TERRITORY_NEAR</Tag>
@@ -602,6 +668,7 @@
 		<Italian>%s1, presso %s2</Italian>
 		<Spanish>%s1 cerca de %s2</Spanish>
 		<Polish>%s1 w pobliżu %s2</Polish>
+		<Russian>%s1 вблизи %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_IN_THE_WILD</Tag>
@@ -611,6 +678,7 @@
 		<Italian>in territorio selvaggio</Italian>
 		<Spanish>en territorio salvaje</Spanish>
 		<Polish>w dziczy</Polish>
+		<Russian>в дикой природе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_JUST_OFF_SHORE</Tag>
@@ -620,6 +688,7 @@
 		<Italian>sulla costa</Italian>
 		<Spanish>frente a la costa</Spanish>
 		<Polish>na wybrzeżu</Polish>
+		<Russian>недалеко от берега</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_LOGGING_GAME</Tag>
@@ -629,6 +698,7 @@
 		<Italian>Partita registrata nel file: %s1</Italian>
 		<Spanish>Registrando partida en el fichero: %s1</Spanish>
 		<Polish>Rejestruj Grę do Pliku: %s1</Polish>
+		<Russian>Запись игры в файл: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_NEAR</Tag>
@@ -638,6 +708,7 @@
 		<Italian>[SPACE]presso %s1</Italian>
 		<Spanish>[SPACE]cerca de %s1</Spanish>
 		<Polish>[SPACE]w pobliżu miasta: %s1</Polish>
+		<Russian>[SPACE]около %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_NO_LOGGING</Tag>
@@ -647,6 +718,7 @@
 		<Italian>Questa partita non viene registrata</Italian>
 		<Spanish>Registro desactivado para esta partida</Spanish>
 		<Polish>Nie Loguj tej Gry</Polish>
+		<Russian>Нет регистрации в этой игре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_NO_STATE_RELIGION</Tag>
@@ -656,6 +728,7 @@
 		<Italian>nessuna Religione di Stato</Italian>
 		<Spanish>Sin religión oficial</Spanish>
 		<Polish>brak religii państwowej</Polish>
+		<Russian>нет государственной религии</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_ON_A_LAKE</Tag>
@@ -665,6 +738,7 @@
 		<Italian>sul lago</Italian>
 		<Spanish>en un lago</Spanish>
 		<Polish>na jeziorze</Polish>
+		<Russian>на озере</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_ON_THE_HIGH_SEAS</Tag>
@@ -674,6 +748,7 @@
 		<Italian>in alto mare</Italian>
 		<Spanish>en alta mar</Spanish>
 		<Polish>na głębokim morzu</Polish>
+		<Russian>в открытом море</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_OTHER_PLAYER_ACTIONS</Tag>
@@ -683,6 +758,7 @@
 		<Italian>Azioni degli altri giocatori:</Italian>
 		<Spanish>Acciones de otros jugadores:</Spanish>
 		<Polish>Inne Akcje Gracza:</Polish>
+		<Russian>Другие действия игрока:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_PEACE_TREATY</Tag>
@@ -692,6 +768,7 @@
 		<Italian>%s1 e %s2 hanno siglato un trattato di pace</Italian>
 		<Spanish>%s1 y %s2 han firmado un tratado de paz</Spanish>
 		<Polish>%s1 i %s2 podpisali traktat pokojowy</Polish>
+		<Russian>%s1 и %s2 заключили мирный договор</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_POPUP_ANSWERS</Tag>
@@ -701,6 +778,7 @@
 		<Italian>Clicca su OK se la risposta è SI, su Cancel se è NO</Italian>
 		<Spanish>"OK" para SÍ, "Cancel" para NO</Spanish>
 		<Polish>OK dla TAK, Anuluj dla NIE</Polish>
+		<Russian>ОК для ДА, Отмена для НЕТ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_POPUP_QUESTION</Tag>
@@ -710,6 +788,7 @@
 		<Italian>Vuoi registrare questa partita?</Italian>
 		<Spanish>¿Quieres activar el registro para esta partida?</Spanish>
 		<Polish>Czy chcesz rejestrować przebieg tej gry?</Polish>
+		<Russian>Вы хотите войти в эту игру?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_PROMOTION</Tag>
@@ -719,6 +798,7 @@
 		<Italian>L'unità %s1 è stata promossa (%s2)</Italian>
 		<Spanish>%s1 ha sido ascendida a: %s2</Spanish>
 		<Polish>%s1 promował jednostkę: %s2</Polish>
+		<Russian>%s1 поднял уровень: %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_RELIGION_CHANGE</Tag>
@@ -728,6 +808,7 @@
 		<Italian>%s1 ha cambiato la Religione di Stato da '%s2' a '%s3'</Italian>
 		<Spanish>La religión oficial de %s1 cambió de '%s2' a '%s3'</Spanish>
 		<Polish>Zmiana religii państwowej: %s1 z '%s2' na '%s3</Polish>
+		<Russian>Смена государственной религии: %s1 с '%s2' на '%s3'</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_RELIGION_FOUNDED</Tag>
@@ -737,6 +818,7 @@
 		<Italian>%s1 è stato fondato a %s2</Italian>
 		<Spanish>%s1 fundada en %s2</Spanish>
 		<Polish>%s1 założono w mieście: %s2</Polish>
+		<Russian>%s1 основан(о) в %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_RELIGION_REMOVED_IN</Tag>
@@ -746,6 +828,7 @@
 		<Italian>%s1 non è più presente a %s2</Italian>
 		<Spanish>%s1 ha sido eliminada de: %s2</Spanish>
 		<Polish>%s1 wycofuje się z: %s2</Polish>
+		<Russian>%s1 был удален(о): %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_RELIGION_REMOVED_OUT</Tag>
@@ -755,6 +838,7 @@
 		<Italian>%s1 non è più presente a %s2 (%s3)</Italian>
 		<Spanish>%s1 ha sido eliminada de: %s2 (%s3)</Spanish>
 		<Polish>%s1 wycofuje się z miasta: %s2 (%s3)</Polish>
+		<Russian>%s1 был удален(о): %s2 (%s3)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_RELIGION_SPREAD_IN</Tag>
@@ -764,6 +848,7 @@
 		<Italian>%s1 si è diffuso a %s2</Italian>
 		<Spanish>%s1 se ha expandido a: %s2</Spanish>
 		<Polish>%s1 rozprzestrzenia się w mieście: %s2</Polish>
+		<Russian>%s1 распространилась в %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_RELIGION_SPREAD_OUT</Tag>
@@ -773,6 +858,7 @@
 		<Italian>%s1 si è diffuso a %s2 (%s3)</Italian>
 		<Spanish>%s1 se ha expandido a: %s2 (%s3)</Spanish>
 		<Polish>%s1 rozprzestrzenia się w mieście: %s2 (%s3)</Polish>
+		<Russian>%s1 распространилась в %s2 (%s3)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_RESEARCH_BEGUN</Tag>
@@ -782,6 +868,7 @@
 		<Italian>Ricerca della tecnologia %s1 iniziata (necessari %d2 [NUM2:turno:turni])</Italian>
 		<Spanish>Investigación comenzada: %s1 (%d2 turnos)</Spanish>
 		<Polish>Badanie rozpoczęte: %s1 (%d2 Tur)</Polish>
+		<Russian>Начато исследование: %s1 (%d2 Turns)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_ROUTE</Tag>
@@ -791,6 +878,7 @@
 		<Italian>Una %s1</Italian>
 		<Spanish>[NUM1:Un:Una:Unos:Unas] %s1</Spanish>
 		<Polish>%s1</Polish>
+		<Russian>%s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_TECH_ACQUIRED</Tag>
@@ -800,6 +888,7 @@
 		<Italian>È stata acquisita la tecnologia %s1</Italian>
 		<Spanish>Tecnología obtenida (por comercio, Gran personaje, Aldea tribal o espionaje): %s1</Spanish>
 		<Polish>Uzyskano technologię (handel, chatka, szpiegostwo, inne): %s1</Polish>
+		<Russian>Приобретена технология (торговля, наука, от варваров, шпионаж): %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_TECH_RESEARCHED</Tag>
@@ -809,6 +898,7 @@
 		<Italian>Ricerca della tecnologia %s1 completata</Italian>
 		<Spanish>Investigación finalizada: %s1</Spanish>
 		<Polish>Zakończono badanie technologii: %s1</Polish>
+		<Russian>Исследование завершено: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_TECH_TRADED</Tag>
@@ -818,6 +908,7 @@
 		<Italian>La tecnologia %s2 è stata commerciata con %s1</Italian>
 		<Spanish>Tecnología comerciada con %s1: %s2</Spanish>
 		<Polish>Wymiana technologii: %s2 na technologię: %s1</Polish>
+		<Russian>Технология продана %s1: %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_TURN</Tag>
@@ -827,6 +918,7 @@
 		<Italian>Turno %s1 (%s2) [%s3]</Italian>
 		<Spanish>Turno %s1 (%s2) [%s3]</Spanish>
 		<Polish>Tura %s1 (%s2) [%s3]</Polish>
+		<Russian>Ход %s1 (%s2) [%s3]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_UNITS_DEFEATED_ATTACKING</Tag>
@@ -836,6 +928,7 @@
 		<Italian>Unità sconfitte in attacco: %d1</Italian>
 		<Spanish>Unidad derrotada atacando: %d1</Spanish>
 		<Polish>Jednostki zniszczone (atakujące): %d1</Polish>
+		<Russian>Отряды побеждены при атаке: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_UNITS_DEFEATED_DEFENDING</Tag>
@@ -845,6 +938,7 @@
 		<Italian>Unità sconfitte in difesa: %d1</Italian>
 		<Spanish>Unidad derrotada defendiendo: %d1</Spanish>
 		<Polish>Jednostki zniszczone (broniące się): %d1</Polish>
+		<Russian>Отряды побеждены при защите: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_UNITS_ESCAPING_ATTACKING</Tag>
@@ -854,6 +948,7 @@
 		<Italian>Unità in fuga: %d1</Italian>
 		<Spanish>Unidad escapó mientras atacaba: %d1</Spanish>
 		<Polish>Jednostki uciekające (atakujące): %d1</Polish>
+		<Russian>Отряды, отступившие после атаки: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_UNITS_VICTORIOUS_ATTACKING</Tag>
@@ -863,6 +958,7 @@
 		<Italian>Unità vittoriose in attacco: %d1</Italian>
 		<Spanish>Unidad vencedora atacando: %d1</Spanish>
 		<Polish>Jednostki zwycięskie (atakujące):</Polish>
+		<Russian>Отряды побеждают при атаке: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_UNITS_VICTORIOUS_DEFENDING</Tag>
@@ -872,6 +968,7 @@
 		<Italian>Unità vittoriose in difesa: %d1</Italian>
 		<Spanish>Unidad vencedora defendiendo: %d1</Spanish>
 		<Polish>Jednostki zwycięskie (broniące się): %d1</Polish>
+		<Russian>Отряды побеждают при обороне: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_UNITS_WITHDRAWING_ATTACKING</Tag>
@@ -881,6 +978,7 @@
 		<Italian>Unità in ritirata: %d1</Italian>
 		<Spanish>Unidad replegándose mientras atacaba: %d1</Spanish>
 		<Polish>Jednostki wycofujące się (atakujące): %d1</Polish>
+		<Russian>Отряды отступили при атаке: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VASSAL_BECOMES</Tag>
@@ -890,6 +988,7 @@
 		<Italian>%s1 è divenuto vassallo di %s2</Italian>
 		<Spanish>%s1 se convirtió en vasallo de %s2</Spanish>
 		<Polish>%s1 staje się Wasalem: %s2</Polish>
+		<Russian>%s1 становится вассальным государством %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VASSAL_REVOLTS</Tag>
@@ -899,6 +998,7 @@
 		<Italian>%s1 si è rivoltato e non è più un vassallo di %s2</Italian>
 		<Spanish>%s1 se rebela y ha dejado de ser vasallo de %s2</Spanish>
 		<Polish>%s1 buntuje się i nie jest dłużej Wasalem: %s2</Polish>
+		<Russian>После победы восстания %s1 больше не является вассальным государством %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT</Tag>
@@ -908,29 +1008,35 @@
 		<Italian>Scoperto un villaggio tribale: %s1</Italian>
 		<Spanish>Resultado de aldea tribal: %s1</Spanish>
 		<Polish>Rezultat z wioski plemiennej: %s1</Polish>
+		<Russian>Результаты туземной деревни: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_ARCHER</Tag>
 		<English>archer</English>
+		<Russian>archer</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_ARQUEBUSIER</Tag>
 		<English>arquebusier</English>
+		<Russian>лучник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_AXEMAN</Tag>
 		<English>axeman</English>
 		<French>guerrier avec hache</French>
+		<Russian>секироносец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_COMPOSITEBOWMAN</Tag>
 		<English>composite bowman</English>
 		<French>archer composite</French>
+		<Russian>композитный лучник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_CRIMINALHOSTILES</Tag>
 		<English>criminal</English>
 		<French>criminel</French>
+		<Russian>преступник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_GATHERER</Tag>
@@ -939,11 +1045,13 @@
 		<German>Sammler</German>
 		<Spanish>un Recolector</Spanish>
 		<Polish>zbiory</Polish>
+		<Russian>собиратель</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_HEALER</Tag>
 		<English>healer</English>
 		<French>guérisseur</French>
+		<Russian>лекарь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_HEALING</Tag>
@@ -953,26 +1061,31 @@
 		<Italian>l'unità è stata curata</Italian>
 		<Spanish>curación</Spanish>
 		<Polish>uzdrowienie</Polish>
+		<Russian>исцеление</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_HEAVYPIKEMAN</Tag>
 		<English>heavy pikeman</English>
 		<French>Piquier lourd</French>
+		<Russian>тяжелый копейщик</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_HEAVYSWORDSMAN</Tag>
 		<English>heavy swordsman</English>
 		<French>Epéiste</French>
+		<Russian>тяжелый мечник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_HUNTER</Tag>
 		<English>hunter</English>
 		<French>chasseur</French>
+		<Russian>охотник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_INFANTRY</Tag>
 		<English>infantry</English>
 		<French>infanterie</French>
+		<Russian>пехотинец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_LITTLEGOLD</Tag>
@@ -982,16 +1095,19 @@
 		<Italian>ricevuta una piccola quantità d'oro</Italian>
 		<Spanish>un puñado de oro</Spanish>
 		<Polish>trochę złota</Polish>
+		<Russian>немного золота</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_LITTLERESEARCH</Tag>
 		<English>a little research</English>
 		<French>un peu de recherche</French>
+		<Russian>небольшое исследование</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_LONGBOWMAN</Tag>
 		<English>longbowman</English>
 		<French>archer long</French>
+		<Russian>йомен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_LOTSOFGOLD</Tag>
@@ -1001,16 +1117,19 @@
 		<Italian>ricevuta una grossa quantità d'oro</Italian>
 		<Spanish>montones de oro</Spanish>
 		<Polish>dużo złota</Polish>
+		<Russian>много золота</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_LOTSOFRESEARCH</Tag>
 		<English>lots of research</English>
 		<French>beaucoup de recherche</French>
+		<Russian>много исследований</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_MACEMAN</Tag>
 		<English>maceman</English>
 		<French>guerrier avec masse</French>
+		<Russian>булавоносец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_MAP</Tag>
@@ -1020,21 +1139,25 @@
 		<Italian>ricevuta una mappa locale</Italian>
 		<Spanish>mapa local</Spanish>
 		<Polish>mapa</Polish>
+		<Russian>карта</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_MECH</Tag>
 		<English>assault mech</English>
 		<French>mech d'assaut</French>
+		<Russian>штурмовой механоид</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_NAVALSTRONGHOSTILES</Tag>
 		<English>naval strong hostiles</English>
 		<French>beaucoup de navires hostiles</French>
+		<Russian>сильный вражеский флот</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_NAVALWEAKHOSTILES</Tag>
 		<English>naval weak hostiles</English>
 		<French>navires hostiles</French>
+		<Russian>слабый вражеский флот</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_NOTHING</Tag>
@@ -1044,22 +1167,26 @@
 		<Italian>nessun beneficio ricevuto</Italian>
 		<Spanish>nada</Spanish>
 		<Polish>nic</Polish>
+		<Russian>ничего</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_PIKEMAN</Tag>
 		<English>pikeman</English>
 		<French>piquier</French>
+		<Russian>копейщик</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_RECON</Tag>
 		<English>recon</English>
 		<French>éclaireur</French>
 		<German>Aufklärungseinheit</German>
+		<Russian>разведка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_RIFLEMAN</Tag>
 		<English>rifleman</English>
 		<French>fusilier</French>
+		<Russian>стрелок</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_SCOUT</Tag>
@@ -1069,6 +1196,7 @@
 		<Italian>ricevuto uno Scout</Italian>
 		<Spanish>un Batidor</Spanish>
 		<Polish>zwiadowca</Polish>
+		<Russian>разведчик</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_SETTLER</Tag>
@@ -1078,16 +1206,19 @@
 		<Italian>ricevuto un Colono</Italian>
 		<Spanish>un Colono</Spanish>
 		<Polish>osadnik</Polish>
+		<Russian>поселенец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_SPEARMAN</Tag>
 		<English>spearman</English>
 		<French>Lancier</French>
+		<Russian>копьеносец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_STONEAXEMAN</Tag>
 		<English>stone axeman</English>
 		<French>guerrier avec hache de pierre</French>
+		<Russian>древний секироносец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_STONESPEARMAN</Tag>
@@ -1095,6 +1226,7 @@
 		<French>guerrier avec lance de pierre</French>
 		<Spanish>un Lancero de piedra</Spanish>
 		<Polish>kamienny włócznik</Polish>
+		<Russian>древний копейщик</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_STRONGHOSTILES</Tag>
@@ -1104,11 +1236,13 @@
 		<Italian>molti abitanti si sono rivelati ostili</Italian>
 		<Spanish>hostiles fuertes</Spanish>
 		<Polish>silni barbarzyńcy</Polish>
+		<Russian>сильные враги</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_SWORDSMAN</Tag>
 		<English>swordsman</English>
 		<French>guerrier avec épée</French>
+		<Russian>мечник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_TECH</Tag>
@@ -1118,11 +1252,13 @@
 		<Italian>ricevuta una Tecnologia</Italian>
 		<Spanish>una tecnología</Spanish>
 		<Polish>technologia</Polish>
+		<Russian>технология</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_TESLA</Tag>
 		<English>tesla infantry</English>
 		<French>infanterie tesla</French>
+		<Russian>пехота Тесла</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_TRIBE</Tag>
@@ -1130,6 +1266,7 @@
 		<French>tribu</French>
 		<Spanish>una Tribu</Spanish>
 		<Polish>plemię</Polish>
+		<Russian>племя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_WARRIOR</Tag>
@@ -1139,6 +1276,7 @@
 		<Italian>ricevuto un Guerriero</Italian>
 		<Spanish>un Guerrero</Spanish>
 		<Polish>wojownik</Polish>
+		<Russian>воин</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_WEAKHOSTILES</Tag>
@@ -1148,6 +1286,7 @@
 		<Italian>alcuni abitanti si sono rivelati ostili</Italian>
 		<Spanish>hostiles débiles</Spanish>
 		<Polish>słabi wrogowie</Polish>
+		<Russian>слабые враги</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_WORKER</Tag>
@@ -1157,6 +1296,7 @@
 		<Italian>ricevuto un Lavoratore</Italian>
 		<Spanish>un Trabajador</Spanish>
 		<Polish>robotnik</Polish>
+		<Russian>рабочий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_XP</Tag>
@@ -1166,6 +1306,7 @@
 		<Italian>l'unità ha guadagnato esperienza</Italian>
 		<Spanish>experiencia</Spanish>
 		<Polish>doświadczenie</Polish>
+		<Russian>опыт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_WHILE_ATTACKING_DECIMATES</Tag>
@@ -1175,6 +1316,7 @@
 		<Italian>Attaccando, l'unità %s1 ha decimato l'unità %s3 %s2 (probabilità di vittoria: %s4%s5)</Italian>
 		<Spanish>Atacando, %s1 diezmó a %s2 %s3 (probabilidad de victoria: %s4%s5)</Spanish>
 		<Polish>Podczas ataku, %s1 dziesiątkuje %s2 %s3 (Szansa Zwycięstwa: %s4%s5)</Polish>
+		<Russian>Во время атаки, %s1 уничтожает %s2 %s3 (Шанс успеха: %s4%s5)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_WHILE_ATTACKING_DEFEATS</Tag>
@@ -1184,6 +1326,7 @@
 		<Italian>Attaccando %s1, l'unità %s2 (%s3/%d4) ha sconfitto %s6 %s5 (probabilità di vittoria: %s7%s8)</Italian>
 		<Spanish>Atacando a %s1, %s2 (%s3/%d4) derrotó a %s5 %s6 (probabilidad de victoria: %s7%s8)</Spanish>
 		<Polish>Podczas ataku %s1, %s2 (%s3/%d4) pokonuje %s5 %s6 (Szansa Zwycięstwa: %s7%s8)</Polish>
+		<Russian>Во время атаки %s1, %s2 (%s3/%d4) побеждает %s5 %s6 (Шанс успеха: %s7%s8)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_WHILE_ATTACKING_ESCAPES</Tag>
@@ -1193,6 +1336,7 @@
 		<Italian>Attaccando, l'unità %s1 si è ritirata davanti all'unità %s3 %s2 (probabilità di vittoria: %s4%s5)</Italian>
 		<Spanish>Atacando, %s1 huyó de %s2 %s3 (probabilidad de victoria: %s4%s5)</Spanish>
 		<Polish>Podczas ataku, %s1 ucieka od %s2 %s3 (Szansa Zwycięstwa: %s4%s5)</Polish>
+		<Russian>Во время атаки, %s1 отступает от %s2 %s3 (Шанс успеха: %s4%s5)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_WHILE_ATTACKING_LOSES</Tag>
@@ -1202,6 +1346,7 @@
 		<Italian>Attaccando %s1, l'unità %s2 è stata sconfitta da %s4 %s3 (%s5/%d6) (probabilità di vittoria: %s7%s8)</Italian>
 		<Spanish>Atacando a %s1, %s2 fue derrotada por %s3 %s4 (%s5/%d6) (probabilidad de victoria: %s7%s8)</Spanish>
 		<Polish>Podczas ataku %s1, %s2 przegrywa z %s3 %s4 (%s5/%d6) (Szansa Zwycięstwa: %s7%s8)</Polish>
+		<Russian>Во время атаки %s1, %s2 проигрывает %s3 %s4 (%s5/%d6) (Шанс успеха: %s7%s8)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_WHILE_DEFENDING_DEFEATS</Tag>
@@ -1211,6 +1356,7 @@
 		<Italian>Difendendo %s1, l'unità %s2 (%s3/%d4) ha sconfitto %s6 %s5 (probabilità di vittoria: %s7%s8)</Italian>
 		<Spanish>Defendiendo de %s1, %s2 (%s3/%d4) derrotó a %s5 %s6 (probabilidad de victoria: %s7%s8)</Spanish>
 		<Polish>Podczas obrony %s1, %s2 (%s3/%d4) pokonuje %s5 %s6 (Szansa Zwycięstwa: %s7%s8)</Polish>
+		<Russian>Во время атаки %s1, %s2 (%s3/%d4) побеждает %s5 %s6 (Шанс успеха: %s7%s8)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_WHILE_DEFENDING_LOSES</Tag>
@@ -1220,6 +1366,7 @@
 		<Italian>Difendendo %s1, l'unità %s2 è stata sconfitta da %s4 %s3 (%s5/%d6) (probabilità di vittoria: %s7%s8)</Italian>
 		<Spanish>Defendiendo de %s1, %s2 fue derrotada por %s3 %s4 (%s5/%d6) (probabilidad de victoria: %s7%s8)</Spanish>
 		<Polish>Podczas obrony %s1, %s2 przegrywa z %s3 %s4 (%s5/%d6) (Szansa Zwycięstwa: %s7%s8)</Polish>
+		<Russian>Во время атаки %s1, %s2 проигрывает %s3 %s4 (%s5/%d6) (Шанс успеха: %s7%s8)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_WHIP_ANGER_DECREASED</Tag>
@@ -1229,6 +1376,7 @@
 		<Italian>L'infelicità da sacrifici è diminuita a %s1</Italian>
 		<Spanish>El malestar por sacrificio decreció en %s1</Spanish>
 		<Polish>Niezadowolenie z przyspieszenia zmalało w mieście %s1</Polish>
+		<Russian>Уменьшилось недовольство от принудительного труда в %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_WHIP_APPLIED</Tag>
@@ -1238,5 +1386,6 @@
 		<Italian>Produzione accelerata a %s1</Italian>
 		<Spanish>Sacrificio de población ejecutado en %s1</Spanish>
 		<Polish>Zastosowano przyspieszenie w mieście: %s1</Polish>
+		<Russian>Принуждение к труду жителей %s1</Russian>
 	</TEXT>
 </Civ4GameText>

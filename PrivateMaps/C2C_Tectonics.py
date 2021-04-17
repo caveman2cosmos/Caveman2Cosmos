@@ -662,7 +662,7 @@ class voronoiMap:
 					self.heightMap[i] = self.heightMap[i] - 1
 
 
-	def min( height, left, right, top, bottom ):
+	def min(self, height, left, right, top, bottom):
 		minHeight = height
 		if ( minHeight > left ):
 			minHeight = left

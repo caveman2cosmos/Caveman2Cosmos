@@ -14,27 +14,32 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Koni</Polish>
+		<Russian>Ìèô î ëîøàäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Horse</English>
 		<French>Effet (Mythe du Cheval)</French>
+		<Russian>Ïåñíÿ î ëîøàäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_STORIES</Tag>
 		<English>Stories - Horse</English>
 		<French>Histoires des Chevaux</French>
+		<Russian>Ñêàçû î ëîøàäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Horse</English>
 		<French>Effet (Histoires des Chevaux)</French>
+		<Russian>Ïðåäàíèÿ î ëîøàäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_STORY</Tag>
 		<English>Story - Horse</English>
 		<French>Histoire du Cheval</French>
 		<Polish>Opowieść o Koniu</Polish>
+		<Russian>Ñêàçêà î ëîøàäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HORSE_PEDIA</Tag>

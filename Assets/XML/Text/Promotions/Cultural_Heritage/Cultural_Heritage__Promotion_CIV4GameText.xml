@@ -6,6 +6,7 @@
 		<French>Nomade de l'Arctique III</French>
 		<Italian>Nomade dell'Artico III</Italian>
 		<Polish>Arktyczny Nomad III</Polish>
+		<Russian>Ïîëÿðíûé êî÷åâíèê III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_ARCTIC_NOMAD_II_DESC</Tag>
@@ -13,6 +14,7 @@
 		<French>Nomade de l'Arctique II</French>
 		<Italian>Nomade dell'Artico II</Italian>
 		<Polish>Arktyczny Nomad II</Polish>
+		<Russian>Ïîëÿðíûé êî÷åâíèê II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_ARCTIC_NOMAD_I_DESC</Tag>
@@ -20,6 +22,7 @@
 		<French>Nomade de l'Arctique I</French>
 		<Italian>Nomade dell'Artico I</Italian>
 		<Polish>Arktyczny Nomad I</Polish>
+		<Russian>Ïîëÿðíûé êî÷åâíèê I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_DESERT_NOMAD_III_DESC</Tag>
@@ -27,6 +30,7 @@
 		<French>Nomade du Désert III</French>
 		<Italian>Nomade del deserto III</Italian>
 		<Polish>Pustynny Nomad III</Polish>
+		<Russian>Ïóñòûííûé êî÷åâíèê III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_DESERT_NOMAD_II_DESC</Tag>
@@ -34,6 +38,7 @@
 		<French>Nomade du Désert II</French>
 		<Italian>Nomade del deserto II</Italian>
 		<Polish>Pustynny Nomad II</Polish>
+		<Russian>Ïóñòûííûé êî÷åâíèê II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_DESERT_NOMAD_I_DESC</Tag>
@@ -41,24 +46,28 @@
 		<French>Nomade du Désert I</French>
 		<Italian>Nomade del deserto I</Italian>
 		<Polish>Pustynny Nomad I</Polish>
+		<Russian>Ïóñòûííûé êî÷åâíèê I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_HARDY_III_DESC</Tag>
 		<English>Hardy III</English>
 		<French>Vigoureux III</French>
 		<Italian>Ardito III</Italian>
+		<Russian>Âûíîñëèâûé III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_HARDY_II_DESC</Tag>
 		<English>Hardy II</English>
 		<French>Vigoureux II</French>
 		<Italian>Ardito II</Italian>
+		<Russian>Âûíîñëèâûé II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_HARDY_I_DESC</Tag>
 		<English>Hardy I</English>
 		<French>Vigoureux I</French>
 		<Italian>Ardito I</Italian>
+		<Russian>Âûíîñëèâûé I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_III_DESC</Tag>
@@ -66,6 +75,7 @@
 		<French>Natif des Highlands III</French>
 		<Italian>Nativo degli altopiani III</Italian>
 		<Polish>Góral III</Polish>
+		<Russian>Òóçåìíûé ãîðåö III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_II_DESC</Tag>
@@ -73,6 +83,7 @@
 		<French>Natif des Highlands II</French>
 		<Italian>Nativo degli altopiani II</Italian>
 		<Polish>Góral II</Polish>
+		<Russian>Òóçåìíûé ãîðåö II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_I_DESC</Tag>
@@ -80,6 +91,7 @@
 		<French>Natif des Highlands I</French>
 		<Italian>Nativo degli altopiani I</Italian>
 		<Polish>Góral I</Polish>
+		<Russian>Òóçåìíûé ãîðåö I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_PLAINSMEN_II_DESC</Tag>
@@ -87,6 +99,7 @@
 		<French>Natif de la plaine II</French>
 		<Italian>Nativo delle pianure II</Italian>
 		<Polish>Mieszkaniec Równin II</Polish>
+		<Russian>Òóçåìíûé ñòåïíÿê II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_PLAINSMEN_I_DESC</Tag>
@@ -94,6 +107,7 @@
 		<French>Natif de la plaine I</French>
 		<Italian>Nativo delle pianure I</Italian>
 		<Polish>Mieszkaniec Równin I</Polish>
+		<Russian>Òóçåìíûé ñòåïíÿê I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_SEAFARING_III_DESC</Tag>
@@ -101,6 +115,7 @@
 		<French>Natif de la côte III</French>
 		<Italian>Nativo dei mari III</Italian>
 		<Polish>Morski Nomad III</Polish>
+		<Russian>Òóçåìíûé ìîðåõîä III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_SEAFARING_II_DESC</Tag>
@@ -108,6 +123,7 @@
 		<French>Natif de la côte II</French>
 		<Italian>Nativo dei mari II</Italian>
 		<Polish>Morski Nomad II</Polish>
+		<Russian>Òóçåìíûé ìîðåõîä II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_SEAFARING_I_DESC</Tag>
@@ -115,6 +131,7 @@
 		<French>Natif de la côte I</French>
 		<Italian>Nativo dei mari I</Italian>
 		<Polish>Morski Nomad I</Polish>
+		<Russian>Òóçåìíûé ìîðåõîä I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_III_DESC</Tag>
@@ -122,6 +139,7 @@
 		<French>Natif des forêts III</French>
 		<Italian>Nativo delle foreste III</Italian>
 		<Polish>Mieszkaniec Lasów III</Polish>
+		<Russian>Òóçåìíûé ñëåäîïûò III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_II_DESC</Tag>
@@ -129,6 +147,7 @@
 		<French>Natif des forêts II</French>
 		<Italian>Nativo delle foreste II</Italian>
 		<Polish>Mieszkaniec Lasów II</Polish>
+		<Russian>Òóçåìíûé ñëåäîïûò II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_I_DESC</Tag>
@@ -136,12 +155,14 @@
 		<French>Natif des forêts I</French>
 		<Italian>Nativo delle foreste I</Italian>
 		<Polish>Mieszkaniec Lasów I</Polish>
+		<Russian>Òóçåìíûé ñëåäîïûò I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_SHAMAN_DESC</Tag>
 		<English>Shaman</English>
 		<Italian>Sciamano</Italian>
 		<Polish>Szaman</Polish>
+		<Russian>Øàìàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_WATERWAYS_II_DESC</Tag>
@@ -149,6 +170,7 @@
 		<French>Voies navigables II</French>
 		<Italian>Corsi d'acqua II</Italian>
 		<Polish>Drogi Wodne II</Polish>
+		<Russian>Ïëîâåö II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_WATERWAYS_I_DESC</Tag>
@@ -156,5 +178,6 @@
 		<French>Voies navigables I</French>
 		<Italian>Corsi d'acqua I</Italian>
 		<Polish>Drogi Wodne I</Polish>
+		<Russian>Ïëîâåö I</Russian>
 	</TEXT>
 </Civ4GameText>

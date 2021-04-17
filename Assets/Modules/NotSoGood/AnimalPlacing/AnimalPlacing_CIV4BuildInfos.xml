@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Build Infos -->
 <Civ4BuildInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>
@@ -11,7 +10,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_DONKEY</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_DONKEY</ImprovementType>
@@ -30,7 +29,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_HORSE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_HORSE</ImprovementType>
@@ -49,7 +48,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_ELEPHANTS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_ELEPHANTS</ImprovementType>
@@ -68,7 +67,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_BISON</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_BISON</ImprovementType>
@@ -87,7 +86,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_CAMEL</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_CAMEL</ImprovementType>
@@ -106,7 +105,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_COW</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_COW</ImprovementType>
@@ -125,7 +124,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_DEER</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_DEER</ImprovementType>
@@ -144,7 +143,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_BEAVERS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_BEAVERS</ImprovementType>
@@ -163,7 +162,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_KANGAROO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_KANGAROO</ImprovementType>
@@ -182,7 +181,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_LLAMA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_LLAMA</ImprovementType>
@@ -201,7 +200,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_MAMMOTH</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_MAMMOTH</ImprovementType>
@@ -220,7 +219,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_PIG</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PIG</ImprovementType>
@@ -239,7 +238,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_POULTRY</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_POULTRY</ImprovementType>
@@ -258,7 +257,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_RABBIT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_RABBIT</ImprovementType>
@@ -277,7 +276,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_SEA_LION_AND_SEAL</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_SEA_LION_AND_SEAL</ImprovementType>
@@ -296,7 +295,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_SHEEP</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_SHEEP</ImprovementType>
@@ -315,7 +314,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_WALRUS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_WALRUS</ImprovementType>
@@ -334,7 +333,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_GUINEA_PIGS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_GUINEA_PIGS</ImprovementType>
@@ -353,7 +352,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_PARROTS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PARROTS</ImprovementType>
@@ -372,7 +371,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_BARLEY</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_BARLEY</ImprovementType>
@@ -391,7 +390,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_CORN</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_CORN</ImprovementType>
@@ -410,7 +409,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_FLAX</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_FLAX</ImprovementType>
@@ -429,7 +428,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_POMEGRANATE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_POMEGRANATE</ImprovementType>
@@ -448,7 +447,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_KAVA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_KAVA</ImprovementType>
@@ -467,7 +466,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_GUAVAS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_GUAVAS</ImprovementType>
@@ -486,7 +485,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_MELONS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_MELONS</ImprovementType>
@@ -505,7 +504,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_POTATOES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_POTATOES</ImprovementType>
@@ -524,7 +523,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_PUMPKIN</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PUMPKIN</ImprovementType>
@@ -543,7 +542,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_RICE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_RICE</ImprovementType>
@@ -562,7 +561,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_SQUASH</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_SQUASH</ImprovementType>
@@ -581,7 +580,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_WHEAT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_WHEAT</ImprovementType>
@@ -600,7 +599,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_ALMONDS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_ALMONDS</ImprovementType>
@@ -619,7 +618,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_APPLE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_APPLE</ImprovementType>
@@ -638,7 +637,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_BANANA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_BANANA</ImprovementType>
@@ -657,7 +656,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_COCONUT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_COCONUT</ImprovementType>
@@ -676,7 +675,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_DATES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_DATES</ImprovementType>
@@ -695,7 +694,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_FIG</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_FIG</ImprovementType>
@@ -714,7 +713,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_LEMONS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_LEMONS</ImprovementType>
@@ -733,7 +732,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_MANGO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_MANGO</ImprovementType>
@@ -752,7 +751,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_OLIVES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_OLIVES</ImprovementType>
@@ -771,7 +770,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_PAPAYA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PAPAYA</ImprovementType>
@@ -790,7 +789,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_PISTACHIO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PISTACHIO</ImprovementType>
@@ -809,7 +808,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_GRAPES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_GRAPES</ImprovementType>
@@ -828,7 +827,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_HENNA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_HENNA</ImprovementType>
@@ -847,7 +846,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_INDIGO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_INDIGO</ImprovementType>
@@ -866,7 +865,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_RUBBER</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_RUBBER</ImprovementType>
@@ -885,7 +884,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_PRIME_TIMBER</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PRIME_TIMBER</ImprovementType>
@@ -904,7 +903,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_HEMP</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_HEMP</ImprovementType>
@@ -923,7 +922,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_COCA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_COCA</ImprovementType>
@@ -942,7 +941,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_COCOA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_COCOA</ImprovementType>
@@ -961,7 +960,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_COFFEE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_COFFEE</ImprovementType>
@@ -980,7 +979,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_COTTON</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_COTTON</ImprovementType>
@@ -999,7 +998,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_INCENSE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_INCENSE</ImprovementType>
@@ -1018,7 +1017,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_MUSHROOMS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_MUSHROOMS</ImprovementType>
@@ -1037,7 +1036,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_OPIUM</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_OPIUM</ImprovementType>
@@ -1056,7 +1055,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_PAPYRUS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PAPYRUS</ImprovementType>
@@ -1075,7 +1074,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_PEYOTE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PEYOTE</ImprovementType>
@@ -1094,7 +1093,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_PRICKLY_PEAR</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_PRICKLY_PEAR</ImprovementType>
@@ -1113,7 +1112,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_RESIN</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_RESIN</ImprovementType>
@@ -1132,7 +1131,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_SILK</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_SILK</ImprovementType>
@@ -1151,7 +1150,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_SPICES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_SPICES</ImprovementType>
@@ -1170,7 +1169,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_SUGAR</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_SUGAR</ImprovementType>
@@ -1189,7 +1188,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_TEA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_TEA</ImprovementType>
@@ -1208,7 +1207,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_TOBACCO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_TOBACCO</ImprovementType>
@@ -1227,7 +1226,7 @@
 			<Description>TXT_KEY_BUILD_BONUS_VANILLA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>200</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_BONUS_VANILLA</ImprovementType>

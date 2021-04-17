@@ -26,7 +26,7 @@ class CvUnit;
 
 typedef std::vector<const CvReplayMessage*> ReplayMessageList;
 
-class CvGame
+class CvGame : bst::noncopyable
 {
 public:
 
@@ -55,7 +55,7 @@ public:
 	void initFreeState();
 	DllExport void initFreeUnits();
 
-	void assignStartingPlots();
+	void assignStartingPlots(const bool bScenario = false, const bool bMapScript = false);
 	void normalizeStartingPlots();
 
 	DllExport void update();
@@ -488,7 +488,7 @@ public:
 
 	int getBuildingCreatedCount(BuildingTypes eIndex) const;
 	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const;
-	void incrementBuildingCreatedCount(BuildingTypes eIndex);
+	void changeNumBuildings(const BuildingTypes eIndex, const short iChange);
 
 	int getProjectCreatedCount(ProjectTypes eIndex) const;
 	bool isProjectMaxedOut(ProjectTypes eIndex, int iExtra = 0) const;

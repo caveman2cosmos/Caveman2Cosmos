@@ -453,9 +453,9 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			return false;
 		}
 
-		for (int i=0; i<iPrereqBuildings; i++)
+		for (int i=0; i < iPrereqBuildings; i++)
 		{
-			if (pCity->getNumBuilding(kInfo.getPrereqBuilding(i)) <= 0)
+			if (pCity->getNumActiveBuilding(kInfo.getPrereqBuilding(i)) <= 0)
 			{
 				return false;
 			}
@@ -785,9 +785,9 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 			return false;
 		}
 
-		for (int i=0; i<iPrereqBuildings; i++)
+		for (int i = 0; i < iPrereqBuildings; i++)
 		{
-			if (pCity->getNumBuilding(kInfo.getPrereqBuilding(i)) <= 0)
+			if (pCity->getNumActiveBuilding(kInfo.getPrereqBuilding(i)) <= 0)
 			{
 				return false;
 			}
@@ -1020,7 +1020,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	bool bNothing = true;
 	if (!szMessage.empty())
 	{
-		szBuffer.append(gDLL->getText(szMessage, kUnit.getNameKey(), pUnitInfo->getDescription()));
+		szBuffer.append(gDLL->getText(szMessage, kUnit.getNameKey(), pUnitInfo->getTextKeyWide()));
 		szBuffer.append(L" ( ");
 		bNothing = false;
 	}
@@ -1287,7 +1287,6 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (!bNothing)
 	{
-		MEMORY_TRACK_EXEMPT();
 
 		AddDLLMessage(kUnit.getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer.getCString(), NULL, MESSAGE_TYPE_INFO, pUnitInfo->getButton(), NO_COLOR, kUnit.getX(), kUnit.getY(), true, true);
 	}
@@ -1575,7 +1574,7 @@ bool CvOutcome::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML)
+void CvOutcome::copyNonDefaults(CvOutcome* pOutcome)
 {
 	GC.copyNonDefaultDelayedResolution((int*)&m_eType, (int*)&(pOutcome->m_eType));
 	//if (m_eType == NO_OUTCOME)
@@ -1658,7 +1657,7 @@ void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	m_Properties.copyNonDefaults(pOutcome->getProperties(), pXML);
+	m_Properties.copyNonDefaults(pOutcome->getProperties());
 
 	if (!m_pPlotCondition)
 	{
@@ -1696,7 +1695,6 @@ void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML)
 		m_pPythonPossibleFunc = pOutcome->m_pPythonPossibleFunc;
 		pOutcome->m_pPythonPossibleFunc = NULL;
 	}
-
 }
 
 void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUnit) const

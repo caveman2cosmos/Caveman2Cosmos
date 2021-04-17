@@ -3,7 +3,6 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- ReModified by StrategyOnly -->
-<!-- -->
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
@@ -26,7 +25,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>32730</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -41,7 +39,7 @@
 			<Strategy>TXT_KEY_BUILDING_DREAM_SIMULATION_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DREAM_SIMULATION_CENTER</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
+			<!-- RevolutionDCM End -->
 			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -51,9 +49,9 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-15</iHealth>
 			<iHappiness>-5</iHappiness>
-			<!-- RevolutionDCM Building Effects  -->
+			<!-- RevolutionDCM Building Effects -->
 			<iRevIdxLocal>25</iRevIdxLocal>
-			<!-- RevolutionDCM End  -->
+			<!-- RevolutionDCM End -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -83,7 +81,7 @@
 			<Strategy>TXT_KEY_BUILDING_DREAM_ARTIST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DREAM_ARTIST</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
+			<!-- RevolutionDCM End -->
 			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -92,7 +90,7 @@
 			<iCost>5455</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHappiness>5</iHappiness>
-			<!-- RevolutionDCM End  -->
+			<!-- RevolutionDCM End -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
@@ -118,7 +116,7 @@
 			<Strategy>TXT_KEY_BUILDING_CYBER_INSECT_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CYBER_INSECT_LAB</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
+			<!-- RevolutionDCM End -->
 			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -126,7 +124,7 @@
 			<Bonus>BONUS_CYBERPUNK</Bonus>
 			<iCost>5455</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<!-- RevolutionDCM End  -->
+			<!-- RevolutionDCM End -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -189,7 +187,7 @@
 			<Strategy>TXT_KEY_BUILDING_INSECT_MANIPULATION_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INSECT_MANIPULATION_LAB</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
+			<!-- RevolutionDCM End -->
 			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -205,7 +203,7 @@
 					<iHeal>20</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
-			<!-- RevolutionDCM End  -->
+			<!-- RevolutionDCM End -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -226,7 +224,7 @@
 			<Strategy>TXT_KEY_BUILDING_DREAM_PROPAGANDA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DREAM_PROPAGANDA</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
+			<!-- RevolutionDCM End -->
 			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -237,7 +235,7 @@
 			<iCost>5455</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHappiness>-3</iHappiness>
-			<!-- RevolutionDCM End  -->
+			<!-- RevolutionDCM End -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>

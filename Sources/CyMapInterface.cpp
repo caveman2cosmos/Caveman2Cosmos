@@ -13,12 +13,9 @@ void CyMapPythonInterface()
 	OutputDebugString("Python Extension Module - CyMapPythonInterface\n");
 
 	python::class_<CyMap>("CyMap")
-		.def("isNone", &CyMap::isNone, "bool () - valid CyMap() interface")
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 		.def("getType", &CyMap::getType, "int ()")
+
+		.def("plotsInitialized", &CyMap::plotsInitialized)
 
 		.def("viewportsEnabled", &CyMap::viewportsEnabled, "bool ()")
 		.def("getViewportWidth", &CyMap::getViewportWidth, "int ()")
@@ -31,9 +28,6 @@ void CyMapPythonInterface()
 
 		.def("closeAdvisor", &CyMap::closeAdvisor, "void (int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)")
 		.def("bringIntoView", &CyMap::bringIntoView, "void (int iX, int iY, bool bDisplayCityScreen)")
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 		.def("erasePlots", &CyMap::erasePlots, "() - erases the plots")
 		.def("setRevealedPlots", &CyMap::setRevealedPlots, "void (int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly) - reveals the plots to eTeam")
@@ -79,6 +73,7 @@ void CyMapPythonInterface()
 		.def("getNumBonuses", &CyMap::getNumBonuses, "int () - total bonuses")
 		.def("getNumBonusesOnLand", &CyMap::getNumBonusesOnLand, "int () - total bonuses on land plots")
 
+		.def("plots", &CyMap::plots)
 		.def("plotByIndex", &CyMap::plotByIndex, python::return_value_policy<python::manage_new_object>(), "CyPlot (iIndex) - get a plot by its Index")
 		.def("sPlotByIndex", &CyMap::sPlotByIndex, python::return_value_policy<python::reference_existing_object>(), "CyPlot (iIndex) - static - get plot by iIndex")
 		.def("plot", &CyMap::plot, python::return_value_policy<python::manage_new_object>(), "CyPlot (iX,iY) - get CyPlot at (iX,iY)")

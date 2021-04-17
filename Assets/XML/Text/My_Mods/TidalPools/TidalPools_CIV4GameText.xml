@@ -3,9 +3,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TIDAL_POOLS</Tag>
 		<English>Tidal Pools</English>
+		<Russian>Рукотворная заводь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TIDAL_POOLS_PEDIA</Tag>
 		<English>Seeing the value of tide pools in catching fish and crabs, early people made artificial ones to improve their haul.</English>
+		<Russian>Видя значение приливов в ловле рыбы и крабов, первобытные люди сделали искусственные затоны, чтобы увеличить свой улов.</Russian>
 	</TEXT>
 </Civ4GameText>

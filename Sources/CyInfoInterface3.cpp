@@ -204,10 +204,6 @@ void CyInfoPythonInterface3()
 		.def("getOceanMinAreaSize", &CvWorldInfo::getOceanMinAreaSize, "int ()")
 	;
 
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	python::class_<CvMapInfo, python::bases<CvInfoBase> >("CvMapInfo")
 
 		.def("getGridWidth", &CvMapInfo::getGridWidth, "int ()")
@@ -215,18 +211,7 @@ void CyInfoPythonInterface3()
 		.def("getWrapX", &CvMapInfo::getWrapX, "int ()")
 		.def("getWrapY", &CvMapInfo::getWrapY, "int ()")
 		.def("getMapScript", &CvMapInfo::getMapScript, "string ()")
-		/*.def("isTechShareMap", &CvMapInfo::isTechShareMap, "bool (int i)")*/
 	;
-
-
-	python::class_<CvMapSwitchInfo, python::bases<CvInfoBase> >("CvMapSwitchInfo")
-		.def("getMap", &CvMapSwitchInfo::getMap, "int ()")
-		.def("getEvent", &CvMapSwitchInfo::getEvent, "string ()")
-	;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
-
 
 	python::class_<CvClimateInfo, python::bases<CvInfoBase> >("CvClimateInfo")
 

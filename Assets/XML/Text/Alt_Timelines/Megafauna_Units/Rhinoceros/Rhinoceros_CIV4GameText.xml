@@ -5,6 +5,7 @@
 		<English>Military Standard (Rhinoceros)</English>
 		<French>Standards Militaires (Rhinocéros)</French>
 		<Polish>Sztandar Wojskowy (Nosorożec)</Polish>
+		<Russian>Òîòåì «Íîñîðîã»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_RHINO_HELP</Tag>
@@ -21,12 +22,14 @@
 		</French>
 		<Italian>Allevatore di rinoceronti</Italian>
 		<Polish>Treser Nosorożców</Polish>
+		<Russian>Ïðèðó÷åíèå íîñîðîãîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_EFFECT</Tag>
 		<English>Effect - Heritage - Rhinos</English>
 		<French>Effet - Patrimoine (Rhinocéros)</French>
 		<Polish>Efekt - Dziedzictwo - Nosorożec</Polish>
+		<Russian>Ïèòîìíèê íîñîðîãîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_EFFECT_HELP</Tag>
@@ -37,6 +40,7 @@
 		<English>Heritage - Rhinoceros</English>
 		<French>Patrimoine (Rhinocéros)</French>
 		<Polish>Dziedzictwo - Nosorożec</Polish>
+		<Russian>Ðàçâåäåíèå íîñîðîãîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE_PEDIA</Tag>
@@ -68,6 +72,7 @@
 		</French>
 		<Italian>Cavalcatore di rinoceronte</Italian>
 		<Polish>Jeździec (Nosorożec)</Polish>
+		<Russian>Íàåçäíèê íà íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RHINO_SWORDSMAN_PEDIA</Tag>
@@ -88,6 +93,7 @@
 		</French>
 		<Italian>Rinoceronte asiatico da guerra</Italian>
 		<Polish>Azjatyckie Nosorożce Bojowe</Polish>
+		<Russian>Áîåâîé íîñîðîã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_RHINO_PEDIA</Tag>

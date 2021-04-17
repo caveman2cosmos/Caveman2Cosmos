@@ -263,7 +263,7 @@ class CvVictoryScreen:
 
 					for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 						CyPlayerX = GC.getPlayer(iPlayerX)
-						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.countNumBuildings(i):
+						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.hasBuilding(i):
 							iUNTeam = CyPlayerX.getTeam()
 							if iUNTeam == iTeamAct or GAME.isDebugMode() or CyTeam.isHasMet(iUNTeam):
 								bUnknown = False
@@ -1032,7 +1032,7 @@ class CvVictoryScreen:
 
 					for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 						CyPlayerX = GC.getPlayer(iPlayerX)
-						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.countNumBuildings(i):
+						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.hasBuilding(i):
 							iUNTeam = CyPlayerX.getTeam()
 							if iUNTeam == iTeamAct or GAME.isDebugMode() or CyTeam.isHasMet(iUNTeam):
 								bUnknown = False
@@ -1597,7 +1597,7 @@ class CvVictoryScreen:
 				if CvBuildingInfo.getVoteSourceType() == j:
 					for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 						CyPlayerX = GC.getPlayer(iPlayerX)
-						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.countNumBuildings(i):
+						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.hasBuilding(i):
 							return CyPlayerX.getTeam()
 		return -1
 
