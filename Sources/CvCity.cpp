@@ -8547,7 +8547,7 @@ namespace {
  */
 void CvCity::calculateFeatureHealthPercentChange(int& iGood, int& iBad, CvPlot* pIgnorePlot) const
 {
-	foreach_ (const CvPlot* loopPlot, plots())
+	foreach_(const CvPlot* loopPlot, plots(NUM_CITY_PLOTS))
 	{
 		if (loopPlot == pIgnorePlot || !loopPlot->isVisible(getTeam(), true))
 			continue;
@@ -9162,7 +9162,7 @@ int CvCity::getAdditionalHappinessByCivic(CivicTypes eCivic, bool bDifferenceToC
 
 			if (iTempHappy != 0)
 			{
-				iHappy += iTempHappy * algo::count_if(plots(), CvPlot::fn::getFeatureType() == (FeatureTypes)iI);
+				iHappy += iTempHappy * algo::count_if(plots(NUM_CITY_PLOTS), CvPlot::fn::getFeatureType() == (FeatureTypes)iI);
 			}
 		}
 	}
