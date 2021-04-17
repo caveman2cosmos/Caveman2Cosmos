@@ -32,7 +32,6 @@
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-
 		<!-- MAPBONUS-ONLY* EXPLOITATION (*mostly) -->
 		<!-- Wildlife Sanctuary | End -->
 		<ImprovementInfo>
@@ -888,7 +887,6 @@
 				</TraitYieldChange>
 			</TraitYieldChanges>
 		</ImprovementInfo>
-
 		<!-- Winery -> Vertical Farm -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WINERY</Type>
@@ -2418,7 +2416,6 @@
 			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 		</ImprovementInfo>
-
 		<!-- Geothermal Factory | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GEOTHERMAL_FACTORY</Type>
@@ -2583,7 +2580,6 @@
 				</RouteYieldChange>
 			</RouteYieldChanges>
 		</ImprovementInfo>
-
 		<!-- Hydrocarbon Well* | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HYDROCARBON_WELL</Type>
@@ -3146,7 +3142,6 @@
 			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_QUARRY</ImprovementUpgrade>
 		</ImprovementInfo>
-
 		<!-- INCIDENTIAL MAPBONUS-EXPLOITING -->
 		<!-- Vertical Farm | End -->
 		<ImprovementInfo>
@@ -4726,7 +4721,6 @@
 				</BonusTypeStruct>
 			</BonusTypeStructs>
 		</ImprovementInfo>
-
 		<!-- Mountain Mine | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MOUNTAIN_MINE</Type>
@@ -5302,7 +5296,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-
 		<!-- Core Mine | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CORE_MINE</Type>
@@ -7190,7 +7183,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-
 		<!-- Hybrid Forest | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HYBRID_FOREST</Type>
@@ -7946,7 +7938,6 @@
 			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_LUMBERJACK</ImprovementUpgrade>
 		</ImprovementInfo>
-
 		<!-- MAIN CHAINS -->
 		<!-- Suburb | End -->
 		<ImprovementInfo>
@@ -8528,8 +8519,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-
-
 		<!-- Manufacturing Complex | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MANUFACTURING_COMPLEX</Type>
@@ -9059,7 +9048,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</ImprovementInfo>
-
 		<!-- Hydro Dam | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HYDRO_DAM</Type>
@@ -9144,7 +9132,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-
 		<!-- Modern Windmill | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MODERN_WINDMILL</Type>
@@ -9282,7 +9269,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-
 		<!-- MISC / OTHER / 1-OFFS -->
 		<!-- Radio Tower | Independent -->
 		<ImprovementInfo>
@@ -9831,7 +9817,6 @@
 			<iCulture>2</iCulture>
 			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
-
 		<!-- PREHISTORIC CAMPS -->
 		<!-- Jungle Camp | End - Information Lifestyle -->
 		<ImprovementInfo>
@@ -10254,7 +10239,6 @@
 				</TraitYieldChange>
 			</TraitYieldChanges>
 		</ImprovementInfo>
-
 		<!-- DEFENSIVE IMPROVEMENTS (LAND) -->
 		<!-- Radar Watchtower | End -->
 		<ImprovementInfo>
@@ -10620,7 +10604,6 @@
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
-
 		<!-- Command Center | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COMMAND_CENTER</Type>
@@ -11125,7 +11108,6 @@
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
-
 		<!-- FEATUREFORMING / TERRAFORMING -->
 		<!-- Plant Forest -->
 		<ImprovementInfo>
@@ -11550,7 +11532,6 @@
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-
 		<!-- NAVAL IMPROVEMENTS -->
 		<!-- Whaling Ships -->
 		<ImprovementInfo>
@@ -12842,7 +12823,6 @@
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
 			<bIsZOCSource>1</bIsZOCSource>
 		</ImprovementInfo>
-
 		<!-- GRAPHICAL ONLY / MISC -->
 		<!-- Land Worked (Graphical) -->
 		<ImprovementInfo>
@@ -12866,7 +12846,7 @@
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-		<!-- City Ruins (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_CITY_RUINS)  -->
+		<!-- City Ruins (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_CITY_RUINS) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CITY_RUINS</Type>
 			<Description>TXT_KEY_IMPROVEMENT_CITY_RUINS</Description>
@@ -12878,7 +12858,7 @@
 			<iDefenseModifier>15</iDefenseModifier>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-		<!-- City Ruins Arcology (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_ARCOLOGY_RUINS)  -->
+		<!-- City Ruins Arcology (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_ARCOLOGY_RUINS) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CITY_RUINS_ARCOLOGY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_CITY_RUINS</Description>

@@ -47,7 +47,7 @@
 	<init module="TradeUtil"/>
 	<init module="TraitUtil"/>
 	<gameutils module="WidgetUtil" handler="getWidgetHelp"/>
-<!--  Removed while I try and get Platy Tech Screen working
+<!-- Removed while I try and get Platy Tech Screen working
 	<event type="OnLoad" module="CvTechChooser" function="resetTechPrefs"/>
 	<event type="GameStart" module="CvTechChooser" function="resetTechPrefs"/-->
 	<!-- Mods -->

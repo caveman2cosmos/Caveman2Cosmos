@@ -123,7 +123,6 @@
 				<AudioRunTypeEnd />
 			</AudioRunSounds>
 		</UnitArtInfo>
-
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_GIRAFFE_CROSSBOW</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/giraffe_archer.dds</Button>
@@ -264,8 +263,5 @@
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
 		</UnitArtInfo>
-
-
-
 	</UnitArtInfos>
 </Civ4ArtDefines>

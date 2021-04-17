@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- Diplomacy Infos -->
-<!-- -->
 <Civ4DiplomacyInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4GameInfoSchema.xml">
 	<DiplomacyInfos>
 		<DiplomacyInfo>

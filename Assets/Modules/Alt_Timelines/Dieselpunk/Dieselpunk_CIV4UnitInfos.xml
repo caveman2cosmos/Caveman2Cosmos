@@ -621,7 +621,7 @@
 			<bDCMAirBomb5>0</bDCMAirBomb5>
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
- 		<UnitInfo>
+		<UnitInfo>
 			<Type>UNIT_VERY_HEAVY_ARMOR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRACKED</Combat>

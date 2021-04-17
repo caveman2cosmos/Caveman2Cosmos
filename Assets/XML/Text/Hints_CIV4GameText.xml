@@ -189,7 +189,7 @@
 		<Italian>*Suggerimento del BUG Team*: Scorta sempre i tuoi Coloni. È molto pericoloso vagare per le Terre Selvagge (specialmente quelle inesplorate).</Italian>
 		<Spanish>*Consejo de BUG*: Considera siempre escoltar a tus Colonos. Es tremendamente peligroso mandarlos solos ahí fuera.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Zawsze eskortuj swoich Osadników. Nie jest bezpiecznie dla nich w dziczy.</Polish>
-		<Russian>*BUG Hint*: Не забывайте  о должном сопровождении своих поселенцев. В пустошах бывает крайне опасно.</Russian>
+		<Russian>*BUG Hint*: Не забывайте о должном сопровождении своих поселенцев. В пустошах бывает крайне опасно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_8</Tag>
@@ -603,7 +603,7 @@
 		<Italian>C2C: Il Rischio d'incendio è un nuovo concetto di C2C. Puoi combatterlo producendo edifici come la Stazione dei Pompieri.</Italian>
 		<Spanish>C2C: La inflamabilidad es un nuevo concepto en C2C. Puedes combatirla creando edificios antiincendios como los Cuarteles de bomberos.</Spanish>
 		<Polish>C2C: Zagrożenie Pożarowe jest nową koncepcją w C2C. Możesz z nim walczyć budując budynki i trenując jednostki Przeciw Pożarowe.</Polish>
-		<Russian>C2C: Âîñïëàìåíÿåìîñòü - ýòî íîâàÿ îñîáåííîñòü â Ñ2Ñ. Âû ìîæåòå áîðîòüñÿ ñ ýòèì áåäñòâèåì, ñîîðóæàÿ òàêèå çäàíèÿ,  êàê ïîæàðíûå ñòàíöèè.</Russian>
+		<Russian>C2C: Âîñïëàìåíÿåìîñòü - ýòî íîâàÿ îñîáåííîñòü â Ñ2Ñ. Âû ìîæåòå áîðîòüñÿ ñ ýòèì áåäñòâèåì, ñîîðóæàÿ òàêèå çäàíèÿ, êàê ïîæàðíûå ñòàíöèè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_42</Tag>
@@ -1291,7 +1291,7 @@
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Vuoi un po' di pepe nella tua vita? Prova le opzioni "Start as Minors" assieme a "Aggressive AI". Vedrai!</Italian>
 		<Spanish>*Consejo de Revolution*: ¿Te falta un poco de picante en tu vida? Prueba "Empezar como menor" junto con "IA agresiva". Ya verás la que te espera.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Mało pikanterii w twoim życiu? Spróbuj opcje "Zacznij jako cywilizacja podrzędna" razem z opcją "Agresywnym AI"...</Polish>
-		<Russian>*Revolutions Mod Hint*: Â âàøèõ ñåðûõ áóäíÿõ íå õâàòàåò îñòðûõ îùóùåíèé? Òîãäà ðåæèì èãðû ''Ñòàðò ìàëûõ íàöèé''  ñ àêòèâíîé îïöèåé ''àãðåññèâíûé ÈÈ'' - áåçóñëîâíî, âàø âûáîð!</Russian>
+		<Russian>*Revolutions Mod Hint*: Â âàøèõ ñåðûõ áóäíÿõ íå õâàòàåò îñòðûõ îùóùåíèé? Òîãäà ðåæèì èãðû ''Ñòàðò ìàëûõ íàöèé'' ñ àêòèâíîé îïöèåé ''àãðåññèâíûé ÈÈ'' - áåçóñëîâíî, âàø âûáîð!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_65</Tag>
@@ -1862,7 +1862,7 @@
 		<Italian>Caveman2Cosmos: Ci sono più di 100 nuovi eventi in questa Mod.</Italian>
 		<Spanish>Caveman2Cosmos: Existen más de 100 nuevos eventos aleatorios en este mod.</Spanish>
 		<Polish>Caveman2Cosmos: W modzie znajdziesz 100 nowych losowych wydarzeń.</Polish>
-		<Russian>Caveman2Cosmos:  Â äàííîì ìîäå èìååòñÿ áîëåå ÷åì 100 íîâûõ ñëó÷àéíûõ ñîáûòèé.</Russian>
+		<Russian>Caveman2Cosmos: Â äàííîì ìîäå èìååòñÿ áîëåå ÷åì 100 íîâûõ ñëó÷àéíûõ ñîáûòèé.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_35</Tag>
