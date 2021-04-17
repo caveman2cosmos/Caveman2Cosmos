@@ -248,7 +248,7 @@ public:
 	city_plot_iterator endPlots() const { return city_plot_iterator(); }
 
 	typedef bst::iterator_range<city_plot_iterator> city_plot_range;
-	city_plot_range plots() const { return city_plot_range(beginPlots(), endPlots()); }
+	city_plot_range plots(int numPlots) const { return city_plot_range(beginPlots(), endPlots()); }
 
 	int getCityPlotIndex(const CvPlot* pPlot) const;
 	// Prefer to use plots() range instead of this for loops, searching etc.

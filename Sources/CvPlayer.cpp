@@ -4940,7 +4940,7 @@ int CvPlayer::countCityFeatures(FeatureTypes eFeature) const
 
 	foreach_(const CvCity* city, cities())
 	{
-		iCount += algo::count_if(city->plots(), CvPlot::fn::getFeatureType() == eFeature);
+		iCount += algo::count_if(city->plots(NUM_CITY_PLOTS), CvPlot::fn::getFeatureType() == eFeature);
 	}
 
 	return iCount;
@@ -26668,7 +26668,7 @@ void CvPlayer::getReligionLayerColors(ReligionTypes eSelectedReligion, std::vect
 					fAlpha *= 0.5f;
 				}
 
-				foreach_(const CvPlot* pLoopPlot, pLoopCity->plots()
+				foreach_(const CvPlot* pLoopPlot, pLoopCity->plots(NUM_CITY_PLOTS)
 				| filtered(CvPlot::fn::isRevealed(getTeam(), true) && CvPlot::fn::isInViewport()))
 				{
 					const int iIndex = GC.getCurrentViewport()->plotNum(pLoopPlot->getViewportX(), pLoopPlot->getViewportY());

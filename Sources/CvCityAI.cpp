@@ -12519,7 +12519,7 @@ void CvCityAI::AI_stealPlots()
 
 	const int iImportance = AI_getCityImportance(true, false);
 
-	foreach_(CvPlot* pLoopPlot, plots())
+	foreach_(CvPlot* pLoopPlot, plots(NUM_CITY_PLOTS))
 	{
 		if (iImportance > 0 && pLoopPlot->getOwner() == getOwner())
 		{
@@ -12760,7 +12760,7 @@ int CvCityAI::AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bInc
 int CvCityAI::AI_countNumImprovableBonuses(bool bIncludeNeutral, TechTypes eExtraTech, bool bLand, bool bWater) const
 {
 	int iCount = 0;
-	foreach_(const CvPlot* pLoopPlot, plots())
+	foreach_(const CvPlot* pLoopPlot, plots(NUM_CITY_PLOTS))
 	{
 		if ((bLand && pLoopPlot->area() == area()) || (bWater && pLoopPlot->isWater()))
 		{

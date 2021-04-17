@@ -18263,7 +18263,7 @@ bool CvUnitAI::AI_pillageAroundCity(const CvCity* pTargetCity, int iBonusValueTh
 	CvPlot* pBestPlot = NULL;
 	const CvPlot* pBestPillagePlot = NULL;
 
-	foreach_(const CvPlot* pLoopPlot, pTargetCity->plots())
+	foreach_(const CvPlot* pLoopPlot, pTargetCity->plots(NUM_CITY_PLOTS))
 	{
 		if (AI_plotValid(pLoopPlot) && !(pLoopPlot->isNPC()))
 		{
