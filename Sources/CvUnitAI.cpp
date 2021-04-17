@@ -1336,7 +1336,7 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 	{
 		for (int iI = 0; iI < pCity->getNumCityPlots(); iI++)
 		{
-			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
+			CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
 
 			if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == pCity && AI_plotValid(pLoopPlot) && pLoopPlot != pIgnorePlot
 
@@ -12305,11 +12305,9 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 						//	Guard a good spot outside the city but in its vicinity
 						int iBestValue = 0;
 
-						for(int iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
+						foreach_(CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), NUM_CITY_PLOTS_2, NUM_CITY_PLOTS_2))
 						{
-							CvPlot* pLoopPlot = plotCity(pPlot->getX(),pPlot->getY(),iI);
-
-							if (pLoopPlot != NULL && AI_plotValid(pLoopPlot) && pLoopPlot->area() == area())
+							if (AI_plotValid(pLoopPlot) && pLoopPlot->area() == area())
 							{
 								if (pLoopPlot->getOwner() == getOwner() &&
 									pLoopPlot->getNumVisibleEnemyUnits(getOwner()) == 0)

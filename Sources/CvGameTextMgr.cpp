@@ -25060,10 +25060,8 @@ void CvGameTextMgr::setProcessHelp(CvWStringBuffer &szBuffer, ProcessTypes eProc
 
 void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
-	CvPlot* pLoopPlot;
 	FeatureTypes eFeature;
 	int iHealth;
-	int iI;
 
 	if (city.badHealth() > 0)
 	{
@@ -25072,26 +25070,19 @@ void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		{
 			eFeature = NO_FEATURE;
 
-			for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+			foreach_(const CvPlot* pLoopPlot, city.plots(NUM_CITY_PLOTS))
 			{
-				pLoopPlot = plotCity(city.getX(), city.getY(), iI);
-
-				if (pLoopPlot != NULL)
+				if (pLoopPlot->getFeatureType() != NO_FEATURE
+				&& GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() < 0)
 				{
-					if (pLoopPlot->getFeatureType() != NO_FEATURE)
+					if (eFeature == NO_FEATURE)
 					{
-						if (GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() < 0)
-						{
-							if (eFeature == NO_FEATURE)
-							{
-								eFeature = pLoopPlot->getFeatureType();
-							}
-							else if (eFeature != pLoopPlot->getFeatureType())
-							{
-								eFeature = NO_FEATURE;
-								break;
-							}
-						}
+						eFeature = pLoopPlot->getFeatureType();
+					}
+					else if (eFeature != pLoopPlot->getFeatureType())
+					{
+						eFeature = NO_FEATURE;
+						break;
 					}
 				}
 			}
@@ -25288,26 +25279,19 @@ void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		{
 			eFeature = NO_FEATURE;
 
-			for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+			foreach_(const CvPlot* pLoopPlot, city.plots(NUM_CITY_PLOTS))
 			{
-				pLoopPlot = plotCity(city.getX(), city.getY(), iI);
-
-				if (pLoopPlot != NULL)
+				if (pLoopPlot->getFeatureType() != NO_FEATURE
+				&& GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() > 0)
 				{
-					if (pLoopPlot->getFeatureType() != NO_FEATURE)
+					if (eFeature == NO_FEATURE)
 					{
-						if (GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() > 0)
-						{
-							if (eFeature == NO_FEATURE)
-							{
-								eFeature = pLoopPlot->getFeatureType();
-							}
-							else if (eFeature != pLoopPlot->getFeatureType())
-							{
-								eFeature = NO_FEATURE;
-								break;
-							}
-						}
+						eFeature = pLoopPlot->getFeatureType();
+					}
+					else if (eFeature != pLoopPlot->getFeatureType())
+					{
+						eFeature = NO_FEATURE;
+						break;
 					}
 				}
 			}
