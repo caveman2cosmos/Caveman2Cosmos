@@ -25106,7 +25106,7 @@ void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 /*																							  */
 /************************************************************************************************/
 		iHealth = -(city.getImprovementBadHealth()) / 100;
-		CvPlayer &kPlayer = GET_PLAYER(city.getOwner());
+		const CvPlayer& kPlayer = GET_PLAYER(city.getOwner());
 		if (iHealth > 0)
 		{
 			ImprovementTypes eImprovement = NO_IMPROVEMENT;
@@ -25118,21 +25118,16 @@ void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 				if (GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent() < 0)
 				{
-					for (int iJ = 0; iJ < city.getNumCityPlots(); ++iJ)
+					foreach_(const CvPlot* pLoopPlot, city.plots())
 					{
-						pLoopPlot = plotCity(city.getX(), city.getY(), iJ);
-
-						if (pLoopPlot != NULL)
+						if (pLoopPlot->getImprovementType() == iI)
 						{
-							if (pLoopPlot->getImprovementType() == iI)
+							iTotalHealth -= GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent();
+							for (int iK = 0; iK < GC.getNumCivicOptionInfos(); iK++)
 							{
-								iTotalHealth -= GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent();
-								for (int iK = 0; iK < GC.getNumCivicOptionInfos(); iK++)
+								if (kPlayer.getCivics((CivicOptionTypes)iK) != NO_CIVIC)
 								{
-									if (kPlayer.getCivics((CivicOptionTypes)iK) != NO_CIVIC)
-									{
-										iTotalHealth -= std::min(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iK)).getImprovementHealthPercentChanges(iI)) / 100;
-									}
+									iTotalHealth -= std::min(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iK)).getImprovementHealthPercentChanges(iI)) / 100;
 								}
 							}
 						}
@@ -25321,7 +25316,7 @@ void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 			szBuffer.append(NEWLINE);
 		}
 		iHealth = city.getImprovementGoodHealth() / 100;
-		CvPlayer &kPlayer = GET_PLAYER(city.getOwner());
+		const CvPlayer& kPlayer = GET_PLAYER(city.getOwner());
 		if (iHealth > 0)
 		{
 			ImprovementTypes eImprovement = NO_IMPROVEMENT;
@@ -25333,21 +25328,16 @@ void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 				if (GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent() > 0)
 				{
-					for (int iJ = 0; iJ < city.getNumCityPlots(); ++iJ)
+					foreach_(const CvPlot* pLoopPlot, city.plots())
 					{
-						pLoopPlot = plotCity(city.getX(), city.getY(), iJ);
-
-						if (pLoopPlot != NULL)
+						if (pLoopPlot->getImprovementType() == iI)
 						{
-							if (pLoopPlot->getImprovementType() == iI)
+							iTotalHealth += GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent();
+							for (int iK = 0; iK < GC.getNumCivicOptionInfos(); iK++)
 							{
-								iTotalHealth += GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent();
-								for (int iK = 0; iK < GC.getNumCivicOptionInfos(); iK++)
+								if (kPlayer.getCivics((CivicOptionTypes)iK) != NO_CIVIC)
 								{
-									if (kPlayer.getCivics((CivicOptionTypes)iK) != NO_CIVIC)
-									{
-										iTotalHealth += std::max(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iK)).getImprovementHealthPercentChanges(iI)) / 100;
-									}
+									iTotalHealth += std::max(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iK)).getImprovementHealthPercentChanges(iI)) / 100;
 								}
 							}
 						}

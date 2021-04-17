@@ -10344,16 +10344,11 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 
 	iValue += (((GC.getGame().getElapsedGameTurns() + 100) * 4) * pCity->plot()->calculateCulturePercent(pCity->getOwner())) / 400;
 
-	for (int iI = 0; iI < pCity->getNumCityPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, pCity->plots())
 	{
-		const CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
-
-		if (pLoopPlot != NULL)
+		if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
 		{
-			if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
-			{
-				iValue += (AI_bonusVal(pLoopPlot->getBonusType(getTeam())) * 10);
-			}
+			iValue += (AI_bonusVal(pLoopPlot->getBonusType(getTeam())) * 10);
 		}
 	}
 
@@ -10448,16 +10443,11 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 
 	iValue += (((GC.getGame().getElapsedGameTurns() + 100) * 4) * pCity->plot()->calculateCulturePercent(pCity->getOwner())) / 400;
 
-	for (int iI = 0; iI < pCity->getNumCityPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, pCity->plots())
 	{
-		const CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
-
-		if (pLoopPlot != NULL)
+		if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
 		{
-			if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
-			{
-				iValue += (AI_bonusVal(pLoopPlot->getBonusType(getTeam())) * 10);
-			}
+			iValue += (AI_bonusVal(pLoopPlot->getBonusType(getTeam())) * 10);
 		}
 	}
 
@@ -25377,19 +25367,10 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 		pCity->AI_updateBestBuild();
 	}
 
-	int iPlotsImproved = 0;
-
-	for (int iI = 0; iI < pCity->getNumCityPlots(); iI++)
-	{
-		if (iI != CITY_HOME_PLOT)
-		{
-			CvPlot* pLoopPlot = plotCity(pPlot->getX(), pPlot->getY(), iI);
-			if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == pCity && pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
-			{
-				iPlotsImproved++;
-			}
-		}
-	}
+	int iPlotsImproved = algo::count_if(pCity->plots(true),
+		bind(CvPlot::getWorkingCity, _1) == pCity &&
+		bind(CvPlot::getImprovementType, _1) != NO_IMPROVEMENT
+	);
 
 	int iDivisor = std::max(1, 2000 / std::max(1, getAdvancedStartPoints()));
 

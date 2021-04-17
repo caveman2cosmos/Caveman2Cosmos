@@ -9293,21 +9293,16 @@ void CvCityAI::AI_doHurry(bool bForce)
 						bWait = true;
 						int iFoodSurplus = 0;
 
-						for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+						foreach_(const CvPlot* pLoopPlot, plots(true))
 						{
-							if (iJ != CITY_HOME_PLOT)
+							if (pLoopPlot->getWorkingCity() == this)
 							{
-								CvPlot* pLoopPlot = getCityIndexPlot(iJ);
+								iFoodSurplus += std::max(0, pLoopPlot->getYield(YIELD_FOOD) - GC.getFOOD_CONSUMPTION_PER_POPULATION());
 
-								if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this)
+								if (iFoodSurplus >= 3)
 								{
-									iFoodSurplus += std::max(0, pLoopPlot->getYield(YIELD_FOOD) - GC.getFOOD_CONSUMPTION_PER_POPULATION());
-
-									if (iFoodSurplus >= 3)
-									{
-										bWait = false;
-										break;
-									}
+									bWait = false;
+									break;
 								}
 							}
 						}
@@ -9383,10 +9378,9 @@ void CvCityAI::AI_doEmphasize()
 				int iGoodFoodSink = 0;
 				const int iFoodPerPop = GC.getFOOD_CONSUMPTION_PER_POPULATION();
 
-				for (int iPlot = 0; iPlot < getNumCityPlots(); iPlot++)
+				foreach_(const CvPlot* pLoopPlot, plots())
 				{
-					CvPlot* pLoopPlot = plotCity(getX(), getY(), iPlot);
-					if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this)
+					if (pLoopPlot->getWorkingCity() == this)
 					{
 						const int iFood = pLoopPlot->getYield(YIELD_FOOD);
 						if (iFood > iFoodPerPop)
@@ -12400,11 +12394,9 @@ int CvCityAI::AI_getPlotMagicValue(const CvPlot* pPlot, bool bHealthy, bool bWor
 int CvCityAI::AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshold, bool bWorkerOptimization) const
 {
 	int iCount = 0;
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, plots(true))
 	{
-		const CvPlot* pLoopPlot = plotCity(getX(),getY(), iI);
-
-		if (iI != CITY_HOME_PLOT && pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this
+		if (pLoopPlot->getWorkingCity() == this
 		&& (!bUnworkedOnly || !pLoopPlot->isBeingWorked()) 
 		&& AI_getPlotMagicValue(pLoopPlot, bHealthy) > iThreshold)
 		{
@@ -12519,7 +12511,7 @@ void CvCityAI::AI_stealPlots()
 
 	const int iImportance = AI_getCityImportance(true, false);
 
-	foreach_(CvPlot* pLoopPlot, plots())
+	foreach_(CvPlot* pLoopPlot, plots(NUM_CITY_PLOTS))
 	{
 		if (iImportance > 0 && pLoopPlot->getOwner() == getOwner())
 		{
@@ -12553,33 +12545,29 @@ int CvCityAI::AI_buildingSpecialYieldChangeValue(BuildingTypes eBuilding, YieldT
 
 	int iValue = 0;
 	int iWorkedCount = 0;
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, plots(true))
 	{
-		if (iI != CITY_HOME_PLOT)
+		if (pLoopPlot->isWater() && pLoopPlot->getWorkingCity() == this)
 		{
-			const CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-			if (pLoopPlot != NULL && pLoopPlot->isWater() && pLoopPlot->getWorkingCity() == this)
+			// Food is main yield from water plots,
+			// so additional yield of any kind holds more value the more food yield the plot have
+			// because food yield is the main reason to work the tile in the first place.
+			iValue += 2 * pLoopPlot->getYield(YIELD_FOOD);
+
+			if (eYield == YIELD_FOOD)
 			{
-				// Food is main yield from water plots,
-				// so additional yield of any kind holds more value the more food yield the plot have
-				// because food yield is the main reason to work the tile in the first place.
-				iValue += 2 * pLoopPlot->getYield(YIELD_FOOD);
-
-				if (eYield == YIELD_FOOD)
-				{
-					iValue += 2 * iChange;
-				}
-				else iValue += iChange;
-
-				// +4 if being worked.
-				if (pLoopPlot->isBeingWorked())
-				{
-					iValue += 4;
-					iWorkedCount++;
-				}
-				// +6 if a bonus.
-				iValue += (pLoopPlot->getBonusType(getTeam()) != NO_BONUS ? 6 : 0);
+				iValue += 2 * iChange;
 			}
+			else iValue += iChange;
+
+			// +4 if being worked.
+			if (pLoopPlot->isBeingWorked())
+			{
+				iValue += 4;
+				iWorkedCount++;
+			}
+			// +6 if a bonus.
+			iValue += (pLoopPlot->getBonusType(getTeam()) != NO_BONUS ? 6 : 0);
 		}
 	}
 	if (iWorkedCount == 0)
@@ -12719,33 +12707,28 @@ int CvCityAI::AI_specialYieldMultiplier(YieldTypes eYield) const
 int CvCityAI::AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bIncludeNeutral, int iOtherCultureThreshold, bool bLand, bool bWater) const
 {
 	int iCount = 0;
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, plots())
 	{
-		const CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-
-		if (pLoopPlot != NULL)
+		if (pLoopPlot->area() == area() || (bWater && pLoopPlot->isWater()))
 		{
-			if ((pLoopPlot->area() == area()) || (bWater && pLoopPlot->isWater()))
+			const BonusTypes eLoopBonus = pLoopPlot->getBonusType(getTeam());
+			if (eLoopBonus != NO_BONUS)
 			{
-				const BonusTypes eLoopBonus = pLoopPlot->getBonusType(getTeam());
-				if (eLoopBonus != NO_BONUS)
+				if ((eBonus == NO_BONUS) || (eBonus == eLoopBonus))
 				{
-					if ((eBonus == NO_BONUS) || (eBonus == eLoopBonus))
+					if (bIncludeOurs && (pLoopPlot->getOwner() == getOwner()) && (pLoopPlot->getWorkingCity() == this))
 					{
-						if (bIncludeOurs && (pLoopPlot->getOwner() == getOwner()) && (pLoopPlot->getWorkingCity() == this))
+						iCount++;
+					}
+					else if (bIncludeNeutral && (!pLoopPlot->isOwned()))
+					{
+						iCount++;
+					}
+					else if ((iOtherCultureThreshold > 0) && (pLoopPlot->isOwned() && (pLoopPlot->getOwner() != getOwner())))
+					{
+						if ((pLoopPlot->getCulture(pLoopPlot->getOwner()) - pLoopPlot->getCulture(getOwner())) < iOtherCultureThreshold)
 						{
 							iCount++;
-						}
-						else if (bIncludeNeutral && (!pLoopPlot->isOwned()))
-						{
-							iCount++;
-						}
-						else if ((iOtherCultureThreshold > 0) && (pLoopPlot->isOwned() && (pLoopPlot->getOwner() != getOwner())))
-						{
-							if ((pLoopPlot->getCulture(pLoopPlot->getOwner()) - pLoopPlot->getCulture(getOwner())) < iOtherCultureThreshold)
-							{
-								iCount++;
-							}
 						}
 					}
 				}

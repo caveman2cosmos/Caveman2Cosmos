@@ -600,15 +600,11 @@ void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 	{
 		if (eType == GAMEOBJECT_PLOT)
 		{
-			for (int iI = 0; iI < m_pCity->getNumCityPlots(); iI++)
+			foreach_(const CvPlot* pLoopPlot, m_pCity->plots())
 			{
-				CvPlot* pLoopPlot = plotCity(m_pCity->getX(), m_pCity->getY(), iI);
-				if (pLoopPlot)
+				if (pLoopPlot->getWorkingCity() == m_pCity)
 				{
-					if (pLoopPlot->getWorkingCity() == m_pCity)
-					{
-						func(pLoopPlot->getGameObject());
-					}
+					func(pLoopPlot->getGameObject());
 				}
 			}
 		}

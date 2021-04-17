@@ -1336,7 +1336,7 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 	{
 		for (int iI = 0; iI < pCity->getNumCityPlots(); iI++)
 		{
-			CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
+			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 			if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == pCity && AI_plotValid(pLoopPlot) && pLoopPlot != pIgnorePlot
 
