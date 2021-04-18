@@ -23250,7 +23250,7 @@
 				</UnitCombat>
 			</UnitCombats>
 			<SubCombatChangeTypes>
-					<SubCombatChangeType>UNITCOMBAT_PIRATE</SubCombatChangeType>
+				<SubCombatChangeType>UNITCOMBAT_PIRATE</SubCombatChangeType>
 			</SubCombatChangeTypes>
 			<iHiddenNationalityChange>1</iHiddenNationalityChange>
 			<iCombatPercent>20</iCombatPercent>
