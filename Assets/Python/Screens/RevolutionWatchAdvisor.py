@@ -54,11 +54,10 @@ import CvScreenEnums
 import CvEventInterface
 import Popup as PyPopup
 
-import BugPath
 import BugConfigTracker
 
 import math
-import os.path
+import SystemPaths as SP
 
 # BUG - Options
 import BugCore
@@ -1149,7 +1148,7 @@ class RevolutionWatchAdvisor:
 		# add National Wonders
 		for i in range(gc.getNumBuildingInfos()):
 			info = gc.getBuildingInfo(i)
-			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and city.getNumBuilding(i) > 0 and not info.isCapital():
+			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and city.getNumRealBuilding(i) > 0 and not info.isCapital():
 				# Use bullets as markers for National Wonders
 				szReturn += self.bulletIcon
 
@@ -1519,7 +1518,7 @@ class RevolutionWatchAdvisor:
 				if city.getProductionName() == self.HEADER_DICT[szKey]: # In production
 					szReturn = "(" + szReturn + ")"
 
-			elif city.getNumBuilding(self.BUILDING_DICT[szKey]) > 0: # Obsolete buildings
+			elif city.getNumBuilding(self.BUILDING_DICT[szKey]) > 0: # Disabled buildings
 				if self.BUILDING_ICONS_DICT[szKey].find(self.cultureIcon):
 					szReturn = self.stripStr(szReturn, self.cultureIcon)
 					szReturn += self.cultureIcon
@@ -1674,20 +1673,10 @@ class RevolutionWatchAdvisor:
 
 
 	def canAdviseToConstruct(self, city, i):
-
-		info = gc.getBuildingInfo(i)
 		if not city.canConstruct(i, True, False, False):
 			return False
+		info = gc.getBuildingInfo(i)
 		if info.isGovernmentCenter() or info.isCapital():
-			return False
-
-		team = gc.getTeam(gc.getGame().getActiveTeam())
-		if info.getObsoleteTech() != TechTypes.NO_TECH and team.isHasTech(info.getObsoleteTech()):
-			return False
-
-		sinfo = gc.getSpecialBuildingInfo(info.getSpecialBuildingType())
-
-		if sinfo and sinfo.getObsoleteTech() != TechTypes.NO_TECH and team.isHasTech(sinfo.getObsoleteTech()):
 			return False
 
 		return True
@@ -2388,8 +2377,8 @@ class RevolutionWatchAdvisor:
 				self.listSelectedCities.append(screen.getTableText(page, 1, i))
 
 	def save(self, inputClass):
-		name = BugPath.findSettingsFile("CustomRevAdv.txt", "CustomRevAdv")
-		if (name):
+		name = SP.joinModDir("UserSettings", "CustomRevAdv", "CustomRevAdv.txt")
+		if SP.isfile(name):
 			file = open(name, 'w')
 
 			if(file != 0):
@@ -2727,10 +2716,10 @@ class RevolutionWatchAdvisor:
 	def loadPages(self):
 
 		self.PAGES = None
-		name = BugPath.findSettingsFile("CustomRevAdv.txt", "CustomRevAdv")
-		if (not name):
-			name = BugPath.findSettingsFile("CustomRevAdv.txt")
-		if (name):
+		name = SP.joinModDir("UserSettings", "CustomRevAdv", "CustomRevAdv.txt")
+		if not SP.isfile(name):
+			name = SP.joinModDir("UserSettings", "CustomRevAdv.txt")
+		if SP.isfile(name):
 			BugConfigTracker.add("CDA_Config", name)
 			try:
 				file = open(name, 'r')

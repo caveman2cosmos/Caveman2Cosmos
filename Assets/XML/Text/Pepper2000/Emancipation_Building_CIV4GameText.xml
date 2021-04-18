@@ -22,8 +22,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>TBD</French>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_HELP</Tag>
@@ -40,7 +38,5 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>TBD</French>
-		<Russian>TBD</Russian>
 	</TEXT>
 </Civ4GameText>

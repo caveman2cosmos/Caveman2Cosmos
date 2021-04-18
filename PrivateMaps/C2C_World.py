@@ -3578,7 +3578,7 @@ class StartingPlotFinder:
 				if iNum == iEntry:
 					raise ValueError, "Not enough room on the map to place all players!"
 					break
-		#Assign players.
+		# Assign starting plots.
 		iCount = 0
 		for startingArea in startingAreaList:
 			for i in xrange(startingArea.idealNumberOfPlayers):
@@ -3587,6 +3587,7 @@ class StartingPlotFinder:
 			startingArea.FindStartingPlots()
 		if iNumPlayers > iCount:
 			raise ValueError, "Some players not placed in starting plot finder!"
+
 		#Now set up for normalization
 		self.plotList = []
 		for startingArea in startingAreaList:
@@ -3786,7 +3787,6 @@ class StartingArea:
 
 
 	def FindStartingPlots(self):
-		GC = CyGlobalContext()
 		numPlayers = len(self.playerList)
 		if numPlayers <= 0:
 			return
@@ -3816,7 +3816,7 @@ class StartingArea:
 			distanceList[0].vacant = False
 		self.CalculateStartingPlotValues()
 		#Now place all starting positions
-		MAP = GC.getMap()
+		MAP = CyGlobalContext().getMap()
 		n = 0
 		for m in xrange(len(self.plotList)):
 			if not self.plotList[m].vacant:
@@ -3824,10 +3824,7 @@ class StartingArea:
 				if sPlot.isWater():
 					raise ValueError, "Start plot is water!"
 				sPlot.setImprovementType(-1)
-				playerID = self.playerList[n]
-				player = GC.getPlayer(playerID)
 				sPlot.setStartingPlot(True)
-				player.setStartingPlot(sPlot, True)
 				n += 1
 
 
@@ -4620,8 +4617,11 @@ def afterGeneration():
 def assignStartingPlots():
 	print "\n", "Starting plot finding"
 	timer = BugUtil.Timer('Starting plot finding')
-	spf.SetStartingPlots()
+	spf.SetStartingPlots() # Only assigns starting-plot flags to plots.
 	timer.log()
+	# Let dll delegate the starting plots to players
+	CyGlobalContext().getGame().assignStartingPlots(False, True)
+	# Release memory
 	global mc, em, cm, tm, lm, rm, pb
 	mc = em = cm = tm = lm = rm = pb = None
 	print "|---------------------------|\n|\t\t^^ All done ^^\t\t|\n|---------------------------|"

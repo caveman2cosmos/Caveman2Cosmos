@@ -1,6 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_BUILDING_DISABLED</Tag>
+		<English>[COLOR_WARNING_TEXT]Disabled[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_BUILDING_DISABLED_RELIGIOUSLY</Tag>
+		<English>[COLOR_WARNING_TEXT]Religiously disabled[COLOR_REVERT][NEWLINE]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA</Tag>
 		<English>[ICON_BULLET]Extra unit upkeep: %s1 [ICON_GOLD]</English>
 		<German>[ICON_BULLET]Zusätzliche laufende Kosten: %s1 [ICON_GOLD]</German>

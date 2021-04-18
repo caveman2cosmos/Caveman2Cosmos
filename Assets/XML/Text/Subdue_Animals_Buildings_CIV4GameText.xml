@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_MYTH</Tag>
-		<English>Myth - Amphibians</English>
+		<English>Myth (B) - Amphibians</English>
 		<French>
 			<Text>Mythe - Amphibiens</Text>
 			<Gender>Male</Gender>
@@ -89,7 +89,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTELOPE_MYTH</Tag>
-		<English>Myth (T) - Antelope</English>
+		<English>Myth - Antelope</English>
 		<French>
 			<Text>Mythe (T) de l'Antilope</Text>
 			<Gender>Male</Gender>
@@ -228,7 +228,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO</Tag>
-		<English>Carnival - Boxing Kangaroo</English>
+		<English>Unit Reward - Carnival (Boxing Kangaroo)</English>
 		<French>
 			<Text>Kangourou Boxeur</Text>
 			<Gender>Male</Gender>
@@ -329,6 +329,11 @@
 		<Russian>Ìèô î âåðáëþäå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CAMEL_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Camel</English>
+		<Russian>Ïåñíÿ î âåðáëþäå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPUCHIN_MYTH</Tag>
 		<English>Myth - Capuchin</English>
 		<French>Mythe du Capucin</French>
@@ -407,7 +412,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE</Tag>
-		<English>Center for Cephalopod Studies</English>
+		<English>Unit Reward - Center for Cephalopod Studies</English>
 		<French>
 			<Text>Centre d'étude des Céphalopodes</Text>
 			<Gender>Male</Gender>
@@ -423,7 +428,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CETAEA_INSTITUTE</Tag>
-		<English>Center for Whale Studies</English>
+		<English>Unit Reward - Center for Whale Studies</English>
 		<French>
 			<Text>Centre d'étude des Baleines</Text>
 			<Gender>Male</Gender>
@@ -499,7 +504,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM</Tag>
-		<English>Coastal Fish Farm</English>
+		<English>Unit Reward - Coastal Fish Farm</English>
 		<French>
 			<Text>Ferme à Poissons du Littoral</Text>
 			<Gender>Female</Gender>
@@ -583,7 +588,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS</Tag>
-		<English>Crab Nets</English>
+		<English>Unit Reward - Crab Nets</English>
 		<French>
 			<Text>Pièges à Crabes</Text>
 			<Gender>Male</Gender>
@@ -617,7 +622,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCING_BEAR</Tag>
-		<English>Carnival - Dancing Bear</English>
+		<English>Unit Reward - Carnival (Dancing Bear)</English>
 		<French>
 			<Text>Carnaval - Ours Dansant</Text>
 			<Gender>Male</Gender>
@@ -651,7 +656,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_MYTH</Tag>
-		<English>Myth (T) - Deer</English>
+		<English>Myth - Deer</English>
 		<French>
 			<Text>Mythe (T) du Cerf</Text>
 			<Gender>Male</Gender>
@@ -667,7 +672,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_MYTH_EFFECT</Tag>
-		<English>Myth Effect (T) - Deer</English>
+		<English>Myth Effect - Deer</English>
 		<French>Effet - Mythe (T) du Cerf</French>
 		<Russian>Ïåñíÿ îá îëåíå</Russian>
 	</TEXT>
@@ -766,6 +771,11 @@
 		<Russian>Ìèô î äðàêîíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DRAGON_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Dragon</English>
+		<Russian>Ïåñíÿ î äðàêîíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_MYTH</Tag>
 		<English>Myth - Dugong</English>
 		<French>
@@ -813,7 +823,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTH_MYTH</Tag>
-		<English>Myth - Earth</English>
+		<English>Myth (L) - Earth</English>
 		<French>
 			<Text>Mythe de la Terre</Text>
 			<Gender>Male</Gender>
@@ -851,7 +861,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_MYTH</Tag>
-		<English>Myth - Elephant</English>
+		<English>Myth (B) - Elephant</English>
 		<French>
 			<Text>Mythe de l'Eléphant</Text>
 			<Gender>Male</Gender>
@@ -883,7 +893,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEATHER_WORKER</Tag>
-		<English>Feather Worker</English>
+		<English>Unit Reward - Feather Worker</English>
 		<French>
 			<Text>Atelier de Plumes</Text>
 			<Gender>Male</Gender>
@@ -899,7 +909,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FISH_PENS</Tag>
-		<English>Fish Pens</English>
+		<English>Unit Reward - Fish Pens</English>
 		<French>
 			<Text>Enclos à Poissons</Text>
 			<Gender>Male</Gender>
@@ -915,7 +925,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
-		<English>Farm - Animal (Fur)</English>
+		<English>Unit Reward - Fur Farm</English>
 		<French>
 			<Text>Ferme de Fourrures</Text>
 			<Gender>Female</Gender>
@@ -962,8 +972,13 @@
 		<Russian>Ìèô î êîçëå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOAT_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Goat</English>
+		<Russian>Ïåñíÿ î êîçëå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOVENORS_MENAGERIE</Tag>
-		<English>Governor's Menagerie</English>
+		<English>Unit Reward - Governor's Menagerie</English>
 		<French>
 			<Text>Ménagerie du Gouverneur</Text>
 			<Gender>Female</Gender>
@@ -979,7 +994,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOVENORS_PETS</Tag>
-		<English>Governor's Pets</English>
+		<English>Unit Reward - Governor's Pets</English>
 		<French>
 			<Text>Animaux du Gouverneurs</Text>
 			<Gender>Male</Gender>
@@ -1027,7 +1042,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAWKING</Tag>
-		<English>Hawking Hut</English>
+		<English>Unit Reward - Hawking Hut</English>
 		<French>
 			<Text>Cabane du Fauconnier</Text>
 			<Gender>Female</Gender>
@@ -1181,7 +1196,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE</Tag>
-		<English>Marine Institute</English>
+		<English>Unit Reward - Marine Institute</English>
 		<French>
 			<Text>Institut de la Mer</Text>
 			<Gender>Male</Gender>
@@ -1243,7 +1258,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARSUPIAL_MYTH</Tag>
-		<English>Myth (T) - Marsupial</English>
+		<English>Myth - Marsupial</English>
 		<French>
 			<Text>Mythe (T) du Marsupial</Text>
 			<Gender>Male</Gender>
@@ -1259,13 +1274,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARSUPIAL_MYTH_EFFECT</Tag>
-		<English>Myth Effect (T) - Marsupial</English>
+		<English>Myth Effect - Marsupial</English>
 		<French>Effet - Mythe (T) - Marsupial</French>
 		<Russian>Ïåñíÿ î ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER</Tag>
-		<English>Master Hunter</English>
+		<English>Unit Reward - Master Hunter</English>
 		<French>
 			<Text>Cabane du Maître chasseur</Text>
 			<Gender>Male</Gender>
@@ -1281,7 +1296,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Tag>
-		<English>Master Sea Hunter</English>
+		<English>Unit Reward - Master Sea Hunter</English>
 		<French>
 			<Text>Maître Chasseur des mers</Text>
 			<Gender>Male</Gender>
@@ -1310,6 +1325,11 @@
 		</Italian>
 		<Polish>Mit Syreny</Polish>
 		<Russian>Ìèô î ðóñàëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MERMAID_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Mermaid</English>
+		<Russian>Ïåñíÿ î ðóñàëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_MYTH</Tag>
@@ -1377,7 +1397,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM</Tag>
-		<English>Naval Standard (Animal mascot)</English>
+		<English>Unit Reward - Naval Standard (Animal mascot)</English>
 		<French>
 			<Text>Mascotte de la Marine</Text>
 			<Gender>Female</Gender>
@@ -1422,6 +1442,11 @@
 		</Italian>
 		<Polish>Mit Starego człowieka z lasu</Polish>
 		<Russian>Ìèô î ëåøåì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OLD_MAN_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Old Man of the Forest</English>
+		<Russian>Ïåñíÿ î ëåøåì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_MYTH</Tag>
@@ -1483,21 +1508,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES</Tag>
-		<English>Stories - Mammoths</English>
+		<English>Stories - Paleolithic Mammoth</English>
 		<French>Histoires des Mammouths</French>
 		<Polish>Historie - Mamutach</Polish>
 		<Russian>Ñêàçû î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES_EFFECT</Tag>
-		<English>Effect - Stories Mammoths</English>
+		<English>Stories Effect - Paleolithic Mammoth</English>
 		<French>Effet - Histoires des Mammouths</French>
 		<Polish>Efekt - Historie Mamutach</Polish>
 		<Russian>Ïðåäàíèÿ î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORY</Tag>
-		<English>Story - Mammoths</English>
+		<English>Story - Paleolithic Mammoth</English>
 		<French>Histoire des Mammouths</French>
 		<Polish>Opowieść o Kopalnych Mamutach</Polish>
 		<Russian>Ñêàçêà î ìàìîíòå</Russian>
@@ -1535,6 +1560,11 @@
 		</Italian>
 		<Polish>Mit Feniksa</Polish>
 		<Russian>Ìèô î Ôåíèêñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PHOENIX_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Phoenix</English>
+		<Russian>Ïåñíÿ î Ôåíèêñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIG_HERD</Tag>
@@ -1728,7 +1758,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REPTILE_MYTH</Tag>
-		<English>Myth - Reptiles</English>
+		<English>Myth (B) - Reptile</English>
 		<French>
 			<Text>Mythe - Reptiles</Text>
 			<Gender>Male</Gender>
@@ -1776,7 +1806,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE</Tag>
-		<English>Center for Shark Studies</English>
+		<English>Unit Reward - Center for Shark Studies</English>
 		<French>
 			<Text>Centre d'étude des Requins</Text>
 			<Gender>Male</Gender>
@@ -1792,7 +1822,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCAVENGER_MYTH</Tag>
-		<English>Myth (S) - Scavenger</English>
+		<English>Myth - Scavenger</English>
 		<French>
 			<Text>Mythe (R) du Mendiant</Text>
 			<Gender>Male</Gender>
@@ -1808,7 +1838,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCAVENGER_MYTH_EFFECT</Tag>
-		<English>Myth Effect (S) - Scavenger</English>
+		<English>Myth Effect - Scavenger</English>
 		<French>
 			<Text>Effet - Mythe (R) du Mendiant</Text>
 			<Gender>Male</Gender>
@@ -1836,7 +1866,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_MYTH</Tag>
-		<English>Myth - Sea turtle</English>
+		<English>Myth - Sea Turtle</English>
 		<French>
 			<Text>Mythe de la Tortue de mer</Text>
 			<Gender>Male</Gender>
@@ -1852,13 +1882,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Sea turtle</English>
+		<English>Myth Effect - Sea Turtle</English>
 		<French>Effet - Mythe de la Tortue de mer</French>
 		<Russian>Ïåñíÿ î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_MYTH</Tag>
-		<English>Myth - Sea</English>
+		<English>Myth (L) - Sea</English>
 		<French>
 			<Text>Mythe de la Mer</Text>
 			<Gender>Male</Gender>
@@ -1906,7 +1936,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKY_MYTH</Tag>
-		<English>Myth - Sky</English>
+		<English>Myth (L) - Sky</English>
 		<French>
 			<Text>Mythe du Ciel</Text>
 			<Gender>Male</Gender>
@@ -1929,7 +1959,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER</Tag>
-		<English>Snake Charmer</English>
+		<English>Unit Reward - Snake Charmer</English>
 		<French>
 			<Text>Charmeur de Serpents</Text>
 			<Gender>Male</Gender>
@@ -1945,7 +1975,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_PIT</Tag>
-		<English>Snake Pit</English>
+		<English>Unit Reward - Snake Pit</English>
 		<French>
 			<Text>Fosse à Serpents</Text>
 			<Gender>Female</Gender>
@@ -1961,7 +1991,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH</Tag>
-		<English>Myth - Spotted Cat</English>
+		<English>Myth (B) - Spotted Cat</English>
 		<French>Mythe du Chat moucheté</French>
 		<Italian>
 			<Text>Mito del felino maculato</Text>
@@ -1995,7 +2025,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER</Tag>
-		<English>Shell Worker's Hut</English>
+		<English>Unit Reward - Shell Worker's Hut</English>
 		<French>
 			<Text>Cabane du sculpteur de carapaces</Text>
 			<Gender>Female</Gender>
@@ -2059,7 +2089,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL</Tag>
-		<English>Carnival - Trained Seal</English>
+		<English>Unit Reward - Carnival (Trained Seal)</English>
 		<French>Phoques dressés</French>
 		<Italian>
 			<Text>Foche ammaestrate</Text>
@@ -2120,6 +2150,11 @@
 		<Russian>Ìèô îá åäèíîðîãå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_UNICORN_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Unicorn</English>
+		<Russian>Ïåñíÿ îá åäèíîðîãå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_CAGE</Tag>
 		<English>Enclosure - Walrus</English>
 		<French>Enclos - Morses</French>
@@ -2144,7 +2179,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEASEL_MYTH</Tag>
-		<English>Myth (T) - Weasel</English>
+		<English>Myth - Weasel</English>
 		<French>
 			<Text>Mythe (T) de la belette</Text>
 			<Gender>Male</Gender>
@@ -2198,7 +2233,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP</Tag>
-		<English>Wonders of the Deep</English>
+		<English>Unit Reward - Wonders of the Deep</English>
 		<French>
 			<Text>Merveilles des profondeurs</Text>
 			<Gender>Female</Gender>

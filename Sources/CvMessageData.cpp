@@ -1959,14 +1959,14 @@ void CvNetConfirmSplitUnit::Execute()
 			FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on split units");
 
 			// Copy appropriate values from the original unit to the new ones
-			for (std::vector<CvUnit*>::const_iterator itr = newUnits.begin(); itr != newUnits.end(); ++itr)
+			foreach_(CvUnit* loopUnit, newUnits)
 			{
-				(*itr)->setExperience100(pUnit0->getExperience100());
-				(*itr)->setLevel(pUnit0->getLevel());
-				(*itr)->setGameTurnCreated(pUnit0->getGameTurnCreated());
-				(*itr)->m_eOriginalOwner = pUnit0->getOriginalOwner();
-				(*itr)->setAutoPromoting(pUnit0->isAutoPromoting());
-				(*itr)->setName(pUnit0->getNameNoDesc());
+				loopUnit->setExperience100(pUnit0->getExperience100());
+				loopUnit->setLevel(pUnit0->getLevel());
+				loopUnit->setGameTurnCreated(pUnit0->getGameTurnCreated());
+				loopUnit->m_eOriginalOwner = pUnit0->getOriginalOwner();
+				loopUnit->setAutoPromoting(pUnit0->isAutoPromoting());
+				loopUnit->setName(pUnit0->getNameNoDesc());
 			}
 
 			if (pUnit0->getLeaderUnitType() != NO_UNIT)

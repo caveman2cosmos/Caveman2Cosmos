@@ -9,7 +9,6 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>309</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iGridX>30</iGridX>

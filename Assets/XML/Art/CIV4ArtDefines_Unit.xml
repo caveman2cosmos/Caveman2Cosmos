@@ -3443,9 +3443,9 @@
 			<Button>Art/Interface/Buttons/units/sparth/early_jet_fighter.dds</Button>
 			<fScale>0.4</fScale>
 			<fInterfaceScale>0.9</fInterfaceScale>
-			<NIF>Art/Units/planes/early_jet_fighter/Airacomet.nif</NIF>
+			<NIF>Art/Units/JetFighter/JetFighter.nif</NIF>
 			<KFM>Art/Units/JetFighter/JetFighter.kfm</KFM>
-			<SHADERNIF>Art/Units/planes/early_jet_fighter/Airacomet.nif</SHADERNIF>
+			<SHADERNIF>Art/Units/planes/early_jet_fighter/Early_Jet_Fighter.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/JetFighterShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>

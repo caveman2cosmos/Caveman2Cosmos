@@ -2660,6 +2660,31 @@ with GFC_Control_Panel
 		map GFC_CtrlTheme_Bitmap_Control_Panel	= GFC_Control_DefaultPanel_Style;
 		map GFC_Control							= GFC_Control_DefaultPanel_Style;
 	}
+	//Black 70% panel
+	style SF_CtrlTheme_Civ4_Control_Panel_Black80_Style
+	{
+		.StyleId_Border			= GPropertyId(GFC_Control_EmptyBorder_Style);
+		.Flag_NoInnerFill		= 0;
+		.Flag_Title_Pos			= GFlags(GPanelCtrl, GFC_CF_PANEL_TITLE_POS_OUTSIDE);
+
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("GUI/Panel/black70.tga", HVGrid, 1, 1, 0, 0);
+					Margin		= GRectMargin(8,8,8,8);
+				}
+			}
+			.Disable			= .Default;
+			.Winoff				= .Default;
+			.WinoffDisable		= .Winoff;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel	= GFC_Control_DefaultPanel_Style;
+		map GFC_Control							= GFC_Control_DefaultPanel_Style;
+	}
 
 
 	//Main Menu - Staging Room panel

@@ -6817,6 +6817,10 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
@@ -12557,7 +12561,7 @@
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<iUnitCombatMod>30</iUnitCombatMod>
+					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<UnitCombats>
@@ -12579,11 +12583,7 @@
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<iUnitCombatMod>180</iUnitCombatMod>
-				</UnitCombatMod>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<iUnitCombatMod>120</iUnitCombatMod>
+					<iUnitCombatMod>50</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<UnitCombats>
@@ -12605,23 +12605,7 @@
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<iUnitCombatMod>360</iUnitCombatMod>
-				</UnitCombatMod>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<iUnitCombatMod>360</iUnitCombatMod>
-				</UnitCombatMod>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<iUnitCombatMod>360</iUnitCombatMod>
-				</UnitCombatMod>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<iUnitCombatMod>360</iUnitCombatMod>
-				</UnitCombatMod>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<iUnitCombatMod>360</iUnitCombatMod>
+					<iUnitCombatMod>100</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<UnitCombats>
@@ -16195,7 +16179,7 @@
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-2</iCaptureResistanceModifierChange>
 		</PromotionInfo>
-<!-- 	<PromotionInfo>
+		<!-- <PromotionInfo>
 			<Type>PROMOTION_STONE_WEAPONS</Type>
 			<Description>TXT_KEY_PROMOTION_STONE_WEAPONS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
@@ -30418,7 +30402,7 @@
 			<iInterceptChange>5</iInterceptChange>
 			<Button>,Art/Interface/Buttons/Promotions/Security4BuildUp.dds</Button>
 		</PromotionInfo>
-<!--		<PromotionInfo>
+		<!-- <PromotionInfo>
 			<Type>PROMOTION_BUILD_UP_SECURITY5</Type>
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_SECURITY5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>

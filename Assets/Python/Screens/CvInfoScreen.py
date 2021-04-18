@@ -985,7 +985,7 @@ class CvInfoScreen:
 				# Loop through world wonders
 				for iWW in aWonderList:
 
-					if pCity.getNumBuilding(iWW) > 0:
+					if pCity.getNumRealBuilding(iWW) > 0:
 
 						aiTempWondersList.append(iWW)
 						aiTopCitiesNumWonders[i] += 1
@@ -1092,7 +1092,7 @@ class CvInfoScreen:
 								and cityX.isRevealed(self.iTeam, False)):
 									aaWondersBeingBuilt.append([iBuildingLoop, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 
-							if (cityX.getNumBuilding(iBuildingLoop) > 0):
+							if (cityX.getNumRealBuilding(iBuildingLoop) > 0):
 								if (iTeamX == self.iTeam or self.team.isHasMet(iTeamX)):
 									aaWondersBuilt.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,True, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 								else:
@@ -1115,7 +1115,7 @@ class CvInfoScreen:
 									aaWondersBeingBuilt.append([iBuildingLoop, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 
 							# Has this city built a wonder?
-							if (cityX.getNumBuilding(iBuildingLoop) > 0):
+							if (cityX.getNumRealBuilding(iBuildingLoop) > 0):
 								if (iTeamX == self.iTeam):
 									aaWondersBuilt.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,True, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 									iNumWonders += 1

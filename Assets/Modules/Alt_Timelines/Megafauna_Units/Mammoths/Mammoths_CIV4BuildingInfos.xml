@@ -66,7 +66,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-            <Bonus>BONUS_MAMMOTH</Bonus>
+			<Bonus>BONUS_MAMMOTH</Bonus>
 			<iCost>624</iCost>
 			<iMinLatitude>40</iMinLatitude>
 			<iHealth>-1</iHealth>
@@ -194,7 +194,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-            </BuildingInfo>
+			</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MASTER_HUNTER_TRADITION</Type>
 			<BonusHappinessChanges>

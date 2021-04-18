@@ -21,8 +21,8 @@ void setIsBug()
 	g_bIsBug = true;
 
 	// set the unit and building filters to default state once Bug is available
-	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("RoMSettings__HideUntrainableUnits", false));
-	BuildingFilterList::setFilterActiveAll(BUILDING_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("RoMSettings__HideUnconstructableBuildings", false));
+	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUntrainableUnits", false));
+	BuildingFilterList::setFilterActiveAll(BUILDING_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUnconstructableBuildings", false));
 }
 
 

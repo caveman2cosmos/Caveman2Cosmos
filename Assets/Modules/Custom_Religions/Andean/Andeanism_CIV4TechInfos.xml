@@ -8,14 +8,13 @@
 			<Strategy>TXT_KEY_TECH_ANDEANISM_STRATEGY</Strategy>
 			<bGlobal>1</bGlobal>
 			<iCost>242</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_DIVINATION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_DUALISM</PrereqTech>
 				<PrereqTech>TECH_STARGAZING</PrereqTech>
+				<PrereqTech>TECH_DUALISM</PrereqTech>
 			</AndPreReqs>
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>

@@ -68,4 +68,6 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("getWonderScore", getWonderScore, "int (int /*BuildingTypes*/ eWonder)");
 
 	python::def("intSqrt", cyIntSqrt64, "int64_t (uint64_t iValue)");
+
+	python::def("getModDir", getModDir);
 }

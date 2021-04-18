@@ -24,15 +24,12 @@
 		<DefineName>SAVE_VERSION</DefineName>
 		<iDefineIntVal>302</iDefineIntVal>
 	</Define>
-
 	<!-- GRAPHICS PAGING OPTIONS -->
-
 	<!-- Start paging out if memory exceeds this amount (in KB) -->
 	<Define>
 		<DefineName>MAX_DESIRED_MEMORY_USED</DefineName>
 		<iDefineIntVal>2000000</iDefineIntVal>
 	</Define>
-
 	<!-- If specified, instead of MAX_DESIRED_MEMORY_USED, a set of test 
 		allocations will be performed to test for low memory conditions -->
 	<!-- Size of each test allocation -->
@@ -45,16 +42,16 @@
 		<DefineName>PAGING_TEST_ALLOC_NUM</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define> -->
-
 	<!-- Maximum amount of time in a frame that can be spent on paging operations.
 		Higher values mean faster paging in at the expense of more stuttering.
-	 -->
+		Currently this define is unused
+	-->
 	<Define>
-		<DefineName>PAGING_FRAME_TIME_MS</DefineName>
+		<DefineName>MAX_PAGING_FRAME_TIME_MS</DefineName>
 		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<!-- Distance in tiles at which to page in different components -->
-	 <Define>
+	<Define>
 		<DefineName>PAGE_IN_DIST_SYMBOLS</DefineName>
 		<iDefineIntVal>999</iDefineIntVal>
 	</Define>
@@ -78,12 +75,10 @@
 		<DefineName>PAGE_IN_DIST_CITY</DefineName>
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
-	
 	<!-- GRAPHICS PAGING OPTIONS END -->
-
 	<!--
  Default uses the normal tag for the language set in Civ4's option dialog.
-	     All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
+		All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
 	-->
 	<Define>
 		<DefineName>LANGUAGE</DefineName>
@@ -1099,11 +1094,11 @@
 	</Define>
 	<!--
  How is visual city size computed from the real city size?
-	     Two approaches are possible:
-	         METHOD_EXPONENTIAL
-	         METHOD_LINMAP
-	     Set the following GAME_CITY_SIZE_METHOD to one of the above tags
-	     to control how big your cities look in the game world.
+		Two approaches are possible:
+			METHOD_EXPONENTIAL
+			METHOD_LINMAP
+		Set the following GAME_CITY_SIZE_METHOD to one of the above tags
+		to control how big your cities look in the game world.
 	-->
 	<Define>
 		<DefineName>GAME_CITY_SIZE_METHOD</DefineName>
@@ -1219,9 +1214,9 @@
 	</Define>
 	<!--
  Controlling the camera's maximum distance is a bit tricky since differently-sized maps need the camera to move back different amounts
-	     There is a lower-bound on the maximum distance, specified below. Thus, the camera will never get any closer than 7000 units.
-	     To actually tweak the apparent-size of the globe when fully-back, you need to go into CIV4DetailManager.XML  and adjust the
-	     CAMERA_MAX_DISTANCE_FADER value. Because this variable is in the DetailManager XML, your changes will go into effect without restarting the game.
+		There is a lower-bound on the maximum distance, specified below. Thus, the camera will never get any closer than 7000 units.
+		To actually tweak the apparent-size of the globe when fully-back, you need to go into CIV4DetailManager.XML and adjust the
+		CAMERA_MAX_DISTANCE_FADER value. Because this variable is in the DetailManager XML, your changes will go into effect without restarting the game.
 	-->
 	<Define>
 		<DefineName>CAMERA_SMALLEST_MAX_DISTANCE</DefineName>
@@ -1592,10 +1587,6 @@
 	<Define>
 		<DefineName>LAND_UNITS_CAN_ATTACK_WATER_CITIES</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CITY_MAX_NUM_BUILDINGS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>RANGED_ATTACKS_USE_MOVES</DefineName>

@@ -10,10 +10,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_ACTIVE</Tag>
-		<English>with</English>
-		<French>avec:</French>
-		<Spanish>con</Spanish>
-		<Russian>åñëè</Russian>
+		<English>with </English>
+		<French>avec: </French>
+		<Spanish>con </Spanish>
+		<Russian>åñëè </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION</Tag>

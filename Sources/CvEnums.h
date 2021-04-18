@@ -685,25 +685,30 @@ enum WorldSizeTypes
 	NUM_WORLDSIZE_TYPES
 };
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-
 enum MapTypes
 {
 	NO_MAP = -1,
-	MAP_INITIAL,
-	MAX_MAPS = 10,
-};
 
-enum MapSwitchTypes
-{
-	NO_MAPSWITCH = -1,
-};
+	MAP_EARTH,
+	MAP_SUBTERRANEAN,
+	MAP_AQUATIC,
+	MAP_CISLUNAR,
+	MAP_LUNAR,
+	MAP_SOLAR_SYSTEM,
+	MAP_MARTIAN,
+	MAP_VENUSIAN,
+	MAP_JOVIAN,
+	MAP_TITANIC,
+	MAP_INTERSTELLAR,
+	MAP_PLASMA,
+	MAP_GALACTIC,
+	MAP_MILKY_WAY,
+	MAP_UNIVERSAL,
+	MAP_DISTANT,
+	MAP_HYPERSPACE,
 
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+	NUM_MAPS
+};
 
 // This is our current relationship with each
 // one of our connected network peers
@@ -1408,15 +1413,10 @@ enum UnitCombatTypes
 {
 	NO_UNITCOMBAT = -1,
 };
-//TB Promotion Line Mod begin
+
 enum PromotionLineTypes
 {
 	NO_PROMOTIONLINE = -1,
-};
-
-enum MapCategoryTypes
-{
-	NO_MAPCATEGORY = -1,
 };
 
 enum IdeaClassTypes
@@ -3155,11 +3155,6 @@ enum CivilopediaWidgetShowTypes
 	CIVILOPEDIA_WIDGET_SHOW_WATER,
 };
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 enum RankingTypes
 {
 	RANKING_POWER,
@@ -3176,14 +3171,11 @@ enum LandmarkTypes
 {
 	NO_LANDMARK = -1,
 	LANDMARK_BAY,
-	LANDMARK_ISLAND,
 	LANDMARK_FOREST,
 	LANDMARK_JUNGLE,
 	LANDMARK_PEAK,
 	LANDMARK_MOUNTAIN_RANGE,
-	LANDMARK_PLAINS,
 	LANDMARK_DESERT,
-	LANDMARK_OCEAN,
 	LANDMARK_LAKE,
 	NUM_LANDMARK_TYPES
 };
@@ -3194,12 +3186,9 @@ enum ModderOptionTypes
 	NO_MODDEROPTION = -1,
 
 	MODDEROPTION_FLEXIBLE_DIFFICULTY,
-	MODDEROPTION_SHOW_COASTAL_BUILDINGS,
-	MODDEROPTION_HIDE_OBSOLETE_BUILDINGS,
 	MODDEROPTION_HIDE_REPLACED_BUILDINGS,
 	MODDEROPTION_NO_FRIENDLY_PILLAGING,
 	MODDEROPTION_HIDE_UNAVAILBLE_BUILDS,
-	MODDEROPTION_HIDE_OBSOLETE_BUILDS,
 	MODDEROPTION_SHOW_REV_EFFECTS,
 	MODDEROPTION_USE_LANDMARK_NAMES,
 	MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS,
@@ -3271,9 +3260,6 @@ enum ModderGameOptionTypes
 
 	NUM_MODDERGAMEOPTION_TYPES
 };
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 // AIAndy: Game object types
 enum GameObjectTypes

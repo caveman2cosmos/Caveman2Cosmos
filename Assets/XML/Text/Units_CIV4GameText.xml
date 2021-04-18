@@ -291,7 +291,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADVENTURER_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADVENTURER_STRATEGY</Tag>
@@ -3651,7 +3650,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLIMP_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLIMP_STRATEGY</Tag>
@@ -3811,7 +3809,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOOBY</Tag>
-		<English>Blue-footed Booby</English>
+		<English>Blue-Footed Booby</English>
 		<French>Fou à pieds bleus</French>
 		<Polish>Głuptak Niebieskonogi</Polish>
 		<Russian>Îëóøà</Russian>
@@ -4059,7 +4057,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Italian>Il maggiore uso delle armi da fuoco automatiche e semiautomatiche nel tardo XIX secolo e all'inizio del XX secolo portò alla fine della cavalleria. Di conseguenza, gli attaccanti persero un vantaggio significativo sia dal punto di vista dell'esplorazione che nello spiegamento. Fu solo con lo sviluppo dei carri armati, veicoli d'attacco corazzati dotati di cannoni di grosso calibro, che venne trovata un'arma che potesse nuovamente aprire una breccia nelle truppe nemiche. Apparsi per la prima volta nella Prima Guerra Mondiale, i veicoli d'attacco corazzato si muovevano rapidamente e attaccavano con efficacia, riuscendo nel contempo a difendersi validamente. I carri armati sono potenti armi contro qualsiasi tipo di unità di terra.</Italian>
 		<Spanish>El triunfo de las armas de fuego automáticas y semiautomáticas, a finales del XIX y principios del XX, provocó el declive de la caballería. Como consecuencia, los atacantes perdieron una ventaja significativa en la exploración y el despliegue de tropas. Hasta la aparición de los tanques, vehículos blindados de ataque equipados con cañones de gran calibre, no volvió a verse un arma capaz de abrir una brecha en las líneas enemigas. Los vehículos ofensivos blindados, dotados de gran movilidad sin menoscabo de su capacidad defensiva, aparecieron por primera vez en la Primera Guerra Mundial. Los tanques son armas poderosas contra cualquier unidad de tierra.</Spanish>
 		<Polish>BTR-80 to współczesny rosyjski transporter opancerzony. W 1976 roku rozpoczęto produkcję transportera opancerzonego BTR-70. W następnych latach stał się on podstawowym pojazdem jednostek piechoty zmechanizowanej operujących w Afganistanie. BTR-70 był wozem lepszym niż BTR-60 którego zastąpił, ale okazało się że nadal posiada pewne wady. Pojazd posiadał skomplikowany system napędowy składający się z dwóch silników co zwiększało prawdopodobieństwo awarii. Krytycznie oceniano rozmieszczenie włazów do przedziału desantowego i ich niewielkie rozmiary. Dodatkowo okazało się że maksymalny kąt podniesienia uzbrojenia jest zbyt niski i niemożliwe jest zwalczanie celów położonych na stokach gór, czy dachach budynków. Napływające z Afganistanu meldunki spowodowały opracowanie zmodernizowanej wieży dla BTR-70 w której maksymalny kąt podniesienia karabinów maszynowych zwiększono do 60o, oraz rozpoczęcie prac nad jego głęboko zmodernizowana wersją pozbawioną pozostałych wad. Pierwsze prototypy nowego wozu powstały na przełomie lat 70. i 80. XX wieku. W następnych latach trwało udoskonalanie pojazdu i w 1984 roku rozpoczęto produkcję nowego transportera który otrzymał wojskowe oznaczenie BTR-80. BTR-80 jest napędzany pojedynczym silnikiem wysokoprężnym. Uzbrojenie jest umieszczone wieży identycznej z zastosowaną w późnych BTR-70. BTR-80 jest pierwszym radzieckim ośmiokołowym transporterem opancerzonym który otrzymał duże boczne drzwi przedziału desantowego. Obecnie BTR-80 jest używany w państwach powstałych po rozpadzie ZSRR.</Polish>
-		<Russian>Рост использования полуавтоматического и автоматического огнестрельного оружия в конце 19-го и начале 20-го века привел к упадку кавалерии. В результате атакующая сторона потеряла  на тот момент значительное преимущество как в разведке, так и в развертывании. Лишь с развитием танков и бронетранспортеров, оснащенных крупнокалиберными орудиями, было найдено оружие, которое могло снова пробить брешь в полевых силах противника. Впервые появившись в Первой мировой войне, броневики движутся быстро и наносят мощный удар, сохраняя при этом эффективную защиту. Танки - наиболее эффективное оружие против любого наземного отряда.</Russian>
+		<Russian>Рост использования полуавтоматического и автоматического огнестрельного оружия в конце 19-го и начале 20-го века привел к упадку кавалерии. В результате атакующая сторона потеряла на тот момент значительное преимущество как в разведке, так и в развертывании. Лишь с развитием танков и бронетранспортеров, оснащенных крупнокалиберными орудиями, было найдено оружие, которое могло снова пробить брешь в полевых силах противника. Впервые появившись в Первой мировой войне, броневики движутся быстро и наносят мощный удар, сохраняя при этом эффективную защиту. Танки - наиболее эффективное оружие против любого наземного отряда.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BTR80_STRATEGY</Tag>
@@ -4276,7 +4274,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_CAMEL_CAVALRY_PEDIA</Tag>
 		<English>Even in the age of the rifle, desert civilizations, especially those of the Sahara, found that the camel's endurance - and its sand-adapted hooves - gave it a slight edge over the horse as a mount for desert campaigns. Of course it has its disadvantages, but if camels are all that is readily available to you, you find them a very competitive substitute.</English>
 		<French>Même à l'âge du fusil, les civilisations du désert, en particulier celles du Sahara, ont constaté que l'endurance du chameau - et ses sabots adaptés au sable - lui donnait un léger avantage sur le cheval comme monture pour les campagnes dans le désert. Bien sûr, il a ses inconvénients, mais si les chameaux sont tout ce qui est à votre disposition, vous les trouvez comme un substitut très compétitif.</French>
-		<Russian>Даже в эпоху винтовок цивилизации пустынь, особенно в Сахаре, обнаружили, что выносливость верблюда и его адаптированные к песку копыта давали ему небольшое преимущество над лошадью в качестве ездового животного для походов в пустыне. Конечно, у него есть  и свои недостатки, но если верблюды - это все, что вам легко доступно, вы найдете их очень конкурентоспособной заменой.</Russian>
+		<Russian>Даже в эпоху винтовок цивилизации пустынь, особенно в Сахаре, обнаружили, что выносливость верблюда и его адаптированные к песку копыта давали ему небольшое преимущество над лошадью в качестве ездового животного для походов в пустыне. Конечно, у него есть и свои недостатки, но если верблюды - это все, что вам легко доступно, вы найдете их очень конкурентоспособной заменой.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_CAVALRY_STRATEGY</Tag>
@@ -5212,7 +5210,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_CHEROKEE_RIFLEMAN_PEDIA</Tag>
 		<English>TBD</English>
 		<French>A compléter</French>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHEYENNE_RIDER</Tag>
@@ -5372,7 +5369,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROME_INFANTRY_STRATEGY</Tag>
 		<English>The Chrome Infantry is the first genetically-enhanced infantry unit of the Transhuman era. You can expect them to give you an edge over the Modern Infantry of your rivals. Welcome... to the Future!</English>
-		<Russian>Õðîìîâàÿ ïåõîòà ÿâëÿåòñÿ ïåðâûì ãåíåòè÷åñêè óñèëåííûì ïåõîòíûì îòðäîì â  ýïîõå Òðàíñ÷åëîâåê. Âû ìîæåòå ðàññ÷èòûâàòü, ÷òî îíè äàäóò âàì ïðåèìóùåñòâî íàä ñîâðåìåííîé ïåõîòîé âàøèõ ñîïåðíèêîâ. ... Äîáðî ïîæàëîâàòü â áóäóùåå!...</Russian>
+		<Russian>Õðîìîâàÿ ïåõîòà ÿâëÿåòñÿ ïåðâûì ãåíåòè÷åñêè óñèëåííûì ïåõîòíûì îòðäîì â ýïîõå Òðàíñ÷åëîâåê. Âû ìîæåòå ðàññ÷èòûâàòü, ÷òî îíè äàäóò âàì ïðåèìóùåñòâî íàä ñîâðåìåííîé ïåõîòîé âàøèõ ñîïåðíèêîâ. ... Äîáðî ïîæàëîâàòü â áóäóùåå!...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHULALONGKORN</Tag>
@@ -5603,12 +5600,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLUBMAN_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLUBMAN_STRATEGY</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COBRA</Tag>
@@ -7260,7 +7255,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROPSHIP_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROPSHIP_STRATEGY</Tag>
@@ -10305,7 +10299,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Òàíê  «Ïàíòåðà»</Russian>
+		<Russian>Òàíê «Ïàíòåðà»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GERONIMO</Tag>
@@ -10707,7 +10701,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[ICON_BULLET]Tech: %s1_Tech Grid X: %d2_Value</English>
 		<French>[ICON_BULLET]Tech: %s1_Tech Grille X: %d2_Value</French>
 		<Polish>[ICON_BULLET]Tech: %s1_Tech Siatka X: %d2_Value</Polish>
-		<Russian>[ICON_BULLET]Техн.: %s1_Tech  Сеть X: %d2_Value</Russian>
+		<Russian>[ICON_BULLET]Техн.: %s1_Tech Сеть X: %d2_Value</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GRIVPANVAR</Tag>
@@ -18976,7 +18970,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NARBONA_PEDIA</Tag>
-		<English>[H1]Narbona[\H1][NEWLINE][BOLD]Navajo Chieftan[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] c. 1766 - August 31, 1849[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Narbona was one of the wealthiest Navajo of his time due to the amount of sheep and horses his outfit, or extended family group, owned. He was not a "chief" of all of the Navajo, the independent minded Navajo having no central authority, but he was very influential due to his status in the tribe, gained from both his wealth, high personal reputation and age at the time he negotiated with the Americans.[PARAGRAPH:1]Narbona had become one of the most prominent leaders in the aftermath of the massacre of 24 Navajo leaders in March 1822 at Jemez Pueblo who had been travelling under flag of truce to a peace conference with the new Mexican government. In February 1829 he lead the Navajo in battle against a Mexican expedition into the Chuska Mountains led by Captain Blas de Hinojos and defeated it utterly. The site of the battle, Copper Pass (Beesh Lichii'I Bigiizh), is now known as Narbona Pass.[PARAGRAPH:1]In 1849, Narbona had ridden with several hundred of his warriors to meet with a delegation led by Col. John M. Washington to discuss terms for peace between the Navajo and the "New Men", Americans who had driven the Mexicans from what is now the Southwestern United States. The US party was composed of both US Regulars and local New Mexican auxiliaries.[PARAGRAPH:1]After several misunderstandings, translators managed to work out an acceptable list of terms for peace between the two parties. As the peace council broke up, Sadoval, a young Navajo warrior of some distinction, began riding his horse to and fro, exhorting the 200-300 Navajo warriors in attendance to break the new treaty immediately, starting with the massacre of Col. Washington's command. At this point, a New Mexican officer claimed that he noticed a horse that belonged to him being ridden by one of the Navajo warriors. Navajos were great raiders of livestock, so it is entirely possible that this horse did indeed belong to the Americans. Washington, put in the position of backing one of his troopers, demanded that the horse be immediately turned over. The Navajo refused, and the horse and its rider departed.[PARAGRAPH:1]Washington commanded his troops to unlimber their cannon and prepare to fire if the Navajo refused to return the, now absent, property the Americans were claiming was stolen. The Navajo again denied his request, and the cannon as well as some rifles were fired.[PARAGRAPH:1]Narbona was mortally wounded in the fusillade. As a final indignity, according to eyewitnesses, he was also scalped by one of the New Mexico militiamen. He was buried by his sons in the traditional Navajo fashion, bound in a "death knotted" blanket and cast into a crevice. Two of his finest horses were slaughtered to ensure he would not walk to the afterlife.</English>
+		<English>[H1]Narbona[\H1][NEWLINE][BOLD]Navajo Chieftain[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] c. 1766 - August 31, 1849[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Narbona was one of the wealthiest Navajo of his time due to the amount of sheep and horses his outfit, or extended family group, owned. He was not a "chief" of all of the Navajo, the independent minded Navajo having no central authority, but he was very influential due to his status in the tribe, gained from both his wealth, high personal reputation and age at the time he negotiated with the Americans.[PARAGRAPH:1]Narbona had become one of the most prominent leaders in the aftermath of the massacre of 24 Navajo leaders in March 1822 at Jemez Pueblo who had been travelling under flag of truce to a peace conference with the new Mexican government. In February 1829 he lead the Navajo in battle against a Mexican expedition into the Chuska Mountains led by Captain Blas de Hinojos and defeated it utterly. The site of the battle, Copper Pass (Beesh Lichii'I Bigiizh), is now known as Narbona Pass.[PARAGRAPH:1]In 1849, Narbona had ridden with several hundred of his warriors to meet with a delegation led by Col. John M. Washington to discuss terms for peace between the Navajo and the "New Men", Americans who had driven the Mexicans from what is now the Southwestern United States. The US party was composed of both US Regulars and local New Mexican auxiliaries.[PARAGRAPH:1]After several misunderstandings, translators managed to work out an acceptable list of terms for peace between the two parties. As the peace council broke up, Sadoval, a young Navajo warrior of some distinction, began riding his horse to and fro, exhorting the 200-300 Navajo warriors in attendance to break the new treaty immediately, starting with the massacre of Col. Washington's command. At this point, a New Mexican officer claimed that he noticed a horse that belonged to him being ridden by one of the Navajo warriors. Navajos were great raiders of livestock, so it is entirely possible that this horse did indeed belong to the Americans. Washington, put in the position of backing one of his troopers, demanded that the horse be immediately turned over. The Navajo refused, and the horse and its rider departed.[PARAGRAPH:1]Washington commanded his troops to unlimber their cannon and prepare to fire if the Navajo refused to return the, now absent, property the Americans were claiming was stolen. The Navajo again denied his request, and the cannon as well as some rifles were fired.[PARAGRAPH:1]Narbona was mortally wounded in the fusillade. As a final indignity, according to eyewitnesses, he was also scalped by one of the New Mexico militiamen. He was buried by his sons in the traditional Navajo fashion, bound in a "death knotted" blanket and cast into a crevice. Two of his finest horses were slaughtered to ensure he would not walk to the afterlife.</English>
 		<Polish>Narbona - wódz indian Navajo z przełomu XVIII i XIX wieku.</Polish>
 	</TEXT>
 	<TEXT>
@@ -19047,7 +19041,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAJO_RIFLEMAN_PEDIA</Tag>
-		<English>[COLOR_UNIT_TEXT]Navajo Riflemans[COLOR_REVERT] are Navajo culture unit. With hidden nationality and "stealth" they are excelent strike units. They got bonus when fighting with mounted units and in desert terrain.</English>
+		<English>[COLOR_UNIT_TEXT]Navajo Riflemen[COLOR_REVERT] are Navajo culture unit. With hidden nationality and "stealth" they are excellent strike units. They got bonus when fighting with mounted units and in desert terrain.</English>
 		<Polish>Nawahowie, Nawaho - największe plemię indiańskie Ameryki Północnej liczące blisko 300 tys. osób (2000 r.). Większość z nich (około 173 tys.) zamieszkuje rezerwat położony na terenie stanów Arizona, Nowy Meksyk oraz Utah. Rezerwat (ang. The Navajo Indian Reservation) ma powierzchnię ponad 70 tys. km2, czyli równą powierzchni np. Czech. Dine Bikeyah, a więc Kraj Nawahów jest większy niż 10 z 50 stanów USA. Siedziba władz Kraju Nawaho znajduje się w Window Rock.</Polish>
 	</TEXT>
 	<TEXT>
@@ -19098,7 +19092,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NDLELA_PEDIA</Tag>
-		<English>Ndlela kaSompisi (died Feb 1840) was a key general to Zulu Kings Shaka and Dingane, and also served as Dingane's induna - his chief advisor. Senzangakona, Shaka and Dingane's father, was married to Bibi, a sister of Ndlela. Mpande was married to Ndlela's daughter Msukilethe. He was general of Dingane's forces at the Battle of Blood River, a significant defeat for the Zulus as the spears and large numbers of Zulus were unable to breach the Boer laager of Andries Pretorius defended with muskets. Neither Shaka nor Dingane had children. Mindful of the lineage of the Zulu kings, Ndlela repeatedly defied Dingane's request that he assassinate Mpande, half-brother of Shaka and Dingane as he was a threat to Dingane's power. He argued that it would diminish his greatness and that, in any case, Mpande did not aspire to the throne. The Battle of Maqongqe where the forces of Mpande and Dingane clashed in 1840 culminated in Dingane calling Ndlele a traitor. Dingane ordered his death through slow strangling with a cow hide throng, but by Ndlela's inaction he had preserved the blood line of the Zulu monarchy, as Mpande succeeded Dingane and Mpande's son Cetshwayo in turn succeeded him. All subsequent Zulu monarchs are descended from Mpande. Regardless, Ndlela is considered by Zulus to be one of their great leaders who tried his best to keep the state together.</English>
+		<English>Ndlela kaSompisi (died Feb 1840) was a key general to Zulu Kings Shaka and Dingane, and also served as Dingane's induna - his chief advisor. Senzangakona, Shaka and Dingane's father, was married to Bibi, a sister of Ndlela. Mpande was married to Ndlela's daughter Msukilethe. He was general of Dingane's forces at the Battle of Blood River, a significant defeat for the Zulus as the spears and large numbers of Zulus were unable to breach the Boer lager of Andries Pretorius defended with muskets. Neither Shaka nor Dingane had children. Mindful of the lineage of the Zulu kings, Ndlela repeatedly defied Dingane's request that he assassinate Mpande, half-brother of Shaka and Dingane as he was a threat to Dingane's power. He argued that it would diminish his greatness and that, in any case, Mpande did not aspire to the throne. The Battle of Maqongqe where the forces of Mpande and Dingane clashed in 1840 culminated in Dingane calling Ndlele a traitor. Dingane ordered his death through slow strangling with a cow hide throng, but by Ndlela's inaction he had preserved the blood line of the Zulu monarchy, as Mpande succeeded Dingane and Mpande's son Cetshwayo in turn succeeded him. All subsequent Zulu monarchs are descended from Mpande. Regardless, Ndlela is considered by Zulus to be one of their great leaders who tried his best to keep the state together.</English>
 		<Polish>Ndlela kaSompisi (zm. luty 1840) był głównym generałem na służbie królów Zulusów Czaki i Dingane, słuzył również jako główny doradca Dingany. Senzangakona, ojciec Czaki i Dingane był żonaty z Bibi, siostrą Ndleli. Był głównodowodzącym siłami zuluskim w bitwie pod Krwawą Rzeką, która przyniosła zwycięstwo Burom i śmierć trzech tysięcy zuluskich wojowników.</Polish>
 	</TEXT>
 	<TEXT>
@@ -19523,7 +19517,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NLOS_CANNON_PEDIA</Tag>
 		<English>The XM1203 Non-Line-of-Sight Cannon (NLOS Cannon) was a mobile 155 mm cannon intended to provide improved responsiveness and lethality to the "unit of action" (UA) commander as part of the US Army's Future Combat Systems project. This self-propelled armored artillery piece provided networked, extended-range targeting, and precision attack of point and area targets in support of other combat units with a suite of munitions that include special purpose capabilities. The Non-Line-of-Sight Cannon provided sustained fire for close support and destructive fire for tactical standoff engagement. The NLOS Cannon used technology from the canceled XM2001 Crusader.</English>
-		<Russian>Пушка XM1203 Non-Line-of-Sight Cannon (САУ NLOS) является самоходной 155-мм гаубицей, предназначенной для обеспечения повышенной точности и летальности «боевого расчета» (АЕ) в рамках проекта «Боевые Системы Будущего» армии США. Эта самоходная артиллерийская установка обеспечивала сетевое целеуказание с увеличенной дальностью и высокоточную атаку точечных и площадных целей в поддержку других боевых единиц с помощью набора боеприпасов, которые включают средства специального назначения. Пушка вне зоны видимости обеспечивала непрерывный огонь для непосредственной поддержки и разрушительный огонь для тактического противостояния. Для САУ NLOS  использовалась технология устаревшей гаубицы XM2001 Crusader.</Russian>
+		<Russian>Пушка XM1203 Non-Line-of-Sight Cannon (САУ NLOS) является самоходной 155-мм гаубицей, предназначенной для обеспечения повышенной точности и летальности «боевого расчета» (АЕ) в рамках проекта «Боевые Системы Будущего» армии США. Эта самоходная артиллерийская установка обеспечивала сетевое целеуказание с увеличенной дальностью и высокоточную атаку точечных и площадных целей в поддержку других боевых единиц с помощью набора боеприпасов, которые включают средства специального назначения. Пушка вне зоны видимости обеспечивала непрерывный огонь для непосредственной поддержки и разрушительный огонь для тактического противостояния. Для САУ NLOS использовалась технология устаревшей гаубицы XM2001 Crusader.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NLOS_CANNON_STRATEGY</Tag>
@@ -24823,7 +24817,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_SIEGE_DROID_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Siege Droid[COLOR_REVERT] its powerful version of Assault Droid, unit which is specialized in siege. Can bombard cities and cause collateral damage.</English>
 		<French>Le [COLOR_UNIT_TEXT]Droïde de Siège[COLOR_REVERT] est une puissante version du Droïde d'Assaut, unité spécialisée dans le siège. Peut bombarder des villes et causer des dommages collatéraux.</French>
-		<Russian>[COLOR_UNIT_TEXT]Осадный дроид[COLOR_REVERT] - более мощная версия Штурмового дроида,  специализирующаяся на осаде. Может обстреливать города и нанести побочный ущерб окопавшемуся противнику.</Russian>
+		<Russian>[COLOR_UNIT_TEXT]Осадный дроид[COLOR_REVERT] - более мощная версия Штурмового дроида, специализирующаяся на осаде. Может обстреливать города и нанести побочный ущерб окопавшемуся противнику.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIEGE_ELEPHANT</Tag>
@@ -26597,7 +26591,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
-		<Russian>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Emu[NEWLINE][ICON_BULLET]Myths of Sky, Flightless Birds and Birds[NEWLINE][ICON_BULLET]Êëåòêè è âîëüåðû ñ ïòèöàìè[NEWLINE][ICON_BULLET]Ratite Flock and Feather Worker</Russian>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Emu[NEWLINE][ICON_BULLET]Myths of Sky, Flightless Birds and Birds[NEWLINE][ICON_BULLET]Êëåòêè è âîëüåðû ñ ïòèöàìè[NEWLINE][ICON_BULLET]Ratite Flock and Feather Worker</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN</Tag>
@@ -29721,7 +29715,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIRACOCHA_PEDIA</Tag>
-		<English>Viracocha is the great creator god in the pre-Inca and Inca mythology in the Andes region of South America. Full name and some spelling alternatives are Wiracocha,Apu Qun Tiqsi Wiraqutra, and Con-Tici Viracocha. Viracocha was one of the most important deities in the Inca pantheon and seen as the creator of all things, or the substance from which all things are created, and intimately associated with the sea. Viracocha created the 	universe, sun, moon, and stars, and time by commanding the sun to move over the sky and civilization itself. Viracocha was worshipped as god of the sun and of storms. He was represented as wearing the sun for a crown, with 	thunderbolts in his hands, and tears descending from his eyes as rain.</English>
+		<English>Viracocha is the great creator god in the pre-Inca and Inca mythology in the Andes region of South America. Full name and some spelling alternatives are Wiracocha,Apu Qun Tiqsi Wiraqutra, and Con-Tici Viracocha. Viracocha was one of the most important deities in the Inca pantheon and seen as the creator of all things, or the substance from which all things are created, and intimately associated with the sea. Viracocha created the	universe, sun, moon, and stars, and time by commanding the sun to move over the sky and civilization itself. Viracocha was worshipped as god of the sun and of storms. He was represented as wearing the sun for a crown, with	thunderbolts in his hands, and tears descending from his eyes as rain.</English>
 		<Polish>"Wirakocza to Bóg wielki twórca w pre-Inków i wierzenia Inków w regionie Andów w Ameryce Południowej. Imię inazwisko i kilka alternatywnych pisowni są Wiracocha, Apu Qun Tiqsi Wiraqutra i Con-Tici Viracocha. Viracocha byłjednym z najważniejszych bóstw Panteonu Inków i postrzegane jako Stwórca wszystkich rzeczy, lub substancji, z którychwszystkie rzeczy są tworzone i ściśle związane z morzem. Viracocha stworzył wszechświat, słońca, księżyca i gwiazd i czasprzez komendanta na słońcu, aby przenieść na niebo i sama cywilizacja. Viracocha był czczony jako Bóg słońca i burz. Byłon reprezentowany jako sobie słońce dla korony, z thunderbolts w jego ręce, a łzy malejąco od jego oczy jak deszcz."</Polish>
 	</TEXT>
 	<TEXT>
@@ -30185,69 +30179,15 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIIIS</Tag>
-		<English>Great Corporal</English>
-		<French>Caporal Illustre</French>
-		<German>
-			<Text>Great Corporal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Caporale illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran alférez</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Kapral</Polish>
-		<Russian>Âåëèêèé êàïðàë</Russian>
+		<English>Captured Corporal</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIIS</Tag>
-		<English>Great Captain</English>
-		<French>Capitaine Illustre</French>
-		<German>
-			<Text>Great Captain</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Capitano illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran capitán</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Kapitan</Polish>
-		<Russian>Âåëèêèé ïîëêîâîäåö</Russian>
+		<English>Captured Captain</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIS</Tag>
-		<English>Great Chief</English>
-		<French>Chef Illustre</French>
-		<German>
-			<Text>Great Chief</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Capo illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran cabo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Wódz</Polish>
-		<Russian>Âåëèêèé âîæäü</Russian>
+		<English>Captured Chief</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIV</Tag>
@@ -30273,25 +30213,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIVS</Tag>
-		<English>Great Colonel</English>
-		<French>Colonel Illustre</French>
-		<German>
-			<Text>Great Colonel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Colonnello illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran coronel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Pułkownik</Polish>
-		<Russian>Âåëèêèé ïîëêîâíèê</Russian>
+		<English>Captured Colonel</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDV</Tag>
@@ -30317,47 +30239,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVS</Tag>
-		<English>Great Commander</English>
-		<French>Commandant Illustre</French>
-		<German>
-			<Text>Great Commander</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Comandante illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran comandante</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wielki Komandor</Polish>
-		<Russian>Âåëèêèé êîìàíäèð</Russian>
+		<English>Captured Commander</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORD_VASSAL</Tag>
-		<English>Warlord Vassal</English>
-		<French>Vassal combattant</French>
-		<German>
-			<Text>Warlord Vassal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Vassallo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Vasallo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Dowódca Wasal</Polish>
-		<Russian>Âàññàë</Russian>
+		<English>Aristocrat</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORD_VASSAL_PEDIA</Tag>

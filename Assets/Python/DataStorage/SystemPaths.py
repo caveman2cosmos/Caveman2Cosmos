@@ -1,4 +1,5 @@
 # Data storage python, values are set in CvEventManager.onInit.
+from CvPythonExtensions import getModDir
 from os import path, mkdir
 
 def init():
@@ -32,6 +33,7 @@ def init():
 	dirBtS = path.dirname(sys.executable).encode('utf-8')
 
 	modDir = dirBtS + "\\Mods\\Caveman2Cosmos"
+	#modDir = getModDir()
 
 	# Create UserSettings folders if missing.
 	userSettingsDir = modDir + "\\UserSettings"
@@ -59,3 +61,6 @@ def initUserSettingsDir():
 
 def isFile(aPath):
 	return path.isfile(aPath)
+
+def joinModDir(*paths):
+	return path.join(modDir, *paths)

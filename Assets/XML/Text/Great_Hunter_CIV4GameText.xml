@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_TRADITION</Tag>
-		<English>Master Hunter Tradition</English>
+		<English>Unit Reward - Master Hunter Tradition</English>
 		<French>Traditions du Maître Chasseur</French>
 		<German>Tradition des Meisterjägers</German>
 		<Polish>Tradycje Wybitnego Łowcy</Polish>

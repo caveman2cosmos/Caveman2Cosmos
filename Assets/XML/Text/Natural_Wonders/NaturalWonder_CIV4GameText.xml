@@ -10,17 +10,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORAL_MYTH</Tag>
-		<English>Myth - Coral Reef</English>
+		<English>Myth (L) - Coral Reef</English>
 		<French>Mythe du Récif de corail</French>
 		<Polish>Mit Rafy Koralowej</Polish>
 		<Russian>Ìèô î êîðàë. ðèôå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CORAL_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Coral Reef</English>
+		<Russian>Ïåñíÿ î êîðàë. ðèôå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FALL_MYTH</Tag>
-		<English>Myth - Stone from the Sky</English>
+		<English>Myth (L) - Stone from the Sky</English>
 		<French>Mythe de la Pierre venue du ciel</French>
 		<Polish>Mit Skały z niebios</Polish>
 		<Russian>Ìèô î íåáåñíîì êàìíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FALL_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Stone from the Sky</English>
+		<Russian>Ïåñíÿ î íåáåñíîì êàìíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATURAL_WONDER_AUYANTEPUI</Tag>
@@ -507,31 +517,51 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OASIS_MYTH</Tag>
-		<English>Myth - Oasis</English>
+		<English>Myth (L) - Oasis</English>
 		<French>Mythe de l'Oasis</French>
 		<Polish>Mit Oazy</Polish>
 		<Russian>Ìèô îá îàçèñå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OASIS_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Oasis</English>
+		<Russian>Ïåñíÿ îá îàçèñå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OUTCROP_MYTH</Tag>
-		<English>Myth - Landform</English>
+		<English>Myth (L) - Landform</English>
 		<French>Mythe de la Formation de la terre</French>
 		<Polish>Mit Form Skalnych</Polish>
 		<Russian>Ìèô î ôîðìå Çåìëè</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OUTCROP_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Landform</English>
+		<Russian>Ïåñíÿ î ôîðìå Çåìëè</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_MYTH</Tag>
-		<English>Myth - Reef</English>
+		<English>Myth (L) - Reef</English>
 		<French>Mythe du Récif</French>
 		<Polish>Mit Rafy</Polish>
 		<Russian>Ìèô î ðèôå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REEF_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Reef</English>
+		<Russian>Ïåñíÿ î ðèôå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VOLCANO_MYTH</Tag>
-		<English>Myth - Volcano</English>
+		<English>Myth (L) - Volcano</English>
 		<French>Mythe du Volcan</French>
 		<Polish>Mit Wulkanu</Polish>
 		<Russian>Ìèô î âóëêàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_VOLCANO_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Volcano</English>
+		<Russian>Ïåñíÿ î âóëêàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_GREAT_BARRIER_REEF</Tag>

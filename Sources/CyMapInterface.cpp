@@ -13,12 +13,9 @@ void CyMapPythonInterface()
 	OutputDebugString("Python Extension Module - CyMapPythonInterface\n");
 
 	python::class_<CyMap>("CyMap")
-		.def("isNone", &CyMap::isNone, "bool () - valid CyMap() interface")
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 		.def("getType", &CyMap::getType, "int ()")
+
+		.def("plotsInitialized", &CyMap::plotsInitialized)
 
 		.def("viewportsEnabled", &CyMap::viewportsEnabled, "bool ()")
 		.def("getViewportWidth", &CyMap::getViewportWidth, "int ()")
@@ -31,9 +28,6 @@ void CyMapPythonInterface()
 
 		.def("closeAdvisor", &CyMap::closeAdvisor, "void (int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)")
 		.def("bringIntoView", &CyMap::bringIntoView, "void (int iX, int iY, bool bDisplayCityScreen)")
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 		.def("erasePlots", &CyMap::erasePlots, "() - erases the plots")
 		.def("setRevealedPlots", &CyMap::setRevealedPlots, "void (int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly) - reveals the plots to eTeam")

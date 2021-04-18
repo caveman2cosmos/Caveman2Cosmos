@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIRD_DANCE</Tag>
-		<English>Dance - Bird</English>
+		<English>Unit Reward - Dance (Bird)</English>
 		<French>Danse des Oiseaux</French>
 		<Russian>Òàíåö ïòèöû</Russian>
 	</TEXT>
@@ -20,7 +20,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOX_DANCE</Tag>
-		<English>Dance - Fox</English>
+		<English>Unit Reward - Dance (Fox)</English>
 		<French>Danse du Renard</French>
 		<Russian>Òàíåö ëèñû</Russian>
 	</TEXT>

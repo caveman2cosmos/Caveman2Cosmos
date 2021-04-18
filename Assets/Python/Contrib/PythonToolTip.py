@@ -1,9 +1,50 @@
 from CvPythonExtensions import *
 
-import ScreenResolution as RES
+import ScreenResolution as SR
 
-GC = CyGlobalContext()
 CyIF = CyInterface()
+
+
+class PythonToolTip:
+	def __init__(self):
+		self.szTextTT = None
+		self.iOffsetTT = [0, 0]
+		self.bLockedTT = False
+
+	def handle(self, screen, szText = None, xPos = -1, yPos = -1, uFont = ""):
+		if not szText:
+			# None means something, while sending in an empty string is a fluke.
+			if szText is None:
+				# Move tooltip to cursor
+				POINT = Win32.getCursorPos()
+				iX = POINT.x + self.iOffsetTT[0]
+				iY = POINT.y + self.iOffsetTT[1]
+				if iX < 0: iX = 0
+				if iY < 0: iY = 0
+				screen.moveItem("Tooltip", iX, iY, 0)
+			return
+
+		if szText != self.szTextTT:
+			self.szTextTT = szText
+			if not uFont:
+				uFont = SR.aFontList[5]
+			iX, iY = makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
+			POINT = Win32.getCursorPos()
+			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
+
+		else: # Already cached, move tooltip to cursor and make it visible
+			if xPos == yPos == -1:
+				POINT = Win32.getCursorPos()
+				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
+			screen.moveToFront("Tooltip")
+			screen.show("Tooltip")
+
+		self.bLockedTT = xPos == yPos == -1
+
+
+	def reset(self, screen):
+		screen.hide("Tooltip")
+		self.bLockedTT = False
 
 def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 	bSetX = False
@@ -16,8 +57,8 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 			xPos = POINT.x
 		if bSetY:
 			yPos = POINT.y
-	xRes = RES.x
-	yRes = RES.y
+	xRes = SR.x
+	yRes = SR.y
 
 	# Remove font literals
 	i1 = szTxt.find("<font=")
