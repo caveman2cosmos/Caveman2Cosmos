@@ -10,14 +10,6 @@
 			<Type>PROMOTIONLINE_WIND_HORSE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_WIND_HORSE</Description>
 			<Button>Art/Interface/Buttons/Promotions/Windhorse1.dds</Button>
-			<NotOnGameOptions/>
-			<UnitCombatPrereqTypes/>
-			<NotOnUnitCombatTypes/>
-			<PrereqTech/>
-			<ObsoleteTech/>
-			<bAffliction>0</bAffliction>
-			<bEquipment>0</bEquipment>
-			<bCritical>0</bCritical>
 		</PromotionLineInfo>
 	</PromotionLineInfos>
 </Civ4PromotionLineInfos>

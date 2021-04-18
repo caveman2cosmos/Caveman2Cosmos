@@ -10,14 +10,6 @@
 			<Type>PROMOTIONLINE_BUSHIDO</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_BUSHIDO</Description>
 			<Button>Art/Interface/Buttons/Promotions/Bushido1.dds</Button>
-			<NotOnGameOptions/>
-			<UnitCombatPrereqTypes/>
-			<NotOnUnitCombatTypes/>
-			<PrereqTech/>
-			<ObsoleteTech/>
-			<bAffliction>0</bAffliction>
-			<bEquipment>0</bEquipment>
-			<bCritical>0</bCritical>
 		</PromotionLineInfo>
 	</PromotionLineInfos>
 </Civ4PromotionLineInfos>
