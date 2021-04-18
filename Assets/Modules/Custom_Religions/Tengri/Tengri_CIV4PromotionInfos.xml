@@ -15,12 +15,6 @@
 			<iFirstStrikesChange>1</iFirstStrikesChange>
 			<iPillageChange>10</iPillageChange>
 			<iExperiencePercent>10</iExperiencePercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Windhorse1.dds</Button>
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
@@ -36,12 +30,6 @@
 			<iFirstStrikesChange>1</iFirstStrikesChange>
 			<iPillageChange>15</iPillageChange>
 			<iExperiencePercent>15</iExperiencePercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Windhorse2.dds</Button>
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>

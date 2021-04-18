@@ -43,24 +43,6 @@
 			<PromotionLine>PROMOTIONLINE_BUSHIDO</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iRevoltProtection>10</iRevoltProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Bushido1.dds</Button>
 			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -75,24 +57,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iRevoltProtection>15</iRevoltProtection>
 			<iPillageChange>10</iPillageChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Bushido2.dds</Button>
 			<iCaptureResistanceModifierChange>15</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -108,24 +72,6 @@
 			<iRevoltProtection>25</iRevoltProtection>
 			<iPillageChange>15</iPillageChange>
 			<iUpgradeDiscount>10</iUpgradeDiscount>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Bushido3.dds</Button>
 			<iCaptureResistanceModifierChange>25</iCaptureResistanceModifierChange>
 		</PromotionInfo>
