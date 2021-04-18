@@ -25274,7 +25274,6 @@
 			<Type>PROMOTION_FOMENT1</Type>
 			<Description>TXT_KEY_PROMOTION_FOMENT1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FOMENT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iRevoltProtection>-10</iRevoltProtection>
@@ -25445,7 +25444,6 @@
 			<Type>PROMOTION_INSPIRE1</Type>
 			<Description>TXT_KEY_PROMOTION_INSPIRE1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_INSPIRE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iRevoltProtection>10</iRevoltProtection>
@@ -25743,7 +25741,6 @@
 			<Type>PROMOTION_ARMED_GUARD1</Type>
 			<Description>TXT_KEY_PROMOTION_ARMED_GUARD1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ARMED_GUARD</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<SubCombatChangeTypes>
@@ -25773,7 +25770,6 @@
 			<Type>PROMOTION_ARMED_GUARD2</Type>
 			<Description>TXT_KEY_PROMOTION_ARMED_GUARD2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ARMED_GUARD</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iDefenseCombatModifierChange>10</iDefenseCombatModifierChange>
@@ -25800,7 +25796,6 @@
 			<Type>PROMOTION_ARMED_GUARD3</Type>
 			<Description>TXT_KEY_PROMOTION_ARMED_GUARD3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ARMED_GUARD</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iDefenseCombatModifierChange>10</iDefenseCombatModifierChange>
@@ -25827,7 +25822,6 @@
 			<Type>PROMOTION_ARMED_GUARD4</Type>
 			<Description>TXT_KEY_PROMOTION_ARMED_GUARD4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ARMED_GUARD</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iDefenseCombatModifierChange>10</iDefenseCombatModifierChange>
@@ -25854,7 +25848,6 @@
 			<Type>PROMOTION_ARMED_GUARD5</Type>
 			<Description>TXT_KEY_PROMOTION_ARMED_GUARD5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ARMED_GUARD</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iDefenseCombatModifierChange>10</iDefenseCombatModifierChange>
@@ -25881,7 +25874,6 @@
 			<Type>PROMOTION_DECOYS1</Type>
 			<Description>TXT_KEY_PROMOTION_DECOYS1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_DECOYS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<UnitCombatMods>
@@ -25904,7 +25896,6 @@
 			<Type>PROMOTION_DECOYS2</Type>
 			<Description>TXT_KEY_PROMOTION_DECOYS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_DECOYS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<UnitCombatMods>
@@ -25927,7 +25918,6 @@
 			<Type>PROMOTION_DECOYS3</Type>
 			<Description>TXT_KEY_PROMOTION_DECOYS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_DECOYS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<UnitCombatMods>
@@ -25950,7 +25940,6 @@
 			<Type>PROMOTION_ENCLOSE1</Type>
 			<Description>TXT_KEY_PROMOTION_ENCLOSE1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ENCLOSE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<UnitCombatMods>
@@ -25979,7 +25968,6 @@
 			<Type>PROMOTION_ENCLOSE2</Type>
 			<Description>TXT_KEY_PROMOTION_ENCLOSE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ENCLOSE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<UnitCombatMods>
@@ -26008,7 +25996,6 @@
 			<Type>PROMOTION_ENCLOSE3</Type>
 			<Description>TXT_KEY_PROMOTION_ENCLOSE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ENCLOSE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<UnitCombatMods>
@@ -26037,7 +26024,6 @@
 			<Type>PROMOTION_FIGHT_THE_POWER1</Type>
 			<Description>TXT_KEY_PROMOTION_FIGHT_THE_POWER1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FIGHT_THE_POWER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<UnitCombatMods>
@@ -26052,7 +26038,6 @@
 			<Type>PROMOTION_FIGHT_THE_POWER2</Type>
 			<Description>TXT_KEY_PROMOTION_FIGHT_THE_POWER2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FIGHT_THE_POWER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<UnitCombatMods>
@@ -26067,7 +26052,6 @@
 			<Type>PROMOTION_FIGHT_THE_POWER3</Type>
 			<Description>TXT_KEY_PROMOTION_FIGHT_THE_POWER3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FIGHT_THE_POWER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<UnitCombatMods>
@@ -26082,7 +26066,6 @@
 			<Type>PROMOTION_LONG_ARM1</Type>
 			<Description>TXT_KEY_PROMOTION_LONG_ARM1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_LONG_ARM</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<UnitCombatMods>
@@ -26101,7 +26084,6 @@
 			<Type>PROMOTION_LONG_ARM2</Type>
 			<Description>TXT_KEY_PROMOTION_LONG_ARM2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_LONG_ARM</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<UnitCombatMods>
@@ -26120,7 +26102,6 @@
 			<Type>PROMOTION_LONG_ARM3</Type>
 			<Description>TXT_KEY_PROMOTION_LONG_ARM3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_LONG_ARM</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<UnitCombatMods>
@@ -26139,7 +26120,6 @@
 			<Type>PROMOTION_HUNTING_STRIKE1</Type>
 			<Description>TXT_KEY_PROMOTION_HUNTING_STRIKE1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
@@ -26153,7 +26133,6 @@
 			<Type>PROMOTION_HUNTING_STRIKE2</Type>
 			<Description>TXT_KEY_PROMOTION_HUNTING_STRIKE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
@@ -26166,7 +26145,6 @@
 			<Type>PROMOTION_HUNTING_STRIKE3</Type>
 			<Description>TXT_KEY_PROMOTION_HUNTING_STRIKE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
@@ -26180,7 +26158,6 @@
 			<Type>PROMOTION_HUNTING_STRIKE4</Type>
 			<Description>TXT_KEY_PROMOTION_HUNTING_STRIKE4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
@@ -26193,7 +26170,6 @@
 			<Type>PROMOTION_HUNTING_STRIKE5</Type>
 			<Description>TXT_KEY_PROMOTION_HUNTING_STRIKE5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
@@ -30386,7 +30362,6 @@
 			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SECURITY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<iVisibilityChange>0</iVisibilityChange>
 			<iInterceptChange>5</iInterceptChange>
 			<Button>,Art/Interface/Buttons/Promotions/Security3BuildUp.dds</Button>
 		</PromotionInfo>
@@ -30398,7 +30373,6 @@
 			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SECURITY</PromotionLine>
 			<iLinePriority>4</iLinePriority>
-			<iVisibilityChange>0</iVisibilityChange>
 			<iInterceptChange>5</iInterceptChange>
 			<Button>,Art/Interface/Buttons/Promotions/Security4BuildUp.dds</Button>
 		</PromotionInfo>
