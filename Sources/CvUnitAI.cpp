@@ -1971,11 +1971,11 @@ void CvUnitAI::AI_workerMove()
 	{
 		return;
 	}
-	// XXX could be trouble...
+	// If worker (or captive) cannot defend itself, and is outside own borders.
 	if (!getGroup()->canDefend() && plot()->getOwner() != getOwner())
 	{
 		// Look for a local group we can join to be safe!
-		AI_setLeaderPriority(LEADER_PRIORITY_MAX); // We don't want to take control
+		AI_setLeaderPriority(LEADER_PRIORITY_MAX); // We do want to take control (otherwise other unit decides where this worker goes, and can go further away)
 		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
 		{
 			return;
@@ -11409,17 +11409,17 @@ void CvUnitAI::AI_EscortMove()
 		return;
 	}
 
-	getGroup()->pushMission(MISSION_SKIP);
+	this->getGroup()->pushMission(MISSION_SKIP);
 }
-
+bool CvUnitAI::AI_retreatIfCantDefend(){
+	return (!getGroup()->canDefend() && GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot())&& AI_retreatToCity())
+}
 
 void CvUnitAI::AI_networkAutomated()
 {
 	FAssertMsg(canBuildRoute(), "canBuildRoute is expected to be true");
 
-	if (!getGroup()->canDefend() && GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot())
-	// XXX maybe not do this??? could be working productively somewhere else...
-	&& AI_retreatToCity())
+	if (AI_retreatIfCantDefend())
 	{
 		return;
 	}
