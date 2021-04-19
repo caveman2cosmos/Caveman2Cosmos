@@ -686,22 +686,6 @@
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
 			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Berzerker1.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,6,2</Button>
 		</PromotionInfo>
@@ -716,24 +700,6 @@
 			<iAttackCombatModifierChange>20</iAttackCombatModifierChange>
 			<iCaptureProbabilityModifierChange>-10</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Berzerker2.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,7,2</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -747,24 +713,6 @@
 			<iAttackCombatModifierChange>35</iAttackCombatModifierChange>
 			<iCaptureProbabilityModifierChange>-15</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>15</iCaptureResistanceModifierChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Berzerker3.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,8,2</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1235,28 +1183,6 @@
 			<PromotionLine>PROMOTIONLINE_NAVIGATION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iMovesChange>1</iMovesChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Navigation1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,7,4</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1267,28 +1193,6 @@
 			<PromotionLine>PROMOTIONLINE_NAVIGATION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iMovesChange>1</iMovesChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Navigation2.dds,Art/Interface/Buttons/Promotions_Atlas.dds,8,4</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1310,28 +1214,6 @@
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 			</FeatureDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Navigation3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1382,26 +1264,12 @@
 			<TechPrereq>TECH_SHIP_BUILDING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_TROOPS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_EXPLORER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_CAPTIVES</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>100</iSMCargoChange>
 			<iCombatPercent>-20</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportTroops1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1411,26 +1279,12 @@
 			<TechPrereq>TECH_SHIP_BUILDING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_TROOPS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_EXPLORER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_CAPTIVES</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>100</iSMCargoChange>
 			<iCombatPercent>-20</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportTroops2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1440,26 +1294,12 @@
 			<TechPrereq>TECH_SHIP_BUILDING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_TROOPS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_EXPLORER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_CAPTIVES</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>100</iSMCargoChange>
 			<iCombatPercent>-20</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportTroops3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1512,24 +1352,12 @@
 			<TechPrereq>TECH_SHIP_BUILDING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_PEOPLE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
 			<iCombatPercent>-5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportPeople1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1539,24 +1367,12 @@
 			<TechPrereq>TECH_SHIP_BUILDING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_PEOPLE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
 			<iCombatPercent>-5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportPeople2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1566,24 +1382,12 @@
 			<TechPrereq>TECH_SHIP_BUILDING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_PEOPLE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
 			<iCombatPercent>-5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportPeople3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1632,21 +1436,12 @@
 			<TechPrereq>TECH_ROCKETRY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_MISSILES</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_TRANSPORT</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
 			<iCombatPercent>-5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportMissiles1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1656,21 +1451,12 @@
 			<TechPrereq>TECH_ROCKETRY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_MISSILES</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_TRANSPORT</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
 			<iCombatPercent>-5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportMissiles2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1680,21 +1466,12 @@
 			<TechPrereq>TECH_ROCKETRY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_MISSILES</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_TRANSPORT</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
 			<iCombatPercent>-5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportMissiles3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1748,21 +1525,12 @@
 			<TechPrereq>TECH_FLIGHT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_SEAPLANES</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SUBMARINE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
 			<iCombatPercent>-10</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportSeaplanes1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1772,21 +1540,12 @@
 			<TechPrereq>TECH_FLIGHT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_SEAPLANES</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SUBMARINE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
 			<iCombatPercent>-10</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportSeaplanes2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1796,21 +1555,12 @@
 			<TechPrereq>TECH_FLIGHT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_SEAPLANES</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_SUBMARINE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
 			<iCombatPercent>-10</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportSeaplanes3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1863,25 +1613,12 @@
 			<TechPrereq>TECH_FLIGHT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_FIGHTERS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_CRUISER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_SUBMARINE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_DESTROYER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_BATTLESHIP</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_TRANSPORT</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
 			<iCombatPercent>-15</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportFighters1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1891,25 +1628,12 @@
 			<TechPrereq>TECH_FLIGHT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_FIGHTERS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_CRUISER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_SUBMARINE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_DESTROYER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_BATTLESHIP</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_TRANSPORT</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
 			<iCombatPercent>-15</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportFighters2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1919,25 +1643,12 @@
 			<TechPrereq>TECH_FLIGHT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_FIGHTERS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_CRUISER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_SUBMARINE</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_DESTROYER</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_BATTLESHIP</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_TRANSPORT</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
 			<iCombatPercent>-15</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Buttons/Promotions/TransportFighters3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1956,18 +1667,6 @@
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
@@ -1991,18 +1690,6 @@
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
 			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Cruiser_transport.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,2,13</Button>
 		</PromotionInfo>
@@ -2019,20 +1706,6 @@
 			<iMovesChange>-1</iMovesChange>
 			<iCargoChange>1</iCargoChange>
 			<iCombatPercent>-20</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Battleship_transport.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,1,13</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -2065,84 +1738,6 @@
 			<PromotionLine>PROMOTIONLINE_COMBAT</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iCombatPercent>10</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Combat3.dds,Art/Interface/Buttons/Promotions_Atlas.dds,2,6</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -2156,80 +1751,6 @@
 				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<iCombatPercent>10</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Combat4.dds,Art/Interface/Buttons/Promotions_Atlas.dds,3,6</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -2240,80 +1761,6 @@
 			<PromotionLine>PROMOTIONLINE_COMBAT</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iCombatPercent>10</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Combat5.dds,Art/Interface/Buttons/Promotions_Atlas.dds,4,6</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -2326,80 +1773,6 @@
 			<iLinePriority>6</iLinePriority>
 			<!--TB Mod End -->
 			<iCombatPercent>25</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Combat6.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,7,3</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -2545,12 +1918,6 @@
 					<iUnitCombatMod>40</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/hunter2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -2573,12 +1940,6 @@
 					<iUnitCombatMod>55</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/hunter3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -2598,12 +1959,6 @@
 					<iUnitCombatMod>30</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/hunter4.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -2802,20 +2157,6 @@
 			<PromotionLine>PROMOTIONLINE_AIR_TO_AIR</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iInterceptChange>10</iInterceptChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_JET_FIGHTERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUPERSONIC_PLANES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEALTH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/jetplane.dds,Art/RoM_Promotions_atlas.dds,1,2</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -2827,20 +2168,6 @@
 			<PromotionLine>PROMOTIONLINE_AIR_TO_AIR</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iInterceptChange>10</iInterceptChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_JET_FIGHTERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUPERSONIC_PLANES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEALTH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/jetplane.dds,Art/RoM_Promotions_atlas.dds,2,2</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -2852,20 +2179,6 @@
 			<iLinePriority>3</iLinePriority>
 			<iAirRangeChange>-1</iAirRangeChange>
 			<iInterceptChange>15</iInterceptChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_JET_FIGHTERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUPERSONIC_PLANES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEALTH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/jetplane.dds,Art/RoM_Promotions_atlas.dds,3,2</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -2876,60 +2189,6 @@
 			<PromotionLine>PROMOTIONLINE_DRILL</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Drill1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,2,3</Button>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -2943,60 +2202,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Drill2.dds,Art/Interface/Buttons/Promotions_Atlas.dds,3,3</Button>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -3010,60 +2215,6 @@
 			<iLinePriority>3</iLinePriority>
 			<iChanceFirstStrikesChange>2</iChanceFirstStrikesChange>
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Drill3.dds,Art/Interface/Buttons/Promotions_Atlas.dds,4,3</Button>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -3077,60 +2228,6 @@
 			<iLinePriority>4</iLinePriority>
 			<iFirstStrikesChange>1</iFirstStrikesChange>
 			<iCollateralDamageProtection>15</iCollateralDamageProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Drill4.dds,Art/Interface/Buttons/Promotions_Atlas.dds,5,3</Button>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -3143,60 +2240,6 @@
 			<iLinePriority>5</iLinePriority>
 			<iFirstStrikesChange>1</iFirstStrikesChange>
 			<iCollateralDamageProtection>20</iCollateralDamageProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/drill5.dds</Button>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -3217,56 +2260,6 @@
 			<PromotionLine>PROMOTIONLINE_FLANKING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iWithdrawalChange>15</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Flanking2.dds,Art/Interface/Buttons/Promotions_Atlas.dds,7,3</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -3278,56 +2271,6 @@
 			<iLinePriority>3</iLinePriority>
 			<bImmuneToFirstStrikes>1</bImmuneToFirstStrikes>
 			<iWithdrawalChange>15</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Flanking3.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,5,5</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -3405,36 +2348,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<IgnoreTerrainDamage>TERRAIN_DESERT</IgnoreTerrainDamage>
 			<Button>,Art/Interface/Buttons/Promotions/Warmth1.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,7,12</Button>
 		</PromotionInfo>
@@ -3467,36 +2380,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<IgnoreTerrainDamage>TERRAIN_DUNES</IgnoreTerrainDamage>
 			<Button>,Art/Interface/Buttons/Promotions/Warmth2.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,8,12</Button>
 		</PromotionInfo>
@@ -3529,36 +2412,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<IgnoreTerrainDamage>TERRAIN_SALT_FLATS</IgnoreTerrainDamage>
 			<Button>art/Tweaks/art/desertcombat3.dds</Button>
 		</PromotionInfo>
@@ -3591,40 +2444,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<IgnoreTerrainDamage>TERRAIN_TAIGA</IgnoreTerrainDamage>
 			<Button>,Art/Interface/Buttons/Promotions/Cold1.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,5,3</Button>
 		</PromotionInfo>
@@ -3657,40 +2476,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<IgnoreTerrainDamage>TERRAIN_TUNDRA</IgnoreTerrainDamage>
 			<Button>,Art/Interface/Buttons/Promotions/Cold2.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,6,3</Button>
 		</PromotionInfo>
@@ -3723,40 +2508,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<IgnoreTerrainDamage>TERRAIN_PERMAFROST</IgnoreTerrainDamage>
 			<Button>art/Tweaks/art/arcticcombat3.dds</Button>
 		</PromotionInfo>
@@ -3789,40 +2540,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<IgnoreTerrainDamage>TERRAIN_ICE</IgnoreTerrainDamage>
 			<Button>art/buttons/promotions/arcticcombat4.dds</Button>
 		</PromotionInfo>
@@ -3855,40 +2572,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Tweaks/art/wetlandcombat1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -3920,40 +2603,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Tweaks/art/wetlandcombat2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -3985,40 +2634,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Tweaks/art/wetlandcombat3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -4050,36 +2665,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Tweaks/art/ruggedcombat1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -4111,40 +2696,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<IgnoreTerrainDamage>TERRAIN_BADLAND</IgnoreTerrainDamage>
 			<Button>art/Tweaks/art/ruggedcombat2.dds</Button>
 		</PromotionInfo>
@@ -4201,40 +2752,6 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<IgnoreTerrainDamage>TERRAIN_JAGGED</IgnoreTerrainDamage>
 			<Button>art/Tweaks/art/ruggedcombat3.dds</Button>
 		</PromotionInfo>

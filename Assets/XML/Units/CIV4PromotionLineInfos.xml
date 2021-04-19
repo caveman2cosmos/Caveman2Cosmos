@@ -55,11 +55,21 @@
 			<Type>PROMOTIONLINE_TRANSPORT</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT</Description>
 			<Button>,Art/Interface/Buttons/Promotions/transport.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,3,13</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_STEAM_SHIPS</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_AIR_TO_AIR</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_AIR_TO_AIR</Description>
 			<Button>,Art/Interface/Buttons/Promotions/jetplane.dds,Art/RoM_Promotions_atlas.dds,1,2</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_JET_FIGHTERS</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_SUPERSONIC_PLANES</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_STEALTH</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_DRILL</Type>
@@ -113,6 +123,13 @@
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -129,6 +146,13 @@
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -145,6 +169,13 @@
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -161,6 +192,13 @@
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -1012,6 +1050,9 @@
 			<Type>PROMOTIONLINE_HUNTER</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HUNTER</Description>
 			<Button>Art/Interface/Buttons/Promotions/hunter1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SEA_HUNTER</Type>
@@ -1192,26 +1233,68 @@
 			<Type>PROMOTIONLINE_TRANSPORT_TROOPS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT_TROOPS</Description>
 			<Button>art/Buttons/Promotions/TransportTroops.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_EXPLORER</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_CAPTIVES</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TRANSPORT_PEOPLE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT_PEOPLE</Description>
 			<Button>art/Buttons/Promotions/TransportPeople.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TRANSPORT_MISSILES</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT_MISSILES</Description>
 			<Button>art/Buttons/Promotions/TransportMissiles.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_TRANSPORT</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TRANSPORT_SEAPLANES</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT_SEAPLANES</Description>
 			<Button>art/Buttons/Promotions/TransportSeaplanes.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_SUBMARINE</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TRANSPORT_FIGHTERS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT_FIGHTERS</Description>
 			<Button>art/Buttons/Promotions/TransportFighters.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_CRUISER</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_SUBMARINE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_DESTROYER</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_BATTLESHIP</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_TRANSPORT</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_FLAMING</Type>
