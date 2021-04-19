@@ -4748,10 +4748,16 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_COMBAT4</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_FLANKING3</PromotionPrereqOr2>
-			<PromotionLine>PROMOTIONLINE_SPEED</PromotionLine>
-			<iLinePriority>1</iLinePriority>
 			<iMovesChange>1</iMovesChange>
 			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
@@ -4788,7 +4794,15 @@
 					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_STRIKE_TEAM</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
 			</UnitCombats>
+			<NotOnDomainTypes>
+				<DomainType>DOMAIN_AIR</DomainType>
+				<DomainType>DOMAIN_SEA</DomainType>
+			</NotOnDomainTypes>
 			<Button>,Art/Interface/Buttons/Promotions/Navigation1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,7,4</Button>
 		</PromotionInfo>
 		<PromotionInfo>

@@ -543,27 +543,6 @@
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_SPEED</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_SPEED</Description>
-			<Button>,Art/Interface/Buttons/Promotions/Navigation1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,7,4</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_THROWING</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_WHEELED</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_TRACKED</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_HELICOPTER</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_ASSAULT_MECH</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_DREADNOUGHT</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_STRIKE_TEAM</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-			<NotOnDomainTypes>
-				<DomainType>DOMAIN_AIR</DomainType>
-				<DomainType>DOMAIN_SEA</DomainType>
-			</NotOnDomainTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PATROL</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PATROL</Description>
 			<Button>,Art/Interface/Buttons/Promotions/patrol1.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,6,14</Button>
