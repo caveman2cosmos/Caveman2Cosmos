@@ -8857,6 +8857,7 @@
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-10</iCaptureResistanceModifierChange>
 		</PromotionInfo>
+		<!-- Abandoned WIP?
 		<PromotionInfo>
 			<Type>PROMOTION_SCOUT_AID1</Type>
 			<Description>TXT_KEY_PROMOTION_SCOUT_AID1</Description>
@@ -9179,6 +9180,7 @@
 			<iHillsAttack>6</iHillsAttack>
 			<Button>Art/Interface/Buttons/Promotions/SiegeAid3.dds</Button>
 		</PromotionInfo>
+		-->
 		<PromotionInfo>
 			<Type>PROMOTION_CROWDED</Type>
 			<Description>TXT_KEY_PROMOTION_CROWDED</Description>
