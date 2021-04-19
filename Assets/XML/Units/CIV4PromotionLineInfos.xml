@@ -433,6 +433,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_THROWING</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_STRIKE_TEAM</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
