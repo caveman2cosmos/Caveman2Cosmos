@@ -1954,7 +1954,7 @@ int CvUnitAI::AI_minSettlerDefense() const
 		GET_PLAYER(getOwner()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE)
 		*
 		(
-			// One defender if game-start settler(s), else 4.
+			// One defender if game-start settler(s), else 2.
 			1 + 1 * (getGameTurnCreated() > 0)
 			+ // Two more if at war (ignore minor civ).
 			2 * GET_TEAM(getTeam()).isAtWar()
