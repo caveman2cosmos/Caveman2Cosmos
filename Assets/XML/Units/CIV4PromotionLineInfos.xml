@@ -1001,31 +1001,6 @@
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_SCOUT_AID</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_SCOUT_AID</Description>
-			<Button>Art/Interface/Buttons/Promotions/ReconAid1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_MELEE_AID</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_MELEE_AID</Description>
-			<Button>Art/Interface/Buttons/Promotions/MeleeAid1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_ARCHER_AID</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_ARCHER_AID</Description>
-			<Button>Art/Interface/Buttons/Promotions/ArcherAid1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_MOUNTED_AID</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_MOUNTED_AID</Description>
-			<Button>Art/Interface/Buttons/Promotions/MountedAid1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_SIEGE_AID</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_SIEGE_AID</Description>
-			<Button>Art/Interface/Buttons/Promotions/SiegeAid1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_HEROIC</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HEROIC</Description>
 			<Button>,Art/Interface/Buttons/Promotions/Hero3.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,3,7</Button>

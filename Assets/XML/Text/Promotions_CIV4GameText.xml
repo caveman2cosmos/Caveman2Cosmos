@@ -136,14 +136,6 @@
 		<Russian>Àíòèêëåðèêàë</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_ARCHER_AID</Tag>
-		<English>Archer Aid Promotion Line</English>
-		<French>Spécialisation d'Archer Secouriste</French>
-		<Italian>Aiuto mirato</Italian>
-		<Polish>Linia Promocji: Wsparcie Łuczników</Polish>
-		<Russian>Ïîìîùü ëó÷íèêîâ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ARCTIC_NOMAD</Tag>
 		<English>Arctic Nomad Promotion Line</English>
 		<French>Spécialisation Nomade artique</French>
@@ -1568,14 +1560,6 @@
 		<Russian>Ìåãàëîìàíüÿê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_MELEE_AID</Tag>
-		<English>Melee Aid Promotion Line</English>
-		<French>Spécialisation Secouriste</French>
-		<Italian>Sussidio pesante</Italian>
-		<Polish>Linia Promocji: Wsparcie Wojowników</Polish>
-		<Russian>Ðóêîïàøíàÿ ïîääåðæêà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MIGHT</Tag>
 		<English>Might Promotion Line</English>
 		<French>Spécialisation Puissance</French>
@@ -1588,14 +1572,6 @@
 		<Italian>Morale</Italian>
 		<Polish>Linia Promocji: Morale</Polish>
 		<Russian>Áîåâàÿ ìîðàëü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_MOUNTED_AID</Tag>
-		<English>Mounted Aid Promotion Line</English>
-		<French>Spécialisation Secouriste Monté</French>
-		<Italian>Sussidio di mobility</Italian>
-		<Polish>Linia Promocji: Wsparcie Jazdy</Polish>
-		<Russian>Ïîìîùü êàâàëåðèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_NATIVE_HIGHLANDER</Tag>
@@ -1956,14 +1932,6 @@
 		<Russian>Äðîæü çåìëè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_SCOUT_AID</Tag>
-		<English>Scout Aid Promotion Line</English>
-		<French>Spécialisation d'Eclaireur Secouriste</French>
-		<Italian>Sussidio dell'esploratore</Italian>
-		<Polish>Linia Promocji: Wsparcie Zwiadu</Polish>
-		<Russian>Ðàçâåäêà ìåñòíîñòè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SEAFARING</Tag>
 		<English>Seafaring Promotion Line</English>
 		<French>Spécialisation Navigateur</French>
@@ -2083,14 +2051,6 @@
 		<Italian>Passo laterale</Italian>
 		<Polish>Linia Promocji: Uniki</Polish>
 		<Russian>Óêëîíåíèå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_SIEGE_AID</Tag>
-		<English>Siege Aid Promotion Line</English>
-		<French>Spécialisation Support de Siege</French>
-		<Italian>Sussidio di assedio</Italian>
-		<Polish>Linia Promocji: Wsparcie Oblężnicze</Polish>
-		<Russian>Îñàäíàÿ ïîääåðæêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SILVERTONGUE</Tag>
@@ -3003,72 +2963,6 @@
 		<Spanish>Acuario</Spanish>
 		<Polish>Wodnik</Polish>
 		<Russian>Âîäîëåé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ARCHER_AID1</Tag>
-		<English>Ranged Aid I</English>
-		<French>
-			<Text>Soutien étendu I</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Fernhilfe I</German>
-		<Italian>
-			<Text>Aiuto mirato I</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos a distancia I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Ogniowe I</Polish>
-		<Russian>Ïðèêðûòèå I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ARCHER_AID2</Tag>
-		<English>Ranged Aid II</English>
-		<French>
-			<Text>Soutien étendu II</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Fernhilfe II</German>
-		<Italian>
-			<Text>Aiuto mirato II</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos a distancia II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Ogniowe II</Polish>
-		<Russian>Ïðèêðûòèå II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ARCHER_AID3</Tag>
-		<English>Ranged Aid III</English>
-		<French>
-			<Text>Soutien étendu III</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Fernhilfe III</German>
-		<Italian>
-			<Text>Aiuto mirato III</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos a distancia III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Ogniowe III</Polish>
-		<Russian>Ïðèêðûòèå III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARIES</Tag>
@@ -12277,72 +12171,6 @@
 		<Russian>Ìåãà-ëó÷</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MELEE_AID1</Tag>
-		<English>Heavy Aid I</English>
-		<French>
-			<Text>Soutien Lourd I</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Schwere Hilfstruppe I</German>
-		<Italian>
-			<Text>Sussidio Pesante I</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de unidad pesada I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Ciężkie Wsparcie I</Polish>
-		<Russian>Ïîäêðåïëåíèå I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MELEE_AID2</Tag>
-		<English>Heavy Aid II</English>
-		<French>
-			<Text>Soutien Lourd II</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Schwere Hilfstruppe II</German>
-		<Italian>
-			<Text>Sussidio Pesante II</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de unidad pesada II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Ciężkie Wsparcie II</Polish>
-		<Russian>Ïîäêðåïëåíèå II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MELEE_AID3</Tag>
-		<English>Heavy Aid III</English>
-		<French>
-			<Text>Soutien Lourd III</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Schwere Hilfstruppe III</German>
-		<Italian>
-			<Text>Sussidio Pesante III</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de unidad pesada III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Ciężkie Wsparcie III</Polish>
-		<Russian>Ïîäêðåïëåíèå III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MERCENARY</Tag>
 		<English>Mercenary</English>
 		<French>
@@ -12680,72 +12508,6 @@
 		<Spanish>Montañero experto</Spanish>
 		<Polish>Wielki Alpinista</Polish>
 		<Russian>Ïîêîðèòåëü âåðøèí</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MOUNTED_AID1</Tag>
-		<English>Mobility Aid I</English>
-		<French>
-			<Text>Soutien Mobilité I</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Mobile Hilfe I</German>
-		<Italian>
-			<Text>Sussidio Di Mobilit_ I</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de unidad móvil I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Mobilności I</Polish>
-		<Russian>Ïîìîùü êàâàëåðèè I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MOUNTED_AID2</Tag>
-		<English>Mobility Aid II</English>
-		<French>
-			<Text>Soutien Mobilité II</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Mobile Hilfe II</German>
-		<Italian>
-			<Text>Sussidio Di Mobilit_ II</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de unidad móvil II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Mobilności II</Polish>
-		<Russian>Ïîìîùü êàâàëåðèè II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MOUNTED_AID3</Tag>
-		<English>Mobility Aid III</English>
-		<French>
-			<Text>Soutien Mobilité III</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Mobile Hilfe III</German>
-		<Italian>
-			<Text>Sussidio Di Mobilit_ III</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de unidad móvil III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Mobilności III</Polish>
-		<Russian>Ïîìîùü êàâàëåðèè III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MOVING_PILLAGE_TEXT</Tag>
@@ -15446,72 +15208,6 @@
 		<Russian>Ñêîðïèîí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SCOUT_AID1</Tag>
-		<English>Scout Aid I</English>
-		<French>
-			<Text>Soutien Scout I</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Hilfsspäher I</German>
-		<Italian>
-			<Text>Sussidio Dell'Esploratore I</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de reconocimiento I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Zwiadu I</Polish>
-		<Russian>Ðàçâåäêà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SCOUT_AID2</Tag>
-		<English>Scout Aid II</English>
-		<French>
-			<Text>Soutien Scout II</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Hilfsspäher II</German>
-		<Italian>
-			<Text>Sussidio Dell'Esploratore II</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de reconocimiento II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Zwiadu II</Polish>
-		<Russian>Ðàçâåäêà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SCOUT_AID3</Tag>
-		<English>Scout Aid III</English>
-		<French>
-			<Text>Soutien Scout III</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Hilfsspäher III</German>
-		<Italian>
-			<Text>Sussidio Dell'Esploratore III</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de reconocimiento III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Zwiadu III</Polish>
-		<Russian>Ðàçâåäêà III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SEAMANSHIP1</Tag>
 		<English>Seamanship I</English>
 		<French>
@@ -16142,72 +15838,6 @@
 		<Italian>Passo laterale III</Italian>
 		<Polish>Uniki III</Polish>
 		<Russian>Óêëîíåíèå III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SIEGE_AID1</Tag>
-		<English>Siege Aid I</English>
-		<French>
-			<Text>Soutien Siège I</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Belagerungshilfe I</German>
-		<Italian>
-			<Text>Sussidio Di Assedio I</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos al asedio I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Oblężnicze I</Polish>
-		<Russian>Îñàäíàÿ ïîääåðæêà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SIEGE_AID2</Tag>
-		<English>Siege Aid II</English>
-		<French>
-			<Text>Soutien Siège II</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Belagerungshilfe II</German>
-		<Italian>
-			<Text>Sussidio Di Assedio II</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos al asedio II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Oblężnicze II</Polish>
-		<Russian>Îñàäíàÿ ïîääåðæêà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SIEGE_AID3</Tag>
-		<English>Siege Aid III</English>
-		<French>
-			<Text>Soutien Siège III</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Belagerungshilfe III</German>
-		<Italian>
-			<Text>Sussidio Di Assedio III</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos al asedio III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Oblężnicze III</Polish>
-		<Russian>Îñàäíàÿ ïîääåðæêà III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SILVER_TONGUE1</Tag>
