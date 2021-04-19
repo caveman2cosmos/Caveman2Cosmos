@@ -11415,7 +11415,7 @@ void CvUnitAI::AI_EscortMove()
 	this->getGroup()->pushMission(MISSION_SKIP);
 }
 bool CvUnitAI::AI_retreatIfCantDefend(){
-	return (!getGroup()->canDefend() && GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot())&& AI_retreatToCity())
+	return (!getGroup()->canDefend() && GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot())&& AI_retreatToCity());
 }
 
 void CvUnitAI::AI_networkAutomated()

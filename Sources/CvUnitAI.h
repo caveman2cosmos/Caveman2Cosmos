@@ -158,7 +158,7 @@ protected:
 	void AI_SeeInvisibleMove();
 	void AI_SeeInvisibleSeaMove();
 	void AI_EscortMove();
-
+	bool AI_retreatIfCantDefend();
 	void AI_networkAutomated();
 	void AI_cityAutomated();
 
