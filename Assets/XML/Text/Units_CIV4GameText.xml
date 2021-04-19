@@ -2426,7 +2426,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AXEMAN_ROXOLANI_PEDIA</Tag>
 		<English>The Roxolani were a people of the Wallachian plain, near the mouth of the Danube on the Black Sea (modern-day Romania/Moldova). They were enemies of the Romans from around 100 BC until being conquered by the Huns in the 4th century. The Romans found their axemen to be especially potent adversaries, especially the Legio XXI Rapax, which was destroyed by a combined force of Roxolani and Dacians in 92 AD.</English>
-		<Italian>I Rossolani erano un popolo delle pianure della Valacchia, vicino alla foce del Danubio nel Mar Nero (gli attuali Romania e Moldavia). Furono nemici dei Romani dal 100 a.C. fino a quando furono conquistati dagli Unni nel 4° secolo. I Romani scoprirono che i loro guerrieri con ascia erano avversari estremamente pericolosi, in particolare quando la Legio XXI Rapax venne annientata da una forza congiunta di Rossolani e Daci nel 92 d.C.</Italian>
+		<Italian>I Rossolani erano un popolo delle pianure della Valacchia, vicino alla foce del Danubio nel Mar Nero (attuali Romania e Moldavia). Furono nemici dei Romani dal 100 a.C. fino a quando furono conquistati dagli Unni nel IV secolo. I Romani scoprirono che i loro guerrieri con ascia erano avversari estremamente pericolosi, in particolare quando la Legio XXI Rapax venne annientata da una forza congiunta di Rossolani e Daci nel 92 d.C.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AXEMAN_ROXOLANI_STRATEGY</Tag>
@@ -11880,7 +11880,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEADHUNTER_STRATEGY</Tag>
 		<English>The Headhunter is the Jivaro culture's version of the Hunter... with a twist. As the name suggests, he hunts humans rather than animals. His bonus is therefore not in animal combat, but against other hunters!</English>
-		<Italian>Il cacciatore di teste è la versione jivaro del cacciatore - solo che, invece degli animali, lui caccia gli uomini. Perciò i suoi bonus si riferiscono non agli scontri con animali, ma con altri cacciatori!</Italian>
+		<Italian>Il cacciatore di teste è la versione jivaro del cacciatore - solo che, invece degli animali, caccia gli uomini. Perciò i suoi bonus si riferiscono non agli scontri con animali, ma con altri cacciatori!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEALER</Tag>
@@ -11927,7 +11927,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_AXEMAN_PEDIA</Tag>
 		<English>The Heavy Axeman is better armored than it's lighter counterpart, thus increasing combat survivability.</English>
-		<Italian>Il guerriero con ascia corazzato ha un'armatura più pesante del normale guerrieo, incrementando la resistenza in combattimento.</Italian>
+		<Italian>Il guerriero con ascia corazzato ha un'armatura più pesante del normale guerriero, incrementando la resistenza in combattimento.</Italian>
 		<Spanish>El Soldado con hacha pesada tiene una mejor armadura que su homólogo ligero, lo que aumenta su resistencia en combate.</Spanish>
 		<Polish>Siekiera lub topór to najstarsze i nadal używane złożone narzędzie. Od ponad czternastu tysięcy lat jest on używany do kształtowania i podziału drewna, rąbania lasów, jako broń obuchowo-sieczna czy też jako symbol heraldyczny. Jest rozwinięciem pomysłu kija z obciążonym końcem, który dał początek takim wynalazkom jak: maczuga, młotek, motyka, topór ciesielski itp. Zmieniał się materiał i zastosowanie, ale zasada działania pozostała nie zmieniona. Początkowo wykonywany z kamienia i rogu, brązu a następnie stali. Siekiery z kamienia łupanego umieszczane były w rozczepionym stylisku, obwiązywanym dla wzmocnienia sznurami lub rzemieniami. Siekiery neolityczne posiadały już często wywiercony otwór dla mocowania trzonka. Pierwsze siekiery z brązu - tzw. siekiery tulejowe, posiadały szeroki, rurowaty otwór ze strony przeciwległej do ostrza, do niego prostopadły, i wymagały specjalnie ukształtowanego, wygiętego prawie pod kątem prostym styliska. Dla wzmocnienia osadzenia takiej siekierki, była ona zwykle przywiązywana do styliska, czemu służyły niewielkie pierścienie z boków nasady, formowane już w czasie odlewania narzędzia. W wielu kulturach epoki brązu siekierki stanowiły prawdopodobnie środek płatniczy.</Polish>
 		<Russian>[TAB]Òÿæåëûé ñåêèðîíîñåö ëó÷øå çàùèùåí áðîíåé, ÷åì åãî ëåãêîâîîðóæåííûé ïðåäøåñòâåííèê, ÷òî çíà÷èòåëüíî ïîâûøàåò âûæèâàåìîñòü â ñðàæåíèè.</Russian>
@@ -12026,34 +12026,18 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_PIKEMAN_PEDIA</Tag>
 		<English>The pike, due to its unwieldy nature, was always intended to be used in a deliberate, defensive manner, often in conjunction with other missile and melee weapons. However, better-trained troops were capable of using the pike in an aggressive attack with each rank of pikemen being trained to hold their pikes so that they presented enemy infantry with four or five layers of spearheads bristling from the front of the formation.</English>
-		<French>
-			<Text>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Ces puissantes unités pontificales sont expertes dans l'art d'affronter les ennemis montés. Elles sont aussi efficaces pour défendre les villes.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Après l'effondrement de l'Empire romain d'Occident, la ville de Rome se retrouva placée sous la protection des Byzantins. Toutefois, les Byzantins ne firent pas grand-chose pour aider Rome, et le pape dut former sa propre armée pour défendre la ville sainte.[PARAGRAPH:1]Les piquiers pontificaux sont des lanciers lourds. Ils sont inspirés des mercenaires de la garde suisse du Vatican, même si cette garde apparut en fait sept siècles après les événements de ce scénario.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>[BOLD]Strategie:[\BOLD][PARAGRAPH:1]Diese starken päpstlichen Einheiten sind besonders geschickt im Kampf gegen berittene Feinde, und auch in der Städteverteidigung sind sie recht effektiv.[NEWLINE][NEWLINE][BOLD]Hintergrund:[\BOLD][PARAGRAPH:1]Mit dem Scheitern des Römischen Reiches stand die Stadt Rom theoretisch unter dem Schutze Konstantinopels. Die Byzantiner waren taten jedoch recht wenig, um Rom zu unterstützen, und der Papst sah sich gezwungen, eine eigene Armee aufzubauen, um die Heilige Stadt zu verteidigen.[PARAGRAPH:1]Päpstliche Pikeniere sind schwere Speerkämpfer. Sie basieren lose auf der Schweizer Garde, die den Vatikan in den letzten fünf Jahrhunderten verteidigt hat (auch wenn die Garde eigentlich erst etwa 700 Jahre nach den Ereignissen dieses Szenarios in Erscheinung trat).</German>
-		<Italian>
-			<Text>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]Queste potenti unità papali sono particolarmente adatte a combattere nemici a cavallo; vanno inoltre bene per difendere le città.[NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1]Con la caduta dell'Impero Romano d'Occidente, la città di Roma era nominalmente sotto la protezione di Bisanzio. I Bizantini però fecero ben poco per supportare Roma e il papa dovette creare un proprio esercito per difendere la Città Santa.[PARAGRAPH:1]I picchieri papali sono lancieri pesanti. Si basano indicativamente sulle unità mercenarie della Guardia Svizzera che hanno difeso il Vaticano negli ultimi cinque secoli (anche se la Guardia è apparsa circa 700 anni dopo gli eventi di questo scenario).</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]Estas poderosas unidades pontificias son especialmente eficaces contra las unidades montadas, así como para defender ciudades.[NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]Con la desaparición del Imperio Romano de occidente, la ciudad de Roma quedó nominalmente bajo la protección de Bizancio. Sin embargo, los bizantinos no hicieron gran cosa para proteger Roma, y los Papas tuvieron que reclutar sus propios ejércitos para defender la Ciudad Santa.[PARAGRAPH:1]Los piqueros papales son lanceros pesados. Estas unidades se basan en los mercenarios de la Guardia Suiza que llevan cinco siglos defendiendo la ciudad del Vaticano (a pesar de que la auténtica Guardia no apareció hasta 700 años después de los sucesos de este escenario).</Spanish>
+		<French>Après l'effondrement de l'Empire romain d'Occident, la ville de Rome se retrouva placée sous la protection des Byzantins. Toutefois, les Byzantins ne firent pas grand-chose pour aider Rome, et le pape dut former sa propre armée pour défendre la ville sainte. Les piquiers pontificaux sont des lanciers lourds. Ils sont inspirés des mercenaires de la garde suisse du Vatican, même si cette garde apparut en fait sept siècles après les événements de ce scénario.</French>
+		<German>Mit dem Scheitern des Römischen Reiches stand die Stadt Rom theoretisch unter dem Schutze Konstantinopels. Die Byzantiner waren taten jedoch recht wenig, um Rom zu unterstützen, und der Papst sah sich gezwungen, eine eigene Armee aufzubauen, um die Heilige Stadt zu verteidigen. Päpstliche Pikeniere sind schwere Speerkämpfer. Sie basieren lose auf der Schweizer Garde, die den Vatikan in den letzten fünf Jahrhunderten verteidigt hat (auch wenn die Garde eigentlich erst etwa 700 Jahre nach den Ereignissen dieses Szenarios in Erscheinung trat).</German>
+		<Italian>Con la caduta dell'Impero Romano d'Occidente, la città di Roma era nominalmente sotto la protezione di Bisanzio. I Bizantini però fecero ben poco per supportare Roma e il papa dovette creare un proprio esercito per difendere la Città Santa. I picchieri papali sono lancieri pesanti. Si basano indicativamente sulle unità mercenarie della Guardia Svizzera che hanno difeso il Vaticano negli ultimi cinque secoli (anche se la Guardia è apparsa circa 700 anni dopo gli eventi di questo scenario).</Italian>
+		<Spanish>Con la desaparición del Imperio Romano de occidente, la ciudad de Roma quedó nominalmente bajo la protección de Bizancio. Sin embargo, los bizantinos no hicieron gran cosa para proteger Roma, y los Papas tuvieron que reclutar sus propios ejércitos para defender la Ciudad Santa. Los piqueros papales son lanceros pesados. Estas unidades se basan en los mercenarios de la Guardia Suiza que llevan cinco siglos defendiendo la ciudad del Vaticano (a pesar de que la auténtica Guardia no apareció hasta 700 años después de los sucesos de este escenario).</Spanish>
 		<Polish>Pikinierzy - jedna z formacji wojskowych z przełomu XV i XVI wieku i pierwsza nowoczesna piechota tamtej epoki. Ich charakterystyczna broń - długa pika (początkowo długości 2,5 m a później nawet 5,5 m) siała w ich sprawnych rękach spustoszenie w szeregach przeciwnika.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_PIKEMAN_STRATEGY</Tag>
 		<English>These powerful Papal units are particularly adept at battling mounted foes; they are also good at city-defense.</English>
-		<French>
-			<Text>Ces puissantes unités pontificales sont expertes dans l'art d'affronter les ennemis montés. Elles sont aussi efficaces pour défendre les villes.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
+		<French>Ces puissantes unités pontificales sont expertes dans l'art d'affronter les ennemis montés. Elles sont aussi efficaces pour défendre les villes.</French>
 		<German>Diese starken päpstlichen Einheiten sind besonders geschickt im Kampf gegen berittene Feinde, und auch in der Städteverteidigung sind sie recht effektiv.</German>
-		<Italian>
-			<Text>Queste potenti unità papali sono particolarmente adatte a combattere nemici a cavallo; vanno inoltre bene per difendere le città.</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Queste potenti unità papali sono particolarmente adatte a combattere nemici a cavallo; vanno inoltre bene per difendere le città.</Italian>
 		<Spanish>Estas poderosas unidades pontificias son especialmente eficaces contra las unidades montadas, así como para defender ciudades.</Spanish>
 		<Polish>Jest to silna jednostka, szczególnie przydatna do walki z jednostkami konnymi oraz równiez nadaje się do obrony miasta.</Polish>
 	</TEXT>
@@ -29643,9 +29627,9 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VET_STRATEGY</Tag>
-		<English>Veterinarians are primarily healers of animal units and excell at supporting the animal side of units that combine animal and human such as mounted units. Their abilities as a healer of people can cetainly assist with people but this is not their specialty.</English>
+		<English>Veterinarians are primarily healers of animal units and excel at supporting the animal side of units that combine animal and human such as mounted units. Their abilities as a healer of people can certainly assist with people but this is not their specialty.</English>
 		<French>Les Vétérinaires sont principalement des soigneurs pour les unités animales, et sont un excellent support pour ces unités. Ils peuvent également assister les humaines, bien que ce ne soit pas leur spécialité.</French>
-		<Polish>Weterynarze są przede wszystkim uzdrowicieli i zwierząt jednostek excell wspieranie stronie zwierząt jednostek, które łączą w sobie zwierząt i ludzi, takich jak jednostki montowane. Swoje umiejętności jako Uzdrowiciel ludzi może pomóc cetainly zludzi, ale nie jest to ich specjalność.</Polish>
+		<Polish>Lekarze weterynarii są przede wszystkim uzdrowicielami jednostek zwierzęcych i przodują we wspieraniu zwierzęcej strony jednostek, które łączą zwierzę i ludzi, takich jak jednostki konne. Ich zdolności jako uzdrowiciela ludzi z pewnością mogą pomagać ludziom, ale to nie jest ich specjalność.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VICEROY</Tag>
@@ -29677,7 +29661,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VICTORY_ADJACENT_TEXT</Tag>
 		<English>[ICON_BULLET]%d1%% chance to heal self, %d2%% chance to heal all friendly units on the tile and %d3%% chance to heal all friendly units on an adjacent tile on a combat victory</English>
-		<French>[ICON_BULLET]%d1%% chance de guerir moi %d2%% chance de guerir notre troupes dans la meme endroin sur combat victoire %d3%% chance de guerir notre troupes dans la rejoint endroit sur combat victoire</French>
+		<French>[ICON_BULLET]%d1%% de chances de se soigner, %d2%% de chances de soigner toutes les unités amies sur la tuile et %d3%% de guérir toutes les unités amies sur une tuile adjacente lors d'une victoire au combat</French>
 		<German>[ICON_BULLET]%d1%% Chance sich selbst und %d2%% Chance alle befreundeten Einheiten auf dem eigenen Feld sowie %d3%% Chance alle befreundeten Einheiten auf einem benachbarten Feld nach erfolgreichem Kampf zu heilen</German>
 		<Spanish>[ICON_BULLET]Probabilidad del %d1%% de curarse, del %d2%% de curar a todas las unidades propias en la misma casilla y del %d3%% de curar a todas las unidades propias en un radio de 1 casilla en cada victoria</Spanish>
 		<Polish>[ICON_BULLET]%d1%% do uleczenia samego siebie, %d2%% do uleczenia wszystkich jednostek na tym samym polu, %d3%% szans na uleczenie jednostek na przyległych polach po wygranej walce</Polish>
@@ -29685,7 +29669,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VICTORY_STACK_TEXT</Tag>
 		<English>[ICON_BULLET]%d1%% chance to heal self and %d2%% chance to heal all friendly units on the tile on a combat victory</English>
-		<French>[ICON_BULLET]%d1%% chance de guerir moi %d2%% chance de guerir notre troupes dans la meme endroin sur combat victoire</French>
+		<French>[ICON_BULLET]%d1%% de chances de se soigner et %d2%% de soigner toutes les unités amies sur la tuile lors d'une victoire au combat</French>
 		<German>[ICON_BULLET]%d1%% Chance sich selbst und %d2%% Chance alle befreundeten Einheiten auf dem eigenen Feld nach erfolgreichem Kampf zu heilen</German>
 		<Spanish>[ICON_BULLET]Probabilidad del %d1%% de curarse y del %d2%% de curar a todas las unidades propias en la misma casilla en cada victoria</Spanish>
 		<Polish>[ICON_BULLET]%d1%% szans na wyleczenie samego siebie i %d2%% na wyleczenie jednostek na tym samym polu po wygranej walce</Polish>
@@ -29698,7 +29682,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIETCONG_PEDIA</Tag>
-		<English>The Viet Cong was a political organization and army in South Vietnam and Cambodia that fought the United States and South Vietnamese governments during the Vietnam War (1959-1975), and emerged on the winning side. It had both guerrilla and regular army units, as well as a network of cadres who organized peasants in the territory it controlled. Many soldiers were recruited in South Vietnam, but others were attached to the People's Army of Vietnam (PAVN), the regular North Vietnamese army. During the war, communists and anti-war spokesmen insisted the Vit Cng was an insurgency indigenous to the South, while the U.S. and South Vietnamese governments portrayed the group as a tool of Hanoi.</English>
+		<English>The Viet Cong was a political organization and army in South Vietnam and Cambodia that fought the United States and South Vietnamese governments during the Vietnam War (1959-1975), and emerged on the winning side. It had both guerrilla and regular army units, as well as a network of cadres who organized peasants in the territory it controlled. Many soldiers were recruited in South Vietnam, but others were attached to the People's Army of Vietnam (PAVN), the regular North Vietnamese army. During the war, communists and anti-war spokesmen insisted the Viet Cong was an insurgency indigenous to the South, while the U.S. and South Vietnamese governments portrayed the group as a tool of Hanoi.</English>
 		<French>Unité Culturelle Unique Vietnamienne.</French>
 		<Italian>Unità unica Vietnamita.</Italian>
 		<Polish>Wietnamska jednostka kulturowa.</Polish>
