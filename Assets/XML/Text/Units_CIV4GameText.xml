@@ -2426,7 +2426,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AXEMAN_ROXOLANI_PEDIA</Tag>
 		<English>The Roxolani were a people of the Wallachian plain, near the mouth of the Danube on the Black Sea (modern-day Romania/Moldova). They were enemies of the Romans from around 100 BC until being conquered by the Huns in the 4th century. The Romans found their axemen to be especially potent adversaries, especially the Legio XXI Rapax, which was destroyed by a combined force of Roxolani and Dacians in 92 AD.</English>
-		<Italian>I Rossolani erano un popolo delle pianure della Valacchia, vicino alla foce del Danubio nel Mar Nero (gli attuali Romania e Moldavia). Furono nemici dei Romani dal 100 a.C. fino a quando furono conquistati dagli Unni nel 4° secolo. I Romani scopriorno che i loro guerrieri con ascia erano avversari estremamente pericolosi, in particolare quando la Legio XXI Rapax venne annientata da una forza congiunta di Rossolani e Daci nel 92 d.C.</Italian>
+		<Italian>I Rossolani erano un popolo delle pianure della Valacchia, vicino alla foce del Danubio nel Mar Nero (gli attuali Romania e Moldavia). Furono nemici dei Romani dal 100 a.C. fino a quando furono conquistati dagli Unni nel 4° secolo. I Romani scoprirono che i loro guerrieri con ascia erano avversari estremamente pericolosi, in particolare quando la Legio XXI Rapax venne annientata da una forza congiunta di Rossolani e Daci nel 92 d.C.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AXEMAN_ROXOLANI_STRATEGY</Tag>
@@ -2451,7 +2451,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AXE_THROWER_STRATEGY</Tag>
 		<English>The Axe Thrower is a Frankish Unit. It is an axeman with a ranged attack. This is not at all obvious.</English>
-		<French>Ce Guerrier peut utiliser ces Haches en les projettant sur ses ennemis.</French>
+		<French>Ce Guerrier peut utiliser ces Haches en les projettent sur ses ennemis.</French>
 		<Italian>Il lanciatore di asce è un guerriero con ascia con un attacco a distanza.</Italian>
 		<Polish>Miotacz Toporów franków to Topornik z możliwością ataku dystansowego.</Polish>
 	</TEXT>
@@ -29828,18 +29828,30 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Russian>Øàãàþùèé äðîèä</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_WALKER_PEDIA</Tag>
+		<English>A walker was any vehicle, usually military, that used legs as its primary method of locomotion rather than the more common repulsors, wheels, or treads. The term could also refer to especially large droids with legs (usually combat droids), though such droids were usually referred to using more specific terminology (such as "spider droid").</English>
+		<Polish>Artyleria Walker jest jednostka artylerii pasuje do walki w erze Transhuman. Za pomocą potężnychelektromagnetyczne serwa przenieść na każdy teren i jego obrzędy posiadają więcej zakres i ognia niż inne jednostki.</Polish>
+		<Russian>Шагоход - это любое транспортное средство, обычно военное, использующее ноги-опоры качестве основного метода передвижения, а не более распространенные репульсоры, колеса или гусеницы. Этот термин также может относиться к особенно большим дроидам с ногами (обычно боевым дроидам), хотя такие дроиды обычно упоминаются с использованием более конкретной терминологии (например, «дроид-паук»).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WALKER_STRATEGY</Tag>
+		<English>Early droid. Cheap and fast late game unit.</English>
+		<French>Droïde primaire. Unité de fin de partie bon marché et rapide.</French>
+		<Russian>Ранний дроид. Дешевый и быстрый отряд для поздней игры.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALKER_ARTILLERY</Tag>
 		<English>Walker Artillery</English>
 		<French>Marcheur Artillerie</French>
 		<Italian>Artiglieria semovente</Italian>
-		<Polish>Krocząca artyleria może bombardować do trzech kwadratów, co czyni go bardzo śmiertelne, gdy chroniony w stos.</Polish>
+		<Polish>Ulepszony Mech</Polish>
 		<Russian>Õîäÿ÷àÿ ãàóáèöà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALKER_ARTILLERY_PEDIA</Tag>
-		<English>The Walker Artillery is an artillery unit fit to fight in the Transhuman Era. Using powerful electromagnetic servos to move over any terrain, and it's ordinances posses more range and firepower than any other unit.</English>
-		<Italian>L'artgilieria semovente è un'unità di artiglieria dell'era transumana; usa dei motori elettromagnetici per muoversi sopra ogni terreno e possiede più raggio d'azione e potenza di fuoco di ogni altra unità.</Italian>
-		<Polish>Ulepszony Mech</Polish>
+		<English>The Walker Artillery is an artillery unit fit to fight in the Transhuman Era. Using powerful electromagnetic servos to move over any terrain, and its ordinances posses more range and firepower than any other unit.</English>
+		<Italian>L'artiglieria semovente è un'unità di artiglieria dell'era transumana; usa dei motori elettromagnetici per muoversi sopra ogni terreno e possiede più raggio d'azione e potenza di fuoco di ogni altra unità.</Italian>
+		<Polish>Krocząca artyleria może bombardować do trzech kwadratów, co czyni go bardzo śmiertelne, gdy chroniony w stos.</Polish>
 		<Russian>Шагающая артиллерия - артиллерийское подразделение, пригодное для сражений в Трансчеловеческую Эру. Для перемещения по любой местности в ней используют мощные электромагнитные сервоприводы, и боеприпасы к ней обладают большей дальностью и огневой мощью, чем у предшестенников.</Russian>
 	</TEXT>
 	<TEXT>
@@ -29882,19 +29894,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Italian>I [COLOR_UNIT_TEXT]mech bipedi[COLOR_REVERT] sono la forza di fanteria d'elite di ogni nazione. Usali per sopprimere velocemente i rivoltosi e attaccare forze di terra.</Italian>
 		<Spanish>Los [COLOR_UNIT_TEXT]mechas bípedos[COLOR_REVERT] conforman las fuerzas de infantería de élite de cualquier nación. Úsalos para reprimir rápidamente revueltas y combatir a fuerzas terrestres.</Spanish>
 		<Russian>[COLOR_UNIT_TEXT]Шагающие механоиды[COLOR_REVERT] являются элитными пехотными силами любой нации. Используйте их, чтобы быстро подавить восстание, а также для наземных сражений.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_WALKER_PEDIA</Tag>
-		<English>A walker was any vehicle, usually military, that used legs as its primary method of locomotion rather than the more common repulsors, wheels, or treads. The term could also refer to especially large droids with legs (usually combat droids), though such droids were usually referred to using more specific terminology (such as "spider droid").</English>
-		<Polish>Krocząca Artyleria</Polish>
-		<Russian>Шагоход - это любое транспортное средство, обычно военное, использующее ноги-опоры качестве основного метода передвижения, а не более распространенные репульсоры, колеса или гусеницы. Этот термин также может относиться к особенно большим дроидам с ногами (обычно боевым дроидам), хотя такие дроиды обычно упоминаются с использованием более конкретной терминологии (например, «дроид-паук»).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_WALKER_STRATEGY</Tag>
-		<English>Early droid. Cheap and fast late game unit.</English>
-		<French>Droïde primaire. Unité de fin de partie bon marché et rapide.</French>
-		<Polish>Artyleria Walker jest jednostka artylerii pasuje do walki w erze Transhuman. Za pomocą potężnychelektromagnetyczne serwa przenieść na każdy teren i jego obrzędy posiadają więcej zakres i ognia niż inne jednostki.</Polish>
-		<Russian>Ранний дроид. Дешевый и быстрый отряд для поздней игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY_HUNTERS</Tag>
@@ -30309,7 +30308,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_CANOE_PEDIA</Tag>
 		<English>War canoes have been extensively used in Africa to transport troops and supplies, and engage targets onshore. While documentation of canoe versus canoe battles in on the open ocean is rare, records from the 14th century mention various tribal peoples of West Africa using huge fighting canoes in inland waters, some up to 80 feet (24 m) and carrying over 100 men. Construction of the war canoe was typically from one massive tree trunk, with the silk cotton tree being particularly useful. The inside was dug out and carved using fire and hand tools. Braces and stays were used to prevent excessive expansion while the fire treatment was underway. Fire also served to release sap as a preservative against insect pests. Some canoes had 7 to 8 feet (2.4 m) of width inside, accommodating benches for rowers, and facilities such as fireplaces and sleeping berths.[PARAGRAPH:2]Warriors onboard were typically armed with shield, spear and bow. In the gunpowder era, small iron or brass cannon were sometimes mounted on the bow or stern, although the firepower delivered from these areas and weapons was relatively ineffective. Musketeers delivering fire to cover raiding missions generally had better luck. The typical tactic was to maneuver close to shore, discharge weapons, then quickly pull out to open water to reload, before dashing in again to repeat the cycle. Troop and supply transport were the primary missions, but canoe versus canoe engagements in the lagoons, creeks and lakes of West Africa were also significant.</English>
-		<Italian>Le canoe da guerra sono state utilizzate in modo estensivo in Africa per trasportare truppe e rifornimenti, oltre che per attaccare bersagli a terra. Mentre la documentazione di battaglie di canoe in mare aperto è rara, alcuni documenti del XIV secolo menzionano varie tribù dell'Africa occidentale che usavano enormi canoe da combattimento nelle acque dell'entroterra, alcune di 24 metri di lunghezza e con una capacità di carico di più di 100 uomini. La costruzione di una canoa partiva generalmente da un unico tronco massiccio. L'interno veniva scavato e intagliato utilizzando strumenti manuali. Vari tipi di morse venivano utilizzati per impedire la dilatazione eccessiva mentre è in corso il trattamento con il fuoco. Il fuoco serviva anche a proteggere il legno dagli insetti. Alcune canoe erano larghe fino a 2,4 m, presentando sedili per i rematori, oltre a posti per il fuoco e per dormire.[PARAGRAPH:2]I guerrieri a bordo erano di solito armati con scudi, lance e archi. Nell'era della polvere da sparo, venivano a volte montati alcuni piccoli cannoni in ottone o ferro, anche se la potenza di fuoco portata da queste aree e armi era relativamente inutile. I moschettieri che sparavano per coprire le incursioni avevano generalmente più fortuna. La manovra tipica era avvicinarsi alla costa, scaricare le armi, ritirarsi velocemente in acue aperte per ricaricare, poi avvicinarsi ancora e ricominciare il ciclo. Le missioni di trasporto di truppe e rifornimenti erano quelle principali, acnhe se attacchi di canoe contro canoe erano frequenti nei laghi dell'Africa occidentale.</Italian>
+		<Italian>Le canoe da guerra sono state utilizzate in modo estensivo in Africa per trasportare truppe e rifornimenti, oltre che per attaccare bersagli a terra. Mentre la documentazione di battaglie di canoe in mare aperto è rara, alcuni documenti del XIV secolo menzionano varie tribù dell'Africa occidentale che usavano enormi canoe da combattimento nelle acque dell'entroterra, alcune di 24 metri di lunghezza e con una capacità di carico di più di 100 uomini. La costruzione di una canoa partiva generalmente da un unico tronco massiccio. L'interno veniva scavato e intagliato utilizzando strumenti manuali. Vari tipi di morse venivano utilizzati per impedire la dilatazione eccessiva mentre è in corso il trattamento con il fuoco. Il fuoco serviva anche a proteggere il legno dagli insetti. Alcune canoe erano larghe fino a 2,4 m, presentando sedili per i rematori, oltre a posti per il fuoco e per dormire.[PARAGRAPH:2]I guerrieri a bordo erano di solito armati con scudi, lance e archi. Nell'era della polvere da sparo, venivano a volte montati alcuni piccoli cannoni in ottone o ferro, anche se la potenza di fuoco portata da queste aree e armi era relativamente inutile. I moschettieri che sparavano per coprire le incursioni avevano generalmente più fortuna. La manovra tipica era avvicinarsi alla costa, scaricare le armi, ritirarsi velocemente in acque aperte per ricaricare, poi avvicinarsi ancora e ricominciare il ciclo. Le missioni di trasporto di truppe e rifornimenti erano quelle principali, anche se attacchi di canoe contro canoe erano frequenti nei laghi dell'Africa occidentale.</Italian>
 		<Polish>Tratwy Wojenne były szeroko rozpowszechnione w Afryce jako środek transportu oddziałów wojskowych i zapasów; i atakowania wroga od strony morza. Jakkolwiek brakuje dokumentów opisujących walki tratw przeciwko tratwom na otwartym oceanie, jednakże, zachowały się świadectwa z XIV w. o ludach Afryki Zachodniej używających wielkich tratw do walki na wodach wewnętrznych. Niektóre z nich osiągały długość do 24 m. i potrafiły unieść ponad 100 osób. Konstrukcja tych wojennych tratw składała się z reguły z jednego, masywnego pnia drzewa, wyjątkowo użyteczny był tutaj zwłaszcza puchowiec. Wnętrze pnia było wydrążane za pomocą ognia i narzędzi ręcznych. Żeby zapobiec nadmiernemu rozejściu się pnia podczas wypalania ogniem używano specjalnych klamer i rozpórek. Niektóre tratwy miały szerokość kadłuba ok. 2,4 m. mieszcząc wewnątrz ławki dla wioślarzy oraz takie udogodnienia jak miejsca na ognisko czy koje do spania. Wojownicy na pokładzie tratw byli z reguły uzbrojeni w tarcze, włócznie i łuki. W erze prochu małe działa z żelaza lub mosiądzu były montowane na dziobie lub rufie, mimo, że siła ognia z tych miejsc była względnie nieefektywna. Strzelcy zapewniający osłonę ogniową podczas wypraw byli dużo bardziej skuteczni. Typowa strategia polegała na podpłynięciu do brzegu, oddania salwy i natychmiastowym odwrocie na otwartą wodę w celu przeładowania broni. Głownym zadaniem tratw wojennych był transport oddziałów i zapasów, ale zdarzały się również potyczki między tratwami na rzekach, jeziorach i zatokach Afryki Zachodniej.</Polish>
 	</TEXT>
 	<TEXT>
