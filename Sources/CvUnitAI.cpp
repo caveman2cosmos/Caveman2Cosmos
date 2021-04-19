@@ -2101,7 +2101,7 @@ void CvUnitAI::AI_workerMove()
 	{
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
-		if (iWorkers > 3 && iWorkers > 5 * GET_PLAYER(getOwner()).getNumCities()
+		if (iWorkers > 3 && iWorkers > 2 * GET_PLAYER(getOwner()).getNumCities()
 		&& GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
 		{
 			if (gUnitLogLevel > 2)
