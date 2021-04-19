@@ -292,6 +292,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_FIELD</Description>
 			<Button>,Art/Interface/Buttons/Promotions/Field1.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,2,5</Button>
 			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMBATANT</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
@@ -301,6 +302,8 @@
 				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_STRIKE_TEAM</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
