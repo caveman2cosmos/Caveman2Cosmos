@@ -232,7 +232,6 @@ void CvCityAI::AI_doTurn()
 		AI_stealPlots();
 	}
 
-	AI_markBestBuildValuesStale();
 	AI_updateBestBuild();
 	AI_updateWorkersNeededHere();
 
