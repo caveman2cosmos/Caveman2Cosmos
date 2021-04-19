@@ -524,7 +524,7 @@
 		<English>Each round spent building up Lie in Wait, the unit gains +5% [COLOR_HIGHLIGHT_TEXT]Stealth Combat Modifier[COLOR_REVERT] up to a maximum bonus of +25%, AND +1 [COLOR_HIGHLIGHT_TEXT]Stealth Strikes[COLOR_REVERT] on the first and fifth rounds of building up up to a maximum of +2, provided each promotion level is qualified for by the unit. Unit also gains Stealth Defense and will thus surprise defend against enemy units attempting to move into the tile. Once the unit has revealed itself, it stays revealed and is no longer engaging in stealth combat thereafter for the remainder of the round.</English>
 		<French>Chaque tour dépensé pour en se retrancher en Intrigue, l'unité gagne + 5% [COLOR_HIGHLIGHT_TEXT] Modificateur de combat furtif [COLOR_REVERT] jusqu'à un bonus maximum de + 25%, ET +1 [COLOR_HIGHLIGHT_TEXT] Frappes furtives [COLOR_REVERT] les premier et cinquième tours de construction jusqu'à un maximum de +2, à condition que chaque niveau de promotion soit qualifié par l'unité. L'unité gagne également la défense furtive et surprendra ainsi la défense contre les unités ennemies qui tentent de se déplacer dans la tuile. Une fois que l'unité s'est révélée, elle reste révélée et n'entreprend plus de combat furtif par la suite pour le reste du round.</French>
 		<German>Durch Training in Auflauern erhöht sich jede Runde der [COLOR_HIGHLIGHT_TEXT]Tarnmodifikator[COLOR_REVERT] der Einheit um 5% (maximal 25%). Außerdem erhält sie einen zusätzlichen Tarnangriff in der ersten und fünften Runde und kann sich außerdem gegen Tarnangriffe verteidigen. Wenn die Einheit sich gezeigt hat, bleibt sie sichtbar und hat für den Rest der Runde keine Tarnvorteile mehr.</German>
-		<Russian>За каждый ход, потраченный на эту квалификацию, отряд получает +5% к [COLOR_HIGHLIGHT_TEXT]скрытности[COLOR_REVERT] (максимум +25%), И +1 к [COLOR_HIGHLIGHT_TEXT]Скрытным атакам[COLOR_REVERT] на первом и пятом ходу, максимум до +2, ппри условии, что каждый следующий уровень квалификации выполняется отрядом.  Отряд получает также защиту от скрытных атак и, таким образом, будет защищаться от вражеских отрядов, пытающихся проникнуть на занимаемую им клетку. Как только юнит обнаружил себя, он остается раскрытым и больше не участвует в стелс-битве до конца хода.</Russian>
+		<Russian>За каждый ход, потраченный на эту квалификацию, отряд получает +5% к [COLOR_HIGHLIGHT_TEXT]скрытности[COLOR_REVERT] (максимум +25%), И +1 к [COLOR_HIGHLIGHT_TEXT]Скрытным атакам[COLOR_REVERT] на первом и пятом ходу, максимум до +2, ппри условии, что каждый следующий уровень квалификации выполняется отрядом. Отряд получает также защиту от скрытных атак и, таким образом, будет защищаться от вражеских отрядов, пытающихся проникнуть на занимаемую им клетку. Как только юнит обнаружил себя, он остается раскрытым и больше не участвует в стелс-битве до конца хода.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_MAINTENANCE_HANGAR</Tag>
@@ -14132,7 +14132,7 @@
 		<Italian>[ICON_BULLET]%D1_Mod%% all'Inseguimento contro [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% Pursuit contra [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% Pościg za [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Polish>
-		<Russian>[ICON_BULLET]Погоня за  [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%%</Russian>
+		<Russian>[ICON_BULLET]Погоня за [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PYROTECHNICS1</Tag>

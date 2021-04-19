@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by EXTREME (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
@@ -23,7 +22,7 @@
 			<Help>TXT_KEY_UNIT_NAVAL_MINE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoRevealMap >1</bNoRevealMap >
+			<bNoRevealMap>1</bNoRevealMap>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -124,7 +123,7 @@
 			<Help>TXT_KEY_UNIT_NAVAL_MINE_FIELD_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoRevealMap >1</bNoRevealMap >
+			<bNoRevealMap>1</bNoRevealMap>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
@@ -226,7 +225,7 @@
 			<Help>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoRevealMap >1</bNoRevealMap >
+			<bNoRevealMap>1</bNoRevealMap>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -391,7 +390,7 @@
 			<Help>TXT_KEY_UNIT_LAND_MINE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoRevealMap >1</bNoRevealMap >
+			<bNoRevealMap>1</bNoRevealMap>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -483,7 +482,7 @@
 			<Help>TXT_KEY_UNIT_LAND_MINE_FIELD_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoRevealMap >1</bNoRevealMap >
+			<bNoRevealMap>1</bNoRevealMap>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -581,7 +580,7 @@
 			<Help>TXT_KEY_UNIT_NUCLEAR_LAND_MINE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoRevealMap >1</bNoRevealMap >
+			<bNoRevealMap>1</bNoRevealMap>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>

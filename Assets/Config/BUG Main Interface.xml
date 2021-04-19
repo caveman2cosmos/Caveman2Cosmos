@@ -4,7 +4,7 @@
 	Copyright (c) 2008 The BUG Mod.
 -->
 <mod id="MainInterface" name="BUG Main Interface" author="EmperorFool, Impaler[WrG], NeverMind, SimCutie" 
-	 version="3.0" date="07/11/2008" url="http://forums.civfanatics.com/forumdisplay.php?f=268">
+	version="3.0" date="07/11/2008" url="http://forums.civfanatics.com/forumdisplay.php?f=268">
 
 	<options id="MainInterface" file="BUG Main Interface.ini">
 		<section id="Main">

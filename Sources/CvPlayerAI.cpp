@@ -4125,14 +4125,19 @@ short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) cons
 	int64_t iNetExpenses;
 	short iProfitMargin = getProfitMargin(iTotalCommerce, iNetIncome, iNetExpenses, iExtraExpense, iExtraExpenseMod);
 
+	// Toffer - Things should absolutly be worse off than this before one can claim financial trouble.
+	if (iProfitMargin > 25)
+	{
+		return 10001;
+	}
 	// Koshling - Never in financial difficulties if we can fund our ongoing expenses with zero taxation
 	if (iNetIncome - getCommercePercent(COMMERCE_GOLD)*iTotalCommerce/100 > iNetExpenses)
 	{
-		return 10001; // A magic number in case we want this state to have some kind of significance.
+		return 10002; // A magic number in case we want this state to have some kind of significance.
 	}
 
-	// Toffer - At low tax levels, and with some profit margin to go on, evaluate treasury rather than profit margin.
-	if (iProfitMargin > 16 && getCommercePercent(COMMERCE_GOLD) < 50)
+	// Toffer - At low to mid tax levels, and with some profit margin to go on, evaluate treasury rather than profit margin.
+	if (iProfitMargin > 15 && getCommercePercent(COMMERCE_GOLD) < 50)
 	{
 		int64_t iValue = 0;
 		// Toffer - Gamespeed (GS) influence the value of gold, so scale gold treshold to GS, era is exponential factor.
@@ -4166,8 +4171,8 @@ short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) cons
 	//	if it is zero it means your expenditure is equal to, or greater than, your income at 100% taxation
 	//	if it is *50* it means your expenditure is half the size of your income at 100% taxation.
 	//	A value of 100 is close to impossible to reach, as that either means expenditure is zero, or that income is severeal orders of magnitude greater than your expenditure.
-	//	Tripling its value may not be needed, but it is to signify that 10% iProfitMargin is not actually all that bad.
-	return iProfitMargin * 3;
+	//	Multiplying with 2.5 may not be needed, but it is to signify that 10% iProfitMargin is not actually all that bad.
+	return iProfitMargin * 5/2;
 }
 
 
@@ -30764,6 +30769,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 #endif // BATTLEWORN
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	for (iI = 0; iI < kPromotion.getNumAfflictOnAttackChangeTypes(); ++iI)
 	{
 		if (kPromotion.getAfflictOnAttackChangeType(iI).eAfflictionLine > 0)
@@ -30853,6 +30859,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			}
 		}
 	}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 #ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
@@ -35672,6 +35679,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 	}
 #endif // BATTLEWORN
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	for (iI = 0; iI < kUnitCombat.getNumAfflictOnAttackChangeTypes(); ++iI)
 	{
 		if (kUnitCombat.getAfflictOnAttackChangeType(iI).eAfflictionLine > 0)
@@ -35749,6 +35757,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 			}
 		}
 	}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 #ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))

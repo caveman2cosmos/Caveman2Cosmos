@@ -213,7 +213,7 @@
 								from CvPythonExtensions import CyGlobalContext
 								def isPossible(unit,plot):
 									gc = CyGlobalContext()
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
+									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -318,7 +318,7 @@
 								import random
 								def isPossible(unit,plot):
 									gc = CyGlobalContext()
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
+									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() not in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -327,7 +327,7 @@
 									destX = -1
 									destY = -1
 									numValid = 0
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
+									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									for x in range(map.getGridWidth()):
 										for y in range(map.getGridHeight()):
@@ -364,7 +364,7 @@
 								import random
 								def isPossible(unit,plot):
 									gc = CyGlobalContext()
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
+									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -558,7 +558,7 @@
 									valid_improvements = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_improvement_strings]
 									if plot.getImprovementType() not in valid_improvements:
 										return False
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
+									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -659,7 +659,7 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_terrain_strings = ['VENUS','VENUS_HIGHLANDS','VENUS_LOWLANDS','MARTIAN_ICE','MARTIAN_PERMAFROST','MARTIAN_DUNES','MARTIAN_BARREN','MARTIAN_PLAINS','MARTIAN_ROCKY','MARTIAN_DESERT']
+									valid_terrain_strings = ['VENUS','VENUS_HIGHLANDS','VENUS_LOWLANDS','MARTIAN_ICE','MARTIAN_PERMAFROST','MARTIAN_DUNES','MARTIAN_BARREN','MARTIAN_PLAINS','MARTIAN_ROCKY','MARTIAN_DESERT','GREEN_MARS']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -711,10 +711,10 @@
 					<TerrainType>TERRAIN_TITAN</TerrainType>
 					<PassableTech>TECH_ABYSS_COLONIZATION</PassableTech>
 				</TerrainPassableTech>
-			  <TerrainPassableTech>
+			<TerrainPassableTech>
 				<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 				<PassableTech>TECH_SOLAR_ORDNANCE</PassableTech>
-			  </TerrainPassableTech>
+			</TerrainPassableTech>
 			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ONEILLSETTLER</Description>
@@ -5014,7 +5014,7 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_terrain_strings = ['MARTIAN_ICE','MARTIAN_PERMAFROST','MARTIAN_DUNES','MARTIAN_BARREN','MARTIAN_PLAINS','MARTIAN_ROCKY','MARTIAN_DESERT']
+									valid_terrain_strings = ['MARTIAN_ICE','MARTIAN_PERMAFROST','MARTIAN_DUNES','MARTIAN_BARREN','MARTIAN_PLAINS','MARTIAN_ROCKY','MARTIAN_DESERT','GREEN_MARS']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):

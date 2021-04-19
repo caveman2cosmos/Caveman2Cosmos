@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- -->
 <!-- Sid Meier's Civilization 4 - Beyond the Sword -->
 <!-- Leaderhead art path information -->
 <!-- Modified for Quot Capita by AbsintheRed -->
-<!-- -->
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<LeaderheadArtInfos>
 		<LeaderheadArtInfo>
