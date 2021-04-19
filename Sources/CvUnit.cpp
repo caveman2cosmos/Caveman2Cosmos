@@ -5729,7 +5729,7 @@ TeamTypes CvUnit::getDeclareWarMove(const CvPlot* pPlot) const
 bool CvUnit::willRevealByMove(const CvPlot* pPlot) const
 {
 	const int iRange = visibilityRange(pPlot) + 1;
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange))
 	{
 		if (!pLoopPlot->isRevealed(getTeam(), false)
 		&& pPlot->canSeePlot(pLoopPlot, getTeam(), visibilityRange(), NO_DIRECTION))
@@ -8393,7 +8393,7 @@ bool CvUnit::isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const
 		return false;
 	}
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), nukeRange(), nukeRange()))
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(nukeRange(), nukeRange()))
 	{
 		if (pLoopPlot->getTeam() == eTeam)
 		{
@@ -9178,7 +9178,7 @@ bool CvUnit::airBomb(int iX, int iY)
 				{
 					iMis1 = 10;
 					iCount = 0;
-					foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), 2, 2))
+					foreach_(const CvPlot* pLoopPlot, plot()->rect(2, 2))
 					{
 						iCount += algo::count_if(pLoopPlot->units(), CvUnit::fn::getOwner() == getOwner());
 					}
@@ -9845,7 +9845,7 @@ void CvUnit::updatePlunder(int iChange, bool bUpdatePlotGroups)
 		CvPlot::setDeferredPlotGroupRecalculationMode(true);
 	}
 
-	foreach_(CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iBlockadeRange, iBlockadeRange))
+	foreach_(CvPlot* pLoopPlot, plot()->rect(iBlockadeRange, iBlockadeRange))
 	{
 		if (!pLoopPlot->isWater() || pLoopPlot->area() != area())
 		{
@@ -14987,7 +14987,7 @@ CvUnit* CvUnit::bestSeaPillageInterceptor(const CvUnit* pPillager, int iMinOdds)
 
 	int pBestUnitRank = -1;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPillager->getX(), pPillager->getY(), 1, 1))
+	foreach_(const CvPlot* pLoopPlot, pPillager->plot()->rect(1, 1))
 	{
 		foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
 		{
@@ -20306,7 +20306,7 @@ void CvUnit::collectBlockadeGold()
 
 	const int iBlockadeRange = GC.getDefineINT("SHIP_BLOCKADE_RANGE");
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iBlockadeRange, iBlockadeRange)
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iBlockadeRange, iBlockadeRange)
 	| filtered(CvPlot::fn::isRevealed(getTeam(), false)))
 	{
 		CvCity* pCity = pLoopPlot->getPlotCity();
@@ -29237,7 +29237,7 @@ void CvUnit::doActiveDefense()
 	{
 		return;
 	}
-	foreach_(CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), 2, 2))
+	foreach_(CvPlot* pLoopPlot, plot()->rect(2, 2))
 	{
 		if (pLoopPlot->getNumUnits() > 0)
 		{
@@ -30055,7 +30055,7 @@ bool CvUnit::spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) c
 	{
 		return false;
 	}
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange))
 	{
 		if (pLoopPlot->getTeam() == eTeam)
 		{

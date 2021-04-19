@@ -137,7 +137,7 @@ bool CvSelectionGroup::sentryAlert() const
 
 	if (NULL != pHeadUnit)
 	{
-		foreach_(const CvPlot* pPlot, CvPlot::rect(pHeadUnit->getX(), pHeadUnit->getY(), iMaxRange, iMaxRange))
+		foreach_(const CvPlot* pPlot, pHeadUnit->plot()->rect(iMaxRange, iMaxRange))
 		{
 			if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION)
 			&& pPlot->isVisibleEnemyUnit(pHeadUnit))
@@ -173,7 +173,7 @@ bool CvSelectionGroup::sentryAlertSameDomainType() const
 	const CvUnit* pHeadUnit = ((iIndex == -1) ? NULL : getUnitAt(iIndex));
 	if (NULL != pHeadUnit)
 	{
-		foreach_(const CvPlot* pPlot, CvPlot::rect(pHeadUnit->getX(), pHeadUnit->getY(), iMaxRange, iMaxRange))
+		foreach_(const CvPlot* pPlot, pHeadUnit->plot()->rect(iMaxRange, iMaxRange))
 		{
 			if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION))
 			{

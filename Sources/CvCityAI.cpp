@@ -7192,7 +7192,7 @@ int CvCityAI::AI_neededAirDefenders() const
 {
 	int iOtherTeam = 0;
 	int iEnemyTeam = 0;
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), 5, 5))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(5, 5))
 	{
 		if (pLoopPlot->isOwned() && pLoopPlot->getTeam() != getTeam())
 		{

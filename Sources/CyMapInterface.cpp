@@ -42,7 +42,6 @@ void CyMapPythonInterface()
 		.def("findBiggestArea", &CyMap::findBiggestArea, python::return_value_policy<python::manage_new_object>(), "CyArea* ()")
 
 		.def("getMapFractalFlags", &CyMap::getMapFractalFlags, "int ()")
-		.def("findWater", &CyMap::findWater, "bool (CyPlot* pPlot, int iRange, bool bFreshWater)")
 		.def("isPlot", &CyMap::isPlot, "bool (iX,iY) - is (iX, iY) a valid plot?")
 		.def("numPlots", &CyMap::numPlots, "int () - total plots in the map")
 		.def("plotNum", &CyMap::plotNum, "int (iX,iY) - the index for a given plot") 

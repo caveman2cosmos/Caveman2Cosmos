@@ -1355,11 +1355,11 @@ void CvPlot::verifyUnitValidPlot()
 	{
 		foreach_(CvUnit* pLoopUnit, aUnits)
 		{
-			CvSelectionGroup* pGroup = pLoopUnit->getGroup();
+			const CvSelectionGroup* pGroup = pLoopUnit->getGroup();
 
 			if ( pGroup != NULL && !pGroup->isMidMove() )
 			{
-				CvUnit*	pHeadUnit = pGroup->getHeadUnit();
+				const CvUnit* pHeadUnit = pGroup->getHeadUnit();
 
 				if ( pHeadUnit != NULL && pHeadUnit->plot() != pLoopUnit->plot() )
 				{
@@ -1380,7 +1380,7 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 
 	GC.getGame().changeNukesExploded(1);
 
-	foreach_(CvPlot* pLoopPlot, rect(getX(), getY(), iRange, iRange))
+	foreach_(CvPlot* pLoopPlot, rect(iRange, iRange))
 	{
 		// if we remove roads, don't remove them on the city... XXX
 
@@ -1750,12 +1750,9 @@ bool CvPlot::isFreshWater() const
 		return true;
 	}
 
-	foreach_(const CvPlot* loopPlot, rect(getX(), getY(), 1, 1))
+	if (algo::any_of(rect(1, 1), bind(CvPlot::isWaterAndIsFresh, _1)))
 	{
-		if (loopPlot->isWaterAndIsFresh())
-		{
-			return true;
-		}
+		return true;
 	}
 
 	return false;
@@ -1955,7 +1952,7 @@ CvPlot* CvPlot::getNearestLandPlotInternal(int iDistance) const
 		return NULL;
 	}
 
-	foreach_(CvPlot* pPlot, rect(getX(), getY(), iDistance, iDistance))
+	foreach_(CvPlot* pPlot, rect(iDistance, iDistance))
 	{
 		if (!pPlot->isWater())
 		{
@@ -2358,10 +2355,9 @@ void CvPlot::updateSeeFromSight(bool bIncrement, bool bUpdatePlotGroups)
 
 	const int iRange = GC.getMAX_UNIT_VISIBILITY_RANGE() + 1;
 
-	foreach_(CvPlot* pLoopPlot, rect(getX(), getY(), iRange, iRange))
-	{
-		pLoopPlot->updateSight(bIncrement, bUpdatePlotGroups);
-	}
+	algo::for_each(rect(iRange, iRange),
+		bind(CvPlot::updateSight, _1, bIncrement, bUpdatePlotGroups)
+	);
 }
 
 
@@ -2903,7 +2899,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		if (GC.getImprovementInfo(eImprovement).getUniqueRange() > 0)
 		{
 			const int iUniqueRange = GC.getImprovementInfo(eImprovement).getUniqueRange();
-			foreach_(const CvPlot* pLoopPlot, rect(getX(), getY(), iUniqueRange, iUniqueRange))
+			foreach_(const CvPlot* pLoopPlot, rect(iUniqueRange, iUniqueRange))
 			{
 				if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT
 				&& finalImprovementUpgrade(pLoopPlot->getImprovementType()) == finalImprovementUpgrade(eImprovement))
@@ -3413,7 +3409,7 @@ int CvPlot::AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, Dom
 
 	int	strSum = 0;
 
-	foreach_(const CvPlot* pLoopPlot, rect(getX(), getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, rect(iRange, iRange))
 	{
 		foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
 		{
@@ -4462,7 +4458,7 @@ void CvPlot::invalidateIsTeamBorderCache() const
 //Alberts2: added eplayer parameter to only return the city if the owner == eplayer
 CvCity* CvPlot::getAdjacentCity(PlayerTypes eplayer) const
 {
-	foreach_(const CvPlot* pLoopPlot, rect(getX(), getY(), 1, 1))
+	foreach_(const CvPlot* pLoopPlot, rect(1, 1))
 	{
 		CvCity* pLoopCity = pLoopPlot->getPlotCity();
 		if (pLoopCity != NULL)
@@ -4729,7 +4725,7 @@ int CvPlot::plotCount(ConstPlotUnitFunc funcA, int iData1A, int iData2A, const C
 	else
 	{
 		//	Recurse for each plot in the specified range
-		foreach_(const CvPlot* pLoopPlot, rect(getX(), getY(), iRange, iRange))
+		foreach_(const CvPlot* pLoopPlot, rect(iRange, iRange))
 		{
 			iCount += pLoopPlot->plotCount(funcA, iData1A, iData2A, pUnit, eOwner, eTeam, funcB, iData1B, iData2B);
 		}
@@ -4771,7 +4767,7 @@ int CvPlot::plotStrengthTimes100(UnitValueFlags eFlags, ConstPlotUnitFunc funcA,
 	else
 	{
 		//	Recurse for each plot in the specified range
-		foreach_(const CvPlot* pLoopPlot, rect(getX(), getY(), iRange, iRange))
+		foreach_(const CvPlot* pLoopPlot, rect(iRange, iRange))
 		{
 			iStrength += pLoopPlot->plotStrengthTimes100(eFlags, funcA, iData1A, iData2A, eOwner, eTeam, funcB, iData1B, iData2B, 0);
 		}
@@ -6144,7 +6140,7 @@ void CvPlot::setIrrigated(bool bNewValue)
 	if (isIrrigated() != bNewValue)
 	{
 		m_bIrrigated = bNewValue;
-		foreach_(CvPlot* pLoopPlot, rect(getX(), getY(), 1, 1))
+		foreach_(CvPlot* pLoopPlot, rect(1, 1))
 		{
 			pLoopPlot->updateYield();
 			pLoopPlot->setLayoutDirty(true);
@@ -6519,10 +6515,9 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 		}
 
 		// Plot danger cache
-		foreach_(CvPlot* pLoopPlot, rect(getX(), getY(), DANGER_RANGE, DANGER_RANGE))
-		{
-			pLoopPlot->invalidateIsTeamBorderCache();
-		}
+		algo::for_each(rect(DANGER_RANGE, DANGER_RANGE),
+			bind(CvPlot::invalidateIsTeamBorderCache, _1)
+		);
 
 		updateSymbols();
 	}

@@ -2423,7 +2423,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	if (iMinRivalRange != -1)
 	{
-		foreach_(const CvPlot* pLoopPlot, CvPlot::rect(iX, iY, iMinRivalRange, iMinRivalRange))
+		foreach_(const CvPlot* pLoopPlot, pPlot->rect(iMinRivalRange, iMinRivalRange))
 		{
 			if (pLoopPlot->plotCheck(PUF_isOtherTeam, getID()) != NULL)
 			{
@@ -2992,7 +2992,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		const int iRange = GREATER_FOUND_RANGE;
 		int iGreaterBadTile = 0;
 
-		foreach_(const CvPlot* pLoopPlot, CvPlot::rect(iX, iY, iRange, iRange))
+		foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange))
 		{
 			if ((pLoopPlot->isWater() || pLoopPlot->area() == pArea)
 			&& plotDistance(iX, iY, pLoopPlot->getX(), pLoopPlot->getY()) <= iRange)
@@ -3506,7 +3506,7 @@ bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool b
 {
 	const CvArea* pPlotArea = pPlot->area();
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange)
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange)
 	| filtered(CvPlot::fn::area() == pPlotArea))
 	{
 		foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
@@ -3611,7 +3611,7 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 	{
 		const CvArea* pPlotArea = pPlot->area();
 
-		foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
+		foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange))
 		{
 			if (pLoopPlot->area() == pPlotArea)
 			{
@@ -3811,7 +3811,7 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 									   iRange,
 									   bTestMoves).c_str());
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange))
 	{
 		if (pLoopPlot->area() == pPlotArea)
 		{
@@ -3979,7 +3979,7 @@ int CvPlayerAI::AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const
 		iRange = DANGER_RANGE;
 	}
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange))
 	{
 		if (pLoopPlot->isWater() || pLoopPlot->getPlotCity() != NULL)
 		{
@@ -4004,7 +4004,7 @@ int CvPlayerAI::AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const
 	return iCount;
 }
 
-int CvPlayerAI::AI_getWaterDanger(const CvPlot* pPlot, int iRange, bool bTestMoves) const
+int CvPlayerAI::AI_getWaterDanger(const CvPlot* pPlot, int iRange) const
 {
 	PROFILE_FUNC();
 
@@ -4015,7 +4015,7 @@ int CvPlayerAI::AI_getWaterDanger(const CvPlot* pPlot, int iRange, bool bTestMov
 		iRange = DANGER_RANGE;
 	}
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange))
 	{
 		if (pLoopPlot->isWater() && pPlot->isAdjacentToArea(pLoopPlot->getArea()))
 		{
@@ -24380,7 +24380,7 @@ int CvPlayerAI::AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDef
 
 	int iValue = 0;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange)
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange)
 	| filtered(CvPlot::fn::area() == pPlot->area()))
 	{
 		const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
@@ -24419,7 +24419,7 @@ int CvPlayerAI::AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bD
 
 	int iValue = 0;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange)
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange)
 	| filtered(CvPlot::fn::area() == pPlot->area()))
 	{
 		const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
@@ -25588,7 +25588,7 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 		int iBestValue = 0;
 		CvPlot* pBestPlot = NULL;
 		const int iRange = 5;
-		foreach_(CvPlot* pLoopPlot, CvPlot::rect(pLoopCity->getX(), pLoopCity->getY(), iRange, iRange)
+		foreach_(CvPlot* pLoopPlot, pLoopCity->plot()->rect(iRange, iRange)
 		| filtered(CvPlot::fn::getOwner() == getID() && (CvPlot::fn::isConnectedToCapital(NO_PLAYER) || CvPlot::fn::isCity())))
 		{
 			int iValue = 1000;
@@ -26498,15 +26498,8 @@ int CvPlayerAI::AI_getPlotAirbaseValue(const CvPlot* pPlot) const
 	PROFILE_FUNC();
 
 	FAssert(pPlot != NULL);
-/************************************************************************************************/
-/* Afforess					  Start		 02/15/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	if (pPlot->isOwned() && (pPlot->getTeam() != getTeam()))
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	{
 		return 0;
 	}
@@ -26522,8 +26515,7 @@ int CvPlayerAI::AI_getPlotAirbaseValue(const CvPlot* pPlot) const
 			}
 			if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 			{
-				CvImprovementInfo &kImprovementInfo = GC.getImprovementInfo(pPlot->getImprovementType());
-				if (!kImprovementInfo.isActsAsCity())
+				if (!GC.getImprovementInfo(pPlot->getImprovementType()).isActsAsCity())
 				{
 					return 0;
 				}
@@ -26532,7 +26524,7 @@ int CvPlayerAI::AI_getPlotAirbaseValue(const CvPlot* pPlot) const
 	}
 
 	int iMinOtherCityDistance = MAX_INT;
-	CvPlot* iMinOtherCityPlot = NULL;
+	const CvPlot* iMinOtherCityPlot = NULL;
 
 	// Super Forts begin *choke* *canal* - commenting out unnecessary code
 //	int iMinFriendlyCityDistance = MAX_INT;
@@ -26541,7 +26533,7 @@ int CvPlayerAI::AI_getPlotAirbaseValue(const CvPlot* pPlot) const
 	int iOtherCityCount = 0;
 
 	int iRange = 4;
-	foreach_(CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange))
 	{
 		if (pPlot != pLoopPlot)
 		{
@@ -27092,7 +27084,7 @@ bool CvPlayerAI::AI_isPlotThreatened(const CvPlot* pPlot, int iRange, bool bTest
 		iRange = DANGER_RANGE;
 	}
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange)
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange)
 	| filtered(CvPlot::fn::area() == pPlotArea))
 	{
 		CvSelectionGroup* pLoopGroup = NULL;
