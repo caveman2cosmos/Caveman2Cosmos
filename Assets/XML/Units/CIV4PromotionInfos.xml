@@ -4819,30 +4819,6 @@
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
 			</UnitCombats>
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 			<Button>,Art/Interface/Buttons/Promotions/patrol1.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,6,14</Button>
@@ -4856,32 +4832,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iMovesChange>1</iMovesChange>
 			<iRevoltProtection>4</iRevoltProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
 			<Button>,Art/Interface/Buttons/Promotions/patrol2.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,7,14</Button>
 		</PromotionInfo>
@@ -4894,32 +4844,6 @@
 			<iLinePriority>3</iLinePriority>
 			<iCityDefense>15</iCityDefense>
 			<iRevoltProtection>5</iRevoltProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
 			<Button>,Art/Interface/Buttons/Promotions/patrol3.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,8,14</Button>
 		</PromotionInfo>
@@ -4937,12 +4861,6 @@
 					<iUnitCombatMod>15</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Manuevering1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -4958,12 +4876,6 @@
 					<iUnitCombatMod>15</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Manuevering2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -4979,12 +4891,6 @@
 					<iUnitCombatMod>20</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Manuevering3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5009,28 +4915,6 @@
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/coastal_guard1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5054,28 +4938,6 @@
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/coastal_guard2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5099,28 +4961,6 @@
 					<iTerrainDefense>25</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/coastal_guard3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5145,28 +4985,6 @@
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 			</TerrainAttacks>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/attack1.dds,Art/RoM_Promotions_Atlas.dds,1,3</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5190,28 +5008,6 @@
 					<iTerrainAttack>15</iTerrainAttack>
 				</TerrainAttack>
 			</TerrainAttacks>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/attack2.dds,Art/RoM_Promotions_Atlas.dds,2,3</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5235,28 +5031,6 @@
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 			</TerrainAttacks>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/attack3.dds,Art/RoM_Promotions_Atlas.dds,3,3</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5268,24 +5042,6 @@
 			<PromotionLine>PROMOTIONLINE_BOMBARDING</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iBombardRateChange>2</iBombardRateChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/bombarding1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5296,24 +5052,6 @@
 			<PromotionLine>PROMOTIONLINE_BOMBARDING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iBombardRateChange>3</iBombardRateChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/bombarding2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5324,24 +5062,6 @@
 			<PromotionLine>PROMOTIONLINE_BOMBARDING</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iBombardRateChange>5</iBombardRateChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/bombarding3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5360,12 +5080,6 @@
 					<iUnitCombatMod>10</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/firearms1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5382,12 +5096,6 @@
 					<iUnitCombatMod>10</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/firearms2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5404,12 +5112,6 @@
 					<iUnitCombatMod>20</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/firearms3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5429,18 +5131,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
@@ -5472,18 +5162,6 @@
 			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
@@ -5512,20 +5190,6 @@
 					<iUnitCombatMod>20</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/defence3.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,5,4</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5536,36 +5200,6 @@
 			<PromotionLine>PROMOTIONLINE_INTERCEPTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iInterceptChange>10</iInterceptChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_EARLY_FIGHTERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_EARLY_BOMBERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_JET_FIGHTERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_BOMBERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUPERSONIC_PLANES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEALTH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/interception.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,3,15</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5576,36 +5210,6 @@
 			<PromotionLine>PROMOTIONLINE_INTERCEPTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iInterceptChange>20</iInterceptChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_EARLY_FIGHTERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_EARLY_BOMBERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_JET_FIGHTERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_BOMBERS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SUPERSONIC_PLANES</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEALTH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/interception2.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,15</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5799,12 +5403,6 @@
 			<PromotionLine>PROMOTIONLINE_LOGISTICS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iMovesChange>1</iMovesChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Logistics1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5816,12 +5414,6 @@
 			<iLinePriority>2</iLinePriority>
 			<bEnemyRoute>1</bEnemyRoute>
 			<iMoveDiscountChange>1</iMoveDiscountChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Logistics2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5832,12 +5424,6 @@
 			<PromotionLine>PROMOTIONLINE_LOGISTICS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iMovesChange>1</iMovesChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Logistics3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5847,12 +5433,6 @@
 			<PromotionLine>PROMOTIONLINE_DECEPTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iEvasionChange>10</iEvasionChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Deception1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5863,12 +5443,6 @@
 			<PromotionLine>PROMOTIONLINE_DECEPTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iEvasionChange>10</iEvasionChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Deception2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5879,12 +5453,6 @@
 			<PromotionLine>PROMOTIONLINE_DECEPTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iEvasionChange>10</iEvasionChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Deception3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5895,12 +5463,6 @@
 			<iLinePriority>1</iLinePriority>
 			<iVisibilityChange>1</iVisibilityChange>
 			<iInterceptChange>10</iInterceptChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Security1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5912,12 +5474,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iVisibilityChange>1</iVisibilityChange>
 			<iInterceptChange>10</iInterceptChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Security2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5929,12 +5485,6 @@
 			<iLinePriority>3</iLinePriority>
 			<iVisibilityChange>1</iVisibilityChange>
 			<iInterceptChange>10</iInterceptChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Security3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5944,12 +5494,6 @@
 			<PromotionLine>PROMOTIONLINE_IMPROVISE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iUpgradeDiscount>10</iUpgradeDiscount>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Improvise1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5960,12 +5504,6 @@
 			<PromotionLine>PROMOTIONLINE_IMPROVISE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iUpgradeDiscount>10</iUpgradeDiscount>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Improvise2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5976,12 +5514,6 @@
 			<PromotionLine>PROMOTIONLINE_IMPROVISE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iUpgradeDiscount>10</iUpgradeDiscount>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Improvise3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -5992,12 +5524,6 @@
 			<PromotionLine>PROMOTIONLINE_IMPROVISE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iUpgradeDiscount>10</iUpgradeDiscount>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Improvise4.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -6008,12 +5534,6 @@
 			<PromotionLine>PROMOTIONLINE_IMPROVISE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iUpgradeDiscount>10</iUpgradeDiscount>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Improvise5.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -6038,12 +5558,6 @@
 			<PromotionLine>PROMOTIONLINE_INSTIGATOR</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iEnemyHealChange>50</iEnemyHealChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Instigator1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -6054,12 +5568,6 @@
 			<PromotionLine>PROMOTIONLINE_INSTIGATOR</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iEnemyHealChange>50</iEnemyHealChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Instigator2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -6070,12 +5578,6 @@
 			<PromotionLine>PROMOTIONLINE_INSTIGATOR</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iNeutralHealChange>100</iNeutralHealChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Instigator3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -6117,12 +5619,6 @@
 			<PromotionLine>PROMOTIONLINE_ESCAPE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iWithdrawalChange>40</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Escape1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -6134,12 +5630,6 @@
 			<PromotionLine>PROMOTIONLINE_ESCAPE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iWithdrawalChange>40</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Escape2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
