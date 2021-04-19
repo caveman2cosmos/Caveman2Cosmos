@@ -6417,24 +6417,6 @@
 			<PromotionLine>PROMOTIONLINE_RAPID_DEPLOYMENT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<bBlitz>1</bBlitz>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NANITE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/March.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,3,8</Button>
 			<iCaptureProbabilityModifierChange>-5</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
@@ -6447,24 +6429,6 @@
 			<PromotionLine>PROMOTIONLINE_RAPID_DEPLOYMENT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<bEnemyRoute>1</bEnemyRoute>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NANITE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Commando.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,8,10</Button>
 			<iCaptureProbabilityModifierChange>-10</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
@@ -6580,16 +6544,6 @@
 					<iUnitCombatMod>10</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/stalwart1.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,1,2</Button>
 			<iCaptureResistanceModifierChange>-10</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -6704,20 +6658,6 @@
 					<iUnitCombatMod>15</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/stalwart2.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,2,2</Button>
 			<iCaptureResistanceModifierChange>-20</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -6833,16 +6773,6 @@
 					<iUnitCombatMod>20</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/stalwart3.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,3,2</Button>
 			<iCaptureResistanceModifierChange>-20</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -6854,12 +6784,6 @@
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE_PROTOCOLS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iWithdrawalChange>15</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Flanking1.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,1,3</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -6870,12 +6794,6 @@
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE_PROTOCOLS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iWithdrawalChange>20</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Flanking2.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,2,3</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -6886,12 +6804,6 @@
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE_PROTOCOLS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iWithdrawalChange>25</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Flanking3.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,3,3</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -6920,16 +6832,6 @@
 			<iLinePriority>1</iLinePriority>
 			<iCityDefense>20</iCityDefense>
 			<iCollateralDamageProtection>5</iCollateralDamageProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/CityGarrison1.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,5,1</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -6941,16 +6843,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iCityDefense>25</iCityDefense>
 			<iCollateralDamageProtection>5</iCollateralDamageProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/CityGarrison2.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,6,1</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -6963,16 +6855,6 @@
 			<iMovesChange>-1</iMovesChange>
 			<iCityDefense>30</iCityDefense>
 			<iCollateralDamageProtection>5</iCollateralDamageProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/CityGarrison3.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,7,1</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -7191,12 +7073,6 @@
 					<iUnitCombatMod>20</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/antitank1.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,5,3</Button>
 			<iCaptureProbabilityModifierChange>-5</iCaptureProbabilityModifierChange>
 		</PromotionInfo>
@@ -7225,12 +7101,6 @@
 					<iUnitCombatMod>20</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/antitank2.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,6,3</Button>
 			<iCaptureProbabilityModifierChange>-5</iCaptureProbabilityModifierChange>
 		</PromotionInfo>
@@ -7259,12 +7129,6 @@
 					<iUnitCombatMod>20</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/antitank3.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,7,3</Button>
 			<iCaptureProbabilityModifierChange>-5</iCaptureProbabilityModifierChange>
 		</PromotionInfo>
@@ -7282,12 +7146,6 @@
 			<PromotionLine>PROMOTIONLINE_GUARDIAN</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iRevoltProtection>6</iRevoltProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/patrol1.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,1,4</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -7298,12 +7156,6 @@
 			<PromotionLine>PROMOTIONLINE_GUARDIAN</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iRevoltProtection>8</iRevoltProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/patrol2.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,2,4</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -7314,12 +7166,6 @@
 			<PromotionLine>PROMOTIONLINE_GUARDIAN</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iRevoltProtection>10</iRevoltProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/patrol3.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,3,4</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -7366,12 +7212,6 @@
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Woodsman1.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,1,6</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -7418,12 +7258,6 @@
 					<iFeatureAttack>20</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Woodsman2.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,2,6</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -7470,12 +7304,6 @@
 					<iFeatureAttack>30</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Woodsman3.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,3,6</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -7485,12 +7313,6 @@
 			<PromotionPrereq>PROMOTION_TACTICS2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_OPERATIONS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/operations1.dds</Button>
 			<iControlPoints>5</iControlPoints>
 		</PromotionInfo>
@@ -7502,12 +7324,6 @@
 			<PromotionPrereqOr1>PROMOTION_TACTICS3</PromotionPrereqOr1>
 			<PromotionLine>PROMOTIONLINE_OPERATIONS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/operations2.dds</Button>
 			<iCommandRange>1</iCommandRange>
 		</PromotionInfo>
@@ -7520,12 +7336,6 @@
 			<PromotionLine>PROMOTIONLINE_OPERATIONS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iNeutralHealChange>5</iNeutralHealChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/operations3.dds</Button>
 			<iCommandRange>1</iCommandRange>
 			<iControlPoints>5</iControlPoints>
@@ -7539,12 +7349,6 @@
 			<PromotionLine>PROMOTIONLINE_OPERATIONS</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iEnemyHealChange>5</iEnemyHealChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/operations4.dds</Button>
 			<iControlPoints>10</iControlPoints>
 		</PromotionInfo>
@@ -7555,12 +7359,6 @@
 			<PromotionLine>PROMOTIONLINE_MORALE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iCombatPercent>5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/morale1.dds</Button>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -7573,12 +7371,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iCombatPercent>10</iCombatPercent>
 			<iRevoltProtection>1</iRevoltProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/morale2.dds</Button>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -7591,12 +7383,6 @@
 			<iLinePriority>3</iLinePriority>
 			<iCombatPercent>15</iCombatPercent>
 			<iRevoltProtection>2</iRevoltProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/morale3.dds</Button>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -7609,12 +7395,6 @@
 			<iLinePriority>4</iLinePriority>
 			<iCombatPercent>10</iCombatPercent>
 			<iRevoltProtection>3</iRevoltProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/morale4.dds</Button>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -7628,12 +7408,6 @@
 			<iCombatPercent>10</iCombatPercent>
 			<iRevoltProtection>4</iRevoltProtection>
 			<iExperiencePercent>10</iExperiencePercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/morale5.dds</Button>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -7645,12 +7419,6 @@
 			<PromotionLine>PROMOTIONLINE_TACTICS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iWithdrawalChange>15</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/tactics1.dds</Button>
 			<iCaptureProbabilityModifierChange>2</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-5</iCaptureResistanceModifierChange>
@@ -7664,12 +7432,6 @@
 			<PromotionLine>PROMOTIONLINE_TACTICS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iWithdrawalChange>15</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/tactics2.dds</Button>
 			<iCaptureProbabilityModifierChange>2</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-5</iCaptureResistanceModifierChange>
@@ -7683,12 +7445,6 @@
 			<PromotionLine>PROMOTIONLINE_TACTICS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iWithdrawalChange>20</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/tactics3.dds</Button>
 			<iCaptureProbabilityModifierChange>2</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-5</iCaptureResistanceModifierChange>
@@ -7702,12 +7458,6 @@
 			<PromotionLine>PROMOTIONLINE_TACTICS</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iWithdrawalChange>20</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/tactics4.dds</Button>
 			<iCaptureProbabilityModifierChange>2</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-5</iCaptureResistanceModifierChange>
@@ -7722,12 +7472,6 @@
 			<iLinePriority>1</iLinePriority>
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
 			<iSameTileHealChange>5</iSameTileHealChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/initiative1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -7742,12 +7486,6 @@
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
 			<iFriendlyHealChange>5</iFriendlyHealChange>
 			<iSameTileHealChange>5</iSameTileHealChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/initiative2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -7762,12 +7500,6 @@
 			<iFirstStrikesChange>1</iFirstStrikesChange>
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
 			<iSameTileHealChange>5</iSameTileHealChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/initiative3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -7783,12 +7515,6 @@
 			<iFirstStrikesChange>1</iFirstStrikesChange>
 			<iChanceFirstStrikesChange>2</iChanceFirstStrikesChange>
 			<iAdjacentTileHealChange>5</iAdjacentTileHealChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/initiative4.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -7800,12 +7526,6 @@
 			<iLinePriority>1</iLinePriority>
 			<iEnemyHealChange>2</iEnemyHealChange>
 			<iCityAttack>10</iCityAttack>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/SelfPreservation1.dds</Button>
 			<iCaptureProbabilityModifierChange>-2</iCaptureProbabilityModifierChange>
 		</PromotionInfo>
@@ -7819,12 +7539,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iEnemyHealChange>3</iEnemyHealChange>
 			<iCityAttack>15</iCityAttack>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/SelfPreservation2.dds</Button>
 			<iCaptureProbabilityModifierChange>-2</iCaptureProbabilityModifierChange>
 		</PromotionInfo>
@@ -7838,12 +7552,6 @@
 			<iLinePriority>3</iLinePriority>
 			<iEnemyHealChange>5</iEnemyHealChange>
 			<iCityAttack>20</iCityAttack>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/promotions/SelfPreservation3.dds</Button>
 			<iCaptureProbabilityModifierChange>-1</iCaptureProbabilityModifierChange>
 		</PromotionInfo>
@@ -8592,12 +8300,6 @@
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SEA_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/seacreature1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -8660,12 +8362,6 @@
 					<iTerrainDefense>20</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SEA_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/seacreature2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -8682,12 +8378,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SEA_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/leviathan1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -8704,12 +8394,6 @@
 					<iUnitCombatMod>50</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SEA_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/leviathan2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -8726,12 +8410,6 @@
 					<iUnitCombatMod>100</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SEA_ANIMAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/leviathan3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -8827,32 +8505,6 @@
 			<iLinePriority>1</iLinePriority>
 			<iCityDefense>10</iCityDefense>
 			<iRevoltProtection>5</iRevoltProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Bard1.dds</Button>
 			<iCaptureResistanceModifierChange>-5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
@@ -8866,32 +8518,6 @@
 			<iSameTileHealChange>10</iSameTileHealChange>
 			<iCityDefense>10</iCityDefense>
 			<iRevoltProtection>5</iRevoltProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Bard2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -8904,32 +8530,6 @@
 			<bAlwaysHeal>1</bAlwaysHeal>
 			<iCityDefense>10</iCityDefense>
 			<iRevoltProtection>5</iRevoltProtection>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Bard3.dds</Button>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>

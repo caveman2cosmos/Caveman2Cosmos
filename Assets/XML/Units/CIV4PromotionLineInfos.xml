@@ -967,21 +967,38 @@
 			<Type>PROMOTIONLINE_HUNTING_SIGHT</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HUNTING_SIGHT</Description>
 			<Button>,Art/Interface/Buttons/Promotions/Sentry.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,4,10</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SEA_CREATURE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_SEA_CREATURE</Description>
 			<Button>Art/Interface/Buttons/Promotions/seacreature1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_SEA_ANIMAL</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_LEVIATHAN</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_LEVIATHAN</Description>
 			<Button>Art/Interface/Buttons/Promotions/leviathan1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_SEA_ANIMAL</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_BARD</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_BARD</Description>
 			<Button>Art/Interface/Buttons/Promotions/Bard1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_THROWING</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SCOUT_AID</Type>
