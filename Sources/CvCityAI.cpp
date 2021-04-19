@@ -8215,13 +8215,13 @@ int CvCityAI::AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovemen
 
 	if (eBonus == NO_BONUS)
 	{
-		for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
-		{
-			if (improvement.getImprovementBonusDiscoverRand(iJ) > 0)
-			{
-				iValue += 10;
-			}
-		}
+		// for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+		// {
+		// 	if (improvement.getImprovementBonusDiscoverRand(iJ) > 0)
+		// 	{
+		// 		iValue += 0;
+		// 	}
+		// }
 	}
 	else if (!GET_TEAM(getTeam()).isBonusObsolete(eBonus))
 	{
@@ -8273,7 +8273,7 @@ int CvCityAI::AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovemen
 	for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 	{
 		yields[iJ] =
-			( pPlot->calculateImprovementYieldChange(eFinalUpgrade, (YieldTypes)iJ, getOwner(), false, true) * 2
+			( pPlot->calculateImprovementYieldChange(eFinalUpgrade, (YieldTypes)iJ, getOwner(), false, true) * 1
 			+ pPlot->calculateImprovementYieldChange(eImprovement, (YieldTypes)iJ, getOwner(), false, true) * 5
 			) / 2;
 	}
@@ -8388,6 +8388,7 @@ void CvCityAI::AI_updateBestBuild()
 	int iHillFoodDeficit = 0;
 	int iFoodTotal = GC.getYieldInfo(YIELD_FOOD).getMinCity();
 	int iProductionTotal = GC.getYieldInfo(YIELD_PRODUCTION).getMinCity();
+	int iCommerceTotal = GC.getYieldInfo(YIELD_COMMERCE).getMinCity();
 	int iWorkerCount = 0;
 	int iWorkableFood = 0;
 	int iWorkableFoodPlotCount = 0;
@@ -8475,13 +8476,13 @@ void CvCityAI::AI_updateBestBuild()
 					}
 				}
 
-				if (aiFinalYields[YIELD_FOOD] >= iFoodPerPop)
+				if (aiFinalYields[YIELD_FOOD] >= iFoodPerPop) // if (plot has equal or more food yield than what 1 population consumes)
 				{
 					iWorkableFood += aiFinalYields[YIELD_FOOD];
 					iWorkableFoodPlotCount++;
 				}
 
-				if (pLoopPlot->isBeingWorked() || 10*aiFinalYields[YIELD_FOOD] + 6*aiFinalYields[YIELD_PRODUCTION] + 4*aiFinalYields[YIELD_COMMERCE] > 21)
+				if (pLoopPlot->isBeingWorked() || (10*aiFinalYields[YIELD_FOOD] + 6*aiFinalYields[YIELD_PRODUCTION] + 4*aiFinalYields[YIELD_COMMERCE] > 21))
 				{
 					iGoodTileCount++;
 					if (pLoopPlot->isBeingWorked())
@@ -8802,7 +8803,7 @@ void CvCityAI::AI_updateBestBuild()
 					{
 						for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 						{
-							aiYields[iJ] = pLoopPlot->getYieldWithBuild(m_aeBestBuild[iI], (YieldTypes)iJ, true);
+							aiYields[iJ] = pLoopPlot->getYieldWithBuild(m_aeBestBuild[iI], (YieldTypes)iJ, false);
 						}
 
 						int iValue = AI_yieldValue(aiYields, NULL, false, false, false, false, true, true);
