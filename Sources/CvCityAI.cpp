@@ -8477,7 +8477,7 @@ void CvCityAI::AI_updateBestBuild()
 					}
 				}
 
-				if (aiFinalYields[YIELD_FOOD] >= iFoodPerPop) // if total food yield (on all plots?) is higher than food needed for 1 plot
+				if (aiFinalYields[YIELD_FOOD] >= iFoodPerPop) // if (plot has equal or more food yield than what 1 population consumes)
 				{
 					iWorkableFood += aiFinalYields[YIELD_FOOD];
 					iWorkableFoodPlotCount++;
