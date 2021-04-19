@@ -763,7 +763,9 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 	//if (eProperty != eDiseaseType)
 	//{
 	//
-	if (!GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS) || !kInfo.isOAType())
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	if (!kInfo.isOAType() || !GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+#endif
 	{
 		//TB Combat Mods end
 		if (!GET_PLAYER(m_pCity->getOwner()).isNPC())
@@ -833,11 +835,15 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 			PromotionRequirements::flags promoFlags = PromotionRequirements::IgnoreHas;
 			if (GC.getPromotionInfo(kPromotion.ePromotion).isEquipment())
 				promoFlags |= PromotionRequirements::Equip;
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 			if(GC.getPromotionInfo(kPromotion.ePromotion).isAffliction())
 				promoFlags |= PromotionRequirements::Afflict;
-
-			if (!GC.getPromotionInfo(kPromotion.ePromotion).isEquipment() &&
-				!GC.getPromotionInfo(kPromotion.ePromotion).isAffliction())
+#endif
+			if (!GC.getPromotionInfo(kPromotion.ePromotion).isEquipment()
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+				&& !GC.getPromotionInfo(kPromotion.ePromotion).isAffliction()
+#endif
+				)
 			{
 				promoFlags |= PromotionRequirements::Promote;
 			}

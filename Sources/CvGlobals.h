@@ -143,7 +143,7 @@ class CvMapInfo;
 
 extern CvDLLUtilityIFaceBase* gDLL;
 
-class cvInternalGlobals
+class cvInternalGlobals : bst::noncopyable
 {
 //	friend class CvDLLUtilityIFace;
 	friend class CvXMLLoadUtility;

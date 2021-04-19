@@ -1,49 +1,47 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- -->
 <!-- Better BTS AI variables to allow easy AI tweaking -->
 <!-- by jdog5000 -->
-<!-- -->
 <Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
 	<Define>
-		<!-- War success value of capturing a city.  BBAI default: 25, BTS 10 -->
+		<!-- War success value of capturing a city. BBAI default: 25, BTS 10 -->
 		<DefineName>WAR_SUCCESS_CITY_CAPTURING</DefineName>
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- Ratio of enemy power to team power for AI to consider running TURTLE (all out defense, no offensive forays) strategy.
-		Equal power would be 100.  BBAI default: 250 -->
+		Equal power would be 100. BBAI default: 250 -->
 		<DefineName>BBAI_TURTLE_ENEMY_POWER_RATIO</DefineName>
 		<iDefineIntVal>130</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Minimum stack strength ratio at which AI will attack enemy city it is next to, higher means less suicide.  BTS default: 120 -->
+		<!-- Minimum stack strength ratio at which AI will attack enemy city it is next to, higher means less suicide. BTS default: 120 -->
 		<DefineName>BBAI_ATTACK_CITY_STACK_RATIO</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Minimum attack odds of best attacker for AI to skip bombarding a city and just attack.  BBAI default: 12 -->
+		<!-- Minimum attack odds of best attacker for AI to skip bombarding a city and just attack. BBAI default: 12 -->
 		<DefineName>BBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS</DefineName>
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- Base ratio of stack strengths for AI considering skipping bombard and just attacking enemy city.
 		This ratio is reduced by the AI's best attacker odds and how long it will take to bombard the city.
-		Lower means AI will more readily skip bombarding.  BBAI default: 300 -->
+		Lower means AI will more readily skip bombarding. BBAI default: 300 -->
 		<DefineName>BBAI_SKIP_BOMBARD_BASE_STACK_RATIO</DefineName>
 		<iDefineIntVal>300</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Minimum stack strength ratio for AI to skip bombarding city and just attack, higher is more conservative.  BBAI default: 150 -->
+		<!-- Minimum stack strength ratio for AI to skip bombarding city and just attack, higher is more conservative. BBAI default: 150 -->
 		<DefineName>BBAI_SKIP_BOMBARD_MIN_STACK_RATIO</DefineName>
 		<iDefineIntVal>130</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Approximate fraction by number of units of attack stacks which AI aims to consist of bombard units.  default: 15 -->
+		<!-- Approximate fraction by number of units of attack stacks which AI aims to consist of bombard units. default: 15 -->
 		<DefineName>BBAI_BOMBARD_ATTACK_STACK_FRACTION</DefineName>
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Maximum fraction by number of units of city attack stacks which AI aims to consist of bombard units.  default: 50 -->
+		<!-- Maximum fraction by number of units of city attack stacks which AI aims to consist of bombard units. default: 50 -->
 		<DefineName>BBAI_BOMBARD_ATTACK_CITY_MAX_STACK_FRACTION</DefineName>
 		<iDefineIntVal>35</iDefineIntVal>
 	</Define>

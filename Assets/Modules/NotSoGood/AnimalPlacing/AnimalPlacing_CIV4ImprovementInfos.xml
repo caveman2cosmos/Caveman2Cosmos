@@ -3,7 +3,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Improvement -->
 <Civ4ImprovementInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<ImprovementInfos>
@@ -205,7 +204,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
- 		<ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_POMEGRANATE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_BONUS_POMEGRANATE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
@@ -214,7 +213,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
- 		<ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_KAVA</Type>
 			<Description>TXT_KEY_IMPROVEMENT_BONUS_KAVA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>

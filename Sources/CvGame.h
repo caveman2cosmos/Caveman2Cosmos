@@ -26,7 +26,7 @@ class CvUnit;
 
 typedef std::vector<const CvReplayMessage*> ReplayMessageList;
 
-class CvGame
+class CvGame : bst::noncopyable
 {
 public:
 

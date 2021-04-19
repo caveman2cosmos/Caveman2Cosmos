@@ -339,7 +339,7 @@
 			<Type>BUILDING_ANGKOR_WAT_2</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_ANGKOR_WAT</Description>
+			<Description>TXT_KEY_BUILDING_ANGKOR_WAT_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANGKOR_WAT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANGKOR_WAT_STRATEGY</Strategy>
 			<CommerceChanges>
@@ -1937,7 +1937,7 @@
 			<Type>BUILDING_CHEOMSEONGDAE_2</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_CHEOMSEONGDAE</Description>
+			<Description>TXT_KEY_BUILDING_CHEOMSEONGDAE_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHEOMSEONGDAE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CHEOMSEONGDAE_STRATEGY</Strategy>
 			<CommerceChanges>
@@ -2036,7 +2036,7 @@
 			<Type>BUILDING_CHICHEN_ITZA_2</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_CHICHEN_ITZA</Description>
+			<Description>TXT_KEY_BUILDING_CHICHEN_ITZA_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHICHEN_ITZA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CHICHEN_ITZA_STRATEGY</Strategy>
 			<CommerceChanges>
@@ -2676,7 +2676,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EDINBURGH_CASTLE</Description>
+			<Description>TXT_KEY_BUILDING_EDINBURGH_CASTLE_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EDINBURGH_CASTLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EDINBURGH_CASTLE_STRATEGY</Strategy>
 			<CommerceChanges>

@@ -13,17 +13,13 @@ Valid NPC players for spawns:
 	48 = NPC0_PLAYER
 	49 = NEANDERTHAL_PLAYER
 	50 = BARBARIAN_PLAYER
-
  <iMaxLocalDensity> Number of same unit allowed within a fat cross area
 	Area of 49 plots, 3 plots out in all directions from the spawn plot.
 	Plots that are not of the same area as the spawn plot is not counted.
-
  <iMaxAreaTotalDensity> Number of plots per unit allowed to spawn by this player within a map area.
 	A value of 20 means that the player must have less than 1 unit per 20 plots in that map area to spawn this unit there.
-
  <iMaxAreaUnitDensity> Number of plots per this unit type, regardless of owner, allowed to spawn within a map area.
 	A value of 20 means that there must be less than 1 of this unit type per 20 plots in that map area to spawn this unit there.
-
  <iTurns> Bigger value means less spawn.
 	Sets a spawn frequency per valid plot that does not adjust based on how many valid plots exist, so more valid plots means more spawns on the map.
  <iGlobalTurns> Bigger value means less spawn.
@@ -31,9 +27,9 @@ Valid NPC players for spawns:
 	Translated to <iTurns>: iTurns = (iGlobalTurns / 100) * iValidPlots
 	iValidPlots = Number of Valid spawn plots on entire map
 Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
-  The smallest, after converting iGlobalTurns to iTurns, will set the minimum spawn frequency.
-  The biggest can only increase that spawn frequency above the minimum set by the smallest one.
-  The bigger the other is the less it will increase the frequency set by the smallest one.
+ The smallest, after converting iGlobalTurns to iTurns, will set the minimum spawn frequency.
+ The biggest can only increase that spawn frequency above the minimum set by the smallest one.
+ The bigger the other is the less it will increase the frequency set by the smallest one.
 -->
 <Civ4SpawnInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<SpawnInfos>
@@ -3595,8 +3591,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -3638,8 +3637,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -3772,8 +3774,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -3794,8 +3799,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4104,11 +4112,17 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMinLatitude>40</iMinLatitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4139,8 +4153,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4174,7 +4191,9 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4211,9 +4230,13 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4234,8 +4257,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4301,11 +4327,17 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4358,7 +4390,9 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4378,11 +4412,17 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4401,6 +4441,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4419,6 +4460,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMinLongitude>60</iMinLongitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4437,6 +4479,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMinLongitude>60</iMinLongitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4474,8 +4517,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4495,8 +4541,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4548,9 +4597,13 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<!-- Neanderthals -->
@@ -4709,7 +4762,9 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMinLatitude>50</iMinLatitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4728,7 +4783,9 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMinLatitude>50</iMinLatitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4747,7 +4804,9 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMinLatitude>50</iMinLatitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>

@@ -32,7 +32,6 @@
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-
 		<!-- MAPBONUS-ONLY* EXPLOITATION (*mostly) -->
 		<!-- Wildlife Sanctuary | End -->
 		<ImprovementInfo>
@@ -888,7 +887,6 @@
 				</TraitYieldChange>
 			</TraitYieldChanges>
 		</ImprovementInfo>
-
 		<!-- Winery -> Vertical Farm -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WINERY</Type>
@@ -2418,7 +2416,6 @@
 			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 		</ImprovementInfo>
-
 		<!-- Geothermal Factory | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GEOTHERMAL_FACTORY</Type>
@@ -2583,7 +2580,6 @@
 				</RouteYieldChange>
 			</RouteYieldChanges>
 		</ImprovementInfo>
-
 		<!-- Hydrocarbon Well* | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HYDROCARBON_WELL</Type>
@@ -2757,7 +2753,6 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
-			<iUpgradeTime>32</iUpgradeTime>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_CRATER</FeatureType>
@@ -2995,7 +2990,6 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
-			<iUpgradeTime>10</iUpgradeTime>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
@@ -3148,7 +3142,6 @@
 			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_QUARRY</ImprovementUpgrade>
 		</ImprovementInfo>
-
 		<!-- INCIDENTIAL MAPBONUS-EXPLOITING -->
 		<!-- Vertical Farm | End -->
 		<ImprovementInfo>
@@ -4728,7 +4721,6 @@
 				</BonusTypeStruct>
 			</BonusTypeStructs>
 		</ImprovementInfo>
-
 		<!-- Mountain Mine | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MOUNTAIN_MINE</Type>
@@ -5304,7 +5296,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-
 		<!-- Core Mine | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CORE_MINE</Type>
@@ -7192,7 +7183,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-
 		<!-- Hybrid Forest | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HYBRID_FOREST</Type>
@@ -7948,7 +7938,6 @@
 			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_LUMBERJACK</ImprovementUpgrade>
 		</ImprovementInfo>
-
 		<!-- MAIN CHAINS -->
 		<!-- Suburb | End -->
 		<ImprovementInfo>
@@ -7968,7 +7957,6 @@
 			<PrereqTech>TECH_GAS_LIGHTING</PrereqTech>
 			<iHealthPercent>-100</iHealthPercent>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iUpgradeTime>50</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>120</iPillageGold>
 			<TerrainMakesValids>
@@ -8531,8 +8519,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-
-
 		<!-- Manufacturing Complex | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MANUFACTURING_COMPLEX</Type>
@@ -9062,7 +9048,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</ImprovementInfo>
-
 		<!-- Hydro Dam | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HYDRO_DAM</Type>
@@ -9147,7 +9132,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-
 		<!-- Modern Windmill | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MODERN_WINDMILL</Type>
@@ -9163,7 +9147,6 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_WINDMILL</ImprovementPillage>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
-			<iUpgradeTime>20</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>30</iPillageGold>
 			<TerrainMakesValids>
@@ -9286,7 +9269,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-
 		<!-- MISC / OTHER / 1-OFFS -->
 		<!-- Radio Tower | Independent -->
 		<ImprovementInfo>
@@ -9333,7 +9315,6 @@
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iAdvancedStartCost>35</iAdvancedStartCost>
-			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>10</iPillageGold>
 			<TerrainMakesValids>
@@ -9429,7 +9410,6 @@
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
 			<iFeatureGrowth>64</iFeatureGrowth>
-			<iUpgradeTime>32</iUpgradeTime>
 			<iAirBombDefense>20</iAirBombDefense>
 			<iHealthPercent>25</iHealthPercent>
 			<FeatureMakesValids>
@@ -9570,7 +9550,6 @@
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
-			<iUpgradeTime>4</iUpgradeTime>
 			<iPillageGold>8</iPillageGold>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
@@ -9594,7 +9573,6 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_SEED_CAMP</ImprovementPillage>
 			<bRequiresFeature>1</bRequiresFeature>
-			<iUpgradeTime>10</iUpgradeTime>
 			<iPillageGold>8</iPillageGold>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
@@ -9839,7 +9817,6 @@
 			<iCulture>2</iCulture>
 			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
-
 		<!-- PREHISTORIC CAMPS -->
 		<!-- Jungle Camp | End - Information Lifestyle -->
 		<ImprovementInfo>
@@ -10262,7 +10239,6 @@
 				</TraitYieldChange>
 			</TraitYieldChanges>
 		</ImprovementInfo>
-
 		<!-- DEFENSIVE IMPROVEMENTS (LAND) -->
 		<!-- Radar Watchtower | End -->
 		<ImprovementInfo>
@@ -10274,7 +10250,6 @@
 			<ImprovementPillage>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementPillage>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>400</iAdvancedStartCost>
-			<iUpgradeTime>25</iUpgradeTime>
 			<iAirBombDefense>15</iAirBombDefense>
 			<iDefenseModifier>20</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -10629,14 +10604,12 @@
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
-
 		<!-- Command Center | End -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COMMAND_CENTER</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COMMAND_CENTER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_CENTER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_CENTER</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_COMMAND_BUNKER</ImprovementPillage>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
@@ -10729,7 +10702,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_BUNKER</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -10824,7 +10796,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_FORT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORT</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -10920,7 +10891,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ArtDefineTag>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
-			<bActsAsCity>1</bActsAsCity>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>90</iAirBombDefense>
@@ -10946,7 +10916,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -10971,7 +10940,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_PALISADE</ArtDefineTag>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<bActsAsCity>1</bActsAsCity>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -11060,7 +11028,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_ABATIS_THORN_HEDGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ABATIS_THORN_HEDGE</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>5</iUpgradeTime>
@@ -11141,7 +11108,6 @@
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
-
 		<!-- FEATUREFORMING / TERRAFORMING -->
 		<!-- Plant Forest -->
 		<ImprovementInfo>
@@ -11566,7 +11532,6 @@
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-
 		<!-- NAVAL IMPROVEMENTS -->
 		<!-- Whaling Ships -->
 		<ImprovementInfo>
@@ -11813,13 +11778,13 @@
 			<iUpgradeTime>2</iUpgradeTime>
 			<ImprovementUpgrade>IMPROVEMENT_FISHING_BOATS</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
-				<ImprovementUpgrade>IMPROVEMENT_WHALING_BOATS</ImprovementUpgrade>
-				<ImprovementUpgrade>IMPROVEMENT_HARVEST_KELP</ImprovementUpgrade>
-				<ImprovementUpgrade>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementUpgrade>
-				<ImprovementUpgrade>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementUpgrade>
-				<ImprovementUpgrade>IMPROVEMENT_MARINE_PRESERVE</ImprovementUpgrade>
-				<ImprovementUpgrade>IMPROVEMENT_SEA_MILL</ImprovementUpgrade>
-				<ImprovementUpgrade>IMPROVEMENT_TIDAL_HARNESS</ImprovementUpgrade>
+				<ImprovementType>IMPROVEMENT_WHALING_BOATS</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HARVEST_KELP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
+				<ImprovementType>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementType>
+				<ImprovementType>IMPROVEMENT_MARINE_PRESERVE</ImprovementType>
+				<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
+				<ImprovementType>IMPROVEMENT_TIDAL_HARNESS</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
@@ -12095,7 +12060,6 @@
 			<bRequiresFeature>1</bRequiresFeature>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
-			<iUpgradeTime>32</iUpgradeTime>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
@@ -12762,7 +12726,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_AQUATIC_FORCEFIELD</ArtDefineTag>
-			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -12860,7 +12823,6 @@
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
 			<bIsZOCSource>1</bIsZOCSource>
 		</ImprovementInfo>
-
 		<!-- GRAPHICAL ONLY / MISC -->
 		<!-- Land Worked (Graphical) -->
 		<ImprovementInfo>
@@ -12884,7 +12846,7 @@
 			<iAirBombDefense>-1</iAirBombDefense>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-		<!-- City Ruins (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_CITY_RUINS)  -->
+		<!-- City Ruins (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_CITY_RUINS) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CITY_RUINS</Type>
 			<Description>TXT_KEY_IMPROVEMENT_CITY_RUINS</Description>
@@ -12896,7 +12858,7 @@
 			<iDefenseModifier>15</iDefenseModifier>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
-		<!-- City Ruins Arcology (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_ARCOLOGY_RUINS)  -->
+		<!-- City Ruins Arcology (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_ARCOLOGY_RUINS) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CITY_RUINS_ARCOLOGY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_CITY_RUINS</Description>

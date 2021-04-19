@@ -15,13 +15,7 @@
 		<ArtDefineTag>ART_DEF_BONUS_STEAMPUNK</ArtDefineTag>
 		<TechReveal>TECH_STEAMPUNK</TechReveal>
 		<TechCityTrade>TECH_STEAMPUNK</TechCityTrade>
-		<TechObsolete>NONE</TechObsolete>
-		<iAITradeModifier>0</iAITradeModifier>
-		<iAIObjective>0</iAIObjective>
-		<iHealth>0</iHealth>
-		<iHappiness>0</iHappiness>
 		<iPlacementOrder>-1</iPlacementOrder>
-		<iConstAppearance>0</iConstAppearance>
 	</BonusInfo>
 </BonusInfos>
 </Civ4BonusInfos>
