@@ -453,6 +453,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_EMU</Tag>
 		<English>Subdued Emu</English>
 		<French>Emeu (App.)</French>
+		<German>
+			<Text>Gefangener Emu:Gefangenen Emus:Gefangenen Emu:Gefangenen Emu:Gefangene Emus:Gefangenen Emus:Gefangenen Emus:Gefangenen Emus</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Emù addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1302,6 +1307,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDFOX</Tag>
 		<English>Subdued Red Fox</English>
 		<French>Renard roux (App.)</French>
+		<German>
+			<Text>Gefangener Rotfuchs:Gefangenen Rotfuchses:Gefangenen Rotfuchs:Gefangenen Rotfuchs:Gefangene Rotfüchse:Gefangenen Rotfüchse:Gefangenen Rotfüchsen:Gefangenen Rotfüchse</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Volpe rossa addomesticata</Text>
 			<Gender>Female</Gender>
@@ -1314,6 +1324,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_REEF_SHARK</Tag>
 		<English>Subdued Reef Shark</English>
 		<French>Requin des récifs (App.)</French>
+		<German>
+			<Text>Gefangener Riffhai:Gefangenen Riffhais:Gefangenen Riffhai:Gefangenen Riffhai:Gefangene Riffhaie:Gefangenen Riffhaie:Gefangenen Riffhaien:Gefangenen Riffhaie</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Squalo di barriera addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1338,6 +1353,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_LARGE</Tag>
 		<English>Subdued Crocodile (Large)</English>
 		<French>Grand Crocodile (App.)</French>
+		<German>
+			<Text>Gefangenes Krokodil (groß):Gefangenen Krokodils (groß):Gefangenen Krokodil (groß):Gefangene Krokodil (groß):Gefangene Krokodile (groß):Gefangenen Krokodile (groß):Gefangenen Krokodilen (groß):Gefangenen Krokodile (groß)</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Coccodrillo (grande) addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1350,6 +1370,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_SMALL</Tag>
 		<English>Subdued Crocodile (Small)</English>
 		<French>Petit Crocodile (App.)</French>
+		<German>
+			<Text>Gefangenes Krokodil (klein):Gefangenen Krokodils (klein):Gefangenen Krokodil (klein):Gefangene Krokodil (klein):Gefangene Krokodile (klein):Gefangenen Krokodile (klein):Gefangenen Krokodilen (klein):Gefangenen Krokodile (klein)</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Coccodrillo (piccolo) addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1362,6 +1387,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_ROCKHOPPER</Tag>
 		<English>Subdued Rockhopper Penguin</English>
 		<French>Gorfou sauteur (App.)</French>
+		<German>
+			<Text>Gefangener Felsenpinguin:Gefangenen Felsenpinguins:Gefangenen Felsenpinguin:Gefangenen Felsenpinguin:Gefangene Felsenpinguine:Gefangenen Felsenpinguine:Gefangenen Felsenpinguinen:Gefangenen Felsenpinguine</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Pinguino Rockhopper addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1386,6 +1416,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROCL</Tag>
 		<English>Subdued Saltwater Crocodile (Large)</English>
 		<French>Grand Crocodile de mer (App.)</French>
+		<German>
+			<Text>Gefangenes Salzwasserkrokodil (groß):Gefangenen Salzwasserkrokodils (groß):Gefangenen Salzwasserkrokodil (groß):Gefangene Salzwasserkrokodil (groß):Gefangene Salzwasserkrokodile (groß):Gefangenen Salzwasserkrokodile (groß):Gefangenen Salzwasserkrokodilen (groß):Gefangenen Salzwasserkrokodile (groß)</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Coccodrillo marino (grande) addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1398,6 +1433,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROCS</Tag>
 		<English>Subdued Saltwater Crocodile (Small)</English>
 		<French>Petit Crocodile de mer (App.)</French>
+		<German>
+			<Text>Gefangenes Salzwasserkrokodil (klein):Gefangenen Salzwasserkrokodils (klein):Gefangenen Salzwasserkrokodil (klein):Gefangene Salzwasserkrokodil (klein):Gefangene Salzwasserkrokodile (klein):Gefangenen Salzwasserkrokodile (klein):Gefangenen Salzwasserkrokodilen (klein):Gefangenen Salzwasserkrokodile (klein)</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Coccodrillo marino (piccolo) addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1410,6 +1450,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_LAND</Tag>
 		<English>Subdued Sea Lion (Land)</English>
 		<French>Lion de mer (App.)</French>
+		<German>
+			<Text>Gezähmter Seelöwe:Gezähmten Seelöwen:Gezähmten Seelöwen:Gezähmten Seelöwen:Gezähmte Seelöwen:Gezähmten Seelöwen:Gezähmten Seelöwen:Gezähmten Seelöwen</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Leone marino addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1422,6 +1467,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_SEA</Tag>
 		<English>Subdued Sea Lion (Sea)</English>
 		<French>Lion de mer (App.)</French>
+		<German>
+			<Text>Gezähmter Seelöwe:Gezähmten Seelöwen:Gezähmten Seelöwen:Gezähmten Seelöwen:Gezähmte Seelöwen:Gezähmten Seelöwen:Gezähmten Seelöwen:Gezähmten Seelöwen</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Leone marino addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1655,6 +1705,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALRUS</Tag>
 		<English>Subdued Walrus</English>
 		<French>Morse (App.)</French>
+		<German>
+			<Text>Gefangenes Walross:Gefangenen Walrosses:Gefangenen Walross:Gefangene Walross:Gefangene Walrosse:Gefangenen Walrosse:Gefangenen Walrossen:Gefangenen Walrosse</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Tricheco addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1679,6 +1734,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_WHALESHARK</Tag>
 		<English>Subdued Whale Shark</English>
 		<French>Requin-baleine (App.)</French>
+		<German>
+			<Text>Gefangener Walhai:Gefangenen Walhais:Gefangenen Walhai:Gefangenen Walhai:Gefangene Walhaie:Gefangenen Walhaie:Gefangenen Walhaien:Gefangenen Walhaie</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Squalo balena addomesticato</Text>
 			<Gender>Male</Gender>

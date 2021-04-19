@@ -111,7 +111,7 @@
 		<Italian>Una Inquisizione nella città di %s1_city ha fallito l'eliminazione delle religioni non di Stato.</Italian>
 		<Spanish>Un Tribunal de la Fé convocado en %s1_city ha fallado al intentar eliminar a los herejes.</Spanish>
 		<Polish>Inkwizytorowi w mieście %s1_city nie udało się odeprzeć wszystkich niepaństwowych religii.</Polish>
-		<Russian>Инквизиция не сумела уничтожить в городе %s1_city  все негосударственные религии.</Russian>
+		<Russian>Инквизиция не сумела уничтожить в городе %s1_city все негосударственные религии.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_INQUISITION_GLOBAL</Tag>

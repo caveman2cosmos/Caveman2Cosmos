@@ -5,7 +5,7 @@
 			<Type>UNIT_FEMALE_JEWISH_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_JUDAISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_JEWISH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -58,7 +58,7 @@
 			<Type>UNIT_FEMALE_CHRISTIAN_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_CHRISTIANITY</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_CHRISTIAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -111,7 +111,7 @@
 			<Type>UNIT_FEMALE_ISLAMIC_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_ISLAM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_ISLAMIC_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -164,7 +164,7 @@
 			<Type>UNIT_FEMALE_HINDU_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_HINDUISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_HINDU_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -217,7 +217,7 @@
 			<Type>UNIT_FEMALE_BUDDHIST_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_BUDDHISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_BUDDHIST_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -270,7 +270,7 @@
 			<Type>UNIT_FEMALE_CONFUCIAN_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_CONFUCIANISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_CONFUCIAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -323,7 +323,7 @@
 			<Type>UNIT_FEMALE_TAOIST_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_TAOISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_TAOIST_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -376,7 +376,7 @@
 			<Type>UNIT_FEMALE_ANDEAN_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_ANDEANISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_ANDEAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -429,7 +429,7 @@
 			<Type>UNIT_FEMALE_ASATRU_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_ASATRU</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_ASATRU_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -482,7 +482,7 @@
 			<Type>UNIT_FEMALE_DRUID_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_DRUID_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -535,7 +535,7 @@
 			<Type>UNIT_FEMALE_HELLENIC_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_HELLENISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_HELLENIC_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -588,7 +588,7 @@
 			<Type>UNIT_FEMALE_EGYPT_MYTH_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_KEMETISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_EGYPT_MYTH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -641,7 +641,7 @@
 			<Type>UNIT_FEMALE_MESO_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_MESO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
@@ -694,7 +694,7 @@
 			<Type>UNIT_FEMALE_SHAMAN_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_SHAMANISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_SHAMAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -747,7 +747,7 @@
 			<Type>UNIT_FEMALE_SHINTO_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_SHINTO</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_SHINTO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -800,7 +800,7 @@
 			<Type>UNIT_FEMALE_TENGRI_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_TENGRIISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_TENGRI_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -853,7 +853,7 @@
 			<Type>UNIT_FEMALE_BAHAI_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_BAHAI</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_BAHAI_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -906,7 +906,7 @@
 			<Type>UNIT_FEMALE_MORMON_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_MORMON</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_MORMON_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -959,7 +959,7 @@
 			<Type>UNIT_FEMALE_SCIENTOLOGY_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_SCIENTOLOGY</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_SCIENTOLOGY_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -1012,7 +1012,7 @@
 			<Type>UNIT_FEMALE_SIKH_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_SIKHISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_SIKH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -1065,7 +1065,7 @@
 			<Type>UNIT_FEMALE_VOODOO_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_VOODOO</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_VOODOO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -1118,7 +1118,7 @@
 			<Type>UNIT_FEMALE_YORUBA_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_YORUBA</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_YORUBA_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
@@ -1171,7 +1171,7 @@
 			<Type>UNIT_FEMALE_CANAANITE_MISSIONARY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_CANAANISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_FEMALE_CANAANITE_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>

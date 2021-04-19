@@ -476,11 +476,12 @@ public:
 
 	int getNumActiveWorldWonders() const;
 
-
 	bool processGreatWall(bool bIn, bool bForce = false, bool bSeeded = true);
 
 	int getReligionCount() const;
 	int getCorporationCount() const;
+
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	//TB Combat Mods (Buildings) begin
 	int getUnitAidPresent(PropertyTypes eProperty) const;
 	int getCityAidTotal(PromotionLineTypes ePromotionLineType) const;
@@ -509,7 +510,6 @@ public:
 	void setCurrentOvercomeChange(PromotionLineTypes ePromotionLine, int iChange);
 
 	int getTotalTechOutbreakLevelChange(BuildingTypes eBuilding) const;
-	int getPropertyValue(PropertyTypes eProperty);
 	int getOutbreakChangesTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const;
 	int getOvercomeChangesTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const;
 	int getUnitCommunicability(PromotionLineTypes eAfflictionLine) const;
@@ -518,6 +518,13 @@ public:
 	int getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) const;
 	void doOutbreakCheck(PromotionLineTypes eAfflictionLine);
 	void doOvercomeCheck(PromotionLineTypes eAfflictionLine);
+	int getPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction) const;
+	void changePromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iChange);
+	void setPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iValue);
+#endif // OUTBREAKS_AND_AFFLICTIONS
+
+	int getPropertyValue(PropertyTypes eProperty);
+
 	int getUnitCombatProductionModifier(UnitCombatTypes eIndex) const;
 	void changeUnitCombatProductionModifier(UnitCombatTypes eIndex, int iChange);
 	int getUnitCombatRepelModifierTotal(UnitCombatTypes eIndex) const;
@@ -526,10 +533,6 @@ public:
 	void changeUnitCombatRepelAgainstModifierTotal(UnitCombatTypes eIndex, int iChange);
 	int getUnitCombatDefenseAgainstModifierTotal(UnitCombatTypes eIndex) const;
 	void changeUnitCombatDefenseAgainstModifierTotal(UnitCombatTypes eIndex, int iChange);
-
-	int getPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction) const;
-	void changePromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iChange);
-	void setPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iValue);
 
 #ifdef STRENGTH_IN_NUMBERS
 	int getTotalFrontSupportPercentModifier() const;
@@ -542,7 +545,7 @@ public:
 	void changeTotalLongRangeSupportPercentModifier(int iChange);
 	int getTotalFlankSupportPercentModifier() const;
 	void changeTotalFlankSupportPercentModifier(int iChange);
-#endif
+#endif // STRENGTH_IN_NUMBERS
 
 	int getUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex) const;
 	void changeUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex, int iChange);

@@ -14981,11 +14981,11 @@
 				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
- 					<iExperience>1</iExperience>
+					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
- 					<iExperience>1</iExperience>
+					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<iAsset>1</iAsset>
@@ -15493,7 +15493,7 @@
 			<Strategy>TXT_KEY_BUILDING_MASTER_SEA_HUNTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MASTER_SEA_HUNTER</ArtDefineTag>
- 			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
+			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<FreePromotion>PROMOTION_SEA_HUNTER1</FreePromotion>
 			<MapCategoryTypes>

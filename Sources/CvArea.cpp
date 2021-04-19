@@ -1153,7 +1153,6 @@ void CvArea::changeNumImprovements(ImprovementTypes eImprovement, int iChange)
 // Koshling - record rolling history of the last N turns of our combat losses and what we lost to
 void CvArea::recordCombatDeath(PlayerTypes ePlayer, UnitTypes lostUnitType, UnitTypes lostToUnitType)
 {
-	MEMORY_TRACK_EXEMPT();
 
 	CombatResultRecord record;
 

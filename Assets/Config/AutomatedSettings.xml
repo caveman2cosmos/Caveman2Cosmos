@@ -16,7 +16,7 @@
 			</option>
 
 			<!-- Automate Pillage Options: -->
-			 <option id="AvoidEnemyUnits" key="AvoidEnemyUnits" type="boolean" default="False" get="isAvoidEnemyUnits" set="setAvoidEnemyUnits">
+			<option id="AvoidEnemyUnits" key="AvoidEnemyUnits" type="boolean" default="False" get="isAvoidEnemyUnits" set="setAvoidEnemyUnits">
 				<change module="AutomatedSettings" function="changedAvoidEnemyUnits"/>
 			</option>
 

@@ -377,7 +377,6 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 // XXX generalize these funcs? (macro?)
 void CvMap::doTurn()
 {
-	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()");
 
 	for (int iI = 0; iI < numPlots(); iI++)
@@ -1607,7 +1606,6 @@ void CvMap::toggleCitiesDisplay()
 			}
 		}
 	}
-	MEMORY_TRACK_EXEMPT();
 	AddDLLMessage(
 		GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(),
 		m_bCitiesDisplayed ? "City entities visible" : "City entities hidden",
@@ -1743,7 +1741,6 @@ void CvMap::toggleUnitsDisplay()
 	if (m_bUnitsDisplayed)
 		szBuffer = "Unit entities created";
 			
-	MEMORY_TRACK_EXEMPT();
 
 	AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
 }
