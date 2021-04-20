@@ -166,13 +166,14 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	##############################
 	### Not available at init time
 	##############################
-
-	sprint = ""
+	global bInitialized
 	if not bInitialized:
+		bInitialized = True
 		if DEBUG:
 			mapStats.mapStatistics()
 	else:
 		global sClimateType, sSeaType, bTeams, mapGetLatitude
+		sprint = ""
 		#######################
 		### retrieve parameters
 		#######################
@@ -238,9 +239,6 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 
 		# debug maps; check if given defLatitude parameter is reasonable
 		if DEBUG: testLatitude()
-
-		global bInitialized
-		bInitialized = True
 
 
 #######################################################################
