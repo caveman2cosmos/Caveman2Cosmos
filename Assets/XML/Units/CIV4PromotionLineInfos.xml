@@ -3274,15 +3274,6 @@
 			<bBuildUp>1</bBuildUp>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_WORKER_TRADITIONS</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_WORKER_TRADITIONS</Description>
-			<Button>Art/Interface/Buttons/Promotions/trad_work_ethic.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_WORKER</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_COMBAT_WORKER</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_ARMED_GUARD</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_ARMED_GUARD</Description>
 			<Button>Art/Interface/Buttons/Promotions/ArmedGuard1Promotion.dds</Button>

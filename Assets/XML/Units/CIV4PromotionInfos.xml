@@ -19448,8 +19448,6 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
-			<PromotionLine>PROMOTIONLINE_WORKER_TRADITIONS</PromotionLine>
-			<iLinePriority>1</iLinePriority>
 			<TerrainWorks>
 				<TerrainWork>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -19536,6 +19534,16 @@
 					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_COMBAT_WORKER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_WORKER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/trad_asthetic_appreciation.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -19544,8 +19552,6 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
-			<PromotionLine>PROMOTIONLINE_WORKER_TRADITIONS</PromotionLine>
-			<iLinePriority>1</iLinePriority>
 			<TerrainWorks>
 				<TerrainWork>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -19616,6 +19622,16 @@
 					<iTerrainWork>10</iTerrainWork>
 				</TerrainWork>
 			</TerrainWorks>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_COMBAT_WORKER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_WORKER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/trad_work_ethic.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
