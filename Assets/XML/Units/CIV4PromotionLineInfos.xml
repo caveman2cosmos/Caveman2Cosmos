@@ -1440,6 +1440,9 @@
 			<Type>PROMOTIONLINE_BLOODHOUND</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_BLOODHOUND</Description>
 			<Button>Art/Interface/Buttons/Promotions/bloodhound1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SHADOWSTALKER</Type>
@@ -1454,24 +1457,44 @@
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</Description>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CIVILIAN</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
 			<bEquipment>1</bEquipment>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</Description>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CIVILIAN</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
 			<bEquipment>1</bEquipment>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_EQUIPMENT_RANGED_WEAPONS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_EQUIPMENT_RANGED_WEAPONS</Description>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
 			<bEquipment>1</bEquipment>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</Description>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
 			<bEquipment>1</bEquipment>
 		</PromotionLineInfo>
