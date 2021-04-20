@@ -175,13 +175,6 @@
 		<Russian>Íàáåã</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_AVIATION_DECEPTION</Tag>
-		<English>Aviation Deception Promotion Line</English>
-		<French>Spécialisation Tromperie Aérienne</French>
-		<Italian>Inganno</Italian>
-		<Polish>Linia Promocji: Oszukanie Lotnictwa</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BACKSTAB</Tag>
 		<English>Backstab Promotion Line</English>
 		<French>Spécialisation Poignard dans le dos</French>
@@ -1277,14 +1270,6 @@
 		<English>Herding Promotion Line</English>
 		<French>Spécialisation Berger</French>
 		<Polish>Linia Promocji: Pasterstwo</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_HEROIC</Tag>
-		<English>Heroic Promotion Line</English>
-		<French>Spécialisation Heros</French>
-		<Italian>Eroico</Italian>
-		<Polish>Linia Promocji: Heroiczność</Polish>
-		<Russian>Ãåðîèçì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_HIDE_IN_SHADOWS</Tag>

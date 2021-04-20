@@ -1001,11 +1001,6 @@
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_HEROIC</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_HEROIC</Description>
-			<Button>,Art/Interface/Buttons/Promotions/Hero3.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,3,7</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SIDESTEP</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_SIDESTEP</Description>
 			<Button>art/Buttons/Promotions/SidestepPromotion1.dds</Button>
@@ -1041,6 +1036,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
+		<!-- Those are used by TraitInfos -->
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PHILOSOPHICAL</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PHILOSOPHICAL</Description>
@@ -1206,11 +1202,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_BARBARIAN</Description>
 			<Button>art/Buttons/Traits/TraitPolitician.dds</Button>
 		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_LIVE</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_LIVE</Description>
-			<Button>Art/Interface/Buttons/Promotions/Phoenix1.dds</Button>
-		</PromotionLineInfo>
+		<!-- End of TraitInfo promotionlines -->
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TRANSPORT_TROOPS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRANSPORT_TROOPS</Description>
@@ -2458,11 +2450,6 @@
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_AVIATION_DECEPTION</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_AVIATION_DECEPTION</Description>
-			<Button>,Art/Interface/Buttons/Promotions/Deception1.dds</Button>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_ENTRAPMENT</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_ENTRAPMENT</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
@@ -3378,6 +3365,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
+		<!-- Is that TB experiment? -->
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_AFFLICTION_DISEASE_COMMON_COLD</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_AFFLICTION_DISEASE_COMMON_COLD</Description>
