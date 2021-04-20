@@ -2452,6 +2452,10 @@
 			<Type>PROMOTIONLINE_MARTIAL_ARTS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_MARTIAL_ARTS</Description>
 			<Button>art/Sports/Buttons/Martial_Arts1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_AVIATION_DECEPTION</Type>
@@ -2462,11 +2466,18 @@
 			<Type>PROMOTIONLINE_ENTRAPMENT</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_ENTRAPMENT</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CRIMINAL</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SLAVE_MASTER</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_SLAVE_MASTER</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TAKE_PRISONERS</Type>
@@ -2482,6 +2493,9 @@
 			<Type>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_NON_LETHAL_FORCE</Type>
@@ -2496,26 +2510,41 @@
 			<Type>PROMOTIONLINE_TO_THE_DEATH</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TO_THE_DEATH</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_DARING_ESCAPE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_DARING_ESCAPE</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_HERDING</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HERDING</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PREDATORIAL_BLOODLUST</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PREDATORIAL_BLOODLUST</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_FELINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_LIVE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_LIVE</Description>
 			<Button>Art/Interface/Buttons/Promotions/Phoenix1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_HERO</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_BOUNTY_HUNTER</Type>
@@ -2536,6 +2565,11 @@
 				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_TRANSPORT</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -2901,6 +2935,10 @@
 				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_SPY</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_COMMANDER</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>

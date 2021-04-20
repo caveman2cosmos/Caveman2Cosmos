@@ -15750,16 +15750,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Sports/Buttons/Martial_Arts1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -15788,16 +15778,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Sports/Buttons/Martial_Arts2.dds</Button>
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
@@ -15829,16 +15809,6 @@
 					<iUnitCombatMod>50</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>art/Sports/Buttons/Martial_Arts3.dds</Button>
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
@@ -16156,16 +16126,6 @@
 			<TechPrereq>TECH_HUNTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ENTRAPMENT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
 			<Button>art/Buttons/Promotions/Ensnare1Promotion.dds</Button>
 		</PromotionInfo>
@@ -16176,16 +16136,6 @@
 			<PromotionPrereq>PROMOTION_ENTRAPMENT1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ENTRAPMENT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
 			<Button>art/Buttons/Promotions/Ensnare2Promotion.dds</Button>
 		</PromotionInfo>
@@ -16196,16 +16146,6 @@
 			<PromotionPrereq>PROMOTION_ENTRAPMENT2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ENTRAPMENT</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
 			<Button>art/Buttons/Promotions/ensnare3promotion.dds</Button>
 		</PromotionInfo>
@@ -16216,12 +16156,6 @@
 			<TechPrereq>TECH_SLAVERY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SLAVE_MASTER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>4</iCaptureProbabilityModifierChange>
 			<Button>art/Buttons/Promotions/SlaveMaster1Promotion.dds</Button>
 		</PromotionInfo>
@@ -16232,12 +16166,6 @@
 			<PromotionPrereq>PROMOTION_SLAVE_MASTER1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_SLAVE_MASTER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>4</iCaptureProbabilityModifierChange>
 			<Button>art/Buttons/Promotions/SlaveMaster2Promotion.dds</Button>
 		</PromotionInfo>
@@ -16248,12 +16176,6 @@
 			<PromotionPrereq>PROMOTION_SLAVE_MASTER2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_SLAVE_MASTER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>4</iCaptureProbabilityModifierChange>
 			<Button>art/Buttons/Promotions/SlaveMaster3Promotion.dds</Button>
 		</PromotionInfo>
@@ -16264,12 +16186,6 @@
 			<PromotionPrereq>PROMOTION_SLAVE_MASTER3</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_SLAVE_MASTER</PromotionLine>
 			<iLinePriority>4</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>4</iCaptureProbabilityModifierChange>
 			<Button>art/Buttons/Promotions/SlaveMaster4Promotion.dds</Button>
 		</PromotionInfo>
@@ -16280,12 +16196,6 @@
 			<PromotionPrereq>PROMOTION_SLAVE_MASTER4</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_SLAVE_MASTER</PromotionLine>
 			<iLinePriority>5</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>4</iCaptureProbabilityModifierChange>
 			<Button>art/Buttons/Promotions/SlaveMaster5Promotion.dds</Button>
 		</PromotionInfo>
@@ -16350,12 +16260,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureResistanceModifierChange>8</iCaptureResistanceModifierChange>
 			<Button>art/Buttons/Promotions/UnquestionedObedience1Promotion.dds</Button>
 		</PromotionInfo>
@@ -16367,12 +16271,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureResistanceModifierChange>8</iCaptureResistanceModifierChange>
 			<Button>art/Buttons/Promotions/UnquestionedObedience2Promotion.dds</Button>
 		</PromotionInfo>
@@ -16384,12 +16282,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureResistanceModifierChange>8</iCaptureResistanceModifierChange>
 			<Button>art/Buttons/Promotions/UnquestionedObedience3Promotion.dds</Button>
 		</PromotionInfo>
@@ -16401,12 +16293,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureResistanceModifierChange>8</iCaptureResistanceModifierChange>
 			<Button>art/Buttons/Promotions/UnquestionedObedience4Promotion.dds</Button>
 		</PromotionInfo>
@@ -16418,12 +16304,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureResistanceModifierChange>8</iCaptureResistanceModifierChange>
 			<Button>art/Buttons/Promotions/UnquestionedObedience5Promotion.dds</Button>
 		</PromotionInfo>
@@ -16488,12 +16368,6 @@
 			<PromotionLine>PROMOTIONLINE_TO_THE_DEATH</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iCombatPercent>5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureResistanceModifierChange>20</iCaptureResistanceModifierChange>
 			<Button>art/Buttons/Promotions/ToTheDeath1Promotion.dds</Button>
 		</PromotionInfo>
@@ -16505,12 +16379,6 @@
 			<PromotionLine>PROMOTIONLINE_TO_THE_DEATH</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iCombatPercent>5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureResistanceModifierChange>25</iCaptureResistanceModifierChange>
 			<Button>art/Buttons/Promotions/ToTheDeath2Promotion.dds</Button>
 		</PromotionInfo>
@@ -16522,12 +16390,6 @@
 			<PromotionLine>PROMOTIONLINE_TO_THE_DEATH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iCombatPercent>5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureResistanceModifierChange>30</iCaptureResistanceModifierChange>
 			<Button>art/Buttons/Promotions/ToTheDeath3Promotion.dds</Button>
 		</PromotionInfo>
@@ -16539,12 +16401,6 @@
 			<PromotionLine>PROMOTIONLINE_TO_THE_DEATH</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iCombatPercent>10</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureResistanceModifierChange>35</iCaptureResistanceModifierChange>
 			<Button>art/Buttons/Promotions/ToTheDeath4Promotion.dds</Button>
 		</PromotionInfo>
@@ -16558,12 +16414,6 @@
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureResistanceModifierChange>20</iCaptureResistanceModifierChange>
 			<Button>art/Buttons/Promotions/DaringEscape1Promotion.dds</Button>
 		</PromotionInfo>
@@ -16578,12 +16428,6 @@
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>10</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureResistanceModifierChange>25</iCaptureResistanceModifierChange>
 			<Button>art/Buttons/Promotions/DaringEscape2Promotion.dds</Button>
 		</PromotionInfo>
@@ -16598,12 +16442,6 @@
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>15</iWithdrawalChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureResistanceModifierChange>30</iCaptureResistanceModifierChange>
 			<Button>art/Buttons/Promotions/DaringEscape3Promotion.dds</Button>
 		</PromotionInfo>
@@ -16614,12 +16452,6 @@
 			<PromotionPrereq>PROMOTION_BARK</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HERDING</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
 			<Button>art/Buttons/Promotions/Herding1Promotion.dds</Button>
 		</PromotionInfo>
@@ -16630,12 +16462,6 @@
 			<PromotionPrereq>PROMOTION_HERDING1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HERDING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
 			<Button>art/Buttons/Promotions/Herding2Promotion.dds</Button>
 		</PromotionInfo>
@@ -16647,12 +16473,6 @@
 			<PromotionLine>PROMOTIONLINE_PREDATORIAL_BLOODLUST</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iCombatPercent>25</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_FELINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>-15</iCaptureProbabilityModifierChange>
 			<Button>art/Buttons/Promotions/PredatorialBloodlust2Promotion.dds</Button>
 		</PromotionInfo>
@@ -16663,12 +16483,6 @@
 			<PromotionLine>PROMOTIONLINE_PREDATORIAL_BLOODLUST</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iCombatPercent>15</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_FELINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<iCaptureProbabilityModifierChange>-10</iCaptureProbabilityModifierChange>
 			<Button>art/Buttons/Promotions/PredatorialBloodlust1Promotion.dds</Button>
 		</PromotionInfo>
@@ -16781,12 +16595,6 @@
 			<PromotionPrereqOr1>PROMOTION_DRILL4</PromotionPrereqOr1>
 			<PromotionLine>PROMOTIONLINE_LIVE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HERO</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Phoenix1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -16797,12 +16605,6 @@
 			<PromotionPrereq>PROMOTION_LIVE1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_LIVE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HERO</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Phoenix2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -16946,13 +16748,6 @@
 			</SubCombatChangeTypes>
 			<PromotionLine>PROMOTIONLINE_BOUNTY_HUNTER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<DomainCargoChange>DOMAIN_LAND</DomainCargoChange>
 			<SpecialCargoChange>SPECIALUNIT_CAPTIVE</SpecialCargoChange>
 			<SMSpecialCargoChange>SPECIALUNIT_CAPTIVE</SMSpecialCargoChange>
@@ -16967,13 +16762,6 @@
 			<PromotionLine>PROMOTIONLINE_BOUNTY_HUNTER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<TechPrereq>TECH_BINDING</TechPrereq>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<iCargoChange>3</iCargoChange>
 			<iSMCargoChange>27</iSMCargoChange>
 			<Button>art/Buttons/Promotions/BountyHunter2Promotion.dds</Button>
@@ -16985,13 +16773,6 @@
 			<PromotionLine>PROMOTIONLINE_BOUNTY_HUNTER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<TechPrereq>TECH_BINDING</TechPrereq>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_TROOPS</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_MISSILES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_SEAPLANES</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</NotOnUnitCombatType>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_TRANSPORT_PEOPLE</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<iCargoChange>3</iCargoChange>
 			<iSMCargoChange>27</iSMCargoChange>
 			<Button>art/Buttons/Promotions/BountyHunter3Promotion.dds</Button>
@@ -17645,14 +17426,6 @@
 					<UnitCombatType>UNITCOMBAT_QUALITY_DIVINE</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
 			</UnitCombats>
 			<Button>Art/Buttons/Promotions/Spot1Promotion.dds</Button>
 		</PromotionInfo>
@@ -17689,14 +17462,6 @@
 					<UnitCombatType>UNITCOMBAT_QUALITY_DIVINE</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
 			</UnitCombats>
 			<Button>Art/Buttons/Promotions/Spot2Promotion.dds</Button>
 		</PromotionInfo>
@@ -17723,14 +17488,6 @@
 				</UnitCombat>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_DIVINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
