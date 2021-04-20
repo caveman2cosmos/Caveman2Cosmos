@@ -1432,6 +1432,9 @@
 			<Type>PROMOTIONLINE_RESCUE_DOG</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_RESCUE_DOG</Description>
 			<Button>Art/Interface/Buttons/Promotions/rescuedog1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_BLOODHOUND</Type>

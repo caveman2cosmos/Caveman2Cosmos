@@ -10858,14 +10858,10 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_COMBAT2</PromotionPrereq>
 			<TechPrereq>TECH_BATTLEFIELD_MEDICINE</TechPrereq>
+			<PromotionLine>PROMOTIONLINE_RESCUE_DOG</PromotionLine>
+			<iLinePriority>1</iLinePriority>
 			<iSameTileHealChange>5</iSameTileHealChange>
 			<iCombatPercent>-5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/rescuedog1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -10874,14 +10870,10 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_RESCUE_DOG1</PromotionPrereq>
 			<TechPrereq>TECH_BATTLEFIELD_MEDICINE</TechPrereq>
+			<PromotionLine>PROMOTIONLINE_RESCUE_DOG</PromotionLine>
+			<iLinePriority>2</iLinePriority>
 			<iSameTileHealChange>5</iSameTileHealChange>
 			<iCombatPercent>-5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/rescuedog2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -10890,14 +10882,10 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_RESCUE_DOG2</PromotionPrereq>
 			<TechPrereq>TECH_BATTLEFIELD_MEDICINE</TechPrereq>
+			<PromotionLine>PROMOTIONLINE_RESCUE_DOG</PromotionLine>
+			<iLinePriority>3</iLinePriority>
 			<iSameTileHealChange>5</iSameTileHealChange>
 			<iCombatPercent>-5</iCombatPercent>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/rescuedog3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
