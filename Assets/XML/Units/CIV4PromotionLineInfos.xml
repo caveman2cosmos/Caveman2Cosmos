@@ -1271,86 +1271,11 @@
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_FLAMING</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_FLAMING</Description>
-			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_CHIVALRY</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_CHIVALRY</Description>
-			<Button>Art/Interface/Buttons/Promotions/chivalry1.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_ENGINEERCORPS</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_ENGINEERCORPS</Description>
-			<Button>Art/Interface/Buttons/Promotions/engineercorps1.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_SIEGE</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_SEAMANSHIP</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_SEAMANSHIP</Description>
-			<Button>Art/Interface/Buttons/Promotions/seamanship1.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_COASTAL</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_COASTAL</Description>
-			<Button>Art/Interface/Buttons/Promotions/coastal1.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_IMPERIAL</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_IMPERIAL</Description>
-			<Button>Art/Interface/Buttons/Promotions/imperial1.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_GUERILLAWAR</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_GUERILLAWAR</Description>
-			<Button>Art/Interface/Buttons/Promotions/guerillawar1.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PATRIOTIC</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PATRIOTIC</Description>
 			<Button>Art/Interface/Buttons/Promotions/patriotic1.dds</Button>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_ATTRITION</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_ATTRITION</Description>
-			<Button>Art/Interface/Buttons/Promotions/attrition1.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_MARKSMAN</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_MARKSMAN</Description>
-			<Button>Art/Interface/Buttons/Promotions/marksman1.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
-				<UnitCombatPrereqType>UNITCOMBAT_THROWING</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
