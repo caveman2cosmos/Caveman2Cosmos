@@ -1384,31 +1384,49 @@
 			<Type>PROMOTIONLINE_SILVERTONGUE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_SILVERTONGUE</Description>
 			<Button>Art/Interface/Buttons/Promotions/silvertongue1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_DIPLOMAT</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PARAMEDIC</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PARAMEDIC</Description>
 			<Button>Art/Interface/Buttons/Promotions/paramedic1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CIVILIAN</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PACK_HUNTER</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_PACK_HUNTER</Description>
 			<Button>Art/Interface/Buttons/Promotions/packhunting1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_RACING_DOG</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_RACING_DOG</Description>
 			<Button>Art/Interface/Buttons/Promotions/racingdog1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_HUNTING_DOG</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HUNTING_DOG</Description>
 			<Button>Art/Interface/Buttons/Promotions/huntingdog1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_TRACK_SCENT</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_TRACK_SCENT</Description>
 			<Button>Art/Interface/Buttons/Promotions/trackscent1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_RESCUE_DOG</Type>

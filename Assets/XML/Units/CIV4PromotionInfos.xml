@@ -10625,12 +10625,6 @@
 			<TechPrereq>TECH_ORAL_TRADITION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SILVERTONGUE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIPLOMAT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/silvertongue1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -10641,12 +10635,6 @@
 			<TechPrereq>TECH_ORATORY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SILVERTONGUE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIPLOMAT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/silvertongue2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -10657,12 +10645,6 @@
 			<TechPrereq>TECH_ARISTOCRACY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SILVERTONGUE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIPLOMAT</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/silvertongue3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -10673,12 +10655,6 @@
 			<PromotionLine>PROMOTIONLINE_PARAMEDIC</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iSameTileHealChange>2</iSameTileHealChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/paramedic1.dds</Button>
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-10</iCaptureResistanceModifierChange>
@@ -10692,12 +10668,6 @@
 			<PromotionLine>PROMOTIONLINE_PARAMEDIC</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iSameTileHealChange>3</iSameTileHealChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/paramedic2.dds</Button>
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-10</iCaptureResistanceModifierChange>
@@ -10711,12 +10681,6 @@
 			<PromotionLine>PROMOTIONLINE_PARAMEDIC</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iSameTileHealChange>5</iSameTileHealChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/paramedic3.dds</Button>
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-10</iCaptureResistanceModifierChange>
@@ -10732,12 +10696,6 @@
 			<iCombatPercent>5</iCombatPercent>
 			<iUnnerveChange>50</iUnnerveChange>
 			<iLungeChange>20</iLungeChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/packhunting1.dds</Button>
 			<iCaptureProbabilityModifierChange>2</iCaptureProbabilityModifierChange>
 		</PromotionInfo>
@@ -10753,12 +10711,6 @@
 			<iCombatPercent>5</iCombatPercent>
 			<iUnnerveChange>50</iUnnerveChange>
 			<iLungeChange>20</iLungeChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/packhunting2.dds</Button>
 			<iCaptureProbabilityModifierChange>3</iCaptureProbabilityModifierChange>
 		</PromotionInfo>
@@ -10774,12 +10726,6 @@
 			<iCombatPercent>5</iCombatPercent>
 			<iUnnerveChange>50</iUnnerveChange>
 			<iLungeChange>20</iLungeChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/packhunting3.dds</Button>
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 		</PromotionInfo>
@@ -10792,12 +10738,6 @@
 			<iLinePriority>1</iLinePriority>
 			<iStealthCombatModifierChange>5</iStealthCombatModifierChange>
 			<iMovesChange>1</iMovesChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/racingdog1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -10810,12 +10750,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iStealthCombatModifierChange>5</iStealthCombatModifierChange>
 			<iMovesChange>1</iMovesChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/racingdog2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -10828,12 +10762,6 @@
 			<iLinePriority>3</iLinePriority>
 			<iStealthCombatModifierChange>5</iStealthCombatModifierChange>
 			<iMovesChange>1</iMovesChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/racingdog3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -10850,12 +10778,6 @@
 					<iUnitCombatMod>15</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/huntingdog1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -10873,12 +10795,6 @@
 					<iUnitCombatMod>15</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/huntingdog2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -10896,12 +10812,6 @@
 					<iUnitCombatMod>15</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/huntingdog3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -10913,12 +10823,6 @@
 			<iLinePriority>1</iLinePriority>
 			<iPursuitChange>10</iPursuitChange>
 			<iVisibilityChange>1</iVisibilityChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/trackscent1.dds</Button>
 			<iCaptureProbabilityModifierChange>2</iCaptureProbabilityModifierChange>
 		</PromotionInfo>
@@ -10932,12 +10836,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iPursuitChange>10</iPursuitChange>
 			<iVisibilityChange>1</iVisibilityChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/trackscent2.dds</Button>
 			<iCaptureProbabilityModifierChange>3</iCaptureProbabilityModifierChange>
 		</PromotionInfo>
@@ -10951,12 +10849,6 @@
 			<iLinePriority>3</iLinePriority>
 			<iPursuitChange>10</iPursuitChange>
 			<iVisibilityChange>1</iVisibilityChange>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/trackscent3.dds</Button>
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 		</PromotionInfo>
