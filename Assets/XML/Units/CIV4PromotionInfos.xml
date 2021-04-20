@@ -12003,9 +12003,6 @@
 			<SubCombatChangeTypes>
 				<SubCombatChangeType>UNITCOMBAT_PROMOTED_CAUTIOUS</SubCombatChangeType>
 			</SubCombatChangeTypes>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_STALL</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
@@ -12021,9 +12018,6 @@
 			<TechPrereq>TECH_GATHERING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CAUTIOUS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_STALL</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
@@ -12039,9 +12033,6 @@
 			<TechPrereq>TECH_PORTABLE_SHELTERS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CAUTIOUS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_STALL</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
@@ -12057,9 +12048,6 @@
 			<TechPrereq>TECH_ANIMAL_RIDING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CAUTIOUS</PromotionLine>
 			<iLinePriority>4</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_STALL</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
@@ -12075,9 +12063,6 @@
 			<TechPrereq>TECH_COMBAT_SPORTS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CAUTIOUS</PromotionLine>
 			<iLinePriority>5</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_STALL</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
@@ -12094,9 +12079,6 @@
 			<SubCombatChangeTypes>
 				<SubCombatChangeType>UNITCOMBAT_PROMOTED_STALL</SubCombatChangeType>
 			</SubCombatChangeTypes>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_CAUTIOUS</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
@@ -12112,9 +12094,6 @@
 			<TechPrereq>TECH_PERSISTENCE_HUNTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_STALL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_CAUTIOUS</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
@@ -12130,9 +12109,6 @@
 			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_STALL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_CAUTIOUS</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
@@ -12148,9 +12124,6 @@
 			<TechPrereq>TECH_CHIEFDOM</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_STALL</PromotionLine>
 			<iLinePriority>4</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_CAUTIOUS</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
@@ -12166,9 +12139,6 @@
 			<TechPrereq>TECH_SACRIFICE_CULT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_STALL</PromotionLine>
 			<iLinePriority>5</iLinePriority>
-			<NotOnUnitCombatTypes>
-				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_CAUTIOUS</NotOnUnitCombatType>
-			</NotOnUnitCombatTypes>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
@@ -15215,7 +15185,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_EDUCATE4</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE4</Description>
-			<Sound>AS4D_IF_LEVELUP</Sound>
+			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_EDUCATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -15233,7 +15203,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_EDUCATE5</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE5</Description>
-			<Sound>AS5D_IF_LEVELUP</Sound>
+			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_COMPULSORY_EDUCATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -15251,7 +15221,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_EDUCATE6</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE6</Description>
-			<Sound>AS6D_IF_LEVELUP</Sound>
+			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_KNOWLEDGE_MANAGEMENT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>6</iLinePriority>
@@ -15269,7 +15239,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_EDUCATE7</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE7</Description>
-			<Sound>AS7D_IF_LEVELUP</Sound>
+			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_BRAIN_MACHINE_INTERFACE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>7</iLinePriority>
@@ -15287,7 +15257,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_EDUCATE8</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE8</Description>
-			<Sound>AS8D_IF_LEVELUP</Sound>
+			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_MEDIA_HIVEMIND</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>8</iLinePriority>
@@ -15305,7 +15275,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_EDUCATE9</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE9</Description>
-			<Sound>AS9D_IF_LEVELUP</Sound>
+			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_EXOCORTEX_NETWORKS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>9</iLinePriority>
@@ -15323,7 +15293,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_EDUCATE10</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE10</Description>
-			<Sound>AS10D_IF_LEVELUP</Sound>
+			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_MIND_UPLOADING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>10</iLinePriority>

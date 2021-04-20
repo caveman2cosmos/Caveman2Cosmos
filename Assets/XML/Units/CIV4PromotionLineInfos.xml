@@ -1620,6 +1620,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HELICOPTER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_BALLOON</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_STALL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_STALL</Type>
@@ -1636,6 +1639,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_RUFFIAN</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_HELICOPTER</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PROMOTED_CAUTIOUS</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_STINGING_INSULTS</Type>
