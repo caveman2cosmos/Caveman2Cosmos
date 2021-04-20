@@ -6490,28 +6490,6 @@
 		<Russian>[ICON_BULLET]%D1_Mod%% шанса крит. урона против [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CROWDED</Tag>
-		<English>Crowded</English>
-		<French>
-			<Text>Serré</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Gedrängt</German>
-		<Italian>
-			<Text>Affollato</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Abarrotado</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Niezłomny</Polish>
-		<Russian>Ïåðåïîëíåíèå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CROWS_NEST1</Tag>
 		<English>Crow's Nest I</English>
 		<French>Nid de corbeau I</French>

@@ -8832,19 +8832,6 @@
 			<iCaptureResistanceModifierChange>-10</iCaptureResistanceModifierChange>
 		</PromotionInfo>
 		<PromotionInfo>
-			<Type>PROMOTION_CROWDED</Type>
-			<Description>TXT_KEY_PROMOTION_CROWDED</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<iMoveDiscountChange>-1</iMoveDiscountChange>
-			<iWithdrawalChange>-20</iWithdrawalChange>
-			<iFirstStrikesChange>-2</iFirstStrikesChange>
-			<iChanceFirstStrikesChange>-3</iChanceFirstStrikesChange>
-			<iCombatPercent>-15</iCombatPercent>
-			<Button>Art/Interface/Buttons/Promotions/Crowded.dds</Button>
-			<iCaptureProbabilityModifierChange>-10</iCaptureProbabilityModifierChange>
-			<iCaptureResistanceModifierChange>-20</iCaptureResistanceModifierChange>
-		</PromotionInfo>
-		<PromotionInfo>
 			<Type>PROMOTION_SPHINX</Type>
 			<Description>TXT_KEY_PROMOTION_SPHINX</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
