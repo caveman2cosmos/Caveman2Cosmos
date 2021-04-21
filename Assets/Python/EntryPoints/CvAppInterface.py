@@ -35,6 +35,8 @@ def init():
 	sys.stderr = CvUtil.RedirectError()
 	sys.excepthook = CvUtil.myExceptHook
 	sys.stdout = CvUtil.RedirectDebug()
+	import TextKeyValidator
+	TextKeyValidator.main()
 
 def onSave():
 	import cPickle
