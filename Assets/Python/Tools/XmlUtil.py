@@ -5,6 +5,9 @@ def getGlob(directory):
 	paths  = glob(join(directory, "*.xml"))
 	paths += glob(join(directory, "**", "*.xml"))
 	paths += glob(join(directory, "**", "**", "*.xml"))
+	paths += glob(join(directory, "**", "**", "**", "*.xml"))
+	paths += glob(join(directory, "**", "**", "**", "**", "*.xml"))
+	paths += glob(join(directory, "**", "**", "**", "**", "**", "*.xml"))
 	return paths
 
 def getTagValues(tags, paths):
