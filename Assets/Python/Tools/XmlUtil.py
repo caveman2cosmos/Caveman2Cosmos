@@ -18,7 +18,7 @@ def getTagValues(tags, paths):
 			if tracker.splice(">") in tags:
 				element = tracker.splice("<")
 				if len(element) > 0 and not element in values:
-					print "Key found: %s" %element
+					#print "Key found: %s" %element
 					values.append(element)
 		file.close()
 	return values
