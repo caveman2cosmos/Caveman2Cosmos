@@ -788,10 +788,8 @@ bool CvUnitAI::AI_promote()
 {
 	PROFILE_FUNC();
 
-	if (!isPromotionReady())
-	{
-		return false;
-	}
+	if (!isPromotionReady()) return false;
+	
 	int iBestValue = 0;
 	PromotionTypes eBestPromotion = NO_PROMOTION;
 
@@ -1961,7 +1959,13 @@ int CvUnitAI::AI_minSettlerDefense() const
 		)
 	);
 }
+bool CvUnitAI::Worker_CanDefend() {
+	return getGroup()->canDefend();
+}
 
+bool CvUnitAI::IsAbroad() {
+	return plot()->getOwner() != getOwner();
+}
 
 void CvUnitAI::AI_workerMove()
 {
@@ -1972,7 +1976,7 @@ void CvUnitAI::AI_workerMove()
 		return;
 	}
 	// If worker (or captive) cannot defend itself, and is outside own borders.
-	if (!getGroup()->canDefend() && plot()->getOwner() != getOwner())
+	if (!Worker_CanDefend() && IsAbroad())
 	{
 		// Look for a local group we can join to be safe!
 		AI_setLeaderPriority(LEADER_PRIORITY_MAX); // We do want to take control (otherwise other unit decides where this worker goes, and can go further away)
@@ -2022,8 +2026,7 @@ void CvUnitAI::AI_workerMove()
 			return;
 		}
 
-		if (plot()->getOwner() == getOwner()
-		&& AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, 2, -1, -1, 0, MOVE_SAFE_TERRITORY))
+		if (!IsAbroad() && AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, 2, -1, -1, 0, MOVE_SAFE_TERRITORY))
 		{
 			return;
 		}
@@ -2057,9 +2060,7 @@ void CvUnitAI::AI_workerMove()
 		return;
 	}
 
-	if (!getGroup()->canDefend()
-	&&
-		(
+	if (!Worker_CanDefend &&(
 			isHuman() && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2)
 		|| !isHuman() && AI_workerNeedsDefender(plot())
 		)

@@ -104,6 +104,8 @@ protected:
 	void AI_animalMove();
 	void AI_settleMove();
 	int AI_minSettlerDefense() const;
+	bool Worker_CanDefend();
+	bool IsAbroad();
 	void AI_workerMove();
 	void AI_barbAttackMove();
 	void AI_attackMove();
