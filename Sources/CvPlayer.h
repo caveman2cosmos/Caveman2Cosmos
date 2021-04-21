@@ -2392,11 +2392,13 @@ protected:
 	void clearCanConstructCacheForGroup(SpecialBuildingTypes eSpecialBuilding, bool bIncludeCities = false) const;
 
 public:
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType) const;
 	void changePlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange);
 	void setPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange);
 	int countAfflictedUnits(PromotionLineTypes eAfflictionLine);
 	void recalculateAfflictedUnitCount();
+#endif
 };
 
 #endif

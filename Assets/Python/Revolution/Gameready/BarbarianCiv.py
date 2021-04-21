@@ -144,6 +144,7 @@ class BarbarianCiv:
 			iPlayer, CyPlayer = aList
 			iCivType = CyPlayer.getCivilizationType()
 			if not bNewWorld:
+				CyTeam = GC.getTeam(CyPlayer.getTeam())
 				for iTech in xrange(iNumTechs):
 					if CyTeam.isHasTech(iTech):
 						techsOwned.append(iTech)
