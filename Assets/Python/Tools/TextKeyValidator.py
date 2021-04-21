@@ -1,10 +1,16 @@
 from os.path import join
 from XmlUtil import getTagValues, getGlob
+import SystemPaths as SP
 
 def main():
 	xmlDir = getXmlDir()
+	dirCiv4 = SP.dirBtS[len(SP.dirBtS) - len("//Beyond the Sword//Civ4BeyondSword.exe") : len(SP.dirBtS)]
 	print "Searching text files for keys"
-	existingKeys = getTagValues(("Tag",), getGlob(join(xmlDir, "Text")))
+	files  = getGlob(join(xmlDir, "Text"))
+	files += getGlob(join(SP.dirBtS, "Assets", "XML", "Text"))
+	files += getGlob(join(dirCiv4, "Assets", "XML", "Text"))
+	files += getGlob(join(dirCiv4, "Warlords", "Assets", "XML", "Text"))
+	existingKeys = getTagValues(("Tag",), files)
 	print "Searching xml files for text key references"
 	referencedKeys = getTagValues(("Description", "Help"), getGlob(xmlDir))
 	print "Validating text keys"
