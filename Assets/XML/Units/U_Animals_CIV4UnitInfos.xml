@@ -8470,6 +8470,7 @@
 			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bAssassin>1</bAssassin>
+			<bRenderBelowWater>1</bRenderBelowWater>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_SIZE_SMALL</UnitCombatTargetType>
@@ -13374,6 +13375,7 @@
 			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bOnlyDefensive>1</bOnlyDefensive>
+			<bRenderBelowWater>1</bRenderBelowWater>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>6</iCombat>

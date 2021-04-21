@@ -3417,11 +3417,7 @@ bool CvPlayer::isHuman() const
 
 void CvPlayer::updateHuman()
 {
-	if (getID() == NO_PLAYER)
-	{
-		m_bHuman = false;
-	}
-	else if (m_bDisableHuman)
+	if (m_bDisableHuman || getID() == NO_PLAYER)
 	{
 		m_bHuman = false;
 	}
