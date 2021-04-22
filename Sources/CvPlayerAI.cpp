@@ -4210,7 +4210,7 @@ int CvPlayerAI::AI_goldTarget() const
 		iGold /= 100;
 
 		const int eventmult = GC.getGame().isOption(GAMEOPTION_NO_EVENTS) ? 10 : 6;
-		const int speedmult = eventmult * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent();
+		const int speedmult = (eventmult * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent());
 		const int turnmult = iMultiplier * GC.getGame().getElapsedGameTurns();
 
 		iGold += (turnmult / speedmult);
@@ -4227,11 +4227,11 @@ int CvPlayerAI::AI_goldTarget() const
 
 		// Afforess 02/01/10
 		if (!GET_TEAM(getTeam()).isGoldTrading() || !GET_TEAM(getTeam()).isTechTrading() || GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
-		{// Don't bother saving gold if we can't trade it for anything
+		{ // Don't bother saving gold if we can't trade it for anything
 			iGold /= 3;
 		}
 		else if (GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
-		{// Gold is less useful without tech brokering
+		{ // Gold is less useful without tech brokering
 			iGold *= 3;
 			iGold /= 4;
 		}
@@ -4261,7 +4261,6 @@ int CvPlayerAI::AI_goldTarget() const
 
 	return iGold + AI_getExtraGoldTarget();
 }
-
 
 TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAsync, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor) const
 {
