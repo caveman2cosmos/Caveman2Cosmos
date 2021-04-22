@@ -474,6 +474,9 @@
     <ClCompile Include="..\boost_test\test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CvPlotEvaluation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h">
@@ -936,6 +939,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GlobalDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPlotEvaluation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
