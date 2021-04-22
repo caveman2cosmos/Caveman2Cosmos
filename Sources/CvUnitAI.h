@@ -106,6 +106,8 @@ protected:
 	int AI_minSettlerDefense() const;
 	bool Worker_CanDefend();
 	bool IsAbroad();
+	int GetNumberOfUnitsInGroup();
+	bool AI_UpgradeWorker();
 	void AI_workerMove();
 	void AI_barbAttackMove();
 	void AI_attackMove();
