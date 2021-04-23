@@ -8092,34 +8092,35 @@ std::wstring CvActionInfo::getHotKeyDescription() const
 //======================================================================================================
 //					CvSpawnInfo
 //======================================================================================================
-CvSpawnInfo::CvSpawnInfo() :	m_eUnitType(NO_UNIT),
-								m_ePrereqTechType(NO_TECH),
-								m_eObsoleteTechType(NO_TECH),
-								m_iPlayerType(-1),
-								m_iTurns(-1),
-								m_iGlobalTurns(-1),
-								m_iMaxLocalDensity(0),
-								m_iMaxAreaTotalDensity(0),
-								m_iMaxAreaUnitDensity(0),
-								m_iStartDate(-200000),
-								m_iEndDate(50000),
-								m_bTreatAsBarbarian(false),
-								m_bNeutralOnly(true),
-								m_bNotInView(false),
-								m_bNoSpeedNormalization(false),
-								m_iRateOverride(100),
-								m_bHills(false),
-								m_bFlatlands(false),
-								m_bPeaks(false),
-								m_bFreshWaterOnly(false),
-								m_bLatitudeAbs(true),
-								m_iMinLatitude(-90),
-								m_iMaxLatitude(90),
-								m_iMinLongitude(-180),
-								m_iMaxLongitude(180),
-								m_pExprSpawnCondition(NULL)
-{
-}
+CvSpawnInfo::CvSpawnInfo()
+	:
+	m_eUnitType(NO_UNIT),
+	m_ePrereqTechType(NO_TECH),
+	m_eObsoleteTechType(NO_TECH),
+	m_iPlayerType(-1),
+	m_iTurns(-1),
+	m_iGlobalTurns(-1),
+	m_iMaxLocalDensity(0),
+	m_iMinAreaPlotsPerPlayerUnit(0),
+	m_iMinAreaPlotsPerUnitType(0),
+	m_iStartDate(-200000),
+	m_iEndDate(50000),
+	m_bTreatAsBarbarian(false),
+	m_bNeutralOnly(true),
+	m_bNotInView(false),
+	m_bNoSpeedNormalization(false),
+	m_iRateOverride(100),
+	m_bHills(false),
+	m_bFlatlands(false),
+	m_bPeaks(false),
+	m_bFreshWaterOnly(false),
+	m_bLatitudeAbs(true),
+	m_iMinLatitude(-90),
+	m_iMaxLatitude(90),
+	m_iMinLongitude(-180),
+	m_iMaxLongitude(180),
+	m_pExprSpawnCondition(NULL)
+{ }
 
 CvSpawnInfo::~CvSpawnInfo()
 {
@@ -8151,8 +8152,8 @@ bool CvSpawnInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iTurns, L"iTurns");
 	pXML->GetOptionalChildXmlValByName(&m_iGlobalTurns, L"iGlobalTurns", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iMaxLocalDensity, L"iMaxLocalDensity");
-	pXML->GetOptionalChildXmlValByName(&m_iMaxAreaTotalDensity, L"iMaxAreaTotalDensity");
-	pXML->GetOptionalChildXmlValByName(&m_iMaxAreaUnitDensity, L"iMaxAreaUnitDensity");
+	pXML->GetOptionalChildXmlValByName(&m_iMinAreaPlotsPerPlayerUnit, L"iMinAreaPlotsPerPlayerUnit");
+	pXML->GetOptionalChildXmlValByName(&m_iMinAreaPlotsPerUnitType, L"iMinAreaPlotsPerUnitType");
 	pXML->GetOptionalChildXmlValByName(&m_iStartDate, L"iStartDate", -200000);
 	pXML->GetOptionalChildXmlValByName(&m_iEndDate, L"iEndDate", 50000);
 	pXML->GetOptionalChildXmlValByName(&m_bTreatAsBarbarian, L"bTreatAsBarbarian", true);
@@ -8384,14 +8385,14 @@ int CvSpawnInfo::getMaxLocalDensity() const
 	return m_iMaxLocalDensity;
 }
 
-int CvSpawnInfo::getMaxAreaTotalDensity() const
+int CvSpawnInfo::getMinAreaPlotsPerPlayerUnit() const
 {
-	return m_iMaxAreaTotalDensity;
+	return m_iMinAreaPlotsPerPlayerUnit;
 }
 
-int CvSpawnInfo::getMaxAreaUnitDensity() const
+int CvSpawnInfo::getMinAreaPlotsPerUnitType() const
 {
-	return m_iMaxAreaUnitDensity;
+	return m_iMinAreaPlotsPerUnitType;
 }
 
 int CvSpawnInfo::getStartDate() const
@@ -8507,8 +8508,8 @@ void CvSpawnInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iTurns);
 	CheckSum(iSum, m_iGlobalTurns);
 	CheckSum(iSum, m_iMaxLocalDensity);
-	CheckSum(iSum, m_iMaxAreaTotalDensity);
-	CheckSum(iSum, m_iMaxAreaUnitDensity);
+	CheckSum(iSum, m_iMinAreaPlotsPerPlayerUnit);
+	CheckSum(iSum, m_iMinAreaPlotsPerUnitType);
 	CheckSum(iSum, m_iStartDate);
 	CheckSum(iSum, m_iEndDate);
 	CheckSum(iSum, m_bTreatAsBarbarian);
