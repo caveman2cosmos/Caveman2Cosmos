@@ -2778,8 +2778,8 @@
 	<ElementType name="iTurns" content="textOnly" dt:type="int"/>
 	<ElementType name="iGlobalTurns" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxLocalDensity" content="textOnly" dt:type="int"/>
-	<ElementType name="iMaxAreaTotalDensity" content="textOnly" dt:type="int"/>
-	<ElementType name="iMaxAreaUnitDensity" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinAreaPlotsPerPlayerUnit" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinAreaPlotsPerUnitType" content="textOnly" dt:type="int"/>
 	<ElementType name="iStartDate" content="textOnly" dt:type="int"/>
 	<ElementType name="iEndDate" content="textOnly" dt:type="int"/>
 	<ElementType name="bTreatAsBarbarian" content="textOnly" dt:type="boolean"/>
@@ -2824,8 +2824,8 @@
 		<element type="iTurns"/>
 		<element type="iGlobalTurns" minOccurs="0"/>
 		<element type="iMaxLocalDensity"/>
-		<element type="iMaxAreaTotalDensity" minOccurs="0"/>
-		<element type="iMaxAreaUnitDensity" minOccurs="0"/>
+		<element type="iMinAreaPlotsPerPlayerUnit" minOccurs="0"/>
+		<element type="iMinAreaPlotsPerUnitType" minOccurs="0"/>
 		<element type="iStartDate" minOccurs="0"/>
 		<element type="iEndDate" minOccurs="0"/>
 		<element type="bTreatAsBarbarian" minOccurs="0"/>

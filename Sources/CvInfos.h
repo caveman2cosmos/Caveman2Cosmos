@@ -2725,8 +2725,8 @@ public:
 	int getTurnRate() const;
 	int getGlobalTurnRate() const;
 	int getMaxLocalDensity() const;
-	int getMaxAreaTotalDensity() const;
-	int getMaxAreaUnitDensity() const;
+	int getMinAreaPlotsPerPlayerUnit() const;
+	int getMinAreaPlotsPerUnitType() const;
 	int getStartDate() const;
 	int	getEndDate() const;
 	int	getMinLatitude() const;
@@ -2759,8 +2759,8 @@ private:
 	int						m_iTurns;
 	int						m_iGlobalTurns;
 	int						m_iMaxLocalDensity;
-	int						m_iMaxAreaTotalDensity;
-	int						m_iMaxAreaUnitDensity;
+	int						m_iMinAreaPlotsPerPlayerUnit;
+	int						m_iMinAreaPlotsPerUnitType;
 	int						m_iStartDate;
 	int						m_iEndDate;
 	bool					m_bTreatAsBarbarian;
