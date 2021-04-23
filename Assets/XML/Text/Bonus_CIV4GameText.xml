@@ -5147,18 +5147,7 @@
 		<Tag>TXT_KEY_BONUS_MAMMOTH_PEDIA</Tag>
 		<English>A mammoth is any species of the extinct genus Mammuthus. These proboscideans are members of Elephantidae, the family of elephants and mammoths, and close relatives of modern elephants. They were often equipped with long curved tusks and, in northern species, a covering of long hair. They lived from the Pliocene Epoch from around 4.8 million years ago, into the Holocene at about 4,500 years ago. The largest known species, Songhua River mammoth (Mammuthus sungari), reached heights of at least 5 metres (16 ft) at the shoulder. Mammoths would probably normally weigh in the region of 6 to 8 tons, but exceptionally large males may have exceeded 12 tons. However, most species of mammoth were only about as large as a modern Asian elephant. Fossils of species of dwarf mammoth have been found on the Californian Channel Islands (Mammuthus exilis) and the Mediterranean island of Sardinia (Mammuthus lamarmorae). There was also a race of dwarf woolly mammoths on Wrangel Island, north of Siberia, within the Arctic Circle.</English>
 		<Russian>Мамонт - это любой вид вымершего рода Mammuthus. Эти хоботки являются членами Elephantidae, семейства слонов и мамонтов, а также близкими родственниками современных слонов. Они часто были оснащены длинными изогнутыми бивнями, а у северных видов - покровом из длинной шерсти. Они жили с эпохи плиоцена, примерно 4,8 миллиона лет назад, в голоцен, примерно 4500 лет назад. Слово мамонт происходит от русского Mamont, вероятно, в свою очередь, из вогульского (мансийского) языка, mang ont, что означает «земляной рог».[PARAGRAPH:2]Как и их современный родственник слон (азиатский или африканский), мамонты были довольно большими; в английском языке существительное «мамонт» стало прилагательным, означающим «большой» или «массивный». Самый крупный из известных видов, мамонт реки Сунгари (Mammuthus sungari), достигал высоты не менее 5 метров (16 футов) в плече. Мамонты, вероятно, обычно весили бы от 6 до 8 тонн, но исключительно крупные самцы могли превышать 12 тонн. Однако большинство видов мамонтов были размером с современного азиатского слона. Окаменелости карликовых мамонтов были найдены на Калифорнийских Нормандских островах (Mammuthus exilis) и на средиземноморском острове Сардиния (Mammuthus lamarmorae). Также была раса карликовых шерстистых мамонтов на острове Врангеля, к северу от Сибири, за Полярным кругом.[PARAGRAPH:2]Бивень мамонта длиной 11 футов (3,4 м) был обнаружен к северу от Линкольна, штат Иллинойс, в 2005 году.[PARAGRAPH:2]Основываясь на исследованиях их близких родственников, современных слонов, у мамонтов, вероятно, был период беременности 22 месяца, в результате чего родился единственный мамонтенок. Их социальная структура, вероятно, была такой же, как у африканских и азиатских слонов, с самками, живущими в стадах, возглавляемых матриархом, в то время как быки жили уединенно или образовывали свободные группы после половой зрелости.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_MAMMOTH_GRAVEYARD</Tag>
-		<English>Mammoth Graveyard</English>
-		<Italian>Cimitero dei mammut</Italian>
-		<Russian>Êëàäáèùå ìàìîíòîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_MAMMOTH_GRAVEYARD_PEDIA</Tag>
-		<English>When mammoths go extinct in the wild their map bonus is replaced by a graveyard. This may be their bones, or fossils or frozen mammoths.</English>
-		<Russian>Когда мамонты вымирают в дикой природе, их бонусные ресурсы на карте заменяется кладбищами. Это могут быть их кости, или окаменелости, или замороженные туши мамонтов.</Russian>
-	</TEXT>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANCHURIAN</Tag>
 		<English>Manchurian</English>
