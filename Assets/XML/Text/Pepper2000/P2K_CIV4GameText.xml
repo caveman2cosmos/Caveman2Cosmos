@@ -3725,4 +3725,26 @@
 		<English>Planetary Maglev</English>
 		<Russian>Планетарный маглев</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_ROVER</Tag>
+		<English>Lunar Rover</English>
+		<French>Véhicule Lunaire</French>
+		<Italian>Rover lunare</Italian>
+		<Polish>Łazik Księżycowy</Polish>
+		<Russian>Ëóíîõîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Tag>
+		<English>Lunar Exploration Unit.</English>
+		<Italian>Unità da esplorazione lunare.</Italian>
+		<Polish>Łazik - rodzaj sondy kosmicznej, posiadający możliwość poruszania się po powierzchni ciała, na którym wylądował (planety lub księżyca, w planach także planetoid). Łazik, dzięki swojej mobilności, ma dużą przewagę nad tradycyjnym lądownikiem w kwestii wyboru miejsca i obiektu badań, jednak jego wysłanie jest znacznie droższe ze względu na konieczność umieszczenia systemu napędowego wewnątrz sondy, co znacznie zwiększa jej wagę. Do łazików zaliczane są głównie pojazdy bezzałogowe, ale łazikiem księżycowym był też nazywany załogowy Lunar Roving Vehicle, używany w misjach programu Apollo.</Polish>
+		<Russian>[TAB]Ëóííûé ðàçâåäîâàòåëüíûé þíèò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_ROVER_STRATEGY</Tag>
+		<English>The Lunar Rover is the first unit you can send to the Lunar Map, (once we get Multi-Maps). The method of sending units between maps still needs some work.</English>
+		<French>Le Véhicule Lunaire est la première unité que vous pouvez envoyer à la carte lunaire, (une fois que nous obtenons plusieurs cartes). La méthode d'envoi d'unités entre les cartes nécessite encore quelques travaux.</French>
+		<Italian>Il rover lunare è la prima unità che può essere mandata sulla Luna (quando verranno implementate le Multi-Maps).</Italian>
+		<Polish>Łazik Księżycowy to pierwszy pojazd jaki możesz wysłać na księżyc.</Polish>
+	</TEXT>
 </Civ4GameText>
