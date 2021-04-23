@@ -1967,6 +1967,24 @@ bool CvUnitAI::IsAbroad() {
 	return plot()->getOwner() != getOwner();
 }
 
+bool CvUnitAI::AI_upgradeWorker(){
+
+	const int64_t iGold = GET_PLAYER(getOwner()).getGold();
+	const int iTargetGold = GET_PLAYER(getOwner()).AI_goldTarget();
+
+	if (iGold > iTargetGold) {
+		//	Whether we let it try to be comsumed by an upgrade depends on how much spare cash we have
+		if (GC.getGame().getSorenRandNum(100, "AI upgrade worker") < 100 * (iGold - iTargetGold) / iGold) {
+			return AI_upgrade();
+		}
+	}
+	return false;
+}
+
+int CvUnitAI::GetNumberOfUnitsInGroup() {
+	return getGroup()->getNumUnits();
+}
+
 void CvUnitAI::AI_workerMove()
 {
 	PROFILE_FUNC();
@@ -2007,26 +2025,18 @@ void CvUnitAI::AI_workerMove()
 	}
 	//ls612: Combat Worker Danger Evaluation
 	const bool bWorkerDanger =
-	(
-		plot()->getOwner() != getOwner() && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2)
-		||
-		plot()->getOwner() == getOwner() && exposedToDanger(plot(), 80, false)
-	);
-	if (canDefend() && getGroup()->getNumUnits() == 1 && bWorkerDanger
-	// in this order, retreat to safety, or go into a city
-	&& (AI_safety() || AI_retreatToCity()))
-	{
-		return;
+		(IsAbroad() && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2) ||
+		 !IsAbroad() && exposedToDanger(plot(), 80, false));
+	if (canDefend() && GetNumberOfUnitsInGroup() == 1 && bWorkerDanger) {
+		// in this order, either retreat to safety, or go into a city
+		if (AI_safety() || AI_retreatToCity()) {
+			return;
+		}
 	}
-
+		
 	if (!isHuman() && !isNPC())
 	{
 		if (AI_workerReleaseDefenderIfNotNeeded())
-		{
-			return;
-		}
-
-		if (!IsAbroad() && AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, 2, -1, -1, 0, MOVE_SAFE_TERRITORY))
 		{
 			return;
 		}
@@ -2034,17 +2044,10 @@ void CvUnitAI::AI_workerMove()
 
 	if (AI_construct(MAX_INT, MAX_INT, 0, true))
 	{
-		OutputDebugString(CvString::format("%S (%d) chooses to head off to construct\n",getDescription().c_str(),m_iID).c_str());
+		OutputDebugString(CvString::format("%S (%d) chooses to head off to construct\n", getDescription().c_str(), m_iID).c_str());
 		return;
 	}
-
-	//	Whether we let it try to be comsumed by an upgrade depends on how much spare cash we have
-	const int64_t iGold = GET_PLAYER(getOwner()).getGold();
-	const int iTargetGold = GET_PLAYER(getOwner()).AI_goldTarget();
-
-	if (iGold > iTargetGold
-	&& GC.getGame().getSorenRandNum(100, "AI upgrade worker") < 100*(iGold - iTargetGold) / iGold
-	&& AI_upgrade())
+	if (AI_upgradeWorker())
 	{
 		return;
 	}
@@ -2056,15 +2059,11 @@ void CvUnitAI::AI_workerMove()
 
 	if (AI_outcomeMission())
 	{
-		OutputDebugString(CvString::format("%S (%d) chooses to head off to do an outcome mission\n",getDescription().c_str(),m_iID).c_str());
+		OutputDebugString(CvString::format("%S (%d) chooses to head off to do an outcome mission\n", getDescription().c_str(), m_iID).c_str());
 		return;
 	}
 
-	if (!Worker_CanDefend &&(
-			isHuman() && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2)
-		|| !isHuman() && AI_workerNeedsDefender(plot())
-		)
-	&& AI_retreatToCity() /*XXX maybe not do this??? could be working productively somewhere else...*/)
+	if (!Worker_CanDefend() && (isHuman() && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2) || !isHuman() && AI_workerNeedsDefender(plot())) && AI_retreatToCity() /*XXX maybe not do this??? could be working productively somewhere else...*/)
 	{
 		return;
 	}
@@ -2072,18 +2071,17 @@ void CvUnitAI::AI_workerMove()
 	bool bCanRoute = canBuildRoute();
 	// Afforess 02/17/10
 	// Workboats don't build Sea Tunnels over Resources
-	if (bCanRoute && getDomainType() != DOMAIN_SEA && plot()->getOwner() == getOwner() /* XXX team??? */)
+	if (bCanRoute && getDomainType() != DOMAIN_SEA && !IsAbroad())
 	{
 		const BonusTypes eNonObsoleteBonus = plot()->getNonObsoleteBonusType(getTeam());
 
-		if (NO_BONUS != eNonObsoleteBonus && !plot()->isConnectedToCapital() && NO_IMPROVEMENT != plot()->getImprovementType()
-		&& GC.getImprovementInfo(plot()->getImprovementType()).isImprovementBonusTrade(eNonObsoleteBonus) && AI_connectPlot(plot()))
+		if (NO_BONUS != eNonObsoleteBonus && !plot()->isConnectedToCapital() && NO_IMPROVEMENT != plot()->getImprovementType() && GC.getImprovementInfo(plot()->getImprovementType()).isImprovementBonusTrade(eNonObsoleteBonus) && AI_connectPlot(plot()))
 		{
 			return;
 		}
 	}
 
-	CvPlot* pBestBonusPlot = NULL;
+	CvPlot *pBestBonusPlot = NULL;
 	BuildTypes eBestBonusBuild = NO_BUILD;
 	int iBestBonusValue = 0;
 
@@ -2098,21 +2096,20 @@ void CvUnitAI::AI_workerMove()
 	}
 
 	// Afforess - worker financial trouble check
-	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER && GET_PLAYER(getOwner()).AI_isFinancialTrouble())
+	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER && GET_PLAYER(getOwner()).AI_isFinancialTrouble()) // not evaluated 
 	{
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
-		if (iWorkers > 3 && iWorkers > 2 * GET_PLAYER(getOwner()).getNumCities()
-		&& GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
+		if (iWorkers > 3 && iWorkers > 2 * GET_PLAYER(getOwner()).getNumCities() && GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
 		{
 			if (gUnitLogLevel > 2)
 			{
 				logBBAI(
 					"%S's %S at (%d,%d) is disbanding itself due to large number of workers available, and financial trouble.",
-					GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY()
-				);
+					GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY());
 			}
-			if(getUpkeep100() > 100){
+			if (getUpkeep100() > 100)
+			{
 				scrap();
 			}
 
@@ -2120,14 +2117,14 @@ void CvUnitAI::AI_workerMove()
 		}
 	}
 
-	CvCity* pCity = NULL;
+	CvCity *pCity = NULL;
 
-	if (plot()->getOwner() == getOwner())
+	if (!IsAbroad())
 	{
-		pCity = plot()->getPlotCity();
-		if (pCity == NULL)
+		pCity = plot()->getPlotCity(); //get city on plot
+		if (pCity == NULL) //if city is not on same plot
 		{
-			pCity = plot()->getWorkingCity();
+			pCity = plot()->getWorkingCity(); //get city that is working this plot (actively working)
 		}
 	}
 
@@ -2155,9 +2152,7 @@ void CvUnitAI::AI_workerMove()
 	}
 	*/
 
-	if (pCity != NULL && pCity->AI_getWorkersNeeded() > 0
-	&& (plot()->isCity() || pCity->AI_getWorkersNeeded() < (1 + pCity->AI_getWorkersHave() * 2) / 3)
-	&& AI_improveCity(pCity))
+	if (pCity != NULL && pCity->AI_getWorkersNeeded() > 0 && (plot()->isCity() || pCity->AI_getWorkersNeeded() < (1 + pCity->AI_getWorkersHave() * 2) / 3) && AI_improveCity(pCity))
 	{
 		return;
 	}
@@ -2179,8 +2174,7 @@ void CvUnitAI::AI_workerMove()
 
 	if (pCity == NULL || pCity->AI_getWorkersNeeded() == 0 || pCity->AI_getWorkersHave() > pCity->AI_getWorkersNeeded() + 1)
 	{
-		if (pBestBonusPlot != NULL && iBestBonusValue >= 15
-		&& AI_improvePlot(pBestBonusPlot, eBestBonusBuild))
+		if (pBestBonusPlot != NULL && iBestBonusValue >= 15 && AI_improvePlot(pBestBonusPlot, eBestBonusBuild))
 		{
 			return;
 		}
@@ -2229,12 +2223,12 @@ void CvUnitAI::AI_workerMove()
 	// {
 	// 	return;
 	// }
-		bool bBuildFort = false;
+	bool bBuildFort = false;
 
 	// Super Forts begin *canal* *choke*
 	if (0 == GC.getGame().getSorenRandNum(5, "AI Worker build Fort with Priority"))
 	{
-		const CvPlayerAI& player = GET_PLAYER(getOwner());
+		const CvPlayerAI &player = GET_PLAYER(getOwner());
 		const bool bCanal = player.countNumCoastalCities() > 0;
 		const bool bAirbase = player.AI_totalUnitAIs(UNITAI_PARADROP) || player.AI_totalUnitAIs(UNITAI_ATTACK_AIR) || player.AI_totalUnitAIs(UNITAI_MISSILE_AIR);
 
@@ -2299,12 +2293,19 @@ void CvUnitAI::AI_workerMove()
 		return;
 	}
 
+	if (!isHuman() && !isNPC())
+	{
+		if (!IsAbroad() && AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, 2, -1, -1, 0, MOVE_SAFE_TERRITORY))
+		{
+			return;
+		}
+	}
+
 	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER)
 	{
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
-		if (iWorkers > 3 && iWorkers > 5* GET_PLAYER(getOwner()).getNumCities()
-		&& GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
+		if (iWorkers > 3 && iWorkers > 5 * GET_PLAYER(getOwner()).getNumCities() && GET_PLAYER(getOwner()).getUnitUpkeepCivilianNet() > 0)
 		{
 			if (gUnitLogLevel > 2)
 			{
@@ -2325,8 +2326,7 @@ void CvUnitAI::AI_workerMove()
 		return;
 	}
 
-	if (getGroup()->isStranded()
-	&& AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, NO_UNITAI, -1, -1, -1, -1, MOVE_NO_ENEMY_TERRITORY, 1))
+	if (getGroup()->isStranded() && AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, NO_UNITAI, -1, -1, -1, -1, MOVE_NO_ENEMY_TERRITORY, 1))
 	{
 		return;
 	}
@@ -2338,7 +2338,6 @@ void CvUnitAI::AI_workerMove()
 
 	getGroup()->pushMission(MISSION_SKIP);
 }
-
 
 void CvUnitAI::AI_barbAttackMove()
 {
@@ -22116,7 +22115,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 		if (pLoopPlot->isCityRadius()
 		&& (!bSafeAutomation || pLoopPlot->getImprovementType() == NO_IMPROVEMENT || pLoopPlot->getImprovementType() == eRuins))
 		{
-			CvCity* pCity = pLoopPlot->getWorkingCity();
+			CvCity* pCity = pLoopPlot->getPlotCity();
 			if (NULL != pCity && pCity->getOwner() == getOwner() && (NULL == pIgnoreCity || pCity != pIgnoreCity) && AI_plotValid(pLoopPlot))
 			{
 				const int iIndex = pCity->getCityPlotIndex(pLoopPlot);

@@ -107,7 +107,7 @@ protected:
 	bool Worker_CanDefend();
 	bool IsAbroad();
 	int GetNumberOfUnitsInGroup();
-	bool AI_UpgradeWorker();
+	bool AI_upgradeWorker();
 	void AI_workerMove();
 	void AI_barbAttackMove();
 	void AI_attackMove();
