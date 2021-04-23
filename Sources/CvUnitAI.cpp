@@ -196,7 +196,7 @@ bool CvUnitAI::AI_update()
 	}
 	if (getGroup()->isAutomated())
 	{
-		switch (getGroup()->getAutomateType())
+		switch (getGroup()->getAutomateType())  // NOLINT(clang-diagnostic-switch-enum)
 		{
 			case AUTOMATE_BUILD:
 			{
@@ -251,9 +251,12 @@ bool CvUnitAI::AI_update()
 						AI_exploreMove();
 						break;
 					}
-					default:
+				case NO_DOMAIN:
+				case DOMAIN_IMMOBILE: 
+				case NUM_DOMAIN_TYPES:
+				default:
 					{
-						FAssert(false);
+						FAssert(false)
 						break;
 					}
 				}
@@ -23714,12 +23717,18 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 bool CvUnitAI::AI_travelToUpgradeCity()
 {
 	PROFILE_FUNC();
-
+	const CvUnitInfo& unitInfo = GC.getUnitInfo(getUnitType());
+	const int iNumUpgrades = unitInfo.getNumUnitUpgrades();
+	if (iNumUpgrades <= 0)
+	{
+		logBBAI("AI_travelToUpgradeCity: found no upgrades"); // gin up a string format that can be parsed, creating a json helper could be useful
+		return false;
+	}
 	// is there a city which can upgrade us?
 	CvCity* pUpgradeCity = getUpgradeCity(/*bSearch*/ true);
-	bool bSuccess = false;
 	if (pUpgradeCity != NULL)
 	{
+		bool bSuccess = false;
 		// cache some stuff
 		CvPlot* pPlot = plot();
 		bool bSeaUnit = (getDomainType() == DOMAIN_SEA);

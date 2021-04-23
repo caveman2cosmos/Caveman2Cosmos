@@ -192,7 +192,6 @@
     <ClCompile Include="..\boost_test\test.cpp" />
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
-    <ClCompile Include="CvPlotEvaluation.cpp" />
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
@@ -346,7 +345,6 @@
     <ClInclude Include="algorithm2.h" />
     <ClInclude Include="BetterBTSAI.h" />
     <ClInclude Include="copy_iterator.h" />
-    <ClInclude Include="CvPlotEvaluation.h" />
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
     <ClInclude Include="EnumFlags.h" />
