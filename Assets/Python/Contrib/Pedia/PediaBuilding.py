@@ -230,11 +230,6 @@ class PediaBuilding:
 		if szText1:
 			screen.appendListBoxStringNoUpdate(panelName, szfont3b + szText1, eWidGen, 0, 0, 1<<0)
 		screen.updateListBox(panelName)
-		# Strategy
-		szStrategy = TRNSLTR.getText("TXT_KEY_PEDIA_STRATEGY", ())
-		screen.addPanel(aName(), szStrategy, "", False, False, X_COL_2, Y_TOP_ROW_1, W_COL_2 - 4, H_TOP_ROW, ePanelBlue50)
-		szStrategyText = szfont2 + CvTheBuildingInfo.getStrategy()
-		screen.addMultilineText(aName(), szStrategyText, X_COL_2 + 4, Y_TOP_ROW_1 + 32, W_COL_2 - 4, H_TOP_ROW - 40, eWidGen, 0, 0, 1<<0)
 		# Graphic
 		s = H_TOP_ROW - 6
 		screen.addBuildingGraphicGFC("Preview|Min", iTheBuilding, X_COL_2 + W_COL_2 + 4, Y_TOP_ROW_1 + 8, s, s, eWidGen, iTheBuilding, 0, -20, 30, 0.4, True)
