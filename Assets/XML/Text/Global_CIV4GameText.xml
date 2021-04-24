@@ -13310,15 +13310,6 @@
 		<Russian>Îæèäàíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROCESS_IDLE_STRATEGY</Tag>
-		<English>An idle city generates no production.</English>
-		<French>Une ville oisive ne produit aucune production.</French>
-		<Italian>Una città oziosa non genera produzione.</Italian>
-		<Spanish>Una ciudad parada no genera producción.</Spanish>
-		<Polish>Bezczynne miasto nie generuje produkcji</Polish>
-		<Russian>Â ðåæèìå îæèäàíèÿ ãîðîä íè÷åãî íå ïðîèçâîäèò.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROCESS_LESSER_CULTURE</Tag>
 		<English>Lesser Culture</English>
 		<French>
