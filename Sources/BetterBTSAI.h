@@ -27,5 +27,6 @@ extern int gUnitLogLevel;
 #endif
 
 void logBBAI(char* format, ... );
+void logAIJson(std::string* type, std::string* function, std::string* message);
 
 #endif  //BETTERBTSAI_H

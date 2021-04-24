@@ -23,3 +23,12 @@ void logBBAI(char* format, ... )
 		OutputDebugString(buf);
 	}
 }
+void logAIJson(std::string *type, std::string *function, std::string *message)
+{
+	static char buf[4096];
+	std::ostringstream oss;
+	oss << "{ type: " << type << " function: " << function << "message: " << message << " }" << std::endl;
+	const std::string data = oss.str();
+	_vsnprintf(buf, 2048 - 4, data.c_str(), (char*)(&data + 1));
+	gDLL->logMsg("FLB.log", buf);
+}

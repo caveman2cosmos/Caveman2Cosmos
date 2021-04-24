@@ -25156,8 +25156,8 @@ bool CvUnitAI::AI_airStrike()
 /* 																			*/
 /* 	Air AI																	*/
 /********************************************************************************/
-// Air strike focused on weakening enemy stacks threatening our cities
 // Returns true if a mission was pushed...
+// Air strike focused on weakening enemy stacks threatening our cities
 bool CvUnitAI::AI_defensiveAirStrike()
 {
 	PROFILE_FUNC();
