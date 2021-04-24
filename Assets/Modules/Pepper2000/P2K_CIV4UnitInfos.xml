@@ -875,7 +875,7 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_terrain_strings = ['OORT_CLOUD','TRANSTELLAR_SPACE','RED_DWARF','SUN_LIKE_STAR','RED_GIANT']
+									valid_terrain_strings = ['TRANSTELLAR_SPACE','RED_DWARF','SUN_LIKE_STAR','RED_GIANT']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
