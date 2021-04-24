@@ -5,6 +5,7 @@
 			<Type>BUILDING_DUCK_FLOCKS</Type>
 			<Description>TXT_KEY_BUILDING_DUCK_FLOCKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_DUCK_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_DUCK</ArtDefineTag>
 			<MapCategoryTypes>
@@ -38,6 +39,7 @@
 			<Type>BUILDING_DUCK_FLOCKS_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DUCK_FLOCKS_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_DUCK_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_DUCK</ArtDefineTag>
 			<MapCategoryTypes>
@@ -52,6 +54,7 @@
 			<Type>BUILDING_PEACOCK_FLOCKS</Type>
 			<Description>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_PEACOCK_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_PEACOCK</ArtDefineTag>
 			<MapCategoryTypes>
@@ -85,6 +88,7 @@
 			<Type>BUILDING_PEACOCK_FLOCKS_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PEACOCK_FLOCKS_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_PEACOCK_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_PEACOCK</ArtDefineTag>
 			<MapCategoryTypes>
@@ -99,6 +103,7 @@
 			<Type>BUILDING_TURKEY_FLOCKS</Type>
 			<Description>TXT_KEY_BUILDING_TURKEY_FLOCKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TURKEY_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_TURKEY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -132,6 +137,7 @@
 			<Type>BUILDING_TURKEY_FLOCKS_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_TURKEY_FLOCKS_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TURKEY_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_TURKEY</ArtDefineTag>
 			<MapCategoryTypes>

@@ -11,6 +11,7 @@
 			<Type>BUILDING_TOYCARVER</Type>
 			<Description>TXT_KEY_BUILDING_TOYCARVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOYCARVER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOYCARVER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TOYCARVER</ArtDefineTag>
@@ -54,6 +55,7 @@
 			<Type>BUILDING_TOY_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_TOY_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOY_FACTORY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOY_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TOY_FACTORY</ArtDefineTag>
@@ -113,6 +115,7 @@
 			<Type>BUILDING_TOY_MAKER</Type>
 			<Description>TXT_KEY_BUILDING_TOY_MAKER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOY_MAKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOY_MAKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TOY_MAKER</ArtDefineTag>

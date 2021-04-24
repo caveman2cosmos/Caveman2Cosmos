@@ -10,6 +10,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OBATALA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OBATALAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_OBATALA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OBATALA</ArtDefineTag>
 			<MapCategoryTypes>
@@ -75,6 +76,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OGGUN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OGGUN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_OGGUN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OGGUN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -140,6 +142,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OLOFIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OLOFIN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_OLOFIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLOFIN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -188,6 +191,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OLOKUN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OLOKUN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_OLOKUN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLOKUN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -285,6 +289,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OSHOSI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OSHOSI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_OSHOSI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OSHOSI</ArtDefineTag>
 			<MapCategoryTypes>
@@ -357,6 +362,7 @@
 			<Type>BUILDING_YORUBA_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_YORUBA_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_YORUBA_SHRINE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_YORUBA_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLODUMARE</ArtDefineTag>
 			<MapCategoryTypes>

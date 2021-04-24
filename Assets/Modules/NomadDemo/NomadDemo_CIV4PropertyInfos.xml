@@ -8,6 +8,7 @@
 		<PropertyInfo>
 			<Type>PROPERTY_FRUIT</Type>
 			<Description>TXT_KEY_PROPERTY_FRUIT</Description>
+			<Strategy>TXT_KEY_PROPERTY_FRUIT_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_FRUIT_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_FRUIT_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_FRUIT_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -31,6 +32,7 @@
 		<PropertyInfo>
 			<Type>PROPERTY_HUNT</Type>
 			<Description>TXT_KEY_PROPERTY_HUNT</Description>
+			<Strategy>TXT_KEY_PROPERTY_HUNT_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_HUNT_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_HUNT_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_HUNT_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -54,6 +56,7 @@
 		<PropertyInfo>
 			<Type>PROPERTY_MATERIAL</Type>
 			<Description>TXT_KEY_PROPERTY_MATERIAL</Description>
+			<Strategy>TXT_KEY_PROPERTY_MATERIAL_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_MATERIAL_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_MATERIAL_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_MATERIAL_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -77,6 +80,7 @@
 		<PropertyInfo>
 			<Type>PROPERTY_LORE</Type>
 			<Description>TXT_KEY_PROPERTY_LORE</Description>
+			<Strategy>TXT_KEY_PROPERTY_LORE_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_LORE_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_LORE_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_LORE_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>

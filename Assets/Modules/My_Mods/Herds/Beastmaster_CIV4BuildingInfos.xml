@@ -8,6 +8,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DONKEY_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_BREEDER_STRATEGY</Strategy>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DONKEY_FARM</BuildingType>
@@ -41,6 +42,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HORSE_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_BREEDER_STRATEGY</Strategy>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>

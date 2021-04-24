@@ -51,6 +51,7 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CROW</Description>
 			<Civilopedia>TXT_KEY_UNIT_CROW_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -137,6 +138,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CROW</Description>
 			<Civilopedia>TXT_KEY_UNIT_CROW_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_CROW_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>

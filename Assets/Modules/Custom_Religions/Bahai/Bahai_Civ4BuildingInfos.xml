@@ -9,6 +9,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BAHAI_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BAHAI_CATHEDRAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BAHAI_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BAHAI_CATHEDRAL</ArtDefineTag>
 			<ReligionType>RELIGION_BAHAI</ReligionType>
@@ -77,6 +78,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BAHAI_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BAHAI_MONASTERY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BAHAI_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BAHAI_MONASTERY</ArtDefineTag>
 			<ReligionType>RELIGION_BAHAI</ReligionType>
@@ -144,6 +146,7 @@
 			<Type>BUILDING_BAHAI_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_BAHAI_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BAHAI_SHRINE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BAHAI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BAHAI_SHRINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_BAHAI</MovieDefineTag>
@@ -204,6 +207,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BAHAI_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BAHAI_TEMPLE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BAHAI_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BAHAI_TEMPLE</ArtDefineTag>
 			<ReligionType>RELIGION_BAHAI</ReligionType>
@@ -257,6 +261,7 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_LOTUS_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LOTUS_TEMPLE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_LOTUS_TEMPLE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_LOTUS_TEMPLE_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LOTUS_TEMPLE</ArtDefineTag>

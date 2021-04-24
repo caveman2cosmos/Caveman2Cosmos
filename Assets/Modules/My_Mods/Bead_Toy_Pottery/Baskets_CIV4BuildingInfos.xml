@@ -11,6 +11,7 @@
 			<Type>BUILDING_BASKETY_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_BASKETY_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BASKETY_FACTORY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BASKETY_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BASKETY_FACTORY</ArtDefineTag>
@@ -82,6 +83,7 @@
 			<Type>BUILDING_BASKETY_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_BASKETY_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BASKETY_WORKSHOP_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BASKETY_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BASKETY_WORKSHOP</ArtDefineTag>
@@ -144,6 +146,7 @@
 			<Type>BUILDING_BASKETWEAVER</Type>
 			<Description>TXT_KEY_BUILDING_BASKETWEAVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BASKETWEAVER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BASKETWEAVER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BASKETWEAVER</ArtDefineTag>

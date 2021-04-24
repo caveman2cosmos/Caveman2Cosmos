@@ -5,6 +5,7 @@
 			<Type>BUILDING_ANTELOPE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_ANTELOPE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANTELOPE_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -52,6 +53,7 @@
 			<Type>BUILDING_ANTELOPE_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ANTELOPE_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WEASEL_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -81,6 +83,7 @@
 			<Type>BUILDING_BULL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_BULL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BULL_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -121,6 +124,7 @@
 			<Type>BUILDING_BULL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BULL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BULL_MYTH_EFFECT</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -132,6 +136,7 @@
 			<Type>BUILDING_CAMEL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_CAMEL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAMEL_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -172,6 +177,7 @@
 			<Type>BUILDING_CAMEL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_CAMEL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAMEL_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -183,6 +189,7 @@
 			<Type>BUILDING_DEER_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_DEER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -223,6 +230,7 @@
 			<Type>BUILDING_DEER_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DEER_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -252,6 +260,7 @@
 			<Type>BUILDING_ELEPHANT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_ELEPHANT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -297,6 +306,7 @@
 			<Type>BUILDING_ELEPHANT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ELEPHANT_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -326,6 +336,7 @@
 			<Type>BUILDING_GOAT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_GOAT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOAT_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -366,6 +377,7 @@
 			<Type>BUILDING_GOAT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_GOAT_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOAT_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -377,6 +389,7 @@
 			<Type>BUILDING_HORSE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -410,6 +423,7 @@
 			<Type>BUILDING_MARSUPIAL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_MARSUPIAL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARSUPIAL_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -450,6 +464,7 @@
 			<Type>BUILDING_MARSUPIAL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_MARSUPIAL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARSUPIAL_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -479,6 +494,7 @@
 			<Type>BUILDING_OLD_MAN_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_OLD_MAN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLD_MAN_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -519,6 +535,7 @@
 			<Type>BUILDING_OLD_MAN_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_OLD_MAN_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLD_MAN_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -530,6 +547,7 @@
 			<Type>BUILDING_SCAVENGER_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_SCAVENGER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCAVENGER_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -570,6 +588,7 @@
 			<Type>BUILDING_SCAVENGER_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SCAVENGER_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCAVENGER_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -599,6 +618,7 @@
 			<Type>BUILDING_SPOTTED_CAT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SPOTTED_CAT_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -647,6 +667,7 @@
 			<Type>BUILDING_SPOTTED_CAT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SPOTTED_CAT_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -676,6 +697,7 @@
 			<Type>BUILDING_TIGER_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_TIGER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TIGER_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -716,6 +738,7 @@
 			<Type>BUILDING_TIGER_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_TIGER_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TIGER_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -745,6 +768,7 @@
 			<Type>BUILDING_WEASEL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_WEASEL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WEASEL_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -790,6 +814,7 @@
 			<Type>BUILDING_WEASEL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_WEASEL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WEASEL_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>

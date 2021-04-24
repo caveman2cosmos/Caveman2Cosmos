@@ -8438,6 +8438,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Russian>Òóðàãåíò ''ÎÑ''</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_STRATEGY_ONE</Tag>
+		<English>Use [COLOR_HIGHLIGHT_TEXT]Lawyers[COLOR_REVERT] to remove corporations from a city. Their chance of success is drastically reduced if a corporate headquarters is located in the city.</English>
+		<French>Utilisez les [COLOR_HIGHLIGHT_TEXT]Avocats[COLOR_REVERT] pour vous débarrassez des corporations présentes dans une ville. La probabilité de succès est réduite si le siège de la corporation est présent dans cette ville.</French>
+		<Italian>Usa gli [COLOR_HIGHLIGHT_TEXT]Avvocati[COLOR_REVERT] per rimuovere le corporazioni da una città. La loro chance di successo è drasticamente ridotta se in città è presente il QG di una corporazione.</Italian>
+		<Spanish>Usa a los [COLOR_HIGHLIGHT_TEXT]Abogados[COLOR_REVERT] para eliminar corporaciones de una ciudad. Su probabilidad de éxito se reducirá drásticamente si hay alguna sede de corporación presente en la ciudad.</Spanish>
+		<Polish>Użyj [COLOR_HIGHLIGHT_TEXT]Prawników[COLOR_REVERT] by usunąć korporacje z Twojego miasta. Szansa na sukces drastycznie spada gdy w mieście znajduje się siedziba korporacji.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_ULTSOLDIER</Tag>
 		<English>Ultimate Soldiers Executive</English>
 		<French>Gérant de Soldats Ultimes</French>

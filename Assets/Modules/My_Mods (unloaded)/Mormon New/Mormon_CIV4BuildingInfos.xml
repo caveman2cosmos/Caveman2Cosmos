@@ -10,6 +10,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MORMON_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_CATHEDRAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MORMON_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MORMON_CATHEDRAL</ArtDefineTag>
 			<MapCategoryTypes>
@@ -214,6 +215,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MORMON_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_MONASTERY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MORMON_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MORMON_MONASTERY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -297,6 +299,7 @@
 			<Type>BUILDING_MORMON_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_MORMON_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_SHRINE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MORMON_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MORMON_SHRINE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -367,6 +370,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MORMON_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_TEMPLE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MORMON_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MORMON_TEMPLE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -595,6 +599,7 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TEMPLE_SQUARE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_SQUARE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TEMPLE_SQUARE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_SQUARE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -881,6 +886,7 @@
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_MISSIONARY_TRAINING_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MISSIONARY_TRAINING_CENTER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MISSIONARY_TRAINING_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MISSIONARY_TRAINING_CENTER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -975,6 +981,7 @@
 			<Type>BUILDING_BISHOPS_STOREHOUSE</Type>
 			<Description>TXT_KEY_BUILDING_BISHOPS_STOREHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BISHOPS_STOREHOUSE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BISHOPS_STOREHOUSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISHOPS_STOREHOUSE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1085,6 +1092,7 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_WELFARE_SQUARE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WELFARE_SQUARE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_WELFARE_SQUARE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WELFARE_SQUARE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1164,6 +1172,7 @@
 			<Type>BUILDING_MORMON_SEMINARY</Type>
 			<Description>TXT_KEY_BUILDING_MORMON_SEMINARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_SEMINARY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MORMON_SEMINARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MORMON_SEMINARY</ArtDefineTag>
 			<MapCategoryTypes>

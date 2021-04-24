@@ -34,6 +34,7 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_TRAINED_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRAINED_MAMMOTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TRAINED_MAMMOTH_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -149,6 +150,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TAMED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_TAMED_MAMMOTH_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -267,6 +269,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_MAMMOTH_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRAINED_MAMMOTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TRAINED_MAMMOTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -385,6 +388,7 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_WAR_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRAINED_MAMMOTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TRAINED_MAMMOTH_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -508,6 +512,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BALLISTA_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_BALLISTA_MAMMOTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_BALLISTA_MAMMOTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -634,6 +639,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BOMBARD_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_BALLISTA_MAMMOTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_BALLISTA_MAMMOTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -754,6 +760,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKMAMMOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>

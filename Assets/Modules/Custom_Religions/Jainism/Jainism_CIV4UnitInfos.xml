@@ -27,6 +27,7 @@
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_JAINISM_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_TECH_JAINISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_JAINISM_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>

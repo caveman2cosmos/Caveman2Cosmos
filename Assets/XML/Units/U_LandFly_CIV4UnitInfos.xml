@@ -26,6 +26,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AUTOGYRO</Description>
 			<Civilopedia>TXT_KEY_UNIT_AUTOGYRO_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_AUTOGYRO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -161,6 +162,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GUNSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_GUNSHIP_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GUNSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -296,6 +298,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AH64_GUNSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_GUNSHIP_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GUNSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -439,6 +442,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_STEALTH_GUNSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_GUNSHIP_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_STEALTH_GUNSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -581,6 +585,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYBRID_GUNSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_HYBRID_GUNSHIP_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HYBRID_GUNSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -719,6 +724,7 @@
 			<DefaultUnitAI>UNITAI_PARADROP</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DROPSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_DROPSHIP_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_DROPSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -863,6 +869,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_UNMANNED_HELICOPTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_UNMANNED_HELICOPTER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_UNMANNED_HELICOPTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1005,6 +1012,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DROID_HELICOPTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DROID_HELICOPTER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_DROID_HELICOPTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>

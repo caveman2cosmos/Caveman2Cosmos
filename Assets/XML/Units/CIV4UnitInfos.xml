@@ -27,6 +27,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ICBM</Description>
 			<Civilopedia>TXT_KEY_UNIT_ICBM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_ICBM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -89,6 +90,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ATOMIC</Description>
 			<Civilopedia>TXT_KEY_UNIT_TACTICAL_NUKE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_ATOMIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -153,6 +155,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYDROGEN</Description>
 			<Civilopedia>TXT_KEY_UNIT_ICBM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_ICBM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -214,6 +217,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TACTICAL_NUKE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TACTICAL_NUKE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TACTICAL_NUKE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -275,6 +279,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MRBM</Description>
 			<Civilopedia>TXT_KEY_UNIT_TACTICAL_NUKE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TACTICAL_NUKE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -335,6 +340,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_IRBM</Description>
 			<Civilopedia>TXT_KEY_UNIT_TACTICAL_NUKE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TACTICAL_NUKE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -396,6 +402,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_MISSILE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BIOLOGICAL_WARFARE_MISSILE</Description>
 			<Civilopedia>TXT_KEY_UNIT_BIOLOGICAL_WARFARE_MISSILE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_BIOLOGICAL_WARFARE_MISSILE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -466,6 +473,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_POISON_NUKE</Description>
 			<Civilopedia>TXT_KEY_UNIT_POISON_NUKE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_POISON_NUKE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -528,6 +536,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_POISON_NOVA</Description>
 			<Civilopedia>TXT_KEY_UNIT_POISON_NOVA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_POISON_NOVA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -590,6 +599,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FUSION_NUKE</Description>
 			<Civilopedia>TXT_KEY_UNIT_FUSION_NUKE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_FUSION_NUKE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -651,6 +661,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FUSION_NOVA</Description>
 			<Civilopedia>TXT_KEY_UNIT_FUSION_NOVA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_FUSION_NOVA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -712,6 +723,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EXPERIMENTAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_EXPERIMENTAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_EXPERIMENTAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -771,6 +783,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TURN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TURN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TURN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -832,6 +845,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_MISSILE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_V1</Description>
 			<Civilopedia>TXT_KEY_UNIT_V1_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_V1_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -901,6 +915,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_MISSILE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GUIDED_MISSILE</Description>
 			<Civilopedia>TXT_KEY_UNIT_GUIDED_MISSILE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GUIDED_MISSILE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -973,6 +988,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_MISSILE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PRECISION_ATTACK_MISSILE</Description>
 			<Civilopedia>TXT_KEY_UNIT_PRECISION_ATTACK_MISSILE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_PRECISION_ATTACK_MISSILE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>

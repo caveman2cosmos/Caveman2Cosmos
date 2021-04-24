@@ -8,6 +8,7 @@
 		<TraitInfo>
 			<Type>TRAIT_WARMONGER</Type>
 			<Description>TXT_KEY_TRAIT_WARMONGER</Description>
+			<Strategy>TXT_KEY_TRAIT_WARMONGER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_WARMONGER_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitWarmonger.dds</Button>
 			<PromotionLine>PROMOTIONLINE_WARMONGER</PromotionLine>
@@ -94,6 +95,7 @@
 		<TraitInfo>
 			<Type>TRAIT_WARMONGER1</Type>
 			<Description>TXT_KEY_TRAIT_WARMONGER1</Description>
+			<Strategy>TXT_KEY_TRAIT_WARMONGER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_WARMONGER1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitWarmonger.dds</Button>
 			<PromotionLine>PROMOTIONLINE_WARMONGER</PromotionLine>
@@ -179,6 +181,7 @@
 		<TraitInfo>
 			<Type>TRAIT_WARMONGER2</Type>
 			<Description>TXT_KEY_TRAIT_WARMONGER2</Description>
+			<Strategy>TXT_KEY_TRAIT_WARMONGER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_WARMONGER2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitWarmonger2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_WARMONGER</PromotionLine>
@@ -266,6 +269,7 @@
 		<TraitInfo>
 			<Type>TRAIT_WARMONGER3</Type>
 			<Description>TXT_KEY_TRAIT_WARMONGER3</Description>
+			<Strategy>TXT_KEY_TRAIT_WARMONGER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_WARMONGER3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitWarmonger3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_WARMONGER</PromotionLine>
@@ -350,6 +354,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PACIFIST</Type>
 			<Description>TXT_KEY_TRAIT_PACIFIST</Description>
+			<Strategy>TXT_KEY_TRAIT_PACIFIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PACIFIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPacifist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PACIFIST</PromotionLine>
@@ -437,6 +442,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PACIFIST1</Type>
 			<Description>TXT_KEY_TRAIT_PACIFIST1</Description>
+			<Strategy>TXT_KEY_TRAIT_PACIFIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PACIFIST1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPacifist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PACIFIST</PromotionLine>
@@ -519,6 +525,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PACIFIST2</Type>
 			<Description>TXT_KEY_TRAIT_PACIFIST2</Description>
+			<Strategy>TXT_KEY_TRAIT_PACIFIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PACIFIST2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPacifist2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PACIFIST</PromotionLine>
@@ -606,6 +613,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PACIFIST3</Type>
 			<Description>TXT_KEY_TRAIT_PACIFIST3</Description>
+			<Strategy>TXT_KEY_TRAIT_PACIFIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PACIFIST3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPacifist3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PACIFIST</PromotionLine>
@@ -692,6 +700,7 @@
 		<TraitInfo>
 			<Type>TRAIT_STRATEGIST</Type>
 			<Description>TXT_KEY_TRAIT_STRATEGIST</Description>
+			<Strategy>TXT_KEY_TRAIT_STRATEGIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_STRATEGIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitStrategist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_STRATEGIST</PromotionLine>
@@ -1102,6 +1111,7 @@
 		<TraitInfo>
 			<Type>TRAIT_STRATEGIST1</Type>
 			<Description>TXT_KEY_TRAIT_STRATEGIST1</Description>
+			<Strategy>TXT_KEY_TRAIT_STRATEGIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_STRATEGIST1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitStrategist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_STRATEGIST</PromotionLine>
@@ -1334,6 +1344,7 @@
 		<TraitInfo>
 			<Type>TRAIT_STRATEGIST2</Type>
 			<Description>TXT_KEY_TRAIT_STRATEGIST2</Description>
+			<Strategy>TXT_KEY_TRAIT_STRATEGIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_STRATEGIST2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitStrategist2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_STRATEGIST</PromotionLine>
@@ -1524,6 +1535,7 @@
 		<TraitInfo>
 			<Type>TRAIT_STRATEGIST3</Type>
 			<Description>TXT_KEY_TRAIT_STRATEGIST3</Description>
+			<Strategy>TXT_KEY_TRAIT_STRATEGIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_STRATEGIST3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitStrategist3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_STRATEGIST</PromotionLine>
@@ -1658,6 +1670,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CARELESS</Type>
 			<Description>TXT_KEY_TRAIT_CARELESS</Description>
+			<Strategy>TXT_KEY_TRAIT_CARELESS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_CARELESS_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCareless.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CARELESS</PromotionLine>
@@ -2064,6 +2077,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CARELESS1</Type>
 			<Description>TXT_KEY_TRAIT_CARELESS1</Description>
+			<Strategy>TXT_KEY_TRAIT_CARELESS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_CARELESS1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCareless.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CARELESS</PromotionLine>
@@ -2294,6 +2308,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CARELESS2</Type>
 			<Description>TXT_KEY_TRAIT_CARELESS2</Description>
+			<Strategy>TXT_KEY_TRAIT_CARELESS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_CARELESS2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCareless2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CARELESS</PromotionLine>
@@ -2482,6 +2497,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CARELESS3</Type>
 			<Description>TXT_KEY_TRAIT_CARELESS3</Description>
+			<Strategy>TXT_KEY_TRAIT_CARELESS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_CARELESS3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCareless3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CARELESS</PromotionLine>
@@ -2615,6 +2631,7 @@
 			<Type>TRAIT_AGGRESSIVE</Type>
 			<ReplacementID>TRAIT_COMPLEX_AGGRESSIVE</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAggressive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AGGRESSIVE</PromotionLine>
@@ -2754,6 +2771,7 @@
 			<Type>TRAIT_AGGRESSIVE1</Type>
 			<ReplacementID>TRAIT_COMPLEX_AGGRESSIVE1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAggressive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AGGRESSIVE</PromotionLine>
@@ -2871,6 +2889,7 @@
 		<TraitInfo>
 			<Type>TRAIT_AGGRESSIVE2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAggressive2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AGGRESSIVE</PromotionLine>
@@ -2987,6 +3006,7 @@
 		<TraitInfo>
 			<Type>TRAIT_AGGRESSIVE3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAggressive3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AGGRESSIVE</PromotionLine>
@@ -3083,6 +3103,7 @@
 		<TraitInfo>
 			<Type>TRAIT_TIMID</Type>
 			<Description>TXT_KEY_TRAIT_TIMID</Description>
+			<Strategy>TXT_KEY_TRAIT_TIMID_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_TIMID_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTimid.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TIMID</PromotionLine>
@@ -3198,6 +3219,7 @@
 		<TraitInfo>
 			<Type>TRAIT_TIMID1</Type>
 			<Description>TXT_KEY_TRAIT_TIMID1</Description>
+			<Strategy>TXT_KEY_TRAIT_TIMID_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_TIMID1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTimid.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TIMID</PromotionLine>
@@ -3289,6 +3311,7 @@
 		<TraitInfo>
 			<Type>TRAIT_TIMID2</Type>
 			<Description>TXT_KEY_TRAIT_TIMID2</Description>
+			<Strategy>TXT_KEY_TRAIT_TIMID_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_TIMID2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTimid2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TIMID</PromotionLine>
@@ -3385,6 +3408,7 @@
 		<TraitInfo>
 			<Type>TRAIT_TIMID3</Type>
 			<Description>TXT_KEY_TRAIT_TIMID3</Description>
+			<Strategy>TXT_KEY_TRAIT_TIMID_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_TIMID3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTimid3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TIMID</PromotionLine>
@@ -3481,6 +3505,7 @@
 		<TraitInfo>
 			<Type>TRAIT_DEFENSIVE</Type>
 			<Description>TXT_KEY_TRAIT_DEFENSIVE</Description>
+			<Strategy>TXT_KEY_TRAIT_DEFENSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_DEFENSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDefensive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE</PromotionLine>
@@ -3725,6 +3750,7 @@
 		<TraitInfo>
 			<Type>TRAIT_DEFENSIVE1</Type>
 			<Description>TXT_KEY_TRAIT_DEFENSIVE1</Description>
+			<Strategy>TXT_KEY_TRAIT_DEFENSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_DEFENSIVE1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDefensive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE</PromotionLine>
@@ -3947,6 +3973,7 @@
 		<TraitInfo>
 			<Type>TRAIT_DEFENSIVE2</Type>
 			<Description>TXT_KEY_TRAIT_DEFENSIVE2</Description>
+			<Strategy>TXT_KEY_TRAIT_DEFENSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_DEFENSIVE2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDefensive2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE</PromotionLine>
@@ -4173,6 +4200,7 @@
 		<TraitInfo>
 			<Type>TRAIT_DEFENSIVE3</Type>
 			<Description>TXT_KEY_TRAIT_DEFENSIVE3</Description>
+			<Strategy>TXT_KEY_TRAIT_DEFENSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_DEFENSIVE3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDefensive3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE</PromotionLine>
@@ -4379,6 +4407,7 @@
 		<TraitInfo>
 			<Type>TRAIT_COWARDLY</Type>
 			<Description>TXT_KEY_TRAIT_COWARDLY</Description>
+			<Strategy>TXT_KEY_TRAIT_COWARDLY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COWARDLY_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCowardly.dds</Button>
 			<PromotionLine>PROMOTIONLINE_COWARDLY</PromotionLine>
@@ -4583,6 +4612,7 @@
 		<TraitInfo>
 			<Type>TRAIT_COWARDLY1</Type>
 			<Description>TXT_KEY_TRAIT_COWARDLY1</Description>
+			<Strategy>TXT_KEY_TRAIT_COWARDLY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COWARDLY1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCowardly.dds</Button>
 			<PromotionLine>PROMOTIONLINE_COWARDLY</PromotionLine>
@@ -4784,6 +4814,7 @@
 		<TraitInfo>
 			<Type>TRAIT_COWARDLY2</Type>
 			<Description>TXT_KEY_TRAIT_COWARDLY2</Description>
+			<Strategy>TXT_KEY_TRAIT_COWARDLY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COWARDLY2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCowardly2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_COWARDLY</PromotionLine>
@@ -4988,6 +5019,7 @@
 		<TraitInfo>
 			<Type>TRAIT_COWARDLY3</Type>
 			<Description>TXT_KEY_TRAIT_COWARDLY3</Description>
+			<Strategy>TXT_KEY_TRAIT_COWARDLY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COWARDLY3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCowardly3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_COWARDLY</PromotionLine>
@@ -5195,6 +5227,7 @@
 			<Type>TRAIT_PROTECTIVE</Type>
 			<ReplacementID>TRAIT_COMPLEX_PROTECTIVE</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProtective.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROTECTIVE</PromotionLine>
@@ -5817,6 +5850,7 @@
 			<Type>TRAIT_PROTECTIVE1</Type>
 			<ReplacementID>TRAIT_COMPLEX_PROTECTIVE1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProtective.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROTECTIVE</PromotionLine>
@@ -6132,6 +6166,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PROTECTIVE2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProtective2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROTECTIVE</PromotionLine>
@@ -6374,6 +6409,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PROTECTIVE3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProtective3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROTECTIVE</PromotionLine>
@@ -6622,6 +6658,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NEGLIGENT</Type>
 			<Description>TXT_KEY_TRAIT_NEGLIGENT</Description>
+			<Strategy>TXT_KEY_TRAIT_NEGLIGENT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NEGLIGENT_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNegligent.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NEGLIGENT</PromotionLine>
@@ -7064,6 +7101,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NEGLIGENT1</Type>
 			<Description>TXT_KEY_TRAIT_NEGLIGENT1</Description>
+			<Strategy>TXT_KEY_TRAIT_NEGLIGENT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NEGLIGENT1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNegligent.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NEGLIGENT</PromotionLine>
@@ -7294,6 +7332,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NEGLIGENT2</Type>
 			<Description>TXT_KEY_TRAIT_NEGLIGENT2</Description>
+			<Strategy>TXT_KEY_TRAIT_NEGLIGENT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NEGLIGENT2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNegligent2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NEGLIGENT</PromotionLine>
@@ -7476,6 +7515,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NEGLIGENT3</Type>
 			<Description>TXT_KEY_TRAIT_NEGLIGENT3</Description>
+			<Strategy>TXT_KEY_TRAIT_NEGLIGENT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NEGLIGENT3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNegligent3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NEGLIGENT</PromotionLine>
@@ -7687,6 +7727,7 @@
 			<Type>TRAIT_IMPERIALIST</Type>
 			<ReplacementID>TRAIT_COMPLEX_IMPERIALIST</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitImperialist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IMPERIALIST</PromotionLine>
@@ -8030,6 +8071,7 @@
 			<Type>TRAIT_IMPERIALIST1</Type>
 			<ReplacementID>TRAIT_COMPLEX_IMPERIALIST1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitImperialist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IMPERIALIST</PromotionLine>
@@ -8215,6 +8257,7 @@
 		<TraitInfo>
 			<Type>TRAIT_IMPERIALIST2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitImperialist2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IMPERIALIST</PromotionLine>
@@ -8431,6 +8474,7 @@
 		<TraitInfo>
 			<Type>TRAIT_IMPERIALIST3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitImperialist3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IMPERIALIST</PromotionLine>
@@ -8579,6 +8623,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MEEK</Type>
 			<Description>TXT_KEY_TRAIT_MEEK</Description>
+			<Strategy>TXT_KEY_TRAIT_MEEK_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_MEEK_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMeek.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEEK</PromotionLine>
@@ -8882,6 +8927,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MEEK1</Type>
 			<Description>TXT_KEY_TRAIT_MEEK1</Description>
+			<Strategy>TXT_KEY_TRAIT_MEEK_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_MEEK1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMeek.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEEK</PromotionLine>
@@ -9049,6 +9095,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MEEK2</Type>
 			<Description>TXT_KEY_TRAIT_MEEK2</Description>
+			<Strategy>TXT_KEY_TRAIT_MEEK_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_MEEK2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMeek2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEEK</PromotionLine>
@@ -9247,6 +9294,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MEEK3</Type>
 			<Description>TXT_KEY_TRAIT_MEEK3</Description>
+			<Strategy>TXT_KEY_TRAIT_MEEK_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_MEEK3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMeek3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEEK</PromotionLine>
@@ -9398,6 +9446,7 @@
 			<Type>TRAIT_SEAFARING</Type>
 			<ReplacementID>TRAIT_COMPLEX_SEAFARING</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SEAFARING</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_SEAFARING_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SEAFARING_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSeafaring.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SEAFARING</PromotionLine>
@@ -9901,6 +9950,7 @@
 			<Type>TRAIT_SEAFARING1</Type>
 			<ReplacementID>TRAIT_COMPLEX_SEAFARING1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SEAFARING1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_SEAFARING_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SEAFARING1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSeafaring.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SEAFARING</PromotionLine>
@@ -10227,6 +10277,7 @@
 		<TraitInfo>
 			<Type>TRAIT_SEAFARING2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SEAFARING2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_SEAFARING_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SEAFARING2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSeafaring2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SEAFARING</PromotionLine>
@@ -10538,6 +10589,7 @@
 		<TraitInfo>
 			<Type>TRAIT_SEAFARING3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SEAFARING3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_SEAFARING_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SEAFARING3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSeafaring3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SEAFARING</PromotionLine>
@@ -10776,6 +10828,7 @@
 			<Type>TRAIT_NOMAD</Type>
 			<ReplacementID>TRAIT_COMPLEX_NOMADIC</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_NOMADIC</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_NOMADIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_NOMADIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNomadic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NOMADIC</PromotionLine>
@@ -12359,6 +12412,7 @@
 			<Type>TRAIT_NOMAD1</Type>
 			<ReplacementID>TRAIT_COMPLEX_NOMADIC1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_NOMADIC1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_NOMADIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_NOMADIC1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNomadic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NOMADIC</PromotionLine>
@@ -13635,6 +13689,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NOMADIC2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_NOMADIC2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_NOMADIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_NOMADIC2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNomadic2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NOMADIC</PromotionLine>
@@ -14660,6 +14715,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NOMADIC3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_NOMADIC3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_NOMADIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_NOMADIC3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNomadic3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NOMADIC</PromotionLine>
@@ -15709,6 +15765,7 @@
 		<TraitInfo>
 			<Type>TRAIT_AERIAL</Type>
 			<Description>TXT_KEY_TRAIT_AERIAL</Description>
+			<Strategy>TXT_KEY_TRAIT_AERIAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_AERIAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAerial.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AERIAL</PromotionLine>
@@ -16655,6 +16712,7 @@
 		<TraitInfo>
 			<Type>TRAIT_AERIAL1</Type>
 			<Description>TXT_KEY_TRAIT_AERIAL1</Description>
+			<Strategy>TXT_KEY_TRAIT_AERIAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_AERIAL1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAerial.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AERIAL</PromotionLine>
@@ -17008,6 +17066,7 @@
 		<TraitInfo>
 			<Type>TRAIT_AERIAL2</Type>
 			<Description>TXT_KEY_TRAIT_AERIAL2</Description>
+			<Strategy>TXT_KEY_TRAIT_AERIAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_AERIAL2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAerial2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AERIAL</PromotionLine>
@@ -17444,6 +17503,7 @@
 		<TraitInfo>
 			<Type>TRAIT_AERIAL3</Type>
 			<Description>TXT_KEY_TRAIT_AERIAL3</Description>
+			<Strategy>TXT_KEY_TRAIT_AERIAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_AERIAL3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAerial3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AERIAL</PromotionLine>
@@ -17836,6 +17896,7 @@
 			<Type>TRAIT_SPIRITUAL</Type>
 			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSpiritual.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SPIRITUAL</PromotionLine>
@@ -18132,6 +18193,7 @@
 			<Type>TRAIT_SPIRITUAL1</Type>
 			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSpiritual.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SPIRITUAL</PromotionLine>
@@ -18386,6 +18448,7 @@
 		<TraitInfo>
 			<Type>TRAIT_SPIRITUAL2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSpiritual2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SPIRITUAL</PromotionLine>
@@ -18545,6 +18608,7 @@
 		<TraitInfo>
 			<Type>TRAIT_SPIRITUAL3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSpiritual3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SPIRITUAL</PromotionLine>
@@ -18714,6 +18778,7 @@
 			<Type>TRAIT_ANTI_CLERICAL</Type>
 			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAnti-Clerical.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ANTI_CLERICAL</PromotionLine>
@@ -19010,6 +19075,7 @@
 			<Type>TRAIT_ANTI_CLERICAL1</Type>
 			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAnti-Clerical.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ANTI_CLERICAL</PromotionLine>
@@ -19167,6 +19233,7 @@
 		<TraitInfo>
 			<Type>TRAIT_ANTI_CLERICAL2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAnti-Clerical2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ANTI_CLERICAL</PromotionLine>
@@ -19325,6 +19392,7 @@
 		<TraitInfo>
 			<Type>TRAIT_ANTI_CLERICAL3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAnti-Clerical3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ANTI_CLERICAL</PromotionLine>
@@ -19487,6 +19555,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PIOUS</Type>
 			<Description>TXT_KEY_TRAIT_PIOUS</Description>
+			<Strategy>TXT_KEY_TRAIT_PIOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PIOUS_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPious.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PIOUS</PromotionLine>
@@ -19658,6 +19727,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PIOUS1</Type>
 			<Description>TXT_KEY_TRAIT_PIOUS1</Description>
+			<Strategy>TXT_KEY_TRAIT_PIOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PIOUS1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPious.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PIOUS</PromotionLine>
@@ -19829,6 +19899,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PIOUS2</Type>
 			<Description>TXT_KEY_TRAIT_PIOUS2</Description>
+			<Strategy>TXT_KEY_TRAIT_PIOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PIOUS2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPious2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PIOUS</PromotionLine>
@@ -19994,6 +20065,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PIOUS3</Type>
 			<Description>TXT_KEY_TRAIT_PIOUS3</Description>
+			<Strategy>TXT_KEY_TRAIT_PIOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PIOUS3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPious3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PIOUS</PromotionLine>
@@ -20127,6 +20199,7 @@
 			<Type>TRAIT_FANATICAL</Type>
 			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
 			<Description>TXT_KEY_TRAIT_ZEALOUS</Description>
+			<Strategy>TXT_KEY_TRAIT_ZEALOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_ZEALOUS_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitZealot.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ZEALOUS</PromotionLine>
@@ -20303,6 +20376,7 @@
 			<Type>TRAIT_FANATICAL1</Type>
 			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_ZEALOUS1</Description>
+			<Strategy>TXT_KEY_TRAIT_ZEALOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_ZEALOUS1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitZealot.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ZEALOUS</PromotionLine>
@@ -20472,6 +20546,7 @@
 		<TraitInfo>
 			<Type>TRAIT_ZEALOUS2</Type>
 			<Description>TXT_KEY_TRAIT_ZEALOUS2</Description>
+			<Strategy>TXT_KEY_TRAIT_ZEALOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_ZEALOUS2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitZealot2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ZEALOUS</PromotionLine>
@@ -20639,6 +20714,7 @@
 		<TraitInfo>
 			<Type>TRAIT_ZEALOUS3</Type>
 			<Description>TXT_KEY_TRAIT_ZEALOUS3</Description>
+			<Strategy>TXT_KEY_TRAIT_ZEALOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_ZEALOUS3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitZealot3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ZEALOUS</PromotionLine>
@@ -20770,6 +20846,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GLORIOUS</Type>
 			<Description>TXT_KEY_TRAIT_GLORIOUS</Description>
+			<Strategy>TXT_KEY_TRAIT_GLORIOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GLORIOUS_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGlorious.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GLORIOUS</PromotionLine>
@@ -20887,6 +20964,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GLORIOUS1</Type>
 			<Description>TXT_KEY_TRAIT_GLORIOUS1</Description>
+			<Strategy>TXT_KEY_TRAIT_GLORIOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GLORIOUS1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGlorious.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GLORIOUS</PromotionLine>
@@ -21004,6 +21082,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GLORIOUS2</Type>
 			<Description>TXT_KEY_TRAIT_GLORIOUS2</Description>
+			<Strategy>TXT_KEY_TRAIT_GLORIOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GLORIOUS2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGlorious2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GLORIOUS</PromotionLine>
@@ -21120,6 +21199,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GLORIOUS3</Type>
 			<Description>TXT_KEY_TRAIT_GLORIOUS3</Description>
+			<Strategy>TXT_KEY_TRAIT_GLORIOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GLORIOUS3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGlorious3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GLORIOUS</PromotionLine>
@@ -21236,6 +21316,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GLOOMY</Type>
 			<Description>TXT_KEY_TRAIT_GLOOMY</Description>
+			<Strategy>TXT_KEY_TRAIT_GLOOMY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GLOOMY_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGloomy.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GLOOMY</PromotionLine>
@@ -21355,6 +21436,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GLOOMY1</Type>
 			<Description>TXT_KEY_TRAIT_GLOOMY1</Description>
+			<Strategy>TXT_KEY_TRAIT_GLOOMY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GLOOMY1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGloomy.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GLOOMY</PromotionLine>
@@ -21474,6 +21556,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GLOOMY2</Type>
 			<Description>TXT_KEY_TRAIT_GLOOMY2</Description>
+			<Strategy>TXT_KEY_TRAIT_GLOOMY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GLOOMY2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGloomy2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GLOOMY</PromotionLine>
@@ -21593,6 +21676,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GLOOMY3</Type>
 			<Description>TXT_KEY_TRAIT_GLOOMY3</Description>
+			<Strategy>TXT_KEY_TRAIT_GLOOMY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GLOOMY3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGloomy3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GLOOMY</PromotionLine>
@@ -21712,6 +21796,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PREEMINENT</Type>
 			<Description>TXT_KEY_TRAIT_PREEMINENT</Description>
+			<Strategy>TXT_KEY_TRAIT_PREEMINENT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PREEMINENT_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPreeminent.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PREEMINENT</PromotionLine>
@@ -21972,6 +22057,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PREEMINENT1</Type>
 			<Description>TXT_KEY_TRAIT_PREEMINENT1</Description>
+			<Strategy>TXT_KEY_TRAIT_PREEMINENT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PREEMINENT1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPreeminent.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PREEMINENT</PromotionLine>
@@ -22232,6 +22318,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PREEMINENT2</Type>
 			<Description>TXT_KEY_TRAIT_PREEMINENT2</Description>
+			<Strategy>TXT_KEY_TRAIT_PREEMINENT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PREEMINENT2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPreeminent2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PREEMINENT</PromotionLine>
@@ -22492,6 +22579,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PREEMINENT3</Type>
 			<Description>TXT_KEY_TRAIT_PREEMINENT3</Description>
+			<Strategy>TXT_KEY_TRAIT_PREEMINENT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PREEMINENT3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPreeminent3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PREEMINENT</PromotionLine>
@@ -22662,6 +22750,7 @@
 		<TraitInfo>
 			<Type>TRAIT_ALOOF</Type>
 			<Description>TXT_KEY_TRAIT_ALOOF</Description>
+			<Strategy>TXT_KEY_TRAIT_ALOOF_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_ALOOF_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAloof.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ALOOF</PromotionLine>
@@ -22922,6 +23011,7 @@
 		<TraitInfo>
 			<Type>TRAIT_ALOOF1</Type>
 			<Description>TXT_KEY_TRAIT_ALOOF1</Description>
+			<Strategy>TXT_KEY_TRAIT_ALOOF_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_ALOOF1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAloof.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ALOOF</PromotionLine>
@@ -23182,6 +23272,7 @@
 		<TraitInfo>
 			<Type>TRAIT_ALOOF2</Type>
 			<Description>TXT_KEY_TRAIT_ALOOF2</Description>
+			<Strategy>TXT_KEY_TRAIT_ALOOF_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_ALOOF2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAloof2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ALOOF</PromotionLine>
@@ -23442,6 +23533,7 @@
 		<TraitInfo>
 			<Type>TRAIT_ALOOF3</Type>
 			<Description>TXT_KEY_TRAIT_ALOOF3</Description>
+			<Strategy>TXT_KEY_TRAIT_ALOOF_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_ALOOF3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAloof3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ALOOF</PromotionLine>
@@ -23613,6 +23705,7 @@
 			<Type>TRAIT_INDUSTRIOUS</Type>
 			<ReplacementID>TRAIT_COMPLEX_INDUSTRIOUS</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIndustrious.dds</Button>
 			<PromotionLine>PROMOTIONLINE_INDUSTRIOUS</PromotionLine>
@@ -24609,6 +24702,7 @@
 			<Type>TRAIT_INDUSTRIOUS1</Type>
 			<ReplacementID>TRAIT_COMPLEX_INDUSTRIOUS1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIndustrious.dds</Button>
 			<PromotionLine>PROMOTIONLINE_INDUSTRIOUS</PromotionLine>
@@ -25188,6 +25282,7 @@
 		<TraitInfo>
 			<Type>TRAIT_INDUSTRIOUS2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIndustrious2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_INDUSTRIOUS</PromotionLine>
@@ -25648,6 +25743,7 @@
 		<TraitInfo>
 			<Type>TRAIT_INDUSTRIOUS3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIndustrious3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_INDUSTRIOUS</PromotionLine>
@@ -26066,6 +26162,7 @@
 		<TraitInfo>
 			<Type>TRAIT_LAZY</Type>
 			<Description>TXT_KEY_TRAIT_LAZY</Description>
+			<Strategy>TXT_KEY_TRAIT_LAZY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_LAZY_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitLazy.dds</Button>
 			<PromotionLine>PROMOTIONLINE_LAZY</PromotionLine>
@@ -27058,6 +27155,7 @@
 		<TraitInfo>
 			<Type>TRAIT_LAZY1</Type>
 			<Description>TXT_KEY_TRAIT_LAZY1</Description>
+			<Strategy>TXT_KEY_TRAIT_LAZY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_LAZY1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitLazy.dds</Button>
 			<PromotionLine>PROMOTIONLINE_LAZY</PromotionLine>
@@ -27634,6 +27732,7 @@
 		<TraitInfo>
 			<Type>TRAIT_LAZY2</Type>
 			<Description>TXT_KEY_TRAIT_LAZY2</Description>
+			<Strategy>TXT_KEY_TRAIT_LAZY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_LAZY2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitLazy2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_LAZY</PromotionLine>
@@ -28094,6 +28193,7 @@
 		<TraitInfo>
 			<Type>TRAIT_LAZY3</Type>
 			<Description>TXT_KEY_TRAIT_LAZY3</Description>
+			<Strategy>TXT_KEY_TRAIT_LAZY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_LAZY3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitLazy3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_LAZY</PromotionLine>
@@ -28512,6 +28612,7 @@
 		<TraitInfo>
 			<Type>TRAIT_EFFICIENT</Type>
 			<Description>TXT_KEY_TRAIT_EFFICIENT</Description>
+			<Strategy>TXT_KEY_TRAIT_EFFICIENT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_EFFICIENT_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitEfficient.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EFFICIENT</PromotionLine>
@@ -28903,6 +29004,7 @@
 		<TraitInfo>
 			<Type>TRAIT_EFFICIENT1</Type>
 			<Description>TXT_KEY_TRAIT_EFFICIENT1</Description>
+			<Strategy>TXT_KEY_TRAIT_EFFICIENT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_EFFICIENT1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitEfficient.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EFFICIENT</PromotionLine>
@@ -29161,6 +29263,7 @@
 		<TraitInfo>
 			<Type>TRAIT_EFFICIENT2</Type>
 			<Description>TXT_KEY_TRAIT_EFFICIENT2</Description>
+			<Strategy>TXT_KEY_TRAIT_EFFICIENT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_EFFICIENT2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitEfficient2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EFFICIENT</PromotionLine>
@@ -29447,6 +29550,7 @@
 		<TraitInfo>
 			<Type>TRAIT_EFFICIENT3</Type>
 			<Description>TXT_KEY_TRAIT_EFFICIENT3</Description>
+			<Strategy>TXT_KEY_TRAIT_EFFICIENT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_EFFICIENT3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitEfficient3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EFFICIENT</PromotionLine>
@@ -29611,6 +29715,7 @@
 			<Type>TRAIT_EXCESSIVE</Type>
 			<ReplacementID>TRAIT_COMPLEX_EXCESSIVE</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExcessive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EXCESSIVE</PromotionLine>
@@ -29996,6 +30101,7 @@
 			<Type>TRAIT_EXCESSIVE1</Type>
 			<ReplacementID>TRAIT_COMPLEX_EXCESSIVE</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExcessive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EXCESSIVE</PromotionLine>
@@ -30244,6 +30350,7 @@
 		<TraitInfo>
 			<Type>TRAIT_EXCESSIVE2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExcessive2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EXCESSIVE</PromotionLine>
@@ -30517,6 +30624,7 @@
 		<TraitInfo>
 			<Type>TRAIT_EXCESSIVE3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExcessive3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EXCESSIVE</PromotionLine>
@@ -30670,6 +30778,7 @@
 			<Type>TRAIT_AGRICULTURAL</Type>
 			<ReplacementID>TRAIT_COMPLEX_AGRICULTURAL</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAgricultural.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AGRICULTURAL</PromotionLine>
@@ -31206,6 +31315,7 @@
 			<Type>TRAIT_AGRICULTURAL1</Type>
 			<ReplacementID>TRAIT_COMPLEX_AGRICULTURAL1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAgricultural.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AGRICULTURAL</PromotionLine>
@@ -31673,6 +31783,7 @@
 		<TraitInfo>
 			<Type>TRAIT_AGRICULTURAL2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAgricultural2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AGRICULTURAL</PromotionLine>
@@ -32092,6 +32203,7 @@
 		<TraitInfo>
 			<Type>TRAIT_AGRICULTURAL3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAgricultural3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AGRICULTURAL</PromotionLine>
@@ -32523,6 +32635,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GLUTTONOUS</Type>
 			<Description>TXT_KEY_TRAIT_GLUTTONOUS</Description>
+			<Strategy>TXT_KEY_TRAIT_GLUTTONOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GLUTTONOUS_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGluttonous.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GLUTTONOUS</PromotionLine>
@@ -33033,6 +33146,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GLUTTONOUS1</Type>
 			<Description>TXT_KEY_TRAIT_GLUTTONOUS1</Description>
+			<Strategy>TXT_KEY_TRAIT_GLUTTONOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GLUTTONOUS1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGluttonous.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GLUTTONOUS</PromotionLine>
@@ -33472,6 +33586,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GLUTTONOUS2</Type>
 			<Description>TXT_KEY_TRAIT_GLUTTONOUS2</Description>
+			<Strategy>TXT_KEY_TRAIT_GLUTTONOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GLUTTONOUS2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGluttonous2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GLUTTONOUS</PromotionLine>
@@ -33868,6 +33983,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GLUTTONOUS3</Type>
 			<Description>TXT_KEY_TRAIT_GLUTTONOUS3</Description>
+			<Strategy>TXT_KEY_TRAIT_GLUTTONOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GLUTTONOUS3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGluttonous3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GLUTTONOUS</PromotionLine>
@@ -34277,6 +34393,7 @@
 			<Type>TRAIT_CREATIVE</Type>
 			<ReplacementID>TRAIT_COMPLEX_CREATIVE</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_CREATIVE</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_CREATIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_CREATIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCreative.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CREATIVE</PromotionLine>
@@ -35380,6 +35497,7 @@
 			<Type>TRAIT_CREATIVE1</Type>
 			<ReplacementID>TRAIT_COMPLEX_CREATIVE1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_CREATIVE1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_CREATIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_CREATIVE1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCreative.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CREATIVE</PromotionLine>
@@ -35946,6 +36064,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CREATIVE2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_CREATIVE2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_CREATIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_CREATIVE2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCreative2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CREATIVE</PromotionLine>
@@ -36443,6 +36562,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CREATIVE3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_CREATIVE3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_CREATIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_CREATIVE3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCreative3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CREATIVE</PromotionLine>
@@ -36728,6 +36848,7 @@
 		<TraitInfo>
 			<Type>TRAIT_UNREFINED</Type>
 			<Description>TXT_KEY_TRAIT_UNREFINED</Description>
+			<Strategy>TXT_KEY_TRAIT_UNREFINED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_UNREFINED_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitUnrefined.dds</Button>
 			<PromotionLine>PROMOTIONLINE_UNREFINED</PromotionLine>
@@ -37578,6 +37699,7 @@
 		<TraitInfo>
 			<Type>TRAIT_UNREFINED1</Type>
 			<Description>TXT_KEY_TRAIT_UNREFINED1</Description>
+			<Strategy>TXT_KEY_TRAIT_UNREFINED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_UNREFINED1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitUnrefined.dds</Button>
 			<PromotionLine>PROMOTIONLINE_UNREFINED</PromotionLine>
@@ -38064,6 +38186,7 @@
 		<TraitInfo>
 			<Type>TRAIT_UNREFINED2</Type>
 			<Description>TXT_KEY_TRAIT_UNREFINED2</Description>
+			<Strategy>TXT_KEY_TRAIT_UNREFINED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_UNREFINED2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitUnrefined2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CREATIVE</PromotionLine>
@@ -38452,6 +38575,7 @@
 		<TraitInfo>
 			<Type>TRAIT_UNREFINED3</Type>
 			<Description>TXT_KEY_TRAIT_UNREFINED3</Description>
+			<Strategy>TXT_KEY_TRAIT_UNREFINED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_UNREFINED3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitUnrefined3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_UNREFINED</PromotionLine>
@@ -38713,6 +38837,7 @@
 			<Type>TRAIT_FINANCIAL</Type>
 			<ReplacementID>TRAIT_COMPLEX_FINANCIAL</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_FINANCIAL</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_FINANCIAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_FINANCIAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitFinancial.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FINANCIAL</PromotionLine>
@@ -39469,6 +39594,7 @@
 			<Type>TRAIT_FINANCIAL1</Type>
 			<ReplacementID>TRAIT_COMPLEX_FINANCIAL1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_FINANCIAL1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_FINANCIAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_FINANCIAL1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitFinancial.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FINANCIAL</PromotionLine>
@@ -39896,6 +40022,7 @@
 		<TraitInfo>
 			<Type>TRAIT_FINANCIAL2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_FINANCIAL2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_FINANCIAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_FINANCIAL2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitFinancial2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FINANCIAL</PromotionLine>
@@ -40194,6 +40321,7 @@
 		<TraitInfo>
 			<Type>TRAIT_FINANCIAL3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_FINANCIAL3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_FINANCIAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_FINANCIAL3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitFinancial3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FINANCIAL</PromotionLine>
@@ -40472,6 +40600,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GREEDY</Type>
 			<Description>TXT_KEY_TRAIT_GREEDY</Description>
+			<Strategy>TXT_KEY_TRAIT_GREEDY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GREEDY_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGreedy.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GREEDY</PromotionLine>
@@ -41223,6 +41352,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GREEDY1</Type>
 			<Description>TXT_KEY_TRAIT_GREEDY1</Description>
+			<Strategy>TXT_KEY_TRAIT_GREEDY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GREEDY1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGreedy.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GREEDY</PromotionLine>
@@ -41646,6 +41776,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GREEDY2</Type>
 			<Description>TXT_KEY_TRAIT_GREEDY2</Description>
+			<Strategy>TXT_KEY_TRAIT_GREEDY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GREEDY2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGreedy2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GREEDY</PromotionLine>
@@ -41943,6 +42074,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GREEDY3</Type>
 			<Description>TXT_KEY_TRAIT_GREEDY3</Description>
+			<Strategy>TXT_KEY_TRAIT_GREEDY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GREEDY3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGreedy3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GREEDY</PromotionLine>
@@ -42221,6 +42353,7 @@
 			<Type>TRAIT_DECEIVER</Type>
 			<ReplacementID>TRAIT_COMPLEX_DECEIVER</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_DECEIVER</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_DECEIVER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_DECEIVER_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDeceiver.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DECEIVER</PromotionLine>
@@ -42859,6 +42992,7 @@
 			<Type>TRAIT_DECEIVER1</Type>
 			<ReplacementID>TRAIT_COMPLEX_DECEIVER1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_DECEIVER1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_DECEIVER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_DECEIVER1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDeceiver.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DECEIVER</PromotionLine>
@@ -43195,6 +43329,7 @@
 		<TraitInfo>
 			<Type>TRAIT_DECEIVER2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_DECEIVER2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_DECEIVER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_DECEIVER2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDeceiver2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DECEIVER</PromotionLine>
@@ -43454,6 +43589,7 @@
 		<TraitInfo>
 			<Type>TRAIT_DECEIVER3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_DECEIVER3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_DECEIVER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_DECEIVER3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDeceiver3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DECEIVER</PromotionLine>
@@ -43770,6 +43906,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NAIVE</Type>
 			<Description>TXT_KEY_TRAIT_NAIVE</Description>
+			<Strategy>TXT_KEY_TRAIT_NAIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NAIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNaive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NAIVE</PromotionLine>
@@ -44403,6 +44540,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NAIVE1</Type>
 			<Description>TXT_KEY_TRAIT_NAIVE1</Description>
+			<Strategy>TXT_KEY_TRAIT_NAIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NAIVE1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNaive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NAIVE</PromotionLine>
@@ -44736,6 +44874,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NAIVE2</Type>
 			<Description>TXT_KEY_TRAIT_NAIVE2</Description>
+			<Strategy>TXT_KEY_TRAIT_NAIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NAIVE2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNaive2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NAIVE</PromotionLine>
@@ -44994,6 +45133,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NAIVE3</Type>
 			<Description>TXT_KEY_TRAIT_NAIVE3</Description>
+			<Strategy>TXT_KEY_TRAIT_NAIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NAIVE3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNaive3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NAIVE</PromotionLine>
@@ -45310,6 +45450,7 @@
 			<Type>TRAIT_SCIENTIFIC</Type>
 			<ReplacementID>TRAIT_COMPLEX_SCIENTIFIC</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitScientific.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SCIENTIFIC</PromotionLine>
@@ -46147,6 +46288,7 @@
 			<Type>TRAIT_SCIENTIFIC1</Type>
 			<ReplacementID>TRAIT_COMPLEX_SCIENTIFIC1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitScientific.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SCIENTIFIC</PromotionLine>
@@ -46428,6 +46570,7 @@
 		<TraitInfo>
 			<Type>TRAIT_SCIENTIFIC2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitScientific2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SCIENTIFIC</PromotionLine>
@@ -46835,6 +46978,7 @@
 		<TraitInfo>
 			<Type>TRAIT_SCIENTIFIC3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitScientific3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SCIENTIFIC</PromotionLine>
@@ -47275,6 +47419,7 @@
 		<TraitInfo>
 			<Type>TRAIT_TRADITIONAL</Type>
 			<Description>TXT_KEY_TRAIT_TRADITIONAL</Description>
+			<Strategy>TXT_KEY_TRAIT_TRADITIONAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_TRADITIONAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTraditional.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TRADITIONAL</PromotionLine>
@@ -48105,6 +48250,7 @@
 		<TraitInfo>
 			<Type>TRAIT_TRADITIONAL1</Type>
 			<Description>TXT_KEY_TRAIT_TRADITIONAL1</Description>
+			<Strategy>TXT_KEY_TRAIT_TRADITIONAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_TRADITIONAL1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTraditional.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TRADITIONAL</PromotionLine>
@@ -48367,6 +48513,7 @@
 		<TraitInfo>
 			<Type>TRAIT_TRADITIONAL2</Type>
 			<Description>TXT_KEY_TRAIT_TRADITIONAL2</Description>
+			<Strategy>TXT_KEY_TRAIT_TRADITIONAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_TRADITIONAL2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTraditional2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TRADITIONAL</PromotionLine>
@@ -48743,6 +48890,7 @@
 		<TraitInfo>
 			<Type>TRAIT_TRADITIONAL3</Type>
 			<Description>TXT_KEY_TRAIT_TRADITIONAL3</Description>
+			<Strategy>TXT_KEY_TRAIT_TRADITIONAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_TRADITIONAL3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTraditional3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TRADITIONAL</PromotionLine>
@@ -49167,6 +49315,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NEGOTIATOR</Type>
 			<Description>TXT_KEY_TRAIT_NEGOTIATOR</Description>
+			<Strategy>TXT_KEY_TRAIT_NEGOTIATOR_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NEGOTIATOR_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNegotiator.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NEGOTIATOR</PromotionLine>
@@ -49285,6 +49434,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NEGOTIATOR1</Type>
 			<Description>TXT_KEY_TRAIT_NEGOTIATOR1</Description>
+			<Strategy>TXT_KEY_TRAIT_NEGOTIATOR_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NEGOTIATOR1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNegotiator.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NEGOTIATOR</PromotionLine>
@@ -49403,6 +49553,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NEGOTIATOR2</Type>
 			<Description>TXT_KEY_TRAIT_NEGOTIATOR2</Description>
+			<Strategy>TXT_KEY_TRAIT_NEGOTIATOR_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NEGOTIATOR2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNegotiator2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NEGOTIATOR</PromotionLine>
@@ -49521,6 +49672,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NEGOTIATOR3</Type>
 			<Description>TXT_KEY_TRAIT_NEGOTIATOR3</Description>
+			<Strategy>TXT_KEY_TRAIT_NEGOTIATOR_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NEGOTIATOR3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNegotiator3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NEGOTIATOR</PromotionLine>
@@ -49640,6 +49792,7 @@
 			<Type>TRAIT_ISOLATIONIST</Type>
 			<ReplacementID>TRAIT_COMPLEX_ISOLATIONIST</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIsolationist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ISOLATIONIST</PromotionLine>
@@ -49763,6 +49916,7 @@
 			<Type>TRAIT_ISOLATIONIST1</Type>
 			<ReplacementID>TRAIT_COMPLEX_ISOLATIONIST1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIsolationist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ISOLATIONIST</PromotionLine>
@@ -49884,6 +50038,7 @@
 		<TraitInfo>
 			<Type>TRAIT_ISOLATIONIST2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIsolationist2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ISOLATIONIST</PromotionLine>
@@ -50003,6 +50158,7 @@
 		<TraitInfo>
 			<Type>TRAIT_ISOLATIONIST3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIsolationist3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ISOLATIONIST</PromotionLine>
@@ -50122,6 +50278,7 @@
 			<Type>TRAIT_PROGRESSIST</Type>
 			<ReplacementID>TRAIT_COMPLEX_PROGRESSIST</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitInnovative.dds</Button>
 			<PromotionLine>PROMOTIONLINE_INNOVATIVE</PromotionLine>
@@ -50216,6 +50373,7 @@
 			<Type>TRAIT_PROGRESSIST1</Type>
 			<ReplacementID>TRAIT_COMPLEX_PROGRESSIST1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitInnovative.dds</Button>
 			<PromotionLine>PROMOTIONLINE_INNOVATIVE</PromotionLine>
@@ -50309,6 +50467,7 @@
 		<TraitInfo>
 			<Type>TRAIT_INNOVATIVE2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitInnovative2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_INNOVATIVE</PromotionLine>
@@ -50399,6 +50558,7 @@
 		<TraitInfo>
 			<Type>TRAIT_INNOVATIVE3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitInnovative3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_INNOVATIVE</PromotionLine>
@@ -50489,6 +50649,7 @@
 		<TraitInfo>
 			<Type>TRAIT_COVETOUS</Type>
 			<Description>TXT_KEY_TRAIT_COVETOUS</Description>
+			<Strategy>TXT_KEY_TRAIT_COVETOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COVETOUS_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCovetous.dds</Button>
 			<PromotionLine>PROMOTIONLINE_COVETOUS</PromotionLine>
@@ -50580,6 +50741,7 @@
 		<TraitInfo>
 			<Type>TRAIT_COVETOUS1</Type>
 			<Description>TXT_KEY_TRAIT_COVETOUS1</Description>
+			<Strategy>TXT_KEY_TRAIT_COVETOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COVETOUS1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCovetous.dds</Button>
 			<PromotionLine>PROMOTIONLINE_COVETOUS</PromotionLine>
@@ -50671,6 +50833,7 @@
 		<TraitInfo>
 			<Type>TRAIT_COVETOUS2</Type>
 			<Description>TXT_KEY_TRAIT_COVETOUS2</Description>
+			<Strategy>TXT_KEY_TRAIT_COVETOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COVETOUS2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCovetous2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_COVETOUS</PromotionLine>
@@ -50762,6 +50925,7 @@
 		<TraitInfo>
 			<Type>TRAIT_COVETOUS3</Type>
 			<Description>TXT_KEY_TRAIT_COVETOUS3</Description>
+			<Strategy>TXT_KEY_TRAIT_COVETOUS_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COVETOUS3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCovetous3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_COVETOUS</PromotionLine>
@@ -50853,6 +51017,7 @@
 		<TraitInfo>
 			<Type>TRAIT_HUMBLE</Type>
 			<Description>TXT_KEY_TRAIT_HUMBLE</Description>
+			<Strategy>TXT_KEY_TRAIT_HUMBLE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_HUMBLE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHumble.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUMBLE</PromotionLine>
@@ -50956,6 +51121,7 @@
 		<TraitInfo>
 			<Type>TRAIT_HUMBLE1</Type>
 			<Description>TXT_KEY_TRAIT_HUMBLE1</Description>
+			<Strategy>TXT_KEY_TRAIT_HUMBLE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_HUMBLE1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHumble.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUMBLE</PromotionLine>
@@ -51059,6 +51225,7 @@
 		<TraitInfo>
 			<Type>TRAIT_HUMBLE2</Type>
 			<Description>TXT_KEY_TRAIT_HUMBLE2</Description>
+			<Strategy>TXT_KEY_TRAIT_HUMBLE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_HUMBLE2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHumble2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUMBLE</PromotionLine>
@@ -51162,6 +51329,7 @@
 		<TraitInfo>
 			<Type>TRAIT_HUMBLE3</Type>
 			<Description>TXT_KEY_TRAIT_HUMBLE3</Description>
+			<Strategy>TXT_KEY_TRAIT_HUMBLE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_HUMBLE3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHumble3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUMBLE</PromotionLine>
@@ -51266,6 +51434,7 @@
 			<Type>TRAIT_MEGALOMANIAC</Type>
 			<ReplacementID>TRAIT_COMPLEX_MEGALOMANIAC</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMegalomaniac.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEGALOMANIAC</PromotionLine>
@@ -51373,6 +51542,7 @@
 			<Type>TRAIT_MEGALOMANIAC1</Type>
 			<ReplacementID>TRAIT_COMPLEX_MEGALOMANIAC1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMegalomaniac.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEGALOMANIAC</PromotionLine>
@@ -51479,6 +51649,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MEGALOMANIAC2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMegalomaniac2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEGALOMANIAC</PromotionLine>
@@ -51582,6 +51753,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MEGALOMANIAC3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMegalomaniac3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEGALOMANIAC</PromotionLine>
@@ -51685,6 +51857,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CIVILIZED</Type>
 			<Description>TXT_KEY_TRAIT_CIVILIZED</Description>
+			<Strategy>TXT_KEY_TRAIT_CIVILIZED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_CIVILIZED_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCivilized.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CIVILIZED</PromotionLine>
@@ -51825,6 +51998,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CIVILIZED1</Type>
 			<Description>TXT_KEY_TRAIT_CIVILIZED1</Description>
+			<Strategy>TXT_KEY_TRAIT_CIVILIZED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_CIVILIZED1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCivilized.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CIVILIZED</PromotionLine>
@@ -51941,6 +52115,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CIVILIZED2</Type>
 			<Description>TXT_KEY_TRAIT_CIVILIZED2</Description>
+			<Strategy>TXT_KEY_TRAIT_CIVILIZED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_CIVILIZED2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCivilized2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CIVILIZED</PromotionLine>
@@ -52057,6 +52232,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CIVILIZED3</Type>
 			<Description>TXT_KEY_TRAIT_CIVILIZED3</Description>
+			<Strategy>TXT_KEY_TRAIT_CIVILIZED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_CIVILIZED3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCivilized3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CIVILIZED</PromotionLine>
@@ -52166,6 +52342,7 @@
 			<Type>TRAIT_BARBARIC</Type>
 			<ReplacementID>TRAIT_COMPLEX_BARBARIC</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_BARBARIC</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_BARBARIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_BARBARIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitBarbaric.dds</Button>
 			<PromotionLine>PROMOTIONLINE_BARBARIC</PromotionLine>
@@ -52310,6 +52487,7 @@
 			<Type>TRAIT_BARBARIC1</Type>
 			<ReplacementID>TRAIT_COMPLEX_BARBARIC1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_BARBARIC1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_BARBARIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_BARBARIC1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitBarbaric.dds</Button>
 			<PromotionLine>PROMOTIONLINE_BARBARIC</PromotionLine>
@@ -52429,6 +52607,7 @@
 		<TraitInfo>
 			<Type>TRAIT_BARBARIC2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_BARBARIC2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_BARBARIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_BARBARIC2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitBarbaric2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_BARBARIC</PromotionLine>
@@ -52545,6 +52724,7 @@
 		<TraitInfo>
 			<Type>TRAIT_BARBARIC3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_BARBARIC3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_BARBARIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_BARBARIC3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitBarbaric3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_BARBARIC</PromotionLine>
@@ -52654,6 +52834,7 @@
 			<Type>TRAIT_CHARISMATIC</Type>
 			<ReplacementID>TRAIT_COMPLEX_CHARISMATIC</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCharismatic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CHARISMATIC</PromotionLine>
@@ -52763,6 +52944,7 @@
 			<Type>TRAIT_CHARISMATIC1</Type>
 			<ReplacementID>TRAIT_COMPLEX_CHARISMATIC1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCharismatic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CHARISMATIC</PromotionLine>
@@ -52889,6 +53071,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CHARISMATIC2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCharismatic2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CHARISMATIC</PromotionLine>
@@ -53003,6 +53186,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CHARISMATIC3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCharismatic3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CHARISMATIC</PromotionLine>
@@ -53118,6 +53302,7 @@
 			<Type>TRAIT_TEMPERAMENTAL</Type>
 			<ReplacementID>TRAIT_COMPLEX_TEMPERAMENTAL</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTemperamental.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TEMPERAMENTAL</PromotionLine>
@@ -53211,6 +53396,7 @@
 			<Type>TRAIT_TEMPERAMENTAL1</Type>
 			<ReplacementID>TRAIT_COMPLEX_TEMPERAMENTAL1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTemperamental.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TEMPERAMENTAL</PromotionLine>
@@ -53303,6 +53489,7 @@
 		<TraitInfo>
 			<Type>TRAIT_TEMPERAMENTAL2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTemperamental2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TEMPERAMENTAL</PromotionLine>
@@ -53393,6 +53580,7 @@
 		<TraitInfo>
 			<Type>TRAIT_TEMPERAMENTAL3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTemperamental3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TEMPERAMENTAL</PromotionLine>
@@ -53484,6 +53672,7 @@
 			<Type>TRAIT_PHILOSOPHICAL</Type>
 			<ReplacementID>TRAIT_COMPLEX_PHILOSOPHICAL</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPhilosophical.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PHILOSOPHICAL</PromotionLine>
@@ -53784,6 +53973,7 @@
 			<Type>TRAIT_PHILOSOPHICAL1</Type>
 			<ReplacementID>TRAIT_COMPLEX_PHILOSOPHICAL1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPhilosophical.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PHILOSOPHICAL</PromotionLine>
@@ -53939,6 +54129,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PHILOSOPHICAL2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPhilosophical2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PHILOSOPHICAL</PromotionLine>
@@ -54053,6 +54244,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PHILOSOPHICAL3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPhilosophical3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PHILOSOPHICAL</PromotionLine>
@@ -54278,6 +54470,7 @@
 			<Type>TRAIT_POPULIST</Type>
 			<ReplacementID>TRAIT_COMPLEX_POPULIST</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_POPULIST</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_POPULIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_POPULIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPopulist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_POPULIST</PromotionLine>
@@ -54590,6 +54783,7 @@
 			<Type>TRAIT_POPULIST1</Type>
 			<ReplacementID>TRAIT_COMPLEX_POPULIST1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_POPULIST1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_POPULIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_POPULIST1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPopulist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_POPULIST</PromotionLine>
@@ -54757,6 +54951,7 @@
 		<TraitInfo>
 			<Type>TRAIT_POPULIST2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_POPULIST2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_POPULIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_POPULIST2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPopulist2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_POPULIST</PromotionLine>
@@ -54882,6 +55077,7 @@
 		<TraitInfo>
 			<Type>TRAIT_POPULIST3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_POPULIST3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_POPULIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_POPULIST3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPopulist3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_POPULIST</PromotionLine>
@@ -55117,6 +55313,7 @@
 			<Type>TRAIT_POLITICIAN</Type>
 			<ReplacementID>TRAIT_COMPLEX_POLITICIAN</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_POLITICIAN</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_POLITICIAN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_POLITICIAN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPolitician.dds</Button>
 			<PromotionLine>PROMOTIONLINE_POLITICIAN</PromotionLine>
@@ -55268,6 +55465,7 @@
 			<Type>TRAIT_POLITICIAN1</Type>
 			<ReplacementID>TRAIT_COMPLEX_POLITICIAN1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_POLITICIAN1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_POLITICIAN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_POLITICIAN1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPolitician.dds</Button>
 			<PromotionLine>PROMOTIONLINE_POLITICIAN</PromotionLine>
@@ -55392,6 +55590,7 @@
 		<TraitInfo>
 			<Type>TRAIT_POLITICIAN2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_POLITICIAN2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_POLITICIAN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_POLITICIAN2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPolitician2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_POLITICIAN</PromotionLine>
@@ -55539,6 +55738,7 @@
 		<TraitInfo>
 			<Type>TRAIT_POLITICIAN3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_POLITICIAN3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_POLITICIAN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_POLITICIAN3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPolitician3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_POLITICIAN</PromotionLine>
@@ -55661,6 +55861,7 @@
 			<Type>TRAIT_FOREIGN</Type>
 			<ReplacementID>TRAIT_COMPLEX_FOREIGN</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_FOREIGN</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_FOREIGN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_FOREIGN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitForeigner.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FOREIGNER</PromotionLine>
@@ -55801,6 +56002,7 @@
 			<Type>TRAIT_FOREIGN1</Type>
 			<ReplacementID>TRAIT_COMPLEX_FOREIGN1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_FOREIGN1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_FOREIGN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_FOREIGN1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitForeigner.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FOREIGNER</PromotionLine>
@@ -55914,6 +56116,7 @@
 		<TraitInfo>
 			<Type>TRAIT_FOREIGN2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_FOREIGN2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_FOREIGN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_FOREIGN2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitForeigner2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FOREIGNER</PromotionLine>
@@ -56030,6 +56233,7 @@
 		<TraitInfo>
 			<Type>TRAIT_FOREIGN3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_FOREIGN3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_FOREIGN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_FOREIGN3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitForeigner3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FOREIGNER</PromotionLine>
@@ -56121,6 +56325,7 @@
 			<Type>TRAIT_REVOLUTIONARY</Type>
 			<ReplacementID>TRAIT_COMPLEX_REVOLUTIONARY</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitRevolutionary.dds</Button>
 			<PromotionLine>PROMOTIONLINE_REVOLUTIONARY</PromotionLine>
@@ -56269,6 +56474,7 @@
 			<Type>TRAIT_REVOLUTIONARY1</Type>
 			<ReplacementID>TRAIT_COMPLEX_REVOLUTIONARY1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitRevolutionary.dds</Button>
 			<PromotionLine>PROMOTIONLINE_REVOLUTIONARY</PromotionLine>
@@ -56396,6 +56602,7 @@
 		<TraitInfo>
 			<Type>TRAIT_REVOLUTIONARY2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitRevolutionary2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_REVOLUTIONARY</PromotionLine>
@@ -56540,6 +56747,7 @@
 		<TraitInfo>
 			<Type>TRAIT_REVOLUTIONARY3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitRevolutionary3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_REVOLUTIONARY</PromotionLine>
@@ -56684,6 +56892,7 @@
 		<TraitInfo>
 			<Type>TRAIT_USURPER</Type>
 			<Description>TXT_KEY_TRAIT_USURPER</Description>
+			<Strategy>TXT_KEY_TRAIT_USURPER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_USURPER_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitUsurper.dds</Button>
 			<PromotionLine>PROMOTIONLINE_USURPER</PromotionLine>
@@ -56824,6 +57033,7 @@
 		<TraitInfo>
 			<Type>TRAIT_USURPER1</Type>
 			<Description>TXT_KEY_TRAIT_USURPER1</Description>
+			<Strategy>TXT_KEY_TRAIT_USURPER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_USURPER1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitUsurper.dds</Button>
 			<PromotionLine>PROMOTIONLINE_USURPER</PromotionLine>
@@ -56944,6 +57154,7 @@
 		<TraitInfo>
 			<Type>TRAIT_USURPER2</Type>
 			<Description>TXT_KEY_TRAIT_USURPER2</Description>
+			<Strategy>TXT_KEY_TRAIT_USURPER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_USURPER2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitUsurper2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_USURPER</PromotionLine>
@@ -57084,6 +57295,7 @@
 		<TraitInfo>
 			<Type>TRAIT_USURPER3</Type>
 			<Description>TXT_KEY_TRAIT_USURPER3</Description>
+			<Strategy>TXT_KEY_TRAIT_USURPER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_USURPER3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitUsurper3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_USURPER</PromotionLine>
@@ -57226,6 +57438,7 @@
 			<Type>TRAIT_EXPANSIVE</Type>
 			<ReplacementID>TRAIT_COMPLEX_EXPANSIVE</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExpansive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EXPANSIVE</PromotionLine>
@@ -57346,6 +57559,7 @@
 			<Type>TRAIT_EXPANSIVE1</Type>
 			<ReplacementID>TRAIT_COMPLEX_EXPANSIVE1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExpansive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EXPANSIVE</PromotionLine>
@@ -57483,6 +57697,7 @@
 		<TraitInfo>
 			<Type>TRAIT_EXPANSIVE2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExpansive2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EXPANSIVE</PromotionLine>
@@ -57608,6 +57823,7 @@
 		<TraitInfo>
 			<Type>TRAIT_EXPANSIVE3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExpansive3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EXPANSIVE</PromotionLine>
@@ -57733,6 +57949,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MINIMALIST</Type>
 			<Description>TXT_KEY_TRAIT_MINIMALIST</Description>
+			<Strategy>TXT_KEY_TRAIT_MINIMALIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_MINIMALIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMinimalist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MINIMALIST</PromotionLine>
@@ -57850,6 +58067,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MINIMALIST1</Type>
 			<Description>TXT_KEY_TRAIT_MINIMALIST1</Description>
+			<Strategy>TXT_KEY_TRAIT_MINIMALIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_MINIMALIST1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMinimalist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MINIMALIST</PromotionLine>
@@ -57985,6 +58203,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MINIMALIST2</Type>
 			<Description>TXT_KEY_TRAIT_MINIMALIST2</Description>
+			<Strategy>TXT_KEY_TRAIT_MINIMALIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_MINIMALIST2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMinimalist2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MINIMALIST</PromotionLine>
@@ -58111,6 +58330,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MINIMALIST3</Type>
 			<Description>TXT_KEY_TRAIT_MINIMALIST3</Description>
+			<Strategy>TXT_KEY_TRAIT_MINIMALIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_MINIMALIST3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMinimalist3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MINIMALIST</PromotionLine>
@@ -58237,6 +58457,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PROLIFIC</Type>
 			<Description>TXT_KEY_TRAIT_PROLIFIC</Description>
+			<Strategy>TXT_KEY_TRAIT_PROLIFIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PROLIFIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProlific.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROLIFIC</PromotionLine>
@@ -58341,6 +58562,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PROLIFIC1</Type>
 			<Description>TXT_KEY_TRAIT_PROLIFIC1</Description>
+			<Strategy>TXT_KEY_TRAIT_PROLIFIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PROLIFIC1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProlific.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROLIFIC</PromotionLine>
@@ -58454,6 +58676,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PROLIFIC2</Type>
 			<Description>TXT_KEY_TRAIT_PROLIFIC2</Description>
+			<Strategy>TXT_KEY_TRAIT_PROLIFIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PROLIFIC2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProlific2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROLIFIC</PromotionLine>
@@ -58577,6 +58800,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PROLIFIC3</Type>
 			<Description>TXT_KEY_TRAIT_PROLIFIC3</Description>
+			<Strategy>TXT_KEY_TRAIT_PROLIFIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PROLIFIC3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProlific3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROLIFIC</PromotionLine>
@@ -58700,6 +58924,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GRIM</Type>
 			<Description>TXT_KEY_TRAIT_GRIM</Description>
+			<Strategy>TXT_KEY_TRAIT_GRIM_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GRIM_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGrim.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GRIM</PromotionLine>
@@ -58821,6 +59046,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GRIM1</Type>
 			<Description>TXT_KEY_TRAIT_GRIM1</Description>
+			<Strategy>TXT_KEY_TRAIT_GRIM_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GRIM1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGrim.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GRIM</PromotionLine>
@@ -58951,6 +59177,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GRIM2</Type>
 			<Description>TXT_KEY_TRAIT_GRIM2</Description>
+			<Strategy>TXT_KEY_TRAIT_GRIM_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GRIM2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGrim2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GRIM</PromotionLine>
@@ -59081,6 +59308,7 @@
 		<TraitInfo>
 			<Type>TRAIT_GRIM3</Type>
 			<Description>TXT_KEY_TRAIT_GRIM3</Description>
+			<Strategy>TXT_KEY_TRAIT_GRIM_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_GRIM3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitGrim3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_GRIM</PromotionLine>
@@ -59203,6 +59431,7 @@
 			<Type>TRAIT_ORGANIZED</Type>
 			<ReplacementID>TRAIT_COMPLEX_ORGANIZED</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_ORGANIZED</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_ORGANIZED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_ORGANIZED_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitOrganized.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ORGANIZED</PromotionLine>
@@ -59302,6 +59531,7 @@
 			<Type>TRAIT_ORGANIZED1</Type>
 			<ReplacementID>TRAIT_COMPLEX_ORGANIZED1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_ORGANIZED1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_ORGANIZED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_ORGANIZED1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitOrganized.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ORGANIZED</PromotionLine>
@@ -59418,6 +59648,7 @@
 		<TraitInfo>
 			<Type>TRAIT_ORGANIZED2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_ORGANIZED2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_ORGANIZED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_ORGANIZED2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitOrganized2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ORGANIZED</PromotionLine>
@@ -59513,6 +59744,7 @@
 		<TraitInfo>
 			<Type>TRAIT_ORGANIZED3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_ORGANIZED3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_ORGANIZED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_ORGANIZED3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitOrganized3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ORGANIZED</PromotionLine>
@@ -59625,6 +59857,7 @@
 		<TraitInfo>
 			<Type>TRAIT_IMPULSIVE</Type>
 			<Description>TXT_KEY_TRAIT_IMPULSIVE</Description>
+			<Strategy>TXT_KEY_TRAIT_IMPULSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_IMPULSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitImpulsive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IMPULSIVE</PromotionLine>
@@ -59720,6 +59953,7 @@
 		<TraitInfo>
 			<Type>TRAIT_IMPULSIVE1</Type>
 			<Description>TXT_KEY_TRAIT_IMPULSIVE1</Description>
+			<Strategy>TXT_KEY_TRAIT_IMPULSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_IMPULSIVE1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitImpulsive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IMPULSIVE</PromotionLine>
@@ -59832,6 +60066,7 @@
 		<TraitInfo>
 			<Type>TRAIT_IMPULSIVE2</Type>
 			<Description>TXT_KEY_TRAIT_IMPULSIVE2</Description>
+			<Strategy>TXT_KEY_TRAIT_IMPULSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_IMPULSIVE2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitImpulsive2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IMPULSIVE</PromotionLine>
@@ -59927,6 +60162,7 @@
 		<TraitInfo>
 			<Type>TRAIT_IMPULSIVE3</Type>
 			<Description>TXT_KEY_TRAIT_IMPULSIVE3</Description>
+			<Strategy>TXT_KEY_TRAIT_IMPULSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_IMPULSIVE3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitImpulsive3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IMPULSIVE</PromotionLine>
@@ -60040,6 +60276,7 @@
 		<TraitInfo>
 			<Type>TRAIT_DYNAMIC</Type>
 			<Description>TXT_KEY_TRAIT_DYNAMIC</Description>
+			<Strategy>TXT_KEY_TRAIT_DYNAMIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_DYNAMIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDynamic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DYNAMIC</PromotionLine>
@@ -60492,6 +60729,7 @@
 		<TraitInfo>
 			<Type>TRAIT_DYNAMIC1</Type>
 			<Description>TXT_KEY_TRAIT_DYNAMIC1</Description>
+			<Strategy>TXT_KEY_TRAIT_DYNAMIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_DYNAMIC1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDynamic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DYNAMIC</PromotionLine>
@@ -60708,6 +60946,7 @@
 		<TraitInfo>
 			<Type>TRAIT_DYNAMIC2</Type>
 			<Description>TXT_KEY_TRAIT_DYNAMIC2</Description>
+			<Strategy>TXT_KEY_TRAIT_DYNAMIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_DYNAMIC2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDynamic2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DYNAMIC</PromotionLine>
@@ -60936,6 +61175,7 @@
 		<TraitInfo>
 			<Type>TRAIT_DYNAMIC3</Type>
 			<Description>TXT_KEY_TRAIT_DYNAMIC3</Description>
+			<Strategy>TXT_KEY_TRAIT_DYNAMIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_DYNAMIC3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDynamic3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DYNAMIC</PromotionLine>
@@ -61104,6 +61344,7 @@
 		<TraitInfo>
 			<Type>TRAIT_STUBBORN</Type>
 			<Description>TXT_KEY_TRAIT_STUBBORN</Description>
+			<Strategy>TXT_KEY_TRAIT_STUBBORN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_STUBBORN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitStubborn.dds</Button>
 			<PromotionLine>PROMOTIONLINE_STUBBORN</PromotionLine>
@@ -61556,6 +61797,7 @@
 		<TraitInfo>
 			<Type>TRAIT_STUBBORN1</Type>
 			<Description>TXT_KEY_TRAIT_STUBBORN1</Description>
+			<Strategy>TXT_KEY_TRAIT_STUBBORN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_STUBBORN1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitStubborn.dds</Button>
 			<PromotionLine>PROMOTIONLINE_STUBBORN</PromotionLine>
@@ -61771,6 +62013,7 @@
 		<TraitInfo>
 			<Type>TRAIT_STUBBORN2</Type>
 			<Description>TXT_KEY_TRAIT_STUBBORN2</Description>
+			<Strategy>TXT_KEY_TRAIT_STUBBORN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_STUBBORN2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitStubborn2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_STUBBORN</PromotionLine>
@@ -61998,6 +62241,7 @@
 		<TraitInfo>
 			<Type>TRAIT_STUBBORN3</Type>
 			<Description>TXT_KEY_TRAIT_STUBBORN3</Description>
+			<Strategy>TXT_KEY_TRAIT_STUBBORN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_STUBBORN3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitStubborn3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_STUBBORN</PromotionLine>
@@ -62165,6 +62409,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PRAGMATIC</Type>
 			<Description>TXT_KEY_TRAIT_PRAGMATIC</Description>
+			<Strategy>TXT_KEY_TRAIT_PRAGMATIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PRAGMATIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPragmatic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PRAGMATIC</PromotionLine>
@@ -62278,6 +62523,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PRAGMATIC1</Type>
 			<Description>TXT_KEY_TRAIT_PRAGMATIC1</Description>
+			<Strategy>TXT_KEY_TRAIT_PRAGMATIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PRAGMATIC1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPragmatic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PRAGMATIC</PromotionLine>
@@ -62391,6 +62637,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PRAGMATIC2</Type>
 			<Description>TXT_KEY_TRAIT_PRAGMATIC2</Description>
+			<Strategy>TXT_KEY_TRAIT_PRAGMATIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PRAGMATIC2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPragmatic2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PRAGMATIC</PromotionLine>
@@ -62504,6 +62751,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PRAGMATIC3</Type>
 			<Description>TXT_KEY_TRAIT_PRAGMATIC3</Description>
+			<Strategy>TXT_KEY_TRAIT_PRAGMATIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PRAGMATIC3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPragmatic3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PRAGMATIC</PromotionLine>
@@ -62618,6 +62866,7 @@
 			<Type>TRAIT_IDEALISTIC</Type>
 			<ReplacementID>TRAIT_COMPLEX_IDEALISTIC</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIdealistic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IDEALISTIC</PromotionLine>
@@ -62735,6 +62984,7 @@
 			<Type>TRAIT_IDEALISTIC1</Type>
 			<ReplacementID>TRAIT_COMPLEX_IDEALISTIC1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIdealistic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IDEALISTIC</PromotionLine>
@@ -62851,6 +63101,7 @@
 		<TraitInfo>
 			<Type>TRAIT_IDEALISTIC2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIdealistic2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IDEALISTIC</PromotionLine>
@@ -62964,6 +63215,7 @@
 		<TraitInfo>
 			<Type>TRAIT_IDEALISTIC3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIdealistic3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IDEALISTIC</PromotionLine>
@@ -63078,6 +63330,7 @@
 			<Type>TRAIT_HUMANITARIAN</Type>
 			<ReplacementID>TRAIT_COMPLEX_HUMANITARIAN</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHumanitarian.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUMANITARIAN</PromotionLine>
@@ -63327,6 +63580,7 @@
 			<Type>TRAIT_HUMANITARIAN1</Type>
 			<ReplacementID>TRAIT_COMPLEX_HUMANITARIAN1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHumanitarian.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUMANITARIAN</PromotionLine>
@@ -63525,6 +63779,7 @@
 		<TraitInfo>
 			<Type>TRAIT_HUMANITARIAN2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHumanitarian2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUMANITARIAN</PromotionLine>
@@ -63738,6 +63993,7 @@
 		<TraitInfo>
 			<Type>TRAIT_HUMANITARIAN3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHumanitarian3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUMANITARIAN</PromotionLine>
@@ -63942,6 +64198,7 @@
 			<Type>TRAIT_CRUEL</Type>
 			<ReplacementID>TRAIT_COMPLEX_CRUEL</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_CRUEL</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_CRUEL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_CRUEL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCruel.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CRUEL</PromotionLine>
@@ -64160,6 +64417,7 @@
 			<Type>TRAIT_CRUEL1</Type>
 			<ReplacementID>TRAIT_COMPLEX_CRUEL1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_CRUEL1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_CRUEL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_CRUEL1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCruel.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CRUEL</PromotionLine>
@@ -64345,6 +64603,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CRUEL2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_CRUEL2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_CRUEL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_CRUEL2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCruel2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CRUEL</PromotionLine>
@@ -64527,6 +64786,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CRUEL3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_CRUEL3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_CRUEL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_CRUEL3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCruel3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CRUEL</PromotionLine>
@@ -64695,6 +64955,7 @@
 		<TraitInfo>
 			<Type>TRAIT_LAWFUL</Type>
 			<Description>TXT_KEY_TRAIT_LAWFUL</Description>
+			<Strategy>TXT_KEY_TRAIT_LAWFUL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_LAWFUL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitLawful.dds</Button>
 			<PromotionLine>PROMOTIONLINE_LAWFUL</PromotionLine>
@@ -65544,6 +65805,7 @@
 		<TraitInfo>
 			<Type>TRAIT_LAWFUL1</Type>
 			<Description>TXT_KEY_TRAIT_LAWFUL1</Description>
+			<Strategy>TXT_KEY_TRAIT_LAWFUL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_LAWFUL1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitLawful.dds</Button>
 			<PromotionLine>PROMOTIONLINE_LAWFUL</PromotionLine>
@@ -65981,6 +66243,7 @@
 		<TraitInfo>
 			<Type>TRAIT_LAWFUL2</Type>
 			<Description>TXT_KEY_TRAIT_LAWFUL2</Description>
+			<Strategy>TXT_KEY_TRAIT_LAWFUL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_LAWFUL2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitLawful2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_LAWFUL</PromotionLine>
@@ -66296,6 +66559,7 @@
 		<TraitInfo>
 			<Type>TRAIT_LAWFUL3</Type>
 			<Description>TXT_KEY_TRAIT_LAWFUL3</Description>
+			<Strategy>TXT_KEY_TRAIT_LAWFUL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_LAWFUL3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitLawful3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_LAWFUL</PromotionLine>
@@ -66627,6 +66891,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CROOKED</Type>
 			<Description>TXT_KEY_TRAIT_CROOKED</Description>
+			<Strategy>TXT_KEY_TRAIT_CROOKED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_CROOKED_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCrooked.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CROOKED</PromotionLine>
@@ -67216,6 +67481,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CROOKED1</Type>
 			<Description>TXT_KEY_TRAIT_CROOKED1</Description>
+			<Strategy>TXT_KEY_TRAIT_CROOKED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_CROOKED1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCrooked.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CROOKED</PromotionLine>
@@ -67492,6 +67758,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CROOKED2</Type>
 			<Description>TXT_KEY_TRAIT_CROOKED2</Description>
+			<Strategy>TXT_KEY_TRAIT_CROOKED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_CROOKED2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCrooked2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CROOKED</PromotionLine>
@@ -67840,6 +68107,7 @@
 		<TraitInfo>
 			<Type>TRAIT_CROOKED3</Type>
 			<Description>TXT_KEY_TRAIT_CROOKED3</Description>
+			<Strategy>TXT_KEY_TRAIT_CROOKED_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_CROOKED3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCrooked3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CROOKED</PromotionLine>
@@ -68059,6 +68327,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MEDICAL</Type>
 			<Description>TXT_KEY_TRAIT_MEDICAL</Description>
+			<Strategy>TXT_KEY_TRAIT_MEDICAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_MEDICAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMedical.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEDICAL</PromotionLine>
@@ -68739,6 +69008,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MEDICAL1</Type>
 			<Description>TXT_KEY_TRAIT_MEDICAL1</Description>
+			<Strategy>TXT_KEY_TRAIT_MEDICAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_MEDICAL1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMedical.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEDICAL</PromotionLine>
@@ -69103,6 +69373,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MEDICAL2</Type>
 			<Description>TXT_KEY_TRAIT_MEDICAL2</Description>
+			<Strategy>TXT_KEY_TRAIT_MEDICAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_MEDICAL2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMedical2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEDICAL</PromotionLine>
@@ -69376,6 +69647,7 @@
 		<TraitInfo>
 			<Type>TRAIT_MEDICAL3</Type>
 			<Description>TXT_KEY_TRAIT_MEDICAL3</Description>
+			<Strategy>TXT_KEY_TRAIT_MEDICAL_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_MEDICAL3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMedical3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEDICAL</PromotionLine>
@@ -69719,6 +69991,7 @@
 		<TraitInfo>
 			<Type>TRAIT_UNSANITARY</Type>
 			<Description>TXT_KEY_TRAIT_UNSANITARY</Description>
+			<Strategy>TXT_KEY_TRAIT_UNSANITARY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_UNSANITARY_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitUnsanitary.dds</Button>
 			<PromotionLine>PROMOTIONLINE_UNSANITARY</PromotionLine>
@@ -70434,6 +70707,7 @@
 		<TraitInfo>
 			<Type>TRAIT_UNSANITARY1</Type>
 			<Description>TXT_KEY_TRAIT_UNSANITARY1</Description>
+			<Strategy>TXT_KEY_TRAIT_UNSANITARY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_UNSANITARY1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitUnsanitary.dds</Button>
 			<PromotionLine>PROMOTIONLINE_UNSANITARY</PromotionLine>
@@ -70801,6 +71075,7 @@
 		<TraitInfo>
 			<Type>TRAIT_UNSANITARY2</Type>
 			<Description>TXT_KEY_TRAIT_UNSANITARY2</Description>
+			<Strategy>TXT_KEY_TRAIT_UNSANITARY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_UNSANITARY2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitUnsanitary2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_UNSANITARY</PromotionLine>
@@ -71078,6 +71353,7 @@
 		<TraitInfo>
 			<Type>TRAIT_UNSANITARY3</Type>
 			<Description>TXT_KEY_TRAIT_UNSANITARY3</Description>
+			<Strategy>TXT_KEY_TRAIT_UNSANITARY_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_UNSANITARY3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitUnsanitary3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_UNSANITARY</PromotionLine>
@@ -71424,6 +71700,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NATURALIST</Type>
 			<Description>TXT_KEY_TRAIT_NATURALIST</Description>
+			<Strategy>TXT_KEY_TRAIT_NATURALIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NATURALIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNaturalist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NATURALIST</PromotionLine>
@@ -71728,6 +72005,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NATURALIST1</Type>
 			<Description>TXT_KEY_TRAIT_NATURALIST1</Description>
+			<Strategy>TXT_KEY_TRAIT_NATURALIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NATURALIST1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNaturalist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NATURALIST</PromotionLine>
@@ -72021,6 +72299,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NATURALIST2</Type>
 			<Description>TXT_KEY_TRAIT_NATURALIST2</Description>
+			<Strategy>TXT_KEY_TRAIT_NATURALIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NATURALIST2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNaturalist2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NATURALIST</PromotionLine>
@@ -72238,6 +72517,7 @@
 		<TraitInfo>
 			<Type>TRAIT_NATURALIST3</Type>
 			<Description>TXT_KEY_TRAIT_NATURALIST3</Description>
+			<Strategy>TXT_KEY_TRAIT_NATURALIST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_NATURALIST3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNaturalist3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NATURALIST</PromotionLine>
@@ -72450,6 +72730,7 @@
 		<TraitInfo>
 			<Type>TRAIT_SLOB</Type>
 			<Description>TXT_KEY_TRAIT_SLOB</Description>
+			<Strategy>TXT_KEY_TRAIT_SLOB_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_SLOB_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSlob.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SLOB</PromotionLine>
@@ -72612,6 +72893,7 @@
 		<TraitInfo>
 			<Type>TRAIT_SLOB1</Type>
 			<Description>TXT_KEY_TRAIT_SLOB1</Description>
+			<Strategy>TXT_KEY_TRAIT_SLOB_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_SLOB1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSlob.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SLOB</PromotionLine>
@@ -72763,6 +73045,7 @@
 		<TraitInfo>
 			<Type>TRAIT_SLOB2</Type>
 			<Description>TXT_KEY_TRAIT_SLOB2</Description>
+			<Strategy>TXT_KEY_TRAIT_SLOB_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_SLOB2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSlob2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SLOB</PromotionLine>
@@ -72872,6 +73155,7 @@
 		<TraitInfo>
 			<Type>TRAIT_SLOB3</Type>
 			<Description>TXT_KEY_TRAIT_SLOB3</Description>
+			<Strategy>TXT_KEY_TRAIT_SLOB_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_SLOB3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSlob3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SLOB</PromotionLine>
@@ -72980,6 +73264,7 @@
 		<TraitInfo>
 			<Type>TRAIT_HONEST</Type>
 			<Description>TXT_KEY_TRAIT_HONEST</Description>
+			<Strategy>TXT_KEY_TRAIT_HONEST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_HONEST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHonest.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HONEST</PromotionLine>
@@ -73077,6 +73362,7 @@
 		<TraitInfo>
 			<Type>TRAIT_HONEST1</Type>
 			<Description>TXT_KEY_TRAIT_HONEST1</Description>
+			<Strategy>TXT_KEY_TRAIT_HONEST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_HONEST1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHonest.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HONEST</PromotionLine>
@@ -73168,6 +73454,7 @@
 		<TraitInfo>
 			<Type>TRAIT_HONEST2</Type>
 			<Description>TXT_KEY_TRAIT_HONEST2</Description>
+			<Strategy>TXT_KEY_TRAIT_HONEST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_HONEST2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHonest2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HONEST</PromotionLine>
@@ -73265,6 +73552,7 @@
 		<TraitInfo>
 			<Type>TRAIT_HONEST3</Type>
 			<Description>TXT_KEY_TRAIT_HONEST3</Description>
+			<Strategy>TXT_KEY_TRAIT_HONEST_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_HONEST3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHonest3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HONEST</PromotionLine>
@@ -73362,6 +73650,7 @@
 		<TraitInfo>
 			<Type>TRAIT_LIAR</Type>
 			<Description>TXT_KEY_TRAIT_LIAR</Description>
+			<Strategy>TXT_KEY_TRAIT_LIAR_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_LIAR_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitLiar.dds</Button>
 			<PromotionLine>PROMOTIONLINE_LIAR</PromotionLine>
@@ -73459,6 +73748,7 @@
 		<TraitInfo>
 			<Type>TRAIT_LIAR1</Type>
 			<Description>TXT_KEY_TRAIT_LIAR1</Description>
+			<Strategy>TXT_KEY_TRAIT_LIAR_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_LIAR1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitLiar.dds</Button>
 			<PromotionLine>PROMOTIONLINE_LIAR</PromotionLine>
@@ -73550,6 +73840,7 @@
 		<TraitInfo>
 			<Type>TRAIT_LIAR2</Type>
 			<Description>TXT_KEY_TRAIT_LIAR2</Description>
+			<Strategy>TXT_KEY_TRAIT_LIAR_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_LIAR2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitLiar2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_LIAR</PromotionLine>
@@ -73647,6 +73938,7 @@
 		<TraitInfo>
 			<Type>TRAIT_LIAR3</Type>
 			<Description>TXT_KEY_TRAIT_LIAR3</Description>
+			<Strategy>TXT_KEY_TRAIT_LIAR_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_LIAR3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitLiar3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_LIAR</PromotionLine>
@@ -73744,6 +74036,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PROGRESSIVE</Type>
 			<Description>TXT_KEY_TRAIT_PROGRESSIVE</Description>
+			<Strategy>TXT_KEY_TRAIT_PROGRESSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PROGRESSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProgressive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROGRESSIVE</PromotionLine>
@@ -73850,6 +74143,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PROGRESSIVE1</Type>
 			<Description>TXT_KEY_TRAIT_PROGRESSIVE1</Description>
+			<Strategy>TXT_KEY_TRAIT_PROGRESSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PROGRESSIVE1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProgressive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROGRESSIVE</PromotionLine>
@@ -73956,6 +74250,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PROGRESSIVE2</Type>
 			<Description>TXT_KEY_TRAIT_PROGRESSIVE2</Description>
+			<Strategy>TXT_KEY_TRAIT_PROGRESSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PROGRESSIVE2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProgressive2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROGRESSIVE</PromotionLine>
@@ -74061,6 +74356,7 @@
 		<TraitInfo>
 			<Type>TRAIT_PROGRESSIVE3</Type>
 			<Description>TXT_KEY_TRAIT_PROGRESSIVE3</Description>
+			<Strategy>TXT_KEY_TRAIT_PROGRESSIVE_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_PROGRESSIVE3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProgressive3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROGRESSIVE</PromotionLine>
@@ -74164,6 +74460,7 @@
 		<TraitInfo>
 			<Type>TRAIT_BIGOT</Type>
 			<Description>TXT_KEY_TRAIT_BIGOT</Description>
+			<Strategy>TXT_KEY_TRAIT_BIGOT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_BIGOT_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitBigot.dds</Button>
 			<PromotionLine>PROMOTIONLINE_BIGOT</PromotionLine>
@@ -74309,6 +74606,7 @@
 		<TraitInfo>
 			<Type>TRAIT_BIGOT1</Type>
 			<Description>TXT_KEY_TRAIT_BIGOT1</Description>
+			<Strategy>TXT_KEY_TRAIT_BIGOT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_BIGOT1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitBigot.dds</Button>
 			<PromotionLine>PROMOTIONLINE_BIGOT</PromotionLine>
@@ -74453,6 +74751,7 @@
 		<TraitInfo>
 			<Type>TRAIT_BIGOT2</Type>
 			<Description>TXT_KEY_TRAIT_BIGOT2</Description>
+			<Strategy>TXT_KEY_TRAIT_BIGOT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_BIGOT2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitBigot2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_BIGOT</PromotionLine>
@@ -74596,6 +74895,7 @@
 		<TraitInfo>
 			<Type>TRAIT_BIGOT3</Type>
 			<Description>TXT_KEY_TRAIT_BIGOT3</Description>
+			<Strategy>TXT_KEY_TRAIT_BIGOT_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_BIGOT3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitBigot3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_BIGOT</PromotionLine>
@@ -74731,6 +75031,7 @@
 			<Type>TRAIT_HUNTER_GATHERER</Type>
 			<ReplacementID>TRAIT_COMPLEX_HUNTER_GATHERER</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHunterGatherer.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUNTER_GATHERER</PromotionLine>
@@ -74854,6 +75155,7 @@
 			<Type>TRAIT_HUNTER_GATHERER1</Type>
 			<ReplacementID>TRAIT_COMPLEX_HUNTER_GATHERER1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER1</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHunterGatherer.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUNTER_GATHERER</PromotionLine>
@@ -74975,6 +75277,7 @@
 		<TraitInfo>
 			<Type>TRAIT_HUNTER_GATHERER2</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER2</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER2_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHunterGatherer2.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUNTER_GATHERER</PromotionLine>
@@ -75093,6 +75396,7 @@
 		<TraitInfo>
 			<Type>TRAIT_HUNTER_GATHERER3</Type>
 			<Description>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER3</Description>
+			<Strategy>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER3_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHunterGatherer3.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUNTER_GATHERER</PromotionLine>

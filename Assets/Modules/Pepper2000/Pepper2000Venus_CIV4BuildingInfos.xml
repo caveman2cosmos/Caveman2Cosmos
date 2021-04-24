@@ -5,6 +5,7 @@
 			<Type>BUILDING_VENUS_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_COLONY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -51,6 +52,7 @@
 			<Type>BUILDING_VENUS_CITY</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_CITY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -80,6 +82,7 @@
 			<Type>BUILDING_VENUS_SURFACE</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_SURFACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_SURFACE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -119,6 +122,7 @@
 			<Type>BUILDING_VENUS_ARCOLOGY</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_ARCOLOGY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_ARCOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ARCOLOGY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -160,6 +164,7 @@
 			<Type>BUILDING_VENUS_SKY_ARCOLOGY</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_SKY_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_SKY_ARCOLOGY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_SKY_ARCOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SKY_ARCOLOGY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -187,6 +192,7 @@
 			<Type>BUILDING_VENUS_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_SOLAR_ARRAY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_SOLAR_ARRAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SOLAR_ARRAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -210,6 +216,7 @@
 			<Type>BUILDING_VENUS_VERTICAL_WIND_FARM</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_VERTICAL_WIND_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_VERTICAL_WIND_FARM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_VERTICAL_WIND_FARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_VERTICAL_WIND_FARM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -236,6 +243,7 @@
 			<Type>BUILDING_VENUS_OXYGEN_GENERATOR</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_OXYGEN_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_OXYGEN_GENERATOR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_OXYGEN_GENERATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_OXYGEN_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -260,6 +268,7 @@
 			<Type>BUILDING_VENUS_HYDROGEN_GENERATOR</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_HYDROGEN_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_HYDROGEN_GENERATOR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_HYDROGEN_GENERATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_HYDROGEN_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -282,6 +291,7 @@
 			<Type>BUILDING_VENUS_CARBONWORKS</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_CARBONWORKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_CARBONWORKS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_CARBONWORKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CARBONWORKS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -319,6 +329,7 @@
 			<Type>BUILDING_VENUS_MAGLEV</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_MAGLEV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_MAGLEV_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_MAGLEV_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_MAGLEV</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -342,6 +353,7 @@
 			<Type>BUILDING_VENUS_ECOSYSTEM</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_ECOSYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_ECOSYSTEM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_ECOSYSTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ECOSYSTEM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -364,6 +376,7 @@
 			<Type>BUILDING_VENUS_HYDROGEN_BOMBARDMENT</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_HYDROGEN_BOMBARDMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_HYDROGEN_BOMBARDMENT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_HYDROGEN_BOMBARDMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_HYDROGEN_BOMBARDMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -389,6 +402,7 @@
 			<Type>BUILDING_VENUS_GOVERNING_COUNCIL</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_GOVERNING_COUNCIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_GOVERNING_COUNCIL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_GOVERNING_COUNCIL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_GOVERNING_COUNCIL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -415,6 +429,7 @@
 			<Type>BUILDING_VENUS_ENTERTAINMENT_COMPLEX</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_ENTERTAINMENT_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_ENTERTAINMENT_COMPLEX_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_ENTERTAINMENT_COMPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ENTERTAINMENT_COMPLEX</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -433,6 +448,7 @@
 			<Type>BUILDING_VENUS_TRADE</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_TRADE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_TRADE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_TRADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_TRADE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -456,6 +472,7 @@
 			<Type>BUILDING_VENUS_DEUTERIUM_EXPORTER</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_DEUTERIUM_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_DEUTERIUM_EXPORTER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_DEUTERIUM_EXPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_DEUTERIUM_EXPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -477,6 +494,7 @@
 			<Type>BUILDING_VENUS_BROADBAND</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_BROADBAND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_BROADBAND_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_BROADBAND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_BROADBAND</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -508,6 +526,7 @@
 			<Type>BUILDING_VENUS_SURFACE_PROBE</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_PROBE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -533,6 +552,7 @@
 			<Type>BUILDING_VENUS_SURFACE_SCOOP</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_SCOOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_SCOOP_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_SURFACE_SCOOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_SCOOP</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -558,6 +578,7 @@
 			<Type>BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -582,6 +603,7 @@
 			<Type>BUILDING_VENUS_SURFACE_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_FACTORY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_SURFACE_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -608,6 +630,7 @@
 			<Type>BUILDING_VENUS_FUSION_PLANT</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_FUSION_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_FUSION_PLANT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_FUSION_PLANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_FUSION_PLANT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -630,6 +653,7 @@
 			<Type>BUILDING_VENUS_BIOTIC_ATMOSPHERE</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_BIOTIC_ATMOSPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_BIOTIC_ATMOSPHERE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_BIOTIC_ATMOSPHERE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_BIOTIC_ATMOSPHERE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -666,6 +690,7 @@
 			<Type>BUILDING_VENUS_HOTEL</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_HOTEL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_HOTEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_HOTEL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -701,6 +726,7 @@
 			<Type>BUILDING_VENUS_CO2_REMOVAL</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_CO2_REMOVAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_CO2_REMOVAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_CO2_REMOVAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CO2_REMOVAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -724,6 +750,7 @@
 			<Type>BUILDING_CALCIUM_MINE</Type>
 			<Description>TXT_KEY_BUILDING_CALCIUM_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CALCIUM_MINE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CALCIUM_MINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CALCIUM_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -745,6 +772,7 @@
 			<Type>BUILDING_CALCIUM_CARBONATE</Type>
 			<Description>TXT_KEY_BUILDING_CALCIUM_CARBONATE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CALCIUM_CARBONATE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CALCIUM_CARBONATE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CALCIUM_CARBONATE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -768,6 +796,7 @@
 			<Type>BUILDING_AGRODOME</Type>
 			<Description>TXT_KEY_BUILDING_AGRODOME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AGRODOME_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AGRODOME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AGRODOME</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -792,6 +821,7 @@
 			<Type>BUILDING_VENUS_MEGAFACTORY</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_MEGAFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_MEGAFACTORY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_MEGAFACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_MEGAFACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -817,6 +847,7 @@
 			<Type>BUILDING_VENUS_CLAYTRONIC_CITY</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_CLAYTRONIC_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_CLAYTRONIC_CITY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_CLAYTRONIC_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CLAYTRONIC_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -840,6 +871,7 @@
 			<Type>BUILDING_VENUS_DEATH_RAY</Type>
 			<Description>TXT_KEY_BUILDING_VENUS_DEATH_RAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_DEATH_RAY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_DEATH_RAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_DEATH_RAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -868,6 +900,7 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_VENUS_TERRA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_TERRA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_TERRA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_TERRA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_VENUS_TERRA</MovieDefineTag>
@@ -909,6 +942,7 @@
 			<Type>BUILDING_TERRAFORMED_VENUS_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_VENUS_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -944,6 +978,7 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CAPTURED_IO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAPTURED_IO_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CAPTURED_IO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAPTURED_IO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CAPTURED_IO</MovieDefineTag>
@@ -982,6 +1017,7 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_VENUS_ARTIFICIAL_ROTATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_ARTIFICIAL_ROTATION_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_VENUS_ARTIFICIAL_ROTATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ARTIFICIAL_ROTATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_VENUS_ARTIFICIAL_ROTATION</MovieDefineTag>

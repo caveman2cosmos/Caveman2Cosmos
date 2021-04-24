@@ -43,6 +43,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CONSTRUCTION_SHIP_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<UnitAIs>
@@ -187,6 +188,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUPPLY_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_SUPPLY_SHIP_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SUPPLY_SHIP_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<UnitAIs>
@@ -251,6 +253,7 @@
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_ROVER</Description>
 			<Civilopedia>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_LUNAR_ROVER_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -402,6 +405,7 @@
 			<Description>TXT_KEY_UNIT_CISLUNARSETTLER</Description>
 			<Help>TXT_KEY_UNIT_CISLUNARSETTLER_HOVER</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -495,6 +499,7 @@
 			<Description>TXT_KEY_UNIT_LUNARSETTLER</Description>
 			<Help>TXT_KEY_UNIT_LUNARSETTLER_HOVER</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -599,6 +604,7 @@
 			<Description>TXT_KEY_UNIT_PLANETARYSETTLER</Description>
 			<Help>TXT_KEY_UNIT_PLANETARYSETTLER_HOVER</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -714,6 +720,7 @@
 			<Description>TXT_KEY_UNIT_ONEILLSETTLER</Description>
 			<Help>TXT_KEY_UNIT_ONEILLSETTLER_HOVER</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -814,6 +821,7 @@
 			<Description>TXT_KEY_UNIT_WORLDSHIP</Description>
 			<Help>TXT_KEY_UNIT_WORLDSHIP_HOVER</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -920,6 +928,7 @@
 			<Description>TXT_KEY_UNIT_WORLDSHIP2</Description>
 			<Help>TXT_KEY_UNIT_WORLDSHIP2_HOVER</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1033,6 +1042,7 @@
 			<Description>TXT_KEY_UNIT_WORLDSHIP3</Description>
 			<Help>TXT_KEY_UNIT_WORLDSHIP3_HOVER</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1136,6 +1146,7 @@
 			<Description>TXT_KEY_UNIT_WORLDSHIP4</Description>
 			<Help>TXT_KEY_UNIT_WORLDSHIP4_HOVER</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1240,6 +1251,7 @@
 			<Description>TXT_KEY_UNIT_HYPERSHIP</Description>
 			<Help>TXT_KEY_UNIT_HYPERSHIP_HOVER</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1342,6 +1354,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ATTACKSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_ATTACKSHIP_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_ATTACKSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1397,6 +1410,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_INVADER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CISLUNAR_INVADER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CISLUNAR_INVADER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1452,6 +1466,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INT_INVADER</Description>
 			<Civilopedia>TXT_KEY_UNIT_INT_INVADER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_INT_INVADER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1507,6 +1522,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INT_BATTLECRUISER</Description>
 			<Civilopedia>TXT_KEY_UNIT_INT_BATTLECRUISER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_INT_BATTLECRUISER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1576,6 +1592,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYPER_BATTLECRUISER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HYPER_BATTLECRUISER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HYPER_BATTLECRUISER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1654,6 +1671,7 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_CISLUNAR_INFANTRY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CISLUNAR_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1736,6 +1754,7 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DEEPSPACE_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_DEEPSPACE_INFANTRY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_DEEPSPACE_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1824,6 +1843,7 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP_DEFENDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORLDSHIP_DEFENDER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WORLDSHIP_DEFENDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1911,6 +1931,7 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_LUNAR_INFANTRY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_LUNAR_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1998,6 +2019,7 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MARTIAN_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_MARTIAN_INFANTRY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MARTIAN_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2085,6 +2107,7 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VENUS_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_VENUS_INFANTRY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_VENUS_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2172,6 +2195,7 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PLANETARY_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_PLANETARY_INFANTRY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_PLANETARY_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2257,6 +2281,7 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYPERSPACE_DEFENDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HYPERSPACE_DEFENDER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HYPERSPACE_DEFENDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2331,6 +2356,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MARTIAN_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -2432,6 +2458,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VENUS_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -2506,6 +2533,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -2570,6 +2598,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SOLAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SOLAR_WORKER_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
@@ -2633,6 +2662,7 @@
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MARSSETTLER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bFood>1</bFood>
 			<bFound>1</bFound>
@@ -2687,6 +2717,7 @@
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VENUS_SETTLER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bFood>1</bFood>
 			<bFound>1</bFound>
@@ -2754,6 +2785,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SOLARSAIL_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SOLARSAIL_WORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SOLARSAIL_WORKER_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
@@ -2879,6 +2911,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MAGSAIL_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAGSAIL_WORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MAGSAIL_WORKER_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
@@ -3053,6 +3086,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NANOWORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_NANOWORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_NANOWORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3231,6 +3265,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_COSMIC_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_COSMIC_WORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_COSMIC_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3522,6 +3557,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHRONOFORM_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHRONOFORM_SHIP_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CHRONOFORM_SHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3664,6 +3700,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SPACE_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPACE_WORK_CREW_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SPACE_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3729,6 +3766,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3796,6 +3834,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3865,6 +3904,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3936,6 +3976,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_COSMIC_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_COSMIC_WORK_CREW_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_COSMIC_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4007,6 +4048,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4081,6 +4123,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4166,6 +4209,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BACTERIA_SWARM</Description>
 			<Civilopedia>TXT_KEY_UNIT_BACTERIA_SWARM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_BACTERIA_SWARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4258,6 +4302,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LIFE_SWARM</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIFE_SWARM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_LIFE_SWARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4315,6 +4360,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ENERGY_ENTITY</Description>
 			<Civilopedia>TXT_KEY_UNIT_ENERGY_ENTITY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_ENERGY_ENTITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4388,6 +4434,7 @@
 			<Description>TXT_KEY_UNIT_SATELLITE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SATELLITE_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Strategy>TXT_KEY_UNIT_SATELLITE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4522,6 +4569,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SPACE_SHUTTLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPACE_SHUTTLE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SPACE_SHUTTLE_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
@@ -4767,6 +4815,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PLANET_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_PLANET_PROBE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_PLANET_PROBE_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
@@ -5386,6 +5435,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERSTELLAR_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERSTELLAR_PROBE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_INTERSTELLAR_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -5582,6 +5632,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BRACEWELL_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_BRACEWELL_PROBE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_BRACEWELL_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -5742,6 +5793,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VON_NEUMANN_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_VON_NEUMANN_PROBE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_VON_NEUMANN_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -5869,6 +5921,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_QUANTUM_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_QUANTUM_PROBE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_QUANTUM_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -5963,6 +6016,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6091,6 +6145,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HEAVY_ROCKET</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HEAVY_ROCKET_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_HEAVY_ROCKET_HOVER</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
@@ -6420,6 +6475,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CAPTURED_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPTURED_ASTEROID_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CAPTURED_ASTEROID_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6498,6 +6554,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CAPTURED_COMET</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPTURED_COMET_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CAPTURED_COMET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6587,6 +6644,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERSTELLAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERSTELLAR_WORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_INTERSTELLAR_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6707,6 +6765,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LOE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_LOE_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_LOE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6784,6 +6843,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SS1_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SS1_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SS1_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6858,6 +6918,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SS2_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SS2_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SS2_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6934,6 +6995,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SS3_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SS3_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SS3_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7012,6 +7074,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_CISLUNAR_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CISLUNAR_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7090,6 +7153,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_LUNAR_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_LUNAR_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7167,6 +7231,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7246,6 +7311,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7320,6 +7386,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7397,6 +7464,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERSTELLAR_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERSTELLAR_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_INTERSTELLAR_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7478,6 +7546,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GALACTIC_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALACTIC_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GALACTIC_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7559,6 +7628,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERGALACTIC_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERGALACTIC_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_INTERGALACTIC_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7633,6 +7703,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MERCURY_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_MERCURY_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MERCURY_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7706,6 +7777,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VENUS_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_VENUS_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_VENUS_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7779,6 +7851,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MARS_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_MARS_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MARS_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7853,6 +7926,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ASTEROID_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASTEROID_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_ASTEROID_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7926,6 +8000,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_JUPITER_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_JUPITER_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_JUPITER_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7999,6 +8074,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EUROPA_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_EUROPA_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_EUROPA_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8073,6 +8149,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SATURN_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SATURN_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SATURN_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8146,6 +8223,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TITAN_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_TITAN_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TITAN_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8219,6 +8297,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_URANUS_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_URANUS_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_URANUS_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8293,6 +8372,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NEPTUNE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_NEPTUNE_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_NEPTUNE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8367,6 +8447,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KBO_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_KBO_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_KBO_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8442,6 +8523,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SEDNOID_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEDNOID_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SEDNOID_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8517,6 +8599,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EXOPLANET_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_EXOPLANET_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_EXOPLANET_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8588,6 +8671,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OORT_CLOUD_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_OORT_CLOUD_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_OORT_CLOUD_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8659,6 +8743,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8730,6 +8815,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYPERSPACE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_HYPERSPACE_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HYPERSPACE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8801,6 +8887,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MULTIVERSE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_MULTIVERSE_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MULTIVERSE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8872,6 +8959,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8943,6 +9031,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -9014,6 +9103,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -9092,6 +9182,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GALACTIC_CORE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALACTIC_CORE_REWARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GALACTIC_CORE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -9174,6 +9265,7 @@
 			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WARLORDVIS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARLORDVIIS</UnitType>
@@ -9236,6 +9328,7 @@
 			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WARLORDVIIS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARLORDVIIIS</UnitType>
@@ -9298,6 +9391,7 @@
 			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WARLORDVIIIS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<UnitAIs>
 				<UnitAI>
@@ -9365,6 +9459,7 @@
 			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WARLORDVI</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -9484,6 +9579,7 @@
 			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WARLORDVII</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -9603,6 +9699,7 @@
 			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WARLORDVIII</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -9780,6 +9877,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_BULLDOZER</Description>
 			<Civilopedia>TXT_KEY_UNIT_LUNAR_BULLDOZER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_LUNAR_BULLDOZER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<UnitAIs>
@@ -9850,6 +9948,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>

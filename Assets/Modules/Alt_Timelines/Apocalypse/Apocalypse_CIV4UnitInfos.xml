@@ -35,6 +35,7 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -120,6 +121,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MACHETE_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MACHETE_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -198,6 +200,7 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WRENCH_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WRENCH_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -291,6 +294,7 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CROWBAR_GUARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CROWBAR_GUARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
@@ -377,6 +381,7 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HATCHET_MAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HATCHET_MAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -471,6 +476,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_POST_APOCALYPTIC_GRENADIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_POST_APOCALYPTIC_GRENADIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>

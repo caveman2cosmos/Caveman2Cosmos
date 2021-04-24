@@ -10,6 +10,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CANAANISM_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JEWISH_TEMPLE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_JEWISH_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_TEMPLE</ArtDefineTag>
 			<ReligionType>RELIGION_CANAANISM</ReligionType>
@@ -58,6 +59,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CANAANISM_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JEWISH_CATHEDRAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CANAANISM_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_CATHEDRAL</ArtDefineTag>
 			<ReligionType>RELIGION_CANAANISM</ReligionType>
@@ -122,6 +124,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CANAANISM_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JEWISH_MONASTERY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_JEWISH_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_MONASTERY</ArtDefineTag>
 			<ReligionType>RELIGION_CANAANISM</ReligionType>
@@ -171,6 +174,7 @@
 			<Type>BUILDING_CANAANISM_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_CANAANISM_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CANAANISM_SHRINE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CANAANISM_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_SHRINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CANAANISM</MovieDefineTag>

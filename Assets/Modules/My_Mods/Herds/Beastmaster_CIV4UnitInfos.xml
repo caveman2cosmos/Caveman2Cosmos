@@ -29,6 +29,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_DONKEY_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TAMED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_TAMED_DONKEY_PAIR_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -102,6 +103,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TAMED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_TAMED_HORSE_PAIR_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitAIs>
@@ -182,6 +184,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_WOLF_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TAMED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_TAMED_WOLF_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
