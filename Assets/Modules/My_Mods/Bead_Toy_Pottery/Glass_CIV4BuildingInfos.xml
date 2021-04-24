@@ -11,7 +11,6 @@
 			<Type>BUILDING_GLASS_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_GLASS_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GLASS_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GLASS_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_GLASS_FACTORY</ArtDefineTag>
@@ -119,7 +118,6 @@
 			<Type>BUILDING_GLASSSMITH</Type>
 			<Description>TXT_KEY_BUILDING_GLASSSMITH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GLASSSMITH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GLASSSMITH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_GLASSSMITH</ArtDefineTag>

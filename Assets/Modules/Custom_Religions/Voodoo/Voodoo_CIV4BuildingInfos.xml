@@ -6,7 +6,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HELLSMOUTH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -66,7 +65,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VOODOO_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VOODOO_CATHEDRAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VOODOO_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_CATHEDRAL</ArtDefineTag>
 			<MapCategoryTypes>
@@ -140,7 +138,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VOODOO_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VOODOO_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VOODOO_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_MONASTERY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -196,7 +193,6 @@
 			<Type>BUILDING_VOODOO_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_VOODOO_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VOODOO_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CONFUCIAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_SHRINE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -246,7 +242,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VOODOO_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VOODOO_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VOODOO_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_TEMPLE</ArtDefineTag>
 			<MapCategoryTypes>

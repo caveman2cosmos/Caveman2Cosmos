@@ -9,7 +9,6 @@
 			<Type>BUILDING_CAVE_NEAR_CITY</Type>
 			<Description>TXT_KEY_BUILDING_CAVE_NEAR_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEAR_CITY_STUFF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NEAR_CITY_STUFF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAVE_NEAR_CITY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -29,7 +28,6 @@
 			<Type>BUILDING_CAVE_IN_NATION</Type>
 			<Description>TXT_KEY_BUILDING_CAVE_IN_NATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEAR_CITY_STUFF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NEAR_CITY_STUFF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAVE_IN_NATION</ArtDefineTag>
 			<MapCategoryTypes>
@@ -41,7 +39,6 @@
 			<Type>BUILDING_ELITE_HOUSING</Type>
 			<Description>TXT_KEY_BUILDING_ELITE_HOUSING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELITE_HOUSING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELITE_HOUSING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELITE_HOUSING</ArtDefineTag>
 			<MapCategoryTypes>

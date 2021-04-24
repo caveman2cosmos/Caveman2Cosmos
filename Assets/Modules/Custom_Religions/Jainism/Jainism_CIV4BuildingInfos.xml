@@ -10,7 +10,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_JAIN_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JAIN_CATHEDRAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JAIN_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JAIN_CATHEDRAL</ArtDefineTag>
 			<ReligionType>RELIGION_JAINISM</ReligionType>
@@ -82,7 +81,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_JAIN_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JAIN_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JAIN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JAIN_MONASTERY</ArtDefineTag>
 			<ReligionType>RELIGION_JAINISM</ReligionType>
@@ -147,7 +145,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_JAIN_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JAIN_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JAIN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JAIN_TEMPLE</ArtDefineTag>
 			<ReligionType>RELIGION_JAINISM</ReligionType>
@@ -207,7 +204,6 @@
 			<Type>BUILDING_JAINISM_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_JAINISM_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JAINISM_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JAINISM_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JAINISM_SHRINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_JAINISM_SHRINE</MovieDefineTag>
