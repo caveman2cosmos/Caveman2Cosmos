@@ -7178,6 +7178,19 @@ ImprovementTypes CvPlot::getImprovementType() const
 	return (ImprovementTypes)m_eImprovementType;
 }
 
+// Toffer - Helper function
+bool CvPlot::isImprovementDestructible() const
+{
+	return (
+		m_eImprovementType > -1
+		&&
+		!GC.getImprovementInfo(getImprovementType()).isPermanent()
+		&&
+		GC.getImprovementInfo(getImprovementType()).getAirBombDefense() > -1
+	);
+}
+// ! Toffer
+
 
 void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 {

@@ -24662,7 +24662,7 @@ int CvUnitAI::AI_airOffenseBaseValue(const CvPlot* pPlot) const
 							// Target enemy cities
 							iTempValue += 3*cityX->getPopulation() + 30;
 
-							if (canAirBomb(pPlot) && cityX->isBombardable(this))
+							if (canAirBomb() && cityX->isBombardable(this))
 							{
 								iTempValue *= 2;
 							}
@@ -29504,7 +29504,7 @@ void CvUnitAI::AI_autoAirStrike()
 	}
 
 	// Support ground attacks
-	if (canAirBomb(NULL))
+	if (canAirBomb())
 	{
 		if (AI_airBombDefenses())
 		{

@@ -18814,23 +18814,19 @@ bool CvCity::canApplyEvent(EventTypes eEvent, const EventTriggeredData& kTrigger
 		{
 			if (CITY_HOME_PLOT != i)
 			{
-				CvPlot* pPlot = getCityIndexPlot(i);
-				if (NULL != pPlot && pPlot->getOwner() == getOwner())
+				const CvPlot* pPlot = getCityIndexPlot(i);
+
+				if (NULL != pPlot && pPlot->getOwner() == getOwner() && pPlot->isImprovementDestructible())
 				{
-					if (NO_IMPROVEMENT != pPlot->getImprovementType() && !GC.getImprovementInfo(pPlot->getImprovementType()).isPermanent())
-					{
-						++iNumImprovements;
-					}
+					++iNumImprovements;
 				}
 			}
 		}
-
 		if (iNumImprovements < kEvent.getMinPillage())
 		{
 			return false;
 		}
 	}
-
 	return true;
 }
 
@@ -18911,17 +18907,17 @@ void CvCity::applyEvent(EventTypes eEvent, const EventTriggeredData* pTriggeredD
 					if (CITY_HOME_PLOT != iPlot)
 					{
 						CvPlot* pPlot = getCityIndexPlot(iPlot);
-						if (NULL != pPlot && pPlot->getOwner() == getOwner())
-						{
-							if (NO_IMPROVEMENT != pPlot->getImprovementType() && !GC.getImprovementInfo(pPlot->getImprovementType()).isPermanent())
-							{
 
-								CvWString szBuffer = gDLL->getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-								AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, GC.getImprovementInfo(pPlot->getImprovementType()).getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
-								pPlot->setImprovementType(NO_IMPROVEMENT);
-								++iNumPillaged;
-								break;
-							}
+						if (NULL != pPlot && pPlot->getOwner() == getOwner() && pPlot->isImprovementDestructible())
+						{
+							AddDLLMessage(
+								getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide()),
+								"AS2D_PILLAGED", MESSAGE_TYPE_INFO, GC.getImprovementInfo(pPlot->getImprovementType()).getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true
+							);
+							pPlot->setImprovementType(NO_IMPROVEMENT);
+							++iNumPillaged;
+							break;
 						}
 					}
 				}

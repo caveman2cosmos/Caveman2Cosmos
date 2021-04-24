@@ -2863,7 +2863,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 			break;
 
 		case INTERFACEMODE_AIRBOMB:
-			if (pLoopUnit->canAirBomb(pLoopUnit->plot()))
+			if (pLoopUnit->canAirBomb())
 			{
 				return true;
 			}
@@ -2895,7 +2895,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 
 		// Dale - AB: Bombing
 		case INTERFACEMODE_AIRBOMB1:
-			if (pLoopUnit->canAirBomb1(pLoopUnit->plot()))
+			if (pLoopUnit->canAirBomb1())
 			{
 				return true;
 			}

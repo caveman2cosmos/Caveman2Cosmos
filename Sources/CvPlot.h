@@ -703,6 +703,8 @@ public:
 	DllExport ImprovementTypes getImprovementType() const;
 	void setImprovementType(ImprovementTypes eNewValue);
 
+	bool isImprovementDestructible() const;
+
 	RouteTypes getRouteType() const;
 	void setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroup);
 	void updateCityRoute(bool bUpdatePlotGroup);
