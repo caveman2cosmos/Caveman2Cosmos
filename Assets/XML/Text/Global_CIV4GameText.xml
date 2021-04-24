@@ -3551,18 +3551,6 @@
 		<Russian>Èçáåãèòå ñåðäèòûõ ãðàæäàí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EMPHASIZE_AVOID_ANGRY_CITIZENS_STRATEGY</Tag>
-		<English>Avoid angry citizens by not growing beyond the capacity for happy citizens.</English>
-		<French>Evite les Citoyens mécontents, en limitant la croissance lorsque la capacité de contenter les citoyens n'est adéquate.</French>
-		<German>Vermeidung unzufriedener Bürger durch Beschränkung des Wachstums auf die Obergrenze für zufriedene Bürger.</German>
-		<Italian>Evita i cittadini arrabbiati impedendo la crescita oltre la capacità di felicità della città.</Italian>
-		<Spanish>Se evitan los ciudadanos infelices dejando de crecer si se llega al límite de ciudadanos felices.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EMPHASIZE_AVOID_GROWTH_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EMPHASIZE_AVOID_UNHEALTHY_CITIZENS</Tag>
 		<English>Avoid Unhealthy Citizens</English>
 		<French>Aucun Citoyen en mauvaise Santé</French>
@@ -3571,34 +3559,6 @@
 		<Spanish>Evitar ciudadanos enfermos</Spanish>
 		<Polish>Uniknij choroby mieszkańców</Polish>
 		<Russian>Èçáåãèòå íåçäîðîâûõ ãðàæäàí</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EMPHASIZE_AVOID_UNHEALTHY_CITIZENS_STRATEGY</Tag>
-		<English>Avoid unhealthy citizens by not growing beyond the capacity for healthy citizens.</English>
-		<French>Evite les Citoyens en mauvaise Santé, en limitant la croissance tant que les conditions sanitaires suffisantes ne sont pas réunies.</French>
-		<German>Vermeidung kranker Bürger durch Beschränkung des Wachstums auf die Obergrenze für gesunde Bürger.</German>
-		<Italian>Evita i cittadini ammalati impedendo la crescita oltre le capacità di salute della città.</Italian>
-		<Spanish>Se evitan los ciudadanos enfermos dejando de crecer si se llega al límite de ciudadanos sanos.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EMPHASIZE_COMMERCE_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EMPHASIZE_FOOD_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EMPHASIZE_GREAT_PEOPLE_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EMPHASIZE_PRODUCTION_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EMPHASIZE_RESEARCH_STRATEGY</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_END_YEAR</Tag>
@@ -15582,10 +15542,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Àíäðîèä</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_ANDROID_WORKER_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_ARTIST</Tag>
 		<English>Artist</English>
 		<French>
@@ -15656,10 +15612,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Çíàìåíèòîñòü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_CELEBRITY_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_CITIZEN</Tag>
 		<English>Citizen</English>
 		<French>
@@ -15699,12 +15651,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Âðà÷</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_DOCTOR_STRATEGY</Tag>
-		<English>Build the [LINK=BUILDING_HEALERHUT]Healer's Hut[\LINK], [LINK=BUILDING_APOTHECARY_SHOP]Apothecary Shop[\LINK], or a [LINK=BUILDING_HOSPITAL]Hospital[\LINK] to add specialist doctors and increase the odds of getting a Great Doctor.</English>
-		<French>Construisez la [LINK=BUILDING_HEALERHUT]Cabane du Guerrisseur[\LINK], l'[LINK=BUILDING_APOTHECARY_SHOP]Herboristerie[\LINK], ou un [LINK=BUILDING_HOSPITAL]Hôpital[\LINK] pour ajouter des spécialistes médecins et augmenter les chances d'obtenir un Médecin Illustre.</French>
-		<Russian>Постройте [LINK=BUILDING_HEALERHUT]Хижину целителя[\LINK], [LINK=BUILDING_APOTHECARY_SHOP]Лавку аптекаря[\LINK] или [LINK=BUILDING_HOSPITAL]Больницу[\LINK], чтобы добавить врачей-специалистов и повысить шансы на рождение Великого Врача.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_ENGINEER</Tag>
@@ -15840,15 +15786,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Un cazador extraordinariamente curtido que se ha establecido en tu ciudad.</Spanish>
 		<Polish>Wielki Łowca</Polish>
 		<Russian>Великий охотник</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_GREAT_HUNTER_STRATEGY</Tag>
-		<English>The Great Hunter Specialist increases the food produced in the city.</English>
-		<French>Le spécialiste Chasseur Illustre augmente la nourriture produite dans la ville.</French>
-		<Italian>Lo specialista grande cacciatore incrementa il cibo prodotto nella città.</Italian>
-		<Spanish>El Gran cazador aumenta los alimentos producidos en la ciudad.</Spanish>
-		<Polish>Specjalista: Wielki Łowca zwiększa produkcję żywności w mieście.</Polish>
-		<Russian>Великий охотник в качестве специалиста увеличивает производство пищи в этом городе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_MERCHANT</Tag>
@@ -16015,12 +15952,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Ñëåäîâàòåëü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_INVESTIGATOR_STRATEGY</Tag>
-		<English>Increase your chance to capture criminals and reduce crime.</English>
-		<French>Augmentez vos chances de capturer des criminels et de réduire la criminalité.</French>
-		<Russian>Увеличьте свой шанс поймать преступников и уменьшить уровень преступности.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_MERCHANT</Tag>
 		<English>Merchant</English>
 		<French>
@@ -16088,10 +16019,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		</Spanish>
 		<Polish>Arystokrata</Polish>
 		<Russian>Äâîðÿíèí</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_NOBLE_STRATEGY</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_PERCENT</Tag>
@@ -16164,13 +16091,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Гладиаторы во многом похожи на Великих Генералов, но дают опыт только юнитам ближнего боя.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_SETTLED_GLADIATOR_STRATEGY</Tag>
-		<English>Increase income and experience of new melee units trained in the city.</English>
-		<French>Augmentez les revenus et l'expérience des nouvelles unités de mêlée entraînées dans la ville.</French>
-		<Polish>Zwiększa dochód i XP nowych jednostek piechoty trenowanych w tym mieście.</Polish>
-		<Russian>Увеличьте доходы и опыт для новых отрядов ближнего боя, обученных в городе.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SLAVES</Tag>
 		<English>Slaves</English>
 		<French>
@@ -16191,10 +16111,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		</Spanish>
 		<Polish>Niewolnicy</Polish>
 		<Russian>Ðàáû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_SLAVES_STRATEGY</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_TECH_HAPPINESS_TYPE</Tag>
@@ -21313,8 +21229,4 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_GRAPHIC_OPTION_FROZEN_ANIMATIONS_HELP</Tag>
 		<English>No unit or improvement animations.[NEWLINE]Causes graphical glitches when selected.</English>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_CITIZEN_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>	
 </Civ4GameText>
