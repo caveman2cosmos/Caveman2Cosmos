@@ -6,7 +6,6 @@
 			<Type>TECH_CYBERPUNK</Type>
 			<Description>TXT_KEY_TECH_CYBERPUNK</Description>
 			<Civilopedia>TXT_KEY_TECH_CYBERPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_CYBERPUNK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<Quote>TXT_KEY_TECH_CYBERPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_CYBERPUNK2</Sound>

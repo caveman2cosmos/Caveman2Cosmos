@@ -10,7 +10,6 @@
 			<SpecialBuildingType></SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_EJE_SONG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EJE_SONG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EJE_SONG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EJE_SONG</ArtDefineTag>
 			<MapCategoryTypes>
@@ -71,7 +70,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SHAMANS_YURTA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMANS_YURTA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SHAMANS_YURTA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMANS_YURTA</ArtDefineTag>
 			<MapCategoryTypes>
@@ -128,7 +126,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_KING_GESAR_SONG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KING_GESAR_SONG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KING_GESAR_SONG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KING_GESAR_SONG</ArtDefineTag>
 			<MapCategoryTypes>
@@ -181,7 +178,6 @@
 			<Type>BUILDING_TENGRI_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_TENGRI_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TENGRI_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TENGRI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TENGRI_SHRINE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -225,7 +221,6 @@
 			<SpecialBuildingType></SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TENGRI_SONG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TENGRI_SONG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TENGRI_SONG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TENGRI_SONG</ArtDefineTag>
 			<MapCategoryTypes>

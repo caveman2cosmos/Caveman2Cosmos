@@ -5,7 +5,6 @@
 			<Type>PROJECT_THE_INTERNET</Type>
 			<Description>TXT_KEY_PROJECT_THE_INTERNET</Description>
 			<Civilopedia>TXT_KEY_PROJECT_THE_INTERNET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_THE_INTERNET_STRATEGY</Strategy>
 			<TechPrereq>TECH_FIBER_OPTICS</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>14760</iCost>
@@ -32,7 +31,6 @@
 			<Type>PROJECT_SDI</Type>
 			<Description>TXT_KEY_PROJECT_SDI</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SDI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_SDI_STRATEGY</Strategy>
 			<TechPrereq>TECH_COMMUNICATION_NETWORKS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>15400</iCost>
@@ -52,7 +50,6 @@
 			<Type>PROJECT_MISSILE_DEFENCE_I</Type>
 			<Description>TXT_KEY_PROJECT_MISSILE_DEFENCE_I</Description>
 			<Civilopedia>TXT_KEY_PROJECT_MISSILE_DEFENCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_MISSILE_DEFENCE_STRATEGY</Strategy>
 			<TechPrereq>TECH_GUIDED_WEAPONS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>12840</iCost>
@@ -71,7 +68,6 @@
 			<Type>PROJECT_MISSILE_DEFENCE_II</Type>
 			<Description>TXT_KEY_PROJECT_MISSILE_DEFENCE_II</Description>
 			<Civilopedia>TXT_KEY_PROJECT_MISSILE_DEFENCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_MISSILE_DEFENCE_STRATEGY</Strategy>
 			<TechPrereq>TECH_PHOTON_THERMODYNAMICS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>33160</iCost>
@@ -94,7 +90,6 @@
 			<Type>PROJECT_MISSILE_RAILGUN</Type>
 			<Description>TXT_KEY_PROJECT_MISSILE_RAILGUN</Description>
 			<Civilopedia>TXT_KEY_PROJECT_MISSILE_DEFENCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_MISSILE_DEFENCE_STRATEGY</Strategy>
 			<TechPrereq>TECH_RAILGUN</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>21000</iCost>
@@ -120,7 +115,6 @@
 			<Type>PROJECT_APOLLO_PROGRAM</Type>
 			<Description>TXT_KEY_PROJECT_APOLLO_PROGRAM</Description>
 			<Civilopedia>TXT_KEY_PROJECT_APOLLO_PROGRAM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_APOLLO_PROGRAM_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
 			<TechPrereq>TECH_ASTRO_ENVIRONMENTAL_SYSTEMS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
@@ -137,7 +131,6 @@
 			<Type>PROJECT_SS_COCKPIT</Type>
 			<Description>TXT_KEY_PROJECT_SS_COCKPIT</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_COCKPIT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_SPACE_SHIP_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
 			<TechPrereq>TECH_INTERACTIVE_GLASS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
@@ -167,7 +160,6 @@
 			<Type>PROJECT_SS_LIFE_SUPPORT</Type>
 			<Description>TXT_KEY_PROJECT_SS_LIFE_SUPPORT</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_LIFE_SUPPORT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_SPACE_SHIP_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
 			<TechPrereq>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
@@ -197,7 +189,6 @@
 			<Type>PROJECT_SS_STASIS_CHAMBER</Type>
 			<Description>TXT_KEY_PROJECT_SS_STASIS_CHAMBER</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_STASIS_CHAMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_SPACE_SHIP_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
 			<TechPrereq>TECH_CRYONICS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
@@ -221,7 +212,6 @@
 			<Type>PROJECT_SS_DOCKING_BAY</Type>
 			<Description>TXT_KEY_PROJECT_SS_DOCKING_BAY</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_DOCKING_BAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_SPACE_SHIP_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
 			<TechPrereq>TECH_COMMERCIAL_SPACEFLIGHT</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
@@ -251,7 +241,6 @@
 			<Type>PROJECT_SS_ENGINE</Type>
 			<Description>TXT_KEY_PROJECT_SS_ENGINE</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_ENGINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_SPACE_SHIP_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
 			<TechPrereq>TECH_MASS_DRIVER</TechPrereq>
 			<iMaxTeamInstances>2</iMaxTeamInstances>
@@ -282,7 +271,6 @@
 			<Type>PROJECT_SS_CASING</Type>
 			<Description>TXT_KEY_PROJECT_SS_CASING</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_CASING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_SPACE_SHIP_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
 			<TechPrereq>TECH_SUPERSTRONG_ALLOYS</TechPrereq>
 			<iMaxTeamInstances>5</iMaxTeamInstances>
@@ -319,7 +307,6 @@
 			<Type>PROJECT_SS_THRUSTERS</Type>
 			<Description>TXT_KEY_PROJECT_SS_THRUSTERS</Description>
 			<Civilopedia>TXT_KEY_PROJECT_SS_THRUSTERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_SPACE_SHIP_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
 			<TechPrereq>TECH_FUSION</TechPrereq>
 			<iMaxTeamInstances>5</iMaxTeamInstances>
@@ -356,7 +343,6 @@
 			<Type>PROJECT_FIRST_CLONED_MAMMAL</Type>
 			<Description>TXT_KEY_PROJECT_FIRST_CLONED_MAMMAL</Description>
 			<Civilopedia>TXT_KEY_PROJECT_FIRST_CLONED_MAMMAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_FIRST_CLONED_MAMMAL_STRATEGY</Strategy>
 			<TechPrereq>TECH_CLONING</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>15400</iCost>
@@ -373,7 +359,6 @@
 			<Type>PROJECT_HUBBLE</Type>
 			<Description>TXT_KEY_PROJECT_HUBBLE</Description>
 			<Civilopedia>TXT_KEY_PROJECT_HUBBLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_HUBBLE_STRATEGY</Strategy>
 			<TechPrereq>TECH_ASTRONAUTICS</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>11800</iCost>
@@ -391,7 +376,6 @@
 			<Type>PROJECT_ENCYCLOPEDIE</Type>
 			<Description>TXT_KEY_PROJECT_ENCYCLOPEDIE</Description>
 			<Civilopedia>TXT_KEY_PROJECT_ENCYCLOPEDIE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_ENCYCLOPEDIE_STRATEGY</Strategy>
 			<TechPrereq>TECH_LIBERALISM</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>4120</iCost>
@@ -407,7 +391,6 @@
 			<Type>PROJECT_IST</Type>
 			<Description>TXT_KEY_PROJECT_IST</Description>
 			<Civilopedia>TXT_KEY_PROJECT_IST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_IST_STRATEGY</Strategy>
 			<TechPrereq>TECH_SPACE_STATIONS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>13480</iCost>
@@ -425,7 +408,6 @@
 			<Type>PROJECT_ITER</Type>
 			<Description>TXT_KEY_PROJECT_ITER</Description>
 			<Civilopedia>TXT_KEY_PROJECT_ITER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_ITER_STRATEGY</Strategy>
 			<TechPrereq>TECH_CONTROLLED_PLASMA</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>18440</iCost>
@@ -436,7 +418,6 @@
 			<Type>PROJECT_IMF</Type>
 			<Description>TXT_KEY_PROJECT_IMF</Description>
 			<Civilopedia>TXT_KEY_PROJECT_IMF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_IMF_STRATEGY</Strategy>
 			<TechPrereq>TECH_GLOBALIZATION</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>9440</iCost>
@@ -453,7 +434,6 @@
 			<Type>PROJECT_EDEN</Type>
 			<Description>TXT_KEY_PROJECT_EDEN</Description>
 			<Civilopedia>TXT_KEY_PROJECT_EDEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_EDEN_STRATEGY</Strategy>
 			<TechPrereq>TECH_WEATHER_CONTROL</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>55240</iCost>
@@ -464,7 +444,6 @@
 			<Type>PROJECT_CURE_FOR_CANCER</Type>
 			<Description>TXT_KEY_BUILDING_CANCER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CANCER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CANCER_STRATEGY</Strategy>
 			<TechPrereq>TECH_PERSONALIZED_HEALTH</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>21000</iCost>
@@ -478,7 +457,6 @@
 			<Type>PROJECT_HUMAN_GENOME</Type>
 			<Description>TXT_KEY_BUILDING_HUMAN_GENOME_PROJECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HUMAN_GENOME_PROJECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HUMAN_GENOME_PROJECT_STRATEGY</Strategy>
 			<TechPrereq>TECH_GENETICS</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>12840</iCost>
@@ -493,7 +471,6 @@
 			<Type>PROJECT_LONGEVITY</Type>
 			<Description>TXT_KEY_BUILDING_LONGEVITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LONGEVITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LONGEVITY_STRATEGY</Strategy>
 			<TechPrereq>TECH_ANTI_AGING_MEDICINE</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>31800</iCost>
@@ -512,7 +489,6 @@
 			<Type>PROJECT_THEORY_OF_EVOLUTION</Type>
 			<Description>TXT_KEY_BUILDING_THEORY_OF_EVOLUTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THEORY_OF_EVOLUTION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_THEORY_OF_EVOLUTION_STRATEGY</Strategy>
 			<TechPrereq>TECH_PALEONTOLOGY</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>4440</iCost>
@@ -528,7 +504,6 @@
 			<Type>PROJECT_THEORY_OF_EVERYTHING</Type>
 			<Description>TXT_KEY_BUILDING_THEORY_OF_EVERYTHING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THEORY_OF_EVERYTHING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_THEORY_OF_EVERYTHING_STRATEGY</Strategy>
 			<TechPrereq>TECH_SUPERSTRING_THEORY</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>16040</iCost>

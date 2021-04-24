@@ -7,7 +7,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_ECONOMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CISLUNAR_ECONOMY</MovieDefineTag>
@@ -84,7 +83,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SOLAR_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_ECONOMY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLAR_ECONOMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_ECONOMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_ECONOMY</MovieDefineTag>
@@ -137,7 +135,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GALACTIC_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_ECONOMY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GALACTIC_ECONOMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_ECONOMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GALACTIC_ECONOMY</MovieDefineTag>
@@ -202,7 +199,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSAL_ECONOMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSAL_ECONOMY</MovieDefineTag>
@@ -259,7 +255,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COSMIC_ECONOMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_ECONOMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COSMIC_ECONOMY</MovieDefineTag>
@@ -306,7 +301,6 @@
 			<Type>BUILDING_CISLUNAR_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -334,7 +328,6 @@
 			<Type>BUILDING_SOLAR_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SOLAR_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLAR_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -362,7 +355,6 @@
 			<Type>BUILDING_GALACTIC_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_GALACTIC_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GALACTIC_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -390,7 +382,6 @@
 			<Type>BUILDING_UNIVERSAL_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_UNIVERSAL_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSAL_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_UNIVERSAL_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSAL_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -418,7 +409,6 @@
 			<Type>BUILDING_COSMIC_ECONOMY_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_ECONOMY_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>

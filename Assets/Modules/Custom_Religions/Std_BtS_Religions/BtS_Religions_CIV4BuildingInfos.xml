@@ -11,7 +11,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CAVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAVES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CAVES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAVES</ArtDefineTag>
 			<MapCategoryTypes>
@@ -91,7 +90,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NARA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NARA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NARA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NARA</ArtDefineTag>
 			<MapCategoryTypes>
@@ -163,7 +161,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARCOS_CATHEDRAL</ArtDefineTag>
 			<MapCategoryTypes>
@@ -258,7 +255,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_VATICAN_LIBRARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VATICAN_LIBRARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VATICAN_LIBRARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VATICAN_LIBRARY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -341,7 +337,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIO</ArtDefineTag>
 			<MapCategoryTypes>
@@ -442,7 +437,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SOLOMON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLOMON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLOMON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLOMON</ArtDefineTag>
 			<MapCategoryTypes>
@@ -523,7 +517,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_AKSHARDHAM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AKSHARDHAM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AKSHARDHAM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AKSHARDHAM</ArtDefineTag>
 			<MapCategoryTypes>
@@ -608,7 +601,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MEENAKSHI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEENAKSHI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MEENAKSHI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MEENAKSHI</ArtDefineTag>
 			<MapCategoryTypes>
@@ -699,7 +691,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BLUE_MOSQUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLUE_MOSQUE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BLUE_MOSQUE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ESTAMBUL</ArtDefineTag>
 			<MapCategoryTypes>
@@ -775,7 +766,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DESERT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESERT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DESERT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESERT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -857,7 +847,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SULTAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SULTAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SULTAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SULTAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -937,7 +926,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_QUANZHEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_QUANZHEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_QUANZHEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QUANZHEN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1033,7 +1021,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_WUDANG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WUDANG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WUDANG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WUDANG</ArtDefineTag>
 			<MapCategoryTypes>

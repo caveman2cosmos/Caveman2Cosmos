@@ -11,7 +11,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_PREHISTORIC</Type>
 			<Description>TXT_KEY_ERA_PREHISTORIC</Description>
-			<Strategy>TXT_KEY_ERA_PREHISTORIC_STRATEGY</Strategy>
 			<iAdvancedStartPoints>500</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>1</iStartingUnitMultiplier>
 			<iStartingExploreUnits>1</iStartingExploreUnits>
@@ -62,7 +61,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_ANCIENT</Type>
 			<Description>TXT_KEY_ERA_ANCIENT</Description>
-			<Strategy>TXT_KEY_ERA_ANCIENT_STRATEGY</Strategy>
 			<iAdvancedStartPoints>1000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>1</iStartingUnitMultiplier>
 			<iStartingExploreUnits>1</iStartingExploreUnits>
@@ -129,7 +127,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_CLASSICAL</Type>
 			<Description>TXT_KEY_ERA_CLASSICAL</Description>
-			<Strategy>TXT_KEY_ERA_CLASSICAL_STRATEGY</Strategy>
 			<iAdvancedStartPoints>2000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>1</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>1</iStartingDefenseUnits>
@@ -189,7 +186,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_MEDIEVAL</Type>
 			<Description>TXT_KEY_ERA_MEDIEVAL</Description>
-			<Strategy>TXT_KEY_ERA_MEDIEVAL_STRATEGY</Strategy>
 			<iAdvancedStartPoints>4000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>2</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>2</iStartingDefenseUnits>
@@ -265,7 +261,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_RENAISSANCE</Type>
 			<Description>TXT_KEY_ERA_RENAISSANCE</Description>
-			<Strategy>TXT_KEY_ERA_RENAISSANCE_STRATEGY</Strategy>
 			<iAdvancedStartPoints>8000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>2</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>2</iStartingDefenseUnits>
@@ -328,7 +323,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_INDUSTRIAL</Type>
 			<Description>TXT_KEY_ERA_INDUSTRIAL</Description>
-			<Strategy>TXT_KEY_ERA_INDUSTRIAL_STRATEGY</Strategy>
 			<iAdvancedStartPoints>16000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>3</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>3</iStartingDefenseUnits>
@@ -389,7 +383,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_ATOMIC</Type>
 			<Description>TXT_KEY_ERA_ATOMIC</Description>
-			<Strategy>TXT_KEY_ERA_ATOMIC_STRATEGY</Strategy>
 			<iAdvancedStartPoints>32000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>3</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>3</iStartingDefenseUnits>
@@ -448,7 +441,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_INFORMATION</Type>
 			<Description>TXT_KEY_ERA_INFORMATION</Description>
-			<Strategy>TXT_KEY_ERA_INFORMATION_STRATEGY</Strategy>
 			<iAdvancedStartPoints>64000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>3</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>3</iStartingDefenseUnits>
@@ -507,7 +499,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_NANOTECH</Type>
 			<Description>TXT_KEY_ERA_NANOTECH</Description>
-			<Strategy>TXT_KEY_ERA_NANOTECH_STRATEGY</Strategy>
 			<iAdvancedStartPoints>128000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>3</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>3</iStartingDefenseUnits>
@@ -559,7 +550,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_TRANSHUMAN</Type>
 			<Description>TXT_KEY_ERA_TRANSHUMAN</Description>
-			<Strategy>TXT_KEY_ERA_TRANSHUMAN_STRATEGY</Strategy>
 			<iAdvancedStartPoints>256000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>3</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>3</iStartingDefenseUnits>
@@ -611,7 +601,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_GALACTIC</Type>
 			<Description>TXT_KEY_ERA_GALACTIC</Description>
-			<Strategy>TXT_KEY_ERA_GALACTIC_STRATEGY</Strategy>
 			<iAdvancedStartPoints>512000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>3</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>3</iStartingDefenseUnits>
@@ -659,7 +648,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_COSMIC</Type>
 			<Description>TXT_KEY_ERA_COSMIC</Description>
-			<Strategy>TXT_KEY_ERA_COSMIC_STRATEGY</Strategy>
 			<iAdvancedStartPoints>1024000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>3</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>3</iStartingDefenseUnits>
@@ -708,7 +696,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_TRANSCENDENT</Type>
 			<Description>TXT_KEY_ERA_TRANSCENDENT</Description>
-			<Strategy>TXT_KEY_ERA_TRANSCENDENT_STRATEGY</Strategy>
 			<iAdvancedStartPoints>2048000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>3</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>3</iStartingDefenseUnits>
@@ -757,7 +744,6 @@ Good luck! -->
 		<EraInfo>
 			<Type>C2C_ERA_FUTURE</Type>
 			<Description>TXT_KEY_ERA_FUTURE</Description>
-			<Strategy>TXT_KEY_ERA_FUTURE_STRATEGY</Strategy>
 			<iAdvancedStartPoints>4096000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>3</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>4</iStartingDefenseUnits>
