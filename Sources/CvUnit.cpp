@@ -28850,21 +28850,29 @@ bool CvUnit::canBombardAtRanged(const CvPlot* pPlot, int iX, int iY) const
 	{
 		return false;
 	}
+	const bool bNotMyTerritory = pTargetPlot->getTeam() != getTeam();
 
-	if (pTargetPlot->isOwned() && pTargetPlot->getTeam() != getTeam() && !atWar(pTargetPlot->getTeam(), getTeam()))
+	if (pTargetPlot->isOwned() && bNotMyTerritory && !atWar(pTargetPlot->getTeam(), getTeam()))
 	{
 		return false;
 	}
 
-	if (pTargetPlot->getNumVisiblePotentialEnemyDefenders(this) > 0 || pTargetPlot->isImprovementDestructible())
+	if (pTargetPlot->getNumVisiblePotentialEnemyDefenders(this) > 0)
 	{
 		return true;
 	}
-	CvCity* pCity = pTargetPlot->getPlotCity();
-
-	if (pCity != NULL && pCity->isBombardable(this))
+	if (bNotMyTerritory)
 	{
-		return true;
+		if (pTargetPlot->isImprovementDestructible())
+		{
+			return true;
+		}
+		CvCity* pCity = pTargetPlot->getPlotCity();
+
+		if (pCity != NULL && pCity->isBombardable(this))
+		{
+			return true;
+		}
 	}
 	return false;
 }
