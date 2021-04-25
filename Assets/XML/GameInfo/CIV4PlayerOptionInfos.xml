@@ -118,13 +118,13 @@
 		<PlayerOptionInfo>
 			<Type>PLAYEROPTION_MODDER_1</Type>
 			<Description>TXT_KEY_PLAYER_OPTION_MODDER_1AFF</Description>
-			<Help>TXT_KEY_PLAYER_OPTION_MODDER_1_HELPAFF</Help>
+			<Help>TXT_KEY_PLAYER_OPTION_MODDER_1AFF_HELP</Help>
 			<bDefault>0</bDefault>
 		</PlayerOptionInfo>
 		<PlayerOptionInfo>
 			<Type>PLAYEROPTION_MODDER_2</Type>
 			<Description>TXT_KEY_PLAYER_OPTION_MODDER_2AFF</Description>
-			<Help>TXT_KEY_PLAYER_OPTION_MODDER_2_HELPAFF</Help>
+			<Help>TXT_KEY_PLAYER_OPTION_MODDER_2AFF_HELP</Help>
 			<bDefault>0</bDefault>
 		</PlayerOptionInfo>
 		<PlayerOptionInfo>

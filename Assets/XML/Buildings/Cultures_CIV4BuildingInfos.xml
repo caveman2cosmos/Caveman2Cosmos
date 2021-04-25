@@ -8,7 +8,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20,7 +20,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_ASIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -32,7 +32,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_EUROPEAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -44,7 +44,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -61,7 +61,7 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -73,7 +73,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -85,7 +85,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_OCEANIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -97,7 +97,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -114,7 +114,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -142,7 +142,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -170,7 +170,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -198,7 +198,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -226,7 +226,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -254,7 +254,7 @@
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -282,7 +282,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -310,7 +310,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -339,7 +339,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -412,7 +412,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_ASIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -485,7 +485,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_EUROPEAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -558,7 +558,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -636,7 +636,7 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -709,7 +709,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -782,7 +782,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_OCEANIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -855,7 +855,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -931,7 +931,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -944,7 +944,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_ASIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -957,7 +957,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_EUROPEAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -970,7 +970,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -988,7 +988,7 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1001,7 +1001,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1014,7 +1014,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_OCEANIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1027,7 +1027,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

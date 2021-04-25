@@ -10,7 +10,7 @@
 		<English>Sabbateans (Sabbatians) is a complex general term that refers to a variety of followers of, disciples and believers in Sabbatai Zevi (1626-1676), a Jewish rabbi who was proclaimed to be the Jewish Messiah in 1665 by Nathan of Gaza. Vast numbers of Jews in the Jewish diaspora accepted his claims, even after he became a Jewish apostate with his conversion to Islam in 1666. Sabbatai Zevi's followers, both during his "Messiahship" and after his conversion to Islam, are known as Sabbateans. They can be grouped into three: "Maaminim" (believers), "Haberim" (associates), and "Ba'ale Milhamah" (warriors).</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Tag>
 		<English>Active Culture</English>
 		<French>Culture active</French>
 		<German>aktive Kultur</German>
@@ -111,7 +111,7 @@
 		<Russian>Южноамериканская (АкК)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Tag>
 		<English>Adopted Culture</English>
 		<French>Culture Adoptée</French>
 		<German>übernommene Kultur</German>
@@ -212,7 +212,7 @@
 		<Russian>Южноамериканская (ПрК)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Tag>
 		<English>Local Culture</English>
 		<French>Culture Locale</French>
 		<German>lokale Kultur</German>
@@ -313,7 +313,7 @@
 		<Russian>Южноамериканская (МК)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Tag>
 		<English>Native Culture</English>
 		<French>
 			<Text>Culture d'origine</Text>

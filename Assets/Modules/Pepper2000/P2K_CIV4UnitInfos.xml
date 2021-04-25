@@ -43,7 +43,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<UnitAIs>
 				<UnitAI>
@@ -187,7 +187,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUPPLY_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_SUPPLY_SHIP_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<UnitAIs>
 				<UnitAI>
@@ -251,7 +251,7 @@
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_ROVER</Description>
 			<Civilopedia>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bPillage>1</bPillage>
@@ -400,7 +400,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNARSETTLER</Description>
-			<Help>TXT_KEY_UNIT_CISLUNARSETTLER_HOVER</Help>
+			<Help>TXT_KEY_UNIT_CISLUNARSETTLER_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -493,7 +493,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNARSETTLER</Description>
-			<Help>TXT_KEY_UNIT_LUNARSETTLER_HOVER</Help>
+			<Help>TXT_KEY_UNIT_LUNARSETTLER_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -597,7 +597,7 @@
 			</TerrainImpassableTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PLANETARYSETTLER</Description>
-			<Help>TXT_KEY_UNIT_PLANETARYSETTLER_HOVER</Help>
+			<Help>TXT_KEY_UNIT_PLANETARYSETTLER_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -712,7 +712,7 @@
 			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ONEILLSETTLER</Description>
-			<Help>TXT_KEY_UNIT_ONEILLSETTLER_HOVER</Help>
+			<Help>TXT_KEY_UNIT_ONEILLSETTLER_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -812,7 +812,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP</Description>
-			<Help>TXT_KEY_UNIT_WORLDSHIP_HOVER</Help>
+			<Help>TXT_KEY_UNIT_WORLDSHIP_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -918,7 +918,7 @@
 			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP2</Description>
-			<Help>TXT_KEY_UNIT_WORLDSHIP2_HOVER</Help>
+			<Help>TXT_KEY_UNIT_WORLDSHIP2_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -1031,7 +1031,7 @@
 			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP3</Description>
-			<Help>TXT_KEY_UNIT_WORLDSHIP3_HOVER</Help>
+			<Help>TXT_KEY_UNIT_WORLDSHIP3_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -1134,7 +1134,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP4</Description>
-			<Help>TXT_KEY_UNIT_WORLDSHIP4_HOVER</Help>
+			<Help>TXT_KEY_UNIT_WORLDSHIP4_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -1238,7 +1238,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYPERSHIP</Description>
-			<Help>TXT_KEY_UNIT_HYPERSHIP_HOVER</Help>
+			<Help>TXT_KEY_UNIT_HYPERSHIP_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -2754,7 +2754,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SOLARSAIL_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SOLARSAIL_WORKER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -2879,7 +2879,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MAGSAIL_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAGSAIL_WORKER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4387,7 +4387,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SATELLITE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SATELLITE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4522,7 +4522,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SPACE_SHUTTLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPACE_SHUTTLE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4767,7 +4767,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PLANET_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_PLANET_PROBE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6091,7 +6091,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HEAVY_ROCKET</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_HEAVY_ROCKET_HOVER</Help>
+			<Help>TXT_KEY_UNIT_HEAVY_ROCKET_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>

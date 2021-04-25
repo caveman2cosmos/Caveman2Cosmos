@@ -12365,7 +12365,7 @@
 		<Russian>Ðåçåðâíûé ïàðàìåòð äëÿ ìîäèôèêàöèé 1.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_1_HELPAFF</Tag>
+		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_1AFF_HELP</Tag>
 		<English>Automated Cities will Construct Workers and Workboats, when needed.</English>
 		<French>Les Gouverneurs des Villes construisent Ouvriers et Bâteaux-Atelier, si nécessaire.</French>
 		<German>Automatisierte Städte bilden Bautrupps und Arbeitsboote aus, wenn sie benötigt werden.</German>
@@ -12405,7 +12405,7 @@
 		<Russian>Ðåçåðâíûé ïàðàìåòð äëÿ ìîäèôèêàöèé 2.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_2_HELPAFF</Tag>
+		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_2AFF_HELP</Tag>
 		<English>All Newly Constructed Units will start fortified in your cities.</English>
 		<French>Toutes les Unités nouvellement formées vont automatiquement se fortifier dans vos Villes.</French>
 		<German>Alle neu ausgebildeten Einheiten verschanzen sich nach Fertigstellung automatisch in der Stadt.</German>

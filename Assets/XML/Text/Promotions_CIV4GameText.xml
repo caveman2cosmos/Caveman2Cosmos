@@ -3015,7 +3015,7 @@
 		<Russian>Ñïåöèàëèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ASTRO</Tag>
+		<Tag>TXT_KEY_PROMOTION_ASTRO_HELP</Tag>
 		<English>[ICON_BULLET]Astrological Sign</English>
 		<French>[ICON_BULLET]Signe Astrologique</French>
 		<Spanish>[ICON_BULLET]Signo astrológico: hay una cierta probabilidad de obtenerlo al entrenar una unidad</Spanish>
