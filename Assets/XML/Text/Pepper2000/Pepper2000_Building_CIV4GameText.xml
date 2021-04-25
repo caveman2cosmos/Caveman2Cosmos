@@ -8062,8 +8062,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DNT_IMPORTER_PEDIA</Tag>
-		<English>TBD</English>
-		<Russian>Import a resource</Russian>
+		<English>Import a resource</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ECOPOIESIS_REACTOR</Tag>
@@ -8588,7 +8587,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_FOAM_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Produces metal foam </English>
 		<Russian>Производит металлическую пену</Russian>
 	</TEXT>
 	<TEXT>
@@ -8725,7 +8724,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_INDUSTRIAL_COMPLEX_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Advanced production of military equipment.</English>
 		<Russian>Продвинутое производство военной техники.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8945,7 +8944,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_ROCK_LAB_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Google Lunar XPRIZE (GLXP), sometimes referred to as Moon 2.0, is an honorable mention space competition hosted by XPRIZE and sponsored by Google. The challenge is for private space companies to be the first to land an automated station on the moon, financed from their own sources, fly up to 500 meters and send back high-definition video and images. </English>
 		<Russian>Google Lunar XPRIZE (GLXP), иногда называемый Moon 2.0, является космическим конкурсом с поощрительным призом, организованным XPRIZE и спонсируемым Google. Задача состоит в том, чтобы частные космические компании первыми посадили на Луну автоматическую станцию, профинансировав из собственных источников, пролетели до 500 метров и передали обратно видео и изображения высокой четкости.</Russian>
 	</TEXT>
 	<TEXT>

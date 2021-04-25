@@ -329,11 +329,6 @@
 		<English>Strategy Overlay allows player to plan where he wants to place his next cities by adding colored dots to the desired map plots. To activate Strategy Overlay edit mode, press [COLOR_HIGHLIGHT_TEXT]ALT-X[COLOR_REVERT]. Select desired color from the palette on the left and then mouse left button to place a dot to map plot. The plot is surrounded with city radius to give you a clear picture how the land will be used if city is placed on that plot. To remove dot from plot hover your mouse pointer over it and right click. Press [COLOR_HIGHLIGHT_TEXT]ALT-X[COLOR_REVERT] to exit Strategy Overlay edit mode. With [COLOR_HIGHLIGHT_TEXT]CTRL-X[COLOR_REVERT] you can turn on and off the overlay.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BUG_OVERLAY_PEDIA2</Tag>
-		<English>TBD</English>
-		<Russian>[H1]Великие сыщики[\H1]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_OVERLAY_TEXT</Tag>
 		<English>Strategy Overlay</English>
 		<Spanish>Capa estratégica</Spanish>
