@@ -408,7 +408,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_ECONOMY_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_ECONOMY_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_ECONOMY_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
