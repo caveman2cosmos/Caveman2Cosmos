@@ -680,7 +680,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Tag>
 		<English>Fortifications are military constructions and buildings designed for defence in warfare and military bases. Humans have constructed defensive works for many thousands of years, in a variety of increasingly complex designs. The term is derived from the Latin fortis ("strong") and facere ("to make").</English>
-		<Russian>[TAB]Ôîðòû - âîåííûå ñîîðóæåíèÿ è çäàíèÿ, ïðåäíàçíà÷åííûå äëÿ çàùèòû íà âîéíå è âîåííûõ áàç. - Wikipedia</Russian>
+		<Russian>Ôîðòû - âîåííûå ñîîðóæåíèÿ è çäàíèÿ, ïðåäíàçíà÷åííûå äëÿ çàùèòû íà âîéíå è âîåííûõ áàç. - Wikipedia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE</Tag>
@@ -960,7 +960,7 @@
 		<Italian>Il Kelp può essere raccolto come cibo e fertilizzante sin dai tempi antichi.</Italian>
 		<Spanish>Las algas han sido recolectadas y usadas como alimento y fertilizante desde la Antigüedad.</Spanish>
 		<Polish>Wodorosty były zbierane i używane jako pożywienie oraz nawozy od czasów starożytnych.</Polish>
-		<Russian>[TAB]Ñ äðåâíåéøèõ âðåìåí âîäîðîñëè ñëóæèëè â êà÷åñòâå èñòî÷íèêà äëÿ ïðîïèòàíèÿ è óäîáðåíèé.</Russian>
+		<Russian>Ñ äðåâíåéøèõ âðåìåí âîäîðîñëè ñëóæèëè â êà÷åñòâå èñòî÷íèêà äëÿ ïðîïèòàíèÿ è óäîáðåíèé.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HUNTING_CAMP</Tag>
@@ -1098,7 +1098,7 @@
 		<English>Indigenous Communities represent the enduring settlements of primative peoples. Many countries, such as the United States with the American Indians or the primative tribes that dot South American nations, must balance the sovereign and human rights of these people with the demands of development.</English>
 		<Italian>Le comunità indigene rappresentano gli stabilimenti permanenti di popoli primitivi. La maggior parte dei paesi, come gli Stati Uniti con gli Indiani d'America, devono bilanciare la sovranità e i diritti umani di questi popoli con la necessità di progresso.</Italian>
 		<Polish>Według profesora Andrzeja Saksona, socjologa specjalizującego się w badaniach mniejszości etnicznych termin autochton określa także mieszkańca pogranicza polsko-niemieckiego, byłego obywatela III Rzeszy, deklarującego polskie pochodzenie. Termin ten bywał niezrozumiały dla osób nim obdarzanych, bywał też stygmatyzujący. Polskojęzyczni mieszkańcy dawnych Prus Wschodnich pochodzili głównie z Mazowsza (z Kurpiów). W ścisłym tego słowa znaczeniu autochtonami nie byli. Pomimo tego, ze względów propagandowych termin ten od 1945 r. został narzucony przez władze PRL. Przyjął się i bywa używany do dziś, także w innych językach. Za rdzennych (autochtonicznych) mieszkańców tych terenów uznać należałoby Prusów.</Polish>
-		<Russian>[TAB]Îáùèíû êîðåííûõ íàðîäîâ íûíå ïðîæèâàþò â ïîñòîÿííûõ ïîñåëåíèÿõ ñ ïðèìèòèâíûì óêëàäîì æèçíè. Âî ìíîãèõ ñòðàíàõ, òàêèõ êàê ÑØÀ ñ ïðîáëåìîé àìåðèêàíñêèõ èíäåéöåâ è äð. ïðèìèòèâíûõ ïëåìåí, ðàññåëèâøèõñÿ â Ëàòèíñêîé Àìåðèêå, èìååòñÿ ïðîáëåìà â ïëàíå îáåñïå÷åíèÿ èõ âñåìè äîñòèæåíèÿìè ñîâðåìåííîãî ìèðà è îäíîâðåìåííîãî ñîõðàíåíèÿ èõ ñàìîáûòíîñòè.</Russian>
+		<Russian>Îáùèíû êîðåííûõ íàðîäîâ íûíå ïðîæèâàþò â ïîñòîÿííûõ ïîñåëåíèÿõ ñ ïðèìèòèâíûì óêëàäîì æèçíè. Âî ìíîãèõ ñòðàíàõ, òàêèõ êàê ÑØÀ ñ ïðîáëåìîé àìåðèêàíñêèõ èíäåéöåâ è äð. ïðèìèòèâíûõ ïëåìåí, ðàññåëèâøèõñÿ â Ëàòèíñêîé Àìåðèêå, èìååòñÿ ïðîáëåìà â ïëàíå îáåñïå÷åíèÿ èõ âñåìè äîñòèæåíèÿìè ñîâðåìåííîãî ìèðà è îäíîâðåìåííîãî ñîõðàíåíèÿ èõ ñàìîáûòíîñòè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INDUSTRIAL_COMPLEX</Tag>
@@ -1203,7 +1203,7 @@
 		<English>Can only be built on Reefs and Coral. Before the development of clearly defined ports mariners were guided by fires built on hilltops. Since raising the fire would improve the visibility, placing the fire on a platform became a practice that led to the development of the lighthouse. In antiquity, the lighthouse functioned more as an entrance marker to ports than as a warning signal for reefs and promontories, unlike many modern lighthouses.</English>
 		<Italian>Può essere costruito solo su scogli e coralli. Prima dello sviluppo di porti chiaramente definiti, i marinai erano guidati da fuochi accesi in cima alle colline. Dato che alzare il fuoco migliorava la visibilità, posizionare il fuoco su una piattaforma divenne una pratica che portò allo sviluppo del faro. Nell'antichità, il faro funzionava più come segnale d'entrata ai porti piuttosto che segnale per scogli e promontori, a differenza della maggior parte dei fari moderni.</Italian>
 		<Polish>Latarnia morska - znak nawigacyjny w postaci charakterystycznej wieży umieszczonej na brzegu lub w wodzie (latarniowiec). Wbrew nazwie może występować również na brzegu odpowiednio dużego zbiornika śródlądowego (jeziora), na którym prowadzona jest żegluga.</Polish>
-		<Russian>[TAB]Ìîæåò áûòü ïîñòðîåí òîëüêî íà ðèôàõ èëè êîðàëëîâûõ ðèôàõ[PARAGRAPH:2]Äî ïîÿâëåíèÿ ìîðñêèõ ïîðòîâ êàê òàêîâûõ ìîðÿêè ðóêîâîäñòâîâàëèñü êîñòðèùàìè, ðàçîææåííûõ íà âîçâûøåííîòÿõ. Ïîñêîëüêó ðàçâåäåíèå êîñòðà äàâàëî âîçìîæíîñòü îïîâåñòèòü ñóäíî çàðàíåå, ðàçìåùåíèå èñòî÷íèêà ñâåòà íà ïëàòôîðìå ñòàëî ïðàêòèêîé, ÷òî è ïðèâåëî ê ïîÿâëåíèþ ìàÿêîâ. Â îòëè÷èå îò ìíîãèõ ñîâðåìåííûõ ìàÿêîâ, â äðåâíîñòè îíè ôóíêöèîíèðîâàëè ñêîðåå êàê îáîçíà÷åíèå âõîäà â ãàâàíè, íåæåëè ÷åì â êà÷åñòâå ïðåäóïðåäèòåëüíîãî ñèãíàëà î áëèçîñòè ðèôîâ è ìûñîâ.</Russian>
+		<Russian>Ìîæåò áûòü ïîñòðîåí òîëüêî íà ðèôàõ èëè êîðàëëîâûõ ðèôàõ[PARAGRAPH:2]Äî ïîÿâëåíèÿ ìîðñêèõ ïîðòîâ êàê òàêîâûõ ìîðÿêè ðóêîâîäñòâîâàëèñü êîñòðèùàìè, ðàçîææåííûõ íà âîçâûøåííîòÿõ. Ïîñêîëüêó ðàçâåäåíèå êîñòðà äàâàëî âîçìîæíîñòü îïîâåñòèòü ñóäíî çàðàíåå, ðàçìåùåíèå èñòî÷íèêà ñâåòà íà ïëàòôîðìå ñòàëî ïðàêòèêîé, ÷òî è ïðèâåëî ê ïîÿâëåíèþ ìàÿêîâ. Â îòëè÷èå îò ìíîãèõ ñîâðåìåííûõ ìàÿêîâ, â äðåâíîñòè îíè ôóíêöèîíèðîâàëè ñêîðåå êàê îáîçíà÷åíèå âõîäà â ãàâàíè, íåæåëè ÷åì â êà÷åñòâå ïðåäóïðåäèòåëüíîãî ñèãíàëà î áëèçîñòè ðèôîâ è ìûñîâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_REEF</Tag>

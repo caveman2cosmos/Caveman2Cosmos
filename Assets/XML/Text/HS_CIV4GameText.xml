@@ -38,7 +38,7 @@
 		<French>Autel pour Sacrifice Humain</French>
 		<Italian>Un altare utilizzato per i sacrifici umani</Italian>
 		<Polish>Ołtarz Ofiar z ludzi</Polish>
-		<Russian>[TAB]Àëòàðü äëÿ ÷åëîâå÷åñêèõ æåðòâîïðèíîøåíèé</Russian>
+		<Russian>Àëòàðü äëÿ ÷åëîâå÷åñêèõ æåðòâîïðèíîøåíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE</Tag>
@@ -70,7 +70,7 @@
 		<French>Sacrifice Humain...</French>
 		<Italian>Sacrifici umani...</Italian>
 		<Polish>Ofiary z ludzi...</Polish>
-		<Russian>[TAB]×åëîâå÷åñêèå æåðòâîïðèíîøåíèÿ....</Russian>
+		<Russian>×åëîâå÷åñêèå æåðòâîïðèíîøåíèÿ....</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_REMOVE_WV_HUMAN_SACRIFICE</Tag>
