@@ -102,14 +102,6 @@
 		<Polish>Kraby (Brachyura, z języka greckiego krótki odwłok/ogon) grupa[a] krótkoodwłokowych skorupiaków z rzędu dziesięcionogów (Decapoda). Kraby są najliczniejszą (opisano 10 500 gatunków) grupą dziesięcionogów, u której pierwsza para odnóży krocznych przekształciła się w szczypce. Wielkość ciała bardzo zróżnicowana, o rozpiętości odnóży od kilku milimetrów (Pinnotheres pisum) do prawie 4 m (japoński krab pacyficzny).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_TAMED_ANIMALS_TEXT</Tag>
-		<English>Tamed animals</English>
-		<French>Animaux Dressés</French>
-		<German>Gezähmte Tiere</German>
-		<Polish>Oswojone zwierzęta</Polish>
-		<Russian>Îäîìàøíåííûå æèâîòíûå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCING_BEAR_PEDIA</Tag>
 		<English>The Dancing Bear is a popular source of amusement for the people of Erebus, be they Veil Ritualists or Order Acolytes. Dancing Bears can't be built, a wild Bear must be captured, taken to a city, and turned into a Dancing Bear. A Carnival is not needed to build the dancing bear, and in fact they dislike the competition.</English>
 		<French>L'Ours Dansant est une source d'amusement populaire pour les gens d'Erebus, aussi bien les vils ritualistes du Voile que les austères acolytes de l'Ordre. Les Ours Dansants ne peuvent être construit, un Ours sauvage doit être capturé, amené dans une ville et transformé en Ours Dansant. Un Carnaval n'est pas nécessaire pour construire un Ours Dansant, et en réalité ils n'aiment pas la compétition.</French>
@@ -374,13 +366,6 @@
 		<Italian>Le storie di animali marini sono storie riguardanti creature marine sconfitte in combattimento.</Italian>
 		<Polish>Opowieści o morskich zwierzętach są opowieściami o zwierzętach pokonanych w walce.</Polish>
 		<Russian>Ðàññêàçû î ìîðñêèõ æèâîòíûõ - ýòî ðàññêàçû î ïîáåæäåííûõ â áîþ ìîðñêèõ ñóùåñòâàõ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_TAMED_ANIMALS_PEDIA</Tag>
-		<English>Tamed animals are basically the same as subdued animals except you can build them and they can attack. They were originally included because the unit graphics by SaibotLieh are cool.</English>
-		<French>Les animaux dressés sont fondamentalement les mêmes que les animaux apprivoisés, sauf que vous pouvez les construire et qu'ils peuvent attaquer. Ils ont été initialement inclus parce que les graphiques de l'unité par SaibotLieh sont cool.</French>
-		<Polish>Oswojone zwierzęta są identyczne z poskromionymi zwierzętami oprócz jednej rzeczy - masz możliwość "budowania" tych zwierząt w mieście.</Polish>
-		<Russian>Îäîìàøíåííûå æèâîòíûå â îñíîâíîì òàêèå æå, êàê ïðèðó÷åííûå æèâîòíûå, çà èñêëþ÷åíèåì òîãî, ÷òî âû ìîæåòå ïîñòðîèòü èõ, è îíè ìîãóò àòàêîâàòü âðàæåñêèõ ëàçóò÷èêîâ è äèâåðñàíòîâ. Ïåðâîíà÷àëüíî îíè áûëè âêëþ÷åíû èç-çà ïðåâîñõîäíûõ ãðàôè÷åñêèõ ìîäåëåé îò SaibotLieh.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNTER_PEDIA</Tag>
