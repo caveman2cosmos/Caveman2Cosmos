@@ -7959,7 +7959,7 @@ short* CvPlot::getYield() const
 int CvPlot::getYield(YieldTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
-	return std::max<short>(0, m_aiYield[eIndex]);
+	return m_aiYield[eIndex];
 }
 
 void CvPlot::updateYield()
@@ -7975,7 +7975,7 @@ void CvPlot::updateYield()
 	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{
 		const int iNewYield = calculateYield((YieldTypes)iI);
-		const int iOldYield = getYield((YieldTypes)iI);
+		const int iOldYield = m_aiYield[iI];
 
 		if (iOldYield != iNewYield)
 		{
@@ -8155,12 +8155,9 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			ePlayer = GC.getGame().getActivePlayer();
 		}
 	}
-	else
-	{
-		ePlayer = getOwner();
-	}
-	int iYield = calculateNatureYield(eYield, ((ePlayer != NO_PLAYER) ? GET_PLAYER(ePlayer).getTeam() : NO_TEAM));
+	else ePlayer = getOwner();
 
+	int iYield = calculateNatureYield(eYield, ((ePlayer != NO_PLAYER) ? GET_PLAYER(ePlayer).getTeam() : NO_TEAM));
 	bool bCity = false;
 
 	if (ePlayer != NO_PLAYER)
@@ -8204,7 +8201,6 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			}
 		}
 	}
-
 	iYield += GC.getGame().getPlotExtraYield(m_iX, m_iY, eYield);
 
 	if (ePlayer != NO_PLAYER)

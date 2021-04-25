@@ -10408,16 +10408,6 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		szString.append(NEWLINE);
 	}
 
-	if (pCity->getExtraYieldTurns() > 0)
-	{
-		szString.append(NEWLINE);
-		szString.append(gDLL->getText("TXT_KEY_MISC_EXTRA_HAMMERS_TURNS", pCity->getExtraYieldTurns()));
-	}
-	else if (pCity->getExtraYieldTurns() < 0)
-	{
-		szString.append(NEWLINE);
-		szString.append(gDLL->getText("TXT_KEY_MISC_EXTRA_FOOD_TURNS", -pCity->getExtraYieldTurns()));
-	}
 	pCity->getProperties()->buildDisplayString(szString);
 
 // BUG - Hide UI Instructions - start
