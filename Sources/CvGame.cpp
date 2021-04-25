@@ -6747,7 +6747,6 @@ void CvGame::doGlobalWarming()
 
 void CvGame::doHeadquarters()
 {
-
 	if (Cy::call_optional(PYGameModule, "doHeadquarters"))
 	{
 		return;
@@ -6779,9 +6778,9 @@ void CvGame::doHeadquarters()
 				&& kLoopTeam.isHasTech(eTechPrereq)
 				&& kLoopTeam.getNumCities() > 0)
 				{
-					for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+					foreach_(const BonusTypes eBonus, kCorporation.getPrereqBonuses())
 					{
-						if (NO_BONUS != kCorporation.getPrereqBonus(i) && kLoopTeam.hasBonus((BonusTypes)kCorporation.getPrereqBonus(i)))
+						if (kLoopTeam.hasBonus(eBonus))
 						{
 							int iValue = getSorenRandNum(10, "Found Corporation (Team)");
 
@@ -6812,10 +6811,9 @@ void CvGame::doHeadquarters()
 
 					if (playerX.isAliveAndTeam(eBestTeam) && playerX.getNumCities() > 0)
 					{
-						for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+						foreach_(const BonusTypes eBonus, kCorporation.getPrereqBonuses())
 						{
-							const BonusTypes eBonus = (BonusTypes)kCorporation.getPrereqBonus(i);
-							if (NO_BONUS != eBonus && playerX.hasBonus(eBonus))
+							if (playerX.hasBonus(eBonus))
 							{
 								int iValue = getSorenRandNum(25, "Found Corporation (Player)") - playerX.getNumAvailableBonuses(eBonus);
 
@@ -9159,20 +9157,11 @@ bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationT
 	if (GC.getCorporationInfo(eCorporation1).isCompetingCorporation(eCorporation2) || GC.getCorporationInfo(eCorporation2).isCompetingCorporation(eCorporation1))
 		return true;
 
-	for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+	foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation1).getPrereqBonuses())
 	{
-		if (GC.getCorporationInfo(eCorporation1).getPrereqBonus(i) != NO_BONUS)
+		if (algo::contains(GC.getCorporationInfo(eCorporation2).getPrereqBonuses(), eBonus))
 		{
-			for (int j = 0; j < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++j)
-			{
-				if (GC.getCorporationInfo(eCorporation2).getPrereqBonus(j) != NO_BONUS)
-				{
-					if (GC.getCorporationInfo(eCorporation1).getPrereqBonus(i) == GC.getCorporationInfo(eCorporation2).getPrereqBonus(j))
-					{
-						return true;
-					}
-				}
-			}
+			return true;
 		}
 	}
 

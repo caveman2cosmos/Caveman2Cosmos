@@ -45,6 +45,15 @@ namespace Cy											\
 
 namespace Cy
 {
+	template <class Range_ class Item_>
+	python::list makeList(Range_ seq)
+	{
+		python::list list = python::list();
+		foreach_(Item_ i, seq)
+			list.append((int)i);
+		return list;
+	}
+
 	template < class Ty_ >
 	struct base_type
 	{

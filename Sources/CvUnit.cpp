@@ -10575,7 +10575,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 		return false;
 	}
 
-	CvCity* pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (NULL == pCity)
 	{
@@ -10648,33 +10648,22 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 				}
 			}
 		}
-/************************************************************************************************/
-/* Afforess	                  Start		 02/17/10                                               */
-/*                                                                                              */
-/* Some corporations don't require any resources...                                             */
-/************************************************************************************************/
+		// Afforess: Some corporations don't require any resources...
 		bool bValid = false;
 		bool bRequiresBonus = false;
-		for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+		foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 		{
-			BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
-			if (NO_BONUS != eBonus)
+			bRequiresBonus = true;
+			if (pCity->hasBonus(eBonus))
 			{
-				bRequiresBonus = true;
-				if (pCity->hasBonus(eBonus))
-				{
-					bValid = true;
-					break;
-				}
+				bValid = true;
+				break;
 			}
 		}
 		if (!bValid && bRequiresBonus)
 		{
 			return false;
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 		if (GET_PLAYER(getOwner()).getGold() < spreadCorporationCost(eCorporation, pCity))
 		{
