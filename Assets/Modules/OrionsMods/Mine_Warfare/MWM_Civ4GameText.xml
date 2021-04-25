@@ -17,11 +17,6 @@
 		<Russian>Центр взрывных технологий - это национальное чудо, созданное для повышения производительности и эффективности наземных и морских мин. Передовые технологии, изученные на этом испытательном полионе, необходимы для создания ядерных минных полей.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Advanced Mine Technology Center[COLOR_REVERT] doubles the production speed of Mines and Mine Fields by reducing the cost by 50%. The effective power of Mines and Mine Fields against armored units is increased to allow Anti-Tank capability.</English>
-		<Russian>[COLOR_BUILDING_TEXT]Центр технологии взрыва[COLOR_REVERT] удваивает скорость производства мин и минных полей за счет снижения затрат на 50%. Мощность мин и минных полей против бронетанковых подразделений увеличена, предоставляя противотанковую защиту.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_INVISIBLE_LAND_MINE</Tag>
 		<English>Mines</English>
 		<French>

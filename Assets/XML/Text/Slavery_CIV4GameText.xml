@@ -181,13 +181,6 @@
 		<Russian>Ðàá. òðóä (óáîðêà)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Tag>
-		<English>Build the various Slave Compounds to get access to specialised settled slaves.</English>
-		<French>Construisez divers Camps d'esclaves pour avoir accès à des spécialistes esclaves dans votre ville.</French>
-		<Italian>Costruisci le diverse baracche degli schiavi per ottenere l'accesso a diversi schiavi specializzati.</Italian>
-		<Russian>Создавайте различные формы «Рабского труда», чтобы получить доступ к городским рабам-специалистам.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_MARKET_HELP</Tag>
 		<English>[ICON_BULLET]Slave Market increases the outcomes from using Captives as Slaves - e.g. increases amount of gold you get from selling a captive into slavery.</English>
 		<French>[ICON_BULLET]Le marché d'esclaves augmente les bénéfices de l'utilisation de prisonnier en tant qu'esclaves, ainsi que l'or que vous pouvez obtenir de la vente d'esclaves.</French>
@@ -226,13 +219,6 @@
 		<Italian>Schiavismo...</Italian>
 		<Polish>Niewolnictwo...</Polish>
 		<Russian>[TAB]Ðàáîâëàäåíèå....</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WV_SLAVERY_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Worldview - Slavery[COLOR_REVERT] indicates slavery is OK in your nation at this time. It can only be removed by a Great Person or Lawyer. It opens up the slave buildings and improves results from using captives as slaves.</English>
-		<French>La [COLOR_UNIT_TEXT]Vision du monde - Esclavage[COLOR_REVERT] indique que l'esclavage est considéré comme normal au sein de votre nation. Peut uniquement être enlevé par un personnage illustre ou un avocat. Il permet l'accès à des bâtiments spécifiques pour l'esclavage, et augmente les chances de capturer des prisonniers esclaves.</French>
-		<Italian>La [COLOR_UNIT_TEXT]Concezione del mondo - Schiavismo[COLOR_REVERT] è un edificio fittizio che indica che nella tua nazione la schiavitù è legale. Può essere rimossa solo da una Grande Persona o da un uomo di legge. Sblocca tutti gli edifici legati agli schiavi e migliora i risultati ottenuti dai tuoi prigionieri.</Italian>
-		<Russian>[COLOR_UNIT_TEXT]Ðàáîâëàäåëü÷åñêîå ìèðîâîççðåíèå[COLOR_REVERT] îáîçíà÷àåò ïîçèòèâíîå îòíîøåíèå ê ðàáîâëàäåíèþ íà äàííûé ìîìåíò. Îíî ìîæåò áûòü çàïðåùåíî òîëüêî Âåëèêèìè ëþäüìè èëè Àäâîêàòàìè. Îíî ïîçâîëÿåò ñîçäàâàòü ðàáîâëàä. ïîñòðîéêè è ïîâûøàòü ïðîèçâîäèòåëüíîñòü, èñïîëüçóÿ ïëåííèêîâ â êà÷åñòâå ðàáîâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SETTLED_SLAVE</Tag>

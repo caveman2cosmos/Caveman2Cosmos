@@ -20,13 +20,6 @@
 		<Russian>[TAB]Ïðèìèòèâíàÿ ýëåêòðîñòàíöèÿ ñòèìïàíêà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COAL_DYNAMO_STRATEGY</Tag>
-		<English>Build a Coal Fired Dynamo to increase your city's electricity.</English>
-		<French>Construisez une [COLOR_BUILDING_TEXT]Dynamo à charbon[COLOR_REVERT] vous permet d'augmenter l'électricité produite dans la ville.</French>
-		<Italian>Costruisci un Generatore a carbone per incrementare la produzione elettrica della tua città.</Italian>
-		<Russian>Óãîëüíûé ãåíåðàòîð óâåëè÷èâàåò ýíåðãèþ â ãîðîäå.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE</Tag>
 		<English>Mad Scientist's Castle</English>
 		<French>
@@ -44,13 +37,6 @@
 		<Italian>La residenza locale dello scienziato pazzo che controlla la campagna circostante, con il pugno di ferro e la sua conoscenza tecnologica. Dai suoi esperimenti derivano un avanzamento tecnologico e una diminuzione del mantenimento, dato che lui e i suoi abili aiutanti controllano il governo locale. Tuttavia, alcuni esperimenti sulla popolazione tendono a innervosire le persone.</Italian>
 		<Polish>Szalony naukowiec jest bardzo często przedstawiany jako złoczyńca. Jest to postać, której pogląd na otaczający ją świat jest zniszczony przez maniakalne podejście do nauki i która pracuje nad stworzeniem wynalazku albo odkryciem sposobu na uzyskanie władzy lub pokonanie bohatera. Typowym zakończeniem fabuły jest obrócenie się wynalazku wobec samego naukowca albo poprzez błąd w jego zamyśle lub przez wykorzystanie wynalazku przez bohatera. Przykładami szalonych naukowców są Dr Evil, Dr Frankenstein, Dr Eggman czy Dr Doom.</Polish>
 		<Russian>[TAB]Ìåñòî æèòåëüñòâà áåçóìíîãî ó÷åíîãî, êîòîðûé êîíòðîëèðóåò îêðóæàþùóþ ìåñòíîñòü æåëåçíûì êóëàêîì è àðìèåé. Îõ óæ ýòà íàóêà! Åãî áåçóìíûå îïûòû ïðèâîäÿò ê óñêîðåíèþ òåõíè÷åñêîãî ïðîãðåññà è ñíèæåíèþ ñòîèìîñòè îáñëóæèâàíèÿ, òàê êàê îí è åãî ïðèñïåøíèêè, îêàçûâàþò ïîìîùü â ìåñòíîì ñàìîóïðàâëåíèè. Õîòÿ, íåêîòîðûå åãî ýêñïåðèìåíòû è ìîãóò ñáèòü ëþäåé ñ òîëêó.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE_STRATEGY</Tag>
-		<English>Build a Mad Scientist's Castle to increase your city's science.</English>
-		<French>Construisez un [COLOR_BUILDING_TEXT]Château de Savant Fou[COLOR_REVERT] pour améliorer la science de votre ville.</French>
-		<Italian>Costruisci un Castello dello scienziato pazzo per incrementare la ricerca della tua città.</Italian>
-		<Russian>Çàìîê áåçóì. ó÷åíîãî ñïîñîáñòâóþò ðîñòó íàóêè â ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUNICIP_COMP</Tag>
@@ -72,13 +58,6 @@
 		<Russian>[TAB]Èäåÿ ñîçäàòü ïàðîâóþ âû÷èñëèòåëüíóþ ìàøèíó ïîñåòèëà â 19 âåêå ×àðëüçà Áýááèäæà. Ìîæíî áûëî áû íàçâàòü åãî ïåðâûì êîìïüþòåðîì â ìèðå, íî çàäóìêà 1837 ãîäà, ê ñîæàëåíèþ, òàê è îñòàëàñü íà áóìàãå - èçîáðåòàòåëü óìåð ðàíüøå ðåàëèçàöèè ïðîåêòà.[PARAGRAPH:1]Íàäî îòìåòèòü, ÷òî óñòðîéñòâî (ñóäÿ ïî ÷åðòåæàì) èìåëî ðàñøèðÿåìóþ ïàìÿòü, ïðîöåññîð, ïðèíòåð, ïëîòòåð è ïðîãðàììèðîâàëîñü ñ ïîìîùüþ ïåðôîêàðò, ÷òî áûëî î÷åíü íåïëîõî äëÿ òîãî âðåìåíè è äëÿ ïëàíèðóåìîé êîíñòðóêöèè.[PARAGRAPH:2]Ðåàëèçàöèÿ ýòîãî ïðîåêòà ÿâëÿåòñÿ áëàãîì äëÿ ó÷åíûõ è èíæåíåðîâ, îäíàêî ãîðîæàíå æàëóþòñÿ íà îãðîìíîå êîëè÷åñòâî ñàæè, äåíü è íî÷ü âûðàáàòûâàåìîé äâèãàòåëåì ýòîé êîíñòðóêöèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MUNICIP_COMP_STRATEGY</Tag>
-		<English>Build a Municipal Computing Engine to increase your city's science.</English>
-		<French>Construisez un [COLOR_BUILDING_TEXT]Centre de Calcul Municipal[COLOR_REVERT] pour améliorer la science de votre ville.</French>
-		<Italian>Costruisci un Centro informatico municipale per incrementare la ricerca della tua città.</Italian>
-		<Russian>Ïàðîâîé êîìïüþòåð ñïîñîáñòâóþò ðîñòó íàóêè â ãîðîäå.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEMO_ACADEMY</Tag>
 		<English>Nemo's Naval Academy</English>
 		<French>Académie navale de Némo</French>
@@ -92,13 +71,6 @@
 		<Italian>Il Capitano Nemo, noto anche come Principe Dakkar, è un personaggio di fantasia presente nei romanzi di Jules Verne Ventimila leghe sotto i mari (1870) e L'isola misteriosa (1874).</Italian>
 		<Polish>Kapitan Nemo (nemo łac. nikt) - postać literacka z powieści Juliusza Verne'a Dwadzieścia tysięcy mil podmorskiej żeglugi oraz Tajemnicza wyspa. Projektant, budowniczy i dowódca okrętu podwodnego Nautilus. Był wysoki, miał niebieskie oczy i bladą cerę. W powieści 20 000 mil podmorskiej żeglugi trudno określić jego wiek, ale to dojrzały mężczyzna. Był człowiekiem spokojnym i łagodnym, jednak kiedy popadł w gniew, potrafił być porywczy. Pewny siebie i dumny, zachowywał dystans dla swoich gości. Jego załogę stanowili ludzie z różnych krajów, dobrzy, odważni i szlachetni, a także lojalni wobec siebie i swego kapitana.</Polish>
 		<Russian>[TAB]Êàïèòàí Íåìî, òàêæå èçâåñòíûé êàê Ïðèíö Äàêêàð - ïåðñîíàæ ðîìàíîâ Æþëÿ Âåðíà. Èíæåíåð, èçîáðåòàòåëü, êîíñòðóêòîð, ó÷åíûé-îêåàíîëîã, áîðåö ïðîòèâ áðèòàíñêîãî êîëîíèàëèçìà. Ñîçäàòåëü è êàïèòàí ôàíòàñòè÷åñêîãî ïîäâîäíîãî êîðàáëÿ «Íàóòèëóñ». Äåéñòâóåò â ðîìàíàõ «Äâàäöàòü òûñÿ÷ ëüå ïîä âîäîé» è «Òàèíñòâåííûé îñòðîâ», âìåñòå ñ ðîìàíîì «Äåòè êàïèòàíà Ãðàíòà» ñîñòàâëÿþùèõ òðèëîãèþ, îáúåäèíåííóþ îáùèìè ãåðîÿìè.[PARAGRAPH:2]Ïðèíö Äàêêàð âîçãëàâëÿâëÿë â 50-õ ãîäàõ XIX âåêà âîññòàíèå èíäèéñêèõ ñèïàåâ ïðîòèâ áðèòàíñêèõ çàõâàò÷èêîâ, ïîðàáîòèâøèõ åãî ðîäíóþ ñòðàíó. Âîññòàíèå îêîí÷èëîñü ïîðàæåíèåì ñèïàåâ, Èíäèÿ ñíîâà îêàçàëàñü ïîä âëàäû÷åñòâîì Áðèòàíèè, è çà ãîëîâó íàñëåäíîãî ïðèíöà è ïðåäâîäèòåëÿ ìÿòåæíèêîâ áûëà íàçíà÷åíà îãðîìíàÿ öåíà. Ïî íåêîòîðûì ñâåäåíèÿì, æåíó è äâîèõ äåòåé Äàêêàðà âçÿëè â çàëîæíèêè è óáèëè â ïëåíó, ñàì îí áûë âûíóæäåí ñêðûâàòüñÿ. Áëàãîäàðÿ áëåñòÿùåìó ðàçíîñòîðîííåìó îáðàçîâàíèþ, ïîëó÷åííîìó Äàêêàðîì â Åâðîïå, è ìíîãî÷èñëåííûì òàëàíòàì îí ñìîã ïîñòðîèòü ïåðâûé â ìèðå äåéñòâóþùèé ïîäâîäíûé êîðàáëü âìåñòå ñ ãîðñòêîé âåðíûõ åìó ëþäåé íà îòäàëåííîì îñòðîâêå Òèõîãî îêåàíà, îòêóäà è íà÷àë ñâîå ïëàâàíèå.[PARAGRAPH:1]Ñ òåõ ïîð ïåðâûé ÷åëîâåê, øàãíóâøèé â ãëóáèíû îêåàíà, ïîòåðÿë, ïî ñîáñòâåííîìó âûðàæåíèþ, è âåðó, è Ðîäèíó, è èìÿ - è ñòàë íàçûâàòüñÿ êàïèòàíîì Íèêòî (Íåìî). Îí óòâåðæäàë, ÷òî íàâñåãäà óìåð äëÿ çåìëè è âñåõ ëþäåé, îáúÿâèâ òàêèì îáðàçîì ïðîòåñò âñåìó ìèðó. Ïðèíöèïèàëüíî íå óïîòðåáëÿÿ íè äëÿ êàêèõ íóæä ñâîåé æèçíè âåùåñòâ íàçåìíîãî ïðîèñõîæäåíèÿ è ñòàðàÿñü íå âûõîäèòü íà ñóøó, Íåìî íå ñìîã îáðåñòè äóøåâíûé ïîêîé â îêåàíñêèõ ïðîñòîðàõ. Âëþáëåííûé â ìîðå, Íåìî ñ÷èòàë, ÷òî òîëüêî òàì ÷åëîâåê ìîæåò ñïàñòèñü îò íåñïðàâåäëèâîñòåé îáùåñòâà è æèòü èñòèííî ñâîáîäíîé æèçíüþ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NEMO_ACADEMY_STRATEGY</Tag>
-		<English>Build Nemo's Naval Academy to increase your city's naval power.</English>
-		<French>Construisez [COLOR_BUILDING_TEXT]l'Académie navale de Némo[COLOR_REVERT] pour améliorer votre puissance navale.</French>
-		<Italian>Costruisci l'Accademia navale di Nemo per incrementare la forza navale della tua città.</Italian>
-		<Russian>Àêàäåìèÿ Íåìî óâåëè÷èâàåò ìîðñêóþ ìîùü ãîðîäà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANOPTICON_PRISON</Tag>
@@ -120,13 +92,6 @@
 		<Russian>[TAB]Èäåÿ ïàíîïòèêóìà áûëà ïðåäëîæåíà â êîíöå 18 âåêà, êàê íàèáîëåå ýôôåêòèâíûé ñïîñîá äåðæàòü ïîä íàáëþäåíèåì çàêëþ÷åííûõ. Öåíòðàëèçîâàííîå íàáëþäåíèå äëÿ îõðàííèêîâ, íåäîñòóïíîå çàêëþ÷åííûì, íàõîäÿùèìñÿ â êàìåðàõ, êîòîðûå âûñòðîåíû ïî ïåðèìåòðó è âñåãäà õîðîøî ïðîñìàòðèâàþòñÿ èç öåíòðà òþðüìû.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PANOPTICON_PRISON_STRATEGY</Tag>
-		<English>Build a Panopticon Prison to increase your city's law.</English>
-		<French>Construire une [COLOR_BUILDING_TEXT]Prison Panopticone[COLOR_REVERT] pour vous permettre d'améliorer l'ordre de votre ville et d'en réduire la criminalité.</French>
-		<Italian>Costruisci una Prigione Panoptiocon per incrementare la legalità nella tua città.</Italian>
-		<Russian>Ïàíîïòèêóì óìåíüøàåò ïðåñòóïíîñòü â ãîðîäå.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEAT_DYNAMO</Tag>
 		<English>Peat Fired Dynamo</English>
 		<French>Dynamo à tourbe</French>
@@ -142,13 +107,6 @@
 		<Russian>[TAB]Ïðèìèòèâíàÿ ýëåêòðîñòàíöèÿ ñòèìïàíêà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEAT_DYNAMO_STRATEGY</Tag>
-		<English>Build a Peat Fired Dynamo to increase your city's electricity.</English>
-		<French>Construisez une [COLOR_BUILDING_TEXT]Dynamo à tourbe[COLOR_REVERT] vous permet d'augmenter l'électricité produite dans la ville.</French>
-		<Italian>Costruisci un Generatore a torba per incrementare la produzione elettrica della tua città.</Italian>
-		<Russian>Òîðôÿíîé ãåíåðàòîð óâåëè÷èâàåò ýíåðãèþ â ãîðîäå.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY</Tag>
 		<English>Culture (Steampunk)</English>
 		<Italian>Cultura (Steampunk)</Italian>
@@ -161,13 +119,6 @@
 		<Italian>La cultura steampunk è stata influenzata, spesso adottandone lo stile, dai romanzi scientifici del XIX secolo di Jules Verne, H.G. Wells e Mary Shelley.</Italian>
 		<Polish>Steampunk - nurt stylistyczny w kulturze (literatura, film, komiks, moda), odmiana fantastyki naukowej, boczna gałąź cyberpunku. W przeciwieństwie do cyberpunku, technika otaczająca bohaterów nie jest oparta na elektronice lecz na mechanice (np. odpowiednikiem komputera jest maszyna różnicowa). Charakterystyczne dla steampunku zainteresowanie rozwojem techniki często prowadzi do kreowania wynalazków nieznanych w naszej historii, dlatego nurt ten bywa zaliczany do tzw. historii alternatywnych. Akcja utworów steampunkowych przeważnie rozgrywa się w epoce wiktoriańskiej - erze rewolucji technicznej, wieku pary (stąd nazwa gatunku: steam, ang. - para). Steampunk nawiązuje do twórczości ojców fantastyki: Juliusza Verne'a, Herberta George'a Wellsa czy Marka Twaina.</Polish>
 		<Russian>[TAB]Ñòèìïàíê - íàïðàâëåíèå íàó÷íîé ôàíòàñòèêè, ìîäåëèðóþùåå öèâèëèçàöèþ, â ñîâåðøåíñòâå îñâîèâøóþ ìåõàíèêó è òåõíîëîãèè ïàðîâûõ ìàøèí. Ñàì òåðìèí ÿâëÿåòñÿ ñìåñüþ ñëîâ "steam"(ïàð) è "punk"(ìóñîð). Êàê ïðàâèëî, ñòèìïàíê ïîäðàçóìåâàåò àëüòåðíàòèâíûé âàðèàíò ðàçâèòèÿ ÷åëîâå÷åñòâà ñ âûðàæåííîé îáùåé ñòèëèçàöèåé ïîä ýïîõó âèêòîðèàíñêîé Àíãëèè (âòîðàÿ ïîëîâèíà XIX âåêà) è ýïîõó ðàííåãî êàïèòàëèçìà ñ õàðàêòåðíûì ãîðîäñêèì ïåéçàæåì è êîíòðàñòíûì ñîöèàëüíûì ðàññëîåíèåì. Âîçìîæíî, îäíàêî, è íàëè÷èå â ïðîèçâåäåíèÿõ ñòèìïàíêà áîëüøåé èëè ìåíüøåé äîëè ýëåìåíòîâ ôýíòåçè.[PARAGRAPH:2]Ê "ïàíêîâñêîìó" êîìïîíåíòó ñòèìïàíêà îòíîñèòñÿ îñîáûé àêöåíò íà èñòèííîé ÷åëîâå÷åñêîé ïðèðîäå, äâèæèìîé íèçêèìè ñòðàñòÿìè - ïîõîòüþ, ãíåâîì, òùåñëàâèåì, àë÷íîñòüþ è çàâèñòüþ. Îáùèé ñòèëü ñòèìïàíêà çà÷àñòóþ âûãëÿäèò öèíè÷íûì (ãðóáî-îòêðîâåííûì) è ïåññèìèñòè÷íûì (àíòèóòîïè÷åñêèì), îäíàêî, áëàãîäàðÿ êîìè÷åñêèì âîçìîæíîñòÿì ðåòðîñòèëèñòèêè è àëüòåðíàòèâíîé èñòîðèè, øèðîêî ðàñïðîñòðàíåíû è þìîðèñòè÷åñêèå, ïàðîäèéíûå ìîòèâû. Òåì íå ìåíåå ñóùåñòâóåò íåìàëî ïðîèçâåäåíèé ñ ïðîòèâîïîëîæíîé íàïðàâëåííîñòüþ - ðîìàíòèêà, äðàìàòèçì âûñîêèõ ÷óâñòâ, äàæå ýëåìåíòû óòîïèè.[PARAGRAPH:1]Ðåàëèè ñòèìïàíêîâîé ñòèëèñòèêè - "ñòàðèííûå" àâòîìîáèëè, ëîêîìîòèâû, òåëåôîíû è ò.ï., àíàõðîíè÷åñêè âïèñàííûå â áîëåå èëè ìåíåå "ñòàðèííûé" àíòóðàæ, ëåòàþùèå êîðàáëè-äèðèæàáëè, ìåõàíè÷åñêèå ðîáîòû.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY_STRATEGY</Tag>
-		<English>Build [COLOR_BUILDING_TEXT]Culture (Steampunk)[COLOR_REVERT] to gain access to unique buildings and units.</English>
-		<French>Construisez la [COLOR_BUILDING_TEXT]Culture (Steampunk)[COLOR_REVERT] pour avoir accès à des bâtiments et unités uniques.</French>
-		<Italian>Costruisci [COLOR_BUILDING_TEXT]Cultura (Steampunk)[COLOR_REVERT] per poter costruire edifici e unità uniche.</Italian>
-		<Russian>Áèîïàíê äåëàåò äîñòóïíûìè óíèêàëüíûå çäàíèÿ è þíèòû.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TR_WORKSHOP</Tag>
@@ -189,13 +140,6 @@
 		<Russian>[TAB]Òÿãîâûé äâèãàòåëü - ñàìîõîäíàÿ ïàðîâàÿ ìàøèíà, êîòîðàÿ èñïîëüçóåòñÿ äëÿ ïåðåìåùåíèÿ òÿæåëûõ ãðóçîâ ïî äîðîãàì, îáðàáîòêè çåìëè èëè ñíàáæåíèÿ ýíåðãèåé. Íàçâàíèå ïðîèñõîäèò îò ëàòèíñêîãî "tractus", ÷òî îçíà÷àåò äâèæåíèå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TR_WORKSHOP_STRATEGY</Tag>
-		<English>Build a Traction Engine Workshop to build Steampunk units.</English>
-		<French>Construisez un [COLOR_BUILDING_TEXT]Atelier de Moteurs à vapeur[COLOR_REVERT] vous permettra de fabriquer les unités [COLOR_UNIT_TEXT]Steampunk[COLOR_REVERT].</French>
-		<Italian>Costruisci una Bottega di trattori a vapore per costruire unità Steampunk.</Italian>
-		<Russian>Ìàøèííàÿ ìàñòåðñêàÿ ïîçâîëÿåò ñîçäàâàòü þíèòû ñòèìïàíêà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOOD_DYNAMO</Tag>
 		<English>Wood Fired Dynamo</English>
 		<French>
@@ -213,13 +157,6 @@
 		<Italian>Un primitivo impianto di generazione elettrica.</Italian>
 		<Polish>Prymitywna elektownia steampunkowa.</Polish>
 		<Russian>[TAB]Ïðèìèòèâíàÿ ýëåêòðîñòàíöèÿ ñòèìïàíêà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WOOD_DYNAMO_STRATEGY</Tag>
-		<English>Build a Wood Fired Dynamo to increase your city's electricity.</English>
-		<French>Construisez une [COLOR_BUILDING_TEXT]Dynamo à bois[COLOR_REVERT] vous permet d'augmenter l'électricité produite dans la ville.</French>
-		<Italian>Costruisci un Generatore a legna per incrementare la produzione elettrica della tua città.</Italian>
-		<Russian>Äðîâÿíîé ãåíåðàòîð óâåëè÷èâàåò ýíåðãèþ â ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STEAMPUNK</Tag>

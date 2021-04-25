@@ -70,13 +70,6 @@
 		<Russian>Трудовая этика - это ценность, основанная на тяжелом труде и прилежании.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WORKER_TRADITION_STRATEGY</Tag>
-		<English>Worker Traditions change the way your workers do their missions. Usually they affect the speed the workers work at.</English>
-		<French>Les Tradition du Travail changer la façon dont les ouvriers réalisent leur actions.Elles affectent entre autre leur efficacité.</French>
-		<German>Arbeitsmoral ändert die Art und Weise wie Arbeiter ihre Aufgaben erfüllen. Normalerweise beeinflusst dies die Geschwindigkeit der Arbeiter.</German>
-		<Russian>Рабочие традиции влияют на то, как ваши работники выполняют порученные им задания. Обычно они влияют на скорость создания всевозможных улучшений работниками.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_WORKER_TRADITIONS</Tag>
 		<English>Worker Traditions</English>
 		<French>Traditions du Travail</French>

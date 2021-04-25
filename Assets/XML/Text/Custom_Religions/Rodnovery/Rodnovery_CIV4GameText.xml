@@ -12,15 +12,6 @@
 		<Russian>[TAB]Îñòàòêè íåñêîëüêèõ ñëàâÿíñêèõ ñâÿòûíü áûëè îáíàðóæåíû â õîäå àðõåîëîãè÷åñêèõ ðàñêîïîê íà ìûñå Àðêîí íà îñòðîâå Ðþãåí, ãäå íàøëèñü îñòàòêè áîëüøîãî õðàìà è ãîðîäà, îòîæäåñòâëÿåìîãî ñ îïèñàíèÿìè Ñàêñîâ. Â Íîâãîðîäå, íà äðåâíåì ñêèòå Ïåðóíà, àðõåîëîãè îáíàðóæèëè îñòàòêè ÿçû÷åñêîãî õðàìà âåðîÿòíî ïîñâÿùåííîãî Ïåðóíó. Õðàì ñòîÿë íà øèðîêîé êðóãëîé ïëàòôîðìå âîêðóã ñòàòóè. Ïëàòôîðìó îêðóæàë ðîâ ñ âîñåìüþ àïñèäàìè, êîòîðûå ñîäåðæàò îñòàòêè æåðòâåííûõ àëòàðåé. Îñòàòêè öèòàäåëè ñ áîëåå èëè ìåíåå îäèíàêîâûìè ìàêåòàìè áûëè îáíàðóæåíû íà ìåñòå ñ íàâîäÿùèì íàçâàíèåì Ïîãàíüñêî (Paganic), íåïîäàëåêó îò Áðæåöëàâà â ×åõèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RODNOVERY_CATHEDRAL_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Chram[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Rodnovery Cathedral[COLOR_REVERT]) greatly increases a city's cultural output. It makes a city's citizens happy (if [COLOR_HIGHLIGHT_TEXT]Rodnovera[COLOR_REVERT] is the state religion).</English>
-		<French>Cathédrale Rodnovère</French>
-		<German>Rodnovery Cathedral</German>
-		<Italian>La [COLOR_BUILDING_TEXT]Cattedrale Rodnovery[COLOR_REVERT] incrementa notevolmente la produzione culturale di una città. Rende felice un cittadino, se il [COLOR_HIGHLIGHT_TEXT]RODNOVERYo[COLOR_REVERT] è la religione di stato ufficiale.</Italian>
-		<Spanish>Rodnovery Cathedral</Spanish>
-		<Russian>[COLOR_BUILDING_TEXT]Êàïèùå[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Ñîáîð Ðîäíîâåðîâ[COLOR_REVERT]) çàìåòíî ïîâûøàåò óðîâåíü êóëüòóðû â ãîðîäå. Ýòî äåëàåò ãîðîæàí ñ÷àñòëèâûìè (åñëè [COLOR_HIGHLIGHT_TEXT]Ðîäíîâåðèå[COLOR_REVERT] ÿâëÿåòñÿ ãîñóäàðñòâåííîé ðåëèãèåé).</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RODNOVERY_MONASTERY</Tag>
 		<English>Idol</English>
 		<French>Idole</French>
@@ -31,15 +22,6 @@
 		<English>Statues of several Slavic deities were discovered in 1848. On the banks of the Zbruch river, a tall stone statue was found, with four faces under a single stone hat. Because of its similarity to Saxo's description of the great image in the temple of Rügen, the statue was immediately proclaimed a representation of Svantevit, although it was clear it could not be the original Svantevit of Rügen. Several other multi-headed statues were discovered elsewhere. A tiny four-headed statue from the 10th century, carved out of bone, was unearthed among the ruins of Preslav, a capital of medieval Bulgarian tsars. A two-headed, human-sized wooden statue was discovered on an island in the Tollensesee lake near Neubrandenburg: in the Middle Ages, this was the land of the Slavic Dolenain tribe, whose name survives in the name of the lake. Furthermore, a three-headed statue was discovered in Dalmatia (Croatia) on the hill bearing the name of Suvid, not far from the peak of Mt. Dinara called Troglav.</English>
 		<Polish>W religiach pierwotnych kult idola (idolatria) był wyrazem przeświadczenia, że pomiędzy wyobrażeniem bóstwa a nim samym istnieje bezpośrednia więź, granicząca czasem z tożsamością. Oddawanie religijnej czci idolowi było więc jednoczesną adoracją bóstwa. Podobny magiczny charakter miała też idolatria występująca w wielu religiach świata starożytnego (Babilon, Egipt, Grecja, częściowo Izrael i inne). Przyozdabianie idoli, namaszczanie, składanie im ofiar, obnoszenie w procesjach, okadzanie itp. były uważane za usługiwanie samym bóstwom.</Polish>
 		<Russian>[TAB]Ñòàòóè íåñêîëüêèõ ñëàâÿíñêèõ áîæåñòâ áûëè îáíàðóæåíû â 1848 ãîäó. Íà áåðåãó ðåêè Çáðó÷ áûëà îáíàðóæåíà âûñîêàÿ êàìåííàÿ ñòàòóÿ ñ ÷åòûðüìÿ ãðàíÿìè ïîä îäíîé êàìåííîé ìàêóøêîé. Èç-çà ñâîåé ñõîæåñòè ñ ñàêñîíñêèì îïèñàíèåì Âåëèêîé îáðàçà â õðàìå íà îñòðîâå Ðþãåí, ýòà ñòàòóÿ áûëà íåìåäëåííî ïðîâîçãëàøåíà èçâàÿíèåì Ñâåíòåâèòà, õîòÿ áûëî ÿñíî, ÷òî îíî íå ìîæåò áûòü îðèãèíàëüíûì Ñâåíòåâèòîì èç Ðþãåíà. Íåñêîëüêî äðóãèõ ìíîãîãëàâûõ ñòàòóé áûëè íàéäåíû â äðóãîì ìåñòå. Êðîøå÷íàÿ ÷åòûðåõãëàâàÿ ñòàòóÿ 10-ãî âåêà, âûðåçàííàÿ èç êîñòè, íàøëàñü ñðåäè ðàçâàëèí Ïðåñëàâà, ñòîëèöû ñðåäíåâåêîâûõ áîëãàðñêèõ öàðåé. Äâóõãîëîâàÿ, â ÷åëîâå÷åñêèé ðîñò, äåðåâÿííàÿ ñòàòóÿ áûëà îáíàðóæåíà íà îñòðîâå íà îçåðå Òîëëåíçåçåå áëèç Íîéáðàíäåíáóðãà: â Ñðåäíèå âåêà ýòî áûëà çåìëÿ Ñëàâÿíñêîãî ïëåìåíè Äîëåíàéíîâ, ÷üå èìÿ ñîõðàíèëîñü â íàçâàíèè îçåðà. Êðîìå òîãî, òðåõãëàâàÿ ñòàòóÿ áûëà îáíàðóæåíà â Äàëìàöèè (Õîðâàòèè) íà õîëìå, íîñÿùåãî èìÿ Ñóâèä, íåäàëåêî îò ãîðíîé âåðøèíû Òðèãëàâ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RODNOVERY_MONASTERY_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Idols[COLOR_REVERT] provide culture, +1 health and a slight boost to research.</English>
-		<French>Monastère Rodnovère</French>
-		<German>Rodnovery Monastery</German>
-		<Italian>I [COLOR_BUILDING_TEXT]monasteri rodnovery[COLOR_REVERT] forniscono cultura, +1 salute e un piccolo bonus alla ricerca.</Italian>
-		<Polish>Rodnovery Monastery</Polish>
-		<Russian>[COLOR_BUILDING_TEXT]Èäîëû[COLOR_REVERT] ïîâûøàþò êóëüòóðó, äàþò +1 ê çäîðîâüþ è íåáîëüøîå ïîâûøåíèå èññëåäîâàíèé. </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RODNOVERY_SHRINE</Tag>
@@ -53,12 +35,6 @@
 		<Russian>[TAB]Ñ 9-ãî ïî 12-é âåêà, Àðêîíà áûëà êóëüòîâûì ìåñòîì äëÿ Ðóãîâ, ïëåìåíè ñëàâÿí, êîòîðîå áûëî ïîñâÿùåíî ñâîåìó áîãó Ñâåíòåâèòó. Ðàñïîëîæåííûé íà îêîíå÷íîñòè ìûñà, îí áûë çàùèùåí ñ òðåõ ñòîðîí ñêàëàìè, à ñî ñòîðîíû ñóøè áûë ïðèêðûò 25-ìåòðîâîé ñòåíîé. Õðàì, áóäó÷è ðàñïîëîæåííûì â ïðåäåëàõ êðåïîñòíîé ñòåíû, áûñòðî ïðèîáðåë ñòàòóñ ðåëèãèîçíîãî öåíòðà ïîëàáñêèõ ñëàâÿí ïîñëå óíè÷òîæåíèÿ Ðåòðû â 1068. Â 1168 ãîäó äàòñêèé êîðîëü Âàëüäåìàð I çàõâàòèë Ðþãåí, êîòîðûé ïîçæå ïðèíÿë êðåùåíèå. Íà ìåñòå ðàçîðåííîãî õðàìà áûëè îòñòðîåíû öåðêâè è çàìîê. Ïðèìåðíî ñ 9-ãî âåêà Ðóãè ïîñåëèëèñü íà Ðþãåíå; îíè, âåðîÿòíî, â òî âðåìÿ ïîñòðîèëè ñâÿòèëèùà, à çàòåì âîçâîäèëè óêðåïëåíèÿ è çàìîê â íåñêîëüêî ýòàïîâ.Â 11 âåêå âàë áûë ïîäíÿò ñ èñïîëüçîâàíèåì ãðóíòà èç âíóòðåííåé ïëîùàäè çàìêà. Ðóãè äîìèíèðîâàëè êàêîå-òî âðåìÿ íà Ðþãåíå è õðàì ïðèîáðåë âñå áîëüøåå çíà÷åíèå êàê ðåëèãèîçíûé öåíòð ñëàâÿí â þæíîé ÷àñòè Áàëòèéñêîãî ìîðÿ ïîñëå ðàçðóøåíèÿ Ðåòðû â 1068. Õðàì òàêæå ñòàë ìåñòîì äëÿ îðàêóëà, ïîëó÷àâøåãî ïîæåðòâîâàíèÿ îò äðóãèõ íàðîäîâ, à íå òîëüêî ñëàâÿí.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RODNOVERY_SHRINE_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Arkona[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Rodnovery Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]Rodnovera[COLOR_REVERT]. It also spreads [COLOR_HIGHLIGHT_TEXT]Rodnovera[COLOR_REVERT] throughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</English>
-		<French>L'[COLOR_BUILDING_TEXT]Arkona[COLOR_REVERT] ([COLOR_BUILDING_TEXT]L'Autel Rodnovère[COLOR_REVERT]) produit de l'or à chaque tour, pour chaque ville au monde qui pratique la [COLOR_HIGHLIGHT_TEXT]Rodnoverie[COLOR_REVERT]. Propage également la [COLOR_HIGHLIGHT_TEXT]Rodnoverie[COLOR_REVERT] à travers le monde, et augmente les chances pour la ville de donner naissance à un [COLOR_UNIT_TEXT]Prophète Illustre[COLOR_REVERT].</French>
-		<Russian>[COLOR_BUILDING_TEXT]Àðêîíà[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Ñâÿòûíÿ Ðîäíîâåðîâ[COLOR_REVERT]) âûïóñêàåò 1 åä. çîëîòà â õîä â êàæäîì ãîðîäå â ìèðå, ãäå èñïîâåäóåòñÿ [COLOR_HIGHLIGHT_TEXT]Ðîäíîâåðèå[COLOR_REVERT]. Îí òàêæå ðàñïðîñòðàíÿåò [COLOR_HIGHLIGHT_TEXT]Ðîäíîâåðèå[COLOR_REVERT] ïî âñåìó ìèðó è óâåëè÷èâàåò øàíñû íà ïîÿâëåíèå [COLOR_UNIT_TEXT]Âåëèêîãî Ïðîðîêà[COLOR_REVERT].</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RODNOVERY_TEMPLE</Tag>
 		<English>Gaj</English>
 		<French>Gaj (Bosquet sacré)</French>
@@ -69,15 +45,6 @@
 		<English>It is commonly claimed that worshiping among Slavic people often happened in the woods rather than in shrines. Such woods were called "gaje" in the Proto-Slavic language (compare Polish gaj 'small wood, thicket, bush, grove'; see: sacred grove), and were sometimes encircled by a fence, which created a sacred area, both a natural and social sphere. Sometimes they would be used as cemeteries as well (see Kleczanów Wood).</English>
 		<Polish>Swięty gaj - święte miejsce poświęcone bóstwom, duchom przodków lub siłom natury. Swięte gaje występują w pierwotnych religiach Ariów, Irańczyków, Greków, Rzymian, Germanów, Słowian, Bałtów i Celtów. Istniały one zarówno w religiach starożytnych jak i w innych kulturach na świecie. W niektórych kulturach święte gaje poświęcone były bogom (jeden z nich stał się np. podstawą do powstania książki Jamesa Frazera Złota gałąź), w innych dodatkowo stanowiły symboliczną więź żywych ze zmarłymi przodkami, której naruszenie groziło poważnymi, negatywnymi konsekwencjami. Miejsca takie zachowały swoją funkcję religijną także współcześnie w wybranych nurtach religijnych.</Polish>
 		<Russian>[TAB]Îáû÷íî óòâåðæäàþò, ÷òî ñâÿùåííûå öåðåìîíèè ñðåäè ñëàâÿíñêèõ íàðîäîâ ÷àñòî ïðîèñõîäèëè â ëåñó, à íå â ñâÿòûíÿõ. Òàêèå ëåñà íàçûâàëè "ãàæå" â ïðàñëàâÿíñêîì ÿçûêå (ñðàâíèòå ïîëüñêîå Ãàé 'ëåñîê, çàðîñëè, êóñòàðíèê, ðîùà'; ñì.: ñâÿùåííûå ðîùè), êîòîðûå áûëè èíîãäà îáíåñåíû ÷àñòîêîëîì, âíóòðè êîòîðîãî íàõîäèëîñü ñâÿòèëèùå, êàê ïðèðîäíîå, òàê è îáùåñòâåííîå. Èíîãäà îíè èñïîëüçîâàëèñü â êà÷åñòâå êëàäáèù.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RODNOVERY_TEMPLE_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Gaj[COLOR_REVERT] increase a city's happiness and culture. They are especially useful for expanding your civilization's borders during the early game.</English>
-		<French>Les [COLOR_BUILDING_TEXT]Gaj[COLOR_REVERT] améliorent le bonheur et la culture des villes. ils sont notamment utiles pour agrandir vos frontières culturelles au début du jeu.</French>
-		<German>[COLOR_BUILDING_TEXT]Gaj[COLOR_REVERT] steigern die Zufriedenheit und Kultur einer Stadt. Sie eignen sich hervorragend, um Ihre Zivilisation bereits in der Frühphase des Spiels zu vergrößern.</German>
-		<Italian>I [COLOR_BUILDING_TEXT]Gaj[COLOR_REVERT] aumentano la felicità e la cultura della città. Sono particolarmente indicati per espandere i confini della tua civiltà durante le fasi iniziali della partita.</Italian>
-		<Spanish>Los [COLOR_BUILDING_TEXT]Gaj[COLOR_REVERT] aumentan la felicidad y cultura de la ciudad. Son especialmente útiles para expandir las fronteras de la civilización al principio de la partida.</Spanish>
-		<Russian>[COLOR_BUILDING_TEXT]Ñâÿùåííûå ðîùè[COLOR_REVERT] ïîâûøàþò êóëüòóðó è íàñòðîåíèå ãðàæäàí â ãîðîäå. Îíè îñîáåííî ïîëåçíû äëÿ ðàñøèðåíèÿ ãðàíèö âàøåé öèâèëèçàöèè â íà÷àëå èãðû.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RODNOVERA</Tag>

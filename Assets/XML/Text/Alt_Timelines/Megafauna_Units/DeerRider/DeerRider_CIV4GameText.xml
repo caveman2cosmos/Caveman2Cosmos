@@ -49,20 +49,9 @@
 		<French>Le bâtiment du patrimoine améliore la merveille de la formation pour permettre la construction d'unités spéciales dans toutes vos villes.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE_STRATEGY</Tag>
-		<English>The Deer Heritage buildings allows the building of deer units in all your cities.</English>
-		<French>Les bâtiments Héritages Cervidés permettent de construire des unités de cerfs dans toutes vos villes.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_PEDIA</Tag>
 		<English>There is no evidence deer were ever trained for warfare. The [COLOR_BUILDING_TEXT]Deer Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.[PARAGRAPH:2]Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.</English>
 		<French>Il n'y a aucune preuve que les cerfs aient été formés pour la guerre. Le bâtiment [COLOR_BUILDING_TEXT] Dresseur de cerfs [COLOR_REVERT] fait partie des [COLOR_HIGHLIGHT_TEXT] technologies de chronologie alternatives [COLOR_REVERT]. Technologies qui auraient pu l'être.[PARAGRAPH:2]Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Deer Trainer[COLOR_REVERT] is required to train [LINK=UNIT_DEERRIDER]Deer Riders[\LINK], [LINK=UNIT_DEER_ARCHER]Deer Archers[\LINK] and [LINK=UNIT_DEER_LIGHT]Light Deer[\LINK].</English>
-		<French>Le [COLOR_BUILDING_TEXT] Dresseur de cerfs [COLOR_REVERT] est requis pour former [LINK = UNIT_DEERRIDER] Chevaucheurs de cerfs [\LINK], [LINK = UNIT_DEER_ARCHER] Archers de cerfs [\LINK] et [LINK = UNIT_DEER_LIGHT] Chevreuils légers [\LINK].</French>
-		<Italian>L'[COLOR_BUILDING_TEXT]Allevatore di cervi[COLOR_REVERT] è necessario per addestrare [LINK=UNIT_DEERRIDER]Cavalcatori su cervi[\LINK] e [LINK=UNIT_DEER_ARCHER]Arcieri su cervo[\LINK].</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEERRIDER</Tag>

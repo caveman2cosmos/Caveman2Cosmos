@@ -20,13 +20,6 @@
 		<Russian>[TAB]Àýðîäðîì - çåìåëüíûé èëè âîäíûé ó÷àñòîê ñ âîçäóøíûì ïðîñòðàíñòâîì, ñîîðóæåíèÿìè è îáîðóäîâàíèåì, îáåñïå÷èâàþùèìè âçëåò, ïîñàäêó, ðóëåíèå, ðàçìåùåíèå è îáñëóæèâàíèå ñàìîëåòîâ, âåðòîëåòîâ è ïëàíåðîâ.[PARAGRAPH:2]Ðàçâèâàþùàÿñÿ èíäóñòðèÿ àâèàïåðåâîçîê íóæäàåòñÿ â ìåñòå äëÿ áàçèðîâàíèÿ äèðèæàáëåé è ãèäðîïëàíîâ, ÷òîáû îáåñïå÷èòü êîìôîðòíûå óñëîâèÿ äëÿ ïîñàäêè áîãàòûõ êëèåíòîâ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AERODROME_STRATEGY</Tag>
-		<English>Build an Aerodrome to increase your city's wealth.</English>
-		<French>Construisez un [COLOR_BUILDING_TEXT]Complexe Aérien[COLOR_REVERT] pour augmenter la richesse la ville..</French>
-		<Italian>Costruisci un Aerodromo per incrementare la ricchezza della tua città.</Italian>
-		<Russian>Àýðîäðîì ñïîñîáñòâóåò ðîñòó áëàãîñîñòîÿíèÿ ãîðîäà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY</Tag>
 		<English>Culture (Dieselpunk)</English>
 		<Italian>Cultura (Dieselpunk)</Italian>
@@ -38,13 +31,6 @@
 		<English>Dieselpunk is based on the aesthetics of the period between the end of the World War I and the beginning of World War II. This sub-genre is sometimes named Decopunk, referring to the Art Deco art style (including its Streamline Moderne variant). The genre combines the artistic and genre influences of the period (including pulp magazines, serial films, film noir, art deco, and wartime pin-ups) with postmodern technology and sensibilities.</English>
 		<Italian>Dieselpunk è basata sull'estetica nel periodo tra la fine della prima guerra mondiale e l'inizio della seconda. Questo sottogenere viene spesso chiamato Decopunk, in riferimento alla corrente artistica Art Deco (inclusa la sua variante moderna). Il genere combina le influenze artistiche di questo periodo (incluse riviste di tendenza, serie tv, film noir, art deco e pin-up) con la tecnologia e la sensibilità post-moderna.</Italian>
 		<Russian>[TAB]Äèçåëüïàíê - ðàçâèâàþùèéñÿ æàíð ôàíòàñòèêè, ïðîèçâîäíûé îò êèáåðïàíêà, îïèñûâàþùèé ìèð, áàçèðóþùèéñÿ íà òåõíîëîãèÿõ óðîâíÿ 20-õ - 50-õ ãã. XX âåêà (ïåðèîä ñ Ïåðâîé ìèðîâîé âîéíû ïî Âòîðóþ ìèðîâóþ âîéíó), à òàêæå çàðîæäàþùàÿñÿ ñóáêóëüòóðà, ñî÷åòàþùàÿ â ñåáå ýñòåòèêó òîãî âðåìåíè ñ ïîñòìîäåðíèñòñêèìè òåõíîëîãèÿìè è ÷óâñòâàìè.[PARAGRAPH:2]Òåðìèí ïîÿâèëñÿ â 2001 ãîäó êàê ìàðêåòèíãîâûé õîä, êîòîðûé ïðèäóìàë èãðîâîé äèçàéíåð Ëüþèñ Ïîëëàê, ÷òîáû îïèñàòü åãî íàñòîëüíóþ ðîëåâóþ èãðó «Children of the Sun». Ïîñëå ýòîãî òåðìèí ïðèìåíÿëñÿ, ÷òîáû îïèñàòü îñîáûé ñòèëü èçîáðàçèòåëüíîãî èñêóññòâà, ìóçûêè, êèíî, õóäîæåñòâåííîé ëèòåðàòóðû, è ìîääèíãà òåõíèêè.[PARAGRAPH:1]Ñëîâî "äèçåëüïàíê" ÿâëÿåòñÿ ïðîèçâîäíûì îò íàçâàíèÿ æàíðà êèáåðïàíê, è èñïîëüçóåòñÿ äëÿ ïðåäñòàâëåíèÿ ïåðèîäà âðåìåíè, êîãäà äèçåëüíûé äâèãàòåëü áûë â îñíîâå ïåðåäâèæåíèÿ â çàïàäíîé êóëüòóðå è "ïàíê" - ñóôôèêñ, ñâÿçàííûé ñ æàíðàìè õóäîæåñòâåííûõ ïðîèçâåäåíèé, â êîòîðûõ îáùåñòâî íàõîäèòñÿ â ãëóáîêîì óïàäêå èëè íà ñòàäèè ðàäèêàëüíûõ ïåðåìåí â ñîöèàëüíîì óñòðîéñòâå. Òàêæå òåðìèí ññûëàåòñÿ íà ñòèìïàíê, äðóãóþ ïðîèçâîäíóþ êèáåðïàíêà, â êîòîðîì, êàê ïðàâèëî, îñíîâíîå âíèìàíèå îáðàùàåòñÿ íå íà ïðîáëåìû îáùåñòâà, à íà ýñòåòèêó âèêòîðèàíñêîé ýïîõè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_STRATEGY</Tag>
-		<English>Build [COLOR_BUILDING_TEXT]Culture (Dieselpunk)[COLOR_REVERT] to gain access to unique buildings and units.</English>
-		<French>Construisez la [COLOR_BUILDING_TEXT]Culture (Dieselpunk)[COLOR_REVERT] pour avoir accès à des bâtiments et unités uniques.</French>
-		<Italian>Costruisci [COLOR_BUILDING_TEXT]Cultura (Dieselpunk)[COLOR_REVERT] per poter costruire edifici e unità uniche.</Italian>
-		<Russian>Äèçåëüïàíê äåëàåò äîñòóïíûìè óíèêàëüíûå çäàíèÿ è þíèòû.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL</Tag>
@@ -66,13 +52,6 @@
 		<Russian>[TAB]Ïåðâîíà÷àëüíî øïèëü Ýìïàéð-ñòåéò-áèëäèíã ïðåäïîëàãàëîñü èñïîëüçîâàòü â êà÷åñòâå ïðè÷àëüíîé ìà÷òû äëÿ äèðèæàáëåé. 102-é ýòàæ áûë ñïðîåêòèðîâàí òàêèì îáðàçîì, ÷òî ïðåêðàñíî ñïðàâèëñÿ áû ñ ðîëüþ ïðè÷àëüíîé ïëàòôîðìû ñî ñõîäíÿìè äëÿ ïîäúåìà íà äèðèæàáëü.[PARAGRAPH:1]Îäíàêî ñåðüåçíûì ïðåïÿòñòâèåì äëÿ âîïëîùåíèÿ ýòîé èäåè ïîñëóæèëè íåáëàãîïðèÿòíûå ïîãîäíûå óñëîâèÿ - äèðèæàáëü íå ìîã ïðè÷àëèòü ê øïèëþ çäàíèÿ èç-çà ñèëüíûõ è íåñòàáèëüíûõ âîçäóøíûõ ïîòîêîâ íà òàêîé âûñîòå. Ýòî ñòàëî ïîíÿòíî ïîñëå ïåðâîé æå ïîïûòêè öåïïåëèíà ïðèøâàðòîâàòüñÿ, è â 1952-ì ãîäó âëàäåëüöû çäàíèÿ îêîí÷àòåëüíî îòêàçàëèñü îò ýòîé èäåè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL_STRATEGY</Tag>
-		<English>Build a Dirigible Terminal to increase your city's wealth.</English>
-		<French>Construisez un [COLOR_BUILDING_TEXT]Terminal de Dirigeable[COLOR_REVERT] pour augmenter la richesse la ville.</French>
-		<Italian>Costruisci un Terminal per dirigibili per incrementare la ricchezza della tua città.</Italian>
-		<Russian>Âîçäóøíûé ïðè÷àë ñïîñîáñòâóåò ðîñòó áëàãîñîñòîÿíèÿ ãîðîäà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FARNSWORTH_LAB</Tag>
 		<English>Farnsworth Electronics Lab</English>
 		<French>
@@ -90,12 +69,6 @@
 		<Italian>Farnsworth chiamò il suo strumento dissettore di immagini, dato che convertiva gli elementi dell'immagine in impulsi elettrici. Sostituì i dischi girevoli con cesio, un elemento che emette elettroni quando esposto alla luce.</Italian>
 		<Polish>Philo Taylor Farnsworth (19 sierpnia 1906 - 11 marca 1971), amerykański wynalazca i pionier telewizji. Twórca wielu wynalazków, które miały kluczowe znaczenie dla wczesnego rozwoju elektronicznej telewizji. Najbardziej znany za wynalezienia pierwszego w pełni funkcjonalnego urządzenia dla elektronicznego obrazu (CRT), dysektora. Opracował również pierwszy w pełni funkcjonalny i kompletny elektroniczny system telewizyjny i jako pierwszy zaprezentował taki system społeczeństwu. Farnsworth opracował system telewizyjny wraz z odbiornikiem i kamerą, który był produkowany w firmie Farnsworth Television and Radio Corporation, od 1938 do 1951.</Polish>
 		<Russian>[TAB]Ôàðíñâîðò íàçâàë ñâîå óñòðîéñòâî "äèññåêòîð", ïîòîìó ÷òî îíî ïðåîáðàçóåò îòäåëüíûå ýëåìåíòû îïòè÷åñêîãî èçîáðàæåíèÿ â ýëåêòðè÷åñòâî. Îí çàìåíèë âðàùàþùèåñÿ äèñêè öåçèåì - ýëåìåíòîì, êîòîðûé èñïóñêàåò ýëåêòðîíû ïðè îáëó÷åíèè ñâåòîì.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FARNSWORTH_LAB_STRATEGY</Tag>
-		<English>Build a Farnsworth Electronics Lab to increase your city's science.</English>
-		<Italian>Costruisci un Laboratorio di elettronica di Farnsworth per incrementare la ricerca della tua città.</Italian>
-		<Russian>Ëàá. ýëåêòðîíèêè ñïîñîáñòâóþò ðîñòó íàóêè â ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAND_AERODROME</Tag>
@@ -117,13 +90,6 @@
 		<Russian>[TAB]Äëÿ ïåðåìåùåíèé ìåãàïîëèñàì òðåáóåòñÿ àýðîäðîì, êîòîðûé ñìîã áû óäîâëåòâîðÿòü ïîòðåáíîñòÿì äàì è ãîñïîä, êîòîðûå åùå â÷åðà áûëè íà äðóãîì êîíöå ñâåòà, è äåëàë áû ýòî ñ øèêîì. Âåëèêîëåïíûå ìðàìîðíûå êîëîííû, ïðåêðàñíûå ñêóëüïòóðû, äåñÿòêè ðîñêîøíûõ ìàãàçèíîâ è îñòàíîâîê âñåõ âèäîâ îáùåñòâåííîãî òðàíñïîðòà, áîëüøîé àýðîäðîì ïðèâëåêàåò íàèáîëåå áîãàòûõ êëèåòíîâ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GRAND_AERODROME_STRATEGY</Tag>
-		<English>Build a Grand Aerodrome to increase your city's wealth.</English>
-		<French>Construisez un [COLOR_BUILDING_TEXT]Grand Complexe Aérien[COLOR_REVERT] pour augmenter la richesse la ville.</French>
-		<Italian>Costruisci un Grande Aerodromo per incrementare la ricchezza della tua città.</Italian>
-		<Russian>Áîëüøîé àýðîäðîì ñïîñîáñòâóåò ðîñòó áëàãîñîñòîÿíèÿ ãîðîäà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RADIOPLEX</Tag>
 		<English>Radioplex</English>
 		<French>
@@ -139,12 +105,6 @@
 		<English>Radio theater is a dramatized, purely acoustic performance, broadcast on radio or published on audio media, such as tape or CD. With no visual component, radio drama depends on dialogue, music and sound effects to help the listener imagine the characters and story. It is auditory in the physical dimension but equally powerful as a visual force in the psychological dimension.</English>
 		<Italian>Il teatro radio è una performance drammatizzata, puramente acustica, trasmessa alla radio o pubblicata su file audio, come cassette o CD. Senza effetti visivi, le trasmissioni radiofoniche dipendono dal dialogo, dalla musica e dagli effetti sonori per aiutare l'ascoltatore a immaginare i personaggi e la storia. Nella dimensione psicologica, ha la stessa forza di una rappresentazione visiva.</Italian>
 		<Russian>[TAB]Ðàäèîòåàòð - ýòî òåàòðàëèçîâàííîå, èñêëþ÷èòåëüíî àêóñòè÷åñêîå ïðåäñòàâëåíèå, òðàíñëèðóåìîå ïî ðàäèî èëè çàïèñàííîå íà àóäèîíîñèòåëü, ê ïðèìåðó ìàãíèòíóþ ëåíòó èëè êîìïàêò-äèñê.[PARAGRAPH:1]Â îòñóòñòâèè âèçóàëüíîé ñîñòàâëÿþùåé, ðàäèîñïåêòàêëü çàâèñèò îò äèàëîãîâ, ìóçûêè è çâóêîâûõ ýôôåêòîâ, ÷òîáû ïîìî÷ü ñëóøàòåëþ ïðåäñòàâèòü ñåáå ãåðîåâ è ñþæåò.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RADIOPLEX_STRATEGY</Tag>
-		<English>Build a Radioplex to increase your city's happiness.</English>
-		<Italian>Costruisci un Radioplex per incrementare la felicità della tua città.</Italian>
-		<Russian>Ðàäèîïëåêñ óâåëè÷èâàåò ñ÷àñòüå â ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THEREMIN_FACTORY</Tag>
@@ -165,13 +125,6 @@
 		<Russian>[TAB]Òåðìåíâîêñ - ýòî èíñòðóìåíò,ñîçäàííûé â 1919 ãîäó ðóññêèì èçîáðåòàòåëåì Ëüâîì Ñåðãååâè÷åì Òåðìåíîì, íà êîòîðîì ìîæíî èãðàòü, íå êàñàÿñü åãî ïàëüöàìè. Ïîä âîçäåéñòâèåì ðóêè, îí ðåàãèðóåò íà èçìåíåíèå ýëåêòðîìàãíèòíûõ ïîëåé, ãåíåðèðóåìûõ àíòåííàìè.[PARAGRAPH:2]Èãðà íà òåðìåíâîêñå çàêëþ÷àåòñÿ â èçìåíåíèè ìóçûêàíòîì ðàññòîÿíèÿ îò ñâîèõ ðóê äî àíòåíí èíñòðóìåíòà, çà ñ÷åò ÷åãî èçìåíÿåòñÿ åìêîñòü êîëåáàòåëüíîãî êîíòóðà è, êàê ñëåäñòâèå, ÷àñòîòà çâóêà. Âåðòèêàëüíàÿ ïðÿìàÿ àíòåííà îòâå÷àåò çà òîí çâóêà, ãîðèçîíòàëüíàÿ ïîäêîâîîáðàçíàÿ - çà åãî ãðîìêîñòü. Äëÿ èãðû íà òåðìåíâîêñå íåîáõîäèìî îáëàäàòü õîðîøî ðàçâèòûì ìóçûêàëüíûì ñëóõîì: âî âðåìÿ èãðû ìóçûêàíò íå êàñàåòñÿ èíñòðóìåíòà è ïîýòîìó íå ìîæåò ôèêñèðîâàòü ïîëîæåíèå ðóê îòíîñèòåëüíî íåãî è äîëæåí ïîëàãàòüñÿ òîëüêî íà ñâîé ñëóõ.[PARAGRAPH:1]Èíñòðóìåíò ïðåäíàçíà÷åí äëÿ èñïîëíåíèÿ ëþáûõ (êëàññè÷åñêèõ, ýñòðàäíûõ, äæàçîâûõ) ìóçûêàëüíûõ ïðîèçâåäåíèé â ïðîôåññèîíàëüíîé è ñàìîäåÿòåëüíîé ìóçûêàëüíîé ïðàêòèêå, à òàêæå äëÿ ñîçäàíèÿ ðàçëè÷íûõ çâóêîâûõ ýôôåêòîâ (ïåíèå ïòèö, ñâèñò è äð.), êîòîðûå ìîãóò íàéòè ïðèìåíåíèå ïðè îçâó÷èâàíèè ôèëüìîâ, â òåàòðàëüíûõ ïîñòàíîâêàõ, öèðêîâûõ ïðîãðàììàõ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_THEREMIN_FACTORY_STRATEGY</Tag>
-		<English>Build a [COLOR_BUILDING_TEXT]Theremin Factory[COLOR_REVERT] to increase your city's wealth.</English>
-		<French>Construisez une [COLOR_BUILDING_TEXT]Usine de thérémine[COLOR_REVERT] pour augmenter la richesse de la ville.</French>
-		<Italian>Costruisci una [COLOR_BUILDING_TEXT]Fabbrica di theremin[COLOR_REVERT] per incrementare la ricchezza della tua città.</Italian>
-		<Russian>Ôàáðèêà òåðìåíâîêñîâ ñïîñîáñòâóåò ðîñòó áëàãîñîñòîÿíèÿ ãîðîäà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZUSE_COMPUTER</Tag>
 		<English>Zuse Computer</English>
 		<French>
@@ -189,12 +142,6 @@
 		<Italian>Lo Z4 è stato il primo calcolatore commerciale digitale, progettato dall'ingegnere tedesco Konrad Zuse e costruito dalla compagnia Zuse Apparatebau tra il 1942 e il 1945.</Italian>
 		<Polish>Pierwsze maszyny Zusego Z1, Z2 i Z3 nosiły początkowo nazwy V1, V2 i V3 (Versuchsmodell - model eksperymentalny); zmienił ten kryptonim, by nie popaść w kolizję z nazwami niemieckich broni V. Wszystkie oryginalne egzemplarze tych maszyn uległy zniszczeniu w trakcie wojny. Maszyna Z4 (konstruowana w latach 1942-1945), częściowo zachowana po wojnie, została skompletowana i uruchomiona w 1950 roku w słynnej politechnice Eidgenössische Technische Hochschule ETHZ w Zurychu w Szwajcarii, gdzie była używana do obliczeń naukowych. Kolejna maszyna, Z5, posłużyła do obliczeń w dziedzinie optyki dla przedsiębiorstwa Leitz.</Polish>
 		<Russian>[TAB]Z4 - âû÷èñëèòåëüíàÿ ìàøèíà íåìåöêîãî èíæåíåðà Êîíðàäà Öóçå.[PARAGRAPH:2]Öóçå íà÷àë ñîçäàâàòü Z4 â êîíöå Âòîðîé ìèðîâîé âîéíû. Åãî ëàáîðàòîðèÿ âìåñòå ñ áîëüøåé ÷àñòüþ ðàçðàáîòàííîãî îáîðóäîâàíèÿ ïîãèáëà ïðè íàëåòå àâèàöèè ñîþçíèêîâ. Òåì íå ìåíåå, ïî÷òè çàêîí÷åííûé Z4 óöåëåë.[PARAGRAPH:1]Ïîñëå îêîí÷àíèÿ âîéíû Öóçå ïðîäîëæèë èçãîòîâëåíèå êîìïüþòåðà. Z4 áûë çàêîí÷åí â ñåíòÿáðå 1950 ãîäà, ïîñëå ÷åãî îí áûë êóïëåí Øâåéöàðñêîé âûñøåé òåõíè÷åñêîé øêîëîé. Â òî âðåìÿ ýòî áûëà åäèíñòâåííàÿ ðàáîòàþùàÿ âû÷èñëèòåëüíàÿ ìàøèíà â êîíòèíåíòàëüíîé Åâðîïå. Z4 ñòàë òàêæå ïåðâûì êîìïüþòåðîì â ìèðå, êîòîðûé áûë ïðîäàí.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZUSE_COMPUTER_STRATEGY</Tag>
-		<English>Build a Zuse Computer to increase your city's science.</English>
-		<Italian>Costruisci un Calcolatore Zuse per incrementare la ricerca della tua città.</Italian>
-		<Russian>Âû÷èñëèòåëü ñïîñîáñòâóþò ðîñòó íàóêè â ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DIESELPUNK</Tag>

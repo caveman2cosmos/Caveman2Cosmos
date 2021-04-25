@@ -100,13 +100,6 @@
 		<Russian>Хотя жители города могут соотносить себя с множеством существующих культур, подобные культуры могут быть признаны или не признаны на местном уровне.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Tag>
-		<English>C.Ac. = Culture Active[NEWLINE]This building shows that the culture is an integrated and recognized part of your nation's culture, obtained by having a corresponding Native Culture (C.N.) or Adopted Culture (C.Ad.) in your empire.</English>
-		<French>Cult. Act. = Culture active[NEWLINE]Ce bâtiment montre que la culture fait partie intégrante et reconnue de la culture de votre nation. It is obtained by having a corresponding Native Culture (C.N.) or Adopted Culture (C.Ad.) in your empire.</French>
-		<German>Als aktiv werden bei C2C Kultureinflüsse bezeichnet, die ein vollwertiger Bestandteil der jeweiligen nationalen Kultur geworden sind. [COLOR_BUILDING_TEXT]Aktive Kulturen[COLOR_REVERT] entstehen aus den entsprechenden Urkulturen, aber auch aus Kulturen, die von der Nation übernommen wurden.</German>
-		<Russian>Активная культура = (АкК)[NEWLINE]Эта постройка показывает, что данная культура является интегрированной и признанной частью культуры вашей державы, полученной путем наличия соответствующей родной культуры (Р.К.) или принятой культуры (ПрК) в вашей цивилизации.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Tag>
 		<English>C.Ac. South American</English>
 		<French>Cult. Act. Sud-américaine</French>
@@ -206,13 +199,6 @@
 		<English>Through military might, societial pressure, or economic power, when sufficient peoples integrate into an existing nation, the values of that nation inevitably end up incorporating the newly introduced cultures and experiences of those peoples. After all, is it really "their" culture if so many of our own citizens identify with it?</English>
 		<German>Im Laufe der Geschichte ist es schon häufig passiert, dass Zivilisationen kulturelle Elemente von besiegten Gegnern, eingewanderten Flüchtlingen oder langjährigen Geschäftspartnern übernommen haben. Letzten Endes läuft es immer auf die Frage hinaus: Können "fremde" Kulturen und Gebräuche noch fremd sein, wenn sich so viele Bürger mit ihnen identifizieren?</German>
 		<Russian>Благодаря военной и экономической мощи или социальному давлению, когда достаточное количество народов интегрируется в существующую нацию, ценности этой нации неизбежно в конечном итоге включают в себя недавно представленные культуры и опыт этих народов. В конце концов, действительно ли это «их» культура, если так много наших граждан соотносят себя с ней?</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Tag>
-		<English>C.Ad. = Culture Adopted[NEWLINE]By owning 3 cities with the same foreign "Local Culture" that differs from your native culture, you will get that foreign culture as an "Adopted Culture".</English>
-		<French>Cult. Adopt. = Culture adoptée :[NEWLINE]En possédant 3 villes avec la même "culture locale" étrangère (pas votre culture d'origine), vous obtiendrez cette culture étrangère en tant que "culture adoptée".</French>
-		<German>Wenn eine Zivilisation über mehr als 3 Städte verfügt, in denen die gleiche fremde Kultur lokal präsent ist, wird diese automatisch als [COLOR_BUILDING_TEXT]übernommene Kultur[COLOR_REVERT] national anerkannt.</German>
-		<Russian>Принятая культура = (ПрК)[NEWLINE]Приобретая 3 города с одинаковой иностранной «местной культурой», отличающейся от вашей родной, данная иностранная культура получает статус «принятой культуры».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Tag>
@@ -425,13 +411,6 @@
 		<English>At the very roughest of scales, human cultures can claim ancestry with one of several continental histories they associate more closely with than any other.</English>
 		<German>Die kulturellen Wurzeln einer Zivilisation liegen oft weit in der Vorgeschichte, aber sie prägen die einzelnen Individuen auch heute noch.</German>
 		<Russian>В самых грубых масштабах человеческие культуры могут претендовать на происхождение из одной из нескольких общеконтинентальных, с которыми они связаны более тесно, чем с любой другой.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Tag>
-		<English>C.N. = Culture Native[NEWLINE]Every civilization have one explicit native culture.</English>
-		<French>Cult. Orig. = Culture d'Origine[NEWLINE]Chaque civilisation a une culture native explicite.</French>
-		<German>Jede Zivilisation hat eine feste [COLOR_BUILDING_TEXT]Urkultur[COLOR_REVERT]. Diese Urkultur leitet sich bei C2C aus der Region ab, zu der die Zivilisation die meisten historischen Bezüge hat.</German>
-		<Russian>Родная культура = (РК)[NEWLINE] У каждой цивилизации есть своя изначальная родная культура.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Tag>
@@ -5037,25 +5016,6 @@
 		<English>A Spartan is a person from the Greek city Sparta or the ancient Greek city-state of the same name.</English>
 		<Italian>Uno spartano è una persona proveniente dalla città greca di Sparta, o dall'antica città-stato greca omonima.</Italian>
 		<Polish>Początki Sparty ustala się na XII-XI wiek p.n.e., kiedy Dorowie zaczęli się osiedlać w Lakonii. Przybyli na tereny Lakedaimonu około 1000 roku p.n.e. W IX wieku p.n.e. łączą się cztery osady (obai), m.in. Pitana, w dolinie rzekiEwrotas tworząc miasto Spartę. W latach późniejszych dołączona zostaje piąta wioska, Amyklaj. W VIII-VII w. p.n.e. Sparta wyłoniła się jako znacząca potęga militarna. W latach 730-710 p.n.e. Spartanie zajęli sąsiednią krainęMesenię, a jej ziemie podzielono między Spartan z wyłączeniem grupy tzw. partheniai, czyli urodzonych ze Spartanki i ojca nie-Spartanina. Około roku 706 p.n.e. właśnie partheniai opuścili Spartę i w południowej Italii założyli kolonię (apoikię) - Tarent. Meseńczycy pozostali na swojej ziemi jako uprawiający ją chłopi, oddając Spartanom połowę plonów. W660 p.n.e. Messenia zbuntowała się przeciw Spartanom, rozpoczynając II wojnę meseńską. Dzięki zastosowaniu falangi Spartanom udało się rozbić powstanie w 640 p.n.e. W roku 550 p.n.e. Spartanie założyli Związek Peloponeski, który obejmował wiele polis w południowej Grecji.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Tag>
-		<English>Gives access to unique buildings and units.</English>
-		<German>Jede Kultur ermöglicht spezielle Gebäude und Einheiten.</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_STRATEGY</Tag>
-		<English>Gives access to unique buildings and units.[PARAGRAPH:1][COLOR_HIGHLIGHT_TEXT]IMPORTANT NOTE:[COLOR_REVERT] Neanderthal units require the corresponding [LINK=BUILDING_CULTURE_LOCAL_NEANDERTHAL]Neanderthal Local Culture[\LINK] to be constructed in the city (unlocked by this Culture), which [COLOR_RED]will remove your ability to construct Prehistoric non-Neanderthal units[COLOR_REVERT] in cities that have that Local Culture![PARAGRAPH:1]In practice, this means your units early in the game will be stronger, but cost more to produce as well as preventing you from training certain stealth or throwing units such as the [LINK=UNIT_AMBUSHER]Ambusher[\LINK] and [LINK=UNIT_ATLATL]Atlatlist[\LINK].</English>
-		<German>Jede Kultur ermöglicht spezielle Gebäude und Einheiten.[NEWLINE][COLOR_WARNING_TEXT]WICHTIG:[COLOR_REVERT] In Städten mit der lokalen Kultur Neandertal ist ausschließlich das Training von Neandertal-Einheiten möglich, alle anderen prähistorischen Einheiten können nicht ausgebildet werden.[NEWLINE]Das bedeutet zwar stärkere (und kostenintensivere) Einheiten zu Beginn des Spiels, aber auch den kompletten Verzicht auf bestimmte Wurfwaffen- und Tarneinheiten.</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Tag>
-		<English>A regional Local Culture (C.L.) determines what specific World Cultures may be completed in that city. Obtaining a C.L. in your city comes in one of four ways:[NEWLINE]1) Your first city gains a C.L. based on your civ's Native Culture.[NEWLINE]2) A settler-type unit will carry all C.L.s present from the city that trained it to a city it founds.[NEWLINE]3) A captured city will maintain its C.L.(s), and you may manually construct your own native or adopted C.L.s (if not already present).[NEWLINE]4) Adopting a culture into your empire (having 3 (+mapsize variant) of the same C.L.s across all your cities) will result all your cities being able to construct that C.L.</English>
-		<German>Eine lokale Kultur kann auf folgende 4 Arten und Weisen in eine Stadt gelangen:[NEWLINE]1. Die erste Stadt einer Zivilisation erhält automatisch die Urkultur als lokale Kultur.[NEWLINE]2. Eine Siedler-Einheit übernimmt jeweils alle lokalen Kulturen der Ausbildungsstadt und überträgt sie auf die neugegründete Stadt.[NEWLINE]3. Eine eingenommene Stadt behält ihre lokalen Kulturen, aber der neue Herrscher kann manuell Ur- oder übernommene Kulturen in der Stadt etablieren (wenn noch nicht vorhanden).[NEWLINE]4. Wenn eine Kultur in eine Zivilisation übernommen wird, können alle Städte diese als lokale Kultur etablieren.</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL_STRATEGY</Tag>
-		<English>[COLOR_RED]NOTE: Constructing this in a city will prevent training of certain Prehistoric unit types[COLOR_REVERT] such as the [LINK=UNIT_AMBUSHER]Ambusher[\LINK] and [LINK=UNIT_ATLATL]Atlatlist[\LINK], though will allow Neanderthal (read: stronger) variants of other units.[PARAGRAPH:1]A regional Local Culture (C.L.) determines what specific World Cultures may be completed in that city. Obtaining a C.L. in your city comes in one of four ways:[NEWLINE]1) Your first city gains a C.L. based on your civ's Native Culture.[NEWLINE]2) A settler-type unit will carry all C.L.s present from the city that trained it to a city it founds.[NEWLINE]3) A captured city will maintain its C.L.(s), and you may manually construct your own native or adopted C.L.s (if not already present).[NEWLINE]4) Adopting a culture into your empire (having 3 (+mapsize variant) of the same C.L.s across all your cities) will result all your cities being able to construct that C.L.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SUDANESE</Tag>

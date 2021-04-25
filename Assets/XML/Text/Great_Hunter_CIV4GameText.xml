@@ -16,12 +16,6 @@
 		<Polish>Zapewniany do wszystkich miast przez [LINK=BUILDING_TRADITION_HUNTER]Tradycje: Łowiectwo[\LINK] która jest tworzona przez [LINK=UNIT_GREAT_HUNTER]Wielkiego Łowce[\LINK]. Łączy [LINK=BUILDING_MASTER_HUNTER]Wybitnego Łowce[\LINK] i [LINK=BUILDING_HUNTING_INSTRUCTION]Instrukcje Łowieckie[\LINK] (budynki).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_TRADITION_STRATEGY</Tag>
-		<English>Provides health and happiness bonuses with game animals. Units built here get free hunting promotion.</English>
-		<French>Procure des bonus en santé et bonheur grâce aux animaux. Les unités construites ici reçoivent la promotion 'chasseur'.</French>
-		<German>Erzeugt Gesundheit und Zufriedenheit mit Großwild. Einheiten die hier gebaut werden, bekommen die Jagtbeförderung kostenlos.</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MASTER_HUNTER</Tag>
 		<English>Master Hunter</English>
 		<French>Spécialisation Maître Chasseur</French>

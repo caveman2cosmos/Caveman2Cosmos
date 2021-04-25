@@ -40,12 +40,6 @@
 		<Russian>Дрессировка кошки - это процесс изменения поведения дикой кошки в развлекательных или дружеских целях. Дрессировка обычно используется для уменьшения нежелательного или проблемного поведения у диких кошек, для улучшения взаимодействия между людьми и кошками и для того, чтобы позволить им комфортно сосуществовать. Существуют различные методы дрессировки кошек, в которых используется различный баланс между вознаграждением и наказанием.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIG_CAT_TRAINER_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Big Cat Trainer[COLOR_REVERT] is required to train cat units.</English>
-		<French>[COLOR_BUILDING_TEXT]Entraineur de Félins[COLOR_REVERT] est requis pour entraîner des unités félines.</French>
-		<Russian>[COLOR_BUILDING_TEXT]Приручение кошек[COLOR_REVERT] требуется для обучения кошачьих отрядов.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLICE_CAT</Tag>
 		<English>Police Cat Trainer</English>
 		<French>Entraineur de Félins Limiers</French>
@@ -54,10 +48,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLICE_CAT_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_POLICE_CAT_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>

@@ -18,12 +18,6 @@
 		<Russian>[TAB]Àêøàðäõàì - èíäóèñòñêèé õðàìîâûé êîìïëåêñ â ã. Äåëè. Âîøåë â Êíèãó Ðåêîðäîâ Ãèííåñà êàê ñàìûé ãðàíäèîçíûé èíäóèñòñêèé õðàì â ìèðå. Îòêðûòèå õðàìà ñîñòîÿëîñü â 2005 ãîäó. Åãî ñòðîèòåëüñòâî âåëîñü â òå÷åíèå 5 ëåò ñ ó÷àñòèåì 7 òûñÿ÷ ìàñòåðîâ èç Ðàäæàñòõàíà, Îðèññû è Áåíãàëèè. Ñòðîèòåëüñòâî îáîøëîñü â 500 ìëí äîëëàðîâ ÑØÀ, ñîáðàííûõ çà ñ÷åò äîáðîâîëüíûõ ïîæåðòâîâàíèé. Âûñîòà õðàìà ñîñòàâëÿåò 42 ì, øèðèíà è äëèíà 94 è 106 ìåòðîâ. Îí óêðàøåí 234 êîëîííàìè, 9 êóïîëàìè, 20 ÷åòûðåõãðàííûìè øèõêàðàìè è áîëåå 20 òûñ. ôèãóð. Ïî ïåðèìåòðó çäàíèÿ ðàñïîëàãàþòñÿ ôèãóðû 148 ñëîíîâ. Â öåíòðå ðàñïîëîæåíà òðåõìåòðîâàÿ ñòàòóÿ Íèëêàíòõà Âàðìè, ïî÷èòàåìîãî êàê âîïëîùåíèå Ñâàìèíàðàÿíà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AKSHARDHAM_STRATEGY</Tag>
-		<English>Akshardam gives your city a bonus to science, a free scientist, to increase the great people rate and to decrease anarchy length.</English>
-		<Italian>L'Akshardam fornisce alla tua città un bonus alla ricerca, uno scienziato gratuito, incrementa il ritmo di nascita dei grandi personaggi e diminuisce la lunghezza dell'anarchia.</Italian>
-		<Russian>Àêøàðäõàì äàåò âàøåìó ãîðîäó áîíóñ ê íàóêå, áåñïëàòíîãî ñïåöèàëèñòà-ó÷åíîãî, óâåëè÷èâàÿ ÷àñòîòó ïîÿâëåíèÿ Âåëèêèõ ëþäåé è ñîêðàùàÿ ïðîäîëæèòåëüíîñòü àíàðõèè.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLUE_MOSQUE</Tag>
 		<English>Blue Mosque</English>
 		<French>La Mosquée Bleue</French>
@@ -41,12 +35,6 @@
 		<Italian>La Moschea del Sultano Ahmed è la moschea nazionale della Turchia; fa parte di un complesso di moschee ed è mehlio nota come la Moschea Blu per le piastrelle blu che ornano le pareti del suo interno.E' stata costruita tra il 1609 e il 1616, durante il regno di Ahmed I. Come molte altre moschee che comprende anche una tomba del fondatore, una madrassa e un ospizio. La Moschea del Sultano Ahmed è diventata una delle più popolari attrazioni turistiche di Istanbul.</Italian>
 		<Polish>Błękitny Meczet (właściwie Meczet Sułtana Ahmeda, tur. Sultanahmet Camii lub Sultan Ahmed Camii) - zbudowany z polecenia sułtana Ahmeda I meczet w Stambule, który jest jednym z ostatnich, a zarazem najwspanialszych przykładów tzw. "klasycznego okresu" sztuki islamskiej w Turcji.</Polish>
 		<Russian>[TAB]Ãîëóáàÿ ìå÷åòü èëè Ìå÷åòü Ñóëòàíàõìåò (òóð. Sultanahmet Camii) - ïåðâàÿ ïî çíà÷åíèþ ìå÷åòü Ñòàìáóëà. Íàñ÷èòûâàåò øåñòü ìèíàðåòîâ: ÷åòûðå, êàê îáû÷íî, ïî ñòîðîíàì, à äâà ÷óòü ìåíåå âûñîêèõ - íà âíåøíèõ óãëàõ. Ñ÷èòàåòñÿ âûäàþùèìñÿ îáðàçöîì èñëàìñêîé è ìèðîâîé àðõèòåêòóðû. Ìå÷åòü ðàñïîëîæåíà íà áåðåãó Ìðàìîðíîãî ìîðÿ â èñòîðè÷åñêîì öåíòðå Ñòàìáóëà â ðàéîíå Ñóëòàíàõìåò íàïðîòèâ ìóçåÿ Àÿ-Ñîôèÿ. Ìå÷åòü ÿâëÿåòñÿ îäíèì èç ñèìâîëîâ ãîðîäà. Îíà áûëà ïîñòðîåíà ìåæäó 1609 è 1616 ãîäàìè â ãîäûïðàâëåíèÿ Àõìåäà I. Êàê è ìíîãèå äðóãèå ìå÷åòè, îíà òàêæå îáúåäèíÿåò â ñåáå ìîãèëó îñíîâàòåëÿ, ìåäðåñå è áîãàäåëüíþ. Àðõèòåêòóðà ìå÷åòè ñî÷åòàåò â ñåáå äâà ñòèëÿ - êëàññè÷åñêèé îñìàíñêèé è âèçàíòèéñêèé. Ïî ëåãåíäå ñóëòàí ïðèêàçàë ïîñòðîèòü ñòàíäàðòíîå êîëè÷åñòâî (4) çîëîòûõ (àëòûí) ìèíàðåòà, íî àðõèòåêòîð ÷òî-òî íàïóòàë è ïîñòðîèë øåñòü (àëòû) ìèíàðåòîâ. Ñòðîèòåëüñòâî ìå÷åòè äëèëîñü ñåìü ëåò è áûëî çàâåðøåíî â 1616 ãîäó, çà ãîä äî ñìåðòè ñóëòàíà. Äëÿ ñòðîèòåëüñòâà ìå÷åòè áûë èñïîëüçîâàí êàìåíü è ìðàìîð. Íàçâàíèå ''Ãîëóáàÿ ìå÷åòü'' ìå÷åòü ïîëó÷èëà áëàãîäàðÿ îãðîìíîìó êîëè÷åñòâó (áîëåå 20 òûñ.) áåëûõ è ãîëóáûõ èçíèêñêèõ êåðàìè÷åñêèõ èçðàçöîâ ðó÷íîé ðàáîòû, êîòîðûå èñïîëüçîâàëèñü â äåêîðàöèÿõ èíòåðüåðà. </Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BLUE_MOSQUE_STRATEGY</Tag>
-		<English>Blue mosque gives to your city a free merchant and a bonus to gold.</English>
-		<Italian>La Moschea blu fornisce alla tua città un mercante gratuito, oltre a un bonus alla produzione di oro.</Italian>
-		<Russian>Ãîëóáàÿ Ìå÷åòü äàåò â âàø ãîðîä áåñïëàòíûõ òîðãîâöåâ è áîíóñ ê çîëîòó.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVES</Tag>
@@ -68,12 +56,6 @@
 		<Russian>[TAB]Áåçåêëèê - ìåñòíîñòü â çàïàäíîé ÷àñòè äîëèíû Ìóòîó Îãíåííûõ ãîð, ðàñïîëîæåííûõ ó ñåâåðî-âîñòî÷íîé êðîìêè ïóñòûíè Òàêëà-Ìàêàí íåïîäàëåêó îò ðàçâàëèí Ãàî÷àíà (Ñèíüöçÿí-Óéãóðñêèé àâòîíîìíûé ðàéîí, Êèòàé). Ìåæäó V è IX ââ. â Áåçåêëèêå áûë ñîçäàí àíñàìáëü áóääèéñêèõ ïåùåðíûõ ìîíàñòûðåé ñ óíèêàëüíîé ñòåíîïèñüþ (''ïåùåðû òûñÿ÷è áóää''). Â 77 ïåùåðàõ íàõîäÿòñÿ ñîòíè ñòåíîïèñíûõ èçîáðàæåíèé Áóääû, à òàêæå ïðèíîñÿùèõ åìó äàðû ïî Âåëèêîìó øåëêîâîìó ïóòè êóïöîâ, çà÷àñòóþ åâðîïåîèäíîé íàðóæíîñòè. ×àñòü ñòåíîïèñè áûëà ñíÿòà è ïåðåâåçåíà â ìóçåè Åâðîïû, â òîì ÷èñëå â Ãîñóäàðñòâåííûé Ýðìèòàæ. Â ñðàâíåíèè ñ íàõîäÿùèìèñÿ ïîä çàùèòîé ÞÍÅÑÊÎ ïåùåðàìè Ìîãàî â Äóíüõóàíå ñîõðàííîñòü áåçåêëèêñêèõ ôðåñîê âûçûâàåò áîëüøèå îïàñåíèÿ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAVES_STRATEGY</Tag>
-		<English>Build Bezeklik Caves to get 2 free artists in your city, and to help spreading buddhism.</English>
-		<Italian>Costruisci le Grotte di Bezeklik per ottenere 2 artisti gratis nella tua città e per migliorare la diffusione del buddismo.</Italian>
-		<Russian>Ïîñòðîéêà ïåùåð Áåçåêëèêà ïðåäîñòàâëÿåò 2 áåñïëàòíûõ õóäîæíèêà â âàøåì ãîðîäå, à òàêæå îáëåã÷àåò ðàñïðîñòðàíåíèå áóääèçìà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL</Tag>
 		<English>Confucian School</English>
 		<French>L'Ecole de Confucius</French>
@@ -90,12 +72,6 @@
 		<English>Confucius Institutes are non-profit public institutions affiliated with the Ministry of Education of the People's Republic of China whose stated aim is to promote Chinese language and culture, support local Chinese teaching internationally, and facilitate cultural exchanges. Confucius Institutes are sometimes compared to language and culture promotion organizations such as Britain's British Council, France's Alliance Française and Germany's Goethe-Institut.</English>
 		<Polish>Instytuty Konfucjusza - sieć organizacji non-profit, których celem jest propagowanie języka chińskiego i chińskiej kultury. Patronem Instytutów jest chiński mędrzec, nauczyciel i filozof Konfucjusz. W Instytutach Konfucjusza prowadzone są kursy języka chińskiego, organizowane konkursy i egzaminy państwowe HSK z tego języka. Instytucje te zajmują się również propagowaniem chińskiej sztuki poprzez organizację wystaw, przeglądów filmowych czy prelekcji. Instytuty Konfucjusza powoływane są przez Chińskie Państwowe Biuro Międzynarodowej Promocji Języka Chińskiego (w skrócie Hanban). Pierwsza, pilotażowa instytucja tego typu powstała czerwcu 2004 roku w Taszkencie w Uzbekistanie. Pierwszy Instytut Konfucjusza został utworzony 21 listopada 2004 roku w Seulu. Od tej pory Hanban zaczął tworzyć Instytuty Konfucjusza przy uniwersytetach na całym świecie, w takich krajach jak Szwecja, Stany Zjednoczone, Niemcy, Zimbabwe, RPA, Wielka Brytania.</Polish>
 		<Russian>[TAB]Èíñòèòóòû èì. Êîíôóöèÿ - ýòî íåêîììåð÷åñêèå ãîñóäàðñòâåííûå ó÷ðåæäåíèÿ, îòíîñÿùèõñÿ ê âåäåíèþ Ìèíèñòåðñòâà îáðàçîâàíèÿ ÊÍÐ, çàÿâëåííîé öåëüþ êîòîðûõ ÿâëÿåòñÿ ïîïóëÿðèçàöèÿ êèòàéñêîãî ÿçûêà è êóëüòóðû, ïîääåðæêó ðåãèîíàëüíîãî ïðåïîäàâàíèÿ êèòàéñêîãî ÿçûêà íà ìåæäóíàðîäíîì óðîâíå, è îðãàíèçàöèÿ êóëüòóðíîãî îáìåíà. Èíñòèòóòû Êîíôóöèÿ ïðîäâèãàþò êëàññè÷åñêèé êèòàéñêèé ÿçûê è ëèòåðàòóðó, îêàçûâàþò ïîääåðæêó îðãàíèçàöèÿì, òàêèì êàê Áðèòàíñêèé Ñîâåò, Ôðàíöóçñêèé Àëüÿíñ è íåìåöêèé óíèâåðñèòåò Ãåòå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL_STRATEGY</Tag>
-		<English>The Confucian School gives a great bonus to culture and science to the city where it is built; it also adds 1 population to all your cities, giving them a small boost to culture and science.</English>
-		<Italian>La Scuola di Confucio fornisceun grandebonus alla cultura e alla ricerca nelle città in cui viene costruita; inoltre aggiunge +1 popolazione a tutte le tue città, fornendo anche un piccolo bonus a cultura e ricerca.</Italian>
-		<Russian>Êîíôóöèàíñêèå øêîëû äàåò áîëüøîé áîíóñ ê êóëüòóðå è íàóêå â ãîðîäå, ãäå îíè áûëè ïîñòðîåíû; êðîìå òîãî, îíè äîáàâëÿþò +1 íàñåëåíèÿ äëÿ âñåõ âàøèõ ãîðîäîâ, äàâàÿ èì íåáîëüøîé èìïóëüñ äëÿ ðîñòà êóëüòóðû è íàóêè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESERT</Tag>
@@ -117,12 +93,6 @@
 		<Russian>[TAB]Äæåííåíñêàÿ ñîáîðíàÿ ìå÷åòü - ñàìîå áîëüøîå ãëèíèñòî-íàíîñíîå çäàíèå â ìèðå. Ìå÷åòü ðàñïîëîæåíà â ãîðîäå Äæåííå, Ìàëè â ïîéìå ðåêè Áàíè. Ñòðîèòåëüñòâî òåêóùåé ñîáîðíîé ìå÷åòè âåëîñü òðè ãîäà è çàâåðøèëîñü â 1907 ãîäó (ïî äðóãèì äàííûì - â 1909 ãîäó). Çà ñòðîèòåëüíûìè ðàáîòàìè íàäçèðàëà ãèëüäèÿ êàìåíùèêîâ ãîðîäà Äæåííå. Â òî âðåìÿ Äæåííå áûë ÷àñòüþ êîëîíèè Ôðàíöóçñêàÿ Çàïàäíàÿ Àôðèêà, è ôðàíöóçû, âîçìîæíî, ïðåäëîæèëè ïîëèòè÷åñêóþ è ýêîíîìè÷åñêóþ ïîääåðæêó ñòðîèòåëüñòâó è ìå÷åòè, è ñîñåäíåãî ñ íåé ìåäðåñå. Ìå÷åòü ïîñòðîåíà èç ïðåññîâàííîé ãëèíû, ïåñêà è âîäû. Îíà áûëà âîçâåäåíà íà âûñîêîé òðåõìåòðîâîé ïëàòôîðìå íà ìåñòå, ãäå â XIII-XIV âåêàõ ðàñïîëàãàëîñü ñòàðîå çäàíèå ñîáîðíîé ìå÷åòè. Ðàçìåðû ñîîðóæåíèÿ äîñòèãàþò 75õ75 ìåòðîâ, à âûñîòà öåíòðàëüíîé áàøíè - îêîëî 16 ìåòðîâ. Êàê ïîëàãàþò ìíîãèå àðõèòåêòîðû, ìå÷åòü â Äæåííå - ñàìîå áîëüøîå äîñòèæåíèå àðõèòåêòóðíîãî ñóäàíî-ñàõåëüñêîãî ñòèëÿ, õîòÿ ñ îïðåäåëåííûìè èñëàìñêèìè âëèÿíèÿìè. Â ñîñòàâå îáúåêòà ''Ñòàðûé ãîðîä Äæåííå'' ìå÷åòü â 1988 ã. âêëþ÷åíà â ñïèñîê Âñåìèðíîãî íàñëåäèÿ ÞÍÅÑÊÎ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DESERT_STRATEGY</Tag>
-		<English>Great mosque of desert increases your cities science, adds a free scientist and increases great people rate.</English>
-		<Italian>La grande moschea del deserto incrementa la ricerca della tua città, aggiunge uno scienziatogratis e incrementa il tasso di nascita dei grandi personaggi.</Italian>
-		<Russian>Âåëèêàÿ ìå÷åòü óâåëè÷èâàåò óðîâåíü èññëåäîâàíèé â âàøèõ ãîðîäàõ, äîáàâëÿåò áåñïëàòíîãî ó÷åíîãî è óâåëè÷èâàåò ñêîðîñòü ïîÿâëåíèÿ Âåëèêèõ ëþäåé.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEENAKSHI</Tag>
 		<English>Meenakshi Temple</English>
 		<French>Le Temple de Meenakshi</French>
@@ -140,12 +110,6 @@
 		<Italian>Il tempio di Sundareswarar Meenakshi è un tempio storico indù situato nella città santa di Madurai. E' dedicato a Shiva (nella forma di Sundareswarar, Signore Magnifico) e alla sua consorte, la dea Parvati (in forma di Meenakshi). Il tempio è il cuore e la linfa vitale della città di Madurai da più di 2500 anni. Questo tempio ha una splendida architettura e una testimonianza significativa per i bramini Vishwakarma, per la loro bravura nelle sculture di questo tempio. Il complesso ospita 14 splendide Gopurams (torri) di cui due Gopurams d'oro per le principali divinità, che sono riccamente scolpite e dipinte. Il tempio è un simbolo significativo per il popolo Tamil, ed è stato citato fin dall'antichità nella letteratura tamil, anche se la struttura attuale si ritiene sia stata costruita solo di recente, nei primi anni del 17° secolo. Questa meraviglia architettonica magnifica era un capofila nelle elezioni per le moderne sette meraviglie del mondo, per la sua importanza architettonica.</Italian>
 		<Polish>Swiątynia Minakszi w Maduraj - to hinduistyczny kompleks obiektów sakralnych w Maduraj w stanie Tamil Nadu w Indiach. Główne obiekty kompleksu powstały w latach 1560-1680. Artystyczny kunszt nadano jej za czasów Najaków, gubernatorów Widźajanagaru. Znaczący wkład wniósł Tirumala (panujący w latach 1623-1660).</Polish>
 		<Russian>[TAB]Õðàì Ìèíàêøè - èíäóèñòñêèé õðàì â ãîðîäå Ìàäóðàé íà òåððèòîðèè èíäèéñêîãî øòàòà Òàìèëíàä. Íàçâàí â ÷åñòü òðåõãðóäîé áîãèíè Ìèíàêøè, îäíîé èç ñóïðóã áîãà Øèâû. Íàéäåíî ìíîæåñòâî èñòîðè÷åñêèõ ñâèäåòåëüñòâ õðàìà äàòèðóåìûõ ðàíåå íîâîé ýðû. Õðàì áûë ïî÷òè ïîëíîñòüþ ðàçðóøåí â 1310 ãîäó ìóñóëüìàíñêèìè çàâîåâàòåëÿìè, íå îòëè÷àâøèìèñÿ òåðïèìîñòüþ ê äðóãèì ðåëèãèÿì. Õðàì áûë ïîëíîñòüþ âîññòàíîâëåí â ïåðâîçäàííîì âèäå â êîíöå XIV âåêà, êîãäà èíäóññêèå öàðè ñíîâà ïðèøëè ê âëàñòè â Ìàäóðàå. Õðàì Ìèíàêøè íàõîäèòñÿ â ñàìîì öåíòðå ãîðîäà, è çäåñü ïðîõîäÿò ìíîãî÷èñëåííûå ïðàçäíèêè è ðèòóàëû äëÿ æèòåëåé ãîðîäà. Õðàì èìååò 258 ì. â øèðèíó è 223 ì. â äëèíó. Âûñîòà - 51,9 ì. Îí óâåí÷àí ÷åòûðíàäöàòüþ ãîïóðàìè - áàøíÿìè âûñîòîé äî 50 ì. Ïÿòü áàøåí ðàñïîëîæåíû âíóòðè õðàìà, îñòàëüíûå ñíàðóæè. Âñå îíè ïîëíîñòüþ ïîêðûòû ìíîæåñòâîì îòíîñèòåëüíî íåáîëüøèõ ðàçðèñîâàííûõ ñêóëüïòóð. Ýòî ìíîãîðóêèå Øèâû, ìíîãîëèêèå áîãèíè, æðåöû è ìóçûêàíòû, ìèôè÷åñêèå æèâîòíûå, ìóæ÷èíû è æåíùèíû. Ìíîãî òûñÿ÷ ôèãóð, íè îäíà íå ïîõîæà íà äðóãóþ. Ïåðåä âõîäîì â õðàì ðàñïîëîæåí ''Ïðóä çîëîòîé ëèëèè'', ïðåäíàçíà÷åííûé äëÿ îáðÿäà îìîâåíèÿ. Õðàì îòêðûò êðóãëûå ñóòêè. Äîâîëüíî ÷àñòî âîêðóã õðàìà ïðîõîäÿò ïðîöåññèè ïàëîìíèêîâ, ñîïðîâîæäàåìûå ìóçûêàíòàìè. Àðõèòåêòóðíàÿ êîìïîçèöèÿ âûïîëíåíà â ñòèëå, òèïè÷íîì äëÿ èíäèéñêèõ õðàìîâ. Õðàì âûòÿíóò ñ âîñòîêà íà çàïàä. Âíóòðè õðàìà ðàñïîëàãàåòñÿ ñâÿòèëèùå áîãà Øèâû-Ñóíäàðåøâàðû è åãî ñêóëüïòóðíîå èçîáðàæåíèå. Ïî òîðæåñòâåííûì ðåëèãèîçíûì äíÿì, ñòàòóþ áîãà ñàæàþò â ïîçîëî÷åííóþ êîëÿñêó è âûâîçÿò èç õðàìà, âïðÿãàþò â íåå ñëîíà è ñîâåðøàþò øåñòâèå âîêðóã õðàìà. Â íàñòîÿùåå âðåìÿ ñêóëüïòóðû ïîäêðàøèâàþòñÿ è ðåñòàâðèðóþòñÿ êàæäûå 12 ëåò. Ïîñëåäíÿÿ ðåêîíñòðóêöèÿ õðàìà áûëà çàâåðøåíà â ìàðòå 2009 ãîäà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MEENAKSHI_STRATEGY</Tag>
-		<English>Meenakshi Temple gives your city a free artist, a bonus to culture, increases your great people rate and decreases anarchy length.</English>
-		<Italian>Il Tempio Meenakshi fornisce alla tua città un artista gratuito e un bonus alla cultura, incrementa il tasso di nascita dei grandi personaggi e diminuisce la lunghezza dell'anarchia.</Italian>
-		<Russian>Õðàì Ìèíàêøè äàåò âàøåìó ãîðîäó áåñïëàòíîãî õóäîæíèêà, áîíóñ ê êóëüòóðå, óâåëè÷èâàåò ñêîðîñòü ïîÿâëåíèÿ Âåëèêèõ ëþäåé è óìåíüøàåò ïðîäîëæèòåëüíîñòü àíàðõèè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NARA</Tag>
@@ -167,12 +131,6 @@
 		<Russian>[TAB]Â ýïîõó Òýìïå íà ßïîíèþ ñâàëèëèñü áåäñòâèÿ è ýïèäåìèè. Â 743 ãîäó èìïåðàòîð Ñèîìó èçäàë óêàç, ïî êîòîðîìó æèòåëè äîëæíû ïîñòðîèòü ñòàòóþ Áóääû äëÿ ñâîåé çàùèòû. Â ñòðîèòåëüñòâå ïðèíÿëî ó÷àñòèå 2,180,000 ÷åëîâåê. Ïðîåêò ñîçäàë Êóíèíàêà-íî-Ìóðàäçè Êèìèìàðî. Îí æå ðóêîâîäèë ñáîðêîé ñòàòóè ðàçìåðîì 15 ìåòðîâ ïî ÷àñòÿì. Õðàì áûë çàâåðøåí â 745, à Áóääà çàêîí÷åí â 751 ãîäó, ïðè ýòîì íà ïðîåêò áûëà áðîøåíà ïî÷òè âñÿ ïðîèçâîäèìàÿ â ñòðàíå áðîíçà. Ñòàòóþ ðåìîíòèðîâàëè íåñêîëüêî ðàç, â ÷àñòíîñòè ïîñëå çåìëåòðÿñåíèÿ è äâóõ ïîæàðîâ. Õðàì ïðèîáðåë ñîâðåìåííûé âèä â 1709 ãîäó, ïðè ýòîì áûëè äåìîíòèðîâàíû äâå ïàãîäû âûñîòîé 100 ì, âåðîÿòíî, ñàìûå âûñîêèå äåðåâÿííûå ñòðîåíèÿ â ìèðå òîãî âðåìåíè, êîòîðûå áûëè ðàçðóøåíû çåìëåòðÿñåíèåì. Òîäàé-äçè ñ÷èòàëñÿ ãëàâíûì õðàìîì îáëàñòè ßìàòî. Â ñîêðîâèùíèöå õðàìà Ñåñîèí íàõîäèòñÿ íåìàëî ðåëèêâèé âðåìåí ïîñòðîéêè õðàìà. Ðàçìåðû Âåëèêîãî Áóääû Âàéðî÷àíû: âûñîòà: 14.98 ì., ëèöî: 5.33 ì., ãëàçà: 1.02 ì., íîñ: 0.5 ì., óøè: 2.54 ì., âåñ: îê. 500 òîíí.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NARA_STRATEGY</Tag>
-		<English>Build the Nara's Giant Buddha to decrease anarchy length and to increase Golden Age length.</English>
-		<Italian>Costruisci i Buddha giganti di Nara per diminuire la lunghezza dell'anarchia e per incrementare la lunghezza delle età dell'oro.</Italian>
-		<Russian>Ïîñòðîéêà Ãèãàíòñêîãî Áóääû èç Íàðà ñîêðàùàåò ïðîäîëæèòåëüíîñòü àíàðõèè ïðè ñìåíå ïàðàäèãì è óâåëè÷èâàåò äëèòåëüíîñòü Çîëîòîãî âåêà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUANZHEN</Tag>
 		<English>Quanzhen School</English>
 		<French>L'Ecole Quanzhen</French>
@@ -190,12 +148,6 @@
 		<Italian>La Scuola di Quanzhen, comunemente chiamata Complete reality in inglese, è un importante setta del Taoismo che ha avuto origine nella Cina settentrionale. E' stata fondata dal sacerdote taoista Wang Chongyang nel 12° secolo, durante l'ascesa della dinastia Jin. Quando i Mongoli invasero la Cina del Nord nel 1254, i taoisti Quanzhen furono tra coloro che esercitarono grande sforzo nel mantenere la pace, salvando così migliaia di vite, in particolare ai cinesi di origine Han. Questo ramo del Taoismo è anche menzionato spesso in popolari romanzi wuxia del Jinyong, tra cui la trilogia di Condor.Il significato di Quanzhen può essere tradotto letteralmente in "All True" e per questo motivo, è spesso chiamata la "All True Religion" o la "Via di completezza e di Verità." In alcuni testi è indicata anche come il "Cammino di perfezione completa."</Italian>
 		<Polish>Szkołą Quanzhen to Taoistyczna sekta pochodząca z Północnych Chin.</Polish>
 		<Russian>[TAB]Öþàíü÷æýíü (êèò. quanzhenjiao), Øêîëà Ñîâåðøåííîé Èñòèíû, Øêîëà Ñîâåðøåííîé Ïîäëèííîñòè - îñíîâíàÿ øêîëà äàîñèçìà, ðàñïðîñòðàíåííàÿ ïðåèìóùåñòâåííî íà ñåâåðå Êèòàÿ. Øêîëó îñíîâàë äàîñ Âàí ×óíúÿí (1112 - 1169) â XII âåêå, êîãäà íàèáîëüøåãî ìîãóùåñòâà äîñòèãëà ÷æóð÷æýíüñêàÿ äèíàñòèÿ Öçèíü (1115-1234). Êîãäà â 1254 â Ñåâåðíûé Êèòàé âòîðãëèñü ìîíãîëû è îäåðæàëè ïîáåäó íàä äèíàñòèåé Ñóí, äàîñû øêîëû Öþàíü÷æýíü ïðèëîæèëè îãðîìíûå óñèëèÿ äëÿ äîñòèæåíèÿ ìèðà è ñïàñåíèÿ æèçíè òûñÿ÷ ëþäåé. Îñíîâíûì ïîëîæåíèåì øêîëû Ñîâåðøåííîé Èñòèíû ñòàëî òðåáîâàíèå îáÿçàòåëüíîãî ïðèíÿòèÿ äàîñàìè ìîíàøåñêîãî îáåòà, îñîáîå çíà÷åíèå èìåëà âñòðå÷à åå îñíîâàòåëÿ - Âàí ×óíúÿíà ñ áåññìåðòíûì Ëþé Äóíáèíåì â 1159. Â öåëîì ýòî îïðåäåëèëî ïåðñîíàëüíûé õàðàêòåð äàííîãî íàïðàâëåíèÿ äàîñèçìà. Äîãìàòè÷åñêîé îñíîâîé ïîâñåäíåâíîé æèçíè äàîñîâ øêîëû Ñîâåðøåííîé èñòèíû ÿâëÿþòñÿ îáåòû (öçå). Â íà÷àëå XIII âåêà øêîëà Öþàíü÷æýíü ðàñïðîñòðàíèëîñü ïî âñåìó Êèòàþ, ïîëüçóÿñü ïðèâèëåãèÿìè ñíà÷àëà ÷æóð÷æýíüñêèõ, à ïîòîì ìîíãîëüñêèõ (Þàíü) âëàñòåé. Öþ ×óöçè (1148-1227) âñòðå÷àëñÿ ñ ×èíãèñõàíîì. ×èíãèñõàíà çàèíòåðåñîâàëè ïåðñïåêòèâû îáðåòåíèÿ áåññìåðòèÿ, îäíàêî Öþ ×óöçè îáúÿñíèë åìó áåññìûñëåííîñòü ëåêàðñòâ è ýëèêñèðîâ è çíà÷åíèå ìåäèòàöèé è âíóòðåííåé àëõèìèè, è áûë ïðèíÿò ñ áîëüøèì óâàæåíèåì. Ïîçäíåå ìîíãîëû ïåðåîðèåíòèðîâàëèñü íà áóääèçì, è ïðîøëî íåñêîëüêî íåóäà÷íûõ äèñïóòîâ î ðåëèãèîçíîì ïðèîðèòåòå Áóääû èëè Ëàî-öçû, çàêîí÷èâøèõñÿ ïîëíûì ïîðàæåíèåì äàîñîâ, íå èìåþùèõ ñòîëü îòòî÷åííîé êóëüòóðû äèñêóññèé. Ïîñëå 1281 øêîëà Öþàíü÷æýíü áûëà ïîäâåðãíóòà ðåïðåññèÿì (õîòÿ ìîíãîëû ïðîäîëæàëè ïðèçíàâàòü ñóùåñòâóþùóþ íà þãå Øêîëó Íåáåñíûõ Íàñòàâíèêîâ. Â 1368 ñ ïðèõîäîì ê âëàñòè êèòàéñêîé äèíàñòèè Ìèí àâòîðèòåò øêîëû Öþàíü÷æýíü áûë âîññòàíîâëåí, ïîñëå ÷åãî Öþàí÷æýíü îáúåäèíèëàñü ñ þæíîé øêîëîé Öçèíüäàíü (øêîëà Çîëîòà è Êèíîâàðè).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_QUANZHEN_STRATEGY</Tag>
-		<English>Quanzhen school gives a bonus to culture to all your cities, adds a free priest to your city and improves health in all your empire.</English>
-		<Italian>La Scuola di Quanzhen fornisce un bonus alla cultura a tutte le tue città, fornisce un sacerdote gratuito nella città in cui viene costruita e migliora la salute in tutto il tuo impero.</Italian>
-		<Russian>Øêîëà Öþàíü÷æýíü äàåò áîíóñ ê êóëüòóðå äëÿ âñåõ âàøèõ ãîðîäîâ è äîáàâëÿåò áåñïëàòíîãî ñâÿùåííèêà â âàø ãîðîä, à òàêæå óëó÷øàåò çäîðîâüå âî âñåé âàøåé èìïåðèè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL</Tag>
@@ -217,12 +169,6 @@
 		<Russian>[TAB]Ñîáîð Ñâÿòîãî Ìàðêà (èòàë. Basilica di San Marco - ''áàçèëèêà Ñàí-Ìàðêî'') - êàôåäðàëüíûé ñîáîð Âåíåöèè (äî 1807 ãîäà ïðèäâîðíàÿ êàïåëëà ïðè äâîðöå äîæåé), ïðåäñòàâëÿþùèé ñîáîé ðåäêèé ïðèìåð âèçàíòèéñêîé àðõèòåêòóðû â Çàïàäíîé Åâðîïå. Ðàñïîëàãàåòñÿ íà ïëîùàäè Ñâÿòîãî Ìàðêà, ðÿäîì ñ Äâîðöîì äîæåé. Ñîáîð, óêðàøåííûé ìíîãî÷èñëåííûìè ìîçàèêàìè, âûïîëíåííûìè â âèçàíòèéñêîì ñòèëå, ÿâëÿåòñÿ ìåñòîì íàõîæäåíèÿ ìîùåé àïîñòîëà Ìàðêà è ìíîæåñòâà öåííûõ ïðåäìåòîâ èñêóññòâà, âûâåçåííûõ âî âðåìÿ ðàçãðàáëåíèÿ Êîíñòàíòèíîïîëÿ òàê íàçûâàåìûìè ''âîèíàìè Õðèñòà'' èç Çàï. Åâðîïû â 1204 ãîäó. Â 1987 ãîäó ñîáîð â ÷èñëå ïðî÷èõ âåíåöèàíñêèõ ïàìÿòíèêîâ âîøåë â ÷èñëî îáúåêòîâ Âñåìèðíîãî íàñëåäèÿ ÞÍÅÑÊÎ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_STRATEGY</Tag>
-		<English>Build the Saint Mark's Basilica to get a boost to production and gold to your water tiles, and to get a free merchant in your city.</English>
-		<Italian>Costruisci la Basilica di San Marco per ottenere un bonus alla produzione e al commercio per le tue caselle di mare, e per ottenere un mercante gratis nella tua città.</Italian>
-		<Russian>Ïîñòðîéêà Ñîáîðà Ñâ. Ìàðêà äàåò çàìåòíûé ïðèðîñò ê äîáû÷å çîëîòà íà âîäíûõ êëåòêàõ, ïðåäîñòàâëÿÿ áåñïëàòíîãî ñïåöèàëèñòà òîðãîâöà â âàøåì ãîðîäå.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLOMON</Tag>
 		<English>Solomon's Temple</English>
 		<French>Le Temple de Salomon</French>
@@ -240,12 +186,6 @@
 		<Italian>Il Tempio di Salomone, noto anche come il Primo Tempio, fu, secondo la Bibbia ebraica, il primo tempio degli israeliti a Gerusalemme; venne originariamente costruito da re Salomone. Secondo la Bibbia, funzionò come punto di riferimento religioso per il culto ed i sacrifici conosciuti come il korbanot nell'antico giudaismo. Completato nel 960 a.C., fu distrutto dai babilonesi nel 586 a.C. Venne ricostruito a Gerusalemme tra il 516 a.C. e il 70 d.C., venendo quindi chiamato Secondo Tempio. L'escatologia ebraica crede che in futuro verrà costruito un Terzo Tempio.</Italian>
 		<Polish>Jedynym dostępnym źródłem na temat usytuowania, wyglądu i rozmiarów Pierwszej Swiątyni jest Biblia. Badania archeologiczne jerozolimskiego Wzgórza Swiątynnego nie są możliwe, ze względu na "Kopułę Skały", wybudowaną na przełomie VII i VIII w. po Chr. przez kalifa Omara. Jest też mało prawdopodobne znalezienie jakiegoś fragmentu Pierwszej Swiątyni ze względu na prace budowlane i remontowe wykonane przy Drugiej Swiątyni pod koniec ery przedchrześcijańskiej. Pierwsza Swiątynia powstała w latach 966-959 p.n.e. za czasów króla Salomona, który podobno wzniósł ją w ciągu 7 lat na miejscu wskazanym uprzednio przez króla Dawida, na wzgórzu Moria ("święta skała") w północno-wschodniej części Jerozolimy, gdzie Abraham miał złożyć w ofierze na żądanie Boga Jahwe swego syna Izaaka. Do Swiątyni, otoczonej kilkoma dziedzińcami, przylegał od południa zespół pałacowy. Pierwsza Swiątynia została zniszczona przez wojska babilońskiego króla Nabuchodonozora II w 587 roku p.n.e. lub 586 roku p.n.e.</Polish>
 		<Russian>[TAB]Ïåðâûé Èåðóñàëèìñêèé õðàì èëè Õðàì Ñîëîìîíà (950 - 586 äî í. ý.). Ñîçäàíèå öåíòðàëüíîãî Õðàìà â äðåâíåì Èçðàèëå îëèöåòâîðÿëî îáúåäèíåíèå Èçðàèëüñêîãî öàðñòâà è ìîãëî ïðîèçîéòè ëèøü âî âðåìÿ óïðî÷åíèÿ ýòîãî åäèíñòâà. È äåéñòâèòåëüíî, ñîãëàñíî Áèáëèè, Õðàì áûë âîçäâèãíóò â ïåðèîä ñàìîãî âûñøåãî ïðîÿâëåíèÿ íàöèîíàëüíîãî åäèíñòâà åâðåéñêîãî íàðîäà, â öàðñòâîâàíèå Ñîëîìîíà. Ñîëîìîíó óäàëîñü îñóùåñòâèòü ïëàí ïîñòðîéêè ãðàíäèîçíîãî Õðàìà, ê êîòîðîìó óñòðåìëÿëèñü áû íà ïîêëîíåíèå åâðåè ñî âñåõ êîíöîâ Èçðàèëÿ. Ñòðîèòåëüñòâî ñàìîãî Õðàìà äëèëîñü 7 ëåò: ñ 957 ïî 950 ãã. äî í. ý. (ïî äðóãèì äàííûì, ñ 1014 ïî 1007). Ðàáîòà áûëà çàâåðøåíà â âîñüìîì ìåñÿöå 11-ãî ãîäà öàðñòâîâàíèÿ Ñîëîìîíà, ïîñëå ÷åãî Êîâ÷åã Çàâåòà áûë òîðæåñòâåííî óñòàíîâëåí â Ñâÿòàÿ ñâÿòûõ. Õðàì ÿâëÿëñÿ ÷àñòüþ êîìïëåêñà öàðñêîãî äâîðöà è, íåñîìíåííî, äîìèíèðîâàë íàä îêðóæàþùèìè ïîñòðîéêàìè. Äâîðåö, íàä âîçâåäåíèåì êîòîðîãî òðóäèëñÿ, âåðîÿòíî, òîò æå ôèíèêèéñêèé çîä÷èé Õèðàì, ðàñïîëàãàëñÿ ðÿäîì ñ Õðàìîì è ñîîáùàëñÿ ñ íèì ïîñðåäñòâîì îòäåëüíîãî âõîäà. Íåäàëåêî îò Õðàìà Ñîëîìîí òàêæå ïîñòðîèë ñâîé ëåòíèé äâîðåö è äâîðåö äëÿ äî÷åðè åãèïåòñêîãî ôàðàîíà, êîòîðóþ âçÿë â æåíû. Ñòðîèòåëüñòâî âñåãî õðàìîâîãî êîìïëåêñà äëèëîñü 16 ëåò. Âåëèêîëåïíîå çäàíèå Õðàìà ñäåëàëî åãî ñ ñàìîãî íà÷àëà öåíòðàëüíûì ñâÿòèëèùåì äëÿ âñåãî Èçðàèëÿ, õîòÿ íàðÿäó ñ íèì ïðîäîëæàëè ñóùåñòâîâàòü è ìåñòíûå ñâÿòèëèùà - áàìîò. Âîøëî â îáû÷àé âîñõîäèòü òðè ðàçà â ãîä â Èåðóñàëèìñêèé õðàì, êàê ðàíüøå â Ñêèíèþ, êîòîðàÿ ðàñïîëàãàëàñü â Ñèëîìå (Øèëî). Îäíàêî, óõóäøåíèå ïîëèòè÷åñêîé ñèòóàöèè â êîíöå ïðàâëåíèÿ Ñîëîìîíà è â äíè åãî ïðååìíèêîâ íåãàòèâíî îòðàçèëîñü íà ñóäüáå Õðàìà. Ïàäåíèå Ñåâåðíîãî öàðñòâà è ðàçðóøåíèå àññèðèéöàìè èçðàèëüñêèõ õðàìîâ â Äàíå è â Âåôèëå (Áåò Ýëå) â 732 è 721 ãã. äî í. ý. óêðåïèëî ïîëîæåíèå Èåðóñàëèìñêîãî õðàìà â êà÷åñòâå öåíòðàëüíîãî ñâÿòèëèùà âñåõ èçðàèëüñêèõ êîëåí. Â ðåçóëüòàòå, ïàëîìíèêè èç áûâøåãî Èçðàèëüñêîãî öàðñòâà ïðèáûâàëè íà Ïåñàõ â Èåðóñàëèì. Ñ âîñøåñòâèåì æå íà ïðåñòîë áëàãî÷åñòèâîãî öàðÿ Èîñèÿ â 662 ãîäó äî í. ý. áûëè ëèêâèäèðîâàíû âñå ÿçû÷åñêèå êóëüòû, ðàçðóøåíû àëòàðè â êóëüòîâûõ öåíòðàõ ñåâåðíûõ êîëåí, è Èåðóñàëèìñêèé õðàì áûë îêîí÷àòåëüíî ïðåâðàùåí â íàöèîíàëüíî-ðåëèãèîçíûé öåíòð. Ñ òåõ ïîð â Èóäåå áûëî îäíî åäèíñòâåííîå Ñâÿòèëèùå, êóäà ïàëîìíè÷àëè äàæå ñàìàðèòÿíå. Âñêîðå ïîñëå ñìåðòè Èîñèè (Èîøèÿó) Íàâóõîäîíîñîð çàáðàë ''÷àñòü ñîñóäîâ äîìà Ãîñïîäíÿ? è ïîëîæèë èõ â êàïèùå ñâîåì â Âàâèëîíå''[93]. Ñïóñòÿ 8 ëåò ïîñëå ýòîãî, ïðè öàðå Èåõîíèè Íàâóõîäîíîñîð çàõâàòèë Èåðóñàëèì è ''âûâåç âñå ñîêðîâèùà äîìà Ãîñïîäíÿ? è èçëîìàë? âñå çîëîòûå ñîñóäû, êîòîðûå Ñîëîìîí, öàðü Èçðàèëåâ, ñäåëàë â õðàìå Ãîñïîäíåì''. Åùå ÷åðåç 11 ëåò, ïîñëå òîãî, êàê Ñåäåêèÿ îáúÿâèë îòäåëåíèå Èóäåè îò Âàâèëîíà, âàâèëîíÿíå ïîä ïðåäâîäèòåëüñòâîì Íàâóõîäîíîñîðà â 586 ãîä äî í. ý. çàõâàòèëè Èåðóñàëèì âíîâü è íà ýòîò ðàç ïîëíîñòüþ ðàçðóøèëè Õðàì Ñîëîìîíà äî ñàìîãî îñíîâàíèÿ. Áîëüøèíñòâî æèòåëåé Èåðóñàëèìà áûëè óáèòû, îñòàâøèåñÿ âçÿòû â ïëåí è óãíàíû â ðàáñòâî â Âàâèëîíèþ. Êîâ÷åã Çàâåòà áûë ïðè ýòîì óòåðÿí.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SOLOMON_STRATEGY</Tag>
-		<English>Build the Solomon's Temple to get a bonus to science in your city; it also adds a free priest to the city.</English>
-		<Italian>Costruisci il tempio di Salomone per ottenere un bonus alla ricerca e un sacerdote gratisnella tua città.</Italian>
-		<Russian>Ïîñòðîéêà õðàìà Ñîëîìîíà ïðåäîñòàâëÿåò áîíóñ ê íàóêå â âàøåì ãîðîäå; êðîìå òîãî, îí äîáàâëÿåò áåñïëàòíîãî ñâÿùåííèêà â ãîðîä.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SULTAN</Tag>
@@ -267,12 +207,6 @@
 		<Russian>[TAB]Ìå÷åòü Ñóëòàíà Êàáóñà èëè Ìàñêàòñêàÿ ñîáîðíàÿ ìå÷åòü - ãëàâíàÿ äåéñòâóþùàÿ ìå÷åòü Ìàñêàòà, Îìàí. Â 1992 ãîäó Ñóëòàí Êàáóñ ïðåäïèñàë, ÷òîáû ó åãî ñòðàíû Îìàíà áûëà ñâîÿ Âåëèêàÿ Ìå÷åòü. Â 1993 ãîäó ïðîøåë êîíêóðñ, ñòðîèòåëüñòâî íà÷àëîñü â 1995 ã. Ñòðîèòåëüíûå ðàáîòû çàíÿëè øåñòü ëåò è ÷åòûðå ìåñÿöà. Â ìàå 2001 ãîäà ïîä ãîëóáûì íåáîì Ìàñêàòà ïîÿâèëñÿ îäèí èç øåäåâðîâ ñîâðåìåííîé àðõèòåêòóðû: ãëàâíàÿ ìå÷åòü ñóëòàíà Êàáóñà. Ìå÷åòü Ñóëòàíà Êàáóñà çàíèìàåò ïëîùàäü 416 òûñ.êâ.ì. Èíòåðüåð ïîêðûò áåëûì è ñåðûì ìðàìîðîì. Êåðàìè÷åñêèå öâåòî÷íûå óçîðû óêðàøàþò èíòåðüåð àðêè è ñëåïûõ íèø. Ìå÷åòü ïîñòðîåíà èç 300 000 òîíí èíäèéñêîãî ïåñ÷àíèêà. Ãëàâíûé ìîëèòâåííûé çàë êâàäðàòíîé ôîðìû (74.4 x 74.4 ì.) ñ öåíòðàëüíûì êóïîëîì, âîçâûøàþùèìñÿ ê âûñîòå íà 50 ì. Êóïîë è ãëàâíûé ìèíàðåò (90 ì. âûñîòîé) è ÷åòûðå áîêîâûõ ìèíàðåòà (45.5 ì) ÿâëÿþòñÿ ãëàâíûìè âèçóàëüíûìè îñîáåííîñòÿìè ìå÷åòè. Ãëàâíûé ìîëèòâåííûé çàë ìîæåò îäíîâðåìåííî âìåñòèòü áîëåå 6,5 òûñ. âåðóþùèõ, â òî âðåìÿ êàê æåíñêèé ìîëèòâåííûé çàë âñåãî òîëüêî 750 ÷åëîâåê (31 õ 18 ìåòðîâ). Âíåøíÿÿ ìîëèòâåíàÿ òåððèòîðèÿ ñïîñîáíà âìåñòèòü 8 òûñ. âåðóþùèõ, ñóììàðíîå êîëè÷åñòâî äî 20 òûñ. âåðóþùèõ. Êóïîë, ïàðÿùèé íà âûñîòå ? äâîéíîé: âíóòðåííÿÿ îáîëî÷êà ïîêðûòà ïîçîëî÷åííîé ìîçàèêîé, âíåøíÿÿ ïðåäñòàâëÿåò ñîáîé àæóðíîå ïîêðûòèå. Ãëàâíûé çàë îñâåùàþò 35 ëþñòð; äèàìåòð ñàìîé áîëüøîé, ñäåëàííîé â Àâñòðèè ? 14 ì, îíà èìååò 1122 ëàìïû è âåñèò 8 òîíí. Íà êàæäîé ëþñòðå èç õðóñòàëÿ è êðèñòàëëîâ ñâàðîâñêè âîñïðèçâåäåíû â ìèíèàòþðå ìíîæåñòâî ìèíàðåòîâ ìå÷åòè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SULTAN_STRATEGY</Tag>
-		<English>Sultan Qaboos Great Mosque increases your cities culture, adds a free engineer and gives a bonus to trade routes.</English>
-		<Italian>La grande moschea del sultano Qaboos incrementa la cultura della tua città, fornisce un ingegnere gratis e migliora la resa delle tue rotte commerciali.</Italian>
-		<Russian>Ñîáîðíàÿ ìå÷åòü Ñóëòàíà Êàáóñà ïîâûøàåò êóëüòóðó âàøèõ ãîðîäîâ, äîáàâëÿåò áåñïëàòíîãî èíæåíåðà è äàåò áîíóñ îò òîðãîâûõ ìàðøðóòîâ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VATICAN_LIBRARY</Tag>
 		<English>Holy See Library</English>
 		<French>Bibliothèque apostolique vaticane</French>
@@ -292,12 +226,6 @@
 		<Russian>[TAB]Âàòèêàíñêàÿ Áèáëèîòåêà - ýòî áèáëèîòåêà Ñâÿòîãî Ïðåñòîëà, â íàñòîÿùåå âðåìÿ íàõîäèòñÿ â Ðèìå. Ýòî îäíà èç ñòàðåéøèõ áèáëèîòåê â ìèðå, êîòîðàÿ ñîäåðæèò îäíó èç ñàìûõ çíà÷èòåëüíûõ êîëëåêöèé èñòîðè÷åñêèõ òåêñòîâ. Îôèöèàëüíî ñîçäàíà â 1475 ãîäó, õîòÿ íà ñàìîì äåëå îíà ãîðàçäî äðåâíåå. Â íåé õðàíèòñÿ ñâûøå 75,000 èñòîðè÷åñêèõ õðîíèê è ìàíóñêðèïòîâ.Ñ èþëÿ 2007 ã. áèáëèîòåêà áûëà âðåìåííî çàêðûòà äëÿ ïîñåòèòåëåé íà ðåìîíò, êîòîðûé çàâåðøèëñÿ ê ñåíòÿáðþ 2010 ãîäà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VATICAN_LIBRARY_STRATEGY</Tag>
-		<English>Build the Vatican Library to increase your cities science, espionage and great people rate.</English>
-		<Italian>Costruisci la Biblioteca Vaticana per incrementare la scienza, lo spionaggio e il tasso di nascita dei grandi personaggi nella tua città.</Italian>
-		<Russian>Ïîñòðîéêà Áèáëèîòåêè Âàòèêàíà ïîâûñèò óðîâåíü èññëåäîâàíèé âàøèõ ãîðîäàõ, ïðèðîñò î÷êîâ øïèîíàæà è øàíñû íà ïîÿâëåíèå Âåëèêèõ ëþäåé.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WUDANG</Tag>
 		<English>Wudang Mountain</English>
 		<French>La Montagne Wudang</French>
@@ -315,11 +243,5 @@
 		<Italian>Negli anni passati, le montagne di Wudang erano note per i numerosi monasteri taoisti che si trovavano lì, monasteri che divennero famosi come centri accademici per la ricerca, l'insegnamento e la pratica della meditazione, delle arti marziali cinesi, della medicina tradizionale cinese, delle pratiche agricole taoiste e delle arti correlate. Già durante la Dinastia Han Orientale (25-220 d.C.), la montagna ha attirato l'attenzione dell'Imperatore. Durante la dinastia Tang (618-907) è stato costruito il primo luogo di culto - il Tempio dei Cinque Dragoni. I monasteri sono stati svuotati, danneggiati e quindi trascurati durante e dopo la Rivoluzione Culturale del periodo 1966-1976, ma le montagne Wudang sono ultimamente diventato sempre più popolari tra i turisti provenienti dalla Cina e dall'estero per la loro posizione panoramica e di interesse storico. I monasteri e gli edifici sono stati proclamati patrimonio mondiale dell'UNESCO nel 1994. I palazzi e i templi di Wudang, che sono stati costruiti come un complesso organizzato durante la dinastia Ming (14°-17° secolo), contengono edifici taoisti risalenti al 7° secolo. Rappresentò i più alti standard dell'arte e dell'architettura cinese per un periodo di circa 1000 anni.</Italian>
 		<Polish>Wudang Shan - niewielkie pasmo górskie w chińskiej prowincji Hubei. Znajdujący się w tych górach taoistyczny średniowieczny zespół świątyń i klasztorów został wpisany w 1994 roku na listę światowego dziedzictwa UNESCO, pomimo zniszczeń w czasie rewolucji kulturalnej. Zespół ten stanowił przez wieki ważny ośrodek m.in. sztuk walki, konkurujący z Shaolinem. Tradycje te są kultywowane po dzień dzisiejszy.</Polish>
 		<Russian>[TAB]Óäàíøàíü (êèò. Wudang Shan), ãîðà Óäàí - íåáîëüøîé ãîðíûé õðåáåò â ïðîâèíöèè Õóáýé, êîòîðûé íàõîäèòñÿ íåäàëåêî îò ïðîìûøëåííîãî ãîðîäà Øèÿíü è îêîëî 120 êì îò ãîðîäà Ñÿíôàíü. Ãîðû Óäàíøàíü çíàìåíèòû ñâîèìè äàîññêèìè ìîíàñòûðÿìè è õðàìàìè, çäåñü áûë äàîññêèé óíèâåðñèòåò, â êîòîðîì èññëåäîâàëàñü ìåäèöèíà, ôàðìàêîëîãèÿ, ñèñòåìû ïèòàíèÿ, ìåäèòàöèÿ è áîåâûå èñêóññòâà. Åùå âî âðåìÿ Âîñòî÷íîé Äèíàñòèè Õàíü (25-220) ãîðà ñòàëà ïîëüçîâàòüñÿ îñîáûì âíèìàíèåì èìïåðàòîðà. Âî âðåìÿ äèíàñòèè Òàí (618-907) áûë îòêðûò ïåðâûé õðàì - Õðàì Ïÿòè Äðàêîíîâ. Çíà÷èòåëüíîå ñòðîèòåëüñòâî áûëî ïðåäïðèíÿòî íà ãîðå â XV âåêå, êîãäà èìïåðàòîð Þíëý ñîçâàë 300 òûñÿ÷ ñîëäàò è îáîðóäîâàë ãîðó, ïîñòðîèâ ìíîãî÷èñëåííûå õðàìîâûå êîìïëåêñû. Â ãîðàõ Óäàíøàíü òîãäà áûëî ïîñòðîåíî 9 õðàìîâ, 9 ìîíàñòûðåé, 36 ñêèòîâ è 72 êóìèðíè, ìíîæåñòâî áåñåäîê, ìîñòèêîâ è ìíîãîÿðóñíûõ áàøåí, îáðàçóþùèõ 33 àðõèòåêòóðíûõ àíñàìáëÿ. Ñòðîèòåëüñòâî â ãîðàõ ïðîäîëæàëîñü 12 ëåò ñ 1412. Êîìïëåêñ ñîîðóæåíèé îõâàòûâàë ãëàâíóþ âåðøèíó è îêðóæàþùèå åå 72 ìàëûõ ïèêà, ñîîðóæåíèÿ òÿíóòñÿ íà 80 êì. Âî âðåìÿ Êóëüòóðíîé ðåâîëþöèè â Êèòàå (1966-1976) õðàìû áûëè ðàçðóøåíû, íî ïîòîì âîññòàíîâëåíû, ãîðà àêòèâíî ïîñåùàåòñÿ òóðèñòàìè Êèòàÿ è èíîñòðàíöàìè. Â 1994 âåñü êîìïëåêñ õðàìîâ è ìîíàñòûðåé íà ãîðå ïîëó÷èë ñòàòóñ Âñåìèðíîãî íàñëåäèÿ ÞÍÅÑÊÎ. Íà ãîðå èìååòñÿ íåñêîëüêî øêîë áîåâûõ èñêóññòâ, â ÷àñòíîñòè Êóíã ôó. Ñ ìîíàñòûðåì ñâÿçàíà âîëíà ïîïóëÿðíîé êóëüòóðû - ôèëüìîâ æàíðà óøó è ëèòåðàòóðû î áîåâûõ èñêóññòâàõ. Ïî ïîïóëÿðíîñòè â ìàññîâîé êóëüòóðå Óäàíøàíü ñòîèò íà âòîðîì ìåñòå ïîñëå Øàîëèíü.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WUDANG_STRATEGY</Tag>
-		<English>Wudang Mountain adds a free priest to your city, and increases health and defence through all your empire.</English>
-		<Italian>Le montagne di Wudang forniscono un sacerdote gratuito alla tua città; inoltre incrementano la salute e la difesa in tutto il tuo impero.</Italian>
-		<Russian>Óäàíøàíü äîáàâëÿåò áåñïëàòíîãî ñïåöèàëèñòà-ñâÿùåííèêà â âàø ãîðîä è óâåëè÷èâàåò çäîðîâüå è çàùèòó âî âñåé öèèëèçàöèè.</Russian>
 	</TEXT>
 </Civ4GameText>

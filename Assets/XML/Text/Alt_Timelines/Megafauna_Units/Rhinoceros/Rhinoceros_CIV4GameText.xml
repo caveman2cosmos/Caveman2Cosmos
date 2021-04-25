@@ -47,20 +47,9 @@
 		<English>Rhinoceros units have the Stampede ability and at the moment they're the only unit with it and the only unit that can develop it. If made a little stronger to make them a bit more viable (and to let them represent better the kind of amazing destructive capacity these animals have in RL) they'll be given an amazingly powerful niche use throughout the early era, particularly as a powerful counter against the strategy of splitting up units to delay attack forces from taking a position.[PARAGRAPH:2]Rhinos also cause some collateral so if one can survive the first fight and the units in the stack they're attacking can still within range of being given further collateral damage, a rhino can uniquely inflict collateral to a stack more than once when it attacks.[PARAGRAPH:2]There is no evidence Rhinoceros were ever trained for warfare. The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE_STRATEGY</Tag>
-		<English>Allows Rhino units to be built in all your cities.</English>
-		<French>Permet aux unités avec des Rhinocéros d'être entraînées dans toutes vos villes.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_PEDIA</Tag>
 		<English>There is no evidence rhinoceros were ever trained for mounted warfare. The [COLOR_BUILDING_TEXT]Rhinoceros Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che i rinoceronti siano mai stati addestrati per la guerra. L'[COLOR_BUILDING_TEXT]Allevatore di rinoceronti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Rhinoceros Trainer[COLOR_REVERT] is required to train [COLOR_UNIT_TEXT]Rhinoceros Riders[COLOR_REVERT].</English>
-		<French>Le [COLOR_BUILDING_TEXT]Dresseur de Rhinocéros[COLOR_REVERT] est requis pour entraîner un [COLOR_UNIT_TEXT]Monteur de Rhinocéros[COLOR_REVERT].</French>
-		<Italian>L'[COLOR_BUILDING_TEXT]Allevatore di rinoceronti[COLOR_REVERT] è richiesto per addestrare i [COLOR_UNIT_TEXT]Cavalcatori di rinoceronti[COLOR_REVERT].</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RHINO_SWORDSMAN</Tag>

@@ -1893,61 +1893,11 @@
 		<Polish>'Osiągnięcia' to wyjątkowe cuda, które mogą zostać stworzone przez [COLOR_UNIT_TEXT]Bohaterów Narodowych[COLOR_REVERT]. W grze występuje osiem [COLOR_BUILDING_TEXT]Osiągnięć[COLOR_REVERT], które posiadają różne zalety; jednakże, kiedy jakieś [COLOR_BUILDING_TEXT]Osiągnięcie[COLOR_REVERT] zostanie stworzone przez jedną cywilizację, nie może już zostać zbudowane przez inną. Czasem dobrze jest poczekać jeśli chce się stworzyć [COLOR_BUILDING_TEXT]Osiągnięcie[COLOR_REVERT] dostępne w późniejszej erze. Choć na początku [COLOR_BUILDING_TEXT]Osiągnięcia[COLOR_REVERT] nie zapewniają ogromnych bonusów, to jednak z biegiem czasu ich zalety się zwiększają.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ADVENTURE_STRATEGY</Tag>
-		<English>Build this corporation in order to get adventure bonuses.</English>
-		<French>Construisez cette corporation pour obtenir des bonus d'aventure.</French>
-		<German>Gründe diese Gesellschaft, um Abenteuerboni zu erhalten.</German>
-		<Italian>Costruisci questa corporazione per ottenere bonus dalle avventure.</Italian>
-		<Spanish>Crea esta corporación para obtener bonificaciones relacionadas con el mundo de las aventuras.</Spanish>
-		<Polish>Zbuduj tą korporacje by zdobyć bonusy z podróży.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BULLSEYE_STRATEGY</Tag>
-		<English>Build this corporation in order to get fruit and groceries bonuses.</English>
-		<French>Construire cette corporation pour obtenir la ressource 'fruits et épices'.</French>
-		<Italian>Costruisci questa corporazione per ottenere bonus da frutta e verdura</Italian>
-		<Spanish>Crea esta corporación para obtener bonificaciones relacionadas con el mundo de las frutas y verduras.</Spanish>
-		<Polish>Zbuduj tą korporacje by otrzymać owoce oraz bonus do żywności.</Polish>
-		<Russian>Постройте эту корпорацию, чтобы получить бонусы за фрукты и продукты.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BURGERWORLD_STRATEGY</Tag>
-		<English>Build the [COLOR_BUILDING_TEXT]Burgerworld[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Burgerworld Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pig[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Wheat[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Coffee[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Burgerworld Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Burgerworld franchise.</English>
-		<French>Construire le Siège de [COLOR_BUILDING_TEXT]MondoBurger[COLOR_REVERT] pour fonder la corporation [COLOR_HIGHLIGHT_TEXT]MondoBurger Corporation[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pommes de terres[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] et ajoute un bonus de culture à chaque ville où la [COLOR_HIGHLIGHT_TEXT]Corporation MondoBurger[COLOR_REVERT] est présente. Le siège social fournit de l'or pour chaque ville du monde avec une franchise MondoBurger.</French>
-		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Burgerworld[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Mucca[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Maiale[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Patata[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Grano[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]Caffè[COLOR_REVERT] e aggiunge un bonus alla cultura in ogni città dove [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] è presente. Il QG fornisce oro per ogni città nel mondo dove Burgerworld è presente.</Italian>
-		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Burgerworld[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cerdos[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Patatas[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Trigo[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] y añade una bonificación a los alimentos en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Burgerworld.</Spanish>
-		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Świata Hamburgerów[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Świata Hamburgerów[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Krowy[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Świnie[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Ziemniaki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pszenicę[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Kawę[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Świata Hamburgerów[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EMPCLOTH_STRATEGY</Tag>
-		<English>Build the [COLOR_BUILDING_TEXT]Emperors Clothing[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Emperors Clothing Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Silk[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Dye[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Sheep[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Emperors Clothing Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Emperors Clothing franchise.</English>
-		<French>Construire le siège de [COLOR_BUILDING_TEXT]Habits Impériaux[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Habits Impériaux[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Mouton[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Habits Impériaux[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise Habits Impériaux.</French>
-		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Emperors Clothing[COLOR_REVERT] per creare [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Seta[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotone[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pecora[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]Pellicce[COLOR_REVERT] e aggiunge un bonus alla cultura dove è presente [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT]. Il QG fornisce oro per ogni città mondiale in cui la corporazione è diffusa.</Italian>
-		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Emperors Clothing[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Seda[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Algodón[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Ovejas[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Pieles[COLOR_REVERT], y añade una bonificación a la cultura en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Emperors Clothing.</Spanish>
-		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Imperialnych ubrań[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Imperialnych Ubrań[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Jedwab[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bawełne[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Barwniki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Owce[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Futro[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Imperialne Ubrania[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENEMY_WAR_WEAR</Tag>
 		<English>[ICON_BULLET]Enemies suffer %D1_percent%% War [ICON_UNHAPPY]</English>
 		<French>[ICON_BULLET]Les Ennemis souffrent de %D1_percent%% [ICON_UNHAPPY] lié à la guerre</French>
 		<German>[ICON_BULLET]%D1_percent%% Kriegsmüdigkeit [ICON_UNHAPPY] für alle Gegner</German>
 		<Russian>[ICON_BULLET]%D1_percent%% [ICON_UNHAPPY] всем враждебным цивилизациям из-за войны</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EWTRADE_STRATEGY</Tag>
-		<English>Build this corporation in order to get bonuses.</English>
-		<French>Construisez cette corporation afin d'obtenir des bonus.</French>
-		<Spanish>Construye esta corporación para obtener bonificaciones.</Spanish>
-		<Polish>Zbuduj Siedzibę tej korporacji by otrzymać bonusy.</Polish>
-		<Russian>Постройте эту корпорацию, чтобы получить бонусы.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FASHION_STRATEGY</Tag>
-		<English>Build the [COLOR_BUILDING_TEXT]Fashion House[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Fashion House Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Silk[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Dye[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Wool[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Fashion House Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Fashion House franchise.</English>
-		<French>Construire le siège de [COLOR_BUILDING_TEXT]Maison de la Mode[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Laine[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise Maison de la Mode.</French>
-		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Fashion House[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Seta[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotone[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bovini[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Lana[COLOR_REVERT] o COLOR_HIGHLIGHT_TEXT]Pellicce[COLOR_REVERT] e dà un bonus di cultura in tutte le città dove è presente [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT]. Il QG fornisce oro per ogni città in cui è diffusa Fashion House.</Italian>
-		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Fashion House[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Seda[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Algodón[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Lana[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Pieles[COLOR_REVERT], y añade una bonificación a la cultura en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Fashion House.</Spanish>
-		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Domu Mody[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Domów Mody[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Jedwab[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bawełne[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Barwniki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Owce[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Futro[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Domów Mody[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GROUP_WONDER_ALLOWED</Tag>
@@ -1991,92 +1941,6 @@
 		<Spanish>En Civilization IV, un templo se define como un lugar al que los fieles acuden a venerar. Los cristianos llaman a sus templos "iglesias", mientras que para los musulmanes son "mezquitas" y para los judíos, sencillamente, "templos". Son mucho más comunes que las catedrales, pero también mucho más pequeños y humildes. Hasta la más pequeña aldea puede poseer uno.</Spanish>
 		<Polish>W Cywilizacji IV świątynia stanowi budynek, w którym wierni gromadzą się w celu oddawania czci swojemu bóstwu. Chrześcijanie nazywają swoje świątynie "kościołami", muzułmanie "meczetami", zaś Żydzi po prostu "świątyniami". Świątynie są znacznie powszechniejsze od katedr, jednakże również znacznie mniejsze i mnie przyozdobione. Świątynia może się znajdować nawet w najmniejszej wiosce.</Polish>
 		<Russian>[TAB]Â èãðå õðàìîì íàçûâàåòñÿ çäàíèå, ãäå âåðóþùèå ñîâåðøàþò îáðÿäû ðåëèãèîçíîãî ïîêëîíåíèÿ. Õðèñòèàíå íàçûâàþò ñâîè õðàìû öåðêâÿìè, ìóñóëüìàíå - ìå÷åòÿìè, èóäåè - ñèíàãîãàìè èëè ïðîñòî õðàìàìè. Õðàìû áîëåå ðàñïðîñòðàíåíû, ÷åì ïðåâîñõîäÿùèå èõ ðàçìåðîì è óáðàíñòâîì ñîáîðû. Äàæå â êðîõîòíîì ñåëå ìîæåò áûòü ñâîé õðàì.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MALLWART_STRATEGY</Tag>
-		<English>Build this corporation in order to get fruit and groceries bonuses.</English>
-		<French>Construisez cette corporation afin d'obtenir des bonus de fruits et d'épicerie.</French>
-		<Italian>Costruisci questa corporazione per ottenere bonus da frutta e verdura.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo de las frutas y las verduras.</Spanish>
-		<Polish>Zbuduj Siedzibę tej korporacji by zdobyć owoce i bonusy do żywności.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAPSTER_STRATEGY</Tag>
-		<English>Mapster is a good way to inform the populace of your nation's enduring successes...</English>
-		<French>Mapster est un bon moyen d'informer la population des succès durables de votre nation...</French>
-		<Italian>Mapster è un ottimo modo per informare la popolazione della tua nazione del tuo successo...</Italian>
-		<Spanish>Mapster es una buena opción para informar a la población de los grandes éxitos de tu nación...</Spanish>
-		<Polish>Mapster jest dobrym sposobem informowania Twojej ludności o Twoich sukcesach...</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MCDOWELLS_STRATEGY</Tag>
-		<English>Build the [COLOR_BUILDING_TEXT]Big McDowells[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Big McDowells Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pig[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Wheat[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Salt[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Big McDowells Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Big McDowells franchise.</English>
-		<French>Construire le siège de [COLOR_BUILDING_TEXT]Big McDowells[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]pommes de terre[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Sel[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise McDowells.</French>
-		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Big McDowells[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Big McDowells[COLOR_REVERT], che consuma [COLOR_HIGHLIGHT_TEXT]Bovino[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Maiale[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Patate[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Granoturco[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]Sale[COLOR_REVERT] e da un bonus alla cultura in ogni città dove è presente [COLOR_HIGHLIGHT_TEXT]Big McDowells[COLOR_REVERT]. Il QG fornisce oro per ogni città nel mondo in cui Big McDowells ha una filiale.</Italian>
-		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]McDowells[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]McDowells [COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cerdos[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Patatas[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Trigo[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Sal[COLOR_REVERT] y añade una bonificación a los alimentos en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de McDowells.</Spanish>
-		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]McDonalda[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje McDonald[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Krowy[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Świnie[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Ziemniaki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pszenice[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Sól[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja McDonald[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MILEHIGH_STRATEGY</Tag>
-		<English>The best way to see the world is from an airplane</English>
-		<French>La meilleure façon de voir le monde est depuis un avion</French>
-		<Italian>Il modo migliore per vedere il mondo è da un aeroplano</Italian>
-		<Spanish>La mejor forma de ver el mundo desde un aeroplano.</Spanish>
-		<Polish>Najlepszy sposób na zwiedzenie świata to samolot</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MOBBY_STRATEGY</Tag>
-		<English>Build this corporation to get benefits from all meats bonuses.</English>
-		<French>Construisez cette corporation pour profiter de tous les bonus de viande.</French>
-		<Italian>Costruisci questa corporazione per ottenere bonus da tutti i tipi di carne.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones de todos los recursos cárnicos.</Spanish>
-		<Polish>Zbuduj siedzibę by zdobyć wszystkie bonusy do mięs.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MOONBEAN_STRATEGY</Tag>
-		<English>Build this corporation in order to get economic bonuses.</English>
-		<French>Construisez cette corporation afin d'obtenir des bonus économiques.</French>
-		<Italian>Costruisci questa corporazione per ottenere bonus economici.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones económicas.</Spanish>
-		<Polish>Zbuduj siedzibę by zdobyć bonusy ekonomiczne.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RED_STRATEGY</Tag>
-		<English>Build this corporation in order to get entertainment bonuses.</English>
-		<French>Construisez cette corporation afin d'obtenir des bonus de divertissement.</French>
-		<Italian>Costruisci questa corporazione per ottenere bonus dall'intrattenimento.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo del entretenimiento.</Spanish>
-		<Polish>Zbuduj siedzibę by zdobyć wszystkie bonusy z rozrywki.</Polish>
-		<Russian>Откройте в городе филиал этой корпорации для получения бонусов к развлечениям.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SAFARI_STRATEGY</Tag>
-		<English>Build this corporation in order to get hunting bonuses.</English>
-		<French>Construisez cette corporation afin d'obtenir des bonus de chasse.</French>
-		<Italian>Costruisci questa corporazione per ottenere bonus dalla caccia.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo de la caza.</Spanish>
-		<Polish>Zbuduj siedzibę by zdobyć bonusy z polowania.</Polish>
-		<Russian>Ñîçäàéòå ýòó êîðïîðàöèþ äëÿ ïîëó÷åíèÿ áîíóñîâ ê îõîòå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ULTSOLDIER_STRATEGY</Tag>
-		<English>Build this corporation in order to get military bonuses.</English>
-		<French>Construisez cette corporation afin d'obtenir des bonus militaires.</French>
-		<German>Baue diese Gesellschaft, um Militärboni zu erhalten.</German>
-		<Italian>Costruisci questa corporazione per di ottenere bonus militari.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo militar.</Spanish>
-		<Polish>Zbuduj siedzibę by zdobyć bonusy militarne.</Polish>
-		<Russian>Ïîñòðîéòå ýòó êîðïîðàöèþ, ÷òîáû ïîëó÷èòü âîåííûå ïðåìèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WONKA_STRATEGY</Tag>
-		<English>Build this corporation in order to get Confectioneries bonuses.</English>
-		<French>Construire cette corporation pour obtenir la ressource Confiseries.</French>
-		<German>Baue diese Gesellschaft, um Zuckerwarenboni zu erhalten.</German>
-		<Italian>Costruisci questa corporazione per ottenere bonus dai derivati dello zucchero.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo de la pastelería.</Spanish>
-		<Polish>Zbuduj siedzibę by zdobyć bonusy cukiernicze.</Polish>
-		<Russian>Постройте эту корпорацию, чтобы получить бонусы кондитерских изделий.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BULLET</Tag>

@@ -74,24 +74,10 @@
 		<German>Dies ist ein automatischer Effekt, der mit der Erforschung einer bestimmten Technologie aktiviert wird. Er hat keinen direkten Effekt, sondern dient der Vereinfachung von Updates, bei denen neue Mythen hinzugefügt oder bestehende verändert werden.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Tag>
-		<English>Free building provided as the effect of another.</English>
-		<French>Bâtiment gratuit obtenu comme effet d'un autre</French>
-		<Polish>Darmowy budynek dostarczany jako efekt innego budynku.</Polish>
-		<Russian>Бесплатная постройка, предусмотренная в качестве эффекта от другого здания или Чуда Света.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Tag>
 		<English>Animal Stories buildings represents educational boost from animals after invention of [LINK=TECH_LITERATURE]Literature[\LINK] - needs [LINK=BUILDING_LIBRARY]Library[\LINK] to create [LINK=BUILDING_ANIMAL_STORIES_REQUIRE]Animal Stories Requirement[\LINK].[NEWLINE]This is done to declutter Library building.</English>
 		<French>Les bâtiments des histoires animales représentent un coup de pouce éducatif provenant des animaux, après l'invention de la [LINK=TECH_LITERATURE]Littérature[\LINK] - nécessite une [LINK=BUILDING_LIBRARY]Bibliothèque[\LINK]</French>
 		<Russian>«Сказки о животных» представляют собой образовательное улучшение от прирученных животных после изучения [LINK=TECH_LITERATURE]Литературы[\LINK] - требуются [LINK=BUILDING_LIBRARY]Библиотеки[\LINK] для создания [LINK=BUILDING_ANIMAL_STORIES_REQUIRE]Сказки о животном[\LINK].[NEWLINE]Это реализовано, как дополнение к библиотекам.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Tag>
-		<English>Pseudo national wonder gives free story building in all cities.</English>
-		<French>Sorte de Merveille nationale qui donne un bâtiment histoire gratuit dans chaque ville</French>
-		<Polish>Pseudo Cud Narodowy. Dostarcza darmowe Opowieści do wszystkich Twoich miast.</Polish>
-		<Russian>Êâàçè-íàöèîíàëüíîå ÷óäî ïðåäîñòàâëÿåò áåñïëàòíûå ýôôåêòû îò ñêàçîê âî âñå ãîðîäà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Tag>
@@ -110,12 +96,6 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_REQUIRE</Tag>
 		<English>Autobuild - Animal Stories Requirement</English>
 		<Russian>Сказка о животном</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Tag>
-		<English>The Animal Story buildings provide Education. They are built by subdued animals and story tellers.[NEWLINE]They can be built in every city, as they aren't pseudo National Wonders unlike Myth and Stories.</English>
-		<French>Les Bâtiments d'Histoire des animaux procure de l'Education. Ils sont construits par des animaux apprivoisés ou des conteurs d'histoires</French>
-		<Polish>Budynki Opowieściu o zwierztach dostarczają Edukacji. Powstają dzieki pochwyconym zwierztom i Gawdziarzom.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_MYTH</Tag>
@@ -762,23 +742,11 @@
 		<Russian>Ñêàçêà îá ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Tag>
-		<English>Free building provided by the same Myth. Make the Myth building a pseudo National Wonder as you only need one.</English>
-		<French>Des Bâtiments gratuits sont construits par le Mythe éponyme. Ils font du Mythe une pseudo-merveille nationale vu qu'il n'y en a besoin que d'une.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Tag>
 		<English>The six elements make up everything. They are Earth, Air (Sky), Water (Sea), Stone, Metal and Fire. They lose all benefit with Chemistry.</English>
 		<French>Tout est formé à partir de 6 éléments. Ce sont la Terre, l'Air (Ciel), l'Eau (Mer), la Pierre, le Métal et le Feu. Ils perdent tout leurs avantages avec la Chimie</French>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Tag>
-		<English>The Elemental Myths provide a small amount of science and education. They are required for many other buildings.</English>
-		<French>Les Mythes des Éléments confèrent un petit bonus d'éducation et de recherche. Ils sont requis pour la construction d'autres bâtiments.</French>
-		<Polish>Mity Żywiołów dostarczają małe ilości nauki i edukacji. Są wymagane do budowy wielu innyc budynków.</Polish>
-		<Russian>Ìèôû îá ýëåìåíòàõ îáåñïå÷èâàþò íåáîëüøîå êîëè÷åñòâî íàóêè è îáðàçîâàíèÿ. Îíè íåîáõîäèìû äëÿ ìíîãèõ äðóãèõ çäàíèé.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_MYTH_EFFECT</Tag>
@@ -1486,11 +1454,6 @@
 		<English>Myths associated with formations found in the landscape.</English>
 		<French>Les Mythes associés aux paysages et éléments trouvés dans la nature.</French>
 		<Polish>Mity związane z formacjami terenu.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Tag>
-		<English>The Landform Myths provide a small amount of science and education.</English>
-		<French>Les mythes associés aux éléments et paysages procurent un léger bonus en science et en éducation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEVIATHAN_MYTH_EFFECT</Tag>

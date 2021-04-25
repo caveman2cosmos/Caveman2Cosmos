@@ -20,12 +20,6 @@
 		<Russian>[TAB]Àíó, ÿâëÿþùèéñÿ áîãîì Íåáà, îáåñïå÷èâàåò áîíóñ ê çàùèòå åãî ïîñëåäîâàòåëÿì. Òàêæå îí èñöåëÿåò ñâîèõ âîèíîâ, ïîäîáíî çàáîòëèâîìó îòöó ñâîèõ âîçëþáëåííûõ ÷àä.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AN_STRATEGY</Tag>
-		<English>TBD</English>
-		<Italian>Le promozioni fornite da questo edificio danno bonus difensivi e alla guarigione.</Italian>
-		<Russian>Õðàì Àíó.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENKI</Tag>
 		<English>Temple of Enki</English>
 		<French>Temple d'Enki</French>
@@ -43,12 +37,6 @@
 		<Italian>Enki, signore delle Acque, insegna la propria saggezza ai suoi fedeli e fornisce loro forza quando entrano nel suo regno acquatico.</Italian>
 		<Polish>Enki w mitologii sumeryjskiej (Ea w mitologii babilońskiej) - bóg słodkich wód, bóg mądrości, stwórca człowieka, czczony w Eridu. Razem z bogiem nieba Anu i bogiem Enlilem tworzył wielką triadę głównych bóstw. Jego żoną była Damgalnuna - bogini ziemi, natomiast córka Ninkasi była boginią piwa.</Polish>
 		<Russian>[TAB]Энки, владыка вод, наставляет своих последователей его мудростью и дает им благодать и силу, пока они пребывают в его морских владениях.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ENKI_STRATEGY</Tag>
-		<English>TBD</English>
-		<Italian>Le promozioni fornite da questo edificio danno bonus alle unità marittime</Italian>
-		<Russian>Õðàì Ýíêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENLIL</Tag>
@@ -70,12 +58,6 @@
 		<Russian>[TAB]Энлиль, повелитель ветра, наставляет своих прозелитов его мудростью и дает им силу, меткость и зоркий глаз. Покровительствует лучникам и охотникам.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ENLIL_STRATEGY</Tag>
-		<English>TBD</English>
-		<Italian>Le promozioni fornite da questo edificio danno bonus alle unità di arcieri</Italian>
-		<Russian>Õðàì Ýíëèëÿ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INANNA</Tag>
 		<English>Temple of Inanna</English>
 		<French>Temple d'Inanna</French>
@@ -93,12 +75,6 @@
 		<Italian>Inanna, dea dell'amore e della guerra, protegge le nascite dei suoi fedeli e rivela i segreti della guerra a coloro che si rivelano forti e coraggiosi.</Italian>
 		<Polish>Isztar (sum. Inana, asyr. Issar) - w mitologii mezopotamskiej bogini wojny i miłości, z czasem główna i jedyna licząca się bogini panteonu mezopotamskiego; jej kult rozpowszechnił się szeroko na całym obszarze starożytnego Bliskiego Wschodu - w Syrii i Fenicji (Asztarte) oraz Anatolii (Szauszka); w Babilonii czczona głównie w Uruk w świątyni E-ana ("Dom nieba").</Polish>
 		<Russian>[TAB]Èíàííà (Àñòàðòà, Àøòîðåò), áîãèíÿ ëþáâè è âîéíû, èìåíåì êîòîðîé áëàãîñëîâëÿþò ìîëÿùèõñÿ î áëàãîïîëó÷íûõ ðîäàõ. Êðîìå òîãî, ñ÷èòàëîñü, ÷òî îíà ìîæåò îäàðèòü âîèíñêîé ñëàâîé è ïîáåäàìè, åñëè ïðåòåíäåíòû íà íåå äîêàæóò ñâîþ ñèëó è ñòîéêîñòü.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_INANNA_STRATEGY</Tag>
-		<English>TBD</English>
-		<Italian>Le promozioni fornite da questo edificio danno bonus alle unità da combattimento ravvicinato</Italian>
-		<Russian>Õðàì Èøòàð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KI</Tag>
@@ -156,12 +132,6 @@
 		<Russian>Ðèñîâûé õðàì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KI_STRATEGY</Tag>
-		<English>TBD</English>
-		<Polish>Le promozioni fornite da questo edificio danno bonus alle unità da combattimento ravvicinato</Polish>
-		<Russian>Õðàì Êè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KI_WHEAT</Tag>
 		<English>Temple of Ki (Wheat)</English>
 		<French>Temple de Ki (Blé)</French>
@@ -183,12 +153,6 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Wieża Babel</Polish>
-		<Russian>Âàâèëîíñêàÿ áàøíÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MESO_SHRINE_STRATEGY</Tag>
-		<English>TBD</English>
-		<Italian>Il santuario della religione mesopotamica.</Italian>
 		<Russian>Âàâèëîíñêàÿ áàøíÿ</Russian>
 	</TEXT>
 	<TEXT>

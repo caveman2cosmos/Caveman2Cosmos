@@ -24,24 +24,12 @@
 		<Russian>[TAB]Ïðèðîäíîå íàñëåäèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DRUID_CATHEDRAL2_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Nature Legacy[COLOR_REVERT] improves health and happiness in the city. It requires Druidic Traditions as the state religion.</English>
-		<Italian>L'[COLOR_BUILDING_TEXT]Eredità della natura[COLOR_REVERT] migliora la salute e la felicità nella tua città; è necessario che le tradizioni druidiche siano la religione di stato.</Italian>
-		<Russian>[COLOR_BUILDING_TEXT]Ïðèðîäíîå íàñëåäèå[COLOR_REVERT] óëó÷øàåò çäîðîâüå íàñåëåíèÿ è íàñòðîåíèÿ ãðàæäàí â ãîðîäå, ãäå áûëî ïîñòðîåíî. Äëÿ ñòðîèòåëüñòâà íåîáõîäèì Äðóèäèçì â êà÷åñòâå ãîñóäàðñòâåííîé ðåëèãèè.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRUID_CATHEDRAL_PEDIA</Tag>
 		<English>Nature Alliance</English>
 		<French>Alliance avec la Nature</French>
 		<Italian>Alleanza della natura</Italian>
 		<Polish>Przymierze Natury</Polish>
 		<Russian>[TAB]Ñîþç ñ ïðèðîäîé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DRUID_CATHEDRAL_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Nature Alliance[COLOR_REVERT] greatly increases a city's food from grains and potatoes. It is required to build the druidic cathedral building ([COLOR_BUILDING_TEXT]Nature Legacy[COLOR_REVERT]). It requires Druidic Traditions as the state religion.</English>
-		<Italian>L'[COLOR_BUILDING_TEXT]Alleanza della natura[COLOR_REVERT] aumenta la produzione di cibo della città grazie a cereali e patate. Serve per costruire la cattedrale druidica, l'[COLOR_BUILDING_TEXT]Eredità della natura[COLOR_REVERT]. E' necessario che le tradizioni druidiche siano la tua religione di stato.</Italian>
-		<Russian>[COLOR_BUILDING_TEXT]Ñîþç ñ ïðèðîäîé[COLOR_REVERT] çíà÷èòåëüíî ïîâûøàåò ïðîèçâîäñòâî ïèùè èç çåðíà è êàðòîôåëÿ â äàííîì ãîðîäå. Ýòà ïîñòðîéêà íåîáõîäèìà äëÿ ñòðîèòåëüñòâà ñîáîðà äðóèäîâ ([COLOR_BUILDING_TEXT]Ïðèðîäíîãî íàñëåäèÿ[COLOR_REVERT]). Äëÿ ñòðîèòåëüñòâà ýòîãî çäàíèÿ íåîáõîäèì Äðóèäèçì â êà÷åñòâå ãîñóäàðñòâåííîé ðåëèãèè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRUID_MONASTERY</Tag>
@@ -194,13 +182,6 @@
 		<Russian>Êàáà÷êîâûé êðóã</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Tag>
-		<English>The Druidic Monastery [COLOR_BUILDING_TEXT]Nature Circle of Power[COLOR_REVERT] is required to build the druidic cathedral building ([COLOR_BUILDING_TEXT]Nature Alliance[COLOR_REVERT]) and druidic missionaries. It does not go obsolete like other monastery buildings. If Druidism is your state religion there are extensions to this building that increase the amount of food generated from grains and potatoes.</English>
-		<French>Le Monastère druidique [COLOR_BUILDING_TEXT]Le Cercle Naturel de Puissance[COLOR_REVERT]) est requis pour construire la cathédrale druidique ([COLOR_BUILDING_TEXT]Alliance avec la Nature[COLOR_REVERT]) et les missionnaires druides. Il ne devient jamais obsolète comme pour les autres religions. Si les traditions druidiques est votre Religion d'Etat, Il est possible d'ajouter des extensions à ce bâtiment qui augmentent notamment la quantités de nourriture obtenue à partir de certains légumes et céréales.</French>
-		<Italian>Il monastero druidico, il [COLOR_BUILDING_TEXT]Cerchio naturale del potere[COLOR_REVERT], è un prerequisito per costruire l'edificio [COLOR_BUILDING_TEXT]Alleanza della natura[COLOR_REVERT] e per addestrare i missionari druidici; tuttavia, non diventa obsoleto come gli altri monasteri. Se il druidismo è la tua religione di stato, avendo accesso ai cereali e alle patate fornisce un bonus alla produzione di cibo.</Italian>
-		<Russian>[TAB]Äðóèäè÷åñêèé ìîíàñòûðü èëè [COLOR_BUILDING_TEXT]Êðóã ñèëû[COLOR_REVERT] íåîáõîäèì äëÿ ñòðîèòåëüñòâà ñîáîðà äðóèäîâ èëè ([COLOR_BUILDING_TEXT]Ñîþçà ñ ïðèðîäîé[COLOR_REVERT]) è ïîäãîòîâêè äðóèäîâ-ìèññèîíåðîâ. Â îòëè÷èå îò äðóãèõ ïîñòðîåê ýòîãî òèïà â äð. ðåëèãèÿõ, Ìîíàñòûðü äðóèäîâ íå óñòàðåâàåò ñî âðåìåíåì. Åñëè Äðóèäèçì ÿâëÿåòñÿ âàøåé ãîñóäàðñòâåííîé ðåëèãèåé, âû ìîæåòå ïðèñòðîèòü óëó÷øåíèÿ äëÿ ýòîãî çäàíèÿ, óâåëè÷èâàþùèå êîëè÷åñòâî ïèùè, ïîëó÷àåìîé îò óðîæàåâ çåðíà è êàðòîôåëÿ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRUID_MONASTERY_WHEAT</Tag>
 		<English>Nature Circle (Wheat God)</English>
 		<French>Cercle Naturel (Céréales)</French>
@@ -222,12 +203,6 @@
 		<Italian>I druidi venerano molti aspetti della natura. I quattro archi di pietra sono un simbolo delle quattro stagioni di un anno, il loro equilibrio e la loro ricorrenza annuale. L'acqua della piscina è un simbolo della rinascita e della vita stessa. La Piscina di equilibrio è un luogo sacro di meditazione per i druidi.</Italian>
 		<Polish>Istniało zrzeszenie druidów o charakterze religijnym, w którym jeden z kapłanów miał władzę zwierzchnią, zaś po jego śmierci następcą zostawał ten, który był najbardziej godny i dostojny. W razie wątpliwości urządzano głosowanie lub też kandydaci odbywali święty pojedynek na słowa. Późniejsze teksty mówią natomiast o królu druidów - tzw. righ druadh, a także o naczelnym mistrzu - primus magister (łac.). Wszyscy druidzi zbierali się corocznie na terytorium Karnutów w samym środku Galii.</Polish>
 		<Russian>[TAB]Äðóèäû ïî÷èòàþò ìíîãèå àñïåêòû ïðèðîäû. ×åòûðå àðêè èç êàìíÿ ÿâëÿþòñÿ ñèìâîëîì ÷åòûðåõ ñåçîíîâ ãîäà, ïðèðîäíîãî ðàâíîâåñèÿ è åæåãîäíîãî ïîâòîðåíèÿ âðåìåí ãîäà. Âîäà â áàññåéíå ÿâëÿåòñÿ ñèìâîëîì ïåðåðîæäåíèÿ è ñàìîé æèçíè. Áàññåéí Ðàâíîâåñèÿ ÿâëÿåòñÿ ñâÿùåííûì ìåñòîì ìåäèòàöèè äëÿ äðóèäîâ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DRUID_SHRINE_STRATEGY</Tag>
-		<English>TBD</English>
-		<Italian>Utilizza un grande profeta per costruire il santuario druidico.</Italian>
-		<Russian>[TAB]Ðàçãîâîð ñ ïðèðîäîé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRUID_TEMPLE</Tag>
@@ -379,13 +354,6 @@
 		<Tag>TXT_KEY_BUILDING_DRUID_TEMPLE_SQUASH</Tag>
 		<English>Nature Altar (Squash)</English>
 		<Russian>Êàáà÷êîâûé àëòàðü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Tag>
-		<English>The Druidic Temple [COLOR_BUILDING_TEXT]Nature Altar[COLOR_REVERT] is required to build any of the other druidic buildings. There are extensions to this building that increase the amount of food generated from grains and potatoes.</English>
-		<French>[COLOR_BUILDING_TEXT]L'Autel de la Nature[COLOR_REVERT] (le Temple druidique) est requis pour construire les autres bâtiments de cette religion. Des extensions sont possibles, améliorant la production de nourriture.</French>
-		<Italian>Il tempio druidico, l'[COLOR_BUILDING_TEXT]Altare della natura[COLOR_REVERT], è un prerequisito per tutti gli altri edifici druidici. Alcuni miglioramenti di questo edificio aumentano il cibo generato dai cereali e dalle patate.</Italian>
-		<Russian>[TAB]Õðàì äðóèäîâ èëè [COLOR_BUILDING_TEXT]Àëòàðü Ïðèðîäû[COLOR_REVERT] òðåáóåòñÿ äëÿ ïîñòðîéêè ëþáîãî èç äðóãèõ ðåëèãèîçíûõ ïîñòðîåê äðóèäîâ. Ñóùåñòâóþò óëó÷øåíèÿ ýòîãî çäàíèÿ, ïîâûøàþùèå ïðèðîñò ïðîèçâîäñòâà ïèùè îò óðîæàåâ çåðíà è êàðòîôåëÿ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRUID_TEMPLE_WHEAT</Tag>

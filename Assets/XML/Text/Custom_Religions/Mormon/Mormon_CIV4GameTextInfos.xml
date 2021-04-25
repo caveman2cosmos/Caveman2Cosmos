@@ -31,10 +31,6 @@
 		<Russian>[TAB]Öåíòð ïîäãîòîâêè ìèññèîíåðîâ (èëè ''ÖÏÌ'') ÿâëÿþòñÿ îðãàíèçàöèåé, öåëüþ êîòîðîé ÿâëÿåòñÿ îáó÷åíèå è ïîäãîòîâêà ìèññèîíåðîâ Öåðêâè Èèñóñà Õðèñòà ñâÿòûõ ïîñëåäíèõ äíåé.[PARAGRAPH:2]Äîï. èíôîðìàöèÿ: https://ru.wikipedia.org/wiki/Ìîðìîíñêèå_ìèññèîíåðû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MORMON_MONASTERY_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MORMON_SHRINE</Tag>
 		<English>Morman Shrine</English>
 		<French>Lieu Saint Mormon</French>
@@ -48,12 +44,6 @@
 		<Italian>Il santuario dei mormoni.</Italian>
 		<Polish>Mury świątyni są 5- metrowej grubości przy podstawie, ma 57 m długości i 36 m szerokości, zaś jej dwie najwyższe iglice wznoszą się na 64 m. Na jednej z nich znajduje się posąg anioła Moroni, który objawił się Josephowi Smithowi, założycielowi mormonów, wraz z dwiema tabliczkami z Księgą Mormona. Posąg ze złocistej miedzi ma 3,8 m wysokości (według mormonów anioł podnosi trąbę do góry aby obwieścić drugie nadejście Chrystusa); wykonany została przez rzeźbiarza Cyrusa Dallina. Swiątynia jest otwarta tylko dla mormonów. Najciekawszym jest budynek Arki Przymierza z dachem w kształcie żółwia. Dach przykrywa salę o długości 76 m i szerokości 46 m; najprawdopodobniej został on zaprojektowany przez Brighama Younga, w taki sposób, aby sala zgromadzeń mogła pomieścić 7 tys. osób, zaś kolumny nie zasłaniały nikomu widoku. Nad salą wzniesiono drewnianą konstrukcję wspartą na kamiennych kolumnach z przymocowanymi do nich drewnianymi kołkami i kawałkami surowej skóry bydlęcej. Całość zrobiona jest z drewna sosnowego, pomalowana w taki sposób, aby imitowało ono różne materiały, np. balkon wygląda tak, jakby wykonany był z marmuru. We wnętrzu znajdują się organy. W niedziele przy akompaniamencie organów można usłyszeć chór mormoński w liczbie ponad 300 osób.</Polish>
 		<Russian>[TAB]Храм мормонов</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MORMON_SHRINE_STRATEGY</Tag>
-		<English>TBD</English>
-		<Italian>Usa un grande profeta per ottenere oro da ogni città del mondo in cui è diffuso il mormonismo.</Italian>
-		<Russian>[TAB]Святилище мормонов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MORMON_TEMPLE</Tag>

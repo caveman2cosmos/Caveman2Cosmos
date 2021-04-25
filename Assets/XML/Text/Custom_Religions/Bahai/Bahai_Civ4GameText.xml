@@ -14,10 +14,6 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BAHAI_CATHEDRAL_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAHAI_MONASTERY</Tag>
 		<English>Baha'i Monastery</English>
 		<French>Monastère de Bahaïsme</French>
@@ -33,10 +29,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAHAI_MONASTERY_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BAHAI_MONASTERY_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
@@ -61,10 +53,6 @@
 		<Russian>[TAB]Õðàì Áàáà - ãëàâíûé õðàì ðåëèãèè áàõàè, ðàñïîëîæåííûé â ãîðîäå Õàéôà (Èçðàèëü), â êîòîðîì çàõîðîíåíû îñòàíêè Áàáà, îñíîâàòåëÿ âåðû áàáèçì, èç êîòîðîé âïîñëåäñòâèè âîçíèêëà âåðà áàõàè. Ìåñòîïîëîæåíèå äëÿ áóäóùåãî õðàìà îïðåäåëèë íåïîñðåäñòâåííî Áàõàóëëà â 1891 ãîäó, íî ãðîáíèöó ïîñòðîèëè ïîä ðóêîâîäñòâîì Àáäóë-Áàõè ìíîãî ëåò ñïóñòÿ. Îñòàíêè Áàáà ïîõîðîíèëè â íåé 21 ìàðòà 1909 ãîäà. Ñîîðóæåíèå, ñòàâøåå íûíå îäíèì èç îáúåêòîâ Âñåìèðíîãî íàñëåäèÿ ÞÍÅÑÊÎ, ïîñòðîèëè íàä ãðîáíèöåé ïîä ðóêîâîäñòâîì Øîãè Ýôôåíäè â 1949-1953 ãîäàõ. Áîëüøèíñòâî êàìíåé äëÿ õðàìà Áàáà áûëè äîáûòû â Èòàëèè, à çàòåì ïåðåâåçåíû â Èçðàèëü. Àðõèòåêòîðîì õðàìà âûñòóïèë Ìàêñâåëë Óèëüÿì Ñàçåðëåíä, êàíàäñêèé áàõàè, ñâåêîð Øîãè Ýôôåíäè, êîòîðûé ñîçäàâàë ñâîè ïðîåêòû â ñòèëå Beaux-Arts. Íåêîòîðûå àñïåêòû ñòðóêòóðíîé ðàçðàáîòêè êóïîëà ïðîåêòèðîâàëè ïðîôåññîðà Òåõíèîíà. Õðàì Áàáà - îäíà èç íàèáîëåå èçâåñòíûõ äîñòîïðèìå÷àòåëüíîñòåé â Õàéôå. Áàõàè ñ÷èòàþò Õðàì Áàáà è îêðóæàþùèå åãî ñàäû (êîòîðûå òàêæå îòíîñÿòñÿ ê îáúåêòó Âñåìèðíîãî íàñëåäèÿ) ''ïîäàðêîì ÷åëîâå÷åñòâó''. </Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BAHAI_SHRINE_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAHAI_TEMPLE</Tag>
 		<English>Baha'i Temple</English>
 		<French>Temple de Bahaïsme</French>
@@ -80,10 +68,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAHAI_TEMPLE_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BAHAI_TEMPLE_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
@@ -109,11 +93,6 @@
 		<English>The Bahai House of Worship in New Delhi, India, popularly known as the Lotus Temple due to its flowerlike shape, is a Bahai House of Worship and also a prominent attraction in Delhi. It was completed in 1986 and serves as the Mother Temple of the Indian subcontinent. It has won numerous architectural awards and been featured in hundreds of newspaper and magazine articles.</English>
 		<Polish>Swiatynia Lotosu w Delhi (ang. Baha'í House of Worship lub Lotus Temple) - najwieksza swiatynia bahaistyczna w Indiach. Zlokalizowana jest w poludniowej czesci sródmiescia Delhi. Uwaza sie, ze architektura swiatyni w wielu elementach nawiazuje do Tadz Mahal. Polozona w rozleglych ogrodach swiatynia wysokosci okolo 40 metrów, której wyglad zainspirowany jest kwiatem lotosu. Glówne filary tworza dziewieciokat foremny. Czesc górna sklada sie z 27 "platków".</Polish>
 		<Russian>[TAB]Ìîëåëüíûé äîì Áàõàè â Íüþ-Äåëè, Èíäèè, èçâåñòíûé â íàðîäå êàê Õðàì Ëîòîñà èç-çà åãî èçÿùíûõ è ìÿãêèõ î÷åðòàíèé, ïîäîáíûõ ëåïåñòêàì öâåòêà, ÿâëÿåòñÿ êóëüòîâûì ñîîðóæåíèåì Áàõàè, à òàêæå çàìåòíîé äîñòîïðèìå÷àòåëüíîñòüþ â ñòîëèöå Èíäèè. Îí áûë çàâåðøåí â 1986 ãîäó è âûñòóïàåò â êà÷åñòâå îñíîâíîãî õðàìà Èíäèéñêîãî ñóáêîíòèíåíòà. Îí çàâîåâàë ìíîæåñòâî àðõèòåêòóðíûõ íàãðàä è áûë ïîêàçàí â ñîòíÿõ ãàçåòíûõ è æóðíàëüíûõ ñòàòåé.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LOTUS_TEMPLE_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Lotus Temple[COLOR_REVERT] gives you a second chance to make friends with leaders with serious conflicts.</English>
-		<Russian>[COLOR_BUILDING_TEXT]Õðàì Ëîòîñà[COLOR_REVERT] äàåò âàì âòîðîé øàíñ ïîäðóæèòüñÿ ñ ëèäåðàìè, èçáåæàâ ñåðüåçíûõ êîíôëèêòîâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BAHAI</Tag>
