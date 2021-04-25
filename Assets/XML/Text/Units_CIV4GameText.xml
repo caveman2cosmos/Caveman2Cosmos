@@ -24973,4 +24973,220 @@
 		<Italian>I lancieri zulu furono guerrieri senza pari nell'Africa meridionale, capaci di sconfiggere ogni avversario finché non si scontrarono con la superiorità tecnologica degli europei. Gli Zulu furono organizzati per la prima volta da Shaka, che cominciò a ordinare i lancieri in gruppi detti "impi" prima ancora di diventare il capo della sua tribù. I guerrieri impi iniziavano l'addestramento a sei anni, facendo prima da ausiliari e servitori ai soldati e poi, una volta diventati maturi, venendo addestrati all'uso delle armi. I maschi zulu raggiungevano la maggiore età a venti anni e solo allora diventavano membri della tribù a pieno titolo. [PARAGRAPH:2]Dai lancieri zulu si esigeva che sapessero superare un cavallo in corsa, che fossero in grado di percorrere 50 miglia al giorno a piedi e che sapessero spostarsi silenziosamente su terreni aspri. Il rigoroso addestramento rendeva i guerrieri zulu più resistenti e più forti dei nemici, che spesso superavano di numero i guerrieri zulu. [PARAGRAPH:2]Quando andavano in battaglia, i lancieri zulu si dipingevano il volto con gesso e ocra rossa per intimidire il nemico. Essi avevano con sé delle lance corte ("iklwa") fatte di legno con una lunga punta metallica. L'iklwa serviva a pugnalare e non a essere scagliata, a differenza del suo predecessore ("assegai") che era simile a un giavellotto. Oltre alla lancia, gli Zulu avevano uno scudo di medie dimensioni. Quando i contatti con gli europei diventarono più frequenti, i guerrieri zulu utilizzarono anche i moschetti e i fucili sottratti ai Britannici, anche se nessuno mai insegnò loro a utilizzarli in modo efficiente. [PARAGRAPH:2]Dal punto di vista tattico, un impi adottava spesso la formazione a "corna di bufalo", che era composta da un corpo centrale ("isifuba" o torso) e da due ali ai lati ("izimpondo" o corna) che dovevano aggirare il nemico. In retroguardia restava un gruppo di veterani come riserva. [PARAGRAPH:2]I lancieri zulu formavano un corpo molto efficiente e versatile e praticamente invincibile se opposto agli altri eserciti africani. Essi viaggiavano leggeri e veloci (anche se forse non raggiungevano le 50 miglia al giorno), ma un impi era abbastanza potente da scombussolare formazioni nemiche pesanti. Intorno al 1820 Shaka usò la tecnica del mordi e fuggi contro i più numerosi Ndwandwe e ottenne una vittoria completa dopo una serie di scontri. [PARAGRAPH:2]Tuttavia i lancieri zulu non potevano competere con i fucili Martini-Henry o con le pistole Maxim dell'esercito britannico quando le due fazioni si scontrarono nel 1878. Il divario tecnologico era troppo profondo persino per i valorosi Zulu. [PARAGRAPH:2]</Italian>
 		<Spanish>Los lanceros zulúes, guerreros sin igual en la zona de África del sur, derrotaron a todos los que se enfrentaron hasta topar con la superior tecnología de los europeos. Los zulúes fueron organizados por primera vez por Chaka, quien empezó a formarlos en unidades llamadas "impi" incluso antes de llegar a ser jefe de su tribu. Los guerreros impi empezaban a entrenarse a los seis años. Primero servían como porteadores y criados y, cuando llegaban a la edad necesaria, eran instruidos en el uso de las armas. Cuando los zulúes llegaban a la mayoría de edad (a los veinte años) se convertían en miembros de pleno derecho de sus unidades. [PARAGRAPH:2]Los lanceros zulúes debían ser capaces de correr más que un caballo, recorrer ochenta kilómetros al día a pie y viajar por terreno abrupto. Las dificultades que afrontaban durante su instrucción los hacían más duros y fuertes que sus adversarios, que muchas veces los superaban en número en el campo de batalla. [PARAGRAPH:2]Antes de las batallas, los lanceros zulúes se pintaban la cara de teja y ocre para parecer más amenazadores. Iban armados con lanzas (llamadas "ilkwas") de madera con una alargada punta de hierro. La ilkwa era un arma punzante de cuerpo a cuerpo, a diferencia de su predecesora, la "assegai" que era una especie de jabalina utilizada como arma arrojadiza. Junto con esta lanza, los zulúes llevaban un escudo de tamaño medio. A lo largo del siglo XIX, a medida que aumentaba su contacto con los europeos, los guerreros zulúes empezaron a hacer uso de los mosquetes y rifles capturados a los británicos, pero siempre carecieron de la instrucción necesaria para utilizarlos bien. [PARAGRAPH:2]Desde el punto de vista táctico, los soldados de los impis zulúes empleaban a menudo la formación de "los cuernos del búfalo", que consistía en un contingente principal ("isifuba" o pecho) y dos alas ("izimpondo" o cuernos), cuya tarea era envolver al enemigo. A veces, un cuarto grupo de veteranos permanecía en retaguardia como reserva. [PARAGRAPH:2]Los lanceros zulúes formaban un ejército eficaz y muy versátil que era casi invencible cuando se enfrentaba a otras fuerzas africanas. Viajaban con poca impedimenta y podían moverse muy deprisa (aunque puede que no tanto como los ochenta kilómetros que ellos decían) y, además, tenían la fuerza suficiente como para desbaratar formaciones pesadas enemigas. En la década de 1820, Chaka usó una táctica de incursiones y maniobras rápidas contra los ndwandwe, superiores en número, y alcanzó una victoria total tras una serie de batallas. [PARAGRAPH:2]Sin embargo, los lanceros zulúes no eran rival para los rifles Martini-Henry y las ametralladoras Maxim del ejército británico cuando se inició la guerra (1878). La bravura zulú no podía llenar el abismo de la diferencia tecnológica.  [PARAGRAPH:2]</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CARTHAGE_NUMIDIAN_CAVALRY</Tag>
+		<English>Numidian Cavalry</English>
+		<French>
+			<Text>Cavalerie numide</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Numidische Kavallerie</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cavalleria numida:Cavallerie numide</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Caballería númida:Caballerías númidas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CELTIC_GALLIC_WARRIOR</Tag>
+		<English>Gallic Warrior</English>
+		<French>
+			<Text>Guerrier gaulois</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gallischer Krieger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Guerriero gallo:Guerrieri galli</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Guerrero galo:Guerreros galos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_2</Tag>
+		<English>Sid's Sushi Executive</English>
+		<French>
+			<Text>Dirigeant de Sid's Sushi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vorstand der Sid's Sushi Co.</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Funzionario della Sid Sushi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ejecutivo de Sid's Sushi:Ejecutivos de Sid's Sushi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_KOREAN_HWACHA</Tag>
+		<English>Hwacha</English>
+		<French>
+			<Text>Hwacha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hwach'a</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hwacha:Hwacha</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Soldado con hwacha:Soldados con hwacha</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_OTTOMAN_JANISSARY</Tag>
+		<English>Janissary</English>
+		<French>
+			<Text>Janissaire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Janitschar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Giannizzero:Giannizzeri</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jenízaro:Jenízaros</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TREBUCHET</Tag>
+		<English>Trebuchet</English>
+		<French>
+			<Text>Tr&#233;buchet</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tribok</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Trabocco:Trabocchi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Trabuquete:Trabuquetes</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TRIREME</Tag>
+		<English>Trireme</English>
+		<French>
+			<Text>Trir&#232;me</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Trireme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Trireme</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Trirreme:Trirremes</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VIKING_BESERKER</Tag>
+		<English>Berserker</English>
+		<French>
+			<Text>Guerrier Viking</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Berserker</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Berserker</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Berserk:Berserker</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ZULU_IMPI</Tag>
+		<English>Impi</English>
+		<French>
+			<Text>Impi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Impi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Impi:Impi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Impi:Impis</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
 </Civ4GameText>

@@ -835,6 +835,14 @@
 		<Russian>Работник будет улучшать только окрестности ближайшего города. Он продолжит работать, пока вы не отмените его автоматизацию.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ACTION_AUTOMATE_EXPLORE</Tag>
+		<English>Explore (Automated)</English>
+		<French>Explorer (auto)</French>
+		<German>Erkunden (automatisch)</German>
+		<Italian>Esplora (automaticamente)</Italian>
+		<Spanish>Explorar (automatizado)</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_EXPLORE_HELP</Tag>
 		<English>This order tells the unit to explore the uncharted regions on the map. The unit will continue to move until it has run out of places to explore.</English>
 		<French>L'unité découvre les zones inconnues de la carte et continue à le faire jusqu'à ce qu'elle n'ait plus rien à explorer.</French>
@@ -842,6 +850,22 @@
 		<Italian>Questo ordine comanda all'unità di esplorare le regioni ancora inesplorate della mappa. L'unità continuerà a muoversi finché ci saranno luoghi da esplorare.</Italian>
 		<Spanish>Con esta orden le decís a la unidad que explore las zonas del mapa que estén sin cartografiar. Seguirá moviéndose hasta que se quede sin lugares que explorar.</Spanish>
 		<Russian>Эта команда заставит отряд исследовать неразведанные области на карте. Он будет продолжать двигаться, пока не закончатся все затемненные области для исследования.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_AUTOMATE_RELIGION</Tag>
+		<English>Spread Automatically</English>
+		<French>R&#233;pandre automatiquement</French>
+		<German>Automatisch verbreiten</German>
+		<Italian>Diffusione automatica.</Italian>
+		<Spanish>Propagar autom&#225;ticamente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_AUTOMATE_RELIGION_HELP</Tag>
+		<English>Will order the unit to automatically spread its religion or corporation</English>
+		<French>Donner l'ordre &#224; l'unit&#233; de r&#233;pandre automatiquement sa religion ou sa soci&#233;t&#233; commerciale</French>
+		<German>Der Einheit wird angeordnet, ihre Religion oder Kapitalgesellschaft automatisch zu verbreiten.</German>
+		<Italian>Ordiner&#224; all'unit&#224; di diffondere automaticamente la sua religione o corporazione.</Italian>
+		<Spanish>Ordenar&#225; a la unidad que propague autom&#225;ticamente su religi&#243;n o corporaci&#243;n</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_HUNT</Tag>

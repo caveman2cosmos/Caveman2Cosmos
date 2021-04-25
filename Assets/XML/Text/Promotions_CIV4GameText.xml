@@ -17967,4 +17967,36 @@
 		<English>[COLOR_WARNING_TEXT]If the unit with this promotion cannot gain Defensive Bonuses, they will not gain inapplicable promotion benefits.[COLOR_REVERT]</English>
 		<Russian>[COLOR_WARNING_TEXT]Если отряд с этой квалификацией не имеет защитных бонусов, он не получает от них несовместимые преимущества.[COLOR_REVERT]</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_GREAT_GENERAL</Tag>
+		<English>Lead by Warlord</English>
+		<French>Dirig&#233; par un seigneur de guerre</French>
+		<German>F&#252;hrung durch Kriegsherr</German>
+		<Italian>Guerriero al comando</Italian>
+		<Spanish>Bajo el liderato de un Caudillo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_LEADERSHIP</Tag>
+		<English>Leadership</English>
+		<French>Commandement</French>
+		<German>F&#252;hrerschaft</German>
+		<Italian>Comando</Italian>
+		<Spanish>Liderazgo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_MORALE</Tag>
+		<English>Morale</English>
+		<French>Moral</French>
+		<German>Kampfmoral</German>
+		<Italian>Morale</Italian>
+		<Spanish>Moral</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_TACTICS</Tag>
+		<English>Tactics</English>
+		<French>Tactiques</French>
+		<German>Taktik</German>
+		<Italian>Tattica</Italian>
+		<Spanish>T&#225;cticas</Spanish>
+	</TEXT>
 </Civ4GameText>

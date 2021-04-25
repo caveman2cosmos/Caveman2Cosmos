@@ -46,6 +46,10 @@
 		<Italian>Il mammut peloso fu l'ultima specie del suo genere. La maggior parte dei mammut pelosi del Nordamerica e dell'Eurasia morirono surante l'ultima era glaciale, facendo parte di un'estinzione di massa della megafauna nell'emisfero settentrionale.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAMMOTH_TRAINER</Tag>
+		<English>Animal Trainer (Mammoth)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH</Tag>
 		<English>Ballista Mammoth</English>
 		<French>
