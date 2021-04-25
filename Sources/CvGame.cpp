@@ -11683,6 +11683,10 @@ void CvGame::recalculateModifiers()
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+
+		// Toffer - Yield cache
+		pLoopPlot->recalculateBaseYield();
+
 		pLoopPlot->getProperties()->clearForRecalculate();
 
 		//	We will recalculate visibility from first principles

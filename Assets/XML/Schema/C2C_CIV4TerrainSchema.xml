@@ -227,7 +227,6 @@
 	<ElementType name="iPeakChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iRiverChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iCityChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iPopulationChangeOffset" content="textOnly" dt:type="int"/>
 	<ElementType name="iPopulationChangeDivisor" content="textOnly" dt:type="int"/>
 	<ElementType name="iMinCity" content="textOnly" dt:type="int"/>
 	<ElementType name="iTradeModifier" content="textOnly" dt:type="int"/>
@@ -253,7 +252,6 @@
 		<element type="iPeakChange" minOccurs="0"/>
 		<element type="iRiverChange" minOccurs="0"/>
 		<element type="iCityChange" minOccurs="0"/>
-		<element type="iPopulationChangeOffset" minOccurs="0"/>
 		<element type="iPopulationChangeDivisor" minOccurs="0"/>
 		<element type="iMinCity" minOccurs="0"/>
 		<element type="iTradeModifier" minOccurs="0"/>

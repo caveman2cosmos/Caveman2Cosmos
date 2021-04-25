@@ -155,6 +155,8 @@ public:
 
 	void erase();
 
+	void recalculateBaseYield();
+
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
