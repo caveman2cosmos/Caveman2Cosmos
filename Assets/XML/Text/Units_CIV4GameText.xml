@@ -19996,7 +19996,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPECIAL_INFANTRY_PEDIA</Tag>
 		<English>Special Infantry, are the elite special forces units of the future battlefield. Trained from their youth by the Schola Progenium in the arts of war, Special Infantry Troopers are, perhaps, the finest soldiers ever to serve in the Human History. Armed with their trademark Hellguns and Hellpistols, these soldiers take combat to the heart of the enemy with blinding speed and deadly precision</English>
-		<Polish>Brak opisu w Cywilopedii</Polish>
 		<Russian>Спецназ - это элитные подразделения спецназа будущего поля боя. С юности обученные искусству войны в Схола Прогениум, специальные пехотные солдаты, возможно, являются лучшими солдатами, когда-либо служившими в истории человечества. Вооруженные своими фирменными Hellguns и Hellpistols, эти солдаты вступают в бой в самое сердце врага с ослепляющей скоростью и смертельной точностью.</Russian>
 	</TEXT>
 	<TEXT>
@@ -20146,7 +20145,6 @@
 		<English>[ICON_BULLET]Stampede: Fights to the death</English>
 		<French>[ICON_BULLET]Suicidaire: Combat à mort</French>
 		<Italian>[ICON_BULLET]Suicidio: combatte fino alla morte.</Italian>
-		<Spanish>[ICON_BULLET]Stampede: Fights to the death.</Spanish>
 		<Polish>[ICON_BULLET]Pęd: Walczy do śmierci</Polish>
 	</TEXT>
 	<TEXT>
@@ -20623,7 +20621,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]: [SPACE][SPACE] * Myth, Story and Stories - Cave Bear and Bear [SPACE][SPACE] * Master Hunter, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes, Histoire(s)des Ours des cavernes et autres ours, Maitre Chasseur, Cages et Enclos pour Ours</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes, Histoire(s)des Ours des cavernes et autres ours, Maître Chasseur, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]: [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Jaskiniowy i Niedźwiedź [SPACE][SPACE] * Mistrz Łowiectwa [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
 	</TEXT>
 	<TEXT>
