@@ -2097,6 +2097,10 @@
 		<Russian>Êðèñòàëïàíê</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CRYSTALPUNK_PEDIA</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CUBAN</Tag>
 		<English>Cuban</English>
 		<French>Cubain</French>
@@ -2131,6 +2135,10 @@
 		<Tag>TXT_KEY_BONUS_CYBERPUNK</Tag>
 		<English>Cyberpunk</English>
 		<Russian>Êèáåðïàíê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CYBERPUNK_PEDIA</Tag>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CZECH</Tag>
@@ -3746,6 +3754,10 @@
 		<Russian>Àíèìå-õèò</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_HIT_ANIMATED_MOVIE_PEDIA</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIT_MOVIES</Tag>
 		<English>Hit Movies</English>
 		<French>Film réussi</French>
@@ -5073,6 +5085,10 @@
 		<English>Machu Picchu Plans</English>
 		<Italian>Progetti per Machu Picchu</Italian>
 		<Russian>Ñõåìû Ìà÷ó-Ïèê÷ó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_MACHU_PICCHU_PLANS_PEDIA</Tag>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MADAN</Tag>
@@ -8248,6 +8264,10 @@
 		<Russian>Êîñìîïàíê</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_SPACEPUNK_PEDIA</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_SPANISH</Tag>
 		<English>Spanish</English>
 		<French>Espagnol</French>
@@ -8326,6 +8346,10 @@
 		<Tag>TXT_KEY_BONUS_STARPUNK</Tag>
 		<English>Starpunk</English>
 		<Russian>Ñòàðïàíê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_STARPUNK_PEDIA</Tag>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STEAMPUNK</Tag>
