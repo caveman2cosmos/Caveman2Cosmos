@@ -20,20 +20,6 @@
 		<Russian>The tradition of having a mascot or flag/standard that identifys the people in a military unit.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ANIMAL_STRATEGY</Tag>
-		<English>Animals spawn in the wilderness and are barbarian animal units. See also [LINK=CONCEPT_SUBDUED_ANIMALS]Subdued Animals[\LINK].</English>
-		<French>Les animaux apparaissent dans la nature et sont des unités animales barbares. Voir également [LINK=CONCEPT_SUBDUED_ANIMALS]Animaux apprivoisés[\LINK].</French>
-		<German>Tiere sind eine spezielle Art von barbarischen Einheiten, die keiner Zivilisation angehören. Sie entstehen zufällig in der Wildnis und können schwachen Einheiten leicht gefährlich werden. Dafür liefern sie aber auch Nahrung und wichtige Rohstoffe, wenn sie besiegt werden. Mehr Informationen gibt es unter [LINK=CONCEPT_SUBDUED_ANIMALS]Gefangene Tiere[\LINK].</German>
-		<Russian>Æèâîòíûå ïîÿâëÿþòñÿ â íåîáæèòûõ ìåñòàõ è ÿâëÿþòñÿ âàðâàðñêèìè æèâîòíûìè. Ñì. òàêæå [LINK=CONCEPT_SUBDUED_ANIMALS]Ïðèðó÷åííûå æèâîòíûå[\LINK] è [LINK=CONCEPT_TAMED_ANIMALS]Îäîìàøíåííûå æèâîòíûå[\LINK].</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Tag>
-		<English>Subdued animals are primarily meant for use in constructing special buildings in cities.</English>
-		<French>Les animaux apprivoisés sont principalement destinés à la construction de bâtiments spéciaux dans les villes.</French>
-		<German>Mit Hilfe von gefangenen Tieren können in Städten spezielle Gebäude errichtet werden. Je nach Art können sie auch als Kampftiere abgerichtet werden oder der Stadt andere Vorteile bringen.</German>
-		<Russian>Ïðèðó÷åííûå æèâîòíûå â ïåðâóþ î÷åðåäü ïðåäíàçíà÷åíû äëÿ èñïîëüçîâàíèÿ â ñòðîèòåëüñòâå ñïåöèàëüíûõ çäàíèé â ãîðîäàõ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_HERD_PEDIA</Tag>
 		<English>Represent the Bison of North America, Water Buffalo of South East Asia and all herbivore herds of Africa.</English>
 		<Italian>Rappresenta il bisonte del Nordamerica, il bufalo d'acqua dell'Asia sudorientale e tutti i branchi di erbivori dell'Africa.</Italian>

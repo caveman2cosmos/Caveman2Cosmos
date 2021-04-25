@@ -80,9 +80,4 @@
 		<English>Cao Dai Missionary</English>
 		<Russian>Ìèññèîíåð Êàîäàé</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAODAI_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]CaoDai[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Masjid al-Haram[COLOR_REVERT].</English>
-		<Russian>Используйте этого миссионера, чтобы активно распространять религию[COLOR_HIGHLIGHT_TEXT]Каодай[COLOR_REVERT] в дружественных городах (или городах-соперниках, с которыми у вас есть [COLOR_HIGHLIGHT_TEXT]Открытые границы[COLOR_REVERT]). Это увеличивает ваш доход, если у вас есть [COLOR_BUILDING_TEXT]Аль-Харам.[COLOR_REVERT]</Russian>
-	</TEXT>
 </Civ4GameText>

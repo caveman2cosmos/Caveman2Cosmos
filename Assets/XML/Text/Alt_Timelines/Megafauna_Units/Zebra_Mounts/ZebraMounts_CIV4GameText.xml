@@ -88,10 +88,6 @@
 		<Russian>Ëó÷íèê íà çåáðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ZEBRA_ARCHER_STRATEGY</Tag>
-		<English>This mounted unit is very powerful for early in the game and is a great counter to an enemy with catapults. This mounted unit is using [COLOR_HIGHLIGHT_TEXT]Zebras[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses.[COLOR_REVERT].</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_CAVALRY</Tag>
 		<English>Zebra Cavalry</English>
 		<French>
@@ -102,10 +98,6 @@
 		<Italian>Cavalleria su zebra</Italian>
 		<Polish>Kawaleria (Zebra)</Polish>
 		<Russian>Êàâàëåðèñò íà çåáðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ZEBRA_CAVALRY_STRATEGY</Tag>
-		<English>This most powerful mounted unit is particularly effective in open terrain and can withdraw from combat. It receives a bonus when attacking [COLOR_UNIT_TEXT]Cannons[COLOR_REVERT] but receives no terrain bonuses when defending. This mounted unit is using [COLOR_HIGHLIGHT_TEXT]Zebras[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses.[COLOR_REVERT].</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_CHARIOT</Tag>
@@ -120,10 +112,6 @@
 		<Russian>Êîëåñíèöà ñ çåáðàìè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ZEBRA_CHARIOT_STRATEGY</Tag>
-		<English>Build this most primitive of the mounted combat units when speed is important but stay on the offensive as it gets no defensive bonuses. This mounted unit is using [COLOR_HIGHLIGHT_TEXT]Zebras[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses.[COLOR_REVERT].</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_CUIRASSIER</Tag>
 		<English>Zebra Cuirassier</English>
 		<French>
@@ -136,10 +124,6 @@
 		<Russian>Êèðàñèð íà çåáðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ZEBRA_CUIRASSIER_STRATEGY</Tag>
-		<English>This unit marks the transition from melee to gunpowder-based cavalry. The [COLOR_UNIT_TEXT]Cuirassier[COLOR_REVERT] is the strongest land unit until the entrance of the [COLOR_UNIT_TEXT]Cavalry[COLOR_REVERT]. This mounted unit is using [COLOR_HIGHLIGHT_TEXT]Zebras[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses.[COLOR_REVERT].</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_KNIGHT</Tag>
 		<English>Zebra Knight</English>
 		<French>
@@ -150,9 +134,5 @@
 		<Italian>Cavaliere su zebra</Italian>
 		<Polish>Rycerz (Zebra)</Polish>
 		<Russian>Ðûöàðü íà çåáðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ZEBRA_KNIGHT_STRATEGY</Tag>
-		<English>This is the strongest pre-gunpowder unit in the game and are quite effective until [COLOR_UNIT_TEXT]Grenadiers[COLOR_REVERT] and [COLOR_UNIT_TEXT]Cannon[COLOR_REVERT] begin appearing. This mounted unit is using [COLOR_HIGHLIGHT_TEXT]Zebras[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses.[COLOR_REVERT].</English>
 	</TEXT>
 </Civ4GameText>

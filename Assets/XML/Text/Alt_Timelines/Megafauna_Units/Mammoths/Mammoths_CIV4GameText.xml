@@ -88,10 +88,6 @@
 		<English>Great mammoths walk in northern tundras, some tribes hunt them for meat, skins and bones. But some hunt them them for beast of war. Capturing one alive and bending is no easy task, but if succeeded. Tribe have a warbeast that can crush down buildings and break a gates of strongholds. Mammoth can be used break down enemy troops.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ballista Mammoth[COLOR_REVERT] - A well protected ballista that can bombard city fortifications. Effective against mounted units, siege engines and city defenders. It's more effective in arctic terrains and generally stronger than its elephant counterpart.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOMBARD_MAMMOTH</Tag>
 		<English>Bombard Mammoth</English>
 		<French>
@@ -150,12 +146,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAINED_MAMMOTH_PEDIA</Tag>
 		<English>You raised your own mammoth pup, broke it to the saddle and trained it for war. You might ride your massive mount on raids but your primary duty is to hunt down marauding raiders in your own clan's lands. Few will stand and face a 10' war-mammoth. Fewer will face that mammoth with a warrior on its back.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRAINED_MAMMOTH_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Mammoth Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Mammoth[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and its slower then rest of the Riders but much stronger. They have bonus in siege cities and when fighting in polar terrain and vs other mounted units and siege engines.</English>
-		<French>Unité adaptée contre les autres unités montés et les unités de siège. Obtient un bonus lors de l'attaque de villes.</French>
-		<Spanish>Una unidad adecuada contra unidades montadas y armas de asedio. Obtiene una bonificación al atacar una ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_MAMMOTH</Tag>

@@ -233,12 +233,6 @@
 		<Russian>[TAB]Áîëüøàÿ Áåðòà - ýòî ìàññèâíûé àðòèëëåðèéñêèé þíèò, ñïóòíèê áðîíåïîåçäîâ. Îí æåðòâóåò ïîäâèæíîñòüþ â ïîëüçó îãíåâîé ìîùè â áîëüøåé ñòåïåíè, ÷åì îáû÷íûå îñàäíûå þíèòû, ýòî îçíà÷àåò, ÷òî îí ìîæåò áûòü çàõâà÷åí.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BIG_BERTHA_STRATEGY</Tag>
-		<English>The Big Bertha is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>La Big Bertha è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
-		<Russian>Áîëüøàÿ Áåðòà - ýòî þíèò àëüòåðíàòèâíîé âðåìåííîé ëèíèè äèçåëüïàíêà. Â áîþ îíà î÷åíü ñèëüíà, íî èõ ÷èñëåííîñòü îãðàíè÷åíà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROMIUM_GUNMAN</Tag>
 		<English>Chromium Gunman</English>
 		<French>Fusilier Chromium</French>
@@ -250,11 +244,6 @@
 		<English>The Chromium Gunman is an internal-combustion-powered denizen of the Dieselpunk culture. He is an automaton born of Henry Ford's grand vision of assembly line mass production, and his polished but unpainted metal exterior is "so in right now" (in the 1920s and 30s that is).</English>
 		<Polish>Strzelec Chromium to prymitywny android napędzany przez silnik spalinowy Henriego Forda.</Polish>
 		<Russian>[TAB]Õðîìîâûé ñòðåëîê - ýòî ïðåäñòàâèòåëü êóëüòóðû äèçåëüïàíêà ñ äâèãàòåëåì âíóòðåííåãî ñãîðàíèÿ. Îí ïðåäñòàâëÿåò ñîáîé àâòîìàòîí èç îòïîëèðîâàííîãî íåîêðàøåííîãî ìåòàëëà ðîæäåííûé âåëèêèì ïðîâèäöåì Ãåíðè Ôîðäîì íà êîíâååðíîé ëèíèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CHROMIUM_GUNMAN_STRATEGY</Tag>
-		<English>The Chromium Gunman is the unique Infantry replacement for the Dieselpunk alt-timeline culture. It starts with bonuses against gunpowder units and in city defence. Thus the go-to city defender for his era - for those lucky enough to have the use of his services. But use him with caution - he looks a bit shifty to me...</English>
-		<Russian>Õðîìîâûé ñòðåëîê - óíèêàëüíàÿ çàìåíà ïåõîòû â àëüòåðíàòèâíîé âðåìåííîé ëèíèè äèçåëüïàíêà. Îí èìååò ïðåèìóùåñòâî â áîþ ïðîòèâ îãíåñòðåëüíûõ þíèòîâ è ïðè çàùèòå ãîðîäà. Ïîýòîìó îí îòëè÷íûé çàùèòíèê ãîðîäà ñâîåé ýïîõè äëÿ òåõ, êîìó ïîâåçëî èì îáëàäàòü. Íî èñïîëüçóéòå åãî ñ îñòîðîæíîñòüþ - îí âûãëÿäèò ñëåãêà õèòðîâàòûì...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOUBLE_BIPLANE</Tag>
@@ -272,12 +261,6 @@
 		<Russian>[TAB]Áèïëàí - ýêñïåðèìåíòàëüíûé ñàìîëåò. Äâà ôþçåëÿæà â íåì îáúåäèíåíû â îäíó êîíñòðóêöèþ è ïîçâîëÿþò îòñëåæèâàòü êàê íàçåìíûå òàê è âîçäóøíûå öåëè íàèáîëåå ýôôåêòèâíî.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DOUBLE_BIPLANE_STRATEGY</Tag>
-		<English>The Double Biplane is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>Il Biplano doppio è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
-		<Russian>Áèïëàí - ýòî þíèò àëüòåðíàòèâíîé âðåìåííîé ëèíèè äèçåëüïàíêà. Â áîþ îí î÷åíü ñèëåí, íî èõ ÷èñëåííîñòü îãðàíè÷åíà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRACHE_HELICOPTER</Tag>
 		<English>Drache Helicopter</English>
 		<French>Hélicoptère Drache</French>
@@ -291,12 +274,6 @@
 		<Italian>L'elicottero Drache è un potente elicottero, equipaggiato con armi pesanti aria-terra. È però debole contro le unità navali.</Italian>
 		<Polish>Smigłowiec wielozadaniowy Fa 223 był kontynuacją założeń wykorzystanych przy budowie poprzedniej konstrukcji profesora Focke - Focke-Wulfa Fw 61. Elementem nośnym tych maszyn były dwa wirniki umieszczone na końcach kratownicowych ramion umieszczonych na bokach kadłuba. Były one napędzane przez silnik umieszczony w kadłubie. Układ dwuwirnikowy umożliwiał rezygnację ze śmigła ogonowego.</Polish>
 		<Russian>[TAB]Ïàðÿùèé äðàêîí - ýòî ìàññèâíûé âåðòîëåò, êîòîðûé îñíàùåí òÿæåëûì ïðîòèâîïåõîòíûì âîîðóæåíèåì. Îí ìàëîýôôåêòèâåí ïðîòèâ âîåííî-ìîðñêèõ þíèòîâ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_DRACHE_HELICOPTER_STRATEGY</Tag>
-		<English>The Drache Helicopter is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>L'elicottero Drache è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
-		<Russian>Ïàðÿùèé äðàêîí - ýòî þíèò àëüòåðíàòèâíîé âðåìåííîé ëèíèè äèçåëüïàíêà. Â áîþ îí î÷åíü ñèëåí, íî èõ ÷èñëåííîñòü îãðàíè÷åíà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GOLIATH_AIRSHIP</Tag>
@@ -314,12 +291,6 @@
 		<Russian>[TAB]Ïî÷òè â äâà ðàçà áîëüøèé, ÷åì ãðîìàäíûé Ãèíäåíáóðã, êëàññ äèðèæàáëåé. Êîëîññàëüíûé äèðèæàáëü êëàññà Ãîëèàô - ÷óäî íåáåñ, îáåñïå÷èâàåò íåïðåâçîéäåííûé óðîâåíü ðîñêîøè äëÿ ñâîèõ íåïðèëè÷íî áîãàòûõ ïàññàæèðîâ (åñëè âû íå íåïðèëè÷íî áîãàòû, òî êàê âû òîãäà ñìîæåòå ïîçâîëèòü ñåáå áèëåò). Íî âî âðåìÿ âîéíû ýòîò ìíîãîöåëåâîé êîðàáëü ìîæåò áûòü ïåðåñòðîåí äëÿ òîãî, ÷òîáû îáåñïå÷èòü ïðåâîñõîäñòâî â âîçäóõå, òàì ãäå âàì ýòî íóæíî è êîãäà âàì ýòî íóæíî, îáåñïå÷èâàÿ ýêèïàæ èç áîëåå 300 ÷åëîâåê ëþêñîâûì îáîãðåâîì è îñâåùåíèåì æèëûõ ïîìåùåíèé áëàãîäàðÿ ìàãèè ýëåêòðè÷åñòâà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GOLIATH_AIRSHIP_STRATEGY</Tag>
-		<English>The Goliath Airship is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>Il Dirigibile Goliath è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
-		<Russian>Ãîëèàô - ýòî þíèò àëüòåðíàòèâíîé âðåìåííîé ëèíèè äèçåëüïàíêà. Â áîþ îí î÷åíü ñèëåí, íî èõ ÷èñëåííîñòü îãðàíè÷åíà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAILROAD_ARTILLERY</Tag>
 		<English>Railroad Artillery</English>
 		<French>Artillerie sur Train</French>
@@ -333,12 +304,6 @@
 		<Italian>Il cannone ferroviario è una potentissima unità di artiglieria. Sacrifica la mobilità in favore della potenza di fuoco, e per questo motivo può essere catturato.</Italian>
 		<Polish>Artyleria kolejowa - artyleria wielkiej mocy składająca się z dział dalekonośnych, przewożonych na specjalnych wieloosiowych platformach kolejowych. Masa dział artylerii kolejowej wynosi od kilkudziesięciu do kilkuset ton. Pierwsze działa kolejowe użyte zostały w czasie I wojny światowej. Niewielka liczba dział kolejowych (o kalibrach nawet do 800 mm) była użyta podczas II wojny światowej, głównie przez Niemców, przede wszystkim do obrony wybrzeża. Po 1945 artyleria kolejowa wyparta została przez artylerię rakietową.</Polish>
 		<Russian>[TAB]Áðîíåïîåçä - ýòî ìàññèâíûé àðòèëëåðèéñêèé þíèò. Îí æåðòâóåò ïîäâèæíîñòüþ â ïîëüçó îãíåâîé ìîùè â áîëüøåé ñòåïåíè, ÷åì îáû÷íûå îñàäíûå þíèòû, ýòî îçíà÷àåò, ÷òî îí ìîæåò áûòü çàõâà÷åí.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_RAILROAD_ARTILLERY_STRATEGY</Tag>
-		<English>The Railroad Artillery is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>Il cannone ferroviario è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
-		<Russian>Áðîíåïîåçä - ýòî þíèò àëüòåðíàòèâíîé âðåìåííîé ëèíèè äèçåëüïàíêà. Â áîþ îí î÷åíü ñèëåí, íî èõ ÷èñëåííîñòü îãðàíè÷åíà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TZAR_TANK</Tag>
@@ -356,12 +321,6 @@
 		<Russian>[TAB]Öàðü-òàíê - ýòî î÷åíü ìîùíûé òàíê. Îí èñïîëüçóåò ñîâðåìåííûå äâèãàòåëè äëÿ ïåðåìåùåíèÿ ïî ïîëþ áîÿ è 105-ìèëëèìåòðîâóþ àâòîìàòè÷åñêóþ ïóøêó äëÿ óíè÷òîæåíèÿ ïðîòèâíèêà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TZAR_TANK_STRATEGY</Tag>
-		<English>The Tzar Tank is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>Il Carro armato Tzar è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
-		<Russian>Öàðü-òàíê - ýòî þíèò àëüòåðíàòèâíîé âðåìåííîé ëèíèè äèçåëüïàíêà. Â áîþ îí î÷åíü ñèëåí, íî èõ ÷èñëåííîñòü îãðàíè÷åíà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_VERY_HEAVY_ARMOR</Tag>
 		<English>Very Heavy Tank</English>
 		<French>Tank Lourd Blindé</French>
@@ -375,11 +334,5 @@
 		<Italian>Il carro blindato pesante fu un progetto su cui si discusse molto dopo la Seconda guerra mondiale. Non fu mai realizzato.</Italian>
 		<Polish>Landkreuzer P-1000 Ratte ("Szczur") - prototypowy czołg superciężki, przeznaczony dla sił zbrojnych III Rzeszy. Ważący 1000 ton P-1000 Ratte (w planach) byłby ponad 5 razy cięższy od największego wyprodukowanego kiedykolwiek czołgu Maus. Zaprojektowany przez zakłady Friedrich Krupp AG w 1942 i zaaprobowany przez Adolfa Hitlera, został ostatecznie zarzucony na początku 1943 z inicjatywy Alberta Speera.</Polish>
 		<Russian>[TAB]Î ñîçäàíèè ñâåðõòÿæåëîãî òàíêà ìíîãî ãîâîðèëè ïîñëå Âòîðîé ìèðîâîé âîéíû. Íî ýòîò ïðîåêò òàê è íå áûë îñóùåñòâëåí, îñòàâøèñü â àëüòåðíàòèâíîé âðåìåííîé ëèíèè äèçåëüïàíêà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_VERY_HEAVY_ARMOR_STRATEGY</Tag>
-		<English>The Very Heavy Tank is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
-		<Italian>Il Carro blindato pesante è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
-		<Russian>Ñâåðõòÿæåëûé òàíê - ýòî þíèò àëüòåðíàòèâíîé âðåìåííîé ëèíèè äèçåëüïàíêà. Â áîþ îí î÷åíü ñèëåí, íî èõ ÷èñëåííîñòü îãðàíè÷åíà.</Russian>
 	</TEXT>
 </Civ4GameText>

@@ -76,9 +76,4 @@
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 		<Polish>Nie ma dowodów na istnienie tej jednostki, jest ona częścią tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej ścieżki historycznej[COLOR_REVERT].</Polish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_BISON_RIDER_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Bison Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Bisons[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and is costlier than the rest of the Riders but they are great when fighting against Elephants and Mammoths.</English>
-		<Italian>I [COLOR_UNIT_TEXT]cavalcatori di bisonti[COLOR_REVERT] sono</Italian>
-	</TEXT>
 </Civ4GameText>

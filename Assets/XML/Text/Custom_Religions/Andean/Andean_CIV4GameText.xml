@@ -243,10 +243,4 @@
 		<Polish>Swiątynia - miejsce kultu religijnego. W sensie szerszym, jest to każda budowla wzniesiona w celu sprawowania w niej wszelkiego rodzaju obrzędów religijnych. W sensie węższym, świątynią może być tylko taka budowla, która spełnia przynajmniej niektóre wyższe funkcje kultowe (np. składanie ofiar), sprawowane jedynie przez kapłanów.</Polish>
 		<Russian>[TAB]Â ìíîãîíàöèîíàëüíîé Èìïåðèè èíêîâ, ðàçíûå íàðîäû èñïîâåäîâàëè ìíîæåñòâî ñàìûõ ðàçëè÷íûõ ïîëèòåèñòè÷åñêèõ êóëüòîâ. Áîëüøèíñòâî ðåëèãèé èìåëî îáùèå ÷åðòû, òàêèå êàê ïîêëîíåíèå Ïà÷àìàìå è Âèðàêî÷å. Êîãäà Èíêè ïîêîðÿëè î÷åðåäíîé íàðîä èëè ïëåìÿ, îíè äîáàâëÿëè èõ òðàäèöèîííûõ áîæåñòâ â ñîáñòâåííûé ïàíòåîí.</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ANDEAN_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Andeanism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</English>
-		<Italian>Usa questo missionario per diffondere velocemente l'[COLOR_HIGHLIGHT_TEXT]Andinismo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
-		<Russian>[TAB]Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ [COLOR_HIGHLIGHT_TEXT]Àíäåíàèçìà[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]).</Russian>
-	</TEXT>
 </Civ4GameText>

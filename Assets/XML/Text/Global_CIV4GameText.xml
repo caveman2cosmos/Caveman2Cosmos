@@ -19701,11 +19701,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Los gorilas, los más grandes de los primates vivos, son los omnívoros de la tierra-vivienda que habitan los bosques de África. Los gorilas todavía se dividen en dos especies y (bajo discusión en fecha 2007) cuatro o cinco subespecies. Su DNA es 97%-98% idéntico a el de un ser humano, y es los parientes vivos más cercanos siguientes a los seres humanos después de las dos especies del chimpancé.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_DOCTOR_STRATEGY</Tag>
-		<English>Use the Great Doctor to build the [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Universal Health Care[\LINK] National Wonder, discover a new technology or add to a city as a super specialist.</English>
-		<French>Utilisez le Docteur illustre pour construire la merveille nationale [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Couverture Santé Universelle[\ LINK], ou découvrir une nouvelle technologie ou encore ajoutez-le à une ville en tant que super spécialiste.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_CAVALRY_PEDIA</Tag>
 		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]Heavy Cavalry are more powerful versions of Light Cavalry. They are especially effective against Melee Units in open terrain, and they can generally crush any Light Cavalry or Horse Archers they come across.[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]To put it simply, a Heavy Cavalry unit is better-armed and armored than its Light Cavalry cousin. The creation of Heavy Cavalry required a number of technological advances: first, larger horses had to be bred; then metal armor had to be made lighter and more flexible. All of these required a fairly wealthy and advanced civilization, but the price was well worth it: few unarmored cavalry units could hope to stand against the determined charge of Heavy Cavalry.</English>
 		<French>
@@ -19721,24 +19716,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		</Italian>
 		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]La caballería pesada es básicamente como ligera, solo que más potente. Resulta especialmente eficaz frente a unidades de cuerpo a cuerpo a campo abierto, y normalmente puede aplastar a cualquier unidad de caballería ligera o arqueros a caballo que se cruce en su camino.[NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]En pocas palabras, una unidad de caballería pesada es una versión mejor armada y equipada de la caballería ligera. La creación de la caballería pesada requería una serie de avances tecnológicos: para empezar, caballos más grandes. Luego, era necesario que la armadura de metal fuera más liviana y flexible. Todo esto solo podía darse en civilizaciones opulentas y avanzadas, pero el resultado merecía la pena: pocas unidades de caballería no pesada podían resistir una carga de una de estas unidades.</Spanish>
 		<Polish>Upadek wartości jazdy rycerskiej spowodował powstanie nowych formacji kawaleryjskich w skład których wchodzili żołnierze zaciężni (najemnicy). W XV wieku, obok tradycyjnych kopijników, pojawili się na polach bitew rajtarzy i arkebuzerzy uzbrojeni w broń palną. W XVI wieku powstała dragonia będąca początkowo konną piechotą. W Europie zachodniej jazda organizowała się na regimenty i kompanie. W Polsce w XV-tym wieku kawaleria dzieliła się na oddziały kopijnicze i strzelcze. W XVI wieku pojawiła się husaria, początkowo jazda lekka, z biegiem czasu stając się najcięższą kawalerią polską. Jazdę lżejszą w Polsce stanowili pancerni, zwani na Litwie petyhorcami, którzy z czasem stali się formacją średniozbrojną. Jazdę lekką stanowiły tzw. chorągwie wołoskie i tatarskie. W XVII wieku na zachodzie pojawili się kirasjerzy. W XVIII wieku w Polsce dawne pułki husarskie i pancerne przekształcono kawalerię narodową, a jazdę lekką na nowoczesnych ułanów. W czasach wojen napoleońskich pojawiły się oddziały lansjerów, szwoleżerów i strzelców konnych. W XIX wieku w związku z dalszym rozwojem broni palnej, znaczenie kawalerii upadło. Jednak jeszcze w czasie I wojny światowej wojska obu walczących stron zmobilizowały łącznie 63 dywizje jazdy, znaczną ich część rozwiązano zresztą w czasie trwania tej wojny.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_CAVALRY_STRATEGY</Tag>
-		<English>Good against melee units in the open and against Light Cavalry, Horse Archers, and Mounted Infantry.</English>
-		<French>
-			<Text>Unités efficaces en terrain dégagé contre les unités de combat rapproché, ainsi que contre la cavalerie légère, les archers montés et l'infanterie montée.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Gut gegen Nahkampfeinheiten im Freien sowie gegen Leichte Kavallerie, Berittene Bogenschützen und Berittene Infanterie.</German>
-		<Italian>
-			<Text>Ottima su terreno aperto contro unità da combattimento ravvicinato e contro cavalleria leggera, arcieri a cavallo e fanteria a cavallo.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Es buena frente a unidades de cuerpo a cuerpo en campo abierto, así como frente a la Caballería ligera, Arqueros a caballo e Infantería montada.</Spanish>
-		<Polish>Jest to silna jednostka i doskonale nadaje się do walki z takimi jednostkami jak: Lekka Kawaleria, Łucznik Konny czy Konny Knecht.</Polish>
-		<Russian>Óñïåøíî äåéñòâóåò íà îòêðûòîé ìåñòíîñòè ïðîòèâ ïåõîòû, ëåãêîé êàâàëåðèè, êîííûõ ëó÷íèêîâ è êîííîé ïåõîòû.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_SWORDSMAN_PEDIA</Tag>
@@ -19757,24 +19734,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]Estas unidades son más poderosas que los espadachines normales y, si cuentan con el respaldo de unidades de asedio, pueden conquistar ciudades no demasiado bien defendidas.[NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]Las espadas pesadas eran más largas y, lógicamente,más pesadas que las normales. A menudo debían empuñarse con las dos manos, y normalmente se empleaban como armas cortantes. Normalmente los soldados con espada pesada llevaban mejor armadura que sus equivalentes más ligeros, lo que significa que podían tanto recibir como infligir más daño.</Spanish>
 		<Polish>W społeczeństwach plemiennych, w toczenie wojen bywała zaangażowana cała męska część populacji, np. u Gurkhów, Maorysów oraz w dawnych plemionach celtyckich, germańskich i słowiańskich. W bardziej rozwiniętych społeczeństwach wojownicy często tworzyli własną kastę lub stan.</Polish>
 		<Russian>[BOLD]Îïèñàíèå[\BOLD][PARAGRAPH:1]Ãðóïïà ýòèõ äîâîëüíî ñèëüíûõ þíèòîâ ìîæåò çàõâàòèòü õîðîøî óêðåïëåííûé ãîðîä, îñîáåííî åñëè èõ ïîääåðæèâàþò îñàäíûå îðóäèÿ.[NEWLINE][NEWLINE][BOLD]Èñòîðè÷åñêàÿ ñïðàâêà[\BOLD][PARAGRAPH:1]Òÿæåëûå ìå÷è äåðæàò äâóìÿ ðóêàìè, èõ ìîæíî èñïîëüçîâàòü è êàê ðóáÿùåå, è êàê ðåæóùåå îðóæèå. Áîåö ñ äâóðó÷íûì ìå÷îì îáû÷íî çàùèùåí áîëåå òÿæåëîé áðîíåé, ïîýòîìó îí áîëåå îïàñåí, ÷åì îáû÷íûé ìå÷íèê.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_SWORDSMAN_STRATEGY</Tag>
-		<English>These more powerful sword units can take on moderately-defended cities when backed up by siege units.</English>
-		<French>
-			<Text>Ces unités de spadassins plus puissantes peuvent attaquer des villes moyennement défendues avec l'appui d'unités de siège.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Diese mächtigeren Schwerteinheiten können mäßig befestigte Städte einnehmen, wenn sie von Belagerungseinheiten unterstützt werden.</German>
-		<Italian>
-			<Text>Queste unità armate con spada, più potenti di quelle normali, possono conquistare città moderatamente difese, con l'aiuto di unità d'assedio.</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Estas unidades son más poderosas que los espadachines normales y, si cuentan con el respaldo de unidades de asedio, pueden conquistar ciudades no demasiado bien defendidas.</Spanish>
-		<Polish>Jest to silna jednostka obdarzona niezwykłą umiejętnością władania mieczem. Przydatna do wsparcia dla jednostek oblężniczych podczas ataku na miasto.</Polish>
-		<Russian>Ãðóïïà ýòèõ äîâîëüíî ñèëüíûõ þíèòîâ ìîæåò çàõâàòèòü õîðîøî óêðåïëåííûé ãîðîä, îñîáåííî åñëè èõ ïîääåðæèâàþò îñàäíûå îðóäèÿ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INQUISITOR</Tag>
@@ -19808,16 +19767,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Polish>Inkwizycja (łac. Inquisitio? śledztwo, badanie)? potoczna nazwa systemu śledczo-sądowniczego Kościoła katolickiego działającego od XIII do XIX wieku, utworzonego w celu wyszukiwania, nawracania i karania heretyków w oparciu o postanowienia ujęte w dokumentach soborowych, synodalnych oraz bullach papieskich.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INQUISITOR_STRATEGY</Tag>
-		<English>Use [COLOR_UNIT_TEXT]Inquisitors[COLOR_REVERT] to eliminate non-state religions from a city. Doing so will destroy the [COLOR_UNIT_TEXT]Inquisitor[COLOR_REVERT].</English>
-		<French>Utilisez un [COLOR_UNIT_TEXT]Inquisiteur[COLOR_REVERT] pour faire disparaître d'une ville les religions non officielles. En accomplissant sa mission, l'[COLOR_UNIT_TEXT]Inquisiteur[COLOR_REVERT] donnera sa vie.</French>
-		<German>Benutzen Sie [COLOR_UNIT_TEXT]Inquisitoren[COLOR_REVERT], um Religionen, die nicht Staatsreligion sind, aus einer Stadt zu eliminieren. Dadurch wird der [COLOR_UNIT_TEXT]Inquisitor[COLOR_REVERT] vernichtet.</German>
-		<Italian>Usa l'[COLOR_UNIT_TEXT]Inquisitore[COLOR_REVERT] per eliminare da una città tutte le religioni non di stato. Così facendo l'[COLOR_UNIT_TEXT]Inquisitore[COLOR_REVERT] verrà distrutto.</Italian>
-		<Spanish>Usa a los [COLOR_UNIT_TEXT]inquisidores[COLOR_REVERT] para eliminar todas las religiones no oficiales de una ciudad. Al hacerlo, el [COLOR_UNIT_TEXT]inquisidor[COLOR_REVERT] será destruido.</Spanish>
-		<Polish>Używaj [COLOR_UNIT_TEXT]Inkwizytora[COLOR_REVERT] do eliminowania niepaństwowych religii z miasta. Spowoduje to utratę [COLOR_UNIT_TEXT]Inkwizytora[COLOR_REVERT]. [COLOR_UNIT_TEXT]Inkwizytor[COLOR_REVERT] wymaga aktywnej doktryny Nietolerancja do budowy i działania.</Polish>
-		<Russian>[COLOR_UNIT_TEXT]Èíêâèçèòîð[COLOR_REVERT] óíè÷òîæàåò â ãîðîäå âñå íåãîñóäàðñòâåííûå ðåëèãèè, à çàòåì èñ÷åçàåò.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAWYER</Tag>
 		<English>Lawyer</English>
 		<French>Avocat</French>
@@ -19840,24 +19789,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Polish>W Europie we wczesnym średniowieczu w okresie wczesnofeudalnym jazda zorganizowana była jako przyboczny oddział władcy (księcia, kniazia). Była częścią drużyny książęcej, która istniała zarówno wśród prymitywnych plemion germańskich, jak i słowiańskich (w tych ostatnich pojawiła się nieco później). W Polsce, w okresie rządów pierwszych Piastów w skład drużyny książęcej wchodziła jazda ciężka (tzw. Pancerni) oraz jazda lekka.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LIGHT_CAVALRY_STRATEGY</Tag>
-		<English>These units can be especially effective against archery or melee units in open terrain.</English>
-		<French>
-			<Text>Ces unités peuvent être particulièrement efficaces contre les unités de combat rapproché et les archers en terrain dégagé.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Diese Einheiten können besonders effektiv gegen unberittene Einheiten auf offenem Feld sein.</German>
-		<Italian>
-			<Text>Queste unità sono particolarmente efficaci contro arcieri o unità da combattimento ravvicinato su terreno aperto.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Estas unidades pueden ser especialmente eficaces frente a arqueros o a unidades de cuerpo a cuerpo en campo abierto.</Spanish>
-		<Polish>Ta jednostka przydaje się do walki przeciwko jednostkom łuczniczym oraz walczącym wręcz na otwartych terenach.</Polish>
-		<Russian>Ýòè þíèòû ýôôåêòèâíû ïðîòèâ ïåõîòèíöåâ è ëó÷íèêîâ â ñðàæåíèÿõ íà îòêðûòîé ìåñòíîñòè.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIGHT_SWORDSMAN_PEDIA</Tag>
 		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]These early sword units can attack enemy cities that are not too heavily defended. Of course it's very useful to bring siege equipment when trying to take cities.[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]During the eighth century AD, European swords tended to be long and straight, with no crossguard to protect the wielder's hand (crossguards didn't appear in Europe until the Late Middle Ages). Light Swordsmen are unarmored, or wear leather armor at best.</English>
 		<French>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Ces premières unités de spadassins peuvent attaquer les villes ennemies qui ne sont pas trop défendues. L'équipement de siège est bien sûr très utile pour prendre une ville.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Au cours du VIIIe siècle, les épées européennes étaient généralement longues, droites et dépourvues de garde pour protéger la main du combattant. La garde n'apparut pas en Europe avant le haut Moyen Age. Les spadassins légers ne portent pas d'armure ou au mieux une armure de cuir.</French>
@@ -19868,24 +19799,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[BOLD]Îïèñàíèå[\BOLD][PARAGRAPH:1]Ýòè þíèòû ìîãóò îòáèòü ó ïðîòèâíèêà ñëàáî óêðåïëåííûé ãîðîä, õîòÿ ïðè øòóðìå èì íå ïîìåøàåò îñàäíàÿ òåõíèêà.[NEWLINE][NEWLINE][BOLD]Èñòîðè÷åñêàÿ ñïðàâêà[\BOLD][PARAGRAPH:1]Â VIII â. í.ý. â Åâðîïå áûëè ðàñïðîñòðàíåíû äëèííûå ïðÿìûå ìå÷è áåç ïîïåðå÷íîé ãàðäû, çàùèùàþùåé ðóêó (ãàðäû ïîÿâèëèñü çäåñü òîëüêî â êîíöå ñðåäíåâåêîâüÿ). Ëåãêèå ìå÷íèêè îáõîäèëèñü áåç çàùèòû èëè äîâîëüñòâîâàëèñü êîæàíûìè äîñïåõàìè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LIGHT_SWORDSMAN_STRATEGY</Tag>
-		<English>These early sword units can attack enemy cities that are not too heavily defended. Of course it's very useful to bring siege equipment when trying to take cities.</English>
-		<French>
-			<Text>Ces premières unités de spadassins peuvent attaquer les villes ennemies qui ne sont pas trop défendues. L'équipement de siège est bien sûr très utile pour prendre une ville.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Diese frühen Schwerteinheiten können feindliche Städte angreifen, die nicht allzu gut gesichert sind. Es ist natürlich immer nützlich, Belagerungsausrüstung mit sich zu führen, wenn man Städte einnimmt</German>
-		<Italian>
-			<Text>Queste prime unità armate con spada possono attaccare città che non sono pesantemente difese. Chiaramente è sempre utile portare con sé unità d'assedio, quando si cerca di conquistare una città.</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Estas unidades pueden atacar ciudades enemigas, siempre que no estén demasiado defendidas. En cualquier caso, es muy conveniente utilizar máquinas de asedio para atacar ciudades.</Spanish>
-		<Polish>W społeczeństwach plemiennych, w toczenie wojen bywała zaangażowana cała męska część populacji, np. u Gurkhów, Maorysów oraz w dawnych plemionach celtyckich, germańskich i słowiańskich. W bardziej rozwiniętych społeczeństwach wojownicy często tworzyli własną kastę lub stan.</Polish>
-		<Russian>Ýòè þíèòû ìîãóò îòáèòü ó ïðîòèâíèêà ñëàáî óêðåïëåííûé ãîðîä, õîòÿ ïðè øòóðìå èì íå ïîìåøàåò îñàäíàÿ òåõíèêà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY_PEDIA</Tag>
 		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]Mounted Infantry are less powerful than Horse Archers; however, these units do receive terrain defensive bonuses, making them far more powerful when defending in hills, woods, or city.[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Mounted Infantry soldiers use horses to get to the battlefield, but once there they dismount and fight on foot. They rarely take part in charges or other horseback maneuvers, and they tend to suffer badly when engaged in such against trained cavalry units. On the other hand, when fortified on a hill, Mounted Infantry can do serious damage to an attacking Horse Archer or Light Cavalry unit.</English>
 		<French>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]L'infanterie montée est moins puissante que les archers montés, mais bénéficie de bonus défensifs de terrain, ce qui lui permet de se défendre bien plus efficacement sur des collines, dans les bois ou dans les villes.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Les soldats de l'infanterie montée se rendent à cheval sur le champ de bataille, mais mettent pied à terre pour combattre une fois arrivés à destination. Ils participent rarement aux charges ou aux autres manoeuvres à cheval, et se font généralement malmener quand ils le font face à des cavaliers entraînés. En revanche, l'infanterie montée peut infliger de sérieux dégâts à une unité de cavalerie légère ou d'archers montés qui l'attaquerait sur une colline où elle aurait pris position.</French>
@@ -19893,24 +19806,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]La fanteria a cavallo è meno potente degli arcieri a cavallo, però queste unità ricevono bonus difensivi per il terreno, che le rendono molto più potenti quando difendono in collina, nelle foreste o in città.[NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1]I soldati della fanteria a cavallo usano i cavalli per arrivare al campo di battaglia ma poi smontano e combattono a piedi. Di rado prendono parte a cariche o altre manovre a cavallo, e tendono a subire malamente gli attacchi delle unità di cavalleria. D'altro canto quando sono fortificate in collina, i fanti a cavallo possono infliggere seri danni ad arcieri a cavallo o cavalleria leggera.</Italian>
 		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]La infantería montada es menos potente que los arqueros a caballo; sin embargo, recibe bonificaciones defensivas por terreno, lo que resulta una enorme ventaja a la hora de defenderse en colinas, bosques o ciudades.[NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]Los soldados de la infantería montada usan sus caballos para llegar al campo de batalla, pero una vez allí desmontan y luchan a pie. Solo en raras ocasiones toman parte en cargas u otras maniobras típicas de caballería y, cuando se enfrentan con escuadrones de caballería profesional, normalmente llevan las de perder. Por otro lado, cuando está atrincherada en una colina, la infantería montada puede ser muy peligrosa para los arqueros a caballo o la caballería ligera.</Spanish>
 		<Polish>Upadek wartości jazdy rycerskiej spowodował powstanie nowych formacji kawaleryjskich w skład których wchodzili żołnierze zaciężni (najemnicy). W XV wieku, obok tradycyjnych kopijników, pojawili się na polach bitew rajtarzy i arkebuzerzy uzbrojeni w broń palną. W XVI wieku powstała dragonia będąca początkowo konną piechotą. W Europie zachodniej jazda organizowała się na regimenty i kompanie. W Polsce w XV-tym wieku kawaleria dzieliła się na oddziały kopijnicze i strzelcze. W XVI wieku pojawiła się husaria, początkowo jazda lekka, z biegiem czasu stając się najcięższą kawalerią polską. Jazdę lżejszą w Polsce stanowili pancerni, zwani na Litwie petyhorcami, którzy z czasem stali się formacją średniozbrojną. Jazdę lekką stanowiły tzw. chorągwie wołoskie i tatarskie. W XVII wieku na zachodzie pojawili się kirasjerzy. W XVIII wieku w Polsce dawne pułki husarskie i pancerne przekształcono kawalerię narodową, a jazdę lekką na nowoczesnych ułanów. W czasach wojen napoleońskich pojawiły się oddziały lansjerów, szwoleżerów i strzelców konnych. W XIX wieku w związku z dalszym rozwojem broni palnej, znaczenie kawalerii upadło. Jednak jeszcze w czasie I wojny światowej wojska obu walczących stron zmobilizowały łącznie 63 dywizje jazdy, znaczną ich część rozwiązano zresztą w czasie trwania tej wojny.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY_STRATEGY</Tag>
-		<English>Use these speedy infantrymen as rapid-reaction forces and to defend hills and forests.</English>
-		<French>
-			<Text>Utilisez ces Spadassins pour intervenir rapidement ou pour défendre les collines et les forêts.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Setzen Sie diese schnellen Infanteriekämpfer als Streitkräfte für schnelle Gegenmaßnahmen und zur Verteidigung von Hügeln und Wäldern ein.</German>
-		<Italian>
-			<Text>Usa questi veloci fanti per reagire rapidamente e per difendere colline e foreste.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Utiliza a estas veloces unidades de infantería como fuerzas de reacción rápida, así como para defender colinas y bosques.</Spanish>
-		<Polish>Używaj tych szybkich jednostek w celu szybkiego reagowania oraz do obrony wzgórz i lasów.</Polish>
-		<Russian>Ýòè þíèòû ýôôåêòèâíû êàê âîéñêà áûñòðîãî ðåàãèðîâàíèÿ, à òàêæå ïðè îáîðîíå õîëìîâ, ëåñîâ è ãîðîäîâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUM_STEALTH_STRIKES_ATTACK</Tag>

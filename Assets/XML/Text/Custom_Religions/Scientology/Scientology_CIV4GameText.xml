@@ -176,10 +176,4 @@
 		<Polish>Misjonarz Scjentologów</Polish>
 		<Russian>Ñàåíò. ìèññèîíåð</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SCIENTOLOGY_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Scientology[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Scientology Sede[COLOR_REVERT].</English>
-		<Italian>Usa questo missionario per diffondere velocemente [COLOR_HIGHLIGHT_TEXT]Scientology[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
-		<Russian>Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ [COLOR_HIGHLIGHT_TEXT]Ñàåíòîëîãèè[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]). Òàêæå óâåëè÷èâàþòñÿ âàøè äîõîäû, åñëè ó âàñ èìååòñÿ [COLOR_BUILDING_TEXT]Ñàåíò. ñâÿòûíÿ[COLOR_REVERT].</Russian>
-	</TEXT>
 </Civ4GameText>

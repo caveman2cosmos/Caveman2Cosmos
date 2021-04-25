@@ -77,11 +77,6 @@
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BEARKNIGHT_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Bear Knights[COLOR_REVERT] are slower but stronger version of normal Knight. This mounted unit is using [COLOR_HIGHLIGHT_TEXT]Bears[COLOR_REVERT] instead of [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and has national limit (15).</English>
-		<Russian>[COLOR_UNIT_TEXT]Ðûöàðü íà ìåäâåäå[COLOR_REVERT] ñåðüåçíî ????</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARRIDER</Tag>
 		<English>Bear Rider</English>
 		<French>
@@ -97,10 +92,5 @@
 		<Tag>TXT_KEY_UNIT_BEARRIDER_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_BEARRIDER_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Bear Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Bears[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and is slower than the rest of the Riders.</English>
-		<Russian>[COLOR_UNIT_TEXT]Íàåçäíèê íà ìåäâåäå[COLOR_REVERT] ñåðüåçíî ????</Russian>
 	</TEXT>
 </Civ4GameText>

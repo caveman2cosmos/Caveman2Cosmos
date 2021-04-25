@@ -416,14 +416,6 @@
 		<Russian>Øàì. æðåö</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SHAMAN_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Shamanism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your culture if you have the [COLOR_BUILDING_TEXT]Spirits Answer[COLOR_REVERT].</English>
-		<German>Verbreitet den Schamanismus. Haben Sie den Felsen der Visionen, erhöhen sich dadurch Ihre Einnahmen.</German>
-		<Italian>Usa questo missionario per diffondere velocemente lo [COLOR_HIGHLIGHT_TEXT]Sciamanismo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]). Questo incrementerà i tuoi introiti se controlli la [COLOR_BUILDING_TEXT]Pietra delle visioni[COLOR_REVERT].</Italian>
-		<Spanish>Construye un [COLOR_BUILDING_TEXT]Templo del chamán[COLOR_REVERT] para permitir el entrenamiento de [COLOR_UNIT_TEXT]Chamanes[COLOR_REVERT]. También sirve para aumentar la producción de oro tus ciudades.</Spanish>
-		<Russian>[TAB]Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ [COLOR_HIGHLIGHT_TEXT]Øàìàíèçìà[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]). Ýòî ïîâûøàåò ïðèðîñò êóëüòóðû â ãîðîäàõ, åñëè ó âàñ èìååòñÿ ïîñòðîéêà [COLOR_BUILDING_TEXT]Ðàçãîâîð ñ äóõàìè[COLOR_REVERT].</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAMAN_PEDIA</Tag>
 		<English>[BOLD]Shaman[\BOLD] perform a plethora of functions depending upon the society wherein they practise their art: healing; leading a sacrifice; preserving the tradition by storytelling and songs; fortune-telling; acting as a psychopomp (literal meaning, “guide of souls”). In some cultures, a shaman may fulfill several functions in one person.[NEWLINE][PARAGRAPH:1][BOLD]Shaman[\BOLD] act as "mediators" in their culture. The shaman is seen as communicating with the spirits on behalf of the community, including the spirits of the dead. In some cultures, this mediator function of the shaman may be illustrated well by some of the shaman's objects and symbols.</English>
 		<Polish>Szaman - osoba pełniąca funkcję religijną, polegającą na sformalizowanej i instytucjonalnej więzi ekstatycznej z istotami nadludzkimi, duchami przodków lub demonami.</Polish>

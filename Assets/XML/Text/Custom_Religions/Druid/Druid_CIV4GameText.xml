@@ -460,11 +460,4 @@
 		<Polish>Druidzi sprawowali ważne funkcje społeczne, byli odpowiedzialni za sprawy wiedzy i nauczania. Młodzież nauczano o nieśmiertelności duszy, reinkarnacji, co przekazywano w formie poetyckiej do nauczenia się na pamięć - studia trwały nawet (jak twierdzi Cezar) do 20 lat, gdyż wiedza była przekazywana tylko drogą ustną. Mieli dużą wiedzę o gwiazdach i ich ruchach, o przyrodzie, mocach i nieśmiertelnych bogach. Innym ważnym zadaniem druidów było strzeżenie tradycji i wpajanie cnót moralnych.</Polish>
 		<Russian>[TAB]Äðóèäû (ãàëëüñêîå druidae, äðåâíåèðëàíäñêîå drui, ìí.÷. druid) - æðåöû ó äðåâíèõ êåëüòñêèõ íàðîäîâ, îðãàíèçîâàííûå â âèäå çàìêíóòîãî, íî íå íàñëåäñòâåííîãî ñîñëîâèÿ, òàêæå âûïîëíÿëè ôóíêöèè ñóäåé, çàíèìàëèñü âðà÷åâàíèåì è àñòðîíîìèåé.</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_DRUID_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread the [COLOR_HIGHLIGHT_TEXT]Druidic Traditions[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Nature Answer[COLOR_REVERT].</English>
-		<German>Verbreitet das Druidentum. Haben Sie das Becken des Gleichgewichts, erhöhen sich dadurch Ihre Einnahmen.</German>
-		<Italian>Usa questo missionario per diffondere attivamente le [COLOR_HIGHLIGHT_TEXT]Traduzioni druidiche[COLOR_REVERT] nelle città alleate, o nelle città straniere nelle quali hai un [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
-		<Russian>[TAB]Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ [COLOR_HIGHLIGHT_TEXT]Òðàäèöèè äðóèäèçìà[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]). Ýòî óâåëè÷èâàåò âàø äîõîä åñëè ó âàñ èìååòñÿ [COLOR_BUILDING_TEXT]Ðàçãîâîð ñ ïðèðîäîé[COLOR_REVERT].</Russian>
-	</TEXT>
 </Civ4GameText>

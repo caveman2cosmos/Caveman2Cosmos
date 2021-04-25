@@ -4,8 +4,4 @@
 		<Tag>TXT_KEY_UNIT_TRIPOD</Tag>
 		<English>Martian Tripod</English>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRIPOD_STRATEGY</Tag>
-		<English>These units invade Earth if the War of the Worlds event happens.</English>
-	</TEXT>
 </Civ4GameText>

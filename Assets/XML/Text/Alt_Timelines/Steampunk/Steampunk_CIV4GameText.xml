@@ -259,11 +259,6 @@
 		<Russian>[TAB]Ïàðÿùèé ðàçðóøèòåëü - ýòî âîçäóøíûé þíèò àëüòåðíàòèâíîé âðåìåííîé ëèíèè ñòèìïàíêà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CLOUD_DESTROYER_STRATEGY</Tag>
-		<English>The Cloud Destroyer is an alt-timeline Steampunk unit. It was a big zeppelin.</English>
-		<Russian>Ïàðÿùèé ðàçðóøèòåëü - ýòî âîçäóøíûé þíèò àëüòåðíàòèâíîé âðåìåííîé ëèíèè ñòèìïàíêà. Îí ïðåäñòàâëÿåò ñîáîé áîëüøîé äèðèæàáëü.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAUTILUS</Tag>
 		<English>Nautilus</English>
 		<Russian>Íàóòèëóñ</Russian>
@@ -274,12 +269,6 @@
 		<Italian>Sottomarino in stile Steampunk. Richiede la costruzione dell'Accademia Navale di Nemo.</Italian>
 		<Polish>Nautilus - fikcyjny okręt podwodny, występujący w powieściach Juliusza Verne'a Dwadzieścia tysięcy mil podmorskiej żeglugi oraz Tajemnicza wyspa, a także wielu filmach i grach komputerowych. Dowodzony był przez hinduskiego księcia, Dakkara, nazywającego się kapitanem Nemo, który zbudował statek jako narzędzie zemsty na Anglikach i ucieczki od cywilizacji. Nautilus napędzany był energią elektryczną, koszt jego budowy i wyposażenia wyniósł 5 milionów franków. Został zbudowany najwcześniej w 1859, a zatonął w 1868.</Polish>
 		<Russian>[TAB]Íàóòèëóñ ? âûìûøëåííûé ïîäâîäíûé êîðàáëü êàïèòàíà Íåìî èç ôàíòàñòè÷åñêèõ ïðîèçâåäåíèé Æþëÿ Âåðíà «Äâàäöàòü òûñÿ÷ ëüå ïîä âîäîé» è «Òàèíñòâåííûé îñòðîâ».[PARAGRAPH:2]Âïåðâûå ïîÿâèâøèñü â «Äâàäöàòü òûñÿ÷ ëüå ïîä âîäîé» (1869), îí âåðíî ñëóæèò ñâîåìó êàïèòàíó, ïîêàçûâàÿ íåïðèõîòëèâîñòü è íàäåæíîñòü, à òàêæå íåâåðîÿòíûå êàê äëÿ âðåìåíè ïîñòðîéêè, òàê è, ÷àñòè÷íî, äëÿ íàñòîÿùåãî âðåìåíè, òåõíè÷åñêèå õàðàêòåðèñòèêè. Òàê, çà ñåìü ìåñÿöåâ îí ïîêðûë ðàññòîÿíèå â 20 000 ëüå (îêîëî 90 000 êì), ÷òî áîëåå ÷åì âäâîå áîëüøå äëèíû ýêâàòîðà, îïóñòèëñÿ íà äíî îêåàíà, à çàòåì ñóìåë âûáðàòüñÿ èç ñèëüíîãî âîäîâîðîòà. Îí áûë îðóäèåì âîçìåçäèÿ è â òî æå âðåìÿ èññëåäîâàòåëüñêîé ëàáîðàòîðèåé, ïîòîïèë íåñêîëüêî êîðàáëåé è ïîìîã íàéòè Àòëàíòèäó. Íàóòèëóñ ñòàë âîïëîùåíèåì òåõíè÷åñêîãî ïðîãðåññà, à åãî èìÿ ñòàëî ñàìûì ïîïóëÿðíûì ñðåäè ñóáìàðèí.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_NAUTILUS_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Nautilus[COLOR_REVERT] is a Steampunk Submarine. Coming at an earlier tech than the normal subs, it can give you a crippling advantage in naval warfare.</English>
-		<Italian>Il [COLOR_UNIT_TEXT]Nautilo[COLOR_REVERT] è un sottomarino in stile Steampunk. Poiché è disponibile molto prima dei normali sottomarini, può darti un grande vantaggio nella guerra navale.</Italian>
-		<Russian>Íàóòèëóñ - ýòî ïîäâîäíàÿ ëîäêà ñòèìïàíêà. Ïîÿâèâøèñü ðàíüøå äðóãèõ ñóáìàðèí, îí ìîæåò äàòü âàì çíà÷èòåëüíîå ïðåèìóùåñòâî â ìîðñêîì áîþ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEAMPUNK_WORKER</Tag>
@@ -293,11 +282,6 @@
 		<English>In the bowels of some hellish Victorian workhouse, a distinctly above-average mad scientist has discovered how to animate a humanoid minion using steam, to do his bidding (without the usual groans and snide comments). He was (alas for him!) unable to keep his creation a secret for long... but his loss is your gain!</English>
 		<Polish>Prymitywny android napędzany silnikiem parowym.</Polish>
 		<Russian>[TAB]Â íåäðàõ ìðà÷íîé âèêòîðèàíñêé ìàñòåðñêîé, àáñîëþòíî áåçóìíûé ó÷åíûé ðàñêðûë ñåêðåò ñîçäàíèÿ ÷åëîâåêîïîäîáíîãî ðîáîòà äâèæèìîãî ïàðîì, äëÿ èñïîëíåíèÿ åãî ïðèêàçîâ (áåç æàëîá è åõèäíûõ çàìå÷àíèé). Íî îí, ê åãî ñîæàëåíèþ, áûë íå â ñèëàõ ñîõðàíèòü ñåêðåò ñâîåãî òâîðåíèÿ... Åãî ïîòåðÿ - íàøå ïðèîáðåòåíèå!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_STEAMPUNK_WORKER_STRATEGY</Tag>
-		<English>A steam robot worker, product of the Steampunk alt-timeline culture. Fast-moving for a worker, fast working too, somewhat cheaper to build, and it doesn't stop you growing to build one. You will not think of commissioning even Modern Workers until you have exhausted your quota of these!</English>
-		<Russian>Ïàðîâîé ðîáîò - ýòî ðàáîòíèê àëüòåðíàòèâíîé âðåìåííîé ëèíèè ñòèìïàíêà. Äâèæåòñÿ îí áûñòðåå ðàáîòíèêà, ñîçäàåò óëó÷øåíèÿ òîæå, íåìíîãî äåøåâëå â ïîñòðîéêå, íè÷òî íå ìåøàåò âàì ñîçäàòü îäíîãî. Âû íå çàäóìàåòåñü íàä ïîñòðîéêîé ñîâðåìåííûõ ðàáî÷èõ, ïîêà íå èñ÷åðïàåòå ëèìèò ïàðîâûõ ðîáîòîâ!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEAM_TANK</Tag>
@@ -315,12 +299,6 @@
 		<Russian>[TAB]Ïàðîâîé òàíê - ýòî ìîíñòðîèäàëüíîå, èçðûãàþùåå äûì è ïàð òâîðåíèå, êîòîðîå íåóäåðæèìî åäåò âïåðåä, îáñòðåëèâàÿ âðàãà èç ñâîèõ ïàðîâûõ ïóøåê. Àòàêà ýòîé ìàøèíû óæàñíà ñàìà ïî ñåáå, êîãäà ñòðåëû îòñêàêèâàþò îò åãî áðîíèðîâàííûõ áîêîâ è âîèíû ãèáíóò äåñÿòêàìè ïîä åãî êîëåñàìè. Ïàðîâûå òàíêè ïðèâîäÿòñÿ â äâèæåíèå äàâëåíèåì ïàðà â êîòëàõ è ñëîæíîé ñèñòåìîé âåíòèëåé è êëàïàíîâ.[PARAGRAPH:1]Ëó÷øèé ñïîñîá íåéòðàëèçàöèè èëè óíè÷òîæåíèÿ ïàðîâîãî òàíêà - ýòî ïóøå÷íûé îãîíü, õîòÿ èçâåñòíû ñëó÷àè, êîãäà ïàðîâûå òàíêè ïåðåæèâàëè è òàêèå ïîâðåæäåíèÿ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_STEAM_TANK_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Steam Tank[COLOR_REVERT] is a tank powered by steam and steampunk technology. It destroys cavalry in combat and can attack from water effectively.</English>
-		<Italian>Il [COLOR_UNIT_TEXT]carro armato a vapore[COLOR_REVERT] è un carro con propulsione a vapore. In combattimento è devastante contro la cavalleria, ed è efficace anche negli attacchi anfibi.</Italian>
-		<Russian>Ïàðîâîé òàíê - ýòî òàíê, ñîçäàííûé ïðè ïîìîùè ïàðîâûõ òåõíîëîãèé ñòèìïàíêà. Îí ñìåðòåëåí äëÿ êîííèöû íà ñóøå è ìîæåò ýôôåêòèâíî àòàêîâàòü ñ ìîðÿ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_WHEEL</Tag>
 		<English>War Wheel</English>
 		<French>Roue de Guerre</French>
@@ -333,11 +311,5 @@
 		<English>A monowheel is a one-wheeled single-track vehicle similar to a unicycle. However, instead of sitting above the wheel, the rider sits either within it or next to it. The wheel is a ring, usually driven by smaller wheels pressing against its inner rim. Most are single-passenger vehicles, though multi-passenger models have been built. Hand-cranked and pedal-powered monowheels were built in the late 19th century; most built in the 20th century have been motorized. Some modern builders refer to these vehicles as monocycles, though that term is also sometimes used to describe motorized unicycles.</English>
 		<Polish>Jednokołowiec, monocykl - jednośladowy pojazd samochodowy, posiadający jedno koło jezdne. Najczęściej spotykaną wersją monocykla jest pojazd, w którym kierowca siedzi w fotelu wbudowanym w obręcz dużego koła jezdnego. Pomysł na tego typu rozwiązanie techniczne powstał w XIX wieku i jest do tej pory stosowany przez większość konstruktorów i firm produkujących jednokołowce z silnikiem spalinowym.</Polish>
 		<Russian>[TAB]Áîåâîå êîëåñî - ýòî îäíîêîëåñíàÿ ìàøèíà, ïîõîæàÿ íà îäíîêîëåñíûé âåëîñèïåä. Îäíàêî, âìåñòî òîãî, ÷òîáû ñèäåòü íàä êîëåñîì, âîäèòåëü ñèäèò ëèáî â íåì, ëèáî ðÿäîì ñ íèì. Áîëüøèíñòâî èç íèõ îäíîìåñòíûå, õîòÿ ïàññàæèðñêèå ìîäåëè òàêæå áûëè ïîñòðîåíû. Ðó÷íîãî èëè ïåäàëüíîãî ïðèâîäà êîëåñà áûëè ïîñòðîåíû â êîíöå 19 âåêà, áîëüøèíñòâî ïîñòðîåííûõ â 20-ì âåêå - ìîòîðèçîâàííûå.[PARAGRAPH:1]Íåêîòîðûå ñîâðåìåííûå êîíñòðóêòîðû íàçûâàþò ýòè òðàíñïîðòíûå ñðåäñòâà "ìîíîöèêëàìè", õîòÿ ýòîò òåðìèí òàêæå èíîãäà èñïîëüçóåòñÿ, ÷òîáû îïèñàòü ìîòîðèçîâàííûå âåëîñèïåäû.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_WAR_WHEEL_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]War Wheel[COLOR_REVERT] is a Steampunk contraption. It can not attack, but is cheaper to build than a Steam Tank and starts with the Sentry, Guerrila, and Woodsman promotions.</English>
-		<Italian>La [COLOR_UNIT_TEXT]ruota da guerra[COLOR_REVERT] è un'unità in stile Steampunk. Non può attaccare, ma è più economica di un carro a vapore e riceve gratis le promozioni Sentinella I, Guerriglia I e Taglialegna I.</Italian>
-		<Russian>Áîåâîå êîëåñî - ýòî ïðîäóêò òåõíîëîãèé ñòèìïàíêà. Îí íå ìîæåò àòàêîâàòü, íî åãî äåøåâëå ñòðîèòü ÷åì ïàðîâîé òàíê è ó íåãî åñòü ñïîñîáíîñòè ÷àñîâîãî, åãåðÿ è ïàðòèçàíñêîé âîéíû.</Russian>
 	</TEXT>
 </Civ4GameText>

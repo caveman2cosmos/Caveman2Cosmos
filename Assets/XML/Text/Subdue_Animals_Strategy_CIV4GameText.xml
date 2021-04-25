@@ -282,22 +282,4 @@
 		<Tag>TXT_KEY_BUILDING_ZEBRA_HERD_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HUNTER_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Hunter units[COLOR_REVERT] specialise in capturing animal units. They are not as good as [COLOR_UNIT_TEXT]recon units[COLOR_REVERT] when it comes to scouting.</English>
-		<French>Les [COLOR_UNIT_TEXT]unités de chasse[COLOR_REVERT] sont spécialisées dans la capture des unités animales. Elle peuvent éventuellement faire de l'exploration, même si elle n'obtiennent pas autant d'avantages que les [COLOR_UNIT_TEXT]unités de reconnaissance units[COLOR_REVERT].</French>
-		<Italian>Le unità di [COLOR_UNIT_TEXT]Cacciatori[COLOR_REVERT] sono specializzate nella cattura di animali. Non sono efficaci come le [COLOR_UNIT_TEXT]Unità da ricognizione[COLOR_REVERT] quando devono esplorare un territorio.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SEA_ANIMAL_STRATEGY</Tag>
-		<English>All units have a small chance of subduing any animal unit. Sometimes instead of subduing an animal it will become a resource. Subdued animals can be used to build special buildings or traded for food, money or hammers.</English>
-		<French>Toutes les unités ont une petite probabilité d'apprivoiser une unité animale. De temps en temps, celle-ci peut devenir une ressource. Les animaux soumis peuvent être utilisés pour construire des bâtiments spéciaux ou échangés contre de la nourriture, de l'argent ou de la production.</French>
-		<Italian>Tutte le unità hanno una piccola chance di addomesticare un animale. A volte gli animali non vengono addomesticati, bensì diventano risorse sulla mappa. Gli animali addomesticati possono essere usati per costruire edifici speciali, possono essere migliorati in unità da combattimento e possono perfino essere venduti in cambio di cibo, oro o produzione.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TALESOF_SEA_ANIMAL_STRATEGY</Tag>
-		<English>These stories can be used to build Myth buildings</English>
-		<French>Ces Histoires peuvent être utilisées pour la construction des bâtiments de Mythes.</French>
-		<Italian>Queste storie possono essere usate per costruire i miti.</Italian>
-	</TEXT>
 </Civ4GameText>

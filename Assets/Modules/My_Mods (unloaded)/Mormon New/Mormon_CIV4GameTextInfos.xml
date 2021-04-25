@@ -209,11 +209,6 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MORMON_MISSIONARY_STRATEGY</Tag>
-		<English>Mormon Missionaries are unique among C2C missionaries because, as in the real world, they do not have to remain missionaries forever. They can be upgraded to RMs, a low-strength melee law enforcement unit (think of them as the do-gooders who jump into a fight with their bare hands if they see the need). They have a small crime-reducing effect. These units retain their missionary ability, though far weaker than they were with the authority of their mission call. They have the unique Mormon promotions for free, and can carry these into either of their two upgrade paths: as law enforcement, or gunpowder units.</English>
-		<Spanish>Un misionario de los Mormones quien ha vuelto de su misión a la vida regular es llamada "Misionero Regressado" (o "MR") en la cultura Mormona. Usualmente los MRs tienen deseos a empezar una familia y ir al colegio o buscar empleamiento pronto. A menudo ellos sierven en el gobierno, el militario, o la policia, por razon de su dedicacion al mantener la orden civica y ayudar a otros.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_RETURNED_MISSIONARY</Tag>
 		<English>Mormon Returned Missionary</English>
 		<Spanish>

@@ -195,19 +195,9 @@
 		<Russian>Ìèííîå ïîëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LAND_MINE_FIELD_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Land Mine Field[COLOR_REVERT] is invisible to all units and has a hidden nationality. The land mine field is lethal and will attack all ships on a plot. It has a high percentage randum chance of destroying any and all units that move into the plot and will remain persistant, requiring a Mine Sweeper to remove it. Once armed, the land mine field cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
-		<Russian>[COLOR_UNIT_TEXT]Минное поле[COLOR_REVERT] невидимо для всех отрядов и имеет скрытую национальность. Минное поле смертоносно и будет атаковать и полностью уничтожить только один отряд на клетке при детонации. Оно с высокой долей вероятности уничтожает все без исключения отряды, которые перемещаются на минированный участок, и не может быть удалено, кроме как сапером. После установки в режим ожидания наземная мина может быть удалена исключительно саперами или противоминными машинами.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_PEDIA</Tag>
 		<English>The Land Mine is a self-contained explosive device placed on land to destroy ground troops or vehicles. Mines must be armed to explode after reaching their destination, where they are left to wait until they are triggered by contact with an enemy unit. The exception is the nuclear land mine, which remains dormant until detonated by the owner. Naval mines can be used offensively, to hamper enemy units or lock them into a peninsula; or defensively, to protect friendly units and create "safe" zones.</English>
 		<Russian>Наземная мина представляет собой автономное взрывное устройство, размещаемое на земле для поражения наземных войск или транспортных средств. Мины должны быть взведены, чтобы сработать при контакте с вражеским отрядом. Исключением является ядерная мина, которая остается бездействующей до тех пор, пока ей не будет дана команда к детонации. Морские мины могут быть использованы в наступательных целях, чтобы препятствовать движению вражеским соединениям или запирать их в узких фарватерах; или в обороне, чтобы защитить дружественные отряды и создать «безопасные» зоны.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LAND_MINE_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Land Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality. The land mine is lethal and will attack and totally destroy only one unit on a plot, when it explodes. Once armed, the land mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
-		<Russian>[COLOR_UNIT_TEXT]Наземная мина[COLOR_REVERT] невидима для всех отрядов и имеет скрытую национальность. Наземная мина смертоносна и будет атаковать и полностью уничтожить только один отряд на клетке при детонации. После установки в режим ожидания наземная мина может быть удалена исключительно саперами или противоминными машинами.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_SWEEPER</Tag>
@@ -221,12 +211,6 @@
 		<Russian>Сапер - это особый отряд, необходимый для противодействия угрозе, создаваемой наземными минами. Саперные роты сначала обнаруживают, а затем обезвреживают мины, как правило, перед другими наземными операциями.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LAND_MINE_SWEEPER_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Land Mine Sweeper[COLOR_REVERT] can be used to detect and remove enemy land mines. Use them to protect your Army units from destruction and to open up trade routes.</English>
-		<French>The [COLOR_UNIT_TEXT]Terrestre Mine Sweeper[COLOR_REVERT] can be used to detect and remove enemy land mines. Use them to protect your Army units from destruction and to open up trade routes.</French>
-		<Russian>[COLOR_UNIT_TEXT]Сапер[COLOR_REVERT] может использоваться для обнаружения и удаления наземных мин противника. Используйте их, чтобы защитить свои армейские подразделения от подрыва и разблокировать торговые пути.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE</Tag>
 		<English>Naval Mine</English>
 		<Russian>Ìîðñêàÿ ìèíà</Russian>
@@ -237,19 +221,9 @@
 		<Russian>Ìîðñêîå ìèííîå ïîëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NAVAL_MINE_FIELD_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Naval Mine Field[COLOR_REVERT] is invisible to all units and has a hidden nationality. The Mine Field is lethal and will attack all ships on a plot. It has a high percentage randum chance of destroying any and all ships that move into the plot and will remain persistant, requiring a Mine Sweeper to remove it. Once armed, the naval mine field cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
-		<Russian>[COLOR_UNIT_TEXT]Морское минное поле[COLOR_REVERT] невидимо для всех отрядов и имеет скрытую национальность. Минное поле является смертоносным и будет атаковать все корабли на участке. Оно с высокой долей вероятности уничтожит все корабли, которые войдут на участок и не может быть удалено, кроме как минным тральщиком.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_PEDIA</Tag>
 		<English>Naval mines are self-contained explosive devices placed in water to destroy ships or submarines. Mines must be armed to explode after reaching their destination, where they are left to wait until they are triggered by contact with an enemy ship. The exception is the nuclear naval mine, which remains dormant until detonated by the owner. Naval mines can be used offensively, to hamper enemy ships or lock them into a harbor; or defensively, to protect friendly ships and create "safe" zones.</English>
 		<Russian>Морские мины представляют собой автономные взрывные устройства, помещенные в воду для уничтожения кораблей или подводных лодок. Мины должны быть взведены в боевой режим, чтобы сдетонировать при контакте с вражеским кораблем. Исключение составляет ядерная морская мина, которая остается бездействующей до тех пор, пока владелец не подаст команду к детонации. Морские мины могут быть использованы в наступательных целях, чтобы препятствовать прохождению вражеских кораблей или запирать их в гавани; либо в обороне, чтобы защитить дружественные корабли и создать «безопасные» зоны.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_NAVAL_MINE_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Naval Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality. The mine is lethal and will attack and totally destroy only one ship on a plot, when it explodes. Once armed, the naval mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
-		<Russian>[COLOR_UNIT_TEXT]Морская мина[COLOR_REVERT] невидима для всех отрядов и имеет скрытую национальность. Мина смертоносна и будет атаковать и полностью уничтожить только один корабль противника на одной с ним клетке. После постановки в режим ожидания морская мина не может удалена, кроме как минным тральщиком.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER</Tag>
@@ -262,11 +236,6 @@
 		<Russian>Минный тральщик - это небольшой военный корабль, предназначенный для противодействия угрозе, создаваемой морскими минами. Как правило тральщики обнаруживают, а затем обезвреживают мины перед другими военно-морскими операциями.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Naval Mine Sweeper[COLOR_REVERT] can be used to detect and remove enemy naval mines. Use them to protect your Navy ships from destruction and to open up maritime trade routes.</English>
-		<Russian>[COLOR_UNIT_TEXT]Минный тральщик[COLOR_REVERT] может быть использован для обнаружения и удаления вражеских морских мин. Используйте их, чтобы защитить ваши военные корабли от подрыва и разблокировать морские торговые пути.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_LAND_MINE</Tag>
 		<English>Nuclear Land Mine</English>
 		<Russian>ßäåðíîå ìèííîå ïîëå</Russian>
@@ -277,11 +246,6 @@
 		<Russian>[ICON_BULLET]Безопасна до установки.[NEWLINE][COLOR_WARNING_TEXT]Требуется: Центр технологии взрыва[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NUCLEAR_LAND_MINE_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Nuclear Land Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality. The nuclear land mine can set off a nuclear explosion that is triggered by the owner. The detonation will destroy every unit on the plot. Once armed, the nuclear land mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
-		<Russian>[COLOR_UNIT_TEXT]Ядерное минное поле[COLOR_REVERT] невидимо для всех отрядов и имеет скрытую национальность. Оно при детонации может вызвать ядерный взрыв по команде владельца. Детонация уничтожит все без исключения отряды на участке. После постановки в режим ожидания ядерная мина не может быть удалена, кроме как саперными подразделениями.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE</Tag>
 		<English>Nuclear Naval Mine</English>
 		<Russian>Ìîðñêàÿ ÿäåðíàÿ ìèíà</Russian>
@@ -290,11 +254,6 @@
 		<Tag>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE_HELP</Tag>
 		<English>[ICON_BULLET]Harmless Until Armed.[NEWLINE][COLOR_WARNING_TEXT]Requires Harbor[COLOR_REVERT][NEWLINE][COLOR_WARNING_TEXT]Requires Advanced Mine Technology Center Wonder [COLOR_REVERT]</English>
 		<Russian>[ICON_BULLET]Безопасна до установки.[NEWLINE][COLOR_WARNING_TEXT]Требуется: Гавань[COLOR_REVERT][NEWLINE][COLOR_WARNING_TEXT]Требуется: Центр технологии взрыва[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Nuclear Naval Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality. The nuclear naval mine can set off a nuclear explosion that is triggered by the owner. The detonation will destroy every ship on the plot. Once armed, the nuclear naval mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
-		<Russian>[COLOR_UNIT_TEXT]Ядерная морская мина[COLOR_REVERT] невидима для всех отрядов и имеет скрытую национальность. Она при детонации вызывает ядерный взрыв по команде владельца. Взрыв уничтожит любой корабль на одном с ней участке. Будучи поставленной в боевой режим, ядерная морская мина не может быть удалена, кроме как минным тральщиком.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DETONATE_NUCLEAR_MINE</Tag>

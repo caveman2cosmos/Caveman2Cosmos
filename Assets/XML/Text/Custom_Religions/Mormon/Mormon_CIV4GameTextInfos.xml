@@ -100,9 +100,4 @@
 		<Polish>Starszy Mormonów</Polish>
 		<Russian>Морм. миссионер</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MORMON_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Mormon religion[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your culture if you have the [COLOR_BUILDING_TEXT]Mormon Shrine[COLOR_REVERT].</English>
-		<Russian>[TAB]Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ ó÷åíèÿ [COLOR_HIGHLIGHT_TEXT]Ìîðìîíîâ[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]). Òàêæå ñóùåñòâåííî óâåëè÷èâàåòñÿ êóëüòóðíûé ðîñò, åñëè ó âàñ èìååòñÿ [COLOR_BUILDING_TEXT]Ìîðìîíñêîå ñâÿòèëèùå[COLOR_REVERT].</Russian>
-	</TEXT>
 </Civ4GameText>

@@ -107,11 +107,4 @@
 		<Polish>Żerca</Polish>
 		<Russian>Çèðêà</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_RODNOVERY_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Rodnovery[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Arkona.[COLOR_REVERT]</English>
-		<French>Utilisez le Missionnaire pour propager la [COLOR_HIGHLIGHT_TEXT]Rodnoverie[COLOR_REVERT] dans les villes alliées (ou les villes rivales avec lesquelles vous avez un accord de [COLOR_HIGHLIGHT_TEXT]Libre passage[COLOR_REVERT]). Cela augmente vos revenus si vous avez construit l'[COLOR_BUILDING_TEXT]Arkona[COLOR_REVERT].</French>
-		<Italian>Usa questo missionario per diffondere velocemente l'[COLOR_HIGHLIGHT_TEXT]Rodnovery[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Arkona[COLOR_REVERT]).</Italian>
-		<Russian>Èñïîëüçóéòå ìèññèîíåðîâ äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ [COLOR_HIGHLIGHT_TEXT]Ðîäíîâåðèÿ[COLOR_REVERT] â äðóæåñòâåííûå ãîðîäà (èëè ãîðîäà ñîïåðíèêà åñëè îí èìååò [COLOR_HIGHLIGHT_TEXT]Îòêðûòûå Ãðàíèöû[COLOR_REVERT]). Ýòî óâåëè÷èò âàø äîõîä, åñëè ó âàñ åñòü [COLOR_BUILDING_TEXT]Àðêîíà.[COLOR_REVERT]</Russian>
-	</TEXT>
 </Civ4GameText>

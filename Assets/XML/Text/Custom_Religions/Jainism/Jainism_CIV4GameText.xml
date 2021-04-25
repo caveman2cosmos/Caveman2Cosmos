@@ -140,11 +140,4 @@
 		<Polish>Misjonarz Dźinizmu</Polish>
 		<Russian>Äæ. ìèññèîíåð</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_JAINISM_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Jainism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Statue of Gomateshwara[COLOR_REVERT]</English>
-		<French>Utilisez le Missionnaire pour propager le [COLOR_HIGHLIGHT_TEXT]jaïnisme[COLOR_REVERT] dans les villes alliées (ou les villes rivales avec lesquelles vous avez un accord de [COLOR_HIGHLIGHT_TEXT]Libre passage[COLOR_REVERT]). Cela augmente vos revenus si vous avez construit la [COLOR_BUILDING_TEXT]Statue de Gomateshvara[COLOR_REVERT].</French>
-		<Italian>Usa questo missionario per diffondere velocemente l'[COLOR_HIGHLIGHT_TEXT]Jainismo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
-		<Russian>Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ [COLOR_HIGHLIGHT_TEXT]Äæàéíèçìà[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]). Òàêæå óâåëè÷èâàþòñÿ âàøè äîõîäû, åñëè ó âàñ èìååòñÿ [COLOR_BUILDING_TEXT]Ñòàòóÿ Áàõóáàëè[COLOR_REVERT].</Russian>
-	</TEXT>
 </Civ4GameText>

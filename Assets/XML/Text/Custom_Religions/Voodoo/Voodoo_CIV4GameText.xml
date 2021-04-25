@@ -185,12 +185,6 @@
 		<Russian>[TAB]ßðîñòíûå áåñòèè, ïðèõîäÿùèå íåïîñðåäñòâåííî èç ãëóáèí àäà. Ïî êðàéíåé ìåðå, ïî ñëîâàì ñêåïòèêîâ, èõ õîçÿåâà õîòåëè áû çàñòàâèòü âàñ ïîâåðèòü â ðåàëüíîñòü ïîäîáíûõ ìîíñòðîâ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HELLSMOUTH_DOG_STRATEGY</Tag>
-		<English>This dog is much more effective in combat than other canine units.</English>
-		<Italian>Questo cane è molto più efficace in combattimento rispetto alle altre unità canine.</Italian>
-		<Russian>[TAB]Ýòîò äåìîíè÷åñêèé ïåñ ãîðàçäî ýôôåêòèâíåå â áîþ, ÷åì äðóãèå ïîäîáíûå åìó îòðÿäû, ñîñòîÿùèå èç äðåññèðîâàííûõ ñîáàê.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_UNDEAD_WORKER</Tag>
 		<English>Entranced Worker</English>
 		<French>Ouvrier en trance</French>
@@ -201,11 +195,6 @@
 		</Italian>
 		<Polish>Robotnik-Zombie</Polish>
 		<Russian>Çîìáè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNDEAD_WORKER_STRATEGY</Tag>
-		<English>Use [COLOR_UNIT_TEXT]Workers[COLOR_REVERT] to improve the land around your cities and build roads that help establish trade routes. This particular worker is cheap version of normal worker and can be build only by civilizations with Voodoo state religion.</English>
-		<Russian>Èñïîëüçóéòå [COLOR_UNIT_TEXT]ðàáî÷èõ[COLOR_REVERT] äëÿ óëó÷øåíèÿ çåìåëü âîêðóã ãîðîäà è ïðîêëàäûâàéòå äîðîãè, ïîìîãàÿ íàëàæèâàòü òîðãîâûå ïóòè. Äàííûé êîíêðåòíûé ðàáîòíèê ÿâëÿåòñÿ äåøåâîé âåðñèåé îáû÷íîãî ðàáîòíèêà è åãî ìîæíî ñòðîèòü òîëüêî åñëè Âóäó ÿâëÿåòñÿ ãîñóäàðñòâåííîé ðåëèãèåé.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VOODOO_MISSIONARY</Tag>
@@ -222,11 +211,5 @@
 		<English>Houngan is the term for a male priest in Haitian Vodou (a female priest is known as a mambo). The term is derived from the Fon word "hùn gan". There are two ranks of houngan: houngan asogwe (high priest) and houngan sur pwen (junior priest). A houngan asogwe is the highest member of clergy in voodoo and the only one with authority to ordain other priests. It is the houngan's role to preserve the rituals and songs and maintain the relationship between the spirits and the community as a whole (though some of this is the responsibility of the whole community as well). They are entrusted with leading the service of all of the spirits of their lineage. Sometimes they may also be bokor (sorcerers).</English>
 		<Polish>Houngan to wielki kapłan w religii voodoo na Haiti (jego żeńskim odpowiednikiem jest mambo). Hounganie są kapłanami najwyższej rangi, prowadzą rytuały wywoływania duchów (loa) lub duchów własnych zmarłych przodków. Ich obowiązkiem jest podtrzymywanie stałej więzi między zmarłymi i żyjącymi wyznawcami voodoo. Czuwają nad zachowaniem tradycji i czystości kultu.</Polish>
 		<Russian>Õóíãàí (ñâÿùåííèê) è ìàìáî (æåíùèíà-ñâÿùåííèê) - ñîáñòâåííî æðåöû ãàèòÿíñêîé ðàçíîâèäíîñòè âóäó, äåÿòåëüíîñòü êîòîðûõ îðèåíòèðîâàíà íà ïîëó÷åíèå ïðåäñêàçàíèé îò äóõîâ âî âðåìÿ îäåðæèìîñòè. Îíè ïðèíöèïèàëüíî îòëè÷àþòñÿ îò áîêîðîâ - êîëäóíîâ, ïðîôåññèîíàëüíî çàíèìàþùèõñÿ ìàãè÷åñêîé äåÿòåëüíîñòüþ. Áîêîðû ÷àñòî ïîíèìàþòñÿ êàê ëþäè, ïðàêòèêóþùèå ''÷åðíóþ ìàãèþ'' è íå âñåãäà ïðèçíàþòñÿ õóíãàíàìè è ìàìáî â êà÷åñòâå àäåïòîâ âóäó.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_VOODOO_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Voodoo[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Tomb of Ansyen Bon[COLOR_REVERT].</English>
-		<Italian>Usa questo missionario per diffondere velocemente il [COLOR_HIGHLIGHT_TEXT]Voodoo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
-		<Russian>Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ êóëüòà [COLOR_HIGHLIGHT_TEXT]Âóäó[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]). Òàêæå óâåëè÷èâàþòñÿ âàøè äîõîäû, åñëè ó âàñ èìååòñÿ [COLOR_BUILDING_TEXT]Äðåâíÿÿ ãðîáíèöà[COLOR_REVERT].</Russian>
 	</TEXT>
 </Civ4GameText>

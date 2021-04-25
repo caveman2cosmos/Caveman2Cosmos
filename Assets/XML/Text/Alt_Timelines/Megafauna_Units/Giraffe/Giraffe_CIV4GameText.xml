@@ -80,10 +80,6 @@
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GIRAFFE_ARCHER_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Giraffe Archer[COLOR_REVERT] is similar to [COLOR_UNIT_TEXT]Horse Archer[COLOR_REVERT] but better against archers, with a bonus to hills and city defense and savanna terrain combat.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CARABINIER</Tag>
 		<English>Giraffe Carabinier</English>
 		<Russian>Êàðàáèíåð íà æèðàôå</Russian>

@@ -116,13 +116,6 @@
 		<Polish>Tylko Wielcy Łowcy mogą zostać Wybitnymi Łowcami. Wybitni Łowcy są specjalna wersją normalnych myśliwych. Są bardziej sprawni w łapaniu zwierząt żywcem.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MASTER_HUNTER_STRATEGY</Tag>
-		<English>Master Hunters are better hunters.</English>
-		<French>Les Maîtres-Chasseurs obtiennent ce titre car ils font partie des meilleurs.</French>
-		<German>Meisterjäger sind bessere Jäger.</German>
-		<Polish>Wybitni Łowcy są lepiej wyszkolonymi rodzajami łowców.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_RANGER</Tag>
 		<English>Master Ranger</English>
 		<French>Maître Ranger</French>
