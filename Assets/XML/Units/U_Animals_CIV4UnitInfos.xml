@@ -168,6 +168,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -4977,6 +4979,8 @@
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
@@ -6303,12 +6307,12 @@
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
@@ -8466,6 +8470,7 @@
 			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bAssassin>1</bAssassin>
+			<bRenderBelowWater>1</bRenderBelowWater>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_SIZE_SMALL</UnitCombatTargetType>
@@ -12028,6 +12033,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -12100,6 +12107,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -12172,6 +12181,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -12244,6 +12255,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -13362,6 +13375,7 @@
 			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bOnlyDefensive>1</bOnlyDefensive>
+			<bRenderBelowWater>1</bRenderBelowWater>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>6</iCombat>
@@ -15241,6 +15255,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -15343,6 +15359,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>

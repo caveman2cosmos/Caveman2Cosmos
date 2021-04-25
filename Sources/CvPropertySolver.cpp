@@ -471,7 +471,6 @@ void CvMainPropertySolver::gatherAndSolve()
 
 void CvMainPropertySolver::doTurn()
 {
-	MEMORY_TRACE_FUNCTION();
 	PROFILE_FUNC();
 
 	resetPropertyChanges();

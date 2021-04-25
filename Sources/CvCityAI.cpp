@@ -4682,7 +4682,6 @@ int CvCityAI::AI_buildingValueThresholdOriginal(BuildingTypes eBuilding, int iFo
 int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding, int iFocusFlags, int iThreshold, bool bMaximizeFlaggedValue, bool bIgnoreCanBuildReplacement, bool bForTech)
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK();
 
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	const CvTeamAI& kTeam = GET_TEAM(getTeam());
@@ -8216,13 +8215,13 @@ int CvCityAI::AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovemen
 
 	if (eBonus == NO_BONUS)
 	{
-		for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
-		{
-			if (improvement.getImprovementBonusDiscoverRand(iJ) > 0)
-			{
-				iValue += 10;
-			}
-		}
+		// for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+		// {
+		// 	if (improvement.getImprovementBonusDiscoverRand(iJ) > 0)
+		// 	{
+		// 		iValue += 0;
+		// 	}
+		// }
 	}
 	else if (!GET_TEAM(getTeam()).isBonusObsolete(eBonus))
 	{
@@ -8274,7 +8273,7 @@ int CvCityAI::AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovemen
 	for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 	{
 		yields[iJ] =
-			( pPlot->calculateImprovementYieldChange(eFinalUpgrade, (YieldTypes)iJ, getOwner(), false, true) * 2
+			( pPlot->calculateImprovementYieldChange(eFinalUpgrade, (YieldTypes)iJ, getOwner(), false, true) * 1
 			+ pPlot->calculateImprovementYieldChange(eImprovement, (YieldTypes)iJ, getOwner(), false, true) * 5
 			) / 2;
 	}
@@ -8389,6 +8388,7 @@ void CvCityAI::AI_updateBestBuild()
 	int iHillFoodDeficit = 0;
 	int iFoodTotal = GC.getYieldInfo(YIELD_FOOD).getMinCity();
 	int iProductionTotal = GC.getYieldInfo(YIELD_PRODUCTION).getMinCity();
+	int iCommerceTotal = GC.getYieldInfo(YIELD_COMMERCE).getMinCity();
 	int iWorkerCount = 0;
 	int iWorkableFood = 0;
 	int iWorkableFoodPlotCount = 0;
@@ -8476,13 +8476,13 @@ void CvCityAI::AI_updateBestBuild()
 					}
 				}
 
-				if (aiFinalYields[YIELD_FOOD] >= iFoodPerPop)
+				if (aiFinalYields[YIELD_FOOD] >= iFoodPerPop) // if (plot has equal or more food yield than what 1 population consumes)
 				{
 					iWorkableFood += aiFinalYields[YIELD_FOOD];
 					iWorkableFoodPlotCount++;
 				}
 
-				if (pLoopPlot->isBeingWorked() || 10*aiFinalYields[YIELD_FOOD] + 6*aiFinalYields[YIELD_PRODUCTION] + 4*aiFinalYields[YIELD_COMMERCE] > 21)
+				if (pLoopPlot->isBeingWorked() || (10*aiFinalYields[YIELD_FOOD] + 6*aiFinalYields[YIELD_PRODUCTION] + 4*aiFinalYields[YIELD_COMMERCE] > 21))
 				{
 					iGoodTileCount++;
 					if (pLoopPlot->isBeingWorked())
@@ -8803,7 +8803,7 @@ void CvCityAI::AI_updateBestBuild()
 					{
 						for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 						{
-							aiYields[iJ] = pLoopPlot->getYieldWithBuild(m_aeBestBuild[iI], (YieldTypes)iJ, true);
+							aiYields[iJ] = pLoopPlot->getYieldWithBuild(m_aeBestBuild[iI], (YieldTypes)iJ, false);
 						}
 
 						int iValue = AI_yieldValue(aiYields, NULL, false, false, false, false, true, true);
@@ -10139,7 +10139,6 @@ bool CvCityAI::AI_removeWorstCitizen(SpecialistTypes eIgnoreSpecialist)
 
 void CvCityAI::AI_juggleCitizens()
 {
-	MEMORY_TRACK()
 
 	bool bAvoidGrowth = AI_avoidGrowth();
 	bool bIgnoreGrowth = AI_ignoreGrowth();
@@ -10522,7 +10521,7 @@ int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoi
 
 int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization)
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	const int iBaseProductionValue = 15;
 	const int iBaseCommerceValue[NUM_COMMERCE_TYPES] = {7,10,7,7};	//	Koshling - boost science a bit
@@ -13901,7 +13900,6 @@ public:
 
 	void AccumulateTo(int iFocusIndex, int value, bool isThresholdSet)
 	{
-		MEMORY_TRACK_EXEMPT();
 
 		if ( isThresholdSet )
 		{
@@ -14053,7 +14051,6 @@ public:
 		std::map<int,OneBuildingValueCache*>::const_iterator itr = m_buildingValues.find(eBuilding);
 		if ( itr == m_buildingValues.end() )
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			//	New entry
 			result = new OneBuildingValueCache();
@@ -14474,7 +14471,6 @@ int	CvCityAI::GetBuildingValue(BuildingTypes eBuilding, int iFocusFlags, int iTh
 	{
 		if (cachedBuildingValues == NULL)
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			OutputDebugString(CvString::format("Rebuilding building value cache for City %S\n", getName().GetCString()).c_str());
 			cachedBuildingValues = new BuildingValueCache(this);
@@ -14555,7 +14551,7 @@ void CvCityAI::AI_FlushBuildingValueCache(bool bRetainValues)
 
 void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	// KOSHLING optimisation - moved what we could outside of the building loop
 	const PlayerTypes ePlayer = getOwner();

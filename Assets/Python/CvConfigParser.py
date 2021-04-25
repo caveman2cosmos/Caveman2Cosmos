@@ -54,12 +54,10 @@ class CvConfigParser(ConfigParser.SafeConfigParser, object):
 
 	def __init__(self, filename = None, *args, **kwargs):
 		# Initializes the parser by reading options from the named file.
-		import os.path
-		import BugPath
+		import SystemPaths as SP
 		super(CvConfigParser, self).__init__(*args, **kwargs)
-		BugPath.init()
 		if filename != None:
-			filenames = [os.path.join(os.path.dirname(BugPath._assetFileSearchPaths), filename)]
+			filenames = [SP.joinModDir("Assets", filename)]
 			self.read(filenames)
 
 	def get(self, section, option, default = None, *args, **kwargs):

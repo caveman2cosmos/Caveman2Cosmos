@@ -110,7 +110,7 @@
 			<Type>UNIT_BISON_RIDER</Type>
 			<AndDependencyTypes>
 				<DependencyType>UNIT_TRAINED_MAMMOTH</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<UnitAttackMods>
 				<UnitAttackMod>
 					<UnitType>UNIT_TRAINED_MAMMOTH</UnitType>
@@ -122,7 +122,7 @@
 			<Type>UNIT_BISON_RIDER</Type>
 			<AndDependencyTypes>
 				<DependencyType>UNIT_WAR_MAMMOTH</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<UnitAttackMods>
 				<UnitAttackMod>
 					<UnitType>UNIT_WAR_MAMMOTH</UnitType>

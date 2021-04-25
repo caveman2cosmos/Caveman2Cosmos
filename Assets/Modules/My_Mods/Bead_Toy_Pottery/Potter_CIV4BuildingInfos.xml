@@ -79,7 +79,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_LEAD_INGOTS</BonusType>
@@ -315,7 +315,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_LEAD_INGOTS</BonusType>
@@ -425,7 +425,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_LEAD_INGOTS</BonusType>

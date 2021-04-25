@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
@@ -14,7 +13,7 @@
 			<Strategy>TXT_KEY_BUILDING_RHINO_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER</ArtDefineTag>
- 		     <MovieDefineTag>ART_DEF_MOVIE_RHINO_TRAINER</MovieDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RHINO_TRAINER</MovieDefineTag>
 			<ObsoleteTech>TECH_ARMORED_CAVALRY</ObsoleteTech>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
@@ -73,7 +72,7 @@
 			<FreeBuilding>BUILDING_RHINO_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
-        		<iAsset>4</iAsset>
+				<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>

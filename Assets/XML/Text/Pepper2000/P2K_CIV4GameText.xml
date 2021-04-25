@@ -821,7 +821,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX_PEDIA</Tag>
 		<English>TBD</English>
-		<Russian>TBD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINE</Tag>
@@ -1620,7 +1619,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Tag>
-		<English>Transforms the Lunar Supply Ship into a Bulldozer to connect resources to your city on the moon.</English>
+		<English>Transforms the Construction Ship into a Bulldozer to connect resources to your city on the moon.</English>
 		<French>Transforme le Vaisseau Spatial en Bulldozer pour connecter des ressources à votre ville sur la lune.</French>
 		<Russian>Ïðåâðàùàåò êîðàáëü ñíàáæåíèÿ â áóëüäîçåð, ÷òîáû ñîåäèíèòü ìåñòîðîæäåíèÿ ðåñóðñîâ ñ âàøèì ãîðîäîì èëè êîëîíèåé íà Ëóíå.</Russian>
 	</TEXT>
@@ -2094,13 +2093,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
-		<English>Will transform the Lunar Supply Ship into a Bulldozer.</English>
+		<English>Will transform the Construction Ship into a Bulldozer.</English>
 		<French>Va Transformer le Vaisseau Spatial en Bulldozer.</French>
 		<Russian>Ïðåâðàòèò êîðàáëü ñíàáæåíèÿ â êîìáàéí.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER_MESSAGE</Tag>
-		<English>Your Lunar Supply Ship was transformed into a Bulldozer.</English>
+		<English>Your Construction Ship was transformed into a Bulldozer.</English>
 		<French>Votre Vaisseau Spatial a été transformé en Bulldozer.</French>
 		<Russian>Ïðåâðàòèò êîðàáëü ñíàáæåíèÿ â êîìáàéí.</Russian>
 	</TEXT>
@@ -2382,13 +2381,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
-		<English>Space worker used to build earliest improvements on Moon, Mars and Venus.</English>
-		<Russian>TBD</Russian>
+		<English>Space worker used to build earliest improvements on Moon, Mars and Venus. It also can be transformed to Lunar bulldozer to build lunar mines and route.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_STRATEGY</Tag>
-		<English>Use this unit to build Lunar Outpost improvement - place, where you can send Lunar settlers to build Lunar cities</English>
-		<Russian>TBD</Russian>
+		<English>Use this unit to build Lunar Outpost improvement - place, where you can send Lunar settlers to build Lunar cities.[NEWLINE]Turn it to lunar bulldozer (requires Lunar Bases tech) on Moon, so you can get resources.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
@@ -2933,7 +2930,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER_STRATEGY</Tag>
-		<English>Build this unit to extract resources on Moon. Lunar Supply Ships can be turned into a Lunar Bulldozer at owned Lunar Bases.</English>
+		<English>Build this unit to extract resources on Moon. Construction Ships can be turned into a Lunar Bulldozer at owned Lunar Bases.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_INFANTRY</Tag>
@@ -3468,13 +3465,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_PEDIA</Tag>
-		<English>Early space unit dedicated to supply of Lunar colonies. It also can be transformed to Lunar bulldozer to build lunar mines.</English>
-		<Russian>TBD</Russian>
+		<English>Early space unit dedicated to supply of Lunar colonies.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_STRATEGY</Tag>
-		<English>Use this unit to build buildings in Lunar colonies, and to turn it to lunar bulldozer (requires Lunar Bases tech).</English>
-		<Russian>TBD</Russian>
+		<English>Use this unit to build buildings in Lunar colonies.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TITAN_REWARD</Tag>
@@ -3729,5 +3724,27 @@
 		<Tag>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Tag>
 		<English>Planetary Maglev</English>
 		<Russian>Планетарный маглев</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_ROVER</Tag>
+		<English>Lunar Rover</English>
+		<French>Véhicule Lunaire</French>
+		<Italian>Rover lunare</Italian>
+		<Polish>Łazik Księżycowy</Polish>
+		<Russian>Ëóíîõîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Tag>
+		<English>Lunar Exploration Unit.</English>
+		<Italian>Unità da esplorazione lunare.</Italian>
+		<Polish>Łazik - rodzaj sondy kosmicznej, posiadający możliwość poruszania się po powierzchni ciała, na którym wylądował (planety lub księżyca, w planach także planetoid). Łazik, dzięki swojej mobilności, ma dużą przewagę nad tradycyjnym lądownikiem w kwestii wyboru miejsca i obiektu badań, jednak jego wysłanie jest znacznie droższe ze względu na konieczność umieszczenia systemu napędowego wewnątrz sondy, co znacznie zwiększa jej wagę. Do łazików zaliczane są głównie pojazdy bezzałogowe, ale łazikiem księżycowym był też nazywany załogowy Lunar Roving Vehicle, używany w misjach programu Apollo.</Polish>
+		<Russian>[TAB]Ëóííûé ðàçâåäîâàòåëüíûé þíèò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_ROVER_STRATEGY</Tag>
+		<English>The Lunar Rover is the first unit you can send to the Lunar Map, (once we get Multi-Maps). The method of sending units between maps still needs some work.</English>
+		<French>Le Véhicule Lunaire est la première unité que vous pouvez envoyer à la carte lunaire, (une fois que nous obtenons plusieurs cartes). La méthode d'envoi d'unités entre les cartes nécessite encore quelques travaux.</French>
+		<Italian>Il rover lunare è la prima unità che può essere mandata sulla Luna (quando verranno implementate le Multi-Maps).</Italian>
+		<Polish>Łazik Księżycowy to pierwszy pojazd jaki możesz wysłać na księżyc.</Polish>
 	</TEXT>
 </Civ4GameText>

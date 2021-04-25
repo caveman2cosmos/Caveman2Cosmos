@@ -109,7 +109,7 @@
 		<Italian>In Civilization IV, il tempio è un edificio all'interno del quale i fedeli si recano a pregare. I Cristiani chiamano i loro templi "chiese", i Musulmani "moschee", gli Ebrei semplicemente "templi". I templi sono più comuni delle cattedrali, ma sono più piccoli e poco fastosi. Anche il villaggio più piccolo ospita un tempio.</Italian>
 		<Spanish>En Civilization IV, un templo se define como un lugar al que los fieles acuden a venerar. Los cristianos llaman a sus templos "iglesias", mientras que para los musulmanes son "mezquitas" y para los judíos, sencillamente, "templos". Son mucho más comunes que las catedrales, pero también mucho más pequeños y humildes. Hasta la más pequeña aldea puede poseer uno.</Spanish>
 		<Polish>Swiątynia - miejsce kultu religijnego. W sensie szerszym, jest to każda budowla wzniesiona w celu sprawowania w niej wszelkiego rodzaju obrzędów religijnych. W sensie węższym, świątynią może być tylko taka budowla, która spełnia przynajmniej niektóre wyższe funkcje kultowe (np. składanie ofiar), sprawowane jedynie przez kapłanów.</Polish>
-		<Russian>[TAB]Â Öèâèëèçàöèè IV, ïîä õðàìîì ïîäðàçóìåâàåòñÿ çäàíèå, êóäà âåðóþùèå ïðèõîäÿò ñîâåðøàòü áîãîñëóæåíèå. Õðèñòèàíå íàçûâàþò ñâîè õðàìû ''öåðêâÿìè'', òîãäà êàê ìóñóëüìàíå íàçûâàþò èõ ''ìå÷åòÿìè'',  à åâðåè íàçûâàþò èõ, ïðîñòî, ''õðàìàìè.'' Õðàìû íàìíîãî áîëüøå ðàñïðîñòðàíåíû, ÷åì ñîáîðû, íî îñòàþòñÿ ãîðàçäî ìåíåå êðóïíûìè è ñêðîìíûìè óáðàíñòâîì. Õðàì ìîæåò ðàñïîëàãàòüñÿ äàæå â ñàìîé çàõóäàëîé äåðåâóøêå.</Russian>
+		<Russian>[TAB]Â Öèâèëèçàöèè IV, ïîä õðàìîì ïîäðàçóìåâàåòñÿ çäàíèå, êóäà âåðóþùèå ïðèõîäÿò ñîâåðøàòü áîãîñëóæåíèå. Õðèñòèàíå íàçûâàþò ñâîè õðàìû ''öåðêâÿìè'', òîãäà êàê ìóñóëüìàíå íàçûâàþò èõ ''ìå÷åòÿìè'', à åâðåè íàçûâàþò èõ, ïðîñòî, ''õðàìàìè.'' Õðàìû íàìíîãî áîëüøå ðàñïðîñòðàíåíû, ÷åì ñîáîðû, íî îñòàþòñÿ ãîðàçäî ìåíåå êðóïíûìè è ñêðîìíûìè óáðàíñòâîì. Õðàì ìîæåò ðàñïîëàãàòüñÿ äàæå â ñàìîé çàõóäàëîé äåðåâóøêå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VOODOO_TEMPLE_STRATEGY</Tag>
@@ -189,7 +189,7 @@
 		<English>Mad dogs coming directly from the hell's mouth. At least, according to skeptics, that is what their owners would have you believe.</English>
 		<Italian>Un cane impazzito che proviene direttamente dalla bocca dell'inferno; o secondo gli scettici, questo è ciò che i loro possessori vogliono far credere.</Italian>
 		<Polish>Wściekłe psy hodowane przez świątynie Voodoo.</Polish>
-		<Russian>[TAB]ßðîñòíûå áåñòèè, ïðèõîäÿùèå íåïîñðåäñòâåííî èç ãëóáèí àäà. Ïî êðàéíåé ìåðå, ïî ñëîâàì ñêåïòèêîâ,  èõ õîçÿåâà õîòåëè áû çàñòàâèòü âàñ ïîâåðèòü â ðåàëüíîñòü ïîäîáíûõ ìîíñòðîâ.</Russian>
+		<Russian>[TAB]ßðîñòíûå áåñòèè, ïðèõîäÿùèå íåïîñðåäñòâåííî èç ãëóáèí àäà. Ïî êðàéíåé ìåðå, ïî ñëîâàì ñêåïòèêîâ, èõ õîçÿåâà õîòåëè áû çàñòàâèòü âàñ ïîâåðèòü â ðåàëüíîñòü ïîäîáíûõ ìîíñòðîâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HELLSMOUTH_DOG_STRATEGY</Tag>
@@ -234,6 +234,6 @@
 		<Tag>TXT_KEY_UNIT_VOODOO_MISSIONARY_STRATEGY</Tag>
 		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Voodoo[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Tomb of Ansyen Bon[COLOR_REVERT].</English>
 		<Italian>Usa questo missionario per diffondere velocemente il [COLOR_HIGHLIGHT_TEXT]Voodoo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
-		<Russian>Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ êóëüòà [COLOR_HIGHLIGHT_TEXT]Âóäó[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü  [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]). Òàêæå óâåëè÷èâàþòñÿ âàøè äîõîäû, åñëè ó âàñ èìååòñÿ [COLOR_BUILDING_TEXT]Äðåâíÿÿ ãðîáíèöà[COLOR_REVERT].</Russian>
+		<Russian>Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ êóëüòà [COLOR_HIGHLIGHT_TEXT]Âóäó[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]). Òàêæå óâåëè÷èâàþòñÿ âàøè äîõîäû, åñëè ó âàñ èìååòñÿ [COLOR_BUILDING_TEXT]Äðåâíÿÿ ãðîáíèöà[COLOR_REVERT].</Russian>
 	</TEXT>
 </Civ4GameText>

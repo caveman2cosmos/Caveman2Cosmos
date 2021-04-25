@@ -131,7 +131,7 @@
 		<English>"Oldoinyo Ngai" means "Mountain of God" in the language of the native Maasai people and they believe this mountain is habited by Ngai.</English>
 		<Italian>"Oldoinyo Ngai" significa "Montagna di Dio" nel linguaggio dei Masai; essi credono che questa montagna sia abitata dallo spirito di Ngai.</Italian>
 		<Polish>Ngai (Enkai, En-kai, Engai, Eng-ai, Mweai, Mwiai) - jedyny bóg w monoteistycznych religiach kenijskich plemion Kamba, Kikuju i Masajów. Według tradycji Kikuju, mieszka on na świętej górze Kirinyadze (Mount Kenya). Według Kamba, mieszka gdzieś w ukryciu i nikt nie wie gdzie. Według Masajów, Enkai jest nie bogiem, a boginią.</Polish>
-		<Russian>[TAB]''Îëüäîèíüî-Íãàè'' íà ÿçûêå Ìàñàè îçíà÷àåò ''Ãîðà Áîãà''. Ìíîãèå áàíòóÿçû÷íûå ïëåìåíà  â Êåíèè è Òàíçàíèè âåðÿò, ÷òî ýòà ãîðà ÿâëÿåòñÿ îáèòàëèùåì ñàìîãî Íãàè.</Russian>
+		<Russian>[TAB]''Îëüäîèíüî-Íãàè'' íà ÿçûêå Ìàñàè îçíà÷àåò ''Ãîðà Áîãà''. Ìíîãèå áàíòóÿçû÷íûå ïëåìåíà â Êåíèè è Òàíçàíèè âåðÿò, ÷òî ýòà ãîðà ÿâëÿåòñÿ îáèòàëèùåì ñàìîãî Íãàè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NGAI_SHRINE_STRATEGY</Tag>
@@ -227,6 +227,6 @@
 		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Ngaiism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your culture if you have the [COLOR_BUILDING_TEXT]Oldoinyo Ngai[COLOR_REVERT].</English>
 		<Italian>Usa questo missionario per diffondere velocemente l'[COLOR_HIGHLIGHT_TEXT]Ngaiismo[COLOR_REVERT] nelle tue città o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]diritto di passaggio[COLOR_REVERT]).</Italian>
 		<Spanish>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Ngaiism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT])</Spanish>
-		<Russian>Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ [COLOR_HIGHLIGHT_TEXT]Íãàèçìà[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü  [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]). Òàêæå ïîâûøàåòñÿ ïðèðîñò êóëüòóðû, åñëè ó âàñ èìååòñÿ [COLOR_BUILDING_TEXT]Îëüäîèíüî-Íãàè[COLOR_REVERT].</Russian>
+		<Russian>Èñïîëüçóéòå ýòîãî ìèññèîíåðà äëÿ àêòèâíîãî ðàñïðîñòðàíåíèÿ [COLOR_HIGHLIGHT_TEXT]Íãàèçìà[COLOR_REVERT] â äðóæåñòâåííûõ ãîðîäàõ (èëè ãîðîäàõ ñîïåðíèêà, ñ êîòîðûìè ó âàñ åñòü [COLOR_HIGHLIGHT_TEXT]îòêðûòûå ãðàíèöû[COLOR_REVERT]). Òàêæå ïîâûøàåòñÿ ïðèðîñò êóëüòóðû, åñëè ó âàñ èìååòñÿ [COLOR_BUILDING_TEXT]Îëüäîèíüî-Íãàè[COLOR_REVERT].</Russian>
 	</TEXT>
 </Civ4GameText>

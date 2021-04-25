@@ -195,7 +195,7 @@ bool CvSelectionGroup::sentryAlertSameDomainType() const
 
 void CvSelectionGroup::doTurn()
 {
-	PROFILE("CvSelectionGroup::doTurn()")
+	PROFILE("CvSelectionGroup::doTurn()");
 
 	FAssert(getOwner() != NO_PLAYER);
 
@@ -338,7 +338,7 @@ void CvSelectionGroup::doTurn()
 
 void CvSelectionGroup::resetHealing()
 {
-	PROFILE("CvSelectionGroup::resetHealing()")
+	PROFILE("CvSelectionGroup::resetHealing()");
 
 	algo::for_each(units(), CvUnit::fn::setHealSupportUsed(0));
 }
@@ -1100,10 +1100,12 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			break;
 
 		case MISSION_CURE:
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 			if (pLoopUnit->canCure(pPlot, ((PromotionLineTypes)iData1)))
 			{
 				return true;
 			}
+#endif
 			break;
 
 		//ls612: Viewports Go To City mission
@@ -1776,10 +1778,12 @@ bool CvSelectionGroup::startMission()
 
 					//TB Combat Mod Begin (Cure)
 					case MISSION_CURE:
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 						if (pLoopUnit->CureAffliction((PromotionLineTypes)(headMissionQueueNode()->m_data.iData1)))
 						{
 							bAction = true;
 						}
+#endif
 						break;
 					//TB Combat Mod end (Cure)
 					case MISSION_JOIN:
@@ -2859,7 +2863,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 			break;
 
 		case INTERFACEMODE_AIRBOMB:
-			if (pLoopUnit->canAirBomb(pLoopUnit->plot()))
+			if (pLoopUnit->canAirBomb())
 			{
 				return true;
 			}
@@ -2891,7 +2895,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 
 		// Dale - AB: Bombing
 		case INTERFACEMODE_AIRBOMB1:
-			if (pLoopUnit->canAirBomb1(pLoopUnit->plot()))
+			if (pLoopUnit->canAirBomb1())
 			{
 				return true;
 			}
@@ -4469,7 +4473,6 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 
 				if (iProduction > 0)
 				{
-					MEMORY_TRACK_EXEMPT();
 
 					CvWString szBuffer = gDLL->getText("TXT_KEY_BUG_PRECLEARING_FEATURE_BONUS", GC.getFeatureInfo(eFeature).getTextKeyWide(), iProduction, pCity->getNameKey());
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getFeatureInfo(eFeature).getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
@@ -5335,7 +5338,7 @@ bool CvSelectionGroup::generatePath(const CvPlot* pFromPlot, const CvPlot* pToPl
 {
 	bool bSuccess;
 
-	PROFILE("CvSelectionGroup::generatePath()")
+	PROFILE("CvSelectionGroup::generatePath()");
 
 #ifdef USE_OLD_PATH_GENERATOR
 
@@ -5543,7 +5546,6 @@ bool CvSelectionGroup::HaveCachedPathEdgeCosts(const CvPlot* pFromPlot, const Cv
 
 void CvSelectionGroup::CachePathEdgeCosts(const CvPlot* pFromPlot, const CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost) const
 {
-	MEMORY_TRACK_EXEMPT();
 
 	if (this == m_pCachedMovementGroup)
 	{

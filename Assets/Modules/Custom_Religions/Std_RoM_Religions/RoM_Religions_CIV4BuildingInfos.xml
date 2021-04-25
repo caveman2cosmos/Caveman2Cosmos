@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
@@ -635,8 +634,8 @@
 		<BuildingInfo>
 			<Type>BUILDING_HAMMURABI</Type>
 			<AndDependencyTypes>
-             	<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
- 			</AndDependencyTypes>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
+			</AndDependencyTypes>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HAMMURABI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAMMURABI_PEDIA</Civilopedia>
@@ -706,8 +705,8 @@
 		<BuildingInfo>
 			<Type>BUILDING_NIMRUD_PALACE</Type>
 			<AndDependencyTypes>
-             	<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
- 			</AndDependencyTypes>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
+			</AndDependencyTypes>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NIMRUD_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NIMRUD_PALACE_PEDIA</Civilopedia>

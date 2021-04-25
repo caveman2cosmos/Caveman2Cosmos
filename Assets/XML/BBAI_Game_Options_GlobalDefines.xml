@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- -->
 <!-- Game options for new features in Better BTS AI -->
 <!-- by jdog5000 -->
-<!-- -->
 <Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
 	<Define>
 		<!-- Better BTS AI: Use new air combat mechanics -->
@@ -15,22 +13,22 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Better BTS AI: Allow AI to use Conquest victory strategy logic if conquest victory is enabled  -->
+		<!-- Better BTS AI: Allow AI to use Conquest victory strategy logic if conquest victory is enabled -->
 		<DefineName>BBAI_VICTORY_STRATEGY_CONQUEST</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Better BTS AI: Allow AI to use Domination victory strategy logic if domination victory is enabled  -->
+		<!-- Better BTS AI: Allow AI to use Domination victory strategy logic if domination victory is enabled -->
 		<DefineName>BBAI_VICTORY_STRATEGY_DOMINATION</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Better BTS AI: Allow AI to use Culture victory strategy logic if culture victory is enabled  -->
+		<!-- Better BTS AI: Allow AI to use Culture victory strategy logic if culture victory is enabled -->
 		<DefineName>BBAI_VICTORY_STRATEGY_CULTURE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Better BTS AI: Allow AI to use Diplomacy victory strategy logic if diplomacy victory is enabled  -->
+		<!-- Better BTS AI: Allow AI to use Diplomacy victory strategy logic if diplomacy victory is enabled -->
 		<DefineName>BBAI_VICTORY_STRATEGY_DIPLOMACY</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>

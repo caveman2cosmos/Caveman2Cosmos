@@ -1405,16 +1405,9 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 				logBBAI("\t%d (%S) for team %d", iTech, GC.getTechInfo((TechTypes)iTech).getDescription(), iTeam);
 			}
 		}
-		int* paiBonusClassRevealed = new int[GC.getNumBonusClassInfos()];
-		int* paiBonusClassUnrevealed = new int[GC.getNumBonusClassInfos()];
-		int* paiBonusClassHave = new int[GC.getNumBonusClassInfos()];
-
-		for (int iI = 0; iI < GC.getNumBonusClassInfos(); iI++)
-		{
-			paiBonusClassRevealed[iI] = 0;
-			paiBonusClassUnrevealed[iI] = 0;
-			paiBonusClassHave[iI] = 0;
-		}
+		std::vector<int> paiBonusClassRevealed(GC.getNumBonusClassInfos(), 0);
+		std::vector<int> paiBonusClassUnrevealed(GC.getNumBonusClassInfos(), 0);
+		std::vector<int> paiBonusClassHave(GC.getNumBonusClassInfos(), 0);
 
 		CvPlayerAI& teamLeader = GET_PLAYER(getLeaderID());
 
@@ -1442,10 +1435,6 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 
 		const int iOurActualTechValue = teamLeader.AI_TechValueCached(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave, true);
 		const int iAverageTechValue = teamLeader.AI_averageCurrentTechValue(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
-
-		SAFE_DELETE_ARRAY(paiBonusClassRevealed);
-		SAFE_DELETE_ARRAY(paiBonusClassUnrevealed);
-		SAFE_DELETE_ARRAY(paiBonusClassHave);
 
 		//	Multiply the base cost by a squashing function of relative goodness of the proposed tech and an average one
 		//	from what we can currently research

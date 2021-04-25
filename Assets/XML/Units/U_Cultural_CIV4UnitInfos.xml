@@ -19623,10 +19623,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 				<FreePromotion>
-					<PromotionType>PROMOTION_MARKSMAN1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
 					<PromotionType>PROMOTION_HIT_AND_RUN</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>

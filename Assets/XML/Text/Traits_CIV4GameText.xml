@@ -504,7 +504,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BONUS_HAPPINESS_CHANGE_END</Tag>
 		<English>Resources</English>
-		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BONUS_HAPPINESS_CHANGE_FIRST</Tag>
@@ -2448,8 +2447,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_END</Tag>
 		<English>Unit Types</English>
-		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
-		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_FIRST</Tag>
@@ -2475,8 +2472,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_END</Tag>
 		<English>Unit Types</English>
-		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
-		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_FIRST</Tag>

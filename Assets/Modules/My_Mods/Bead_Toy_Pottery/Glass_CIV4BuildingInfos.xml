@@ -81,7 +81,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_DYE</BonusType>

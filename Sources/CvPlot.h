@@ -703,6 +703,8 @@ public:
 	DllExport ImprovementTypes getImprovementType() const;
 	void setImprovementType(ImprovementTypes eNewValue);
 
+	bool isImprovementDestructible() const;
+
 	RouteTypes getRouteType() const;
 	void setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroup);
 	void updateCityRoute(bool bUpdatePlotGroup);
@@ -1121,8 +1123,9 @@ public:
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 
 	//TB Combat Mod AI
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
-
+#endif
 	bool isImprovementUpgradable() const;
 	void setImprovementUpgradeCache(const int iNewValue);
 

@@ -50,7 +50,7 @@
 			</CommerceChanges>
 			<!--FreeBonus>BONUS_ROPE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses-->
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_DYE</BonusType>
