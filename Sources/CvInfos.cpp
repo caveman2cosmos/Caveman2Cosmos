@@ -21789,7 +21789,6 @@ CvCorporationInfo::CvCorporationInfo() :
 ,m_iMaintenance(0)
 ,m_iMissionType(NO_MISSION)
 ,m_iBonusProduced(NO_BONUS)
-,m_paiPrereqBonuses(NULL)
 ,m_paiHeadquarterCommerce(NULL)
 ,m_paiCommerceProduced(NULL)
 ,m_paiYieldProduced(NULL)
@@ -21818,7 +21817,6 @@ CvCorporationInfo::CvCorporationInfo() :
 //------------------------------------------------------------------------------------------------------
 CvCorporationInfo::~CvCorporationInfo()
 {
-	SAFE_DELETE_ARRAY(m_paiPrereqBonuses);
 	SAFE_DELETE_ARRAY(m_paiHeadquarterCommerce);
 	SAFE_DELETE_ARRAY(m_paiCommerceProduced);
 	SAFE_DELETE_ARRAY(m_paiYieldProduced);
@@ -22027,7 +22025,7 @@ const std::vector<BonusTypes>& CvCorporationInfo::getPrereqBonuses() const
 	return m_vPrereqBonuses;
 }
 
-const python::list& CvCorporationInfo::cyGetPrereqBonuses() const
+const python::list CvCorporationInfo::cyGetPrereqBonuses() const
 {
 	return Cy::makeList(m_vPrereqBonuses);
 }

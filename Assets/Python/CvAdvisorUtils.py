@@ -31,7 +31,7 @@ def resetNoLiberateCities():
 		eCorporation = CvBuildingInfo.getFoundsCorporation()
 		if eCorporation > -1 and not GAME.isCorporationFounded(eCorporation):
 
-			bonuses = GC.getCorporationInfo(eCorporation).getPrereqBonuses():
+			bonuses = GC.getCorporationInfo(eCorporation).getPrereqBonuses()
 			if not bonuses:
 				continue
 

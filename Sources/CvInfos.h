@@ -5870,7 +5870,7 @@ public:
 	const TCHAR* getSound() const;
 
 	const std::vector<BonusTypes>& getPrereqBonuses() const;
-	const python::list& cyGetPrereqBonuses() const;
+	const python::list cyGetPrereqBonuses() const;
 
 	// Arrays
 	int getHeadquarterCommerce(int i) const;

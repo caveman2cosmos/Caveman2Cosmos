@@ -216,7 +216,7 @@ class CvCorporationScreen:
 				szListLabels = []
 				iNum = 0
 				szList = u""
-				for eBonus in GC.getCorporationInfo(i).getPrereqBonuses()
+				for eBonus in GC.getCorporationInfo(i).getPrereqBonuses():
 					if iNum == 0:
 						szList = u""
 					else:
