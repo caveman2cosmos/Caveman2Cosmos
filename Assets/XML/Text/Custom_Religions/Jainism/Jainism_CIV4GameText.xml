@@ -129,13 +129,6 @@
 		<Russian>«Это квинтэссенция мудрости: не убей жизнь. Это чистый неизменный Закон. Посему перестаньте причинять вред живым существам». - Йогашастра (джайнское писание), c. 500 г. до н.э.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_JAINISM_STRATEGY</Tag>
-		<English>Research Jainism to found a Religion</English>
-		<French>Recherchez Jainisme pour fonder une religion</French>
-		<Spanish>Investiga el Jainismo para fundar una religión.</Spanish>
-		<Russian>Изучите [COLOR_HIGHLIGHT_TEXT]Джайнизм[COLOR_REVERT], чтобы основать одноименную религию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAINISM_MISSIONARY</Tag>
 		<English>Jain Missionary</English>
 		<French>Missionnaire jain</French>

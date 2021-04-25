@@ -90,12 +90,6 @@
 		<Russian>Ïîñëå èññëåäîâàíèé â îáëàñòè ÷èñòîé è áåçîïàñíîé ÿäåðíîé ýíåðãåòèêè, áûëî ïîñòðîåíî ìíîæåñòâî ðåàêòîðîâ äëÿ âûðàáîòêè íåâåðîÿòíîãî êîëè÷åñòâà ýíåðãèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR_STRATEGY</Tag>
-		<English>Build a Hi-Tech Nuclear Reactor to increase your cities Production.</English>
-		<French>Construisez un [COLOR_BUILDING_TEXT] Réacteur nucléaire Hi-Tech[COLOR_REVERT] pour améliorer la production de votre ville.</French>
-		<Russian>Âûñîêîòåõíîëîãè÷íûé ðåàêòîð ñïîñîáñòâóåò ðîñòó ïðîèçâîäñòâà â âàøèõ ãîðîäàõ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Tag>
 		<English>Housing (Mid Class Skypad Apartments)</English>
 		<French>Habitations (Appartements à ciel ouvert)</French>

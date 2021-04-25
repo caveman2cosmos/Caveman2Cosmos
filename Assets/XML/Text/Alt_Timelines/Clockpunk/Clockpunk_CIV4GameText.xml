@@ -228,13 +228,6 @@
 		<Russian>«Механическое сердце не способно заменить настоящее и живое». - Дрю Паглиассотти, Заводное Сердце</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CLOCKPUNK_STRATEGY</Tag>
-		<English>Research [COLOR_TECH_TEXT]Clockpunk[COLOR_REVERT] to gain access to unique buildings and units.</English>
-		<French>Rechercher [COLOR_TECH_TEXT]Clockpunk[COLOR_REVERT] permet d'accéder à des bâtiments et unités uniques.</French>
-		<Italian>Ricerca [COLOR_TECH_TEXT]Clockpunk[COLOR_REVERT] per poter costruire edifici e unità uniche.</Italian>
-		<Russian>[COLOR_TECH_TEXT]Клокпанк[COLOR_REVERT] делает доступными уникальные здания и юниты.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLOCKWORK_GOLEM</Tag>
 		<English>
 			<Text>Clockwork Golem</Text>

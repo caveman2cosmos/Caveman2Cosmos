@@ -210,13 +210,6 @@
 		<Polish>"O Pachakamak![NEWLINE]Ty, który istniałeś od początku. Ty, który będziesz istniał aż do końca, wszechmogący, ale miłosierny. Daj nam życie wieczne." - ze strony www.sacred-texts.com</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_ANDEANISM_STRATEGY</Tag>
-		<English>Research Andeanism to found a Religion</English>
-		<French>Recherchez Andéanisme pour fonder une religion</French>
-		<Spanish>Investiga el Andeanismo para fundar una religión.</Spanish>
-		<Russian>Изучите Анденаизм, чтобы основать эту религию</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_ANDEANISM</Tag>
 		<English>Religion(Andeanism)</English>
 		<French>

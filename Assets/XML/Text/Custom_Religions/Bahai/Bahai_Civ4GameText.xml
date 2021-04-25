@@ -153,13 +153,6 @@
 		<Russian>«О Боже! Даруй Твою благосклонность и даруй благословение Твое. Сподоби милость Твою и дай часть щедрости Твоей. Пошли Свой небесный дождь и дай Твое изобилие и благодать». - Абдул-Баха</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_BAHAI_STRATEGY</Tag>
-		<English>Research Baha'i to found a Religion</English>
-		<French>Recherchez Baha'i pour fonder une religion</French>
-		<Spanish>Investiga el Bahaísmo para fundar una religión.</Spanish>
-		<Russian>Изучите [COLOR_HIGHLIGHT_TEXT]Бахаи[COLOR_REVERT], чтобы основать одноименную религию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_BAHAI</Tag>
 		<English>Religion(Baha'i)</English>
 		<French>

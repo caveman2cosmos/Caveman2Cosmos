@@ -246,13 +246,6 @@
 		<Russian>Что самое важное - это жить полноценной жизнью здесь и сейчас. Синтоизм не ищет вечных истин и награды в загробной жизни.[PARAGRAPH:2]- Официальная энциклика в храме Ацута</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_SHINTO_STRATEGY</Tag>
-		<English>Research Shintoism to Found a religion</English>
-		<French>Recherchez le [COLOR_TECH_TEXT]Shintoïsme[COLOR_REVERT] pour fonder une religion</French>
-		<Spanish>Investiga el Sintoísmo para fundar una religión.</Spanish>
-		<Russian>Первооткрыватель данной технологии станет основателем [COLOR_HIGHLIGHT_TEXT]Синтоизма[COLOR_REVERT].</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHINTO_MISSIONARY</Tag>
 		<English>Kannushi</English>
 		<Russian>Êàííóñè</Russian>

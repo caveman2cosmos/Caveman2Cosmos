@@ -166,13 +166,6 @@
 		<Russian>«Асака, устрой мне сад[NEWLINE]Молю тебя, Агве, не затопляй мой сад.[NEWLINE]Эрзули, моя грядущая любовь.[NEWLINE]Папаша Ге, не подходи ко мне».[NEWLINE] - от мюзикл "Однажды на этом острове", слова Линн Аренс</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_VOODOO_STRATEGY</Tag>
-		<English>Research Voodoo to found a Religion</English>
-		<French>Recherchez Voodoo pour fonder une religion</French>
-		<Spanish>Investiga el Vudú para fundar una religión.</Spanish>
-		<Russian>Первооткрыватель Вуду получает право основать эту религию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HELLSMOUTH_DOG</Tag>
 		<English>Hell's Mouth Dog</English>
 		<French>Chien Gueule de l'enfer</French>

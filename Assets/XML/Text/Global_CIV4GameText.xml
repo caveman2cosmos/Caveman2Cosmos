@@ -16579,13 +16579,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>«Я ищу спасение в Будде.[NEWLINE]Я ищу спасение в Дхарме. Я ищу спасение в Сангхе» - бирмано-палийская версия формула</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_BUDDHISM_STRATEGY</Tag>
-		<English>Research Buddhism to found a Religion</English>
-		<French>Recherchez Bouddhisme pour fonder une religion</French>
-		<Spanish>Investiga el Budismo para fundar una religión.</Spanish>
-		<Russian>Исследуйте Буддизм, чтобы основать религию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_CHRISTIANITY</Tag>
 		<English>Christianity</English>
 		<French>
@@ -16654,13 +16647,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>«Во имя Отца и Сына и Святого Духа». - Открытие католической мессы</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CHRISTIANITY_STRATEGY</Tag>
-		<English>Research Christianity to found a Religion</English>
-		<French>Recherchez le Christianisme pour fonder une religion</French>
-		<Spanish>Investiga el Cristianismo para fundar una religión.</Spanish>
-		<Russian>Исследуйте Христианство, чтобы основать религию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_CONFUCIANISM</Tag>
 		<English>Confucianism</English>
 		<French>
@@ -16727,13 +16713,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>"Predica con el ejemplo ante tu gente, y sé laborioso en cuanto a sus asuntos." - Confucio</Spanish>
 		<Polish>"Idź przed luźmi ze swoim przykładem, i pracowity dla ich spraw." - Konfucjusz</Polish>
 		<Russian>«Иди позади людей со своим примером и будь трудолюбив в их делах». - Конфуций</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_CONFUCIANISM_STRATEGY</Tag>
-		<English>Research Confucianism to found a Religion</English>
-		<French>Recherchez Confucianisme pour fonder une religion</French>
-		<Spanish>Investiga el Confucianismo para fundar una religión.</Spanish>
-		<Russian>Исследуйте Конфуцианство, чтобы основать религию.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CORPORATION_MAINTENANCE</Tag>
@@ -16845,13 +16824,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>«Все человеческие души бессмертны, но души праведников и бессмертны и божественны». - Сократ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_HELLENISM_STRATEGY</Tag>
-		<English>Research Hellenism to found a Religion</English>
-		<French>Recherchez Hellénisme pour fonder une religion</French>
-		<Spanish>Investiga el Helenismo para fundar una religión.</Spanish>
-		<Russian>Исследуйте Эллинизм, чтобы основать религию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_HINDUISM</Tag>
 		<English>Hinduism</English>
 		<French>
@@ -16918,13 +16890,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>"He nacido más veces que nadie excepto Krishna." - Mark Twain</Spanish>
 		<Polish>"Rodziłem się więcej razy niż ktokolwiek inny, oprócz Krishny." - Mark Twain</Polish>
 		<Russian>«Я рождался чаще других, кроме Кришны». - Марк Твен</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_HINDUISM_STRATEGY</Tag>
-		<English>Research Hinduism to found a Religion</English>
-		<French>Recherchez Hindouisme pour fonder une religion</French>
-		<Spanish>Investiga el Hinduísmo para fundar una religión.</Spanish>
-		<Russian>Исследуйте Индуизм, чтобы основать религию.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ISLAM</Tag>
@@ -16994,13 +16959,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>«Он - Аллах - Единый, Аллах - Самодостаточный; Он не родил и не был рождён, и нет никого равного Ему». - Коран 112:1-4</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_ISLAM_STRATEGY</Tag>
-		<English>Research Islam to found a Religion</English>
-		<French>Recherchez Islam pour fonder une religion</French>
-		<Spanish>Investiga el Islam para fundar una religión.</Spanish>
-		<Russian>Исследуйте Ислам, чтобы основать религию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_JUDAISM</Tag>
 		<English>Judaism</English>
 		<French>
@@ -17068,13 +17026,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>«И приму вас Себе в народ и буду вам Богом». - Исход 6:7</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_JUDAISM_STRATEGY</Tag>
-		<English>Research Judaism to found a Religion</English>
-		<French>Recherchez Judaïsme pour fonder une religion</French>
-		<Spanish>Investiga el Judaismo para fundar una religión.</Spanish>
-		<Russian>Исследуйте Иудаизм, чтобы основать религию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_KEMETISM</Tag>
 		<English>Kemetism</English>
 		<French>Kémétisme</French>
@@ -17105,13 +17056,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Puede que el sol que hay en el cielo esté a tu favor; puede que él haga que los dos señores estén a tu favor.[NEWLINE]Puede que la noche esté a tu favor; puede que las dos señoras estén a tu favor.[NEWLINE]Utterance 44 of The Pyramid Texts (encontrado en sacred-texts.com)</Spanish>
 		<Polish>W wierzeniach egipskich ludzka dusza istnieje również po śmierci ciała. W celu zachowania tożsamości w istnieniu po śmierci, ciało było balsamowane i mumifikowane. Ciała były tymczasowo umieszczane w trzcinowych trumnach w bardzo gorącym piasku, co szybko wysuszało zwłoki i zapobiegało rozkładowi. Później następował pogrzeb. W późniejszych czasach zaczęły powstawać drewniane groby, rytuały i reguły pochówku były rozbudowywane, komplikował się sposób mumifikacji. Balsamowanie zostało wynalezione w okresie Czwartej Dynastii. Usuwano wszystkie miękkie tkanki, a powstałe miejsca wypełniano natronem.</Polish>
 		<Russian>Да будет тебе благосклонно солнце на небесах; пусть оно сделает благосклонными к тебе оба господина.[NEWLINE]Пусть ночь будет благосклонна к тебе; да будут к тебе благосклонны обе владычицы.[NEWLINE]Извлечение из 44 Текстов пирамид</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_KEMETISM_STRATEGY</Tag>
-		<English>Research Kemetism to found a Religion</English>
-		<French>Recherchez Kémétisme pour fonder une religion</French>
-		<Spanish>Investiga el Kemetismo para fundar una religión.</Spanish>
-		<Russian>Исследуйте Кеметизм, чтобы основать религию.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MAINT_MOD</Tag>
@@ -17149,13 +17093,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>"Luego Tepeu y Gucumatz vinieron juntos; después conversaron sobre la vida y la luz, sobre si podían hacer para que hubiera luz y alba... ¡Que así sea! ¡Rellénese el vacío! Aléjese el agua y hágase un vacío, aparézcase la tierra y hágase sólida, así sea. Y así hablaban." - del Popol Vuh</Spanish>
 		<Polish>"I wtedy Tepeu i Gucumatz nadeszli razem. Rozmawiali o życiu i światłości, co powinni zrobić by nastało światło i ciemność. To uczynili." - Popol Vuh</Polish>
 		<Russian>«Тогда Тепеу и Кукумац сошлись вместе с ними, они совещались о жизни и свете, о том, чтобы появились свет и заря; кто должен заботиться об их пище и пропитании. Так пусть это свершится! Да будет заполнена пустота! Пусть воды отступят и образуют пустоту, пусть появится земля и будет прочной; пусть это свершится, - так говорили они». - из эпоса "Пополь Вух"</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_NAGHUALISM_STRATEGY</Tag>
-		<English>Research Naghulism to found a Religion</English>
-		<French>Recherchez Naghulism pour fonder une religion</French>
-		<Spanish>Investiga el Nahualismo para fundar una religión.</Spanish>
-		<Russian>Исследуйте эту технологию, чтобы основать религию.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NUM_CITIES_MAINT</Tag>
@@ -17270,13 +17207,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>«Овладение другими – это сила, овладение собой – истинная власть». - Лао-цзы, Дао Дэ Цзин</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_TAOISM_STRATEGY</Tag>
-		<English>Research Taoism to found a Religion</English>
-		<French>Recherchez Taoïsme pour fonder une religion</French>
-		<Spanish>Investiga el Taoísmo para fundar una religión.</Spanish>
-		<Russian>Исследуйте Даосизм, чтобы основать религию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_ZOROASTRIANISM</Tag>
 		<English>Zoroastrianism</English>
 		<French>Zoroastrisme</French>
@@ -17321,13 +17251,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>"Ahora, los dos principales espíritus que se revelan[NEWLINE]en una visión como gemelos, son el Bien y el Mal, en[NEWLINE]pensamiento, palabra y acción. Entre esos dos[NEWLINE]los sabios sabrán elegir; no así los necios."[NEWLINE]- Zaratustra (628 a.C. - 551 a.C.)</Spanish>
 		<Polish>"I dwa pierwotne Duchy, które objawiły się w wizji jako bliźnięta, są jakoż Dobry i Zły, w myślach, słowach i czynach. Pomiędzy nimi mądry potrafi wybrać właściwy, głupi nie bardzo." - Zoroaster, ok. 628 - ok.551 r. p.n.e.</Polish>
 		<Russian>«Ныне два предначальных Духа, являющие себя в[NEWLINE]видении как Близнецы, являются Благим и Дурным в[NEWLINE] мысли, словах и поступках. Между ними[NEWLINE] мудрые сделали правильный выбор, а невежды - нет».[NEWLINE] - Заратустра, Авеста (c.628 - c.551)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_ZOROASTRIANISM_STRATEGY</Tag>
-		<English>Research Zoroastrianism to found a Religion</English>
-		<French>Recherchez le Zoroastrisme pour fonder une religion</French>
-		<Spanish>Investiga el Zoroastrismo para fundar una religión.</Spanish>
-		<Russian>Исследуйте эту технологию, чтобы основать религию.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TEMP_AIR_BOMBARD_RATE</Tag>

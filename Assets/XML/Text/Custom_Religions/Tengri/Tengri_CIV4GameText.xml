@@ -220,13 +220,6 @@
 		<Russian>Никому от него не скрыться... Пусть каждый, кто хочет спастись, откровенно выражает свою преданность Тенгри.[PARAGRAPH:2]- Сандугач «Соловей»,[PARAGRAPH:1][SPACE][SPACE]«Чулман Толгау, 53:114-125» - тенгрианская молитва</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_TENGRIISM_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Tengriism[COLOR_REVERT] is a prehistoric era technology that founds said religion in the first civilization that researches it. Mechanically Tengriism works differently, first, and most important, it only spreads through the use of shamans, meaning that Tengriism isn't able to spread by itself. To construct shamans it is necessary to build a [COLOR_BUILDING_TEXT]Shaman's Yurta[COLOR_REVERT] first (the religion's only building) in the founding city.</English>
-		<French>Le Tengriisme permet d'entraîner des meilleures unités montées et cela dans toutes vos villes, à partir d'une seule ressource de chevaux.</French>
-		<Italian>Il tengriismo permette di addestrare unità di cavalleria migliori; inoltre permette di addestrare unità di cavalleria anche nelle città che non hanno accesso diretto ai cavalli, sempre che sia disponibile almeno una fonte di cavalli nella tua nazione.</Italian>
-		<Russian>Òåíãðèàíñòâî äàåò âîçìîæíîñòü ïðèíÿâøèì åãî öèâèëèçàöèÿì îáó÷àòü ëó÷øèå êàâàëåðèéñêèå îòðÿäû â íà÷àëå èãðû è ïîçâîëÿåò ñòðîèòü êîííèöó âî âñåõ ãîðîäàõ ïîêà ó âàñ åñòü ïî êðàéíåé ìåðå ðåñóðñ â âèäå êî÷åâîãî ñòàäà ëîøàäåé.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_TENGRI_MISSIONARY</Tag>
 		<English>Tengri Shaman</English>
 		<French>Shaman Tengri</French>

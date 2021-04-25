@@ -165,13 +165,6 @@
 		<Russian>«Писать за гроши просто смешно. Если человек действительно хочет заработать миллион долларов, то лучший способ - это основать собственную религию». - Л. Рон Хаббард, основатель Саентологии</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_SCIENTOLOGY_STRATEGY</Tag>
-		<English>Research Scientology to found a Religion</English>
-		<French>Recherchez Scientology pour fonder une religion</French>
-		<Spanish>Investiga la Cienciología para fundar una religión.</Spanish>
-		<Russian>Исследуйте первым Саентологию, чтобы основать эту религию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCIENTOLOGY_MISSIONARY</Tag>
 		<English>Scientology Missionary</English>
 		<French>Missionnaire de la Scientologie</French>

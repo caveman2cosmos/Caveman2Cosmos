@@ -446,13 +446,6 @@
 		<Russian>Итак, помимо заклинания рун, какие еще у вас хобби - запрещенные ритуалы и... человеческие жертвоприношения?[PARAGRAPH:2]- Симона Панова,[PARAGRAPH:1][SPACE][SPACE]«Кошмарная жертва»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_DRUIDIC_TRADITIONS_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Druidic Traditions[COLOR_REVERT] is a prehistoric era technology that founds said religion in the first civilization that researches it.</English>
-		<French>Recherchez Druidisme pour fonder une religion</French>
-		<Spanish>Investiga el Druidismo para fundar una religión.</Spanish>
-		<Russian>[COLOR_TECH_TEXT]Друидизм[COLOR_REVERT] - это технология доисторической эпохи, которая положит начало указанной религии для цивилизации, ставшей ее первооткрывателем.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRUID_MISSIONARY</Tag>
 		<English>Druidic Missionary</English>
 		<French>Missionnaire Druidique</French>

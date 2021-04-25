@@ -197,13 +197,6 @@
 		<Russian>«Маленький ребенок, который впервые рубит дерево, не может знать, куда оно упадет, но старейшина, срубивший дерево, заранее знает, где оно упадет». - Пословица йоруба</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_YORUBA_STRATEGY</Tag>
-		<English>Research Yoruba to Found a religion</English>
-		<French>Recherchez Yoruba pour fonder une religion</French>
-		<Spanish>Investiga la Yoruba para fundar una religión.</Spanish>
-		<Russian>Первооткрыватель данной технологии получает возможность основать религию [COLOR_HIGHLIGHT_TEXT]Йоруба[COLOR_REVERT].</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_YORUBA_MISSIONARY</Tag>
 		<English>Yoruba Missionary</English>
 		<French>Missionnaire Yoruba</French>

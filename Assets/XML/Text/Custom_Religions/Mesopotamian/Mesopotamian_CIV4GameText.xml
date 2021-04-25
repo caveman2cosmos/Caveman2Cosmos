@@ -248,13 +248,6 @@
 		<Russian>«Где сила? Это Гильгамеш первым отправится в Кедровый лес, а вы можете следовать за ним, крича: "Ступай, иди вперед и прими опасность!" Вы, кто сражался со львами и с волками, ведаете об опасности. Где ныне ваша храбрость? Если я паду, мое доброе имя будет в безопасности. Это Гильгамеш сражался против Хумбабы! Это Гильгамеш отважится отправиться в Лес и срубит Кедр и снискает славу. Моя слава сохранится для всех моих потомков». - Эпос о Гильгамеше</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_MESOPOTAMISM_STRATEGY</Tag>
-		<English>Research Mesopotamism to Found a religion</English>
-		<French>Recherchez Mésopotamisme pour fonder une religion</French>
-		<Spanish>Investiga el Mesopotamismo para fundar una religión.</Spanish>
-		<Russian>Изучите [COLOR_HIGHLIGHT_TEXT]Месопотамизм[COLOR_REVERT], чтобы основать одноименную религию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_MESO_MISSIONARY</Tag>
 		<English>Mesopotamic Missionary</English>
 		<French>Missionnaire de Mésopotamie</French>

@@ -205,13 +205,6 @@
 		<Russian>«Можно ли узреть Нгаи глазами смертных? Только когда люди действительно нуждаются, они должны приближаться к нему, не опасаясь потревожить его и навлечь на себя его гнев». - Джомо Кеньятта, религия кикуйю, поклонение предкам и практики жертвоприношений</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_NGAIISM_STRATEGY</Tag>
-		<English>Research Ngaiism to Found a religion</English>
-		<French>Recherchez [COLOR_TECH_TEXT]Ngaiisme[COLOR_REVERT] pour fonder une religion</French>
-		<Spanish>Investiga el Ngasmo para fundar una religión.</Spanish>
-		<Russian>Первооткрыватель этой технологии станет основателем религии [COLOR_HIGHLIGHT_TEXT]Нгаизм[COLOR_REVERT].</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_NGAI_MISSIONARY</Tag>
 		<English>Laibon</English>
 		<Russian>Ëàéáîí</Russian>
