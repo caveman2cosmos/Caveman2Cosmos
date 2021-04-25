@@ -13,7 +13,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_TRIPOD</Description>
-			<Civilopedia>TXT_KEY_UNIT_TRIPOD</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_TRIPOD_PEDIA</Civilopedia>
 			<bPillage>1</bPillage>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>

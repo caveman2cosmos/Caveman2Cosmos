@@ -12091,7 +12091,7 @@
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TIDAL_HARNESS</Type>
 			<Description>TXT_KEY_IMPROVEMENT_TIDAL_HARNESS</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_TIDAL_HARNESS</Civilopedia>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_TIDAL_HARNESS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TIDAL_HARNESS</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>

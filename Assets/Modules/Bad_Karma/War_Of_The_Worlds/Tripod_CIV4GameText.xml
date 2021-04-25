@@ -4,4 +4,8 @@
 		<Tag>TXT_KEY_UNIT_TRIPOD</Tag>
 		<English>Martian Tripod</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TRIPOD_PEDIA</Tag>
+		<English>TBD</English>
+	</TEXT>
 </Civ4GameText>

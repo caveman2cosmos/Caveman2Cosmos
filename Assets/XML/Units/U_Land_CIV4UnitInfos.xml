@@ -800,7 +800,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PACK_LLAMA</Description>
-			<Civilopedia>TXT_KEY_UNIT_PACK_LLAMA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_PACK_LLAMA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -1807,7 +1807,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SPY</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1872,7 +1872,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AGENT</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1943,7 +1943,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SPECIAL_AGENT</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2025,7 +2025,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_007</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -27256,7 +27256,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_THIEF</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_INFILTRATOR</DefaultUnitAI>
 			<UnitAIs>
@@ -27438,7 +27438,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_ROGUE</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_INFILTRATOR</DefaultUnitAI>
 			<UnitAIs>
@@ -27622,7 +27622,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_BURGLAR</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_INFILTRATOR</DefaultUnitAI>
 			<UnitAIs>
@@ -27813,7 +27813,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_CUTTHROAT</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PILLAGE</DefaultUnitAI>
 			<UnitAIs>
@@ -28030,7 +28030,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_SCOUNDREL</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_INFILTRATOR</DefaultUnitAI>
 			<UnitAIs>
@@ -28249,7 +28249,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_GUNFIGHTER</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_INFILTRATOR</DefaultUnitAI>
 			<UnitAIs>
@@ -28471,7 +28471,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_THUG</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_INFILTRATOR</DefaultUnitAI>
 			<UnitAIs>
