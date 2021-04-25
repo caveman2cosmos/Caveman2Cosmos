@@ -2155,10 +2155,6 @@
 		<Russian>Эффект - Лунная экономика</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CISLUNAR_EFFECT_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_EMP</Tag>
 		<English>Cislunar EMP Power Supply</English>
 		<Russian>Сеть энергопередачи (Лун. орб.)</Russian>
@@ -2848,10 +2844,6 @@
 		<Tag>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT</Tag>
 		<English>Effect - Multiversal Economy</English>
 		<Russian>Эффект - Экономика Метавселенной</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT_PEDIA</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COSMIC_ECONOMY_PEDIA</Tag>
@@ -4722,10 +4714,6 @@
 		<Tag>TXT_KEY_BUILDING_GALACTIC_EFFECT</Tag>
 		<English>Effect - Galactic Economy</English>
 		<Russian>Эффект - Галактическая экономика</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GALACTIC_EFFECT_PEDIA</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_GROUP_COLONY</Tag>
@@ -11522,10 +11510,6 @@
 		<Russian>Эффект - Экономика солн. системы</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SOLAR_EFFECT_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_IMPORTER_EXPORTER</Tag>
 		<English>Deep Space Solar Importer/Exporter</English>
 		<Russian>Космич. таможня</Russian>
@@ -13262,10 +13246,6 @@
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_EFFECT</Tag>
 		<English>Effect - Universal Economy</English>
 		<Russian>Эффект - Экономика Вселенной</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_UNIVERSAL_EFFECT_PEDIA</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_LIBRARY</Tag>

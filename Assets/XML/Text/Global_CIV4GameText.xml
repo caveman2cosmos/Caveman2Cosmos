@@ -6093,22 +6093,6 @@
 		<Russian>Í. ×</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MAPSWITCH_EXAMPLE</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAPSWITCH_EXAMPLE_HELP</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAP_EXAMPLE</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAP_EXAMPLE_HELP</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_PERFECTMONGOOSE_DESCR</Tag>
 		<English>Official Civ4 Port of Civ5's PerfectWorld 3, with new Perlin Noise landmass generator and optional new climate system. River, Lake, Feature and Resource placement remain unchanged from PerfectWorld 2.</English>
 		<French>Port Civ4 officiel de PerfectWorld 3 de Civ5, avec un nouveau générateur de masse terrestre Perlin Noise et un nouveau système de climatisation en option. Le placement de la rivière, du lac, des entités et des ressources reste inchangé par rapport à PerfectWorld 2.</French>

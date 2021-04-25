@@ -300,7 +300,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_EFFECT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -327,7 +327,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SOLAR_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SOLAR_EFFECT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_SOLAR_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -354,7 +354,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_GALACTIC_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_EFFECT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -381,7 +381,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSAL_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_UNIVERSAL_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_UNIVERSAL_EFFECT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSAL_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -408,7 +408,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_ECONOMY_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_ECONOMY_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>

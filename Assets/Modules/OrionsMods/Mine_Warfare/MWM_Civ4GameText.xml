@@ -112,10 +112,6 @@
 		<Russian>Удалить все найденные вражеские мины.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_SWEEP_FOR_LAND_MINE_MESSAGE</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_MINE_LAND</Tag>
 		<English>Remove Land Mine</English>
 		<Russian>Ðàçìèíèðîâàòü</Russian>
@@ -134,10 +130,6 @@
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_SEA_MINE_HELP</Tag>
 		<English>Remove any enemy mines you find.</English>
 		<Russian>Удалить все найденные вражеские мины.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_SWEEP_FOR_SEA_MINE_MESSAGE</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_FIELD_HELP</Tag>
