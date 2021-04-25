@@ -288,64 +288,6 @@
 		<Russian>Áåçá.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ARROGANT</Tag>
-		<English>Arrogant</English>
-		<French>
-			<Text>Arrogant</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Arrogant</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Arrogante</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Arrogante:Arrogante:Arrogantes:Arrogantes</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Polish>Arogancki</Polish>
-		<Russian>Âûñîêîìåðíûé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ARROGANT_PEDIA</Tag>
-		<English>This ruler sees other leaders as inferior to himself, and doesn't take them seriously. He tends to adopt a condescending attitude in negotiations and ignores many reports of his spies as exaggerated, confident that his rivals can't really exceed him. - TR Team.</English>
-		<Italian>Questo leader vede gli altri leader come inferiori rispetto a lui, e non li prende seriamente. Tende ad adottare un atteggiamento accondiscendente nelle negoziazioni, e ignora molti dei rapporti provenienti dalla sue spie ritenendoli esagerati, ritenendo che i suoi rivali non possano veramente competere con lui.</Italian>
-		<Russian>Этот правитель считает других лидеров ниже себя и не воспринимает их всерьез. Он склонен проявлять снисходительность на переговорах и игнорирует многие сообщения о своих шпионах как преувеличенные, будучи уверенным, что его соперники действительно не могут превзойти его.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ARROGANT_SHORT</Tag>
-		<English>Arr</English>
-		<French>
-			<Text>Arr</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Arr</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Arr</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Arr</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Aro</Polish>
-		<Russian>Âûñ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ATTITUDE_MODIFIER_NEGATIVE</Tag>
 		<English>[ICON_BULLET]%D1_Num Diplomacy Penalty (inverts to a bonus with Leaders with same trait)</English>
 		<French>[ICON_BULLET]%D1_Num Pénalité Diplomatique (se compense avec un bonus pour un Leader du meme trait)</French>
@@ -1922,63 +1864,6 @@
 		<Russian>[TAB]Ýòî äðóãàÿ íîâàÿ îñîáåííîñòü ââåäåííàÿ ïàêåòîì ðàñøèðåíèÿ Warlords, è êàæåòñÿ, íå î÷åíü õîðîøî ïðîäóìàíàÿ. Ôàêòè÷åñêè òî, ÷òî ÿ ðàññìàòðèâàþ ýòî êàê îäíó èç ñàìûõ ñëàáûõ ÷åðò íå äîëæíî áûòü óäèâèòåëüíûì, òàê êàê ýòî ìíåíèå, ðàçäåëåííîå áîëüøèíñòâîì èãðîêîâ--õîòÿ ÿ ïðåäîñòàâëÿþ, ÷òî Çàùèòíèê äåéñòâèòåëüíî èìååò åãî ôàíàòîâ.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ARCHERY]Ñòðåëüáà èç ëóêà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASONRY]Êàìåííàÿ êëàäêà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_POLYTHEISM]Ïîëèòåèçì[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_SAILING]Ìîðåïëàâàíèå[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_FEUDALISM]Ôåîäàëèçì[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MACHINERY]Ñëîæíûå ìåõàíèçìû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ENGINEERING]Èíæåíåðíîå äåëî[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_GUNPOWDER]Ïîðîõ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CHEMISTRY]Õèìèÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_RIFLING]Íàðåçíûå ñòâîëû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Êîíâåéåð[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_TEMPLE_OF_ARTEMIS]Õðàì Àðòåìèäû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_LIGHTHOUSE]Àëåêñàíäðèéñêèé ìàÿê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_CHICHEN_ITZA]×è÷åí-Èöà[\LINK][PARAGRAPH:1][H1]Ëó÷øèå çäàíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BARRACKS]Êàçàðìû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_WALLS]Ñòåíû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_CASTLE]Çàìîê[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_VASSALAGE]Âàññàëüíàÿ çàâèñèìîñòü[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_THEOCRACY]Òåîêðàòèÿ[\LINK][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Ïîêà Çàùèòíèê ñëàá, îí íå èñïîëüçóåòñÿ. Êîãäà âû çàõâàòèòå ãîðîä, âàøè ñâîáîäíî-óëó÷øåííûå þíèòû ëó÷øå îñíàùåíû, ÷òîáû çàùèòèòü âàøå íîâîå âëàäåíèå, êîòîðîå, î÷åíü âåðîÿòíî, ïîäïàäåò ïîä êîíòðàòàêó. Ôàêòè÷åñêè, âàøè îãåñòðåëüíûå þíèòû ìîãóò ïîòåíöèàëüíî âûïîëíèòü äâîéíóþ çàäà÷ó: è êàê íàïàäàþùèå è êàê çàùèòíèêè. (Áîëüøèíñòâî ëó÷íèêîâ, îäíàêî, ñëàáûå íàïàäàþøèå è ëó÷øå âñåãî èñïîëüçóþòñÿ òîëüêî íà çàùèòå.)[PARAGRAPH:1]Åñëè âû èìååòå èñòî÷íèê êàìíÿ, ñòåíû è çàìêè åùå áîëåå äåøåâû, ñîçäàâàÿ ìåíüøóþ íàãðóçêó ïðè ñòðîèòåëüñòâå. Ñêîìáèíèðîâàííûå ñ ÷óäåñàìè ïîäîáíûìè Õðàìó Àðòåìèäû è Àëåêñàíäðèéñêîìó ìàÿêó, âû ìîæåòå ñäåëàòü äåøåâûå çàìêè Çàùèòíèêà ÷àñòüþ ýêîíîìèêè òîðãîâûõ ïóòåé, êîòîðàÿ ìîæåò áûòü î÷åíü ïîëåçíîé â ñåðåäèíå ïåðèîäà èãðû. Âû òàêæå ìîæåòå èñïîëüçîâàòü äåøåâûå çàìêè, ÷òîáû äîáàâèòü øïèîíàæ â BtS. Ôàêòè÷åñêè, íåêîòîðûå èãðîêè íà÷èíàþò èãðàòü EP, èëè "Espionage Economy" (Ýêîíîìèêà øïèîíàæà), ãäå ïîëçóíîê íàóêè âûêëþ÷àåòñÿ äî 0% ïîñëå Àëôàâèòà è áîëüøèíñòâî îñòàþùèõñÿ òåõíîëîãèé ïðèîáðåòàþòñÿ ÷åðåç êðàæó òåõíîëîãèé.[PARAGRAPH:1]Öèâèëèçàöèÿ, êîòîðîé âåðîÿòíî áîëüøå âñåãî ïðèíîñèò ïîëüçó ýòà ÷åðòà Êèòàé, ïîòîìó ÷òî èõ UU ÿâëÿåòñÿ îäíèì èç ëó÷øèõ þíèòîâ ëó÷íèêîâ â èãðå--×è-Êî-Íè, êîòîðûé ìîæåò è äîëæåí èñïîëüçîâàòüñÿ êàê åäèíèöà íàïàäåíèÿ. Òðåíèðîâêà I òîëüêî óâåëè÷èâàåò åå ìîùü, äàâàÿ åìó øàíñ äîïîëíèòåëüíîãî ïåðâîãî óäàðà êðîìå åãî 2 ñâîáîäíûõ ïåðâûõ óäàðîâ.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Ïðîáëåìà ñ Çàùèòíîé ÷åðòîé ñîñòîèò â òîì, ÷òî îíà ÿâëÿåòñÿ â çíà÷èòåëüíîé ñòåïåíè îáîðîíèòåëüíîé ïî ïðèðîäå. Ñâîáîäíîå óëó÷øåíèå Ãîðîäñêîé ãàðíèçîí ïîëåçíî òîëüêî òîãäà, êîãäà þíèòû ïîä àòàêîé â ãîðîäå. Ñòåíû è çàìêè--êîòîðûå ÿâëÿþòñÿ äîâîëüíî äåøåâûìè äëÿ íà÷àëà, äåëàþò èõ äâîéíóþ ñêîðîñòü ïðîèçâîäñòâà ìåíåå ïðèâëåêàòåëüíîé--àíàëîãè÷íî ÿâëÿþòñÿ ïîëåçíûìè òîëüêî êîãäà âû ïîä îãíåì. Òîëüêî ñâîáîäíîå óëó÷øåíèå Òðåíèðîâêà I àòàêóþùåå óëó÷øåíèå, íî êàê ÷àñòî âû àòàêóåòå ëó÷íèêàìè? Åñëè îíè íå ×è-Êî-Íè, êîíå÷íî. (Õîòÿ ýòî ìîæåò áûòü ïîëåçíûì äëÿ âàøèõ áîëåå àãðåññèâíûõ îãíåñòðåëüíûõ þíèòîâ.)[PARAGRAPH:1]Ïðîáëåìà ñ çàùèòíîé èãðîé â Civilization IV ýòî òî, ÷òî ÈÈ òàê ëþáèò ðàçáîé. Åñëè âàøè þíèòû çàæèìàþòñÿ ïîçàäè ãîðîäñêèõ ñòåí, ÈÈ áóäåò ðàäîñòíî ïîñòåïåííî ñíèæàòü âàøó ýêîíîìèêó â ðóèíû ãðàáÿ êàæäóþ êëåòêó óëó÷øåíèé â ïîëå çðåíèÿ. Âàøè þíèòû äîëæíû ðèñêîâàòü âûõîäÿ èç âàøèõ ãîðîäîâ çàùèùàòü âàøó òåððèòîðèþ, ÷òî äåëàåò ñòåíû è çàìêè ïî÷òè áåñïîëåçíûìè--òàê æå ñ óëó÷øåíèåì Ãîðîäñêîé ãàðíèçîí.[PARAGRAPH:1]Âî ìíîãîì Çàùèòíàÿ ÷åðòà, êàæåòñÿ, äîáàâëåíà áîëüøå äëÿ òîãî, ÷òîáû èçâëå÷ü âûãîäó ÈÈ íàä èãðîêîì ÷åëîâåêîì. ÈÈ ïðåäïî÷èòàåò èãðàòü çàùèòíî ãëàâíûì îáðàçîì, òàê ÷òî Çàùèòíèê ïîäõîäèò äëÿ èõ ïðîãðàììèðîâàíèÿ. Ëþáîé ÷åëîâå÷åñêèé èãðîê ñêàæåò âàì ÷òî òî ïðåâûøåíèå ïðîòèâ Çàùèòíèêà Äëèííîëó÷íèêà, óêðåïëåííîãî â ãîðîäå íà õîëìå ñ çàìêîì è ñòåíàìè, ìîæåò áûòü çàïóãèâàþùèì--õîòÿ êîíå÷íî âåñüìà ïðåîäîëèìûì. Òîëüêî ïðèâåäèòå áîëüøå Òðåáóøåòîâ â îòðÿäå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_RECKLESS</Tag>
-		<English>Schemer</English>
-		<French>
-			<Text>Comploteur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Schemer</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Cospiratore</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Conspirador:Conspiradora:Conspiradores:Conspiradoras</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Polish>Intrygant</Polish>
-		<Russian>Ïðîæåêòåð</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_RECKLESS_PEDIA</Tag>
-		<English>This leader is known to resort to all means to achieve his goals, including outright lies and betrayal. As this is well-known, he harbors a deep distrust for higher military ranks who don't understand his way of thinking and doing. Without military support, he is relatively inept at strategic command. - TR Team.</English>
-		<Russian>Известно, что этот лидер использует все средства для достижения своих целей, включая откровенную ложь и предательство. Как известно, он испытывает глубокое недоверие к высшим военным чинам, которые не понимают его образ мыслей и действий. Без поддержки опытных военных он довольно плох в вопросах стратегического руководства.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_RECKLESS_SHORT</Tag>
-		<English>Sch</English>
-		<French>
-			<Text>Com</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Sch</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Com</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Con</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Itr</Polish>
-		<Russian>Ïðîæ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVIDX_LOCAL</Tag>
 		<English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1 to local RevIdx Penalty</English>
 		<French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1 de pénalité 'RevIdx'</French>
@@ -2141,63 +2026,6 @@
 		<Russian>Ìîð.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_SEMI_CIVILIZED</Tag>
-		<English>Semi Civilized</English>
-		<French>
-			<Text>Presque Civilisé</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Semi Civilized</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Semi Civilizzato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Semicivilizado:Semicivilizada:Semicivilizados:Semicivilizadas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Polish>Pół-Cywilizowany</Polish>
-		<Russian>Ðåòðîãðàä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_SEMI_CIVILIZED_PEDIA</Tag>
-		<English>This leader has done much to bring the fruits of civilization to his peoples, but it is still not enough. His people is still treated with prejudice, and it will require much effort to win them the respect they deserve. - TR Team.</English>
-		<Russian>Этот лидер много сделал для того, чтобы принести плоды цивилизации своим народам, но этого все еще недостаточно. К его народу по-прежнему относятся с предубеждениями, и потребуется немало усилий, чтобы завоевать их уважение, которого они заслуживают.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_SEMI_CIVILIZED_SHORT</Tag>
-		<English>S-C</English>
-		<French>
-			<Text>S-C</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>S-C</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>S-C</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>S-C</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>PCw</Polish>
-		<Russian>Ðåòð.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL</Tag>
 		<English>Spiritual</English>
 		<French>
@@ -2356,60 +2184,6 @@
 		</Spanish>
 		<Polish>Wyb</Polish>
 		<Russian>Òåìï.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_TEST</Tag>
-		<English>Test</English>
-		<French>
-			<Text>Barbare</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Barbarisch</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Barbaro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Barbarian</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Testowy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_TEST_PEDIA</Tag>
-		<English>This is just a fill in for testing trait tags.</English>
-		<Italian>Caratteristica ancora da testare.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_TEST_SHORT</Tag>
-		<English>Tst</English>
-		<French>
-			<Text>Tst</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>BrB</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Tst</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>BrB</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADE_YIELD_MODIFIERS_C2C</Tag>
