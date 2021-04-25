@@ -17970,8 +17970,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GREAT_GENERAL</Tag>
 		<English>Lead by Warlord</English>
-		<French>Dirig&#233; par un seigneur de guerre</French>
-		<German>F&#252;hrung durch Kriegsherr</German>
+		<French>Dirigé par un seigneur de guerre</French>
+		<German>Führung durch Kriegsherr</German>
 		<Italian>Guerriero al comando</Italian>
 		<Spanish>Bajo el liderato de un Caudillo</Spanish>
 	</TEXT>
@@ -17979,7 +17979,7 @@
 		<Tag>TXT_KEY_PROMOTION_LEADERSHIP</Tag>
 		<English>Leadership</English>
 		<French>Commandement</French>
-		<German>F&#252;hrerschaft</German>
+		<German>Führerschaft</German>
 		<Italian>Comando</Italian>
 		<Spanish>Liderazgo</Spanish>
 	</TEXT>
@@ -17997,6 +17997,6 @@
 		<French>Tactiques</French>
 		<German>Taktik</German>
 		<Italian>Tattica</Italian>
-		<Spanish>T&#225;cticas</Spanish>
+		<Spanish>Tácticas</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -1730,7 +1730,7 @@
 		<Tag>TXT_KEY_LEADER_AUGUSTUS</Tag>
 		<English>Augustus Caesar</English>
 		<French>
-			<Text>Auguste C&#233;sar</Text>
+			<Text>Auguste César</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1874,7 +1874,7 @@
 		<Tag>TXT_KEY_LEADER_RAMESSES</Tag>
 		<English>Ramesses II</English>
 		<French>
-			<Text>Rams&#232;s II</Text>
+			<Text>Ramsès II</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>

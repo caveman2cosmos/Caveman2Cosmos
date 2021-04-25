@@ -854,18 +854,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_RELIGION</Tag>
 		<English>Spread Automatically</English>
-		<French>R&#233;pandre automatiquement</French>
+		<French>Répandre automatiquement</French>
 		<German>Automatisch verbreiten</German>
 		<Italian>Diffusione automatica.</Italian>
-		<Spanish>Propagar autom&#225;ticamente</Spanish>
+		<Spanish>Propagar automáticamente</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_RELIGION_HELP</Tag>
 		<English>Will order the unit to automatically spread its religion or corporation</English>
-		<French>Donner l'ordre &#224; l'unit&#233; de r&#233;pandre automatiquement sa religion ou sa soci&#233;t&#233; commerciale</French>
+		<French>Donner l'ordre à l'unité de répandre automatiquement sa religion ou sa société commerciale</French>
 		<German>Der Einheit wird angeordnet, ihre Religion oder Kapitalgesellschaft automatisch zu verbreiten.</German>
-		<Italian>Ordiner&#224; all'unit&#224; di diffondere automaticamente la sua religione o corporazione.</Italian>
-		<Spanish>Ordenar&#225; a la unidad que propague autom&#225;ticamente su religi&#243;n o corporaci&#243;n</Spanish>
+		<Italian>Ordinerà all'unità di diffondere automaticamente la sua religione o corporazione.</Italian>
+		<Spanish>Ordenará a la unidad que propague automáticamente su religión o corporación</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_HUNT</Tag>

@@ -1401,14 +1401,14 @@
 		<Tag>TXT_KEY_BUILD_WHALING_BOATS</Tag>
 		<English>Create [LINK=IMPROVEMENT_WHALING_BOATS]Whaling Boats[\LINK]</English>
 		<French>construire des [LINK=IMPROVEMENT_WHALING_BOATS]baleiniers[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_WHALING_BOATS]Walf&#228;nger[\LINK] bauen</German>
+		<German>[LINK=IMPROVEMENT_WHALING_BOATS]Walfänger[\LINK] bauen</German>
 		<Italian>Creare delle [LINK=IMPROVEMENT_WHALING_BOATS]baleniere[\LINK]</Italian>
 		<Spanish>Crear [LINK=IMPROVEMENT_WHALING_BOATS]barcos balleneros[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SCRUB_FALLOUT</Tag>
 		<English>Scrub [LINK=FEATURE_FALLOUT]Fallout[\LINK]</English>
-		<French>[LINK=FEATURE_FALLOUT]D&#233;contaminer[\LINK]</French>
+		<French>[LINK=FEATURE_FALLOUT]Décontaminer[\LINK]</French>
 		<German>[LINK=FEATURE_FALLOUT]Fallout-Entfernung[\LINK]</German>
 		<Italian>Bonificare le [LINK=FEATURE_FALLOUT]scorie radioattive[\LINK]</Italian>
 		<Spanish>Descontaminar [LINK=FEATURE_FALLOUT]lluvia radiactiva[\LINK]</Spanish>
@@ -1419,12 +1419,12 @@
 		<French>construire une [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]plate-forme offshore[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_OFFSHORE_PLATFORM]Bohrinsel[\LINK] errichten</German>
 		<Italian>Creare una [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]piattaforma petrolifera[\LINK]</Italian>
-		<Spanish>Crear una [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]plataforma petrol&#237;fera[\LINK]</Spanish>
+		<Spanish>Crear una [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]plataforma petrolífera[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FISHING_BOATS</Tag>
 		<English>Create [LINK=IMPROVEMENT_FISHING_BOATS]Fishing Boats[\LINK]</English>
-		<French>construire des [LINK=IMPROVEMENT_FISHING_BOATS]bateaux de p&#234;che[\LINK]</French>
+		<French>construire des [LINK=IMPROVEMENT_FISHING_BOATS]bateaux de pêche[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_FISHING_BOATS]Fischerboote[\LINK] bauen</German>
 		<Italian>Construire dei [LINK=IMPROVEMENT_FISHING_BOATS]pescherecci[\LINK]</Italian>
 		<Spanish>Crear [LINK=IMPROVEMENT_FISHING_BOATS]barcos pesqueros[\LINK]</Spanish>

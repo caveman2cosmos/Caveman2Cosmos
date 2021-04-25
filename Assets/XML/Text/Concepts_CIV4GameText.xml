@@ -3361,8 +3361,8 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_BTS_BUILDINGS</Tag>
 		<English>Beyond the Sword Buildings</English>
-		<French>B&#226;timents de Beyond The Sword</French>
-		<German>Beyond The Sword-Geb&#228;ude</German>
+		<French>Bâtiments de Beyond The Sword</French>
+		<German>Beyond The Sword-Gebäude</German>
 		<Italian>Edifici di Beyond the Sword</Italian>
 		<Spanish>Edificios de "Beyond The Sword"</Spanish>
 	</TEXT>
@@ -3371,22 +3371,22 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<English>Beyond the Sword Civilizations</English>
 		<French>Civilisations de Beyond The Sword</French>
 		<German>Beyond The Sword-Zivilisationen</German>
-		<Italian>Civilt&#224; di Beyond the Sword</Italian>
+		<Italian>Civiltà di Beyond the Sword</Italian>
 		<Spanish>Civilizaciones de "Beyond The Sword"</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BTS_LEADERS</Tag>
 		<English>Beyond the Sword Leaders</English>
 		<French>Dirigeants de Beyond The Sword</French>
-		<German>Beyond The Sword-Staatsoberh&#228;upter</German>
+		<German>Beyond The Sword-Staatsoberhäupter</German>
 		<Italian>Leader di Beyond the Sword</Italian>
-		<Spanish>L&#237;deres de "Beyond The Sword"</Spanish>
+		<Spanish>Líderes de "Beyond The Sword"</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BTS_RULES_CHANGES</Tag>
 		<English>Beyond the Sword Rules Changes</English>
-		<French>R&#232;gles modifi&#233;es de Beyond The Sword</French>
-		<German>Beyond The Sword-Regel&#228;nderungen</German>
+		<French>Règles modifiées de Beyond The Sword</French>
+		<German>Beyond The Sword-Regeländerungen</German>
 		<Italian>Cambiamenti delle regole di Beyond the Sword</Italian>
 		<Spanish>Cambios en las reglas de "Beyond The Sword"</Spanish>
 	</TEXT>
@@ -3396,14 +3396,14 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<French>Technologies de Beyond The Sword</French>
 		<German>Beyond The Sword-Technologien</German>
 		<Italian>Tecnologie di Beyond the Sword</Italian>
-		<Spanish>Tecnolog&#237;as de "Beyond The Sword"</Spanish>
+		<Spanish>Tecnologías de "Beyond The Sword"</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BTS_UNITS</Tag>
 		<English>Beyond the Sword Units</English>
-		<French>Unit&#233;s de Beyond The Sword</French>
+		<French>Unités de Beyond The Sword</French>
 		<German>Beyond The Sword-Einheiten</German>
-		<Italian>Unit&#224; di Beyond the Sword</Italian>
+		<Italian>Unità di Beyond the Sword</Italian>
 		<Spanish>Unidades de "Beyond The Sword"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3417,8 +3417,8 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GREAT_GENERALS</Tag>
 		<English>Great Generals</English>
-		<French>G&#233;n&#233;raux illustres</French>
-		<German>Gro&#223;e Gener&#228;le</German>
+		<French>Généraux illustres</French>
+		<German>Große Generäle</German>
 		<Italian>Grandi Generali</Italian>
 		<Spanish>Los grandes generales</Spanish>
 	</TEXT>
@@ -3426,7 +3426,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Tag>TXT_KEY_CONCEPT_IRRIGATION</Tag>
 		<English>Irrigation</English>
 		<French>Irrigation</French>
-		<German>Bew&#228;sserung</German>
+		<German>Bewässerung</German>
 		<Italian>Irrigazione</Italian>
 		<Spanish>Riego</Spanish>
 	</TEXT>
