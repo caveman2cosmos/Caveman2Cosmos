@@ -9232,6 +9232,7 @@ void CvGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYiel
 	}
 }
 
+/* Toffer - Unused, but might be needed for recalc...
 void CvGame::removePlotExtraYield(int iX, int iY)
 {
 	for (std::vector<PlotExtraYield>::iterator it = m_aPlotExtraYields.begin(); it != m_aPlotExtraYields.end(); ++it)
@@ -9249,6 +9250,7 @@ void CvGame::removePlotExtraYield(int iX, int iY)
 		pPlot->updateYield();
 	}
 }
+*/
 
 int CvGame::getPlotExtraCost(int iX, int iY) const
 {
