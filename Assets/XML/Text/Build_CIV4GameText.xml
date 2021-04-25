@@ -1035,10 +1035,6 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SUBMERGED_TOWN]zatopione miasto[\LINK]</Polish>
 		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_SUBMERGED_TOWN]Ïîäâîäíûé ãîðîä[\LINK]</Russian>
 	</TEXT>
-	<!-- <TEXT>
-		<Tag>TXT_KEY_BUILD_SUBMERGED_TOWN_DEEP</Tag>
-		<English>Build [LINK=IMPROVEMENT_SUBMERGED_TOWN_DEEP]Submerged Town (Deep)[\LINK]</English>
-	</TEXT> -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUBURBS</Tag>
 		<English>Build [LINK=IMPROVEMENT_SUBURBS]Suburbs[\LINK]</English>

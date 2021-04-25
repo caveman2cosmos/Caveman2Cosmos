@@ -2172,10 +2172,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BANDIT_FOOTPAD</Tag>
-		<English>
-			<Text>Bandit Footpad</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural> 		</English>
+		<English>Bandit Footpad</English>
 		<French>Bandit à pied</French>
 		<Italian>
 			<Text>Bandito a piedi</Text>
@@ -2197,10 +2194,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BANDIT_RIDER</Tag>
-		<English>
-			<Text>Bandit Rider</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural> 		</English>
+		<English>Bandit Rider</English>
 		<French>Bandit à cheval</French>
 		<Italian>
 			<Text>Bandito a cavallo</Text>
