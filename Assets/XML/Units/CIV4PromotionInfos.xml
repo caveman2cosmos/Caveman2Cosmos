@@ -9064,7 +9064,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_COMMAND7</Type>
-			<Description>TXT_KEY_PROMOTION_COMMAND6</Description>
+			<Description>TXT_KEY_PROMOTION_COMMAND7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_COMMAND6</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_COMMAND</PromotionLine>
