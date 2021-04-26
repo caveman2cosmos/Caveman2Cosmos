@@ -1085,16 +1085,6 @@
 		<Russian>Подразделения получают больше опыта после сражений внутри культурных границ, Великие Генералы появляются чаще, и военная усталость растет медленнее. Производство пищи в столице увеличено на 10%. Огромная империя страдает от возрастания расходов на содержание.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_CHOOSE_CURRENCY</Tag>
-		<English>[ICON_BULLET]Can adopt a standard currency</English>
-		<French>[ICON_BULLET]Peut adopter une monnaie standard</French>
-		<German>[ICON_BULLET]Kann eine Standardwährung übernehmen</German>
-		<Italian>[ICON_BULLET]Può adottare una valuta standard</Italian>
-		<Spanish>[ICON_BULLET]Puede adoptar una moneda estándar</Spanish>
-		<Polish>[ICON_BULLET]Możliwość przyjęcia standardowej waluty</Polish>
-		<Russian>[ICON_BULLET]Ìîæåò ïðèíÿòü ñòàíäàðòíóþ âàëþòó</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_CHURCH</Tag>
 		<English>Church</English>
 		<French>Eglise</French>

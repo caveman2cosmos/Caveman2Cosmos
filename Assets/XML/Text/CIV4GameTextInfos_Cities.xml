@@ -474,11 +474,6 @@
 		<Russian>Кайруан</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_AL_RAQQAH</Tag>
-		<English>al-Raqqah</English>
-		<Russian>Ракка</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AL_YAMAMA</Tag>
 		<English>al-Yamama</English>
 		<Russian>Ямама</Russian>
@@ -507,11 +502,6 @@
 		<Tag>TXT_KEY_CITY_NAME_AMASYA</Tag>
 		<English>Amasya</English>
 		<Russian>Àìàñüÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_AMAZONAS</Tag>
-		<English>Amazonas</English>
-		<Russian>Àìàñîíàñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AMBRACIA</Tag>
@@ -734,11 +724,6 @@
 		<English>Apollonia</English>
 		<Spanish>Apolonia</Spanish>
 		<Russian>Аполлония</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_APURIMAC</Tag>
-		<English>Apurímac</English>
-		<Russian>Àïóðèìàê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AQUILEIA</Tag>
@@ -1975,11 +1960,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAIRNS</Tag>
 		<English>Cairns</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_CAJAMARCA</Tag>
-		<English>Cajamarca</English>
-		<Russian>Êàõàìàðêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CALAH</Tag>
@@ -3741,10 +3721,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GIRSU</Tag>
 		<English>Girsu</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_GIULIANOVA</Tag>
-		<English>Giulianova</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GIVATAAIM</Tag>
@@ -5610,10 +5586,6 @@
 		<Russian>Крефельд</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_KRINA</Tag>
-		<English>Krina</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KRO</Tag>
 		<English>Kro</English>
 	</TEXT>
@@ -5835,11 +5807,6 @@
 		<English>Lam'an'ain</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_LAMBAYEQUE</Tag>
-		<English>Lambayeque</English>
-		<Russian>Ëàìáàåêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LAMEGO</Tag>
 		<English>Lamego</English>
 	</TEXT>
@@ -5903,11 +5870,6 @@
 		<Tag>TXT_KEY_CITY_NAME_LAVO</Tag>
 		<English>Lavapuri</English>
 		<Russian>Ëàâàïóðè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_LA_LIBERTAD</Tag>
-		<English>La Libertad</English>
-		<Russian>Ëà-Ëèáåðòàä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LA_ROCHELLE</Tag>
@@ -6154,11 +6116,6 @@
 		<Russian>Ëîïáóðè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_LORETO</Tag>
-		<English>Loreto</English>
-		<Russian>Ëîðåòî</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LOS_ANGELES</Tag>
 		<English>Los Angeles</English>
 		<Spanish>Los Ángeles</Spanish>
@@ -6283,10 +6240,6 @@
 		<Russian>Маастрихт</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MABLE</Tag>
-		<English>Mable</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MACAPA</Tag>
 		<English>Macapa</English>
 	</TEXT>
@@ -6328,11 +6281,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MADINAT_FAS</Tag>
 		<English>Madinat Fas</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MADRE_DE_DIOS</Tag>
-		<English>Madre de Dios</English>
-		<Russian>Ìàäðå-äå-Äüîñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MADRID</Tag>
@@ -6881,11 +6829,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MONT_DORE</Tag>
 		<English>Mont-Dore</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MOQUEGUA</Tag>
-		<English>Moquegua</English>
-		<Russian>Ìîêåãóà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MORIDUNON</Tag>
@@ -8183,11 +8126,6 @@
 		<Russian>Пасаргады</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_PASCO</Tag>
-		<English>Pasco</English>
-		<Russian>Ïàñêî</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PASSAU</Tag>
 		<English>Passau</English>
 		<Italian>Passavia</Italian>
@@ -8426,11 +8364,6 @@
 		<Tag>TXT_KEY_CITY_NAME_PITTSBURGH</Tag>
 		<English>Pittsburgh</English>
 		<Russian>Питтсбург</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_PIURA</Tag>
-		<English>Piura</English>
-		<Russian>Ïèóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PIWWELTHA</Tag>
@@ -10109,11 +10042,6 @@
 		<English>Tacatacuru</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_TACNA</Tag>
-		<English>Tacna</English>
-		<Russian>Òàêíà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TACOMA</Tag>
 		<English>Tacoma</English>
 		<Russian>Такома</Russian>
@@ -10986,11 +10914,6 @@
 		<Tag>TXT_KEY_CITY_NAME_UBON_RATCHATHANI</Tag>
 		<English>Ubon Ratchathani</English>
 		<Russian>Óáîíðàò÷àòõàíè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_UCAYALI</Tag>
-		<English>Ucayali</English>
-		<Russian>Óêàÿëè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_UDONG</Tag>

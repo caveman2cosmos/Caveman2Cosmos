@@ -371,32 +371,6 @@
 		<Russian>Àöòåêè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_BABYLONIA_ADJECTIVE</Tag>
-		<English>
-			<Text>Babylonian:Babylonians</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
-		<French>
-			<Text>babylonien:babylonienne:babyloniens:babyloniennes</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>babylonisch</German>
-		<Italian>
-			<Text>babilonese:babilonese:babilonesi:babilonesi</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>babilonio:babilonia:babilonios:babilonias</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Polish>Babilończyków</Polish>
-		<Russian>âàâèëîíÿíå:âàâèëîíÿíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_BABYLON_ADJECTIVE</Tag>
 		<English>
 			<Text>Babylonian:Babylonians</Text>
@@ -540,72 +514,6 @@
 		</Spanish>
 		<Polish>Barbarzyńcy</Polish>
 		<Russian>Âàðâàðû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_BYZANTINE_ADJECTIVE</Tag>
-		<English>Byzantine</English>
-		<French>
-			<Text>Byzantin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>byzantinisch</German>
-		<Italian>
-			<Text>bizantino:bizantina:bizantini:bizantine</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>bizantino:bizantina:bizantinos:bizantinas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Polish>Bizantyjczyków</Polish>
-		<Russian>âèçàíòèéöû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_BYZANTINE_DESC</Tag>
-		<English>Byzantine Empire</English>
-		<French>
-			<Text>Empire Byzantin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Reich der Byzantiner</German>
-		<Italian>
-			<Text>Impero Bizantino</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Imperio bizantino</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Imperium Bizantyjskie</Polish>
-		<Russian>Âèçàíòèÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_BYZANTINE_SHORT_DESC</Tag>
-		<English>Byzantines</English>
-		<French>
-			<Text>Byzance</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Byzanz</German>
-		<Italian>
-			<Text>Bisanzio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Bizancio</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Bizancjum</Polish>
-		<Russian>Âèçàíòèéöû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTIUM_ADJECTIVE</Tag>
@@ -1282,28 +1190,6 @@
 		<Russian>Õåòòû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_HOLYROMAN_DESC</Tag>
-		<English>Holy Roman Empire</English>
-		<French>
-			<Text>Saint Empire Romain</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Reich der Heiligen Römischen Nation</German>
-		<Italian>
-			<Text>Sacro Romano Impero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Sacro Imperio Romano</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Święte Imperium Rzymskie</Polish>
-		<Russian>Ñâÿùåííàÿ èìïåðèÿ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_HOLY_ROMAN_ADJECTIVE</Tag>
 		<English>
 			<Text>Holy Roman:Holy Romans</Text>
@@ -1438,28 +1324,6 @@
 		</Spanish>
 		<Polish>Inkowie</Polish>
 		<Russian>Èíêè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_INDEPENDENT_ADJECTIVE</Tag>
-		<English>Independent</English>
-		<French>
-			<Text>indépendant:indépendante:indépendants:indépendantes</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>unabhängig</German>
-		<Italian>
-			<Text>indipendente:indipendente:indipendenti:indipendenti</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>autónomo:autónoma:autónomos:autónomas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Polish>Niezależny</Polish>
-		<Russian>ñâîáîäíûå íàðîäû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_INDIA_ADJECTIVE</Tag>
@@ -1964,28 +1828,6 @@
 		<Russian>Ìîíãîëû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_NATIVE_ADJECTIVE</Tag>
-		<English>Native</English>
-		<French>
-			<Text>natif:native:natifs:natives</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>eingeboren</German>
-		<Italian>
-			<Text>nativo:nativa:nativi:native</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>nativo:nativa:nativos:nativas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Polish>Siuksowie</Polish>
-		<Russian>ìåñòíûå æèòåëè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_NATIVE_AMERICA_ADJECTIVE</Tag>
 		<English>
 			<Text>Sioux:Sioux's</Text>
@@ -2264,46 +2106,6 @@
 		</Spanish>
 		<Polish>Persja</Polish>
 		<Russian>Ïåðñû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_PERU_ADJECTIVE</Tag>
-		<English>Peruvian</English>
-		<French>Péruvien</French>
-		<German>peruanisch</German>
-		<Italian>
-			<Text>peruviano:peruviana:peruviani:peruviane</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>peruano:peruana:peruanos:peruanas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Polish>Peruwiańczyk</Polish>
-		<Russian>ïåðóàíöû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_PERU_DESC</Tag>
-		<English>Peruvian Empire</English>
-		<French>
-			<Text>Empire péruvien</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Reich der Peruaner</German>
-		<Italian>Impero peruviano</Italian>
-		<Spanish>Imperio Peruano</Spanish>
-		<Polish>Imperium Peruwiańskie</Polish>
-		<Russian>Ïåðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_PERU_SHORT_DESC</Tag>
-		<English>Peru</English>
-		<French>Pérou</French>
-		<Italian>Perù</Italian>
-		<Spanish>Perú</Spanish>
-		<Russian>Ïåðóàíöû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_POLYNESIA_ADJECTIVE</Tag>
