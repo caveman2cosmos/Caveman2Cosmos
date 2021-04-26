@@ -1,10 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_CIV_AFRICA</Tag>
-		<English>Africa</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_AFRICA_ADJECTIVE</Tag>
 		<English>Africa</English>
 	</TEXT>
@@ -19,10 +15,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_AFRICA_SHORT_DESC</Tag>
 		<English>Africa</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_ASIA</Tag>
-		<English>Asia</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ASIA_ADJECTIVE</Tag>
@@ -41,10 +33,6 @@
 		<English>Asia</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_EUROPE</Tag>
-		<English>Europe</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_EUROPE_ADJECTIVE</Tag>
 		<English>Europe</English>
 	</TEXT>
@@ -59,10 +47,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_EUROPE_SHORT_DESC</Tag>
 		<English>Europe</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MIDDLEEAST</Tag>
-		<English>Middle East</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MIDDLEEAST_ADJECTIVE</Tag>
@@ -81,10 +65,6 @@
 		<English>Middle East</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_NORTH_AMERICA</Tag>
-		<English>North America</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_NORTH_AMERICA_ADJECTIVE</Tag>
 		<English>North America</English>
 	</TEXT>
@@ -101,10 +81,6 @@
 		<English>North America</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_OCEANIA</Tag>
-		<English>Oceania</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_OCEANIA_ADJECTIVE</Tag>
 		<English>Oceania</English>
 	</TEXT>
@@ -119,10 +95,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_OCEANIA_SHORT_DESC</Tag>
 		<English>Oceania</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_SOUTH_AMERICA</Tag>
-		<English>South America</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SOUTH_AMERICA_ADJECTIVE</Tag>
