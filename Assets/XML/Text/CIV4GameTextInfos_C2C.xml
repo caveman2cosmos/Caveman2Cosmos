@@ -434,15 +434,6 @@
 		<French>Votre %s1_UnitName a été contrecarré et est maintenant en fuite pour échapper aux autorités!</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_TECH_YIELD</Tag>
-		<English>%s1: %D2%F3 (with [LINK=%s4_BonusType]%s5_Bonus[\LINK])</English>
-		<French>%s1 : %D2%F3 (avec [LINK=%s4_BonusType]%s5_Bonus[\LINK])</French>
-		<German>%s1: %D2%F3 (mit [LINK=%s4_BonusType]%s5_Bonus[\LINK])</German>
-		<Italian>%s1: %D2%F3 (con [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Italian>
-		<Spanish>%s1: %D2 %F3 (con [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Spanish>
-		<Russian>%s1: %D2%F3 (с [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PER_POP</Tag>
 		<English>(Per Population)</English>
 		<French>(par Population)</French>
