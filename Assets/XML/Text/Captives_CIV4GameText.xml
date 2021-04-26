@@ -1,21 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION</Tag>
-		<English>Join the city. Increasing the population by one.</English>
-		<French>Rejoindre la Ville. Augmente de 1 la population.</French>
-		<Italian>Unisci alla città; incrementa la popolazione di 1.</Italian>
-		<Russian>Ïîäñåëèòü â ãîðîä. Íàñåëåíèå ãîðîäà óâåëè÷èâàåòñÿ íà îäíîãî æèòåëÿ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION</Tag>
-		<English>Join the city. Increasing the population by one.</English>
-		<French>Rejoindre la Ville. Augmente de 1 la population.</French>
-		<Italian>Unisci alla città; incrementa la popolazione di 1.</Italian>
-		<Polish>Dołącz do miasta. Zwiększa populację miasta o 1.</Polish>
-		<Russian>Ïîäñåëèòü â ãîðîä. Íàñåëåíèå ãîðîäà óâåëè÷èâàåòñÿ íà îäíîãî æèòåëÿ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_ARCHER</Tag>
 		<English>Upgrade a Captive to an Archer.</English>
 		<French>Convertir le Prisonnier en Archer.</French>

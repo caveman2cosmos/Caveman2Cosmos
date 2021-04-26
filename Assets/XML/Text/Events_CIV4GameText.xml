@@ -7193,4 +7193,248 @@
 		<Polish>Rząd s1_civ_adjective drastycznie obcina finansowanie agencji kosmicznej, i zaoszczędzone pieniądze użyje w nowej "Walce z Ubóstwem".</Polish>
 		<Russian>Правительство %s1_civ_adjective резко сокращает финансирование своего Аэрокосмического агентства и использует сэкономленные средства для финансирования своей новой «Войны с бедностью».</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_BLARNEYVISIT</Tag>
+		<English>The %s4_civ_adjective leader is paying a state visit to the %s1_civ_adjective capital.</English>
+		<French>Le Leader %s4_civ_adjective prévoit une visite d'état dans la capitale %s1_civ_adjective.</French>
+		<Russian>Ëèäåð %s4_civ_adjective íàõîäèòñÿ ñ ãîñóäàðñòâåííûì âèçèòîì â %s1_civ_adjective ñòîëèöå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_BREAK_THE_BANK</Tag>
+		<English>A lucky gambler from %s2_city has broken the bank at Monte Carlo.</English>
+		<French>Un joueur chanceux de %s2_city a cassé la banque à Monte Carlo.</French>
+		<Italian>Un fortunato giocatore di %s2_city ha sbancato la roulette a Monte Carlo</Italian>
+		<Russian>Óäà÷ëèâûé èãðîê èç %s2_city ñóìåë ñîðâàòü êóø â Ìîíòå Êàðëî.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_DINO_ATTACK</Tag>
+		<English>An accident has led to an escape of animals at Dinosaur Park!</English>
+		<French>Un Accident a fait s'échapper des animaux du Parc de dinosaures!</French>
+		<Italian>Un incidente ha causato la fuga degli animali al Parco dei dinosauri!</Italian>
+		<Russian>Íåñ÷àñòíûé ñëó÷àé ïðèâåë ê ïîáåãó æèâîòíûõ èç Ïàðêà äèíîçàâðîâ!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_MEGA_ATTACK</Tag>
+		<English>An accident has led to an escape of animals at Pleistocene Park!</English>
+		<French>Un accident a conduit à une fuite d'animaux au Parc Pléistocène!</French>
+		<Italian>Un incidente ha causato una fuga di animali nel Parco del Pleistocene!</Italian>
+		<Russian>Íåñ÷àñòíûé ñëó÷àé ïðèâåë ê ïîáåãó æèâîòíûõ â Ïëåéñòîöåíîâîì ïàðêå!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_NSLCHAMP</Tag>
+		<English>The hometown hero of %s2_city is going to Disneyland after winning the %s1_civ_adjective National Sports League championship.</English>
+		<French>Le Héros local de %s2_city se déplace à Disneyland, après avoir gagné le Championnat de la Ligue Nationale de Sport %s1_civ_adjective.</French>
+		<Italian>Il campiona nazionale di %s2_city sta andando a Disneyland dopo aver vinto il Campionato nazionale %s1_civ_adjective.</Italian>
+		<Russian>Ðîäíîé ãîðîä ãåðîÿ %s2_city ñîáèðàåòñÿ ÷åñòâîâàòü åãî â Äèñíåéëåíäå ïîñëå îäåðæàííîé ïîáåäû â ñîðåâíîâàíèÿõ %s1_civ_adjective Êóáêà íàöèîíàëüíîé ñïîðòèâíîé ëèãè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_SUMMER_OF_LOVE</Tag>
+		<English>The Summer of Love has begun in the city of %s2 as the Woodstock Music Festival is held there.</English>
+		<French>L'été de l'Amour a commencé dans la ville de %s2, représenté par le Festival de Musique de Wookstock</French>
+		<Italian>La Summer of Love è iniziata a %s2 dove si tiene il festival di Woodstock.</Italian>
+		<Russian>Ëåòî Ëþáâè íà÷àëîñü â ãîðîäå %s2 ãäå ñåé÷àñ ïðîõîäèò Ôåñòèâàëü Âóäñòîê.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_VEGAS_JACKPOT</Tag>
+		<English>A lucky gambler from %s2_city has hit the jackpot on the Las Vegas Strip.</English>
+		<French>Un joueur chanceux de %s2_city a décroché le jackpot à Las Vegas.</French>
+		<Italian>Un fortunato giocatore d'azzardo di %s2_city ha vinto il jackpot sulla strip di Las Vegas.</Italian>
+		<Russian>Óäà÷ëèâûé èãðîê èç %s2_city ñóìåë ñîðâàòü êóø â Ëàñ-Âåãàñå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BLARNEYVISIT</Tag>
+		<English>Charmed by the eloquence granted to you by the Blarney Stone, the %s1_civ_adjective leader is paying a state visit to your capital.</English>
+		<French>Charmé par l'éloquence que vous apporte les pierres de Blarney, le leader %s1_civ_adjective prévoit une visite d'état dans votre Capitale.</French>
+		<Italian>Ammirato dall'eloquenza che la pietra di Blarney ti ha donato, il leader %s1_civ_adjective sta facendo una visita di stato alla tua capitale.</Italian>
+		<Russian>Îçàðåííûé êðàñíîðå÷èåì ïîëó÷åííûì îò êàìíÿ Áëàðíè, %s1_civ_adjective ëèäåð íàõîäèòñÿ ñ ãîñóäàðñòâåííûì âèçèòîì â âàøåé ñòîëèöå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_1</Tag>
+		<English>I hope this will build friendship between our two civilizations.</English>
+		<French>J'espère que cela va sceller l'amitié entre nos deux civilisations.</French>
+		<Italian>Spero che questo gesto sia la base di una grande amicizia tra le nostre due civiltà.</Italian>
+		<Russian>ß íàäåþñü, ÷òî ýòî ñîîðóæåíèå ñòàíåò îñíîâîé äëÿ äðóæáû ìåæäó íàøèìè ñòðàíàìè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_2</Tag>
+		<English>This visit made us closer.</English>
+		<French>Cette visite nous a rapprochés.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_OTHER_1</Tag>
+		<English>You have been invited to pay a state visit to the %s1_civ_adjective capital.</English>
+		<French>You avez été invité à faire une visite d'état dans la Capitale %s1_civ_adjective.</French>
+		<Italian>Sei stato invitato ad una visita di stato nella capitale %s1_civ_adjective.</Italian>
+		<Russian>Âû ïîëó÷èëè ïðèãëàøåíèå ñîâåðøèòü ãîñóäàðñòâåííûé âèçèò â %s1_civ_adjective ñòîëèöó.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_OTHER_2</Tag>
+		<English>We are now a bit closer after this visit.</English>
+		<French>Nous sommes maintenant un peu plus proches après cette visite.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK</Tag>
+		<English>A gambler from %s2_city has broken the bank at Monte Carlo! Of course, our tax collectors stand ready for just such an event.</English>
+		<French>Un joueur de %s2_city a cassé la banque à Monte Carlo! Bien sûr, nos collecteurs d'impôts sont prêts pour un tel événement.</French>
+		<Italian>Un fortunato giocatore di %s2_city ha sbancato la roulette a Monte Carlo! Ovviamente, i nostri esattori delle tasse stavano aspettando un simile evento.</Italian>
+		<Russian>Èãðîê èç %s2_city âçÿë äæýêïîò â Ìîíòå Êàðëî! Ðàçóìååòñÿ, íàøà íàëîãîâàÿ èíñïåêöèÿ íå äðåìëåò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK_1</Tag>
+		<English>Send our tax collectors to pay the lucky gambler a visit.</English>
+		<French>Envoyez nos collecteurs d'impôts pour rendre visite au joueur chanceux.</French>
+		<Italian>Mandate i nostri esattori a far visita al "fortunato" giocatore.</Italian>
+		<Russian>Îòïðàâèòü íàøèõ íàëîãîâûõ èíñïåêòîðîâ ïîèìåòü äîëþ ñ åãî âûèãðûøà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK_2</Tag>
+		<English>Good fortune should be enjoyed.</English>
+		<French>La bonne fortune doit être appréciée.</French>
+		<Italian>Dovrebbe godersi la sua buona stella.</Italian>
+		<Russian>Óäà÷åé ñëåäóåò íàñëàæäàòüñÿ...</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK_OTHER_1</Tag>
+		<English>A lucky gambler from %s2_city has broken the bank at Monte Carlo.</English>
+		<French>Un joueur chanceux de %s2_city a cassé la banque à Monte Carlo.</French>
+		<Italian>Un fortunato giocatore di %s2_city ha sbancato la roulette a Monte Carlo.</Italian>
+		<Russian>Óäà÷ëèâûé èãðîê èç %s2_city ñóìåë ñîðâàòü êóø â Ìîíòå Êàðëî.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_DINO_ATTACK</Tag>
+		<English>An accident has led to an escape of animals at Dinosaur Park! Several people are dead and dozens are injured.</English>
+		<French>Un Accident a fait s'échapper des animaux du Parc de dinosaures! Plusieurs personnes sont mortes, et des douzaines sont blessées.</French>
+		<Italian>Un incidente ha causato la fuga degli animali al Parco dei dinosauri! Molte persone sono morte, e ci sono dozzine di feriti.</Italian>
+		<Russian>Íåñ÷àñòíûé ñëó÷àé ïðèâåë ê ïîáåãó æèâîòíûõ èç Ïàðêà äèíîçàâðîâ!Íåñêîëüêî ÷åëîâåê ïîãèáëè è äåñÿòêè ïîëó÷èëè ðàíåíèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_DINO_ATTACK_1</Tag>
+		<English>Offer compensation to the affected families and conduct a safety audit of the park.</English>
+		<French>Offrir une compensation aux familles et mener un audit sécurité dans le parc.</French>
+		<Italian>Offri dei risarcimenti alle famiglie delle vittime e conduci un'indagine sulla sicurezza del parco.</Italian>
+		<Russian>Ïðåäëîæèòü êîìïåíñàöèþ äëÿ ïîñòðàäàâøèõ ñåìåé è ïðîâåñòè àóäèò áåçîïàñíîñòè ïàðêà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_DINO_ATTACK_2</Tag>
+		<English>We don't have the money to spare.</English>
+		<French>Nous n'avons pas d'argent à perdre.</French>
+		<Italian>Non abbiamo soldi da perdere.</Italian>
+		<Russian>Ó íàñ íåò ëèøíèõ äåíåã.</Russian>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_MEGA_ATTACK</Tag>
+		<English>An accident has led to an escape of animals at Pleistocene Park! Several people are dead and dozens are injured.</English>
+		<French>Un accident a conduit à une fuite d'animaux au Parc Pléistocène! Plusieurs personnes sont mortes et des dizaines ont été blessées.</French>
+		<Italian>Un incidente ha causato una fuga di animali nel Parco del Pleistocene! Molte persone sono morte e ci sono dozzine di feriti.</Italian>
+		<Russian>Íåñ÷àñòíûé ñëó÷àé ïðèâåë ê ïîáåãó æèâîòíûõ â Ïëåéñòîöåíîâîì ïàðêå! Íåñêîëüêî ÷åëîâåê ïîãèáëè è äåñÿòêè ïîëó÷èëè ðàíåíèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_MEGA_ATTACK_1</Tag>
+		<English>Offer compensation to the affected families.</English>
+		<French>Offrir une compensation aux familles affectées.</French>
+		<Italian>Offri un risarcimento alle famiglie delle vittime.</Italian>
+		<Russian>Ïðåäîñòàâèòü êîìïåíñàöèþ ïîñòðàäàâøèì ñåìüÿì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_MEGA_ATTACK_2</Tag>
+		<English>We don't have the money to spare.</English>
+		<French>Nous n'avons pas d'argent à perdre.</French>
+		<Italian>Non abbiamo soldi da perdere.</Italian>
+		<Russian>Ñåé÷àñ ó íàñ íåò ëèøíèõ äåíåã.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_NSLCHAMP</Tag>
+		<English>The hometown hero of %s2_city has just won the National Sports League championship! What is he going to do next?</English>
+		<French>Le Héros local de %s2_city vient de gagner le Championnat de la Ligue Nationale de Sport ! Que va-t-il faire ensuite ?</French>
+		<Italian>Il campionato nazionale di %s2_city ha appena vinto il Campionato nazionale! Cosa farà ora?</Italian>
+		<Russian>Â ðîäíîì ãîðîäå ãåðîÿ %s2_city èäåò ëèêîâàíèå ïî òîëüêî ÷òî âûèãðàííîìó èì ÷åìïèîíàòó â Íàöèîíàëüíîé ñïîðòèâíîé ëèãå! ×òî îí íàìåðåâàåòñÿ äåëàòü äàëüøå?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_NSLCHAMP_1</Tag>
+		<English>He's going to Disneyland!</English>
+		<French>Qu'Il aille à Disneyland!</French>
+		<Italian>Sta andando a Disneyland!</Italian>
+		<Russian>Îí îòïðàâèëñÿ â Äèñíåéëåíä!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_NSLCHAMP_2</Tag>
+		<English>Disneyland now has higher income.</English>
+		<French>Disneyland a maintenant un revenu plus élevé.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_NSL_CHAMP_OTHER_1</Tag>
+		<English>Disneyland is experiencing a rise in admissions after a visit from the winner of the %s1_civ_adjective National Sports League championship.</English>
+		<French>Disneyland connaît une augmentation des entrées après une visite du gagnant du Championnat de La Ligue Nationale de Sport %s1_civ_adjective.</French>
+		<Italian>Disneyland sta avendo un aumento delle entrate dopo una visita dal vincitore del Campionato nazionale %s1_civ_adjective.</Italian>
+		<Russian>Äèñíåéëåíä ïåðåæèâàåò íàïëûâ ïîñåòèòåëåé è ôàíàòîâ ïîñëå åãî ïîñåùåíèÿ àáñîëþòíûì ïîáåäèòåëåì â ñîðåâíîâàíèÿõ %s1_civ_adjective íàöèîíàëüíîé ñïîðòèâíîé ëèãè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_NSL_CHAMP_OTHER_2</Tag>
+		<English>Disneyland experienced a rise in admissions after a visit from the winner of the %s1_civ_adjective National Sports League championship.</English>
+		<French>Disneyland connaît une augmentation des entrées après une visite du gagnant du Championnat de La Ligue Nationale de Sport %s1_civ_adjective.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SUMMER_OF_LOVE</Tag>
+		<English>The Age of Aquarius has begun with the Summer of Love! Artists, students, and radicals of all kinds are turning on, tuning in, and dropping out.</English>
+		<French>L'Age du Verseau a commencé avec l'été de l'Amour! Artistes, étudiants, et les radicaux de toutes sortes sont sous tension, réglage en, et le décrochage scolaire</French>
+		<Italian>L'era dell'Aquarius è iniziata con la Summer of Love! Artisti, studenti e radicali di ogni tipo si stanno recando lì per divertirsi.</Italian>
+		<Russian>Ýðà Âîäîëåÿ íà÷àëàñü ñ Ëåòà Ëþáâè! Õóäîæíèêè, ñòóäåíòû, è ðàäèêàëû âñåõ ìàñòåé òóñóþòñÿ, çàæèãàþò è óãîðàþò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SUMMER_OF_LOVE_1</Tag>
+		<English>Like, far out, man, but what will the squares think?</English>
+		<French>Waouh, épatant, but que vont penser les ringards coincés?</French>
+		<Italian>Wow, grande, ma cosa ne penserà la gente?</Italian>
+		<Russian>Ýòî âðîäå êàê äàëåêî, à ÷òî íà ïëîùàäÿõ äóìàþò?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SUMMER_OF_LOVE_OTHER_1</Tag>
+		<English>The Summer of Love has begun in the %s1_civ_adjective Empire.</English>
+		<French>L'été de l'Amour a commencé dans l'Empire %s1_civ_adjective.</French>
+		<Italian>La Summer of Love è iniziata nell'impero %s1_civ_adjective.</Italian>
+		<Russian>Ëåòî Ëþáâè íà÷àëîñü â %s1_civ_adjective èìïåðèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT</Tag>
+		<English>A gambler from %s2_city has hit the jackpot on the Las Vegas Strip! Of course, our tax collectors stand ready for just such an event.</English>
+		<French>Un joueur de %s2_city a décroché le jackpot à Las Vegas! Bien sûr, nos collecteurs d'impôts sont prêts pour un tel événement.</French>
+		<Italian>Un giocatore di %s2_city ha vinto il jackpot nella Strip di Las Vegas! Ovviamente, i nostri esattori delle tasse satvano aspettando un evento come questo.</Italian>
+		<Russian>Èãðîê èç %s2_city âçÿë äæýêïîò â Ëàñ-Âåãàñå! Ðàçóìååòñÿ, íàøà íàëîãîâàÿ èíñïåêöèÿ íå äðåìëåò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT_1</Tag>
+		<English>Send our tax collectors to pay the lucky gambler a visit.</English>
+		<French>Envoyez nos collecteurs d'impôts rendre une visite au gagnant.</French>
+		<Italian>Manda i nostri esattori delle tasse a far visita a questo "fortunato" giocatore.</Italian>
+		<Russian>Îòïðàâèòü íàøèõ íàëîãîâûõ èíñïåêòîðîâ ïîèìåòü äîëþ ñ åãî âûèãðûøà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT_2</Tag>
+		<English>Good fortune should be enjoyed.</English>
+		<French>La bonne fortune doit être appréciée.</French>
+		<Italian>Augurategli buona fortuna.</Italian>
+		<Russian>Óäà÷åé ñëåäóåò íàñëàæäàòüñÿ...</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT_OTHER_1</Tag>
+		<English>A lucky gambler from %s2_city has hit the jackpot on the Las Vegas Strip.</English>
+		<French>Un joueur chanceux de %s2_city a décroché le jackpot à Las Vegas.</French>
+		<Italian>Un fortunato giocatore d'azzardo di %s2_city ha vinto il jackpot sulla strip di Las Vegas.</Italian>
+		<Russian>Óäà÷ëèâûé èãðîê èç %s2_city ñóìåë ñîðâàòü êóø â Ëàñ-Âåãàñ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION</Tag>
+		<English>Join the city. Increasing the population by one.</English>
+		<French>Rejoindre la Ville. Augmente de 1 la population.</French>
+		<Italian>Unisci alla città; incrementa la popolazione di 1.</Italian>
+		<Russian>Ïîäñåëèòü â ãîðîä. Íàñåëåíèå ãîðîäà óâåëè÷èâàåòñÿ íà îäíîãî æèòåëÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION</Tag>
+		<English>Join the city. Increasing the population by one.</English>
+		<French>Rejoindre la Ville. Augmente de 1 la population.</French>
+		<Italian>Unisci alla città; incrementa la popolazione di 1.</Italian>
+		<Polish>Dołącz do miasta. Zwiększa populację miasta o 1.</Polish>
+		<Russian>Ïîäñåëèòü â ãîðîä. Íàñåëåíèå ãîðîäà óâåëè÷èâàåòñÿ íà îäíîãî æèòåëÿ.</Russian>
+	</TEXT>
 </Civ4GameText>
