@@ -97,11 +97,6 @@
 		<Russian>Âçîðâàòü ÿäåðíóþ ìèíó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_DETONATE_NUCLEAR_MINE_HELP</Tag>
-		<English>Explode a Nuclear Mine to destroy all units on the plot.</English>
-		<Russian>Взорвите ядерную мину, чтобы уничтожить все отряды на данном участке.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_LAND_MINE</Tag>
 		<English>Sweep the plot looking for mines.</English>
 		<Russian>Обыск участка на наличие мин.</Russian>
@@ -110,16 +105,6 @@
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_LAND_MINE_HELP</Tag>
 		<English>Remove any enemy mines you find.</English>
 		<Russian>Удалить все найденные вражеские мины.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_SWEEP_FOR_MINE_LAND</Tag>
-		<English>Remove Land Mine</English>
-		<Russian>Ðàçìèíèðîâàòü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_SWEEP_FOR_MINE_SEA</Tag>
-		<English>Remove Naval Mine</English>
-		<Russian>Îáåçâðåäèòü ìîðñêóþ ìèíó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_SEA_MINE</Tag>

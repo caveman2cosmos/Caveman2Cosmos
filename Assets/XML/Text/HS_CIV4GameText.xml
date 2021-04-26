@@ -81,14 +81,6 @@
 		<Russian>Ïðåêðàòèòü ÷åëîâå÷åñêèå æåðòâîïðèíîøåíèÿ â âàøåé ñòðàíå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_REMOVE_WV_HUMAN_SACRIFICE_HELP</Tag>
-		<English>Human Sacrifice will no longer be possible and your sacrificial altars will be sold.</English>
-		<French>Les sacrifices humains ne seront plus possibles, et l'autel sera fermé.</French>
-		<Italian>I sacrifici umani non saranno più possibili e i tuoi altari verranno venduti.</Italian>
-		<Polish>Ofiary z ludzi zostają zakazane, a Ołtarze Ofiar z ludzi zostają sprzedane.</Polish>
-		<Russian>×åëîâå÷åñêèå æåðòâîïðèíîøåíèÿ óæå áóäóò íåâîçìîæíû è âàøè Æåðòâåííèêè áóäóò ðàñïðîäàíû.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_SACRIFICE_CAPTIVE</Tag>
 		<English>Sacrifice a captive for Culture, Happiness and maybe a small golden age.</English>
 		<French>Sacrifier un prisonnier pour de la culture, du Bonheur</French>

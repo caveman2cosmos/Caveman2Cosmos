@@ -131,14 +131,6 @@
 		<Russian>Îòêàçàòüñÿ îò òðàäèöèè êàííèáàëèçìà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_REMOVE_WV_CANNIBALISM_HELP</Tag>
-		<English>Eating people is no longer acceptable in your cities. Unit is consumed.</English>
-		<French>Le fait de manger vos semblables n'est plus accepté dans vos villes. Les unités sont libérées.</French>
-		<Italian>Mangiare altre persone è ora illegale nella tua nazione. L'unità viene consumata.</Italian>
-		<Polish>Zjadanie ludzi nie jest już akceptowane w Twoim imperium. Jednostka zostaj usunięta.</Polish>
-		<Russian>Ëþäîåäñòâî îòíûíå áîëåå íåïðèåìëåìî â âàøèõ ãîðîäàõ. Îòðÿä èñ÷åçàåò.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MSG_NO_CANNIBALISM</Tag>
 		<English>Your nation has banned cannibalism.</English>
 		<French>Votre nation a banni le cannibalisme.</French>

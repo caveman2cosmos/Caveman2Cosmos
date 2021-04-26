@@ -30,10 +30,6 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_VICTIMS</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_UNIT_WITHDRAW_ONSLAUGHT</Tag>
 		<English>TBD</English>
 	</TEXT>
@@ -5505,261 +5501,6 @@
 		<Russian>Îáðàòíûé îòñ÷åò ïðàâèë ìèëîñåðäèÿ áûë ïðåðâàí! Íîðìàëüíàÿ èãðà ïðîäîëæàåòñÿ...</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MILITARY_SITREP_DEFPACTS</Tag>
-		<English>Def Pacts</English>
-		<French>Pactes Défensifs</French>
-		<German>Vert.bünd.</German>
-		<Italian>Patti Difensivi</Italian>
-		<Spanish>Acuerdos de protección</Spanish>
-		<Polish>Pakty Obronne</Polish>
-		<Russian>Äîãîâîð çàùèòû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_SITREP_ENEMY</Tag>
-		<English>Enemy</English>
-		<French>Ennemi</French>
-		<German>Erzfeind</German>
-		<Italian>Nemico</Italian>
-		<Spanish>Enemigo</Spanish>
-		<Polish>Wróg</Polish>
-		<Russian>Âðàã</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_SITREP_POSSIBLE_EMBARGOS_1</Tag>
-		<English>Possible</English>
-		<French>Possibles</French>
-		<German>Mögliche</German>
-		<Italian>Potenziali</Italian>
-		<Spanish>Potencial</Spanish>
-		<Polish>Możliwe</Polish>
-		<Russian>Âîçìîæíû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_SITREP_POSSIBLE_EMBARGOS_2</Tag>
-		<English>Embargos</English>
-		<Italian>Embarghi</Italian>
-		<Polish>Embarga</Polish>
-		<Russian>Ýìáàðãî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_SITREP_THREAT_INDEX</Tag>
-		<English>Threat Index</English>
-		<French>Indice de Menace</French>
-		<German>Bedrohungslage</German>
-		<Italian>Rischio</Italian>
-		<Spanish>Ìndice de amenaza</Spanish>
-		<Polish>Zagrożenie</Polish>
-		<Russian>Ïîêàçàòåëü óãðîçû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_SITREP_VASSAL</Tag>
-		<English>Vassal</English>
-		<German>Vasall</German>
-		<Italian>Vassallo</Italian>
-		<Spanish>Vasallo</Spanish>
-		<Polish>Wasal</Polish>
-		<Russian>Âàññàë</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_SITREP_VASSALS</Tag>
-		<English>Vassals</English>
-		<French>Vassaux</French>
-		<German>Vasallen</German>
-		<Italian>Vassalli</Italian>
-		<Spanish>Vasallos</Spanish>
-		<Polish>Wasalstwa</Polish>
-		<Russian>Âàññàëû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_SITREP_WARS</Tag>
-		<English>Wars</English>
-		<French>Guerres</French>
-		<German>Kriege</German>
-		<Italian>Guerre</Italian>
-		<Spanish>Guerras</Spanish>
-		<Polish>Wojny</Polish>
-		<Russian>Âîéíû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_SITREP_WARS_ACTIVE</Tag>
-		<English>Active</English>
-		<French>Actives</French>
-		<German>Im Gange</German>
-		<Italian>In corso</Italian>
-		<Spanish>Activo</Spanish>
-		<Polish>Trwające</Polish>
-		<Russian>Àêòèâíû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_SITREP_WARS_OPTIONAL</Tag>
-		<English>Possible</English>
-		<French>Possibles</French>
-		<German>Möglich</German>
-		<Italian>Potenziali</Italian>
-		<Spanish>Potencial</Spanish>
-		<Polish>Możliwe</Polish>
-		<Russian>Ãîòîâû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_SITREP_WORST</Tag>
-		<English>Worst</English>
-		<French>Pire</French>
-		<German>Schlimmster</German>
-		<Italian>Peggior</Italian>
-		<Spanish>Peor</Spanish>
-		<Polish>Najgorszy</Polish>
-		<Russian>Çëîé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_SITUATION_REPORT</Tag>
-		<English>Sit-Rep</English>
-		<French>Rapport</French>
-		<German>Lagebericht</German>
-		<Italian>Rapporti</Italian>
-		<Spanish>Informe</Spanish>
-		<Polish>Raport</Polish>
-		<Russian>Îò÷åò ïî ñèòóàöèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_STRATADV_KNOWN</Tag>
-		<English>Known</English>
-		<French>Connu</French>
-		<German>Bekannt</German>
-		<Italian>Noti</Italian>
-		<Spanish>Conocido</Spanish>
-		<Polish>Znane</Polish>
-		<Russian>Èçâåñòíûå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_STRATADV_OURS</Tag>
-		<English>Ours</English>
-		<French>Nous</French>
-		<German>Eigene</German>
-		<Italian>Propri</Italian>
-		<Spanish>Nuestros</Spanish>
-		<Polish>Nasze</Polish>
-		<Russian>Íàøè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_STRATADV_OUR_UNITS</Tag>
-		<English>Our Units</English>
-		<French>Nos Unités</French>
-		<German>Eigene Einheiten</German>
-		<Italian>Nostre Unità</Italian>
-		<Spanish>Nuestras unidades</Spanish>
-		<Polish>Nasze Jednostki</Polish>
-		<Russian>Íàøè þíèòû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_STRATADV_POSSIBLE</Tag>
-		<English>Possible</English>
-		<German>Möglich</German>
-		<Italian>Possibili</Italian>
-		<Spanish>Posible</Spanish>
-		<Polish>Możliwe</Polish>
-		<Russian>Âîçìîæíûå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_STRATADV_RESOURCES</Tag>
-		<English>Resources</English>
-		<French>Ressources</French>
-		<German>Ressourcen</German>
-		<Italian>Risorse</Italian>
-		<Spanish>Recursos</Spanish>
-		<Polish>Zasoby</Polish>
-		<Russian>Ðåñóðñû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_STRATADV_THEIRS</Tag>
-		<English>Theirs</English>
-		<French>Eux</French>
-		<German>Gegnerische</German>
-		<Italian>Altrui</Italian>
-		<Spanish>Suyos</Spanish>
-		<Polish>Obce</Polish>
-		<Russian>Èõ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_STRATADV_THEIR_UNITS</Tag>
-		<English>Their Units</English>
-		<French>Leurs Unités</French>
-		<German>Gegnerische Einheiten</German>
-		<Italian>Unità Altrui</Italian>
-		<Spanish>Sus unidades</Spanish>
-		<Polish>Obce Jednostki</Polish>
-		<Russian>Èõ þíèòû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_STRATEGIC_ADVANTAGES</Tag>
-		<English>Strategic Advantages</English>
-		<French>Avantages Stratégiques</French>
-		<German>Strategische Vorteile</German>
-		<Italian>Vantaggi Strategici</Italian>
-		<Spanish>Ventajas estratégicas</Spanish>
-		<Polish>Korzyści Strategiczne</Polish>
-		<Russian>Ñòðàòåãè÷åñêèå ïðåèìóùåñòâà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_THREAT_INDEX_ELEVATED</Tag>
-		<English>Elevated</English>
-		<French>Elevé</French>
-		<German>Angespannt</German>
-		<Italian>Rischio Notevole</Italian>
-		<Spanish>Elevado</Spanish>
-		<Polish>Znaczące</Polish>
-		<Russian>Ïîäíÿòûé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_THREAT_INDEX_GUARDED</Tag>
-		<English>Guarded</English>
-		<French>En garde</French>
-		<German>Erhöht</German>
-		<Italian>Prudenza</Italian>
-		<Spanish>Guarnecido</Spanish>
-		<Polish>Niskie</Polish>
-		<Russian>Óêðåïëåííûé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_THREAT_INDEX_HIGH</Tag>
-		<English>High</English>
-		<French>Haut</French>
-		<German>Alarmierend</German>
-		<Italian>Allarme</Italian>
-		<Spanish>Alarma</Spanish>
-		<Polish>Wysokie</Polish>
-		<Russian>Âûñîêèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_THREAT_INDEX_LOW</Tag>
-		<English>Low</English>
-		<French>Bas</French>
-		<German>Gering</German>
-		<Italian>Rischio Basso</Italian>
-		<Spanish>Bajo</Spanish>
-		<Polish>Znikome</Polish>
-		<Russian>Íèçêèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_THREAT_INDEX_SEVERE</Tag>
-		<English>Severe</English>
-		<French>Sévère</French>
-		<German>Akut</German>
-		<Italian>Grave allarme</Italian>
-		<Spanish>Severo</Spanish>
-		<Polish>Poważne</Polish>
-		<Russian>Ñèëüíûé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_UNIT_LOCATION</Tag>
-		<English>Deployment</English>
-		<French>Déploiement</French>
-		<German>Aufstellung</German>
-		<Italian>Dispiegamento</Italian>
-		<Spanish>Despliegue</Spanish>
-		<Polish>Położenie Jedn.</Polish>
-		<Russian>Ðàçìåùåíèå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MINOR_CIV_DISPLAY</Tag>
 		<English>minor</English>
 		<French>mineure</French>
@@ -6020,16 +5761,6 @@
 		<Russian>%D1: "Âàøà êðîøå÷íàÿ ñòðàíà íå ïðåäñòàâëÿåò äëÿ íàñ íèêàêîé óãðîçû."</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_ATTITUDE_CIVIC_SHARE</Tag>
-		<English>%D1: "You have the same civic"</English>
-		<French>%D1: "Vous avez la même Doctrine"</French>
-		<German>%D1: "Du hast die gleiche Gesellschaftsform"</German>
-		<Italian>%D1: "Abbiamo la stessa forma di governo"</Italian>
-		<Spanish>%D1: "Tenemos el mismo principio"</Spanish>
-		<Polish>%D1: "Posiadasz tą samą doktrynę"</Polish>
-		<Russian>%D1: "Ó âàñ èìååòñÿ òàêàÿ æå Ïàðàäèãìà"</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_CIVIC_SHARE_BAD</Tag>
 		<English>%D1: "Our philosophies clash"</English>
 		<French>%D1: "Nos Philosophies sont incompatibles"</French>
@@ -6136,16 +5867,6 @@
 		<Russian>%D1_Change[ICON_UNHEALTHY] îò Ñîáûòèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_BARBARIAN_LEADER</Tag>
-		<English>Barbarian Leader: %d1_Curr/%d2_Need Experience</English>
-		<French>Chef Barbe: %d1_Curr/%d2_Need Expérience requis</French>
-		<German>Barbarenanführer: %d1_Curr/%d2_Need Erfahrung</German>
-		<Italian>Leader barbaro: %d1_Curr/%d2_Need XP</Italian>
-		<Spanish>Experiencia para Líder bárbaro: %d1_Curr/%d2_Need</Spanish>
-		<Polish>Barbarzyński Dowódca: %d1_Curr/%d2_Need Doświadczenia</Polish>
-		<Russian>Âàðâàðñêèé Ëèäåð: %d1_Curr/%d2_Need Îïûò</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_BASE_MAINTENANCE</Tag>
 		<English>%s1_MaintNum [ICON_GOLD]: Base Maintenance</English>
 		<French>%s1_MaintNum [ICON_GOLD]: Entretien de base</French>
@@ -6162,16 +5883,6 @@
 		<German>Unsere Einheit %s1 wurde in unsere Hauptstadt evakuiert und hat sich vollständig erholt</German>
 		<Spanish>[NUM1:Nuestro:Nuestra:Nuestros:Nuestras] %s1 [NUM1:ha sido evacuado:ha sido evacuada:han sido evacuados:han sido evacuadas] hacia nuestra capital, donde [NUM1:se ha:se ha:se han:se han] recuperado completamente.</Spanish>
 		<Polish>Nasza jednostka: %s1 ewakuowała się do Stolicy i odzyskała pełnie sił</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_BECOME_BARBARIAN</Tag>
-		<English>Our [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] has plundered the city of [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT]!</English>
-		<French>Notre [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] [NUM1:a:a:ont:ont] pillé la ville de [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT]!</French>
-		<German>Eure Einheit [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] hat die Stadt [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT] geplündert!</German>
-		<Italian>La nostra unità [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] ha saccheggiato la città di [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT]!</Italian>
-		<Spanish>¡Nuestr[NUM1:o:a:os:as] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] [NUM1:ha:ha:han:han] saqueado la ciudad de [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT]!</Spanish>
-		<Polish>Nasz [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] splądrowała miasto [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT]!</Polish>
-		<Russian>Íàø [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] ðàçãðàáèë ãîðîä [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT]!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BORDERS_EXPANDED</Tag>
@@ -6267,16 +5978,6 @@
 		<Russian>Атакующие при переправе через реки, получают модификатор %D1%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_CAPITAL_CONSCRIPT</Tag>
-		<English>[COLOR_NEGATIVE_TEXT]Must be the Capital city[COLOR_REVERT]</English>
-		<French>[COLOR_NEGATIVE_TEXT]Doit être la Capitale[COLOR_REVERT]</French>
-		<German>[COLOR_NEGATIVE_TEXT]Nur in der Hauptstadt möglich[COLOR_REVERT]</German>
-		<Italian>[COLOR_NEGATIVE_TEXT]Dev'essere nella capitale[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_NEGATIVE_TEXT]Debe ser la capital[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_NEGATIVE_TEXT]Musi być w Stolicy[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_NEGATIVE_TEXT]Äîëæåí áûòü Ñòîëèöåé[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_CAPTURED_BY</Tag>
 		<English>%s1_CityName has been captured by the %s2_CivName!</English>
 		<French>La ville de %s1_CityName est tombée aux mains de %s2_CivName!</French>
@@ -6287,16 +5988,6 @@
 		<Russian>Ãîðîä %s1_CityName çàõâà÷åí! Àãðåññîð - %s2_CivName.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_CITY_HAS_BEEN_ENSLAVED_BY</Tag>
-		<English>The citizens of %s1_cityname have been enslaved by %s2_civilization!</English>
-		<French>Les habitants de %s1_cityname ont été réduits à l'esclavage par %s2_civilization!</French>
-		<German>Die Einwohner von %s1_cityname wurden von %s2_civilization versklavt!</German>
-		<Italian>I cittadini di %s1_cityname sono stati schiavizzati da %s2_civilization!</Italian>
-		<Spanish>¡Los ciudadanos de %s1_cityname han sido esclavizados por %s2_civilization!</Spanish>
-		<Polish>Mieszkańcy miasta %s1_cityname zostali zniewoleni przez %s2_civilization!</Polish>
-		<Russian>Ãðàæäàíå %s1_cityname áûëè ïîðàáîùåíû %s2_civilization!!!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_HAS_BEEN_RAZED_BY</Tag>
 		<English>%s1_CityName has been razed by the %s2_CivName!</English>
 		<French>La ville de %s1_CityName a été rasée par %s2_CivName !</French>
@@ -6305,16 +5996,6 @@
 		<Spanish>¡%s1_CityName ha sido arrasada por %s2_CivName!</Spanish>
 		<Polish>%s1_CityName zostało zrównane z ziemią przez %s2_CivName!</Polish>
 		<Russian>Ãîðîä %s1_CityName ðàçðóøåí! Àãðåññîð - %s2_CivName.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_CITY_HAS_BEEN_SACKED_BY</Tag>
-		<English>The city of %s1_cityname has been sacked by %s2_civilization!</English>
-		<French>La ville de %s1_cityname a été saccagée par %s2_civilization!</French>
-		<German>Die Stadt %s1_cityname wurde von %s2_civilization geplündert!</German>
-		<Italian>La città di %s1_cityname è stata saccheggiata da %s2_civilization!</Italian>
-		<Spanish>¡La ciudad de %s1_cityname ha sido saqueada por %s2_civilization!</Spanish>
-		<Polish>Miasto %s1_cityname zostało zniewolone przez %s2_civilization!</Polish>
-		<Russian>Ãîðîä %s1_cityname áûë îòêàçàí â óïðàâëåíèè %s2_civilization!!!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_HAS_CONSCRIPTED</Tag>
@@ -6409,15 +6090,6 @@
 		<Russian>Â ãîðîäå %s2_CityName ãîòîâî çäàíèå %s1_BldgName.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_CONTRACT</Tag>
-		<English>Your %s1_UnitName has contracted %s2_PromotionName due to an ongoing outbreak in the vicinity!</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] contracté: %s2_PromotionName en raison d'une épidémie dans le secteur!</French>
-		<German>Your %s1_UnitName has contracted %s2_PromotionName due to ongoing outbreak in the vicinity!</German>
-		<Italian>La tua unità %s1_UnitName ha contratto %s2_PromotionName a causa di un'epidemia nelle vicinanze!</Italian>
-		<Spanish>Your %s1_UnitName has contracted %s2_PromotionName due to ongoing outbreak in the vicinity!</Spanish>
-		<Polish>Twoja jednostka: %s1_UnitName zleciła: %s2_PromotionName z powodu epidemii szalejącej w pobliżu!</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_CORPORATION_DECAY</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]%s1_CorpName[COLOR_REVERT] has stopped doing business in %s2_CityName.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%s1_CorpName[COLOR_REVERT] a arrêté son activité dans %s2_CityName.</French>
@@ -6488,14 +6160,6 @@
 		<Spanish>%d1%[ICON_DEFENSE] por cultura</Spanish>
 		<Polish>%d1%[ICON_DEFENSE] z kultury</Polish>
 		<Russian>%d1%[ICON_DEFENSE] îò óðîâ. êóëüòóðû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_CURE</Tag>
-		<English>Your %s1_UnitName has cured %s2_UnitName of %s3_PromotionName!</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] guéri %s2_UnitName de sa maladie %s3_PromotionName!</French>
-		<Italian>La tua unità %s1_UnitName ha curato %s2_UnitName da %s3_PromotionName!</Italian>
-		<Polish>Twoja jednostka: %s1_UnitName wyleczyła jednostkę: %s2_UnitName z %s3_PromotionName!</Polish>
-		<Russian>Âàø %s1_UnitName èñöåëèë %s2_UnitName èñïîëüçóÿ %s3_PromotionName!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CURRENT_DEFENSE_HOVER</Tag>
@@ -6805,16 +6469,6 @@
 		<Russian>Ïðîòèâíèêó íå óäàëîñü ïðè÷èíèòü ïîâðåæäåíèÿ êîðàáëþ â ïîðòó ãîðîäà %s1_CityName.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_ENEMY_AIRBOMB4SUCCESS</Tag>
-		<English>The enemy has bombed a ship.</English>
-		<French>L'Ennemi a bombardé un navire.</French>
-		<German>Der Feind hat ein Schiff bombardiert.</German>
-		<Italian>Il nemico ti ha colpito una nave.</Italian>
-		<Spanish>El enemigo ha bombardeado un navío.</Spanish>
-		<Polish>Wróg zbombardował twój statek.</Polish>
-		<Russian>Ïðîòèâíèê ïðè÷èíèë ïîâðåæäåíèÿ êîðàáëþ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_ENEMY_AIRBOMB5FAIL</Tag>
 		<English>Production has not been damaged in %s1_CityName.</English>
 		<French>La Production est restée intacte à %s1_CityName.</French>
@@ -6935,36 +6589,6 @@
 		<Polish>Wroga jednostka: %s1_EnUName uciekła przed przewagą naszej jednostki: %s2_UnitName!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_ENSLAVED_CITY</Tag>
-		<English>You have enslaved the citizens of %s1_cityname!</English>
-		<French>Vous avez réduit à l'esclavage des habitants de %s1_cityname!</French>
-		<German>Ihr habt die Einwohner von %s1_cityname versklavt!</German>
-		<Italian>Hai schiavizzato i cittadini di %s1_cityname!</Italian>
-		<Spanish>¡Has esclavizado a los ciudadanos de %s1_cityname!</Spanish>
-		<Polish>Zniewoliłeś mieszkańców miasta %s1_cityname!</Polish>
-		<Russian>Âû ïîðàáîòèëè ãðàæäàí %s1_cityname!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_EVERYBODY_DECLARE_WAR_ON_OTHER</Tag>
-		<English>The %s1_civ_adjective tribe has been accused of barbarian activity! Everybody has declared war on them!</English>
-		<French>La tribu %s1_civ_adjective a été accusé de mener des actes barbares! La Guerre leur est déclarée!</French>
-		<German>Der %s1_civ_adjective Stamm wurde beschuldigt, für die Umtriebe der Barbaren verantwortlich zu sein! Alle Zivilisationen haben ihm daraufhin den Krieg erklärt!</German>
-		<Italian>La tribù %s1_civ_adjective è stata accusata di crimini barbarici! Tutti le hanno dichiarato guerra!</Italian>
-		<Spanish>¡La tribu %s1_civ_adjective ha sido acusada de realizar actos barbáricos! ¡Todos le han declarado la guerra!</Spanish>
-		<Polish>Plemię %s1_civ_adjective zostało oznaczone jako barbarzyńskie! Wszyscy wywołują mu wojnę!</Polish>
-		<Russian>%s1_civ_adjective ïëåìÿ áûëî îáâèíåíî â âàðâàðñêîé äåÿòåëüíîñòè! Âñå îáúÿâèëè èì âîéíó!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_EVERYBODY_DECLARE_WAR_ON_US</Tag>
-		<English>The %s1_civ_adjective tribe has accused us of barbarians! Everybody has declared war on us!</English>
-		<French>La tribu %s1_civ_adjective nous a accusé d'actes barbares! Ils nous déclarent tous la guerre!</French>
-		<German>Der %s1_civ_adjective Stamm hat Euch beschuldigt, gemeinsame Sache mit den Barbaren zu machen! Alle Zivilisationen haben Euch den Krieg erklärt!</German>
-		<Italian>La tribù %s1_civ_adjective ci accusa di essere dei barbari! Tutti ci stanno dichiarando guerra!</Italian>
-		<Spanish>¡La tribu %s1:2_civ_adjective nos ha acusado de ser bárbaros! ¡Todos nos han declarado la guerra!</Spanish>
-		<Polish>Zostaliśmy oznaczeni jako barbarzyńcy! Wszyscy wywołują nam wojnę!</Polish>
-		<Russian>%s1_civ_adjective ïëåìÿ îáâèíèëî íàñ â âàðâàðñòâå! Âñå îáúÿâèëè âîéíó íàì!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_EXPERIENCE</Tag>
 		<English>%d1 XP</English>
 		<French>%d1 EXP</French>
@@ -7034,16 +6658,6 @@
 		<Russian>Îñîáåííîñòè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_FEATURE_OVERGROWN_NEAR_CITY</Tag>
-		<English>A %s1_FeatName has overgrown your %s2_Improvement near %s3_CityName.</English>
-		<French>Un %s1_FeatName a envahi votre %s2_Improvement près de %s3_CityName.</French>
-		<German>%s1_FeatName hat die Modernisierung %s2_Improvement nahe %s3_CityName überwuchert.</German>
-		<Italian>Una %s1_FeatName ha coperto il miglioramento %s2_Improvement vicino alla città di %s3_CityName.</Italian>
-		<Spanish>[NUM1:Un:Una:Unos:Unas] %s1_FeatName [NUM1:ha:ha:han:han] cubierto [NUM2:tu:tu:tus:tus] %s2_Improvement cerca de %s3_CityName.</Spanish>
-		<Polish>%s1_FeatName przerósł Twój %s2_Improvement w %s3_CityName.</Polish>
-		<Russian>%s1_FeatName ïåðåðîñ âàø %s2_Improvement ðÿäîì ñ %s3_CityName.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_FIELD_MEDIC_ATTACKERS</Tag>
 		<English>General, our Field Medics (%s1_UnitName) have seen to our wounded and ensured that the attack can be pressed! (%d2_Num [NUM2:Unit:Units] healed)</English>
 		<French>Général, nos Practiciens de Terrain (%s1_UnitName) s'occupent de nos blessés, et l'attaque peut continuer! (%d2_Num [NUM2:Unité soignée:Unités soignées])</French>
@@ -7068,16 +6682,6 @@
 		<Spanish>Acuerdo de Libre Comercio</Spanish>
 		<Polish>Umowa o Wolnym Handlu</Polish>
 		<Russian>Ñîãëàøåíèå î ñâîáîäíîé òîðãîâëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_FREE_UNIT_SUPPORT</Tag>
-		<English>Your %s1_UnitName has increased your unit's support limit!</English>
-		<French>Votre %s1_UnitName a augmenté sa limite d'entretien gratuit!</French>
-		<German>Eure Einheit %s1_UnitName hat die allgemeine Militärunterstützung erhöht!</German>
-		<Italian>La tua unità %s1_UnitName ha aumentato il proprio limite di supporto!</Italian>
-		<Spanish>¡[NUM1:Tu:Tu:Tus:Tus] %s1_UnitName [NUM1:ha:ha:han:han] aumentado tu límite de unidades soportadas!</Spanish>
-		<Polish>Twój oddział %s1_UnitName zwiększył limit jednostek!</Polish>
-		<Russian>Âàø %s1_UnitName óâåëè÷èë ïðåäåë ïîääåðæêè!!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_FROM</Tag>
@@ -7143,15 +6747,6 @@
 		<Spanish>%D1_Change[ICON_HEALTHY] por principios</Spanish>
 		<Polish>%D1_Change[ICON_HEALTHY] z doktryn</Polish>
 		<Russian>%D1_Change[ICON_HEALTHY] îò ïàðàäèãì</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_GOOD_HEALTH_FROM_COMMERCE</Tag>
-		<English>%D1_Change[ICON_HEALTHY] from Commerce</English>
-		<French>%D1_Change[ICON_HEALTHY] dû au Commerce</French>
-		<German>%D1_Change[ICON_HEALTHY] durch Handel</German>
-		<Spanish>%D1_Change[ICON_HEALTHY] por comercio</Spanish>
-		<Polish>%D1_Change[ICON_HEALTHY] z handlu</Polish>
-		<Russian>%D1_Change[ICON_HEALTHY] îò òîðãîâëè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_GOOD_HEALTH_FROM_CORPORATION</Tag>
@@ -7245,16 +6840,6 @@
 		<Russian>%D1_Change[ICON_UNHEALTHY] îò ìèðîâûõ ïðîåêòîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_BASE_FOOD_PRODUCED</Tag>
-		<English>-----------------------[NEWLINE]Base Food Produced: %d1[ICON_FOOD]</English>
-		<French>-----------------------[NEWLINE]Nourriture de base produite: %d1[ICON_FOOD]</French>
-		<German>-----------------------[NEWLINE]Grundertrag produzierte Nahrung: %d1[ICON_FOOD]</German>
-		<Italian>-----------------------[NEWLINE]Cibo totale parziale prodotto: %d1[ICON_FOOD]</Italian>
-		<Spanish>-----------------------[NEWLINE]Producción base de alimentos: %d1[ICON_FOOD]</Spanish>
-		<Polish>-----------------------[NEWLINE]Produkcja żywności (bazowo): %d1[ICON_FOOD]</Polish>
-		<Russian>-----------------------[NEWLINE]Áàçîâîå ïðîèçâîäñòâî ïèùè: %d1[ICON_FOOD]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_BONUS_COMMERCE</Tag>
 		<English>[ICON_BULLET]%D1%%%F2 from Bonus</English>
 		<French>[ICON_BULLET]%D1%%%F2 des Bonus</French>
@@ -7272,16 +6857,6 @@
 		<Italian>[ICON_BULLET]%D1%F2 dagli edifici</Italian>
 		<Spanish>[ICON_BULLET]%D1 %F2 por edificios</Spanish>
 		<Russian>[ICON_BULLET]%D1%F2 от зданий</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_BUILDING_DEFENSE</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_DEFENSE] from Buildings</English>
-		<French>[ICON_BULLET]%D1%%[ICON_DEFENSE] en raison des bâtiments</French>
-		<German>[ICON_BULLET]%D1%%[ICON_DEFENSE] durch Gebäude</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_DEFENSE] dagli edifici</Italian>
-		<Spanish>[ICON_BULLET]%D1%%[ICON_DEFENSE] por edificios</Spanish>
-		<Polish>[ICON_BULLET]%D1%%[ICON_DEFENSE] z Budowli</Polish>
-		<Russian>[ICON_BULLET]%D1%%[ICON_DEFENSE] от зданий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_COMMERCE_EVENTS</Tag>
@@ -7321,36 +6896,6 @@
 		<Russian>[ICON_BULLET]%D1%F2 îò çàêëþ÷åííûõ â òþðüìó ñîëäàò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_CULTURE_DEFENSE</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_DEFENSE] from Culture</English>
-		<French>[ICON_BULLET]%D1%%[ICON_DEFENSE] en raison de la culture</French>
-		<German>[ICON_BULLET]%D1%%[ICON_DEFENSE] durch Kultur</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_DEFENSE] dagli Cultura</Italian>
-		<Spanish>[ICON_BULLET]%D1%%[ICON_DEFENSE] por cultura</Spanish>
-		<Polish>[ICON_BULLET]%D1%%[ICON_DEFENSE] z Kultury</Polish>
-		<Russian>[ICON_BULLET]%D1%%[ICON_DEFENSE] îò êóëüòóðû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_CULTURE_DEFENSE_PARTIAL</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_DEFENSE] from Culture (%d2%%)</English>
-		<French>[ICON_BULLET]%D1%%[ICON_DEFENSE] en raison de la culture (%d2%%)</French>
-		<German>[ICON_BULLET]%D1%%[ICON_DEFENSE] durch Kultur (%d2%%)</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_DEFENSE] dagli Cultura (%d2%%)</Italian>
-		<Spanish>[ICON_BULLET]%D1%%[ICON_DEFENSE] por cultura (%d2%%)</Spanish>
-		<Polish>[ICON_BULLET]%D1%%[ICON_DEFENSE] z Kultury (%d2%%)</Polish>
-		<Russian>[ICON_BULLET]%D1%%[ICON_DEFENSE] îò êóëüòóðû (%d2%%)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_DEFENSE_DAMAGE</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_DEFENSE] from Bombardment</English>
-		<French>[ICON_BULLET]%D1%%[ICON_DEFENSE] des Bombardements</French>
-		<German>[ICON_BULLET]%D1%%[ICON_DEFENSE] durch Wunder</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_DEFENSE] dalle Meraviglie</Italian>
-		<Spanish>[ICON_BULLET]%D1%%[ICON_DEFENSE] frente a bombardeo</Spanish>
-		<Polish>[ICON_BULLET]%D1%%[ICON_DEFENSE] z Bombardowania</Polish>
-		<Russian>[ICON_BULLET]%D1%%[ICON_DEFENSE] îò áîìáàðäèðîâêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_EATEN_FOOD</Tag>
 		<English>[ICON_BULLET]%D1[ICON_EATENFOOD] for Population</English>
 		<French>[ICON_BULLET]%D1[ICON_EATENFOOD] pour la population</French>
@@ -7359,16 +6904,6 @@
 		<Spanish>[ICON_BULLET]%D1[ICON_EATENFOOD] por población</Spanish>
 		<Polish>[ICON_BULLET]%D1[ICON_EATENFOOD] z Populacji</Polish>
 		<Russian>[ICON_BULLET]%D1[ICON_EATENFOOD] äëÿ íàñåëåíèÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_FREE_CITY_YIELD</Tag>
-		<English>[ICON_BULLET]%D1%F2 free yield</English>
-		<French>[ICON_BULLET]%D1%F2 en raison du libre échange</French>
-		<German>[ICON_BULLET]%D1%F2 freie Wirtschaft</German>
-		<Italian>[ICON_BULLET]%D1%F2 dal commercio libero</Italian>
-		<Spanish>[ICON_BULLET]%D1 %F2 comercio libre</Spanish>
-		<Polish>[ICON_BULLET]%D1%F2 darmowe pole</Polish>
-		<Russian>[ICON_BULLET]%D1%F2 ñâîáîä. ïðîäóêöèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_GREATPEOPLE_BUILDINGS</Tag>
@@ -7388,16 +6923,6 @@
 		<Spanish>[ICON_BULLET]%D1%F2 por monedas acuñadas</Spanish>
 		<Polish>[ICON_BULLET]%D1%F2 z Wybitych Monet</Polish>
 		<Russian>[ICON_BULLET]%D1%F2 îò îò÷åêàíåíûõ ìîíåò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_NET_DEFENSE</Tag>
-		<English>Net Defense: %D1%%[ICON_DEFENSE]</English>
-		<French>Défense nette: %D1%%[ICON_DEFENSE]</French>
-		<German>Netto-Verteidigungswert: %D1%%[ICON_DEFENSE]</German>
-		<Italian>Difesa netto: %D1%%[ICON_DEFENSE]</Italian>
-		<Spanish>Defensa neta: %D1%%[ICON_DEFENSE]</Spanish>
-		<Polish>Obrona przed prochem: %D1%%[ICON_DEFENSE]</Polish>
-		<Russian>Îáùàÿ çàùèòà: %D1%%[ICON_DEFENSE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_NET_FOOD_GROW</Tag>
@@ -7473,26 +6998,6 @@
 		<Russian>[ICON_BULLET]%D1[ICON_EATENFOOD] äëÿ çäîðîâüÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_TOTAL_BOMBARD_DEFENSE</Tag>
-		<English>Total Bombard Defense: %d1%%[ICON_DEFENSE]</English>
-		<French>Défense bombardement totale: %d1%%[ICON_DEFENSE]</French>
-		<German>Brutto-Verteidigungswert (Bombardierung): %d1%%[ICON_DEFENSE]</German>
-		<Italian>Difesa bombardmento totale: %d1%%[ICON_DEFENSE]</Italian>
-		<Spanish>Defensa frente a bombardeo total: %d1%%[ICON_DEFENSE]</Spanish>
-		<Polish>Całkowita obrona przed bombardowaniem: %d1%%[ICON_DEFENSE]</Polish>
-		<Russian>Âñåãî çàùèòà îò áîìáàðäèðîâêè: %d1%%[ICON_DEFENSE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_TOTAL_DEFENSE</Tag>
-		<English>Total Defense: %D1%%[ICON_DEFENSE]</English>
-		<French>Défense totale: %D1%%[ICON_DEFENSE]</French>
-		<German>Brutto-Verteidigungswert: %D1%%[ICON_DEFENSE]</German>
-		<Italian>Difesa totale: %D1%%[ICON_DEFENSE]</Italian>
-		<Spanish>Defensa total: %D1%%[ICON_DEFENSE]</Spanish>
-		<Polish>Pełna obrona: %D1%%[ICON_DEFENSE]</Polish>
-		<Russian>Âñåãî çàùèòà: %D1%%[ICON_DEFENSE]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_TOTAL_FOOD_CONSUMED</Tag>
 		<English>-----------------------[NEWLINE]Total Food Consumed: %d1[ICON_EATENFOOD]</English>
 		<French>-----------------------[NEWLINE]Nourriture totale consommée: %d1[ICON_EATENFOOD]</French>
@@ -7513,23 +7018,6 @@
 		<Russian>-----------------------[NEWLINE]Âñåãî ïðîèçâåäåíî ïèùè: %d1[ICON_FOOD]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD</Tag>
-		<English>-----------------------[NEWLINE]Total %s1_yield_type: %d2%F3</English>
-		<German>-----------------------[NEWLINE]Gesamtertrag %s1_yield_type: %d2%F3</German>
-		<Italian>-----------------------[NEWLINE]%s1_yield_type totale: %d2%F3</Italian>
-		<Spanish>-----------------------[NEWLINE]Total de %s1_yield_type: %d2%F3</Spanish>
-		<Polish>-----------------------[NEWLINE]Razem %s1_yield_type: %d2%F3</Polish>
-		<Russian>-----------------------[NEWLINE]Âñåãî %s1_yield_type: %d2%F3</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_TRAITS_COMMERCE</Tag>
-		<English>[ICON_BULLET]%D1 %F2 from Traits</English>
-		<French>[ICON_BULLET]%D1 %F2 des Traits</French>
-		<Italian>[ICON_BULLET]%D1 %F2 dai tratti</Italian>
-		<Polish>[ICON_BULLET]%D1 %F2 z Cech</Polish>
-		<Russian>[ICON_BULLET]%D1 %F2 îò ÷åðò Ëèäåðà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_TRAIT_COMMERCE</Tag>
 		<English>[ICON_BULLET]%D1 %F2 from %s3_Trait</English>
 		<French>[ICON_BULLET]%D1 %F2 de %s3_Trait</French>
@@ -7545,16 +7033,6 @@
 		<Spanish>[ICON_BULLET]%D1[ICON_EATENFOOD] Desperdiciados</Spanish>
 		<Polish>[ICON_BULLET]Zmarnowano %D1[ICON_EATENFOOD]</Polish>
 		<Russian>[ICON_BULLET]%D1[ICON_EATENFOOD] èçðàñõîäîâàíî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_WONDER_DEFENSE</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_DEFENSE] from Wonders</English>
-		<French>[ICON_BULLET]%D1%%[ICON_DEFENSE] des Merveilles</French>
-		<German>[ICON_BULLET]%D1%%[ICON_DEFENSE] durch Wunder</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_DEFENSE] dalle Meraviglie</Italian>
-		<Spanish>[ICON_BULLET]%D1%%[ICON_DEFENSE] por Maravillas</Spanish>
-		<Polish>[ICON_BULLET]%D1%%[ICON_DEFENSE] z Cudów</Polish>
-		<Russian>[ICON_BULLET]%D1%%[ICON_DEFENSE] îò ÷óäåñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_WORKED_TILES_YIELD</Tag>
@@ -7576,16 +7054,6 @@
 		<Russian>[ICON_BULLET]%D1%%%F2 от зданий</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_YIELD_CHANGE_BONUS</Tag>
-		<English>[ICON_BULLET]%D1%%%F2 from Civics</English>
-		<French>[ICON_BULLET]%D1%%%F2 (doctrine)</French>
-		<German>[ICON_BULLET]%D1%%%F2 durch Gesellschaftsformen</German>
-		<Italian>[ICON_BULLET]%D1%%%F2 dalle forme di governo</Italian>
-		<Spanish>[ICON_BULLET]%D1%% %F2 por principios</Spanish>
-		<Polish>[ICON_BULLET]%D1%%%F2 z Doktryn</Polish>
-		<Russian>[ICON_BULLET]%D1%%%F2 îò ïàðàäèãì</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_YIELD_EVENTS</Tag>
 		<English>[ICON_BULLET]%d1%% %F2 from Events</English>
 	</TEXT>
@@ -7598,14 +7066,6 @@
 		<Spanish>[ICON_BULLET]%D1%%%F2 por proyectos y maravillas</Spanish>
 		<Polish>[ICON_BULLET]%D1%%%F2 z Projektów i Cudów</Polish>
 		<Russian>[ICON_BULLET]%D1%%%F2 Îò ïðîåêòîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_YIELD_SPECIALISTS</Tag>
-		<English>[ICON_BULLET]%D1 %F2 from Specialists</English>
-		<French>[ICON_BULLET]%D1 %F2 des Specialists</French>
-		<Italian>[ICON_BULLET]%D1 %F2 dagli Specialisti</Italian>
-		<Polish>[ICON_BULLET]%D1 %F2 od Specjalistów</Polish>
-		<Russian>[ICON_BULLET]%D1 %F2 îò Ñïåöèàëèñòîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_YIELD_TRAITS</Tag>
@@ -7656,26 +7116,6 @@
 		<Russian>[SPACE]â ñîñåäíèõ ãîðîäàõ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_IDENTITY_REVEALED</Tag>
-		<English>Because we captured the %s1_civ_adjective city of %s2_city, our identity has been revealed!</English>
-		<French>Lors de la capture de la ville %s1_civ_adjective de %s2_city, notre identité a été révélée!</French>
-		<German>Bei der Einnahme der %s1_civ_adjective Stadt %s2_city wurde Euer Stamm als Urheber entlarvt!</German>
-		<Italian>Poiché abbiamo catturato la città %s1_civ_adjective di %s2_city, la nostra identità è stata scoperta!</Italian>
-		<Spanish>¡Nuestra identidad ha sido revelada por culpa de la captura de la ciudad %s1:2_civ_adjective de %s2_city!</Spanish>
-		<Polish>Ponieważ przejęliśmy miasto %s1_civ_adjective: %s2_city, nasz rozpoznawalność wzrasta!</Polish>
-		<Russian>Ïîñêîëüêó ìû çàõâàòèëè %s1_civ_adjective ãîðîä %s2_city, íàøà íàöèÿ áûëà ðàñêðûòà!!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_IDENTITY_REVEALED_OTHER</Tag>
-		<English>Because the %s1_civ_adjective tribe captured the %s2_civ_adjective city of %s3_city, their identity has been revealed!</English>
-		<French>La capture par la tribu %s1_civ_adjective de la ville %s2_civ_adjective de %s3_city, a révélé l'identité des commanditaires!</French>
-		<German>Bei der Einnahme der %s2_civ_adjective Stadt %s3_city wurde der %s1_civ_adjective Stamm als Urheber entlarvt!</German>
-		<Italian>Poiché la tribù %s1_civ_adjective ha catturato la città %s2_civ_adjective di %s3_city, la loro identità è stata scoperta!</Italian>
-		<Spanish>¡La identidad de los %s1:3_civ_adjective ha sido revelada debido a su captura de la ciudad %s2:2_civ_adjective de %s3_city!</Spanish>
-		<Polish>Ponieważ %s1_civ_adjective przejęło miasto %s2_civ_adjective: %s3_city, ich rozpoznawalność wzrasta!</Polish>
-		<Russian>Ïîñêîëüêó %s1_civ_adjective ïëåìÿ çàõâàòèëî %s2_civ_adjective ãîðîä %s3_city, èõ íàöèÿ áûëà ðàñêðûòà!!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_IMPROVEMENTS</Tag>
 		<English>Improvements</English>
 		<French>Aménagements</French>
@@ -7684,16 +7124,6 @@
 		<Spanish>Mejoras</Spanish>
 		<Polish>Ulepszenia</Polish>
 		<Russian>Ïðîìûøëåííîñòü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_IMPROVEMENT_DEPLETED</Tag>
-		<English>Your %s1 has been Exhausted of Useful Material!</English>
-		<French>Votre %s1 est épuisée!</French>
-		<German>Es sind keine Rohstoffe mehr zum Abbau vorhanden (%s1).</German>
-		<Italian>La tua %s1 è stata esaurita completamente!</Italian>
-		<Spanish>¡La producción de [NUM1:tu:tu:tus:tus] %s1 se ha agotado!</Spanish>
-		<Polish>Twoja %s1 wyczerpała surowiec!</Polish>
-		<Russian>Âàø %s1 áûë Èñ÷åðïàí Ïîëåçíîãî Ìàòåðèàëà!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_IMPR_GOOD_HEALTH</Tag>
@@ -7807,39 +7237,6 @@
 		<Russian>Ìèí. çàùèòà: %d1%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_NEGATIVE_ATTITUDE_TRAIT</Tag>
-		<English>%D1: "You speak with a Disrespectfull tone"</English>
-		<French>%D1: "Vous parlez avec un ton irrespectueux"</French>
-		<German>%D1: "Ihr habt einen respektlosen Ton an Euch"</German>
-		<Spanish>%D1: "Usas un tono irrespetuoso"</Spanish>
-		<Polish>%D1: "Przemawiasz w Ironicznym tonie"</Polish>
-		<Russian>%D1: "Вы слишком высокомерны к нам!"</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_NEG_GOLD</Tag>
-		<English>[ICON_GOLD]: [COLOR_NEGATIVE_TEXT]%d1_Gold[COLOR_REVERT]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_NEG_WARNING_GOLD_PER_TURN</Tag>
-		<English>[SPACE][COLOR_YELLOW](%D1_Change/Turn)[COLOR_REVERT]</English>
-		<French>[SPACE][COLOR_YELLOW](%D1_Change/tour)[COLOR_REVERT]</French>
-		<German>[SPACE][COLOR_YELLOW](%D1_Change/Runde)[COLOR_REVERT]</German>
-		<Italian>[SPACE][COLOR_YELLOW](%D1_Change/Turno)[COLOR_REVERT]</Italian>
-		<Spanish>[SPACE][COLOR_YELLOW](%D1_Change/turno)[COLOR_REVERT]</Spanish>
-		<Polish>[SPACE][COLOR_YELLOW](%D1_Change/turę)[COLOR_REVERT]</Polish>
-		<Russian>[SPACE][COLOR_YELLOW](%D1_Change/ход)[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_NEIGHBOR_CITY_PLUNDERED</Tag>
-		<English>We have heard reports that the %s1_civ_adjective city of %s2_city has been plundered by a marauding Barbarian Tribe!</English>
-		<French>Nous avons appris que la ville %s1_civ_adjective de %s2_city a été pillée par une tribu barbare environnante!</French>
-		<German>Uns ist zu Ohren gekommen, dass die %s1_civ_adjective Stadt %s2_city von einem marodierenden Barbarenstamm geplündert wurde!</German>
-		<Italian>Abbiamo sentito la notzia che la città %s1_civ_adjective di %s2_city è stata saccheggiata da una tribù barbarica!</Italian>
-		<Spanish>Hemos oído que la ciudad %s1:2_civ_adjective de %s2_city ha sido saqueada por una Tribu bárbara cercana.</Spanish>
-		<Polish>Mamy doniesienia że miasto %s1_civ_adjective: %s2_city zostało splądrowane przez Barbarzyńskie Plemię!</Polish>
-		<Russian>Ìû óñëûøàëè îò÷åòû, ÷òî %s1_civ_adjective ãîðîä %s2_city áûë ðàçãðàáëåí ìàðîäåðñòâóþùèì Âàðâàðñêèì Ïëåìåíåì!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_NO_CONSCRIPT_UNITS_LEFT</Tag>
 		<English>[COLOR_NEGATIVE_TEXT]You cannot draft any more units this turn[COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]Vous ne pouvez pas recruter d'autre unités ce tour[COLOR_REVERT]</French>
@@ -7903,13 +7300,6 @@
 		<Spanish>¡Se ha producido una explosión nuclear de origen desconocido en el territorio %s1!</Spanish>
 		<Polish>Wybuch nuklearny z nieznanego źródła nastąpił na terytorium %s1!</Polish>
 		<Russian>ßäåðíûé âçðûâ èç íåèçâåñòíîãî èñòî÷íèêà ïðîèçîøåë íà %s1's òåððèòîðèè!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_CAN_RETRAIN</Tag>
-		<English>Your %s1_Unit has lost its %s2_Promotion promotion and may now select a new promotion.</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_Unit [NUM1:a:a:ont:ont] perdu [NUM1:sa:sa:leur:leur] promotion %s2_Promotion et peu[NUM1:t:t:vent:vent] à présent choisir une nouvelle promotion.</French>
-		<Italian>La tua unità %s1_Unit ha perso la promozione %s2_Promotion e può ora selezionare una nuova promozione.</Italian>
-		<Polish>Twoja jednostka: %s1_Unit straciła promocję: %s2_Promotion i może teraz wybrać nową.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_CAN_RETRAIN</Tag>
@@ -8012,13 +7402,6 @@
 		<French>N'ayant plus de définition de classe de combat, votre %s1_Unit a rendu sa promotion %s2_Promotion obsolète.</French>
 		<Italian>Dato che ha cambiato la propria classe di combattimento, la tua unità %s1_Unit ha perso la promozione %s2_Promotion.</Italian>
 		<Polish>Ponieważ Twoja jednostka nie posiada już żadnej definicji klasy bojowej, jednostka: %s1_Unit traci: %s2_Promotion</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_NO_RETRAIN</Tag>
-		<English>Your %s1_Unit has obsoleted its %s2_Promotion promotion.</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_Unit [NUM1:a:a:ont:ont] rendu [NUM1:sa:sa:leur:leur] promotion %s2_Promotion obsolète.</French>
-		<Italian>La tua unità %s1_Unit ha reso obsoleta la propria promozione %s2_Promotion.</Italian>
-		<Polish>Twoja jednostka: %s1_Unit posiada przestarzałą promocję: %s2_Promotion</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_CAN_RETRAIN</Tag>
@@ -8198,20 +7581,6 @@
 		<Russian>Èç ãîðîäà %s1_CityName ïîõèùåíû âàøè âîåííûå ïëàíû!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_IMP</Tag>
-		<English>Our %s1 is winning the hearts and minds of the oppressed citizenry of our %s2 enemy.</English>
-		<French>Notre %s1 gagné le cœur et l'esprit des citoyens opprimés de nos ennemis %s2.</French>
-		<Spanish>[NUM1:Nuestro:Nuestra:Nuestros:Nuestras] %s1 se [NUM1:está:está:están:están] ganando el corazón y las mentes de los oprimidos ciudadanos de los %s2:3.</Spanish>
-		<Polish>Nasza jednostka: %s1 wygrała serca i umysły ciemiężonych mieszkańców naszego wroga %s2.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_IMP_HIDDEN</Tag>
-		<English>Our %s1 is winning the hearts and minds of the oppressed citizenry of our enemies.</English>
-		<French>Notre %s1 gagné le cœur et l'esprit des citoyens opprimés de nos ennemis.</French>
-		<Spanish>[NUM1:Nuestro:Nuestra:Nuestros:Nuestras] %s1 se [NUM1:está:está:están:están] ganando el corazón y las mentes de los oprimidos ciudadanos.</Spanish>
-		<Polish>Nasza jednostka: %s1 wygrała serca i umysły ciemiężonych mieszkańców naszego wroga %s2.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP</Tag>
 		<English>You have plundered %d1_Num[ICON_ESPIONAGE] from the %s2_ImpName!</English>
 		<French>Vous avez pillé %d1_Num[ICON_ESPIONAGE] dans: %s2_ImpName!</French>
@@ -8290,39 +7659,6 @@
 		<Polish>Generale, nasza jednostka: %s2 odkryła sekrety technicznej natury martwego %s3. (+%d1 [ICON_RESEARCH] do [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_PLUNDER_CITY_01</Tag>
-		<English>Our [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] has plundered the city of [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT]!</English>
-		<French>Notre [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] a pillé la ville de [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT]!</French>
-		<German>Eure Einheit [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] hat die Stadt [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT] geplündert!</German>
-		<Italian>La nostra unità [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] ha saccheggiato la città di [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT]!</Italian>
-		<Spanish>¡Nuestr[NUM1:o:a:os:as] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] [NUM1:ha:ha:han:han] saqueado la ciudad de [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT]!</Spanish>
-		<Polish>Nasza [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] splądrowała miasto [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT]!</Polish>
-		<Russian>Íàø [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] ðàçãðàáèë ãîðîä [COLOR_UNIT_TEXT]%s2_CityName[COLOR_REVERT]!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_PLUNDER_CITY_PLUNDERED</Tag>
-		<English>Our city of %s1_city has been plundered by a marauding Barbarian Tribe!</English>
-		<French>Notre ville de %s1_city a été pillée par une tribu barbare environnante!</French>
-		<German>Eure Stadt %s1_city wurde von einem marodierenden Barbarenstamm geplündert!</German>
-		<Italian>La nostra città di %s1_city è stata saccheggiata da una tribù barbarica!</Italian>
-		<Spanish>¡Nuestra ciudad de %s1_city ha sido saqueada por una Tribu bárbara cercana!</Spanish>
-		<Polish>Nasze miasto %s1_city zostało splądrowane przez Barbarzyńskie Plemię!</Polish>
-		<Russian>Íàø ãîðîä %s1_city áûë ðàçãðàáëåí ìàðîäåðñòâóþùèì Âàðâàðñêèì Ïëåìåíåì!!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_POSITIVE_ATTITUDE_TRAIT</Tag>
-		<English>%D1: "You speak with a Diplomatic tone"</English>
-		<French>%D1: "Vous parlez avec un ton diplomate"</French>
-		<German>%D1: "Ihr sprecht mit diplomatischer Zunge"</German>
-		<Spanish>%D1: "Usas un tono diplomático"</Spanish>
-		<Polish>%D1: "Przemawiasz w Dyplomatycznym tonie"</Polish>
-		<Russian>%D1: "Âû ãîâîðèòå â äèïëîìàòè÷íîé ìàíåðå"</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_POS_GOLD</Tag>
-		<English>[ICON_GOLD]: %d1_Gold</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL</Tag>
 		<English>[SPACE][COLOR_POSITIVE_TEXT](%D1/Turn %D2 TD/WFL)[COLOR_REVERT]</English>
 		<French>[SPACE][COLOR_POSITIVE_TEXT](%D1/tour %D2 Diff.Tech)[COLOR_REVERT]</French>
@@ -8330,16 +7666,6 @@
 		<Italian>[SPACE][COLOR_POSITIVE_TEXT](%D1/Turno %D2 TD/WFL)[COLOR_REVERT]</Italian>
 		<Spanish>[SPACE][COLOR_POSITIVE_TEXT](%D1/turno %D2 TD/WFL)[COLOR_REVERT]</Spanish>
 		<Russian>[SPACE][COLOR_POSITIVE_TEXT](%D1/ход %D2 TD/WFL)[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_POS_WARNING_GOLD_PER_TURN</Tag>
-		<English>[SPACE][COLOR_YELLOW](%D1_Change/Turn)[COLOR_REVERT]</English>
-		<French>[SPACE][COLOR_YELLOW](%D1_Change/tour)[COLOR_REVERT]</French>
-		<German>[SPACE][COLOR_YELLOW](%D1_Change/Runde)[COLOR_REVERT]</German>
-		<Italian>[SPACE][COLOR_YELLOW](%D1_Change/Turno)[COLOR_REVERT]</Italian>
-		<Spanish>[SPACE][COLOR_YELLOW](%D1_Change/turno)[COLOR_REVERT]</Spanish>
-		<Polish>[SPACE][COLOR_YELLOW](%D1_Change/turę)[COLOR_REVERT]</Polish>
-		<Russian>[SPACE][COLOR_YELLOW](%D1_Change/ход)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_POWER_RESTORED</Tag>
@@ -8478,26 +7804,6 @@
 		<Spanish>¡Nos han informado de un sabotaje cerca de %s1_CityName!</Spanish>
 		<Polish>Dostałeś raporty o sabotażu niedaleko %s1_CityName!</Polish>
 		<Russian>Ïðèøëî äîíåñåíèå î ñàáîòàæå âáëèçè ãîðîäà %s1_CityName!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_SACKED_CITY</Tag>
-		<English>You have sacked the city of %s1_cityname!</English>
-		<French>Vous avez saccagé la ville de %s1_cityname !</French>
-		<German>Ihr habt die Stadt %s1_cityname geplündert!</German>
-		<Italian>Hai saccheggiato la città di %s1_cityname!</Italian>
-		<Spanish>¡Has saqueado la ciudad de %s1_cityname!</Spanish>
-		<Polish>Zniewoliłeś miasto %s1_cityname!</Polish>
-		<Russian>Âû îòêàçàëèñü îò ãîðîäà %s1_cityname!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_SACKED_CITY_GOLD</Tag>
-		<English>%d2_gold[ICON_GOLD] has been seized from the city of %s1_cityname!</English>
-		<French>%d2_gold[ICON_GOLD] ont été saisis de la ville de %s1_cityname !</French>
-		<German>%d2_gold[ICON_GOLD] wurde in der Stadt %s1_cityname beschlagnahmt!</German>
-		<Italian>%d2_gold[ICON_GOLD] è stato rubato dalla città di %s1_cityname!</Italian>
-		<Spanish>¡Se ha obtenido %d2_gold[ICON_GOLD] de la ciudad de %s1_cityname!</Spanish>
-		<Polish>%d2_gold[ICON_GOLD] zostało zabranych z miasta %s1_cityname!</Polish>
-		<Russian>%d2_gold[ICON_GOLD] áûëî çàõâà÷åíî èç ãîðîäà %s1_cityname!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SET_RATE</Tag>
@@ -8639,16 +7945,6 @@
 		<French>En combattant l'unité %s1_EnemyUnit, votre %s2_YourUnit a été étourdie durant %d3_StunVolume tour(s).</French>
 		<Italian>Durante la battaglia contro l'unità %s1_EnemyUnit, la tua unità %s2_YourUnit è stata messa fuori combattimento per %d3_StunVolume turni.</Italian>
 		<Polish>W bitwie przeciwko jednostce: %s1_EnemyUnit, Twoja jednostka: %s2_YourUnit jest oszołomiona na: %d3_StunVolume rund(y).</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_TAXATION_ANGER</Tag>
-		<English>Your People Are Unhappy about Higher Taxes! They Have Taken to the Streets to Protest!</English>
-		<French>Votre peuple est mécontent des Taxes élevées! Ils sont descendus dans les rues pour protester!</French>
-		<German>Eure Bürger sind unzufrieden mit den erhöhten Steuern! Sie gehen auf die Straße und protestieren!</German>
-		<Italian>I tuoi cittadini sono arrabbiati per l'aumento delle tasse! Sono scesi in piazza per protestare!</Italian>
-		<Spanish>¡Tu pueblo está infeliz por los altos impuestos! ¡Han tomado las calles para protestar!</Spanish>
-		<Polish>Twoi ludzie są niezadowoleni z powodu wysokich podatków! Wyszli na ulice by protestować!</Polish>
-		<Russian>Âàøè ëþäè íåäîâîëüíû âûñîêèìè íàëîãàìè! Îíè âûøëè íà óëèöû, ÷òîáû âûñòóïèòü!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_TERRAIN_DEFENSE_HOVER</Tag>
@@ -8836,16 +8132,6 @@
 		<English>Your %s1_UnitName has been injured by a %s2_UnitName, suffering %d3_damage!</English>
 		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName a été blessé par %s2_UnitName, souffrant de %d3_damage!</French>
 		<Russian>Ваш %s1_UnitName был ранен от действий %s2_UnitName, получив %d3_damage урона!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_TRIBAL_CONSCRIPT</Tag>
-		<English>[COLOR_WARNING_TEXT]Will reduce [ICON_FOOD] and [ICON_PRODUCTION] in the city[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Réduit [ICON_FOOD] et [ICON_PRODUCTION] dans la ville[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Verringert [ICON_FOOD] und [ICON_PRODUCTION] der Stadt[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Ridurrà [ICON_FOOD] e [ICON_PRODUCTION] nella città[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Reducirá [ICON_FOOD] y [ICON_PRODUCTION] en la ciudad[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Redukcja [ICON_FOOD] i [ICON_PRODUCTION] w mieście[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Óìåíüøèò [ICON_FOOD] è [ICON_PRODUCTION] â ãîðîäå[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_TURN_OFF</Tag>
@@ -9097,16 +8383,6 @@
 		<Spanish>No has podido bombardear ningún barco en %s1_CityName.</Spanish>
 		<Polish>Nie udało się zbombardować statku w mieście: %s1_CityName.</Polish>
 		<Russian>Âàì íå óäàëîñü ïðè÷èíèòü ïîâðåæäåíèÿ êîðàáëþ â ïîðòó ãîðîäà %s1_CityName.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_YOU_AIRBOMB4SUCCESS</Tag>
-		<English>You have bombed a ship.</English>
-		<French>Vous avez bombardé un navire.</French>
-		<German>Du hast ein Schiff bombardiert.</German>
-		<Italian>Hai colpito una nave!</Italian>
-		<Spanish>Has bombardeado un navío.</Spanish>
-		<Polish>Zbombardowałeś statek wroga.</Polish>
-		<Russian>Âû ïðè÷èíèëè ïîâðåæäåíèÿ êîðàáëþ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_AIRBOMB5FAIL</Tag>

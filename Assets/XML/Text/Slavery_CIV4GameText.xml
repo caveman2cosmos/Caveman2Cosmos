@@ -311,14 +311,6 @@
 		<Russian>Îòêàçàòüñÿ îò òðàäèöèè ðàáîâëàäåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_REMOVE_WV_SLAVERY_HELP</Tag>
-		<English>Slavery is no longer acceptable in your cities. Unit is consumed.</English>
-		<French>L'Esclavage n'est plus accepté dans vos villes. Les unités sont libérées.</French>
-		<Italian>La schiavitù non è più legale nella tua città. L'unità viene consumata.</Italian>
-		<Polish>Niewolnictwo nie jest już akceptowane w Twoich miastach. Jednostka zostaje usunięta.</Polish>
-		<Russian>Ðàáñòâî áîëåå íåïðèåìëåìî â âàøèõ ãîðîäàõ. Îòðÿä èñ÷åçàåò.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_SELL_CAPTIVE</Tag>
 		<English>Sell your captive into slavery for money.</English>
 		<French>Vendre vos prisonniers comme esclaves.</French>
