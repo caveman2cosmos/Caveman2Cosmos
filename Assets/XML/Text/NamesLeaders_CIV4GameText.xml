@@ -703,11 +703,6 @@
 		<Russian>Накоплено Национальной культуры: %d1_Culture</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_1_GC</Tag>
-		<English>+ %d1_Culture Million</English>
-		<Russian> + %d1_Culture миллион</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_2</Tag>
 		<English>Culture Volume to Achieve Next Level: %d1_Culture</English>
 		<French>Volume de Culture pour le Niveau suivant: %d1_Culture</French>

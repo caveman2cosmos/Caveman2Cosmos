@@ -4230,14 +4230,6 @@
 		<Russian>Ïðèðîñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_INFLATION_OUTLOOK_IMPROVING</Tag>
-		<English>improving</English>
-		<French>s'améliore</French>
-		<Spanish>mejorando</Spanish>
-		<Polish>wzrasta</Polish>
-		<Russian>улучшает</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_INSIDIOUSNESS_TEXT</Tag>
 		<English>[ICON_BULLET]Insidiousness (Ability to Evade Investigation): %s1_Amount%%</English>
 		<French>[ICON_BULLET]Insidiosité (Habileté à échapper à l'investigation): %s1_Amount%%</French>
@@ -4370,16 +4362,6 @@
 		<Spanish>"Combate" permite a los cazas atacar a otros cazas enemigos en aire o en tierra.</Spanish>
 		<Polish>Angażowanie myśliwców pozwala myśliwcom atakować wrogie myśliwce znajdujące się w powietrzu lub na ziemi.</Polish>
 		<Russian>Èñòðåáèòåëè îäíîé äåðæàâû ìîãóò àòàêîâàòü èñòðåáèòåëè äðóãîé äåðæàâû êàê â âîçäóõå, òàê è íà çåìëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INTERFACEMODE_FENGAGE_TEXT</Tag>
-		<English>Fighter Engagement</English>
-		<French>Engagement Aérien</French>
-		<German>Jägereinsatz</German>
-		<Italian>Ingaggio</Italian>
-		<Spanish>Combate</Spanish>
-		<Polish>Angażowanie myśliwców</Polish>
-		<Russian>Áîé èñòðåáèòåëåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_SENTRY</Tag>
@@ -4795,66 +4777,6 @@
 		<Spanish>Montaña %s1</Spanish>
 		<Polish>Góra %s1</Polish>
 		<Russian>%s1 ãîðà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LANGUAGE_10</Tag>
-		<English>Portuguese</English>
-		<French>Portugais</French>
-		<German>Portugiesisch</German>
-		<Italian>Portoghese</Italian>
-		<Spanish>Portugués</Spanish>
-		<Polish>Portugalski</Polish>
-		<Russian>ßïîíñêèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LANGUAGE_5</Tag>
-		<English>Finnish</English>
-		<French>Finnois</French>
-		<German>Finnisch</German>
-		<Italian>Finlandese</Italian>
-		<Spanish>Finlandés</Spanish>
-		<Polish>Fiński</Polish>
-		<Russian>Èñïàíñêèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LANGUAGE_6</Tag>
-		<English>Hungarian</English>
-		<French>Hongrois</French>
-		<German>Ungarisch</German>
-		<Italian>Ungherese</Italian>
-		<Spanish>Húngaro</Spanish>
-		<Polish>Węgierski</Polish>
-		<Russian>Âåíãåðñêèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LANGUAGE_7</Tag>
-		<English>Polish</English>
-		<French>Polonais</French>
-		<German>Polnisch</German>
-		<Italian>Polacco</Italian>
-		<Spanish>Polaco</Spanish>
-		<Polish>Polski</Polish>
-		<Russian>Ïîëüñêèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LANGUAGE_8</Tag>
-		<English>Russian</English>
-		<French>Russe</French>
-		<German>Russisch</German>
-		<Italian>Russo</Italian>
-		<Spanish>Ruso</Spanish>
-		<Polish>Rosyjski</Polish>
-		<Russian>Русский</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LANGUAGE_9</Tag>
-		<English>Chinese</English>
-		<French>Chinois</French>
-		<German>Chinesisch</German>
-		<Italian>Cinese</Italian>
-		<Spanish>Chino</Spanish>
-		<Polish>Chiński</Polish>
-		<Russian>Китайский</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LATLONG</Tag>
