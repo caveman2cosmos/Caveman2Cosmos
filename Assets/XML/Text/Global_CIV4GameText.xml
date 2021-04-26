@@ -176,10 +176,6 @@
 		<English>%s1: (%d2)</English>
 	</TEXT>
 	<TEXT>
-		<Tag>INTERFACE_NEXT_GREAT_GENERAL_XP</Tag>
-		<English>%s1 (%d2)</English>
-	</TEXT>
-	<TEXT>
 		<Tag>INTERFACE_UNIT_TAB</Tag>
 		<English>Unit Tab</English>
 		<French>Unités</French>
@@ -636,26 +632,6 @@
 		<Russian>Разрушение города, где большинство горожан имеет другую национальность, приведет к ухудшению отношений с другими цивилизациями.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ABANDON_FREE</Tag>
-		<English>Free</English>
-		<French>Libre</French>
-		<German>Befreien</German>
-		<Italian>Libera</Italian>
-		<Spanish>Libre</Spanish>
-		<Polish>Darmowy</Polish>
-		<Russian>Ñâîáîäíî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ABANDON_UNHAPPINESS</Tag>
-		<English>+1 unhappy</English>
-		<French>+1 mécontent</French>
-		<German>+1 Unzufriedenheit</German>
-		<Italian>+1 infelicità</Italian>
-		<Spanish>+1 infelicidad</Spanish>
-		<Polish>+1 nieszczęśliwy</Polish>
-		<Russian>+1 ê íåñ÷àñòüþ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ACTION_ASSASSIN_MISSION</Tag>
 		<English>Eliminate %s1_unit for %d2[ICON_ESPIONAGE] %d3_percent%% chance of success.</English>
 		<French>Eliminer %s1_unit pour %d2[ICON_ESPIONAGE] %d3_percent%% chances de succès.</French>
@@ -1024,16 +1000,6 @@
 		<Russian>Ìîäåðíèçèðóåò â íîâûõ þíèòîâ êîãäà ñòàíîâèòñÿ âîçìîæíî.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ACTION_BECOME_BARBARIAN_COST</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Requires %d1_cost [COLOR_REVERT][ICON_GOLD]</English>
-		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Requis: %d1_cost [COLOR_REVERT][ICON_GOLD]</French>
-		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Verbraucht %d1_cost [COLOR_REVERT][ICON_GOLD]</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Richiede %d1_cost [COLOR_REVERT][ICON_GOLD]</Italian>
-		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Requiere %d1_cost [COLOR_REVERT][ICON_GOLD]</Spanish>
-		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Wymaga %d1_cost [COLOR_REVERT][ICON_GOLD]</Polish>
-		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Требует %d1_cost [COLOR_REVERT][ICON_GOLD]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ACTION_CANNOT_FOUND_CITY_LIMIT</Tag>
 		<English>[COLOR_WARNING_TEXT]Cannot found more than %d1 cities because of %s2[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Ne peut pas fonder plus de %d1 Villes à cause de %s2[COLOR_REVERT]</French>
@@ -1072,16 +1038,6 @@
 		<Russian>Пополняет запасы продовольствия в [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ACTION_FREE_UNIT_SUPPORT</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Free Support for [COLOR_REVERT][COLOR_POSITIVE_TEXT]%d1_Num[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] units.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Entretien gratuit pour [COLOR_REVERT][COLOR_POSITIVE_TEXT]%d1_Num[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] unités.[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Freie Militärunterstützung für [COLOR_REVERT][COLOR_POSITIVE_TEXT]%d1_Num[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] Einheiten.[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Supporto gratuito per [COLOR_REVERT][COLOR_POSITIVE_TEXT]%d1_Num[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] unità.[COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Soporte gratuito para [COLOR_REVERT][COLOR_POSITIVE_TEXT]%d1_Num[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] unidades.[COLOR_REVERT]</Spanish>
-		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Dodatkowe wsparcie dla [COLOR_REVERT][COLOR_POSITIVE_TEXT]%d1_Num[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] jednostek.[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Áåñïëàòíàÿ ïîääåðæêà äëÿ [COLOR_REVERT][COLOR_POSITIVE_TEXT]%d1_Num[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] îòðÿäîâ.[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ACTION_NO_PRODUCTION</Tag>
 		<English>[COLOR_YELLOW]Will not receive any [ICON_PRODUCTION][COLOR_REVERT]</English>
 		<French>[COLOR_YELLOW]Ne reçoit aucune [ICON_PRODUCTION][COLOR_REVERT]</French>
@@ -1099,16 +1055,6 @@
 		<Italian>[ICON_BULLET]Fornisce [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Da [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]</Spanish>
 		<Russian>[ICON_BULLET]Дает [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ACTION_WAKE_WHEN_READY</Tag>
-		<English>Will awaken when it has accrued the maximum possible espionage points</English>
-		<French>Se réveillera lorsqu'il aura atteint le maximum possible de points d'espionnage</French>
-		<German>Wird erst aufwachen, wenn die maximal mögliche Zahl an Spionagepunkten erreicht ist</German>
-		<Italian>Si sveglierà quando avrà raccolto il massimo punteggio possibile di spionaggio</Italian>
-		<Spanish>Se activará cuando haya acumulado la mayor cantidad de puntos de espionaje posible</Spanish>
-		<Polish>Zostanie obudzony gdy zostanie zebrana maksymalna ilość pkt szpiegostwa</Polish>
-		<Russian>Ïðîñíåòñÿ, êîãäà íàêîïèòñÿ ìàêñèìàëüíî âîçìîæíûå øïèîíñêèå ïóíêòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTUAL_EFFECTS</Tag>
@@ -1144,16 +1090,6 @@
 		<Polish>[ICON_BULLET]Dolegliwość: Na końcu walki, szansa: %d1_Probability na zadanie %s2_PromotionName które zadał Tobie wróg.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_ABDICATE</Tag>
-		<English>Old age has finally caught up with you and you decide to abdicate rule.</English>
-		<French>La vieillesse vous a finalement rattrapé vous décidez à de renoncer au pouvoir.</French>
-		<German>Ihr hohes Alter hat Sie schließlich eingeholt und Sie entscheiden sich, die Herrschaft abzugeben.</German>
-		<Italian>La vecchiaia infine ti ha raggiunto e tu hai deciso di lasciare il potere.</Italian>
-		<Spanish>Finalmente los viejos tiempos te han alcanzado y decides dejar el poder.</Spanish>
-		<Polish>Starość dała w końcu znać o sobie i zadecydowałeś zrzec się tronu.</Polish>
-		<Russian>Ñòàðîñòü íàêîíåö ïðèøëà è ê âàì è âû ðåøèëè îòðå÷üñÿ îò âëàñòè.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_AUTOMATION</Tag>
 		<English>Choose type of automation</English>
 		<French>Choisissez le type d'automatisation</French>
@@ -1174,16 +1110,6 @@
 		<Russian>Îòìåíà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_CIV_DIED</Tag>
-		<English>Your civ has died.[NEWLINE]Would you like to lead another civ?[NEWLINE]</English>
-		<French>Votre civ s'est éteinte.[NEWLINE]Souhaitez-vous diriger une autre civ ?[NEWLINE]</French>
-		<German>Ihre Zivilisation ist untergegangen.[NEWLINE]Möchten Sie eine andere Zivilisation führen?[NEWLINE]</German>
-		<Italian>La tua civiltà è scomparsa.[NEWLINE]Vuoi guidarne un'altra?[NEWLINE]</Italian>
-		<Spanish>Tu civilización ha sido derrotada.[NEWLINE]¿Le gustaría dirigir otra civilización?[NEWLINE]</Spanish>
-		<Polish>Twoja cywilizacja upadła.[NEWLINE]Czy chcesz przewodzić inną cywilizacją?[NEWLINE]</Polish>
-		<Russian>Âàøà öèâèëèçàöèÿ ïîãèáëà.[NEWLINE]Õîòèòå ëè âû âîçãëàâèòü äðóãóþ öèâèëèçàöèþ?[NEWLINE]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_CLEARING_ALL</Tag>
 		<English>Clearing all automation</English>
 		<French>Nettoyer toutes les automatisations</French>
@@ -1192,16 +1118,6 @@
 		<Spanish>Cancelar toda automatización</Spanish>
 		<Polish>Wyczyść Wszystkie Automatyzacje</Polish>
 		<Russian>Î÷èñòèòü âñþ àâòîìàòèçàöèþ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_DEBUG</Tag>
-		<English>Debug Mode (will reveal entire world!!!)</English>
-		<French>Mode Debug (Dévoile toute la carte!!!)</French>
-		<German>Fehlerprüfungsmodus (deckt ganze Welt auf!!!)</German>
-		<Italian>Modalità Debug (rivela il mondo intero!!!)</Italian>
-		<Spanish>Modo de depuración (¡¡¡Revelará el mundo entero!!!)</Spanish>
-		<Polish>Tryb Debugowy (odkryje cały świat!!!)</Polish>
-		<Russian>Îòëàäî÷íûé ðåæèì (áóäåò îòêðûò âåñü ìèð!!!)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_FULLY</Tag>
@@ -1224,26 +1140,6 @@
 		<Russian>Ïîëíîñòüþ àâòîìàòèçèðóÿ ÷åðåç %d õîäîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_GOOD_NEWS</Tag>
-		<English>[NEWLINE][NEWLINE]However, there is good news![NEWLINE]Mystical advisors report that you will be reincarnated and return to power in %d turns.[NEWLINE][NEWLINE]In the meantime, you can only hope your successor proves worthy.</English>
-		<French>[NEWLINE][NEWLINE]Cependant, il y a de bonnes nouvelles![NEWLINE]les conseillers mystiques rapportent que vous serez réincarné et de retour d'ici %d tours.[NEWLINE][NEWLINE]en attendant, vous pouvez seulement espérer que votre successeur se montre digne de ce que vous avez bâti.</French>
-		<German>[NEWLINE][NEWLINE]Es gibt allerdings auch gute Nachrichten![NEWLINE]Geheimnisvolle Berater berichten, dass Sie wiedergeboren und in %d Runden wieder an die Macht gelangen werden.[NEWLINE][NEWLINE]In der Zwischenzeit können Sie nur hoffen, dass Ihr Nachfolger sich als würdig erweist.</German>
-		<Italian>[NEWLINE][NEWLINE]Tuttavia, ci sono buone notizie![NEWLINE]I consiglieri religiosi prevedono che sarai reincarnato e tornerai al potere in %d turni.[NEWLINE][NEWLINE]Nel frattempo, puoi soltanto sperare che il tuo successore si dimostri degno.</Italian>
-		<Spanish>[NEWLINE][NEWLINE]¡No obstante, también hay buenas noticias![NEWLINE]Los astrólogos han vaticinado vuestra futura reencarnación y retorno al poder en %d turnos.[NEWLINE][NEWLINE]Mientras tanto, solo puedes esperar que tu sucesor esté a la altura.</Spanish>
-		<Polish>[NEWLINE][NEWLINE]Pomimo tego, są i dobre wieści![NEWLINE]Mistycy głoszą, że za %d tur dostąpisz reinkarnacji i powrócisz do władzy.[NEWLINE][NEWLINE]W międzyczasie, możesz tylko mieć nadzieję, że Twój następca dobrze się spisze.</Polish>
-		<Russian>[NEWLINE][NEWLINE]Âðåìÿ õîðîøèõ íîâîñòåé![NEWLINE]Ìèñòèêè ñîîáùàþò ÷òî âû âåðíåòåñü ê âëàñòè â íîâîì îáðàçå ÷åðåç %d õîäîâ.[NEWLINE][NEWLINE]Òåì âðåìåíåì, âû ìîæåòå òîëüêî íàäåÿòüñÿ ÷òî âàø ïðèåìíèê ïðîÿâèò ñåáÿ äîñòîéíî.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_LIMIT_DIPLO</Tag>
-		<English>Limit diplomacy changes</English>
-		<French>Limiter les changements de diplomatie</French>
-		<German>Diplomatieänderungen begrenzen</German>
-		<Italian>Limita i cambiamenti diplomatici</Italian>
-		<Spanish>Limitar cambios en la diplomacia</Spanish>
-		<Polish>Ogranicz zmiany dyplomatyczne</Polish>
-		<Russian>Ëèìèò èçìåíåíèÿ äèïëîìàòèè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_MOVING</Tag>
 		<English>Moving your units...</English>
 		<French>Déplacement de vos unités...</French>
@@ -1252,34 +1148,6 @@
 		<Spanish>Moviendo tus unidades...</Spanish>
 		<Polish>Ruch Twoich Jednostek...</Polish>
 		<Russian>Ïåðåìåùåíèå Âàøèõ Îòðÿäîâ...</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_MP_ANNOUNCE_ABDICATE</Tag>
-		<English>AI Auto Control On</English>
-		<French>Activation du Contrôle par l'IA</French>
-		<German>KI-Autosteuerung an</German>
-		<Italian>Automazione dell'IA attivata</Italian>
-		<Spanish>Control automático de la IA activado</Spanish>
-		<Polish>Autogra włączona</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_MP_ANNOUNCE_ABDICATE_TEXT</Tag>
-		<English>LEADER: %s1_Leader[NEWLINE]CIVILIZATION: %s2_CivilizationAdj[NEWLINE][NEWLINE]START TURN: %d3_StartTurn[NEWLINE]END TURN: %d4_EndTurn[NEWLINE]AUTO TURNS: %d5_AutoTurn[NEWLINE][NEWLINE]Game AI Auto Control is Now Active.</English>
-		<French>LEADER: %s1_Leader[NEWLINE]CIVILISATION: %s2_CivilizationAdj[NEWLINE][NEWLINE]TOUR DEBUT: %d3_StartTurn[NEWLINE]TOUR FIN: %d4_EndTurn[NEWLINE]TOURS AUTO: %d5_AutoTurn[NEWLINE][NEWLINE]Le contrôle du Jeu par l'IA est à présent actif.</French>
-		<German>ANFÜHRER: %s1_Leader[NEWLINE]ZIVILISATION: %s2_CivilizationAdj[NEWLINE][NEWLINE]STARTRUNDE: %d3_StartTurn[NEWLINE]ENDRUNDE: %d4_EndTurn[NEWLINE]KI-RUNDEN: %d5_AutoTurn[NEWLINE][NEWLINE]KI-Autosteuerung ist jetzt aktiv.</German>
-		<Italian>LEADER: %s1_Leader[NEWLINE]CIVILTA': %s2_CivilizationAdj[NEWLINE][NEWLINE]TURNO INIZIALE: %d3_StartTurn[NEWLINE]TURNO FINALE: %d4_EndTurn[NEWLINE]TURNI AUTO: %d5_AutoTurn[NEWLINE][NEWLINE]Controllo Automatico dell'IA attivo.</Italian>
-		<Spanish>LÍDER: %s1_Leader[NEWLINE]CIVILIZACIÓN: %s2_CivilizationAdj[NEWLINE][NEWLINE]TURNO DE INICIO: %d3_StartTurn[NEWLINE]TURNO FINAL: %d4_EndTurn[NEWLINE]TURNOS AUTOMÁTICOS: %d5_AutoTurn[NEWLINE][NEWLINE]El control automático de la IA está activado.</Spanish>
-		<Polish>PRZYWÓDCA: %s1_Leader[NEWLINE]CYWILIZACJA: %s2_CivilizationAdj[NEWLINE][NEWLINE]TURA ROZPOCZECIA: %d3_StartTurn[NEWLINE]TURA ZAKOnCZENIA: %d4_EndTurn[NEWLINE]AUTOMATYCZNE TURY: %d5_AutoTurn[NEWLINE][NEWLINE]Autogra jest teraz włączona.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_NEW_LEADER</Tag>
-		<English>There is a new leader!!!</English>
-		<French>Il y a un nouveau chef!!!</French>
-		<German>Es gibt einen neuen Anführer!!!</German>
-		<Italian>C'è un nuovo leader!!!</Italian>
-		<Spanish>¡¡¡Hay un nuevo líder!!!</Spanish>
-		<Polish>Mamy nowego przywódcę!!!</Polish>
-		<Russian>Ýòî íîâûé ëèäåð!!!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_NO</Tag>
@@ -1292,56 +1160,6 @@
 		<Russian>Áåç àâòîìàòèçàöèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_NONE</Tag>
-		<English>None</English>
-		<French>Aucun</French>
-		<German>Kein</German>
-		<Italian>Nessuno</Italian>
-		<Spanish>Ninguno</Spanish>
-		<Polish>Brak</Polish>
-		<Russian>Íåò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_NOW_CONTROL</Tag>
-		<English>You now control the %s</English>
-		<French>Vous contrôlez maintenant %s</French>
-		<German>Sie steuern jetzt %s</German>
-		<Italian>Ora controlli %s</Italian>
-		<Spanish>Ahora controlas %s</Spanish>
-		<Polish>Teraz kontrolujesz %s</Polish>
-		<Russian>Òåïåðü âû êîíòðîëèðóåòå %s</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_OF_THE</Tag>
-		<English>%s of the %s</English>
-		<French>%s de %s</French>
-		<German>%s von %s</German>
-		<Italian>%s / %s</Italian>
-		<Spanish>%s de los %s</Spanish>
-		<Polish>%s %s</Polish>
-		<Russian>%s èç %s</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_PICK_CIV</Tag>
-		<English>Pick a civ</English>
-		<French>Sélectionnez une civ</French>
-		<German>Wählen Sie eine Zivilisation aus</German>
-		<Italian>Seleziona una civiltà</Italian>
-		<Spanish>Elige una civilización</Spanish>
-		<Polish>Wybierz cywilizację</Polish>
-		<Russian>Âûáåðèòå öèâèëèçàöèþ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_TAKE_CONTROL_CIV</Tag>
-		<English>Take control of this civ...</English>
-		<French>Prendre le contrôle de cette civ...</French>
-		<German>Die Kontrolle über diese Zivilisation übernehmen...</German>
-		<Italian>Prendi il controllo di questa civiltà...</Italian>
-		<Spanish>Toma el control de esta civilización...</Spanish>
-		<Polish>Przejmij kontrolę nad tą cywilizacją...</Polish>
-		<Russian>Âçÿòèå êîíòðîëÿ íàä öèâèëèçàöèåé ...</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_TURNS</Tag>
 		<English>How many turns would you like the AI to control?</English>
 		<French>Pour combien de tours donnez-vous le contrôle à l'IA?</French>
@@ -1352,51 +1170,6 @@
 		<Russian>Ñêîëüêî õîäîâ âû õîòèòå îñóùåñòâëÿòü êîíòðîëü ÈÈ?</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_TURNS_HELP</Tag>
-		<English>Number of turns the AI control</English>
-		<French>Nombre de tours contrôlés par l'IA</French>
-		<German>Anzahl an Runden unter KI-Kontrolle</German>
-		<Italian>Per quanti turni vuoi lasciare il controllo all'IA?</Italian>
-		<Spanish>Número de turnos que controlará la IA</Spanish>
-		<Polish>Ile tur SI ma kontrolować twoją cywilizację?</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_TURN_ABDICATE</Tag>
-		<English>Turn AI Auto Controled</English>
-		<French>Laisser l'IA contrôler le Tour</French>
-		<German>Eine Runde KI-Autosteuerung</German>
-		<Italian>Turno dell'Automazione dell'IA</Italian>
-		<Spanish>Turno controlado automáticamente por la IA</Spanish>
-		<Polish>Włącz Autogrę</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_TURN_ABDICATE_TEXT</Tag>
-		<English>LEADER: %s1_Leader[NEWLINE]CIVILIZATION: %s2_CivilizationAdj[NEWLINE][NEWLINE]START TURN: %d3_StartTurn[NEWLINE]END TURN: %d4_EndTurn[NEWLINE]AUTO TURNS: %d5_AutoTurn[NEWLINE][NEWLINE]Game AI Auto Controled for a single Turn.</English>
-		<French>LEADER: %s1_Leader[NEWLINE]CIVILISATION: %s2_CivilizationAdj[NEWLINE][NEWLINE]TOUR DEBUT: %d3_StartTurn[NEWLINE]TOUR FIN: %d4_EndTurn[NEWLINE]TOURS AUTO: %d5_AutoTurn[NEWLINE][NEWLINE]L'IA contrôle la partie pour un tour.</French>
-		<German>ANFÜHRER: %s1_Leader[NEWLINE]ZIVILISATION: %s2_CivilizationAdj[NEWLINE][NEWLINE]STARTRUNDE: %d3_StartTurn[NEWLINE]ENDRUNDE: %d4_EndTurn[NEWLINE]KI-RUNDEN: %d5_AutoTurn[NEWLINE][NEWLINE]KI steuert eine Runde lang.</German>
-		<Italian>LEADER: %s1_Leader[NEWLINE]CIVILTA': %s2_CivilizationAdj[NEWLINE][NEWLINE]TURNO INIZIALE: %d3_StartTurn[NEWLINE]TURNO FINALE: %d4_EndTurn[NEWLINE]TURNI AUTO: %d5_AutoTurn[NEWLINE][NEWLINE]Controllo Automatico dell'IA per un solo turno.</Italian>
-		<Spanish>LÍDER: %s1_Leader[NEWLINE]CIVILIZACIÓN: %s2_CivilizationAdj[NEWLINE][NEWLINE]TURNO DE INICIO: %d3_StartTurn[NEWLINE]TURNO FINAL: %d4_EndTurn[NEWLINE]TURNOS AUTOMÁTICOS: %d5_AutoTurn[NEWLINE][NEWLINE]Controlado automáticamente por la IA durante un solo turno.</Spanish>
-		<Polish>PRZYWÓDCA: %s1_Leader[NEWLINE]CYWILIZACJA: %s2_CivilizationAdj[NEWLINE][NEWLINE]TURA ROZPOCZECIA: %d3_StartTurn[NEWLINE]TURA ZAKOnCZENIA: %d4_EndTurn[NEWLINE]AUTOMATYCZNE TURY: %d5_AutoTurn[NEWLINE][NEWLINE]Autogra przez jedną turę.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_TURN_OFF</Tag>
-		<English>AI Auto Control Ended</English>
-		<French>Contrôle automatique par l'IA terminé</French>
-		<German>KI-Autosteuerung wurde beendet</German>
-		<Italian>L'automazione dell'IA è finita</Italian>
-		<Spanish>El control automático de la IA ha finalizado</Spanish>
-		<Polish>Autogra zakończona</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_TURN_OFF_TEXT</Tag>
-		<English>Control returned.</English>
-		<French>Contrôle du Joueur rétabli.</French>
-		<German>Steuerung wieder übernommen.</German>
-		<Italian>Sei tornato alla guida.</Italian>
-		<Spanish>Control devuelto al jugador.</Spanish>
-		<Polish>Kontrola przywrócona.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_TURN_ON</Tag>
 		<English>Turn on AI Auto Control?</English>
 		<French>Activer le contrôle automatique par IA?</French>
@@ -1405,26 +1178,6 @@
 		<Spanish>¿Activar el control automático de la IA?</Spanish>
 		<Polish>Czy włączyć autogrę?</Polish>
 		<Russian>Âêëþ÷èòü àâòîêîíòðîëü ÈÈ?</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_UNIT</Tag>
-		<English>Automate unit moves only (not fully tested)</English>
-		<French>Automatiser uniquement les mouvements d'unité (pas entièrement testé)</French>
-		<German>Nur Einheitenzüge automatisieren (noch nicht vollständig getestet)</German>
-		<Italian>Solo controllo automatico dei movimenti (non completamente testato)</Italian>
-		<Spanish>En unidades automatizadas, solo movimiento (opción no probada completamente)</Spanish>
-		<Polish>Automatyzuj tylko ruchy jednostek (nie w pełni przetestowane)</Polish>
-		<Russian>Àâòîìàòèçèðîâàòü òîëüêî äâèæåíèå þíèòîâ (íå òåñòèðîâàíî)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AIAUTOPLAY_USURPATOR</Tag>
-		<English>Terrible news:[NEWLINE][NEWLINE]Coniving rivals have overthrown you in a coup![NEWLINE]A little to much "Let them eat cake" perhaps?</English>
-		<French>Nouvelles terribles:[NEWLINE][NEWLINE]Des rivaux ont réussi à monter un complot et vous destituer dans un coup d'état![NEWLINE]Laisser-les prendre une part du gâteau?</French>
-		<German>Schreckliche Neuigkeiten:[NEWLINE][NEWLINE]Hinterhältige Rivalen haben Sie gestürzt![NEWLINE]Vielleicht war es doch einmal zu oft "Wenn sie kein Brot haben, sollen sie doch Kuchen essen"?</German>
-		<Italian>Notizie terribili:[NEWLINE][NEWLINE]Nemici occulti ti hanno rovesciato con un colpo di stato![NEWLINE]Hai forse esagerato con "Che mangino brioches"?</Italian>
-		<Spanish>Terribles noticias:[NEWLINE][NEWLINE]¡Unos conspiradores rivales han dado un golpe de estado![NEWLINE]¿Puede que hayas sido demasiado permisivo?</Spanish>
-		<Polish>Okropne wieści:[NEWLINE][NEWLINE]Rywale obalili cię w zamachu stanu![NEWLINE]Może pozwoliłeś im za dużo wolności?</Polish>
-		<Russian>Óæàñíûå íîâîñòè:[NEWLINE][NEWLINE]Âàøè ñîïåðíèêè ñâåðãëè âàñ![NEWLINE]Ñàìîå ìàëîå ÷òî ìîæíî ñäåëàòü, ýòî "Ïîæåëàòü èì ñúåñòü òîðò è íå ïîäàâèòüñÿ"?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ALL_RELIGIONS_ACTIVE</Tag>
@@ -1562,16 +1315,6 @@
 		<Russian>[ICON_BULLET]Отключает все культовые здания негосударственных религий.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BARBCIV_CHECK_BARB</Tag>
-		<English>Found %d barbarian cities, max %d within %d</English>
-		<French>%d Villes barbares trouvées, %d maximum dans %d</French>
-		<German>Gefundene %d Barbarenstädte, maximal %d innerhalb %d</German>
-		<Italian>Trovate %d Città Barbare, max. da %d a %d</Italian>
-		<Spanish>Encontradas %d ciudades bárbaras, máximo %d al alcance de %d</Spanish>
-		<Polish>Znaleziono %d miast barbarzyńców, maksimum %d z %d</Polish>
-		<Russian>Íàéäåíî %d âàðâàðñêèõ ãîðîäîâ, ìàêñ. %d â ïðåäåëàõ %d</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BARBCIV_DISCOVER_WRITING</Tag>
 		<English>With your discovery of writing, you can now conduct diplomacy!</English>
 		<French>Avec votre découverte de l'écriture, vous pouvez maintenant conduire la diplomatie!</French>
@@ -1602,16 +1345,6 @@
 		<Russian>Âàøè äîñòèæåíèÿ ïðèâåëè âàøèõ ëþäåé ê ãîðäîìó çâàíèþ öèâèëèçàöèè!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BARBCIV_HUMAN_DECLARE</Tag>
-		<English>Your advisers push for a declaration of war against the %s!</English>
-		<French>Vos conseillers insistent pour une déclaration de guerre contre le %s!</French>
-		<German>Ihre Berater drängen auf eine Kriegserklärung gegen %s!</German>
-		<Italian>I tuoi consiglieri insistono per una dichiarazione di guerra contro %s!</Italian>
-		<Spanish>¡Tus consejeros insisten para una declaración de guerra contra los %s!</Spanish>
-		<Polish>Twoi doradcy naciskają na wypowiedzenie wojny przeciwko %s!</Polish>
-		<Russian>Âàøè ñîâåòíèêè íàñòàèâàþò íà îáúÿâëåíèè âîéíû %s!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BARBCIV_MINOR_SETTLE</Tag>
 		<English>%s has organized the %s and formed the %s!</English>
 		<French>%s a organisé le %s et a formé le %s!</French>
@@ -1620,52 +1353,6 @@
 		<Spanish>¡%s ha organizado a los %s y formado el %s!</Spanish>
 		<Polish>%s zjednoczył %s i utworzył %s!</Polish>
 		<Russian>%s îáúåäèíèë %s è ñôîðìèðîâàë %s!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BARBCIV_OK</Tag>
-		<English>Ok</English>
-		<Spanish>De acuerdo.</Spanish>
-		<Russian>Îê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BARBCIV_OPT_AM</Tag>
-		<English>I am %s...</English>
-		<French>Je suis %s...</French>
-		<German>Ich bin %s...</German>
-		<Italian>Sono %s...</Italian>
-		<Spanish>Soy %s...</Spanish>
-		<Polish>Ja jestem %s...</Polish>
-		<Russian>ß %s ...</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BARBCIV_SPREAD_1</Tag>
-		<English>Word spreads from distant lands:</English>
-		<French>Rumeurs provenant des terres:</French>
-		<German>Gerüchte verbreiten sich aus entfernten Ländern:</German>
-		<Italian>Giungono voci da terre lontane:</Italian>
-		<Spanish>Llegan rumores desde tierras lejanas:</Spanish>
-		<Polish>Wieści przychodzą z odległego kraju:</Polish>
-		<Russian>Ïðèøëè âåñòè èç äàëüíèõ çåìåëü:</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BARBCIV_SPREAD_2</Tag>
-		<English>%s has organized the Barbarians and formed the %s!</English>
-		<French>%s a organisé les barbares et a formé le %s!</French>
-		<German>%s hat die Barbaren organisiert und das %s errichtet!</German>
-		<Italian>%s ha organizzato alcune tribù barbare e ha formato %s!</Italian>
-		<Spanish>%s ha organizado a los bárbaros y ha formado el %s!</Spanish>
-		<Polish>%s zjednoczył Barbarzyńców i utworzył %s!</Polish>
-		<Russian>%s has îðãàíèçîâàë áûò âàðâàðîâ è ñôðîðìèðîâàë %s!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BARBCIV_SPREAD_OPT</Tag>
-		<English>[NEWLINE][NEWLINE](Note: You can opt to become %s)</English>
-		<French>[NEWLINE][NEWLINE](Note: Vous pouvez choisir de devenir %s)</French>
-		<German>[NEWLINE][NEWLINE](Anmerkung: Sie können entscheiden, %s zu werden)</German>
-		<Italian>[NEWLINE][NEWLINE](Nota: Puoi scegliere di trasformarti in %s)</Italian>
-		<Spanish>[NEWLINE][NEWLINE](Nota: Puedes optar a convertirte en %s)</Spanish>
-		<Polish>[NEWLINE][NEWLINE](Notatka: Możesz wybrać i stać się %s)</Polish>
-		<Russian>[NEWLINE][NEWLINE](Çàìåòêà: âû èìååòå âîçìîæíîñòü ñòàòü %s)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBCIV_WORD_SPREADS</Tag>
@@ -1713,56 +1400,6 @@
 		<Russian>Ëåñíîé çàïîâåäíèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING</Tag>
-		<English>HOF Warning</English>
-		<French>Avertissement HOF</French>
-		<German>HOF-Warnung</German>
-		<Italian>Avviso HOF</Italian>
-		<Spanish>Advertencia de HOF</Spanish>
-		<Polish>Ostrzeżenia HOF</Polish>
-		<Russian>HOF Ïðåäóïðåæäåíèå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_BALANCED_RESOUCES_NOT_ALLOWED</Tag>
-		<English>[COLOR_WARNING_TEXT]Balanced resources not allowed[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Equilibrage des ressources non autorisé[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Ausgewogene Ressourcen sind nicht erlaubt[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Il bilanciamento delle Risorse non è consentito[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Balanceo de recursos no permitido[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Zbalansowane surowce nie dostępne[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Ñáàëàíñèðîâàííûå ðåñóðñû íå äîïóñêàþòñÿ[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_CHECKSUM_DIFFERENT</Tag>
-		<English>[COLOR_WARNING_TEXT]The assets are different from a standard install. Contact the HOF staff.[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Les Données (assets) sont différentes d'une installation standard. Contacter l'équipe de HOF.[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Die Dateien unterscheiden sich von einer Standard-Installation. Kontaktieren Sie das HOF-Team.[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]'Assets' differenti da quelli di una partita standard; contatta lo Staff HOF.[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Los recursos son distintos a los de una instalación estándar. Contacta con el staff del HOF.[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Te ustawienia sa różne od standardowej instalacji. Skontaktuj się z ekipą HOF.[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Ñðåäñòâà îòëè÷àþòñÿ îò ñòàíäàðòà óñòàíîâêè. Ñâÿæèòåñü ñ ïåðñîíàëîì HOF.[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_CHECKSUM_FAILED</Tag>
-		<English>[COLOR_WARNING_TEXT]Failed to check CRCs.[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]La vérification de CRCs a échouée.[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Prüfung der CRC-Werte fehlgeschlagen.[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Controllo dei CRC fallito.[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Fallo al comprobar el CRC.[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Bład w sprawdzaniu CRCs.[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Íåóäà÷à ïðîâåðêè CRCs.[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_CHECKSUM_MISSING</Tag>
-		<English>[COLOR_WARNING_TEXT]CRCs are missing. This game can't be used. Check Locked Modified Assets if unchecked.[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]CRCs manquants. Ce jeu n'est pas valide. Vérifiez si l'option 'Assets modifiés verrouillés' est désactivée.[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]CRC-Werte fehlen. Diese Partie kann nicht verwendet werden. Aktivieren Sie "Locked Modified Assets", falls diese Option deaktiviert ist.[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Mancano i CRC. Questa partita non può essere usata. Seleziona 'Locked Modified Assets' (se non lo è già).[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]No se encuentran las CRCs. Esta partida no puede ser utilizada. Marca "Bloquear parámetros modificados" ("Lock Modified Assets") si está desmarcada.[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]CRCs nie odnaleziony. Ta gra nie może zostać użyta. Sprawdź zablokowane modyfikacje.[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]CRC ïîòåðÿíà. Ýòà èãðà íå ìîæåò áûòü èñïîëüçîâàíà. Óñòàíîâèòå Locked Modified Assets åñëè íå óñòàíîâëåíî.[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUFFYWARNING_CHECKSUM_SKIPPED</Tag>
 		<English>[COLOR_WARNING_TEXT]Skipped Checksum.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Checksum ignoré.[COLOR_REVERT]</French>
@@ -1771,143 +1408,6 @@
 		<Spanish>[COLOR_WARNING_TEXT]Se ha saltado el checksum.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Pominięto Checksum.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Ïîòåðÿíà êîíòðîëüíàÿ ñóììà.[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_DLL_MISSING</Tag>
-		<English>[COLOR_WARNING_TEXT]The BUFFY DLL is missing.[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]les DLLs BUFFY sont manquantes.[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Die BUFFY-DLL fehlt[COLOR_REVERT]</German>
-		<Spanish>[COLOR_WARNING_TEXT]No se ha encontrado el DLL de BUFFY.[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]BUFFY: DLL nie znaleziono.[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]BUFFY DLL íå íàéäåí.[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_INSTALL_LOCATION</Tag>
-		<English>[COLOR_WARNING_TEXT]BUFFY must be installed to:[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]BUFFY doit être installé sur:[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]BUFFY muss hier installiert sein:[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]BUFFY deve essere installato in:[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]BUFFY debe ser instalado en:[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]BUFFY musi być zainstalowane w:[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]BUFFY äîëæåí áûòü óñòàíîâëåí â:[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_MAC</Tag>
-		<English>[COLOR_WARNING_TEXT]Mac Players cannot submit HoF Entries[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Les joueurs sur Mac ne peuvent pas soumettre leurs résultats HOF[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Mac-Spieler können keine HoF-Ergebnisse einreichen[COLOR_REVERT]</German>
-		<Spanish>[COLOR_WARNING_TEXT]Los jugadores con Mac no pueden enviar partidas al HOF[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Gracze Mac nie mogą zgłaszać wpisów HoF[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Èãðîêè Mac íå ìîãóò ïðåäëàãàòü HoF çàïèñè[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_MULTI_PLAYER_NOT_ALLOWED</Tag>
-		<English>[COLOR_WARNING_TEXT]Multi-player games not allowed[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Parties Multi-joueurs non autorisées[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Multiplayer-Partien nicht erlaubt[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Le partite in multi-player non sono consentite[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Partidas multijugador no permitidas[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Gry Multi-Player nie dostępne[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Ìóëüòèïëååð èãðû íå äîïóñêàþòñÿ[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_MULT_LEADERS</Tag>
-		<English>[COLOR_WARNING_TEXT]%s1 has been chosen %d2 times[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]%s1 a été choisi %d2x[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]%s1 wurde %d2x gewählt[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]%s1 è stato scelto %d2 volte[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]%s1 ha sido elegido %d2 veces[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]%s1 został wybrany %d2 razy[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]%s1 áûë âûáðàí %d2 ðàç[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_NOT_ALLOWED</Tag>
-		<English>[COLOR_WARNING_TEXT](Not allowed)[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT](Non autorisé)[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT](Nicht erlaubt)[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT](non consentito)[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT](No permitido)[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT](Niedozwolone)[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT](Íå äîïóñêàåòñÿ)[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_NOT_VALID</Tag>
-		<English>This game is not valid for HOF use. See the [COLOR_WARNING_TEXT]highlighted[COLOR_REVERT] in the boxes below for the specific invalid settings.</English>
-		<French>Cette Partie est invalide pour figurer dans le HOF. Consulter le [COLOR_WARNING_TEXT]Texte mis en évidence[COLOR_REVERT] dans les champs suivants pour connaître les paramètres invalidants.</French>
-		<German>Diese Partie ist nicht zulässig zur Verwendung mit HOF. Beachten Sie die [COLOR_WARNING_TEXT]hervorgehobenen[COLOR_REVERT] Einstellungen in den Feldern unten, um diese entsprechend zu ändern.</German>
-		<Italian>Questa partita non è valida per l'uso con HOF. Vedi la parte [COLOR_WARNING_TEXT]evidenziata[COLOR_REVERT] nelle caselle sottostanti per le specifiche impostazioni non valide.</Italian>
-		<Spanish>Esta partida no es válida para su uso con HOF. Consulta las partes [COLOR_WARNING_TEXT]resaltadas[COLOR_REVERT] en las casillas más abajo para ver qué configuración es incorrecta.</Spanish>
-		<Polish>Ta gra nie obsługuje użycia HOF. Zobacz [COLOR_WARNING_TEXT]podświetlone[COLOR_REVERT] ustawienia.</Polish>
-		<Russian>Ýòà èãðà íå ãîäèòñÿ äëÿ èñïîëüçîâàíèÿ HOF. Ñìîòðè [COLOR_WARNING_TEXT]ïîäñâå÷åííîå[COLOR_REVERT] â ïîëå íèæå äëÿ îïðåäåëåíèÿ íåäåéñòâèòåëüíûõ ïàðàìåòðîâ íàñòðîéêè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_NO_TEAMS</Tag>
-		<English>[COLOR_WARNING_TEXT]Team play is not allowed[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Jeu en équipes non autorisé[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Verbündete sind nicht erlaubt[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Il gioco di squadra non è consentito[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]El juego en equipo no está permitido[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Gra drużynowa nie dozwolona[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Êîìàíäíàÿ èãðà íå äîïóñêàåòñÿ[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_REQUIRED</Tag>
-		<English>[COLOR_WARNING_TEXT](Required)[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT](Requis)[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT](erforderlich)[COLOR_REVERT]</German>
-		<Spanish>[COLOR_WARNING_TEXT](Requerido)[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT](Wymagane)[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT](Òðåáóåòñÿ)[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_TOO_FEW_OPPONENTS</Tag>
-		<English>[COLOR_WARNING_TEXT]%d1 or more opponents are required for a %s2[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]%d1 adversaires ou plus sont nécessaires pour un %s2[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]%d1 oder mehr Gegner sind erforderlich für ein %s2[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Sono necessari %d1 o più avversari per un %s2[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Son necesarios %d1 o más oponentes para un %s2[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]%d1 lub więcej graczy jest wymagane dla %s2[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]%d1 èëè áîëüøå ïðîòèâíèêîâ òðåáóåòñÿ äëÿ %s2[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_TOO_MANY_OPPONENTS</Tag>
-		<English>[COLOR_WARNING_TEXT]%d1 or less opponents are required for a %s2[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]%d1 adversaires au maximum sont nécessaire pour un %s2[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]%d1 oder weniger Gegner sind erforderlich für ein %s2[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Sono necessari %d1 o meno avversari per un %s2[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Son necesarios %d1 o menos oponentes para un %s2[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]%d1 lub mniej graczy jest wymagane dla %s2[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]%d1 èëè ìåíüøå ïðîòèâíèêîâ òðåáóåòñÿ äëÿ %s2[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFYWARNING_VICTORY_CONDITIONS</Tag>
-		<English>[COLOR_WARNING_TEXT]All Victory Conditions must be enabled. The following are missing:[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Toutes les Conditions de Victoire doivent être activées. Les conditions suivantes sont désactivées:[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Alle Siegbedingungen müssen aktiviert sein. Die folgenden sind deaktiviert:[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Tutte le Condizioni di Vittoria devono essere abilitate; mancano le seguenti:[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Todas las condiciones de victoria deben estar activadas. Faltan las siguientes:[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Wszystkie warunki zwycięstwa muszą być włączone. Brakuje:[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Âñå óñëîâèÿ Ïîáåäû äîëæíû áûòü âêëþ÷åíû. Ñëåäóþùèå ïðîïóùåíû:[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFY_INVALID_HOF</Tag>
-		<English>[COLOR_WARNING_TEXT]HOF Warning:[COLOR_REVERT] This game is not valid for HOF use. See the Settings page of the Victory screen for details.</English>
-		<French>[COLOR_WARNING_TEXT]Avertissement HOF:[COLOR_REVERT] Cette partie est invalide pour figurer dans le HOF. Pour plus de détails, consultez l'onglet Propriétés de l'écran de Victoire</French>
-		<German>[COLOR_WARNING_TEXT]HOF-Warnung:[COLOR_REVERT] Diese Partie ist nicht zulässig zur Verwendung mit HOF. Beachten Sie die Seite "Einstellungen" im Sieg-Bildschirm.</German>
-		<Italian>[COLOR_WARNING_TEXT]Avviso HOF:[COLOR_REVERT] questa partita non è valida per l'uso con HOF. Per maggiori dettagli, guarda la pagina delle Impostazioni nella Schermata di Vittoria.</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Advertencia de HOF:[COLOR_REVERT] esta partida no es válida para su uso con HOF. Consulta la pestaña de Configuración en la Vista de victoria para conocer los detalles.</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Uwaga HOF:[COLOR_REVERT] Ta gra nie obsługuje użycia HOF. Szczegóły na ekranie Zwycięstwa w zakładce Ustawień.</Polish>
-		<Russian>[COLOR_WARNING_TEXT]HOF Ïðåäóïðåæäåíèå:[COLOR_REVERT] Ýòà èãðà íå ãîäèòñÿ äëÿ èñïîëüçîâàíèÿ HOF. Ñìîòðè ñòðàíèöó íàñòðîåê ýêðàíà ïîáåäû äëÿ äåòàëåé.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUFFY_INVALID_HOF_GOTM</Tag>
-		<English>[COLOR_WARNING_TEXT]Warning:[COLOR_REVERT] This game is not valid for HOF or GOTM use.</English>
-		<French>[COLOR_WARNING_TEXT]Attention:[COLOR_REVERT] Ce Mod est invalide pour une partie de type HOF ou GOTM.</French>
-		<German>[COLOR_WARNING_TEXT]Warnung:[COLOR_REVERT] Diese Partie ist nicht zulässig zur Verwendung mit HOF oder GOTM.</German>
-		<Italian>[COLOR_WARNING_TEXT]Attenzione:[COLOR_REVERT] questa partita non è valida per l'uso con HOF o GOTM.</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Advertencia:[COLOR_REVERT] esta partida no es válida para su uso con HOF o GOTM.</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Uwaga:[COLOR_REVERT] Ta gra nie obsługuje HOF lub GOTM.</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Ïðåäóïðåæäåíèå:[COLOR_REVERT] Ýòà èãðà íå ãîäèòñÿ äëÿ èñïîëüçîâàíèÿ HOF èëè GOTM.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Tag>
