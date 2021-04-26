@@ -1208,7 +1208,6 @@ m_bDCMAirBombTech2(0),
 // Dale - AB: Bombing END
 m_piDomainExtraMoves(NULL),
 m_piFlavorValue(NULL),
-m_piPrereqOrTechs(NULL),
 m_piPrereqAndTechs(NULL),
 m_pbCommerceFlexible(NULL),
 m_pbTerrainTrade(NULL),
@@ -1244,20 +1243,13 @@ CvTechInfo::~CvTechInfo()
 {
 	SAFE_DELETE_ARRAY(m_piDomainExtraMoves);
 	SAFE_DELETE_ARRAY(m_piFlavorValue);
-	SAFE_DELETE_ARRAY(m_piPrereqOrTechs);
 	SAFE_DELETE_ARRAY(m_piPrereqAndTechs);
 	SAFE_DELETE_ARRAY(m_pbCommerceFlexible);
 	SAFE_DELETE_ARRAY(m_pbTerrainTrade);
 	SAFE_DELETE_ARRAY(m_piCommerceModifier);
-
-	for (int i=0; i<(int)m_aPrereqBuilding.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aPrereqBuilding[i]));
-	}
-	for (int i=0; i<(int)m_aPrereqOrBuilding.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aPrereqOrBuilding[i]));
-	}
+	GC.removeDelayedResolutionVector(m_piPrereqOrTechs);
+	GC.removeDelayedResolutionVector(m_aPrereqBuilding);
+	GC.removeDelayedResolutionVector(m_aPrereqOrBuilding);
 	GC.removeDelayedResolution((int*)&m_iFirstFreeUnit);
 	GC.removeDelayedResolution((int*)&m_iFirstFreeProphet);
 }
@@ -1521,9 +1513,14 @@ int CvTechInfo::getFlavorValue(int i) const
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
-int CvTechInfo::getPrereqOrTechs(int i) const
+const std::vector<TechTypes>& CvTechInfo::getPrereqOrTechs() const
 {
-	return m_piPrereqOrTechs ? m_piPrereqOrTechs[i] : -1;
+	return m_piPrereqOrTechs;
+}
+
+const python::list CvTechInfo::cyGetPrereqOrTechs() const
+{
+	return Cy::makeList(m_piPrereqOrTechs);
 }
 
 int CvTechInfo::getPrereqAndTechs(int i) const
@@ -1666,7 +1663,6 @@ bool CvTechInfo::isGlobal() const
 
 bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -1826,6 +1822,8 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bGlobal, L"bGlobal");
 	//TB Tech Tags end
 
+	pXML->SetOptionalVectorWithDelayedResolution(m_piPrereqOrTechs, L"OrPreReqs");
+
 	return true;
 }
 
@@ -1837,42 +1835,6 @@ bool CvTechInfo::readPass2(CvXMLLoadUtility* pXML)
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
-	}
-	if (pXML->TryMoveToXmlFirstChild(L"OrPreReqs"))
-	{
-		const int iNumSibs = pXML->GetXmlChildrenNumber();
-		FAssertMsg((0 < GC.getNUM_OR_TECH_PREREQS()) ,"Allocating zero or less memory in SetGlobalUnitInfo");
-
-		if (GC.isXMLLogging())
-		{
-			szDebugBuffer.Format("OrPrereqs for tech %s: %i entries", getType(), iNumSibs);
-			gDLL->logMsg("CvTechInfo_readPass2.log", szDebugBuffer.c_str());
-		}
-
-		if (0 < iNumSibs)
-		{
-			pXML->CvXMLLoadUtility::InitList(&m_piPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS(), -1);
-			if (pXML->GetChildXmlVal(szTextVal))
-			{
-				FAssertMsg((iNumSibs <= GC.getNUM_OR_TECH_PREREQS()) ,"There are more siblings than memory allocated for them in SetGlobalUnitInfo");
-				for (int j = 0; j < iNumSibs; ++j)
-				{
-					m_piPrereqOrTechs[j] = GC.getInfoTypeForString(szTextVal);
-					if (!pXML->GetNextXmlVal(szTextVal))
-					{
-						break;
-					}
-				}
-
-				pXML->MoveToXmlParent();
-			}
-		}
-		else
-		{
-			SAFE_DELETE_ARRAY(m_piPrereqOrTechs);
-		}
-
-		pXML->MoveToXmlParent();
 	}
 
 	if (pXML->TryMoveToXmlFirstChild(L"AndPreReqs"))
@@ -2031,18 +1993,6 @@ void CvTechInfo::copyNonDefaults(const CvTechInfo* pClassInfo)
 	if (isGlobal() == bDefault) m_bGlobal = pClassInfo->isGlobal();
 	//TB Tech Tags end
 
-	// Readpass2 stuff
-	for ( int j = 0; j < GC.getNUM_OR_TECH_PREREQS(); j++)
-	{
-		if ( getPrereqOrTechs(j) != pClassInfo->getPrereqOrTechs(j) )
-		{
-			if ( NULL == m_piPrereqOrTechs )
-			{
-				CvXMLLoadUtility::InitList(&m_piPrereqOrTechs,GC.getNUM_OR_TECH_PREREQS(),-1);
-			}
-			m_piPrereqOrTechs[j] = pClassInfo->getPrereqOrTechs(j);
-		}
-	}
 	for ( int j = 0; j < GC.getNUM_AND_TECH_PREREQS(); j++)
 	{
 		if ( getPrereqAndTechs(j) != pClassInfo->getPrereqAndTechs(j) )
@@ -2110,33 +2060,13 @@ void CvTechInfo::copyNonDefaults(const CvTechInfo* pClassInfo)
 			GC.copyNonDefaultDelayedResolution((int*)&(m_aPrereqOrBuilding[i].eBuilding), (int*)&(pClassInfo->m_aPrereqOrBuilding[i].eBuilding));
 		}
 	}
+	GC.copyNonDefaultDelayedResolutionVector(m_piPrereqOrTechs, pClassInfo->m_piPrereqOrTechs);
 }
 
 void CvTechInfo::copyNonDefaultsReadPass2(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
 {
 	int iTextDefault = -1;
 	bool bOverride = false;
-
-	// If the modder has something here, we assume he wants to override the tech definitions
-	for ( int i = 0; i < GC.getNUM_OR_TECH_PREREQS(); i++ )
-	{
-		if (bOver || pClassInfo->getPrereqOrTechs(i) != iTextDefault )
-		{
-			bOverride = true;
-			break;
-		}
-	}
-	if ( bOverride)
-	{
-		if ( NULL == m_piPrereqOrTechs )
-		{
-			m_piPrereqOrTechs = new int[GC.getNUM_OR_TECH_PREREQS()];
-		}
-		for ( int i = 0; i < GC.getNUM_OR_TECH_PREREQS(); i++ )
-		{
-			m_piPrereqOrTechs[i] = pClassInfo->getPrereqOrTechs(i);
-		}
-	}
 
 	bOverride = false;
 	// If the modder has something here, we assume he wants to override the tech definitions
@@ -2205,7 +2135,7 @@ void CvTechInfo::getCheckSum(unsigned int& iSum) const
 
 	CheckSum(iSum, m_piDomainExtraMoves, NUM_DOMAIN_TYPES);
 	CheckSum(iSum, m_piFlavorValue, GC.getNumFlavorTypes());
-	CheckSum(iSum, m_piPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS());
+	CheckSumC(iSum, m_piPrereqOrTechs);
 	CheckSum(iSum, m_piPrereqAndTechs, GC.getNUM_AND_TECH_PREREQS());
 	CheckSum(iSum, m_pbCommerceFlexible, NUM_COMMERCE_TYPES);
 	CheckSum(iSum, m_pbTerrainTrade, GC.getNumTerrainInfos());

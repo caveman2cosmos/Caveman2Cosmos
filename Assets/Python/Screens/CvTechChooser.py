@@ -312,7 +312,6 @@ class CvTechChooser:
 
 		# Place techs
 		NUM_AND_TECH_PREREQS = GC.getNUM_AND_TECH_PREREQS()
-		NUM_OR_TECH_PREREQS = GC.getNUM_OR_TECH_PREREQS()
 		RED_X = AFM.getInterfaceArtInfo("INTERFACE_BUTTONS_RED_X").getPath()
 		ARROW_X = AFM.getInterfaceArtInfo("ARROW_X").getPath()
 		ARROW_Y = AFM.getInterfaceArtInfo("ARROW_Y").getPath()
@@ -394,11 +393,7 @@ class CvTechChooser:
 						screen.setImageButtonAt(TECH_REQ + str(iTechX) + "|" + iTechStr, techCellId, GC.getTechInfo(iTechX).getButton(), iX, iY, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
 
 					# Draw connecting arrows
-					for i in xrange(NUM_OR_TECH_PREREQS):
-						iTechX = CvTechInfo.getPrereqOrTechs(i)
-						if iTechX == -1:
-							break
-
+					for iTechX in CvTechInfo.getPrereqOrTechs():
 						techInfoX = GC.getTechInfo(iTechX)
 
 						x1 = techInfoX.getGridX()

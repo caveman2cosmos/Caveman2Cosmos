@@ -37,7 +37,6 @@ class TechPrefs:
 	def __init__(self):
 		self.NUM_TECHS = gc.getNumTechInfos()
 		self.NUM_AND_PREREQS = gc.getDefineINT("NUM_AND_TECH_PREREQS")
-		self.NUM_OR_PREREQS = gc.getDefineINT("NUM_OR_TECH_PREREQS")
 
 		self.mTechs = {}
 		self.lTechsByFlavor = []
@@ -60,10 +59,8 @@ class TechPrefs:
 				pPrereqTech = pTechInfo.getPrereqAndTechs(i)
 				if (pPrereqTech != -1):
 					pTech.addAndPrereq(self.getTech(pPrereqTech))
-			for i in range(self.NUM_OR_PREREQS):
-				pPrereqTech = pTechInfo.getPrereqOrTechs(i)
-				if (pPrereqTech != -1):
-					pTech.addOrPrereq(self.getTech(pPrereqTech))
+			for pPrereqTech in pTechInfo.getPrereqOrTechs():
+				pTech.addOrPrereq(self.getTech(pPrereqTech))
 
 		# sort each flavor's list of techs by decreasing preference: reverse flavor value, tech number
 		# and create a copy that doesn't get trimmed as techs are researched

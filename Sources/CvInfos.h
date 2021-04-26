@@ -444,7 +444,8 @@ public:
 
 	int getDomainExtraMoves(int i) const;
 	int getFlavorValue(int i) const;
-	int getPrereqOrTechs(int i) const;
+	const std::vector<TechTypes>& getPrereqOrTechs() const;
+	const python::list cyGetPrereqOrTechs() const;
 	int getPrereqAndTechs(int i) const;
 
 	bool isCommerceFlexible(int i) const;
@@ -519,7 +520,7 @@ protected:
 	int* m_piDomainExtraMoves;
 	int* m_piFlavorValue;
 
-	int* m_piPrereqOrTechs;
+	std::vector<TechTypes> m_piPrereqOrTechs;
 	int* m_piPrereqAndTechs;
 
 	bool* m_pbCommerceFlexible;

@@ -8677,18 +8677,14 @@ bool CvPlayer::canResearch(TechTypes eTech) const
 	}
 
 	bool bOk = true;
-	for (int iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
+	foreach_(const TechTypes ePrereq, GC.getTechInfo(eTech).getPrereqOrTechs())
 	{
-		const TechTypes ePrereq = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(iI);
-		if (ePrereq != NO_TECH)
-		{
-			bOk = false;
+		bOk = false;
 
-			if (GET_TEAM(getTeam()).isHasTech(ePrereq))
-			{
-				bOk = true;
-				break;
-			}
+		if (GET_TEAM(getTeam()).isHasTech(ePrereq))
+		{
+			bOk = true;
+			break;
 		}
 	}
 	if (!bOk)
@@ -15307,31 +15303,25 @@ void CvPlayer::constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pat
 		}
 	}
 
-	//TechTypes eShortestOr = NO_TECH;
-	//int iLowestCost = MAX_INT;
 	//	Find the shortest OR tech
-	for (int j = 0; j < GC.getNUM_OR_TECH_PREREQS(); j++)
+	const std::vector<TechTypes>& prereqOrTechs = GC.getTechInfo(eTech).getPrereqOrTechs();
+	for (uint32_t j = 0; j < prereqOrTechs.size(); j++)
 	{
-		const TechTypes ePreReq = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(j);
+		techPath* seedPath;
 
-		if (ePreReq != NO_TECH)
+		if (j == 0)
 		{
-			techPath* seedPath;
-
-			if (j == 0)
-			{
-				seedPath = &rootPath;
-			}
-			else
-			{
-				//	Spawn a copy
-				seedPath = new techPath(rootPath);
-				pathSet.push_back(seedPath);
-			}
-
-			//	Recurse
-			constructTechPathSet(ePreReq, pathSet, *seedPath);
+			seedPath = &rootPath;
 		}
+		else
+		{
+			//	Spawn a copy
+			seedPath = new techPath(rootPath);
+			pathSet.push_back(seedPath);
+		}
+
+		//	Recurse
+		constructTechPathSet(prereqOrTechs[j], pathSet, *seedPath);
 	}
 }
 
@@ -15409,23 +15399,16 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 		eShortestOr = NO_TECH;
 		iShortestPath = MAX_INT;
 		//	Find the shortest OR tech
-		for (i = 0; i < GC.getNUM_OR_TECH_PREREQS(); i++)
+		foreach_(const TechTypes ePrereq, GC.getTechInfo(eTech).getPrereqOrTechs())
 		{
-			//	Grab the tech
-			ePreReq = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(i);
+			//	Recursively find the path length (takes into account all ANDs)
+			iNumSteps = findPathLength(ePreReq, bCost);
 
-			//	If this is a valid tech
-			if (ePreReq != NO_TECH)
+			//	If the prereq is a valid tech and its the current shortest, mark it as such
+			if (iNumSteps < iShortestPath)
 			{
-				//	Recursively find the path length (takes into account all ANDs)
-				iNumSteps = findPathLength(ePreReq, bCost);
-
-				//	If the prereq is a valid tech and its the current shortest, mark it as such
-				if (iNumSteps < iShortestPath)
-				{
-					eShortestOr = ePreReq;
-					iShortestPath = iNumSteps;
-				}
+				eShortestOr = ePreReq;
+				iShortestPath = iNumSteps;
 			}
 		}
 
@@ -15524,31 +15507,27 @@ bool CvPlayer::pushResearch(TechTypes eTech, bool bClear)
 	int iShortestPath = MAX_INT;
 	bool bOrPrereqFound = false;
 	//	Cycle through all the OR techs
-	for (int j = 0; j < GC.getNUM_OR_TECH_PREREQS(); j++)
+	foreach_(const TechTypes ePreReq, GC.getTechInfo(eTech).getPrereqOrTechs())
 	{
-		const TechTypes ePreReq = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(j);
-		if (ePreReq != NO_TECH)
-		{
-			bOrPrereqFound = true;
+		bOrPrereqFound = true;
 
-			//	If the pre-req exists, and we have it, it is the shortest path, get out, we're done
-			if (GET_TEAM(getTeam()).isHasTech(ePreReq))
+		//	If the pre-req exists, and we have it, it is the shortest path, get out, we're done
+		if (GET_TEAM(getTeam()).isHasTech(ePreReq))
+		{
+			eShortestOr = ePreReq;
+			break;
+		}
+
+		if (canEverResearch(ePreReq))
+		{
+			//	Find the length of the path to this pre-req
+			const int iNumSteps = findPathLength(ePreReq);
+
+			//	If this pre-req is a valid tech, and its the shortest current path, set it as such
+			if (iNumSteps < iShortestPath)
 			{
 				eShortestOr = ePreReq;
-				break;
-			}
-
-			if (canEverResearch(ePreReq))
-			{
-				//	Find the length of the path to this pre-req
-				const int iNumSteps = findPathLength(ePreReq);
-
-				//	If this pre-req is a valid tech, and its the shortest current path, set it as such
-				if (iNumSteps < iShortestPath)
-				{
-					eShortestOr = ePreReq;
-					iShortestPath = iNumSteps;
-				}
+				iShortestPath = iNumSteps;
 			}
 		}
 	}
@@ -18666,15 +18645,12 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 			if (GET_TEAM(getTeam()).isHasTech(eTechLoop))
 			{
 				// Or Prereqs
-				for (int iJ = 0; iJ < GC.getNUM_OR_TECH_PREREQS(); iJ++)
+				if (algo::contains(GC.getTechInfo(eTechLoop).getPrereqOrTechs(), eTech))
 				{
-					if (GC.getTechInfo(eTechLoop).getPrereqOrTechs(iJ) == eTech)
-					{
-						return -1;
-					}
+					return -1;
 				}
 				// And Prereqs
-				for (iJ = 0; iJ < GC.getNUM_AND_TECH_PREREQS(); iJ++)
+				for (int iJ = 0; iJ < GC.getNUM_AND_TECH_PREREQS(); iJ++)
 				{
 					if (GC.getTechInfo(eTechLoop).getPrereqAndTechs(iJ) == eTech)
 					{

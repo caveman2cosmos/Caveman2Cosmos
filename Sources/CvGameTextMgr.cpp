@@ -28107,19 +28107,11 @@ void CvGameTextMgr::buildSingleLineTechTreeString(CvWStringBuffer &szBuffer, Tec
 		{
 			bool bTechFound = false;
 
-			if (!bTechFound)
+			if (algo::contains(GC.getTechInfo((TechTypes)iI).getPrereqOrTechs(), eTech))
 			{
-				for (int iJ = 0; iJ < GC.getNUM_OR_TECH_PREREQS(); iJ++)
-				{
-					if (GC.getTechInfo((TechTypes) iI).getPrereqOrTechs(iJ) == eTech)
-					{
-						bTechFound = true;
-						break;
-					}
-				}
+				bTechFound = true;
 			}
-
-			if (!bTechFound)
+			else
 			{
 				for (int iJ = 0; iJ < GC.getNUM_AND_TECH_PREREQS(); iJ++)
 				{
@@ -28158,28 +28150,24 @@ void CvGameTextMgr::buildTechTreeString(CvWStringBuffer &szBuffer, TechTypes eTe
 	CvWString szOtherOrTechs;
 	int nOtherOrTechs = 0;
 	bool bOrTechFound = false;
-	for (int iJ = 0; iJ < GC.getNUM_OR_TECH_PREREQS(); iJ++)
+	foreach_(const TechTypes eTestTech, GC.getTechInfo(eTech).getPrereqOrTechs())
 	{
-		TechTypes eTestTech = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(iJ);
-		if (eTestTech >= 0)
+		bool bTechAlreadyResearched = false;
+		if (bPlayerContext)
 		{
-			bool bTechAlreadyResearched = false;
-			if (bPlayerContext)
+			bTechAlreadyResearched = GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eTestTech);
+		}
+		if (!bTechAlreadyResearched)
+		{
+			if (eTestTech == eFromTech)
 			{
-				bTechAlreadyResearched = GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eTestTech);
+				bOrTechFound = true;
 			}
-			if (!bTechAlreadyResearched)
+			else
 			{
-				if (eTestTech == eFromTech)
-				{
-					bOrTechFound = true;
-				}
-				else
-				{
-					szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), GC.getTechInfo(eTestTech).getDescription());
-					setListHelp(szOtherOrTechs, L"", szTempBuffer, gDLL->getText("TXT_KEY_OR").c_str(), 0 == nOtherOrTechs);
-					nOtherOrTechs++;
-				}
+				szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), GC.getTechInfo(eTestTech).getDescription());
+				setListHelp(szOtherOrTechs, L"", szTempBuffer, gDLL->getText("TXT_KEY_OR").c_str(), 0 == nOtherOrTechs);
+				nOtherOrTechs++;
 			}
 		}
 	}
