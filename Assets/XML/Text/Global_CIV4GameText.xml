@@ -8705,14 +8705,6 @@
 		<Russian>В городе установлена зона контроля. (Вражеские отряды не могут перемещаться напрямую из одного смежного участка на другой.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MOD_AIAUTOPLAY</Tag>
-		<English>AI AutoPlay</English>
-		<French>IA Automatique</French>
-		<German>Selbstablaufende Partie</German>
-		<Spanish>Control automático de la IA</Spanish>
-		<Russian>ÈÈ Àâòîèãðà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_ALLIANCE</Tag>
 		<English> Alliance</English>
 		<German>ne Allianz</German>
@@ -8729,16 +8721,6 @@
 		<Spanish>Árabe</Spanish>
 		<Polish>Arabska</Polish>
 		<Russian>Àðàá</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_DCN_BLANK_OF</Tag>
-		<English>%s %s of %s</English>
-		<French>%s %s des %s</French>
-		<German>%s %s von %s</German>
-		<Italian>%s %s di %s</Italian>
-		<Spanish>%s %s de %s</Spanish>
-		<Polish>%s %s %s</Polish>
-		<Russian>%s %s %s</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_BLANK_OF_CITY</Tag>
@@ -8974,16 +8956,6 @@
 		<Russian>Âàøà öèâèëèçàöèÿ òåïåðü èçâåñòíà êàê %s1</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MOD_DCN_OF</Tag>
-		<English>of %s</English>
-		<French>des %s</French>
-		<German>von %s</German>
-		<Italian>di %s</Italian>
-		<Spanish>de %s</Spanish>
-		<Polish>%s</Polish>
-		<Russian> %s</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_OF_CITY</Tag>
 		<English>of %s</English>
 		<French>de %s</French>
@@ -9198,16 +9170,6 @@
 		<Russian>Ñîâåòñê.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MOD_DCN_STATE</Tag>
-		<English>%s State</English>
-		<French>Etat des %s</French>
-		<German>%s Staat</German>
-		<Italian>Stato %s</Italian>
-		<Spanish>Estado %s</Spanish>
-		<Polish>Państwo %s</Polish>
-		<Russian>%s Ãîñóäàðñòâî</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_SULTANATE</Tag>
 		<English>Sultanate</English>
 		<French>Sultanat</French>
@@ -9354,16 +9316,6 @@
 		<Russian>%s Ãîñóäàðñòâî âîèíîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MOD_FRACTRADE</Tag>
-		<English>Fractional Trade Routes</English>
-		<French>Routes commerciales Fractionnées</French>
-		<German>Gestückelte Handelsverbindungen</German>
-		<Italian>Rotte Commerciali Frazionarie</Italian>
-		<Spanish>Rutas comerciales fraccionadas</Spanish>
-		<Polish>Nieznaczne Szlaki handlowe</Polish>
-		<Russian>×àñòè÷íûå òîðãîâûå ìàðøðóòû</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MOD_GAMESTART_ADVANCED_START</Tag>
 		<English>[COLOR_WARNING_TEXT]Warning:[COLOR_REVERT] Caveman2Cosmos is not adjusted for advanced starts. Starting this way will not be balanced.</English>
 		<French>[COLOR_WARNING_TEXT]Attention:[COLOR_REVERT] Caveman2Cosmos n'est pas ajusté pour les démarrages avancés. Commencer de cette façon ne sera pas équilibré.</French>
@@ -9376,26 +9328,6 @@
 		<Russian>[COLOR_WARNING_TEXT]Внимание:[COLOR_REVERT] мод Caveman2Cosmos предназначен для старта с Доисторическую эру. Старт игры в других эпохах не будет сбалансированным.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MOD_GOVWORKERS</Tag>
-		<English>City Governors Build Workers</English>
-		<French>Les Gouverneurs des Villes produisent des Ouvriers</French>
-		<German>Stadtverwalter: Bautrupp aufstellen</German>
-		<Italian>I Governatori cittadini costruiscono i Lavoratori</Italian>
-		<Spanish>Los gobernadores de la ciudad producen Trabajadores</Spanish>
-		<Polish>Gubernatorzy miast budują robotników</Polish>
-		<Russian>Ãîðîäñêèå ãóáåðíàòîðû ñòðîÿò ðàáî÷èõ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_GWARM</Tag>
-		<English>Global Warming</English>
-		<French>Réchauffement Climatique</French>
-		<German>Globale Erwärmung</German>
-		<Italian>Riscaldamento Globale</Italian>
-		<Spanish>Calentamiento global</Spanish>
-		<Polish>Globalne ocieplenie</Polish>
-		<Russian>Ãëîáàëüíîå ïîòåïëåíèå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MOD_HEADER</Tag>
 		<English>Welcome to Caveman 2 Cosmos!</English>
 		<French>Bienvenue dans CIV IV: Caveman to Cosmos!</French>
@@ -9404,92 +9336,6 @@
 		<Spanish>¡Bienvenido a Caveman2Cosmos!</Spanish>
 		<Polish>Witaj w Caveman2Cosmos!</Polish>
 		<Russian>Äîáðî ïîæàëîâàòü â ìîä Caveman 2 Cosmos!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_NO_CONFIG</Tag>
-		<English>WARNING:[NEWLINE][NEWLINE]"%s1" not found![NEWLINE][NEWLINE]Default values are used![NEWLINE][NEWLINE]Check mod installation directory, should be:[NEWLINE][NEWLINE]%s2</English>
-		<French>WARNING:[NEWLINE][NEWLINE]"%s1" non trouvé![NEWLINE][NEWLINE]Des valeurs par défaut seront utilisées![NEWLINE][NEWLINE]Vérifier le répertoire d'installation du Mod, qui doit être:[NEWLINE][NEWLINE]%s2</French>
-		<German>ACHTUNG:[NEWLINE][NEWLINE]"%s1" nicht gefunden![NEWLINE][NEWLINE]Defaultwerte werden verwendet![NEWLINE][NEWLINE]Bitte Modinstallationsordner prüfen:[NEWLINE][NEWLINE]%s2</German>
-		<Italian>ATTENZIONE:[NEWLINE][NEWLINE]"%s1" non trovato![NEWLINE][NEWLINE]Viene usata la configurazione base![NEWLINE][NEWLINE]Controlla la cartella di istallazione del Mod, dovrebbe essere:[NEWLINE][NEWLINE]%s2</Italian>
-		<Spanish>ADVERTENCIA:[NEWLINE][NEWLINE]No se ha encontrado "%s1".[NEWLINE][NEWLINE]Se usarán los valores por defecto.[NEWLINE][NEWLINE]Revisa el directorio de instalación del mod, debería ser:[NEWLINE][NEWLINE]%s2</Spanish>
-		<Polish>UWAGA:[NEWLINE][NEWLINE]"%s1" nie znaleziono![NEWLINE][NEWLINE]Domyślne ustawienia przywrócone![NEWLINE][NEWLINE]Sprawdź katalog instalacyjny moda. Poprawny to:[NEWLINE][NEWLINE]%s2</Polish>
-		<Russian>ÏÐÅÄÓÏÐÅÆÄÅÍÈÅ:[NEWLINE][NEWLINE]"%s1" íå íàéäåí![NEWLINE][NEWLINE]Çàäåéñòâîâàíû çíà÷åíèÿ ïî óìîë÷àíèþ![NEWLINE][NEWLINE]ïðîâåðüòå ïàïêó â êîòîðóþ óñòàíîâëåí ìîä, ñëåäóåò:[NEWLINE][NEWLINE]%s2</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_REVUTILS_CAPTURE</Tag>
-		<English>With your capture of %s, support for the rebellion in the city swells...</English>
-		<French>Avec votre capture de %s, le soutien de la rébellion dans la ville augmente...</French>
-		<German>Durch Ihre Eroberung von %s wächst in der Stadt die Unterstützung für die Rebellion...</German>
-		<Italian>Con la tua conquista di %s, il supporto ai ribelli aumenta...</Italian>
-		<Spanish>Con vuestra captura de %s, el apoyo a la rebelión en la ciudad crece...</Spanish>
-		<Polish>Wraz ze zdobyciem miasta: %s, poparcie dla rebelii w mieście wzrasta...</Polish>
-		<Russian>Ñ Âàøèì çàõâàòîì %s ïîääåðæêà äëÿ âîññòàíèÿ â ãîðîäå íàáóõàåò...</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_REVUTILS_CONTROL</Tag>
-		<English>The rebel %s have taken control of %s![NEWLINE]Support for the rebellion swells...</English>
-		<French>Les rebelles %s ont pris le contrôle de %s![NEWLINE]Le soutien à la rébellion ne cesse d'augmenter...</French>
-		<German>Die Aufrührer %s haben %s übernommen![NEWLINE]Die Unterstützung für den Aufstand wächst...</German>
-		<Italian>Il ribelle %s ha preso il controllo di %s! Aumenta[NEWLINE]la spinta alla rivolta...</Italian>
-		<Spanish>Los rebeldes %s han tomado el control de %s![NEWLINE]El apoyo a la rebelión se incrementa...</Spanish>
-		<Polish>Rebelianci %s przejęli kontrolę nad miastem: %s![NEWLINE]Poparcie dla rebelii wzrasta...</Polish>
-		<Russian>%s ïîâñòàíöû âçÿëè ïîä ñâîé êîíòðîëü %s! [NEWLINE] Ïîääåðæêà äëÿ âîññòàíèÿ ðàñòåò...</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_REVUTILS_ERROR1</Tag>
-		<English>ERROR: Failure to set human flag in new player.[NEWLINE]You will probably need to reload a save.</English>
-		<French>ERREUR: Impossible de placer le drapeau pour le nouveau joueur humain.[NEWLINE]vous devrez probablement recharger une sauvegarde.</French>
-		<German>Fehler beim Setzen eines menschlichen Flags für einen neuen Spieler.[NEWLINE]Sie müssen vermutlich ein gespeichertes Spiel neu laden.</German>
-		<Italian>ERRORE: Impossibile settare flag "Umano" per un nuovo giocatore.[NEWLINE]Probabilimente è necessario caricare una partita salvata.</Italian>
-		<Spanish>ERROR: No se ha podido configurar como jugador humano al nuevo jugador.[NEWLINE]Probablemente necesitarás volver a cargar una partida guardada.</Spanish>
-		<Polish>BŁaD: Nieudana próba ustawienia flagi dla nowego gracza.[NEWLINE]Musisz wczytać zapisaną grę.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_REVUTILS_ERROR2</Tag>
-		<English>ERROR: Failure to unset human flag in old player.[NEWLINE]You will probably need to reload a save.</English>
-		<French>ERREUR: Impossible de supprimer le drapeau pour l'ancien joueur.[NEWLINE]vous devrez probablement recharger une sauvegarde.</French>
-		<German>STÖRUNG: Fehler beim Entfernen der menschlichen Flag bei einem alten Spieler.[NEWLINE]Sie müssen vermutlich ein gespeichertes Spiel neu laden.</German>
-		<Italian>ERRORE: Impossibile togliere flag "Umano" per un giocatore.[NEWLINE]Probabilimente è necessario caricare una partita salvata.</Italian>
-		<Spanish>ERROR: No se ha podido configurar como jugador humano a un jugador ya existente.[NEWLINE]Probablemente necesitarás volver a cargar una partida guardada.</Spanish>
-		<Polish>BŁaD: Nieudana próba przywrócenia flagi dla starego gracza.[NEWLINE]Musisz wczytać zapisaną grę.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_REVUTILS_WARNING</Tag>
-		<English>WARNING: Passed an arealess plot!</English>
-		<French>AVERTISSEMENT: une parcelle de terrain sans zone!</French>
-		<Italian>ATTENZIONE: Superata una casella senza area (arealess)!</Italian>
-		<Spanish>¡ADVERTENCIA: se ha detectado una casilla sin área!</Spanish>
-		<Polish>UWAGA: Przeszedłeś niepoprawne pole!</Polish>
-		<Russian>ÏÐÅÄÓÏÐÅÆÄÅÍÈÅ: Ïðîèçîøåë ðåãèîíàëüíûé çàãîâîð!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_SENTRY</Tag>
-		<English>New Sentry Actions</English>
-		<French>Nouvelles Actions de Surveillance</French>
-		<German>Neue Wach-Befehle</German>
-		<Italian>Nuove Azioni di Sentinella</Italian>
-		<Spanish>Nuevas acciones de centinela</Spanish>
-		<Polish>Nowe akcje wartownika</Polish>
-		<Russian>Íîâûå ñòîðîæåâûå äåéñòâèÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_SHAM_SPOILER</Tag>
-		<English>Show Hidden Attitudes</English>
-		<French>Afficher les Attitudes 'Secrètes'</French>
-		<German>Verborgene Modifikatoren anzeigen</German>
-		<Spanish>Mostrar actitud oculta</Spanish>
-		<Polish>Wyświetl Ukryte Postawy</Polish>
-		<Russian>Ïîêàçàòü ñêðûòûå îòíîøåíèÿ [ïîìåõà]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_TEXT</Tag>
-		<English>This mod is awesome! "Just Have Fun."</English>
-		<French>Ce Mod est étonnant! "Amusez-vous bien."</French>
-		<German>Dieser Mod ist grandios! "Just Have Fun."</German>
-		<Italian>Questa Mod è grandiosa! "Just Have Fun."</Italian>
-		<Spanish>¡Este mod es grandioso! "Pásalo bien."</Spanish>
-		<Polish>Ten mod jest cudowny! "Po prostu baw się dobrze."</Polish>
-		<Russian>Çäåñü íà÷èíàåòñÿ òûñÿ÷åëåòíÿÿ èñòîðèÿ...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MONTH_APRIL</Tag>
