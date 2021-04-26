@@ -4525,28 +4525,6 @@
 		<Russian>Êîìàíäèðû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CONTROL</Tag>
-		<English>Controllers</English>
-		<French>
-			<Text>Unités de Contrôle</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Kontrolleinheiten:Kontrolleinheiten:Kontrolleinheiten:Kontrolleinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>Unità di controllo</Italian>
-		<Spanish>
-			<Text>Controlador:Controladores</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Kontroler Jednostek</Polish>
-		<Russian>Êîíòðîëåðû</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CORVETTE</Tag>
 		<English>Corvette</English>
 		<Polish>Korwety</Polish>
@@ -6449,12 +6427,6 @@
 		<Russian>Êóëüòóðà(Ëóçèòàíû)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LYDIANS</Tag>
-		<English>Culture (Lydians)</English>
-		<French>(Culture) Lydiens</French>
-		<Russian>Êóëüòóðà(Ëèäèéñêàÿ)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MALAGASY</Tag>
 		<English>Culture (Malagasy)</English>
 		<French>(Culture) Malagache</French>
@@ -6790,22 +6762,6 @@
 		<Russian>Êóëüòóðà(Íàñêà)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NEANDERTHAL</Tag>
-		<English>Culture (Neanderthal)</English>
-		<French>
-			<Text>(Culture) Néanderthal</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Spanish>
-			<Text>Neandertal:Unidades de la cultura neandertal</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Kultura (Neanderthalska)</Polish>
-		<Russian>Êóëüòóðà(Íåàíäåðòàë.)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NEPALESE</Tag>
 		<English>Culture (Nepalese)</English>
 		<French>
@@ -6949,12 +6905,6 @@
 		<English>Culture (Paiute)</English>
 		<French>(Culture) Païute</French>
 		<Russian>Êóëüòóðà(Ïàéþòû)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAKISTAN</Tag>
-		<English>Culture (Pakistan)</English>
-		<French>(Culture) Pakistanaise</French>
-		<Russian>Êóëüòóðà(Ïàêèñòàíñêàÿ)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAKISTANI</Tag>
@@ -7482,12 +7432,6 @@
 		</Spanish>
 		<Polish>Kultura (Siuksów)</Polish>
 		<Russian>Êóëüòóðà(Ñèó)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SLOVAKIAN</Tag>
-		<English>Culture (Slovakian)</English>
-		<French>(Culture) Slovaque</French>
-		<Russian>Êóëüòóðà(Ñëîâàöêàÿ)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SLOVENIAN</Tag>
@@ -9305,22 +9249,6 @@
 		</Spanish>
 		<Polish>Ssak (Wielbłąd)</Polish>
 		<Russian>Âåðáëþäû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_MAMMAL_CANINE</Tag>
-		<English>Mammal (Canine)</English>
-		<French>
-			<Text>(Mammifères) Canins</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Spanish>
-			<Text>Canino:Mamíferos caninos</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Ssak (Pies)</Polish>
-		<Russian>Ñîáàêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_MAMMAL_CERVID</Tag>

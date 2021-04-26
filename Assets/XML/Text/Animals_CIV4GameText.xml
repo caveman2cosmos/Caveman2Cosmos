@@ -5512,21 +5512,6 @@
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lion des mers</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_TARANTULA</Tag>
-		<English>Subdued Tarantula</English>
-		<French>
-			<Text>Tarentule (App.)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gefangene Vogelspinne:Gefangenen Vogelspinne:Gefangenen Vogelspinne:Gefangene Vogelspinne:Gefangene Vogelspinnen:Gefangenen Vogelspinnen:Gefangenen Vogelspinnen:Gefangenen Vogelspinnen</Text>
-			<Gender>Female</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Russian>Òàðàíòóë (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Tarantula

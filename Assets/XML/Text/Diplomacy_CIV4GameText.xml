@@ -1218,16 +1218,6 @@
 		<Russian>Ïðèñîåäèíÿéòåñü ê íàì, âûáåðèòå %s1.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_CIVIC_PRESSURE_16</Tag>
-		<English>Adopt %s1 - before it's too late!</English>
-		<French>Adoptez: %s1! Après, il sera trop tard!</French>
-		<German>Nehmt die Gesellschaftsform "%s1" an, bevor es zu spät ist!</German>
-		<Italian>Adotta %s1 come forma di governo, prima che sia troppo tardi!</Italian>
-		<Polish>Przyjmij: %s1! Zanim będzie za późno!</Polish>
-		<Spanish>¡Adoptad [NUM1:el:la:los:las] %s1 antes de que sea demasiado tarde!</Spanish>
-		<Russian>%s1!!! Ñäåëàéòå âûáîð, ïîêà íå ïîçäíî!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>AI_DIPLO_CIVIC_PRESSURE_2</Tag>
 		<English>All the cool civs are adopting %s1, [CT_NAME]. How about you?</English>
 		<French>[CT_NAME], toutes les civilisations évoluées adoptent: %s1. Pourquoi pas vous?</French>

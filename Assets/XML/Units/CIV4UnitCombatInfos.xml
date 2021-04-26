@@ -7144,7 +7144,7 @@
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_SHIELD_MATERIAL_COPPER</Type>
-			<Description>TXT_KEY_UNITCOMBAT_SHIELD_MATERIAL_BRONZE</Description>
+			<Description>TXT_KEY_UNITCOMBAT_SHIELD_MATERIAL_COPPER</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/shield_material.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>

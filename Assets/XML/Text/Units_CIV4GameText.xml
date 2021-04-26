@@ -4575,14 +4575,6 @@
 		<English>According to some scholars, they are depicted on the Arch of Constantine, as the soldiers who are shown wearing horned helmets. On the relief representing the Battle of Verona (312) they are in the first lines, and they are depicted fighting with the bowmen in the relief of the Battle of the Milvian Bridge.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COST_MODIFIER</Tag>
-		<English>[ICON_BULLET]Unit Support Cost: %D1_Amount%.</English>
-		<French>[ICON_BULLET]Le coût d'entretien de cette unité est modifié de %D1_Amount%.</French>
-		<German>[ICON_BULLET]laufende Kosten: %D1_Amount%</German>
-		<Polish>[ICON_BULLET]Koszt Wsparcia dla tej jednostki modyfikowany przez: %D1_Amount%.</Polish>
-		<Russian>[ICON_BULLET]Жалование отряду: %D1_Amount%.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_COST_MODIFIER_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Unit Support Cost: %D1_Amount%</English>
 		<French>[ICON_BULLET]Modif. du coût d'entretien: Coût modifié de %D1_Amount%</French>
