@@ -209,12 +209,4 @@
 		<Polish>Od tego momentu stada zwierząt zasiedlają ten teren.</Polish>
 		<Russian>Îòíûíå íà ýòîì ó÷àñòêå ðàçâîäÿò îäîìàøíåííûõ æèâîòíûõ.</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SUBDUED_ANIMAL</Tag>
-		<English>A %s1 has been subdued.</English>
-		<French>%s1 a été apprivoisé.</French>
-		<Italian>[NUM1:Un:Una] %s1 [NUM1:è stato addomesticato:è stata addomesticata].</Italian>
-		<Polish>%s1 został pochwycony.</Polish>
-		<Russian>%s1 áûë ïðèðó÷åí.</Russian>
-	</TEXT>
 </Civ4GameText>
