@@ -12,7 +12,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENTTRIGGER_TUSK_1</Text>
+					<Text>TXT_KEY_EVENT_TRIGGER_TUSK_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>

@@ -5632,7 +5632,7 @@
 		<Russian>Я хочу, чтобы правосудие восторжествовало над этими ворами, живыми или мертвыми! Отправьте солдат для обыска близлежащих городов и заплатите осведомителям для получения нужной информации об этой шайке, а когда их поймают, казните их публично! Нанимайте новых шпионов, дабы впредь подобного не повторилось!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_ACADEMIC_FUNDING</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_ACADEMIC_FUNDING</Tag>
 		<English>Wealthy businessmen have formed a coalition to fund research projects at the local academy, making large amounts of money available for research projects.</English>
 		<French>Des riches hommes d'affaires ont créé une fondation pour financer des projets dans notre académie, octroyant d'importantes sommes d'argent pour des projets de recherche.</French>
 		<German>Reiche Geschäftsleute haben sich zusammengetan, um Forschungsprojekte an der örtlichen Akademie zu finanzieren und dabei große Mengen an Geld zur Verfügung gestellt.</German>
@@ -5642,7 +5642,7 @@
 		<Russian>Состоятельные бизнесмены основали венчурный фонд для финансирования исследовательских проектов в местной академии, выделяя для этого крупные инвестиции.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_ALTERNATIVE_ENERGY</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_ALTERNATIVE_ENERGY</Tag>
 		<English>The people are complaining about the ugly black smoke coming from our fossil fuel-burning power plants. Some of our scientists and engineers argue that a decentralized chain of [COLOR_BUILDING_TEXT]Hydro Plants[COLOR_REVERT] and [COLOR_BUILDING_TEXT]Nuclear Plants[COLOR_REVERT] would reduce both atmospheric pollution and our dependence on fossil fuels.</English>
 		<French>Le peuple se plaint au sujet de cette dégoutante fumée noire venant de nos centrales électriques fossiles. Certains de nos scientifiques et ingénieurs sont d'avis qu'une série de [de COLOR_BUILDING_TEXT]Centrales Hydro-électriques[COLOR_REVERT] et de [COLOR_BUILDING_TEXT]Centrales Nucléaires[COLOR_REVERT] réduirait la pollution atmosphérique et notre dépendance à légard des combustibles fossiles.</French>
 		<German>Die Menschen beschweren sich über den häßlichen schwarzen Rauch, der von unseren Kraftwerken kommt, die fossile Brennstoffe verfeuern. Einige unserer Wissenschaftler und Ingenieure behaupten, eine dezentralisierte Kette von [COLOR_BUILDING_TEXT]Wassserkraftwerken[COLOR_REVERT] und [COLOR_BUILDING_TEXT]Kernkraftwerken[COLOR_REVERT] würde gleichermaßen die Luftverschmutzung und unsere Abhängigkeit von fossilen Brennstoffen verringern.</German>
@@ -5652,7 +5652,7 @@
 		<Russian>Граждане жалуются на уродливый черный дым, исходящий от наших электростанций, работающих на ископаемом топливе. Часть из наших ученых и инженеров утверждает, что децентрализованная цепочка [COLOR_BUILDING_TEXT]гидроэлектростанций[COLOR_REVERT] и [COLOR_BUILDING_TEXT]АЭС[COLOR_REVERT] сократит как загрязнение атмосферы, так и нашу зависимость от ископаемого топлива.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_ALTERNATIVE_ENERGY_DONE</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_ALTERNATIVE_ENERGY_DONE</Tag>
 		<English>Congratulations! You have built enough [COLOR_BUILDING_TEXT]Hydro Plants[COLOR_REVERT] and [COLOR_BUILDING_TEXT]Nuclear Plants[COLOR_REVERT] to meet the goals of the quest for Alternative Energy. Please choose a reward.</English>
 		<French>Félicitations! Vous avez construit assez de [COLOR_BUILDING_TEXT]Centrales hydro-électriques[COLOR_REVERT] et de[COLOR_BUILDING_TEXT] Centrales Nucléaires[COLOR_REVERT] pour accomplir la Quête de l'énergie alternative. Veuillez choisir une récompense.</French>
 		<German>Glückwünsche! Sie haben genügend [COLOR_BUILDING_TEXT]Wasserkraftwerke[COLOR_REVERT] und [COLOR_BUILDING_TEXT]Kernkraftwerke[COLOR_REVERT] errichtet, um die Ziele des Quests "Alternative Energie" zu erfüllen. Wählen Sie bitte eine Belohnung.</German>
@@ -5662,7 +5662,7 @@
 		<Russian>Поздравляем! Вы построили достаточно [COLOR_BUILDING_TEXT]гидроэлектростанций[COLOR_REVERT] и [COLOR_BUILDING_TEXT]АЭС[COLOR_REVERT] для выполнения задачи поиска альтернативной энергии. Теперь выберите награду.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_ARCHERY_FOUNDED_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_ARCHERY_FOUNDED_1</Tag>
 		<English>Hunters in %s2_city have equipped themselves now with bows and arrows - our city gets 1 free archer unit.</English>
 		<French>Les Chasseurs de %s2_city se sont équipés eux-mêmes d'arcs et de flèches - notre Ville reçoit une unité d'archers gratuite.</French>
 		<German>Jäger in %s2_city haben sich jetzt mit Pfeil und Bogen ausgerüstet - unsere Stadt erhält einen kostenlosen Bogenschützen.</German>
@@ -5672,7 +5672,7 @@
 		<Russian>Охотники из %s2_city теперь вооружены луками и стрелами - наш город получает 1 бесплатный отряд лучников.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_ARTIFICIAL_ELEMENT_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_ARTIFICIAL_ELEMENT_1</Tag>
 		<English>The scientists in %s2_city have discovered first artificial element with the accelerator! More elements might be found in near future now that the methods to create them have been proven.</English>
 		<French>Nos scientifiques de %s2_city ont découvert le premier élément artificiel avec un accélérateur à particules! d'autres éléments pourraient être découvert dans un futur proche, maintenant que la méthodologie pour leur création a été prouvée.</French>
 		<German>Die Wissenschaftler in %s2_city haben mit ihrem Teilchenbeschleuniger das erste künstliche Element erschaffen! Jetzt, wo die Methode etabliert ist, könnten weitere künstliche Elemente gefunden werden.</German>
@@ -5682,7 +5682,7 @@
 		<Russian>Ученые в городе %s2_city обнаружили первый искусственный элемент с ускорителем! В ближайшем будущем могут быть обнаружены другие элементы, поскольку методы их создания были уже апробированы.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_BATTLE_LASERS_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_BATTLE_LASERS_1</Tag>
 		<English>Our weapons engineers have invented a way to install on-board combat lasers on our helicopter gunships. The lasers will reduce our aviators' reaction time, giving us the high-tech edge in battle.</English>
 		<French>Nos ingénieurs d'armes ont inventé une manière d'installer les lasers à bord de combat sur nos hélicoptères armés. Les lasers réduiront le temps de réaction de nos aviateurs, nous donnant un avantage certain dans la bataille.</French>
 		<German>Unsere Waffeingenieure haben einen Weg gefunden, Bordkampflaser auf unsere Kampfhubschrauber anzubringen. Die Laser verringern die Reaktionszeit unserer Piloten und geben uns den entscheidenden High-Tech-Vorteil in der Schlacht.</German>
@@ -5692,7 +5692,7 @@
 		<Russian>Наши военные инженеры разработали способ оснащения боевыми лазерами наших вертолетов. Лазеры сокращают время реакции наших авиаторов, давая нам преимущество в бою в области высоких технологий.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_BEST_HUNTERS</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_BEST_HUNTERS</Tag>
 		<English>One of our best hunters says he has developed a better way to hunt our prey! What should we do?</English>
 		<French>Un de nos meilleurs chasseurs prétend avoir trouvé un meilleur moyen de chasser nos proies! Que devons nous faire?</French>
 		<Italian>Uno dei nostri migliori cacciatori afferma di aver sviluppato un modo migliore per cacciare le prede! Cosa dovremmo fare?</Italian>
@@ -5701,7 +5701,7 @@
 		<Russian>Один из наших лучших охотников утверждает, что он придумал более эффективный способ охоты на дичь в наших угодьях! Как нам следует поступить?</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_BILLIONS_AND_BILLIONS</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_BILLIONS_AND_BILLIONS</Tag>
 		<English>A scientist in %s2_city has produced a popular radio series on astronomy.</English>
 		<French>Un scientifique de %s2_city a produit une série populaire de radio sur l'astronomie.</French>
 		<German>Ein Wissenschaftler in %s2_city hat eine populäre Radioserie über Astronomie produziert.</German>
@@ -5710,7 +5710,7 @@
 		<Polish>Naukowiec w mieście %s2_city nakręcił naukowy serial telewizyjny o astronomii.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_BLACK_DEATH_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_BLACK_DEATH_1</Tag>
 		<English>Black Death plague epidemic has struck hard at the people of %s2_city. Most have fallen ill and many are dying.</English>
 		<French>Une épidémie de Peste Noire a touché le peuple de %s2_city. La plupart sont tombé malades, et beaucoup en sont morts.</French>
 		<German>Die Schwarze Pest hat die Menschen in %s2_city hart getroffen. Die meisten sind krank und viele sterben.</German>
@@ -5719,7 +5719,7 @@
 		<Polish>Plaga czarnej śmierci zaatakowała miasto %s2_city. Plaga ta przyczyniła się do dużej ilości zgonów.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CARNATION_REVOLUTION</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CARNATION_REVOLUTION</Tag>
 		<English>Veteran military officers in one of our elite units are advocating peace with the %s1_civ_adjective and socialism at home. This faction is gaining support, and it may be impossible to stop them from seizing power unless action is taken soon.</English>
 		<French>Les officiers militaires vétérans d'une de nos unités d'élite préconisent de faire la paix avec les %s1:3_civ_adjective et d'adopter le socialisme comme doctrine. Cette faction reçoit l'appui de nombreuses personnes, et des mesures doivent être prises, car il sera bientôt impossible de les empêcher de prendre le pouvoir.</French>
 		<German>Militärische Offiziersveteranen in einer unserer Eliteeinheiten befürworten den Frieden mit dem %s1_civ_adjective Volk sowie den Sozialismus. Diese Partei gewinnt schnell an Rückhalt. Wenn wir nicht schnell eingreifen, könnte es unmöglich sein, sie von der Übernahme der Macht abzuhalten.</German>
@@ -5728,7 +5728,7 @@
 		<Polish>Wysocy oficerowie jednego z naszych elitarnych oddziałów żądają zawarcia pokoju z cywilizacją %s1_civ_adjective oraz wprowadzenia socjalizmu w naszym kraju! Frakcja ta zyskuje coraz większe poparcie, jeżeli nie podejmiemy żadnych działań wkrótce może być za późno przed powstrzymaniem ich od przejęcia władzy.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CHAIN_SHOT_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CHAIN_SHOT_1</Tag>
 		<English>A master smith has crafted a new type of naval ammunition formed of two balls chained together that can be used to shoot down yards and masts from other ships.</English>
 		<French>Un maître fondeur a mis au point un nouveau type de munition navale formée de deux boulets enchaînés ensemble, qui améliore considérablement les dégâts sur les installations portuaires et les autres navires.</French>
 		<German>Ein Meisterschmied hat einen neuen Typ Munition erfunden, der aus zwei zusammengeketteten Kugeln besteht mit denen man Masten von anderen Schiffen herunterschießen kann.</German>
@@ -5738,7 +5738,7 @@
 		<Russian>Мастер-оружейник создал новый тип боеприпасов, состоящий из двух шариков, соединенных цепью, которые можно использовать для повреждения оснастки и мачт на кораблях неприятеля.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CHARIOTRY_FOUNDED_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CHARIOTRY_FOUNDED_1</Tag>
 		<English>Local governor from %s2_city has presented a plan to improve our military forces. With a small donation from empire's treasury, he can hurry citizens to train chariots or to build a stable.</English>
 		<French>Un gouverneur local de %s2_city a présenté un plan pour améliorer la puissance de notre armée. Avec un petit investissement supplémentaire, il peut s'arranger avec les citoyens pour construire une [COLOR_BUILDING_TEXT]Ecurie[COLOR_REVERT] ou entraîner des [COLOR_UNIT_TEXT]Chars[COLOR_REVERT].</French>
 		<German>Der örtliche Gouverneur von %s2_city hat Pläne präsentiert, wie unser Militär verstärkt werden kann. Mit Hilfe einer kleinen Spende aus der Schatzkammer des Reiches kann er die Ausbildung von Streitwägen oder den Bau von Stallungen beschleunigen.</German>
@@ -5748,42 +5748,42 @@
 		<Russian>Наместник города %s2_city представил план по улучшению наших вооруженных сил. Согласно ему, это поможет будущим рекрутам обучиться вождению колесницы, а также обеспечит конницу новыми конюшнями при небольшом финансировании из казны.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CITYFIRE_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CITYFIRE_1</Tag>
 		<English>A fire has destroyed a building in the city! Fortunately our local forces brought it under control before it could spread.</English>
 		<French>un incendie a détruit un bâtiment de la ville! Heureusement, nos forces locales ont réussi à le maîtriser avant qu'il ne se propage.</French>
 		<Polish>Pożar zniszczył budynek w mieście! Na szczęście nasze miejscowe siły przeciwpożarowe opanowały pożar zanim się rozprzesztrzenił.</Polish>
 		<Russian>Пожар уничтожил здание в городе! К счастью, наши местные силы взяли его под контроль, прежде чем он смог распространиться.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CITYFIRE_2</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CITYFIRE_2</Tag>
 		<English>A fire has destroyed a building in the city! Local firefighters have it contained but ask for some additional forces to secure adjacent buildings.</English>
 		<French>Un incendie a détruit un bâtiment de la ville! les forces locales réussisent à le contenir, mais demandent des ressources supplémentaires pour sécuriser les bâtiments alentours.</French>
 		<Polish>Pożar zniszczył budynek w mieście! Nasze miejscowe siły przeciwpożarowe opanowały pożar, ale mimo to proszą o pomoc.</Polish>
 		<Russian>Пожар уничтожил здание в городе! Местные пожарные делают все возможное, но им требуются кое-какие дополнительные силы для защиты соседних зданий.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CITYFIRE_3</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CITYFIRE_3</Tag>
 		<English>A fire has destroyed a building in the city! Local firefighters are doing all they can to contain it. Their commanders are asking for additional support due to the high density of flammable buildings in the area.</English>
 		<French>Un incendie a détruit un bâtiment de la ville! les forces locales font tout leur possible pour le contenir. Ils demandent des ressources supplémentaires en raison de la forte concentration d'immeubles dans cette zone.</French>
 		<Polish>Pożar zniszczył budynek w mieście! Nasze miejscowe siły przeciwpożarowe robią co mogą aby opanować pożar.Strażacy proszą o pomoc ponieważ pożar wybuchł w dzielnicy o gęstej zabudowie i boją się, że się rozprzestrzeni.</Polish>
 		<Russian>Пожар уничтожил здание в городе! Местные пожарные делают все возможное, чтобы сдержать пламя. Их бригадиры просят дополнительной поддержки из-за высокой плотности застройки в этом районе.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CITYFIRE_4</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CITYFIRE_4</Tag>
 		<English>A fire has destroyed a building in the city! Local firefighters are fighting the flames bravely, however the fire still rages out of control. They are asking for more forces to control the highly flammable area and to keep the city from burning down.</English>
 		<French>Un incendie a détruit un bâtiment de la ville! les forces locales combattent les flammes avec bravoure, mais le feu n'est pas maîtrisé pour l'instant. Ils demandent des ressources supplémentaires pour pouvoir contenir l'incendie et limiter les dégâts.</French>
 		<Polish>Pożar zniszczył budynek w mieście! Nasze miejscowe siły przeciwpożarowe walczą dzielnie, ale ogień ciagle wymyka im się spod kontroli. Proszą o dodatkowe wsparcie w dzielnicy w której magazynowane są wysoce łatwopalne materiały.</Polish>
 		<Russian>Пожар уничтожил здание в городе! Местные пожарные самоотверженно борются с огнем, однако он все еще неконтролируем. Они просят больше сил, чтобы сдержать распространение возгорания на площади и остановить пожары.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CITYFIRE_5</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CITYFIRE_5</Tag>
 		<English>A fire has destroyed a building in the city! The fire is raging out of control in parts of the city and local forces are overwhelmed. They request rapid reinforcements to contain the flames and keep the city from widespread destruction.</English>
 		<French>Un incendie a détruit un bâtiment de la ville! Le Feu fait rage et a déjà atteint plusieurs quartiers. Nos forces locales sont débordées. Ils demandent des renforts en urgence pour contenir les flammes et éviter à une propagation catastrophique.</French>
 		<Polish>Pożar zniszczył budynek w mieście! Pożar szaleje w mieście, a lokalne siły przeciwpożarowe nie mogą nic z tym zrobic. Proszą o wsparcie ponieważ los całego miasta jest zagrożony!</Polish>
 		<Russian>Пожар уничтожил здание в городе! Пламя выходит из-под контроля в некоторых частях города, а местные силы парализованы. Они требуют быстрого подкрепления, чтобы сдержать пламя и защитить город от широкомасштабного разрушения.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Tag>
 		<English>Scouts exploring ruins near %s2_city have discovered a hidden treasure.</English>
 		<French>Nos éclaireurs ont exploré des ruines près de %s2_city et ont trouvé un trésor caché.</French>
 		<German>Entdecker habe bei der Untersuchung von Ruinen in der Nähe von %s2_city einen versteckten Schatz gefunden.</German>
@@ -5793,7 +5793,7 @@
 		<Russian>Разведчики, исследующие руины около города %s2_city обнаружили зарытый клад.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CITY_RUINS_TREASURE_INDUSTRIAL_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_INDUSTRIAL_1</Tag>
 		<English>An archaeological expedition to city ruins near %s2_city has uncovered lost treasures, texts and artifacts.</English>
 		<French>Une expédition archéologique dans des ruines près de %s2_city a mis à jour des trsors perdus, d'anciens textes et des artefacts précieux.</French>
 		<German>Eine archäologische Expedition hat in Stadtruinen in der Nähe von %s2_city verschollene Schätze, Schriftstücke und Artefakte gefunden.</German>
@@ -5803,7 +5803,7 @@
 		<Russian>Археологическая экспедиция в окрестностях города %s2_city обнаружила потерянные сокровища, древние рукописи и артефакты.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CIV_GAME</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CIV_GAME</Tag>
 		<English>Our game designers have developed a new addictive game of Civilization. How shall we proceed?</English>
 		<French>Nos développeurs de jeux vidéos on créé une nouvelle et addictive version de Civilization. Que devons-nous faire?</French>
 		<German>Unsere Entwickler präsentieren ein neuartiges Computerspiel namens 'Civilization'. Was meint Ihr dazu?</German>
@@ -5813,14 +5813,14 @@
 		<Russian>Наши разработчики видеоигр недавно выпустили новую захватывающую игру Civilization. Как мы на это отреагируем?</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_COCK_FIGHTS</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_COCK_FIGHTS</Tag>
 		<English>Animal rights activists in %s2_city demand that you put a stop to the inhumane practice of cock fighting that is still common in certain parts of the city.</English>
 		<French>Des Activistes des droits de animaux de %s2_city demandent que vous mettiez un terme à ces pratiques inhumaines que sont les combats de coq, courants dans certains quartiers.</French>
 		<Polish>Obrońcy praw zwierząt z miasta %s2_city domagają się zaprzestania nieludzkich praktyk jakimi są walki kogutów, wciąż popularnie w niektórych częściach miasta.</Polish>
 		<Russian>Зоозащитники из %s2_city требуют положеть конец жестокой практике петушиных боев, которая до сих пор распространена в некоторых частях города.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_COMPULSORY_DEM</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_COMPULSORY_DEM</Tag>
 		<English>In response to a slow news week, certain highbrow newspapers have stirred up the debate over voluntary vs. compulsory voting.</English>
 		<French>En réponse à une semaine sans grandes nouvelles, certains journaux intellectuels ont soulevé le débat sur le vote obligatoire face au vote volontaire.</French>
 		<Spanish>En respuesta a una semana sin grandes novedades, ciertos diarios de tirada nacional han alentado el debate sobre el sufragio obligatorio frente al voluntario.</Spanish>
@@ -5828,7 +5828,7 @@
 		<Russian>Некоторые официальные газеты возобновили дискуссию о добровольном и обязательном голосовании, реагируя на публикации новостных еженедельников.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_COMPULSORY_DEM_HELP_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_COMPULSORY_DEM_HELP_1</Tag>
 		<English>[ICON_BULLET]No Change.</English>
 		<French>[ICON_BULLET]Pas de changements.</French>
 		<Spanish>[ICON_BULLET]Sin cambios</Spanish>
@@ -5836,7 +5836,7 @@
 		<Russian>[ICON_BULLET]Без изменений.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_COPPER_PLATING_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_COPPER_PLATING_1</Tag>
 		<English>Our shipmasters have devised a way to add copper plates to the hulls of our ships. This will help with both ramming and being rammed. The ship hulls will also resist cannonball hits longer.</English>
 		<French>Nos bateliers ont trouvé un moyen de renforcer les coques des navires avec des plaques de cuivre. Ces modifications vont nous donner l'avantage dans le pillonage des navires ennemis.</French>
 		<German>Unsere Schiffbauer haben einen Weg gefunden, um Kupferplatten am Rumpf unsere Schiffe anzubringen. Dies wird bei Rammstößen und auch bei Kanonenbeschuss helfen.</German>
@@ -5846,7 +5846,7 @@
 		<Russian>Наши судостроители разработали передовой способ бронирования медными пластинами корпусов наших кораблей. Это полезно для атаки тараном, так и для защиты от него. Корпуса корабля также будут дольше выдерживать попадания пушечных ядер.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CROSSING_THE_RUBICON</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CROSSING_THE_RUBICON</Tag>
 		<English>The leader of our best military unit has been complaining that the Senate is not providing enough support to the Army. The Senate has relieved him of duties and recalled him to the capital for questioning. The General, instead, is marching on the capital at the head of his old Army unit. Civil war appears inevitable.</English>
 		<French>Le chef de notre meilleure unité militaire s'était plaint que le sénat ne fournit pas assez d'appui à l'armée. Le sénat l'a relevé de ses fonctions et l'a rappelé à la Capitale pour interrogatoire. Le général, au lieu de cela, marche sur la capitale à la tête de son unité militaire. La guerre civile semble inévitable.</French>
 		<German>Der Führer unserer besten militärischen Einheit hat sich beschwert, daß der Senat der Armee nicht genügend Unterstützung zukommen lässt. Der Senat hat ihn seiner Aufgaben enthoben und ihn zur Befragung in die Hauptstadt geholt. Stattdessen marschiert der General an der Spitze seiner bisherigen Truppen auf die Hauptstadt zu. Der Bürgerkrieg scheint unvermeidlich.</German>
@@ -5856,7 +5856,7 @@
 		<Russian>Командующий одного из лучшего нашего подразделения жаловался на то, что Сенат не оказывает достаточной поддержки армии. Сенат освободил его от обязанностей и отозвал в столицу для допроса. Вместо этого полководец идет ускоренным маршем к столице вместе с преданными ему ветеранами его войска. Гражданская война кажется неизбежной.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CRUCIBLE_STEEL_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CRUCIBLE_STEEL_1</Tag>
 		<English>Our smiths have found iron smelting technique to produce extra hard wootz steel armors and weapons.</English>
 		<French>Nos Forgerons ont découvert une technique pour fondre le fer différemment et produire un acier extra dur, appelé 'wootz'. Ils nous fabriquent à présent des armes et armures fabuleuses.</French>
 		<German>Unsere Schmiede haben eine Eisenschmelz-Technologie entdeckt, mit der Wootz-Stahl hergestellt werden kann, um daraus Panzerungen und Waffen herzustellen.</German>
@@ -5866,7 +5866,7 @@
 		<Russian>Наши кузнецы открыли новую технику плавки железа для производства доспехов и оружия из сверхпрочной стали.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CURE_FOR_CANCER</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CURE_FOR_CANCER</Tag>
 		<English>The research laboratory in %s2_city reports a major breakthrough in development of treatments for HIV.</English>
 		<French>Le laboratoire de recherches dans %s2_city annonce une percée importante des l'étude des remèdes pour HIV.</French>
 		<German>Das Forschung Labor in %s2_city berichtet über einen Durchbruch in der Entwicklung der Behandlung von HIV.</German>
@@ -5876,7 +5876,7 @@
 		<Russian>Исследовательская лаборатория в %s2_city сообщает о значительном прорыве в разработке методов борьбы с ВИЧ-инфекцией.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_DARWINS_VOYAGE</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE</Tag>
 		<English>After completing an ocean voyage around the world, one of our scientists has published a new theory of the origins of life based on his studies of the strange animals in foreign lands. News of this theory has spurred research throughout the Empire.</English>
 		<French>Après avoir réalisé un voyage maritime tout autour du monde, un de nos scientifiques a édité une nouvelle théorie des origines de la vie basées sur ses études des animaux exotiques dans les terres lointaines. Les nouvelles de cette théorie ont stimulé la recherche dans tout l'empire.</French>
 		<German>Nachdem er eine Ozeanreise rund um die Welt durchgeführt hat, hat einer unserer Wissenschaftler eine neue Theorie über den Ursprung des Lebens veröffentlicht, basierend auf seinen Studien der eigenartigen Tiere in fremden Ländern. Die Verbreitung dieser Theorie hat die Forschung im ganzen Land befruchtet.</German>
@@ -5886,7 +5886,7 @@
 		<Russian>Один из наших зоологов после завершения кругосветного путешествия по морю опубликовал новую теорию происхождения жизни, основанную на его исследованиях экзотических животных. Новые положения из этой теории существенно продвинули вперед отечественную науку.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_DOCK_WORKERS_STRIKE</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_DOCK_WORKERS_STRIKE</Tag>
 		<English>Dock workers in %s2_city have begun a city-wide strike, calling for better working conditions!</English>
 		<French>Les Dockers de %s2_city ont cessé le travail et font grève pour de meilleures conditions de travail!</French>
 		<Spanish>¡Los trabajadores de los muelles de %s2_city han comenzado una huelga, pidiendo mejores condiciones laborales!</Spanish>
@@ -5894,7 +5894,7 @@
 		<Russian>Согласно новостям, в городе %s2_city началась всеобщая забастовка докеров, требующих улучшений условий труда!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_DRUIDS_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_DRUIDS_1</Tag>
 		<English>%s1_civ_adjective druids have asked permission to make pilgrim to Stonehenge. What should we do?</English>
 		<French>Des druides %s1:3_civ_adjective ont demandé la permission de faire un pèlerinage jusqu'à Stonehenge. Que devons-mous faire?</French>
 		<German>%s1_civ_adjective Druiden haben um Erlaubnis gefragt nach Stonehenge zu pilgern. Was sollen wir tun?</German>
@@ -5904,7 +5904,7 @@
 		<Russian>Друиды народа %s1_civ_adjective попросили разрешения совершить паломничество к Стоунхенджу. Как нам следует поступить?</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_1</Tag>
 		<English>An earthquake jolts the city of %s2_city, causing building collapses, landslides and floods.</English>
 		<French>Un Tremblement de Terre a secoué la ville de %s2_city, provoquant l'effondrement de bâtiments, des glissements de terrains et des inondations.</French>
 		<German>Ein Erdbeben erschüttert die Stadt %s2_city, dabei stürzen Gebäude ein und es kommt zu Erdrutschen und Überflutungen.</German>
@@ -5914,7 +5914,7 @@
 		<Russian>Землетрясение обрушилось на город %s2_city, вызывая обвал зданий, оползни и наводнения.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Tag>
 		<English>An earthquake over 7.5 in Richter scale has shaken ground near %s2_city.</English>
 		<French>Un Tremblement de Terre de plus de 7.5 sur l'échelle de Richter a retenti près de %s2_city.</French>
 		<German>Ein Erdbeben von über 7,5 auf der Richter-Skala hat den Grund in der nähe von %s2_city erschüttert.</German>
@@ -5924,7 +5924,7 @@
 		<Russian>Землетрясение силой более 7,5 баллов по шкале Рихтера сотрясло землю около %s2_city.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_EXPENSIVE_HABITS_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_EXPENSIVE_HABITS_1</Tag>
 		<English>Our monarch seems more concerned with beautifying his gardens than preserving the royal treasury.</English>
 		<French>Notre Monarque semble plus enclin à soigner ses beaux jardins qu'à préserver le trésor royal.</French>
 		<German>Unser Monarch scheint sich mehr um die Verschönerung seines Gartens als um den Erhalt des Staatsschatzes zu sorgen.</German>
@@ -5934,7 +5934,7 @@
 		<Russian>Наш монарх, похоже, больше заботится об украшении своих садов, чем о состоянии государственной казны.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_FIAT_MONEY</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_FIAT_MONEY</Tag>
 		<English>Our currency reserves are running low. Some advisors suggest that we increase our reserves just by printing more paper money. By doing so, we won't have to make unpopular decisions about spending and taxes, but this runs the long-term risks of increased inflation.</English>
 		<French>Nos réserves de monnaie sont en baisse. Quelques conseillers proposent que nous augmentions nos réserves juste en imprimant plus d'argent papier. En faisant ainsi, nous ne devrons pas prendre des décisions impopulaires au sujet de la dépense et des impôts, mais ceci court les risques à long terme d'une inflation accrue.</French>
 		<German>Unsere Währungsreserven werden knapp. Einige Berater schlagen vor, daß wir unsere Reserven erhöhen, gerade indem wir mehr Papiergeld drucken. Indem wir dies tun, müssen wir keine unpopulären Entscheidungen über Ausgaben und Steuern treffen, aber dies erhöht die langfristigen Gefahren einer erhöhten Inflation.</German>
@@ -5944,7 +5944,7 @@
 		<Russian>Наши валютные резервы истощаются. Некоторые эксперты предлагают увеличить наши резервы, просто печатая больше бумажных денег. Таким образом, нам не придется принимать непопулярные решения о расходах и налогах, но это создает долгосрочные риски роста инфляции.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_FREE_ENTERPRISE</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_FREE_ENTERPRISE</Tag>
 		<English>A private aerospace company claims that in exchange for a small initial investment, they can design and build spacecraft parts more efficiently than the government space agency.</English>
 		<French>Une compagnie aérospatiale privée réclame qu'en échange d'un petit investissement initial, elle peut concevoir et établir des pièces de vaisseau spatial plus efficacement que l'agence gouvernementale de l'espace.</French>
 		<German>Eine private Luftfahrtfirma behauptet, daß sie gegen eine kleine Ausgangsförderung Raumschiffteile leistungsfähiger entwerfen und errichten kann als die staatliche Raumfahrtagentur.</German>
@@ -5954,7 +5954,7 @@
 		<Russian>Частная аэрокосмическая компания утверждает, что в обмен на небольшие первоначальные инвестиции они могут разрабатывать и изготавливать модули для космических аппаратов более эффективно, чем государственное космическое агентство.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_FULLERENES_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_FULLERENES_1</Tag>
 		<English>The scientists in %s2_city have discovered fullerenes, a new form of carbon molecules! They say this will boost research on different fields and possibly is a breakthrough towards nanotechnology.</English>
 		<French>Nos scientifique de %s2_city ont découvert le fullerène, une nouvelle forme des molécules de carbone! Ils affirment que cela va révolutionner nos recherches et créer une grande avancée dans le domaine des nanotechnologies.</French>
 		<German>Die Forscher in %s2_city haben Fullerene entdeckt, eine neue Form von Kohlenstoffmolekülen! Sie behaupten, das wird der Forschung in verschiedenen Feldern einen Schub geben und möglicherweise den Durchbruch in Richtung Nanotechnologie bedeuten.</German>
@@ -5964,7 +5964,7 @@
 		<Russian>Ученые в городе %s2_city открыли фуллерены, новую форму молекул углерода! Они утверждают, что это стимулирует исследования в различных областях и, возможно, станет прорывом в области нанотехнологий.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_GRAPE_SHOT_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_GRAPE_SHOT_1</Tag>
 		<English>A master engineer has crafted a new type of anti-personnel ammunition that can be used in cannons. Instead of solid shot, a mass of loosely packed metal slugs is loaded into a canvas bag. When assembled, the balls resemble a cluster of grapes and when fired the balls spread out from the muzzle at high velocity.</English>
 		<French>Un maître en armement a conçu un nouveau type de munitions anti-personnel qui peuvent être utilisées dans nos canons. A la place d'un boulet solide, celui-ci crache une masse de petits éclats de métal placé dans un filet. Lorsque ces munitions sont tirées, elles atteignent leur cible à grande vitesse et provoque des dégâts dévastateurs.</French>
 		<German>Ein Meister ingenieur hat eine Form von Munition entwickelt, die in Kanonen gegen Soldaten verwendet werden kann. Statt einer soliden Kugel wird eine Menge locker zusammengepackter Metallklumpen in ein Segeltuch gepackt. Diese Verteilen sich nach dem Abfeuern in großer Geschwindigkeit in viele kleine Kügelchen.</German>
@@ -5974,7 +5974,7 @@
 		<Russian>Главный инженер разработал новый тип противопехотных боеприпасов, которые можно заряжать в пушки. Вместо цельного снаряда ствол заряжается холщовым мешком, наполненным картечью. Собранные шарики напоминают гроздь винограда, а при выстреле шарики разлетаются из жерла на высокой скорости.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_GREAT_MONUMENTS_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_GREAT_MONUMENTS_1</Tag>
 		<English>Travelers love the monuments in the city of %s2_city, and the locals are benefiting greatly.</English>
 		<French>Les Voyageurs adorent les Monuments de notre Ville de %s2_city, et les riverains en bénéficient grandement.</French>
 		<German>Reisende lieben das Monument in %s2_city, die Einheimischen profitieren davon in großem Maße.</German>
@@ -5984,7 +5984,7 @@
 		<Russian>Памятники в городе %s2_city пользуются популярностью среди путешественников, и местные жители извлекли из этого большую пользу.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_GREEK_FIRE</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_GREEK_FIRE</Tag>
 		<English>Our alchemists have developed a liquid based on naptha that ignites easily and cannot be put out with water -- in fact, the liquid will ignite while floating on water itself. It will be devastating for use against enemy ships.</English>
 		<French>Nos alchimistes ont développé un liquide basé sur le naptha qui s'enflamme très facilement et ne peut pas être eteint avec de l'eau -- en fait, ce liquide s'enflamme tout en flottant sur l'eau elle-même. Il sera dévastateur contre les bateaux ennemis.</French>
 		<German>Unsere Alchemisten haben eine auf Naphtha basierende Flüssigkeit entwickelt, die leicht entzündet und nicht mit Wasser gelöscht werden kann -- tatsächlich entzündet die Flüssigkeit beim Schwimmen auf Wasser. Sie wird in der Verwendung gegen feindliche Schiffe vernichtend sein.</German>
@@ -5994,7 +5994,7 @@
 		<Russian>Наши алхимики разработали жидкость на основе нефти, которая легко воспламеняется и не может быть потушена водой - иными словами, жидкость воспламенится, будучи разлитой на водной поверхности. Это будет разрушительным оружием в сражениях против вражеских флотилий.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_HARBORMASTER</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_HARBORMASTER</Tag>
 		<English>Our harbormasters request government aid in expanding our overseas trading empire.[PARAGRAPH:1]We will need to build enough [COLOR_BUILDING_TEXT]Ports[COLOR_REVERT] in our cities and construct enough ocean worthy ships.</English>
 		<French>Nos maîtres des ports demandent au gouvernement une aide pour développer les échanges commerciaux outremer.[PARAGRAPH:1]Nous devons construire suffisamment de [COLOR_BUILDING_TEXT]Ports[COLOR_REVERT] dans nos Ville ainsi que des navires capables d'affronter les océans.</French>
 		<German>Unsere Hafenmeister fordern mehr [COLOR_BUILDING_TEXT]Häfen[COLOR_REVERT] und [COLOR_BUILDING_TEXT]Überseeschiffe[COLOR_REVERT], um den Überseehandel entwickeln zu können.</German>
@@ -6004,7 +6004,7 @@
 		<Russian>Наши начальники портов запрашивают государственной поддержки в расширении нашей зарубежной торговли.[PARAGRAPH:1]Нам нужно будет построить достаточное количество [COLOR_BUILDING_TEXT]Портов[COLOR_REVERT] в наших городах, а также снарядить нужное количество кораблей, годных к океанскому плаванию.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_HARBORMASTER_DONE_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_HARBORMASTER_DONE_1</Tag>
 		<English>Congratulations! You have met the goals of your merchant marine and built for them enough ships and docks to empower their plans. Please choose a reward from among the benefits your new trading empire is able to provide to you.</English>
 		<French>Félicitations! Vous avez atteint les objectifs de votre marine marchande et lui avez construit suffisamment de navires et de ports pour qu'elle réalise ses projets. Veuillez choisir une récompense parmi les avantages que votre nouvel empire commercial peut vous procurer.</French>
 		<German>Glückwunsch! Ihr habt die Mission "Hafenmeister" durch den Bau ausreichend vieler [COLOR_BUILDING_TEXT]Häfen[COLOR_REVERT] und [COLOR_UNIT_TEXT]Karavellen[COLOR_REVERT] erfüllt. Eure Einrichtungen können Euch nun einen Vorteil nach Wahl verschaffen.</German>
@@ -6014,7 +6014,7 @@
 		<Russian>Поздравляем! Вы достигли всех заявленных целей и построили достаточно кораблей и доков для нужд своего торгового флота, основательно укрепив его. Теперь выберите вознаграждение из числа преимуществ, которые может предоставить ваша новая колониальная империя.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_HARRY_POTTER</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_HARRY_POTTER</Tag>
 		<English>Religious leaders have lobbied your government to ban the latest novel in the 'Harry Potter' fantasy series.</English>
 		<French>Les chefs religieux font pression sur votre gouvernement pour interdire le dernier Roman de la série 'Harry Potter'.</French>
 		<Spanish>Los líderes religiosos presionan a tu gobierno para que se censure la última novela de la serie de fantasía 'Harry Potter'.</Spanish>
@@ -6022,7 +6022,7 @@
 		<Russian>Религиозные лидеры лоббировали ваше правительство, требуя запрета романа «Гарри Поттер» и одноименного сериала фэнтези.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_HENRY_MORGAN</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_HENRY_MORGAN</Tag>
 		<English>The notorious Pirate [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] has set sail for our waters, seeking plunder and mayhem! His flotilla is just over the horizon!</English>
 		<French>Le fameux pirate [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] a dirigé ses voiles vers nos eaux! Sa flotille est visible juste au-dessus de l'horizon!</French>
 		<German>Der gefürchtete Pirat [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] hat Segel auf unsere Gewässer gesetzt und sucht Plünderung und Chaos! Seine Flotille liegt direkt hinter dem Horizont!</German>
@@ -6032,7 +6032,7 @@
 		<Russian>Печально известный пират [COLOR_NEGATIVE_TEXT]Генри Морган[COLOR_REVERT] направился в наши воды в поисках богатой добычи и легкой наживы! Его флотилия уже на подходе!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_HERETICAL_RESEARCH2_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_HERETICAL_RESEARCH2_1</Tag>
 		<English>Our priests have declared our current research heretical and have denounced it in public sermons.</English>
 		<French>Nos Prêtres ont déclaré nos récents projets de recherche comme une hérésie, et les dénoncent en public lors de leurs Sermons.</French>
 		<German>Unsere Priester haben das aktuelle Forschungsprojekt als häretisch bezeichnet und es in öffentlichen Gesängen verurteilt.</German>
@@ -6042,7 +6042,7 @@
 		<Russian>Наши священники объявили наше текущее исследование еретическим и осудили его в публичных проповедях.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_HERETICAL_RESEARCH_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_HERETICAL_RESEARCH_1</Tag>
 		<English>Our priests have declared our current research heretical and have denounced it in public sermons.</English>
 		<French>Nos Prêtres ont déclaré nos récents projets de recherche comme une hérésie, et les dénoncent en public lors de leurs Sermons.</French>
 		<German>Unsere Priester haben das aktuelle Forschungsprojekt als häretisch bezeichnet und es in öffentlichen Gesängen verurteilt.</German>
@@ -6052,7 +6052,7 @@
 		<Russian>Наши священники объявили наше текущее исследование еретическим и осудили его в публичных проповедях.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_HERO_SPAWN_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_HERO_SPAWN_1</Tag>
 		<English>A local commoner has risen up to become a great champion for our empire!</English>
 		<French>Un partisan local est devenu un vrai Champion pour votre Empire!</French>
 		<Italian>Un partigiano locale è diventato un grande esempio per la nostra nazione!</Italian>
@@ -6061,7 +6061,7 @@
 		<Russian>Местный выходец из низов возвысился, став великим бойцом во всей нашей державе!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_HORSE_WHISPERING</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_HORSE_WHISPERING</Tag>
 		<English>Our horse trainers believe that it would be possible to gain a much deeper bond with and understanding of our riding animals.[PARAGRAPH:1]They require a larger and more coordinated network of [COLOR_BUILDING_TEXT]Stables[COLOR_REVERT] to pursue this goal.</English>
 		<French>Nos entraîneurs de chevaux pensent qu'on peut créer un lien plus profond avec nos montures et les comprendre davantage.[PARAGRAPH:1]Ils ont besoin d'un réseau d'[COLOR_BUILDING_TEXT]Ecuries[COLOR_REVERT] plus grand et mieux coordonné pour y parvenir.</French>
 		<German>Unsere Pferdetrainer fordern mehr [COLOR_BUILDING_TEXT]Ställe[COLOR_REVERT], um zu den Reittieren ein engeres Verhältnis und für deren Pflege ein besseres Verständnis entwickeln zu können.</German>
@@ -6071,14 +6071,14 @@
 		<Russian>Наши дрессировщики полагают, что можно обрести гораздо более тесную связь с нашими ездовыми животными и понять их.[PARAGRAPH:1]Им требуется более крупная и более развитая сеть [COLOR_BUILDING_TEXT]Конюшен[COLOR_REVERT] для достижения этой цели.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_IDITAROD</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_IDITAROD</Tag>
 		<English>The 'Iditarod' dog sled race organizers would like it to be held in %s2_city this year.</English>
 		<French>Les organisateurs de la course de chien de traineaux 'Iditarod' aimeraient choisir la ville de %s2_city pour cette année.</French>
 		<Polish>"Iditarod' to zawody psich zaprzęg jakie od tego roku będą organizowane w mieście %s2_city.</Polish>
 		<Russian>Организаторы бегов на собачьих упряжках «Айдитарод» хотели бы, чтобы в этом году они проводились в %s2_city.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_ILLYRIAN_PIRATES</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_ILLYRIAN_PIRATES</Tag>
 		<English>The dastardly [COLOR_NEGATIVE_TEXT]Illyrian Pirates[COLOR_REVERT] have arrived in our waters, seeking to plunder our trade routes!</English>
 		<French>Les [COLOR_NEGATIVE_TEXT]Pirates d'Illyrian[COLOR_REVERT] sont arrivés dans nos eaux territoriales, cherchant à piller nos routes commerciales!</French>
 		<German>Die schrecklichen [COLOR_NEGATIVE_TEXT]Illyrian Pirates[COLOR_REVERT] sind in unserem Wasser angekommen und versuchen unsere Handelswege zu plündern!</German>
@@ -6088,7 +6088,7 @@
 		<Russian>Коварные [COLOR_NEGATIVE_TEXT]иллирийские пираты[COLOR_REVERT] прибыли в наши воды охотиться на купеческие суда на торговых путях!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_IMMIGRANTS</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_IMMIGRANTS</Tag>
 		<English>Immigrants are flowing to %s2_city inspired by stories of its culture!</English>
 		<French>Les immigrants arrivent en masse dans la ville de %s2_city, attirés par les histoires qu'ils ont lu sur sa culture!</French>
 		<German>Geschichten über die reiche Kultur der Stadt %s2_city ziehen viele Immigranten an.</German>
@@ -6098,7 +6098,7 @@
 		<Russian>Иммигранты стекаются в город %s2_city, впечатленные его великой культурой!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_INDUSTRIAL_ACTION</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_INDUSTRIAL_ACTION</Tag>
 		<English>Factory workers in %s2_city have organized and walked off the job, protesting poor working conditions and demanding a pay increase. Workers in other industries have joined them in solidarity. The entire city will be paralyzed for as long as the general strike continues.</English>
 		<French>Les ouvriers de %s2_city ont organisé des grèves et ont marché dans les rues, protestant contre leurs mauvaises conditions de travail et exigeant une augmentation de salaire. Les ouvriers dans d'autres industries les ont rejoints par solidarité. La ville entière sera paralysée tant que la grève continue.</French>
 		<German>Fabrikarbeiter in %s2_city haben sich organisiert und die Arbeit eingestellt, sie protestieren gegen schlechte Arbeitsbedingungen und verlangen eine Lohnerhöhung. Arbeiter aus anderen Industriezweigen haben sich ihnen solidarisch angeschlossen. Die gesamte Stadt ist so lange gelähmt, wie der Generalstreik anhält.</German>
@@ -6108,7 +6108,7 @@
 		<Russian>Фабричные рабочие в городе %s2_city сорганизовались и забросили работу, протестуя против плохих условий труда и требуя повышения заработной платы. Работники других отраслей присоединились к ним в знак солидарности. Весь город будет парализован до тех пор, пока продолжается всеобщая забастовка.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_JADE_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_JADE_1</Tag>
 		<English>A rich source of jade has been found amongst the veins of ore at one of our mines.</English>
 		<French>Une riche source de jade a été trouvée parmi les autres filons d'une de nos mines.</French>
 		<German>In einer unserer Minen ist beim Abbau von Eisenerz ein reicher Bestand an Jade gefunden worden.</German>
@@ -6116,7 +6116,7 @@
 		<Russian>На одном из наших рудников были обнаружены изобильные жилы нефрита.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_LESS_DICTATOR</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_LESS_DICTATOR</Tag>
 		<English>While effusively praising your leadership and bowing repeatedly, a delegation of concerned citizens has humbly requested that the government take a more "modernistic" view in the future.</English>
 		<French>Tout en louant votre leadership et en s'inclinant à plusieurs reprises, une délégation de citoyens concernés a humblement demandé que le gouvernement adopte une approche plus «moderniste» pour l'avenir.</French>
 		<Spanish>Mientras alaban efusivamente tu liderazgo y hacen reiteradas reverencias, una delegación de ciudadanos preocupados han solicitado humildemente una política más "progresista" por parte del gobierno en el futuro.</Spanish>
@@ -6124,7 +6124,7 @@
 		<Russian>Высоко оценивая ваше руководство и беспрерывно кланяясь, делегация заинтересованных граждан смиренно просила правительство придерживаться более «модернистского» взгляда на будущее.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_LOYALTY_TESTS_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_LOYALTY_TESTS_1</Tag>
 		<English>We have begun purging those in our government with questionable loyalties.</English>
 		<French>Nous avons commencé à épurer les membres de notre gouvernement dont la loyauté présentait quelques doutes.</French>
 		<German>Wir haben damit begonnen, jene in unserer Regierung mit fraglicher Loyalität auszusieben.</German>
@@ -6134,7 +6134,7 @@
 		<Russian>Мы начали очищать ряды нашего руководства от лиц с сомнительной лояльностью.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_MAJOR_IN_HUMANITIES</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_MAJOR_IN_HUMANITIES</Tag>
 		<English>Our university in %s2_city has specialized in the study of ancient poetry, literature, and rhetoric. Students from around the world yearn to study with our experts.</English>
 		<French>Notre Université de %s2_city s'est spécialisée dans la poésie, la littérature et la rhétorique. Des Étudiantes du Monde Entier accourent pour écouter l'enseignement de nos experts.</French>
 		<German>Unsere Universität in in %s2_city hat sich auf das Studium von alter Dichtung, Literatur und Rhetorik spezialisiert. Studenten aus der ganzen Welt sehnen sich danach, mit unseren Experten zu studieren.</German>
@@ -6144,7 +6144,7 @@
 		<Russian>Наш университет в городе %s2_city специализируется на изучении древней поэзии, литературы и риторики. Студенты со всего мира стремятся учиться у наших профессоров.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_MALACCAN_PIRATES</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_MALACCAN_PIRATES</Tag>
 		<English>Our ships have come under attack by the [COLOR_NEGATIVE_TEXT]Malaccan Pirates[COLOR_REVERT]! They are using their fleet of hijacked ships to prey on commercial traders right under our noses.</English>
 		<French>Nos bateaux ont été attaqués par les [COLOR_NEGATIVE_TEXT]Pirates de Malacca[COLOR_REVERT]! Ils utilisent leur flotte de bateaux volés pour attaquer les navires marchands juste sous notre nez.</French>
 		<German>Unsere Schiffe sind unter Beschuss durch die [COLOR_NEGATIVE_TEXT]Malaccanischen Piraten[COLOR_REVERT] geraten! Sie benutzen ihre Flotte aus geraubten Schiffe um unsere Handelsschiffe direkt vor unserer Nase zu berauben.</German>
@@ -6154,7 +6154,7 @@
 		<Russian>Наши суда подверглись атаке [COLOR_NEGATIVE_TEXT]Малайских пиратов[COLOR_REVERT]! Они используют свой флот угнанных кораблей, чтобы охотиться на купеческие суда прямо у нас под носом.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_MERCENARIES_ANCIENT_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_MERCENARIES_ANCIENT_1</Tag>
 		<English>Ruthless mercenaries approach you with a threat: They demand 100 gold from our treasury and if not given, they'll attack us.</English>
 		<French>Des Mercenaires audaçieux nous ont contacté et ont proféré des menaces: Ils demandent 100 or de notre trésor, ou ils nous attaqueront.</French>
 		<German>Gewissenlose Söldner erscheinen mit einer Drohung vor Dir: Sie verlangen 100 Gold aus unserem Staatsschatz oder sie werden uns angreifen.</German>
@@ -6164,7 +6164,7 @@
 		<Russian>Безжалостные наемники угрожают нам, требуя 100 золотых из нашей казны и, в случае отказа, нападут на нас.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_MERCENARIES_CLASSICAL_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_MERCENARIES_CLASSICAL_1</Tag>
 		<English>Ruthless mercenaries approach you with a threat: They demand 200 gold from our treasury and if not given, they'll attack us.</English>
 		<French>Des Mercenaires sans pitié nous ont contacté et ont proféré des menaces: Ils demandent 200 or de notre trésor, ou ils nous attaqueront.</French>
 		<German>Gewissenlose Söldner erscheinen mit einer Drohung vor Dir: Sie verlangen 200 Gold aus unserem Staatsschatz oder sie werden uns angreifen.</German>
@@ -6174,7 +6174,7 @@
 		<Russian>Безжалостные наемники угрожают нам, требуя 200 золотых из нашей казны и, в случае отказа, нападут на нас.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_MERCENARIES_MEDIEVAL_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_MERCENARIES_MEDIEVAL_1</Tag>
 		<English>Ruthless mercenaries approach you with a threat: They demand 300 gold from our treasury and if not given, they'll attack us.</English>
 		<French>Des Mercenaires sans pitié nous ont contacté et ont proféré des menaces: Ils demandent 300 or de notre trésor, ou ils nous attaqueront.</French>
 		<German>Gewissenlose Söldner erscheinen mit einer Drohung vor Dir: Sie verlangen 300 Gold aus unserem Staatsschatz oder sie werden uns angreifen.</German>
@@ -6184,7 +6184,7 @@
 		<Russian>Безжалостные наемники угрожают нам, требуя 300 золотых из нашей казны и, в случае отказа, нападут на нас.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_MORE_FIAT_MONEY</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_MORE_FIAT_MONEY</Tag>
 		<English>The Treasury reports that our budget surplus has evaporated, and that hard currency reserves are down to a dangerously low level. We can print more currency and lower interest rates again, but inflation will almost certainly go even higher.</English>
 		<French>Le trésor signale que notre surplus budgétaire s'est évaporé, et que les réserves de devises sont fortement en baisse et atteignent un niveau dangereusement bas. Nous pouvons imprimer plus de devises et descendre les taux d'intérêt d'intérêt, mais l'inflation explosera aussitôt.</French>
 		<German>Das Finanzministerium berichtet, daß unser Haushaltsüberschuß sich in nichts aufgelöst hat und daß die Währungsreserven auf einem gefährlich niedrigen Niveau sind. Wir können mehr Bargeld drucken und die Zinsen nochmal senken, aber die Inflation wird sich fast zweifellos weiter verstärken.</German>
@@ -6194,13 +6194,13 @@
 		<Russian>Казначейство сообщает, что период профицита нашего бюджета подошел к концу, и что резервы в твердой валюте упали до опасно низкого уровня. Мы можем напечатать больше валюты и снова снизить процентные ставки, но инфляция почти наверняка пойдет еще выше.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_MUSICOFGODS</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_MUSICOFGODS</Tag>
 		<English>Some electricity nuts have started using gigantic solid state Tesla coils to create unspeakably loud low fidelity music. The spectacle of lightning bolts playing the theme of Spectral Exterminators The Motion Picture have attracted significant audiences wherever they perform.</English>
 		<Polish>Jacyś zwariowani inżynierowie zaczęli używać gigantycznych cewek Tesli do produkcji muzyki. Koncerty przez nich organizowane owocują w orgie światła i dźwięku i przyciągają tłumy spragnionych atrakcji widzów.</Polish>
 		<Russian>Некоторые электрические муфты начали использовать как гигантские твердотельные катушки Теслы для создания невероятно громкой музыки с низким качеством воспроизведения. Зрелище со светомузыкой на тему Spectral Exterminators The Motion Picture, привлекло значительную аудиторию, где бы они ни выступали.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_NAPALM</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_NAPALM</Tag>
 		<English>Our weapons researchers have discovered that a chemical mixture of gasoline along with certain jellying agents called "napalm" creates a powerful new incendiary weapon. The severe burns it causes the unlucky survivors, however, are truly horrific. World opinion may sway against us if we equip our air forces with these bombs.</English>
 		<French>Nos chercheurs d'armes ont découvert qu'un mélange chimique d'essence avec certains agents gelants appelés "napalm" cré une nouvelle arme incendiaire puissante. Les brûlures graves qu'il cause aux malheureux survivants, cependant, sont vraiment terrifiantes. L'opinion du monde peut se retourner contre nous si nous équipons notre Armée de l'Air de ces bombes.</French>
 		<German>Unsere Waffenforscher haben entdeckt, daß eine chemische Mischung von Benzin zusammen mit bestimmten gelierenden Materialien, dem sogenannten "Napalm", eine leistungsfähige neue brandstiftende Waffe erzeugt. Die schweren Verbrennungen der unglücklichen Überlebenden sind Sie jedoch wirklich entsetzlich. Die allgemeine Stimmung in der Welt kann sich gegen uns richten, wenn wir unsere Luftwaffe mit diesen Bomben ausrüsten.</German>
@@ -6210,7 +6210,7 @@
 		<Russian>Наши военные инженеры обнаружили, что химическая смесь бензина и некоторых желеобразующих веществ, называемых напалмом, создает новое мощное зажигательное оружие. Серьезные ожоги, которые оно причиняет несчастным выжившим, действительно ужасны. Мировое общественное мнение может быть настроено против нас, если мы оснастим наши ВВС этими бомбами.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_NATUROPATHY_FOUNDED_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_NATUROPATHY_FOUNDED_1</Tag>
 		<English>Shamans in %s2_city have discovered herbs that can help cure diseases and wounds - our city gets Healer's Hut building.</English>
 		<French>Des Shamans de %s2_city ont découvert des herbes capables de guérir des blessures et des maladies graves - notre ville reçoit une Hutte de Guérisseur.</French>
 		<German>Schamanen in %s2_city haben Kräuter entdeckt, die bei der Heilung von Kräutern und Verwundungen helfen - unsere Stadt erhält einen Medizinmann.</German>
@@ -6220,7 +6220,7 @@
 		<Russian>Шаманы в городе %s2_city обнаружили травы, способные исцелять болезни и раны. В нашем городе появляется Хижина целителя.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_NEW_WORLD</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_NEW_WORLD</Tag>
 		<English>Crowds of angry denizens are gathering near government centres in your cities, demanding improvements in living conditions, or else!</English>
 		<French>Des foules en colère d'habitants se rassemblent à proximité des centres de collecte du gouvernement dans vos villes, exigeant des améliorations de leurs conditions de vie!</French>
 		<Spanish>¡Se está congregando una multitud de ciudadanos furiosos cerca de los centros de gobierno de tus ciudades, reclamando mejoras en sus condiciones de vida!</Spanish>
@@ -6228,7 +6228,7 @@
 		<Russian>Толпы разгневанных жителей собираются возле правительственных кварталов в ваших городах, требуя улучшения условий жизни и многого другого!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_PAPYRUS_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_PAPYRUS_1</Tag>
 		<English>A local farmer claims to have invented papyrus scrolls. He's willing to give stack of them for free so that the scribes can transfer most important texts to these scrolls.</English>
 		<French>Un fermier local déclare avoir inventé des rouleaux de papyrus. Il souhaite fournir une grande quantité de ces rouleaux pour que les scribes puissent transférer les textes les plus importants sur ce nouveau support.</French>
 		<German>Ein örtlicher Bauer behauptet, die Papyrusrolle erfunden zu haben. Er möchte einen Stapel davon spenden, um es den Schreibern zu ermöglichen, die wichtigsten Texte darauf zu kopieren.</German>
@@ -6238,7 +6238,7 @@
 		<Russian>Местный земледелец утверждает, что он изготовил свитки папируса. Он готов бесплатно раздать их стопку, чтобы писцы могли перенести в эти свитки важнейшие тексты.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_PAPYRUS_2</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_PAPYRUS_2</Tag>
 		<English>A local farmer from %s2_city has discovered a way to produce papyrus scrolls. According to him, the local farmers can make new scrolls for years to come if scribes are willing to pay some gold to farmers.</English>
 		<French>Un fermier de %s2_city a inventé une méthode de fabrication de rouleaux de papyrus. selon lui, les fermiers locaux peuvent fabriquer des rouleaux pour des années si les scribes sont prêt à leur en acheter.</French>
 		<German>Ein örtlicher Bauer aus %s2_city hat einen Weg gefunden, Papyrusrollen herzustellen. Seiner Meinung nach können die örtlichen Bauern noch jahrelang neue Rollen produzieren, wenn die Schreiber bereit sind, ihnen dafür etwas Gold zu bezahlen.</German>
@@ -6248,7 +6248,7 @@
 		<Russian>Местный земледелец из города %s2_city открыл способ производить свитки папируса. По его словам, местные крестьяне могут изготавливать новые долговечные свитки, если книжники готовы заплатить им немного золота.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_PESTILENCE_6</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_PESTILENCE_6</Tag>
 		<English>A plague of locusts have swarmed over a Farm near %s2_city, destroying all the crops there.</English>
 		<French>une invasion d'acridiens a déferlé dans une ferme près de %s2_city, détruisant tous les champs.</French>
 		<German>Ein Heuschreckenschwarm fällt über eine Farm in der Nähe von %s2_city her und zerstört alle Feldfrüchte.</German>
@@ -6258,7 +6258,7 @@
 		<Russian>Саранча заполонила поля возле %s2_city, уничтожив там все посевы.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_PIRATES_OF_THE_NEUTRAL_ZONES</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_PIRATES_OF_THE_NEUTRAL_ZONES</Tag>
 		<English>Our Security Service reports that [COLOR_NEGATIVE_TEXT]Pirates[COLOR_REVERT] from the ungoverned neutral zones have equipped their fast attack ships with radar-absorbing materials. We believe that they are heading for our territorial waters!</English>
 		<French>Nos services de renseignement nous signalent que des pirates provenant d'un secteur lointain ont équipé leur navires d'attaque rapide de matériaux absorbants et nos radars ne les détectent plus. Nous croyons qu'ils se dirigent vers nos eaux territoriales!</French>
 		<German>Unser Geheimdienst berichtet, daß [COLOR_NEGATIVE_TEXT]Piraten[COLOR_REVERT] aus dem Niemandsland ihre schnellen Angriffsschiffe mit Radar-absorbierenden Materialien ausgestattet haben. Wir glauben, dass unsere Gewässer ihr Ziel sind!</German>
@@ -6268,7 +6268,7 @@
 		<Russian>Наша служба безопасности сообщает, что [COLOR_NEGATIVE_TEXT]Корсары[COLOR_REVERT] в неуправляемых серых зонх оснастили свои быстроходные боевые корабли радиопоглощающими материалами. Мы уверены, что они направляются в наши территориальные воды!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_POISON_ARROWS_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_POISON_ARROWS_1</Tag>
 		<English>Our shamans have found herb which contains paralyzing poison.</English>
 		<French>Nos shamans ont découvert des herbes dont on peut extraire un redoutable poison.</French>
 		<German>Unsere Schamanen haben Kräuter entdeckt, die ein lähmendes Gift enthalten.</German>
@@ -6278,7 +6278,7 @@
 		<Russian>Наши шаманы обнаружили траву, содержащую парализующий яд.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_PROMISING_COMMANDER_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_PROMISING_COMMANDER_1</Tag>
 		<English>A local noble who showed talent as a commander in the last war is also an incredibly efficient administrator in his home province.</English>
 		<French>Un noble local qui a montré ses talents de commandant durant la dernière Guerre est également un administrateur efficace de sa province natale.</French>
 		<German>Ein örtlicher Feudalherr, der im letzten Krieg sein Talent als Kommandeur zeugte, ist ebenso ein unglaublich effektiver Administrator in seiner Heimatprovinz.</German>
@@ -6288,7 +6288,7 @@
 		<Russian>Один из наших дворян, проявивший себя способным командиром в последней войне, оказался невероятно эффективным администратором в своей родной провинции.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_REACTIVE_ARMOR</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_REACTIVE_ARMOR</Tag>
 		<English>Our combat engineers have learned that by applying plates with explosive charges to the armor of our obsolete [COLOR_POSITIVE_TEXT]Tanks[COLOR_REVERT], the explosives can defeat penetrating shells fired from more modern combat vehicles.</English>
 		<French>Nos ingénieurs en armement ont appris qu'en appliquant des plaques renforcées d'explosifs à nos [COLOR_POSITIVE_TEXT]Chars[COLOR_REVERT] obsolètes, les explosifs peuvent annuler les effets des munitions provenant de véhicules de combat plus modernes.</French>
 		<German>Unsere Waffentechniker haben gelernt, dass sie durch die Anbringung von Platten mit Explosivstoffen auf die Panzerung von unseren veralteten [COLOR_POSITIVE_TEXT]Panzern[COLOR_REVERT] in der Lage sind, eindringende Geschosse von moderneren Kampffahrzeugen durch eine Explosion abzuwehren.</German>
@@ -6298,7 +6298,7 @@
 		<Russian>Наши военные инженеры выяснили, что при размещении контейнеров с зарядами взрывчатого вещества поверх брони наших устаревших [COLOR_POSITIVE_TEXT]танков[COLOR_REVERT], контрвзрыв может ослабить проникающую силу снарядов более современных боевых машин.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_REFINERY_EXPLOSION_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_REFINERY_EXPLOSION_1</Tag>
 		<English>A careless worker mixed wrong chemicals at the Oil Refinery in %s2_city causing a huge explosion which totally destroyed the facility. Several nearby industrial cityblocks were damaged and dangerous chemicals were spread to environment.</English>
 		<French>Un Ouvrier imprudent a mélangé des produits chimique incompatibles dans la Raffinerie de Prétrole de %s2_city, provoquant une énorme explosion qui a totalement détruit l'installation. Des logements à proximité ont été également endommagés et des produits toxiques se sont déversés dans la nature.</French>
 		<German>Ein achtloser Arbeiter hat in der Ölraffinerie in %s2_city die falschen Chemikalien gemischt und dabei eine riesige Explosion hervorgerufen, die die Anlage völlig zerstört hat. Verschiedene Industrieanlagen in der Umgebung wurden ebenfalls in Mitleidenschaft gezogen und gefährliche Chemikalien in die Umwelt freigesetzt.</German>
@@ -6308,7 +6308,7 @@
 		<Russian>Халатность одного из работников, что смешал неправильные химикаты на НПЗ в %s2_city, вызвала мощный взрыв, который полностью разрушил объект. Несколько близлежащих промышленных городских кварталов сильно пострадали, а опасные химические вещества попали в окружающую среду.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_SAILING_FOUNDED_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_SAILING_FOUNDED_1</Tag>
 		<English>Boat builders in %s2_city have designed new ship type - our city gets 1 free galley unit.</English>
 		<French>Des fabricants de bâteaux dans %s2_city ont conçu un nouveau type de navire - notre ville reçoit une galère.</French>
 		<German>Schiffsbauer in %s2_city haben einen neuen Schiffstyp konstruiert - unsere Stadt erhält eine kostenlose Galeere.</German>
@@ -6318,7 +6318,7 @@
 		<Russian>Судостроители в городе %s2_city разработали новый тип корабля - наш город получает 1 бесплатную галеру.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_SALT_MINE_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_SALT_MINE_1</Tag>
 		<English>Large deposits of salt have been discovered within the area near the city of %s2_city.</English>
 		<French>De Larges dépôts de Sel ont été découvert dans la Toundra près de la ville de %s2_city.</French>
 		<German>Große Vorkommen an Salz wurden im Tundragebiet in der Nähe von %s2_city entdeckt.</German>
@@ -6328,7 +6328,7 @@
 		<Russian>Крупные залежи соли были обнаружены в окрестностях города %s2_city.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_SANDSTORM_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_SANDSTORM_1</Tag>
 		<English>Sandstorm has made the routes vanish in the sand near %s2_city.</English>
 		<French>Des Tempêtes de sable ont fait disparaitre des routes près de %s2_city.</French>
 		<German>Durch Sandstürme sind einige Straßen in der Nähe von %s2_city verschwunden.</German>
@@ -6338,7 +6338,7 @@
 		<Russian>Песчаная буря около %s2_city засыпала песком окрестные дороги и караванные тропы.</Russian>
 	</TEXT>	
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_SEGMENTED_ARMOR_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_SEGMENTED_ARMOR_1</Tag>
 		<English>Invention of the segmented armor has provided our foot soldiers with some protection against archers.</English>
 		<French>L'Invention d'armures segmentées permet à nos troupes à pied une meilleure protection contre les archers.</French>
 		<German>Die Erfindung von segmentiertem Panzer hat unseren Fußsoldaten einen gewissen Schutz gegenüber Bogenschützen gegeben.</German>
@@ -6348,14 +6348,14 @@
 		<Russian>Изобретение сегментированной брони обеспечило нашей пехоте некоторую защиту от лучников.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_SHERIFF</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_SHERIFF</Tag>
 		<English>There is a new Sheriff in %s2_city who is doing a great job, but could use some help to deal with the criminals controlling large parts of the town.</English>
 		<French>Il y a un nouveau Shérif dans la ville de %s2_city qui fait du bon travail, mais pourrait avoir besoin d'aide avec les criminels qui contrôlent une bonne partie de la ville.</French>
 		<Polish>W mieście %s2_city pojawił się nowy szeryf, który wykonuje świetną robotę. Przydała by mu się jednak pomoc w usuwaniu przestępców z najbiedniejszych częsci miasta.</Polish>
 		<Russian>В городе %s2_city появился новый шериф, который отлично справляется со своей работой, но ему нужна помощь, чтобы разобраться с преступниками, контролирующими большую часть города.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_SLAVE_REVOLT_WARNING</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_SLAVE_REVOLT_WARNING</Tag>
 		<English>The slaves of %s2_city are on the verge of revolt!</English>
 		<French>Les esclaves de la ville de %s2_city sont sur le point de se révolter.</French>
 		<German>Die unterdrückten Sklaven in %s2_city stehen am Rande eines Aufstandes!</German>
@@ -6365,7 +6365,7 @@
 		<Russian>Рабы в городе %s2_city находятся на грани восстания!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_SMALLPOX_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_SMALLPOX_1</Tag>
 		<English>Smallpox epidemic has struck hard at the people of %s2_city. Most have fallen ill and many are dying.</English>
 		<French>Une épidémie de Variole a durement frappé le peuple de %s2_city. La plupart sont tombé malades, et beaucoup en sont morts.</French>
 		<German>Die Pocken haben die Menschen in %s2_city hart getroffen. Die meisten sind krank und viele sterben.</German>
@@ -6375,14 +6375,14 @@
 		<Russian>Эпидемия оспы сильно ударила по жителям города %s2_city. Большинство из них заразились, а многие уже скончались.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_SNAKEOIL</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_SNAKEOIL</Tag>
 		<English>A snake oil salesman has come to %s2_city to try to sell his miracle tonics and elixirs.</English>
 		<French>Un vendeur d'huile de Serpent est venu à %s2_city pour refourguer ses elixirs et potions-miracle.</French>
 		<Polish>Sprzedawca oleju z węży przybył do miasta %s2_city by namawiać ludzi do kupna swojego cudownego specyfiku.</Polish>
 		<Russian>Торговец змеиным маслом прибыл в %s2_city для продажи своих чудодейственных эликсиров и бальзамов.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_SOCIAL_STAGNATION</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_SOCIAL_STAGNATION</Tag>
 		<English>Subjects in the city of %s2_city are fed up with the lack of social advancement. They are migrating elsewhere for opportunities to better their lives.</English>
 		<French>Nos Sujets de %s2_city en ont assez du manque d'avancées sociales dans leur Ville. Ils quittent la ville à la recherche d'une Vie meilleure ailleurs.</French>
 		<German>Bewohner der Stadt %s2_city haben genug vom Mangel an sozialem Fortschritt. Sie ziehen fort um anderswo nach einem besseren Leben zu suchen.</German>
@@ -6392,7 +6392,7 @@
 		<Russian>Группа вольнодумцев в городе %s2_city тяготятся порочностью нашего общества. Они решили переселиться на чужбину в поисках лучшей доли.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_STEDE_BONNET</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_STEDE_BONNET</Tag>
 		<English>The famous Pirate [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] has set sail for our waters, seeking plunder and mayhem! His flotilla is just over the horizon!</English>
 		<French>Le fameux pirate [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] a dirigé ses voiles vers nos eaux! Sa flotille est visible juste au-dessus de l'horizon!</French>
 		<German>Der berühmte Pirat [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] hat Segel auf unsere Gewässer gesetzt und sucht Plünderung und Chaos! Seine Flotille liegt direkt hinter dem Horizont!</German>
@@ -6402,7 +6402,7 @@
 		<Russian>Знаменитый пират [COLOR_NEGATIVE_TEXT]Стид Боннет[COLOR_REVERT] прибыл в наши воды ради славы и наживы! Его флотилия уже на подходе!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_STREAMLINED_GOVERNMENT_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_STREAMLINED_GOVERNMENT_1</Tag>
 		<English>Efforts to reduce paperwork and the number of personnel in the government has been successful.</English>
 		<French>Nos Efforts pour réduire les formalités administratives et le personnel du gouvernement ont été couronnés de succès.</French>
 		<German>Bemühungen den Papierkrieg und das Personal in der Regierung zu reduzieren waren erfolgreich.</German>
@@ -6412,7 +6412,7 @@
 		<Russian>Усилия по сокращению бумажной работы и численности чиновного аппарата оказались успешными.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_STUCK_IN_SWAMP_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_STUCK_IN_SWAMP_1</Tag>
 		<English>One of our units got lost in the swamps. The fools...</English>
 		<French>Une de nos unités s'est perdue dans les marais. Les idiots...</French>
 		<Italian>Una delle nostre unità si è persa negli acquitrini. Che idioti...</Italian>
@@ -6421,7 +6421,7 @@
 		<Russian>Один из наших отрядов застрял в болотах. Ну и ротозеи...</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_SUPER_VIRUS</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_SUPER_VIRUS</Tag>
 		<English>Dire News! Years of super-stringent health standards at our hospitals and clinics has led to the creation of a super-virus in %s2_city!!! What is the best course of action?</English>
 		<French>Mauvaises Nouvelles! Des années de normes sanitaires extrêmement strictes dans nos hôpitaux et cliniques ont conduit à la création d'un super-virus à %s2_city!!! Quelle est la meilleure action à mener?</French>
 		<Spanish>¡Terribles noticias! ¡Años de estándares sanitarios extremadamente rigurosos en nuestros hospitales y clínicas han propiciado la creación de un supervirus en %s2_city! ¿Qué debemos hacer?</Spanish>
@@ -6429,7 +6429,7 @@
 		<Russian>Ужасные новости! Годы сверхстрогих стандартов здравоохранения в наших больницах и клиниках привели к созданию супервируса в городе %s2_city!!! Что нам лучше всего предпринять?</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_SYNTHETIC_FUELS</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_SYNTHETIC_FUELS</Tag>
 		<English>A scientist in %s2_city claims to have discovered a way to produce synthetic automobile fuel from domestically-produced coal. He asks for a large government subsidy to develop the technology.</English>
 		<French>Un scientifique de %s2_city déclare avoir découvert une manière de produire un carburant synthétique pour l'automobile à partir du charbon domestique. Il demande une grande subvention au gouvernement pour développer cette technologie.</French>
 		<German>Ein Wissenschaftler in %s2_city behauptet, eine Methode entdeckt zu haben, synthetischen Kraftstoff aus der heimischen Kohle zu produzieren. Er bittet um massive staatliche Unterstützung, die Technologie zu entwickeln.</German>
@@ -6439,7 +6439,7 @@
 		<Russian>Ученый из города %s2_city утверждает, что открыл способ производства синтетического автомобильного топлива из местного угля. Он просит власти о крупной субсидии на разработку технологии.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_TANNERY_GLUE_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_TANNERY_GLUE_1</Tag>
 		<English>%s2_city has produced a master tanner who has found out that leftover leather can be turned into glue. The local tannery is now selling glue to everyone.</English>
 		<French>%s2_city a un maître Tanneur qui a trouvé comment utiliser des restes de cuirs pour en faire de la colle. La tannerie locale vend à présent de la Colle.</French>
 		<German>%s2_city hat einen Meistergerber hervorgebracht, dass Lederreste in einen Klebstoff umgewandelt werden können. Die örtliche Gerberei verkauft jetzt Kleber an jedermann.</German>
@@ -6449,7 +6449,7 @@
 		<Russian>Искусный кожевник из города %s2_city обнаружил, что остатки кожи можно превратить в клей. Местная кожевенная мастерская теперь продает клей всем желающим.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_TAX_COLLECTION_RECORDS_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_TAX_COLLECTION_RECORDS_1</Tag>
 		<English>Court magistrates have revealed our tax collection records were more than optimistic for the last few years.</English>
 		<French>Des magistrats ont révélés que nos impôts étaient plus qu'optimistes ces dernières années.</French>
 		<German>Verwaltungsbeamte haben aufgedeckt, dass die Aufzeichnungen unserer Steuereinnahmen der letzten Jahre deutlich zu optimistisch waren.</German>
@@ -6459,7 +6459,7 @@
 		<Russian>Отчет от наших финансовых интендантов показал, что за последнее время наши налоговые сборы были более чем оптимистичными.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_THE_CORSAIRS</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_THE_CORSAIRS</Tag>
 		<English>The dastardly [COLOR_NEGATIVE_TEXT]Corsairs[COLOR_REVERT] have arrived in our waters, seeking to attack our ships for plunder!</English>
 		<French>Des [COLOR_NEGATIVE_TEXT]Corsaires[COLOR_REVERT] sont arrivés dans nos eaux territoriales, à la recherche de navires à piller et faire sombrer!</French>
 		<German>Die verabscheunungswürdigen [COLOR_NEGATIVE_TEXT]Korsaren[COLOR_REVERT] sind in unseren Gewässern erschienen um unsere Schiffe wegen der Beute anzugreifen!</German>
@@ -6469,7 +6469,7 @@
 		<Russian>Алчные [COLOR_NEGATIVE_TEXT]Корсары[COLOR_REVERT] прибыли в наши воды в поисках наших купеческих судов ради наживы!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_THE_GENERALS_PUTSCH</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_THE_GENERALS_PUTSCH</Tag>
 		<English>The commanders of one of our elite parachute regiments have seized control of the government offices in %s2_city. They say that the government is too weak to defeat the %s1_civ_adjective enemy, and that we need a "strong hand" to guide us to victory.</English>
 		<French>Les commandants d'un de nos régiments de parachutistes d'élite ont pris le contrôle des bureaux de gouvernement dans %s2_city. Ils disent que le gouvernement est trop faible pour défaire l'ennemi %s1_civ_adjective, et que nous avons besoin "d'une main forte" pour nous guider à la victoire.</French>
 		<German>Die Kommandanten von einem unserer Elite-Fallschirmregimenten haben die Kontrolle über die Regierungsbüros in in %s2_city übernommen. Sie sagen, daß die Regierung zu schwach ist, den %s1_civ_adjective Feind zu besiegen und daß wir eine "starke Hand" benötigen, uns zum Sieg zu führen.</German>
@@ -6479,7 +6479,7 @@
 		<Russian>Командиры одного из наших элитных полков ВДВ захватили контроль над правительственными учреждениями в городе %s2_city. Они утверждают, что нынешнее правительство слишком слабо, чтобы победить врага %s1_civ_adjective, и что нам нужна «сильная рука», чтобы вести нас к победе.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_TOWER_SHIELD_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_TOWER_SHIELD_1</Tag>
 		<English>Invention of the tower shield has provided our foot soldiers with some protection against archers.</English>
 		<French>L'invention du Pavois donne à nos soldats à pied une protection contre les archers.</French>
 		<German>Die Entwicklung des Turmschildes erlaubt es, unsere Fußsoldaten mit einem besseren Schutz gegen Bogenschützen auszurüsten.</German>
@@ -6489,7 +6489,7 @@
 		<Russian>Изобретение башенного щита дало нашим пехотинцам неплохую защиту от лучников.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_TRADE_FOUNDED_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_TRADE_FOUNDED_1</Tag>
 		<English>Group of merchants in %s2_city have formed a Trade Caravan and are ready to seek out market opportunities in distant lands.</English>
 		<French>Un Groupe de marchands de %s2_city a formé une Caravane Commerciale et ils sont prêts à chercher des opportunités commerciales chez nos voisins.</French>
 		<German>Eine Gruppe von Händlern in %s2_city haben eine Handelskaravane begründet und sind bereit, in fernen Ländern nach neuen Märkten zu suchen.</German>
@@ -6499,7 +6499,7 @@
 		<Russian>Группа купцов в %s2_city сформировала Торговый Караван и готова искать прибыльные рынки сбыта в отдаленных странах.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_TREASURY_PLUNDERED_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_TREASURY_PLUNDERED_1</Tag>
 		<English>Bold thieves have robbed our Treasury in %s2_city! Treasury guards in duty were silently killed before the robbery and city guards were distracted while the thieves with the gold vanished to areas outside our Capital.</English>
 		<French>Des voleurs ont réussi à piller notre trésor à %s2_city! Les gardes en faction ont été tués en silence avant le vol, et les garde des ville ont été distraits pendant que les voleurs filaient avec leur butin.</French>
 		<German>Wagemütige Diebe haben unsere Schatzkammer in %s2_city ausgeraubt! Die Wächter wurden vor dem Einbruch lautlos getötet und die Stadtwache wurde abgelenkt während die Diebe in Regionen außerhalb der Hauptstadt verschwanden.</German>
@@ -6509,7 +6509,7 @@
 		<Russian>Дерзкие воры обчистили нашу сокровищницу в %s2_city! Дежурившие стражи были убиты на посту без лишнего шума еще до ограбления, а городские стражники отвлеклись, и воры исчезли в районах за пределами нашей столицы с краденым золотом.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_UFO_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_UFO_1</Tag>
 		<English>News report about UFOs near the %s2_city has attracted lots of unwanted attention to our Secret Army Base. Tourists, foreign agents and news reporters are rushing to the site with their cameras as they're trying to get see what we are hiding in our base. What should we do now?</English>
 		<French>Des Informations concernant des Ovnis près de %s2_city ont attiré une attention non souhaité sur notre base secrète militaire. Touristes, agents étranger et journalistes se ruent vers le site avec leurs appareils photos, essayant de voir ce qu'il se passe dans notre base. Que devons-nous faire maintenant?</French>
 		<German>Die Nachrichtenberichte über UFOs in der Nähe von %s2_city haben eine Menge unerwünschte Aufmerksamkeit auf unsere geheime Armeebasis gezogen. Toristen, ausländische Agenten und Nachrichtenreporter eilen mit ihren Kameras dorthin und versuchen herauszufinden, was wir in unserer Basis verbergen. Was sollen wir tun?</German>
@@ -6519,7 +6519,7 @@
 		<Russian>Новостной репортаж о НЛО возле %s2_city привлек много нежелательного внимания к нашей секретной военной базе. Туристы, иностранные агенты и репортеры спешат к месту с множеством фото- и видеокамер, пытаясь понять, что мы скрываем на нашей базе. Что нам теперь делать?</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_UNLIMITED_POWER</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_UNLIMITED_POWER</Tag>
 		<English>Scientists have discovered an excellent source of geothermal beneath %s2_city. They want to know what course of action to take.</English>
 		<French>Les Scientifiques ont découvert une excellente source de géotermie près de %s2_city. Ils veulent connaître votre position.</French>
 		<Spanish>Los científicos han descubierto una fuente excelente de energía geotérmica debajo de %s2_city. Desean conocer qué medidas se tomarán al respecto.</Spanish>
@@ -6527,40 +6527,40 @@
 		<Russian>Геологи обнаружили перспективный источник геотермальной энергии под %s2_city. Они хотят знать, какие действия мы можем предпринять.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_DORMANT</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT</Tag>
 		<English>This formerly active volcano has shown no activity for some time, and is now considered dormant.</English>
 		<Russian>Вулкан, считавшийся потухшим в наше время, проснулся и вновь извергается. Сельская местность была опустошена.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_EXTINCT</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>
 		<English>A volcano has erupted at a site we long regarded as safe, even though traces of volcanic activity long ago could be found. While this caused widespread destruction, the surrounding soil has improved tremendously.</English>
 		<French>L'éruption d'un volcan a eu lieu sur un site que l'on pensait sûr, même si de l'activité volcanique avait déjà été recensée à cet emplacement. Malgré les destructions occasionnées par cette catastrophe, le sol de la région en est amélioré.</French>
 		<Polish>Wulkan eksplodował w miejscu, które uważaliśmy za bezpieczne. Chociaż wulkan zniszczył wszystko w pobliżu, przy okazji wulkan użyźnił ziemię na terenach wokół.</Polish>
 		<Russian>На месте, которое мы давно считали безопасным, случилось извержение вулкана, хотя следы вулканической активности давно могли быть найдены. Хотя это вызвало повсеместное разрушение, окружающая почва стала значительно плодороднее.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_EXTINCTION</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCTION</Tag>
 		<English>Some traces of volcanic activity remain at this site, but there no longer seems to be any activity now.</English>
 		<French>Quelques traces d'activité volcanique sont visibles sur ce site, mais il ne semble plus actif à présent.</French>
 		<Polish>Ślady wcześniejszych erupcji wulkanu można odnaleźć na tym terenie, ale obecnie wulkan wydaje się być wygasłym.</Polish>
 		<Russian>Некоторые следы вулканической активности остаются на этом месте, но, похоже, сам вулкан уже потух.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_NEW</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_NEW</Tag>
 		<English>A sudden eruption of an hitherto unknown volcano has rocked the countryside and caused widespread destruction. In the aftermath of this catastrophe though we found new signs of life everywhere and the soil seems to have become tremendously fertile.</English>
 		<French>Une éruption soudaine d'un volcan inconnu a altéré tout le paysage, causant des destructions massives. En contre-coup de cette catastrophe, la vie a repris le dessus, et le sol semble à présent plus fertile.</French>
 		<Polish>Niespodziewana erupcja wulkanu wstrząsnęła krainą. Zniszczenie jakie spowodował wulkan są niespotykane. Opadający pył wulkaniczny okazał się bardzo urodzajny i tereny wokół wulkanu stają się przez to bardziej wydajne w produkcji żywności.</Polish>
 		<Russian>Внезапное извержение неизвестного до сих пор вулкана всколыхнуло сельскую местность и вызвало широкомасштабные разрушения. После этой катастрофы мы нашли повсюду новые признаки жизни, и почва, кажется, стала чрезвычайно плодородной.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_SLEEP</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_SLEEP</Tag>
 		<English>This volcano has not erupted in living memory, only old tales speak of it spewing lava.</English>
 		<French>Ce volcan n'a plus été vu en éruption de mémoire vivante, seuls les anciens parlent de quelques jets de lave.</French>
 		<Polish>Ten wulkan od dawien dawna nie wybuchał. Jedynie stare legendy wspominają o tym, że kiedyś buchał płomieniami i lawą.</Polish>
 		<Russian>Этот вулкан ни разу не извергался на памяти современников, и лишь в старых преданиях говорят об его прошлых извержениях.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_V_GER</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_V_GER</Tag>
 		<English>Our Space Agency proposes construction of robotic space probes to perform a "grand tour" of the Solar System. The probes will visit every planet and explore local interstellar space. The Space Agency asks for a large funding increase to pursue this program.</English>
 		<French>Notre agence de l'espace propose la construction de sondes robotisées pour réaliser "une grande exploration" du système solaire. Les sondes visiteront chaque planète et exploreront l'espace interstellaire local. L'agence spatiale demande une grande augmentation des subventions pour poursuivre ce programme.</French>
 		<German>Unsere Raumfahrtagentur schlägt die Konstruktion von unbemannten Raumfahrzeugen vor, um das ganze Sonnensystem zu durchqueren. Die Raumfahrzeuge sollen alle Planeten aufsuchen und den umliegenden Weltraum untersuchen. Die Raumfahrtagentur fordert eine große Budgeterhöhung um das Programm zu finanzieren.</German>
@@ -6570,7 +6570,7 @@
 		<Russian>Наше космическое агентство предлагает создать автоматические зонды для проведения «большого тура» по Солнечной системе. Зонды посетят каждую планету и исследуют местное межзвездное пространство. Космическое агентство настаивает на значительном увеличении финансирования для реализации этой программы.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_WAR_MEMORIAL</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_WAR_MEMORIAL</Tag>
 		<English>Our citizens living in %s2_city have built a war memorial to commemorate the lives of our brave soldiers.</English>
 		<French>Nos Habitants de %s2_city ont bâti un mémorial pour commémorer nos braves soldats qui ont donné leurs vies durant les dernières Guerres.</French>
 		<German>Unsere Bürger in in %s2_city haben ein Kriegerdenkmal errichtet, um unseren tapferen gefallenen Soldaten zu gedenken.</German>
@@ -6579,7 +6579,7 @@
 		<Polish>Nasi obywatele z miasta %s2_city wybudowali pomnik upamiętniający dzielnych żołnierzy poległych w niedawnej wojnie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_WORLD_ALTERNATIVE_ENERGY_DONE</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_WORLD_ALTERNATIVE_ENERGY_DONE</Tag>
 		<English>The resourceful %s1_civ_adjective electric companies have completed the quest for Alternative Energy!</English>
 		<French>Les compagnies électriques innovantes %s1:4_civ_adjective ont accompli la quête pour l'énergie alternative!</French>
 		<German>Die ressourcenreichen %s1_civ_adjective Stromkonzerne haben den Quest nach alternativer Energie vollendet!</German>
@@ -6589,7 +6589,7 @@
 		<Russian>Находчивые предприниматели %s1_civ_adjective завершили поиски альтернативной энергии!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_WORLD_INDUSTRIAL_ACTION</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_WORLD_INDUSTRIAL_ACTION</Tag>
 		<English>Factory workers in the %s1_civ_adjective Empire have gone on strike to protest low wages and poor working conditions.</English>
 		<French>Des ouvriers de l'empire des %s1:3_civ_adjective ont fait la grève pour protester de leur bas salaires et de leur mauvaises conditions de travail.</French>
 		<German>Arbeiter im %s1_civ_adjective Reich haben gestreikt, um gegen niedrige Löhne und schlechte Arbeitsbedingungen zu protestieren.</German>

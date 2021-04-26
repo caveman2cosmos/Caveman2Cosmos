@@ -14,7 +14,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENTTRIGGER_KNOWLEDGE_INHERITANCE_1</Text>
+					<Text>TXT_KEY_EVENT_TRIGGER_KNOWLEDGE_INHERITANCE_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>

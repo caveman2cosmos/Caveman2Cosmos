@@ -6459,7 +6459,7 @@ def TriggerCompulsoryDem3(argsList):
 
 def getHelpCompulsoryDem1(argsList):
 
-	return TRNSLTR.getText("TXT_KEY_EVENTTRIGGER_COMPULSORY_DEM_HELP_1", ())
+	return TRNSLTR.getText("TXT_KEY_EVENT_TRIGGER_COMPULSORY_DEM_HELP_1", ())
 
 
 def getHelpCompulsoryDem2(argsList):
@@ -7279,7 +7279,7 @@ def doVolcanoNewEruption(argsList):
   doVolcanoPlot(pPlot)
   doVolcanoNeighbouringPlots(pPlot)
   doVolcanoAdjustFertility((pPlot, 1, team))
-  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENTTRIGGER_VOLCANO_NEW")))
+  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_NEW")))
 
   return
 
@@ -7305,7 +7305,7 @@ def doVolcanoDormantEruption(argsList):
   doVolcanoPlot(pPlot)
   doVolcanoNeighbouringPlots(pPlot)
   doVolcanoAdjustFertility((pPlot, 1, team))
-  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENTTRIGGER_VOLCANO_EXTINCT")))
+  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT")))
 
   return
 def doVolcanoExtinction(argsList):
@@ -7344,7 +7344,7 @@ def doVolcanoSleep(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   team = player.getTeam()
   doVolcanoAdjustFertility((pPlot, -1, team))
-  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENTTRIGGER_VOLCANO_DORMANT")))
+  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT")))
 
 def getHelpVolcanoEruption1(argsList):
   iEvent = argsList[0]
