@@ -10459,76 +10459,6 @@
 		<Russian>/город</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLAYEROPTION_AUTOMATED_AIR_CAN_DEFEND</Tag>
-		<English>Automated Air Units Can Defend</English>
-		<French>Unités aériennes Automatisées peuvent défendre</French>
-		<Italian>Unità aeree automatizzate possono difendere</Italian>
-		<Spanish>Aviones automatizados pueden defender</Spanish>
-		<Polish>Automatyczna Obrona Powietrzna</Polish>
-		<Russian>Автоматизированные воздушные отряды могут обороняться</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYEROPTION_AUTOMATED_AIR_CAN_DEFEND_HELP</Tag>
-		<English>Automated Strike Craft will be allowed to intercept potiental enemy aircraft</English>
-		<French>Les Unités aériennes Automatisées peuvent être autorisée à intercepter les unités aériennes ennemies.</French>
-		<Italian>Le unità aeree automatizzate possono intercettare aerei nemici.</Italian>
-		<Spanish>Los aviones de combate automatizados podrán interceptar aviones enemigos.</Spanish>
-		<Polish>Automatyczne lotnictwo może eliminować potencjalne zagrożenie ze strony wroga</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYEROPTION_AUTOMATED_AIR_CAN_REBASE</Tag>
-		<English>Automated Air Units Can Rebase</English>
-		<French>Unités aériennes Automatisées changent de base</French>
-		<Italian>Unità aree automatizzate possono cambiare base</Italian>
-		<Spanish>Aviones automatizados pueden trasladarse</Spanish>
-		<Polish>Automatyczne Przebazowanie Samolotów</Polish>
-		<Russian>Автоматизированные воздушные отряды можно перебазировать</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYEROPTION_AUTOMATED_AIR_CAN_REBASE_HELP</Tag>
-		<English>Automated Strike Craft will be allowed to rebase into more offensive positions</English>
-		<French>Les Unités aériennes Automatisées peuvent changer de base pour atteindre des positions plus offensives.</French>
-		<Italian>Le unità aeree da attacco potranno cambiare base verso posizioni più offensive</Italian>
-		<Spanish>Los aviones de combate automatizados podrán trasladarse a otras posiciones más ofensivas.</Spanish>
-		<Polish>Automatyczne lotnictwo może przebazować się na bardziej ofensywne pozycje</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYEROPTION_BORDER_STAY_IN_BORDERS</Tag>
-		<English>Patrolling Units will not leave friendly borders</English>
-		<French>Unités patrouillent à l'intérieur de leurs frontières</French>
-		<Italian>Le unità di pattuglia non lasceranno il territorio</Italian>
-		<Spanish>Las patrullas no abandonarán las fronteras</Spanish>
-		<Polish>Patrolujące jednostki nie opuszczą granic</Polish>
-		<Russian>Ïàòðóëüíûå þíèòû íå ïîêèíóò äðóæåñòâåííûå ãðàíèöû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYEROPTION_BORDER_STAY_IN_BORDERS_HELP</Tag>
-		<English>Units Automated to Border Patrol will not leave friendly territory for any reason.</English>
-		<French>Les Unités Automatisées pour la Patrouille des frontières resteront toujours à l'intérieur de leur territoire.</French>
-		<Italian>Le unità automatizzate per pattugliare i confini non lasceranno il territorio amico per nessuna ragione.</Italian>
-		<Spanish>Las unidades que hagan patrulla fronteriza automatizada no abandonarán las fronteras del imperio bajo ningún concepto.</Spanish>
-		<Polish>Jednostki automatycznie przydzielone do patrolowania granic państwa nigdy ich nie opuszczą.</Polish>
-		<Russian>Þíèòû, àâòîìàòèçèðîâàííûå íà ïîãðàíè÷íóþ ñëóæáó íå áóäóò îñòàâëÿòü äðóæåñòâåííóþ òåððèòîðèþ ïî ëþáîé ïðè÷èíå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYEROPTION_NO_EXPLORER_HEALING</Tag>
-		<English>Automated Explorers Cannot Heal</English>
-		<French>Explorateurs Automatisés ne se soignent pas</French>
-		<Italian>Esploratori automatizzati non possono curarsi</Italian>
-		<Spanish>Exploradores automatizados no se curarán</Spanish>
-		<Polish>Brak Leczenie Auto Zwiadowców</Polish>
-		<Russian>Автоматизированные исследователи не могут исцеляться</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYEROPTION_NO_EXPLORER_HEALING_HELP</Tag>
-		<English>Automated Explorers will not be allowed to heal</English>
-		<French>Les Explorateurs Automatisés ne sont pas autorisés à se soigner</French>
-		<Italian>Gli esploratori automatizzati non possono curarsi</Italian>
-		<Spanish>Los exploradores automatizados no podrán parar para curarse.</Spanish>
-		<Polish>Automatyczni zwiadowcy nie mogą się leczyć</Polish>
-		<Russian>Автоматизированные исследователи не способны лечить других</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PLAYER_FREE_EXPERIENCE</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 from Wonders, Civics and Traits[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 des Merveilles et Doctrines[COLOR_REVERT]</French>
@@ -10556,52 +10486,6 @@
 		<Spanish>No puede fijar sus fronteras.</Spanish>
 		<Polish>Nie ma stałej granicy!</Polish>
 		<Russian>Не имеет четких границ!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_AI_PATHING</Tag>
-		<English>AI Pathing</English>
-		<French>Itinéraire par A.I.</French>
-		<Spanish>Generador de rutas de la IA</Spanish>
-		<Polish>Wyszukiwanie ścieżki AI</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_AI_PATHING_HELP</Tag>
-		<English>The normal pathing algiorithm for human players is replaced with the one the AI uses.</English>
-		<French>L'Algoritrhme de parcours (pathing) des joueurs est remplacé par celui de l'IA.</French>
-		<Spanish>El algoritmo de cálculo de rutas de los jugadores humanos es reemplazado por el que usa la IA.</Spanish>
-		<Polish>Algorytm wyszukiwania ścieżki dla graczy ludzkich zostanie zastąpiony tym dla AI.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_AVOID_BARBARIANS</Tag>
-		<English>Automated Pillaging Avoids Barbarians</English>
-		<French>Pilleurs Automatisés évitent les Barbares</French>
-		<Italian>Saccheggio automatico evita i barbari</Italian>
-		<Spanish>Saqueadores automatizados evitan bárbaros</Spanish>
-		<Polish>Automatycznie Plądruj Unikając Barbarzyńców</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_AVOID_BARBARIANS_HELP</Tag>
-		<English>Troops automated to pillage will avoid entering barbarian territory and will not pillage barbarian settlements.</English>
-		<French>Les Unités réalisant des pillages automatiquement vont éviter d'entrer dans les territoires des barbares et ne vont pas piller leurs installations.</French>
-		<Italian>Le truppe automatizzate per saccheggiare non entreranno nel territorio barbarico e non saccheggeranno gli insediamenti dei barbari.</Italian>
-		<Spanish>Las tropas automatizadas para saquear evitarán entrar en territorio bárbaro, y por tanto no saquearán asentamientos bárbaros.</Spanish>
-		<Polish>Żołnierze będą automatycznie plądrować unikając przy tym barbarzyńskich jednostek oraz terytoriów.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_IGNORE_DANGER</Tag>
-		<English>Automated Pillaging Ignores Danger</English>
-		<French>Pilleurs Automatisés ignorent les dangers</French>
-		<Italian>Saccheggio automatico ignora i pericoli</Italian>
-		<Spanish>Saqueadores automatizados ignoran advertencias</Spanish>
-		<Polish>Automatycznie Plądruj Ignorując Zagrożenie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_IGNORE_DANGER_HELP</Tag>
-		<English>Troops automated to pillage will ignore enemy units and may enter dangerous situations.</English>
-		<French>Les Unités réalisant des pillages automatiquement vont ignorer la présence d'unités ennemies et peuvent donc se mettre dans des situations dangereuses.</French>
-		<Italian>Le truppe automatizzate per saccheggiare ignoreranno le truppe nemiche, e potrebbe cacciarsi in situazioni pericolose.</Italian>
-		<Spanish>Las tropas automatizadas para saquear ignorarán la presencia de unidades enemigas y podrían entrar en situaciones peligrosas.</Spanish>
-		<Polish>Żołnierze będą automatycznie plądrować oraz ignorować jednostki wroga. Może to spowodować niebezpieczne sytuacje.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_1</Tag>
