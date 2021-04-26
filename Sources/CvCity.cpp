@@ -35,6 +35,7 @@ CvCity::CvCity()
 	m_aiSeaPlotYield = new int[NUM_YIELD_TYPES];
 	m_aiRiverPlotYield = new int[NUM_YIELD_TYPES];
 	m_aiBaseYieldRate = new int[NUM_YIELD_TYPES];
+	m_aiExtraYield = new int[NUM_YIELD_TYPES];
 	m_aiBaseYieldPerPopRate = new int[NUM_YIELD_TYPES];
 	m_aiYieldRateModifier = new int[NUM_YIELD_TYPES];
 	m_aiPowerYieldRateModifier = new int[NUM_YIELD_TYPES];
@@ -179,6 +180,7 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiSeaPlotYield);
 	SAFE_DELETE_ARRAY(m_aiRiverPlotYield);
 	SAFE_DELETE_ARRAY(m_aiBaseYieldRate);
+	SAFE_DELETE_ARRAY(m_aiExtraYield);
 	SAFE_DELETE_ARRAY(m_aiBaseYieldPerPopRate);
 	SAFE_DELETE_ARRAY(m_aiYieldRateModifier);
 	SAFE_DELETE_ARRAY(m_aiPowerYieldRateModifier);
@@ -186,6 +188,7 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiTradeYield);
 	SAFE_DELETE_ARRAY(m_aiCorporationYield);
 	SAFE_DELETE_ARRAY(m_aiExtraSpecialistYield);
+
 	SAFE_DELETE_ARRAY(m_aiExtraSpecialistCommerce);
 	SAFE_DELETE_ARRAY(m_aiCommerceRate);
 	SAFE_DELETE_ARRAY(m_abCommerceRateDirty);
@@ -674,6 +677,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_aiSeaPlotYield[iI] = 0;
 		m_aiRiverPlotYield[iI] = 0;
 		m_aiBaseYieldRate[iI] = 0;
+		m_aiExtraYield[iI] = 0;
 		m_aiBaseYieldPerPopRate[iI] = 0;
 		m_aiYieldRateModifier[iI] = 0;
 		m_aiPowerYieldRateModifier[iI] = 0;
@@ -1560,14 +1564,10 @@ void CvCity::doTurn()
 	// ONEVENT - Do turn
 	CvEventReporter::getInstance().cityDoTurn(this, getOwner());
 
-	// XXX
 #ifdef _DEBUG
 	{
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
-			//FAssert(getBaseYieldRate((YieldTypes)iI) >= 0);
-			//FAssert(getYieldRate((YieldTypes)iI) >= 0);
-
 			int iCount = 0;
 
 			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
@@ -1601,10 +1601,10 @@ void CvCity::doTurn()
 			iCount += getTradeYield((YieldTypes)iI);
 			iCount += getCorporationYield((YieldTypes)iI);
 
-			//FAssert(iCount == getBaseYieldRate((YieldTypes)iI));
+			FAssert(iCount == getPlotYield((YieldTypes)iI) + getExtraYield((YieldTypes)iI));
 		}
 
-/*
+		/*
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
 			FAssert(getBuildingCommerce((CommerceTypes)iI) >= 0);
@@ -1618,10 +1618,9 @@ void CvCity::doTurn()
 		{
 			FAssert(isNoBonus((BonusTypes)iI) || getNumBonuses((BonusTypes)iI) >= ((isConnectedToCapital()) ? (GET_PLAYER(getOwner()).getBonusImport((BonusTypes)iI) - GET_PLAYER(getOwner()).getBonusExport((BonusTypes)iI)) : 0));
 		}
-*/
+		*/
 	}
 #endif
-	// XXX
 }
 
 void CvCity::doAutobuild()
@@ -2092,12 +2091,12 @@ int CvCity::findBaseYieldRateRank(YieldTypes eYield) const
 	if (!m_abBaseYieldRankValid[eYield])
 	{
 		//TB Traits begin
-		const int iRate = getModifiedBaseYieldRate(eYield);
+		const int iRate = getBaseYieldRate(eYield);
 		//TB Traits end
 
 		const int iRank = 1 + algo::count_if(GET_PLAYER(getOwner()).cities(),
-			CvCity::fn::getModifiedBaseYieldRate(eYield) > iRate
-			|| (CvCity::fn::getModifiedBaseYieldRate(eYield) == iRate && CvCity::fn::getID() < getID())
+			CvCity::fn::getBaseYieldRate(eYield) > iRate
+			|| (CvCity::fn::getBaseYieldRate(eYield) == iRate && CvCity::fn::getID() < getID())
 		);
 
 		m_abBaseYieldRankValid[eYield] = true;
@@ -4325,9 +4324,9 @@ int CvCity::getProductionPerTurn(int modifier, ProductionCalc::flags flags = Pro
 	}
 	const int iFoodProduction = (flags & ProductionCalc::FoodProduction) ? std::max(0, getYieldRate(YIELD_FOOD) - foodConsumption(true)) : 0;
 	const int iOverflow = (flags & ProductionCalc::Overflow) ? getOverflowProduction() + getFeatureProduction() : 0;
-	const int iYield = (flags & ProductionCalc::Yield) ? getModifiedBaseYieldRate(YIELD_PRODUCTION) : 0;
+	const int iYield = (flags & ProductionCalc::Yield) ? getBaseYieldRate(YIELD_PRODUCTION) : 0;
 
-	return iFoodProduction + (iYield + iOverflow) * getBaseYieldRateModifier(YIELD_PRODUCTION, modifier) / 100;
+	return getExtraYield(YIELD_PRODUCTION) + iOverflow + iFoodProduction + iYield * getBaseYieldRateModifier(YIELD_PRODUCTION, modifier) / 100;
 }
 
 int CvCity::getProductionDifference(const OrderData& orderData, ProductionCalc::flags flags) const
@@ -5191,7 +5190,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		const YieldTypes eYieldX = static_cast<YieldTypes>(iI);
 		changeSeaPlotYield(eYieldX, kBuilding.getSeaPlotYieldChange(iI) * iChange);
 		changeRiverPlotYield(eYieldX, kBuilding.getRiverPlotYieldChange(iI) * iChange);
-		changeBaseYieldRate(eYieldX,
+		changeExtraYield(eYieldX,
 			(
 				kBuilding.getYieldChange(iI)
 				+ getBuildingYieldChange(eBuilding, eYieldX)
@@ -5713,7 +5712,7 @@ void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
-		changeBaseYieldRate(((YieldTypes)iI), ((GC.getSpecialistInfo(eSpecialist).getYieldChange(iI) + (GET_PLAYER(getOwner()).getSpecialistYieldPercentChanges(eSpecialist, (YieldTypes)iI) / 100)) * iChange));
+		changeExtraYield((YieldTypes)iI, (GC.getSpecialistInfo(eSpecialist).getYieldChange(iI) + GET_PLAYER(getOwner()).getSpecialistYieldPercentChanges(eSpecialist, (YieldTypes)iI) / 100) * iChange);
 	}
 
 	int iCommerceChangeTotal = 0;
@@ -11390,7 +11389,7 @@ void CvCity::changeRiverPlotYield(YieldTypes eIndex, int iChange)
  */
 int CvCity::getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter)
 {
-	const int iRate = getModifiedBaseYieldRate(eIndex);
+	const int iRate = getBaseYieldRate(eIndex);
 	const int iModifier = getBaseYieldRateModifier(eIndex);
 	int iExtra = 
 	(
@@ -11631,7 +11630,7 @@ int CvCity::getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, Building
 int CvCity::getAdditionalYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
 {
 	//TB Traits begin
-	const int iRate = getModifiedBaseYieldRate(eIndex);
+	const int iRate = getBaseYieldRate(eIndex);
 	//TB Traits end
 	const int iModifier = getBaseYieldRateModifier(eIndex);
 	const int iExtra = ((iRate + getAdditionalBaseYieldRateBySpecialist(eIndex, eSpecialist, iChange)) * iModifier / 100) - (iRate * iModifier / 100);
@@ -11651,14 +11650,6 @@ int CvCity::getAdditionalBaseYieldRateBySpecialist(YieldTypes eIndex, Specialist
 
 	return iChange * (kSpecialist.getYieldChange(eIndex) + GET_PLAYER(getOwner()).getExtraSpecialistYield(eSpecialist, eIndex) + (GET_PLAYER(getOwner()).getSpecialistYieldPercentChanges(eSpecialist, eIndex) / 100));
 }
-
-
-int CvCity::getBaseYieldRate(YieldTypes eIndex)	const
-{
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
-	return m_aiBaseYieldRate[eIndex] + popYield(eIndex);
-}
-
 
 // note: player->invalidateYieldRankCache() must be called for anything that is checked here
 // so if any extra checked things are added here, the cache needs to be invalidated
@@ -11685,51 +11676,72 @@ int CvCity::getBaseYieldRateModifier(YieldTypes eIndex, int iExtra) const
 	return std::max(0, iModifier);
 }
 
-
 int CvCity::getYieldRate(YieldTypes eIndex) const
 {
 	PROFILE_FUNC();
-	return (getModifiedBaseYieldRate(eIndex) * getBaseYieldRateModifier(eIndex) / 100);
+	return getExtraYield(eIndex) + getBaseYieldRate(eIndex) * getBaseYieldRateModifier(eIndex) / 100;
 }
 
+int CvCity::getPlotYield(YieldTypes eIndex)	const
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
+	return m_aiBaseYieldRate[eIndex];
+}
 
-void CvCity::setBaseYieldRate(YieldTypes eIndex, int iNewValue)
+void CvCity::changePlotYield(YieldTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
-	if (m_aiBaseYieldRate[eIndex] != iNewValue)
+	if (iChange != 0)
 	{
-		m_aiBaseYieldRate[eIndex] = iNewValue;
+		m_aiBaseYieldRate[eIndex] += iChange;
+		onYieldChange();
+	}
+}
 
+
+int CvCity::getExtraYield(YieldTypes eIndex) const
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
+	return m_aiExtraYield[eIndex] + popYield(eIndex);
+}
+
+void CvCity::changeExtraYield(YieldTypes eIndex, int iChange)
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
+
+	if (iChange != 0)
+	{
+		m_aiExtraYield[eIndex] += iChange;
+		onYieldChange();
+	}
+}
+
+
+void CvCity::onYieldChange()
+{
 #ifdef YIELD_VALUE_CACHING
-		ClearYieldValueCache();
+	ClearYieldValueCache();
 #endif
+	setCommerceDirty();
 
-		setCommerceDirty();
+	if (getTeam() == GC.getGame().getActiveTeam())
+	{
+		setInfoDirty(true);
 
-		if (getTeam() == GC.getGame().getActiveTeam())
+		if (isCitySelected())
 		{
-			setInfoDirty(true);
-
-			if (isCitySelected())
-			{
-				gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-			}
+			gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
+			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 		}
 	}
 }
 
 
-void CvCity::changeBaseYieldRate(YieldTypes eIndex, int iChange)
-{
-	setBaseYieldRate(eIndex, m_aiBaseYieldRate[eIndex] + iChange);
-}
-
 int CvCity::popYield(YieldTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
-	return (getPopulation() * m_aiBaseYieldPerPopRate[eIndex] / 100);
+	return getPopulation() * m_aiBaseYieldPerPopRate[eIndex] / 100;
 }
 
 int CvCity::getBaseYieldPerPopRate(YieldTypes eIndex)	const
@@ -11745,23 +11757,7 @@ void CvCity::setBaseYieldPerPopRate(YieldTypes eIndex, int iNewValue)
 	if (m_aiBaseYieldPerPopRate[eIndex] != iNewValue)
 	{
 		m_aiBaseYieldPerPopRate[eIndex] = iNewValue;
-
-#ifdef YIELD_VALUE_CACHING
-		ClearYieldValueCache();
-#endif
-
-		setCommerceDirty();
-
-		if (getTeam() == GC.getGame().getActiveTeam())
-		{
-			setInfoDirty(true);
-
-			if (isCitySelected())
-			{
-				gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-			}
-		}
+		onYieldChange();
 	}
 }
 
@@ -12117,7 +12113,7 @@ void CvCity::setTradeYield(YieldTypes eIndex, int iNewValue)
 		m_aiTradeYield[eIndex] = iNewValue;
 		FASSERT_NOT_NEGATIVE(getTradeYield(eIndex))
 
-		changeBaseYieldRate(eIndex, iNewValue - iOldValue);
+		changeExtraYield(eIndex, iNewValue - iOldValue);
 	}
 }
 
@@ -12160,7 +12156,7 @@ void CvCity::updateExtraSpecialistYield(YieldTypes eYield)
 	{
 		m_aiExtraSpecialistYield[eYield] = iNewYield;
 
-		changeBaseYieldRate(eYield, iNewYield - iOldYield);
+		changeExtraYield(eYield, iNewYield - iOldYield);
 	}
 }
 
@@ -12984,7 +12980,7 @@ void CvCity::setCorporationYield(YieldTypes eIndex, int iNewValue)
 		m_aiCorporationYield[eIndex] = iNewValue;
 		FASSERT_NOT_NEGATIVE(getCorporationYield(eIndex))
 
-		changeBaseYieldRate(eIndex, (iNewValue - iOldValue));
+		changeExtraYield(eIndex, iNewValue - iOldValue);
 	}
 }
 
@@ -13077,7 +13073,7 @@ void CvCity::updateCorporationYield(YieldTypes eIndex)
 		m_aiCorporationYield[eIndex] = iNewYield;
 		FASSERT_NOT_NEGATIVE(getCorporationYield(eIndex))
 
-		changeBaseYieldRate(eIndex, (iNewYield - iOldYield));
+		changeExtraYield(eIndex, iNewYield - iOldYield);
 	}
 }
 
@@ -14573,7 +14569,7 @@ void CvCity::processWorkingPlot(int iPlot, int iChange, bool yieldsOnly)
 
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
-			changeBaseYieldRate(((YieldTypes)iI), iChange * pPlot->getYield((YieldTypes)iI));
+			changePlotYield((YieldTypes)iI, iChange * pPlot->getYield((YieldTypes)iI));
 		}
 	}
 
@@ -17760,6 +17756,9 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iQuarantinedCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadRawVicinityBonus);
 	WRAPPER_READ(wrapper, "CvCity", &m_bPropertyControlBuildingQueued);
+
+	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiExtraYield);
+
 	WRAPPER_READ_OBJECT_END(wrapper);
 	//Example of how to skip an unneeded element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iMaxFoodKeptPercent, SAVE_VALUE_ANY);	// was present in old formats
@@ -18185,6 +18184,9 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iQuarantinedCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadRawVicinityBonus);
 	WRAPPER_WRITE(wrapper, "CvCity", m_bPropertyControlBuildingQueued);
+
+	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiExtraYield);
+
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -19156,7 +19158,7 @@ void CvCity::setBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield, 
 
 				if (hasFullyActiveBuilding(eBuilding))
 				{
-					changeBaseYieldRate(eYield, iChange - iOldChange);
+					changeExtraYield(eYield, iChange - iOldChange);
 				}
 			}
 			return;
@@ -19173,7 +19175,7 @@ void CvCity::setBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield, 
 
 		if (hasFullyActiveBuilding(eBuilding))
 		{
-			changeBaseYieldRate(eYield, iChange);
+			changeExtraYield(eYield, iChange);
 		}
 	}
 }
@@ -23976,9 +23978,9 @@ bool CvCity::canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const
 
 //TB Combat Mods (Buildings) end
 //TB Traits begin
-int CvCity::getModifiedBaseYieldRate(YieldTypes eIndex) const
+int CvCity::getBaseYieldRate(YieldTypes eIndex) const
 {
-	int iModifiedYield = getBaseYieldRate(eIndex);
+	int iModifiedYield = getPlotYield(eIndex);
 	iModifiedYield += GET_PLAYER(getOwner()).getFreeCityYield(eIndex);
 
 	if (GET_PLAYER(getOwner()).isGoldenAge() && GET_PLAYER(getOwner()).getGoldenAgeYield(eIndex) > 0)

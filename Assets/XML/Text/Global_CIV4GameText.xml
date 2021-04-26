@@ -8330,10 +8330,6 @@
 		<Polish>[ICON_BULLET]%D1%%[ICON_PRODUCTION] dla %s2</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_TOTAL</Tag>
-		<English>Total: %d1%%[ICON_PRODUCTION]</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_SLIDER_PERCENT_FLOAT</Tag>
 		<English>-----------------------[NEWLINE]%d1%% of %d2[ICON_COMMERCE] = %s3%F4</English>
 		<French>-----------------------[NEWLINE]%d1%% sur %d2[ICON_COMMERCE] = %s3%F4</French>

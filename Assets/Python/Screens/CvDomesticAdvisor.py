@@ -208,7 +208,7 @@ class CvDomesticAdvisor:
 				"COMMERCE_"
 			]
 			for i in xrange(YieldTypes.NUM_YIELD_TYPES):
-				COLUMNS_LIST.append((aList[i] + "BASE", 40, "int", "getBaseYieldRate", None, i, "B" + self.yieldIcons[i]))
+				COLUMNS_LIST.append((aList[i] + "BASE", 40, "int", "getPlotYield", None, i, "B" + self.yieldIcons[i]))
 				COLUMNS_LIST.append((aList[i] + "GRANK_BASE", 42, "int", None, self.findGlobalBaseYieldRateRank, i, "B" + self.yieldIcons[i] + "g"))
 				COLUMNS_LIST.append((aList[i] + "GRANK", 40, "int", None, self.findGlobalYieldRateRank, i, self.yieldIcons[i] + "g"))
 				COLUMNS_LIST.append((aList[i] + "NRANK_BASE", 42, "int", "findBaseYieldRateRank", None, i, "B" + self.yieldIcons[i] + "n"))
@@ -972,11 +972,11 @@ class CvDomesticAdvisor:
 
 	def findGlobalBaseYieldRateRank(self, CyCity, szKey, arg):
 
-		y = CyCity.getBaseYieldRate(arg)
+		y = CyCity.getPlotYield(arg)
 		aList = []
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 			for CyCity in GC.getPlayer(iPlayerX).cities():
-				aList.append(CyCity.getBaseYieldRate(arg))
+				aList.append(CyCity.getPlotYield(arg))
 
 		return len([i for i in aList if i > y]) + 1
 
@@ -1083,19 +1083,19 @@ class CvDomesticAdvisor:
 					elif type == "Spaceship":
 						if not CyCity.isPower():
 							if info.isPower():
-								value = CyCity.getBaseYieldRate(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
+								value = CyCity.getPlotYield(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
 								if value > bestData:
 									bestOrder = iType
 									bestData = value
 
 						if CyCity.findBaseYieldRateRank(YieldTypes.YIELD_PRODUCTION) < 12:
-							value = CyCity.getBaseYieldRate(YieldTypes.YIELD_PRODUCTION) * 2 * info.getYieldModifier(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
+							value = CyCity.getPlotYield(YieldTypes.YIELD_PRODUCTION) * 2 * info.getYieldModifier(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
 							if value > bestData:
 								bestOrder = iType
 								bestData = value
 
 						if CyCity.findBaseYieldRateRank(YieldTypes.YIELD_COMMERCE) < CyPlayer.getNumCities() / 2:
-							value = CyCity.getBaseYieldRate(YieldTypes.YIELD_COMMERCE) * info.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH) / float(info.getProductionCost())
+							value = CyCity.getPlotYield(YieldTypes.YIELD_COMMERCE) * info.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH) / float(info.getProductionCost())
 							if value > bestData:
 								bestOrder = iType
 								bestData = value

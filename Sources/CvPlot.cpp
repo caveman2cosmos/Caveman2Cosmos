@@ -7893,9 +7893,8 @@ void CvPlot::changeBaseYield(const short* pYieldChange)
 			{
 				if (bWorked)
 				{
-					pWorkingCity->changeBaseYieldRate((YieldTypes)iI, pYieldChange[iI]);
+					pWorkingCity->changePlotYield((YieldTypes)iI, pYieldChange[iI]);
 				}
-				pWorkingCity->AI_setAssignWorkDirty(true);
 			}
 			bChange = true;
 		}
@@ -7989,7 +7988,7 @@ void CvPlot::updateYield()
 			{
 				if (isBeingWorked())
 				{
-					pWorkingCity->changeBaseYieldRate((YieldTypes)iI, iNewYield - iOldYield);
+					pWorkingCity->changePlotYield((YieldTypes)iI, iNewYield - iOldYield);
 				}
 				pWorkingCity->AI_setAssignWorkDirty(true);
 			}
