@@ -21789,7 +21789,6 @@ CvCorporationInfo::CvCorporationInfo() :
 ,m_iMaintenance(0)
 ,m_iMissionType(NO_MISSION)
 ,m_iBonusProduced(NO_BONUS)
-,m_paiPrereqBonuses(NULL)
 ,m_paiHeadquarterCommerce(NULL)
 ,m_paiCommerceProduced(NULL)
 ,m_paiYieldProduced(NULL)
@@ -21818,7 +21817,6 @@ CvCorporationInfo::CvCorporationInfo() :
 //------------------------------------------------------------------------------------------------------
 CvCorporationInfo::~CvCorporationInfo()
 {
-	SAFE_DELETE_ARRAY(m_paiPrereqBonuses);
 	SAFE_DELETE_ARRAY(m_paiHeadquarterCommerce);
 	SAFE_DELETE_ARRAY(m_paiCommerceProduced);
 	SAFE_DELETE_ARRAY(m_paiYieldProduced);
@@ -22022,10 +22020,14 @@ int* CvCorporationInfo::getCommerceChangeArray() const
 
 // Arrays
 
-int CvCorporationInfo::getPrereqBonus(int i) const
+const std::vector<BonusTypes>& CvCorporationInfo::getPrereqBonuses() const
 {
-	FASSERT_BOUNDS(0, GC.getNUM_CORPORATION_PREREQ_BONUSES(), i)
-	return m_paiPrereqBonuses ? m_paiPrereqBonuses[i] : NO_BONUS;
+	return m_vPrereqBonuses;
+}
+
+const python::list CvCorporationInfo::cyGetPrereqBonuses() const
+{
+	return Cy::makeList(m_vPrereqBonuses);
 }
 
 int CvCorporationInfo::getHeadquarterCommerce(int i) const
@@ -22122,41 +22124,7 @@ bool CvCorporationInfo::read(CvXMLLoadUtility* pXML)
 		SAFE_DELETE_ARRAY(m_paiYieldProduced);
 	}
 
-
-	if (pXML->TryMoveToXmlFirstChild(L"PrereqBonuses"))
-	{
-		int iNumSibs = pXML->GetXmlChildrenNumber();
-		FAssertMsg(0 < GC.getNUM_CORPORATION_PREREQ_BONUSES(),"Allocating zero or less memory in CvCorporationInfo::read");
-
-		if (0 < iNumSibs)
-		{
-			pXML->CvXMLLoadUtility::InitList(&m_paiPrereqBonuses, GC.getNUM_CORPORATION_PREREQ_BONUSES(), -1);
-			if (pXML->GetChildXmlVal(szTextVal))
-			{
-				FAssertMsg((iNumSibs <= GC.getNUM_CORPORATION_PREREQ_BONUSES()) , "There are more siblings than memory allocated for them in CvCorporationInfo::read");
-				for (int j=0; j<iNumSibs; ++j)
-				{
-					m_paiPrereqBonuses[j] = pXML->GetInfoClass(szTextVal);
-					if (!pXML->GetNextXmlVal(szTextVal))
-					{
-						break;
-					}
-				}
-
-				pXML->MoveToXmlParent();
-			}
-		}
-		else
-		{
-			SAFE_DELETE_ARRAY(m_paiPrereqBonuses);
-		}
-
-		pXML->MoveToXmlParent();
-	}
-	else
-	{
-		SAFE_DELETE_ARRAY(m_paiPrereqBonuses);
-	}
+	pXML->SetOptionalVector(&m_vPrereqBonuses, L"PrereqBonuses");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"BonusProduced");
 	m_iBonusProduced = pXML->GetInfoClass(szTextVal);
@@ -22313,14 +22281,7 @@ void CvCorporationInfo::copyNonDefaults(const CvCorporationInfo* pClassInfo)
 		}
 	}
 
-	if (!m_paiPrereqBonuses) CvXMLLoadUtility::InitList(&m_paiPrereqBonuses, GC.getNUM_CORPORATION_PREREQ_BONUSES());
-	for ( int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); i++ )
-	{
-		if ( m_paiPrereqBonuses[i] == iTextDefault )
-		{
-			m_paiPrereqBonuses[i] = pClassInfo->getPrereqBonus(i);
-		}
-	}
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_vPrereqBonuses, pClassInfo->m_vPrereqBonuses);
 
 	if (getBonusProduced() == iTextDefault) m_iBonusProduced = pClassInfo->getBonusProduced();
 
@@ -22397,7 +22358,7 @@ void CvCorporationInfo::getCheckSum(unsigned int& iSum) const
 
 	// Arrays
 
-	CheckSum(iSum, m_paiPrereqBonuses, GC.getNUM_CORPORATION_PREREQ_BONUSES());
+	CheckSumC(iSum, m_vPrereqBonuses);
 	CheckSum(iSum, m_paiHeadquarterCommerce, NUM_COMMERCE_TYPES);
 	CheckSum(iSum, m_paiCommerceProduced, NUM_COMMERCE_TYPES);
 	CheckSum(iSum, m_paiYieldProduced, NUM_YIELD_TYPES);
