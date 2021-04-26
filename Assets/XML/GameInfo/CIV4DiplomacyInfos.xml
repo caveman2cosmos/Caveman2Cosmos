@@ -1269,7 +1269,7 @@
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_ AUGUSTUS_CAESAR _1</Text>
+						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_AUGUSTUS_CAESAR_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -1283,7 +1283,7 @@
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_ BRENNUS _1</Text>
+						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_BRENNUS_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -2067,7 +2067,7 @@
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_NO_PEACE_LEADER_ AUGUSTUS_CAESAR _1</Text>
+						<Text>AI_DIPLO_NO_PEACE_LEADER_AUGUSTUS_CAESAR_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -2081,7 +2081,7 @@
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_NO_PEACE_LEADER_ BRENNUS _1</Text>
+						<Text>AI_DIPLO_NO_PEACE_LEADER_BRENNUS_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -3179,7 +3179,7 @@
 					</Attitudes>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_ AUGUSTUS_CAESAR _1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_AUGUSTUS_CAESAR_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -3206,7 +3206,7 @@
 					</Attitudes>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_ BRENNUS _1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_BRENNUS_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -4516,7 +4516,7 @@
 					</Attitudes>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_ BRENNUS _1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_BRENNUS_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -6346,7 +6346,7 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_ AUGUSTUS_CAESAR _1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_AUGUSTUS_CAESAR_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -6365,7 +6365,7 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_ BRENNUS _1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_BRENNUS_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -7301,7 +7301,7 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_ AUGUSTUS_CAESAR _1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_AUGUSTUS_CAESAR_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -7320,7 +7320,7 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_ BRENNUS _1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_BRENNUS_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -8238,7 +8238,7 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_ AUGUSTUS_CAESAR _1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_AUGUSTUS_CAESAR_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -8257,7 +8257,7 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_ BRENNUS _1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_BRENNUS_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
