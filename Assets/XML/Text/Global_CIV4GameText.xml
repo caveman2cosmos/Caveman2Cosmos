@@ -21313,4 +21313,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_GRAPHIC_OPTION_FROZEN_ANIMATIONS_HELP</Tag>
 		<English>No unit or improvement animations.[NEWLINE]Causes graphical glitches when selected.</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_CITIZEN_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>	
 </Civ4GameText>

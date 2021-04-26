@@ -70928,24 +70928,6 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<UnitProductionModifiers>
-				<UnitProductionModifier>
-					<UnitType>UNIT_DIPLOMAT_MESSENGER</UnitType>
-					<iProductionModifier>50</iProductionModifier>
-				</UnitProductionModifier>
-				<UnitProductionModifier>
-					<UnitType>UNIT_DIPLOMAT_EARLY</UnitType>
-					<iProductionModifier>50</iProductionModifier>
-				</UnitProductionModifier>
-				<UnitProductionModifier>
-					<UnitType>UNIT_DIPLOMAT_INDUST</UnitType>
-					<iProductionModifier>50</iProductionModifier>
-				</UnitProductionModifier>
-				<UnitProductionModifier>
-					<UnitType>UNIT_DIPLOMAT_MODERN</UnitType>
-					<iProductionModifier>50</iProductionModifier>
-				</UnitProductionModifier>
-			</UnitProductionModifiers>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>3</iAsset>
 			<Flavors>

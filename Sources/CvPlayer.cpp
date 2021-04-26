@@ -2619,10 +2619,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	if (bTrade)
 	{
-		foreach_(CvPlot* pLoopPlot, CvPlot::rect(pCityPlot->getX(), pCityPlot->getY(), 1, 1))
-		{
-			pLoopPlot->setCulture(eOldOwner, 0, false, false);
-		}
+		algo::for_each(pCityPlot->rect(1, 1),
+			bind(CvPlot::setCulture, _1, eOldOwner, 0, false, false)
+		);
 	}
 
 	CvCity* pNewCity = initCity(pCityPlot->getX(), pCityPlot->getY(), !bConquest, false);
@@ -3417,11 +3416,7 @@ bool CvPlayer::isHuman() const
 
 void CvPlayer::updateHuman()
 {
-	if (getID() == NO_PLAYER)
-	{
-		m_bHuman = false;
-	}
-	else if (m_bDisableHuman)
+	if (m_bDisableHuman || getID() == NO_PLAYER)
 	{
 		m_bHuman = false;
 	}
@@ -6401,7 +6396,7 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 			int iBestValue = 0;
 			pBestPlot = NULL;
 
-			foreach_(CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iOffset, iOffset)
+			foreach_(CvPlot* pLoopPlot, pPlot->rect(iOffset, iOffset)
 			| filtered(!CvPlot::fn::isRevealed(getTeam(), false)))
 			{
 				int iValue = (1 + GC.getGame().getSorenRandNum(10000, "Goody Map"));
@@ -6421,7 +6416,7 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 			pBestPlot = pPlot;
 		}
 
-		foreach_(CvPlot* pLoopPlot, CvPlot::rect(pBestPlot->getX(), pBestPlot->getY(), iRange, iRange))
+		foreach_(CvPlot* pLoopPlot, pBestPlot->rect(iRange, iRange))
 		{
 			if (plotDistance(pBestPlot->getX(), pBestPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iRange)
 			{
@@ -6565,8 +6560,6 @@ void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 
 bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 {
-	CvPlot* pPlot = GC.getMap().plot(iX, iY);
-
 	if(GC.getUSE_CANNOT_FOUND_CITY_CALLBACK())
 	{
 		if (Cy::call<bool>(PYGameModule, "cannotFoundCity", Cy::Args() << getID() << iX << iY))
@@ -6579,6 +6572,8 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 	{
 		return false;
 	}
+
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 
 	if (pPlot->isImpassable(getTeam()))
 	{
@@ -6642,7 +6637,7 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 	{
 		const int iRange = GC.getMIN_CITY_RANGE();
 
-		if (algo::any_of(CvPlot::rect(iX, iY, iRange, iRange), CvPlot::fn::isCity(false, NO_TEAM) && CvPlot::fn::area() == pPlot->area()))
+		if (algo::any_of(pPlot->rect(iRange, iRange), CvPlot::fn::isCity(false, NO_TEAM) && CvPlot::fn::area() == pPlot->area()))
 		{
 			return false;
 		}
@@ -9307,12 +9302,9 @@ void CvPlayer::foundCorporation(CorporationTypes eCorporation)
 			int iValue = 10;
 			iValue += pLoopCity->getPopulation();
 
-			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+			foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 			{
-				if (NO_BONUS != GC.getCorporationInfo(eCorporation).getPrereqBonus(i))
-				{
-					iValue += 10 * pLoopCity->getNumBonuses((BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i));
-				}
+				iValue += 10 * pLoopCity->getNumBonuses(eBonus);
 			}
 
 			iValue += GC.getGame().getSorenRandNum(GC.getDefineINT("FOUND_CORPORATION_CITY_RAND"), "Found Corporation");
@@ -23151,6 +23143,8 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 			}
 		}
 
+		/* Toffer - commented out, something is wrong here.
+
 		if (kEvent.getMaxPillage() > 0 && !adjustModifiersOnly)
 		{
 			FAssert(kEvent.getMaxPillage() >= kEvent.getMinPillage());
@@ -23159,22 +23153,24 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 			int iNumPillaged = 0;
 			for (int i = 0; i < iNumPillage; ++i)
 			{
-				int iRandOffset = GC.getGame().getSorenRandNum(GC.getMap().numPlots(), "Pick event pillage plot (any city)");
+				const int iRandOffset = GC.getGame().getSorenRandNum(GC.getMap().numPlots(), "Pick event pillage plot (any city)");
+
 				for (int j = 0; j < GC.getMap().numPlots(); ++j)
 				{
-					int iPlot = (j + iRandOffset) % GC.getMap().numPlots();
-					CvPlot* pPlot = GC.getMap().plotByIndex(iPlot);
-					if (NULL != pPlot && pPlot->getOwner() == getID() && pPlot->isCity())
-					{
-						if (NO_IMPROVEMENT != pPlot->getImprovementType() && !GC.getImprovementInfo(pPlot->getImprovementType()).isPermanent())
-						{
+					CvPlot* pPlot = GC.getMap().plotByIndex((j + iRandOffset) % GC.getMap().numPlots());
 
-							CvWString szBuffer = gDLL->getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-							AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, GC.getImprovementInfo(pPlot->getImprovementType()).getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
-							pPlot->setImprovementType(NO_IMPROVEMENT);
-							++iNumPillaged;
-							break;
-						}
+					// Toffer - Something is wrong here... pPlot->isCity() && pPlot->isImprovementDestructible() doesn't make much sense
+					//	I think it's looking for a plot that belong to a city rather than a plot with a city on it.
+					if (NULL != pPlot && pPlot->getOwner() == getID() && pPlot->isCity() && pPlot->isImprovementDestructible())
+					{
+						AddDLLMessage(
+							getID(), false, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide()),
+							"AS2D_PILLAGED", MESSAGE_TYPE_INFO, GC.getImprovementInfo(pPlot->getImprovementType()).getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true
+						);
+						pPlot->setImprovementType(NO_IMPROVEMENT);
+						++iNumPillaged;
+						break;
 					}
 				}
 			}
@@ -23186,6 +23182,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 				AddDLLMessage(pTriggeredData->m_eOtherPlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO);
 			}
 		}
+		*/
 
 		if (kEvent.getFood() != 0 && !adjustModifiersOnly)
 		{
@@ -26894,16 +26891,12 @@ CvCity* CvPlayer::getBestHQCity(CorporationTypes eCorporation) const
 				}
 
 				bool bFoundBonus = false;
-				for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+				foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 				{
-					BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
-					if (NO_BONUS != eBonus)
+					if (pLoopCity->hasBonus(eBonus))
 					{
-						if (pLoopCity->hasBonus(eBonus))
-						{
-							bFoundBonus = true;
-							iValue += 50;
-						}
+						bFoundBonus = true;
+						iValue += 50;
 					}
 				}
 
@@ -26924,15 +26917,11 @@ CvCity* CvPlayer::getBestHQCity(CorporationTypes eCorporation) const
 				iValue += 100;
 			}
 
-			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+			foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 			{
-				BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
-				if (NO_BONUS != eBonus)
+				if (pLoopCity->hasBonus(eBonus))
 				{
-					if (pLoopCity->hasBonus(eBonus))
-					{
-						iValue += 50;
-					}
+					iValue += 50;
 				}
 			}
 
@@ -27001,17 +26990,13 @@ DenialTypes CvPlayer::AI_corporationTrade(CorporationTypes eCorporation, PlayerT
 		//If we don't have the corporation
 		if (!(pLoopCity->isHasCorporation(eCorporation)))
 		{
-			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+			foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 			{
-				BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
-				if (NO_BONUS != eBonus)
+				bRequiresBonus = true;
+				//if the city can have the corporation
+				if (pLoopCity->hasBonus(eBonus))
 				{
-					bRequiresBonus = true;
-					//if the city can have the corporation
-					if (pLoopCity->hasBonus(eBonus))
-					{
-						bValid = true;
-					}
+					bValid = true;
 				}
 			}
 		}
@@ -27063,8 +27048,6 @@ DenialTypes CvPlayer::AI_corporationTrade(CorporationTypes eCorporation, PlayerT
 	{
 		return DENIAL_ATTITUDE;
 	}
-
-
 
 	return NO_DENIAL;
 }

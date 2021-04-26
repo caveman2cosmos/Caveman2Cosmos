@@ -2087,6 +2087,11 @@
 		<Russian>Õðóñòàëü</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CRYSTAL_GLASSWARE_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Lead glass[COLOR_REVERT], commonly called crystal, is a variety of glass in which lead replaces the calcium content of a typical potash glass. It is retained from the Venetian word "cristallo" to describe the rock crystal imitated by Murano glassmakers. This naming convention has been maintained to describe decorative hollow-ware. The earliest known example is a blue glass fragment from Nippur (Mesopotamia) dated to 1400 BC. Lead glass also occurs in Han-period China (206 BC – 220 AD), where it was cast to imitate jade, both for ritual objects such as big and small figures, as well as jewellery and a limited range of vessels. In medieval and early modern Europe, lead glass was used as a base in coloured glasses, specifically in mosaic tesserae, enamels, stained-glass painting, and bijouterie, where it was used to imitate precious stones. English entrepreneur George Ravenscroft was the first to produce clear lead crystal glassware on an industrial scale, seeking to find an alternative to Venetian cristallo. From the 18th century on, English lead glass became popular throughout Europe, and was being produced in France, Hungary, Germany, and Norway.</English>
+		<Italian>Il [COLOR_HIGHLIGHT_TEXT]vetro-cristallo[COLOR_REVERT] o cristallo al piombo, comunemente chiamato cristallo, è una varietà di vetro in cui il piombo sostituisce il contenuto di calcio di un tipico vetro di carbonato di potassio. Il nome è ispirato al cristallo di rocca usato dai vetrai di Murano. Questa denominazione è stata mantenuta per descrivere questo tipo di oggetti decorativi. Il primo esempio conosciuto è un frammento di vetro blu di Nippur (Mesopotamia) datato 1400 a.C. Il vetro-cristallo si trova anche nella Cina del periodo Han (206 a.C. - 220 d.C.), dove veniva fuso per imitare la giada, sia per oggetti rituali come figure grandi e piccole, sia per gioielli e una gamma limitata di vasi. Nell'Europa medievale e della prima età moderna, il vetro al piombo era usato come base nei vetri colorati, in particolare nelle tessere di mosaico, negli smalti, nella pittura su vetro colorato e nella bigiotteria, dove veniva usato per imitare le pietre preziose. L'imprenditore inglese George Ravenscroft è stato il primo a produrre cristalli al piombo trasparenti su scala industriale, cercando di trovare un'alternativa al cristallo veneziano. Dal XVIII secolo in poi, il vetro al piombo inglese divenne popolare in tutta Europa e venne prodotto in Francia, Ungheria, Germania e Norvegia.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CRYSTALPUNK</Tag>
 		<English>Crystalpunk</English>
 		<Russian>Êðèñòàëïàíê</Russian>
@@ -2709,6 +2714,11 @@
 		<French>Fausses Gemmes</French>
 		<Italian>Gemme finte</Italian>
 		<Russian>Èñê. äðàã. êàìíè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FAKE_GEMS_PEDIA</Tag>
+		<English>A [COLOR_HIGHLIGHT_TEXT]fake gem[COLOR_REVERT] is a gem produced by humans, which shares virtually all chemical, optical, and physical characteristics of its natural mineral counterpart, though in some cases, namely synthetic turquoise and synthetic opal, additional compounds can be present. The oldest-surviving synthetic materials used for bead-making have generally been ceramics (pottery and glass), but many were also made from ancient alloys, such as bronze and brass. Synthetic gem crystals have been manufactured since the late 19th century, and their production is often marked by a need for them in industrial applications outside of the jewelry industry, such as communications and laser technology, microelectronics, and abrasives.</English>
+		<Italian>Una [COLOR_HIGHLIGHT_TEXT]gemma finta[COLOR_REVERT] è una gemma prodotta dagli esseri umani, che condivide praticamente tutte le caratteristiche chimiche, ottiche e fisiche della sua controparte minerale naturale, sebbene in alcuni casi (come i turchesi e gli opali sintetici) possano essere presenti composti aggiuntivi. I materiali sintetici più antichi utilizzati per la fabbricazione di perline sono stati generalmente la ceramica e il vetro, ma molti erano anche realizzati con leghe come bronzo e ottone. I cristalli di gemme sintetiche sono stati prodotti a partire dalla fine del XIX secolo e la loro produzione è spesso contrassegnata dalla loro necessità in applicazioni industriali al di fuori dell'industria della gioielleria, come le comunicazioni e la tecnologia laser, la microelettronica e gli abrasivi.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FATIMID</Tag>
@@ -5137,18 +5147,7 @@
 		<Tag>TXT_KEY_BONUS_MAMMOTH_PEDIA</Tag>
 		<English>A mammoth is any species of the extinct genus Mammuthus. These proboscideans are members of Elephantidae, the family of elephants and mammoths, and close relatives of modern elephants. They were often equipped with long curved tusks and, in northern species, a covering of long hair. They lived from the Pliocene Epoch from around 4.8 million years ago, into the Holocene at about 4,500 years ago. The largest known species, Songhua River mammoth (Mammuthus sungari), reached heights of at least 5 metres (16 ft) at the shoulder. Mammoths would probably normally weigh in the region of 6 to 8 tons, but exceptionally large males may have exceeded 12 tons. However, most species of mammoth were only about as large as a modern Asian elephant. Fossils of species of dwarf mammoth have been found on the Californian Channel Islands (Mammuthus exilis) and the Mediterranean island of Sardinia (Mammuthus lamarmorae). There was also a race of dwarf woolly mammoths on Wrangel Island, north of Siberia, within the Arctic Circle.</English>
 		<Russian>Мамонт - это любой вид вымершего рода Mammuthus. Эти хоботки являются членами Elephantidae, семейства слонов и мамонтов, а также близкими родственниками современных слонов. Они часто были оснащены длинными изогнутыми бивнями, а у северных видов - покровом из длинной шерсти. Они жили с эпохи плиоцена, примерно 4,8 миллиона лет назад, в голоцен, примерно 4500 лет назад. Слово мамонт происходит от русского Mamont, вероятно, в свою очередь, из вогульского (мансийского) языка, mang ont, что означает «земляной рог».[PARAGRAPH:2]Как и их современный родственник слон (азиатский или африканский), мамонты были довольно большими; в английском языке существительное «мамонт» стало прилагательным, означающим «большой» или «массивный». Самый крупный из известных видов, мамонт реки Сунгари (Mammuthus sungari), достигал высоты не менее 5 метров (16 футов) в плече. Мамонты, вероятно, обычно весили бы от 6 до 8 тонн, но исключительно крупные самцы могли превышать 12 тонн. Однако большинство видов мамонтов были размером с современного азиатского слона. Окаменелости карликовых мамонтов были найдены на Калифорнийских Нормандских островах (Mammuthus exilis) и на средиземноморском острове Сардиния (Mammuthus lamarmorae). Также была раса карликовых шерстистых мамонтов на острове Врангеля, к северу от Сибири, за Полярным кругом.[PARAGRAPH:2]Бивень мамонта длиной 11 футов (3,4 м) был обнаружен к северу от Линкольна, штат Иллинойс, в 2005 году.[PARAGRAPH:2]Основываясь на исследованиях их близких родственников, современных слонов, у мамонтов, вероятно, был период беременности 22 месяца, в результате чего родился единственный мамонтенок. Их социальная структура, вероятно, была такой же, как у африканских и азиатских слонов, с самками, живущими в стадах, возглавляемых матриархом, в то время как быки жили уединенно или образовывали свободные группы после половой зрелости.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_MAMMOTH_GRAVEYARD</Tag>
-		<English>Mammoth Graveyard</English>
-		<Italian>Cimitero dei mammut</Italian>
-		<Russian>Êëàäáèùå ìàìîíòîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_MAMMOTH_GRAVEYARD_PEDIA</Tag>
-		<English>When mammoths go extinct in the wild their map bonus is replaced by a graveyard. This may be their bones, or fossils or frozen mammoths.</English>
-		<Russian>Когда мамонты вымирают в дикой природе, их бонусные ресурсы на карте заменяется кладбищами. Это могут быть их кости, или окаменелости, или замороженные туши мамонтов.</Russian>
-	</TEXT>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANCHURIAN</Tag>
 		<English>Manchurian</English>
@@ -5643,6 +5642,11 @@
 		<French>Vase Ming</French>
 		<Italian>Vaso Ming</Italian>
 		<Russian>Êèòàéñêèé ôàðôîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_MING_VASE_PEDIA</Tag>
+		<English>A [COLOR_HIGHLIGHT_TEXT]Ming vase[COLOR_REVERT] is an example of Chinese ceramic manufacture from 14th to 17th century, that was also the result of an extraordinary period of innovation. Manufacturers explored and investigated new techniques in design and shapes, showing a predilection for colour and painted design, and an openness to foreign forms (especially Islamic ones, during the first part of the 15th century). Late Ming period vessels underwent a dramatic shift towards a market economy, exporting porcelain around the world on an unprecedented scale, thus becoming valuable and highly prized possessions.</English>
+		<Italian>Un [COLOR_HIGHLIGHT_TEXT]vaso Ming[COLOR_REVERT] è un esempio di manifattura ceramica cinese dal XIV al XVII secolo, frutto anche di uno straordinario periodo di innovazione. I produttori esplorarono e investigarono nuove tecniche nel design e nelle forme, mostrando una predilezione per il colore e il design dipinto, e un'apertura alle forme straniere (specialmente quelle islamiche, durante la prima parte del XV secolo). La qualità dei vasi del tardo periodo Ming subì una marcata transizione verso l'economia di mercato, quando la porcellana cinese venne esportata in tutto il mondo su una scala senza precedenti, diventando così un bene di valore molto apprezzato.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MINOAN</Tag>
@@ -6553,6 +6557,11 @@
 		<Russian>Ïåãàñ</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_PEGASUS_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Pegasus[COLOR_REVERT] is a mythical winged divine horse, and one of the most recognized creatures in Greek mythology. Usually depicted as pure white, Pegasus is the offspring of the Olympian god Poseidon. He was foaled by the Gorgon Medusa upon her death, when the hero Perseus decapitated her. Pegasus is the brother of Chrysaor and the uncle of Geryon. Pegasus was caught by the Greek hero Bellerophon, near the fountain Peirene, with the help of Athena and Poseidon. Pegasus allowed Bellerophon to ride him in order to defeat the monstrous Chimera, which led to many other exploits. Bellerophon later fell from the winged horse's back while trying to reach Mount Olympus. Afterwards, Zeus transformed Pegasus into the eponymous constellation.</English>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Pegaso[COLOR_REVERT] è un mitico cavallo alato divino e una delle creature più riconosciute nella mitologia greca. Di solito raffigurato di colore bianco puro, Pegaso è figlio del dio dell'Olimpo Poseidone. Fu partorito dalla Gorgone Medusa alla sua morte, quando l'eroe Perseo la decapitò. Pegaso è il fratello di Crisaore e lo zio di Gerione. Pegaso fu catturato dall'eroe greco Bellerofonte, vicino alla fontana Peirene, con l'aiuto di Atena e Poseidone. Pegasus permise a Bellerofonte di cavalcarlo per sconfiggere la mostruosa Chimera, per poi seguirlo in molte altre imprese. Bellerofonte in seguito cadde dalla schiena del cavallo alato mentre cercava di raggiungere il Monte Olimpo. Successivamente, Zeus trasformò Pegaso nell'omonima costellazione.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_PELTS</Tag>
 		<English>Pelts</English>
 		<French>Peaux</French>
@@ -7284,6 +7293,11 @@
 		<French>Quetzalcoatl</French>
 		<Italian>Quetzalcoatl</Italian>
 		<Russian>Êåòöàëüêîàòëü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_QUETZALCOATL_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Quetzalcoatl[COLOR_REVERT] is a deity in Aztec culture and literature, whose name comes from the Nahuatl language and means "Precious serpent" or "Quetzal-feathered Serpent". According to Ixtlilxóchitl, a descendant of Aztec royalty and historian of the Nahua people, the name in its literal sense means "serpent of precious feathers", but in the allegorical sense means "wisest of men". Quetzalcoatl was related to gods of the wind, of the planet Venus, of the dawn, of merchants and of arts, crafts and knowledge. He was also the patron god of the Aztec priesthood, of learning and knowledge, and wears around his neck the "wind breastplate" ehēcacōzcatl, "the spirally voluted wind jewel" made of a conch shell (possibly symbolizing patterns witnessed in hurricanes, dust devils, seashells, and whirlpools).</English>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Quetzalcoatl[COLOR_REVERT] è una divinità della cultura e della letteratura azteca, il cui nome deriva dalla lingua nahuatl e significa "Serpente prezioso" o "Serpente dalle piume di Quetzal". Secondo Ixtlilxóchitl, discendente della famiglia reale azteca e storico del popolo Nahua, il nome nel suo senso letterale significa "serpente di piume preziose", ma in senso allegorico significa "il più saggio degli uomini". Quetzalcoatl viene accostato agli dei del vento, del pianeta Venere, dell'alba, dei mercanti e delle arti, dei mestieri e della conoscenza. Era anche il dio protettore del sacerdozio azteco, dell'apprendimento e della conoscenza, e indossa al collo la "corazza del vento" ehēcacōzcatl, "il gioiello del vento a spirale" fatto di una conchiglia (e che forse simboleggia i motivi degli uragani, dei "diavoli della polvere", delle conchiglie e dei vortici).</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QULLA</Tag>

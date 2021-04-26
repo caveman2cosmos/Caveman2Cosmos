@@ -570,7 +570,8 @@ public:
 	static rect_iterator endRect() { return rect_iterator(); }
 
 	typedef bst::iterator_range<rect_iterator> rect_range;
-	static rect_range rect(int centerX, int centerY, int halfWid, int halfHgt) { return rect_range(beginRect(centerX, centerY, halfWid, halfHgt), endRect()); }
+	//static rect_range rect(int centerX, int centerY, int halfWid, int halfHgt) { return rect_range(beginRect(centerX, centerY, halfWid, halfHgt), endRect()); }
+	rect_range rect(int halfWid, int halfHgt) const { return rect_range(beginRect(m_iX, m_iY, halfWid, halfHgt), endRect()); }
 
 	// ==========================================================================================
 	// PAGING SYSTEM
@@ -702,6 +703,8 @@ public:
 
 	DllExport ImprovementTypes getImprovementType() const;
 	void setImprovementType(ImprovementTypes eNewValue);
+
+	bool isImprovementDestructible() const;
 
 	RouteTypes getRouteType() const;
 	void setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroup);

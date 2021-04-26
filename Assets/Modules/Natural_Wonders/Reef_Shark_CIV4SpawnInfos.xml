@@ -7,8 +7,8 @@
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>

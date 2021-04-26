@@ -2725,8 +2725,8 @@ public:
 	int getTurnRate() const;
 	int getGlobalTurnRate() const;
 	int getMaxLocalDensity() const;
-	int getMaxAreaTotalDensity() const;
-	int getMaxAreaUnitDensity() const;
+	int getMinAreaPlotsPerPlayerUnit() const;
+	int getMinAreaPlotsPerUnitType() const;
 	int getStartDate() const;
 	int	getEndDate() const;
 	int	getMinLatitude() const;
@@ -2759,8 +2759,8 @@ private:
 	int						m_iTurns;
 	int						m_iGlobalTurns;
 	int						m_iMaxLocalDensity;
-	int						m_iMaxAreaTotalDensity;
-	int						m_iMaxAreaUnitDensity;
+	int						m_iMinAreaPlotsPerPlayerUnit;
+	int						m_iMinAreaPlotsPerUnitType;
 	int						m_iStartDate;
 	int						m_iEndDate;
 	bool					m_bTreatAsBarbarian;
@@ -5869,9 +5869,10 @@ public:
 	const TCHAR* getMovieSound() const;
 	const TCHAR* getSound() const;
 
-	// Arrays
+	const std::vector<BonusTypes>& getPrereqBonuses() const;
+	const python::list cyGetPrereqBonuses() const;
 
-	int getPrereqBonus(int i) const;
+	// Arrays
 	int getHeadquarterCommerce(int i) const;
 	int* getHeadquarterCommerceArray() const;
 	int getCommerceProduced(int i) const;
@@ -5951,9 +5952,9 @@ protected:
 	CvString m_szMovieSound;
 	CvString m_szSound;
 
-	// Arrays
+	std::vector<BonusTypes> m_vPrereqBonuses;
 
-	int* m_paiPrereqBonuses;
+	// Arrays
 	int* m_paiHeadquarterCommerce;
 	int* m_paiCommerceProduced;
 	int* m_paiYieldProduced;
