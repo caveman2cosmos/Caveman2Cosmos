@@ -2102,7 +2102,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_FARM_PLOWS_1</Type>
-			<Description>TXT_KEY_EVENT_TRIGGER_FARM_PLOWS_1</Description>
+			<Description>TXT_KEY_EVENTTRIGGER_FARM_PLOWS_1</Description>
 			<iGold>30</iGold>
 			<iRandomGold>30</iRandomGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -2110,7 +2110,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_STAINED_GLASS_1</Type>
-			<Description>TXT_KEY_EVENT_TRIGGER_STAINED_GLASS_1</Description>
+			<Description>TXT_KEY_EVENTTRIGGER_STAINED_GLASS_1</Description>
 			<iGold>-40</iGold>
 			<iRandomGold>30</iRandomGold>
 			<BuildingExtraCommerces>
@@ -2155,7 +2155,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_MARBLE_STATUES_1</Type>
-			<Description>TXT_KEY_EVENT_TRIGGER_MARBLE_STATUES_1</Description>
+			<Description>TXT_KEY_EVENTTRIGGER_MARBLE_STATUES_1</Description>
 			<iGold>-50</iGold>
 			<iRandomGold>-20</iRandomGold>
 			<BuildingExtraCommerces>
@@ -2170,7 +2170,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_CRAB_CAKES_1</Type>
-			<Description>TXT_KEY_EVENT_TRIGGER_CRAB_CAKES_1</Description>
+			<Description>TXT_KEY_EVENTTRIGGER_CRAB_CAKES_1</Description>
 			<iGold>30</iGold>
 			<iRandomGold>40</iRandomGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -2178,7 +2178,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BOILERS_1</Type>
-			<Description>TXT_KEY_EVENT_TRIGGER_BOILERS_1</Description>
+			<Description>TXT_KEY_EVENTTRIGGER_BOILERS_1</Description>
 			<iGold>90</iGold>
 			<iRandomGold>50</iRandomGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -2186,7 +2186,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PERSONAL_COMPUTERS_1</Type>
-			<Description>TXT_KEY_EVENT_TRIGGER_PERSONAL_COMPUTERS_1</Description>
+			<Description>TXT_KEY_EVENTTRIGGER_PERSONAL_COMPUTERS_1</Description>
 			<iGold>140</iGold>
 			<iRandomGold>90</iRandomGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -2221,7 +2221,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_FASHION_1</Type>
-			<Description>TXT_KEY_EVENT_TRIGGER_FASHION_1</Description>
+			<Description>TXT_KEY_EVENTTRIGGER_FASHION_1</Description>
 			<iGold>180</iGold>
 			<iRandomGold>80</iRandomGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -2229,7 +2229,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_THOROUGHBRED_1</Type>
-			<Description>TXT_KEY_EVENT_TRIGGER_THOROUGHBRED_1</Description>
+			<Description>TXT_KEY_EVENTTRIGGER_THOROUGHBRED_1</Description>
 			<iGold>30</iGold>
 			<iRandomGold>40</iRandomGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -2237,7 +2237,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_GIRLS_BEST_FRIEND_1</Type>
-			<Description>TXT_KEY_EVENT_TRIGGER_GIRLS_BEST_FRIEND_1</Description>
+			<Description>TXT_KEY_EVENTTRIGGER_GIRLS_BEST_FRIEND_1</Description>
 			<iGold>120</iGold>
 			<iRandomGold>60</iRandomGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>

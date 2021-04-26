@@ -9,7 +9,7 @@
 			<Type>EVENTTRIGGER_BEST_HUNTERS</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BEST_HUNTERS</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BEST_HUNTERS</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>

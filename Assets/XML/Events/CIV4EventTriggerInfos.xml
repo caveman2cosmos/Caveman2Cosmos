@@ -8,15 +8,15 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FOREST_FIRE_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FOREST_FIRE_2</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FOREST_FIRE_3</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -62,27 +62,27 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS_ANCIENT_1</Text>
 					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS_ANCIENT_1</Text>
 					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS_ANCIENT_1</Text>
 					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS_ANCIENT_1</Text>
 					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_INDUSTRIAL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS_INDUSTRIAL_1</Text>
 					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_INDUSTRIAL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS_INDUSTRIAL_1</Text>
 					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -110,15 +110,15 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HAPPY_HUNTING_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HAPPY_HUNTING_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HAPPY_HUNTING_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HAPPY_HUNTING_2</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HAPPY_HUNTING_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HAPPY_HUNTING_3</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -150,7 +150,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MOTHER_LODE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MOTHER_LODE_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -191,7 +191,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WASHED_OUT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WASHED_OUT_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -221,7 +221,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_AT_THE_SWORD_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_AT_THE_SWORD_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/AtTheSwordEvent.dds</EventArt>
@@ -247,7 +247,7 @@
 			<Type>EVENTTRIGGER_MAN_NAMED_JED</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MAN_NAMED_JED_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/JedEvent.dds</EventArt>
@@ -278,7 +278,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_INSPIRED_MISSION_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_INSPIRED_MISSION_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/InspiredMissionEvent.dds</EventArt>
@@ -304,10 +304,10 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HYMNS_AND_SCULPTURES_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HYMNS_AND_SCULPTURES_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HYMNS_AND_SCULPTURES_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HYMNS_AND_SCULPTURES_2</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HymnsAndSculpturesEvent.dds</EventArt>
@@ -349,13 +349,13 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CARELESS_APPRENTICE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CARELESS_APPRENTICE_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CARELESS_APPRENTICE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CARELESS_APPRENTICE_2</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CARELESS_APPRENTICE_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CARELESS_APPRENTICE_3</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CarelessApprenticeEvent.dds</EventArt>
@@ -382,13 +382,13 @@
 			<Type>EVENTTRIGGER_FAMINE</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FAMINE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FAMINE_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FAMINE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FAMINE_2</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FAMINE_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FAMINE_3</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FamineEvent.dds</EventArt>
@@ -416,15 +416,15 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SLAVE_REVOLT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SLAVE_REVOLT_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SLAVE_REVOLT_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SLAVE_REVOLT_2</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SLAVE_REVOLT_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SLAVE_REVOLT_3</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -456,11 +456,11 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SLAVE_REVOLT_AGAIN_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SLAVE_REVOLT_AGAIN_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SLAVE_REVOLT_AGAIN_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SLAVE_REVOLT_AGAIN_2</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -485,7 +485,7 @@
 			<Type>EVENTTRIGGER_BLESSED_SEA</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BLESSED_SEA_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BLESSED_SEA_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BlessedSeaEvent.dds</EventArt>
@@ -516,7 +516,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BLESSED_SEA_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BLESSED_SEA_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BlessedSeaEvent.dds</EventArt>
@@ -545,7 +545,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_AIRLINER_CRASH_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_AIRLINER_CRASH_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/AirlinerCrashEvent.dds</EventArt>
@@ -572,13 +572,13 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FARM_BANDITS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FARM_BANDITS_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FARM_BANDITS_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FARM_BANDITS_2</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FARM_BANDITS_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FARM_BANDITS_3</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FarmBanditsEvent.dds</EventArt>
@@ -625,10 +625,10 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FARM_BANDITS_AGAIN_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FARM_BANDITS_AGAIN_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FARM_BANDITS_AGAIN_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FARM_BANDITS_AGAIN_2</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FarmBanditsEvent.dds</EventArt>
@@ -671,7 +671,7 @@
 			<Type>EVENTTRIGGER_HOLY_MOUNTAIN</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HOLY_MOUNTAIN_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HOLY_MOUNTAIN_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HolyMountainEvent.dds</EventArt>
@@ -705,7 +705,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HOLY_MOUNTAIN_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HOLY_MOUNTAIN_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HolyMountainEvent.dds</EventArt>
@@ -727,7 +727,7 @@
 			<Type>EVENTTRIGGER_HOLY_MOUNTAIN_REVEALED</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HOLY_MOUNTAIN_REVEALED_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HOLY_MOUNTAIN_REVEALED_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HolyMountainEvent.dds</EventArt>
@@ -751,13 +751,13 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HORTICULTURE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HORTICULTURE_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HORTICULTURE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HORTICULTURE_2</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HORTICULTURE_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HORTICULTURE_3</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HorticultureEvent.dds</EventArt>
@@ -786,10 +786,10 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FUGITIVE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FUGITIVE_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FUGITIVE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FUGITIVE_2</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FugitiveEvent.dds</EventArt>
@@ -816,13 +816,13 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PESTILENCE_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PESTILENCE_2</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PESTILENCE_3</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/PestilenceEvent.dds</EventArt>
@@ -845,13 +845,13 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_4</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PESTILENCE_4</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_5</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PESTILENCE_5</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PESTILENCE_3</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -873,7 +873,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MARATHON_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MARATHON_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MarathonEvent.dds</EventArt>
@@ -896,7 +896,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FAUX_PAS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FAUX_PAS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FauxPasEvent.dds</EventArt>
@@ -918,55 +918,55 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_1</Text>
 					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_1</Text>
 					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_2</Text>
 					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_2</Text>
 					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_3</Text>
 					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_3</Text>
 					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_3</Text>
 					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_3</Text>
 					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_3</Text>
 					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_3</Text>
 					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_3</Text>
 					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_3</Text>
 					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING_3</Text>
 					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -994,55 +994,55 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_1</Text>
 					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_1</Text>
 					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_2</Text>
 					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_2</Text>
 					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_3</Text>
 					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_3</Text>
 					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_3</Text>
 					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_3</Text>
 					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_3</Text>
 					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_3</Text>
 					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_3</Text>
 					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_3</Text>
 					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD_3</Text>
 					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -1070,55 +1070,55 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_1</Text>
 					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_1</Text>
 					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_2</Text>
 					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_2</Text>
 					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_3</Text>
 					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_3</Text>
 					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_3</Text>
 					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_3</Text>
 					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_3</Text>
 					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_3</Text>
 					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_3</Text>
 					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_3</Text>
 					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR_3</Text>
 					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -1141,7 +1141,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SPICY_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SPICY_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SpicyEvent.dds</EventArt>
@@ -1173,39 +1173,39 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TORNADO_1</Text>
 					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TORNADO_1</Text>
 					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TORNADO_1</Text>
 					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TORNADO_2</Text>
 					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TORNADO_2</Text>
 					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TORNADO_3</Text>
 					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TORNADO_3</Text>
 					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TORNADO_3</Text>
 					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TORNADO_3</Text>
 					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -1232,7 +1232,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BABY_BOOM_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BABY_BOOM_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BabyBoomEvent.dds</EventArt>
@@ -1257,7 +1257,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BARDS_TALE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BARDS_TALE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BardsTaleEvent.dds</EventArt>
@@ -1281,55 +1281,55 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_1</Text>
 					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_1</Text>
 					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_1</Text>
 					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_1</Text>
 					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_1</Text>
 					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_2</Text>
 					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_2</Text>
 					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_2</Text>
 					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_2</Text>
 					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_2</Text>
 					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_2</Text>
 					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_2</Text>
 					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOOTERS_2</Text>
 					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -1355,7 +1355,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BROTHERS_IN_NEED_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BROTHERS_IN_NEED_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BrothersInNeedEvent.dds</EventArt>
@@ -1392,7 +1392,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HURRICANE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HURRICANE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HurricaneEvent.dds</EventArt>
@@ -1418,7 +1418,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CYCLONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CYCLONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CycloneEvent.dds</EventArt>
@@ -1444,7 +1444,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TSUNAMI_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TSUNAMI_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/TsunamiEvent.dds</EventArt>
@@ -1471,7 +1471,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MONSOON_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MONSOON_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MonsoonEvent.dds</EventArt>
@@ -1497,10 +1497,10 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BLIZZARD_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BLIZZARD_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BLIZZARD_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BLIZZARD_2</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BlizzardEvent.dds</EventArt>
@@ -1588,7 +1588,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_VOLCANO_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/VolcanoEvent.dds</EventArt>
@@ -1611,7 +1611,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_DUSTBOWL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_DUSTBOWL_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/DustbowlEvent.dds</EventArt>
@@ -1641,7 +1641,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_DUSTBOWL_CONT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_DUSTBOWL_CONT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/DustbowlEvent.dds</EventArt>
@@ -1667,7 +1667,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PARROTS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PARROTS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ParrotsEvent.dds</EventArt>
@@ -1703,7 +1703,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_JADE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_JADE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/JadeEvent.dds</EventArt>
@@ -1747,7 +1747,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BLACK_PEARLS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BLACK_PEARLS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BlackPearlsEvent.dds</EventArt>
@@ -1774,7 +1774,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SALTPETER_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SALTPETER_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SaltpeterEvent.dds</EventArt>
@@ -1801,7 +1801,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CLUNKER_COAL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CLUNKER_COAL_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ClunkerCoalEvent.dds</EventArt>
@@ -1840,7 +1840,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SOUR_CRUDE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SOUR_CRUDE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SourCrudeEvent.dds</EventArt>
@@ -1867,7 +1867,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TRUFFLES_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TRUFFLES_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/TrufflesEvent.dds</EventArt>
@@ -1905,7 +1905,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SEA_TURTLES_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SEA_TURTLES_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SeaTurtlesEvent.dds</EventArt>
@@ -1939,7 +1939,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TIN_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TIN_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/TinEvent.dds</EventArt>
@@ -1971,7 +1971,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PRAIRIE_DOGS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PRAIRIE_DOGS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/PrairieDogsEvent.dds</EventArt>
@@ -2001,7 +2001,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ICE_SCULPTURE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ICE_SCULPTURE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/IceSculptureEvent.dds</EventArt>
@@ -2034,7 +2034,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_APPLESEED_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_APPLESEED_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/AppleSeedEvent.dds</EventArt>
@@ -2067,13 +2067,13 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MINING_ACCIDENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MINING_ACCIDENT_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MINING_ACCIDENT_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MINING_ACCIDENT_2</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MINING_ACCIDENT_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MINING_ACCIDENT_3</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MiningAccidentEvent.dds</EventArt>
@@ -2102,13 +2102,13 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MINING_ACCIDENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MINING_ACCIDENT_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MINING_ACCIDENT_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MINING_ACCIDENT_2</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MINING_ACCIDENT_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MINING_ACCIDENT_3</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -2137,7 +2137,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BREAKTHROUGH_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BREAKTHROUGH_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SetbackEvent.dds</EventArt>
@@ -2157,7 +2157,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SETBACK_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SETBACK_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -2175,7 +2175,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_RUNNING_BULLS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_RUNNING_BULLS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/RunningBullsEvent.dds</EventArt>
@@ -2216,7 +2216,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_GREAT_DEPRESSION_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_GREAT_DEPRESSION_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/GreatDepressionEvent.dds</EventArt>
@@ -2265,10 +2265,10 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PATRON_OF_KNOWLEDGE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PATRON_OF_KNOWLEDGE_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PATRON_OF_KNOWLEDGE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PATRON_OF_KNOWLEDGE_2</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/PatronOfKnowledgeEvent.dds</EventArt>
@@ -2294,7 +2294,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MASTER_SMITH_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MASTER_SMITH_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MasterSmithEvent.dds</EventArt>
@@ -2320,7 +2320,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_RURAL_FARMERS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_RURAL_FARMERS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/RuralFarmersEvent.dds</EventArt>
@@ -2346,7 +2346,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MONEY_CHANGERS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MONEY_CHANGERS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MoneyChangersEvent.dds</EventArt>
@@ -2371,7 +2371,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BOWYER_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BOWYER_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BowyerEvent.dds</EventArt>
@@ -2402,7 +2402,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HORSESHOE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HORSESHOE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HorseshoeEvent.dds</EventArt>
@@ -2443,7 +2443,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CHAMPION_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CHAMPION_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ChampionEvent.dds</EventArt>
@@ -2467,7 +2467,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MOTOR_OIL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MOTOR_OIL_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MotorOilEvent.dds</EventArt>
@@ -2496,7 +2496,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FEDERAL_RESERVE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FEDERAL_RESERVE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FederalReserveEvent.dds</EventArt>
@@ -2523,7 +2523,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ELECTRIC_COMPANY_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ELECTRIC_COMPANY_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ElectricCompanyEvent.dds</EventArt>
@@ -2549,7 +2549,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HINDENBERG_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HINDENBERG_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HindenbergEvent.dds</EventArt>
@@ -2578,7 +2578,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_COMET_FRAGMENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_COMET_FRAGMENT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CometFragmentEvent.dds</EventArt>
@@ -2604,7 +2604,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SUBWAY_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SUBWAY_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SubwayEvent.dds</EventArt>
@@ -2631,10 +2631,10 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_GOLD_RUSH_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_GOLD_RUSH_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_GOLD_RUSH_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_GOLD_RUSH_2</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/GoldrushEvent.dds</EventArt>
@@ -2661,7 +2661,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_INFLUENZA_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_INFLUENZA_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/InfluenzaEvent.dds</EventArt>
@@ -2688,7 +2688,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SOLO_FLIGHT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SOLO_FLIGHT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SoloFlightEvent.dds</EventArt>
@@ -2713,7 +2713,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ANTELOPE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ANTELOPE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/AntelopeEvent.dds</EventArt>
@@ -2748,7 +2748,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WHALEOFATHING_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WHALEOFATHING_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WhaleOfAThingEvent.dds</EventArt>
@@ -2789,7 +2789,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HIYOSILVER_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HIYOSILVER_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HiYoSilverEvent.dds</EventArt>
@@ -2824,7 +2824,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WININGMONKS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WININGMONKS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WiningMonksEvent.dds</EventArt>
@@ -2878,7 +2878,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_INDEPENDENTFILMS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_INDEPENDENTFILMS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/IndependentFilmsEvent.dds</EventArt>
@@ -2905,7 +2905,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ANCIENTOLYMPICS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ANCIENTOLYMPICS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/AncientOlympicsEvent.dds</EventArt>
@@ -2939,7 +2939,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MODERNOLYMPICS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MODERNOLYMPICS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ModernOlympicsEvent.dds</EventArt>
@@ -2963,7 +2963,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_INTERSTATE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_INTERSTATE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/InterstateEvent.dds</EventArt>
@@ -2987,7 +2987,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EARTHDAY_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_EARTHDAY_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/EarthDayEvent.dds</EventArt>
@@ -3012,7 +3012,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FREEDOMCONCERT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FREEDOMCONCERT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FreedomConcert.dds</EventArt>
@@ -3037,7 +3037,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_AXE_HAFT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_AXE_HAFT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Axehaft.dds</EventArt>
@@ -3069,7 +3069,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TOWER_SHIELD_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TOWER_SHIELD_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Towershield.dds</EventArt>
@@ -3100,7 +3100,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SMOKELESS_POWDER_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SMOKELESS_POWDER_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SmokelessPowder.dds</EventArt>
@@ -3130,7 +3130,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_STRONGER_FITTINGS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_STRONGER_FITTINGS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/StrongerFittings.dds</EventArt>
@@ -3158,7 +3158,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FIRING_PINS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FIRING_PINS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FiringPins.dds</EventArt>
@@ -3187,7 +3187,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_RIFLED_CANNON_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_RIFLED_CANNON_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/RifledCannon.dds</EventArt>
@@ -3215,7 +3215,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_METAL_DECKS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_METAL_DECKS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MetalDecks.dds</EventArt>
@@ -3244,7 +3244,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LONG_RANGE_FIGHTERS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LONG_RANGE_FIGHTERS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/LongRangeFighter.dds</EventArt>
@@ -3273,7 +3273,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HALBERD_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HALBERD_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Halberd.dds</EventArt>
@@ -3303,7 +3303,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_REINFORCED_HULL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_REINFORCED_HULL_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ReinforcedHull.dds</EventArt>
@@ -3332,10 +3332,10 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CIGARETTE_SMOKER_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CIGARETTE_SMOKER_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CIGARETTE_SMOKER_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CIGARETTE_SMOKER_2</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CigaretteSmoker.dds</EventArt>
@@ -3366,7 +3366,7 @@
 			<Type>EVENTTRIGGER_HEROIC_GESTURE</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HEROIC_GESTURE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HEROIC_GESTURE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HeroicGesture.dds</EventArt>
@@ -3386,7 +3386,7 @@
 			<Type>EVENTTRIGGER_GREAT_MEDIATOR</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_GREAT_MEDIATOR_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_GREAT_MEDIATOR_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/GreatMediator.dds</EventArt>
@@ -3409,7 +3409,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FORTY_THIEVES_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FORTY_THIEVES_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FortyThieves.dds</EventArt>
@@ -3444,7 +3444,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ANCIENT_TEXTS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ANCIENT_TEXTS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/AncientTexts.dds</EventArt>
@@ -3479,7 +3479,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WATERS_OF_LIFE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WATERS_OF_LIFE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WatersOfLife.dds</EventArt>
@@ -3502,7 +3502,7 @@
 			<Type>EVENTTRIGGER_IMPACT_CRATER</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_IMPACT_CRATER_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_IMPACT_CRATER_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ImpactCrater.dds</EventArt>
@@ -3657,7 +3657,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HOLY_RITUAL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HOLY_RITUAL_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HolyRitual.dds</EventArt>
@@ -3717,7 +3717,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SECURITY_TAX_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SECURITY_TAX_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SecurityTax.dds</EventArt>
@@ -3743,7 +3743,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LITERACY_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LITERACY_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Literacy.dds</EventArt>
@@ -3766,7 +3766,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FARM_PLOWS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FARM_PLOWS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FarmPlow.dds</EventArt>
@@ -3796,7 +3796,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_STAINED_GLASS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_STAINED_GLASS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/StainedGlass.dds</EventArt>
@@ -3840,7 +3840,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MARBLE_STATUES_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MARBLE_STATUES_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MarbleStatues.dds</EventArt>
@@ -3885,7 +3885,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CRAB_CAKES_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CRAB_CAKES_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CrabCakes.dds</EventArt>
@@ -3917,7 +3917,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BOILERS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BOILERS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Boilers.dds</EventArt>
@@ -3944,7 +3944,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PERSONAL_COMPUTERS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PERSONAL_COMPUTERS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/PersonalComputers.dds</EventArt>
@@ -3971,7 +3971,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FUEL_ADDITIVES_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FUEL_ADDITIVES_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FuelAdditives.dds</EventArt>
@@ -3998,7 +3998,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HAMBURGER_JOINT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HAMBURGER_JOINT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HamburgerJoint.dds</EventArt>
@@ -4038,7 +4038,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TEA_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TEA_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Tea.dds</EventArt>
@@ -4085,7 +4085,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FASHION_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FASHION_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Fashion.dds</EventArt>
@@ -4130,7 +4130,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_THOROUGHBRED_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_THOROUGHBRED_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Thoroughbred.dds</EventArt>
@@ -4174,7 +4174,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_GIRLS_BEST_FRIEND_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_GIRLS_BEST_FRIEND_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/GirlsBestFriend.dds</EventArt>
@@ -4203,7 +4203,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BANANA_SPLIT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BANANA_SPLIT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BananaSplit.dds</EventArt>
@@ -4241,7 +4241,7 @@
 			<Type>EVENTTRIGGER_HORSE_WHISPERING</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HORSE_WHISPERING</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HORSE_WHISPERING</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HorseWhispering.dds</EventArt>
@@ -4271,7 +4271,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HORSE_WHISPERING_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HORSE_WHISPERING_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HorseWhispering.dds</EventArt>
@@ -4301,7 +4301,7 @@
 			<Type>EVENTTRIGGER_HARBORMASTER</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HARBORMASTER</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HARBORMASTER</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Harbormaster.dds</EventArt>
@@ -4330,7 +4330,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HARBORMASTER_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HARBORMASTER_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Harbormaster.dds</EventArt>
@@ -4361,7 +4361,7 @@
 			<Type>EVENTTRIGGER_CLASSIC_LITERATURE</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CLASSIC_LITERATURE</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CLASSIC_LITERATURE</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ClassicLiterature.dds</EventArt>
@@ -4391,7 +4391,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CLASSIC_LITERATURE_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CLASSIC_LITERATURE_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ClassicLiterature.dds</EventArt>
@@ -4422,7 +4422,7 @@
 			<Type>EVENTTRIGGER_MASTER_BLACKSMITH</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MASTER_BLACKSMITH</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MASTER_BLACKSMITH</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MasterBlacksmith.dds</EventArt>
@@ -4450,7 +4450,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MASTER_BLACKSMITH_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MASTER_BLACKSMITH_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MasterBlacksmith.dds</EventArt>
@@ -4479,7 +4479,7 @@
 			<Type>EVENTTRIGGER_BEST_DEFENSE</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BEST_DEFENSE</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BEST_DEFENSE</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BestDefense.dds</EventArt>
@@ -4509,7 +4509,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BEST_DEFENSE_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BEST_DEFENSE_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BestDefense.dds</EventArt>
@@ -4534,7 +4534,7 @@
 			<Type>EVENTTRIGGER_SPORTS_LEAGUE</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SPORTS_LEAGUE</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SPORTS_LEAGUE</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SportsLeague.dds</EventArt>
@@ -4560,7 +4560,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SPORTS_LEAGUE_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SPORTS_LEAGUE_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SportsLeague.dds</EventArt>
@@ -4586,7 +4586,7 @@
 			<Type>EVENTTRIGGER_CRUSADE</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CRUSADE</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CRUSADE</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Crusade.dds</EventArt>
@@ -4613,7 +4613,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CRUSADE_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CRUSADE_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Crusade.dds</EventArt>
@@ -4638,7 +4638,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MIRACLE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MIRACLE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Miracle.dds</EventArt>
@@ -4668,7 +4668,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ESTEEMED_PLAYWRIGHT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ESTEEMED_PLAYWRIGHT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/EsteemedPlaywright.dds</EventArt>
@@ -4694,7 +4694,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FAVORITE_SON_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FAVORITE_SON_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FavoriteSon.dds</EventArt>
@@ -4722,7 +4722,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SECRET_KNOWLEDGE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SECRET_KNOWLEDGE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SecretKnowledge.dds</EventArt>
@@ -4761,7 +4761,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HIGH_WARLORD_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HIGH_WARLORD_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HighWarlord.dds</EventArt>
@@ -4792,7 +4792,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SPOILED_GRAIN_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SPOILED_GRAIN_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SpoiledGrain.dds</EventArt>
@@ -4816,7 +4816,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ANGEL_OF_MERCY_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ANGEL_OF_MERCY_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/AngelOfMercy.dds</EventArt>
@@ -4843,7 +4843,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CHILLY_FLIGHT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CHILLY_FLIGHT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ChillyFlight.dds</EventArt>
@@ -4869,7 +4869,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_INDUSTRIAL_FIRE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_INDUSTRIAL_FIRE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/IndustrialFire.dds</EventArt>
@@ -4899,7 +4899,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LABORATORY_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LABORATORY_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Laboratory.dds</EventArt>
@@ -4923,7 +4923,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EXPERIENCED_CAPTAIN_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_EXPERIENCED_CAPTAIN_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ExperiencedCaptain.dds</EventArt>
@@ -4997,7 +4997,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HERESY_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HERESY_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Heresy.dds</EventArt>
@@ -5021,7 +5021,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PARTISANS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PARTISANS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Partisans.dds</EventArt>
@@ -5040,7 +5040,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_NEW_DYNASTY_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_NEW_DYNASTY_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/NewDynasty.dds</EventArt>
@@ -5073,7 +5073,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CRISIS_IN_THE_SENATE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CRISIS_IN_THE_SENATE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CrisisInTheSenate.dds</EventArt>
@@ -5096,7 +5096,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TOO_CLOSE_TO_CALL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TOO_CLOSE_TO_CALL_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/TooCloseToCall.dds</EventArt>
@@ -5118,7 +5118,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CHARISMATIC_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CHARISMATIC_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Charismatic.dds</EventArt>
@@ -5142,7 +5142,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FRIENDLY_LOCALS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FRIENDLY_LOCALS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FriendlyLocals.dds</EventArt>
@@ -5162,7 +5162,7 @@
 			<Type>EVENTTRIGGER_GREED</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_GREED_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_GREED_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Greed.dds</EventArt>
@@ -5185,7 +5185,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_GREED_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_GREED_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Greed.dds</EventArt>
@@ -5208,7 +5208,7 @@
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WAR_CHARIOTS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WAR_CHARIOTS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WarChariots.dds</EventArt>
@@ -5233,7 +5233,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WAR_CHARIOTS_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WAR_CHARIOTS_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WarChariots.dds</EventArt>
@@ -5260,7 +5260,7 @@
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ELITE_SWORDS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ELITE_SWORDS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/EliteSwords.dds</EventArt>
@@ -5284,7 +5284,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ELITE_SWORDS_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ELITE_SWORDS_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/EliteSwords.dds</EventArt>
@@ -5311,7 +5311,7 @@
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WARSHIPS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WARSHIPS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Warships.dds</EventArt>
@@ -5336,7 +5336,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WARSHIPS_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WARSHIPS_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Warships.dds</EventArt>
@@ -5363,7 +5363,7 @@
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_GUNS_BUTTER_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_GUNS_BUTTER_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/GunsButter.dds</EventArt>
@@ -5387,7 +5387,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_GUNS_BUTTER_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_GUNS_BUTTER_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/GunsButter.dds</EventArt>
@@ -5415,7 +5415,7 @@
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_NOBLE_KNIGHTS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_NOBLE_KNIGHTS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/NobleKnights.dds</EventArt>
@@ -5440,7 +5440,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_NOBLE_KNIGHTS_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_NOBLE_KNIGHTS_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/NobleKnights.dds</EventArt>
@@ -5464,7 +5464,7 @@
 			<Type>EVENTTRIGGER_OVERWHELM</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_OVERWHELM_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_OVERWHELM_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Overwhelm.dds</EventArt>
@@ -5489,7 +5489,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_OVERWHELM_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_OVERWHELM_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -5509,7 +5509,7 @@
 			<Type>EVENTTRIGGER_CORPORATE_EXPANSION</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CORPORATE_EXPANSION_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CORPORATE_EXPANSION_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -5530,7 +5530,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CORPORATE_EXPANSION_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CORPORATE_EXPANSION_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CorporateExpansion.dds</EventArt>
@@ -5549,7 +5549,7 @@
 			<Type>EVENTTRIGGER_HOSTILE_TAKEOVER</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HOSTILE_TAKEOVER_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HOSTILE_TAKEOVER_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HostileTakeover.dds</EventArt>
@@ -5571,7 +5571,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HOSTILE_TAKEOVER_DONE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HOSTILE_TAKEOVER_DONE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HostileTakeover.dds</EventArt>
@@ -5593,7 +5593,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CIV_GAME</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CIV_GAME</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CivGame.dds</EventArt>
@@ -5619,7 +5619,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_IMMIGRANTS</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_IMMIGRANTS</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Immigrants.dds</EventArt>
@@ -6166,7 +6166,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BATTLE_LASERS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BATTLE_LASERS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BattleLasers.dds</EventArt>
@@ -6233,7 +6233,7 @@
 			<Type>EVENTTRIGGER_NAPALM</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_NAPALM</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_NAPALM</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Napalm.dds</EventArt>
@@ -6260,7 +6260,7 @@
 			<Type>EVENTTRIGGER_BILLIONS_AND_BILLIONS</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BILLIONS_AND_BILLIONS</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BILLIONS_AND_BILLIONS</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BillionsAndBillions.dds</EventArt>
@@ -6287,7 +6287,7 @@
 			<Type>EVENTTRIGGER_REACTIVE_ARMOR</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_REACTIVE_ARMOR</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_REACTIVE_ARMOR</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ReactiveArmor.dds</EventArt>
@@ -6317,7 +6317,7 @@
 			<Type>EVENTTRIGGER_GREEK_FIRE</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_GREEK_FIRE</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_GREEK_FIRE</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/GreekFire.dds</EventArt>
@@ -6344,7 +6344,7 @@
 			<Type>EVENTTRIGGER_FREE_ENTERPRISE</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FREE_ENTERPRISE</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FREE_ENTERPRISE</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FreeEnterprise.dds</EventArt>
@@ -6366,7 +6366,7 @@
 			<Type>EVENTTRIGGER_FIAT_MONEY</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FIAT_MONEY</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FIAT_MONEY</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FiatMoney.dds</EventArt>
@@ -6392,7 +6392,7 @@
 			<Type>EVENTTRIGGER_CROSSING_THE_RUBICON</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CROSSING_THE_RUBICON</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CROSSING_THE_RUBICON</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6425,7 +6425,7 @@
 			<Type>EVENTTRIGGER_THE_GENERALS_PUTSCH</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_THE_GENERALS_PUTSCH</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_THE_GENERALS_PUTSCH</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6455,7 +6455,7 @@
 			<Type>EVENTTRIGGER_CURE_FOR_CANCER</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CURE_FOR_CANCER</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CURE_FOR_CANCER</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6479,7 +6479,7 @@
 			<Type>EVENTTRIGGER_CARNATION_REVOLUTION</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CARNATION_REVOLUTION</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CARNATION_REVOLUTION</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<bSinglePlayer>1</bSinglePlayer>
@@ -6514,7 +6514,7 @@
 			<Type>EVENTTRIGGER_SYNTHETIC_FUELS</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SYNTHETIC_FUELS</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SYNTHETIC_FUELS</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6542,7 +6542,7 @@
 			<Type>EVENTTRIGGER_ALTERNATIVE_ENERGY</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ALTERNATIVE_ENERGY</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ALTERNATIVE_ENERGY</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6559,11 +6559,11 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_ALTERNATIVE_ENERGY_DONE</Type>
 			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENT_TRIGGER_WORLD_ALTERNATIVE_ENERGY_DONE</Text>
+				<Text>TXT_KEY_EVENTTRIGGER_WORLD_ALTERNATIVE_ENERGY_DONE</Text>
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ALTERNATIVE_ENERGY_DONE</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ALTERNATIVE_ENERGY_DONE</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6584,7 +6584,7 @@
 			<Type>EVENTTRIGGER_MORE_FIAT_MONEY</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MORE_FIAT_MONEY</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MORE_FIAT_MONEY</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6608,11 +6608,11 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_INDUSTRIAL_ACTION</Type>
 			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENT_TRIGGER_WORLD_INDUSTRIAL_ACTION</Text>
+				<Text>TXT_KEY_EVENTTRIGGER_WORLD_INDUSTRIAL_ACTION</Text>
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_INDUSTRIAL_ACTION</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_INDUSTRIAL_ACTION</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/DockWorkersStrikeEvent.dds</EventArt>
@@ -6640,7 +6640,7 @@
 			<Type>EVENTTRIGGER_DARWINS_VOYAGE</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_DARWINS_VOYAGE</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6707,7 +6707,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PIRATES_OF_THE_NEUTRAL_ZONES</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATES_OF_THE_NEUTRAL_ZONES</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6726,7 +6726,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MALACCAN_PIRATES</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MALACCAN_PIRATES</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6748,7 +6748,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HENRY_MORGAN</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HENRY_MORGAN</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6770,7 +6770,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_STEDE_BONNET</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_STEDE_BONNET</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6792,7 +6792,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_THE_CORSAIRS</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_THE_CORSAIRS</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6814,7 +6814,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ILLYRIAN_PIRATES</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ILLYRIAN_PIRATES</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6873,7 +6873,7 @@
 			<Type>EVENTTRIGGER_V_GER</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_V_GER</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_V_GER</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6899,7 +6899,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CRUCIBLE_STEEL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CRUCIBLE_STEEL_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6932,7 +6932,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_POISON_ARROWS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_POISON_ARROWS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6958,7 +6958,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SANDSTORM_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SANDSTORM_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -6990,7 +6990,7 @@
 			<Type>EVENTTRIGGER_ARCHERY_FOUNDED</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ARCHERY_FOUNDED_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ARCHERY_FOUNDED_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<bOwnPlot>1</bOwnPlot>
@@ -7014,7 +7014,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SAILING_FOUNDED_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SAILING_FOUNDED_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<bOwnPlot>1</bOwnPlot>
@@ -7039,7 +7039,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_NATUROPATHY_FOUNDED_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_NATUROPATHY_FOUNDED_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<bOwnPlot>1</bOwnPlot>
@@ -7063,10 +7063,10 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PAPYRUS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PAPYRUS_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PAPYRUS_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PAPYRUS_2</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7097,7 +7097,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TRADE_FOUNDED_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TRADE_FOUNDED_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<bOwnPlot>1</bOwnPlot>
@@ -7120,7 +7120,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CHARIOTRY_FOUNDED_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CHARIOTRY_FOUNDED_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7151,7 +7151,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MERCENARIES_ANCIENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MERCENARIES_ANCIENT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/AncientMercenariesEvent.dds</EventArt>
@@ -7176,7 +7176,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MERCENARIES_CLASSICAL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MERCENARIES_CLASSICAL_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ClassicalMercenariesEvent.dds</EventArt>
@@ -7201,7 +7201,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MERCENARIES_MEDIEVAL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MERCENARIES_MEDIEVAL_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7228,38 +7228,38 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_1</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
 					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
 					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
 					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
 					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
 					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
 					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
 					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
 					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -7285,7 +7285,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TANNERY_GLUE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TANNERY_GLUE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7309,10 +7309,10 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_4</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PESTILENCE_4</Text>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_6</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PESTILENCE_6</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7334,7 +7334,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SEGMENTED_ARMOR_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SEGMENTED_ARMOR_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7360,7 +7360,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CHAIN_SHOT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CHAIN_SHOT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7396,7 +7396,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_GRAPE_SHOT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_GRAPE_SHOT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7429,7 +7429,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_COPPER_PLATING_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_COPPER_PLATING_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7580,7 +7580,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_DRUIDS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_DRUIDS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7607,7 +7607,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TREASURY_PLUNDERED_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TREASURY_PLUNDERED_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7638,7 +7638,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_FULLERENES_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_FULLERENES_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7668,7 +7668,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ARTIFICIAL_ELEMENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ARTIFICIAL_ELEMENT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7692,7 +7692,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BLACK_DEATH_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_BLACK_DEATH_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7719,7 +7719,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SMALLPOX_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SMALLPOX_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7746,7 +7746,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_REFINERY_EXPLOSION_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_REFINERY_EXPLOSION_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7772,7 +7772,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_UFO_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_UFO_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -8079,7 +8079,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SALT_MINE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SALT_MINE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SaltMine.dds</EventArt>
@@ -8146,7 +8146,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_WAR_MEMORIAL</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_WAR_MEMORIAL</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WarMemorial.dds</EventArt>
@@ -8171,7 +8171,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_GREAT_MONUMENTS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_GREAT_MONUMENTS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/GreatMonuments.dds</EventArt>
@@ -8199,7 +8199,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HERETICAL_RESEARCH_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HERETICAL_RESEARCH_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HereticalResearch.dds</EventArt>
@@ -8221,7 +8221,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HERETICAL_RESEARCH2_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HERETICAL_RESEARCH2_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HereticalResearch.dds</EventArt>
@@ -8243,7 +8243,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_STREAMLINED_GOVERNMENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_STREAMLINED_GOVERNMENT_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/StreamlinedGovernment.dds</EventArt>
@@ -8265,7 +8265,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TAX_COLLECTION_RECORDS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_TAX_COLLECTION_RECORDS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/TaxCollectionRecords.dds</EventArt>
@@ -8286,7 +8286,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PROMISING_COMMANDER_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PROMISING_COMMANDER_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/PromisingCommander.dds</EventArt>
@@ -8308,7 +8308,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LOYALTY_TESTS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LOYALTY_TESTS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/LoyaltyTests.dds</EventArt>
@@ -8336,7 +8336,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EXPENSIVE_HABITS_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_EXPENSIVE_HABITS_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ExpensiveHabits.dds</EventArt>
@@ -8364,7 +8364,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ACADEMIC_FUNDING</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_ACADEMIC_FUNDING</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/AcademicFunding.dds</EventArt>
@@ -8389,7 +8389,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MAJOR_IN_HUMANITIES</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MAJOR_IN_HUMANITIES</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MajorInHumanities.dds</EventArt>
@@ -8413,7 +8413,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SOCIAL_STAGNATION</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SOCIAL_STAGNATION</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SocialStagnation.dds</EventArt>
@@ -9482,27 +9482,27 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
 					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
 					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
 					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
 					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_INDUSTRIAL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS_TREASURE_INDUSTRIAL_1</Text>
 					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_INDUSTRIAL_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS_TREASURE_INDUSTRIAL_1</Text>
 					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -9530,7 +9530,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_COMPULSORY_DEM</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_COMPULSORY_DEM</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9554,7 +9554,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HARRY_POTTER</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HARRY_POTTER</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9579,7 +9579,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_LESS_DICTATOR</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_LESS_DICTATOR</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9601,7 +9601,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_UNLIMITED_POWER</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_UNLIMITED_POWER</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9625,7 +9625,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SUPER_VIRUS</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SUPER_VIRUS</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9658,7 +9658,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_NEW_WORLD</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_NEW_WORLD</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9687,7 +9687,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_DOCK_WORKERS_STRIKE</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_DOCK_WORKERS_STRIKE</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9936,7 +9936,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_STUCK_IN_SWAMP_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_STUCK_IN_SWAMP_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/StuckInSwamp.dds</EventArt>
@@ -9981,7 +9981,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_HERO_SPAWN_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_HERO_SPAWN_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10132,7 +10132,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_COCK_FIGHTS</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_COCK_FIGHTS</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10160,7 +10160,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SNAKEOIL</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SNAKEOIL</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10187,7 +10187,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_IDITAROD</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_IDITAROD</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10217,7 +10217,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SHERIFF</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_SHERIFF</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10247,7 +10247,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MUSICOFGODS</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MUSICOFGODS</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10268,7 +10268,7 @@
 		<Type>EVENTTRIGGER_VOLCANO_ERUPTION_EXTINCT</Type>
 		<TriggerTexts>
 			<TriggerText>
-				<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Text>
+				<Text>TXT_KEY_EVENTTRIGGER_VOLCANO_EXTINCT</Text>
 			</TriggerText>
 		</TriggerTexts>
 		<iPercentGamesActive>100</iPercentGamesActive>
@@ -10295,7 +10295,7 @@
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_NEW</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_NEW</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_VOLCANO_NEW</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10313,7 +10313,7 @@
 			<Type>EVENTTRIGGER_VOLCANO_GOES_EXTINCT</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCTION</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_VOLCANO_EXTINCTION</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10334,7 +10334,7 @@
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_DORMANT</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_VOLCANO_DORMANT</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10376,7 +10376,7 @@
 			<Type>EVENTTRIGGER_VOLCANO_GOES_DORMANT</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_SLEEP</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_VOLCANO_SLEEP</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10428,7 +10428,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITYFIRE_1</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITYFIRE_1</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/cityfire1.dds</EventArt>
@@ -10454,7 +10454,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITYFIRE_2</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITYFIRE_2</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/cityfire2.dds</EventArt>
@@ -10481,7 +10481,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITYFIRE_3</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITYFIRE_3</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/cityfire3.dds</EventArt>
@@ -10509,7 +10509,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITYFIRE_4</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITYFIRE_4</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/cityfire4.dds</EventArt>
@@ -10537,7 +10537,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_CITYFIRE_5</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_CITYFIRE_5</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/cityfire5.dds</EventArt>
