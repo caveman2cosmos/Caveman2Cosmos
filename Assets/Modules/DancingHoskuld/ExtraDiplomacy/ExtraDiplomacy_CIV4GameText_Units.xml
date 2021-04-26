@@ -46,45 +46,6 @@
 		</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_ABRAHAM_LINCOLN</Tag>
-		<English>Abraham Lincoln</English>
-		<French>
-			<Text>Abraham Lincoln</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Abraham Lincoln</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Abramo Lincoln</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Abraham Lincoln</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Abraham Lincoln</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-		<Chinese>
-			<Text>Abraham Lincoln</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Chinese>
-		<Portuguese>
-			<Text>Abraham Lincoln</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ALCIBIADES</Tag>
 		<English>Alcibiades</English>
 		<French>
@@ -431,45 +392,6 @@
 		</Chinese>
 		<Portuguese>
 			<Text>Emperor Akihito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_EMPEROR_HIROHITO</Tag>
-		<English>Emperor Hirohito</English>
-		<French>
-			<Text>Empereur Hirohito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Emperor Hirohito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Imperatore Hirohito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Emperor Hirohito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Emperor Hirohito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-		<Chinese>
-			<Text>Emperor Hirohito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Chinese>
-		<Portuguese>
-			<Text>Emperor Hirohito</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Portuguese>
@@ -1411,45 +1333,6 @@
 		</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_SELAHADINE_EYUBI</Tag>
-		<English>Selahadine Eyubi</English>
-		<French>
-			<Text>Selahadine Eyubi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Selahadine Eyubi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Selahadine Eyubi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Selahadine Eyubi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Selahadine Eyubi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-		<Chinese>
-			<Text>Selahadine Eyubi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Chinese>
-		<Portuguese>
-			<Text>Selahadine Eyubi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SIR_FRANCIS_BACON</Tag>
 		<English>Sir Francis Bacon</English>
 		<French>
@@ -1601,45 +1484,6 @@
 		</Chinese>
 		<Portuguese>
 			<Text>Willy Brandt</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_WINSTON_CHURCHILL</Tag>
-		<English>Winston Churchill</English>
-		<French>
-			<Text>Winston Churchill</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Winston Churchill</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Winston Churchill</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Winston Churchill</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Winston Churchill</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-		<Chinese>
-			<Text>Winston Churchill</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Chinese>
-		<Portuguese>
-			<Text>Winston Churchill</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Portuguese>
