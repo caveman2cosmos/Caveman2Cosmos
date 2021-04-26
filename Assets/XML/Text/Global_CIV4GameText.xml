@@ -10808,15 +10808,6 @@
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NEWS_EVENT_BARBARIAN_ATTITUDE_3</Tag>
-		<English>The %s2_civ_adjective tribe has accused us of being involved in Barbarian activity. This intolerable event has completely spoiled our relationship. We are at war now!</English>
-		<French>La tribu %s2_civ_adjective nous a accusé d'être impliqué dans des activités barbares. Cet événement intolérable a dégradé nos relations, à tel point que nous somme en Guerre maintenant!</French>
-		<Italian>La tribù %s2_civ_adjective ci ha accusato di essere coinvolti in attività barbare. Questo evento intollerabile ha rovinato completamente le nostre relazioni. Ora siamo in guerra!</Italian>
-		<Spanish>La tribu %s2:2_civ_adjective nos ha acusado de estar envueltos en actividades bárbaras. Este intolerable evento ha roto por completo nuestras relaciones. ¡Ahora estamos en guerra!</Spanish>
-		<Polish>Plemię %s2_civ_adjective zostaje oskarżone o Aktywność Barbarzyńców. To wydarzenie kompletnie rujnuje ich stosunki. Wywołują Wojnę!</Polish>
-		<Russian>Племя %s2_civ_adjective обвинило нас в причастности к злодеяниям варваров. Это невыносимое событие полностью испортило наши отношения. Отныне мы в состоянии войны!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_NEWS_EVENT_BEST_HUNTERS_1</Tag>
 		<English>A member of the %s1_civ_adjective tribe has stood out among their hunters. He has taught the rest of the tribe how to become a [COLOR_UNIT_TEXT]Good Hunter[COLOR_REVERT].</English>
 		<French>Un membre de la tribu %s1_civ_adjective a étudié et rassemblé l'expérience de ses pairs. Il a appris au reste de la tribu comment devenir un [COLOR_UNIT_TEXT]Bon Chasseur[COLOR_REVERT].</French>
@@ -10842,60 +10833,6 @@
 		<Spanish>Un miembro de la tribu %s1:2_civ_adjective ha destacado entre los demás cazadores. Ha enseñado al resto de la tribu cómo ser un [COLOR_UNIT_TEXT]Gran cazador[COLOR_REVERT].</Spanish>
 		<Polish>Członek plemienia %s1_civ_adjective odkrył właśnie jak polepszyć polowanie. Przekazał wiedzę reszcie plemienia jak stać się [COLOR_UNIT_TEXT]Wielkim Łowcą[COLOR_REVERT].</Polish>
 		<Russian>Среди охотников выделялся член племени %s1_civ_adjective. Он научил остальную часть племени всему, что дожен уметь [COLOR_UNIT_TEXT]Великий охотник[COLOR_REVERT].</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NEWS_EVENT_DRUG_TRAFFICKING_1</Tag>
-		<English>%s1_civ_adjective empire has agreed to stop cultivating the Coca Plant.</English>
-		<French>L'Empire %s1_civ_adjective a accepté d'arrêter de cultiver les plants de Coca.</French>
-		<Italian>L'impero %s1_civ_adjective ha acconsentito a smettere di coltivare Coca.</Italian>
-		<Spanish>La civilización %s1:2_civ_adjective ha aceptado dejar de cultivar hojas de Coca.</Spanish>
-		<Polish>Imperium %s1_civ_adjective zgodziło się na zamknięcie Plantacji kokainy.</Polish>
-		<Russian>Держава %s1_civ_adjective согласилась прекратить выращивать растение коки.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NEWS_EVENT_DRUG_TRAFFICKING_2</Tag>
-		<English>%s1_civ_adjective empire has not agreed to stop cultivating the Coca Plant. %s3_civ_adjective leader is outraged with this attitude.</English>
-		<French>L'Empire %s1_civ_adjective a refusé d'arrêter de cultiver les plants de Coca. Le Leader %s3_civ_adjective est outréde cette attitude.</French>
-		<Italian>L'impero %s1_civ_adjective non ha accosentito a smettere di coltivare Coca. Il leader %s3_civ_adjective è indignato da questo atteggiamento.</Italian>
-		<Spanish>El imperio %s1_civ_adjective no quiere dejar de cultivar hojas de Coca. El líder %s3_civ_adjective está indignado con su actitud.</Spanish>
-		<Polish>%s1_civ_adjective nie zgodziło się na zamknięcie Plantacji Kokainy. %s3_civ_adjective jest wściekłe.</Polish>
-		<Russian>Держава %s1_civ_adjective отказалась прекратить выращивание коки. Лидер %s3_civ_adjective возмущен подобным отношением.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NEWS_EVENT_DRUG_TRAFFICKING_3</Tag>
-		<English>%s1_civ_adjective Drug Traffickers have attacked the %s3_civ_adjective empire! This act of vengeance has triggered war between both nations!</English>
-		<French>Des traffiquants de drogue %s1_civ_adjective ont attaqué l'empire %s3_civ_adjective ! Cet acte de vengeance a déclenché une guerre entre les deux nations!</French>
-		<Italian>I narcotrafficanti %s1_civ_adjective hanno attaccato l'impero %s3_civ_adjective! Quest'atto di vendetta ha scatento una guerra tra le due nazioni!</Italian>
-		<Spanish>¡Narcotraficantes %s1:3_civ_adjective han atacado al imperio %s3_civ_adjective! Este acto de venganza ha provocado la guerra entre ambas naciones.</Spanish>
-		<Polish>Handlarze Narkotyków z %s1_civ_adjective atakują imperium %s3_civ_adjective! Spowodowało to eskalacje nienawiści i wojnę między dwoma narodami!</Polish>
-		<Russian>Наркодилеры державы %s1_civ_adjective напали на бойцов державы %s3_civ_adjective! Этот акт мести спровоцировал войну между двумя странами!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NEWS_EVENT_EARTHQUAKE_1</Tag>
-		<English>Something terrible and strange has happened in the %s1_civ_adjective city of %s2_city. The ground has trembled as it destroyed everything on it.</English>
-		<French>Quelque chose de terrible et d'étrange s'est produit dans la ville %s1_civ_adjective de %s2_city. Le sol a tremblé en détruisant tout ce qu'elle contenait.</French>
-		<Italian>Qualcosa di terribile e strano è successo nella città %s1_civ_adjective di %s2_city. La terra ha tremato distruggendo tutte le costruzioni.</Italian>
-		<Spanish>Algo terrible y extraño ha sucedido en la ciudad %s1:2_civ_adjective de %s2_city. La tierra ha temblado, destruyendo todo lo que había encima de ella.</Spanish>
-		<Polish>Coś strasznego wydarzyło się w mieście plemienia %s1_civ_adjective: %s2_city. Ziemia zaczęła się trząść i wszystko zostało zniszczone!</Polish>
-		<Russian>Нечто ужасное и странное произошло в городе %s2_city державы %s1_civ_adjective. Дрожь земли привела к разрушениям на ее поверхности.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NEWS_EVENT_IMMIGRANTS_ARRIVAL_1</Tag>
-		<English>A nomad tribe has arrived to %s1_civ_adjective lands.</English>
-		<French>Une tribu nomade est arrivée dans les terres %s1_civ_adjective.</French>
-		<Italian>Una tribù nomade è arrivata nelle terre %s1_civ_adjective.</Italian>
-		<Spanish>Una tribu nómada ha llegado a tierras %s1:4_civ_adjective.</Spanish>
-		<Polish>Koczownicy dotarli do ziem %s1_civ_adjective.</Polish>
-		<Russian>Племя кочевников прибыло на земли %s1_civ_adjective.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NEWS_EVENT_IMMIGRANT_BETRAYER_1</Tag>
-		<English>The %s1_civ_adjective tribe has been betrayed by a marauding tribe that was allowed to join them.</English>
-		<French>La tribu %s1_civ_adjective a été trahie par une tribu en maraude qui a été autorisée à les rejoindre.</French>
-		<Italian>La tribù %s1_civ_adjective è stata tradita da una tribù di saccheggiatori a cui era stato permesso di unirsi a loro.</Italian>
-		<Spanish>La tribu %s1:2_civ_adjective ha sido traicionada por una tribu nómada a la que se la permitió unírseles.</Spanish>
-		<Polish>Plemię %s1_civ_adjective zostali zdradzeni przez koczowników. Skradli złoto i uciekli.</Polish>
-		<Russian>Племя %s1_civ_adjective было предано другим племенем, которое ранее присоединлось к их набегу.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEWS_EVENT_LABOR_UNIONS_1</Tag>
@@ -11171,44 +11108,12 @@
 		<Russian>Удаляет все корпорации из города.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_LAWYER_LITIGATION_FAIL</Tag>
-		<English>Legal proceedings drag on in %s1_city.</English>
-		<French>Des Procédures judiciaires s'éternisent dans la ville de %s1_city.</French>
-		<Italian>I procedimenti giudiziari si trascinano a %s1_city.</Italian>
-		<Spanish>El procedimiento judicial se ha estancado en %s1_city.</Spanish>
-		<Polish>Spory sądowe przeciągają się w mieście %s1_city.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_LAWYER_LITIGATION_FAIL_MESSAGE</Tag>
-		<English>Legal proceedings drag on in %s1_city.</English>
-		<French>Des Procédures judiciaires s'éternisent dans la ville de %s1_city.</French>
-		<Italian>I procedimenti giudiziari si trascinano a %s1_city.</Italian>
-		<Spanish>El procedimiento judicial se ha estancado en %s1_city.</Spanish>
-		<Polish>Spory sądowe przeciągają się w mieście %s1_city.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_LAWYER_LITIGATION_MESSAGE</Tag>
 		<English>All Corporations have been removed from the city.</English>
 		<French>Toutes les Corporations ont été renvoyées de la ville.</French>
 		<Italian>Tutte le corporazioni sono state rimosse dalla città.</Italian>
 		<Spanish>Todas las corporaciones han sido expulsadas de la ciudad.</Spanish>
 		<Polish>Wszystkie korporacje zostały usunięte.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_LAWYER_LITIGATION_SUCCESS</Tag>
-		<English>Your lawyer has successfully filed a suit against big business in %s1_city.</English>
-		<French>Votre avocat a réussi à intenter un procès contre des grandes entreprises dans la ville de %s1_city.</French>
-		<Italian>Il nostro avvocato ha vinto una causa contro una grande impresa a %s1_city.</Italian>
-		<Spanish>Tu abogado ha presentado con éxito una demanda contra las grandes empresas en %s1_city.</Spanish>
-		<Polish>Twój prawnik wygrał sprawę i pozbył się korporacji z miasta %s1_city.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_LAWYER_LITIGATION_SUCCESS_MESSAGE</Tag>
-		<English>Your lawyer has successfully filed a suit against big business in %s1_city.</English>
-		<French>Votre avocat a réussi à intenter un procès contre des grandes entreprises dans la ville de %s1_city.</French>
-		<Italian>Il nostro avvocato ha vinto una causa contro una grande impresa a %s1_city.</Italian>
-		<Spanish>Tu abogado ha presentado con éxito una demanda contra las grandes empresas en %s1_city.</Spanish>
-		<Polish>Twój prawnik wygrał sprawę i pozbył się korporacji z miasta %s1_city.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_LESS_ANARCHY</Tag>
@@ -11265,15 +11170,6 @@
 		<Spanish>Nuestr[NUM1:o:a:os:as] %s1 [NUM1:ha:ha:han:han] domado [NUM2:un:una:unos:unas] %s2</Spanish>
 		<Polish>Nasza jednostka %s1 oswoiła %s2</Polish>
 		<Russian>Íàø %s1 ïðèðó÷èë %s2 </Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_SUBDUE_SEA</Tag>
-		<English>Subdue Sea Animal</English>
-		<French>Apprivoiser l'Animal marin</French>
-		<Italian>Addomestica animale marino</Italian>
-		<Spanish>Domar animal marino</Spanish>
-		<Polish>Oswojone Zwierze Morskie</Polish>
-		<Russian>Ïðèðó÷èòü ìîðñêîãî çâåðÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_TALES_MESSAGE</Tag>

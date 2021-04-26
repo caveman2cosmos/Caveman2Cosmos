@@ -152,11 +152,6 @@
 		<Russian>Ваша мина установлена в режим ожидания.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_DETONATE_NUCLEAR_MINE</Tag>
-		<English>Detonate Nuclear Mine</English>
-		<Russian>Âçîðâàòü ÿäåðíóþ ìèíó</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_DETONATE_NUCLEAR_MINE_MESSAGE</Tag>
 		<English>Your nuclear mine has exploded.</English>
 		<Russian>Ваша ядерная мина сдетонировала.</Russian>

@@ -102,14 +102,6 @@
 		<Russian>Ëþäè íàñëàæäàëèñü èãðàìè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE</Tag>
-		<English>This will consume the unit providing a culture and science boost based on which building is available in the city (Cave Paintings, Story Tellers Hut, School of Scribes, Library or University).</English>
-		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures des cavernes, Hutte du Conteur d'histoire, Ecole des scribes, Bibliothèque ou Université).</French>
-		<Italian>Consumerà l'unità fornendo un bonus a cultura e ricerca basato sugli edifici presenti in città (Pitture rupestri, Capanna del cantastorie, Scuola di scribi, Biblioteca o Università).</Italian>
-		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości kultury i nauki bazując na tym jakie budynki są dostępne w mieście (Malunki Naskalne, Chata Opowiadacza, Szkoła Skrybów, Uniwersytet).</Polish>
-		<Russian>Ýòî áóäåò ïîòðåáëÿòü îòðÿä, îáåñïå÷èâàþùóþ êóëüòóðó è íàó÷íîå ïîâûøåíèå, îñíîâàííîå, íà êîòîðîì çäàíèå äîñòóïíî â ãîðîäå (Øêîëà Ïèñöîâ, Áèáëèîòåêà èëè Óíèâåðñèòåò).</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_CAVE</Tag>
 		<English>This will consume the unit providing a culture and science boost. Better results can be had in a city with a School of Scribes, Library or University.</English>
 		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Ecole des scribes, Bibliothèque ou université).</French>
@@ -180,20 +172,6 @@
 		<Italian>Hai studiato l'animale.</Italian>
 		<Polish>Zbadałeś zwierzę.</Polish>
 		<Russian>Âû îáó÷èëè æèâîòíîå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_HERD</Tag>
-		<English>Attempt to convert the subdued animal into a herd resource.</English>
-		<French>Essayez de convertir l'animal apprivoisé en ressource de troupeau.</French>
-		<Polish>Spróbuj zmienić oswojone zwierzę w stado (surowiec na mapie).</Polish>
-		<Russian>Ïîïûòêà ïðåîáðàçîâàòü ïðèðó÷åííîå æèâîòíîå â ðåñóðñ ñòàäà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_HERD_MESSAGE</Tag>
-		<English>A herd now roams this plot.</English>
-		<French>Un troupeau parcourt maintenant cette parcelle.</French>
-		<Polish>Od tego momentu stada zwierząt przemierzają ten teren.</Polish>
-		<Russian>Ñòàäî ñåé÷àñ êî÷óåò ïî ýòîìó ó÷àñòêó.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_PASTURE</Tag>

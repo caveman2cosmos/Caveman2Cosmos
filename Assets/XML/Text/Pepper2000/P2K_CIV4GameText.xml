@@ -1720,12 +1720,6 @@
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_EXPLORE_DISTANT</Tag>
-		<English>Do Research Mission</English>
-		<French>Faire une Mission de Recherche</French>
-		<Russian>Íà÷àòü ìèññèþ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_DISTANT_COSMOS</Tag>
 		<English>Do Research Mission</English>
 		<French>Faire une Mission de Recherche</French>
@@ -1733,12 +1727,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_DISTANT_COSMOS_MESSAGE</Tag>
-		<English>Mission Successful!</English>
-		<French>Mission Réussie !</French>
-		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_EXPLORE_DISTANT_MESSAGE</Tag>
 		<English>Mission Successful!</English>
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>

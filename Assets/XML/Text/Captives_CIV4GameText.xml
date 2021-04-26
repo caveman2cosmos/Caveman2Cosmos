@@ -141,14 +141,6 @@
 		<Russian>Íàñåëåíèå ãîðîäà óâåëè÷èâàåòñÿ íà îäíîãî æèòåëÿ. Îòðÿä èñ÷åçàåò.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MSG_CAPTURED_SLAVES_AS_GATHERERS</Tag>
-		<English>You have "freed" %d1 settled slaves. (Captive - Freed Slave).</English>
-		<French>Vous avez "libéré" %d1 Esclave sédentaires. (Prisonnier - Esclave libéré).</French>
-		<Italian>Hai "liberato" %d1 schiavi sedentari. (Prigioniero - Schiavo liberato).</Italian>
-		<Polish>Uwolniłeś %d1 niewolników. (Wyzwoleni Niewolnicy).</Polish>
-		<Russian>Âû "îñâîáîäèëè" %d1 çäåøíèõ ðàáîâ. (Ïëåííèê - âîëüíîîòïóùåííèê).</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_ARTISTS</Tag>
 		<English>The city had %d1 Artists. You killed %d1 and %d1 were captured. (Captive - Artist).</English>
 		<French>La Ville a %d1 Artistes. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Artiste).</French>
@@ -233,13 +225,6 @@
 		<French>Rejoindre la Ville. Augmente d'autant la population.</French>
 		<Polish>Dołącz do miasta. (Częściowy wzrost punktów populacji)</Polish>
 		<Russian>Ïîñåëèòüñÿ â ãîðîäå (÷àñò. ïðèðîñò íàñåëåíèÿ)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_JOIN_CITY_FREED_SLAVE_MESSAGE</Tag>
-		<English>The freed slave has joined your city. This is represented as a boost to food.</English>
-		<French>L'Esclave libéré a rejoint votre ville. Représenté par un bonus de nourriture.</French>
-		<Polish>Uwolnienie niewolnicy dołączają się do populacji miasta dostarczając my odrobinę żywności.</Polish>
-		<Russian>Îñâîáîæäåííûé ðàá ïîñåëèëñÿ â âàøåì ãîðîäå. Ýòî ïðåäñòàâëåíî êàê ïîïîëíåíèå àìáàðà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_CITY_POPULATION</Tag>
