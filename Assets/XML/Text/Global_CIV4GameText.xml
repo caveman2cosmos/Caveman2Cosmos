@@ -6443,26 +6443,6 @@
 		<Russian>%d1 XP (призванные отряды получают половину обычного опыта)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_EXTRA_FOOD_TURNS</Tag>
-		<English>Extra [ICON_FOOD] from location (%d1 turns remaining)</English>
-		<French>[ICON_FOOD] Suppl. de l'emplacement(%d1 tours restants)</French>
-		<German>Zusätzlich [ICON_FOOD] durch Standort (%d1 verbleibende Runden)</German>
-		<Italian>Extra [ICON_FOOD] dalla posizione (%d1 turni rimanenti)</Italian>
-		<Spanish>[ICON_FOOD] extra de la ubicación (%d1 [NUM1:turno restante:turnos restantes])</Spanish>
-		<Polish>Dodatkowe [ICON_FOOD] od lokacji (pozostało tur: %d1)</Polish>
-		<Russian>Äîïîëíèòåëüíûå [ICON_FOOD] îò ëîêàöèè (%d1 õîäîâ îñòàëîñü)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_EXTRA_HAMMERS_TURNS</Tag>
-		<English>Extra [ICON_PRODUCTION] from location (%d1 turns remaining)</English>
-		<French>[ICON_PRODUCTION] Suppl. de l'emplacement(%d1 tours restants)</French>
-		<German>Zusätzlich [ICON_PRODUCTION] durch Standort (%d1 verbleibende Runden)</German>
-		<Italian>Extra [ICON_PRODUCTION] dalla posizione (%d1 turni rimanenti)</Italian>
-		<Spanish>[ICON_PRODUCTION] extra de la ubicación (%d1 [NUM1:turno restante:turnos restantes])</Spanish>
-		<Polish>Dodatkowe [ICON_PRODUCTION] od lokacji (pozostało tur: %d1)</Polish>
-		<Russian>Äîïîëíèòåëüíûå [ICON_PRODUCTION] îò ëîêàöèè (%d1 õîäîâ îñòàëîñü)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_EXTRA_RANGE</Tag>
 		<English>[ICON_BULLET]%D1_Change Extra Operation Range For Aircraft</English>
 		<French>[ICON_BULLET]%D1_Change de Portée pour les Opérations aériennes</French>
@@ -6809,10 +6789,6 @@
 		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per %s2</Italian>
 		<Spanish>[ICON_BULLET]%D1%%[ICON_PRODUCTION] por %s2</Spanish>
 		<Polish>[ICON_BULLET]%D1%%[ICON_PRODUCTION] dla %s2</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_TOTAL</Tag>
-		<English>Total: %d1%%[ICON_PRODUCTION]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_SLIDER_PERCENT_FLOAT</Tag>

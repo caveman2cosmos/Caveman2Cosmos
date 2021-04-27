@@ -335,6 +335,42 @@
 		<French>Le responsable %s2_UnitName %s1_CivAdj a été repéré et son action déjouée!</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_BASE_YIELD</Tag>
+		<English>Base %s1: %d2 %F3</English>
+		<French>%s1 de base : %d2 %F3</French>
+		<German>Grundwert %s1: %d2 %F3</German>
+		<Italian>%s1 base: %d2 %F3</Italian>
+		<Spanish>%s1 base: %d2 %F3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_EXTRA_YIELD</Tag>
+		<English>Extra %s1: %d2 %F3</English>
+		<French>%s1 de base : %d2 %F3</French>
+		<German>Grundwert %s1: %d2 %F3</German>
+		<Italian>%s1 base: %d2 %F3</Italian>
+		<Spanish>%s1 base: %d2 %F3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE</Tag>
+		<English>[ICON_BULLET]%D1 %F2 from %s3</English>
+		<French>[ICON_BULLET]%D1 %F2 en raison de %s3</French>
+		<German>[ICON_BULLET]%D1 %F2 durch %s3</German>
+		<Italian>[ICON_BULLET]%D1 %F2 [NUM3:da:dai] %s3</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2 por %s3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_YIELD_OTHER</Tag>
+		<English>[ICON_BULLET]%D1 %F2 from other</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD</Tag>
+		<English>Sum: %d1%% = %s2%F3</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_FINAL_YIELD</Tag>
+		<English>Total: %d1 %F2</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE</Tag>
 		<English>[ICON_BULLET]%D1%F2 Free Commerce</English>
 		<French>[ICON_BULLET]%D1%F2 en raison du libre échange</French>

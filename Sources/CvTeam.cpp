@@ -7632,7 +7632,7 @@ void CvTeam::changeBuildingYieldChange(BuildingTypes eIndex1, YieldTypes eIndex2
 			{
 				algo::for_each(GET_PLAYER((PlayerTypes)iI).cities()
 					| filtered(CvCity::fn::hasFullyActiveBuilding(eIndex1)),
-					CvCity::fn::changeBaseYieldRate(eIndex2, getBuildingYieldChange(eIndex1, eIndex2))
+					CvCity::fn::changeExtraYield(eIndex2, getBuildingYieldChange(eIndex1, eIndex2))
 				);
 			}
 		}
