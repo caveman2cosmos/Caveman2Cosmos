@@ -226,7 +226,10 @@ public:
 	bool isAnyUnitCombatFreeExperience() const { return m_piUnitCombatFreeExperience != NULL; }
 	bool isAnyDomainFreeExperience() const { return m_piDomainFreeExperience != NULL; }
 	int getDomainProductionModifier(int i) const;
-	int getPrereqAndTechs(int i) const;
+
+	const std::vector<TechTypes>& getPrereqAndTechs() const;
+	const python::list cyGetPrereqAndTechs() const;
+
 	int getBuildingHappinessChanges(int i) const;
 	int getPrereqNumOfBuilding(int i) const;
 
@@ -777,7 +780,7 @@ protected:
 	CvString m_szArtDefineTag;
 	CvString m_szMovieDefineTag;
 
-	int* m_piPrereqAndTechs;
+	std::vector<TechTypes> m_piPrereqAndTechs;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;

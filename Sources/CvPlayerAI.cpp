@@ -9800,14 +9800,11 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 								{
 									bHasTechForBuilding = false;
 								}
-								for (int iPrereqIndex = 0; bHasTechForBuilding && iPrereqIndex < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iPrereqIndex++)
+								foreach_(const TechTypes ePrereqTech, kLoopBuilding.getPrereqAndTechs())
 								{
-									if (kLoopBuilding.getPrereqAndTechs(iPrereqIndex) != NO_TECH)
+									if (!kTeam.isHasTech(ePrereqTech))
 									{
-										if (!(kTeam.isHasTech((TechTypes)(kLoopBuilding.getPrereqAndTechs(iPrereqIndex)))))
-										{
-											bHasTechForBuilding = false;
-										}
+										bHasTechForBuilding = false;
 									}
 								}
 

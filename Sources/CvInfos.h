@@ -2224,8 +2224,10 @@ public:
 
 	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const;
 
+	const std::vector<TechTypes>& getPrereqAndTechs() const;
+	const python::list cyGetPrereqAndTechs() const;
+
 	// Arrays
-	int getPrereqAndTechs(int i) const;
 	int getFlavorValue(int i) const;
 	int getTerrainAttackModifier(int i) const;
 	int getTerrainDefenseModifier(int i) const;
@@ -2475,7 +2477,7 @@ protected:
 
 	// Arrays
 
-	int* m_piPrereqAndTechs;
+	std::vector<TechTypes> m_piPrereqAndTechs;
 	std::vector<BonusTypes> m_piPrereqOrBonuses;
 	int* m_piFlavorValue;
 	int* m_piTerrainAttackModifier;
