@@ -1878,16 +1878,6 @@
 		<Russian>Î ìîåé ùåäðîñòè ãîâîðÿò âî âñåì ìèðå, [CT_NAME]. À î òâîåé?</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_MENES_1</Tag>
-		<English>Furnish [OUR_CIV_SHORT] with these gifts and we will tolerate your existence for a little while longer.</English>
-		<French>Si vous offrez ce présent aux [OUR_CIV_SHORT], nous tolérerons votre existence un peu plus longtemps.</French>
-		<German>Bietet mir etwas von Wert, und ich werde Eure Existenz ein klein wenig länger erdulden.</German>
-		<Italian>Fornisci questi doni al[OUR_CIV_SHORT:2] e ti permetteremo di vivere ancora un po'.</Italian>
-		<Polish>Jeżeli dostarczysz narodowi [OUR_CIV_ADJ] podarunki, to pozwolimy Ci jeszcze trochę egzystować.</Polish>
-		<Spanish>Si proporcionáis estos regalos a [OUR_CIV_SHORT] toleraremos vuestra existencia durante algo más de tiempo.</Spanish>
-		<Russian>Åñëè [OUR_CIV_SHORT] ïîëó÷àò íåáîëüøîé ïîäàðîê, îíè, òàê è áûòü, åùå íåìíîãî ïîòåðïÿò âàøå ñóùåñòâîâàíèå.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_MONTEZUMA_1</Tag>
 		<English>The [OUR_EMPIRE] requests from you a small donation, [CT_NAME]. Or, if you prefer, we can battle until one of us is destroyed.</English>
 		<French>L'[OUR_EMPIRE] vous demande un modeste présent, [CT_NAME]. Mais si vous préférez, nous pouvons nous battre jusqu'à la mort.</French>
@@ -2196,16 +2186,6 @@
 		<Polish>Czas tej rozmowy jest tak krótki jak będzie krótka pamięć o cywilizacji [CT_CIV_ADJ], jeżeli odmówisz złożenia mi daniny.</Polish>
 		<Spanish>Se acaba el tiempo, como se acabará el recuerdo de [CT_CIV_SHORT] si nos negáis esta pequeña muestra de aprecio.</Spanish>
 		<Russian>Âðåìÿ ëåòèò áûñòðî. Ñêîðî î òàêîì íàðîäå, êàê [CT_CIV_SHORT], íèêòî íå âñïîìíèò. Íå ñòîèò íàì îòêàçûâàòü.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_MENES_1</Tag>
-		<English>Glorious [OUR_CIV_SHORT] requires from you a token of aubmission. Or would you prefer that we wipe [CT_CIV_SHORT] from the face of the planet?</English>
-		<French>Les glorieux [OUR_CIV_SHORT] vous demandent un gage de soumission. A moins que vous ne préfériez voir disparaître les [CT_CIV_SHORT] de la surface de la planète?</French>
-		<German>Mein glorreiches Volk erwartet von Euch ein Zeichen der Ehrerbietung! Oder wäre es Euch vielleicht lieber, wenn wir Eure Zivilisation vom Antlitz der Erde tilgen würden?</German>
-		<Italian>[OUR_CIV_SHORT:1] richiede un pegno di sottomissione. Oppure preferisci che [CT_CIV_SHORT:2] faccia una brutta fine?</Italian>
-		<Polish>Naród [OUR_CIV_ADJ] pragnie od Ciebie oznaki poddaństwa. Albo jeśli tak woli lud [CT_CIV_ADJ], to zniszczymy was.</Polish>
-		<Spanish>La gloriosa civilización de [OUR_CIV_SHORT] os exige una muestra de sumisión. ¿O preferís que borremos [CT_CIV_SHORT] de la faz de la Tierra?</Spanish>
-		<Russian>Ñëàâíûå [OUR_CIV_SHORT] òðåáóþò îò âàñ ïîä÷èíèòüñÿ è âûïëàòèòü êîíòðèáóöèþ. Èíà÷å [CT_CIV_SHORT] áóäóò óíè÷òîæåíû âñå äî åäèíîãî.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_MONTEZUMA_1</Tag>
@@ -2546,16 +2526,6 @@
 		<Polish>Porzuć chciwość, przyjacielu. Złóż mi hołd albo poznasz gniew [OUR_CIV_ADJ].</Polish>
 		<Spanish>¡Renunciad a la avaricia! Dadme un tributo o arriesgaos a despertar la cólera del pueblo [OUR_CIV_ADJ:1].</Spanish>
 		<Russian>Íå ñêóïèñü, äðóæèùå! Äàé ìíå òî, ÷òî ÿ ïðîøó, èíà÷å [OUR_CIV_ADJ] ñèëüíî ðàçãíåâàþòñÿ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_MENES_1</Tag>
-		<English>I want this right now. Do not make me angry - you wouldn't like me when I'm angry...</English>
-		<French>J'exige ceci immédiatement. Ne me mettez pas en colère... vous le regretteriez.</French>
-		<German>Diese Forderung ist umgehend zu erfüllen! Macht mich nicht wütend - Ihr wollt mich nicht wütend erleben...</German>
-		<Italian>Lo voglio subito. Non farmi arrabbiare, quando mi arrabbio non sono una persona piacevole...</Italian>
-		<Polish>Ja chcę to teraz. Nie denerwuj mnie - lepiej abym się nie zdenerwował</Polish>
-		<Spanish>Lo quiero ahora mismo. No me hagáis enfadar, no os gustaría verme de ese talante...</Spanish>
-		<Russian>Ìíå ýòî íóæíî. Ñåé÷àñ. Íå íóæíî ìåíÿ ñåðäèòü - òåáå ýòî íå ïîíðàâèòñÿ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_MONTEZUMA_1</Tag>
