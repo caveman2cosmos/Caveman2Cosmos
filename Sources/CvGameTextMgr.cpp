@@ -5652,61 +5652,45 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
 						}
 
-						int iDefExperienceKill;
-						iDefExperienceKill = (pDefender->defenseXPValue() * iAttackerStrength) / iDefenderStrength;
-						iDefExperienceKill = range(iDefExperienceKill, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
-
+						const int iDefExperienceKill =
+						(
+							range(
+								pDefender->defenseXPValue() * iAttackerStrength / iDefenderStrength,
+								GC.getMIN_EXPERIENCE_PER_COMBAT(),
+								GC.getMAX_EXPERIENCE_PER_COMBAT()
+							)
+						);
 						int iBonusAttackerXP = (iExperience * iAttackerExperienceModifier) / 100;
 						int iBonusDefenderXP = (iDefExperienceKill * iDefenderExperienceModifier) / 100;
 						int iBonusWithdrawXP = (pAttacker->getExperiencefromWithdrawal(iAttackerWithdrawalProbability) * iAttackerExperienceModifier) / 100;
 
-						//The following code adjusts the XP for barbarian encounters.  In standard game, barb and animal xp cap is 10,5 respectively.
-						/**Thanks to phungus420 for the following block of code! **/
-						if (pDefender->isAnimal())
+						// Toffer - Note: Doesn't take into account that some units ignore this limit.
+						if (pDefender->isNPC())
 						{
-							//animal
-							iExperience = range(iExperience, 0, GC.getANIMAL_MAX_XP_VALUE() - (pAttacker->getExperience()));
-							if (iExperience < 0)
+							const int iPotential = 
+							(
+								(
+									pDefender->isAnimal()
+									?
+									GC.getANIMAL_MAX_XP_VALUE()
+									:
+									GC.getBARBARIAN_MAX_XP_VALUE()
+								)
+								- pAttacker->getExperience()
+							);
+							if (iPotential > 0)
+							{
+								iExperience = range(iExperience, 0, iPotential);
+								iWithdrawXP = range(iWithdrawXP, 0, iPotential);
+
+								iBonusAttackerXP = range(iBonusAttackerXP, 0, std::max(0, iPotential - iExperience));
+								iBonusWithdrawXP = range(iBonusWithdrawXP, 0, std::max(0, iPotential - iWithdrawXP));
+							}
+							else
 							{
 								iExperience = 0;
-							}
-							iWithdrawXP = range(iWithdrawXP, 0, GC.getANIMAL_MAX_XP_VALUE() - (pAttacker->getExperience()));
-							if (iWithdrawXP < 0)
-							{
 								iWithdrawXP = 0;
-							}
-							iBonusAttackerXP = range(iBonusAttackerXP, 0, GC.getANIMAL_MAX_XP_VALUE() - (pAttacker->getExperience() + iExperience));
-							if (iBonusAttackerXP < 0)
-							{
 								iBonusAttackerXP = 0;
-							}
-							iBonusWithdrawXP = range(iBonusWithdrawXP, 0, GC.getANIMAL_MAX_XP_VALUE() - (pAttacker->getExperience() + iWithdrawXP));
-							if (iBonusWithdrawXP < 0)
-							{
-								iBonusWithdrawXP = 0;
-							}
-						}
-						if (pDefender->isHominid())
-						{
-							//normal barbarian
-							iExperience = range(iExperience, 0, GC.getBARBARIAN_MAX_XP_VALUE() - pAttacker->getExperience());
-							if (iExperience < 0)
-							{
-								iExperience = 0;
-							}
-							iWithdrawXP = range(iWithdrawXP, 0, GC.getBARBARIAN_MAX_XP_VALUE() - (pAttacker->getExperience()));
-							if (iWithdrawXP < 0)
-							{
-								iWithdrawXP = 0;
-							}
-							iBonusAttackerXP = range(iBonusAttackerXP, 0, GC.getBARBARIAN_MAX_XP_VALUE() - (pAttacker->getExperience() + iExperience));
-							if (iBonusAttackerXP < 0)
-							{
-								iBonusAttackerXP = 0;
-							}
-							iBonusWithdrawXP = range(iBonusWithdrawXP, 0, GC.getBARBARIAN_MAX_XP_VALUE() - (pAttacker->getExperience() + iWithdrawXP));
-							if (iBonusWithdrawXP < 0)
-							{
 								iBonusWithdrawXP = 0;
 							}
 						}
@@ -6088,8 +6072,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						}
 
 						szString.append(NEWLINE);
-						szTempBuffer.Format(L": " SETCOLR L"%.2f%% " L"%d" ENDCOLR,
-							TEXT_COLOR("COLOR_NEGATIVE_TEXT"), 100.0f * DefenderKillOdds, iDefExperienceKill);
+						szTempBuffer.Format(L": " SETCOLR L"%.2f%% " L"%d" ENDCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT"), 100.0f * DefenderKillOdds, iDefExperienceKill);
 						szString.append(gDLL->getText("TXT_ACO_DEFEAT"));
 						szString.append(szTempBuffer.GetCString());
 						if (iDefenderExperienceModifier > 0)
