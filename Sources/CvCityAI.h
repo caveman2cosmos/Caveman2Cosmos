@@ -189,6 +189,7 @@ public:
 	void AI_forceEmphasizeCulture(bool bNewValue);
 
 	void AI_markBestBuildValuesStale();
+	void AI_calculateOutputRatio(std::vector<int>& ratios, int food, int production, int commerce);
 	void AI_getCurrentPlotValue(int iPlotCounter, ::CvPlot* plot, std::vector<plotInfo>& currentYieldList);
 	void AI_getBestPlotValue(int iPlotCounter, CvPlot* plot, std::vector<plotInfo>& currentYieldList, std::vector<plotInfo>& optimalYieldList);
 	void AI_updateBestBuildForPlots();

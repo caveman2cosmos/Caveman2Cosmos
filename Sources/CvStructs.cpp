@@ -31,7 +31,7 @@ std::string plotInfo::ToJSON()
 	std::ostringstream oss;
 	oss << "{ plotIndex: " << index << ", worked: " << worked << ", owned:" << owned << ", yieldValue: " << yieldValue
 		<< ",yields: { food: " << yields[YIELD_FOOD] << ", production: " << yields[YIELD_PRODUCTION] << ", commerce: " << yields[YIELD_COMMERCE]
-		<< "}, currentImprovement: " << currentImprovement << ", currentFeature: " << currentFeature << "}" << std::endl;
+		<< "}, currentBuild: "<< currentBuild << " ,currentImprovement: " << currentImprovement << ", currentFeature: " << currentFeature << "}" << std::endl;
 
 	const std::string output = oss.str();
 	return output;
