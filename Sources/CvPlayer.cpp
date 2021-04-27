@@ -27970,20 +27970,12 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 		{
 			const CvBuildingInfo& kBuilding = GC.getBuildingInfo(pLoopCity->getProductionBuilding());
 
-			if (kBuilding.getPrereqAndBonus() == eBonus || kBuilding.getPrereqVicinityBonus() == eBonus)
+			if (kBuilding.getPrereqAndBonus() == eBonus
+			|| kBuilding.getPrereqVicinityBonus() == eBonus
+			|| algo::contains(kBuilding.getPrereqOrBonuses(), eBonus))
+			|| algo::contains(kBuilding.getPrereqOrVicinityBonuses(), eBonus))
 			{
 				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
-			}
-			else
-			{
-				for (int iI = 0; iI < kBuilding.getNumPrereqOrBonuses(); iI++)
-				{
-					if ((kBuilding.getPrereqOrBonuses(iI) == eBonus) || (kBuilding.getPrereqOrVicinityBonuses(iI) == eBonus))
-					{
-						iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
-						break;
-					}
-				}
 			}
 
 			if (kBuilding.getBonusProductionModifier(eBonus) != 0)

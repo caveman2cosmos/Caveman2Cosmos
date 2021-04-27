@@ -254,7 +254,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_piTechHappinessChanges(NULL)
 ,m_piTechHealthChanges(NULL)
 ,m_piUnitProductionModifier(NULL)
-,m_piPrereqOrVicinityBonuses(NULL)
 ,m_piBonusDefenseChanges(NULL)
 ,m_piUnitCombatExtraStrength(NULL)
 ,m_piCommerceAttacks(NULL)
@@ -381,7 +380,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pbPrereqOrImprovement);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrFeature);
 	SAFE_DELETE_ARRAY(m_piUnitProductionModifier);
-	SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
 	SAFE_DELETE_ARRAY(m_piBonusDefenseChanges);
 	SAFE_DELETE_ARRAY(m_piBuildingProductionModifier);
 	SAFE_DELETE_ARRAY(m_piGlobalBuildingProductionModifier);
@@ -1009,12 +1007,6 @@ bool CvBuildingInfo::isPrereqOrFeature(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
 	return m_pbPrereqOrFeature ? m_pbPrereqOrFeature[i] : false;
-}
-
-int CvBuildingInfo::getPrereqOrVicinityBonuses(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), i)
-	return m_piPrereqOrVicinityBonuses ? m_piPrereqOrVicinityBonuses[i] : -1;
 }
 
 int CvBuildingInfo::getBonusDefenseChanges(int i) const
@@ -1775,21 +1767,13 @@ bool CvBuildingInfo::EnablesOtherBuildings() const
 
 			if ( eFreeBonus != NO_BONUS )
 			{
-				for (int iJ = 0; iJ < GC.getNumBuildingInfos() && !m_bEnablesOtherBuildingsValue; iJ++)
+				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
-					if (GC.getBuildingInfo((BuildingTypes)iJ).getPrereqAndBonus() == eFreeBonus)
+					if (GC.getBuildingInfo((BuildingTypes)iJ).getPrereqAndBonus() == eFreeBonus
+					|| algo::contains(GC.getBuildingInfo((BuildingTypes)iJ).getPrereqOrBonuses(iI), eFreeBonus))
 					{
 						m_bEnablesOtherBuildingsValue = true;
 						break;
-					}
-
-					for(int iI = 0; iI < GC.getBuildingInfo((BuildingTypes)iJ).getNumPrereqOrBonuses(); iI++)
-					{
-						if ( GC.getBuildingInfo((BuildingTypes)iJ).getPrereqOrBonuses(iI) == eFreeBonus )
-						{
-							m_bEnablesOtherBuildingsValue = true;
-							break;
-						}
 					}
 				}
 			}
@@ -2152,7 +2136,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumTechInfos(), m_piTechHealthChanges);
 
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piUnitProductionModifier);
-	CheckSumI(iSum, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), m_piPrereqOrVicinityBonuses);
+	CheckSumC(iSum, m_piPrereqOrVicinityBonuses);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusDefenseChanges);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatExtraStrength);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piCommerceAttacks);
@@ -2331,7 +2315,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 //
 bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 
 	if (!CvHotkeyInfo::read(pXML))
@@ -3343,40 +3326,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	if (pXML->TryMoveToXmlFirstChild(L"PrereqVicinityBonuses"))
-	{
-		const int iNumChildren = pXML->GetXmlChildrenNumber();
-
-		if (0 < iNumChildren)
-		{
-			pXML->CvXMLLoadUtility::InitList(&m_piPrereqOrVicinityBonuses, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), -1);
-			if (pXML->GetChildXmlVal(szTextVal))
-			{
-				FAssertMsg((iNumChildren <= GC.getNUM_BUILDING_PREREQ_OR_BONUSES()),"For loop iterator is greater than array size");
-				for (int j = 0; j < iNumChildren; ++j)
-				{
-					m_piPrereqOrVicinityBonuses[j] = pXML->GetInfoClass(szTextVal);
-					if (!pXML->GetNextXmlVal(szTextVal))
-					{
-						break;
-					}
-				}
-				pXML->MoveToXmlParent();
-			}
-		}
-		else
-		{
-			SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
-		}
-
-		pXML->MoveToXmlParent();
-	}
-	else
-	{
-		SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
-	}
-
-	pXML->SetOptionalVector<BonusTypes>(&m_aePrereqOrRawVicinityBonuses, L"PrereqRawVicinityBonuses");
+	pXML->SetOptionalVector(&m_piPrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
+	pXML->SetOptionalVector(&m_aePrereqOrRawVicinityBonuses, L"PrereqRawVicinityBonuses");
 
 	if (pXML->TryMoveToXmlFirstChild(L"TechCommerceChanges"))
 	{
@@ -4891,18 +4842,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); i++)
-	{
-		if ( getPrereqOrVicinityBonuses(i) == NO_BONUS && pClassInfo->getPrereqOrVicinityBonuses(i) != NO_BONUS)
-		{
-			if ( NULL == m_piPrereqOrVicinityBonuses )
-			{
-				CvXMLLoadUtility::InitList(&m_piPrereqOrVicinityBonuses,GC.getNUM_UNIT_PREREQ_OR_BONUSES(),(int)NO_BONUS);
-			}
-			m_piPrereqOrVicinityBonuses[i] = pClassInfo->getPrereqOrVicinityBonuses(i);
-		}
-	}
-
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_piPrereqOrVicinityBonuses, pClassInfo->m_piPrereqOrVicinityBonuses);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrRawVicinityBonuses, pClassInfo->getPrereqOrRawVicinityBonuses());
 
 	for ( int i = 0; i < GC.getNumTechInfos(); i++)	// "Init2DIntList" verify method

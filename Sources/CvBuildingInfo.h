@@ -303,8 +303,9 @@ public:
 	int getHealthPercentPerPopulation() const		{ return m_iHealthPercentPerPopulation; }
 
 	int getUnitProductionModifier(int i) const;
-	int getPrereqOrVicinityBonuses(int i) const;
-	const std::vector<BonusTypes> getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
+
+	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const { return m_piPrereqOrVicinityBonuses; }
+	const std::vector<BonusTypes>& getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
 
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
@@ -587,7 +588,7 @@ protected:
 	bool m_bZoneOfControl;
 	bool m_bProtectedCulture;
 
-	int* m_piPrereqOrVicinityBonuses;
+	std::vector<BonusTypes> m_piPrereqOrVicinityBonuses;
 	std::vector<BonusTypes> m_aePrereqOrRawVicinityBonuses;
 	int* m_piUnitProductionModifier;
 	bool* m_pbPrereqOrCivics;
@@ -628,6 +629,7 @@ public:
 	//Alberts2 PrereqBonuses
 	int getNumPrereqOrBonuses() const;
 	BonusTypes getPrereqOrBonuses(int i) const;
+	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
 
 protected:
 	int m_iVictoryPrereq;
@@ -886,7 +888,7 @@ protected:
 
 	std::vector<int> m_aiPrereqInCityBuildings;
 	std::vector<int> m_vPrereqNotInCityBuildings;
-	std::vector<int> m_aePrereqOrBonuses;
+	std::vector<BonusTypes> m_aePrereqOrBonuses;
 	std::vector<int> m_vPrereqOrBuilding;
 	std::vector<int> m_vReplacementBuilding;
 	std::vector<int> m_vReplacedBuilding;

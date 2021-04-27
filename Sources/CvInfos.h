@@ -2223,7 +2223,6 @@ public:
 	const python::list cyGetPrereqOrBonuses() const;
 
 	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const;
-	const python::list cyGetPrereqOrVicinityBonuses() const;
 
 	// Arrays
 	int getPrereqAndTechs(int i) const;

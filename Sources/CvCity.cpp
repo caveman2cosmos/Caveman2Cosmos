@@ -3089,17 +3089,14 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 		bool bRequiresBonus = false;
 		bool bNeedsBonus = true;
-		for (int iI = 0; iI < kBuilding.getNumPrereqOrBonuses(); iI++)
+		foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrBonuses())
 		{
-			if (kBuilding.getPrereqOrBonuses(iI) != NO_BONUS)
-			{
-				bRequiresBonus = true;
+			bRequiresBonus = true;
 
-				if (hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iI)))
-				{
-					bNeedsBonus = false;
-					break;
-				}
+			if (hasBonus(ePrereqBonus))
+			{
+				bNeedsBonus = false;
+				break;
 			}
 		}
 		if (bRequiresBonus && bNeedsBonus)
@@ -3231,16 +3228,13 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	{
 		bool bHasAnyVicinityBonus = false;
 		bool bRequiresAnyVicinityBonus = false;
-		for (int iI = 0; iI < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); iI++)
+		foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrVicinityBonuses())
 		{
-			if (kBuilding.getPrereqOrVicinityBonuses(iI) != NO_BONUS)
+			bRequiresAnyVicinityBonus = true;
+			if (hasVicinityBonus(ePrereqBonus))
 			{
-				bRequiresAnyVicinityBonus = true;
-				if (hasVicinityBonus((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iI)))
-				{
-					bHasAnyVicinityBonus = true;
-					break;
-				}
+				bHasAnyVicinityBonus = true;
+				break;
 			}
 		}
 		if (bRequiresAnyVicinityBonus && !bHasAnyVicinityBonus)
@@ -20920,16 +20914,13 @@ void CvCity::checkBuildings(bool bAlertOwner)
 						bool bHasORVicinityBonus = false;
 						bool bNeedsORVicinityBonus = false;
 
-						for (int iJ = 0; iJ < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); iJ++)
+						foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrVicinityBonuses())
 						{
-							if (kBuilding.getPrereqOrVicinityBonuses(iJ) != NO_BONUS)
+							bNeedsORVicinityBonus = true;
+							if (hasVicinityBonus(ePrereqBonus))
 							{
-								bNeedsORVicinityBonus = true;
-								if (hasVicinityBonus((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iJ)))
-								{
-									bHasORVicinityBonus = true;
-									break;
-								}
+								bHasORVicinityBonus = true;
+								break;
 							}
 						}
 
@@ -20982,16 +20973,13 @@ void CvCity::checkBuildings(bool bAlertOwner)
 						bool bHasORBonus = false;
 						bool bNeedsORBonus = false;
 
-						for (int iJ = 0; iJ < kBuilding.getNumPrereqOrBonuses(); iJ++)
+						foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrBonuses())
 						{
-							if (kBuilding.getPrereqOrBonuses(iJ) != NO_BONUS)
+							bNeedsORBonus = true;
+							if (hasBonus(ePrereqBonus))
 							{
-								bNeedsORBonus = true;
-								if (hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iJ)))
-								{
-									bHasORBonus = true;
-									break;
-								}
+								bHasORBonus = true;
+								break;
 							}
 						}
 

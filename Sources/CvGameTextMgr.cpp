@@ -20879,13 +20879,13 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 
 				bFirst = true;
 
-				foreach_(const BonusTypes ePreReqBonus, GC.getUnitInfo(eUnit).getPrereqOrBonuses())
+				foreach_(const BonusTypes ePrereqBonus, GC.getUnitInfo(eUnit).getPrereqOrBonuses())
 				{
-					if (pCity == NULL || !pCity->hasBonus(ePreReqBonus))
+					if (pCity == NULL || !pCity->hasBonus(ePrereqBonus))
 					{
 						setListHelp(
 							szBuffer, gDLL->getText("TXT_KEY_REQUIRES"),
-							GC.getBonusInfo(ePreReqBonus).getDescription(),
+							GC.getBonusInfo(ePrereqBonus).getDescription(),
 							gDLL->getText("TXT_KEY_OR").c_str(), bFirst
 						);
 						bFirst = false;
@@ -24324,21 +24324,18 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		CvWStringBuffer szBonusList;
 		bFirst = true;
 
-		for (int iI = 0; iI < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); ++iI)
+		foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrVicinityBonuses())
 		{
-			if (kBuilding.getPrereqOrVicinityBonuses(iI) != NO_BONUS)
+			if (pCity == NULL || !pCity->hasVicinityBonus(ePrereqBonus))
 			{
-				if (pCity == NULL || !pCity->hasVicinityBonus((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iI)))
-				{
-					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_IN_CITY_VICINITY").c_str());
-					setListHelp(szBonusList, szTempBuffer, GC.getBonusInfo((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iI)).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
-					bFirst = false;
-				}
-				else if (NULL != pCity)
-				{
-					bFirst = true;
-					break;
-				}
+				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_IN_CITY_VICINITY").c_str());
+				setListHelp(szBonusList, szTempBuffer, GC.getBonusInfo(ePrereqBonus).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+				bFirst = false;
+			}
+			else if (NULL != pCity)
+			{
+				bFirst = true;
+				break;
 			}
 		}
 
@@ -24613,24 +24610,21 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 
 			bFirst = true;
 
-			for (int iI = 0; iI < kBuilding.getNumPrereqOrBonuses(); ++iI)
+			foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrBonuses())
 			{
-				if (kBuilding.getPrereqOrBonuses(iI) != NO_BONUS)
+				if (pCity == NULL || !pCity->hasBonus(ePrereqBonus))
 				{
-					if (pCity == NULL || !pCity->hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iI)))
-					{
-						setListHelp(
-							szBonusList, gDLL->getText("TXT_KEY_REQUIRES"),
-							GC.getBonusInfo((BonusTypes)kBuilding.getPrereqOrBonuses(iI)).getDescription(),
-							gDLL->getText("TXT_KEY_OR").c_str(), bFirst
-						);
-						bFirst = false;
-					}
-					else if (NULL != pCity)
-					{
-						bFirst = true;
-						break;
-					}
+					setListHelp(
+						szBonusList, gDLL->getText("TXT_KEY_REQUIRES"),
+						GC.getBonusInfo(ePrereqBonus).getDescription(),
+						gDLL->getText("TXT_KEY_OR").c_str(), bFirst
+					);
+					bFirst = false;
+				}
+				else if (NULL != pCity)
+				{
+					bFirst = true;
+					break;
 				}
 			}
 

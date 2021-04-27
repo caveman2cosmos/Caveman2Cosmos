@@ -3054,9 +3054,8 @@ def getGreedUnit(CyPlayer, CyPlot):
 		CvUnitInfo = GC.getUnitInfo(iUnit)
 		if CvUnitInfo.getMaxGlobalInstances() + 1 or CvUnitInfo.getMaxPlayerInstances() + 1:
 			continue
-		if iUnit != -1 and CvUnitInfo.getDomainType() == DomainTypes.DOMAIN_LAND and CyPlayer.canTrain(iUnit, False, False):
-			if CvUnitInfo.getPrereqAndBonus() == iBonus
-			or iBonus in CvUnitInfo.getPrereqOrBonuses():
+		if CvUnitInfo.getDomainType() == DomainTypes.DOMAIN_LAND and CyPlayer.canTrain(iUnit, False, False):
+			if CvUnitInfo.getPrereqAndBonus() == iBonus or iBonus in CvUnitInfo.getPrereqOrBonuses():
 				iValue = CyPlayer.AI_unitValue(iUnit, UnitAITypes.UNITAI_ATTACK, CyPlot.area())
 				if iValue > iBestValue:
 					iBestValue = iValue

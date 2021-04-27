@@ -2080,10 +2080,10 @@ bool CvTeam::isUnitBonusEnabledByTech(const CvUnitInfo& unit, const bool bNoWorl
 		}
 	}
 	bool bMet = true;
-	foreach_(const BonusTypes ePreReqBonus, unit.getPrereqOrBonuses())
+	foreach_(const BonusTypes ePrereqBonus, unit.getPrereqOrBonuses())
 	{
-		if (isHasTech((TechTypes)GC.getBonusInfo(ePreReqBonus).getTechCityTrade())
-		&& (!bNoWorldBonuses || GC.getBonusInfo(ePreReqBonus).getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE")))
+		if (isHasTech((TechTypes)GC.getBonusInfo(ePrereqBonus).getTechCityTrade())
+		&& (!bNoWorldBonuses || GC.getBonusInfo(ePrereqBonus).getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE")))
 		{
 			bMet = true;
 			break;

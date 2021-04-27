@@ -12424,13 +12424,13 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 		}
 
 		bool bValid = true;
-		foreach_(const BonusTypes ePreReqBonus, kUnit.getPrereqOrBonuses())
+		foreach_(const BonusTypes ePrereqBonus, kUnit.getPrereqOrBonuses())
 		{
 			bValid = false;
 
 			if (NULL == pCity)
 			{
-				if (isPlotGroupConnectedBonus(getOwner(), ePreReqBonus))
+				if (isPlotGroupConnectedBonus(getOwner(), ePrereqBonus))
 				{
 					bValid = true;
 					break;

@@ -1917,11 +1917,6 @@ const std::vector<BonusTypes>& CvUnitInfo::getPrereqOrVicinityBonuses() const
 	return m_piPrereqOrVicinityBonuses;
 }
 
-const python::list CvUnitInfo::cyGetPrereqOrVicinityBonuses() const
-{
-	return Cy::makeList(m_piPrereqOrVicinityBonuses);
-}
-
 CvWString CvUnitInfo::getCivilizationName(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivilizationInfos(), i)
