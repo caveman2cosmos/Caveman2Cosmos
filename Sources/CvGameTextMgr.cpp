@@ -9915,7 +9915,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		if (bBaseValues)
 		{
 			//TB Traits begin
-			iBaseProductionDiffNoFood = pCity->getBaseYieldRate(YIELD_PRODUCTION);
+			iBaseProductionDiffNoFood = pCity->getBaseYieldRate(YIELD_PRODUCTION) + pCity->getExtraYield(YIELD_PRODUCTION);
 			//TB Traits end
 		}
 		else
@@ -9982,7 +9982,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		if (bBaseValues)
 		{
 			//TB Traits begin
-			iBaseProductionDiffNoFood = pCity->getBaseYieldRate(YIELD_PRODUCTION);
+			iBaseProductionDiffNoFood = pCity->getBaseYieldRate(YIELD_PRODUCTION) + pCity->getExtraYield(YIELD_PRODUCTION);
 			//TB Traits end
 		}
 		else
@@ -10127,7 +10127,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		if (bBaseValues)
 		{
 			//TB Traits begin
-			iRate = pCity->getBaseYieldRate(YIELD_COMMERCE);
+			iRate = pCity->getBaseYieldRate(YIELD_COMMERCE) + pCity->getExtraYield(YIELD_COMMERCE);
 			//TB Traits end
 		}
 		else
