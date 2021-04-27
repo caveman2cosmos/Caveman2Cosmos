@@ -14,6 +14,7 @@
 #include "CvGlobals.h"
 #include "CvInfos.h"
 #include "CvPlayerAI.h"
+#include "CvPython.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 
@@ -21861,9 +21862,6 @@ int* CvCorporationInfo::getCommerceChangeArray() const
 {
 	return m_piCommerceChange;
 }
-
-
-// Arrays
 
 const std::vector<BonusTypes>& CvCorporationInfo::getPrereqBonuses() const
 {
