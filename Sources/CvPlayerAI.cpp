@@ -4608,10 +4608,9 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, const std::vect
 
 			bool bIsANDPreReq = false;
 			int iANDPrereqs = 0;
-			for (int iK = 0; iK < GC.getNUM_AND_TECH_PREREQS(); iK++)
+			foreach_(const TechTypes ePrereq, GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs())
 			{
-				const TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs(iK);
-				if (ePrereq != NO_TECH && !GET_TEAM(getTeam()).isHasTech(ePrereq))
+				if (!GET_TEAM(getTeam()).isHasTech(ePrereq))
 				{
 					iANDPrereqs++;
 					if (ePrereq == eTech)
@@ -4624,8 +4623,8 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, const std::vect
 			if (bIsORPreReq || bIsANDPreReq)
 			{
 				// Consider all the AND pre-reqs as worth 33% of the follow on, and significant OR as 25%
-				int	iANDPercentage = (bIsANDPreReq ? 33/iANDPrereqs : 0);
-				int	iORPercentage = (bIsORPreReq ? 25 : 0);
+				const int iANDPercentage = (bIsANDPreReq ? 33/iANDPrereqs : 0);
+				const int iORPercentage = (bIsORPreReq ? 25 : 0);
 
 				iTotalWeight += iANDPercentage + iORPercentage;
 

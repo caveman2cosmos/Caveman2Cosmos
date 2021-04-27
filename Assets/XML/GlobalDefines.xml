@@ -369,14 +369,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>NUM_OR_TECH_PREREQS</DefineName>
-		<iDefineIntVal>6</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_AND_TECH_PREREQS</DefineName>
-		<iDefineIntVal>6</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>NUM_UNIT_AND_TECH_PREREQS</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>

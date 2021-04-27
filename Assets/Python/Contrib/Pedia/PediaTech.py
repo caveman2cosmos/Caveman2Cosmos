@@ -201,13 +201,9 @@ class PediaTech:
 		n = 0
 		szChild = PF + "TECH"
 		# Tech Req
-		NUM_AND_TECH_PREREQS = GC.getNUM_AND_TECH_PREREQS()
-
-		for i in range(NUM_AND_TECH_PREREQS):
-			iType = CvTheTechInfo.getPrereqAndTechs(i)
-			if iType != -1:
-				aList1.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
-				n += 1
+		for iType in CvTheTechInfo.getPrereqAndTechs():
+			aList1.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
+			n += 1
 		nOr = 0
 		for iType in CvTheTechInfo.getPrereqOrTechs():
 			aList2.append(iType)
@@ -297,10 +293,7 @@ class PediaTech:
 				if iType == iTheTech:
 					screen.attachImageButton(Pnl, "", CvTechInfo.getButton(), enumGBS, eWidJuToDerTech, i, 1, False)
 
-			for n in range(NUM_AND_TECH_PREREQS):
-				iType = CvTechInfo.getPrereqAndTechs(n)
-				if iType == -1:
-					break
+			for iType in CvTechInfo.getPrereqAndTechs():
 				if iType == iTheTech:
 					screen.attachImageButton(Pnl, "", CvTechInfo.getButton(), enumGBS, eWidJuToDerTech, i, 1, False)
 

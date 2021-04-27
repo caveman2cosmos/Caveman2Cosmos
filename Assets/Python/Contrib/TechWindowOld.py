@@ -241,8 +241,7 @@ class CvTechSplashScreen:
 			for iPrereq in GC.getTechInfo(j).getPrereqOrTechs():
 				if iPrereq == self.iTech:
         			screen.attachImageButton(panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
-			for k in range(GC.getDefineINT("NUM_AND_TECH_PREREQS")):
-				iPrereq = GC.getTechInfo(j).getPrereqAndTechs(k)
+			for iPrereq in GC.getTechInfo(j).getPrereqAndTechs():
 				if iPrereq == self.iTech:
         			screen.attachImageButton(panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
 #---Eingef�gt ENDE ------------------------------------------------

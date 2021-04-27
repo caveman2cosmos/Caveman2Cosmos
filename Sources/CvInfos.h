@@ -341,8 +341,7 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvTechInfo : public CvInfoBase
 {
-
-friend class CvXMLLoadUtility;
+//friend class CvXMLLoadUtility;
 
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
@@ -444,9 +443,12 @@ public:
 
 	int getDomainExtraMoves(int i) const;
 	int getFlavorValue(int i) const;
+
 	const std::vector<TechTypes>& getPrereqOrTechs() const;
 	const python::list cyGetPrereqOrTechs() const;
-	int getPrereqAndTechs(int i) const;
+
+	const std::vector<TechTypes>& getPrereqAndTechs() const;
+	const python::list cyGetPrereqAndTechs() const;
 
 	bool isCommerceFlexible(int i) const;
 	bool isTerrainTrade(int i) const;
@@ -455,15 +457,10 @@ public:
 	int* getCommerceModifierArray() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(const CvTechInfo* pClassInfo);
-	void copyNonDefaultsReadPass2(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
 protected:
 
 	int m_iAdvisorType;
@@ -521,7 +518,7 @@ protected:
 	int* m_piFlavorValue;
 
 	std::vector<TechTypes> m_piPrereqOrTechs;
-	int* m_piPrereqAndTechs;
+	std::vector<TechTypes> m_piPrereqAndTechs;
 
 	bool* m_pbCommerceFlexible;
 	bool* m_pbTerrainTrade;
@@ -1110,9 +1107,6 @@ protected:
 	int m_iIgnoreTerrainDamage;
 	int m_zobristValue;
 public:
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvPromotionInfo* pClassInfo);

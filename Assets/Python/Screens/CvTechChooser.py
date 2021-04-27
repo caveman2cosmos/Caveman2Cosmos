@@ -311,7 +311,6 @@ class CvTechChooser:
 		yBoxSpacing = yCellDist/2
 
 		# Place techs
-		NUM_AND_TECH_PREREQS = GC.getNUM_AND_TECH_PREREQS()
 		RED_X = AFM.getInterfaceArtInfo("INTERFACE_BUTTONS_RED_X").getPath()
 		ARROW_X = AFM.getInterfaceArtInfo("ARROW_X").getPath()
 		ARROW_Y = AFM.getInterfaceArtInfo("ARROW_Y").getPath()
@@ -386,9 +385,7 @@ class CvTechChooser:
 					# Requires
 					iX = self.wCell + CELL_BORDER_W - 2
 					iY = 5 + CELL_BORDER_H
-					for i in xrange(NUM_AND_TECH_PREREQS):
-						iTechX = CvTechInfo.getPrereqAndTechs(i)
-						if iTechX == -1: break
+					for iTechX in CvTechInfo.getPrereqAndTechs():
 						iX -= dx
 						screen.setImageButtonAt(TECH_REQ + str(iTechX) + "|" + iTechStr, techCellId, GC.getTechInfo(iTechX).getButton(), iX, iY, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
 

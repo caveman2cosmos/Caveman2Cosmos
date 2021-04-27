@@ -36,7 +36,6 @@ class TechPrefs:
 
 	def __init__(self):
 		self.NUM_TECHS = gc.getNumTechInfos()
-		self.NUM_AND_PREREQS = gc.getDefineINT("NUM_AND_TECH_PREREQS")
 
 		self.mTechs = {}
 		self.lTechsByFlavor = []
@@ -55,10 +54,8 @@ class TechPrefs:
 					bHasFlavor = True
 
 			# hook up prereq techs
-			for i in range(self.NUM_AND_PREREQS):
-				pPrereqTech = pTechInfo.getPrereqAndTechs(i)
-				if (pPrereqTech != -1):
-					pTech.addAndPrereq(self.getTech(pPrereqTech))
+			for pPrereqTech in pTechInfo.getPrereqAndTechs():
+				pTech.addAndPrereq(self.getTech(pPrereqTech))
 			for pPrereqTech in pTechInfo.getPrereqOrTechs():
 				pTech.addOrPrereq(self.getTech(pPrereqTech))
 
