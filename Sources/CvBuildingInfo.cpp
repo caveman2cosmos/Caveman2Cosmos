@@ -1882,17 +1882,12 @@ bool CvBuildingInfo::EnablesUnits() const
 				}
 			}
 
-			for (int iK = 0; iK < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iK++)
+			foreach_(const BonusTypes eXtraFreeBonus, kUnit.getPrereqOrBonuses())
 			{
-				const BonusTypes eXtraFreeBonus = (BonusTypes)kUnit.getPrereqOrBonuses(iK);
-
-				if ( eXtraFreeBonus != NO_BONUS )
+				if (isFreeBonusOfBuilding(eXtraFreeBonus))
 				{
-					if ( isFreeBonusOfBuilding( eXtraFreeBonus ) )
-					{
-						m_bEnablesUnits = true;
-						return m_bEnablesUnits;
-					}
+					m_bEnablesUnits = true;
+					return m_bEnablesUnits;
 				}
 			}
 		}
@@ -1901,7 +1896,7 @@ bool CvBuildingInfo::EnablesUnits() const
 	return m_bEnablesUnits;
 }
 
-void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
+void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bNoLimit);
 	CheckSum(iSum, m_iVictoryPrereq);

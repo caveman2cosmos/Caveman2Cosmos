@@ -198,10 +198,7 @@ class PediaUnit:
 		# Bonus Req
 		szChild = PF + "BONUS"
 		nOr = 0
-		for j in xrange(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
-			iType = CvTheUnitInfo.getPrereqOrBonuses(j)
-			if iType == -1:
-				break
+		for iType in CvTheUnitInfo.getPrereqOrBonuses():
 			aList0.append(iType)
 			n += 1
 			nOr += 1

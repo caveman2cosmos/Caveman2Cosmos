@@ -211,7 +211,6 @@ class CityDemolish:
 			CyTeam = GC.getTeam(CyPlayer.getTeam())
 			# Settler
 			if iOwnCulturePop > 0 or iForeignPop > 2:
-				NUM_UNIT_PREREQ_OR_BONUSES = GC.getNUM_UNIT_PREREQ_OR_BONUSES()
 				aSettlerList = [
 					GC.getInfoTypeForString("UNIT_AIRSETTLER"),
 					GC.getInfoTypeForString("UNIT_PIONEER"),
@@ -242,9 +241,8 @@ class CityDemolish:
 					iBonus = CvUnitInfo.getPrereqAndBonus()
 					if iBonus > -1 and not CyCity.getNumBonuses(iBonus):
 						continue
-					for i in range(NUM_UNIT_PREREQ_OR_BONUSES):
-						iBonus = CvUnitInfo.getPrereqOrBonuses(i)
-						if iBonus > -1 and not CyCity.getNumBonuses(iBonus):
+					for iBonus in CvUnitInfo.getPrereqOrBonuses():
+						if not CyCity.getNumBonuses(iBonus):
 							bContinue = True
 							break
 					if bContinue: continue

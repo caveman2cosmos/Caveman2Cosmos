@@ -232,7 +232,7 @@ void CyInfoPythonInterface1()
 
 		// Arrays
 		.def("getPrereqAndTechs", &CvUnitInfo::getPrereqAndTechs, "int (int i)")
-		.def("getPrereqOrBonuses", &CvUnitInfo::getPrereqOrBonuses, "int (int i)")
+		.def("getPrereqOrBonuses", &CvUnitInfo::cyGetPrereqOrBonuses)
 		.def("getFlavorValue", &CvUnitInfo::getFlavorValue, "int (int i)")
 		.def("getBonusProductionModifier", &CvUnitInfo::getBonusProductionModifier, "int (int i)")
 
