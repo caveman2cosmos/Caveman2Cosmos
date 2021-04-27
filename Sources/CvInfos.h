@@ -5869,9 +5869,10 @@ public:
 	const TCHAR* getMovieSound() const;
 	const TCHAR* getSound() const;
 
-	// Arrays
+	const std::vector<BonusTypes>& getPrereqBonuses() const;
+	const python::list cyGetPrereqBonuses() const;
 
-	int getPrereqBonus(int i) const;
+	// Arrays
 	int getHeadquarterCommerce(int i) const;
 	int* getHeadquarterCommerceArray() const;
 	int getCommerceProduced(int i) const;
@@ -5951,9 +5952,9 @@ protected:
 	CvString m_szMovieSound;
 	CvString m_szSound;
 
-	// Arrays
+	std::vector<BonusTypes> m_vPrereqBonuses;
 
-	int* m_paiPrereqBonuses;
+	// Arrays
 	int* m_paiHeadquarterCommerce;
 	int* m_paiCommerceProduced;
 	int* m_paiYieldProduced;

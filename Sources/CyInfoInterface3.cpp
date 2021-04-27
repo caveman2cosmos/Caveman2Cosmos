@@ -151,15 +151,8 @@ void CyInfoPythonInterface3()
 		.def("getMovieSound", &CvCorporationInfo::getMovieSound, "string ()")
 		.def("getSound", &CvCorporationInfo::getSound, "string ()")
 
-/************************************************************************************************/
-/* TGA_INDEXATION                          03/25/08                                MRGENIE      */
-/*                                                                                              */
-/* reorganizing the Religion vector by checking the TGAIndex of the xml and placing everything  */
-/* properly                                                                                     */
-/************************************************************************************************/
-
 		// Arrays
-		.def("getPrereqBonus", &CvCorporationInfo::getPrereqBonus, "int (int i)")
+		.def("getPrereqBonuses", &CvCorporationInfo::cyGetPrereqBonuses)
 		.def("getCommerceProduced", &CvCorporationInfo::getCommerceProduced, "int (int i)")
 		.def("getYieldProduced", &CvCorporationInfo::getYieldProduced, "int (int i)")
 	;
