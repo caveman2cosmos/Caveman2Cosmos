@@ -10078,9 +10078,9 @@ int CvPlayerAI::AI_corporationBonusVal(BonusTypes eBonus) const
 			int iNumCorpBonuses = 0;
 			iCorpCount += getNumCities() / 6 + 1;
 			const CvCorporationInfo& kCorp = GC.getCorporationInfo((CorporationTypes)iCorporation);
-			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+			foreach_(const BonusTypes ePrereqBonus, kCorp.getPrereqBonuses())
 			{
-				if (eBonus == kCorp.getPrereqBonus(i))
+				if (eBonus == ePrereqBonus)
 				{
 					iValue += (50 * kCorp.getYieldProduced(YIELD_FOOD) * iCorpCount) / iCityCount;
 					iValue += (50 * kCorp.getYieldProduced(YIELD_PRODUCTION) * iCorpCount) / iCityCount;
@@ -13226,9 +13226,9 @@ int CvPlayerAI::AI_corporationValue(CorporationTypes eCorporation, const CvCity*
 		const int iBonusCount = pCity->getNumBonuses(eBonus);
 		if (iBonusCount > 0)
 		{
-			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+			foreach_(const BonusTypes ePrereqBonus, kCorp.getPrereqBonuses())
 			{
-				if (eBonus == kCorp.getPrereqBonus(i))
+				if (eBonus == ePrereqBonus)
 				{
 					//	These are all in hundredths, so the multipliers here accoutn for the division
 					//	by 100 at the very end and are 100 times smaller than the multipliers for the
