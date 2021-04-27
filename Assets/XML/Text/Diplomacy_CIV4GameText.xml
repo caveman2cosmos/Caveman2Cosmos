@@ -7928,4 +7928,100 @@
 		<Spanish>Así sea.</Spanish>
 		<Russian>Õîðîøî.</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_AUGUSTUS_CAESAR_1</Tag>
+		<English>It is excellent to meet you, [CT_NAME]! Would you care to surrender to mighty [OUR_CIV_SHORT] now or would you prefer to put off the inevitable for a while?</English>
+		<French>Quelle joie de vous rencontrer, [CT_NAME] ! Auriez-vous l'obligeance de vous capituler immédiatement face à la puissance des [OUR_CIV_SHORT] ou souhaitez-vous repousser l'inévitable encore quelques temps ?</French>
+		<German>Es freut mich, Eure Bekanntschaft zu machen, [CT_NAME]! Seid Ihr bereit, vor dem Volk von [OUR_CIV_SHORT] zu kapitulieren oder zieht Ihr es vor, das Unvermeidliche noch etwas hinauszuzögern?</German>
+		<Italian>Sono felice di incontrarti, [CT_NAME]! Desideri arrenderti alla nostra potente civiltà ora o preferisci rimandare l'inevitabile per qualche tempo?</Italian>
+		<Spanish>Es un honor conoceros, [CT_NAME]. ¿Os importaría rendiros a la poderosa tierra de [OUR_CIV_SHORT] ahora mismo o preferís aplazar lo inevitable por un tiempo?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BRENNUS_1</Tag>
+		<English>Greetings, [CT_NAME]! I am [OUR_NAME] of the warlike [OUR_CIV_ADJ] people!  My druids shall construct a huge stone circle to honor this auspicious occasion!</English>
+		<French>Salutations, [CT_NAME] ! Je suis [OUR_NAME] du belliqueux peuple des [OUR_CIV_ADJ] ! Mes druides vont faire ériger un large cercle de pierres pour célébrer cette formidable rencontre !</French>
+		<German>Seid gegrüßt, [CT_NAME]! Ich bin [OUR_NAME], Staatsoberhaupt des kriegerischen [CT_CIV_ADJ:2] Volkes! Meine Druiden werden zur Feier dieses denkwürdigen Augenblicks einen riesigen Steinkreis errichten!</German>
+		<Italian>Salve, [CT_NAME]! Io sono [OUR_NAME] [OUR_CIV_ADJ]! I miei druidi erigeranno un enorme cerchio di pietre per commemorare questo incontro propizio!</Italian>
+		<Spanish>¡Saludos, [CT_NAME]! Soy [OUR_NAME], del belicoso pueblo [OUR_CIV_ADJ:1].  Mis druidas construirán un gran círculo de piedra para conmemorar esta propicia ocasión.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_AUGUSTUS_CAESAR_1</Tag>
+		<English>Go away, [CT_NAME]; you bother me.</English>
+		<French>Partez, [CT_NAME] ; vous m'ennuyez.</French>
+		<German>Hinfort, [CT_NAME]! Ihr strapaziert meine Nerven!</German>
+		<Italian>Vattene, [CT_NAME]; non infastidirmi.</Italian>
+		<Spanish>Marchad, [CT_NAME]. Me importunáis.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_BRENNUS_1</Tag>
+		<English>Your words twist like they were serpents, [CT_NAME]. Begone!</English>
+		<French>Vos mots résonnent comme les sifflements du plus perfide des serpents, [CT_NAME]. Hors de ma vue !</French>
+		<German>Ihr windet Euch wie eine Schlange, man kann Euch einfach nicht trauen, [CT_NAME]! Hinfort!</German>
+		<Italian>Le tue parole sono viscide come serpenti, [CT_NAME]. Sparisci!</Italian>
+		<Spanish>Vuestras palabras se retuercen como si fueran serpientes, [CT_NAME]. ¡Fuera de aquí!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_AUGUSTUS_CAESAR_1</Tag>
+		<English>You shall have peace, [CT_NAME] - the peace of death!</English>
+		<French>Je vais vous offrir la paix, [CT_NAME], la paix éternelle !</French>
+		<German>Friede sei mit Euch, [CT_NAME] - im Tod!</German>
+		<Italian>Avrai la pace, [CT_NAME]... la pace eterna!</Italian>
+		<Spanish>Tendréis paz, [CT_NAME]: ¡la paz de los muertos!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_BRENNUS_1</Tag>
+		<English>Peace? Don't make me laugh!</English>
+		<French>La paix ? Vous voulez rire, j'espère !</French>
+		<German>Ihr wollt Frieden schließen? Macht Euch doch nicht lächerlich!</German>
+		<Italian>Pace? Ma non farmi ridere!</Italian>
+		<Spanish>¿Paz? ¡No me hagáis reír!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_AUGUSTUS_CAESAR_1</Tag>
+		<English>Greetings, [CT_NAME]! What brings you to mighty [OUR_CIV_SHORT] today? Let's go over to the Coliseum and watch a bunch of prisoners get eaten by wild animals, shall we? </English>
+		<French>Ave, [CT_NAME] ! Que nous vaut votre visite chez les puissants [OUR_CIV_SHORT] ? Rendons-nous donc au Colisée pour admirer le glorieux spectacle offert par des animaux sauvages dévorant des quelques esclaves ?</French>
+		<German>Seid gegrüßt, [CT_NAME]! Was führt Euch heute zum mächtigen Volk von [OUR_CIV_SHORT]? Lasst uns im Kolosseum ein paar Gladiatorenkämpfe anschauen, in Ordnung? </German>
+		<Italian>Salve, [CT_NAME]! Qual buon vento ti porta nella grandiosa capitale [OUR_CIV_ADJ] oggi? Perché non facciamo una capatina al Colosseo a vedere dei prigionieri mangiati vivi dalle fiere? </Italian>
+		<Spanish>¡Saludos, [CT_NAME]! ¿Qué os trae hoy a la poderosa tierra de [OUR_CIV_SHORT]? ¿Os apetece ir al Coliseo a ver cómo las fieras devoran a unos cuantos prisioneros? </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_BRENNUS_1</Tag>
+		<English>Speak your piece, [CT_NAME], and then be gone!</English>
+		<French>Videz votre sac, [CT_NAME], et déguerpissez !</French>
+		<German>Sagt, was Ihr zu sagen habt und dann geht mir aus den Augen, [CT_NAME]!</German>
+		<Italian>Di' quello che devi dire, [CT_NAME], e poi sparisci!</Italian>
+		<Spanish>Decid lo que tengáis que decir, [CT_NAME], y marchaos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_BRENNUS_1</Tag>
+		<English>We welcome our friend and ally, [CT_NAME]. </English>
+		<French>Bienvenue à vous, [CT_NAME], notre valeureux ami et allié. </French>
+		<German>Ich grüße Euch in Freundschaft und Verbundenheit, [CT_NAME]. </German>
+		<Italian>Diamo il benvenuto al nostro amico e alleato, [CT_NAME]. </Italian>
+		<Spanish>Damos la bienvenida a [CT_NAME], de nuestra nación amiga y aliada. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_BRENNUS_1</Tag>
+		<English>Give 'til it hurts, [CT_NAME].</English>
+		<French>Donnez, [CT_NAME], je prends sans discernement.</French>
+		<German>Opfer müssen wehtun, ist es nicht so, [CT_NAME]?</German>
+		<Italian>Darai finché non potrai più dare, [CT_NAME].</Italian>
+		<Spanish>Apoquinando que es gerundio, [CT_NAME].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_BRENNUS_1</Tag>
+		<English>I recommend that you give us what we want, [CT_NAME].</English>
+		<French>Un conseil, [CT_NAME], donnez-nous ce que nous demandons.</French>
+		<German>Ich rate Euch, unserer Forderung nachzukommen, [CT_NAME]!</German>
+		<Italian>Ti consiglio di darci ciò che vogliamo, [CT_NAME].</Italian>
+		<Spanish>Os recomiendo que nos deis lo que queremos, [CT_NAME].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_BRENNUS_1</Tag>
+		<English>Pay now or pay tenfold later, [CT_NAME].</English>
+		<French>Payez maintenant une fois, ou dix fois plus tard, c'est vous qui voyez, [CT_NAME].</French>
+		<German>Ich würde jetzt zahlen, denn später wird sich der Preis verzehnfachen, [CT_NAME]!</German>
+		<Italian>Paga ora, o dopo pagherai il decuplo, [CT_NAME].</Italian>
+		<Spanish>Pagad ahora o luego lo pagaréis multiplicado por diez, [CT_NAME].</Spanish>
+	</TEXT>
 </Civ4GameText>
