@@ -11,14 +11,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_CHARLES_V</LeaderType>
+							<LeaderType>LEADER_SOLOMON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_CHARLES_V_1</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_SOLOMON_1</Text>
 					</DiplomacyText>
 				</Response>
 			</Responses>
@@ -30,14 +30,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_CHARLES_V</LeaderType>
+							<LeaderType>LEADER_SOLOMON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_CHARLES_V_1</Text>
+						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_SOLOMON_1</Text>
 					</DiplomacyText>
 				</Response>
 			</Responses>
@@ -49,14 +49,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_CHARLES_V</LeaderType>
+							<LeaderType>LEADER_SOLOMON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_NO_PEACE_LEADER_CHARLES_V_1</Text>
+						<Text>AI_DIPLO_NO_PEACE_LEADER_SOLOMON_1</Text>
 					</DiplomacyText>
 				</Response>
 			</Responses>
@@ -68,14 +68,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_CHARLES_V</LeaderType>
+							<LeaderType>LEADER_SOLOMON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_CHARLES_V_1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SOLOMON_1</Text>
 					</DiplomacyText>
 				</Response>
 			</Responses>
@@ -87,14 +87,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_CHARLES_V</LeaderType>
+							<LeaderType>LEADER_SOLOMON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_CHARLES_V_1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SOLOMON_1</Text>
 					</DiplomacyText>
 				</Response>
 			</Responses>
@@ -106,14 +106,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_CHARLES_V</LeaderType>
+							<LeaderType>LEADER_SOLOMON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_CHARLES_V_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SOLOMON_1</Text>
 					</DiplomacyText>
 				</Response>
 			</Responses>
@@ -125,14 +125,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_CHARLES_V</LeaderType>
+							<LeaderType>LEADER_SOLOMON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_CHARLES_V_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SOLOMON_1</Text>
 					</DiplomacyText>
 				</Response>
 			</Responses>
@@ -144,14 +144,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_CHARLES_V</LeaderType>
+							<LeaderType>LEADER_SOLOMON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_CHARLES_V_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SOLOMON_1</Text>
 					</DiplomacyText>
 				</Response>
 			</Responses>
