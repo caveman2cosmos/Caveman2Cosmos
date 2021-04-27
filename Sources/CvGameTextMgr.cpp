@@ -9898,7 +9898,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		if (bBaseValues)
 		{
 			//TB Traits begin
-			iBaseProductionDiffNoFood = pCity->getModifiedBaseYieldRate(YIELD_PRODUCTION);
+			iBaseProductionDiffNoFood = pCity->getBaseYieldRate(YIELD_PRODUCTION) + pCity->getExtraYield(YIELD_PRODUCTION);
 			//TB Traits end
 		}
 		else
@@ -9965,7 +9965,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		if (bBaseValues)
 		{
 			//TB Traits begin
-			iBaseProductionDiffNoFood = pCity->getModifiedBaseYieldRate(YIELD_PRODUCTION);
+			iBaseProductionDiffNoFood = pCity->getBaseYieldRate(YIELD_PRODUCTION) + pCity->getExtraYield(YIELD_PRODUCTION);
 			//TB Traits end
 		}
 		else
@@ -10110,7 +10110,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		if (bBaseValues)
 		{
 			//TB Traits begin
-			iRate = pCity->getModifiedBaseYieldRate(YIELD_COMMERCE);
+			iRate = pCity->getBaseYieldRate(YIELD_COMMERCE) + pCity->getExtraYield(YIELD_COMMERCE);
 			//TB Traits end
 		}
 		else
@@ -10391,16 +10391,6 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		szString.append(NEWLINE);
 	}
 
-	if (pCity->getExtraYieldTurns() > 0)
-	{
-		szString.append(NEWLINE);
-		szString.append(gDLL->getText("TXT_KEY_MISC_EXTRA_HAMMERS_TURNS", pCity->getExtraYieldTurns()));
-	}
-	else if (pCity->getExtraYieldTurns() < 0)
-	{
-		szString.append(NEWLINE);
-		szString.append(gDLL->getText("TXT_KEY_MISC_EXTRA_FOOD_TURNS", -pCity->getExtraYieldTurns()));
-	}
 	pCity->getProperties()->buildDisplayString(szString);
 
 // BUG - Hide UI Instructions - start
@@ -12556,7 +12546,7 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			int aiYields[NUM_YIELD_TYPES];
 			for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 			{
-				aiYields[iI] = pCity->getAdditionalYieldBySpecialist((YieldTypes)iI, eSpecialist, iChange);
+				aiYields[iI] = iChange * pCity->getYieldBySpecialist((YieldTypes)iI, eSpecialist);
 			}
 			bStarted = setResumableYieldChangeHelp(szHelpString, szStart, L": ", L"", aiYields, false, true, bStarted);
 
@@ -31141,7 +31131,6 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 		setYieldChangeHelp(szBuffer, L", ", L"", L"", info.getYieldChangeArray(), false, false);
 
 		setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_MISC_WITH_IRRIGATION").c_str(), info.getIrrigatedYieldChangeArray());
-		setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_MISC_ON_HILLS").c_str(), info.getHillsYieldChangeArray());
 		setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_MISC_ALONG_RIVER").c_str(), info.getRiverSideYieldChangeArray());
 
 		for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
@@ -32251,11 +32240,6 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 	}
 	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_TERRAIN_NEXT_TO_RIVER"), aiYields);
 
-	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
-	{
-		aiYields[iI] = feature.getHillsYieldChange(iI);
-	}
-	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_TERRAIN_ON_HILLS"), aiYields);
 
 	if (feature.getMovementCost() != 0)
 	{
@@ -32351,17 +32335,6 @@ void CvGameTextMgr::setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerr
 		}
 		setYieldChangeHelp(szBuffer, L"", L"", L"", aiYields);
 	}
-	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
-	{
-		aiYields[iI] = terrain.getRiverYieldChange(iI);
-	}
-	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_TERRAIN_NEXT_TO_RIVER"), aiYields);
-
-	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
-	{
-		aiYields[iI] = terrain.getHillsYieldChange(iI);
-	}
-	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_TERRAIN_ON_HILLS"), aiYields);
 
 	if (terrain.getMovementCost() != 0)
 	{
@@ -32795,7 +32768,6 @@ void CvGameTextMgr::buildFinanceForeignIncomeString(CvWStringBuffer& szBuffer, P
 	}
 }
 
-// BUG - Food Rate Hover - start
 
 /*
 	+14 from Worked Tiles
@@ -32824,84 +32796,12 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	FAssertMsg(NO_PLAYER != city.getOwner(), "City must have an owner");
 
 	const CvYieldInfo& info = GC.getYieldInfo(YIELD_FOOD);
-	bool bNeedSubtotal = false;
-	int iBaseRate = 0;
-	int i;
-
-	// Worked Tiles
-	int iTileFood = 0;
-	for (i = 0; i < NUM_CITY_PLOTS; i++)
-	{
-		if (city.isWorkingPlot(i))
-		{
-			const CvPlot* pPlot = city.getCityIndexPlot(i);
-
-			if (pPlot != NULL)
-			{
-				iTileFood += pPlot->getYield(YIELD_FOOD);
-			}
-		}
-	}
-	if (iTileFood != 0)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_WORKED_TILES_YIELD", iTileFood, info.getChar()));
-		iBaseRate += iTileFood;
-	}
-
-	// Trade
-	int iTradeFood = city.getTradeYield(YIELD_FOOD);
-	if (iTradeFood != 0)
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iTradeFood, info.getChar(), L"TXT_KEY_HEADING_TRADEROUTE_LIST"));
-		iBaseRate += iTradeFood;
-		bNeedSubtotal = true;
-	}
-
-	// Specialists
-	int iSpecialistFood = 0;
-	for (i = 0; i < GC.getNumSpecialistInfos(); i++)
-	{
-		iSpecialistFood += city.specialistYieldTotal((SpecialistTypes)i, YIELD_FOOD);
-	}
-	if (iSpecialistFood != 0)
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iSpecialistFood, info.getChar(), L"TXT_KEY_CONCEPT_SPECIALISTS"));
-		iBaseRate += iSpecialistFood;
-		bNeedSubtotal = true;
-	}
-
-	// Corporations
-	int iCorporationFood = city.getCorporationYield(YIELD_FOOD);
-	if (iCorporationFood != 0)
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_CORPORATION_COMMERCE", iCorporationFood, info.getChar()));
-		iBaseRate += iCorporationFood;
-		bNeedSubtotal = true;
-	}
-
-	// Traits
-	for (i = 0; i < GC.getNumTraitInfos(); i++)
-	{
-		TraitTypes eTrait = ((TraitTypes)i);
-		if (GET_PLAYER(city.getOwner()).hasTrait(eTrait))
-		{
-			int iTraitFood = GC.getTraitInfo(eTrait).getYieldChange(YIELD_FOOD);
-			if (iTraitFood != 0)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_TRAIT_COMMERCE", iTraitFood, info.getChar(), GC.getTraitInfo(eTrait).getDescription()));
-				iBaseRate += iTraitFood;
-				bNeedSubtotal = true;
-			}
-		}
-	}
+	/*
+	int iBaseRate = city.getPlotYield(YIELD_FOOD);
 
 	// Buildings
 	int iBuildingFood = 0;
-	for (i = 0; i < GC.getNumBuildingInfos(); i++)
+	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
 		if (city.hasFullyActiveBuilding((BuildingTypes)i))
 		{
@@ -32922,28 +32822,14 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BUILDING_COMMERCE", iBuildingFood, info.getChar()));
 		iBaseRate += iBuildingFood;
-		bNeedSubtotal = true;
 	}
+	*/
 
-	// Base and modifiers (only if there are modifiers since total is always shown)
-	if (city.getBaseYieldRateModifier(YIELD_FOOD) != 100)
-	{
-		szBuffer.append(SEPARATOR);
-		szBuffer.append(NEWLINE);
-		// shows Base Food and lists all modifiers
-		setYieldHelp(szBuffer, city, YIELD_FOOD);
-	}
-	else
-	{
-		szBuffer.append(NEWLINE);
-	}
+	int iRate = city.getYieldRate(YIELD_FOOD);
 
-	// Total Produced
-	int iBaseModifier = city.getBaseYieldRateModifier(YIELD_FOOD);
-	int iRate = iBaseModifier * iBaseRate / 100;
-	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_TOTAL_FOOD_PRODUCED", iRate));
+	// shows Base Food and lists all modifiers
+	setYieldHelp(szBuffer, city, YIELD_FOOD);
 
-	// ==========================
 	szBuffer.append(DOUBLE_SEPARATOR);
 
 	int iFoodConsumed = 0;
@@ -33011,16 +32897,12 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		}
 	}
 
-	// ==========================
-
-// BUG - Building Additional Food - start
 	if (city.getOwner() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingAdditionalFood", true, "BUG_BUILDING_ADDITIONAL_FOOD_HOVER"))
 	{
 		setBuildingAdditionalYieldHelp(szBuffer, city, YIELD_FOOD, DOUBLE_SEPARATOR);
 	}
-// BUG - Building Additional Food - end
 }
-// BUG - Food Rate Hover - end
+
 
 // BUG - Building Additional Yield - start
 bool CvGameTextMgr::setBuildingAdditionalYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldTypes eIndex, const CvWString& szStart, bool bStarted)
@@ -33125,331 +33007,10 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
 	FAssertMsg(NO_PLAYER != city.getOwner(), "City must have an owner");
 
-	const bool bIsProcess = city.isProductionProcess();
-	const int iPastOverflow = (bIsProcess ? 0 : city.getOverflowProduction());
-	if (iPastOverflow != 0)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_OVERFLOW", iPastOverflow));
-		szBuffer.append(NEWLINE);
-	}
-
-	const int iFromChops = (city.isProductionProcess() ? 0 : city.getFeatureProduction());
-	if (iFromChops != 0)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_CHOPS", iFromChops));
-		szBuffer.append(NEWLINE);
-	}
-
-	const bool bBuildingAdditionalYield = getBugOptionBOOL("MiscHover__BuildingAdditionalProduction", true, "BUG_BUILDING_ADDITIONAL_PRODUCTION_HOVER");
-	if (city.getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow) == 0 && !bBuildingAdditionalYield)
-	{
-		return;
-	}
-
 	setYieldHelp(szBuffer, city, YIELD_PRODUCTION);
 
-	const CvPlayer& owner = GET_PLAYER(city.getOwner());
-
-	const int iBaseProduction = city.getModifiedBaseYieldRate(YIELD_PRODUCTION) + iPastOverflow + iFromChops;
-	int iBaseModifier = city.getBaseYieldRateModifier(YIELD_PRODUCTION);
-	int iMod;
-
-	UnitTypes eUnit = city.getProductionUnit();
-	if (NO_UNIT != eUnit)
-	{
-		const CvUnitInfo& unit = GC.getUnitInfo(eUnit);
-		// Trait
-		for (int iI = 0; iI < GC.getNumTraitInfos(); ++iI)
-		{
-			if (owner.hasTrait((TraitTypes)iI))
-			{
-				CvTraitInfo& kTrait = GC.getTraitInfo((TraitTypes)iI);
-				iMod = 0;
-				for (int iJ = 0; iJ < kTrait.getNumUnitProductionModifiers(); iJ++)
-				{
-					if ((UnitTypes)kTrait.getUnitProductionModifier(iJ).eUnit == eUnit)
-					{
-						iMod += kTrait.getUnitProductionModifier(iJ).iModifier;
-						break;
-					}
-				}
-				if (unit.getSpecialUnitType() != NO_SPECIALUNIT)
-				{
-					for (int iJ = 0; iJ < kTrait.getNumSpecialUnitProductionModifiers(); iJ++)
-					{
-						if ((SpecialUnitTypes)kTrait.getSpecialUnitProductionModifier(iJ).eSpecialUnit == unit.getSpecialUnitType())
-						{
-							iMod += kTrait.getSpecialUnitProductionModifier(iJ).iModifier;
-							break;
-						}
-					}
-				}
-				if (iMod == 100)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_DOUBLE_SPEED_TRAIT", kTrait.getTextKeyWide()));
-					iBaseModifier += 100;
-				}
-				else if (iMod != 0)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_MODIFIER_TRAIT", iMod, kTrait.getTextKeyWide()));
-					iBaseModifier += iMod;
-				}
-			}
-		}
-		// City and National
-		iMod = city.getUnitProductionModifier(eUnit) + owner.getUnitProductionModifier(eUnit);
-		if (0 != iMod)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_FROM", iMod, unit.getTextKeyWide()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iMod;
-		}
-		if (!unit.isNoNonTypeProdMods())
-		{
-			// Domain
-			iMod = city.getDomainProductionModifier((DomainTypes)unit.getDomainType());
-			if (0 != iMod)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_FROM", iMod, GC.getDomainInfo((DomainTypes)unit.getDomainType()).getTextKeyWide()));
-				szBuffer.append(NEWLINE);
-				iBaseModifier += iMod;
-			}
-			// Unit Combat
-			if (unit.getUnitCombatType() != NO_UNITCOMBAT)
-			{
-				iMod = owner.getUnitCombatProductionModifier((UnitCombatTypes)unit.getUnitCombatType()) + city.getUnitCombatProductionModifier((UnitCombatTypes)unit.getUnitCombatType());
-				if (0 != iMod)
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_FROM", iMod, GC.getUnitCombatInfo((UnitCombatTypes)unit.getUnitCombatType()).getDescription()));
-					szBuffer.append(NEWLINE);
-					iBaseModifier += iMod;
-				}
-				for (int iI = 0; iI < unit.getNumSubCombatTypes(); iI++)
-				{
-					iMod = owner.getUnitCombatProductionModifier((UnitCombatTypes)unit.getSubCombatType(iI)) + city.getUnitCombatProductionModifier((UnitCombatTypes)unit.getSubCombatType(iI));
-					if (0 != iMod)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_FROM", iMod, GC.getUnitCombatInfo((UnitCombatTypes)unit.getSubCombatType(iI)).getDescription()));
-						szBuffer.append(NEWLINE);
-						iBaseModifier += iMod;
-					}
-				}
-			}
-			// Military
-			if (unit.isMilitaryProduction())
-			{
-				iMod = owner.getMilitaryProductionModifier() + city.getMilitaryProductionModifier();
-				if (0 != iMod)
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MILITARY", iMod));
-					szBuffer.append(NEWLINE);
-					iBaseModifier += iMod;
-				}
-			}
-			// Religion
-			if (NO_RELIGION != owner.getStateReligion() && city.isHasReligion(owner.getStateReligion()))
-			{
-				iMod = owner.getStateReligionUnitProductionModifier();
-				if (0 != iMod)
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_RELIGION", iMod, GC.getReligionInfo(owner.getStateReligion()).getTextKeyWide()));
-					szBuffer.append(NEWLINE);
-					iBaseModifier += iMod;
-				}
-			}
-		}
-		// Bonus
-		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-		{
-			if (city.hasBonus((BonusTypes)iI))
-			{
-				iMod = unit.getBonusProductionModifier(iI);
-				if (0 != iMod)
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_BONUS", iMod, unit.getTextKeyWide(), GC.getBonusInfo((BonusTypes)iI).getTextKeyWide()));
-					szBuffer.append(NEWLINE);
-					iBaseModifier += iMod;
-				}
-			}
-		}
-	}
-
-	const BuildingTypes eBuilding = city.getProductionBuilding();
-	if (NO_BUILDING != eBuilding)
-	{
-		const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
-
-		// Bonus
-		for (int i = 0; i < GC.getNumBonusInfos(); i++)
-		{
-			if (city.hasBonus((BonusTypes)i))
-			{
-				const int iBonusMod = building.getBonusProductionModifier(i);
-				if (0 != iBonusMod)
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_BONUS", iBonusMod, building.getTextKeyWide(), GC.getBonusInfo((BonusTypes)i).getTextKeyWide()));
-					szBuffer.append(NEWLINE);
-					iBaseModifier += iBonusMod;
-				}
-			}
-		}
-
-		const int iBuildingMod = city.getBuildingProductionModifier(eBuilding) + owner.getBuildingProductionModifier(eBuilding);
-		if (0 != iBuildingMod)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_FROM", iBuildingMod, building.getTextKeyWide()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iBuildingMod;
-		}
-
-		// Trait
-		int iTraitMod = 0;
-		for (int i = 0; i < GC.getNumTraitInfos(); i++)
-		{
-			iTraitMod = 0;
-			const TraitTypes eTrait = static_cast<TraitTypes>(i);
-			if (city.hasTrait(eTrait))
-			{
-				for (int j = 0; j < GC.getTraitInfo(eTrait).getNumBuildingProductionModifiers(); j++)
-				{
-					if ((BuildingTypes)GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).eBuilding == eBuilding)
-					{
-						iTraitMod += GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).iModifier;
-					}
-				}
-
-				if (building.getSpecialBuildingType() != NO_SPECIALBUILDING)
-				{
-					for (int j = 0; j < GC.getTraitInfo(eTrait).getNumSpecialBuildingProductionModifiers(); j++)
-					{
-						if ((SpecialBuildingTypes)GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifier(j).eSpecialBuilding == building.getSpecialBuildingType())
-						{
-							iTraitMod += GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifier(j).iModifier;
-						}
-					}
-				}
-				if (0 != iTraitMod)
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_TRAIT", iTraitMod, building.getTextKeyWide(), GC.getTraitInfo(eTrait).getTextKeyWide()));
-					szBuffer.append(NEWLINE);
-					iBaseModifier += iTraitMod;
-				}
-			}
-		}
-
-		// Wonder
-		if (isWorldWonder(eBuilding) && NO_PLAYER != city.getOwner())
-		{
-			const int iWonderMod = owner.getMaxGlobalBuildingProductionModifier();
-			if (0 != iWonderMod)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_WONDER", iWonderMod));
-				szBuffer.append(NEWLINE);
-				iBaseModifier += iWonderMod;
-			}
-		}
-
-		// Team Wonder
-		if (isTeamWonder(eBuilding) && NO_PLAYER != city.getOwner())
-		{
-			const int iWonderMod = owner.getMaxTeamBuildingProductionModifier();
-			if (0 != iWonderMod)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_TEAM_WONDER", iWonderMod));
-				szBuffer.append(NEWLINE);
-				iBaseModifier += iWonderMod;
-			}
-		}
-
-		// National Wonder
-		if (isNationalWonder(eBuilding) && NO_PLAYER != city.getOwner())
-		{
-			const int iWonderMod = owner.getMaxPlayerBuildingProductionModifier();
-			if (0 != iWonderMod)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_NATIONAL_WONDER", iWonderMod));
-				szBuffer.append(NEWLINE);
-				iBaseModifier += iWonderMod;
-			}
-		}
-
-		// Religion
-		if (NO_PLAYER != city.getOwner() && NO_RELIGION != owner.getStateReligion())
-		{
-			if (city.isHasReligion(owner.getStateReligion()))
-			{
-				const int iReligionMod = owner.getStateReligionBuildingProductionModifier();
-				if (0 != iReligionMod)
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_RELIGION", iReligionMod, GC.getReligionInfo(owner.getStateReligion()).getTextKeyWide()));
-					szBuffer.append(NEWLINE);
-					iBaseModifier += iReligionMod;
-				}
-			}
-		}
-	}
-
-	const ProjectTypes eProject = city.getProductionProject();
-	if (NO_PROJECT != eProject)
-	{
-		const CvProjectInfo& project = GC.getProjectInfo(eProject);
-
-		// Spaceship
-		if (project.isSpaceship())
-		{
-			int iSpaceshipMod = city.getSpaceProductionModifier();
-			if (NO_PLAYER != city.getOwner())
-			{
-				iSpaceshipMod += owner.getSpaceProductionModifier();
-			}
-			if (0 != iSpaceshipMod)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_SPACESHIP", iSpaceshipMod));
-				szBuffer.append(NEWLINE);
-				iBaseModifier += iSpaceshipMod;
-			}
-		}
-
-		// Bonus
-		for (int i = 0; i < GC.getNumBonusInfos(); i++)
-		{
-			if (city.hasBonus((BonusTypes)i))
-			{
-				const int iBonusMod = project.getBonusProductionModifier(i);
-				if (0 != iBonusMod)
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_BONUS", iBonusMod, project.getTextKeyWide(), GC.getBonusInfo((BonusTypes)i).getTextKeyWide()));
-					szBuffer.append(NEWLINE);
-					iBaseModifier += iBonusMod;
-				}
-			}
-		}
-	}
-
-	// Total
-	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_TOTAL", iBaseModifier-100));
-	szBuffer.append(SEPARATOR);
-	szBuffer.append(NEWLINE);
-
-	const int iFoodProduction = (city.isFoodProduction() ? std::max(0, (city.getYieldRate(YIELD_FOOD) - city.foodConsumption(true))) : 0);
-	if (iFoodProduction > 0)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_FOOD", iFoodProduction, iFoodProduction));
-		szBuffer.append(NEWLINE);
-	}
-
-	const int iModProduction = iFoodProduction + (iBaseModifier * iBaseProduction) / 100;
-
-	FAssertMsg(iModProduction == city.getCurrentProductionDifference(ProductionCalc::FoodProduction | (!bIsProcess? ProductionCalc::Overflow : ProductionCalc::None)),
-		CvString::format("Modified Production (%d) does not match actual value (%d)",
-			iModProduction, city.getCurrentProductionDifference(ProductionCalc::FoodProduction | (!bIsProcess? ProductionCalc::Overflow : ProductionCalc::None))).c_str());
-	//FAssertMsg(city.getProductionModifier() == (iBaseModifier-100), CvString::format("Real Modifier: %d%%; modifier: %d%%", city.getProductionModifier(), iBaseModifier-100).c_str());
-
-	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_FINAL_YIELD", iModProduction));
-
-	if (bBuildingAdditionalYield && city.getOwner() == GC.getGame().getActivePlayer())
+	if (city.getOwner() == GC.getGame().getActivePlayer()
+	&& getBugOptionBOOL("MiscHover__BuildingAdditionalProduction", true, "BUG_BUILDING_ADDITIONAL_PRODUCTION_HOVER"))
 	{
 		setBuildingAdditionalYieldHelp(szBuffer, city, YIELD_PRODUCTION, DOUBLE_SEPARATOR);
 	}
@@ -33810,9 +33371,7 @@ void CvGameTextMgr::buildHintsList(CvWStringBuffer& szBuffer)
 
 void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, CommerceTypes eCommerceType)
 {
-	//check if this hover is turned on in the bug options and disable if not.
-	bool bBuildingAdditionalCommerce = getBugOptionBOOL("MiscHover__BuildingAdditionalCommerce", true, "BUG_BUILDING_ADDITIONAL_COMMERCE_HOVER");
-	if (NO_COMMERCE == eCommerceType || (0 == city.getCommerceRateTimes100(eCommerceType) && !bBuildingAdditionalCommerce))
+	if (NO_COMMERCE == eCommerceType || NO_PLAYER == city.getOwner())
 	{
 		return;
 	}
@@ -33820,11 +33379,6 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	//define commerce info.
 	const CvCommerceInfo& info = GC.getCommerceInfo(eCommerceType);
 
-	//ensure we have a player definition - if we don't, disable the help hover
-	if (NO_PLAYER == city.getOwner())
-	{
-		return;
-	}
 	//define player owner.
 	CvPlayer& owner = GET_PLAYER(city.getOwner());
 	//define team owner.
@@ -33833,6 +33387,8 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	//initiate with an exposition on the base commerce yield income total for the city before we start a breakdown
 	//Note: should generate a total value as it shows the base and then modifier but not a total - that would be a helpful addition
 	setYieldHelp(szBuffer, city, YIELD_COMMERCE);
+	szBuffer.append(SEPARATOR);
+	szBuffer.append(NEWLINE);
 
 	//STEP 1 : Slider
 	//displays as: slider% of totalCommerce = total base unmodified commerce
@@ -34109,7 +33665,8 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	CvWString szYield = CvWString::format(L"%d.%02d", iModYield/100, std::abs(iModYield%100));
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_FINAL_YIELD_FLOAT", info.getTextKeyWide(), szYield.GetCString(), info.getChar()));
 
-	if (bBuildingAdditionalCommerce && city.getOwner() == GC.getGame().getActivePlayer())
+	if (city.getOwner() == GC.getGame().getActivePlayer()
+	&& getBugOptionBOOL("MiscHover__BuildingAdditionalCommerce", true, "BUG_BUILDING_ADDITIONAL_COMMERCE_HOVER"))
 	{
 		setBuildingAdditionalCommerceHelp(szBuffer, city, eCommerceType, DOUBLE_SEPARATOR);
 	}
@@ -34124,131 +33681,537 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 		return;
 	}
 	const CvYieldInfo& info = GC.getYieldInfo(eYieldType);
-	CvPlayer& owner = GET_PLAYER(city.getOwner());
+	const CvPlayer& owner = GET_PLAYER(city.getOwner());
 
-	const int iBaseProduction = city.getModifiedBaseYieldRate(eYieldType);
+	const int iBaseYield = city.getBaseYieldRate(eYieldType);
+	int iYield = iBaseYield;
 
-	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BASE_YIELD", info.getTextKeyWide(), iBaseProduction, info.getChar()));
-	szBuffer.append(NEWLINE);
+	const int iPlotYield = city.getPlotYield(eYieldType);
+	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_WORKED_TILES_YIELD", iPlotYield, info.getChar()));
+	iYield -= iPlotYield;
 
-	int iTemp;
-	int iBaseModifier = 100;
-	// Toffer
-	// There may be a better way to get the event modifiers isolated, though the only one I can think
-	// of is to add a new player and city variable to store the eventModifiers explicitly.
-	int iEventModifier = city.getYieldRateModifier(eYieldType) + owner.getYieldRateModifier(eYieldType);
 	// Traits
-	int iMod = 0;
-	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
+	if (owner.getFreeCityYield(eYieldType) != 0)
 	{
-		if (owner.hasTrait((TraitTypes)iI))
+		for (int i = 0; i < GC.getNumTraitInfos(); i++)
 		{
-			iTemp = GC.getTraitInfo((TraitTypes)iI).getYieldModifier(eYieldType);
-			iEventModifier -= iTemp;
-			iMod += iTemp;
-		}
-	}
-	if (0 != iMod)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_TRAITS", iMod, info.getChar()));
-		szBuffer.append(NEWLINE);
-		iBaseModifier += iMod;
-	}
-	// Civics
-	iMod = 0;
-	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
-	{
-		if (NO_CIVIC != owner.getCivics((CivicOptionTypes)iI))
-		{
-			iTemp = GC.getCivicInfo(owner.getCivics((CivicOptionTypes)iI)).getYieldModifier(eYieldType);
-			iEventModifier -= iTemp;
-			iMod += iTemp;
-		}
-	}
-	if (0 != iMod)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CIVICS", iMod, info.getChar()));
-		szBuffer.append(NEWLINE);
-		iBaseModifier += iMod;
-	}
-	// Buildings
-	iMod = 0;
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-	{
-		const CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iI);
-		if (city.getNumActiveBuilding((BuildingTypes)iI) > 0)
-		{
-			iTemp = building.getYieldModifier(eYieldType);
-			iEventModifier -= iTemp;
-			iMod += iTemp;
-			iMod += GET_TEAM(city.getTeam()).getBuildingYieldModifier((BuildingTypes)iI, eYieldType);
-		}
-		for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
-		{
-			if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(owner.getTeam()))
+			TraitTypes eTrait = static_cast<TraitTypes>(i);
+			if (owner.hasTrait(eTrait))
 			{
-				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iJ).cities())
+				const int iTraitYield = GC.getTraitInfo(eTrait).getYieldChange(eYieldType);
+				if (iTraitYield != 0)
 				{
-					if (pLoopCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
-					{
-						iTemp = building.getGlobalYieldModifier(eYieldType);
-						iEventModifier -= iTemp;
-						iMod += iTemp;
-					}
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_TRAIT_COMMERCE", iTraitYield, info.getChar(), GC.getTraitInfo(eTrait).getDescription()));
+					iYield -= iTraitYield;
 				}
 			}
 		}
 	}
-	if (NULL != city.area())
+	if (iYield != 0)
 	{
-		iMod += city.area()->getYieldRateModifier(city.getOwner(), eYieldType);
-	}
-	if (0 != iMod)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iMod, info.getChar()));
 		szBuffer.append(NEWLINE);
-		iBaseModifier += iMod;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_OTHER", iYield, info.getChar()));
 	}
-	// Resources
-	iMod = city.getBonusYieldRateModifier(eYieldType);
-	if (0 != iMod)
+	szBuffer.append(SEPARATOR);
+	szBuffer.append(NEWLINE);
+	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BASE_YIELD", info.getTextKeyWide(), iBaseYield, info.getChar()));
+	szBuffer.append(NEWLINE);
+
+	const int iActualBaseMod = city.getBaseYieldRateModifier(eYieldType);
+	int iBaseModifier = 100;
+	int iMod = 0;
+	if (iActualBaseMod != 100)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BONUS", iMod, info.getChar()));
-		szBuffer.append(NEWLINE);
-		iBaseModifier += iMod;
-	}
-	// Power
-	if (city.isPower())
-	{
-		iMod = city.getPowerYieldRateModifier(eYieldType);
+		// Toffer
+		// There may be a better way to get the event modifiers isolated, though the only one I can think
+		// of is to add a new player and city variable to store the eventModifiers explicitly.
+		int iEventModifier = city.getYieldRateModifier(eYieldType) + owner.getYieldRateModifier(eYieldType);
+		// Traits
+		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
+		{
+			if (owner.hasTrait((TraitTypes)iI))
+			{
+				const int iTemp = GC.getTraitInfo((TraitTypes)iI).getYieldModifier(eYieldType);
+				iEventModifier -= iTemp;
+				iMod += iTemp;
+			}
+		}
 		if (0 != iMod)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_POWER", iMod, info.getChar()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_TRAITS", iMod, info.getChar()));
 			szBuffer.append(NEWLINE);
 			iBaseModifier += iMod;
 		}
-	}
-	// Capital
-	if (city.isCapital())
-	{
-		iMod = owner.getCapitalYieldRateModifier(eYieldType);
+		// Civics
+		iMod = 0;
+		for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		{
+			if (NO_CIVIC != owner.getCivics((CivicOptionTypes)iI))
+			{
+				const int iTemp = GC.getCivicInfo(owner.getCivics((CivicOptionTypes)iI)).getYieldModifier(eYieldType);
+				iEventModifier -= iTemp;
+				iMod += iTemp;
+			}
+		}
 		if (0 != iMod)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CAPITAL", iMod, info.getChar()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CIVICS", iMod, info.getChar()));
 			szBuffer.append(NEWLINE);
 			iBaseModifier += iMod;
 		}
+		// Buildings
+		iMod = 0;
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		{
+			const CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iI);
+			if (city.getNumActiveBuilding((BuildingTypes)iI) > 0)
+			{
+				const int iTemp = building.getYieldModifier(eYieldType);
+				iEventModifier -= iTemp;
+				iMod += iTemp;
+				iMod += GET_TEAM(city.getTeam()).getBuildingYieldModifier((BuildingTypes)iI, eYieldType);
+			}
+			for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
+			{
+				if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(owner.getTeam()))
+				{
+					foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iJ).cities())
+					{
+						if (pLoopCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+						{
+							const int iTemp = building.getGlobalYieldModifier(eYieldType);
+							iEventModifier -= iTemp;
+							iMod += iTemp;
+						}
+					}
+				}
+			}
+		}
+		if (NULL != city.area())
+		{
+			iMod += city.area()->getYieldRateModifier(city.getOwner(), eYieldType);
+		}
+		if (0 != iMod)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iMod, info.getChar()));
+			szBuffer.append(NEWLINE);
+			iBaseModifier += iMod;
+		}
+		// Resources
+		iMod = city.getBonusYieldRateModifier(eYieldType);
+		if (0 != iMod)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BONUS", iMod, info.getChar()));
+			szBuffer.append(NEWLINE);
+			iBaseModifier += iMod;
+		}
+		// Power
+		if (city.isPower())
+		{
+			iMod = city.getPowerYieldRateModifier(eYieldType);
+			if (0 != iMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_POWER", iMod, info.getChar()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iMod;
+			}
+		}
+		// Capital
+		if (city.isCapital())
+		{
+			iMod = owner.getCapitalYieldRateModifier(eYieldType);
+			if (0 != iMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CAPITAL", iMod, info.getChar()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iMod;
+			}
+		}
+		// Events
+		if (iEventModifier != 0)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_EVENTS", iEventModifier, info.getChar()));
+			szBuffer.append(NEWLINE);
+			iBaseModifier += iEventModifier;
+		}
+		FAssertMsg(iActualBaseMod == iBaseModifier, CvString::format("Total Yield Modifier %d should be %d", iBaseModifier, iActualBaseMod).c_str())
 	}
-	// Events
-	if (iEventModifier != 0)
+
+	// Production specific
+	if (eYieldType == YIELD_PRODUCTION && city.getProductionModifier() != 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_EVENTS", iEventModifier, info.getChar()));
-		szBuffer.append(NEWLINE);
-		iBaseModifier += iEventModifier;
+		UnitTypes eUnit = city.getProductionUnit();
+		if (NO_UNIT != eUnit)
+		{
+			const CvUnitInfo& unit = GC.getUnitInfo(eUnit);
+			// Trait
+			for (int iI = 0; iI < GC.getNumTraitInfos(); ++iI)
+			{
+				if (owner.hasTrait((TraitTypes)iI))
+				{
+					CvTraitInfo& kTrait = GC.getTraitInfo((TraitTypes)iI);
+					iMod = 0;
+					for (int iJ = 0; iJ < kTrait.getNumUnitProductionModifiers(); iJ++)
+					{
+						if ((UnitTypes)kTrait.getUnitProductionModifier(iJ).eUnit == eUnit)
+						{
+							iMod += kTrait.getUnitProductionModifier(iJ).iModifier;
+							break;
+						}
+					}
+					if (unit.getSpecialUnitType() != NO_SPECIALUNIT)
+					{
+						for (int iJ = 0; iJ < kTrait.getNumSpecialUnitProductionModifiers(); iJ++)
+						{
+							if ((SpecialUnitTypes)kTrait.getSpecialUnitProductionModifier(iJ).eSpecialUnit == unit.getSpecialUnitType())
+							{
+								iMod += kTrait.getSpecialUnitProductionModifier(iJ).iModifier;
+								break;
+							}
+						}
+					}
+					if (iMod == 100)
+					{
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_DOUBLE_SPEED_TRAIT", kTrait.getTextKeyWide()));
+						iBaseModifier += 100;
+					}
+					else if (iMod != 0)
+					{
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_MODIFIER_TRAIT", iMod, kTrait.getTextKeyWide()));
+						iBaseModifier += iMod;
+					}
+				}
+			}
+			// City and National
+			iMod = city.getUnitProductionModifier(eUnit) + owner.getUnitProductionModifier(eUnit);
+			if (0 != iMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_FROM", iMod, unit.getTextKeyWide()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iMod;
+			}
+			if (!unit.isNoNonTypeProdMods())
+			{
+				// Domain
+				iMod = city.getDomainProductionModifier((DomainTypes)unit.getDomainType());
+				if (0 != iMod)
+				{
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_FROM", iMod, GC.getDomainInfo((DomainTypes)unit.getDomainType()).getTextKeyWide()));
+					szBuffer.append(NEWLINE);
+					iBaseModifier += iMod;
+				}
+				// Unit Combat
+				if (unit.getUnitCombatType() != NO_UNITCOMBAT)
+				{
+					iMod = owner.getUnitCombatProductionModifier((UnitCombatTypes)unit.getUnitCombatType()) + city.getUnitCombatProductionModifier((UnitCombatTypes)unit.getUnitCombatType());
+					if (0 != iMod)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_FROM", iMod, GC.getUnitCombatInfo((UnitCombatTypes)unit.getUnitCombatType()).getDescription()));
+						szBuffer.append(NEWLINE);
+						iBaseModifier += iMod;
+					}
+					for (int iI = 0; iI < unit.getNumSubCombatTypes(); iI++)
+					{
+						iMod = owner.getUnitCombatProductionModifier((UnitCombatTypes)unit.getSubCombatType(iI)) + city.getUnitCombatProductionModifier((UnitCombatTypes)unit.getSubCombatType(iI));
+						if (0 != iMod)
+						{
+							szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_FROM", iMod, GC.getUnitCombatInfo((UnitCombatTypes)unit.getSubCombatType(iI)).getDescription()));
+							szBuffer.append(NEWLINE);
+							iBaseModifier += iMod;
+						}
+					}
+				}
+				// Military
+				if (unit.isMilitaryProduction())
+				{
+					iMod = owner.getMilitaryProductionModifier() + city.getMilitaryProductionModifier();
+					if (0 != iMod)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MILITARY", iMod));
+						szBuffer.append(NEWLINE);
+						iBaseModifier += iMod;
+					}
+				}
+				// Religion
+				if (NO_RELIGION != owner.getStateReligion() && city.isHasReligion(owner.getStateReligion()))
+				{
+					iMod = owner.getStateReligionUnitProductionModifier();
+					if (0 != iMod)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_RELIGION", iMod, GC.getReligionInfo(owner.getStateReligion()).getTextKeyWide()));
+						szBuffer.append(NEWLINE);
+						iBaseModifier += iMod;
+					}
+				}
+			}
+			// Bonus
+			for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+			{
+				if (city.hasBonus((BonusTypes)iI))
+				{
+					iMod = unit.getBonusProductionModifier(iI);
+					if (0 != iMod)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_BONUS", iMod, unit.getTextKeyWide(), GC.getBonusInfo((BonusTypes)iI).getTextKeyWide()));
+						szBuffer.append(NEWLINE);
+						iBaseModifier += iMod;
+					}
+				}
+			}
+		}
+		const BuildingTypes eBuilding = city.getProductionBuilding();
+
+		if (NO_BUILDING != eBuilding)
+		{
+			const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+
+			// Bonus
+			for (int i = 0; i < GC.getNumBonusInfos(); i++)
+			{
+				if (city.hasBonus((BonusTypes)i))
+				{
+					const int iBonusMod = building.getBonusProductionModifier(i);
+					if (0 != iBonusMod)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_BONUS", iBonusMod, building.getTextKeyWide(), GC.getBonusInfo((BonusTypes)i).getTextKeyWide()));
+						szBuffer.append(NEWLINE);
+						iBaseModifier += iBonusMod;
+					}
+				}
+			}
+
+			const int iBuildingMod = city.getBuildingProductionModifier(eBuilding) + owner.getBuildingProductionModifier(eBuilding);
+			if (0 != iBuildingMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_FROM", iBuildingMod, building.getTextKeyWide()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iBuildingMod;
+			}
+
+			// Trait
+			int iTraitMod = 0;
+			for (int i = 0; i < GC.getNumTraitInfos(); i++)
+			{
+				iTraitMod = 0;
+				const TraitTypes eTrait = static_cast<TraitTypes>(i);
+				if (city.hasTrait(eTrait))
+				{
+					for (int j = 0; j < GC.getTraitInfo(eTrait).getNumBuildingProductionModifiers(); j++)
+					{
+						if ((BuildingTypes)GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).eBuilding == eBuilding)
+						{
+							iTraitMod += GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).iModifier;
+						}
+					}
+
+					if (building.getSpecialBuildingType() != NO_SPECIALBUILDING)
+					{
+						for (int j = 0; j < GC.getTraitInfo(eTrait).getNumSpecialBuildingProductionModifiers(); j++)
+						{
+							if ((SpecialBuildingTypes)GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifier(j).eSpecialBuilding == building.getSpecialBuildingType())
+							{
+								iTraitMod += GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifier(j).iModifier;
+							}
+						}
+					}
+					if (0 != iTraitMod)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_TRAIT", iTraitMod, building.getTextKeyWide(), GC.getTraitInfo(eTrait).getTextKeyWide()));
+						szBuffer.append(NEWLINE);
+						iBaseModifier += iTraitMod;
+					}
+				}
+			}
+
+			// Wonder
+			if (isWorldWonder(eBuilding) && NO_PLAYER != city.getOwner())
+			{
+				const int iWonderMod = owner.getMaxGlobalBuildingProductionModifier();
+				if (0 != iWonderMod)
+				{
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_WONDER", iWonderMod));
+					szBuffer.append(NEWLINE);
+					iBaseModifier += iWonderMod;
+				}
+			}
+
+			// Team Wonder
+			if (isTeamWonder(eBuilding) && NO_PLAYER != city.getOwner())
+			{
+				const int iWonderMod = owner.getMaxTeamBuildingProductionModifier();
+				if (0 != iWonderMod)
+				{
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_TEAM_WONDER", iWonderMod));
+					szBuffer.append(NEWLINE);
+					iBaseModifier += iWonderMod;
+				}
+			}
+
+			// National Wonder
+			if (isNationalWonder(eBuilding) && NO_PLAYER != city.getOwner())
+			{
+				const int iWonderMod = owner.getMaxPlayerBuildingProductionModifier();
+				if (0 != iWonderMod)
+				{
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_NATIONAL_WONDER", iWonderMod));
+					szBuffer.append(NEWLINE);
+					iBaseModifier += iWonderMod;
+				}
+			}
+
+			// Religion
+			if (NO_PLAYER != city.getOwner() && NO_RELIGION != owner.getStateReligion())
+			{
+				if (city.isHasReligion(owner.getStateReligion()))
+				{
+					const int iReligionMod = owner.getStateReligionBuildingProductionModifier();
+					if (0 != iReligionMod)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_RELIGION", iReligionMod, GC.getReligionInfo(owner.getStateReligion()).getTextKeyWide()));
+						szBuffer.append(NEWLINE);
+						iBaseModifier += iReligionMod;
+					}
+				}
+			}
+		}
+
+		const ProjectTypes eProject = city.getProductionProject();
+		if (NO_PROJECT != eProject)
+		{
+			const CvProjectInfo& project = GC.getProjectInfo(eProject);
+
+			// Spaceship
+			if (project.isSpaceship())
+			{
+				int iSpaceshipMod = city.getSpaceProductionModifier();
+				if (NO_PLAYER != city.getOwner())
+				{
+					iSpaceshipMod += owner.getSpaceProductionModifier();
+				}
+				if (0 != iSpaceshipMod)
+				{
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_SPACESHIP", iSpaceshipMod));
+					szBuffer.append(NEWLINE);
+					iBaseModifier += iSpaceshipMod;
+				}
+			}
+
+			// Bonus
+			for (int i = 0; i < GC.getNumBonusInfos(); i++)
+			{
+				if (city.hasBonus((BonusTypes)i))
+				{
+					const int iBonusMod = project.getBonusProductionModifier(i);
+					if (0 != iBonusMod)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_BONUS", iBonusMod, project.getTextKeyWide(), GC.getBonusInfo((BonusTypes)i).getTextKeyWide()));
+						szBuffer.append(NEWLINE);
+						iBaseModifier += iBonusMod;
+					}
+				}
+			}
+		}
+		FAssertMsg(
+			iBaseModifier == city.getBaseYieldRateModifier(YIELD_PRODUCTION, city.getProductionModifier()),
+			CvString::format(
+				"Total Production Modifier %d should be %d",
+				iBaseModifier, city.getBaseYieldRateModifier(YIELD_PRODUCTION, city.getProductionModifier())
+			).c_str()
+		)
 	}
-	FAssertMsg(city.getBaseYieldRateModifier(eYieldType) == iBaseModifier, CvString::format("Total Yield Modifier %d should be %d", city.getBaseYieldRateModifier(eYieldType), iBaseModifier).c_str());
-	FAssertMsg(iBaseProduction * std::max(0, iBaseModifier) / 100 == city.getYieldRate(eYieldType), "Yield Modifier in setProductionHelp does not agree with actual value");
+
+	// Sub total
+	if (iBaseModifier != 100)
+	{
+		const int iModBaseYield100 = iBaseYield * iBaseModifier;
+		CvWString szYield = CvWString::format(L"%d.%02d", iModBaseYield100/100, iModBaseYield100%100);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD", iBaseModifier-100, szYield.GetCString(), info.getChar()));
+	}
+	szBuffer.append(SEPARATOR);
+
+	// Extra yields
+	int iExtraYield = city.getExtraYield(eYieldType);
+	iYield = iExtraYield;
+
+	// Specialists
+	int iSpecialistYield = city.getExtraSpecialistYield(eYieldType);
+	if (iSpecialistYield != 0)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iSpecialistYield, info.getChar(), L"TXT_KEY_CONCEPT_SPECIALISTS"));
+		iYield -= iSpecialistYield;
+	}
+	// Trade
+	const int iTradeYield = city.getTradeYield(eYieldType);
+	if (iTradeYield != 0)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iTradeYield, info.getChar(), L"TXT_KEY_HEADING_TRADEROUTE_LIST"));
+		iYield -= iTradeYield;
+	}
+	// Corporations
+	const int iCorporationYield = city.getCorporationYield(eYieldType);
+	if (iCorporationYield != 0)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_CORPORATION_COMMERCE", iCorporationYield, info.getChar()));
+		iYield += iCorporationYield;
+	}
+
+	// Yield specifics
+	switch (eYieldType)
+	{
+		case YIELD_FOOD:
+		{
+			break;
+		}
+		case YIELD_PRODUCTION:
+		{
+			const int iFoodProduction = city.isFoodProduction() ? std::max(0, city.getYieldRate(YIELD_FOOD) - city.foodConsumption(true)) : 0;
+			if (iFoodProduction > 0)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_FOOD", iFoodProduction, iFoodProduction));
+			}
+			const bool bIsProcess = city.isProductionProcess();
+			const int iPastOverflow = (bIsProcess ? 0 : city.getOverflowProduction());
+			if (iPastOverflow != 0)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_OVERFLOW", iPastOverflow));
+			}
+
+			const int iFromChops = (bIsProcess ? 0 : city.getFeatureProduction());
+			if (iFromChops != 0)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_CHOPS", iFromChops));
+			}
+			iExtraYield += iFoodProduction + iPastOverflow + iFromChops;
+			break;
+		}
+		case YIELD_COMMERCE:
+		{
+			break;
+		}
+	}
+	// Unspecified
+	if (iYield != 0)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_OTHER", iYield, info.getChar()));
+	}
+
+	// Total
+	szBuffer.append(SEPARATOR);
+	szBuffer.append(NEWLINE);
+	const int iTotal = iExtraYield + iBaseYield * iBaseModifier / 100;
+	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_FINAL_YIELD", iTotal, info.getChar()));
 }
+
 
 void CvGameTextMgr::setConvertHelp(CvWStringBuffer& szBuffer, PlayerTypes ePlayer, ReligionTypes eReligion)
 {
