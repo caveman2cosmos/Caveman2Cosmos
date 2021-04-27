@@ -11,8 +11,31 @@
 //  Copyright (c) 2005 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 
+#include "CvCityAI.h"
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
+
+plotInfo::plotInfo() :
+	index(0),
+	worked(false),
+	owned(false),
+	yieldValue(0),
+	currentImprovement(NO_IMPROVEMENT),
+	currentFeature(NO_FEATURE),
+	currentBuild(NO_BUILD)
+{
+}
+
+std::string plotInfo::ToJSON()
+{
+	std::ostringstream oss;
+	oss << "{ plotIndex: " << index << ", worked: " << worked << ", owned:" << owned << ", yieldValue: " << yieldValue
+		<< ",yields: { food: " << yields[YIELD_FOOD] << ", production: " << yields[YIELD_PRODUCTION] << ", commerce: " << yields[YIELD_COMMERCE]
+		<< "}, currentImprovement: " << currentImprovement << ", currentFeature: " << currentFeature << "}" << std::endl;
+
+	const std::string output = oss.str();
+	return output;
+}
 
 int EventTriggeredData::getID() const 
 { 

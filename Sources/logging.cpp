@@ -38,8 +38,6 @@ namespace logging
 
 	void logMsgW(const char* file, const wchar_t* msg, ...)
 	{
-		if (GC.isXMLLogging())
-		{
 			static wchar_t buf[2048];
 			_vsnwprintf(buf, 2048 -4, msg, (char*)(&msg +1));
 			static char buf2[2048];
@@ -51,9 +49,7 @@ namespace logging
 			FAssert(stream.is_open())
 			stream << buf2;
 			stream.close();
-
 			OutputDebugString(buf2);
-		}
 	}
 
 	void createLogsFolder()

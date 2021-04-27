@@ -24,6 +24,22 @@ typedef std::vector< std::pair<PromotionLineTypes, int> > PromotionLineModifierA
 typedef std::vector< std::pair<InvisibleTypes, int> > InvisibilityArray;
 typedef std::vector< std::pair<EraTypes, int> > EraArray;
 typedef std::vector< std::pair<PropertyTypes, int> > AidArray;
+
+struct plotInfo
+{
+	plotInfo();
+	std::string ToJSON();
+
+	int index;
+	bool worked;
+	bool owned;
+	int yieldValue;
+	short yields[NUM_YIELD_TYPES];
+	ImprovementTypes currentImprovement;
+	FeatureTypes currentFeature;
+	BuildTypes currentBuild;
+};
+
 struct AidStruct
 {	
 	PropertyTypes eProperty;

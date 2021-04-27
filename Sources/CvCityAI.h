@@ -5,6 +5,11 @@
 #ifndef CIV4_CITY_AI_H
 #define CIV4_CITY_AI_H
 
+#include <vector>
+#include <vector>
+#include <vector>
+#include <vector>
+
 #include "CvCity.h"
 #include "CvPlayerAI.h"
 
@@ -93,7 +98,7 @@ public:
 	void AI_init();
 	void AI_uninit();
 	void AI_reset();
-	void SendLog(char* function, char* message);
+	void SendLog(CvWString function, CvWString message);
 
 	void AI_doTurn();
 
@@ -184,8 +189,8 @@ public:
 	void AI_forceEmphasizeCulture(bool bNewValue);
 
 	void AI_markBestBuildValuesStale();
-	void AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, int** currentYieldList, CvPlayerAI& kPlayer) const;
-	void AI_getBestPlotValue(int iPlotCounter, CvPlot* plot, int** optimalYieldList, CvPlayerAI& kPlayer) const;
+	void AI_getCurrentPlotValue(int iPlotCounter, ::CvPlot* plot, std::vector<plotInfo>& currentYieldList);
+	void AI_getBestPlotValue(int iPlotCounter, CvPlot* plot, std::vector<plotInfo>& currentYieldList, std::vector<plotInfo>& optimalYieldList);
 	void AI_updateBestBuildForPlots();
 	int AI_getBestBuildValue(int iIndex) const;
 	int AI_totalBestBuildValue(const CvArea* pArea) const;

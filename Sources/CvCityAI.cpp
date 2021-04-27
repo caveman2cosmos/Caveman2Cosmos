@@ -4,6 +4,10 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCityAI.h"
+
+#include <string>
+#include <string>
+
 #include "CvContractBroker.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
@@ -56,6 +60,7 @@ static bool isFreeBonusOfBuilding(const CvBuildingInfo& kBuilding, BonusTypes eB
 }
 
 // Public Functions...
+
 
 CvCityAI::CvCityAI()
 {
@@ -193,9 +198,13 @@ void CvCityAI::AI_reset()
 	m_iCityThreat = -1;
 }
 
-void CvCityAI::SendLog(char* function, char* message)
+void CvCityAI::SendLog(CvWString function, CvWString message)
 {
-	std::string const type = "CvCityAI";
+	//WIP, wrapper of the new FLB logger, to create correct payload for this class
+	CvWString aiType = "CvCityAI";
+	
+	
+	logAIJson(aiType,this->getName(), function,  message);
 
 }
 
@@ -8377,31 +8386,31 @@ void CvCityAI::AI_markBestBuildValuesStale()
 {
 	m_bestBuildValuesStale = true;
 }
-void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, int **currentYieldList, CvPlayerAI &kPlayer) const
+void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vector<plotInfo> &currentYieldList)
 {
-	const int activeWorkerMissions = kPlayer.AI_plotTargetMissionAIs(plot, MISSIONAI_BUILD);
-
+	CvWString yieldNames[3] = { "food", "production", "commerce" };
+	
+	SendLog("getCurrentPlotValue", "{ event: entering }");
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
+	bool bIgnoreFeature = false;
+	int activeWorkerMissions = kPlayer.AI_plotTargetMissionAIs(plot, MISSIONAI_BUILD);
+	SendLog("getCurrentPlotValue", "{ event: " + CvWString::format(L"active workers %lld" ,activeWorkerMissions)+ " \" }");
 	if (activeWorkerMissions > 0)
-	{
+	{		
+		SendLog("getCurrentPlotValue", "{ event: active workermission" + this->getName() + " }");
 		BuildTypes eBuild = NO_BUILD;
-		if (m_aeBestBuild[iPlotCounter] != NO_BUILD && m_aiBestBuildValue[iPlotCounter] > 0)
-		{
-			eBuild = m_aeBestBuild[iPlotCounter];
-		}
-		else
-		{
-			// This check is necessary to stop oscillation which can result
-			// when best build changes food situation for city, changing the best build. making sure worker completes the ongoing build
-			// this gets the build action with the shortest remaining build-time
-			eBuild = GetShortestBuildTimeOnPlot(plot);
-		}
+		// This check is necessary to stop oscillation which can result
+		// when best build changes food situation for city, changing the best build. making sure worker completes the ongoing build
+		// this gets the build action with the shortest remaining build-time
+		eBuild = GetShortestBuildTimeOnPlot(plot);	
 		if (eBuild != NO_BUILD)
 		{
 			//get plot-improvement that build generates
 			const ImprovementTypes eImprovement = static_cast<ImprovementTypes>(GC.getBuildInfo(eBuild).getImprovement());
 			if (eImprovement != NO_IMPROVEMENT)
 			{
-				const bool bIgnoreFeature = (plot->getFeatureType() != NO_FEATURE &&
+				currentYieldList[iPlotCounter].currentImprovement = eImprovement;
+				 bIgnoreFeature = (plot->getFeatureType() != NO_FEATURE &&
 					GC.getBuildInfo(eBuild).isFeatureRemove(plot->getFeatureType()));
 
 				for (int iYieldType = 0; iYieldType < NUM_YIELD_TYPES; iYieldType++)
@@ -8409,24 +8418,67 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, int **curr
 					const int natureYield = plot->calculateNatureYield(static_cast<YieldTypes>(iYieldType), getTeam(), bIgnoreFeature);
 					const int yieldIncrease = plot->calculateImprovementYieldChange(eImprovement, static_cast<YieldTypes>(iYieldType), getOwner(), false);
 
-					currentYieldList[iPlotCounter][iYieldType] = natureYield + yieldIncrease;
-					
+					currentYieldList[iPlotCounter].yields[iYieldType] = yieldIncrease + natureYield;
 				}
+				
 			}
 		}
 	}
 	//if plot does not have active worker mission, take existing yield
 	for (int yieldTypes = 0; yieldTypes < NUM_YIELD_TYPES; yieldTypes++)
 	{
-		currentYieldList[iPlotCounter][yieldTypes] = plot->getYield(static_cast<YieldTypes>(yieldTypes));
+		currentYieldList[iPlotCounter].yields[yieldTypes] = plot->getYield(static_cast<YieldTypes>(yieldTypes));
+		SendLog("getCurrentPlotValue", "{ event: \"adding current yieldType " + yieldNames[yieldTypes] + this->getName() +" \" }");
 	}
-}
-void CvCityAI::AI_getBestPlotValue(int iPlotCounter, CvPlot *plot,int **optimalYieldList,CvPlayerAI &kPlayer) const
-{
-	
+	currentYieldList[iPlotCounter].yieldValue = AI_yieldValue(
+		currentYieldList[iPlotCounter].yields, NULL, false, bIgnoreFeature, false, false, true, true);
+	SendLog("getBestPlotValue", currentYieldList[iPlotCounter].ToJSON());
 }
 
-void CvCityAI::AI_updateBestBuildForPlots()
+void CvCityAI::AI_getBestPlotValue(int iPlotCounter, CvPlot *plot,std::vector<plotInfo> &currentYieldList, std::vector<plotInfo> &optimalYieldList)
+{
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
+	BuildTypes eBuild = NO_BUILD;
+	int iFoodMultiplier = 500;
+	int iProductionMultiplier = 1000;
+	int iCommerceMultiplier = 1000;
+	bool bChop = false;
+	int iHappyAdjust = 0;
+	int iHealthAdjust = 0;
+	int iFoodChange = 0;
+	bool bIgnoreFeature = false;
+	
+	AI_bestPlotBuild(plot,&(optimalYieldList[iPlotCounter].yieldValue),&(optimalYieldList[iPlotCounter].currentBuild),
+	iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier,
+	bChop, iHappyAdjust, iHealthAdjust, 0);
+	SendLog("getBestPlotValue", CvWString::format(L"%lld", optimalYieldList[iPlotCounter].currentBuild));
+	eBuild = optimalYieldList[iPlotCounter].currentBuild;
+	if(eBuild != NO_BUILD)
+	{
+		eBuild = eBuild;
+		optimalYieldList[iPlotCounter].currentImprovement = static_cast<ImprovementTypes>(GC.getBuildInfo(eBuild).getImprovement());
+		const ImprovementTypes eImprovement = optimalYieldList[iPlotCounter].currentImprovement;
+		if (eImprovement != NO_IMPROVEMENT)
+		{
+			currentYieldList[iPlotCounter].currentImprovement = eImprovement;
+			bIgnoreFeature = (plot->getFeatureType() != NO_FEATURE &&
+				GC.getBuildInfo(eBuild).isFeatureRemove(plot->getFeatureType()));
+
+			for (int iYieldType = 0; iYieldType < NUM_YIELD_TYPES; iYieldType++)
+			{
+				const int natureYield = plot->calculateNatureYield(static_cast<YieldTypes>(iYieldType), getTeam(), bIgnoreFeature);
+				const int yieldIncrease = plot->calculateImprovementYieldChange(eImprovement, static_cast<YieldTypes>(iYieldType), getOwner(), false);
+
+				currentYieldList[iPlotCounter].yields[iYieldType] = yieldIncrease + natureYield;
+			}
+		}
+		optimalYieldList[iPlotCounter].yieldValue = AI_yieldValue(
+			currentYieldList[iPlotCounter].yields, NULL, false, bIgnoreFeature, false, false, true, true);
+	}
+	SendLog("getBestPlotValue", optimalYieldList[iPlotCounter].ToJSON());
+}
+
+void CvCityAI::AI_updateBestBuild()
 {
 	PROFILE_FUNC();
 	if (!m_bestBuildValuesStale)
@@ -8436,28 +8488,50 @@ void CvCityAI::AI_updateBestBuildForPlots()
 		return;
 	}
 	SendLog("updateBestBuild", "{ event: BestBuildCacheUpdating }");
+	m_bestBuildValuesStale = false;
+
 
 	const int numCityPlots = getNumCityPlots();
-	int *currentYieldList[NUM_CITY_PLOTS][NUM_YIELD_TYPES] = { 0 };
-	int *optimalYieldList[NUM_CITY_PLOTS][NUM_YIELD_TYPES] = { 0 };
-	int aiFinalYields[NUM_YIELD_TYPES];
+	std::vector<plotInfo> currentYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
+	std::vector<plotInfo> optimalYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
 
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	for (int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++) // start at 1, 0 is the plot of the city
 	{
+		currentYieldList[iPlotCounter].index = iPlotCounter;
+		optimalYieldList[iPlotCounter].index = iPlotCounter;
 		CvPlot* loopedPlot = getCityIndexPlot(iPlotCounter);
-		if (nullptr == loopedPlot || !(loopedPlot->getPlotCity() == this)) continue;
-		AI_getCurrentPlotValue(iPlotCounter,loopedPlot, *currentYieldList, kPlayer);
-		AI_getBestPlotValue(iPlotCounter, loopedPlot, *optimalYieldList, kPlayer);
+		//SendLog("getPlotCity", loopedPlot->getPlotCity()->getName());
+		SendLog("getWorkingCity", loopedPlot->getWorkingCity()->getName());
+		SendLog("thisCity", this->getName());
+		if (NULL == loopedPlot || !(loopedPlot->getWorkingCity() == this)) continue;
 
-
-		delete* currentYieldList;
-		delete* optimalYieldList;
+		currentYieldList[iPlotCounter].owned = true;
+		if (loopedPlot->getWorkingCity() == this) currentYieldList[iPlotCounter].worked = true;
+		
+		AI_getCurrentPlotValue(iPlotCounter,loopedPlot, currentYieldList);
+		std::string logMessage = "{ event: " + currentYieldList[iPlotCounter].ToJSON() + "}";
+		SendLog("currentBuild", logMessage);
+		AI_getBestPlotValue(iPlotCounter, loopedPlot, optimalYieldList,currentYieldList);
+		logMessage = "{ event: " + optimalYieldList[iPlotCounter].ToJSON() + "}";
+		SendLog("optimalBuild", logMessage);
+	}
+	for(int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++)
+	{
+		if(currentYieldList[iPlotCounter].yieldValue >= optimalYieldList[iPlotCounter].yieldValue)
+		{
+			m_aeBestBuild[iPlotCounter] = NO_BUILD;
+			m_aiBestBuildValue[iPlotCounter] = 0;
+		}
+		else
+		{
+			m_aeBestBuild[iPlotCounter] = optimalYieldList[iPlotCounter].currentBuild;
+			m_aiBestBuildValue[iPlotCounter] = optimalYieldList[iPlotCounter].yieldValue;
+		}
 	}
 }
 
 // Improved worker AI provided by Blake - thank you!
-void CvCityAI::AI_updateBestBuild()
+void CvCityAI::AI_updateBestBuildForPlots()
 {
 	PROFILE_FUNC();
 
@@ -8496,7 +8570,7 @@ void CvCityAI::AI_updateBestBuild()
 		{
 			CvPlot* pLoopPlot = getCityIndexPlot(iI);
 
-			if (nullptr != pLoopPlot && pLoopPlot->getWorkingCity() == this)
+			if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this)
 			{
 				const int iCount = kPlayer.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD);
 				iWorkerCount += iCount;
@@ -11327,7 +11401,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 			:
 			GET_TEAM(getTeam()).finalImprovementUpgrade(ePlotImp)
 			);
-	const CvImprovementInfo* plotImp = ePlotImp != NO_IMPROVEMENT ? &GC.getImprovementInfo(ePlotImp) : nullptr;
+	const CvImprovementInfo* plotImp = ePlotImp != NO_IMPROVEMENT ? &GC.getImprovementInfo(ePlotImp) : NULL;
 
 	// When improving new plots only, count emphasis twice
 	// helps to avoid too much tearing up of old improvements.
