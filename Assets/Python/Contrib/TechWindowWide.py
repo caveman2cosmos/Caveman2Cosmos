@@ -245,10 +245,10 @@ class CvTechSplashScreen:
 		for j in range(GC.getNumTechInfos()):
 			for iPrereq in GC.getTechInfo(j).getPrereqOrTechs():
 				if iPrereq == self.iTech:
-        			screen.attachImageButton(panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
+					screen.attachImageButton(panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
 			for iPrereq in GC.getTechInfo(j).getPrereqAndTechs():
 				if iPrereq == self.iTech:
-        			screen.attachImageButton(panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
+					screen.attachImageButton(panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
 
 #---Eingef�gt ENDE ------------------------------------------------
 		# Allows
