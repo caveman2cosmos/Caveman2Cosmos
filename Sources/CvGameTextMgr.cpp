@@ -12563,7 +12563,7 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			int aiYields[NUM_YIELD_TYPES];
 			for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 			{
-				aiYields[iI] = pCity->getAdditionalYieldBySpecialist((YieldTypes)iI, eSpecialist, iChange);
+				aiYields[iI] = iChange * pCity->getYieldBySpecialist((YieldTypes)iI, eSpecialist);
 			}
 			bStarted = setResumableYieldChangeHelp(szHelpString, szStart, L": ", L"", aiYields, false, true, bStarted);
 
