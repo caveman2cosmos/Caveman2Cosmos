@@ -741,63 +741,60 @@ def canTriggerMonsoonCity(argsList):
 ######## VOLCANO ###########
 
 def getHelpVolcano1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_1_HELP", ())
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_1_HELP", ())
 
 def canApplyVolcano1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	kTriggeredData = argsList[1]
 
-  iNumImprovements = 0
-  for iDX in xrange(-1, 2):
-    for iDY in xrange(-1, 2):
-      loopPlot = plotXY(kTriggeredData.iPlotX, kTriggeredData.iPlotY, iDX, iDY)
-      if not loopPlot.isNone():
-        if (iDX != 0 or iDY != 0):
-          if loopPlot.getImprovementType() != -1:
-            iNumImprovements += 1
-
-  return (iNumImprovements > 0)
+	for iDX in xrange(-1, 2):
+		for iDY in xrange(-1, 2):
+			plotX = plotXY(kTriggeredData.iPlotX, kTriggeredData.iPlotY, iDX, iDY)
+			if not plotX.isNone() and plotX.getImprovementType() != -1:
+				return True
+	return False
 
 def applyVolcano1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	kTriggeredData = argsList[1]
+	plots = []
+	iPlots = 0
+	for iDX in xrange(-1, 2):
+		for iDY in xrange(-1, 2):
+			plotX = plotXY(kTriggeredData.iPlotX, kTriggeredData.iPlotY, iDX, iDY)
+			if not plotX.isNone():
+				iImprovement = plotX.getImprovementType()
+				if iImprovement > -1:
+					plots.append((plotX, iImprovement))
+					iPlots += 1
 
-  listPlots = []
-  for iDX in xrange(-1, 2):
-    for iDY in xrange(-1, 2):
-      loopPlot = plotXY(kTriggeredData.iPlotX, kTriggeredData.iPlotY, iDX, iDY)
-      if not loopPlot.isNone():
-        if (iDX != 0 or iDY != 0):
-          if loopPlot.getImprovementType() != -1:
-            listPlots.append(loopPlot)
+	if not plots: raise "Event - Error in canApplyVolcano1"
 
-  listRuins = []
-  listRuins.append(GC.getInfoTypeForString("IMPROVEMENT_COTTAGE"))
-  listRuins.append(GC.getInfoTypeForString("IMPROVEMENT_HAMLET"))
-  listRuins.append(GC.getInfoTypeForString("IMPROVEMENT_VILLAGE"))
-  listRuins.append(GC.getInfoTypeForString("IMPROVEMENT_TOWN"))
+	if iPlots < 3:
+		iRange = iPlots
+	else: iRange = 3
 
-  iRuins = GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS")
+	listRuins = [
+		GC.getInfoTypeForString("IMPROVEMENT_COTTAGE"),
+		GC.getInfoTypeForString("IMPROVEMENT_HAMLET"),
+		GC.getInfoTypeForString("IMPROVEMENT_VILLAGE"),
+		GC.getInfoTypeForString("IMPROVEMENT_TOWN"),
+		GC.getInfoTypeForString("IMPROVEMENT_SUBURBS"),
+		GC.getInfoTypeForString("IMPROVEMENT_GOODY_HUT")
+	]
+	iRuins = GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS")
 
-  for i in xrange(3):
-    if len(listPlots) > 0:
-      plot = listPlots[GAME.getSorenRandNum(len(listPlots), "Volcano event improvement destroyed")]
-      iImprovement = plot.getImprovementType()
-      szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getImprovementInfo(iImprovement).getTextKey(), ))
-      CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getInfoTypeForString("COLOR_RED"), plot.getX(), plot.getY(), True, True)
-      if iImprovement in listRuins:
-        plot.setImprovementType(iRuins)
-      else:
-        plot.setImprovementType(-1)
-      listPlots.remove(plot)
+	for i in xrange(iRange):
+		if i and GAME.getSorenRandNum(100, "Volcano event num improvements destroyed") < 50:
+			break
+		plot, iImprovement = plots.pop(GAME.getSorenRandNum(iPlots, "Volcano event improvement destroyed"))
+		iPlots -= 1
+		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getImprovementInfo(iImprovement).getTextKey(), ))
+		CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getInfoTypeForString("COLOR_RED"), plot.getX(), plot.getY(), True, True)
+		if iImprovement in listRuins:
+			plot.setImprovementType(iRuins)
+		else:
+			plot.setImprovementType(-1)
 
-      if i == 1 and GAME.getSorenRandNum(100, "Volcano event num improvements destroyed") < 50:
-        break
+
 
 ######## DUSTBOWL ###########
 
@@ -3558,9 +3555,8 @@ def getHostileTakeoverListResources(corporation, player):
       if iBonus != -1 and not iBonus in listHave:
           listHave.append(iBonus)
   listNeed = []
-  for i in xrange(GC.getNUM_CORPORATION_PREREQ_BONUSES()):
-    iBonus = corporation.getPrereqBonus(i)
-    if iBonus != -1 and not iBonus in listHave:
+  for iBonus in corporation.getPrereqBonuses():
+    if not iBonus in listHave:
         listNeed.append(iBonus)
   return listNeed
 
@@ -5996,63 +5992,58 @@ def applyMercenariesMedieval2(argsList):
 ######## EARTHQUAKE ###########
 
 def getHelpEarthquake1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_EARTHQUAKE_1_HELP", ())
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_EARTHQUAKE_1_HELP", ())
 
 def canApplyEarthquake1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	kTriggeredData = argsList[1]
 
-  iNumImprovements = 0
-  for iDX in xrange(-1, 2):
-    for iDY in xrange(-1, 2):
-      loopPlot = plotXY(kTriggeredData.iPlotX, kTriggeredData.iPlotY, iDX, iDY)
-      if not loopPlot.isNone():
-        if (iDX != 0 or iDY != 0):
-          if loopPlot.getImprovementType() != -1:
-            iNumImprovements += 1
-
-  return (iNumImprovements > 0)
+	for iDX in xrange(-1, 2):
+		for iDY in xrange(-1, 2):
+			plotX = plotXY(kTriggeredData.iPlotX, kTriggeredData.iPlotY, iDX, iDY)
+			if not plotX.isNone() and plotX.getImprovementType() != -1:
+				return True
+	return False
 
 def applyEarthquake1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	kTriggeredData = argsList[1]
+	plots = []
+	iPlots = 0
+	for iDX in xrange(-1, 2):
+		for iDY in xrange(-1, 2):
+			plotX = plotXY(kTriggeredData.iPlotX, kTriggeredData.iPlotY, iDX, iDY)
+			if not plotX.isNone():
+				iImprovement = plotX.getImprovementType()
+				if iImprovement > -1:
+					plots.append((plotX, iImprovement))
+					iPlots += 1
 
-  listPlots = []
-  for iDX in xrange(-1, 2):
-    for iDY in xrange(-1, 2):
-      loopPlot = plotXY(kTriggeredData.iPlotX, kTriggeredData.iPlotY, iDX, iDY)
-      if not loopPlot.isNone():
-        if (iDX != 0 or iDY != 0):
-          if loopPlot.getImprovementType() != -1:
-            listPlots.append(loopPlot)
+	if not plots: raise "Event - Error in canApplyVolcano1"
 
-  listRuins = []
-  listRuins.append(GC.getInfoTypeForString("IMPROVEMENT_COTTAGE"))
-  listRuins.append(GC.getInfoTypeForString("IMPROVEMENT_HAMLET"))
-  listRuins.append(GC.getInfoTypeForString("IMPROVEMENT_VILLAGE"))
-  listRuins.append(GC.getInfoTypeForString("IMPROVEMENT_TOWN"))
+	if iPlots < 3:
+		iRange = iPlots
+	else: iRange = 3
 
-  iRuins = GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS")
+	listRuins = [
+		GC.getInfoTypeForString("IMPROVEMENT_COTTAGE"),
+		GC.getInfoTypeForString("IMPROVEMENT_HAMLET"),
+		GC.getInfoTypeForString("IMPROVEMENT_VILLAGE"),
+		GC.getInfoTypeForString("IMPROVEMENT_TOWN"),
+		GC.getInfoTypeForString("IMPROVEMENT_SUBURBS"),
+		GC.getInfoTypeForString("IMPROVEMENT_GOODY_HUT")
+	]
+	iRuins = GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS")
 
-  for i in xrange(3):
-    if len(listPlots) > 0:
-      plot = listPlots[GAME.getSorenRandNum(len(listPlots), "Earthquake event improvement destroyed")]
-      iImprovement = plot.getImprovementType()
-      szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getImprovementInfo(iImprovement).getTextKey(), ))
-      CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getInfoTypeForString("COLOR_RED"), plot.getX(), plot.getY(), True, True)
-      if iImprovement in listRuins:
-        plot.setImprovementType(iRuins)
-      else:
-        plot.setImprovementType(-1)
-      listPlots.remove(plot)
-
-      if i == 1 and GAME.getSorenRandNum(100, "Earthquake event num improvements destroyed") < 50:
-        break
+	for i in xrange(iRange):
+		if i and GAME.getSorenRandNum(100, "Volcano event num improvements destroyed") < 50:
+			break
+		plot, iImprovement = plots.pop(GAME.getSorenRandNum(iPlots, "Volcano event improvement destroyed"))
+		iPlots -= 1
+		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getImprovementInfo(iImprovement).getTextKey(), ))
+		CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getInfoTypeForString("COLOR_RED"), plot.getX(), plot.getY(), True, True)
+		if iImprovement in listRuins:
+			plot.setImprovementType(iRuins)
+		else:
+			plot.setImprovementType(-1)
 
 
 ####### Assassin Discovered #######
@@ -7115,7 +7106,8 @@ def doVolcanoNeighbouringPlots(pPlot):
                GC.getInfoTypeForString("IMPROVEMENT_HAMLET"),
                GC.getInfoTypeForString("IMPROVEMENT_VILLAGE"),
                GC.getInfoTypeForString("IMPROVEMENT_TOWN"),
-               GC.getInfoTypeForString("IMPROVEMENT_SUBURBS")]
+               GC.getInfoTypeForString("IMPROVEMENT_SUBURBS"),
+               GC.getInfoTypeForString("IMPROVEMENT_GOODY_HUT")]
   iRuins = GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS")
 
   # List of improvements that are unaffected by eruption

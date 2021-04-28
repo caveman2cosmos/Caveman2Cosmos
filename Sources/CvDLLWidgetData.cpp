@@ -2496,26 +2496,22 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						CvWStringBuffer szBonusList;
 						bool bValid = false;
 						bool bFirst = true;
-						for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+						foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 						{
-							BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
-							if (NO_BONUS != eBonus)
+							if (!bFirst)
 							{
-								if (!bFirst)
-								{
-									szBonusList.append(L", ");
-								}
-								else
-								{
-									bFirst = false;
-								}
-								szBonusList.append(GC.getBonusInfo(eBonus).getDescription());
+								szBonusList.append(L", ");
+							}
+							else
+							{
+								bFirst = false;
+							}
+							szBonusList.append(GC.getBonusInfo(eBonus).getDescription());
 
-								if (pMissionCity->hasBonus(eBonus))
-								{
-									bValid = true;
-									break;
-								}
+							if (pMissionCity->hasBonus(eBonus))
+							{
+								bValid = true;
+								break;
 							}
 						}
 
@@ -2865,10 +2861,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					// Yield delta from terrain change
 					if ( (NO_TERRAIN != ePlotTerrain) && bIsTerrainChange)
 					{
-						iYield += GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getYield(iI) +
-							(ePlotRiverSide ? GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getRiverYieldChange(iI) : 0);
-						iYield -= GC.getTerrainInfo(ePlotTerrain).getYield(iI) +
-							(ePlotRiverSide ? GC.getTerrainInfo(ePlotTerrain).getRiverYieldChange(iI) : 0);
+						iYield += GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getYield(iI);
+						iYield -= GC.getTerrainInfo(ePlotTerrain).getYield(iI);
 					}
 
 					if (iYield != 0)

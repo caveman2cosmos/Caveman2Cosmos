@@ -15475,4 +15475,9 @@
 		<Polish>Statek Wormhole</Polish>
 		<Russian>Âàðï-çâåçäîëåò</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_NOMAD</Tag>
+		<English>Nomads</English>
+		<French>Nomades</French>
+	</TEXT>
 </Civ4GameText>

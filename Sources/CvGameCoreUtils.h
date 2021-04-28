@@ -323,7 +323,9 @@ bool PUF_isAvailableUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData
 bool PUF_isUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 bool PUF_isFiniteRangeAndNotJustProduced(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 bool PUF_isMissionary(const CvUnit* pUnit, int /*ReligionTypes*/ iData1, int /*PlayerTypes*/ iData2, const CvUnit* pThis = NULL);
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 bool PUF_isAfflicted(const CvUnit* pUnit, int /*PromotionLineTypes*/ iData1, int iData2, const CvUnit* pThis = NULL);
+#endif
 bool PUF_isTunneledEnemy( const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 bool PUF_isNonTunneledEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 

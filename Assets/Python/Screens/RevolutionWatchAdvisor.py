@@ -315,9 +315,9 @@ class RevolutionWatchAdvisor:
 #				("ADVISE_RESEARCH",			150,	"text",	None,					None,					0,									self.advise,							"Research",					"localText.getText(\"TXT_KEY_COMMERCE_RESEARCH\", ()).upper()"),
 #				("ADVISE_SPACESHIP",		150,	"text",	None,					None,					0,									self.advise,							"Spaceship",				"localText.getText(\"TXT_KEY_CONCEPT_SPACESHIP\", ()).upper()"),
 #				("AUTOMATION",				80,		"text",	None,					None,					0,									self.calculateAutomation,				None,						"u\"AUTO\""),
-				("BASE_COMMERCE",			38,		"int",	None,					CyCity.getBaseYieldRate, YieldTypes.YIELD_COMMERCE,			None,									None,						"u\"B\" + self.commerceIcon"),
-				("BASE_FOOD",				38,		"int",	None,					CyCity.getBaseYieldRate, YieldTypes.YIELD_FOOD,				None,									None,						"u\"B\" + self.foodIcon"),
-				("BASE_PRODUCTION",			38,		"int",	None,					CyCity.getBaseYieldRate, YieldTypes.YIELD_PRODUCTION,		None,									None,						"u\"B\" + self.hammerIcon"),
+				("BASE_COMMERCE",			38,		"int",	None,					CyCity.getPlotYield,	YieldTypes.YIELD_COMMERCE,			None,									None,						"u\"B\" + self.commerceIcon"),
+				("BASE_FOOD",				38,		"int",	None,					CyCity.getPlotYield,	YieldTypes.YIELD_FOOD,				None,									None,						"u\"B\" + self.foodIcon"),
+				("BASE_PRODUCTION",			38,		"int",	None,					CyCity.getPlotYield,	YieldTypes.YIELD_PRODUCTION,		None,									None,						"u\"B\" + self.hammerIcon"),
 #				("CONSCRIPT_UNIT",			90,		"text",	None,					None,					0,									self.calculateConscriptUnit,			None,						"localText.getText(\"TXT_KEY_CONCEPT_DRAFT\", ()).upper()"),
 #				("COULD_CONSCRIPT_UNIT",	90,		"text",	None,					None,					0,									self.calculatePotentialConscriptUnit,	None,						"localText.getText(\"TXT_KEY_CONCEPT_DRAFT\", ()).upper() + u\"#\""),
 #				("CORPORATIONS",			90,		"text",	None,					None,					0,									self.calculateCorporations,				None,						"localText.getText(\"TXT_KEY_CONCEPT_CORPORATIONS\", ()).upper()"),
@@ -546,28 +546,27 @@ class RevolutionWatchAdvisor:
 		self.bonusCorpCommerces = {}
 		for eCorp in range(gc.getNumCorporationInfos()):
 			info = gc.getCorporationInfo(eCorp)
-			for i in range(gc.getNUM_CORPORATION_PREREQ_BONUSES()):
-				eBonus = info.getPrereqBonus(i)
-				if (eBonus >= 0):
-					for eYield in range(YieldTypes.NUM_YIELD_TYPES):
-						iYieldValue = info.getYieldProduced(eYield)
-						if (iYieldValue != 0):
-							if (not self.bonusCorpYields.has_key(eBonus)):
-								self.bonusCorpYields[eBonus] = {}
-							if (not self.bonusCorpYields[eBonus].has_key(eYield)):
-								self.bonusCorpYields[eBonus][eYield] = {}
-							if (not self.bonusCorpYields[eBonus][eYield].has_key(eCorp)):
-								self.bonusCorpYields[eBonus][eYield][eCorp] = iYieldValue
+			for eBonus in info.getPrereqBonuses():
 
-					for eCommerce in range(CommerceTypes.NUM_COMMERCE_TYPES):
-						iCommerceValue = info.getCommerceProduced(eCommerce)
-						if (iCommerceValue != 0):
-							if (not self.bonusCorpCommerces.has_key(eBonus)):
-								self.bonusCorpCommerces[eBonus] = {}
-							if (not self.bonusCorpCommerces[eBonus].has_key(eCommerce)):
-								self.bonusCorpCommerces[eBonus][eCommerce] = {}
-							if (not self.bonusCorpCommerces[eBonus][eCommerce].has_key(eCorp)):
-								self.bonusCorpCommerces[eBonus][eCommerce][eCorp] = iCommerceValue
+				for eYield in range(YieldTypes.NUM_YIELD_TYPES):
+					iYieldValue = info.getYieldProduced(eYield)
+					if (iYieldValue != 0):
+						if (not self.bonusCorpYields.has_key(eBonus)):
+							self.bonusCorpYields[eBonus] = {}
+						if (not self.bonusCorpYields[eBonus].has_key(eYield)):
+							self.bonusCorpYields[eBonus][eYield] = {}
+						if (not self.bonusCorpYields[eBonus][eYield].has_key(eCorp)):
+							self.bonusCorpYields[eBonus][eYield][eCorp] = iYieldValue
+
+				for eCommerce in range(CommerceTypes.NUM_COMMERCE_TYPES):
+					iCommerceValue = info.getCommerceProduced(eCommerce)
+					if (iCommerceValue != 0):
+						if (not self.bonusCorpCommerces.has_key(eBonus)):
+							self.bonusCorpCommerces[eBonus] = {}
+						if (not self.bonusCorpCommerces[eBonus].has_key(eCommerce)):
+							self.bonusCorpCommerces[eBonus][eCommerce] = {}
+						if (not self.bonusCorpCommerces[eBonus][eCommerce].has_key(eCorp)):
+							self.bonusCorpCommerces[eBonus][eCommerce][eCorp] = iCommerceValue
 
 		self.loadPages()
 
@@ -1646,9 +1645,9 @@ class RevolutionWatchAdvisor:
 		aList = []
 		for i in range(gc.getMAX_PLAYERS()):
 			for cityX in gc.getPlayer(i).cities():
-				L.append(cityX.getBaseYieldRate(arg))
+				L.append(cityX.getPlotYield(arg))
 
-		y = city.getBaseYieldRate(arg)
+		y = city.getPlotYield(arg)
 		return len([i for i in aList if i > y]) + 1
 
 	def findGlobalYieldRateRank (self, city, szKey, arg):
@@ -1744,7 +1743,7 @@ class RevolutionWatchAdvisor:
 							bestOrder = i
 							bestData = value
 					elif type == "Nutty":
-						value = math.sin(float(info.getProductionCost()) * city.getBaseYieldRate(YieldTypes.YIELD_COMMERCE)) + 1
+						value = math.sin(float(info.getProductionCost()) * city.getPlotYield(YieldTypes.YIELD_COMMERCE)) + 1
 						if value > bestData:
 							bestOrder = i
 							bestData = value
@@ -1758,19 +1757,19 @@ class RevolutionWatchAdvisor:
 					elif type == "Spaceship":
 						if not city.isPower():
 							if info.isPower():
-								value = city.getBaseYieldRate(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
+								value = city.getPlotYield(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
 								if value > bestData:
 									bestOrder = i
 									bestData = value
 
 						if city.findBaseYieldRateRank(YieldTypes.YIELD_PRODUCTION) < 12:
-							value = city.getBaseYieldRate(YieldTypes.YIELD_PRODUCTION) * 2 * info.getYieldModifier(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
+							value = city.getPlotYield(YieldTypes.YIELD_PRODUCTION) * 2 * info.getYieldModifier(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
 							if value > bestData:
 								bestOrder = i
 								bestData = value
 
 						if city.findBaseYieldRateRank(YieldTypes.YIELD_COMMERCE) < player.getNumCities() / 2:
-							value = city.getBaseYieldRate(YieldTypes.YIELD_COMMERCE) * info.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH) / float(info.getProductionCost())
+							value = city.getPlotYield(YieldTypes.YIELD_COMMERCE) * info.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH) / float(info.getProductionCost())
 							if value > bestData:
 								bestOrder = i
 								bestData = value
@@ -2378,7 +2377,7 @@ class RevolutionWatchAdvisor:
 
 	def save(self, inputClass):
 		name = SP.joinModDir("UserSettings", "CustomRevAdv", "CustomRevAdv.txt")
-		if SP.isfile(name):
+		if SP.isFile(name):
 			file = open(name, 'w')
 
 			if(file != 0):
@@ -2717,9 +2716,9 @@ class RevolutionWatchAdvisor:
 
 		self.PAGES = None
 		name = SP.joinModDir("UserSettings", "CustomRevAdv", "CustomRevAdv.txt")
-		if not SP.isfile(name):
+		if not SP.isFile(name):
 			name = SP.joinModDir("UserSettings", "CustomRevAdv.txt")
-		if SP.isfile(name):
+		if SP.isFile(name):
 			BugConfigTracker.add("CDA_Config", name)
 			try:
 				file = open(name, 'r')
