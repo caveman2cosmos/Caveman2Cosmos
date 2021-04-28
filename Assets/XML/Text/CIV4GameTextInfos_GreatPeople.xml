@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<!-- Composite texts: Those TXT _PEDIA keys are procedurally concatenated by DLL and or Python. _PEDIA entries of GP are displayed when GP is spawned. -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AARON_BURR</Tag>

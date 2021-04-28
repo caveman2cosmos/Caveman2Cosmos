@@ -35555,6 +35555,7 @@
 				<UniqueName>TXT_KEY_GREAT_PERSON_XOLOTL</UniqueName>
 				<UniqueName>TXT_KEY_GREAT_PERSON_ZHANG_HENG</UniqueName>
 				<UniqueName>TXT_KEY_GREAT_PERSON_ZHORES_ALFEROV</UniqueName>
+				<UniqueName>TXT_KEY_GREAT_PERSON_LOUIS_RENAULT</UniqueName>
 			</UniqueNames>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_PRODIGY</Combat>
