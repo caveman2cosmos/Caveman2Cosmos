@@ -12501,23 +12501,27 @@ CvCity* CvUnit::getUpgradeCity(bool bSearch) const
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		int iNewValue = kPlayer.AI_unitValue(((UnitTypes)iI), eUnitAI, pArea);
-		if (iNewValue > iCurrentValue)
+		const UnitTypes eUnitX = static_cast<UnitTypes>(iI);
+		if (upgradeAvailable(m_eUnitType, eUnitX) && kPlayer.canTrain(eUnitX))
 		{
-			int iSearchValue;
-			CvCity* pUpgradeCity = getUpgradeCity((UnitTypes)iI, bSearch, &iSearchValue);
-			if (pUpgradeCity != NULL)
+			int iNewValue = kPlayer.AI_unitValue(eUnitX, eUnitAI, pArea);
+			if (iNewValue > iCurrentValue)
 			{
-				// if not searching or close enough, then this match will do
-				if (!bSearch || iSearchValue < 16)
+				int iSearchValue;
+				CvCity* pUpgradeCity = getUpgradeCity(eUnitX, bSearch, &iSearchValue);
+				if (pUpgradeCity != NULL)
 				{
-					return pUpgradeCity;
-				}
+					// if not searching or close enough, then this match will do
+					if (!bSearch || iSearchValue < 16)
+					{
+						return pUpgradeCity;
+					}
 
-				if (iSearchValue < iBestSearchValue)
-				{
-					iBestSearchValue = iSearchValue;
-					pBestUpgradeCity = pUpgradeCity;
+					if (iSearchValue < iBestSearchValue)
+					{
+						iBestSearchValue = iSearchValue;
+						pBestUpgradeCity = pUpgradeCity;
+					}
 				}
 			}
 		}
@@ -12536,7 +12540,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 {
 	PROFILE_FUNC();
 
-	if (eUnit == NO_UNIT || !upgradeAvailable(getUnitType(), eUnit))
+	if (eUnit == NO_UNIT || !upgradeAvailable(m_eUnitType, eUnit) || !GET_PLAYER(getOwner()).canTrain(eUnit))
 	{
 		return NULL;
 	}
@@ -12572,8 +12576,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 				return NULL;
 			}
 
-			if (kUnitInfo.getDomainCargo() != NO_DOMAIN
-			&& kUnitInfo.getDomainCargo() != pLoopUnit->getDomainType())
+			if (kUnitInfo.getDomainCargo() != NO_DOMAIN && kUnitInfo.getDomainCargo() != pLoopUnit->getDomainType())
 			{
 				return NULL;
 			}
