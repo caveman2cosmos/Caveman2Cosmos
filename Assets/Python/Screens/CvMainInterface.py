@@ -255,9 +255,9 @@ class CvMainInterface:
 				(afm.getInterfaceArtInfo("OVERLAY_NOMOVE").getPath(), afm.getInterfaceArtInfo("OVERLAY_NOMOVE_INJURED").getPath()),
 				(afm.getInterfaceArtInfo("OVERLAY_NOMOVE_GG").getPath(), afm.getInterfaceArtInfo("OVERLAY_NOMOVE_INJURED_GG").getPath())]
 			# Cache Info Types
-			self.COLOR_RED			= GC.getInfoTypeForString('COLOR_RED')
-			self.COLOR_YELLOW		= GC.getInfoTypeForString('COLOR_YELLOW')
-			self.COLOR_GREEN		= GC.getInfoTypeForString('COLOR_GREEN')
+			self.COLOR_RED			= GC.getCOLOR_RED()
+			self.COLOR_YELLOW		= GC.getCOLOR_YELLOW()
+			self.COLOR_GREEN		= GC.getCOLOR_GREEN()
 			self.HURRY_POPULATION	= GC.getInfoTypeForString('HURRY_POPULATION')
 			self.HURRY_GOLD			= GC.getInfoTypeForString('HURRY_GOLD')
 			self.PROMOTION_LEADER	= GC.getInfoTypeForString('PROMOTION_LEADER')

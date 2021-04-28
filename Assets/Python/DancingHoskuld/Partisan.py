@@ -113,8 +113,8 @@ def onCityAcquired(argsList):
 ### set Partisan Units ###
 ##########################
 
-						ft_forest = GC.getInfoTypeForString('FEATURE_FOREST')
-						ft_jungle = GC.getInfoTypeForString( 'FEATURE_JUNGLE' )
+						ft_forest = GC.getFEATURE_FOREST()
+						ft_jungle = GC.getFEATURE_JUNGLE()
 						it_fort = GC.getInfoTypeForString("IMPROVEMENT_FORT")
 						# Check all city radius plots
 						iX = CyCity.getX()

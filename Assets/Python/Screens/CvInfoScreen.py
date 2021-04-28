@@ -123,8 +123,8 @@ class CvInfoScreen:
 			self.iNumGraphs = 8
 		else: self.iNumGraphs = 7
 
-		self.iBlack = GC.getInfoTypeForString("COLOR_BLACK")
-		iYellow = GC.getInfoTypeForString("COLOR_YELLOW")
+		self.iBlack = GC.getCOLOR_BLACK()
+		iYellow = GC.getCOLOR_YELLOW()
 		sTemp2 = []
 		for txt in sTemp1:
 			sTemp2.append(TRNSLTR.changeTextColor(txt, iYellow))
