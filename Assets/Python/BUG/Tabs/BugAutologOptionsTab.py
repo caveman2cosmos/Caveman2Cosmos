@@ -28,7 +28,7 @@ class BugAutologOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.attachHSeparator(column, column + "Sep1")
 		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
-		self.addIntDropdown(screen, left, left, "Autolog__4000BC")
+		self.addIntDropdown(screen, left, left, "Autolog__StartDate")
 		self.addCheckbox(screen, left, "Autolog__DefaultFileName")
 		self.addCheckbox(screen, left, "Autolog__IBT")
 		self.addCheckbox(screen, left, "Autolog__ColorCoding")

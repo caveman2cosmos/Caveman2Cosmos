@@ -1159,14 +1159,6 @@
 		<Russian>Ãîðîäñêîé ýêðàí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPTTAB_CONFIG</Tag>
-		<English>Config</English>
-		<French>Configuration</French>
-		<German>Pfade</German>
-		<Spanish>Configuración</Spanish>
-		<Russian>Êîíôèãóðàöèÿ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTTAB_CREDITS</Tag>
 		<English>Credits</English>
 		<French>Crédits</French>
@@ -1210,15 +1202,6 @@
 		<Russian>×àñû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPTTAB_PLE</Tag>
-		<English>Plot List</English>
-		<French>Liste des unités</French>
-		<German>Einheitenliste</German>
-		<Italian>Icone Unità</Italian>
-		<Spanish>Lista de unidades</Spanish>
-		<Russian>Ñïèñîê ãðàôèêîâ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTTAB_SCORES</Tag>
 		<English>Scoreboard</English>
 		<French>Scores</French>
@@ -1243,21 +1226,6 @@
 		<Italian>Nomi Unità</Italian>
 		<Spanish>Nombrado de unidades</Spanish>
 		<Russian>Íàçâàíèÿ þíèòîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ACO__DEBUG_HOVER</Tag>
-		<English>When checked, shows debugging information in the combat odds calculations.</English>
-		<French>Lorsque activé, affiche les informations de debuggage pour les calculs des probabilité des combats.</French>
-		<German>Zeigt Debug-Information bei der Berechnung der Siegchancen an</German>
-		<Italian>Quando è selezionato, mostra le informazioni di debug nel calcolo delle Probabilità di Combattimento.</Italian>
-		<Spanish>Cuando se activa, muestra información de depuración en los cálculos de las probabilidades de combate.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, ïîêàçûâàåò îòëàäî÷íóþ èíôîðìàöèþ î áîåâûõ âû÷èñëåíèÿõ øàíñîâ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ACO__DEBUG_TEXT</Tag>
-		<English>Debug</English>
-		<Spanish>Depuración</Spanish>
-		<Russian>Îòëàäêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ACO__ENABLED_HOVER</Tag>
@@ -1678,24 +1646,6 @@
 		<Russian>Ïðåäñòðîéêà óëó÷øåíèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGFINANCEADVISOR_HOVER</Tag>
-		<English>When checked, uses the BUG Finance Advisor (requires restart).</English>
-		<French>Lorsque activé, utilise le Conseiller Financier BUG (nécessite le redémarrage du jeu).</French>
-		<German>Aktiviert den verbesserten Finanzberater der BUG Mod (erfordert Neustart)</German>
-		<Italian>Quando è selezionato, visualizza il Consigliere Economico del BUG mod (è richiesto un perché il cambiamento abbia effetto).</Italian>
-		<Spanish>Cuando se activa, utiliza el Consejero Económico de BUG (requiere reiniciar).</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, èñïîëüçóåòñÿ BUG Ôèíàíñîâûé ñîâåòíèê (òðåáóåòñÿ ïåðåçàïóñê).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGFINANCEADVISOR_TEXT</Tag>
-		<English>BUG Finance Advisor</English>
-		<French>Conseiller Financier BUG</French>
-		<German>BUG Finanzberater</German>
-		<Italian>Evoluto</Italian>
-		<Spanish>Consejero Económico BUG</Spanish>
-		<Russian>BUG Ôèíàíñîâûé ñîâåòíèê</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGGRAPHSLOGSCALE_HOVER</Tag>
 		<English>When checked, displays graphs are displayed in Log(10) scale.</English>
 		<French>Lorsque activé, affiche les échelles des graphiques sous forme Logarithmique.</French>
@@ -1730,24 +1680,6 @@
 		<Italian>Usa Colore del Giocatore</Italian>
 		<Spanish>Usar color del jugador</Spanish>
 		<Russian>Èñïîëüçîâàòü öâåò èãðîêà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGMA_HOVER</Tag>
-		<English>When checked, uses the BUG Military Advisor (requires restart).</English>
-		<French>Lorsque activé, utilise le Conseiller Militaire BUG (nécessite le redémarrage du Jeu).</French>
-		<German>Aktiviert den verbesserten Militärberater der BUG Mod (erfordert Neustart)</German>
-		<Italian>Quando è selezionato, utilizza il Consigliere Militare del BUG Mod (è richiesto un riavvio perché il cambiamento abbia effetto).</Italian>
-		<Spanish>Cuando se activa, utiliza el Consejero Militar de BUG (requiere reiniciar).</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, èñïîëüçóåò BUG Âîåííîãî ñîâåòíèêà (òðåáóåòñÿ ïåðåçàïóñê).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGMA_TEXT</Tag>
-		<English>BUG Military Advisor</English>
-		<French>Conseiller Militaire BUG</French>
-		<German>BUG Militärberater</German>
-		<Italian>Consigliere militare BUG</Italian>
-		<Spanish>Consejero Militar BUG</Spanish>
-		<Russian>BUG Âîåííûé ñîâåòíèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGMEMBERSTAB_HOVER</Tag>
@@ -1920,24 +1852,6 @@
 		<Russian>GP Èññëåäîâàíèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__SEVOPEDIASORTITEMLIST_HOVER</Tag>
-		<English>When checked, the lists of units, buildings, technologies, etc. are sorted.</English>
-		<French>Lorsque activé, les listes des unités, bâtiments, technologies, etc. seront triées.</French>
-		<German>Sortiert die Listen der Einheiten, Gebäuden, Technologien etc.</German>
-		<Italian>Quando è selezionato, le liste di Unità, Edifici, Tecnologie ecc. sono ordinate.</Italian>
-		<Spanish>Cuando se activa, las listas de unidades, edificios, tecnologias, etc. aparecen ordenadas.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, ñïèñêè þíèòîâ, ñòðîåíèé, òåõíîëîãèé, è ò.ä. ñîðòèðóþòñÿ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__SEVOPEDIASORTITEMLIST_TEXT</Tag>
-		<English>Sort Lists</English>
-		<French>Trier les Listes</French>
-		<German>Listen sortieren</German>
-		<Italian>Liste ordinate</Italian>
-		<Spanish>Listas ordenadas</Spanish>
-		<Russian>Ñîðòèðîâàòü ñïèñêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__SHOWRELIGIONS_HOVER</Tag>
 		<English>Select which religions should be shown in the top area of the Religion Advisor.</English>
 		<French>Sélectionne les Religions qui seront affichées en haut de l'écran du Conseiller Religieux.</French>
@@ -2001,22 +1915,22 @@
 		<Russian>Øèðîêèé ýêðàí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__4000BC_HOVER</Tag>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__STARTDATE_HOVER</Tag>
 		<English>Select which turn number 200 000 BC should be.</English>
 		<French>Sélectionnez quel devrait être le numéro de tour de 200 000 av.J.C.</French>
-		<German>Bestimmt die Runde, der das Jahr 200000 n.Chr. entsprechen soll</German>
+		<German>Bestimmt die Runde, der das Jahr 200 000 n.Chr. entsprechen soll</German>
 		<Italian>Indica quale numero di turno debba corrispondere all'anno 200 000 a.C.</Italian>
 		<Spanish>Elige qué número de turno será el año 200 000 a.C.</Spanish>
-		<Russian>Âûáåðèòå êîãäà õîä íîìåð 4000BC äîëæåí áûòü.</Russian>
+		<Russian>Âûáåðèòå êîãäà õîä íîìåð 200 000BC äîëæåí áûòü.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__4000BC_TEXT</Tag>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__STARTDATE_TEXT</Tag>
 		<English>200 000 BC is Turn</English>
 		<French>200 000 av. J.C. est le Tour</French>
 		<German>200000 n.Chr. ist Runde</German>
 		<Italian>200 000 a.C. è il turno</Italian>
 		<Spanish>200 000 a.C. es el turno</Spanish>
-		<Russian>4000BC ýòî õîä</Russian>
+		<Russian>200 000BC ýòî õîä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__BBAILEVEL_HOVER</Tag>
