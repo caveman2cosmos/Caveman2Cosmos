@@ -8513,7 +8513,7 @@ void CvUnitAI::AI_assaultSeaMove()
 
 			// galleys with upgrade available should get that ASAP
 			if( GET_PLAYER(getOwner()).AI_unitImpassableCount(getUnitType()) > 0 )
-			{// getUpgradeCity very suspect of a problem
+			{
 				CvCity* pUpgradeCity = getUpgradeCity(false);
 				if( pUpgradeCity != NULL && pUpgradeCity == pCity )
 				{
@@ -23740,7 +23740,6 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_travelToUpgradeCity()
 {
-	return false;
 	PROFILE_FUNC();
 
 	// Check if unit is not a dead end, that there exist a better unit in the game that it one day can upgrade into.
