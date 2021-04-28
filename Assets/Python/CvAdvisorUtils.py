@@ -22,7 +22,7 @@ g_iAdvisorNags = 0
 
 def resetNoLiberateCities():
 	global g_listNoLiberateCities
-g_listNoLiberateCities = []
+	g_listNoLiberateCities = []
 
 	global lCorporations
 	lCorporations = []
