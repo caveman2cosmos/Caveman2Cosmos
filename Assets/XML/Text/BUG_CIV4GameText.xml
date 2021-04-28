@@ -5548,24 +5548,6 @@
 		<Russian>Ýôôåêòû çäîðîâüÿ îò îñîáåííîñòåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__REMOVESPECIALIST_HOVER</Tag>
-		<English>When checked, the hover text for the Remove Specialist button includes the same specialist information shown on the Add Specialist button.</English>
-		<French>Lorsque activé, l'Infobulle du bouton permettant d'enlever un Spécialiste affiche les mêmes informations que le bouton d'ajout de Spécialistes.</French>
-		<German>Zeigt im Tooltip der Schaltfläche "Spezialist entfernen" dieselben Informationen über einen Spezialisten an wie bei der Schaltfläche "Spezialist hinzufügen"</German>
-		<Italian>Quando è selezionato, il testo a comparsa del Bottone di rimozione degli Specialisti include le stesse informazioni mostrate da quello del Bottone di aggiunta degli Specialisti.</Italian>
-		<Spanish>Cuando se activa, el texto que se muestra cuando se pasa el ratón por encima del botón de Quitar especialista incluye la misma información que el botón de Añadir especialista.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, âñïëûâàþùàÿ ïîäñêàçêà êíîïêè óäàëåíèÿ ñïåöèàëèñòà âêëþ÷àåò òàêóþ æå èíôîðìàöèþ, êàê îòîáðàæàåìàÿ íà êíîïêå äîáàâëåíèÿ ñïåöèàëèñòà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__REMOVESPECIALIST_TEXT</Tag>
-		<English>Remove Specialist Button</English>
-		<French>Infos Supp. Spécialistes</French>
-		<German>"Spezialist entfernen"-Schaltfläche</German>
-		<Italian>Bottone rimozione Specialisti</Italian>
-		<Spanish>Botón 'Quitar especialista'</Spanish>
-		<Russian>Êíîïêà óäàëåíèÿ ñïåöèàëèñòà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__TECHTRADEDENIAL_HOVER</Tag>
 		<English>When checked, hovering over a technology in the "Won't Trade" column of the Foreign Advisor's TECHS page will show you the AI's reason for denying the trade.</English>
 		<French>Lorsque activé, La raison qu'a l'IA pour refuser l'échange d'une technologie sera disponible en infobulle dans l'écran du Conseiller aux relations étrangères.</French>
@@ -5896,20 +5878,6 @@
 		<Russian>Âàññàë</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_NEANDERTHALSPAWN__ENABLED_HOVER</Tag>
-		<English>Enable Neanderthal barbarian units to spawn.</English>
-		<Italian>Permette ai Neanderthal di comparire sulla mappa.</Italian>
-		<Spanish>Activa la aparición de unidades bárbaras neandertales.</Spanish>
-		<Russian>Âêëþ÷èòü Íåàíäåðòàëüñêèõ âàðâàðîâ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_NEANDERTHALSPAWN__SPAWNRATE_HOVER</Tag>
-		<English>How often should neanderthal barbarians spawn?</English>
-		<Italian>Quanto spesso dovrebbero comparire i Neanderthal?</Italian>
-		<Spanish>¿Con qué frecuencia deberían aparecer los bárbaros neandertales?</Spanish>
-		<Russian>Êàê ÷àñòî íåàíäåðòàëüñêèå âàðâàðû äîëæíû ïîÿâëÿòüñÿ?</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__ALTERNATETEXT_HOVER</Tag>
 		<English>When checked, the game clock switches between two views: standard and alternate.</English>
 		<French>Lorsque activé, l'horloge alterne régulièrement entre la vue standard et la vue alternative.</French>
@@ -6145,17 +6113,6 @@
 		<Russian>Âêëþ÷èòü íàïîìèíàíèÿ [ALT + M]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__BBAI_DEFENSEPACT_HOVER</Tag>
-		<English>0=default bi-pact; 1=multi-pact; 2=offensive pact;</English>
-		<Spanish>0: pacto bilateral predeterminado[NEWLINE]1: multipacto.[NEWLINE]2: pacto ofensivo.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__BBAI_DEFENSEPACT_TEXT</Tag>
-		<English>Defense pact type:</English>
-		<Spanish>Tipo de acuerdo de protección:</Spanish>
-		<Russian>Âèä îáîðîíèòåëüíîãî ñîþçà:</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_ACTIVE_DEFENSE_HOVER</Tag>
 		<English>Allows patrolling fighters to actively engage enemy units</English>
 		<French>Autorise les avions de Chasse en patrouille d'engager automatiquement les unités ennemies</French>
@@ -6346,22 +6303,6 @@
 		<Russian>Ðàñøèðåííûé ëèìèò ðåëèãèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__OC_LIMITED_RELIGIONS_HOVER</Tag>
-		<English>A civ can only found one religion and thus possess only one holy city (unless more are obtained through conquest); Causes a more equal spread of religions in a game creating more diplomatic religious tensions</English>
-		<French>Une Civilisation peut fonder une seule religion, et donc posséder une seule Ville Sainte (sauf celles qui sont obtenues par Conquête. Permet une répartition plus importante des religions, et créé de ce fait plus de tension diplomatiques liées aux religions.</French>
-		<German>Eine Zivilisation kann nur eine Religion gründen und somit nur eine Heilige Stadt besitzen (außer durch Eroberung); Erzeugt eine gleichmäßigere Verteilung der Religionen im Spiel und bewirkt verstärkte religiös-diplomatische Spannungen</German>
-		<Spanish>Una civilización solo puede fundar una religión y poseer una sola Ciudad Santa (a no ser que se obtengan otras por conquista); provoca una distribución más equitativa de las religiones en la partida, creando mayores tensiones diplomáticas religiosas.</Spanish>
-		<Russian>Â èãðå òåïåðü ìîæíî îñíîâàòü ëèøü îäíó ðåëèãèþ è ïðè ýòîì îáëàäàòü òîëüêî îäíèì Ñâÿù. ãîðîäîì (åñëè íå çàïîëó÷èòü áîëüøå ïóòåì çàâîåâàíèé); ÷òî ïðèâîäèò ê áîëåå ðàâíîìåðíîìó ðàñïðîñòðàíåíèþ ðåëèãèé â èãðå, ñîçäàâàÿ áîëåå ñóùåñòâåííóþ ìåæðåëèãèîçíóþ ðîçíü.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__OC_LIMITED_RELIGIONS_TEXT</Tag>
-		<English>Limited Religions</English>
-		<French>Religions Limitées</French>
-		<German>Begrenzte Religionen</German>
-		<Spanish>Religiones limitadas</Spanish>
-		<Russian>Îãðàíè÷åíèå ðåëèãèé</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__OC_RESPAWN_HOLY_CITIES_HOVER</Tag>
 		<English>Allows inquisitions to purge Holy Cities; if there exists a civilization that has two cities with the religion of the purged holy city, the holy city will relocate</English>
 		<French>Permet aux Inquisiteurs des Purger les Villes Saintes. Dans le cas où la civilisation possède une autre ville où la religion est établie, la Ville Sainte va être déplacée.</French>
@@ -6408,22 +6349,6 @@
 		<German>Auf Standardoptionen zurücksetzen</German>
 		<Spanish>Restaurar configuración predeterminada</Spanish>
 		<Russian>Ñáðîñ íàñòðîåê ïî óìîë÷àíèþ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__RISING_SEAS_HOVER</Tag>
-		<English>Global warming can raise sea level.</English>
-		<French>Le réchauffement global peut soulever le niveau de la mer.</French>
-		<German>Die globale Erwärmung kann Meeresspiegel anheben.</German>
-		<Italian>Il riscaldamento globale può alzare il livello del mare.</Italian>
-		<Spanish>El calentamiento global puede elevar el nivel del mar.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__RISING_SEAS_TEXT</Tag>
-		<English>Rising Seas</English>
-		<French>Mers Er Hausse</French>
-		<German>Steigende Meere</German>
-		<Italian>Livello del mare in aumento</Italian>
-		<Spanish>Mar creciente</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__SS_ASSASSINATE_HOVER</Tag>
@@ -6596,20 +6521,6 @@
 		<Russian>Òèïû õóä. ñòèëåé </Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBARIAN_CIV_HOVER</Tag>
-		<English>Barbarian Civ</English>
-		<French>Civ Barbares</French>
-		<Spanish>Civilizaciones bárbaras</Spanish>
-		<Russian>Âêëþ÷èòü âàðâàðñêèå öèâèëèçàöèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBARIAN_CIV_TEXT</Tag>
-		<English>Barbarian Civ</English>
-		<French>Civ Barbares</French>
-		<Spanish>Civilizaciones bárbaras</Spanish>
-		<Russian>Âàðâàðñêèå öèâèëèçàöèè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBCIVMAXCIVS_HOVER</Tag>
 		<English>Barbcivs will not spawn if there are already this many civs in the game (-1 for DLL limit)</English>
 		<German>Barbaren-Zivilisationen entstehen nicht, wenn es bereits so viele Zivilisationen im Spiel gibt (-1 wegen der DLL-Begrenzung)</German>
@@ -6691,16 +6602,6 @@
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CHANCEMODIFIER_TEXT</Tag>
 		<English>Chance Modifier</English>
 		<Spanish>Modificador de probabilidad</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CHANGEPLAYERDEBUGMODE_HOVER</Tag>
-		<English>Enables Debugging information and logging for Change Player functions</English>
-		<Spanish>Activa información de depuración y registro para la función de Cambiar de jugador ('Change Player')</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CHANGEPLAYERDEBUGMODE_TEXT</Tag>
-		<English>Debug</English>
-		<Spanish>Depuración</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CHANGEPLAYERENABLE_HOVER</Tag>
@@ -7093,18 +6994,6 @@
 		<Russian>Механика Нового Света</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__NEWWORLDREDUCTION_HOVER</Tag>
-		<English>Reduce tech given to former barbarians alone on a continent (larger means they're more behind)</English>
-		<German>Reduziere die Zahl der Technologien, die ehemalige Barbaren erhalten, die sich allein auf dem Kontinent befinden (größere Zahlen bedeuten, sie liegen weiter zurück)</German>
-		<Spanish>Reduce las tecnologías obtenidas por las nuevas civilizaciones bárbaras que estén solas en un continente (a mayor valor se obtienen menos tecnologías)</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__NEWWORLDREDUCTION_TEXT</Tag>
-		<English>NewWorld Reduction</English>
-		<German>Reduzierte Technologien in Neuer Welt</German>
-		<Spanish>Reducción en Nuevo Mundo</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__OFFERDEFECTTOREVS_HOVER</Tag>
 		<English>Offer human players with a rebellion the choice to defect and lead the rebels.</English>
 		<Spanish>Ofrece a los jugadores humanos afectados por una rebelión la posibilidad de desertar y liderar a los rebeldes.</Spanish>
@@ -7173,17 +7062,6 @@
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__RELIGIOUSREVOLUTION_TEXT</Tag>
 		<English>Religious Revolutions</English>
 		<Spanish>Revoluciones religiosas</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REVCONFIGDEBUGMODE_HOVER</Tag>
-		<English>Don't change this</English>
-		<German>Nicht verändern!</German>
-		<Spanish>No cambies esto</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REVCONFIGDEBUGMODE_TEXT</Tag>
-		<English>RevConfig Debug</English>
-		<Spanish>Depuración de RevConfig</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REVCULTUREMODIFIER_HOVER</Tag>
@@ -7493,23 +7371,6 @@
 		<Russian>Ìàêñ. ñëîæíîñòü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMAXRANK_HOVER</Tag>
-		<English>Your difficulty will not change if your rank is above the maximum rank. -1 indicates no maximum rank.</English>
-		<French>Votre difficulté ne va pas changer si votre rang est supérieur au Rang Maximum. -1 signifie pas de rang maximum.</French>
-		<German>Der Schwierigkeitsgrad wird sich nicht ändern, solange dein Rang über dem maximalen Rang liegt. -1 bedeutet kein maximaler Rang.</German>
-		<Italian>La difficoltà non cambierà se il tuo rank è superiore a quello massimo. -1 indica nessun rank massimo.</Italian>
-		<Spanish>La dificultad no cambiará si tu posición en la clasificación es superior a la máxima. -1 indica sin posición máxima.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMAXRANK_TEXT</Tag>
-		<English>Maximum Rank</English>
-		<French>Rang Maximum</French>
-		<German>Maximaler Rang</German>
-		<Italian>Rank massimo</Italian>
-		<Spanish>Máxima posición</Spanish>
-		<Russian>Ìàêñ. çíà÷åíèå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMINIMUMDIFF_HOVER</Tag>
 		<English>The minimum difficulty that you can fall to when playing with Flexible Difficulty</English>
 		<French>La difficulté minimum à laquelle vous pouvez tomber avec l'Option Difficulté Flexible</French>
@@ -7535,23 +7396,6 @@
 		<Italian>Difficoltà minima</Italian>
 		<Spanish>Dificultad mínima</Spanish>
 		<Russian>Ìèí. ñëîæíîñòü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMINRANK_HOVER</Tag>
-		<English>Your difficulty will not change if your rank is below the minimum rank. -1 indicates no minimum rank.</English>
-		<French>Votre difficulté ne va pas changer si votre rang est inférieur au Rang Minimum. -1 signifie pas de rang minimum.</French>
-		<German>Der Schwierigkeitsgrad wird sich nicht ändern, solange dein Rang unter dem minimalen Rang liegt. -1 bedeutet kein minimaler Rang.</German>
-		<Italian>La difficoltà non cambierà se il tuo rank è inferiore a quello minimo. -1 indica nessun rank minimo.</Italian>
-		<Spanish>La dificultad no cambiará si tu posición en la clasificación es inferior a la mínima. -1 indica sin posición mínima.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMINRANK_TEXT</Tag>
-		<English>Minimum Rank</English>
-		<French>Rang Minimum</French>
-		<German>Minimaler Rang</German>
-		<Italian>Rank minimo</Italian>
-		<Spanish>Mínima posición</Spanish>
-		<Russian>Ìèíèìàëüí. çíà÷åíèå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYTURNINCREMENTS_HOVER</Tag>
@@ -7779,24 +7623,6 @@
 		<Italian>Niente saccheggio di alleati</Italian>
 		<Spanish>No saquear aliados</Spanish>
 		<Russian>Îòêë. ãðàáåæ ñîþçíèêà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NOMILITARYTRADING_HOVER</Tag>
-		<English>Removes the ability to trade military units. Only takes affect if Advanced Diplomacy is enabled.</English>
-		<French>Enlève la possibilité d'échanger des unités militaires. N'a d'effet que si l'Option Diplomatie Avancée est activée.</French>
-		<German>Militäreinheiten können nicht gehandelt werden. Nur bei aktivierter Option "Verbesserte Diplomatie".</German>
-		<Italian>Rimuove la possibilità di commerciare unità militari. Funziona solo se diplomazia avanzata è attivato.</Italian>
-		<Spanish>Elimina la capacidad de comerciar con unidades militares. Solo funciona si la opción "Diplomacia avanzada" está activada.</Spanish>
-		<Russian>Óäàëÿåò âîçìîæíîñòü òîðãîâàòü þíèòàìè. Ðàáîòàåò, åñëè çàäåéñòâîâàíà îïöèÿ Advanced Diplomacy.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NOMILITARYTRADING_TEXT</Tag>
-		<English>No Military Trading</English>
-		<French>Pas d'Echange Militaire</French>
-		<German>Kein Militärhandel</German>
-		<Italian>Nessun commercio militare</Italian>
-		<Spanish>No comerciar con unidades militares</Spanish>
-		<Russian>Îòêë. òîðãîâëþ þíèòàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NOPRODUCTIONPOPUP_HOVER</Tag>
@@ -8081,24 +7907,6 @@
 		<Italian>Bottini di guerra</Italian>
 		<Spanish>Botín de guerra</Spanish>
 		<Russian>Ïðèçîâûå êîðàáëè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_SCORES__ALIGNICONS_HOVER</Tag>
-		<English>When checked, the scoreboard is drawn as a grid, and the other options in this column affect it.</English>
-		<French>Lorsque activé, le panneau des scores devient un tableau, et les options dans cette colonne l'affectent.</French>
-		<German>Stellt die Punkteanzeige als Raster dar, um die folgenden Optionen nutzen zu können</German>
-		<Italian>Quando è selezionato, il Pannello del Punteggio viene strutturato come griglia (vedi l'opzione seguente).</Italian>
-		<Spanish>Cuando se activa, el panel de clasificación se estructura como una tabla, y las otras opciones de esta columna afectan a dicha tabla.</Spanish>
-		<Russian>Êîãäà âêëþ÷åí, òàáëèöà ðèñóåòñÿ êàê ñåòêà, è äðóãèå îïöèè â ýòîé êîëîíêå âëèÿþò íà íåå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_SCORES__ALIGNICONS_TEXT</Tag>
-		<English>Enabled</English>
-		<French>Tab. Activé</French>
-		<German>Aktivieren</German>
-		<Italian>Attivato</Italian>
-		<Spanish>Activado</Spanish>
-		<Russian>Âêëþ÷åí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_SCORES__ATTITUDE_HOVER</Tag>
@@ -8620,22 +8428,6 @@
 		<Italian>Trasparenza</Italian>
 		<Spanish>Transparencia</Spanish>
 		<Russian>ßðêîñòü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_STRATEGYOVERLAY__DOTMAPDOTICON_HOVER</Tag>
-		<English>The index number of the icon to be placed in the center of the borders of planned cities.</English>
-		<German>Die Indexnummer des Symbols, das im Zentrum der Grenzen von geplanten Städten angezeigt werden soll</German>
-		<Italian>Indica il numero d'indice dell'icona che deve essere posizionata al centro delle aree di posizionamento delle città.</Italian>
-		<Spanish>El índice del icono a utilizar en el centro de las fronteras de las ciudades planificadas.</Spanish>
-		<Russian>Íîìåð èíäåêñà èêîíêè, êîòîðàÿ áóäåò ðàçìåùåíà â öåíòðå ãðàíèö ïëàíèðóåìûõ ãîðîäîâ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_STRATEGYOVERLAY__DOTMAPDOTICON_TEXT</Tag>
-		<English>City Dot Icon</English>
-		<German>Städtesymbol</German>
-		<Italian>Icona delle Città</Italian>
-		<Spanish>Icono de la posición de la ciudad</Spanish>
-		<Russian>Èêîíêà ãîðîäñêîé òî÷êè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_STRATEGYOVERLAY__DOTMAPDRAWDOTS_HOVER</Tag>
