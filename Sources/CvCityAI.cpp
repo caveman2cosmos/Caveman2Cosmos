@@ -8391,7 +8391,6 @@ void CvCityAI::AI_calculateOutputRatio(std::vector<int> &ratios, int food, int p
 
 	
 	const int totalOutput = (food + production + commerce);
-	SendLog("yieldRate", CvWString::format(L"food: %lld production: %lld commerce: %lld total: %lld", food, production, commerce, totalOutput));
 
 	const int foodRatio = 100 - ((food * 100) / totalOutput);
 	const int commerceRatio = 100 - ((commerce * 100) / totalOutput);
@@ -8409,7 +8408,6 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vecto
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	bool bIgnoreFeature = false;
 	int activeWorkerMissions = kPlayer.AI_plotTargetMissionAIs(plot, MISSIONAI_BUILD);
-	SendLog("getCurrentPlotValue", "{ event: " + CvWString::format(L"active workers %lld" ,activeWorkerMissions)+ " \" }");
 	if (activeWorkerMissions > 0)
 	{		
 		BuildTypes eBuild = NO_BUILD;
@@ -8442,11 +8440,9 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vecto
 	for (int yieldTypes = 0; yieldTypes < NUM_YIELD_TYPES; yieldTypes++)
 	{
 		currentYieldList[iPlotCounter].yields[yieldTypes] = plot->getYield(static_cast<YieldTypes>(yieldTypes));
-		SendLog("getCurrentPlotValue", "{ event: \"adding current yieldType " + yieldNames[yieldTypes] + this->getName() +" \" }");
 	}
 	currentYieldList[iPlotCounter].yieldValue = AI_yieldValue(
 		currentYieldList[iPlotCounter].yields, NULL, false, bIgnoreFeature, false, false, true, true);
-	SendLog("getBestPlotValue", currentYieldList[iPlotCounter].ToJSON());
 }
 
 void CvCityAI::AI_getBestPlotValue(int iPlotCounter, CvPlot *plot,std::vector<plotInfo> &currentYieldList, std::vector<plotInfo> &optimalYieldList)
@@ -8454,7 +8450,7 @@ void CvCityAI::AI_getBestPlotValue(int iPlotCounter, CvPlot *plot,std::vector<pl
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	BuildTypes eBuild = NO_BUILD;
 	std::vector<int> ratios = std::vector<int>(NUM_YIELD_TYPES);
-	bool bChop = false;
+	bool bChop = true;
 	int iHappyAdjust = 0;
 	int iHealthAdjust = 0;
 	int iFoodChange = 0;
@@ -8468,7 +8464,6 @@ void CvCityAI::AI_getBestPlotValue(int iPlotCounter, CvPlot *plot,std::vector<pl
 	AI_bestPlotBuild(plot,&(optimalYieldList[iPlotCounter].yieldValue),&(optimalYieldList[iPlotCounter].currentBuild),
 	ratios[YIELD_FOOD], ratios[YIELD_PRODUCTION], ratios[YIELD_COMMERCE],
 	bChop, iHappyAdjust, iHealthAdjust, 0);
-	SendLog("bestPlotBuild", CvWString::format(L"%lld", optimalYieldList[iPlotCounter].currentBuild));
 	eBuild = optimalYieldList[iPlotCounter].currentBuild;
 	if(eBuild != NO_BUILD)
 	{
@@ -8478,7 +8473,6 @@ void CvCityAI::AI_getBestPlotValue(int iPlotCounter, CvPlot *plot,std::vector<pl
 		if (eImprovement != NO_IMPROVEMENT)
 		{
 			optimalYieldList[iPlotCounter].currentImprovement = eImprovement;
-			SendLog("improvementName", CvWString::format(L"%S",GC.getImprovementInfo(eImprovement).getType()));
 			bIgnoreFeature = (plot->getFeatureType() != NO_FEATURE &&
 				GC.getBuildInfo(eBuild).isFeatureRemove(plot->getFeatureType()));
 
@@ -8486,16 +8480,12 @@ void CvCityAI::AI_getBestPlotValue(int iPlotCounter, CvPlot *plot,std::vector<pl
 			{
 				const int natureYield = plot->calculateNatureYield(static_cast<YieldTypes>(iYieldType), getTeam(), bIgnoreFeature);
 				const int yieldIncrease = plot->calculateImprovementYieldChange(eImprovement, static_cast<YieldTypes>(iYieldType), getOwner(), false);
-				SendLog("yieldChange", CvWString::format(L"%lld", yieldIncrease));
-
 				optimalYieldList[iPlotCounter].yields[iYieldType] = yieldIncrease + natureYield;
 			}
 		}
-		SendLog("beforeYieldValue", optimalYieldList[iPlotCounter].ToJSON());
 		optimalYieldList[iPlotCounter].yieldValue = AI_yieldValue(
 			optimalYieldList[iPlotCounter].yields, NULL, false, bIgnoreFeature, false, false, true, true);
 	}
-	SendLog("getBestPlotValue", optimalYieldList[iPlotCounter].ToJSON());
 }
 
 void CvCityAI::AI_updateBestBuild()
@@ -8503,11 +8493,9 @@ void CvCityAI::AI_updateBestBuild()
 	PROFILE_FUNC();
 	if (!m_bestBuildValuesStale)
 	{
-		SendLog("updateBestBuild", "{ event: buildPlotUpdateSkipped, reason: cache still valid }");
 		OutputDebugString(CvString::format("City %S skips re-evaluation of build values\n", getName().GetCString()).c_str());
 		return;
 	}
-	SendLog("updateBestBuild", "{ event: BestBuildCacheUpdating }");
 	m_bestBuildValuesStale = false;
 
 
@@ -8527,11 +8515,7 @@ void CvCityAI::AI_updateBestBuild()
 		if (loopedPlot->getWorkingCity() == this) currentYieldList[iPlotCounter].worked = true;
 		
 		AI_getCurrentPlotValue(iPlotCounter,loopedPlot, currentYieldList);
-		std::string logMessage = "{ event: " + currentYieldList[iPlotCounter].ToJSON() + "}";
-		SendLog("currentBuild", logMessage);
 		AI_getBestPlotValue(iPlotCounter, loopedPlot, currentYieldList, optimalYieldList);
-		logMessage = "{ event: " + optimalYieldList[iPlotCounter].ToJSON() + "}";
-		SendLog("optimalBuild", logMessage);
 	}
 	for(int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++)
 	{
@@ -11430,24 +11414,24 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 	// helps to avoid too much tearing up of old improvements.
 	// AI no longer uses emphasis really, except for short term boosts to commerce.
 	// Inappropriate to base improvements on short term goals.
-	if (isHuman() && ePlotImp == NO_IMPROVEMENT)
-	{
-		if (AI_isEmphasizeYield(YIELD_FOOD))
-		{
-			iFoodPriority *= 130;
-			iFoodPriority /= 100;
-		}
-		if (AI_isEmphasizeYield(YIELD_PRODUCTION))
-		{
-			iProductionPriority *= 180;
-			iProductionPriority /= 100;
-		}
-		if (AI_isEmphasizeYield(YIELD_COMMERCE))
-		{
-			iCommercePriority *= 180;
-			iCommercePriority /= 100;
-		}
-	}
+	//if (isHuman() && ePlotImp == NO_IMPROVEMENT)
+	//{
+	//	if (AI_isEmphasizeYield(YIELD_FOOD))
+	//	{
+	//		iFoodPriority *= 130;
+	//		iFoodPriority /= 100;
+	//	}
+	//	if (AI_isEmphasizeYield(YIELD_PRODUCTION))
+	//	{
+	//		iProductionPriority *= 180;
+	//		iProductionPriority /= 100;
+	//	}
+	//	if (AI_isEmphasizeYield(YIELD_COMMERCE))
+	//	{
+	//		iCommercePriority *= 180;
+	//		iCommercePriority /= 100;
+	//	}
+	//}
 	FAssertMsg(pPlot->getOwner() == getOwner(), "pPlot must be owned by this city's owner");
 
 	const BonusTypes eBonus = pPlot->getBonusType(getTeam());
@@ -11738,23 +11722,23 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 				{
 					aiFinalYields[iJ] = 2 * pPlot->calculateNatureYield((YieldTypes)iJ, getTeam(), bIgnoreFeature);
-					if (eFinalImpX != eImpX)
-					{
-						aiFinalYields[iJ] += pPlot->calculateImprovementYieldChange(eFinalImpX, (YieldTypes)iJ, getOwner(), false, true);
-						aiFinalYields[iJ] += pPlot->calculateImprovementYieldChange(eImpX, (YieldTypes)iJ, getOwner(), false, true);
-					}
-					else aiFinalYields[iJ] += 2 * pPlot->calculateImprovementYieldChange(eImpX, (YieldTypes)iJ, getOwner(), false, true);
+					//if (eFinalImpX != eImpX)
+					//{
+					//	aiFinalYields[iJ] += pPlot->calculateImprovementYieldChange(eFinalImpX, (YieldTypes)iJ, getOwner(), false, true);
+					//	aiFinalYields[iJ] += pPlot->calculateImprovementYieldChange(eImpX, (YieldTypes)iJ, getOwner(), false, true);
+					//}
+					aiFinalYields[iJ] += 2 * pPlot->calculateImprovementYieldChange(eImpX, (YieldTypes)iJ, getOwner(), false, true);
 
 					int iCurYield = 2 * pPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), false);
 
 					if (ePlotImp != NO_IMPROVEMENT)
 					{
-						if (ePlotImpFinal != ePlotImp)
-						{
-							iCurYield += pPlot->calculateImprovementYieldChange(ePlotImpFinal, (YieldTypes)iJ, getOwner(), false, true);
-							iCurYield += pPlot->calculateImprovementYieldChange(ePlotImp, (YieldTypes)iJ, getOwner(), false, true);
-						}
-						else iCurYield += 2 * pPlot->calculateImprovementYieldChange(ePlotImp, (YieldTypes)iJ, getOwner(), false, true);
+						//if (ePlotImpFinal != ePlotImp)
+						//{
+						//	iCurYield += pPlot->calculateImprovementYieldChange(ePlotImpFinal, (YieldTypes)iJ, getOwner(), false, true);
+						//	iCurYield += pPlot->calculateImprovementYieldChange(ePlotImp, (YieldTypes)iJ, getOwner(), false, true);
+						//}
+						iCurYield += 2 * pPlot->calculateImprovementYieldChange(ePlotImp, (YieldTypes)iJ, getOwner(), false, true);
 					}
 					aiDiffYields[iJ] = aiFinalYields[iJ] - iCurYield;
 				}
@@ -11774,8 +11758,8 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 				}
 
 				iValue += aiDiffYields[YIELD_FOOD] * iFoodPriority;
-				iValue += aiDiffYields[YIELD_PRODUCTION] * iProductionPriority * 60 / 100;
-				iValue += aiDiffYields[YIELD_COMMERCE] * iCommercePriority * 40 / 100;
+				iValue += aiDiffYields[YIELD_PRODUCTION] * iProductionPriority;
+				iValue += aiDiffYields[YIELD_COMMERCE] * iCommercePriority;
 
 				iValue /= 2;
 
