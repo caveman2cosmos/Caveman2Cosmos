@@ -9097,30 +9097,6 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 		<Russian>Çàìêè:</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_TECH_PREFS_ALL</Tag>
-		<English>Research Preference Order</English>
-		<French>Ordre de priorité de la Recherche</French>
-		<German>Forschungsprioritäten</German>
-		<Spanish>Orden de preferencia de investigación</Spanish>
-		<Russian>Ïîðÿäîê èññëåäîâàòåëüñêèõ ïðåäïî÷òåíèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_TECH_PREFS_CURRENT</Tag>
-		<English>Current Technologies</English>
-		<French>Technologies actuelles</French>
-		<German>Derzeitige Technologien</German>
-		<Spanish>Tecnologías actuales</Spanish>
-		<Russian>Òåêóùèå òåõíîëîãèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_TECH_PREFS_FUTURE</Tag>
-		<English>Future Technologies</English>
-		<French>Technologies futures</French>
-		<German>Zukünftige Technologien</German>
-		<Spanish>Tecnologías futuras</Spanish>
-		<Russian>Áóäóùèå òåõíîëîãèè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_TOTAL_TRADE_ROUTES</Tag>
 		<English>[NEWLINE]Number of Routes: %d1</English>
 		<French>[NEWLINE]Nombre de Routes: %d1</French>
@@ -9207,15 +9183,6 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 		<Italian>Vittoria Diplomatica</Italian>
 		<Spanish>Victoria diplomática</Spanish>
 		<Russian>Äèïëîìàòè÷åñêàÿ ïîáåäà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_VICTORY_TOGGLE_VOTES</Tag>
-		<English>Toggle Votes</English>
-		<French>Alterner les Voix</French>
-		<German>Wahlen umschalten</German>
-		<Italian>Alterna Voti</Italian>
-		<Spanish>Alternar votos</Spanish>
-		<Russian>Ïåðêëþ÷èòü ãîëîñà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_VICTORY_TURNS_NEXT_VOTE</Tag>
