@@ -16248,4 +16248,17 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_GRAPHIC_OPTION_FROZEN_ANIMATIONS_HELP</Tag>
 		<English>No unit or improvement animations.[NEWLINE]Causes graphical glitches when selected.</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAWYER_SPECIALIST</Tag>
+		<English>Lawyer</English>
+		<French>Avocat</French>
+		<German>
+			<Text>Anwalt:Anwalts:Anwalt:Anwalt:Anwälte:Anwälte:Anwälten:Anwälte</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>Avvocato</Italian>
+		<Polish>Prawnik</Polish>
+		<Russian>Àäâîêàò</Russian>
+	</TEXT>
 </Civ4GameText>

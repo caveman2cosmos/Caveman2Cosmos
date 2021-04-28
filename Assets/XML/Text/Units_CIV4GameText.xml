@@ -25168,4 +25168,21 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_STATESMAN</Tag>
+		<English>Great Statesman</English>
+		<French>Homme d'Etat Illustre</French>
+		<German>
+			<Text>Großer Staatsmann:Großen Staatsmannes:Großen Staatsmann:Großen Staatsmann:Große Staatsmänner:Großen Staatsmänner:Großen Staatsmännern:Große Staatsmänner</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Grande uomo di stato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Wielki Ustawodawca</Polish>
+		<Russian>Âåëèêèé ïîëèòèê</Russian>
+	</TEXT>	
 </Civ4GameText>

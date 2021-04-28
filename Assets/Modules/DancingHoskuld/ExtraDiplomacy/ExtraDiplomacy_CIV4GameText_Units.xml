@@ -1,25 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_GREAT_STATESMAN_PEDIA</Tag>
-		<English>The [COLOR_UNIT_TEXT]Great Statesman[COLOR_REVERT] can improve international relations, prevent international disasters, start a golden age, and attach himself to a city.</English>
-		<Italian>Un [COLOR_UNIT_TEXT]Grande uomo di stato[COLOR_REVERT] può migliorare le relazioni internazionali, prevenire i disastri internazionali, iniziare un'età dell'oro o unirsi ad una città.</Italian>
-		<Polish>[COLOR_UNIT_TEXT]Wielki Ustawodawca[COLOR_REVERT] może poprawiać relacje międzynarodowe, zapobiegać konfliktom, rozpoczynać Złoty Wiek i dołączać do miasta.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LAWYER_SPECIALIST</Tag>
-		<English>Lawyer</English>
-		<French>Avocat</French>
-		<German>
-			<Text>Anwalt:Anwalts:Anwalt:Anwalt:Anwälte:Anwälte:Anwälten:Anwälte</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Italian>Avvocato</Italian>
-		<Polish>Prawnik</Polish>
-		<Russian>Àäâîêàò</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIPLOMAT_EARLY</Tag>
 		<English>Diplomat - Classic</English>
 		<French>Diplomate - Classique</French>
@@ -72,22 +53,5 @@
 		<English>A diplomat is a person appointed by a state to conduct diplomacy with another state or international organization. The main functions of diplomats revolve around the representation and protection of the interests and nationals of the sending state, as well as the promotion of information and friendly relations.[PARAGRAPH:2]Diplomats are the oldest form of any of the foreign policy institutions of the state, predating by centuries foreign ministers and ministerial offices.</English>
 		<Italian>Un diplomatico è una persona designata da uno Stato per condurre la diplomazia con un'altra organizzazione statale o internazionale. Le principali funzioni dei diplomatici ruotano intorno alla rappresentanza e alla tutela degli interessi e dei cittadini dello Stato che li invia, così come la promozione di informazioni e delle relazioni amichevoli.[PARAGRAPH:2]I diplomatici sono la più antica forma di politica estera, anticipando di secoli i ministri degli esteri e gli uffici ministeriali.</Italian>
 		<Polish>Dyplomata lub przedstawiciel dyplomatyczny (ang. diplomatic representative, fr. représentant diplomatique, niem. diplomatischer Vertreter) oficjalny przedstawiciel państwa za granicą, czyli zatrudniony w dyplomacji. Państwo, które dyplomata reprezentuje nazywamy państwem wysyłającym, zaś państwo, w którym jest akredytowany państwem przyjmującym. Wszyscy przedstawiciele dyplomatyczni akredytowani w określonym państwie tworzą jego korpus dyplomatyczny.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_STATESMAN</Tag>
-		<English>Great Statesman</English>
-		<French>Homme d'Etat Illustre</French>
-		<German>
-			<Text>Großer Staatsmann:Großen Staatsmannes:Großen Staatsmann:Großen Staatsmann:Große Staatsmänner:Großen Staatsmänner:Großen Staatsmännern:Große Staatsmänner</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Grande uomo di stato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Wielki Ustawodawca</Polish>
-		<Russian>Âåëèêèé ïîëèòèê</Russian>
 	</TEXT>
 </Civ4GameText>
