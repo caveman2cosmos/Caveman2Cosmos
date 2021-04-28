@@ -48,7 +48,7 @@ def _python_modules_for_python_version(version: _PythonVersion) -> Tuple[Path, .
     raise ValueError(f"Unsupported python version {version.value}")
 
 
-def _python_2_modules() -> List[Path, ...]:
+def _python_2_modules():
 	list = (_root_path() / "Assets" / "Python").rglob("*.py")
 	list += ((Path(__file__).parents[2]).resolve() / "PrivateMaps").rglob("*.py")
 	return list
