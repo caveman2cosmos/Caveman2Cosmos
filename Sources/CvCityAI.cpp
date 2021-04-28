@@ -8386,11 +8386,10 @@ void CvCityAI::AI_markBestBuildValuesStale()
 {
 	m_bestBuildValuesStale = true;
 }
+
 void CvCityAI::AI_calculateOutputRatio(std::vector<int> &ratios, int food, int production, int commerce)
 {
-
-	
-	const int totalOutput = (food + production + commerce);
+	const int totalOutput = std::max(1, food + production + commerce);
 
 	const int foodRatio = 100 - ((food * 100) / totalOutput);
 	const int commerceRatio = 100 - ((commerce * 100) / totalOutput);
@@ -8399,8 +8398,8 @@ void CvCityAI::AI_calculateOutputRatio(std::vector<int> &ratios, int food, int p
 	ratios[YIELD_FOOD] = foodRatio;
 	ratios[YIELD_PRODUCTION] = productionRatio *80 / 100;
 	ratios[YIELD_COMMERCE] = commerceRatio / 2;
-	
 }
+
 void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vector<plotInfo> &currentYieldList)
 {
 	CvWString yieldNames[3] = { "food", "production", "commerce" };
