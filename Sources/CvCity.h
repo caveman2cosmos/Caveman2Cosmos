@@ -827,7 +827,7 @@ public:
 
 	int getOverflowProduction() const;
 	void setOverflowProduction(int iNewValue);
-	void changeOverflowProduction(int iChange, int iProductionModifier);
+	void changeOverflowProduction(int iChange);
 
 	int getFeatureProduction() const;
 	void setFeatureProduction(int iNewValue);

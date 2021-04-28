@@ -3966,7 +3966,6 @@ int CvCity::getProductionNeeded(BuildingTypes eBuilding) const
 			iProductionNeeded /= 100;
 		}
 	}
-
 	return iProductionNeeded;
 }
 
@@ -4526,7 +4525,6 @@ bool CvCity::hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool
 		*iGold = 0;
 		return true;
 	}
-
 	int iTotal, iCurrent, iModifier, iGoldPercent;
 
 	if (isProductionUnit())
@@ -4556,19 +4554,15 @@ bool CvCity::hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool
 		iModifier = getProductionModifier(eProject);
 		iGoldPercent = GC.getMAXED_PROJECT_GOLD_PERCENT();
 	}
-	else
-	{
-		return false;
-	}
+	else return false;
 
-	int iHurry = hurryProduction(eHurry);
-	int iOverflow = iCurrent + iHurry - iTotal;
+	int iOverflow = iCurrent + hurryProduction(eHurry) - iTotal;
 	if (bCountThisTurn)
 	{
 		// include chops and previous overflow here
 		iOverflow += getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow);
 	}
-	int iMaxOverflow = std::max(iTotal, getCurrentProductionDifference(ProductionCalc::FoodProduction));
+	const int iMaxOverflow = 3 * getYieldRate(YIELD_PRODUCTION);
 	int iLostProduction = std::max(0, iOverflow - iMaxOverflow);
 	int iBaseModifier = getBaseYieldRateModifier(YIELD_PRODUCTION);
 	int iTotalModifier = getBaseYieldRateModifier(YIELD_PRODUCTION, iModifier);
@@ -10351,11 +10345,9 @@ void CvCity::setOverflowProduction(int iNewValue)
 }
 
 
-void CvCity::changeOverflowProduction(int iChange, int iProductionModifier)
+void CvCity::changeOverflowProduction(int iChange)
 {
-	const int iOverflow = iChange * 100 / std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, iProductionModifier));
-
-	setOverflowProduction(getOverflowProduction() + iOverflow);
+	setOverflowProduction(m_iOverflowProduction + iChange);
 }
 
 
@@ -15939,19 +15931,20 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			{
 				logBBAI("      City %S builds unit %S", getName().GetCString(), GC.getUnitInfo(eTrainUnit).getDescription());
 			}
-
-			const int iProductionNeeded = getProductionNeeded(eTrainUnit);
-
-			// max overflow is the value of the item produced (to eliminate prebuild exploits)
-			const int iUnlimitedOverflow = getUnitProduction(eTrainUnit) - iProductionNeeded;
-			const int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(ProductionCalc::FoodProduction));
-			int iLostProduction = std::max(0, iUnlimitedOverflow - iMaxOverflow);
+			const int iRawOverflow =
+			(
+				getUnitProduction(eTrainUnit) - getProductionNeeded(eTrainUnit)
+				-
+				getBaseYieldRate(YIELD_PRODUCTION) * getProductionModifier(eTrainUnit) / 100
+			);
+			const int iMaxOverflow = 3 * getYieldRate(YIELD_PRODUCTION);
+			int iLostProduction = std::max(0, iRawOverflow - iMaxOverflow);
 			m_iLostProductionModified = iLostProduction;
 			m_iLostProductionBase = 100 * iLostProduction / std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eTrainUnit)));
-			int iOverflow = std::min(iMaxOverflow, iUnlimitedOverflow);
+			int iOverflow = std::min(iMaxOverflow, iRawOverflow);
 			if (iOverflow > 0)
 			{
-				changeOverflowProduction(iOverflow, getProductionModifier(eTrainUnit));
+				changeOverflowProduction(iOverflow);
 			}
 			setUnitProduction(eTrainUnit, 0);
 
@@ -16126,18 +16119,20 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 					getName().GetCString(),
 					GC.getBuildingInfo(eConstructBuilding).getDescription());
 			}
-
-			int iProductionNeeded = getProductionNeeded(eConstructBuilding);
-			// max overflow is the value of the item produced (to eliminate prebuild exploits)
-			int iUnlimitedOverflow = getBuildingProduction(eConstructBuilding) - iProductionNeeded;
-			int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(ProductionCalc::FoodProduction));
-			int iLostProduction = std::max(0, iUnlimitedOverflow - iMaxOverflow);
+			const int iRawOverflow =
+			(
+				getBuildingProduction(eConstructBuilding) - getProductionNeeded(eConstructBuilding)
+				-
+				getBaseYieldRate(YIELD_PRODUCTION) * getProductionModifier(eConstructBuilding) / 100
+			);
+			const int iMaxOverflow = 3 * getYieldRate(YIELD_PRODUCTION);
+			int iLostProduction = std::max(0, iRawOverflow - iMaxOverflow);
 			m_iLostProductionModified = iLostProduction;
 			m_iLostProductionBase = (100 * iLostProduction) / std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eConstructBuilding)));
-			int iOverflow = std::min(iMaxOverflow, iUnlimitedOverflow);
+			int iOverflow = std::min(iMaxOverflow, iRawOverflow);
 			if (iOverflow > 0)
 			{
-				changeOverflowProduction(iOverflow, getProductionModifier(eConstructBuilding));
+				changeOverflowProduction(iOverflow);
 			}
 			setBuildingProduction(eConstructBuilding, 0);
 			setBuildingProductionTime(eConstructBuilding, 0);
@@ -16241,18 +16236,20 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 					GET_TEAM(getTeam()).setProjectArtType(eCreateProject, projectCount - 1, defaultArtType);
 				}
 			}
-
-			int iProductionNeeded = getProductionNeeded(eCreateProject);
-			// max overflow is the value of the item produced (to eliminate pre-build exploits)
-			int iUnlimitedOverflow = getProjectProduction(eCreateProject) - iProductionNeeded;
-			int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(ProductionCalc::FoodProduction));
-			int iLostProduction = std::max(0, iUnlimitedOverflow - iMaxOverflow);
+			const int iRawOverflow =
+			(
+				getProjectProduction(eCreateProject) - getProductionNeeded(eCreateProject)
+				-
+				getBaseYieldRate(YIELD_PRODUCTION) * getProductionModifier(eCreateProject) / 100
+			);
+			const int iMaxOverflow = 3 * getYieldRate(YIELD_PRODUCTION);
+			int iLostProduction = std::max(0, iRawOverflow - iMaxOverflow);
 			m_iLostProductionModified = iLostProduction;
 			m_iLostProductionBase = 100 * iLostProduction / std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eCreateProject)));
-			int iOverflow = std::min(iMaxOverflow, iUnlimitedOverflow);
+			int iOverflow = std::min(iMaxOverflow, iRawOverflow);
 			if (iOverflow > 0)
 			{
-				changeOverflowProduction(iOverflow, getProductionModifier(eCreateProject));
+				changeOverflowProduction(iOverflow);
 			}
 			setProjectProduction(eCreateProject, 0);
 
@@ -16793,7 +16790,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 	}
 	else
 	{
-		changeOverflowProduction(getCurrentProductionDifference(ProductionCalc::FoodProduction), getProductionModifier());
+		changeOverflowProduction(getCurrentProductionDifference(ProductionCalc::FoodProduction));
 	}
 }
 
