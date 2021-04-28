@@ -4200,8 +4200,8 @@ int CvPlayerAI::AI_goldTarget() const
 		iMultiplier += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
 		iMultiplier += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
 		iMultiplier += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-		iMultiplier += GC.getHandicapInfo(GC.getGame().getHandicapType()).getTrainPercent();
-		iMultiplier += GC.getHandicapInfo(GC.getGame().getHandicapType()).getConstructPercent();
+		iMultiplier += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAITrainPercent();
+		iMultiplier += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIConstructPercent();
 		iMultiplier /= 5;
 
 		iGold += (getNumCities() * 3 + getTotalPopulation() / 3);
@@ -4209,7 +4209,11 @@ int CvPlayerAI::AI_goldTarget() const
 		iGold *= iMultiplier;
 		iGold /= 100;
 
-		iGold += ( (iMultiplier * GC.getGame().getElapsedGameTurns()) / (((GC.getGame().isOption(GAMEOPTION_NO_EVENTS))? 10 : 6) * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent()) );
+		const int eventmult = GC.getGame().isOption(GAMEOPTION_NO_EVENTS) ? 10 : 6;
+		const int speedmult = (eventmult * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent());
+		const int turnmult = iMultiplier * GC.getGame().getElapsedGameTurns();
+
+		iGold += (turnmult / speedmult);
 
 		iGold *= (100 + calculateInflationRate());
 		iGold /= 100;
@@ -4223,11 +4227,11 @@ int CvPlayerAI::AI_goldTarget() const
 
 		// Afforess 02/01/10
 		if (!GET_TEAM(getTeam()).isGoldTrading() || !GET_TEAM(getTeam()).isTechTrading() || GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
-		{// Don't bother saving gold if we can't trade it for anything
+		{ // Don't bother saving gold if we can't trade it for anything
 			iGold /= 3;
 		}
 		else if (GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
-		{// Gold is less useful without tech brokering
+		{ // Gold is less useful without tech brokering
 			iGold *= 3;
 			iGold /= 4;
 		}
@@ -4257,7 +4261,6 @@ int CvPlayerAI::AI_goldTarget() const
 
 	return iGold + AI_getExtraGoldTarget();
 }
-
 
 TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAsync, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor) const
 {

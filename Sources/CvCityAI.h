@@ -5,7 +5,13 @@
 #ifndef CIV4_CITY_AI_H
 #define CIV4_CITY_AI_H
 
+#include <vector>
+#include <vector>
+#include <vector>
+#include <vector>
+
 #include "CvCity.h"
+#include "CvPlayerAI.h"
 
 //	Possible focus flags to use when evaluating buildings
 #define BUILDINGFOCUS_FOOD					(1 << 1)
@@ -92,6 +98,7 @@ public:
 	void AI_init();
 	void AI_uninit();
 	void AI_reset();
+	void SendLog(CvWString function, CvWString message);
 
 	void AI_doTurn();
 
@@ -182,6 +189,10 @@ public:
 	void AI_forceEmphasizeCulture(bool bNewValue);
 
 	void AI_markBestBuildValuesStale();
+	void AI_calculateOutputRatio(std::vector<int>& ratios, int food, int production, int commerce);
+	void AI_getCurrentPlotValue(int iPlotCounter, ::CvPlot* plot, std::vector<plotInfo>& currentYieldList);
+	void AI_getBestPlotValue(int iPlotCounter, CvPlot* plot, std::vector<plotInfo>& currentYieldList, std::vector<plotInfo>& optimalYieldList);
+	void AI_updateBestBuildForPlots();
 	int AI_getBestBuildValue(int iIndex) const;
 	int AI_totalBestBuildValue(const CvArea* pArea) const;
 
@@ -194,6 +205,7 @@ public:
 
 	BuildTypes AI_getBestBuild(int iIndex) const;
 	int AI_countBestBuilds(const CvArea* pArea) const;
+	BuildTypes GetShortestBuildTimeOnPlot(CvPlot* plot) const;
 	void AI_updateBestBuild();
 
 	virtual int AI_cityValue() const;
