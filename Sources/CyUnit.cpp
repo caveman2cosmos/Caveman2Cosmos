@@ -711,10 +711,12 @@ float CyUnit::getRealExperience() const
 	return m_pUnit ? (float)m_pUnit->getExperience100() / 100 : -1;
 }
 
+#ifdef MAD_NUKES
 CyPlot* CyUnit::getMADTargetPlot() const
 {
 	return m_pUnit ? new CyPlot(m_pUnit->getMADTargetPlot()) : false;
 }
+#endif
 
 bool CyUnit::isHiddenNationality() const
 {

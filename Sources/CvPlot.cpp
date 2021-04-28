@@ -1413,10 +1413,11 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 
 			if (pLoopUnit != NULL)
 			{
-				// < M.A.D. Nukes Start >
-				if (pLoopUnit != pNukeUnit && !pLoopUnit->isMADEnabled())
-				//if (pLoopUnit != pNukeUnit)
-				// < M.A.D. Nukes End   >
+				if (pLoopUnit != pNukeUnit
+#ifdef MAD_NUKES
+					&& !pLoopUnit->isMADEnabled()
+#endif
+					)
 				{
 					if (!pLoopUnit->isNukeImmune() && !pLoopUnit->isDelayedDeath())
 					{

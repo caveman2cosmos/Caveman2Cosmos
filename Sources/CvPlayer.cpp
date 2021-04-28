@@ -790,6 +790,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	// Uninit class
 	uninit();
 
+#ifdef MAD_NUKES
 	m_iMADDeterrent = 0;
 	m_iMADIncoming = 0;
 	m_iMADOutgoing = 0;
@@ -798,7 +799,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	{
 		m_bMADTrigger[iI] = false;
 	}
-
+#endif
 	m_iStartingX = INVALID_PLOT_COORD;
 	m_iStartingY = INVALID_PLOT_COORD;
 	m_iTotalPopulation = 0;
@@ -3838,6 +3839,7 @@ void CvPlayer::doTurn()
 
 	CvEventReporter::getInstance().beginPlayerTurn( GC.getGame().getGameTurn(),  getID());
 
+#ifdef MAD_NUKES
 	if (isEnabledMAD())
 	{
 		for(int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -3848,7 +3850,7 @@ void CvPlayer::doTurn()
 			}
 		}
 	}
-
+#endif
 	setBuildingListInvalid();
 
 	//	Reset cache of best route type to build
@@ -19121,7 +19123,9 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 		changeHurryInflationModifier(kCivic.getHurryInflationModifier() * iChange);
 		changeLandmarkHappiness(kCivic.getLandmarkHappiness() * iChange);
 		changeNoLandmarkAngerCount(kCivic.isNoLandmarkAnger() ? iChange : 0);
+#ifdef MAD_NUKES
 		changeMADNukesCount(kCivic.isEnablesMAD() ? iChange : 0);
+#endif
 		changeCityLimit(kCivic.getCityLimit(getID()) * iChange);
 		changeCityOverLimitUnhappy(kCivic.getCityOverLimitUnhappy() * iChange);
 		changeForeignUnhappyPercent(kCivic.getForeignerUnhappyPercent() * iChange);
@@ -19247,10 +19251,17 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		// Init data before load
 		reset();
 
+#ifdef MAD_NUKES
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMADDeterrent);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMADIncoming);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMADOutgoing);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMADNukesCount);
+#else
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADDeterrent, SAVE_VALUE_TYPE_INT);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADIncoming, SAVE_VALUE_TYPE_INT);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADOutgoing, SAVE_VALUE_TYPE_INT);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADNukesCount, SAVE_VALUE_TYPE_INT);
+#endif
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingX);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingY);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalPopulation);
@@ -20562,10 +20573,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 	if ( m_bEverAlive )
 	{
+#ifdef MAD_NUKES
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMADDeterrent);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMADIncoming);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMADOutgoing);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMADNukesCount);
+#endif
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStartingX);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStartingY);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalPopulation);
@@ -28869,6 +28882,7 @@ void CvPlayer::changeForeignUnhappyPercent(int iChange) {
 	}
 }
 
+#ifdef MAD_NUKES
 // < M.A.D. Nukes Start >
 int CvPlayer::getMADIncoming() const
 {
@@ -28953,9 +28967,7 @@ void CvPlayer::changeMADNukesCount(int iChange)
 		}
 	}
 }
-
-// < M.A.D. Nukes End   >
-
+#endif // MAD_NUKES
 
 // BUG - Reminder Mod - start
 #include "CvMessageControl.h"

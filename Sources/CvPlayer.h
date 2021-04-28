@@ -63,8 +63,8 @@ public:
 protected:
 	CvGameObjectPlayer m_GameObject;
 
+#ifdef MAD_NUKES
 public:
-	// M.A.D. Nukes
 	int getMADDeterrent() const;
 	void setMADDeterrent(int iValue);
 	void changeMADDeterrent(int iValue);
@@ -85,9 +85,8 @@ protected:
 	int m_iMADOutgoing;
 	int m_iMADNukesCount;
 	bool m_bMADTrigger[MAX_PLAYERS];
-
+#endif // MAD_NUKES
 public:
-
 	DllExport void init(PlayerTypes eID);
 	DllExport void setupGraphical();
 	DllExport void reset(PlayerTypes eID = NO_PLAYER, bool bConstructorCall = false);

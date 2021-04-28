@@ -516,12 +516,12 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 
 	m_iDCMBombRange = 0;
 	m_iDCMBombAccuracy = 0;
-
+#ifdef MAD_NUKES
 	m_bMADEnabled = false;
 	m_iMADTargetPlotX = INVALID_PLOT_COORD;
 	m_iMADTargetPlotY = INVALID_PLOT_COORD;
 	m_pMADTargetPlotOwner = NO_PLAYER;
-
+#endif
 	m_iID = iID;
 	if (!bIdentityChange)
 	{
@@ -1155,10 +1155,12 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		bMessaged = true;
 	}
 
+#ifdef MAD_NUKES
 	if (isMADEnabled())
 	{
 		setMADEnabled(false);
 	}
+#endif
 
 	const PlayerTypes eOwner = getOwner();
 	CvPlayerAI& owner = GET_PLAYER(eOwner);
@@ -1631,11 +1633,13 @@ void CvUnit::doTurn()
 
 	setMoves(0);
 
+#ifdef MAD_NUKES
 	if(isMADEnabled())
 	{
 		doMADNukes(false);
 		finishMoves();
 	}
+#endif
 }
 
 
@@ -5338,13 +5342,14 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 		{
 			return true;
 		}
+#ifdef MAD_NUKES
 		// < M.A.D. Nukes Start >
 		if(isMADEnabled() && getUnitInfo().getUnitAIType(UNITAI_ICBM))
 		{
 			return true;
 		}
 		// < M.A.D. Nukes End   >
-
+#endif
 		break;
 
 	case COMMAND_STOP_AUTOMATION:
@@ -5504,12 +5509,14 @@ void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 			break;
 
 		case COMMAND_CANCEL:
+#ifdef MAD_NUKES
 			// < M.A.D. Nukes Start >
 			if(isMADEnabled() && getUnitInfo().getUnitAIType(UNITAI_ICBM))
 			{
 				clearMADTargetPlot();
 				setMoves(0);
 			}
+#endif
 			getGroup()->popMission();
 			// < M.A.D. Nukes End   >
 			break;
@@ -8444,10 +8451,10 @@ bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar) con
 	{
 		return false;
 	}
-	CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
-
 	if (bTestAtWar)
 	{
+		const CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
+
 		for (int iI = 0; iI < MAX_TEAMS; iI++)
 		{
 			if (iI != getTeam() && isNukeVictim(pTargetPlot, (TeamTypes)iI) && !isEnemy((TeamTypes)iI))
@@ -8459,7 +8466,7 @@ bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar) con
 	return true;
 }
 
-// < M.A.D. Nukes Start >
+#ifdef MAD_NUKES
 bool CvUnit::setMADTargetPlot(int iX, int iY)
 {
 	CvPlot* pPlot;
@@ -8537,16 +8544,21 @@ bool CvUnit::clearMADTargetPlot()
 
 	return true;
 }
-// < M.A.D. Nukes End   >
+#endif // MAD_NUKES
 
 bool CvUnit::nuke(int iX, int iY, bool bTrap)
 {
 
+#ifdef MAD_NUKES
 	if (!canNukeAt(plot(), iX, iY, !isMADEnabled()))
+#else
+	if (!canNukeAt(plot(), iX, iY, true))
+#endif
 	{
 		return false;
 	}
 
+#ifdef MAD_NUKES
 	if (!isHuman() && !isMADEnabled()
 	&& GET_PLAYER(getOwner()).isEnabledMAD()
 	&& GET_PLAYER(getOwner()).getMADDeterrent() > 0
@@ -8555,7 +8567,6 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 		GET_PLAYER(getOwner()).changeMADDeterrent(-1);
 		return false;
 	}
-
 	// Dale - Check validity of target before blowing it up
 	if (isMADEnabled() && !bTrap)
 	{
@@ -8573,6 +8584,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 			return false;
 		}
 	}
+#endif // MAD_NUKES
 
 	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	bool abTeamsAffected[MAX_TEAMS];
@@ -8644,6 +8656,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 	//		1. Ascertain the teams affected.
 	//		2. Ascertain players in the teams affected.
 	//		3. Set the MAD trigger to true for the players affected to the agressor.
+#ifdef MAD_NUKES
 	if (GET_PLAYER(getOwner()).isEnabledMAD())
 	{
 		for (int iI = 0; iI < MAX_TEAMS; iI++)
@@ -8660,7 +8673,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 			}
 		}
 	}
-
+#endif
 	if (pPlot->isActiveVisible(false) && !isUsingDummyEntities() && isInViewport())
 	{
 		if (airBaseCombatStr() != 0)
@@ -13018,10 +13031,9 @@ BuildTypes CvUnit::getBuildType() const
 // BUG - Sentry Actions - end
 		case MISSION_AIRLIFT:
 		case MISSION_NUKE:
-		// < M.A.D. Nukes Start >
+#ifdef MAD_NUKES
 		case MISSION_PRETARGET_NUKE:
-		// < M.A.D. Nukes End   >
-
+#endif
 		case MISSION_RECON:
 		case MISSION_PARADROP:
 		case MISSION_AIRBOMB:
@@ -23606,11 +23618,17 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDCMBombRange);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDCMBombAccuracy);
 
+#ifdef MAD_NUKES
 	WRAPPER_READ(wrapper, "CvUnit", &m_bMADEnabled);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iMADTargetPlotX);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iMADTargetPlotY);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_pMADTargetPlotOwner);
-
+#else
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_bMADEnabled, SAVE_VALUE_TYPE_BOOL);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iMADTargetPlotX, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iMADTargetPlotY, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_pMADTargetPlotOwner, SAVE_VALUE_TYPE_INT);
+#endif
 	WRAPPER_READ(wrapper, "CvUnit", &m_iID);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iGroupID);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iHotKeyNumber);
@@ -25168,12 +25186,12 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDCMBombRange);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDCMBombAccuracy);
-
+#ifdef MAD_NUKES
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bMADEnabled);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iMADTargetPlotX);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iMADTargetPlotY);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_pMADTargetPlotOwner);
-
+#endif
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iID);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iGroupID);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iHotKeyNumber);
@@ -31335,7 +31353,7 @@ void CvUnit::setAutoUpgrading(bool bNewValue)
 /************************************************************************************************/
 
 
-// < M.A.D. Nukes Start >
+#ifdef MAD_NUKES
 bool CvUnit::isMADEnabled() const
 {
 	return m_bMADEnabled;
@@ -31363,7 +31381,6 @@ void CvUnit::setMADEnabled(bool bValue)
 	}
 }
 
-// Dale - MAD: get MAD plot
 CvPlot* CvUnit::getMADTargetPlot() const
 {
 	return GC.getMap().plot(m_iMADTargetPlotX, m_iMADTargetPlotY);
@@ -31499,8 +31516,7 @@ void CvUnit::doMADNukes(bool bForceRetarget)
 		}
 	}
 }
-// < M.A.D. Nukes End   >
-
+#endif // MAD_NUKES
 
 bool CvUnit::canShadow() const
 {

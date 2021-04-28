@@ -3,7 +3,7 @@
 # By: The Lopez
 # CvMADNukesManager
 #
-
+"""
 from CvPythonExtensions import *
 
 # globals
@@ -518,3 +518,4 @@ class CvMADNukesManager:
 		screen.addPanel(self.getNextWidgetName(), "", "PANEL_STYLE_MAIN_TANB", False, False, 215, iRow, 100, 100, PanelStyles.PANEL_STYLE_MAIN_TANB)
 		screen.addPanel(self.getNextWidgetName(), "", "PANEL_STYLE_MAIN_BOTTOMBAR", False, False, iRow, 320, 100, 100, PanelStyles.PANEL_STYLE_MAIN_BOTTOMBAR)
 		screen.addPanel(self.getNextWidgetName(), "", "PANEL_STYLE_MAIN_SELECT", False, False, 425, iRow, 100, 100, PanelStyles.PANEL_STYLE_MAIN_SELECT)
+"""

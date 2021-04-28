@@ -1182,6 +1182,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 			originalTradeNetworkConnectivity[iI] = GET_PLAYER((PlayerTypes)iI).isAlive() ? pPlot->getPlotGroup((PlayerTypes)iI) : NULL;
 		}
 	}
+#ifdef MAD_NUKES
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -1197,6 +1198,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 			}
 		}
 	}
+#endif
 	algo::for_each(
 		plots() | filtered(CvPlot::fn::getWorkingCityOverride() == this),
 		CvPlot::fn::setWorkingCityOverride(NULL)

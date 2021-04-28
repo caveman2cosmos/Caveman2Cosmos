@@ -108,9 +108,9 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("isAlive", &CyPlayer::isAlive, "bool ()")
 		.def("isEverAlive", &CyPlayer::isEverAlive, "bool ()")
 		.def("isFoundedFirstCity", &CyPlayer::isFoundedFirstCity, "bool ()")
-
+#ifdef MAD_NUKES
 		.def("isMADNukesEnabled", &CyPlayer::isMADNukesEnabled, "bool ()")
-
+#endif
 		.def("isStrike", &CyPlayer::isStrike, "bool ()")
 
 		.def("getID", &CyPlayer::getID, "int ()")

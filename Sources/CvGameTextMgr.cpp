@@ -3071,13 +3071,13 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					szString.append(NEWLINE);
 					szString.append(gDLL->getText("TXT_KEY_UNIT_CAN_NUKE"));
 				}
-
+#ifdef MAD_NUKES
 				if(pUnit->isMADEnabled() && pUnit->getMADTargetPlot() != NULL)
 				{
 					szString.append(NEWLINE);
 					szString.append(gDLL->getText("TXT_KEY_NUKE_TARGET_CITY", pUnit->getMADTargetPlot()->getPlotCity()->getNameKey()));
 				}
-
+#endif
 				//Invisibility/Visibility
 				if (pUnit->alwaysInvisible())
 				{
@@ -15856,11 +15856,13 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_MILITARY_PRODUCTION", GC.getCivicInfo(eCivic).getMilitaryProductionModifier()));
 	}
 
+#ifdef MAD_NUKES
 	if (GC.getCivicInfo(eCivic).isEnablesMAD())
 	{
 		szHelpText.append(NEWLINE);
 		szHelpText.append(gDLL->getText("TXT_KEY_BUILDING_ENABLES_MAD"));
 	}
+#endif
 
 	// Free Civilian unit upkeep
 	if (GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilian() != 0)

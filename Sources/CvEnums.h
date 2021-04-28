@@ -259,10 +259,9 @@ enum InterfaceModeTypes
 	INTERFACEMODE_GO_TO_SENTRY,
 #endif
 // BUG - Sentry Actions - end
-	// < M.A.D. Nukes Start >
+#ifdef MAD_NUKES
 	INTERFACEMODE_PRETARGET_NUKE,
-	// < M.A.D. Nukes End   >
-
+#endif
 	INTERFACEMODE_SHADOW_UNIT,
 
 	NUM_INTERFACEMODE_TYPES
@@ -1698,9 +1697,9 @@ enum MissionTypes
 
 	//ls612: City Goto in Viewports
 	MISSION_GOTO,
-	// < M.A.D. Nukes Start >
+#ifdef MAD_NUKES
 	MISSION_PRETARGET_NUKE,
-	// < M.A.D. Nukes End   >
+#endif
 	//TB Combat Mod and Mission fix begin
 	MISSION_BUTCHER,
 	MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE,

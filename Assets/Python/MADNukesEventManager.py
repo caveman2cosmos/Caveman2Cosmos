@@ -1,6 +1,6 @@
 ## A New Dawn Mod Code
 ##
-
+"""
 from CvPythonExtensions import *
 gc = CyGlobalContext()
 import CvMADNukesManager
@@ -20,3 +20,4 @@ class MADNukesEventManager:
 
 		if ( eventType == self.EventKeyDown and theKey == int(InputTypes.KB_N) and self.eventManager.bAlt and gc.getPlayer(gc.getGame().getActivePlayer()).isMADNukesEnabled()):
 			CvMADNukesManager.CvMADNukesManager(CvScreenEnums.MAD_NUKES_MANAGER).interfaceScreen()
+"""

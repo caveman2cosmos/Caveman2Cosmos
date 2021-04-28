@@ -114,8 +114,9 @@ public:
 	void setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow);
 	CyPlot* plot() const;
 	CyArea* area() const;
+#ifdef MAD_NUKES
 	CyPlot* getMADTargetPlot() const;
-
+#endif
 	int getDamage() const;
 	void setDamage(int iNewValue, int /*PlayerTypes*/ ePlayer);
 	void changeDamage(int iChange, int /*PlayerTypes*/ ePlayer);

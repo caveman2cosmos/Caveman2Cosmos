@@ -1271,10 +1271,12 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 							case MISSION_RBOMBARD:
 							case MISSION_FENGAGE:
 							case MISSION_CLAIM_TERRITORY:
+#ifdef MAD_NUKES
 							case MISSION_PRETARGET_NUKE:
 								iData3 = GC.getCurrentViewport()->getMapXFromViewportX(iData3);
 								iData4 = GC.getCurrentViewport()->getMapYFromViewportY(iData4);
 								break;
+#endif
 							default:
 								break;
 							}

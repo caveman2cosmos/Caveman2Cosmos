@@ -477,6 +477,7 @@ protected:
 	CvGameObjectUnit m_GameObject;
 
 public:
+#ifdef MAD_NUKES
 	// < M.A.D. Nukes Start >
 	bool isMADEnabled() const;
 	void setMADEnabled(bool bValue);
@@ -496,7 +497,7 @@ protected:
 	PlayerTypes m_pMADTargetPlotOwner;
 public:
 	// < M.A.D. Nukes End   >
-
+#endif
 	void reloadEntity(bool bForceLoad = false);
 	void init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOwner, int iX, int iY, DirectionTypes eFacingDirection, int iBirthmark);
 	void uninit();
@@ -3259,7 +3260,9 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCommander);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGoldenAge);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBlockading);
+#ifdef MAD_NUKES
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isMADEnabled);
+#endif
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isSpy);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, cargoSpace);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getFortifyTurns);

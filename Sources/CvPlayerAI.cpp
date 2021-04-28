@@ -14447,6 +14447,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	iValue += iTempValue;
 
+#ifdef MAD_NUKES
 	iTempValue = kCivic.isEnablesMAD() ? 5 * getNumNukeUnits() : 0;
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
@@ -14455,6 +14456,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 				 iTempValue);
 	}
 	iValue += iTempValue;
+#endif
 
 	if (kCivic.getPopulationgrowthratepercentage() != 0)
 	{
