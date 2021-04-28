@@ -102,7 +102,6 @@ class BugAutologOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, col3, "Autolog__LogWar")
 		self.addCheckbox(screen, col4, "Autolog__LogVassals")
 		self.addCheckbox(screen, col5, "Autolog__LogCivics")
-		#self.addCheckbox(screen, col3, "Autolog__LogTradeAll")
 
 		screen.attachHSeparator(right, right + "Sep7a")
 		screen.attachHSeparator(left, left + "Sep7b")

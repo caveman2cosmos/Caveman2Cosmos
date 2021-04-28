@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<!-- Composite texts: Texts starting with TXT_KEY_BUG_OPT(LABEL)_ are concatenated in Python: TXT_KEY_BUG_OPT_ + XXXX__YYYY + _TEXT / _HOVER / _LIST -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUG_AVERAGE_TRADE_YIELD</Tag>
@@ -2520,24 +2521,6 @@
 		<Russian>Òåõíîëîãèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGTRADEALL_HOVER</Tag>
-		<English>When checked, will log all AI-initiated trade offers and demands along with your responses.</English>
-		<French>Lorsque activé, inscrit dans le log les offres d'échange et les requêtes des IA, avec vos réponses.</French>
-		<German>Protokolliert alle von anderen Zivilisationen angeregte Handelsangebote und Forderungen zusammen mit den Reaktionen der eigenen Zivilisation</German>
-		<Italian>Quando è selezionato, il Registro Automatico registra tutte le offerte e le richieste commerciali delle altre Civiltà e le vostre risposte.</Italian>
-		<Spanish>Cuando se activa, se grabarán en el registro las propuestas de comercio y las exigencias iniciadas por la IA junto con tu respuesta.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, áóäåò ðåãèñòðèðîâàòü âñå èíèöèàëèçèðîâàííûå ÈÈ òîðãîâûå ïðåäëîæåíèÿ è òðåáîâàíèÿ íàðÿäó ñ âàøèìè îòâåòàìè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGTRADEALL_TEXT</Tag>
-		<English>Trade/Demands</English>
-		<French>Commerce/Demandes</French>
-		<German>Handel / Forderungen</German>
-		<Italian>Commercio</Italian>
-		<Spanish>Comercio/Exigencias</Spanish>
-		<Russian>Òîðãîâëÿ/Òðåáîâàíèÿ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGTRADEOFFER_HOVER</Tag>
 		<English>When checked, will log AI-initiated trades and gift offers and your responses.</English>
 		<French>Lorsque activé, inscrit dans le log les échanges et cadeaux à l'initiative des IAs, et vos réponses.</French>
@@ -3787,24 +3770,6 @@
 		<Russian>Òèïû è ïðîöåíòû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__GREATPERSONTURNS_HOVER</Tag>
-		<English>When checked, displays the number of turns until the city will produce a [ICON_GREATPEOPLE].</English>
-		<French>Lorsque activé, Affiche le nombre de tours jusqu'à ce que la ville donne naissance à [ICON_GREATPEOPLE].</French>
-		<German>Zeigt in der Anzeige der Große Persönlichkeit-Punkte die Anzahl der Runden an, bis eine Stadt eine Große Persönlichkeit ([ICON_GREATPEOPLE]) hervorbringt</German>
-		<Italian>Quando è selezionato, viene visualizzato il numero di turni mancanti alla successiva nascita di un Grande Personaggio.</Italian>
-		<Spanish>Cuando se activa, muestras el número de turnos que faltan para que aparezca en la ciudad un[ICON_GREATPEOPLE].</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàåòñÿ ÷èñëî õîäîâ äî òåõ ïîð êîãäà ãîðîä ïðîèçâåäåò [ICON_GREATPEOPLE].</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__GREATPERSONTURNS_TEXT</Tag>
-		<English>Turns Until Birth</English>
-		<French>Tours avant Naissance</French>
-		<German>Runden bis zum Erscheinen</German>
-		<Italian>Turni per la nascita di un Grande Personaggio</Italian>
-		<Spanish>Turnos para aparición de GP</Spanish>
-		<Russian>Õîäîâ äî ðîæäåíèÿ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__ONLYPRESENTCORPORATIONS_HOVER</Tag>
 		<English>When checked, displays only the corporations that are present in the city and allows for more than seven corporations.</English>
 		<French>Lorsque activé, affiche uniquement les corporations présentes dans la ville et permet l'affichage de plus de sept corporations.</French>
@@ -4269,14 +4234,6 @@
 		<Italian>Imminente</Italian>
 		<Spanish>Inminente</Spanish>
 		<Russian>Ïðåäñòîÿùèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__CIV4LERTS_HOVER</Tag>
-		<English>When checked, messages are displayed to alert you to various pending and existing conditions using Dr. Elmer Jiggle's Civ4lerts mod.</English>
-		<French>Lorsque activé, des messages apparaissent pour vous informer de l'état de plusieurs éléments du jeu, grâce au mod Civ4lerts de Dr. Elmer Jiggle.</French>
-		<German>Lässt Warnungen erscheinen, die bevorstehende oder bereits eingetretene Ereignisse melden (verwendet Dr. Elmer Jiggles "Civ4lerts"-Mod)</German>
-		<Italian>Quando è selezionato, vengono visualizzati dei messaggi per avvertirti di varie condizioni presenti o imminenti (utilizzando il Civ4lerts Mod di Dr. Elmer Jiggle's).</Italian>
-		<Spanish>Cuando se activa, se muestran mensajes para informarte de varios sucesos actuales o pendientes, utilizando el mod Civ4lerts de Dr. Elmer Jiggle.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__ENABLED_TEXT</Tag>
@@ -4967,21 +4924,6 @@
 		<Russian>Âêë. âèäîâûå ýêðàíû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__EVENTSWITHIMAGES_HOVER</Tag>
-		<English>When checked and the required images are present, shows pictures on the random event screens.</English>
-		<French>Lorsque activé, et si les images requises sont présentes, affiche une image d'illustration associé à un événement aléatoire.</French>
-		<German>Fügt den Nachrichten über Zufällige Ereignisse Bilder hinzu, sofern vorhanden.</German>
-		<Spanish>Cuando se activa, si existen las imágenes requeridas, muestra una imagen ilustrativa en los eventos aleatorios.</Spanish>
-		<Russian>Êîãäà ïîäêëþ÷åíî è íåîáõîäèìûå îáðàçû çàãðóæåíû, ïîêàçûâàåò èçîáðàæåíèÿ ïðè ïîÿâëåíèè ñëó÷àéíûõ ñîáûòèÿõ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__EVENTSWITHIMAGES_TEXT</Tag>
-		<English>Events with Images</English>
-		<French>Evénements avec Images</French>
-		<Spanish>Eventos con imágenes</Spanish>
-		<Russian>Ñîáûòèÿ ñ èçîáðàæåíèÿìè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__FIELDOFVIEW_HOVER</Tag>
 		<English>When checked, displays a slide bar which can be used to change the field of view.</English>
 		<French>Lorsque activé, affiche un curseur permettant de changer le champ de vision et donc d'effectuer un Zoom avant/arrière.</French>
@@ -5016,15 +4958,6 @@
 		<Italian>Campo visuale</Italian>
 		<Spanish>Campo de visión</Spanish>
 		<Russian>Âèäèìàÿ îáëàñòü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__FIELDOFVIEW_VALUE_HOVER</Tag>
-		<English>Stores the Field of View value</English>
-		<French>Sauvegarde la valeur du Champ de Vision</French>
-		<German>Eingabemöglichkeit für die Einstellung des Sichtfeldes</German>
-		<Italian>Riporta il valore assegnato al Campo visuale</Italian>
-		<Spanish>Contiene el valor del Campo de visión.</Spanish>
-		<Russian>Çíà÷åíèå ñîõðàíÿåìîé âèäèìîé îáëàñòè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__GPBAR_TYPES_HOVER</Tag>
@@ -5096,24 +5029,6 @@
 		<German>Größe der Befehlssymbole</German>
 		<Spanish>Tamaño de iconos de Acción</Spanish>
 		<Russian>Размер значка действия</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__UNITMOVEMENTPOINTSFRACTION_HOVER</Tag>
-		<English>When checked, shows the Movement Points for a single unit as a fraction in the Info Pane.</English>
-		<French>Lorsque activé, affiche les Points de déplacement d'une unité sous forme de Fraction dans le panneau d'Information.</French>
-		<German>Zeigt die Bewegungspunkte einer einzelnen Einheit in der Detailanzeige mit Nachkommastellen an</German>
-		<Italian>Quando è selezionato, mostra nel Pannello delle Informazioni i Punti Movimento di una Unità come un numero con una cifra decimale.</Italian>
-		<Spanish>Cuando se activa, muestra los Puntos de movimiento de una única unidad en forma decimal en el Panel de información.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàåò åäèíèöû äâèæåíèÿ äëÿ îäèíî÷íîãî þíèòà êàê äðîáü íà ïàíåëè èíôîðìàöèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__UNITMOVEMENTPOINTSFRACTION_TEXT</Tag>
-		<English>Fractional Movement Points</English>
-		<French>Points de Déplacement en Fractions</French>
-		<German>Gebrochene Bewegungspunkte</German>
-		<Italian>Punti movimento decimali</Italian>
-		<Spanish>Puntos de movimiento fraccionados</Spanish>
-		<Russian>Äðîáíûå åäèíèöû äâèæåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__USEAIPATHING_HOVER</Tag>
