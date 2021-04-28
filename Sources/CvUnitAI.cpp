@@ -8513,7 +8513,7 @@ void CvUnitAI::AI_assaultSeaMove()
 
 			// galleys with upgrade available should get that ASAP
 			if( GET_PLAYER(getOwner()).AI_unitImpassableCount(getUnitType()) > 0 )
-			{// getUpgradeCity very suspect of a problem
+			{
 				CvCity* pUpgradeCity = getUpgradeCity(false);
 				if( pUpgradeCity != NULL && pUpgradeCity == pCity )
 				{
@@ -23740,27 +23740,20 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_travelToUpgradeCity()
 {
-	return false;
 	PROFILE_FUNC();
-	const CvUnitInfo& unitInfo = GC.getUnitInfo(getUnitType());
-	const int iNumUpgrades = unitInfo.getNumUnitUpgrades();
-	if (iNumUpgrades <= 0)
+
+	// Check if unit is not a dead end, that there exist a better unit in the game that it one day can upgrade into.
+	if (GC.getUnitInfo(getUnitType()).getNumUnitUpgrades() <= 0)
 	{
-		SendLog("AI_ExploreMove", CvWString::format(L"Unit: %S has %lld upgrades?", this->getName().c_str(), unitInfo.getNumUnitUpgrades()));
-		logBBAI("AI_travelToUpgradeCity: found no upgrades"); // gin up a string format that can be parsed, creating a json helper could be useful
 		return false;
 	}
-	SendLog("AI_ExploreMove", CvWString::format(L"Unit: %S has %lld upgrades?", this->getName().c_str(), unitInfo.getNumUnitUpgrades()));
+	SendLog("AI_ExploreMove", CvWString::format(L"Unit: %S is not a dead end unit, and can potentially upgrade to something one day", this->getName().c_str()));
 	// is there a city which can upgrade us?
 	CvCity* pUpgradeCity = getUpgradeCity(/*bSearch*/ true);
 	if (pUpgradeCity != NULL)
 	{
-		bool bSuccess = false;
 		// cache some stuff
 		CvPlot* pPlot = plot();
-		bool bSeaUnit = (getDomainType() == DOMAIN_SEA);
-		bool bCanAirliftUnit = (getDomainType() == DOMAIN_LAND);
-		bool bShouldSkipToUpgrade = (getDomainType() != DOMAIN_AIR);
 
 		// if we at the upgrade city, stop, wait to get upgraded
 		if (pUpgradeCity->plot() == pPlot)
@@ -23775,18 +23768,13 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 				getGroup()->setActivityType(ACTIVITY_AWAKE);
 				return true;
 			}
-			else
+			if (getDomainType() == DOMAIN_AIR)
 			{
-				if (!bShouldSkipToUpgrade)
-				{
-					return false;
-				}
-
-				bSuccess = getGroup()->pushMissionInternal(MISSION_SKIP);
-				if (bSuccess)
-				{
-					return true;
-				}
+				return false;
+			}
+			if (getGroup()->pushMissionInternal(MISSION_SKIP))
+			{
+				return true;
 			}
 		}
 
@@ -23805,7 +23793,7 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 		}
 		if (pClosestCity == NULL)
 		{
-			pClosestCity = GC.getMap().findCity(getX(), getY(), NO_PLAYER, getTeam(), true, bSeaUnit);
+			pClosestCity = GC.getMap().findCity(getX(), getY(), NO_PLAYER, getTeam(), true, getDomainType() == DOMAIN_SEA);
 		}
 
 		// can we path to the upgrade city?
@@ -23818,21 +23806,19 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 		}
 
 		// if we close to upgrade city, head there
-		if (NULL != pThisTurnPlot && NULL != pClosestCity && (pClosestCity == pUpgradeCity || iUpgradeCityPathTurns < 4))
+		if (NULL != pThisTurnPlot && NULL != pClosestCity
+		&& (pClosestCity == pUpgradeCity || iUpgradeCityPathTurns < 4)
+		&& !exposedToDanger(pThisTurnPlot, 70))
 		{
-			if ( !exposedToDanger(pThisTurnPlot, 70) )
+			FAssert(!atPlot(pThisTurnPlot));
+			if (getGroup()->pushMissionInternal(MISSION_MOVE_TO, pThisTurnPlot->getX(), pThisTurnPlot->getY()))
 			{
-				FAssert(!atPlot(pThisTurnPlot));
-				bSuccess = getGroup()->pushMissionInternal(MISSION_MOVE_TO, pThisTurnPlot->getX(), pThisTurnPlot->getY());
-				if (bSuccess)
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 
 		// check for better airlift choice
-		if (bCanAirliftUnit && NULL != pClosestCity && pClosestCity->getMaxAirlift() > 0)
+		if (getDomainType() == DOMAIN_LAND && NULL != pClosestCity && pClosestCity->getMaxAirlift() > 0)
 		{
 			// if we at the closest city, then do the airlift, or wait
 			if (bAtClosestCity)
@@ -23840,42 +23826,35 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 				// can we do the airlift this turn?
 				if (canAirliftAt(pClosestCity->plot(), pUpgradeCity->getX(), pUpgradeCity->getY()))
 				{
-					bSuccess = getGroup()->pushMissionInternal(MISSION_AIRLIFT, pUpgradeCity->getX(), pUpgradeCity->getY());
-					if (bSuccess)
+					if (getGroup()->pushMissionInternal(MISSION_AIRLIFT, pUpgradeCity->getX(), pUpgradeCity->getY()))
 					{
 						return true;
 					}
 				}
 				// wait to do it next turn
-				else
+				else if (getGroup()->pushMissionInternal(MISSION_SKIP))
 				{
-					bSuccess = getGroup()->pushMissionInternal(MISSION_SKIP);
-					if (bSuccess)
-					{
-						return true;
-					}
+					return true;
 				}
 			}
-
 			int iClosestCityPathTurns;
-			CvPlot* pThisTurnPlotForAirlift = NULL;
-			bool bCanPathToClosestCity = generatePath(pClosestCity->plot(), 0, true, &iClosestCityPathTurns);
-			if (bCanPathToClosestCity)
-			{
-				pThisTurnPlotForAirlift = getPathEndTurnPlot();
-			}
-
+			const CvPlot* pThisTurnPlotForAirlift = 
+			(
+				generatePath(pClosestCity->plot(), 0, true, &iClosestCityPathTurns)
+				?
+				getPathEndTurnPlot()
+				:
+				NULL
+			);
 			// is the closest city closer pathing? If so, move toward closest city
-			if (NULL != pThisTurnPlotForAirlift && (!bCanPathToUpgradeCity || iClosestCityPathTurns < iUpgradeCityPathTurns))
+			if (NULL != pThisTurnPlotForAirlift
+			&& (!bCanPathToUpgradeCity || iClosestCityPathTurns < iUpgradeCityPathTurns)
+			&& !exposedToDanger(pThisTurnPlotForAirlift, 70))
 			{
-				if ( !exposedToDanger(pThisTurnPlotForAirlift, 70) )
+				FAssert(!atPlot(pThisTurnPlotForAirlift));
+				if (getGroup()->pushMissionInternal(MISSION_MOVE_TO, pThisTurnPlotForAirlift->getX(), pThisTurnPlotForAirlift->getY()))
 				{
-					FAssert(!atPlot(pThisTurnPlotForAirlift));
-					bSuccess = getGroup()->pushMissionInternal(MISSION_MOVE_TO, pThisTurnPlotForAirlift->getX(), pThisTurnPlotForAirlift->getY());
-					if (bSuccess)
-					{
-						return true;
-					}
+					return true;
 				}
 			}
 		}
@@ -23883,14 +23862,13 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 		// did not have better airlift choice, go ahead and path to the upgrade city
 		if (NULL != pThisTurnPlot)
 		{
-			if ( !exposedToDanger(pThisTurnPlot, 70) )
+			if (!exposedToDanger(pThisTurnPlot, 70))
 			{
 				FAssert(!atPlot(pThisTurnPlot));
 				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pThisTurnPlot->getX(), pThisTurnPlot->getY());
 			}
 		}
 	}
-
 	return false;
 }
 

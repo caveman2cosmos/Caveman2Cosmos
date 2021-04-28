@@ -2377,7 +2377,7 @@ class RevolutionWatchAdvisor:
 
 	def save(self, inputClass):
 		name = SP.joinModDir("UserSettings", "CustomRevAdv", "CustomRevAdv.txt")
-		if SP.isfile(name):
+		if SP.isFile(name):
 			file = open(name, 'w')
 
 			if(file != 0):
@@ -2716,9 +2716,9 @@ class RevolutionWatchAdvisor:
 
 		self.PAGES = None
 		name = SP.joinModDir("UserSettings", "CustomRevAdv", "CustomRevAdv.txt")
-		if not SP.isfile(name):
+		if not SP.isFile(name):
 			name = SP.joinModDir("UserSettings", "CustomRevAdv.txt")
-		if SP.isfile(name):
+		if SP.isFile(name):
 			BugConfigTracker.add("CDA_Config", name)
 			try:
 				file = open(name, 'r')
