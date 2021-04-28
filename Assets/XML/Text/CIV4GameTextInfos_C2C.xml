@@ -295,12 +295,6 @@
 		<Russian>[SPACE]Одна из женщин племени понравилась вашим разведчикам!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
-		<English>Pedia</English>
-		<French>Pédia</French>
-		<Russian>ЦИВИЛОПЕДИЯ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_PREREQUISITE</Tag>
 		<English>[ICON_BULLET]May only exist on a %s1_MapCat.</English>
 		<German>[ICON_BULLET]kann nur auf einem %s1_MapCat existieren</German>
