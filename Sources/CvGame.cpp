@@ -1446,13 +1446,10 @@ void CvGame::normalizeRemovePeaks()
 
 			if (pStartingPlot != NULL)
 			{
-				foreach_(CvPlot* pLoopPlot, CvPlot::rect(pStartingPlot->getX(), pStartingPlot->getY(), 3, 3))
-				{
-					if (pLoopPlot->isPeak())
-					{
-						pLoopPlot->setPlotType(PLOT_HILLS);
-					}
-				}
+				algo::for_each(pStartingPlot->rect(3, 3)
+					| filtered(bind(CvPlot::isPeak, _1))
+					, bind(CvPlot::setPlotType, _1, PLOT_HILLS, true, true)
+				);
 			}
 		}
 	}
@@ -1533,7 +1530,7 @@ void CvGame::normalizeRemoveBadFeatures()
 
 				const int iMaxRange = CITY_PLOTS_RADIUS + 2;
 
-				foreach_(CvPlot* pLoopPlot, CvPlot::rect(pStartingPlot->getX(), pStartingPlot->getY(), iMaxRange, iMaxRange))
+				foreach_(CvPlot* pLoopPlot, pStartingPlot->rect(iMaxRange, iMaxRange))
 				{
 					const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 
@@ -6065,6 +6062,24 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 			{
 				continue;
 			}
+			// TB - Actually, here the unit is selected already based on the spawn info itself.
+			// Ensure that pPlot has the MapType of the unit... no need to include MapTypes on the Spawn Info file.
+			{
+				const int iCount = unitInfo.getNumMapTypes();
+				bool bFound = (iCount < 1);
+				for (int iI = 0; !bFound && iI < iCount; iI++)
+				{
+					if (pPlot->isMapType((MapTypes)unitInfo.getMapType(iI)))
+					{
+						bFound = true;
+					}
+				}
+				if (!bFound)
+				{
+					continue;
+				}
+			}
+
 			// Encroaching animals?
 			if (
 				bWildAnimal
@@ -6232,6 +6247,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 		{
 			continue;
 		}
+
 		std::vector<CvPlot*> validPlots;
 
 		enumSpawnPlots(j, &validPlots);
@@ -6258,19 +6274,19 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 		if (!spawnInfo.getNoSpeedNormalization())
 		{
-			adjustedSpawnRate = (adjustedSpawnRate*((GC.getGameSpeedInfo(getGameSpeedType()).getTrainPercent()+666)/3) / 100);
+			adjustedSpawnRate = adjustedSpawnRate * (GC.getGameSpeedInfo(getGameSpeedType()).getTrainPercent()+666) / 300;
 		}
 
 		if (isOption(GAMEOPTION_PEACE_AMONG_NPCS))
 		{
-			adjustedSpawnRate *= (100+GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getSpawnRateNPCPeaceModifier());
+			adjustedSpawnRate *= 100 + GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getSpawnRateNPCPeaceModifier();
 		}
 		else
 		{
-			adjustedSpawnRate *= (100+GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getSpawnRateModifier());
+			adjustedSpawnRate *= 100 + GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getSpawnRateModifier();
 		}
 		// Adjust for any rate override
-		adjustedSpawnRate = adjustedSpawnRate / spawnInfo.getRateOverride();
+		adjustedSpawnRate /= spawnInfo.getRateOverride();
 
 		int iMinAreaPlotsPerPlayerUnit = spawnInfo.getMinAreaPlotsPerPlayerUnit();
 		int iMinAreaPlotsPerUnitType = spawnInfo.getMinAreaPlotsPerUnitType();
@@ -6285,53 +6301,23 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 		logging::logMsg("C2C.log", "Spawn chance per plot for %s is 1 to %d .", spawnInfo.getType(), (int)adjustedSpawnRate);
 
-		int spawnCount = 0;
 		//So we ARE going by spawn here but it's still a random check per plot rather than placing an amount.  Before this, determine how many should spawn this round, then pick a plot for each of those spawns.
 		//The density factor is going to be interesting.  Perhaps each plot should get a likelihood value and vary that by the density factor around that plot.
 		//The spawn rate... is high more likely or low and what kind of numeric range are we working with?
+
+		/* Toffer - Disable this, this should be cached far less often than for each player each end turn. Not worth it.
 		foreach_(CvArea* pArea, GC.getMap().areas())
 		{
 			const int iValidPlots = algo::count_if(validPlots, CvPlot::fn::area() == pArea);
 			pArea->setNumValidPlotsbySpawn(eSpawn, iValidPlots);
 		}
+		*/
 		const UnitTypes eUnit = spawnInfo.getUnitType();
 		const int iMaxLocalDensity = spawnInfo.getMaxLocalDensity();
+		int spawnCount = 0;
 
 		foreach_(const CvPlot* pPlot, validPlots)
 		{
-			const int iArea = pPlot->getArea();
-			const CvArea* pArea = pPlot->area();
-			const int iTotalAreaSize = pArea->getNumTiles();
-			//TB Spawn Modification Begin
-			//Automatically adapts chances of spawn to normalize between units that have a huge amount of plots available to spawn in and those that have relatively few.
-			//Keeping in mind higher is less chance.
-			const int iValidPlotsThisArea = pArea->getNumValidPlotsbySpawn(eSpawn);
-
-			// Produces the % of plots valid in area, base 50 so 1% becomes 51% while 90% becomes 140%
-			const int iFrequencyAdjustment = 50 + iValidPlotsThisArea * 100 / iTotalAreaSize;
-
-			int iLocalSpawnRate = (int)adjustedSpawnRate * iFrequencyAdjustment / 100;
-			//TB Spawn Modification End
-
-
-			//Actually, here the unit is selected already based on the spawn info itself.  Derive that then derive the MapTypes
-			//of the unit and ensure that pPlot has the MapType of the unit.  Easy... no need to include MapTypes on the
-			//Spawn Info file.
-			const int iCount = GC.getUnitInfo(eUnit).getNumMapTypes();
-			bool bFound = (iCount < 1);
-			for (int iI = 0; iI < iCount; iI++)
-			{
-				if (pPlot->isMapType((MapTypes)GC.getUnitInfo(eUnit).getMapType(iI)))
-				{
-					bFound = true;
-				}
-			}
-			if (!bFound)
-			{
-				continue;
-			}
-			//Note: correct MapType checks throughout the code so that if one is valid that gets checked later, the validation is still there!
-
 			// Safety valve - if there are over a certain number of total barbarian units in existance halt all spawns
 			// else the game can run into fatal issues when it uses up the entire id space of units (8191 at once per player)
 			if (GET_PLAYER(ePlayer).getNumUnits() > MAX_BARB_UNITS_FOR_SPAWNING)
@@ -6339,33 +6325,43 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 				break;
 			}
 
+			const CvArea* pArea = pPlot->area();
+			const int iTotalAreaSize = pArea->getNumTiles();
+
 			// Toffer - Bar spawn if player has the max unit density allowed in this area.
 			//	Ignore small areas, max local density limit will be adequate for those.
 			if (iTotalAreaSize > std::max(49, iMinAreaPlotsPerPlayerUnit))
 			{
-				const int iPlayerUnitsInArea = pPlot->area()->getUnitsPerPlayer(ePlayer);
+				const int iPlayerUnitsInArea = pArea->getUnitsPerPlayer(ePlayer);
 				if (iPlayerUnitsInArea > 0 && iTotalAreaSize / iPlayerUnitsInArea <= iMinAreaPlotsPerPlayerUnit)
 				{
 					continue;
 				}
 			}
+			//TB Spawn Modification Begin
+			// Automatically adapts chances of spawn to normalize between units that have a huge amount of plots available to spawn in and those that have relatively few.
+			// Keeping in mind higher is less chance.
+			// Produces the % of plots valid in area, base 50 so 1% becomes 51% while 90% becomes 140%
+			//const int iFrequencyAdjustment = 50 + pArea->getNumValidPlotsbySpawn(eSpawn) * 100 / iTotalAreaSize;
+
+			int iLocalSpawnRate = (int)adjustedSpawnRate/* * iFrequencyAdjustment / 100*/;
+			//TB Spawn Modification End
 
 			//	Adjust spawn rate for area ownership percentage
-			if (!pPlot->isWater() && pPlot->area()->getNumCities() == pPlot->area()->getCitiesPerPlayer(ePlayer))
+			if (!pPlot->isWater() && pArea->getNumCities() == pArea->getCitiesPerPlayer(BARBARIAN_PLAYER) + pArea->getCitiesPerPlayer(NEANDERTHAL_PLAYER))
 			{
 				// No non-barb cities so dramatically reduce spawns since its essentially an unplayed-in area for now
 				iLocalSpawnRate *= 10;
 			}
-			else
+			else // Adjust spawn rate upward by up to tripling the normal rate in proportion with how little wilderness is left in this area
 			{
-				const int percentOccupied = (100*pPlot->area()->getNumOwnedTiles())/pPlot->area()->getNumTiles();
-				//	Adjust spawn rate upward by up to trebbleing the normal rate in proportion with how
-				//	little wilderness is left in this area
-				iLocalSpawnRate = iLocalSpawnRate * 100 / (100 + 2*percentOccupied);
+				iLocalSpawnRate *= 100;
+				iLocalSpawnRate /= 100 + 200 * pArea->getNumOwnedTiles() / pArea->getNumTiles();
 			}
 
 			if (getSorenRandNum(std::max(1, iLocalSpawnRate), "Unit spawn") == 0)
 			{
+				const int iArea = pPlot->getArea();
 				// Check area unit type density not exceeded if specified
 				if (iMinAreaPlotsPerUnitType > 0
 				&& areaPopulationMap[iArea].find(eUnit) != areaPopulationMap[iArea].end()
@@ -6383,16 +6379,15 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 				const int LocalRange = 3;
 				const int TotalLocalArea = (LocalRange * 2 + 1) * (LocalRange * 2 + 1);
 
-				foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), LocalRange, LocalRange))
+				foreach_(const CvPlot* pLoopPlot, pPlot->rect(LocalRange, LocalRange))
 				{
-					if (pLoopPlot->area() == pPlot->area())
+					if (pLoopPlot->area() == pArea)
 					{
 						localAreaSize++;
 						localUnitTypeCount += pLoopPlot->plotCount(PUF_isUnitType, eUnit);
-						localPlayerUnitCount += pLoopPlot->plotCount(PUF_isPlayer, spawnInfo.getPlayer());
+						localPlayerUnitCount += pLoopPlot->plotCount(PUF_isPlayer, ePlayer);
 					}
 				}
-				// We know that localAreaSize > 0 because pLoopPlot == pPlot in one of the above iterations.
 				if (localUnitTypeCount == 0
 				// Max 0.50 unit per plot in local area owned by spawn owner.
 				|| localPlayerUnitCount * 100 / localAreaSize < 50
@@ -6749,7 +6744,6 @@ void CvGame::doGlobalWarming()
 
 void CvGame::doHeadquarters()
 {
-
 	if (Cy::call_optional(PYGameModule, "doHeadquarters"))
 	{
 		return;
@@ -6781,9 +6775,9 @@ void CvGame::doHeadquarters()
 				&& kLoopTeam.isHasTech(eTechPrereq)
 				&& kLoopTeam.getNumCities() > 0)
 				{
-					for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+					foreach_(const BonusTypes eBonus, kCorporation.getPrereqBonuses())
 					{
-						if (NO_BONUS != kCorporation.getPrereqBonus(i) && kLoopTeam.hasBonus((BonusTypes)kCorporation.getPrereqBonus(i)))
+						if (kLoopTeam.hasBonus(eBonus))
 						{
 							int iValue = getSorenRandNum(10, "Found Corporation (Team)");
 
@@ -6814,10 +6808,9 @@ void CvGame::doHeadquarters()
 
 					if (playerX.isAliveAndTeam(eBestTeam) && playerX.getNumCities() > 0)
 					{
-						for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+						foreach_(const BonusTypes eBonus, kCorporation.getPrereqBonuses())
 						{
-							const BonusTypes eBonus = (BonusTypes)kCorporation.getPrereqBonus(i);
-							if (NO_BONUS != eBonus && playerX.hasBonus(eBonus))
+							if (playerX.hasBonus(eBonus))
 							{
 								int iValue = getSorenRandNum(25, "Found Corporation (Player)") - playerX.getNumAvailableBonuses(eBonus);
 
@@ -9161,20 +9154,11 @@ bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationT
 	if (GC.getCorporationInfo(eCorporation1).isCompetingCorporation(eCorporation2) || GC.getCorporationInfo(eCorporation2).isCompetingCorporation(eCorporation1))
 		return true;
 
-	for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+	foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation1).getPrereqBonuses())
 	{
-		if (GC.getCorporationInfo(eCorporation1).getPrereqBonus(i) != NO_BONUS)
+		if (algo::contains(GC.getCorporationInfo(eCorporation2).getPrereqBonuses(), eBonus))
 		{
-			for (int j = 0; j < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++j)
-			{
-				if (GC.getCorporationInfo(eCorporation2).getPrereqBonus(j) != NO_BONUS)
-				{
-					if (GC.getCorporationInfo(eCorporation1).getPrereqBonus(i) == GC.getCorporationInfo(eCorporation2).getPrereqBonus(j))
-					{
-						return true;
-					}
-				}
-			}
+			return true;
 		}
 	}
 
@@ -9234,6 +9218,7 @@ void CvGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYiel
 	}
 }
 
+/* Toffer - Unused, but might be needed for recalc...
 void CvGame::removePlotExtraYield(int iX, int iY)
 {
 	for (std::vector<PlotExtraYield>::iterator it = m_aPlotExtraYields.begin(); it != m_aPlotExtraYields.end(); ++it)
@@ -9251,6 +9236,7 @@ void CvGame::removePlotExtraYield(int iX, int iY)
 		pPlot->updateYield();
 	}
 }
+*/
 
 int CvGame::getPlotExtraCost(int iX, int iY) const
 {
@@ -11685,6 +11671,10 @@ void CvGame::recalculateModifiers()
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+
+		// Toffer - Yield cache
+		pLoopPlot->recalculateBaseYield();
+
 		pLoopPlot->getProperties()->clearForRecalculate();
 
 		//	We will recalculate visibility from first principles

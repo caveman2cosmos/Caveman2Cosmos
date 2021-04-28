@@ -147,7 +147,7 @@ public:
 	int AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool bTestMoves) const;
 	//int AI_getUnitDanger(CvUnit* pUnit, int iRange = -1, bool bTestMoves = true, bool bAnyDanger = true) const;
 
-	int AI_getWaterDanger(const CvPlot* pPlot, int iRange, bool bTestMoves = true) const;
+	int AI_getWaterDanger(const CvPlot* pPlot, int iRange) const;
 	int AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const;
 
 	bool AI_avoidScience() const;

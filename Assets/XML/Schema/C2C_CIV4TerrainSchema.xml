@@ -150,9 +150,6 @@
 	<ElementType name="RiverYieldChange" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="HillsYieldChange" content="eltOnly">
-		<element type="iYield" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="bWaterTerrain" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bImpassable" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFound" content="textOnly" dt:type="boolean"/>
@@ -196,8 +193,6 @@
 		<element type="Help" minOccurs="0"/>
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="Yields" minOccurs="0"/>
-		<element type="RiverYieldChange" minOccurs="0"/>
-		<element type="HillsYieldChange" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
 		<element type="bWaterTerrain" minOccurs="0"/>
 		<element type="bImpassable" minOccurs="0"/>
@@ -230,8 +225,8 @@
 	<ElementType name="Description" content="textOnly"/>
 	<ElementType name="iHillsChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iPeakChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iRiverChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iCityChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iPopulationChangeOffset" content="textOnly" dt:type="int"/>
 	<ElementType name="iPopulationChangeDivisor" content="textOnly" dt:type="int"/>
 	<ElementType name="iMinCity" content="textOnly" dt:type="int"/>
 	<ElementType name="iTradeModifier" content="textOnly" dt:type="int"/>
@@ -255,8 +250,8 @@
 		<element type="Description" minOccurs="0"/>
 		<element type="iHillsChange" minOccurs="0"/>
 		<element type="iPeakChange" minOccurs="0"/>
+		<element type="iRiverChange" minOccurs="0"/>
 		<element type="iCityChange" minOccurs="0"/>
-		<element type="iPopulationChangeOffset" minOccurs="0"/>
 		<element type="iPopulationChangeDivisor" minOccurs="0"/>
 		<element type="iMinCity" minOccurs="0"/>
 		<element type="iTradeModifier" minOccurs="0"/>
@@ -323,7 +318,6 @@
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="YieldChanges" minOccurs="0"/>
 		<element type="RiverYieldChange" minOccurs="0"/>
-		<element type="HillsYieldChange" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
 		<element type="iMovement" minOccurs="0"/>
 		<element type="iSeeThrough" minOccurs="0"/>
@@ -696,7 +690,6 @@
 		<element type="PrereqNatureYields" minOccurs="0"/>
 		<element type="YieldChanges" minOccurs="0"/>
 		<element type="RiverSideYieldChange" minOccurs="0"/>
-		<element type="HillsYieldChange" minOccurs="0"/>
 		<element type="IrrigatedYieldChange" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
 		<element type="bActsAsCity" minOccurs="0"/>
