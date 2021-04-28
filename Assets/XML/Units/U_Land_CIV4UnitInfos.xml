@@ -41611,15 +41611,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GREAT_DETECTIVE</Type>
-			<!--
-				<UniqueName>TXT_KEY_GP_DETECTIVE_DAVE_TOSCHI</UniqueName>
-				<UniqueName>TXT_KEY_GP_DETECTIVE_ISIDOR_EINSTEIN</UniqueName>
-				<UniqueName>TXT_KEY_GP_DETECTIVE_JOHNNY_BRODERICK</UniqueName>
-				<UniqueName>TXT_KEY_GP_DETECTIVE_MOE_W_SMITH</UniqueName>
-				<UniqueName>TXT_KEY_GP_DETECTIVE_WILLIAM_J_BURNS</UniqueName>
-				<UniqueName>TXT_KEY_GP_DETECTIVE_WILLIAM_J_FLYNN</UniqueName>
-			</UniqueNames>
-			-->
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_PRODIGY</Combat>
 			<SubCombatTypes>
