@@ -81,9 +81,9 @@
 	<load mod="Revolution"/>
 	<load mod="RevDCM"/>
 	<!--RevolutionDCM end-->
-	<!--Mad Nukes Mod-->
+	<!--
 	<events module="MADNukesEventManager"/>
-	<!--Mad Nukes Mod-->
+	-->
 	<!-- Options Screen -->
 	<screen id="BUGFull">
 		<tab module="BugGeneralOptionsTab"/>
