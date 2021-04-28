@@ -4300,12 +4300,6 @@ int CvCity::getProductionModifier(ProjectTypes eProject) const
 }
 
 
-int CvCity::getOverflowProductionDifference() const
-{
-	return getProductionPerTurn(getProductionModifier(), ProductionCalc::Overflow);
-}
-
-
 int CvCity::getProductionPerTurn(int modifier, ProductionCalc::flags flags = ProductionCalc::Yield) const
 {
 	if (isDisorder())
@@ -14009,10 +14003,10 @@ void CvCity::setUnitProduction(UnitTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 
-	if (getUnitProduction(eIndex) != iNewValue)
+	if (m_paiUnitProduction[eIndex] != iNewValue)
 	{
 		m_paiUnitProduction[eIndex] = iNewValue;
-		FASSERT_NOT_NEGATIVE(getUnitProduction(eIndex))
+		FASSERT_NOT_NEGATIVE(m_paiUnitProduction[eIndex])
 
 		if (getTeam() == GC.getGame().getActiveTeam())
 		{
@@ -14029,7 +14023,7 @@ void CvCity::setUnitProduction(UnitTypes eIndex, int iNewValue)
 
 void CvCity::changeUnitProduction(UnitTypes eIndex, int iChange)
 {
-	setUnitProduction(eIndex, (getUnitProduction(eIndex) + iChange));
+	setUnitProduction(eIndex, getUnitProduction(eIndex) + iChange);
 }
 
 
@@ -16746,10 +16740,10 @@ void CvCity::doProduction(bool bAllowNoProduction)
 		setBuiltFoodProducedUnit(isFoodProduction());
 		clearLostProduction();
 
-		int iOverflowProductionModified = 0;
-		while (isProduction() && productionLeft() <= iOverflowProductionModified)
+		int iOverflow = 0;
+		while (isProduction() && productionLeft() <= iOverflow)
 		{
-			changeProduction(iOverflowProductionModified);
+			changeProduction(iOverflow);
 			setOverflowProduction(0);
 
 			popOrder(0, true, true);
@@ -16759,19 +16753,20 @@ void CvCity::doProduction(bool bAllowNoProduction)
 				AI_chooseProduction();
 			}
 
+			/* Toffer - Don't think the wonder limit can be breached here just like that.
 			// Prevents breaching the wonder limit.
 			// Eliminates pre-build exploits for all Wonders and all Projects
 			if (isProductionWonder() || isProductionProject())
 			{
 				break;
 			}
+			*/
 
 			// Eliminate pre-build exploits for Settlers and Workers
 			if (isFoodProduction() && !isBuiltFoodProducedUnit())
 			{
 				break;
 			}
-
 			if (isProductionProcess())
 			{
 				break;
@@ -16783,8 +16778,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 				changeProduction(getExtraProductionDifference(m_iLostProductionBase));
 				clearLostProduction();
 			}
-
-			iOverflowProductionModified = getOverflowProductionDifference();
+			iOverflow = getOverflowProduction();
 		}
 
 		if (m_iGoldFromLostProduction > 0)
