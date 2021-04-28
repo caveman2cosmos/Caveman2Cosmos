@@ -1360,9 +1360,9 @@ void CvCityAI::AI_chooseProduction()
 			}
 
 			// Offensive rebel units
-			if( bDanger || (GC.getGame().getSorenRandNum(100, "AI Build Unit Production") < AI_buildUnitProb()) )
+			if (bDanger || GC.getGame().getSorenRandNum(100, "AI Build Unit Production") < AI_buildUnitProb())
 			{
-				if( (getYieldRate(YIELD_PRODUCTION) > 5) )
+				if (getYieldRate(YIELD_PRODUCTION) > 5 * getPopulation())
 				{
 					// Air units
 					int iBestDefenseValue = player.AI_bestCityUnitAIValue(UNITAI_DEFENSE_AIR, this);
@@ -2433,7 +2433,7 @@ void CvCityAI::AI_chooseProduction()
 	{
 		//Building city hunting stack.
 
-		if (getDomainFreeExperience(DOMAIN_LAND) == 0 && getYieldRate(YIELD_PRODUCTION) > 4
+		if (getDomainFreeExperience(DOMAIN_LAND) == 0 && getYieldRate(YIELD_PRODUCTION) > 5 * getPopulation()
 		&& AI_chooseBuilding(BUILDINGFOCUS_EXPERIENCE, (player.getCurrentEra() > 1) ? 0 : 7, 33))
 		{
 			if (gCityLogLevel >= 2)
@@ -3661,7 +3661,7 @@ void CvCityAI::AI_chooseProduction()
 
 		if (!isHuman() || AI_isEmphasizeYield(YIELD_PRODUCTION))
 		{
-			if (getBaseYieldRate(YIELD_PRODUCTION) >= 8)
+			if (getPlotYield(YIELD_PRODUCTION) >= 8)
 			{
 				if (AI_chooseBuilding(BUILDINGFOCUS_PRODUCTION, 80))
 				{
@@ -6250,7 +6250,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						{
 							foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 							{
-								int iCityValue = pLoopCity->getBaseYieldRate((YieldTypes)iI);
+								int iCityValue = pLoopCity->getPlotYield((YieldTypes)iI);
 								globalYieldModifierValue += iCityValue*(iGlobalModifier + (pLoopCity->area() == area() ? iAreaModifier : 0));
 							}
 						}
@@ -6317,11 +6317,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						// Koshling - modify direct production value if the base yield rate for this city (for production) is low
 						// in relation to the amount this would add
 						// i.e. - boost the value of extra production especially when we donit already have much
-						if ( directYieldValue > getBaseYieldRate(YIELD_PRODUCTION)/3 )
+						if ( directYieldValue > getPlotYield(YIELD_PRODUCTION)/3 )
 						{
 							//	directYieldValue is roughly 8*<direct production gain>, so if that implies a net gain
 							//	of 4% (ish) or more boost the value
-							int iBoost = (directYieldValue*12 - getBaseYieldRate(YIELD_PRODUCTION)*4);
+							int iBoost = (directYieldValue*12 - getPlotYield(YIELD_PRODUCTION)*4);
 
 							//	Examples -
 							//	1) City production is 1, building adds 1 (directYieldValue 8), so iBoost is 92 - value almost trebbled
@@ -6500,7 +6500,7 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 
 	iValue += AI_buildingSpecialYieldChangeValue(eBuilding, eYield);
 
-	const int iBaseRate = getBaseYieldRate(eYield);
+	const int iBaseRate = getPlotYield(eYield);
 
 	iValue += iBaseRate * GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, eYield) / 8;
 
@@ -9104,8 +9104,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 				bEssential = true;
 			}
 
-			if (building.getYieldModifier(YIELD_PRODUCTION) > 0
-			&& getModifiedBaseYieldRate(YIELD_PRODUCTION) >= 6)
+			if (building.getYieldModifier(YIELD_PRODUCTION) > 0 && getBaseYieldRate(YIELD_PRODUCTION) >= 6)
 			{
 				iMinTurns = std::min(iMinTurns, 10);
 				bGrowth = true;
@@ -10553,7 +10552,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 		{
 			// Get yield for city after adding/removing the citizen in question
 			//TB Traits begin
-			int iOldCityYield = getModifiedBaseYieldRate((YieldTypes)iI);
+			int iOldCityYield = getBaseYieldRate((YieldTypes)iI);
 			//TB Traits end
 			int iNewCityYield = (bRemove ? (iOldCityYield - piYields[iI]) : (iOldCityYield + piYields[iI]));
 			int iModifier = getBaseYieldRateModifier((YieldTypes)iI);
@@ -16142,7 +16141,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					{
 						foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 						{
-							int iCityValue = pLoopCity->getBaseYieldRate((YieldTypes)iI);
+							int iCityValue = pLoopCity->getPlotYield((YieldTypes)iI);
 							iYieldModiferValue += iCityValue*(iGlobalModifier + (pLoopCity->area() == pArea ? iAreaModifier : 0));
 						}
 					}
@@ -16212,11 +16211,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				// Koshling - modify direct production value if the base yield rate for this city (for production) is low
 				// in relation to the amount this would add
 				// i.e. - boost the value of extra production especially when we donit already have much
-				if (directYieldValue > getBaseYieldRate(YIELD_PRODUCTION) / 3)
+				if (directYieldValue > getPlotYield(YIELD_PRODUCTION) / 3)
 				{
 					// directYieldValue is roughly 8*<direct production gain>,
 					// so if that implies a net gain of 4% (ish) or more value boost.
-					const int iBoost = 12 * directYieldValue - 4 * getBaseYieldRate(YIELD_PRODUCTION);
+					const int iBoost = 12 * directYieldValue - 4 * getPlotYield(YIELD_PRODUCTION);
 
 					// Examples
 					//	1) City poduction is 1, building adds 1 (directYieldValue 8), so iBoost is 92 - value almost trebbled
@@ -16356,7 +16355,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	iResult = iResult * getTotalCommerceRateModifier((CommerceTypes)iI) / 100;
 
 	//	Factor in yield changes
-	int iTempValue = getBaseYieldRate(YIELD_COMMERCE)
+	int iTempValue = getPlotYield(YIELD_COMMERCE)
 		* (kBuilding.getYieldModifier(YIELD_COMMERCE) + GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_COMMERCE));
 
 	iTempValue *= kOwner.getCommercePercent((CommerceTypes)iI);
@@ -16373,14 +16372,14 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	iResult += iTempValue;
 
 	iTempValue = 0;
-	iTempValue += ((kBuilding.getYieldModifier(YIELD_COMMERCE) + GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_COMMERCE)) * getBaseYieldRate(YIELD_COMMERCE) + aiFreeSpecialistYield[YIELD_COMMERCE]) / 8;
+	iTempValue += ((kBuilding.getYieldModifier(YIELD_COMMERCE) + GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_COMMERCE)) * getPlotYield(YIELD_COMMERCE) + aiFreeSpecialistYield[YIELD_COMMERCE]) / 8;
 	iTempValue += (kBuilding.getYieldChange(YIELD_COMMERCE) + ((kBuilding.getYieldPerPopChange(YIELD_COMMERCE)*getPopulation())/100) + GET_TEAM(getTeam()).getBuildingYieldChange(eBuilding, YIELD_COMMERCE)) * 8;
 	for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 	{
 		if (hasBonus((BonusTypes)iJ))
 		{
 			//TB Traits begin
-			iTempValue += (kBuilding.getBonusYieldModifier(iJ, YIELD_COMMERCE) * getModifiedBaseYieldRate(YIELD_COMMERCE) / 12);
+			iTempValue += (kBuilding.getBonusYieldModifier(iJ, YIELD_COMMERCE) * getBaseYieldRate(YIELD_COMMERCE) / 12);
 			//TB Traits end
 			iTempValue += (kBuilding.getBonusYieldChanges(iJ, YIELD_COMMERCE) * 8);
 			if (kBuilding.getVicinityBonusYieldChanges(iJ, YIELD_COMMERCE) != 0 && hasVicinityBonus((BonusTypes)iJ))
