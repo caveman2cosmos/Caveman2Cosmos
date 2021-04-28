@@ -560,7 +560,7 @@ public:
 
 	//TB Combat Mods (Buildings) end
 	//TB Traits begin
-	int getModifiedBaseYieldRate(YieldTypes eIndex) const;
+	int getBaseYieldRate(YieldTypes eIndex) const;
 	//TB Traits end
 	bool isQuarantined() const;
 	int getQuarantinedCount() const;
@@ -976,17 +976,21 @@ public:
 	void changeRiverPlotYield(YieldTypes eIndex, int iChange);
 
 	int getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false);
-	int getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingTypes eBuilding);
-	int getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const;
+	int getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding);
+	int getAdditionalBaseYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const;
+	int getAdditionalBaseYieldModifierByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const;
 
-	int getAdditionalYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
-	int getAdditionalBaseYieldRateBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
+	int getYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist) const;
 
-	int getBaseYieldRate(YieldTypes eIndex) const;
+	int getPlotYield(YieldTypes eIndex) const;
 	int getBaseYieldRateModifier(YieldTypes eIndex, int iExtra = 0) const;
 	int getYieldRate(YieldTypes eIndex) const;
-	void setBaseYieldRate(YieldTypes eIndex, int iNewValue);
-	void changeBaseYieldRate(YieldTypes eIndex, int iChange);
+	void changePlotYield(YieldTypes eIndex, int iChange);
+
+	int getExtraYield(YieldTypes eIndex) const;
+	void changeExtraYield(YieldTypes eIndex, int iChange);
+
+	void onYieldChange();
 
 	int popYield(YieldTypes eIndex) const;
 	int getBaseYieldPerPopRate(YieldTypes eIndex) const;
@@ -1390,9 +1394,7 @@ public:
 	bool isInquisitionConditions() const;
 	int calculateCorporationHealth() const;
 	int calculateCorporationHappiness() const;
-	int getExtraYieldTurns() const;
-	void changeExtraYieldTurns (int iChange);
-	void setExtraYieldTurns(int iNewVal);
+
 	BuildTypes findChopBuild(FeatureTypes eFeature) const;
 	CultureLevelTypes getOccupationCultureLevel() const;
 	void setOccupationCultureLevel(CultureLevelTypes eNewValue);
@@ -1764,7 +1766,6 @@ protected:
 
 	bool m_bBuiltFoodProducedUnit;
 	bool m_bResetTechs;
-	int m_iExtraYieldTurns;
 	int m_iLineOfSight;
 	int m_iLandmarkAngerTimer;
 	int m_iInvasionChance;
@@ -1927,6 +1928,7 @@ protected:
 	int* m_aiSeaPlotYield;
 	int* m_aiRiverPlotYield;
 	int* m_aiBaseYieldRate;
+	int* m_aiExtraYield;
 	int* m_aiBaseYieldPerPopRate;
 	int* m_aiYieldRateModifier;
 	int* m_aiPowerYieldRateModifier;
@@ -2238,6 +2240,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateBuildingCommerce);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateCorporation);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateYield);
+		DECLARE_MAP_FUNCTOR(CvCity, void, onYieldChange);
 		DECLARE_MAP_FUNCTOR(CvCity, void, clearTradeRoutes);
 		DECLARE_MAP_FUNCTOR(CvCity, void, setBuildingListInvalid);
 		DECLARE_MAP_FUNCTOR(CvCity, void, clearModifierTotals);
@@ -2275,7 +2278,7 @@ public:
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeAreaBuildingCount, BuildingTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeSpecialistCount, SpecialistTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, processVoteSourceBonus, VoteSourceTypes, bool);
-		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeBaseYieldRate, YieldTypes, int);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeExtraYield, YieldTypes, int);
 
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isCapital);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isNoUnhappiness);
@@ -2309,7 +2312,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCultureTimes100, PlayerTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getYieldRate, YieldTypes);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getModifiedBaseYieldRate, YieldTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getBaseYieldRate, YieldTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, const CvPlotGroup*, plotGroup, PlayerTypes);
 
 		DECLARE_MAP_FUNCTOR_CONST_2(CvCity, bool, isRevealed, TeamTypes, bool);

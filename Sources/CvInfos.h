@@ -4335,8 +4335,6 @@ public:
 	int* getYieldChangeArray() const;
 	int getRiverSideYieldChange(int i) const;
 	int* getRiverSideYieldChangeArray() const;
-	int getHillsYieldChange(int i) const;
-	int* getHillsYieldChangeArray() const;
 	int getIrrigatedYieldChange(int i) const;
 	int* getIrrigatedYieldChangeArray() const;		// For Moose - CvWidgetData XXX
 
@@ -4466,7 +4464,6 @@ protected:
 	int* m_piPrereqNatureYield;
 	int* m_piYieldChange;
 	int* m_piRiverSideYieldChange;
-	int* m_piHillsYieldChange;
 	int* m_piIrrigatedChange;
 
 	bool* m_pbTerrainMakesValid;
@@ -4715,7 +4712,6 @@ public:
 
 	int getYieldChange(int i) const;
 	int getRiverYieldChange(int i) const;
-	int getHillsYieldChange(int i) const;
 	int get3DAudioScriptFootstepIndex(int i) const;
 
 	bool isTerrain(int i) const;
@@ -4801,7 +4797,6 @@ protected:
 
 	int* m_piYieldChange;
 	int* m_piRiverYieldChange;
-	int* m_piHillsYieldChange;
 	int* m_pi3DAudioScriptFootstepIndex;
 
 	bool* m_pbTerrain;
@@ -4873,8 +4868,8 @@ public:
 	void setChar(int i);
 	int getHillsChange() const;
 	int getPeakChange() const;
+	int getRiverChange() const;
 	int getCityChange() const;
-	int getPopulationChangeOffset() const;
 	int getPopulationChangeDivisor() const;
 	int getMinCity() const;
 	int getTradeModifier() const;
@@ -4899,8 +4894,8 @@ protected:
 	int m_iChar;
 	int m_iHillsChange;
 	int m_iPeakChange;
+	int m_iRiverChange;
 	int m_iCityChange;
-	int m_iPopulationChangeOffset;
 	int m_iPopulationChangeDivisor;
 	int m_iMinCity;
 	int m_iTradeModifier;
@@ -4949,8 +4944,6 @@ public:
 	// Arrays
 
 	int getYield(int i) const;
-	int getRiverYieldChange(int i) const;
-	int getHillsYieldChange(int i) const;
 	int get3DAudioScriptFootstepIndex(int i) const;
 
 	int getMapType(int i) const;
@@ -5007,8 +5000,6 @@ protected:
 
 	// Arrays
 	int* m_piYields;
-	int* m_piRiverYieldChange;
-	int* m_piHillsYieldChange;
 	int* m_pi3DAudioScriptFootstepIndex;
 
 	std::vector<int> m_aiMapTypes;
