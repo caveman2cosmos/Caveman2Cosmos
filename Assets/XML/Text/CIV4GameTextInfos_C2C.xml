@@ -337,14 +337,6 @@
 		<Spanish>%s1 base: %d2 %F3</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_EXTRA_YIELD</Tag>
-		<English>Extra %s1: %d2 %F3</English>
-		<French>%s1 de base : %d2 %F3</French>
-		<German>Grundwert %s1: %d2 %F3</German>
-		<Italian>%s1 base: %d2 %F3</Italian>
-		<Spanish>%s1 base: %d2 %F3</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE</Tag>
 		<English>[ICON_BULLET]%D1 %F2 from %s3</English>
 		<French>[ICON_BULLET]%D1 %F2 en raison de %s3</French>

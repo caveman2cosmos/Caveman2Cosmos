@@ -885,28 +885,6 @@
 		<Russian>Ðóêîâîäèòåëè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_AIR</Tag>
-		<English>Air</English>
-		<French>
-			<Text>Unités Aériennes</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Lufteinheiten:Lufteinheiten:Lufteinheiten:Lufteinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>Unità aeree</Italian>
-		<Spanish>
-			<Text>Unidad aérea:Unidades aéreas</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Myśliwce</Polish>
-		<Russian>Âîçäóøíûå þíèòû</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_AIR_RECON</Tag>
 		<English>Air Recon Units</English>
 		<French>Unités aériennes d'espionnage</French>
@@ -1740,32 +1718,6 @@
 		</Spanish>
 		<Polish>Jednostki łucznicze</Polish>
 		<Russian>Ëó÷íèêè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ARMOR</Tag>
-		<English>Armored</English>
-		<French>
-			<Text>Unités blindées</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Gepanzerte Einheiten:Gepanzerte Einheiten:Gepanzerte Einheiten:Gepanzerte Einheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Unità corazzata:Unità corazzate</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Unidad blindada:Unidades blindadas</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Jednostki pancerne</Polish>
-		<Russian>Áðîíåòåõíèêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ARMOR_AIRCRAFT</Tag>
@@ -9952,32 +9904,6 @@
 		<French>Nanomorphe</French>
 		<Polish>Nanomorficzny</Polish>
 		<Russian>Íàíîìîðôû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_NAVAL</Tag>
-		<English>Naval</English>
-		<French>
-			<Text>Unités navales</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Marineeinheiten:Marineeinheiten:Marineeinheiten:Marineeinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Unità navale:Unità navali</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Unidad naval: Unidades navales</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Jednostki morskie</Polish>
-		<Russian>Âîåííî-ìîðñêèå þíèòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_NAVAL_COMBATANT</Tag>

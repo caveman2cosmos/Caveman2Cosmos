@@ -6355,16 +6355,6 @@
 		<Russian>В городе %s2_city появился новый шериф, который отлично справляется со своей работой, но ему нужна помощь, чтобы разобраться с преступниками, контролирующими большую часть города.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_TRIGGER_SLAVE_REVOLT_WARNING</Tag>
-		<English>The slaves of %s2_city are on the verge of revolt!</English>
-		<French>Les esclaves de la ville de %s2_city sont sur le point de se révolter.</French>
-		<German>Die unterdrückten Sklaven in %s2_city stehen am Rande eines Aufstandes!</German>
-		<Italian>Gli schiavi di %s2_city sono sull'orlo di una rivolta!</Italian>
-		<Spanish>¡Los esclavos de %s2_city están a punto de rebelarse!</Spanish>
-		<Polish>Niewolnicy z %s2_city są na skraju rewolty.</Polish>
-		<Russian>Рабы в городе %s2_city находятся на грани восстания!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SMALLPOX_1</Tag>
 		<English>Smallpox epidemic has struck hard at the people of %s2_city. Most have fallen ill and many are dying.</English>
 		<French>Une épidémie de Variole a durement frappé le peuple de %s2_city. La plupart sont tombé malades, et beaucoup en sont morts.</French>

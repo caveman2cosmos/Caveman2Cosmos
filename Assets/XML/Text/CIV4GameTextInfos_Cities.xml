@@ -2664,12 +2664,6 @@
 		<Russian>Катака</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_CUZCO</Tag>
-		<English>Cuzco</English>
-		<German>Cusco</German>
-		<Russian>Êóñêî</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CYROPOLIS</Tag>
 		<English>Cyropolis</English>
 		<Italian>Kyropolis</Italian>
@@ -3745,12 +3739,6 @@
 		<Tag>TXT_KEY_CITY_NAME_GLOUCESTER</Tag>
 		<English>Gloucester</English>
 		<Russian>Глостер</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_GOA</Tag>
-		<English>Goa</English>
-		<Italian>Goa</Italian>
-		<Russian>Гоа</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GOIOGOUEN</Tag>
@@ -6089,10 +6077,6 @@
 		<Russian>Ëîä</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_LODOSE</Tag>
-		<English>Lödöse</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LOGRONO</Tag>
 		<English>Logroño</English>
 		<Russian>Логроньо</Russian>
@@ -7357,10 +7341,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGA</Tag>
 		<English>Nga</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_NGAZARGUMU</Tag>
-		<English>Ngazargamu</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGOTSHE</Tag>
@@ -9045,13 +9025,6 @@
 		<Russian>Самара</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SAMARIA</Tag>
-		<English>Samaria</English>
-		<French>Samarie</French>
-		<German>Samarien</German>
-		<Russian>Самария</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAMAROBRIWA</Tag>
 		<English>Samarobriwa</English>
 		<Russian>Самаробрива</Russian>
@@ -9330,12 +9303,6 @@
 		<English>Seha</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SELEUCIA</Tag>
-		<English>Seleucia</English>
-		<French>Séleucie</French>
-		<Russian>Селевкия</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SELYMBRIA</Tag>
 		<English>Selymbria</English>
 		<French>Sélymbrie</French>
@@ -9522,13 +9489,6 @@
 		<Italian>Sicione</Italian>
 		<Spanish>Sición</Spanish>
 		<Russian>Сикион</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SIDON</Tag>
-		<English>Sidon</English>
-		<Italian>Sidone</Italian>
-		<Spanish>Sidón</Spanish>
-		<Russian>Сидон</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SIDRON</Tag>
@@ -10747,15 +10707,6 @@
 		<Russian>Трир</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_TROY</Tag>
-		<English>Troy</English>
-		<French>Troie</French>
-		<German>Troja</German>
-		<Italian>Troia</Italian>
-		<Spanish>Troya</Spanish>
-		<Russian>Троя</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TRUWA</Tag>
 		<English>Truwa</English>
 	</TEXT>
@@ -11426,11 +11377,6 @@
 		<Tag>TXT_KEY_CITY_NAME_WARWICK</Tag>
 		<English>Warwick</English>
 		<Russian>Уоррик</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_WASHINGTON</Tag>
-		<English>Washington</English>
-		<Russian>Вашингтон</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WASHINGTON_DC</Tag>

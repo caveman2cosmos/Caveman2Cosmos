@@ -197,16 +197,6 @@
 		<Russian>Выберите событие, которое должно быть вызвано.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_SELECT_NEVER_MIND</Tag>
-		<English>Do not trigger an event.</English>
-		<French>N'activer aucun événement.</French>
-		<German>Kein Event starten!</German>
-		<Italian>Non attivare un evento.</Italian>
-		<Polish>Nie wywołuj wydarzeń.</Polish>
-		<Spanish>No activar ningún evento.</Spanish>
-		<Russian>Не вызывают события.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POPUP_THATS_TERRIBLE</Tag>
 		<English>That's terrible!</English>
 		<French>C'est terrible!</French>

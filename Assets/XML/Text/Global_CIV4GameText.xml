@@ -6821,16 +6821,6 @@
 		<Russian>-----------------------[NEWLINE]Âñåãî ïèùè ïîòðåáëåíî: %d1[ICON_EATENFOOD]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_TOTAL_FOOD_PRODUCED</Tag>
-		<English>-----------------------[NEWLINE]Total Food Produced: %d1[ICON_FOOD]</English>
-		<French>-----------------------[NEWLINE]Nourriture totale produite: %d1[ICON_FOOD]</French>
-		<German>-----------------------[NEWLINE]Insgesamt produzierte Nahrung: %d1[ICON_FOOD]</German>
-		<Italian>-----------------------[NEWLINE]Cibo totale prodotto: %d1[ICON_FOOD]</Italian>
-		<Spanish>-----------------------[NEWLINE]Producción total de alimentos: %d1[ICON_FOOD]</Spanish>
-		<Polish>-----------------------[NEWLINE]Produkcja żywności (razem): %d1[ICON_FOOD]</Polish>
-		<Russian>-----------------------[NEWLINE]Âñåãî ïðîèçâåäåíî ïèùè: %d1[ICON_FOOD]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_TRAIT_COMMERCE</Tag>
 		<English>[ICON_BULLET]%D1 %F2 from %s3_Trait</English>
 		<French>[ICON_BULLET]%D1 %F2 de %s3_Trait</French>
@@ -9149,319 +9139,7 @@
 		<Spanish>¡Bienvenido a Caveman2Cosmos!</Spanish>
 		<Polish>Witaj w Caveman2Cosmos!</Polish>
 		<Russian>Äîáðî ïîæàëîâàòü â ìîä Caveman 2 Cosmos!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MONTH_APRIL</Tag>
-		<English>April</English>
-		<French>
-			<Text>Avril</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>April</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Aprile</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Abril</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Kwiecień</Polish>
-		<Russian>Àïðåëü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MONTH_AUGUST</Tag>
-		<English>August</English>
-		<French>
-			<Text>Août</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>August</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Agosto</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Agosto</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Sierpień</Polish>
-		<Russian>Àâãóñò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MONTH_DECEMBER</Tag>
-		<English>December</English>
-		<French>
-			<Text>Décembre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Dezember</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Dicembre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Diciembre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Grudzień</Polish>
-		<Russian>Äåêàáðü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MONTH_FEBRUARY</Tag>
-		<English>February</English>
-		<French>
-			<Text>Février</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Februar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Febbraio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Febrero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Luty</Polish>
-		<Russian>Ôåâðàëü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MONTH_JANUARY</Tag>
-		<English>January</English>
-		<French>
-			<Text>Janvier</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Januar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Gennaio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Enero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Styczeń</Polish>
-		<Russian>ßíâàðü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MONTH_JULY</Tag>
-		<English>July</English>
-		<French>
-			<Text>Juillet</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Juli</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Luglio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Julio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Lipiec</Polish>
-		<Russian>Èþëü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MONTH_JUNE</Tag>
-		<English>June</English>
-		<French>
-			<Text>Juin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Juni</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Giugno</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Junio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Czerwiec</Polish>
-		<Russian>Èþíü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MONTH_MARCH</Tag>
-		<English>March</English>
-		<French>
-			<Text>Mars</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>März</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Marzo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Marzo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Marzec</Polish>
-		<Russian>Ìàðò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MONTH_MAY</Tag>
-		<English>May</English>
-		<French>
-			<Text>Mai</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Mai</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Maggio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mayo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Maj</Polish>
-		<Russian>Ìàé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MONTH_NOVEMBER</Tag>
-		<English>November</English>
-		<French>
-			<Text>Novembre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>November</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Novembre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Noviembre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Listopad</Polish>
-		<Russian>Íîÿáðü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MONTH_OCTOBER</Tag>
-		<English>October</English>
-		<French>
-			<Text>Octobre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Oktober</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ottobre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Octubre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Październik</Polish>
-		<Russian>Îêòÿáðü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MONTH_SEPTEMBER</Tag>
-		<English>September</English>
-		<French>
-			<Text>Septembre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>September</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Settembre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Septiembre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wrzesień</Polish>
-		<Russian>Ñåíòÿáðü</Russian>
-	</TEXT>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_BONUS_NOT_AVAIL</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]%s1 won't trade %s2[COLOR_REVERT]</English>
@@ -10311,16 +9989,6 @@
 		<Russian>Îòêëþ÷èòü îáó÷åíèå ("Ïîñëåäíèé ðóáåæ")</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_1AFF</Tag>
-		<English>City Governor Builds Workers and Workboats</English>
-		<French>Gouverneur de Ville construit Ouvriers et Bâteaux-Atelier</French>
-		<German>Stadtverwalter bildet Bautrupps und Arbeitsboote aus</German>
-		<Italian>Il governatore cittadino costruisce lavoratori e chiatte.</Italian>
-		<Spanish>El gobernador de la ciudad construye trabajadores y barcos faeneros</Spanish>
-		<Polish>Gubernator miasta buduje robotników oraz kutry</Polish>
-		<Russian>Ãîðîäñêîé ãóáåðíàòîð ñòðîèò ðàáî÷èõ è ðàáî÷èå ëîäêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_1_HELP</Tag>
 		<English>City governors can build Workboats when needed</English>
 		<French>Les Gouverneurs des Villes peuvent construire des Bateaux-Ateliers si nécessaire</French>
@@ -10329,16 +9997,6 @@
 		<Spanish>Los gobernadores de las ciudades pueden construir Barcos faeneros cuando sea necesario.</Spanish>
 		<Polish>Gubernatorzy miast mogą budować Statki konstrukcyjne kiedy trzeba</Polish>
 		<Russian>Ðåçåðâíûé ïàðàìåòð äëÿ ìîäèôèêàöèé 1.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_1AFF_HELP</Tag>
-		<English>Automated Cities will Construct Workers and Workboats, when needed.</English>
-		<French>Les Gouverneurs des Villes construisent Ouvriers et Bâteaux-Atelier, si nécessaire.</French>
-		<German>Automatisierte Städte bilden Bautrupps und Arbeitsboote aus, wenn sie benötigt werden.</German>
-		<Italian>Le città automatizzate costruiranno lavoratori e chiatte, se necessari.</Italian>
-		<Spanish>Las ciudades automatizadas construirán trabajadores y barcos faeneros si es necesario.</Spanish>
-		<Polish>Miasta automatycznie będą budować robotników oraz kutry gdy zajdzie potrzeba.</Polish>
-		<Russian>Ãóáåðíàòîðû áóäóò ñòðîèòü ðàáî÷èõ è ðàáî÷èå ëîäêè, åñëè íåîáõîäèìî.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_2</Tag>
@@ -10351,16 +10009,6 @@
 		<Russian>Ïàðàìåòð ìîäèôèêàöèè 2</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_2AFF</Tag>
-		<English>Start Fortified</English>
-		<French>Unité Fortifié par défaut</French>
-		<German>Verschanzt starten</German>
-		<Italian>Comincia fortificato</Italian>
-		<Spanish>Fortificación automática</Spanish>
-		<Polish>Od razu fortyfikuj</Polish>
-		<Russian>Íà÷àòü óêðåïëåíèÿ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_2_HELP</Tag>
 		<English>City governors can build Workers when needed</English>
 		<French>Les Gouverneurs des Villes peuvent construire des Ouvriers si nécessaire</French>
@@ -10369,16 +10017,6 @@
 		<Spanish>Los gobernadores de las ciudades pueden entrenar a Trabajadores cuando sea necesario.</Spanish>
 		<Polish>Gubernatorzy miast mogą budować Robotników kiedy trzeba</Polish>
 		<Russian>Ðåçåðâíûé ïàðàìåòð äëÿ ìîäèôèêàöèé 2.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_2AFF_HELP</Tag>
-		<English>All Newly Constructed Units will start fortified in your cities.</English>
-		<French>Toutes les Unités nouvellement formées vont automatiquement se fortifier dans vos Villes.</French>
-		<German>Alle neu ausgebildeten Einheiten verschanzen sich nach Fertigstellung automatisch in der Stadt.</German>
-		<Italian>Tutte le nuove unità costruite inizieranno fortificate nelle tue città.</Italian>
-		<Spanish>Todas las unidades nuevas aparecerán fortificadas por defecto en tus ciudades.</Spanish>
-		<Polish>Wszystkie nowo wybudowane jednostki startują ufortyfikowane w Twoich miastach.</Polish>
-		<Russian>Âñå íåäàâíî ïîñòðîåííûå îòðÿäû íà÷íóòñÿ óêðåïëÿòüñÿ â âàøèõ ãîðîäàõ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_3</Tag>
@@ -11290,110 +10928,6 @@
 		<Spanish>[NEWLINE][COLOR_YELLOW]Tu nivel de dificultad es %s1[COLOR_REVERT]</Spanish>
 		<Polish>[NEWLINE][COLOR_YELLOW]Aktualny poziom trudności: %s1[COLOR_REVERT]</Polish>
 		<Russian>[NEWLINE][COLOR_YELLOW]Âàø óðîâåíü ñëîæíîñòè %s1[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SEASON_FALL</Tag>
-		<English>Fall</English>
-		<French>
-			<Text>Automne</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Herbst</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Autunno</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Otoño</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Jesień</Polish>
-		<Russian>Îñåíü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SEASON_SPRING</Tag>
-		<English>Spring</English>
-		<French>
-			<Text>Printemps</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Frühling</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Primavera</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Primavera</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wiosna</Polish>
-		<Russian>Âåñíà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SEASON_SUMMER</Tag>
-		<English>Summer</English>
-		<French>
-			<Text>Eté</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Sommer</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Estate</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Verano</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Lato</Polish>
-		<Russian>Ëåòî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SEASON_WINTER</Tag>
-		<English>Winter</English>
-		<French>
-			<Text>Hiver</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Winter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Inverno</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Invierno</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Zima</Polish>
-		<Russian>Çèìà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SECOND_FLANK_SUPPORT</Tag>
@@ -14974,72 +14508,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Õîäîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TURNTIMER_FAST</Tag>
-		<English>Fast</English>
-		<French>
-			<Text>Rapide</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Schnell</German>
-		<Italian>
-			<Text>Veloce</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Rápido</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Szybko</Polish>
-		<Russian>Áûñòðûé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TURNTIMER_MEDIUM</Tag>
-		<English>Medium</English>
-		<French>
-			<Text>Normale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Normal</German>
-		<Italian>
-			<Text>Medio</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Intermedio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Średnio</Polish>
-		<Russian>Ñðåäíèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TURNTIMER_SLOW</Tag>
-		<English>Slow</English>
-		<French>
-			<Text>Lente</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Langsam</German>
-		<Italian>
-			<Text>Lento</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Lento</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wolno</Polish>
-		<Russian>Ìåäëåííûé</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNHAPPY_AREA_BUILDINGS</Tag>
 		<English>+%d1[ICON_UNHAPPY] "Buildings and Effects that influence the region we are in are driving us crazy!"</English>
 		<French>+%d1[ICON_UNHAPPY] "Les bâtiments et effets influençant notre religion nous rendent fous!"</French>
@@ -16223,31 +15691,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_MISC_ENEMY_TROOPS_SPOTTED</Tag>
 		<English>The enemy has been spotted near %s1_CityName!</English>
 		<Russian>Враг был замечен рядом с %s1_CityName!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DOMAIN_SEA</Tag>
-		<English>Water Units</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DOMAIN_AIR</Tag>
-		<English>Air Units</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DOMAIN_LAND</Tag>
-		<English>Land Units</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DOMAIN_IMMOBILE</Tag>
-		<English>Immobile Units</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GRAPHICOPTION_LOWRES_TEXTURES_HELP</Tag>
-		<English>Lower resolution textures will be used.[NEWLINE]Causes graphical glitches when selected.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GRAPHIC_OPTION_FROZEN_ANIMATIONS_HELP</Tag>
-		<English>No unit or improvement animations.[NEWLINE]Causes graphical glitches when selected.</English>
-	</TEXT>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_LAWYER_SPECIALIST</Tag>
 		<English>Lawyer</English>
