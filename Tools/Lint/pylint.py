@@ -49,8 +49,11 @@ def _python_modules_for_python_version(version: _PythonVersion) -> Tuple[Path, .
 
 
 def _python_2_modules():
-	files = (_root_path() / "Assets" / "Python").rglob("*.py")
-	files += ((Path(__file__).parents[2]).resolve() / "PrivateMaps").rglob("*.py")
+	files = []
+	for path in (_root_path() / "Assets" / "Python").rglob("*.py"):
+		files.append(path)
+	for path in ((Path(__file__).parents[2]).resolve() / "PrivateMaps").rglob("*.py"):
+		files.append(path)
 	return files
 
 def _python_3_modules() -> Tuple[Path, ...]:
