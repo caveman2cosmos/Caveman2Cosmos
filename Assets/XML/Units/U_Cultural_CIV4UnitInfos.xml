@@ -5159,36 +5159,6 @@
 		<UnitInfo>
 			<Type>UNIT_CANADIAN_MOUNTIE</Type>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
-			<UniqueNames>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_A_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_O_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_C_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_E_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_K_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_D_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_H_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_DEPOT_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_J_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_B_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_G_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_L_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_M_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_V_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_A_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_O_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_C_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_E_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_K_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_D_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_H_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_DEPOT_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_J_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_B_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_G_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_L_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_M_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_V_DIVISION_2</UniqueName>
-			</UniqueNames>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_LAW_ENFORCEMENT</SubCombatType>

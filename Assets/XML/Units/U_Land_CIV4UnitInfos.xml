@@ -32541,27 +32541,6 @@
 		<UnitInfo>
 			<Type>UNIT_JUDGE</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<UniqueNames>
-				<UniqueName>TXT_KEY_GREAT_PERSON_JUDGE_ROY_BEAN</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_LORD_DENNING</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_SANDRA_DAY_O_CONNOR</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_CARDINAL_FRANCESCO_BARBERINI</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_CARRINGTON_TANNER_MARSHALL</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_THOMAS_DANFORTH</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_THURGOOD_MARSHALL</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_BAO_ZHENG</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_JUAN_SALVADOR_GUZMAN_TAPIA</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_KING_ARCHON</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_ANDREW_JACKSON</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_MAXIMILIEN_DE_ROBESPIERRE</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_SYED_AHMED_KHAN</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_LOUIS_RENAULT</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_SHIRIN_EBADI</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_ANDREW_HAMILTON</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_JUDGE_ITO</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_JUDGE_OTHNIEL</UniqueName>
-				<UniqueName>TXT_KEY_GREAT_PERSON_JUDGE_WAPNER</UniqueName>
-			</UniqueNames>
 			<Combat>UNITCOMBAT_ADMINISTRATOR</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
