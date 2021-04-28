@@ -23747,7 +23747,6 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 	if (iNumUpgrades <= 0)
 	{
 		SendLog("AI_ExploreMove", CvWString::format(L"Unit: %S has %lld upgrades?", this->getName().c_str(), iNumUpgrades));
-		logBBAI("AI_travelToUpgradeCity: found no upgrades"); // gin up a string format that can be parsed, creating a json helper could be useful
 		return false;
 	}
 	SendLog("AI_ExploreMove", CvWString::format(L"Unit: %S has %lld upgrades?", this->getName().c_str(), iNumUpgrades));
