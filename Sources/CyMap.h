@@ -48,7 +48,6 @@ public:
 	CyArea* findBiggestArea(bool bWater);
 
 	int getMapFractalFlags();
-	bool findWater(CyPlot* pPlot, int iRange, bool bFreshWater);
 	bool isPlot(int iX, int iY);
 	int numPlots();
 	int plotNum(int iX, int iY);

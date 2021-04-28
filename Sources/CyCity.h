@@ -281,8 +281,7 @@ public:
 	int getCultureThreshold() const;
 	int getSeaPlotYield(int /*YieldTypes*/ eIndex) const;
 
-	int getBaseYieldRate(int /*YieldTypes*/ eIndex) const;
-	void changeBaseYieldRate(int /*YieldTypes*/ eIndex, int iNewValue);
+	int getPlotYield(int /*YieldTypes*/ eIndex) const;
 
 	int getBaseYieldRateModifier(int /*YieldTypes*/ eIndex, int iExtra) const;
 	int getYieldRate(int /*YieldTypes*/ eIndex) const;

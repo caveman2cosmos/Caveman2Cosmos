@@ -8092,34 +8092,35 @@ std::wstring CvActionInfo::getHotKeyDescription() const
 //======================================================================================================
 //					CvSpawnInfo
 //======================================================================================================
-CvSpawnInfo::CvSpawnInfo() :	m_eUnitType(NO_UNIT),
-								m_ePrereqTechType(NO_TECH),
-								m_eObsoleteTechType(NO_TECH),
-								m_iPlayerType(-1),
-								m_iTurns(-1),
-								m_iGlobalTurns(-1),
-								m_iMaxLocalDensity(0),
-								m_iMaxAreaTotalDensity(0),
-								m_iMaxAreaUnitDensity(0),
-								m_iStartDate(-200000),
-								m_iEndDate(50000),
-								m_bTreatAsBarbarian(false),
-								m_bNeutralOnly(true),
-								m_bNotInView(false),
-								m_bNoSpeedNormalization(false),
-								m_iRateOverride(100),
-								m_bHills(false),
-								m_bFlatlands(false),
-								m_bPeaks(false),
-								m_bFreshWaterOnly(false),
-								m_bLatitudeAbs(true),
-								m_iMinLatitude(-90),
-								m_iMaxLatitude(90),
-								m_iMinLongitude(-180),
-								m_iMaxLongitude(180),
-								m_pExprSpawnCondition(NULL)
-{
-}
+CvSpawnInfo::CvSpawnInfo()
+	:
+	m_eUnitType(NO_UNIT),
+	m_ePrereqTechType(NO_TECH),
+	m_eObsoleteTechType(NO_TECH),
+	m_iPlayerType(-1),
+	m_iTurns(-1),
+	m_iGlobalTurns(-1),
+	m_iMaxLocalDensity(0),
+	m_iMinAreaPlotsPerPlayerUnit(0),
+	m_iMinAreaPlotsPerUnitType(0),
+	m_iStartDate(-200000),
+	m_iEndDate(50000),
+	m_bTreatAsBarbarian(false),
+	m_bNeutralOnly(true),
+	m_bNotInView(false),
+	m_bNoSpeedNormalization(false),
+	m_iRateOverride(100),
+	m_bHills(false),
+	m_bFlatlands(false),
+	m_bPeaks(false),
+	m_bFreshWaterOnly(false),
+	m_bLatitudeAbs(true),
+	m_iMinLatitude(-90),
+	m_iMaxLatitude(90),
+	m_iMinLongitude(-180),
+	m_iMaxLongitude(180),
+	m_pExprSpawnCondition(NULL)
+{ }
 
 CvSpawnInfo::~CvSpawnInfo()
 {
@@ -8151,8 +8152,8 @@ bool CvSpawnInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iTurns, L"iTurns");
 	pXML->GetOptionalChildXmlValByName(&m_iGlobalTurns, L"iGlobalTurns", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iMaxLocalDensity, L"iMaxLocalDensity");
-	pXML->GetOptionalChildXmlValByName(&m_iMaxAreaTotalDensity, L"iMaxAreaTotalDensity");
-	pXML->GetOptionalChildXmlValByName(&m_iMaxAreaUnitDensity, L"iMaxAreaUnitDensity");
+	pXML->GetOptionalChildXmlValByName(&m_iMinAreaPlotsPerPlayerUnit, L"iMinAreaPlotsPerPlayerUnit");
+	pXML->GetOptionalChildXmlValByName(&m_iMinAreaPlotsPerUnitType, L"iMinAreaPlotsPerUnitType");
 	pXML->GetOptionalChildXmlValByName(&m_iStartDate, L"iStartDate", -200000);
 	pXML->GetOptionalChildXmlValByName(&m_iEndDate, L"iEndDate", 50000);
 	pXML->GetOptionalChildXmlValByName(&m_bTreatAsBarbarian, L"bTreatAsBarbarian", true);
@@ -8384,14 +8385,14 @@ int CvSpawnInfo::getMaxLocalDensity() const
 	return m_iMaxLocalDensity;
 }
 
-int CvSpawnInfo::getMaxAreaTotalDensity() const
+int CvSpawnInfo::getMinAreaPlotsPerPlayerUnit() const
 {
-	return m_iMaxAreaTotalDensity;
+	return m_iMinAreaPlotsPerPlayerUnit;
 }
 
-int CvSpawnInfo::getMaxAreaUnitDensity() const
+int CvSpawnInfo::getMinAreaPlotsPerUnitType() const
 {
-	return m_iMaxAreaUnitDensity;
+	return m_iMinAreaPlotsPerUnitType;
 }
 
 int CvSpawnInfo::getStartDate() const
@@ -8507,8 +8508,8 @@ void CvSpawnInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iTurns);
 	CheckSum(iSum, m_iGlobalTurns);
 	CheckSum(iSum, m_iMaxLocalDensity);
-	CheckSum(iSum, m_iMaxAreaTotalDensity);
-	CheckSum(iSum, m_iMaxAreaUnitDensity);
+	CheckSum(iSum, m_iMinAreaPlotsPerPlayerUnit);
+	CheckSum(iSum, m_iMinAreaPlotsPerUnitType);
 	CheckSum(iSum, m_iStartDate);
 	CheckSum(iSum, m_iEndDate);
 	CheckSum(iSum, m_bTreatAsBarbarian);
@@ -15096,7 +15097,6 @@ m_iWorldSoundscapeScriptId(0),
 m_piPrereqNatureYield(NULL),
 m_piYieldChange(NULL),
 m_piRiverSideYieldChange(NULL),
-m_piHillsYieldChange(NULL),
 m_piIrrigatedChange(NULL),
 m_pbTerrainMakesValid(NULL),
 m_pbFeatureMakesValid(NULL),
@@ -15133,7 +15133,6 @@ CvImprovementInfo::~CvImprovementInfo()
 	SAFE_DELETE_ARRAY(m_piPrereqNatureYield);
 	SAFE_DELETE_ARRAY(m_piYieldChange);
 	SAFE_DELETE_ARRAY(m_piRiverSideYieldChange);
-	SAFE_DELETE_ARRAY(m_piHillsYieldChange);
 	SAFE_DELETE_ARRAY(m_piIrrigatedChange);
 	SAFE_DELETE_ARRAY(m_pbTerrainMakesValid);
 	SAFE_DELETE_ARRAY(m_pbFeatureMakesValid);
@@ -15374,17 +15373,6 @@ int CvImprovementInfo::getRiverSideYieldChange(int i) const
 int* CvImprovementInfo::getRiverSideYieldChangeArray() const
 {
 	return m_piRiverSideYieldChange;
-}
-
-int CvImprovementInfo::getHillsYieldChange(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-	return m_piHillsYieldChange ? m_piHillsYieldChange[i] : 0;
-}
-
-int* CvImprovementInfo::getHillsYieldChangeArray() const
-{
-	return m_piHillsYieldChange;
 }
 
 int CvImprovementInfo::getIrrigatedYieldChange(int i) const
@@ -15700,7 +15688,6 @@ void CvImprovementInfo::getCheckSum(unsigned int &iSum) const
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piPrereqNatureYield);
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piYieldChange);
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piRiverSideYieldChange);
-	CheckSumI(iSum, NUM_YIELD_TYPES, m_piHillsYieldChange);
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piIrrigatedChange);
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbTerrainMakesValid);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbFeatureMakesValid);
@@ -15793,17 +15780,6 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	else
 	{
 		SAFE_DELETE_ARRAY(m_piRiverSideYieldChange);
-	}
-
-	if (pXML->TryMoveToXmlFirstChild(L"HillsYieldChange"))
-	{
-		// call the function that sets the yield change variable
-		pXML->SetYields(&m_piHillsYieldChange);
-		pXML->MoveToXmlParent();
-	}
-	else
-	{
-		SAFE_DELETE_ARRAY(m_piHillsYieldChange);
 	}
 
 	if (pXML->TryMoveToXmlFirstChild(L"IrrigatedYieldChange"))
@@ -16089,14 +16065,6 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 				CvXMLLoadUtility::InitList(&m_piRiverSideYieldChange,NUM_YIELD_TYPES,iDefault);
 			}
 			m_piRiverSideYieldChange[i] = pClassInfo->getRiverSideYieldChange(i);
-		}
-		if (getHillsYieldChange(i) == iDefault && pClassInfo->getHillsYieldChange(i) != iDefault)
-		{
-			if ( NULL == m_piHillsYieldChange )
-			{
-				CvXMLLoadUtility::InitList(&m_piHillsYieldChange,NUM_YIELD_TYPES,iDefault);
-			}
-			m_piHillsYieldChange[i] = pClassInfo->getHillsYieldChange(i);
 		}
 		if (getIrrigatedYieldChange(i) == iDefault && pClassInfo->getIrrigatedYieldChange(i) != iDefault)
 		{
@@ -16995,7 +16963,6 @@ m_iWorldSoundscapeScriptId(0),
 m_iEffectProbability(0),
 m_piYieldChange(NULL),
 m_piRiverYieldChange(NULL),
-m_piHillsYieldChange(NULL),
 m_pi3DAudioScriptFootstepIndex(NULL),
 m_pbTerrain(NULL)
 ,m_iSpreadProbability(0)
@@ -17019,7 +16986,6 @@ CvFeatureInfo::~CvFeatureInfo()
 {
 	SAFE_DELETE_ARRAY(m_piYieldChange);
 	SAFE_DELETE_ARRAY(m_piRiverYieldChange);
-	SAFE_DELETE_ARRAY(m_piHillsYieldChange);
 	SAFE_DELETE_ARRAY(m_pi3DAudioScriptFootstepIndex);
 	SAFE_DELETE_ARRAY(m_pbTerrain);
 }
@@ -17197,12 +17163,6 @@ int CvFeatureInfo::getRiverYieldChange(int i) const
 	return m_piRiverYieldChange ? m_piRiverYieldChange[i] : 0;
 }
 
-int CvFeatureInfo::getHillsYieldChange(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-	return m_piHillsYieldChange ? m_piHillsYieldChange[i] : 0;
-}
-
 int CvFeatureInfo::get3DAudioScriptFootstepIndex(int i) const
 {
 	//	FAssertMsg(i < ?, "Index out of bounds");
@@ -17344,14 +17304,6 @@ bool CvFeatureInfo::read(CvXMLLoadUtility* pXML)
 	else
 		SAFE_DELETE_ARRAY(m_piRiverYieldChange);
 
-	if (pXML->TryMoveToXmlFirstChild(L"HillsYieldChange"))
-	{
-		pXML->SetYields(&m_piHillsYieldChange);
-		pXML->MoveToXmlParent();
-	}
-	else
-		SAFE_DELETE_ARRAY(m_piHillsYieldChange);
-
 	pXML->GetOptionalChildXmlValByName(&m_iMovementCost, L"iMovement");
 	pXML->GetOptionalChildXmlValByName(&m_iSeeThroughChange, L"iSeeThrough");
 	pXML->GetOptionalChildXmlValByName(&m_iHealthPercent, L"iHealthPercent");
@@ -17458,14 +17410,6 @@ void CvFeatureInfo::copyNonDefaults(const CvFeatureInfo* pClassInfo)
 				CvXMLLoadUtility::InitList(&m_piRiverYieldChange, NUM_YIELD_TYPES);
 			}
 			m_piRiverYieldChange[i] = pClassInfo->getRiverYieldChange(i);
-		}
-		if ( getHillsYieldChange(i) == iDefault && pClassInfo->getHillsYieldChange(i) != iDefault)
-		{
-			if ( m_piYieldChange == NULL )
-			{
-				CvXMLLoadUtility::InitList(&m_piHillsYieldChange, NUM_YIELD_TYPES);
-			}
-			m_piHillsYieldChange[i] = pClassInfo->getHillsYieldChange(i);
 		}
 	}
 
@@ -17583,7 +17527,6 @@ void CvFeatureInfo::getCheckSum(unsigned int &iSum) const
 
 	CheckSum(iSum, m_piYieldChange, NUM_YIELD_TYPES);
 	CheckSum(iSum, m_piRiverYieldChange, NUM_YIELD_TYPES);
-	CheckSum(iSum, m_piHillsYieldChange, NUM_YIELD_TYPES);
 
 	CheckSum(iSum, m_pbTerrain, GC.getNumTerrainInfos());
 
@@ -17712,8 +17655,8 @@ CvYieldInfo::CvYieldInfo() :
 m_iChar(0),
 m_iHillsChange(0),
 m_iPeakChange(0),
+m_iRiverChange(0),
 m_iCityChange(0),
-m_iPopulationChangeOffset(0),
 m_iPopulationChangeDivisor(0),
 m_iMinCity(0),
 m_iTradeModifier(0),
@@ -17758,14 +17701,14 @@ int CvYieldInfo::getPeakChange() const
 	return m_iPeakChange;
 }
 
+int CvYieldInfo::getRiverChange() const
+{
+	return m_iRiverChange;
+}
+
 int CvYieldInfo::getCityChange() const
 {
 	return m_iCityChange;
-}
-
-int CvYieldInfo::getPopulationChangeOffset() const
-{
-	return m_iPopulationChangeOffset;
 }
 
 int CvYieldInfo::getPopulationChangeDivisor() const
@@ -17824,8 +17767,8 @@ bool CvYieldInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(&m_iHillsChange, L"iHillsChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPeakChange, L"iPeakChange");
+	pXML->GetOptionalChildXmlValByName(&m_iRiverChange, L"iRiverChange");
 	pXML->GetOptionalChildXmlValByName(&m_iCityChange, L"iCityChange");
-	pXML->GetOptionalChildXmlValByName(&m_iPopulationChangeOffset, L"iPopulationChangeOffset");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChangeDivisor, L"iPopulationChangeDivisor");
 	pXML->GetOptionalChildXmlValByName(&m_iMinCity, L"iMinCity");
 	pXML->GetOptionalChildXmlValByName(&m_iTradeModifier, L"iTradeModifier");
@@ -17885,8 +17828,8 @@ void CvYieldInfo::copyNonDefaults(const CvYieldInfo* pClassInfo)
 
 	if (getHillsChange() == iDefault) m_iHillsChange = pClassInfo->getHillsChange();
 	if (getPeakChange() == iDefault) m_iPeakChange = pClassInfo->getPeakChange();
+	if (m_iRiverChange == iDefault) m_iRiverChange = pClassInfo->getRiverChange();
 	if (getCityChange() == iDefault) m_iCityChange = pClassInfo->getCityChange();
-	if (getPopulationChangeOffset() == iDefault) m_iPopulationChangeOffset = pClassInfo->getPopulationChangeOffset();
 	if (getPopulationChangeDivisor() == iDefault) m_iPopulationChangeDivisor = pClassInfo->getPopulationChangeDivisor();
 	if (getMinCity() == iDefault) m_iMinCity = pClassInfo->getMinCity();
 	if (getTradeModifier() == iDefault) m_iTradeModifier = pClassInfo->getTradeModifier();
@@ -17908,8 +17851,8 @@ void CvYieldInfo::getCheckSum(unsigned int& iSum) const
 {
 	CheckSum(iSum, m_iHillsChange);
 	CheckSum(iSum, m_iPeakChange);
+	CheckSum(iSum, m_iRiverChange);
 	CheckSum(iSum, m_iCityChange);
-	CheckSum(iSum, m_iPopulationChangeOffset);
 	CheckSum(iSum, m_iPopulationChangeDivisor);
 	CheckSum(iSum, m_iMinCity);
 	CheckSum(iSum, m_iTradeModifier);
@@ -17941,8 +17884,6 @@ m_bFoundFreshWater(false),
 m_bFreshWaterTerrain(false),
 m_iWorldSoundscapeScriptId(0),
 m_piYields(NULL),
-m_piRiverYieldChange(NULL),
-m_piHillsYieldChange(NULL),
 m_pi3DAudioScriptFootstepIndex(NULL)
 ,m_iCultureDistance(0)
 ,m_iHealthPercent(0)
@@ -17964,8 +17905,6 @@ m_bColdDamage(false)
 CvTerrainInfo::~CvTerrainInfo()
 {
 	SAFE_DELETE_ARRAY(m_piYields);
-	SAFE_DELETE_ARRAY(m_piRiverYieldChange);
-	SAFE_DELETE_ARRAY(m_piHillsYieldChange);
 	SAFE_DELETE_ARRAY(m_pi3DAudioScriptFootstepIndex);
 
 }
@@ -18031,18 +17970,6 @@ int CvTerrainInfo::getYield(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
 	return m_piYields ? m_piYields[i] : 0;
-}
-
-int CvTerrainInfo::getRiverYieldChange(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-	return m_piRiverYieldChange ? m_piRiverYieldChange[i] : 0;
-}
-
-int CvTerrainInfo::getHillsYieldChange(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-	return m_piHillsYieldChange ? m_piHillsYieldChange[i] : 0;
 }
 
 int CvTerrainInfo::get3DAudioScriptFootstepIndex(int i) const
@@ -18120,24 +18047,7 @@ bool CvTerrainInfo::read(CvXMLLoadUtility* pXML)
 		pXML->SetYields(&m_piYields);
 		pXML->MoveToXmlParent();
 	}
-	else
-		SAFE_DELETE_ARRAY(m_piYields);
-
-	if (pXML->TryMoveToXmlFirstChild(L"RiverYieldChange"))
-	{
-		pXML->SetYields(&m_piRiverYieldChange);
-		pXML->MoveToXmlParent();
-	}
-	else
-		SAFE_DELETE_ARRAY(m_piRiverYieldChange);
-
-	if (pXML->TryMoveToXmlFirstChild(L"HillsYieldChange"))
-	{
-		pXML->SetYields(&m_piHillsYieldChange);
-		pXML->MoveToXmlParent();
-	}
-	else
-		SAFE_DELETE_ARRAY(m_piHillsYieldChange);
+	else SAFE_DELETE_ARRAY(m_piYields);
 
 	pXML->GetOptionalChildXmlValByName(&m_bWaterTerrain, L"bWaterTerrain");
 	pXML->GetOptionalChildXmlValByName(&m_bImpassable, L"bImpassable");
@@ -18223,32 +18133,6 @@ void CvTerrainInfo::copyNonDefaults(const CvTerrainInfo* pClassInfo)
 		{
 			m_piYields[i] = pClassInfo->getYield(i);
 		}
-
-		if (!m_piRiverYieldChange)
-		{
-			if (pClassInfo->getRiverYieldChange(i))
-			{
-				CvXMLLoadUtility::InitList(&m_piRiverYieldChange, NUM_YIELD_TYPES);
-			}
-		}
-
-		if (m_piRiverYieldChange && (m_piRiverYieldChange[i] == iDefault))
-		{
-			m_piRiverYieldChange[i] = pClassInfo->getRiverYieldChange(i);
-		}
-
-		if (!m_piHillsYieldChange)
-		{
-			if (pClassInfo->getHillsYieldChange(i))
-			{
-				CvXMLLoadUtility::InitList(&m_piHillsYieldChange, NUM_YIELD_TYPES);
-			}
-		}
-
-		if (m_piHillsYieldChange && (m_piHillsYieldChange[i] == iDefault))
-		{
-			m_piHillsYieldChange[i] = pClassInfo->getHillsYieldChange(i);
-		}
 	}
 	if (isWaterTerrain() == bDefault) m_bWaterTerrain = pClassInfo->isWaterTerrain();
 	if (isImpassable() == bDefault) m_bImpassable = pClassInfo->isImpassable();
@@ -18303,8 +18187,6 @@ void CvTerrainInfo::getCheckSum(unsigned int &iSum) const
 	// Arrays
 
 	CheckSum(iSum, m_piYields, NUM_YIELD_TYPES);
-	CheckSum(iSum, m_piRiverYieldChange, NUM_YIELD_TYPES);
-	CheckSum(iSum, m_piHillsYieldChange, NUM_YIELD_TYPES);
 
 	CheckSum(iSum, m_iCultureDistance);
 	CheckSum(iSum, m_iHealthPercent);
@@ -21788,7 +21670,6 @@ CvCorporationInfo::CvCorporationInfo() :
 ,m_iMaintenance(0)
 ,m_iMissionType(NO_MISSION)
 ,m_iBonusProduced(NO_BONUS)
-,m_paiPrereqBonuses(NULL)
 ,m_paiHeadquarterCommerce(NULL)
 ,m_paiCommerceProduced(NULL)
 ,m_paiYieldProduced(NULL)
@@ -21817,7 +21698,6 @@ CvCorporationInfo::CvCorporationInfo() :
 //------------------------------------------------------------------------------------------------------
 CvCorporationInfo::~CvCorporationInfo()
 {
-	SAFE_DELETE_ARRAY(m_paiPrereqBonuses);
 	SAFE_DELETE_ARRAY(m_paiHeadquarterCommerce);
 	SAFE_DELETE_ARRAY(m_paiCommerceProduced);
 	SAFE_DELETE_ARRAY(m_paiYieldProduced);
@@ -22021,10 +21901,14 @@ int* CvCorporationInfo::getCommerceChangeArray() const
 
 // Arrays
 
-int CvCorporationInfo::getPrereqBonus(int i) const
+const std::vector<BonusTypes>& CvCorporationInfo::getPrereqBonuses() const
 {
-	FASSERT_BOUNDS(0, GC.getNUM_CORPORATION_PREREQ_BONUSES(), i)
-	return m_paiPrereqBonuses ? m_paiPrereqBonuses[i] : NO_BONUS;
+	return m_vPrereqBonuses;
+}
+
+const python::list CvCorporationInfo::cyGetPrereqBonuses() const
+{
+	return Cy::makeList(m_vPrereqBonuses);
 }
 
 int CvCorporationInfo::getHeadquarterCommerce(int i) const
@@ -22121,41 +22005,7 @@ bool CvCorporationInfo::read(CvXMLLoadUtility* pXML)
 		SAFE_DELETE_ARRAY(m_paiYieldProduced);
 	}
 
-
-	if (pXML->TryMoveToXmlFirstChild(L"PrereqBonuses"))
-	{
-		int iNumSibs = pXML->GetXmlChildrenNumber();
-		FAssertMsg(0 < GC.getNUM_CORPORATION_PREREQ_BONUSES(),"Allocating zero or less memory in CvCorporationInfo::read");
-
-		if (0 < iNumSibs)
-		{
-			pXML->CvXMLLoadUtility::InitList(&m_paiPrereqBonuses, GC.getNUM_CORPORATION_PREREQ_BONUSES(), -1);
-			if (pXML->GetChildXmlVal(szTextVal))
-			{
-				FAssertMsg((iNumSibs <= GC.getNUM_CORPORATION_PREREQ_BONUSES()) , "There are more siblings than memory allocated for them in CvCorporationInfo::read");
-				for (int j=0; j<iNumSibs; ++j)
-				{
-					m_paiPrereqBonuses[j] = pXML->GetInfoClass(szTextVal);
-					if (!pXML->GetNextXmlVal(szTextVal))
-					{
-						break;
-					}
-				}
-
-				pXML->MoveToXmlParent();
-			}
-		}
-		else
-		{
-			SAFE_DELETE_ARRAY(m_paiPrereqBonuses);
-		}
-
-		pXML->MoveToXmlParent();
-	}
-	else
-	{
-		SAFE_DELETE_ARRAY(m_paiPrereqBonuses);
-	}
+	pXML->SetOptionalVector(&m_vPrereqBonuses, L"PrereqBonuses");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"BonusProduced");
 	m_iBonusProduced = pXML->GetInfoClass(szTextVal);
@@ -22312,14 +22162,7 @@ void CvCorporationInfo::copyNonDefaults(const CvCorporationInfo* pClassInfo)
 		}
 	}
 
-	if (!m_paiPrereqBonuses) CvXMLLoadUtility::InitList(&m_paiPrereqBonuses, GC.getNUM_CORPORATION_PREREQ_BONUSES());
-	for ( int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); i++ )
-	{
-		if ( m_paiPrereqBonuses[i] == iTextDefault )
-		{
-			m_paiPrereqBonuses[i] = pClassInfo->getPrereqBonus(i);
-		}
-	}
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_vPrereqBonuses, pClassInfo->m_vPrereqBonuses);
 
 	if (getBonusProduced() == iTextDefault) m_iBonusProduced = pClassInfo->getBonusProduced();
 
@@ -22396,7 +22239,7 @@ void CvCorporationInfo::getCheckSum(unsigned int& iSum) const
 
 	// Arrays
 
-	CheckSum(iSum, m_paiPrereqBonuses, GC.getNUM_CORPORATION_PREREQ_BONUSES());
+	CheckSumC(iSum, m_vPrereqBonuses);
 	CheckSum(iSum, m_paiHeadquarterCommerce, NUM_COMMERCE_TYPES);
 	CheckSum(iSum, m_paiCommerceProduced, NUM_COMMERCE_TYPES);
 	CheckSum(iSum, m_paiYieldProduced, NUM_YIELD_TYPES);

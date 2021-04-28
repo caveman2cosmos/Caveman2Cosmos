@@ -8571,7 +8571,7 @@ void CvUnitAI::AI_assaultSeaMove()
 			}
 
 			MissionAITypes eMissionAIType = MISSIONAI_GROUP;
-			if( (GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, &eMissionAIType, 1, getGroup(), 3) > 0) || (GET_PLAYER(getOwner()).AI_getWaterDanger(plot(), 4, false) > 0) )
+			if( (GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, &eMissionAIType, 1, getGroup(), 3) > 0) || (GET_PLAYER(getOwner()).AI_getWaterDanger(plot(), 4) > 0) )
 			{
 				// Loaded but with no escort, wait for others joining us soon or avoid dangerous waters
 				getGroup()->pushMission(MISSION_SKIP);
@@ -8787,7 +8787,7 @@ void CvUnitAI::AI_assaultSeaMove()
 			MissionAITypes eMissionAIType = MISSIONAI_GROUP;
 			if( GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, &eMissionAIType, 1, getGroup(), 1) > 0 )
 			{
-				if( iEscorts < GET_PLAYER(getOwner()).AI_getWaterDanger(plot(), 2, false) )
+				if (iEscorts < GET_PLAYER(getOwner()).AI_getWaterDanger(plot(), 2))
 				{
 					// Wait for units which are joining our group this turn (hopefully escorts)
 					getGroup()->pushMission(MISSION_SKIP);
@@ -11974,7 +11974,7 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 		// Can transport reach enemy in requested time
 		const int loadingRange = iMaxTransportPath * bestTransportUnit->baseMoves();
 		if (!algo::any_of(
-			CvPlot::rect(getX(), getY(), loadingRange, loadingRange),
+			plot()->rect(loadingRange, loadingRange),
 			bind(canTransportReachPlot, _1, this, bestTransportUnit, iMaxTransportPath))
 			)
 		{
@@ -20753,7 +20753,7 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 		PROFILE("AI_assaultSeaReinforce.Nearby");
 
 		const int iRange = 2*baseMoves();
-		foreach_(CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iRange, iRange))
+		foreach_(CvPlot* pLoopPlot, plot()->rect(iRange, iRange))
 		{
 			if (pLoopPlot->isOwned() && isEnemy(pLoopPlot->getTeam(), pLoopPlot))
 			{
@@ -22137,7 +22137,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 	const CvPlot* pBestPlot = NULL;
 	BuildTypes eBestBuild = NO_BUILD;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iRange, iRange))
 	{
 		if (pLoopPlot->isCityRadius()
 		&& (!bSafeAutomation || pLoopPlot->getImprovementType() == NO_IMPROVEMENT || pLoopPlot->getImprovementType() == eRuins))
@@ -24615,7 +24615,7 @@ int CvUnitAI::AI_airOffenseBaseValue(const CvPlot* pPlot) const
 		// Loop over operational range
 		const int iRange = airRange();
 
-		foreach_(const CvPlot* plotX, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
+		foreach_(const CvPlot* plotX, pPlot->rect(iRange, iRange))
 		{
 			if (plotX->area() != NULL)
 			{
@@ -24698,7 +24698,7 @@ int CvUnitAI::AI_airOffenseBaseValue(const CvPlot* pPlot) const
 							// Target enemy cities
 							iTempValue += 3*cityX->getPopulation() + 30;
 
-							if (canAirBomb(pPlot) && cityX->isBombardable(this))
+							if (canAirBomb() && cityX->isBombardable(this))
 							{
 								iTempValue *= 2;
 							}
@@ -25194,7 +25194,7 @@ bool CvUnitAI::AI_defensiveAirStrike()
 	int iBestValue = (isSuicide() && m_pUnitInfo->getProductionCost() > 0) ? (60 * m_pUnitInfo->getProductionCost()) : 0;
 	const CvPlot* pBestPlot = NULL;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
 		if (canMoveInto(pLoopPlot, MoveCheck::Attack)) // Only true of plots this unit can airstrike
 		{
@@ -25276,7 +25276,7 @@ bool CvUnitAI::AI_defendBaseAirStrike()
 	int iBestValue = (isSuicide() && m_pUnitInfo->getProductionCost() > 0) ? (15 * m_pUnitInfo->getProductionCost()) : 0;
 	const CvPlot* pBestPlot = NULL;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
 		if (canMoveInto(pLoopPlot, MoveCheck::Attack) && !pLoopPlot->isWater()) // Only true of plots this unit can airstrike
 		{
@@ -25351,7 +25351,7 @@ bool CvUnitAI::AI_airBombPlots()
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
 		if (!pLoopPlot->isCity() && pLoopPlot->isOwned() && pLoopPlot != plot())
 		{
@@ -25422,7 +25422,7 @@ bool CvUnitAI::AI_airBombDefenses()
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
 		 const CvCity* pCity = pLoopPlot->getPlotCity();
 		if (pCity != NULL)
@@ -25567,7 +25567,7 @@ bool CvUnitAI::AI_exploreAir2()
 	int iBestValue = 0;
 
 	const int iSearchRange = airRange();
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange)
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange)
 	| filtered(!CvPlot::fn::isVisible(getTeam(), false)))
 	{
 		if (canReconAt(plot(), pLoopPlot->getX(), pLoopPlot->getY()))
@@ -25658,13 +25658,13 @@ bool CvUnitAI::AI_nukeRange(int iRange)
 {
 	const CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iRange, iRange))
 	{
 		if (canNukeAt(plot(), pLoopPlot->getX(), pLoopPlot->getY()))
 		{
 			int iValue = -99;
 
-			foreach_(const CvPlot* pLoopPlot2, CvPlot::rect(pLoopPlot->getX(), pLoopPlot->getY(), nukeRange(), nukeRange()))
+			foreach_(const CvPlot* pLoopPlot2, pLoopPlot->rect(nukeRange(), nukeRange()))
 			{
 				int iEnemyCount = 0;
 				int iTeamCount = 0;
@@ -26181,7 +26181,7 @@ bool CvUnitAI::AI_bonusOffenseSpy(int iRange)
 
 	const int iSearchRange = AI_searchRange(iRange);
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
 		if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
 		{
@@ -26825,7 +26825,7 @@ int CvUnitAI::AI_nukeValue(const CvCity* pCity) const
 
 	iValue += -(GET_PLAYER(getOwner()).AI_getAttitudeVal(pCity->getOwner()) / 3);
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pCity->getX(), pCity->getY(), nukeRange(), nukeRange()))
+	foreach_(const CvPlot* pLoopPlot, pCity->plot()->rect(nukeRange(), nukeRange()))
 	{
 		if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
 		{
@@ -27065,7 +27065,7 @@ bool CvUnitAI::AI_stackAttackCity(int iRange, int iPowerThreshold, bool bFollow)
 	int iSearchRange = bFollow ? 1 : AI_searchRange(iRange);
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
 		int iPathTurns;
 		if (AI_plotValid(pLoopPlot)
@@ -27128,7 +27128,7 @@ bool CvUnitAI::AI_moveIntoCity(int iRange, bool bOpponentOnly)
 	const CvPlot* pBestPlot = NULL;
 	const CvPlot* pBestCityPlot = NULL;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
 		int iPathTurns = 0;
 		if (AI_plotValid(pLoopPlot)
@@ -27348,7 +27348,7 @@ bool CvUnitAI::AI_choke(int iRange, bool bDefensive)
 	const CvPlot* pBestChokePlot = NULL;
 	int iBestValue = 0;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iRange, iRange))
 	{
 		if (isEnemy(pLoopPlot->getTeam()) && (!pLoopPlot->isVisible(getTeam(),false) || !pLoopPlot->isVisibleEnemyUnit(this)))
 		{
@@ -27775,7 +27775,7 @@ bool CvUnitAI::AI_RbombardPlot(int iRange, int iBonusValueThreshold)
 
 	const int iSearchRange = AI_searchRange(iRange);
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
 		if (AI_plotValid(pLoopPlot)	&& !pLoopPlot->isCity() && pLoopPlot->getImprovementType() != NO_IMPROVEMENT && pLoopPlot->getTeam() != getTeam())
 		{
@@ -27849,7 +27849,7 @@ bool CvUnitAI::AI_RbombardUnit(int iRange, int iHighestOddsThreshold, int iMinSt
 	int iBestValue = 999; // looking for the odds at or below iHighestOddsThreshold
 	const CvPlot* pBestPlot = NULL;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
 		if (AI_plotValid(pLoopPlot) && (!pLoopPlot->isCity() || bCity))
 		{
@@ -27974,7 +27974,7 @@ bool CvUnitAI::AI_RbombardNaval()
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
 		if (!atPlot(pLoopPlot) && getGroup()->canBombardAtRanged(plot(), pLoopPlot->getX(), pLoopPlot->getY()))
 		{
@@ -28063,7 +28063,7 @@ bool CvUnitAI::AI_FEngage()
 		const int iSearchRange = airRange();
 		int iBestValue = 0;
 		const CvPlot* pBestPlot = NULL;
-		foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+		foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 		{
 			if (canFEngageAt(plot(), pLoopPlot->getX(), pLoopPlot->getY()))
 			{
@@ -28894,7 +28894,7 @@ bool CvUnitAI::AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders,
 	int bestScore = iMinValue;
 	const CvPlot* bestTargetPlot = NULL;
 
-	foreach_(const CvPlot* potentialTargetPlot, CvPlot::rect(getX(), getY(), iRange, iRange))
+	foreach_(const CvPlot* potentialTargetPlot, plot()->rect(iRange, iRange))
 	{
 		if (!atPlot(potentialTargetPlot)
 			&& (!bStayInBorders || potentialTargetPlot->getOwner() == getOwner())
@@ -29286,7 +29286,7 @@ bool CvUnitAI::AI_patrolBorders()
 
 	const int iSearchRange = baseMoves();
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
 		if (canMoveInto(pLoopPlot, MoveCheck::IgnoreLoad))
 		{
@@ -29540,7 +29540,7 @@ void CvUnitAI::AI_autoAirStrike()
 	}
 
 	// Support ground attacks
-	if (canAirBomb(NULL))
+	if (canAirBomb())
 	{
 		if (AI_airBombDefenses())
 		{
@@ -29594,7 +29594,7 @@ bool CvUnitAI::AI_airBombCities()
 	int iBestValue = (isSuicide() && m_pUnitInfo->getProductionCost() > 0) ? (5 * m_pUnitInfo->getProductionCost()) / 6 : 0;
 	const CvPlot* pBestPlot = NULL;
 
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
 		if (canMoveInto(pLoopPlot, MoveCheck::Attack))
 		{
@@ -29741,7 +29741,7 @@ bool CvUnitAI::AI_protectTarget(const CvUnit* pTarget)
 	//Only minimal enemy targets, move to kill them if possible
 	else
 	{
-		foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+		foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 		{
 			if (AI_plotValid(pLoopPlot))
 			{
@@ -30641,20 +30641,20 @@ void CvUnitAI::AI_setLeaderPriority(int iPriority)	//	 -1 means reset to default
 bool CvUnitAI::AI_fulfillHealerNeed(const CvPlot* pPlot)
 {
 	const CvPlot* pBestPlot = NULL;
-	CvPlot* endTurnPlot = NULL;
+	const CvPlot* endTurnPlot = NULL;
 	int iBestValue = 0;
 	int iPathTurns = 0;
-	PlayerTypes ePlayer = getOwner();
-	UnitCombatTypes eUnitCombat = getBestHealingType();
-	int iRange = 25;
-	DomainTypes eDomain = getDomainType();
+	const UnitCombatTypes eUnitCombat = getBestHealingType();
 	if (eUnitCombat == NO_UNITCOMBAT)
 	{
 		return false;
 	}
 
+	const PlayerTypes ePlayer = getOwner();
+	const DomainTypes eDomain = getDomainType();
+
 	int iValue = 0;
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(25, 25))
 	{
 		const int iCheck = pLoopPlot->getUnitCombatsUnsupportedByHealer(ePlayer, eUnitCombat, eDomain);
 
@@ -30712,22 +30712,22 @@ bool CvUnitAI::AI_fulfillHealerNeed(const CvPlot* pPlot)
 
 bool CvUnitAI::AI_fulfillImmediateHealerNeed(const CvPlot* pPlot)
 {
-	CvPlot* pBestPlot = NULL;
-	CvPlot* endTurnPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
+	const CvPlot* endTurnPlot = NULL;
 	int iBestValue = 0;
 	int iPathTurns = 0;
-	PlayerTypes ePlayer = getOwner();
-	UnitCombatTypes eUnitCombat = getBestHealingType();
-	int iRange = 4;
-	DomainTypes eDomain = getDomainType();
+	const UnitCombatTypes eUnitCombat = getBestHealingType();
 	if (eUnitCombat == NO_UNITCOMBAT)
 	{
 		return false;
 	}
 
+	const PlayerTypes ePlayer = getOwner();
+	const DomainTypes eDomain = getDomainType();
+
 	int iValue = 0;
 
-	foreach_(CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(4, 4))
 	{
 		const int iCheck = pLoopPlot->getInjuredUnitCombatsUnsupportedByHealer(ePlayer, eUnitCombat, eDomain);
 
