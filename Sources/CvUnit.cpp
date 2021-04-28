@@ -12494,7 +12494,7 @@ CvCity* CvUnit::getUpgradeCity(bool bSearch) const
 	UnitAITypes eUnitAI = AI_getUnitAIType();
 	CvArea* pArea = area();
 
-	int iCurrentValue = kPlayer.AI_unitValue(getUnitType(), eUnitAI, pArea);
+	const int iCurrentValue = kPlayer.AI_unitValue(getUnitType(), eUnitAI, pArea);
 
 	int iBestSearchValue = MAX_INT;
 	CvCity* pBestUpgradeCity = NULL;
