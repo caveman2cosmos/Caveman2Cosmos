@@ -204,7 +204,7 @@ void CvCityAI::SendLog(CvWString function, CvWString message)
 	CvWString aiType = "CvCityAI";
 	
 	
-	logAIJson(aiType,this->getName(), function,  message);
+	//logAIJson(aiType,this->getName(), function,  message);
 
 }
 
@@ -8397,7 +8397,7 @@ void CvCityAI::AI_calculateOutputRatio(std::vector<int> &ratios, int food, int p
 	const int productionRatio = 100 - ((production * 100) / totalOutput);
 
 	ratios[YIELD_FOOD] = foodRatio;
-	ratios[YIELD_PRODUCTION] = productionRatio;
+	ratios[YIELD_PRODUCTION] = productionRatio *80 / 100;
 	ratios[YIELD_COMMERCE] = commerceRatio / 2;
 	
 }

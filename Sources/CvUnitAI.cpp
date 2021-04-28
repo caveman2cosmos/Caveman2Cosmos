@@ -138,7 +138,7 @@ void CvUnitAI::SendLog(CvWString function, CvWString message)
 	CvWString aiType = "CvUnitAI";
 
 
-	logAIJson(aiType, this->getName(), function, message);
+	// logAIJson(aiType, this->getName(), function, message);
 
 }
 
@@ -1907,9 +1907,9 @@ void CvUnitAI::AI_settleMove()
 					GET_PLAYER(getOwner()).getContractBroker().advertiseWork(
 
 						HIGHEST_PRIORITY_ESCORT_PRIORITY,
-						DEFENSIVE_UNITCAPABILITIES,
+						OFFENSIVE_UNITCAPABILITIES,
 						getX(), getY(), this,
-						UNITAI_CITY_DEFENSE,
+						UNITAI_ESCORT,
 						AI_minSettlerDefense()
 					);
 					m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
