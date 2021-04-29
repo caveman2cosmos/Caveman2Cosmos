@@ -16546,6 +16546,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Muestra los movimientos de las unidades enemigas entre turno y turno.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_NO_ENEMY_GLOW</Tag>
+		<English>No Enemy Glow</English>
+		<French>Pas d'&#233;clairage ennemi</French>
+		<German>Keine Feindkennzeichnung</German>
+		<Italian>Non evidenziare il nemico</Italian>
+		<Spanish>Sin brillo enemigo</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NO_ENEMY_GLOW_HELP</Tag>
 		<English>Enemy units in your territory are not highlighted on the map</English>
 		<French>Les unit&#233;s ennemies sur votre territoire n'apparaissent pas sur la carte.</French>
@@ -17016,5 +17024,341 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Zur &#220;bernahme der &#196;nderungen muss das Programm neu gestartet werden</German>
 		<Italian>Il programma deve essere riavviato prima che i cambiamenti abbiano effetto</Italian>
 		<Spanish>Hay que reiniciar el programa para que los cambios surtan efecto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SCREEN_LANGUAGE</Tag>
+		<English>Language</English>
+		<French>Langue</French>
+		<German>Sprache</German>
+		<Italian>Lingua</Italian>
+		<Spanish>Idioma</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SCREEN_OTHER</Tag>
+		<English>Other</English>
+		<French>Autre</French>
+		<German>Sonstige</German>
+		<Italian>Altro</Italian>
+		<Spanish>Otros</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SCREEN_PROFILES</Tag>
+		<English>Profiles</English>
+		<French>Profils</French>
+		<German>Profile</German>
+		<Italian>Profili</Italian>
+		<Spanish>Perfiles</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SCREEN_PROFILE_NAME</Tag>
+		<English>Profile Name</English>
+		<French>Nom du profil</French>
+		<German>Profilname</German>
+		<Italian>Nome profilo</Italian>
+		<Spanish>Nombre del perfil</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SCREEN_GLOBE</Tag>
+		<English>Globe Quality</English>
+		<French>Qualit&#233; du globe</French>
+		<German>Weltqualit&#228;t</German>
+		<Italian>Qualit&#224; del pianeta</Italian>
+		<Spanish>Calidad del globo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SCREEN_GRAPHICS_LEVEL</Tag>
+		<English>Graphics Level</English>
+		<French>Niveau des graphismes</French>
+		<German>Grafikstufe</German>
+		<Italian>Dettaglio grafico</Italian>
+		<Spanish>Nivel gr&#225;fico</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SCREEN_RENDER_QUALITY_LEVEL</Tag>
+		<English>Render Quality Level</English>
+		<French>Niveau de qualit&#233; du rendu</French>
+		<German>Renderqualit&#228;tsstufe</German>
+		<Italian>Livello di qualit&#224; del render</Italian>
+		<Spanish>Nivel de calidad del renderizado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SCREEN_SET_CLOCK</Tag>
+		<English>Set Clock</English>
+		<French>R&#233;gler horloge</French>
+		<German>Uhr einstellen</German>
+		<Italian>Imposta orologio</Italian>
+		<Spanish>Poner en hora</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SCREEN_RESET_CLOCK</Tag>
+		<English>Reset Clock</English>
+		<French>R&#233;initialiser horloge</French>
+		<German>Uhr zur&#252;cksetzen</German>
+		<Italian>Azzera orologio</Italian>
+		<Spanish>Poner a cero</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SCREEN_OTHER</Tag>
+		<English>Other</English>
+		<French>Autre</French>
+		<German>Sonstige</German>
+		<Italian>Altro</Italian>
+		<Spanish>Otros</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SCREEN_TEXTURE_QUALITY_LEVEL</Tag>
+		<English>Texture Quality Level</English>
+		<French>Qualit&#233; des textures</French>
+		<German>Texturqualit&#228;tsstufe</German>
+		<Italian>Livello qualit&#224; texture</Italian>
+		<Spanish>Nivel de calidad de las texturas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_EFFECTS_DISABLED</Tag>
+		<English>Effects Disabled</English>
+		<French>Effets d&#233;sactiv&#233;s</French>
+		<German>Effekte deaktiviert</German>
+		<Italian>Effetti disattivati</Italian>
+		<Spanish>Efectos desactivados</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_EFFECTS_DISABLED_HELP</Tag>
+		<English>Turns off particle effects</English>
+		<French>D&#233;sactive les effets de particule</French>
+		<German>Schaltet Partikeleffekte aus</German>
+		<Italian>Disattiva effetti particellari</Italian>
+		<Spanish>Desactiva los efectos de part&#237;culas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_GLOBE_VIEW_BUILDINGS_DISABLED</Tag>
+		<English>Globe View Buildings Disabled</English>
+		<French>B&#226;timents de la vue du globe d&#233;sactiv&#233;s</French>
+		<German>Globusansicht Geb&#228;ude deaktiviert</German>
+		<Italian>Edifici disattivati nella visuale globale</Italian>
+		<Spanish>Edificios desactivados en vista global</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_GLOBE_VIEW_BUILDINGS_DISABLED_HELP</Tag>
+		<English>Building models won't be displayed in Globe View</English>
+		<French>Les mod&#232;les des b&#226;timents ne s'affichent pas en vue du globe</French>
+		<German>Geb&#228;udemodelle erscheinen nicht in Globusansicht</German>
+		<Italian>I modelli degli edifici non verranno mostrati nella visuale globale</Italian>
+		<Spanish>Los modelos de los edificios no se mostrar&#225;n en la vista global.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_FULLSCREEN</Tag>
+		<English>Full-screen Mode</English>
+		<French>Mode Plein &#233;cran</French>
+		<German>Vollbild-Modus</German>
+		<Italian>Modalit&#224; a schermo intero</Italian>
+		<Spanish>Modo pantalla completa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_FULLSCREEN_HELP</Tag>
+		<English>The game will run in a window when not set.</English>
+		<French>D&#233;sactivez cette option pour que le jeu s'affiche dans une fen&#234;tre.</French>
+		<German>Wenn dieser nicht eingestellt ist, l&#228;uft das Spiel in einem Fenster.</German>
+		<Italian>Se non selezionata, il gioco verr&#224; avviato in una finestra.</Italian>
+		<Spanish>El juego se ejecutar&#225; en una ventana cuando no se indique lo contrario.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_HIRES_TERRAIN_HELP</Tag>
+		<English>A high detail terrain will be used</English>
+		<French>Le niveau de d&#233;tail utilis&#233; pour les terrains sera plus haut.</French>
+		<German>Es werden hohes Gel&#228;ndedetails verwendet</German>
+		<Italian>Verr&#224; utilizzato un dettaglio alto del terreno</Italian>
+		<Spanish>Se usar&#225; un nivel de detalle del terreno m&#225;s alto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_HIRES_TERRAIN</Tag>
+		<English>High Detail Terrain</English>
+		<French>D&#233;tail terrains haut</French>
+		<German>Hohes Gel&#228;ndedetails</German>
+		<Italian>Dettaglio alto del terreno</Italian>
+		<Spanish>Detalle del terreno alto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_NO_MOVIES_HELP</Tag>
+		<English>Skips Wonder, Religion, and Victory Movies</English>
+		<French>Passe les films Merveille, Religion et Victoire.</French>
+		<German>&#220;berspringt Wunder-, Religions- und Siegfilme</German>
+		<Italian>Salta i filmati di meraviglie, religioni e vittoria</Italian>
+		<Spanish>Para omitir las pel&#237;culas de maravillas, religiones y victoria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_NO_MOVIES</Tag>
+		<English>No Movies</English>
+		<French>Pas de film</French>
+		<German>Keine Filme</German>
+		<Italian>Nessun filmato</Italian>
+		<Spanish>Sin pel&#237;culas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_CITY_RADIUS_HELP</Tag>
+		<English>Shows City Radius when a Settler is Selected</English>
+		<French>Affiche le rayon de la ville quand un colon est s&#233;lectionn&#233;.</French>
+		<German>Zeigt Stadtradius bei Auswahl eines Siedlers an</German>
+		<Italian>Mostra il raggio d'azione della citt&#224; selezionando un colono</Italian>
+		<Spanish>Para ver el radio urbano al seleccionar a un colono</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_CITY_RADIUS</Tag>
+		<English>Show City Radius</English>
+		<French>Afficher Rayon ville</French>
+		<German>Stadtradius anzeigen</German>
+		<Italian>Mostra raggio d?azione della citt&#224;</Italian>
+		<Spanish>Mostrar radio urbano</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_VOICE</Tag>
+		<English>Enable Voice Chatting</English>
+		<French>Activer les messages vocaux</French>
+		<German>Sprachchat ein</German>
+		<Italian>Attiva chat vocale</Italian>
+		<Spanish>Activar conversaciones de voz</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_CAPTURE_DEVICE</Tag>
+		<English>Voice Capture Device</English>
+		<French>P&#233;riph&#233;rique vocal</French>
+		<German>Sprachaufnahmeger&#228;t</German>
+		<Italian>Periferica di registrazione vocale</Italian>
+		<Spanish>Dispositivo de captura de la voz</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_PLAYBACK_DEVICE</Tag>
+		<English>Voice Playback Device</English>
+		<French>P&#233;riph&#233;rique restitution vocale</French>
+		<German>Sprachwiedergabeger&#228;t</German>
+		<Italian>Periferica di riproduzione vocale</Italian>
+		<Spanish>Dispositivo de reproducci&#243;n de la voz</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTION_SOUND_SYSTEM_CONFIG</Tag>
+		<English>Use System Config</English>
+		<French>Utiliser Config. Syst&#232;me</French>
+		<German>Systemkonfiguration verwenden</German>
+		<Italian>Usa configurazione di sistema</Italian>
+		<Spanish>Usar config. sistema</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTION_SOUND_HEADPHONES</Tag>
+		<English>Headphones</English>
+		<French>Casque</French>
+		<German>Lautsprecher</German>
+		<Italian>Cuffie</Italian>
+		<Spanish>Auriculares</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INVALID_PLAYBACK_TITLE</Tag>
+		<English>Invalid Device</English>
+		<French>Invalid Device</French>
+		<German>Invalid Device</German>
+		<Italian>Invalid Device</Italian>
+		<Spanish>Invalid Device</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INVALID_PLAYBACK_DESC</Tag>
+		<English>You have selected an unusable voice playback device.  Voice playback disabled.</English>
+		<French>You have selected an unusable voice playback device.  Voice playback disabled.</French>
+		<German>You have selected an unusable voice playback device.  Voice playback disabled.</German>
+		<Italian>You have selected an unusable voice playback device.  Voice playback disabled.</Italian>
+		<Spanish>You have selected an unusable voice playback device.  Voice playback disabled.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTION_SOUND_MONO</Tag>
+		<English>Mono</English>
+		<French>Mono</French>
+		<German>Mono</German>
+		<Italian>Mono</Italian>
+		<Spanish>Mono</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTION_SOUND_STEREO</Tag>
+		<English>Stereo</English>
+		<French>Stereo</French>
+		<German>Stereo</German>
+		<Italian>Stereo</Italian>
+		<Spanish>Estereo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICS_SETTINGS_MOVIE_QUALITY</Tag>
+		<English>Movie Quality</English>
+		<French>Qualit&#233; de Film</French>
+		<German>Filmqualit&#228;t</German>
+		<Italian>Qualit&#224; di Film</Italian>
+		<Spanish>Calidad de Pel&#237;cula</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_GREATPEOPLE_GOLDEN_AGE</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] from Golden Age</English>
+		<French>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] en raison de l'&#226;ge d'or</French>
+		<German>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] aus Goldenem Zeitalter</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] dall'Età dell'oro</Italian>
+		<Spanish>[ICON_BULLET]%D1%% [ICON_GREATPEOPLE] de la edad de oro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHIC_OPTION_FROZEN_ANIMATIONS</Tag>
+		<English>Animations Frozen</English>
+		<French>Animations gel&#233;es</French>
+		<German>Animationen gestoppt</German>
+		<Italian>Animazioni bloccate</Italian>
+		<Spanish>Animaciones est&#225;ticas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SINGLE_UNIT_HELP</Tag>
+		<English>Units are displayed with a single figure</English>
+		<French>Les unit&#233;s sont affich&#233;es avec une seule silhouette.</French>
+		<German>Einheiten werden durch eine einzelne Figur dargestellt</German>
+		<Italian>Le unit&#224; vengono mostrate con una singola sagoma</Italian>
+		<Spanish>Las unidades se muestran con una sola figura.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_LOWRES_TEXTURES</Tag>
+		<English>Low Resolution Textures</English>
+		<French>Textures basse r&#233;solution</French>
+		<German>Texturen mit niedriger Aufl&#246;sung</German>
+		<Italian>Texture a bassa risoluzione</Italian>
+		<Spanish>Texturas de baja resoluci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_NETWORK</Tag>
+		<English>Network</English>
+		<French>R&#233;seau</French>
+		<German>Netzwerk</German>
+		<Italian>Rete</Italian>
+		<Spanish>Red</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_BANDWIDTH_DESC</Tag>
+		<English>Select your connection speed</English>
+		<French>Choisissez votre vitesse de connexion</French>
+		<German>W&#228;hlen Sie eine Verbindungsgeschwindigkeit</German>
+		<Italian>Seleziona la velocit&#224; della tua connessione</Italian>
+		<Spanish>Selecciona tu velocidad de conexi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_BROADBAND_LBL</Tag>
+		<English>Broadband (Cable/DSL)</English>
+		<French>Haut d&#233;bit (c&#226;ble/ADSL)</French>
+		<German>Breitband (Kabel/DSL)</German>
+		<Italian>Banda larga (Cavo/DSL)</Italian>
+		<Spanish>Banda ancha (Cable/ADSL)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_MODEM_LBL</Tag>
+		<English>Modem</English>
+		<French>Modem</French>
+		<German>Modem</German>
+		<Italian>Modem</Italian>
+		<Spanish>M&#243;dem</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPENING_MENU</Tag>
+		<English>Opening Menu</English>
+		<French>Menu de lancement</French>
+		<German>Anfangsmenü</German>
+		<Italian>Menu d'apertura</Italian>
+		<Spanish>Menú inicial</Spanish>
 	</TEXT>
 </Civ4GameText>
