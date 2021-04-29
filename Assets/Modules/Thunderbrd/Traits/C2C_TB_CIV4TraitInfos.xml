@@ -18194,7 +18194,7 @@
 			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
 			<Description>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL1</Description>
 			<Strategy>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL_STRATEGY</Strategy>
-			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL1_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSpiritual.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SPIRITUAL</PromotionLine>
 			<iLinePriority>1</iLinePriority>

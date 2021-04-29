@@ -27,7 +27,6 @@
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NOMAD_CAMP</Description>
 			<Civilopedia>TXT_KEY_UNIT_NOMAD_CAMP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NOMAD_CAMP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
 			<bFood>1</bFood>

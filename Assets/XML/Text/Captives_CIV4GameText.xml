@@ -1,21 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION</Tag>
-		<English>Join the city. Increasing the population by one.</English>
-		<French>Rejoindre la Ville. Augmente de 1 la population.</French>
-		<Italian>Unisci alla città; incrementa la popolazione di 1.</Italian>
-		<Russian>Ïîäñåëèòü â ãîðîä. Íàñåëåíèå ãîðîäà óâåëè÷èâàåòñÿ íà îäíîãî æèòåëÿ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION</Tag>
-		<English>Join the city. Increasing the population by one.</English>
-		<French>Rejoindre la Ville. Augmente de 1 la population.</French>
-		<Italian>Unisci alla città; incrementa la popolazione di 1.</Italian>
-		<Polish>Dołącz do miasta. Zwiększa populację miasta o 1.</Polish>
-		<Russian>Ïîäñåëèòü â ãîðîä. Íàñåëåíèå ãîðîäà óâåëè÷èâàåòñÿ íà îäíîãî æèòåëÿ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_ARCHER</Tag>
 		<English>Upgrade a Captive to an Archer.</English>
 		<French>Convertir le Prisonnier en Archer.</French>
@@ -141,14 +126,6 @@
 		<Russian>Íàñåëåíèå ãîðîäà óâåëè÷èâàåòñÿ íà îäíîãî æèòåëÿ. Îòðÿä èñ÷åçàåò.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MSG_CAPTURED_SLAVES_AS_GATHERERS</Tag>
-		<English>You have "freed" %d1 settled slaves. (Captive - Freed Slave).</English>
-		<French>Vous avez "libéré" %d1 Esclave sédentaires. (Prisonnier - Esclave libéré).</French>
-		<Italian>Hai "liberato" %d1 schiavi sedentari. (Prigioniero - Schiavo liberato).</Italian>
-		<Polish>Uwolniłeś %d1 niewolników. (Wyzwoleni Niewolnicy).</Polish>
-		<Russian>Âû "îñâîáîäèëè" %d1 çäåøíèõ ðàáîâ. (Ïëåííèê - âîëüíîîòïóùåííèê).</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_ARTISTS</Tag>
 		<English>The city had %d1 Artists. You killed %d1 and %d1 were captured. (Captive - Artist).</English>
 		<French>La Ville a %d1 Artistes. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Artiste).</French>
@@ -233,13 +210,6 @@
 		<French>Rejoindre la Ville. Augmente d'autant la population.</French>
 		<Polish>Dołącz do miasta. (Częściowy wzrost punktów populacji)</Polish>
 		<Russian>Ïîñåëèòüñÿ â ãîðîäå (÷àñò. ïðèðîñò íàñåëåíèÿ)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_JOIN_CITY_FREED_SLAVE_MESSAGE</Tag>
-		<English>The freed slave has joined your city. This is represented as a boost to food.</English>
-		<French>L'Esclave libéré a rejoint votre ville. Représenté par un bonus de nourriture.</French>
-		<Polish>Uwolnienie niewolnicy dołączają się do populacji miasta dostarczając my odrobinę żywności.</Polish>
-		<Russian>Îñâîáîæäåííûé ðàá ïîñåëèëñÿ â âàøåì ãîðîäå. Ýòî ïðåäñòàâëåíî êàê ïîïîëíåíèå àìáàðà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_CITY_POPULATION</Tag>
@@ -479,13 +449,6 @@
 		<Russian>Мирные жители, захваченные в бою или после разрушения городов.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAPTIVE_CIVILIAN_STRATEGY</Tag>
-		<English>Captured civilian units may join your cities or become slaves.</English>
-		<French>Les unités civiles capturées peuvent rejoindre vos villes ou devenir des esclaves.</French>
-		<Italian>Le unità civili catturate possono stabilirsi nelle tue città o diventare schiavi.</Italian>
-		<Russian>Çàõâà÷åííûå ãðàæäàíñêèå ìîãóò áûòü ïîñåëåíû â âàøèõ ãîðîäàõ èëè îáðàùåíû â ðàáñòâî.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_IMMIGRANT</Tag>
 		<English>Captive - Immigrant</English>
 		<French>Prisonnier - Immigrant</French>
@@ -519,14 +482,7 @@
 		<English>Military units captured in battle.</English>
 		<French>Unités Militaires capturées au combat.</French>
 		<Italian>Unità militari catturate in battaglia.</Italian>
-		<Russian>[TAB]Áîåâûå îòðÿäû ïîïàâøèå â ïëåí â ñðàæåíèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAPTIVE_MILITARY_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Captive - Military[COLOR_REVERT] can upgrade to Military or Worker unit. Force build [COLOR_UNIT_TEXT]Improvement[COLOR_REVERT] or [COLOR_UNIT_TEXT]Building[COLOR_REVERT]. Sacrifice or join city.</English>
-		<French>[COLOR_UNIT_TEXT]Prisonnier - Militaire[COLOR_REVERT] Peut être converti en unité militaire ou ouvrière. Peut construire de manière forcée un [COLOR_UNIT_TEXT]aménagement[COLOR_REVERT] ou [COLOR_UNIT_TEXT]Bâtiment[COLOR_REVERT]. Peut être Sacrifié ou rejoindre une ville.</French>
-		<Italian>Un [COLOR_UNIT_TEXT]Prigioniero - Militare[COLOR_REVERT] può essere migliorato in un lavoratore o in un'unità militare. Può essere costretto a realizzare [COLOR_UNIT_TEXT]Miglioramenti[COLOR_REVERT] o [COLOR_UNIT_TEXT]Edifici[COLOR_REVERT]. Può essere sacrificato o essere aggiunto alla città.</Italian>
-		<Russian>[COLOR_UNIT_TEXT]Пленный солдат[COLOR_REVERT] может быть переобучен в военный или рабочий отряд. Может ускорить строительство [COLOR_UNIT_TEXT]Улучшений[COLOR_REVERT] или [COLOR_UNIT_TEXT]Зданий[COLOR_REVERT]. Их можно принести в жертву или подселить в городе.</Russian>
+		<Russian>Áîåâûå îòðÿäû ïîïàâøèå â ïëåí â ñðàæåíèè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_NEANDERTHAL</Tag>
@@ -563,12 +519,5 @@
 		<French>Si vous capturez une ville qui y a installé des esclaves, certains d'entre eux deviendront éligibles pour être améliorés en ouvriers. Le coût de la mise à niveau représente le coût de leur fournir les outils et l'infrastructure dont disposent vos autres employés.</French>
 		<Italian>Se catturi una città in cui sono stanziati degli schiavi, alcuni di essi potrebbero diventare lavoratori. Il costo della promozione include il costo del rifornirli degli utensili e delle infrastrutture che hanno gli altri tuoi lavoratori.</Italian>
 		<Russian>Если вы захватите город, в котором были поселены рабы, некоторые из них получат возможность переобучиться в рабочих. Цена обновления представляет собой стоимость предоставления им инструментов и инфраструктуры, имеющейся у других ваших работников.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_FREED_SLAVE_STRATEGY</Tag>
-		<English>Upgrade to become workers.</English>
-		<French>Améliorer en Ouvriers.</French>
-		<Italian>Migliorabile in Lavoratore.</Italian>
-		<Russian>Óëó÷øèòü äî ðàáîòíèêîâ.</Russian>
 	</TEXT>
 </Civ4GameText>

@@ -26,7 +26,6 @@
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DIPLOMAT_MESSENGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DIPLOMAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DIPLOMAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
@@ -191,7 +190,6 @@
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DIPLOMAT_EARLY</Description>
 			<Civilopedia>TXT_KEY_UNIT_DIPLOMAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DIPLOMAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
@@ -264,7 +262,6 @@
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DIPLOMAT_INDUST</Description>
 			<Civilopedia>TXT_KEY_UNIT_DIPLOMAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DIPLOMAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
@@ -339,7 +336,6 @@
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DIPLOMAT_MODERN</Description>
 			<Civilopedia>TXT_KEY_UNIT_DIPLOMAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DIPLOMAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>

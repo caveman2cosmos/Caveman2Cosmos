@@ -74,24 +74,10 @@
 		<German>Dies ist ein automatischer Effekt, der mit der Erforschung einer bestimmten Technologie aktiviert wird. Er hat keinen direkten Effekt, sondern dient der Vereinfachung von Updates, bei denen neue Mythen hinzugefügt oder bestehende verändert werden.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Tag>
-		<English>Free building provided as the effect of another.</English>
-		<French>Bâtiment gratuit obtenu comme effet d'un autre</French>
-		<Polish>Darmowy budynek dostarczany jako efekt innego budynku.</Polish>
-		<Russian>Бесплатная постройка, предусмотренная в качестве эффекта от другого здания или Чуда Света.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Tag>
 		<English>Animal Stories buildings represents educational boost from animals after invention of [LINK=TECH_LITERATURE]Literature[\LINK] - needs [LINK=BUILDING_LIBRARY]Library[\LINK] to create [LINK=BUILDING_ANIMAL_STORIES_REQUIRE]Animal Stories Requirement[\LINK].[NEWLINE]This is done to declutter Library building.</English>
 		<French>Les bâtiments des histoires animales représentent un coup de pouce éducatif provenant des animaux, après l'invention de la [LINK=TECH_LITERATURE]Littérature[\LINK] - nécessite une [LINK=BUILDING_LIBRARY]Bibliothèque[\LINK]</French>
 		<Russian>«Сказки о животных» представляют собой образовательное улучшение от прирученных животных после изучения [LINK=TECH_LITERATURE]Литературы[\LINK] - требуются [LINK=BUILDING_LIBRARY]Библиотеки[\LINK] для создания [LINK=BUILDING_ANIMAL_STORIES_REQUIRE]Сказки о животном[\LINK].[NEWLINE]Это реализовано, как дополнение к библиотекам.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Tag>
-		<English>Pseudo national wonder gives free story building in all cities.</English>
-		<French>Sorte de Merveille nationale qui donne un bâtiment histoire gratuit dans chaque ville</French>
-		<Polish>Pseudo Cud Narodowy. Dostarcza darmowe Opowieści do wszystkich Twoich miast.</Polish>
-		<Russian>Êâàçè-íàöèîíàëüíîå ÷óäî ïðåäîñòàâëÿåò áåñïëàòíûå ýôôåêòû îò ñêàçîê âî âñå ãîðîäà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Tag>
@@ -110,12 +96,6 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_REQUIRE</Tag>
 		<English>Autobuild - Animal Stories Requirement</English>
 		<Russian>Сказка о животном</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Tag>
-		<English>The Animal Story buildings provide Education. They are built by subdued animals and story tellers.[NEWLINE]They can be built in every city, as they aren't pseudo National Wonders unlike Myth and Stories.</English>
-		<French>Les Bâtiments d'Histoire des animaux procure de l'Education. Ils sont construits par des animaux apprivoisés ou des conteurs d'histoires</French>
-		<Polish>Budynki Opowieściu o zwierztach dostarczają Edukacji. Powstają dzieki pochwyconym zwierztom i Gawdziarzom.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_MYTH</Tag>
@@ -762,23 +742,11 @@
 		<Russian>Ñêàçêà îá ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Tag>
-		<English>Free building provided by the same Myth. Make the Myth building a pseudo National Wonder as you only need one.</English>
-		<French>Des Bâtiments gratuits sont construits par le Mythe éponyme. Ils font du Mythe une pseudo-merveille nationale vu qu'il n'y en a besoin que d'une.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Tag>
 		<English>The six elements make up everything. They are Earth, Air (Sky), Water (Sea), Stone, Metal and Fire. They lose all benefit with Chemistry.</English>
 		<French>Tout est formé à partir de 6 éléments. Ce sont la Terre, l'Air (Ciel), l'Eau (Mer), la Pierre, le Métal et le Feu. Ils perdent tout leurs avantages avec la Chimie</French>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Tag>
-		<English>The Elemental Myths provide a small amount of science and education. They are required for many other buildings.</English>
-		<French>Les Mythes des Éléments confèrent un petit bonus d'éducation et de recherche. Ils sont requis pour la construction d'autres bâtiments.</French>
-		<Polish>Mity Żywiołów dostarczają małe ilości nauki i edukacji. Są wymagane do budowy wielu innyc budynków.</Polish>
-		<Russian>Ìèôû îá ýëåìåíòàõ îáåñïå÷èâàþò íåáîëüøîå êîëè÷åñòâî íàóêè è îáðàçîâàíèÿ. Îíè íåîáõîäèìû äëÿ ìíîãèõ äðóãèõ çäàíèé.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_MYTH_EFFECT</Tag>
@@ -1486,11 +1454,6 @@
 		<English>Myths associated with formations found in the landscape.</English>
 		<French>Les Mythes associés aux paysages et éléments trouvés dans la nature.</French>
 		<Polish>Mity związane z formacjami terenu.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Tag>
-		<English>The Landform Myths provide a small amount of science and education.</English>
-		<French>Les mythes associés aux éléments et paysages procurent un léger bonus en science et en éducation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEVIATHAN_MYTH_EFFECT</Tag>
@@ -3518,7 +3481,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Tag>
-		<English>TBD</English>
+		<English>The [COLOR_UNIT_TEXT] black caiman [COLOR_REVERT] (Melanosuchus niger), also black caiman, belongs to the alligator family like all caimans. With a maximum length of 6 meters, it is one of the largest predators in South America, along with the Orinoco crocodile. With its broad snout, it resembles the Mississippi alligator. [NEWLINE] Little is known about the black caimans. Most of the specimens live in the Amazon basin. Their mound nests made of earth and parts of plants are similar in shape to those of the crocodile caimans, but are larger. Young animals probably feed on insects and snails, later they also hunt fish, birds, mammals and lizards (also other caiman species). Like most crocodiles, they are nocturnal. [NEWLINE] The black caiman can hardly be found in open areas. Adult males were often hunted in the past because of the beautiful skin that, unlike other crocodile skins, does not contain small bones. Since the females live withdrawn to lay their eggs, the populations quickly recovered.</English>
 		<German>Der [COLOR_UNIT_TEXT]Mohrenkaiman[COLOR_REVERT] (Melanosuchus niger), auch Schwarzer Kaiman, gehört wie alle Kaimane zur Familie der Alligatoren. Mit einer Maximallänge von 6 Metern gehört er neben dem Orinoko-Krokodil zu den größten Räubern Südamerikas. Mit seiner breiten Schnauze ähnelt er dem Mississippi-Alligator.[NEWLINE]Über die Mohrenkaimane ist nur wenig bekannt. Die meisten Exemplare leben im Amazonasbecken. Ihre Hügelnester aus Erde und Pflanzenteilen ähneln in ihrer Form denen der Krokodilkaimane, sind allerdings größer. Jungtiere ernähren sich wahrscheinlich von Insekten und Schnecken, später jagen sie auch Fische, Vögel, Säugetiere sowie Echsen (auch andere Kaimanarten). Wie die meisten Krokodile sind sie nachtaktiv.[NEWLINE]In offenen Gegenden ist der Mohrenkaiman kaum noch zu finden. Ausgewachsene Männchen wurden in der Vergangenheit wegen der schönen Haut, die im Gegensatz zu anderen Krokodilhäuten keine kleinen Knochen enthält, oft gejagt. Da die Weibchen zur Eiablage zurückgezogen leben, erholten sich die Bestände jedoch schnell wieder.</German>
 		<Polish>Kajmany (Caimaninae) podrodzina gadów z rodziny aligatorów, obejmująca gatunki z rodzajów Caiman, Melanosuchus i Paleosuchus. Kajmany mają duże płytki kostne wzmacniające rogowe tarczki brzuszne. Długość dorosłych kajmanów od 1,5 kajman Schneidera (Paleosuchus trigonatus) do 4,5 m kajman czarny (Melanosuchus niger) (choć prehistoryczne kajmany, takie jak Purussaurus, osiągały nawet 11 m długości). Występują w Ameryce Zrodkowej i Południowej.</Polish>
 	</TEXT>
@@ -4695,14 +4658,6 @@
 		<Russian>Ìàë. ìîð. êðîêîäèë</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SALTWATER_CROC_STRATEGY</Tag>
-		<English>Capture salt water crocodiles if you can. They can be used to build special buildings in a costal city.</English>
-		<French>Capturez des crocodiles d'eau de mer si vous le pouvez. Ils peuvent être utilisés pour construire des bâtiments spéciaux dans une ville côtière.</French>
-		<German>Fange Salzwasserkrokodile nach Möglichkeit ein. Sie können für den Bau spezieller Gebäude in Küstenstädten benutzt werden.</German>
-		<Italian>Cattura i coccodrilli marini se riesci. Possono essere usati per costruire edifici speciali in una città costiera.</Italian>
-		<Spanish>Captura los cocodrilos marinos si puedes. Pueden ser utilizados para construir edificios especiales en una ciudad costera.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAEAGLE</Tag>
 		<English>Steller's Sea Eagle</English>
 		<French>
@@ -4773,12 +4728,6 @@
 		<Tag>TXT_KEY_UNIT_SEAOTTER_PEDIA</Tag>
 		<English>The sea otter (Enhydra lutris) is a marine mammal native to the coasts of the northern and eastern North Pacific Ocean. Adult sea otters typically weigh between 14 and 45 kg (30 and 100 lb), making them the heaviest members of the weasel family, but among the smallest marine mammals. Unlike most marine mammals, the sea otter's primary form of insulation is an exceptionally thick coat of fur, the densest in the animal kingdom. Although it can walk on land, the sea otter lives mostly in the ocean.[PARAGRAPH:2]The sea otter inhabits offshore environments, where it dives to the sea floor to forage. It preys mostly on marine invertebrates such as sea urchins, various molluscs and crustaceans, and some species of fish. Its foraging and eating habits are noteworthy in several respects. First, its use of rocks to dislodge prey and to open shells makes it one of the few mammal species to use tools. In most of its range, it is a keystone species, controlling sea urchin populations which would otherwise inflict extensive damage to kelp forest ecosystems. Its diet includes prey species that are also valued by humans as food, leading to conflicts between sea otters and fisheries.[PARAGRAPH:2]Sea otters, whose numbers were once estimated at 150,000 - 300,000, were hunted extensively for their fur between 1741 and 1911, and the world population fell to 1,000 - 2,000 individuals in a fraction of their historic range. A subsequent international ban on hunting, conservation efforts, and reintroduction programs into previously populated areas have contributed to numbers rebounding, and the species now occupies about two-thirds of its former range. The recovery of the sea otter is considered an important success in marine conservation, although populations in the Aleutian Islands and California have recently declined or have plateaued at depressed levels. For these reasons, the sea otter remains classified as an endangered species.</English>
 		<German>Der [COLOR_UNIT_TEXT]Seeotter[COLOR_REVERT], auch Kalan oder Meerotter (Enhydra lutris), ist ein Raubtier aus der Marderfamilie und neben dem Küstenotter die einzige Art, die nur im Meer lebt. In der Ökologie stellt der Seeotter eine Schlüsselart dar, da er trotz seines geringen Vorkommens großen Einfluss auf die Artenvielfalt hat. Die meisten Exemplare leben heute an den Küsten des Beringmeers in Alaska, auf den Aleuten und den Kommandeurinseln.[NEWLINE]Mit maximal 150 cm Körperlänge inklusive Schwanz gehört der Seeotter zu den größten Mardern. Das sehr dichte Fell ist dunkelbraun, am Kopf etwas heller, jedoch ohne isolierende Fettschicht, was unter den Meeressäugern einzigartig ist. Er ist sehr gut an das Wasser angepasst, was man an den nach hinten versetzten Hinterbeinen und den Schwimmhäuten zwischen den Zehen erkennt. Durch die wesentlich kleineren Vorderpfoten ähneln seine Bewegungsabläufe denen der Ohrenrobben. Der Schwanz ist im Gegensatz zu anderen Ottern abgeflacht, des Weiteren hat er nur 32 Zähne (anstatt der für Otter üblichen 36). Der Seeotter ist das einzige Raubtier mit nur zwei Paar Schneidezähnen im Unterkiefer. Die kräftigen Backenzähne eignen sich gut zum Zerbeißen von Muscheln oder Schnecken. Auch Werkzeuge werden oft benutzt, um die harten Schalen aufzubrechen. Häufig stehen pflanzenfressende Seeigel aus den Tangwäldern auf dem Speiseplan, was wiederum zum Erhalt dieser Wälder beiträgt. Der Seeotter kann sogar Salzwasser trinken, wobei das überschüssige Salz durch die großen Nieren wieder ausgeschieden wird. Da er im Wasser schläft, umwickelt er sich zuvor mit Seetang, um nicht abgetrieben zu werden. So schützen Mütter auch ihre Jungen, wenn sie auf Nahrungssuche gehen.[NEWLINE]Seeotterfell ist sehr lange haltbar und war schon kurz nach der Entdeckung der Art im Jahre 1741 äußerst begehrt, besonders als Mantelbesatz für russische und chinesische Würdenträger. Durch die Jagd wurden die Tiere fast ausgerottet, weswegen der Handel mit Otterfellen seit 1911 verboten ist. Die Bestände haben sich seitdem erholt. Aktuelle Gefahren drohen dem Seeotter vor allem durch ölverschmutzte Gewässer. Der größte Fressfeind ist der Große Schwertwal. In der Gesellschaft wird der Seeotter als possierlich dargestellt, was auch daran liegt, dass ein auf dem Rücken liegender Seeotter die Vorderpfoten so anhebt, als würde er winken. Er ziert u.a. Postkarten und T-Shirts und steht Modell für Plüschtiere.</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SEA_ANIMAL_STRATEGY</Tag>
-		<English>A few sea animals hunt unprotected rafts! Beware!!</English>
-		<French>Quelques animaux marins chassent les radeaux non protégés! Il faut se méfier!!</French>
-		<German>Einige Meerestiere jagen ungeschützte Flöße! Vorsicht!!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STAG_DEER</Tag>
@@ -5561,21 +5510,6 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_SEA_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Sea Lion</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lion des mers</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_TARANTULA</Tag>
-		<English>Subdued Tarantula</English>
-		<French>
-			<Text>Tarentule (App.)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gefangene Vogelspinne:Gefangenen Vogelspinne:Gefangenen Vogelspinne:Gefangene Vogelspinne:Gefangene Vogelspinnen:Gefangenen Vogelspinnen:Gefangenen Vogelspinnen:Gefangenen Vogelspinnen</Text>
-			<Gender>Female</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Russian>Òàðàíòóë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Tag>

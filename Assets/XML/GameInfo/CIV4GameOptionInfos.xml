@@ -34,7 +34,7 @@
 		<GameOptionInfo>
 			<Type>GAMEOPTION_LOCK_MODS</Type>
 			<Description>TXT_KEY_GAMEOPTION_LOCK_MODS</Description>
-			<Help>TXT_KEY_GAMEOPTION_LOCK_MODS</Help>
+			<Help>TXT_KEY_GAMEOPTION_LOCK_MODS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
 		</GameOptionInfo>

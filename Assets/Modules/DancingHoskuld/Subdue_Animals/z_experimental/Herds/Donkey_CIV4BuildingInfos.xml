@@ -5,7 +5,6 @@
 			<Type>BUILDING_DONKEY_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_DONKEY_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -47,7 +46,6 @@
 			<Type>BUILDING_DONKEY_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DONKEY_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -59,7 +57,6 @@
 			<Type>BUILDING_DONKEY_STORY</Type>
 			<Description>TXT_KEY_BUILDING_DONKEY_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
@@ -95,7 +92,6 @@
 			<Type>BUILDING_DONKEY_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_DONKEY_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
@@ -132,7 +128,6 @@
 			<Type>BUILDING_DONKEY_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DONKEY_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>

@@ -40,8 +40,8 @@
 			<option id="ColorCoding" key="Color Coding" type="boolean" default="True" get="isColorCoding" set="setColorCoding" label="Color Coding"
 				help="When checked, comments are color-coded for forum posts."/>
 
-			<list id="4000BC" key="4000BC" type="int" default="0" listType="int" values="0, 1" get="get4000BCTurn" set="set4000BCTurn" label="6000BC is Turn"
-				help="Select which turn number 6000BC should be."/>
+			<list id="StartDate" key="StartDate" type="int" default="0" listType="int" values="0, 1" get="getStartDateTurn" set="setStartDateTurn" label="200000BC is Turn"
+				help="Select which turn number 200000BC should be."/>
 
 			<option id="IBT" key="Show IBT" type="boolean" default="True" get="isShowIBT" set="setShowIBT" label="Show IBT"
 				help="When checked, the logger inserts IBT (in between turns) at the end of the player's turn."/>

@@ -38,14 +38,7 @@
 		<French>Autel pour Sacrifice Humain</French>
 		<Italian>Un altare utilizzato per i sacrifici umani</Italian>
 		<Polish>Ołtarz Ofiar z ludzi</Polish>
-		<Russian>[TAB]Àëòàðü äëÿ ÷åëîâå÷åñêèõ æåðòâîïðèíîøåíèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HUMAN_SACRIFICE_ALTAR_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Altar for Human Sacrifice[COLOR_REVERT] increases returns from human sacrifice.</English>
-		<French>L'[COLOR_UNIT_TEXT]Autel pour Sacrifice Humain[COLOR_REVERT] augmente les bénéfices du sacrifice humain.</French>
-		<Italian>L'[COLOR_UNIT_TEXT]Altare per sacrifici umani[COLOR_REVERT] incrementa gli effetti derivanti dai sacrifici umani.</Italian>
-		<Russian>The [COLOR_UNIT_TEXT]Æåðòâåííûé àëòàðü[COLOR_REVERT] ïîâûøàåò ýôôåêò îò ÷åëîâå÷åñêèõ æåðòâîïðèíîøåíèé.</Russian>
+		<Russian>Àëòàðü äëÿ ÷åëîâå÷åñêèõ æåðòâîïðèíîøåíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE</Tag>
@@ -77,14 +70,7 @@
 		<French>Sacrifice Humain...</French>
 		<Italian>Sacrifici umani...</Italian>
 		<Polish>Ofiary z ludzi...</Polish>
-		<Russian>[TAB]×åëîâå÷åñêèå æåðòâîïðèíîøåíèÿ....</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Worldview - Human Sacrifice[COLOR_REVERT] indicates that sacrificing humans to the god(s) is OK in your nation at this time. It can only be removed by a Great Person or Lawyer.</English>
-		<French>La [COLOR_UNIT_TEXT]Vision du monde - Sacrifices humaines[COLOR_REVERT] indique que la pratique des sacrifices humains pour les Dieux fait partie de votre culture. Elle peut uniquement être enlevée par un personnage illustre ou un avocat.</French>
-		<Italian>La [COLOR_UNIT_TEXT]Concezione del mondo - Sacrifici umani[COLOR_REVERT] indica che nella tua città è legale sacrificare agli dei altri individui. Può essere rimossa solo da un Grande personaggio o da un uomo di legge.</Italian>
-		<Russian>[COLOR_UNIT_TEXT]Ìèðîâîççðåíèå - ÷åëîâå÷åñêèõ æåðòâîïðèíîøåíèé[COLOR_REVERT] îòêðûâàåò âîçìîæíîñòü â âàøåé äåðæàâå ïðèíîñèòü â æåðòâó ëþäåé áîãàì â òåêóùåå âðåìÿ. Îíî ìîæåò áûòü çàïðåùåíî òîëüêî Âåëèêèìè ëþäüìè èëè Àäâîêàòàìè.</Russian>
+		<Russian>×åëîâå÷åñêèå æåðòâîïðèíîøåíèÿ....</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_REMOVE_WV_HUMAN_SACRIFICE</Tag>
@@ -93,14 +79,6 @@
 		<Italian>Ferma i sacrifici umani nella tua nazione.</Italian>
 		<Polish>Ofiary z ludzi w Twoim imperium zostają zakazane.</Polish>
 		<Russian>Ïðåêðàòèòü ÷åëîâå÷åñêèå æåðòâîïðèíîøåíèÿ â âàøåé ñòðàíå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_REMOVE_WV_HUMAN_SACRIFICE_HELP</Tag>
-		<English>Human Sacrifice will no longer be possible and your sacrificial altars will be sold.</English>
-		<French>Les sacrifices humains ne seront plus possibles, et l'autel sera fermé.</French>
-		<Italian>I sacrifici umani non saranno più possibili e i tuoi altari verranno venduti.</Italian>
-		<Polish>Ofiary z ludzi zostają zakazane, a Ołtarze Ofiar z ludzi zostają sprzedane.</Polish>
-		<Russian>×åëîâå÷åñêèå æåðòâîïðèíîøåíèÿ óæå áóäóò íåâîçìîæíû è âàøè Æåðòâåííèêè áóäóò ðàñïðîäàíû.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SACRIFICE_CAPTIVE</Tag>
@@ -117,14 +95,6 @@
 		<Italian>Incrementa la cultura e la felicità di una città. L'unità viene consumata. Potrebbe generare una piccola età dell'oro.</Italian>
 		<Polish>Zwiększa Kultura i Szczęście w mieście. Istnieje szansa na Złotą Erę. Jednostka zostaje usunięta.</Polish>
 		<Russian>Ïîâûøàåò êóëüòóðó è ñ÷àñòüå â ãîðîäå. Îòðÿä èñ÷åçàåò. Âîçìîæåí çàïóñê Çîëîòîãî Âåêà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MSG_ALTAR_SOLD</Tag>
-		<English>Your Altar for Human Sacrifice in %s1 has been sold.</English>
-		<French>Votre Autel pour les sacrifices humains de %s1 a été fermé.</French>
-		<Italian>Il tuo altare dei sacrifici di %s1 è stato venduto.</Italian>
-		<Polish>Twój Ołtarz Ofiar z ludzi w %s1 został sprzedany.</Polish>
-		<Russian>Âàø Æåðòâåííèê â %s áûë ïðîäàí.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_NO_HUMAN_SACRIFICE</Tag>

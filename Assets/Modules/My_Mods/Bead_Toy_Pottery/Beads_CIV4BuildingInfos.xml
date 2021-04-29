@@ -11,7 +11,6 @@
 			<Type>BUILDING_BEAD_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_BEAD_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEAD_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BEAD_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BEAD_FACTORY</ArtDefineTag>
@@ -137,7 +136,6 @@
 			<Type>BUILDING_BEADMAKER</Type>
 			<Description>TXT_KEY_BUILDING_BEADMAKER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEADMAKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BEADMAKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BEADMAKER</ArtDefineTag>
@@ -236,7 +234,6 @@
 			<Type>BUILDING_BEADMAKER_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_BEADMAKER_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEADMAKER_WORKSHOP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BEADMAKER_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BEADMAKER_WORKSHOP</ArtDefineTag>
