@@ -2899,4 +2899,927 @@
 		<Italian>I tuoi dettagli:</Italian>
 		<Spanish>Detalles:</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ALARM_GOES_OFF</Tag>
+		<English>RIIIIIIIIING! Time is now %s1_TimeStr.</English>
+		<French>DRIIIIIIIIING ! Il est %s1_TimeStr.</French>
+		<German>RIIIIIIIIING! Es ist jetzt %s1_TimeStr.</German>
+		<Italian>DRIIIIIIIIIN! Sono le %s1_TimeStr.</Italian>
+		<Spanish>&#161;RIIIIIIIIING! Hora: %s1_TimeStr.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ALARM_WILL_GO_OFF</Tag>
+		<English>Alarm will go off at %s1_TimeStr.</English>
+		<French>Le r&#233;veil se d&#233;clenchera &#224; %s1_TimeStr.</French>
+		<German>Der Alarm wird um %s1_TimeStr ausgel&#246;st.</German>
+		<Italian>L'allarme suoner&#224; tra %s1_TimeStr.</Italian>
+		<Spanish>La alarma se apagar&#225; a la/s %s1_TimeStr.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_AM_MORNING</Tag>
+		<English>[SPACE]AM</English>
+		<French>[SPACE]AM</French>
+		<German>[SPACE]a.m.</German>
+		<Italian>[SPACE]AM</Italian>
+		<Spanish>[SPACE]AM</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_OUT_OF_SYNC</Tag>
+		<English>***** OUT OF SYNC! MY SYNC SEED = %d1_Sync : MY OPTIONS SEED = %d2_Options *****[NEWLINE]</English>
+		<French>***** MAUVAISE SYNCHRONISATION ! MA POSITION = %d1_Sync : MES OPTIONS = %d2_Options *****\n</French>
+		<German>***** NICHT SYNCHRON! MEIN RANDOM SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</German>
+		<Italian>***** FUORI SINCRONIA! ESTRAZIONE CASUALE = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</Italian>
+		<Spanish>***** OUT OF SYNC! MY RANDOM SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PM_AFTERNOON</Tag>
+		<English>[SPACE]PM</English>
+		<French>[SPACE]PM</French>
+		<German>[SPACE]p.m.</German>
+		<Italian>[SPACE]PM</Italian>
+		<Spanish>[SPACE]PM</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_SAY_TO_ALL</Tag>
+		<English>Say to All:[SPACE]</English>
+		<French>Dire &#224; tous :[SPACE]</French>
+		<German>Alle ansprechen:[SPACE]</German>
+		<Italian>Parla a tutti:[SPACE]</Italian>
+		<Spanish>Decirles a todos:[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_SAY_TO_PLAYER</Tag>
+		<English>Say to %s1_PlyrName</English>
+		<French>Dire &#224; %s1_PlyrName</French>
+		<German>%s1_PlyrName ansprechen</German>
+		<Italian>Parla a %s1_PlyrName</Italian>
+		<Spanish>Decirle a %s1_PlyrName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_SAY_TO_TEAM</Tag>
+		<English>Say to Team:[SPACE]</English>
+		<French>Dire &#224; l'&#233;quipe :[SPACE]</French>
+		<German>Team ansprechen:[SPACE]</German>
+		<Italian>Parla alla squadra:[SPACE]</Italian>
+		<Spanish>Decirle al equipo:[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_SEND</Tag>
+		<English>Send</English>
+		<French>Envoyer</French>
+		<German>Senden</German>
+		<Italian>Invia</Italian>
+		<Spanish>Enviar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TRYING_TO_CONTACT</Tag>
+		<English>%s1_PlyrName is Trying to Contact You!</English>
+		<French>%s1_PlyrName essaie de vous contacter !</French>
+		<German>%s1_PlyrName versucht Euch zu kontaktieren!</German>
+		<Italian>%s1_PlyrName sta cercando di contattarti!</Italian>
+		<Spanish>%s1_PlyrName quiere contactar contigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WARNING</Tag>
+		<English>Warning!</English>
+		<French>Attention !</French>
+		<German>Warnung!</German>
+		<Italian>Attenzione!</Italian>
+		<Spanish>&#161;Aviso!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MOD_FOLDER_TAG</Tag>
+		<English>Mod Folder: %s1_Modname</English>
+		<French>R&#233;pertoire mods : %s1_Modname</French>
+		<German>Mod-Verzeichnis: %s1_Modname</German>
+		<Italian>Cartella mod: %s1_Modname</Italian>
+		<Spanish>Carpeta del mod: %s1_Modname</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MOD_REQUIRED</Tag>
+		<English>The save file you have selected requires the following mod to be loaded:[NEWLINE][BOLD]%s1[\BOLD][NEWLINE]The application must restart, ok?</English>
+		<French>La sauvegard&#233; s&#233;lectionn&#233;e n&#233;cessite le chargement du mod suivant : [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] L'application doit &#234;tre relanc&#233;e. Confirmer ?</French>
+		<German>F&#252;r den von Ihnen gew&#228;hlten Spielstand muss das folgende Mod geladen werden: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] Die Anwendung wird neu gestartet, okay? </German>
+		<Italian>Il salvataggio selezionato richiede il caricamento del seguente mod: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] Il gioco deve essere riavviato, continuare?</Italian>
+		<Spanish>La partida guardada que has seleccionado requiere que se cargue el siguiente mod: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] La aplicaci&#243;n debe reiniciarse. &#191;Aceptar? </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_DIPLO_CANCEL_CURRENT_DEALS</Tag>
+		<English>Cancel current deals...</English>
+		<French>Annuler les accords en cours...</French>
+		<German>Aktuelle Handelsvereinbarungen annullieren ...</German>
+		<Italian>Annulla gli accordi attuali...</Italian>
+		<Spanish>Cancelar los tratos actuales...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_DIPLO_EXIT</Tag>
+		<English>Exit diplomacy</English>
+		<French>Arr&#234;ter la diplomatie</French>
+		<German>Diplomatie beenden</German>
+		<Italian>Esci dalla diplomazia</Italian>
+		<Spanish>Salir de la diplomacia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_OFFER_TRADE</Tag>
+		<English>Offer trade</English>
+		<French>Proposer un &#233;change</French>
+		<German>Handel anbieten</German>
+		<Italian>Offri commercio</Italian>
+		<Spanish>Ofrecer intercambio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_RENEGOTIATE</Tag>
+		<English>System Message: Trade Renegotiation has begun.</English>
+		<French>Message syst&#232;me : les n&#233;gociations commerciales ont commenc&#233;es.</French>
+		<German>Systemmeldung: Die Neuverhandlungen f&#252;r Handelsabkommen haben begonnen.</German>
+		<Italian>Messaggio di sistema: la rinegoziazione commerciale &#232; iniziata.</Italian>
+		<Spanish>Mensaje del sistema: iniciada la renegociaci&#243;n del intercambio.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_RETRACT_OFFER</Tag>
+		<English>Retract offer</English>
+		<French>Retirer l'offre</French>
+		<German>Angebot zur&#252;ckziehen</German>
+		<Italian>Ritira offerta</Italian>
+		<Spanish>Retirar la oferta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_THEY_ACCEPT</Tag>
+		<English>They accept</English>
+		<French>Ils acceptent</French>
+		<German>Sie akzeptieren</German>
+		<Italian>Accettano</Italian>
+		<Spanish>Aceptan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_THEY_NO_ACCEPT</Tag>
+		<English>They do not accept</English>
+		<French>Ils refusent</French>
+		<German>Sie lehnen ab</German>
+		<Italian>Non accettano</Italian>
+		<Spanish>No aceptan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MULTIPLAYER_TAB_NAME</Tag>
+		<English>Multiplayer</English>
+		<French>Multijoueur</French>
+		<Italian>Multigiocatore</Italian>
+		<Spanish>Multijugador</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NAT_CONTACT_FAILURE_DESC</Tag>
+		<English>Could not connect to the NAT Negotiation server.</English>
+		<French>Connexion au serveur de n&#233;gociation NAT impossible.</French>
+		<German>Es konnte keine Verbindung zum NAT Negotiation Server hergestellt werden.</German>
+		<Italian>Impossibile connettersi al server di negoziazione NAT.</Italian>
+		<Spanish>No se ha podido conectar con el servidor de negociaci&#243;n NAT.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NAT_CONTACT_FAILURE_TITLE</Tag>
+		<English>NAT server unavailable</English>
+		<French>Serveur NAT indisponible</French>
+		<German>NAT-Server nicht verf&#252;gbar</German>
+		<Italian>Server NAT non disponibile</Italian>
+		<Spanish>Servidor NAT no disponible</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NICKNAME_INUSE_DESC</Tag>
+		<English>This login name has already been claimed by another account.</English>
+		<French>Ce pseudo est d&#233;j&#224; utilis&#233; par un autre compte.</French>
+		<German>Dieser Login-Name wird bereits von einem anderen Account verwendet.</German>
+		<Italian>Questo nome di login &#232; gi&#224; stato registrato da un altro account.</Italian>
+		<Spanish>Este nombre de inicio de sesi&#243;n ya se est&#225; utilizando con otra cuenta.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NICKNAME_INUSE_TITLE</Tag>
+		<English>Bad Login</English>
+		<French>Pseudo incorrect</French>
+		<German>Falscher Login</German>
+		<Italian>Login non valido</Italian>
+		<Spanish>Inicio de sesi&#243;n err&#243;neo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OOS_TITLE</Tag>
+		<English>The game has gone Out Of Sync.[NEWLINE]Please check OOS values (next to scores).[NEWLINE]The player with different values should reconnect in order to resync.</English>
+		<French>La partie n'est plus synchronis&#233;e.[NEWLINE]Veuillez v&#233;rifier vos valeurs hors synch. (&#224; c&#244;t&#233; des scores).[NEWLINE]Le joueur ayant des valeurs diff&#233;rentes devrait se reconnecter pour resynchroniser la partie.</French>
+		<German>Das Spiel l&#228;uft nicht mehr synchron.[NEWLINE]Bitte &#252;berpr&#252;fen Sie die OOS-Werte (neben den Ergebnissen).[NEWLINE]Der Spieler mit anderen Werten sollte sich neu verbinden, um die Synchronit&#228;t wiederherzustellen.</German>
+		<Italian>Il gioco non &#232; in sincronia.[NEWLINE]Controlla i valori OOS (Out Of Synch) vicini ai punteggi.[NEWLINE]Il giocatore con i valori diversi dovr&#224; riconnettersi per risincronizzarsi.</Italian>
+		<Spanish>El juego se ha desincronizado.[NEWLINE]Consulta los valores OOS de falta de sincronizaci&#243;n (junto a la puntuaci&#243;n).[NEWLINE]El jugador que tenga unos valores diferentes tendr&#225; que volver a conectar para poder sincronizarse.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_CONFIRM_RESOLUTION</Tag>
+		<English>Do you wish to keep this resolution?</English>
+		<French>Voulez-vous conserver cette r&#233;solution ?</French>
+		<German>Wollen Sie diese Aufl&#246;sung beibehalten?</German>
+		<Italian>Vuoi mantenere questa risoluzione?</Italian>
+		<Spanish>&#191;Quieres conservar esta resoluci&#243;n?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_TITLE</Tag>
+		<English>Options</English>
+		<German>Optionen</German>
+		<Italian>Opzioni</Italian>
+		<Spanish>Opciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUT_OF_VRAM</Tag>
+		<English>Failed to allocate video memory. Please try reducing your graphics settings.</English>
+		<French>Impossible d'allouer de la m&#233;moire graphique. Essayez de r&#233;duire vos param&#232;tres graphiques.</French>
+		<German>Grafikspeicher konnte nicht zugewiesen werden. Bitte reduzieren Sie Ihre Grafikeinstellungen.</German>
+		<Italian>Impossibile assegnare la memoria video. Prova a ridurre le impostazioni grafiche.</Italian>
+		<Spanish>No se pudo asignar la memoria de video. Intente reducir los ajustes de los gr&#225;ficos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTPUT_NOT_FOUND</Tag>
+		<English>Localized Output not found...</English>
+		<French>Donn&#233;es de sortie localis&#233;es non trouv&#233;es...</French>
+		<German>Kein lokalisierter Text vorhanden ...</German>
+		<Italian>Dati localizzati non trovati...</Italian>
+		<Spanish>No se ha encontrado salida localizada...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OVERWRITE_FILE</Tag>
+		<English>The file %s1 already exists.[NEWLINE]Press OK to proceed, overwriting the file.</English>
+		<French>Le fichier %s1 existe d&#233;j&#224;.[NEWLINE]Cliquez sur OK pour continuer et &#233;craser ce fichier.</French>
+		<German>Die Datei %s1 besteht bereits.[NEWLINE]W&#228;hlen Sie OK, um fortzufahren und die Datei zu &#252;berschreiben.</German>
+		<Italian>File di salvataggio di Civilization IV %s1 gi&#224; esistente.[NEWLINE]Premi OK per continuare e sovrascrivere il file.</Italian>
+		<Spanish>Ya existe el archivo %s1.[NEWLINE]Pulsa 'Aceptar' para continuar y sobrescribirlo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PASSWORD_REQUIRED_DESC</Tag>
+		<English>You must provide a password.</English>
+		<French>Vous devez fournir un mot de passe.</French>
+		<German>Sie m&#252;ssen ein Kennwort angeben.</German>
+		<Italian>Devi inserire una password.</Italian>
+		<Spanish>Hay que introducir una contrase&#241;a.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PASSWORD_REQUIRED_TITLE</Tag>
+		<English>Password required</English>
+		<French>Mot de passe requis</French>
+		<German>Kennwort erforderlich</German>
+		<Italian>Password necessaria</Italian>
+		<Spanish>Se requiere contrase&#241;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCH_AVAILABLE_INFO</Tag>
+		<English>An update is available.  Would you like to get it?</English>
+		<French>Une mise &#224; jour est disponible. Voulez-vous la t&#233;l&#233;charger ?</French>
+		<German>Es ist ein Update verf&#252;gbar. Wollen Sie es herunterladen?</German>
+		<Italian>&#200; disponibile una patch... vuoi scaricarla?</Italian>
+		<Spanish>Hay disponible una actualizaci&#243;n.  &#191;Quieres obtenerla?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCH_AVAILABLE_TITLEBAR</Tag>
+		<English>NEW PATCH AVAILABLE</English>
+		<French>NOUVEAU PATCH DISPONIBLE</French>
+		<German>NEUER PATCH VERF&#220;GBAR</German>
+		<Italian>NUOVA PATCH DISPONIBILE</Italian>
+		<Spanish>NUEVO PARCHE DISPONIBLE</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_CANCELLED_DESC</Tag>
+		<English>The patch download has been canceled.</English>
+		<French>Le t&#233;l&#233;chargement du patch a &#233;t&#233; annul&#233;.</French>
+		<German>Der Patch-Download wurde abgebrochen.</German>
+		<Italian>Lo scaricamento dell'aggiornamento &#232; stato annullato.</Italian>
+		<Spanish>Se ha cancelado la descarga del parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_CONNECT_DESC</Tag>
+		<English>We were unable to connect to the server hosting the patch.</English>
+		<French>Nous n'avons pas pu nous connecter au serveur h&#233;bergeant ce patch.</French>
+		<German>Wir konnten keine Verbindung zum Server herstellen, der den Patch anbietet.</German>
+		<Italian>Non siamo riusciti a connetterci al server host dell'aggiornamento.</Italian>
+		<Spanish>No se ha podido conectar con el servidor que aloja el parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCH_COMPLETE_DESC</Tag>
+		<English>The patch has been successfully downloaded.[NEWLINE]Press OK to close the game and install the patch.</English>
+		<French>Le patch a &#233;t&#233; charg&#233; avec succ&#232;s.[NEWLINE]Cliquez sur OK pour fermer le jeu et installer le patch.</French>
+		<German>Der Patch wurde erfolgreich heruntergeladen.[NEWLINE]Klicken Sie auf OK, um das Spiel zu beenden und den Patch zu installieren.</German>
+		<Italian>La patch &#232; stata scaricata con successo.[NEWLINE]Premi OK per chiudere il gioco e installare la patch.</Italian>
+		<Spanish>El parche se ha descargado con &#233;xito.[NEWLINE]Pulsa "Aceptar" para elegir la partida e instalar el parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_ENCRYPTION_DESC</Tag>
+		<English>An error occurred while trying to encrypt the patch data.</English>
+		<French>Une erreur s'est produite lors de la tentative d'encodage des donn&#233;es du patch.</French>
+		<German>Beim Versuch, die Patchdaten zu entschl&#252;sseln, ist ein Fehler aufgetreten.</German>
+		<Italian>Si &#236; verificato un errore durante la criptazione dei dati dell'aggiornamento.</Italian>
+		<Spanish>Se ha producido un error al intentar encriptar los datos del parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_FILENOTFOUND_DESC</Tag>
+		<English>The specified file for this patch could not be found on the server.</English>
+		<French>Le fichier indiqu&#233; pour ce patch n'a pas pu &#234;tre trouv&#233; sur le serveur.</French>
+		<German>Die angegebene Patchdatei konnte nicht auf dem Server gefunden werden.</German>
+		<Italian>Il file specificato per questo aggiornamento non &#232; stato trovato sul server.</Italian>
+		<Spanish>El archivo indicado para el parche no se ha encontrado en el servidor.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_FILEREAD_DESC</Tag>
+		<English>An error was encountered while trying to read data from our disk.</English>
+		<French>Une erreur s'est produite lors de la tentative de lecture de donn&#233;es sur notre disque.</French>
+		<German>Beim Versuch, Daten von unserer Festplatte zu lesen, ist ein Fehler aufgetreten.</German>
+		<Italian>Si &#232; verificato un errore durante la lettura dei dati dal disco.</Italian>
+		<Spanish>Se ha producido un error al intentar leer datos del disco.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_FILEWRITE_DESC</Tag>
+		<English>An error was encountered while trying to write data to our disk.</English>
+		<French>Une erreur s'est produite lors de la tentative d'&#233;criture de donn&#233;es sur notre disque.</French>
+		<German>Beim Versuch, Daten auf unsere Festplatte zu schreiben, ist ein Fehler aufgetreten.</German>
+		<Italian>Si &#232; verificato un errore durante la scrittura dei dati su disco.</Italian>
+		<Spanish>Se ha producido un error al intentar escribir datos en el disco.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_FORBIDDEN_DESC</Tag>
+		<English>The retrieval of the patch has been forbidden on this server.</English>
+		<French>La r&#233;cup&#233;ration du patch a &#233;t&#233; interdite sur ce serveur.</French>
+		<German>Auf diesem Server ist das Abrufen des Patchs nicht zugelassen.</German>
+		<Italian>Lo scaricamento dell'aggiornamento &#232; stato vietato da questo server.</Italian>
+		<Spanish>La recuperaci&#243;n del parche se ha prohibido en este servidor.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_HOSTNAME_DESC</Tag>
+		<English>The host name specified for this patch is not valid.</English>
+		<French>Le nom de l'h&#244;te indiqu&#233; pour ce patch n'est pas valide.</French>
+		<German>Der f&#252;r diesen Patch angegebene Hostname ist ung&#252;ltig.</German>
+		<Italian>Il nome dell'host specificato per l'aggiornamento non &#232; valido.</Italian>
+		<Spanish>El nombre de anfitri&#243;n indicado para el parche no es v&#225;lido.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_INCOMPLETE_DESC</Tag>
+		<English>The download of the patch was interrupted.</English>
+		<French>Le t&#233;l&#233;chargement du patch a &#233;t&#233; interrompu.</French>
+		<German>Der Patch-Download wurde unterbrochen.</German>
+		<Italian>Lo scaricamento dell'aggiornamento &#232; stato interrotto.</Italian>
+		<Spanish>Se ha interrumpido la descarga del parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_MEMORY_DESC</Tag>
+		<English>A memory error was encountered while downloading the patch.</English>
+		<French>Erreur m&#233;moire lors du t&#233;l&#233;chargement du patch</French>
+		<German>Beim Patch-Download ist ein Speicherfehler aufgetreten.</German>
+		<Italian>Si &#232; verificato un errore di memoria durante lo scaricamento dell'aggiornamento.</Italian>
+		<Spanish>Se ha producido un error de memoria al descargar el parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_OVERFLOW_DESC</Tag>
+		<English>Our computer could not handle the rate that the data was sent!  Verify your network speed is correct in game options.</English>
+		<French>Notre ordinateur n'a pas pu tenir le rythme auquel les donn&#233;es ont &#233;t&#233; envoy&#233;es ! V&#233;rifiez que votre vitesse r&#233;seau est correcte dans les options de jeu.</French>
+		<German>Unser Computer kam nicht mit der Daten&#252;bertragungsrate zurecht! Bitte die Netzwerkgeschwindigkeit in den Spieloptionen &#252;berpr&#252;fen.</German>
+		<Italian>Il nostro computer non potrebbe gestire la velocit&#224; di invio dei dati!  Verifica la velocit&#224; di rete nelle opzioni del gioco.</Italian>
+		<Spanish>El ordenador no ha soportado la tasa a la que se enviaban los datos.  Comprueba en las opciones de partida si la velocidad de red es correcta.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_PARSE_DESC</Tag>
+		<English>The URL specified for this patch is not valid.</English>
+		<French>L'URL indiqu&#233;e pour ce patch n'est pas valide.</French>
+		<German>Die f&#252;r diesen Patch angegebene URL ist ung&#252;ltig.</German>
+		<Italian>L'indirizzo URL specificato per l'aggiornamento non &#232; valido.</Italian>
+		<Spanish>La URL indicada para el parche no es v&#225;lida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_REJECTED_DESC</Tag>
+		<English>Our request for the patch has been rejected by the server.</English>
+		<French>Notre demande de patch a &#233;t&#233; rejet&#233;e par le serveur.</French>
+		<German>Unsere Patchanfrage wurde vom Server abgelehnt.</German>
+		<Italian>La nostra richiesta dell'aggiornamento &#232; stata respinta dal server.</Italian>
+		<Spanish>La solicitud del parche ha sido rechazada por el servidor.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_RESPONSE_DESC</Tag>
+		<English>The server hosting the patch sent us a strange response.</English>
+		<French>Le serveur h&#233;bergeant ce patch nous a envoy&#233; une &#233;trange r&#233;ponse.</French>
+		<German>Der Server, der den Patch anbietet, hat uns eine merkw&#252;rdige Antwort geschickt.</German>
+		<Italian>Il server host dell'aggiornamento ci ha inviato una risposta inattesa.</Italian>
+		<Spanish>El servidor que aloja el parche ha enviado una respuesta extra&#241;a.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_SERVER_DESC</Tag>
+		<English>The server hosting the patch has encountered an internal error.</English>
+		<French>Le serveur h&#233;bergeant le patch a rencontr&#233; une erreur interne.</French>
+		<German>Der Server, der den Patch anbietet, hat einen internen Fehler.</German>
+		<Italian>Si &#232; verificato un errore interno sul server host dell'aggiornamento.</Italian>
+		<Spanish>Se ha producido un error interno en el servidor que aloja el parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_SOCKET_DESC</Tag>
+		<English>There was a network resource error while downloading the patch.</English>
+		<French>Erreur de ressource r&#233;seau lors du t&#233;l&#233;chargement de ce patch.</French>
+		<German>Beim Patch-Download ist ein Netzwerkressourcenfehler aufgetreten.</German>
+		<Italian>Si &#232; verificato un errore di risorse di rete durante lo scaricamento dell'aggiornamento.</Italian>
+		<Spanish>Ha habido un error de recursos de red durante la descarga del parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCH_COMPLETE_TITLE</Tag>
+		<English>Patch Download Complete</English>
+		<French>Chargement du patch termin&#233;</French>
+		<German>Patch-Download abgeschlossen</German>
+		<Italian>Download patch completo</Italian>
+		<Spanish>Descarga del parche completa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_TOOBIG_DESC</Tag>
+		<English>The patch file is too large to be downloaded.</English>
+		<French>Le fichier du patch est trop gros pour &#234;tre t&#233;l&#233;charg&#233;.</French>
+		<German>Die Patch-Datei ist zu gro&#223; f&#252;r den Download.</German>
+		<Italian>Il file dell'aggiornamento &#232; troppo grosso per essere scaricato.</Italian>
+		<Spanish>El archivo del parche es demasiado voluminoso para descargarlo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_UNAUTHORIZED_DESC</Tag>
+		<English>We are not authorized to access the patch.</English>
+		<French>Nous ne sommes pas autoris&#233;s &#224; acc&#233;der au patch.</French>
+		<German>Wir haben keinen autorisierten Zugang zu diesem Patch.</German>
+		<Italian>Non siamo autorizzati ad accedere all'aggiornamento.</Italian>
+		<Spanish>No se tiene autorizaci&#243;n para acceder al parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHCOMPLETE_UNKNOWN_DESC</Tag>
+		<English>An unknown error has occurred while downloading the patch.</English>
+		<French>Une erreur inconnue est survenue lors du t&#233;l&#233;chargement du patch.</French>
+		<German>Beim Patch-Download ist ein unbekannter Fehler aufgetreten.</German>
+		<Italian>Si &#232; verificato un errore sconosciuto durante lo scaricamento dell'aggiornamento.</Italian>
+		<Spanish>Se ha producido un error desconocido al descargar el parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCH_DOWNLOADING_DESC</Tag>
+		<English>Unable to act while downloading the patch.</English>
+		<French>Impossible d'agir pendant le chargement du patch.</French>
+		<German>W&#228;hrend des Patch-Downloads sind keine weiteren Aktivit&#228;ten m&#246;glich.</German>
+		<Italian>Impossibile durante il download della patch.</Italian>
+		<Spanish>No se pueden llevar a cabo otras acciones mientras se descarga el parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCH_DOWNLOADING_TITLE</Tag>
+		<English>Downloading patch</English>
+		<French>Chargement du patch...</French>
+		<German>Patch wird heruntergeladen</German>
+		<Italian>Download della patch in corso</Italian>
+		<Spanish>Descargando parche</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCH_FAILED_TITLE</Tag>
+		<English>Patch Download Failed</English>
+		<French>Echec du chargement du patch</French>
+		<German>Patch-Download gescheitert</German>
+		<Italian>Download patch fallito</Italian>
+		<Spanish>Ha fallado la descarga del parche</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHING_COMPLETE_DESC</Tag>
+		<English>The patch has been successfully downloaded. Press OK to close the game and install the patch.</English>
+		<French>Le patch a &#233;t&#233; charg&#233; avec succ&#232;s. Cliquez sur OK pour fermer le jeu et installer le patch.</French>
+		<German>Der Patch wurde erfolgreich heruntergeladen. Klicken Sie auf OK, um das Spiel zu beenden und den Patch zu installieren.</German>
+		<Italian>La patch &#232; stata scaricata con successo. Premi OK per chiudere il gioco e installare la patch.</Italian>
+		<Spanish>El parche se ha descargado con &#233;xito. Pulsa "Aceptar" para elegir la partida e instalar el parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHING_COMPLETE_TITLE</Tag>
+		<English>DOWNLOAD COMPLETE</English>
+		<French>CHARGEMENT TERMINE</French>
+		<German>DOWNLOAD ABGESCHLOSSEN</German>
+		<Italian>DOWNLOAD COMPLETATO</Italian>
+		<Spanish>DESCARGA COMPLETA</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHING_FAILED_DESC</Tag>
+		<English>The patch failed to downloaded successfully.</English>
+		<French>Le t&#233;l&#233;chargement du patch a &#233;chou&#233;.</French>
+		<German>Der Patch konnte nicht heruntergeladen werden.</German>
+		<Italian>Impossibile scaricare la patch.</Italian>
+		<Spanish>El parche no se ha podido descargar con &#233;xito.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHING_FAILED_TITLE</Tag>
+		<English>DOWNLOAD FAILED</English>
+		<French>ECHEC DU CHARGEMENT</French>
+		<German>DOWNLOAD FEHLGESCHLAGEN</German>
+		<Italian>DOWNLOAD FALLITO</Italian>
+		<Spanish>FALLO AL DESCARGAR</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCHING_WEBSITE_INFO</Tag>
+		<English>Please visit www.CivIV.com for the latest patching information.</English>
+		<French>Veuillez visiter le site www.CivIV.com pour obtenir les derni&#232;res informations de patch.</French>
+		<German>Die neuesten Patchinfos erhalten Sie unter www.2kgames.de/civ.</German>
+		<Italian>Visita il sito Internet www.CivIV.com per le ultime informazioni sugli aggiornamenti.</Italian>
+		<Spanish>Visita www.CivIV.com para obtener la &#250;ltima informaci&#243;n acerca de los parches.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCH_NAME_TAG</Tag>
+		<English>Patch Name:  %s1_Name</English>
+		<French>Nom du patch :  %s1_Name</French>
+		<German>Patch-Name:  %s1_Name</German>
+		<Italian>Nome patch: %s1_Name</Italian>
+		<Spanish>Nombre del parche: %s1_Name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCH_REQUIRED_INFO</Tag>
+		<English>You must update your game before proceeding.</English>
+		<French>Vous devez mettre &#224; jour votre version du jeu avant de continuer.</French>
+		<German>Sie m&#252;ssen Ihr Spiel aktualisieren, bevor Sie fortfahren k&#246;nnen.</German>
+		<Italian>Prima di procedere devi aggiornare il gioco.</Italian>
+		<Spanish>Debes actualizar la partida antes de continuar.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCH_REQUIRED_TITLEBAR</Tag>
+		<English>REQUIRED PATCH</English>
+		<French>PATCH REQUIS</French>
+		<German>PATCH ERFORDERLICH</German>
+		<Italian>PATCH NECESSARIA</Italian>
+		<Spanish>SE REQUIERE PARCHE</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PATCH_UPDATE_TITLE</Tag>
+		<English>Patching...</English>
+		<French>Installation du patch en cours...</French>
+		<German>Patch-Installation l&#228;uft ...</German>
+		<Italian>Patch in corso...</Italian>
+		<Spanish>Aplicando parche...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PBEM_DONT_SEND</Tag>
+		<English>Don't send</English>
+		<French>Ne pas envoyer</French>
+		<German>Nicht senden</German>
+		<Italian>Non spedire</Italian>
+		<Spanish>No enviar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PBEM_ENTER_ADDRESS</Tag>
+		<English>Enter E-mail address for %s1_player:</English>
+		<French>Saisir une adresse email pour %s1_player:</French>
+		<German>E-Mail-Adresse f&#252;r %s1_player eingeben:</German>
+		<Italian>Inserisci l'indirizzo e-mail di %s1_player:</Italian>
+		<Spanish>Escribe la direcci&#243;n de e-mail de %s1_player:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PBEM_ENTER_PASSWORD</Tag>
+		<English>Enter Password for %s1_leader</English>
+		<French>Saisissez le mot de passe pour %s1_leader</French>
+		<German>Kennwort f&#252;r %s1_leader eingeben</German>
+		<Italian>Inserisci una password per %s1_leader</Italian>
+		<Spanish>Introduce la contrase&#241;a de %s1_leader</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PBEM_NEXT_PLAYER</Tag>
+		<English>%s1_leader, it's your turn!</English>
+		<French>%s1_leader, &#224; vous de jouer !</French>
+		<German>Ihr seid dran, %s1_leader!</German>
+		<Italian>%s1_leader, &#232; il tuo turno!</Italian>
+		<Spanish>&#161;Es vuestro turno, %s1_leader!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PBEM_NOT_SENDING</Tag>
+		<English>The save has been placed in your PBEM folder. Please send it to %s1_leader.[NEWLINE] If you set your e-mail address and SMTP server, saves can be sent from within the game.</English>
+		<French>La sauvegarde a &#233;t&#233; enregistr&#233;e dans votre r&#233;pertoire PBEM. Veuillez l'envoyer &#224; %s1_leader.[NEWLINE] Si vous avez sp&#233;cifi&#233; une adresse e-mail et un serveur SMTP, les sauvegardes peuvent &#234;tre envoy&#233;es depuis le jeu.</French>
+		<German>Der Spielstand wurde in Ihrem PBEM-Verzeichnis abgelegt. Senden Sie ihn bitte an %s1_leader.[NEWLINE] Wenn Sie Ihre E-Mail-Adresse und den SMTP-Server einstellen, k&#246;nnen Spielstand-Dateien aus dem Spiel heraus versendet werden.</German>
+		<Italian>Il salvataggio &#232; stato effettuato nella cartella PBEM. Spediscilo a %s1_leader.[NEWLINE] Se imposti il tuo indirizzo e-mail e il server SMTP, i salvataggi possono essere spediti dal gioco.</Italian>
+		<Spanish>La partida guardada se ha colocado en tu carpeta PBEM. Env&#237;asela a %s1_leader.[NEWLINE] Si fijas una direcci&#243;n de e-mail y un servidor SMTP, las partidas guardadas podr&#225;n enviarse desde el juego.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEACE_ERROR</Tag>
+		<English>When trading for a peace treaty, only one player may offer items to another player.  Only gifts may be offered as payment for ending war, no trades can be made.</English>
+		<French>Lors de la n&#233;gociation d'un trait&#233; de paix, seul l'un des joueurs peut offrir quelque chose &#224; l'autre. Pour faire la paix, seuls les pr&#233;sents sont possibles, aucun &#233;change ne peut &#234;tre conclu.</French>
+		<German>Beim Aushandeln eines Friedensvertrags bietet der anfragende Spieler dem anderen Spieler eine Gegenleistung an. Es findet kein beidseitiger Handel statt und es k&#246;nnen ausschlie&#223;lich Schenkungen angeboten werden.</German>
+		<Italian>Quando tratti la pace, solo un giocatore pu&#242; offrirla a un altro. Come pagamento per il termine di una guerra, sono accettati solamente dei doni e non sono permesse azioni commerciali.</Italian>
+		<Spanish>Al realizar un intercambio para alcanzar un tratado de paz, solo uno de los jugadores puede ofrecerle cosas al otro.  Solo se pueden ofrecer regalos como pago para poner fin a la guerra, no se pueden realizar intercambios.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEER_CONNECT_FAILURE_DESC</Tag>
+		<English>We were unable to connect to another joining player.[NEWLINE]This player may not have his firewall environment properly configured.</English>
+		<French>Connexion &#224; un autre joueur voulant rejoindre la partie impossible.[NEWLINE]Son environnement firewall n'est peut-&#234;tre pas correctement configur&#233;.</French>
+		<German>Wir konnten keine Verbindung zu einem anderen einsteigenden Spieler aufbauen.[NEWLINE]Der Spieler hat seine Firewall-Umgebung eventuell nicht korrekt konfiguriert.</German>
+		<Italian>Impossibile connettersi al giocatore.[NEWLINE]Il giocatore potrebbe non aver impostato correttamente il firewall.</Italian>
+		<Spanish>Ha sido imposible conectar con otro jugador que intentaba unirse.[NEWLINE]Puede que ese jugador no tenga configurado correctamente su entorno de firewall/servidor de seguridad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEER_CONNECT_FAILURE_TITLE</Tag>
+		<English>Peer Connection Failure!</English>
+		<French>Echec de la connexion au peer !</French>
+		<German>Peer-Verbindungsfehler!</German>
+		<Italian>Errore di connessione al peer!</Italian>
+		<Spanish>Fallo al conectar con interlocutor</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEER_FAILURE_DESC</Tag>
+		<English>An incoming player has failed to connect to you and is unable to join the game.[NEWLINE]Please verify that your firewall allows incoming connections for Civilization IV.</English>
+		<French>Un joueur entrant n'a pas pu se connecter &#224; vous et ne peut pas rejoindre la partie.[NEWLINE]Veuillez v&#233;rifier que votre firewall autorise des connexions entrantes pour Civilization IV.</French>
+		<German>Ein einsteigender Spieler konnte keine Verbindung zu Ihnen herstellen und kann dem Spiel nicht beitreten.[NEWLINE]Bitte stellen Sie sicher, dass Ihre Firewall eingehende Verbindungen f&#252;r Civilization IV erlaubt.</German>
+		<Italian>Un altro giocatore non &#232; riuscito a connettersi al tuo sistema e non pu&#242; partecipare alla partita.[NEWLINE]Controlla che le impostazioni del tuo firewall permettano il passaggio delle connessioni in arrivo a Civilization IV.</Italian>
+		<Spanish>El jugador entrante no ha conseguido conectarse y no puede unirse a la partida.[NEWLINE]Comprueba si tu firewall/servidor de seguridad permite las conexiones entrantes de Civilization IV.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEER_FAILURE_TITLE</Tag>
+		<English>Connection Failure!</English>
+		<French>Echec de la connexion !</French>
+		<German>Verbindungsfehler!</German>
+		<Italian>Errore durante la connessione!</Italian>
+		<Spanish>Fallo en la conexi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PING_RECEIVED</Tag>
+		<English>Ping received from %s1_player.</English>
+		<French>Ping reçu par %s1_player.</French>
+		<German>Ping von Spieler %s1_player erhalten.</German>
+		<Italian>Ping ricevuto da %s1_player.</Italian>
+		<Spanish>Ping recibido de %s1_player.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PITBOSS_PLAYER</Tag>
+		<English>Player %d1</English>
+		<French>Joueur %d1</French>
+		<German>Spieler %d1</German>
+		<Italian>Giocatore %d1</Italian>
+		<Spanish>Jugador %d1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PITBOSS_TEAM</Tag>
+		<English>Team</English>
+		<French>Equipe</French>
+		<German>Team</German>
+		<Italian>Squadra</Italian>
+		<Spanish>Equipo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_VOTE_DESC</Tag>
+		<English>%s1_Name's vote:</English>
+		<French>Vote de %s1_Name :</French>
+		<German>Abstimmung von %s1_Name:</German>
+		<Italian>Il voto di %s1_Name:</Italian>
+		<Spanish>Voto de %s1_Name:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ADMIN_PASSWORD</Tag>
+		<English>Admin Password:</English>
+		<French>Mot de passe administrateur :</French>
+		<German>Admin-Kennwort:</German>
+		<Italian>Password amministratore:</Italian>
+		<Spanish>Contrase&#241;a del administrador:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CANCEL</Tag>
+		<English>Cancel</English>
+		<French>Annuler</French>
+		<German>Abbrechen</German>
+		<Italian>Annulla</Italian>
+		<Spanish>Cancelar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CANNOT_CANCEL_DEAL</Tag>
+		<English>This deal cannot currently be canceled.</English>
+		<French>Cet accord ne peut pas &#234;tre annul&#233; pour l'instant.</French>
+		<German>Dieser Handel kann zurzeit nicht aufgek&#252;ndigt werden.</German>
+		<Italian>L'accordo non pu&#242; essere annullato in questo momento.</Italian>
+		<Spanish>Este trato no puede cancelarse ahora mismo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DETAILS_SMTP</Tag>
+		<English>SMTP Server</English>
+		<French>Serveur SMTP</French>
+		<German>SMTP-Server</German>
+		<Italian>Server SMTP</Italian>
+		<Spanish>Servidor SMTP</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_INSTALL</Tag>
+		<English>Install</English>
+		<French>Installer</French>
+		<German>Installieren</German>
+		<Italian>Installa</Italian>
+		<Spanish>Instalar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_NO</Tag>
+		<English>No</English>
+		<French>Non</French>
+		<German>Nein</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_YES</Tag>
+		<English>Yes</English>
+		<French>Oui</French>
+		<German>Ja</German>
+		<Italian>S&#236;</Italian>
+		<Spanish>S&#237;</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROFILES_SELECT_MUSIC_PATH</Tag>
+		<English>Choose a Folder to Play Music From</English>
+		<French>Choisissez le r&#233;pertoire de lecture de la musique</French>
+		<German>Gew&#252;nschten Musikordner w&#228;hlen</German>
+		<Italian>Scegli la cartella contenente la musica desiderata</Italian>
+		<Spanish>Escoge una carpeta desde donde reproducir la m&#250;sica</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_QUEST_MESSAGE_LOG</Tag>
+		<English>Quests</English>
+		<French>Qu&#234;tes</French>
+		<Italian>Imprese</Italian>
+		<Spanish>Misiones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_QUICK_SAVING</Tag>
+		<English>Quick Saving...</English>
+		<French>Sauvegarde rapide en cours...</French>
+		<German>Schnellspeichern ...</German>
+		<Italian>Salvataggio rapido in corso...</Italian>
+		<Spanish>Guardado r&#225;pido...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RECIP_BUDDY_PROMPT</Tag>
+		<English>[COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] must be a buddy to receive messages from you.[NEWLINE][NEWLINE]Would you to add [COLOR_SELECTED_TEXT]%s2_Name[COLOR_REVERT] to your buddy list?</English>
+		<French>[COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] doit &#234;tre votre ami pour recevoir des messages de votre part.[NEWLINE][NEWLINE]Voulez-vous ajouter [COLOR_SELECTED_TEXT]%s2_Name[COLOR_REVERT] &#224; votre liste d'amis ?</French>
+		<German>[COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] muss ein Freund sein, um Nachrichten von Ihnen empfangen zu k&#246;nnen.[NEWLINE][NEWLINE]Wollen Sie [COLOR_SELECTED_TEXT]%s2_Name[COLOR_REVERT] zu Ihrer Freundesliste hinzuf&#252;gen?</German>
+		<Italian>[COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] deve essere un amico per ricevere il tuo messaggio.[NEWLINE][NEWLINE]Vuoi aggiungere [COLOR_SELECTED_TEXT]%s2_Name[COLOR_REVERT] alla tua lista amici?</Italian>
+		<Spanish>[COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] debe ser un amigo para poder recibir tus mensajes.[NEWLINE][NEWLINE]&#191;Quieres agregar a [COLOR_SELECTED_TEXT]%s2_Name[COLOR_REVERT] a tu lista de amigos?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RECOMMENDED_SPECS_MESSAGE</Tag>
+		<English>Your machine is below recommended specifications. The graphic settings were altered to accomodate this, however, you may experience performance issues.</English>
+		<French>Votre machine ne correspond pas &#224; la configuration recommand&#233;e. Les param&#232;tres graphiques ont &#233;t&#233; modifi&#233;s pour pallier ce probl&#232;me, mais les performances du programme risquent d'en souffrir.</French>
+		<German>Ihr Computer entspricht nicht den empfohlenen Systemspezifikationen. Die Grafikeinstellungen wurden entsprechend angepasst, es k&#246;nnten jedoch Performance-Probleme auftreten.</German>
+		<Italian>Il tuo computer &#232; al di sotto dei requisiti consigliati. Le impostazioni grafiche sono state alterate di conseguenza ma, tuttavia, potrai avere dei problemi di prestazioni.</Italian>
+		<Spanish>El ordenador no cumple los requisitos recomendados. Se ha modificado la configuraci&#243;n gr&#225;fica en consecuencia, pero aun as&#237; es posible que se experimenten problemas de rendimiento.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REJECT_FULL_DESC</Tag>
+		<English>The chosen game is full.</English>
+		<French>La partie choisie est d&#233;j&#224; pleine.</French>
+		<German>Das gew&#228;hlte Spiel ist belegt.</German>
+		<Italian>La partita scelta &#232; al completo.</Italian>
+		<Spanish>La partida elegida est&#225; completa.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REJECT_FULL_TITLE</Tag>
+		<English>Connection rejected.</English>
+		<French>Connexion refus&#233;e</French>
+		<German>Verbindungsanfrage abgewiesen.</German>
+		<Italian>Connessione rifiutata.</Italian>
+		<Spanish>Conexi&#243;n rechazada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REJECT_INVALID_DATA_DESC</Tag>
+		<English>Our connection has been rejected because we have provided invalid identification data.</English>
+		<French>Notre connexion a &#233;t&#233; refus&#233;e. Donn&#233;es d'identification incorrectes.</French>
+		<German>Die Verbindungsabfrage wurde wegen ung&#252;ltiger Identifikationsdaten abgewiesen.</German>
+		<Italian>La nostra connessione &#232; stata rifiutata perch&#233; abbiamo fornito dati di identificazione non validi.</Italian>
+		<Spanish>La conexi&#243;n ha sido rechazada porque se han facilitado unos datos de identificaci&#243;n no v&#225;lidos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REJECT_INVALID_DATA_TITLE</Tag>
+		<English>Connection rejected.</English>
+		<French>Connexion refus&#233;e</French>
+		<German>Verbindungsanfrage abgewiesen.</German>
+		<Italian>Connessione rifiutata.</Italian>
+		<Spanish>Conexi&#243;n rechazada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REJECT_LAUNCHING_DESC</Tag>
+		<English>The chosen game is currently launching.  Unable to connect at this time.</English>
+		<French>La partie choisie est en cours de lancement. Connexion impossible pour l'instant.</French>
+		<German>Das gew&#228;hlte Spiel wird zurzeit gestartet. Ein Verbindungsaufbau ist gegenw&#228;rtig nicht m&#246;glich.</German>
+		<Italian>La partita scelta &#232; in avvio. Impossibile connettersi in questo momento.</Italian>
+		<Spanish>La partida elegida se est&#225; iniciando.  No es posible conectarse en este momento.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REJECT_LAUNCHING_TITLE</Tag>
+		<English>Connection rejected.</English>
+		<French>Connexion refus&#233;e</French>
+		<German>Verbindungsanfrage abgewiesen.</German>
+		<Italian>Connessione rifiutata.</Italian>
+		<Spanish>Conexi&#243;n rechazada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REMOVE_BUDDY_NAME_TITLE</Tag>
+		<English>Remove a Buddy</English>
+		<French>Supprimer un ami</French>
+		<German>Einen Freund entfernen</German>
+		<Italian>Elimina un amico</Italian>
+		<Spanish>Quitar a un amigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REMOVE_BUDDY_TAG</Tag>
+		<English>Remove Buddy</English>
+		<French>Supprimer ami</French>
+		<German>Freund entfernen</German>
+		<Italian>Elimina amico</Italian>
+		<Spanish>Quitar amigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REMOVE_BUDDY_TITLE</Tag>
+		<English>REMOVE EXISTING BUDDY</English>
+		<French>SUPPRIMER AMI EXISTANT</French>
+		<German>VORHANDENEN FREUND ENTFERNEN</German>
+		<Italian>ELIMINA AMICO ESISTENTE</Italian>
+		<Spanish>ELIMINAR AMIGO EXISTENTE</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REMOVE_BUDDY_VERIFY</Tag>
+		<English>Are you sure you want to remove this buddy?</English>
+		<French>Voulez-vous vraiment supprimer cet ami de votre liste ?</French>
+		<German>Soll dieser Freund wirklich aus der Liste entfernt werden?</German>
+		<Italian>Sei sicuro di voler eliminare questo amico?</Italian>
+		<Spanish>&#191;Seguro que quieres quitar a este amigo?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SAVE_ERROR</Tag>
+		<English>Save Error</English>
+		<French>Erreur lors de la sauvegarde</French>
+		<German>Speicherfehler</German>
+		<Italian>Errore di salvataggio</Italian>
+		<Spanish>Error de guardado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SAVE_EXTENSION_DESC</Tag>
+		<English>Saves</English>
+		<French>Sauvegardes</French>
+		<German>Spielstand-Dateien</German>
+		<Italian>Salvataggi</Italian>
+		<Spanish>Partidas guardadas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SAVE_FILE</Tag>
+		<English>Save File</English>
+		<French>Sauvegarder fichier</French>
+		<German>Datei speichern</German>
+		<Italian>Salva file</Italian>
+		<Spanish>Guardar archivo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SAVE_FILE_CORRUPT</Tag>
+		<English>You are attempting to load a corrupt save file. The game will now exit.</English>
+		<French>Vous essayez de charger un fichier corrompu. Le jeu va maintenant se fermer.</French>
+		<German>Sie versuchen, einen fehlerhaften Spielstand zu laden. Das Spiel wird nun verlassen.</German>
+		<Italian>Stai cercando di caricare un file di salvataggio corrotto. Il gioco verr&#224; chiuso automaticamente.</Italian>
+		<Spanish>Est&#225;s intentando cargar un archivo guardado corrupto. Se va a proceder a salir del juego.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SAVING_GAME</Tag>
+		<English>Saving Game...</English>
+		<French>Sauvegarde en cours...</French>
+		<German>Speichervorgang ...</German>
+		<Italian>Salvataggio in corso...</Italian>
+		<Spanish>Guardando la partida...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SCREEN_CANCEL</Tag>
+		<English>Cancel</English>
+		<French>Annuler</French>
+		<German>Abbrechen</German>
+		<Italian>Annulla</Italian>
+		<Spanish>Cancelar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SEND_MAP_WAIT</Tag>
+		<English>Sending map to clients.  Please wait...</English>
+		<French>Envoi de la carte aux clients. Veuillez patienter...</French>
+		<German>Karte wird an Clients gesendet. Bitte warten ...</German>
+		<Italian>Invio della mappa ai client in corso.  Attendere...</Italian>
+		<Spanish>Enviando el mapa a los clientes.  Un momento...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SENT_BUDDY_REQUEST_DESC</Tag>
+		<English>The buddy request has been sent.</English>
+		<French>La requ&#234;te d'ami a &#233;t&#233; envoy&#233;e.</French>
+		<German>Die Freundesanfrage wurde gesendet.</German>
+		<Italian>La richiesta amico &#232; stata inviata.</Italian>
+		<Spanish>Se ha enviado la solicitud de amigo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SENT_BUDDY_REQUEST_TITLE</Tag>
+		<English>Buddy request sent</English>
+		<French>Requ&#234;te d'ami envoy&#233;e</French>
+		<German>Freundesanfrage gesendet</German>
+		<Italian>Richiesta amico inviata</Italian>
+		<Spanish>Enviada solicitud de amigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_ENTER_CAPTION</Tag>
+		<English>Enter caption</English>
+		<French>Saisir l&#233;gende</French>
+		<German>Titel eingeben</German>
+		<Italian>Inserisci didascalia</Italian>
+		<Spanish>Escribir un encabezamiento</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SMTP_PASSWORD</Tag>
+		<English>Password for SMTP Secure Password Authentication (if required)</English>
+		<French>Mot de passe pour l'authentification SMTP (si n&#233;cessaire)</French>
+		<German>Kennwort f&#252;r SMTP-Kennwortauthentifizierung (sofern erforderlich)</German>
+		<Italian>Username per l'SMTP (se necessaria)</Italian>
+		<Spanish>Contrase&#241;a para autenticaci&#243;n segura de SMTP (si es necesaria)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SMTP_USERNAME</Tag>
+		<English>Username for SMTP Secure Password Authentication (if required)</English>
+		<French>Nom d'utilisateur pour l'authentification SMTP (si n&#233;cessaire)</French>
+		<German>Benutzername f&#252;r SMTP-Kennwortauthentifizierung (sofern erforderlich)</German>
+		<Italian>Username per l'SMTP (se necessario)</Italian>
+		<Spanish>Nombre de usuario para autenticaci&#243;n segura de SMTP (si es necesario)</Spanish>
+	</TEXT>
 </Civ4GameText>
