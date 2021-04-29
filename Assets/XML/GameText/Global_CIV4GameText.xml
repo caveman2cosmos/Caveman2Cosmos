@@ -16193,4 +16193,828 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Estensione del pianeta</Italian>
 		<Spanish>Cobertura del mundo</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ALL_LEADERS</Tag>
+		<English>All Leaders</English>
+		<French>Tous h&#233;ros</French>
+		<German>Alle Staatsoberh&#228;upter</German>
+		<Italian>Tutti i leader</Italian>
+		<Spanish>Todos los l&#237;deres</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ALL_VICTORIES</Tag>
+		<English>All Victories</English>
+		<French>Toutes victoires</French>
+		<German>Siege</German>
+		<Italian>Tutte le vittorie</Italian>
+		<Spanish>Todas las victorias</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ALL_DIFFICULTIES</Tag>
+		<English>All Difficulties</English>
+		<French>Toutes difficult&#233;s</French>
+		<German>Alle Schwierigkeitsgrade</German>
+		<Italian>Tutte le difficolt&#224;</Italian>
+		<Spanish>Todas las dificultades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ALL_WORLD_SIZES</Tag>
+		<English>All World Sizes</English>
+		<French>Toutes tailles de monde</French>
+		<German>Weltgr&#246;&#223;en</German>
+		<Italian>Dimensioni del mondo</Italian>
+		<Spanish>Tam&#241;o del mundo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ALL_ERAS</Tag>
+		<English>All Starting Eras</English>
+		<French>Toutes &#232;res de d&#233;part</French>
+		<German>Alle Startzeitalter</German>
+		<Italian>Tutte le ere iniziali</Italian>
+		<Spanish>Todas las &#233;pocas de inic.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ALL_GAME_SPEEDS</Tag>
+		<English>All Game Speeds</English>
+		<French>Toutes vitesses de jeu</French>
+		<German>Spielgeschwindigkeiten</German>
+		<Italian>Tutte le velocit&#224; di gioco</Italian>
+		<Spanish>Velocidad de juego</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HALL_OF_FAME_SCREEN_TITLE</Tag>
+		<English>Hall of Fame</English>
+		<French>Panth&#233;on</French>
+		<German>Ruhmeshalle</German>
+		<Italian>Hall of Fame</Italian>
+		<Spanish>Sal&#243;n de la Fama</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HALL_OF_FAME_SORT_BY_NORMALIZED_SCORE</Tag>
+		<English>Normalized Score</English>
+		<French>Score normalis&#233;</French>
+		<German>Endpunktestand</German>
+		<Italian>Punteggio normalizzato</Italian>
+		<Spanish>Puntuaci&#243;n normalizada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HALL_OF_FAME_SORT_BY_GAME_SCORE</Tag>
+		<English>In-game Score</English>
+		<French>Score du jeu</French>
+		<German>Spiel-Punktestand</German>
+		<Italian>Punteggio in partita</Italian>
+		<Spanish>Puntuaci&#243;n en el juego</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HALL_OF_FAME_SORT_BY_DATE</Tag>
+		<English>Finish Date</English>
+		<French>Date de fin</French>
+		<German>Enddatum</German>
+		<Italian>Conclusione</Italian>
+		<Spanish>T&#233;rmino</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PITBOSS_LEADER</Tag>
+		<English>Leader</English>
+		<French>Chef</French>
+		<German>Staatsoberhaupt</German>
+		<Italian>Leader</Italian>
+		<Spanish>L&#237;der</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_RESET</Tag>
+		<English>Restore Defaults</English>
+		<French>Par d&#233;faut</French>
+		<German>Standardeinstellungen wiederherstellen</German>
+		<Italian>Ripristina predefiniti</Italian>
+		<Spanish>Restablecer valores predeterminados</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_ADVISOR_POPUPS</Tag>
+		<English>Advisor Pop-Ups</English>
+		<French>Info-bulle du conseiller</French>
+		<German>Berater-Popups</German>
+		<Italian>Avvisi dei consiglieri</Italian>
+		<Spanish>Ventanas de consejeros</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_ADVISOR_HELP</Tag>
+		<English>Sid's Tips</English>
+		<French>Aide du conseiller</French>
+		<German>Beraterhilfe</German>
+		<Italian>Aiuto del consigliere</Italian>
+		<Spanish>Ayuda de consejeros</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_WAIT_AT_END_OF_TURN</Tag>
+		<English>Wait at End of Turn</English>
+		<French>Attendre en fin de tour</French>
+		<German>Am Ende einer Runde warten</German>
+		<Italian>In attesa della fine del turno</Italian>
+		<Spanish>Esperar al final del turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_MINIMIZE_POPUPS</Tag>
+		<English>Minimize Pop-Ups</English>
+		<French>R&#233;duire info-bulles</French>
+		<German>Popups minimieren</German>
+		<Italian>Minimizza i menu a comparsa</Italian>
+		<Spanish>Minimizar ventanas emergentes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_HEALTH_BARS</Tag>
+		<English>Show Health Bars</English>
+		<French>Afficher barres de sant&#233;</French>
+		<German>Lebensbalken einblenden</German>
+		<Italian>Mostra le barre della salute</Italian>
+		<Spanish>Mostrar barras de salud</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_DETAILED_CITY_INFO</Tag>
+		<English>Detailed City Info</English>
+		<French>Infos d&#233;taill&#233;es sur la ville</French>
+		<German>Detaillierte Stadt-Info</German>
+		<Italian>Informazioni dettagliate sulla citt&#224;</Italian>
+		<Spanish>Informaci&#243;n detallada de la ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_FRIENDLY_MOVES</Tag>
+		<English>Show Friendly Moves</English>
+		<French>Afficher mouvements alli&#233;s</French>
+		<German>Freundliche Bewegungen zeigen</German>
+		<Italian>Mostra i movimenti delle unit&#224; amiche</Italian>
+		<Spanish>Mostrar movimientos de amigos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_ENEMY_MOVES</Tag>
+		<English>Show Enemy Moves</English>
+		<French>Afficher mouvements ennemis</French>
+		<German>Feindliche Bewegungen zeigen</German>
+		<Italian>Mostra i movimenti delle unit&#224; nemiche</Italian>
+		<Spanish>Mostrar movimientos de enemigos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_MOVES</Tag>
+		<English>Quick Moves</English>
+		<French>Mouvements rapides</French>
+		<German>Schnelle Bewegungen</German>
+		<Italian>Movimenti rapidi</Italian>
+		<Spanish>Movimientos r&#225;pidos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_COMBAT_OFFENSE</Tag>
+		<English>Quick Combat (Offense)</English>
+		<French>Combat rapide (Attaque)</French>
+		<German>Schneller Kampf (Offensive)</German>
+		<Italian>Combattimento rapido (Offensivo)</Italian>
+		<Spanish>Combate r&#225;pido (ataque)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_COMBAT_DEFENSE</Tag>
+		<English>Quick Combat (Defense)</English>
+		<French>Combat rapide (D&#233;fense)</French>
+		<German>Schneller Kampf (Defensive)</German>
+		<Italian>Combattimento rapido (Difensivo)</Italian>
+		<Spanish>Combate r&#225;pido (defensa)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_STACK_ATTACK</Tag>
+		<English>Stack Attack</English>
+		<French>Attaque d'unit&#233;s empil&#233;es</French>
+		<German>Stapelangriff</German>
+		<Italian>Attacco di massa</Italian>
+		<Spanish>Ataque conjunto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_NO_COMBAT_ZOOM</Tag>
+		<English>No Combat Zoom</English>
+		<French>Aucun zoom de combat</French>
+		<German>Kein Kampfzoom</German>
+		<Italian>Nessuno zoom in combattimento</Italian>
+		<Spanish>Sin zoom de combate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_START_AUTO</Tag>
+		<English>Workers Start Automated</English>
+		<French>Ouvriers auto. d&#232;s cr&#233;ation</French>
+		<German>Automatisierte Bautrupps</German>
+		<Italian>I lavoratori cominciano automatizzati</Italian>
+		<Spanish>Los trabajadores empiezan automatizados</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_LEAVE_OLD_IMPS</Tag>
+		<English>Automated Workers Leave Old Improvements</English>
+		<French>Ouvriers auto. d&#233;laissent anciens am&#233;nagements</French>
+		<German>Automat. Bautrupps lassen alte Modernis. unver&#228;ndert</German>
+		<Italian>I lavoratori automatizzati non toccano i vecchi miglioramenti</Italian>
+		<Spanish>Los trabajadores automatizados abandonan las mejoras antiguas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_NUMPAD_HELP</Tag>
+		<English>Numpad Help</English>
+		<French>Aide pav&#233; num&#233;rique</French>
+		<German>Ziffernblock-Hilfe</German>
+		<Italian>Aiuto del tastierino numerico</Italian>
+		<Spanish>Ayuda del teclado num&#233;rico</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_MOVEMENT_RANGE</Tag>
+		<English>Show Movement Range</English>
+		<French>Afficher distance de mouvement</French>
+		<German>Fortbewegungsradius einblenden</German>
+		<Italian>Mostra il raggio di movimento</Italian>
+		<Spanish>Mostrar alcance del movimiento</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_FROZEN_UNITS</Tag>
+		<English>Unit Animations Frozen</English>
+		<French>Unit&#233;s non-anim&#233;es</French>
+		<German>Einheitenanimationen gestoppt</German>
+		<Italian>Blocca le animazioni delle unit&#224;</Italian>
+		<Spanish>Animaciones de unidades est&#225;ticas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_NO_UNIT_CYCLING</Tag>
+		<English>No Unit Cycling</English>
+		<French>Impossible de faire d&#233;filer les unit&#233;s</French>
+		<German>Kein Einheitendurchlauf</German>
+		<Italian>Nessuno scorrimento delle unit&#224;</Italian>
+		<Spanish>Sin alternar unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_NO_UNIT_RECOMMEND</Tag>
+		<English>No Unit Action Recommendations</English>
+		<French>Sans recommandation d'unit&#233;</French>
+		<German>Keine Einheitenempfehlungen</German>
+		<Italian>Nessuna raccomandazione delle unit&#224;</Italian>
+		<Spanish>Sin recomendaciones de unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_RIGHT_CLICK_MENU</Tag>
+		<English>Right-Click Menu</English>
+		<French>Menu clic droit</French>
+		<German>Kontextmen&#252;</German>
+		<Italian>Richiama il menu con il tasto destro del mouse</Italian>
+		<Spanish>Men&#250; de clic derecho</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_HEALTH_BARS_HELP</Tag>
+		<English>Show unit health bars</English>
+		<French>Voir les barres de sant&#233; des unit&#233;s.</French>
+		<German>Lebensbalken der Einheiten einblenden</German>
+		<Italian>Mostra la barra dell'energia delle unit&#224;</Italian>
+		<Spanish>Mostrar barras de Salud de las unidades.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_DETAILED_CITY_INFO_HELP</Tag>
+		<English>Show extra info in the city bar</English>
+		<French>Voir les informations d&#233;taill&#233;es de la barre des villes.</French>
+		<German>Zusatzinformationen in der Stadt-Leiste einblenden</German>
+		<Italian>Mostra informazioni extra nella barra della citt&#224;</Italian>
+		<Spanish>Mostrar informaci&#243;n adicional en la barra de la ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_NO_COMBAT_ZOOM_HELP</Tag>
+		<English>No camera zooming during combat</English>
+		<French>Pas de zoom cam&#233;ra pendant les combats.</French>
+		<German>Kein Kamerazoom im Kampf</German>
+		<Italian>Disattiva lo zoom della visuale durante i combattimenti</Italian>
+		<Spanish>La c&#225;mara no se acerca durante el combate.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_MOVEMENT_RANGE_HELP</Tag>
+		<English>Show movement range for the active unit</English>
+		<French>Voir le rayon d'action de l'unit&#233; active.</French>
+		<German>Fortbewegungsradius f&#252;r aktive Einheit einblenden</German>
+		<Italian>Mostra il raggio di movimento dell'unit&#224; attiva</Italian>
+		<Spanish>Muestra el alcance del movimiento de la unidad activa.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_FROZEN_UNITS_HELP</Tag>
+		<English>No unit animations</English>
+		<French>Pas d'animations pour les unit&#233;s.</French>
+		<German>Keine animierten Einheiten</German>
+		<Italian>Disattiva le animazioni delle unit&#224;</Italian>
+		<Spanish>Sin animaciones de las unidades.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_ADVISOR_POPUPS_HELP</Tag>
+		<English>The advisor occasionally interrupts play to suggest a new build choice in a city</English>
+		<French>Le conseiller interrompt parfois le jeu pour sugg&#233;rer un nouveau projet dans une ville.</French>
+		<German>Der Berater unterbricht gelegentlich das Spiel, um ein neues Bauprojekt in einer Stadt vorzuschlagen</German>
+		<Italian>Il consigliere interromper&#224; saltuariamente il gioco per suggerirti una costruzione da realizzare in una citt&#224;</Italian>
+		<Spanish>El consejero interrumpe de vez en cuando para sugerir algo nuevo que construir en una ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_ADVISOR_HELP_HELP</Tag>
+		<English>Sid provides extra help for the player's research and build choices</English>
+		<French>Le conseiller appara&#238;t pour aider le joueur quand il a achev&#233; une recherche ou construit un b&#226;timent.</French>
+		<German>Der Berater wird eingeblendet, um dem Spieler zus&#228;tzliche Hilfestellung bei der Auswahl eines Forschungs- oder Bauprojekts zu geben</German>
+		<Italian>Quando dovrai scegliere una costruzione o una ricerca, il consigliere apparir&#224; per offrirti aiuto extra</Italian>
+		<Spanish>Sid proporciona ayuda al jugador en relaci&#243;n a la investigaci&#243;n y las opciones de construcci&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_WAIT_AT_END_OF_TURN_HELP</Tag>
+		<English>The game will not progress until the player specifies that the turn should end</English>
+		<French>Le jeu n'avance pas tant que le joueur n'indique pas qu'il a termin&#233; son tour.</French>
+		<German>Das Spiel wird erst nach Beendigung der Runde durch den Spieler fortgesetzt</German>
+		<Italian>Il gioco non proseguir&#224; finch&#233; il giocatore non specifica che intende passare il turno</Italian>
+		<Spanish>La partida no avanzar&#225; hasta que el jugador especifique que el turno debe finalizar.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_MINIMIZE_POPUPS_HELP</Tag>
+		<English>Popups are minimized until the player has moved all units</English>
+		<French>Les fen&#234;tres sont minimis&#233;es tant que le joueur n'a pas d&#233;plac&#233; toutes ses unit&#233;s.</French>
+		<German>Popups werden verkleinert dargestellt, bis der Spieler alle Einheiten fortbewegt hat</German>
+		<Italian>I menu a comparsa vengono ridotti al minimo finch&#233; il giocatore non ha mosso tutte le sue unit&#224;</Italian>
+		<Spanish>Los elementos emergentes quedar&#225;n ocultos hasta que el jugador haya movido todas las unidades.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_FRIENDLY_MOVES_HELP</Tag>
+		<English>Show the moves of friendly units between turns</English>
+		<French>Voir les d&#233;placements des unit&#233;s alli&#233;es entre deux tours.</French>
+		<German>Fortbewegung freundlicher Einheiten zwischen den Runden anzeigen</German>
+		<Italian>Mostra i movimenti delle unit&#224; amichevoli tra un turno e l'altro</Italian>
+		<Spanish>Muestra los movimientos de las unidades amistosas entre turno y turno.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_ENEMY_MOVES_HELP</Tag>
+		<English>Show the moves of enemy units between turns</English>
+		<French>Voir les d&#233;placements des unit&#233;s ennemies entre deux tours.</French>
+		<German>Fortbewegung feindlicher Einheiten zwischen den Runden anzeigen</German>
+		<Italian>Mostra i movimenti delle unit&#224; nemiche tra un turno e l'altro</Italian>
+		<Spanish>Muestra los movimientos de las unidades enemigas entre turno y turno.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_NO_ENEMY_GLOW_HELP</Tag>
+		<English>Enemy units in your territory are not highlighted on the map</English>
+		<French>Les unit&#233;s ennemies sur votre territoire n'apparaissent pas sur la carte.</French>
+		<German>Feindliche Einheiten auf Ihrem Territorium werden nicht auf der Karte gekennzeichnet</German>
+		<Italian>Le unit&#224; nemiche nel tuo territorio non vengono segnalate sulla mappa.</Italian>
+		<Spanish>Las unidades enemigas en vuestro territorio no aparecen resaltadas en el mapa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_COMBAT_OFFENSE_HELP</Tag>
+		<English>The player's combats are accelerated (when on offense)</English>
+		<French>Les combats du joueur sont acc&#233;l&#233;r&#233;s (en position offensive).</French>
+		<German>Alle eigenen Gefechte werden beschleunigt (nur in der Offensive)</German>
+		<Italian>I combattimenti del giocatore vengono velocizzati (in attacco)</Italian>
+		<Spanish>Los combates del jugador se aceleran (cuando ataca).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_COMBAT_DEFENSE_HELP</Tag>
+		<English>The player's combats are accelerated (when on defense)</English>
+		<French>Les combats du joueur sont acc&#233;l&#233;r&#233;s (en position d&#233;fensive).</French>
+		<German>Alle eigenen Gefechte werden beschleunigt (nur in der Defensive)</German>
+		<Italian>I combattimenti del giocatore vengono velocizzati (in difesa)</Italian>
+		<Spanish>Los combates del jugador se aceleran  (cuando defiende).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_STACK_ATTACK_HELP</Tag>
+		<English>All selected units will attack in rapid succession (note: this is purely an interface convenience - the underlying battle mechanics are unchanged)</English>
+		<French>Toutes les unit&#233;s s&#233;lectionn&#233;es attaqueront en succession rapide (remarque : c'est uniquement pour le confort de l'interface, les m&#233;canismes des combats restent inchang&#233;s).</French>
+		<German>Alle gew&#228;hlten Einheiten greifen in schneller Folge nacheinander an (Hinweis: Diese Einstellung bezieht sich ausschlie&#223;lich auf die Darstellung auf der Karte - die zugrunde liegenden Kampfeinstellungen bleiben unver&#228;ndert)</German>
+		<Italian>Tutte le unit&#224; selezionate attaccheranno in rapida successione (nota: &#232; solo una comodit&#224; in termini di interfaccia, la meccanica di gioco resta invariata)</Italian>
+		<Spanish>Todas las unidades seleccionadas atacar&#225;n en r&#225;pida sucesi&#243;n (nota: esto se hace solamente a conveniencia de la interfaz, no tiene efecto alguno en la mec&#225;nica de combate subyacente).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_AUTO_PROMOTION_HELP</Tag>
+		<English>The player's units are automatically promoted (if possible) at the beginning of each turn</English>
+		<French>Les unit&#233;s du joueur sont automatiquement promues (si possible) au d&#233;but de chaque tour.</French>
+		<German>Die eigenen Einheiten werden zu Beginn jeder Runde automatisch bef&#246;rdert (sofern m&#246;glich)</German>
+		<Italian>All'inizio di ogni turno le unit&#224; del giocatore vengono automaticamente promosse (dove possibile)</Italian>
+		<Spanish>Las unidades del jugador ascienden autom&#225;ticamente (a ser posible) al principio de cada turno.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_START_AUTO_HELP</Tag>
+		<English>All workers and work boats start the game as automated</English>
+		<French>Tous les ouvriers et bateaux-ateliers sont automatis&#233;s d&#232;s qu'ils apparaissent dans le jeu.</French>
+		<German>Alle Bautrupps und Arbeitsboote sind beim Spielstart automatisiert</German>
+		<Italian>Tutti i lavoratori e le chiatte entrano in gioco in modalit&#224; automatica</Italian>
+		<Spanish>Todos los Trabajadores y Barcos faeneros empiezan la partida automatizados.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_LEAVE_OLD_IMPS_HELP</Tag>
+		<English>Automated workers will not change previously built improvements</English>
+		<French>Les ouvriers automatis&#233;s ne modifient pas les am&#233;liorations pr&#233;c&#233;dentes.</French>
+		<German>Automatisierte Bautrupps ver&#228;ndern keine zuvor errichteten Modernisierungen</German>
+		<Italian>I lavoratori in modalit&#224; automatica non modificheranno i miglioramenti precedentemente costruiti</Italian>
+		<Spanish>Los Trabajadores automatizados no cambiar&#225;n las mejoras construidas previamente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_NUMPAD_HELP_HELP</Tag>
+		<English>Show NUM-PAD help for unit movement</English>
+		<French>Voir l'aide du pav&#233; num&#233;rique pour le d&#233;placement des unit&#233;s.</French>
+		<German>Ziffernblock-Hilfe f&#252;r Fortbewegung der Einheiten einblenden</German>
+		<Italian>Mostra l'aiuto TAST-NUM per il movimento delle unit&#224;</Italian>
+		<Spanish>Muestra la ayuda del teclado num&#233;rico para el movimiento de las unidades.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_NO_UNIT_CYCLING_HELP</Tag>
+		<English>No automatic cycling between units</English>
+		<French>Pas de cycle automatique entre les unit&#233;s.</French>
+		<German>Kein automatischer Einheitendurchlauf</German>
+		<Italian>Disattiva lo scorrimento automatico tra le unit&#224;</Italian>
+		<Spanish>Las unidades no se alternan autom&#225;ticamente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_NO_UNIT_RECOMMEND_HELP</Tag>
+		<English>No unit action or movement recommendations</English>
+		<French>Pas d'action ou de manoeuvre recommand&#233;e pour les unit&#233;s.</French>
+		<German>Keine Empfehlungen f&#252;r Einheitenfortbewegung oder -aktionen</German>
+		<Italian>Disattiva i consigli sulle azioni e sui movimenti delle unit&#224;</Italian>
+		<Spanish>No se dan recomendaciones para las acciones y el movimiento de las unidades.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_RIGHT_CLICK_MENU_HELP</Tag>
+		<English>Context menu via RIGHT-CLICK (normally available with [SHIFT + LEFT-CLICK])</English>
+		<French>Menu contextuel avec un CLIC DROIT (normalement accessible par [MAJ + CLIC GAUCHE]).</French>
+		<German>Kontextmen&#252; per RECHTSKLICK &#246;ffnen (normalerweise mit [UMSCHALTEN + LINKSKLICK] verf&#252;gbar)</German>
+		<Italian>Menu contestuale tramite PULSANTE DESTRO (normalmente utilizzabile con [MAIUSC + PULSANTE SINISTRO])</Italian>
+		<Spanish>El men&#250; contextual se activa haciendo CLIC DERECHO (normalmente es con [MAY&#218;S + CLIC IZQUIERDO])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_MISSIONARIES_AUTOMATED</Tag>
+		<English>Missionaries and Executives Start Automated</English>
+		<French>Les Missionnaires et les Directeurs d&#233;marrent automatis&#233;s</French>
+		<German>Missionare und Vorst&#228;nde automatisch starten</German>
+		<Italian>Missionari e Funzionari cominciano automatizzati</Italian>
+		<Spanish>Misioneros y ejecutivos empiezan automatizados</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_MISSIONARIES_AUTOMATED_HELP</Tag>
+		<English>All Religion Missionaries and Corporation Executives start the game automated</English>
+		<French>Tous les missionnaires des religions et les Directeurs de soci&#233;t&#233; commerciale d&#233;marrent la partie automatis&#233;s</French>
+		<German>Alle Religionsmissionare und Vorst&#228;nde von Kapitalgesellschaften beginnen das Spiel automatisch</German>
+		<Italian>Tutti i missionari religiosi e i funzionari corporativi cominciano la partita automatizzati.</Italian>
+		<Spanish>Todos los misioneros y ejecutivos empiezan la partida automatizados</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OPTION_AUTO_PROMOTION</Tag>
+		<English>Units Auto-Promote</English>
+		<French>Auto-promotion des unit&#233;s</French>
+		<German>Auto-Einheitenbef&#246;rderung</German>
+		<Italian>Promozione automatica unit&#224;</Italian>
+		<Spanish>Ascenso autom&#225;tico de unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYEROPTION_LEAVE_FORESTS</Tag>
+		<English>Automated Workers Leave Forests</English>
+		<French>Ouvriers auto. d&#233;laissent for&#234;ts</French>
+		<German>Automatisierte Bautrupps verlassen W&#228;lder</German>
+		<Italian>I lavoratori automatizzati non toccano le foreste</Italian>
+		<Spanish>Trabajadores automatizados abandonan bosques</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYEROPTION_LEAVE_FORESTS_HELP</Tag>
+		<English>Automated workers will not chop down forests</English>
+		<French>Ouvriers auto. n'abattent pas arbres</French>
+		<German>Automatisierte Bautrupps holzen keine W&#228;lder ab</German>
+		<Italian>I lavoratori automatizzati non abbattono le foreste</Italian>
+		<Spanish>Los trabajadores automatizados no talan los bosques.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_TITLE</Tag>
+		<English>Options</English>
+		<French>Options</French>
+		<German>Optionen</German>
+		<Italian>Opzioni</Italian>
+		<Spanish>Opciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_GAME</Tag>
+		<English>Game</English>
+		<French>Jeu</French>
+		<German>Spiel</German>
+		<Italian>Partita</Italian>
+		<Spanish>Juego</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_INPUT</Tag>
+		<English>Input</English>
+		<French>Commandes</French>
+		<German>Eingabe</German>
+		<Italian>Comandi</Italian>
+		<Spanish>Entrada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_GRAPHICS</Tag>
+		<English>Graphics</English>
+		<French>Graphismes</French>
+		<German>Grafik</German>
+		<Italian>Grafica</Italian>
+		<Spanish>Gr&#225;ficos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_AUDIO</Tag>
+		<English>Audio</English>
+		<French>Audio</French>
+		<German>Audio</German>
+		<Italian>Sonoro</Italian>
+		<Spanish>Sonido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_CLOCK</Tag>
+		<English>Clock</English>
+		<French>Horloge</French>
+		<German>Uhr</German>
+		<Italian>Orologio</Italian>
+		<Spanish>Reloj</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_NEW_PROFILE</Tag>
+		<English>Create New Profile</English>
+		<French>Cr&#233;er nouveau profil</French>
+		<German>Neues Profil erstellen</German>
+		<Italian>Crea un nuovo profilo</Italian>
+		<Spanish>Crear nuevo perfil</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_DELETE_PROFILE</Tag>
+		<English>Delete Profile</English>
+		<French>Supprimer profil</French>
+		<German>Profil l&#246;schen</German>
+		<Italian>Elimina profilo</Italian>
+		<Spanish>Borrar perfil</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_DEFAULT_PROFILE</Tag>
+		<English>Default Profile</English>
+		<French>Profil par d&#233;faut</French>
+		<German>Standardprofil</German>
+		<Italian>Profilo predefinito</Italian>
+		<Spanish>Perfil predeterminado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_LOADED_PROFILE</Tag>
+		<English>%s1_Profile Loaded!</English>
+		<French>Profil %s1_Profile charg&#233; !</French>
+		<German>%s1_Profile geladen!</German>
+		<Italian>%s1_Profile caricato!</Italian>
+		<Spanish>Se ha cargado "%s1_Profile"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SAVED_PROFILE</Tag>
+		<English>%s1_Profile Saved!</English>
+		<French>Profil %s1_Profile sauvegard&#233; !</French>
+		<German>%s1_Profile gespeichert!</German>
+		<Italian>%s1_Profile salvato!</Italian>
+		<Spanish>Se ha guardado "%s1_Profile"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_DELETED_PROFILE</Tag>
+		<English>%s1_Profile Deleted!</English>
+		<French>Profil %s1_Profile supprim&#233; !</French>
+		<German>%s1_Profile gel&#246;scht!</German>
+		<Italian>%s1_Profile eliminato!</Italian>
+		<Spanish>Se ha borrado "%s1_Profile"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_LOAD_PROFILE_FAIL</Tag>
+		<English>Load failed. Profile version may not match current system.</English>
+		<French>Echec du chargement. La version du profil n'est peut-&#234;tre pas compatible avec le syst&#232;me actuel.</French>
+		<German>Laden gescheitert. M&#246;glicherweise passt die Profilversion nicht zum aktuellen System.</German>
+		<Italian>Caricamento fallito. La versione del profilo non corrisponde al sistema attuale.</Italian>
+		<Spanish>Fallo al cargar. Puede que la versi&#243;n del perfil no se corresponda con el sistema actual.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_NO_CONTENT</Tag>
+		<English>No Content</English>
+		<French>Aucun contenu</French>
+		<German>Kein Inhalt</German>
+		<Italian>Nessun contenuto</Italian>
+		<Spanish>Sin contenido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SINGLE_UNIT</Tag>
+		<English>Single Unit Graphics</English>
+		<French>Graphismes unit&#233; seule</French>
+		<German>Grafik als einzelne Einheit</German>
+		<Italian>Grafica unit&#224; singola</Italian>
+		<Spanish>Gr&#225;ficos de unidad individual</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_PERFORMANCE</Tag>
+		<English>Performance</English>
+		<French>Performances</French>
+		<German>Performance</German>
+		<Italian>Prestazioni</Italian>
+		<Spanish>Rendimiento</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_QUALITY</Tag>
+		<English>Quality</English>
+		<French>Qualit&#233;</French>
+		<German>Qualit&#228;t</German>
+		<Italian>Qualit&#224;</Italian>
+		<Spanish>Calidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SCREEN_RES</Tag>
+		<English>Screen Resolution</English>
+		<French>R&#233;solution</French>
+		<German>Aufl&#246;sung</German>
+		<Italian>Risoluzione video</Italian>
+		<Spanish>Resoluci&#243;n de pantalla</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_ANTIALIAS</Tag>
+		<English>Anti-Aliasing MultiSamples</English>
+		<French>Multi-&#233;chantillons anti-aliasing</French>
+		<German>Antialiasing MultiSample</German>
+		<Italian>Multi Sample di Antialias</Italian>
+		<Spanish>Anti-Aliasing MultiSamples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_MASTERVOLUME</Tag>
+		<English>Master Volume</English>
+		<French>Volume g&#233;n&#233;ral</French>
+		<German>Gesamtlautst&#228;rke</German>
+		<Italian>Volume principale</Italian>
+		<Spanish>Control del volumen</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_MUSICVOLUME</Tag>
+		<English>Music</English>
+		<French>Volume musique</French>
+		<German>Musiklautst&#228;rke</German>
+		<Italian>Volume musica</Italian>
+		<Spanish>Volumen de la m&#250;sica</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_EFFECTSVOLUME</Tag>
+		<English>Sound Effects</English>
+		<French>Vol. effets sonores</French>
+		<German>Soundlautst&#228;rke</German>
+		<Italian>Volume effetti sonori</Italian>
+		<Spanish>Volumen de los efectos de sonido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SPEECHVOLUME</Tag>
+		<English>Speech</English>
+		<French>Volume voix</French>
+		<German>Sprachlautst&#228;rke</German>
+		<Italian>Volume del parlato</Italian>
+		<Spanish>Volumen de los di&#225;logos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_AMBIENCEVOLUME</Tag>
+		<English>Ambience</English>
+		<French>Vol. ambiance</French>
+		<German>Umgebungslautst&#228;rke</German>
+		<Italian>Volume ambientale</Italian>
+		<Spanish>Volumen del sonido ambiental</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_INTERFACEVOLUME</Tag>
+		<English>Interface</English>
+		<French>Vol. interface</French>
+		<German>Interfacelautst&#228;rke</German>
+		<Italian>Volume interfaccia</Italian>
+		<Spanish>Volumen de la interfaz</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SOFT_LOUD</Tag>
+		<English>Soft        Loud</English>
+		<French>Faible      Fort</French>
+		<German>Leise        Laut</German>
+		<Italian>Basso        Alto</Italian>
+		<Spanish>Bajo        Alto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_NO_SOUND</Tag>
+		<English>No Sound</English>
+		<French>Muet</French>
+		<German>Kein Sound</German>
+		<Italian>Nessun suono</Italian>
+		<Spanish>Sin sonido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_CUSTOM_MUSIC</Tag>
+		<English>Custom Music Folder</English>
+		<French>Dossier musique perso</French>
+		<German>Eigener Musikordner</German>
+		<Italian>Musica personalizzata</Italian>
+		<Spanish>Carpeta de m&#250;sica personalizada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_BROWSE</Tag>
+		<English>Browse...</English>
+		<French>Parcourir...</French>
+		<German>Durchsuchen ...</German>
+		<Italian>Esplora...</Italian>
+		<Spanish>Examinar...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_RESET</Tag>
+		<English>Restore Defaults</English>
+		<French>Par d&#233;faut</French>
+		<German>Standardeinstellungen wiederherstellen</German>
+		<Italian>Ripristina predefiniti</Italian>
+		<Spanish>Restablecer valores predeterminados</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SPEAKERS</Tag>
+		<English>Audio Speakers</English>
+		<French>Enceintes</French>
+		<German>Lautsprecher</German>
+		<Italian>Altoparlanti</Italian>
+		<Spanish>Altavoces</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_CLOCK_ON</Tag>
+		<English>Clock On</English>
+		<French>Horloge active</French>
+		<German>Uhr ein</German>
+		<Italian>Orologio attivo</Italian>
+		<Spanish>Reloj activado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_24CLOCK</Tag>
+		<English>24 Hour Clock</English>
+		<French>Horloge 24 heures</French>
+		<German>24-Stunden-Anzeige</German>
+		<Italian>Orologio a 24 ore</Italian>
+		<Spanish>Reloj de 24 horas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_ALARMON</Tag>
+		<English>Alarm On</English>
+		<French>R&#233;veil actif</French>
+		<German>Alarm ein</German>
+		<Italian>Allarme attivo</Italian>
+		<Spanish>Alarma activada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_ALARMHOURS</Tag>
+		<English>Alarm Hours</English>
+		<French>Heures du r&#233;veil</French>
+		<German>Alarm Stunden</German>
+		<Italian>Allarme ore</Italian>
+		<Spanish>Horas de alarma</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_HOURS</Tag>
+		<English>Alarm Hours:</English>
+		<French>Heures :</French>
+		<German>Stunden:</German>
+		<Italian>Ore:</Italian>
+		<Spanish>Horas:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_MINS</Tag>
+		<English>Alarm Mins:</English>
+		<French>Min. :</French>
+		<German>Minuten:</German>
+		<Italian>Minuti:</Italian>
+		<Spanish>Minutos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_ALARMMINUTES</Tag>
+		<English>Alarm Minutes</English>
+		<French>Minutes r&#233;veil</French>
+		<German>Alarm Minuten</German>
+		<Italian>Allarme minuti</Italian>
+		<Spanish>Minutos de alarma</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_GIVE_FILENAME</Tag>
+		<English>Please provide a valid filename</English>
+		<French>Saisissez un nom de fichier valide</French>
+		<German>Bitte g&#252;ltigen Dateinamen eingeben</German>
+		<Italian>Fornisci un nome di file valido</Italian>
+		<Spanish>Introduce un nombre de archivo v&#225;lido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_WARNING1</Tag>
+		<English>This option is disabled for now due to incompatibility with the interface system; it can be set in the .ini</English>
+		<French>Cette option est d&#233;sactiv&#233;e pour cause d'incompatibilit&#233; avec l'interface syst&#232;me. Le probl&#232;me peut &#234;tre corrig&#233; dans le fichier .ini</French>
+		<German>Diese Option ist wegen Inkompatibilit&#228;t mit dem Interface-System vorl&#228;ufig deaktiviert. Sie kann in der .ini eingestellt werden</German>
+		<Italian>Questa opzione &#232; disabilitata per il momento, a causa dell'incompatibilit&#224; con l'interfaccia; pu&#242; essere impostata nel file .ini</Italian>
+		<Spanish>Esta opci&#243;n est&#225; desactivada de momento debido a una incompatibilidad con el sistema de la interfaz. Puede configurarse en el archivo .ini</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_WARNING2</Tag>
+		<English>Warning: Resolutions other than 1024x768 are incompatible with the interface system</English>
+		<French>Attention : les r&#233;solutions autres que 1024x768 sont incompatibles avec l'interface syst&#232;me</French>
+		<German>Hinweis: Andere Aufl&#246;sungen als 1024x768 sind nicht mit dem Interface-System kompatibel</German>
+		<Italian>Attenzione: le risoluzioni superiori a 1024x768 sono incompatibili con l'interfaccia</Italian>
+		<Spanish>Aviso: las resoluciones que no sean la de 1024 x 768 son incompatibles con el sistema de la interfaz.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_WARNING3</Tag>
+		<English>Delete the active profile in the Civ4/Profiles/ folder to return to 1024x768</English>
+		<French>Supprimez le profil actif dans le r&#233;pertoire Civ4/Profiles/ pour repasser en 1024x768</French>
+		<German>Aktives Profil im Verzeichnis Civ4/Profiles/ l&#246;schen, um zur Aufl&#246;sung 1024x768 zur&#252;ckzukehren</German>
+		<Italian>Elimina il profilo attivo nella directory Civ4/Profiles/ per ritornare a 1024x768</Italian>
+		<Spanish>Borra el perfil activo en la carpeta Civ4/Profiles para restablecer la resoluci&#243;n de 1024 x 768</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_NEED_TO_RESTART</Tag>
+		<English>Program must be restarted before changes will take effect</English>
+		<French>Le programme doit &#234;tre relanc&#233; pour que les modifications soient prises en consid&#233;ration.</French>
+		<German>Zur &#220;bernahme der &#196;nderungen muss das Programm neu gestartet werden</German>
+		<Italian>Il programma deve essere riavviato prima che i cambiamenti abbiano effetto</Italian>
+		<Spanish>Hay que reiniciar el programa para que los cambios surtan efecto</Spanish>
+	</TEXT>
 </Civ4GameText>
