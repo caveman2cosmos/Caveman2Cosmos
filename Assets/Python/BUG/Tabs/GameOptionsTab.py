@@ -16,11 +16,12 @@ class GameOptionsTab(BugOptionsTab.BugOptionsTab):
 		column = left
 		for i in range(GC.getNumGameOptionInfos()):
 			info = GC.getGameOptionInfo(i)
-			szType = info.getType()
-			control = szType + "Check"
-			screen.attachCheckBox(column, control, info.getDescription(), "BUG_OptionsCB_IF", "handleGameOptionChange", szType, GAME.isOption(i))
-			screen.setToolTip(control, info.getHelp())
-			if column is left:
-				column = right
-			else:
-				column = left
+			if info.canChangeMidGame():
+				szType = info.getType()
+				control = szType + "Check"
+				screen.attachCheckBox(column, control, info.getDescription(), "BUG_OptionsCB_IF", "handleGameOptionChange", szType, GAME.isOption(i))
+				screen.setToolTip(control, info.getHelp())
+				if column is left:
+					column = right
+				else:
+					column = left
