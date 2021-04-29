@@ -20,11 +20,6 @@
 		<Russian>Îõîòíèêè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_HUNTING_MASTER</Tag>
-		<English>Hunting Master</English>
-		<Russian>Ìàñòåð îõîòû</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SEA_ANIMAL</Tag>
 		<English>Sea Animals</English>
 		<French>Unités animales marines</French>
@@ -63,15 +58,6 @@
 		<Spanish>Sea Animales</Spanish>
 		<Polish>Zwierzęta Morskie (Małe)</Polish>
 		<Russian>Áîëüøèå ðûáû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_SHARK</Tag>
-		<English>Shark</English>
-		<French>Requin</French>
-		<Italian>Squali</Italian>
-		<German>Hai</German>
-		<Polish>Rekin</Polish>
-		<Russian>Àêóëû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WHALE</Tag>

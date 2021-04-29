@@ -26513,8 +26513,8 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 							if (algo::any_of(kActivePlayer.cities(),
 								bind(CvCity::isHasCorporation, _1, (CorporationTypes)iCorp))
 
-							|| algo::any_of(GET_PLAYER(eTradingPlayer).cities(),
-								bind(CvCity::isHasCorporation, _1, (CorporationTypes)iCorp)))
+							|| (bTradingPlayer && algo::any_of(GET_PLAYER(eTradingPlayer).cities(),
+								bind(CvCity::isHasCorporation, _1, (CorporationTypes)iCorp))))
 							{
 								szBuffer.append(GC.getCorporationInfo((CorporationTypes)iCorp).getChar());
 								break;

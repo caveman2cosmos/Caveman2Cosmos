@@ -19,10 +19,6 @@
 					<bLoad>0</bLoad>
 				</Module>
 				<Module>
-					<Directory>Cultures</Directory>
-					<bLoad>0</bLoad>
-				</Module>
-				<Module>
 					<Directory>Israel</Directory>
 					<bLoad>1</bLoad>
 				</Module>

@@ -36,7 +36,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BEARRIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BEARRIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BEARRIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -137,7 +136,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BEARKNIGHT</Description>
 			<Civilopedia>TXT_KEY_UNIT_BEARKNIGHT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BEARKNIGHT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>

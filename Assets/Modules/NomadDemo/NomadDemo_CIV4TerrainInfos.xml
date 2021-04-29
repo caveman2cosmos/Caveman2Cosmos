@@ -9,24 +9,24 @@
 			<Type>TERRAIN_GRASSLAND</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>3</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>2</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -34,24 +34,24 @@
 			<Type>TERRAIN_LUSH</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>4</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>3</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -59,24 +59,24 @@
 			<Type>TERRAIN_PLAINS</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>2</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>2</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -84,24 +84,24 @@
 			<Type>TERRAIN_BARREN</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>2</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -109,24 +109,24 @@
 			<Type>TERRAIN_ROCKY</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>2</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -134,24 +134,24 @@
 			<Type>TERRAIN_DESERT</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -159,24 +159,24 @@
 			<Type>TERRAIN_SCRUB</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -184,24 +184,24 @@
 			<Type>TERRAIN_DUNES</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -209,24 +209,24 @@
 			<Type>TERRAIN_SALT_FLATS</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -234,24 +234,24 @@
 			<Type>TERRAIN_TAIGA</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -259,24 +259,24 @@
 			<Type>TERRAIN_TUNDRA</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -284,24 +284,24 @@
 			<Type>TERRAIN_ICE</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>0</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>0</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -309,24 +309,24 @@
 			<Type>TERRAIN_MARSH</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>
@@ -334,24 +334,24 @@
 			<Type>TERRAIN_MUDDY</Type>
 			<PropertyManipulators>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_FRUIT</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_HUNT</PropertyType>
-				<iAmountPerTurn>2</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_MATERIAL</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-				<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				<PropertyType>PROPERTY_LORE</PropertyType>
-				<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</TerrainInfo>

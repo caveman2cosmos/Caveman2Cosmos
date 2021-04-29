@@ -25,7 +25,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_MAPINGUARI_WOODEN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAPINGUARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAPINGUARI_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -111,7 +110,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_MAPINGUARI_STONE</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAPINGUARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAPINGUARI_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -196,7 +194,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_MAPINGUARI_OBSIDIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAPINGUARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAPINGUARI_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -283,7 +280,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_MAPINGUARI</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAPINGUARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAPINGUARI_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -374,7 +370,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_MAPINGUARI_PIKE</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAPINGUARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAPINGUARI_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

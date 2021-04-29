@@ -2092,7 +2092,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
-<!-- Removed from game because "unfun". Available in two forms in the Bad_Karma modules.
+		<!-- Removed from game because "unfun". Available in two forms in the Bad_Karma modules.
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_NATIVE</Type>
 			<UnitType>UNIT_LOCUST</UnitType>

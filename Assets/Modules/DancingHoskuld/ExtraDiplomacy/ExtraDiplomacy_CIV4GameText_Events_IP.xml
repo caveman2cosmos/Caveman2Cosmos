@@ -22,13 +22,6 @@
 		<Polish>Powitajcie ich, ale im nie zapłaćcie. Nie stać nas teraz na dodatowe wydatki.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_NATIVEGOOD1_REVEAL</Tag>
-		<English>A new source of %s1 has been revealed by natives near the city of %s2!</English>
-		<French>Une nouvelle source de %s1 a été révélée par une tribu locale, près de la ville de %s2!</French>
-		<Italian>Una nuova fonte di %s1 è stata rivelata dai nativi vicino alla città di %s2!</Italian>
-		<Polish>Nowe źródło %s1 zostało odkryte przez tubylców niedaleko miasta %s2!</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENT_NATIVEGOOD2_1</Tag>
 		<English>Although some may accuse us of exploiting them, we appreciate their help and loyalty. Find them gear.</English>
 		<French>Même si certains nous accuserons de profiter d'eux, nous apprécions leur aide et leur loyauté. Trouvez-leur de l'équipement.</French>

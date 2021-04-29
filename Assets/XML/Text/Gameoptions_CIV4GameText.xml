@@ -642,6 +642,10 @@
 		<Russian>Çàïðåòèòü èçìåíåíèÿ ïàðàìåòðîâ</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_LOCK_MODS_HELP</Tag>
+		<English>Sets a random admin password so that debug tools cannot be used, and the game assets cannot be modified. Only for single-player games.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LS612_TRAITS</Tag>
 		<English>Focused Traits</English>
 		<French>Traits de caract. Avancés</French>

@@ -15,9 +15,9 @@
 		<UnitInfo>
 			<Type>UNIT_ENTERTAINER</Type>
 			<AndDependencyTypes>
-						<DependencyType>UNIT_ENTERTAINER</DependencyType>
-						<DependencyType>BUILDING_CROW_STORY</DependencyType>
-						<DependencyType>BUILDING_CROW_STORIES</DependencyType>
+				<DependencyType>UNIT_ENTERTAINER</DependencyType>
+				<DependencyType>BUILDING_CROW_STORY</DependencyType>
+				<DependencyType>BUILDING_CROW_STORIES</DependencyType>
 			</AndDependencyTypes>
 			<Buildings>
 				<BuildingType>BUILDING_CROW_STORY</BuildingType>
@@ -27,9 +27,9 @@
 		<UnitInfo>
 			<Type>UNIT_CELEBRITY</Type>
 			<AndDependencyTypes>
-						<DependencyType>UNIT_CELEBRITY</DependencyType>
-						<DependencyType>BUILDING_CROW_STORY</DependencyType>
-						<DependencyType>BUILDING_CROW_STORIES</DependencyType>
+				<DependencyType>UNIT_CELEBRITY</DependencyType>
+				<DependencyType>BUILDING_CROW_STORY</DependencyType>
+				<DependencyType>BUILDING_CROW_STORIES</DependencyType>
 			</AndDependencyTypes>
 			<Buildings>
 				<BuildingType>BUILDING_CROW_STORY</BuildingType>
