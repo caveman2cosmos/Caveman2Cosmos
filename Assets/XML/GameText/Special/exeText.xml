@@ -3822,4 +3822,795 @@
 		<Italian>Username per l'SMTP (se necessario)</Italian>
 		<Spanish>Nombre de usuario para autenticaci&#243;n segura de SMTP (si es necesario)</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SOCKET_CREATE_FAILURE_DESC</Tag>
+		<English>The network socket could not be created.</English>
+		<French>Le socket r&#233;seau n'a pas pu &#234;tre cr&#233;&#233;.</French>
+		<German>Das Netzwerk-Socket konnte nicht erstellt werden.</German>
+		<Italian>Impossibile creare il socket di rete.</Italian>
+		<Spanish>No se ha podido crear el socket de red.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SOCKET_CREATE_FAILURE_TITLE</Tag>
+		<English>Network error</English>
+		<French>Erreur de r&#233;seau</French>
+		<German>Netzwerkfehler</German>
+		<Italian>Errore di rete</Italian>
+		<Spanish>Error de red</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SOCKET_ERROR_DESC</Tag>
+		<English>The network socket encountered an error and was closed.  Disconnected.</English>
+		<French>Erreur du socket r&#233;seau. Fermeture et d&#233;connexion.</French>
+		<German>Es ist ein Fehler im Netzwerk-Socket aufgetreten. Das Socket wurde geschlossen und die Verbindung getrennt.</German>
+		<Italian>Il socket di rete ha rilevato un errore ed &#232; stato chiuso. Disconnesso.</Italian>
+		<Spanish>El socket de red ha encontrado un problema y se ha cerrado.  Desconectado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SOCKET_ERROR_TITLE</Tag>
+		<English>Disconnected</English>
+		<French>D&#233;connexion</French>
+		<German>Verbindung getrennt</German>
+		<Italian>Disconnesso</Italian>
+		<Spanish>Desconectado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SP_LOAD_ERROR_DESC</Tag>
+		<English>You are not permitted to load Multiplayer games in Single-Player mode!</English>
+		<French>Vous ne pouvez pas charger de parties multijoueur en mode Solo !</French>
+		<German>Im Einzelspieler-Modus k&#246;nnen keine Multiplayer-Spiele geladen werden!</German>
+		<Italian>Non ti &#232; permesso caricare partite multigiocatore in modalit&#224; giocatore singolo!</Italian>
+		<Spanish>No se permite cargar partidas multijugador en modo un jugador.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SP_LOAD_ERROR_TITLE</Tag>
+		<English>Single Player Only!</English>
+		<French>Solo uniquement !</French>
+		<German>Nur Einzelspieler-Modus!</German>
+		<Italian>Solo modalit&#224; giocatore singolo!</Italian>
+		<Spanish>&#161;Solo hay un jugador!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STAGING_ROOM_READY</Tag>
+		<English>Ready</English>
+		<French>Pr&#234;t</French>
+		<German>Bereit</German>
+		<Italian>Pronto</Italian>
+		<Spanish>Listo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STAGING_ROOM_TITLE</Tag>
+		<English>STAGING ROOM</English>
+		<French>SALLE DE PREPARATION</French>
+		<German>LAN SETUP</German>
+		<Italian>STANZA D'ALLESTIMENTO</Italian>
+		<Spanish>SALA DE COMUNICAC.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STOP_SLIDESHOW</Tag>
+		<English>Play Game</English>
+		<French>Arr&#234;ter diaporama</French>
+		<German>Bildershow anhalten</German>
+		<Italian>Blocca le immagini</Italian>
+		<Spanish>Saltar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SUBMIT_VOTE</Tag>
+		<English>Submit vote</English>
+		<French>Envoyer vote</French>
+		<German>Stimme abgeben</German>
+		<Italian>Invia votazione</Italian>
+		<Spanish>Enviar voto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SYSTEM_ADD_BUDDY</Tag>
+		<English>%s1_Name would like to add you as a buddy</English>
+		<French>%s1_Name souhaiterait vous ajouter &#224; sa liste d'amis</French>
+		<German>%s1_Name m&#246;chte Euch als Freund aufnehmen</German>
+		<Italian>%s1_Name vorrebbe aggiungerti come amico</Italian>
+		<Spanish>A %s1_Name le gustar&#237;a agregarte como amigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SYSTEM_ALL</Tag>
+		<English>all</English>
+		<French>
+			<Text>tout</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Alle</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>tutto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>todos:todas</Text>
+			<Gender>Male:Female</Gender>
+			<Plural>1:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SYSTEM_BUDDY_REQUEST_TITLE</Tag>
+		<English>Buddy Request</English>
+		<French>Requ&#234;te d'ami</French>
+		<German>Freund-Anfrage</German>
+		<Italian>Richiesta amico</Italian>
+		<Spanish>Solicitud de amigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SYSTEM_CHAT_STRING</Tag>
+		<English>[%s1_Plyr1 to %s2_Plyr2]:  %s3_ChatMsg</English>
+		<French>[%s1_Plyr1 &#224; %s2_Plyr2]:  %s3_ChatMsg</French>
+		<German>[%s1_Plyr1 an %s2_Plyr2]:  %s3_ChatMsg</German>
+		<Italian>[%s1_Plyr1 a %s2_Plyr2]:  %s3_ChatMsg</Italian>
+		<Spanish>[%s1_Plyr1 a %s2_Plyr2]:  %s3_ChatMsg</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SYSTEM_ERROR_PASSWORD_MISMATCH</Tag>
+		<English>Passwords must match!</English>
+		<French>Les mots de passe doivent correspondre !</French>
+		<German>Die Kennw&#246;rter m&#252;ssen &#252;bereinstimmen!</German>
+		<Italian>Le password devono essere uguali!</Italian>
+		<Spanish>Las contrase&#241;as tienen que coincidir.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SYSTEM_ERROR_PASSWORD_MISMATCH_TITLE</Tag>
+		<English>Password Error</English>
+		<French>Erreur de mot de passe</French>
+		<German>Kennwortfehler</German>
+		<Italian>Errore di password</Italian>
+		<Spanish>Error de contrase&#241;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SYSTEM_GAME_RESUMED</Tag>
+		<English>Game Resumed by %s1_PlyrName</English>
+		<French>Jeu relanc&#233; par %s1_PlyrName</French>
+		<German>%s1_PlyrName hat das Spiel fortgesetzt</German>
+		<Italian>Partita ripresa da %s1_PlyrName</Italian>
+		<Spanish>Partida reanudada por %s1_PlyrName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SYSTEM_TEAM</Tag>
+		<English>team</English>
+		<French>
+			<Text>&#233;quipe</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Team</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>squadra</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>equipo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SYSTEM_YOU</Tag>
+		<English>you</English>
+		<French>
+			<Text>vous</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ihr:Euch</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>tu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>t&#250;:vosotros</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TITLE_CONNECT_FAILURE_DESC</Tag>
+		<English>Civilization IV's matchmaking room is not available at this time.</English>
+		<French>La salle de recherche de Civilization IV n'est pas accessible pour l'instant.</French>
+		<German>Der Civilization IV-Matchmaking-Raum ist zurzeit nicht verf&#252;gbar.</German>
+		<Italian>La stanza per l'organizzazione d'incontri non &#232; disponibile in questo momento.</Italian>
+		<Spanish>La sala de b&#250;squeda de jugadores no est&#225; disponible en este momento.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TITLE_CONNECT_FAILURE_TITLE</Tag>
+		<English>Server unreachable</English>
+		<French>Serveur injoignable</French>
+		<German>Server nicht erreichbar</German>
+		<Italian>Server irraggiungibile</Italian>
+		<Spanish>No se puede acceder al servidor</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADEABLE_ITEMS</Tag>
+		<English>Tradeable Items</English>
+		<French>Objets &#233;changeables</French>
+		<German>Handelsg&#252;ter</German>
+		<Italian>Oggetti commerciabili</Italian>
+		<Spanish>Elementos intercambiables</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_CEASE_FIRE_STRING</Tag>
+		<English>Cease Fire</English>
+		<French>
+			<Text>Cessez-le-feu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Waffenruhe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tregua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Alto el fuego</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_CLEAR_TABLE</Tag>
+		<English>CLEAR TABLE</English>
+		<French>ANNULER TOUT</French>
+		<German>VERHANDLUNGSTISCH LEEREN</German>
+		<Italian>PULISCI TABELLA</Italian>
+		<Spanish>LIMPIAR TABLA</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_GOLD_FROM_THEM</Tag>
+		<English>How much gold would you like from them?</English>
+		<French>Quelle somme en or souhaitez-vous demander ?</French>
+		<German>Wie viel Gold fordert Ihr von ihnen?</German>
+		<Italian>Quanto oro vuoi richiedere?</Italian>
+		<Spanish>&#191;Cu&#225;nto oro quer&#233;is que os den?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_GOLD_TO_OFFER</Tag>
+		<English>How much gold would you like to offer?</English>
+		<French>Quelle somme en or d&#233;sirez-vous offrir ?</French>
+		<German>Wie viel Gold m&#246;chtet Ihr bieten?</German>
+		<Italian>Quanto oro vuoi offrire?</Italian>
+		<Spanish>&#191;Cu&#225;nto oro quer&#233;is ofrecer?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_GPT_FROM_THEM</Tag>
+		<English>How much gold per turn would you like from them?</English>
+		<French>Combien d'or souhaitez-vous leur demander par tour ?</French>
+		<German>Wie viel Gold pro Runde fordert Ihr von ihnen?</German>
+		<Italian>Quanto oro per turno vuoi richiedere?</Italian>
+		<Spanish>&#191;Cu&#225;nto oro por turno quer&#233;is que os den?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_GPT_TO_OFFER</Tag>
+		<English>How much gold per turn would you like to offer?</English>
+		<French>Combien d'or d&#233;sirez-vous offrir par tour ?</French>
+		<German>Wie viel Gold pro Runde m&#246;chtet Ihr bieten?</German>
+		<Italian>Quanto oro per turno vuoi offrire?</Italian>
+		<Spanish>&#191;Cu&#225;nto oro por turno quer&#233;is ofrecer?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_PLAYER_HAS</Tag>
+		<English>%s1_PlName HAS</English>
+		<French>%s1_PlName A</French>
+		<German>%s1_PlName HAT</German>
+		<Italian>%s1_PlName HA</Italian>
+		<Spanish>%s1_PlName TIENE</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_PLAYER_OFFERS</Tag>
+		<English>%s1_PlName OFFERS</English>
+		<French>%s1_PlName OFFRE</French>
+		<German>%s1_PlName BIETET</German>
+		<Italian>%s1_PlName OFFRE</Italian>
+		<Spanish>%s1_PlName OFRECE</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_TITLE_GOLD</Tag>
+		<English>Gold</English>
+		<French>
+			<Text>Or</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gold</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Oro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Oro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_YOU_HAVE</Tag>
+		<English>YOU HAVE</English>
+		<French>VOUS AVEZ</French>
+		<German>IHR HABT</German>
+		<Italian>TU HAI</Italian>
+		<Spanish>TEN&#201;IS</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_YOU_OFFER</Tag>
+		<English>YOU OFFER</English>
+		<French>VOUS PROPOSEZ</French>
+		<German>IHR BIETET</German>
+		<Italian>TU OFFRI</Italian>
+		<Spanish>OFREC&#201;IS</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRANSFER_GAME_DATA_TITLE</Tag>
+		<English>Transferring Game Data to </English>
+		<French>Transfert des donn&#233;es du jeu vers </French>
+		<German>Spieldaten werden &#252;bertragen an</German>
+		<Italian>Trasferimento dati a</Italian>
+		<Spanish>Transfiriendo datos de la partida a </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TURN_LIMIT_TAG</Tag>
+		<English>Game Turn Limit:</English>
+		<French>Limite tours de jeu :</French>
+		<German>Limit Spielrunden:</German>
+		<Italian>Limite turni della partita:</Italian>
+		<Spanish>L&#237;mite de turnos de la partida:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNCOMPRESS_FAILED</Tag>
+		<English>Failed to uncompress game data</English>
+		<French>Impossible de d&#233;compresser les donn&#233;es du jeu</French>
+		<German>Die Spieldaten konnten nicht dekomprimiert werden</German>
+		<Italian>Impossibile decomprimere i dati di gioco</Italian>
+		<Spanish>No se han podido descomprimir los datos del juego.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNKNOWN</Tag>
+		<English>Unknown</English>
+		<French>Inconnu</French>
+		<German>Unbekannt</German>
+		<Italian>Sconosciuto</Italian>
+		<Spanish>Desconocido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_USER_GAMENAME</Tag>
+		<English>'s Game</English>
+		<French>Partie de</French>
+		<German>s Spiel</German>
+		<Italian>- partita</Italian>
+		<Spanish>, partida de</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VERSION_WARNING_DESC</Tag>
+		<English>Player %d1_ID has different versions of some game files.[NEWLINE]Verify that this is a trusted player.</English>
+		<French>Le joueur %d1_ID a plusieurs versions de certains fichiers de jeu.[NEWLINE]Veuillez v&#233;rifier qu'il s'agit d'un joueur fiable.</French>
+		<German>Spieler %d1_ID hat eine andere Version einiger Spieldateien.[NEWLINE]Stellen Sie sicher, dass er vertrauensw&#252;rdig ist.</German>
+		<Italian>Il giocatore %d1_ID possiede una versione differente di alcuni file.[NEWLINE]Assicurati che il giocatore sia affidabile.</Italian>
+		<Spanish>El jugador %d1_ID tiene versiones diferentes de algunos archivos de la partida.[NEWLINE]Comprueba si se trata de un jugador de confianza.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VERSION_WARNING_TITLE</Tag>
+		<English>Version Warning!</English>
+		<French>Alerte version !</French>
+		<German>Versionswarnung!</German>
+		<Italian>Avviso sulla versione dei file!</Italian>
+		<Spanish>Aviso de versi&#243;n diferente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VISIT_GAMESPYID</Tag>
+		<English>Visit www.gamespyid.com to manage your account!</English>
+		<French>Visitez le site www.gamespyid.com pour g&#233;rer votre compte !</French>
+		<German>Besuchen Sie www.gamespyid.com, um Ihren Account zu verwalten.</German>
+		<Italian>Mostra informazioni dettagliate sul mondo di gioco (www.gamespyid.com).</Italian>
+		<Spanish>Visita www.gamespyid.com para gestionar tu cuenta.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_SCREEN_EXIT_NOW</Tag>
+		<English>Exit Now</English>
+		<French>Quitter maintenant</French>
+		<German>Jetzt beenden</German>
+		<Italian>Esci ora</Italian>
+		<Spanish>Salir ya</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_SCREEN_SAVE_NAME</Tag>
+		<English>Save Game Name</English>
+		<French>Nom de la sauvegarde</French>
+		<German>Speichername</German>
+		<Italian>Nome del salvataggio</Italian>
+		<Spanish>Guardar nombre de la partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_SCREEN_SAVE_NOW</Tag>
+		<English>Save Now</English>
+		<French>Sauvegarder maintenant</French>
+		<German>Jetzt speichern</German>
+		<Italian>Salva ora</Italian>
+		<Spanish>Guardar ya</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WAIT_PLAYERSTATE_AUTH</Tag>
+		<English>Waiting for Player Authentication</English>
+		<French>Attente de l'authentification du joueur</French>
+		<German>Warten auf Spielerauthentifizierung</German>
+		<Italian>In attesa dell'autenticazione del giocatore</Italian>
+		<Spanish>Esperando autenticaci&#243;n de jugadores</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WAIT_PLAYERSTATE_MAP</Tag>
+		<English>Confirming Map Script</English>
+		<French>Confirmation du script de la carte</French>
+		<German>Kartenskript wird best&#228;tigt</German>
+		<Italian>Conferma dello script della mappa</Italian>
+		<Spanish>Confirmando secuencia de comandos del mapa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WAIT_PLAYERSTATE_SYNC</Tag>
+		<English>Synchronizing Game State</English>
+		<French>Synchronisation de la partie</French>
+		<German>Spielstatus wird synchronisiert</German>
+		<Italian>Sincronizzazione dello stato della partita</Italian>
+		<Spanish>Sincronizando estado de la partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_AS_CITIES</Tag>
+		<English>Cities</English>
+		<French>Villes</French>
+		<German>St&#228;dte</German>
+		<Italian>Citt&#224;</Italian>
+		<Spanish>Ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_AS_IMPROVEMENTS</Tag>
+		<English>Improvements</English>
+		<French>Am&#233;nagements</French>
+		<German>Modernisierungen</German>
+		<Italian>Miglioramenti</Italian>
+		<Spanish>Mejoras</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_AS_TECH</Tag>
+		<English>Techs</English>
+		<French>Technologies</French>
+		<German>Technologien</German>
+		<Italian>Tecnologie</Italian>
+		<Spanish>Tecnolog&#237;as</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_AS_UNITS</Tag>
+		<English>Units</English>
+		<French>Unit&#233;s</French>
+		<German>Einheiten</German>
+		<Italian>Unit&#224;</Italian>
+		<Spanish>Unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_AS_VISIBILITY</Tag>
+		<English>Visibility</English>
+		<French>Affichage</French>
+		<German>Sicht</German>
+		<Italian>Visibilit&#224;</Italian>
+		<Spanish>Visibilidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_BONUSES</Tag>
+		<English>Bonuses</English>
+		<French>Bonus</French>
+		<German>Boni</German>
+		<Italian>Bonus</Italian>
+		<Spanish>Bonificaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_BUILDINGS</Tag>
+		<English>Buildings</English>
+		<French>B&#226;timents</French>
+		<German>Geb&#228;ude</German>
+		<Italian>Edifici</Italian>
+		<Spanish>Edificios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_CHANGE_ALL_PLOTS</Tag>
+		<English>Change All Plots</English>
+		<French>Changer toutes les cases</French>
+		<German>Alle Gel&#228;ndefelder &#228;ndern</German>
+		<Italian>Cambia tutti i terreni</Italian>
+		<Spanish>Cambiar todas las casillas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_DIPLOMACY</Tag>
+		<English>Diplomacy Mode</English>
+		<French>Mode diplomatie</French>
+		<German>Diplomatiemodus</German>
+		<Italian>Modalit&#224; diplomatica</Italian>
+		<Spanish>Modo Diplomacia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_EDIT_CITY</Tag>
+		<English>Edit City Mode</English>
+		<French>Mode &#233;dition des villes</French>
+		<German>Stadtmodus bearbeiten</German>
+		<Italian>Modifica modalit&#224; citt&#224;</Italian>
+		<Spanish>Modo Editar ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_EDIT_UNIT</Tag>
+		<English>Edit Unit Mode</English>
+		<French>Mode &#233;dition des unit&#233;s</French>
+		<German>Einheitenmodus bearbeiten</German>
+		<Italian>Modifica modalit&#224; unit&#224;</Italian>
+		<Spanish>Modo Editar unidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_ERASE_PLOTS</Tag>
+		<English>Enter erase mode</English>
+		<French>Mode effacement</French>
+		<German>L&#246;schmodus starten</German>
+		<Italian>Modalit&#224; elimina</Italian>
+		<Spanish>Activar modo "Borrar"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_EXIT</Tag>
+		<English>Exit World Builder</English>
+		<French>Quitter l'&#233;diteur de mondes</French>
+		<German>Weltenbauer beenden</German>
+		<Italian>Esci dall'editor</Italian>
+		<Spanish>Salir del Creador de mundos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_IMPROVEMENTS</Tag>
+		<English>Improvements</English>
+		<French>Am&#233;nagements</French>
+		<German>Modernisierungen</German>
+		<Italian>Miglioramenti</Italian>
+		<Spanish>Mejoras</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_LANDMARK_PLOTS</Tag>
+		<English>Enter landmark mode</English>
+		<French>Mode monument</French>
+		<German>Wahrzeichenmodus starten</German>
+		<Italian>Modalit&#224; punto di riferimento</Italian>
+		<Spanish>Activar modo "Lugar de referencia"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_MAP_MODE</Tag>
+		<English>Map Mode</English>
+		<French>Mode Carte</French>
+		<German>Kartenmodus</German>
+		<Italian>Modalit&#224; mappa</Italian>
+		<Spanish>Modo Mapa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_NORMAL_MAP</Tag>
+		<English>Map Mode</English>
+		<French>Mode carte</French>
+		<German>Kartenmodus</German>
+		<Italian>Modalit&#224; mappa</Italian>
+		<Spanish>Modo Mapa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_NORMAL_PLAYER</Tag>
+		<English>Player Mode</English>
+		<French>Mode joueur</French>
+		<German>Spielermodus</German>
+		<Italian>Modalit&#224; giocatore</Italian>
+		<Spanish>Modo Jugador</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_PLAYER_MODE</Tag>
+		<English>Player Mode</English>
+		<French>Mode Joueur</French>
+		<German>Spielermodus</German>
+		<Italian>Modalit&#224; giocatore</Italian>
+		<Spanish>Modo Jugador</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_PROMOTIONS</Tag>
+		<English>Promotions</English>
+		<German>Bef&#246;rderungen</German>
+		<Italian>Promozioni</Italian>
+		<Spanish>Ascensos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WBREAD_FAILURE</Tag>
+		<English>Failed to read worldbuilder file "%s1_WBName"</English>
+		<French>Echec de lecture du fichier "%s1_WBName" de l'&#233;diteur de mondes</French>
+		<German>Weltenbauer-Datei "%s1_WBName" konnte nicht gelesen werden</German>
+		<Italian>Impossibile leggere il file dell'editor "%1_WBName"</Italian>
+		<Spanish>No se ha podido leer el archivo "%s1_WBName" del Creador de mundos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_REGENERATE_MAP</Tag>
+		<English>Regenerate Map Using Current Map Script</English>
+		<French>R&#233;g&#233;n&#233;rer la carte &#224; l'aide du script de la carte actuelle</French>
+		<German>Karte auf Basis des aktuellen Kartenskripts neu generieren</German>
+		<Italian>Rigenera la mappa utilizzando l'attuale script</Italian>
+		<Spanish>Regenerar mapa empleando la actual secuencia de comandos de mapa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_REVEAL_ALL</Tag>
+		<English>Reveal All Tiles</English>
+		<French>D&#233;voiler toutes les cases</French>
+		<German>Alle Gel&#228;ndefelder einblenden</German>
+		<Italian>Rivela tutte le caselle</Italian>
+		<Spanish>Mostrar todas las casillas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_REVEAL_TILE</Tag>
+		<English>Reveal Tile Mode</English>
+		<French>Mode d&#233;voiler terrain</French>
+		<German>Gel&#228;ndefelder-einblenden-Modus</German>
+		<Italian>Modalit&#224; scopri caselle</Italian>
+		<Spanish>Modo Mostrar casilla</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_SIZE_TAG</Tag>
+		<English>Map Size: %s1_size</English>
+		<French>Taille carte : %s1_size</French>
+		<German>Kartengr&#246;&#223;e: %s1_size</German>
+		<Italian>Dimensioni mappa: %s1_size</Italian>
+		<Spanish>Tama&#241;o: %s1_size</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_TECHNOLOGIES</Tag>
+		<English>Technologies</English>
+		<French>Technologies</French>
+		<German>Technologien</German>
+		<Italian>Tecnologie</Italian>
+		<Spanish>Tecnolog&#237;as</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_TERRAINS</Tag>
+		<English>Terrains</English>
+		<French>Terrains</French>
+		<German>Gel&#228;nde</German>
+		<Italian>Terreni</Italian>
+		<Spanish>Terrenos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_TERRITORY</Tag>
+		<English>Territory</English>
+		<French>Territoire</French>
+		<German>Territorium</German>
+		<Italian>Territorio</Italian>
+		<Spanish>Territorio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_UNITS</Tag>
+		<English>Units</English>
+		<French>Unit&#233;s</French>
+		<German>Einheiten</German>
+		<Italian>Unit&#224;</Italian>
+		<Spanish>Unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_UNREVEAL_ALL</Tag>
+		<English>Unreveal All Tiles</English>
+		<French>Masquer toutes les cases</French>
+		<German>Alle Gel&#228;ndefelder ausblenden</German>
+		<Italian>Copri tutte le caselle</Italian>
+		<Spanish>Ocultar todas las casillas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_WORLD_BUILDER_EDIT_CONTROL</Tag>
+		<English>World Builder Edit Control</English>
+		<French>Commande Editeur de monde </French>
+		<German>Weltenbauer-Bearbeitungssteuerung</German>
+		<Italian>Comandi dell'editor</Italian>
+		<Spanish>Control de edici&#243;n del Creador de mundos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WINDOW_CLOSE</Tag>
+		<English>Close</English>
+		<French>Fermer</French>
+		<German>Schlie&#223;en</German>
+		<Italian>Chiudi</Italian>
+		<Spanish>Close</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WINDOW_COLLAPSE</Tag>
+		<English>Collapse</English>
+		<French>R&#233;duire</French>
+		<German>Ausblenden</German>
+		<Italian>Collassa</Italian>
+		<Spanish>Derruir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WINDOW_EXPAND</Tag>
+		<English>Expand</English>
+		<French>Etendre</French>
+		<German>Einblenden</German>
+		<Italian>Espandi</Italian>
+		<Spanish>Expandir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WINDOW_MAXIMIZE</Tag>
+		<English>Maximize</English>
+		<French>Agrandir</French>
+		<German>Maximieren</German>
+		<Italian>Ingrandisci</Italian>
+		<Spanish>Maximizar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WINDOW_MINIMIZE</Tag>
+		<English>Minimize</English>
+		<French>Diminuer</French>
+		<German>Minimieren</German>
+		<Italian>Riduci</Italian>
+		<Spanish>Minimizar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WINDOW_POPUP_MOVE</Tag>
+		<English>Move</English>
+		<French>D&#233;placer</French>
+		<German>Verschieben</German>
+		<Italian>Muovi</Italian>
+		<Spanish>Mover</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WINDOW_POPUP_RESIZE</Tag>
+		<English>Size</English>
+		<French>Taille</French>
+		<German>Gr&#246;&#223;e &#228;ndern</German>
+		<Italian>Dimensioni</Italian>
+		<Spanish>Tama&#241;o</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WINDOW_RESTORE</Tag>
+		<English>Restore</English>
+		<French>R&#233;tablir</French>
+		<German>Wiederherstellen</German>
+		<Italian>Ripristina</Italian>
+		<Spanish>Restaurar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WINDOW_RESTORE_DOWN</Tag>
+		<English>Restore Down</English>
+		<French>R&#233;tablir bas</French>
+		<German>Verkleinern</German>
+		<Italian>Ripristino in basso</Italian>
+		<Spanish>Restaurar (baja)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WINDOW_RESTORE_UP</Tag>
+		<English>Restore Up</English>
+		<French>R&#233;tablir haut</French>
+		<German>Vergr&#246;&#223;ern</German>
+		<Italian>Ripristino in alto</Italian>
+		<Spanish>Restaurar (alza)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WRONG_VERSION</Tag>
+		<English>Cannot load version %d1, expected version %d2 or lower</English>
+		<French>Impossible de charger la version %d1, version attendue : %d2 ou inf&#233;rieure</French>
+		<German>Version %d1 kann nicht geladen werden, es wurde Version %d2 oder eine fr&#252;hrere Version erwartet.</German>
+		<Italian>Impossibile caricare la versione %d1, prevista la versione %d2 o inferiore</Italian>
+		<Spanish>No se puede cargar la versi&#243;n %d1. Es necesaria la %d2 o inferior.</Spanish>
+	</TEXT>
 </Civ4GameText>
