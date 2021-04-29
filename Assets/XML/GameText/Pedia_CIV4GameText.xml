@@ -1054,4 +1054,12 @@
 		<Polish>Ocena pracy: %d1</Polish>
 		<Russian>Îöåíêà ðàáîòû: %d1</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_SCREEN_EXIT</Tag>
+		<English>Exit</English>
+		<French>Quitter</French>
+		<German>Beenden</German>
+		<Italian>Esci</Italian>
+		<Spanish>Salir</Spanish>
+	</TEXT>
 </Civ4GameText>
