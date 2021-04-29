@@ -763,7 +763,7 @@ bool CvXMLLoadUtility::LoadGlobalText()
 	std::vector<CvString> aszFiles;
 	std::vector<CvString> aszModfiles;
 
-	gDLL->enumerateFiles(aszFiles, "xml\\text\\*.xml");
+	gDLL->enumerateFiles(aszFiles, "xml\\GameText\\*.xml");
 
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 05/23/08                                MRGENIE      */

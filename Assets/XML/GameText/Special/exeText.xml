@@ -1,0 +1,914 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- WARNING: Those are texts used by EXE. No text may be removed from it or added to it, only translations may be added or removed. -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_LOAD</Tag>
+		<English>Load</English>
+		<French>Charger</French>
+		<German>Laden</German>
+		<Italian>Imbarca</Italian>
+		<Spanish>Embarcar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_LOAD_GAME</Tag>
+		<English>Load Game</English>
+		<French>Charger une partie</French>
+		<German>Spiel laden</German>
+		<Italian>Carica partita</Italian>
+		<Spanish>Cargar partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SAVE</Tag>
+		<English>Save</English>
+		<French>Sauvegarder</French>
+		<German>Speichern</German>
+		<Italian>Salva</Italian>
+		<Spanish>Guardar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADD_BUDDY_HELP_TEXT</Tag>
+		<English>Once you add a person to your buddy list, you can send them direct messages.</English>
+		<French>Si vous ajoutez un joueur &#224; votre liste d'amis, vous pourrez lui envoyer directement des messages.</French>
+		<German>Nach dem Hinzuf&#252;gen einer Person zu Ihrer Freundesliste k&#246;nnen Sie sofort Nachrichten an sie versenden.</German>
+		<Italian>Quando aggiungi una persona alla lista amici, puoi inviare messaggi personali diretti.</Italian>
+		<Spanish>Cuando agregas a alguien a la lista de amigos, puedes enviarle mensajes directos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADD_BUDDY_IMAGE_TEXT</Tag>
+		<English>ADD NEW BUDDY</English>
+		<French>AJOUTER NOUVEL AMI</French>
+		<German>NEUEN FREUND HINZUF&#220;GEN</German>
+		<Italian>AGGIUNGI NUOVO AMICO</Italian>
+		<Spanish>AGREGAR NUEVO AMIGO</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADD_BUDDY_NAME_TITLE</Tag>
+		<English>Add a Buddy</English>
+		<French>Ajouter un ami</French>
+		<German>Einen Freund hinzuf&#252;gen</German>
+		<Italian>Aggiungi un amico</Italian>
+		<Spanish>Agregar a un amigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADD_BUDDY_REQ_TITLE</Tag>
+		<English>BUDDY REQUEST</English>
+		<French>REQUETE D'AMI</French>
+		<German>FREUNDESANFRAGE</German>
+		<Italian>RICHIESTA AMICO</Italian>
+		<Spanish>SOLICITUD DE AMIGO</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADD_BUDDY_TAG</Tag>
+		<English>Add Buddy</English>
+		<French>Ajouter ami</French>
+		<German>Freund hinzuf&#252;gen</German>
+		<Italian>Aggiungi amico</Italian>
+		<Spanish>Agregar amigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADDED_BUDDY_IMAGE_TEXT</Tag>
+		<English>BUDDY REQUEST</English>
+		<French>REQUETE D'AMI</French>
+		<German>FREUNDESANFRAGE</German>
+		<Italian>RICHIESTA AMICO</Italian>
+		<Spanish>SOLICITUD DE AMIGO</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADDED_BUDDY_PROMPT</Tag>
+		<English>Would you like to be added to %s1_BuddyName's buddy list?</English>
+		<French>Voulez-vous figurer dans la liste d'amis de %s1_BuddyName ?</French>
+		<German>Wollen Sie zur Freundesliste von [COLOR_SELECTED_TEXT]%s1_BuddyName[COLOR_SELECTED_TEXT] hinzugef&#252;gt werden?</German>
+		<Italian>Vuoi che %s1_BuddyName ti aggiunga alla sua lista amici?</Italian>
+		<Spanish>&#191;Quieres que se te agregue a la lista de amigos de %s1_BuddyName?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADDED_BUDDY_TITLE</Tag>
+		<English>Buddy Request</English>
+		<French>Requ&#234;te d'ami</French>
+		<German>Freundesanfrage</German>
+		<Italian>Richiesta amico</Italian>
+		<Spanish>Solicitud de amigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADD_MEMBER_AS_BUDDYHELP</Tag>
+		<English>To directly chat with a member, they must first be added to your buddy list.  Do you want to add %s1_Name as a buddy now?</English>
+		<French>Pour discuter directement avec un membre, vous devez d'abord l'ajouter &#224; votre liste d'amis. Voulez-vous ajouter %s1_Name &#224; votre liste d'amis ?</French>
+		<German>Wenn Sie direkt mit anderen Mitgliedern chatten wollen, m&#252;ssen Sie diese in Ihre Freundesliste aufnehmen. Wollen Sie [COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] zu Ihrer Freundesliste hinzuf&#252;gen?</German>
+		<Italian>Per chattare direttamente con un membro, prima devi aggiungerlo alla tua lista amici. Vuoi aggiungere %s1_Name come amico?</Italian>
+		<Spanish>Para charlar directamente con un miembro, primero debes agregarlo a tu lista de amigos.  &#191;Quieres agregar a %s1_Name como amigo?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADDRESS_REQUIRED_DESC</Tag>
+		<English>A valid internet address is required.</English>
+		<French>Une adresse Internet valide est requise.</French>
+		<German>Es ist eine g&#252;ltige Internetadresse erforderlich.</German>
+		<Italian>&#200; necessario un indirizzo Internet valido.</Italian>
+		<Spanish>Se necesita una direcci&#243;n v&#225;lida de Internet.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADDRESS_REQUIRED_TITLE</Tag>
+		<English>Address missing</English>
+		<French>Adresse manquante</French>
+		<German>Fehlende Adresse</German>
+		<Italian>Indirizzo mancante</Italian>
+		<Spanish>Falta direcci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADVANCED_START_POINTS</Tag>
+		<English>Advanced Start Base Points:</English>
+		<French>Points de base du d&#233;marrage avanc&#233; :</French>
+		<German>Basispunkte f&#252;r Fortgeschrittenen Start:</German>
+		<Italian>Punti iniziali Avvio avanzato:</Italian>
+		<Spanish>Puntos base del Inicio avanzado:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADVANCED_START_POINTS_HELP</Tag>
+		<English>Gold you receive at the start to purchase cities, units, and improvements.</English>
+		<French>Or que vous recevez au d&#233;marrage pour acheter des villes, des unit&#233;s et des am&#233;liorations.</French>
+		<German>Gold, das Sie am Anfang erhalten, um St&#228;dte, Einheiten und Modernisierungen zu kaufen.</German>
+		<Italian>L'oro che ricevi all'inizio per acquistare citt&#224;, unit&#224; e miglioramenti.</Italian>
+		<Spanish>El oro que recibes al inicio para comprar ciudades, unidades y mejoras.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ALREADY_BUDDY_DESC</Tag>
+		<English>You have attempted to add an existing buddy.</English>
+		<French>Vous avez tent&#233; d'ajouter un ami qui existe d&#233;j&#224;.</French>
+		<German>Sie haben versucht, einen Freund hinzuzuf&#252;gen, der bereits existiert.</German>
+		<Italian>Hai provato ad aggiungere un amico esistente.</Italian>
+		<Spanish>Se ha intentado agregar a un amigo ya existente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ALREADY_BUDDY_TITLE</Tag>
+		<English>Already a buddy</English>
+		<French>D&#233;j&#224; un de vos amis</French>
+		<German>Freund existiert bereits</German>
+		<Italian>&#200; gi&#224; un amico</Italian>
+		<Spanish>Ya es amigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AUTOSAVING</Tag>
+		<English>Autosaving...</English>
+		<French>Sauvegarde automatique...</French>
+		<German>Automatisches Speichern ...</German>
+		<Italian>Salvataggio automatico...</Italian>
+		<Spanish>Guardado autom&#225;tico...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BAD_LOGIN_DESC</Tag>
+		<English>The Username you entered is not valid.</English>
+		<French>Le nom d'utilisateur sp&#233;cifi&#233; est incorrect.</French>
+		<German>Der angegebene Benutzername ist ung&#252;ltig.</German>
+		<Italian>Lo username inserito non &#232; valido.</Italian>
+		<Spanish>El nombre de usuario introducido no es v&#225;lido.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BAD_LOGIN_TITLE</Tag>
+		<English>Username not found</English>
+		<French>Nom d'utilisateur introuvable</French>
+		<German>Benutzername nicht gefunden</German>
+		<Italian>Username non trovato</Italian>
+		<Spanish>No se ha encontrado nombre de usuario</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BAD_NEW_PASSWORD_DESC</Tag>
+		<English>The password is incorrect for the provided E-Mail address.</English>
+		<French>Le mot de passe ne correspond pas &#224; l'adresse e-mail fournie.</French>
+		<German>Das Passwort f&#252;r die angegebene E-Mail-Adresse ist nicht korrekt.</German>
+		<Italian>La password per l'indirizzo e-mail fornito non &#232; valida.</Italian>
+		<Spanish>La contrase&#241;a para la direcci&#243;n de e-mail proporcionada no es correcta.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BAD_NEW_PASSWORD_TITLE</Tag>
+		<English>Bad Password</English>
+		<French>Mot de passe incorrect</French>
+		<German>Falsches Passwort</German>
+		<Italian>Password non valida</Italian>
+		<Spanish>Contrase&#241;a err&#243;nea</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BAD_PASSWORD_DESC</Tag>
+		<English>The password you entered is incorrect.</English>
+		<French>Le mot de passe saisi est incorrect.</French>
+		<German>Das angegebene Kennwort ist falsch.</German>
+		<Italian>La password inserita &#232; sbagliata.</Italian>
+		<Spanish>La contrase&#241;a introducida es incorrecta.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BAD_PASSWORD_TITLE</Tag>
+		<English>Incorrect Password</English>
+		<French>Mot de passe incorrect</French>
+		<German>Falsches Kennwort</German>
+		<Italian>Password sbagliata</Italian>
+		<Spanish>Contrase&#241;a incorrecta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BELOW_MIN_SPECS_MESSAGE</Tag>
+		<English>Your machine is below minimum specifications. Civ4 will not run on this hardware setup.</English>
+		<French>Votre ordinateur ne r&#233;pond pas &#224; la configuration minimale requise. Civ IV ne peut pas fonctionner avec cette configuration mat&#233;rielle.</French>
+		<German>Ihr Computer erf&#252;llt nicht die Mindestanforderungen. Civ4 wird mit diesem Hardware-Setup nicht laufen.</German>
+		<Italian>Il tuo computer non raggiunge i requisiti minimi. Civ4 non pu&#242; funzionare su questa configurazione hardware.</Italian>
+		<Spanish>El ordenador no cumple los requisitos m&#237;nimos. Civilization 4 no puede funcionar con esta configuraci&#243;n de hardware.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDYLIST_EMPTY_NAME_DESC</Tag>
+		<English>You must provide a buddy name.</English>
+		<French>Vous devez sp&#233;cifier un nom d'ami.</French>
+		<German>Sie m&#252;ssen einen Freund-Namen angeben.</German>
+		<Italian>Devi inserire il nome di un amico.</Italian>
+		<Spanish>Hay que facilitar un nombre de amigo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDYLIST_EMPTY_NAME_TITLE</Tag>
+		<English>Buddy name required</English>
+		<French>Nom d'ami requis</French>
+		<German>Freund-Name erforderlich</German>
+		<Italian>Nome amico necessario</Italian>
+		<Spanish>Se requiere nombre de amigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDYLIST_MULTIPLE_PROFILES_DESC</Tag>
+		<English>Multiple matching profiles were found.  Please refine your search criteria.</English>
+		<French>Plusieurs profils correspondants ont &#233;t&#233; trouv&#233;s. Affinez vos crit&#232;res de recherche.</French>
+		<German>Es wurden mehrere &#252;bereinstimmende Profile gefunden. Geben Sie bitte weitere Suchkriterien an.</German>
+		<Italian>Trovati risultati multipli. Modifica il tuo criterio di ricerca.</Italian>
+		<Spanish>Se han encontrado varios perfiles que coinciden.  Hay que reducir los criterios de b&#250;squeda.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDYLIST_MULTIPLE_PROFILES_TITLE</Tag>
+		<English>Multiple matches found</English>
+		<French>Plusieurs amis ont &#233;t&#233; trouv&#233;s.</French>
+		<German>Mehrfache &#220;bereinstimmungen gefunden</German>
+		<Italian>Trovati risultati multipli</Italian>
+		<Spanish>Halladas varias coincidencias</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDYLIST_NO_PROFILE_DESC</Tag>
+		<English>No matching buddy profiles were found.</English>
+		<French>Pas de profil d'ami correspondant trouv&#233;.</French>
+		<German>Es wurden keine Freundesprofile gefunden.</German>
+		<Italian>Nessun profilo amico trovato.</Italian>
+		<Spanish>No se ha encontrado ning&#250;n perfil de amigo que coincida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDYLIST_NO_PROFILE_TITLE</Tag>
+		<English>No buddy found</English>
+		<French>Pas d'ami trouv&#233;</French>
+		<German>Kein Freund gefunden</German>
+		<Italian>Nessun amico trovato</Italian>
+		<Spanish>Amigo no encontrado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDYLIST_SERVER_ERROR_DESC</Tag>
+		<English>An error has occured on the buddy list server.</English>
+		<French>Une erreur est survenue sur la liste d'amis du serveur.</French>
+		<German>Auf dem Freundeslisten-Server ist ein Fehler aufgetreten.</German>
+		<Italian>Errore sul server della lista amici.</Italian>
+		<Spanish>Se ha producido un error en la lista de amigos del servidor.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDYLIST_SERVER_ERROR_TITLE</Tag>
+		<English>Server error</English>
+		<French>Erreur du serveur</French>
+		<German>Serverfehler</German>
+		<Italian>Errore del server</Italian>
+		<Spanish>Error del servidor</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDY_LIST_STATUS_LOBBY</Tag>
+		<English>Lobby</English>
+		<French>Salle</French>
+		<German>Lobby</German>
+		<Italian>Sala d'attesa</Italian>
+		<Spanish>Sala</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDY_LIST_STATUS_NA</Tag>
+		<English>Not Available</English>
+		<French>Non disponible</French>
+		<German>Nicht verf&#252;gbar</German>
+		<Italian>Non disponibile</Italian>
+		<Spanish>No disponible</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDY_LIST_STATUS_OFFLINE</Tag>
+		<English>Offline</English>
+		<French>Hors ligne</French>
+		<German>Offline</German>
+		<Italian>Non connesso</Italian>
+		<Spanish>Desconectado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDY_LIST_STATUS_PLAYING</Tag>
+		<English>Playing</English>
+		<French>En cours de partie</French>
+		<German>Spielt</German>
+		<Italian>In gioco</Italian>
+		<Spanish>Jugando</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDY_LIST_STATUS_STAGING</Tag>
+		<English>Staging</English>
+		<French>Dans le salon</French>
+		<German>Staging</German>
+		<Italian>In allestimento</Italian>
+		<Spanish>En comunicaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDY_NAME_TAG</Tag>
+		<English>Buddy Name: </English>
+		<French>Nom d'ami :</French>
+		<German>Freund-Name: </German>
+		<Italian>Nome amico:</Italian>
+		<Spanish>Nombre de amigo: </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDY_REQUEST_FAILED_DESC</Tag>
+		<English>The buddy request could not be sent.</English>
+		<French>L'envoi de la requ&#234;te d'ami est impossible.</French>
+		<German>Die Freundesanfrage konnte nicht gesendet werden.</German>
+		<Italian>La richiesta amico non &#232; stata inviata.</Italian>
+		<Spanish>No se ha podido enviar la solicitud de amigo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDY_REQUEST_FAILED_TITLE</Tag>
+		<English>Buddy request failed</English>
+		<French>Echec de la requ&#234;te d'ami</French>
+		<German>Freundesanfrage fehlgeschlagen</German>
+		<Italian>Richiesta amico fallita</Italian>
+		<Spanish>Fallo en la solicitud de amigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUDDY_ROOT_NAME</Tag>
+		<English>Buddies</English>
+		<French>Amis</French>
+		<German>Freunde</German>
+		<Italian>Amici</Italian>
+		<Spanish>Amigos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CHAT_LOG</Tag>
+		<English>Chat Log</English>
+		<French>Journal</French>
+		<German>Chat-Log</German>
+		<Italian>Registro chat</Italian>
+		<Spanish>Historial del chat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_ELIM_TAG</Tag>
+		<English>City Elimination Limit:</English>
+		<French>Limite &#233;limination villes :</French>
+		<German>Limit Stadt-Eliminierung:</German>
+		<Italian>Limite eliminazione citt&#224;:</Italian>
+		<Spanish>L&#237;mite de eliminaci&#243;n de ciudades:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_RESPONSE_TAKEN_DESC</Tag>
+		<English>This Civ has already been claimed.</English>
+		<French>Cette civilisation a d&#233;j&#224; &#233;t&#233; choisie.</French>
+		<German>Diese Zivilisation ist bereits vergeben.</German>
+		<Italian>Questa civilt&#224; &#232; gi&#224; stata assegnata.</Italian>
+		<Spanish>Alguien ha escogido ya esta civilizaci&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_RESPONSE_TAKEN_TITLE</Tag>
+		<English>Pick your Civ</English>
+		<French>Choisissez votre civilisation</French>
+		<German>W&#228;hlen Sie Ihre Zivilisation</German>
+		<Italian>Scegli la tua civilt&#224;</Italian>
+		<Spanish>Elige una civilizaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SELECT_RANDOM_CIV</Tag>
+		<English>The Civilization and Leader will be chosen randomly.</English>
+		<French>La civilisation et le dirigeant seront choisis al&#233;atoirement.</French>
+		<German>Zivilisation und Staatsoberhaupt werden zuf&#228;llig ausgew&#228;hlt.</German>
+		<Italian>Leader e civilt&#224; verranno scelti casualmente.</Italian>
+		<Spanish>La civilizaci&#243;n y el l&#237;der se elegir&#225;n al azar.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SELECT_RANDOM_LEADER</Tag>
+		<English>The Leader will be chosen randomly.</English>
+		<French>Le dirigeant sera choisi al&#233;atoirement.</French>
+		<German>Das Staatsoberhaupt wird zuf&#228;llig ausgew&#228;hlt.</German>
+		<Italian>Il leader verr&#224; scelto casualmente.</Italian>
+		<Spanish>El l&#237;der se elegir&#225; al azar.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_LOG</Tag>
+		<English>Combat Log</English>
+		<French>Journal de combat</French>
+		<German>Kampf-Log</German>
+		<Italian>Registro combattimenti</Italian>
+		<Spanish>Historial del combate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMPRESS_FAILED</Tag>
+		<English>Failed to compress game data</English>
+		<French>Impossible de compresser les donn&#233;es du jeu</French>
+		<German>Die Spieldaten konnten nicht komprimiert werden</German>
+		<Italian>Impossibile comprimere i dati di gioco</Italian>
+		<Spanish>No se han podido comprimir los datos del juego.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_ALREADY_CONNECTED_DESC</Tag>
+		<English>We are already connected to this host.</English>
+		<French>Nous sommes d&#233;j&#224; connect&#233;s &#224; cet h&#244;te.</French>
+		<German>Es besteht bereits eine Verbindung zu diesem Host.</German>
+		<Italian>Siamo gi&#224; connessi a questo host.</Italian>
+		<Spanish>Ya existe una conexi&#243;n con el anfitri&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_ALREADY_CONNECTED_TITLE</Tag>
+		<English>Already connected</English>
+		<French>Connexion d&#233;j&#224; &#233;tablie</French>
+		<German>Bereits verbunden</German>
+		<Italian>Gi&#224; connesso</Italian>
+		<Spanish>Ya conectado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_INVALID_ADDRESS_DESC</Tag>
+		<English>The address attempted was invalid.</English>
+		<French>L'adresse de connexion est incorrecte.</French>
+		<German>Die angefragte Adresse ist ung&#252;ltig.</German>
+		<Italian>L'indirizzo inserito non &#232; risultato valido.</Italian>
+		<Spanish>La direcci&#243;n probada no era v&#225;lida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_INVALID_ADDRESS_TITLE</Tag>
+		<English>Connection attempt rejected</English>
+		<French>Echec de la tentative de connexion</French>
+		<German>Verbindungsanfrage abgewiesen</German>
+		<Italian>Tentativo di connessione rifiutato</Italian>
+		<Spanish>Intento de conexi&#243;n rechazado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_NAT_ERROR_DESC</Tag>
+		<English>Unable to negotiate with the host's firewall.</English>
+		<French>Impossible de n&#233;gocier avec le pare-feu de l'h&#244;te.</French>
+		<German>Es konnte kein Verbindungsaufbau mit der Firewall des Hosts ausgehandelt werden.</German>
+		<Italian>Impossibile negoziare con il firewall dell'host.</Italian>
+		<Spanish>No se ha podido negociar con el firewall/servidor de seguridad del anfitri&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_NAT_ERROR_TITLE</Tag>
+		<English>Connection attempt failed</English>
+		<French>Echec de la tentative de connexion</French>
+		<German>Verbindungsversuch gescheitert</German>
+		<Italian>Tentativo di connessione fallito</Italian>
+		<Spanish>Ha fallado el intento de conexi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_NETWORK_ERROR_DESC</Tag>
+		<English>Our connection attempt failed due to an unspecified network error.</English>
+		<French>La tentative de connexion a &#233;chou&#233;. R&#233;seau non sp&#233;cifi&#233;.</French>
+		<German>Der Verbindungsversuch ist wegen eines unbekannten Netzwerkfehlers gescheitert.</German>
+		<Italian>Il nostro tentativo di connessione &#232; fallito a causa di un errore di rete non specificato.</Italian>
+		<Spanish>El intento de conexi&#243;n ha fallado debido a un error de red no especificado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_NETWORK_ERROR_TITLE</Tag>
+		<English>Connection attempt failed</English>
+		<French>Echec de la tentative de connexion</French>
+		<German>Verbindungsversuch fehlgeschlagen</German>
+		<Italian>Tentativo di connessione fallito</Italian>
+		<Spanish>Ha fallado el intento de conexi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_OUT_OF_MEMORY_DESC</Tag>
+		<English>Our connection attempt failed due to a lack of available memory.</English>
+		<French>La connexion a &#233;chou&#233; par manque de m&#233;moire syst&#232;me.</French>
+		<German>Zu wenig verf&#252;gbarer Speicher. Der Verbindungsversuch ist gescheitert.</German>
+		<Italian>Il nostro tentativo di connessione &#232; fallito a causa della mancanza di memoria disponibile.</Italian>
+		<Spanish>El intento de conexi&#243;n ha fallado debido a la falta de disponibilidad de memoria.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_OUT_OF_MEMORY_TITLE</Tag>
+		<English>Connection attempt failed</English>
+		<French>Echec de la tentative de connexion</French>
+		<German>Verbindungsversuch gescheitert</German>
+		<Italian>Tentativo di connessione fallito</Italian>
+		<Spanish>Ha fallado el intento de conexi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_REJECTED_DESC</Tag>
+		<English>The host of this game has rejected our connection attempt.</English>
+		<French>L'h&#244;te de cette partie a rejet&#233; votre tentative de connexion.</French>
+		<German>Der Host dieses Spiels hat die Verbindungsanfrage abgewiesen.</German>
+		<Italian>L'host di questa partita ha rifiutato il tuo tentativo di connessione.</Italian>
+		<Spanish>El anfitri&#243;n de la partida ha rechazado el intento de conexi&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_REJECTED_TITLE</Tag>
+		<English>Connection attempt rejected</English>
+		<French>Tentative de connexion rejet&#233;e</French>
+		<German>Verbindungsanfrage abgewiesen</German>
+		<Italian>Tentativo di connessione rifiutato</Italian>
+		<Spanish>Intento de conexi&#243;n rechazado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_TIMEOUT_DESC</Tag>
+		<English>The connection attempt to the host has timed out.</English>
+		<French>Le d&#233;lai de connexion &#224; l'h&#244;te a expir&#233;.</French>
+		<German>Die Wartezeit f&#252;r den Verbindungsaufbau zum Host ist abgelaufen.</German>
+		<Italian>Time out durante il tentativo di connessione all'host.</Italian>
+		<Spanish>Se ha agotado el tiempo de espera del intento de conexi&#243;n con el anfitri&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_TIMEOUT_TITLE</Tag>
+		<English>Connection timed out</English>
+		<French>D&#233;lai de connexion expir&#233;</French>
+		<German>Wartezeit f&#252;r Verbindungsaufbau abgelaufen</German>
+		<Italian>Time out della connessione</Italian>
+		<Spanish>Agotado el tiempo de espera de la conexi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_UNSPECIFIED_ERROR_DESC</Tag>
+		<English>The connection attempt failed due to an unspecified error.</English>
+		<French>Echec de la tentative de connexion. Erreur non sp&#233;cifi&#233;e.</French>
+		<German>Der Verbindungsversuch ist wegen eines unbekannten Fehlers gescheitert.</German>
+		<Italian>Il tentativo di connessione &#232; fallito a causa di un errore non specificato.</Italian>
+		<Spanish>El intento de conexi&#243;n ha fallado debido a un error no especificado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_UNSPECIFIED_ERROR_TITLE</Tag>
+		<English>Connection attempt failed</English>
+		<French>Echec de la tentative de connexion</French>
+		<German>Verbindungsversuch gescheitert</German>
+		<Italian>Tentativo di connessione fallito</Italian>
+		<Spanish>Ha fallado el intento de conexi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_UPDATE_HOST_ATTEMPT</Tag>
+		<English>Contacting host...</English>
+		<French>Contact de l'h&#244;te...</French>
+		<German>Verbindungsversuch zum Host ...</German>
+		<Italian>Connessione con l'host...</Italian>
+		<Spanish>Contactando con el anfitri&#243;n...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_UPDATE_HOST_CONNECTED</Tag>
+		<English>Connected to host...</English>
+		<French>Connect&#233; &#224; l'h&#244;te...</French>
+		<German>Verbindung zum Host hergestellt ...</German>
+		<Italian>Connesso all'host...</Italian>
+		<Spanish>Se ha conectado con el anfitri&#243;n...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_UPDATE_NAMED_PEER_ATTEMPT</Tag>
+		<English>Contacting Established Peer "%s1_Name"</English>
+		<French>Contact avec le peer "%s1_Name"</French>
+		<German>Verbindungsaufbau mit etabliertem Peer "%s1_Name"</German>
+		<Italian>Connessione via peer con "%s1_Name"</Italian>
+		<Spanish>Contactando con el interlocutor establecido "%s1_Name"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_UPDATE_PEER_ATTEMPT</Tag>
+		<English>Contacting peer...</English>
+		<French>Tentative connexion en 'peer to peer'...</French>
+		<German>Verbindungsaufbau mit Gegenstelle ...</German>
+		<Italian>Connessione al peer...</Italian>
+		<Spanish>Contactando con un interlocutor...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONNECT_UPDATE_PEER_CONNECTED</Tag>
+		<English>Connected to peer...</English>
+		<French>Connexion en 'peer to peer'...</French>
+		<German>Verbindung zur Gegenstelle hergestellt ...</German>
+		<Italian>Connesso al peer...</Italian>
+		<Spanish>Se ha contactado con un interlocutor...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONN_UPDATE_JOINED</Tag>
+		<English>%s1_Name has joined the game.</English>
+		<French>%s1_Name a rejoint la partie.</French>
+		<German>%s1_Name hat sich dem Spiel angeschlossen.</German>
+		<Italian>%s1_Name si &#232; unito alla partita.</Italian>
+		<Spanish>%s1_Name se ha unido a la partida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONN_UPDATE_KICKED</Tag>
+		<English>%s1_Name has been kicked from the game.</English>
+		<French>%s1_Name a &#233;t&#233; expuls&#233;(e) de la partie.</French>
+		<German>%s1_Name wurde aus dem Spiel geworfen.</German>
+		<Italian>%s1_Name &#232; stato cacciato dalla partita.</Italian>
+		<Spanish>%s1_Name ha sido expulsado de la partida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONN_UPDATE_LEFT</Tag>
+		<English>%s1_Name has left the game.</English>
+		<French>%s1_Name a quitt&#233; la partie.</French>
+		<German>%s1_Name hat das Spiel verlassen.</German>
+		<Italian>%s1_Name ha abbandonato la partita.</Italian>
+		<Spanish>%s1_Name ha abandonado la partida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONN_UPDATE_RETIRED</Tag>
+		<English>%s1_Name has retired from the game.</English>
+		<French>%s1_Name a abandonn&#233; la partie.</French>
+		<German>%s1_Name hat das Spiel verlassen.</German>
+		<Italian>%s1_Name si &#232; ritirato dalla partita.</Italian>
+		<Spanish>%s1_Name se ha retirado de la partida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONN_UPDATE_SAVING_QUITTING</Tag>
+		<English>Saving and quitting...</English>
+		<French>Sauvegarde et fin du programme...</French>
+		<German>Speichern und beenden ...</German>
+		<Italian>Salvataggio e uscita...</Italian>
+		<Spanish>Guardando y abandonando...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONN_UPDATE_SAVING_REMOVING</Tag>
+		<English>Saving game and removing %s1_Names</English>
+		<French>Sauvegarde et suppression de %s1_Names</French>
+		<German>Spiel wird gespeichert und %s1_Names entfernt</German>
+		<Italian>Salvataggio della partita e rimozione di %s1_Names</Italian>
+		<Spanish>Guardando partida y eliminando a %s1_Names.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONN_UPDATE_UNEXPECTED</Tag>
+		<English>Unexpected vote result.</English>
+		<French>R&#233;sultat de vote inattendu</French>
+		<German>Unerwartetes Abstimmungsergebnis.</German>
+		<Italian>Risultato della votazione inaspettato.</Italian>
+		<Spanish>Resultado inesperado de la votaci&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CUSTOM_GAME_TITLE</Tag>
+		<English>CUSTOM GAME</English>
+		<French>PARTIE PERSONNALISEE</French>
+		<German>EIGENES SPIEL</German>
+		<Italian>PARTITA PERSONALIZZATA</Italian>
+		<Spanish>PERSONALIZAR PARTIDA</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEFAULT_GAMENAME</Tag>
+		<English>My Game</English>
+		<French>Ma partie</French>
+		<German>Mein Spiel</German>
+		<Italian>Mia partita</Italian>
+		<Spanish>Mi partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DIPLOMACY_BUSY</Tag>
+		<English>%s1_player is busy. Try again later.</English>
+		<French>%s1_player est occup&#233;. R&#233;essayez plus tard.</French>
+		<German>%s1_player ist besch&#228;ftigt. Versuchen Sie es sp&#228;ter noch mal.</German>
+		<Italian>%s1_player &#232; occupato. Riprova pi&#249; tardi.</Italian>
+		<Spanish>%s1_player no est&#225; disponible. Intentadlo m&#225;s tarde.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DISCONNECT_NETWORK_DESC</Tag>
+		<English>The server has broken our connection.</English>
+		<French>Le serveur a interrompu notre connexion.</French>
+		<German>Der Server hat die Verbindung getrennt.</German>
+		<Italian>Il server ha interrotto la nostra connessione.</Italian>
+		<Spanish>El servidor ha interrumpido la conexi&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DISCONNECT_NETWORK_TITLE</Tag>
+		<English>Disconnected</English>
+		<French>D&#233;connexion</French>
+		<German>Verbindung getrennt</German>
+		<Italian>Disconnesso</Italian>
+		<Spanish>Desconectado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DISCONNECT_UNSPECIFIED_TITLE</Tag>
+		<English>Disconnected</English>
+		<French>D&#233;connexion</French>
+		<German>Verbindung getrennt</German>
+		<Italian>Disconnesso</Italian>
+		<Spanish>Desconectado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DISCONNECT_UNSPECIFIED_DESC</Tag>
+		<English>We have been disconnected from the server due to an unspecified error.</English>
+		<French>Nous avons &#233;t&#233; d&#233;connect&#233;s du serveur. Erreur non sp&#233;cifi&#233;e.</French>
+		<German>Die Verbindung zum Server wurde wegen eines unbekannten Fehlers getrennt.</German>
+		<Italian>Siamo stati disconnessi dal server a causa di un errore non specificato.</Italian>
+		<Spanish>Se ha producido la desconexi&#243;n del servidor debido a un error no especificado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOWNLOADING_DESC</Tag>
+		<English>DOWNLOADING...</English>
+		<French>CHARGEMENT EN COURS...</French>
+		<German>WIRD HERUNTERGELADEN ...</German>
+		<Italian>DOWNLOAD IN CORSO...</Italian>
+		<Spanish>DESCARGANDO...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOWNLOAD_MAP_WAIT</Tag>
+		<English>Waiting for peers to complete map transfer</English>
+		<French>En attente de peer pour terminer le transfert de la carte</French>
+		<German>Warten, dass Peers Kartentranfer abschlie&#223;en</German>
+		<Italian>In attesa che i peer completino il trasferimento della mappa</Italian>
+		<Spanish>Esperando a que los interlocutores completen la transferencia del mapa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOWNLOAD_STATUS_TAG</Tag>
+		<English>Download:  %d1_Recv / %d2_Total bytes</English>
+		<French>T&#233;l&#233;chargement:  %d1_Recv / %d2_Total octets</French>
+		<German>Download:  %d1_Recv / %d2_Total Bytes</German>
+		<Italian>Download: %d1_Recv / %d2_Total byte</Italian>
+		<Spanish>Descarga: %d1_Recv / %d2_Total bytes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_NAME_AND</Tag>
+		<English>and %s1_Name</English>
+		<French>et %s1_Name</French>
+		<German>und %s1_Name</German>
+		<Italian>e %s1_Name</Italian>
+		<Spanish>y %s1_Name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_NAME_COMMA_AND</Tag>
+		<English>, and %s1_Name</English>
+		<French>, et %s1_Name</French>
+		<German> und %s1_Name</German>
+		<Italian>, e %s1_Name</Italian>
+		<Spanish>, %s1_Name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_CONTINUE_DESC</Tag>
+		<English>Save the current game and continue playing</English>
+		<French>Sauvegarder la partie en cours et continuer le jeu.</French>
+		<German>Aktuelles Spiel speichern und weiterspielen</German>
+		<Italian>Salva la partita in corso e continua a giocare</Italian>
+		<Spanish>Guardar la partida y seguir jugando</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_CONTINUE_SHORT</Tag>
+		<English>CONTINUE</English>
+		<French>CONTINUER</French>
+		<German>FORTFAHREN</German>
+		<Italian>CONTINUA</Italian>
+		<Spanish>CONTINUAR</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_HEADER_CORRECTED</Tag>
+		<English>We are waiting for %s1_Names to reconnect to the game.  If you would like to stop waiting, please vote on how to proceed.</English>
+		<French>Nous attendons que %s1_Names se reconnecte &#224; la partie.  Si vous voulez mettre fin &#224; l'attente, demandez un vote sur la poursuite des op&#233;rations.</French>
+		<German>Warten auf erneute Spielverbindung von %s1_Names.  W&#228;hlen Sie, wie Sie fortfahren wollen, wenn Sie nicht l&#228;nger warten wollen.</German>
+		<Italian>Stiamo aspettando che %s1_Names si riconnettano alla partita.  Se vuoi smettere di aspettare, vota su come procedere.</Italian>
+		<Spanish>Esperando que se reanude la conexi&#243;n a la partida de %s1_Names.  Si no quieres seguir esperando, vota acerca de c&#243;mo proceder.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_OUTSTANDING_TITLE</Tag>
+		<English>Still waiting for outstanding votes.</English>
+		<French>Certains votes sont toujours en attente.</French>
+		<German>Es stehen noch immer Stimmabgaben aus.</German>
+		<Italian>In attesa dei voti mancanti.</Italian>
+		<Spanish>Esperando todav&#237;a votos importantes.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_QUIT_DESC</Tag>
+		<English>Save the current game and continue later</English>
+		<French>Sauvegarder la partie en cours et continuer plus tard.</French>
+		<German>Aktuelles Spiel speichern und sp&#228;ter weiterspielen</German>
+		<Italian>Salva la partita in corso e riprendi pi&#249; tardi</Italian>
+		<Spanish>Guardar la partida y seguir m&#225;s tarde</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_QUIT_SHORT</Tag>
+		<English>QUIT</English>
+		<French>QUITTER</French>
+		<German>ENDE</German>
+		<Italian>ELIMINA</Italian>
+		<Spanish>SALIR</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_TIED_TITLE</Tag>
+		<English>The vote was tied.</English>
+		<French>Egalit&#233; des votes.</French>
+		<German>Das Abstimmungsergebnis war unentschieden.</German>
+		<Italian>La votazione &#232; patta.</Italian>
+		<Spanish>La votaci&#243;n ha acabado en empate.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_UNANIMOUS_TITLE</Tag>
+		<English>The vote must be unanimous.</English>
+		<French>Le vote doit &#234;tre unanime.</French>
+		<German>Das Abstimmungsergebnis muss einstimmig sein.</German>
+		<Italian>La votazione deve essere unanime.</Italian>
+		<Spanish>La votaci&#243;n ha de ser un&#225;nime.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_UNDECIDED_SHORT</Tag>
+		<English>(Undecided)</English>
+		<French>(non d&#233;cid&#233;)</French>
+		<German>(Unentschlossen)</German>
+		<Italian>(Indeciso)</Italian>
+		<Spanish>(Indeciso)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_UNKNOWN_SHORT</Tag>
+		<English>Unknown!</English>
+		<French>Inconnu !</French>
+		<German>Unbekannt!</German>
+		<Italian>Sconosciuto!</Italian>
+		<Spanish>Desconocido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_WAIT_DESC</Tag>
+		<English>Continue to wait</English>
+		<French>Rester en attente</French>
+		<German>Weiter warten</German>
+		<Italian>Continua ad aspettare</Italian>
+		<Spanish>Seguir esperando</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_WAIT_SHORT</Tag>
+		<English>WAIT</English>
+		<French>ATTENDRE</French>
+		<German>WARTEN</German>
+		<Italian>ATTESA</Italian>
+		<Spanish>ESPERAR</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DROP_VOTE_WAIT_TITLE</Tag>
+		<English>The players have chosen to continue to wait.</English>
+		<French>Les joueurs ont vot&#233; pour la poursuite de l'attente.</French>
+		<German>Die Spieler haben beschlossen zu warten.</German>
+		<Italian>I giocatori hanno scelto di continuare ad aspettare.</Italian>
+		<Spanish>Los jugadores han decidido seguir esperando.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMAIL_NOT_SENT</Tag>
+		<English>Failed to send e-mail.[NEWLINE]SMTP host: %s1[NEWLINE]To: %s2[NEWLINE]From: %s3</English>
+		<French>Echec de l'envoi d'e-mail.[NEWLINE]H&#244;te SMTP : %s1[NEWLINE]A : %s2[NEWLINE]De : %s3</French>
+		<German>E-Mail-Versand fehlgeschlagen.[NEWLINE]SMTP-Host: %s1[NEWLINE]An: %s2[NEWLINE]Von: %s3</German>
+		<Italian>Invio dell'e-mail fallito.[NEWLINE]Host SMTP: %s1[NEWLINE]A: %s2[NEWLINE]Da: %s3</Italian>
+		<Spanish>No se ha conseguido enviar el e-mail.[NEWLINE]Anfitri&#243;n SMTP: %s1[NEWLINE]Para: %s2[NEWLINE]De: %s3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMAIL_REQUIRED_DESC</Tag>
+		<English>You must enter a valid E-Mail address.</English>
+		<French>Vous devez saisir une adresse e-mail valide.</French>
+		<German>Sie m&#252;ssen eine g&#252;ltige E-Mail-Adresse angeben.</German>
+		<Italian>Devi inserire un indirizzo e-mail valido.</Italian>
+		<Spanish>Hay que introducir una direcci&#243;n v&#225;lida de correo electr&#243;nico.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMAIL_REQUIRED_TITLE</Tag>
+		<English>Email required</English>
+		<French>E-mail requis</French>
+		<German>E-Mail-Adresse erforderlich</German>
+		<Italian>E-mail necessaria</Italian>
+		<Spanish>Se requiere e-mail</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMAIL_SENT</Tag>
+		<English>E-mail to %s1 successfully sent.</English>
+		<French>E-mail envoy&#233; &#224; %s1 avec succ&#232;s.</French>
+		<German>E-Mail erfolgreich an %s1 gesendet.</German>
+		<Italian>E-mail a %s1 inviata con successo.</Italian>
+		<Spanish>Se ha enviado sin problemas el e-mail a %s1.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ERROR</Tag>
+		<English>Error</English>
+		<French>Erreur</French>
+		<German>Fehler</German>
+		<Italian>Errore</Italian>
+		<Spanish>Error</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_LOG</Tag>
+		<English>Event Log</English>
+		<French>Journal des &#233;v&#233;nements</French>
+		<German>Ereignis-Log</German>
+		<Italian>Registro degli eventi</Italian>
+		<Spanish>Historial de sucesos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FATAL_ERROR</Tag>
+		<English>Fatal Error</English>
+		<French>Erreur fatale</French>
+		<German>Fataler Fehler</German>
+		<Italian>Errore critico</Italian>
+		<Spanish>Error cr&#237;tico</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FILE_TRANSFER_ERROR_DESC</Tag>
+		<English>Encountered a critical error while transferring the file.</English>
+		<French>Une erreur critique est survenue pendant le transfert du fichier.</French>
+		<German>Bei der &#220;bertragung der Datei ist ein Fehler aufgetreten.</German>
+		<Italian>Errore critico durante il trasferimento dei file.</Italian>
+		<Spanish>Se ha producido un error cr&#237;tico al transferir el archivo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FILE_TRANSFER_ERROR_TITLE</Tag>
+		<English>File transfer error</English>
+		<French>Erreur de transfert de fichier</French>
+		<German>Datei&#252;bertragungsfehler</German>
+		<Italian>Errore di trasferimento file</Italian>
+		<Spanish>Error de transferencia de archivo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
+		<English>Pedia</English>
+		<French>Pédia</French>
+		<Russian>ЦИВИЛОПЕДИЯ</Russian>
+	</TEXT>
+</Civ4GameText>
