@@ -20,20 +20,6 @@
 		<Russian>The tradition of having a mascot or flag/standard that identifys the people in a military unit.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ANIMAL_STRATEGY</Tag>
-		<English>Animals spawn in the wilderness and are barbarian animal units. See also [LINK=CONCEPT_SUBDUED_ANIMALS]Subdued Animals[\LINK].</English>
-		<French>Les animaux apparaissent dans la nature et sont des unités animales barbares. Voir également [LINK=CONCEPT_SUBDUED_ANIMALS]Animaux apprivoisés[\LINK].</French>
-		<German>Tiere sind eine spezielle Art von barbarischen Einheiten, die keiner Zivilisation angehören. Sie entstehen zufällig in der Wildnis und können schwachen Einheiten leicht gefährlich werden. Dafür liefern sie aber auch Nahrung und wichtige Rohstoffe, wenn sie besiegt werden. Mehr Informationen gibt es unter [LINK=CONCEPT_SUBDUED_ANIMALS]Gefangene Tiere[\LINK].</German>
-		<Russian>Æèâîòíûå ïîÿâëÿþòñÿ â íåîáæèòûõ ìåñòàõ è ÿâëÿþòñÿ âàðâàðñêèìè æèâîòíûìè. Ñì. òàêæå [LINK=CONCEPT_SUBDUED_ANIMALS]Ïðèðó÷åííûå æèâîòíûå[\LINK] è [LINK=CONCEPT_TAMED_ANIMALS]Îäîìàøíåííûå æèâîòíûå[\LINK].</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Tag>
-		<English>Subdued animals are primarily meant for use in constructing special buildings in cities.</English>
-		<French>Les animaux apprivoisés sont principalement destinés à la construction de bâtiments spéciaux dans les villes.</French>
-		<German>Mit Hilfe von gefangenen Tieren können in Städten spezielle Gebäude errichtet werden. Je nach Art können sie auch als Kampftiere abgerichtet werden oder der Stadt andere Vorteile bringen.</German>
-		<Russian>Ïðèðó÷åííûå æèâîòíûå â ïåðâóþ î÷åðåäü ïðåäíàçíà÷åíû äëÿ èñïîëüçîâàíèÿ â ñòðîèòåëüñòâå ñïåöèàëüíûõ çäàíèé â ãîðîäàõ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_HERD_PEDIA</Tag>
 		<English>Represent the Bison of North America, Water Buffalo of South East Asia and all herbivore herds of Africa.</English>
 		<Italian>Rappresenta il bisonte del Nordamerica, il bufalo d'acqua dell'Asia sudorientale e tutti i branchi di erbivori dell'Africa.</Italian>
@@ -43,14 +29,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO_PEDIA</Tag>
 		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ANIMALS_TEXT</Tag>
-		<English>Animals in Caveman2Cosmos</English>
-		<French>Les Animaux dans Caveman2Cosmos</French>
-		<German>Tiere in Caveman2Cosmos</German>
-		<Polish>Zwierzęta w Caveman2Cosmos</Polish>
-		<Russian>Æèâîòíûå â Caveman2Cosmos</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_TEXT</Tag>
@@ -68,11 +46,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_TRAINER_PEDIA</Tag>
 		<English>The Buffalo Trainer is required to build Buffalo Worker.</English>
-		<Russian>The Buffalo Trainer is required to build Buffalo Worker.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAMEL_HERD_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Only domesticated camels can build the Herd - Camels; provides a resource of camels.</English>
 		<Italian>Solo i cammelli addomesticati possono costruire il Branco - Cammelli; fornisce una risorsa di cammelli.</Italian>
 		<Polish>Wielbłąd (Camelus) rodzaj dużych ssaków z rodziny wielbłądowatych. Fizjologicznie przystosowane do życia w warunkach suchego i gorącego klimatu, są w wielu krajach wykorzystywane jako zwierzęta użytkowe.</Polish>
 	</TEXT>
@@ -87,13 +64,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE_PEDIA</Tag>
-		<English>TBD</English>
+		<English>A center specialized in the study of cephalopods. The cephalopods (Cephalopoda, from the Greek kephale, head and pous, podos, foot) are exclusively marine molluscs, among the most evolved, with a shell reduced internally or completely absent, purely nectonic (like cuttlefish and squid) or benthic (like the octopus and baby octopus). They developed in a great multitude of forms during the Mesozoic, colonizing practically all marine environments with the nautiloid, ammonoid and belemnoid groups, the last two totally extinct. Recent hypotheses consider cephalopods derived directly from monoplacophores with a more pronounced spiraling shell; it is supposed that the apical region of the viscera sac of these molluscs withdrew from time to time and the mantle that covered them formed a successive series of internal calcareous septa, delimiting cavities filled with gas. This produced an ever greater lightness, a characteristic that allowed them to acquire a neutral buoyancy in order to move in the liquid with less effort. During these early evolutionary stages, the cephalopods acquired speed and predation ability, developing a head with prehensile lobes, derived from simple tentacles of ancestral monoplacophores. The dimensions are very variable, from a few millimeters to several meters in the case of the giant squid, which is the second largest mollusk, as well as being the second largest animal among all current invertebrates. In size it is surpassed only by the colossal squid, Mesonychoteuthis hamiltoni, which can have a coat almost twice as long as its own. Some extinct cephalopods, such as the Cretaceous vampiromorph Tusoteuthis and the Ordovician nautiloid Cameroceras, could reach even larger sizes. </English>
 		<Italian>Un centro specializzato nello studio dei cefalopodi. I cefalopodi (Cephalopoda, dal greco kephale, testa e pous, podos, piede) sono molluschi esclusivamente marini, tra i più evoluti, con conchiglia ridotta internamente o del tutto assente, prettamente nectonici (come le seppie e i calamari) o bentonici (come il polpo e il moscardino). Si svilupparono in una grande moltitudine di forme durante il Mesozoico, colonizzando praticamente tutti gli ambienti marini con i gruppi dei nautiloidi, ammonoidea e belemnoidi, gli ultimi due totalmente estinti. Ipotesi recenti considerano i cefalopodi derivati direttamente da monoplacofori con conchiglia a spiralizzazione più accentuata; si suppone che la regione apicale del sacco dei visceri di questi molluschi si ritirasse di tanto in tanto e il mantello che li ricopriva formasse una serie successiva di setti calcarei interni, delimitando cavità ripiene di gas. Ciò produsse una sempre maggiore leggerezza, caratteristica questa che permise loro di acquisire un galleggiamento neutro per potersi spostare nel liquido con minor sforzo. Durante questi primi stadi evolutivi, i cefalopodi acquisirono velocità e capacità di predazione, sviluppando un capo dotato di lobi prensili, derivati da tentacoli semplici di monoplacofori ancestrali. Le dimensioni sono molto variabili, da pochi millimetri a vari metri nel caso del calamaro gigante, che è il secondo mollusco più grande, oltre ad essere anche il secondo animale più grande tra tutti gli invertebrati attuali. Nelle dimensioni è superato solamente dal calamaro colossale, Mesonychoteuthis hamiltoni, che può avere un mantello lungo quasi il doppio del suo. Alcuni cefalopodi estinti, come il vampiromorfo cretaceo Tusoteuthis ed il nautiloide ordoviciano Cameroceras potevano raggiungere dimensioni perfino più grandi.</Italian>
 		<Polish>Sieci na ryby były konstruowane przez bogatych by dostarczać im ciągle świeżych i egzotycznych gatunków ryb na ich wykwintne uczty.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CETAEA_INSTITUTE_PEDIA</Tag>
-		<English>TBD</English>
+		<English>A center specialized in the study of cetaceans. Cetaceans are an order of euplacentate mammals, fully adapted to aquatic life. The cetacean name derives from the Greek and means whale or sea monster; it was introduced by Aristotle to designate aquatic animals with lung respiration. They have a fusiform body, similar to that of fish, which ensures them greater hydrodynamics. The forelimbs are modified into fins; the hind limbs as such are absent; only a few small vestigial bones remain, hidden inside the body, and not connected to the spine due to the absence of the pelvis. The caudal fin is arranged horizontally and divided into two lobes. They are generally hairless and are thermally insulated by a thick layer of fat. The order Cetacea includes about 85 species, almost all of which are marine except for 5 species of freshwater dolphins. The species are divided into two suborders: Mysticeti and Odontoceti. There is a third suborder, Archaeoceti, to which only extinct species belong. Among the mysticetes there are animals commonly called whales, the largest known in the world: in particular, the blue whale is the largest animal existing on Earth today. Among the odontoceti, however, there are dolphins and killer whales, often reared and trained in dolphinaria. </English>
 		<Italian>Un centro specializzato nello studio dei cetacei. I Cetacei sono un ordine di mammiferi euplacentati, completamente adattatisi alla vita acquatica. Il nome cetaceo deriva dal greco e significa balena o mostro marino; fu introdotto da Aristotele per designare gli animali acquatici dotati di respirazione polmonare. Presentano un corpo fusiforme, simile a quello dei pesci, che assicura loro una maggiore idrodinamicità. Gli arti anteriori sono modificati in pinne; gli arti posteriori come tali sono assenti; rimangono solo alcune piccole ossa vestigiali, nascoste dentro al corpo, e non collegate alla spina dorsale per l'assenza del bacino. La pinna caudale è disposta orizzontalmente e divisa in due lobi. Sono generalmente privi di peli e sono isolati termicamente da uno spesso strato di grasso. L'ordine Cetacea comprende circa 85 specie, quasi tutte marine tranne 5 specie di delfini di acqua dolce. Le specie sono suddivise in due sottordini: Mysticeti ed Odontoceti. Esiste un terzo sottordine, Archaeoceti, cui appartengono solo specie estinte. Tra i misticeti si trovano gli animali comunemente chiamati balene, i più grandi conosciuti al mondo: in particolare la balenottera azzurra è il più grande animale oggi esistente sulla Terra. Tra gli odontoceti, invece, si trovano delfini e orche, spesso allevati e addestrati nei delfinari.</Italian>
 		<Polish>Instytut Morski jednostka naukowo-badawcza. Placówka wykonuje prace naukowe, badawcze i wdrożeniowe: m.in. zajmuje się modernizacją i eksploatacją portów, oceanografią operacyjną, czy problematyką zagospodarowania regionu nadmorskiego. Misją Instytutu jest dbałość o zachowanie wartości morza i zrównoważony rozwój polskiej gospodarki morskiej. Instytut opracowuje studia wykonalności i eksperyzy oraz udziela konsultacji w zakresie: hydrotechniki morskiej, geotechniki, oceanografii operacyjnej, ochrony środowiska (badania chemiczne i biologiczne), transportu, logistyki, zagospodarowania przestrzennego regionu nadmorskiego, modernizacji i eksploatacji portów, żeglugi śródlądowej, turystyki, bezpieczeństwa przeciwpowodziowego, elektroniki morskiej, a także tworzenia baz danych i monitoringu zjawisk ciągłych.</Polish>
 	</TEXT>
@@ -106,22 +83,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COW_HERD_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Only domesticated cattle can build the Herd - Bovines; provides a resource of cattle. Based on Sarkyn's idea. </English>
 		<Italian>Solo i bovini addomesticati possono costruire il Branco - Bovini; fornisce una risorsa di bovini. Basato su un'idea di Sarkyn.</Italian>
 		<Polish>Bydło domowe (Bos taurus) gatunek zwierząt z rodziny wołowatych, rzędu parzystokopytnych. Gatunek ten pochodzi od tura wielkiego i tura krótkorogiego.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Crabs (Brachyura, from the Greek short abdomen / tail) a group [a] of short-legged crustaceans from the order Decapoda. Crabs are the most numerous (10,500 species have been described) group of tenths, in which the first pair of crotch legs developed into claws. The size of the body is very varied, with a leg span from a few millimeters (Pinnotheres pisum) to almost 4 m (Japanese Pacific crab). </English>
 		<Polish>Kraby (Brachyura, z języka greckiego krótki odwłok/ogon) grupa[a] krótkoodwłokowych skorupiaków z rzędu dziesięcionogów (Decapoda). Kraby są najliczniejszą (opisano 10 500 gatunków) grupą dziesięcionogów, u której pierwsza para odnóży krocznych przekształciła się w szczypce. Wielkość ciała bardzo zróżnicowana, o rozpiętości odnóży od kilku milimetrów (Pinnotheres pisum) do prawie 4 m (japoński krab pacyficzny).</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_TAMED_ANIMALS_TEXT</Tag>
-		<English>Tamed animals</English>
-		<French>Animaux Dressés</French>
-		<German>Gezähmte Tiere</German>
-		<Polish>Oswojone zwierzęta</Polish>
-		<Russian>Îäîìàøíåííûå æèâîòíûå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCING_BEAR_PEDIA</Tag>
@@ -224,7 +193,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_HERD_PEDIA</Tag>
-		<English>TBD</English>
+		<English>The domestication of the lama took place around 4,000,000 BC. in the Andean basin, probably near Lake Titicaca. In pre-Inca times, representatives of the Mochica culture placed the remains of llamas in their graves, and also presented them on their pottery. Llamas and alpacas were the staple animal in the Inca State as food, fuel, fiber for clothing, as pack animals. They were also used in religious ceremonies as sacrificial animals. After the Inca conquest by the conquistadors, the importance of the llamas declined significantly, as the conquistadors brought their own pack animals. Despite this, llamas and alpacas remained important animals in South America, mainly in highland areas. South American countries at the beginning of the 20th century introduced a ban on the export of these animals. This ban was finally lifted for llamas and alpacas in the 1980s. </English>
 		<Polish>Udomowienie lamy miało miejsce około 4000 5000 lat p.n.e. na terenach andyjskiej puny, prawdopodobnie w okolicach jeziora Titicaca. W czasach przedinkaskich, przedstawiciele kultury Mochica umieszczali szczątki lam w grobach, przedstawiali je także na swojej ceramice. Lamy i alpaki były podstawowym zwierzęciem w Państwie Inków, jako żywność, źródło paliwa, włókien na ubrania, jako zwierzęta juczne. Były także wykorzystywane w ceremoniach religijnych, jako zwierzęta ofiarne. Po podboju Państwa Inków przez konkwistadorów znaczenie lam znacznie spadło, gdyż konkwistadorzy sprowadzili własne zwierzęta juczne. Mimo tego lamy i alpaki pozostały ważnymi zwierzętami w Ameryce Południowej, głównie na terenach wysokogórskich. Państwa południowoamerykańskie na początku XX wieku wprowadziły zakaz eksportu tych zwierząt. Zakaz ten został ostatecznie zniesiony dla lam i alpak w latach 80. XX wieku.</Polish>
 	</TEXT>
 	<TEXT>
@@ -388,13 +357,6 @@
 		<Italian>Le storie di animali marini sono storie riguardanti creature marine sconfitte in combattimento.</Italian>
 		<Polish>Opowieści o morskich zwierzętach są opowieściami o zwierzętach pokonanych w walce.</Polish>
 		<Russian>Ðàññêàçû î ìîðñêèõ æèâîòíûõ - ýòî ðàññêàçû î ïîáåæäåííûõ â áîþ ìîðñêèõ ñóùåñòâàõ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_TAMED_ANIMALS_PEDIA</Tag>
-		<English>Tamed animals are basically the same as subdued animals except you can build them and they can attack. They were originally included because the unit graphics by SaibotLieh are cool.</English>
-		<French>Les animaux dressés sont fondamentalement les mêmes que les animaux apprivoisés, sauf que vous pouvez les construire et qu'ils peuvent attaquer. Ils ont été initialement inclus parce que les graphiques de l'unité par SaibotLieh sont cool.</French>
-		<Polish>Oswojone zwierzęta są identyczne z poskromionymi zwierzętami oprócz jednej rzeczy - masz możliwość "budowania" tych zwierząt w mieście.</Polish>
-		<Russian>Îäîìàøíåííûå æèâîòíûå â îñíîâíîì òàêèå æå, êàê ïðèðó÷åííûå æèâîòíûå, çà èñêëþ÷åíèåì òîãî, ÷òî âû ìîæåòå ïîñòðîèòü èõ, è îíè ìîãóò àòàêîâàòü âðàæåñêèõ ëàçóò÷èêîâ è äèâåðñàíòîâ. Ïåðâîíà÷àëüíî îíè áûëè âêëþ÷åíû èç-çà ïðåâîñõîäíûõ ãðàôè÷åñêèõ ìîäåëåé îò SaibotLieh.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNTER_PEDIA</Tag>

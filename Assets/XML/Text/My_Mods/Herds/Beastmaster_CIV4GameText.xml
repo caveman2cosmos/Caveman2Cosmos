@@ -6,11 +6,6 @@
 		<French>Le centre de gestion des troupeaux permet la migration de troupeau pour s'établir dans d'autres villes. Certaines unités peuvent être améliorés en unités combattantes.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_BREEDER_STRATEGY</Tag>
-		<English>Train herd animals here and spread them to other cities.</English>
-		<French>Permet d'entraîner des animaux, afin de les envoyer dans vos autres villes pour créer des troupeaux.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DONKEY_BREEDER</Tag>
 		<English>Donkey Breeder</English>
 		<French>Éleveur d'ânes</French>

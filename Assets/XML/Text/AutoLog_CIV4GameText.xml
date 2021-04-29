@@ -1176,13 +1176,6 @@
 		<Russian>копейщик</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_RECON</Tag>
-		<English>recon</English>
-		<French>éclaireur</French>
-		<German>Aufklärungseinheit</German>
-		<Russian>разведка</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_RIFLEMAN</Tag>
 		<English>rifleman</English>
 		<French>fusilier</French>

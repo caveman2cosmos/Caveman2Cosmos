@@ -80,24 +80,6 @@
 		<Russian>Óñòàðåâøèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_BONUS_REQUIRES_BUILDING</Tag>
-		<English>Buildings that require this bonus</English>
-		<French>Bâtiments qui requiert ce bonus</French>
-		<German>benötigt von</German>
-		<Spanish>Edificios que requieren el recurso</Spanish>
-		<Polish>Budynki, które wymagają surowca</Polish>
-		<Russian>Çäàíèÿ òðåáóþò ýòîò áîíóñ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_BONUS_REQUIRES_UNIT</Tag>
-		<English>Allows</English>
-		<French>Permet</French>
-		<German>mögliche Einheiten</German>
-		<Spanish>Permite entrenar</Spanish>
-		<Polish>Pozwala</Polish>
-		<Russian>Ïîçâîëÿåò</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_TRADE</Tag>
 		<English>Enable</English>
 		<French>Utilisable dès</French>
@@ -107,44 +89,11 @@
 		<Russian>Включить</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_BONUS_VICINITY_BUILDING</Tag>
-		<English>Vicinity buildings</English>
-		<French>Bâtiments du voisinage</French>
-		<German>mögliche Gebäude</German>
-		<Spanish>Edificios que lo requieren en el radio</Spanish>
-		<Polish>Okoliczne budynki</Polish>
-		<Russian>Çîíà ýôôåêòà çäàíèé</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BUILD</Tag>
 		<English>Build:</English>
 		<French>Est construit par :</French>
 		<German>gebaut durch</German>
 		<Russian>Здания:</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_BUILDING_BONUS_PROD1</Tag>
-		<English>Build</English>
-		<French>Construit :</French>
-		<Spanish>Se construye un</Spanish>
-		<Polish>Budowa</Polish>
-		<Russian>Ñòðîèòü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_BUILDING_BONUS_PROD2</Tag>
-		<English>percent faster</English>
-		<French>pourcent plus vite</French>
-		<Spanish>por ciento más rápido</Spanish>
-		<Polish>Procent szybciej</Polish>
-		<Russian>ïðîö. áûñòðåå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_BUILDING_VICINITY</Tag>
-		<English>Required in vicinity</English>
-		<French>Requis dans le voisinage</French>
-		<Spanish>Requerido en el radio de la ciudad</Spanish>
-		<Polish>Wymagane w pobliżu</Polish>
-		<Russian>Òðåáóåòñÿ â îêðåñòíîñòÿõ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BUILD_TIME</Tag>
@@ -360,16 +309,6 @@
 		<Russian>Êîíöåïöèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_CONCEPT_DCM</Tag>
-		<English>RoM Concepts</English>
-		<French>Concepts de RoM</French>
-		<German>RoM-Konzepte</German>
-		<Italian>Nozioni di RoM</Italian>
-		<Spanish>Conceptos de RoM</Spanish>
-		<Polish>Koncepcje RoM</Polish>
-		<Russian>Íîâîå â RoM</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_CONCEPT_NEW</Tag>
 		<English>C2C Concepts</English>
 		<French>Concepts C2C</French>
@@ -403,26 +342,6 @@
 		<Russian>Эпохи</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_EVENT</Tag>
-		<English>Events</English>
-		<French>Événements</French>
-		<German>Ereignisse</German>
-		<Italian>Eventi</Italian>
-		<Spanish>Sucesos</Spanish>
-		<Polish>Zdarzenia</Polish>
-		<Russian>Ñîáûòèÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_EVENTAGE</Tag>
-		<English>Ages</English>
-		<French>Âges</French>
-		<German>Zeitalter</German>
-		<Italian>Ere</Italian>
-		<Spanish>Edades</Spanish>
-		<Polish>Epoki</Polish>
-		<Russian>Ýïîõè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_FEATURE</Tag>
 		<English>Features</English>
 		<French>
@@ -443,16 +362,6 @@
 		</Spanish>
 		<Polish>Cechy Terenu</Polish>
 		<Russian>Ñâîéñòâà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_GREAT_PERSONS</Tag>
-		<English>Great People</English>
-		<French>Personnages Illustres</French>
-		<German>Große Persönlichkeiten</German>
-		<Italian>Grandi Personaggi</Italian>
-		<Spanish>Grandes personajes</Spanish>
-		<Polish>Wielcy Ludzie</Polish>
-		<Russian>Âåëèêèå ëþäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_GREAT_WONDERS</Tag>
@@ -957,33 +866,6 @@
 		<Russian>Огранич. война: [BOLD]%d1[\BOLD] (%d2%% Коэффициент мощи)[NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_LOGIC_AND</Tag>
-		<English>AND</English>
-		<French>ET</French>
-		<German>UND</German>
-		<Italian>E</Italian>
-		<Spanish>Y</Spanish>
-		<Russian>И</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_LOGIC_OR</Tag>
-		<English>OR</English>
-		<French>OU</French>
-		<German>ODER</German>
-		<Italian>O</Italian>
-		<Spanish>O</Spanish>
-		<Russian>ИЛИ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_MOVEMENT</Tag>
-		<English>Movement: %d1_Num</English>
-		<French>Mouvement: %d1_Num</French>
-		<German>Bewegung: %d1_Num</German>
-		<Italian>Movimento: %d1_Num</Italian>
-		<Spanish>Movimiento: %d1_Num</Spanish>
-		<Russian>Движение: %d1_Num</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_NO_PLOT_YIELD_CHANGE</Tag>
 		<English>No Change</English>
 		<French>Pas de Modif.</French>
@@ -995,14 +877,6 @@
 		<Tag>TXT_PEDIA_NON_COMBAT</Tag>
 		<English>Non-Combat</English>
 		<Russian>Небоевой</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_PLOT_YIELD_CHANGE</Tag>
-		<English>Plot Yield Change</English>
-		<French>Rendement des Cases</French>
-		<Spanish>Rendimiento de la casilla</Spanish>
-		<Polish>Wydajność pola uległa zmianie</Polish>
-		<Russian>Äîõîä èçìåíåí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_QUOTE</Tag>
@@ -1046,52 +920,12 @@
 		<Russian>Áîíóñ èñòî÷íèêà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_ROUTE_FLAT_COST</Tag>
-		<English>Flat Move:</English>
-		<French>Dépl. Plat:</French>
-		<Spanish>Mov. por ruta:</Spanish>
-		<Polish>Ruch podstawowy:</Polish>
-		<Russian>Очки движения:</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_ROUTE_FLAT_MOVEMENT</Tag>
-		<English>[ICON_BULLET]Flat Movement: %d1[NEWLINE]</English>
-		<French>[ICON_BULLET]Déplacement Plat: %d1[NEWLINE]</French>
-		<Spanish>[ICON_BULLET]Movimiento por ruta: %d1[NEWLINE]</Spanish>
-		<Polish>[ICON_BULLET]Ruch podstawowy: %d1[NEWLINE]</Polish>
-		<Russian>[ICON_BULLET]Äâèæåíèå ïî ïðÿìîé: %d1[NEWLINE]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ROUTE_IMPROVEMENT_YIELD_CHANGE</Tag>
 		<English>Improvement Yield Change</English>
 		<French>Chang. taux de rendement</French>
 		<Spanish>Cambios al rendimiento de la mejora</Spanish>
 		<Polish>Wydajność ulepszenia uległa zmianie</Polish>
 		<Russian>Ýôôåêò óëó÷øåíèÿ èçìåíåí</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_ROUTE_MOVEMENT</Tag>
-		<English>Movement:</English>
-		<French>Déplacement:</French>
-		<Spanish>Mov. hacia ruta:</Spanish>
-		<Polish>Ruch:</Polish>
-		<Russian>Äâèæåíèå:</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_ROUTE_TECH_CHANGE</Tag>
-		<English>[ICON_BULLET]+%.1d1 Movement with %s2[NEWLINE]</English>
-		<French>[ICON_BULLET]+%.1d1 Déplacement avec %s2[NEWLINE]</French>
-		<Spanish>[ICON_BULLET]+%.1d1 al movimiento con %s2[NEWLINE]</Spanish>
-		<Polish>[ICON_BULLET]+%.1d1 Ruch z %s2[NEWLINE]</Polish>
-		<Russian>[ICON_BULLET]+%.1d1 Äâèæåíèå ïî %s2[NEWLINE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_ROUTE_WORK_COST</Tag>
-		<English>Work Cost: %d1</English>
-		<French>Coût de Travail: %d1</French>
-		<Spanish>Coste de trabajo:</Spanish>
-		<Polish>Koszt prac:</Polish>
-		<Russian>Ñòîèìîñòü ðàáîòû: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_SCREEN_BACK</Tag>
@@ -1130,15 +964,6 @@
 		<Russian>Èíäåêñ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_STATS</Tag>
-		<English>Personality</English>
-		<French>Personnalité</French>
-		<German>Persönlichkeit</German>
-		<Spanish>Personalidad</Spanish>
-		<Polish>Charakter</Polish>
-		<Russian>Õàðàêòåð</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_STRATEGY</Tag>
 		<English>Strategy</English>
 		<French>Stratégie</French>
@@ -1153,14 +978,6 @@
 		<French>Synergie</French>
 		<German>beeinflusst von</German>
 		<Russian>Синергия</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_TECH_CHANGES</Tag>
-		<English>Technology Change</English>
-		<French>Changement Technologique</French>
-		<Spanish>Cambios por tecnología</Spanish>
-		<Polish>Zmiana technologii</Polish>
-		<Russian>Ñìåíà òåõíîëîãèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_TECH_REQUIRED</Tag>
@@ -1192,16 +1009,6 @@
 		<Russian>[ICON_BULLET]Ìîæåò áûòü çàõâà÷åí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_UNIT_COLLATERAL_DAMAGES_MAX_UNITS</Tag>
-		<English>[NEWLINE][ICON_BULLET]Collateral or Flanking damage hits maximum of[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET]Les Dommages Collatéraux ou de Flanc atteignent un maximum de[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET]Maximaler Schaden durch Kollateral oder Flanke:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Danni collaterali e da accerchiamento fino a un massimo di[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Los daños colaterales o de flanqueo golpean a un máximo de[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zabezpieczanie lub Oskrzydlanie zadaje maksimum obrażeń[SPACE]</Polish>
-		<Russian>[NEWLINE][ICON_BULLET]Ñîïóòñòâóþùèé èëè ôëàíãîâûé óðîí ìàêñèìóì[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_DRAFTABLE</Tag>
 		<English>[ICON_BULLET]Can be drafted when requirements are met</English>
 		<French>[ICON_BULLET]Peut être recrutés lorsque les conditions sont réunies</French>
@@ -1222,31 +1029,12 @@
 		<Russian>[ICON_BULLET]Èãíîðèðóåò çàùèòó çäàíèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_UNIT_UNITS</Tag>
-		<English>[SPACE]units</English>
-		<French>[SPACE]unités</French>
-		<German>[SPACE]Einheiten</German>
-		<Italian>[SPACE]unità</Italian>
-		<Spanish>[SPACE]unidades</Spanish>
-		<Polish>[SPACE]Jednostka</Polish>
-		<Russian>[SPACE]ïîäðàçäåëåíèÿ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WELCOME_MESSAGE</Tag>
 		<English>«Who are we, who is each one of us, if not a combination of experiences, information, books we have read, things imagined? Each life is an encyclopedia, a library, an inventory of objects, a series of styles, and everything can be constantly shuffled and reordered in every way conceivable.» - Italo Calvino, Six Memos For the Next Millennium</English>
 		<French>« Qui sommes-nous, qu'est chacun de nous, sinon une combinaison d'expériences, d'informations, de lectures, de rêveries ? Chaque vie est une encyclopédie, une bibliothèque, un inventaire d'objets, un échantillonnage de styles, où tout peut se mêler et se réorganiser de toutes les manières possibles. » - Italo Calvino, Leçons américaines : Six propositions pour le prochain millénaire</French>
 		<German>„Wer sind wir denn, wer ist jeder von uns, wenn nicht eine Kombination von Erfahrungen, Informationen, Lektüren und Phantasien? Jedes Leben ist eine Enzyklopädie, eine Bibliothek, ein Inventar von Objekten, eine Musterkollektion von Stilen, worin alles jederzeit auf jede mögliche Weise neu gemischt und neu geordnet werden kann.“ - Italo Calvino, Sechs Vorschläge für das nächste Jahrtausend</German>
 		<Italian>«Chi siamo noi, chi è ciascuno di noi se non una combinatoria d'esperienza, d'informazioni, di letture, d'immaginazioni? Ogni vita è un'enciclopedia, una biblioteca, un inventario di oggetti, un campionario di stili, dove tutto può essere continuamente rimescolato e riordinato in tutti i modi possibili.» - Italo Calvino, Lezioni americane. Sei proposte per il prossimo millennio</Italian>
 		<Russian>Кто мы, кто есть каждый из нас, если не сочетание опыта, информации, книг, которые мы прочли, вещей, которые мы воображали? Любая жизнь сродни энциклопедии, библиотеке, инвентарю предметов, ряду стилей. Все можно постоянно перетасовывать и переупорядочивать любыми доступными способами.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_WITH_IMPROVEMENT_AND_ROUTE</Tag>
-		<English>with route and improvement</English>
-		<French>avec route et amélioration</French>
-		<German>wenn angeschlossen und abgebaut</German>
-		<Spanish>con camino y mejora</Spanish>
-		<Polish>z drogą i ulepszeniem</Polish>
-		<Russian>ñ òîðãîâûì ïóòåì è óëó÷øåíèåì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WONDER</Tag>

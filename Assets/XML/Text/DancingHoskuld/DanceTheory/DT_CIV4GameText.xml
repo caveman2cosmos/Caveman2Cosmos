@@ -13,12 +13,6 @@
 		<Russian>Ãîâîðÿò, ÷òî íåêîòîðûå ïòèöû òàíöóþò, è ýòè òàíöû âäîõíîâèëè ðàííèå ÷åëîâå÷åñêèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DANCE_STRATEGY</Tag>
-		<English>Dancing improves the chance of inspiring Great Artists.</English>
-		<French>La danse améliore les chances d'inspirer de grands artistes.</French>
-		<Russian>Òàíöû óëó÷øàþò øàíñû íà ïîÿâëåíèå âåëèêèõ õóäîæíèêîâ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOX_DANCE</Tag>
 		<English>Unit Reward - Dance (Fox)</English>
 		<French>Danse du Renard</French>
@@ -41,12 +35,6 @@
 		<English>The haka is a ceremonial dance or challenge in Polynesian culture. It is a posture dance performed by a group, with vigorous movements and stamping of the feet with rhythmically shouted accompaniment.</English>
 		<French>Le haka est une danse de cérémonie ou un défi dans la culture polynésienne. C'est une danse de posture exécutée par un groupe, avec des mouvements vigoureux et un estampage des pieds avec un accompagnement rythmé.</French>
 		<Russian>Õàêà - ýòî öåðåìîíèàëüíûé òàíåö èëè âûçîâ â ïîëèíåçèéñêîé êóëüòóðå. Ýòî òàíåö îñàíêè, èñïîëíÿåìûé ãðóïïîé, ñ ýíåðãè÷íûìè äâèæåíèÿìè è òîïîòîì íîã ñ ðèòìè÷íî-êðè÷àùèì ñîïðîâîæäåíèåì.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAKA_STRATEGY</Tag>
-		<English>Strike fear in the hearts of your enemy.</English>
-		<French>Inspirez la peur dans le cœur de votre ennemi.</French>
-		<Russian>Âñåëèòå ñòðàõ â ñåðäöà âðàãà!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CACOPHONY</Tag>

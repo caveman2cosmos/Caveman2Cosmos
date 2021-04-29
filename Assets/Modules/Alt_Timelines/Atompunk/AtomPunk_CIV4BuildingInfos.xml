@@ -13,7 +13,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ATOMPUNK_EMBASSY</ArtDefineTag>
 			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
@@ -37,7 +36,6 @@
 			<Type>BUILDING_VIDEOPHONE_NETWORK</Type>
 			<Description>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VIDEOPHONE_NETWORK</ArtDefineTag>
 			<ObsoleteTech>TECH_KNOWLEDGE_MANAGEMENT</ObsoleteTech>
@@ -90,7 +88,6 @@
 			<Type>BUILDING_PUSHBUTTON_AUTOMAT</Type>
 			<Description>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PUSHBUTTON_AUTOMAT</ArtDefineTag>
 			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
@@ -421,7 +418,6 @@
 			<Type>BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Type>
 			<Description>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</ArtDefineTag>
 			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
@@ -462,7 +458,6 @@
 			<Type>BUILDING_CLEAN_NUCLEAR_REACTOR</Type>
 			<Description>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CLEAN_NUCLEAR_REACTOR</ArtDefineTag>
 			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
@@ -505,7 +500,6 @@
 			<Type>BUILDING_HI_TECH_NUCLEAR_REACTOR</Type>
 			<Description>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HI_TECH_NUCLEAR_REACTOR</ArtDefineTag>
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
@@ -549,7 +543,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NUCLEAR_POWERCOMPLEX</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NUCLEAR_POWERCOMPLEX</MovieDefineTag>
@@ -606,7 +599,6 @@
 			<Type>BUILDING_HIGH_ENERGY_LAB</Type>
 			<Description>TXT_KEY_BUILDING_HIGH_ENERGY_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HIGH_ENERGY_LAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HIGH_ENERGY_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HIGH_ENERGY_LAB</ArtDefineTag>
 			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
@@ -687,7 +679,6 @@
 			<Type>BUILDING_SMALL_REACTOR_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SMALL_REACTOR_FACTORY</ArtDefineTag>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
@@ -743,7 +734,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_VENTURE_INDUSTRIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENTURE_INDUSTRIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENTURE_INDUSTRIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENTURE_INDUSTRIES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_VENTURE_INDUSTRIES</MovieDefineTag>
@@ -812,7 +802,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_ATOM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_ATOM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GOOD_ATOM_STRATEGY</Strategy>
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ATOMPUNK</PrereqTech>

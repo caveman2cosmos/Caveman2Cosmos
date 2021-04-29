@@ -9064,7 +9064,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_COMMAND7</Type>
-			<Description>TXT_KEY_PROMOTION_COMMAND6</Description>
+			<Description>TXT_KEY_PROMOTION_COMMAND7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_COMMAND6</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_COMMAND</PromotionLine>
@@ -9252,7 +9252,7 @@
 			<bBlitz>1</bBlitz>
 			<Button>Art/Interface/Buttons/Promotions/seahunter4.dds</Button>
 		</PromotionInfo>
-<!-- CIV4PromotionInfos.xml BEGIN MILITIA PROMOTIONS CODE -->
+		<!-- CIV4PromotionInfos.xml BEGIN MILITIA PROMOTIONS CODE -->
 		<PromotionInfo>
 			<Type>PROMOTION_BUSHMAN</Type>
 			<Description>TXT_KEY_PROMOTION_BUSHMAN</Description>
@@ -9470,11 +9470,11 @@
 			</TerrainDefenses>
 			<Button>Art/Interface/Buttons/Promotions/Markofthescorpion.dds</Button>
 		</PromotionInfo>
-<!-- END MILITIA PROMOTIONS CODE -->
+		<!-- END MILITIA PROMOTIONS CODE -->
 		<PromotionInfo>
 			<Type>PROMOTION_AQUARIUS</Type>
 			<Description>TXT_KEY_PROMOTION_AQUARIUS</Description>
-			<Help>TXT_KEY_PROMOTION_ASTRO</Help>
+			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<iExperiencePercent>20</iExperiencePercent>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/aquarius.dds</Button>
@@ -9482,7 +9482,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_ARIES</Type>
 			<Description>TXT_KEY_PROMOTION_ARIES</Description>
-			<Help>TXT_KEY_PROMOTION_ASTRO</Help>
+			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<iChanceFirstStrikesChange>3</iChanceFirstStrikesChange>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/aries.dds</Button>
@@ -9490,7 +9490,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_CANCER</Type>
 			<Description>TXT_KEY_PROMOTION_CANCER</Description>
-			<Help>TXT_KEY_PROMOTION_ASTRO</Help>
+			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<bDefensiveVictoryMove>1</bDefensiveVictoryMove>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/cancer.dds</Button>
@@ -9498,7 +9498,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_CAPRICORN</Type>
 			<Description>TXT_KEY_PROMOTION_CAPRICORN</Description>
-			<Help>TXT_KEY_PROMOTION_ASTRO</Help>
+			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<bAmphib>1</bAmphib>
 			<bRiver>1</bRiver>
@@ -9507,7 +9507,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_GEMINI</Type>
 			<Description>TXT_KEY_PROMOTION_GEMINI</Description>
-			<Help>TXT_KEY_PROMOTION_ASTRO</Help>
+			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<iVictoryHeal>15</iVictoryHeal>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/gemini.dds</Button>
@@ -9515,7 +9515,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_LEO</Type>
 			<Description>TXT_KEY_PROMOTION_LEO</Description>
-			<Help>TXT_KEY_PROMOTION_ASTRO</Help>
+			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<iStrengthChange>1</iStrengthChange>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/leo.dds</Button>
@@ -9523,7 +9523,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_LIBRA</Type>
 			<Description>TXT_KEY_PROMOTION_LIBRA</Description>
-			<Help>TXT_KEY_PROMOTION_ASTRO</Help>
+			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<iUpgradeDiscount>25</iUpgradeDiscount>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/libra.dds</Button>
@@ -9531,7 +9531,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_PISCES</Type>
 			<Description>TXT_KEY_PROMOTION_PISCES</Description>
-			<Help>TXT_KEY_PROMOTION_ASTRO</Help>
+			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<bOneUp>1</bOneUp>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/pices.dds</Button>
@@ -9539,7 +9539,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_SAGITTARIUS</Type>
 			<Description>TXT_KEY_PROMOTION_SAGITTARIUS</Description>
-			<Help>TXT_KEY_PROMOTION_ASTRO</Help>
+			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<iFirstStrikesChange>3</iFirstStrikesChange>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/SAGITTARIUS.dds</Button>
@@ -9547,7 +9547,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_SCORPIO</Type>
 			<Description>TXT_KEY_PROMOTION_SCORPIO</Description>
-			<Help>TXT_KEY_PROMOTION_ASTRO</Help>
+			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<iSurvivorChance>20</iSurvivorChance>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/scorpio.dds</Button>
@@ -9555,7 +9555,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_TAURUS</Type>
 			<Description>TXT_KEY_PROMOTION_TAURUS</Description>
-			<Help>TXT_KEY_PROMOTION_ASTRO</Help>
+			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<iVictoryAdjacentHeal>15</iVictoryAdjacentHeal>
 			<iVictoryStackHeal>15</iVictoryStackHeal>
@@ -9564,7 +9564,7 @@
 		<PromotionInfo>
 			<Type>PROMOTION_VIRGO</Type>
 			<Description>TXT_KEY_PROMOTION_VIRGO</Description>
-			<Help>TXT_KEY_PROMOTION_ASTRO</Help>
+			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<iHillsDefense>50</iHillsDefense>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/virgo.dds</Button>
@@ -18984,7 +18984,7 @@
 			<PromotionLine>PROMOTIONLINE_ARMED_GUARD</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<SubCombatChangeTypes>
-					<SubCombatChangeType>UNITCOMBAT_PROMOTED_ARMED_GUARD</SubCombatChangeType>
+				<SubCombatChangeType>UNITCOMBAT_PROMOTED_ARMED_GUARD</SubCombatChangeType>
 			</SubCombatChangeTypes>
 			<iDefenseCombatModifierChange>10</iDefenseCombatModifierChange>
 			<iDynamicDefenseChange>10</iDynamicDefenseChange>
