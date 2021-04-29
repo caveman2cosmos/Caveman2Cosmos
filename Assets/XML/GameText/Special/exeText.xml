@@ -10,6 +10,70 @@
 		<Spanish>Contenido de Beyond the Sword</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_BUDDY_LIST_STAGING_LOC</Tag>
+		<English>In Staging Room: "%s1_GameName"</English>
+		<French>Dans le salon : "%s1_GameName"</French>
+		<German>Im Staging Room: "%s1_GameName"</German>
+		<Italian>Nella stanza d'allestimento: "%s1_GameName"</Italian>
+		<Spanish>En la sala de comunicaciones: "%s1_GameName"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_BUDDY_LIST_PLAYING_LOC</Tag>
+		<English>Playing Game: "%s1_GameName"</English>
+		<French>En cours de partie : "%s1_GameName"</French>
+		<German>Spielt: "%s1_GameName"</German>
+		<Italian>Nella partita: "%s1_GameName"</Italian>
+		<Spanish>Jugando a la partida: "%s1_GameName"</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_MAIN_MENU_CIV_PASSWORD_TITLEBAR</Tag>
+		<English>Password Protection</English>
+		<French>Protection par mot de passe</French>
+		<German>Kennwortschutz</German>
+		<Italian>Protezione password</Italian>
+		<Spanish>Protecci&#243;n con contrase&#241;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_MAIN_MENU_CIV_PASSWORD_TITLE</Tag>
+		<English>ENTER CIV PASSWORD</English>
+		<French>SAISISSEZ LE MOT DE PASSE CIV</French>
+		<German>ZIVILISATIONSKENNWORT EINGEBEN</German>
+		<Italian>INSERISCI LA PASSWORD DELLA CIVILT&#192;</Italian>
+		<Spanish>CONTRASE&#209;A DE LA CIVILIZACI&#211;N</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_MAIN_MENU_CIV_PASSWORD_DESC</Tag>
+		<English>Please enter the required password for this Civ.</English>
+		<French>Saisissez le mot de passe requis pour cette civilisation.</French>
+		<German>Geben Sie das f&#252;r diese Zivilisation erforderliche Kennwort ein.</German>
+		<Italian>Inserisci la password necessaria per questa civilt&#224;.</Italian>
+		<Spanish>Introduce la contrase&#241;a necesaria para esta civilizaci&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_MAIN_MENU_CIV_PASSWORD_RETRY_DESC</Tag>
+		<English>The password you entered was incorrect.  Please try again.</English>
+		<French>Saisissez le mot de passe requis pour cette civilisation.</French>
+		<German>Geben Sie das f&#252;r diese Zivilisation erforderliche Kennwort ein.</German>
+		<Italian>Inserisci la password necessaria per questa civilt&#224;.</Italian>
+		<Spanish>Introduce la contrase&#241;a necesaria para esta civilizaci&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_MAIN_MENU_CIV_PROTECT_TITLE</Tag>
+		<English>PROTECT YOUR CIV</English>
+		<French>PROTEGEZ VOTRE CIVILISATION</French>
+		<German>SCH&#220;TZEN SIE IHRE ZIVILISATION</German>
+		<Italian>PROTEGGI LA TUA CIVILT&#192;</Italian>
+		<Spanish>PROTEGE TU CIVILIZACI&#211;N</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_MAIN_MENU_CIV_PROTECT_DESC</Tag>
+		<English>Enter a password to protect your Civilization, or leave it blank to waive password protection.</English>
+		<French>Saisissez un mot de passe pour prot&#233;ger votre civilisation ou ne pr&#233;cisez aucun mot de passe pour ignorer la protection.</French>
+		<German>Geben Sie ein Kennwort ein, um Ihre Zivilisation vor unbefugtem Zugriff zu sch&#252;tzen.[NEWLINE]Oder lassen Sie die Kennworteingabe leer, wenn Sie kein Kennwort nutzen wollen.</German>
+		<Italian>Inserisci una password per proteggere la tua civilt&#224;, oppure lascia lo spazio bianco per evitare protezioni.</Italian>
+		<Spanish>Introduce una contrase&#241;a para proteger tu civilizaci&#243;n, o d&#233;jala en blanco para descartar la protecci&#243;n mediante contrase&#241;a.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ACTION_LOAD</Tag>
 		<English>Load</English>
 		<French>Charger</French>
