@@ -8513,7 +8513,7 @@ void CvUnitAI::AI_assaultSeaMove()
 
 			// galleys with upgrade available should get that ASAP
 			if( GET_PLAYER(getOwner()).AI_unitImpassableCount(getUnitType()) > 0 )
-			{// getUpgradeCity very suspect of a problem
+			{
 				CvCity* pUpgradeCity = getUpgradeCity(false);
 				if( pUpgradeCity != NULL && pUpgradeCity == pCity )
 				{
@@ -23740,16 +23740,14 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_travelToUpgradeCity()
 {
-	return false;
 	PROFILE_FUNC();
-	const CvUnitInfo& unitInfo = GC.getUnitInfo(getUnitType());
-	const int iNumUpgrades = unitInfo.getNumUnitUpgrades();
-	if (iNumUpgrades <= 0)
+
+	// Check if unit is not a dead end, that there exist a better unit in the game that it one day can upgrade into.
+	if (GC.getUnitInfo(getUnitType()).getNumUnitUpgrades() <= 0)
 	{
-		SendLog("AI_ExploreMove", CvWString::format(L"Unit: %S has %lld upgrades?", this->getName().c_str(), iNumUpgrades));
 		return false;
 	}
-	SendLog("AI_ExploreMove", CvWString::format(L"Unit: %S has %lld upgrades?", this->getName().c_str(), iNumUpgrades));
+	SendLog("AI_ExploreMove", CvWString::format(L"Unit: %S is not a dead end unit, and can potentially upgrade to something one day", this->getName().c_str()));
 	// is there a city which can upgrade us?
 	CvCity* pUpgradeCity = getUpgradeCity(/*bSearch*/ true);
 	if (pUpgradeCity != NULL)
