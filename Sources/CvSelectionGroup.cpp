@@ -5982,9 +5982,16 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 				iUnitsSplitOffCount++;
 			}
 		}
-		for (; idx < static_cast<int>(unitsOfType.size()); ++idx)
+		if (pRemainderGroup != this) // Toffer, no point for a unit in this group to join this group...
 		{
-			unitsOfType[idx]->joinGroup(pRemainderGroup);
+			for (; idx < static_cast<int>(unitsOfType.size()); ++idx)
+			{
+				unitsOfType[idx]->joinGroup(pRemainderGroup);
+			}
+		}
+		else if (iSplitSize <= iUnitsSplitOffCount)
+		{
+			break; // Toffer - Job done.
 		}
 	}
 
