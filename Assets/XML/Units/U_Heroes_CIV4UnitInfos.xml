@@ -20492,7 +20492,7 @@
 			</FreePromotions>
 			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
 		</UnitInfo>
-				<UnitInfo>
+		<UnitInfo>
 			<Type>UNIT_GOTH_ALARIC</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>

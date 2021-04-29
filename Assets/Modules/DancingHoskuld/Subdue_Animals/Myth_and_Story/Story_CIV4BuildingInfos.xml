@@ -236,11 +236,11 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>-1</iAmountPerTurn>
 					<Active>
-					<Has>
-						<GOMType>GOM_TECH</GOMType>
-						<ID>TECH_PALEONTOLOGY</ID>
-					</Has>
-				</Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_PALEONTOLOGY</ID>
+						</Has>
+					</Active>
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -309,10 +309,10 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>-1</iAmountPerTurn>
 					<Active>
-					<Has>
-						<GOMType>GOM_TECH</GOMType>
-						<ID>TECH_PALEONTOLOGY</ID>
-					</Has>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_PALEONTOLOGY</ID>
+						</Has>
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>

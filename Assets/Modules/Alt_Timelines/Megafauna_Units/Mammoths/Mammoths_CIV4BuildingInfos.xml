@@ -190,7 +190,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			</BuildingInfo>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MASTER_HUNTER_TRADITION</Type>
 			<BonusHappinessChanges>

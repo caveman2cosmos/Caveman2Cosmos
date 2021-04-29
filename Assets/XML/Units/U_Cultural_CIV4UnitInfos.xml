@@ -29712,8 +29712,8 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
-									<ID>ADAPT_DEFAULT</ID>
-									<Constant>12</Constant>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
 									</Adapt>
 								</iCommerce>
 							</Commerces>
@@ -31167,8 +31167,8 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
-									<ID>ADAPT_DEFAULT</ID>
-									<Constant>5</Constant>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>5</Constant>
 									</Adapt>
 								</iCommerce>
 							</Commerces>
@@ -31183,8 +31183,8 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
-									<ID>ADAPT_DEFAULT</ID>
-									<Constant>10</Constant>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
 									</Adapt>
 								</iCommerce>
 							</Commerces>
@@ -32245,8 +32245,8 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
-									<ID>ADAPT_DEFAULT</ID>
-									<Constant>6</Constant>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
 									</Adapt>
 								</iCommerce>
 							</Commerces>
@@ -32261,8 +32261,8 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
-									<ID>ADAPT_DEFAULT</ID>
-									<Constant>12</Constant>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
 									</Adapt>
 								</iCommerce>
 							</Commerces>

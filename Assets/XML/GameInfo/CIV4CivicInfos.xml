@@ -5310,16 +5310,16 @@
 			<SpecialistValids/>
 			<UnitCombatProductionModifiers>
 				<UnitCombatProductionModifier>
-						<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-						<iProductionModifier>20</iProductionModifier>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
-						<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-						<iProductionModifier>15</iProductionModifier>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iProductionModifier>15</iProductionModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
-						<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-						<iProductionModifier>15</iProductionModifier>
+					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<iProductionModifier>15</iProductionModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 			<BuildingHappinessChanges/>
@@ -5438,8 +5438,8 @@
 					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
-						<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-						<iProductionModifier>15</iProductionModifier>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iProductionModifier>15</iProductionModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>

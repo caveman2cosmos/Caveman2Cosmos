@@ -48688,7 +48688,7 @@
 				<BuildingType>BUILDING_HOUSE_ERA1_MDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_MDHW</BuildingType>
-					<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>192</iCost>
@@ -70868,7 +70868,7 @@
 				<BuildingType>BUILDING_MUSKOX_HERD</BuildingType>
 				<BuildingType>BUILDING_WOOLY_PIG_BREEDER</BuildingType>
 			</PrereqOrBuildings>
-<!-- Note Mammoths are included in the above only if the megafauna mod is active -->
+			<!-- Note Mammoths are included in the above only if the megafauna mod is active -->
 			<iCost>86</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -87584,7 +87584,7 @@
 				<BuildingType>BUILDING_HOUSE_ERA1_MDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_MDHW</BuildingType>
-					<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -87619,7 +87619,7 @@
 				<BuildingType>BUILDING_HOUSE_ERA1_MDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_MDHW</BuildingType>
-					<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
 			</PrereqOrBuildings>
 			<SpecialistCounts>

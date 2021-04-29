@@ -5,7 +5,7 @@
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
-<!-- EgyptMyth -->
+		<!-- EgyptMyth -->
 		<BuildingInfo>
 			<Type>BUILDING_PTAH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -173,7 +173,7 @@
 			<Type>BUILDING_EGYPT_MYTH_SHRINE</Type>
 			<MovieDefineTag>ART_DEF_MOVIE_EGYPT_MYTH_SHRINE</MovieDefineTag>
 		</BuildingInfo>
-<!-- Hellenism -->
+		<!-- Hellenism -->
 		<BuildingInfo>
 			<Type>BUILDING_ERECTION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -456,7 +456,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-<!-- Nagualismo -->
+		<!-- Nagualismo -->
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_PYRAMID_OF_THE_MOON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -623,7 +623,7 @@
 			<Type>BUILDING_MESOAMERICAN_SHRINE</Type>
 			<MovieDefineTag>ART_DEF_MOVIE_MESOAMERICAN_SHRINE</MovieDefineTag>
 		</BuildingInfo>
-<!-- Zoroasterism -->
+		<!-- Zoroasterism -->
 		<BuildingInfo>
 			<Type>BUILDING_HAMMURABI</Type>
 			<AndDependencyTypes>

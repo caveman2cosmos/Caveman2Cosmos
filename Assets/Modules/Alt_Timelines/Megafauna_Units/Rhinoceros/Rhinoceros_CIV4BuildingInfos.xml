@@ -70,7 +70,7 @@
 			<FreeBuilding>BUILDING_RHINO_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
-				<iAsset>4</iAsset>
+			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>

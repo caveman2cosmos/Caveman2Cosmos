@@ -3433,7 +3433,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 		</BuildingInfo>
-<!--
+		<!--
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Type>
 			<MapCategoryTypes>
@@ -8973,7 +8973,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-<!--
+			<!--
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14001,7 +14001,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_III</ArtDefineTag>
 		</BuildingInfo>
-<!-- Should be given by python when butchering units.
+		<!-- Should be given by python when butchering units.
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_KURU</Type>
 			<MapCategoryTypes>

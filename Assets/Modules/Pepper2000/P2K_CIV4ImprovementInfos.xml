@@ -916,15 +916,15 @@
 					<TerrainType>TERRAIN_JUPITER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-			<TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_SATURN</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-			<TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_URANUS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-			<TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_NEPTUNE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
@@ -1297,7 +1297,7 @@
 			<iUniqueRange>2</iUniqueRange>
 			<iPillageGold>200</iPillageGold>
 			<TechYieldChanges>
-			<TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_ARTIFICIAL_STARS</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>

@@ -122,14 +122,14 @@
 			</Flavors>
 			<ConstructCondition>
 				<And>
-				<Has>
-				<GOMType>GOM_BONUS</GOMType>
-				<ID>BONUS_BRICKS</ID>
-				</Has>
-				<Has>
-				<GOMType>GOM_BONUS</GOMType>
-				<ID>BONUS_FURNITURE</ID>
-				</Has>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_BRICKS</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_FURNITURE</ID>
+					</Has>
 				</And>
 			</ConstructCondition>
 			<PropertyManipulators>
