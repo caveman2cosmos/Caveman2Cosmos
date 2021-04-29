@@ -4,7 +4,7 @@ from CvPythonExtensions import CyGlobalContext
 
 # Initialize callback interface
 def init():
-	global g_options, g_screen
+	global g_options
 	import BugOptions
 	g_options = BugOptions.getOptions()
 
@@ -63,6 +63,6 @@ def handleBugSliderChanged(argsList):
 		option.setValue(iValue)
 
 def handleGameOptionChange(argsList):
-	iValue, szName = argsList
+	bValue, szName = argsList
 	GC = CyGlobalContext()
-	GC.getGame().setOption(GC.getInfoTypeForString(szName), iValue)
+	GC.getGame().setOption(GC.getInfoTypeForString(szName), bValue)
