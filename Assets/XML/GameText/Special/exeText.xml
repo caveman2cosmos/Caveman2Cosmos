@@ -1796,10 +1796,11 @@
 		<Italian>Carica partita</Italian>
 		<Spanish>Cargar partida</Spanish>
 	</TEXT>
+	<!-- Toffer - These doesn't exist in vanilla xml, so unlikely that exe actually use them.
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOAD_INIT_FAILED</Tag>
 		<English>!!</English>
-	</TEXT>
+	</TEXT-->
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOAD_INIT_FAILED_DESC</Tag>
 		<English>Could not load initial game data.</English>
@@ -2299,10 +2300,11 @@
 		<Italian>Aggiorna elenco</Italian>
 		<Spanish>Actualizar lista</Spanish>
 	</TEXT>
+	<!-- Toffer - These doesn't exist in vanilla xml, so unlikely that exe actually use them.
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_REMEMBER_PASSWORD</Tag>
 		<English>!!</English>
-	</TEXT>
+	</TEXT-->
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_REPEAT_PASSWORD</Tag>
 		<English>Repeat</English>
@@ -2550,5 +2552,351 @@
 		<German>Warten auf Ziv-Auswahl ...</German>
 		<Italian>In attesa delle scelte delle civilt&#224;...</Italian>
 		<Spanish>Esperando elecci&#243;n de civilizaciones...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_NAME_TAG</Tag>
+		<English>Map Name:  %s1_Name</English>
+		<French>Nom de la carte : %s1_Name</French>
+		<German>Kartenname:  %s1_Name</German>
+		<Italian>Nome mappa:  %s1_Name</Italian>
+		<Spanish>Nombre del mapa:  %s1_Name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_UPDATE_RECV</Tag>
+		<English>RECEIVING MAP...</English>
+		<French>RECEPTION CARTE...</French>
+		<German>KARTE WIRD ERHALTEN ...</German>
+		<Italian>RICEZIONE MAPPA IN CORSO...</Italian>
+		<Spanish>RECIBIENDO MAPA...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_UPDATE_SEND</Tag>
+		<English>SENDING MAP...</English>
+		<French>ENVOI CARTE...</French>
+		<German>KARTE WIRD GESENDET ...</German>
+		<Italian>INVIO MAPPA IN CORSO...</Italian>
+		<Spanish>ENVIANDO MAPA...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_UPDATE_TITLE</Tag>
+		<English>Map Transfer</English>
+		<French>Transfert carte</French>
+		<German>Kartentransfer</German>
+		<Italian>Trasferimento mappa</Italian>
+		<Spanish>Transferencia de mapa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_CONNECT_FAILURE_DESC</Tag>
+		<English>The connection to the game browsing server has failed.</English>
+		<French>Echec de la connexion avec le navigateur de recherche des parties Internet.</French>
+		<German>Der Verbindungsaufbau zum Spieleserver ist fehlgeschlagen.</German>
+		<Italian>La connessione al server per la ricerca di partite &#232; fallita.</Italian>
+		<Spanish>Ha fallado la conexi&#243;n con el servidor de b&#250;squeda de partidas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_CONNECT_FAILURE_TITLE</Tag>
+		<English>Server unreachable</English>
+		<French>Serveur injoignable</French>
+		<German>Server nicht erreichbar</German>
+		<Italian>Server irraggiungibile</Italian>
+		<Spanish>No se puede acceder al servidor</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_CONNECT_INVALID_LOGIN_DESC</Tag>
+		<English>The username you entered is invalid.</English>
+		<French>Le nom d'utilisateur est incorrect.</French>
+		<German>Der angegebene Benutzername ist ung&#252;ltig.</German>
+		<Italian>Lo username da te inserito non &#232; valido.</Italian>
+		<Spanish>El nombre de usuario que has introducido no es v&#225;lido.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_CONNECT_INVALID_LOGIN_TITLE</Tag>
+		<English>Invalid login name</English>
+		<French>Nom de connexion incorrect</French>
+		<German>Ung&#252;ltiger Login-Name</German>
+		<Italian>Nome di login non valido</Italian>
+		<Spanish>Nombre de inicio de sesi&#243;n no v&#225;lido</Spanish>
+	</TEXT>
+	<!-- Toffer - These doesn't exist in vanilla xml, so unlikely that exe actually use them.
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_DNS_ERROR_DESC</Tag>
+		<English>!!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_DNS_ERROR_TITLE</Tag>
+		<English>!!</English>
+	</TEXT-->
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_NAT_ERROR_DESC</Tag>
+		<English>Unable to find internet games due to firewall issues.</English>
+		<French>Un probl&#232;me de pare-feu emp&#234;che la recherche des parties sur Internet.</French>
+		<German>Aufgrund der eingestellten Firewall-Regeln konnten keine Internetspiele gefunden werden.</German>
+		<Italian>Impossibile cercare partite Internet a causa di problemi con il firewall.</Italian>
+		<Spanish>No se han podido encontrar partidas en Internet debido a problemas con el firewall/servidor de seguridad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_NAT_ERROR_TITLE</Tag>
+		<English>Server not reachable</English>
+		<French>Serveur injoignable</French>
+		<German>Server nicht erreichbar</German>
+		<Italian>Server irraggiungibile</Italian>
+		<Spanish>No se puede acceder al servidor</Spanish>
+	</TEXT>
+	<!-- Toffer - These doesn't exist in vanilla xml, so unlikely that exe actually use them.
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_PORT_ERROR_DESC</Tag>
+		<English>!!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_PORT_ERROR_TITLE</Tag>
+		<English>!!</English>
+	</TEXT-->
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_SERVER_ERROR_DESC</Tag>
+		<English>The game browsing server is unresponsive.</English>
+		<French>Pas de r&#233;ponse du navigateur de recherche des parties Internet.</French>
+		<German>Der Spieleserver antwortet nicht.</German>
+		<Italian>Il server per la ricerca di partite non risponde.</Italian>
+		<Spanish>El servidor de b&#250;squeda de partidas no responde.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_SERVER_ERROR_TITLE</Tag>
+		<English>Server unreachable</English>
+		<French>Serveur injoignable</French>
+		<German>Server nicht erreichbar</German>
+		<Italian>Server irraggiungibile</Italian>
+		<Spanish>No se puede acceder al servidor</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_SOCKET_ERROR_DESC</Tag>
+		<English>The network socket encountered an error.  Disconnected from game browsing server.</English>
+		<French>Erreur du socket r&#233;seau. D&#233;connexion du navigateur pour les parties Internet.</French>
+		<German>Es ist ein Fehler im Netzwerk-Socket aufgetreten. Die Verbindung zum Spieleserver wurde getrennt.</German>
+		<Italian>Il socket di rete ha rilevato un errore. Disconnesso dal server per la ricerca delle partite.</Italian>
+		<Spanish>El socket de red ha encontrado un error.  Desconectado del servidor de b&#250;squeda de partidas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_SOCKET_ERROR_TITLE</Tag>
+		<English>Network error</English>
+		<French>Erreur de r&#233;seau</French>
+		<German>Netzwerkfehler</German>
+		<Italian>Errore di rete</Italian>
+		<Spanish>Error de red</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_UNAVAILABLE_DESC</Tag>
+		<English>The internet game browsing server is unavailable.</English>
+		<French>Le navigateur Internet pour les parties en ligne est indisponible.</French>
+		<German>Der Spieleserver ist nicht verf&#252;gbar.</German>
+		<Italian>Il server Internet per la ricerca delle partite non &#232; disponibile.</Italian>
+		<Spanish>El servidor de b&#250;squeda de partidas en Internet no est&#225; disponible.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_UNAVAILABLE_TITLE</Tag>
+		<English>Server unavailable</English>
+		<French>Serveur indisponible</French>
+		<German>Server nicht verf&#252;gbar</German>
+		<Italian>Server non disponibile</Italian>
+		<Spanish>Servidor no disponible</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_UNSPECIFIED_ERROR_DESC</Tag>
+		<English>We cannot reach the game browsing server due to an unspecified problem.</English>
+		<French>Impossible de joindre le navigateur de recherche des parties Internet. Probl&#232;me non sp&#233;cifi&#233;.</French>
+		<German>Der Spieleserver ist wegen eines unbekannten Fehlers nicht erreichbar.</German>
+		<Italian>Impossibile connettersi al server per la ricerca delle partite a causa di un problema non specificato.</Italian>
+		<Spanish>No se ha podido acceder al servidor de b&#250;squeda de partidas debido a un problema sin especificar.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MASTER_UNSPECIFIED_ERROR_TITLE</Tag>
+		<English>Server not reachable</English>
+		<French>Serveur injoignable</French>
+		<German>Server nicht erreichbar</German>
+		<Italian>Server irraggiungibile</Italian>
+		<Spanish>No se puede acceder al servidor</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMBERS_ADD_BUDDY</Tag>
+		<English>Add to Buddies</English>
+		<French>Ajouter &#224; la liste d'amis</French>
+		<German>Zu Freundesliste hinzuf&#252;gen</German>
+		<Italian>Aggiungi agli amici</Italian>
+		<Spanish>Agregar a amigos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMBERS_IGNORE_MEMBER</Tag>
+		<English>Ignore User</English>
+		<French>Ignorer l'utilisateur</French>
+		<German>Benutzer ignorieren</German>
+		<Italian>Ignora utente</Italian>
+		<Spanish>Ignorar al usuario</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMBERS_REMOVE_BUDDY</Tag>
+		<English>Remove from Buddies</English>
+		<French>Supprimer de la liste d'amis</French>
+		<German>Aus Freundesliste entfernen</German>
+		<Italian>Elimina dagli amici</Italian>
+		<Spanish>Quitar de amigos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMBERS_SEND_MESSAGE</Tag>
+		<English>Send Message</English>
+		<French>Envoyer message</French>
+		<German>Nachricht senden</German>
+		<Italian>Invia messaggio</Italian>
+		<Spanish>Enviar mensaje</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMBERS_UNIGNORE_MEMBER</Tag>
+		<English>Stop Ignoring User</English>
+		<French>Cesser d'ignorer l'utilisateur</French>
+		<German>Benutzer nicht mehr ignorieren</German>
+		<Italian>Annulla ignora utente</Italian>
+		<Spanish>Dejar de ignorar al usuario</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_SAVER_ERROR</Tag>
+		<English>Using the MemorySaver option in your configuration does not allow device loss. Exiting program.</English>
+		<French>Le fait d'utiliser l'option MemorySaver dans votre configuration n'autorise aucune perte de performances graphiques. Programme en cours de fermeture.</French>
+		<German>Die Verwendung der MemorySaver-Option in Ihrer Konfiguration setzt exklusiven Zugriff auf die Grafikkarte voraus. Programm wird verlassen.</German>
+		<Italian>L'opzione di salvataggio della memoria video non permette il passaggio a un'altra applicazione che fa utilizzo della scheda video. Uscita dal programma in corso.</Italian>
+		<Spanish>Al usar la opci&#243;n AhorroMemoria en tu configuraci&#243;n no se puede abrir otra aplicaci&#243;n en segundo plano. Saliendo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_CIV_ADJ</Tag>
+		<English>Civ Adjective:</English>
+		<French>Adjectif :</French>
+		<German>Ziv.-Adjektiv:</German>
+		<Italian>Aggettivo:</Italian>
+		<Spanish>Adjetivo:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_CIV_DESC</Tag>
+		<English>Civ Description:</English>
+		<French>Desc. civilisation :</French>
+		<German>Ziv.-Beschreibung:</German>
+		<Italian>Descriz. civilt&#224;:</Italian>
+		<Spanish>Civilizaci&#243;n:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_CIV_EMAIL</Tag>
+		<English>E-Mail Address:</English>
+		<French>Adresse e-mail :</French>
+		<German>E-Mail-Adresse:</German>
+		<Italian>Indirizzo e-mail:</Italian>
+		<Spanish>Direcci&#243;n de e-mail:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_CIV_PASSWORD</Tag>
+		<English>Civ Password:</English>
+		<French>Mot de passe Civ :</French>
+		<German>Civ-Kennwort:</German>
+		<Italian>Password della civilt&#224;:</Italian>
+		<Spanish>Contrase&#241;a de civilizaci&#243;n:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_CIV_SHORT_DESC</Tag>
+		<English>Short Description:</English>
+		<French>Descript. rapide :</French>
+		<German>Kurzbeschreibung:</German>
+		<Italian>Br. descriz. civ.:</Italian>
+		<Spanish>Descripci&#243;n:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_CIV_SMTP</Tag>
+		<English>SMTP Server:</English>
+		<French>Serveur SMTP :</French>
+		<German>SMTP-Server:</German>
+		<Italian>Server SMTP:</Italian>
+		<Spanish>Servidor SMTP:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_CIV_TYPE</Tag>
+		<English>Civ Type:</English>
+		<French>Type de civilisat. :</French>
+		<German>Zivilisation:</German>
+		<Italian>Tipo di civilt&#224;:</Italian>
+		<Spanish>Tipo de civilizaci&#243;n:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_CLIMATE</Tag>
+		<English>Climate:</English>
+		<French>Climat :</French>
+		<German>Klima:</German>
+		<Italian>Clima:</Italian>
+		<Spanish>Clima:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_ERA</Tag>
+		<English>Era:</English>
+		<French>Epoque :</French>
+		<German>Zeitalter:</German>
+		<Italian>Era:</Italian>
+		<Spanish>&#201;poca:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_FINAL_SETUP</Tag>
+		<English>GAME SNAPSHOT</English>
+		<French>CAPTURE D'ECRAN</French>
+		<German>SPIEL-SCHNAPPSCHUSS</German>
+		<Italian>RIASSUNTO PARTITA</Italian>
+		<Spanish>FOTO DE LA PARTIDA</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_LEADER_NAME</Tag>
+		<English>Leader Name:</English>
+		<French>Nom du h&#233;ros :</French>
+		<German>Staatsoberhauptes:</German>
+		<Italian>Nome leader:</Italian>
+		<Spanish>Nombre del l&#237;der:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_LEADER_TYPE</Tag>
+		<English>Leader Type:</English>
+		<French>Type de dirigeant :</French>
+		<German>Staatsoberhaupt:</German>
+		<Italian>Tipo di leader:</Italian>
+		<Spanish>Tipo de l&#237;der:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_MAP</Tag>
+		<English>Map:</English>
+		<French>Carte :</French>
+		<German>Karte:</German>
+		<Italian>Mappa:</Italian>
+		<Spanish>Mapa:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_SEALEVEL</Tag>
+		<English>Sealevel:</English>
+		<French>Niveau de la mer :</French>
+		<German>Meeresspiegel:</German>
+		<Italian>Livello del mare:</Italian>
+		<Spanish>Nivel del mar:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_SIZE</Tag>
+		<English>Size:</English>
+		<French>Taille :</French>
+		<German>Gr&#246;&#223;e:</German>
+		<Italian>Dimensione:</Italian>
+		<Spanish>Tama&#241;o:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_SPEED</Tag>
+		<English>Speed:</English>
+		<French>Vitesse :</French>
+		<German>Geschwindigkeit:</German>
+		<Italian>Velocit&#224;:</Italian>
+		<Spanish>Velocidad:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_YOUR_DETAILS</Tag>
+		<English>Your Details:</English>
+		<French>Infos personnelles :</French>
+		<German>Euer Steckbrief:</German>
+		<Italian>I tuoi dettagli:</Italian>
+		<Spanish>Detalles:</Spanish>
 	</TEXT>
 </Civ4GameText>
