@@ -1,6 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- WARNING: Those are texts used by EXE. No text may be removed from it or added to it, only translations may be added or removed. -->
-<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../Schema/Civ4Gametext.xsd">
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>CHANGED_TXT_KEY_MAIN_MENU_WARLORS</Tag>
+		<English>Beyond the Sword Content</English>
+		<French>Contenu de Beyond the Sword</French>
+		<German>Beyond The Sword-Inhalte</German>
+		<Italian>Contenuti di Beyond the Sword</Italian>
+		<Spanish>Contenido de Beyond the Sword</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_LOAD</Tag>
 		<English>Load</English>
