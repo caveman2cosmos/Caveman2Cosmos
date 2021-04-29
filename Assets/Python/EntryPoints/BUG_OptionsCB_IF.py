@@ -4,7 +4,7 @@ from CvPythonExtensions import CyGlobalContext
 
 # Initialize callback interface
 def init():
-	global g_options
+	global g_options, g_screen
 	import BugOptions
 	g_options = BugOptions.getOptions()
 

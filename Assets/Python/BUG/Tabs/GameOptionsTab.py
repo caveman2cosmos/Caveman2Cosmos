@@ -1,10 +1,10 @@
 from CvPythonExtensions import CyGlobalContext
-from BugOptionsTab import BugOptionsTab
+import BugOptionsTab
 
 class GameOptionsTab(BugOptionsTab.BugOptionsTab):
 
 	def __init__(self):
-		BugOptionsTab.__init__(self, "GameOptions", "Game Options")
+		BugOptionsTab.BugOptionsTab.__init__(self, "GameOptions", "Game Options")
 
 	def create(self, screen):
 		GC = CyGlobalContext()
