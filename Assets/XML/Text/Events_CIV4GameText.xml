@@ -97,7 +97,7 @@
 		<Spanish>Los ingenieros %s1:3_civ_adjective han inventado un método para instalar sistemas láser de combate en sus helicópteros de batalla. Los analistas están preocupados acerca del impacto en el equilibrio de fuerzas.</Spanish>
 		<Polish>Inżynierowie %s1_civ_adjective wynaleźli sposób montowania bojowych laserów na śmigłowcach. Analitycy zastanawiają się jak wpłynie to na ich możliwości bojowe.</Polish>
 		<Russian>Инженеры %s1_civ_adjective оснастили свои боевые вертолеты лазерными турелями. Аналитики обеспокоены изменением международного баланса и расстановки сил.</Russian>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BETTER_COAL</Tag>
 		<English>%s1_civ_adjective scientists have developed better ways of processing coal fuel.</English>
@@ -6336,7 +6336,7 @@
 		<Spanish>Una tormenta de arena ha hecho desaparecer bajo la arena los caminos cerca de %s2_city.</Spanish>
 		<Polish>Szalejąca burza piaskowa zasypała drogi w pobliżu miasta %s2_city.</Polish>
 		<Russian>Песчаная буря около %s2_city засыпала песком окрестные дороги и караванные тропы.</Russian>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SEGMENTED_ARMOR_1</Tag>
 		<English>Invention of the segmented armor has provided our foot soldiers with some protection against archers.</English>
@@ -7310,7 +7310,7 @@
 		<French>Nous n'avons pas d'argent à perdre.</French>
 		<Italian>Non abbiamo soldi da perdere.</Italian>
 		<Russian>Ó íàñ íåò ëèøíèõ äåíåã.</Russian>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEGA_ATTACK</Tag>
 		<English>An accident has led to an escape of animals at Pleistocene Park! Several people are dead and dozens are injured.</English>

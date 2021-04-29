@@ -1903,7 +1903,7 @@
 			</AudioRunSounds>
 			<SelectionSound>AS3D_UN_OCEAN_END1</SelectionSound>
 			<ActionSound>AS3D_UN_OCEAN_END1</ActionSound>
-		</UnitArtInfo>		
+		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CARROBALLISTA</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/carrobalista.dds</Button>

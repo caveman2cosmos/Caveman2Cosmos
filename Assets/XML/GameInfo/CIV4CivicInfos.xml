@@ -4966,7 +4966,7 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-		</CivicInfo>		
+		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_MILITARY</CivicOptionType>
 			<Type>CIVIC_MILITIA</Type>
@@ -11823,7 +11823,7 @@
 				<iYield>1</iYield>
 				<iYield>0</iYield>
 			</LandmarkYieldChanges>
-		</CivicInfo>		
+		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
 			<Type>CIVIC_SURVIVAL</Type>
@@ -19312,7 +19312,7 @@
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<Flavors/>
-		</CivicInfo>		
+		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
 			<Type>CIVIC_HUNTER_GATHERING</Type>
@@ -20365,7 +20365,7 @@
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 			<Flavors/>
-		</CivicInfo>		
+		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GARBAGE</CivicOptionType>
 			<Type>CIVIC_GARBAGE_ANYWHERE</Type>

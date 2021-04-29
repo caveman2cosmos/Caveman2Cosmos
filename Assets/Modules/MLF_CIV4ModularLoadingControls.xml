@@ -8,7 +8,7 @@
 		<ConfigurationInfo>
 			<Type>Modules_Main_1</Type>
 			<Description>Initialize ALL Modules by using the MLF file structure</Description>
-			<Modules>				
+			<Modules>
 				<Module>
 					<Directory>Custom_Leaderheads</Directory>
 					<bLoad>1</bLoad>

@@ -25075,7 +25075,7 @@
 					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		</UnitInfo>		
+		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ENFORCERS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>

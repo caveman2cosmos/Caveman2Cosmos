@@ -12920,7 +12920,7 @@
 				<BuildingType>BUILDING_MOUNTAIN_TAPIR_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BRAZILIAN_TAPIR_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BAIRDS_TAPIR_MYTH_EFFECT</BuildingType>
-			</PrereqOrBuildings>			
+			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_TAPIR_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
@@ -16266,7 +16266,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MOOSE_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>			
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_MOOSE_MYTH_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>

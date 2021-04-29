@@ -11434,7 +11434,7 @@
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TUNDRA</TerrainType>
 					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>				
+				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
@@ -12554,7 +12554,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 			</RouteYieldChanges>
-		</ImprovementInfo>		
+		</ImprovementInfo>
 		<!-- Sea Air Defense -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</Type>

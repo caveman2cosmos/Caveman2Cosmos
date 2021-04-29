@@ -47,7 +47,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<iUniqueRange>2</iUniqueRange>
-			<ImprovementPillage>IMPROVEMENT_SPACE_STATION_LV1</ImprovementPillage>			
+			<ImprovementPillage>IMPROVEMENT_SPACE_STATION_LV1</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_SPACE_STATION_LV3</ImprovementUpgrade>
 		</ImprovementInfo>
 		<ImprovementInfo>

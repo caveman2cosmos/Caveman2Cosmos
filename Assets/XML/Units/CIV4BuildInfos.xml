@@ -4824,7 +4824,7 @@
 					<TerrainType>TERRAIN_TUNDRA</TerrainType>
 					<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 					<iTime>200</iTime>
-				</TerrainStruct>				
+				</TerrainStruct>
 			</TerrainStructs>
 			<Button>,Art/Interface/Buttons/Buildings/Factory.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,2</Button>
 		</BuildInfo>

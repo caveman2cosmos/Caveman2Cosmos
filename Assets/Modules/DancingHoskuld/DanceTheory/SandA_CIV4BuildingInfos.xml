@@ -49,7 +49,7 @@
 				<BonusType>BONUS_RAPA_NUI</BonusType>
 				<BonusType>BONUS_SAMOAN</BonusType>
 				<BonusType>BONUS_TAHITIAN</BonusType>
-				<BonusType>BONUS_TONGAN</BonusType>				
+				<BonusType>BONUS_TONGAN</BonusType>
 			</PrereqBonuses>
 		</BuildingInfo>
 	</BuildingInfos>
