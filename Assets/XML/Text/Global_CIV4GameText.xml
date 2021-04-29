@@ -15705,4 +15705,12 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Polish>Prawnik</Polish>
 		<Russian>Àäâîêàò</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHICOPTION_LOWRES_TEXTURES_HELP</Tag>
+		<English>Lower resolution textures will be used.[NEWLINE]Causes graphical glitches when selected.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GRAPHIC_OPTION_FROZEN_ANIMATIONS_HELP</Tag>
+		<English>No unit or improvement animations.[NEWLINE]Causes graphical glitches when selected.</English>
+	</TEXT>
 </Civ4GameText>
