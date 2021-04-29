@@ -5964,30 +5964,17 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 	const int sourceGroupSize = getNumUnits();
 
 	// Interlace units into the two groups, new group takes its fair share from each AI type proportionally to orignial group
-	int iUnitsSplitOffCount = 0;
+	int iUnitsSplitOffCount = 1;
 	foreach_(const std::vector<CvUnit*>& unitsOfType, unitGroups | map_values)
 	{
 		int idx = 0;
 		if (iSplitSize - iUnitsSplitOffCount > 0)
 		{
-			// Toffer - More accurate to only compensate for rounding errors when there is a rounding error.
-			int countForThisAIType = iSplitSize * unitsOfType.size();
-			// New group takes at least 1 from each AI type if it has room for it.
-			if (sourceGroupSize > countForThisAIType)
-			{
-				countForThisAIType = 1;
-			}
-			// No rounding error
-			else if ((countForThisAIType % sourceGroupSize) == 0)
-			{
-				countForThisAIType /= sourceGroupSize;
-			}
-			else // +1 to compensate for rounding errors.
-			{
-				countForThisAIType = 1 + countForThisAIType / sourceGroupSize;
-			}
-			// can't take more than there is to take, and don't take more than the new group want.
-			countForThisAIType = std::min(iSplitSize - iUnitsSplitOffCount, std::min(countForThisAIType, static_cast<int>(unitsOfType.size())));
+			// We want to take a proportion of the units equal to the proportional size of iSplitSize relative to the original group.
+			// i.e. we going to take our fair share (+1 so we don't suffer rounding errors)
+			int countForThisAIType = std::min(1 + iSplitSize * unitsOfType.size() / sourceGroupSize, unitsOfType.size());
+			// Make sure we don't exceed the requested units for the split group (this might not really matter)
+			countForThisAIType = std::min(countForThisAIType, iSplitSize - iUnitsSplitOffCount);
 
 			for (; idx < countForThisAIType; ++idx)
 			{
@@ -6002,15 +5989,15 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 				unitsOfType[idx]->joinGroup(pRemainderGroup);
 			}
 		}
-		else if (iSplitSize == iUnitsSplitOffCount)
+		else if (iSplitSize <= iUnitsSplitOffCount)
 		{
 			break; // Toffer - Job done.
 		}
 	}
 
-	FAssertMsg(pRemainderGroup != this || getNumUnits() == 0, "Source group in split action wasn't fully emptied");
+	FAssertMsg(pRemainderGroup == this || getNumUnits() == 0, "Source group in split action wasn't fully emptied");
 	FAssertMsg(pSplitGroup->getNumUnits() == iSplitSize, "New split group didn't meet requested size");
-	FAssertMsg(pRemainderGroup->getNumUnits() == sourceGroupSize - iSplitSize, "New remainder group didn't meet expected size");
+	FAssertMsg(pRemainderGroup->getNumUnits() == 1 + sourceGroupSize - iSplitSize, "New remainder group didn't meet expected size");
 
 	if (ppOtherGroup != NULL)
 	{
