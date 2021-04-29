@@ -1202,6 +1202,320 @@
 		<English>Invalid Device</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_JOIN_FAILURE_DESC</Tag>
+		<English>We were unable to connect to the player "%s1_Name".[NEWLINE]This player may not have his firewall environment properly configured.</English>
+		<French>Connexion au joueur "%s1_Name" impossible.[NEWLINE]Son environnement firewall n'est peut-&#234;tre pas correctement configur&#233;..</French>
+		<German>Wir konnten keine Verbindung zum Spieler "%s1_Name" aufbauen.[NEWLINE]Der Spieler hat seine Firewall-Umgebung eventuell nicht korrekt konfiguriert.</German>
+		<Italian>Impossibile connettersi al giocatore "%s1_Name".[NEWLINE]Il giocatore potrebbe non aver impostato correttamente il firewall.</Italian>
+		<Spanish>Ha sido imposible conectar con el jugador "%s1_Name".[NEWLINE]Puede que ese jugador no tenga configurado correctamente su entorno de firewall/servidor de seguridad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_JOIN_FAILURE_TITLE</Tag>
+		<English>Peer Connection Failure!</English>
+		<French>Echec de la connexion au peer !</French>
+		<German>Peer-Verbindungsfehler!</German>
+		<Italian>Errore di connessione al peer!</Italian>
+		<Spanish>Fallo al conectar con interlocutor</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_JOIN_GAME_PASSWORD_DESC</Tag>
+		<English>Please enter the required password for this game.</English>
+		<French>Saisissez le mot de passe requis pour cette partie.</French>
+		<German>Geben Sie bitte das Kennwort f&#252;r dieses Spiel ein.</German>
+		<Italian>Inserire una password per partecipare a questa partita.</Italian>
+		<Spanish>Introduce la contrase&#241;a necesaria para la partida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_JOIN_GAME_PASSWORD_TITLE</Tag>
+		<English>PASSWORD REQUIRED</English>
+		<French>MOT DE PASSE REQUIS</French>
+		<German>KENNWORTEINGABE ERFORDERLICH</German>
+		<Italian>PASSWORD NECESSARIA</Italian>
+		<Spanish>SE REQUIERE CONTRASE&#209;A</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_JOIN_GAME_PASSWORD_TITLEBAR</Tag>
+		<English>Game Password</English>
+		<French>Mot de passe de la partie</French>
+		<German>Spielkennwort</German>
+		<Italian>Password partita</Italian>
+		<Spanish>Contrase&#241;a de la partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAN_LOBBY_TITLE</Tag>
+		<English>LAN LOBBY</English>
+		<French>SALON RESEAU LOCAL</French>
+		<German>LAN-LOBBY</German>
+		<Italian>SALA D'ATTESA LAN</Italian>
+		<Spanish>SALA DE RED LOCAL</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_DESC_GENERIC</Tag>
+		<English>Leader Description</English>
+		<French>Description du dirigeant</French>
+		<German>Beschreibung Staatsoberhaupt</German>
+		<Italian>Descrizione del leader</Italian>
+		<Spanish>Descripci&#243;n del l&#237;der</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOAD_ERROR</Tag>
+		<English>Load Error</English>
+		<French>Erreur lors du chargement</French>
+		<German>Ladefehler</German>
+		<Italian>Errore di caricamento</Italian>
+		<Spanish>Error de carga.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOAD_FILE</Tag>
+		<English>Load File</English>
+		<French>Charger fichier</French>
+		<German>Datei laden</German>
+		<Italian>Carica file</Italian>
+		<Spanish>Cargar archivo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOADSAVE_ALL_FILES</Tag>
+		<English>All files (*.*)</English>
+		<French>Tous les fichiers (*.*)</French>
+		<German>Alle Dateien (*.*)</German>
+		<Italian>Tutti i file (*.*)</Italian>
+		<Spanish>Todos los archivos (*.*)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOADSAVE_FILE_CANT_CREATE</Tag>
+		<English>Error creating file %s1</English>
+		<French>Erreur lors de la cr&#233;ation du fichier %s1</French>
+		<German>Fehler beim Erstellen der Datei %s1</German>
+		<Italian>Errore nella creazione del file %s1</Italian>
+		<Spanish>Error al crear el archivo %s1.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOADSAVE_FILE_CANT_OPEN</Tag>
+		<English>Error opening file %s1</English>
+		<French>Erreur lors de l'ouverture du fichier %s1</French>
+		<German>Fehler beim &#214;ffnen der Datei %s1</German>
+		<Italian>Errore nell'apertura del file %s1</Italian>
+		<Spanish>Error al abrir el archivo %s1.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOADSAVE_FILE_NOT_EXIST</Tag>
+		<English>The specified file does not exist.[NEWLINE]Please select a valid file name.</English>
+		<French>Le fichier indiqu&#233; n'existe pas.[NEWLINE]Veuillez s&#233;lectionner un nom de fichier valide.</French>
+		<German>Die angegebene Datei existiert nicht.[NEWLINE]Bitte w&#228;hlen Sie einen g&#252;ltigen Dateinamen.</German>
+		<Italian>Il file specificato non esiste.[NEWLINE]Seleziona un nome di file valido.</Italian>
+		<Spanish>El archivo indicado no existe.[NEWLINE]Selecciona un nombre de archivo v&#225;lido.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOADSAVE_FILE_PROTECTED</Tag>
+		<English>The save file you have selected is protected to ensure that the assets in your mod folder have not been changed.</English>
+		<French>Le fichier de sauvegarde s&#233;lectionn&#233; est prot&#233;g&#233; afin que les donn&#233;es de votre dossier Mod ne soient pas modifi&#233;es.</French>
+		<German>Der von Ihnen gew&#228;hlte Spielstand ist schreibgesch&#252;tzt, um sicherzustellen, dass die Daten in Ihrem Mod-Verzeichnis nicht ver&#228;ndert wurden.</German>
+		<Italian>Il file di salvataggio selezionato &#232; protetto, in modo da assicurarsi che la cartella dei mod non venga modificata.</Italian>
+		<Spanish>El archivo guardado que has seleccionado est&#225; protegido para asegurar que no se modifiquen los par&#225;metros de la carpeta mod.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOBBY_PROFILE_TAG</Tag>
+		<English>Name:</English>
+		<French>Nom :</French>
+		<Italian>Nome:</Italian>
+		<Spanish>Nombre:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOGGING_WARNING_DESC</Tag>
+		<English>Player %d1_ID has logging enabled.[NEWLINE]Verify that this is a trusted player.</English>
+		<French>Le joueur %d1_ID: LoggingEnabled=1.[NEWLINE]Veuillez v&#233;rifier qu'il s'agit d'un joueur fiable.</French>
+		<German>Spieler %d1_ID: LoggingEnabled=1.[NEWLINE]Stellen Sie sicher, dass er vertrauensw&#252;rdig ist.</German>
+		<Italian>Giocatore %d1_ID: LoggingEnabled=1.[NEWLINE]Assicurati che il giocatore sia affidabile.</Italian>
+		<Spanish>Jugador %d1_ID: LoggingEnabled=1.[NEWLINE]Comprueba si se trata de un jugador de confianza.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOGIN_ERROR_DESC</Tag>
+		<English>The login attempt has failed.</English>
+		<French>Echec de la tentative de connexion.</French>
+		<German>Der Login-Versuch ist fehlgeschlagen.</German>
+		<Italian>Il tentativo di login &#232; fallito.</Italian>
+		<Spanish>El intento de inicio de sesi&#243;n ha fallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOGIN_ERROR_TITLE</Tag>
+		<English>Login failed</English>
+		<French>Echec de la connexion</French>
+		<German>Login gescheitert</German>
+		<Italian>Login fallito</Italian>
+		<Spanish>Fallo al iniciar sesi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOGIN_IN_USE_DESC</Tag>
+		<English>This account is currently in use.</English>
+		<French>Ce compte est d&#233;j&#224; utilis&#233;.</French>
+		<German>Dieser Account wird zurzeit benutzt.</German>
+		<Italian>Questo account &#232; attualmente in uso.</Italian>
+		<Spanish>Esa cuenta ya se encuentra en uso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOGIN_IN_USE_TITLE</Tag>
+		<English>Account in use</English>
+		<French>Compte utilis&#233;</French>
+		<German>Account in Benutzung</German>
+		<Italian>Account in uso</Italian>
+		<Spanish>Cuenta en uso</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOGIN_REQUIRED_DESC</Tag>
+		<English>You must enter a Username.</English>
+		<French>Vous devez saisir un nom d'utilisateur.</French>
+		<German>Sie m&#252;ssen einen Benutzernamen angeben.</German>
+		<Italian>Devi inserire uno username.</Italian>
+		<Spanish>Hay que introducir un nombre de usuario.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOGIN_REQUIRED_TITLE</Tag>
+		<English>Username required</English>
+		<French>Nom d'utilisateur requis</French>
+		<German>Benutzername erforderlich</German>
+		<Italian>Username necessario</Italian>
+		<Spanish>Se requiere nombre de usuario</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOGIN_TIMEOUT_DESC</Tag>
+		<English>Our login attempt has timed out.  The authentication server may be down.</English>
+		<French>Temps &#233;coul&#233; pour la tentative de connexion. Le serveur d'authentification est peut-&#234;tre HS.</French>
+		<German>Bei unserem Login-Versuch ist die Zeit abgelaufen. Der Authentifizierungsserver ist vielleicht nicht erreichbar.</German>
+		<Italian>Tentativo di login scaduto. Il server di autenticazione potrebbe essere disattivato.</Italian>
+		<Spanish>Agotado el tiempo de inicio de sesi&#243;n.  Puede que el servidor de autenticaci&#243;n no est&#233; disponible.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LOGIN_TIMEOUT_TITLE</Tag>
+		<English>Login Error</English>
+		<French>Erreur de connexion</French>
+		<German>Login-Fehler</German>
+		<Italian>Errore di login</Italian>
+		<Spanish>Error de inicio de sesi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_ABOUT_CIV4</Tag>
+		<English>About Civ 4</English>
+		<French>A propos de Civ 4</French>
+		<German>&#220;ber Civ 4</German>
+		<Italian>Informazioni su Civ 4</Italian>
+		<Spanish>Acerca de Civilization IV</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_ABOUT_THIS_BUILD</Tag>
+		<English>About this Build</English>
+		<French>&#192; propos de cette version</French>
+		<German>&#220;ber diese Version</German>
+		<Italian>Informazioni su questa build</Italian>
+		<Spanish>Acerca de esta build</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_ADDRESS_MISSING_DESC</Tag>
+		<English>You must provide a valid network address.</English>
+		<French>Vous devez sp&#233;cifier une adresse r&#233;seau valide.</French>
+		<German>Sie m&#252;ssen eine g&#252;ltige Netzwerkadresse angeben.</German>
+		<Italian>Devi inserire un indirizzo di rete valido.</Italian>
+		<Spanish>Hay que facilitar una direcci&#243;n de red v&#225;lida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_ADDRESS_MISSING_TITLE</Tag>
+		<English>Net Address required</English>
+		<French>Adresse Internet requise</French>
+		<German>Netzwerkadresse erforderlich</German>
+		<Italian>Indirizzo di rete necessario</Italian>
+		<Spanish>Se requiere direcci&#243;n de red</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_ADVANCED</Tag>
+		<English>ADVANCED</English>
+		<French>AVANC&#201;</French>
+		<German>ERWEITERT</German>
+		<Italian>IMPOSTAZIONI AVANZATE</Italian>
+		<Spanish>AVANZADO</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_AI</Tag>
+		<English>AI</English>
+		<French>IA</French>
+		<German>KI</German>
+		<Italian>IA</Italian>
+		<Spanish>IA</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_ALREADY_PATCHING_DESC</Tag>
+		<English>A patch update is already in progress.</English>
+		<French>Une mise &#224; jour est d&#233;j&#224; en cours.</French>
+		<German>Es l&#228;uft bereits ein Patch-Update.</German>
+		<Italian>Aggiornamento gi&#224; in esecuzione.</Italian>
+		<Spanish>El parche de actualizaci&#243;n ya se est&#225; aplicando.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_ALREADY_PATCHING_TITLE</Tag>
+		<English>Already patching</English>
+		<French>Patch d&#233;j&#224; en cours d'installation</French>
+		<German>Patch l&#228;uft bereits</German>
+		<Italian>Patch gi&#224; in esecuzione</Italian>
+		<Spanish>Ya se est&#225; aplicando el parche</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_BTS_MOD</Tag>
+		<English>Mod</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_BTS_SCENARIO</Tag>
+		<English>Scenario</English>
+		<French>Sc&#233;nario</French>
+		<German>Szenario</German>
+		<Spanish>Escenario</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_BUDDY_LIST_TAB</Tag>
+		<English>Buddy List</English>
+		<French>Liste d'amis</French>
+		<German>Freundesliste</German>
+		<Italian>Lista amici</Italian>
+		<Spanish>Lista de amigos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_BUILD_DATE</Tag>
+		<English>Build Date:</English>
+		<French>Date de compilation :</French>
+		<German>Versionsdatum:</German>
+		<Italian>Data della build:</Italian>
+		<Spanish>Fecha de la build:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_BUILD_VERSION</Tag>
+		<English>Build Version:</English>
+		<French>Version de compilation :</French>
+		<German>Version:</German>
+		<Italian>Versione della build:</Italian>
+		<Spanish>Versi&#243;n de la build:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_CHOOSE_GAME_LOAD</Tag>
+		<English>Choose a game to load</English>
+		<French>Choisissez une partie &#224; charger</French>
+		<German>Zu ladendes Spiel w&#228;hlen!</German>
+		<Italian>Scegli una partita da caricare!</Italian>
+		<Spanish>Elegir la partida a cargar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_CIV_ADMINPWD_DESC</Tag>
+		<English>Please enter the required admin password for this game.</English>
+		<French>Saisissez le mot de passe administrateur requis pour cette partie.</French>
+		<German>Geben Sie bitte das Admin-Kennwort f&#252;r dieses Spiel ein.</German>
+		<Italian>Inserire la password amministratore per partecipare a questa partita.</Italian>
+		<Spanish>Introduce la contrase&#241;a del administrador necesaria para la partida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_CIV_ADMINPWD_TITLE</Tag>
+		<English>ADMIN PASSWORD</English>
+		<French>MOT DE PASSE ADMINISTRATEUR</French>
+		<German>ADMIN-KENNWORT</German>
+		<Italian>PASSWORD AMMINISTRATORE</Italian>
+		<Spanish>CONTRASE&#209;A DEL ADMINISTRADOR</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
 		<English>Pedia</English>
 		<French>Pédia</French>
