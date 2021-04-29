@@ -2149,4 +2149,406 @@
 		<Italian>Password</Italian>
 		<Spanish>Contrase&#241;a</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PATCH_CHECK_ERROR_DESC</Tag>
+		<English>An error was encountered while checking for updates.</English>
+		<French>Une erreur s'est produite lors de la recherche de mise &#224; jour.</French>
+		<German>Bei der Update-&#220;berpr&#252;fung ist ein Fehler aufgetreten.</German>
+		<Italian>Durante la verifica degli aggiornamenti si &#232; rilevato un errore.</Italian>
+		<Spanish>Se ha producido un error al comprobar las actualizaciones.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PATCH_CHECK_ERROR_TITLE</Tag>
+		<English>Update error</English>
+		<French>Erreur de mise &#224; jour</French>
+		<German>Update-Fehler</German>
+		<Italian>Errore di aggiornamento</Italian>
+		<Spanish>Error de actualizaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PATCH_IN_PROGRESS_DESC</Tag>
+		<English>You may not proceed until the patching process is complete.</English>
+		<French>Vous devez attendre la fin de l'installation du patch.</French>
+		<German>Sie k&#246;nnen erst nach Abschluss des Patching-Vorgangs fortfahren.</German>
+		<Italian>Non puoi continuare finch&#233; il processo di patch non &#232; terminato.</Italian>
+		<Spanish>No puedes continuar hasta que se haya aplicado el parche.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PATCH_IN_PROGRESS_TITLE</Tag>
+		<English>Patch in progress!</English>
+		<French>Patch en cours !</French>
+		<German>Patch l&#228;uft!</German>
+		<Italian>Patch in corso!</Italian>
+		<Spanish>Parche aplic&#225;ndose</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PATCH_OK_DESC</Tag>
+		<English>There are no updates available at this time.</English>
+		<French>Aucune mise &#224; jour n'est disponible pour l'instant.</French>
+		<German>Es sind zurzeit keine Updates verf&#252;gbar.</German>
+		<Italian>In questo momento non ci sono aggiornamenti disponibili.</Italian>
+		<Spanish>En este momento no hay disponible ninguna actualizaci&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PATCH_OK_TITLE</Tag>
+		<English>Version OK!</English>
+		<Italian>Versione OK!</Italian>
+		<Spanish>Versi&#243;n correcta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PBEM</Tag>
+		<English>Play by E-mail</English>
+		<French>Jouer par email</French>
+		<German>Per E-Mail spielen</German>
+		<Italian>Gioca tramite e-mail</Italian>
+		<Spanish>Juego por e-mail</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PITBOSS_WAIT</Tag>
+		<English> - Waiting for the PitBoss</English>
+		<French>En attente du Pitboss</French>
+		<German> - Warten auf den PitBoss</German>
+		<Italian>- In attesa del Pitboss</Italian>
+		<Spanish> - Esperando Pitboss</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PLAYER_DETAILS_TITLE</Tag>
+		<English>PLAYER DETAILS</English>
+		<French>DETAILS JOUEUR</French>
+		<German>SPIELERDETAILS</German>
+		<Italian>DETTAGLI GIOCATORE</Italian>
+		<Spanish>DETALLES DEL JUGADOR</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PLAYER_NAME</Tag>
+		<English>Player Name</English>
+		<French>Nom du joueur</French>
+		<German>Spielername</German>
+		<Italian>Nome giocatore</Italian>
+		<Spanish>Nombre del jugador</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PLAYERNAME_MISSING_DESC</Tag>
+		<English>You must provide a player name.</English>
+		<French>Vous devez sp&#233;cifier un nom de joueur.</French>
+		<German>Sie m&#252;ssen einen Spielernamen angeben.</German>
+		<Italian>Devi inserire il nome del giocatore.</Italian>
+		<Spanish>Hay que facilitar el nombre del jugador.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PLAYERNAME_MISSING_TITLE</Tag>
+		<English>Player name required</English>
+		<French>Nom de joueur requis</French>
+		<German>Spielername erforderlich</German>
+		<Italian>Nome del giocatore necessario</Italian>
+		<Spanish>Se requiere nombre del jugador</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PLAYERS</Tag>
+		<English>Players</English>
+		<French>Joueurs</French>
+		<German>Spieler</German>
+		<Italian>Giocatori</Italian>
+		<Spanish>Jugadores</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PLAYER_WAIT</Tag>
+		<English> - Waiting for </English>
+		<French>- En attente de :</French>
+		<German> - Warten auf </German>
+		<Italian> - In attesa di</Italian>
+		<Spanish> - Esperando a </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PLAY_NOW</Tag>
+		<English>Play Now!</English>
+		<French>Jouer</French>
+		<German>Jetzt spielen!</German>
+		<Italian>Gioca ora!</Italian>
+		<Spanish>Jugar ya</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_RANDOM</Tag>
+		<English>Random</English>
+		<French>Al&#233;atoire</French>
+		<German>Zuf&#228;llig</German>
+		<Italian>Casuale</Italian>
+		<Spanish>Al azar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_RANDOM_DESC</Tag>
+		<English>Your leader will be chosen at random.</English>
+		<French>Votre dirigeant sera choisi al&#233;atoirement.</French>
+		<German>Das Staatsoberhaupt wird zuf&#228;llig ausgew&#228;hlt.</German>
+		<Italian>Il tuo leader verr&#224; scelto casualmente.</Italian>
+		<Spanish>Tu l&#237;der se elegir&#225; al azar.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_RANDOM_TOOLTIP</Tag>
+		<English>A choice will be made at random.  Selecting this option proves you are tough.</English>
+		<French>Un choix sera fait al&#233;atoirement. Le choix de cette option prouve que vous avez du cran.</French>
+		<German>Es wird eine zuf&#228;llige Wahl getroffen. Diese Option eignet sich nur f&#252;r echte Draufg&#228;nger!</German>
+		<Italian>Verr&#224; eseguita una scelta casuale. Scegliendo questa opzione, dimostri di essere un duro.</Italian>
+		<Spanish>La elecci&#243;n se realizar&#225; al azar.  Con esta decisi&#243;n se demuestra tu dureza.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_REFRESH_LIST</Tag>
+		<English>Refresh List</English>
+		<French>Actualiser liste</French>
+		<German>Liste aktualisieren </German>
+		<Italian>Aggiorna elenco</Italian>
+		<Spanish>Actualizar lista</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_REMEMBER_PASSWORD</Tag>
+		<English>!!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_REPEAT_PASSWORD</Tag>
+		<English>Repeat</English>
+		<French>V&#233;rification[SPACE]</French>
+		<German>Wiederholen</German>
+		<Italian>Ripeti</Italian>
+		<Spanish>Repetir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_ROOM_MEMBERS_TAB</Tag>
+		<English>Lobby Members</English>
+		<French>Membres du salon</French>
+		<German>Lobby-Mitglieder</German>
+		<Italian>Membri della sala d'attesa</Italian>
+		<Spanish>Miembros en la sala</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SAVE_GAME_TITLE</Tag>
+		<English>Save Game</English>
+		<French>Sauvegarder</French>
+		<German>Spiel speichern</German>
+		<Italian>Salva partita</Italian>
+		<Spanish>Guardar partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SAVE_VERSION</Tag>
+		<English>Save Version:</English>
+		<French>Version de sauvegarde :</French>
+		<German>Spielstandversion:</German>
+		<Italian>Versione del salvataggio:</Italian>
+		<Spanish>Guardar versi&#243;n:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SCENARIO</Tag>
+		<English>Play a Scenario</English>
+		<French>Jouer un sc&#233;nario</French>
+		<German>Szenario spielen</German>
+		<Italian>Gioca uno scenario</Italian>
+		<Spanish>Jugar un escenario</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SELECT_A</Tag>
+		<English>Select a[SPACE]</English>
+		<French>Faites votre choix : [SPACE]</French>
+		<German>W&#196;hlen[SPACE]</German>
+		<Italian>Seleziona [SPACE]</Italian>
+		<Spanish>Seleccionar [SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SELECT_A_CIV</Tag>
+		<English>Select a Civilization</English>
+		<French>Choisissez une civilisation</French>
+		<German>Zivilisation w&#196;hlen</German>
+		<Italian>Seleziona una civilt&#192;</Italian>
+		<Spanish>Seleccionar una civilizaci&#211;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SELECT_A_DIFFICULTY</Tag>
+		<English>Select a Difficulty</English>
+		<French>Choisissez le niveau de difficult&#233;</French>
+		<German>Schwierigkeitsgrad w&#228;hlen</German>
+		<Italian>Seleziona la difficolt&#224;</Italian>
+		<Spanish>Seleccionar una dificultad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SELECT_A_MAP</Tag>
+		<English>Select a Map</English>
+		<French>Choisissez une carte</French>
+		<German>Karte w&#196;hlen</German>
+		<Italian>Seleziona una mappa</Italian>
+		<Spanish>Seleccionar un mapa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SELECT_CLIMATE_TITLE</Tag>
+		<English>CLIMATE</English>
+		<French>CLIMAT</French>
+		<German>KLIMA</German>
+		<Italian>CLIMA</Italian>
+		<Spanish>CLIMA</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SELECT_DIFFICULTY_TITLE</Tag>
+		<English>DIFFICULTY</English>
+		<French>DIFFICULTE</French>
+		<German>SCHWIERIGKEIT</German>
+		<Italian>DIFFICOLT&#192;</Italian>
+		<Spanish>DIFICULTAD</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SELECT_GAME_SPEED</Tag>
+		<English>How fast should the game be?</English>
+		<French>Quelle vitesse de jeu souhaitez-vous ?</French>
+		<German>Wie schnell soll das Spiel laufen?</German>
+		<Italian>Quanto veloce deve essere il gioco?</Italian>
+		<Spanish>&#191;A qu&#233; velocidad ha de ir el juego?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SELECT_GAME_SPEED_TITLE</Tag>
+		<English>GAME SPEED</English>
+		<French>VITESSE DU JEU</French>
+		<German>SPIELGESCHWINDIGKEIT</German>
+		<Italian>VELOCIT&#192; DI GIOCO</Italian>
+		<Spanish>VELOCIDAD DE JUEGO</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SELECT_SEALEVEL_TITLE</Tag>
+		<English>SEALEVEL</English>
+		<French>NIVEAU DE LA MER</French>
+		<German>MEERESSPIEGEL</German>
+		<Italian>LIVELLO DEL MARE</Italian>
+		<Spanish>NIVEL DEL MAR</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SELECT_WORLD_SETUP</Tag>
+		<English>WORLD SIZE</English>
+		<French>TAILLE DU MONDE</French>
+		<German>WELTGR&#214;SSE</German>
+		<Italian>DIMENSIONI DEL MONDO</Italian>
+		<Spanish>TAMA&#209;O DEL MUNDO</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SELECT_WORLD_SIZE_TITLE</Tag>
+		<English>WORLD SIZE</English>
+		<French>TAILLE DU MONDE</French>
+		<German>WELTGR&#214;SSE</German>
+		<Italian>DIMENSIONI DEL MONDO</Italian>
+		<Spanish>TAMA&#209;O DEL MUNDO</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SERVER_STAGING_ERROR_DESC</Tag>
+		<English>An error has occurred with the staging room on the server.</English>
+		<French>Une erreur est survenue avec la salle de pr&#233;paration sur le serveur.</French>
+		<German>Es ist ein Fehler im Staging Room auf dem Server aufgetreten.</German>
+		<Italian>Si &#232; verificato un errore sul server della stanza d'allestimento.</Italian>
+		<Spanish>Se ha producido un error relacionado con la sala de comunicaciones del servidor.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SERVER_STAGING_ERROR_TITLE</Tag>
+		<English>Staging Room Error</English>
+		<French>Erreur dans la salle de pr&#233;paration</French>
+		<German>Staging Room-Fehler</German>
+		<Italian>Errore nella stanza d'allestimento</Italian>
+		<Spanish>Error de la sala de comunicaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SETTINGS</Tag>
+		<English>Settings</English>
+		<French>PARAMETRES</French>
+		<German>Einstellungen</German>
+		<Italian>Impostazioni</Italian>
+		<Spanish>Configuraci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SHORT_NICK_ERROR_DESC</Tag>
+		<English>Usernames must be at least 3 characters long.</English>
+		<French>Les noms d'utilisateurs doivent comprendre au moins 3 caract&#232;res.</French>
+		<German>Benutzernamen m&#252;ssen mindestens 3 Zeichen lang sein.</German>
+		<Italian>Gli username devono essere lunghi almeno tre caratteri.</Italian>
+		<Spanish>Los nombres de usuario deben tener una longitud de al menos 3 caracteres.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SHORT_NICK_ERROR_TITLE</Tag>
+		<English>Username Error</English>
+		<French>Erreur de nom d'utilisateur</French>
+		<German>Fehler beim Benutzernamen</German>
+		<Italian>Errore di username</Italian>
+		<Spanish>Error de nombre de usuario</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SINGLE_PLAYER</Tag>
+		<English>Single Player</English>
+		<French>Solo</French>
+		<German>Einzelspieler</German>
+		<Italian>Giocatore singolo</Italian>
+		<Spanish>Un jugador</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_STAGING_NAME</Tag>
+		<English>Staging Room</English>
+		<French>Salon</French>
+		<German>Staging Room</German>
+		<Italian>Stanza d'allestimento</Italian>
+		<Spanish>Sala de comunicaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_UNLOAD_MOD</Tag>
+		<English>Unload Mod</English>
+		<French>D&#233;charger un mod</French>
+		<German>Mod deaktivieren</German>
+		<Italian>Annulla Mod</Italian>
+		<Spanish>Descargar mod</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_UPDATES</Tag>
+		<English>Check for updates</English>
+		<French>Chercher des mises &#224; jour</French>
+		<German>Auf Updates pr&#252;fen</German>
+		<Italian>Verifica aggiornamenti</Italian>
+		<Spanish>Comprobar actualizaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_VERSION_MISMATCH_ERROR_DESC</Tag>
+		<English>The version of our critical game files do not match our host's.[NEWLINE]Cannot join game!</English>
+		<French>Notre version des fichiers critiques du jeu est diff&#233;rente de celle de l'h&#244;te.[NEWLINE]Impossible de rejoindre cette partie !</French>
+		<German>Ihre Kern-Spieldateien entsprechen nicht der auf dem Host verwendeten Version.[NEWLINE]Spielanschluss nicht m&#246;glich!</German>
+		<Italian>La versione dei nostri file critici &#232; differente da quella dell'host.[NEWLINE]Impossibile partecipare alla partita!</Italian>
+		<Spanish>Aviso: la versi&#243;n de los archivos cr&#237;ticos de la partida no coincide con la del anfitri&#243;n.[NEWLINE]No es posible unirse a la partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_VERSION_MISMATCH_ERROR_TITLE</Tag>
+		<English>Version Mismatch</English>
+		<French>Version diff&#233;rente</French>
+		<German>Versionskonflikt</German>
+		<Italian>Versione incompatibile</Italian>
+		<Spanish>Versi&#243;n incompatible</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_VERSION_MISMATCH_WARNING_DESC</Tag>
+		<English>Warning: The version of our game files do not match our host's.</English>
+		<French>Attention : la version de notre jeu est diff&#233;rente de celle de l'h&#244;te.</French>
+		<German>Achtung: Ihre Spieldaten entsprechen nicht der vom Host verwendeten Version.</German>
+		<Italian>Attenzione: la versione dei file del nostro gioco &#232; differente da quella dell'host.</Italian>
+		<Spanish>Aviso: la versi&#243;n de los archivos de la partida no coincide con la del anfitri&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_VERSION_MISMATCH_WARNING_TITLE</Tag>
+		<English>Version Mismatch</English>
+		<French>Version diff&#233;rente</French>
+		<German>Versionskonflikt</German>
+		<Italian>Versione incompatibile</Italian>
+		<Spanish>Versi&#243;n incompatible</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_VICTORIES</Tag>
+		<English>Victories</English>
+		<French>Victoires</French>
+		<German>Siege</German>
+		<Italian>Vittorie</Italian>
+		<Spanish>Victorias</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_WAITING_FOR_CIVS</Tag>
+		<English>Waiting for Civ Choices...</English>
+		<French>Attente des choix de Civ...</French>
+		<German>Warten auf Ziv-Auswahl ...</German>
+		<Italian>In attesa delle scelte delle civilt&#224;...</Italian>
+		<Spanish>Esperando elecci&#243;n de civilizaciones...</Spanish>
+	</TEXT>
 </Civ4GameText>
