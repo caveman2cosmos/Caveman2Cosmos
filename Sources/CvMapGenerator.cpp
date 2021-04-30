@@ -162,7 +162,7 @@ bool CvMapGenerator::canPlaceGoodyAt(ImprovementTypes eImprovement, int iX, int 
 	}
 
 	const int iUniqueRange = GC.getImprovementInfo(eImprovement).getGoodyUniqueRange();
-	return algo::any_of(pPlot->rect(iUniqueRange, iUniqueRange),
+	return algo::none_of(pPlot->rect(iUniqueRange, iUniqueRange),
 		bind(CvPlot::getImprovementType, _1) == eImprovement
 	);
 }
@@ -617,7 +617,7 @@ void CvMapGenerator::addUniqueBonusType(BonusTypes eBonus)
 		int iBestValue = 0;
 		CvArea *pBestArea = NULL;
 
-		foreach_(CvArea * pLoopArea, GC.getMap().areas())
+		foreach_(const CvArea * pLoopArea, GC.getMap().areas())
 		{
 			bool bTried = false;
 
