@@ -17361,4 +17361,71 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Menu d'apertura</Italian>
 		<Spanish>Menú inicial</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>SYSTEM_GAME_PAUSED</Tag>
+		<!-- Human Player Alias -->
+		<English>Game Paused by %s1</English>
+		<French>Jeu mis en pause par %s1</French>
+		<German>%s1 hat das Spiel unterbrochen</German>
+		<Italian>%s1 ha messo in pausa la partita.</Italian>
+		<Spanish>%s1 ha detenido la partida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>SYSTEM_WAITING_FOR_PLAYER</Tag>
+		<!-- Human Player Alias -->
+		<English>Waiting to hear from %s1 (Player %d2)</English>
+		<French>En attente de nouvelles de %s1 (Joueur %d2)</French>
+		<German>Warten auf Reaktion von %s1 (Spieler %d2)</German>
+		<Italian>In attesa di %s1 (giocatore %d2)</Italian>
+		<Spanish>Esperando noticias de %s1 (el jugador %d2)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>SYSTEM_PLAYER_JOINING</Tag>
+		<!-- Human Player's Alias -->
+		<English>%s1 (Player %d2) is joining the game.  Please wait...</English>
+		<French>%s1 (Joueur %d2) rejoint la partie. Merci de patienter...</French>
+		<German>%s1 (Spieler %d2) schlie&#223;t sich dem Spiel an. Bitte warten ...</German>
+		<Italian>%s1 (giocatore %d2) sta partecipando alla partita. Attendere...</Italian>
+		<Spanish>%s1 (el jugador %d2) se est&#225; uniendo a la partida.  Un momento...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>SYSTEM_RETURN</Tag>
+		<English>Press &lt;ESC> to return...</English>
+		<French>Appuyez sur &lt;ECHAP> pour quitter...</French>
+		<German>Zur&#252;ck mit &lt;ESC> ...</German>
+		<Italian>Premi &lt;ESC> per tornare...</Italian>
+		<Spanish>Pulsar &lt;ESC> para volver...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>SYSTEM_WAITING</Tag>
+		<English>Waiting for other Civilizations...</English>
+		<French>En attente d'autres civilisations...</French>
+		<German>Warten auf andere Zivilisationen ...</German>
+		<Italian>In attesa delle altre civilt&#224;...</Italian>
+		<Spanish>Esperando a m&#225;s civilizaciones...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>SYSTEM_END_TURN</Tag>
+		<English>Press &lt;ENTER> to end turn...</English>
+		<French>Appuyez sur &lt;ENTRER> pour finir votre tour...</French>
+		<German>Runde beenden mit &lt;EINGABETASTE> ...</German>
+		<Italian>Premi &lt;INVIO> per terminare il turno...</Italian>
+		<Spanish>Pulsar &lt;INTRO> para terminar el turno...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>SYSTEM_WAITING_FOR_YOU</Tag>
+		<English>Waiting for YOU to finish turn...</English>
+		<French>En attente de VOTRE fin de tour...</French>
+		<German>Warten auf Beendigung der Runde durch EUCH ...</German>
+		<Italian>In attesa della fine del TUO turno...</Italian>
+		<Spanish>Esperando a que termines el turno...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KET_ESPIONAGE_MISSION_COST</Tag>
+		<English>%s1_espionage_mission (%d2[ICON_ESPIONAGE])</English>
+		<French>%s1_espionage_mission (%d2[ICON_ESPIONAGE])</French>
+		<German>%s1_espionage_mission (%d2[ICON_ESPIONAGE])</German>
+		<Italian>%s1_espionage_mission (%d2[ICON_ESPIONAGE])</Italian>
+		<Spanish>%s1_espionage_mission (%d2 [ICON_ESPIONAGE])</Spanish>
+	</TEXT>
 </Civ4GameText>
