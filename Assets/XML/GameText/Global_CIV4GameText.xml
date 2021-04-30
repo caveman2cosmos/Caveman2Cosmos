@@ -17362,7 +17362,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Menú inicial</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>SYSTEM_GAME_PAUSED</Tag>
+		<Tag>TXT_KEY_SYSTEM_GAME_PAUSED</Tag>
 		<!-- Human Player Alias -->
 		<English>Game Paused by %s1</English>
 		<French>Jeu mis en pause par %s1</French>
@@ -17371,7 +17371,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>%s1 ha detenido la partida.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>SYSTEM_WAITING_FOR_PLAYER</Tag>
+		<Tag>TXT_KEY_SYSTEM_WAITING_FOR_PLAYER</Tag>
 		<!-- Human Player Alias -->
 		<English>Waiting to hear from %s1 (Player %d2)</English>
 		<French>En attente de nouvelles de %s1 (Joueur %d2)</French>
@@ -17380,7 +17380,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Esperando noticias de %s1 (el jugador %d2)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>SYSTEM_PLAYER_JOINING</Tag>
+		<Tag>TXT_KEY_SYSTEM_PLAYER_JOINING</Tag>
 		<!-- Human Player's Alias -->
 		<English>%s1 (Player %d2) is joining the game.  Please wait...</English>
 		<French>%s1 (Joueur %d2) rejoint la partie. Merci de patienter...</French>
@@ -17389,7 +17389,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>%s1 (el jugador %d2) se est&#225; uniendo a la partida.  Un momento...</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>SYSTEM_RETURN</Tag>
+		<Tag>TXT_KEY_SYSTEM_RETURN</Tag>
 		<English>Press &lt;ESC> to return...</English>
 		<French>Appuyez sur &lt;ECHAP> pour quitter...</French>
 		<German>Zur&#252;ck mit &lt;ESC> ...</German>
@@ -17397,7 +17397,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Pulsar &lt;ESC> para volver...</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>SYSTEM_WAITING</Tag>
+		<Tag>TXT_KEY_SYSTEM_WAITING</Tag>
 		<English>Waiting for other Civilizations...</English>
 		<French>En attente d'autres civilisations...</French>
 		<German>Warten auf andere Zivilisationen ...</German>
@@ -17405,7 +17405,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Esperando a m&#225;s civilizaciones...</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>SYSTEM_END_TURN</Tag>
+		<Tag>TXT_KEY_SYSTEM_END_TURN</Tag>
 		<English>Press &lt;ENTER> to end turn...</English>
 		<French>Appuyez sur &lt;ENTRER> pour finir votre tour...</French>
 		<German>Runde beenden mit &lt;EINGABETASTE> ...</German>
@@ -17413,7 +17413,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Pulsar &lt;INTRO> para terminar el turno...</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>SYSTEM_WAITING_FOR_YOU</Tag>
+		<Tag>TXT_KEY_SYSTEM_WAITING_FOR_YOU</Tag>
 		<English>Waiting for YOU to finish turn...</English>
 		<French>En attente de VOTRE fin de tour...</French>
 		<German>Warten auf Beendigung der Runde durch EUCH ...</German>
@@ -17421,7 +17421,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Esperando a que termines el turno...</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KET_ESPIONAGE_MISSION_COST</Tag>
+		<Tag>TXT_KEY_ESPIONAGE_MISSION_COST</Tag>
 		<English>%s1_espionage_mission (%d2[ICON_ESPIONAGE])</English>
 		<French>%s1_espionage_mission (%d2[ICON_ESPIONAGE])</French>
 		<German>%s1_espionage_mission (%d2[ICON_ESPIONAGE])</German>

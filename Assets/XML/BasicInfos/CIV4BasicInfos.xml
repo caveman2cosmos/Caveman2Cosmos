@@ -23,7 +23,7 @@
 			<Civilopedia>TXT_KEY_CONCEPT_ANIMALS_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
-			<Type>CONCEPT_APOSTOLIC_PALACE</Type>
+			<Type>TXT_KEY_CONCEPT_APOSTOLIC_PALACE</Type>
 			<Description>TXT_KEY_CONCEPT_APOSTOLIC_PALACE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_APOSTOLIC_PALACE_PEDIA</Civilopedia>
 		</ConceptInfo>
