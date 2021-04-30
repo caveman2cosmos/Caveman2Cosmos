@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>
-		<!-- Prehistoric -->
+	<!-- Breaks AI
 		<BuildInfo>
 			<Type>BUILD_SEED_CAMP_SLAVE</Type>
 			<Description>TXT_KEY_BUILD_SEED_CAMP_SLAVE</Description>
@@ -947,7 +947,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -955,7 +954,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -1063,7 +1061,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -1071,7 +1068,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -2089,7 +2085,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -2097,7 +2092,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -2171,7 +2165,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -2179,7 +2172,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -2434,7 +2426,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -2442,7 +2433,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -2697,7 +2687,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -2705,7 +2694,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -2960,7 +2948,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -2968,7 +2955,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -3509,7 +3495,6 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -3517,7 +3502,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_OASIS</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -3525,7 +3509,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -3533,7 +3516,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>1</iTime>
@@ -4555,5 +4537,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/gatherer_mushroom.dds</Button>
 		</BuildInfo>
+	-->
 	</BuildInfos>
 </Civ4BuildInfos>

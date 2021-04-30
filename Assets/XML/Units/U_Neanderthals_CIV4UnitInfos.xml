@@ -3530,6 +3530,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
+			<!-- Breaks AI
 			<Builds>
 				<Build>
 					<BuildType>BUILD_TRAIL_SLAVE</BuildType>
@@ -3632,6 +3633,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
+			-->
 			<Buildings>
 				<BuildingType>BUILDING_WV_SLAVERY</BuildingType>
 				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
