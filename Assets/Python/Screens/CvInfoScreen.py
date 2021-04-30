@@ -1336,15 +1336,11 @@ class CvInfoScreen:
 		for iImprovementLoop in xrange(iNumImprovements):
 			aiImprovementsCurrent.append(0)
 
-		iGridW = CyMap().getGridWidth()
-		iGridH = CyMap().getGridHeight()
-		for iX in xrange(iGridW):
-			for iY in xrange(iGridH):
-				plot = CyMap().plot(iX, iY)
-				if (plot.getOwner() == self.iPlayer):
-					iType = plot.getImprovementType()
-					if (iType != ImprovementTypes.NO_IMPROVEMENT):
-						aiImprovementsCurrent[iType] += 1
+		for plot in CyMap().plots():
+			if plot.getOwner() == self.iPlayer:
+				iType = plot.getImprovementType()
+				if iType != ImprovementTypes.NO_IMPROVEMENT:
+					aiImprovementsCurrent[iType] += 1
 
 ################################################### TOP PANEL ###################################################
 
