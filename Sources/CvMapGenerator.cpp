@@ -617,7 +617,7 @@ void CvMapGenerator::addUniqueBonusType(BonusTypes eBonus)
 		int iBestValue = 0;
 		CvArea *pBestArea = NULL;
 
-		foreach_(const CvArea * pLoopArea, GC.getMap().areas())
+		foreach_(CvArea * pLoopArea, GC.getMap().areas())
 		{
 			bool bTried = false;
 
