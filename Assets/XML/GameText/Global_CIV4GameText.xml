@@ -17748,4 +17748,100 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Attiva/disattiva la visibilit&#224; delle icone Cibo/Produzione/Commercio.</Italian>
 		<Spanish>Activa la visibilidad de iconos de alimentos / producci&#243;n / comercio</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADVISOR_MILITARY</Tag>
+		<English>Military</English>
+		<French>Militaire</French>
+		<German>Milit&#228;r</German>
+		<Italian>Militare</Italian>
+		<Spanish>Militar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADVISOR_RELIGION</Tag>
+		<English>Religion</English>
+		<French>Religion</French>
+		<German>Religion</German>
+		<Italian>Religione</Italian>
+		<Spanish>Religi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADVISOR_ECONOMY</Tag>
+		<English>Economy</English>
+		<French>Economie</French>
+		<German>Wirtschaft</German>
+		<Italian>Economia</Italian>
+		<Spanish>Econom&#237;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADVISOR_SCIENCE</Tag>
+		<English>Science</English>
+		<French>Science</French>
+		<German>Wissenschaft</German>
+		<Italian>Scienza</Italian>
+		<Spanish>Ciencia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADVISOR_CULTURE</Tag>
+		<English>Culture</English>
+		<French>Culture</French>
+		<German>Kultur</German>
+		<Italian>Cultura</Italian>
+		<Spanish>Cultura</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADVISOR_GROWTH</Tag>
+		<English>Growth</English>
+		<French>D&#233;veloppement</French>
+		<German>Wachstum</German>
+		<Italian>Crescita</Italian>
+		<Spanish>Crecimiento</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_APOSTOLIC_PALACE_RESIDENT</Tag>
+		<English>Apostolic Palace Resident</English>
+		<French>R&#233;sident du Palais apostolique</French>
+		<German>Herrscher im Apostolischen Palast</German>
+		<Italian>Residente Palazzo Apostolico</Italian>
+		<Spanish>Ocupante del Palacio Apost&#243;lico</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_ATTITUDE_FURIOUS</Tag>
+		<English>Furious</English>
+		<French>En col&#232;re</French>
+		<German>W&#252;tend</German>
+		<Italian>Furioso:Furiosa</Italian>
+		<Spanish>Furiosa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ATTITUDE_ANNOYED</Tag>
+		<English>Annoyed</English>
+		<French>S'inqui&#232;te</French>
+		<German>Ver&#228;rgert</German>
+		<Italian>Infastidito:Infastidita</Italian>
+		<Spanish>Molesta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ATTITUDE_CAUTIOUS</Tag>
+		<English>Cautious</English>
+		<French>Se m&#233;fie</French>
+		<German>Vorsichtig</German>
+		<Italian>Cauto:Cauta</Italian>
+		<Spanish>Cauta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ATTITUDE_PLEASED</Tag>
+		<English>Pleased</English>
+		<French>Favorable</French>
+		<German>Erfreut</German>
+		<Italian>Soddisfatto:Soddisfatta</Italian>
+		<Spanish>Amable</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ATTITUDE_FRIENDLY</Tag>
+		<English>Friendly</English>
+		<French>Enthousiaste</French>
+		<German>Freundlich</German>
+		<Italian>Amichevole:Amichevole</Italian>
+		<Spanish>Amistosa</Spanish>
+	</TEXT>
 </Civ4GameText>
