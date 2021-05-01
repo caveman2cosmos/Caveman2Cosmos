@@ -19674,4 +19674,521 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>[COLOR_UNIT_TEXT]#%d1 - %s2[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_UNIT_TEXT]#%d1 - %s2[COLOR_REVERT]</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_ALL_UNITS</Tag>
+		<English>[SPACE](&lt;ALT> for All Units)</English>
+		<French>[SPACE](&lt;ALT> pour toutes les unit&#233;s)</French>
+		<German>[SPACE](&lt;ALT> f&#252;r alle Einheiten)</German>
+		<Italian>[SPACE](&lt;ALT> per tutte le unit&#224;)</Italian>
+		<Spanish>[SPACE](&lt;ALT> para todas las unidades)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_BUILDING_HURRY</Tag>
+		<English>[COLOR_WARNING_TEXT]Can only Hurry Production of a Building.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Ne peut acc&#233;l&#233;rer que la construction d'un b&#226;timent.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nur die Produktion eines Geb&#228;udes beschleunigen.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Puoi velocizzare solamente la produzione di un edificio.[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Solo se puede acelerar la producci&#243;n de un edificio.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CANNOT_FOUND</Tag>
+		<English>[COLOR_WARNING_TEXT]Cannot found within %d1_Num plots of city.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Introuvable &#224; moins de %d1_Num cases de la ville.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nicht innerhalb eines Radius von %d1_Num Gel&#228;ndefeldern um die Stadt gegr&#252;ndet werden.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Non &#232; stato trovato all'interno di %d1_Num [NUM1:spazio:spazi] della citt&#224;.[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]No se encuentra en un radio de %d1_Num casillas de la ciudad.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CANNOT_SPREAD_NON_STATE_RELIGION</Tag>
+		<English>[COLOR_WARNING_TEXT]Cannot spread Non-State [ICON_RELIGION] in this city.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Impossible de r&#233;pandre une [ICON_RELIGION] qui n'est pas une religion d'&#233;tat dans cette ville.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann die nichtstaatliche Religion [ICON_RELIGION] in dieser Stadt nicht verbreiten.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Non si pu&#242; diffondere una religione non ufficiale[ICON_RELIGION] in questa citt&#224;.[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]En esta ciudad no se puede propagar una [ICON_RELIGION] que no sea la oficial.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CHANCE_DISCOVER</Tag>
+		<English>[ICON_BULLET]Small chance of discovering[SPACE]</English>
+		<French>[ICON_BULLET]Faibles chances de d&#233;couvrir :[SPACE]</French>
+		<German>[ICON_BULLET]Geringe Entdeckungschance f&#252;r[SPACE]</German>
+		<Italian>[ICON_BULLET]Una piccola probabilit&#224; di scoprire[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Peque&#241;a probabilidad de descubrir[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CHANGE_PRODUCTION</Tag>
+		<English>[ICON_BULLET]%D1_Change [ICON_PRODUCTION] in %s2_CityName</English>
+		<French>[ICON_BULLET]%D1_Change [ICON_PRODUCTION] &#224; %s2_CityName</French>
+		<German>[ICON_BULLET]%D1_Change [ICON_PRODUCTION] in %s2_CityName</German>
+		<Italian>[ICON_BULLET]%D1_Change [ICON_PRODUCTION] a %s2_CityName</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change [ICON_PRODUCTION] en %s2_CityName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CONNECTS_RESOURCES</Tag>
+		<English>[ICON_BULLET]Connects Improved Resources with your Cities</English>
+		<French>[ICON_BULLET]Relie les ressources exploit&#233;es &#224; vos villes.</French>
+		<German>[ICON_BULLET]Verbindet modernisierte Ressourcen mit Euren St&#228;dten</German>
+		<Italian>[ICON_BULLET]Collega le citt&#224; ai miglioramenti delle risorse</Italian>
+		<Spanish>[ICON_BULLET]Comunica los recursos mejorados con tus ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CONSUME_GREAT_PEOPLE</Tag>
+		<English>[COLOR_WARNING_TEXT]Will consume %d1_Num[ICON_GREATPEOPLE][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Consommera %d1_Num[ICON_GREATPEOPLE][COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Wird %d1_Num[ICON_GREATPEOPLE] verbrauchen[COLOR_REVERT]</German>
+		<Italian>[COLOR__WARNING_TEXT] %d1_Num[ICON_GREATPEOPLE][NUM1:verr&#224;:verranno] sacrificati[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Consumir&#225; %d1_Num [ICON_GREATPEOPLE][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CONSUME_UNIT</Tag>
+		<English>[COLOR_WARNING_TEXT]Will consume the unit[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]L'unit&#233; sera d&#233;truite[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Wird die Einheit verbrauchen[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]L'unit&#224; verr&#224; sacrificata nel procedimento[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Consumir&#225; la unidad[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CORPORATION_COMPETING_HEADQUARTERS</Tag>
+		<English>[COLOR_WARNING_TEXT]Cannot expand %s1_corporation into %s2_corporation Headquarters[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Impossible de d&#233;velopper %s1_corporation dans le si&#232;ge social de la soci&#233;t&#233; commerciale %s2_corporation</French>
+		<German>[COLOR_WARNING_TEXT]Die Kapitalgesellschaft %s1_corporation kann nicht in den Hauptsitz der Kapitalgesellschaft %s2_corporation expandieren[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Impossibile espandere %s1_corporation nel quartier generale di %s2_corporation[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]%s1_corporation no se puede expandir en la sede de %s2_corporation.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CORPORATION_NOT_ACTIVE</Tag>
+		<English>[COLOR_WARNING_TEXT]Cannot expand %s1_corporation within %s2_civ_adjective borders[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Impossible de d&#233;velopper %s1_corporation &#224; l'int&#233;rieur des fronti&#232;res %s2:4_civ_adjective[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Die Kapitalgesellschaft %s1_corporation kann innerhalb der %s2:2_civ_adjective Grenzen nicht expandieren[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Impossibile espandere %s1_corporation all'interno dei confini %s2_civ_adjective[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]%s1_corporation no se puede expandir dentro de las fronteras %s2:4_civ_adjective.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CORPORATION_NO_RESOURCES</Tag>
+		<English>[COLOR_WARNING_TEXT]%s1_city has no access to %s2_bonus_list[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]%s1_city n'a pas acc&#232;s &#224; la liste : %s2_bonus_list[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]%s1_city hat keinen Zugang zu %s2_bonus_list[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]%s1_city non ha accesso a %s2_bonus_list[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]%s1_city no tiene acceso a %s2_bonus_list.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_DEFENSE_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% Tile Defense</English>
+		<French>[ICON_BULLET]D&#233;fense de la case %D1%%</French>
+		<German>[ICON_BULLET]%D1%% Gel&#228;ndefeld-Verteidigung</German>
+		<Italian>[ICON_BULLET]%D1%% difensiva della casella</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la defensa de la casilla</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_DESTROY_IMP</Tag>
+		<!-- TXT_KEY_IMPROVEMENT_ -->
+		<English>[ICON_BULLET]Destroys [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]D&#233;truit : [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Vernichtet die Modernisierung [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Distruggi [NUM1:il:la:gli:le] [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Destruye [NUM1:el:la:los:las] [COLOR_HIGHLIGHT_TEXT]%s1:2_ImpName[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_ESPIONAGE_MISSION</Tag>
+		<English>Unit can perform Espionage Missions when in a valid location and if the player has sufficient Espionage Points to execute them.</English>
+		<French>Cette unit&#233; peux ex&#233;cuter des missions d'espionnage si elle se trouve dans un lieu autoris&#233; et si le joueur a suffisamment de points d'espionnage pour les ex&#233;cuter.</French>
+		<German>Einheit kann Spionagemissionen ausf&#252;hren, wenn sie sich an einer g&#252;ltigen Stelle befindet und der Spieler gen&#252;gend Spionagepunkte besitzt.</German>
+		<Italian>L'unit&#224; pu&#242; effettuare missioni di spionaggio se si trova in una posizione valida e se il giocatore ha abbastanza punti spionaggio.</Italian>
+		<Spanish>La unidad puede realizar misiones de espionaje si est&#225; en un lugar v&#225;lido y el jugador tiene suficientes puntos de espionaje para llevarla a cabo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_EXTRA_CONSTRUCTION</Tag>
+		<!-- TXT_KEY_BUILDING_ -->
+		<English>%D1_Change[ICON_PRODUCTION] for Construction of [COLOR_BUILDING_TEXT]%s2_BuildName[COLOR_REVERT].</English>
+		<French>%D1_Change[ICON_PRODUCTION] pour construire : [COLOR_BUILDING_TEXT]%s2_BuildName[COLOR_REVERT].</French>
+		<German>%D1_Change[ICON_PRODUCTION] f&#252;r die Errichtung des Geb&#228;udes [COLOR_BUILDING_TEXT]%s2_BuildName[COLOR_REVERT].</German>
+		<Italian>%D1_Change[ICON_PRODUCTION] per la costruzione [NUM1:del:della:dei:delle] [COLOR_BUILDING_TEXT]%s2_BuildName[COLOR_REVERT].</Italian>
+		<Spanish>%D1_Change [ICON_PRODUCTION] para construir [NUM2:el:la:los:las] [COLOR_BUILDING_TEXT]%s2_BuildName[COLOR_REVERT].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_EXTRA_RESEARCH</Tag>
+		<!-- TXT_KEY_TECH_ -->
+		<English>%D1_NumResearch[ICON_RESEARCH] for Research of [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT].</English>
+		<French>%D1_NumResearch[ICON_RESEARCH] pour rechercher : [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT].</French>
+		<German>%D1_NumResearch[ICON_RESEARCH] f&#252;r die Erforschung der Technologie [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT].</German>
+		<Italian>%D1_NumResearch[ICON_RESEARCH] per la ricerca [NUM2:del:della:degli:delle] [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT].</Italian>
+		<Spanish>%D1_NumResearch [ICON_RESEARCH] para investigar [NUM2:el:la:los:las] [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_FINISH_CONSTRUCTION</Tag>
+		<!-- TXT_KEY_BUILDING_ -->
+		<English>Finish Construction of [COLOR_BUILDING_TEXT]%s1_BuildName[COLOR_REVERT].</English>
+		<French>Terminer la construction de : [COLOR_BUILDING_TEXT]%s1_BuildName[COLOR_REVERT].</French>
+		<German>Errichtung des Geb&#228;udes [COLOR_BUILDING_TEXT]%s1_BuildName[COLOR_REVERT] abschlie&#223;en.</German>
+		<Italian>Termina la costruzione [NUM1:del:della:dei:delle] [COLOR_BUILDING_TEXT]%s1_BuildName[COLOR_REVERT].</Italian>
+		<Spanish>Terminar la construcci&#243;n [NUM1:del:de la:de los:de las] [COLOR_BUILDING_TEXT]%s1_BuildName[COLOR_REVERT].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_FLAT_MOVEMENT_COST</Tag>
+		<English>[ICON_BULLET]All Units Can Move %d1 Tiles/Turn</English>
+		<French>[ICON_BULLET]Toutes les unit&#233;s peuvent se d&#233;placer de %d1 cases par tour.</French>
+		<German>[ICON_BULLET]Alle Einheiten k&#246;nnen sich %d1 Gel&#228;ndefelder/Runde fortbewegen</German>
+		<Italian>[ICON_BULLET]Tutte le unit&#224; possono muovere %d1 caselle/turno</Italian>
+		<Spanish>[ICON_BULLET]Todas las unidades se pueden mover %d1 casillas/turno.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_GOES_TO_CIV</Tag>
+		<English>[ICON_BULLET]Goes To[SPACE]</English>
+		<French>[ICON_BULLET]Se rend &#224; :[SPACE]</French>
+		<German>[ICON_BULLET]Geht an[SPACE]</German>
+		<Italian>[ICON_BULLET]Vai verso[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Pasa a ser de[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_INFILTRATE_MISSION_FOREIGN</Tag>
+		<English>[COLOR_WARNING_TEXT]Can only Conduct an Infiltrate Mission in a Foreign City.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Doit &#234;tre dans une ville &#233;trang&#232;re pour ex&#233;cuter une mission d'espionnage.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nur eine Infiltrationsmission in einer fremden Stadt durchf&#252;hren.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Pu&#242; condurre una missione d'infiltrazione solamente in una citt&#224; straniera.[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Solo puede llevar a cabo una misi&#243;n de infiltraci&#243;n en una ciudad extranjera.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_IRRIGATED</Tag>
+		<English>Irrigated</English>
+		<French>Irrigation</French>
+		<German>Bew&#228;ssert</German>
+		<Italian>Irrigato</Italian>
+		<Spanish>Tiene riego</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_LEAD_TROOPS</Tag>
+		<English>Gives a Total of %d1_Num Experience to Units in the Same Tile</English>
+		<French>Octroie un total de %d1_Num exp&#233;rience aux unit&#233;s dans la m&#234;me case</French>
+		<German>&#220;bertr&#228;gt insgesamt %d1_Num Erfahrungspunkte auf Einheiten auf demselben Gel&#228;ndefeld</German>
+		<Italian>D&#224; un totale di %d1_Num di esperienza alle unit&#224; presenti nella stessa casella</Italian>
+		<Spanish>Da un total de %d1_Num de experiencia a las unidades en la misma casilla</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_MORE_GREAT_PEOPLE</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires %d1_Num More [ICON_GREATPEOPLE][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Il faut %d1_Num [ICON_GREATPEOPLE] de plus[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert %d1_Num weitere [ICON_GREATPEOPLE][COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede altri %d1_Num [ICON_GREATPEOPLE][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere %d1_Num [ICON_GREATPEOPLE] m&#225;s.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_MOVEMENT_COST</Tag>
+		<English>[ICON_BULLET]Travel Costs 1/%d1 Movement Point</English>
+		<French>[ICON_BULLET]Le d&#233;placement co&#251;te 1/%d1 point(s) de mouvement.</French>
+		<German>[ICON_BULLET]Reisekosten 1/%d1 Fortbewegungspunkt</German>
+		<Italian>[ICON_BULLET]Il viaggio costa 1/%d1 punto movimento</Italian>
+		<Spanish>[ICON_BULLET]Viajar cuesta 1/%d1 de los puntos de movimiento.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_NEEDS_CULTURE_BORDER</Tag>
+		<English>[COLOR_WARNING_TEXT]Must be within our Cultural Borders.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Uniquement &#224; l'int&#233;rieur de nos fronti&#232;res culturelles.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Muss sich innerhalb unserer kulturellen Grenzen befinden.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Bisogna essere all'interno dei propri confini culturali.[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Ha de estar dentro de las fronteras de nuestra cultura.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER</Tag>
+		<English>[COLOR_WARNING_TEXT]Must be outside rival Cultural Borders.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Doit être en dehors des frontières culturelles adverses.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Muss sich au&#223;erhalb der Kulturgrenzen des Gegners befinden.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Bisogna essere all'esterno dei confini culturali avversari.[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Ha de estar fuera de las fronteras de la cultura rival.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_NUM_TURNS</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:Turn:Turns]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:tour:tours]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:Runde:Runden]</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:Turno:Turni]</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:turno:turnos]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_ONLY_HOLY_CONSTRUCT</Tag>
+		<!-- TXT_KEY_RELIGION_ -->
+		<English>[COLOR_WARNING_TEXT]Can only be Constructed in the %F1_RelIcon Holy City.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Construction possible uniquement dans la ville sainte %F1_RelIcon.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nur in der Heiligen Stadt der Religion %F1_RelIcon errichtet werden.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Pu&#242; essere costruito solo nella %F1_RelIcon Citt&#224; Santa.[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Solo se puede erigir en la ciudad santa del %F1_RelIcon.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_PLUNDER_IN_BORDERS</Tag>
+		<English>[COLOR_WARNING_TEXT]Must be outside Cultural Borders.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Doit être en dehors des frontières culturelles.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Muss sich au&#223;erhalb der Kulturgrenzen befinden.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Bisogna essere all'esterno dei confini culturali.[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Ha de estar dentro de las fronteras de nuestra cultura.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_PROBABILITY</Tag>
+		<English>Probability of Success: %d1_Prob%%</English>
+		<French>Chances de r&#233;ussite : %d1_Prob%%</French>
+		<German>Erfolgschance: %d1_Prob%%</German>
+		<Italian>Probabilit&#224; di successo: %d1_Prob%%</Italian>
+		<Spanish>Probabilidad de &#233;xito: %d1_Prob%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_PROBABILITY_RANGE</Tag>
+		<English>Probability of Success: %d1_Prob - %d2_Prob%%</English>
+		<French>Chances de r&#233;ussite : %d1_Prob - %d2_Prob%%</French>
+		<German>Erfolgschance: %d1_Prob - %d2_Prob%%</German>
+		<Italian>Probabilit&#224; di successo: %d1_Prob - %d2_Prob%%</Italian>
+		<Spanish>Probabilidad de &#233;xito: %d1_Prob - %d2_Prob%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_REMOVE_FEATURE</Tag>
+		<English>[COLOR_WARNING_TEXT]Will remove the %s1_FeatName[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Supprimera : %s1_FeatName[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Entfernt die Gel&#228;ndeart %s1_FeatName[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Per eliminare [NUM1:il:la:gli:le] %s1_FeatName[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Quitar&#225; [NUM1:el:la:los:las] %s1_FeatName.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_TRADE_MISSION_FOREIGN</Tag>
+		<English>[COLOR_WARNING_TEXT]Can only Conduct a Trade Mission in a Foreign City.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Mission commerciale possible uniquement dans une ville &#233;trang&#232;re.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nur eine Handelsmission in einer fremden Stadt durchf&#252;hren.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Pu&#242; condurre una missione commerciale solamente in una citt&#224; straniera.[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Solo puede realizar una misi&#243;n comercial en una ciudad extranjera.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_WILL_DESTROY_IMP</Tag>
+		<English>[COLOR_WARNING_TEXT]Will destroy the %s1_ImpName[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]D&#233;truira : %s1_ImpName[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Wird die Modernisierung %s1_ImpName zerst&#246;ren[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Il miglioramento %s1_ImpName[COLOR_REVERT] verr&#224; distrutto.</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Destruir&#225; [NUM1:el:la:los:las] %s1_ImpName[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_WILL_ELIMINATE_CORPORATION</Tag>
+		<English>[ICON_BULLET]Buy out %s1_corporation in this city</English>
+		<French>[ICON_BULLET]Racheter %s1_corporation dans cette ville</French>
+		<German>[ICON_BULLET]Aufl&#246;sung der Kapitalgesellschaft %s1_corporation in dieser Stadt</German>
+		<Italian>[ICON_BULLET]Elimina la %s1_corporation in questa citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]Liquidar %s1_corporation en esta ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADVANCED_START_BEGIN_GAME</Tag>
+		<English>Begin!</English>
+		<French>Commen&#231;ons !</French>
+		<German>Start!</German>
+		<Italian>Iniziamo!</Italian>
+		<Spanish>&#161;Empezar!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ALT</Tag>
+		<English>Alt+</English>
+		<French>Alt+</French>
+		<German>Alt+</German>
+		<Italian>Alt+</Italian>
+		<Spanish>Alt+</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANARCHY_TURNS</Tag>
+		<English>%d1 [NUM1:Turn:Turns] for Revolution</English>
+		<French>%d1 [NUM1:tour:tours] pour la r&#233;volution</French>
+		<German>%d1 [NUM1:Runde:Runden] bis zur Revolution</German>
+		<Italian>%d1 [NUM1:turno:turni] per la rivoluzione</Italian>
+		<Spanish>%d1 [NUM1:turno:turnos] para la revoluci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AND</Tag>
+		<English>[SPACE]and[SPACE]</English>
+		<French>[SPACE]et[SPACE]</French>
+		<German>[SPACE]und[SPACE]</German>
+		<Italian>[SPACE]e[SPACE]</Italian>
+		<Spanish>[SPACE]y[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AND_SPACE</Tag>
+		<English>[SPACE]and[SPACE]</English>
+		<French>[SPACE]et[SPACE]</French>
+		<German>[SPACE]und[SPACE]</German>
+		<Italian>[SPACE]e[SPACE]</Italian>
+		<Spanish>[SPACE]y[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_ANARCHY</Tag>
+		<English>"Our Civilization is in Anarchy!"</English>
+		<French>"Notre civilisation sombre dans l'anarchie !"</French>
+		<German>"In unserer Zivilisation herrscht Anarchie!"</German>
+		<Italian>"La nostra civilt&#224; &#232; nell'anarchia!"</Italian>
+		<Spanish>"&#161;Nuestra civilizaci&#243;n es la anarqu&#237;a!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_ARGH</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "AAAARRRGHHHH!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "AAAARRRGHHHH !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "AAAARRRGHHHH!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "AAAARRRGHHHH!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#161;AAAARRRGHHHH!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_BAD_ENTERTAINMENT</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "We do not appreciate this type of entertainment!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "Nous n'appr&#233;cions pas ce genre de divertissement !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Diese Art der Unterhaltung sch&#228;tzen wir gar nicht!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "Non apprezziamo questo tipo di intrattenimento!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "No nos gusta este tipo de espect&#225;culos!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_BONUS</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "Some goods are making us unhappy!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "Nous n'appr&#233;cions pas certaines marchandises !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Manche G&#252;ter schlagen uns m&#228;chtig aufs Gem&#252;t!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "Alcuni beni ci rendono infelici!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "Algunos productos nos hacen infelices!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_DEFY_RESOLUTION</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "The world considers you a villain!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : " Le monde vous consid&#232;re comme une crapule ! "</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Die Welt h&#228;lt Euch f&#252;r einen Verbrecher!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "Il mondo ti considera un malvagio!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#161;El mundo os considera un ser vil!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_DRAFT</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "Hell NO, we won't GO!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "Pas question, nous n'irons PAS !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Zur H&#246;lle, NEIN, wir werden NICHT gehen!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "NO! Non partiremo!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#161;No pensamos ir, pu&#241;etas!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_ESPIONAGE</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "People are telling us of your villainy!"</English>
+		<French>>+%d1_Change[ICON_UNHAPPY]: "Votre infamie est devenue notoire !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Die Leute erz&#228;hlen von Eurer Grausamkeit!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "La gente ci racconta della tua infamia!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#161;La gente no para de hablarnos de vuestra villan&#237;a!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_HANDICAP</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "We're just being difficult!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "Nous voulons simplement vous emb&#234;ter !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Wir sind halt einfach schwierig!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "&#200; appena pi&#249; difficile!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#161;Es solo para pon&#233;oslo dif&#237;cil"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_MILITARY_PRESENCE</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "The military presence makes us nervous!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "La pr&#233;sence des militaires nous rend nerveux !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Die Milit&#228;rpr&#228;senz macht uns nerv&#246;s!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "L'occupazione militare ci rende nervosi!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#161;La presencia militar nos pone nerviosos!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_MILITARY_PROTECTION</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "We fear for our safety. We demand military protection!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "Nous craignons pour notre s&#233;curit&#233;. Nous exigeons une protection militaire !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Wir f&#252;hlen uns hier nicht sicher. Wir verlangen Schutz durch das Milit&#228;r!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "Temiamo per la nostra incolumit&#224;. Abbiamo bisogno di difese militari!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "Tememos por nuestra seguridad. &#161;Solicitamos protecci&#243;n militar!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_OCCUPIED</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "We yearn to join our Motherland!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "Nous avons h&#226;te de rejoindre notre patrie !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Wir sehnen uns nach unserer Heimat!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "Desideriamo tornare nella terra natia!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#161;Anhelamos volver a nuestra patria!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_OPPRESSION</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "We cannot forget your cruel oppression!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "Nous n'oublierons jamais votre oppression cruelle !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Wir k&#246;nnen Eure grausame Tyrannei nicht ertragen!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "Non possiamo dimenticare la tua crudele oppressione!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#161;No olvidaremos vuestra cruel opresi&#243;n!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_OVERCROWDING</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "It's too crowded!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "Il y a trop de monde !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Es ist hier einfach zu &#252;berv&#246;lkert!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "&#200; troppo affollato!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#161;Esto est&#225; abarrotado!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_RELIGION_FIGHT</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "We will not fight with our brothers and sisters in the Faith!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "Nous ne nous battrons pas contre les fr&#232;res et soeurs qui partagent notre foi !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Wir werden nicht gegen unsere Glaubensbr&#252;der und -schwestern k&#228;mpfen!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "Non combatteremo contro i nostri fratelli e le nostre sorelle!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#161;No lucharemos contra nuestros hermanos y hermanas de fe!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_RELIGIOUS_FREEDOM</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "We desire religious freedom!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "Nous demandons la libert&#233; de culte !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Wir fordern Religionsfreiheit!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "Vogliamo la libert&#224; religiosa!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#161;Queremos la libertad de culto!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_RESISTANCE</Tag>
+		<English>"Viva la Resistance!"</English>
+		<French>"Vive la R&#233;sistance !"</French>
+		<German>"Es lebe der Widerstand!"</German>
+		<Italian>"Viva la resistenza!"</Italian>
+		<Spanish>"Vive la R&#233;sistance!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_STATE_RELIGION</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "We demand a new State Religion!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "Nous voulons une nouvelle religion d'&#233;tat !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Wir verlangen eine neue Staatsreligion!"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "Vogliamo una nuova religione ufficiale!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#161;Exigimos una nueva religi&#243;n oficial!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_TOTAL_UNHAPPY</Tag>
+		<English>Total Unhappiness: %d1_Num[ICON_UNHAPPY]</English>
+		<French>M&#233;contentement total : %d1_Num[ICON_UNHAPPY]</French>
+		<German>Unzufriedenheit gesamt: %d1_Num[ICON_UNHAPPY]</German>
+		<Italian>Infelict&#224; totale: %d1_Num[ICON_UNHAPPY]</Italian>
+		<Spanish>Infelicidad total: %d1_Num [ICON_UNHAPPY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_WAR_WEAR</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "War... What is it good for? Absolutely nothing... Unh!"</English>
+		<French>+%d1_Change[ICON_UNHAPPY] : "La guerre... &#231;a sert &#224; quoi ? Absolument &#224; rien... Pfff !"</French>
+		<German>+%d1_Change[ICON_UNHAPPY]: "Keiner will sterben, das ist doch klar. Wozu sind Kriege da?"</German>
+		<Italian>+%d1_Change[ICON_UNHAPPY]: "Guerra... a cosa serve? Assolutamente a niente... unh!"</Italian>
+		<Spanish>+%d1_Change [ICON_UNHAPPY]: "&#191;Guerra...? &#191;Y eso para qu&#233; sirve? &#161;Para nada!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AS_UNREMOVABLE</Tag>
+		<English>[NEWLINE][COLOR_WARNING_TEXT]Not removable[COLOR_REVERT]</English>
+		<French>[NEWLINE][COLOR_WARNING_TEXT]Inamovible[COLOR_REVERT]</French>
+		<German>[NEWLINE][COLOR_WARNING_TEXT]Nicht entfernbar[COLOR_REVERT]</German>
+		<Italian>[NEWLINE][COLOR_WARNING_TEXT]Non rimuovibile[COLOR_REVERT]</Italian>
+		<Spanish>[NEWLINE][COLOR_WARNING_TEXT]No eliminable[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ATTITUDE_TOWARDS</Tag>
+		<English>%s1_attitude towards %s2_leader</English>
+		<French>%s1_attitude envers %s2_leader</French>
+		<German>%s1_attitude gegen&#252;ber %s2_leader</German>
+		<Italian>%s1_attitude nei confronti di %s2_leader</Italian>
+		<Spanish>Actitud hacia %s2_leader: %s1_attitude</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ATTITUDE_VASSAL_OF</Tag>
+		<English>Vassal of %s1_CivDesc</English>
+		<French>Vassal de : %s1_CivDesc</French>
+		<German>Vasall von: %s1_CivDesc</German>
+		<Italian>Vassallo di %s1_CivDesc</Italian>
+		<Spanish>Vasallo del %s1_CivDesc</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ATTITUDE_MASTER_OF</Tag>
+		<English>Master of %s1_player</English>
+		<French>Ma&#238;tre de %s1_player</French>
+		<German>Hegemon von %s1_player</German>
+		<Italian>Signore di %s1_player</Italian>
+		<Spanish>Se&#241;or de %s1_player.</Spanish>
+	</TEXT>
 </Civ4GameText>

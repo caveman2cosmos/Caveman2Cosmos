@@ -1203,6 +1203,10 @@
 		<Russian>древний копейщик</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_STONETHROWER</Tag>
+		<English>stone thrower</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_STRONGHOSTILES</Tag>
 		<English>strong hostiles</English>
 		<French>des Barbares hostiles</French>
