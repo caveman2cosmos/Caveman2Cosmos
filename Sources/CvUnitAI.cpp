@@ -3,6 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvImprovementInfo.h"
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CvContractBroker.h"
@@ -22110,6 +22111,12 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 				{
 					eMission = MISSION_ROUTE_TO;
 				}
+			}
+			if (getGroup()->pushMissionInternal(eMission, pBestPlot->getX(), pBestPlot->getY(), isHuman() ? 0 : MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pBestPlot))
+			{
+				getGroup()->pushMission(MISSION_BUILD, eBestBuild, -1, 0, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, pBestPlot);
+
+				return true;
 			}
 		}
 

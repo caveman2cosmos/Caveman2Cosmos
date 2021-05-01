@@ -10,6 +10,7 @@
 #include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilitySetMod.h"
 #include "FVariableSystem.h"
+#include "CvImprovementInfo.h"
 #include <iostream>
 
 // Macro for Setting Global Art Defines

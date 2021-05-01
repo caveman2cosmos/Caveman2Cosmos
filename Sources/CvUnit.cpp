@@ -23,6 +23,7 @@
 #include "CvDLLEntity.h"
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CvImprovementInfo.h"
 
 static CvEntity* g_dummyEntity = NULL;
 static CvUnit*	 g_dummyUnit = NULL;

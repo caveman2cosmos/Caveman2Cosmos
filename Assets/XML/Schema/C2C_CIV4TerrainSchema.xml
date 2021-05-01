@@ -19,6 +19,9 @@
 	<ElementType name="FeatureChangeTypes" content="eltOnly">
 		<element type="FeatureType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="BuildTypes" content="eltOnly">
+		<element type="BuildType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="MapCategoryType" content="textOnly"/>
 	<ElementType name="MapCategoryTypes" content="eltOnly">
 		<element type="MapCategoryType" minOccurs="0" maxOccurs="*"/>

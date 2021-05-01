@@ -18,6 +18,7 @@
 #include "CvViewport.h"
 #include "CvXMLLoadUtility.h"
 #include "FVariableSystem.h"
+#include "CvImprovementInfo.h"
 #include <time.h> 
 #include <sstream>
 
