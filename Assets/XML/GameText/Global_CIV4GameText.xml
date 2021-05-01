@@ -19418,4 +19418,108 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Attiva/disattiva l'editor</Italian>
 		<Spanish>Activa el Creador de mundos</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_RETIRE</Tag>
+		<English>Retire from the game</English>
+		<French>Abandonner la partie</French>
+		<German>Aus dem Spiel ausscheiden</German>
+		<Italian>Ritirati dalla partita</Italian>
+		<Spanish>Retirarse de la partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_CITY_VISIBILITY</Tag>
+		<English>City Visibility</English>
+		<French>Afficher la ville</French>
+		<German>Stadtsichtbarkeit</German>
+		<Italian>Visibilit&#224; citt&#224;</Italian>
+		<Spanish>Visibilidad de la ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_INVESTIGATE_CITY</Tag>
+		<English>Investigate City</English>
+		<French>Enqu&#234;ter sur la ville</French>
+		<German>Stadt erkunden</German>
+		<Italian>Infiltrati nella citt&#224;</Italian>
+		<Spanish>Investigar ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_SCREEN</Tag>
+		<English>Espionage Screen</English>
+		<French>Ecran d'espionnage</French>
+		<German>Spionagebildschirm</German>
+		<Italian>Schermata dello spionaggio</Italian>
+		<Spanish>Pantalla de espionaje</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBE_VIEW</Tag>
+		<English>Globe View</English>
+		<French>Vue du globe</French>
+		<German>Globale Ansicht</German>
+		<Italian>Visuale del pianeta</Italian>
+		<Spanish>Vista global</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_DEITY_HELP</Tag>
+		<English>Muuuhahaha!  Good luck, sucker!</English>
+		<French>Mouah ha ha ! Bonne chance, imb&#233;cile !</French>
+		<German>Ha ha ha! Viel Gl&#252;ck, Wurm!</German>
+		<Italian>Muuuhahaha! Buona fortuna, poppante!</Italian>
+		<Spanish>&#161;Juuuuuaaajajajajaj&#225;!  &#161;Buena suerte, infeliz!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_55</Tag>
+		<English>During wartime, your ships may sever all naval trade routes entering an enemy city by using the "Blockade" Mission within range of the opposing metropolis. Using a Privateer to blockade a city during peace time will even allow you to plunder gold from your enemy's treasury!</English>
+		<French>En temps de guerre, vos navires peuvent couper toutes les routes commerciales maritimes rejoignant une ville ennemie, en ex&#233;cutant la mission Blocus pr&#232;s de la m&#233;tropole adverse. Utiliser des Corsaires pour bloquer une ville en tant de paix vous permet m&#234;me de piller l'or du tr&#233;sor ennemi !</French>
+		<German>Zu Kriegszeiten k&#246;nnen Ihre Schiffe alle Marinehandelswege zu einer gegnerischen Stadt mittels der Blockade-Mission innerhalb der Reichweite der gegnerischen Stadt blockieren. Wenn Sie eine Stadt zu Friedenszeiten mit Freibeutern blockieren, k&#246;nnen Sie sogar Gold aus der Schatzkammer des Gegners pl&#252;ndern!</German>
+		<Italian>In tempo di guerra, le tue navi possono bloccare tutte le rotte commerciali navali dirette verso una citt&#224; nemica compiendo la missione "Embargo" nel raggio della citt&#224;. Effettuando l'embargo con una nave corsara in tempo di pace potrai sottrarre oro al tesoro nemico!</Italian>
+		<Spanish>En tiempos de guerra, tus barcos pueden cortar todas las rutas comerciales que pasen por una ciudad enemiga si usan la misi&#243;n "Bloqueo" dentro del alcance de la metr&#243;polis contraria. Usar un corsario para bloquear una ciudad en tiempos de paz te permitir&#225; incluso saquear oro de la tesorer&#237;a de tu enemigo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_PARADROP</Tag>
+		<English>Paradrop Mode</English>
+		<French>Mode parachute</French>
+		<German>Fallschirmsprung-Modus</German>
+		<Italian>Modalit&#224; Lancio col paracadute</Italian>
+		<Spanish>Modo Desembarco a&#233;reo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_PARADROP_HELP</Tag>
+		<English>Order the unit to jump to a specified location.</English>
+		<French>Ordonner &#224; l'unit&#233; de sauter &#224; un endroit pr&#233;cis.</French>
+		<German>Die Einheit wird zur ausgew&#228;hlten Stelle springen.</German>
+		<Italian>Ordina all'unit&#224; selezionata di paracadutarsi su una casella.</Italian>
+		<Spanish>Ordenar a la unidad que salte en paraca&#237;das al lugar especificado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_LEAD_TROOPS</Tag>
+		<English>Lead Troops as a Warlord</English>
+		<French>Diriger les troupes en tant que Seigneur de guerre</French>
+		<German>Truppen als Kriegsherr anf&#252;hren</German>
+		<Italian>Guida le truppe come Guerriero</Italian>
+		<Spanish>Liderar tropas como un Caudillo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CHARISMATIC_SHORT</Tag>
+		<English>Chm</English>
+		<French>Chm</French>
+		<German>Chm</German>
+		<Italian>Car</Italian>
+		<Spanish>Car</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_PROTECTIVE_SHORT</Tag>
+		<English>Pro</English>
+		<French>Pro</French>
+		<German>Stz</German>
+		<Italian>Pro</Italian>
+		<Spanish>Pro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_IMPERIALIST_SHORT</Tag>
+		<English>Imp</English>
+		<French>Imp</French>
+		<German>Imp</German>
+		<Italian>Imp</Italian>
+		<Spanish>Imp</Spanish>
+	</TEXT>
 </Civ4GameText>

@@ -9,37 +9,37 @@
 		<ForceControlInfo>
 			<Type>FORCECONTROL_SPEED</Type>
 			<Description>TXT_KEY_FORCE_CONTROL_SPEED</Description>
-			<Help>TXT_KEY_FORCE_CONTROL_SPEED_HELP</Help>
+			<Help/>
 			<bDefault>0</bDefault>
 		</ForceControlInfo>
 		<ForceControlInfo>
 			<Type>FORCECONTROL_HANDICAP</Type>
 			<Description>TXT_KEY_FORCE_CONTROL_HANDICAP</Description>
-			<Help>TXT_KEY_FORCE_CONTROL_HANDICAP_HELP</Help>
+			<Help/>
 			<bDefault>0</bDefault>
 		</ForceControlInfo>
 		<ForceControlInfo>
 			<Type>FORCECONTROL_OPTIONS</Type>
 			<Description>TXT_KEY_FORCE_CONTROL_OPTIONS</Description>
-			<Help>TXT_KEY_FORCE_CONTROL_OPTIONS_HELP</Help>
+			<Help/>
 			<bDefault>0</bDefault>
 		</ForceControlInfo>
 		<ForceControlInfo>
 			<Type>FORCECONTROL_VICTORIES</Type>
 			<Description>TXT_KEY_FORCE_CONTROL_VICTORIES</Description>
-			<Help>TXT_KEY_FORCE_CONTROL_VICTORIES_HELP</Help>
+			<Help/>
 			<bDefault>0</bDefault>
 		</ForceControlInfo>
 		<ForceControlInfo>
 			<Type>FORCECONTROL_MAX_TURNS</Type>
 			<Description>TXT_KEY_FORCE_CONTROL_MAX_TURNS</Description>
-			<Help>TXT_KEY_FORCE_CONTROL_MAX_TURNS_HELP</Help>
+			<Help/>
 			<bDefault>0</bDefault>
 		</ForceControlInfo>
 		<ForceControlInfo>
 			<Type>FORCECONTROL_MAX_CITY_ELIMINATION</Type>
 			<Description>TXT_KEY_FORCE_CONTROL_MAX_CITY_ELIMINATION</Description>
-			<Help>TXT_KEY_FORCE_CONTROL_MAX_CITY_ELIMINATION_HELP</Help>
+			<Help/>
 			<bDefault>0</bDefault>
 		</ForceControlInfo>
 		<ForceControlInfo>
