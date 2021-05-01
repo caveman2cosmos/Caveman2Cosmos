@@ -18083,14 +18083,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Influyente</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURELEVEL_LEGENDARY</Tag>
-		<English>Legendary</English>
-		<French>l&#233;gendaire</French>
-		<German>Legend&#228;r</German>
-		<Italian>Leggendaria</Italian>
-		<Spanish>Legendaria</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DIPLOMACY</Tag>
 		<English>Start Diplomacy</English>
 		<French>Lancer diplomatie</French>
