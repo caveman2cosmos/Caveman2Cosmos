@@ -30,6 +30,7 @@
 #include "CvUnit.h"
 #include "CvXMLLoadUtility.h"
 #include "CvDLLSymbolIFaceBase.h"
+#include "CvImprovementInfo.h"
 
 int shortenID(int iId)
 {
