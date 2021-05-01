@@ -9552,4 +9552,236 @@
 		<Italian>Vattene, stupido selvaggio!</Italian>
 		<Spanish>¡Largaos, escoria infiel!</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_UNKNOWN</Tag>
+		<English>"Sorry... we're not willing to trade this."</English>
+		<French>"Je regrette... nous ne souhaitons pas &#233;changer ceci."</French>
+		<German>"Wir haben leider kein Interesse, damit zu handeln."</German>
+		<Italian>"Ci spiace, ma non vogliamo commerciare."</Italian>
+		<Spanish>"Lo sentimos... No deseamos intercambiar esto."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_NEVER</Tag>
+		<English>"You'll have to take it from our cold, dead hands."</English>
+		<French>"Il faudra d'abord nous passer sur le corps !"</French>
+		<German>"Nur &#252;ber unsere Leichen!"</German>
+		<Italian>"Dovrai passare sul nostro cadavere."</Italian>
+		<Spanish>"Nos lo arrebatar&#233;is por encima de nuestro cad&#225;ver."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_TOO_MUCH</Tag>
+		<English>"Surely, you ask for too much!"</English>
+		<French>"Vous nous demandez beaucoup trop !"</French>
+		<German>"Da verlangt Ihr definitiv zu viel!"</German>
+		<Italian>"Sul serio, hai preteso troppo!"</Italian>
+		<Spanish>"&#161;Est&#225; claro que ped&#237;s demasiado!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_MYSTERY</Tag>
+		<English>"We have our reasons."</English>
+		<French>"Nous avons nos raisons."</French>
+		<German>"Wir haben unsere Gr&#252;nde."</German>
+		<Italian>"Abbiamo i nostri motivi."</Italian>
+		<Spanish>"Tenemos nuestros motivos."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_JOKING</Tag>
+		<English>"Surely, you must be joking..."</English>
+		<French>"C'est une plaisanterie, j'esp&#232;re !"</French>
+		<German>"Ihr beliebt wohl zu scherzen ..."</German>
+		<Italian>"Seriamente, stai scherzando..."</Italian>
+		<Spanish>"Seguro que deb&#233;is de estar bromeando..."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_ANGER_CIVIC</Tag>
+		<English>"We don't want to deal with the unhappiness."</English>
+		<French>"Nous ne voulons pas traiter avec le malheur."</French>
+		<German>"Wir haben keine Lust, uns Unzufriedenheit einzuhandeln."</German>
+		<Italian>"Non vogliamo avere a che fare con il malumore del popolo."</Italian>
+		<Spanish>"No queremos arriesgarnos a la infelicidad."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_FAVORITE_CIVIC</Tag>
+		<English>"That would go against everything we stand for!"</English>
+		<French>"Cela irait &#224; l'encontre de tous nos principes !"</French>
+		<German>"Das w&#252;rde gegen alle unsere Grunds&#228;tze versto&#223;en!"</German>
+		<Italian>"Sarebbe contro i nostri principi!"</Italian>
+		<Spanish>"&#161;Eso ir&#237;a contra todo por lo que luchamos!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_MINORITY_RELIGION</Tag>
+		<English>"Too few of our people follow that faith..."</English>
+		<French>"Trop peu de nos citoyens ont adopt&#233; cette religion..."</French>
+		<German>"Zu wenige unserer B&#252;rger folgen diesem Glauben..."</German>
+		<Italian>"Troppe poche persone seguono la nostra fede..."</Italian>
+		<Spanish>"Muy pocos de los nuestros siguen esa fe..."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_CONTACT_THEM</Tag>
+		<English>"We'd love to, but you'll have to contact them..."</English>
+		<French>"Ce serait avec plaisir, mais vous devez les contacter..."</French>
+		<German>"Das w&#252;rden wir gern tun, aber Ihr m&#252;sst Kontakt zu ihnen aufnehmen ..."</German>
+		<Italian>"Ci piacerebbe, ma non li abbiamo mai incontrati..."</Italian>
+		<Spanish>"Nos encantar&#237;a, pero tendr&#233;is que contactar con ellos..."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_VICTORY</Tag>
+		<English>"We'd rather win the game, thank you very much..."</English>
+		<French>"Nous pr&#233;f&#233;rons &#234;tre vainqueurs, merci..."</French>
+		<German>"Wir haben eigentlich vor, das Spiel zu gewinnen! Besten Dank ..."</German>
+		<Italian>"Ci piacerebbe vincere la partita, grazie lo stesso..."</Italian>
+		<Spanish>"Preferimos ganar la partida, muchas gracias..."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_ATTITUDE</Tag>
+		<English>"We just don't like you enough."</English>
+		<French>"Nous ne vous appr&#233;cions pas suffisamment."</French>
+		<German>"Ganz so nah stehen wir Euch dann eigentlich doch nicht."</German>
+		<Italian>"Non ci piaci abbastanza."</Italian>
+		<Spanish>"No nos ca&#233;is lo bastante bien."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_ATTITUDE_THEM</Tag>
+		<English>"We couldn't betray our close friends!"</English>
+		<French>"Nous ne trahirons pas nos plus fid&#232;les amis !"</French>
+		<German>"Es w&#252;rde uns nie in den Sinn kommen, enge Freunde zu hintergehen!"</German>
+		<Italian>"Non potremmo mai tradire i nostri pi&#249; cari amici!"</Italian>
+		<Spanish>"&#161;No podr&#237;amos traicionar a nuestros amigos del alma!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_TECH_WHORE</Tag>
+		<English>"We fear you are becoming too advanced."</English>
+		<French>"Nous craignons que vous preniez trop d'avance dans votre essor technologique."</French>
+		<German>"Wir haben die Bef&#252;rchtung, dass Ihr zu fortschrittlich werdet."</German>
+		<Italian>"Temiamo che ti possa sviluppare troppo."</Italian>
+		<Spanish>"Nos tememos que hab&#233;is avanzado demasiado."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_TECH_MONOPOLY</Tag>
+		<English>"We don't want to start trading away this technology just yet."</English>
+		<French>"Nous ne souhaitons pas &#233;changer cette technologie pour l'instant."</French>
+		<German>"Wir finden es noch zu fr&#252;h, mit dieser Technologie zu handeln."</German>
+		<Italian>"Non vogliamo ancora commerciare questa tecnologia."</Italian>
+		<Spanish>"A&#250;n no queremos empezar a comerciar con esta tecnolog&#237;a."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_POWER_US</Tag>
+		<English>"We're doing fine on our own."</English>
+		<French>"Nous nous en sortons tr&#232;s bien seuls."</French>
+		<German>"Wir kommen ganz gut allein klar."</German>
+		<Italian>"Ce la facciamo da soli."</Italian>
+		<Spanish>"Nos va bien sin ayuda."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_POWER_YOU</Tag>
+		<English>"You've grown too powerful for us."</English>
+		<French>"Vous &#234;tes devenu trop puissant pour nous."</French>
+		<German>"Ihr seid zu m&#228;chtig f&#252;r uns geworden."</German>
+		<Italian>"Siete diventati troppo potenti per noi."</Italian>
+		<Spanish>"Os hab&#233;is hecho demasiado poderosos para nosotros."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_POWER_THEM</Tag>
+		<English>"We're afraid of their military might."</English>
+		<French>"Leur puissance militaire nous inqui&#232;te."</French>
+		<German>"Wir haben m&#228;chtigen Respekt vor ihrer milit&#228;rischen St&#228;rke."</German>
+		<Italian>"Temiamo la loro potenza militare."</Italian>
+		<Spanish>"Tememos su poder militar."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_TOO_MANY_WARS</Tag>
+		<English>"We have enough on our hands right now."</English>
+		<French>"Nous avons d&#233;j&#224; suffisamment &#224; faire."</French>
+		<German>"Zurzeit haben wir genug andere Sorgen."</German>
+		<Italian>"Stiamo gi&#224; affrontando troppi conflitti."</Italian>
+		<Spanish>"Ya tenemos demasiado entre manos."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_NO_GAIN</Tag>
+		<English>"We would have nothing to gain."</English>
+		<French>"Nous n'avons rien &#224; y gagner."</French>
+		<German>"Davon h&#228;tten wir nichts."</German>
+		<Italian>"Non avremmo niente da guadagnarci."</Italian>
+		<Spanish>"No tenemos nada que ganar."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_NOT_ALLIED</Tag>
+		<English>"We haven't had a defensive pact or shared a war for long enough."</English>
+		<French>"Nous n'avons pas sign&#233; de pacte de d&#233;fense ou combattu ensemble depuis assez longtemps.'"</French>
+		<German>"Wir haben lange genug kein Verteidigungsb&#252;ndnis geschlossen oder sind gemeinsam in den Krieg gezogen."</German>
+		<Italian>"Non abbiamo avuto un'alleanza difensiva o combattuto una guerra insieme da troppo tempo."</Italian>
+		<Spanish>"No hemos firmado un acuerdo de protecci&#243;n ni guerreado el tiempo suficiente."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_RECENT_CANCEL</Tag>
+		<English>"Not right now... maybe we'll change our mind in a few years."</English>
+		<French>"Pas pour l'instant... mais nous pourrions changer d'avis dans quelques ann&#233;es...'"</French>
+		<German>"Das ist ein schlechter Zeitpunkt ... Vielleicht &#228;ndern wir unsere Meinung ja in ein paar Jahren."</German>
+		<Italian>"Non ora... Forse cambieremo idea tra qualche anno."</Italian>
+		<Spanish>"Ahora no... Quiz&#225; cambiemos de idea en unos a&#241;os."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_WORST_ENEMY</Tag>
+		<English>"We will never trade with you, our worst enemy!!!"</English>
+		<French>"Jamais nous ne ferons commerce avec notre pire ennemi !!!"</French>
+		<German>"Ihr seid unsere &#228;rgsten Feinde! Wir werden niemals Handel mit Euch treiben!!!"</German>
+		<Italian>"Non tratteremo mai con voi, siete i nostri peggiori nemici!"</Italian>
+		<Spanish>"&#161;Nunca negociaremos con vosotros, nuestros peores enemigos!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_PEACE_NOT_POSSIBLE_US</Tag>
+		<English>Making peace with our enemies is out of the question</English>
+		<French>Il est hors de question de faire la paix avec nos ennemis</French>
+		<German>Eine Vers&#246;hnung mit unseren Feinden ist v&#246;llig ausgeschlossen</German>
+		<Italian>Fare pace coi nostri nemici &#232; fuori questione</Italian>
+		<Spanish>Firmar la paz con nuestros enemigos es inconcebible</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_PEACE_NOT_POSSIBLE_YOU</Tag>
+		<English>Making peace with your enemies is not possible for you</English>
+		<French>Il vous est impossible de faire la paix avec vos ennemis</French>
+		<German>Ihr k&#246;nnt mit Euren Feinden nicht Frieden schlie&#223;en</German>
+		<Italian>Non ti &#232; possibile fare pace coi tuoi nemici</Italian>
+		<Spanish>Firmar la paz con vuestros enemigos no es posible para vos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_POWER_YOUR_ENEMIES</Tag>
+		<English>We are afraid of your enemies!</English>
+		<French>Nous avons peur de vos ennemis !</French>
+		<German>Wir f&#252;rchten Eure Feinde!</German>
+		<Italian>I tuoi nemici ci fanno paura!</Italian>
+		<Spanish>Tememos a vuestros enemigos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_TOO_FAR</Tag>
+		<English>Your land is too far away</English>
+		<French>Votre territoire est trop &#233;loign&#233;</French>
+		<German>Euer Reich ist zu weit entfernt.</German>
+		<Italian>Il tuo territorio &#232; troppo lontano</Italian>
+		<Spanish>Vuestra tierra est&#225; demasiado lejos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_WAR_NOT_POSSIBLE_US</Tag>
+		<English>Joining the war on your side is not possible for us</English>
+		<French>Nous ne pouvons pas nous battre &#224; vos c&#244;t&#233;s</French>
+		<German>Wir k&#246;nnen in diesem Krieg nicht auf Eurer Seite k&#228;mpfen.</German>
+		<Italian>Non possiamo scendere in guerra al tuo fianco</Italian>
+		<Spanish>No nos es posible unirnos a la guerra en vuestro bando.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_WAR_NOT_POSSIBLE_YOU</Tag>
+		<English>Joining the war on our side is not possible for you</English>
+		<French>Vous ne pouvez pas vous battre &#224; nos c&#244;t&#233;s</French>
+		<German>Ihr k&#246;nnt in diesem Krieg nicht auf unserer Seite k&#228;mpfen.</German>
+		<Italian>Non puoi scendere in guerra al nostro fianco</Italian>
+		<Spanish>No es posible que os un&#225;is a la guerra en nuestro bando.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_VASSAL</Tag>
+		<English>Sorry, it's out of our hands.</English>
+		<French>D&#233;sol&#233;, cela ne nous concerne plus.</French>
+		<German>Es liegt leider nicht in unserer Hand.</German>
+		<Italian>Spiacente, non possiamo farci nulla.</Italian>
+		<Spanish>Lo sentimos, no est&#225; en nuestras manos.</Spanish>
+	</TEXT>
 </Civ4GameText>

@@ -294,4 +294,180 @@
 		<Spanish>Unas protestas pacifistas en %s1, incitadas por un espía %s2, han estado causando problemas a las autoridades locales.</Spanish>
 		<Russian>Àíòèâîåííûå âûñòóïëåíèÿ â %s1, ïîäñòðåêàåìîì øïèîíîì %s2, äîñòàâëÿëè íåïðèÿòíîñòè ìåñòíûì ÷èíîâíèêàì.</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_BUY_CITY</Tag>
+		<English>Bribe City</English>
+		<French>Corrompre la ville</French>
+		<German>Stadt bestechen</German>
+		<Italian>Corrompi citt&#224;</Italian>
+		<Spanish>Sobornar ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_BUY_TECH</Tag>
+		<English>Steal Technology</English>
+		<French>Voler une technologie</French>
+		<German>Technologie stehlen</German>
+		<Italian>Ruba tecnologie</Italian>
+		<Spanish>Robar tecnolog&#237;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_CAN_SEE_DEMOGRAPHICS</Tag>
+		<English>Can See Demographics</English>
+		<French>Voir donn&#233;es d&#233;mographiques</French>
+		<German>Demografie sichtbar</German>
+		<Italian>Visione demografica</Italian>
+		<Spanish>Puede ver estad&#237;sticas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_CITY_INSERT_CULTURE</Tag>
+		<English>Spread Culture</English>
+		<French>Propager la culture</French>
+		<German>Kultur verbreiten</German>
+		<Italian>Diffondi cultura</Italian>
+		<Spanish>Propagar cultura</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_CITY_POISON_WATER</Tag>
+		<English>Poison Water</English>
+		<French>Empoisonner l'eau</French>
+		<German>Wasser vergiften</German>
+		<Italian>Avvelena acqua</Italian>
+		<Spanish>Envenenar agua</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_CITY_UNHAPPINESS</Tag>
+		<English>Foment Unhappiness</English>
+		<French>Comploter du m&#233;contentement</French>
+		<German>Unzufriedenheit sch&#252;ren</German>
+		<Italian>Alimenta infelicit&#224;</Italian>
+		<Spanish>Fomentar la infelicidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_CITY_REVOLT</Tag>
+		<English>Support City Revolt</English>
+		<French>Soutenir la r&#233;volte de la ville</French>
+		<German>Stadt-Revolte unterst&#252;tzen</German>
+		<Italian>Supporta rivolta cittadina</Italian>
+		<Spanish>Apoyar rebeli&#243;n en la ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_COUNTERESPIONAGE</Tag>
+		<English>Perform Counterespionage</English>
+		<French>Contre-espionnage</French>
+		<German>Spionageabwehr ausf&#252;hren</German>
+		<Italian>Effettua controspionaggio</Italian>
+		<Spanish>Contraespionaje</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_CULTURE</Tag>
+		<English>Espionage</English>
+		<French>
+			<Text>Espionnage</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Spionage</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Spionaggio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Espionaje</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_DESTROY_PROJECT</Tag>
+		<English>Sabotage Project</English>
+		<French>Sabotage de projet</French>
+		<German>Projekt sabotieren</German>
+		<Italian>Sabota progetto</Italian>
+		<Spanish>Sabotear proyecto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_DESTROY_PRODUCTION</Tag>
+		<English>Sabotage Production</English>
+		<French>Sabotage de production</French>
+		<German>Produktion sabotieren</German>
+		<Italian>Sabota produzione</Italian>
+		<Spanish>Sabotear la producci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_DESTROY_IMPROVEMENT</Tag>
+		<English>Sabotage Improvement</English>
+		<French>Saboter l'am&#233;nagement</French>
+		<German>Modernisierung sabotieren</German>
+		<Italian>Sabota miglioramenti</Italian>
+		<Spanish>Sabotear mejora</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_DESTROY_BUILDING</Tag>
+		<English>Sabotage Building</English>
+		<French>Saboter le b&#226;timent</French>
+		<German>Geb&#228;ude sabotieren</German>
+		<Italian>Sabota edifici</Italian>
+		<Spanish>Sabotear edificio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_NO_ACTIVE_MISSIONS</Tag>
+		<English>Spies Cannot Enter Our Borders</English>
+		<French>Les espions ne peuvent pas franchir nos fronti&#232;res</French>
+		<German>Spione k&#246;nnen unsere Grenzen nicht &#252;berwinden</German>
+		<Italian>Le spie non possono entrare nei nostri confini</Italian>
+		<Spanish>Los esp&#237;as no pueden atravesar nuestras fronteras</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_PLAYER_ANARCHY</Tag>
+		<English>Spread Anarchy</English>
+		<French>Propager l'anarchie</French>
+		<German>Anarchie verbreiten</German>
+		<Italian>Diffondi anarchia</Italian>
+		<Spanish>Propagar anarqu&#237;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_SCREEN_TOTAL_NUM_EPS</Tag>
+		<English>Total EPs Made Per Turn: %D1_Num</English>
+		<French>Total de PE gagn&#233;s par tour : %D1_Num</French>
+		<German>Gesamt-SP pro Runde: %D1_Num</German>
+		<Italian>PS totali per turno: %D1_Num</Italian>
+		<Spanish>Total de PE ganados por turno: %D1_Num</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_SEE_RESEARCH</Tag>
+		<English>Can See Research</English>
+		<French>Peut voir l'&#233;tat des recherches</French>
+		<German>Forschung sichtbar</German>
+		<Italian>Visione ricerche</Italian>
+		<Spanish>Puede ver investigaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_STEAL_TREASURY</Tag>
+		<English>Steal Treasury</English>
+		<French>Voler le tr&#233;sor</French>
+		<German>Schatzkammer ausrauben</German>
+		<Italian>Ruba tesoro</Italian>
+		<Spanish>Robar tesoro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_SWITCH_CIVIC</Tag>
+		<English>Influence Civics</English>
+		<French>Influencer les civils</French>
+		<German>Staatsform beeinflussen</German>
+		<Italian>Influenza forme di governo</Italian>
+		<Spanish>Influir en principios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_SWITCH_RELIGION</Tag>
+		<English>Influence Religion</English>
+		<French>Influencer la religion</French>
+		<German>Religion beeinflussen</German>
+		<Italian>Influenza religione</Italian>
+		<Spanish>Influir en religi&#243;n</Spanish>
+	</TEXT>
 </Civ4GameText>

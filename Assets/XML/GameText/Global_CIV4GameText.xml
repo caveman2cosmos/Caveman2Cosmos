@@ -18140,4 +18140,164 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Leggendaria</Italian>
 		<Spanish>Legendaria</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DIPLOMACY</Tag>
+		<English>Start Diplomacy</English>
+		<French>Lancer diplomatie</French>
+		<German>Diplomatie starten</German>
+		<Italian>Avvia diplomazia</Italian>
+		<Spanish>Iniciar diplomacia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMAIN_SEA</Tag>
+		<English>Water Units</English>
+		<French>
+			<Text>Unit&#233;s navales</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Wassereinheiten</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Unit&#224; navale:Unit&#224; navali</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Unidad acu&#225;tica:Unidades acu&#225;ticas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMAIN_AIR</Tag>
+		<English>Air Units</English>
+		<French>
+			<Text>Unit&#233;s a&#233;riennes</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Lufteinheiten</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Unit&#224; aerea:Unit&#224; aeree</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Unidad a&#233;rea:Unidades a&#233;reas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMAIN_LAND</Tag>
+		<English>Land Units</English>
+		<French>
+			<Text>Unit&#233;s terrestres</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Landeinheiten</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Unit&#224; terrestre:Unit&#224; terrestri</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Unidad terrestre:Unidades terrestres</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMAIN_IMMOBILE</Tag>
+		<English>Immobile Units</English>
+		<French>
+			<Text>Unit&#233;s statiques</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Unbewegliche Einheiten</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Unit&#224; fissa:Unit&#224; fisse</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Unidad inm&#243;vil:Unidades inm&#243;viles</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMESTIC_ADVISOR_TITLE</Tag>
+		<English>Domestic Advisor</English>
+		<French>Conseiller aux affaires int&#233;rieures</French>
+		<German>Inlandsberater</German>
+		<Italian>Consigliere interno</Italian>
+		<Spanish>Consejero de Interior</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_FOOD</Tag>
+		<English>Emphasize Food</English>
+		<French>Privil&#233;gier la nourriture</French>
+		<German>Schwerpunkt Nahrung</German>
+		<Italian>Privilegia il cibo</Italian>
+		<Spanish>Favorecer alimentos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_PRODUCTION</Tag>
+		<English>Emphasize Production</English>
+		<French>Privil&#233;gier la production</French>
+		<German>Schwerpunkt Produktion</German>
+		<Italian>Privilegia la produzione</Italian>
+		<Spanish>Favorecer producci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_COMMERCE</Tag>
+		<English>Emphasize Commerce</English>
+		<French>Privil&#233;gier le commerce</French>
+		<German>Schwerpunkt Wirtschaft</German>
+		<Italian>Privilegia il commercio</Italian>
+		<Spanish>Favorecer comercio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_RESEARCH</Tag>
+		<English>Emphasize Research</English>
+		<French>Privil&#233;gier la recherche</French>
+		<German>Schwerpunkt Forschung</German>
+		<Italian>Privilegia la ricerca</Italian>
+		<Spanish>Favorecer investigaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_GREAT_PEOPLE</Tag>
+		<English>Emphasize Great Person</English>
+		<French>Privil&#233;gier les personnages illustres</French>
+		<German>Schwerpunkt Gro&#223;e Pers&#246;nlichkeiten</German>
+		<Italian>Privilegia i Grandi Personaggi</Italian>
+		<Spanish>Favorecer grandes personajes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_AVOID_GROWTH</Tag>
+		<English>Avoid Growth</English>
+		<French>Eviter toute croissance</French>
+		<German>Wachstum vermeiden</German>
+		<Italian>Evita la crescita</Italian>
+		<Spanish>Evitar crecimiento</Spanish>
+	</TEXT>
 </Civ4GameText>
