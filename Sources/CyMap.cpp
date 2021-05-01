@@ -315,11 +315,6 @@ CyPlot* CyMap::pointToPlot(float fX, float fY)
 	return m_pMap ? new CyPlot(m_pMap->pointToPlot(fX, fY)) : NULL;
 }
 
-int CyMap::getIndexAfterLastArea()
-{
-	return m_pMap ? m_pMap->getIndexAfterLastArea() : -1;
-}
-
 int CyMap::getNumAreas()
 {
 	return m_pMap ? m_pMap->getNumAreas() : -1;
@@ -338,6 +333,7 @@ CyArea* CyMap::getArea(int iID)
 python::list CyMap::areas() const
 {
 	python::list list = python::list();
+
 	foreach_(CvArea* area, m_pMap->areas())
 	{
 		list.append(new CyArea(area));

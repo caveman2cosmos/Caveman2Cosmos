@@ -956,7 +956,6 @@ def getTerrainPercentage( eTerrain, bPercent=True ):
 # area = MAP.getArea( areaID )
 # area = MAP.findBiggestArea( bWater )
 # bTest = plot.isAdjacentToArea( area )
-# areaList = CvMapGeneratorUtil.getAreas()
 ################################################################################
 
 # get region from area
