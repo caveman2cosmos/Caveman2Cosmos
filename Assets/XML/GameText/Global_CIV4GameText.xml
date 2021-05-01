@@ -4114,56 +4114,6 @@
 		<English>[NEWLINE][SPACE][SPACE] *</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HINT_11</Tag>
-		<English>An unescorted settler, galleon, or transport are all huge risks - make sure you are willing to take them!</English>
-		<French>Un colon, un galion ou un transport sans escorte courent tous d'énormes risques... voulez-vous vraiment les perdre?</French>
-		<German>Tipp... Wertvolle Einheiten ohne nennenswerte Verteidigungsfähigkeiten, wie Siedler und Galeonen, können leicht Opfer von Angriffen werden und verdienen deshalb auf fremdem Terrain einen Begleitschutz.</German>
-		<Italian>Un colone, un galeone o un trasporto senza scorta sono a rischio. Assicurati di non mandare mai in giro da sole queste unità!</Italian>
-		<Spanish>Un colono, galeón o transporte sin escolta estará corriendo un gran riesgo. Aseguraos de querer asumirlo.</Spanish>
-		<Polish>Nie eskortowani osadnicy, galeony czy transportowce są narażone na ogromne niebezpieczeństwo. Chyba nie chcesz ich stracić?</Polish>
-		<Russian>"Àíòàíòà" ïî-ôðàíöóçñêè îçíà÷àåò "ñîãëàñèå".</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HINT_16</Tag>
-		<English>If you find a valuable resource that is too far away for you to use, it may still be smart to keep a unit on top of it, if only to find out who eventually is going to control it.</English>
-		<French>Si vous trouvez des ressources trop éloignées pour être exploitables, il peut être intéressant d'y placer une unité, ne serait-ce que pour savoir qui en profitera finalement.</French>
-		<German>Tipp... Selbst wenn eine wertvolle Ressource zu weit entfernt ist, um diese nutzen zu können, so kann es sich trotzdem lohnen, eine Einheit auf ihr zu stationieren. Diese kann zumindest Informationen über potenzielle Konkurrenten sammeln, die sie sich aneignen wollen.</German>
-		<Italian>Se scopri una risorsa di valore troppo distante per essere utilizzata, è meglio posizionarci sopra un'unità per impedire che altri possano controllarla.</Italian>
-		<Spanish>Si encontráis un recurso valioso que esté demasiado lejos para usarlo, quizá sea útil mantener una unidad encima de él, aunque solo sea para saber quién se lo acaba quedando.</Spanish>
-		<Polish>Jeśli znajdziesz wartościowy surowiec za daleko by go wykorzystać, możesz zawsze wysłać grupkę jednostek by go pilnowali by kiedyś przejąć nad nim kontrolę.</Polish>
-		<Russian>Âûáèðàéòå ïðèâû÷íóþ äëÿ âàñ äåðæàâó, èíà÷å èãðàòü áóäåò ñëîæíåå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HINT_57</Tag>
-		<English>Naval Units performing "Blockade" Missions prevent all enemy trade from passing within their blockading range. Making sure an enemy city is within that range is a sure-fire way to stop enemy trade routes.</English>
-		<French>La Mission 'Blocus' des unités navales empêche tout le commerce ennemi de passer dans la portée du blocus. Placez donc vos unités en vous assurant que la ville ennemie est dans ce périmètre est un moyen sûr de bloquer les routes commerciales ennemies.</French>
-		<German>Tipp... Die Postierung eigener Marineeinheiten in Reichweite einer gegnerischen Küstenstadt und die Errichtung einer Seeblockade ist eine zuverlässige Methode, gegnerischen Handel zu verhindern.</German>
-		<Italian>Le unità navali che compiono la missione "Embargo" impediscono a tutto il commercio nemico di attraversare l'area bloccata. Assicurati che nel raggio d'azione ricada una città nemica per bloccare le rotte commerciali del nemico.</Italian>
-		<Spanish>Las unidades navales que lleven a cabo la misión "Bloqueo" evitan que todo el comercio enemigo pase por el área bloqueada. Asegurarse de que una ciudad enemiga esté dentro del alcance es un disparo certero para conseguir detener las rutas comerciales enemigas.</Spanish>
-		<Polish>Misja "Blokada" dla jednostek morskich powoduje blokadę wszystkich wrogich szlaków handlowych w zasięgu blokady. Upewnij się, że blokada obejmuje zasięgiem wszystkie pola wokół miasta by zablokować cały ruch handlowy.</Polish>
-		<Russian>Âûïîëíÿÿ çàäàíèå "Áëîêàäà", êîðàáëü ïåðåêðûâàåò ìîðñêèå òîðãîâûå ïóòè ïðîòèâíèêà. Âðàæåñêèé ãîðîä, êîòîðûé ïîïàë â çîíó äåéñòâèÿ áëîêàäû, ïðåêðàùàåò ó÷àñòâîâàòü â ìîðñêîé òîðãîâëå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HINT_73</Tag>
-		<English>To found a Corporation, you must have the correct type of Great Person, have researched the appropriate technologies and build it in a city with one or more of the resources that the Corporation demands. See the "Corporations" entry under the "Beyond the Sword Concepts" section for more details.</English>
-		<French>Pour fonder une société commerciale, vous devez disposer du bon type de personnages illustres, avoir recherché les technologies appropriées, et la construire dans une ville disposant d'au moins une des ressources dont elle a besoin. Consultez l'entrée "Sociétés commerciales" dans la rubrique "Concepts de Beyond the Sword" pour en savoir plus.</French>
-		<German>Tipp... Zur Gründung einer Kapitalgesellschaft ist neben den technologischen Voraussetzungen eine entsprechende Große Persönlichkeit erforderlich, die den Hauptsitz der Kapitalgesellschaft in einer Stadt mit den erforderlichen Ressourcen gründet. Mehr dazu findet sich in der Civilopedia unter "Beyond the Sword-Konzepte - Kapitalgesellschaften".</German>
-		<Italian>Per fondare una corporazione devi avere il giusto tipo di Grande Personaggio, aver ricercato le tecnologie giuste e devi costruirla in una città con una o più delle risorse necessarie alla corporazione stessa. Consulta la voce "Corporazioni" nella sezione "Nozioni di Beyond the Sword" per ulteriori dettagli.</Italian>
-		<Spanish>Para fundar una corporación, debes tener el tipo correcto de gran personaje, haber investigado las tecnologías apropiadas y crearla en una ciudad con uno o más de los recursos que la corporación necesita. Encontrarás más detalles en la sección "Corporaciones" del apartado "Conceptos de Beyond the Sword".</Spanish>
-		<Polish>Aby założyć korporacje musisz posiadać odpowiednich Wielkich Ludzi oraz odpowiednie technologie a także zapewnione w mieście (co najmniej w jednym) odpowiednie wymagania dla korporacji. Zobacz w koncepcjach gry Beyond the Sword dla korporacji.</Polish>
-		<Russian>×òîáû îñíîâàòü êîðïîðàöèþ, íóæíà çíàìåíèòîñòü îïðåäåëåííîãî âèäà, ñîîòâåòñòâóþùèå òåõíîëîãèè è ãîðîä, ó êîòîðîãî åñòü äîñòóï ê îäíîìó èëè íåñêîëüêèì ðåñóðñàì, ïîòðåáëÿåìûì ýòîé êîðïîðàöèåé. Ïîäðîáíåå îá ýòîì ñì. ðàçäåë "Êîðïîðàöèè" â Öèâèëîïåäèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HINT_8</Tag>
-		<English>Never despair in the face of a large stack of units. Catapults may not beat cavalry, but you can still do a lot of damage to a stack with enough of them.</English>
-		<French>Ne baissez jamais les bras face à un grand nombre d'unités empilées. Les catapultes ne font peut-être pas le poids face à la cavalerie, mais vous pouvez quand même infliger de sérieux dégâts si vous en avez suffisamment.</French>
-		<German>Tipp... Angesichts eines bedrohlichen Einheitenverbandes heißt es, Ruhe zu bewahren. Durch den Einsatz von Belagerungswaffen lässt sich ein Verband auf breiter Front schwächen.</German>
-		<Italian>Non spaventarti davanti a un gran numero di unità. Le catapulte non possono battere la cavalleria, ma infliggono comunque ingenti danni.</Italian>
-		<Spanish>Nunca desesperéis ante un gran apilamiento de unidades. Quizá las catapultas no derroten a la caballería, pero aún podréis hacerle mucho daño si tenéis bastantes de ellas.</Spanish>
-		<Polish>Nigdy się nie bój dużych stosów jednostek. Katapulty może są słabe wobec jednostek konnych ale nadal mogą zadać ogromne obrażenia stosowi</Polish>
-		<Russian>Íàïàâ íà Ðîññèþ, âû óçíàåòå, ïðàâäó ëè ñêàçàë Íàïîëåîí ïðî "ãåíåðàëà Çèìó".</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_HOF_WINLOSS_LOSS</Tag>
 		<English>L-</English>
 		<French>P-</French>
