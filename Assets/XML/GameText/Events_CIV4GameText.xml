@@ -7770,14 +7770,6 @@
 		<Spanish>[ICON_BULLET]Se [NUM1:ha destruido el:ha destruido la:han destruido los:han destruido las] %s1_route</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_UNIT_PROMOTION</Tag>
-		<English>[ICON_BULLET]The %s1_unit is promoted to [COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][NUM1:Le:La:L'] %s1_unit re&#231;oit la promotion [COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT]</French>
-		<German>[ICON_BULLET]Die Einheit %s1_unit erh&#228;lt die Bef&#246;rderung [COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]L'unit&#224; %s1_unit riceve la promozione [COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET][NUM1:El:La:Los:Las] %s1_unit [NUM1:asciende:asciende:ascienden:ascienden] a [COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT]</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENT_CONVERT_OWN_CITIES</Tag>
 		<English>[ICON_BULLET]Convert up to %d1 of your own cities to %s2_religion</English>
 		<French>[ICON_BULLET]Convertir jusqu'&#224; %d1 de vos villes &#224; la religion %s2_religion</French>
@@ -7944,14 +7936,6 @@
 		<German>[ICON_BULLET]Ressource [COLOR_HIGHLIGHT_TEXT]%s1_resource[COLOR_REVERT] als Geschenk f&#252;r %s2_player</German>
 		<Italian>[ICON_BULLET]Regala [COLOR_HIGHLIGHT_TEXT]%s1_resource[COLOR_REVERT] a %s2_player</Italian>
 		<Spanish>[ICON_BULLET]Regalarle [COLOR_HIGHLIGHT_TEXT]%s1_resource[COLOR_REVERT] a %s2_player</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_POPULATION_REDUCED</Tag>
-		<English>The population of %s1_city has been reduced</English>
-		<French>>La population de %s1_city d&#233;cro&#238;t</French>
-		<German>Die Bev&#246;lkerungszahl von %s1_city wurde gesenkt</German>
-		<Italian>La popolazione di %s1_city &#232; stata ridotta</Italian>
-		<Spanish>Se ha reducido la poblaci&#243;n de %s1_city</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_UNIT_IMMOBILE</Tag>
@@ -8736,14 +8720,6 @@
 		<German>Der Heilige Berg[PARAGRAPH:1]Eure religi&#246;sen F&#252;hrer haben Euch aufgetragen, den Heiligen Berg zu finden, sich dort niederzulassen und ihn zu besetzen.</German>
 		<Italian>La Montagna Sacra[PARAGRAPH:1]I capi religiosi ti hanno incaricato di trovare la Montagna Sacra, accampati vicino a essa e prendine il controllo.</Italian>
 		<Spanish>La Monta&#241;a Sagrada[PARAGRAPH:1]Los l&#237;deres religiosos nos han encargado encontrar la Monta&#241;a Sagrada, asentarnos en sus cercan&#237;as y apoderarnos de ella.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_HOLY_MOUNTAIN_HELP</Tag>
-		<English>[PARAGRAPH:1]To complete this quest, you must extend your cultural influence and control over the Peak plot that is the Holy Mountain. You may achieve this by divine providence by settling near any Peaks you find. Eventually you may find the right one.[PARAGRAPH:1]Or you may seek further guidance from studying the holy scriptures. If you build %d3 religious buildings (Temples and Monasteries), your religious leaders will solve the puzzle and identify the correct location of the Holy Mountain, which you must then still go and settle near to complete the quest. A %s2_building allows for more coordinated worship and is worth as much as four Temples for the purposes of this quest.[PARAGRAPH:1]You will fail this quest if you change state religions, cease to have a state religion, or reach [COLOR_TECH_TEXT]Industrialism[COLOR_REVERT] without having met the conditions. You will also fail this quest if any other civilization takes control of the Holy Mountain before you do.</English>
-		<French>[PARAGRAPH:1]Pour achever cette qu&#234;te, vous devez &#233;tendre votre influence culturelle et votre contr&#244;le &#224; la case montagneuse sur laquelle se trouve la montagne sacr&#233;e. Vous pouvez r&#233;ussir cette mission en comptant sur la providence divine, c'est-&#224;-dire en vous installant pr&#232;s de toutes les montagnes que vous trouverez. Au bout du compte, vous finirez bien par trouver la bonne.[PARAGRAPH:1]Ou vous pouvez tenter d'en savoir plus en &#233;tudiant les &#233;critures sacr&#233;es. Si vous construisez %d3 b&#226;timents religieux (temples et monast&#232;res), vos chefs religieux r&#233;soudront l'&#233;nigme et localiseront pr&#233;cis&#233;ment la montagne sacr&#233;e, qu'il vous faudra encore coloniser pour achever la qu&#234;te. La construction d'un b&#226;timent pr&#233;cis (%s2_building) permet une meilleure coordination du culte et &#233;quivaut &#224; quatre temples, en ce qui concerne cette qu&#234;te.[PARAGRAPH:1]Vous &#233;chouerez dans votre qu&#234;te si vous changez les religions d'Etat, si vous cessez d'avoir une religion d'Etat ou si vous atteignez l'&#233;poque industrielle sans en avoir rempli les conditions. Vous &#233;chouerez &#233;galement si une autre civilisation prend le contr&#244;le de la montagne sacr&#233;e avant vous.</French>
-		<German>[PARAGRAPH:1]Um diese Quest zu erf&#252;llen, m&#252;ssen Sie Ihren kulturellen Einfluss ausdehnen und die Kontrolle &#252;ber das erh&#246;hte Gel&#228;ndefeld erringen, auf dem sich der Heilige Berg befindet. Dies erreichen Sie nach g&#246;ttlicher Vorsehung, indem Sie sich an allen erh&#246;hten Standorten ansiedeln, bis Sie schlie&#223;lich den richtigen Standort gefunden haben.[PARAGRAPH:1]Oder Sie durchsuchen die Heilige Schrift weiter nach Hinweisen. Wenn Sie %d3 religi&#246;se Geb&#228;ude errichtet haben (Tempel und Kl&#246;ster), werden Ihre religi&#246;sen F&#252;hrer das R&#228;tsel l&#246;sen und den korrekten Standort des Heiligen Berges identifizieren. Anschlie&#223;end m&#252;ssen Sie dorthin aufbrechen und sich in der N&#228;he des Berges niederlassen, um die Quest erfolgreich abzuschlie&#223;en. Das Geb&#228;ude %s2_building erm&#246;glicht bessere Gottesdienste und ist f&#252;r diese Quest etwa so viel wert wie vier Tempel.[PARAGRAPH:1]Diese Quest gilt als gescheitert, wenn Sie die Staatsreligion wechseln, die Staatsreligion abschaffen oder die Industrialisierung erreichen, ohne die geforderten Bedingungen erf&#252;llt zu haben. Au&#223;erdem gilt sie auch dann als gescheitert, wenn eine andere Zivilisation den Heiligen Berg vor Ihnen besetzt.</German>
-		<Italian>[PARAGRAPH:1]Per completare l'impresa dovrai espandere la tua influenza culturale e il tuo controllo sulla casella che ospita il picco della Montagna Sacra. Puoi riuscirci affidandoti alla divina provvidenza e accampandoti a fianco di ogni picco che incontri: prima o poi troverai quello giusto.[PARAGRAPH:1]Oppure puoi cercare aiuto nello studio delle sacre scritture. Se costruisci %d3 edifici religiosi (templi e monasteri) i tuoi capi religiosi riusciranno a risolvere l'enigma e a identificare l'esatta posizione della Montagna Sacra; dovrai comunque andarci e accampartici, per portare e termine l'impresa. %s2_building permette un'adorazione pi&#249; coordinata e vale come quattro templi, ai fini dell'impresa.[PARAGRAPH:1]Fallirai nell'impresa se cambi religione di stato, elimini la religione di stato o se raggiungi l'era industriale senza aver soddisfatto le condizioni. Fallirai anche se un'altra civilt&#224; prende il controllo della Montagna Sacra prima di te.</Italian>
-		<Spanish>[PARAGRAPH:1]Para completar esta misi&#243;n, debemos extender nuestra influencia cultural y controlar la casilla con el pico, que es la Monta&#241;a Sagrada. &#201;sta se encontrar&#225; por divina providencia si se colonizan las inmediaciones de cualquier pico hallado. Tarde o pronto se encontrar&#225; el apropiado.[PARAGRAPH:1]Tambi&#233;n se pueden buscar m&#225;s pistas si se estudian las sagradas escrituras. Si se construyen %d3 edificios religiosos (Templos y Monasterios), los l&#237;deres religiosos resolver&#225;n el enigma de la ubicaci&#243;n correcta de la Monta&#241;a Sagrada, pero a&#250;n habr&#225; que ir all&#237; y colonizarla para completar la misi&#243;n. [NUM2:Un:Una:Unos:Unas] %s2_building [NUM2:permite:permite:permiten:permiten] un culto m&#225;s coordinado y [NUM2:cuenta:cuenta:cuentan:cuentan] como cuatro Templos a efectos de esta misi&#243;n.[PARAGRAPH:1]Esta misi&#243;n fracasar&#225; si se cambia la religi&#243;n oficial, si se deja de tener una religi&#243;n oficial o si se alcanza la Era Industrial sin haber cumplido las condiciones. Tambi&#233;n se fracasar&#225; si cualquier otra civilizaci&#243;n se apodera antes de la Monta&#241;a Sagrada.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAIL_HOLY_MOUNTAIN</Tag>
@@ -10298,30 +10274,6 @@
 		<Spanish>[ICON_BULLET]Todas las naciones del mundo sufren una p&#233;rdida del %d1%% en su erario nacional.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_BERMUDA_TRIANGLE</Tag>
-		<English>%s1_civ_adjective ships and planes have disappeared without a trace in the Bermuda Triangle!</English>
-		<French>Des navires et des avions %s1:3_civ_adjective ont disparu dans le triangle des Bermudes sans laisser de trace !</French>
-		<German>%s1:3_civ_adjective Schiffe und Flugzeuge sind spurlos im Bermuda-Dreieck verschwunden!</German>
-		<Italian>Navi e aerei %s1_civ_adjective sono spariti senza lasciare traccia nel Triangolo delle Bermuda!</Italian>
-		<Spanish>&#161;En el Tri&#225;ngulo de las Bermudas han desaparecido barcos y aviones %s1:3_civ_adjective sin dejar ni rastro!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_TRIGGER_BERMUDA_TRIANGLE_1</Tag>
-		<English>On a sunny day, with no storms in sight, one of our vessels has been lost at sea. Not only is the cause unknown, but there is no trace whatsoever of the ship or its crew or cargo. Several smaller vessels and some airplanes in the same general region also have vanished without a trace. Rumors are flying concerning this mystery. This region has been dubbed by the press as the Bermuda Triangle, named after a small island nearby.</English>
-		<French>Par une journ&#233;e ensoleill&#233;e, sans aucune temp&#234;te &#224; l'horizon, un de nos navires a disparu en mer. Non seulement nous en ignorons la cause, mais il n'y a aucune trace du navire, ni de son &#233;quipage, ni de sa cargaison. Plusieurs petits bateaux et quelques avions ont &#233;galement disparu dans la r&#233;gion. Ce myst&#232;re alimente d&#233;sormais de nombreuses rumeurs et la r&#233;gion a &#233;t&#233; surnomm&#233;e "le triangle des Bermudes" par la presse, d'apr&#232;s le nom d'une petite &#238;le voisine.</French>
-		<German>Eins unserer Schiffe ist an einem sonnigen, wolkenlosen Tag auf hoher See verschollen. Es gibt weder eine offensichtliche Ursache daf&#252;r noch die kleinste Spur von dem Schiff, seiner Besatzung oder seiner Ladung. In der gleichen Region sind bereits mehrere kleinere Schiffe und Flugzeuge spurlos verschwunden. Um dieses Mysterium ranken sich zahllose Geschichten und Ger&#252;chte. Die Medien haben die Region nach einer kleinen Insel in der n&#228;heren Umgebung das "Bermuda-Dreieck" getauft.</German>
-		<Italian>In un giorno di sole, senza alcuna tempesta in vista, &#232; scomparso uno dei nostri vascelli. Non solo la causa &#232; sconosciuta, ma non c'&#232; alcuna traccia della nave, dell'equipaggio o del carico. Diversi altri vascelli pi&#249; piccoli e alcuni aeroplani sono anch'essi spariti in quella regione senza lasciare traccia. Molti parlano di questo mistero. La regione &#232; stata chiamata il Triangolo delle Bermuda, per il nome di un'isola nelle vicinanze.</Italian>
-		<Spanish>Uno de nuestros nav&#237;os ha desaparecido en el mar un d&#237;a soleado sin ninguna tormenta a la vista. No solo se desconoce la causa de la desaparici&#243;n, sino que, adem&#225;s, no hay ni rastro de la tripulaci&#243;n ni de la carga. Tambi&#233;n han desaparecido sin dejar ni rastro en esa misma regi&#243;n varios peque&#241;os nav&#237;os y aeroplanos. Se han disparado los rumores relativos a este misterio. La prensa ha apodado a esta zona "el Tri&#225;ngulo de las Bermudas", debido a un islote que se encuentra cerca.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_BERMUDA_TRIANGLE_1</Tag>
-		<English>Our investigations have turned up no worthwhile results? This is most peculiar.</English>
-		<French>Nos enqu&#234;tes n'ont donn&#233; aucun r&#233;sultat ? C'est plut&#244;t curieux.</French>
-		<German>Unsere Untersuchungen haben keinerlei Ergebnisse erbracht? Das ist h&#246;chst sonderbar.</German>
-		<Italian>Le nostre indagini non hanno dato alcun risultato valido? Molto strano.</Italian>
-		<Spanish>&#191;Nuestra investigaci&#243;n no ha arrojado resultados dignos de menci&#243;n? Esto es muy raro.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PATRON_OF_KNOWLEDGE_1</Tag>
 		<English>A patron of knowledge from the %s1_civ_adjective city of %s2_city has donated a cache of rare writings to the local Library.</English>
 		<French>Un m&#233;c&#232;ne de la ville %s1:2_civ_adjective de %s2_city a offert une collection de documents rares &#224; la biblioth&#232;que locale.</French>
@@ -11768,14 +11720,6 @@
 		<German>F&#246;rdert weiterhin das Lesen und Schreiben. Wissen ist Macht!</German>
 		<Italian>Continua a promuovere l'istruzione. La conoscenza &#232; potere!</Italian>
 		<Spanish>Que se siga promocionando la lectura y la escritura. &#161;El conocimiento es poder!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_SALES_TAXES</Tag>
-		<English>The taxes from these sales should nicely boost our coffers.</English>
-		<French>Les taxes sur ces ventes devraient faire du bien &#224; nos caisses.</French>
-		<German>Die Steuern aus diesen Verk&#228;ufen werden unsere Schatztruhen gut f&#252;llen.</German>
-		<Italian>Le tasse derivate da queste vendite dovrebbero riempire bene le nostre casse.</Italian>
-		<Spanish>Los impuestos de estas ventas llenar&#225;n generosamente nuestras arcas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FARM_PLOWS</Tag>
@@ -13696,14 +13640,6 @@
 		<German>Die Quest "Feindliche &#220;bernahme" ist gescheitert!</German>
 		<Italian>Hai fallito nell'impresa del Rilevamento ostile!</Italian>
 		<Spanish>&#161;La misi&#243;n Opa hostil ha fracasado!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_TRIGGER_SLAVE_REVOLT_WARNING</Tag>
-		<English>The slaves of %s2_city are on the verge of revolt!</English>
-		<French>Les esclaves de la ville de %s2_city sont sur le point de se revolter.</French>
-		<German>Die unterdr&#252;ckten Sklaven in %s2_city stehen am Rande eines Aufstandes!</German>
-		<Italian>Gli schiavi di %s2_city sono sull'orlo di una rivolta!</Italian>
-		<Spanish>Los esclavos de %s2_city est&#225;n a punto de rebelarse!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER</Tag>
