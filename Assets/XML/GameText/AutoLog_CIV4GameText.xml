@@ -288,27 +288,24 @@
 		<Italian>Diplomazia: %s1 (%s2) ha offerto %s3 a %s4 (%s5)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) ofrece renunciar a la ciudad %s3 a %s4 (%s5)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) oferuje: przekazanie miasta: %s3 dla: %s4 (%s5)</Polish>
-		<Russian>Diplomacy: %s1 (%s2) offers to give the city %s3 to %s4 (%s5)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_CIVIC_DEMAND</Tag>
 		<English>Diplomacy (Civic Request): %s1 (%s2) asks %s3 (%s4) to switch to %s5</English>
-		<French>Diplomatie (Requete de doctrine): %s1 (%s2) demande à %s3 (%s4) de changer à %s5</French>
+		<French>Diplomatie (Requête de doctrine): %s1 (%s2) demande à %s3 (%s4) de changer à %s5</French>
 		<German>Diplomatie: %s1 (%s2) fordert %s3 (%s4) auf, [NUM5:zum:zur:zum:zu den:zu den:zu den] %s5:3 zu wechseln</German>
 		<Italian>Diplomazia: %s1 (%s2) ha chiesto a %s3 (%s4) di passare alla forma di Governo %s5</Italian>
 		<Spanish>Diplomacia (Solicitud de principios): %s1 (%s2) pide a %s3 (%s4) que cambie [NUM5:al:a la:a los:a las] %s5</Spanish>
 		<Polish>Dyplomacja (Żądanie Doktryny): %s1 (%s2) pyta: %s3 (%s4) o przejście na: %s5</Polish>
-		<Russian>Diplomacy (Civic Request): %s1 (%s2) asks %s3 (%s4) to switch to %s5</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_DEAL_ACCEPT</Tag>
 		<English>Diplomacy: %s1 (%s2) accepts trade of %s3 to %s4 (%s5) for %s6</English>
-		<French>Diplomatie: %s1 (%s2) accepte le commerce de %s3 a %s4 (%s5) pour %s6</French>
+		<French>Diplomatie: %s1 (%s2) accepte le commerce de %s3 vers %s4 (%s5) pour %s6</French>
 		<German>Diplomatie: %s1 (%s2) stimmt Handel mit %s4 (%s5) zu (%s3 gegen %s6)</German>
 		<Italian>Diplomazia: %s1 (%s2) ha accettato di scambiare con %s4 (%s5) %s3 in cambio di %s6</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) acepta el trato de %s3 a %s4 (%s5) por %s6</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) akceptuje: handel %s3 z %s4 (%s5) za: %s6</Polish>
-		<Russian>Diplomacy: %s1 (%s2) accepts trade of %s3 to %s4 (%s5) for %s6</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_DEAL_CANCEL</Tag>
@@ -318,37 +315,33 @@
 		<Italian>Diplomazia: %s1 (%s2) ha interrotto lo scambio con %s4 (%s5) di %s3 con %s6</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) cancela el trato de %s3 a %s4 (%s5) por %s6</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) anuluje: handel %s3 z: %s4 (%s5) za: %s6</Polish>
-		<Russian>Diplomacy: %s1 (%s2) cancels trade of %s3 to %s4 (%s5) for %s6</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_DEAL_OFFER</Tag>
 		<English>Diplomacy: %s1 (%s2) offers to trade %s3 to %s4 (%s5) for %s6</English>
-		<French>Diplomatie: %s1 (%s2) offre d'échanger %s3 a %s4 (%s5) pour %s6</French>
+		<French>Diplomatie: %s1 (%s2) offre d'échanger %s3 vers %s4 (%s5) pour %s6</French>
 		<German>Diplomatie: %s1 (%s2) bietet %s4 (%s5) einen Handel an (%s3 gegen %s6)</German>
 		<Italian>Diplomazia: %s1 (%s2) ha offerto a %s4 (%s5) di scambiare %s3 con %s6</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) ofrece %s3 a %s4 (%s5) por %s6</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) oferuje: %s3 dla %s4 (%s5) za: %s6</Polish>
-		<Russian>Diplomacy: %s1 (%s2) offers to trade %s3 to %s4 (%s5) for %s6</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_DEAL_REJECT</Tag>
 		<English>Diplomacy: %s1 (%s2) rejects trade of %s3 to %s4 (%s5) for %s6</English>
-		<French>Diplomatie: %s1 (%s2) rejects trade of %s3 to %s4 (%s5) for %s6</French>
+		<French>Diplomatie: %s1 (%s2) rejette l'échange de %s3 vers %s4 (%s5) pour %s6</French>
 		<German>Diplomatie: %s1 (%s2) lehnt Handel mit %s4 (%s5) ab (%s3 gegen %s6)</German>
 		<Italian>Diplomazia: %s1 (%s2) ha rifiutato di scambiare con %s4 (%s5) %s3 in cambio di %s6</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) rechaza el trato de %s3 a %s4 (%s5) por %s6</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) odrzuca: handel %s3 z %s4 (%s5) za: %s6</Polish>
-		<Russian>Diplomacy: %s1 (%s2) rejects trade of %s3 to %s4 (%s5) for %s6</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_EMBARGO_DEMAND</Tag>
 		<English>Diplomacy (Embargo Request): %s1 (%s2) asks %s3 (%s4) to stop trading with %s5 (%s6)</English>
-		<French>Diplomatie (Requête d'Embargo): %s1 (%s2) demande à %s3 (%s4) d'arrêter les échanges avec %s5 (%s6)</French>
+		<French>Diplomatie (Requête d'embargo): %s1 (%s2) demande à %s3 (%s4) d'arrêter les échanges avec %s5 (%s6)</French>
 		<German>Diplomatie: %s1 (%s2) fordert %s3 (%s4) auf, den Handel mit %s5 (%s6) einzustellen</German>
 		<Italian>Diplomazia: %s1 (%s2) ha chiesto a %s3 (%s4) di cessare ogni scambio commerciale con %s5 (%s6)</Italian>
 		<Spanish>Diplomacia (Solicitud de embargo): %s1 (%s2) solicita que %s3 (%s4) cancele las relaciones comerciales con %s5 (%s6)</Spanish>
 		<Polish>Dyplomacja (Żądanie Embarga): %s1 (%s2) pyta: %s3 (%s4) o przerwanie handlu z: %s5 (%s6)</Polish>
-		<Russian>Diplomacy (Embargo Request): %s1 (%s2) asks %s3 (%s4) to stop trading with %s5 (%s6)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_GENERIC_ACCEPT</Tag>
@@ -358,7 +351,6 @@
 		<Italian>; %s1 HA ACCETTATO.</Italian>
 		<Spanish>; %s1 ACEPTA.</Spanish>
 		<Polish>; %s1 AKCEPTUJE.</Polish>
-		<Russian>; %s1 AGREES.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_GENERIC_REJECT</Tag>
@@ -368,7 +360,6 @@
 		<Italian>; %s1 HA RIFIUTATO.</Italian>
 		<Spanish>; %s1 RECHAZA.</Spanish>
 		<Polish>; %s1 ODRZUCA.</Polish>
-		<Russian>; %s1 REFUSES.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_GIFT_ACCEPT</Tag>
@@ -378,7 +369,6 @@
 		<Italian>Diplomazia: %s1 (%s2) ha accettato la donazione di %s3 da parte di %s4 (%s5)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) acepta el regalo de %s3 por parte de %s4 (%s5)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) akceptuje: podarunek %s3 od: %s4 (%s5)</Polish>
-		<Russian>Diplomacy: %s1 (%s2) accepts gift of %s3 from %s4 (%s5)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_GIFT_CANCEL</Tag>
@@ -388,7 +378,6 @@
 		<Italian>Diplomazia: %s1 (%s2) ha cancellato la sua donazione di %s3 a %s4 (%s5)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) cancela el regalo de %s3 a %s4 (%s5)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) anuluje: podarunek %s3 dla: %s4 (%s5)</Polish>
-		<Russian>Diplomacy: %s1 (%s2) cancels gift of %s3 to %s4 (%s5)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_GIFT_REJECT</Tag>
@@ -398,17 +387,15 @@
 		<Italian>Diplomazia: %s1 (%s2) ha rifiutato la donazione di %s3 da parte di %s4 (%s5)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) rechaza el regalo de %s3 de %s4 (%s5)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) odrzuca: podarunek %s3 od: %s4 (%s5)</Polish>
-		<Russian>Diplomacy: %s1 (%s2) rejects gift of %s3 from %s4 (%s5)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_HELP_DEMAND</Tag>
 		<English>Diplomacy (Help Request): %s1 (%s2) asks %s3 (%s4) for %s5</English>
-		<French>Diplomatie (Requete d'aide): %s1 (%s2) demande à %s3 (%s4) pour %s5</French>
+		<French>Diplomatie (Requête d'aide): %s1 (%s2) demande à %s3 (%s4) pour %s5</French>
 		<German>Diplomatie: %s1 (%s2) fordert von %s3 (%s4) Hilfe (%s5)</German>
 		<Italian>Diplomazia: %s1 (%s2) ha supplicato %s3 (%s4) di aiutarlo donandogli %s5</Italian>
 		<Spanish>Diplomacia (solicitud de ayuda): %s1 (%s2) pide a %s3 (%s4) por %s5</Spanish>
 		<Polish>Dyplomacja (Prośba o Pomoc): %s1 (%s2) pyta: %s3 (%s4) o %s5</Polish>
-		<Russian>Diplomacy (Help Request): %s1 (%s2) asks %s3 (%s4) for %s5</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_HELP_OFFER</Tag>
@@ -418,7 +405,6 @@
 		<Italian>Diplomazia: %s1 (%s2) ha offerto il suo aiuto (%s3) a %s4 (%s5)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) ofrece ayudar con (%s3) a %s4 (%s5)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) oferuje: udzielenie pomocy (%s3) dla: %s4 (%s5)</Polish>
-		<Russian>Diplomacy: %s1 (%s2) offers to give help (%s3) to %s4 (%s5)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_PEACE_OFFER</Tag>
@@ -428,27 +414,24 @@
 		<Italian>Diplomazia: %s1 (%s2) ha fatto una proposta di pace a %s3 (%s4)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) pide hacer las paces con %s3 (%s4)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) oferuje: podpisanie pokoju z: %s3 (%s4)</Polish>
-		<Russian>Diplomacy: %s1 (%s2) offers to make peace with %s3 (%s4)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_RELIGION_DEMAND</Tag>
 		<English>Diplomacy (Religion Request): %s1 (%s2) asks %s3 (%s4) to convert to %s5</English>
-		<French>Diplomatie (Requête de Religion): %s1 (%s2) demande à %s3 (%s4) de se convertir à %s5</French>
+		<French>Diplomatie (Requête de religion): %s1 (%s2) demande à %s3 (%s4) de se convertir à %s5</French>
 		<German>Diplomatie: %s1 (%s2) fordert %s3 (%s4) auf, [NUM5:zum:zur:zum:zu den:zu den:zu den] %s5:3 zu konvertieren</German>
 		<Italian>Diplomazia: %s1 (%s2) ha chiesto a %s3 (%s4) di convertirsi al %s5</Italian>
 		<Spanish>Diplomacia (solicitud religiosa): %s1 (%s2) pide a %s3 (%s4) se convierta [NUM5:al:a la:a los:a las] %s5</Spanish>
 		<Polish>Dyplomacja (Żądanie Religijne): %s1 (%s2) pyta: %s3 (%s4) o nawrócenie się na %s5</Polish>
-		<Russian>Diplomacy (Religion Request): %s1 (%s2) asks %s3 (%s4) to convert to %s5</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_TRIBUTE_DEMAND</Tag>
 		<English>Diplomacy (Tribute Demand): %s1 (%s2) demands that %s3 (%s4) gives %s5</English>
-		<French>Diplomatie (Demande de Tribut): %s1 (%s2) demande que %s3 (%s4) lui donne %s5</French>
+		<French>Diplomatie (Demande de tribut): %s1 (%s2) demande que %s3 (%s4) lui donne %s5</French>
 		<German>Diplomatie: %s1 (%s2) fordert von %s3 (%s4) Tribut (%s5)</German>
 		<Italian>Diplomazia: %s1 (%s2) ha chiesto a %s3 (%s4) che gli dia %s5 come tributo</Italian>
 		<Spanish>Diplomacia (demanda de tributo): %s1 (%s2) exige que %s3 (%s4) le dé %s5</Spanish>
 		<Polish>Dyplomacja (Żądanie Zapłaty): %s1 (%s2) żąda od: %s3 (%s4) przekazania: %s5</Polish>
-		<Russian>Diplomacy (Tribute Demand): %s1 (%s2) demands that %s3 (%s4) gives %s5</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_VASSAL_OFFER</Tag>
@@ -458,17 +441,15 @@
 		<Italian>Diplomazia: %s1 (%s2) si è offerto di diventare vassallo di %s3 (%s4)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) ofrece convertirse en vasallo de %s3 (%s4)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) oferuje: swoje wasalstwo %s3 (%s4)</Polish>
-		<Russian>Diplomacy: %s1 (%s2) offers to become a vassal of %s3 (%s4)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DIPLO_WAR_DEMAND</Tag>
 		<English>Diplomacy (War Request): %s1 (%s2) asks %s3 (%s4) to declare war on %s5 (%s6)</English>
-		<French>Diplomatie (Requête de Guerre): %s1 (%s2) demande à %s3 (%s4) de déclarer la Guerre à %s5 (%s6)</French>
+		<French>Diplomatie (Requête de guerre): %s1 (%s2) demande à %s3 (%s4) de déclarer la guerre à %s5 (%s6)</French>
 		<German>Diplomatie: %s1 (%s2) fordert %s3 (%s4) auf, %s5 (%s6) den Krieg zu erklären</German>
 		<Italian>Diplomazia: %s1 (%s2) ha chiesto a %s3 (%s4) di dichiarare guerra a %s5 (%s6)</Italian>
 		<Spanish>Diplomacia (Solicitud militar): %s1 (%s2) solicita que %s3 (%s4) declare la guerra a %s5 (%s6)</Spanish>
 		<Polish>Dyplomacja (Żądanie Wojny): %s1 (%s2) pyta: %s3 (%s4) o wypowiedzenie wojny: %s5 (%s6)</Polish>
-		<Russian>Diplomacy (War Request): %s1 (%s2) asks %s3 (%s4) to declare war on %s5 (%s6)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_DISTANT_LAND</Tag>

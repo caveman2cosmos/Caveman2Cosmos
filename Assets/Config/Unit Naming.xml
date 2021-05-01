@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <mod id="UnitNaming" name="Unit Naming" author="Ruff_Hi" version="1.0" date="09/02/2007" url="http://forums.civfanatics.com/showthread.php?t=241801">
-	<options id="UnitNaming" file="Unit Naming.ini">
+	<options id="UnitNaming" file="UnitNamingNew.ini">
 		<section id="UnitName">
 			<option id="Enabled" key="Enabled" type="boolean" default="True"/>
 			<option id="UseAdvanced" key="UseAdvanced" type="boolean" default="False" get="isAdvanced" set="setAdvanced"/>
