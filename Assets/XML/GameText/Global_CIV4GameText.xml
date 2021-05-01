@@ -20964,4 +20964,932 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Costo: %d1_cost [ICON_GOLD]</Italian>
 		<Spanish>Coste: %d1_cost [ICON_GOLD]</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CANCEL_PATCH_DOWNLOAD</Tag>
+		<English>Cancel the patch download</English>
+		<French>Annuler le t&#233;l&#233;chargement de la mise &#224; jour</French>
+		<German>Patch-Download abbrechen</German>
+		<Italian>Annulla il download della patch</Italian>
+		<Spanish>Cancelar la descarga del parche</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CANT_NUKE_FRIENDS</Tag>
+		<English>[COLOR_WARNING_TEXT]Cannot Nuke Friendly Territory or Units[COLOR_REVERT][NEWLINE]</English>
+		<French>[COLOR_WARNING_TEXT]Impossible de lancer le missile nucl&#233;aire sur des unit&#233;s ou un territoire amis[COLOR_REVERT][NEWLINE]</French>
+		<German>[COLOR_WARNING_TEXT]Verb&#252;ndete k&#246;nnen nicht mit Atomwaffen angegriffen werden[COLOR_REVERT][NEWLINE]</German>
+		<Italian>[COLOR_WARNING_TEXT]Impossibile colpire con armi nucleari il territorio e le unit&#224; amiche[COLOR_REVERT][NEWLINE]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]No se pueden hacer bombardeos nucleares contra los territorios o unidades amigos[COLOR_REVERT][NEWLINE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CHANGE_NAME</Tag>
+		<English>Click to Change the Name</English>
+		<French>Cliquez pour changer le nom</French>
+		<German>F&#252;r Namens&#228;nderung anklicken</German>
+		<Italian>Clicca qui per cambiare il nome</Italian>
+		<Spanish>Haz clic para cambiar el nombre</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CHANGE_PRODUCTION</Tag>
+		<English>Change Production</English>
+		<French>Changer production</French>
+		<German>Produktion &#228;ndern</German>
+		<Italian>Cambia produzione</Italian>
+		<Spanish>Cambiar producci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CHOOSE_ESPIONAGE_MISSION</Tag>
+		<English>Choose Espionage Mission</English>
+		<French>Choisir mission d'espionnage</French>
+		<German>Spionagemission ausw&#228;hlen</German>
+		<Italian>Scegli missione di spionaggio</Italian>
+		<Spanish>Elegir misi&#243;n de espionaje</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CHOOSE_TRANSPORT</Tag>
+		<English>Choose Transport...</English>
+		<French>Choisissez votre transport</French>
+		<German>W&#228;hlt eine Transporteinheit ...</German>
+		<Italian>Scegli il trasporto...</Italian>
+		<Spanish>Elegir un transporte...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CHOOSE_UNIT_TO_LEAD</Tag>
+		<English>Choose Unit to Lead</English>
+		<French>Choisir l'unit&#233; &#224; diriger</French>
+		<German>F&#252;hrungseinheit w&#228;hlen</German>
+		<Italian>Scegli l'unit&#224; da guidare</Italian>
+		<Spanish>Elegir unidad a liderar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_BAR_AIR_UNIT_CAPACITY</Tag>
+		<English>Air Unit Capacity: %d1/%d2</English>
+		<French>Capacit&#233; des unit&#233;s a&#233;riennes : %d1/%d2</French>
+		<German>Kapazit&#228;t f&#252;r Lufteinheiten: %d1/%d2</German>
+		<Italian>Spazio di carico : %d1/%d2</Italian>
+		<Spanish>Capacidad de la unidad a&#233;rea: %d1/%d2</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_BAR_CULTURE</Tag>
+		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</English>
+		<French>[NEWLINE][ICON_CULTURE] : %d1/%d2 (%s3)</French>
+		<German>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</German>
+		<Italian>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</Italian>
+		<Spanish>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_BAR_FOOD_GROWTH</Tag>
+		<English>[NEWLINE]%d1 [ICON_FOOD]/Turn[NEWLINE]Growth: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:Turn:Turns])</English>
+		<French>[NEWLINE]%d1 [ICON_FOOD]/tour[NEWLINE]Croissance : %d2/%d3 [ICON_FOOD] (%d4 [NUM4:tour:tours])</French>
+		<German>[NEWLINE]Wachstum: %d1/%d2 [ICON_FOOD] (%d3 [NUM3:Runde:Runden])</German>
+		<Italian>[NEWLINE]%d1 [ICON_FOOD]/Turno[NEWLINE]Crescita: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:turno:turni])</Italian>
+		<Spanish>[NEWLINE]%d1 [ICON_FOOD]/turno[NEWLINE]Crecimiento: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_BAR_FOOD_HAMMER_PRODUCTION</Tag>
+		<English>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Turn[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Turn:Turns])</English>
+		<French>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/tour[NEWLINE]%s3 : %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:tour:tours])</French>
+		<German>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Runde[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Runde:Runden])</German>
+		<Italian>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Turno[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:turno:turni])</Italian>
+		<Spanish>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/turno[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_BAR_GREAT_PEOPLE</Tag>
+		<English>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</English>
+		<French>[NEWLINE][ICON_GREATPEOPLE] : %d1/%d2</French>
+		<German>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</German>
+		<Italian>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</Italian>
+		<Spanish>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_BAR_GROWTH</Tag>
+		<English>[NEWLINE]Growth: %d1/%d2 [ICON_FOOD]</English>
+		<French>[NEWLINE]Croissance : %d1/%d2 [ICON_FOOD]</French>
+		<German>[NEWLINE]Wachstum: %d1/%d2 [ICON_FOOD]</German>
+		<Italian>[NEWLINE]Crescita: %d1/%d2 [ICON_FOOD]</Italian>
+		<Spanish>[NEWLINE]Crecimiento: %d1/%d2 [ICON_FOOD]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_BAR_HAMMER_PRODUCTION</Tag>
+		<English>[NEWLINE]%d1 [ICON_PRODUCTION]/Turn[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:Turn:Turns])</English>
+		<French>[NEWLINE]%d1 [ICON_PRODUCTION]/tour[NEWLINE]%s2 : %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:tour:tours])</French>
+		<German>[NEWLINE]%d1 [ICON_PRODUCTION]/Runde[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:Runde:Runden])</German>
+		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION]/Turno[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:turno:turni])</Italian>
+		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION]/turno[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_BAR_PRODUCTION</Tag>
+		<English>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</English>
+		<French>[NEWLINE]%s1 : %d2/%d3 [ICON_PRODUCTION]</French>
+		<German>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</German>
+		<Italian>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</Italian>
+		<Spanish>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_BAR_SELECT</Tag>
+		<English>[NEWLINE]Left-Click to select %s1</English>
+		<French>[NEWLINE]Clic gauche pour s&#233;lectionner %s1</French>
+		<German>[NEWLINE]%s1 per Linksklick ausw&#228;hlen</German>
+		<Italian>[NEWLINE]Clicca con il tasto sinistro %s1</Italian>
+		<Spanish>[NEWLINE]Hacer clic izquierdo para seleccionar %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_BAR_SELECT_CTRL</Tag>
+		<English>[NEWLINE](&lt;CTRL> for All Cities on this Continent)</English>
+		<French>[NEWLINE](&lt;CTRL> pour toutes les villes sur ce continent)</French>
+		<German>[NEWLINE](&lt;STRG> f&#252;r alle St&#228;dte auf diesem Kontinent)</German>
+		<Italian>[NEWLINE](&lt;CTRL> per tutte le citt&#224; in questo continente)</Italian>
+		<Spanish>[NEWLINE](&lt;CTRL> para todas las ciudades de este continente)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_BAR_SELECT_ALT</Tag>
+		<English>[NEWLINE](&lt;ALT> for All Cities in the World)</English>
+		<French>[NEWLINE](&lt;ALT> pour toutes les villes du monde)</French>
+		<German>[NEWLINE](&lt;ALT> f&#252;r alle St&#228;dte der Welt)</German>
+		<Italian>[NEWLINE](&lt;ALT> per tutte le citt&#224; del mondo)</Italian>
+		<Spanish>[NEWLINE](&lt;ALT> para todas las ciudades del mundo)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_CELEBRATE</Tag>
+		<English>%s1 celebrates %s2!!!</English>
+		<French>%s1 c&#233;l&#232;bre : %s2 !</French>
+		<German>%s1 feiert den %s2!!!</German>
+		<Italian>%s1 celebra %s2!</Italian>
+		<Spanish>&#161;%s1 est&#225; celebrando el d&#237;a de %s2!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_FOUNDED</Tag>
+		<English>Founded: %s1</English>
+		<French>Fondation de : %s1</French>
+		<German>Gegr&#252;ndet: %s1</German>
+		<Italian>Fondata: %s1</Italian>
+		<Spanish>Fundada: %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_LIBERATE</Tag>
+		<English>Liberate %s1_city (Gift to %s2_player)</English>
+		<French>Lib&#233;rer %s1_city (Cadeau au joueur %s2_player)</French>
+		<German>%s1_city befreien (Geschenk an %s2_player)</German>
+		<Italian>Libera %s1_city (regalo a %s2_player)</Italian>
+		<Spanish>Liberar %s1_city (regalo para %s2_player)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_OF</Tag>
+		<English>City of %s1_cityName</English>
+		<French>Ville de %s1_cityName</French>
+		<German>Stadt %s1_cityName</German>
+		<Italian>Citt&#224; di %s1_cityName</Italian>
+		<Spanish>Ciudad de %s1_cityName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_POPULATION</Tag>
+		<English>Population: %d1</English>
+		<French>Population : %d1</French>
+		<German>Bev&#246;lkerung: %d1</German>
+		<Italian>Popolazione: %d1</Italian>
+		<Spanish>Poblaci&#243;n: %d1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_WARNING_ANSWER3</Tag>
+		<English>Wait, let me examine the city first...</English>
+		<French>Un instant, je vais examiner cette ville...</French>
+		<German>Wartet, ich will mir die Stadt erst mal selbst anschauen ...</German>
+		<Italian>Aspetta, fammi prima esaminare la citt&#224;...</Italian>
+		<Spanish>Esperad, dejadme examinar primero la ciudad...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICS_SCREEN_NO_UPKEEP</Tag>
+		<English>No Upkeep</English>
+		<French>Aucun entretien</French>
+		<German>Kein Unterhalt</German>
+		<Italian>Nessun mantenimento</Italian>
+		<Spanish>Sin mantenimiento</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_DISTANCE_MAINT</Tag>
+		<English>[ICON_BULLET]No Maintenance Costs from Distance to Palace</English>
+		<French>[ICON_BULLET]Aucun co&#251;t d'entretien d&#251; &#224; l'&#233;loignement du palais</French>
+		<German>[ICON_BULLET]Keine Unterhaltskosten wegen Entfernung zum Palast</German>
+		<Italian>[ICON_BULLET]Nessun costo di mantenimento per la distanza dal palazzo</Italian>
+		<Spanish>[ICON_BULLET]Sin costes de mantenimiento por lejan&#237;a con palacio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_DISTANCE_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Distance to Palace</English>
+		<French>[ICON_BULLET]Co&#251;t d'entretien %D1_Mod%% d&#251; &#224; l'&#233;loignement du palais</French>
+		<German>[ICON_BULLET]%D1_Mod%% Unterhaltskosten wegen Entfernung zum Palast</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento per la distanza dal palazzo</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a los costes de mantenimiento por lejan&#237;a con palacio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_EXPERIENCE_IN_BORDERS</Tag>
+		<English>[ICON_BULLET]%D1%% Experience gained from Combat within own Borders</English>
+		<French>[ICON_BULLET]Exp&#233;rience obtenue suite au combat dans vos fronti&#232;res : %D1%%</French>
+		<German>[ICON_BULLET]%D1%% Erfahrungszuwachs durch Kämpfe innerhalb der eigenen Grenzen</German>
+		<Italian>[ICON_BULLET]%D1%% di esperienza per i combattimenti sul proprio territorio</Italian>
+		<Spanish>[ICON_BULLET]%D1%% de experiencia obtenida por combatir dentro de las fronteras propias.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_EXTRA_HEALTH</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUn in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUn dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HealthOrUn in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HealthOrUn in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HealthOrUn en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_EXTRA_WAR_WEARINESS</Tag>
+		<English>[ICON_BULLET]%D1_WarWearMod%% War [ICON_UNHAPPY]</English>
+		<French>[ICON_BULLET]%D1_WarWearMod%% [ICON_UNHAPPY] d&#251; &#224; la guerre</French>
+		<German>[ICON_BULLET]%D1_WarWearMod%% [ICON_UNHAPPY] wegen Krieg</German>
+		<Italian>[ICON_BULLET]%D1_WarWearMod%% di [ICON_UNHAPPY] per la guerra</Italian>
+		<Spanish>[ICON_BULLET]%D1_WarWearMod%% al [ICON_UNHAPPY] b&#233;lico</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FEATURE_HAPPINESS</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp from[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch Gel&#228;ndeart[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp per[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_SPECIALISTS</Tag>
+		<English>[ICON_BULLET]%D1_Change Free [NUM1:Specialist:Specialists] per City</English>
+		<French>[ICON_BULLET]%D1_Change sp&#233;cialistes gratuits par ville</French>
+		<German>[ICON_BULLET]%D1_Change freie Spezialisten pro Stadt</German>
+		<Italian>[ICON_BULLET]%D1_Change specialisti gratis per citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis por ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_XP</Tag>
+		<English>[ICON_BULLET]New Units Receive %D1_Change Experience Points</English>
+		<French>[ICON_BULLET]Les nouvelles unit&#233;s re&#231;oivent %D1_Change XP</French>
+		<German>[ICON_BULLET]Neue Einheiten erhalten %D1_Change Erfahrungspunkte</German>
+		<Italian>[ICON_BULLET]Le nuove unit&#224; ricevono %D1_Change punti esperienza</Italian>
+		<Spanish>[ICON_BULLET]Las nuevas unidades reciben %D1_Change puntos de experiencia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FROM_TRADE_ROUTES</Tag>
+		<English>[SPACE]from Trade Routes ([ICON_TRADE])</English>
+		<French>[SPACE]des routes commerciales ([ICON_TRADE])</French>
+		<German>[SPACE]von Handelswegen ([ICON_TRADE])</German>
+		<Italian>[SPACE]dalle rotte commerciali ([ICON_TRADE])</Italian>
+		<Spanish>[SPACE]por rutas comerciales ([ICON_TRADE])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_GREAT_PEOPLE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Birth Rate</English>
+		<French>[ICON_BULLET]Taux de natalit&#233; %D1_Mod%%[ICON_GREATPEOPLE]</French>
+		<German>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Geburtenrate</German>
+		<Italian>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Tasso di natalit&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la tasa de natalidad de [ICON_GREATPEOPLE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_GREAT_PEOPLE_MOD_RELIGION</Tag>
+		<English>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Birth Rate in Cities with %F2_Religion</English>
+		<French>[ICON_BULLET]Taux de natalit&#233; %D1_Mod%%[ICON_GREATPEOPLE] dans les villes pratiquant : %F2_Religion</French>
+		<German>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Geburtenrate in St&#228;dten mit der Religion %F2_Religion</German>
+		<Italian>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Tasso di natalit&#224; nelle citt&#224; con la religione %F2_Religion</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la tasa de natalidad de [ICON_GREATPEOPLE] en ciudades que sigan el %F2_Religion</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_GREAT_PEOPLE_MOD_STATE_RELIGION</Tag>
+		<English>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Birth Rate in Cities with State %F2_Religion</English>
+		<French>[ICON_BULLET]Taux de natalit&#233; %D1_Mod%%[ICON_GREATPEOPLE] dans les villes ayant comme religion d'&#233;tat : F2_Religion</French>
+		<German>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Geburtenrate in St&#228;dten mit der Staatsreligion %F2_Religion</German>
+		<Italian>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Tasso di natalit&#224; nelle citt&#224; con la religione ufficiale %F2_Religion</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la tasa de natalidad de [ICON_GREATPEOPLE] en ciudades que tengan el %F2_Religion como religi&#243;n oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_GREAT_GENERAL_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Great General Emergence</English>
+		<French>[ICON_BULLET]Emergence d'un G&#233;n&#233;ral illustre %D1_Mod%%</French>
+		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% Produktion Gro&#223;er Gener&#228;le</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% comparsa di un Grande Generale</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la aparici&#243;n de Gran general</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_IMPROVEMENT_UPGRADE</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Growth for[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Mod%% de croissance pour[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Mod%% Wachstum f&#252;r[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% miglioramento sulla crescita[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al crecimiento por[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_IMPROVEMENT_YIELD_CHANGE</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_Icon durch die Modernisierung[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_Icon da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_IN_ALL_CITIES</Tag>
+		<English>[SPACE]in All Cities</English>
+		<French>[SPACE]dans toutes les villes</French>
+		<German>[SPACE]in allen St&#228;dten</German>
+		<Italian>[SPACE]in tutte le citt&#224;</Italian>
+		<Spanish>[SPACE]en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_IN_CAPITAL</Tag>
+		<English>[SPACE]in Capital</English>
+		<French>[SPACE]dans la capitale</French>
+		<German>[SPACE]in der Hauptstadt</German>
+		<Italian>[SPACE]nella capitale</Italian>
+		<Spanish>[SPACE]en la capital</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in %d3_NumCities Largest Cities</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans les %d3_NumCities plus grandes villes</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in den %d3_NumCities gr&#246;&#223;ten St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappyOrUn nelle %d3_NumCities citt&#224; pi&#249; grandi</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en las %d3_NumCities mayores ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MILITARY_PRODUCTION</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Military Unit Production</English>
+		<French>[ICON_BULLET]%D1_Mod%% de production d'unit&#233;s militaires</French>
+		<German>[ICON_BULLET]%D1_Mod%% Produktion von Milit&#228;reinheiten</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di produzione nelle unit&#224; militari</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la producci&#243;n de unidades militares</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MILITARY_FOOD</Tag>
+		<English>[ICON_BULLET]Military Units Produced with [ICON_FOOD]</English>
+		<French>[ICON_BULLET]Unit&#233;s militaires produites avec : [ICON_FOOD]</French>
+		<German>[ICON_BULLET]Mit [ICON_FOOD] produzierte Milit&#228;reinheiten</German>
+		<Italian>[ICON_BULLET]Unit&#224; militari prodotte con [ICON_FOOD]</Italian>
+		<Spanish>[ICON_BULLET]Las unidades militares se producen con [ICON_FOOD]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NON_STATE_REL_HAPPINESS_NO_STATE</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn per [ICON_RELIGION] in a City</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn par [ICON_RELIGION] dans une ville</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn je [ICON_RELIGION]-Religion in einer Stadt</German>
+		<Italian>[ICON_BULLET]%D1_Change di %F2_HappyOrUn per [ICON_RELIGION] in una citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn por cada [ICON_RELIGION] en cada ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NON_STATE_REL_HAPPINESS_WITH_STATE</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn per Non-State [ICON_RELIGION] in a City</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn par [ICON_RELIGION] non officielle dans une ville</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn je nichtstaatlicher Religion [ICON_RELIGION] in einer Stadt</German>
+		<Italian>[ICON_BULLET]%D1_Change di %F2_HappyOrUn per [ICON_RELIGION] non ufficiale di una citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn por cada [ICON_RELIGION] no oficial en cada ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NO_BUILDING_UNHEALTHY</Tag>
+		<English>[ICON_BULLET]No [ICON_UNHEALTHY] from Buildings</English>
+		<French>[ICON_BULLET]Pas de [ICON_UNHEALTHY] en raison des b&#226;timents</French>
+		<German>[ICON_BULLET]Nicht [ICON_UNHEALTHY] durch Geb&#228;ude</German>
+		<Italian>[ICON_BULLET]Nessun [ICON_UNHEALTHY] dagli edifici</Italian>
+		<Spanish>[ICON_BULLET]No hay [ICON_UNHEALTHY] por edificios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NO_CORPORATIONS</Tag>
+		<English>[ICON_BULLET]Corporations have no effect</English>
+		<French>[ICON_BULLET]Les soci&#233;t&#233;s commerciales n'ont aucun effet</French>
+		<German>[ICON_BULLET]Kapitalgesellschaften haben keine Auswirkung</German>
+		<Italian>[ICON_BULLET]Le corporazioni non hanno effetto</Italian>
+		<Spanish>[ICON_BULLET]Las corporaciones no tienen efecto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NO_FOREIGN_CORPORATIONS</Tag>
+		<English>[ICON_BULLET]Foreign Corporations have no effect</English>
+		<French>[ICON_BULLET]Les soci&#233;t&#233;s commerciales &#233;trang&#232;res n'ont aucun effet</French>
+		<German>[ICON_BULLET]Fremde Kapitalgesellschaften haben keine Auswirkung</German>
+		<Italian>[ICON_BULLET]Le corporazioni straniere non hanno effetto</Italian>
+		<Spanish>[ICON_BULLET]Las corporaciones extranjeras no tienen efecto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NO_FOREIGN_TRADE</Tag>
+		<English>[ICON_BULLET]No Foreign Trade Routes ([ICON_TRADE])</English>
+		<French>[ICON_BULLET]Aucune route commerciale &#233;trang&#232;re</French>
+		<German>[ICON_BULLET]Keine fremden Handelswege ([ICON_TRADE])</German>
+		<Italian>[ICON_BULLET]Nessuna rotta commerciale estera ([ICON_TRADE])</Italian>
+		<Spanish>[ICON_BULLET]Sin rutas comerciales extranjeras ([ICON_TRADE])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NO_MAINT_CORPORATION_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Corporations</English>
+		<French>[ICON_BULLET]%D1_Mod%% Co&#251;ts d'entretien des Soci&#233;t&#233;s commerciales</French>
+		<German>[ICON_BULLET]%D1_Mod%% Unterhaltskosten von Kapitalgesellschaften</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% costi di manutenzione da Corporazioni</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a los costes de mantenimiento de las corporaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NO_MAINT_CORPORATION</Tag>
+		<English>[ICON_BULLET]No Maintenance Costs from Corporations</English>
+		<French>[ICON_BULLET]Pas de co&#251;t d'entretien des Soci&#233;t&#233;s commerciales</French>
+		<German>[ICON_BULLET]Keine Unterhaltskosten von Kapitalgesellschaften</German>
+		<Italian>[ICON_BULLET]Nessun costo di manutenzione da Corporazioni</Italian>
+		<Spanish>[ICON_BULLET]Sin costes de mantenimiento de las corporaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NO_MAINT_NUM_CITIES</Tag>
+		<English>[ICON_BULLET]No Maintenance Costs from Number of Cities</English>
+		<French>[ICON_BULLET]Aucun co&#251;t d'entretien d&#251; au nombre de villes</French>
+		<German>[ICON_BULLET]Keine Unterhaltskosten f&#252;r Anzahl der St&#228;dte</German>
+		<Italian>[ICON_BULLET]Nessun costo di mantenimento per il numero di citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]Sin costes de mantenimiento por cantidad de ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NO_MAINT_NUM_CITIES_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Number of Cities</English>
+		<French>[ICON_BULLET]Co&#251;t d'entretien %D1_Mod%% d&#251; au nombre de villes</French>
+		<German>[ICON_BULLET]%D1_Mod%% Unterhaltskosten von Anzahl der St&#228;dte</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% costo di mantenimento per il numero di citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a los costes de mantenimiento por cantidad de ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NO_NON_STATE_SPREAD</Tag>
+		<English>[ICON_BULLET]No Non-State [ICON_RELIGION] Spread</English>
+		<French>[ICON_BULLET]Aucune [ICON_RELIGION] propag&#233;e</French>
+		<German>[ICON_BULLET]Keine nichtstaatliche Religion [ICON_RELIGION] verbreitet</German>
+		<Italian>[ICON_BULLET]Nessuna diffusione di [ICON_RELIGION] non ufficiale</Italian>
+		<Spanish>[ICON_BULLET]No se propaga ninguna [ICON_RELIGION] que no sea la oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NO_POP_UNHEALTHY</Tag>
+		<English>[ICON_BULLET]No [ICON_UNHEALTHY] from City Population</English>
+		<French>[ICON_BULLET]Pas de [ICON_UNHEALTHY] en raison de la population de la ville</French>
+		<German>[ICON_BULLET]Nicht [ICON_UNHEALTHY] durch Stadtbev&#246;lkerung</German>
+		<Italian>[ICON_BULLET]Nessun [ICON_UNHEALTHY] dalla popolazione della citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]No hay [ICON_UNHEALTHY] por poblaci&#243;n de la ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NO_STATE_RELIGION</Tag>
+		<English>[ICON_BULLET]No State [ICON_RELIGION]</English>
+		<French>[ICON_BULLET]Aucune [ICON_RELIGION] d'&#233;tat</French>
+		<German>[ICON_BULLET]Keine Staatsreligion [ICON_RELIGION]</German>
+		<Italian>[ICON_BULLET]Nessuna [ICON_RELIGION] ufficiale</Italian>
+		<Spanish>[ICON_BULLET]Sin [ICON_RELIGION] oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NO_WAR_WEARINESS</Tag>
+		<English>[ICON_BULLET]No War [ICON_UNHAPPY]</English>
+		<French>[ICON_BULLET]Pas de [ICON_UNHAPPY] d&#251; &#224; la guerre</French>
+		<German>[ICON_BULLET]Keine [ICON_UNHAPPY] wegen Krieg</German>
+		<Italian>[ICON_BULLET]Nessuna guerra [ICON_UNHAPPY]</Italian>
+		<Spanish>[ICON_BULLET]Sin [ICON_UNHAPPY] b&#233;lico</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_PER_SPECIALIST</Tag>
+		<English>[SPACE]per Specialist</English>
+		<French>[SPACE]par sp&#233;cialiste</French>
+		<German>[SPACE]pro Spezialist</German>
+		<Italian>[SPACE]per specialista</Italian>
+		<Spanish>[SPACE]por cada especialista</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_RELIGION_HAPPINESS</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in Cities with State [ICON_RELIGION]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans les villes ayant comme religion  d'&#233;tat [ICON_RELIGION]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in St&#228;dten mit der Staatsreligion [ICON_RELIGION]</German>
+		<Italian>[ICON_BULLET]%D1_Change di %F2_HappyOrUn nelle citt&#224; con la religione di stato [ICON_RELIGION]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en las ciudades con [ICON_RELIGION] oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_REL_FREE_XP</Tag>
+		<English>[ICON_BULLET]%D1_XP Experience Points in Cities with %F2_RelIcon</English>
+		<French>[ICON_BULLET]%D1_XP EXP dans les villes ayant pour religion : %F2_RelIcon</French>
+		<German>[ICON_BULLET]%D1_XP Erfahrungspunkte in St&#228;dten mit der Religion %F2_RelIcon</German>
+		<Italian>[ICON_BULLET]%D1_XP punti esperienza esperienza nelle citt&#224; con %F2_RelIcon</Italian>
+		<Spanish>[ICON_BULLET]%D1_XP puntos de experiencia en las ciudades con %F2_RelIcon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_SCREEN_UPKEEP</Tag>
+		<English>Upkeep: %d1[ICON_GOLD] per turn</English>
+		<French>Entretien : %d1[ICON_GOLD] par tour</French>
+		<German>Unterhalt: %d1[ICON_GOLD] pro Runde</German>
+		<Italian>Mantenimento: %d1[ICON_GOLD] per turno</Italian>
+		<Spanish>Mantenimiento: %d1 [ICON_GOLD] por turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_HAPPINESS</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in Cities with %F3_RelIcon</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans les villes ayant pour religion %F3_RelIcon</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in St&#228;dten mit der Religion %F3_RelIcon</German>
+		<Italian>[ICON_BULLET]%D1_Change di %F2_HappyOrUn nelle citt&#224; con %F3_RelIcon</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en las ciudades con %F3_RelIcon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_STATE_REL_FREE_XP</Tag>
+		<English>[ICON_BULLET]%D1_XP Experience Points in Cities with State [ICON_RELIGION]</English>
+		<French>[ICON_BULLET]%D1_XP EXP dans les villes ayant une [ICON_RELIGION] d'&#233;tat</French>
+		<German>[ICON_BULLET]%D1_XP Erfahrungspunkte in St&#228;dten mit der Staatsreligion [ICON_RELIGION]</German>
+		<Italian>[ICON_BULLET]%D1_XP [NUM1:punto esperienza:punti esperienza] nelle citt&#224; con [ICON_RELIGION] ufficiale</Italian>
+		<Spanish>[ICON_BULLET]%D1_XP [NUM1:punto de experiencia:puntos de experiencia] en las ciudades con [ICON_RELIGION] oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_TRADE_ROUTES</Tag>
+		<English>[ICON_BULLET]%D1_Change Trade Routes ([ICON_TRADE]) per City</English>
+		<French>[ICON_BULLET]%D1_Change routes commerciales par ville</French>
+		<German>[ICON_BULLET]%D1_Change Handelswege ([ICON_TRADE]) pro Stadt</German>
+		<Italian>[ICON_BULLET]%D1_Change rotte commerciali ([ICON_TRADE]) per citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales ([ICON_TRADE]) por ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_UNIT_HAPPINESS</Tag>
+		<English>[ICON_BULLET]%D1_PerUnit%F2_HappyOrSad per Military Unit Stationed in a City</English>
+		<French>[ICON_BULLET]%D1_PerUnit%F2_HappyOrSad par unit&#233; militaire en garnison dans une ville</French>
+		<German>[ICON_BULLET]%D1_PerUnit%F2_HappyOrSad pro in einer Stadt stationierter Milit&#228;reinheit</German>
+		<Italian>[ICON_BULLET]%D1_PerUnit%F2_HappyOrSad per le unit&#224; militari stazionate in citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_PerUnit %F2_HappyOrSad por cada unidad militar destacada en la ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_UNLIMTED</Tag>
+		<English>[ICON_BULLET]Unlimited[SPACE]</English>
+		<French>[ICON_BULLET]Sans limite[SPACE]</French>
+		<German>[ICON_BULLET]Unbegrenzt[SPACE]</German>
+		<Italian>[ICON_BULLET]Illimitato[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Sin l&#237;mite[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_WORKER_SPEED</Tag>
+		<English>[ICON_BULLET]Workers Build Improvements %D1_Mod%% Faster</English>
+		<French>[ICON_BULLET]Vitesse de construction des am&#233;nagements : %D1_Mod%%</French>
+		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Mod%% schneller</German>
+		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Mod%% pi&#249; rapidamente</Italian>
+		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Mod%% m&#225;s r&#225;pido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COLOR_POSITIVE</Tag>
+		<English>[COLOR_POSITIVE_TEXT]</English>
+		<French>[COLOR_POSITIVE_TEXT]</French>
+		<German>[COLOR_POSITIVE_TEXT]</German>
+		<Italian>[COLOR_POSITIVE_TEXT]</Italian>
+		<Spanish>[COLOR_POSITIVE_TEXT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COLOR_NEGATIVE</Tag>
+		<English>[COLOR_NEGATIVE_TEXT]</English>
+		<French>[COLOR_NEGATIVE_TEXT]</French>
+		<German>[COLOR_NEGATIVE_TEXT]</German>
+		<Italian>[COLOR_NEGATIVE_TEXT]</Italian>
+		<Spanish>[COLOR_NEGATIVE_TEXT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COLOR_REVERT</Tag>
+		<English>[COLOR_REVERT]</English>
+		<French>[COLOR_REVERT]</French>
+		<German>[COLOR_REVERT]</German>
+		<Italian>[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_KAMIKAZE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_percent%% for Self-Destruction</English>
+		<French>[ICON_BULLET]Autodestruction %D1_percent%%</French>
+		<German>[ICON_BULLET]%D1_percent%% f&#252;r Selbstzerst&#246;rung</German>
+		<Italian>[ICON_BULLET]%D1_percent%% per l'autodistruzione</Italian>
+		<Spanish>[ICON_BULLET]%D1_percent%% de autodestruirse</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_AI_ANIMAL_COMBAT</Tag>
+		<English>(AI Animal Combat: %D1%%)</English>
+		<French>(Combat animal IA : %D1%%)</French>
+		<German>(KI-Tierkampf: %D1%%)</German>
+		<Italian>(Combattimento IA animali: %D1%%)</Italian>
+		<Spanish>(Combate del animal de la IA: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_ANIMAL_COMBAT</Tag>
+		<English>(Animal Combat: %D1%%)</English>
+		<French>(Combat animal : %D1%%)</French>
+		<German>(Tierkampf: %D1%%)</German>
+		<Italian>(Combattimento animali: %D1%%)</Italian>
+		<Spanish>(Combate del animal: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_BARBARIAN_AI_COMBAT</Tag>
+		<English>(AI Barbarian Combat: %D1%%)</English>
+		<French>(Combat barbare AI : %D1%%)</French>
+		<German>(KI-Barbarenkampf: %D1%%)</German>
+		<Italian>(Combattimento IA Barbari: %D1%%)</Italian>
+		<Spanish>(Combate del b&#225;rbaro de la IA: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_BARBARIAN_COMBAT</Tag>
+		<English>(Barbarian Combat: %D1%%)</English>
+		<French>(Combat barbare : %D1%%)</French>
+		<German>(Barbarenkampf: %D1%%)</German>
+		<Italian>(Combattimento Barbari: %D1%%)</Italian>
+		<Spanish>(Combate del b&#225;rbaro: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_CITY_DEFENSE</Tag>
+		<English>(City Defense: %D1%%)</English>
+		<French>(D&#233;fense ville : %D1%%)</French>
+		<German>(Stadtverteidigung: %D1%%)</German>
+		<Italian>(Difesa citt&#224;: %D1%%)</Italian>
+		<Spanish>(Defensa de la ciudad: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_CITY_ATTACK</Tag>
+		<English>(City Attack: %D1%%)</English>
+		<French>(Attaque ville : %D1%%)</French>
+		<German>(Stadtangriff: %D1%%)</German>
+		<Italian>(Attacco citt&#224;: %D1%%)</Italian>
+		<Spanish>(Ataque a la ciudad: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_CITY_BARBARIAN_DEFENSE</Tag>
+		<English>(City Barbarian Defense: %D1%%)</English>
+		<French>(D&#233;fense ville barbare : %D1%%)</French>
+		<German>(Stadtverteidigung Barbaren: %D1%%)</German>
+		<Italian>(Difesa citt&#224; Barbare: %D1%%)</Italian>
+		<Spanish>(Defensa de la ciudad contra b&#225;rbaros: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_DOMAIN_DEFENSE</Tag>
+		<English>(Domain Defense: %D1%%)</English>
+		<French>(D&#233;fense domaine : %D1%%)</French>
+		<German>(Verteidigung gesamt: %D1%%)</German>
+		<Italian>(Difesa dominio: %D1%%)</Italian>
+		<Spanish>(Defensa de la posesi&#243;n: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_CLASS_AMPHIB_ATTACK</Tag>
+		<English>(Amphibious Attack: %D1%%)</English>
+		<French>(Attaque amphibie : %D1%%)</French>
+		<German>(Amphibienangriff: %D1%%)</German>
+		<Italian>(Attacco anfibio: %D1%%)</Italian>
+		<Spanish>(Ataque anfibio: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_CLASS_ANIMAL_COMBAT</Tag>
+		<English>(Class Animal Combat: %D1%%)</English>
+		<French>(Combat animal groupe : %D1%%)</French>
+		<German>(Tierkampf Einheitentyp: %D1%%)</German>
+		<Italian>(Combattimento classe animali: %D1%%)</Italian>
+		<Spanish>(Clase de combate del animal: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_CLASS_ATTACK</Tag>
+		<English>(Class Attack: %D1%%)</English>
+		<French>(Attaque groupe : %D1%%)</French>
+		<German>(Angriff Einheitentyp: %D1%%)</German>
+		<Italian>(Attacco classe: %D1%%)</Italian>
+		<Spanish>(Clase de ataque: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_CLASS_COMBAT</Tag>
+		<English>(Combat: %D1%%)</English>
+		<French>(Combat : %D1%%)</French>
+		<German>(Kampf: %D1%%)</German>
+		<Italian>(Combattimento: %D1%%)</Italian>
+		<Spanish>(Combate: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_CLASS_DEFENSE</Tag>
+		<English>(Class Defense: %D1%%)</English>
+		<French>(D&#233;fense groupe : %D1%%)</French>
+		<German>(Verteidigung Einheitentyp: %D1%%)</German>
+		<Italian>(Difesa classe: %D1%%)</Italian>
+		<Spanish>(Clase de defensa: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_CLASS_DOMAIN</Tag>
+		<English>(Domain: %D1%%)</English>
+		<French>(Domaine : %D1%%)</French>
+		<German>(Gesamt: %D1%%)</German>
+		<Italian>(Dominio: %D1%%)</Italian>
+		<Spanish>(Posesi&#243;n: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_CLASS_RIVER_ATTACK</Tag>
+		<English>(River Attack: %D1%%)</English>
+		<French>(Attaque rivi&#232;re: %D1%%)</French>
+		<German>(Flussangriff: %D1%%)</German>
+		<Italian>(Attacco fiume: %D1%%)</Italian>
+		<Spanish>(Ataque por r&#237;o: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_EXTRA_COMBAT_PERCENT</Tag>
+		<English>(Extra Combat: %D1%%)</English>
+		<French>(Combat suppl&#233;mentaire : %D1%%)</French>
+		<German>(Extrakampf: %D1%%)</German>
+		<Italian>(Combattimento extra: %D1%%)</Italian>
+		<Spanish>(Combate adicional: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_FEATURE_ATTACK</Tag>
+		<English>(Feature Attack: %D1%%)</English>
+		<French>(Attaque caract&#233;ristique : %D1%%)</French>
+		<German>(Gel&#228;ndeart-Angriff: %D1%%)</German>
+		<Italian>(Attacco da caratteristiche: %D1%%)</Italian>
+		<Spanish>(Ataque a accidente: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_FORTIFY</Tag>
+		<English>(Fortify: %D1%%)</English>
+		<French>(Se retrancher : %D1%%)</French>
+		<German>(Verschanzen: %D1%%)</German>
+		<Italian>(Fortifica: %D1%%)</Italian>
+		<Spanish>(Fortificar: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_HILLS_ATTACK</Tag>
+		<English>(Hills Attack: %D1%%)</English>
+		<French>(Attaque collines : %D1%%)</French>
+		<German>(H&#252;gel-Angriff: %D1%%)</German>
+		<Italian>(Attacco in collina: %D1%%)</Italian>
+		<Spanish>(Ataque a colinas: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_ODDS</Tag>
+		<English>Combat Odds:</English>
+		<French>Probabilit&#233; de conflit :</French>
+		<German>Kampfchancen:</German>
+		<Italian>Probabilit&#224; di combattimento:</Italian>
+		<Spanish>Probabilidades del combate:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_PLOT_DEFENSE</Tag>
+		<English>(Plot Defense: %D1%%)</English>
+		<French>(D&#233;fense case : %D1%%)</French>
+		<German>(Gel&#228;ndefeldverteidigung: %D1%%)</German>
+		<Italian>(Difesa territorio: %D1%%)</Italian>
+		<Spanish>(Defensa de la casilla: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_TERRAIN_ATTACK</Tag>
+		<English>(Terrain Attack: %D1%%)</English>
+		<French>(Attaque terrain : %D1%%)</French>
+		<German>(Gel&#228;ndeangriff: %D1%%)</German>
+		<Italian>(Attacco da terreno: %D1%%)</Italian>
+		<Spanish>(Ataque a terreno: %D1%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_AMPHIB_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Amphibious Landing</English>
+		<French>[ICON_BULLET]%D1_Bonus%% en raison de d&#233;barquement amphibie</French>
+		<German>[ICON_BULLET]%D1_Bonus%% durch amphibische Landung</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% per l'atterraggio anfibio</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% por desembarco anfibio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_CITY_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from City (Unit Ability)</English>
+		<French>[ICON_BULLET]%D1_Bonus%% dans la ville (comp&#233;tence unit&#233;)</French>
+		<German>[ICON_BULLET]%D1_Bonus%% durch Stadt (Einheitenf&#228;higkeit)</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% dalla citt&#224; (abilit&#224; dell'unit&#224;)</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% por ciudad (capacidad de unidad)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_EXTRA_STRENGTH</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% Strength</English>
+		<French>[ICON_BULLET]%D1_Bonus%% de force</French>
+		<German>[ICON_BULLET]%D1_Bonus%% St&#228;rke</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% di forza</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% a la fuerza</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_FORTIFY_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Unit Fortify</English>
+		<French>[ICON_BULLET]%D1_Bonus%% en raison du retranchement</French>
+		<German>[ICON_BULLET]%D1_Bonus%% durch Einheitenverschanzung</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% per la fortificazione dell'unit&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% por fortificaci&#243;n de unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_HILLS_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Hills (Unit Ability)</English>
+		<French>[ICON_BULLET]%D1_Bonus%% dans les collines (comp&#233;tence unit&#233;)</French>
+		<German>[ICON_BULLET]%D1_Bonus%% durch H&#252;gel (Einheitenf&#228;higkeit)</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% dalle colline (abilit&#224; dell'unit&#224;)</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% por colinas (capacidad de unidad)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_HP</Tag>
+		<English>%[d1]/%[d2]HP</English>
+		<French>%[d1]/%[d2]PV</French>
+		<German>%[d1]/%[d2]TP</German>
+		<Italian>%[d1]/%[d2]PV</Italian>
+		<Spanish>%[d1]/%[d2]PG</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_MOD_VS_TYPE</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% vs. %s2_Type</English>
+		<French>[ICON_BULLET]%D1_Bonus%% contre %s2_Type</French>
+		<German>[ICON_BULLET]%D1_Bonus%% gegen %s2_Type</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% contro %s2_Type</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% contra %s2:2_Type</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_ODDS</Tag>
+		<English>Combat Odds: %s1%%</English>
+		<French>Probabilit&#233; de victoire : %s1%%</French>
+		<German>Kampfchancen: %s1%%</German>
+		<Italian>Probabilit&#224; di combattimento: %s1%%</Italian>
+		<Spanish>Probabilidades del combate: %s1%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_ODDS_VS</Tag>
+		<English>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] vs. [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</English>
+		<French>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contre [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</French>
+		<German>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] gegen [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</German>
+		<Italian>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contro [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] / [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_ODDS_RETREAT</Tag>
+		<English>Retreat odds: %s1%%</English>
+		<French>Chances de retraite : %s1 %%</French>
+		<German>R&#252;ckzugschance: %s1%%</German>
+		<Italian>Probabilit&#224; di ritirata: %s1%%</Italian>
+		<Spanish>Probabilidades de retirada: %s1%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_RIVER_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Crossing River</English>
+		<French>[ICON_BULLET]%D1_Bonus%% en raison de franchissement de fleuve</French>
+		<German>[ICON_BULLET]%D1_Bonus%% durch Fluss&#252;berquerung</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% per il guado del fiume</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% por cruzar un r&#237;o</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_TILE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Tile Defense</English>
+		<French>[ICON_BULLET]%D1_Bonus%% (d&#233;fense terrain)</French>
+		<German>[ICON_BULLET]%D1_Bonus%% durch Gel&#228;ndefeld-Verteidigung</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% dalla difesa della casella</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% por defensa de la casilla</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_UNIT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from %s2_TerrOrFeat (Unit Ability)</English>
+		<French>[ICON_BULLET]%D1_Bonus%% sur les cases de %s2_TerrOrFeat (comp&#233;tence unit&#233;)</French>
+		<German>[ICON_BULLET]%D1_Bonus%% durch %s2_TerrOrFeat (Einheitenf&#228;higkeit)</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% per %s2_TerrOrFeat (abilit&#224; dell'unit&#224;)</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% por %s2_TerrOrFeat (capacidad de unidad)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CORPORATION_BONUS_PRODUCED</Tag>
+		<English>[ICON_BULLET]Generates: %F1_bonus</English>
+		<French>[ICON_BULLET]G&#233;n&#232;re : %F1_bonus</French>
+		<German>[ICON_BULLET]Erzeugt: %F1_bonus</German>
+		<Italian>[ICON_BULLET]Genera: %F1_bonus</Italian>
+		<Spanish>[ICON_BULLET]Genera: %F1_bonus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CORPORATION_BONUS_REQUIRED</Tag>
+		<English>[ICON_BULLET]Consumes:[SPACE]</English>
+		<French>[ICON_BULLET]Consomme :[SPACE]</French>
+		<German>[ICON_BULLET]Ben&#246;tigt:[SPACE]</German>
+		<Italian>[ICON_BULLET]Consuma:[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Consume:[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CORPORATION_COMPETES</Tag>
+		<English>[NEWLINE][ICON_BULLET]Competes with[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET]Est en concurrence avec[SPACE]</French>
+		<German>[NEWLINE][ICON_BULLET]Konkurriert mit[SPACE]</German>
+		<Italian>[NEWLINE][ICON_BULLET]Compete con[SPACE]</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Compite con[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CORPORATION_HEADQUARTERS</Tag>
+		<English>Headquarters</English>
+		<French>Si&#232;ge</French>
+		<German>Unternehmenssitz</German>
+		<Italian>Quartier generale</Italian>
+		<Spanish>Sede</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CORPORATION_SCREEN_HEADQUARTERS</Tag>
+		<English>Headquarters:</English>
+		<French>Quartier g&#233;n&#233;ral :</French>
+		<German>Unternehmenssitze:</German>
+		<Italian>Quartier generale:</Italian>
+		<Spanish>Sede:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CORPORATION_SCREEN_TITLE</Tag>
+		<English>Corporation Advisor</English>
+		<French>Conseiller commercial</French>
+		<German>Unternehmensberater</German>
+		<Italian>Consigliere corporativo</Italian>
+		<Spanish>Consejero de corporaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CTRL</Tag>
+		<English>Ctrl+</English>
+		<French>Ctrl+</French>
+		<German>Strg+</German>
+		<Italian>Ctrl+</Italian>
+		<Spanish>Ctrl+</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CURRENT</Tag>
+		<English>Current</English>
+		<French>Actuel</French>
+		<German>Aktuell</German>
+		<Italian>Attuale</Italian>
+		<Spanish>Actual</Spanish>
+	</TEXT>
 </Civ4GameText>

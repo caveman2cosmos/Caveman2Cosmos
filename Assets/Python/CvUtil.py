@@ -217,7 +217,7 @@ def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
 		CyIF.addCombatMessage(ePlayer,msg)
 
 	if cdUnit.iDomainDefenseModifier:
-		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CITY_DOMAIN_DEFENSE",(cdUnit.iDomainDefenseModifier * iChange,))
+		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_DOMAIN_DEFENSE",(cdUnit.iDomainDefenseModifier * iChange,))
 		CyIF.addCombatMessage(ePlayer,msg)
 
 	if cdUnit.iCityBarbarianDefenseModifier:
