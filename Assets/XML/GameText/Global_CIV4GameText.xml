@@ -18978,4 +18978,124 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Consigliere militare</Italian>
 		<Spanish>Consejero militar</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_OPTION_SHUFFLE_TEAMS</Tag>
+		<English>Shuffle Teams</English>
+		<French>M&#233;langer les &#233;quipes</French>
+		<German>Zuf&#228;llige Teams</German>
+		<Italian>Mescola le squadre</Italian>
+		<Spanish>Sortear equipos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_OPTION_SHUFFLE_TEAMS_HELP</Tag>
+		<English>The human members of each team will be randomly reassigned upon game launch</English>
+		<French>Les joueurs humains de chaque &#233;quipe seront al&#233;atoirement r&#233;assign&#233;s lors du lancement de la partie</French>
+		<German>Bei jedem Spielstart erfolgt eine zuf&#228;llige Teamzuweisung der menschlichen Spieler.</German>
+		<Italian>I membri umani delle squadre verranno riassegnati casualmente all'avvio della partita</Italian>
+		<Spanish>Al iniciar la partida se asignar&#225;n al azar los integrantes humanos de los equipos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_OPTION_ANONYMOUS</Tag>
+		<English>Anonymous</English>
+		<French>Anonymes</French>
+		<German>Anonym</German>
+		<Italian>Anonimo</Italian>
+		<Spanish>An&#243;nimos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_OPTION_ANONYMOUS_HELP</Tag>
+		<English>The true identity of all leaders is hidden</English>
+		<French>La v&#233;ritable identit&#233; des diff&#233;rents chefs reste cach&#233;e</French>
+		<German>Die wahre Identit&#228;t aller Herrscher bleibt verborgen.</German>
+		<Italian>La vera identit&#224; dei leader &#232; nascosta</Italian>
+		<Spanish>Se oculta la identidad de todos los l&#237;deres.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_OPTION_SIMULTANEOUS_TURNS</Tag>
+		<English>Simultaneous Turns</English>
+		<French>Tours simultan&#233;s</French>
+		<German>Simultanrunden</German>
+		<Italian>Turni simultanei</Italian>
+		<Spanish>Turnos simult&#225;neos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_OPTION_SIMULTANEOUS_TURNS_HELP</Tag>
+		<English>All civilizations conduct their turns at the same time</English>
+		<French>Toutes les civilisations jouent leur tour en m&#234;me temps.</French>
+		<German>Alle Zivilisationen f&#252;hren ihre Runden gleichzeitig aus</German>
+		<Italian>Tutte le civilt&#224; effettuano il proprio turno contemporaneamente</Italian>
+		<Spanish>Todas las civilizaciones llevan a cabo sus turnos a la vez.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_OPTION_TAKEOVER_AI</Tag>
+		<English>Take over AI</English>
+		<French>Prendre contr&#244;le IA</French>
+		<German>KI &#252;bernehmen</German>
+		<Italian>Prendi il controllo della IA</Italian>
+		<Spanish>IA de relevo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_OPTION_TAKEOVER_AI_HELP</Tag>
+		<English>Players can "hot-join" into an AI civilization's slot at any time</English>
+		<French>Les joueurs peuvent prendre la place d'une civilisation g&#233;r&#233;e par l'IA &#224; tout moment.</French>
+		<German>Spieler k&#246;nnen sich jederzeit im Schnellverfahren einer KI-Zivilisation anschlie&#223;en</German>
+		<Italian>I giocatori possono "assumere il controllo" delle civilt&#224; gestite dall'IA in qualsiasi momento</Italian>
+		<Spanish>Los jugadores pueden "tomar las riendas" de una civilizaci&#243;n de la IA en cualquier momento.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_OPTION_TURN_TIMER</Tag>
+		<English>Turn Timer</English>
+		<French>Chrono tour</French>
+		<German>Rundenz&#228;hler</German>
+		<Italian>Timer del turno</Italian>
+		<Spanish>Contador del turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MP_OPTION_TURN_TIMER_HELP</Tag>
+		<English>Turns are limited by a timer which scales based on the size of the largest civilization</English>
+		<French>Les tours sont limit&#233;s par un chronom&#232;tre, leur dur&#233;e d&#233;pend de la taille de la plus grande civilisation.</French>
+		<German>Die Rundenzeit wird durch einen Timer bestimmt, dessen Einteilung sich an der Ausdehnung der gr&#246;&#223;ten Zivilisation orientiert</German>
+		<Italian>I turni sono limitati da un conto alla rovescia basato sulla dimensione della civilt&#224; pi&#249; grossa</Italian>
+		<Spanish>Los turnos quedan limitados por un contador cuya escala se basa en el tama&#241;o de la mayor civilizaci&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DETAILS_TITLE</Tag>
+		<English>Your Details</English>
+		<French>Vos coordonn&#233;es</French>
+		<German>Euer Steckbrief</German>
+		<Italian>I tuoi dettagli</Italian>
+		<Spanish>Detalles</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_GAME_DETAILS</Tag>
+		<English>Game Details</English>
+		<French>D&#233;tails de la partie</French>
+		<German>Spieldetails</German>
+		<Italian>Dettagli partita</Italian>
+		<Spanish>Detalles de la partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_POPE_ELECTION</Tag>
+		<English>As the resident of the Apostolic Palace, you can choose a Resolution to put forward for a vote.</English>
+		<French>En tant que r&#233;gent du Palais apostolique, vous pouvez demander le vote d'une r&#233;solution.</French>
+		<German>Als Eigent&#252;mer des Apostolischen Palastes k&#246;nnt Ihr eine Resolution ausw&#228;hlen und dar&#252;ber abstimmen lassen.</German>
+		<Italian>In quanto detentore del Palazzo Apostolico, puoi scegliere una mozione da sottoporre a votazione.</Italian>
+		<Spanish>Ya que el Palacio Apost&#243;lico est&#225; en vuestro poder, pod&#233;is elegir una resoluci&#243;n para someterla a votaci&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SECRETARY_GENERAL</Tag>
+		<English>U.N. Secretary General</English>
+		<French>Secr&#233;taire g&#233;n&#233;ral de l'ONU</French>
+		<German>U.N.-Generalsekret&#228;r</German>
+		<Italian>Segretario generale Nazioni Unite</Italian>
+		<Spanish>Secretario General de la ONU</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_CHOOSER_TITLE</Tag>
+		<English>Technology Advisor</English>
+		<French>Conseiller scientifique</French>
+		<German>Technologieberater</German>
+		<Italian>Consigliere tecnologico</Italian>
+		<Spanish>Consejero de tecnolog&#237;a</Spanish>
+	</TEXT>
 </Civ4GameText>

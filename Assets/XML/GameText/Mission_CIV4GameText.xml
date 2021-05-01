@@ -667,4 +667,492 @@
 		<Polish>Pozwala zaznaczonej jednostce na późniejsze odkrycie technologii. Jednostka będzie uśpiona dopóki technologia nie będzie możliwa do wynalezienia. Gdy już będzie możliwe odkrycie danej technologii jednostka automatycznie zostanie wykorzystana do odkrycia jej.</Polish>
 		<Russian>Позволяет выбрать желательную технологию для обнаружения. Юнит будет спать, пока эта технология не становится доступной, чтобы исследовать, и затем будет потреблять ее исследование.</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_MOVE_TO</Tag>
+		<English>Move To</English>
+		<French>Aller vers</French>
+		<German>Fortbewegen nach</German>
+		<Italian>Vai</Italian>
+		<Spanish>Mover a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ROUTE_TO</Tag>
+		<English>Route To</English>
+		<French>Route vers</French>
+		<German>Stra&#223;e nach</German>
+		<Italian>Intinerario</Italian>
+		<Spanish>Ir en ruta a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_MOVE_TO_UNIT</Tag>
+		<English>Move To Unit</English>
+		<French>Aller vers l'unit&#233;</French>
+		<German>Einheit fortbewegen nach</German>
+		<Italian>Vai all'unit&#224;</Italian>
+		<Spanish>Llevar hasta la unidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SKIP</Tag>
+		<English>Skip Turn</English>
+		<French>Passer le tour</French>
+		<German>Runde &#252;berspringen</German>
+		<Italian>Salta turno</Italian>
+		<Spanish>Saltar turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SLEEP</Tag>
+		<English>Sleep</English>
+		<French>Dormir</French>
+		<German>Ausruhen</German>
+		<Italian>Dormi</Italian>
+		<Spanish>Dormir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_FORTIFY</Tag>
+		<English>Fortify</English>
+		<French>Se retrancher</French>
+		<German>Verschanzen</German>
+		<Italian>Fortifica</Italian>
+		<Spanish>Fortificar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_INTERCEPT</Tag>
+		<English>Intercept</English>
+		<French>Intercepter</French>
+		<German>Abfangen</German>
+		<Italian>Intercetta</Italian>
+		<Spanish>Interceptar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HEAL</Tag>
+		<English>Fortify Until Healed</English>
+		<French>Se retrancher jusqu'&#224; gu&#233;rison</French>
+		<German>Bis zur vollst&#228;ndigen Heilung verschanzen</German>
+		<Italian>Fortifica finch&#233; non raggiunge il massimo della salute</Italian>
+		<Spanish>Fortificar hasta curarse</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SENTRY</Tag>
+		<English>Sentry</English>
+		<French>Sentinelle</French>
+		<German>Wache</German>
+		<Italian>Sentinella</Italian>
+		<Spanish>Vigilar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRLIFT</Tag>
+		<English>Airlift</English>
+		<French>Transport a&#233;rien</French>
+		<German>Lufttransport</German>
+		<Italian>Trasporto aereo</Italian>
+		<Spanish>Aerotransportar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_RECON</Tag>
+		<English>Recon</English>
+		<French>Reconnaissance</French>
+		<German>Aufkl&#228;rung</German>
+		<Italian>Ricognizione</Italian>
+		<Spanish>Reconocer</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB</Tag>
+		<English>Air Bomb</English>
+		<French>Bombardement a&#233;rien</French>
+		<German>Luftbombardierung</German>
+		<Italian>Bombardamento aereo</Italian>
+		<Spanish>Bombardeo a&#233;reo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BOMBARD</Tag>
+		<English>Bombard</English>
+		<French>Bombardement</French>
+		<German>Bombardierung</German>
+		<Italian>Bombarda</Italian>
+		<Spanish>Ca&#241;onear</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PILLAGE</Tag>
+		<English>Pillage</English>
+		<French>Pillage</French>
+		<German>Pl&#252;nderung</German>
+		<Italian>Saccheggia</Italian>
+		<Spanish>Saquear</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SABOTAGE</Tag>
+		<English>Sabotage</English>
+		<French>Sabotage</French>
+		<German>Sabotage</German>
+		<Italian>Sabota</Italian>
+		<Spanish>Sabotear</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DESTROY</Tag>
+		<English>Destroy Production</English>
+		<French>Saboter la production</French>
+		<German>Produktion zerst&#246;ren</German>
+		<Italian>Distruggi produzione</Italian>
+		<Spanish>Destruir producci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_STEAL_PLANS</Tag>
+		<English>Steal Plans</English>
+		<French>Voler des plans</French>
+		<German>Pl&#228;ne stehlen</German>
+		<Italian>Ruba i piani</Italian>
+		<Spanish>Robar planos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUILD_CITY</Tag>
+		<English>Build City</English>
+		<French>Fonder une ville</French>
+		<German>Stadt gr&#252;nden</German>
+		<Italian>Costruisci citt&#224;</Italian>
+		<Spanish>Construir ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SPREAD</Tag>
+		<English>Spread Religion</English>
+		<French>Propager la religion</French>
+		<German>Religion verbreiten</German>
+		<Italian>Diffondi religione</Italian>
+		<Spanish>Propagar religi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_JOIN_CITY</Tag>
+		<English>Join City</English>
+		<French>Rejoindre la ville</French>
+		<German>Sich einer Stadt anschlie&#223;en</German>
+		<Italian>Unisci alla citt&#224;</Italian>
+		<Spanish>Unirse a ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CONSTRUCT</Tag>
+		<English>Construct</English>
+		<French>Construire</French>
+		<German>Bauen</German>
+		<Italian>Costruire</Italian>
+		<Spanish>Erigir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DISCOVER_TECH</Tag>
+		<English>Discover Technology</English>
+		<French>D&#233;couvrir une technologie</French>
+		<German>Technologie entdecken</German>
+		<Italian>Scopri tecnologia</Italian>
+		<Spanish>Descubrir tecnolog&#237;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HURRY_PRODUCTION</Tag>
+		<English>Hurry Production</English>
+		<French>Acc&#233;l&#233;rer la production</French>
+		<German>Produktion beschleunigen</German>
+		<Italian>Produzione accelerata</Italian>
+		<Spanish>Acelerar la producci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CREATE_GREAT_WORK</Tag>
+		<English>Create Great Work</English>
+		<French>Cr&#233;er un chef d'oeuvre</French>
+		<German>Gro&#223;es Bauwerk errichten</German>
+		<Italian>Crea una Grande Opera</Italian>
+		<Spanish>Crear gran obra</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_START_GOLDENAGE</Tag>
+		<English>Start a Golden Age</English>
+		<French>D&#233;clencher un &#226;ge d'or</French>
+		<German>Goldenes Zeitalter beginnen</German>
+		<Italian>Avvia un'Et&#224; dell'Oro</Italian>
+		<Spanish>Iniciar una edad de oro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Tag>
+		<English>Build Improvement</English>
+		<French>Construire am&#233;nagement</French>
+		<German>Modernisierung errichten</German>
+		<Italian>Costruire miglioramento</Italian>
+		<Spanish>Construir mejora</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PATROL_TO_HELP</Tag>
+		<English>Set your unit to patrol (repeats a goto path indefinitely)</English>
+		<French>Ordonner &#224; l'unit&#233; de patrouiller entre sa position et le point indiqu&#233; (l'unit&#233; ob&#233;it &#224; deux ordres Aller &#224; ind&#233;finiment).</French>
+		<German>Versetzen Sie die Einheit in den Patrouillenmodus.</German>
+		<Italian>Ordina all'unit&#224; di pattugliare la zona (ripetendo lo stesso percorso a tempo indeterminato).</Italian>
+		<Spanish>Para poner la unidad a patrullar (recorrer indefinidamente un camino)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_MOVE_TO_HELP</Tag>
+		<English>Set your unit to move to a specific plot</English>
+		<French>Ordonner &#224; l'unit&#233; de rejoindre une position sur la carte.</French>
+		<German>Schicken Sie Ihre Einheit auf ein bestimmtes Gel&#228;ndefeld.</German>
+		<Italian>Ordina alla tua unit&#224; di muoversi in una casella specifica.</Italian>
+		<Spanish>Para decirle a la unidad que vaya a una casilla concreta.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ROUTE_TO_HELP</Tag>
+		<English>This order causes the worker to build a road (or railroad) to the location selected. The worker will follow the shortest path to the location. The worker wakes when it has completed the assignment.</English>
+		<French>Ordonner &#224; l'ouvrier de construire une route (ou une voie ferr&#233;e) vers l'endroit indiqu&#233;. Il suivra le chemin le plus court et sera &#224; nouveau disponible lorsqu'il aura termin&#233; sa mission.</French>
+		<German>Befehlen Sie einem Bautrupp, eine Stra&#223;e (oder Eisenbahnstrecke) zur gew&#228;hlten Position zu bauen. Ihr Bautrupp w&#228;hlt nun den k&#252;rzesten Weg und wartet nach dem Bau der Stra&#223;e/Eisenbahnstrecke auf weitere Befehle.</German>
+		<Italian>Con questo ordine, si obbliga un lavoratore a costruire una strada (o una ferrovia) nel luogo prescelto. Il lavoratore far&#224; il percorso pi&#249; breve per raggiungere il punto e si sveglier&#224; quando avr&#224; completato il proprio incarico.</Italian>
+		<Spanish>Con esta orden hac&#233;is que un trabajador construya una carretera (o ferrocarril) al lugar seleccionado. El trabajador seguir&#225; el camino m&#225;s corto hasta dicho lugar. Se despertar&#225; cuando haya cumplido su cometido.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_MOVE_TO_UNIT_HELP</Tag>
+		<English>Set your unit to move to a unit</English>
+		<French>Ordonner &#224; l'unit&#233; de rejoindre une autre unit&#233;.</French>
+		<German>Schicken Sie Ihre Einheit zu einer anderen Einheit.</German>
+		<Italian>Ordina alla tua unit&#224; di muoversi verso un'altra unit&#224;.</Italian>
+		<Spanish>Para decirle a la unidad que vaya hasta otra unidad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SKIP_HELP</Tag>
+		<English>Do nothing. The unit will awake and ask again for orders the next turn.</English>
+		<French>Ne rien faire. L'unit&#233; attend le tour suivant pour demander de nouveaux ordres.</French>
+		<German>Tun Sie gar nichts, wartet die Einheit in der n&#228;chsten Runde auf weitere Befehle.</German>
+		<Italian>Nessun ordine. L'unit&#224; si sveglier&#224; e attender&#224; altri ordini al turno successivo.</Italian>
+		<Spanish>La unidad no har&#225; nada, despertar&#225; y volver&#225; a solicitar &#243;rdenes al turno siguiente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SLEEP_HELP</Tag>
+		<English>Order the unit to sleep until activated by the player</English>
+		<French>Ordonner &#224; l'unit&#233; de se mettre en sommeil tant qu'elle n'est pas r&#233;activ&#233;e par le joueur.</French>
+		<German>Versetzen Sie die Einheit in den Ausruhmodus, bis Sie sie wieder aktivieren.</German>
+		<Italian>Ordina all'unit&#224; di riposare finch&#233; non viene attivata dal giocatore</Italian>
+		<Spanish>Para ordenarle a la unidad que duerma hasta que la activ&#233;is.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_INTERCEPT_HELP</Tag>
+		<English>This air unit order will tell the craft to attempt interception with any incoming air attacks.</English>
+		<French>Ordonner &#224; l'unit&#233; de tenter d'intercepter toutes les raids a&#233;riens ennemis.</French>
+		<German>Befehlen Sie einer Lufteinheit, alle Luftangriffe abzufangen.</German>
+		<Italian>Questo ordine serve per dire al velivolo di intercettare qualsiasi tentativo di attacco aereo.</Italian>
+		<Spanish>Esta orden es para unidades a&#233;reas y les dice que intenten interceptar todos los ataques a&#233;reos que lleguen.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRLIFT_HELP</Tag>
+		<English>Airlifts the unit to another city.</English>
+		<French>Transport a&#233;rien de l'unit&#233; vers une autre ville.</French>
+		<German>Fliegen Sie die Einheit in eine andere Stadt.</German>
+		<Italian>L'unit&#224; viene trasportata in aereo verso un'altra citt&#224;.</Italian>
+		<Spanish>Para aerotransportar a la unidad a otra ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NUKE_HELP</Tag>
+		<English>Drops a nuclear device onto the selected space.</English>
+		<French>Larguer une arme nucl&#233;aire sur la case s&#233;lectionn&#233;e.</French>
+		<German>Werfen Sie im Zielgebiet eine Atombombe ab.</German>
+		<Italian>Lancia una bomba nucleare nella casella selezionata.</Italian>
+		<Spanish>Deja caer una bomba nuclear en la casilla seleccionada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_RECON_HELP</Tag>
+		<English>Clears the fog of war from around the selected space for one turn.</English>
+		<French>Lever le brouillard de guerre autour de la case s&#233;lectionn&#233;e pendant un tour.</French>
+		<German>Der Nebel des Krieges lichtet sich im Zielgebiet eine Runde lang.</German>
+		<Italian>Elimina la nebbia di guerra dallo spazio selezionato per un turno.</Italian>
+		<Spanish>Despeja durante un turno la niebla de la guerra que haya alrededor de la casilla seleccionada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB_HELP</Tag>
+		<English>Destroys city fortifications and tile improvements.</English>
+		<French>D&#233;truire les fortifications de la ville et les am&#233;nagements des cases.</French>
+		<German>Zerst&#246;ren Sie Befestigungen und Modernisierungen.</German>
+		<Italian>Distrugge le fortificazioni delle citt&#224; e i miglioramenti delle caselle.</Italian>
+		<Spanish>Destruye fortificaciones de ciudades y mejoras de casillas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BOMBARD_HELP</Tag>
+		<English>Destroys fortifications and reduces the cities defensive bonus.</English>
+		<French>D&#233;truire les fortifications de la ville et r&#233;duire ses bonus de d&#233;fense.</French>
+		<German>Zerst&#246;ren Sie die Befestigungen einer Stadt und senken Sie deren Defensivbonus.</German>
+		<Italian>Distrugge le fortificazioni e riduce i bonus difensivi delle citt&#224;.</Italian>
+		<Spanish>Destruye las fortificaciones y reduce la bonificaci&#243;n defensiva de las ciudades.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SABOTAGE_HELP</Tag>
+		<English>The [COLOR_UNIT_TEXT]Spy[COLOR_REVERT] will attempt to sabotage the tile's improvement.</English>
+		<French>L'[COLOR_UNIT_TEXT]espion[COLOR_REVERT] tente de saboter un am&#233;nagement sur cette case.</French>
+		<German>Der [COLOR_UNIT_TEXT]Spion[COLOR_REVERT] versucht, alle Modernisierungen eines Gel&#228;ndefelds zu sabotieren.</German>
+		<Italian>La [COLOR_UNIT_TEXT]spia[COLOR_REVERT] tenter&#224; di sabotare il miglioramento della casella.</Italian>
+		<Spanish>El [COLOR_UNIT_TEXT]Esp&#237;a[COLOR_REVERT] intentar&#225; sabotear la mejora que haya en la casilla.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DESTROY_HELP</Tag>
+		<English>The [COLOR_UNIT_TEXT]Spy[COLOR_REVERT] will attempt to destroy the city's current production.</English>
+		<French>L'[COLOR_UNIT_TEXT]espion[COLOR_REVERT] tentera de saboter la production en cours de la ville.</French>
+		<German>Der [COLOR_UNIT_TEXT]Spion[COLOR_REVERT] versucht, die aktuelle Produktion der Stadt zu zerst&#246;ren.</German>
+		<Italian>La [COLOR_UNIT_TEXT]spia[COLOR_REVERT] tenter&#224; di distruggere la produzione attuale della citt&#224;.</Italian>
+		<Spanish>El [COLOR_UNIT_TEXT]Esp&#237;a[COLOR_REVERT] intentar&#225; destruir la producci&#243;n que haya en ese momento en la ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_STEAL_PLANS_HELP</Tag>
+		<English>The [COLOR_UNIT_TEXT]Spy[COLOR_REVERT] will attempt to steal plans, which will reveal all of the target civilization's units.</English>
+		<French>L'[COLOR_UNIT_TEXT]espion[COLOR_REVERT] tentera de voler des plans, qui r&#233;v&#232;lent toutes les unit&#233;s de la civilisation vis&#233;e.</French>
+		<German>Der [COLOR_UNIT_TEXT]Spion[COLOR_REVERT] versucht, Pl&#228;ne zu stehlen, die alle Einheiten der gew&#252;nschten Zivilisation enth&#252;llen.</German>
+		<Italian>La [COLOR_UNIT_TEXT]spia[COLOR_REVERT] tenter&#224; di rubare dei documenti per rivelare tutte le unit&#224; della civilt&#224; bersaglio.</Italian>
+		<Spanish>El [COLOR_UNIT_TEXT]Esp&#237;a[COLOR_REVERT] intentar&#225; robar los planos, que revelar&#225;n todas las unidades de la civilizaci&#243;n objetivo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUILD_CITY_HELP</Tag>
+		<English>This order causes the [COLOR_UNIT_TEXT]Settler[COLOR_REVERT] to build a city in its current location. The [COLOR_UNIT_TEXT]Settler[COLOR_REVERT] is consumed in the process.</English>
+		<French>Ordonne au [COLOR_UNIT_TEXT]colon[COLOR_REVERT] de s'installer et de fonder une ville. Le [COLOR_UNIT_TEXT]colon[COLOR_REVERT] s'autod&#233;truit dans l'op&#233;ration.</French>
+		<German>Opfern Sie einen [COLOR_UNIT_TEXT]Siedler[COLOR_REVERT], damit dieser an seinem aktuellen Standort eine Stadt gr&#252;ndet.</German>
+		<Italian>Con questo comando, si ordina al [COLOR_UNIT_TEXT]colono[COLOR_REVERT] di costruire una citt&#224; nel punto in cui si trova. Il [COLOR_UNIT_TEXT]colono[COLOR_REVERT] viene sacrificato durante il procedimento.</Italian>
+		<Spanish>Esta orden hace que el [COLOR_UNIT_TEXT]Colono[COLOR_REVERT] construya una ciudad en el lugar en que se encuentre. El [COLOR_UNIT_TEXT]Colono[COLOR_REVERT] se consumir&#225; en el proceso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SPREAD_HELP</Tag>
+		<English>This order will consume the [COLOR_UNIT_TEXT]Missionary[COLOR_REVERT] unit but spread their religion to the city.</English>
+		<French>Cet ordre d&#233;truit le [COLOR_UNIT_TEXT]missionnaire[COLOR_REVERT], mais sa religion sera propag&#233;e &#224; la ville.</French>
+		<German>Opfern Sie einen [COLOR_UNIT_TEXT]Missionar[COLOR_REVERT], damit dieser seine Religion in der Welt verbreitet.</German>
+		<Italian>Con questo ordine, si sacrifica un [COLOR_UNIT_TEXT]missionario[COLOR_REVERT], ma viene diffusa la religione nella citt&#224;.</Italian>
+		<Spanish>Esta orden har&#225; que se consuma la unidad de [COLOR_UNIT_TEXT]Misionero[COLOR_REVERT], pero propagar&#225; la religi&#243;n por la ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_JOIN_CITY_HELP</Tag>
+		<English>This order will make the Great Person join the city as a super specialist. It will consume the Great Person.</English>
+		<French>Ordonner &#224; ce personnage illustre de rejoindre la ville en tant que super-sp&#233;cialiste. Il est alors d&#233;truit.</French>
+		<German>Opfern Sie eine Gro&#223;e Pers&#246;nlichkeit und befehlen Sie ihr, sich als Super-Spezialist in der Stadt anzusiedeln.</German>
+		<Italian>Con questo ordine, i Grandi Personaggi possono unirsi alla citt&#224; in veste di super specialisti, venendo sacrificati nel procedimento.</Italian>
+		<Spanish>Esta orden hace que el gran personaje se quede en la ciudad como un superespecialista, consumi&#233;ndose en el proceso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CONSTRUCT_HELP</Tag>
+		<English>This will have the Great Person create their special building. It consumes the Great Person.</English>
+		<French>Ordonner au personnage illustre de construire son &#233;difice sp&#233;cial. Le personnage illustre est alors d&#233;truit.</French>
+		<German>Opfern Sie die Gro&#223;e Pers&#246;nlichkeit, damit diese ihr Spezialgeb&#228;ude errichtet.</German>
+		<Italian>Con questo comando, ordini a un Grande Personaggio di creare un edificio speciale. L'unit&#224; viene sacrificata nel procedimento.</Italian>
+		<Spanish>Hace que el gran personaje cree su edificio especial, consumi&#233;ndose en el proceso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DISCOVER_TECH_HELP</Tag>
+		<English>This will have the Great Person help research a technology. It consumes the Great Person.</English>
+		<French>Ordonner au personnage illustre de d&#233;couvrir automatiquement une nouvelle technologie. Le personnage illustre est alors d&#233;truit.</French>
+		<German>Opfern Sie die Gro&#223;e Pers&#246;nlichkeit, damit diese automatisch eine Technologie entdeckt.</German>
+		<Italian>Con questo comando, un Grande Personaggio scopre automaticamente una tecnologia. L'unit&#224; viene sacrificata nel procedimento.</Italian>
+		<Spanish>Hace que el gran personaje descubra autom&#225;ticamente una tecnolog&#237;a, consumi&#233;ndose en el proceso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CREATE_GREAT_WORK_HELP</Tag>
+		<English>This order will have the Great Artist create a Great Work in the city they are currently in. It consumes the Great Person.</English>
+		<French>Ordonner &#224; l'artiste illustre de cr&#233;er un chef d'oeuvre dans la ville o&#249; il se trouve. Ceci d&#233;truit le personnage illustre.</French>
+		<German>Opfern Sie die Gro&#223;e Pers&#246;nlichkeit, damit ein Gro&#223;er K&#252;nstler in der aktuellen Stadt ein gro&#223;es Kunstwerk erschafft.</German>
+		<Italian>Ordina a un Grande Artista di creare una Grande Opera nella citt&#224; in cui si trova. L'unit&#224; viene sacrificata nel procedimento.</Italian>
+		<Spanish>Esta orden hace que el gran artista cree una gran obra en la ciudad en la que se encuentre, consumi&#233;ndose en el proceso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SPREAD_CORPORATION</Tag>
+		<English>Expand Corporation</English>
+		<French>D&#233;velopper une soci&#233;t&#233; commerciale</French>
+		<German>Kapitalgesellschaft expandieren</German>
+		<Italian>Espandi corporazione</Italian>
+		<Spanish>Expandir corporaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SPREAD_CORPORATION_HELP</Tag>
+		<English>This order will consume the [COLOR_UNIT_TEXT]Executive[COLOR_REVERT] unit but expand their corporation into the city.</English>
+		<French>Cet ordre d&#233;truira le [COLOR_UNIT_TEXT]Directeur[COLOR_REVERT] mais d&#233;veloppera sa soci&#233;t&#233; commerciale dans la ville.</French>
+		<German>Der [COLOR_UNIT_TEXT]Vorstand[COLOR_REVERT] wird geopfert, damit die Kapitalgesellschaft in die Stadt expandieren kann.</German>
+		<Italian>Con questo ordine, si sacrifica un [COLOR_UNIT_TEXT]Funzionario[COLOR_REVERT], ma la corporazione si espande nella citt&#224;.</Italian>
+		<Spanish>Esta orden consumir&#225; a la unidad de [COLOR_UNIT_TEXT]Ejecutivo[COLOR_REVERT] pero expandir&#225; su corporaci&#243;n en la ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_TRADE_NET_TO</Tag>
+		<English>Trade Route To</English>
+		<French>>Route commerciale vers</French>
+		<German>Handelsweg nach</German>
+		<Italian>Itinerario commerciale</Italian>
+		<Spanish>Ruta comercial a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_TRADE_NET_TO_HELP</Tag>
+		<English>This order causes the workboat to build a sea trade route to the location selected. The workboat will follow the shortest path to the location. The workboat wakes when it has completed the assignment.</English>
+		<French>Ordonner au Bateau-atelier de construire une route commerciale jusqu'&#224; l'endroit s&#233;lectionn&#233;. Le bateau-atelier suivra le chemin le plus court et sera de nouveau disponible lorsqu'il aura termin&#233; sa mission</French>
+		<German>Das Arbeitsboot beginnt, einen Seehandelsweg zur ausgew&#228;hlten Stelle zu errichten. Das Arbeitsboot w&#228;hlt den k&#252;rzesten Weg, um zu dieser Stelle zu gelangen. Wenn es die Aufgabe erf&#252;llt hat, ist das Arbeitsboot erneut einsatzbereit.</German>
+		<Italian>Con questo ordine, si obbliga una barca da lavoro a creare una rotta commerciale marina verso il luogo prescelto. La barca da lavoro far&#224; il percorso pi&#249; breve per raggiungere il punto e rimarr&#224; in attesa di ordini quando avr&#224; completato il proprio incarico.</Italian>
+		<Spanish>Con esta orden hac&#233;is que un barco faenero construya una ruta comercial mar&#237;tima al lugar seleccionado. El barco faenero seguir&#225; el camino m&#225;s corto hasta dicho lugar. Se despertar&#225; cuando haya cumplido su cometido.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SEAPATROL</Tag>
+		<English>Sea Patrol</English>
+		<French>Patrouille des mers</French>
+		<German>Seepatrouille</German>
+		<Italian>Pattuglia marina</Italian>
+		<Spanish>Patrulla mar&#237;tima</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SEAPATROL_HELP</Tag>
+		<English>This order will tell the unit to attack enemy ships attempting to pillage adjacent tiles</English>
+		<French>Ordonner &#224; l'unit&#233; d'attaquer les navires ennemis se livrant au pillage de cases adjacentes</French>
+		<German>Die Einheit wird feindliche Schiffe angreifen, um angrenzende Gel&#228;ndefelder zu pl&#252;ndern</German>
+		<Italian>Questo ordine far&#224; in modo che l'unit&#224; attacchi le navi nemiche che cercano di saccheggiare le caselle circostanti</Italian>
+		<Spanish>Esta orden le dir&#225; a la unidad que ataque a los barcos enemigos que intenten saquear las casillas adyacentes.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PARADROP</Tag>
+		<English>Paradrop</English>
+		<French>Parachuter</French>
+		<German>Fallschirmsprung</German>
+		<Italian>Lancio col paracadute</Italian>
+		<Spanish>Desembarco a&#233;reo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PARADROP_HELP</Tag>
+		<English>Paradrops to a specified location. The mission is subject to interception.</English>
+		<French>Parachuter des troupes &#224; un endroit pr&#233;cis. La mission peut &#234;tre intercept&#233;e.</French>
+		<German>Fallschirmsprung an eine ausgew&#228;hlte Stelle. Die Mission kann abgefangen werden.</German>
+		<Italian>Si lancia col paracadute nella posizione specificata. La missione pu&#242; essere intercettata.</Italian>
+		<Spanish>Se lanza en paraca&#237;das en el lugar especificado. La misi&#243;n es susceptible de ser interceptada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PERFORM_ESPIONAGE</Tag>
+		<English>Perform Espionage Mission</English>
+		<French>Ex&#233;cuter mission d'espionnage</French>
+		<German>Spionagemission ausf&#252;hren</German>
+		<Italian>Effettua missione di spionaggio</Italian>
+		<Spanish>Realizar misi&#243;n de espionaje</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_KILL_SPY</Tag>
+		<English>Kill Nearby Spy</English>
+		<French>Tuer espion proche</French>
+		<German>Spion in der N&#228;he t&#246;ten</German>
+		<Italian>Uccidi la spia vicina</Italian>
+		<Spanish>Matar al esp&#237;a cercano</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_KILL_SPY_HELP</Tag>
+		<English>Kill adjacent Spy</English>
+		<French>Tuer espion adjacent</French>
+		<German>Spion in der N&#228;he eliminieren</German>
+		<Italian>Uccidi la spia adiacente</Italian>
+		<Spanish>Matar al esp&#237;a adyacente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PLUNDER_HELP</Tag>
+		<English>The unit disrupts the trade route so that no intercontinental trade can pass through the blockaded tile</English>
+		<French>L'unit&#233; effectue le blocus de la case pour emp&#234;cher tout commerce intercontinental par cette route commerciale.</French>
+		<German>Die Einheit unterbricht den Handelsweg, daher kann kein interkontinentaler Handel auf dem blockierten Gel&#228;ndefeld stattfinden</German>
+		<Italian>L'unit&#224; interrompe la rotta commerciale in modo che nessuna rotta commerciale intercontinentale possa passare dalla casella bloccata.</Italian>
+		<Spanish>La unidad corta la ruta comercial para que ninguna operaci&#243;n de comercio intercontinental pueda atravesar la casilla bloqueada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_START_GOLDENAGE_HELP</Tag>
+		<English>This order will consume one or more Great People (of different types) and initiate a Golden Age (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], no Anarchy).</English>
+		<French>Cette ordre consommera plusieurs personnages illustres (de types différents) et déclenchera un âge d'or ([ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE] supplémentaires, pas d'anarchie).</French>
+		<German>Opfern Sie eine oder mehrere Gro&#223;e Pers&#246;nlichkeiten (unterschiedlicher Klassen), um ein Goldenes Zeitalter (zus&#228;tzliche [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], keine Anarchie) zu begr&#252;nden.</German>
+		<Italian>Con questo ordine si consumano uno o pi&#249; Grandi Personaggi (di tipi differenti) e si avvia un'Et&#224; dell'Oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], nessuna anarchia).</Italian>
+		<Spanish>Esta orden consume uno o m&#225;s grandes personajes (de diferentes tipos) e inicia una edad de oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], sin Anarqu&#237;a).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PLUNDER</Tag>
+		<English>Blockade</English>
+		<French>Blocus</French>
+		<German>Blockade</German>
+		<Italian>Embargo</Italian>
+		<Spanish>Bloqueo</Spanish>
+	</TEXT>
 </Civ4GameText>
