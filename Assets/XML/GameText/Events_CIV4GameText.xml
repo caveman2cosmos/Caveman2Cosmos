@@ -2344,6 +2344,46 @@
 		<Russian>ПРОДОЛЖИТЬ</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER</Tag>
+		<English>A philosopher from %s2_city is stirring up controversy among our population. Our people are highly distrustful of his teachings.</English>
+		<French>Un philosophe de %s2_city a jeté le trouble parmi nos gens qui se méfient fortement de ses enseignements.</French>
+		<German>Ein Philosoph aus %s2_city löst Kontroversen innerhalb unserer Bevölkerung aus. Seine Lehren machen die Leute argwöhnisch.</German>
+		<Italian>Un filosofo di %s2_city sta scatenando una controversia all'interno della nostra popolazione. I nostri cittadini sono molto diffidenti nei confronti dei suoi insegnamenti.</Italian>
+		<Spanish>Un filósofo de %s2_city está levantando controversia entre nuestra población. Nuestra gente está realmente disgustada con sus enseñanzas.</Spanish>
+		<Polish>Filozof z %s2_city głosi kontrowersyjne tezy wśród naszej społeczności. Ludzie są z tego niezadowoleni.</Polish>
+		<Russian>Идеи одного философа из города %s2_city породили споры среди нашего населения. Наши люди не очень доверяют его учениям.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER_1</Tag>
+		<English>We won't tolerate such heresy. Send him into exile!</English>
+		<French>Nous ne tolèrerons aucune hérésie. Bannissez-le!</French>
+		<German>Derartige Ketzerei wird nicht toleriert. Schickt ihn ins Exil!</German>
+		<Italian>Non tollereremo un'eresia simile. Mandatelo in esilio!</Italian>
+		<Spanish>No toleraremos tal herejía. ¡Mandadlo al exilio!</Spanish>
+		<Polish>Nie będziemy tolerować takiej herezji. Wygnać go!</Polish>
+		<Russian>Мы не потерпим такой ереси. Отправьте его в ссылку!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER_2</Tag>
+		<English>He's a senile old fool. Let him teach if he wants to.</English>
+		<French>Ce n'est qu'un vieux radoteur. Laissez-le enseigner s'il le souhaite.</French>
+		<German>Der senile alte Narr soll lehren, was er will.</German>
+		<Italian>È un vecchio pazzo. Lasciatelo insegnare se vuole.</Italian>
+		<Spanish>Es un viejo tonto senil. Dejadle enseñar si así lo desea.</Spanish>
+		<Polish>To stary głupiec. Niech sobie gada co chce.</Polish>
+		<Russian>Он выживший из ума старикашка. Пускай ораторствует, если хочет.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER_3</Tag>
+		<English>That's one exceptional mind! Sponsor an Academy for him to teach!</English>
+		<French>C'est un esprit exceptionnel! Proposons-lui une chaire où il puisse enseigner!</French>
+		<German>Würdigt diesen außergewöhnlichen Geist durch die Errichtung einer eigenen Akademie!</German>
+		<Italian>Quest'uomo è dotato di una mente eccezionale. Mandatelo ad insegnare in un'accademia!</Italian>
+		<Spanish>¡Es una mente excepcional! ¡Haced que imparta sus enseñanzas en una Academia!</Spanish>
+		<Polish>Co za geniusz! Wyślijcie go do Akademii, niech naucza!</Polish>
+		<Russian>Он истинный гений! Спонсируйте Академию, чтобы он имел возможность обучать молодежь!</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_COOKING</Tag>
 		<English>Interesting. Let's share this knowledge with the rest of our tribe.</English>
 		<French>Intéressant. Partageons cette découverte au reste de la tribu.</French>
@@ -3609,6 +3649,16 @@
 		<Spanish>Nos agrada que hayan elegido residir allí.</Spanish>
 		<Polish>Jesteśmy zadowoleni z ich wyboru nowych domostw.</Polish>
 		<Russian>We are pleased at their new choice of residence.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_IMMOBILE_UNIT</Tag>
+		<English>[ICON_BULLET]The %s2_unit will be busy for %d1 [NUM1:turn:turns], unavailable for any other duty except self-defense.</English>
+		<French>[ICON_BULLET][NUM2:Le:La:L':Les] %s2_unit [NUM2:sera occupé:sera occupée:seront occupés:seront occupées] pendant %d1 [NUM1:tour:tours] et indisponible pour toute activité à part l'autodéfense.</French>
+		<German>[ICON_BULLET]%s2_unit [NUM2:wird:werden] %d1 [NUM1:Runde:Runden] beschäftigt sein und nicht für andere Aufgaben zur Verfügung stehen, außer zur Selbstverteidigung</German>
+		<Italian>[ICON_BULLET]L'unità %s2_unit sarà occupata per %d1 [NUM1:turno:turni], e non farà altro eccetto difendersi.</Italian>
+		<Spanish>[ICON_BULLET][NUM2:El:La:Los:Las] %s2_unit [NUM2:no estará disponible:no estará disponible:no estarán disponibles:no estarán disponibles] para ningún cometido que no sea su propia defensa durante %d1 [NUM1:turno:turnos]</Spanish>
+		<Polish>[ICON_BULLET]The %s2_unit będzie zajęty %d1 [NUM1:turn:turns], niezdatny do żadnych akcji oprócz samoobrony.</Polish>
+		<Russian>[ICON_BULLET]%s2_unit будет неактивен %d1 [NUM1:ход:ходов], а любые действия будут заблокированы, кроме самозащиты.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_IMPEACHMENT</Tag>
@@ -7816,14 +7866,6 @@
 		<German>[ICON_BULLET]Alle Bonusg&#252;ter [COLOR_HIGHLIGHT_TEXT]%s1_bonus[COLOR_REVERT] enth&#252;llen</German>
 		<Italian>[ICON_BULLET]Rivelare tutti i [COLOR_HIGHLIGHT_TEXT]%s1_bonus[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Mostrar [NUM1:todo el:toda la:todos los:todas las] [COLOR_HIGHLIGHT_TEXT]%s1_bonus[COLOR_REVERT]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_IMMOBILE_UNIT</Tag>
-		<English>[ICON_BULLET]The %s2_unit will be busy for %d1 [NUM1:turn:turns], unavailable for any other duty except self-defense.</English>
-		<French>[ICON_BULLET][NUM1:Le:La:L':Les] %s2_unit [NUM2:sera occup&#233;:sera occup&#233;e:seront occup&#233;s:seront occup&#233;es] pendant %d1 [NUM1:tour:tours] et indisponible pour toute activit&#233; &#224; part l'autod&#233;fense.</French>
-		<German>[ICON_BULLET]Die Einheit %s2_unit ist %d1 [NUM1:Runde:Runden] lang besch&#228;ftigt und f&#252;r keine andere Aufgabe au&#223;er Selbstverteidigung verf&#252;gbar.</German>
-		<Italian>[ICON_BULLET]L'unit&#224; %s2_unit sar&#224; occupata per %d1 [NUM1:turno:turni], e non far&#224; altro eccetto difendersi.</Italian>
-		<Spanish>[ICON_BULLET][NUM2:El:La:Los:Las] %s2_unit [NUM2:no estar&#225; disponible:no estar&#225; disponible:no estar&#225;n disponibles:no estar&#225;n disponibles] durante %d1 [NUM1:turno:turnos], para ning&#250;n cometido que no sea su propia defensa</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_YIELD_CHANGE_PLOT</Tag>
@@ -13640,37 +13682,5 @@
 		<German>Die Quest "Feindliche &#220;bernahme" ist gescheitert!</German>
 		<Italian>Hai fallito nell'impresa del Rilevamento ostile!</Italian>
 		<Spanish>&#161;La misi&#243;n Opa hostil ha fracasado!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER</Tag>
-		<English>A philosopher from %s2_city is stirring up controversy among our population. Our people are highly distrustful of his teachings.</English>
-		<French>Un philoshope de %s2_city a jete le trouble parmi nos gens qui se mefient fortement de ses enseignements.</French>
-		<German>Ein Philosoph aus %s2_city l&#246;st Kontroversen innerhalb unserer Bev&#246;lkerung aus. Seine Lehren machen die Leute argw&#246;hnisch.</German>
-		<Italian>Un filosofo di %s2_city sta scatenando una controversia all'interno della nostra popolazione. I nostri cittadini sono molto diffidenti nei confronti dei suoi insegnamenti.</Italian>
-		<Spanish>Un fil&#243;sofo de %s2_city esta levantando controversia entre nuestra poblaci&#243;n. Nuestra gente esta realmente disgustada con sus ense&#241;anzas.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER_1</Tag>
-		<English>We won't tolerate such heresy. Send him into exile!</English>
-		<French>Nous ne tolererons aucune heresie. Bannissez-le!</French>
-		<German>Derartige Ketzerei wird nicht toleriert. Schickt ihn ins Exil!</German>
-		<Italian>Non tollereremo un'eresia simile. Mandatelo in esilio!</Italian>
-		<Spanish>No toleraremos tal herejia. Mandarlo al exilio!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER_2</Tag>
-		<English>He's a senile old fool. Let him teach if he wants to.</English>
-		<French>Ce n'est qu'un vieux radoteur. Laissez-le enseigner s'il le souhaite.</French>
-		<German>Der senile alte Narr soll lehren, was er will.</German>
-		<Italian>&#200; un vecchio pazzo. Lasciatelo insegnare se vuole.</Italian>
-		<Spanish>Es un viejo tonto senil. Dejadle ense&#241;ar si as&#237; lo desea.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER_3</Tag>
-		<English>That's one exceptional mind! Sponsor an Academy for him to teach!</English>
-		<French>C'est un esprit exceptionnel! Proposons-lui une chaire ou il puisse enseigner!</French>
-		<German>W&#252;rdigt diesen au&#223;ergew&#246;hnlichen Geist durch die Errichtung einer eigenen Akademie!</German>
-		<Italian>Quest'uomo &#232; dotato di una mente eccezionale. Mandatelo ad insegnare in un'accademia!</Italian>
-		<Spanish>Es una mente excepcional! Patrocinar una Academia para sus ense&#241;anzas!</Spanish>
 	</TEXT>
 </Civ4GameText>
