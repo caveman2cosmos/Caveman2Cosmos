@@ -8408,4 +8408,188 @@
 		<Italian>Tutti hanno dei bisogni, [CT_NAME]. Per esempio noi abbiamo bisogno di questo, e tu hai bisogno di darcelo. </Italian>
 		<Spanish>Todo el mundo tiene sus necesidades, [CT_NAME]. Por ejemplo, nosotros necesitamos lo siguiente, y vosotros necesitáis dárnoslo. </Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_BOUDICA_1</Tag>
+		<English>Could you spare your good friends a small gift?</English>
+		<French>Offririez-vous ce modeste présent à vos bons amis ?</French>
+		<German>Würdet Ihr Euren Freunden ein kleines Geschenk machen?</German>
+		<Italian>Hai un piccolo regalo per dei buoni amici?</Italian>
+		<Spanish>¿No podríais hacerles un regalito a vuestros buenos amigos?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_CHARLEMAGNE_1</Tag>
+		<English>Share the wealth a little, willya?</English>
+		<French>Je veux ma part du gâteau.</French>
+		<German>Lasst uns doch nur ein wenig an Eurem Wohlstand teilhaben ... bitte?</German>
+		<Italian>Condividi un po' di ricchezza, eh?</Italian>
+		<Spanish>Compartid un poco de riqueza, ¿no?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_DARIUS_1</Tag>
+		<English>We need this. Now. Thank you for your cooperation.</English>
+		<French>On a besoin de ça. Immédiatement. Merci de votre coopération.</French>
+		<German>Das ist unsere Forderung und wir verlangen sofortige Erfüllung! Danke für Eure Kooperation!</German>
+		<Italian>Ecco cosa ci serve. Ora. Grazie per la collaborazione.</Italian>
+		<Spanish>Necesitamos esto. Ahora mismo. Gracias por vuestra cooperación.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_DE_GAULLE_1</Tag>
+		<English>The honor of [OUR_CIV_SHORT] demands that you provide us with the following. If it isn't too much trouble, that is.</English>
+		<French>L'honneur des [OUR_CIV_SHORT:3] exige que vous nous donniez ceci. Si ce n'est pas trop vous demander, bien sûr.</French>
+		<German>Es gebührt der Ehre des Volkes von [OUR_CIV_SHORT], dass Ihr uns gebt, wonach wir verlangen. Natürlich nur, wenn es Euch nicht allzu viele Umstände macht ...</German>
+		<Italian>L'onore di [OUR_CIV_SHORT] impone che tu ci dia ciò di cui abbiamo bisogno. Se non è un problema, chiaramente.</Italian>
+		<Spanish>El honor de [OUR_CIV_SHORT] exige que nos proporcionéis lo siguiente. Si no os importa, claro está.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_HAMMURABI_1</Tag>
+		<English>We could use your assistance, friend [CT_NAME].</English>
+		<French>Nous aurions besoin de votre aide, cher [CT_NAME].</French>
+		<German>Wir könnten Eure freundliche Unterstützung gebrauchen, [CT_NAME].</German>
+		<Italian>Potremmo avere bisogno del tuo aiuto, amico [CT_NAME].</Italian>
+		<Spanish>Nos iría bien vuestra ayuda, amigable [CT_NAME].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_HANNIBAL_1</Tag>
+		<English>Our continued protection comes at a price, [CT_NAME]. I recommend that you pay it.</English>
+		<French>Notre protection n'est pas gratuite, [CT_NAME]. Je vous conseille de payer le prix requis.</French>
+		<German>Wenn Ihr unseren Schutz wollt, hat das seinen Preis, [CT_NAME]. Und Ihr solltet ihn lieber zahlen.</German>
+		<Italian>La nostra continua protezione ha un prezzo, [CT_NAME]. Ti consiglio di pagarlo.</Italian>
+		<Spanish>Nuestra continua protección tiene un precio, [CT_NAME]. Os recomiendo que la pagu&#233;is.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_JOAO_1</Tag>
+		<English>If it pleases you, [CT_NAME], [OUR_CIV_SHORT] could use a little assistance.</English>
+		<French>Si vous n'y voyez aucun inconvénient, [CT_NAME], les [OUR_CIV_SHORT:3] auraient besoin d'aide.</French>
+		<German>Wenn Ihr die Güte hättet, [CT_NAME]: Das Volk von [OUR_CIV_SHORT] könnte ein wenig Unterstützung gebrauchen.</German>
+		<Italian>Se ti va bene, [CT_NAME], [OUR_CIV_SHORT] avrebbe bisogno di un po' di aiuto.</Italian>
+		<Spanish>Si os complace, [CT_NAME], a [OUR_CIV_SHORT] no le iría mal una ayudita.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_JOSEF_STALIN_1</Tag>
+		<English>It's time for a redistribution of wealth, [CT_NAME]. </English>
+		<French>L'heure est venue de redistribuer un peu vos richesses, [CT_NAME].</French>
+		<German>Es ist an der Zeit, den vorhandenen Wohlstand etwas umzuschichten, [CT_NAME]. </German>
+		<Italian>Forse è il momento di una redistribuzione delle ricchezze, [CT_NAME]. </Italian>
+		<Spanish>Es hora de que se haga una redistribución de la riqueza, [CT_NAME]. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_JUSTINIAN_1</Tag>
+		<English>Could you spare this for us, [CT_NAME]?</English>
+		<French>Pourriez-vous nous donner ceci, [CT_NAME] ? </French>
+		<German>Würdet Ihr uns dies hier überlassen, [CT_NAME]?</German>
+		<Italian>Hai un po' di tempo per noi, [CT_NAME]?</Italian>
+		<Spanish>¿Podríais darnos esto, [CT_NAME]?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LINCOLN_1</Tag>
+		<English>Can you spare this for a good friend, [CT_NAME]?</English>
+		<French>Pourriez-vous donner ceci à un bon ami, [CT_NAME] ?</French>
+		<German>Ihr werdet einem treuen Freund diese kleine Bitte doch nicht abschlagen, [CT_NAME]?</German>
+		<Italian>Avresti un po' di questi in nome della nostra amicizia, [CT_NAME]?</Italian>
+		<Spanish>¿Podríais darles esto a unos buenos amigos, [CT_NAME]?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_MEHMED_1</Tag>
+		<English>How about a small token of appreciation, [CT_NAME]? </English>
+		<French>Je ne saurais refuser un petit geste de votre part, [CT_NAME].</French>
+		<German>Wie wär's mit einem kleinen Zeichen der Ehrerbietung, [CT_NAME]? </German>
+		<Italian>Che ne dici di un piccolo segno di gratitudine, [CT_NAME]? </Italian>
+		<Spanish>¿Qu&#233; tal una pequeña muestra de aprecio, [CT_NAME]? </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_PACAL_1</Tag>
+		<English>[CT_NAME], a war between our two great people is to be avoided at all costs, wouldn't you agree? So pay up.</English>
+		<French>[CT_NAME], la guerre entre nos deux grandes nations doit à tout prix être évitée, vous ne croyez pas ? Alors, payez !</French>
+		<German>Es ist doch sicher auch in Eurem Sinne, einen Krieg zwischen unseren Völkern zu vermeiden, nicht wahr, [CT_NAME]? Also, her damit!</German>
+		<Italian>[CT_NAME], dovremmo evitare a tutti i costi una guerra tra i nostri due grandi popoli, non sei d'accordo? Allora paga.</Italian>
+		<Spanish>[CT_NAME], hay que evitar a toda costa una guerra entre nuestros pueblos, ¿no creéis? Pues pagad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_PERICLES_1</Tag>
+		<English>Mighty [OUR_CIV_SHORT] requests a small token of friendship from its faithful ally, [CT_CIV_SHORT]. </English>
+		<French>Les puissants [OUR_CIV_SHORT:3] exigent un petit gage d'amitié de leurs loyaux alliés [CT_CIV_SHORT:3]. </French>
+		<German>Das mächtige Volk von [OUR_CIV_SHORT] fordert eine kleine Geste der Freundschaft von seinen treuen Verbündeten, den Bürgern von [CT_CIV_SHORT]. </German>
+		<Italian>[OUR_CIV_SHORT] richiede un piccolo gesto di amicizia da parte di [CT_CIV_SHORT], suo fedele alleato. </Italian>
+		<Spanish>La poderosa tierra de [OUR_CIV_SHORT] solicita una pequeña muestra de amistad de su fiel aliado, el imperio de [CT_CIV_SHORT]. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_RAGNAR_LODBROK_1</Tag>
+		<English>We usually take what we want, [CT_NAME], but in the name of our continued good relations I'll ask for it first.</English>
+		<French>On prend g&#233;n&#233;ralement tout ce qu'on veut, [CT_NAME], mais au nom de nos bonnes relations, je vais vous laisser l'honneur de me le donner de bon coeur.</French>
+		<German>Normalerweise nehmen wir uns einfach, was wir wollen, [CT_NAME]. Aber damit wir unsere guten Beziehungen fortsetzen können, dachte ich, ich bitte ausnahmsweise mal darum.</German>
+		<Italian>Di solito quello che vogliamo ce lo prendiamo da soli, [CT_NAME], ma in nome del nostro buono e duraturo rapporto, prima proverò a chiedertelo.</Italian>
+		<Spanish>Nosotros solemos coger lo que queremos, [CT_NAME], pero, en nombre de la continuidad de nuestras buenas relaciones, primero os lo pedir&#233;.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_RAMESSES_II_1</Tag>
+		<English>A wise ruler makes sacrifices to gain the good will of the gods, [CT_NAME]. You can start with me.</English>
+		<French>Un seigneur sage accepte de faire des sacrifices pour gagner les faveurs des dieux, [CT_NAME]. Vous pouvez commencer par acheter mes faveurs.</French>
+		<German>Ein kluges Staatsoberhaupt bringt Opfer, um die Götter milde zu stimmen, [CT_NAME]! Ihr könnt gleich bei mir damit anfangen!</German>
+		<Italian>Un sovrano saggio è pronto a compiere dei sacrifici pur di ottenere la benevolenza degli dei. Puoi cominciare da me, [CT_NAME].</Italian>
+		<Spanish>Los monarcas sensatos saben cuándo hacer sacrificios para ganarse el favor de los dioses, [CT_NAME]. Podríais empezar conmigo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SHAKA_1</Tag>
+		<English>Give me this, [CT_NAME] and perhaps our two nations can live in peace for a while longer.</English>
+		<French>Donnez-moi ce que je demande, [CT_NAME], et peut-&#234;tre nos deux nations pourront-elles cohabiter en paix quelques temps encore.</French>
+		<German>Gebt uns, was wir verlangen, [CT_NAME], dann besteht die Chance, dass unsere Zivilisationen noch eine Weile in Frieden miteinander leben!</German>
+		<Italian>Dammi questo, [CT_NAME], e forse le nostre due nazioni vivranno in pace per un altro po'.</Italian>
+		<Spanish>Dadme esto, [CT_NAME], y es posible que nuestras naciones puedan vivir en paz un poco más.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SITTING_BULL_1</Tag>
+		<English>Would you care to share some of your wealth with your good friends and allies, [CT_NAME]?</English>
+		<French>Voudriez-vous partager votre richesse avec vos amis et alliés, [CT_NAME] ?</French>
+		<German>Wärt Ihr bereit, Euren Wohlstand mit guten Freunden und verlässlichen Verbündeten zu teilen, [CT_NAME]?</German>
+		<Italian>Vuoi condividere un po' delle tue ricchezze con i tuoi buoni amici e alleati, [CT_NAME]?</Italian>
+		<Spanish>¿Os importaría compartir parte de vuestra riqueza con vuestros amigos y aliados, [CT_NAME]?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SULEIMAN_1</Tag>
+		<English>Would you care to give [OUR_CIV_SHORT] a small token of your affection, [CT_NAME]?</English>
+		<French>Auriez-vous l'obligeance d'offrir aux [OUR_CIV_SHORT:3] un petit gage de votre affection, [CT_NAME] ?</French>
+		<German>Was haltet Ihr davon, die Bürger von [OUR_CIV_SHORT] mit einer Geste der Ehrerbietung zu erfreuen, [CT_NAME]?</German>
+		<Italian>Che ne diresti di dare a [OUR_CIV_ADJ] un piccolo segno di amicizia, [CT_NAME]?</Italian>
+		<Spanish>¿Os importaría darle a [OUR_CIV_SHORT] una pequeña muestra de vuestro aprecio, [CT_NAME]?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SURYAVARMAN_1</Tag>
+		<English>The [OUR_CIV_ADJ] people could use your assistance, [CT_NAME]. I trust that you won't disappoint them.</English>
+		<French>Les [OUR_CIV_ADJ:3] ont besoin de votre aide, [CT_NAME]. J'espère que vous ne les décevrez pas.</French>
+		<German>Das [OUR_CIV_ADJ:3] Volk könnte Eure Hilfe gebrauchen, [CT_NAME]. Ihr werdet es doch sicher nicht enttäuschen wollen ...</German>
+		<Italian>Al popolo [OUR_CIV_ADJ] farebbe comodo il tuo aiuto, [CT_NAME]. Spero che non vorrai deluderla.</Italian>
+		<Spanish>Al pueblo [OUR_CIV_ADJ:1] le iría bien vuestra ayuda, [CT_NAME]. Confiamos en que no nos decepcionaréis.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_WANG_KON_1</Tag>
+		<English>We require some assistance at this time, [CT_NAME]. Will you come to our aid?</English>
+		<French>Nous sollicitons votre aide, [CT_NAME]. Nous porterez-vous assistance ?</French>
+		<German>Wir könnten im Moment etwas Unterstützung gebrauchen, [CT_NAME]. Werdet Ihr uns helfen?</German>
+		<Italian>In questo momento abbiamo bisogno di assistenza, [CT_NAME]. Verrai in nostro aiuto?</Italian>
+		<Spanish>Necesitamos un poco de ayuda en este momento, [CT_NAME]. ¿Nos auxiliar&#233;is?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_WILLEM_VAN_ORANJE_1</Tag>
+		<English>Can you spare us this, [CT_NAME]? I would be extremely grateful for your assistance.</English>
+		<French>Pouvez-vous nous donner ceci, [CT_NAME] ? Je vous serais extrêmement reconnaissant de votre aide.</French>
+		<German>Könnt Ihr das hier erübrigen, [CT_NAME]? Ich wäre Euch wirklich außerordentlich verbunden.</German>
+		<Italian>Puoi darci ciò che chiediamo, [CT_NAME]? Sarei molto riconoscente per la tua assistenza.</Italian>
+		<Spanish>¿Podrías darnos esto, [CT_NAME]? Os estaríamos tremendamente agradecidos por vuestra ayuda.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_WINSTON_CHURCHILL_1</Tag>
+		<English>Perhaps you would care to show your appreciation for our friendship, [CT_NAME]...</English>
+		<French>Vous souhaiterez peut-&#234;tre nous t&#233;moigner votre amiti&#233;, [CT_NAME]...</French>
+		<German>So eine kleine Geste der Anerkennung unserer Freundschaft könnte nicht schaden, [CT_NAME] ...</German>
+		<Italian>Forse non disdegnerai di mostrarci quanto apprezzi la nostra amicizia, [CT_NAME]...</Italian>
+		<Spanish>Quizá os gustaría mostrar el aprecio que sentís por nuestra amistad, [CT_NAME]...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_ZARA_YAQOB_1</Tag>
+		<English>Pay it forward, [CT_NAME]. </English>
+		<French>Payez-nous votre tribut, [CT_NAME].</French>
+		<German>Her damit, [CT_NAME]! </German>
+		<Italian>Anticipa i soldi, [CT_NAME]. </Italian>
+		<Spanish>Pagadlo ahora mismo, [CT_NAME]. </Spanish>
+	</TEXT>
 </Civ4GameText>
