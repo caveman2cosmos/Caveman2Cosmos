@@ -17844,4 +17844,300 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Amichevole:Amichevole</Italian>
 		<Spanish>Amistosa</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_PROMOTION</Tag>
+		<English>Promote Unit</English>
+		<French>Promouvoir l'unit&#233;</French>
+		<German>Einheit bef&#246;rdern</German>
+		<Italian>Promuovi unit&#224;</Italian>
+		<Spanish>Ascender unidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_UPGRADE</Tag>
+		<English>Upgrade Unit</English>
+		<French>Am&#233;liorer l'unit&#233;</French>
+		<German>Einheit modernisieren</German>
+		<Italian>Migliora unit&#224;</Italian>
+		<Spanish>Modernizar unidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_AUTOMATE</Tag>
+		<English>Automate the Unit</English>
+		<French>Automatiser l'unit&#233;</French>
+		<German>Einheit automatisieren</German>
+		<Italian>Automatizza l'unit&#224;</Italian>
+		<Spanish>Automatizar la unidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_WAKE</Tag>
+		<English>Wake the Unit</English>
+		<French>R&#233;veiller l'unit&#233;</French>
+		<German>Einheit wecken</German>
+		<Italian>Sveglia l'unit&#224;</Italian>
+		<Spanish>Despertar a la unidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_CANCEL</Tag>
+		<English>Cancel last Mission</English>
+		<French>Annuler la derni&#232;re mission</French>
+		<German>Letzte Mission abbrechen</German>
+		<Italian>Annulla l'ultima missione</Italian>
+		<Spanish>Cancelar &#250;ltima misi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_CANCEL_ALL</Tag>
+		<English>Cancel all Missions</English>
+		<French>Annuler toutes les missions</French>
+		<German>Alle Eins&#228;tze abbrechen</German>
+		<Italian>Annulla tutte le missioni</Italian>
+		<Spanish>Cancelar todas las misiones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_STOP_AUTOMATION</Tag>
+		<English>Stop Automation</English>
+		<French>Annuler l'automatisation</French>
+		<German>Automatisierung stoppen</German>
+		<Italian>Interrompi l'automazione</Italian>
+		<Spanish>Detener la automatizaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_DELETE</Tag>
+		<English>Delete the Unit</English>
+		<French>Supprimer l'unit&#233;</French>
+		<German>Einheit aufl&#246;sen</German>
+		<Italian>Elimina l'unit&#224;</Italian>
+		<Spanish>Borrar la unidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_GIFT</Tag>
+		<English>Gift the Unit</English>
+		<French>Offrir l'unit&#233;</French>
+		<German>Einheit schenken</German>
+		<Italian>Dona l'unit&#224;</Italian>
+		<Spanish>Regalar la unidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_LOAD</Tag>
+		<English>Load</English>
+		<French>Charger</French>
+		<German>Laden</German>
+		<Italian>Imbarca</Italian>
+		<Spanish>Embarcar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_UNLOAD</Tag>
+		<English>Unload</English>
+		<French>D&#233;charger</French>
+		<German>Entladen</German>
+		<Italian>Sbarca</Italian>
+		<Spanish>Desembarcar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_UNLOAD_ALL</Tag>
+		<English>Unload All</English>
+		<French>D&#233;charger tous</French>
+		<German>Alle entladen</German>
+		<Italian>Sbarca tutto</Italian>
+		<Spanish>Desembarcar todas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_WAKE_HELP</Tag>
+		<English>This will wake the unit up so that it can be issued orders. Waking a unit does not remove its fortification bonus.</English>
+		<French>R&#233;veiller l'unit&#233; pour lui donner des ordres. Cette action ne modifie pas le bonus de retranchement de l'unit&#233;.</French>
+		<German>Wecken Sie eine Einheit auf und erteilen Sie ihr Befehle. Die Einheit verliert dadurch nicht ihren Befestigungsbonus.</German>
+		<Italian>Questo comando sveglier&#224; l'unit&#224;, in modo che possa ricevere ordini. Svegliando un'unit&#224; non si perde il bonus della sua fortificazione.</Italian>
+		<Spanish>Esto despertar&#225; a la unidad para que se le puedan dar &#243;rdenes. Despertar a una unidad no elimina las bonificaciones que tenga por fortificaci&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_CANCEL_HELP</Tag>
+		<English>This will cancel the last order in the unit's mission queue. You will find this to be very useful if you accidentally queue the wrong order.</English>
+		<French>Annuler le dernier ordre de la liste d'attente. Cette option est tr&#232;s utile pour corriger une erreur.</French>
+		<German>L&#246;schen Sie den letzten Befehl in der Befehlsliste der Einheit. Haben Sie dieser versehentlich einen falschen Befehl erteilt, ist diese Funktion sehr n&#252;tzlich.</German>
+		<Italian>Questo comando annulla l'ultimo ordine nella coda delle azioni dell'unit&#224;. Estremamente utile se si sbaglia a impostare la coda degli ordini.</Italian>
+		<Spanish>Esto cancelar&#225; la &#250;ltima orden en la cola de &#243;rdenes de la unidad. Es muy &#250;til si pon&#233;is sin querer una orden incorrecta en la cola.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_CANCEL_ALL_HELP</Tag>
+		<English>This will cancel all queued orders for the currently selected unit.</English>
+		<French>Annuler tous les ordres en attente de l'unit&#233; s&#233;lectionn&#233;e.</French>
+		<German>L&#246;schen Sie alle Befehle der aktuellen Einheit.</German>
+		<Italian>Per annullare tutti gli ordini in coda dell'unit&#224; selezionata.</Italian>
+		<Spanish>Esto cancelar&#225; todas las &#243;rdenes que haya en cola para la unidad que teng&#225;is seleccionada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_STOP_AUTOMATION_HELP</Tag>
+		<English>This will cancel the order for the unit to automate itself. It will then rely on you for all orders.</English>
+		<French>Annuler l'automatisation de l'unit&#233;. Vous pouvez ensuite lui donner de nouveaux ordres.</French>
+		<German>Widerrufen Sie den Automatisierungsbefehl der Einheit. Diese wartet anschlie&#223;end auf weitere Befehle. </German>
+		<Italian>Per annullare l'ordine di automazione di un'unit&#224; e riprenderne completamente il controllo.</Italian>
+		<Spanish>Sirve para cancelar la orden de automatizarse de la unidad. &#201;sta pasar&#225; a obedecer solo las &#243;rdenes que le deis.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_DELETE_HELP</Tag>
+		<English>Click on this order to remove the unit from play.</English>
+		<French>Retirer l'unit&#233; de la partie.</French>
+		<German>Klicken Sie hier, um die Einheit aus dem Spiel zu entfernen.</German>
+		<Italian>Clicca su questo ordine per rimuovere l'unit&#224; dalla partita.</Italian>
+		<Spanish>Hacer clic en esta orden para eliminar a la unidad de la partida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_GIFT_HELP</Tag>
+		<English>This will give the currently selected unit to the player who controls the land the unit is standing on. To give the unit to a different player you must first move the unit into their territory.</English>
+		<French>Transf&#233;rer l'unit&#233; s&#233;lectionn&#233;e au joueur contr&#244;lant le terrain sur laquelle elle se trouve. Pour transf&#233;rer une unit&#233; &#224; un joueur, vous devez d'abord placer cette unit&#233; sur son territoire.</French>
+		<German>&#220;bergeben Sie die aktuelle Einheit dem Spieler, der ihren Standort kontrolliert. M&#246;chten Sie die Einheit einem anderen Spieler &#252;bergeben, m&#252;ssen Sie sie zuerst in dessen Territorium verlegen.</German>
+		<Italian>Questo comando serve per consegnare l'unit&#224; attualmente selezionata al giocatore che controlla il territorio sul quale si trova l'unit&#224;. Per dare l'unit&#224; a un altro giocatore devi prima muovere l'unit&#224; nel territorio prescelto.</Italian>
+		<Spanish>Con esto le dar&#233;is la unidad seleccionada al jugador que controle la tierra en la que se encuentre dicha unidad. Para darle la unidad a otro jugador, antes tendr&#233;is que moverla a un territorio que le pertenezca.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_LOAD_HELP</Tag>
+		<English>This will move the unit into a transport.</English>
+		<French>Embarquer l'unit&#233; &#224; bord d'un transport.</French>
+		<German>Schicken Sie die Einheit in ein Transportschiff.</German>
+		<Italian>Per muovere un'unit&#224; a bordo di un trasporto.</Italian>
+		<Spanish>Con esto subir&#233;is la unidad a un transporte.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_UNLOAD_HELP</Tag>
+		<English>This will unload a previously loaded unit from its transport.</English>
+		<French>D&#233;charger une unit&#233; d'un transport.</French>
+		<German>Entladen Sie eine zuvor eingeladene Einheit.</German>
+		<Italian>Per scaricare un'unit&#224; precedentemente caricata su un trasporto.</Italian>
+		<Spanish>Con esto bajar&#233;is del transporte a una unidad previamente embarcada en &#233;l.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_UNLOAD_ALL_HELP</Tag>
+		<English>This will unload all transported units.</English>
+		<French>D&#233;charger toutes les unit&#233;s transport&#233;es.</French>
+		<German>Entladen Sie alle transportierten Einheiten.</German>
+		<Italian>Per scaricare tutte le unit&#224; a bordo del trasporto.</Italian>
+		<Spanish>Con esto desembarcar&#225;n todas las unidades transportadas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_HOTKEY_HELP</Tag>
+		<English>Allows you to assign a hot-key to this unit.</English>
+		<French>Assigner un raccourci-clavier &#224; cette unit&#233;.</French>
+		<German>Weisen Sie dieser Einheit eine Schnelltaste zu.</German>
+		<Italian>Ti permette di assegnare un tasto di scelta rapida a questa unit&#224;.</Italian>
+		<Spanish>Permite asignarle una tecla de acceso a esta unidad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_LOAD_UNIT</Tag>
+		<English>Load onto Unit</English>
+		<French>Charger sur unit&#233;</French>
+		<German>Einheit beladen</German>
+		<Italian>Carica sull'unit&#224;</Italian>
+		<Spanish>Embarcar la unidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_LOAD_UNIT_HELP</Tag>
+		<English>This will move the unit into a specified transport.</English>
+		<French>L'unit&#233; embarquera &#224; bord du transport indiqu&#233;.</French>
+		<German>Die Einheit wird in die gew&#228;hlte Transporteinheit geladen.</German>
+		<Italian>Per muovere un'unit&#224; sul trasporto specificato.</Italian>
+		<Spanish>Con esto, la unidad embarcar&#225; en el transporte especificado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMERCE_GOLD</Tag>
+		<English>Gold</English>
+		<French>
+			<Text>Or</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gold</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Oro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Oro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMERCE_CULTURE</Tag>
+		<English>Culture</English>
+		<French>
+			<Text>Culture[SPACE]</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kultur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cultura</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cultura</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_NONE</Tag>
+		<English>None</English>
+		<French>inexistant</French>
+		<German>Null</German>
+		<Italian>Nessuno</Italian>
+		<Spanish>Inexistente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_POOR</Tag>
+		<English>Poor</English>
+		<French>balbutiante</French>
+		<German>Gering</German>
+		<Italian>Povero</Italian>
+		<Spanish>Pobre</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_FLEDGLING</Tag>
+		<English>Fledgling</English>
+		<French>naissante</French>
+		<German>Beginnend</German>
+		<Italian>Principiante</Italian>
+		<Spanish>Incipiente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_DEVELOPING</Tag>
+		<English>Developing</English>
+		<French>grandissante</French>
+		<German>Wachsend</German>
+		<Italian>In sviluppo</Italian>
+		<Spanish>Creciente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_REFINED</Tag>
+		<English>Refined</English>
+		<French>raffin&#233;e</French>
+		<German>Fortgeschritten</German>
+		<Italian>Raffinato</Italian>
+		<Spanish>Refinada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_INFLUENTIAL</Tag>
+		<English>Influential</English>
+		<French>influente</French>
+		<German>Einflussreich</German>
+		<Italian>Influente</Italian>
+		<Spanish>Influyente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_LEGENDARY</Tag>
+		<English>Legendary</English>
+		<French>l&#233;gendaire</French>
+		<German>Legend&#228;r</German>
+		<Italian>Leggendaria</Italian>
+		<Spanish>Legendaria</Spanish>
+	</TEXT>
 </Civ4GameText>
