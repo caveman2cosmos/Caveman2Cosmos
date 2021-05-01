@@ -8224,4 +8224,188 @@
 		<Italian>I cieli comandano che tu ci dia ciò che ci serve, [CT_NAME]. A meno che non ti piaccia essere colpito dai fulmini ti consiglio di accettare.</Italian>
 		<Spanish>Es voluntad del Cielo que nos deis lo siguiente, [CT_NAME]. A menos que os gusten especialmente los rayos, os apremiamos a hacerlo.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_BOUDICA_1</Tag>
+		<English>Give until it hurts, [CT_NAME].</English>
+		<French>Donnez-nous jusqu'à la dernière pièce de votre coffre, [CT_NAME].</French>
+		<German>Ihr solltet bereit sein, Euer Bestes zu geben, [CT_NAME].</German>
+		<Italian>Dacci tutto, [CT_NAME].</Italian>
+		<Spanish>Aflojad la pasta, [CT_NAME].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_CHARLEMAGNE_1</Tag>
+		<English>Give us what we want and perhaps your heathenish empire will survive another day. Perhaps...</English>
+		<French>Donnez-nous ce que nous voulons et nous laisserons votre empire barbare survivre un jour de plus. Enfin, peut-être...</French>
+		<German>Wenn Ihr uns gebt, was wir verlangen, wird Euer heidnisches Volk möglicherweise noch eine Weile überdauern. Möglicherweise ...</German>
+		<Italian>Dacci ciò che vogliamo e forse il tuo impero pagano sopravvivrà un altro giorno. Forse...</Italian>
+		<Spanish>Dadnos lo que queremos y quizá vuestro imperio infiel sobreviva otro día. Quizá...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_DARIUS_1</Tag>
+		<English>I'm all about the bling, [CT_NAME]. Hand it over or suffer the consequences.</English>
+		<French>Je ne crois qu'à l'argent, [CT_NAME]. Payez ou vous en subirez les conséquences.</French>
+		<German>Ich stehe auf Glitzerzeug, [CT_NAME], also überlasst uns Eure Wertsachen oder tragt die Konsequenzen!</German>
+		<Italian>Vado matto per i soldi, [CT_NAME]. Daccene o paga le conseguenze delle tue azioni.</Italian>
+		<Spanish>Me gustan los tesoros, [CT_NAME]. Entregádnoslos o sufrid las consecuencias.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_DE_GAULLE_1</Tag>
+		<English>The honor of [OUR_CIV_SHORT] demands that you provide us with the following. Or we'll destroy you.</English>
+		<French>L'honneur des [OUR_CIV_SHORT:3] exige que vous nous donniez ceci. Sinon, nous vous anéantirons.</French>
+		<German>Es gebührt der Ehre des Volkes von [OUR_CIV_SHORT], dass Ihr uns dies hier überlasst. Andernfalls werden wir Euch vernichten müssen!</German>
+		<Italian>L'onore di [OUR_CIV_SHORT] impone che tu ci dia ciò di cui abbiamo bisogno. O vi distruggeremo.</Italian>
+		<Spanish>El honor de [OUR_CIV_SHORT] exige que nos proporcionéis lo siguiente. O nos veremos obligados a destruiros.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_HAMMURABI_1</Tag>
+		<English>Give us this or we shall surely come and take it.</English>
+		<French>Donnez-nous ce que nous voulons ou nous viendrons nous en emparer par la force.</French>
+		<German>Gebt uns, was wir verlangen, oder wir werden kommen und es uns holen!</German>
+		<Italian>Dacci ciò che vogliamo, o verremo di certo a prendercelo.</Italian>
+		<Spanish>Dadnos esto si no queréis que vayamos y lo cojamos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_HANNIBAL_1</Tag>
+		<English>Give us what we want and perhaps we'll let your puny civilization survive for a while longer.</English>
+		<French>Donnez-nous ce que nous vous avons demand&#233; et peut-&#234;tre laisserons-nous votre m&#233;diocre civilisation survivre quelques temps encore.</French>
+		<German>Wenn Ihr uns gebt, was wir verlangen, werden wir Eure jämmerliche kleine Zivilisation vielleicht noch eine Weile verschonen</German>
+		<Italian>Dacci ciò che ti chiediamo e forse lasceremo sopravvivere ancora un po' la tua insignificante civiltà.</Italian>
+		<Spanish>Dadnos lo que queremos y puede que dejemos sobrevivir a vuestra insignificante civilización un poco más.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_JOAO_1</Tag>
+		<English>[CT_NAME], I'm making you an offer you can't refuse.</English>
+		<French>[CT_NAME], je vais vous faire une offre que vous ne pourrez pas refuser.</French>
+		<German>Ich mache Euch ein Angebot, das Ihr nicht ablehnen könnt, [CT_NAME].</German>
+		<Italian>[CT_NAME], ti sto facendo un'offerta che non puoi rifiutare.</Italian>
+		<Spanish>[CT_NAME], os voy a hacer una oferta que no podréis rechazar.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_JOSEF_STALIN_1</Tag>
+		<English>Give us what we want or suffer the consequences.</English>
+		<French>Si vous ne nous donnez pas ce que nous vous avons demand&#233;, vous risquez d'en subir les terribles cons&#233;quences.</French>
+		<German>Gebt uns, was wir verlangen oder tragt die Konsequenzen!</German>
+		<Italian>Dacci quello che vogliamo o preparati ad affrontare le conseguenze.</Italian>
+		<Spanish>Dadnos lo que queremos o ateneos a las consecuencias.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_JUSTINIAN_1</Tag>
+		<English>Give us what we want, [CT_NAME]. Your armies are no match for ours, and you know it.</English>
+		<French>Donnez-nous ce que nous voulons, [CT_NAME]. Vos armées ne font pas le poids face aux nôtres et vous le savez.</French>
+		<German>Gebt uns, was wir verlangen, [CT_NAME]! Eure Truppen können es nicht mit unseren aufnehmen, und das wisst Ihr auch!</German>
+		<Italian>Dacci ciò che vogliamo, [CT_NAME]. I tuoi eserciti non possono farcela contro di noi, e lo sai.</Italian>
+		<Spanish>Dadnos lo que queremos, [CT_NAME]. Vuestros ejércitos no son rivales para los nuestros, y lo sabéis.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LINCOLN_1</Tag>
+		<English>Hand this over or feel the wrath of our 'terrible swift sword.' </English>
+		<French>Répondez à nos exigences ou vous subirez la foudre de notre "terrible et rapide épée".</French>
+		<German>Schlagt ein, wenn Ihr kein zweites Gettysburg erleben wollt! </German>
+		<Italian>Dammi ciò che chiedo o proverai l'ira della nostra &quot;terribile e rapida spada.&quot; </Italian>
+		<Spanish>Dadnos esto o sentiréis la cólera de nuestra &quot;terrible y veloz espada&quot;. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_MEHMED_1</Tag>
+		<English>If you want our continued friendship,[CT_NAME], you'll have to pay for it.</English>
+		<French>Pour le cas o&#249; vous seriez int&#233;ress&#233; par une amiti&#233; prolong&#233;e, [CT_NAME], il est pr&#233;f&#233;rable que vous en payiez le prix.</French>
+		<German>Wenn Euch an unserer Freundschaft gelegen ist, werdet Ihr sie Euch sicher auch etwas kosten lassen, [CT_NAME]!</German>
+		<Italian>Se desideri continuare a godere della nostra amicizia, [CT_NAME], dovrai pagare.</Italian>
+		<Spanish>Si quer&#233;is que nuestra amistad prosiga, [CT_NAME], tendr&#233;is que pagar por ella.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_PACAL_1</Tag>
+		<English>Give us what we want or die.</English>
+		<French>Donnez-nous ce que nous voulons ou mourez !</French>
+		<German>Gebt uns, wonach wir verlangen, oder sterbt!</German>
+		<Italian>Dacci ciò che vogliamo o morirai.</Italian>
+		<Spanish>Dadnos lo que queremos o morid.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_PERICLES_1</Tag>
+		<English>Beware of Greeks demanding gifts, [CT_NAME]. </English>
+		<French>Ne prenez pas les exigences des Grecs à la légère, [CT_NAME].</French>
+		<German>Nehmt Euch vor Griechen in Acht, die Geschenke von Euch fordern, [CT_NAME]! </German>
+		<Italian>Attento ai Greci che chiedono doni, [CT_NAME]. </Italian>
+		<Spanish>Cuidaos de los griegos que piden regalos, [CT_NAME]. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_RAGNAR_LODBROK_1</Tag>
+		<English>Give us this or die.</English>
+		<French>Donnez-nous &#231;a ou p&#233;rissez !</French>
+		<German>Her damit oder Ihr werdet sterben!</German>
+		<Italian>Dammelo o morirai.</Italian>
+		<Spanish>Dádnoslo o morid.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_RAMESSES_II_1</Tag>
+		<English>Give this to me immediately or face my divine wrath!</English>
+		<French>Si vous ne nous donnez pas cela imm&#233;diatement, vous risquez de provoquer mon divin courroux !</French>
+		<German>Her damit oder Ihr werdet meinen göttlichen Zorn zu spüren bekommen!</German>
+		<Italian>Dammelo immediatamente o dovrai affrontare la mia collera divina!</Italian>
+		<Spanish>¡Dádnoslo inmediatamente o afrontad mi cólera divina!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SHAKA_1</Tag>
+		<English>Hand this over, [CT_NAME], and I might let you continue to exist for a short while longer.</English>
+		<French>Donnez-nous ce tribut, [CT_NAME], et il est possible que je vous laisse vivre... quelques temps, en tout cas.</French>
+		<German>Her damit, [CT_NAME]! Dann werde ich Euch vielleicht noch eine Weile verschonen!</German>
+		<Italian>Dammelo, [CT_NAME], e potrei lasciarti continuare a esistere ancora un po'.</Italian>
+		<Spanish>Entregadnos esto, [CT_NAME] y puede que os deje perdurar un poco más.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SITTING_BULL_1</Tag>
+		<English>It is unwise to deny a hungry bear its food, [CT_NAME]. You're liable to get mauled.</English>
+		<French>Il n'est pas sage de priver de nourriture un ours affamé, [CT_NAME]. Vous risquez de vous faire déchiqueter. </French>
+		<German>Es wäre nicht besonders klug, einem hungrigen Bär sein Futter zu verweigern, [CT_NAME]. Ihr würdet Euch nur selbst schaden.</German>
+		<Italian>Non è saggio negare il cibo a un orso affamato, [CT_NAME]. Rischi di prenderle.</Italian>
+		<Spanish>Es poco prudente quitarle la comida a un oso hambriento, [CT_NAME]. Si os ataca, será culpa vuestra.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SULEIMAN_1</Tag>
+		<English>Our protection comes at a price, [CT_NAME]. Pay up or suffer the consequences.</English>
+		<French>Notre protection a un prix, [CT_NAME]. Payez ou vous en subirez les conséquences.</French>
+		<German>Unser Schutz ist nicht umsonst zu haben, [CT_NAME]! Also zahlt oder tragt die Konsequenzen!</German>
+		<Italian>La nostra protezione ha un prezzo, [CT_NAME]. Dacci ciò che vogliamo o pagane le conseguenze.</Italian>
+		<Spanish>Nuestra protección tiene un precio, [CT_NAME]. Pagad o afrontad las consecuencias.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SURYAVARMAN_1</Tag>
+		<English>You may pay us in treasure today or in blood tomorrow. I strongly recommend the former.</English>
+		<French>Vous avez le choix entre nous payer en or aujourd'hui ou en sang demain. Je vous recommande fortement la première option.</French>
+		<German>Ihr habt die Wahl: Überschüttet uns heute mit Reichtümern oder zahlt morgen mit Eurem Blut. Ich persönlich würde Euch eindringlich zu Ersterem raten ...</German>
+		<Italian>Puoi pagarci col tesoro oggi o col sangue domani. Ti consiglio caldamente il primo.</Italian>
+		<Spanish>O nos pagáis en tesoro hoy o en sangre mañana. Os recomiendo encarecidamente lo primero.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_WANG_KON_1</Tag>
+		<English>Time to pay it forward, [CT_NAME].</English>
+		<French>L'heure est venue de payer votre d&#251;, [CT_NAME].</French>
+		<German>Es ist Zahltag, [CT_NAME]!</German>
+		<Italian>Devi anticiparmi qualcosa, [CT_NAME].</Italian>
+		<Spanish>Es hora de pagar en el acto, [CT_NAME].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_WILLEM_VAN_ORANJE_1</Tag>
+		<English>Time to pay the piper, [CT_NAME].</English>
+		<French>Il est temps de payer l'ardoise, [CT_NAME].</French>
+		<German>Zeit, die Zeche zu zahlen, [CT_NAME].</German>
+		<Italian>È ora di pagare il conto, [CT_NAME].</Italian>
+		<Spanish>Es hora de pagar a quienes tienen la sartén por el mango, [CT_NAME].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_WINSTON_CHURCHILL_1</Tag>
+		<English>You have something we need, [CT_NAME]. Isn't it NICE to be needed?</English>
+		<French>Vous avez quelque chose dont nous avons besoin, [CT_NAME]. N'est-ce pas r&#233;jouissant de se sentir n&#233;cessaire ?</French>
+		<German>Ihr besitzt etwas, was wir haben wollen, [CT_NAME]. Ist ein gutes Gefühl, gebraucht zu werden, oder?</German>
+		<Italian>Hai una cosa che ci serve, [CT_NAME]. Non è BELLO sapere di servire a qualcuno?</Italian>
+		<Spanish>Ten&#233;is algo que necesitamos, [CT_NAME]. ¿No es bonito sentirse necesario?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_ZARA_YAQOB_1</Tag>
+		<English>Everyone has needs, [CT_NAME]. For example, we need the following, and you need to give it to us. </English>
+		<French>Tout le monde a des besoins, [CT_NAME]. En l'occurrence, il nous faut un tribut, et il vous faut le satisfaire.</French>
+		<German>Jeder hat doch so seine Bedürfnisse, nicht wahr, [CT_NAME]? Uns fehlt es beispielsweise an diesem hier und Ihr tätet gut daran, es uns beschaffen. </German>
+		<Italian>Tutti hanno dei bisogni, [CT_NAME]. Per esempio noi abbiamo bisogno di questo, e tu hai bisogno di darcelo. </Italian>
+		<Spanish>Todo el mundo tiene sus necesidades, [CT_NAME]. Por ejemplo, nosotros necesitamos lo siguiente, y vosotros necesitáis dárnoslo. </Spanish>
+	</TEXT>
 </Civ4GameText>
