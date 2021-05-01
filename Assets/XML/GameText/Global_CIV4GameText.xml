@@ -22597,4 +22597,508 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Leva %s1_Unit, %d2 Pop</Italian>
 		<Spanish>Reclutar %s1_Unit, %d2 pob</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ECON_AMOUNT_MONEY_UNITS_ENEMY_TERRITORY</Tag>
+		<English>The Amount of Money Spent on Units in Enemy Territory</English>
+		<French>Somme d&#233;pens&#233;e pour les unit&#233;s en territoire ennemi</French>
+		<German>Ausgaben f&#252;r Einheiten auf feindlichem Territorium</German>
+		<Italian>Il quantitativo di soldi spesi nel mantenimento delle unit&#224; in territorio nemico</Italian>
+		<Spanish>Dinero gastado en unidades en territorio enemigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ECON_AMOUNT_MONEY_CITY_MAINT</Tag>
+		<English>The Amount of Money Spent on City Maintenance</English>
+		<French>Somme d&#233;pens&#233;e pour l'entretien de ville</French>
+		<German>Ausgaben f&#252;r Stadtunterhalt</German>
+		<Italian>Il quantitativo di soldi spesi nel mantenimento della citt&#224;</Italian>
+		<Spanish>Dinero gastado en el mantenimiento de ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ECON_AMOUNT_MONEY_CIVIC_UPKEEP</Tag>
+		<English>The Amount of Money Spent on Civics</English>
+		<French>Somme d&#233;pens&#233;e pour l'entretien doctrinal</French>
+		<German>Ausgaben f&#252;r Staatsformen</German>
+		<Italian>Il quantitativo di soldi spesi nel mantenimento delle forme di governo</Italian>
+		<Spanish>Dinero gastado en principios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ECON_AMOUNT_MONEY_FOREIGN</Tag>
+		<English>Income collected from other civilizations</English>
+		<French>Recettes provenant des autres civilisations</French>
+		<German>Einnahmen von anderen Zivilisationen</German>
+		<Italian>Entrate dalle altre civilt&#224;</Italian>
+		<Spanish>Ingresos obtenidos de otras civilizaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ECON_AMOUNT_MONEY_AFTER_INFLATION</Tag>
+		<English>Increase of Expenses due to Inflation</English>
+		<French>Augmentation des d&#233;penses due &#224; l'inflation</French>
+		<German>Ausgabenanstieg durch Inflation</German>
+		<Italian>Aumenta le spese a causa dell'inflazione</Italian>
+		<Spanish>Aumento de los gastos debido a la inflaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ECON_GROSS_INCOME</Tag>
+		<English>Your Gross Income</English>
+		<French>Vos revenus bruts</French>
+		<German>Eure Bruttoeinnahmen</German>
+		<Italian>Entrate lorde</Italian>
+		<Spanish>Ingresos brutos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ECON_NET_GOLD</Tag>
+		<English>Net Gold Per Turn</English>
+		<French>Or (net) par tour</French>
+		<German>Netto-Goldbetrag pro Runde</German>
+		<Italian>Oro netto per turno</Italian>
+		<Spanish>Oro neto por turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ECON_NUM_UNITS_SUPPORTING</Tag>
+		<English>Number of Units You Are Currently Supporting</English>
+		<French>Nombre d'unit&#233;s actuellement &#224; votre charge</French>
+		<German>Anzahl der aktuell unterhaltenen Einheiten</German>
+		<Italian>Numero delle unit&#224; attualmente supportate</Italian>
+		<Spanish>N&#250;mero de unidades que se abastecen actualmente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ELECTION_CANCELLED</Tag>
+		<English>The election has been cancelled</English>
+		<French>Le vote a été annulé.</French>
+		<German>Die Wahl wurde abgebrochen</German>
+		<Italian>L'elezione è stata annullata</Italian>
+		<Spanish>Se ha cancelado la elección</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ERA_SPLASH_SCREEN</Tag>
+		<English>You have entered the %s1_era era!</English>
+		<French>Vous venez d'entrer dans une nouvelle &#232;re (%s1_era) !</French>
+		<German>Ihr habt das Zeitalter %s1 erreicht!</German>
+		<Italian>Sei entrato nell'era %s1_era!</Italian>
+		<Spanish>Hab&#233;is entrado en [NUM1:el:la:los:las] %s1_era.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_AGAINST_PLAYER</Tag>
+		<English>[ICON_ESPIONAGE] Ratio with %s1_player: %d2/%d3[NEWLINE]</English>
+		<French>[ICON_ESPIONAGE] Rapport avec %s1_player : %d2/%d3[NEWLINE]</French>
+		<German>[ICON_ESPIONAGE] Verh&#228;ltnis zu %s1_player: %d2/%d3[NEWLINE]</German>
+		<Italian>[ICON_ESPIONAGE] rapporto con %s1_player: %d2/%d3[NEWLINE]</Italian>
+		<Spanish>[ICON_ESPIONAGE] Proporci&#243;n con %s1_player: %d2/%d3[NEWLINE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_BASE_COST</Tag>
+		<English>%d1 [ICON_ESPIONAGE]: Base Cost</English>
+		<French>%d1 [ICON_ESPIONAGE] : co&#251;t de base</French>
+		<German>%d1 [ICON_ESPIONAGE]: Basiskosten</German>
+		<Italian>%d1 [ICON_ESPIONAGE]: costo basilare</Italian>
+		<Spanish>%d1 [ICON_ESPIONAGE]: Coste base</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_CANNOT_DO_MISSION</Tag>
+		<English>That Mission cannot be used there right now.</English>
+		<French>Cette mission ne peut &#234;tre ex&#233;cut&#233;e pour l'instant.</French>
+		<German>Diese Mission kann dort im Augenblick nicht ausgef&#252;hrt werden.</German>
+		<Italian>Quella missione non pu&#242; essere utilizzata qui ora.</Italian>
+		<Spanish>Esta misi&#243;n no se puede realizar all&#237; ahora mismo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_CHANCE_OF_SUCCESS</Tag>
+		<English>Chance of Success: %d1%%</English>
+		<French>Chance de r&#233;ussite : %d1%%</French>
+		<German>Erfolgschance: %d1%%</German>
+		<Italian>Probabilit&#224; di successo: %d1%%.</Italian>
+		<Spanish>Posibilidades de &#233;xito: %d1%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_CHOOSE_TARGET</Tag>
+		<English>Choose Your Target</English>
+		<French>Choisir votre cible</French>
+		<German>W&#228;hlt Euer Ziel aus</German>
+		<Italian>Scegli il bersaglio</Italian>
+		<Spanish>Elegir el objetivo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_COST</Tag>
+		<English>%d1%% [ICON_ESPIONAGE] Cost</English>
+		<French>%d1%% [ICON_ESPIONAGE] Co&#251;t</French>
+		<German>%d1%% [ICON_ESPIONAGE] Kosten</German>
+		<Italian>[ICON_ESPIONAGE] Costo %d1%%</Italian>
+		<Spanish>%d1%% de coste [ICON_ESPIONAGE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_COST_TOTAL</Tag>
+		<English>%d1 [ICON_ESPIONAGE]: Total Cost</English>
+		<French>%d1 [ICON_ESPIONAGE] : co&#251;t total</French>
+		<German>%d1 [ICON_ESPIONAGE]: Gesamtkosten</German>
+		<Italian>%d1 [ICON_ESPIONAGE]: costo totale</Italian>
+		<Spanish>%d1 [ICON_ESPIONAGE]: Coste total</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_COUNTERESPIONAGE_MOD</Tag>
+		<English>%D1%%: for Counterespionage</English>
+		<French>%D1%% : pour le contre-espionnage</French>
+		<German>%D1%%: f&#252;r Gegenspionage</German>
+		<Italian>%D1%%: per il controspionaggio</Italian>
+		<Spanish>%D1%%: Por contraespionaje</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_CULTURE_MOD</Tag>
+		<English>%D1%%: for City Culture</English>
+		<French>%D1%% : pour la culture de la ville</French>
+		<German>%D1%%: f&#252;r st&#228;dtische Kultur</German>
+		<Italian>%D1%%: per la cultura della citt&#224;</Italian>
+		<Spanish>%D1%%: Por la cultura de la ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_DEFENSE_MOD</Tag>
+		<English>%D1%%: for City Espionage Defense</English>
+		<French>%D1%% : pour la d&#233;fense de la ville contre l'espionnage</French>
+		<German>%D1%%: f&#252;r st&#228;dtische Spionageabwehr</German>
+		<Italian>%D1%%: per la difesa cittadina dallo spionaggio</Italian>
+		<Spanish>%D1%%: Por defensa contra el espionaje de la ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_DESTROY_UNIT</Tag>
+		<English>Destroy Unit</English>
+		<French>D&#233;truire l'unit&#233;</French>
+		<German>Einheit zerst&#246;ren</German>
+		<Italian>Distruggi unit&#224;</Italian>
+		<Spanish>Destruir unidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_DISTANCE_MOD</Tag>
+		<English>%D1%%: for Distance</English>
+		<French>%D1%% : pour la distance</French>
+		<German>%D1%%: f&#252;r Entfernung</German>
+		<Italian>%D1%%: per la distanza</Italian>
+		<Spanish>%D1%%: Por distancia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_EP_RATIO_MOD</Tag>
+		<English>%D1%%: for Espionage Point Spending</English>
+		<French>%D1%% : pour les points d'espionnage d&#233;pens&#233;s</French>
+		<German>%D1%%: f&#252;r Spionagepunkt-Aufwendung</German>
+		<Italian>%D1%%: per la spesa dei punti spionaggio</Italian>
+		<Spanish>%D1%%: Por gasto en puntos de espionaje</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_HELP_ANARCHY</Tag>
+		<English>Cause %s1_player to enter Anarchy for %d2 [NUM2:turn:turns]</English>
+		<French>Semer l'anarchie chez %s1_player pendant %d2 [NUM2:tour:tours]</French>
+		<German>Bei %s1_player bricht für %d2 [NUM2:Runde:Runden] Anarchie aus</German>
+		<Italian>Spingi %s1_player all'Anarchia per %d2 [NUM2:turno:turni]</Italian>
+		<Spanish>Hacer que %s1_player entre en la anarquía durante %d2 [NUM2:turno:turnos]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_HELP_BRIBE</Tag>
+		<English>Bribe the loyalty of %s1_name</English>
+		<French>Acheter la loyaut&#233; de : %s1_name</French>
+		<German>Die Loyalität von %s1_name kaufen</German>
+		<Italian>Compra la lealtà di %s1_name</Italian>
+		<Spanish>Comprar la lealtad de %s1_name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_HELP_COUNTERESPIONAGE</Tag>
+		<English>Add %d1%% to the cost of %s2_civ_adjective espionage missions against you (lasts for %d3 [NUM3:turn:turns])</English>
+		<French>Ajouter %d1%% au co&#251;t des missions d'espionnage %s2:4_civ_adjective lanc&#233;es contre vous (dure %d3 [NUM3:tour:tours])</French>
+		<German>Kosten der gegen Sie gerichteten %s2:2_civ_adjective Spionagemissionen um %d1%% erhöhen (dauert %d3 [NUM3:Runde:Runden])</German>
+		<Italian>Aggiungi %d1%% al costo delle missioni di spionaggio %s2_civ_adjective contro di te (dura per %d3 [NUM3:turno:turni])</Italian>
+		<Spanish>Añadir un %d1%% al coste de las misiones de espionaje %s2:4_civ_adjective contra ti (dura %d3 [NUM3:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_HELP_DESTROY_IMPROVEMENT</Tag>
+		<English>Sabotage %s1_improvement</English>
+		<French>Saboter %s1_improvement</French>
+		<German>%s1_improvement sabotieren</German>
+		<Italian>Sabota %s1_improvement</Italian>
+		<Spanish>Sabotear %s1_improvement</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_HELP_DESTROY_PRODUCTION</Tag>
+		<English>Sabotage current production (%d1[ICON_PRODUCTION])</English>
+		<French>Saboter la production actuelle (%d1[ICON_PRODUCTION])</French>
+		<German>Aktuelle Produktion sabotieren (%d1[ICON_PRODUCTION])</German>
+		<Italian>Sabota la produzione corrente (%d1[ICON_PRODUCTION])</Italian>
+		<Spanish>Sabotear producción actual (%d1 [ICON_PRODUCTION])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_HELP_DESTROY_UNIT</Tag>
+		<English>Assassinate %s1_unit_name</English>
+		<French>Assassiner : %s1_unit_name</French>
+		<German>%s1_unit_name ermorden</German>
+		<Italian>Uccidi %s1_unit_name</Italian>
+		<Spanish>Asesinar [NUM1:al:a la:a los:a las] %s1_unit_name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_HELP_INSERT_CULTURE</Tag>
+		<English>Spread %d2[ICON_CULTURE] to %s1_city (%d3%%)</English>
+		<French>Etendre %d2[ICON_CULTURE] à %s1_city (%d3%%)</French>
+		<German>%d2[ICON_CULTURE] Kultur in %s1_city (%d3%%) verbreiten</German>
+		<Italian>Diffondi %d2[ICON_CULTURE] a %s1_city (%d3%%)</Italian>
+		<Spanish>Propagar %d2[ICON_CULTURE] a %s1_city (%d3%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_HELP_POISON</Tag>
+		<English>Cause %d1%F2 in %s3_city (fully recovers after %d4 [NUM4:turn:turns])</English>
+		<French>Provoquer %d1%F2 dans la ville : %s3_city (gu&#233;rison totale apr&#232;s %d4 [NUM4:tour:tours])</French>
+		<German>%d1%F2 in %s3_city verursachen (nach %d4 [NUM4:Runde:Runden] vollständig wiederhergestellt)</German>
+		<Italian>Provoca %d1%F2 a %s3_city (recupera pienamente dopo %d4 [NUM4:turno:turni])</Italian>
+		<Spanish>Provocar %d1 %F2 en %s3_city (se recuperará totalmente tras %d4 [NUM4:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_HELP_REVOLT</Tag>
+		<English>Cause %s1_city to revolt for %d2 [NUM2:turn:turns]</English>
+		<French>Provoquer la r&#233;volte de la ville : %s1_city pendant %d2 [NUM2:tour:tours]</French>
+		<German>%d2 [NUM2:Runde:Runden] eine Revolte in %s1_city verursachen</German>
+		<Italian>Provoca una rivolta a %s1_city per %d2 [NUM2:turno:turni]</Italian>
+		<Spanish>Provocar en %s1_city una revuelta durante %d2 [NUM2:turno:turnos]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_HELP_STEAL_TECH</Tag>
+		<English>Gain knowledge of %s1_tech</English>
+		<French>Acqu&#233;rir la connaissance de : %s1_tech</French>
+		<German>Technologie %s1_tech ausspionieren</German>
+		<Italian>Ottieni la conoscenza di %s1_tech</Italian>
+		<Spanish>Adquirir el conocimiento [NUM1:del:de la:de los:de las] %s1_tech</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_HELP_STEAL_TREASURY</Tag>
+		<English>Steal %d1[ICON_GOLD] from the %s2_civ_adjective treasury</English>
+		<French>D&#233;rober %d1[ICON_GOLD] au tr&#233;sor %s2:1_civ_adjective</French>
+		<German>%d1[ICON_GOLD] aus der %s2:2_civ_adjective Schatzkammer stehlen</German>
+		<Italian>Ruba %d1[ICON_GOLD] dal tesoro %s2_civ_adjective</Italian>
+		<Spanish>Robar %d1 [ICON_GOLD] del tesoro %s2:1_civ_adjective</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_HELP_SWITCH_CIVIC</Tag>
+		<English>Induce %s1_player to switch to %s2_civic</English>
+		<French>Pousser %s1_player &#224; adopter la doctrine : %s2_civic</French>
+		<German>%s1_player zum Wechsel zur Staatsform %s2_civic verleiten</German>
+		<Italian>Induci %s1_player a passare a %s2_civic</Italian>
+		<Spanish>Inducir a %s1_player a pasarse [NUM2:al:a la:a los:a las] %s2_civic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_MISSION_PERFORMED</Tag>
+		<English>Espionage Mission undertaken successfully!</English>
+		<French>Mission d'espionnage r&#233;ussie !</French>
+		<German>Spionagemission war erfolgreich!</German>
+		<Italian>Missione di spionaggio portata a termine con successo!</Italian>
+		<Spanish>&#161;La misi&#243;n de espionaje se ha realizado con &#233;xito!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_POPULATION_MOD</Tag>
+		<English>%D1%%: for City Size</English>
+		<French>%D1%% : pour la taille de la ville</French>
+		<German>%D1%%: f&#252;r Stadtgr&#246;&#223;e</German>
+		<Italian>%D1%%: per dimensione della citt&#224;</Italian>
+		<Spanish>%D1%%: Por tama&#241;o de la ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_RELIGION_MOD</Tag>
+		<English>%D1%%: for our State Religion</English>
+		<French>%D1%% : pour notre religion d'Etat</French>
+		<German>%D1%%: f&#252;r unsere Staatsreligion</German>
+		<Italian>%D1%%: per la religione ufficiale</Italian>
+		<Spanish>%D1%%: Por nuestra religi&#243;n oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_SCREEN_COST</Tag>
+		<English>Cost</English>
+		<French>Co&#251;t</French>
+		<German>Kosten</German>
+		<Italian>Costo</Italian>
+		<Spanish>Coste</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_SCREEN_MISSIONS</Tag>
+		<English>Missions</English>
+		<French>Missions</French>
+		<German>Missionen</German>
+		<Italian>Missioni</Italian>
+		<Spanish>Misiones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_SCREEN_PASSIVE_EFFECTS</Tag>
+		<English>Passive Effects</English>
+		<French>Effets passifs</French>
+		<German>Passive Auswirkungen</German>
+		<Italian>Effetti passivi</Italian>
+		<Spanish>Efectos pasivos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_SCREEN_SPENDING_WEIGHT</Tag>
+		<English>Weight</English>
+		<French>Poids</French>
+		<German>Gewich.</German>
+		<Italian>Peso</Italian>
+		<Spanish>Peso</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_SPY_STATIONARY_MOD</Tag>
+		<English>%D1%%: for Stationary Spy</English>
+		<French>%D1%% : pour un espion immobile</French>
+		<German>%D1%%: f&#252;r station&#228;ren Spion</German>
+		<Italian>%D1%%: per la spia stazionaria</Italian>
+		<Spanish>%D1%%: Por esp&#237;a estacionario</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_CITY_BOUGHT</Tag>
+		<English>The loyalty of the city of %s1_CityName was bought by enemy infiltrators!</English>
+		<French>La loyaut&#233; de la ville %s1_CityName a &#233;t&#233; achet&#233;e par des ennemis infiltr&#233;s !</French>
+		<German>Die Loyalit&#228;t der Stadt %s1_CityName wurde von feindlichen Spionen gekauft!</German>
+		<Italian>Infiltrati nemici hanno comperato la lealt&#224; della citt&#224; di %s1_CityName!</Italian>
+		<Spanish>&#161;Los enemigos infiltrados han comprado la lealtad de la ciudad de %s1_CityName!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_CITY_CULTURE_INSERTED</Tag>
+		<English>Elements loyal to another empire have spread propaganda within the city of %s1_CityName!</English>
+		<French>Des fid&#232;les d'un autre empire ont sem&#233; la propagande dans la ville de %s1_CityName !</French>
+		<German>Elemente, die einem anderen Reich treu sind, haben in %s1_CityName Propaganda verbreitet!</German>
+		<Italian>Elementi leali a un altro impero hanno diffuso propaganda nella citt&#224; di %s1_CityName!</Italian>
+		<Spanish>&#161;Los elementos leales a otro imperio han hecho propaganda en la ciudad de %s1_CityName!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_CITY_POISONED</Tag>
+		<English>The Water Supply of the city of %s1_CityName was poisoned by enemy infiltrators!</English>
+		<French>>L'eau de la ville de %s1_CityName a &#233;t&#233; empoisonn&#233;e par des ennemis infiltr&#233;s !</French>
+		<German>Die Wasservorr&#228;te der Stadt %s1_CityName wurden von feindlichen Spionen vergiftet!</German>
+		<Italian>Infiltrati nemici hanno avvelenato la riserva d'acqua della citt&#224; di %s1_CityName!</Italian>
+		<Spanish>&#161;Los enemigos infiltrados han envenenado el agua de la ciudad de %s1_CityName!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_CITY_REVOLT</Tag>
+		<English>Enemy infiltrators have assassinated the governor of the city of %s1_CityName!</English>
+		<French>Des ennemis infiltr&#233;s ont assassin&#233; le gouverneur de la ville de %s1_CityName !</French>
+		<German>Feindliche Spione haben den Stadtverwalter von %s1_CityName ermordet!</German>
+		<Italian>Infiltrati nemici hanno assassinato il governatore della citt&#224; di %s1_CityName!</Italian>
+		<Spanish>&#161;Los enemigos infiltrados han asesinado al gobernante de la ciudad de %s1_CityName!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_CITY_UNHAPPY</Tag>
+		<English>Enemy infiltrators have fomented unrest within the city of %s1_CityName!</English>
+		<French>Des ennemis infiltr&#233;s ont foment&#233; une &#233;meute dans la ville de %s1_CityName !</French>
+		<German>Feindliche Spione haben Unruhen in der Stadt %s1_CityName verbreitet!</German>
+		<Italian>Infiltrati nemici hanno fomentato una rivolta nella citt&#224; di %s1_CityName!</Italian>
+		<Spanish>&#161;Los enemigos infiltrados han fomentado la agitaci&#243;n en la ciudad de %s1_CityName!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_COUNTERESPIONAGE</Tag>
+		<English>Enemy spies appear to be extra vigilant to our espionage efforts in the near future.</English>
+		<French>Les espions ennemis semblent porter une attention particuli&#232;re &#224; nos tentatives d'espionnage.</French>
+		<German>Feindliche Spione werden unsere Spionage-Unternehmungen demn&#228;chst gut im Auge behalten.</German>
+		<Italian>Pare che le spie nemiche saranno molto attente a scoprire i nostri tentativi di spionaggio nell'immediato futuro.</Italian>
+		<Spanish>Parece que los esp&#237;as enemigos no perder&#225;n de vista a nuestros agentes de ahora en adelante.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_PLAYER_ANARCHY</Tag>
+		<English>Enemy infiltrators have supported a rebellion within our lands!</English>
+		<French>Des ennemis infiltr&#233;s ont soutenu une r&#233;bellion sur nos terres !</French>
+		<German>Feindliche Spione haben einen Aufstand in unserem Land angefacht!</German>
+		<Italian>Infiltrati nemici hanno aiutato una ribellione nei nostri territori!</Italian>
+		<Spanish>&#161;Los enemigos infiltrados han apoyado una rebeli&#243;n en nuestras propias tierras!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_PRODUCTION_DESTROYED_IN</Tag>
+		<English>All %s1_buildName progress in %s2_CityName was destroyed by enemy infiltrators!</English>
+		<French>Toutes les progressions du b&#226;timent : %s1_buildName dans %s2_CityName ont &#233;t&#233; d&#233;truites par les infiltrateurs ennemis !</French>
+		<German>Der gesamte Fortschritt bei der Errichtung des Geb&#228;udes %s1_buildName in %s2_CityName wurde von gegnerischen Eindringlingen zerst&#246;rt!</German>
+		<Italian>Tutti i progressi in %s1_buildName presso %s2_CityName sono stati distrutti da nemici infiltrati!</Italian>
+		<Spanish>&#161;Los infiltrados enemigos han destruido todo el progreso [NUM1:del:de la:de los:de las] %s1_buildName en %s2_CityName!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED_IN</Tag>
+		<English>A %s1_BldngName in %s2_CityName was destroyed by enemy infiltrators!</English>
+		<French>[NUM1:Un:Une] %s1_BldngName [NUM1:a &#233;t&#233; d&#233;truit:a &#233;t&#233; d&#233;truite] &#224; %s2_CityName par des ennemis infiltr&#233;s !</French>
+		<German>Das Geb&#228;ude %s1_BldngName in %s2_CityName wurde von feindlichen Spionen zerst&#246;rt!</German>
+		<Italian>Infiltrati nemici hanno distrutto [NUM1:un:una] %s1_BldngName a %s2_CityName!</Italian>
+		<Spanish>&#161;Los enemigos infiltrados han destruido [NUM1:un:una:unos:unas] %s1_BldngName en %s2_CityName!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_STEAL_TREASURY</Tag>
+		<English>A portion of our state treasury was looted by enemy infiltrators!</English>
+		<French>>Une partie de notre tr&#233;sor a &#233;t&#233; pill&#233;e par des ennemis infiltr&#233;s !</French>
+		<German>Feindliche Spione haben einen Teil unseres Staatsschatzes erbeutet!</German>
+		<Italian>Infiltrati nemici hanno rubato una parte del nostro tesoro di stato!</Italian>
+		<Spanish>&#161;Los enemigos infiltrados han saqueado parte de nuestro tesoro!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_SWITCH_CIVIC</Tag>
+		<English>Enemy infiltrators have taken control of the government and imposed %s1_CivicName upon our nation!</English>
+		<French>Des ennemis infiltr&#233;s ont pris le contr&#244;le du gouvernement et impos&#233; la doctrine %s1_CivicName &#224; notre nation !</French>
+		<German>Feindliche Spione haben die Kontrolle &#252;ber die Regierung &#252;bernommen und unserer Nation die Staatsform %s1_CivicName aufgezwungen!</German>
+		<Italian>Infiltrati nemici hanno preso il controllo del governo e hanno imposto alla nostra nazione la forma di governo %s1_CivicName!</Italian>
+		<Spanish>&#161;Los enemigos infiltrados se han hecho con el control del gobierno y han impuesto [NUM1:el:la:los:las] %s1_CivicName en nuestra propia naci&#243;n!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_SWITCH_RELIGION</Tag>
+		<English>Enemy infiltrators have taken control of the clergy and imposed %s1_ReligionName upon our nation!</English>
+		<French>Des ennemis infiltr&#233;s ont pris le contr&#244;le du clerg&#233; et impos&#233; la religion %s1_ReligionName &#224; notre nation !</French>
+		<German>Feindliche Spione haben die Kontrolle &#252;ber die Geistlichkeit &#252;bernommen und unserer Nation die Religion %s1_ReligionName aufgezwungen!</German>
+		<Italian>Infiltrati nemici hanno preso il controllo del clero e hanno imposto alla nostra nazione la religione %s1_ReligionName!</Italian>
+		<Spanish>&#161;Los enemigos infiltrados se han hecho con el control del gobierno y han impuesto el %s1_ReligionName en nuestra propia naci&#243;n!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TARGET_TECH_BOUGHT</Tag>
+		<English>The secrets of %s1_TechName were stolen by enemy infiltrators!</English>
+		<French>Les secrets de la technologie %s1_TechName ont &#233;t&#233; vol&#233;s par des ennemis infiltr&#233;s !</French>
+		<German>Die Geheimnisse der Technologie %s1_TechName wurden von feindlichen Spionen gestohlen!</German>
+		<Italian>Infiltrati nemici hanno rubato i segreti della tecnologia %s1_TechName!</Italian>
+		<Spanish>&#161;Los enemigos infiltrados han robado los secretos [NUM1:del:de la:de los:de las] %s1_TechName!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TOO_EXPENSIVE</Tag>
+		<English>That action costs %d1_CostNum Espionage Points. You have %d2_HaveNum.</English>
+		<French>Cette action co&#251;te %d1_CostNum points d'espionnage. Vous avez %d2_HaveNum points.</French>
+		<German>Diese Aktion kostet %d1_CostNum Spionagepunkte. Ihr habt %d2_HaveNum.</German>
+		<Italian>Quell'azione costa %d1_CostNum punti spionaggio. Ne hai %d2_HaveNum.</Italian>
+		<Spanish>Esta acci&#243;n cuesta %d1_CostNum [NUM1:punto de espionaje:puntos de espionaje]. Ten&#233;is %d2_HaveNum.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_TRADE_ROUTE_MOD</Tag>
+		<English>%D1%%: for Trade Routes</English>
+		<French>%D1%% : pour les routes commerciales</French>
+		<German>%D1%%: f&#252;r Handelswege</German>
+		<Italian>%D1%%: per le rotte commerciali</Italian>
+		<Spanish>%D1%%: Por rutas comerciales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESTIMATED_VICTORY_DATE</Tag>
+		<English>Estimated date of victory: %s1_date</English>
+		<French>Date de victoire estim&#233;e : %s1_date</French>
+		<German>Voraussichtliches Datum des Sieges: %s1_date</German>
+		<Italian>Data prevista per la vittoria: %s1_date</Italian>
+		<Spanish>Fecha de victoria estimada: %s1_date</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EXTENDED_GAME_TITLE</Tag>
+		<English>The End of History...</English>
+		<French>La fin de l'histoire...</French>
+		<German>Das Ende der Geschichte ...</German>
+		<Italian>La fine della storia...</Italian>
+		<Spanish>El final de la historia...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EXTENDED_GAME_YES</Tag>
+		<English>Wait! Just... one... more... turn...</English>
+		<French>Attendez ! Juste... un... dernier... tour...</French>
+		<German>Nur noch ... eine ... einzige ... Runde ...</German>
+		<Italian>Aspetta! Ancora... un... turno... soltanto...</Italian>
+		<Spanish>&#161;Espera! Solo... un... turno... m&#225;s...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EXTENDED_GAME_NO_MENU</Tag>
+		<English>(Exit to Main Menu)</English>
+		<French>(Retour au menu principal)</French>
+		<German>(Zur&#252;ck zum Hauptmen&#252;)</German>
+		<Italian>(Vai al menu principale)</Italian>
+		<Spanish>(Salir al men&#250; principal)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EXTENDED_GAME_NO_DESKTOP</Tag>
+		<English>(Exit to Desktop)</English>
+		<French>(Retour au bureau)</French>
+		<German>(Zur&#252;ck zum Desktop)</German>
+		<Italian>(Vai al desktop)</Italian>
+		<Spanish>(Salir al escritorio)</Spanish>
+	</TEXT>
 </Civ4GameText>
