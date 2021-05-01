@@ -28,7 +28,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CLOUD_DESTROYER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CLOUD_DESTROYER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CLOUD_DESTROYER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -157,7 +156,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_NAUTILUS</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAUTILUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NAUTILUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -299,7 +297,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WAR_WHEEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_WAR_WHEEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WAR_WHEEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -393,7 +390,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_STEAM_TANK</Description>
 			<Civilopedia>TXT_KEY_UNIT_STEAM_TANK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEAM_TANK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -480,7 +476,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_STEAMPUNK_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_STEAMPUNK_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEAMPUNK_WORKER_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -573,10 +568,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

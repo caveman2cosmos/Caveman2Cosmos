@@ -36,7 +36,7 @@ class Grouper:
 		if isinstance(key, int):
 			return self.groupings[key]
 		else:
-			return self.groupingsByKey(key)
+			return self.groupingsByKey[key]
 
 	def __iter__(self):
 		return self.groupings.__iter__()

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE</Tag>
+		<English>Assimulate Indigenous Peoples</English>
+		<French>Assimiler ces Peuples Indigènes</French>
+		<Italian>Assimila la comunità indigena</Italian>
+		<Polish>Asimiluj Tubylców</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DIPLOMAT_PRAISE_IND_PEOPLE</Tag>
+		<English>Assimulate Indigenous Peoples</English>
+		<French>Assimiler ces Peuples Indigènes</French>
+		<Italian>Celebra la comunità indigena</Italian>
+		<Polish>Asimiluj Tubylców</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DIPLOMAT_SPEAK_TO_BARBARIAN_LEADERS</Tag>
+		<English>Speak with barbarian leaders.</English>
+		<French>Parler avec les chefs barbares.</French>
+		<Italian>Parla con i leader barbarici.</Italian>
+		<Polish>Porozmawiaj z przywódcami barbarzyńców.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DIPLOMAT_SPREAD_RELIGION</Tag>
+		<English>Spread your State religion to barbarian city.</English>
+		<French>Propager votre Religion d'Etat à la cité barbare.</French>
+		<Italian>Diffondi la tua religione di stato nella città barbarica.</Italian>
+		<Polish>Konwertuj barbarzyńskie miasto do Twojej religii państwowej.</Polish>
+	</TEXT>
+</Civ4GameText>

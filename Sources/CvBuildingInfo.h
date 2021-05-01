@@ -53,8 +53,6 @@ public:
 	int getProductionCost() const					{ return m_iProductionCost; }
 	int getHurryCostModifier() const				{ return m_iHurryCostModifier; }
 	int getHurryAngerModifier() const				{ return m_iHurryAngerModifier; }
-	int getAdvancedStartCost() const				{ return m_iAdvancedStartCost; }
-	int getAdvancedStartCostIncrease() const		{ return m_iAdvancedStartCostIncrease; }
 	int getMinAreaSize() const						{ return m_iMinAreaSize; }
 	int getNumCitiesPrereq() const					{ return m_iNumCitiesPrereq; }
 	int getNumTeamsPrereq() const					{ return m_iNumTeamsPrereq; }
@@ -103,7 +101,7 @@ public:
 
 	int getHolyCity() const							{ return m_iHolyCity; }
 	int getReligionType() const						{ return m_iReligionType; }
-	int getStateReligion() const					{ return m_iStateReligion; }
+	int getPrereqStateReligion() const				{ return m_iStateReligion; }
 	int getPrereqReligion() const					{ return m_iPrereqReligion; }
 	int getPrereqCorporation() const				{ return m_iPrereqCorporation; }
 	int getFoundsCorporation() const				{ return m_iFoundsCorporation; }
@@ -177,7 +175,7 @@ public:
 	bool isNeverCapture() const						{ return m_bNeverCapture; }
 	bool isNukeImmune() const						{ return m_bNukeImmune; }
 	bool isCenterInCity() const						{ return m_bCenterInCity; }
-	bool isStateReligion() const					{ return m_bStateReligion; }
+	bool needStateReligionInCity() const			{ return m_bStateReligionInCity; }
 	bool isAllowsNukes() const						{ return m_bAllowsNukes; }
 
 	const TCHAR* getConstructSound() const			{ return m_szConstructSound; }
@@ -207,8 +205,6 @@ public:
 	int* getCommerceChangeArray() const;
 	int getCommercePerPopChange(int i) const;
 	int* getCommercePerPopChangeArray() const;
-	int getObsoleteSafeCommerceChange(int i) const;
-	int* getObsoleteSafeCommerceChangeArray() const;
 	int getCommerceChangeDoubleTime(int i) const;
 	int getCommerceModifier(int i) const;
 	int* getCommerceModifierArray() const;
@@ -270,14 +266,12 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	// Afforess 12/9/09
 	int getFreePromotion_2() const					{ return m_iFreePromotion_2; }
 	int getFreePromotion_3() const					{ return m_iFreePromotion_3; }
 	int getPrereqVicinityBonus() const				{ return m_iPrereqVicinityBonus; }
 	int getPrereqRawVicinityBonus() const			{ return m_iPrereqRawVicinityBonus; }
 	int getGlobalPopulationgrowthratepercentage() const { return m_iGlobalPopulationgrowthratepercentage; }
 	int getPopulationgrowthratepercentage() const	{ return m_iPopulationgrowthratepercentage; }
-	bool isBuildOnlyOnPeaks() const					{ return m_bBuildOnlyOnPeaks; }
 	bool isPrereqPower() const						{ return m_bPrereqPower; }
 	bool isApplyFreePromotionOnMove() const			{ return m_bApplyFreePromotionOnMove; }
 	bool isNoEnemyPillagingIncome() const			{ return m_bNoEnemyPillagingIncome; }
@@ -300,6 +294,7 @@ public:
 	int getWorkableRadius() const					{ return m_iWorkableRadius; }
 	int getPrereqAnyoneBuilding() const				{ return m_iPrereqAnyoneBuilding; }
 	int getExtendsBuilding() const					{ return m_iExtendsBuilding; }
+	int getObsoletesToBuilding() const				{ return m_iObsoletesToBuilding; }
 	int getOccupationTimeModifier() const			{ return m_iOccupationTimeModifier; }
 	int getNoEntryDefenseLevel() const;
 	int getNumUnitFullHeal() const					{ return m_iNumUnitFullHeal; }
@@ -449,9 +444,10 @@ public:
 	int getNumMayDamageAttackingUnitCombatTypes() const;
 	bool isMayDamageAttackingUnitCombatType(int i) const;
 
-	int getMapCategoryType(int i) const;
-	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i) const;
+	int getMapType(int i) const;
+	int getNumMapTypes() const;
+	bool isMapType(int i) const;
+	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
 
 	//integer vectors with pairing method without delayed resolution
 	int getNumUnitCombatRepelModifiers() const;
@@ -493,10 +489,7 @@ public:
 
 	bool isHurry(int i) const;
 
-	//ls612 Begin:
 	int getMaxPopAllowed() const;
-	int getMaxCultureLevelAllowed() const;
-	//ls612 End:
 
 	//BoolExpr* getFreePromotionCondition();
 	//Struct
@@ -575,6 +568,7 @@ protected:
 	int m_iWorkableRadius;
 	int m_iPrereqAnyoneBuilding;
 	int m_iExtendsBuilding;
+	int m_iObsoletesToBuilding;
 	int m_iOccupationTimeModifier;
 	int m_iNoEntryDefenseLevel;
 	int m_iNumUnitFullHeal;
@@ -582,7 +576,6 @@ protected:
 	int m_iNumPopulationEmployed;
 	int m_iHappinessPercentPerPopulation;
 	int m_iHealthPercentPerPopulation;
-	bool m_bBuildOnlyOnPeaks;
 	bool m_bPrereqPower;
 	bool m_bApplyFreePromotionOnMove;
 	bool m_bNoEnemyPillagingIncome;
@@ -630,7 +623,7 @@ private:
 
 public:
 	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvBuildingInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	//Alberts2 PrereqBonuses
 	int getNumPrereqOrBonuses() const;
@@ -656,8 +649,6 @@ protected:
 	int m_iProductionCost;
 	int m_iHurryCostModifier;
 	int m_iHurryAngerModifier;
-	int m_iAdvancedStartCost;
-	int m_iAdvancedStartCostIncrease;
 	int m_iMinAreaSize;
 	int m_iNumCitiesPrereq;
 	int m_iNumTeamsPrereq;
@@ -777,7 +768,7 @@ protected:
 	bool m_bNeverCapture;
 	bool m_bNukeImmune;
 	bool m_bCenterInCity;
-	bool m_bStateReligion;
+	bool m_bStateReligionInCity;
 	bool m_bAllowsNukes;
 
 	CvString m_szConstructSound;
@@ -796,7 +787,6 @@ protected:
 	int* m_piGlobalYieldModifier;
 	int* m_piCommerceChange;
 	int* m_piCommercePerPopChange;
-	int* m_piObsoleteSafeCommerceChange;
 	int* m_piCommerceChangeDoubleTime;
 	int* m_piCommerceModifier;
 	int* m_piGlobalCommerceModifier;
@@ -879,7 +869,7 @@ protected:
 	//std::vector<int> m_aiFreePromoTypes;
 	std::vector<int> m_aiUnitCombatRetrainTypes;
 	std::vector<int> m_aiMayDamageAttackingUnitCombatTypes;
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int> m_aiMapTypes;
 	//integer vectors with pairing without delayed resolution
 	UnitCombatModifierArray m_aUnitCombatRepelModifiers;
 	UnitCombatModifierArray m_aUnitCombatRepelAgainstModifiers;
@@ -904,10 +894,7 @@ protected:
 protected:
 	bool* m_pabHurry;
 
-	//ls612 Begin:
 	int m_iMaxPopAllowed;
-	int m_iMaxCultureLevelAllowed;
-	//ls612 End:
 
 	/*
 	BoolExpr* m_pExprFreePromotionCondition;*/

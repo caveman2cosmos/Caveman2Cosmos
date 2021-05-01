@@ -4,7 +4,7 @@
 		<ReligionInfo>
 			<Type>RELIGION_SIKHISM</Type>
 			<Description>TXT_KEY_TECH_SIKHISM</Description>
-  			<Civilopedia>TXT_KEY_TECH_SIKHISM_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TECH_SIKHISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_SIKHISM</TechPrereq>
 			<iSpreadFactor>16</iSpreadFactor>
 			<iTGAIndex>17</iTGAIndex>

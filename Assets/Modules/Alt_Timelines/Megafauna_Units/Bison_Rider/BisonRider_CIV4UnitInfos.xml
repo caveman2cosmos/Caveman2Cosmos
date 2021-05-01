@@ -36,7 +36,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BISON_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BISON_RIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BISON_RIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -110,7 +109,7 @@
 			<Type>UNIT_BISON_RIDER</Type>
 			<AndDependencyTypes>
 				<DependencyType>UNIT_TRAINED_MAMMOTH</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<UnitAttackMods>
 				<UnitAttackMod>
 					<UnitType>UNIT_TRAINED_MAMMOTH</UnitType>
@@ -122,7 +121,7 @@
 			<Type>UNIT_BISON_RIDER</Type>
 			<AndDependencyTypes>
 				<DependencyType>UNIT_WAR_MAMMOTH</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<UnitAttackMods>
 				<UnitAttackMod>
 					<UnitType>UNIT_WAR_MAMMOTH</UnitType>

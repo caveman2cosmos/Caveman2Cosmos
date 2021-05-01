@@ -2,13 +2,12 @@
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- Modified by the World of Civilization Team -->
 <!-- Religion Infos -->
-<!-- -->
 <Civ4ReligionInfo xmlns="x-schema:../../../XML/Schema/C2C_CIV4GameInfoSchema.xml">
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_BAHAI</Type>
 			<Description>TXT_KEY_TECH_BAHAI</Description>
-            <Adjective>TXT_KEY_TECH_BAHAI_ADJECTIVE</Adjective>
+			<Adjective>TXT_KEY_TECH_BAHAI_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_BAHAI_PEDIA</Civilopedia>
 			<TechPrereq>TECH_BAHAI</TechPrereq>
 			<FreeUnit>UNIT_BAHAI_MISSIONARY</FreeUnit>

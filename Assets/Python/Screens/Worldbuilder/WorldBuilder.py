@@ -1,6 +1,5 @@
 from CvPythonExtensions import *
 import HandleInputUtil
-import PythonToolTip as pyTT
 import WBPlotScreen
 import WBEventScreen
 import WBCityEditScreen
@@ -59,10 +58,10 @@ class WorldBuilder:
 		if self.bNotWB:
 			import InputData
 			self.InputData = InputData.instance
-			# Tool Tip
-			self.szTextTT = ""
-			self.iOffsetTT = []
-			self.bLockedTT = False
+
+			import PythonToolTip
+			self.tooltip = PythonToolTip.PythonToolTip()
+
 			# init sub-screens
 			self.inSubScreen = None
 			import WBTechScreen
@@ -228,8 +227,7 @@ class WorldBuilder:
 
 	def refreshReveal(self):
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
-		for i in xrange(MAP.numPlots()):
-			pPlot = MAP.plotByIndex(i)
+		for pPlot in MAP.plots():
 			if pPlot.isNone(): continue
 			self.showRevealed(pPlot)
 
@@ -1113,8 +1111,7 @@ class WorldBuilder:
 
 
 	def revealAll(self, bReveal):
-		for i in xrange(MAP.numPlots()):
-			pPlot = MAP.plotByIndex(i)
+		for pPlot in MAP.plots():
 			if pPlot.isNone(): continue
 			self.RevealCurrentPlot(bReveal, pPlot)
 		self.refreshReveal()
@@ -1124,7 +1121,7 @@ class WorldBuilder:
 		iType = GC.getInfoTypeForStringWithHiddenAssert(self.iPlayerAddMode)
 		if iType == -1:
 			if bReveal or (not pPlot.isVisible(self.m_iCurrentTeam, False)):
-				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1);
+				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1)
 		elif bReveal:
 			if pPlot.isInvisibleVisible(self.m_iCurrentTeam, iType): return
 			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, 1)
@@ -1373,42 +1370,17 @@ class WorldBuilder:
 	def getScreen(self):
 		return CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
 
-	# Tooltip
-	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
-		if not szText:
-			return
-		if szText != self.szTextTT:
-			self.szTextTT = szText
-			if not uFont:
-				uFont = self.aFontList[5]
-			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			POINT = Win32.getCursorPos()
-			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
-		else:
-			if xPos == yPos == -1:
-				POINT = Win32.getCursorPos()
-				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
-			screen.moveToFront("Tooltip")
-			screen.show("Tooltip")
-		if xPos == yPos == -1:
-			self.bLockedTT = True
-
 	#--------------------------#
 	# Base operation functions #
 	#||||||||||||||||||||||||||#
 	def update(self, fDelta):
-		if self.bLockedTT:
-			POINT = Win32.getCursorPos()
-			iX = POINT.x + self.iOffsetTT[0]
-			iY = POINT.y + self.iOffsetTT[1]
-			if iX < 0: iX = 0
-			if iY < 0: iY = 0
-			self.getScreen().moveItem("Tooltip", iX, iY, 0)
+		if self.tooltip.bLockedTT:
+			self.tooltip.handle(self.getScreen())
 
 	def handleInput(self, inputClass):
 		screen = self.getScreen()
 
-		screen.hide("Tooltip") # Remove potential Help Text
+		self.tooltip.reset(screen)
 
 		if self.inSubScreen:
 			return self.inSubScreen.handleInput(inputClass, screen)
@@ -1424,8 +1396,8 @@ class WorldBuilder:
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
 		if NAME == "WorldBuilderEraseAll":
-			for i in xrange(MAP.numPlots()):
-				self.m_pCurrentPlot = MAP.plotByIndex(i)
+			for plot in MAP.plots():
+				self.m_pCurrentPlot = plot
 				self.placeObject()
 
 		elif NAME == "TradeScreen":
@@ -1589,8 +1561,6 @@ class WorldBuilder:
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_HIGHLIGHT_PLOT)
-		del self.xRes, self.yRes, self.iCurrentPlayer, self.iPlayerAddMode, \
-			self.iSelection, self.iSelectClass, self.iBrushWidth, self.iBrushHeight, self.iChange, \
-			self.InputData, self.szTextTT, self.iOffsetTT, self.bLockedTT, \
-			self.subScreens, self.inSubScreen
+		del self.InputData, self.subScreens, self.inSubScreen, self.xRes, self.yRes, self.iCurrentPlayer, \
+			self.iPlayerAddMode, self.iSelection, self.iSelectClass, self.iBrushWidth, self.iBrushHeight, self.iChange
 		self.bNotWB = True

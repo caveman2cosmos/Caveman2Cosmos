@@ -93,7 +93,7 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		break;
 
 	case WIDGET_BUILD_LIST_CONSTRUCT:
-		GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)widgetDataStruct.m_iData1);
+		GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)widgetDataStruct.m_iData1, false);
 		break;
 
 	case WIDGET_BUILD_LIST_CREATE:
@@ -1386,7 +1386,6 @@ void CvDLLWidgetData::doResearch(CvWidgetDataStruct &widgetDataStruct)
 
 		if (!kPlayer.isChoosingFreeTech())
 		{
-			MEMORY_TRACK_EXEMPT();
 			AddDLLMessage(
 				GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(),
 				gDLL->getText("TXT_KEY_CHEATERS_NEVER_PROSPER"), NULL, MESSAGE_TYPE_MAJOR_EVENT
@@ -1954,7 +1953,7 @@ void CvDLLWidgetData::parseConstructHelp(CvWidgetDataStruct &widgetDataStruct, C
 
 	if (pHeadSelectedCity != NULL)
 	{
-		GAMETEXT.setBuildingHelpActual(szBuffer, (BuildingTypes)widgetDataStruct.m_iData1, false, widgetDataStruct.m_bOption, false, pHeadSelectedCity);
+		GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)widgetDataStruct.m_iData1, true, pHeadSelectedCity, false, widgetDataStruct.m_bOption);
 	}
 }
 
@@ -2064,8 +2063,7 @@ void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 			{
 				if (GC.getCivicInfo((CivicTypes)iI).isHurry(widgetDataStruct.m_iData1))
 				{
-					CvWString szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_REQUIRES");
-					setListHelp(szBuffer, szTempBuffer, GC.getCivicInfo((CivicTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getCivicInfo((CivicTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 					bFirst = false;
 				}
 			}
@@ -2074,8 +2072,7 @@ void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 			{
 				if (GC.getBuildingInfo((BuildingTypes)iI).isHurry(widgetDataStruct.m_iData1))
 				{
-					CvWString szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_REQUIRES");
-					setListHelp(szBuffer, szTempBuffer, GC.getBuildingInfo((BuildingTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getBuildingInfo((BuildingTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 					bFirst = false;
 				}
 			}
@@ -2148,8 +2145,7 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 				{
 					if (getWorldSizeMaxConscript((CivicTypes)iI) > 0)
 					{
-						CvWString szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_REQUIRES");
-						setListHelp(szBuffer, szTempBuffer, GC.getCivicInfo((CivicTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+						setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getCivicInfo((CivicTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 						bFirst = false;
 					}
 				}
@@ -2500,26 +2496,22 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						CvWStringBuffer szBonusList;
 						bool bValid = false;
 						bool bFirst = true;
-						for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+						foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 						{
-							BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
-							if (NO_BONUS != eBonus)
+							if (!bFirst)
 							{
-								if (!bFirst)
-								{
-									szBonusList.append(L", ");
-								}
-								else
-								{
-									bFirst = false;
-								}
-								szBonusList.append(GC.getBonusInfo(eBonus).getDescription());
+								szBonusList.append(L", ");
+							}
+							else
+							{
+								bFirst = false;
+							}
+							szBonusList.append(GC.getBonusInfo(eBonus).getDescription());
 
-								if (pMissionCity->hasBonus(eBonus))
-								{
-									bValid = true;
-									break;
-								}
+							if (pMissionCity->hasBonus(eBonus))
+							{
+								bValid = true;
+								break;
 							}
 						}
 
@@ -2553,11 +2545,11 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					if (pMissionCity->canConstruct(eBuilding, false, false, true))
 					{
 						szBuffer.append(NEWLINE);
-						GAMETEXT.setBuildingHelpActual(szBuffer, ((BuildingTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData())), false, false, false, pMissionCity);
+						GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData(), true, pMissionCity);
 					}
 					else if (!GC.getGame().isBuildingMaxedOut(eBuilding))
 					{
-						GAMETEXT.buildBuildingRequiresString(szBuffer, ((BuildingTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData())), false, false, pMissionCity);
+						GAMETEXT.buildBuildingRequiresString(szBuffer, (BuildingTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData(), false, false, pMissionCity);
 					}
 				}
 			}
@@ -2869,10 +2861,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					// Yield delta from terrain change
 					if ( (NO_TERRAIN != ePlotTerrain) && bIsTerrainChange)
 					{
-						iYield += GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getYield(iI) +
-							(ePlotRiverSide ? GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getRiverYieldChange(iI) : 0);
-						iYield -= GC.getTerrainInfo(ePlotTerrain).getYield(iI) +
-							(ePlotRiverSide ? GC.getTerrainInfo(ePlotTerrain).getRiverYieldChange(iI) : 0);
+						iYield += GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getYield(iI);
+						iYield -= GC.getTerrainInfo(ePlotTerrain).getYield(iI);
 					}
 
 					if (iYield != 0)
@@ -3021,87 +3011,92 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						if (!bFoundValid)
 						{
 							bool bFirst = true;
-							for (std::vector<BonusTypes>::iterator it = aeOrBonuses.begin(); it != aeOrBonuses.end(); ++it)
+							foreach_(const BonusTypes& it, aeOrBonuses)
 							{
-								CvWString szFirstBuffer = NEWLINE + gDLL->getText("TXT_KEY_BUILDING_REQUIRES_LIST");
+								const CvWString szFirstBuffer = NEWLINE + gDLL->getText("TXT_KEY_BUILDING_REQUIRES_LIST");
 								CvWString szTempBuffer;
 								szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),
-									CvWString(GC.getBonusInfo(*it).getType()).GetCString(), GC.getBonusInfo(*it).getDescription());
+									CvWString(GC.getBonusInfo(it).getType()).GetCString(), GC.getBonusInfo(it).getDescription());
 								setListHelp(szBuffer, szFirstBuffer.GetCString(), szTempBuffer, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 								bFirst = false;
 							}
 						}
 					}
 
-					// Save tech prereq to avoid double-posting if terrain happens to share same tech prereq
-					TechTypes featureTechRequired = NO_TECH;
-
-					// Check feature prereqs against current plot
-					if (ePlotFeature != NO_FEATURE)
+					if (GC.getBuildInfo(eBuild).getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)GC.getBuildInfo(eBuild).getRoute()).isSeaTunnel())
 					{
-						featureTechRequired = (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature);
+						// Save tech prereq to avoid double-posting if terrain happens to share same tech prereq
+						TechTypes featureTechRequired = NO_TECH;
 
-						// If the plot feature requires a different tech than the base tile itself AND we don't have that tech
-						if ( (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
-						&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)) )
+						// Check feature prereqs against current plot
+						if (ePlotFeature != NO_FEATURE)
 						{
-							// If the base never obsoletes OR we don't have the tech which obsoletes it
-							if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
-							|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
+							featureTechRequired = (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature);
+							if (featureTechRequired != NO_TECH)
 							{
-								szBuffer.append(NEWLINE);
+								// If the plot feature requires a different tech than the base tile itself AND we don't have that tech
+								if ((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
+									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)))
+								{
+									// If the base never obsoletes OR we don't have the tech which obsoletes it
+									if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
+										|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
+									{
+										szBuffer.append(NEWLINE);
 
-								// If the feature blocks the improvement from ever being constructable or not, different messages
-								// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ FEATURE BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
-								if (GC.getTechInfo(featureTechRequired).isDisable())
-								{
-									szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
-										GC.getFeatureInfo(ePlotFeature).getTextKeyWide()));
-								}
-								else
-								{
-									szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
-										CvWString(GC.getTechInfo(featureTechRequired).getType()).GetCString(),
-										GC.getTechInfo(featureTechRequired).getTextKeyWide()));
+										// If the feature blocks the improvement from ever being constructable or not, different messages
+										// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ FEATURE BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
+										if (GC.getTechInfo(featureTechRequired).isDisable())
+										{
+											szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
+												GC.getFeatureInfo(ePlotFeature).getTextKeyWide()));
+										}
+										else
+										{
+											szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
+												CvWString(GC.getTechInfo(featureTechRequired).getType()).GetCString(),
+												GC.getTechInfo(featureTechRequired).getTextKeyWide()));
+										}
+									}
 								}
 							}
 						}
-					}
-					// Check terrain prereqs against current plot
-					for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumTerrainStructs(); iI++)
-					{
-						const TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
-						if (eTerrain == pMissionPlot->getTerrainType()
-						||  eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isAsPeak()
-						||  eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills())
+						// Check terrain prereqs against current plot
+						for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumTerrainStructs(); iI++)
 						{
-							const TechTypes terrainTechRequired = GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech;
-
-							// If there is a tech required to build on the terrain that differs from the base tech prereq and feature prereq,
-							// we don't have that tech, and the build doesn't obsolete OR we don't have the obsolete tech:
-							if (terrainTechRequired != NO_TECH
-							&&  terrainTechRequired != featureTechRequired
-							&&  terrainTechRequired != (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq()
-							&&  !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(terrainTechRequired)
-							&&  (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
-								|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech())))
+							const TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
+							if (eTerrain == pMissionPlot->getTerrainType()
+								|| eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isAsPeak()
+								|| eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills())
 							{
-								szBuffer.append(NEWLINE);
-								// If the terrain blocks the improvement from ever being constructable or not, different messages
-								// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ TERRAIN BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
-								if (GC.getTechInfo(terrainTechRequired).isDisable())
+								const TechTypes terrainTechRequired = GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech;
+
+								// If there is a tech required to build on the terrain that differs from the base tech prereq and feature prereq,
+								// we don't have that tech, and the build doesn't obsolete OR we don't have the obsolete tech:
+								if (terrainTechRequired != NO_TECH
+									&& terrainTechRequired != featureTechRequired
+									&& terrainTechRequired != (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq()
+									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(terrainTechRequired)
+									&& (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
+										|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech())))
 								{
-									szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
-										GC.getTerrainInfo(ePlotTerrain).getTextKeyWide()));
+									szBuffer.append(NEWLINE);
+									// If the terrain blocks the improvement from ever being constructable or not, different messages
+									// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ TERRAIN BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
+									if (GC.getTechInfo(terrainTechRequired).isDisable())
+									{
+										szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
+											GC.getTerrainInfo(ePlotTerrain).getTextKeyWide()));
+									}
+									else
+									{
+										szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
+											CvWString(GC.getTechInfo(terrainTechRequired).getType()).GetCString(),
+											GC.getTechInfo(terrainTechRequired).getTextKeyWide()));
+									}
+									// Avoid duplicating if terrain pops up twice due to the isAsPeak or isHills checks
+									break;
 								}
-								else
-								{
-									szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
-										CvWString(GC.getTechInfo(terrainTechRequired).getType()).GetCString(),
-										GC.getTechInfo(terrainTechRequired).getTextKeyWide()));
-								}
-								// Avoid duplicating if terrain pops up twice due to the isAsPeak or isHills checks
-								break;
 							}
 						}
 					}
@@ -3742,40 +3737,30 @@ void CvDLLWidgetData::parseFreeCitizenHelp(CvWidgetDataStruct &widgetDataStruct,
 void CvDLLWidgetData::parseDisabledCitizenHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
-	if (pHeadSelectedCity != NULL)
+
+	if (pHeadSelectedCity != NULL && widgetDataStruct.m_iData1 != NO_SPECIALIST)
 	{
-		if (widgetDataStruct.m_iData1 != NO_SPECIALIST)
+		GAMETEXT.parseSpecialistHelpActual(szBuffer, (SpecialistTypes)widgetDataStruct.m_iData1, pHeadSelectedCity, false, 1);
+
+		if (!pHeadSelectedCity->isSpecialistValid(((SpecialistTypes)widgetDataStruct.m_iData1), 1))
 		{
-// BUG - Specialist Actual Effects - start
-			GAMETEXT.parseSpecialistHelpActual(szBuffer, ((SpecialistTypes)(widgetDataStruct.m_iData1)), pHeadSelectedCity, false, 1);
-// BUG - Specialist Actual Effects - end
+			bool bFirst = true;
 
-			if (!(pHeadSelectedCity->isSpecialistValid(((SpecialistTypes)(widgetDataStruct.m_iData1)), 1)))
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				bool bFirst = true;
+				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
-				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+				if (GC.getBuildingInfo(eLoopBuilding).getSpecialistCount(widgetDataStruct.m_iData1) > 0
+				&& pHeadSelectedCity->getNumActiveBuilding(eLoopBuilding) <= 0 && !isLimitedWonder(eLoopBuilding)
+				&& (GC.getBuildingInfo(eLoopBuilding).getSpecialBuildingType() == NO_SPECIALBUILDING || pHeadSelectedCity->canConstruct(eLoopBuilding)))
 				{
-					const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-
-					if (GC.getBuildingInfo(eLoopBuilding).getSpecialistCount(widgetDataStruct.m_iData1) > 0)
-					{
-						if ((pHeadSelectedCity->getNumBuilding(eLoopBuilding) <= 0) && !isLimitedWonder(eLoopBuilding))
-						{
-							if ((GC.getBuildingInfo(eLoopBuilding).getSpecialBuildingType() == NO_SPECIALBUILDING) || pHeadSelectedCity->canConstruct(eLoopBuilding))
-							{
-								CvWString szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_REQUIRES");
-								setListHelp(szBuffer, szTempBuffer, GC.getBuildingInfo(eLoopBuilding).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
-								bFirst = false;
-							}
-						}
-					}
+					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getBuildingInfo(eLoopBuilding).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+					bFirst = false;
 				}
-
-				if (!bFirst)
-				{
-					szBuffer.append(ENDCOLR);
-				}
+			}
+			if (!bFirst)
+			{
+				szBuffer.append(ENDCOLR);
 			}
 		}
 	}
@@ -4757,27 +4742,6 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 	if (kActiveTeam.isHasMet(eTeam) || GC.getGame().isDebugMode())
 	{
-		if (!kPlayer.isHuman())
-		{
-			if (!kPlayer.AI_isWillingToTalk(eActivePlayer))
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_REFUSES_TO_TALK"));
-			}
-			if (!gDLL->altKey() && !gDLL->ctrlKey() || gDLL->getChtLvl() <= 0)
-			{
-				szBuffer.append(NEWLINE);
-				GAMETEXT.getEspionageString(szBuffer, ePlayer, eActivePlayer);
-
-				GAMETEXT.getAttitudeString(szBuffer, ePlayer, eActivePlayer);
-			}
-		}
-		else
-		{
-			szBuffer.append(NEWLINE);
-			GAMETEXT.getEspionageString(szBuffer, ePlayer, eActivePlayer);
-		}
-
 		if (!gDLL->altKey() && !gDLL->ctrlKey() || gDLL->getChtLvl() <= 0)
 		{
 			if (gDLL->ctrlKey() && ePlayer != eActivePlayer)
@@ -4794,7 +4758,28 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 		if (eTeam != eActiveTeam)
 		{
-			if( !(kActiveTeam.isAtWar(eTeam)))
+			if (!kPlayer.isHuman())
+			{
+				if (!kPlayer.AI_isWillingToTalk(eActivePlayer))
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_REFUSES_TO_TALK"));
+				}
+				if (!gDLL->altKey() && !gDLL->ctrlKey() || gDLL->getChtLvl() <= 0)
+				{
+					szBuffer.append(NEWLINE);
+					GAMETEXT.getEspionageString(szBuffer, ePlayer, eActivePlayer);
+
+					GAMETEXT.getAttitudeString(szBuffer, ePlayer, eActivePlayer);
+				}
+			}
+			else
+			{
+				szBuffer.append(NEWLINE);
+				GAMETEXT.getEspionageString(szBuffer, ePlayer, eActivePlayer);
+			}
+
+			if (!kActiveTeam.isAtWar(eTeam))
 			{
 				if (kActiveTeam.canDeclareWar(eTeam))
 				{
@@ -4806,7 +4791,6 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 					szBuffer.append(NEWLINE);
 					szBuffer.append(gDLL->getText("TXT_KEY_MISC_CANNOT_DECLARE_WAR"));
 				}
-
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_SHIFT_ALT_PREPARE_WAR"));
 			}
@@ -5576,7 +5560,7 @@ void CvDLLWidgetData::parseSelectedHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 			break;
 
 		case ORDER_CONSTRUCT:
-			GAMETEXT.setBuildingHelpActual(szBuffer, order.getBuildingType(), false, false, false, pHeadSelectedCity);
+			GAMETEXT.setBuildingHelp(szBuffer, order.getBuildingType(), true, pHeadSelectedCity);
 			break;
 
 		case ORDER_CREATE:
@@ -5623,7 +5607,7 @@ void CvDLLWidgetData::parseBuildListQueueHelp(CvWidgetDataStruct &widgetDataStru
 				break;
 
 			case ORDER_CONSTRUCT:
-				GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)(pOrder->iData1));
+				GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)pOrder->iData1, false);
 				break;
 
 			case ORDER_CREATE:

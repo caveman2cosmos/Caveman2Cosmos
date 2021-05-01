@@ -2,26 +2,26 @@
 <!--
 	BUG City Screen
 	by EmperorFool, Dresden, Chinese American, Ruff_Hi, TheLopez, Sevo
-	
+
 	Collects all of the various main interface mods.
-	
+
 	Copyright (c) 2008 The BUG Mod.
 -->
 <mod id="CityScreen" name="BUG City Screen" author="EmperorFool, Chinese American, TheLopez, Ruff_Hi, Sevo"
-	 version="3.0" date="07/11/2008" url="http://forums.civfanatics.com/forumdisplay.php?f=268">
+	version="3.0" date="07/11/2008" url="http://forums.civfanatics.com/forumdisplay.php?f=268">
 
 	<options id="CityScreen" file="BUG City Screen.ini">
 		<section id="City Screen">
 			<!-- Raw Yields by EmperorFool (inspired by Raw Commerce by Sevo) -->
 			<option id="RawYields" key="Raw Yields" type="boolean" default="True" get="isShowRawYields" dirtyBit="CityScreen"/>
-			<list id="RawYieldsView" key="Raw Yields View" type="int" default="0" listType="string" 
+			<list id="RawYieldsView" key="Raw Yields View" type="int" default="0" listType="string"
 					values="Trade Routes|Food|Production|Commerce" get="getRawYieldsDefaultView" dirtyBit="CityScreen">
 				<choice id="TradeRoutes" get="isRawYieldsDefaultViewTradeRoutes"/>
 				<choice id="Food" get="isRawYieldsDefaultViewFood"/>
 				<choice id="Production" get="isRawYieldsDefaultViewProduction"/>
 				<choice id="Commerce" get="isRawYieldsDefaultViewCommerce"/>
 			</list>
-			<list id="RawYieldsTiles" key="Raw Yields Tiles" type="int" default="0" listType="string" 
+			<list id="RawYieldsTiles" key="Raw Yields Tiles" type="int" default="0" listType="string"
 					values="Worked|City|Owned" get="getRawYieldsDefaultTiles" dirtyBit="CityScreen">
 				<choice id="Worked" get="isRawYieldsDefaultTilesWorked"/>
 				<choice id="City" get="isRawYieldsDefaultTilesCity"/>
@@ -29,7 +29,7 @@
 			</list>
 			<!-- WhipAssist by EmperorFool, Dresden -->
 			<option id="WhipAssist" key="WhipAssist" type="boolean" default="True" get="isShowWhipAssist" dirtyBit="CityScreen"/>
-			<option id="WhipAssistOverflowCountCurrentProduction" key="WhipAssist Overflow Count Current Production" 
+			<option id="WhipAssistOverflowCountCurrentProduction" key="WhipAssist Overflow Count Current Production"
 					type="boolean" default="True" get="isWhipAssistOverflowCountCurrentProduction" dirtyBit="CityScreen"/>
 
 			<!-- Great Person Info by Chinese American, EmperorFool -->
@@ -61,6 +61,11 @@
 					type="boolean" default="False" get="isProductionPopupTrainCivilianUnitsForever"/>
 			<option id="ProductionPopupTrainMilitaryUnitsForever" key="Production Popup Train Military Units Forever"
 					type="boolean" default="False" get="isProductionPopupTrainMilitaryUnitsForever"/>
+
+			<!-- City option screen -->
+			<option id="BuildIconSize" key="Build Icon Size" type="int" default="64" get="getBuildIconSize" set="setBuildIconSize"/>
+			<option id="HideUnconstructableBuildings" key="HideUnconstructableBuildings" type="boolean" default="True" get="isHideUnconstructableBuildings" set="setHideUnconstructableBuildings"/>
+			<option id="HideUntrainableUnits" key="HideUntrainableUnits" type="boolean" default="True" get="isHideUntrainableUnits" set="setHideUntrainableUnits"/>
 		</section>
 	</options>
 </mod>

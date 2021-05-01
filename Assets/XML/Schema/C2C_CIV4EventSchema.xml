@@ -1,38 +1,38 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
-  <ElementType name="ReplacementCondition"/>
-  <ElementType name="ReplacementID"/>
-  <!-- Expressions added by AIAndy -->
-  <ElementType name="Constant" content="textOnly"/>
-  <ElementType name="Is" content="textOnly"/>
-  <ElementType name="Python" content="textOnly"/>
-  <ElementType name="BoolExpr"/>
-  <ElementType name="Not"/>
-  <ElementType name="And"/>
-  <ElementType name="Or"/>
-  <ElementType name="BEqual"/>
-  <ElementType name="If"/>
-  <ElementType name="IntegrateOr"/>
-  <ElementType name="GOMType" content="textOnly"/>
-  <ElementType name="ID" content="textOnly"/>
-  <ElementType name="Has" content="eltOnly">
-    <element type="GOMType" minOccurs="1" maxOccurs="*"/>
-    <element type="ID" minOccurs="1" maxOccurs="*"/>
-  </ElementType>
-  <ElementType name="Greater"/>
-  <ElementType name="GreaterEqual"/>
-  <ElementType name="Equal"/>
-  <ElementType name="Random"/>
-  <ElementType name="Adapt"/>
-  <ElementType name="Plus"/>
-  <ElementType name="Minus"/>
-  <ElementType name="Mult"/>
-  <ElementType name="Div"/>
-  <ElementType name="IntegrateSum"/>
-  <ElementType name="IntegrateAvg"/>
-  <ElementType name="IntegrateCount"/>
+	<ElementType name="ReplacementCondition"/>
+	<ElementType name="ReplacementID"/>
+	<!-- Expressions added by AIAndy -->
+	<ElementType name="Constant" content="textOnly"/>
+	<ElementType name="Is" content="textOnly"/>
+	<ElementType name="Python" content="textOnly"/>
+	<ElementType name="BoolExpr"/>
+	<ElementType name="Not"/>
+	<ElementType name="And"/>
+	<ElementType name="Or"/>
+	<ElementType name="BEqual"/>
+	<ElementType name="If"/>
+	<ElementType name="IntegrateOr"/>
+	<ElementType name="GOMType" content="textOnly"/>
+	<ElementType name="ID" content="textOnly"/>
+	<ElementType name="Has" content="eltOnly">
+		<element type="GOMType" minOccurs="1" maxOccurs="*"/>
+		<element type="ID" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Greater"/>
+	<ElementType name="GreaterEqual"/>
+	<ElementType name="Equal"/>
+	<ElementType name="Random"/>
+	<ElementType name="Adapt"/>
+	<ElementType name="Plus"/>
+	<ElementType name="Minus"/>
+	<ElementType name="Mult"/>
+	<ElementType name="Div"/>
+	<ElementType name="IntegrateSum"/>
+	<ElementType name="IntegrateAvg"/>
+	<ElementType name="IntegrateCount"/>
 	<ElementType name="Type" content="textOnly"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+	<!-- XMLCOPY				02/20/2008			MRGENIE -->
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
@@ -40,7 +40,7 @@
 	<ElementType name="OrDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
 	</ElementType>
-<!-- XMLCOPY				END					MRGENIE		-->
+	<!-- XMLCOPY				END					MRGENIE -->
 	<ElementType name="Description" content="textOnly"/>
 	<ElementType name="OtherPlayerPopup" content="textOnly"/>
 	<ElementType name="LocalInfoText" content="textOnly"/>
@@ -320,7 +320,6 @@
 	<ElementType name="CommerceModifiers" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<!--AIAndy: Adding tags for generic properties-->
 	<ElementType name="PropertyType" content="textOnly"/>
 	<ElementType name="iPropertyValue" content="textOnly" dt:type="int"/>
@@ -346,12 +345,10 @@
 	<ElementType name="PrereqPlayerMaxProperties" content="eltOnly">
 		<element type="Property" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="iYield" content="textOnly" dt:type="int"/>
 	<ElementType name="YieldModifiers" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<!--TB's Tags-->
 	<ElementType name="GameOptionType" content="textOnly"/>
 	<ElementType name="OnGameOptions" content="eltOnly">
@@ -363,10 +360,10 @@
 	<!--TB's Tags end-->
 	<ElementType name="EventTriggerInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="OnGameOptions" minOccurs="0"/>
 		<element type="NotOnGameOptions" minOccurs="0"/>
 		<element type="WorldNewsTexts" minOccurs="0"/>
@@ -439,7 +436,6 @@
 		<element type="PrereqMaxProperties" minOccurs="0"/>
 		<element type="PrereqPlayerMinProperties" minOccurs="0"/>
 		<element type="PrereqPlayerMaxProperties" minOccurs="0"/>
-
 		<element type="PythonCanDo" minOccurs="0"/>
 		<element type="PythonCanDoCity" minOccurs="0"/>
 		<element type="PythonCanDoUnit" minOccurs="0"/>
@@ -453,10 +449,10 @@
 	</ElementType>
 	<ElementType name="EventInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="LocalInfoText" minOccurs="0"/>
 		<element type="WorldNewsTexts" minOccurs="0"/>

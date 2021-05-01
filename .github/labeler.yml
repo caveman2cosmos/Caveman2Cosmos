@@ -19,6 +19,7 @@ text:
 python:
   - Assets/Python/**/*
   - Assets/Python/*
+  - PrivateMaps/*.py
 
 art:
   - UnpackedArt/**/*

@@ -2,17 +2,15 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
-<!-- EgyptMyth -->
+		<!-- EgyptMyth -->
 		<BuildingInfo>
 			<Type>BUILDING_PTAH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PTAH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PTAH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PTAH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PTAH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -21,7 +19,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PTAH</MovieDefineTag>
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
 			<PrereqTech>TECH_WRITING</PrereqTech>
@@ -32,16 +30,15 @@
 			<FreeBuilding>BUILDING_SCHOOL_OF_SCRIBES</FreeBuilding>
 			<iCost>1056</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>3</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -85,7 +82,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TOTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TOTH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -94,7 +90,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TOTH</MovieDefineTag>
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
@@ -103,16 +99,15 @@
 			</PrereqBonuses>
 			<iCost>1056</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>3</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -178,13 +173,12 @@
 			<Type>BUILDING_EGYPT_MYTH_SHRINE</Type>
 			<MovieDefineTag>ART_DEF_MOVIE_EGYPT_MYTH_SHRINE</MovieDefineTag>
 		</BuildingInfo>
-<!-- Hellenism -->
+		<!-- Hellenism -->
 		<BuildingInfo>
 			<Type>BUILDING_ERECTION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ERECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ERECTION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ERECTION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ERECTION</ArtDefineTag>
 			<MapCategoryTypes>
@@ -193,7 +187,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ERECTION</MovieDefineTag>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
 			<StateReligion>RELIGION_HELLENISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
@@ -203,20 +197,20 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iDefense>100</iDefense>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -279,7 +273,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_FIDIAS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FIDIAS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FIDIAS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIDIAS</ArtDefineTag>
 			<MapCategoryTypes>
@@ -288,23 +281,22 @@
 			<MovieDefineTag>ART_DEF_MOVIE_FIDIAS</MovieDefineTag>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
 			<StateReligion>RELIGION_HELLENISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<iCost>1104</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -373,7 +365,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NECROMANTEION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NECROMANTEION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NECROMANTEION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NECROMANTEION</ArtDefineTag>
 			<MapCategoryTypes>
@@ -382,7 +373,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NECROMANTEION</MovieDefineTag>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
 			<StateReligion>RELIGION_HELLENISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
@@ -392,17 +383,16 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -466,14 +456,13 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-<!-- Nagualismo -->
+		<!-- Nagualismo -->
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_PYRAMID_OF_THE_MOON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PYRAMID_OF_THE_MOON</ArtDefineTag>
 			<MapCategoryTypes>
@@ -482,7 +471,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PYRAMID_OF_THE_MOON</MovieDefineTag>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<StateReligion>RELIGION_NAGHUALISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
@@ -492,16 +481,15 @@
 			<iHurryAngerModifier>-100</iHurryAngerModifier>
 			<iCost>1404</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -555,7 +543,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PYRAMID_OF_THE_SUN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -564,7 +551,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PYRAMID_OF_THE_SUN</MovieDefineTag>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<StateReligion>RELIGION_NAGHUALISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
@@ -574,17 +561,16 @@
 			<iHurryAngerModifier>-100</iHurryAngerModifier>
 			<iCost>1404</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>4</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -637,16 +623,15 @@
 			<Type>BUILDING_MESOAMERICAN_SHRINE</Type>
 			<MovieDefineTag>ART_DEF_MOVIE_MESOAMERICAN_SHRINE</MovieDefineTag>
 		</BuildingInfo>
-<!-- Zoroasterism -->
+		<!-- Zoroasterism -->
 		<BuildingInfo>
 			<Type>BUILDING_HAMMURABI</Type>
 			<AndDependencyTypes>
-             	<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
- 			</AndDependencyTypes>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
+			</AndDependencyTypes>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HAMMURABI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAMMURABI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HAMMURABI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HAMMURABI</ArtDefineTag>
 			<MapCategoryTypes>
@@ -661,17 +646,16 @@
 			<FreeBuilding>BUILDING_COURTHOUSE</FreeBuilding>
 			<iCost>1008</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -713,12 +697,11 @@
 		<BuildingInfo>
 			<Type>BUILDING_NIMRUD_PALACE</Type>
 			<AndDependencyTypes>
-             	<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
- 			</AndDependencyTypes>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
+			</AndDependencyTypes>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NIMRUD_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NIMRUD_PALACE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NIMRUD_PALACE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NIMRUD_PALACE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -733,7 +716,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1008</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iDomesticGreatGeneralRateModifier>50</iDomesticGreatGeneralRateModifier>
 			<iMaintenanceModifier>-25</iMaintenanceModifier>
@@ -743,11 +725,11 @@
 			<iMilitaryProductionModifier>25</iMilitaryProductionModifier>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -801,7 +783,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEHISTUN_INSCRIPTION</ArtDefineTag>
 			<MapCategoryTypes>
@@ -821,11 +802,11 @@
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iGlobalTradeRoutes>1</iGlobalTradeRoutes>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -847,7 +828,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PIR_E_NARAKI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PIR_E_NARAKI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PIR_E_NARAKI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PIR_E_NARAKI</ArtDefineTag>
 			<MapCategoryTypes>
@@ -871,11 +851,11 @@
 			<iHealth>2</iHealth>
 			<iGlobalHealth>2</iGlobalHealth>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<iAllCityDefense>25</iAllCityDefense>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<Flavors>
@@ -897,7 +877,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SETI_PIR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SETI_PIR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SETI_PIR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SETI_PIR</ArtDefineTag>
 			<MapCategoryTypes>
@@ -915,11 +894,11 @@
 			<iCost>1860</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<iAllCityDefense>15</iAllCityDefense>
 			<iGlobalWarWearinessModifier>-75</iGlobalWarWearinessModifier>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
@@ -942,14 +921,13 @@
 			<Type>BUILDING_TOWER_OF_SILENCE</Type>
 			<Description>TXT_KEY_BUILDING_TOWER_OF_SILENCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOWER_OF_SILENCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOWER_OF_SILENCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TOWER_OF_SILENCE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>

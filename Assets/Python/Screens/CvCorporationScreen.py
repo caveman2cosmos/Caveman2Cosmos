@@ -110,7 +110,7 @@ class CvCorporationScreen:
 		screen = self.getScreen()
 		if screen.isActive():
 			return
-		screen.setRenderInterfaceOnly(True);
+		screen.setRenderInterfaceOnly(True)
 		screen.showScreen( PopupStates.POPUPSTATE_IMMEDIATE, False)
 		screen.setDimensions(self.X_POSITION, self.Y_POSITION, self.W_SCREEN, self.H_SCREEN)
 		screen.addDDSGFC("CorporationBG", ArtFileMgr.getInterfaceArtInfo("MAINMENU_SLIDESHOW_LOAD").getPath(), 0, 0, self.W_SCREEN, self.H_SCREEN, WidgetTypes.WIDGET_GENERAL, -1, -1 )
@@ -216,20 +216,18 @@ class CvCorporationScreen:
 				szListLabels = []
 				iNum = 0
 				szList = u""
-				for iRequired in range(GC.getDefineINT("NUM_CORPORATION_PREREQ_BONUSES")):
-					eBonus = GC.getCorporationInfo(i).getPrereqBonus(iRequired)
-					if -1 != eBonus:
-						if iNum == 0:
-							szList = u""
-						else:
-							szList += u", "
-						iNum += 1
-						szList += u"%c" % (GC.getBonusInfo(eBonus).getChar(), )
+				for eBonus in GC.getCorporationInfo(i).getPrereqBonuses():
+					if iNum == 0:
+						szList = u""
+					else:
+						szList += u", "
+					iNum += 1
+					szList += u"%c" % (GC.getBonusInfo(eBonus).getChar(), )
 
-						if iNum > 3:
-							iNum = 0
-							szListLabels.append(szList)
-							szList = u""
+					if iNum > 3:
+						iNum = 0
+						szListLabels.append(szList)
+						szList = u""
 
 				if len(szList) > 0:
 					szListLabels.append(szList)

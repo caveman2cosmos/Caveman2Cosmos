@@ -25,7 +25,7 @@ class CvEraMovieScreen:
 		screen.addPanel("EraMoviePanel", "", "", True, True, self.X_SCREEN, self.Y_SCREEN, self.W_SCREEN, self.H_SCREEN, PanelStyles.PANEL_STYLE_MAIN)
 
 		screen.showWindowBackground(True)
-		screen.setRenderInterfaceOnly(False);
+		screen.setRenderInterfaceOnly(False)
 		screen.setSound("AS2D_NEW_ERA")
 		screen.showScreen(PopupStates.POPUPSTATE_MINIMIZED, False)
 

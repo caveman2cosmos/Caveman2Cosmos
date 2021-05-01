@@ -294,10 +294,6 @@
 			<Path>Art/Movies/Wonders/PontDuGard.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SECRET_ARMY_BASE</Type>
-			<Path>Art/Movies/Wonders/SecretArmyBase.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SILKROAD</Type>
 			<Path>Art/Movies/Wonders/SilkRoad.bik</Path>
 		</MovieArtInfo>
@@ -418,10 +414,6 @@
 			<Path>Art/Movies/wonders/wtc.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_WESTP</Type>
-			<Path>Art/Movies/Wonders/WESTP.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MT_RUSHMORE</Type>
 			<Path>Art/Movies/Wonders/Rushmore.bik</Path>
 		</MovieArtInfo>
@@ -510,10 +502,6 @@
 			<Path>Art/Movies/Wonders/Nara.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SAN_MARCOS_CATHEDRAL</Type>
-			<Path>Art/Movies/Wonders/SanMarco.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_VATICAN_LIBRARY</Type>
 			<Path>Art/Movies/Wonders/Papal.bik</Path>
 		</MovieArtInfo>
@@ -532,10 +520,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MEENAKSHI</Type>
 			<Path>Art/Movies/Wonders/Meenakshi.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_DESERT</Type>
-			<Path>Art/Movies/Wonders/Djenne.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ESTAMBUL</Type>
@@ -595,7 +579,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ISHTAR</Type>
-			<Path>Art/Movies/Wonders/Ishtar.bik</Path>
+			<Path>Art/Movies/Wonders/ISHTAR.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_NIMRUD</Type>
@@ -918,10 +902,6 @@
 			<Path>Art/movies/Wonders/HadrianWall.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_HOMELAND_SECURITY</Type>
-			<Path>Art/movies/Wonders/HomelandSecurity.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PENICILLIN</Type>
 			<Path>Art/Movies/Wonders/Penicillin.bik</Path>
 		</MovieArtInfo>
@@ -996,10 +976,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SHRINE_SIKH</Type>
 			<Path>Art/Movies/Wonders/AnandpurSahib.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</Type>
-			<Path>Art/Movies/Wonders/Behistun_InscriptionMovie.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_AURORA</Type>
@@ -1139,7 +1115,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CHARLIE_LAKE_CAVE</Type>
-			<Path>Art/Movies/Wonders/Charlie_Lake_Cave.bik</Path>
+			<Path>Art/Movies/group_wonders/Charlie_Lake_Cave.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CHIEFS_PYRE</Type>
@@ -1452,10 +1428,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TRADITION_ARCHERY</Type>
 			<Path>Art/Movies/special/TRADITION_ARCHERY.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_NOBLEGARDEN</Type>
-			<Path>Art/Movies/Wonders/Noblegarden.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CHILEHAUS</Type>
@@ -2834,10 +2806,6 @@
 			<Path>Art/Movies/national_wonders/ONLINE_UNIVERSITY.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_ORBITAL_PRISON</Type>
-			<Path>Art/Movies/national_wonders/ORBITAL_PRISON.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PALACE</Type>
 			<Path>Art/Movies/national_wonders/PALACE.dds</Path>
 		</MovieArtInfo>
@@ -3284,6 +3252,174 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_WMAP</Type>
 			<Path>Art/Movies/special/WMAP.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_CENTAUR</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_CENTAUR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_FEATHER</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_FEATHER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_FIST</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_FIST.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_LEECH</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_LEECH.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_SHADOWS</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_SHADOWS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WARRIOR</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_WARRIOR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WAVES</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_WAVES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WILD</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_WILD.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WIND</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_WIND.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WOLF</Type>
+			<Path>Art/Movies/group_wonders/ANCIENT_WAY_OF_THE_WOLF.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HARVARD_UNIVERSITY</Type>
+			<Path>Art/Movies/group_wonders/HARVARD_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HEIDELBERG_UNIVERSITY</Type>
+			<Path>Art/Movies/group_wonders/HEIDELBERG_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_JAGIELLONIAN_UNIVERSITY</Type>
+			<Path>Art/Movies/group_wonders/JAGIELLONIAN_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MONTPELLIER_UNIVERSITY</Type>
+			<Path>Art/Movies/group_wonders/MONTPELLIER_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_OXFORD_UNIVERSITY</Type>
+			<Path>Art/Movies/group_wonders/OXFORD_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SORBONNE_UNIVERSITY</Type>
+			<Path>Art/Movies/group_wonders/SORBONNE_UNIVERSITY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_BARCELONA</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_BARCELONA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_BASEL</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_BASEL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_BOLOGNA</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_BOLOGNA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_CAMBRIDGE</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_CAMBRIDGE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_COIMBRA</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_COIMBRA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_EDINBURGH</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_EDINBURGH.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_MURCIA</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_MURCIA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_PADUA</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_PADUA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_UNIVERSITY_OF_SALAMANCA</Type>
+			<Path>Art/Movies/group_wonders/UNIVERSITY_OF_SALAMANCA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ACCADEMIA_AERONAUTICA</Type>
+			<Path>Art/Movies/group_wonders/ACCADEMIA_AERONAUTICA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_EVELPIDON_MILITARY_ACADEMY</Type>
+			<Path>Art/Movies/group_wonders/EVELPIDON_MILITARY_ACADEMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_IMPERIAL_JAPANESE_NAVAL_ACADEMY</Type>
+			<Path>Art/Movies/group_wonders/IMPERIAL_JAPANESE_NAVAL_ACADEMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_REPUBLIC_OF_CHINA_NAVAL_ACADEMY</Type>
+			<Path>Art/Movies/group_wonders/REPUBLIC_OF_CHINA_NAVAL_ACADEMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ROYAL_AIR_FORCE_ACADEMY</Type>
+			<Path>Art/Movies/group_wonders/ROYAL_AIR_FORCE_ACADEMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_WEST_POINT</Type>
+			<Path>Art/Movies/group_wonders/WEST_POINT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CHAMPAGNE</Type>
+			<Path>Art/Movies/group_wonders/CHAMPAGNE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_VINTAGE_RED_WINE</Type>
+			<Path>Art/Movies/group_wonders/VINTAGE_RED_WINE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_VINTAGE_WHITE_WINE</Type>
+			<Path>Art/Movies/group_wonders/VINTAGE_WHITE_WINE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CAODAI_SHRINE</Type>
+			<Path>Art/Movies/wonders/CAODAI_SHRINE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_RODNOVERY_SHRINE</Type>
+			<Path>Art/Movies/wonders/RODNOVERY_SHRINE_ARKONA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HINDU_BRIHADEESWARAR</Type>
+			<Path>Art/Movies/wonders/HINDU_BRIHADEESWARAR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MASADA</Type>
+			<Path>Art/Movies/wonders/MASADA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_POTALA</Type>
+			<Path>Art/Movies/wonders/POTALA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ZOROASTRIAN_SHRINE</Type>
+			<Path>Art/Movies/wonders/ZOROASTRIAN_SHRINE_PIR_E_SABZ.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TEMPLE_OF_HEAVEN</Type>
+			<Path>Art/Movies/wonders/TEMPLE_OF_HEAVEN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AZTEC_SACRIFICIAL_ALTAR</Type>
+			<Path>Art/Movies/wonders/AZTEC_SACRIFICIAL_ALTAR_TLALOC.dds</Path>
 		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

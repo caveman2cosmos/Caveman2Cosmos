@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- Master Load File -->
-<!-- -->
 <Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<DefaultConfiguration>Dancing_Hoskuld_Mods_1</DefaultConfiguration>
 	<ConfigurationInfos>
@@ -15,7 +14,7 @@
 				</Module>
 				<Module>
 					<Directory>ExtraDiplomacy</Directory>
-					<bLoad>1</bLoad>
+					<bLoad>0</bLoad> <!-- WIP - unfinished module -->
 				</Module>
 				<Module>
 					<Directory>DanceTheory</Directory>

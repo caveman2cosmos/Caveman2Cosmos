@@ -88,7 +88,7 @@ class CvDanQuayle:
 		screen = self.getScreen()
 		if screen.isActive():
 			return
-		screen.setRenderInterfaceOnly(True);
+		screen.setRenderInterfaceOnly(True)
 		screen.showScreen( PopupStates.POPUPSTATE_IMMEDIATE, False)
 
 		# Set the background and exit button, and show the screen

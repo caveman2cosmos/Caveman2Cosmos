@@ -250,11 +250,11 @@ class CvAdvancedStartScreen:
 		initWBToolAdvancedStartControl()
 		self.CyGTabCtrl = CyGTabCtrl = getWBToolAdvancedStartTabCtrl()
 		CyGTabCtrl.setSize(600, 188)
-		CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_CITIES",()));
-		CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_UNITS",()));
-		CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_IMPROVEMENTS",()));
-		CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_VISIBILITY",()));
-		CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_TECH",()));
+		CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_CITIES",()))
+		CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_UNITS",()))
+		CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_IMPROVEMENTS",()))
+		CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_VISIBILITY",()))
+		CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_TECH",()))
 		addWBAdvancedStartControlTabs()
 
 #--------------------------------------------------------#

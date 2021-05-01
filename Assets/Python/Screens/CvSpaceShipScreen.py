@@ -58,7 +58,7 @@ class CvSpaceShipScreen:
 			component = GC.getProjectInfo(i)
 			if (component.isSpaceship()):
 				self.spaceVictory = component.getVictoryPrereq()
-				self.componentProjects.append(i);
+				self.componentProjects.append(i)
 
 		#title text
 		self.finishedLabelX = 10

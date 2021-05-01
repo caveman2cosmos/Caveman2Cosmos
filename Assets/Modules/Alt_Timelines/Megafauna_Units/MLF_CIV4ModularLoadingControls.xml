@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- Caveman2Cosmos mod -->
-<!-- megafauna Units  -->
-<!--                 -->
-<!-- These are units based on the animal named in the folder.       -->
-<!--                 -->
-<!--  These are compatible with your selection of animals in the animals folder.              -->
-<!--                 -->
-<!--   If you dont have the animal selected then its megafauna units will not be in game even if you have selected them here.        -->
-<!--                 -->
+<!-- megafauna Units -->
+<!-- These are units based on the animal named in the folder. -->
+<!-- These are compatible with your selection of animals in the animals folder. -->
+<!-- If you dont have the animal selected then its megafauna units will not be in game even if you have selected them here. -->
 <Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<DefaultConfiguration>Megafauna_Units</DefaultConfiguration>
 	<ConfigurationInfos>

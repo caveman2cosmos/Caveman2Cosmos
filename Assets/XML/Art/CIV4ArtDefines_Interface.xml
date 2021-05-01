@@ -1538,30 +1538,6 @@
 			<Type>ART_DEF_BACKGROUND_DOCTOR</Type>
 			<Path>Art/interface/great_people/bg_doctor.dds</Path>
 		</InterfaceArtInfo>
-		<!--InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_DAVE_TOSCHI</Type>
-			<Path>Art/interface/great_people/Dave_Toschi.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_ISIDOR_EINSTEIN</Type>
-			<Path>Art/interface/great_people/Isidor_Einstein.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_JOHNNY_BRODERICK</Type>
-			<Path>Art/interface/great_people/Johnny_Broderick.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_MOE_W_SMITH</Type>
-			<Path>Art/interface/great_people/Moe_W_Smith.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_WILLIAM_J_BURNS</Type>
-			<Path>Art/interface/great_people/William_J_Burns.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_WILLIAM_J_FLYNN</Type>
-			<Path>Art/interface/great_people/William_J_Flynn.dds</Path>
-		</InterfaceArtInfo-->
 		<InterfaceArtInfo>
 			<Type>ART_DEF_GREAT_PERSON_ABBA</Type>
 			<Path>Art/interface/great_people/abba.dds</Path>
@@ -6570,6 +6546,14 @@
 		<InterfaceArtInfo>
 			<Type>ART_DEF_FILTER_SHOW_UNLIMITED</Type>
 			<Path>Art/BUG/World_Off.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>ART_DEF_CHECKBOX_CHECKED</Type>
+			<Path>Art/Interface/buttons/general/checkbox_checked.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>ART_DEF_CHECKBOX_UNCHECKED</Type>
+			<Path>Art/Interface/buttons/general/checkbox_unchecked.dds</Path>
 		</InterfaceArtInfo>
 	</InterfaceArtInfos>
 </Civ4ArtDefines>

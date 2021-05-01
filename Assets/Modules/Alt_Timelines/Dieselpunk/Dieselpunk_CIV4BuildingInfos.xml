@@ -3,7 +3,6 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- ReModified by StrategyOnly -->
-<!-- -->
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
@@ -14,7 +13,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DIESELPUNK_EMBASSY</ArtDefineTag>
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
@@ -27,7 +25,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6480</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -39,7 +36,6 @@
 			<Type>BUILDING_AERODROME</Type>
 			<Description>TXT_KEY_BUILDING_AERODROME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AERODROME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AERODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AERODROME</ArtDefineTag>
 			<MapCategoryTypes>
@@ -49,7 +45,6 @@
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirlift>2</iAirlift>
 			<iAirUnitCapacity>6</iAirUnitCapacity>
 			<HealUnitCombatTypes>
@@ -85,7 +80,6 @@
 			<Type>BUILDING_GRAND_AERODROME</Type>
 			<Description>TXT_KEY_BUILDING_GRAND_AERODROME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRAND_AERODROME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GRAND_AERODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_AERODROME</ArtDefineTag>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
@@ -98,7 +92,6 @@
 			</MapCategoryTypes>
 			<iCost>1230</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirlift>4</iAirlift>
 			<iAirUnitCapacity>9</iAirUnitCapacity>
 			<HealUnitCombatTypes>
@@ -132,7 +125,6 @@
 			<Type>BUILDING_ZUSE_COMPUTER</Type>
 			<Description>TXT_KEY_BUILDING_ZUSE_COMPUTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZUSE_COMPUTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ZUSE_COMPUTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZUSE_COMPUTER</ArtDefineTag>
 			<ObsoleteTech>TECH_COMPUTER_NETWORKS</ObsoleteTech>
@@ -146,7 +138,6 @@
 			</TechTypes>
 			<iCost>1130</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -169,7 +160,6 @@
 			<Type>BUILDING_DIRIGIBLE_TERMINAL</Type>
 			<Description>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DIRIGIBLE_TERMINAL</ArtDefineTag>
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
@@ -183,7 +173,6 @@
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
@@ -201,7 +190,6 @@
 			<Type>BUILDING_FARNSWORTH_LAB</Type>
 			<Description>TXT_KEY_BUILDING_FARNSWORTH_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FARNSWORTH_LAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FARNSWORTH_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FARNSWORTH_LAB</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
@@ -214,7 +202,6 @@
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -232,7 +219,6 @@
 			<Type>BUILDING_THEREMIN_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_THEREMIN_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THEREMIN_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_THEREMIN_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_THEREMIN_FACTORY</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
@@ -247,7 +233,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -272,7 +257,6 @@
 			<Type>BUILDING_RADIOPLEX</Type>
 			<Description>TXT_KEY_BUILDING_RADIOPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RADIOPLEX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RADIOPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RADIOPLEX</ArtDefineTag>
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>

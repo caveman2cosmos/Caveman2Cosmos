@@ -136,7 +136,7 @@ class CvReligionScreen:
 		screen = self.getScreen()
 		if screen.isActive():
 			return
-		screen.setRenderInterfaceOnly(True);
+		screen.setRenderInterfaceOnly(True)
 		screen.showScreen( PopupStates.POPUPSTATE_IMMEDIATE, False)
 
 		# Set the background and exit button, and show the screen
@@ -608,7 +608,7 @@ class CvReligionScreen:
 				pCity = pPlayer.getCity(inputClass.getData2())
 #				CyCamera().JustLookAtPlot(pCity.plot())
 
-				CyInterface().selectCity(pCity, True);
+				CyInterface().selectCity(pCity, True)
 
 		elif (self.ReligionScreenInputMap.has_key(inputClass.getFunctionName())):
 			'Calls function mapped in ReligionScreenInputMap'
@@ -653,18 +653,14 @@ class CvReligionScreen:
 			self.drawCityInfo(self.iReligionSelected)
 
 	def calculateBuilding (self, city, bldg):
-		if city.getNumBuilding(bldg) > 0:
+		if city.getNumRealBuilding(bldg) > 0:
 			return self.objectHave
-#			if city.getNumActiveBuilding(bldg) > 0:
-#				return self.objectHave
-#			else:
-#				return self.objectHaveObsolete
-		elif city.GetCy().getFirstBuildingOrder(bldg) != -1:
+		if city.GetCy().getFirstBuildingOrder(bldg) != -1:
 			return self.objectUnderConstruction
-		elif city.GetCy().canConstruct(bldg, False, False, False):
+		if city.GetCy().canConstruct(bldg, False, False, False):
 			return self.objectPossible
-		elif city.GetCy().canConstruct(bldg, True, False, False):
+		if city.GetCy().canConstruct(bldg, True, False, False):
 			return self.objectPossibleConcurrent
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 

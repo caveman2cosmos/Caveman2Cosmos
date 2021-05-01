@@ -1,37 +1,37 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
-  <!-- Replacements added by AIAndy -->
-  <ElementType name="ReplacementCondition"/>
-  <ElementType name="ReplacementID"/>
-  <!-- Expressions added by AIAndy -->
-  <ElementType name="Constant" content="textOnly"/>
-  <ElementType name="Is" content="textOnly"/>
-  <ElementType name="Python" content="textOnly"/>
-  <ElementType name="BoolExpr"/>
-  <ElementType name="Not"/>
-  <ElementType name="And"/>
-  <ElementType name="Or"/>
-  <ElementType name="BEqual"/>
-  <ElementType name="If"/>
-  <ElementType name="IntegrateOr"/>
-  <ElementType name="GOMType" content="textOnly"/>
-  <ElementType name="ID" content="textOnly"/>
-  <ElementType name="Has" content="eltOnly">
-    <element type="GOMType" minOccurs="1" maxOccurs="*"/>
-    <element type="ID" minOccurs="1" maxOccurs="*"/>
-  </ElementType>
-  <ElementType name="Greater"/>
-  <ElementType name="GreaterEqual"/>
-  <ElementType name="Equal"/>
-  <ElementType name="Random"/>
-  <ElementType name="Adapt"/>
-  <ElementType name="Plus"/>
-  <ElementType name="Minus"/>
-  <ElementType name="Mult"/>
-  <ElementType name="Div"/>
-  <ElementType name="IntegrateSum"/>
-  <ElementType name="IntegrateAvg"/>
-  <ElementType name="IntegrateCount"/>
+	<!-- Replacements added by AIAndy -->
+	<ElementType name="ReplacementCondition"/>
+	<ElementType name="ReplacementID"/>
+	<!-- Expressions added by AIAndy -->
+	<ElementType name="Constant" content="textOnly"/>
+	<ElementType name="Is" content="textOnly"/>
+	<ElementType name="Python" content="textOnly"/>
+	<ElementType name="BoolExpr"/>
+	<ElementType name="Not"/>
+	<ElementType name="And"/>
+	<ElementType name="Or"/>
+	<ElementType name="BEqual"/>
+	<ElementType name="If"/>
+	<ElementType name="IntegrateOr"/>
+	<ElementType name="GOMType" content="textOnly"/>
+	<ElementType name="ID" content="textOnly"/>
+	<ElementType name="Has" content="eltOnly">
+		<element type="GOMType" minOccurs="1" maxOccurs="*"/>
+		<element type="ID" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Greater"/>
+	<ElementType name="GreaterEqual"/>
+	<ElementType name="Equal"/>
+	<ElementType name="Random"/>
+	<ElementType name="Adapt"/>
+	<ElementType name="Plus"/>
+	<ElementType name="Minus"/>
+	<ElementType name="Mult"/>
+	<ElementType name="Div"/>
+	<ElementType name="IntegrateSum"/>
+	<ElementType name="IntegrateAvg"/>
+	<ElementType name="IntegrateCount"/>
 	<!-- PropertyManipulators added by AIAndy -->
 	<ElementType name="PropertySourceType" content="textOnly"/>
 	<ElementType name="PropertyInteractionType" content="textOnly"/>
@@ -55,7 +55,6 @@
 	<ElementType name="iNoDecayAmount" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoConvertAmount" content="textOnly" dt:type="int"/>
 	<ElementType name="Active"/>
-
 	<ElementType name="PropertySource" content="eltOnly" order="many">
 		<element type="PropertySourceType" minOccurs="1" maxOccurs="*"/>
 		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
@@ -69,7 +68,6 @@
 		<element type="iNoDecayAmount" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyInteraction" content="eltOnly" order="many">
 		<element type="PropertyInteractionType" minOccurs="1" maxOccurs="*"/>
 		<element type="SourcePropertyType" minOccurs="1" maxOccurs="*"/>
@@ -84,7 +82,6 @@
 		<element type="iNoConvertAmount" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyPropagator" content="eltOnly" order="many">
 		<element type="PropertyPropagatorType" minOccurs="1" maxOccurs="*"/>
 		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
@@ -99,17 +96,15 @@
 		<element type="iPercent" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyManipulators" content="eltOnly" order="many">
-    <element type="PropertySource" minOccurs="0" maxOccurs="*"/>
-    <element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertySource" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
 		<element type="PropertyPropagator" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="Description" content="textOnly"/>
 	<ElementType name="BonusType" content="textOnly"/>
 	<ElementType name="Type" content="textOnly"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+	<!-- XMLCOPY				02/20/2008			MRGENIE -->
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
@@ -117,7 +112,7 @@
 	<ElementType name="OrDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
 	</ElementType>
-<!-- XMLCOPY				END					MRGENIE		-->
+	<!-- XMLCOPY				END					MRGENIE -->
 	<ElementType name="iYield" content="textOnly" dt:type="int"/>
 	<ElementType name="Yields" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
@@ -139,29 +134,27 @@
 	</ElementType>
 	<ElementType name="Button" content="textOnly"/>
 	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iAdvancedStartCostIncrease" content="textOnly" dt:type="int"/>
 	<ElementType name="iValue" content="textOnly" dt:type="int"/>
 	<ElementType name="iMovement" content="textOnly" dt:type="int"/>
 	<ElementType name="iFlatMovement" content="textOnly" dt:type="int"/>
 	<ElementType name="fZBias" content="textOnly"/>
-<!-- JOOYO_ADDON							START	-->
+	<!-- JOOYO_ADDON							START -->
 	<ElementType name="bSeaTunnel" content="textOnly" dt:type="boolean"/>
-<!-- JOOYO_ADDON							END		-->
+	<!-- JOOYO_ADDON							END -->
 	<ElementType name="RouteInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="iValue" minOccurs="0"/>
 		<element type="iAdvancedStartCost" minOccurs="0"/>
-		<element type="iAdvancedStartCostIncrease" minOccurs="0"/>
 		<element type="iMovement" minOccurs="0"/>
 		<element type="iFlatMovement" minOccurs="0"/>
-<!-- JOOYO_ADDON							START	-->
+		<!-- JOOYO_ADDON							START -->
 		<element type="bSeaTunnel" minOccurs="0"/>
-<!-- JOOYO_ADDON							END		-->
+		<!-- JOOYO_ADDON							END -->
 		<element type="BonusType" minOccurs="0"/>
 		<element type="PrereqOrBonuses" minOccurs="0"/>
 		<element type="Yields" minOccurs="0"/>
@@ -182,10 +175,10 @@
 	<ElementType name="Connections" content="textOnly"/>
 	<ElementType name="RiverInfo" content="eltOnly">
 		<element type="Type" maxOccurs="*"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 	</ElementType>
 	<ElementType name="RiverInfos" content="eltOnly">
 		<element type="fZBias" minOccurs="0"/>
@@ -298,10 +291,10 @@
 	</ElementType>
 	<ElementType name="EffectInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="fScale" minOccurs="0"/>
 		<element type="fUpdateRate" minOccurs="0"/>
@@ -313,10 +306,10 @@
 	</ElementType>
 	<ElementType name="AttachableInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="fScale" minOccurs="0"/>
 		<element type="Path" minOccurs="0"/>
@@ -326,10 +319,10 @@
 	</ElementType>
 	<ElementType name="QuestInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="QuestObjective" minOccurs="0"/>
 		<element type="QuestBodyText" minOccurs="0"/>
@@ -373,10 +366,10 @@
 	<ElementType name="iInputKey" content="textOnly" dt:type="int"/>
 	<ElementType name="ScriptGameInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="GameData" minOccurs="0" maxOccurs="*"/>
 		<element type="iInputKey"/>
 	</ElementType>
@@ -398,10 +391,10 @@
 	<ElementType name="fPauseDuration" content="textOnly"/>
 	<ElementType name="ScriptCameraInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="fZoomDistance"/>
 		<element type="fZoomSpeed"/>
 		<element type="fRotateDistance"/>
@@ -422,10 +415,10 @@
 	<ElementType name="ScriptedMoveData" content="textOnly"/>
 	<ElementType name="ScriptEngineInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="InterfaceVisibility"/>
 		<element type="bHideCityBillboards"/>
 		<element type="bHideFlag"/>
@@ -436,10 +429,10 @@
 	</ElementType>
 	<ElementType name="ScriptUnitInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="UnitScriptString"/>
 		<element type="AnimationPathType"/>
 		<element type="EntityEventType"/>
@@ -455,10 +448,10 @@
 	<ElementType name="SoundTag3D" content="textOnly"/>
 	<ElementType name="ScriptSoundInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="SoundTag2D"/>
 		<element type="SoundTag3D"/>
 	</ElementType>
@@ -472,10 +465,10 @@
 	<ElementType name="PythonFunction" content="textOnly"/>
 	<ElementType name="PythonCallInfo" content="eltOnly">
 		<element type="Type" minOccurs="0"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="PythonModule" minOccurs="0"/>
 		<element type="PythonFunction" minOccurs="0"/>
 		<element type="PythonArguments" minOccurs="0"/>

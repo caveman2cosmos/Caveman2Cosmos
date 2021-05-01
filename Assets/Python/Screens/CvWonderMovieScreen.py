@@ -114,7 +114,7 @@ class CvWonderMovieScreen:
 	def infoPanel(self):
 		if not self.iInfoPanel:
 			if not self.iMovieType:
-				szHelp = CyGameTextMgr().getBuildingHelp(self.iWonderId, False, False, False, None, False)
+				szHelp = CyGameTextMgr().getBuildingHelp(self.iWonderId, False, None, False, False, False)
 
 			elif self.iMovieType == 2:
 				szHelp = CyGameTextMgr().getProjectHelp(self.iWonderId, False, None)

@@ -8,9 +8,9 @@ from CvPythonExtensions import *
 import BugConfigTracker
 import BugCore
 import BugOptions
-import BugPath
+import SystemPaths as SP
 import codecs
-import os.path
+import os
 import time
 
 AutologOpt = BugCore.game.Autolog
@@ -41,7 +41,9 @@ class autologInstance:
 			AutologOpt.setFilePath(LogFilePath)
 			BugOptions.write()
 		if not LogFilePath or LogFilePath == "Default":
-			LogFilePath = BugPath.findOrMakeDir("Autolog")
+			LogFilePath = SP.joinModDir("Autolog")
+		if not os.path.isdir(LogFilePath):
+			os.makedirs(LogFilePath)
 		self.LogFilePath = LogFilePath
 		self.updateLogFile()
 
@@ -71,9 +73,9 @@ class autologInstance:
 			year = TRNSLTR.getText("TXT_KEY_TIME_AD", (year,))
 
 		if iMaxTurns:
-			zTurn = "%i/%i" % (GAME.getElapsedGameTurns() + AutologOpt.get4000BCTurn(), iMaxTurns)
+			zTurn = "%i/%i" % (GAME.getElapsedGameTurns() + AutologOpt.getStartDateTurn(), iMaxTurns)
 		else:
-			zTurn = "%i" %(GAME.getElapsedGameTurns() + AutologOpt.get4000BCTurn())
+			zTurn = "%i" %(GAME.getElapsedGameTurns() + AutologOpt.getStartDateTurn())
 
 		self.writeMsg(TRNSLTR.getText("TXT_KEY_AUTOLOG_TURN", (zTurn, year, time.strftime("%d-%b-%Y %H:%M:%S"))), vBold=True, vUnderline=True)
 		self.bStarted = True

@@ -23,7 +23,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GREAT_FARMER</Description>
 			<Civilopedia>TXT_KEY_UNIT_GREAT_FARMER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREAT_FARMER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<UnitAIs>
@@ -121,7 +120,7 @@
 					<BuildType>BUILD_BONUS_FLAX</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
- 				<Build>
+				<Build>
 					<BuildType>BUILD_BONUS_POMEGRANATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>

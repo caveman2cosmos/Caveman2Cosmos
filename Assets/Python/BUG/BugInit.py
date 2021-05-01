@@ -27,9 +27,6 @@ def init():
 
 	BugOptions.initUserSettings()
 
-	import BugPath
-	BugPath.init()
-
 	loadMod("init")
 	import BugCore
 	BugCore.initDone()
