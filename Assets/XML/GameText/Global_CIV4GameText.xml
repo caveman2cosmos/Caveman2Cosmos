@@ -16282,14 +16282,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>L&#237;der</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_RESET</Tag>
-		<English>Restore Defaults</English>
-		<French>Par d&#233;faut</French>
-		<German>Standardeinstellungen wiederherstellen</German>
-		<Italian>Ripristina predefiniti</Italian>
-		<Spanish>Restablecer valores predeterminados</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_ADVISOR_POPUPS</Tag>
 		<English>Advisor Pop-Ups</English>
 		<French>Info-bulle du conseiller</French>
@@ -16682,14 +16674,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Los trabajadores automatizados no talan los bosques.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_TITLE</Tag>
-		<English>Options</English>
-		<French>Options</French>
-		<German>Optionen</German>
-		<Italian>Opzioni</Italian>
-		<Spanish>Opciones</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_GAME</Tag>
 		<English>Game</English>
 		<French>Jeu</French>
@@ -17034,14 +17018,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Idioma</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_SCREEN_OTHER</Tag>
-		<English>Other</English>
-		<French>Autre</French>
-		<German>Sonstige</German>
-		<Italian>Altro</Italian>
-		<Spanish>Otros</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SCREEN_PROFILES</Tag>
 		<English>Profiles</English>
 		<French>Profils</French>
@@ -17248,22 +17224,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Lautsprecher</German>
 		<Italian>Cuffie</Italian>
 		<Spanish>Auriculares</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INVALID_PLAYBACK_TITLE</Tag>
-		<English>Invalid Device</English>
-		<French>Invalid Device</French>
-		<German>Invalid Device</German>
-		<Italian>Invalid Device</Italian>
-		<Spanish>Invalid Device</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INVALID_PLAYBACK_DESC</Tag>
-		<English>You have selected an unusable voice playback device.  Voice playback disabled.</English>
-		<French>You have selected an unusable voice playback device.  Voice playback disabled.</French>
-		<German>You have selected an unusable voice playback device.  Voice playback disabled.</German>
-		<Italian>You have selected an unusable voice playback device.  Voice playback disabled.</Italian>
-		<Spanish>You have selected an unusable voice playback device.  Voice playback disabled.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTION_SOUND_MONO</Tag>
