@@ -20191,4 +20191,777 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Signore di %s1_player</Italian>
 		<Spanish>Se&#241;or de %s1_player.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_AVAILABLE_PLAYER</Tag>
+		<English>[SPACE](%s2_player has %d1_num_bonus)[SPACE]</English>
+		<French>[SPACE](%s2_player a %d1_num_bonus)[SPACE]</French>
+		<German>[SPACE](%s2_player hat %d1_num_bonus)[SPACE]</German>
+		<Italian>[SPACE](%s2_player possiede %d1_num_bonus)[SPACE]</Italian>
+		<Spanish>[SPACE](%s2_player tiene %d1_num_bonus)[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_HEALTHY</Tag>
+		<English>Healthy: +%d1_Change[ICON_HEALTHY]</English>
+		<French>Sant&#233; : +%d1_Change[ICON_HEALTHY]</French>
+		<German>Gesund: +%d1_Change[ICON_HEALTHY]</German>
+		<Italian>Sani: +%d1_Change[ICON_HEALTHY]</Italian>
+		<Spanish>Saludable: +%d1_Change [ICON_HEALTHY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_REVEALED_BY</Tag>
+		<English>[ICON_BULLET]Revealed by [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Appara&#238;t avec : [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Durch die Technologie [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] verf&#252;gbar</German>
+		<Italian>[ICON_BULLET]Una scoperta [NUM1:del:della:dei:delle] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Se descubre gracias [NUM1:al:a la:a los:a las] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_UNHEALTHY</Tag>
+		<English>Unhealthy: +%d1_Change[ICON_UNHEALTHY]</English>
+		<French>Maladie : +%d1_Change[ICON_UNHEALTHY]</French>
+		<German>Krank: +%d1_Change[ICON_UNHEALTHY]</German>
+		<Italian>Malati: +%d1_Change[ICON_UNHEALTHY]</Italian>
+		<Spanish>Insalubre: +%d1_Change [ICON_UNHEALTHY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_WITH_IMPROVEMENT</Tag>
+		<English>(with %s1_ImpName)</English>
+		<French>(avec %s1_ImpName)</French>
+		<German>(durch die Modernisierung %s1_ImpName)</German>
+		<Italian>(con [NUM1:il:la:gli:le] %s1_ImpName)</Italian>
+		<Spanish>(con %s1_ImpName)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ADJUST_COMM_RATE</Tag>
+		<English>[ICON_BULLET]Can Adjust %F1_CmrcIcon Rate</English>
+		<French>[ICON_BULLET]Peut modifier le taux de commerce de %F1_CmrcIcon</French>
+		<German>[ICON_BULLET]Kann %F1_CmrcIcon-Rate anpassen</German>
+		<Italian>[ICON_BULLET]Pu&#242; regolare il ritmo del %F1_CmrcIcon</Italian>
+		<Spanish>[ICON_BULLET]Puede ajustar el ritmo de %F1_CmrcIcon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AIRLIFT</Tag>
+		<English>[ICON_BULLET]Can Airlift %d1_Num Land [NUM1:Unit:Units] per Turn</English>
+		<French>[ICON_BULLET]Peut convoyer %d1_Num [NUM1:unit&#233; terrestre:unit&#233;s terrestres] par voie a&#233;rienne par tour</French>
+		<German>[ICON_BULLET]Kann pro Runde %d1_Num [NUM1:Bodeneinheit:Bodeneinheiten] per Lufttransport bef&#246;rdern</German>
+		<Italian>[ICON_BULLET]Permette il trasporto aereo di %d1_Num unit&#224; [NUM1:terrestre:terrestri] per turno</Italian>
+		<Spanish>[ICON_BULLET]Puede aerotransportar %d1_Num [NUM1:unidad terrestre:unidades terrestres] por turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AIR_DAMAGE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Damage from [LINK=CONCEPT_AIR_UNITS]Air Units[\LINK]</English>
+		<French>[ICON_BULLET]D&#233;g&#226;ts par les [LINK=CONCEPT_AIR_UNITS]unit&#233;s a&#233;riennes[\LINK] %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Schaden durch [LINK=CONCEPT_AIR_UNITS]Lufteinheiten[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% danno dalle [LINK=CONCEPT_AIR_UNITS]unit&#224; aeree[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al da&#241;o por [LINK=CONCEPT_AIR_UNITS]unidades a&#233;reas[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AIR_UNIT_CAPACITY</Tag>
+		<English>[ICON_BULLET]%D1 [LINK=CONCEPT_AIR_UNITS]Air Unit[\LINK] Capacity</English>
+		<French>[ICON_BULLET]%D1 Capacit&#233; des [LINK=CONCEPT_AIR_UNITS]unit&#233;s a&#233;riennes[\LINK]</French>
+		<German>[ICON_BULLET]%D1 Kapazit&#228;t f&#252;r [LINK=CONCEPT_AIR_UNITS]Lufteinheiten[\LINK]</German>
+		<Italian>[ICON_BULLET]Spazio di carico [LINK=CONCEPT_AIR_UNITS]unit&#224; aerea[\LINK] %D1</Italian>
+		<Spanish>[ICON_BULLET]%D1 de Capacidad de la [LINK=CONCEPT_AIR_UNITS]Unidad a&#233;rea[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALL_CITIES_THIS_CONTINENT</Tag>
+		<English>[SPACE]All Cities This Continent</English>
+		<French>[SPACE]Toutes les villes sur ce continent</French>
+		<German>[SPACE]Alle St&#228;dte auf diesem Kontinent</German>
+		<Italian>[SPACE]Tutte le citt&#224; in questo continente</Italian>
+		<Spanish>[SPACE]Todas las ciudades de este continente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALL_CITIES</Tag>
+		<English>[SPACE]All Cities</English>
+		<French>[SPACE]Toutes les villes</French>
+		<German>[SPACE]Alle St&#228;dte</German>
+		<Italian>[SPACE]Tutte le citt&#224;</Italian>
+		<Spanish>[SPACE]Todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRTH_RATE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% [ICON_GREATPEOPLE] Birth Rate</English>
+		<French>[ICON_BULLET]Taux de natalit&#233; [ICON_GREATPEOPLE] %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Geburtenrate [ICON_GREATPEOPLE]</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% [ICON_GREATPEOPLE] tasso di natalit&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la tasa de natalidad de [ICON_GREATPEOPLE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRTH_RATE_MOD_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% [ICON_GREATPEOPLE] Birth Rate in All Cities</English>
+		<French>[ICON_BULLET]Natalit&#233; dans toutes les villes [ICON_GREATPEOPLE] %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Geburtenrate [ICON_GREATPEOPLE] in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% [ICON_GREATPEOPLE] tasso di natalit&#224; in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la tasa de natalidad de [ICON_GREATPEOPLE] en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BORDER_OBSTACLE</Tag>
+		<English>[ICON_BULLET]Prevents Barbarians from Entering Borders on Continent</English>
+		<French>[ICON_BULLET]Emp&#234;che les Barbares de franchir les fronti&#232;res du continent</French>
+		<German>[ICON_BULLET]Hindert Barbaren an der Überquerung der kontinentalen Grenzen</German>
+		<Italian>[ICON_BULLET]Impedisce ai barbari di superare i confini sul continente</Italian>
+		<Spanish>[ICON_BULLET]Impide que los b&#225;rbaros traspasen las fronteras del continente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUILDS_FASTER_DOMAIN</Tag>
+		<English>[ICON_BULLET]Builds %s1_UnitName %D2_Mod%% Faster</English>
+		<French>[ICON_BULLET]Vitesse de production de "%s1_UnitName" : %D2_Mod%%</French>
+		<German>[ICON_BULLET]Errichtet die Einheit %s1_UnitName %D2_Mod%% schneller</German>
+		<Italian>[ICON_BULLET]Costruisce %s1_UnitName %D2_Mod%% pi&#249; velocemente</Italian>
+		<Spanish>[ICON_BULLET]Construye %s1:2_UnitName un %D2_Mod%% m&#225;s r&#225;pido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CAPITAL</Tag>
+		<English>[ICON_BULLET]Makes this City the Capital</English>
+		<French>[ICON_BULLET]Fait de cette ville la capitale</French>
+		<German>[ICON_BULLET]Erhebt diese Stadt zur Hauptstadt</German>
+		<Italian>[ICON_BULLET]Rende capitale questa citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]Convierte esta ciudad en la capital</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CENTERS_MAP</Tag>
+		<English>[ICON_BULLET]Centers [LINK=CONCEPT_MAPS]World Map[\LINK]</English>
+		<French>[ICON_BULLET]Centre la [LINK=CONCEPT_MAPS]carte du monde[\LINK]</French>
+		<German>[ICON_BULLET]Zentriert die [LINK=CONCEPT_MAPS]Weltkarte[\LINK]</German>
+		<Italian>[ICON_BULLET]Centra la [LINK=CONCEPT_MAPS]mappa[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Centra el [LINK=CONCEPT_MAPS]mapamundi[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CIVIC_HEALTH_HAPPINESS_CHANGE</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrHealth with[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrHealth avec [SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrHealth mit[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappyOrHealth con[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrHealth con[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_COASTAL_TRADE_ROUTES</Tag>
+		<English>[ICON_BULLET]%D1_Change Trade Routes in All Coastal Cities</English>
+		<French>[ICON_BULLET]%D1_Change Routes commerciales dans toutes les villes c&#244;ti&#232;res</French>
+		<German>[ICON_BULLET]%D1_Change Handelswege in allen K&#252;stenst&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Change rotte commerciali in tutte le citt&#224; costiere</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales en todas las ciudades costeras</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DEFENSE_MOD_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%d1_Mod%% Defense in All Cities</English>
+		<French>[ICON_BULLET]%d1_Mod%% en d&#233;fense dans toutes les villes</French>
+		<German>[ICON_BULLET]%d1_Mod%% Verteidigung in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%d1_Mod%% alla difesa in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%d1_Mod%% a la defensa en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ELECTION_ELIGIBILITY</Tag>
+		<English>[ICON_BULLET]Guarantees Eligibility for Diplomatic Votes</English>
+		<French>[ICON_BULLET]Garantit l'&#233;ligibilit&#233; pour les votes diplomatiques</French>
+		<German>[ICON_BULLET]Garantiert Berechtigung f&#252;r diplomatische Wahlen</German>
+		<Italian>[ICON_BULLET]Garantisce l'idoneit&#224; per i voti diplomatici</Italian>
+		<Spanish>[ICON_BULLET]Garantiza la validez de los votos diplom&#225;ticos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ENABLES_CIVICS</Tag>
+		<!-- %s1_Name = TXT_KEY_CIVICOPTION_ -->
+		<English>[ICON_BULLET]Enables all [COLOR_HIGHLIGHT_TEXT]%s1_Name[COLOR_REVERT] Civics</English>
+		<French>[ICON_BULLET]Permet toutes les doctrines de %s1_Name</French>
+		<German>[ICON_BULLET]Erm&#246;glicht alle %s1_Name staatsformen</German>
+		<Italian>[ICON_BULLET]Permette tutte [COLOR_HIGHLIGHT_TEXT]%s1_Name[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Permite todos los principios de [COLOR_HIGHLIGHT_TEXT]%s1_Name[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ESPIONAGE_DEFENSE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Defense against Espionage</English>
+		<French>[ICON_BULLET]Protection contre l'espionnage %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Verteidigung gegen Spionage</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% in difesa contro lo spionaggio</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la defensa contra el espionaje</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOREIGN_TRADE_ROUTE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Foreign Trade Route Yield</English>
+		<French>[ICON_BULLET]Production de la route commerciale &#233;trang&#232;re %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Gewinn auf interkontinentalen Au&#223;enhandelswegen</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% al rendimento delle rotte commerciali straniere</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de las rutas comerciales internacionales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FREE_SPECIALISTS</Tag>
+		<English>[ICON_BULLET]%D1_Change Free Specialists</English>
+		<French>[ICON_BULLET]%D1_Change sp&#233;cialistes gratuits</French>
+		<German>[ICON_BULLET]%D1_Change freie Spezialisten</German>
+		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FREE_SPECIALISTS_CONT</Tag>
+		<English>[ICON_BULLET]%D1_Change Free Specialists in All Cities on this Continent</English>
+		<French>[ICON_BULLET]%D1_Change sp&#233;cialiste gratuit dans toutes les villes sur ce continent</French>
+		<German>[ICON_BULLET]%D1_Change freie(n) Spezialisten in allen St&#228;dten dieses Kontinents</German>
+		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti in tutte le citt&#224; di questo continente.</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis en todas las ciudades de este continente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FREE_SPECIALISTS_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Change Free Specialists in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change sp&#233;cialistes gratuits dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change freie Spezialisten in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti in tutt le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis en todas las ciudades </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FREE_START_ERA</Tag>
+		<English>[ICON_BULLET]Available for free on %s1_EraName and later starts</English>
+		<French>[ICON_BULLET]Disponible gratuitement &#224; l'&#233;poque "%s1_EraName" et pour les d&#233;buts de partie plus tardifs</French>
+		<German>[ICON_BULLET]Frei verf&#252;gbar im Zeitalter %s1_EraName und sp&#228;ter</German>
+		<Italian>[ICON_BULLET]Disponibile gratuitamente al raggiungimento di %s1_EraName</Italian>
+		<Spanish>[ICON_BULLET]Disponible gratis a partir [NUM1:del:de la:de los:de las] %s1_EraName e inicios posteriores</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FREE_TECH</Tag>
+		<English>[ICON_BULLET]1 Free Technology</English>
+		<French>[ICON_BULLET]1 technologie gratuite</French>
+		<German>[ICON_BULLET]1 freie Technologie</German>
+		<Italian>[ICON_BULLET]1 tecnologia gratuita</Italian>
+		<Spanish>[ICON_BULLET]1 tecnolog&#237;a gratis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FREE_TECHS</Tag>
+		<English>[ICON_BULLET]%d1_Num Free Technologies</English>
+		<French>[ICON_BULLET]%d1_Num technologies gratuites</French>
+		<German>[ICON_BULLET]%d1_Num freie Technologien</German>
+		<Italian>[ICON_BULLET]%d1_Num tecnologie gratuite</Italian>
+		<Spanish>[ICON_BULLET]%d1_Num tecnolog&#237;as gratis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FREE_XP_UNITS</Tag>
+		<English>[ICON_BULLET]New Units Receive %D1_Change Experience Points</English>
+		<French>[ICON_BULLET]Les nouvelles unit&#233;s b&#233;n&#233;ficient de %D1_Change EXP</French>
+		<German>[ICON_BULLET]Neue Einheiten erhalten %D1_Change Erfahrungspunkte</German>
+		<Italian>[ICON_BULLET]Le nuove unit&#224; ricevono %D1_Change punti esperienza</Italian>
+		<Spanish>[ICON_BULLET]Las nuevas unidades reciben %D1_Change [NUM1:punto de experiencia:puntos de experiencia]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FREE_XP_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]New Units Receive %D1_Change Experience Points in All Cities</English>
+		<French>[ICON_BULLET]Les nouvelles unit&#233;s b&#233;n&#233;ficient de %D1_Change EXP dans toutes les villes</French>
+		<German>[ICON_BULLET]Neue Einheiten erhalten %D1_Change Erfahrungspunkte in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]Le nuove unit&#224; %D1_Change ricevono punti esperienza in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]Las nuevas unidades reciben %D1_Change [NUM1:punto de experiencia:puntos de experiencia] en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FROM_ALL_REL_BUILDINGS</Tag>
+		<English>[SPACE]from All %F1_RelIcon Buildings</English>
+		<French>[SPACE]de tous les b&#226;timents li&#233;s &#224; : %F1_RelIcon</French>
+		<German>[SPACE]von allen %F1_RelIcon-Geb&#228;uden</German>
+		<Italian>[SPACE]da tutti gli edifici %F1_RelIcon</Italian>
+		<Spanish>[SPACE]de todos los edificios del %F1_RelIcon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GENERAL_RATE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Great General Emergence</English>
+		<French>[ICON_BULLET]Emergence d'un G&#233;n&#233;ral illustre %D1_Mod%%</French>
+		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% Produktion Gro&#223;er Gener&#228;le</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% comparsa di un Grande Generale</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la aparici&#243;n de Gran general</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GLOBAL_POP</Tag>
+		<English>[ICON_BULLET]%D1_Change Population in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change Population dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change Bev&#246;lkerung in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Change di popolazione in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change de poblaci&#243;n en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOLDEN_AGE</Tag>
+		<English>[ICON_BULLET]Starts a Golden Age</English>
+		<French>[ICON_BULLET]D&#233;clenche un &#226;ge d'or</French>
+		<German>[ICON_BULLET]Beginnt ein Goldenes Zeitalter</German>
+		<Italian>[ICON_BULLET]Avvia l'Et&#224; dell'Oro</Italian>
+		<Spanish>[ICON_BULLET]Inicia una edad de oro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOLDENAGE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Golden Age Length</English>
+		<French>[ICON_BULLET]Longueur de l'&#226;ge d'or %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Dauer des Goldenen Zeitalters</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di lunghezza dell'Et&#224; dell'Oro</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la duraci&#243;n de la edad de oro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAPPY_CHANGE_CONT</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in All Cities on this Continent</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans toutes les villes sur ce continent</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in allen St&#228;dten dieses Kontinents</German>
+		<Italian>[ICON_BULLET]%D1_Change %F2_HappyOrUn in tutte le citt&#224; di questo continente</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en todas las ciudades de este continente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAPPY_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappyOrUn in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAPPINESS_CHANGE</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappOrUn from[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappOrUn en raison de :[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappOrUn durch[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUn da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUn por[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HEALTH_CHANGE_CONT</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUn in All Cities on this Continent</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUn dans toutes les villes sur ce continent</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HealthOrUn in allen St&#228;dten dieses Kontinents</German>
+		<Italian>[ICON_BULLET]%D1_Change %F2_HealthOrUn in tutte le citt&#224; di questo continente</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HealthOrUn en todas las ciudades de este continente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HEALTH_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUn in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUn dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HealthOrUn in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HealthOrUn in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HealthOrUn en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HEALTH_HAPPINESS_CHANGE</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrHealth from[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrHealth en raison de [SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrHealth durch[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change %F2_HappyOrHealth da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrHealth por[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HEAL_MOD</Tag>
+		<English>[ICON_BULLET]Heals Units Extra %d1_Mod%% Damage/Turn</English>
+		<French>[ICON_BULLET]Soigne les unit&#233;s de %d1_Mod%% de d&#233;g&#226;ts/tour</French>
+		<German>[ICON_BULLET]Heilt zus&#228;tzlich %d1_Mod%% Schaden/Runde bei Einheiten</German>
+		<Italian>[ICON_BULLET]Cura le unit&#224; del %d1_Mod%% di danno extra per turno.</Italian>
+		<Spanish>[ICON_BULLET]Cura a las unidades un %d1_Mod%% de da&#241;o extra por turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HURRY_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Hurry Production Cost</English>
+		<French>[ICON_BULLET]Co&#251;t de l'acc&#233;l&#233;ration de la production %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Kosten f&#252;r beschleunigte Produktion</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% costo per accelerare la produzione</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de acelerar la producci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HURRY_ANGER_MOD</Tag>
+		<English>[ICON_BULLET]%D1_percent%% Anger Duration from Sacrificing Population</English>
+		<French>[ICON_BULLET]Dur&#233;e de col&#232;re apr&#232;s avoir un sacrifice de population%D1_percent%%</French>
+		<German>[ICON_BULLET]%D1_percent%% Unmutsdauer durch Bev&#246;lkerungseinbu&#223;en</German>
+		<Italian>[ICON_BULLET]%D1_percent%% di durata del malcontento per aver sacrificato la popolazione</Italian>
+		<Spanish>[ICON_BULLET]%D1_percent%% a la duraci&#243;n del hast&#237;o por sacrificar poblaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_IMPROVEMENT_FREE_SPECIALISTS</Tag>
+		<English>[ICON_BULLET]%D1_Change Free [NUM1:Specialist:Specialists] per[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change [NUM1:Sp&#233;cialiste gratuit:Sp&#233;cialistes gratuits] par[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change [NUM1:freier Spezialist:freie Spezialisten] pro[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change [NUM1:specialista:specialisti] gratis per[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change [NUM1:especialista gratis:especialistas gratis] por[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Maintenance[\LINK]</English>
+		<French>[ICON_BULLET][LINK=CONCEPT_MAINTENANCE]Entretien[\LINK] %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Unterhalt[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di [LINK=CONCEPT_MAINTENANCE]mantenimento[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAX_START_ERA</Tag>
+		<!-- %s1_Name = TXT_KET_ERA_ -->
+		<English>[ICON_BULLET]Can only be Built on %s1_Name and Earlier Starts</English>
+		<French>[ICON_BULLET]Construction uniquement possible &#224; l'&#233;poque "%s1_Name" et pour les d&#233;buts de partie plus pr&#233;coces</French>
+		<German>[ICON_BULLET]Kann nur im Zeitalter %s1_Name und fr&#252;her errichtet werden</German>
+		<Italian>[ICON_BULLET]Pu&#242; essere costruito soltanto durante l'era %s1_Name o prima</Italian>
+		<Spanish>[ICON_BULLET]Solo se puede construir en [NUM1:el:la:los:las] %s1_Name e inicios anteriores</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MILITARY_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Military Unit Production</English>
+		<French>[ICON_BULLET]Production d'unit&#233;s militaires %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Produktion von Milit&#228;reinheiten</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di produzione nelle unit&#224; militari</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la producci&#243;n de unidades militares</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIONAL_WONDER_ALLOWED</Tag>
+		<English>[ICON_BULLET]National Wonder (%d1_Num Allowed)</English>
+		<French>[ICON_BULLET]Merveille nationale (limite : %d1_Num)</French>
+		<German>[ICON_BULLET]Nationales Wunder (%d1_Num zul&#228;ssig)</German>
+		<Italian>[ICON_BULLET]Meraviglia Nazionale (%d1_Num [NUM1:permessa:permesse])</Italian>
+		<Spanish>[ICON_BULLET]Maravilla nacional (%d1_Num [NUM1:permitida:permitidas])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIONAL_WONDER_LEFT</Tag>
+		<English>[SPACE](National Wonder: %d1_Num Left)</English>
+		<French>[SPACE](Merveille nationale : reste %d1_Num)</French>
+		<German>[SPACE](Nationales Wunder: %d1_Num &#252;brig)</German>
+		<Italian>[SPACE](Meraviglia Nazionale: %d1_Num [NUM1:rimasta:rimaste])</Italian>
+		<Spanish>[SPACE](Maravilla nacional: %d1_Num [NUM1:restante:restantes])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIONAL_WONDERS_PER_CITY</Tag>
+		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num National Wonders per City[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Construction de merveilles nationales limit&#233;e &#224; %d1_Num par ville[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num [NUM1:Nationales:Nationale] Wunder pro Stadt errichten[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Meraviglie Nazionali per citt&#224;[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla nacional:maravillas nacionales] por ciudad[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NO_UNHAPPY</Tag>
+		<English>[ICON_BULLET]No [ICON_UNHAPPY] in this City</English>
+		<French>[ICON_BULLET]Pas de [ICON_UNHAPPY] dans cette ville</French>
+		<German>[ICON_BULLET]Keine [ICON_UNHAPPY] in dieser Stadt</German>
+		<Italian>[ICON_BULLET]Nessuno [ICON_UNHAPPY] in questa citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]En esta ciudad no hay [ICON_UNHAPPY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NO_UNHEALTHY_POP</Tag>
+		<English>[ICON_BULLET]No [ICON_UNHEALTHY] from Population</English>
+		<French>[ICON_BULLET]Pas de [ICON_UNHEALTHY] &#224; cause de la population</French>
+		<German>[ICON_BULLET]Nicht [ICON_UNHEALTHY] durch Bev&#246;lkerung</German>
+		<Italian>[ICON_BULLET]Nessun [ICON_UNHEALTHY] tra la popolazione</Italian>
+		<Spanish>[ICON_BULLET]No hay [ICON_UNHEALTHY] por poblaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NO_UNHEALTHY_BUILDINGS</Tag>
+		<English>[ICON_BULLET]No [ICON_UNHEALTHY] from Buildings</English>
+		<French>[ICON_BULLET]Pas de [ICON_UNHEALTHY] &#224; cause des b&#226;timents</French>
+		<German>[ICON_BULLET]Nicht [ICON_UNHEALTHY] durch Geb&#228;ude</German>
+		<Italian>[ICON_BULLET]Nessun [ICON_UNHEALTHY] dagli edifici</Italian>
+		<Spanish>[ICON_BULLET]No hay [ICON_UNHEALTHY] por edificios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NUKE_DAMAGE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Damage from [LINK=CONCEPT_NUKES]Nukes[\LINK]</English>
+		<French>[ICON_BULLET]D&#233;g&#226;ts par les [LINK=CONCEPT_NUKES]armes nucl&#233;aires[\LINK] %D1_Mod%% </French>
+		<German>[ICON_BULLET]%D1_Mod%% Schaden durch [LINK=CONCEPT_NUKES]Atomraketen[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% danno dalle [LINK=CONCEPT_NUKES]bombe atomiche[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al da&#241;o por [LINK=CONCEPT_NUKES]armas nucleares[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NUM_TURNS</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]%d1_Num Turns[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]%d1_Num tours[COLOR_REVERT]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]%d1_Num Runden[COLOR_REVERT]</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turni][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PER_CITY_WITH</Tag>
+		<English>[SPACE]per City with %F1_RelIcon</English>
+		<French>[SPACE]par ville avec : %F1_RelIcon</French>
+		<German>[SPACE]pro Stadt mit der Religion %F1_RelIcon</German>
+		<Italian>[SPACE]per una citt&#224; con %F1_RelIcon</Italian>
+		<Spanish>[SPACE]por cada ciudad con %F1_RelIcon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PER_SPECIALIST_ALL_CITIES</Tag>
+		<English>[SPACE]per Specialist in All Cities</English>
+		<French>[SPACE]par sp&#233;cialiste dans toutes les villes</French>
+		<German>[SPACE]pro Spezialist in allen St&#228;dten</German>
+		<Italian>[SPACE]per specialista in tutte le citt&#224;</Italian>
+		<Spanish>[SPACE]por cada especialista en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PER_LEVEL</Tag>
+		<English>[ICON_BULLET]+1%F1_HappyOrUn per %d2_Percent%% %F3_CommIcon Rate</English>
+		<French>[ICON_BULLET]+1%F1_HappyOrUn par %d2_Percent%% de %F3_CommIcon</French>
+		<German>[ICON_BULLET]+1%F1_HappyOrUn je %d2_Percent%% %F3_CommIcon-Rate</German>
+		<Italian>[ICON_BULLET]+1%F1_HappyOrUn per %d2_Percent%% al ritmo %F3_CommIcon</Italian>
+		<Spanish>[ICON_BULLET]+1 %F1_HappyOrUn por cada %d2_Percent%% de ritmo de %F3_CommIcon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROVIDES_POWER</Tag>
+		<English>[ICON_BULLET]Provides Power ([ICON_POWER])</English>
+		<French>[ICON_BULLET]Fournit de l'&#233;lectricit&#233; ([ICON_POWER])</French>
+		<German>[ICON_BULLET]Liefert Energie ([ICON_POWER])</German>
+		<Italian>[ICON_BULLET]Fornisce energia([ICON_POWER])</Italian>
+		<Spanish>[ICON_BULLET]Proporciona energ&#237;a ([ICON_POWER])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROVIDES_AREA_CLEAN_POWER</Tag>
+		<English>[ICON_BULLET]Provides Power ([ICON_POWER]) for All Cities on this Continent</English>
+		<French>[ICON_BULLET]Fournit de l'&#233;nergie &#224; toutes les villes de ce continent</French>
+		<German>[ICON_BULLET]Liefert Energie f&#252;r alle St&#228;dte auf diesem Kontinent</German>
+		<Italian>[ICON_BULLET]Fornisce energia a tutte le citt&#224; in questo continente</Italian>
+		<Spanish>[ICON_BULLET]Proporciona energ&#237;a a todas las ciudades de este continente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REDUCES_MAINTENANCE</Tag>
+		<English>[ICON_BULLET]Reduces [LINK=CONCEPT_MAINTENANCE]Maintenance[\LINK] in Nearby Cities</English>
+		<French>[ICON_BULLET]R&#233;duit le co&#251;t [LINK=CONCEPT_MAINTENANCE]d'entretien[\LINK] des villes voisines</French>
+		<German>[ICON_BULLET]Reduziert den [LINK=CONCEPT_MAINTENANCE]Unterhalt[\LINK] in umliegenden St&#228;dten</German>
+		<Italian>[ICON_BULLET]Riduce il [LINK=CONCEPT_MAINTENANCE]mantenimento[\LINK] nelle citt&#224; vicine</Italian>
+		<Spanish>[ICON_BULLET]Reduce el [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK] de las ciudades cercanas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RELIGION_HAPPINESS</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn if %F3_RelIcon is State [ICON_RELIGION]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn si la [ICON_RELIGION] d'&#233;tat est : %F3_RelIcon</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn, wenn die Religion %F3_RelIcon die [ICON_RELIGION] des Staates ist</German>
+		<Italian>[ICON_BULLET]%D1_Change %F2_HappyOrUn se %F3_RelIcon &#232; la [ICON_RELIGION] di stato</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn si el %F3_RelIcon es la [ICON_RELIGION] oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REQUIRED_TO_TRAIN</Tag>
+		<English>[ICON_BULLET]Required to Train[SPACE]</English>
+		<French>[ICON_BULLET]Requis pour entra&#238;ner :[SPACE]</French>
+		<German>[ICON_BULLET]Erforderlich f&#252;r die Ausbildung[SPACE]</German>
+		<Italian>[ICON_BULLET]Necessario per addestrare[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Se requiere para entrenar[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REQUIRED_TO_BUILD</Tag>
+		<English>[ICON_BULLET]Required to Build[SPACE]</English>
+		<French>[ICON_BULLET]Requis pour construire :[SPACE]</French>
+		<German>[ICON_BULLET]Erforderlich zum Bau von:[SPACE]</German>
+		<Italian>[ICON_BULLET]Necessario per costruire[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Se requiere para construir[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REQUIRES_LIST</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires[SPACE][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert :[SPACE][COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Ben&#246;tigt[SPACE][COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede[SPACE][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere[SPACE][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REQUIRES_NUM_SPECIAL_BUILDINGS</Tag>
+		<!-- %s1_Name = Can be Buildings, Units, etc -->
+		<English>[COLOR_WARNING_TEXT]Requires %s1_Name (%d2_NumCurr/%d3_NumTotal Total)[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Name (%d2_NumCurr/%d3_NumTotal au total)[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Name (%d2_NumCurr/%d3_NumTotal gesamt)[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Name (%d2_NumCurr/%d3_NumTotal totali)[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Name (%d2_NumCurr de un total de %d3_NumTotal)[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REQUIRES_NUM_SPECIAL_BUILDINGS_NO_CITY</Tag>
+		<!-- %s1_Name = Can be Buildings, Units, etc -->
+		<English>[COLOR_WARNING_TEXT]Requires %s1_Name (%d2_NumTotal Total)[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Name (%d2_NumTotal au total)[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Name (%d2_NumTotal gesamt)[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Name (%d2_NumTotal totali)[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Name (%d2_NumTotal en total)[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REQUIRES_NUM_CITIES</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires at least %d1_Num Cities[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert au moins %d1_Num villes[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert mindestens %d1_Num St&#228;dte[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede almeno %d1_Num citt&#224;[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere al menos %d1_Num [NUM1:ciudad:ciudades][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REQUIRES_NUM_TEAMS</Tag>
+		<English>[ICON_BULLET]Requires at least %d1_Num Teams</English>
+		<French>[ICON_BULLET]Requiert au moins %d1_Num &#233;quipes</French>
+		<German>[ICON_BULLET]Erfordert mindestens %d1_Num Teams</German>
+		<Italian>[ICON_BULLET]Richiede almeno %d1_Num [NUM1:squadra:squadre]</Italian>
+		<Spanish>[ICON_BULLET]Requiere al menos %d1_Num [NUM1:equipo:equipos]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REQUIRES_UNIT_LEVEL</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires a Unit of Level %d1_Num Experience[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert une unit&#233; de niveau d'EXP %d1_Num[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert eine Einheit mit Erfahrungsstufe %d1_Num[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede un'unit&#224; di livello d'esperienza %d1_Num[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una unidad de nivel %d1_Num de experiencia[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REQUIRES_VICTORY</Tag>
+		<!-- %s1_Name = TXT_KEY_VICTORY_ -->
+		<English>[ICON_BULLET]%s1_Name Victory must be Enabled</English>
+		<French>[ICON_BULLET]Requiert une victoire de type "%s1_Name"</French>
+		<German>[ICON_BULLET]Erfordert Siegvariante %s1_Name</German>
+		<Italian>[ICON_BULLET]Richiede la vittoria %s1_Name</Italian>
+		<Spanish>[ICON_BULLET]Requiere una victoria %s1_Name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RIVER_PLOTS</Tag>
+		<English>River Tiles</English>
+		<French>Cases rivi&#232;res</French>
+		<German>Fluss-Gel&#228;ndefelder</German>
+		<Italian>Caselle di fiume</Italian>
+		<Spanish>Casillas de r&#237;o</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPACESHIP_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Spaceship Production</English>
+		<French>[ICON_BULLET]Production de vaisseau spatial %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Raumschiffproduktion</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% sulla produzione dell'astronave</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la producci&#243;n de naves espaciales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPACESHIP_MOD_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Spaceship Production in All Cities</English>
+		<French>[ICON_BULLET]Production de vaisseau spatial dans toutes les villes %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Raumschiffproduktion in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% sulla produzione dell'astronave in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la producci&#243;n de naves espaciales en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPREADS_RELIGION</Tag>
+		<English>[ICON_BULLET]Spreads %F1_RelIcon</English>
+		<French>[ICON_BULLET]Propage : %F1_RelIcon</French>
+		<German>[ICON_BULLET]Verbreitet die Religion %F1_RelIcon</German>
+		<Italian>[ICON_BULLET]Diffonde %F1_RelIcon</Italian>
+		<Spanish>[ICON_BULLET]Propaga el %F1_RelIcon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_STATE_REL_BUILDINGS</Tag>
+		<English>[SPACE]from All State [ICON_RELIGION] Buildings</English>
+		<French>[SPACE]de tous les b&#226;timents li&#233;s &#224; une [ICON_RELIGION] d'&#233;tat</French>
+		<German>[SPACE]von allen Geb&#228;uden der Staatsreligion [ICON_RELIGION]</German>
+		<Italian>[SPACE]da tutti gli edifici della [ICON_RELIGION] ufficiale</Italian>
+		<Spanish>[SPACE]de todos los edificios de la [ICON_RELIGION] oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_STORES_FOOD</Tag>
+		<English>[ICON_BULLET]Stores %d1_Mod%% of [ICON_FOOD] after Growth</English>
+		<French>[ICON_BULLET]Stocke %d1_Mod%% de [ICON_FOOD] apr&#232;s la croissance</French>
+		<German>[ICON_BULLET]Speichert %d1_Mod%% [ICON_FOOD] nach Wachstum</German>
+		<Italian>[ICON_BULLET]Immagazzina %d1_Mod%% di [ICON_FOOD] dopo la crescita</Italian>
+		<Spanish>[ICON_BULLET]Almacena el %d1_Mod%% de los [ICON_FOOD] tras el crecimiento</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TEAM_WONDERS_PER_CITY</Tag>
+		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num Team Wonders per City[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Construction de merveilles d'&#233;quipe limit&#233;e &#224; %d1_Num par ville[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num Teamwunder pro Stadt errichten[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Meraviglie di Squadra per citt&#224;[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla de equipo:maravillas de equipo] por ciudad[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TEAM_WONDER_ALLOWED</Tag>
+		<English>[ICON_BULLET]Team Wonder (%d1_Num Allowed)</English>
+		<French>[ICON_BULLET]Merveille d'&#233;quipe (limite : %d1_Num)</French>
+		<German>[ICON_BULLET]Teamwunder (%d1_Num zul&#228;ssig)</German>
+		<Italian>[ICON_BULLET]Meraviglia di squadra (%d1_Num [NUM1:permessa:permesse])</Italian>
+		<Spanish>[ICON_BULLET]Maravilla de equipo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TEAM_WONDER_LEFT</Tag>
+		<English>[SPACE](Team Wonder: %d1_Num Left)</English>
+		<French>[SPACE](Merveille d'&#233;quipe : reste %d1_Num)</French>
+		<German>[SPACE](Teamwunder: %d1_Num &#252;brig)</German>
+		<Italian>[SPACE](Meraviglia di squadra: %d1_Num [NUM1:rimasta:rimaste])</Italian>
+		<Spanish>[SPACE](Maravilla de equipo: %d1_Num [NUM1:restante:restantes])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRADE_ROUTES</Tag>
+		<English>[ICON_BULLET]%D1_Change Trade Routes</English>
+		<French>[ICON_BULLET]%D1_Change Routes commerciales</French>
+		<German>[ICON_BULLET]%D1_Change Handelswege</German>
+		<Italian>[ICON_BULLET]%D1_Change rotte commerciali</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRADE_ROUTES_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Change Trade Routes in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change Routes commerciales dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change Handelswege in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Change rotte commerciali in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRADE_ROUTE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Trade Route Yield</English>
+		<French>[ICON_BULLET]Production de la route commerciale %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Ertr&#228;ge durch Handelswege</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% al rendimento della rotta commerciale</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de la ruta comercial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WAR_WEAR_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% War [ICON_UNHAPPY]</English>
+		<French>[ICON_BULLET][ICON_UNHAPPY] d&#251; &#224; la guerre %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% [ICON_UNHAPPY] wegen Krieg</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% [ICON_UNHAPPY] per la guerra</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al [ICON_UNHAPPY] b&#233;lico</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WAR_WEAR_MOD_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% War [ICON_UNHAPPY] in All Cities</English>
+		<French>[ICON_BULLET][ICON_UNHAPPY] d&#251; &#224; la guerre dans toutes les villes %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% [ICON_UNHAPPY] wegen Krieg in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% [ICON_UNHAPPY] per la guerra in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al [ICON_UNHAPPY] b&#233;lico en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WATER_PLOTS</Tag>
+		<English>Water Tiles</English>
+		<French>Cases d'eau[SPACE]</French>
+		<German>Wasser-Gel&#228;ndefelder</German>
+		<Italian>Caselle d'acqua</Italian>
+		<Spanish>Casillas de agua</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WATER_PLOTS_ALL_CITIES</Tag>
+		<English>All Cities Water Tiles</English>
+		<French>Toutes les cases d'eau des villes[SPACE]</French>
+		<German>Alle St&#228;dte auf Wasser-Gel&#228;ndefeldern</German>
+		<Italian>Caselle d'acqua di tutte le citt&#224;</Italian>
+		<Spanish>Todas las casillas de agua de ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WITH_POWER</Tag>
+		<English>[SPACE]with Power ([ICON_POWER])</English>
+		<French>[SPACE]avec &#233;lectricit&#233; ([ICON_POWER])</French>
+		<German>[SPACE]mit Energie ([ICON_POWER])</German>
+		<Italian>[SPACE]con l'energia ([ICON_POWER])</Italian>
+		<Spanish>[SPACE]con energ&#237;a ([ICON_POWER])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WORKER_MOD</Tag>
+		<English>[ICON_BULLET]Workers Build Improvements %D1_Mod%% Faster</English>
+		<French>[ICON_BULLET]Vitesse de construction des am&#233;nagements : %D1_Mod%%</French>
+		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Mod%% schneller</German>
+		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Mod%% pi&#249; rapidamente</Italian>
+		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Mod%% m&#225;s r&#225;pido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WORLD_WONDER_ALLOWED</Tag>
+		<English>[ICON_BULLET]World Wonder (%d1_Num Allowed)</English>
+		<French>[ICON_BULLET]Merveille mondiale (limite : %d1_Num)</French>
+		<German>[ICON_BULLET]Weltwunder (%d1_Num zul&#228;ssig)</German>
+		<Italian>[ICON_BULLET]Grande Meraviglia (%d1_Num [NUM1:permessa:permesse])</Italian>
+		<Spanish>[ICON_BULLET]Maravilla del mundo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WORLD_WONDER_LEFT</Tag>
+		<English>[SPACE](World Wonder: %d1_Num Left)</English>
+		<French>[SPACE](Merveille mondiale : reste %d1_Num)</French>
+		<German>[SPACE](Weltwunder: %d1_Num &#252;brig)</German>
+		<Italian>[SPACE](Grande Meraviglia: %d1_Num [NUM1:rimasta:rimaste])</Italian>
+		<Spanish>[SPACE](Maravilla del mundo: %d1_Num [NUM1:restante:restantes])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WORLD_WONDERS_PER_CITY</Tag>
+		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num World Wonders per City[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Construction de merveilles mondiales limit&#233;e &#224; %d1_Num par ville[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num Weltwunder pro Stadt errichten[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Grandi Meraviglie per citt&#224;[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla del mundo:maravillas del mundo] por ciudad[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COST</Tag>
+		<English>Cost: %d1_cost [ICON_GOLD]</English>
+		<French>Co&#251;t : %d1_cost [ICON_GOLD]</French>
+		<German>Kosten: %d1_cost [ICON_GOLD]</German>
+		<Italian>Costo: %d1_cost [ICON_GOLD]</Italian>
+		<Spanish>Coste: %d1_cost [ICON_GOLD]</Spanish>
+	</TEXT>
 </Civ4GameText>
