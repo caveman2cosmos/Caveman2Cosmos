@@ -8968,4 +8968,188 @@
 		<Italian>Che le benedizioni del Cielo siano su di te, [CT_NAME]!</Italian>
 		<Spanish>¡Que el Cielo os bendiga, [CT_NAME]!</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_BOUDICA_1</Tag>
+		<English>Go ahead: Make my day. </English>
+		<French>Allez-y : faites-moi rire.</French>
+		<German>Nur zu: Macht mich glücklich! </German>
+		<Italian>Coraggio: fatti ammazzare. </Italian>
+		<Spanish>Adelante, alegradme el día. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_CHARLEMAGNE_1</Tag>
+		<English>What do YOU want, knave?</English>
+		<French>Que voulez-vous, manant ?</French>
+		<German>Was wollt IHR denn, Gauner?</German>
+		<Italian>Che COSA vuoi, furfante?</Italian>
+		<Spanish>¿Qué queréis, canalla?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_DARIUS_1</Tag>
+		<English>Well look what the goat dragged in.</English>
+		<French>Tiens, tiens, regardez qui voilà...</French>
+		<German>Sieh einer an, wer da hereingeschneit kommt!</German>
+		<Italian>Toh, guarda che cos'ha trovato la capra...</Italian>
+		<Spanish>Vaya, mirad lo que ha traído la cabra.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_DE_GAULLE_1</Tag>
+		<English>Say what you have to say, [CT_NAME]. I have no desire to spend any more time with you than absolutely necessary.</English>
+		<French>Dites ce que vous avez à dire, [CT_NAME]. Je n'ai aucune envie de passer plus de temps que nécessaire avec vous.</French>
+		<German>Sagt, was Ihr zu sagen habt, [CT_NAME]! Ich habe nicht vor, mehr Zeit mit Euch zu vergeuden als unbedingt erforderlich!</German>
+		<Italian>Di' ciò che hai da dire, [CT_NAME]. Non intendo passare con te più tempo di quello strettamente necessario.</Italian>
+		<Spanish>Decid lo que tengáis que decir, [CT_NAME]. No deseo pasar más tiempo con vos que el absolutamente necesario.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_GILGAMESH_1</Tag>
+		<English>Speak quickly before I open a big old can of divine wrath on you, false one!</English>
+		<French>Parlez vite, avant que je ne vous foudroie de ma colère divine, scélérat !</French>
+		<German>Redet, bevor ich die Geduld mit Euch falscher Schlange verliere!</German>
+		<Italian>Parla in fretta, prima che scateni un po' di buona vecchia ira divina su di te, bugiardo!</Italian>
+		<Spanish>Hablad rápidamente antes de que abra un gran frasco de cólera divina y la vierta sobre vos, serpiente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HAMMURABI_1</Tag>
+		<English>Well? Get on with it! I have laws to write!</English>
+		<French>Alors ? Dépêchez-vous ! J'ai des lois à écrire !</French>
+		<German>Nun? Was gibt's? Ich habe Gesetze zu erlassen!</German>
+		<Italian>E quindi? Continua! Ho delle leggi da scrivere!</Italian>
+		<Spanish>¿Y bien? ¡Soltadlo de una vez! ¡Que tenemos un código que escribir!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HANNIBAL_1</Tag>
+		<English>This had better be good, [CT_NAME]. I have no time for nonsense.</English>
+		<French>J'esp&#232;re pour vous que &#231;a en vaut la peine, [CT_NAME]. Je n'ai pas de temps &#224; perdre.</French>
+		<German>Ihr habt hoffentlich etwas Wichtiges zu sagen, [CT_NAME]! Für dummes Geschwätz fehlt mir die Zeit!</German>
+		<Italian>Spero che ne valga la pena, [CT_NAME]. Non ho tempo per le sciocchezze.</Italian>
+		<Spanish>Mejor que sea para bien, [CT_NAME]. No tengo tiempo para tonterías.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_JOAO_1</Tag>
+		<English>What now?</English>
+		<French>Quoi encore ?</French>
+		<German>Was wollt Ihr nun schon wieder?</German>
+		<Italian>Che c'è ora?</Italian>
+		<Spanish>¿Y ahora qué?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_JOSEF_STALIN_1</Tag>
+		<English>What do YOU want?</English>
+		<French>Qu'est ce que VOUS voulez ?</French>
+		<German>Was wollt IHR denn?</German>
+		<Italian>Cosa DIAVOLO vuoi?</Italian>
+		<Spanish>¿Qu&#233; quer&#233;is?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_JUSTINIAN_1</Tag>
+		<English>You may skip the pleasantries, [CT_NAME]. Why have you come to mighty [OUR_CIV_SHORT]?</English>
+		<French>Trêve de courtoisies, [CT_NAME]. Que voulez-vous aux puissants [OUR_CIV_SHORT:3] ?</French>
+		<German>Ihr könnt Euch die Freundlichkeiten sparen, [CT_NAME]. Warum belästigt Ihr das mächtige Volk von [OUR_CIV_SHORT]?</German>
+		<Italian>Salta i preliminari, [CT_NAME]. Perché vieni da [OUR_CIV_SHORT]?</Italian>
+		<Spanish>Podéis ahorraros las cortesías, [CT_NAME]. ¿A qué habéis venido a la poderosa tierra de [OUR_CIV_SHORT]?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_LINCOLN_1</Tag>
+		<English>And to what do I owe the dubious honor of your presence?</English>
+		<French>Que me vaut l'honneur peu enviable de votre présence ?</French>
+		<German>Was verschafft mir die zweifelhafte Ehre Eures Besuchs?</German>
+		<Italian>E a cosa devo il dubbio onore della tua presenza?</Italian>
+		<Spanish>¿Y a qué debemos el dudoso honor de vuestra compañía?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_MEHMED_1</Tag>
+		<English>Speak quickly, [CT_NAME]. Your voice has an unpleasant grating whine that is distasteful to listen to.</English>
+		<French>Parlez prestement, [CT_NAME]. Votre voix est fort d&#233;plaisante &#224; l'oreille, elle crisse, elle grince, alors &#233;courtez mon supplice.</French>
+		<German>Fasst Euch kurz, [CT_NAME]! Euer weinerliches Gesäusel beleidigt meine Ohren!</German>
+		<Italian>Di' e in fretta, [CT_NAME]. La tua voce ha degli acuti oltremodo sgradevoli da udire.</Italian>
+		<Spanish>Hablad rápido, [CT_NAME]. La estridencia de vuestra voz no es precisamente un regalo para nuestros oídos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_PACAL_1</Tag>
+		<English>Come to grovel at our feet, eh? Well, go ahead.</English>
+		<French>Venu ramper à nos pieds, hein ? Bon, je vous écoute.</French>
+		<German>Seid Ihr gekommen, um vor uns zu kriechen? Nun denn, nur zu!</German>
+		<Italian>Sei venuto a strisciare ai nostri piedi, eh? Be', fai pure.</Italian>
+		<Spanish>¿Venís a postraros a nuestros pies, eh? Bueno, adelante.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_PERICLES_1</Tag>
+		<English>Well? Out with it!</English>
+		<French>Alors ? Parlez !</French>
+		<German>Nun? Raus damit!</German>
+		<Italian>Be'? Sputa il rospo!</Italian>
+		<Spanish>¿Y bien? ¡Soltadlo de una vez!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_RAGNAR_LODBROK_1</Tag>
+		<English>Speak quickly, [CT_NAME]. You are stinking up my palace.</English>
+		<French>Crachez ce que vous avez &#224; dire et d&#233;guerpissez, [CT_NAME] ! Vous empestez !</French>
+		<German>Fasst Euch kurz, [CT_NAME]! Ihr verpestet die Luft in meinem Palast!</German>
+		<Italian>Parla, ma fa' in fretta, [CT_NAME]. Mi stai appestando il palazzo.</Italian>
+		<Spanish>Hablad rápido, [CT_NAME]. Me estáis dejando el palacio lleno de peste.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_RAMESSES_II_1</Tag>
+		<English>Talk quickly and be gone, knave, before I forget myself and turn you into a beetle.</English>
+		<French>Dites ce que vous &#234;tes venu me dire et &#233;pargnez-moi votre pr&#233;sence, vil insecte, avant que je perde patience et vous transforme en cafard.</French>
+		<German>Fasst Euch kurz und verschwindet, bevor ich mich vergesse und Euch in einen Käfer verwandle!</German>
+		<Italian>Parla rapidamente e vattene, furfante, prima che mi dimentichi le buone maniere e ti trasformi in uno scarabeo.</Italian>
+		<Spanish>Hablad rápido y marchaos, canalla, antes de que pierda la compostura y os convierta en un escarabajo pelotero.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SITTING_BULL_1</Tag>
+		<English>What could you possibly say that would be of even the slightest interest to me?</English>
+		<French>Que pourriez-vous dire qui soit du moindre intérêt pour moi ?</French>
+		<German>Was könntet Ihr mir schon zu bieten haben?</German>
+		<Italian>Cosa potresti mai dire di minimamente interessante per me?</Italian>
+		<Spanish>¿Qué podéis decir que tenga siquiera el mínimo interés para mí?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SULEIMAN_1</Tag>
+		<English>Well? Get on with it! Every moment that I spend gazing upon your wizened visage is painful to me.</English>
+		<French>Eh bien ? Parlez ! Chaque moment que je passe à contempler votre visage ratatiné m'est affreusement pénible.</French>
+		<German>Nun? Redet schon! Jeder Augenblick, den ich Eure schrumpelige Visage betrachten muss, ist mir ein Gräuel!</German>
+		<Italian>Allora? Datti una mossa! Ogni momento passato a guardare il tuo viso raggrinzito è una tortura, per me.</Italian>
+		<Spanish>¿Y bien? ¡Soltadlo de una vez! Me duele cada segundo que paso mirando vuestra marchita figura.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SURYAVARMAN_1</Tag>
+		<English>Well?</English>
+		<French>Eh bien ?</French>
+		<German>Nun?</German>
+		<Italian>Quindi?</Italian>
+		<Spanish>¿Y bien?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_WANG_KON_1</Tag>
+		<English>Speak quickly, [CT_NAME]. I have little time for your imbecilities. </English>
+		<French>Ecourtez au maximum votre oraison, [CT_NAME]. Mon temps r&#233;serv&#233; aux plus basses futilit&#233;s est tr&#232;s restreint.</French>
+		<German>Fasst Euch kurz, [CT_NAME]! Ich habe keine Zeit für dummes Geschwätz! </German>
+		<Italian>Parla, ma fa' in fretta, [CT_NAME]. Non ho tempo per le tue scemenze. </Italian>
+		<Spanish>Hablad rápido, [CT_NAME]. No tengo tiempo para vuestras estupideces. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_WILLEM_VAN_ORANJE_1</Tag>
+		<English>I'm listening.</English>
+		<French>Je vous écoute.</French>
+		<German>Ich höre!</German>
+		<Italian>Sto ascoltando.</Italian>
+		<Spanish>Os escuchamos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_WINSTON_CHURCHILL_1</Tag>
+		<English>I have no desire to exchange social pleasantries with you, [CT_NAME]. Why have you come?</English>
+		<French>Je n'ai aucune envie d'&#233;changer des civilit&#233;s avec vous, [CT_NAME]. Qu'est-ce que vous voulez ?</French>
+		<German>Ich habe absolut keine Lust, Smalltalk mit Euch zu betreiben, [CT_NAME]! Also, was wollt Ihr?</German>
+		<Italian>Non ho alcun desiderio di scambiare convenevoli con te, [CT_NAME]. Perché sei qui?</Italian>
+		<Spanish>No tengo ganas de intercambiar cumplidos con vos, [CT_NAME]. ¿A qu&#233; hab&#233;is venido?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_ZARA_YAQOB_1</Tag>
+		<English>Say what you have come to say, sinful one. I am listening.</English>
+		<French>Dites ce que vous avez à dire, misérable pécheur. Je vous écoute. </French>
+		<German>Sagt, was Ihr zu sagen habt, sündiges Wesen! Ich höre!</German>
+		<Italian>Di' ciò che sei venuto a dire, peccatore. Sto ascoltando.</Italian>
+		<Spanish>Decid lo que tengáis que decir, encarnación del pecado. Os escuchamos.</Spanish>
+	</TEXT>
 </Civ4GameText>
