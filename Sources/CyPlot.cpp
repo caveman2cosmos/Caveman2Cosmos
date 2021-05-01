@@ -625,3 +625,17 @@ CyPlot* CyPlot::cloneToViewport() const
 {
 	return new CyPlot(m_pPlot, true);
 }
+
+python::list CyPlot::rect(int halfWid, int halfHgt) const
+{
+	python::list list = python::list();
+
+	if (m_pPlot)
+	{
+		foreach_(CvPlot* plot, m_pPlot->rect(halfWid, halfHgt))
+		{
+			list.append(CyPlot(plot));
+		}
+	}
+	return list;
+}
