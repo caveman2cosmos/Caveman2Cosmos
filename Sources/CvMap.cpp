@@ -618,20 +618,10 @@ CvPlot* CvMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTi
 		{
 			bool bValid = true;
 
-			if (iMinUnitDistance != -1)
+			if (iMinUnitDistance != -1
+			&& algo::any_of(pTestPlot->rect(iMinUnitDistance, iMinUnitDistance), bind(CvPlot::isUnit, _1)))
 			{
-				for (int iDX = -(iMinUnitDistance); iDX <= iMinUnitDistance; iDX++)
-				{
-					for (int iDY = -(iMinUnitDistance); iDY <= iMinUnitDistance; iDY++)
-					{
-						const CvPlot* pLoopPlot = plotXY(pTestPlot->getX(), pTestPlot->getY(), iDX, iDY);
-
-						if (pLoopPlot != NULL && pLoopPlot->isUnit())
-						{
-							bValid = false;
-						}
-					}
-				}
+				bValid = false;
 			}
 
 			if (bValid)
