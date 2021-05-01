@@ -17315,14 +17315,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Esperando a m&#225;s civilizaciones...</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SYSTEM_END_TURN</Tag>
-		<English>Press &lt;ENTER> to end turn...</English>
-		<French>Appuyez sur &lt;ENTRER> pour finir votre tour...</French>
-		<German>Runde beenden mit &lt;EINGABETASTE> ...</German>
-		<Italian>Premi &lt;INVIO> per terminare il turno...</Italian>
-		<Spanish>Pulsar &lt;INTRO> para terminar el turno...</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_WAITING_FOR_YOU</Tag>
 		<English>Waiting for YOU to finish turn...</English>
 		<French>En attente de VOTRE fin de tour...</French>
@@ -19521,5 +19513,165 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Imp</German>
 		<Italian>Imp</Italian>
 		<Spanish>Imp</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_ANARCHY</Tag>
+		<English>Anarchy!!! (%d1)</English>
+		<French>Anarchie ! (%d1)</French>
+		<German>Anarchie!!! (%d1)</German>
+		<Italian>Anarchia! (%d1)</Italian>
+		<Spanish>&#161;Anarqu&#237;a! (%d1)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CITY_COMMERCE_RATE</Tag>
+		<English>%F1: %s2 (%D3/Turn)</English>
+		<French>%F1 : %s2 (%D3/tour)</French>
+		<German>%F1: %s2 (%D3/Runde)</German>
+		<Italian>%F1: %s2 (%D3/turno)</Italian>
+		<Spanish>%F1: %s2 (%D3/turno)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CITY_GREATPEOPLE_RATE</Tag>
+		<English>%F1: (%D2/Turn)</English>
+		<French>%F1 : (%D2/tour)</French>
+		<German>%F1: (%D2/Runde)</German>
+		<Italian>%F1: (%D2/turno)</Italian>
+		<Spanish>%F1: (%D2/turno)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CITY_GROWING</Tag>
+		<English>Growing (%d1 [NUM1:Turn:Turns])</English>
+		<French>Croissance (%d1 [NUM1:tour:tours])</French>
+		<German>Wachstum (%d1 [NUM1:Runde:Runden])</German>
+		<Italian>Crescita (%d1 [NUM1:Turno:Turni])</Italian>
+		<Spanish>Creciendo (%d1 [NUM1:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CITY_HAPPY</Tag>
+		<English>%d1[ICON_HAPPY] > %d2[ICON_UNHAPPY]</English>
+		<French>%d1[ICON_HAPPY] > %d2[ICON_UNHAPPY]</French>
+		<German>%d1[ICON_HAPPY] > %d2[ICON_UNHAPPY]</German>
+		<Italian>%d1[ICON_HAPPY] > %d2[ICON_UNHAPPY]</Italian>
+		<Spanish>%d1 [ICON_HAPPY] > %d2 [ICON_UNHAPPY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CITY_HAPPY_NO_UNHAPPY</Tag>
+		<English>%d1[ICON_HAPPY]</English>
+		<French>%d1[ICON_HAPPY]</French>
+		<German>%d1[ICON_HAPPY]</German>
+		<Italian>%d1[ICON_HAPPY]</Italian>
+		<Spanish>%d1 [ICON_HAPPY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CITY_HEALTH_GOOD</Tag>
+		<English>%d1[ICON_HEALTHY] > %d2[ICON_UNHEALTHY]</English>
+		<French>%d1[ICON_HEALTHY] > %d2[ICON_UNHEALTHY]</French>
+		<German>%d1[ICON_HEALTHY] > %d2[ICON_UNHEALTHY]</German>
+		<Italian>%d1[ICON_HEALTHY] > %d2[ICON_UNHEALTHY]</Italian>
+		<Spanish>%d1 [ICON_HEALTHY] > %d2 [ICON_UNHEALTHY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CITY_HEALTH_GOOD_NO_BAD</Tag>
+		<English>%d1[ICON_HEALTHY]</English>
+		<French>%d1[ICON_HEALTHY]</French>
+		<German>%d1[ICON_HEALTHY])</German>
+		<Italian>%d1[ICON_HEALTHY]</Italian>
+		<Spanish>%d1 [ICON_HEALTHY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CITY_MAINTENANCE</Tag>
+		<English>Maintenance:</English>
+		<French>Entretien :</French>
+		<German>Unterhalt:</German>
+		<Italian>Mantenimento:</Italian>
+		<Spanish>Mantenimiento:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CITY_PRODUCTION</Tag>
+		<English>%s1 (%d2 [NUM2:Turn:Turns])</English>
+		<French>%s1 (%d2 [NUM2:tour:tours])</French>
+		<German>%s1 (%d2 [NUM2:Runde:Runden])</German>
+		<Italian>%s1 (%d2 [NUM2:Turno:Turni])</Italian>
+		<Spanish>%s1 (%d2 [NUM2:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CITY_STAGNANT</Tag>
+		<English>Stagnant</English>
+		<French>Pas de croissance</French>
+		<German>Stagnation</German>
+		<Italian>Stagnante</Italian>
+		<Spanish>Estancada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CITY_STARVING</Tag>
+		<English>[COLOR_WARNING_TEXT]STARVATION![COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]FAMINE ![COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]HUNGERSNOT![COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]CARESTIA![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]&#161;HAMBRUNA![COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CITY_TURNS</Tag>
+		<English>(%d1 [NUM1:Turn:Turns])</English>
+		<French>(%d1 [NUM1:tour:tours])</French>
+		<German>(%d1 [NUM1:Runde:Runden])</German>
+		<Italian>(%d1 [NUM1:Turno:Turni])</Italian>
+		<Spanish>(%d1 [NUM1:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_PANE_AIR_STRENGTH</Tag>
+		<English>Air Strength:</English>
+		<French>Puissance en combat a&#233;rien :</French>
+		<German>Luftkampfst&#228;rke:</German>
+		<Italian>Forza aerea:</Italian>
+		<Spanish>Fuerza de combate a&#233;reo:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_PANE_EXPERIENCE</Tag>
+		<English>Experience</English>
+		<French>Exp&#233;rience</French>
+		<German>Erfahrung</German>
+		<Italian>Esperienza</Italian>
+		<Spanish>Experiencia:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_PANE_LEVEL</Tag>
+		<English>Level:</English>
+		<French>Niveau :</French>
+		<German>Stufe:</German>
+		<Italian>Livello:</Italian>
+		<Spanish>Nivel:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_PANE_MOVEMENT</Tag>
+		<English>Movement:</English>
+		<French>Mouvement :</French>
+		<German>Fortbewegung:</German>
+		<Italian>Movimento:</Italian>
+		<Spanish>Movimiento:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_PANE_STRENGTH</Tag>
+		<English>Strength:</English>
+		<French>Puissance :</French>
+		<German>St&#228;rke:</German>
+		<Italian>Forza:</Italian>
+		<Spanish>Fuerza:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_PANE_UNIT_NAME</Tag>
+		<English>[COLOR_UNIT_TEXT]%s1[COLOR_REVERT]</English>
+		<French>[COLOR_UNIT_TEXT]%s1[COLOR_REVERT]</French>
+		<German>[COLOR_UNIT_TEXT]%s1[COLOR_REVERT]</German>
+		<Italian>[COLOR_UNIT_TEXT]%s1[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_UNIT_TEXT]%s1[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_PANE_UNIT_NAME_HOT_KEY</Tag>
+		<English>[COLOR_UNIT_TEXT]#%d1 - %s2[COLOR_REVERT]</English>
+		<French>[COLOR_UNIT_TEXT]#%d1 - %s2[COLOR_REVERT]</French>
+		<German>[COLOR_UNIT_TEXT]#%d1 - %s2[COLOR_REVERT]</German>
+		<Italian>[COLOR_UNIT_TEXT]#%d1 - %s2[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_UNIT_TEXT]#%d1 - %s2[COLOR_REVERT]</Spanish>
 	</TEXT>
 </Civ4GameText>
