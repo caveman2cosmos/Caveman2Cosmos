@@ -13,7 +13,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DIESELPUNK_EMBASSY</ArtDefineTag>
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
@@ -37,7 +36,6 @@
 			<Type>BUILDING_AERODROME</Type>
 			<Description>TXT_KEY_BUILDING_AERODROME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AERODROME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AERODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AERODROME</ArtDefineTag>
 			<MapCategoryTypes>
@@ -82,7 +80,6 @@
 			<Type>BUILDING_GRAND_AERODROME</Type>
 			<Description>TXT_KEY_BUILDING_GRAND_AERODROME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRAND_AERODROME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GRAND_AERODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_AERODROME</ArtDefineTag>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
@@ -128,7 +125,6 @@
 			<Type>BUILDING_ZUSE_COMPUTER</Type>
 			<Description>TXT_KEY_BUILDING_ZUSE_COMPUTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZUSE_COMPUTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ZUSE_COMPUTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZUSE_COMPUTER</ArtDefineTag>
 			<ObsoleteTech>TECH_COMPUTER_NETWORKS</ObsoleteTech>
@@ -164,7 +160,6 @@
 			<Type>BUILDING_DIRIGIBLE_TERMINAL</Type>
 			<Description>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DIRIGIBLE_TERMINAL</ArtDefineTag>
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
@@ -195,7 +190,6 @@
 			<Type>BUILDING_FARNSWORTH_LAB</Type>
 			<Description>TXT_KEY_BUILDING_FARNSWORTH_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FARNSWORTH_LAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FARNSWORTH_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FARNSWORTH_LAB</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
@@ -225,7 +219,6 @@
 			<Type>BUILDING_THEREMIN_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_THEREMIN_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THEREMIN_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_THEREMIN_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_THEREMIN_FACTORY</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
@@ -264,7 +257,6 @@
 			<Type>BUILDING_RADIOPLEX</Type>
 			<Description>TXT_KEY_BUILDING_RADIOPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RADIOPLEX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RADIOPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RADIOPLEX</ArtDefineTag>
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>

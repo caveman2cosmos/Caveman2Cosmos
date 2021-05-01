@@ -6,9 +6,8 @@
 # This files allows special civ names to be assigned to certain leaders.  Intended mainly for mods.
 
 from CvPythonExtensions import *
-import CvUtil
 
-gc = CyGlobalContext()
+#gc = CyGlobalContext()
 
 # Initialize dict to empty
 LeaderCivNames = dict()

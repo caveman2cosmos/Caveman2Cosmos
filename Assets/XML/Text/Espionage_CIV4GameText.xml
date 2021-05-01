@@ -30,7 +30,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_HELP_NUKE</Tag>
 		<English>Causes a nuclear detonation in the city of %s1. (May cause war and injure friendly units)</English>
-		<French>Provoque une détonation nucléaire dans la ville de %s1. (Peut entaîner une Guerre, et causer des dommages aux unités amies)</French>
+		<French>Provoque une détonation nucléaire dans la ville de %s1. (Peut provoquer la guerre et blesser les unités amies)</French>
 		<German>Verursacht eine nukleare Detonation in %s1. (Kann Krieg verursachen und befreundete Einheiten verletzen.)</German>
 		<Italian>Causa un esplosione nucleare nella città di %s1. (Può causare guerra e ferire unità amiche)</Italian>
 		<Spanish>Causa una explosión nuclear en la ciudad de %s1. (Podría provocar una guerra y herir a unidades aliadas)</Spanish>

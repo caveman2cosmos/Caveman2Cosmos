@@ -3,9 +3,7 @@
 import codecs
 import os
 import os.path
-import string
 import BugCore
-import BugOptions
 import BugConfigTracker
 import SystemPaths as SP
 

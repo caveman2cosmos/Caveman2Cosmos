@@ -40,13 +40,4 @@
 		<Polish>Bractwa studentów sa dla mieczaków. Wcielic wszystkich studentów do armii!</Polish>
 		<Russian>Ýòè âñå àêàäåìèè äëÿ ñëþíòÿåâ è ñëàáàêîâ. Çàáðåéòå ýòèõ ãëóïûõ þíöîâ â ðÿäû íàøåé àðìèè.</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_SCHOLARS_4_HELP</Tag>
-		<English>Receive 2 Axemen</English>
-		<French>Recevoir 2 Guerriers</French>
-		<German>Erhalte 2 Axtkämpfer</German>
-		<Italian>Ricevi 2 Guerrieri con ascia</Italian>
-		<Polish>Otrzymujesz 2 Toporników</Polish>
-		<Russian>Ïîëó÷èòü 2 Ñåêèðîíîñöåâ</Russian>
-	</TEXT>
 </Civ4GameText>

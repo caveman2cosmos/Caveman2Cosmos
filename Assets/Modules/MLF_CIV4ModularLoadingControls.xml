@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-	<!-- Re-Modified by StrategyOnly -->
-	<!-- Master Load File -->
-	<Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Xml\Schema\Caveman2Cosmos.xsd">
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Re-Modified by StrategyOnly -->
+<!-- Master Load File -->
+<Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Xml\Schema\Caveman2Cosmos.xsd">
 	<DefaultConfiguration>Modules_Main_1</DefaultConfiguration>
 	<ConfigurationInfos>
 		<ConfigurationInfo>
 			<Type>Modules_Main_1</Type>
 			<Description>Initialize ALL Modules by using the MLF file structure</Description>
-			<Modules>				
+			<Modules>
 				<Module>
 					<Directory>Custom_Leaderheads</Directory>
 					<bLoad>1</bLoad>

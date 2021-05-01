@@ -1,10 +1,4 @@
-
 from CvPythonExtensions import *
-import CvUtil
-import ScreenInput
-import CvScreenEnums
-import math
-
 
 # globals
 gc = CyGlobalContext()

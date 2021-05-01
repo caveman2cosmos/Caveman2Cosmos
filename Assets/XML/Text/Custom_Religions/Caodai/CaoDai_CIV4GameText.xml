@@ -11,11 +11,6 @@
 		<Russian>В Цивилизации IV собор определяется как особенно большое и богато украшенное религиозное сооружение, где совершается богослужение. Только самые процветающие города могут позволить себе создавать соборы, поскольку они требуют огромного количества сырья и многолетнего труда квалифицированных мастеров. Например, собор Парижской Богоматери в Париже, Франция, занял более двух веков.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAODAI_CATHEDRAL_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Mosque[COLOR_REVERT] ([COLOR_BUILDING_TEXT]CaoDai Cathedral[COLOR_REVERT]) greatly increases a city's cultural output. It makes a city's citizens happy (if [COLOR_HIGHLIGHT_TEXT]CaoDai[COLOR_REVERT] is the state religion).</English>
-		<Russian>[COLOR_BUILDING_TEXT]Собор Каодай[COLOR_REVERT] значительно увеличивает культурный рост в данном городе. Это делает жителей города счастливыми (если [COLOR_HIGHLIGHT_TEXT]Каодай[COLOR_REVERT] является государственной религией).</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAODAI_MONASTERY</Tag>
 		<English>Cao Dai Monastery</English>
 		<Russian>Ìîíàñòûðü Êàîäàé</Russian>
@@ -24,11 +19,6 @@
 		<Tag>TXT_KEY_BUILDING_CAODAI_MONASTERY_PEDIA</Tag>
 		<English>A monastery is a building where monks can retreat from the world and concentrate upon the divine. Usually a monastery will have strict rules of conduct to protect its unworldly members from temptation. In some monasteries, the monks are totally silent; in others no visitors are allowed inside. Monasteries usually have many daily rituals and religious services.[PARAGRAPH:1]Throughout the ages monasteries have often been centers of learning. In remote areas the monks may be the only literate people for miles around. Monks have often been employed as scribes, copying out the words of their religion's sacred scripture. Monasteries frequently have extensive libraries, holding religious, scientific, medical and philosophical texts.</English>
 		<Russian>Монастырь - это здание, в котором монахи могут отступить от мира и сосредоточиться на духовных практиках. Обычно в монастыре действуют строгие правила поведения, чтобы защитить своих мирских членов от искушений. В некоторых монастырях монахи совершенно молчаливы; в других посетители не допускаются внутрь. Монастыри обычно проводят много ежедневных ритуалов и религиозных служб. [PARAGRAPH:1]На протяжении веков монастыри часто были центрами обучения. В отдаленных районах монахи могут быть единственными грамотными людьми на многие мили вокруг. Монахи часто использовались как писцы, копируя слова священного писания их религии. Монастыри часто имеют обширные библиотеки, содержащие религиозные, научные, медицинские и философские тексты.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAODAI_MONASTERY_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Monasteries[COLOR_REVERT] allow you to create [COLOR_UNIT_TEXT]Missionaries[COLOR_REVERT], who can spread the faith in other cities. They also provide culture and a slight boost to research.</English>
-		<Russian>[COLOR_BUILDING_TEXT]Монастыри[COLOR_REVERT] позволяют обучать [COLOR_UNIT_TEXT]Миссионеров[COLOR_REVERT],которые могут распространять веру в других городах. Они также обеспечивают небольшой прирост культуры и научных исследований.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAODAI_SHRINE</Tag>
@@ -41,11 +31,6 @@
 		<Russian>Великий храм имеет длину 140 м и ширину 40 м. Он состоит из 4 башен, каждая из которых носит свое название: Там Дай, Хип Тхиен Дай, Куу Чунг Дай и Бат Квай Дай. Интерьер храма состоит из зала с колоннами и святилища. Два ряда колонн украшены драконами и окрашены белой, красной и синей краской. Куполообразный потолок разделен на 9 частей, как ночное небо, полное звезд и символизирующее небеса. Под куполом находится гигантский голубой шар, усыпанный звездами, на котором нарисовано Божественное Око, официальный символ каодаизма. Последователи Каодай поклоняются Иисусу Христу, Конфуцию, Лао-Цзы и Будде.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAODAI_SHRINE_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Great Temple Tay Ninh[COLOR_REVERT] ([COLOR_BUILDING_TEXT]CaoDai Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]CaoDai[COLOR_REVERT]. It also spreads [COLOR_HIGHLIGHT_TEXT]CaoDai[COLOR_REVERT] throughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</English>
-		<Russian>[COLOR_BUILDING_TEXT]Святыня Каодай[COLOR_REVERT] производит одну единицу золота каждый ход за каждый город в мире, где исповедуют [COLOR_HIGHLIGHT_TEXT]Каодай[COLOR_REVERT]. Оно также распространяет [COLOR_HIGHLIGHT_TEXT]Каодай[COLOR_REVERT] по всему миру и повышает шансы на рождение [COLOR_UNIT_TEXT]Великого Пророка[COLOR_REVERT] в данном городе.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAODAI_TEMPLE</Tag>
 		<English>Cao Dai Temple</English>
 		<Russian>Õðàì Êàîäàé</Russian>
@@ -54,11 +39,6 @@
 		<Tag>TXT_KEY_BUILDING_CAODAI_TEMPLE_PEDIA</Tag>
 		<English>In Civilization IV, a temple is defined as a building where the faithful come to worship. Christians call their temples "churches," while Muslims call theirs "mosques," and Jews call theirs, simply, "temples." Temples are far more common than cathedrals, but much less large and ornate. Even the smallest village can possess a temple.</English>
 		<Russian>В Цивилизации IV храм определяется как здание, куда верующие приходят поклоняться. Христиане называют свои храмы "церквями", а мусульмане называют свои "мечетями", а иудеи называют их просто "храмами". Храмы встречаются гораздо чаще, чем соборы, но гораздо менее крупные и богато украшенные. Даже самая маленькая деревня может иметь храм.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAODAI_TEMPLE_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Temples[COLOR_REVERT] increase a city's happiness and culture. They are especially useful for expanding your civilization's borders during the early game.</English>
-		<Russian>[COLOR_BUILDING_TEXT]Храмы[COLOR_REVERT] улучшают настроение горожан и прирост культуры. Они особенно полезны для расширения границ вашей цивилизации в начале игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CAO_DAI</Tag>
@@ -76,18 +56,8 @@
 		<Russian>Цель последователя Каодай - прекращение цепи перерождений (сансары) и слияние с Единым Богом - Каодай/[PARAGRAPH:2]- Нго Ван Тьеу,[PARAGRAPH:1][SPACE][SPACE]"Каодай: Вера Единства"</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CAO_DAI_STRATEGY</Tag>
-		<English>Research Cao Dai to found a religion.</English>
-		<Russian>Исследуйте Каодай, чтобы основать религию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAODAI_MISSIONARY</Tag>
 		<English>Cao Dai Missionary</English>
 		<Russian>Ìèññèîíåð Êàîäàé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAODAI_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]CaoDai[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Masjid al-Haram[COLOR_REVERT].</English>
-		<Russian>Используйте этого миссионера, чтобы активно распространять религию[COLOR_HIGHLIGHT_TEXT]Каодай[COLOR_REVERT] в дружественных городах (или городах-соперниках, с которыми у вас есть [COLOR_HIGHLIGHT_TEXT]Открытые границы[COLOR_REVERT]). Это увеличивает ваш доход, если у вас есть [COLOR_BUILDING_TEXT]Аль-Харам.[COLOR_REVERT]</Russian>
 	</TEXT>
 </Civ4GameText>

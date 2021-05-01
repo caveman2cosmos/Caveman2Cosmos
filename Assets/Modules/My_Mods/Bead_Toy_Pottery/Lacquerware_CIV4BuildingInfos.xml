@@ -11,7 +11,6 @@
 			<Type>BUILDING_LACQUERWARE_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_LACQUERWARE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LACQUERWARE_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LACQUERWARE_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_LACQUERWARE_FACTORY</ArtDefineTag>
@@ -99,7 +98,6 @@
 			<Type>BUILDING_LACQUERWARE_HUT</Type>
 			<Description>TXT_KEY_BUILDING_LACQUERWARE_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LACQUERWARE_HUT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LACQUERWARE_HUT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_LACQUERWARE_HUT</ArtDefineTag>
@@ -175,7 +173,6 @@
 			<Type>BUILDING_LACQUERWARE_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_LACQUERWARE_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LACQUERWARE_WORKSHOP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LACQUERWARE_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_LACQUERWARE_WORKSHOP</ArtDefineTag>

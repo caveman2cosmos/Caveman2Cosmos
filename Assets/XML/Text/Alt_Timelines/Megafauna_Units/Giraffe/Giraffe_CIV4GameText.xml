@@ -47,20 +47,9 @@
 		<English>Giraffe units are good for combat in Savanna tiles and their increased Sight Range. Very good light mounted units with a generally strong skill at getting in and out quickly and doing some damage while there. Giraffes are not pushovers in a fight - those horns can straight knock a person out. There is no evidence giraffes were ever trained for warfare. The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_STRATEGY</Tag>
-		<English>Allows Giraffe units to be built in all your cities.</English>
-		<French>Permet d'entraîner des unités avec Girafes dans toutes vos villes.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Tag>
 		<English>There is no evidence giraffe were ever trained for warfare. The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che le giraffe siano mai state usate in guerra. L'[COLOR_BUILDING_TEXT]Allevatore di giraffe[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] is required to train [LINK=UNIT_GIRAFFE_ARCHER]Giraffe Archers[\LINK].</English>
-		<Italian>L'[COLOR_BUILDING_TEXT]Allevatore di giraffe[COLOR_REVERT] è necessario per addestrare [LINK=UNIT_GIRAFFE_ARCHER]Arcieri su giraffe[\LINK].</Italian>
-		<Russian>The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] is required to train [COLOR_UNIT_TEXT]Giraffe Archers[COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_ARCHER</Tag>
@@ -78,10 +67,6 @@
 		<Tag>TXT_KEY_UNIT_GIRAFFE_ARCHER_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_GIRAFFE_ARCHER_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Giraffe Archer[COLOR_REVERT] is similar to [COLOR_UNIT_TEXT]Horse Archer[COLOR_REVERT] but better against archers, with a bonus to hills and city defense and savanna terrain combat.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CARABINIER</Tag>

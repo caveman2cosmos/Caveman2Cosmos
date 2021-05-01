@@ -5,7 +5,6 @@
 			<Type>TECH_JAINISM</Type>
 			<Description>TXT_KEY_TECH_JAINISM</Description>
 			<Civilopedia>TXT_KEY_TECH_JAINISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_JAINISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>824</iCost>
 			<bGlobal>1</bGlobal>
