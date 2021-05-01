@@ -8048,4 +8048,180 @@
 		<Italian>E così hai lasciato quel tuo fetido paese e sei venuto da me, [CT_NAME]. E a cosa devo questo dubbio onore?</Italian>
 		<Spanish>Así que hab&#233;is salido de vuestro f&#233;tido país y hab&#233;is venido a verme, [CT_NAME]. ¿A qu&#233; debo tan dudoso honor?</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_BOUDICA_1</Tag>
+		<English>Give us this, [CT_NAME]. Frankly you need all of the friends you can get.</English>
+		<French>Donnez-nous ce que nous demandons, [CT_NAME]. Franchement, vous avez besoin de tous les amis possibles.</French>
+		<German>Schlagt ein, [CT_NAME]. Ist es nicht so, dass Ihr jeden Freund braucht, den Ihr kriegen könnt?</German>
+		<Italian>Dacci ciò che vogliamo, [CT_NAME]. Francamente, hai bisogno di tutti gli amici che riesci a farti.</Italian>
+		<Spanish>Dadnos esto, [CT_NAME]. La verdad, necesitáis todos los amigos posibles.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_CHARLEMAGNE_1</Tag>
+		<English>I believe that you'll find it in [CT_CIV_SHORT]'s best interest to supply us with the following.</English>
+		<French>Vous comprendrez aisément qu'il est dans l'intérêt des [CT_CIV_SHORT:3] de nous donner ceci.</French>
+		<German>Ich denke, es wäre im besten Interesse des Volkes von [CT_CIV_SHORT], uns Tribut zu zollen, findet Ihr nicht auch?</German>
+		<Italian>Credo che scoprirai che darci ciò che chiediamo è nell'interesse di [CT_CIV_SHORT].</Italian>
+		<Spanish>Creo que a [CT_CIV_SHORT] le interesa mucho proporcionarnos lo siguiente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_DARIUS_1</Tag>
+		<English>You should give us what we want, [CT_NAME] - your people's future depends upon it.</English>
+		<French>Vous devriez nous donner ce que nous voulons, [CT_NAME], l'avenir de votre peuple en dépend</French>
+		<German>Ihr solltet unsere Forderung erfüllen, [CT_NAME] - denn damit werdet Ihr über die Zukunft Eures Volkes entscheiden!</German>
+		<Italian>Dovresti darci ciò che vogliamo, [CT_NAME]. Il futuro della tua gente dipende da questo.</Italian>
+		<Spanish>Deberíais darnos lo que queremos, [CT_NAME]: el futuro de vuestro pueblo depende de ello.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_DE_GAULLE_1</Tag>
+		<English>The honor of [OUR_CIV_SHORT] demands that you provide us with the following. We really mean it this time.</English>
+		<French>L'honneur des [OUR_CIV_SHORT:3] exige que vous nous donniez ceci. Et on ne plaisante pas, cette fois.</French>
+		<German>Es gebührt der Ehre des Volkes von [OUR_CIV_SHORT], dass Ihr uns Tribut zollt. Diesmal ist es uns ernst damit!</German>
+		<Italian>L'onore di [OUR_CIV_SHORT] impone che tu ci dia ciò di cui abbiamo bisogno. Diciamo sul serio, stavolta.</Italian>
+		<Spanish>El honor de [OUR_CIV_SHORT] exige que nos proporcionéis lo siguiente. Esta vez hablamos en serio.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_HAMMURABI_1</Tag>
+		<English>Can you spare this for a good friend?</English>
+		<French>Pouvez-vous donner ceci à un bon ami ?</French>
+		<German>Könntet Ihr dies für gute Freunde erübrigen?</German>
+		<Italian>Avresti un po' di questi in nome della nostra amicizia?</Italian>
+		<Spanish>¿Podríais darles esto a unos buenos amigos?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_HANNIBAL_1</Tag>
+		<English>Share the wealth, [CT_NAME].</English>
+		<French>Et si vous partagiez votre fortune, [CT_NAME] ?</French>
+		<German>Seid lieb und teilt Euren Reichtum mit anderen, [CT_NAME]!</German>
+		<Italian>Condividi la tua ricchezza, [CT_NAME].</Italian>
+		<Spanish>Compartid la riqueza, [CT_NAME].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_JOAO_1</Tag>
+		<English>We could use your aid, [CT_NAME]. Can you spare us this?</English>
+		<French>Nous aurions besoin de votre aide, [CT_NAME]. Pourriez-vous nous donner ceci ?</French>
+		<German>Wir könnten Eure Hilfe brauchen, [CT_NAME]. Seid Ihr einverstanden?</German>
+		<Italian>Ci farebbe comodo il tuo aiuto, [CT_NAME]. Puoi darci questo?</Italian>
+		<Spanish>Nos iría bien vuestra ayuda, [CT_NAME]. ¿Podrías darnos esto?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_JOSEF_STALIN_1</Tag>
+		<English>Pay up or be destroyed.</English>
+		<French>Payez ou pleurez vos pertes.</French>
+		<German>Zahlt oder es wird Euch übel ergehen!</German>
+		<Italian>Paga o verrete distrutti.</Italian>
+		<Spanish>Pagad o ser&#233;is destruidos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_JUSTINIAN_1</Tag>
+		<English>Please give us this, [CT_NAME]. It will help to ensure continued friendship between our two great empires.</English>
+		<French>Veuillez nous donner ceci, [CT_NAME]. Cela renforcera l'amitié entre nos deux grands empires.</French>
+		<German>Bitte gebt uns, worum wir Euch bitten, [CT_NAME]. Diese Geste wird zweifellos zur fortgesetzten Freundschaft unserer großen Reiche beitragen.</German>
+		<Italian>Per favore dacci questo, [CT_NAME]. Farà in modo che l'amicizia tra i nostri due imperi continui.</Italian>
+		<Spanish>Haced el favor de darnos esto, [CT_NAME]. Contribuirá a que prosiga la amistad entre nuestros dos grandes imperios.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_LINCOLN_1</Tag>
+		<English>Sharing is caring, [CT_NAME].</English>
+		<French>Partager, c'est le début de l'amitié, [CT_NAME].</French>
+		<German>Helfen heißt brüderlich teilen, [CT_NAME].</German>
+		<Italian>Se ci tieni a me, condividi, [CT_NAME].</Italian>
+		<Spanish>Compartir es de generosos, [CT_NAME].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_PACAL_1</Tag>
+		<English>Giving us what we want is the only way to avoid immediate destruction. Pay up.</English>
+		<French>Donnez-nous ce que nous voulons. C'est le seul moyen d'éviter l'anéantissement immédiat. Payez !</French>
+		<German>Der einzige Weg, Eure sofortige Vernichtung zu verhindern, ist, unsere Forderung zu erfüllen. Also, her damit!</German>
+		<Italian>Darci ciò che chiediamo è l'unico modo per evitare la distruzione immediata. Paga.</Italian>
+		<Spanish>Darnos lo que queremos es la única manera de evitar una destrucción inmediata. Pagad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_PERICLES_1</Tag>
+		<English>A truly civilized leader would give us what we want, [CT_NAME]? </English>
+		<French>Un chef véritablement civilisé nous offrirait ce que nous voulons, [CT_NAME].</French>
+		<German>Ein wahrhaft zivilisiertes Staatsoberhaupt würde uns geben, was wir verlangen, [CT_NAME]. </German>
+		<Italian>Un capo davvero civilizzato ci darebbe ciò che vogliamo, [CT_NAME]. </Italian>
+		<Spanish>Un líder verdaderamente civilizado nos daría lo que queremos, ¿no, [CT_NAME]? </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_PERICLES_1</Tag>
+		<English>A truly civilized leader would give us what we want, [CT_NAME]? </English>
+		<French>Un chef véritablement civilisé nous offrirait ce que nous voulons, [CT_NAME].</French>
+		<German>Ein wahrhaft zivilisiertes Staatsoberhaupt würde uns geben, was wir verlangen, [CT_NAME]. </German>
+		<Italian>Un capo davvero civilizzato ci darebbe ciò che vogliamo, [CT_NAME]. </Italian>
+		<Spanish>Un líder verdaderamente civilizado nos daría lo que queremos, ¿no, [CT_NAME]? </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_RAMESSES_II_1</Tag>
+		<English>I demand that you give me this tribute.</English>
+		<French>J'exige que vous nous versiez ce tribut.</French>
+		<German>Ich verlange diesen Tribut von Euch!</German>
+		<Italian>Esigo che tu ci paghi questo tributo.</Italian>
+		<Spanish>Os exijo que me deis este tributo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SHAKA_1</Tag>
+		<English>Unlikely as it may seem, it appears that your puny civilization has something that we want. I suggest you hand it over quickly. </English>
+		<French>Aussi ahurissant que cela puisse para&#238;tre, il semblerait que votre ridicule petite civilisation dispose de quelque chose qui pourrait nous &#234;tre utile. Je vous sugg&#232;re de nous le d&#233;livrer au plus vite.</French>
+		<German>So unglaublich es auch klingen mag: Eure mickrige Zivilisation scheint tatsächlich etwas zu haben, was wir wollen. Ihr wärt gut beraten, es uns schnellstens zu überlassen! </German>
+		<Italian>Per quanto possa apparire improbabile, a quanto pare la tua insignificante civiltà possiede qualcosa che vogliamo. Ti consiglio di darcelo subito. </Italian>
+		<Spanish>Por extraño que suene, parece que vuestra civilización tiene algo que queremos. Os sugiero que nos lo deis rápidamente. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SITTING_BULL_1</Tag>
+		<English>For the sake of the continued friendship between our two great peoples, I request the following token of appreciation.</English>
+		<French>Au nom de l'amitié qui lie nos grands peuples, j'exige que vous nous donniez ceci en gage d'estime. </French>
+		<German>Zum Wohle der fortgesetzten Freundschaft unserer großartigen Völker fordere ich ein Zeichen Eurer Anerkennung!</German>
+		<Italian>Per il bene della duratura amicizia tra i nostri grandi popoli ti chiedo ciò di cui abbiamo bisogno come segno di riconoscimento.</Italian>
+		<Spanish>En aras de que continúe la amistad entre nuestros dos grandes pueblos, os solicito una muestra de vuestro aprecio.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SULEIMAN_1</Tag>
+		<English>It is wise for inferior cultures to shower their betters with gifts, don't you think?</English>
+		<French>Vous ne trouvez pas qu'il est sage de couvrir de cadeaux les civilisations supérieures ?</French>
+		<German>Unterlegene Kulturen sind gut beraten, die ihnen überlegenen Völker zu beschenken, findet Ihr nicht auch?</German>
+		<Italian>È saggio, per le culture inferiori, riempire di regali chi è migliore di loro, non trovi?</Italian>
+		<Spanish>Es juicioso que las culturas inferiores colmen de regalos a las superiores, ¿no creéis?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SURYAVARMAN_1</Tag>
+		<English>Share the wealth, Baby?</English>
+		<French>On se partage le butin, mon pote ?</French>
+		<German>Seid Ihr bereit, Euren Reichtum zu teilen?</German>
+		<Italian>Condividi la tua ricchezza, Baby?</Italian>
+		<Spanish>Compartid la riqueza, porfi.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_WANG_KON_1</Tag>
+		<English>Care to give [OUR_CIV_SHORT] a small token of friendship, [CT_NAME]?</English>
+		<French>Souhaiteriez-vous offrir aux [OUR_CIV_SHORT] un petit gage de votre amiti&#233;, [CT_NAME] ?</French>
+		<German>Wie wär's mit einer kleinen Geste der Freundschaft für das Volk von [OUR_CIV_SHORT], [CT_NAME]?</German>
+		<Italian>Che ne diresti di dare all'impero [OUR_CIV_ADJ] un piccolo segno di amicizia, [CT_NAME]?</Italian>
+		<Spanish>¿Os importaría darle a [OUR_CIV_SHORT] una pequeña prenda de amistad, [CT_NAME]?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_WILLEM_VAN_ORANJE_1</Tag>
+		<English>It would be diplomatically expedient to give us what we want, [CT_NAME]?</English>
+		<French>Il serait diplomatiquement opportun de nous donner ce que nous voulons, [CT_NAME].</French>
+		<German>Es wäre in diplomatischer Hinsicht durchaus angebracht, unsere Forderung zu erfüllen, [CT_NAME].</German>
+		<Italian>Sarebbe diplomaticamente vantaggioso darci ciò che vogliamo, [CT_NAME].</Italian>
+		<Spanish>¿No sería más oportuno, diplomáticamente hablando, que nos dierais lo que queremos, [CT_NAME]?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_WINSTON_CHURCHILL_1</Tag>
+		<English>Give us this one small thing, [CT_NAME], and you shall earn [OUR_CIV_SHORT]'s gratitude tenfold. That's quite a bargain, don't you agree?</English>
+		<French>Donnez-nous ce que nous voulons, [CT_NAME], et vous gagnerez en &#233;change la gratitude &#233;ternelle des [OUR_CIV_SHORT]. C'est un march&#233; plus qu'&#233;quitable, n'est-il pas ?</French>
+		<German>Wenn Ihr uns gebt, was wir verlangen, [CT_NAME], wird Euch das den zehnfachen Dank des Volkes von [OUR_CIV_SHORT] einbringen. Klingt doch verlockend, oder?</German>
+		<Italian>Dacci questa sciocchezza, [CT_NAME], e guadagnerai la nostra gratitudine per dieci volte tanto. A me sembra un affare. A te no?</Italian>
+		<Spanish>Dadnos esta bagatela, [CT_NAME], y os ganar&#233;is la eterna gratitud de [OUR_CIV_SHORT]. Es un buen trato, ¿no os parece?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_ZARA_YAQOB_1</Tag>
+		<English>The heavens command that you give us the following, [CT_NAME]. Unless you particularly like thunderbolts I urge you to comply.</English>
+		<French>Le ciel vous ordonne de nous donner ceci, [CT_NAME]. Je vous conseille d'obéir, à moins que vous n'aimiez les éclairs.</French>
+		<German>Die Götter verlangen, dass Ihr uns Tribut zollt, [CT_NAME]. Und wenn Ihr nicht vom Blitz erschlagen werden wollt, solltet Ihr ihnen Folge leisten!</German>
+		<Italian>I cieli comandano che tu ci dia ciò che ci serve, [CT_NAME]. A meno che non ti piaccia essere colpito dai fulmini ti consiglio di accettare.</Italian>
+		<Spanish>Es voluntad del Cielo que nos deis lo siguiente, [CT_NAME]. A menos que os gusten especialmente los rayos, os apremiamos a hacerlo.</Spanish>
+	</TEXT>
 </Civ4GameText>
