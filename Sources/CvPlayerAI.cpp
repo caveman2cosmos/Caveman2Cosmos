@@ -3,6 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvImprovementInfo.h"
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CvDeal.h"
@@ -14,12 +15,15 @@
 #include "CvPlot.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
+
+#include "CvDiploParameters.h"
 #include "CvPopupInfo.h"
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CvInitCore.h"
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  08/21/09								jdog5000	  */
