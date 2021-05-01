@@ -8592,4 +8592,188 @@
 		<Italian>Anticipa i soldi, [CT_NAME]. </Italian>
 		<Spanish>Pagadlo ahora mismo, [CT_NAME]. </Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>USER_DIPLO_TRIBUTE_1</Tag>
+		<English>Time for your tribute! Refusal means WAR!</English>
+		<French>Il est temps de payer tribut ! Refusez, et c'est la GUERRE !</French>
+		<German>Zeit f&#252;r Euren Tribut! Solltet Ihr Euch weigern, bedeutet das KRIEG!</German>
+		<Italian>Paga il tributo! O sar&#224; GUERRA!</Italian>
+		<Spanish>&#161;Es hora de que nos rind&#225;is tributo! Negarse significar&#225; la guerra.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BOUDICA_1</Tag>
+		<English>Welcome, [CT_NAME]! Mighty [OUR_CIV_SHORT] seeks peace with your weak little civilization. For the moment, that is.</English>
+		<French>Bienvenue, [CT_NAME] ! Les puissants [OUR_CIV_SHORT:3] veulent la paix avec votre misérable civilisation. Enfin, pour l'instant.</French>
+		<German>Willkommen, [CT_NAME]! Das mächtige Volk von [OUR_CIV_SHORT] wünscht friedvolle Beziehungen zu Eurer bedauernswerten Nation. Zumindest für den Augenblick ...</German>
+		<Italian>Ti do il benvenuto, [CT_NAME]! [OUR_CIV_SHORT] vuole la pace con la tua piccola e debole civiltà. Per il momento, almeno.</Italian>
+		<Spanish>¡Os doy la bienvenida, [CT_NAME]! La poderosa tierra de [OUR_CIV_SHORT] busca la paz con vuestra débil civilización de pacotilla. De momento, claro está.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CHARLEMAGNE_1</Tag>
+		<English>May the blessings of Heaven be upon you, [CT_NAME]. I, [OUR_NAME], leader of the puissant [OUR_CIV_ADJ] people, welcome you to our mighty empire.</English>
+		<French>Que les cieux vous bénissent, [CT_NAME] ! Moi, [OUR_NAME], chef des puissants [OUR_CIV_ADJ:3] vous souhaite la bienvenue dans notre grand empire.</French>
+		<German>Möge der Himmel Euch segnen, [CT_NAME]! Ich, [OUR_NAME], Staatsoberhaupt des überragenden [OUR_CIV_ADJ:2] Volkes, heiße Euch in unserem prachtvollen Reich willkommen.</German>
+		<Italian>Possano discendere su di te le benedizioni del Cielo, [CT_NAME]. Io, [OUR_NAME], leader del potente popolo [OUR_CIV_ADJ], ti do il benvenuto nel nostro poderoso impero.</Italian>
+		<Spanish>Que el Cielo os bendiga, [CT_NAME]. Yo, [OUR_NAME], líder del poderoso pueblo [OUR_CIV_ADJ:1], os doy la bienvenida a nuestro gran imperio.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DARIUS_1</Tag>
+		<English>I, [OUR_NAME], welcome [CT_NAME], ruler of the upstart nation of [CT_CIV_SHORT].</English>
+		<French>Moi, [OUR_NAME], souhaite la bienvenue à [CT_NAME], chef de la présomptueuse nation des [CT_CIV_SHORT:3].</French>
+		<German>Ich, [OUR_NAME], heiße Euch willkommen, [CT_NAME], Staatsoberhaupt des aufstrebenden Volkes von [CT_CIV_SHORT].</German>
+		<Italian>Io, [OUR_NAME], do il benvenuto a [CT_NAME], signore della giovane civiltà di [CT_CIV_SHORT].</Italian>
+		<Spanish>Yo, [OUR_NAME], doy la bienvenida a [CT_NAME], dirigente de la advenediza nación de [CT_CIV_SHORT].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DE_GAULLE_1</Tag>
+		<English>I, [OUR_NAME], possessor of one of the largest and finest noses in human history, welcome you to glorious [OUR_CIV_SHORT]!</English>
+		<French>Moi, [OUR_NAME], détenteur du plus grand nez de l'histoire humaine, je vous souhaite la bienvenue chez les [OUR_CIV_SHORT:3] !</French>
+		<German>Ich, [OUR_NAME], ausgestattet mit einem der größten und schönsten Riechkolben der Menschheitsgeschichte, heiße Euch im Namen des glorreichen Volkes von [OUR_CIV_SHORT] willkommen!</German>
+		<Italian>Io, [OUR_NAME], possessore di uno dei più grandi e dei migliori nasi della storia, ti do il benvenuto presso [OUR_CIV_SHORT]!</Italian>
+		<Spanish>Yo, [OUR_NAME], poseedor de una de las más bellas narices de la historia de la Humanidad, os doy la bienvenida a la gloriosa tierra de [OUR_CIV_SHORT]!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GILGAMESH_1</Tag>
+		<English>Welcome, puny mortal. I am [OUR_NAME], divine leader of [OUR_CIV_SHORT]. How can you assist me?</English>
+		<French>Bienvenue, misérable mortel. Je suis [OUR_NAME], divin chef des [OUR_CIV_SHORT:3]. Que pouvez-vous faire pour moi ?</French>
+		<German>Willkommen, sterbliches Wesen. Ich bin [OUR_NAME], gottgleiches Staatsoberhaupt des Volkes von [OUR_CIV_SHORT]. Was könnt Ihr für mich tun?</German>
+		<Italian>Benvenuto, debole mortale. Sono [OUR_NAME], capo divino di [OUR_CIV_SHORT]. Come puoi servirmi?</Italian>
+		<Spanish>Se os da la bienvenida, insignificante mortal. Soy [OUR_NAME], líder divino de [OUR_CIV_SHORT]. ¿En qué podéis ayudarme?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HAMMURABI_1</Tag>
+		<English>Greetings, stranger! Gaze in awe on the majesty that is [OUR_CIV_SHORT]!</English>
+		<French>Bonjour, étranger ! Contemplez avec crainte la majesté des [OUR_CIV_ADJ:3] !</French>
+		<German>Ich grüße Euch, Fremdling! Kommt und bestaunt die Pracht des Volkes von [OUR_CIV_SHORT]!</German>
+		<Italian>Saluti, straniero! Ammira stupito lo splendore di [OUR_CIV_SHORT]!</Italian>
+		<Spanish>Saludos a los que vienen de tierras lejanas. ¡Maravillaos ante la majestad de [OUR_CIV_SHORT]!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HANNIBAL_1</Tag>
+		<English>The glorious [OUR_CIV_ADJ] people welcome the cute little civilization of [CT_CIV_SHORT]!</English>
+		<French>Le fier peuple des [OUR_CIV_ADJ] souhaite la bienvenue &#224; la petite civilisation des [CT_CIV_SHORT] !</French>
+		<German>Die ruhmreichen Bürger von [OUR_CIV_SHORT] heißen das niedliche kleine Völkchen von [CT_CIV_SHORT] willkommen!</German>
+		<Italian>Il glorioso leader [OUR_CIV_ADJ] dà il benvenuto alla tua insignificante civiltà!</Italian>
+		<Spanish>El glorioso pueblo [OUR_CIV_ADJ:1] le da la bienvenida a la encantadora y diminuta tierra de [CT_CIV_SHORT].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_JOAO_1</Tag>
+		<English>Congratulations, [CT_NAME]! At last your explorations have led you to me!</English>
+		<French>Félicitations, [CT_NAME] ! Vos explorations vous ont enfin conduit jusqu'à moi !</French>
+		<German>Ich gratuliere, [CT_NAME]! Endlich haben Euch Eure Erkundungsreisen zu mir geführt!</German>
+		<Italian>Congratulazioni, [CT_NAME]! Alla fine le tue esplorazioni ti hanno portato da me!</Italian>
+		<Spanish>¡Felicidades, [CT_NAME]! ¡Por fin vuestras exploraciones os han traído hasta mí!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_JOSEF_STALIN_1</Tag>
+		<English>Greetings from the glorious worker's paradise of [OUR_CIV_SHORT]! Shall we be friends, or do you have a death wish?</English>
+		<French>Salutations du glorieux paradis des ouvriers ! Pensez-vous que votre civilisation et les [OUR_CIV_SHORT] peuvent d&#233;velopper une entente cordiale ou avez-vous des pulsions suicidaires ?</French>
+		<German>Das ruhmreiche Arbeiterparadies [OUR_CIV_SHORT] grüßt Euch! Nun, werden wir Freundschaft schließen oder verspürt Ihr Todessehnsucht?</German>
+		<Italian>Salve dal nostro glorioso paradiso dei lavoratori! Vogliamo essere amici, o hai già pronto un ultimo desiderio?</Italian>
+		<Spanish>Saludos desde [OUR_CIV_SHORT], el glorioso paraíso del proletariado. ¿Seremos amigos o quer&#233;is morir rápido?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_JUSTINIAN_1</Tag>
+		<English>Welcome, [CT_NAME]! May the heavens bless you as you deserve to be blessed!</English>
+		<French>Bienvenue, [CT_NAME] ! Que les cieux vous bénissent comme vous le méritez !</French>
+		<German>Willkommen, [CT_NAME]! Mögen die Götter Euch segnen, denn Ihr verdient ihren Segen!</German>
+		<Italian>Ti do il benvenuto, [CT_NAME]! Possano i cieli benedirti quanto meriti!</Italian>
+		<Spanish>¡Os doy la bienvenida, [CT_NAME]! Que los cielos os bendigan como merecéis.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_LINCOLN_1</Tag>
+		<English>Greetings, [CT_NAME]. I am [OUR_NAME]. It is indeed an honor to meet you.</English>
+		<French>Salutations, [CT_NAME] ! Je suis [OUR_NAME]. C'est un honneur de vous rencontrer.</French>
+		<German>Seid gegrüßt, [CT_NAME]. Mein Name ist [OUR_NAME]. Es ist mir eine Ehre, Eure Bekanntschaft zu machen.</German>
+		<Italian>Saluti, [CT_NAME]. Sono [OUR_NAME]. È davvero un onore incontrarti.</Italian>
+		<Spanish>Saludos, [CT_NAME]. Soy [OUR_NAME]. Es todo un honor conoceros.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MEHMED_1</Tag>
+		<English>May the heavens rain down blessings upon you, [CT_NAME]! I am [OUR_NAME], wise and benevolent ruler of [OUR_EMPIRE]! Feel free to begin showering me with tribute at your convenience!</English>
+		<French>Qu'une pluie de b&#233;n&#233;dictions caresse votre peuple, [CT_NAME] ! Je suis [OUR_NAME], sage et bienveillant sultan de [OUR_EMPIRE] ! J'esp&#232;re que vous n'h&#233;siterez pas &#224; me recouvrir de tributs en tout genre !</French>
+		<German>Mögen die Götter Euch segnen, [CT_NAME]! Ich bin [OUR_NAME], weises und gütiges Staatsoberhaupt des [OUR_EMPIRE:3]es! Ihr dürft mir gerne angemessenen Tribut zollen!</German>
+		<Italian>Che il cielo possa far piovere benedizioni su di te, [CT_NAME]! Io sono [OUR_NAME], benevolo leader dell'impero [OUR_CIV_ADJ]! Inondami pure di tributi come preferisci!</Italian>
+		<Spanish>Que los cielos os colmen de bendiciones, [CT_NAME]. Soy [OUR_NAME], el gobernante sabio y benevolente del [OUR_EMPIRE]. Cuando queráis, pod&#233;is empezar a rendirme pleitesía.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PACAL_1</Tag>
+		<English>I greet you, [CT_NAME]. [OUR_CIV_SHORT] is mighty - deal with us fairly and you will prosper. Attack us and our temples will run red with the blood of your warriors!</English>
+		<French>Je vous salue, [CT_NAME]. Les [OUR_CIV_SHORT:3] sont puissants. Agissez loyalement avec nous et vous prospèrerez. Attaquez-nous et le sang de vos guerriers teindra en rouge les façades de nos temples !</French>
+		<German>Ich grüße Euch, [CT_NAME]. Das Volk von [OUR_CIV_SHORT] ist mächtig - behandelt uns fair, dann soll es Euer Schaden nicht sein. Solltet Ihr uns jedoch angreifen, werden wir unsere Tempel mit dem Blut Eurer Krieger tränken!</German>
+		<Italian>Ti saluto, [CT_NAME]. [OUR_CIV_SHORT] è una potente civiltà: sii giusto con noi e prospererai. Attaccaci e i nostri templi diverranno rossi col sangue dei tuoi guerrieri!</Italian>
+		<Spanish>Os saludo, [CT_NAME]. [OUR_CIV_SHORT] es una tierra poderosa: tratadnos como se debe y prosperaréis. ¡Atacadnos y en nuestros templos correrá la sangre de vuestros guerreros!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PERICLES_1</Tag>
+		<English>As the leader of ancient [OUR_CIV_SHORT], father and mother of all that is civilized, I, [OUR_NAME], welcome the leader of the upstart [CT_CIV_ADJ] people into my august presence.</English>
+		<French>En tant que chef des vénérables [OUR_CIV_SHORT:3], père et mère de tout ce qui est civilisé, moi, [OUR_NAME], daigne accepter le chef des présomptueux [CT_CIV_ADJ:3] en mon auguste présence</French>
+		<German>Als Staatsoberhaupt des alten Volkes von [OUR_CIV_SHORT], dessen Ahnen bereits zivilisiert waren, heiße ich, [OUR_NAME], das Staatsoberhaupt des aufstrebenden [CT_CIV_ADJ:2] Volkes in meiner erhabenen Pracht willkommen.</German>
+		<Italian>Quale leader dell'antica civiltà di [OUR_CIV_SHORT], padre e madre di tutto ciò che è civilizzato io, [OUR_NAME], accolgo il capo della crescente popolazione [CT_CIV_ADJ] alla mia augusta presenza.</Italian>
+		<Spanish>Como líder de la antigua tierra de [OUR_CIV_SHORT], cuna de la civilización, yo, [OUR_NAME], os doy la bienvenida, oh, líder del pueblo [CT_CIV_ADJ:1], ante mi augusta presencia.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SHAKA_1</Tag>
+		<English>Greetings, [CT_NAME]! The [OUR_CIV_ADJ] people always enjoy meeting vulnerable and undefended new civilizations!</English>
+		<French>Mes hommages, [CT_NAME] ! Le peuple des [OUR_CIV_ADJ] est toujours enchant&#233; de rencontrer de nouvelles civilisations vuln&#233;rables et sans d&#233;fense !</French>
+		<German>Seid gegrüßt, [CT_NAME]! Das [OUR_CIV_ADJ:3] Volk ist stets hoch erfreut, die Bekanntschaft schutz- und wehrloser neuer Zivilisationen zu machen!</German>
+		<Italian>Salve, [CT_NAME]! Il sovrano [OUR_CIV_ADJ] è sempre lieto di incontrare nuove civiltà vulnerabili e indifese!</Italian>
+		<Spanish>¡Saludos, [CT_NAME]! El pueblo [OUR_CIV_ADJ:1] siempre se congratula de encontrarse con civilizaciones vulnerables e indefensas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SITTING_BULL_1</Tag>
+		<English>The great [OUR_CIV_ADJ] people welcome you, [CT_NAME]. Would it be politically correct to offer you a peace-pipe?</English>
+		<French>Les puissants [OUR_CIV_ADJ:3] vous souhaitent la bienvenue, [CT_NAME]. Serait-il politiquement correct de vous offrir un calumet de la paix ?</French>
+		<German>Das großartige [OUR_CIV_ADJ:3] Volk heißt Euch willkommen, [CT_NAME]. Wäre es politisch korrekt, Euch die Friedenspfeife anzubieten?</German>
+		<Italian>Il grande popolo [OUR_CIV_ADJ] ti dà il benvenuto, [CT_NAME]. È politicamente corretto offrirti un calumet della pace?</Italian>
+		<Spanish>El gran pueblo [OUR_CIV_ADJ:1] os da la bienvenida, [CT_NAME]. ¿Sería apropiado ofreceros una pipa de la paz u os habéis sumado a la cruzada contra el tabaco?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SULEIMAN_1</Tag>
+		<English>Well met, [CT_NAME]! I am [OUR_NAME] the Magnificent. Come - sit and bathe in my glory while we discuss many things.</English>
+		<French>Ravi de vous rencontrer, [CT_NAME] ! Je suis [OUR_NAME] le Magnifique. Asseyez-vous à mes côtés pour baigner dans ma gloire.</French>
+		<German>Wohlan, [CT_NAME]! Ich bin [OUR_NAME], auch Euer Prächtigkeit genannt. Kommt, setzt Euch und sonnt Euch in meinem Glanze, während wir ein paar Dinge besprechen.</German>
+		<Italian>Benvenuto, [CT_NAME]! Sono [OUR_NAME] il Magnifico. Vieni: siedi e beati della mia gloria mentre discutiamo.</Italian>
+		<Spanish>¡Nos llena de dicha conoceros, [CT_NAME]! Soy [OUR_NAME] el Magnífico. Venid, sentaos y daos un baño de mi gloria mientras hablamos de muchas cosas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SURYAVARMAN_1</Tag>
+		<English>I am pleased to meet you, [CT_NAME], and I look forward to many years of peace and friendship between our two great nations.</English>
+		<French>Je suis ravi de vous rencontrer, [CT_NAME], et je me réjouis à l'idée de longues années de paix et d'amitié entre nous.</French>
+		<German>Ich freue mich, Euch zu sehen, [CT_NAME], und ich freue mich auch auf viele zukünftige Jahre des Friedens und der Freundschaft zwischen unseren großen Nationen.</German>
+		<Italian>Sono contento di incontrarti, [CT_NAME], e vedo davanti a noi molti anni di pace e amicizia tra le nostre due grandi nazioni.</Italian>
+		<Spanish>Estamos encantadísimos de conoceros, [CT_NAME], y deseamos muchos años de amistad entre nuestras dos grandes naciones.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_WANG_KON_1</Tag>
+		<English>Welcome, [CT_NAME], ruler of mighty [CT_CIV_SHORT]! Deal faithfully with [OUR_CIV_SHORT] and we will deal faithfully with you. Betray us and your life will be both short and full of excitement...</English>
+		<French>Bienvenue, [CT_NAME], seigneur des puissants [CT_CIV_SHORT] ! Sachez que si vous &#234;tes respectueux et loyaux envers [OUR_CIV_SHORT], nous vous t&#233;moignerons le m&#234;me respect et la m&#234;me loyaut&#233;. Trahissez-nous une seule fois, et votre vie sera non seulement tr&#232;s courte, mais &#233;galement tr&#233;pidante...</French>
+		<German>Willkommen, [CT_NAME], Staatsoberhaupt des mächtigen Volkes von [CT_CIV_SHORT]! Solange Ihr die Bürger von [OUR_CIV_SHORT] fair behandelt, werden wir Euch ebenfalls fair behandeln. Solltet Ihr uns jedoch hintergehen, wird Euer Dasein von sehr kurzer Dauer sein ...</German>
+		<Italian>Salve, [CT_NAME], potente sovrano [CT_CIV_ADJ]! Comportati lealmente con la nostra civiltà e noi ci comporteremo lealmente con la tua. Tradiscici e la tua vita sarà eccitante ma breve...</Italian>
+		<Spanish>Os damos la bienvenida, [CT_NAME], líder de la poderosa tierra de [CT_CIV_SHORT]. Portaos bien con [OUR_CIV_SHORT] y nos portaremos bien con vosotros. Traicionadnos y vuestra vida será corta y llena de emociones...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_WILLEM_VAN_ORANJE_1</Tag>
+		<English>I am honored to meet you, [CT_NAME]. I hope that our two nations will be able to live in peace and friendship.</English>
+		<French>Je suis honoré de vous rencontrer, [CT_NAME]. J'espère que nos deux nations seront capables de vivre dans la paix et l'amitié.</French>
+		<German>Es ist mir eine Ehre, [CT_NAME]. Ich hoffe, es wird Friede und Freundschaft zwischen unseren Völkern herrschen.</German>
+		<Italian>È un onore incontrarti, [CT_NAME]. Spero che le nostre due nazioni riusciranno a vivere in pace e amicizia.</Italian>
+		<Spanish>Es un honor conoceros, [CT_NAME]. Espero que nuestras dos naciones sean capaces de vivir en paz y armonía.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_WINSTON_CHURCHILL_1</Tag>
+		<English>Welcome, [CT_NAME]! I hope that our two great nations can be firm friends and allies. However if you attack us we shall fight you on the beaches, we shall fight you on the landing grounds, we shall fight you in the fields and in the streets - well, you get the idea... </English>
+		<French>Bienvenue, [CT_NAME] ! J'esp&#232;re que nos deux grandes nations sauront &#233;tablir une relation aussi solide qu'amicale. Toutefois, sachez que si vous nous attaquiez, je n'aurai rien d'autre &#224; vous offrir que du sang, de la souffrance, des larmes et de la sueur, si vous voyez ce que je veux dire...</French>
+		<German>Willkommen, [CT_NAME]! Ich hoffe, unsere großen Zivilisationen können enge Freunde und Verbündete werden. Wenn Ihr uns jedoch angreifen solltet, werden wir zurückschlagen, wo immer wir Euch begegnen - in jedem Winkel der Erde, wenn Ihr versteht, was ich meine ... </German>
+		<Italian>Salve, [CT_NAME]! Spero che le nostre due grandi nazioni possano allearsi e godere di una salda amicizia. Ma se proverete ad attaccarci, vi combatteremo sulle coste, vi combatteremo in pianura, vi combatteremo per le strade cittadine... Insomma, hai capito, spero. </Italian>
+		<Spanish>¡Os doy la bienvenida, [CT_NAME]! Espero que nuestras dos grandes naciones puedan ser amigas y firmes aliadas. No obstante, si nos atacáis, os combatiremos en las playas y en las pistas de aterrizaje, os combatiremos en los campos y en las calles... Bueno, ya os hac&#233;is una idea... </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ZARA_YAQOB_1</Tag>
+		<English>Hail to you, [CT_NAME]. I am [OUR_NAME], ruler of the god-fearing [OUR_CIV_ADJ] people! May the friendship between our two great civilizations last until we are much, much larger than you! </English>
+		<French>Mes respects, [CT_NAME] ! Je suis [OUR_NAME], chef des dévots [OUR_CIV_ADJ:3] ! Que l'amitié entre nos deux grandes civilisations dure jusqu'à ce que nous soyons bien plus puissants que vous !</French>
+		<German>Seid gegrüßt, [CT_NAME]. Ich bin [OUR_NAME], Staatsoberhaupt des gottesfürchtigen [OUR_CIV_ADJ:2] Volkes! Möge die Freundschaft zwischen unseren großartigen Nationen andauern, bis wir Euch haushoch überlegen sind! </German>
+		<Italian>Salute a te, [CT_NAME]. Sono [OUR_NAME], signore del popolo [OUR_CIV_ADJ], timorato di Dio! Possa l'amicizia tra le nostre due grandi civiltà durare fino a quando non saremo molto più vasti di voi! </Italian>
+		<Spanish>Mis saludos, [CT_NAME]. Soy [OUR_NAME], gobernante del pueblo [OUR_CIV_ADJ:1], temeroso de Dios. Que la amistad entre nuestras dos magníficas civilizaciones perdure hasta que nosotros seamos mucho más grandes que vosotros. </Spanish>
+	</TEXT>
 </Civ4GameText>
