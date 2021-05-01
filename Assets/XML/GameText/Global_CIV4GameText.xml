@@ -19098,4 +19098,332 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Consigliere tecnologico</Italian>
 		<Spanish>Consejero de tecnolog&#237;a</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TURNTIMER_SLOW</Tag>
+		<English>Slow</English>
+		<French>
+			<Text>Lente</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Langsam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lento</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lento</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TURNTIMER_MEDIUM</Tag>
+		<English>Medium</English>
+		<French>
+			<Text>Normale</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mittel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Medio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Intermedio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TURNTIMER_FAST</Tag>
+		<English>Fast</English>
+		<French>
+			<Text>Rapide</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Schnell</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Veloce</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>R&#225;pido</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TURNTIMER_SNAIL</Tag>
+		<English>Snail</English>
+		<French>
+			<Text>Escargot</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Schnecke</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lumaca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Caracol</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TURNTIMER_BLAZING</Tag>
+		<English>Blazing!!!</English>
+		<French>
+			<Text>Tr&#232;s rapide !</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Blitzschnell!!!</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Folgorante!</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Fren&#233;tico</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TURNTIMER_STATIC</Tag>
+		<English>Static</English>
+		<French>
+			<Text>Static</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Static</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Static</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Est&#225;tico</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UN_VOTE_FORCE_NO_TRADE</Tag>
+		<English>U.N. Trade Embargo</English>
+		<French>Embargo commercial des Nations Unies</French>
+		<German>V.N.-Handelsembargo</German>
+		<Italian>Embargo commerciale ONU</Italian>
+		<Spanish>Embargo comercial de la ONU</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UN_VOTE_FORCE_WAR</Tag>
+		<English>U.N. War Resolution</English>
+		<French>R&#233;solution pour la guerre des Nations Unies</French>
+		<German>V.N.-Kriegsresolution</German>
+		<Italian>Risoluzione di guerra ONU</Italian>
+		<Spanish>Resoluci&#243;n de guerra de la ONU</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UPKEEP_LOW</Tag>
+		<English>Low Upkeep</English>
+		<French>Entretien faible</French>
+		<German>Geringe Unterhaltskosten</German>
+		<Italian>Mantenimento basso</Italian>
+		<Spanish>Mantenimiento bajo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UPKEEP_MEDIUM</Tag>
+		<English>Medium Upkeep</English>
+		<French>Entretien moyen</French>
+		<German>Mittlere Unterhaltskosten</German>
+		<Italian>Mantenimento medio</Italian>
+		<Spanish>Mantenimiento medio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UPKEEP_HIGH</Tag>
+		<English>High Upkeep</English>
+		<French>Entretien &#233;lev&#233;</French>
+		<German>Hohe Unterhaltskosten</German>
+		<Italian>Mantenimento alto</Italian>
+		<Spanish>Mantenimiento alto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_TITLE</Tag>
+		<English>Victory Conditions</English>
+		<French>Conditions de victoire</French>
+		<German>Siegbedingungen</German>
+		<Italian>Condizioni di vittoria</Italian>
+		<Spanish>Condiciones para la victoria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_ASSIGN_CITY</Tag>
+		<English>Return a city to their rightful owner.</English>
+		<French>Rendre une ville &#224; son propri&#233;taire l&#233;gitime.</French>
+		<German>&#220;bergebt eine Stadt wieder ihrem rechtm&#228;&#223;igen Besitzer.</German>
+		<Italian>Restituisci una citt&#224; al legittimo proprietario.</Italian>
+		<Spanish>Devolverle una ciudad a su leg&#237;timo propietario.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_DEFENSIVE_PACT</Tag>
+		<English>Sign a Defensive Pact</English>
+		<French>Signer un pacte de d&#233;fense</French>
+		<German>Ein Verteidigungsb&#252;ndnis unterzeichnen</German>
+		<Italian>Firma patto di difesa</Italian>
+		<Spanish>Firmar un acuerdo de protecci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_FORCE_PEACE</Tag>
+		<English>Stop the fighting among our brothers in faith.</English>
+		<French>Arr&#234;ter la guerre entre nos fr&#232;res de confession.</French>
+		<German>Beendet die K&#228;mpfe unter unseren Glaubensbr&#252;dern.</German>
+		<Italian>Ferma la lotta tra i nostri fratelli nella fede.</Italian>
+		<Spanish>Que cese la lucha entre nuestros hermanos de fe.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_FORCE_NO_TRADE</Tag>
+		<English>Stop trading with the infidels.</English>
+		<French>Rompre les &#233;changes avec les infid&#232;les</French>
+		<German>Stoppt den Handel mit den Ungl&#228;ubigen.</German>
+		<Italian>Smetti di commerciare con gli infedeli.</Italian>
+		<Spanish>Dejar de comerciar con los infieles.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_FORCE_WAR</Tag>
+		<English>Declare war on the infidels.</English>
+		<French>D&#233;clarer la guerre contre les infid&#232;les.</French>
+		<German>Erkl&#228;rt den Ungl&#228;ubigen den Krieg.</German>
+		<Italian>Dichiara guerra agli infedeli.</Italian>
+		<Spanish>Declararles la guerra a los infieles.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_FREE_TRADE</Tag>
+		<English>U.N. Resolution #523 (Open Markets - Trade Routes ([ICON_TRADE]) with All Foreign Cities)</English>
+		<French>R&#233;solution de l'ONU n&#176; 523 (March&#233;s ouverts - routes commerciales vers toutes les villes &#233;trang&#232;res)</French>
+		<German>U.N.-Resolution Nr. 523 (Offene M&#228;rkte - Handelswege in alle fremden St&#228;dte)</German>
+		<Italian>Mozione #523 dell'ONU (Mercati aperti - Apertura dei mercati globali)</Italian>
+		<Spanish>Resoluci&#243;n n&#186; 523 de la ONU (mercado libre - rutas comerciales con todas las ciudades extranjeras)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_NO_NUKES</Tag>
+		<English>U.N. Resolution #1284 (Nuclear Non-Proliferation Treaty - Cannot Build Nuclear Weapons)</English>
+		<French>R&#233;solution de l'ONU n&#176; 1284 (Trait&#233; de non prolif&#233;ration des armes nucl&#233;aires - impossible de construire des armes nucl&#233;aires)</French>
+		<German>U.N.-Resolution Nr. 1284 (Atomwaffensperrvertrag - Errichtung atomarer Waffen nicht m&#246;glich)</German>
+		<Italian>Mozione #1284 dell'ONU (Accordo sul disarmo nucleare - Non si possono costruire armi nucleari)</Italian>
+		<Spanish>Resoluci&#243;n n&#186; 1284 de la ONU (tratado de no proliferaci&#243;n de armas nucleares)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_OPEN_BORDERS</Tag>
+		<English>Open Borders</English>
+		<French>Libre passage</French>
+		<German>Offene Grenzen</German>
+		<Italian>Diritto di passaggio</Italian>
+		<Spanish>Apertura de fronteras</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_POPE</Tag>
+		<English>Apostolic Palace Election (Winner Proposes Apostolic Palace Resolutions)</English>
+		<French>Election au palais apostolique (Le vainqueur propose les r&#233;solutions du palais apostolique.)</French>
+		<German>Apostolischer Palast-Wahl (Sieger schl&#228;gt Apostolischer Palast-Resolutionen vor)</German>
+		<Italian>Elezione del Palazzo Apostolico (il vincitore propone le mozioni del Palazzo Apostolico)</Italian>
+		<Spanish>Elecciones del Palacio Apost&#243;lico (el ganador propone resoluciones del Palacio Apost&#243;lico)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_RELIGIOUS_VICTORY</Tag>
+		<English>Religious Leader (Diplomatic Victory)</English>
+		<French>Chef religieux (Victoire diplomatique)</French>
+		<German>Religi&#246;ser F&#252;hrer (Diplomatischer Sieg)</German>
+		<Italian>Leader religioso (Vittoria diplomatica)</Italian>
+		<Spanish>L&#237;der religioso (victoria diplom&#225;tica)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_SECRETARY_GENERAL</Tag>
+		<English>U.N. Election (Secretary-General - Can Propose U.N. Resolutions)</English>
+		<French>Election ONU (Secr&#233;taire g&#233;n&#233;ral - peut proposer des r&#233;solutions de l'ONU)</French>
+		<German>U.N.-Wahl (Generalsekret&#228;r - Kann U.N.-Resolutionen vorschlagen)</German>
+		<Italian>Elezione ONU (Segretario generale)</Italian>
+		<Spanish>Votaci&#243;n en la ONU (Secretario General - puede proponer resoluciones de la ONU)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_SINGLE_CURRENCY</Tag>
+		<English>U.N. Resolution #104 (Single Currency - +1 Trade Route ([ICON_TRADE]) in All Cities)</English>
+		<French>R&#233;solution de l'ONU n&#176; 104 (Monnaie unique - + route commerciale dans toutes les villes)</French>
+		<German>U.N.-Resolution Nr. 104 (Einheitsw&#228;hrung - +1 Handelsweg in allen St&#228;dten)</German>
+		<Italian>Mozione #104 dell'ONU (Moneta unica - +1 alle rotte commerciali in tutte le citt&#224;)</Italian>
+		<Spanish>Resoluci&#243;n n&#186; 104 de la ONU (moneda &#250;nica - +1 ruta comercial en todas las ciudades)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_UN_ASSIGN_CITY</Tag>
+		<English>U.N. Mandate for City Ownership</English>
+		<French>Mandat des Nations Unies pour la possession d'une ville</French>
+		<German>V.N.-Mandat f&#252;r Stadt&#252;bernahme</German>
+		<Italian>Mandato ONU di assegnazione della citt&#224;</Italian>
+		<Spanish>Mandato de la ONU de cesi&#243;n de ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_UN_FORCE_PEACE</Tag>
+		<English>U.N. Peacekeeping</English>
+		<French>Maintien de la paix des Nations Unies</French>
+		<German>V.N.-Friedenstruppen</German>
+		<Italian>Forze di pace ONU</Italian>
+		<Spanish>Pacificaci&#243;n de la ONU</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_VICTORY</Tag>
+		<English>U.N. Election (Diplomatic Victory)</English>
+		<French>Election ONU (Victoire diplomatique)</French>
+		<German>U.N.-Wahl (Diplomatischer Sieg)</German>
+		<Italian>Elezione ONU (Vittoria diplomatica)</Italian>
+		<Spanish>Votaci&#243;n en la ONU (victoria diplom&#225;tica)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WIDGET_HELP</Tag>
+		<English>Civilopedia</English>
+		<French>Civilop&#233;dia</French>
+		<German>Zivilop&#228;die</German>
+		<Italian>Civilopedia</Italian>
+		<Spanish>Civilopedia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WORLD_BUILDER</Tag>
+		<English>Toggles World Builder</English>
+		<French>Activer l'&#233;diteur de mondes </French>
+		<German>Weltenbauer ein/aus</German>
+		<Italian>Attiva/disattiva l'editor</Italian>
+		<Spanish>Activa el Creador de mundos</Spanish>
+	</TEXT>
 </Civ4GameText>
