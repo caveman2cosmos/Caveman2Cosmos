@@ -21892,4 +21892,709 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Attuale</Italian>
 		<Spanish>Actual</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE</Tag>
+		<!-- %s1_year = string version of the date -->
+		<English>The Dawn of Man</English>
+		<French>L'aube de l'Humanit&#233;</French>
+		<German>Der Beginn der Menschheit</German>
+		<Italian>L'alba dell'umanit&#224;</Italian>
+		<Spanish>Los Albores del Hombre</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DECLARE_WAR_YES</Tag>
+		<English>Yes, DECLARE WAR!</English>
+		<French>Oui, DECLARONS LA GUERRE !</French>
+		<German>Ja, KRIEG ERKL&#196;REN!</German>
+		<Italian>S&#236;, DICHIARA GUERRA!</Italian>
+		<Spanish>S&#237;, &#161;DECLAREMOS LA GUERRA!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DECLARE_WAR_NO</Tag>
+		<English>No, let's reconsider...</English>
+		<French>Non, r&#233;examinons la question...</French>
+		<German>Nein, denken wir noch mal nach ...</German>
+		<Italian>No, meglio ripensarci...</Italian>
+		<Spanish>No, reconsider&#233;moslo...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMOGRAPHICS_SCREEN_RIVAL_AVERAGE</Tag>
+		<English>Rival Average</English>
+		<French>Moyenne rivaux</French>
+		<German>Weltdurchschn.</German>
+		<Italian>Media dei rivali</Italian>
+		<Spanish>Promedio del rival</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_AGRICULTURE_TEXT</Tag>
+		<English>Crop Yield (Food)</English>
+		<French>R&#233;colte (Nour.)</French>
+		<German>Getreideertrag (Nahrung)</German>
+		<Italian>Prod. raccolto (cibo)</Italian>
+		<Spanish>Rend.cosechas(Ali)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_AGRICULTURE_MEASURE</Tag>
+		<English> Million Bushels</English>
+		<French> Millions de boisseaux</French>
+		<German> Mio. Scheffel</German>
+		<Italian>Milioni di stai</Italian>
+		<Spanish> Mill. de fanegas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_ECONOMY_TEXT</Tag>
+		<English>GNP (Gold)</English>
+		<French>PNB (Or)</French>
+		<German>BSP (Gold)</German>
+		<Italian>PIL (oro)</Italian>
+		<Spanish>PNB (oro)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE</Tag>
+		<English> Million Gold</English>
+		<French> Millions en or</French>
+		<German> Mio. Gold</German>
+		<Italian>Milioni d'oro</Italian>
+		<Spanish> Mill. de oro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_EXPORTS_TEXT</Tag>
+		<English>Exports</English>
+		<French>Exportations</French>
+		<German>Exporte</German>
+		<Italian>Esportazioni</Italian>
+		<Spanish>Exportaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_HAPPINESS_TEXT</Tag>
+		<English>Approval Rate</English>
+		<French>Taux d'approbation</French>
+		<German>Billigungsrate</German>
+		<Italian>Grado di approvazione</Italian>
+		<Spanish>Ritmo aprobaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_HEALTH_TEXT</Tag>
+		<English>Life Expectancy</English>
+		<French>Esp&#233;rance de vie</French>
+		<German>Lebenserwartung</German>
+		<Italian>Durata della vita</Italian>
+		<Spanish>Esperanza de vida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_IMPORTS_TEXT</Tag>
+		<English>Imports</English>
+		<French>Importations</French>
+		<German>Importe</German>
+		<Italian>Importazioni</Italian>
+		<Spanish>Importaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_INDUSTRY_MEASURE</Tag>
+		<English> Million Tons</English>
+		<French> Millions de tonnes</French>
+		<German> Mio. Tonnen</German>
+		<Italian>Milioni di tonnellate</Italian>
+		<Spanish> Mill. de toneladas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_INDUSTRY_TEXT</Tag>
+		<English>Mfg. Goods (Prod.)</English>
+		<French>March. (Prod.)</French>
+		<German>Ind. (Prod.)</German>
+		<Italian>Beni (Prod.)</Italian>
+		<Spanish>Merc.fabric.(Prod)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_LAND_AREA_TEXT</Tag>
+		<English>Land Area</English>
+		<French>Territoire</French>
+		<German>Landgebiet</German>
+		<Italian>Superficie</Italian>
+		<Spanish>&#193;rea terrestre</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_LAND_AREA_MEASURE</Tag>
+		<English> Square km</English>
+		<French> Km&#178;</French>
+		<German> Quadratkilometer</German>
+		<Italian>Km quadrati</Italian>
+		<Spanish> Km cuad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_MILITARY_TEXT</Tag>
+		<English>Soldiers</English>
+		<French>Soldats</French>
+		<German>Soldaten</German>
+		<Italian>Soldati</Italian>
+		<Spanish>Soldados</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_POPULATION_TEXT</Tag>
+		<English>Population</English>
+		<French>Population</French>
+		<German>Bev&#246;lkerung</German>
+		<Italian>Popolazione</Italian>
+		<Spanish>Poblaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_POPULATION_MEASURE</Tag>
+		<English> Years</English>
+		<French> Personnes</French>
+		<German> Jahre</German>
+		<Italian>Popolazione</Italian>
+		<Spanish> A&#241;os</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_STRENGTH_TEXT</Tag>
+		<English>Strength</English>
+		<French>Puissance</French>
+		<German>St&#228;rke</German>
+		<Italian>Forza</Italian>
+		<Spanish>Fuerza</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_TITLE</Tag>
+		<English>Demographics</English>
+		<French>D&#233;mographie</French>
+		<German>Demografien</German>
+		<Italian>Demografica</Italian>
+		<Spanish>Estad&#237;sticas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_VALUE_TEXT</Tag>
+		<English>Value</English>
+		<French>Valeur</French>
+		<German>Wert</German>
+		<Italian>Valore</Italian>
+		<Spanish>Valor</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DIPLOMACY_TITLE</Tag>
+		<English>Who do you want to contact?</English>
+		<French>Qui voulez-vous contacter ?</French>
+		<German>Wen wollt Ihr kontaktieren?</German>
+		<Italian>Chi vuoi contattare?</Italian>
+		<Spanish>&#191;Con qui&#233;n quieres contactar?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMESTIC_GREAT_GENERAL_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Great General Emergence inside Cultural Borders</English>
+		<French>[ICON_BULLET]Emergence d'un grand G&#233;n&#233;ral &#224; l'int&#233;rieur des fronti&#232;res culturelles %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Produktion Gro&#223;er Gener&#228;le innerhalb der kulturellen Grenzen</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% comparsa di un Grande Generale all'interno dei confini culturali</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la aparici&#243;n de un Gran general dentro de las fronteras culturales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOUBLE_SPEED_TRAIT</Tag>
+		<English>[ICON_BULLET]Double production speed for %s1_trait leaders</English>
+		<French>[ICON_BULLET]Vitesse de production doubl&#233;e pour les dirigeants avec le trait %s1_trait</French>
+		<German>[ICON_BULLET]Doppelte Produktionsgeschwindigkeit f&#252;r %s1:2_trait Staatsoberhaupt</German>
+		<Italian>[ICON_BULLET]Doppia velocit&#224; produttiva con un leader %s1_trait</Italian>
+		<Spanish>[ICON_BULLET]Doble velocidad de producci&#243;n con l&#237;der %s1:1_trait</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_1</Tag>
+		<English>Augustus Caesar</English>
+		<French>
+			<Text>Auguste</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Augustus Caesar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cesare Augusto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>C&#233;sar Augusto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_2</Tag>
+		<English>Hammurabi</English>
+		<French>
+			<Text>Hammourabi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hammurabi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hammurabi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hammurabi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_3</Tag>
+		<English>Abraham Lincoln</English>
+		<French>
+			<Text>Abraham Lincoln</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Abraham Lincoln</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Abramo Lincoln</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Abraham Lincoln</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_4</Tag>
+		<English>Charlemagne</English>
+		<French>
+			<Text>Charlemagne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Karl der Gro&#223;e</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Carlo Magno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Carlomagno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_5</Tag>
+		<English>Winston Churchill</English>
+		<French>
+			<Text>Winston Churchill</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Winston Churchill</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Winston Churchill</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Winston Churchill</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_6</Tag>
+		<English>Nelson Mandela</English>
+		<French>
+			<Text>Nelson Mandela</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nelson Mandela</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nelson Mandela</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nelson Mandela</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_7</Tag>
+		<English>Emperor Constantine</English>
+		<French>
+			<Text>Empereur Constantin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kaiser Konstantin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Imperatore Costantino</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Constantino Emperador</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_8</Tag>
+		<English>Shaka Zulu</English>
+		<French>
+			<Text>Chaka Zoulou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Shaka Zulu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Shaka Zulu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chaka Zul&#250;</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_9</Tag>
+		<English>Charles de Gaulle</English>
+		<French>
+			<Text>Charles de Gaulle</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Charles de Gaulle</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Charles de Gaulle</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Charles de Gaulle</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_10</Tag>
+		<English>Simon Bolivar</English>
+		<French>
+			<Text>Simon Bolivar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Simon Bolivar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Simon Bolivar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sim&#243;n Bol&#237;var</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_11</Tag>
+		<English>Lech Walesa</English>
+		<French>
+			<Text>Lech Walesa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lech Walesa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lech Walesa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lech Walesa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_12</Tag>
+		<English>Ivan the Terrible</English>
+		<French>
+			<Text>Ivan le Terrible</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Iwan der Schreckliche</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ivan il Terribile</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Iv&#225;n el Terrible</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_13</Tag>
+		<English>Henry VIII</English>
+		<French>
+			<Text>Henri VIII</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Heinrich VIII.</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Enrico VIII</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Enrique VIII</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_14</Tag>
+		<English>Herbert Hoover</English>
+		<French>
+			<Text>Herbert Hoover</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Herbert Hoover</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Herbert Hoover</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Herbert Hoover</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_15</Tag>
+		<English>Louis XVI</English>
+		<French>
+			<Text>Louis XVI</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ludwig XVI.</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Luigi XVI</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Luis XVI</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_16</Tag>
+		<English>Neville Chamberlain</English>
+		<French>
+			<Text>Neville Chamberlain</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Neville Chamberlain</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Neville Chamberlain</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Neville Chamberlain</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_17</Tag>
+		<English>Nero</English>
+		<French>
+			<Text>N&#233;ron</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nero</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nerone</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ner&#243;n</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_18</Tag>
+		<English>Warren G. Harding</English>
+		<French>
+			<Text>Warren G. Harding</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Warren G. Harding</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Warren G. Harding</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Warren G. Harding</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_19</Tag>
+		<English>Ethelred the Unready</English>
+		<French>
+			<Text>Ethelred II</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ethelred der Ratlose</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ethelred l'Impreparato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ethelred el Desprevenido</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_20</Tag>
+		<English>Dan Quayle</English>
+		<French>
+			<Text>Dan Quayle</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dan Quayle</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dan Quayle</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dan Quayle</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DQ_TEXT_STRING</Tag>
+		<English>%s1_leader, during this game you have displayed the leadership abilities of %s2_leader!</English>
+		<French>%s1_leader, pendant cette partie, vous avez affich&#233; les comp&#233;tences de dirigeant de %s2_leader !</French>
+		<German>Ihr habt in diesem Spiel die Herrschermerkmale von %s2_leader gezeigt, %s1_leader!</German>
+		<Italian>%s1_leader, durante la partita hai mostrato le abilit&#224; da leader di %s2_leader!</Italian>
+		<Spanish>%s1_leader, durante esta partida hab&#233;is demostrado tener la capacidad de liderazgo de %s2_leader.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DRAFT</Tag>
+		<English>DRAFT</English>
+		<French>CONSCRIP.</French>
+		<German>REKRUT.</German>
+		<Italian>LEVA</Italian>
+		<Spanish>RECLUTAM.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DRAFT_UNIT</Tag>
+		<English>Draft %s1_Unit, %d2 Pop</English>
+		<French>Enr&#244;ler %s1_Unit, %d2 pop</French>
+		<German>Einberufung von %s1_Unit, %d2 Bev.</German>
+		<Italian>Leva %s1_Unit, %d2 Pop</Italian>
+		<Spanish>Reclutar %s1_Unit, %d2 pob</Spanish>
+	</TEXT>
 </Civ4GameText>
