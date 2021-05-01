@@ -18300,4 +18300,212 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Evita la crescita</Italian>
 		<Spanish>Evitar crecimiento</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_TITLE</Tag>
+		<English>Financial Advisor</English>
+		<French>Conseiller financier</French>
+		<German>Finanzberater</German>
+		<Italian>Consigliere economico</Italian>
+		<Spanish>Consejero financiero</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FORCE_CONTROL_SPEED</Tag>
+		<English>Force Game Speed</English>
+		<French>Forcer vitesse du jeu</French>
+		<German>Spielgeschwindigkeit erzwingen</German>
+		<Italian>Forza velocit&#224; di gioco</Italian>
+		<Spanish>Forzar velocidad de juego</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FORCE_CONTROL_SPEED_DESC</Tag>
+		<English>Disable the control for changing game speed</English>
+		<French>D&#233;sactiver la commande de changement de vitesse du jeu</French>
+		<German>&#196;nderung der Spielgeschwindigkeit deaktivieren</German>
+		<Italian>Disabilita i comandi per cambiare la velocit&#224; di gioco</Italian>
+		<Spanish>Para desactivar el control que permite cambiar la velocidad de juego.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FORCE_CONTROL_HANDICAP</Tag>
+		<English>Force Handicap</English>
+		<French>Forcer handicap</French>
+		<German>Handicap erzwingen</German>
+		<Italian>Forza handicap</Italian>
+		<Spanish>Forzar h&#225;ndicap</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FORCE_CONTROL_HANDICAP_DESC</Tag>
+		<English>Disable the control for changing player handicap</English>
+		<French>D&#233;sactiver la commande de changement de handicap du joueur</French>
+		<German>&#196;nderung des Spieler-Handicaps deaktivieren</German>
+		<Italian>Disabilita i comandi per cambiare l'handicap del giocatore</Italian>
+		<Spanish>Para desactivar el control que permite cambiar el h&#225;ndicap del jugador.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FORCE_CONTROL_OPTIONS</Tag>
+		<English>Force Game Options</English>
+		<French>Forcer options de jeu</French>
+		<German>Spieloptionen erzwingen</German>
+		<Italian>Forza opzioni di gioco</Italian>
+		<Spanish>Forzar opciones de partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FORCE_CONTROL_OPTIONS_DESC</Tag>
+		<English>Disable the controls for selecting specific game options</English>
+		<French>D&#233;sactiver la commande pour sp&#233;cifier les options du jeu</French>
+		<German>&#196;nderung bestimmter Spieloptionen deaktivieren</German>
+		<Italian>Disabilita i comandi per la selezione di opzioni di gioco specifiche</Italian>
+		<Spanish>Para desactivar los controles que permiten seleccionar opciones de partida concretas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FORCE_CONTROL_VICTORIES</Tag>
+		<English>Force Victories</English>
+		<French>Forcer victoires</French>
+		<German>Siegbedingungen erzwingen</German>
+		<Italian>Forza le vittorie</Italian>
+		<Spanish>Forzar victorias</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FORCE_CONTROL_VICTORIES_DESC</Tag>
+		<English>Disable the controls for selecting specific victory conditions</English>
+		<French>D&#233;sactiver les commandes de choix de conditions de victoire sp&#233;cifiques</French>
+		<German>&#196;nderung bestimmter Siegbedingungen deaktivieren</German>
+		<Italian>Disabilita i comandi per la selezione di specifiche condizioni di vittoria</Italian>
+		<Spanish>Para desactivar los controles que permiten seleccionar condiciones de victoria concretas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FORCE_CONTROL_MAX_TURNS</Tag>
+		<English>Force Max Turns</English>
+		<French>Forcer tours maxi</French>
+		<German>Max. Runden erzwingen</German>
+		<Italian>Forza il numero massimo di turni</Italian>
+		<Spanish>Forzar l&#237;mite de turnos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FORCE_CONTROL_MAX_TURNS_DESC</Tag>
+		<English>Disable the controls for setting maximum number of turns</English>
+		<French>D&#233;sactiver les commandes de d&#233;finition du nombre maximum de tours</French>
+		<German>&#196;nderung der maximalen Rundenzahl deaktivieren</German>
+		<Italian>Disabilita i comandi delle impostazioni per il numero massimo di turni</Italian>
+		<Spanish>Para desactivar los controles que permiten determinar un n&#250;mero m&#225;ximo de turnos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FORCE_CONTROL_MAX_CITY_ELIMINATION</Tag>
+		<English>Force Max City Elimination</English>
+		<French>Forcer nombre de villes d&#233;truites</French>
+		<German>Max. Stadteliminierung erzwingen</German>
+		<Italian>Forza la massima eliminazione citt&#224;</Italian>
+		<Spanish>Forzar l&#237;mite de eliminaci&#243;n de ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FORCE_ADVANCED_START</Tag>
+		<English>Force Advanced Start</English>
+		<French>Forcer le d&#233;marrage avanc&#233;</French>
+		<German>Fortgeschrittenen Start erzwingen</German>
+		<Italian>Forza Avvio avanzato</Italian>
+		<Spanish>Forzar Inicio avanzado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_TITLE</Tag>
+		<English>Foreign Advisor</English>
+		<French>Conseiller diplomatique</French>
+		<German>Auslandsberater</German>
+		<Italian>Consigliere estero</Italian>
+		<Spanish>Consejero de Asuntos Exteriores</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FREE_COLONY</Tag>
+		<English>Select the colonies to which you wish to grant independence</English>
+		<French>S&#233;lectionnez les colonies auxquelles vous souhaitez accorder l'ind&#233;pendance</French>
+		<German>W&#228;hlt die Kolonien aus, denen Ihr Unabh&#228;ngigkeit verleihen m&#246;chtet</German>
+		<Italian>Seleziona le colonie che vuoi rendere indipendenti</Italian>
+		<Spanish>Seleccionad las colonias que quer&#225;is declarar independientes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_UNITS</Tag>
+		<English>Toggles display of unit position and density information</English>
+		<French>Afficher/masquer la position des unit&#233;s et des informations de densit&#233;.</French>
+		<German>Schaltet die Anzeige der Einheitenpositionen und -dichte ein/aus</German>
+		<Italian>Attiva/disattiva la visualizzazione della posizione e le informazioni sulla densit&#224; delle unit&#224;</Italian>
+		<Spanish>Activa el visor de la posici&#243;n de las unidades y de la informaci&#243;n de la densidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES</Tag>
+		<English>Makes finding resources easier</English>
+		<French>Faciliter la d&#233;couverte des ressources.</French>
+		<German>Erleichtert das Auffinden von Ressourcenvorkommen</German>
+		<Italian>Facilita la scoperta delle risorse</Italian>
+		<Spanish>Hace que sea m&#225;s f&#225;cil encontrar recursos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_SETTLER_HELP</Tag>
+		<English>The easiest difficulty level and a great way to start your very first game or when you want to try a new strategy.  As a Settler leader, you will notice that: barbarians and wild animals are less aggressive, your citizens stay happy and healthy longer, and there are many production bonuses to help you.</English>
+		<French>C'est le niveau de difficult&#233; le plus facile et le choix id&#233;al pour votre premi&#232;re partie ou pour essayer une nouvelle strat&#233;gie. Au niveau Chef tribal, les barbares et les animaux sauvages sont moins agressifs, vos citoyens restent heureux et en bonne sant&#233; plus longtemps et de nombreux bonus de production sont pr&#233;vus pour vous aider.</French>
+		<German>Die einfachste Schwierigkeitsstufe ist eine gute Wahl, wenn Sie Ihr allererstes Spiel starten oder eine neue Strategie ausprobieren m&#246;chten. Als Siedleranf&#252;hrer werden Sie feststellen: Barbaren und wilde Tiere sind weniger aggressiv, Ihre B&#252;rger bleiben l&#228;nger gesund und zufrieden und Sie erhalten dar&#252;ber hinaus viele Produktionsboni.</German>
+		<Italian>Il livello di difficolt&#224; pi&#249; semplice e il modo migliore per iniziare la tua prima partita oppure se desideri provare una nuova strategia. Giocando al livello Colono, i Barbari e gli animali selvaggi saranno meno aggressivi, i tuoi cittadini saranno pi&#249; felici, godranno di buona salute pi&#249; a lungo e potrai contare su molti bonus produttivi.</Italian>
+		<Spanish>El nivel de dificultad m&#225;s f&#225;cil y una manera excelente de empezar con vuestra primera partida o probar una estrategia nueva.  Como Colono, ver&#233;is que los b&#225;rbaros y animales salvajes son menos agresivos, que los ciudadanos est&#225;n m&#225;s felices y sanos y que habr&#225; muchas bonificaciones a la producci&#243;n para ayudaros.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_CHIEFTAIN_HELP</Tag>
+		<English>A relatively easy difficulty level - good for when you want to try a new strategy.  Barbarians and wild animals are stronger and more aggressive and you don't get as many bonuses.</English>
+		<French>C'est un niveau de difficult&#233; relativement facile et un bon choix pour essayer une nouvelle strat&#233;gie. Les barbares et les animaux sauvages sont plus agressifs et vous ne disposez d'aucun bonus.</French>
+		<German>Diesen relativ einfachen Schwierigkeitsgrad sollten Sie w&#228;hlen, wenn Sie eine neue Strategie testen m&#246;chten. Barbaren und wilde Tiere sind in diesem Fall st&#228;rker und aggressiver. Au&#223;erdem erhalten Sie weniger Boni.</German>
+		<Italian>Un livello di difficolt&#224; abbastanza basso, utile per provare una nuova strategia. I barbari e gli animali selvaggi sono pi&#249; forti e aggressivi, inoltre non otterrai molti bonus.</Italian>
+		<Spanish>Un nivel de dificultad relativamente bajo, bueno para probar nuevas estrategias.  Los b&#225;rbaros y animales salvajes son m&#225;s fuertes y agresivos y no se reciben tantas bonificaciones.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_WARLORD_HELP</Tag>
+		<English>Warlords have a slightly tougher time of it.  Your opponents are less forgiving and more aggressive - watch your back!</English>
+		<French>Les Seigneurs de guerre rencontreront davantage de difficult&#233;s. Vos adversaires sont plus coriaces et agressifs. Surveillez vos arri&#232;res !</French>
+		<German>Kriegsherren haben es etwas schwerer, da Barbaren und wilde Tiere st&#228;rker und aggressiver sind. Au&#223;erdem erhalten Sie als Kriegsherr weniger Boni.</German>
+		<Italian>I guerrieri hanno una vita un po' pi&#249; difficile: i tuoi avversari sono meno permissivi e pi&#249; aggressivi. Fai attenzione!</Italian>
+		<Spanish>Los Caudillos lo tienen un poco m&#225;s crudo.  Los oponentes son menos clementes y m&#225;s peligrosos. &#161;Mucho cuidado!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_NOBLE_HELP</Tag>
+		<English>Nobles need to balance their many responsibilities so this is the most balanced level.  Civ veterans will find this level to be a great place to start.</English>
+		<French>Les R&#233;gents doivent faire face &#224; leurs nombreuses responsabilit&#233;s. Il s'agit donc d'un niveau de difficult&#233; tr&#232;s &#233;quilibr&#233; et id&#233;al comme point de d&#233;part pour les v&#233;t&#233;rans de Civilization.</French>
+		<German>Da Adlige sehr viele Pflichten wahrnehmen m&#252;ssen, ist dieser Schwierigkeitsgrad sehr ausgewogen und eignet sich vor allem f&#252;r erfahrene Civilization-Spieler.</German>
+		<Italian>I Nobili devono saper bilanciare le loro grandi responsabilit&#224; e, per questo motivo, questo &#232; il livello pi&#249; equilibrato. I veterani di Civilization lo troveranno il livello ideale per iniziare.</Italian>
+		<Spanish>Los Nobles tienen que equilibrar sus diversas responsabilidades, as&#237; que &#233;ste es el nivel m&#225;s equilibrado.  Los veteranos del Civi comprobar&#225;n que este nivel es un punto estupendo por el que empezar. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_PRINCE_HELP</Tag>
+		<English>As a Prince you will need to truly prove you are of royal stock.  The AI can produce and research slightly faster than you so you will have to play a much better game to be victorious.</English>
+		<French>En tant que Prince, vous devrez prouver que vous avez du sang royal. Avec un handicap contre l'I.A., dont la production et la recherche sont bien plus rapides que les v&#244;tres. Il faudra tr&#232;s bien jouer pour remporter la victoire.</French>
+		<German>Als Prinz m&#252;ssen Sie beweisen, dass Sie wirklich von k&#246;niglichem Blut sind. Um Ihnen das Leben schwer zu machen, produziert und forscht die KI des Spiels in diesem Schwierigkeitsgrad etwas schneller als Sie. Sie m&#252;ssen sich also anstrengen, wenn Sie das Spiel gewinnen m&#246;chten.</German>
+		<Italian>Come Principe, dovrai saper dimostrare di essere di vera stirpe reale. Quest'ultima pu&#242; produrre e fare ricerche pi&#249; velocemente di te, pertanto dovrai giocare con maggior impegno per poter vincere.</Italian>
+		<Spanish>Como Pr&#237;ncipe, tendr&#233;is que demostrar que ten&#233;is sangre real de verdad.  La IA producir&#225; e investigar&#225; algo m&#225;s deprisa que vos, por lo que tendr&#233;is que jugar mucho mejor para lograr la victoria.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_MONARCH_HELP</Tag>
+		<English>For Monarchs, the challenges definitely start to ramp up on this level.  Upkeep is higher, research is slower, your people are harder to please, and your computer opponents are just plain smarter.</English>
+		<French>Pour les Monarques, les d&#233;fis qui se pr&#233;sentent sont d'une toute autre ampleur. L'entretien est plus cher, la recherche plus lente, votre peuple plus exigeant et vos adversaires I.A. tout simplement plus intelligents.</French>
+		<German>Dieser Schwierigkeitsgrad ist wahrlich k&#246;niglich. Ihre Unterhaltskosten erreichen nun schwindelnde H&#246;hen, Ihre Forschungen kommen nur langsam voran und Ihr Volk ist alles andere als gen&#252;gsam. Zu allem &#220;berfluss m&#252;ssen Sie sich mit &#252;beraus geschickten Computergegnern herumschlagen.</German>
+		<Italian>Per i Monarchi, la sfida comincia a farsi impegnativa. Il costo di mantenimento &#232; superiore, la ricerca pi&#249; lenta, la gente pi&#249; difficile da accontentare e gli avversari computerizzati pi&#249; scaltri.</Italian>
+		<Spanish>Para los Monarcas, el reto empieza a ponerse serio en este nivel.  El mantenimiento es m&#225;s alto, la investigaci&#243;n, m&#225;s lenta, vuestro pueblo es m&#225;s dif&#237;cil de complacer y los oponentes que lleva el ordenador son m&#225;s astutos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_EMPEROR_HELP</Tag>
+		<English>Are you ready to be an Emperor?  If so, you will need to prove your mettle by overcoming opponents that are both fast and aggressive while dealing with a population that is harder to motivate and please. This is a true test for Civ experts.</English>
+		<French>Vous vous sentez l'&#226;me d'un empereur ? Si tel est le cas, vous devrez le prouver en terrassant des ennemis rapides et agressifs et en r&#233;gnant sur une population de plus en plus difficile &#224; motiver et &#224; satisfaire. C'est un vrai d&#233;fi pour les experts de Civilization.</French>
+		<German>Sie sind der geborene Kaiser? Beweisen Sie es, indem Sie Ihre schnellen und aggressiven Gegner bezwingen, w&#228;hrend Sie Ihr notorisch unzufriedenes Volk gl&#252;cklich machen. Dieser Herausforderung sind nur wahre Civilization-Experten gewachsen.</German>
+		<Italian>Sei pronto per diventare Imperatore? Se s&#236;, dovrai affrontare con coraggio gli avversari, rapidi e aggressivi, e allo stesso tempo cercare di soddisfare la tua popolazione, pi&#249; difficile da compiacere e motivare. Una vera sfida per gli esperti di Civilization.</Italian>
+		<Spanish>&#191;Est&#225;is listo para ser emperador?  De ser as&#237;, tendr&#233;is que demostrar vuestra val&#237;a derrotando a adversarios m&#225;s r&#225;pidos y agresivos a la vez que cuid&#225;is de una poblaci&#243;n m&#225;s dif&#237;cil de motivar y complacer. Esto es una prueba de verdad para los expertos en Civilization.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_IMMORTAL_HELP</Tag>
+		<English>Only a few can claim memberships among the ranks of the Immortals.  This is a bruising test for all but the most experienced.</English>
+		<French>Peu nombreux sont ceux qui peuvent revendiquer une place parmi les Immortels. C'est l&#224; un d&#233;fi que seuls les plus exp&#233;riment&#233;s sauront relever.</French>
+		<German>Nur wenige Herrscher werden durch ihre Leistungen unsterblich. Dieser Herausforderung sind nur die Besten der Besten gewachsen.</German>
+		<Italian>Solo in pochi possono appartenere alla schiera degli Immortali. Una prova molto impegnativa, anche per i pi&#249; esperti.</Italian>
+		<Spanish>Solo unos cuantos pueden contarse entre las filas de los inmortales.  Esto resulta una prueba demoledora para todos, excepto para los m&#225;s experimentados.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_DIETY_HELP</Tag>
+		<English>The ultimate test for only the best Civ players. Can it be beat?</English>
+		<French>L'ultime &#233;preuve, r&#233;serv&#233;e aux meilleurs joueurs. Serez-vous &#224; la hauteur ?</French>
+		<German>Diese ultimative Pr&#252;fung bestehen nur die besten Civ-Spieler aller Zeiten. Geh&#246;ren auch Sie dazu?</German>
+		<Italian>La prova definitiva per i migliori giocatori di Civilization. Ce la farai?</Italian>
+		<Spanish>La prueba definitiva, solo para los mejores jugadores del Civi. &#191;Podr&#225; superarla alguien?</Spanish>
+	</TEXT>
 </Civ4GameText>
