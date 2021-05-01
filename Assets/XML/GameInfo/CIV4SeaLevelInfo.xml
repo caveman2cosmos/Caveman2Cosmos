@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Sea Level -->
+<Civ4SeaLevelInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
+	<SeaLevelInfos>
+		<SeaLevelInfo>
+			<Type>SEALEVEL_LOW</Type>
+			<Description>TXT_KEY_SEALEVEL_LOW</Description>
+			<iSeaLevelChange>-8</iSeaLevelChange>
+		</SeaLevelInfo>
+		<SeaLevelInfo>
+			<Type>SEALEVEL_MEDIUM</Type>
+			<Description>TXT_KEY_SEALEVEL_MEDIUM</Description>
+			<iSeaLevelChange>0</iSeaLevelChange>
+		</SeaLevelInfo>
+		<SeaLevelInfo>
+			<Type>SEALEVEL_HIGH</Type>
+			<Description>TXT_KEY_SEALEVEL_HIGH</Description>
+			<iSeaLevelChange>6</iSeaLevelChange>
+		</SeaLevelInfo>
+	</SeaLevelInfos>
+</Civ4SeaLevelInfo>
