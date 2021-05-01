@@ -366,7 +366,9 @@ class UnitReName(object):
 
 		#BUGPrint("UnitNameEM-iniA [" + zsUnitNameConv + "]" + UnitCombat[11:])
 
-		zsUnitNameConv = UnitNamingOpt.getByCombatType(UnitCombat[11:])
+		#Apparently it needs entire list of unitcombats in relevant config xml file.
+		#It should be done procedurally instead of spamming three different files.
+		#zsUnitNameConv = UnitNamingOpt.getByCombatType(UnitCombat[11:])
 
 		#BUGPrint("UnitNameEM-iniB [" + zsUnitNameConv + "]")
 
