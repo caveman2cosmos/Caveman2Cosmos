@@ -8129,20 +8129,20 @@
 		<Spanish>Compartir es de generosos, [CT_NAME].</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_RAGNAR_LODBROK_1</Tag>
+		<English>Give us what we want or face our wrath.</English>
+		<French>Donnez-nous ce que nous voulons ou craignez notre courroux !</French>
+		<German>Gebt uns, was wir verlangen, oder spürt unseren Zorn!</German>
+		<Italian>Dacci ciò che vogliamo o dovrai affrontare la nostra ira.</Italian>
+		<Spanish>Dadnos lo que queremos o afrontad nuestra ira.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_PACAL_1</Tag>
 		<English>Giving us what we want is the only way to avoid immediate destruction. Pay up.</English>
 		<French>Donnez-nous ce que nous voulons. C'est le seul moyen d'éviter l'anéantissement immédiat. Payez !</French>
 		<German>Der einzige Weg, Eure sofortige Vernichtung zu verhindern, ist, unsere Forderung zu erfüllen. Also, her damit!</German>
 		<Italian>Darci ciò che chiediamo è l'unico modo per evitare la distruzione immediata. Paga.</Italian>
 		<Spanish>Darnos lo que queremos es la única manera de evitar una destrucción inmediata. Pagad.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_PERICLES_1</Tag>
-		<English>A truly civilized leader would give us what we want, [CT_NAME]? </English>
-		<French>Un chef véritablement civilisé nous offrirait ce que nous voulons, [CT_NAME].</French>
-		<German>Ein wahrhaft zivilisiertes Staatsoberhaupt würde uns geben, was wir verlangen, [CT_NAME]. </German>
-		<Italian>Un capo davvero civilizzato ci darebbe ciò che vogliamo, [CT_NAME]. </Italian>
-		<Spanish>Un líder verdaderamente civilizado nos daría lo que queremos, ¿no, [CT_NAME]? </Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_PERICLES_1</Tag>
@@ -9151,5 +9151,405 @@
 		<German>Sagt, was Ihr zu sagen habt, sündiges Wesen! Ich höre!</German>
 		<Italian>Di' ciò che sei venuto a dire, peccatore. Sto ascoltando.</Italian>
 		<Spanish>Decid lo que tengáis que decir, encarnación del pecado. Os escuchamos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_BOUDICA_1</Tag>
+		<English>Don't make me laugh!</English>
+		<French>Ne me faites pas rire !</French>
+		<German>Macht Euch nicht lächerlich!</German>
+		<Italian>Non farmi ridere!</Italian>
+		<Spanish>¡No me hagáis reír!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_CHARLEMAGNE_1</Tag>
+		<English>Peace? Not by the hair on my chinny-chin-chin!</English>
+		<French>La paix ? Par ma barbe, jamais !</French>
+		<German>Frieden? Bei meinem Barthaar: Auf keinen Fall!</German>
+		<Italian>Pace? Nemmeno per i peli della mia barba!</Italian>
+		<Spanish>¿Paz? ¡Por los pelos de mi barba! ¡No!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_DARIUS_1</Tag>
+		<English>Grovel all you want, [CT_NAME]. It will not save your pitiful people from their destruction!</English>
+		<French>Suppliez-moi tant que vous voulez, [CT_NAME]. Je ne sauverai pas votre misérable peuple de l'anéantissement !</French>
+		<German>Kriecht so viel vor mir herum, wie Ihr wollt, [CT_NAME], doch das wird Euer erbärmliches Volk auch nicht vor der Vernichtung bewahren!</German>
+		<Italian>Umiliati quanto ti pare, [CT_NAME]. Non salverò dalla distruzione il tuo pietoso popolo!</Italian>
+		<Spanish>Humillaos cuanto queráis, [CT_NAME]. ¡Eso no salvará de la destrucción a vuestro lastimero pueblo!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_DE_GAULLE_1</Tag>
+		<English>Certainly not! The honor of [OUR_CIV_SHORT] demands that this war continue until you are ground into very small bits.</English>
+		<French>Certainement pas ! L'honneur des [OUR_CIV_SHORT:3] exige que cette guerre continue jusqu'à ce que vous soyez réduits en bouillie.</French>
+		<German>Keinesfalls! Es gebührt der Ehre des Volkes von [OUR_CIV_SHORT], dass dieser Krieg fortgeführt wird, bis Ihr alle im Staub liegt!</German>
+		<Italian>Certo che no! L'onore di [OUR_CIV_SHORT] vuole che questa guerra continui fino a quando non sarai ridotto in pezzi molto piccoli.</Italian>
+		<Spanish>¡Por supuesto que no! El honor de [OUR_CIV_SHORT] exige que la guerra continúe hasta que os hayamos hecho paté de foie.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_GILGAMESH_1</Tag>
+		<English>This war will continue until my divine bloodlust is completely sated.</English>
+		<French>Cette guerre continuera jusqu'à ce que ma soif de sang soit totalement étanchée.</French>
+		<German>Dieser Krieg wird so lange dauern, bis es meinen göttlichen Gaumen nicht mehr nach Blut dürstet!</German>
+		<Italian>Questa guerra continuerà fino a quando la mia divina sete di sangue non si sarà calmata.</Italian>
+		<Spanish>Esta guerra continuará hasta que mi divina sed de sangre se sacie por completo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_HAMMURABI_1</Tag>
+		<English>There will be no peace until the last [CT_CIV_ADJ] soldier's head is atop a [OUR_CIV_ADJ] spear!</English>
+		<French>Il n'y aura pas de paix tant que la tête du dernier soldat [CT_CIV_ADJ:1] ne sera pas au bout d'une lance [OUR_CIV_ADJ:2] !</French>
+		<German>Es wird keinen Frieden geben, bis nicht auch das letzte Haupt eines [CT_CIV_ADJ:2] Kriegers die Spitze eines [OUR_CIV_ADJ:2] Speers ziert!</German>
+		<Italian>Non ci sarà pace fino a quando anche l'ultima testa di un soldato di [CT_CIV_ADJ] non sarà su una picca [OUR_CIV_ADJ]!</Italian>
+		<Spanish>¡No habrá paz hasta que la cabeza del último soldado [CT_CIV_ADJ:1] esté clavada en una pica [OUR_CIV_ADJ:2]!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_HANNIBAL_1</Tag>
+		<English>And why in the world would I want to discuss peace when mighty [OUR_CIV_SHORT] is on the verge of wiping your puny civilization off of the planet?</English>
+		<French>Et pourquoi voudrais-je parler de paix avec vous, alors que [OUR_CIV_SHORT] est sur le point de rayer, de toute sa majestueuse puissance, votre piteuse civilisation de la surface de la Terre ?</French>
+		<German>Warum in aller Welt sollten wir Friedensverhandlungen führen, wenn der vernichtende Sieg des mächtigen Volkes von [OUR_CIV_SHORT] über Eure jämmerliche Zivilisation so kurz bevorsteht?</German>
+		<Italian>E perché mai dovrei discutere di pace quando l'impero [OUR_CIV_ADJ] è sul punto di cancellare la tua ridicola civiltà dalla faccia del pianeta?</Italian>
+		<Spanish>¿Y por qu&#233; diantres tendría que hablar de paz cuando la poderosa nación de [OUR_CIV_SHORT] está a punto de barrer a vuestra insignificante civilización de la faz del planeta?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_JOAO_1</Tag>
+		<English>Not while there are still so many [CT_CIV_ADJ] warriors to slaughter!</English>
+		<French>Pas tant qu'il reste tant de guerriers [CT_CIV_ADJ:3] à massacrer !</French>
+		<German>Nicht, solange es noch so viele [CT_CIV_ADJ:3] Krieger niederzumetzeln gibt!</German>
+		<Italian>Non fino a quando ci saranno tanti guerrieri [CT_CIV_ADJ] da sterminare!</Italian>
+		<Spanish>¡No mientras aún queden tantos guerreros [CT_CIV_ADJ:3] por matar!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_JOSEF_STALIN_1</Tag>
+		<English>No! You have made your bed, now you must die in it!</English>
+		<French>Non ! Contrairement &#224; ce que j'ai pu dire, votre mort ne sera pas une trag&#233;die !</French>
+		<German>Nein! Ihr habt Euch diese Grube gegraben, jetzt müsst Ihr Euch auch darin begraben lassen!</German>
+		<Italian>No! Ti sei scavato la fossa e ora ci morirai!</Italian>
+		<Spanish>¡No! Os hab&#233;is hecho vuestra propia cama, ¡y morir&#233;is en ella!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_JUSTINIAN_1</Tag>
+		<English>Thank you for your kind offer, [CT_NAME], but I believe that I would prefer to wipe your civilization off of the face of the world.</English>
+		<French>Je vous remercie de votre offre, [CT_NAME], mais je crois que je préfèrerais rayer votre civilisation de la carte.</French>
+		<German>Danke für Euer freundliches Angebot, [CT_NAME], aber ich bevorzuge es, Eure Zivilisation vom Antlitz der Erde zu tilgen!</German>
+		<Italian>Grazie per la tua cortese offerta, [CT_NAME], ma credo che preferirei cancellare la tua civiltà dalla faccia della Terra.</Italian>
+		<Spanish>Gracias por vuestra amable oferta, [CT_NAME], pero creo que preferimos barrer vuestra civilización de la faz de la Tierra.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_LINCOLN_1</Tag>
+		<English>As a friend of mine once said, 'No terms except unconditional and immediate surrender can be accepted.' Pithy, don't you agree?</English>
+		<French>Comme un ami m'a dit un jour, "Aucune condition ne saurait être acceptée, hormis une capitulation immédiate et inconditionnelle." Dommage, n'est-ce pas ?</French>
+		<German>Wie ein Freund von mir zu sagen pflegte: 'Ich akzeptiere nur die sofortige und bedingungslose Kapitulation'. Äußerst treffend, nicht wahr?</German>
+		<Italian>Come disse una volta un mio amico: &quot;L'unica cosa accettabile è una resa incondizionata e immediata.&quot; Conciso, non trovi?</Italian>
+		<Spanish>Como un amigo mío dijo una vez: &quot;Ninguna condición es aceptable, salvo una rendición incondicional e inmediata&quot;. Es una lástima, ¿no creéis?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_MEHMED_1</Tag>
+		<English>One cannot make peace with a jackal. Now go!</English>
+		<French>Il est impossible de faire la paix avec un chacal. Partez !</French>
+		<German>Mit einem Schakal kann man keinen Frieden schließen! Und jetzt verschwindet!</German>
+		<Italian>Non è possibile discutere di pace con uno sciacallo. Ora va'!</Italian>
+		<Spanish>No se pueden hacer las paces con un chacal. ¡Fuera de aquí ahora mismo!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_PACAL_1</Tag>
+		<English>Peace now? You've got to be kidding me!</English>
+		<French>La paix maintenant ? Vous rigolez ?</French>
+		<German>Frieden? Jetzt? Das soll wohl ein Witz sein!</German>
+		<Italian>Pace, ora? Stai scherzando!</Italian>
+		<Spanish>¿Ahora queréis la paz? ¡Debéis de estar de guasa!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_PERICLES_1</Tag>
+		<English>Peace? Don't be foolish. There can be no peace between Civilization and Barbarian. </English>
+		<French>La paix ? Ne soyez pas ridicule. Il ne peut y avoir de paix entre des êtres civilisés et des barbares.</French>
+		<German>Frieden? Seid nicht albern! Zwischen zivilisierten Menschen und Barbaren kann es keinen Frieden geben! </German>
+		<Italian>Pace? Non essere stupido. Non può esserci pace tra civilizzato e barbaro. </Italian>
+		<Spanish>¿Paz? No seáis tan idiota. No puede haber paz entre la civilización y los bárbaros. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_RAGNAR_LODBROK_1</Tag>
+		<English>Peace? Hah! Peace is for the weak and the dead - not for mighty Viking warriors!</English>
+		<French>La paix ? Ha ! La paix est pour les faibles et les morts, pas pour les puissants guerriers vikings !</French>
+		<German>Frieden? Pah! Frieden ist was für Schwache und Tote - aber nicht für die mächtigen Wikinger!</German>
+		<Italian>Pace? Ah! La pace è per i deboli e per i morti, non per i potenti guerrieri vichinghi!</Italian>
+		<Spanish>¿Paz? ¡Ja! La paz es para los d&#233;biles y los muertos, ¡no para los poderosos guerreros vikingos!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_RAMESSES_II_1</Tag>
+		<English>Peace now? When my mighty chariots are on the verge of destroying your civilization in its entirety? Don't make me laugh!</English>
+		<French>Pourquoi faire la paix maintenant, alors que mes puissants chars sont sur le point de raser votre civilisation ? Voyons, un peu de retenue !</French>
+		<German>Frieden? Jetzt? Wo meine mächtigen Streitwagen kurz vor der totalen Vernichtung Eurer Zivilisation stehen? Da kann ich nur lachen!</German>
+		<Italian>Pace? Ora? Quando le mie potenti bighe sono sul punto di annientare la tua civiltà? Non farmi ridere!</Italian>
+		<Spanish>¿Ahora quer&#233;is la paz? ¿Cuando mis poderosos carros están a punto de destruir vuestra civilización por completo? ¡No me hagáis reír!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_SHAKA_1</Tag>
+		<English>Not a chance. The mighty [OUR_CIV_ADJ] people do not care to make peace with cattle-stealing brigands like you. </English>
+		<French>N'y comptez pas ! Le puissant peuple des [OUR_CIV_ADJ] ne souhaite pas faire la paix avec des vils voleurs de b&#233;tail de votre esp&#232;ce.</French>
+		<German>Keine Chance! Das mächtige [OUR_CIV_ADJ:3] Volk hat kein Interesse daran, mit miesen Viehdieben wie Euch Frieden zu schließen! </German>
+		<Italian>Neanche per idea. Al potente sovrano [OUR_CIV_ADJ] non può interessare la pace con briganti ladri di bestiame come voi. </Italian>
+		<Spanish>Ni en broma. El poderoso pueblo [OUR_CIV_ADJ:1] no se molesta ni en hacer las paces con cuatreros bergantes como vosotros. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_SITTING_BULL_1</Tag>
+		<English>This war will end when I decide it will end, and not a moment before.</English>
+		<French>Cette guerre prendra fin quand je le déciderai et pas avant.</French>
+		<German>Dieser Krieg wird erst enden, wenn ich es sage, und nicht einen Augenblick früher!</German>
+		<Italian>Questa guerra finirà quando io deciderò di farla finire, e non un secondo prima.</Italian>
+		<Spanish>Esta guerra terminará cuando yo lo decida, y no antes.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_SULEIMAN_1</Tag>
+		<English>That would be unwise at the moment. The war shall continue.</English>
+		<French>Ce ne serait pas avisé pour le moment. La guerre continuera.</French>
+		<German>Das wäre gegenwärtig unklug. Der Krieg wird fortgesetzt!</German>
+		<Italian>Non sarebbe saggio, al momento. La guerra continuerà.</Italian>
+		<Spanish>Sería muy poco aconsejable en este momento. La guerra proseguirá.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_SURYAVARMAN_1</Tag>
+		<English>We do not make peace with barbarians.</English>
+		<French>Nous ne faisons pas la paix avec les barbares.</French>
+		<German>Wir schließen keinen Frieden mit Barbaren!</German>
+		<Italian>Non facciamo pace con i barbari.</Italian>
+		<Spanish>No firmamos la paz con bárbaros.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_WANG_KON_1</Tag>
+		<English>There shall be no peace until you are languishing in a [OUR_CIV_ADJ] prison, [CT_NAME]. Get out of here.</English>
+		<French>Aucune paix n'est possible avant que vous ne croupissiez au fin fond d'une ge&#244;le du puissant peuple des [OUR_CIV_ADJ], [CT_NAME]. Hors de ma vue !</French>
+		<German>Frieden wird erst dann herrschen, wenn Ihr nicht in einem [OUR_CIV_ADJ:2] Kerker verrottet, [CT_NAME]! Verschwindet!</German>
+		<Italian>Non ci sarà pace finché non sarete tutti rinchiusi in un gelido sotterraneo [OUR_CIV_ADJ], [CT_NAME]. Ora sparisci.</Italian>
+		<Spanish>No habrá paz hasta que os pudráis en una prisión [OUR_CIV_ADJ:2], [CT_NAME]. Salid de aquí.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_WILLEM_VAN_ORANJE_1</Tag>
+		<English>Certainly not. The war will continue until we have achieved total victory.</English>
+		<French>Certainement pas. La guerre continuera jusqu'à la victoire totale.</French>
+		<German>Auf keinen Fall! Der Krieg wird so lange fortgeführt, bis wir den vollständigen Sieg erzielt haben!</German>
+		<Italian>Certo che no. La guerra continuerà fino a quando non avremo ottenuto una vittoria totale.</Italian>
+		<Spanish>Por supuesto que no. La guerra seguirá hasta que hayamos logrado la victoria total.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_WINSTON_CHURCHILL_1</Tag>
+		<English>The [OUR_CIV_ADJ] people shall accept no terms but unconditional surrender, [CT_NAME]. </English>
+		<French>Le prestigieux peuple des [OUR_CIV_ADJ] est dispos&#233; &#224; n'accepter rien d'autre qu'une reddition sans condition, [CT_NAME].</French>
+		<German>Das [OUR_CIV_ADJ:3] Volk erwartet Eure bedingungslose Kapitulation, nicht mehr und nicht weniger, [CT_NAME]! </German>
+		<Italian>Il sovrano [OUR_CIV_ADJ] non accetterà trattati che non prevedano una vostra resa incondizionata, [CT_NAME]. </Italian>
+		<Spanish>El pueblo [OUR_CIV_ADJ:1] no aceptará de vosotros más t&#233;rminos que una rendición incondicional, [CT_NAME]. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_ZARA_YAQOB_1</Tag>
+		<English>There shall be no peace until your tortured soul is burning in the fiery pits of the netherworld!</English>
+		<French>Il n'y aura pas de paix tant que votre âme torturée ne brûlera pas dans les flammes de l'enfer !</French>
+		<German>Es wird keinen Frieden geben, bis Eure gepeinigte Seele in den Tiefen der Hölle schmort!</German>
+		<Italian>Non ci sarà pace fino a quando la tua anima torturata non brucerà negli abissi infuocati dell'inferno!</Italian>
+		<Spanish>¡No habrá paz hasta que vuestra torturada alma arda en las simas del averno!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_VASSAL_1</Tag>
+		<English>It appears you are too weak to protect us, so we no longer have any interest in being your Vassal State. What are you going to do about it?</English>
+		<French>Vous &#234;tes trop faible pour nous prot&#233;ger. Nous ne voyons plus d'int&#233;r&#234;t &#224; rester votre &#233;tat vassal. Que pouvez-vous proposer ?</French>
+		<German>Wie es scheint, seid Ihr nicht in der Lage, uns zu sch&#252;tzen, daher sind wir auch nicht mehr daran interessiert, Euch als Vasallenstaat zu dienen. Was werdet Ihr dagegen unternehmen?</German>
+		<Italian>A quanto pare sei troppo debole per proteggerci, quindi non abbiamo pi&#249; alcun interesse a essere un tuo stato vassallo. Cosa intendi fare ora?</Italian>
+		<Spanish>Parece que sois demasiado d&#233;biles para protegernos, por lo que ya no nos interesa ser vuestro estado vasallo. &#191;C&#243;mo pens&#225;is impedirlo?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_OFFER_VASSAL</Tag>
+		<English>Oh [CT_NAME], leader of mighty [CT_CIV_SHORT], please protect [OUR_CIV_SHORT] from harm and you shall have our loyalty.</English>
+		<French>&#212; [CT_NAME], chef des puissants [CT_CIV_SHORT], prot&#233;gez les [OUR_CIV_SHORT] de tout malheur et vous pourrez compter sur notre loyaut&#233;.</French>
+		<German>Oh [CT_NAME], Staatsoberhaupt des m&#228;chtigen Volkes von [CT_CIV_SHORT], bitte gew&#228;hrt dem Volk von [OUR_CIV_SHORT] Euren Schutz. Wir werden Euch treue Diener sein.</German>
+		<Italian>O [CT_NAME], potente leader [CT_CIV_ADJ], ti prego, proteggici dai pericoli esterni e noi ti saremo fedeli.</Italian>
+		<Spanish>Oh, [CT_NAME], l&#237;der de la poderosa tierra de [CT_CIV_SHORT], protege a [OUR_CIV_SHORT] de todo da&#241;o y tendr&#225;s nuestra lealtad para siempre.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_BOUDICA_1</Tag>
+		<English>Go away before I throw you to the badgers!</English>
+		<French>Disparaissez avant que je vous jette aux blaireaux !</French>
+		<German>Hinfort, bevor ich Euch einkerkern lasse!</German>
+		<Italian>Vattene, prima che ti getti in pasto ai tassi!</Italian>
+		<Spanish>¡Largaos antes de que os eche a los tejones!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_CHARLEMAGNE_1</Tag>
+		<English>Get out of my sight before I do something extremely undiplomatic.</English>
+		<French>Hors de ma vue, avant que je ne fasse quelque chose d'extrêmement peu diplomatique.</French>
+		<German>Geht mir aus den Augen, bevor ich mich zu etwas gänzlich Undiplomatischem hinreißen lasse!</German>
+		<Italian>Sparisci dalla mia vista prima che faccia qualcosa di molto poco diplomatico.</Italian>
+		<Spanish>Fuera de mi vista antes de que haga algo muy poco diplomático.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_DARIUS_1</Tag>
+		<English>I will not speak with you!</English>
+		<French>Je ne veux pas vous parler !</French>
+		<German>Ich werde nicht mit Euch reden!</German>
+		<Italian>Non parlerò con te!</Italian>
+		<Spanish>¡No hablo con vos!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_DE_GAULLE_1</Tag>
+		<English>There is nothing to discuss. Go away now.</English>
+		<French>Il n'y a rien à discuter. Partez !</French>
+		<German>Wir haben uns nichts zu sagen! Verschwindet!</German>
+		<Italian>Non c'è niente da discutere. Vattene ora.</Italian>
+		<Spanish>No hay nada que hablar. Marchaos ahora mismo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_GILGAMESH_1</Tag>
+		<English>No! Your prayers will remain unanswered!</English>
+		<French>Non ! Vos prières resteront sans réponse !</French>
+		<German>Nein! Eure Gebete werden nicht erhört!</German>
+		<Italian>No! Le tue preghiere non verranno ascoltate!</Italian>
+		<Spanish>¡No! ¡Vuestros ruegos serán desoídos!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_HAMMURABI_1</Tag>
+		<English>I do not speak to liars and cheats.</English>
+		<French>Je ne parle ni aux menteurs ni aux traîtres.</French>
+		<German>Mit Lügnern und Betrügern wie Euch will ich nichts zu schaffen haben!</German>
+		<Italian>Non parlo a bugiardi e truffatori.</Italian>
+		<Spanish>No hablamos con embusteros y tramposos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_HANNIBAL_1</Tag>
+		<English>Go away. [OUR_EMPIRE] has no time for your nonsense. </English>
+		<French>Partez ! [OUR_EMPIRE] n'a pas de temps &#224; perdre avec vos sottises.</French>
+		<German>Lasst mich in Ruhe! Das [OUR_EMPIRE:2] ist nicht an Euren Hirngespinsten interessiert! </German>
+		<Italian>Vattene. [OUR_EMPIRE] non ha tempo da perdere con le tue sciocchezze. </Italian>
+		<Spanish>Marchaos. El [OUR_EMPIRE] no tiene tiempo para vuestras tonterías. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_JOAO_1</Tag>
+		<English>Go away, you vile person!</English>
+		<French>Disparaissez, scélérat !</French>
+		<German>Hinfort, niederträchtige Person!</German>
+		<Italian>Va' via, essere spregevole!</Italian>
+		<Spanish>¡Largo, vil entre viles!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_JOSEF_STALIN_1</Tag>
+		<English>I'll have no truck with liars and villains, [CT_NAME]! Begone!</English>
+		<French>Je refuse d'avoir affaire &#224; des vils menteurs de votre esp&#232;ce, [CT_NAME] ! Hors de ma vue !</French>
+		<German>Ihr verbreitet nichts als Lug und Trug, [CT_NAME]! Geht mir aus den Augen!</German>
+		<Italian>Non ho nulla a che spartire con bugiardi e traditori, [CT_NAME]! Vattene!</Italian>
+		<Spanish>¡No tendr&#233; piedad con los mentirosos y los villanos, [CT_NAME]! ¡Fuera de aquí!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_JUSTINIAN_1</Tag>
+		<English>No!</English>
+		<French>Non !</French>
+		<German>Nein!</German>
+		<Italian>No!</Italian>
+		<Spanish>¡No!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_LINCOLN_1</Tag>
+		<English>Drop dead.</English>
+		<French>Allez vous faire voir !</French>
+		<German>Fahrt zur Hölle!</German>
+		<Italian>Sparisci.</Italian>
+		<Spanish>Podéis iros al cuerno.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_MEHMED_1</Tag>
+		<English>You're wasting your time, [CT_NAME]. I'll not be swayed by your lying words.</English>
+		<French>Vous perdez votre temps, [CT_NAME]. Je ne me laisserai jamais influencer par vos path&#233;tiques mensonges.</French>
+		<German>Ihr verschwendet meine Zeit, [CT_NAME]! Ich werde mich nicht von Euren Lügen täuschen lassen!</German>
+		<Italian>Stai sprecando tempo, [CT_NAME]. Non mi farò influenzare dalle tue menzogne.</Italian>
+		<Spanish>Estáis perdiendo el tiempo, [CT_NAME]. No me engañarán vuestras insinceras palabras.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_PACAL_1</Tag>
+		<English>No! I am far too important to speak with you!</English>
+		<French>Non ! Je suis bien trop important pour parler avec vous !</French>
+		<German>Nein! Ich bin eine viel zu bedeutende Persönlichkeit, als dass ich mich mit Euch abgeben würde!</German>
+		<Italian>No! Sono troppo importante per parlare con te!</Italian>
+		<Spanish>¡No! ¡Soy demasiado importante como para hablar con vos!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_PERICLES_1</Tag>
+		<English>No!</English>
+		<French>Non !</French>
+		<German>Nein!</German>
+		<Italian>No!</Italian>
+		<Spanish>¡No!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_RAGNAR_LODBROK_1</Tag>
+		<English>Be gone before I chop you into tiny pieces and feed you to the walruses!</English>
+		<French>D&#233;guerpissez avant que je vous coupe en petits morceaux et que je vous donne &#224; manger aux morses !</French>
+		<German>Geht mir aus den Augen, bevor ich Euch in Stücke schneide und den Walen zum Fraß vorwerfe!</German>
+		<Italian>Sparisci prima che ti faccia tagliare a pezzettini e ti dia in pasto ai trichechi!</Italian>
+		<Spanish>Marchaos antes de que os descuartice y os eche de comer a las morsas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_RAMESSES_II_1</Tag>
+		<English>Hold your tongue less I tear it out and feed it to the crocodiles!</English>
+		<French>Taisez-vous, avant que je ne vous arrache la langue pour l'offrir &#224; mes crocodiles !</French>
+		<German>Kein Wort, wenn Ihr nicht an die Krokodile verfüttert werden wollt!</German>
+		<Italian>Ti conviene tenere chiusa la bocca o ti strapperò la lingua e la darò in pasto ai coccodrilli!</Italian>
+		<Spanish>Sujetaos la lengua a menos que queráis que se la d&#233; de comer a los cocodrilos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_SHAKA_1</Tag>
+		<English>Your words are but the grunts of a diseased pig, [CT_NAME]. I do not hear them.</English>
+		<French>Vos paroles sonnent &#224; mes oreilles tels d'horribles grognements d'un porc agonisant, [CT_NAME]. Je ne les &#233;couterai pas plus longtemps.</French>
+		<German>Ihr sprecht mit gespaltener Zunge, [CT_NAME], und ich will es nicht hören!</German>
+		<Italian>Le tue parole risuonano come i grugniti di un maiale morente, [CT_NAME]. Un rumore fastidioso che non voglio udire.</Italian>
+		<Spanish>Vuestras palabras no son más que gruñidos de un cerdo enfermo, [CT_NAME]. Como tales, no las escucho.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_SITTING_BULL_1</Tag>
+		<English>I don't speak with liars. Now scram.</English>
+		<French>Je ne parle pas aux menteurs. Maintenant, filez !</French>
+		<German>Ich gebe mich nicht mit Lügnern ab! Und jetzt verschwindet!</German>
+		<Italian>Non parlo coi bugiardi. Ora sgomma.</Italian>
+		<Spanish>No hablo con gente embustera. Y ahora, largo de aquí.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_SULEIMAN_1</Tag>
+		<English>Not a chance.</English>
+		<French>Aucune chance.</French>
+		<German>Keine Chance!</German>
+		<Italian>Nemmeno per sogno.</Italian>
+		<Spanish>Ni en broma.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_SURYAVARMAN_1</Tag>
+		<English>Leave me alone, you barbarian cur!</English>
+		<French>Laissez-moi tranquille, sale barbare !</French>
+		<German>Lasst mich in Ruhe, barbarischer Abschaum!</German>
+		<Italian>Lasciami in pace, cane barbaro!</Italian>
+		<Spanish>¡Dejadnos en paz, escoria bárbara!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_WANG_KON_1</Tag>
+		<English>Your web of deceit will not ensnare [OUR_CIV_SHORT]. I've been lied to by far better men than you!</English>
+		<French>L'ampleur de votre perfide mesquinerie est trop ostentatoire pour tromper [OUR_CIV_NAME]. Des hommes bien plus brillants que vous ont essay&#233; de me duper par le pass&#233; !</French>
+		<German>Ihr werdet das Volk von [OUR_CIV_NAME] nicht einwickeln! Das haben schon ganz andere versucht - und versagt!</German>
+		<Italian>La tua ragnatela di menzogne non ci intrappolerà. Ho ascoltato menzogne più credibili da leader molto migliori di te!</Italian>
+		<Spanish>No enredar&#233;is al [OUR_CIV_NAME] en vuestra telaraña de engaños. ¡Me han mentido gobernantes mucho mejores que vos!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_WILLEM_VAN_ORANJE_1</Tag>
+		<English>No!</English>
+		<French>Non !</French>
+		<German>Nein!</German>
+		<Italian>No!</Italian>
+		<Spanish>¡No!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_WINSTON_CHURCHILL_1</Tag>
+		<English>I have nothing to say to you, you pestilential insect.</English>
+		<French>Je n'ai rien &#224; vous dire, m&#233;prisable insecte.</French>
+		<German>Ich habe Euch nichts zu sagen! Für mich seid Ihr bloß Ungeziefer!</German>
+		<Italian>Non ho nulla da dirti, insetto pestilenziale.</Italian>
+		<Spanish>No tenemos nada que deciros, sabandija inmunda.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_ZARA_YAQOB_1</Tag>
+		<English>Be gone, you heathen fool!</English>
+		<French>Hors de ma vue, païen !</French>
+		<German>Hinfort mit Euch, heidnisches Wesen!</German>
+		<Italian>Vattene, stupido selvaggio!</Italian>
+		<Spanish>¡Largaos, escoria infiel!</Spanish>
 	</TEXT>
 </Civ4GameText>
