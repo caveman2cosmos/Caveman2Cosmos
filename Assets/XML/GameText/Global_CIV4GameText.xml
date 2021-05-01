@@ -23101,4 +23101,614 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>(Vai al desktop)</Italian>
 		<Spanish>(Salir al escritorio)</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_ADDS_FRESH_WATER</Tag>
+		<English>[NEWLINE][ICON_BULLET]Acts as a source of fresh water</English>
+		<French>[NEWLINE][ICON_BULLET]Agit comme une source d'eau douce</French>
+		<German>[NEWLINE][ICON_BULLET]Dient als S&#252;&#223;wasserquelle</German>
+		<Italian>[NEWLINE][ICON_BULLET]Funge da fonte di acqua dolce</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Sirve como fuente de agua dulce</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_BAD_HEALTH</Tag>
+		<!-- %s1 = TXT_KEY_FEATURE_ -->
+		<English>[NEWLINE][ICON_BULLET]+%s1[ICON_UNHEALTHY] in nearby cities</English>
+		<French>[NEWLINE][ICON_BULLET]+%s1[ICON_UNHEALTHY] dans les villes voisines</French>
+		<German>[NEWLINE][ICON_BULLET]+%s1[ICON_UNHEALTHY] in umliegenden St&#228;dten</German>
+		<Italian>[NEWLINE][ICON_BULLET]+%s1[ICON_UNHEALTHY] nelle citt&#224; vicine</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]+%s1 [ICON_UNHEALTHY] a las ciudades cercanas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_GOOD_HEALTH</Tag>
+		<!-- %s1 = TXT_KEY_FEATURE_ -->
+		<English>[NEWLINE][ICON_BULLET]+%s1[ICON_HEALTHY] in nearby cities</English>
+		<French>[NEWLINE][ICON_BULLET]+%s1[ICON_HEALTHY] dans les villes voisines</French>
+		<German>[NEWLINE][ICON_BULLET]+%s1[ICON_HEALTHY] in umliegenden St&#228;dten</German>
+		<Italian>[NEWLINE][ICON_BULLET]+%s1[ICON_HEALTHY] nelle citt&#224; vicine</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]+%s1 [ICON_HEALTHY] a las ciudades cercanas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_PRODUCTION_MODIFIER</Tag>
+		<English>[ICON_BULLET]Workers Produce %D1_Change%% [ICON_PRODUCTION] from Chopping</English>
+		<French>[ICON_BULLET]Les ouvriers produisent %D1_Change%% [ICON_PRODUCTION] en coupant du bois</French>
+		<German>[ICON_BULLET]Bautrupps produzieren %D1_Change%% [ICON_PRODUCTION] durch Abholzung</German>
+		<Italian>[ICON_BULLET]I lavoratori producono %D1_Change%% [ICON_PRODUCTION] dal legname</Italian>
+		<Spanish>[ICON_BULLET]Los trabajadores obtienen un %D1_Change%% de [ICON_PRODUCTION] de la tala</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_ACCOMPLISHED_OK</Tag>
+		<English>Very well, carry on then...</English>
+		<French>Tr&#232;s bien, continuez...</French>
+		<German>Na sch&#246;n, weiter geht's ...</German>
+		<Italian>Molto bene, continua pure...</Italian>
+		<Spanish>Muy bien, seguid as&#237;...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_ACCOMPLISHED_MORE</Tag>
+		<English>What's the Big Picture?</English>
+		<French>Alors, comment &#231;a se pr&#233;sente ?</French>
+		<German>Wie ist die Lage?</German>
+		<Italian>Qual &#232; il grande piano?</Italian>
+		<Spanish>&#191;Cu&#225;l es la visi&#243;n de conjunto?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_UNITCOMBAT_ARCHER</Tag>
+		<English>Congratulations, you have trained your first Archery Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units get a special first-strike ability that allows them a chance to hit their opponent before regular combat begins.</English>
+		<French>F&#233;licitations, vous venez d'entra&#238;ner votre premi&#232;re unit&#233; d'archers ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) &#224; %s2City_Name ! Ces unit&#233;s b&#233;n&#233;ficient d'une premi&#232;re attaque qui leur laisse une chance de toucher leur adversaire avant le d&#233;but du combat.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr habt Eure erste Bogensch&#252;tzeneinheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Diese Einheiten besitzen eine spezielle Erstangriffsf&#228;higkeit, die es ihnen erlaubt, den Gegner bereits anzugreifen, bevor der regul&#228;re Kampf beginnt.</German>
+		<Italian>Congratulazioni, hai realizzato la tua prima unit&#224; ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Queste unit&#224; possiedono l'abilit&#224; speciale attacco improvviso, che fornisce la possibilit&#224; di colpire il nemico prima dell'inizio del combattimento.</Italian>
+		<Spanish>Felicidades, hab&#233;is entrenado en %s2City_Name a vuestra primera unidad con proyectiles, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Estas unidades tienen la capacidad especial de ataque de iniciativa, que les permite intentar alcanzar a sus oponentes antes de que empiece el combate normal.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_UNITCOMBAT_MOUNTED</Tag>
+		<English>Congratulations, you have trained your first Mounted Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units can move farther per turn than regular units, allowing them to wreak havoc behind enemy lines.</English>
+		<French>F&#233;licitations, vous venez d'entra&#238;ner votre premi&#232;re unit&#233; mont&#233;e ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) &#224; %s2City_Name ! Ces unit&#233;s peuvent se d&#233;placer plus loin que les autres unit&#233;s en un tour de jeu, ce qui leur permet de semer la panique derri&#232;re les lignes ennemies.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr habt Eure erste berittene Einheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name ausgebildet! Diese Einheiten k&#246;nnen sich weiter fortbewegen als regul&#228;re Einheiten und so auch hinter den feindlichen Linien angreifen.</German>
+		<Italian>Congratulazioni, hai realizzato la tua prima unit&#224; montata ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Queste unit&#224; dispongono di pi&#249; punti movimento rispetto alle unit&#224; normali e possono quindi seminare il caos dietro le linee nemiche.</Italian>
+		<Spanish>Felicidades, hab&#233;is entrenado en %s2City_Name a vuestra primera unidad montada, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Las unidades de este tipo pueden moverse m&#225;s por turno que las normales, lo que les permite sembrar el caos tras las l&#237;neas enemigas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_UNITCOMBAT_MELEE</Tag>
+		<English>Congratulations, you have trained your first Melee Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units form the backbone of your earliest armies.</English>
+		<French>F&#233;licitations, vous venez d'entra&#238;ner votre premi&#232;re unit&#233; de combat rapproch&#233; ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) &#224; %s2City_Name ! Ces unit&#233;s sont les piliers de vos premi&#232;res arm&#233;es.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr habt Eure erste Nahkampfeinheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Diese Einheiten bilden das R&#252;ckgrat Eurer fr&#252;hen Streitm&#228;chte.</German>
+		<Italian>Congratulazioni, hai realizzato la tua prima unit&#224; da mischia ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Queste unit&#224; sono la spina dorsale del tuo esercito iniziale.</Italian>
+		<Spanish>Felicidades, hab&#233;is entrenado en %s2City_Name a vuestra primera unidad de cuerpo a cuerpo, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Estas unidades conforman la columna vertebral de vuestros primeros ej&#233;rcitos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_UNITCOMBAT_SIEGE</Tag>
+		<English>Congratulations, you have trained your first Siege Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units cause collateral damage to the tiles they attack, damaging multiple units at once.</English>
+		<French>F&#233;licitations, vous venez d'entra&#238;ner votre premi&#232;re unit&#233; de si&#232;ge ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) &#224; %s2City_Name ! Ces unit&#233;s provoquent des dommages collat&#233;raux sur les cases qu'elles attaquent, touchant ainsi plusieurs unit&#233;s.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr habt Eure erste Belagerungseinheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Diese Einheiten verursachen auf den Gel&#228;ndefeldern, auf denen sie angreifen, Kollateralsch&#228;den und verwunden mehrere feindliche Einheiten gleichzeitig.</German>
+		<Italian>Congratulazioni, hai realizzato la tua prima unit&#224; d'assedio ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Queste unit&#224; infliggono danni collaterali nelle caselle attaccate, danneggiando pi&#249; nemici con un colpo.</Italian>
+		<Spanish>Felicidades, hab&#233;is entrenado en %s2City_Name a vuestra primera unidad de asedio, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Estas unidades pueden causar da&#241;os colaterales en las casillas que ataquen y alcanzar as&#237; a varios enemigos a la vez.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_UNITCOMBAT_GUN</Tag>
+		<English>Congratulations, you have trained your first Gunpowder Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! All units whose weaponry is based on gunpowder can ignore man-made city fortifications.</English>
+		<French>F&#233;licitations, vous venez d'entra&#238;ner votre premi&#232;re unit&#233; &#233;quip&#233;e d'armes &#224; feu ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) &#224; %s2City_Name ! Toutes les unit&#233;s &#233;quip&#233;es d'armes &#224; feu peuvent ignorer les fortifications construites par l'homme.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr habt Eure erste Schie&#223;pulver-Einheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! F&#252;r alle Einheiten mit Schie&#223;pulverbewaffnung sind von Menschenhand errichtete Stadtbefestigungen kein Problem.</German>
+		<Italian>Congratulazioni, hai realizzato la tua prima unit&#224; con armi da fuoco ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Tutte le unit&#224; con armi da fuoco possono ignorare le fortificazioni artificiali delle citt&#224;.</Italian>
+		<Spanish>Felicidades, hab&#233;is entrenado en %s2City_Name a vuestra primera unidad con armas de p&#243;lvora, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Las unidades con armamento de p&#243;lvora no se ven afectadas por las fortificaciones hechas por el hombre.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_UNITCOMBAT_HELICOPTER</Tag>
+		<English>Congratulations, you have trained your first Helicopter Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units can fly over short distances, allowing them to ignore regular terrain costs.</English>
+		<French>F&#233;licitations, vous venez de construire votre premier h&#233;licopt&#232;re ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) &#224; %s2City_Name ! Ces unit&#233;s peuvent voler sur de courtes distances et ignorent les p&#233;nalit&#233;s de terrain.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr habt Eure erste Hubschraubereinheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Diese Einheiten fliegen &#252;ber Kurzstreckendistanzen, ohne die regul&#228;ren Gel&#228;ndefeldkosten ber&#252;cksichtigen zu m&#252;ssen.</German>
+		<Italian>Congratulazioni, hai realizzato la tua prima unit&#224; ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Queste unit&#224; possono percorrere in volo brevi distanze, ignorando i costi di movimento del terreno.</Italian>
+		<Spanish>Felicidades, hab&#233;is entrenado en %s2City_Name a vuestra primera unidad de helic&#243;pteros, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Estas unidades pueden recorrer peque&#241;as distancias por el aire, de modo que los costes por terreno habituales no les afectan.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_UNITCOMBAT_NAVAL</Tag>
+		<English>Congratulations, you have trained your first Naval Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! Protecting coastal cities is a crucial part your national defense. Naval units can also blockade enemy towns, preventing them from working adjacent water tiles.</English>
+		<French>F&#233;licitations, vous venez d'entra&#238;ner votre premi&#232;re unit&#233; navale ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) &#224; %s2City_Name ! La protection des cases c&#244;ti&#232;res est un &#233;l&#233;ment essentiel de votre d&#233;fense nationale. Les unit&#233;s navales peuvent aussi encercler les villes ennemies pour les emp&#234;cher d'exploiter leurs ressources c&#244;ti&#232;res.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr habt Eure erste Marineeinheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Die Sicherung Eurer K&#252;stenst&#228;dte ist ein wichtiger Faktor f&#252;r die Verteidigungsf&#228;higkeit Eurer Nation. Au&#223;erdem k&#246;nnen Marineeinheiten feindliche St&#228;dte blockieren, so dass sie keine benachbarten Wasser-Gel&#228;ndefelder bearbeiten k&#246;nnen.</German>
+		<Italian>Congratulazioni, hai realizzato la tua prima unit&#224; navale ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Proteggere le citt&#224; costiere &#232; un punto fondamentale della tua difesa nazionale. Le unit&#224; navali possono bloccare i paesi nemici, impedendo la lavorazione delle caselle d'acqua adiacenti.</Italian>
+		<Spanish>Felicidades, hab&#233;is entrenado en %s2City_Name a vuestra primera unidad naval, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Proteger las ciudades costeras es una parte crucial de la defensa nacional. Las unidades navales tambi&#233;n pueden someter a bloqueo a las ciudades enemigas, impidi&#233;ndoles faenar en las casillas de agua adyacentes.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_NATIONAL_WONDER</Tag>
+		<English>Congratulations, you have completed your first National Wonder ([COLOR_BUILDING_TEXT]%s1Building_Name[COLOR_REVERT]) in %s2City_Name! These powerful buildings are useful for specializing your cities - it is wise to plan ahead, though, as only two National Wonders can be built in each one.</English>
+		<French>F&#233;licitations, vous venez de construire votre premi&#232;re merveille ([COLOR_BUILDING_TEXT]%s1Building_Name[COLOR_REVERT]) &#224; %s2City_Name ! Ces puissants &#233;difices permettent de sp&#233;cialiser vos villes. Toutefois, il faut bien planifier leur construction, le nombre de merveilles nationales &#233;tant limit&#233; &#224; 2 par ville.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr habt Euer erstes Nationales Wunder ([COLOR_BUILDING_TEXT]%s1Building_Name[COLOR_REVERT]) in %s2City_Name fertig gestellt! Diese m&#228;chtigen Geb&#228;ude eignen sich f&#252;r die Spezialisierung Eurer St&#228;dte - Bauvorhaben dieser Art sollten allerdings im Voraus geplant werden, da in jeder Stadt nur zwei Nationale Wunder errichtet werden k&#246;nnen.</German>
+		<Italian>Congratulazioni, hai completato la tua prima Meraviglia Nazionale ([COLOR_BUILDING_TEXT]%s1Building_Name[COLOR_REVERT]) a %s2City_Name! Questi potenti edifici sono particolarmente indicati per specializzare le tue citt&#224;. Tuttavia, dovrai progettare con attenzione la loro costruzione, poich&#233; ogni citt&#224; pu&#242; contenere soltanto due Meraviglie Nazionali.</Italian>
+		<Spanish>Felicidades, hab&#233;is completado en %s2City_Name vuestra primera maravilla nacional, [COLOR_BUILDING_TEXT]%s1Unit_Name[COLOR_REVERT]. Estos poderosos edificios son &#250;tiles para especializar las ciudades. Sin embargo, es aconsejable planearlo antes, ya que solo se pueden construir dos maravillas nacionales en cada ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_TRADE_ROUTE</Tag>
+		<English>Congratulations! You have connected your first city (%s1City_Name) with your Capital. Because the cities are connected, they will share resources and increase their commerce.</English>
+		<French>F&#233;licitations ! Vous venez de relier une premi&#232;re ville (%s1City_Name) &#224; votre capitale. Elles partagent d&#233;sormais les m&#234;mes ressources et leur production de commerce augmente.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr habt Eure erste Stadt (%s1City_Name) mit Eurer Hauptstadt verbunden. Verbundene St&#228;dte nutzen ihre Ressourcenvorr&#228;te gemeinsam und steigern somit ihr Wirtschaftseinkommen.</German>
+		<Italian>Congratulazioni, hai collegato la tua citt&#224; (%s1City_Name) con la capitale. Ora che le citt&#224; sono collegate, condivideranno le proprie risorse e aumenteranno il commercio.</Italian>
+		<Spanish>&#161;Felicidades! Hab&#233;is comunicado vuestra primera ciudad, %s1City_Name, con la capital. Cuando las ciudades est&#225;n comunicadas comparten recursos y ven incrementado su comercio.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_COPPER_CONNECTED</Tag>
+		<English>Congratulations! You have gained access to [COLOR_HIGHLIGHT_TEXT]Copper[COLOR_REVERT], an important strategic resource! Cities with access to [COLOR_HIGHLIGHT_TEXT]Copper[COLOR_REVERT] can build strong melee units.</English>
+		<French>F&#233;licitations ! Vous venez de trouver du [COLOR_HIGHLIGHT_TEXT]cuivre[COLOR_REVERT], une ressource strat&#233;gique essentielle ! Les villes ayant acc&#232;s au [COLOR_HIGHLIGHT_TEXT]cuivre[COLOR_REVERT] peuvent construire de puissantes unit&#233;s de combat rapproch&#233;.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr verf&#252;gt nun &#252;ber die wichtige strategische Ressource [COLOR_HIGHLIGHT_TEXT]Kupfer[COLOR_REVERT]! St&#228;dte mit Zugang zu [COLOR_HIGHLIGHT_TEXT]Kupfervorkommen[COLOR_REVERT] k&#246;nnen starke Nahkampfeinheiten errichten.</German>
+		<Italian>Congratulazioni, hai ottenuto l'accesso alla risorsa [COLOR_HIGHLIGHT_TEXT]rame[COLOR_REVERT], un'importante risorsa strategica! Le citt&#224; con accesso al [COLOR_HIGHLIGHT_TEXT]rame[COLOR_REVERT] possono realizzare delle potenti unit&#224; da mischia.</Italian>
+		<Spanish>&#161;Felicidades! Hab&#233;is conseguido acceder al [COLOR_HIGHLIGHT_TEXT]Cobre[COLOR_REVERT], un importante recurso estrat&#233;gico. Las ciudades con acceso a &#233;l pueden crear fuertes unidades de cuerpo a cuerpo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_HORSE_CONNECTED</Tag>
+		<English>Congratulations! You have gained access to [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT], an important strategic resource! Cities with access to [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] can build fast mounted units.</English>
+		<French>F&#233;licitations ! Vous venez de trouver des [COLOR_HIGHLIGHT_TEXT]chevaux[COLOR_REVERT], une ressource strat&#233;gique essentielle ! Les villes disposant de [COLOR_HIGHLIGHT_TEXT]chevaux[COLOR_REVERT] peuvent construire de puissantes unit&#233;s mont&#233;es.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr verf&#252;gt nun &#252;ber die wichtige strategische Ressource [COLOR_HIGHLIGHT_TEXT]Pferde[COLOR_REVERT]! St&#228;dte mit Zugang zu [COLOR_HIGHLIGHT_TEXT]Pferdevorkommen[COLOR_REVERT] k&#246;nnen schnelle berittene Einheiten errichten.</German>
+		<Italian>Congratulazioni, hai ottenuto l'accesso alla risorsa [COLOR_HIGHLIGHT_TEXT]cavalli[COLOR_REVERT], un'importante risorsa strategica! Le citt&#224; con accesso ai [COLOR_HIGHLIGHT_TEXT]cavalli[COLOR_REVERT] possono realizzare delle veloci unit&#224; montate.</Italian>
+		<Spanish>&#161;Felicidades! Hab&#233;is conseguido acceder a los [COLOR_HIGHLIGHT_TEXT]Caballos[COLOR_REVERT], un importante recurso estrat&#233;gico. Las ciudades con acceso a ellos pueden crear r&#225;pidas unidades montadas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_IRON_CONNECTED</Tag>
+		<English>Congratulations! You have gained access to [COLOR_HIGHLIGHT_TEXT]Iron[COLOR_REVERT], an important strategic resource! Cities with access to [COLOR_HIGHLIGHT_TEXT]Iron[COLOR_REVERT] can build strong melee units.</English>
+		<French>F&#233;licitations ! Vous venez de trouver du [COLOR_HIGHLIGHT_TEXT]fer[COLOR_REVERT], une ressource strat&#233;gique essentielle ! Les villes ayant acc&#232;s &#224; du [COLOR_HIGHLIGHT_TEXT]fer[COLOR_REVERT] peuvent construire de puissantes unit&#233;s de combat rapproch&#233;.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr verf&#252;gt nun &#252;ber die wichtige strategische Ressource [COLOR_HIGHLIGHT_TEXT]Eisen[COLOR_REVERT]! St&#228;dte mit Zugang zu [COLOR_HIGHLIGHT_TEXT]Eisenvorkommen[COLOR_REVERT] k&#246;nnen starke Nahkampfeinheiten errichten.</German>
+		<Italian>Congratulazioni, hai ottenuto l'accesso alla risorsa [COLOR_HIGHLIGHT_TEXT]ferro[COLOR_REVERT], un'importante risorsa strategica! Le citt&#224; con accesso al [COLOR_HIGHLIGHT_TEXT]ferro[COLOR_REVERT] possono realizzare delle potenti unit&#224; da mischia.</Italian>
+		<Spanish>&#161;Felicidades! Hab&#233;is conseguido acceder al [COLOR_HIGHLIGHT_TEXT]Hierro[COLOR_REVERT], un importante recurso estrat&#233;gico. Las ciudades con acceso a &#233;l pueden crear fuertes unidades de cuerpo a cuerpo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_LUXURY_CONNECTED</Tag>
+		<English>Congratulations! You have gained access to your first luxury resource ([COLOR_HIGHLIGHT_TEXT]%s1Luxury_Name[COLOR_REVERT])! This resource will create happiness in all cities connected to your Capital, making your citizens easier to manage.</English>
+		<French>F&#233;licitations ! Vous venez de trouver votre premi&#232;re ressource de luxe ([COLOR_HIGHLIGHT_TEXT]%s1Luxury_Name[COLOR_REVERT]) ! Cette ressource g&#233;n&#232;rera du bonheur dans toutes les villes reli&#233;es &#224; votre capitale et vos citoyens seront ainsi plus faciles &#224; g&#233;rer.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr verf&#252;gt nun &#252;ber Euer erstes Luxusgut ([COLOR_HIGHLIGHT_TEXT]%s1Luxury_Name[COLOR_REVERT])! Diese Ressource erzeugt in allen St&#228;dten, die mit Eurer Hauptstadt verbunden sind, Zufriedenheit und erleichtert Euch die "Verwaltung" Eurer B&#252;rger.</German>
+		<Italian>Congratulazioni, hai ottenuto l'accesso alla risorsa di lusso ([COLOR_HIGHLIGHT_TEXT]%s1Luxury_Name[COLOR_REVERT])! Questa risorsa generer&#224; felicit&#224; in tutte le citt&#224; collegate alla tua capitale, rendendo i cittadini pi&#249; facili da gestire.</Italian>
+		<Spanish>&#161;Felicidades! Hab&#233;is conseguido acceder a vuestro primer recurso de lujo, [NUM1:el:la:los:las] [COLOR_HIGHLIGHT_TEXT]%s1Luxury_Name[COLOR_REVERT]. &#201;ste llevar&#225; Felicidad a todas las ciudades comunicadas con la capital, de modo que los ciudadanos ser&#225;n m&#225;s manejables.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_FOOD_CONNECTED</Tag>
+		<English>Congratulations! You have gained access to your first food resource ([COLOR_HIGHLIGHT_TEXT]%s1Food_Name[COLOR_REVERT])! This resource will raise the health level in all cities connected to your Capital, encouraging faster growth.</English>
+		<French>F&#233;licitations ! Vous venez de trouver votre premi&#232;re source de nourriture ([COLOR_HIGHLIGHT_TEXT]%s1Food_Name[COLOR_REVERT]) ! Cette ressource am&#233;liorera le niveau de sant&#233; de toutes les villes reli&#233;es &#224; votre capitale et favorisera leur croissance.</French>
+		<German>Herzlichen Gl&#252;ckwunsch! Ihr verf&#252;gt nun &#252;ber Eure erste Nahrungsressource ([COLOR_HIGHLIGHT_TEXT]%s1Food_Name[COLOR_REVERT])! Diese Ressource steigert die Gesundheit in allen St&#228;dten, die mit Eurer Hauptstadt verbunden sind, und erm&#246;glicht so ein schnelleres Wachstum.</German>
+		<Italian>Congratulazioni, hai ottenuto l'accesso alla risorsa di cibo ([COLOR_HIGHLIGHT_TEXT]%s1Food_Name[COLOR_REVERT])! Questa risorsa aumenter&#224; la salute in tutte le citt&#224; collegate alla tua capitale, rendendo i cittadini pi&#249; facili da gestire.</Italian>
+		<Spanish>&#161;Felicidades! Hab&#233;is conseguido acceder a vuestro primer recurso de Alimentos, [NUM1:el:la:los:las] [COLOR_HIGHLIGHT_TEXT]%s1Food_Name[COLOR_REVERT]. &#201;ste subir&#225; el nivel de salud en todas las ciudades comunicadas con la capital, lo que propiciar&#225; un crecimiento m&#225;s r&#225;pido.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_HALF_MILLION</Tag>
+		<English>Congratulations, the burgeoning %s1Civ_Name now holds Half a Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<French>F&#233;licitations, la civilisation de l'%s1Civ_Name est en plein essor et compte d&#233;sormais un demi million d'&#226;mes ! Les grandes villes peuvent abriter plus de citoyens et de sp&#233;cialistes, ce qui augmente leur productivit&#233; !</French>
+		<German>Herzlichen Gl&#252;ckwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt eine halbe Million Einwohner! Gr&#246;&#223;ere St&#228;dte bieten Platz f&#252;r mehr B&#252;rger und Spezialisten, die wiederum unsere Produktivit&#228;t erh&#246;hen!</German>
+		<Italian>Congratulazioni, la fiorente citt&#224; %s1Civ_Name ora contiene mezzo milione di abitanti! Le grandi citt&#224; ospitano pi&#249; cittadini e specialisti, aumentando la produttivit&#224;!</Italian>
+		<Spanish>Felicidades, el pr&#243;spero %s1Civ_Name ya alberga a medio mill&#243;n de almas. Unas mayores ciudades permiten que haya m&#225;s habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_1_MILLION</Tag>
+		<English>Congratulations, the burgeoning %s1Civ_Name now holds a Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<French>F&#233;licitations, la civilisation de l'%s1Civ_Name est en plein essor et compte d&#233;sormais un million d'&#226;mes ! Les grandes villes peuvent abriter plus de citoyens et de sp&#233;cialistes, ce qui augmente leur productivit&#233; !</French>
+		<German>Herzlichen Gl&#252;ckwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt eine Million Einwohner! Gr&#246;&#223;ere St&#228;dte bieten Platz f&#252;r mehr B&#252;rger und Spezialisten, die wiederum unsere Produktivit&#228;t erh&#246;hen!</German>
+		<Italian>Congratulazioni, la fiorente citt&#224; %s1Civ_Name ora contiene un milione di abitanti! Le grandi citt&#224; ospitano pi&#249; cittadini e specialisti, aumentando la produttivit&#224;!</Italian>
+		<Spanish>Felicidades, el pr&#243;spero %s1Civ_Name ya alberga a un mill&#243;n de almas. Unas mayores ciudades permiten que haya m&#225;s habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_2_MILLION</Tag>
+		<English>Congratulations, the burgeoning %s1Civ_Name now holds Two Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<French>F&#233;licitations, la civilisation de l'%s1Civ_Name est en plein essor et compte d&#233;sormais deux millions d'&#226;mes ! Les grandes villes peuvent abriter plus de citoyens et de sp&#233;cialistes, ce qui augmente leur productivit&#233; !</French>
+		<German>Herzlichen Gl&#252;ckwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt zwei Millionen Einwohner! Gr&#246;&#223;ere St&#228;dte bieten Platz f&#252;r mehr B&#252;rger und Spezialisten, die wiederum unsere Produktivit&#228;t erh&#246;hen!</German>
+		<Italian>Congratulazioni, la fiorente citt&#224; %s1Civ_Name ora contiene due milioni di abitanti! Le grandi citt&#224; ospitano pi&#249; cittadini e specialisti, aumentando la produttivit&#224;!</Italian>
+		<Spanish>Felicidades, el pr&#243;spero %s1Civ_Name ya alberga a dos millones de almas. Unas mayores ciudades permiten que haya m&#225;s habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_5_MILLION</Tag>
+		<English>Congratulations, the burgeoning %s1Civ_Name now holds Five Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<French>F&#233;licitations, la civilisation de l'%s1Civ_Name est en plein essor et compte d&#233;sormais cinq millions d'&#226;mes ! Les grandes villes peuvent abriter plus de citoyens et de sp&#233;cialistes, ce qui augmente leur productivit&#233; !</French>
+		<German>Herzlichen Gl&#252;ckwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt f&#252;nf Millionen Einwohner! Gr&#246;&#223;ere St&#228;dte bieten Platz f&#252;r mehr B&#252;rger und Spezialisten, die wiederum unsere Produktivit&#228;t erh&#246;hen!</German>
+		<Italian>Congratulazioni, la fiorente citt&#224; %s1Civ_Name ora contiene cinque milioni di abitanti! Le grandi citt&#224; ospitano pi&#249; cittadini e specialisti, aumentando la produttivit&#224;!</Italian>
+		<Spanish>Felicidades, el pr&#243;spero %s1Civ_Name ya alberga a cinco millones de almas. Unas mayores ciudades permiten que haya m&#225;s habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_10_MILLION</Tag>
+		<English>Congratulations, the burgeoning %s1Civ_Name now holds Ten Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<French>F&#233;licitations, la civilisation de l'%s1Civ_Name est en plein essor et compte d&#233;sormais dix millions d'&#226;mes ! Les grandes villes peuvent abriter plus de citoyens et de sp&#233;cialistes, ce qui augmente leur productivit&#233; !</French>
+		<German>Herzlichen Gl&#252;ckwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt zehn Millionen Einwohner! Gr&#246;&#223;ere St&#228;dte bieten Platz f&#252;r mehr B&#252;rger und Spezialisten, die wiederum unsere Produktivit&#228;t erh&#246;hen!</German>
+		<Italian>Congratulazioni, la fiorente citt&#224; %s1Civ_Name ora contiene dieci milioni di abitanti! Le grandi citt&#224; ospitano pi&#249; cittadini e specialisti, aumentando la produttivit&#224;!</Italian>
+		<Spanish>Felicidades, el pr&#243;spero %s1Civ_Name ya alberga a diez millones de almas. Unas mayores ciudades permiten que haya m&#225;s habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_20_MILLION</Tag>
+		<English>Congratulations, the burgeoning %s1Civ_Name now holds Twenty Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<French>F&#233;licitations, la civilisation de l'%s1Civ_Name est en plein essor et compte d&#233;sormais vingt millions d'&#226;mes ! Les grandes villes peuvent abriter plus de citoyens et de sp&#233;cialistes, ce qui augmente leur productivit&#233; !</French>
+		<German>Herzlichen Gl&#252;ckwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt zwanzig Millionen Einwohner! Gr&#246;&#223;ere St&#228;dte bieten Platz f&#252;r mehr B&#252;rger und Spezialisten, die wiederum unsere Produktivit&#228;t erh&#246;hen!</German>
+		<Italian>Congratulazioni, la fiorente citt&#224; %s1Civ_Name ora contiene venti milioni di abitanti! Le grandi citt&#224; ospitano pi&#249; cittadini e specialisti, aumentando la produttivit&#224;!</Italian>
+		<Spanish>Felicidades, el pr&#243;spero %s1Civ_Name ya alberga a veinte millones de almas. Unas mayores ciudades permiten que haya m&#225;s habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_50_MILLION</Tag>
+		<English>Congratulations, the burgeoning %s1Civ_Name now holds Fifty Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<French>F&#233;licitations, la civilisation de l'%s1Civ_Name est en plein essor et compte d&#233;sormais cinquante millions d'&#226;mes ! Les grandes villes peuvent abriter plus de citoyens et de sp&#233;cialistes, ce qui augmente leur productivit&#233; !</French>
+		<German>Herzlichen Gl&#252;ckwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt f&#252;nfzig Millionen Einwohner! Gr&#246;&#223;ere St&#228;dte bieten Platz f&#252;r mehr B&#252;rger und Spezialisten, die wiederum unsere Produktivit&#228;t erh&#246;hen!</German>
+		<Italian>Congratulazioni, la fiorente citt&#224; %s1Civ_Name ora contiene cinquanta milioni di abitanti! Le grandi citt&#224; ospitano pi&#249; cittadini e specialisti, aumentando la produttivit&#224;!</Italian>
+		<Spanish>Felicidades, el pr&#243;spero %s1Civ_Name ya alberga a cincuenta millones de almas. Unas mayores ciudades permiten que haya m&#225;s habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_100_MILLION</Tag>
+		<English>Congratulations, the burgeoning %s1Civ_Name now holds One Hundred Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<French>F&#233;licitations, la civilisation de l'%s1Civ_Name est en plein essor et compte d&#233;sormais cent millions d'&#226;mes ! Les grandes villes peuvent abriter plus de citoyens et de sp&#233;cialistes, ce qui augmente leur productivit&#233; !</French>
+		<German>Herzlichen Gl&#252;ckwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt einhundert Millionen Einwohner! Gr&#246;&#223;ere St&#228;dte bieten Platz f&#252;r mehr B&#252;rger und Spezialisten, die wiederum unsere Produktivit&#228;t erh&#246;hen!</German>
+		<Italian>Congratulazioni, la fiorente citt&#224; %s1Civ_Name ora contiene cento milioni di abitanti! Le grandi citt&#224; ospitano pi&#249; cittadini e specialisti, aumentando la produttivit&#224;!</Italian>
+		<Spanish>Felicidades, el pr&#243;spero %s1Civ_Name ya alberga a cien millones de almas. Unas mayores ciudades permiten que haya m&#225;s habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_200_MILLION</Tag>
+		<English>Congratulations, the burgeoning %s1Civ_Name now holds Two Hundred Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<French>F&#233;licitations, la civilisation de l'%s1Civ_Name est en plein essor et compte d&#233;sormais deux cents millions d'&#226;mes ! Les grandes villes peuvent abriter plus de citoyens et de sp&#233;cialistes, ce qui augmente leur productivit&#233; !</French>
+		<German>Herzlichen Gl&#252;ckwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt zweihundert Millionen Einwohner! Gr&#246;&#223;ere St&#228;dte bieten Platz f&#252;r mehr B&#252;rger und Spezialisten, die wiederum unsere Produktivit&#228;t erh&#246;hen!</German>
+		<Italian>Congratulazioni, la fiorente citt&#224; %s1Civ_Name ora contiene duecento milioni di abitanti! Le grandi citt&#224; ospitano pi&#249; cittadini e specialisti, aumentando la produttivit&#224;!</Italian>
+		<Spanish>Felicidades, el pr&#243;spero %s1Civ_Name ya alberga a doscientos millones de almas. Unas mayores ciudades permiten que haya m&#225;s habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_500_MILLION</Tag>
+		<English>Congratulations, the burgeoning %s1Civ_Name now holds Five Hundred Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<French>F&#233;licitations, la civilisation de l'%s1Civ_Name est en plein essor et compte d&#233;sormais cinq cents millions d'&#226;mes ! Les grandes villes peuvent abriter plus de citoyens et de sp&#233;cialistes, ce qui augmente leur productivit&#233; !</French>
+		<German>Herzlichen Gl&#252;ckwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt f&#252;nfhundert Millionen Einwohner! Gr&#246;&#223;ere St&#228;dte bieten Platz f&#252;r mehr B&#252;rger und Spezialisten, die wiederum unsere Produktivit&#228;t erh&#246;hen!</German>
+		<Italian>Congratulazioni, la fiorente citt&#224; %s1Civ_Name ora contiene cinquecento milioni di abitanti! Le grandi citt&#224; ospitano pi&#249; cittadini e specialisti, aumentando la produttivit&#224;!</Italian>
+		<Spanish>Felicidades, el pr&#243;spero %s1Civ_Name ya alberga a quinientos millones de almas. Unas mayores ciudades permiten que haya m&#225;s habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_1_BILLION</Tag>
+		<English>Congratulations, the burgeoning %s1Civ_Name now holds a BILLION souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<French>F&#233;licitations, la civilisation de l'%s1Civ_Name est en plein essor et compte UN MILLIARD d'habitants ! Les grandes villes peuvent abriter plus de citoyens et de sp&#233;cialistes, ce qui augmente leur productivit&#233; !</French>
+		<German>Herzlichen Gl&#252;ckwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt eine MILLIARDE Einwohner! Gr&#246;&#223;ere St&#228;dte bieten Platz f&#252;r mehr B&#252;rger und Spezialisten, die wiederum unsere Produktivit&#228;t erh&#246;hen!</German>
+		<Italian>Congratulazioni, la fiorente citt&#224; %s1Civ_Name ora contiene un miliardo di abitanti! Le grandi citt&#224; ospitano pi&#249; cittadini e specialisti, aumentando la produttivit&#224;!</Italian>
+		<Spanish>Felicidades, el pr&#243;spero %s1Civ_Name ya alberga a MIL MILLONES de almas. Unas mayores ciudades permiten que haya m&#225;s habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_2_BILLION</Tag>
+		<English>Congratulations, the burgeoning %s1Civ_Name now holds TWO BILLION souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<French>F&#233;licitations, la civilisation de l'%s1Civ_Name est en plein essor et compte DEUX MILLIARDS d'habitants ! Les grandes villes peuvent abriter plus de citoyens et de sp&#233;cialistes, ce qui augmente leur productivit&#233; !</French>
+		<German>Herzlichen Gl&#252;ckwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt ZWEI MILLIARDEN Einwohner! Gr&#246;&#223;ere St&#228;dte bieten Platz f&#252;r mehr B&#252;rger und Spezialisten, die wiederum unsere Produktivit&#228;t erh&#246;hen!</German>
+		<Italian>Congratulazioni, la fiorente citt&#224; %s1Civ_Name ora contiene due miliardi di abitanti! Le grandi citt&#224; ospitano pi&#249; cittadini e specialisti, aumentando la produttivit&#224;!</Italian>
+		<Spanish>Felicidades, el pr&#243;spero %s1Civ_Name ya alberga a DOS MIL MILLONES de almas. Unas mayores ciudades permiten que haya m&#225;s habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_CORPORATION_ENABLED</Tag>
+		<English>Congratulations! You now possess the knowledge required to found [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. You may use a [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] to build the Headquarters in any city with access to [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</English>
+		<French>F&#233;licitations ! Vous poss&#233;dez maintenant le savoir n&#233;cessaire pour fonder la soci&#233;t&#233; commerciale [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. Vous pouvez utiliser une unit&#233; de [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] pour construire son si&#232;ge social dans n'importe quelle ville ayant acc&#232;s &#224; la ressource [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</French>
+		<German>Glückwunsch! Sie verfügen jetzt über das Wissen, um die Kapitalgesellschaft [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT] zu gründen. Sie können eine Einheit [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] einsetzen, um den Unternehmenssitz in einer Stadt zu errichten, die Zugang zum Bonusgut [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT] hat.</German>
+		<Italian>Congratulazioni! Ora sei in possesso della conoscenza richiesta per fondare [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. Puoi usare un'unità [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] per costruire i quartieri generali in qualunque città con accesso a [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</Italian>
+		<Spanish>¡Felicidades! Ya tenéis el conocimiento necesario para fundar la [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. Podéis usar [NUM2:un:una:unos:unas] [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] para construir la sede en cualquier ciudad con acceso a [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_UNIT_PRIVATEER</Tag>
+		<English>Congratulations, you have trained your first [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! The nationality of this unit is invisible to your rivals, so you may use it to attack their ships without having to declare war. You may also blockade and plunder rival trade routes without having to be at war.</English>
+		<French>F&#233;licitations ! Vous avez entra&#238;n&#233; votre premi&#232;re unit&#233; de [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] dans la ville : %s2City_Name ! La nationalit&#233; de cette unit&#233; est invisible &#224; vos rivaux, ce qui vous permet de l'utiliser pour attaquer leurs navires sans avoir &#224; d&#233;clarer la guerre. Vous pouvez aussi bloquer et piller les routes commerciales rivales sans avoir &#224; entrer en guerre.</French>
+		<German>Glückwunsch, Sie haben Ihre erste Einheit [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name ausgebildet! Die Nationalität dieser Einheit ist für Ihre Gegner unsichtbar, Sie können mit dieser Einheit also gegnerische Schiffe angreifen, ohne ihnen den Krieg zu erklären. Sie können auch gegnerische Handelswege blockieren und plündern, ohne Krieg zu führen.</German>
+		<Italian>Congratulazioni, hai addestrato la tua prima unità [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! La nazionalità di questa unità non sarà visibile ai nemici, il che significa che potrai usarla per attaccare le loro navi senza bisogno di dichiarare guerra. Allo stesso modo, potrai anche stringere d'assedio e saccheggiare le rotte commerciali nemiche senza necessità di essere in guerra.</Italian>
+		<Spanish>¡Felicidades! Habéis entrenado a [NUM1:vuestro primer:vuestra primera:vuestros primeros:vuestras primeras] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] en %s2City_Name. Los pabellones de dichas unidades son invisibles para vuestros rivales, por lo que podéis usarlas para atacar a sus barcos sin declarar la guerra. También podéis bloquear y saquear las rutas comerciales rivales sin tener que estar en guerra.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEAT_UNIT_SPY</Tag>
+		<English>Congratulations, you have trained your first [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! This unit is invisible to other players, which allows you to enter into their territory to gather intelligence and to perform Espionage Missions. Be aware, however, that even though it cannot be seen, this unit still has a chance to get caught when operating in rival territory, possibly revealing its identity and causing tension in your international relations.</English>
+		<French>F&#233;licitations ! Vous avez entra&#238;n&#233; votre premi&#232;re unit&#233; de [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] dans la ville : %s2City_Name ! Cette unit&#233; est invisible aux autres joueurs, ce qui vous permet de p&#233;n&#233;trer dans leur territoire pour r&#233;colter des informations et ex&#233;cuter des missions d'espionnage. Mais attention, m&#234;me si elle ne peut &#234;tre vue, cette unit&#233; risque n&#233;anmoins de se faire attraper lorsqu'elle op&#232;re en territoire ennemi, risquant alors de r&#233;v&#233;ler son identit&#233; et de causer des tensions dans vos relations internationales.</French>
+		<German>Glückwunsch, Sie haben Ihre erste Einheit [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name ausgebildet! Da diese Einheit für die anderen Spieler unsichtbar ist, können Sie mit ihr in gegnerische Gebiete vordringen, um Geheiminformationen zu sammeln und Spionagemissionen auszuführen. Vergessen Sie jedoch nicht, dass diese Einheiten zwar nicht sichtbar sind, aber dennoch bei Einsätzen in gegnerischen Gebieten gefasst werden können und dann möglicherweise ihre Identität preisgeben, was zu Spannungen in Ihren internationalen Beziehungen führen würde.</German>
+		<Italian>Congratulazioni, hai addestrato la tua prima unità [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! Questa unità non è visibile agli altri giocatori, il che ti permetterà di entrare nel loro territorio per raccogliere informazioni e svolgere missioni di spionaggio. Stai attento, tuttavia, perché anche se non può essere vista, quest'unità può essere catturata quando opera in territorio nemico, con il rischio che riveli la sua identità e causi quindi tensione nelle relazioni diplomatiche.</Italian>
+		<Spanish>¡Felicidades! Habéis entrenado a [NUM1:vuestro primer:vuestra primera:vuestros primeros:vuestras primeras] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] en %s2City_Name. Los pabellones de dichas unidades son invisibles para vuestros rivales, cosa que os permite entrar en su territorio para recoger información y realizar misiones de espionaje. Sin embargo, id con cuidado: aunque no se la pueda detectar, esta unidad todavía puede ser apresada mientras opera en territorio rival, con el riesgo de que revele su identidad y la consecuente tensión que crearía en vuestras relaciones internacionales.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_HANDICAP_COST</Tag>
+		<English>[NEWLINE]%d1[ICON_GOLD]: Handicap cost</English>
+		<French>[NEWLINE]%d1[ICON_GOLD] : co&#251;t handicap</French>
+		<German>[NEWLINE]%d1[ICON_GOLD]: Handicap-Kosten</German>
+		<Italian>[NEWLINE]%d1[ICON_GOLD]: costo handicap</Italian>
+		<Spanish>[NEWLINE]%d1 [ICON_GOLD]: coste de h&#225;ndicap</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_SUPPLY_COST</Tag>
+		<English>[NEWLINE]%d3[ICON_GOLD]: Away supply cost for %d1 units (free supply for %d2)%s4[NEWLINE]------------------------[NEWLINE]TOTAL SUPPLY COST: %d5[ICON_GOLD]</English>
+		<French>[NEWLINE]%d3[ICON_GOLD] : co&#251;t de ravitaillement pour %d1 unit&#233;s (gratuit pour %d2)%s4[NEWLINE]------------------------[NEWLINE]CO&#219;T TOTAL RAVITAILLEMENT : %d5[ICON_GOLD]</French>
+		<German>[NEWLINE]%d3[ICON_GOLD]: Reisenachschubkosten f&#252;r %d1 [NUM1:Einheit:Einheiten] (freier Nachschub f&#252;r %d2)%s4[NEWLINE]------------------------[NEWLINE]NACHSCHUBKOSTEN GESAMT: %d5[ICON_GOLD]</German>
+		<Italian>[NEWLINE]%d3[ICON_GOLD]: Costi di supporto per %d1 unit&#224; (supporto gratuito per %d2)%s4[NEWLINE]------------------------[NEWLINE]TOTALE COSTI DI SUPPORTO: %d5[ICON_GOLD]</Italian>
+		<Spanish>[NEWLINE]%d3 [ICON_GOLD]: coste de suministro por lejan&#237;a para %d1 [NUM1:unidad:unidades] (suministro gratis para %d2) %s4[NEWLINE]------------------------[NEWLINE]COSTE DE SUMINISTRO TOTAL: %d5 [ICON_GOLD]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_FOREIGN_INCOME</Tag>
+		<English>%s1[NEWLINE]------------------------[NEWLINE]TOTAL FOREIGN INCOME: %d2[ICON_GOLD]</English>
+		<French>%s1[NEWLINE]------------------------[NEWLINE]TOTAL RECETTES ETRANGER : %d2[ICON_GOLD]</French>
+		<German>%s1[NEWLINE]------------------------[NEWLINE]AUSLANDSEINNAHMEN GESAMT: %d2[ICON_GOLD]</German>
+		<Italian>%s1[NEWLINE]------------------------[NEWLINE]ENTRATE NETTE DALL'ESTERO: %d2[ICON_GOLD]</Italian>
+		<Spanish>%s1[NEWLINE]------------------------[NEWLINE]TOTAL DE INGRESOS EN EL EXTRANJERO: %d2 [ICON_GOLD]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_CIVIC_UPKEEP_COST</Tag>
+		<English>%s1[NEWLINE]------------------------[NEWLINE]TOTAL CIVIC UPKEEP: %d2[ICON_GOLD]</English>
+		<French>%s1[NEWLINE]------------------------[NEWLINE]ENTRETIEN DOCTRINAL TOTAL : %d2 [ICON_GOLD]</French>
+		<German>%s1[NEWLINE]------------------------[NEWLINE]STAATSFORMUNTERHALT GESAMT: %d2[ICON_GOLD]</German>
+		<Italian>%s1[NEWLINE]------------------------[NEWLINE]MANTENIMENTO TOTALE FORMA DI GOVERNO: %d2[ICON_GOLD]</Italian>
+		<Spanish>%s1[NEWLINE]------------------------[NEWLINE]COSTE TOTAL DE MANTENIMIENTO DE LOS PRINCIPIOS: %d2 [ICON_GOLD]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_CIVICS</Tag>
+		<English>Civic Upkeep</English>
+		<French>Entretien doctrinal</French>
+		<German>Staatsformunterhalt</German>
+		<Italian>Mantenimento forma di governo</Italian>
+		<Spanish>Mantenimiento principios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_COST_PER_TURN</Tag>
+		<English>Net Foreign Expenses</English>
+		<French>D&#233;penses &#233;trang&#232;res nettes</French>
+		<German>Netto-Auslandsausgaben</German>
+		<Italian>Spese nette all'estero</Italian>
+		<Spanish>Gastos netos en el extranjero</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_EXPENSES</Tag>
+		<English>Total Expenses</English>
+		<French>D&#233;penses totales</French>
+		<German>Gesamtausgaben</German>
+		<Italian>Spese totali</Italian>
+		<Spanish>Gastos totales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_EXPENSES_HEADER</Tag>
+		<English>Expenses</English>
+		<French>D&#233;penses</French>
+		<German>Ausgaben</German>
+		<Italian>Spese</Italian>
+		<Spanish>Gastos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_INCOME_HEADER</Tag>
+		<English>Income</English>
+		<French>Recettes</French>
+		<German>Einnahmen</German>
+		<Italian>Entrate</Italian>
+		<Spanish>Ingresos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_INCOME</Tag>
+		<English>Total Income</English>
+		<French>Recettes totales</French>
+		<German>Gesamteinnahmen</German>
+		<Italian>Entrate totali</Italian>
+		<Spanish>Ingresos totales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_INFLATION</Tag>
+		<English>Inflation</English>
+		<French>Inflation</French>
+		<German>Inflation</German>
+		<Italian>Inflazione</Italian>
+		<Spanish>Inflaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_MAINTENANCE</Tag>
+		<English>City Maintenance</English>
+		<French>Entretien ville</French>
+		<German>Stadtunterhalt</German>
+		<Italian>Mantenimento citt&#224;</Italian>
+		<Spanish>Mantenimiento de las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_NET_INCOME</Tag>
+		<English>Net Income: %D1</English>
+		<French>Revenu net : %D1</French>
+		<German>Nettoeinnahmen: %D1</German>
+		<Italian>Entrate nette: %D1</Italian>
+		<Spanish>Ingresos netos: %D1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_PER_TURN</Tag>
+		<English>Net Foreign Income</English>
+		<French>Recettes de l'&#233;tranger</French>
+		<German>Netto-Auslandseinkommen</German>
+		<Italian>Entrete nette estere</Italian>
+		<Spanish>Ingresos netos en el extranjero</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_TAXES</Tag>
+		<English>Taxes</English>
+		<French>Imp&#244;ts</French>
+		<German>Steuern</German>
+		<Italian>Tasse</Italian>
+		<Spanish>Impuestos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_TREASURY</Tag>
+		<English>Treasury: %d1 [ICON_GOLD]</English>
+		<French>Tr&#233;sor : %d1 [ICON_GOLD]</French>
+		<German>Schatzkammer: %d1 [ICON_GOLD]</German>
+		<Italian>Tesoro: %d1 [ICON_GOLD]</Italian>
+		<Spanish>Tesoro: %d1 [ICON_GOLD]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_UNITSUPPLY</Tag>
+		<English>Unit Supply</English>
+		<French>Ravitaillement</French>
+		<German>Einheitennachschub</German>
+		<Italian>Supporto unit&#224;</Italian>
+		<Spanish>Suministro de las unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FLYOUT_MENU_FLY_TO</Tag>
+		<English>Fly To</English>
+		<French>Voler &#224;</French>
+		<German>Kameraflug nach</German>
+		<Italian>Vola a</Italian>
+		<Spanish>Volar a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FLYOUT_MENU_MOVE_TO</Tag>
+		<English>Move To (%d1_NumTurns)</English>
+		<French>Aller &#224; (%d1_NumTurns)</French>
+		<German>Fortbewegen nach (%d1_NumTurns)</German>
+		<Italian>Muovi a (%d1_NumTurns)</Italian>
+		<Spanish>Mover a (%d1_Num [NUM1:turno:turnos)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FLYOUT_MENU_SELECT_ALL</Tag>
+		<English>Select All</English>
+		<French>S&#233;lectionner tous</French>
+		<German>Alle ausw&#228;hlen</German>
+		<Italian>Seleziona tutto</Italian>
+		<Spanish>Seleccionar todo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FLYOUT_MENU_WAKE_ALL</Tag>
+		<English>Wake All</English>
+		<French>R&#233;veiller tous</French>
+		<German>Alle wecken</German>
+		<Italian>Sveglia tutte le unit&#224;</Italian>
+		<Spanish>Despertar a todas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FLYOUT_MENU_FORTIFY_ALL</Tag>
+		<English>Fortify All</English>
+		<French>Retrancher tous</French>
+		<German>Alle verschanzen</German>
+		<Italian>Fortifica tutte le unit&#224;</Italian>
+		<Spanish>Fortificar a todas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FLYOUT_MENU_SLEEP_ALL</Tag>
+		<English>Sleep All</English>
+		<French>Endormir tous</French>
+		<German>Alle ausruhen</German>
+		<Italian>Fai dormire tutte le unit&#224;</Italian>
+		<Spanish>Dormir a todas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_ACTIVE</Tag>
+		<English>Active</English>
+		<French>Actif</French>
+		<German>Aktiv</German>
+		<Italian>Attivo</Italian>
+		<Spanish>Activo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_CONTACT</Tag>
+		<English>Contact</English>
+		<French>Contacter</French>
+		<German>Kontaktieren</German>
+		<Italian>Contatta</Italian>
+		<Spanish>Contactar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_EXPORT</Tag>
+		<English>Export</English>
+		<French>Exporter</French>
+		<German>Export</German>
+		<Italian>Esportazione</Italian>
+		<Spanish>Exportar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_FOR_TRADE_2</Tag>
+		<English>Will Trade</English>
+		<French>Echangera</French>
+		<German>Treibt Handel</German>
+		<Italian>Commercer&#224;</Italian>
+		<Spanish>Intercambia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_NOT_FOR_TRADE_2</Tag>
+		<English>Won't Trade</English>
+		<French>N'&#233;changera pas</French>
+		<German>Treibt keinen Handel</German>
+		<Italian>Non commercer&#224;</Italian>
+		<Spanish>No intercambia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_GLANCE</Tag>
+		<English>Glance</English>
+		<French>Aper&#231;u</French>
+		<German>Einblick</German>
+		<Italian>Occhiata</Italian>
+		<Spanish>Mirar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_GOLD_PER_TURN_FOR_TRADE</Tag>
+		<English>%d1 Gold Per Turn Available For Trade</English>
+		<French>%d1 or par tour disponible pour le commerce</French>
+		<German>%d1 Gold pro Runde zum Handel verf&#252;bar</German>
+		<Italian>%d1 Oro per turno disponibile per il commercio</Italian>
+		<Spanish>%d1 oro por turno disponible para intercambiar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_IMPORT</Tag>
+		<English>Import</English>
+		<French>Importer</French>
+		<German>Import</German>
+		<Italian>Importazione</Italian>
+		<Spanish>Importar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_LEADER</Tag>
+		<English>Leader</English>
+		<French>Chef</French>
+		<German>Staatsoberhaupt</German>
+		<Italian>Leader</Italian>
+		<Spanish>L&#237;der</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_NOT_CONNECTED</Tag>
+		<English>Not Connected to Trade Network</English>
+		<French>Aucune liaison avec le r&#233;seau commercial</French>
+		<German>Keinem Handelsnetz angeschlossen</German>
+		<Italian>Non connesso alla rete commerciale</Italian>
+		<Spanish>Sin comunicaci&#243;n con red comercial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_NO_TECH_TRADING</Tag>
+		<English>Technology Trading Not Allowed</English>
+		<French>Echange de technologie non autoris&#233;</French>
+		<German>Kein Technologiehandel zul&#228;ssig</German>
+		<Italian>Non &#232; consentito lo scambio di tecnologie</Italian>
+		<Spanish>Intercambio de tecnolog&#237;a no permitido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_RELATIONS</Tag>
+		<English>Relations</English>
+		<French>Relations</French>
+		<German>Beziehungen</German>
+		<Italian>Relazioni</Italian>
+		<Spanish>Relaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_RESOURCES</Tag>
+		<English>Resources</English>
+		<French>Ressources</French>
+		<German>Ressourcen</German>
+		<Italian>Risorse</Italian>
+		<Spanish>Recursos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_TECHS</Tag>
+		<English>Techs</English>
+		<French>Technologies</French>
+		<German>Technologien</German>
+		<Italian>Tecnologie</Italian>
+		<Spanish>Tecnolog&#237;as</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREIGN_ADVISOR_WANTS</Tag>
+		<English>Wants</English>
+		<French>Veut</French>
+		<German>W&#252;nscht</German>
+		<Italian>Vuole</Italian>
+		<Spanish>Quiere</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FREE_TECHS</Tag>
+		<English>Starting Technologies</English>
+		<French>Technologies de d&#233;part[SPACE] </French>
+		<German>Starttechnologien</German>
+		<Italian>Tecnologie iniziali</Italian>
+		<Spanish>Tecnolog&#237;as iniciales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FREE_TECHS_NO</Tag>
+		<English>No Starting Technologies</English>
+		<French>Aucune technologie de d&#233;part</French>
+		<German>Keine Starttechnologien</German>
+		<Italian>Nessuna tecnologia iniziale</Italian>
+		<Spanish>Sin tecnolog&#237;as iniciales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FREE_UNITS</Tag>
+		<English>Unique Units</English>
+		<French>Unit&#233;(s) unique(s)[SPACE] </French>
+		<German>Spezialeinheiten</German>
+		<Italian>Unit&#224; uniche</Italian>
+		<Spanish>Unidades exclusivas</Spanish>
+	</TEXT>
 </Civ4GameText>
