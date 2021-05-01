@@ -8776,4 +8776,196 @@
 		<Italian>Salute a te, [CT_NAME]. Sono [OUR_NAME], signore del popolo [OUR_CIV_ADJ], timorato di Dio! Possa l'amicizia tra le nostre due grandi civiltà durare fino a quando non saremo molto più vasti di voi! </Italian>
 		<Spanish>Mis saludos, [CT_NAME]. Soy [OUR_NAME], gobernante del pueblo [OUR_CIV_ADJ:1], temeroso de Dios. Que la amistad entre nuestras dos magníficas civilizaciones perdure hasta que nosotros seamos mucho más grandes que vosotros. </Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_BOUDICA_1</Tag>
+		<English>Greetings, [CT_NAME]! Let us mount my mighty chariot and hunt down some barbarians! You can ride "shotgun!"</English>
+		<French>Mes respects, [CT_NAME] ! Montons sur mon puissant char et sus aux barbares ! Mais c'est moi qui conduis !</French>
+		<German>Seid gegrüßt, [CT_NAME]! Lasst uns meinen prachtvollen Streitwagen besteigen und ein paar Barbaren jagen! Ihr dürft mein "Beifahrer" sein!</German>
+		<Italian>Saluti, [CT_NAME]! Monta sul mio potente cocchio e diamo insieme la caccia a qualche barbaro! Puoi stare davanti, se vuoi!</Italian>
+		<Spanish>¡Saludos, [CT_NAME]! ¡Montemos en mi imponente carro y vayamos a cazar unos bárbaros! ¡Podréis sentaros a mi lado!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_CHARLEMAGNE_1</Tag>
+		<English>We graciously welcome the mighty leader of [OUR_CIV_SHORT] to our presence.</English>
+		<French>Nous accueillons gracieusement le puissant chef des [OUR_CIV_SHORT:3] parmi nous.</French>
+		<German>Wir heißen das mächtige Staatsoberhaupt des Volkes von [OUR_CIV_SHORT] gnädigerweise willkommen.</German>
+		<Italian>Accogliamo con grazia il grande leader di [OUR_CIV_SHORT] alla nostra presenza.</Italian>
+		<Spanish>Os damos una cordial bienvenida ante nuestra presencia, oh, líder de la poderosa tierra de [OUR_CIV_SHORT].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_DARIUS_1</Tag>
+		<English>Back again, eh? What is it this time?</English>
+		<French>Vous revoilà, hein ? Qu'est-ce qu'il y a encore ?</French>
+		<German>Schon wieder Ihr? Nun, worum geht es diesmal?</German>
+		<Italian>Sei ancora qui, eh? Che succede questa volta?</Italian>
+		<Spanish>Ya estáis de vuelta, ¿eh? ¿De qué se trata esta vez?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_DE_GAULLE_1</Tag>
+		<English>Welcome, [CT_NAME]. Have you come yet again to admire my heroic profile?</English>
+		<French>Bienvenue, [CT_NAME]. Etes-vous revenu admirer mon allure héroïque ?</French>
+		<German>Willkommen, [CT_NAME]. Seid Ihr gekommen, um ein weiteres Mal mein heldenhaftes Profil zu würdigen?</German>
+		<Italian>Benvenuto, [CT_NAME]. Sei di nuovo qui per ammirare il mio eroico profilo?</Italian>
+		<Spanish>Saludos, [CT_NAME]. ¿Habéis vuelto a admirar mi heroico perfil?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_GILGAMESH_1</Tag>
+		<English>You are truly blessed to come once more into my divine presence, [CT_NAME]. I assume that you've brought gifts?</English>
+		<French>Vous avez vraiment de la chance d'être une nouvelle fois en ma divine présence, [CT_NAME]. J'imagine que vous avez amené des cadeaux ?</French>
+		<German>Ihr seid wahrhaft gesegnet, dass Ihr Euch erneut in meinem göttlichen Glanz sonnen dürft, [CT_NAME]. Ich nehme an, Ihr habt angemessene Geschenke dabei?</German>
+		<Italian>Sei davvero fortunato a trovarti ancora una volta in presenza della mia divinità, [CT_NAME]. Presuppongo che tu abbia dei regali.</Italian>
+		<Spanish>No sabéis la suerte que tenéis de poder comparecer una vez más ante mi divina presencia, [CT_NAME]. Supongo que me habréis traído ofrendas, ¿no?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HAMMURABI_1</Tag>
+		<English>Welcome, friend [CT_NAME]! What can mighty [OUR_CIV_SHORT] do to assist your humble empire?</English>
+		<French>Bienvenue, cher [CT_NAME] ! En quoi les puissants [OUR_CIV_SHORT:3] peuvent-ils aider votre humble empire ?</French>
+		<German>Ich grüße Euch in Freundschaft, [CT_NAME]! Womit kann das mächtige Volk von [OUR_CIV_SHORT] Eurem bescheidenen Reich dienen?</German>
+		<Italian>Salute, amico [CT_NAME]! Cosa può fare il grande [OUR_CIV_SHORT] per aiutare il tuo umile impero?</Italian>
+		<Spanish>¡Os saludamos, amigable [CT_NAME]! ¿Qué puede hacer la poderosa tierra de [OUR_CIV_SHORT] por ayudar a vuestro humilde imperio?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HANNIBAL_1</Tag>
+		<English>So you have come, [CT_NAME]? Excellent. It always gives me pleasure to speak with one who is almost my equal.</English>
+		<French>Vous &#234;tes donc venu, [CT_NAME] ? Formidable. Cela me fait toujours un immense plaisir de converser avec quelqu'un qui m'est presque &#233;gal.</French>
+		<German>Ihr stattet mir einen Besuch ab, [CT_NAME]? Wie nett! Es ist mir stets eine Freude, mich mit jemandem unterhalten zu können, der mir nahezu ebenbürtig ist.</German>
+		<Italian>Ah, eccoti qua, [CT_NAME]. Eccellente. Fa sempre piacere discutere con chi è quasi tuo pari.</Italian>
+		<Spanish>¿Así que hab&#233;is venido, [CT_NAME]? Excelente. Siempre es un placer hablar con alguien que casi está a mi altura.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_JOAO_1</Tag>
+		<English>I greet you with effusive ebullience, my good friend.</English>
+		<French>Je vous souhaite chaleureusement la bienvenue, mon bon ami.</French>
+		<German>Ich grüße Euch mit Überschwang und in Freundschaft.</German>
+		<Italian>Ti saluto con affettuoso entusiasmo, mio caro amico.</Italian>
+		<Spanish>Os saludo con efusiva efervescencia, colega del alma.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_JOSEF_STALIN_1</Tag>
+		<English>Ah, [CT_NAME]. Come to surrender and join our glorious collectivist society, have you?</English>
+		<French>Ah, [CT_NAME]. Vous &#234;tes venu vous rendre afin de go&#251;ter au d&#233;licieux bonheur de notre glorieuse soci&#233;t&#233; collectiviste ?</French>
+		<German>Ah, [CT_NAME]! Seid Ihr gekommen, um zu kapitulieren und Euch unserem glorreichen Kollektiv anzuschließen?</German>
+		<Italian>Ah, [CT_NAME]. Sei venuto per arrenderti e unirti alla nostra gloriosa società collettivista?</Italian>
+		<Spanish>Ah, [CT_NAME]. Hab&#233;is venido a rendiros a nuestra gloriosa sociedad colectivizada, ¿no?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_JUSTINIAN_1</Tag>
+		<English>You honor [OUR_CIV_SHORT] with your presence, [CT_NAME]. How can we assist you?</English>
+		<French>Vous honorez les [OUR_CIV_SHORT:3] de votre présence, [CT_NAME]. En quoi puis-je vous aider ?</French>
+		<German>Ihr ehrt das Volk von [OUR_CIV_SHORT] mit Eurem Besuch, [CT_NAME]. Wie können wir Euch behilflich sein?</German>
+		<Italian>Onori [OUR_CIV_SHORT] con la tua presenza, [CT_NAME]. Come possiamo aiutarti?</Italian>
+		<Spanish>Honráis a [OUR_CIV_SHORT] con vuestra presencia, [CT_NAME]. ¿En qué podemos ayudaros?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_LINCOLN_1</Tag>
+		<English>Greetings, [CT_NAME]. Sit down and let's chat for a spell.</English>
+		<French>Salutations, [CT_NAME] ! Asseyez-vous et bavardons un instant.</French>
+		<German>Seid gegrüßt, [CT_NAME]. Nehmt Platz und lasst uns ein wenig plaudern.</German>
+		<Italian>Salve, [CT_NAME]. Siediti e parliamo per un po'.</Italian>
+		<Spanish>Saludos, [CT_NAME]. Sentaos y charlemos un rato.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_MEHMED_1</Tag>
+		<English>Welcome, [CT_NAME]. Let us eat figs and sip sherbet and discuss important things.</English>
+		<French>Bienvenue, [CT_NAME]. Mangeons donc quelques figues autour d'un bon verre de raki et conversons.</French>
+		<German>Willkommen, [CT_NAME]! Lasst uns ein paar Häppchen zu uns nehmen und wichtige Dinge besprechen.</German>
+		<Italian>Salve, [CT_NAME]. Mangiamo fichi e gustiamo un sorbetto mentre parliamo di cose importanti, ti va?</Italian>
+		<Spanish>Saludos, [CT_NAME]. Comamos brevas, paladeemos un sorbete y hablemos de cosas importantes.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_PACAL_1</Tag>
+		<English>I greet my friend and almost equal, [CT_NAME]. And what present shall you give us today?</English>
+		<French>Je salue mon ami et quasi égal, [CT_NAME]. Alors, qu'allez-vous nous offrir aujourd'hui ?</French>
+		<German>Ich grüße Euch in Freundschaft und als nahezu ebenbürtiges Staatsoberhaupt, [CT_NAME]. Und? Womit wollt Ihr uns heute erfreuen?</German>
+		<Italian>Saluto il mio amico e quasi mio pari, [CT_NAME]. E che regalo vuoi farci, oggi?</Italian>
+		<Spanish>Saludo a mi casi igual e inseparable amistad, [CT_NAME]. ¿Y qué presente nos traéis hoy?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_PERICLES_1</Tag>
+		<English>Have you come again, [CT_NAME]? Wonderful! Let us sit on a log and debate Aristotelian Metaphysics until bedtime, shall we?</English>
+		<French>Vous revoilà, [CT_NAME] ? Merveilleux ! Asseyons-nous sur un rondin et débattons de métaphysique aristotélicienne, voulez-vous ?</French>
+		<German>Ihr besucht uns erneut, [CT_NAME]? Wunderbar! Lasst uns Platz nehmen und über die Metaphysik des Aristoteles diskutieren, bis es Schlafenszeit ist, in Ordnung?</German>
+		<Italian>Di nuovo qui, [CT_NAME]? Magnifico! Sediamoci su un tronco e discutiamo della metafisica aristotelica fino a sera, vuoi?</Italian>
+		<Spanish>¿Habéis vuelto, [CT_NAME]? ¡Fantástico! Sentémonos y debatamos sobre metafísica aristotélica hasta que caiga la noche, ¿hace?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_RAGNAR_LODBROK_1</Tag>
+		<English>Greetings, friend [CT_NAME]! Of all the decadent and vulnerable civilizations in the world, yours is one of my favorites! </English>
+		<French>[CT_NAME], bien le bonjour ! De toutes les vuln&#233;rables civilisations d&#233;cadentes qui peuplent notre monde, je dois dire que la v&#244;tre est de loin ma pr&#233;f&#233;r&#233;e !</French>
+		<German>Ich grüße Euch in Freundschaft, [CT_NAME]! Von allen runtergekommenen und verwundbaren Zivilisationen der Welt ist die Eure mir die Liebste! </German>
+		<Italian>Salve, amico [CT_NAME]! Di tutte le decadenti e vulnerabili civiltà del mondo, la tua è la mia preferita! </Italian>
+		<Spanish>Saludos, amigable [CT_NAME]. De todas las civilizaciones decadentes y vulnerables del mundo, la vuestra es una de mis favoritas. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_RAMESSES_II_1</Tag>
+		<English>Ah, [CT_NAME] - come to bask for a while in my wondrous glory, have you?</English>
+		<French>Ah, [CT_NAME], vous &#234;tes l&#224; pour admirer de plus pr&#232;s la glorieuse magnificence de notre civilisation ?</French>
+		<German>Ah, [CT_NAME]! Seid Ihr gekommen, um Euch ein Weilchen in meinem Glanz zu sonnen?</German>
+		<Italian>Ah, [CT_NAME]! Sei qui per crogiolarti un po' alla luce della mia gloria?</Italian>
+		<Spanish>Ah, [CT_NAME]. Hab&#233;is venido a deleitaros un rato con mi radiante gloria, ¿no?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SHAKA_1</Tag>
+		<English>Welcome, [CT_NAME]. And how is that undefended civilization of your coming along?</English>
+		<French>Bienvenue, [CT_NAME]. Alors, comment &#233;volue donc la situation dans votre petite civilisation si vuln&#233;rable ?</French>
+		<German>Willkommen, [CT_NAME]! Und, wie stehen die Dinge in Eurer hilflosen kleinen Zivilisation?</German>
+		<Italian>Salve, [CT_NAME]. Come vanno le cose per la tua civiltà indifesa?</Italian>
+		<Spanish>Saludos, [CT_NAME]. ¿Cómo está esa civilización indefensa de la que venís?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SITTING_BULL_1</Tag>
+		<English>Welcome, my friend! You are indeed wise to seek the council of your betters.</English>
+		<French>Bienvenue, mon ami ! Je vous félicite d'avoir eu la sagesse de chercher conseil auprès de civilisations plus évoluées.</French>
+		<German>Willkommen! Ihr seid in der Tat gut beraten, Euch mit jenen, die Euch überlegen sind, gutzustellen.</German>
+		<Italian>Benvenuto, amico mio! Sei davvero saggio a cercare consiglio presso chi è migliore di te.</Italian>
+		<Spanish>¡Os saludamos, camarada! Tenéis sabiduría suficiente como para buscar consejo de vuestros superiores.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SULEIMAN_1</Tag>
+		<English>My palace is always open to you, [CT_NAME], oh wise and generous leader of [CT_CIV_SHORT].</English>
+		<French>Mon palais vous est toujours ouvert, [CT_NAME], ô sage et généreux chef des [CT_CIV_SHORT:3].</French>
+		<German>Mein Palast steht Euch immer offen, [CT_NAME], weises und großzügiges Staatsoberhaupt von [CT_CIV_SHORT].</German>
+		<Italian>Il mio palazzo è sempre aperto per te, [CT_NAME], saggio e generoso governante di [CT_CIV_SHORT].</Italian>
+		<Spanish>Mi palacio siempre está abierto para vos, [CT_NAME], oh, líder de [CT_CIV_SHORT], espejo de sabiduría y generosidad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SURYAVARMAN_1</Tag>
+		<English>Welcome, my friend! Let us discuss many things. Here: have a mango.</English>
+		<French>Bienvenue, mon ami ! Discutons un instant. Tenez, prenez une mangue.</French>
+		<German>Ich grüße Euch in Freundschaft! Lasst uns doch ein wenig plaudern. Hier, kostet eine Mango!</German>
+		<Italian>Benvenuto, amico mio! Abbiamo molto di cui discutere. Ecco: prenditi un mango.</Italian>
+		<Spanish>¡Os saludamos, camarada! Hemos de hablar de muchas cosas. Tomad un mango.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_WANG_KON_1</Tag>
+		<English>We are honored by your visit, [CT_NAME]. Let us speak of many important things.</English>
+		<French>Votre visite nous honore au plus haut point, [CT_NAME]. Discutons donc de sujets importants.</French>
+		<German>Euer Besuch ehrt uns, [CT_NAME]! Wir haben viele wichtige Dinge zu besprechen.</German>
+		<Italian>Siamo onorati della tua visita, [CT_NAME]. Dobbiamo parlare di cose molto importanti.</Italian>
+		<Spanish>Nos honra vuestra visita, [CT_NAME]. Tenemos muchas cosas importantes de las que hablar.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_WILLEM_VAN_ORANJE_1</Tag>
+		<English>Welcome, [CT_NAME]. I can always spare a few moments to converse with friends and allies.</English>
+		<French>Bienvenue, [CT_NAME]. Je suis toujours disponible pour discuter avec mes amis et alliés.</French>
+		<German>Willkommen, [CT_NAME]. Für Freunde und Verbündete habe ich doch immer ein paar Minuten Zeit.</German>
+		<Italian>Benvenuto, [CT_NAME]. Ho sempre un momento da dedicare ad amici e alleati.</Italian>
+		<Spanish>Saludos, [CT_NAME]. Siempre tengo un momento libre para charlar con amigos y aliados como vos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_WINSTON_CHURCHILL_1</Tag>
+		<English>Greetings, [CT_NAME]! Let us have tea and crumpets and divide the world between us.</English>
+		<French>Salutations, [CT_NAME] ! Et si on se r&#233;partissait le reste du monde autour d'une bonne tasse de th&#233; et de quelques biscuits.</French>
+		<German>Seid gegrüßt, [CT_NAME]! Nehmt etwas Tee und Gebäck und dann lasst uns erörtern, wie wir die Welt unter uns aufteilen wollen.</German>
+		<Italian>Salve, [CT_NAME]! Beviamoci del tè con i biscottini e spartiamoci il mondo!</Italian>
+		<Spanish>¡Saludos, [CT_NAME]! Tomemos un t&#233; con pastitas y repartámonos el mundo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_ZARA_YAQOB_1</Tag>
+		<English>May the blessings of Heaven be upon you, [CT_NAME]!</English>
+		<French>Que les cieux vous bénissent, [CT_NAME] !</French>
+		<German>Mögen die Götter Euch segnen, [CT_NAME]!</German>
+		<Italian>Che le benedizioni del Cielo siano su di te, [CT_NAME]!</Italian>
+		<Spanish>¡Que el Cielo os bendiga, [CT_NAME]!</Spanish>
+	</TEXT>
 </Civ4GameText>
