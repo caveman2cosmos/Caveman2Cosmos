@@ -154,15 +154,11 @@
 ##
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
 
 from array import array
 from random import random,randint,seed, shuffle
 import math
-import sys
-import time
-import os
 
 class MapConstants :
 		def __init__(self):

@@ -4,8 +4,6 @@
 # Thanks to "Ulf 'ulfn' Norell" from Apolyton for his additions relating to the graph section of this screen
 #
 from CvPythonExtensions import *
-
-import string
 import math
 
 # globals

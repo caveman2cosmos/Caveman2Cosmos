@@ -11,8 +11,6 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
-import ScreenInput
 
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()

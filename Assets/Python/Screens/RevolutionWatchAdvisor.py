@@ -49,16 +49,12 @@
 ###############################################################################################################
 
 from CvPythonExtensions import *
-
 import CvScreenEnums
 import CvEventInterface
 import Popup as PyPopup
-
 import BugConfigTracker
-
 import math
 import SystemPaths as SP
-
 # BUG - Options
 import BugCore
 CityScreenOpt = BugCore.game.CityScreen
