@@ -85,7 +85,7 @@
 		<ControlInfo>
 			<Type>CONTROL_NEXTCITY</Type>
 			<Description>TXT_KEY_ACTION_NEXT_CITY</Description>
-			<Help>TXT_KEY_ACTION_NEXT_CITY_HELP</Help>
+			<Help/>
 			<HotKey>KB_HOME</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -100,7 +100,7 @@
 		<ControlInfo>
 			<Type>CONTROL_PREVCITY</Type>
 			<Description>TXT_KEY_ACTION_PREVIOUS_CITY</Description>
-			<Help>TXT_KEY_ACTION_PREVIOUS_CITY_HELP</Help>
+			<Help/>
 			<HotKey>KB_END</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -114,8 +114,8 @@
 		</ControlInfo>
 		<ControlInfo>
 			<Type>CONTROL_NEXTUNIT</Type>
-			<Description>TXT_KEY_ACTION_PREVIOUS_PLOT_UNIT_HELP</Description>
-			<Help>TXT_KEY_ACTION_NEXT_UNIT_HELP</Help>
+			<Description/>
+			<Help/>
 			<HotKey>KB_PERIOD</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -129,8 +129,8 @@
 		</ControlInfo>
 		<ControlInfo>
 			<Type>CONTROL_PREVUNIT</Type>
-			<Description>TXT_KEY_ACTION_PREVIOUS_PLOT_UNIT_HELP</Description>
-			<Help>TXT_KEY_ACTION_PREVIOUS_UNIT_HELP</Help>
+			<Description/>
+			<Help/>
 			<HotKey>KB_COMMA</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -145,7 +145,7 @@
 		<ControlInfo>
 			<Type>CONTROL_CYCLEUNIT</Type>
 			<Description>TXT_KEY_ACTION_CYCLE_UNITS</Description>
-			<Help>TXT_KEY_ACTION_CYCLE_UNITS_HELP</Help>
+			<Help/>
 			<HotKey>KB_RETURN</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -160,7 +160,7 @@
 		<ControlInfo>
 			<Type>CONTROL_CYCLEUNIT_ALT</Type>
 			<Description>TXT_KEY_ACTION_CYCLE_UNITS_ALT</Description>
-			<Help>TXT_KEY_ACTION_CYCLE_UNITS_ALT_HELP</Help>
+			<Help/>
 			<HotKey>KB_W</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -175,7 +175,7 @@
 		<ControlInfo>
 			<Type>CONTROL_CYCLEWORKER</Type>
 			<Description>TXT_KEY_ACTION_CYCLE_WORKERS</Description>
-			<Help>TXT_KEY_ACTION_CYCLE_WORKERS_HELP</Help>
+			<Help/>
 			<HotKey>KB_SLASH</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -190,7 +190,7 @@
 		<ControlInfo>
 			<Type>CONTROL_LASTUNIT</Type>
 			<Description>TXT_KEY_ACTION_LASTUNIT</Description>
-			<Help>TXT_KEY_ACTION_LASTUNIT_HELP</Help>
+			<Help/>
 			<HotKey>KB_BACKSLASH</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -205,7 +205,7 @@
 		<ControlInfo>
 			<Type>CONTROL_ENDTURN</Type>
 			<Description>TXT_KEY_ACTION_ENDTURN</Description>
-			<Help>TXT_KEY_ACTION_ENDTURN_HELP</Help>
+			<Help/>
 			<HotKey>KB_RETURN</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -220,7 +220,7 @@
 		<ControlInfo>
 			<Type>CONTROL_ENDTURN_ALT</Type>
 			<Description>TXT_KEY_ACTION_ENDTURN_ALT</Description>
-			<Help>TXT_KEY_ACTION_ENDTURN_ALT_HELP</Help>
+			<Help/>
 			<HotKey>KB_SPACE</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -235,7 +235,7 @@
 		<ControlInfo>
 			<Type>CONTROL_FORCEENDTURN</Type>
 			<Description>TXT_KEY_ACTION_FORCE_ENDTURN</Description>
-			<Help>TXT_KEY_ACTION_FORCE_ENDTURN_HELP</Help>
+			<Help/>
 			<HotKey>KB_RETURN</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>1</bShiftDown>
@@ -250,7 +250,7 @@
 		<ControlInfo>
 			<Type>CONTROL_AUTOMOVES</Type>
 			<Description>TXT_KEY_ACTION_AUTOMOVES</Description>
-			<Help>TXT_KEY_ACTION_AUTOMOVES_HELP</Help>
+			<Help/>
 			<HotKey>KB_A</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -400,7 +400,7 @@
 		<ControlInfo>
 			<Type>CONTROL_LOAD_GAME</Type>
 			<Description>TXT_KEY_ACTION_LOAD_GAME</Description>
-			<Help>TXT_KEY_ACTION_LOAD_GAME_HELP</Help>
+			<Help/>
 			<HotKey>KB_L</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -415,7 +415,7 @@
 		<ControlInfo>
 			<Type>CONTROL_OPTIONS_SCREEN</Type>
 			<Description>TXT_KEY_ACTION_OPTIONS_SCREEN</Description>
-			<Help>TXT_KEY_ACTION_OPTIONS_SCREEN_HELP</Help>
+			<Help/>
 			<HotKey>KB_O</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -430,7 +430,7 @@
 		<ControlInfo>
 			<Type>CONTROL_RETIRE</Type>
 			<Description>TXT_KEY_ACTION_RETIRE</Description>
-			<Help>TXT_KEY_ACTION_RETIRE_HELP</Help>
+			<Help/>
 			<HotKey>KB_Q</HotKey>
 			<bAltDown>1</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -445,7 +445,7 @@
 		<ControlInfo>
 			<Type>CONTROL_SAVE_GROUP</Type>
 			<Description>TXT_KEY_ACTION_SAVE_GROUP</Description>
-			<Help>TXT_KEY_ACTION_SAVE_GROUP_HELP</Help>
+			<Help/>
 			<HotKey>KB_S</HotKey>
 			<bAltDown>1</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -460,7 +460,7 @@
 		<ControlInfo>
 			<Type>CONTROL_SAVE_NORMAL</Type>
 			<Description>TXT_KEY_ACTION_SAVE_NORMAL</Description>
-			<Help>TXT_KEY_ACTION_SAVE_GAME_HELP</Help>
+			<Help/>
 			<HotKey>KB_S</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>

@@ -17388,4 +17388,364 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>%s1_espionage_mission (%d2[ICON_ESPIONAGE])</Italian>
 		<Spanish>%s1_espionage_mission (%d2 [ICON_ESPIONAGE])</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_AUTOMOVES</Tag>
+		<English>Triggers All Automated Moves</English>
+		<French>D&#233;clenche tous les mouvements automatis&#233;s</French>
+		<German>Alle automatisierten Z&#252;ge ausl&#246;sen</German>
+		<Italian>Attiva tutti i movimenti automatici</Italian>
+		<Spanish>Activa todos los movimientos automatizados</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_BARE_MAP</Tag>
+		<English>Toggle Bare Map</English>
+		<French>Afficher/masquer la carte vierge</French>
+		<German>Leere Karte ein/aus</German>
+		<Italian>Abilita/disabilita la mappa semplificata</Italian>
+		<Spanish>Activar mapa limpio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_BARE_MAP_HELP</Tag>
+		<English>Makes it easier to see the landscape</English>
+		<French>Facilite l'inspection du terrain</French>
+		<German>Erleichtert die Sicht auf die Landschaft.</German>
+		<Italian>Agevola la visione del panorama.</Italian>
+		<Spanish>Hace que ver el paisaje sea m&#225;s f&#225;cil</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CENTER_SELECTION</Tag>
+		<English>Center on Selection</English>
+		<French>Centrer sur la s&#233;lection</French>
+		<German>Auf Auswahl zentrieren</German>
+		<Italian>Centra sulla selezione</Italian>
+		<Spanish>Centrar en selecci&#243;n</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_ACTION_CYCLE_UNITS</Tag>
+		<English>Cycle Units</English>
+		<French>Faire d&#233;filer les unit&#233;s</French>
+		<German>Durch Einheiten schalten</German>
+		<Italian>Scorri unit&#224;</Italian>
+		<Spanish>Alternar unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CYCLE_UNITS_ALT</Tag>
+		<English>Cycle Units (Alt)</English>
+		<French>Faire d&#233;filer les unit&#233;s (Alt)</French>
+		<German>Durch Einheiten schalten (Alt)</German>
+		<Italian>Scorri unit&#224; (Alt)</Italian>
+		<Spanish>Alternar unidades (Alt)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CYCLE_WORKERS</Tag>
+		<English>Cycle Workers</English>
+		<French>Faire d&#233;filer les ouvriers</French>
+		<German>Durch Bautrupps schalten</German>
+		<Italian>Scorri lavoratori</Italian>
+		<Spanish>Alternar trabajadores</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CYCLE_CAMERA_FLYING_MODES</Tag>
+		<English>Cycle Camera Flying Modes</English>
+		<French>Faire d&#233;filer modes de cam&#233;ra libre</French>
+		<German>Durch Kameraflugmodi schalten</German>
+		<Italian>Scorri le visuali dall'alto</Italian>
+		<Spanish>Alternar modos a&#233;reos de c&#225;mara</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_ENDTURN</Tag>
+		<English>End of Turn</English>
+		<French>Fin du tour</French>
+		<German>Rundenende</German>
+		<Italian>Fine del turno</Italian>
+		<Spanish>Fin del turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_ENDTURN_ALT</Tag>
+		<English>End of Turn (Alt)</English>
+		<French>Fin du tour (Alt)</French>
+		<German>Rundenende (Alt)</German>
+		<Italian>Fine del turno (Alt)</Italian>
+		<Spanish>Fin del turno (Alt)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_FLYING_CAMERA</Tag>
+		<English>Toggle Flying Camera</English>
+		<French>Activer/d&#233;sactiver la cam&#233;ra libre</French>
+		<German>Kameraflug umschalten</German>
+		<Italian>Abilita/disabilita la visuale dall'alto</Italian>
+		<Spanish>Activar c&#225;mara a&#233;rea</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_FORCE_ENDTURN</Tag>
+		<English>Force End of Turn</English>
+		<French>Forcer la fin du tour</French>
+		<German>Rundenende erzwingen</German>
+		<Italian>Forza la fine del turno</Italian>
+		<Spanish>Forzar fin del turno </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_GRID</Tag>
+		<English>Toggle Show Tiles</English>
+		<French>Afficher/masquer la grille</French>
+		<German>Gel&#228;ndefelder anzeigen ein/aus</German>
+		<Italian>Abilita/disabilita le caselle</Italian>
+		<Spanish>Activar casillas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_GRID_HELP</Tag>
+		<English>Toggle Gridlines On / Off</English>
+		<French>Afficher/masquer la grille</French>
+		<German>Rasterlinien ein-/ausblenden.</German>
+		<Italian>Attiva/disattiva la griglia</Italian>
+		<Spanish>Activar cuadr&#237;cula</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_ISOMETRIC_CAMERA_LEFT</Tag>
+		<English>Turn Camera 45 Degrees Left</English>
+		<French>Faire pivoter la cam&#233;ra de 45&#176; &#224; gauche</French>
+		<German>Kamera um 45 Grad nach links drehen</German>
+		<Italian>Sposta la visuale di 45&#176; a sinistra</Italian>
+		<Spanish>Girar c&#225;mara 45 grados a la izquierda</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_ISOMETRIC_CAMERA_RIGHT</Tag>
+		<English>Turn Camera 45 Degrees Right</English>
+		<French>Faire pivoter la cam&#233;ra de 45&#176; &#224; droite</French>
+		<German>Kamera um 45 Grad nach rechts drehen</German>
+		<Italian>Sposta la visuale di 45&#176; a destra</Italian>
+		<Spanish>Girar c&#225;mara 45 grados a la derecha</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_LASTUNIT</Tag>
+		<English>Cycle Units (Backwards)</English>
+		<French>Faire d&#233;filer unit&#233;s (en arri&#232;re)</French>
+		<German>Durch Einheiten schalten (r&#252;ckw&#228;rts)</German>
+		<Italian>Scorri unit&#224; (indietro)</Italian>
+		<Spanish>Alternar unidades (atr&#225;s)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_MOUSE_FLYING_CAMERA</Tag>
+		<English>Unlock Flying Camera Mouse</English>
+		<French>D&#233;bloquer cam&#233;ra libre &#224; la souris</French>
+		<German>Maus-Kameraflug aktivieren</German>
+		<Italian>Sblocca il movimento della visuale dall'alto con il mouse</Italian>
+		<Spanish>Desbloquear rat&#243;n de c&#225;mara a&#233;rea</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_NEXT_CITY</Tag>
+		<English>Next City</English>
+		<French>Ville suivante</French>
+		<German>N&#228;chste Stadt</German>
+		<Italian>Citt&#224; successiva</Italian>
+		<Spanish>Ciudad siguiente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_OPTIONS_SCREEN</Tag>
+		<English>Options Screen</English>
+		<French>Ecran des options</French>
+		<German>Optionen</German>
+		<Italian>Schermata delle opzioni</Italian>
+		<Spanish>Pantalla de opciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_ORTHO_CAMERA</Tag>
+		<English>Orthographic Camera</English>
+		<French>Cam&#233;ra orthographique</French>
+		<German>Fixierte Kamera</German>
+		<Italian>Visuale ortografica</Italian>
+		<Spanish>C&#225;mara ortogr&#225;fica</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_PING</Tag>
+		<English>Ping</English>
+		<French>Balise</French>
+		<German>Pingen</German>
+		<Italian>Segnala</Italian>
+		<Spanish>Se&#241;alar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_PING_HELP</Tag>
+		<English>Ping a plot to bring it to the attention of your team mates</English>
+		<French>D&#233;signer un terrain pour y attirer l'attention de vos co&#233;quipiers</French>
+		<German>Pingen Sie ein Gel&#228;ndefeld an, um Ihre Mitstreiter darauf aufmerksam zu machen.</German>
+		<Italian>Segnala un punto per richiamare l'attenzione dei tuoi compagni di squadra.</Italian>
+		<Spanish>Hac&#233;is que destaque una casilla para llamar la atenci&#243;n sobre ella a vuestros compa&#241;eros de equipo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_PREVIOUS_UNIT</Tag>
+		<English>Previous Unit</English>
+		<French>Unit&#233; pr&#233;c&#233;dente</French>
+		<German>Vorherige Einheit</German>
+		<Italian>Unit&#224; precedente</Italian>
+		<Spanish>Unidad anterior</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_PREVIOUS_CITY</Tag>
+		<English>Previous City</English>
+		<French>Ville pr&#233;c&#233;dente</French>
+		<German>Vorherige Stadt</German>
+		<Italian>Citt&#224; precedente</Italian>
+		<Spanish>Ciudad anterior</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_QUICK_SAVE</Tag>
+		<English>Quick Save Game</English>
+		<French>Sauvegarde rapide</French>
+		<German>Schnell speichern</German>
+		<Italian>Salvataggio rapido</Italian>
+		<Spanish>Guardado r&#225;pido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_QUICK_LOAD</Tag>
+		<English>Quick Load Game</English>
+		<French>Chargement rapide</French>
+		<German>Schnell laden</German>
+		<Italian>Caricamento rapido</Italian>
+		<Spanish>Carga r&#225;pida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_RESOURCE_ALL</Tag>
+		<English>Toggle Show All Resource Display</English>
+		<French>Afficher/masquer les ressources</French>
+		<German>Alle Ressourcen anzeigen ein/aus</German>
+		<Italian>Abilita/disabilita la finestra 'Mostra tutte le risorse'</Italian>
+		<Spanish>Activar visor de todos los recursos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SAVE_GROUP</Tag>
+		<English>Save Game (Group)</English>
+		<French>Sauvegarder (groupe)</French>
+		<German>Spiel speichern (Gruppe)</German>
+		<Italian>Salva partita (gruppo)</Italian>
+		<Spanish>Guardar partida (grupo)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SAVE_NORMAL</Tag>
+		<English>Save Game</English>
+		<French>Sauvegarder</French>
+		<German>Spiel speichern</German>
+		<Italian>Salva partita</Italian>
+		<Spanish>Guardar partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SCORES</Tag>
+		<English>Toggle Scores Display</English>
+		<French>Afficher/masquer les scores</French>
+		<German>Punkteanzeige ein/aus</German>
+		<Italian>Abilita/disabilita la 'Finestra dei punteggi'</Italian>
+		<Spanish>Activar visor de puntuaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SCORES_HELP</Tag>
+		<English>Toggle Score Visibility</English>
+		<French>Afficher/masquer les scores.</French>
+		<German>Punktestand ein-/ausblenden.</German>
+		<Italian>Attiva/disattiva la visibilit&#224; del punteggio.</Italian>
+		<Spanish>Activa la visibilidad de la puntuaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SELECT_UNIT_TYPE</Tag>
+		<English>Select All Units (Same Type)</English>
+		<French>S&#233;lectionner toutes les unit&#233;s (m&#234;me type)</French>
+		<German>Alle Einheiten w&#228;hlen (Gleicher Typ)</German>
+		<Italian>Seleziona tutte le unit&#224; (dello stesso tipo)</Italian>
+		<Spanish>Seleccionar todas las unidades (del mismo tipo)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SELECT_UNIT_ALL</Tag>
+		<English>Select All Units</English>
+		<French>S&#233;lectionner toutes les unit&#233;s</French>
+		<German>Alle Einheiten w&#228;hlen</German>
+		<Italian>Seleziona tutte le unit&#224;</Italian>
+		<Spanish>Seleccionar todas las unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SELECT_CITY</Tag>
+		<English>Select City</English>
+		<French>S&#233;lectionner la ville</French>
+		<German>Stadt w&#228;hlen</German>
+		<Italian>Seleziona citt&#224;</Italian>
+		<Spanish>Seleccionar ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SELECT_CAPITAL</Tag>
+		<English>Select Capital</English>
+		<French>S&#233;lectionner capitale</French>
+		<German>Hauptstadt w&#228;hlen</German>
+		<Italian>Seleziona citt&#224;</Italian>
+		<Spanish>Seleccionar capital</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SHOW_RELIGION_SCREEN</Tag>
+		<English>Convert Religion</English>
+		<French>Ecran de Religion</French>
+		<German>Religion wechseln</German>
+		<Italian>Conversione alla religione</Italian>
+		<Spanish>Convertirse a una religi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SHOW_CIVICS_SCREEN</Tag>
+		<English>Change Civics</English>
+		<French>Changer de doctrine</French>
+		<German>Staatsformen &#228;ndern</German>
+		<Italian>Cambia forme di governo</Italian>
+		<Spanish>Cambiar de principios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SHOW_CORPORATION_SCREEN</Tag>
+		<English>Corporation Advisor</English>
+		<French>Conseiller des soci&#233;t&#233;s commerciales</French>
+		<German>Unternehmensberater</German>
+		<Italian>Consigliere corporativo</Italian>
+		<Spanish>Consejero de corporaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SIGN</Tag>
+		<English>Sign</English>
+		<French>Panneau</French>
+		<German>Zeichen</German>
+		<Italian>Segnale</Italian>
+		<Spanish>Letrero</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SIGN_HELP</Tag>
+		<English>Adds a sign to a specific plot that you and your teammates can see.</English>
+		<French>Ajoutez un panneau &#224; un endroit pr&#233;cis pour vous et vos co&#233;quipiers.</French>
+		<German>Markieren Sie ein Gel&#228;ndefeld mit einem Zeichen, das nur Sie und Ihre Teammitglieder sehen k&#246;nnen.</German>
+		<Italian>Aggiunge in una determinata casella un segnale visibile soltanto a te e ai tuoi alleati.</Italian>
+		<Spanish>A&#241;ade a una casilla concreta un letrero que pod&#225;is ver tus compa&#241;eros y t&#250;.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_TOP_DOWN_CAMERA</Tag>
+		<English>Toggle Camera Top Down View</English>
+		<French>Activer/d&#233;sactiver vue invers&#233;e</French>
+		<German>Kamera-Draufsicht umschalten</German>
+		<Italian>Abilita la visuale sottosopra</Italian>
+		<Spanish>Activar vista superior de la c&#225;mara</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_UNIT_ICONS</Tag>
+		<English>Toggle enemy units display</English>
+		<French>Afficher/masquer les unit&#233;s ennemies</French>
+		<German>Feindanzeige ein-/ausblenden</German>
+		<Italian>Abilita/Disabilita la visualizzazione delle unit&#224; nemiche</Italian>
+		<Spanish>Activar el visor de unidades enemigas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_YIELDS</Tag>
+		<English>Toggle Yield Display</English>
+		<French>Afficher/masquer la production</French>
+		<German>Ertragsanzeige umschalten</German>
+		<Italian>Abilita/disabilita la visualizzazione della produzione</Italian>
+		<Spanish>Activar visor de rendimiento</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_YIELDS_HELP</Tag>
+		<English>Toggle Food / Production / Commerce icon visibility</English>
+		<French>Alterner entre l'affichage des ic&#244;nes Nourriture / Production / Commerce</French>
+		<German>Nahrungs-/Produktions-/Wirtschaftssymbole ein-/ausblenden.</German>
+		<Italian>Attiva/disattiva la visibilit&#224; delle icone Cibo/Produzione/Commercio.</Italian>
+		<Spanish>Activa la visibilidad de iconos de alimentos / producci&#243;n / comercio</Spanish>
+	</TEXT>
 </Civ4GameText>
