@@ -9,6 +9,7 @@
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvMessageControl.h"
