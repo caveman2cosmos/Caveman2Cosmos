@@ -18458,4 +18458,524 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>La prova definitiva per i migliori giocatori di Civilization. Ce la farai?</Italian>
 		<Spanish>La prueba definitiva, solo para los mejores jugadores del Civi. &#191;Podr&#225; superarla alguien?</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HURRY_POPULATION</Tag>
+		<English>Can Sacrifice Population to Finish Production in a City</English>
+		<French>Peut sacrifier de la population pour achever la production dans une ville</French>
+		<German>Kann Bev&#246;lkerung opfern, um die Produktion in einer Stadt zu vollenden</German>
+		<Italian>Permette di sacrificare la popolazione per terminare la produzione in una citt&#224;</Italian>
+		<Spanish>Se puede sacrificar poblaci&#243;n para terminar la producci&#243;n en una ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HURRY_GOLD</Tag>
+		<English>Can Spend Gold to Finish Production in a City</English>
+		<French>Peut payer en or pour achever la production dans une ville</French>
+		<German>Kann die Produktion in einer Stadt durch die Zahlung von Gold vollenden</German>
+		<Italian>Permette di spendere oro per terminare la produzione in una citt&#224;</Italian>
+		<Spanish>Se puede gastar oro para terminar la producci&#243;n en una ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_SCREEN</Tag>
+		<English>Info Screen</English>
+		<French>Ecran d'informations</French>
+		<German>Info-Bildschirm</German>
+		<Italian>Schermata delle informazioni</Italian>
+		<Spanish>Pantalla de informaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_RANGE_ATTACK</Tag>
+		<English>Ranged Attack Mode</English>
+		<French>Mode Attaque &#224; distance</French>
+		<German>Fernkampf-Modus</German>
+		<Italian>Modalit&#224; Attacco da lontano</Italian>
+		<Spanish>Modo Ataque a distancia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_RANGE_ATTACK_HELP</Tag>
+		<English>Order the unit to remotely attack the selected tile</English>
+		<French>Ordonner &#224; l'unit&#233; d'attaquer &#224; distance les cases s&#233;lectionn&#233;es</French>
+		<German>Die Einheit greift das ausgew&#228;hlte Gel&#228;ndefeld im Fernkampf an</German>
+		<Italian>Questo ordine fa in modo che l'unit&#224; attacchi da lontano la casella selezionata</Italian>
+		<Spanish>Ordenar a la unidad que ataque desde lejos la casilla seleccionada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_GRIP</Tag>
+		<English>Grip Mode</English>
+		<French>Mode de contr&#244;le</French>
+		<German>Grip-Modus</German>
+		<Italian>Modalit&#224; rotazione</Italian>
+		<Spanish>Modo Agarre</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_SIGN</Tag>
+		<English>Sign Mode</English>
+		<French>Mode Panneau</French>
+		<German>Zeichenmodus</German>
+		<Italian>Modalit&#224; segnale</Italian>
+		<Spanish>Modo letrero</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_SELECTION</Tag>
+		<English>Selection Mode</English>
+		<French>Mode S&#233;lection</French>
+		<German>Auswahlmodus</German>
+		<Italian>Modalit&#224; di selezione</Italian>
+		<Spanish>Modo Selecci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_PING</Tag>
+		<English>Ping Teammates</English>
+		<French>Placer balise pour &#233;quipe</French>
+		<German>Mitspieler anpingen</German>
+		<Italian>Lascia un segnale ai compagni di squadra</Italian>
+		<Spanish>Se&#241;alar a los compa&#241;eros</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_GLOBELAYER_INPUT</Tag>
+		<English>Globe Input Mode</English>
+		<French>Commandes Globe</French>
+		<German>Eingabemodus Weltkarte</German>
+		<Italian>Modalit&#224; 'Comandi globali'</Italian>
+		<Spanish>Modo Datos globales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_DRAG</Tag>
+		<English>Drag Mode</English>
+		<French>Rotation</French>
+		<German>Ziehmodus</German>
+		<Italian>Modalit&#224; 'Trascina'</Italian>
+		<Spanish>Modo Arrastrar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_GO_TO</Tag>
+		<English>Go To Mode</English>
+		<French>Aller &#224;</French>
+		<German>Gehe-zu-Modus</German>
+		<Italian>Modalit&#224; 'Vai'</Italian>
+		<Spanish>Modo Ir a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_TYPE</Tag>
+		<English>Go To Mode (Same Unit Type)</English>
+		<French>Aller &#224; (m&#234;me type d'unit&#233;)</French>
+		<German>Gehe-zu-Modus (Gleiche Einheiten)</German>
+		<Italian>Modalit&#224; 'Vai' (unit&#224; dello stesso tipo)</Italian>
+		<Spanish>Modo Ir a (mismo tipo de unidad)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_ALL</Tag>
+		<English>Go To Mode (All Units)</English>
+		<French>Aller &#224; (toutes unit&#233;s)</French>
+		<German>Gehe-zu-Modus (Alle Einheiten)</German>
+		<Italian>Modalit&#224; 'Vai' (tutte le unit&#224;)</Italian>
+		<Spanish>Modo Ir a (todas las unidades)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_ROUTE_TO</Tag>
+		<English>Route To Mode</English>
+		<French>Route vers</French>
+		<German>Stra&#223;e nach-Modus</German>
+		<Italian>Modalit&#224; 'Itinerario'</Italian>
+		<Spanish>Modo Ir en ruta a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_AIRLIFT</Tag>
+		<English>Airlift Mode</English>
+		<French>Transport a&#233;rien</French>
+		<German>Lufttransportmodus</German>
+		<Italian>Modalit&#224; trasporto aereo</Italian>
+		<Spanish>Modo Aerotransportar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_NUKE</Tag>
+		<English>Nuke Mode</English>
+		<French>Nucl&#233;aire</French>
+		<German>Atomraketenmodus</German>
+		<Italian>Modalit&#224; 'Bomba nucleare'</Italian>
+		<Spanish>Modo Lanzar arma nuclear</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_RECON</Tag>
+		<English>Recon Mode</English>
+		<French>Reconnaissance</French>
+		<German>Aufkl&#228;rungsmodus</German>
+		<Italian>Modalit&#224; 'Ricognizione'</Italian>
+		<Spanish>Modo Reconocer</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB</Tag>
+		<English>Air Bomb Mode</English>
+		<French>Bombardement a&#233;rien</French>
+		<German>Luftbombardierungsmodus</German>
+		<Italian>Modalit&#224; 'Bombardamento aereo'</Italian>
+		<Spanish>Modo Bombardeo a&#233;reo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_AIRSTRIKE</Tag>
+		<English>Air Strike Mode</English>
+		<French>Frappe a&#233;rienne</French>
+		<German>Luftangriffsmodus</German>
+		<Italian>Modalit&#224; 'Attacco aereo'</Italian>
+		<Spanish>Modo Ataque a&#233;reo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_REBASE</Tag>
+		<English>Rebase Mode</English>
+		<French>R&#233;affecter</French>
+		<German>Stellungswechselmodus</German>
+		<Italian>Modalit&#224; 'Cambia base'</Italian>
+		<Spanish>Modo Cambiar de base</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_HELP</Tag>
+		<English>Order the selected unit to move to a tile</English>
+		<French>Ordonner &#224; l'unit&#233; s&#233;lectionn&#233;e de se d&#233;placer vers une case.</French>
+		<German>Schicken Sie die gew&#228;hlte Einheit auf ein bestimmtes Gel&#228;ndefeld.</German>
+		<Italian>Ordina all'unit&#224; selezionata di muoversi su una casella</Italian>
+		<Spanish>Ordena a la unidad seleccionada que se mueva hasta una casilla.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_TYPE_HELP</Tag>
+		<English>Orders all units of the currently selected unit's type to move</English>
+		<French>Ordonner &#224; toutes les unit&#233;s du type s&#233;lectionn&#233; de se d&#233;placer.</French>
+		<German>Erteilen Sie allen Einheiten des gew&#228;hlten Typs den Marschbefehl.</German>
+		<Italian>Ordina a tutte le unit&#224; dello stesso tipo di quella selezionata di muoversi</Italian>
+		<Spanish>Ordena moverse a todas las unidades del tipo seleccionado actualmente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_ALL_HELP</Tag>
+		<English>Order all units on the currently selected unit's tile to move</English>
+		<French>Ordonner &#224; toutes les unit&#233;s sur la case de l'unit&#233; s&#233;lectionn&#233;e de se d&#233;placer.</French>
+		<German>Erteilen Sie allen Einheiten auf dem Feld der gew&#228;hlten Einheit den Marschbefehl.</German>
+		<Italian>Ordina a tutte le unit&#224; attualmente sulla casella selezionata di muoversi</Italian>
+		<Spanish>Ordena moverse a todas las unidades de la casilla seleccionada actualmente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_ROUTE_TO_HELP</Tag>
+		<English>Order the unit to build roads or railroads to the selected tile</English>
+		<French>Ordonner &#224; l'unit&#233; s&#233;lectionn&#233;e de construire des routes ou des voies ferr&#233;es vers la case s&#233;lectionn&#233;e.</French>
+		<German>Befehlen Sie der Einheit, Stra&#223;en oder Eisenbahnstrecken zum gew&#228;hlten Gel&#228;ndefeld zu bauen.</German>
+		<Italian>Ordina all'unit&#224; di costruire strade e ferrovie sulla casella selezionata</Italian>
+		<Spanish>Ordena a la unidad que construya carreteras o ferrocarriles hasta la casilla seleccionada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_AIRLIFT_HELP</Tag>
+		<English>Order the unit airlifted to the selected tile</English>
+		<French>Ordonner le transport a&#233;rien de l'unit&#233; vers la case s&#233;lectionn&#233;e.</French>
+		<German>Fliegen Sie die Einheit zum gew&#228;hlten Gel&#228;ndefeld.</German>
+		<Italian>Ordina il trasporto aereo dell'unit&#224; sulla casella selezionata</Italian>
+		<Spanish>Ordena a la unidad que se aerotransporte hasta la casilla seleccionada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_NUKE_HELP</Tag>
+		<English>Order a nuclear missile strike on the selected tile</English>
+		<French>Ordonner une frappe nucl&#233;aire sur la case s&#233;lectionn&#233;e</French>
+		<German>Befehlen Sie einen Atomschlag auf das gew&#228;hlte Gel&#228;ndefeld.</German>
+		<Italian>Ordina un attacco missilistico nucleare sulla casella selezionata</Italian>
+		<Spanish>Ordena un ataque con misil nuclear a la casilla seleccionada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_RECON_HELP</Tag>
+		<English>Order the air unit to perform a recon sweep on an area</English>
+		<French>Ordonner &#224; l'unit&#233; a&#233;rienne d'effectuer une reconnaissance sur un secteur donn&#233;.</French>
+		<German>Schicken Sie die Lufteinheit zu einem Aufkl&#228;rungsflug in das Zielgebiet.</German>
+		<Italian>Ordina all'unit&#224; aerea di eseguire un giro di ricognizione sulla zona</Italian>
+		<Spanish>Ordena a la unidad a&#233;rea que lleve a cabo un barrido de reconocimiento en un &#225;rea.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB_HELP</Tag>
+		<English>Order the air unit to bomb the city or improvement in the selected tile</English>
+		<French>Ordonner &#224; l'unit&#233; a&#233;rienne de bombarder la ville ou l'am&#233;nagement de la case s&#233;lectionn&#233;e.</French>
+		<German>Befehlen Sie der Lufteinheit, die Modernisierung des gew&#228;hlten Gel&#228;ndefelds zu bombardieren.</German>
+		<Italian>Ordina all'unit&#224; aerea di bombardare la citt&#224; o il miglioramento sulla casella selezionata</Italian>
+		<Spanish>Ordena a la unidad a&#233;rea que bombardee la ciudad o la mejora que haya en la casilla seleccionada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_AIRSTRIKE_HELP</Tag>
+		<English>Order the air unit to attack enemy units in the selected tile</English>
+		<French>Ordonner &#224; l'unit&#233; a&#233;rienne d'attaquer les unit&#233;s ennemies sur la case s&#233;lectionn&#233;e.</French>
+		<German>Befehlen Sie der Lufteinheit, feindliche Einheiten auf dem gew&#228;hlten Gel&#228;ndefeld zu bombardieren.</German>
+		<Italian>Ordina all'unit&#224; aerea di attaccare le unit&#224; nemiche sulla casella selezionata</Italian>
+		<Spanish>Ordena a la unidad a&#233;rea que ataque a las unidades enemigas que haya en la casilla seleccionada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_REBASE_HELP</Tag>
+		<English>Order the air unit to rebase to another city</English>
+		<French>R&#233;affecter un unit&#233; a&#233;rienne &#224; une autre ville.</French>
+		<German>Befehlen Sie der Lufteinheit, in einer anderen Stadt zu landen.</German>
+		<Italian>Ordina all'unit&#224; aerea di tornare alla base in un'altra citt&#224;</Italian>
+		<Spanish>Ordena a la unidad a&#233;rea que cambie de base y se vaya a otra ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_VOTED_AGAINST_US</Tag>
+		<English>"You voted against us!"</English>
+		<French>"Vous avez vot&#233; contre nous !"</French>
+		<German>"Ihr habt gegen uns gestimmt!"</German>
+		<Italian>"Hai votato contro di noi!"</Italian>
+		<Spanish>"&#161;Votasteis contra nosotros!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_VOTED_FOR_US</Tag>
+		<English>"You voted for us"</English>
+		<French>"Vous avez vot&#233; pour nous."</French>
+		<German>"Ihr habt f&#252;r uns gestimmt"</German>
+		<Italian>"Hai votato per noi."</Italian>
+		<Spanish>"Votasteis por nosotros."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_EVENT_GOOD_TO_US</Tag>
+		<English>"Past events have proved your good nature to us."</English>
+		<French>"Les &#233;v&#233;nements pass&#233;s prouvent qu'on peut vous faire confiance."</French>
+		<German>"Fr&#252;here Geschehnisse haben gezeigt, dass Ihr uns wohl gesonnen seid."</German>
+		<Italian>"Gli eventi passati ci hanno dimostrato la tua buona natura."</Italian>
+		<Spanish>"Los acontecimientos pasados nos han demostrado vuestra bondad."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_EVENT_BAD_TO_US</Tag>
+		<English>"Past events have proved your bad nature to us."</English>
+		<French>"Les &#233;v&#233;nements pass&#233;s prouvent qu'on ne peut pas vous faire confiance."</French>
+		<German>"Fr&#252;here Geschehnisse haben gezeigt, dass Ihr uns nicht wohl gesonnen seid."</German>
+		<Italian>"Gli eventi passati ci hanno dimostrato la tua natura malvagia."</Italian>
+		<Spanish>"Los acontecimientos pasados nos han demostrado vuestra maldad."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_LIBERATED_CITIES</Tag>
+		<English>"You liberated our cities"</English>
+		<French>"Vous avez lib&#233;r&#233; nos villes."</French>
+		<German>"Ihr habt unsere St&#228;dte befreit!"</German>
+		<Italian>"Hai liberato le nostre citt&#224;"</Italian>
+		<Spanish>"Liberasteis nuestras ciudades."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_HIRED_WAR_ALLY</Tag>
+		<English>"You brought in a war ally against us!"</English>
+		<French>"Vous avez soulev&#233; un de nos alli&#233;s militaires contre nous !"</French>
+		<German>"Ihr habt einen Kriegsverb&#252;ndeten gegen uns aufgebracht!"</German>
+		<Italian>"Hai portato in guerra un alleato contro di noi!"</Italian>
+		<Spanish>"&#161;Hab&#233;is tra&#237;do a un aliado de guerra contra nosotros!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_HIRED_TRADE_EMBARGO</Tag>
+		<English>"You negotiated a trade embargo against us!"</English>
+		<French>"Vous avez n&#233;goci&#233; un embargo commercial contre nous !"</French>
+		<German>"Ihr habt ein Handelsembargo gegen uns ausgehandelt!"</German>
+		<Italian>"Hai negoziato un embargo contro di noi!"</Italian>
+		<Spanish>"&#161;Hab&#233;is negociado un embargo comercial contra nosotros!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_DECLARED_WAR</Tag>
+		<English>"You declared war on us!"</English>
+		<French>"Vous nous avez d&#233;clar&#233; la guerre !"</French>
+		<German>"Ihr habt uns den Krieg erkl&#228;rt!"</German>
+		<Italian>"Ci hai dichiarato guerra!"</Italian>
+		<Spanish>"&#161;Nos declarasteis la guerra!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_DECLARED_WAR_ON_FRIEND</Tag>
+		<English>"You declared war on our friend!"</English>
+		<French>"Vous avez d&#233;clar&#233; la guerre &#224; nos alli&#233;s !"</French>
+		<German>"Ihr habt unseren Freunden den Krieg erkl&#228;rt!"</German>
+		<Italian>"Hai dichiarato guerra a un nostro amico!"</Italian>
+		<Spanish>"&#161;Declarasteis la guerra a nuestros amigos!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_NUKED_US</Tag>
+		<English>"You nuked us!"</English>
+		<French>"Vous nous avez attaqu&#233; avec une arme nucl&#233;aire !"</French>
+		<German>"Ihr habt einen atomaren Angriff gegen uns ausgef&#252;hrt!"</German>
+		<Italian>"Ci hai bombardato con l'atomica!"</Italian>
+		<Spanish>"&#161;Nos bombardeasteis con armas nucleares!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_NUKED_FRIEND</Tag>
+		<English>"You nuked our friend!"</English>
+		<French>"Vous avez attaqu&#233; nos alli&#233;s avec une arme nucl&#233;aire !"</French>
+		<German>"Ihr habt einen atomaren Angriff gegen unsere Freunde ausgef&#252;hrt!"</German>
+		<Italian>"Hai bombardato con l'atomica un nostro amico!"</Italian>
+		<Spanish>"&#161;Bombardeasteis con armas nucleares a nuestros amigos!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_RAZED_CITY</Tag>
+		<English>"You razed one of our cities!"</English>
+		<French>"Vous avez ras&#233; l'une de nos villes !"</French>
+		<German>"Ihr habt eine unserer St&#228;dte vernichtet!"</German>
+		<Italian>"Hai razziato una delle nostre citt&#224;!"</Italian>
+		<Spanish>"&#161;Arrasasteis una de nuestras ciudades!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_RAZED_HOLY_CITY</Tag>
+		<English>"You razed a Holy City!"</English>
+		<French>"Vous avez ras&#233; une ville sainte !"</French>
+		<German>"Ihr habt eine Heilige Stadt vernichtet!"</German>
+		<Italian>"Hai razziato una Citt&#224; Santa!"</Italian>
+		<Spanish>"&#161;Arrasasteis una ciudad santa!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_SPY_CAUGHT</Tag>
+		<English>"Your spy was caught causing trouble!"</English>
+		<French>"Votre espion a &#233;t&#233; pris en flagrant d&#233;lit !"</French>
+		<German>"Euer Spion wurde dabei erwischt, wie er Unruhe stiftete!"</German>
+		<Italian>"Abbiamo scoperto una tua spia mentre combinava guai!"</Italian>
+		<Spanish>"&#161;Pillamos a vuestro esp&#237;a con las manos en la masa!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_GIVE_HELP</Tag>
+		<English>"You gave us help."</English>
+		<French>"Vous nous avez aid&#233;s."</French>
+		<German>"Ihr habt uns geholfen."</German>
+		<Italian>"Ci hai aiutati."</Italian>
+		<Spanish>"Nos ayudasteis."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_REFUSED_HELP</Tag>
+		<English>"You refused to help us!"</English>
+		<French>"Vous avez refus&#233; de nous aider !"</French>
+		<German>"Ihr habt uns Eure Hilfe verwehrt!"</German>
+		<Italian>"Avete rifiutato di aiutarci!"</Italian>
+		<Spanish>"&#161;Os negasteis a ayudarnos!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_ACCEPT_DEMAND</Tag>
+		<English>"You gave us tribute."</English>
+		<French>"Vous nous avez vers&#233; un tribut !"</French>
+		<German>"Ihr habt uns Tribut gezollt."</German>
+		<Italian>"Ci hai donato dei tributi."</Italian>
+		<Spanish>"Nos disteis un tributo."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_REJECTED_DEMAND</Tag>
+		<English>"You refused to give us tribute!"</English>
+		<French>"Vous avez refus&#233; de nous verser un tribut !"</French>
+		<German>"Ihr habt Euch geweigert, uns Tribut zu zollen!"</German>
+		<Italian>"Avete rifiutato di donarci dei tributi!"</Italian>
+		<Spanish>"&#161;Os negasteis a darnos un tributo!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_ACCEPTED_RELIGION</Tag>
+		<English>"You accepted our state religion."</English>
+		<French>"Vous avez accept&#233; notre religion d'&#233;tat."</French>
+		<German>"Ihr habt unsere Staatsreligion akzeptiert."</German>
+		<Italian>"Hai accettato la nostra religione ufficiale."</Italian>
+		<Spanish>"Aceptasteis nuestra religi&#243;n oficial."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_DENIED_RELIGION</Tag>
+		<English>"You refused to accept our state religion!"</English>
+		<French>"Vous avez refus&#233; notre religion d'&#233;tat !"</French>
+		<German>"Ihr habt unsere Staatsreligion abgelehnt!"</German>
+		<Italian>"Hai rifiutato di adottare la nostra religione ufficiale."</Italian>
+		<Spanish>"&#161;Os negasteis a aceptar nuestra religi&#243;n oficial!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_ACCEPTED_CIVIC</Tag>
+		<English>"You accepted our favorite civic."</English>
+		<French>"Vous avez accept&#233; notre doctrine pr&#233;f&#233;r&#233;e."</French>
+		<German>"Ihr habt unsere bevorzugte Staatsform akzeptiert."</German>
+		<Italian>"Hai accettato la nostra forma di governo preferita."</Italian>
+		<Spanish>"Adoptasteis nuestro principio favorito."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_DENIED_CIVIC</Tag>
+		<English>"You refused to accept our favorite civic!"</English>
+		<French>"Vous avez refus&#233; notre doctrine pr&#233;f&#233;r&#233;e."</French>
+		<German>"Ihr habt unsere bevorzugte Staatsform abgelehnt!"</German>
+		<Italian>"Avete rifiutato la nostra forma di governo preferita."</Italian>
+		<Spanish>"&#161;Os negasteis a adoptar nuestro principio favorito!" </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_ACCEPTED_JOIN_WAR</Tag>
+		<English>"You agreed to come to our aid in war-time."</English>
+		<French>"Vous avez accept&#233; de nous aider en temps de guerre."</French>
+		<German>"Ihr habt zugestimmt, uns in Kriegszeiten zur Seite zu stehen."</German>
+		<Italian>"Hai accettato di aiutarci in tempi di guerra."</Italian>
+		<Spanish>"Accedisteis a venir en nuestra ayuda en tiempos de guerra."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_DENIED_JOIN_WAR</Tag>
+		<English>"You refused to help us during war-time!"</English>
+		<French>"Vous avez refus&#233; de nous aider en temps de guerre !"</French>
+		<German>"Ihr habt Euch geweigert, uns in Kriegszeiten zur Seite zu stehen!"</German>
+		<Italian>"Vi siete rifiutati di aiutarci durante la guerra."</Italian>
+		<Spanish>"&#161;Os negasteis a ayudarnos en tiempos de guerra!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_ACCEPTED_STOP_TRADING</Tag>
+		<English>"You agreed to stop trading with our worst enemy."</English>
+		<French>"Vous avez accept&#233; de cesser tout commerce avec notre pire ennemi."</French>
+		<German>"Ihr habt zugestimmt, Eure Handelsbeziehungen mit unserem schlimmsten Feind einzustellen."</German>
+		<Italian>"Avete accettato di interrompere il commercio con il nostro peggior nemico."</Italian>
+		<Spanish>"Accedisteis a dejar de comerciar con nuestro peor enemigo."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_DENIED_STOP_TRADING</Tag>
+		<English>"You refused to stop trading with our worst enemy."</English>
+		<French>"Vous avez refus&#233; de cesser tout commerce avec notre pire ennemi."</French>
+		<German>"Ihr habt Euch geweigert, Eure Handelsbeziehungen mit unserem schlimmsten Feind einzustellen!"</German>
+		<Italian>"Vi siete rifiutati di interrompere il commercio con il nostro peggior nemico." </Italian>
+		<Spanish>"Os negasteis a dejar de comerciar con nuestro peor enemigo."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_STOPPED_TRADING</Tag>
+		<English>"You stopped trading with us."</English>
+		<French>"Vous avez cess&#233; de commercer avec nous."</French>
+		<German>"Ihr habt Eure Handelsbeziehungen mit uns eingestellt."</German>
+		<Italian>"Hai smesso di commerciare con noi."</Italian>
+		<Spanish>"Dejasteis de comerciar con nosotros."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_STOPPED_TRADING_RECENT</Tag>
+		<English>"You recently stopped trading with us!"</English>
+		<French>"Vous venez de cesser tout commerce avec nous !"</French>
+		<German>"Ihr habt k&#252;rzlich Eure Handelsbeziehungen mit uns eingestellt!"</German>
+		<Italian>"Di recente hai interrotto il commercio con noi!"</Italian>
+		<Spanish>"Hace poco dejasteis de comerciar con nosotros."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_MADE_DEMAND</Tag>
+		<English>"You made an arrogant demand!"</English>
+		<French>"Vous nous avez fait une demande arrogante !"</French>
+		<German>"Ihr habt eine v&#246;llig &#252;berzogene Forderung gestellt!"</German>
+		<Italian>"Hai fatto una richiesta arrogante!"</Italian>
+		<Spanish>"&#161;Nos hicisteis una exigencia arrogante!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_MADE_DEMAND_RECENT</Tag>
+		<English>"You recently made an arrogant demand!"</English>
+		<French>"Vous venez de nous soumettre une requ&#234;te fort arrogante !"</French>
+		<German>"Ihr habt k&#252;rzlich eine v&#246;llig &#252;berzogene Forderung gestellt!"</German>
+		<Italian>"Recentemente hai fatto una richiesta arrogante!"</Italian>
+		<Spanish>"&#161;Hace poco nos hicisteis una exigencia arrogante!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_CANCELLED_OPEN_BORDERS</Tag>
+		<English>"You cancelled our open border agreement!"</English>
+		<French>"Vous avez annul&#233; notre accord de libre passage !"</French>
+		<German>"Ihr habt unsere Grenz&#246;ffnungsvereinbarung aufgehoben!"</German>
+		<Italian>"Hai annullato il nostro accordo di diritto di passaggio!"</Italian>
+		<Spanish>"&#161;Cancelasteis nuestro acuerdo de apertura de fronteras!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_TRADED_TECH_TO_US</Tag>
+		<English>"You have shared your technological discoveries with us."</English>
+		<French>"Vous avez partag&#233; vos d&#233;couvertes technologiques avec nous."</French>
+		<German>"Ihr habt Eure technologischen Errungenschaften mit uns geteilt."</German>
+		<Italian>"Avete condiviso le vostre scoperte tecnologiche con noi."</Italian>
+		<Spanish>"Compartisteis con nosotros vuestros descubrimientos tecnol&#243;gicos."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_RECEIVED_TECH_FROM_ANY</Tag>
+		<English>"You received a tech from another civilization."</English>
+		<French>"Une autre civilisation vous a fait don d'une technologie."</French>
+		<German>"Ihr habt eine Technologie von einer anderen Zivilisation erhalten."</German>
+		<Italian>"Hai ricevuto una tecnologia da un'altra civilt&#224;."</Italian>
+		<Spanish>"Recibisteis una tecnolog&#237;a de otra civilizaci&#243;n."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MILITARY_ADVISOR_TITLE</Tag>
+		<English>Military Advisor</English>
+		<French>Conseiller militaire</French>
+		<German>Milit&#228;rberater</German>
+		<Italian>Consigliere militare</Italian>
+		<Spanish>Consejero militar</Spanish>
+	</TEXT>
 </Civ4GameText>
