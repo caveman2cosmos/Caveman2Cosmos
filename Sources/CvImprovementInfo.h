@@ -27,8 +27,8 @@ public:
 	int getImprovementPillage() const;
 	int getImprovementUpgrade() const;
 	int getNumBuildTypes() const { return m_improvementBuildTypes.size(); };
-	std::vector<ImprovementBuildTypes> getBuildTypes() const { return m_improvementBuildTypes; };
-	const ImprovementBuildTypes& getImprovementBuildType(int iIndex) const;
+	const std::vector<BuildTypes>& getBuildTypes() const { return m_improvementBuildTypes; };
+	BuildTypes getImprovementBuildType(int iIndex) const;
 	// Super Forts begin *XML*
 	int getCulture() const;
 	int getCultureRange() const;
@@ -223,7 +223,7 @@ protected:
 	// bool vector with delayed resolution
 	std::vector<int> m_aiAlternativeImprovementUpgradeTypes;
 	std::vector<int> m_aiFeatureChangeTypes;
-	std::vector<ImprovementBuildTypes> m_improvementBuildTypes;
+	std::vector<BuildTypes> m_improvementBuildTypes;
 
 	//Post Load Functions
 	//int m_iHighestCost;
