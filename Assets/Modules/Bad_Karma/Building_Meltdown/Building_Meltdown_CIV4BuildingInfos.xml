@@ -13,23 +13,23 @@
 		<BuildingInfo>
 			<Type>BUILDING_GENERATION_IV_REACTOR</Type>
 			<AndDependencyTypes>
-             	<DependencyType>BUILDING_GENERATION_IV_REACTOR</DependencyType>
- 			</AndDependencyTypes>
+				<DependencyType>BUILDING_GENERATION_IV_REACTOR</DependencyType>
+			</AndDependencyTypes>
 			<iNukeExplosionRand>1</iNukeExplosionRand>
 		</BuildingInfo>
 		<!-- Atompunk -->
 		<BuildingInfo>
 			<Type>BUILDING_CLEAN_NUCLEAR_REACTOR</Type>
 			<AndDependencyTypes>
-             	<DependencyType>BUILDING_CLEAN_NUCLEAR_REACTOR</DependencyType>
- 			</AndDependencyTypes>
+				<DependencyType>BUILDING_CLEAN_NUCLEAR_REACTOR</DependencyType>
+			</AndDependencyTypes>
 			<iNukeExplosionRand>3</iNukeExplosionRand>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HI_TECH_NUCLEAR_REACTOR</Type>
 			<AndDependencyTypes>
-             	<DependencyType>BUILDING_HI_TECH_NUCLEAR_REACTOR</DependencyType>
- 			</AndDependencyTypes>
+				<DependencyType>BUILDING_HI_TECH_NUCLEAR_REACTOR</DependencyType>
+			</AndDependencyTypes>
 			<iNukeExplosionRand>2</iNukeExplosionRand>
 		</BuildingInfo>
 	</BuildingInfos>

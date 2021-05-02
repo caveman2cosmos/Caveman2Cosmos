@@ -89,10 +89,6 @@
 		<French>[COLOR_WARNING_TEXT]Requiert un taux de criminalité d'au moins %D1[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROPERTY_FRUIT_STRATEGY</Tag>
-		<English>[H1]Crime Rate[\H1][PARAGRAPH:2]Crime events require a minimum Crime Rate in a city before they trigger. Certain buildings raise the crime rate, certain buildings lower the crime rate. So you are less likely to get a theft in a city with a lot of law buildings than you are in a city with a gambling house, etc.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_HUNT</Tag>
 		<English>Crime Rate</English>
 		<French>Taux de Criminalité</French>
@@ -123,10 +119,6 @@
 		<French>[COLOR_WARNING_TEXT]Requiert un taux de criminalité d'au moins %D1[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROPERTY_HUNT_STRATEGY</Tag>
-		<English>[H1]Crime Rate[\H1][PARAGRAPH:2]Crime events require a minimum Crime Rate in a city before they trigger. Certain buildings raise the crime rate, certain buildings lower the crime rate. So you are less likely to get a theft in a city with a lot of law buildings than you are in a city with a gambling house, etc.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_LORE</Tag>
 		<English>Crime Rate</English>
 	</TEXT>
@@ -151,10 +143,6 @@
 		<English>[COLOR_WARNING_TEXT]Needs a crime rate of at least %D1[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROPERTY_LORE_STRATEGY</Tag>
-		<English>[H1]Crime Rate[\H1][PARAGRAPH:2]Crime events require a minimum Crime Rate in a city before they trigger. Certain buildings raise the crime rate, certain buildings lower the crime rate. So you are less likely to get a theft in a city with a lot of law buildings than you are in a city with a gambling house, etc.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_MATERIAL</Tag>
 		<English>Crime Rate</English>
 	</TEXT>
@@ -177,9 +165,5 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_MATERIAL_PREREQ_MIN</Tag>
 		<English>[COLOR_WARNING_TEXT]Needs a crime rate of at least %D1[COLOR_REVERT]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROPERTY_MATERIAL_STRATEGY</Tag>
-		<English>[H1]Crime Rate[\H1][PARAGRAPH:2]Crime events require a minimum Crime Rate in a city before they trigger. Certain buildings raise the crime rate, certain buildings lower the crime rate. So you are less likely to get a theft in a city with a lot of law buildings than you are in a city with a gambling house, etc.</English>
 	</TEXT>
 </Civ4GameText>

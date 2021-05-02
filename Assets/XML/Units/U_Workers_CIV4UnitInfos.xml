@@ -6,7 +6,7 @@
 	- This whole effort might be obsoleted if Flabbert gets a converted database structure working, but oh well.
 -->
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
-    <UnitInfos>
+	<UnitInfos>
 		<!-- ::::LAND:::: -->
 		<!-- Gatherer -->
 		<UnitInfo>
@@ -25,7 +25,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_GATHERER</Description>
 			<Civilopedia>TXT_KEY_UNIT_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GATHERER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<UnitAIs>
@@ -177,7 +176,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -417,7 +415,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKANIMAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKANIMAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -693,10 +690,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -774,7 +767,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKBUFFALO</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBUFFALO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -1050,10 +1042,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1143,7 +1131,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKMULE</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKMULE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -1419,10 +1406,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1513,7 +1496,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKELEPHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKELEPHANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -1789,10 +1771,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1872,7 +1850,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKLLAMA</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKLLAMA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -2148,10 +2125,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2241,7 +2214,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKCAMEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKCAMEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -2517,10 +2489,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2611,7 +2579,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKER_INDUSTRIAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_INDUSTRIAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -2816,10 +2783,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -2972,7 +2935,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BULLDOZER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -3091,7 +3053,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKER_MODERN</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -3266,10 +3227,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3455,7 +3412,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CLONES</Description>
 			<Civilopedia>TXT_KEY_UNIT_CLONES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CLONES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -3712,7 +3668,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKER_ANDROID</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_ANDROID_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -3994,7 +3949,6 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
-
 		<!-- ::::NAVAL:::: -->
 		<!-- Workboat (Prehistoric) -->
 		<UnitInfo>
@@ -4018,7 +3972,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKBOAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4144,7 +4097,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKBOAT_CLASSIC</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBOAT_CLASSIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4201,6 +4153,16 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_BEACON_REEF</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<Build>
+					<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -4297,7 +4259,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKBOAT_MIDDLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBOAT_MIDDLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4465,7 +4426,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKBOAT_MODERN</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBOAT_MODERN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4605,7 +4565,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSTRUCT_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CONSTRUCT_SHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4754,7 +4713,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OFFSHORE_PLATFORM</Description>
 			<Civilopedia>TXT_KEY_UNIT_OFFSHORE_PLATFORM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OFFSHORE_PLATFORM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4815,7 +4773,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_UNIT_EXTRACTION_FACILITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_EXTRACTION_FACILITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4882,7 +4839,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBMERGED_TOWN_PLATFORM</Description>
 			<Civilopedia>TXT_KEY_UNIT_SUBMERGED_TOWN_PLATFORM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SUBMERGED_TOWN_PLATFORM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4931,5 +4887,5 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
-    </UnitInfos>
+	</UnitInfos>
 </Civ4UnitInfos>

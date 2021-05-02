@@ -142,7 +142,7 @@ class PediaBuilding:
 			szText2 = ""
 		for k in range(CommerceTypes.NUM_COMMERCE_TYPES):
 			char = unichr(8500 + k)
-			iTemp = CvTheBuildingInfo.getObsoleteSafeCommerceChange(k) + CvTheBuildingInfo.getCommerceChange(k)
+			iTemp = CvTheBuildingInfo.getCommerceChange(k)
 			if iTemp:
 				if iTemp < 0:
 					szValue = " <color=255,0,0,255>"
@@ -365,12 +365,8 @@ class PediaBuilding:
 		iType = CvTheBuildingInfo.getFoundsCorporation()
 		if iType != -1:
 			CvCorporationInfo = GC.getCorporationInfo(iType)
-			nOr = 0
-			while True:
-				if CvCorporationInfo.getPrereqBonus(nOr) > -1:
-					nOr += 1
-				else:
-					break
+			lPrereqBonuses = CvCorporationInfo.getPrereqBonuses()
+			nOr = len(lPrereqBonuses)
 			if bPlus:
 				if nOr:
 					screen.attachLabel(panelName, "", szAnd)
@@ -379,7 +375,7 @@ class PediaBuilding:
 			if nOr > 1:
 				screen.attachLabel(panelName, "", szBracketL)
 			for i in range(nOr):
-				iType = CvCorporationInfo.getPrereqBonus(i)
+				iType = lPrereqBonuses[i]
 				if i != 0:
 					screen.attachLabel(panelName, "", szOr)
 				screen.attachImageButton(panelName, szChild + str(iType), GC.getBonusInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
@@ -543,7 +539,7 @@ class PediaBuilding:
 			H_ROW_2 += H_BOT_ROW
 		# Special Abilities
 		screen.addPanel(aName(), "", "", True, False, X_COL_1, Y_TOP_ROW_2, W_COL_3, H_ROW_2, ePanelBlue50)
-		szSpecialText = szfont3 + CyGameTextMgr().getBuildingHelp(iTheBuilding, True, False, False, None, False)[1:]
+		szSpecialText = szfont3 + CyGameTextMgr().getBuildingHelp(iTheBuilding, False, None, True, False, False)[1:]
 		screen.addMultilineText(aName(), szSpecialText, X_COL_1 + 4, Y_TOP_ROW_2 + 12, W_COL_3 - 8, H_ROW_2 - 20, eWidGen, 0, 0, 1<<0)
 		# History
 		szHistory = TRNSLTR.getText("TXT_KEY_PEDIA_HISTORY", ())

@@ -108,7 +108,6 @@ Each file can have multiple sections.
 from CvPythonExtensions import *
 import BugConfig
 import BugInit
-import BugPath
 import SystemPaths as SP
 import BugUtil
 import ColorUtil

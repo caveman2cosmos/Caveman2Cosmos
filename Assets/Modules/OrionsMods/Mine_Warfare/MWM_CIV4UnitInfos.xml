@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by EXTREME (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
@@ -19,11 +18,10 @@
 			<Invisible>INVISIBLE_NAVAL_MINE</Invisible>
 			<Description>TXT_KEY_UNIT_NAVAL_MINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAVAL_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NAVAL_MINE_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_NAVAL_MINE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoRevealMap >1</bNoRevealMap >
+			<bNoRevealMap>1</bNoRevealMap>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -120,11 +118,10 @@
 			<Invisible>INVISIBLE_NAVAL_MINE</Invisible>
 			<Description>TXT_KEY_UNIT_NAVAL_MINE_FIELD</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAVAL_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NAVAL_MINE_FIELD_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_NAVAL_MINE_FIELD_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoRevealMap >1</bNoRevealMap >
+			<bNoRevealMap>1</bNoRevealMap>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
@@ -222,11 +219,10 @@
 			<Invisible>INVISIBLE_NAVAL_MINE</Invisible>
 			<Description>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAVAL_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoRevealMap >1</bNoRevealMap >
+			<bNoRevealMap>1</bNoRevealMap>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -326,7 +322,6 @@
 			<SeeInvisible>INVISIBLE_NAVAL_MINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MINE_SWEEPER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -387,11 +382,10 @@
 			<Invisible>INVISIBLE_LAND_MINE</Invisible>
 			<Description>TXT_KEY_UNIT_LAND_MINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_LAND_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LAND_MINE_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_LAND_MINE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoRevealMap >1</bNoRevealMap >
+			<bNoRevealMap>1</bNoRevealMap>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -479,11 +473,10 @@
 			<Invisible>INVISIBLE_LAND_MINE</Invisible>
 			<Description>TXT_KEY_UNIT_LAND_MINE_FIELD</Description>
 			<Civilopedia>TXT_KEY_UNIT_LAND_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LAND_MINE_FIELD_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_LAND_MINE_FIELD_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoRevealMap >1</bNoRevealMap >
+			<bNoRevealMap>1</bNoRevealMap>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -577,11 +570,10 @@
 			<Invisible>INVISIBLE_LAND_MINE</Invisible>
 			<Description>TXT_KEY_UNIT_NUCLEAR_LAND_MINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_LAND_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NUCLEAR_LAND_MINE_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_NUCLEAR_LAND_MINE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoRevealMap >1</bNoRevealMap >
+			<bNoRevealMap>1</bNoRevealMap>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -675,7 +667,6 @@
 			<SeeInvisible>INVISIBLE_LAND_MINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_LAND_MINE_SWEEPER</Description>
 			<Civilopedia>TXT_KEY_UNIT_LAND_MINE_SWEEPER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LAND_MINE_SWEEPER_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MINE_SWEEPER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>

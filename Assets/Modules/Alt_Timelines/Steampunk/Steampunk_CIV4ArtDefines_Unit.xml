@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Unit art path information -->
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<UnitArtInfos>
@@ -163,7 +162,7 @@
 			<Type>ART_DEF_UNIT_WAR_WHEEL_NATIVE_AMERICAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/culture/war_wheel.dds</Button>
 			<fScale>0.45</fScale>
-    		<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Native_american_Sparth/warwheel/ww.nif</NIF>
@@ -198,7 +197,7 @@
 			<Type>ART_DEF_UNIT_WAR_WHEEL_SOUTH_AMERICA</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/culture/war_wheel.dds</Button>
 			<fScale>0.45</fScale>
-    		<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/South_American_Sparth/warwheel/ww.nif</NIF>
@@ -233,7 +232,7 @@
 			<Type>ART_DEF_UNIT_WAR_WHEEL_ASIAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/culture/war_wheel.dds</Button>
 			<fScale>0.45</fScale>
-    		<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Asian_Sparth/warwheel/ww.nif</NIF>
@@ -268,7 +267,7 @@
 			<Type>ART_DEF_UNIT_WAR_WHEEL_AFRICAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/culture/war_wheel.dds</Button>
 			<fScale>0.45</fScale>
-    		<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/African_Sparth/warwheel/ww.nif</NIF>
@@ -303,7 +302,7 @@
 			<Type>ART_DEF_UNIT_WAR_WHEEL_MEAST</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/culture/war_wheel.dds</Button>
 			<fScale>0.45</fScale>
-    		<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Middle_Eastern_Sparth/warwheel/ww.nif</NIF>

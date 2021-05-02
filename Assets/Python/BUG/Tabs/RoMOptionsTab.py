@@ -44,11 +44,7 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__MaxBombardDefense", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 
-		self.addCheckbox(screen, center, "RoMSettings__ShowCoastalBuildings")
-		self.addCheckbox(screen, center, "RoMSettings__HideObsoleteBuildings")
 		self.addCheckbox(screen, center, "RoMSettings__HideReplacedBuildings")
-		self.addCheckbox(screen, center, "RoMSettings__HideUnconstructableBuildings")
-		self.addCheckbox(screen, center, "RoMSettings__HideUntrainableUnits")
 
 		#Empire Management
 		self.addLabel(screen, center, "RoMSettings__EmpireManagement")

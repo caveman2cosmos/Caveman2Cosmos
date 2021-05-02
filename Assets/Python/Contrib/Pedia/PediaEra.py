@@ -158,7 +158,6 @@ class PediaEra:
 
 		# Text
 		szTxt = TRNSLTR.getText("TXT_KEY_CIVILOPEDIA_STRATEGY", ()) + CvTheEraInfo.getStrategy() + "\n\n"
-		szTxt += TRNSLTR.getText("TXT_KEY_PEDIA_HISTORY", ()) + CvTheEraInfo.getCivilopedia()
 
 		screen.addPanel(aName(), "", "", True, False, X_COL_1, Y_ROW_2, W_PEDIA_PAGE, H_ROW_2, ePnlBlue50)
 		screen.addMultilineText(aName(), szfont2 + szTxt, X_COL_1 + 4, Y_ROW_2 + 8, W_PEDIA_PAGE - 8, H_ROW_2 - 16, eWidGen, 0, 0, 1<<0)

@@ -51,13 +51,11 @@ public:
 	int getSecretaryGeneral(int /*VoteSourceTypes*/ eVoteSource) const;
 	bool canHaveSecretaryGeneral(int /*VoteSourceTypes*/ eVoteSource) const;
 	int getVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource) const;
-	void setVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource, int /*ReligionTypes*/ eReligion, bool bAnnounce);
 
 	int countCivPlayersAlive() const;
 	int countCivPlayersEverAlive() const;
 	int countCivTeamsAlive() const;
 	int countCivTeamsEverAlive() const;
-	int countHumanPlayersAlive() const;
 
 	int countTotalCivPower() const;
 	int countTotalNukeUnits() const;
@@ -318,6 +316,9 @@ public:
 	bool canEverSpread(int iCorporation) const;
 
 	const char* getC2CVersion() const;
+
+	void assignStartingPlots(bool bScenario, bool bMapScript);
+
 protected:
 	CvGame& m_pGame;
 };

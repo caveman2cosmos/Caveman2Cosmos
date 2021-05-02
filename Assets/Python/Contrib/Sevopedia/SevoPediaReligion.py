@@ -11,8 +11,6 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
-import ScreenInput
 import string
 
 gc = CyGlobalContext()
@@ -115,7 +113,7 @@ class SevoPediaReligion:
 			# buildings have several options for religions so need to check them all, only one of them needs to be True
 			iPrereq = gc.getBuildingInfo(iBuilding).getPrereqReligion()
 			iPrereq2 = gc.getBuildingInfo(iBuilding).getReligionType()
-			iPrereq3 = gc.getBuildingInfo(iBuilding).getStateReligion()
+			iPrereq3 = gc.getBuildingInfo(iBuilding).getPrereqStateReligion()
 			iPrereq4 = gc.getBuildingInfo(iBuilding).getGlobalReligionCommerce()
 			if (iPrereq == self.iReligion or iPrereq2 == self.iReligion or iPrereq3 == self.iReligion):
 				screen.attachImageButton(panelName, "", gc.getBuildingInfo(iBuilding).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, iBuilding, 1, False)

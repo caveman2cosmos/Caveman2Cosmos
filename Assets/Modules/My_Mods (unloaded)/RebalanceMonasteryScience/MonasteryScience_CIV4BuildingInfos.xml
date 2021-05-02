@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Building Infos -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_ANDEAN_MONASTERY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_ANDEANISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
@@ -339,7 +338,7 @@
 			<Type>BUILDING_MORMON_MONASTERY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_MORMON</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_CONSUMERISM</PrereqTech>
@@ -365,7 +364,7 @@
 			<Type>BUILDING_MESOAMERICAN_MONASTERY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_NAGHUALISM</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -391,7 +390,7 @@
 			<Type>BUILDING_SCIENTOLOGY_MONASTERY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_SCIENTOLOGY</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
@@ -417,7 +416,7 @@
 			<Type>BUILDING_SHINTO_MONASTERY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_SHINTO</DependencyType>
- 			</AndDependencyTypes>
+			</AndDependencyTypes>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>

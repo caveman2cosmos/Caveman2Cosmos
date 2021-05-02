@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4BonusInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<BonusInfos>
-	<!-- Aborigine -->
+		<!-- Aborigine -->
 		<BonusInfo>
 			<Type>BONUS_ABORIGINE</Type>
 			<Description>TXT_KEY_BONUS_ABORIGINE</Description>
@@ -10,7 +10,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ABORIGINE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Ainu -->
+		<!-- Ainu -->
 		<BonusInfo>
 			<Type>BONUS_AINU</Type>
 			<Description>TXT_KEY_BONUS_AINU</Description>
@@ -19,7 +19,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AINU</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Aka -->
+		<!-- Aka -->
 		<BonusInfo>
 			<Type>BONUS_AKA</Type>
 			<Description>TXT_KEY_BONUS_AKA</Description>
@@ -28,7 +28,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AKA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Akkadian -->
+		<!-- Akkadian -->
 		<BonusInfo>
 			<Type>BONUS_AKKADIAN</Type>
 			<Description>TXT_KEY_BONUS_AKKADIAN</Description>
@@ -37,7 +37,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AKKADIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- American -->
+		<!-- American -->
 		<BonusInfo>
 			<Type>BONUS_AMERICAN</Type>
 			<Description>TXT_KEY_BONUS_AMERICAN</Description>
@@ -46,7 +46,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AMERICAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Anasazi -->
+		<!-- Anasazi -->
 		<BonusInfo>
 			<Type>BONUS_ANASAZI</Type>
 			<Description>TXT_KEY_BONUS_ANASAZI</Description>
@@ -55,7 +55,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ANASAZI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Apache -->
+		<!-- Apache -->
 		<BonusInfo>
 			<Type>BONUS_APACHE</Type>
 			<Description>TXT_KEY_BONUS_APACHE</Description>
@@ -64,7 +64,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_APACHE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Arabian -->
+		<!-- Arabian -->
 		<BonusInfo>
 			<Type>BONUS_ARABIAN</Type>
 			<Description>TXT_KEY_BONUS_ARABIAN</Description>
@@ -73,7 +73,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ARABIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Arawak -->
+		<!-- Arawak -->
 		<BonusInfo>
 			<Type>BONUS_ARAWAK</Type>
 			<Description>TXT_KEY_BONUS_ARAWAK</Description>
@@ -82,7 +82,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ARAWAK</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Argentinian -->
+		<!-- Argentinian -->
 		<BonusInfo>
 			<Type>BONUS_ARGENTINIAN</Type>
 			<Description>TXT_KEY_BONUS_ARGENTINIAN</Description>
@@ -91,7 +91,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ARGENTINIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Armenian -->
+		<!-- Armenian -->
 		<BonusInfo>
 			<Type>BONUS_ARMENIAN</Type>
 			<Description>TXT_KEY_BONUS_ARMENIAN</Description>
@@ -100,7 +100,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ARMENIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Ashanti -->
+		<!-- Ashanti -->
 		<BonusInfo>
 			<Type>BONUS_ASHANTI</Type>
 			<Description>TXT_KEY_BONUS_ASHANTI</Description>
@@ -109,7 +109,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ASHANTI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Assyrian -->
+		<!-- Assyrian -->
 		<BonusInfo>
 			<Type>BONUS_ASSYRIAN</Type>
 			<Description>TXT_KEY_BONUS_ASSYRIAN</Description>
@@ -118,7 +118,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ASSYRIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Athenian -->
+		<!-- Athenian -->
 		<BonusInfo>
 			<Type>BONUS_ATHENIAN</Type>
 			<Description>TXT_KEY_BONUS_ATHENIAN</Description>
@@ -127,7 +127,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ATHENIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Australian -->
+		<!-- Australian -->
 		<BonusInfo>
 			<Type>BONUS_AUSTRALIAN</Type>
 			<Description>TXT_KEY_BONUS_AUSTRALIAN</Description>
@@ -136,7 +136,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AUSTRALIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Austrian -->
+		<!-- Austrian -->
 		<BonusInfo>
 			<Type>BONUS_AUSTRIAN</Type>
 			<Description>TXT_KEY_BONUS_AUSTRIAN</Description>
@@ -145,7 +145,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AUSTRIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Aymara -->
+		<!-- Aymara -->
 		<BonusInfo>
 			<Type>BONUS_AYMARA</Type>
 			<Description>TXT_KEY_BONUS_AYMARA</Description>
@@ -154,7 +154,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AYMARA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Aztec -->
+		<!-- Aztec -->
 		<BonusInfo>
 			<Type>BONUS_AZTEC</Type>
 			<Description>TXT_KEY_BONUS_AZTEC</Description>
@@ -163,7 +163,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AZTEC</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Babylonian -->
+		<!-- Babylonian -->
 		<BonusInfo>
 			<Type>BONUS_BABYLONIAN</Type>
 			<Description>TXT_KEY_BONUS_BABYLONIAN</Description>
@@ -172,7 +172,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BABYLONIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Bandanese -->
+		<!-- Bandanese -->
 		<BonusInfo>
 			<Type>BONUS_BANDANESE</Type>
 			<Description>TXT_KEY_BONUS_BANDANESE</Description>
@@ -181,7 +181,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BANDANESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Basque -->
+		<!-- Basque -->
 		<BonusInfo>
 			<Type>BONUS_BASQUE</Type>
 			<Description>TXT_KEY_BONUS_BASQUE</Description>
@@ -190,7 +190,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BASQUE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Belgian -->
+		<!-- Belgian -->
 		<BonusInfo>
 			<Type>BONUS_BELGIAN</Type>
 			<Description>TXT_KEY_BONUS_BELGIAN</Description>
@@ -199,7 +199,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BELGIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Bengali -->
+		<!-- Bengali -->
 		<BonusInfo>
 			<Type>BONUS_BENGALI</Type>
 			<Description>TXT_KEY_BONUS_BENGALI</Description>
@@ -208,7 +208,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BENGALI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Benin -->
+		<!-- Benin -->
 		<BonusInfo>
 			<Type>BONUS_BENINESE</Type>
 			<Description>TXT_KEY_BONUS_BENINESE</Description>
@@ -217,7 +217,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BENINESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Berber -->
+		<!-- Berber -->
 		<BonusInfo>
 			<Type>BONUS_BERBER</Type>
 			<Description>TXT_KEY_BONUS_BERBER</Description>
@@ -226,7 +226,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BERBER</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Blackfoot -->
+		<!-- Blackfoot -->
 		<BonusInfo>
 			<Type>BONUS_BLACKFOOT</Type>
 			<Description>TXT_KEY_BONUS_BLACKFOOT</Description>
@@ -235,7 +235,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BLACKFOOT</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Brazilian -->
+		<!-- Brazilian -->
 		<BonusInfo>
 			<Type>BONUS_BRAZILIAN</Type>
 			<Description>TXT_KEY_BONUS_BRAZILIAN</Description>
@@ -244,7 +244,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BRAZILIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Bulgarian -->
+		<!-- Bulgarian -->
 		<BonusInfo>
 			<Type>BONUS_BULGARIAN</Type>
 			<Description>TXT_KEY_BONUS_BULGARIAN</Description>
@@ -253,7 +253,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BULGARIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Burmese -->
+		<!-- Burmese -->
 		<BonusInfo>
 			<Type>BONUS_BURMESE</Type>
 			<Description>TXT_KEY_BONUS_BURMESE</Description>
@@ -262,7 +262,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BURMESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Byzantine -->
+		<!-- Byzantine -->
 		<BonusInfo>
 			<Type>BONUS_BYZANTINE</Type>
 			<Description>TXT_KEY_BONUS_BYZANTINE</Description>
@@ -271,7 +271,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BYZANTINE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Californian -->
+		<!-- Californian -->
 		<BonusInfo>
 			<Type>BONUS_CALIFORNIAN</Type>
 			<Description>TXT_KEY_BONUS_CALIFORNIAN</Description>
@@ -280,7 +280,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CALIFORNIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Canadian -->
+		<!-- Canadian -->
 		<BonusInfo>
 			<Type>BONUS_CANADIAN</Type>
 			<Description>TXT_KEY_BONUS_CANADIAN</Description>
@@ -289,7 +289,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CANADIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Cantonese -->
+		<!-- Cantonese -->
 		<BonusInfo>
 			<Type>BONUS_CANTONESE</Type>
 			<Description>TXT_KEY_BONUS_CANTONESE</Description>
@@ -298,7 +298,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CANTONESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Carib -->
+		<!-- Carib -->
 		<BonusInfo>
 			<Type>BONUS_CARIB</Type>
 			<Description>TXT_KEY_BONUS_CARIB</Description>
@@ -307,7 +307,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CARIB</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Carthaginian -->
+		<!-- Carthaginian -->
 		<BonusInfo>
 			<Type>BONUS_CARTHAGINIAN</Type>
 			<Description>TXT_KEY_BONUS_CARTHAGINIAN</Description>
@@ -316,7 +316,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CARTHAGINIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Celtic -->
+		<!-- Celtic -->
 		<BonusInfo>
 			<Type>BONUS_CELTIC</Type>
 			<Description>TXT_KEY_BONUS_CELTIC</Description>
@@ -325,7 +325,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CELTIC</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Ceylonese -->
+		<!-- Ceylonese -->
 		<BonusInfo>
 			<Type>BONUS_CEYLONESE</Type>
 			<Description>TXT_KEY_BONUS_CEYLONESE</Description>
@@ -334,7 +334,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CEYLONESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Cham -->
+		<!-- Cham -->
 		<BonusInfo>
 			<Type>BONUS_CHAM</Type>
 			<Description>TXT_KEY_BONUS_CHAM</Description>
@@ -343,7 +343,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHAM</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Cherokee -->
+		<!-- Cherokee -->
 		<BonusInfo>
 			<Type>BONUS_CHEROKEE</Type>
 			<Description>TXT_KEY_BONUS_CHEROKEE</Description>
@@ -352,7 +352,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHEROKEE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Cheyenne -->
+		<!-- Cheyenne -->
 		<BonusInfo>
 			<Type>BONUS_CHEYENNE</Type>
 			<Description>TXT_KEY_BONUS_CHEYENNE</Description>
@@ -361,7 +361,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHEYENNE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Chinese -->
+		<!-- Chinese -->
 		<BonusInfo>
 			<Type>BONUS_CHINESE</Type>
 			<Description>TXT_KEY_BONUS_CHINESE</Description>
@@ -370,7 +370,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHINESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Chippewa -->
+		<!-- Chippewa -->
 		<BonusInfo>
 			<Type>BONUS_CHIPPEWA</Type>
 			<Description>TXT_KEY_BONUS_CHIPPEWA</Description>
@@ -379,7 +379,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHIPPEWA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Chola -->
+		<!-- Chola -->
 		<BonusInfo>
 			<Type>BONUS_CHOLA</Type>
 			<Description>TXT_KEY_BONUS_CHOLA</Description>
@@ -388,7 +388,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHOLA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Chumash -->
+		<!-- Chumash -->
 		<BonusInfo>
 			<Type>BONUS_CHUMASH</Type>
 			<Description>TXT_KEY_BONUS_CHUMASH</Description>
@@ -397,7 +397,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHUMASH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Colombian -->
+		<!-- Colombian -->
 		<BonusInfo>
 			<Type>BONUS_COLOMBIAN</Type>
 			<Description>TXT_KEY_BONUS_COLOMBIAN</Description>
@@ -406,7 +406,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_COLOMBIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Comanche -->
+		<!-- Comanche -->
 		<BonusInfo>
 			<Type>BONUS_COMANCHE</Type>
 			<Description>TXT_KEY_BONUS_COMANCHE</Description>
@@ -415,7 +415,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_COMANCHE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Confederate -->
+		<!-- Confederate -->
 		<BonusInfo>
 			<Type>BONUS_CONFEDERATE</Type>
 			<Description>TXT_KEY_BONUS_CONFEDERATE</Description>
@@ -424,7 +424,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CONFEDERATE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Cree -->
+		<!-- Cree -->
 		<BonusInfo>
 			<Type>BONUS_CREE</Type>
 			<Description>TXT_KEY_BONUS_CREE</Description>
@@ -433,7 +433,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CREE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Croatian -->
+		<!-- Croatian -->
 		<BonusInfo>
 			<Type>BONUS_CROATIAN</Type>
 			<Description>TXT_KEY_BONUS_CROATIAN</Description>
@@ -442,7 +442,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CROATIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Cuban -->
+		<!-- Cuban -->
 		<BonusInfo>
 			<Type>BONUS_CUBAN</Type>
 			<Description>TXT_KEY_BONUS_CUBAN</Description>
@@ -451,7 +451,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CUBAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Dahomey -->
+		<!-- Dahomey -->
 		<BonusInfo>
 			<Type>BONUS_DAHOMEY</Type>
 			<Description>TXT_KEY_BONUS_DAHOMEY</Description>
@@ -460,7 +460,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_DAHOMEY</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Dene -->
+		<!-- Dene -->
 		<BonusInfo>
 			<Type>BONUS_DENE</Type>
 			<Description>TXT_KEY_BONUS_DENE</Description>
@@ -469,7 +469,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_DENE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Danish -->
+		<!-- Danish -->
 		<BonusInfo>
 			<Type>BONUS_DANISH</Type>
 			<Description>TXT_KEY_BONUS_DANISH</Description>
@@ -478,7 +478,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_DANISH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Cetacea Sapien -->
+		<!-- Cetacea Sapien -->
 		<BonusInfo>
 			<Type>BONUS_CETACEA_SAPIENS</Type>
 			<Description>TXT_KEY_BONUS_CETACEA_SAPIENS</Description>
@@ -487,7 +487,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CETACEA_SAPIENS</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Dutch -->
+		<!-- Dutch -->
 		<BonusInfo>
 			<Type>BONUS_DUTCH</Type>
 			<Description>TXT_KEY_BONUS_DUTCH</Description>
@@ -496,7 +496,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_DUTCH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Dzungar -->
+		<!-- Dzungar -->
 		<BonusInfo>
 			<Type>BONUS_DZUNGAR</Type>
 			<Description>TXT_KEY_BONUS_DZUNGAR</Description>
@@ -505,7 +505,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_DZUNGAR</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Egyptian -->
+		<!-- Egyptian -->
 		<BonusInfo>
 			<Type>BONUS_EGYPTIAN</Type>
 			<Description>TXT_KEY_BONUS_EGYPTIAN</Description>
@@ -514,7 +514,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_EGYPTIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- English -->
+		<!-- English -->
 		<BonusInfo>
 			<Type>BONUS_ENGLISH</Type>
 			<Description>TXT_KEY_BONUS_ENGLISH</Description>
@@ -523,7 +523,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ENGLISH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Epirus -->
+		<!-- Epirus -->
 		<BonusInfo>
 			<Type>BONUS_EPIROTE</Type>
 			<Description>TXT_KEY_BONUS_EPIROTE</Description>
@@ -532,7 +532,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_EPIROTE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Ethiopian -->
+		<!-- Ethiopian -->
 		<BonusInfo>
 			<Type>BONUS_ETHIOPIAN</Type>
 			<Description>TXT_KEY_BONUS_ETHIOPIAN</Description>
@@ -541,7 +541,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ETHIOPIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Fijian -->
+		<!-- Fijian -->
 		<BonusInfo>
 			<Type>BONUS_FIJIAN</Type>
 			<Description>TXT_KEY_BONUS_FIJIAN</Description>
@@ -550,7 +550,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_FIJIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Finnish -->
+		<!-- Finnish -->
 		<BonusInfo>
 			<Type>BONUS_FINNISH</Type>
 			<Description>TXT_KEY_BONUS_FINNISH</Description>
@@ -559,7 +559,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_FINNISH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Franks -->
+		<!-- Franks -->
 		<BonusInfo>
 			<Type>BONUS_FRANKISH</Type>
 			<Description>TXT_KEY_BONUS_FRANKISH</Description>
@@ -568,7 +568,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_FRANKISH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- French -->
+		<!-- French -->
 		<BonusInfo>
 			<Type>BONUS_FRENCH</Type>
 			<Description>TXT_KEY_BONUS_FRENCH</Description>
@@ -577,7 +577,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_FRENCH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Fulani -->
+		<!-- Fulani -->
 		<BonusInfo>
 			<Type>BONUS_FULANI</Type>
 			<Description>TXT_KEY_BONUS_FULANI</Description>
@@ -586,7 +586,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_FULANI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- German -->
+		<!-- German -->
 		<BonusInfo>
 			<Type>BONUS_GERMAN</Type>
 			<Description>TXT_KEY_BONUS_GERMAN</Description>
@@ -595,7 +595,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GERMAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Ghanaian -->
+		<!-- Ghanaian -->
 		<BonusInfo>
 			<Type>BONUS_GHANAIAN</Type>
 			<Description>TXT_KEY_BONUS_GHANAIAN</Description>
@@ -604,7 +604,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GHANAIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Goth -->
+		<!-- Goth -->
 		<BonusInfo>
 			<Type>BONUS_GOTH</Type>
 			<Description>TXT_KEY_BONUS_GOTH</Description>
@@ -613,7 +613,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GOTH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Greek -->
+		<!-- Greek -->
 		<BonusInfo>
 			<Type>BONUS_GREEK</Type>
 			<Description>TXT_KEY_BONUS_GREEK</Description>
@@ -622,7 +622,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GREEK</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Romani (Gypsy) -->
+		<!-- Romani (Gypsy) -->
 		<BonusInfo>
 			<Type>BONUS_ROMANI</Type>
 			<Description>TXT_KEY_BONUS_ROMANI</Description>
@@ -631,7 +631,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ROMANI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Haida -->
+		<!-- Haida -->
 		<BonusInfo>
 			<Type>BONUS_HAIDA</Type>
 			<Description>TXT_KEY_BONUS_HAIDA</Description>
@@ -640,7 +640,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HAIDA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Haitian -->
+		<!-- Haitian -->
 		<BonusInfo>
 			<Type>BONUS_HAITIAN</Type>
 			<Description>TXT_KEY_BONUS_HAITIAN</Description>
@@ -649,7 +649,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HAITIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Hausa -->
+		<!-- Hausa -->
 		<BonusInfo>
 			<Type>BONUS_HAUSA</Type>
 			<Description>TXT_KEY_BONUS_HAUSA</Description>
@@ -658,7 +658,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HAUSA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Hawaiian -->
+		<!-- Hawaiian -->
 		<BonusInfo>
 			<Type>BONUS_HAWAIIAN</Type>
 			<Description>TXT_KEY_BONUS_HAWAIIAN</Description>
@@ -667,7 +667,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HAWAIIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Herero -->
+		<!-- Herero -->
 		<BonusInfo>
 			<Type>BONUS_HERERO</Type>
 			<Description>TXT_KEY_BONUS_HERERO</Description>
@@ -676,7 +676,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HERERO</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Hittite -->
+		<!-- Hittite -->
 		<BonusInfo>
 			<Type>BONUS_HITTITE</Type>
 			<Description>TXT_KEY_BONUS_HITTITE</Description>
@@ -685,7 +685,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HITTITE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Holy Roman -->
+		<!-- Holy Roman -->
 		<BonusInfo>
 			<Type>BONUS_HOLY_ROMAN</Type>
 			<Description>TXT_KEY_BONUS_HOLY_ROMAN</Description>
@@ -694,7 +694,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HOLY_ROMAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Hopi -->
+		<!-- Hopi -->
 		<BonusInfo>
 			<Type>BONUS_HOPI</Type>
 			<Description>TXT_KEY_BONUS_HOPI</Description>
@@ -703,7 +703,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HOPI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Huastec -->
+		<!-- Huastec -->
 		<BonusInfo>
 			<Type>BONUS_HUASTEC</Type>
 			<Description>TXT_KEY_BONUS_HUASTEC</Description>
@@ -712,7 +712,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUASTEC</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Hun -->
+		<!-- Hun -->
 		<BonusInfo>
 			<Type>BONUS_HUN</Type>
 			<Description>TXT_KEY_BONUS_HUN</Description>
@@ -721,7 +721,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Hungarian -->
+		<!-- Hungarian -->
 		<BonusInfo>
 			<Type>BONUS_HUNGARIAN</Type>
 			<Description>TXT_KEY_BONUS_HUNGARIAN</Description>
@@ -730,7 +730,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUNGARIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Huron -->
+		<!-- Huron -->
 		<BonusInfo>
 			<Type>BONUS_HURON</Type>
 			<Description>TXT_KEY_BONUS_HURON</Description>
@@ -739,7 +739,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HURON</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Icelandic -->
+		<!-- Icelandic -->
 		<BonusInfo>
 			<Type>BONUS_ICELANDIC</Type>
 			<Description>TXT_KEY_BONUS_ICELANDIC</Description>
@@ -748,7 +748,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ICELANDIC</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Incan -->
+		<!-- Incan -->
 		<BonusInfo>
 			<Type>BONUS_INCAN</Type>
 			<Description>TXT_KEY_BONUS_INCAN</Description>
@@ -757,7 +757,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_INCAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Indian -->
+		<!-- Indian -->
 		<BonusInfo>
 			<Type>BONUS_INDIAN</Type>
 			<Description>TXT_KEY_BONUS_INDIAN</Description>
@@ -766,7 +766,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_INDIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Indonesian -->
+		<!-- Indonesian -->
 		<BonusInfo>
 			<Type>BONUS_INDONESIAN</Type>
 			<Description>TXT_KEY_BONUS_INDONESIAN</Description>
@@ -775,7 +775,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_INDONESIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Inuit -->
+		<!-- Inuit -->
 		<BonusInfo>
 			<Type>BONUS_INUIT</Type>
 			<Description>TXT_KEY_BONUS_INUIT</Description>
@@ -784,7 +784,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_INUIT</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Irish -->
+		<!-- Irish -->
 		<BonusInfo>
 			<Type>BONUS_IRISH</Type>
 			<Description>TXT_KEY_BONUS_IRISH</Description>
@@ -793,7 +793,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_IRISH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Iroquois -->
+		<!-- Iroquois -->
 		<BonusInfo>
 			<Type>BONUS_IROQUOIS</Type>
 			<Description>TXT_KEY_BONUS_IROQUOIS</Description>
@@ -802,7 +802,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_IROQUOIS</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Israeli -->
+		<!-- Israeli -->
 		<BonusInfo>
 			<Type>BONUS_ISRAELI</Type>
 			<Description>TXT_KEY_BONUS_ISRAELI</Description>
@@ -811,7 +811,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ISRAELI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Italian -->
+		<!-- Italian -->
 		<BonusInfo>
 			<Type>BONUS_ITALIAN</Type>
 			<Description>TXT_KEY_BONUS_ITALIAN</Description>
@@ -820,7 +820,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ITALIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Jamaican -->
+		<!-- Jamaican -->
 		<BonusInfo>
 			<Type>BONUS_JAMAICAN</Type>
 			<Description>TXT_KEY_BONUS_JAMAICAN</Description>
@@ -829,7 +829,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_JAMAICAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Japanese -->
+		<!-- Japanese -->
 		<BonusInfo>
 			<Type>BONUS_JAPANESE</Type>
 			<Description>TXT_KEY_BONUS_JAPANESE</Description>
@@ -838,7 +838,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_JAPANESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Jivaro -->
+		<!-- Jivaro -->
 		<BonusInfo>
 			<Type>BONUS_JIVARO</Type>
 			<Description>TXT_KEY_BONUS_JIVARO</Description>
@@ -847,7 +847,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_JIVARO</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Jomon -->
+		<!-- Jomon -->
 		<BonusInfo>
 			<Type>BONUS_JOMON</Type>
 			<Description>TXT_KEY_BONUS_JOMON</Description>
@@ -856,7 +856,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_JOMON</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Jordanian -->
+		<!-- Jordanian -->
 		<BonusInfo>
 			<Type>BONUS_JORDANIAN</Type>
 			<Description>TXT_KEY_BONUS_JORDANIAN</Description>
@@ -865,7 +865,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_JORDANIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Joseon -->
+		<!-- Joseon -->
 		<BonusInfo>
 			<Type>BONUS_JOSEON</Type>
 			<Description>TXT_KEY_BONUS_JOSEON</Description>
@@ -874,7 +874,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_JOSEON</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Kanem-Bornu -->
+		<!-- Kanem-Bornu -->
 		<BonusInfo>
 			<Type>BONUS_KANEM_BORNU</Type>
 			<Description>TXT_KEY_BONUS_KANEM_BORNU</Description>
@@ -883,7 +883,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KANEM_BORNU</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Khmer -->
+		<!-- Khmer -->
 		<BonusInfo>
 			<Type>BONUS_KHMER</Type>
 			<Description>TXT_KEY_BONUS_KHMER</Description>
@@ -892,7 +892,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KHMER</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Klamath -->
+		<!-- Klamath -->
 		<BonusInfo>
 			<Type>BONUS_KLAMATH</Type>
 			<Description>TXT_KEY_BONUS_KLAMATH</Description>
@@ -901,7 +901,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KLAMATH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Kongolese -->
+		<!-- Kongolese -->
 		<BonusInfo>
 			<Type>BONUS_KONGOLESE</Type>
 			<Description>TXT_KEY_BONUS_KONGOLESE</Description>
@@ -910,7 +910,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KONGOLESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Konjo -->
+		<!-- Konjo -->
 		<BonusInfo>
 			<Type>BONUS_KONJAN</Type>
 			<Description>TXT_KEY_BONUS_KONJAN</Description>
@@ -919,7 +919,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KONJAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Korean -->
+		<!-- Korean -->
 		<BonusInfo>
 			<Type>BONUS_KOREAN</Type>
 			<Description>TXT_KEY_BONUS_KOREAN</Description>
@@ -928,8 +928,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_KOREAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Laingzhu -->
-	<!-- by Dancing Hoskuld -->
+		<!-- Laingzhu -->
+		<!-- by Dancing Hoskuld -->
 		<BonusInfo>
 			<Type>BONUS_LIANGZHU</Type>
 			<Description>TXT_KEY_BONUS_LIANGZHU</Description>
@@ -938,7 +938,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LIANGZHU</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Luba -->
+		<!-- Luba -->
 		<BonusInfo>
 			<Type>BONUS_LUBA</Type>
 			<Description>TXT_KEY_BONUS_LUBA</Description>
@@ -947,7 +947,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LUBA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Lydian -->
+		<!-- Lydian -->
 		<BonusInfo>
 			<Type>BONUS_LYDIAN</Type>
 			<Description>TXT_KEY_BONUS_LYDIAN</Description>
@@ -956,7 +956,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LYDIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Macedonia -->
+		<!-- Macedonia -->
 		<BonusInfo>
 			<Type>BONUS_MACEDONIAN</Type>
 			<Description>TXT_KEY_BONUS_MACEDONIAN</Description>
@@ -965,7 +965,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MACEDONIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Madan -->
+		<!-- Madan -->
 		<BonusInfo>
 			<Type>BONUS_MADAN</Type>
 			<Description>TXT_KEY_BONUS_MADAN</Description>
@@ -974,7 +974,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MADAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Malaysian -->
+		<!-- Malaysian -->
 		<BonusInfo>
 			<Type>BONUS_MALAYSIAN</Type>
 			<Description>TXT_KEY_BONUS_MALAYSIAN</Description>
@@ -983,7 +983,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MALAYSIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Malinese -->
+		<!-- Malinese -->
 		<BonusInfo>
 			<Type>BONUS_MALINESE</Type>
 			<Description>TXT_KEY_BONUS_MALINESE</Description>
@@ -992,7 +992,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MALINESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Manchurian -->
+		<!-- Manchurian -->
 		<BonusInfo>
 			<Type>BONUS_MANCHURIAN</Type>
 			<Description>TXT_KEY_BONUS_MANCHURIAN</Description>
@@ -1001,7 +1001,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MANCHURIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Maori -->
+		<!-- Maori -->
 		<BonusInfo>
 			<Type>BONUS_MAORI</Type>
 			<Description>TXT_KEY_BONUS_MAORI</Description>
@@ -1010,7 +1010,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MAORI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Mapuche -->
+		<!-- Mapuche -->
 		<BonusInfo>
 			<Type>BONUS_MAPUCHE</Type>
 			<Description>TXT_KEY_BONUS_MAPUCHE</Description>
@@ -1019,7 +1019,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MAPUCHE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Masai -->
+		<!-- Masai -->
 		<BonusInfo>
 			<Type>BONUS_MASAI</Type>
 			<Description>TXT_KEY_BONUS_MASAI</Description>
@@ -1028,7 +1028,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MASAI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Massagetae -->
+		<!-- Massagetae -->
 		<BonusInfo>
 			<Type>BONUS_MASSAGETAE</Type>
 			<Description>TXT_KEY_BONUS_MASSAGETAE</Description>
@@ -1037,7 +1037,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MASSAGETAE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Mayan -->
+		<!-- Mayan -->
 		<BonusInfo>
 			<Type>BONUS_MAYAN</Type>
 			<Description>TXT_KEY_BONUS_MAYAN</Description>
@@ -1046,7 +1046,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MAYAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Merina -->
+		<!-- Merina -->
 		<BonusInfo>
 			<Type>BONUS_MERINA</Type>
 			<Description>TXT_KEY_BONUS_MERINA</Description>
@@ -1055,7 +1055,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MERINA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Mexican -->
+		<!-- Mexican -->
 		<BonusInfo>
 			<Type>BONUS_MEXICAN</Type>
 			<Description>TXT_KEY_BONUS_MEXICAN</Description>
@@ -1064,7 +1064,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MEXICAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Minoan -->
+		<!-- Minoan -->
 		<BonusInfo>
 			<Type>BONUS_MINOAN</Type>
 			<Description>TXT_KEY_BONUS_MINOAN</Description>
@@ -1073,7 +1073,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MINOAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Mississippian -->
+		<!-- Mississippian -->
 		<BonusInfo>
 			<Type>BONUS_MISSISSIPPIAN</Type>
 			<Description>TXT_KEY_BONUS_MISSISSIPPIAN</Description>
@@ -1082,7 +1082,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MISSISSIPPIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Mixtec -->
+		<!-- Mixtec -->
 		<BonusInfo>
 			<Type>BONUS_MIXTEC</Type>
 			<Description>TXT_KEY_BONUS_MIXTEC</Description>
@@ -1091,7 +1091,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MIXTEC</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Moche -->
+		<!-- Moche -->
 		<BonusInfo>
 			<Type>BONUS_MOCHE</Type>
 			<Description>TXT_KEY_BONUS_MOCHE</Description>
@@ -1100,7 +1100,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MOCHE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Mongolian -->
+		<!-- Mongolian -->
 		<BonusInfo>
 			<Type>BONUS_MONGOLIAN</Type>
 			<Description>TXT_KEY_BONUS_MONGOLIAN</Description>
@@ -1109,7 +1109,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MONGOLIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Moroccan -->
+		<!-- Moroccan -->
 		<BonusInfo>
 			<Type>BONUS_MOROCCAN</Type>
 			<Description>TXT_KEY_BONUS_MOROCCAN</Description>
@@ -1118,7 +1118,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MOROCCAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Mughal -->
+		<!-- Mughal -->
 		<BonusInfo>
 			<Type>BONUS_MUGHAL</Type>
 			<Description>TXT_KEY_BONUS_MUGHAL</Description>
@@ -1127,7 +1127,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MUGHAL</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Mutapa -->
+		<!-- Mutapa -->
 		<BonusInfo>
 			<Type>BONUS_MUTAPA</Type>
 			<Description>TXT_KEY_BONUS_MUTAPA</Description>
@@ -1136,7 +1136,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MUTAPA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Nama -->
+		<!-- Nama -->
 		<BonusInfo>
 			<Type>BONUS_NAMA</Type>
 			<Description>TXT_KEY_BONUS_NAMA</Description>
@@ -1145,7 +1145,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NAMA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Navajo -->
+		<!-- Navajo -->
 		<BonusInfo>
 			<Type>BONUS_NAVAJO</Type>
 			<Description>TXT_KEY_BONUS_NAVAJO</Description>
@@ -1154,7 +1154,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NAVAJO</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Nazca -->
+		<!-- Nazca -->
 		<BonusInfo>
 			<Type>BONUS_NAZCA</Type>
 			<Description>TXT_KEY_BONUS_NAZCA</Description>
@@ -1163,7 +1163,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NAZCA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Nepalese -->
+		<!-- Nepalese -->
 		<BonusInfo>
 			<Type>BONUS_NEPALESE</Type>
 			<Description>TXT_KEY_BONUS_NEPALESE</Description>
@@ -1172,7 +1172,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NEPALESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- New Zealand -->
+		<!-- New Zealand -->
 		<BonusInfo>
 			<Type>BONUS_NEW_ZEALANDER</Type>
 			<Description>TXT_KEY_BONUS_NEW_ZEALANDER</Description>
@@ -1181,7 +1181,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NEW_ZEALANDER</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Nok -->
+		<!-- Nok -->
 		<BonusInfo>
 			<Type>BONUS_NOK</Type>
 			<Description>TXT_KEY_BONUS_NOK</Description>
@@ -1190,7 +1190,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NOK</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Nootka -->
+		<!-- Nootka -->
 		<BonusInfo>
 			<Type>BONUS_NOOTKA</Type>
 			<Description>TXT_KEY_BONUS_NOOTKA</Description>
@@ -1199,7 +1199,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NOOTKA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Norwegian -->
+		<!-- Norwegian -->
 		<BonusInfo>
 			<Type>BONUS_NORWEGIAN</Type>
 			<Description>TXT_KEY_BONUS_NORWEGIAN</Description>
@@ -1208,7 +1208,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NORWEGIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Nubian -->
+		<!-- Nubian -->
 		<BonusInfo>
 			<Type>BONUS_NUBIAN</Type>
 			<Description>TXT_KEY_BONUS_NUBIAN</Description>
@@ -1217,7 +1217,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NUBIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Olmec -->
+		<!-- Olmec -->
 		<BonusInfo>
 			<Type>BONUS_OLMEC</Type>
 			<Description>TXT_KEY_BONUS_OLMEC</Description>
@@ -1226,7 +1226,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_OLMEC</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Ottoman -->
+		<!-- Ottoman -->
 		<BonusInfo>
 			<Type>BONUS_OTTOMAN</Type>
 			<Description>TXT_KEY_BONUS_OTTOMAN</Description>
@@ -1235,7 +1235,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_OTTOMAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Pakistani -->
+		<!-- Pakistani -->
 		<BonusInfo>
 			<Type>BONUS_PAKISTANI</Type>
 			<Description>TXT_KEY_BONUS_PAKISTANI</Description>
@@ -1244,7 +1244,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PAKISTANI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Papuan -->
+		<!-- Papuan -->
 		<BonusInfo>
 			<Type>BONUS_PAPUAN</Type>
 			<Description>TXT_KEY_BONUS_PAPUAN</Description>
@@ -1253,7 +1253,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PAPUAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Parthian -->
+		<!-- Parthian -->
 		<BonusInfo>
 			<Type>BONUS_PARTHIAN</Type>
 			<Description>TXT_KEY_BONUS_PARTHIAN</Description>
@@ -1262,7 +1262,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PARTHIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Persian -->
+		<!-- Persian -->
 		<BonusInfo>
 			<Type>BONUS_PERSIAN</Type>
 			<Description>TXT_KEY_BONUS_PERSIAN</Description>
@@ -1271,7 +1271,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PERSIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Phoenican -->
+		<!-- Phoenican -->
 		<BonusInfo>
 			<Type>BONUS_PHOENICIAN</Type>
 			<Description>TXT_KEY_BONUS_PHOENICIAN</Description>
@@ -1280,7 +1280,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PHOENICIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Pictish -->
+		<!-- Pictish -->
 		<BonusInfo>
 			<Type>BONUS_PICTISH</Type>
 			<Description>TXT_KEY_BONUS_PICTISH</Description>
@@ -1289,7 +1289,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PICTISH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Pima -->
+		<!-- Pima -->
 		<BonusInfo>
 			<Type>BONUS_PIMA</Type>
 			<Description>TXT_KEY_BONUS_PIMA</Description>
@@ -1298,7 +1298,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PIMA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Polish -->
+		<!-- Polish -->
 		<BonusInfo>
 			<Type>BONUS_POLISH</Type>
 			<Description>TXT_KEY_BONUS_POLISH</Description>
@@ -1307,7 +1307,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_POLISH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Polynesian -->
+		<!-- Polynesian -->
 		<BonusInfo>
 			<Type>BONUS_POLYNESIAN</Type>
 			<Description>TXT_KEY_BONUS_POLYNESIAN</Description>
@@ -1316,7 +1316,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_POLYNESIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Portuguese -->
+		<!-- Portuguese -->
 		<BonusInfo>
 			<Type>BONUS_PORTUGUESE</Type>
 			<Description>TXT_KEY_BONUS_PORTUGUESE</Description>
@@ -1325,7 +1325,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PORTUGUESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Prussian -->
+		<!-- Prussian -->
 		<BonusInfo>
 			<Type>BONUS_PRUSSIAN</Type>
 			<Description>TXT_KEY_BONUS_PRUSSIAN</Description>
@@ -1334,7 +1334,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PRUSSIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Qiang -->
+		<!-- Qiang -->
 		<BonusInfo>
 			<Type>BONUS_QIANG</Type>
 			<Description>TXT_KEY_BONUS_QIANG</Description>
@@ -1343,7 +1343,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_QIANG</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Quechua -->
+		<!-- Quechua -->
 		<BonusInfo>
 			<Type>BONUS_QUECHUA</Type>
 			<Description>TXT_KEY_BONUS_QUECHUA</Description>
@@ -1352,7 +1352,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_QUECHUA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Rapa Nui -->
+		<!-- Rapa Nui -->
 		<BonusInfo>
 			<Type>BONUS_RAPA_NUI</Type>
 			<Description>TXT_KEY_BONUS_RAPA_NUI</Description>
@@ -1361,7 +1361,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_RAPA_NUI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Rhodesian -->
+		<!-- Rhodesian -->
 		<BonusInfo>
 			<Type>BONUS_RHODESIAN</Type>
 			<Description>TXT_KEY_BONUS_RHODESIAN</Description>
@@ -1370,7 +1370,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_RHODESIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Roman -->
+		<!-- Roman -->
 		<BonusInfo>
 			<Type>BONUS_ROMAN</Type>
 			<Description>TXT_KEY_BONUS_ROMAN</Description>
@@ -1379,7 +1379,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ROMAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Roxolani -->
+		<!-- Roxolani -->
 		<BonusInfo>
 			<Type>BONUS_ROXOLANI</Type>
 			<Description>TXT_KEY_BONUS_ROXOLANI</Description>
@@ -1388,7 +1388,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ROXOLANI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Russian -->
+		<!-- Russian -->
 		<BonusInfo>
 			<Type>BONUS_RUSSIAN</Type>
 			<Description>TXT_KEY_BONUS_RUSSIAN</Description>
@@ -1397,7 +1397,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_RUSSIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Sami -->
+		<!-- Sami -->
 		<BonusInfo>
 			<Type>BONUS_SAMI</Type>
 			<Description>TXT_KEY_BONUS_SAMI</Description>
@@ -1406,7 +1406,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAMI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Samoa -->
+		<!-- Samoa -->
 		<BonusInfo>
 			<Type>BONUS_SAMOAN</Type>
 			<Description>TXT_KEY_BONUS_SAMOAN</Description>
@@ -1415,7 +1415,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAMOAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Sassanian -->
+		<!-- Sassanian -->
 		<BonusInfo>
 			<Type>BONUS_SASSANIAN</Type>
 			<Description>TXT_KEY_BONUS_SASSANIAN</Description>
@@ -1424,7 +1424,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SASSANIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Saxon -->
+		<!-- Saxon -->
 		<BonusInfo>
 			<Type>BONUS_SAXON</Type>
 			<Description>TXT_KEY_BONUS_SAXON</Description>
@@ -1433,7 +1433,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAXON</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Scottish -->
+		<!-- Scottish -->
 		<BonusInfo>
 			<Type>BONUS_SCOTTISH</Type>
 			<Description>TXT_KEY_BONUS_SCOTTISH</Description>
@@ -1442,7 +1442,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SCOTTISH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Scythian -->
+		<!-- Scythian -->
 		<BonusInfo>
 			<Type>BONUS_SCYTHIAN</Type>
 			<Description>TXT_KEY_BONUS_SCYTHIAN</Description>
@@ -1451,7 +1451,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SCYTHIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Seminole -->
+		<!-- Seminole -->
 		<BonusInfo>
 			<Type>BONUS_SEMINOLE</Type>
 			<Description>TXT_KEY_BONUS_SEMINOLE</Description>
@@ -1460,7 +1460,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SEMINOLE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Shang -->
+		<!-- Shang -->
 		<BonusInfo>
 			<Type>BONUS_SHANG</Type>
 			<Description>TXT_KEY_BONUS_SHANG</Description>
@@ -1469,7 +1469,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SHANG</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Siamese -->
+		<!-- Siamese -->
 		<BonusInfo>
 			<Type>BONUS_SIAMESE</Type>
 			<Description>TXT_KEY_BONUS_SIAMESE</Description>
@@ -1478,7 +1478,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SIAMESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Siberian -->
+		<!-- Siberian -->
 		<BonusInfo>
 			<Type>BONUS_SIBERIAN</Type>
 			<Description>TXT_KEY_BONUS_SIBERIAN</Description>
@@ -1487,7 +1487,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SIBERIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Sioux -->
+		<!-- Sioux -->
 		<BonusInfo>
 			<Type>BONUS_SIOUX</Type>
 			<Description>TXT_KEY_BONUS_SIOUX</Description>
@@ -1496,7 +1496,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SIOUX</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Slovakian -->
+		<!-- Slovakian -->
 		<BonusInfo>
 			<Type>BONUS_SLOVAKIAN</Type>
 			<Description>TXT_KEY_BONUS_SLOVAKIAN</Description>
@@ -1505,7 +1505,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SLOVAKIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Somali -->
+		<!-- Somali -->
 		<BonusInfo>
 			<Type>BONUS_SOMALI</Type>
 			<Description>TXT_KEY_BONUS_SOMALI</Description>
@@ -1514,7 +1514,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SOMALI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Songhai -->
+		<!-- Songhai -->
 		<BonusInfo>
 			<Type>BONUS_SONGHAI</Type>
 			<Description>TXT_KEY_BONUS_SONGHAI</Description>
@@ -1523,7 +1523,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SONGHAI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- South African -->
+		<!-- South African -->
 		<BonusInfo>
 			<Type>BONUS_SOUTH_AFRICAN</Type>
 			<Description>TXT_KEY_BONUS_SOUTH_AFRICAN</Description>
@@ -1532,7 +1532,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SOUTH_AFRICAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Soviet -->
+		<!-- Soviet -->
 		<BonusInfo>
 			<Type>BONUS_SOVIET</Type>
 			<Description>TXT_KEY_BONUS_SOVIET</Description>
@@ -1541,7 +1541,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SOVIET</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Spanish -->
+		<!-- Spanish -->
 		<BonusInfo>
 			<Type>BONUS_SPANISH</Type>
 			<Description>TXT_KEY_BONUS_SPANISH</Description>
@@ -1550,7 +1550,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SPANISH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Spartan -->
+		<!-- Spartan -->
 		<BonusInfo>
 			<Type>BONUS_SPARTAN</Type>
 			<Description>TXT_KEY_BONUS_SPARTAN</Description>
@@ -1559,7 +1559,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SPARTAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Sumerian -->
+		<!-- Sumerian -->
 		<BonusInfo>
 			<Type>BONUS_SUMERIAN</Type>
 			<Description>TXT_KEY_BONUS_SUMERIAN</Description>
@@ -1568,7 +1568,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SUMERIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Swahili -->
+		<!-- Swahili -->
 		<BonusInfo>
 			<Type>BONUS_SWAHILI</Type>
 			<Description>TXT_KEY_BONUS_SWAHILI</Description>
@@ -1577,7 +1577,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SWAHILI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Swazi -->
+		<!-- Swazi -->
 		<BonusInfo>
 			<Type>BONUS_SWAZI</Type>
 			<Description>TXT_KEY_BONUS_SWAZI</Description>
@@ -1586,7 +1586,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SWAZI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Swiss -->
+		<!-- Swiss -->
 		<BonusInfo>
 			<Type>BONUS_SWISS</Type>
 			<Description>TXT_KEY_BONUS_SWISS</Description>
@@ -1595,7 +1595,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SWISS</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Syrian -->
+		<!-- Syrian -->
 		<BonusInfo>
 			<Type>BONUS_SYRIAN</Type>
 			<Description>TXT_KEY_BONUS_SYRIAN</Description>
@@ -1604,7 +1604,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SYRIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Tahitian -->
+		<!-- Tahitian -->
 		<BonusInfo>
 			<Type>BONUS_TAHITIAN</Type>
 			<Description>TXT_KEY_BONUS_TAHITIAN</Description>
@@ -1613,7 +1613,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TAHITIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Taiwanese -->
+		<!-- Taiwanese -->
 		<BonusInfo>
 			<Type>BONUS_TAIWANESE</Type>
 			<Description>TXT_KEY_BONUS_TAIWANESE</Description>
@@ -1622,7 +1622,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TAIWANESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Tamil -->
+		<!-- Tamil -->
 		<BonusInfo>
 			<Type>BONUS_TAMIL</Type>
 			<Description>TXT_KEY_BONUS_TAMIL</Description>
@@ -1631,7 +1631,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TAMIL</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Tarascan -->
+		<!-- Tarascan -->
 		<BonusInfo>
 			<Type>BONUS_TARASCAN</Type>
 			<Description>TXT_KEY_BONUS_TARASCAN</Description>
@@ -1640,7 +1640,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TARASCAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Texan -->
+		<!-- Texan -->
 		<BonusInfo>
 			<Type>BONUS_TEXAN</Type>
 			<Description>TXT_KEY_BONUS_TEXAN</Description>
@@ -1649,7 +1649,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TEXAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Thai -->
+		<!-- Thai -->
 		<BonusInfo>
 			<Type>BONUS_THAI</Type>
 			<Description>TXT_KEY_BONUS_THAI</Description>
@@ -1658,7 +1658,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_THAI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Tibetan -->
+		<!-- Tibetan -->
 		<BonusInfo>
 			<Type>BONUS_TIBETAN</Type>
 			<Description>TXT_KEY_BONUS_TIBETAN</Description>
@@ -1667,7 +1667,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TIBETAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Timurid -->
+		<!-- Timurid -->
 		<BonusInfo>
 			<Type>BONUS_TIMURID</Type>
 			<Description>TXT_KEY_BONUS_TIMURID</Description>
@@ -1676,7 +1676,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TIMURID</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Tlatilco -->
+		<!-- Tlatilco -->
 		<BonusInfo>
 			<Type>BONUS_TLATILCO</Type>
 			<Description>TXT_KEY_BONUS_TLATILCO</Description>
@@ -1685,7 +1685,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TLATILCO</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Tlaxcaltec -->
+		<!-- Tlaxcaltec -->
 		<BonusInfo>
 			<Type>BONUS_TLAXCALTEC</Type>
 			<Description>TXT_KEY_BONUS_TLAXCALTEC</Description>
@@ -1694,7 +1694,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TLAXCALTEC</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Toltec -->
+		<!-- Toltec -->
 		<BonusInfo>
 			<Type>BONUS_TOLTEC</Type>
 			<Description>TXT_KEY_BONUS_TOLTEC</Description>
@@ -1703,7 +1703,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TOLTEC</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Tongan -->
+		<!-- Tongan -->
 		<BonusInfo>
 			<Type>BONUS_TONGAN</Type>
 			<Description>TXT_KEY_BONUS_TONGAN</Description>
@@ -1712,7 +1712,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TONGAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Trojan -->
+		<!-- Trojan -->
 		<BonusInfo>
 			<Type>BONUS_TROJAN</Type>
 			<Description>TXT_KEY_BONUS_TROJAN</Description>
@@ -1721,7 +1721,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TROJAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Tuareg -->
+		<!-- Tuareg -->
 		<BonusInfo>
 			<Type>BONUS_TUAREG</Type>
 			<Description>TXT_KEY_BONUS_TUAREG</Description>
@@ -1730,7 +1730,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TUAREG</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Tupi -->
+		<!-- Tupi -->
 		<BonusInfo>
 			<Type>BONUS_TUPI</Type>
 			<Description>TXT_KEY_BONUS_TUPI</Description>
@@ -1739,7 +1739,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TUPI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Turkmen -->
+		<!-- Turkmen -->
 		<BonusInfo>
 			<Type>BONUS_TURKMEN</Type>
 			<Description>TXT_KEY_BONUS_TURKMEN</Description>
@@ -1748,7 +1748,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TURKMEN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Uighur -->
+		<!-- Uighur -->
 		<BonusInfo>
 			<Type>BONUS_UIGHUR</Type>
 			<Description>TXT_KEY_BONUS_UIGHUR</Description>
@@ -1757,7 +1757,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_UIGHUR</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Venezuelan -->
+		<!-- Venezuelan -->
 		<BonusInfo>
 			<Type>BONUS_VENEZUELAN</Type>
 			<Description>TXT_KEY_BONUS_VENEZUELAN</Description>
@@ -1766,7 +1766,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_VENEZUELAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Venetian -->
+		<!-- Venetian -->
 		<BonusInfo>
 			<Type>BONUS_VENETIAN</Type>
 			<Description>TXT_KEY_BONUS_VENETIAN</Description>
@@ -1775,7 +1775,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_VENETIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Vietnamese -->
+		<!-- Vietnamese -->
 		<BonusInfo>
 			<Type>BONUS_VIETNAMESE</Type>
 			<Description>TXT_KEY_BONUS_VIETNAMESE</Description>
@@ -1784,7 +1784,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_VIETNAMESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Viking -->
+		<!-- Viking -->
 		<BonusInfo>
 			<Type>BONUS_VIKING</Type>
 			<Description>TXT_KEY_BONUS_VIKING</Description>
@@ -1793,7 +1793,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_VIKING</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Wayana -->
+		<!-- Wayana -->
 		<BonusInfo>
 			<Type>BONUS_WAYANA</Type>
 			<Description>TXT_KEY_BONUS_WAYANA</Description>
@@ -1802,7 +1802,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_WAYANA</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Welsh -->
+		<!-- Welsh -->
 		<BonusInfo>
 			<Type>BONUS_WELSH</Type>
 			<Description>TXT_KEY_BONUS_WELSH</Description>
@@ -1811,7 +1811,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_WELSH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Xiongnu -->
+		<!-- Xiongnu -->
 		<BonusInfo>
 			<Type>BONUS_XIONGNU</Type>
 			<Description>TXT_KEY_BONUS_XIONGNU</Description>
@@ -1820,7 +1820,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_XIONGNU</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Yaghan -->
+		<!-- Yaghan -->
 		<BonusInfo>
 			<Type>BONUS_YAGHAN</Type>
 			<Description>TXT_KEY_BONUS_YAGHAN</Description>
@@ -1829,7 +1829,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_YAGHAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Yamato -->
+		<!-- Yamato -->
 		<BonusInfo>
 			<Type>BONUS_YAMATO</Type>
 			<Description>TXT_KEY_BONUS_YAMATO</Description>
@@ -1838,7 +1838,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_YAMATO</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Yanomami -->
+		<!-- Yanomami -->
 		<BonusInfo>
 			<Type>BONUS_YANOMAMI</Type>
 			<Description>TXT_KEY_BONUS_YANOMAMI</Description>
@@ -1847,7 +1847,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_YANOMAMI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Yemenese -->
+		<!-- Yemenese -->
 		<BonusInfo>
 			<Type>BONUS_YEMENI</Type>
 			<Description>TXT_KEY_BONUS_YEMENI</Description>
@@ -1856,7 +1856,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_YEMENI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Zapotec -->
+		<!-- Zapotec -->
 		<BonusInfo>
 			<Type>BONUS_ZAPOTEC</Type>
 			<Description>TXT_KEY_BONUS_ZAPOTEC</Description>
@@ -1865,7 +1865,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ZAPOTEC</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Zulu -->
+		<!-- Zulu -->
 		<BonusInfo>
 			<Type>BONUS_ZULU</Type>
 			<Description>TXT_KEY_BONUS_ZULU</Description>
@@ -1874,7 +1874,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ZULU</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Zuni -->
+		<!-- Zuni -->
 		<BonusInfo>
 			<Type>BONUS_ZUNI</Type>
 			<Description>TXT_KEY_BONUS_ZUNI</Description>
@@ -1883,12 +1883,12 @@
 			<ArtDefineTag>ART_DEF_BONUS_ZUNI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Unsorted -->
+		<!-- Unsorted -->
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</ArtDefineTag>
 			<TechReveal>TECH_ONLINE_COMMUNITY</TechReveal>
 			<TechCityTrade>TECH_ONLINE_COMMUNITY</TechCityTrade>
@@ -1898,7 +1898,7 @@
 			<Type>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_DIGITAL_IDENTITY</ArtDefineTag>
 			<TechReveal>TECH_VIRTUAL_SOCIETY</TechReveal>
 			<TechCityTrade>TECH_VIRTUAL_SOCIETY</TechCityTrade>
@@ -1908,7 +1908,7 @@
 			<Type>BONUS_HUMAN_MOD_GENE_EDITING</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_GENE_EDITING</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_GENE_EDITING</ArtDefineTag>
 			<TechReveal>TECH_GENE_ENHANCEMENT</TechReveal>
 			<TechCityTrade>TECH_GENE_ENHANCEMENT</TechCityTrade>
@@ -1918,7 +1918,7 @@
 			<Type>BONUS_HUMAN_MOD_DESIGNER_BABIES</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_DESIGNER_BABIES</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_DESIGNER_BABIES</ArtDefineTag>
 			<TechReveal>TECH_GENE_JURISPRUDENCE</TechReveal>
 			<TechCityTrade>TECH_GENE_JURISPRUDENCE</TechCityTrade>
@@ -1928,7 +1928,7 @@
 			<Type>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</ArtDefineTag>
 			<TechReveal>TECH_NEURON_ENGINEERING</TechReveal>
 			<TechCityTrade>TECH_NEURON_ENGINEERING</TechCityTrade>
@@ -1938,7 +1938,7 @@
 			<Type>BONUS_HUMAN_MOD_ENLIGHTENED</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_ENLIGHTENED</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ENLIGHTENED</ArtDefineTag>
 			<TechReveal>TECH_UTOPIA_DESTINY</TechReveal>
 			<TechCityTrade>TECH_UTOPIA_DESTINY</TechCityTrade>
@@ -1948,7 +1948,7 @@
 			<Type>BONUS_HUMAN_MOD_NOVEL_SENSES</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_NOVEL_SENSES</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_NOVEL_SENSES</ArtDefineTag>
 			<TechReveal>TECH_SYNTHETIC_SYNESTHESIA</TechReveal>
 			<TechCityTrade>TECH_SYNTHETIC_SYNESTHESIA</TechCityTrade>
@@ -1958,7 +1958,7 @@
 			<Type>BONUS_HUMAN_MOD_LUNARIS</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_LUNARIS</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_LUNARIS</ArtDefineTag>
 			<TechReveal>TECH_ARTIFICIAL_EVOLUTION</TechReveal>
 			<TechCityTrade>TECH_ARTIFICIAL_EVOLUTION</TechCityTrade>
@@ -1968,7 +1968,7 @@
 			<Type>BONUS_HUMAN_MOD_MARTIAN</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_MARTIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_MARTIAN</ArtDefineTag>
 			<TechReveal>TECH_ARTIFICIAL_EVOLUTION</TechReveal>
 			<TechCityTrade>TECH_ARTIFICIAL_EVOLUTION</TechCityTrade>
@@ -1978,7 +1978,7 @@
 			<Type>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</ArtDefineTag>
 			<TechReveal>TECH_TRANSHUMANISM</TechReveal>
 			<TechCityTrade>TECH_TRANSHUMANISM</TechCityTrade>
@@ -1988,7 +1988,7 @@
 			<Type>BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</ArtDefineTag>
 			<TechReveal>TECH_TRANSHUMANISM</TechReveal>
 			<TechCityTrade>TECH_TRANSHUMANISM</TechCityTrade>
@@ -1998,7 +1998,7 @@
 			<Type>BONUS_HUMAN_MOD_ROBOTIC_BODY</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_ROBOTIC_BODY</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ROBOTIC_BODY</ArtDefineTag>
 			<TechReveal>TECH_COMPREHENSIVE_CYBERNETICS</TechReveal>
 			<TechCityTrade>TECH_COMPREHENSIVE_CYBERNETICS</TechCityTrade>
@@ -2008,7 +2008,7 @@
 			<Type>BONUS_HUMAN_MOD_WINGS</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_WINGS</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_WINGS</ArtDefineTag>
 			<TechReveal>TECH_HUMAN_TRANSMUTATION</TechReveal>
 			<TechCityTrade>TECH_HUMAN_TRANSMUTATION</TechCityTrade>
@@ -2018,7 +2018,7 @@
 			<Type>BONUS_HUMAN_MOD_GILLS</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_GILLS</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_GILLS</ArtDefineTag>
 			<TechReveal>TECH_HUMAN_TRANSMUTATION</TechReveal>
 			<TechCityTrade>TECH_HUMAN_TRANSMUTATION</TechCityTrade>
@@ -2028,7 +2028,7 @@
 			<Type>BONUS_HUMAN_MOD_HEAT_TOLERANCE</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_HEAT_TOLERANCE</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_HEAT_TOLERANCE</ArtDefineTag>
 			<TechReveal>TECH_THERMAL_NEGATION</TechReveal>
 			<TechCityTrade>TECH_THERMAL_NEGATION</TechCityTrade>
@@ -2038,7 +2038,7 @@
 			<Type>BONUS_HUMAN_MOD_COLD_TOLERANCE</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_COLD_TOLERANCE</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_COLD_TOLERANCE</ArtDefineTag>
 			<TechReveal>TECH_THERMAL_NEGATION</TechReveal>
 			<TechCityTrade>TECH_THERMAL_NEGATION</TechCityTrade>
@@ -2048,7 +2048,7 @@
 			<Type>BONUS_HUMAN_MOD_RADIATION_TOLERANCE</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_RADIATION_TOLERANCE</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_RADIATION_TOLERANCE</ArtDefineTag>
 			<TechReveal>TECH_NANOSHIELDING</TechReveal>
 			<TechCityTrade>TECH_NANOSHIELDING</TechCityTrade>
@@ -2058,7 +2058,7 @@
 			<Type>BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</ArtDefineTag>
 			<TechReveal>TECH_SENTIENT_EARTH</TechReveal>
 			<TechCityTrade>TECH_SENTIENT_EARTH</TechCityTrade>
@@ -2068,7 +2068,7 @@
 			<Type>BONUS_HUMAN_MOD_NANOMORPHISM</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_NANOMORPHISM</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_NANOMORPHISM</ArtDefineTag>
 			<TechReveal>TECH_NANOMORPHIC_TROIDS</TechReveal>
 			<TechCityTrade>TECH_NANOMORPHIC_TROIDS</TechCityTrade>
@@ -2078,7 +2078,7 @@
 			<Type>BONUS_HUMAN_MOD_INFORMATION_BASED</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_INFORMATION_BASED</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_INFORMATION_BASED</ArtDefineTag>
 			<TechReveal>TECH_POSTHUMANISM</TechReveal>
 			<TechCityTrade>TECH_POSTHUMANISM</TechCityTrade>
@@ -2088,27 +2088,27 @@
 			<Type>BONUS_HUMAN_MOD_TRANSAPIENT</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_TRANSAPIENT</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_TRANSAPIENT</ArtDefineTag>
 			<TechReveal>TECH_STELLAR_COMPUTING</TechReveal>
 			<TechCityTrade>TECH_STELLAR_COMPUTING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
- 		<BonusInfo>
+		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_ALIEN_HYBRID</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ALIEN_HYBRID</ArtDefineTag>
 			<TechReveal>TECH_SPECIES_AMALGAMATION</TechReveal>
 			<TechCityTrade>TECH_SPECIES_AMALGAMATION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
- 		<BonusInfo>
+		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_IMMORTAL</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_IMMORTAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_IMMORTAL</ArtDefineTag>
 			<TechReveal>TECH_IMMORTALITY</TechReveal>
 			<TechCityTrade>TECH_IMMORTALITY</TechCityTrade>
@@ -2118,7 +2118,7 @@
 			<Type>BONUS_HUMAN_MOD_PURE_ENERGY</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_PURE_ENERGY</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_PURE_ENERGY</ArtDefineTag>
 			<TechReveal>TECH_LUMINAL_BEINGS</TechReveal>
 			<TechCityTrade>TECH_LUMINAL_BEINGS</TechCityTrade>
@@ -2128,7 +2128,7 @@
 			<Type>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</ArtDefineTag>
 			<TechReveal>TECH_TRANSVERSE_EUCLIDEAN_GEOMETRY</TechReveal>
 			<TechCityTrade>TECH_TRANSVERSE_EUCLIDEAN_GEOMETRY</TechCityTrade>
@@ -2138,7 +2138,7 @@
 			<Type>BONUS_HUMAN_MOD_ARCHAILECT</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ARCHAILECT</ArtDefineTag>
 			<TechReveal>TECH_HYPERINTELLIGENCE</TechReveal>
 			<TechCityTrade>TECH_HYPERINTELLIGENCE</TechCityTrade>
@@ -2148,7 +2148,7 @@
 			<Type>BONUS_HUMAN_MOD_ATEMPORAL</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_ATEMPORAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ATEMPORAL</ArtDefineTag>
 			<TechReveal>TECH_ATEMPORAL_BEINGS</TechReveal>
 			<TechCityTrade>TECH_ATEMPORAL_BEINGS</TechCityTrade>
@@ -2158,17 +2158,17 @@
 			<Type>BONUS_HUMAN_MOD_NONSPATIAL</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_NONSPATIAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_NONSPATIAL</ArtDefineTag>
 			<TechReveal>TECH_SPATIAL_TRANSCENDENCE</TechReveal>
 			<TechCityTrade>TECH_SPATIAL_TRANSCENDENCE</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
- 		<BonusInfo>
+		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_METAPHYSICAL</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_METAPHYSICAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
+			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_METAPHYSICAL</ArtDefineTag>
 			<TechReveal>TECH_ARCHETYPAL_VECTOR_SPACES</TechReveal>
 			<TechCityTrade>TECH_ARCHETYPAL_VECTOR_SPACES</TechCityTrade>
@@ -2182,13 +2182,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ABBASID</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ADENAN</Type>
@@ -2198,13 +2192,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ADENAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AFGHAN</Type>
@@ -2214,13 +2202,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AFGHAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AKSUMITE</Type>
@@ -2230,13 +2212,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AKSUMITE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ALACALUFE</Type>
@@ -2246,13 +2222,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ALACALUFE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ALBANIAN</Type>
@@ -2262,13 +2232,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ALBANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ALEMANNIC</Type>
@@ -2278,13 +2242,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ALEMANNIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ALGERIAN</Type>
@@ -2294,13 +2252,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ALGERIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AMIS</Type>
@@ -2310,13 +2262,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AMIS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ANDAMANESE</Type>
@@ -2326,13 +2272,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ANDAMANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ANGOLAN</Type>
@@ -2342,13 +2282,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ANGOLAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ARAGONESE</Type>
@@ -2358,13 +2292,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ARAGONESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AVARIC</Type>
@@ -2374,13 +2302,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AVARIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ARVERNIAN</Type>
@@ -2390,13 +2312,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ARVERNIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AZANDE</Type>
@@ -2406,13 +2322,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_AZANDE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BAHRAINI</Type>
@@ -2422,13 +2332,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BAHRAINI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BACTRIC</Type>
@@ -2438,13 +2342,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BACTRIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BANGLADESHI</Type>
@@ -2454,13 +2352,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BANGLADESHI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BASHKIR</Type>
@@ -2470,13 +2362,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BASHKIR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BATAVIAN</Type>
@@ -2486,13 +2372,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BATAVIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BATEK</Type>
@@ -2502,13 +2382,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BATEK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BAVARIAN</Type>
@@ -2518,13 +2392,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BAVARIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BEDOUIN</Type>
@@ -2534,13 +2402,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BEDOUIN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BELIZEAN</Type>
@@ -2550,13 +2412,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BELIZEAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BOLIVIAN</Type>
@@ -2566,13 +2422,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BOLIVIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BRETON</Type>
@@ -2582,13 +2432,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BRETON</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BRITON</Type>
@@ -2598,13 +2442,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BRITON</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BURGUNDIAN</Type>
@@ -2614,13 +2452,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_BURGUNDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CAMBEBA</Type>
@@ -2630,13 +2462,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CAMBEBA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CANARI</Type>
@@ -2646,13 +2472,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CANARI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CAPAYAN</Type>
@@ -2662,13 +2482,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CAPAYAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CARAL_SUPE</Type>
@@ -2678,13 +2492,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CARAL_SUPE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CATALONIAN</Type>
@@ -2694,13 +2502,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CATALONIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CELTIBERIAN</Type>
@@ -2710,13 +2512,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CELTIBERIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHACHAPOYA</Type>
@@ -2726,13 +2522,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHACHAPOYA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHAVIN</Type>
@@ -2742,13 +2532,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHAVIN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHECHEN</Type>
@@ -2758,13 +2542,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHECHEN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHILEAN</Type>
@@ -2774,13 +2552,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHILEAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHIMU</Type>
@@ -2790,13 +2562,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHIMU</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KHWARAZMIAN</Type>
@@ -2806,13 +2572,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KHWARAZMIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CZECH</Type>
@@ -2822,13 +2582,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CZECH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DACIAN</Type>
@@ -2838,13 +2592,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_DACIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DAYAK</Type>
@@ -2854,13 +2602,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_DAYAK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DRAVIDIAN</Type>
@@ -2870,13 +2612,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_DRAVIDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ECUADORIAN</Type>
@@ -2886,13 +2622,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ECUADORIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ESTONIAN</Type>
@@ -2902,13 +2632,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ESTONIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ETRUSCAN</Type>
@@ -2918,13 +2642,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ETRUSCAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FATIMID</Type>
@@ -2934,13 +2652,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_FATIMID</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FLEMISH</Type>
@@ -2950,13 +2662,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_FLEMISH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FUEGIAN</Type>
@@ -2966,13 +2672,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_FUEGIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FURAWI</Type>
@@ -2982,13 +2682,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_FURAWI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GALATIAN</Type>
@@ -2998,13 +2692,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GALATIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GAUCHO</Type>
@@ -3014,13 +2702,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GAUCHO</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GEORGIAN</Type>
@@ -3030,13 +2712,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GEORGIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GHURID</Type>
@@ -3046,13 +2722,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GHURID</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GOKTURK</Type>
@@ -3062,13 +2732,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GOKTURK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KIPCHAK</Type>
@@ -3078,13 +2742,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KIPCHAK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHAMORRAN</Type>
@@ -3094,13 +2752,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHAMORRAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GUANCHES</Type>
@@ -3110,13 +2762,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GUANCHES</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GUARANI</Type>
@@ -3126,13 +2772,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GUARANI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GUATEMALAN</Type>
@@ -3142,13 +2782,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GUATEMALAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GUYANESE</Type>
@@ -3158,13 +2792,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_GUYANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HELVETIAN</Type>
@@ -3174,13 +2802,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HELVETIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HEMUDU</Type>
@@ -3190,13 +2812,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HEMUDU</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HIMYARITE</Type>
@@ -3206,13 +2822,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HIMYARITE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HONGKONGER</Type>
@@ -3222,13 +2832,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HONGKONGER</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HOPEWELL</Type>
@@ -3238,13 +2842,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HOPEWELL</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HURRIANS</Type>
@@ -3254,13 +2852,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HURRIANS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HYKSOSI</Type>
@@ -3270,13 +2862,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_HYKSOSI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ILLYRIAN</Type>
@@ -3286,13 +2872,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ILLYRIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ILOCANO</Type>
@@ -3302,13 +2882,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ILOCANO</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_INDUS</Type>
@@ -3318,13 +2892,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_INDUS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_IRANIAN</Type>
@@ -3334,13 +2902,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_IRANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_IRAQI</Type>
@@ -3350,13 +2912,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_IRAQI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JAVANESE</Type>
@@ -3366,13 +2922,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_JAVANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JUTE</Type>
@@ -3382,13 +2932,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_JUTE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KENYAN</Type>
@@ -3398,13 +2942,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KENYAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KAZAKH</Type>
@@ -3414,13 +2952,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KAZAKH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KHAZAR</Type>
@@ -3430,13 +2962,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KHAZAR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KHITAN</Type>
@@ -3446,13 +2972,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KHITAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KILLKE</Type>
@@ -3462,13 +2982,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KILLKE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KITARAN</Type>
@@ -3478,13 +2992,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KITARAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KOGI</Type>
@@ -3494,13 +3002,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KOGI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KURDISH</Type>
@@ -3510,13 +3012,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KURDISH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KUSHITE</Type>
@@ -3526,13 +3022,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KUSHITE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KUSHAN</Type>
@@ -3542,13 +3032,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KUSHAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KUWAITI</Type>
@@ -3558,13 +3042,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_KUWAITI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LATVIAN</Type>
@@ -3574,13 +3052,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LATVIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LA_PLATAN</Type>
@@ -3590,13 +3062,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LA_PLATAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LEBANESE</Type>
@@ -3606,13 +3072,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LEBANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LIBYAN</Type>
@@ -3622,13 +3082,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LIBYAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LITHUANIAN</Type>
@@ -3638,13 +3092,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LITHUANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LONGOBARDIAN</Type>
@@ -3654,13 +3102,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LONGOBARDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LULE</Type>
@@ -3670,13 +3112,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LULE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LUNDA</Type>
@@ -3686,13 +3122,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LUNDA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LUSITANIAN</Type>
@@ -3702,13 +3132,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LUSITANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MALAGASY</Type>
@@ -3718,13 +3142,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MALAGASY</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MAMELUK</Type>
@@ -3734,13 +3152,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MAMELUK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MANI</Type>
@@ -3750,13 +3162,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MANI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MEDIAN</Type>
@@ -3766,13 +3172,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MEDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MELANESIAN</Type>
@@ -3782,13 +3182,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MELANESIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MICRONESIAN</Type>
@@ -3798,13 +3192,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MICRONESIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MING</Type>
@@ -3814,13 +3202,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MING</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MITANNI</Type>
@@ -3830,13 +3212,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MITANNI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MOCOVI</Type>
@@ -3846,13 +3222,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MOCOVI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MOHAWK</Type>
@@ -3862,13 +3232,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MOHAWK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MOLLO</Type>
@@ -3878,13 +3242,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MOLLO</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MUISCA</Type>
@@ -3894,13 +3252,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MUISCA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MARIC</Type>
@@ -3910,13 +3262,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_MARIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NABATEANS</Type>
@@ -3926,13 +3272,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NABATEANS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NAHUA</Type>
@@ -3942,13 +3282,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NAHUA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NIGERIAN</Type>
@@ -3958,13 +3292,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NIGERIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NOONGAR</Type>
@@ -3974,13 +3302,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NOONGAR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NORMAN</Type>
@@ -3990,13 +3312,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NORMAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NUMIDIAN</Type>
@@ -4006,13 +3322,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_NUMIDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ODAWA</Type>
@@ -4022,13 +3332,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ODAWA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_OMANI</Type>
@@ -4038,13 +3342,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_OMANI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_OPHIR</Type>
@@ -4054,13 +3352,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_OPHIR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ORANG_ASLI</Type>
@@ -4070,13 +3362,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ORANG_ASLI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PAIUTE</Type>
@@ -4086,13 +3372,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PAIUTE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PALESTINIAN</Type>
@@ -4102,13 +3382,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PALESTINIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PANAMAN</Type>
@@ -4118,13 +3392,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PANAMAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PARAGUAYAN</Type>
@@ -4134,13 +3402,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PARAGUAYAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PASHTUN</Type>
@@ -4150,13 +3412,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PASHTUN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PERUVIAN</Type>
@@ -4166,13 +3422,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PERUVIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FILIPINO</Type>
@@ -4182,13 +3432,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_FILIPINO</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PHILISTINE</Type>
@@ -4198,13 +3442,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PHILISTINE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PILAGA</Type>
@@ -4214,13 +3452,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PILAGA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_POVERTY_POINT</Type>
@@ -4230,13 +3462,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_POVERTY_POINT</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_POYA</Type>
@@ -4246,13 +3472,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_POYA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PUELCHE</Type>
@@ -4262,13 +3482,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PUELCHE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PUNTIC</Type>
@@ -4278,13 +3492,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PUNTIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QIN</Type>
@@ -4294,13 +3502,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_QIN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QING</Type>
@@ -4310,13 +3512,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_QING</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QUEBECKER</Type>
@@ -4326,13 +3522,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_QUEBECKER</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QUERANDI</Type>
@@ -4342,13 +3532,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_QUERANDI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QULLA</Type>
@@ -4358,13 +3542,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_QULLA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_RED_OCHER</Type>
@@ -4374,13 +3552,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_RED_OCHER</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SABBATEAN</Type>
@@ -4390,13 +3562,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SABBATEAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SAFAVID</Type>
@@ -4406,13 +3572,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAFAVID</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SAFFARID</Type>
@@ -4422,13 +3582,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAFFARID</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SAKA</Type>
@@ -4438,13 +3592,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAKA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SARMATIAN</Type>
@@ -4454,13 +3602,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SARMATIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SELJUK</Type>
@@ -4470,13 +3612,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SELJUK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SEMANG</Type>
@@ -4486,13 +3622,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SEMANG</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SENEGALI</Type>
@@ -4502,13 +3632,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SENEGALI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SENNAR</Type>
@@ -4518,13 +3642,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SENNAR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SERBIAN</Type>
@@ -4534,13 +3652,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SERBIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SICAN</Type>
@@ -4550,13 +3662,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SICAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SICILIAN</Type>
@@ -4566,13 +3672,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SICILIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SINTASHTA</Type>
@@ -4582,13 +3682,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SINTASHTA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SLOVENIAN</Type>
@@ -4598,13 +3692,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SLOVENIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SUDANESE</Type>
@@ -4614,13 +3702,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SUDANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SUNDANESE</Type>
@@ -4630,13 +3712,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SUNDANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SURINAMESE</Type>
@@ -4646,13 +3722,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SURINAMESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SWEDISH</Type>
@@ -4662,13 +3732,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SWEDISH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TAGALOG</Type>
@@ -4678,13 +3742,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TAGALOG</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TAIRONA</Type>
@@ -4694,13 +3752,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TAIRONA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TAJIK</Type>
@@ -4710,13 +3762,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TAJIK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TANG</Type>
@@ -4726,13 +3772,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TANG</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TANZANIAN</Type>
@@ -4742,13 +3782,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TANZANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TASMANIAN</Type>
@@ -4758,13 +3792,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TASMANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TATAR</Type>
@@ -4774,13 +3802,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TATAR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_THRACIAN</Type>
@@ -4790,13 +3812,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_THRACIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_THREE_KINGDOMS</Type>
@@ -4806,13 +3822,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_THREE_KINGDOMS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TIWI</Type>
@@ -4822,13 +3832,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TIWI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TOBA</Type>
@@ -4838,13 +3842,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TOBA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TOTONAC</Type>
@@ -4854,13 +3852,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TOTONAC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TRANSOXANIAN</Type>
@@ -4870,13 +3862,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TRANSOXANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TUCANO</Type>
@@ -4886,13 +3872,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TUCANO</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TUNGUS</Type>
@@ -4902,13 +3882,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TUNGUS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TUNISIAN</Type>
@@ -4918,13 +3892,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TUNISIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TURKISH</Type>
@@ -4934,13 +3902,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_TURKISH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_UKRAINIAN</Type>
@@ -4950,13 +3912,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_UKRAINIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_URUGUAYAN</Type>
@@ -4966,13 +3922,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_URUGUAYAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_UZBEK</Type>
@@ -4982,13 +3932,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_UZBEK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_VALDIVIAN</Type>
@@ -4998,13 +3942,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_VALDIVIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_VANUATUAN</Type>
@@ -5014,13 +3952,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_VANUATUAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_VANDAL</Type>
@@ -5030,13 +3962,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_VANDAL</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SAUDI</Type>
@@ -5046,13 +3972,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAUDI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WALLACHIAN</Type>
@@ -5062,13 +3982,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_WALLACHIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WARAY</Type>
@@ -5078,13 +3992,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_WARAY</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WARI</Type>
@@ -5094,13 +4002,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_WARI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WAYUU</Type>
@@ -5110,13 +4012,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_WAYUU</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_XIA</Type>
@@ -5126,13 +4022,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_XIA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_XIANBEI</Type>
@@ -5142,13 +4032,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_XIANBEI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_YAGUA</Type>
@@ -5158,13 +4042,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_YAGUA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_YOLNGU</Type>
@@ -5174,13 +4052,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_YOLNGU</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ZANZIBARI</Type>
@@ -5190,13 +4062,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ZANZIBARI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ZENU</Type>
@@ -5206,13 +4072,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ZENU</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ZIMBABWEAN</Type>
@@ -5222,13 +4082,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_ZIMBABWEAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 	</BonusInfos>
 </Civ4BonusInfos>

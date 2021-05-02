@@ -3,50 +3,61 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AUGUSTA</Tag>
 		<English>Augusta</English>
+		<Russian>Îãàñòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LOUISVILLE</Tag>
 		<English>Louisville</English>
+		<Russian>Ëóèñâèëë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MOBILE</Tag>
 		<English>Mobile</English>
+		<Russian>Ìîáèë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MONTGOMERY</Tag>
 		<English>Montgomery</English>
+		<Russian>Ìîíòãîìåðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NASHVILLE</Tag>
 		<English>Nashville</English>
+		<Russian>Íàøâèëë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NORFOLK</Tag>
 		<English>Norfolk</English>
+		<Russian>Íîðôîëê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PETERSBURG</Tag>
 		<English>Petersburg</English>
+		<Russian>Ïèòåðñáåðã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SHREVEPORT</Tag>
 		<English>Shreveport</English>
+		<Russian>Øðèâïîðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VICKSBURG</Tag>
 		<English>Vicksburg</English>
+		<Russian>Âèêñáåðã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_AMERICAN_CONFEDERACY_ADJECTIVE</Tag>
 		<English>Confederate</English>
 		<French>Confédérés</French>
 		<Polish>Konfederacki</Polish>
+		<Russian>êîíôåäåðàòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_AMERICAN_CONFEDERACY_DESC</Tag>
 		<English>Confederate States of America</English>
 		<French>Etats Confédérés d'Amérique</French>
 		<Polish>Skonfederowane Stany Ameryki</Polish>
+		<Russian>ÊØÀ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_AMERICAN_CONFEDERACY_PEDIA</Tag>
@@ -58,11 +69,13 @@
 		<English>The Confederacy</English>
 		<French>La Confédération</French>
 		<Polish>Konfederacja</Polish>
+		<Russian>Êîíôåäåðàòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DAVIS</Tag>
 		<English>Davis</English>
 		<French>J. Davis</French>
+		<Russian>Äýâèñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DAVIS_PEDIA</Tag>
@@ -73,6 +86,7 @@
 		<Tag>TXT_KEY_LEADER_HOOD</Tag>
 		<English>Hood</English>
 		<French>J. Hood</French>
+		<Russian>Õóä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HOOD_PEDIA</Tag>
@@ -82,6 +96,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_JACKSON</Tag>
 		<English>Jackson</English>
+		<Russian>Äæåêñîí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_JACKSON_PEDIA</Tag>
@@ -92,6 +107,7 @@
 		<Tag>TXT_KEY_LEADER_LEE</Tag>
 		<English>Lee</English>
 		<French>R. Lee</French>
+		<Russian>Ëè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEE_PEDIA</Tag>
@@ -102,6 +118,7 @@
 		<Tag>TXT_KEY_LEADER_LONGSTREET</Tag>
 		<English>Longstreet</English>
 		<French>J. Longstreet</French>
+		<Russian>Ëîíãñòðèò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LONGSTREET_PEDIA</Tag>

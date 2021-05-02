@@ -92,7 +92,6 @@
 	<Define>
 		<!-- Afforess:
 	Sets a Maximum Airlift and Rebase range for aircraft. -1 for no limit to range or rebase.
-
 	Toffer: This is only used for the AI perceived value of a tech; and for wheter to display the can rebase anywhere information for air units.
 	A dll modder will need to decide if it should be removed from the dll or implemented to actually influence the max re-base range for air units.
 -->
@@ -212,12 +211,12 @@
 	<Define>
 		<!-- Realistic Corporations: Corporation will be founded when more players than X have the prereq tech for it. -->
 		<DefineName>MINIMUM_PLAYERS_WITH_TECH_FOR_AUTO_CORPORATION_FOUNDING</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- The game will try to found a HQ for a corporation every X turns -->
 		<DefineName>CORPORATION_FOUND_CHECK_TURNS</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- The Time and Gold to Build a Route over an existing route is reduced by the time and Gold already invested in the previous Route -->
@@ -243,10 +242,6 @@
 	<Define>
 		<DefineName>SEA_ANIMAL_SPAWN_MODIFIER</DefineName>
 		<iDefineIntVal>75</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BANDIT_SPAWN_MODIFIER</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>KILLERRABBIT_SPAWN_MODIFIER</DefineName>
@@ -322,6 +317,6 @@ The Great Wall is always dynamic if viewports are enabled regardless of this set
 	</Define>
 	<Define>
 		<DefineName>C2C_VERSION</DefineName>
-		<DefineTextVal>v41-dev</DefineTextVal>
+		<DefineTextVal>v41.2</DefineTextVal>
 	</Define>
 </Civ4Defines>

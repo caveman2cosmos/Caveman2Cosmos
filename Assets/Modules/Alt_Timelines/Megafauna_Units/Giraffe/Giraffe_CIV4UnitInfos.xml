@@ -37,7 +37,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GIRAFFE_ARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_GIRAFFE_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GIRAFFE_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -164,7 +163,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GIRAFFE_CROSSBOW</Description>
 			<Civilopedia>TXT_KEY_UNIT_GIRAFFE_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GIRAFFE_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -323,7 +321,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GIRAFFE_CUIRASSIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_GIRAFFE_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GIRAFFE_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -508,7 +505,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GIRAFFE_CARABINIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_GIRAFFE_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GIRAFFE_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -690,7 +686,6 @@
 			<DefaultUnitAI>UNITAI_ESCORT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GIRAFFE_DRAGOON</Description>
 			<Civilopedia>TXT_KEY_UNIT_GIRAFFE_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GIRAFFE_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -848,7 +843,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GIRAFFE_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_GIRAFFE_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GIRAFFE_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1034,7 +1028,6 @@
 			<DefaultUnitAI>UNITAI_ESCORT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GIRAFFE_TRENCH_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_GIRAFFE_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GIRAFFE_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1232,7 +1225,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_URBAN_GIRAFFEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_GIRAFFE_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GIRAFFE_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>

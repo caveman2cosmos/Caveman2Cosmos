@@ -155,6 +155,8 @@ public:
 
 	void erase();
 
+	void recalculateBaseYield();
+
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
@@ -570,7 +572,8 @@ public:
 	static rect_iterator endRect() { return rect_iterator(); }
 
 	typedef bst::iterator_range<rect_iterator> rect_range;
-	static rect_range rect(int centerX, int centerY, int halfWid, int halfHgt) { return rect_range(beginRect(centerX, centerY, halfWid, halfHgt), endRect()); }
+	//static rect_range rect(int centerX, int centerY, int halfWid, int halfHgt) { return rect_range(beginRect(centerX, centerY, halfWid, halfHgt), endRect()); }
+	rect_range rect(int halfWid, int halfHgt) const { return rect_range(beginRect(m_iX, m_iY, halfWid, halfHgt), endRect()); }
 
 	// ==========================================================================================
 	// PAGING SYSTEM
@@ -703,6 +706,8 @@ public:
 	DllExport ImprovementTypes getImprovementType() const;
 	void setImprovementType(ImprovementTypes eNewValue);
 
+	bool isImprovementDestructible() const;
+
 	RouteTypes getRouteType() const;
 	void setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroup);
 	void updateCityRoute(bool bUpdatePlotGroup);
@@ -728,15 +733,18 @@ public:
 	int getRiverCrossingCount() const;
 	void changeRiverCrossingCount(int iChange);
 
+	int getBaseYield(const YieldTypes eIndex) const;
+	void changeBaseYield(const short* pYieldChange);
+
 	short* getYield() const;
+	void updateYield();
+	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;
 	DllExport int getYield(YieldTypes eIndex) const;
 	int calculateNatureYield(YieldTypes eIndex, TeamTypes eTeam, bool bIgnoreFeature = false) const;
 	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const;
 	int calculateTotalBestNatureYield(TeamTypes eTeam) const;
 	int calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal = false, bool bBestRoute = false) const;
-	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;
 	bool hasYield() const;
-	void updateYield();
 	int calculateMaxYield(YieldTypes eYield) const;
 	int getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUpgrade) const;
 
@@ -1007,6 +1015,7 @@ protected:
 	//short* m_aiCultureRangeForts;
 	// Super Forts end
 
+	short* m_baseYields;
 	short* m_aiYield;
 	std::vector<std::pair<PlayerTypes,int> > m_aiCulture;
 	std::vector<PlotTeamVisibilityIntensity> m_aPlotTeamVisibilityIntensity;
@@ -1117,8 +1126,9 @@ public:
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 
 	//TB Combat Mod AI
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
-
+#endif
 	bool isImprovementUpgradable() const;
 	void setImprovementUpgradeCache(const int iNewValue);
 
@@ -1128,7 +1138,7 @@ public:
 
 	void unitGameStateCorrections();
 
-	bool isMapCategoryType(MapCategoryTypes eIndex) const;
+	bool isMapType(MapTypes eIndex) const;
 
 	int countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible) const;
 

@@ -176,7 +176,7 @@ class WBBuildingScreen:
 			sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 			if pCity.getNumRealBuilding(item[1]):
 				sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
-			elif pCity.getNumBuilding(item[1]):
+			elif pCity.getNumRealBuilding(item[1]):
 				sColor = CyTranslator().getText("[COLOR_YELLOW]", ())
 			screen.setTableText("WBBuilding", iColumn, iRow, "<font=3>" + sColor + item[0] + "</font></color>", ItemInfo.getButton(), WidgetTypes.WIDGET_HELP_BUILDING, item[1], 1, 1<<0 )
 
@@ -211,7 +211,7 @@ class WBBuildingScreen:
 			sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 			if pCity.getNumRealBuilding(item[1]):
 				sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
-			elif pCity.getNumBuilding(item[1]):
+			elif pCity.getNumRealBuilding(item[1]):
 				sColor = CyTranslator().getText("[COLOR_YELLOW]", ())
 			screen.setTableText("WBWonders", iColumn, iRow, "<font=3>" + sColor + item[0] + "</font></color>", ItemInfo.getButton(), WidgetTypes.WIDGET_HELP_BUILDING, item[1], 1, 1<<0 )
 

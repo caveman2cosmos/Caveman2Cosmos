@@ -622,8 +622,7 @@ class WBPlotScreen:
 			if iEditType == 0:
 				pPlot.setPlotType(PlotTypes(inputClass.getData()), True, True)
 			elif iEditType == 1:
-				for i in xrange(CyMap().numPlots()):
-					pLoopPlot = CyMap().plotByIndex(i)
+				for pLoopPlot in CyMap().plots():
 					if pLoopPlot.isNone(): continue
 					if pLoopPlot.getArea() == pPlot.getArea():
 						pLoopPlot.setPlotType(PlotTypes(inputClass.getData()), True, True)
@@ -636,8 +635,7 @@ class WBPlotScreen:
 			if iEditType == 0:
 				pPlot.setTerrainType(iTerrain, True, True)
 			else:
-				for i in xrange(CyMap().numPlots()):
-					pLoopPlot = CyMap().plotByIndex(i)
+				for pLoopPlot in CyMap().plots():
 					if pLoopPlot.isNone(): continue
 					if iEditType == 1:
 						if pLoopPlot.getArea() == pPlot.getArea():
@@ -659,8 +657,7 @@ class WBPlotScreen:
 				else:
 					pPlot.setBonusType(-1)
 			else:
-				for i in xrange(CyMap().numPlots()):
-					pLoopPlot = CyMap().plotByIndex(i)
+				for pLoopPlot in CyMap().plots():
 					if pLoopPlot.isNone(): continue
 					if iEditType == 1 and pLoopPlot.getArea() != pPlot.getArea(): continue
 					iOld = pLoopPlot.getBonusType(-1)
@@ -682,8 +679,7 @@ class WBPlotScreen:
 				else:
 					pPlot.setImprovementType(-1)
 			else:
-				for i in xrange(CyMap().numPlots()):
-					pLoopPlot = CyMap().plotByIndex(i)
+				for pLoopPlot in CyMap().plots():
 					if pLoopPlot.isNone(): continue
 					if iEditType == 1 and pLoopPlot.getArea() != pPlot.getArea(): continue
 					if bAdd:
@@ -712,8 +708,7 @@ class WBPlotScreen:
 				else:
 					pPlot.setFeatureType(-1, 0)
 			else:
-				for i in xrange(CyMap().numPlots()):
-					pLoopPlot = CyMap().plotByIndex(i)
+				for pLoopPlot in CyMap().plots():
 					if pLoopPlot.isNone(): continue
 					if iEditType == 1 and pLoopPlot.getArea() != pPlot.getArea(): continue
 					iOldFeature = pLoopPlot.getFeatureType()
@@ -736,8 +731,7 @@ class WBPlotScreen:
 				else:
 					pPlot.setRouteType(-1)
 			else:
-				for i in xrange(CyMap().numPlots()):
-					pLoopPlot = CyMap().plotByIndex(i)
+				for pLoopPlot in CyMap().plots():
 					if pLoopPlot.isNone(): continue
 					if bSensibility:
 						if pLoopPlot.isImpassable(): continue

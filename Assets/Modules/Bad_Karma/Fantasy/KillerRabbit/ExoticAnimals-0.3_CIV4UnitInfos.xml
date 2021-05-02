@@ -34,7 +34,6 @@
 			<DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KILLERRABBIT</Description>
 			<Civilopedia>TXT_KEY_UNIT_KILLERRABBIT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitAIs>
 				<UnitAI>

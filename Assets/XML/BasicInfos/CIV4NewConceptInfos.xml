@@ -103,11 +103,6 @@
 			<Civilopedia>TXT_KEY_CONCEPT_CASTLE_IMPROVEMENTS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
-			<Type>CONCEPT_CHANGECIV</Type>
-			<Description>TXT_KEY_CONCEPT_CHANGECIV_TEXT</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_CHANGECIV_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
 			<Type>CONCEPT_CRIME</Type>
 			<Description>TXT_KEY_CONCEPT_CRIME_TEXT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CRIME_PEDIA</Civilopedia>
@@ -765,6 +760,11 @@
 			<Type>CONCEPT_STRATEGY_NAVAL</Type>
 			<Description>TXT_KEY_STRATEGY_NAVAL</Description>
 			<Civilopedia>TXT_KEY_STRATEGY_NAVAL_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_STRATEGY_SPACE_EXPLORATION</Type>
+			<Description>TXT_KEY_STRATEGY_SPACE_EXPLORATION</Description>
+			<Civilopedia>TXT_KEY_STRATEGY_SPACE_EXPLORATION_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_STRATEGY_OCC</Type>

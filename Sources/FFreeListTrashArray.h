@@ -366,7 +366,6 @@ T* FFreeListTrashArray<T>::add()
 		iIndex = m_iLastIndex;
 	}
 
-	MEMORY_TRACK_EXEMPT();
 
 	m_pArray[iIndex].pData = new T;
 	m_pArray[iIndex].iNextFreeIndex = FFreeList::INVALID_INDEX;
@@ -392,7 +391,7 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 
 	int iIndex = (iID & FLTA_INDEX_MASK);
 
-	FAssert(iIndex >= 0);
+	FASSERT_NOT_NEGATIVE(iIndex)
 
 	if ((iIndex <= m_iLastIndex) && 
 		(m_pArray[iIndex].pData != NULL))
@@ -510,7 +509,6 @@ void FFreeListTrashArray<T>::load(T* pData)
 template <class T>
 void FFreeListTrashArray<T>::growArray()
 {
-	MEMORY_TRACK_EXEMPT();
 
 	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::growArray - not initialized");
 

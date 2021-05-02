@@ -144,12 +144,12 @@ const CvProperties* CvGameObjectPlot::getPropertiesConst() const
 }
 
 // helper function to call foreach on the object
-void callForeach(CvGameObject* pObject, GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
+void callForeach(const CvGameObject* pObject, GameObjectTypes eType, bst::function<void (const CvGameObject*)> func)
 {
 	pObject->foreach(eType, func);
 }
 
-void CvGameObjectGame::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
+void CvGameObjectGame::foreach(GameObjectTypes eType, bst::function<void (const CvGameObject*)> func) const
 {
 	switch(eType)
 	{
@@ -195,7 +195,7 @@ void CvGameObjectGame::foreach(GameObjectTypes eType, bst::function<void (CvGame
 	}
 }
 
-void CvGameObjectTeam::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
+void CvGameObjectTeam::foreach(GameObjectTypes eType, bst::function<void (const CvGameObject*)> func) const
 {
 	switch(eType)
 	{
@@ -238,7 +238,7 @@ void CvGameObjectTeam::foreach(GameObjectTypes eType, bst::function<void (CvGame
 	}
 }
 
-void CvGameObjectPlayer::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
+void CvGameObjectPlayer::foreach(GameObjectTypes eType, bst::function<void (const CvGameObject*)> func) const
 {
 	switch(eType)
 	{
@@ -281,7 +281,7 @@ void CvGameObjectPlayer::foreach(GameObjectTypes eType, bst::function<void (CvGa
 	}
 }
 
-void CvGameObjectCity::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
+void CvGameObjectCity::foreach(GameObjectTypes eType, bst::function<void (const CvGameObject*)> func) const
 {
 	switch(eType)
 	{
@@ -311,7 +311,7 @@ void CvGameObjectCity::foreach(GameObjectTypes eType, bst::function<void (CvGame
 	}
 }
 
-void CvGameObjectUnit::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
+void CvGameObjectUnit::foreach(GameObjectTypes eType, bst::function<void (const CvGameObject*)> func) const
 {
 	switch(eType)
 	{
@@ -341,7 +341,7 @@ void CvGameObjectUnit::foreach(GameObjectTypes eType, bst::function<void (CvGame
 	}
 }
 
-void CvGameObjectPlot::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
+void CvGameObjectPlot::foreach(GameObjectTypes eType, bst::function<void (const CvGameObject*)> func) const
 {
 	switch(eType)
 	{
@@ -471,21 +471,21 @@ CvGameObjectPlot* CvGameObjectPlot::getPlot() const
 	return const_cast<CvGameObjectPlot*>(this);
 }
 
-void CvGameObject::foreachOn(GameObjectTypes eType, bst::function<void(CvGameObject *)> func)
+void CvGameObject::foreachOn(GameObjectTypes eType, bst::function<void(const CvGameObject*)> func) const
 {
-	CvGameObjectPlot* pPlot = getPlot();
+	const CvGameObjectPlot* pPlot = getPlot();
 	if (pPlot)
 		pPlot->foreachOn(eType, func);
 }
 
-void CvGameObject::foreachNear(GameObjectTypes eType, bst::function<void(CvGameObject *)> func, int iDistance)
+void CvGameObject::foreachNear(GameObjectTypes eType, bst::function<void(const CvGameObject*)> func, int iDistance) const
 {
-	CvGameObjectPlot* pPlot = getPlot();
+	const CvGameObjectPlot* pPlot = getPlot();
 	if (pPlot)
 		pPlot->foreachNear(eType, func, iDistance);
 }
 
-void CvGameObject::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(CvGameObject *)> func, int iData)
+void CvGameObject::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(const CvGameObject*)> func, int iData) const
 {
 	switch (eRelation)
 	{
@@ -502,13 +502,13 @@ void CvGameObject::foreachRelated(GameObjectTypes eType, RelationTypes eRelation
 }
 
 // helper function to call function if expression true
-void callFuncIf(CvGameObject* pObject, BoolExpr* pExpr, bst::function<void (CvGameObject*)> func)
+void callFuncIf(const CvGameObject* pObject, BoolExpr* pExpr, bst::function<void (const CvGameObject*)> func)
 {
 	if (pExpr->evaluate(pObject))
 		func(pObject);
 }
 
-void CvGameObject::foreachRelatedCond(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(CvGameObject *)> func, BoolExpr* pExpr, int iData)
+void CvGameObject::foreachRelatedCond(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(const CvGameObject*)> func, BoolExpr* pExpr, int iData) const
 {
 	if (pExpr)
 	{
@@ -521,37 +521,37 @@ void CvGameObject::foreachRelatedCond(GameObjectTypes eType, RelationTypes eRela
 }
 
 //helper function to add game object to vector
-void addToVector(CvGameObject* pObject, std::vector<CvGameObject*> *kEnum)
+void addToVector(const CvGameObject* pObject, std::vector<const CvGameObject*> *kEnum)
 {
 	kEnum->push_back(pObject);
 }
 
-void CvGameObject::enumerate(std::vector<CvGameObject*> &kEnum, GameObjectTypes eType)
+void CvGameObject::enumerate(std::vector<const CvGameObject*> &kEnum, GameObjectTypes eType) const
 {
 	foreach(eType, bst::bind(addToVector, _1, &kEnum));
 }
 
-void CvGameObject::enumerateOn(std::vector<CvGameObject*> &kEnum, GameObjectTypes eType)
+void CvGameObject::enumerateOn(std::vector<const CvGameObject*> &kEnum, GameObjectTypes eType) const
 {
 	foreachOn(eType, bst::bind(addToVector, _1, &kEnum));
 }
 
-void CvGameObject::enumerateNear(std::vector<CvGameObject*> &kEnum, GameObjectTypes eType, int iDistance)
+void CvGameObject::enumerateNear(std::vector<const CvGameObject*> &kEnum, GameObjectTypes eType, int iDistance) const
 {
 	foreachNear(eType, bst::bind(addToVector, _1, &kEnum), iDistance);
 }
 
-void CvGameObject::enumerateRelated(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, int iData)
+void CvGameObject::enumerateRelated(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, int iData) const
 {
 	foreachRelated(eType, eRelation, bst::bind(addToVector, _1, &kEnum), iData);
 }
 
-void CvGameObject::enumerateRelatedCond(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, BoolExpr* pExpr, int iData)
+void CvGameObject::enumerateRelatedCond(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, BoolExpr* pExpr, int iData) const
 {
 	foreachRelatedCond(eType, eRelation, bst::bind(addToVector, _1, &kEnum), pExpr, iData);
 }
 
-void CvGameObjectPlot::foreachOn(GameObjectTypes eType, bst::function<void(CvGameObject *)> func)
+void CvGameObjectPlot::foreachOn(GameObjectTypes eType, bst::function<void(const CvGameObject*)> func) const
 {
 	if (eType == GAMEOBJECT_PLOT)
 	{
@@ -563,23 +563,15 @@ void CvGameObjectPlot::foreachOn(GameObjectTypes eType, bst::function<void(CvGam
 	}
 }
 
-void CvGameObjectPlot::foreachNear(GameObjectTypes eType, bst::function<void(CvGameObject *)> func, int iDistance)
+void CvGameObjectPlot::foreachNear(GameObjectTypes eType, bst::function<void(const CvGameObject*)> func, int iDistance) const
 {
-	const int iPlotX = m_pPlot->getX();
-	const int iPlotY = m_pPlot->getY();
-
-	for (int iX=iPlotX - iDistance; iX <= iPlotX + iDistance; iX++)
+	foreach_(const CvPlot* pPlot, m_pPlot->rect(iDistance, iDistance))
 	{
-		for (int iY=iPlotY - iDistance; iY <= iPlotY + iDistance; iY++)
-		{
-			CvPlot* pPlot = GC.getMap().plot(iX, iY);
-			if (pPlot)
-				pPlot->getGameObject()->foreachOn(eType, func);
-		}
+		pPlot->getGameObject()->foreachOn(eType, func);
 	}
 }
 
-void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(CvGameObject *)> func, int iData)
+void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(const CvGameObject*)> func, int iData) const
 {
 	if (eRelation == RELATION_TRADE)
 	{
@@ -588,7 +580,7 @@ void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 			const int iRoutes = m_pCity->getTradeRoutes();
 			for (int i=0; i<iRoutes; i++)
 			{
-				CvCity* pTradeCity = m_pCity->getTradeCity(i);
+				const CvCity* pTradeCity = m_pCity->getTradeCity(i);
 				if (pTradeCity)
 				{
 					func(pTradeCity->getGameObject());
@@ -619,7 +611,7 @@ void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 	}
 }
 
-void CvGameObjectPlot::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(CvGameObject *)> func, int iData)
+void CvGameObjectPlot::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(const CvGameObject*)> func, int iData) const
 {
 	if (eRelation == RELATION_WORKING)
 	{
@@ -668,13 +660,9 @@ void CvGameObjectCity::foreachManipulator(ManipCallbackFn func) const
 	// Building manipulators apply to cities
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if(m_pCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+		if (m_pCity->hasFullyActiveBuilding((BuildingTypes)iI))
 		{
-			//Team Project (5)
-			if (!m_pCity->isReligiouslyDisabledBuilding((BuildingTypes)iI))
-			{
-				func(GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators());
-			}
+			func(GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators());
 		}
 	}
 
@@ -767,7 +755,9 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 	//if (eProperty != eDiseaseType)
 	//{
 	//
-	if (!GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS) || !kInfo.isOAType())
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	if (!kInfo.isOAType() || !GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+#endif
 	{
 		//TB Combat Mods end
 		if (!GET_PLAYER(m_pCity->getOwner()).isNPC())
@@ -775,7 +765,7 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 			for (int i=0; i<iNum; i++)
 			{
 				const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
-				const bool bHasBuilding = m_pCity->getNumRealBuilding(kBuilding.eBuilding) > 0;
+				const bool bHasBuilding = m_pCity->getNumActiveBuilding(kBuilding.eBuilding) > 0;
 				const bool bInRange = (iNewValue >= kBuilding.iMinValue) && (iNewValue <= kBuilding.iMaxValue);
 				if (!bInRange)
 				{
@@ -837,11 +827,15 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 			PromotionRequirements::flags promoFlags = PromotionRequirements::IgnoreHas;
 			if (GC.getPromotionInfo(kPromotion.ePromotion).isEquipment())
 				promoFlags |= PromotionRequirements::Equip;
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 			if(GC.getPromotionInfo(kPromotion.ePromotion).isAffliction())
 				promoFlags |= PromotionRequirements::Afflict;
-
-			if (!GC.getPromotionInfo(kPromotion.ePromotion).isEquipment() &&
-				!GC.getPromotionInfo(kPromotion.ePromotion).isAffliction())
+#endif
+			if (!GC.getPromotionInfo(kPromotion.ePromotion).isEquipment()
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+				&& !GC.getPromotionInfo(kPromotion.ePromotion).isAffliction()
+#endif
+				)
 			{
 				promoFlags |= PromotionRequirements::Promote;
 			}
@@ -1051,12 +1045,12 @@ int CvGameObjectGame::getAttribute(AttributeTypes eAttribute) const
 	return 0;
 }
 
-void aggregateHasGOM(CvGameObject* pObject, GOMTypes eType, int iID, bool* bHasGOM)
+void aggregateHasGOM(const CvGameObject* pObject, GOMTypes eType, int iID, bool* bHasGOM)
 {
 	*bHasGOM = *bHasGOM || pObject->hasGOM(eType, iID);
 }
 
-bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
+bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID) const
 {
 	switch (eType)
 	{
@@ -1172,7 +1166,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 	return false;
 }
 
-bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
+bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID) const
 {
 	switch (eType)
 	{
@@ -1296,7 +1290,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 	return false;
 }
 
-bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
+bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID) const
 {
 	switch (eType)
 	{
@@ -1413,7 +1407,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 	return false;
 }
 
-bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
+bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID) const
 {
 	switch (eType)
 	{
@@ -1553,7 +1547,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 	return false;
 }
 
-bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
+bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID) const
 {
 	switch (eType)
 	{
@@ -1699,7 +1693,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 	return false;
 }
 
-bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
+bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID) const
 {
 	switch (eType)
 	{

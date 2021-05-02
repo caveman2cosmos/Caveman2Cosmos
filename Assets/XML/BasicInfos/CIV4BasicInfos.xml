@@ -5,7 +5,7 @@
 		<ConceptInfo>
 			<Type>CONCEPT_AIR_COMBAT</Type>
 			<Description>TXT_KEY_CONCEPT_AIR_COMBAT</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_AIR_COMBAT_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_AIR_COMBAT_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_AIR_PROMOTIONS</Type>
@@ -60,7 +60,7 @@
 		<ConceptInfo>
 			<Type>CONCEPT_BTS_RULES_CHANGES</Type>
 			<Description>TXT_KEY_BTS_RULES_CHANGES</Description>
-			<Civilopedia>TXT_KEY_BTS_RULES_CHANGES_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_BTS_RULES_CHANGES_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_BTS_TECHS</Type>
@@ -135,7 +135,7 @@
 		<ConceptInfo>
 			<Type>CONCEPT_ESPIONAGE</Type>
 			<Description>TXT_WORD_ESPIONAGE</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_EVENTS</Type>
@@ -280,7 +280,7 @@
 		<ConceptInfo>
 			<Type>CONCEPT_SEA_TRADE</Type>
 			<Description>TXT_KEY_CONCEPT_SEA_TRADE</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_SEA_TRADE_PEDIA_TR</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_SEA_TRADE_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_SPACESHIP</Type>

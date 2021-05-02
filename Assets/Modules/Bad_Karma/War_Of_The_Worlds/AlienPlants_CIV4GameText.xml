@@ -12,17 +12,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_ALIEN_PLANT_PEDIA</Tag>
-		<English>Alien Plant eg Red Weed from "War of the Worlds" by H.G.Wells or Planet Fungus from Alpha Centuri.  graphics from the Alpa Centuri mod. (GarretSidzaka)</English>
-		<French>Alien Plant eg Red Weed from "War of the Worlds" by H.G.Wells or Planet Fungus from Alpha Centuri.  graphics from the Alpa Centuri mod.(GarretSidzaka)</French>
-		<German>Alien Plant eg Red Weed from "War of the Worlds" by H.G.Wells or Planet Fungus from Alpha Centuri.  graphics from the Alpa Centuri mod.(GarretSidzaka)</German>
-		<Italian>Piante aliene rappresentano l'Erba Rossa di "War of the Worlds" di H.G.Wells o i funghi alieni di Alpha Centauri.  Grafica da the Alpa Centuri mod.(GarretSidzaka)</Italian>
-		<Spanish>Alien Plant eg Red Weed from "War of the Worlds" by H.G.Wells or Planet Fungus from Alpha Centuri.  graphics from the Alpa Centuri mod.(GarretSidzaka)</Spanish>
+		<English>Alien Plant (e.g. Red Weed) from "War of the Worlds" by H.G. Wells or Planet Fungus from Alpha Centauri. Graphics from the Alpha Centauri mod.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_SEA_FUNGUS</Tag>
 		<English>Sea Fungus</English>
 		<French>
-			<Text>Champigon des mer</Text>
+			<Text>Champignon des mer</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>

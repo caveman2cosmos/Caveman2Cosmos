@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <!-- Be careful of changing their orders, some code reference them by index number
-
  Find new colours at https://www.december.com/html/spec/colorper.html.
 -->
 <Civ4ColorVals xmlns="x-schema:../Schema/C2C_CIV4InterfaceSchema.xml">
@@ -759,7 +758,7 @@
 			<fBlue>.15</fBlue>
 			<fAlpha>1</fAlpha>
 		</ColorVal>
-<!-- Unused
+		<!-- Unused
 		<ColorVal>
 			<Type>COLOR_GOLDENROD</Type>
 			<fRed>.85</fRed>

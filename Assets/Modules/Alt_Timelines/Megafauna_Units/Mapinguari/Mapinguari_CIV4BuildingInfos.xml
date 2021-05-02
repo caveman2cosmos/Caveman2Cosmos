@@ -8,7 +8,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_STRATEGY</Strategy>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
@@ -33,7 +32,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MAPINGUARI_GUARD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAPINGUARI_GUARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MAPINGUARI_GUARD_STRATEGY</Strategy>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
