@@ -206,7 +206,7 @@ class BuildUnitName(AbstractBuildUnitName):
 		pUnit = argsList[1]
 		iPlayer = pUnit.getOwner()
 
-		if not pUnit or pUnit.isNone():
+		if pUnit is None:
 			return
 		if iPlayer != gc.getGame().getActivePlayer() or not UnitNamingOpt.isEnabled():
 			# Not having the same name for a unit will cause OOS issues if unit names are considered part of the game-state.
@@ -383,8 +383,7 @@ class UnitReName(object):
 	def getUnitCombat(self, pUnit):
 
 # Return immediately if the unit passed in is invalid
-		if (pUnit == None
-		or pUnit.isNone()):
+		if pUnit is None:
 			return "UNITCOMBAT_None"
 
 		iUnitCombat = pUnit.getUnitCombatType()

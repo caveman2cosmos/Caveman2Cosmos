@@ -12,12 +12,12 @@
 
 CyCity::CyCity() : m_pCity(NULL)
 {
-	FErrorMsg("CyCity constructor should not be called with a no parameter");
+	FErrorMsg("Error");
 }
 
 CyCity::CyCity(CvCity* pCity) : m_pCity(pCity)
 {
-	FAssertMsg(m_pCity != NULL, "CyCity constructor should not be called with a NULL parameter");
+	FAssert(m_pCity != NULL);
 }
 
 void CyCity::kill()

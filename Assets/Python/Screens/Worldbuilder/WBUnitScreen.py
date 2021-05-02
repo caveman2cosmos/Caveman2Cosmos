@@ -557,7 +557,7 @@ class WBUnitScreen:
 		for i in lUnits:
 			pPlayerX = GC.getPlayer(i[0])
 			pUnitX = pPlayerX.getUnit(i[1])
-			if pUnitX.isNone(): continue
+			if pUnitX is None: continue
 			iRow = screen.appendTableRow("WBCurrentUnit")
 			sText = pUnitX.getName()
 			if len(pUnitX.getNameNoDesc()):
@@ -599,7 +599,6 @@ class WBUnitScreen:
 
 			if pUnit.cargoSpace() > 0:
 				for pUnitX in pPlot.units():
-					if pUnitX.isNone(): continue
 					if pUnitX.getID() == pUnit.getID(): continue
 					if pUnit.domainCargo() > -1:
 						if pUnitX.getDomainType() != pUnit.domainCargo(): continue
@@ -619,7 +618,6 @@ class WBUnitScreen:
 					screen.setTableText("WBCargoUnits", 0, iRow, "<font=3>" + sColor + sText + "</font></color>", pUnitX.getButton(), WidgetTypes.WIDGET_PYTHON, 8300 + iPlayerX, pUnitX.getID(), 1<<0)
 		else:
 			for pUnitX in pPlot.units():
-				if pUnitX.isNone(): continue
 				if pUnitX.getID() == pUnit.getID(): continue
 				if pUnitX.cargoSpace() < 1: continue
 				if pUnitX.domainCargo() > -1:
@@ -829,7 +827,6 @@ class WBUnitScreen:
 				lUnits.append(pUnit)
 			else:
 				for pUnitX in pPlot.units():
-					if pUnitX.isNone(): continue
 					if pUnitX.getOwner() != pUnit.getOwner(): continue
 					if iCommandUnitType == 1:
 						if pUnitX.getUnitType() != pUnit.getUnitType(): continue
@@ -970,7 +967,7 @@ class WBUnitScreen:
 	def handleCopyAll(self):
 		for i in lUnits:
 			loopUnit = GC.getPlayer(i[0]).getUnit(i[1])
-			if loopUnit.isNone(): continue
+			if loopUnit is None: continue
 			if iChangeType == 0:
 				loopUnit.setLevel(pUnit.getLevel())
 			elif iChangeType == 1:

@@ -139,7 +139,7 @@ class WBPromotionScreen:
 		for i in lUnits:
 			pPlayerX = GC.getPlayer(i[0])
 			pUnitX = pPlayerX.getUnit(i[1])
-			if pUnitX.isNone(): continue
+			if pUnitX is None: continue
 			iRow = screen.appendTableRow("WBCurrentUnit")
 			sText = pUnitX.getName()
 			if len(pUnitX.getNameNoDesc()):
@@ -264,7 +264,7 @@ class WBPromotionScreen:
 		if bApplyAll:
 			for i in lUnits:
 				loopUnit = GC.getPlayer(i[0]).getUnit(i[1])
-				if loopUnit.isNone(): continue
+				if loopUnit is None: continue
 				if iChangeType == 2:
 					iType = not loopUnit.isHasPromotion(item)
 				self.doEffects(loopUnit, item, iType)
