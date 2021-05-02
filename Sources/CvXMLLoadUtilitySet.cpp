@@ -12,6 +12,7 @@
 #include "FVariableSystem.h"
 #include "CvImprovementInfo.h"
 #include <iostream>
+#include "CvInitCore.h"
 
 // Macro for Setting Global Art Defines
 #define INIT_XML_GLOBAL_LOAD(xmlInfoPath, infoArray, numInfos)  SetGlobalClassInfo(infoArray, xmlInfoPath, numInfos);

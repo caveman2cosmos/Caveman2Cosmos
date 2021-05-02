@@ -203,7 +203,7 @@ void CvCityAI::SendLog(CvWString function, CvWString message)
 	CvWString aiType = "CvCityAI";
 	
 	
-	//logAIJson(aiType,this->getName(), function,  message);
+	logAIJson(aiType,this->getName(), function,  message);
 
 }
 
@@ -11564,28 +11564,31 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &
 		//check if improvement is a fort or watchtower, then its a no.
 		else if (!potentialImprovementInfo.isActsAsCity() && potentialImprovementInfo.getVisibilityChange() == 0)
 		{
-			for (int iJ = 0; iJ < potentialImprovementInfo.getBuildTypes().size(); iJ++)
+			SendLog("eBestTempBuild", "eBestTempBuildType count");
+			SendLog("eBestTempBuild", CvWString::format(L"%lld", potentialImprovementInfo.getNumBuildTypes()));
+			SendLog("eBestTempImprovement", potentialImprovementInfo.getType());
+			for (int iJ = 0; iJ < potentialImprovementInfo.getNumBuildTypes(); iJ++)
 			{
-				const BuildTypes eBuild = static_cast<BuildTypes>(potentialImprovementInfo.getBuildTypes()[iJ]);
+				const BuildTypes eBuildType = potentialImprovementInfo.getImprovementBuildType(iJ).eBuildType;
+				SendLog("eBestTempBuild", CvWString::format(L"%lld", eBuildType));
 
-				const std::string buildName = GC.getBuildInfo(eBuild).getType();
-				if (GC.getBuildInfo(eBuild).getImprovement() == ePotentialImprovement
-					&& GET_PLAYER(getOwner()).canBuild(pPlot, eBuild, false, false, false))
+				if (GC.getBuildInfo(eBuildType).getImprovement() == ePotentialImprovement
+					&& GET_PLAYER(getOwner()).canBuild(pPlot, eBuildType, false, false, false))
 				{
-					int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuild).getTime());
+					int iSpeedValue = 10000 / (1 + GC.getBuildInfo(eBuildType).getTime());
 
 					if (iSpeedValue > iBestTempBuildValue)
 					{
 						iBestTempBuildValue = iSpeedValue;
-						eBestTempBuild = eBuild;
+						eBestTempBuild = eBuildType;
 					}
 				}
-				//if (eBestTempBuild != NO_BUILD)
-				//{
-				//	SendLog("eBestTempBuild", "eBestTempBuildType");
-				//	SendLog("eBestTempBuild", GC.getBuildInfo(eBestTempBuild).getType());
-				//	SendLog("eBestTempBuild iteration, and plotIndex", CvWString::format(L"%lld %lld", iJ, pPlot->getWorkingCity()->getCityPlotIndex(pPlot)));
-				//}
+				if (eBestTempBuild != NO_BUILD)
+				{
+					SendLog("eBestTempBuild", "eBestTempBuildType");
+					SendLog("eBestTempBuild", GC.getBuildInfo(eBestTempBuild).getType());
+					SendLog("eBestTempBuild iteration, and plotIndex", CvWString::format(L"%lld %lld", iJ, pPlot->getWorkingCity()->getCityPlotIndex(pPlot)));
+				}
 			}
 			if (eBestTempBuild == NO_BUILD) continue;
 

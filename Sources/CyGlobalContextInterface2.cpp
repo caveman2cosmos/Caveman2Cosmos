@@ -1,5 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CyGlobalContext.h"
+#include "CvImprovementInfo.h"
+#include "CvInfos.h"
 
 //
 // published python interface for CyGlobalContext

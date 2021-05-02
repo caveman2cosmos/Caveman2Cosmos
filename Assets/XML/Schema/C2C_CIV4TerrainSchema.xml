@@ -19,9 +19,6 @@
 	<ElementType name="FeatureChangeTypes" content="eltOnly">
 		<element type="FeatureType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="BuildTypes" content="eltOnly">
-		<element type="BuildType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="MapCategoryType" content="textOnly"/>
 	<ElementType name="MapCategoryTypes" content="eltOnly">
 		<element type="MapCategoryType" minOccurs="0" maxOccurs="*"/>
@@ -182,6 +179,10 @@
 	<ElementType name="bGraphicalOnly" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNational" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGlobal" content="textOnly" dt:type="boolean"/>
+	<ElementType name="BuildInfo"/>
+	<ElementType name="BuildInfos" content="eltOnly">
+		<element type="BuildInfo" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="TerrainInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE -->
@@ -679,11 +680,13 @@
 	<!-- Super forts C2C adaptation end -->
 	<ElementType name="ImprovementInfo" content="eltOnly">
 		<element type="Type"/>
+		<element type="BuildInfos" minOccurs="0"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
+
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
