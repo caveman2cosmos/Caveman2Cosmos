@@ -9,7 +9,7 @@
 ##        2) Create a class derived from CvScreenUtils in that file ' class <Mod>ScreenUtils(CvScreenUtils): '
 ##        3) Copy into Python\EntryPoints\ a copy of CvScreenUtilsInterface
 ##        4) Change normalScreenUtils to use your mod ScreenUtils ' normalScreenUtils = <Mod>ScreenUtils.<Mod>ScreenUtils '
-
+"""
 import ScreenInput as PyScreenInput
 
 class CvScreenUtils:
@@ -76,3 +76,4 @@ class CvScreenUtils:
         screenEnum = argsList[0]
         # place call to mini map function here
         return 0
+"""

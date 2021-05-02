@@ -4,9 +4,6 @@
 ## Modified from autolog by eotinb
 ## autolog's event handler
 ## by eotinb
-##
-## TODO:
-## - Use onPlayerChangeStateReligion event
 
 from CvPythonExtensions import *
 import CvUtil
