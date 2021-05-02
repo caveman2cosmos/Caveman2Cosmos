@@ -5662,6 +5662,9 @@
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_MOAI</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<PrereqBonusTypes>
+				<PrereqBonusType>BONUS_RAPA_NUI</PrereqBonusType>
+			</PrereqBonusTypes>
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
