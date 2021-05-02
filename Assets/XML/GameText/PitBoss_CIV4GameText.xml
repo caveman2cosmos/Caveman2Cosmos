@@ -962,12 +962,4 @@
 		<Italian>Inserisci il nuovo timer dei turni (ore)</Italian>
 		<Spanish>Introduce nuevo contador del turno (horas)</Spanish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PITBOSS_LEADER</Tag>
-		<English>Leader</English>
-		<French>Chef</French>
-		<German>Staatsoberhaupt</German>
-		<Italian>Leader</Italian>
-		<Spanish>L&#237;der</Spanish>
-	</TEXT>
 </Civ4GameText>

@@ -20497,14 +20497,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en todas las ciudades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAPPINESS_CHANGE</Tag>
-		<English>[ICON_BULLET]%D1_Change%F2_HappOrUn from[SPACE]</English>
-		<French>[ICON_BULLET]%D1_Change%F2_HappOrUn en raison de :[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Change%F2_HappOrUn durch[SPACE]</German>
-		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUn da[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUn por[SPACE]</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEALTH_CHANGE_CONT</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUn in All Cities on this Continent</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUn dans toutes les villes sur ce continent</French>
@@ -29825,14 +29817,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]Keine Fortbewegung auf</German>
 		<Italian>[ICON_BULLET]Non pu&#242; entrare nell'</Italian>
 		<Spanish>[ICON_BULLET]No puede entrar en</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CANNOT_CAPTURE</Tag>
-		<English>[ICON_BULLET]Cannot Capture Enemy Cities</English>
-		<French>[ICON_BULLET]Ne peut pas capturer de villes ennemies</French>
-		<German>[ICON_BULLET]Kann keine feindlichen St&#228;dte erobern</German>
-		<Italian>[ICON_BULLET]Non pu&#242; conquistare le citt&#224; nemiche</Italian>
-		<Spanish>[ICON_BULLET]No puede capturar ciudades enemigas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAN</Tag>
