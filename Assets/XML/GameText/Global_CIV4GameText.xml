@@ -27648,4 +27648,1150 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>/Turno</Italian>
 		<Spanish>/turno</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLAYER_OOS</Tag>
+		<English>OOS Values: Sync=%d1_Num; Options=%d2_Num</English>
+		<French>Valeurs hors synch. : Sync=%d1_Num; Options=%d2_Num</French>
+		<German>OOS-Werte: Sync=%d1_Num; Optionen=%d2_Num</German>
+		<Italian>Valori OOS: Sync=%d1_Num; Opzioni=%d2_Num</Italian>
+		<Spanish>Valores OOS: Sincronizaci&#243;n=%d1_Num; Opciones=%d2_Num</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_BLOCKADED</Tag>
+		<English>Trade Blocked by Enemy Ship</English>
+		<French>Route commerciale bloqu&#233;e par un navire ennemi</French>
+		<German>Handel von gegnerischem Schiff blockiert</German>
+		<Italian>Rotta bloccata da nave nemica</Italian>
+		<Spanish>Comercio bloqueado por barco enemigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_BONUS</Tag>
+		<English>Defense Bonus: %D1_Mod%%</English>
+		<French>Bonus de d&#233;fense : %D1_Mod%%</French>
+		<German>Defensivbonus: %D1_Mod%%</German>
+		<Italian>Bonus difensivo: %D1_Mod%%</Italian>
+		<Spanish>Bonificaci&#243;n de defensa: %D1_Mod%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_DAMAGE</Tag>
+		<English>Damage per Turn: %d1_Amt%%</English>
+		<French>D&#233;g&#226;ts par tour : %d1_Amt%%</French>
+		<German>Schaden pro Runde: %d1_Amt%%</German>
+		<Italian>Danno per turno: %d1_Amt%%</Italian>
+		<Spanish>Da&#241;o por turno: %d1_Amt%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_HILLS</Tag>
+		<English>Hills/</English>
+		<French>Collines/</French>
+		<German>H&#252;gel/</German>
+		<Italian>Colline/</Italian>
+		<Spanish>Colina/</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_IMPASSABLE</Tag>
+		<English>[COLOR_WARNING_TEXT]IMPASSABLE[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]INFRANCHISSABLE[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]UNPASSIERBAR[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]INVALICABILE[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]INFRANQUEABLE[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_IRRIGATED</Tag>
+		<English>[SPACE](Irrigated)</English>
+		<French>[SPACE](Irrigation)</French>
+		<German>[SPACE](Bew&#228;ssert)</German>
+		<Italian>[SPACE](Irrigato)</Italian>
+		<Spanish>[SPACE](tiene riego)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_NOT_IRRIGATED</Tag>
+		<English>[SPACE](Not Irrigated)</English>
+		<French>[SPACE](non irrigu&#233;)</French>
+		<German>[SPACE](nicht bew&#228;ssert)</German>
+		<Italian>[SPACE](Non irrigato)</Italian>
+		<Spanish>[SPACE](no tiene riego)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_PEAK</Tag>
+		<English>Peak</English>
+		<French>Montagne</French>
+		<German>Gipfel</German>
+		<Italian>Montagna</Italian>
+		<Spanish>Pico</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_REQUIRES_ROUTE</Tag>
+		<English>, Requires Route</English>
+		<French>, route n&#233;cessaire</French>
+		<German>, erfordert Stra&#223;e</German>
+		<Italian>, richiede un itinerario</Italian>
+		<Spanish>, requiere ruta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_RESEARCH</Tag>
+		<English>, Research: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</English>
+		<French>, Recherche : [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</French>
+		<German>, Forschung: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</German>
+		<Italian>, Ricerca: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Italian>
+		<Spanish>, investigar: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ABSTAINS</Tag>
+		<English>%s1_VtrName abstains (%d2_Num Total)</English>
+		<French>%s1_VtrName s'abstient (%d2_Num au total)</French>
+		<German>%s1_VtrName enth&#228;lt sich der Stimme (Gesamt: %d2_Num)</German>
+		<Italian>%s1_VtrName si astiene (%d2_Num totali)</Italian>
+		<Spanish>%s1_VtrName se ha abstenido (%d2_Num en total)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ABSTAIN</Tag>
+		<English>Abstain</English>
+		<French>Abstention</French>
+		<German>Enthaltung</German>
+		<Italian>Astieniti</Italian>
+		<Spanish>Abstenerse</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ADMIN_ALLOW_CHEATS</Tag>
+		<English>Allow Debug Tools</English>
+		<French>Autoriser outils de d&#233;boguage</French>
+		<German>Debug-Tool zulassen</German>
+		<Italian>Consenti gli strumenti di debug</Italian>
+		<Spanish>Permitir herramientas de depuraci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ALARM_TITLE</Tag>
+		<English>Alarm</English>
+		<French>R&#233;veil</French>
+		<German>Alarm</German>
+		<Italian>Allarme</Italian>
+		<Spanish>Alarma</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ARE_YOU_SURE</Tag>
+		<English>Are you sure?</English>
+		<French>Vraiment ?</French>
+		<German>Sind Sie sicher?</German>
+		<Italian>Sei sicuro?</Italian>
+		<Spanish>&#191;Seguro?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ARE_YOU_SURE_ACTION</Tag>
+		<English>Are you sure you want to %s1_ActionName?</English>
+		<French>Voulez-vous vraiment : %s1_ActionName ?</French>
+		<German>Soll diese Einheit wirklich ausgef&#252;hrt werden?: %s1_ActionName</German>
+		<Italian>Sei sicuro di voler eseguire l'azione %s1_ActionName?</Italian>
+		<Spanish>&#191;Seguro que quer&#233;is %s1_ActionName?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_BUILDING_DEFENSE_DEMAND</Tag>
+		<English>Sire, the defenses of %s1_CityName are very weak, making us an inviting target! Remember, good fences make good neighbors. The construction of [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] would give our people safety at last!</English>
+		<French>Sire, les d&#233;fenses de la ville de %s1_CityName sont tr&#232;s faibles, ce qui fait de nous une cible bien vuln&#233;rable ! N'oubliez pas que mieux vaut pr&#233;venir que gu&#233;rir ! La construction d'un b&#226;timent ([COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]) permettrait d'assurer la s&#233;curit&#233; de notre peuple !</French>
+		<German>%s1_CityName besitzt nur sehr schwache Verteidigungsm&#246;glichkeiten! Das macht sie geradewegs zur Zielscheibe! Ihr wisst ja sicher: Nur gute Z&#228;une gew&#228;hrleisten gute Nachbarschaft. Wenn wir das Geb&#228;ude [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] errichten w&#252;rden, w&#228;re die Bev&#246;lkerung endlich sicher!</German>
+		<Italian>Sire, le difese della citt&#224; %s1_CityName sono deboli e siamo un bersaglio invitante! Ricorda, una buona difesa crea un buon vicinato, La costruzione dell'edificio [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] metterebbe al sicuro la nostra gente!</Italian>
+		<Spanish>Excelencia, las defensas de %s1_CityName son muy d&#233;biles, por lo que estamos invitando a que la invadan. Recordad que las verjas altas hacen buenos a los vecinos. La construcci&#243;n de [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] le dar&#237;a a nuestro pueblo una merecida seguridad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CANCEL_DEAL</Tag>
+		<English>Are you sure you wish to cancel this deal?</English>
+		<French>Voulez-vous vraiment annuler cet accord ?</French>
+		<German>Wollt Ihr diesen Handel wirklich aufk&#252;ndigen?</German>
+		<Italian>Sei sicuro di voler annullare questo affare?</Italian>
+		<Spanish>&#191;Seguro que quer&#233;is cancelar este trato?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CANCEL_DEAL_YES</Tag>
+		<English>Absolutely, cancel this deal.</English>
+		<French>Absolument, annulez cet accord.</French>
+		<German>Unbedingt! Dieser Handel wird aufgek&#252;ndigt!</German>
+		<Italian>Certamente, annulla l'affare.</Italian>
+		<Spanish>Por supuesto, cancel&#233;moslo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CANCEL_DEAL_NO</Tag>
+		<English>Hrmmm, perhaps we should rethink this?</English>
+		<French>Hmm, peut-&#234;tre devrions-nous y r&#233;fl&#233;chir davantage ?</French>
+		<German>Hmmm, vielleicht sollte ich das noch mal &#252;berdenken?</German>
+		<Italian>Uhm, forse dovremmo ripensarci?</Italian>
+		<Spanish>Quiz&#225; debamos replante&#225;rnoslo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CANNOT_CONSTRUCT_WORK_NEXT_LIMITED</Tag>
+		<English>You cannot continue constructing [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
+		<French>Vous ne pouvez plus assurer la construction de : [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] &#224; %s2_CityName. Que souhaitez-vous faire &#224; la place ?</French>
+		<German>Die Errichtung des Geb&#228;udes [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
+		<Italian>Non puoi continuare a costruire l'edificio [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
+		<Spanish>No pod&#233;is seguir construyendo [NUM1:el:la:los:las] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] en %s2_CityName. &#191;Qu&#233; quer&#233;is hacer en su lugar?</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_POPUP_CANNOT_CREATE_WORK_NEXT</Tag>
+		<English>You cannot continue creating a [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
+		<French>Vous ne pouvez plus assurer la cr&#233;ation de : [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] &#224; %s2_CityName. Que souhaitez-vous faire &#224; la place ?</French>
+		<German>Das Projekt [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
+		<Italian>Non puoi continuare la realizzazione del progetto [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
+		<Spanish>No pod&#233;is seguir creando [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] en %s2_CityName. &#191;Qu&#233; quer&#233;is hacer en su lugar?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CANNOT_CREATE_WORK_NEXT_LIMITED</Tag>
+		<English>You cannot continue creating [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
+		<French>Vous ne pouvez plus cr&#233;er : [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] &#224; %s2_CityName. Que souhaitez-vous faire &#224; la place ?</French>
+		<German>Das Projekt [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
+		<Italian>Non puoi continuare a creare il progetto [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
+		<Spanish>No pod&#233;is seguir creando [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] en %s2_CityName. &#191;Qu&#233; quer&#233;is hacer en su lugar?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CANNOT_TRAIN_WORK_NEXT_LIMITED</Tag>
+		<English>You cannot continue training [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
+		<French>Vous ne pouvez plus entra&#238;ner : [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] &#224; %s2_CityName. Que souhaitez-vous faire &#224; la place ?</French>
+		<German>Die Ausbildung der Einheit [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
+		<Italian>Non puoi continuare a realizzare l'unit&#224; [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
+		<Spanish>No pod&#233;is seguir entrenando [NUM1:al:a la:a los:a las] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] en %s2_CityName. &#191;Qu&#233; quer&#233;is hacer en su lugar?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CHOOSE_TECH</Tag>
+		<English>Choose a technology...</English>
+		<French>Choisissez une technologie...</French>
+		<German>W&#228;hlt eine Technologie ...</German>
+		<Italian>Scegli una tecnologia...</Italian>
+		<Spanish>Elegid una tecnolog&#237;a...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CITY_CAPTURE_KEEP</Tag>
+		<English>You have captured %s1_CityName!!! Would you like to keep it?</English>
+		<French>Vous avez captur&#233; %s1_CityName ! Voulez-vous garder cette ville ?</French>
+		<German>Ihr habt die Stadt %s1_CityName eingenommen!!! Wollt Ihr sie behalten?</German>
+		<Italian>Hai conquistato %s1_CityName! Vuoi tenerla?</Italian>
+		<Spanish>Hab&#233;is capturado %s1_CityName. &#191;Dese&#225;is conservarla?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_COLONY_DEMAND</Tag>
+		<English>Sire, the costs of maintaining our overseas possession of %s1_CityName are mounting. We should consider granting independence to all of our cities on that continent.</English>
+		<French>Monsieur, les co&#251;ts d'entretien de notre possession &#233;trang&#232;re de %s1_CityName augmentent. Nous devrions consid&#233;rer la question de l'ind&#233;pendance de toutes nos villes sur ce continent.</French>
+		<German>Die Unterhaltskosten der Stadt %s1_CityName in &#220;bersee, die sich in Eurem Besitz befindet, steigen drastisch. Wir sollten erw&#228;gen, all unseren St&#228;dten auf diesem Kontinent die Unabh&#228;ngigkeit zu gew&#228;hren.</German>
+		<Italian>Sire, i costi di manutenzione dei nostri possedimenti oltremare di %s1_CityName diventano sempre pi&#249; elevati. Dovremmo considerare l'ipotesi di concedere l'indipendenza a tutte le nostre citt&#224; in quel continente.</Italian>
+		<Spanish>Excelencia, los costes de mantenimiento de nuestra posesi&#243;n de ultramar de %s1_CityName son galopantes. Deber&#237;amos pensar en darles la independencia a todas las ciudades que tenemos en ese continente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CONVERTING_EFFECTS</Tag>
+		<English>[SPACE]Converting will produce %D1_Change%F2_HappOrUn in all cities with %F3_RelIcon</English>
+		<French>[SPACE]La conversion entra&#238;ne %D1_Change%F2_HappOrUn dans toutes les villes ayant la religion %F3_RelIcon</French>
+		<German>[SPACE]Die Konvertierung wird in allen St&#228;dten mit der Religion %F3_RelIcon %D1_Change%F2_HappOrUn verursachen</German>
+		<Italian>[SPACE]La conversione produrr&#224; %D1_Change%F2_HappOrUn in tutte le citt&#224; con %F3_RelIcon</Italian>
+		<Spanish>[SPACE]La conversi&#243;n producir&#225; %D1_Change %F2_HappOrUn en todas las ciudades con %F3_RelIcon.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CONVERT_RELIGION</Tag>
+		<English>Yes, start the incantations!</English>
+		<French>Oui, commencez les incantations !</French>
+		<German>Ja, stimmt die Gebete an!</German>
+		<Italian>S&#236;, iniziamo subito i riti!</Italian>
+		<Spanish>&#161;S&#237;, que empiecen los c&#225;nticos!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CREATED_WORK_ON_NEXT_LIMITED</Tag>
+		<English>You have created [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
+		<French>Vous avez cr&#233;&#233; : [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] &#224; %s2_CityName. Que souhaitez-vous faire ensuite ?</French>
+		<German>Das Projekt [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName wurde fertig gestellt. Wie lautet Euer n&#228;chster Befehl?</German>
+		<Italian>Hai creato il progetto [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare adesso?</Italian>
+		<Spanish>Hab&#233;is creado [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] en %s2_CityName. &#191;Qu&#233; quer&#233;is hacer a continuaci&#243;n?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CREATED_WORK_ON_NEXT_SPACESHIP</Tag>
+		<English>%s2_CityName has added [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] to the spaceship. What would you like to work on next?</English>
+		<French>Ajout de : [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] au vaisseau par %s2_CityName. Que souhaitez-vous construire ensuite ?</French>
+		<German>%s2_CityName hat das Projekt [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] zum Raumschiff hinzugef&#252;gt. Woran m&#246;chtet Ihr als N&#228;chstes arbeiten?</German>
+		<Italian>%s2_CityName ha aggiunto [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] all'astronave. Qual &#232; il prossimo compito?</Italian>
+		<Spanish>%s2_CityName ha a&#241;adido [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] a la nave espacial. &#191;Qu&#233; quer&#233;is hacer a continuaci&#243;n?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CULTURE_DEMAND</Tag>
+		<English>Sire, %s1_CityName is not producing any culture - this would expand our borders, bringing more of the world under our command! The construction of a [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] would let the culture flow!</English>
+		<French>Sire, la ville de %s1_CityName ne g&#233;n&#232;re pas de culture. Cela nous permettrait d'&#233;largir nos fronti&#232;res et ainsi d'accro&#238;tre notre influence ! La construction d'un b&#226;timent ([COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]) permettrait de pallier ce manque !</French>
+		<German>In %s1_CityName mangelt es an Kultur, die wir jedoch brauchen, wenn wir unsere Grenzen erweitern und weitere Gebiete der Welt unter unsere Kontrolle bringen wollen! Um den Kulturaussto&#223; zu steigern, sollten wir das Geb&#228;ude [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] errichten!</German>
+		<Italian>Sire, %s1_CityName non sta producendo cultura che invece ci servirebbe per espandere i nostri confini e controllare il mondo! La costruzione di [NUM2:un:una] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] aumenter&#224; la cultura!</Italian>
+		<Spanish>Excelencia, %s1_CityName no est&#225; generando cultura alguna, cosa que servir&#237;a para expandir nuestras fronteras y apoderarnos de una mayor parte del mundo. Si construy&#233;ramos [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] permitir&#237;amos que fluyese la cultura.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DEAL_CANCEL</Tag>
+		<English>Deal Canceled</English>
+		<French>March&#233; annul&#233;</French>
+		<German>Handel annulliert</German>
+		<Italian>Affare annullato</Italian>
+		<Spanish>Trato cancelado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DEMAND_AGREE</Tag>
+		<English>Fine, do so at the next opportunity.</English>
+		<French>Tr&#232;s bien, attelons-nous &#224; cette t&#226;che &#224; la prochaine occasion.</French>
+		<German>Also sch&#246;n, dann sollten wir das bei n&#228;chster Gelegenheit tun.</German>
+		<Italian>Bene, fallo alla prossima opportunit&#224;</Italian>
+		<Spanish>Bien, hacedlo en cuanto se presente la oportunidad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DEMAND_REFUSE</Tag>
+		<English>Forget it, I'm the one in charge here!</English>
+		<French>Oubliez cela, c'est moi qui commande ici !</French>
+		<German>Kommt nicht in Frage! Und schlie&#223;lich entscheide immer noch ich!</German>
+		<Italian>Scordatelo, qui comando io!</Italian>
+		<Spanish>Olvidadlo, &#161;aqu&#237; soy yo quien manda!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DEMAND_EXAMINE</Tag>
+		<English>Wait, let me examine the city first...</English>
+		<French>Laissez-moi d'abord le temps d'examiner cette ville...</French>
+		<German>Nun, ich will mir die Stadt erst mal selbst anschauen ...</German>
+		<Italian>Un attimo, prima voglio esaminare la citt&#224;...</Italian>
+		<Spanish>Esperad, dejadme examinar primero la ciudad...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DETAILS_EMAIL</Tag>
+		<English>E-mail Address</English>
+		<French>Adresse email </French>
+		<German>E-Mail-Adresse</German>
+		<Italian>Indirizzo e-mail</Italian>
+		<Spanish>Direcci&#243;n de e-mail</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DIPLOMATIC_VOTING_VICTORY</Tag>
+		<English>Leading Candidate: %s1_TeamName (%d2 Votes - Required %d3 of %d4)</English>
+		<French>Candidat en t&#234;te : %s1_TeamName (%d2 votes - %d3 sur %d4 requis)</French>
+		<German>Spitzenkandidat: %s1_TeamName (%d2 Stimmen - Erforderlich: %d3 von %d4)</German>
+		<Italian>Candidato in testa: %s1_TeamName (%d2 Voti - Richiesti %d3 di %d4)</Italian>
+		<Spanish>Candidatura en cabeza: %s1_TeamName (%d2 votos, %d3 de %d4 necesarios)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DIPLOMATIC_VOTING_SUCCEEDS</Tag>
+		<English>%s1_VoteName Succeeds! (%d2 Votes - Required %d3 of %d4)</English>
+		<French>Victoire de %s1_VoteName ! (%d2 votes - %d3 sur %d4 requis)</French>
+		<German>%s1_VoteName hat sich durchgesetzt! (%d2 Stimmen - Erforderlich: %d3 von %d4)</German>
+		<Italian>%s1_VoteName ha vinto! (%d2 Voti - Richiesti %d3 di %d4)</Italian>
+		<Spanish>&#161;Ha ganado %s1_VoteName! (%d2 votos, %d3 of %d4 necesarios)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DIPLOMATIC_VOTING_FAILURE</Tag>
+		<English>%s1_VoteName Fails! (%d2 Votes - Required %d3 of %d4)</English>
+		<French>Echec de %s1_VoteName ! (%d2 votes - %d3 sur %d4 requis)</French>
+		<German>%s1_VoteName ist gescheitert! (%d2 Stimmen - Erforderlich: %d3 von %d4)</German>
+		<Italian>%s1_VoteName ha perso! (%d2 Voti - Richiesti %d3 di %d4)</Italian>
+		<Spanish>&#161;%s1_VoteName ha perdido! (%d2 [NUM2:voto:votos], %d3 of %d4 necesarios)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DISBAND_FLIPPED_CITY</Tag>
+		<English>No. Disband the city!</English>
+		<French>Non. Qu'on fasse dispara&#238;tre la ville !</French>
+		<German>Nein! L&#246;st die Stadt auf!</German>
+		<Italian>No. Liquida la citt&#224;!</Italian>
+		<Spanish>No. &#161;Desmantelad la ciudad!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_DOES_THIS_MEAN_WAR</Tag>
+		<English>Does this mean WAR?!? (vs. %s1_Team)</English>
+		<French>Cela signifie la GUERRE ?! (contre : %s1_Team)</French>
+		<German>Soll das KRIEG bedeuten?!? (gegen %s1_Team)</German>
+		<Italian>Ci&#242; vuol dire GUERRA?</Italian>
+		<Spanish>&#191;Esto es la GUERRA? (contra %s1_Team)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_ASSIGN_CITY</Tag>
+		<English>Assign the %s1_civ_adjective city of %s2_city to %s3_player (Requires %d4_ReqNum of %d5_TotNum Total Votes)</English>
+		<French>Attribuer la ville %s1:2_civ_adjective de %s2_city &#224; %s3_player (%d4_ReqNum vote(s) sur %d5_TotNum requis)</French>
+		<German>&#220;bereignet die %s1:3_civ_adjective Stadt %s2_city an %s3_player. (Erfordert %d4_ReqNum von insgesamt %d5_TotNum Stimmen.)</German>
+		<Italian>Assegna la citt&#224; %s1:2_civ_adjective di %s2_city a %s3_player (richiede %d4_ReqNum su %d5_TotNum voti totali)</Italian>
+		<Spanish>Asignarle la ciudad %s1:2_civ_adjective de %s2_city a %s3_player (requiere %d4_ReqNum de %d5_TotNum votos totales)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_DEFENSIVE_PACT</Tag>
+		<English>Sign defensive pact with all members (Requires %d1_ReqNum of %d2_TotNum Total Votes)</English>
+		<French>Signer un pacte de d&#233;fense entre tous les membres (Requiert %d1_ReqNum des %d2_TotNum votes totaux)</French>
+		<German>Ein Verteidigungsb&#252;ndnis mit allen Mitgliedern unterzeichnen (%d1_ReqNum von insgesamt %d2_TotNum Stimmen erforderlich)</German>
+		<Italian>Firma un patto di difesa tra tutti i membri (richiede %d1_ReqNum su %d2_TotNum voti totali)</Italian>
+		<Spanish>Firmar un acuerdo de protecci&#243;n entre todos los miembros (requiere %d1_ReqNum de %d2_TotNum votos en total)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_FORCE_NO_TRADE</Tag>
+		<English>Stop trading with %s1_player (Requires %d2_ReqNum of %d3_TotNum Total Votes)</English>
+		<French>Rompre les &#233;changes avec %s1_player (%d2_ReqNum vote(s) sur %d3_TotNum requis)</French>
+		<German>Stoppt den Handel mit %s1_player. (Erfordert %d2_ReqNum von insgesamt %d3_TotNum Stimmen.)</German>
+		<Italian>Smetti di commerciare con %s1_player (richiede %d2_ReqNum su %d3_TotNum voti totali)</Italian>
+		<Spanish>Dejar de comerciar con %s1_player (requiere %d2_ReqNum de %d3_TotNum votos totales)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_FORCE_PEACE</Tag>
+		<English>Stop the war against %s1_player (Requires %d2_ReqNum of %d3_TotNum Total Votes)</English>
+		<French>Arr&#234;ter la guerre contre %s1_player (%d2_ReqNum vote(s) sur %d3_TotNum requis)</French>
+		<German>Stoppt den Krieg gegen %s1_player. (Erfordert %d2_ReqNum von insgesamt %d3_TotNum Stimmen.)</German>
+		<Italian>Ferma la guerra contro %s1_player (richiede %d2_ReqNum su %d3_TotNum voti totali)</Italian>
+		<Spanish>Detener la guerra contra %s1_player (requiere %d2_ReqNum de %d3_TotNum votos totales)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_FORCE_WAR</Tag>
+		<English>Declare war on %s1_player (Requires %d2_ReqNum of %d3_TotNum Total Votes)</English>
+		<French>>D&#233;clarer la guerre contre %s1_player (%d2_ReqNum vote(s) sur %d3_TotNum requis)</French>
+		<German>Erkl&#228;rt %s1_player den Krieg. (Erfordert %d2_ReqNum on insgesamt %d3_TotNum Stimmen.)</German>
+		<Italian>Dichiara guerra a %s1_player (richiede %d2_ReqNum su %d3_TotNum voti totali)</Italian>
+		<Spanish>Declararle la guerra a %s1_player (requiere %d2_ReqNum de %d3_TotNum votos totales)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_OPEN_BORDERS</Tag>
+		<English>Sign open borders with all members (Requires %d1_ReqNum of %d2_TotNum Total Votes)</English>
+		<French>Signer un accord de libre passage entre tous les membres (Requiert %d1_ReqNum des %d2_TotNum votes totaux)</French>
+		<German>Offene-Grenzen-Abkommen mit allen Mitgliedern unterzeichnen (%d1_ReqNum von insgesamt %d2_TotNum Stimmen erforderlich)</German>
+		<Italian>Firma un accordo di diritto di passaggio tra tutti i membri (richiede %d1_ReqNum su %d2_TotNum voti totali)</Italian>
+		<Spanish>Firmar un acuerdo de apertura de fronteras entre todos los miembros (requiere %d1_ReqNum de %d2_TotNum votos en total)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_OPTION</Tag>
+		<English>%s1_VoteName (Requires %d2_ReqNum of %d3_TotNum Total Votes)</English>
+		<French>%s1_VoteName (n&#233;cessite %d2_ReqNum sur %d3_TotNum votes au total)</French>
+		<German>%s1_VoteName (Erforderlich: %d2_ReqNum von %d3_TotNum Gesamtstimmen)</German>
+		<Italian>%s1_VoteName (Richiede %d2_ReqNum su %d3_TotNum voti totali)</Italian>
+		<Spanish>%s1_VoteName (son necesarios %d2_ReqNum de un total de %d3_TotNum votos).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ENTER_WB</Tag>
+		<English>Enter WorldBuilder</English>
+		<French>Ouvrir l'&#233;diteur de mondes</French>
+		<German>Weltenbauer &#246;ffnen</German>
+		<Italian>Entra nell'editor</Italian>
+		<Spanish>Entrar en el Creador de mundos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ENTER_WITH_OPEN_BORDERS</Tag>
+		<English>[SPACE](You can peacefully enter if you sign an Open Borders Treaty.)</English>
+		<French>[SPACE](Vous pouvez entrer en paix si vous signez un trait&#233; de libre passage.)</French>
+		<German>[SPACE](Wenn Ihr eine Grenz&#246;ffnungsvereinbarung schlie&#223;t, k&#246;nnten wir das Gebiet gefahrlos betreten.)</German>
+		<Italian>[SPACE](Puoi entrare pacificamente se decidi di siglare un accordo di diritto di passaggio.)</Italian>
+		<Spanish>[SPACE](Pod&#233;is entrar pac&#237;ficamente si firm&#225;is un tratado de apertura de fronteras.)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_EXAMINE_CITY</Tag>
+		<English>Examine City</English>
+		<French>Examiner la ville</French>
+		<German>Stadt untersuchen</German>
+		<Italian>Esamina citt&#224;</Italian>
+		<Spanish>Examinar la ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_EXIT_TO_DESKTOP</Tag>
+		<English>Exit to Desktop</English>
+		<French>Retour au bureau</French>
+		<German>Zur&#252;ck zum Desktop</German>
+		<Italian>Vai al desktop</Italian>
+		<Spanish>Salir al escritorio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_EXIT_TO_MAIN_MENU</Tag>
+		<English>Exit to Main Menu</English>
+		<French>Retour au menu principal</French>
+		<German>Zur&#252;ck zum Hauptmen&#252;</German>
+		<Italian>Vai al menu principale</Italian>
+		<Spanish>Salir al men&#250; principal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_FIRST_REVOLUTION</Tag>
+		<English>You might want to review some of the civic options available to you.</English>
+		<French>Vous pouvez revoir les choix de doctrines dont vous disposez.</French>
+		<German>Vielleicht solltet Ihr einige Optionen f&#252;r diese Staatsform anpassen ...</German>
+		<Italian>Forse vuoi rivedere alcune opzioni delle forme di governo disponibili.</Italian>
+		<Spanish>Quiz&#225; quer&#225;is revisar algunas de las opciones de principios que ten&#233;is a vuestra disposici&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_FLIPPED_CITY_KEEP</Tag>
+		<English>The people of %s1_CityName wish to join our illustrious empire! Shall we welcome them?</English>
+		<French>Le peuple de %s1_CityName souhaite rejoindre notre illustre empire ! Devons-nous l'accueillir ?</French>
+		<German>Das Volk von %s1_CityName m&#246;chte sich unserem glanzvollen Reich anschlie&#223;en. Sollen wir sie willkommen hei&#223;en?</German>
+		<Italian>Gli abitanti di %s1_CityName desiderano unirsi al nostro grandioso impero! Vuoi accoglierli?</Italian>
+		<Spanish>&#161;El pueblo de %s1_CityName desea unirse a nuestro ilustre imperio! &#191;Lo aceptaremos de buen grado?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_GOLD_CITY_CAPTURE</Tag>
+		<English>You have pillaged %d1_Num [ICON_GOLD] from the capture of %s2_CityName!!! Would you like to keep it?</English>
+		<French>Vous avez pill&#233; %d1_Num [ICON_GOLD] en capturant %s2_CityName ! Voulez-vous le garder ?</French>
+		<German>Ihr habt durch die Eroberung von %s2_CityName %d1_Num [ICON_GOLD] erbeutet!!! Wollt Ihr die Stadt behalten?</German>
+		<Italian>Hai saccheggiato %d1_Num [ICON_GOLD] dalla conquista di %s2_CityName!!! Vuoi mantenerla?</Italian>
+		<Spanish>Hab&#233;is saqueado %d1_Num [ICON_GOLD] con la captura de %s2_CityName. &#191;Dese&#225;is conservarla?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_GOLD_DEMAND</Tag>
+		<English>Sire, %s1_CityName is producing a great deal of gold for our treasury! We should consider constructing a [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] to increase the output even more, making us all very, very rich!</English>
+		<French>Sire, la ville de %s1_CityName produit de grandes quantit&#233;s d'or pour notre tr&#233;sor ! Nous devrions penser &#224; construire un b&#226;timent ([COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]) pour am&#233;liorer encore ses rentr&#233;es et ainsi devenir tr&#232;s tr&#232;s riches !</French>
+		<German>In %s1_CityName wird jede Menge Gold f&#252;r unsere Schatzkammern erwirtschaftet! Wir sollten das Geb&#228;ude [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] errichten, um den Aussto&#223; noch weiter zu erh&#246;hen - damit wir alle sehr, sehr reich werden!</German>
+		<Italian>Sire, %s1_CityName sta portando molto oro nelle nostre casse! Dovremmo prendere in considerazione l'ipotesi di costruire [NUM2:un:una] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] per aumentare ulteriormente la produzione e diventare molto ricchi!</Italian>
+		<Spanish>Excelencia, %s1_CityName est&#225; reportando una gran cantidad de oro a nuestras arcas. Deber&#237;amos pensar en construir [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] para aumentar m&#225;s todav&#237;a el rendimiento y enriquecernos a lo grande.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_KEEP_CAPTURED_CITY</Tag>
+		<English>Yes! Install a new Governor...</English>
+		<French>Oui ! Qu'on installe un nouveau gouverneur...</French>
+		<German>Ja! Benennt einen neuen Statthalter ...</German>
+		<Italian>S&#236;! Instaura un nuovo governatore...</Italian>
+		<Spanish>S&#237;. Que tome posesi&#243;n un nuevo gobernante.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_KEEP_FLIPPED_CITY</Tag>
+		<English>Yes! Install a new Governor...</English>
+		<French>Oui ! Qu'on installe un nouveau gouverneur...</French>
+		<German>Ja! Benennt einen neuen Statthalter ...</German>
+		<Italian>S&#236;! Instaura un nuovo governatore...</Italian>
+		<Spanish>S&#237;. Que tome posesi&#243;n un nuevo gobernante.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_KICKED</Tag>
+		<English>We are being kicked from the game!  Exiting to main menu...</English>
+		<French>Nous sommes exclus de la partie ! D&#233;connexion du menu principal...</French>
+		<German>Wir werden aus dem Spiel geworfen! Zur&#252;ck zum Hauptmen&#252; ...</German>
+		<Italian>Siamo stati cacciati dal gioco! Ritorno al menu principale...</Italian>
+		<Spanish>Te est&#225;n expulsando de la partida.  Saliendo al men&#250; principal...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_LIBERATION_DEMAND</Tag>
+		<English>Sire, the citizens of %s1_CityName are rightfully asking to join the %s2_civ. Allowing them to do so would make %s3_player quite pleased with us.</English>
+		<French>Monsieur, les citoyens de %s1_CityName sont l&#233;gitimement en droit de rejoindre la civilisation de %s2_civ. Le leur permettre nous mettrait en bons termes avec %s3_player.</French>
+		<German>Die Bewohner von %s1_CityName bitten in aller Form darum, der Zivilisation %s2_civ beizutreten. Eure Erlaubnis w&#252;rde %s3_player hoch erfreuen.</German>
+		<Italian>Sire, i cittadini di %s1_CityName a buon diritto chiedono di unirsi a %s2_civ. Concedendoglielo, %s3_player ci guarderebbe con favore.</Italian>
+		<Spanish>Excelencia, los ciudadanos de %s1_CityName piden leg&#237;timamente unirse al %s2_civ. Permit&#237;rselo nos predispondr&#237;a favorablemente a ojos de %s3_player.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_LIKE_TO_CONVERT</Tag>
+		<English>[SPACE]Would you like to adopt to this new creed?</English>
+		<French>[SPACE]Souhaitez-vous adopter cette nouvelle croyance ?</French>
+		<German>[SPACE]Wollt Ihr diesen neuen Glauben anerkennen?</German>
+		<Italian>[SPACE]Vuoi adottare questa nuova fede?</Italian>
+		<Spanish>[SPACE]&#191;Os gustar&#237;a adoptar esta nueva fe?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_LOAD_GAME</Tag>
+		<English>Load Game</English>
+		<French>Charger</French>
+		<German>Spiel laden</German>
+		<Italian>Carica partita</Italian>
+		<Spanish>Cargar partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_MAINTENANCE_DEMAND</Tag>
+		<English>Sire, the maintenance of %s1_CityName is costing us a great deal, a result of our empire's expansive growth! The construction of a [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] would be wise indeed!</English>
+		<French>Sire, l'entretien de la ville de %s1_CityName nous co&#251;te cher, &#224; cause de l'expansion d&#233;mesur&#233;e de notre empire ! La construction d'un b&#226;timent ([COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]) serait la bienvenue !</French>
+		<German>In %s1_CityName fallen sehr hohe Unterhaltskosten an - was nicht zuletzt eine Folge des enormen Wachstums unseres Reiches ist! Es w&#228;re klug, dort das Geb&#228;ude [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] zu errichten!</German>
+		<Italian>Sire, il mantenimento di %s1_CityName ci sta costando parecchio, in seguito alla crescita del nostro impero! La costruzione di [NUM2:un:una] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] potrebbe essere una mossa saggia!</Italian>
+		<Spanish>Excelencia, el mantenimiento de %s1_CityName nos est&#225; costando un ojo de la cara, debido a la gran expansi&#243;n de nuestro imperio. Construir [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] ser&#237;a una sabia decisi&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_MISSIONARY_DEMAND</Tag>
+		<English>Sire, as our empire grows, we would be wise to spread our state religion, [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT]! Building a [COLOR_UNIT_TEXT]%s2_UnitName[COLOR_REVERT] in %s3_CityName would help us spread the faith to our other cities, increasing their happiness.</English>
+		<French>Sire, notre empire s'&#233;tend, il serait sage de propager notre religion d'&#233;tat ([COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT]) ! La construction de : [COLOR_UNIT_TEXT]%s2_UnitName[COLOR_REVERT] &#224; %s3_CityName nous aiderait &#224; r&#233;pandre notre foi dans les autres villes et &#224; faire leur bonheur.</French>
+		<German>Wenn unser Reich weiterhin w&#228;chst, w&#228;ren wir gut beraten, unsere Staatsreligion [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] zu propagieren! Durch die Errichtung einer Einheit [COLOR_UNIT_TEXT]%s2_UnitName[COLOR_REVERT] in %s3_CityName k&#246;nnten wir unseren Glauben auch in unsere anderen St&#228;dte einf&#252;hren und so die Zufriedenheit der dortigen Bev&#246;lkerung erh&#246;hen.</German>
+		<Italian>Sire, con la crescita dell'impero, sarebbe saggio diffondere la nostra religione ufficiale, [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT]! Realizzando un'unit&#224; [COLOR_UNIT_TEXT]%s2_UnitName[COLOR_REVERT] a %s3_CityName contribuiremmo a diffondere la fede nelle altre citt&#224; dell'impero, aumentandone la felicit&#224;.</Italian>
+		<Spanish>Excelencia, a medida que el imperio crezca, ser&#237;a prudente que propag&#225;semos nuestra religi&#243;n oficial, el [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT]. Construir [NUM2:un:una:unos:unas] [COLOR_UNIT_TEXT]%s2_UnitName[COLOR_REVERT] en %s3_CityName nos ayudar&#237;a a propagar la fe a las dem&#225;s ciudades y aumentar su Felicidad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_NEW_CIVIC</Tag>
+		<English>Your society can now implement the civic [COLOR_HIGHLIGHT_TEXT]%s1_CivicName[COLOR_REVERT]</English>
+		<French>Votre soci&#233;t&#233; peut maintenant adopter la doctrine [COLOR_HIGHLIGHT_TEXT]%s1_CivicName[COLOR_REVERT]</French>
+		<German>Eure Gesellschaft kann nun die Staatsform [COLOR_HIGHLIGHT_TEXT]%s1_CivicName[COLOR_REVERT] annehmen</German>
+		<Italian>La tua societ&#224; adesso pu&#242; implementare la forma di governo [COLOR_HIGHLIGHT_TEXT]%s1_CivicName[COLOR_REVERT]</Italian>
+		<Spanish>Vuestra sociedad ya puede adoptar el principio [NUM1:del:de la:de los:de las] [COLOR_HIGHLIGHT_TEXT]%s1_CivicName[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_NO_CONVERSION</Tag>
+		<English>No, it's nothing but superstition.</English>
+		<French>Non, ce ne sont que des superstitions.</French>
+		<German>Nein, das ist nichts als Aberglaube.</German>
+		<Italian>No, sono soltanto superstizioni.</Italian>
+		<Spanish>Ni hablar, no son m&#225;s que supersticiones.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_OLD_WAYS_BEST</Tag>
+		<English>No, the old ways are best.</English>
+		<French>Non, ne changeons rien !</French>
+		<German>Nein, das alte System hat sich bew&#228;hrt.</German>
+		<Italian>No, i vecchi metodi sono i migliori.</Italian>
+		<Spanish>No, son mejores las tradiciones.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_OPTIONS</Tag>
+		<English>Options</English>
+		<French>Options</French>
+		<German>Optionen</German>
+		<Italian>Opzioni</Italian>
+		<Spanish>Opciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_PASSED</Tag>
+		<English>[SPACE](PASSED)</English>
+		<French>[SPACE](ADOPTEE)</French>
+		<German>[SPACE](ANGENOMMEN)</German>
+		<Italian>[SPACE](PASSATA)</Italian>
+		<Spanish>[SPACE](APROBADA)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_RAZE_CAPTURED_CITY</Tag>
+		<English>No! BURN BABY, BURN!!!</English>
+		<French>NON ! REDUISEZ-LA EN CENDRES !</French>
+		<German>Nein! BRENNT SIE NIEDER!!!</German>
+		<Italian>No! BRUCIAMO TUTTO!</Italian>
+		<Spanish>&#161;No! &#161;REDUCIDLA A CENIZAS!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_RECOMMENDED</Tag>
+		<English>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Recommended (%s3_AdvsrName)[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Conseil (%s3_AdvsrName) :[COLOR_REVERT] %s1_ProdName (%d2_NumTurns) </French>
+		<German>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]empfohlen (%s3_AdvsrName)[COLOR_REVERT]</German>
+		<Italian>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Consigliato (%s3_AdvsrName)[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT](%s3_AdvsrName) Se recomienda crear:[COLOR_REVERT] %s1_ProdName (%d2_NumTurns [NUM2:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_RECOMMENDED_NO_ADV</Tag>
+		<English>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Recommended[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Conseil :[COLOR_REVERT] %s1_ProdName (%d2_NumTurns) </French>
+		<German>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]empfohlen[COLOR_REVERT]</German>
+		<Italian>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Consigliato[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]Se recomienda crear:[COLOR_REVERT] %s1_ProdName (%d2_NumTurns [NUM2:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_RECOMMENDED_NO_ADV_OR_TURNS</Tag>
+		<English>%s1_WorkName [COLOR_HIGHLIGHT_TEXT]Recommended[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Conseil :[COLOR_REVERT] %s1_WorkName</French>
+		<German>%s1_WorkName [COLOR_HIGHLIGHT_TEXT]empfohlen[COLOR_REVERT]</German>
+		<Italian>%s1_WorkName [COLOR_HIGHLIGHT_TEXT]Consigliato[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]Se recomienda:[COLOR_REVERT] %s1_WorkName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_RECOMMENDED_ONLY_ADV</Tag>
+		<English>[SPACE][COLOR_HIGHLIGHT_TEXT]Recommended (%s1_AdvsrName)[COLOR_REVERT]</English>
+		<French>[SPACE][COLOR_HIGHLIGHT_TEXT]Conseil (%s1_AdvsrName)[COLOR_REVERT]</French>
+		<German>[SPACE][COLOR_HIGHLIGHT_TEXT]empfohlen (%s1_AdvsrName)[COLOR_REVERT]</German>
+		<Italian>[SPACE][COLOR_HIGHLIGHT_TEXT]Consigliato (%s1_AdvsrName)[COLOR_REVERT]</Italian>
+		<Spanish>[SPACE][COLOR_HIGHLIGHT_TEXT]Se recomienda (%s1_AdvsrName)[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_REGENERATE_MAP</Tag>
+		<English>Regenerate Map</English>
+		<French>Régénérer carte</French>
+		<German>Karte neu laden</German>
+		<Italian>Rigenera mappa</Italian>
+		<Spanish>Regenerar mapa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_RELIGION_SPREAD</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT] has spread in your lands!</English>
+		<French>Une religion ([COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT]) se propage sur vos terres !</French>
+		<German>Die Religion [COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT] hat sich in Eurem Land ausgebreitet!</German>
+		<Italian>%s1_RelName si &#232; diffuso nel tuo territorio!</Italian>
+		<Spanish>&#161;El [COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT] se ha propagado por vuestras tierras!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_RESEARCH_NEXT</Tag>
+		<English>What would you like to research next?</English>
+		<French>Qu'est-ce qui fera l'objet de votre prochaine recherche ?</French>
+		<German>Was wollt Ihr als N&#228;chstes erforschen?</German>
+		<Italian>Cosa vuoi ricercare dopo?</Italian>
+		<Spanish>&#191;Qu&#233; quer&#233;is investigar a continuaci&#243;n?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_RESEARCH_DEMAND</Tag>
+		<English>Sire, %s1_CityName is a great center of scholarship and research! The construction of a [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] would take advantage of this fact by increasing the science output to even higher levels!</English>
+		<French>Sire, la ville de %s1_CityName concentre de nombreuses connaissances et recherches ! La construction d'un b&#226;timent ([COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]) nous permettrait d'en tirer profit en optimisant la production scientifique !</French>
+		<German>%s1_CityName hat sich zu einem regelrechten Zentrum f&#252;r Wissenschaft und Forschung entwickelt! Wir k&#246;nnten diesen Umstand zu unserem Vorteil nutzen und das Geb&#228;ude [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] errichten, um den Wissenschaftsaussto&#223; noch weiter zu erh&#246;hen!</German>
+		<Italian>Sire, %s1_CityName &#232; un grande centro di studio e ricerca! Costruendo [NUM1:un:una] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] ne trarremo grandi vantaggi e potremo aumentare la produzione scientifica ad alti livelli!</Italian>
+		<Spanish>Excelencia, %s1_CityName es un importante centro de investigaci&#243;n y sabidur&#237;a. Si construy&#233;ramos [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] nos aprovechar&#237;amos de ello al llevar la producci&#243;n cient&#237;fica hasta nuevas cotas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_RETIRE</Tag>
+		<English>Retire</English>
+		<French>Abandonner</French>
+		<German>Verlassen</German>
+		<Italian>Ritirati</Italian>
+		<Spanish>Retirarse</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_RETURN_ALLIED_CITY</Tag>
+		<English>No, return control to the %s1_CivName</English>
+		<French>Non, rendez-la aux %s1_CivName.</French>
+		<German>Nein, &#252;bergebt sie wieder an das %s1:2_CivName</German>
+		<Italian>No, restituisci il controllo all'%s1_CivName</Italian>
+		<Spanish>No, devolvedle el control al %s1_CivName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_SAVE_GAME</Tag>
+		<English>Save Game</English>
+		<French>Sauvegarder</French>
+		<German>Spiel speichern</German>
+		<Italian>Salva partita</Italian>
+		<Spanish>Guardar partida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_SEE_BIG_PICTURE</Tag>
+		<English>Let's see the Big Picture...</English>
+		<French>Voyons quelle est la situation...</French>
+		<German>Verschaffen wir uns mal einen &#220;berblick ...</German>
+		<Italian>Vediamo il grande obiettivo...</Italian>
+		<Spanish>Ve&#225;moslo en conjunto...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_START_REVOLUTION</Tag>
+		<English>. Would you like to start a revolution?</English>
+		<French>Voulez-vous d&#233;clencher une r&#233;volution ?</French>
+		<German>. Wollt Ihr eine Revolution einleiten?</German>
+		<Italian>. Vuoi iniziare la rivoluzione?</Italian>
+		<Spanish>. &#191;Os gustar&#237;a iniciar una revoluci&#243;n?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_TURNS_OF_ANARCHY</Tag>
+		<English>[SPACE](%d1_Num [NUM1:Turn:Turns] of Anarchy)</English>
+		<French>[SPACE](%d1_Num [NUM1:tour:tours] d'anarchie)</French>
+		<German>[SPACE](%d1_Num [NUM1:Runde:Runden] Anarchie)</German>
+		<Italian>[SPACE](%d1_Num [NUM1:turno:turni] di Anarchia)</Italian>
+		<Spanish>[SPACE](%d1_Num [NUM1:turno:turnos] de anarqu&#237;a)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_UNHAPPY_DO_SO_NEXT</Tag>
+		<English>Fine, do so at the next opportunity.</English>
+		<French>Tr&#232;s bien, faites-le d&#232;s que possible !</French>
+		<German>Na sch&#246;n, geben wir ihnen bei n&#228;chster Gelegenheit, wonach sie verlangen.</German>
+		<Italian>D'accordo, iniziate alla prima occasione.</Italian>
+		<Spanish>Bien, hacedlo en cuanto se presente la oportunidad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_UNHAPPY_REFUSE</Tag>
+		<English>Bah! I spoil them enough already!!!</English>
+		<French>Bah ! Je les g&#226;te d&#233;j&#224; assez comme &#231;a !</French>
+		<German>Pah! Die sind ohnhin schon verw&#246;hnt!!!</German>
+		<Italian>Bah! Li vizio gi&#224; abbastanza!!!</Italian>
+		<Spanish>&#161;Bah! &#161;Ya les consiento demasiado!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_UNHEALTHY_DO_SO_NEXT</Tag>
+		<English>Very well, do so at the next opportunity.</English>
+		<French>Tr&#232;s bien, faites-le d&#232;s que possible !</French>
+		<German>Also sch&#246;n, geben wir ihnen bei n&#228;chster Gelegenheit, wonach sie verlangen.</German>
+		<Italian>Molto bene, iniziate alla prima occasione.</Italian>
+		<Spanish>Bien, hacedlo en cuanto se presente la oportunidad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_UNHEALTHY_REFUSE</Tag>
+		<English>Bah! Let them eat cake!!!</English>
+		<French>Bah ! Qu'ils aillent au diable !</French>
+		<German>Pah! Lasst sie Kuchen essen!!!</German>
+		<Italian>Bah! Lasciateli lamentarsi!!!</Italian>
+		<Spanish>&#161;Bah! &#161;Que les den morcilla!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_UNHEALTHY_EXAMINE</Tag>
+		<English>Wait, let me examine the city first...</English>
+		<French>Un instant, je vais examiner la ville...</French>
+		<German>Wartet, ich will mir die Stadt erst mal selbst anschauen ...</German>
+		<Italian>Aspetta, fammi esaminare la citt&#224;...</Italian>
+		<Spanish>Esperad, dejadme examinar primero la ciudad...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_UNIT_DEFENSE_DEMAND</Tag>
+		<English>Sire, %s1_CityName is unprotected, leaving it at great risk. The training of a defensive unit ([COLOR_UNIT_TEXT]%s2_UnitName[COLOR_REVERT]) would appease the worried citizens!</English>
+		<French>Sire, la ville de %s1_CityName n'est pas prot&#233;g&#233;e et court de grands risques. La formation d'une unit&#233; d&#233;fensive ([COLOR_BUILDING_TEXT]%s2_UnitName[COLOR_REVERT]) apaiserait nos citoyens !</French>
+		<German>%s1_CityName ist v&#246;llig schutzlos und damit &#228;u&#223;erst gef&#228;hrdet! Wir sollten eine Defensiveinheit ([COLOR_BUILDING_TEXT]%s2_UnitName[COLOR_REVERT]) ausbilden, um die besorgte Bev&#246;lkerung zu beruhigen!</German>
+		<Italian>Sire, %s1_CityName non &#232; protetta e corre un grande rischi. Addestrando delle unit&#224; difensive, ([COLOR_UNIT_TEXT]%s2_UnitName[COLOR_REVERT]), render&#224; felici i cittadini preoccupati!</Italian>
+		<Spanish>Excelencia, %s1_CityName est&#225; desprotegida, por lo que corre un gran peligro. Si entren&#225;ramos una unidad defensiva, como [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_UnitName[COLOR_REVERT], apaciguar&#237;amos a los inquietos ciudadanos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_UNIT_WORKER_DEMAND</Tag>
+		<English>Sire, the city of %s1_CityName has much unimproved land. The training of a [COLOR_UNIT_TEXT]%s2_UnitName[COLOR_REVERT] could help it become much more productive!</English>
+		<French>Sire, la ville de %s1_CityName dispose de nombreux terrains non exploit&#233;s. La formation d'une unit&#233; ([COLOR_BUILDING_TEXT]%s2_UnitName[COLOR_REVERT]) aiderait &#224; la rendre bien pus productive !</French>
+		<German>In %s1_CityName gibt es viele nicht modernisierte Fl&#228;chen. Wenn wir die Einheit [COLOR_BUILDING_TEXT]%s2_UnitName[COLOR_REVERT] ausbilden w&#252;rden, lie&#223;e sich die Produktivit&#228;t der Stadt sicherlich steigern!</German>
+		<Italian>Sire, la citt&#224; di %s1_CityName &#232; circondata da molti terreni non migliorati. Addestrando l'unit&#224; ([COLOR_UNIT_TEXT]%s2_UnitName[COLOR_REVERT]), potrebbe diventare pi&#249; produttiva!</Italian>
+		<Spanish>Excelencia, la ciudad de %s1_CityName tiene mucha tierra a&#250;n por mejorar. Entrenar a una unidad de [COLOR_BUILDING_TEXT]%s2:2_UnitName[COLOR_REVERT] podr&#237;a ayudar a que fuera un lugar mucho m&#225;s productivo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_UNIT_SETTLE_DEMAND</Tag>
+		<English>Sire, our great Civilization is ready to expand! The training of a [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] will allow us to build more cities, spreading our influence far and wide!</English>
+		<French>Sire, notre grande civilisation est pr&#234;te &#224; se d&#233;velopper ! La formation d'une unit&#233; ([COLOR_BUILDING_TEXT]%s1_UnitName[COLOR_REVERT]) nous aiderait &#224; construire d'autres villes et ainsi &#224; accro&#238;tre notre influence !</French>
+		<German>Es ist an der Zeit, unsere wunderbare Zivilisation zu vergr&#246;&#223;ern! Wenn wir die Einheit [COLOR_BUILDING_TEXT]%s1_UnitName[COLOR_REVERT] ausbilden w&#252;rden, k&#246;nnten wir weitere St&#228;dte gr&#252;nden und so unseren Einflussbereich erweitern!</German>
+		<Italian>Sire, la nostra grande civilt&#224; sta per espandersi! L'addestramento dell'unit&#224; [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] ci permetter&#224; di fondare altre citt&#224; e diffondere la nostra influenza molto lontano!</Italian>
+		<Spanish>Excelencia, nuestra gran civilizaci&#243;n est&#225; lista para expandirse. Si entren&#225;ramos a [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_UnitName[COLOR_REVERT] podr&#237;amos construir m&#225;s ciudades, lo que expandir&#237;a nuestra influencia por todas partes.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_VOTES_FOR</Tag>
+		<English>%s1_VtrName votes for %s2_PlyrName (%d3_Num Total)</English>
+		<French>%s1_VtrName vote pour %s2_PlyrName (%d3_Num au total)</French>
+		<German>%s1_VtrName stimmt f&#252;r %s2_PlyrName (Gesamt: %d3_Num)</German>
+		<Italian>%s1_VtrName vota per %s2_PlyrName (%d3_Num totali)</Italian>
+		<Spanish>%s1_VtrName ha votado por %s2_PlyrName (%d3_Num en total)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_VOTES_YES_NO</Tag>
+		<English>%s1_VtrName votes %s2_YesNo (%d3_Num Total)</English>
+		<French>%s1_VtrName vote %s2_YesNo (%d3_Num au total)</French>
+		<German>%s1_VtrName stimmt mit %s2_YesNo (Gesamt: %d3_Num)</German>
+		<Italian>%s1_VtrName vota %s2_YesNo (%d3_Num totali)</Italian>
+		<Spanish>%s1_VtrName ha votado "%s2_YesNo" (%d3_Num en total)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_VOTE_NEVER</Tag>
+		<English>Never! (Defy resolution)</English>
+		<French>Jamais ! (D&#233;fier une r&#233;solution)</French>
+		<German>Niemals! (Resolution ignorieren)</German>
+		<Italian>Mai! (Sfida la risoluzione)</Italian>
+		<Spanish>&#161;Jam&#225;s! (Desafiar resoluci&#243;n)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_WATER_FOOD_DEMAND</Tag>
+		<English>Sire, %s1_CityName is a coastal city - it should reap the fruits of the sea! The construction of a [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] would increase its growth significantly!</English>
+		<French>Sire, la ville de %s1_CityName est situ&#233;e sur la c&#244;te, ce qui lui permet de profiter des largesses de la mer ! La construction d'un b&#226;timent ([COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]) am&#233;liorerait grandement sa croissance !</French>
+		<German>%s1_CityName ist eine K&#252;stenstadt und damit ideal geeignet, um Meeresfr&#252;chte zu ernten! Durch die Errichtung des Geb&#228;udes [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] k&#246;nnten wir das Wachstum der Stadt deutlich steigern!</German>
+		<Italian>Sire, %s1_CityName &#232; una citt&#224; costiera e dovrebbe contare sui doni forniti dal mare! La costruzione di [NUM2:un:una] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] aumenterebbe sensibilmente la crescita!</Italian>
+		<Spanish>Excelencia, %s1_CityName es una ciudad costera y deber&#237;a aprovechar lo que le ofrece la mar. La construcci&#243;n de [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] aumentar&#237;a de manera significativa su crecimiento.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_WHAT_TO_BUILD</Tag>
+		<English>What would you like to build in this city?</English>
+		<French>Que souhaitez-vous construire dans cette ville ?</French>
+		<German>Was wollt Ihr in dieser Stadt errichten?</German>
+		<Italian>Cosa vuoi creare in questa citt&#224;?</Italian>
+		<Spanish>&#191;Qu&#233; os gustar&#237;a construir en esta ciudad?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_YES_START_REVOLUTION</Tag>
+		<English>Yes, let's get this revolution started!</English>
+		<French>Oui, que la r&#233;volution commence !</French>
+		<German>Ja, m&#246;ge die Revolution beginnen!</German>
+		<Italian>S&#236;, facciamo iniziare la rivoluzione!</Italian>
+		<Spanish>&#161;S&#237;, que empiece la revoluci&#243;n!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PRODUCTION_MODIFIER_TRAIT</Tag>
+		<English>[ICON_BULLET]%D1_change%% production speed for %s2_trait leaders</English>
+		<French>[ICON_BULLET]Vitesse de production de %D1_change%% pour les dirigeants avec le trait %s2_trait</French>
+		<German>[ICON_BULLET]%D1_change%% Produktionsgeschwindigkeit f&#252;r %s2:2_trait Staatsoberhaupt</German>
+		<Italian>[ICON_BULLET]%D1_change%% di velocit&#224; produttiva con un leader %s2_trait</Italian>
+		<Spanish>[ICON_BULLET]%D1_change%% de velocidad de producci&#243;n con l&#237;der %s2:1_trait</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_CHANCE_INTERCEPT_NUKES</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Chance of Intercepting [LINK=CONCEPT_NUKES]Nukes[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Mod%% de chance d'intercepter les [LINK=CONCEPT_NUKES]missiles nucl&#233;aires[\LINK]</French>
+		<German>[ICON_BULLET]Wahrscheinlichkeit von %D1_Mod%% zum Abfangen von [LINK=CONCEPT_NUKES]Atomraketen[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% probabilit&#224; di intercettare [LINK=CONCEPT_NUKES]missili[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Probabilidad del %D1_Mod%% de interceptar [LINK=CONCEPT_NUKES]armas nucleares[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_ENABLES_SPECIAL</Tag>
+		<!-- %s1_Name = Can be Buildings, Units, Projects, etc -->
+		<English>[ICON_BULLET]Enables %s1_Name (For all Players)</English>
+		<French>[ICON_BULLET]Permet : %s1_Name (pour tous les joueurs)</French>
+		<German>[ICON_BULLET]Erm&#246;glicht: %s1_Name (f&#252;r alle Spieler)</German>
+		<Italian>[ICON_BULLET]Attiva %s1_Name (per tutti i giocatori)</Italian>
+		<Spanish>[ICON_BULLET]Permite a todos los jugadores: %s1_Name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_NO_NUKES</Tag>
+		<English>[COLOR_WARNING_TEXT][LINK=CONCEPT_NUKES]Nuclear Weapons[\LINK] are Banned[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT][LINK=CONCEPT_NUKES]Armes nucl&#233;aires[\LINK] interdites[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT][LINK=CONCEPT_NUKES]Atomwaffen[\LINK] sind verboten[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Le [LINK=CONCEPT_NUKES]armi nucleari[\LINK] sono proibite[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Las [LINK=CONCEPT_NUKES]armas nucleares[\LINK] est&#225;n prohibidas[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_NUM_TURNS</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]%d1_Num Turns[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]%d1_Num tours[COLOR_REVERT]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]%d1_Num Runden[COLOR_REVERT]</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1_Num turni[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_REQUIRED_FOR_VICTORY</Tag>
+		<English>[ICON_BULLET]%s1 Required for %s2_victory Victory</English>
+		<French>[ICON_BULLET]%s1 requis pour victoire %s2_victory</French>
+		<German>[ICON_BULLET]%s1 für den Siegtyp %s2_victory erforderlich</German>
+		<Italian>[ICON_BULLET]Richiesto %s1 per la vittoria %s2_victory</Italian>
+		<Spanish>[ICON_BULLET]Se necesita %s1 para la victoria %s2_victory</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_REQUIRED_TO_CREATE</Tag>
+		<English>Required to Create[SPACE]</English>
+		<French>Requis pour Cr&#233;er :[SPACE]</French>
+		<German>Erforderlich zur Errichtung von[SPACE]</German>
+		<Italian>Richiesto per Creare[SPACE]</Italian>
+		<Spanish>Se requiere para Crear[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_REQUIRED_TO_CREATE_ANYONE</Tag>
+		<English>Required for Anyone to Create[SPACE]</English>
+		<French>Requis pour cr&#233;er[SPACE]</French>
+		<German>Von jedem ben&#246;tigt zur Erstellung von[SPACE]</German>
+		<Italian>Richiesto da tutti per creare[SPACE]</Italian>
+		<Spanish>Necesario para que cualquiera pueda crear:[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_REQUIRES_STRING_VICTORY</Tag>
+		<!-- %s1_Name = TXT_KEY_VICTORY -->
+		<English>[ICON_BULLET]%s1_Name Victory must be Enabled</English>
+		<French>[ICON_BULLET]Requiert une victoire de type : %s1_Name</French>
+		<German>[ICON_BULLET]Erfordert Siegvariante %s1_Name</German>
+		<Italian>[ICON_BULLET]Richiede la vittoria %s1_Name</Italian>
+		<Spanish>[ICON_BULLET]Requiere una victoria %s1_Name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_TEAM_NUM_ALLOWED</Tag>
+		<English>[ICON_BULLET]Team Project (%d1_Num Allowed)</English>
+		<French>[ICON_BULLET]Projet d'&#233;quipe (limite : %d1_Num)</French>
+		<German>[ICON_BULLET]Teamprojekt: (%d1_Num zul&#228;ssig)</German>
+		<Italian>[ICON_BULLET]Progetto di squadra (%d1_Num [NUM1:consentito:consentiti])</Italian>
+		<Spanish>[ICON_BULLET]Proyecto de equipo (%d1_Num [NUM1:permitido:permitidos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_TEAM_NUM_LEFT</Tag>
+		<English>[SPACE](Team Project: %d1_Num Left)</English>
+		<French>[SPACE](Projet d'&#233;quipe : reste %d1_Num)</French>
+		<German>[SPACE](Teamprojekt: %d1_Num &#252;brig)</German>
+		<Italian>[SPACE](Progetto di squadra: %d1_Num [NUM1:rimanente:rimanenti])</Italian>
+		<Spanish>[SPACE](Proyecto de equipo: %d1_Num [NUM1:restante:restantes])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_TECH_SHARE</Tag>
+		<English>[ICON_BULLET]Grants all Technologies acquired by any %d1_Num Known [NUM1:Civilization:Civilizations]</English>
+		<French>[ICON_BULLET]Octroie toutes les technologies acquises par %d1_Num [NUM1:civilisation connue:civilisations connues]</French>
+		<German>[ICON_BULLET]Stellt alle von %d1_Num bekannten [NUM1:Zivilisation:Zivilisationen] erworbenen Technologien zur Verf&#252;gung</German>
+		<Italian>[ICON_BULLET]Concede tutte le tecnologie scoperte da %d1_Num civilt&#224; [NUM1:conosciuta:conosciute]</Italian>
+		<Spanish>[ICON_BULLET]Otorga todas las tecnolog&#237;as adquiridas por %d1_Num [NUM1:civilizaci&#243;n cualquiera conocida:civilizaciones cualesquiera conocidas]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_WORLD_NUM_ALLOWED</Tag>
+		<English>[ICON_BULLET]World Project (%d1_Num Allowed)</English>
+		<French>[ICON_BULLET]Projet mondial (limite : %d1_Num)</French>
+		<German>[ICON_BULLET]Weltprojekt: (%d1_Num zul&#228;ssig)</German>
+		<Italian>[ICON_BULLET]Progetto globale (%d1_Num [NUM1:consentito:consentiti])</Italian>
+		<Spanish>[ICON_BULLET]Proyecto mundial (%d1_Num [NUM1:permitido:permitidos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_WORLD_NUM_LEFT</Tag>
+		<English>[SPACE](World Project: %d1_Num Left)</English>
+		<French>[SPACE](Projet mondial : reste %d1_Num)</French>
+		<German>[SPACE](Weltprojekt: %d1_Num &#252;brig)</German>
+		<Italian>[SPACE](Progetto globale: %d1_Num [NUM1:rimasto:rimasti])</Italian>
+		<Spanish>[SPACE](Proyecto mundial: %d1_Num [NUM1:restante:restantes])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_AIR_RANGE_TEXT</Tag>
+		<English>[ICON_BULLET]%D1_Change Operational Range</English>
+		<French>[ICON_BULLET]%D1_Change Port&#233;e op&#233;rationnelle</French>
+		<German>[ICON_BULLET]%D1_Change Einsatzreichweite</German>
+		<Italian>[ICON_BULLET]%D1_Change di raggio operativo</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change de alcance operativo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ALWAYS_HEAL_TEXT</Tag>
+		<English>[ICON_BULLET]Can Heal while Moving</English>
+		<French>[ICON_BULLET]Peut se soigner en mouvement</French>
+		<German>[ICON_BULLET]Kann w&#228;hrend der Fortbewegung heilen</German>
+		<Italian>[ICON_BULLET]Permette la cura in movimento</Italian>
+		<Spanish>[ICON_BULLET]Se cura a la vez que se mueve</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_AMPHIB_TEXT</Tag>
+		<English>[ICON_BULLET]No Combat Penalty for Attacking from Sea</English>
+		<French>[ICON_BULLET]Aucune p&#233;nalit&#233; de combat en attaquant depuis la mer</French>
+		<German>[ICON_BULLET]Keine Kampfstrafe f&#252;r Seeangriffe</German>
+		<Italian>[ICON_BULLET]Nessuna penalit&#224; di combattimento quando si attacca dal mare</Italian>
+		<Spanish>[ICON_BULLET]No sufre penalizaci&#243;n al combate por atacar desde el mar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ATTACK_TEXT</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat Attack</English>
+		<French>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat Attaque</French>
+		<German>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat-Angriff</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% di attacco in %s2_TerrFeat</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% a ataque a %s2:2_TerrFeat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_BLITZ_TEXT</Tag>
+		<English>[ICON_BULLET]Can Attack Multiple Times per Turn</English>
+		<French>[ICON_BULLET]Peut attaquer plusieurs fois par tour</French>
+		<German>[ICON_BULLET]Kann mehrmals pro Runde angreifen</German>
+		<Italian>[ICON_BULLET]Permette di attaccare pi&#249; volte durante lo stesso turno</Italian>
+		<Spanish>[ICON_BULLET]Puede atacar varias veces por turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CARGO_TEXT</Tag>
+		<English>[ICON_BULLET]%D1_Change Cargo Space</English>
+		<French>[ICON_BULLET]%D1_Change Capacit&#233; d'emport</French>
+		<German>[ICON_BULLET]%D1_Change Frachtraum</German>
+		<Italian>[ICON_BULLET]%D1_Change spazio di carico</Italian>
+		<Spanish>[ICON_BULLET]Bodega: %D1_Change</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CITY_ATTACK_TEXT</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% City Attack</English>
+		<French>[ICON_BULLET]Attaque de ville %D1_Bonus%%</French>
+		<German>[ICON_BULLET]%D1_Bonus%% Stadtangriff</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% di attacco verso le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% al atacar ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CITY_DEFENSE_TEXT</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% City Defense</English>
+		<French>[ICON_BULLET]D&#233;fense de ville %D1_Bonus%%</French>
+		<German>[ICON_BULLET]%D1_Bonus%% Stadtverteidigung</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% di difesa in citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% al defender ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_COLLATERAL_PROTECTION_TEXT</Tag>
+		<English>[ICON_BULLET]Suffers %d1_percent%% less Collateral Damage</English>
+		<French>[ICON_BULLET]Dommages collat&#233;raux r&#233;duits de %d1_percent%%</French>
+		<German>[ICON_BULLET]%d1_percent%% weniger Kollateralsch&#228;den</German>
+		<Italian>[ICON_BULLET]Subisce %d1_percent%% in meno di danni collaterali</Italian>
+		<Spanish>[ICON_BULLET]Sufre un %d1_percent%% menos de da&#241;os colaterales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT</Tag>
+		<English>Damage/Turn</English>
+		<French>D&#233;g&#226;ts/tour</French>
+		<German>Schaden/Runde</German>
+		<Italian>Danno/turno</Italian>
+		<Spanish>Da&#241;o/turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DEFENSE_TEXT</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat Defense</English>
+		<French>[ICON_BULLET]D&#233;fense sur une case de %s2_TerrFeat %D1_Bonus%%</French>
+		<German>[ICON_BULLET]%D1_Bonus%% Verteidigung f&#252;r die Gel&#228;ndeart %s2_TerrFeat</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% difensivo nelle caselle di %s2:1_TerrFeat</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% a defender %s2:2_TerrFeat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT</Tag>
+		<English>[ICON_BULLET]Double Movement in %s1_TerrFeatType</English>
+		<French>[ICON_BULLET]Capacit&#233; de mouvement doubl&#233;e sur : %s1_TerrFeatType</French>
+		<German>[ICON_BULLET]Doppelte Fortbewegung in folgendem Gel&#228;nde: %s1_TerrFeatType</German>
+		<Italian>[ICON_BULLET]Movimento raddoppiato nelle caselle di %s1_TerrFeatType</Italian>
+		<Spanish>[ICON_BULLET]Movimiento doble en %s1:2_TerrFeatType</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ENEMY_ROADS_TEXT</Tag>
+		<English>[ICON_BULLET]Can Use Enemy Roads</English>
+		<French>[ICON_BULLET]Peut se d&#233;placer sur les routes ennemies</French>
+		<German>[ICON_BULLET]Kann feindliche Stra&#223;en nutzen</German>
+		<Italian>[ICON_BULLET]Permette di usare le strade nemiche</Italian>
+		<Spanish>[ICON_BULLET]Puede usar las carreteras enemigas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_EVASION_TEXT</Tag>
+		<English>[ICON_BULLET]%D1_Change%% Evasion Chance</English>
+		<French>>[ICON_BULLET]%D1_Change%% Chances de fuite</French>
+		<German>[ICON_BULLET]%D1_Change%% Ausweichwahrscheinlichkeit</German>
+		<Italian>[ICON_BULLET]%D1_Change%% di probabilit&#224; di schivata</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% probabilidad de evasi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_FASTER_EXPERIENCE_TEXT</Tag>
+		<English>[ICON_BULLET]Gains %D1_percent%% Experience from Combat</English>
+		<French>[ICON_BULLET]Octroie %D1_percent%% exp&#233;rience au combat</French>
+		<German>[ICON_BULLET]%D1_percent%% mehr Erfahrungspunkte durch Kampf</German>
+		<Italian>[ICON_BULLET]Acquisisce %D1_percent%% di esperienza da combattimento</Italian>
+		<Spanish>[ICON_BULLET]Gana un %D1_percent%% de experiencia por combate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_HEALS_ADJACENT_TEXT</Tag>
+		<English>[ICON_BULLET]Heals Units in Adjacent Tiles Extra %d1_Heals%%[SPACE]</English>
+		<French>[ICON_BULLET]Soigne les unit&#233;s dans les cases adjacentes de + %d1_Heals%%[SPACE]</French>
+		<German>[ICON_BULLET]Heilt Einheiten auf benachbarten Gel&#228;ndefeldern um zus&#228;tzliche %d1_Heals%%[SPACE]</German>
+		<Italian>[ICON_BULLET]Cura le unit&#224; nelle caselle adiacenti del %d1_Heals%%[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Cura a las unidades en casillas adyacentes un %d1_Amount%% m&#225;s de[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT</Tag>
+		<English>[ICON_BULLET]Heals Extra %d1_Amount%%[SPACE]</English>
+		<French>[ICON_BULLET]Gu&#233;rison + %d1_Amount%%[SPACE]</French>
+		<German>[ICON_BULLET]%d1_Amount%%[SPACE]zus&#228;tzliche Heilung[SPACE]</German>
+		<Italian>[ICON_BULLET]Cura il %d1_Amount%% supplementare[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Cura un %d1_Amount%% m&#225;s de[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_HILLS_DEFENSE_TEXT</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% Hills Defense</English>
+		<French>[ICON_BULLET]D&#233;fense de collines %D1_Bonus%%</French>
+		<German>[ICON_BULLET]%D1_Bonus%% H&#252;gel-Verteidigung</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% di difesa in collina</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% a defender colinas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_HILLS_MOVE_TEXT</Tag>
+		<English>[ICON_BULLET]Double Movement in Hills</English>
+		<French>[ICON_BULLET]Capacit&#233; de mouvement doubl&#233;e dans les collines</French>
+		<German>[ICON_BULLET]Doppelte Fortbewegung in H&#252;geln</German>
+		<Italian>[ICON_BULLET]Movimento raddoppiato in collina</Italian>
+		<Spanish>[ICON_BULLET]Movimiento doble en Colinas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_IMMUNE_FIRST_STRIKES_TEXT</Tag>
+		<English>[ICON_BULLET]Immune to First Strikes</English>
+		<French>[ICON_BULLET]Insensible aux premi&#232;res attaques</French>
+		<German>[ICON_BULLET]Immun gegen Erstangriffe</German>
+		<Italian>[ICON_BULLET]Immune agli 'Attacchi improvvisi'</Italian>
+		<Spanish>[ICON_BULLET]Inmune a los ataques de iniciativa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_INTERCEPT_TEXT</Tag>
+		<English>[ICON_BULLET]%D1_Change%% Interception Chance</English>
+		<French>[ICON_BULLET]%D1_Change%% Chances d'interception</French>
+		<German>[ICON_BULLET]%D1_Change%% Abfangwahrscheinlichkeit</German>
+		<Italian>[ICON_BULLET]%D1_Change%% di probabilit&#224; di intercettazione</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% probabilidad de intercepci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_KAMIKAZE_TEXT</Tag>
+		<English>[ICON_BULLET]Sacrificed in Combat in Exchange for %D1_percent%% [ICON_STRENGTH]</English>
+		<French>[ICON_BULLET]Sacrifi&#233; au combat en &#233;change de %D1_percent%% [ICON_STRENGTH]</French>
+		<German>[ICON_BULLET]Wird im Austausch f&#252;r %D1_percent%% [ICON_STRENGTH] im Gefecht geopfert</German>
+		<Italian>[ICON_BULLET]Sacrificato in combattimento in cambio di %D1_percent%% [ICON_STRENGTH]</Italian>
+		<Spanish>[ICON_BULLET]Se sacrifica en combate a cambio de un %D1_percent%% de [ICON_STRENGTH]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_PILLAGE_CHANGE_TEXT</Tag>
+		<English>[ICON_BULLET]Yields %D1_percent%% [ICON_GOLD] from Pillaging</English>
+		<French>[ICON_BULLET]Le pillage rapporte %D1_percent%% [ICON_GOLD]</French>
+		<German>[ICON_BULLET]%D1_percent%% [ICON_GOLD] durch Pl&#252;nderung</German>
+		<Italian>[ICON_BULLET]Produce %D1_percent%% [ICON_GOLD] dal saccheggio</Italian>
+		<Spanish>[ICON_BULLET]Rinde un %D1_percent%% de [ICON_GOLD] en los saqueos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_RIVER_ATTACK_TEXT</Tag>
+		<English>[ICON_BULLET]No Combat Penalty for Crossing River</English>
+		<French>[ICON_BULLET]Aucune p&#233;nalit&#233; de combat en franchissant une rivi&#232;re</French>
+		<German>[ICON_BULLET]Keine Kampfstrafe f&#252;r Fluss&#252;berquerung</German>
+		<Italian>[ICON_BULLET]Nessuna penalit&#224; nel guado di un fiume</Italian>
+		<Spanish>[ICON_BULLET]No sufre penalizaci&#243;n al combate por cruzar un r&#237;o</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_STRENGTH_TEXT</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% Strength</English>
+		<French>[ICON_BULLET]Puissance %D1_Bonus%%</French>
+		<German>[ICON_BULLET]%D1_Bonus%% St&#228;rke</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% di forza</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% a la fuerza</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_FREE_TEXT</Tag>
+		<English>[ICON_BULLET]Free upgrades</English>
+		<French>[ICON_BULLET]Am&#233;liorations gratuites</French>
+		<German>[ICON_BULLET]Freie Modernisierungen</German>
+		<Italian>[ICON_BULLET]Miglioramenti gratuiti</Italian>
+		<Spanish>[ICON_BULLET]Modernizaciones asequibles</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_TEXT</Tag>
+		<English>[ICON_BULLET]%d1_percent%% less [ICON_GOLD] to Upgrade</English>
+		<French>[ICON_BULLET]Co&#251;t de l'am&#233;lioration r&#233;duite de %d1_percent%% [ICON_GOLD]</French>
+		<German>[ICON_BULLET]%d1_percent%% weniger [ICON_GOLD] f&#252;r Modernisierungen</German>
+		<Italian>[ICON_BULLET]%d1_percent%% [ICON_GOLD] in meno ai miglioramenti</Italian>
+		<Spanish>[ICON_BULLET]%d1_percent%% menos de [ICON_GOLD] para modernizar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_WHEN_LEADING</Tag>
+		<English>When attached to a unit:</English>
+		<French>Quand rattach&#233; &#224; une unit&#233; :</French>
+		<German>Wenn im Gefolge einer Einheit:</German>
+		<Italian>Quando legato a un'unit&#224;:</Italian>
+		<Spanish>Cuando se agrega a una unidad:</Spanish>
+	</TEXT>
 </Civ4GameText>
