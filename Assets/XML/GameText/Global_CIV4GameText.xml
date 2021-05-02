@@ -23711,4 +23711,308 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Unit&#224; uniche</Italian>
 		<Spanish>Unidades exclusivas</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAME_END_SCREEN_TITLE</Tag>
+		<English>Your place in History</English>
+		<French>Votre place dans l'histoire</French>
+		<German>Euer Platz in der Geschichte</German>
+		<Italian>Il tuo posto nella storia</Italian>
+		<Spanish>Tu lugar en la Historia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAME_OPTION_NO_BARBARIANS</Tag>
+		<English>No Barbarians</English>
+		<French>Pas de barbares</French>
+		<German>Keine Barbaren</German>
+		<Italian>No Barbari</Italian>
+		<Spanish>Sin b&#225;rbaros</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAME_SCORE</Tag>
+		<English>Score</English>
+		<French>Score</French>
+		<German>Punktestand</German>
+		<Italian>Punteggio</Italian>
+		<Spanish>Puntuaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAME_WON</Tag>
+		<English>%s1 has won a %s2 Victory!!!</English>
+		<French>%s1 a remport&#233; la victoire (%s2) !!!</French>
+		<German>%s1 hat den Sieg in der Kategorie %s2 erzielt!!!</German>
+		<Italian>%s1 ha ottenuto una vittoria %s2!!!</Italian>
+		<Spanish>&#161;%s1 ha conseguido una victoria %s2!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_CULTURE</Tag>
+		<English>Toggles display of culture</English>
+		<French>Afficher/masquer la culture.</French>
+		<German>Schaltet die Kulturanzeige ein/aus</German>
+		<Italian>Attiva/disattiva la visualizzazione della cultura</Italian>
+		<Spanish>Activa el visor de cultura</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RELIGION</Tag>
+		<English>Toggles display of religion spread and distribution</English>
+		<French>Afficher/masquer la propagation et la distribution des religions.</French>
+		<German>Schaltet die Anzeige der Religionsverbreitung und -verteilung ein/aus</German>
+		<Italian>Attiva/disattiva la visualizzazione la diffusione e la distribuzione della religione</Italian>
+		<Spanish>Activa el visor de la propagaci&#243;n y distribuci&#243;n de las religiones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_GENERAL</Tag>
+		<English>General</English>
+		<French>G&#233;n&#233;ral</French>
+		<German>Allgemein</German>
+		<Italian>Generale</Italian>
+		<Spanish>Generales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_STRATEGY_VIEW</Tag>
+		<English>View</English>
+		<French>Vue</French>
+		<German>Ansicht</German>
+		<Italian>Visuale</Italian>
+		<Spanish>Vista</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_STRATEGY_NEW_LINE</Tag>
+		<English>New line</English>
+		<French>Nouvelle ligne</French>
+		<German>Neue Zeile</German>
+		<Italian>Nuova linea</Italian>
+		<Spanish>Nueva l&#237;nea</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_STRATEGY_NEW_SIGN</Tag>
+		<English>New sign</English>
+		<French>Nouveau panneau</French>
+		<German>Neues Symbol</German>
+		<Italian>Nuova nota</Italian>
+		<Spanish>Nueva se&#241;al</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_STRATEGY_DELETE</Tag>
+		<English>Delete</English>
+		<French>Supprimer</French>
+		<German>L&#246;schen</German>
+		<Italian>Elimina</Italian>
+		<Spanish>Borrar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_STRATEGY_DELETE_LINES</Tag>
+		<English>Delete All Lines</English>
+		<French>Effacer toutes lignes</French>
+		<German>Alle Linien l&#246;schen</German>
+		<Italian>Elimina tutte le linee</Italian>
+		<Spanish>Borrar todas las l&#237;neas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_TRADE</Tag>
+		<English>Toggles display of different trade groups</English>
+		<French>Afficher/masquer les diff&#233;rents groupes de commerce.</French>
+		<German>Schaltet die Anzeige verschiedener Handelsgruppen ein/aus</German>
+		<Italian>Attiva/disattiva la visualizzazione dei diversi gruppi di commercio</Italian>
+		<Spanish>Activa el visor de los diferentes grupos de intercambio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_UNITS_ALLMILITARY</Tag>
+		<English>All Military</English>
+		<French>Toutes unit&#233;s militaires</French>
+		<German>Alle Milit&#228;reinheiten</German>
+		<Italian>Tutti gli eserciti</Italian>
+		<Spanish>Todos los ej&#233;rcitos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_UNITS_TEAMMILITARY</Tag>
+		<English>Team Military</English>
+		<French>Unit&#233;s militaires de l'&#233;quipe</French>
+		<German>Team-Milit&#228;reinheiten</German>
+		<Italian>Eserciti della squadra</Italian>
+		<Spanish>Ej&#233;rcitos del equipo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_UNITS_ENEMYMILITARY</Tag>
+		<English>Enemy Military</English>
+		<French>Unit&#233;s militaires ennemies</French>
+		<German>Feindliche Milit&#228;reinheiten</German>
+		<Italian>Eserciti nemici</Italian>
+		<Spanish>Ej&#233;rcitos enemigos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_UNITS_DOMESTICS</Tag>
+		<English>Domestics</English>
+		<French>Domestiques</French>
+		<German>Einheimische</German>
+		<Italian>Unit&#224; locali</Italian>
+		<Spanish>Unidades nacionales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_UNITS_ENEMY_TERRITORY_MILITARY</Tag>
+		<English>Enemies in Territory</English>
+		<French>Ennemis sur le territoire</French>
+		<German>Feindliche Einheiten im Territorium</German>
+		<Italian>Nemici nel territorio</Italian>
+		<Spanish>Enemigos en territorio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_BIG_CITY</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "We love this great city of ours!"</English>
+		<French>+%d1_Change[ICON_HAPPY] : "Nous adorons notre belle cit&#233; !"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "Wir lieben unsere gro&#223;artige Stadt!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "Amiamo la nostra grande citt&#224;!"</Italian>
+		<Spanish>+%d1_Change [ICON_HAPPY]: &#161;Adoramos nuestra gran ciudad!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_BONUS</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "We enjoy our luxurious resources!"</English>
+		<French>+%d1_Change[ICON_HAPPY] : "Nous appr&#233;cions nos ressources luxueuses !"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "Wir genie&#223;en unsere luxuri&#246;sen Ressourcen!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "Ci godiamo le nostre risorse di lusso!"</Italian>
+		<Spanish>+%d1_Change [ICON_HAPPY]: "&#161;Disfrutamos de nuestros lujosos recursos!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_BUILDINGS</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "Some buildings are making us happy!"</English>
+		<French>+%d1_Change[ICON_HAPPY] : "Certains &#233;difices nous r&#233;jouissent"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "Manche Geb&#228;ude lassen uns wirklich alle Sorgen vergessen!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "Alcuni edifici ci rendono felici!"</Italian>
+		<Spanish>+%d1_Change [ICON_HAPPY]: "&#161;Algunos edificios nos hacen felices!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_ENTERTAINMENT</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "We appreciate our entertainment!"</English>
+		<French>+%d1_Change[ICON_HAPPY] : "Nous appr&#233;cions nos divertissements !"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "Wir freuen uns &#252;ber das Unterhaltungsangebot in dieser Stadt!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "Apprezziamo i nostri divertimenti!"</Italian>
+		<Spanish>+%d1_Change [ICON_HAPPY]: "&#161;Nos gustan nuestros espect&#225;culos!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_FEATURES</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "We love our National Parks!"</English>
+		<French>+%d1_Change[ICON_HAPPY] : "Nous appr&#233;cions la beaut&#233; de nos parcs nationaux !"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "Wir lieben unsere Nationalparks!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "Amiamo il nostro parco nazionale!"</Italian>
+		<Spanish>+%d1_Change [ICON_HAPPY]: "&#161;Adoramos nuestros parques nacionales!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_HANDICAP</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "We just enjoy life!"</English>
+		<French>+%d1_Change[ICON_HAPPY] : "La vie est belle !"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "Wir genie&#223;en einfach das Leben!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "Ci godiamo la vita!"</Italian>
+		<Spanish>+%d1_Change [ICON_HAPPY]: "&#161;Vivimos la vida!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_MILITARY_PRESENCE</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "The military presence impresses us!"</English>
+		<French>+%d1_Change[ICON_HAPPY] : "Nous sommes impressionn&#233;s par la pr&#233;sence militaire !"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "Diese Milit&#228;rpr&#228;senz ist beeindruckend!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "La presenza dell'esercito ci impressiona!"</Italian>
+		<Spanish>+%d1_Change [ICON_HAPPY]: "&#161;La presencia militar nos impresiona!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_RELIGIOUS_FREEDOM</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "In our Religion we trust!"</English>
+		<French>+%d1_Change[ICON_HAPPY] : "Nous avons foi en notre religion !"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "Wir vertrauen auf unsere Religion!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "Crediamo nella nostra religione!"</Italian>
+		<Spanish>+%d1_Change [ICON_HAPPY]: "&#161;Creemos en nuestra religi&#243;n!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_STATE_RELIGION</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "Our State Religion is the best!"</English>
+		<French>+%d1_Change[ICON_HAPPY] : "Nous avons la meilleure religion d'&#233;tat qui soit !"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "Unsere Staatsreligion ist die beste!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "La nostra religione ufficiale &#232; la migliore!"</Italian>
+		<Spanish>+%d1_Change [ICON_HAPPY]: "&#161;Nuestra religi&#243;n oficial es la mejor!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_TEMP</Tag>
+		<English>%D1_Change[ICON_HAPPY]: "Past events went well!" (%d2 [NUM2:turn:turns])</English>
+		<French>%D1_Change[ICON_HAPPY]: "La r&#233;ussite nous sourit !" (%d2 [NUM2:tour:tours])</French>
+		<German>%D1_Change[ICON_HAPPY]: "Die vergangenen Ereignisse liefen gut!" (%d2 [NUM2:Runde:Runden])</German>
+		<Italian>%D1_Change[ICON_HAPPY]: "Gli eventi passati sono andati bene!" (%d2 [NUM2:turno:turni])</Italian>
+		<Spanish>%D1_Change [ICON_HAPPY]: "&#161;Los acontecimientos pasados han ido bien!" (%d2 [NUM2:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_TOTAL_HAPPY</Tag>
+		<English>Total Happiness: %d1_Num[ICON_HAPPY]</English>
+		<French>Bonheur total : %d1_Num[ICON_HAPPY]</French>
+		<German>Zufriedenheit gesamt: %d1_Num[ICON_HAPPY]</German>
+		<Italian>Felicit&#224; totale: %d1_Num[ICON_HAPPY]</Italian>
+		<Spanish>Felicidad total: %d1_Num [ICON_HAPPY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_VASSAL</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "We influence other civilizations!"</English>
+		<French>+%d1_Change[ICON_HAPPY] : "Nous influen&#231;ons d'autres civilisations !"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "Wir &#252;ben Einfluss auf andere Zivilisationen aus!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "Influenziamo altre civilt&#224;!"</Italian>
+		<Spanish>+%d1_Change [ICON_HAPPY]: "Influenciamos a las dem&#225;s civilizaciones."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAPPY_YEAH</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "OH YEAH!"</English>
+		<French>+%d1_Change[ICON_HAPPY] : "OH OUI !"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "OH JA!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "OH S&#204;!"</Italian>
+		<Spanish>+%d1_Change [ICON_HAPPY]: "&#161;ESTUPENDO!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HEADING_TRADEROUTE_LIST</Tag>
+		<English>Trade Routes</English>
+		<French>Routes commerciales</French>
+		<German>Handelswege</German>
+		<Italian>Rotte commerciali</Italian>
+		<Spanish>Rutas comerciales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HOF_SCREEN_SIZE</Tag>
+		<English>Size</English>
+		<French>Taille</French>
+		<German>Weltgr&#246;&#223;e</German>
+		<Italian>Dimensione</Italian>
+		<Spanish>Tama&#241;o</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HOF_SCREEN_STARTING_ERA</Tag>
+		<English>Start</English>
+		<French>D&#233;part</French>
+		<German>Startzeitalter</German>
+		<Italian>Iniziale</Italian>
+		<Spanish>Inicio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HOF_SCREEN_GAME_SPEED</Tag>
+		<English>Speed</English>
+		<French>Vitesse</French>
+		<German>Geschwindigkeit</German>
+		<Italian>Velocit&#224;</Italian>
+		<Spanish>Velocidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HURRY_PRODUCTION</Tag>
+		<English>Hurry Production</English>
+		<French>H&#226;ter production</French>
+		<German>Produktion beschleunigen</German>
+		<Italian>Produzione accelerata</Italian>
+		<Spanish>Acelerar la producci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HURRY_PRODUCTION_GOLD</Tag>
+		<English>, %d1 Gold</English>
+		<French>, %d1 or</French>
+		<German>, %d1 Gold</German>
+		<Italian>, %d1 Oro</Italian>
+		<Spanish>, %d1 oro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HURRY_PRODUCTION_POP</Tag>
+		<English>, %d1 Pop</English>
+		<French>, %d1 Pop</French>
+		<German>, %d1 Bev.</German>
+		<Italian>, %d1 Pop</Italian>
+		<Spanish>, %d1 pob</Spanish>
+	</TEXT>
 </Civ4GameText>
