@@ -3067,7 +3067,7 @@ def expireHostileTakeover1(argsList):
 	data = argsList[1]
 	player = GC.getPlayer(data.ePlayer)
 	city = player.getCity(data.iCityId)
-	return city is None:
+	return city is None
 
 def getHostileTakeoverListResources(corporation, player):
   listHave = []
@@ -3134,11 +3134,10 @@ def applyHostileTakeoverDone1(argsList):
 ######## Great Beast ########
 
 def doGreatBeast3(argsList):
-  data = argsList[1]
-
-  for loopCity in GC.getPlayer(data.ePlayer).cities():
-    if loopCity.isHasReligion(data.eReligion):
-      loopCity.changeHappinessTimer(40)
+	data = argsList[1]
+	for loopCity in GC.getPlayer(data.ePlayer).cities():
+		if loopCity.isHasReligion(data.eReligion):
+			loopCity.changeHappinessTimer(40)
 
 def getHelpGreatBeast3(argsList):
 	data = argsList[1]
@@ -3148,13 +3147,10 @@ def getHelpGreatBeast3(argsList):
 ####### Comet Fragment ########
 
 def canDoCometFragment(argsList):
-  data = argsList[0]
-  player = GC.getPlayer(data.ePlayer)
-
-  if (player.getSpaceProductionModifier()) > 10:
-    return False
-
-  return True
+	data = argsList[0]
+	if GC.getPlayer(data.ePlayer).getSpaceProductionModifier() > 10:
+		return False
+	return True
 
 ####### Immigrants ########
 
@@ -3253,7 +3249,7 @@ def canTriggerDissidentPriestCity(argsList):
 def canTriggerImpeachmentCity(argsList):
 	iCity = argsList[2]
 	player = GC.getPlayer(argsList[1])
-	return player.getCity(iCity).isCapital():
+	return player.getCity(iCity).isCapital()
 
 ######## FUTBOL_WAR #######
 #Need to stop vassals from being selected as "other player" b/c can't DoW them.  Also, b/c this event railroads other player into war, don't
@@ -3304,16 +3300,15 @@ def getHelpNapalm2(argsList):
 #Carl Sagan doesn't like theocracies -- he only likes free speech
 
 def canTriggerBillionsandBillions(argsList):
+	data = argsList[0]
+	pPlayer = GC.getPlayer(data.ePlayer)
 
-  data = argsList[0]
-  pPlayer = GC.getPlayer(data.ePlayer)
+	if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_CULT")) or pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_INQUISITORIAL")):
+		return False
+	if (pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DEMOCRACY")) or pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FEDERALISM"))) and pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_EGALITARIAN")):
+		return True
 
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_CULT")) or pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_INQUISITORIAL")):
-    return False
-  if ( pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DEMOCRACY")) or pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FEDERALISM"))) and pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_EGALITARIAN")):
-    return True
-
-  return False
+	return False
 
 def getHelpBillionsandBillions2 (argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_HELP_BILLIONS_AND_BILLIONS_2", ())
@@ -3442,9 +3437,9 @@ def canTriggerGeneralsPutsch(argsList):
   Despot = GC.getInfoTypeForString("CIVIC_DESPOTISM")
   HerdRule = GC.getInfoTypeForString("CIVIC_MONARCHY")
 
-  if R>0:
+  if R > 0:
     return False
-  if A>0:
+  if A > 0:
     return False
   if GC.getTeam(pPlayer.getTeam()).AI_getAtWarCounter(otherPlayer.getTeam()) < 10:
     return False
@@ -3491,24 +3486,21 @@ def applyGeneralsPutsch3(argsList):
 ######  CURE_FOR_CANCER ########
 
 def canTriggerCureforCancer(argsList):
+	data = argsList[0]
+	pPlayer = GC.getPlayer(data.ePlayer)
 
-  data = argsList[0]
-  pPlayer = GC.getPlayer(data.ePlayer)
+	if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_CULT")):
+		return False
+	if pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_MEDICAL_DATABASE")) == 0:
+		return False
 
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_CULT")):
-    return False
-  iOxford = GC.getInfoTypeForString("BUILDING_MEDICAL_DATABASE")
-  if pPlayer.getBuildingCountWithUpgrades(iOxford) == 0:
-    return False
-
-  return True
+	return True
 
 def getHelpCureforCancer1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_CURE_FOR_CANCER_HELP_1", (1, ))
 
 def applyCureforCancer1(argsList):
 	data = argsList[1]
-
 	for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
 		loopPlayer = GC.getPlayer(iPlayer)
 		if loopPlayer.isAlive() and iPlayer != data.ePlayer:
@@ -3530,10 +3522,9 @@ def canTriggerCarnation(argsList):
   Rep = GC.getInfoTypeForString("CIVIC_REPUBLIC")
   StatProp = GC.getInfoTypeForString("CIVIC_PLANNED")
 
-
-  if R>0:
+  if R > 0:
     return False
-  if A>0:
+  if A > 0:
     return False
   if GC.getTeam(pPlayer.getTeam()).AI_getAtWarCounter(otherPlayer.getTeam()) < 10:
     return False
@@ -3553,12 +3544,10 @@ def canTriggerCarnation(argsList):
   return True
 
 def canTriggerCarnationUnit(argsList):
-  eTrigger = argsList[0]
   ePlayer = argsList[1]
   iUnit = argsList[2]
 
-  player = GC.getPlayer(ePlayer)
-  unit = player.getUnit(iUnit)
+  unit = GC.getPlayer(ePlayer).getUnit(iUnit)
 
   if unit.isNone():
     return False
@@ -3652,14 +3641,11 @@ def canTriggerCitySyntheticFuels(argsList):
 	pCity = pPlayer.getCity(iCity)
 	return not pCity.isGovernmentCenter()
 
-
 def getHelpSyntheticFuels1(argsList):
 	data = argsList[1]
 	pCity = GC.getPlayer(data.ePlayer).getCity(data.iCityId)
 	oBonus = GC.getInfoTypeForString("BONUS_OIL")
 	return TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_1", ( 1, GC.getBonusInfo(oBonus).getChar(), pCity.getNameKey()))
-
-  return szHelp
 
 def getHelpSyntheticFuels2(argsList):
 	data = argsList[1]
@@ -3789,8 +3775,6 @@ def canTriggerDarwinsVoyage(argsList):
   pPlayerCY = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_CARAVEL"))
   pAggregate = pPlayerPT + pPlayerDD + pPlayerBB + pPlayerCV + pPlayerFF + pPlayerSoL + pPlayerIC + pPlayerSDD + pPlayerMC + pPlayerSSN + pPlayerSSBN
   pTransports = pPlayerTT + pPlayerGL + pPlayerCY
-
-
 
   if not pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_SECULARISM")):
     return False
@@ -5581,8 +5565,6 @@ def canTriggerCityRuinsTreasure1(argsList):
 def getHelpCityRuinsTreasure1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_BONUS_UNIT", (1, GC.getUnitInfo(GC.getInfoTypeForString("UNIT_TREASURE")).getTextKey()))
 
-  return szHelp
-
 def applyCityRuinsTreasure1(argsList):
   data = argsList[1]
   player = GC.getPlayer(data.ePlayer)
@@ -5825,10 +5807,7 @@ def getHelpLessDictator2(argsList):
 
 def canTriggerUnlimitedPower1(argsList):
 	data = argsList[1]
-
-	if GC.getPlayer(data.ePlayer).getCity(data.iCityId).isPower():
-		return False
-	return True
+	return not GC.getPlayer(data.ePlayer).getCity(data.iCityId).isPower()
 
 def TriggerUnlimitedPower1(argsList):
 	data = argsList[1]
