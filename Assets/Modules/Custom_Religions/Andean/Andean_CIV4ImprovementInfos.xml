@@ -8,6 +8,9 @@
 	<ImprovementInfos>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MACHU_PICCHU</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_MACHU_PICCHU</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_BUILDING_MACHU_PICCHU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MACHU_PICCHU_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MACHU_PICCHU</ArtDefineTag>

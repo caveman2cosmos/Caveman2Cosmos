@@ -582,8 +582,8 @@
 			<Button>art/interface/buttons/improvements/space_solar_array.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_SPACE_SOLAR_CONCENTRATOR</Type>
-			<Description>TXT_KEY_BUILD_SPACE_SOLAR_CONCENTRATOR</Description>
+			<Type>BUILD_SOLAR_CONCENTRATOR</Type>
+			<Description>TXT_KEY_BUILD_SOLAR_CONCENTRATOR</Description>
 			<Help/>
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<iTime>2500</iTime>
