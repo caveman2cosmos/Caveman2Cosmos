@@ -110,6 +110,7 @@ from CvPythonExtensions import *
 import CvUtil
 from CvUtil import *
 import CvMapGeneratorUtil
+from CvMapGeneratorUtil import *
 import math
 import sys
 import gc
