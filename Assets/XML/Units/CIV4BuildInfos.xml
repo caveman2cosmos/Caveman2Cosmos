@@ -6433,22 +6433,6 @@
 			<Button>,Art/Interface/Buttons/Builds/BuildChopDown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,8</Button>
 		</BuildInfo>
 		<!-- DEFENSIVE IMPROVEMENTS (LAND) -->
-		<!-- Listening Node | Independent -->
-		<BuildInfo>
-			<Type>BUILD_LISTENING_NODE</Type>
-			<Description>TXT_KEY_BUILD_LISTENING_NODE</Description>
-			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
-			<iTime>1000</iTime>
-			<iCost>300</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_LISTENING_NODE</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_F</HotKey>
-			<bCtrlDown>1</bCtrlDown>
-			<bShiftDown>1</bShiftDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/radar/radar_button.dds</Button>
-		</BuildInfo>
 		<!-- Radar Watchtower | End -->
 		<BuildInfo>
 			<Type>BUILD_RADAR_TOWER</Type>

@@ -8173,6 +8173,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	const bool bCtrl = gDLL->ctrlKey();
 
 	const TeamTypes eActiveTeam = GC.getGame().getActiveTeam();
+	const TeamTypes ePlotTeam = pPlot->getTeam();
+	const CvTeamAI* plotTeam = ePlotTeam > -1 ? &GET_TEAM(ePlotTeam) : NULL;
 
 	if (bCtrl && (gDLL->getChtLvl() > 0 || bDebug))
 	{
@@ -8190,7 +8192,6 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		{
 			const PlayerTypes ePlayer = pPlot->getOwner();
 			const CvPlayerAI& pPlayer = GET_PLAYER(ePlayer);
-			const CvTeamAI& pTeam = GET_TEAM(pPlayer.getTeam());
 
 			szString.append(CvWString::format(L"\n\nRevIndex:%d, ", pPlotCity->getRevolutionIndex()));
 			szString.append(CvWString::format(L"Avg:%d, ", pPlotCity->getRevIndexAverage()));
@@ -8213,7 +8214,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			szString.append(CvWString::format(L"\nThreat C/P (%d / %d)", pPlotCity->AI_cityThreat(), pPlayer.AI_getTotalAreaCityThreat(pPlotCity->area())));
 
 			bool bFirst = true;
-			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
 				if (iI == ePlayer) continue;
 
@@ -8225,36 +8226,36 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				{
 					const int iPlayerCloseness = pPlayer.AI_playerCloseness((PlayerTypes)iI, DEFAULT_PLAYER_CLOSENESS);
 
-					if (pTeam.isHasMet(eTeamX) || iPlayerCloseness != 0)
+					if (plotTeam->isHasMet(eTeamX) || iPlayerCloseness != 0)
 					{
 						if (bFirst)
 						{
 							bFirst = false;
 
-							szString.append(CvWString::format(L"\n\nCloseness + War: (in %d wars)", pTeam.getAtWarCount(true)));
+							szString.append(CvWString::format(L"\n\nCloseness + War: (in %d wars)", plotTeam->getAtWarCount(true)));
 						}
 						szString.append(CvWString::format(L"\n%s(%d) : %d ", GET_PLAYER((PlayerTypes)iI).getName(), DEFAULT_PLAYER_CLOSENESS,
 							pPlotCity->AI_playerCloseness((PlayerTypes)iI, DEFAULT_PLAYER_CLOSENESS)));
 
 						szString.append(CvWString::format(L" [%d, ", iPlayerCloseness));
 
-						if (pPlayer.getTeam() != eTeamX)
+						if (ePlotTeam != eTeamX)
 						{
-							szString.append(CvWString::format(L"%d]", pTeam.AI_teamCloseness(eTeamX, DEFAULT_PLAYER_CLOSENESS)));
+							szString.append(CvWString::format(L"%d]", plotTeam->AI_teamCloseness(eTeamX, DEFAULT_PLAYER_CLOSENESS)));
 
-							if (pTeam.isHasMet(eTeamX) && pTeam.AI_getAttitude(eTeamX) != ATTITUDE_FRIENDLY)
+							if (plotTeam->isHasMet(eTeamX) && plotTeam->AI_getAttitude(eTeamX) != ATTITUDE_FRIENDLY)
 							{
-								const int iStartWarVal = pTeam.AI_startWarVal(eTeamX);
+								const int iStartWarVal = plotTeam->AI_startWarVal(eTeamX);
 
-								if (pTeam.isAtWar(eTeamX))
+								if (plotTeam->isAtWar(eTeamX))
 								{
 									szString.append(CvWString::format(L"\n   At War:   "));
 								}
-								else if (pTeam.AI_getWarPlan(eTeamX) != NO_WARPLAN)
+								else if (plotTeam->AI_getWarPlan(eTeamX) != NO_WARPLAN)
 								{
 									szString.append(CvWString::format(L"\n   Plan. War:"));
 								}
-								else if (!pTeam.canDeclareWar(eTeamX))
+								else if (!plotTeam->canDeclareWar(eTeamX))
 								{
 									szString.append(CvWString::format(L"\n   Can't War:"));
 								}
@@ -8275,11 +8276,11 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 								{
 									szString.append(CvWString::format(L" %d", iStartWarVal));
 								}
-								szString.append(CvWString::format(L" (%d", pTeam.AI_calculatePlotWarValue(eTeamX)));
-								szString.append(CvWString::format(L", %d", pTeam.AI_calculateBonusWarValue(eTeamX)));
-								szString.append(CvWString::format(L", %d", pTeam.AI_calculateCapitalProximity(eTeamX)));
-								szString.append(CvWString::format(L", %4s", GC.getAttitudeInfo(pTeam.AI_getAttitude(eTeamX)).getDescription(0)));
-								szString.append(CvWString::format(L", %d%%)", 100-pTeam.AI_noWarAttitudeProb(pTeam.AI_getAttitude(eTeamX))));
+								szString.append(CvWString::format(L" (%d", plotTeam->AI_calculatePlotWarValue(eTeamX)));
+								szString.append(CvWString::format(L", %d", plotTeam->AI_calculateBonusWarValue(eTeamX)));
+								szString.append(CvWString::format(L", %d", plotTeam->AI_calculateCapitalProximity(eTeamX)));
+								szString.append(CvWString::format(L", %4s", GC.getAttitudeInfo(plotTeam->AI_getAttitude(eTeamX)).getDescription(0)));
+								szString.append(CvWString::format(L", %d%%)", 100-plotTeam->AI_noWarAttitudeProb(plotTeam->AI_getAttitude(eTeamX))));
 							}
 						}
 						else
@@ -8302,8 +8303,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 						szString.append(CvWString::format(L"\n%s(%d) : %d ", GET_PLAYER((PlayerTypes)iI).getName(), DEFAULT_PLAYER_CLOSENESS, iCloseness));
 						szString.append(CvWString::format(L" [%d, ", pPlayer.AI_playerCloseness((PlayerTypes)iI, DEFAULT_PLAYER_CLOSENESS)));
 
-						pPlayer.getTeam() != eTeamX ?
-							szString.append(CvWString::format(L"%d]", pTeam.AI_teamCloseness(eTeamX, DEFAULT_PLAYER_CLOSENESS)))
+						ePlotTeam != eTeamX ?
+							szString.append(CvWString::format(L"%d]", plotTeam->AI_teamCloseness(eTeamX, DEFAULT_PLAYER_CLOSENESS)))
 							:
 							szString.append(CvWString::format(L"-]"));
 					}
@@ -8333,7 +8334,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				{
 					if (GC.getBonusInfo((BonusTypes)iI).getTechReveal() != NO_TECH)
 					{
-						if (GET_TEAM(pPlot->getTeam()).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal()))
+						if (plotTeam->isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal()))
 						{
 							paiBonusClassRevealed[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
 						}
@@ -8359,7 +8360,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					{
 						const int iPathLength = GET_PLAYER(pPlot->getOwner()).findPathLength(((TechTypes)iI), false);
 
-						if (iPathLength <= 3 && !GET_TEAM(pPlot->getTeam()).isHasTech((TechTypes)iI))
+						if (iPathLength <= 3 && !plotTeam->isHasTech((TechTypes)iI))
 						{
 							if (bFirst)
 							{
@@ -8377,7 +8378,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 			else if (bAlt && !bShift)
 			{
-				if (pPlot->isHasPathToEnemyCity(pPlot->getTeam()))
+				if (pPlot->isHasPathToEnemyCity(ePlotTeam))
 				{
 					szString.append(CvWString::format(L"\nCan reach an enemy city\n\n"));
 				}
@@ -8389,7 +8390,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				{
 					if (GET_PLAYER((PlayerTypes)iI).isAlive())
 					{
-						if (pPlot->isHasPathToPlayerCity(pPlot->getTeam(), (PlayerTypes) iI))
+						if (pPlot->isHasPathToPlayerCity(ePlotTeam, (PlayerTypes) iI))
 						{
 							szString.append(CvWString::format(SETCOLR L"Can reach %s city" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), GET_PLAYER((PlayerTypes)iI).getName()));
 						}
@@ -8398,7 +8399,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 							szString.append(CvWString::format(SETCOLR L"Cannot reach any %s city" ENDCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT"), GET_PLAYER((PlayerTypes)iI).getName()));
 						}
 
-						if (GET_TEAM(pPlot->getTeam()).isAtWar(GET_PLAYER((PlayerTypes)iI).getTeam()))
+						if (plotTeam->isAtWar(GET_PLAYER((PlayerTypes)iI).getTeam()))
 						{
 							szString.append(CvWString::format(L" (enemy)"));
 						}
@@ -8863,83 +8864,85 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 
 			//Area battle plans.
-			if (pPlot->area()->getAreaAIType(pPlot->getTeam()) == AREAAI_OFFENSIVE)
+			if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_OFFENSIVE)
 			{
 				szTempBuffer.Format(L"\n Area AI = OFFENSIVE");
 			}
-			else if (pPlot->area()->getAreaAIType(pPlot->getTeam()) == AREAAI_DEFENSIVE)
+			else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_DEFENSIVE)
 			{
 				szTempBuffer.Format(L"\n Area AI = DEFENSIVE");
 			}
-			else if (pPlot->area()->getAreaAIType(pPlot->getTeam()) == AREAAI_MASSING)
+			else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_MASSING)
 			{
 				szTempBuffer.Format(L"\n Area AI = MASSING");
 			}
-			else if (pPlot->area()->getAreaAIType(pPlot->getTeam()) == AREAAI_ASSAULT)
+			else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_ASSAULT)
 			{
 				szTempBuffer.Format(L"\n Area AI = ASSAULT");
 			}
-			else if (pPlot->area()->getAreaAIType(pPlot->getTeam()) == AREAAI_ASSAULT_MASSING)
+			else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_ASSAULT_MASSING)
 			{
 				szTempBuffer.Format(L"\n Area AI = ASSAULT_MASSING");
 			}
-			else if (pPlot->area()->getAreaAIType(pPlot->getTeam()) == AREAAI_NEUTRAL)
+			else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_NEUTRAL)
 			{
 				szTempBuffer.Format(L"\n Area AI = NEUTRAL");
 			}
 
 			szString.append(szTempBuffer);
-			szString.append(CvWString::format(L"\n\nNum Wars: %d + %d minor", GET_TEAM(pPlot->getTeam()).getAtWarCount(true), GET_TEAM(pPlot->getTeam()).getAtWarCount(false) - GET_TEAM(pPlot->getTeam()).getAtWarCount(true)));
-			szString.append(CvWString::format(L"\nWarplans:"));
-			for (int iI = 0; iI < MAX_TEAMS; ++iI)
 			{
-				TeamTypes eTeam = (TeamTypes)iI;
-
-				if( GET_TEAM(eTeam).isAlive() || GET_TEAM(eTeam).isNPC() )
+				const int iNumRealWars = plotTeam->getAtWarCount(true);
+				if (iNumRealWars != 0)
 				{
-					if( GET_TEAM(pPlot->getTeam()).AI_getWarPlan(eTeam) == WARPLAN_ATTACKED )
+					szString.append(CvWString::format(L"\n\nNum Wars: %d + %d minor", iNumRealWars, plotTeam->getAtWarCount(false) - iNumRealWars));
+				}
+			}
+			szString.append(CvWString::format(L"\nWarplans:"));
+
+			for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
+			{
+				const TeamTypes eTeamX = static_cast<TeamTypes>(iI);
+				const CvTeam& teamX = GET_TEAM(eTeamX);
+
+				if (teamX.isAlive())
+				{
+					if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_ATTACKED)
 					{
-						szString.append(CvWString::format(L"\n%s: ATTACKED", GET_TEAM(eTeam).getName().c_str()));
+						szString.append(CvWString::format(L"\n%s: ATTACKED", teamX.getName().c_str()));
 					}
-					else if( GET_TEAM(pPlot->getTeam()).AI_getWarPlan(eTeam) == WARPLAN_ATTACKED_RECENT )
+					else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_ATTACKED_RECENT)
 					{
-						szString.append(CvWString::format(L"\n%s: ATTACKED_RECENT", GET_TEAM(eTeam).getName().c_str()));
+						szString.append(CvWString::format(L"\n%s: ATTACKED_RECENT", teamX.getName().c_str()));
 					}
-					else if( GET_TEAM(pPlot->getTeam()).AI_getWarPlan(eTeam) == WARPLAN_PREPARING_LIMITED )
+					else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_PREPARING_LIMITED)
 					{
-						szString.append(CvWString::format(L"\n%s: PREP_LIM", GET_TEAM(eTeam).getName().c_str()));
+						szString.append(CvWString::format(L"\n%s: PREP_LIM", teamX.getName().c_str()));
 					}
-					else if( GET_TEAM(pPlot->getTeam()).AI_getWarPlan(eTeam) == WARPLAN_PREPARING_TOTAL )
+					else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_PREPARING_TOTAL)
 					{
-						szString.append(CvWString::format(L"\n%s: PREP_TOTAL", GET_TEAM(eTeam).getName().c_str()));
+						szString.append(CvWString::format(L"\n%s: PREP_TOTAL", teamX.getName().c_str()));
 					}
-					else if( GET_TEAM(pPlot->getTeam()).AI_getWarPlan(eTeam) == WARPLAN_LIMITED )
+					else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_LIMITED)
 					{
-						szString.append(CvWString::format(L"\n%s: LIMITED", GET_TEAM(eTeam).getName().c_str()));
+						szString.append(CvWString::format(L"\n%s: LIMITED", teamX.getName().c_str()));
 					}
-					else if( GET_TEAM(pPlot->getTeam()).AI_getWarPlan(eTeam) == WARPLAN_TOTAL )
+					else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_TOTAL)
 					{
-						szString.append(CvWString::format(L"\n%s: TOTAL", GET_TEAM(eTeam).getName().c_str()));
+						szString.append(CvWString::format(L"\n%s: TOTAL", teamX.getName().c_str()));
 					}
-					else if( GET_TEAM(pPlot->getTeam()).AI_getWarPlan(eTeam) == WARPLAN_DOGPILE )
+					else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_DOGPILE)
 					{
-						szString.append(CvWString::format(L"\n%s: DOGPILE", GET_TEAM(eTeam).getName().c_str()));
+						szString.append(CvWString::format(L"\n%s: DOGPILE", teamX.getName().c_str()));
 					}
-					else if( GET_TEAM(pPlot->getTeam()).AI_getWarPlan(eTeam) == NO_WARPLAN )
+					else if (plotTeam->AI_getWarPlan(eTeamX) == NO_WARPLAN && plotTeam->isAtWar(eTeamX))
 					{
-						if( GET_TEAM(pPlot->getTeam()).isAtWar(eTeam) )
-						{
-							szString.append(CvWString::format(SETCOLR L"\n%s: NO_WARPLAN!" ENDCOLR, TEXT_COLOR("COLOR_WARNING_TEXT"), GET_TEAM(eTeam).getName().c_str()));
-						}
+						szString.append(CvWString::format(SETCOLR L"\n%s: NO_WARPLAN!" ENDCOLR, TEXT_COLOR("COLOR_WARNING_TEXT"), teamX.getName().c_str()));
 					}
 				}
 
-				if( GET_TEAM(pPlot->getTeam()).isMinorCiv() || GET_TEAM(pPlot->getTeam()).isNPC() )
+				if (ePlotTeam != eTeamX && (plotTeam->isMinorCiv() || plotTeam->isNPC()) && !plotTeam->isAtWar(eTeamX))
 				{
-					if( pPlot->getTeam() != eTeam && !GET_TEAM(pPlot->getTeam()).isAtWar(eTeam) )
-					{
-						szString.append(CvWString::format(SETCOLR L"\n%s: minor/npc not at war!" ENDCOLR, TEXT_COLOR("COLOR_WARNING_TEXT"), GET_TEAM(eTeam).getName().c_str()));
-					}
+					szString.append(CvWString::format(SETCOLR L"\n%s: minor/npc not at war!" ENDCOLR, TEXT_COLOR("COLOR_WARNING_TEXT"), teamX.getName().c_str()));
 				}
 			}
 
@@ -9464,10 +9467,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					break;
 				}
 			}
-			const TeamTypes ePlotTeam = pPlot->getTeam();
-
-			if (pPlot->isImprovementUpgradable()
-			&& (ePlotTeam == eActiveTeam || bDebug && ePlotTeam != NO_TEAM))
+			if (pPlot->isImprovementUpgradable() && (ePlotTeam == eActiveTeam || bDebug && ePlotTeam != NO_TEAM))
 			{
 				bool bOpenParenthesis = false;
 				bool bImpUpgList = false;
@@ -11062,13 +11062,13 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 						GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iMod);
 				}
 				szHelpString.append(NEWLINE);
-				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP",  iMod));
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP", iMod));
 				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP", CvWString::format(L"%.2f", iValue / 100.0).GetCString()));
 			}
 			else
 			{
 				szHelpString.append(NEWLINE);
-				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP_0", GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent()));
+				szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP", GC.getTraitInfo(eTrait).getFreeUnitUpkeepCivilianPopPercent()));
 			}
 		}
 		// Free Military unit upkeep
@@ -15886,13 +15886,13 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 					GET_PLAYER(GC.getGame().getActivePlayer()).getTotalPopulation() * 100 / (100 - iMod);
 			}
 			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP",  iMod));
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP", iMod));
 			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP", CvWString::format(L"%.2f", iValue / 100.0).GetCString()));
 		}
 		else
 		{
 			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP_0", GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent()));
+			szHelpText.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP", GC.getCivicInfo(eCivic).getFreeUnitUpkeepCivilianPopPercent()));
 		}
 	}
 	// Free Military unit upkeep

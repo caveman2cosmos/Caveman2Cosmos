@@ -8,12 +8,11 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
 from math import sqrt
-from CvMapGeneratorUtil import FractalWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
+#from CvMapGeneratorUtil import FractalWorld
+#from CvMapGeneratorUtil import TerrainGenerator
+#from CvMapGeneratorUtil import FeatureGenerator
 #from CvMapGeneratorUtil import BonusBalancer
 
 #balancer = BonusBalancer()

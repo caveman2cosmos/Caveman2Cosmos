@@ -3674,10 +3674,6 @@
 					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_LISTENING_NODE</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -3917,10 +3913,6 @@
 					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_LISTENING_NODE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -4140,10 +4132,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_RADAR_TOWER</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_LISTENING_NODE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -4369,10 +4357,6 @@
 					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_LISTENING_NODE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -4574,10 +4558,6 @@
 					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_LISTENING_NODE</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -4775,10 +4755,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_RADAR_TOWER</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_LISTENING_NODE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -4979,10 +4955,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_RADAR_TOWER</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_LISTENING_NODE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -5186,10 +5158,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_RADAR_TOWER</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_LISTENING_NODE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
