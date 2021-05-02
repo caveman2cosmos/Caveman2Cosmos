@@ -90,15 +90,9 @@ CvImprovementInfo::~CvImprovementInfo()
 	SAFE_DELETE_ARRAY2(m_ppiTechYieldChanges, GC.getNumTechInfos());
 	SAFE_DELETE_ARRAY2(m_ppiRouteYieldChanges, GC.getNumRouteInfos());
 	//	SAFE_DELETE_ARRAY2(m_ppiTraitYieldChanges, GC.getNumTraitInfos());
-
-	for (int i = 0; i < (int)m_aiAlternativeImprovementUpgradeTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiAlternativeImprovementUpgradeTypes[i]));
-	}
-	for (int i = 0; i < (int)m_aiFeatureChangeTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiFeatureChangeTypes[i]));
-	}
+	GC.removeDelayedResolutionVector(m_improvementBuildTypes);
+	GC.removeDelayedResolutionVector(m_aiAlternativeImprovementUpgradeTypes);
+	GC.removeDelayedResolutionVector(m_aiFeatureChangeTypes);
 }
 
 int CvImprovementInfo::getAdvancedStartCost() const
@@ -161,7 +155,7 @@ int CvImprovementInfo::getImprovementUpgrade() const
 	return m_iImprovementUpgrade;
 }
 
-const ImprovementBuildTypes& CvImprovementInfo::getImprovementBuildType(int iIndex) const
+BuildTypes CvImprovementInfo::getImprovementBuildType(int iIndex) const
 {
 	return m_improvementBuildTypes[iIndex];
 }
@@ -637,11 +631,7 @@ void CvImprovementInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_bPermanent);
 	CheckSum(iSum, m_bOutsideBorders);
 	CheckSumC(iSum, m_aiMapTypes);
-	const int iNumElements = m_improvementBuildTypes.size();
-	for (int iI = 0; iI < iNumElements; ++iI)
-	{
-		CheckSum(iSum, m_improvementBuildTypes[iI].eBuildType);
-	}
+	CheckSumC(iSum, m_improvementBuildTypes);
 
 	// Arrays
 
@@ -848,23 +838,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 	
-	if (pXML->TryMoveToXmlFirstChild(L"CreatingBuilds"))
-	{
-		int i = 0;
-		const int iNum = pXML->GetXmlChildrenNumber(L"CreatingBuild");
-		m_improvementBuildTypes.resize(iNum);
-		if (pXML->TryMoveToXmlFirstChild(L"CreatingBuild"))
-		{
-			do
-			{
-				pXML->GetXmlVal(szTextVal);
-				m_improvementBuildTypes[i].eBuildType = (BuildTypes)pXML->GetInfoClass(szTextVal);
-				i++;
-			} while (pXML->TryMoveToXmlNextSibling(L"CreatingBuild"));
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
+	pXML->SetOptionalVectorWithDelayedResolution(m_improvementBuildTypes, L"CreatingBuilds");
 
 	// initialize the boolean list to the correct size and all the booleans to false
 	FAssertMsg((GC.getNumRouteInfos() > 0) && (NUM_YIELD_TYPES) > 0, "either the number of route infos is zero or less or the number of yield types is zero or less");
@@ -1088,7 +1062,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (isGoody() == bDefault) m_bGoody = pClassInfo->isGoody();
 	if (isPermanent() == bDefault) m_bPermanent = pClassInfo->isPermanent();
 	if (isOutsideBorders() == bDefault) m_bOutsideBorders = pClassInfo->isOutsideBorders();
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_improvementBuildTypes, pClassInfo->m_improvementBuildTypes);
+	GC.copyNonDefaultDelayedResolutionVector(m_improvementBuildTypes, pClassInfo->getBuildTypes());
 
 	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
 	{

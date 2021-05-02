@@ -11567,9 +11567,10 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &
 			SendLog("eBestTempBuild", "eBestTempBuildType count");
 			SendLog("eBestTempBuild", CvWString::format(L"%lld", potentialImprovementInfo.getNumBuildTypes()));
 			SendLog("eBestTempImprovement", potentialImprovementInfo.getType());
-			for (int iJ = 0; iJ < potentialImprovementInfo.getNumBuildTypes(); iJ++)
+			foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
+			//for (int iJ = 0; iJ < potentialImprovementInfo.getNumBuildTypes(); iJ++)
 			{
-				const BuildTypes eBuildType = potentialImprovementInfo.getImprovementBuildType(iJ).eBuildType;
+				//const BuildTypes eBuildType = potentialImprovementInfo.getImprovementBuildType(iJ);
 				SendLog("eBestTempBuild", CvWString::format(L"%lld", eBuildType));
 
 				if (GC.getBuildInfo(eBuildType).getImprovement() == ePotentialImprovement
@@ -11587,7 +11588,8 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &
 				{
 					SendLog("eBestTempBuild", "eBestTempBuildType");
 					SendLog("eBestTempBuild", GC.getBuildInfo(eBestTempBuild).getType());
-					SendLog("eBestTempBuild iteration, and plotIndex", CvWString::format(L"%lld %lld", iJ, pPlot->getWorkingCity()->getCityPlotIndex(pPlot)));
+					SendLog("eBestTempBuild plotIndex", CvWString::format(L"%lld", pPlot->getWorkingCity()->getCityPlotIndex(pPlot)));
+					//SendLog("eBestTempBuild iteration, and plotIndex", CvWString::format(L"%lld %lld", iJ, pPlot->getWorkingCity()->getCityPlotIndex(pPlot)));
 				}
 			}
 			if (eBestTempBuild == NO_BUILD) continue;
