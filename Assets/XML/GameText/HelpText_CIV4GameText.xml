@@ -27,10 +27,6 @@
 		<Russian>[ICON_BULLET]%d1%% бесплатных гражданских юнитов на население.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP_0</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY</Tag>
 		<English>[ICON_BULLET]Free military unit upkeep: %d1 [ICON_GOLD]</English>
 		<German>[ICON_BULLET]Kostenübernahme für militärische Einheiten: %d1 [ICON_GOLD]</German>
