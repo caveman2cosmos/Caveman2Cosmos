@@ -249,11 +249,9 @@ def canTriggerMarathon(argsList):
 
 def doWeddingFeud2(argsList):
 	data = argsList[1]
-
 	for loopCity in GC.getPlayer(data.ePlayer).cities():
 		if loopCity.isHasReligion(data.eReligion):
 			loopCity.changeHappinessTimer(30)
-
 	return 1
 
 def getHelpWeddingFeud2(argsList):
@@ -404,10 +402,7 @@ def getHelpBardTale3(argsList):
 
 def getHelpLooters3(argsList):
 	data = argsList[1]
-
-	otherPlayer = GC.getPlayer(data.eOtherPlayer)
-	city = otherPlayer.getCity(data.iOtherPlayerCityId)
-
+	city = GC.getPlayer(data.eOtherPlayer).getCity(data.iOtherPlayerCityId)
 	return TRNSLTR.getText("TXT_KEY_EVENT_LOOTERS_3_HELP", (1, 2, city.getNameKey()))
 
 
@@ -2877,22 +2872,22 @@ def canTriggerNobleKnightsDone(argsList):
 
 def canApplyNobleKnightsDone2(argsList):
 	data = argsList[1]
-	return GC.getPlayer(data.ePlayer).isCivic(GC.getInfoTypeForString("CIVIC_STATE_CHURCH")):
+	return GC.getPlayer(data.ePlayer).isCivic(GC.getInfoTypeForString("CIVIC_STATE_CHURCH"))
 
 ######## OVERWHELM DOCTRINE ###########
 
 def canTriggerOverwhelm(argsList):
-  data = argsList[0]
+	data = argsList[0]
 
-  map = GC.getMap()
-  iNumWater = 0
+	map = GC.getMap()
+	iNumWater = 0
 
-  for plot in map.plots():
-    if plot.isWater():
-      iNumWater += 1
-    if 100 * iNumWater >= 55 * map.numPlots():
-      return True
-  return False
+	for plot in map.plots():
+		if plot.isWater():
+			iNumWater += 1
+		if 100 * iNumWater >= 55 * map.numPlots():
+			return True
+	return False
 
 def getHelpOverwhelm1(argsList):
   data = argsList[1]
