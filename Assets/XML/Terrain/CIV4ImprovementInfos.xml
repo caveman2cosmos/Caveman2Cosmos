@@ -2335,9 +2335,10 @@
 		<!-- Mushroom Gatherer -> Vertical Farm -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MUSHROOM_GATHERER</Type>
-			<BuildInfos>
-				<BuildInfo>BUILD_MUSHROOM_GATHERER</BuildInfo>
-			</BuildInfos>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_MUSHROOM_GATHERER</CreatingBuild>
+				<CreatingBuild>BUILD_MUSHROOM_GATHERER_KILL</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MUSHROOM_GATHERING_CAMP</ArtDefineTag>
@@ -2744,9 +2745,10 @@
 		<!-- Tar Gatherer* -> Hydrocarbon Well -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TAR_GATHERER</Type>
-			<BuildInfos>
-				<BuildInfo>BUILD_TAR_GATHERER</BuildInfo>
-			</BuildInfos>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_TAR_GATHERER</CreatingBuild>
+				<CreatingBuild>BUILD_TAR_GATHERER_KILL</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_TAR_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TAR_GATHERER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TAR_GATHERER</ArtDefineTag>
@@ -3048,9 +3050,9 @@
 		<!-- Fossil Digsite* | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FOSSIL_DIG_SITE</Type>
-			<BuildInfos>
-				<BuildInfo>IMPROVEMENT_FOSSIL_DIG_SITE</BuildInfo>
-			</BuildInfos>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_FOSSIL_DIG_SITE</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FOSSIL_DIG_SITE</ArtDefineTag>
@@ -3169,9 +3171,10 @@
 		<!-- Salt Gatherer* -> Quarry (Information Lifestyle Obsolete) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SALT_GATHERER</Type>
-			<BuildInfos>
-				<BuildInfo>BUILD_SALT_GATHERER</BuildInfo>
-			</BuildInfos>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_SALT_GATHERER</CreatingBuild>
+				<CreatingBuild>BUILD_SALT_GATHERER_KILL</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_SALT_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SALT_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
@@ -7156,9 +7159,10 @@
 		<!-- Stone Tools Workshop -> Mine OR Early Quarry Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_STONE_TOOLS_WORKSHOP</Type>
-			<BuildInfos>
-				<BuildInfo>BUILD_STONE_TOOLS_WORKSHOP</BuildInfo>
-			</BuildInfos>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_STONE_TOOLS_WORKSHOP</CreatingBuild>
+				<CreatingBuild>BUILD_STONE_TOOLS_WORKSHOP_KILL</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
@@ -8850,9 +8854,9 @@
 		<!-- Factory -> Manufacturing Complex Era -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FACTORY</Type>
-			<BuildInfos>
-				<BuildInfo>IMPROVEMENT_FACTORY</BuildInfo>
-			</BuildInfos>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_FACTORY</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FACTORY</ArtDefineTag>
@@ -11168,10 +11172,10 @@
 		<!-- Palisade -> Fort -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WOODEN_PALISADE</Type>
-			<BuildInfos>
-				<BuildInfo>BUILD_WOODEN_PALISADE</BuildInfo>
-				<BuildInfo>BUILD_WOODEN_PALISADE</BuildInfo>
-			</BuildInfos>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_WOODEN_PALISADE</CreatingBuild>
+				<CreatingBuild>BUILD_WOODEN_PALISADE_KILL</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WOODEN_PALISADE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_PALISADE</ArtDefineTag>
@@ -11801,9 +11805,9 @@
 		<!-- Terraform Dunes -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_DUNES</Type>
-			<BuildInfos>
-				<BuildInfo>IMPROVEMENT_TERRAFORM_DUNES</BuildInfo>
-			</BuildInfos>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_TERRAFORM_DUNES</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_BUILD_TERRAFORM_DUNES</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
@@ -11823,9 +11827,9 @@
 		<!-- Whaling Ships -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WHALING_SHIPS</Type>
-			<BuildInfos>
-				<BuildInfo>IMPROVEMENT_WHALING_SHIPS</BuildInfo>
-			</BuildInfos>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_WHALING_SHIPS</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WHALING_SHIPS</Description>
 			<Civilopedia>TXT_KEY_WHALING_BOATS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WHALING_BOATS</ArtDefineTag>
@@ -11892,9 +11896,9 @@
 		<!-- Whaling Boats -> Whaling Ships -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WHALING_BOATS</Type>
-			<BuildInfos>
-				<BuildInfo>IMPROVEMENT_WHALING_BOATS</BuildInfo>
-			</BuildInfos>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_WHALING_BOATS</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_WHALING_BOATS</Description>
 			<Civilopedia>TXT_KEY_WHALING_BOATS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WHALING_BOATS</ArtDefineTag>
@@ -13101,9 +13105,6 @@
 		<!-- Land Worked (Graphical) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LAND_WORKED</Type>
-			<BuildInfos>
-				<BuildInfo></BuildInfo>
-			</BuildInfos>
 			<Description>TXT_KEY_IMPROVEMENT_LAND_WORKED</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
@@ -13115,9 +13116,6 @@
 		<!-- Water Worked (Graphical) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WATER_WORKED</Type>
-			<BuildInfos>
-				<BuildInfo></BuildInfo>
-			</BuildInfos>
 			<Description>TXT_KEY_IMPROVEMENT_WATER_WORKED</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WATER_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WATER_WORKED</ArtDefineTag>
@@ -13129,9 +13127,6 @@
 		<!-- City Ruins (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_CITY_RUINS) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CITY_RUINS</Type>
-			<BuildInfos>
-				<BuildInfo></BuildInfo>
-			</BuildInfos>
 			<Description>TXT_KEY_IMPROVEMENT_CITY_RUINS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CITY_RUINS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CITY_RUINS</ArtDefineTag>
@@ -13144,9 +13139,6 @@
 		<!-- City Ruins Arcology (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_ARCOLOGY_RUINS) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CITY_RUINS_ARCOLOGY</Type>
-			<BuildInfos>
-				<BuildInfo></BuildInfo>
-			</BuildInfos>
 			<Description>TXT_KEY_IMPROVEMENT_CITY_RUINS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CITY_RUINS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CITY_RUINS_ARCOLOGY</ArtDefineTag>
@@ -13159,9 +13151,6 @@
 		<!-- Goody Hut -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GOODY_HUT</Type>
-			<BuildInfos>
-				<BuildInfo></BuildInfo>
-			</BuildInfos>
 			<Description>TXT_KEY_IMPROVEMENT_GOODY_HUT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_GOODY_HUT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GOODY_HUT</ArtDefineTag>
@@ -13228,9 +13217,6 @@
 		<!-- Goody Island -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GOODY_ISLAND</Type>
-			<BuildInfos>
-				<BuildInfo></BuildInfo>
-			</BuildInfos>
 			<Description>TXT_KEY_IMPROVEMENT_GOODY_ISLAND</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_GOODY_ISLAND_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GOODY_ISLAND</ArtDefineTag>
@@ -13256,9 +13242,6 @@
 		<!-- Indigenous People (Barb Diplomacy placeholder? Inquire with DH, not currently used afaik) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_INDIGENOUS_COMMUNITY</Type>
-			<BuildInfos>
-				<BuildInfo></BuildInfo>
-			</BuildInfos>
 			<Description>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INDIGENOUS_COMMUNITY</ArtDefineTag>
@@ -13286,9 +13269,6 @@
 		<!-- City -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CITY</Type>
-			<BuildInfos>
-				<BuildInfo></BuildInfo>
-			</BuildInfos>
 			<Description>TXT_WORD_CITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CITY_RUINS</ArtDefineTag>
