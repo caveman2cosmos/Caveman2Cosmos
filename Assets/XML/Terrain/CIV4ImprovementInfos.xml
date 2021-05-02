@@ -11143,7 +11143,7 @@
 			<Type>IMPROVEMENT_FORTIFIED_CAVE</Type>
 			<BuildInfos>
 				<BuildInfo>BUILD_FORTIFIED_CAVE</BuildInfo>
-				</BuildInfo>BUILD_FORTIFIED_CAVE_KILL</BuildInfo>
+				<BuildInfo>BUILD_FORTIFIED_CAVE_KILL</BuildInfo>
 			</BuildInfos>
 			<Description>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
