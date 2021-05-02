@@ -102,11 +102,6 @@ def myExceptHook(type, value, tb):
 def pyPrint(stuff):
 	sys.stdout.write('PY:' + stuff + "\n")
 
-def pyAssert(cond, msg):
-	if not cond:
-		sys.stderr.write(msg)
-	assert(cond, msg)
-
 def getOppositeCardinalDirection(dir):
 	return (dir + 2) % CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES
 
@@ -124,7 +119,7 @@ def findInfoTypeNum(infoGetter, numInfos, typeStr):
 	if typeStr == 'NONE':
 		return -1
 	idx = GC.getInfoTypeForString(typeStr)
-	pyAssert(idx != -1, "Can't find type enum for type tag %s" % typeStr)
+	assert(idx != -1, "Can't find type enum for type tag %s" % typeStr)
 	return idx
 
 def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
