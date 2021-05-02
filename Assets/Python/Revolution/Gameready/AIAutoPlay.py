@@ -3,7 +3,6 @@
 #
 from CvPythonExtensions import *
 import Popup as PyPopup
-
 import RevDefs
 import SdToolKit
 import RevUtils
