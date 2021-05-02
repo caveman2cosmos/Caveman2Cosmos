@@ -259,7 +259,7 @@ def generateTerrainTypes():
 class DonutFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 	def addIceAtPlot(self, pPlot, iX, iY, lat):
 		# We don' need no steeking ice. M'kay? Alrighty then.
-		ice = 0
+		return
 		
 	def addJunglesAtPlot(self, pPlot, iX, iY, lat):
 		if (CyMap().getCustomMapOption(1) == 1): pass #No Jungles option
