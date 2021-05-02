@@ -151,4 +151,12 @@
 		<Polish>[COLOR_UNIT_TEXT]Wieza Telewizyjna Zizkov[COLOR_SELECTED_TEXT] zaklócila sygnaly radiowe na calym swiecie!</Polish>
 		<Russian>[COLOR_UNIT_TEXT]Жижковская телебашня[COLOR_SELECTED_TEXT] заблокировала радиосигналы по всему миру!</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MSG_LITIGATION</Tag>
+		<English>Corporation was removed from city.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MSG_LITIGATION_FAIL</Tag>
+		<English>Corporation won and stays in city.</English>
+	</TEXT>
 </Civ4GameText>

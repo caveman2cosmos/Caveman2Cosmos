@@ -27451,5 +27451,209 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Eure Einheit %s1_UnitName wurde w&#228;hrend eines Verteidigungsman&#246;vers von einer Einheit %s2_EnUName vernichtet!</German>
 		<Italian>Difendendo, la tua unit&#224; %s1_UnitName &#232; stata distrutta dall'unit&#224; nemica %s2_EnUName!</Italian>
 		<Spanish>Mientras se [NUM1:defend&#237;a:defend&#237;a:defend&#237;an:defend&#237;an], [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName [NUM1:ha sido destruido:ha sido destruida:han sido destruidos:han sido destruidas] por [NUM2:un:una:unos:unas] %s2_EnUName.</Spanish>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_NEVER_MIND</Tag>
+		<English>Never mind...</English>
+		<French>Laissez tomber...</French>
+		<German>Schon gut ...</German>
+		<Italian>Non importa...</Italian>
+		<Spanish>No importa...</Spanish>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_NONE</Tag>
+		<English>None</English>
+		<French>Rien</French>
+		<German>Keine</German>
+		<Italian>Nessuno</Italian>
+		<Spanish>Ninguno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NON_APPLICABLE</Tag>
+		<English>N/A</English>
+		<French>N/D</French>
+		<German>n.v.</German>
+		<Italian>N/D</Italian>
+		<Spanish>N/A</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NORMALIZED_SCORE</Tag>
+		<English>Normalized</English>
+		<French>Normalis&#233;</French>
+		<German>Normalisiertes</German>
+		<Italian>Normalizzato</Italian>
+		<Spanish>Normalizada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_CAPTUREVOLUME</Tag>
+		<English>Voice Capture Volume</English>
+		<French>Volume capture des voix</French>
+		<German>Sprachwiedergabelautst&#228;rke</German>
+		<Italian>Volume di registrazione vocale</Italian>
+		<Spanish>Volumen de captura de la voz</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_PLAYBACKVOLUME</Tag>
+		<English>Playback Volume</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OR</Tag>
+		<English>[SPACE]or[SPACE]</English>
+		<French>[SPACE]ou[SPACE]</French>
+		<German>[SPACE]oder[SPACE]</German>
+		<Italian>[SPACE]o[SPACE]</Italian>
+		<Spanish>[SPACE]o[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_ALL_UNITS</Tag>
+		<English>All Units</English>
+		<French>Toutes les unit&#233;s</French>
+		<German>Alle Einheiten</German>
+		<Italian>Tutte le unit&#224;</Italian>
+		<Spanish>Todas las unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BUILDINGS_ENABLED</Tag>
+		<English>Buildings Enabled</English>
+		<French>Nouveaux b&#226;timents</French>
+		<German>Geb&#228;ude freigegeben</German>
+		<Italian>Edifici abilitati</Italian>
+		<Spanish>Edificios permitidos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_COST</Tag>
+		<English>Cost: %d1_Num</English>
+		<French>Co&#251;t : %d1_Num</French>
+		<German>Kosten: %d1_Num</German>
+		<Italian>Costo: %d1_Num</Italian>
+		<Spanish>Coste: %d1_Num</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_EFFECTS</Tag>
+		<English>Effects</English>
+		<French>Effets</French>
+		<German>Effekte</German>
+		<Italian>Effetti</Italian>
+		<Spanish>Efectos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_FAV_CIVIC</Tag>
+		<English>Favorite Civics</English>
+		<French>Doctrines pr&#233;f&#233;r&#233;es</French>
+		<German>Bevorzugte Staatsformen</German>
+		<Italian>Forme di governo preferite</Italian>
+		<Spanish>Principios favoritos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_LEADS_TO</Tag>
+		<English>Leads To</English>
+		<French>M&#232;ne &#224; :</French>
+		<German>F&#252;hrt zu</German>
+		<Italian>Conduce a</Italian>
+		<Spanish>Lleva a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_NATIONAL_WONDER</Tag>
+		<English>National Wonder</English>
+		<French>Merveille nationale</French>
+		<German>Nationales Wunder</German>
+		<Italian>Meraviglia Nazionale</Italian>
+		<Spanish>Maravilla nacional</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_PROMOTION_UNITS</Tag>
+		<English>Available To</English>
+		<French>Disponible pour :</French>
+		<German>Verf&#252;gbar f&#252;r</German>
+		<Italian>Disponibile a</Italian>
+		<Spanish>Disponible para</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_RANGE</Tag>
+		<English>Range: %d1_Num</English>
+		<French>Port&#233;e : %d1_Num</French>
+		<German>Reichweite: %d1_Num</German>
+		<Italian>Raggio d'azione: %d1_Num</Italian>
+		<Spanish>Alcance: %d1_Num</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_SPECIAL_ABILITIES</Tag>
+		<English>Special Abilities</English>
+		<French>Comp&#233;tences sp&#233;ciales</French>
+		<German>Spezialf&#228;higkeiten</German>
+		<Italian>Abilit&#224; speciali</Italian>
+		<Spanish>Capacidades especiales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_TEAM_PROJECT</Tag>
+		<English>Team Project</English>
+		<French>Projet d'&#233;quipe</French>
+		<German>Teamprojekt</German>
+		<Italian>Progetto di squadra</Italian>
+		<Spanish>Proyecto de equipo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_TEAM_WONDER</Tag>
+		<English>Team Wonder</English>
+		<French>Merveille d'&#233;quipe</French>
+		<German>Teamwunder</German>
+		<Italian>Meraviglia di squadra</Italian>
+		<Spanish>Maravilla de equipo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_TRAITS</Tag>
+		<English>Traits</English>
+		<French>Traits de caract&#232;re</French>
+		<German>Merkmale</German>
+		<Italian>Punti di forza</Italian>
+		<Spanish>Rasgos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_UNITS_ENABLED</Tag>
+		<English>Units Enabled</English>
+		<French>Nouvelles unit&#233;s</French>
+		<German>Einheiten freigegeben</German>
+		<Italian>Unit&#224; abilitate</Italian>
+		<Spanish>Unidades permitidas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_UPGRADES_TO</Tag>
+		<English>Upgrades To</English>
+		<French>S'am&#233;liore en :</French>
+		<German>Verbessert sich zu</German>
+		<Italian>Migliora in</Italian>
+		<Spanish>Se moderniza a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_WORLD_PROJECT</Tag>
+		<English>World Project</English>
+		<French>Projet mondial</French>
+		<German>Weltprojekt</German>
+		<Italian>Progetto mondiale</Italian>
+		<Spanish>Proyecto mundial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_WORLD_WONDER</Tag>
+		<English>World Wonder</English>
+		<French>Merveille mondiale</French>
+		<German>Weltwunder</German>
+		<Italian>Grande Meraviglia</Italian>
+		<Spanish>Maravilla del mundo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_YIELDS</Tag>
+		<English>Yields</English>
+		<French>Produit</French>
+		<German>Ertr&#228;ge</German>
+		<Italian>Prodotti</Italian>
+		<Spanish>Rendim.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PER_TURN</Tag>
+		<English>/Turn</English>
+		<French>/tour</French>
+		<German>/Runde</German>
+		<Italian>/Turno</Italian>
+		<Spanish>/turno</Spanish>
 	</TEXT>
 </Civ4GameText>
