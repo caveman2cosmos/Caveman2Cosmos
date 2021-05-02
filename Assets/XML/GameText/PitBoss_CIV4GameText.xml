@@ -3,18 +3,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SELECT_NETWORK</Tag>
 		<English>Select Network</English>
-		<French>Choix du r&#233;seau</French>
-		<German>Netzwerk ausw&#228;hlen</German>
+		<French>Choix du réseau</French>
+		<German>Netzwerk auswählen</German>
 		<Italian>Seleziona la rete</Italian>
 		<Spanish>Seleccionar red</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SELECT_NETWORK_HELP</Tag>
 		<English>Select the network on which to run the Pitboss</English>
-		<French>Choisissez le r&#233;seau pour lancer le Pitboss</French>
-		<German>W&#228;hlt das Netzwerk, auf dem der Pitboss gestartet werden soll</German>
+		<French>Choisissez le réseau pour lancer le Pitboss</French>
+		<German>Wählt das Netzwerk, auf dem der Pitboss gestartet werden soll</German>
 		<Italian>Scegli la rete sulla quale avviare il Pitboss</Italian>
-		<Spanish>Selecciona la red en la que te gustar&#237;a ejecutar el Pitboss</Spanish>
+		<Spanish>Selecciona la red en la que te gustaría ejecutar el Pitboss</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_LOGIN</Tag>
@@ -22,7 +22,7 @@
 		<French>Connectez-vous pour ouvrir un Pitboss Internet</French>
 		<German>Loggt Euch bitte ein, um einen Internet Pitboss zu hosten</German>
 		<Italian>Effettua il login per avviare un Pitboss via Internet</Italian>
-		<Spanish>Inicia sesi&#243;n para alojar Pitboss en Internet</Spanish>
+		<Spanish>Inicia sesión para alojar Pitboss en Internet</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_USERNAME</Tag>
@@ -38,7 +38,7 @@
 		<French>Saisissez votre pseudo ici</French>
 		<German>Gebt hier Euren Benutzernamen an</German>
 		<Italian>Inserisci qui il tuo nome utente:</Italian>
-		<Spanish>Introduce aqu&#237; tu nombre de usuario</Spanish>
+		<Spanish>Introduce aquí tu nombre de usuario</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PASSWORD</Tag>
@@ -46,7 +46,7 @@
 		<French>Mot de passe :</French>
 		<German>Kennwort:</German>
 		<Italian>Password:</Italian>
-		<Spanish>Contrase&#241;a:</Spanish>
+		<Spanish>Contraseña:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PASSWORD_HELP</Tag>
@@ -54,15 +54,15 @@
 		<French>Saisissez votre mot de passe ici</French>
 		<German>Gebt hier Euer Kennwort an</German>
 		<Italian>Inserisci qui la tua password</Italian>
-		<Spanish>Introduce aqu&#237; tu contrase&#241;a</Spanish>
+		<Spanish>Introduce aquí tu contraseña</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_LOGIN_FAILED</Tag>
 		<English>Login Failed - Check username and password</English>
-		<French>Echec de la connexion. V&#233;rifiez le pseudo et le mot de passe</French>
-		<German>Login fehlgeschlagen - Benutzername und Kennwort pr&#252;fen</German>
+		<French>Echec de la connexion. Vérifiez le pseudo et le mot de passe</French>
+		<German>Login fehlgeschlagen - Benutzername und Kennwort prüfen</German>
 		<Italian>Login fallito - Verifica il nome utente e la password</Italian>
-		<Spanish>Fallo al iniciar sesi&#243;n: revisa el nombre de usuario y la contrase&#241;a</Spanish>
+		<Spanish>Fallo al iniciar sesión: revisa el nombre de usuario y la contraseña</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_LOGIN_ERROR</Tag>
@@ -70,13 +70,13 @@
 		<French>Erreur de connexion</French>
 		<German>Login-Fehler</German>
 		<Italian>Errore di login</Italian>
-		<Spanish>Error de inicio de sesi&#243;n</Spanish>
+		<Spanish>Error de inicio de sesión</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SELECT_INIT</Tag>
 		<English>Select Init Type</English>
 		<French>Choix du type de lancement</French>
-		<German>Init Type w&#228;hlen</German>
+		<German>Init Type wählen</German>
 		<Italian>Seleziona tipo di init</Italian>
 		<Spanish>Seleccionar tipo de inicio</Spanish>
 	</TEXT>
@@ -91,7 +91,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_ERROR_HOSTING</Tag>
 		<English>Internal error when hosting game</English>
-		<French>Erreur interne lors de l'h&#233;bergement de la partie</French>
+		<French>Erreur interne lors de l'hébergement de la partie</French>
 		<German>Interner Fehler beim Hosten des Spiels</German>
 		<Italian>Errore interno durante il tentativo di ospitare una partita</Italian>
 		<Spanish>Error interno al alojar la partida</Spanish>
@@ -99,16 +99,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_HOST_ERROR</Tag>
 		<English>Host Error</English>
-		<French>Erreur d'h&#233;bergement</French>
+		<French>Erreur d'hébergement</French>
 		<German>Host-Fehler</German>
 		<Italian>Errore host</Italian>
-		<Spanish>Error de anfitri&#243;n</Spanish>
+		<Spanish>Error de anfitrión</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_CHOOSE_SAVE</Tag>
 		<English>Choose a saved game</English>
 		<French>Choisissez une sauvegarde</French>
-		<German>W&#228;hlt einen Spielstand</German>
+		<German>Wählt einen Spielstand</German>
 		<Italian>Scegli una partita salvata</Italian>
 		<Spanish>Elegir una partida guardada</Spanish>
 	</TEXT>
@@ -116,7 +116,7 @@
 		<Tag>TXT_KEY_PITBOSS_SAVE_FILES</Tag>
 		<English>Civ Save files %s1</English>
 		<French>Sauvegardes Civ %s1</French>
-		<German>Civ-Spielst&#228;nde %s1</German>
+		<German>Civ-Spielstände %s1</German>
 		<Italian>File di salvataggio Civ %s1</Italian>
 		<Spanish>Archivos de guardado de Civilization: %s1</Spanish>
 	</TEXT>
@@ -156,9 +156,9 @@
 		<Tag>TXT_KEY_PITBOSS_SIZE</Tag>
 		<English>Size:</English>
 		<French>Taille :</French>
-		<German>Gr&#246;&#223;e:</German>
+		<German>Größe:</German>
 		<Italian>Dimensione:</Italian>
-		<Spanish>Tama&#241;o:</Spanish>
+		<Spanish>Tamaño:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_ERA</Tag>
@@ -166,14 +166,14 @@
 		<French>Ere :</French>
 		<German>Zeitalter:</German>
 		<Italian>Era:</Italian>
-		<Spanish>&#201;poca:</Spanish>
+		<Spanish>Época:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SPEED</Tag>
 		<English>Speed:</English>
 		<French>Vitesse :</French>
 		<German>Geschwindigkeit:</German>
-		<Italian>Velocit&#224;:</Italian>
+		<Italian>Velocità:</Italian>
 		<Spanish>Velocidad:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -182,13 +182,13 @@
 		<French>Assistant de configuration Pitboss - Civ IV</French>
 		<German>Civ IV Pitboss-Installationsassistent</German>
 		<Italian>Wizard di impostazione del Pitboss di Civilization IV</Italian>
-		<Spanish>Asistente de configuraci&#243;n de Pitboss de Civilization IV</Spanish>
+		<Spanish>Asistente de configuración de Pitboss de Civilization IV</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_RANDOM</Tag>
 		<English>Random</English>
-		<French>Al&#233;atoire</French>
-		<German>Zuf&#228;llig</German>
+		<French>Aléatoire</French>
+		<German>Zufällig</German>
 		<Italian>Casuale</Italian>
 		<Spanish>Al azar</Spanish>
 	</TEXT>
@@ -198,15 +198,15 @@
 		<French>Qui</French>
 		<German>Wer</German>
 		<Italian>Chi</Italian>
-		<Spanish>Qui&#233;n</Spanish>
+		<Spanish>Quién</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_CIV</Tag>
 		<English>Civ</English>
 		<French>Civ</French>
 		<German>Ziv</German>
-		<Italian>Civilt&#224;</Italian>
-		<Spanish>Civilizaci&#243;n</Spanish>
+		<Italian>Civiltà</Italian>
+		<Spanish>Civilización</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_LEADER</Tag>
@@ -214,14 +214,14 @@
 		<French>Chef</French>
 		<German>Staatsoberhaupt</German>
 		<Italian>Leader</Italian>
-		<Spanish>L&#237;der</Spanish>
+		<Spanish>Líder</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_DIFFICULTY</Tag>
 		<English>Difficulty</English>
-		<French>Difficult&#233;</French>
+		<French>Difficulté</French>
 		<German>Schwierigkeit</German>
-		<Italian>Difficolt&#224;</Italian>
+		<Italian>Difficoltà</Italian>
 		<Spanish>Dificultad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -236,7 +236,7 @@
 		<Tag>TXT_KEY_PITBOSS_ABOUT</Tag>
 		<English>About</English>
 		<French>A propos de</French>
-		<German>&#220;ber</German>
+		<German>Über</German>
 		<Italian>&amp;Informazioni</Italian>
 		<Spanish>Acerca de</Spanish>
 	</TEXT>
@@ -276,7 +276,7 @@
 		<Tag>TXT_KEY_PITBOSS_EXIT_TEXT</Tag>
 		<English>Terminate the Pitboss</English>
 		<French>Fermer le Pitboss</French>
-		<German>Pitboss schlie&#223;en</German>
+		<German>Pitboss schließen</German>
 		<Italian>Termina il Pitboss</Italian>
 		<Spanish>Pone fin al Pitboss</Spanish>
 	</TEXT>
@@ -294,7 +294,7 @@
 		<French>Ping</French>
 		<German>Ping</German>
 		<Italian>Segnala</Italian>
-		<Spanish>Se&#241;alar</Spanish>
+		<Spanish>Señalar</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SCORE</Tag>
@@ -302,13 +302,13 @@
 		<French>Score</French>
 		<German>Punkte</German>
 		<Italian>Punteggio</Italian>
-		<Spanish>Puntuaci&#243;n</Spanish>
+		<Spanish>Puntuación</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_KICK</Tag>
 		<English>Kick</English>
 		<French>Expulser</French>
-		<German>Ausschlie&#223;en</German>
+		<German>Ausschließen</German>
 		<Italian>Espelli</Italian>
 		<Spanish>Expulsar</Spanish>
 	</TEXT>
@@ -325,15 +325,15 @@
 		<!-- %s1 = player name  -->
 		<English>Are you sure you want to kick %s1 out of the game?</English>
 		<French>Voulez-vous vraiment expulser %s1 de la partie ?</French>
-		<German>Wollt Ihr %s1 wirklich vom Spiel ausschlie&#223;en?</German>
+		<German>Wollt Ihr %s1 wirklich vom Spiel ausschließen?</German>
 		<Italian>Sei sicuro di voler espellere %s1 dalla partita?</Italian>
-		<Spanish>&#191;Seguro que quieres expulsar a %s1 de la partida?</Spanish>
+		<Spanish>¿Seguro que quieres expulsar a %s1 de la partida?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_KICK_VERIFY_TITLE</Tag>
 		<English>Double checking...</English>
-		<French>V&#233;rification...</French>
-		<German>&#220;berpr&#252;fe ...</German>
+		<French>Vérification...</French>
+		<German>Überprüfe ...</German>
 		<Italian>Controllo doppio...</Italian>
 		<Spanish>Comprobando...</Spanish>
 	</TEXT>
@@ -341,7 +341,7 @@
 		<Tag>TXT_KEY_PITBOSS_ABOUT_BOX_TITLE</Tag>
 		<English>About the Pitboss</English>
 		<French>A propos du Pitboss</French>
-		<German>&#220;ber Pitboss</German>
+		<German>Über Pitboss</German>
 		<Italian>Informazioni sul Pitboss</Italian>
 		<Spanish>Acerca de Pitboss</Spanish>
 	</TEXT>
@@ -357,7 +357,7 @@
 		<Tag>TXT_KEY_PITBOSS_SAVE_AS_TEXT</Tag>
 		<English>Civ Save files</English>
 		<French>Fichiers de sauvegarde Civ</French>
-		<German>Ziv-Spielst&#228;nde</German>
+		<German>Ziv-Spielstände</German>
 		<Italian>File di salvataggio di Civ</Italian>
 		<Spanish>Archivos de guardado de Civilization</Spanish>
 	</TEXT>
@@ -380,7 +380,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SAVED</Tag>
 		<English>Saved!</English>
-		<French>Sauvegarde r&#233;ussie !</French>
+		<French>Sauvegarde réussie !</French>
 		<German>Gespeichert!</German>
 		<Italian>Salvataggio riuscito!</Italian>
 		<Spanish>Guardado</Spanish>
@@ -389,18 +389,18 @@
 		<Tag>TXT_KEY_PITBOSS_SAVE_SUCCESS</Tag>
 		<!-- %s1 = name of a save game file -->
 		<English>'%s1' successfully saved"</English>
-		<French>Sauvegarde de '%s1' r&#233;ussie</French>
+		<French>Sauvegarde de '%s1' réussie</French>
 		<German>'%s1' erfolgreich gespeichert"</German>
-		<Italian>'%s1' &#232; stato salvato con successo"</Italian>
+		<Italian>'%s1' è stato salvato con successo"</Italian>
 		<Spanish>Se ha conseguido guardar "%s1"</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_DISCONNECT</Tag>
 		<English>We have lost our connection to the PitBoss!  Exiting to main menu...</English>
-		<French>Nous avons perdu notre connexion au PitBoss ! D&#233;connexion du menu principal...</French>
-		<German>Wir haben die Verbindung zum PitBoss verloren. Zur&#252;ck zum Hauptmen&#252; ...</German>
+		<French>Nous avons perdu notre connexion au PitBoss ! Déconnexion du menu principal...</French>
+		<German>Wir haben die Verbindung zum PitBoss verloren. Zurück zum Hauptmenü ...</German>
 		<Italian>Abbiamo perso la connessione a PitBoss!  Ritorno al menu principale...</Italian>
-		<Spanish>Se ha perdido la conexi&#243;n con el Pitboss.  Saliendo al men&#250; principal...</Spanish>
+		<Spanish>Se ha perdido la conexión con el Pitboss.  Saliendo al menú principal...</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_CLIMATE</Tag>
@@ -421,26 +421,26 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_EMAIL_SUBJECT</Tag>
 		<English>It's your turn! (%s1_Name - %s2_Year)</English>
-		<French>C'est &#224; vous ! (%s1_Name - %s2_Year)</French>
+		<French>C'est à vous ! (%s1_Name - %s2_Year)</French>
 		<German>Sie sind an der Reihe! (%s1_Name - %s2_Year)</German>
-		<Italian>&#200; il tuo turno! (%s1_Name - %s2_Year)</Italian>
-		<Spanish>&#161;Es vuestro turno! (%s1_Name - %s2_Year)</Spanish>
+		<Italian>È il tuo turno! (%s1_Name - %s2_Year)</Italian>
+		<Spanish>¡Es vuestro turno! (%s1_Name - %s2_Year)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_EMAIL_BODY</Tag>
 		<English>You are now welcome to take your turn in the Civ4 Pitboss game "%s1_Name"!</English>
 		<French>Vous pouvez maintenant jouer votre tour dans la partie "%s1_Name" de Pitboss - Civ IV !</French>
-		<German>Sie k&#246;nnen jetzt im Civ4-Pitboss-Spiel "%s1_Name" Ihre Runde spielen!</German>
-		<Italian>&#200; giunto il tuo turno nella modalit&#224; Pitboss di Civ4, "%s1_Name"!</Italian>
-		<Spanish>Ya pod&#233;is llevar a cabo vuestro turno en la partida "%s1_Name" del Pitboss de Civilization 4.</Spanish>
+		<German>Sie können jetzt im Civ4-Pitboss-Spiel "%s1_Name" Ihre Runde spielen!</German>
+		<Italian>È giunto il tuo turno nella modalità Pitboss di Civ4, "%s1_Name"!</Italian>
+		<Spanish>Ya podéis llevar a cabo vuestro turno en la partida "%s1_Name" del Pitboss de Civilization 4.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_EMAIL_TIMER</Tag>
 		<English>Your turn will expire in %d1_timer hours.</English>
 		<French>Votre tour expirera dans %d1_timer heures.</French>
-		<German>Ihre Runde l&#228;uft in %d1_timer Stunden ab.</German>
-		<Italian>Il tuo turno scadr&#224; in %d1_timer ore.</Italian>
-		<Spanish>Vuestro turno expirar&#225; en %d1_timer [NUM1:hora:horas].</Spanish>
+		<German>Ihre Runde läuft in %d1_timer Stunden ab.</German>
+		<Italian>Il tuo turno scadrà in %d1_timer ore.</Italian>
+		<Spanish>Vuestro turno expirará en %d1_timer [NUM1:hora:horas].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_MOTD_TITLE</Tag>
@@ -448,7 +448,7 @@
 		<French>Message du jour</French>
 		<German>Nachricht des Tages</German>
 		<Italian>Messaggio del giorno</Italian>
-		<Spanish>Mensaje del d&#237;a</Spanish>
+		<Spanish>Mensaje del día</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_MOTD_TOGGLE</Tag>
@@ -456,7 +456,7 @@
 		<French>Afficher Message du jour</French>
 		<German>Nachricht des Tages anzeigen</German>
 		<Italian>Mostra il messaggio del giorno</Italian>
-		<Spanish>Mostrar mensaje del d&#237;a</Spanish>
+		<Spanish>Mostrar mensaje del día</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_MOTD_HELP</Tag>
@@ -464,13 +464,13 @@
 		<French>Message du jour actuel</French>
 		<German>Aktuelle Nachricht des Tages</German>
 		<Italian>Attuale messaggio del giorno</Italian>
-		<Spanish>Mensaje del d&#237;a de hoy.</Spanish>
+		<Spanish>Mensaje del día de hoy.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_MOTD_CHANGE</Tag>
 		<English>Change MotD</English>
 		<French>Changer MduJ</French>
-		<German>NdT &#228;ndern</German>
+		<German>NdT ändern</German>
 		<Italian>Cambia messaggio del giorno</Italian>
 		<Spanish>Cambiar mensaje</Spanish>
 	</TEXT>
@@ -478,9 +478,9 @@
 		<Tag>TXT_KEY_PITBOSS_MOTD_CHANGE_HELP</Tag>
 		<English>Modify the Message of the Day</English>
 		<French>Modifier le message du jour</French>
-		<German>Nachricht des Tages &#228;ndern</German>
+		<German>Nachricht des Tages ändern</German>
 		<Italian>Modifica messaggio del giorno</Italian>
-		<Spanish>Modifica el mensaje del d&#237;a.</Spanish>
+		<Spanish>Modifica el mensaje del día.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_CHAT_TITLE</Tag>
@@ -488,13 +488,13 @@
 		<French>Discussion</French>
 		<German>Chat-Dialog</German>
 		<Italian>Finestra di chat</Italian>
-		<Spanish>Di&#225;logo del chat</Spanish>
+		<Spanish>Diálogo del chat</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_CHAT_LOG_HELP</Tag>
 		<English>Log of sent and received chat messages</English>
-		<French>Journal des messages de discussion envoy&#233;s et re&#231;us</French>
-		<German>&#220;bersicht der gesendeten und erhaltenen Chat-Nachrichten</German>
+		<French>Journal des messages de discussion envoyés et reçus</French>
+		<German>Übersicht der gesendeten und erhaltenen Chat-Nachrichten</German>
 		<Italian>Registro dei messaggi di chat inviati e ricevuti</Italian>
 		<Spanish>Registro de mensajes de chat enviados y recibidos.</Spanish>
 	</TEXT>
@@ -504,7 +504,7 @@
 		<French>Tapez vos messages de discussion ici.</French>
 		<German>Chat-Nachrichten hier eingeben</German>
 		<Italian>Inserisci qui i tuoi messaggi di chat</Italian>
-		<Spanish>Introduce aqu&#237; los mensajes de chat.</Spanish>
+		<Spanish>Introduce aquí los mensajes de chat.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_MOTD_POPUP_DESC</Tag>
@@ -512,7 +512,7 @@
 		<French>Donner Message du jour</French>
 		<German>Die Nachricht des Tages anzeigen</German>
 		<Italian>Fornisci un messaggio del giorno</Italian>
-		<Spanish>Escribe un mensaje del d&#237;a.</Spanish>
+		<Spanish>Escribe un mensaje del día.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_MOTD_POPUP_TITLE</Tag>
@@ -520,31 +520,31 @@
 		<French>Message du jour</French>
 		<German>Nachricht des Tages</German>
 		<Italian>Messaggio del giorno</Italian>
-		<Spanish>Mensaje del d&#237;a</Spanish>
+		<Spanish>Mensaje del día</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SMTP_HEADER</Tag>
 		<English>Provide SMTP information to send reminder emails</English>
-		<French>Donner les informations SMTP pour envoyer des e-mails pense-b&#234;tes</French>
-		<German>SMTP-Info f&#252;r Erinnerungsmails angeben</German>
+		<French>Donner les informations SMTP pour envoyer des e-mails pense-bêtes</French>
+		<German>SMTP-Info für Erinnerungsmails angeben</German>
 		<Italian>Fornisci delle informazioni SMTP per inviare delle comunicazioni e-mail</Italian>
-		<Spanish>Proporcionar informaci&#243;n del SMTP para enviar los e-mails de recordatorio</Spanish>
+		<Spanish>Proporcionar información del SMTP para enviar los e-mails de recordatorio</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SMTP_HOST</Tag>
 		<English>SMTP Host:</English>
-		<French>H&#244;te SMTP :</French>
+		<French>Hôte SMTP :</French>
 		<German>SMTP-Host:</German>
 		<Italian>Host SMTP:</Italian>
-		<Spanish>Anfitri&#243;n SMTP:</Spanish>
+		<Spanish>Anfitrión SMTP:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SMTP_HOST_HELP</Tag>
 		<English>SMTP server address or domain name</English>
 		<French>Adresse du serveur SMTP ou nom de domaine</French>
-		<German>Name der SMTP-Serveradresse oder Dom&#228;ne</German>
+		<German>Name der SMTP-Serveradresse oder Domäne</German>
 		<Italian>Indirizzo del server SMTP o nome del dominio</Italian>
-		<Spanish>Nombre de dominio o direcci&#243;n del servidor SMTP.</Spanish>
+		<Spanish>Nombre de dominio o dirección del servidor SMTP.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SMTP_LOGIN</Tag>
@@ -552,7 +552,7 @@
 		<French>Connexion SMTP :</French>
 		<German>SMTP-Login</German>
 		<Italian>Login SMTP:</Italian>
-		<Spanish>Inicio de sesi&#243;n SMTP:</Spanish>
+		<Spanish>Inicio de sesión SMTP:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SMTP_LOGIN_HELP</Tag>
@@ -560,7 +560,7 @@
 		<French>Connexion serveur SMTP</French>
 		<German>SMTP-Server-Login</German>
 		<Italian>Login del server SMTP</Italian>
-		<Spanish>Inicio de sesi&#243;n del servidor SMTP.</Spanish>
+		<Spanish>Inicio de sesión del servidor SMTP.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SMTP_PASSWORD</Tag>
@@ -568,7 +568,7 @@
 		<French>Mot de passe SMTP :</French>
 		<German>SMPT-Passwort</German>
 		<Italian>Password SMTP:</Italian>
-		<Spanish>Contrase&#241;a SMTP:</Spanish>
+		<Spanish>Contraseña SMTP:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SMTP_PASSWORD_HELP</Tag>
@@ -576,7 +576,7 @@
 		<French>Mot de passe serveur SMTP</French>
 		<German>SMTP-Server-Passwort</German>
 		<Italian>Password del server SMTP</Italian>
-		<Spanish>Contrase&#241;a del servidor SMTP.</Spanish>
+		<Spanish>Contraseña del servidor SMTP.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_DIRECTIP</Tag>
@@ -589,7 +589,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_LAN</Tag>
 		<English>LAN</English>
-		<French>R&#233;seau local</French>
+		<French>Réseau local</French>
 		<German>LAN</German>
 		<Italian>LAN</Italian>
 		<Spanish>LAN</Spanish>
@@ -605,23 +605,23 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PATCH_REQUIRED_DESC</Tag>
 		<English>You must install the latest update to continue</English>
-		<French>Pour continuer, vous devez installer la derni&#232;re mise &#224; jour.</French>
-		<German>Sie m&#252;ssen das neueste Update installieren, um fortzufahren</German>
+		<French>Pour continuer, vous devez installer la dernière mise à jour.</French>
+		<German>Sie müssen das neueste Update installieren, um fortzufahren</German>
 		<Italian>Devi installare l'ultimo aggiornamento per continuare</Italian>
-		<Spanish>Debes instalar la actualizaci&#243;n m&#225;s reciente para continuar.</Spanish>
+		<Spanish>Debes instalar la actualización más reciente para continuar.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PATCH_REQUIRED_TITLE</Tag>
 		<English>Patch Required</English>
 		<French>Patch requis</French>
-		<German>Patch ben&#246;tigt</German>
+		<German>Patch benötigt</German>
 		<Italian>Aggiornamento necessario</Italian>
 		<Spanish>Se requiere parche</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PATCH_DOWNLOAD_ERROR_DESC</Tag>
 		<English>Error while downloading the patch</English>
-		<French>Erreur lors du t&#233;l&#233;chargement du patch</French>
+		<French>Erreur lors du téléchargement du patch</French>
 		<German>Fehler beim Patch-Download</German>
 		<Italian>Errore nello scaricamento dell'aggiornamento</Italian>
 		<Spanish>Error al descargar el parche.</Spanish>
@@ -629,7 +629,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PATCH_DOWNLOAD_ERROR_TITLE</Tag>
 		<English>Download Error</English>
-		<French>Erreur lors du t&#233;l&#233;chargement</French>
+		<French>Erreur lors du téléchargement</French>
 		<German>Download-Fehler</German>
 		<Italian>Errore di scaricamento</Italian>
 		<Spanish>Error de descarga</Spanish>
@@ -638,14 +638,14 @@
 		<Tag>TXT_KEY_PITBOSS_PATCH_COMPLETE_DESC</Tag>
 		<English>Press ok to shut down and install the patch</English>
 		<French>Cliquez sur OK pour lancer l'installation du patch.</French>
-		<German>W&#228;hlen Sie 'OK', um das Programm zu schlie&#223;en und den Patch zu installieren</German>
+		<German>Wählen Sie 'OK', um das Programm zu schließen und den Patch zu installieren</German>
 		<Italian>Premi OK per chiudere e installare l'aggiornamento</Italian>
 		<Spanish>Pulsa "Aceptar" para salir e instalar el parche.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PATCH_COMPLETE_TITLE</Tag>
 		<English>Download Complete!</English>
-		<French>T&#233;l&#233;chargement termin&#233; !</French>
+		<French>Téléchargement terminé !</French>
 		<German>Download abgeschlossen!</German>
 		<Italian>Scaricamento completato!</Italian>
 		<Spanish>Descarga completa</Spanish>
@@ -653,7 +653,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PATCH_CHECK_ERROR_DESC</Tag>
 		<English>Error while looking for updates</English>
-		<French>Erreur lors de la recherche de mises &#224; jour</French>
+		<French>Erreur lors de la recherche de mises à jour</French>
 		<German>Fehler bei der Suche nach Updates</German>
 		<Italian>Errore nella ricerca degli aggiornamenti</Italian>
 		<Spanish>Error al buscar actualizaciones.</Spanish>
@@ -661,10 +661,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PATCH_CHECK_ERROR_TITLE</Tag>
 		<English>Update Error</English>
-		<French>Erreur lors de la mise &#224; jour</French>
+		<French>Erreur lors de la mise à jour</French>
 		<German>Aktualisierungsfehler</German>
 		<Italian>Errore di aggiornamento</Italian>
-		<Spanish>Error de actualizaci&#243;n</Spanish>
+		<Spanish>Error de actualización</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_NEWGAME</Tag>
@@ -685,16 +685,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PATCH_AVAILABLE_DESC</Tag>
 		<English>Would you like to install the latest updates?</English>
-		<French>Voulez-vous installer la derni&#232;re mise &#224; jour ?</French>
-		<German>M&#246;chten Sie die neuesten Updates installieren?</German>
+		<French>Voulez-vous installer la dernière mise à jour ?</French>
+		<German>Möchten Sie die neuesten Updates installieren?</German>
 		<Italian>Vuoi installare gli ultimi aggiornamenti?</Italian>
-		<Spanish>&#191;Quieres instalar las &#250;ltimas actualizaciones?</Spanish>
+		<Spanish>¿Quieres instalar las últimas actualizaciones?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PATCH_AVAILABLE_TITLE</Tag>
 		<English>Patch Available</English>
 		<French>Patch disponible</French>
-		<German>Patch verf&#252;gbar</German>
+		<German>Patch verfügbar</German>
 		<Italian>Aggiornamento disponibile</Italian>
 		<Spanish>Parche disponible</Spanish>
 	</TEXT>
@@ -702,7 +702,7 @@
 		<Tag>TXT_KEY_PITBOSS_NAME_GAME_DESC</Tag>
 		<English>Please enter a name for your game</English>
 		<French>Veuillez saisir un nom pour votre partie.</French>
-		<German>Bitte geben Sie einen Namen f&#252;r Ihr Spiel ein</German>
+		<German>Bitte geben Sie einen Namen für Ihr Spiel ein</German>
 		<Italian>Inserisci un nome per la partita</Italian>
 		<Spanish>Introduce un nombre para la partida.</Spanish>
 	</TEXT>
@@ -718,15 +718,15 @@
 		<Tag>TXT_KEY_PITBOSS_PWD_GAME_DESC</Tag>
 		<English>Please enter a password for your game</English>
 		<French>Veuillez saisir un mot de passe pour votre partie.</French>
-		<German>Bitte geben Sie ein Passwort f&#252;r Ihr Spiel ein</German>
+		<German>Bitte geben Sie ein Passwort für Ihr Spiel ein</German>
 		<Italian>Inserisci una password per la partita</Italian>
-		<Spanish>Introduce una contrase&#241;a para la partida.</Spanish>
+		<Spanish>Introduce una contraseña para la partida.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PWD_GAME_TITLE</Tag>
 		<English>Protect Your Game</English>
-		<French>Prot&#233;ger votre partie</French>
-		<German>Sch&#252;tzen Sie Ihr Spiel</German>
+		<French>Protéger votre partie</French>
+		<German>Schützen Sie Ihr Spiel</German>
 		<Italian>Proteggi la tua partita</Italian>
 		<Spanish>Protege la partida</Spanish>
 	</TEXT>
@@ -765,7 +765,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_CLOSED</Tag>
 		<English>Closed</English>
-		<French>Ferm&#233;</French>
+		<French>Fermé</French>
 		<German>Geschlossen</German>
 		<Italian>Chiuso</Italian>
 		<Spanish>Cerrado</Spanish>
@@ -773,7 +773,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_TURNTIMER_ERROR_DESC</Tag>
 		<English>Turn Timer value must be an integer</English>
-		<French>La valeur du chrono doit &#234;tre un nombre entier.</French>
+		<French>La valeur du chrono doit être un nombre entier.</French>
 		<German>Der Runden-Timer-Wert muss ein Integer-Wert sein</German>
 		<Italian>Il valore del timer dei turni deve essere un numero intero</Italian>
 		<Spanish>El valor del contador del turno debe ser entero.</Spanish>
@@ -782,9 +782,9 @@
 		<Tag>TXT_KEY_PITBOSS_TURNTIMER_ERROR_TITLE</Tag>
 		<English>Invalid Turn Timer</English>
 		<French>Chrono invalide</French>
-		<German>Ung&#252;ltiger Runden-Timer</German>
+		<German>Ungültiger Runden-Timer</German>
 		<Italian>Timer dei turni non valido</Italian>
-		<Spanish>Contador del turno no v&#225;lido</Spanish>
+		<Spanish>Contador del turno no válido</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PATCH_PROGRESS_TITLE</Tag>
@@ -800,12 +800,12 @@
 		<French>Version du Pitboss - Civ IV : %s1_Version</French>
 		<German>Civ4-Pitboss-Version: %s1_Version</German>
 		<Italian>Civ4 Pitboss versione: %s1_Version</Italian>
-		<Spanish>Pitboss de Civilization 4 versi&#243;n: %s1_Version</Spanish>
+		<Spanish>Pitboss de Civilization 4 versión: %s1_Version</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SCENARIO</Tag>
 		<English>New Scenario</English>
-		<French>Nouveau sc&#233;nario</French>
+		<French>Nouveau scénario</French>
 		<German>Neues Szenario</German>
 		<Italian>Nuovo scenario</Italian>
 		<Spanish>Nuevo escenario</Spanish>
@@ -813,8 +813,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_CHOOSE_SCENARIO</Tag>
 		<English>Choose a scenario:</English>
-		<French>Choisir un sc&#233;nario :</French>
-		<German>W&#228;hlen Sie ein Szenario:</German>
+		<French>Choisir un scénario :</French>
+		<German>Wählen Sie ein Szenario:</German>
 		<Italian>Scegli uno scenario:</Italian>
 		<Spanish>Elige un escenario:</Spanish>
 	</TEXT>
@@ -822,7 +822,7 @@
 		<Tag>TXT_KEY_PITBOSS_CHOOSE_MOD</Tag>
 		<English>Choose a Mod:</English>
 		<French>Choisir un mod :</French>
-		<German>W&#228;hlen Sie einen Mod:</German>
+		<German>Wählen Sie einen Mod:</German>
 		<Italian>Scegli un mod:</Italian>
 		<Spanish>Elige un mod:</Spanish>
 	</TEXT>
@@ -837,9 +837,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SCENARIO_ERROR_TITLE</Tag>
 		<English>There was an error when attempting to read the scenario data.</English>
-		<French>Une erreur s'est produite lors de la lecture des donn&#233;es du sc&#233;nario.</French>
+		<French>Une erreur s'est produite lors de la lecture des données du scénario.</French>
 		<German>Beim Lesen der Szenariodaten ist ein Fehler aufgetreten.</German>
-		<Italian>Si &#232; verificato un errore durante la lettura dei dati dello scenario.</Italian>
+		<Italian>Si è verificato un errore durante la lettura dei dati dello scenario.</Italian>
 		<Spanish>Se ha producido un error al intentar leer los datos del escenario.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -848,23 +848,23 @@
 		<French>Limite tours de jeu : </French>
 		<German>Spiel-Runden-Limit: </German>
 		<Italian>Limite turni della partita:</Italian>
-		<Spanish>L&#237;mite de turnos de la partida: </Spanish>
+		<Spanish>Límite de turnos de la partida: </Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_CITY_ELIMINATION</Tag>
 		<English>City Elimination Limit: </English>
-		<French>Limite &#233;limination villes : </French>
-		<German>Stadt-Zerst&#246;rungs-Limit: </German>
-		<Italian>Limite eliminazione citt&#224;:</Italian>
-		<Spanish>L&#237;mite de eliminaci&#243;n de ciudades: </Spanish>
+		<French>Limite élimination villes : </French>
+		<German>Stadt-Zerstörungs-Limit: </German>
+		<Italian>Limite eliminazione città:</Italian>
+		<Spanish>Límite de eliminación de ciudades: </Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_MAXTURN_ERROR_DESC</Tag>
 		<English>The value must be an integer.</English>
-		<French>La valeur doit &#234;tre un nombre entier.</French>
+		<French>La valeur doit être un nombre entier.</French>
 		<German>Der Wert muss ein Integer sein.</German>
 		<Italian>Il valore deve essere un numero intero.</Italian>
-		<Spanish>El valor tiene que ser un n&#250;mero entero.</Spanish>
+		<Spanish>El valor tiene que ser un número entero.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_MAXTURN_ERROR_TITLE</Tag>
@@ -877,10 +877,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_CITYELIMINATION_ERROR_DESC</Tag>
 		<English>The value must be an integer.</English>
-		<French>La valeur doit &#234;tre un nombre entier.</French>
+		<French>La valeur doit être un nombre entier.</French>
 		<German>Der Wert muss ein Integer sein.</German>
 		<Italian>Il valore deve essere un numero intero.</Italian>
-		<Spanish>El valor tiene que ser un n&#250;mero entero.</Spanish>
+		<Spanish>El valor tiene que ser un número entero.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_CITYELIMINATION_ERROR_TITLE</Tag>
@@ -896,15 +896,15 @@
 		<French>Configuration du jeu</French>
 		<German>Spiel-Setup</German>
 		<Italian>Impostazioni della partita</Italian>
-		<Spanish>Configuraci&#243;n de la partida</Spanish>
+		<Spanish>Configuración de la partida</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_GAME_SETTINGS</Tag>
 		<English>Settings</English>
-		<French>Param&#232;tres</French>
+		<French>Paramètres</French>
 		<German>Einstellungen</German>
 		<Italian>Impostazioni</Italian>
-		<Spanish>Configuraci&#243;n</Spanish>
+		<Spanish>Configuración</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_GAME_MPOPTIONS</Tag>
@@ -925,15 +925,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_NO_SCENARIOS_DESC</Tag>
 		<English>There are no WorldBuilder saves available for this mod to load as a scenario.</English>
-		<French>Aucune sauvegarde &#233;diteur de mondes disponible pour &#234;tre charg&#233;e par ce mod comme sc&#233;nario</French>
-		<German>F&#252;r diesen Mod sind keine Weltenbauer-Spielst&#228;nde zum Laden als Szenario verf&#252;gbar.</German>
+		<French>Aucune sauvegarde éditeur de mondes disponible pour être chargée par ce mod comme scénario</French>
+		<German>Für diesen Mod sind keine Weltenbauer-Spielstände zum Laden als Szenario verfügbar.</German>
 		<Italian>Nessun salvataggio dell'editor disponibile di questo mod da caricare come scenario.</Italian>
 		<Spanish>No hay disponibles archivos guardados del Creador de mundos para que este mod pueda cargarse como un escenario.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_NO_SCENARIOS_TITLE</Tag>
 		<English>No Scenarios found</English>
-		<French>Aucun sc&#233;nario trouv&#233;</French>
+		<French>Aucun scénario trouvé</French>
 		<German>Keine Szenarios gefunden</German>
 		<Italian>Nessun scenario trovato</Italian>
 		<Spanish>No se han encontrado escenarios</Spanish>
@@ -941,7 +941,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_NO_MAPS_TITLE</Tag>
 		<English>No Maps found</English>
-		<French>Aucune carte trouv&#233;e</French>
+		<French>Aucune carte trouvée</French>
 		<German>Keine Karten gefunden</German>
 		<Italian>Nessuna mappa trovata</Italian>
 		<Spanish>No se han encontrado mapas</Spanish>
@@ -950,7 +950,7 @@
 		<Tag>TXT_KEY_PITBOSS_NO_MAPS_DESC</Tag>
 		<English>There are no map script files available for this mod.</English>
 		<French>Aucun script carte disponible pour ce mod.</French>
-		<German>F&#252;r diesen Mod sind keine Kartenskriptdateien verf&#252;gbar.</German>
+		<German>Für diesen Mod sind keine Kartenskriptdateien verfügbar.</German>
 		<Italian>Nessun file script della mappa disponibile per questo mod.</Italian>
 		<Spanish>No hay disponibles archivos de secuencia de comandos del mapa para este mod.</Spanish>
 	</TEXT>
@@ -958,7 +958,7 @@
 		<Tag>TXT_KEY_PITBOSS_TURN_TIMER_NEW</Tag>
 		<English>Enter new turn timer (hours)</English>
 		<French>Entrer le nouveau chrono de tour (heures)</French>
-		<German>Neue Rundenz&#228;hlung angeben (Stunden)</German>
+		<German>Neue Rundenzählung angeben (Stunden)</German>
 		<Italian>Inserisci il nuovo timer dei turni (ore)</Italian>
 		<Spanish>Introduce nuevo contador del turno (horas)</Spanish>
 	</TEXT>

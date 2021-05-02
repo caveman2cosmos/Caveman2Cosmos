@@ -299,7 +299,7 @@
 		<English>Bribe City</English>
 		<French>Corrompre la ville</French>
 		<German>Stadt bestechen</German>
-		<Italian>Corrompi citt&#224;</Italian>
+		<Italian>Corrompi città</Italian>
 		<Spanish>Sobornar ciudad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -308,15 +308,15 @@
 		<French>Voler une technologie</French>
 		<German>Technologie stehlen</German>
 		<Italian>Ruba tecnologie</Italian>
-		<Spanish>Robar tecnolog&#237;a</Spanish>
+		<Spanish>Robar tecnología</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_CAN_SEE_DEMOGRAPHICS</Tag>
 		<English>Can See Demographics</English>
-		<French>Voir donn&#233;es d&#233;mographiques</French>
+		<French>Voir données démographiques</French>
 		<German>Demografie sichtbar</German>
 		<Italian>Visione demografica</Italian>
-		<Spanish>Puede ver estad&#237;sticas</Spanish>
+		<Spanish>Puede ver estadísticas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_CITY_INSERT_CULTURE</Tag>
@@ -337,24 +337,24 @@
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_CITY_UNHAPPINESS</Tag>
 		<English>Foment Unhappiness</English>
-		<French>Comploter du m&#233;contentement</French>
-		<German>Unzufriedenheit sch&#252;ren</German>
-		<Italian>Alimenta infelicit&#224;</Italian>
+		<French>Comploter du mécontentement</French>
+		<German>Unzufriedenheit schüren</German>
+		<Italian>Alimenta infelicità</Italian>
 		<Spanish>Fomentar la infelicidad</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_CITY_REVOLT</Tag>
 		<English>Support City Revolt</English>
-		<French>Soutenir la r&#233;volte de la ville</French>
-		<German>Stadt-Revolte unterst&#252;tzen</German>
+		<French>Soutenir la révolte de la ville</French>
+		<German>Stadt-Revolte unterstützen</German>
 		<Italian>Supporta rivolta cittadina</Italian>
-		<Spanish>Apoyar rebeli&#243;n en la ciudad</Spanish>
+		<Spanish>Apoyar rebelión en la ciudad</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_COUNTERESPIONAGE</Tag>
 		<English>Perform Counterespionage</English>
 		<French>Contre-espionnage</French>
-		<German>Spionageabwehr ausf&#252;hren</German>
+		<German>Spionageabwehr ausführen</German>
 		<Italian>Effettua controspionaggio</Italian>
 		<Spanish>Contraespionaje</Spanish>
 	</TEXT>
@@ -396,12 +396,12 @@
 		<French>Sabotage de production</French>
 		<German>Produktion sabotieren</German>
 		<Italian>Sabota produzione</Italian>
-		<Spanish>Sabotear la producci&#243;n</Spanish>
+		<Spanish>Sabotear la producción</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_DESTROY_IMPROVEMENT</Tag>
 		<English>Sabotage Improvement</English>
-		<French>Saboter l'am&#233;nagement</French>
+		<French>Saboter l'aménagement</French>
 		<German>Modernisierung sabotieren</German>
 		<Italian>Sabota miglioramenti</Italian>
 		<Spanish>Sabotear mejora</Spanish>
@@ -409,18 +409,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_DESTROY_BUILDING</Tag>
 		<English>Sabotage Building</English>
-		<French>Saboter le b&#226;timent</French>
-		<German>Geb&#228;ude sabotieren</German>
+		<French>Saboter le bâtiment</French>
+		<German>Gebäude sabotieren</German>
 		<Italian>Sabota edifici</Italian>
 		<Spanish>Sabotear edificio</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_NO_ACTIVE_MISSIONS</Tag>
 		<English>Spies Cannot Enter Our Borders</English>
-		<French>Les espions ne peuvent pas franchir nos fronti&#232;res</French>
-		<German>Spione k&#246;nnen unsere Grenzen nicht &#252;berwinden</German>
+		<French>Les espions ne peuvent pas franchir nos frontières</French>
+		<German>Spione können unsere Grenzen nicht überwinden</German>
 		<Italian>Le spie non possono entrare nei nostri confini</Italian>
-		<Spanish>Los esp&#237;as no pueden atravesar nuestras fronteras</Spanish>
+		<Spanish>Los espías no pueden atravesar nuestras fronteras</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_PLAYER_ANARCHY</Tag>
@@ -428,20 +428,20 @@
 		<French>Propager l'anarchie</French>
 		<German>Anarchie verbreiten</German>
 		<Italian>Diffondi anarchia</Italian>
-		<Spanish>Propagar anarqu&#237;a</Spanish>
+		<Spanish>Propagar anarquía</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_SEE_RESEARCH</Tag>
 		<English>Can See Research</English>
-		<French>Peut voir l'&#233;tat des recherches</French>
+		<French>Peut voir l'état des recherches</French>
 		<German>Forschung sichtbar</German>
 		<Italian>Visione ricerche</Italian>
-		<Spanish>Puede ver investigaci&#243;n</Spanish>
+		<Spanish>Puede ver investigación</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_STEAL_TREASURY</Tag>
 		<English>Steal Treasury</English>
-		<French>Voler le tr&#233;sor</French>
+		<French>Voler le trésor</French>
 		<German>Schatzkammer ausrauben</German>
 		<Italian>Ruba tesoro</Italian>
 		<Spanish>Robar tesoro</Spanish>
@@ -460,6 +460,6 @@
 		<French>Influencer la religion</French>
 		<German>Religion beeinflussen</German>
 		<Italian>Influenza religione</Italian>
-		<Spanish>Influir en religi&#243;n</Spanish>
+		<Spanish>Influir en religión</Spanish>
 	</TEXT>
 </Civ4GameText>

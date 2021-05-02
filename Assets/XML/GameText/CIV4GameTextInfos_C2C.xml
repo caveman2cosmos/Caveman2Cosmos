@@ -853,8 +853,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_MAP</Tag>
 		<English>The villagers have provided you with a map!</English>
-		<French>Les villageois vous ont donn&#233; une carte !</French>
-		<German>Die Bewohner haben Euch eine Karte &#252;berlassen!</German>
+		<French>Les villageois vous ont donné une carte !</French>
+		<German>Die Bewohner haben Euch eine Karte überlassen!</German>
 		<Italian>Gli abitanti del villaggio ti hanno donato una mappa!</Italian>
 		<Spanish>Los aldeanos os han dado un mapa.</Spanish>
 	</TEXT>
@@ -862,7 +862,7 @@
 		<Tag>TXT_KEY_GOODY_SETTLER</Tag>
 		<English>The villagers have provided you with a Settler!</English>
 		<French>Les villageois vous fournissent un colon !</French>
-		<German>Die Bewohner haben Euch einen Siedler zur Verf&#252;gung gestellt!</German>
+		<German>Die Bewohner haben Euch einen Siedler zur Verfügung gestellt!</German>
 		<Italian>Gli abitanti del villaggio ti hanno donato un colono!</Italian>
 		<Spanish>Los aldeanos os han dado un colono.</Spanish>
 	</TEXT>
@@ -870,15 +870,15 @@
 		<Tag>TXT_KEY_GOODY_WARRIOR</Tag>
 		<English>The villagers have provided you with a Warrior!</English>
 		<French>Les villageois vous fournissent un guerrier !</French>
-		<German>Die Bewohner haben Euch einen Krieger zur Verf&#252;gung gestellt!</German>
+		<German>Die Bewohner haben Euch einen Krieger zur Verfügung gestellt!</German>
 		<Italian>Gli abitanti del villaggio ti hanno donato un guerriero!</Italian>
 		<Spanish>Los aldeanos os han dado un guerrero.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_SCOUT</Tag>
 		<English>The villagers have provided you with a Scout!</English>
-		<French>Les villageois vous fournissent un &#233;claireur !</French>
-		<German>Die Bewohner haben Euch einen Sp&#228;her zur Verf&#252;gung gestellt!</German>
+		<French>Les villageois vous fournissent un éclaireur !</French>
+		<German>Die Bewohner haben Euch einen Späher zur Verfügung gestellt!</German>
 		<Italian>Gli abitanti del villaggio ti hanno donato uno scout!</Italian>
 		<Spanish>Los aldeanos os han dado un batidor.</Spanish>
 	</TEXT>
@@ -886,33 +886,33 @@
 		<Tag>TXT_KEY_GOODY_WORKER</Tag>
 		<English>The villagers have provided you with a Worker!</English>
 		<French>Les villageois vous fournissent un ouvrier !</French>
-		<German>Die Bewohner haben Euch einen Bautrupp zur Verf&#252;gung gestellt!</German>
+		<German>Die Bewohner haben Euch einen Bautrupp zur Verfügung gestellt!</German>
 		<Italian>Gli abitanti del villaggio ti hanno donato un lavoratore!</Italian>
 		<Spanish>Los aldeanos os han dado un trabajador.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_EXPERIENCE</Tag>
 		<English>The villagers have provided your unit with experience!</English>
-		<French>Les villageois ont am&#233;lior&#233; l'exp&#233;rience de votre unit&#233; !</French>
+		<French>Les villageois ont amélioré l'expérience de votre unité !</French>
 		<German>Die Bewohner haben Eure Einheit mit Erfahrung ausgestattet!</German>
-		<Italian>Gli abitanti del villaggio hanno donato esperienza alla tua unit&#224;!</Italian>
+		<Italian>Gli abitanti del villaggio hanno donato esperienza alla tua unità!</Italian>
 		<Spanish>Los aldeanos le han dado experiencia a la unidad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_HEALING</Tag>
 		<English>The villagers have healed your unit!</English>
-		<French>Les villageois ont soign&#233; votre unit&#233; !</French>
+		<French>Les villageois ont soigné votre unité !</French>
 		<German>Die Bewohner haben Eure Einheit geheilt!</German>
-		<Italian>Gli abitanti del villaggio hanno curato la tua unit&#224;!</Italian>
+		<Italian>Gli abitanti del villaggio hanno curato la tua unità!</Italian>
 		<Spanish>Los aldeanos han curado a la unidad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_TECH</Tag>
 		<English>The villagers have given you the secrets of a new Technology!</English>
-		<French>Les villageois vous ont enseign&#233; une nouvelle technologie !</French>
+		<French>Les villageois vous ont enseigné une nouvelle technologie !</French>
 		<German>Die Bewohner haben Euch in die Geheimnisse einer neuen Technologie eingeweiht!</German>
 		<Italian>Gli abitanti del villaggio ti hanno donato il segreto di una nuova tecnologia!</Italian>
-		<Spanish>Lo aldeanos os han dado los secretos de una nueva tecnolog&#237;a.</Spanish>
+		<Spanish>Lo aldeanos os han dado los secretos de una nueva tecnología.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_BARBARIANS</Tag>
