@@ -1220,19 +1220,6 @@
 		<Russian>Маяк (Рифы)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_LISTENING_NODE</Tag>
-		<English>Listening Node</English>
-		<French>Station d'écoute</French>
-		<Italian>Nodo d'ascolto</Italian>
-		<Spanish>
-			<Text>Nodo de escucha</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Boja Nasłuchowa</Polish>
-		<Russian>Óçåë ñâÿçè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUMBERJACK</Tag>
 		<English>Lumberjack</English>
 		<French>Camp de bûcherons</French>
