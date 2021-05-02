@@ -928,7 +928,7 @@ class Revolution:
 							revIdxHist['Events'][0] += iThisRevIdxChange
 							RevData.updateCityVal(cityX,'RevIdxHistory',revIdxHist)
 
-			if( not sumRevIdx == 0 ) :
+			if sumRevIdx != 0:
 				if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Avg net effect for %s: %d"%(pPlayer.getCivilizationDescription(0),sumRevIdx))
 
 
@@ -5258,11 +5258,9 @@ class Revolution:
 							# Give motherlands map
 							bGaveMap = True
 							MAP = GC.getMap()
-							for ix in xrange(CyMap().getGridWidth()):
-								for iy in xrange(CyMap().getGridHeight()):
-									pPlot = MAP.plot(ix,iy)
-									if pPlot.isRevealed(pTeam.getID(), False):
-										pPlot.setRevealed(pRevTeam.getID(), True, False, pTeam.getID())
+							for pPlot in MAP.plots():
+								if pPlot.isRevealed(pTeam.getID(), False):
+									pPlot.setRevealed(pRevTeam.getID(), True, False, pTeam.getID())
 
 							# Meet players known by motherland
 							for k in xrange(GC.getMAX_PC_TEAMS()) :
@@ -6210,11 +6208,9 @@ class Revolution:
 				# Give motherlands map
 				bGaveMap = True
 				MAP = GC.getMap()
-				for ix in xrange(CyMap().getGridWidth()):
-					for iy in xrange(CyMap().getGridHeight()):
-						pPlot = MAP.plot(ix,iy)
-						if pPlot.isRevealed(pTeam.getID(),False):
-							pPlot.setRevealed(pRevTeam.getID(),True,False,pTeam.getID())
+				for pPlot in MAP.plots():
+					if pPlot.isRevealed(pTeam.getID(), False):
+						pPlot.setRevealed(pRevTeam.getID(), True, False, pTeam.getID())
 
 				# Meet players known by motherland
 				for k in xrange(GC.getMAX_PC_TEAMS()) :

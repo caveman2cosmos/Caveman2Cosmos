@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- ReModified by Strategyonly -->
-	<!-- -->
-	<!-- Improvement art path information -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- ReModified by Strategyonly -->
+<!-- Improvement art path information -->
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<ImprovementArtInfos>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_SPACE_STATION_LV1</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-            <NIF>Art/Units/FinalFrontier_Starbase/Starbase.nif</NIF>
+			<NIF>Art/Units/FinalFrontier_Starbase/Starbase.nif</NIF>
 			<KFM>Art/Units/FinalFrontier_Starbase/Starbase.kfm</KFM>
 			<Button>art/interface/buttons/improvements/space_station_1.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_SPACE_STATION_LV2</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -25,7 +24,7 @@
 			<KFM>Art/Units/FinalFrontier_Starbase/Starbase.kfm</KFM>
 			<Button>art/interface/buttons/improvements/space_station_2.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_SPACE_STATION_LV3</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -34,7 +33,7 @@
 			<KFM>Art/Units/FinalFrontier_Starbase/Starbase.kfm</KFM>
 			<Button>art/interface/buttons/improvements/space_station_3.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_SPACE_SOLAR_PANELS</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -43,7 +42,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/space_solar_array.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_MERCURY_SOLAR_ARRAY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -52,7 +51,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/mercury_solar_array.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_LUNAR_ARCOLOGY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -61,7 +60,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/lunar_arcology.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_JOVIAN_LUNAR_BASE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.15</fScale>
@@ -70,7 +69,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/jovian_lunar_base.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -79,7 +78,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/jovian_lunar_arcology.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.15</fScale>
@@ -88,7 +87,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/interstellar_research_base.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.15</fScale>
@@ -97,7 +96,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/intergalactic_research_base.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_DISTANT_RESEARCH_BASE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.15</fScale>
@@ -106,7 +105,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/distant_research_base.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_DYSON_SPHERE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -115,7 +114,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/dyson_sphere.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_CISLUNAR_BASE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
@@ -124,7 +123,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/cislunar_military_base.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_SOLAR_SYSTEM_BASE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
@@ -133,7 +132,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/deep_space_military_base.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_INTERSTELLAR_BASE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
@@ -142,7 +141,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/interstellar_military_base.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_INTERGALACTIC_BASE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
@@ -151,7 +150,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/intergalactic_base.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_HYPERSPACE_BUNKER</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
@@ -160,7 +159,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/hyperspace_bunker.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_NEUTRON_STAR_COLONY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
@@ -169,7 +168,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/neutron_star_colony.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_JOVIAN_SCOOP</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
@@ -178,7 +177,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/jovian_scoop.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_JOVIAN_FLOATING_CITY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -187,7 +186,7 @@
 			<KFM>Art/Structures/Improvements/Town/Town.kfm</KFM>
 			<Button>art/interface/buttons/improvements/jovian_floating_city.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_DISTANT_PAST_CITY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -196,7 +195,7 @@
 			<KFM>Art/Structures/Improvements/Town/Town.kfm</KFM>
 			<Button>art/interface/buttons/improvements/distant_past_city.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_DISTANT_FUTURE_CITY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -205,7 +204,7 @@
 			<KFM>Art/Structures/Improvements/Town/Town.kfm</KFM>
 			<Button>art/interface/buttons/improvements/distant_future_city.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_MERCURY_COLONY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -214,7 +213,7 @@
 			<KFM>Art/Structures/Improvements/Town/Town.kfm</KFM>
 			<Button>art/interface/buttons/improvements/mercury_colony.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_BRANE_FACTORY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.2</fScale>
@@ -223,7 +222,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/branespace_factory.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_SUN_SCOOP</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
@@ -232,7 +231,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/sun_scoop.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_BLUE_SUPERGIANT_COLONY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -241,7 +240,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/blue_supergiant_colony.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_STAR_SCOOP</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
@@ -250,7 +249,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/star_scoop.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_COSMIC_EXPANSION_NODE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
@@ -268,7 +267,7 @@
 			<KFM>Art/Units/FinalFrontier_Starbase/Starbase.kfm</KFM>
 			<Button>art/interface/buttons/improvements/expanded_habitat.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_SATELLITE_STATION</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.25</fScale>
@@ -277,7 +276,7 @@
 			<KFM>Art/Units/FinalFrontier_Starbase/Starbase.kfm</KFM>
 			<Button>art/interface/buttons/improvements/satellite_colony.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_ARCOLOGY_MOON</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -286,7 +285,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/arcology_moon.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_INTERSTELLAR_COLONY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.25</fScale>
@@ -295,7 +294,7 @@
 			<KFM>Art/Units/FinalFrontier_Starbase/Starbase.kfm</KFM>
 			<Button>art/interface/buttons/improvements/interstellar_colony.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_INTERGALACTIC_COLONY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.25</fScale>
@@ -304,7 +303,7 @@
 			<KFM>Art/Units/FinalFrontier_Starbase/Starbase.kfm</KFM>
 			<Button>art/interface/buttons/improvements/intergalactic_colony_improvement.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_SUPERCLUSTER_COLONY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.25</fScale>
@@ -313,7 +312,7 @@
 			<KFM>Art/Units/FinalFrontier_Starbase/Starbase.kfm</KFM>
 			<Button>art/interface/buttons/improvements/supercluster_colony.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.25</fScale>
@@ -322,7 +321,7 @@
 			<KFM>Art/Units/FinalFrontier_Starbase/Starbase.kfm</KFM>
 			<Button>art/interface/buttons/improvements/observable_universe_colony.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_PARALLEL_UNIVERSE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.25</fScale>
@@ -331,7 +330,7 @@
 			<KFM>Art/Units/FinalFrontier_Starbase/Starbase.kfm</KFM>
 			<Button>art/interface/buttons/improvements/parallel_universe.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_TIME_MANIFOLD</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.25</fScale>
@@ -340,7 +339,7 @@
 			<KFM>Art/Units/FinalFrontier_Starbase/Starbase.kfm</KFM>
 			<Button>art/interface/buttons/improvements/time_manifold.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_SPIRITUAL_REALM</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.25</fScale>
@@ -367,7 +366,7 @@
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,5,4</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_PLACE_GALAXY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1</fScale>
@@ -385,7 +384,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/martian_farm.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_BRANE_FARM</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.15</fScale>
@@ -394,7 +393,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/branespace_farm.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_VENUS_AERIAL_FARM</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.15</fScale>
@@ -412,7 +411,7 @@
 			<KFM>Art/Structures/Improvements/Mine/Mine_Modern.kfm</KFM>
 			<Button>art/interface/buttons/improvements/mars_mine.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_VENUS_SURFACE_MINE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -421,7 +420,7 @@
 			<KFM>Art/Structures/Improvements/Mine/Mine_Modern.kfm</KFM>
 			<Button>art/interface/buttons/improvements/venus_surface_mine.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_ASTEROID_MINE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -430,7 +429,7 @@
 			<KFM>Art/Structures/Improvements/Mine/Mine_Modern.kfm</KFM>
 			<Button>art/interface/buttons/improvements/asteroid_mine.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_SUPERNOVA_MINE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -439,7 +438,7 @@
 			<KFM>Art/Structures/Improvements/Mine/Mine_Modern.kfm</KFM>
 			<Button>art/interface/buttons/improvements/supernova_mine_improvement.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_TRUE_VACUUM</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -448,7 +447,7 @@
 			<KFM>Art/Structures/Improvements/Mine/Mine_Modern.kfm</KFM>
 			<Button>art/interface/buttons/improvements/true_vacuum.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_INTERSTELLAR_TRADING_POST</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -457,7 +456,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/interstellar_trading_post.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_SOLAR_TRADING_POST</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -466,7 +465,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/solar_trading_post.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_TERRAFORMED_PLANET</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.6</fScale>
@@ -475,7 +474,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/terraformed_planet_improvement.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_BIOTIC_NEUTRON_STAR</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.6</fScale>
@@ -484,7 +483,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/biotic_neutron_star.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_PARATERRAFORMED_ASTEROID</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.6</fScale>
@@ -493,7 +492,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/paraterraformed_asteroid.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_ARTIFICIAL_PLANET</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.6</fScale>
@@ -502,7 +501,7 @@
 			<KFM/>
 			<Button>art/interface/buttons/improvements/artificial_planet.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_TERRAFORM_NEUTRON_STAR</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>2</fScale>
@@ -511,7 +510,7 @@
 			<KFM>Art/Structures/Improvements/LandWorked/sm_farm_house.kfm</KFM>
 			<Button>art/interface/buttons/worldbuilder/neutron_star.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_TERRAFORM_HYPERSPACE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>2</fScale>
@@ -520,7 +519,7 @@
 			<KFM>Art/Structures/Improvements/LandWorked/sm_farm_house.kfm</KFM>
 			<Button>art/interface/buttons/worldbuilder/hyperspace.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_TERRAFORM_PAST</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>2</fScale>
@@ -529,7 +528,7 @@
 			<KFM>Art/Structures/Improvements/LandWorked/sm_farm_house.kfm</KFM>
 			<Button>art/interface/buttons/worldbuilder/distant_past.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_TERRAFORM_FUTURE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>2</fScale>
@@ -538,7 +537,7 @@
 			<KFM>Art/Structures/Improvements/LandWorked/sm_farm_house.kfm</KFM>
 			<Button>art/interface/buttons/worldbuilder/distant_future.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_TERRAFORM_BRANESPACE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>2</fScale>
@@ -547,7 +546,7 @@
 			<KFM>Art/Structures/Improvements/LandWorked/sm_farm_house.kfm</KFM>
 			<Button>art/interface/buttons/worldbuilder/branespace.dds</Button>
 		</ImprovementArtInfo>
-        <ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_BIOTIC_GALAXY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.6</fScale>

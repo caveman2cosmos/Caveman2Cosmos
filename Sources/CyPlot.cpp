@@ -580,11 +580,12 @@ void CyPlot::changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*Invis
 python::list CyPlot::units() const
 {
 	python::list list = python::list();
+
 	if (m_pPlot)
 	{
 		foreach_(CvUnit* unit, m_pPlot->units())
 		{
-			list.append(new CyUnit(unit));
+			list.append(CyUnit(unit));
 		}
 	}
 	return list;
@@ -623,4 +624,18 @@ bool CyPlot::isInViewport() const
 CyPlot* CyPlot::cloneToViewport() const
 {
 	return new CyPlot(m_pPlot, true);
+}
+
+python::list CyPlot::rect(int halfWid, int halfHgt) const
+{
+	python::list list = python::list();
+
+	if (m_pPlot)
+	{
+		foreach_(CvPlot* plot, m_pPlot->rect(halfWid, halfHgt))
+		{
+			list.append(CyPlot(plot));
+		}
+	}
+	return list;
 }

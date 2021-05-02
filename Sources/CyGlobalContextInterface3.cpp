@@ -11,16 +11,9 @@ void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 	OutputDebugString("Python Extension Module - CyGlobalContextPythonInterface3\n");
 
 	x
-		.def("multiMapsEnabled", &CyGlobalContext::multiMapsEnabled, "bool ()")
-		.def("enableMultiMaps", &CyGlobalContext::enableMultiMaps)
-		.def("getNumMapInfos", &CyGlobalContext::getNumMapInfos, "int ()")
 		.def("getMapInfo", &CyGlobalContext::getMapInfo, python::return_value_policy<python::reference_existing_object>())
 		.def("switchMap", &CyGlobalContext::switchMap, "void (int)")
 		.def("getMapByIndex", &CyGlobalContext::getMapByIndex, python::return_value_policy<python::reference_existing_object>(), "CyMap (int)")
-		.def("getNumMaps", &CyGlobalContext::getNumMaps, "int ()")
-		.def("updateMaps", &CyGlobalContext::updateMaps, "void ()")
-		.def("initializeMap", &CyGlobalContext::initializeMap, "void (int)")
-		.def("mapInitialized", &CyGlobalContext::mapInitialized, "bool (int)")
 
 		.def("getAttitudeInfo", &CyGlobalContext::getAttitudeInfo, python::return_value_policy<python::reference_existing_object>(), "AttitudeInfo (int id)")
 		.def("getMemoryInfo", &CyGlobalContext::getMemoryInfo, python::return_value_policy<python::reference_existing_object>(), "MemoryInfo (int id)")

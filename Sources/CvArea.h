@@ -21,7 +21,7 @@ typedef std::vector<CombatResultRecord> TurnCombatResults;
 // Rolling record of this number of turns combat are kept for AI analysis
 #define COMBAT_RECORD_LENGTH 20
 
-class CvArea
+class CvArea : bst::noncopyable
 {
 //
 // Functions

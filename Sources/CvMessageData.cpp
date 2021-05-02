@@ -1745,6 +1745,7 @@ void CvNetChooseMergeUnit::Execute()
 						{
 							pkMergedUnit->setHasPromotion(ePromotion, true, true);
 						}
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 						else if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isAffliction())
 						{
 							if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
@@ -1752,6 +1753,7 @@ void CvNetChooseMergeUnit::Execute()
 								pkMergedUnit->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
 							}
 						}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 						else if (pUnit1->isPromotionFree(ePromotion) || pUnit2->isPromotionFree(ePromotion) || pUnit3->isPromotionFree(ePromotion))
 						{
 							pkMergedUnit->setHasPromotion(ePromotion, true, true);
@@ -1899,6 +1901,7 @@ void CvNetConfirmSplitUnit::Execute()
 						{
 							pUnit1->setHasPromotion(ePromotion, true, true);
 						}
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 						else if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isAffliction())
 						{
 							if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
@@ -1908,6 +1911,7 @@ void CvNetConfirmSplitUnit::Execute()
 								pUnit3->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
 							}
 						}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 						else if (pUnit0->isPromotionFree(ePromotion) || GC.getPromotionInfo(ePromotion).isEquipment())
 						{
 							pUnit1->setHasPromotion(ePromotion, true, true);
@@ -1959,14 +1963,14 @@ void CvNetConfirmSplitUnit::Execute()
 			FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on split units");
 
 			// Copy appropriate values from the original unit to the new ones
-			for (std::vector<CvUnit*>::const_iterator itr = newUnits.begin(); itr != newUnits.end(); ++itr)
+			foreach_(CvUnit* loopUnit, newUnits)
 			{
-				(*itr)->setExperience100(pUnit0->getExperience100());
-				(*itr)->setLevel(pUnit0->getLevel());
-				(*itr)->setGameTurnCreated(pUnit0->getGameTurnCreated());
-				(*itr)->m_eOriginalOwner = pUnit0->getOriginalOwner();
-				(*itr)->setAutoPromoting(pUnit0->isAutoPromoting());
-				(*itr)->setName(pUnit0->getNameNoDesc());
+				loopUnit->setExperience100(pUnit0->getExperience100());
+				loopUnit->setLevel(pUnit0->getLevel());
+				loopUnit->setGameTurnCreated(pUnit0->getGameTurnCreated());
+				loopUnit->m_eOriginalOwner = pUnit0->getOriginalOwner();
+				loopUnit->setAutoPromoting(pUnit0->isAutoPromoting());
+				loopUnit->setName(pUnit0->getNameNoDesc());
 			}
 
 			if (pUnit0->getLeaderUnitType() != NO_UNIT)

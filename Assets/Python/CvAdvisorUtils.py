@@ -31,11 +31,7 @@ def resetNoLiberateCities():
 		eCorporation = CvBuildingInfo.getFoundsCorporation()
 		if eCorporation > -1 and not GAME.isCorporationFounded(eCorporation):
 
-			bonuses = []
-			for iPrereq in xrange(GC.getDefineINT("NUM_CORPORATION_PREREQ_BONUSES")):
-				eBonus = GC.getCorporationInfo(eCorporation).getPrereqBonus(iPrereq)
-				if eBonus > -1:
-					bonuses.append(eBonus)
+			bonuses = GC.getCorporationInfo(eCorporation).getPrereqBonuses()
 			if not bonuses:
 				continue
 
@@ -601,7 +597,7 @@ def cityAdvise(CyCity, iPlayer):
 							popupInfo.addPopup(iPlayer)
 							g_iAdvisorNags += 1
 
-				if CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) == 0 and not CyCity.isOccupation():
+				if CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) < 10 and not CyCity.isOccupation():
 
 					if (iTurn + 21) % 40 == iTurnFounded % 40:
 
@@ -615,7 +611,7 @@ def cityAdvise(CyCity, iPlayer):
 
 							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
-							iValue = CvBuildingInfoX.getObsoleteSafeCommerceChange(CommerceTypes.COMMERCE_CULTURE)
+							iValue = CvBuildingInfoX.getCommerceChange(CommerceTypes.COMMERCE_CULTURE)
 							if iValue <= iBestValue: continue
 
 							if CyCity.canConstruct(iBuildingX, False, False, False):

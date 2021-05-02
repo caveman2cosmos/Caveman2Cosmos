@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 
-<mod id="Core" name="BUG Core" author="EmperorFool" 
+<mod id="Core" name="BUG Core" author="EmperorFool"
 	version="3.5" build="1324" date="09/11/2008" url="http://forums.civfanatics.com/forumdisplay.php?f=268">
 
 	<options id="Core" file="BUG Core.ini">

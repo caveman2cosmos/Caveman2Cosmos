@@ -38,7 +38,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LLAMA_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_LLAMA_RIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LLAMA_RIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -190,7 +189,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LLAMA_ARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_LLAMA_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LLAMA_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>

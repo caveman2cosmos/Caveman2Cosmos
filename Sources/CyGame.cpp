@@ -130,11 +130,6 @@ int CyGame::getVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource) const
 	return m_pGame.getVoteSourceReligion((VoteSourceTypes) eVoteSource);
 }
 
-void CyGame::setVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource, int /*ReligionTypes*/ eReligion, bool bAnnounce)
-{
-	m_pGame.setVoteSourceReligion((VoteSourceTypes)eVoteSource, (ReligionTypes)eReligion, bAnnounce);
-}
-
 int CyGame::countCivPlayersAlive() const
 {
 	return m_pGame.countCivPlayersAlive();
@@ -153,11 +148,6 @@ int CyGame::countCivTeamsAlive() const
 int CyGame::countCivTeamsEverAlive() const
 {
 	return m_pGame.countCivTeamsEverAlive();
-}
-
-int CyGame::countHumanPlayersAlive() const
-{
-	return m_pGame.countHumanPlayersAlive();
 }
 
 int CyGame::countTotalCivPower() const
@@ -1217,4 +1207,9 @@ bool CyGame::canEverSpread(int iCorporation) const
 const char* CyGame::getC2CVersion() const
 {
 	return GC.getDefineSTRING("C2C_VERSION");
+}
+
+void CyGame::assignStartingPlots(bool bScenario, bool bMapScript)
+{
+	m_pGame.assignStartingPlots(bScenario, bMapScript);
 }

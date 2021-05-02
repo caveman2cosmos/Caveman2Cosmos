@@ -7,7 +7,7 @@
 
 //#include "CvEnums.h"
 
-class CvInitCore
+class CvInitCore : bst::noncopyable
 {
 
 public:

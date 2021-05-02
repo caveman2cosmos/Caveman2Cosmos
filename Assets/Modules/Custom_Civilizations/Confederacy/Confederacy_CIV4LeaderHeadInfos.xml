@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
-	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-	<!-- re-Modified by strategyonly -->
-	<!-- -->
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- re-Modified by strategyonly -->
 <Civ4LeaderHeadInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
 	<LeaderHeadInfos>
 		<LeaderHeadInfo>

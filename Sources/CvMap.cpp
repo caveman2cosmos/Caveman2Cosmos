@@ -84,7 +84,7 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 		GC.getSeaLevelInfo(GC.getInitCore().getSeaLevel()).getDescription(),
 		GC.getInitCore().getNumCustomMapOptions()).c_str() );
 
-	Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "beforeInit");
+	Cy::call_optional(getMapScript(), "beforeInit");
 
 	//--------------------------------
 	// Init saved data
@@ -162,7 +162,7 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 		if (GC.getInitCore().getWorldSize() != NO_WORLDSIZE)
 		{
 			std::vector<int> out;
-			if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "getGridSize", Cy::Args() << GC.getInitCore().getWorldSize(), out)
+			if (Cy::call_override(getMapScript(), "getGridSize", Cy::Args() << GC.getInitCore().getWorldSize(), out)
 				&& out.size() == 2)
 			{
 				m_iGridWidth = out[0];
@@ -191,8 +191,8 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 	{
 		// Check map script for latitude override (map script beats ini file)	
 		long resultTop = 0, resultBottom = 0;
-		if(Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "getTopLatitude", resultTop)
-			&& Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "getBottomLatitude", resultBottom))
+		if(Cy::call_override(getMapScript(), "getTopLatitude", resultTop)
+			&& Cy::call_override(getMapScript(), "getBottomLatitude", resultBottom))
 		{
 			m_iTopLatitude = resultTop;
 			m_iBottomLatitude = resultBottom;
@@ -220,8 +220,8 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 	{
 		// Check map script for wrap override (map script beats ini file)
 		long resultX = 0, resultY = 0;
-		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "getWrapX", resultX)
-			&& Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "getWrapY", resultY))
+		if (Cy::call_override(getMapScript(), "getWrapX", resultX)
+			&& Cy::call_override(getMapScript(), "getWrapY", resultY))
 		{
 			m_bWrapX = (resultX != 0);
 			m_bWrapY = (resultY != 0);
@@ -231,9 +231,7 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	//Koshling - why do we ignore the map size in MapInfos if there is only 1???  Changed that for now
-	//if (GC.getNumMapInfos() > 1)
-	if (GC.multiMapsEnabled() /*&& GC.getMapInfos().size() > 0*/)
+	if (m_eType > MAP_EARTH && GC.getNumMapInfos() > 0)
 	{
 		if (GC.getMapInfo(getType()).getGridWidth() > 0 && GC.getMapInfo(getType()).getGridHeight() > 0)
 		{
@@ -379,8 +377,7 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 // XXX generalize these funcs? (macro?)
 void CvMap::doTurn()
 {
-	MEMORY_TRACE_FUNCTION();
-	PROFILE("CvMap::doTurn()")
+	PROFILE("CvMap::doTurn()");
 
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
@@ -538,7 +535,7 @@ void CvMap::updateMinOriginalStartDist(const CvArea* pArea)
 					{
 					    //int iCrowDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 					    //iDist = std::min(iDist,  iCrowDistance * 2);
-						if ((pLoopPlot->getMinOriginalStartDist() == -1) || (iDist < pLoopPlot->getMinOriginalStartDist()))
+						if (pLoopPlot->getMinOriginalStartDist() == -1 || iDist < pLoopPlot->getMinOriginalStartDist())
 						{
 							pLoopPlot->setMinOriginalStartDist(iDist);
 						}
@@ -621,20 +618,10 @@ CvPlot* CvMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTi
 		{
 			bool bValid = true;
 
-			if (iMinUnitDistance != -1)
+			if (iMinUnitDistance != -1
+			&& algo::any_of(pTestPlot->rect(iMinUnitDistance, iMinUnitDistance), bind(CvPlot::isUnit, _1)))
 			{
-				for (int iDX = -(iMinUnitDistance); iDX <= iMinUnitDistance; iDX++)
-				{
-					for (int iDY = -(iMinUnitDistance); iDY <= iMinUnitDistance; iDY++)
-					{
-						const CvPlot* pLoopPlot = plotXY(pTestPlot->getX(), pTestPlot->getY(), iDX, iDY);
-
-						if (pLoopPlot != NULL && pLoopPlot->isUnit())
-						{
-							bValid = false;
-						}
-					}
-				}
+				bValid = false;
 			}
 
 			if (bValid)
@@ -840,9 +827,7 @@ int CvMap::getMapFractalFlags() const
 //"Check plots for wetlands or seaWater.  Returns true if found"
 bool CvMap::findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const
 {
-	PROFILE("CvMap::findWater()");
-
-	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
+	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange))
 	{
 		if (bFreshWater ? pLoopPlot->isFreshWater() : pLoopPlot->isWater())
 		{
@@ -931,7 +916,7 @@ int CvMap::getLandPlots() const
 void CvMap::changeLandPlots(int iChange)
 {
 	m_iLandPlots += iChange;
-	FAssert(getLandPlots() >= 0);
+	FASSERT_NOT_NEGATIVE(getLandPlots())
 }
 
 
@@ -944,7 +929,7 @@ int CvMap::getOwnedPlots() const
 void CvMap::changeOwnedPlots(int iChange)
 {
 	m_iOwnedPlots += iChange;
-	FAssert(getOwnedPlots() >= 0);
+	FASSERT_NOT_NEGATIVE(getOwnedPlots())
 }
 
 
@@ -1013,7 +998,7 @@ void CvMap::changeNumBonuses(BonusTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	m_paiNumBonus[eIndex] += iChange;
-	FAssertMsg(m_paiNumBonus[eIndex] >= 0, "Negative bonus occurance on the map!");
+	FASSERT_NOT_NEGATIVE(m_paiNumBonus[eIndex])
 }
 
 
@@ -1028,7 +1013,7 @@ void CvMap::changeNumBonusesOnLand(BonusTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	m_paiNumBonusOnLand[eIndex] += iChange;
-	FAssert(getNumBonusesOnLand(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getNumBonusesOnLand(eIndex))
 }
 
 
@@ -1375,15 +1360,6 @@ void CvMap::afterSwitch()
 				AddDLLMessage((PlayerTypes)0, true, GC.getEVENT_MESSAGE_TIME(), L"Worldbuilder map failed to load");
 			}
 		}
-		else if (GC.getMapInfo(getType()).getMapScript().GetLength() > 0)
-		{
-			init();
-			CvMapGenerator& kGenerator = CvMapGenerator::GetInstance();
-			kGenerator.setUseDefaultMapScript(false);
-			kGenerator.generateRandomMap();
-			kGenerator.addGameElements();
-			kGenerator.setUseDefaultMapScript(true);
-		}
 		else
 		{
 			init();
@@ -1539,10 +1515,21 @@ MapTypes CvMap::getType() const
 	return m_eType;
 }
 
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+const char* CvMap::getMapScript() const
+{
+	if (m_eType > MAP_EARTH)
+	{
+		const CvString& module = GC.getMapInfo(m_eType).getMapScript();
+		if (module.GetLength() > 0)
+			return module.c_str();
+	}
+	return gDLL->getPythonIFace()->getMapScriptModule();
+}
 
+bool CvMap::plotsInitialized() const
+{
+	return m_pMapPlots != NULL;
+}
 
 //
 // used for loading WB maps
@@ -1607,7 +1594,6 @@ void CvMap::toggleCitiesDisplay()
 			}
 		}
 	}
-	MEMORY_TRACK_EXEMPT();
 	AddDLLMessage(
 		GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(),
 		m_bCitiesDisplayed ? "City entities visible" : "City entities hidden",
@@ -1692,11 +1678,6 @@ void CvMap::toggleUnitsDisplay()
 						{
 							paiBuiltNum[iI][7]++;
 						}
-
-						//if (pCity->getBuildingOriginalTime((BuildingTypes)iI) > 1000)
-						//{
-						//	pCity->setNumRealBuilding((BuildingTypes)iI, 0);
-						//}
 					}
 				}
 			}
@@ -1748,7 +1729,6 @@ void CvMap::toggleUnitsDisplay()
 	if (m_bUnitsDisplayed)
 		szBuffer = "Unit entities created";
 			
-	MEMORY_TRACK_EXEMPT();
 
 	AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
 }

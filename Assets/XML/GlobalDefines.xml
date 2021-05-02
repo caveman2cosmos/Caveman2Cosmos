@@ -24,20 +24,13 @@
 		<DefineName>SAVE_VERSION</DefineName>
 		<iDefineIntVal>302</iDefineIntVal>
 	</Define>
-	<Define>
-		<DefineName>MAX_NUM_LANGUAGES</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
-	</Define>
-
 	<!-- GRAPHICS PAGING OPTIONS -->
-
 	<!-- Start paging out if memory exceeds this amount (in KB) -->
 	<Define>
 		<DefineName>MAX_DESIRED_MEMORY_USED</DefineName>
 		<iDefineIntVal>2000000</iDefineIntVal>
 	</Define>
-
-	<!-- If specified, instead of MAX_DESIRED_MEMORY_USED, a set of test 
+	<!-- If specified, instead of MAX_DESIRED_MEMORY_USED, a set of test
 		allocations will be performed to test for low memory conditions -->
 	<!-- Size of each test allocation -->
 	<!-- <Define>
@@ -49,16 +42,16 @@
 		<DefineName>PAGING_TEST_ALLOC_NUM</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define> -->
-
 	<!-- Maximum amount of time in a frame that can be spent on paging operations.
 		Higher values mean faster paging in at the expense of more stuttering.
-	 -->
+		Currently this define is unused
+	-->
 	<Define>
 		<DefineName>MAX_PAGING_FRAME_TIME_MS</DefineName>
 		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<!-- Distance in tiles at which to page in different components -->
-	 <Define>
+	<Define>
 		<DefineName>PAGE_IN_DIST_SYMBOLS</DefineName>
 		<iDefineIntVal>999</iDefineIntVal>
 	</Define>
@@ -82,12 +75,10 @@
 		<DefineName>PAGE_IN_DIST_CITY</DefineName>
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
-	
 	<!-- GRAPHICS PAGING OPTIONS END -->
-
 	<!--
  Default uses the normal tag for the language set in Civ4's option dialog.
-	     All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
+		All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
 	-->
 	<Define>
 		<DefineName>LANGUAGE</DefineName>
@@ -406,35 +397,11 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>NUM_CORPORATION_PREREQ_BONUSES</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>NUM_ROUTE_PREREQ_OR_BONUSES</DefineName>
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>MAX_WORLD_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>14</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_TEAM_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>16</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_NATIONAL_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>31</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_NATIONAL_WONDERS_PER_CITY_FOR_OCC</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>INITIAL_CITY_POPULATION</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>INITIAL_AI_CITY_PRODUCTION</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
@@ -734,14 +701,6 @@
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>ESCAPE_MODIFIER_PER_TURN</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>ESTABLISH_MODIFIER_PER_TURN</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MAX_FORTIFY_TURNS</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
@@ -966,10 +925,6 @@
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>FORCED_WAR_WAR_WEARINESS_MODIFIER</DefineName>
-		<iDefineIntVal>-50</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MULTIPLAYER_WAR_WEARINESS_MODIFIER</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
@@ -1086,10 +1041,6 @@
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>MAX_EXPERIENCE_AFTER_UPGRADE</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>BUILDING_PRODUCTION_DECAY_TIME</DefineName>
 		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
@@ -1139,11 +1090,11 @@
 	</Define>
 	<!--
  How is visual city size computed from the real city size?
-	     Two approaches are possible:
-	         METHOD_EXPONENTIAL
-	         METHOD_LINMAP
-	     Set the following GAME_CITY_SIZE_METHOD to one of the above tags
-	     to control how big your cities look in the game world.
+		Two approaches are possible:
+			METHOD_EXPONENTIAL
+			METHOD_LINMAP
+		Set the following GAME_CITY_SIZE_METHOD to one of the above tags
+		to control how big your cities look in the game world.
 	-->
 	<Define>
 		<DefineName>GAME_CITY_SIZE_METHOD</DefineName>
@@ -1259,9 +1210,9 @@
 	</Define>
 	<!--
  Controlling the camera's maximum distance is a bit tricky since differently-sized maps need the camera to move back different amounts
-	     There is a lower-bound on the maximum distance, specified below. Thus, the camera will never get any closer than 7000 units.
-	     To actually tweak the apparent-size of the globe when fully-back, you need to go into CIV4DetailManager.XML  and adjust the
-	     CAMERA_MAX_DISTANCE_FADER value. Because this variable is in the DetailManager XML, your changes will go into effect without restarting the game.
+		There is a lower-bound on the maximum distance, specified below. Thus, the camera will never get any closer than 7000 units.
+		To actually tweak the apparent-size of the globe when fully-back, you need to go into CIV4DetailManager.XML and adjust the
+		CAMERA_MAX_DISTANCE_FADER value. Because this variable is in the DetailManager XML, your changes will go into effect without restarting the game.
 	-->
 	<Define>
 		<DefineName>CAMERA_SMALLEST_MAX_DISTANCE</DefineName>
@@ -1634,10 +1585,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>CITY_MAX_NUM_BUILDINGS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>RANGED_ATTACKS_USE_MOVES</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
@@ -1686,10 +1633,6 @@
 		<iDefineIntVal>75</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>ADVANCED_START_CULTURE_COST_INCREASE</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>ADVANCED_START_VISIBILITY_COST</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
@@ -1716,10 +1659,6 @@
 	<Define>
 		<DefineName>FIRST_EVENT_DELAY_TURNS</DefineName>
 		<iDefineIntVal>20</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CIVILOPEDIA_SHOW_ACTIVE_CIVS_ONLY</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>USE_MODDERS_PLAYEROPTION_1</DefineName>
@@ -1752,10 +1691,6 @@
 	<Define>
 		<DefineName>USE_SPIES_NO_ENTER_BORDERS</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BONUS_OBSOLETE_VALUE_MODIFIER</DefineName>
-		<iDefineIntVal>150</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FORCE_UNOWNED_CITY_TIMER</DefineName>

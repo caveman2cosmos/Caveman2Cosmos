@@ -10,8 +10,6 @@
 from CvPythonExtensions import *
 import CvMapGeneratorUtil
 from CvMapGeneratorUtil import HintedWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_ARBORIA_DESCR"
@@ -193,7 +191,7 @@ class ArboriaFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 		
 	def addIceAtPlot(self, pPlot, iX, iY, lat):
 		# We don' need no steeking ice. M'kay? Alrighty then.
-		ice = 0
+		return
 	
 	def addJunglesAtPlot(self, pPlot, iX, iY, lat):
 		# Warning: this version of JunglesAtPlot is using the forest fractal!
@@ -242,7 +240,6 @@ def addBonusType(argsList):
 	[iBonusType] = argsList
 	GC = CyGlobalContext()
 	map = CyMap()
-	dice = GC.getGame().getMapRand()
 	type_string = GC.getBonusInfo(iBonusType).getType()
 
 	if not (type_string in forest):
@@ -281,7 +278,6 @@ def addBonusType(argsList):
 							if pPlot.isHills():
 								if (foodVal >= iSilverBottom and foodVal <= iSilverTop):
 									map.plot(x,y).setBonusType(iBonusType)
-
 		return None
 
 def afterGeneration():

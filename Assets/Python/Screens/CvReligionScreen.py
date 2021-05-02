@@ -418,7 +418,6 @@ class CvReligionScreen:
 			screen.addPanel(self.AREA1_ID, "", "", True, True, self.X_CITY1_AREA, self.Y_CITY_AREA, self.W_CITY_AREA, self.H_CITY_AREA, PanelStyles.PANEL_STYLE_MAIN)
 			screen.addPanel(self.AREA2_ID, "", "", True, True, self.X_CITY2_AREA, self.Y_CITY_AREA, self.W_CITY_AREA, self.H_CITY_AREA, PanelStyles.PANEL_STYLE_MAIN)
 
-		szArea = self.RELIGION_PANEL_ID
 		for iRel in self.RELIGIONS:
 			if (self.iReligionSelected == iRel):
 				screen.setState(self.getReligionButtonName(iRel), True)
@@ -550,7 +549,6 @@ class CvReligionScreen:
 # end of BUG indent of original code
 
 		# Convert Button....
-		iLink = 0
 		if (GC.getPlayer(self.iActivePlayer).canChangeReligion()):
 			iLink = 1
 
@@ -584,13 +582,8 @@ class CvReligionScreen:
 
 	# Will handle the input for this screen...
 	def handleInput (self, inputClass):
-
 		screen = self.getScreen()
-
 		szWidgetName = inputClass.getFunctionName()
-		szFullWidgetName = szWidgetName + str(inputClass.getID())
-		code = inputClass.getNotifyCode()
-
 		if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED
 		and szWidgetName != self.TABLE_ID):
 			screen = self.getScreen()
@@ -599,7 +592,6 @@ class CvReligionScreen:
 			self.drawReligionInfo()
 			self.drawCityInfo(self.iReligionSelected)
 			return 1
-
 		# BUG Zoom to City
 		elif (szWidgetName == self.TABLE_ID):
 			if (inputClass.getMouseX() == 0):
@@ -641,30 +633,25 @@ class CvReligionScreen:
 
 	def ReligionConvert(self, inputClass):
 		screen = self.getScreen()
-		if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED) :
+		if inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED:
 			screen.hideScreen()
 
 	def ReligionCancel(self, inputClass):
-		screen = self.getScreen()
-		if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED) :
+		if inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED:
 			self.iReligionSelected = self.iReligionOriginal
-			if (-1 == self.iReligionSelected):
+			if -1 == self.iReligionSelected:
 				self.iReligionSelected = self.NUM_RELIGIONS
 			self.drawCityInfo(self.iReligionSelected)
 
 	def calculateBuilding (self, city, bldg):
-		if city.getNumBuilding(bldg) > 0:
+		if city.getNumRealBuilding(bldg) > 0:
 			return self.objectHave
-#			if city.getNumActiveBuilding(bldg) > 0:
-#				return self.objectHave
-#			else:
-#				return self.objectHaveObsolete
-		elif city.GetCy().getFirstBuildingOrder(bldg) != -1:
+		if city.GetCy().getFirstBuildingOrder(bldg) != -1:
 			return self.objectUnderConstruction
-		elif city.GetCy().canConstruct(bldg, False, False, False):
+		if city.GetCy().canConstruct(bldg, False, False, False):
 			return self.objectPossible
-		elif city.GetCy().canConstruct(bldg, True, False, False):
+		if city.GetCy().canConstruct(bldg, True, False, False):
 			return self.objectPossibleConcurrent
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 

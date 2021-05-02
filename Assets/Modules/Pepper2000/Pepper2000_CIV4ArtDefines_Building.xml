@@ -13730,8 +13730,8 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>art\lunarcementmill.dds</Button>
-		  </BuildingArtInfo>
-		  <BuildingArtInfo>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LUNAR_HYDROPONICS_FARM</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
@@ -13820,8 +13820,8 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>art\placeholder.dds</Button>
-		  </BuildingArtInfo>
-		  <BuildingArtInfo>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LUNAR_ORGANIC_POLYMERE_FACTORY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
@@ -13890,8 +13890,8 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>art\placeholder.dds</Button>
-		  </BuildingArtInfo>
-		  <BuildingArtInfo>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
@@ -13970,8 +13970,8 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>art\lunarobservatory.dds</Button>
-		  </BuildingArtInfo>
-		  <BuildingArtInfo>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LUNAR_CHEMICAL_STORAGE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
@@ -13981,7 +13981,7 @@
 			<KFM/>
 			<Button>art\placeholder.dds</Button>
 		</BuildingArtInfo>
-		  <BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>

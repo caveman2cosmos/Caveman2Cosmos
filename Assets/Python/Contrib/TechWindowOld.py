@@ -6,12 +6,10 @@
 ## Copyright (c) 2008 The BUG Mod.
 
 from CvPythonExtensions import *
-import CvUtil
 
-# BUG - Options - end
+# BUG Options
 import BugCore
 TechWindowOpt = BugCore.game.TechWindow
-# BUG - Options - end
 
 GC = CyGlobalContext()
 TRNSLTR = CyTranslator()
@@ -296,7 +294,7 @@ class CvTechSplashScreen:
 #---Eingef�gt START - kann komplett gel�scht werden --------------
                 # Improvements
 		for j in range(GC.getNumBuildInfos()):
-				bTechFound = 0;
+				bTechFound = 0
 				if (GC.getBuildInfo(j).getTechPrereq() == -1):
 					bTechFound = 0
 					for k in range(GC.getNumFeatureInfos()):

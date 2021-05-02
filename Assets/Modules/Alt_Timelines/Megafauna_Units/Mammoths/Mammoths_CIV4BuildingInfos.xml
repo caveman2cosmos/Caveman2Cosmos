@@ -10,7 +10,6 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_HERD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_HERD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MAMMOTH_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_HERD</ArtDefineTag>
 			<MapCategoryTypes>
@@ -49,7 +48,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MAMMOTH_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAMMOTH_TRAINER</MovieDefineTag>
@@ -66,7 +64,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-            <Bonus>BONUS_MAMMOTH</Bonus>
+			<Bonus>BONUS_MAMMOTH</Bonus>
 			<iCost>624</iCost>
 			<iMinLatitude>40</iMinLatitude>
 			<iHealth>-1</iHealth>
@@ -122,7 +120,6 @@
 			<Type>BUILDING_MAMMOTH_TRAINER_HERITAGE</Type>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER_EFFECT</ArtDefineTag>
 			<ObsoleteTech>TECH_ARMORED_VEHICLES</ObsoleteTech>
@@ -169,7 +166,6 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MAMMOTH_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER_EFFECT</ArtDefineTag>
 			<ObsoleteTech>TECH_ARMORED_VEHICLES</ObsoleteTech>
@@ -194,7 +190,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-            </BuildingInfo>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MASTER_HUNTER_TRADITION</Type>
 			<BonusHappinessChanges>

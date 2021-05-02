@@ -29,7 +29,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RA_FIST</Description>
 			<Civilopedia>TXT_KEY_UNIT_RA_FIST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RA_FIST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -151,7 +150,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RA_KNIGHT</Description>
 			<Civilopedia>TXT_KEY_UNIT_RA_FIST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RA_KNIGHT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>

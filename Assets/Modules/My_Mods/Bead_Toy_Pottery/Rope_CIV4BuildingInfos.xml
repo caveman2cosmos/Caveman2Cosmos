@@ -11,7 +11,6 @@
 			<Type>BUILDING_ROPE_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_ROPE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROPE_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ROPE_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ROPE_FACTORY</ArtDefineTag>
@@ -50,7 +49,7 @@
 			</CommerceChanges>
 			<!--FreeBonus>BONUS_ROPE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses-->
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_DYE</BonusType>
@@ -59,7 +58,6 @@
 			</BonusHappinessChanges>
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<!-- Properties diffusion -->
 			<Properties>
 				<Property>
@@ -82,7 +80,6 @@
 			<Type>BUILDING_ROPE_WEAVER</Type>
 			<Description>TXT_KEY_BUILDING_ROPE_WEAVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROPE_WEAVER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ROPE_WEAVER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ROPE_WEAVER</ArtDefineTag>
@@ -121,7 +118,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>

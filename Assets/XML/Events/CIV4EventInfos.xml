@@ -4857,7 +4857,7 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-	<EventInfo>
+		<EventInfo>
 			<Type>EVENT_THE_BUCCANEERS_1</Type>
 			<Description>TXT_KEY_EVENT_THE_BUCCANEERS_1</Description>
 			<WorldNewsTexts>
@@ -5666,8 +5666,8 @@
 			<Description>TXT_KEY_EVENT_HARDY_CROPS_1</Description>
 			<PlotExtraYields>
 				<PlotExtraYield>
-					 <YieldType>YIELD_FOOD</YieldType>
-					 <iExtraYield>2</iExtraYield>
+					<YieldType>YIELD_FOOD</YieldType>
+					<iExtraYield>2</iExtraYield>
 				</PlotExtraYield>
 			</PlotExtraYields>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
@@ -6557,7 +6557,7 @@
 			<iRevoltTurns>1</iRevoltTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</EventInfo>
-<!-- Other -->
+		<!-- Other -->
 		<EventInfo>
 			<Type>EVENT_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_EVENT_ACHIEVEMENT</Description>
@@ -6574,7 +6574,7 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-<!-- STUCK IN SWAMP -->
+		<!-- STUCK IN SWAMP -->
 		<EventInfo>
 			<Type>EVENT_STUCK_IN_SWAMP_1</Type>
 			<Description>TXT_KEY_EVENT_STUCK_IN_SWAMP_1</Description>
@@ -6582,7 +6582,7 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-<!-- Events for Missions and Outcomes-->
+		<!-- Events for Missions and Outcomes-->
 		<EventInfo>
 			<Type>EVENT_LAWYER_LITIGATION</Type>
 			<Description>TXT_KEY_EVENT_LAWYER_LITIGATION</Description>
@@ -6700,7 +6700,7 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-<!-- End Template -->
+		<!-- End Template -->
 		<EventInfo>
 			<Type>EVENT_COCK_FIGHTS_2</Type>
 			<Description>TXT_KEY_EVENT_COCK_FIGHTS_2</Description>
@@ -6844,7 +6844,7 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-				<EventInfo>
+		<EventInfo>
 			<Type>EVENT_SHERIFF_1</Type>
 			<Description>TXT_KEY_EVENT_SHERIFF_1</Description>
 			<bPickCity>1</bPickCity>
@@ -6882,7 +6882,7 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-			<EventInfo>
+		<EventInfo>
 			<Type>EVENT_MUSICOFGODS_1</Type>
 			<Description>TXT_KEY_EVENT_MUSICOFGODS_1</Description>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>

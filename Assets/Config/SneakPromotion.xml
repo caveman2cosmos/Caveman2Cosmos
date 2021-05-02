@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!--
-    Sneak Promotion 
+	Sneak Promotion
 -->
 <mod id="SneakPromotion" module="SneakPromotion">
-   	<event type="combatResult" function="onCombatResult"/>
-   	<event type="unitPromoted" function="onUnitPromoted"/>
-   	<!--event type="CivicChanged" function="onCivicChanged"/-->
+	<event type="combatResult" function="onCombatResult"/>
+	<event type="unitPromoted" function="onUnitPromoted"/>
+	<!--event type="CivicChanged" function="onCivicChanged"/-->
 
-<!--	<init/> -->
+<!-- <init/> -->
 </mod>

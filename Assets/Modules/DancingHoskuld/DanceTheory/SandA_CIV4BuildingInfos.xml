@@ -13,7 +13,6 @@
 			<Type>BUILDING_HAKA</Type>
 			<Description>TXT_KEY_BUILDING_HAKA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAKA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HAKA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HAKA</ArtDefineTag>
@@ -50,7 +49,7 @@
 				<BonusType>BONUS_RAPA_NUI</BonusType>
 				<BonusType>BONUS_SAMOAN</BonusType>
 				<BonusType>BONUS_TAHITIAN</BonusType>
-				<BonusType>BONUS_TONGAN</BonusType>				
+				<BonusType>BONUS_TONGAN</BonusType>
 			</PrereqBonuses>
 		</BuildingInfo>
 	</BuildingInfos>

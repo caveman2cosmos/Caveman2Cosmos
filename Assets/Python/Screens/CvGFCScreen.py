@@ -1,6 +1,5 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
-import CvUtil
 from CvPythonExtensions import *
 
 # globals
@@ -19,7 +18,7 @@ class CvGFCScreen:
 		screen = CyGInterfaceScreen(self.screenName, self.screenID)
 		return screen
 	
-	def setCloseButton(widgetname, text, x, y):
+	def setCloseButton(self, widgetname, text, x, y):
 		#self.getScreen().setButtonGFC(widgetname, text, "", x, y, 50,50, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD)
 		return
 	

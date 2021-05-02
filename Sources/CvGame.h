@@ -26,7 +26,7 @@ class CvUnit;
 
 typedef std::vector<const CvReplayMessage*> ReplayMessageList;
 
-class CvGame
+class CvGame : bst::noncopyable
 {
 public:
 
@@ -55,7 +55,7 @@ public:
 	void initFreeState();
 	DllExport void initFreeUnits();
 
-	void assignStartingPlots();
+	void assignStartingPlots(const bool bScenario = false, const bool bMapScript = false);
 	void normalizeStartingPlots();
 
 	DllExport void update();
@@ -488,7 +488,7 @@ public:
 
 	int getBuildingCreatedCount(BuildingTypes eIndex) const;
 	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const;
-	void incrementBuildingCreatedCount(BuildingTypes eIndex);
+	void changeNumBuildings(const BuildingTypes eIndex, const short iChange);
 
 	int getProjectCreatedCount(ProjectTypes eIndex) const;
 	bool isProjectMaxedOut(ProjectTypes eIndex, int iExtra = 0) const;
@@ -645,7 +645,7 @@ public:
 
 	int getPlotExtraYield(int iX, int iY, YieldTypes eYield) const;
 	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iCost);
-	void removePlotExtraYield(int iX, int iY);
+	//void removePlotExtraYield(int iX, int iY); // Toffer - Unused, but might be needed for recalc...
 
 	int getPlotExtraCost(int iX, int iY) const;
 	void changePlotExtraCost(int iX, int iY, int iCost);

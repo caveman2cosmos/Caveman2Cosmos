@@ -28,7 +28,7 @@
 		<Tag>TXT_KEY_UNIT_CROW_PEDIA</Tag>
 		<English>Information on Crow
 Graphics Source:
-</English>
+		</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CROW</Tag>
@@ -36,6 +36,6 @@ Graphics Source:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CROW_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crow and Sea Birds[NEWLINE][ICON_BULLET]Bird Cage and Enclosure[NEWLINE][ICON_BULLET]Feather Worker</English>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Crow and Sea Birds[NEWLINE][ICON_BULLET]Bird Cage and Enclosure[NEWLINE][ICON_BULLET]Feather Worker</English>
 	</TEXT>
 </Civ4GameText>

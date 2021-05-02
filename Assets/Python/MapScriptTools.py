@@ -29,14 +29,6 @@
 #    Please tell me.
 #  -----
 
-#  =====================
-#  Temudjin 15.July.2010
-#  =====================
-
-#	Changelog
-#	---------
-#	1.00					initial release
-#
 from CvPythonExtensions import *
 import CvMapGeneratorUtil
 import inspect
@@ -44,6 +36,7 @@ import inspect
 GC = CyGlobalContext()
 
 DEBUG = False
+bInitialized = False
 
 #################################################
 ### Defined Class Instances
@@ -76,16 +69,6 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 		if len(stackList) > 1:
 			callModule = stackList[1][1]
 		print "[MST] callModule: %s" %callModule
-
-	########################
-	### initialization check
-	########################
-	global bInitialized
-	try:
-		test = bInitialized
-		bInitialized = True
-	except:
-		bInitialized = False
 
 	###########################
 	### civ universal constants
@@ -175,13 +158,14 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	##############################
 	### Not available at init time
 	##############################
-
-	sprint = ""
+	global bInitialized
 	if not bInitialized:
+		bInitialized = True
 		if DEBUG:
 			mapStats.mapStatistics()
 	else:
 		global sClimateType, sSeaType, bTeams, mapGetLatitude
+		sprint = ""
 		#######################
 		### retrieve parameters
 		#######################

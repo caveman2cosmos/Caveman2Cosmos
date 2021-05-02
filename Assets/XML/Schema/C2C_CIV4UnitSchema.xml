@@ -56,7 +56,6 @@
 	<ElementType name="iNoDecayAmount" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoConvertAmount" content="textOnly" dt:type="int"/>
 	<ElementType name="Active"/>
-
 	<ElementType name="PropertySource" content="eltOnly" order="many">
 		<element type="PropertySourceType" minOccurs="1" maxOccurs="*"/>
 		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
@@ -70,7 +69,6 @@
 		<element type="iNoDecayAmount" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyInteraction" content="eltOnly" order="many">
 		<element type="PropertyInteractionType" minOccurs="1" maxOccurs="*"/>
 		<element type="SourcePropertyType" minOccurs="1" maxOccurs="*"/>
@@ -85,7 +83,6 @@
 		<element type="iNoConvertAmount" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyPropagator" content="eltOnly" order="many">
 		<element type="PropertyPropagatorType" minOccurs="1" maxOccurs="*"/>
 		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
@@ -100,13 +97,11 @@
 		<element type="iPercent" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyManipulators" content="eltOnly" order="many">
 		<element type="PropertySource" minOccurs="0" maxOccurs="*"/>
 		<element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
 		<element type="PropertyPropagator" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<!-- @MOD Commanders -->
 	<ElementType name="iCommandRange" content="textOnly" dt:type="int"/>
 	<ElementType name="iControlPoints" content="textOnly" dt:type="int"/>
@@ -1476,7 +1471,6 @@
 	<ElementType name="iCost"/>
 	<ElementType name="iHurryCostModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iAdvancedStartCostIncrease" content="textOnly" dt:type="int"/>
 	<ElementType name="iMinAreaSize" content="textOnly" dt:type="int"/>
 	<ElementType name="iMoves" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoRevealMap" content="textOnly" dt:type="boolean"/>
@@ -1959,7 +1953,6 @@
 		<element type="iCost" minOccurs="0"/>
 		<element type="iHurryCostModifier" minOccurs="0"/>
 		<element type="iAdvancedStartCost" minOccurs="0"/>
-		<element type="iAdvancedStartCostIncrease" minOccurs="0"/>
 		<element type="iMinAreaSize" minOccurs="0"/>
 		<element type="iMoves" minOccurs="0"/>
 		<element type="bNoRevealMap" minOccurs="0"/>
@@ -2355,7 +2348,7 @@
 		<element type="bNoSelfHeal" minOccurs="0"/>
 		<element type="iSelfHealModifier" minOccurs="0"/>
 		<element type="iNumHealSupport" minOccurs="0"/>
-		<!--TB SubCombat Mod begin  TB Combat Mod begin-->
+		<!--TB SubCombat Mod begin TB Combat Mod begin-->
 		<element type="PromotionLine" minOccurs="0"/>
 		<element type="iLinePriority" minOccurs="0"/>
 		<element type="SubCombatChangeTypes" minOccurs="0"/>
@@ -2393,7 +2386,7 @@
 		<element type="bZeroesXP" minOccurs="0"/>
 		<element type="bForOffset" minOccurs="0"/>
 		<element type="SetSpecialUnit" minOccurs="0"/>
-		<!--TB SubCombat Mod end  TB Combat Mod end-->
+		<!--TB SubCombat Mod end TB Combat Mod end-->
 		<element type="bBlitz" minOccurs="0"/>
 		<element type="bAmphib" minOccurs="0"/>
 		<element type="bRiver" minOccurs="0"/>
@@ -2782,12 +2775,11 @@
 	<ElementType name="Civ4AnimationPathInfos" content="eltOnly">
 		<element type="AnimationPaths" minOccurs="1" maxOccurs="1"/>
 	</ElementType>
-
 	<ElementType name="iTurns" content="textOnly" dt:type="int"/>
 	<ElementType name="iGlobalTurns" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxLocalDensity" content="textOnly" dt:type="int"/>
-	<ElementType name="iMaxAreaTotalDensity" content="textOnly" dt:type="int"/>
-	<ElementType name="iMaxAreaUnitDensity" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinAreaPlotsPerPlayerUnit" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinAreaPlotsPerUnitType" content="textOnly" dt:type="int"/>
 	<ElementType name="iStartDate" content="textOnly" dt:type="int"/>
 	<ElementType name="iEndDate" content="textOnly" dt:type="int"/>
 	<ElementType name="bTreatAsBarbarian" content="textOnly" dt:type="boolean"/>
@@ -2832,8 +2824,8 @@
 		<element type="iTurns"/>
 		<element type="iGlobalTurns" minOccurs="0"/>
 		<element type="iMaxLocalDensity"/>
-		<element type="iMaxAreaTotalDensity" minOccurs="0"/>
-		<element type="iMaxAreaUnitDensity" minOccurs="0"/>
+		<element type="iMinAreaPlotsPerPlayerUnit" minOccurs="0"/>
+		<element type="iMinAreaPlotsPerUnitType" minOccurs="0"/>
 		<element type="iStartDate" minOccurs="0"/>
 		<element type="iEndDate" minOccurs="0"/>
 		<element type="bTreatAsBarbarian" minOccurs="0"/>
@@ -2924,10 +2916,8 @@
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="GenericCategory" minOccurs="0"/>
-
 		<element type="KillOutcomes" minOccurs="0"/>
 		<element type="Actions" minOccurs="0"/>
-
 		<element type="ReligionType" minOccurs="0"/>
 		<element type="CultureType" minOccurs="0"/>
 		<element type="EraType" minOccurs="0"/>
