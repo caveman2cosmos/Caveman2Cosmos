@@ -638,7 +638,7 @@ class CanHurryPopulation(AbstractCanHurry):
 		iAnger = city.getHurryAngerTimer() + city.flatHurryAngerLength()
 		iMaxOverflow = min(city.getProductionNeeded(), iOverflow)
 		iOverflowGold = max(0, iOverflow - iMaxOverflow) * GC.getDefineINT("MAXED_UNIT_GOLD_PERCENT") / 100
-		iOverflow =  100 * iMaxOverflow / city.getBaseYieldRateModifier(GC.getInfoTypeForString("YIELD_PRODUCTION"), city.getProductionModifier())
+		iOverflow =  100 * iMaxOverflow / city.getBaseYieldRateModifier(YieldTypes.YIELD_PRODUCTION, city.getProductionModifier())
 		if iOverflowGold > 0:
 			return TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_CAN_HURRY_POP_PLUS_GOLD", (city.getName(), info.getDescription(), iPop, iOverflow, iAnger, iOverflowGold))
 		else:

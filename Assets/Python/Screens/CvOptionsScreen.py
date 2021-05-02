@@ -289,8 +289,8 @@ class CvOptionsScreen:
 			
 			if (bContinue):
 				
-				szOptionDesc = gc.getPlayerOptionsInfoByIndex(iOptionLoop).getDescription()
-				szHelp = gc.getPlayerOptionsInfoByIndex(iOptionLoop).getHelp()
+				szOptionDesc = gc.getPlayerOptionsInfo(iOptionLoop).getDescription()
+				szHelp = gc.getPlayerOptionsInfo(iOptionLoop).getHelp()
 				szCallbackFunction = "handleGameOptionsClicked"
 				szWidgetName = "GameOptionCheckBox_" + str(iOptionLoop)
 				bOptionOn = UserProfile.getPlayerOption(iOptionLoop)#gc.getPlayer(gc.getGame().getActivePlayer()).isOption(iOptionLoop)
@@ -493,8 +493,8 @@ class CvOptionsScreen:
 				
 		# Checkboxes
 		for iOptionLoop in range(GraphicOptionTypes.NUM_GRAPHICOPTION_TYPES):
-			szOptionDesc = gc.getGraphicOptionsInfoByIndex(iOptionLoop).getDescription()
-			szHelp = gc.getGraphicOptionsInfoByIndex(iOptionLoop).getHelp()
+			szOptionDesc = gc.getGraphicOptionsInfo(iOptionLoop).getDescription()
+			szHelp = gc.getGraphicOptionsInfo(iOptionLoop).getHelp()
 			szCallbackFunction = "handleGraphicOptionsClicked"
 			szWidgetName = "GraphicOptionCheckbox_" + str(iOptionLoop)
 			bOptionOn = UserProfile.getGraphicOption(iOptionLoop)
