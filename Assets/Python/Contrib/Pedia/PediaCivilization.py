@@ -35,7 +35,7 @@ class PediaCivilization:
 	def interfaceScreen(self, iCivilization):
 		GC = CyGlobalContext()
 		TRNSLTR = CyTranslator()
-		ArtFileMgr = CyArtFileMgr()
+		#ArtFileMgr = CyArtFileMgr()
 		screen = self.main.screen()
 		aName = self.main.getNextWidgetName
 
@@ -45,7 +45,6 @@ class PediaCivilization:
 		ePanelBlue50	= PanelStyles.PANEL_STYLE_BLUE50
 		eFontTitle		= FontTypes.TITLE_FONT
 
-		enumGBS	= self.main.enumGBS
 		szfontEdge, szfont4b, szfont4, szfont3b, szfont3, szfont2b, szfont2 = self.main.aFontList
 
 		H_TOP_ROW = self.H_TOP_ROW
