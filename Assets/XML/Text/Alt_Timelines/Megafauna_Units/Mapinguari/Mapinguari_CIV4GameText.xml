@@ -2,34 +2,28 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND</Tag>
-		<English>Mapinguari Compound</English>
+		<English>Unit Reward - Mapinguari Compound</English>
 		<French>
 			<Text>Enceinte Mapinguari</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<Polish>Leże Mapinguari</Polish>
+		<Russian>Îáùèíà ìàïèíãóàðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_PEDIA</Tag>
 		<English>Mapinguari Compound is a place where subdued Ground Sloths and their handlers are trained as combat units.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_STRATEGY</Tag>
-		<English>Allows Subdued Ground Sloth to upgrade to a combat unit - Mapinguari</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_GUARD</Tag>
-		<English>Mapinguari Changing of the Guard Ceremony</English>
+		<English>Autobuild - Mapinguari Changing of the Guard Ceremony</English>
 		<Polish>Strażnik Mapinguari</Polish>
+		<Russian>Êàðàóë ìàïèíãóàðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_GUARD_PEDIA</Tag>
 		<English>A fictional military ceremony.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAPINGUARI_GUARD_STRATEGY</Tag>
-		<English>Increase tourism and reduce war weariness.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAPINGUARI</Tag>
@@ -40,6 +34,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Włócznik)</Polish>
+		<Russian>Ìàïèíãóàðè-êîïåéùèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAPINGUARI_OBSIDIAN</Tag>
@@ -50,10 +45,12 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Włócznik - Obsydian)</Polish>
+		<Russian>Ìàïèíãóàðè ñ îáñ. êîïüåì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAPINGUARI_PEDIA</Tag>
 		<English>The Mapinguari is a South American legend although some suggest it may still exist. Here we are giving the name to a unit consisting of a Giant Sloth and two spearman handlers as suggested by Boonkie on the C2C forum.</English>
+		<Russian>Ëåãåíäû èíäåéöåâ ðàññêàçûâàþò î ñóùåñòâå Ìàïèíãóàðè, êîòîðîå ïî îïèñàíèþ ñîâïàäàåò ñ îãðîìíûì ëåíèâöåì. Çàèíòðèãîâàííûå ýòèìè ëåãåíäàìè êðèïòîçîîëîãè ïûòàëèñü íàéòè âûæèâøèå îñîáè â áàññåéíå Àìàçîíêè, îäíàêî èì ýòî íå óäàëîñü.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAPINGUARI_PIKE</Tag>
@@ -64,6 +61,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Pikimen)</Polish>
+		<Russian>Ìàïèíãóàðè-ïèêèíåð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAPINGUARI_STONE</Tag>
@@ -74,10 +72,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Włócznik - Kamień)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MAPINGUARI_STRATEGY</Tag>
-		<English>Shock troops?</English>
+		<Russian>Ìàïèíãóàðè ñ êð. êîïüåì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAPINGUARI_WOODEN</Tag>
@@ -88,5 +83,6 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Włócznik - Drewno)</Polish>
+		<Russian>Ìàïèíãóàðè ñ äåð. êîïüåì</Russian>
 	</TEXT>
 </Civ4GameText>

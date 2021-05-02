@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
@@ -11,7 +10,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ASATRU_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASATRU_CATHEDRAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASATRU_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASATRU_CATHEDRAL</ArtDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
@@ -21,7 +19,6 @@
 			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iWarWearinessModifier>-25</iWarWearinessModifier>
 			<iHappiness>1</iHappiness>
@@ -95,7 +92,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ASATRU_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASATRU_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASATRU_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASATRU_MONASTERY</ArtDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
@@ -111,7 +107,6 @@
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>216</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iWarWearinessModifier>-15</iWarWearinessModifier>
 			<HealUnitCombatTypes>
@@ -123,11 +118,11 @@
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -169,7 +164,6 @@
 			<Type>BUILDING_ASATRU_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_ASATRU_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASATRU_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASATRU_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASATRU_SHRINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_ASATRU</MovieDefineTag>
@@ -182,15 +176,14 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -232,7 +225,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ASATRU_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASATRU_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASATRU_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASATRU_TEMPLE</ArtDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
@@ -247,17 +239,16 @@
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iWarWearinessModifier>-10</iWarWearinessModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -296,12 +287,11 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-         <BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_FREYA_SANCTUARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_FREYA_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FREYA_SANCTUARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FREYA_SANCTUARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FREYA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FREYA</MovieDefineTag>
@@ -310,7 +300,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<PrereqBonuses>
@@ -320,7 +310,6 @@
 			</PrereqBonuses>
 			<iCost>1296</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -333,11 +322,11 @@
 			<iGlobalPopulationChange>1</iGlobalPopulationChange>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -367,12 +356,11 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
-        <BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_HEIMDALL_SANCTUARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HEIMDALL_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HEIMDALL_SANCTUARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HEIMDALL_SANCTUARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HEIMDALL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HEIMDALL</MovieDefineTag>
@@ -381,7 +369,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
@@ -392,18 +380,17 @@
 			</PrereqBonuses>
 			<iCost>1296</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iDefense>100</iDefense>
 			<iAllCityDefense>20</iAllCityDefense>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -438,7 +425,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_LOKI_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LOKI_SANCTUARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LOKI_SANCTUARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LOKI</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LOKI</MovieDefineTag>
@@ -447,7 +433,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
@@ -459,16 +445,15 @@
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1296</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -502,12 +487,11 @@
 			<Type>BUILDING_THOR_ALTAR</Type>
 			<Description>TXT_KEY_BUILDING_THOR_ALTAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THOR_ALTAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_THOR_ALTAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_THOR_ALTAR</ArtDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<StateReligion>RELIGION_ASATRU</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -522,15 +506,14 @@
 			<FreePromotion>PROMOTION_MJOLNIR</FreePromotion>
 			<iCost>216</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -559,7 +542,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_THOR_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THOR_SANCTUARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_THOR_SANCTUARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_THOR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_THOR</MovieDefineTag>
@@ -568,14 +550,13 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<FreeBuilding>BUILDING_THOR_ALTAR</FreeBuilding>
 			<iCost>1296</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iWarWearinessModifier>-50</iWarWearinessModifier>
 			<iGlobalWarWearinessModifier>-20</iGlobalWarWearinessModifier>
@@ -583,11 +564,11 @@
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>

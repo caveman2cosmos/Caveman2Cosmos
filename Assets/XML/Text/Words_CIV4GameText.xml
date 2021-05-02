@@ -7,6 +7,7 @@
 		<German>Fracht</German>
 		<Spanish>Carga</Spanish>
 		<Polish>Ładowność</Polish>
+		<Russian>Òðàíñïîðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_CITY</Tag>
@@ -16,6 +17,7 @@
 		<Italian>Città</Italian>
 		<Spanish>Ciudad</Spanish>
 		<Polish>Miasto</Polish>
+		<Russian>Ãîðîä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_COST</Tag>
@@ -25,6 +27,7 @@
 		<Italian>Costo</Italian>
 		<Spanish>Coste</Spanish>
 		<Polish>Koszt</Polish>
+		<Russian>Öåíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_CULTURE</Tag>
@@ -33,6 +36,7 @@
 		<Italian>Cultura</Italian>
 		<Spanish>Cultura</Spanish>
 		<Polish>Kultura</Polish>
+		<Russian>Êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_DEFAULT</Tag>
@@ -41,6 +45,7 @@
 		<German>Standard</German>
 		<Italian>Predefinito</Italian>
 		<Spanish>Predeterminado</Spanish>
+		<Russian>По умолчанию</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_ESPIONAGE</Tag>
@@ -50,6 +55,7 @@
 		<Italian>Spionaggio</Italian>
 		<Spanish>Espionaje</Spanish>
 		<Polish>Szpiegostwo</Polish>
+		<Russian>Øïèîíàæ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_FOOD</Tag>
@@ -59,6 +65,7 @@
 		<Italian>Cibo</Italian>
 		<Spanish>Alimento</Spanish>
 		<Polish>Żywność</Polish>
+		<Russian>Ïèùà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_GAME</Tag>
@@ -68,6 +75,7 @@
 		<Italian>Gioco</Italian>
 		<Spanish>Partida</Spanish>
 		<Polish>Gra</Polish>
+		<Russian>Èãðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_NAME</Tag>
@@ -76,6 +84,7 @@
 		<Italian>Nome</Italian>
 		<Spanish>Nombre</Spanish>
 		<Polish>Nazwa</Polish>
+		<Russian>Íàçâàíèå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_PLAYER</Tag>
@@ -85,6 +94,7 @@
 		<Italian>Giocatore</Italian>
 		<Spanish>Jugador</Spanish>
 		<Polish>Gracz</Polish>
+		<Russian>Èãðîê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_PLOT</Tag>
@@ -94,6 +104,7 @@
 		<Italian>Casella</Italian>
 		<Spanish>Casilla</Spanish>
 		<Polish>Pole</Polish>
+		<Russian>Ó÷àñòîê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_TEAM</Tag>
@@ -102,6 +113,7 @@
 		<Italian>Squadra</Italian>
 		<Spanish>Equipo</Spanish>
 		<Polish>Drużyna</Polish>
+		<Russian>Êîìàíäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_UNIT</Tag>
@@ -111,5 +123,6 @@
 		<Italian>Unità</Italian>
 		<Spanish>Unidad</Spanish>
 		<Polish>Jednostka</Polish>
+		<Russian>Îòðÿä</Russian>
 	</TEXT>
 </Civ4GameText>

@@ -10,14 +10,13 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_ZEBRA_HERD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_HERD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ZEBRA_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_HERD</ArtDefineTag>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-     		<FreeBonus>BONUS_CARCASS</FreeBonus>
+			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>3</iAsset>
 			<YieldChanges>
@@ -38,10 +37,9 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ZEBRA_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_TRAINER</ArtDefineTag>
-  		       <MovieDefineTag>ART_DEF_MOVIE_ZEBRA_RIDER</MovieDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ZEBRA_RIDER</MovieDefineTag>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
@@ -81,7 +79,6 @@
 			<Type>BUILDING_ZEBRA_TRAINER_HERITAGE</Type>
 			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_HERITAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ZEBRA_TRAINER_HERITAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_TRAINER_EFFECT</ArtDefineTag>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
@@ -122,7 +119,6 @@
 			<Type>BUILDING_ZEBRA_TRAINER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ZEBRA_TRAINER_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_ZEBRA_TRAINER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_TRAINER_EFFECT</ArtDefineTag>
@@ -144,7 +140,6 @@
 			<Type>BUILDING_ANIMAL_TOTEM_ZEBRA</Type>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_ZEBRA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_TOTEM_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_ZEBRA_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>

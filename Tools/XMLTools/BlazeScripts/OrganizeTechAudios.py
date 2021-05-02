@@ -8,12 +8,10 @@ import os
 import glob
 import sys
 import lxml.etree as ET
+from Common import load_tree
 
 # RUN SCRIPT WITH "-rename" to automatically rename entries in the defines, sounds folder
-if str(sys.argv[-1]) == '-rename':
-    actually_rename = True
-else:
-    actually_rename = False
+actually_rename = bool(str(sys.argv[-1]) == '-rename')
 
 path_assets_folder =  '../../../Assets/'
 path_mp3_files  = '../../../Assets/Sounds/Tech/'
@@ -45,15 +43,6 @@ era_dict = {
 # 'TECH_NAME' : [ *LIST* (singleplayer) , *LIST* (multiplayer) , 'ERA' , ['TXT_KEY_TECH_NAME','Tech Name'] ]
 # *LIST* = ['AS2D_TECH_...' , 'SND_TECH_...' , 'Sounds/Tech/...']
 tech_dict = {}
-
-
-# Given path to xml file, return (root, schema) of that file
-def load_tree(path_to_xml):
-    tree = ET.parse(path_to_xml)
-    root = tree.getroot()
-    tag = root.tag
-    schema = tag[:tag.find('}')+1] #probably some .attrib way to get it but this works too
-    return tree, root, schema
 
 # helper functions to slightly reduce retyping
 def find_text(element, schema, child_element):
@@ -90,11 +79,11 @@ def breakcheck(dict_depth, dict_width=4):
             err = True
         else:
             if len(v[0]) != dict_depth:
-                print(f"ERROR: Malformatted or missing:")
+                print("ERROR: Malformatted or missing:")
                 print(f"{k}, {v}")
                 err = True
             if len(v[1]) != dict_depth:
-                print(f"ERROR: Malformatted or missing:")
+                print("ERROR: Malformatted or missing:")
                 print(f"{k}, {v}")
                 err = True
         if err:
@@ -129,7 +118,7 @@ def mp3_missing_query(mp3_filepath, source, miss_list):
     if check_vanilla(mp3_filepath):
         return
     # Check if file exists
-    elif os.path.exists(f"{path_assets_folder}{mp3_filepath}.mp3") == False:
+    if not os.path.exists(f"{path_assets_folder}{mp3_filepath}.mp3"):
         print(f"Missing mp3 file from {source}: {mp3_filepath}")
         miss_list.append(mp3_filepath)
         return
@@ -143,7 +132,7 @@ def rename_file(filename, era, techname, element, schema, child_element):
     target_filename = 'Sounds/Tech/' + target_mp3_name
     if filename == target_filename:
         return
-    elif check_vanilla(filename) == False:
+    if not check_vanilla(filename):
         # rename file in xml
         print(f"{filename} should be: {target_filename}:")
         full_mp3_filename = f"{path_assets_folder}{filename}.mp3"
@@ -157,14 +146,10 @@ def rename_file(filename, era, techname, element, schema, child_element):
                 os.rename(full_mp3_filename, f"{path_mp3_files}{target_mp3_name}.mp3")
             else:
                 print(f"Cannot find {full_mp3_filename} to rename.")
-            return
         else:
             print(f"{filename} should be: {target_filename}:")
             print(f"Will rename: {schema}{child_element}")
             print(f"Will rename: {full_mp3_filename} (if exists) to {path_mp3_files}{target_mp3_name}.mp3")
-            return
-    else:
-        return
 
 ##############
 
@@ -176,7 +161,7 @@ for path in paths:
         tech = find_text(tech_info, schema, 'Type')
         if tech == 'TECH_DUMMY' or tech == '':
             print(f"Tech skipping: {tech}")
-        elif tech_dict.get(tech) != None:
+        elif tech_dict.get(tech) is not None:
             print(f"DUPLICATE ENTRY: {tech}, {path}")
         else:
             audio2D_single = find_text(tech_info, schema, 'Sound')
@@ -225,7 +210,7 @@ for path in paths:
                 if script_ID == v[1][0]:
                     v[1].append(sound_ID)
                     matched = True
-            if matched == False:
+            if not matched:
                 unlinked_scripts[script_ID] = [sound_ID]
 
 # # A number of these are from modules or unused quotes from vanilla, but not all.
@@ -314,12 +299,12 @@ for path in paths:
                 if v[1][1] == sound_ID:
                     rename_file(v[1][2], v[2], v[3][1], sound_data, schema, 'Filename')
     tree.write(path)
-            
 
-if actually_rename == False and need_changing == True:
+
+if not actually_rename and need_changing:
     print('!!!!!!!!!----------!!!!!!!!!!')
     print("To do these changes, run again with -rename ")
-elif need_changing == False:
+elif not need_changing:
     print('Nothing to rename!')
 else:
     print('Done organizing names!')

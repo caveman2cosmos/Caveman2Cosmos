@@ -6,8 +6,6 @@ from string import split
 import ScreenInput
 import HandleInputUtil
 
-import PythonToolTip as pyTT
-
 import UnitUpgradesGraph
 
 GC = CyGlobalContext()
@@ -36,11 +34,13 @@ class Pedia:
 	# Prepare pedia.
 	def startPedia(self):
 		print "Start Pedia"
-		self.bLockedTT = False
 		self.bKeyPress = False
 
 		import InputData
 		self.InputData = InputData.instance
+
+		import PythonToolTip
+		self.tooltip = PythonToolTip.PythonToolTip()
 
 		self.fKeyTimer = 99999
 		self.bIndex = True
@@ -52,9 +52,7 @@ class Pedia:
 		import ScreenResolution as SR
 		self.xRes = xRes = SR.x
 		self.yRes = yRes = SR.y
-		# Tool Tip
-		self.szTextTT = ""
-		self.iOffsetTT = []
+
 		# Calibrate variables.
 		if yRes > 1000:
 			self.enumGBS = GenericButtonSizes.BUTTON_SIZE_CUSTOM
@@ -936,7 +934,7 @@ class Pedia:
 				return 4
 			if GC.getSpecialBuildingInfo(iSpecialBuilding).getType().find("_GROUP_") != -1:
 				return 2
-		if szStrat.find("Myth -", 0, 6) + szStrat.find("Myth Effect -", 0, 13) + szStrat.find("Story -", 0, 7) + szStrat.find("Stories -", 0, 9) + szStrat.find("Stories Effect -", 0, 16) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -7:
+		if szStrat.find("Myth -", 0, 6) + szStrat.find("Myth (B) -", 0, 10) + szStrat.find("Myth (L) -", 0, 10) + szStrat.find("Myth Effect -", 0, 13) + szStrat.find("Story -", 0, 7) + szStrat.find("Story (B) -", 0, 11) + szStrat.find("Stories -", 0, 9) + szStrat.find("Stories (B) -", 0, 13) + szStrat.find("Stories Effect -", 0, 16) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -11:
 			return 6
 		elif CvBuildingInfo.getReligionType() != -1 or CvBuildingInfo.getPrereqReligion() != -1:
 			return 5
@@ -1416,26 +1414,6 @@ class Pedia:
 			current = self.pediaFuture.pop()
 			self.pediaJump(current[0], current[1], current[2], False)
 
-	# Tooltip
-	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
-		if not szText:
-			return
-		if szText != self.szTextTT:
-			self.szTextTT = szText
-			if not uFont:
-				uFont = self.aFontList[6]
-			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			POINT = Win32.getCursorPos()
-			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
-		else:
-			if xPos == yPos == -1:
-				POINT = Win32.getCursorPos()
-				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
-			screen.moveToFront("Tooltip")
-			screen.show("Tooltip")
-		if xPos == yPos == -1:
-			self.bLockedTT = True
-
 	def welcomeMessage(self, screen, bCredit = ""):
 		if bCredit:
 			szText = "Created by Kristoffer E.H.-L. \n\t AKA: Toffer90"
@@ -1445,7 +1423,7 @@ class Pedia:
 			uFont = self.aFontList[4]
 		x = int(0.3 * self.xRes)
 		y = int(0.4 * self.yRes)
-		self.updateTooltip(screen, szText, x, y, uFont)
+		self.tooltip.handle(screen, szText, x, y, uFont)
 
 	def handleInput(self, inputClass):
 		if self.bNotPedia: return
@@ -1483,45 +1461,45 @@ class Pedia:
 					bPlayerContext = False
 				if "TxtTT" in szSplit:
 					if szSplit[-1][:8] == "TXT_KEY_":
-						self.updateTooltip(screen, TRNSLTR.getText(szSplit[-1], ()))
+						self.tooltip.handle(screen, TRNSLTR.getText(szSplit[-1], ()))
 					else:
-						self.updateTooltip(screen, szSplit[-1].replace("_", " "))
+						self.tooltip.handle(screen, szSplit[-1].replace("_", " "))
 				elif "UNIT" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().getUnitHelp(ID, False, True, True, None))
+					self.tooltip.handle(screen, CyGameTextMgr().getUnitHelp(ID, False, True, True, None))
 				elif "BUILDING" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().getBuildingHelp(ID, False, False, True, None, False))
+					self.tooltip.handle(screen, CyGameTextMgr().getBuildingHelp(ID, False, None, False, False, True))
 				elif "PROMO" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().getPromotionHelp(ID, False))
+					self.tooltip.handle(screen, CyGameTextMgr().getPromotionHelp(ID, False))
 				elif "TECH" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().getTechHelp(ID, False, bPlayerContext, False, True, -1))
+					self.tooltip.handle(screen, CyGameTextMgr().getTechHelp(ID, False, bPlayerContext, False, True, -1))
 				elif "BONUS" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().getBonusHelp(ID, False))
+					self.tooltip.handle(screen, CyGameTextMgr().getBonusHelp(ID, False))
 				elif "CIVIC" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().parseCivicInfo(ID, not bPlayerContext, bPlayerContext, False))
+					self.tooltip.handle(screen, CyGameTextMgr().parseCivicInfo(ID, not bPlayerContext, bPlayerContext, False))
 				elif "REL" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().parseReligionInfo(ID, False))
+					self.tooltip.handle(screen, CyGameTextMgr().parseReligionInfo(ID, False))
 				elif "CORP" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().parseCorporationInfo(ID, False))
+					self.tooltip.handle(screen, CyGameTextMgr().parseCorporationInfo(ID, False))
 				elif "TERRAIN" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().getTerrainHelp(ID, False))
+					self.tooltip.handle(screen, CyGameTextMgr().getTerrainHelp(ID, False))
 				elif "IMP" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().getImprovementHelp(ID, False))
+					self.tooltip.handle(screen, CyGameTextMgr().getImprovementHelp(ID, False))
 				elif "FEATURE" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().getFeatureHelp(ID, False))
+					self.tooltip.handle(screen, CyGameTextMgr().getFeatureHelp(ID, False))
 				elif "ROUTE" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().getRouteHelp(ID, False))
+					self.tooltip.handle(screen, CyGameTextMgr().getRouteHelp(ID, False))
 				elif "PROJECT" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().getProjectHelp(ID, False, None))
+					self.tooltip.handle(screen, CyGameTextMgr().getProjectHelp(ID, False, None))
 				elif "TRAIT" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().parseTraits(ID, -1, False, False))
+					self.tooltip.handle(screen, CyGameTextMgr().parseTraits(ID, -1, False, False))
 				elif "LEADER" in szSplit:
-					self.updateTooltip(screen, CyGameTextMgr().parseLeaderTraits(ID, -1, False, False))
+					self.tooltip.handle(screen, CyGameTextMgr().parseLeaderTraits(ID, -1, False, False))
 				elif "BUILD" in szSplit:
-					self.updateTooltip(screen, GC.getBuildInfo(ID).getDescription())
+					self.tooltip.handle(screen, GC.getBuildInfo(ID).getDescription())
 				elif "CONCEPT" in szSplit:
-					self.updateTooltip(screen, GC.getConceptInfo(ID).getDescription())
+					self.tooltip.handle(screen, GC.getConceptInfo(ID).getDescription())
 				elif "CONCEPT_NEW" in szSplit:
-					self.updateTooltip(screen, GC.getNewConceptInfo(ID).getDescription())
+					self.tooltip.handle(screen, GC.getNewConceptInfo(ID).getDescription())
 				return 1
 			return
 
@@ -1560,8 +1538,7 @@ class Pedia:
 				self.bKeyPress = True
 			return
 
-		screen.hide("Tooltip")
-		self.bLockedTT = False
+		self.tooltip.reset(screen)
 
 		if iCode == 11: # List Select
 			if NAME == "PediaMainItemList":
@@ -1685,14 +1662,8 @@ class Pedia:
 			screen.enableSelect(LIST, False)
 
 	def update(self, fDelta):
-		if self.bLockedTT:
-			screen = self.screen()
-			POINT = Win32.getCursorPos()
-			iX = POINT.x + self.iOffsetTT[0]
-			iY = POINT.y + self.iOffsetTT[1]
-			if iX < 0: iX = 0
-			if iY < 0: iY = 0
-			screen.moveItem("Tooltip", iX, iY, 0)
+		if self.tooltip.bLockedTT:
+			self.tooltip.handle(self.screen())
 		if self.bKeyPress:
 			self.fKeyTimer += fDelta
 			if self.fKeyTimer > 2:
@@ -1700,8 +1671,7 @@ class Pedia:
 
 	def onClose(self):
 		print "Exit Pedia"
-		del self.aWidgetBucket, self.bMovie, self.InputData, \
-			self.fKeyTimer, self.bKeyPress, self.szTextTT, self.iOffsetTT, self.bLockedTT, \
+		del self.aWidgetBucket, self.bMovie, self.InputData, self.fKeyTimer, self.bKeyPress, \
 			self.CyPlayer, self.bIndex, self.pediaFuture, self.SECTION, self.nWidgetCount, self.iGroupCategory, \
 			self.Y_BOT_TEXT, self.H_EDGE_PANEL, self.H_MID_SECTION, self.W_CATEGORIES, self.W_ITEMS, \
 			self.X_PEDIA_PAGE, self.Y_PEDIA_PAGE, self.R_PEDIA_PAGE, self.B_PEDIA_PAGE, self.W_PEDIA_PAGE, self.H_PEDIA_PAGE, \

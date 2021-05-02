@@ -2459,7 +2459,7 @@
 			<fRangedDeathTime>0.35</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
- 		<UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MOUNTAIN_TAPIR</Type>
 			<Button>Art/Interface/Buttons/Units/mttapir.dds</Button>
 			<fScale>30.0</fScale>
@@ -2507,7 +2507,7 @@
 			<fRangedDeathTime>0.35</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
- 		<UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TAMED_MOUNTAIN_TAPIR</Type>
 			<Button>Art/Interface/Buttons/units/sparth/tamed_tapir.dds</Button>
 			<fScale>30.0</fScale>

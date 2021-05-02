@@ -107,10 +107,8 @@ class CvTechChooser:
 		self.iCurrentEra = self.CyPlayer.getCurrentEra()
 		self.currentTechState = [self.getTechState(iTech) for iTech in xrange(self.iNumTechs)]
 
-		# Tool Tip
-		self.szTxtTT = ""
-		self.iOffsetTT = []
-		self.bLockedTT = False
+		self.tooltip = pyTT.PythonToolTip()
+
 		self.iUnitTT = None
 		self.bUnitTT = False
 
@@ -904,25 +902,6 @@ class CvTechChooser:
 			iType += 1
 		self.techBenefits = techBenefits
 
-	# Tooltip
-	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
-		if not szText:
-			return
-		if szText != self.szTxtTT:
-			self.szTxtTT = szText
-			if not uFont:
-				uFont = self.aFontList[5]
-			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			POINT = Win32.getCursorPos()
-			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
-		else:
-			if xPos == yPos == -1:
-				POINT = Win32.getCursorPos()
-				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
-			screen.moveToFront("Tooltip")
-			screen.show("Tooltip")
-		if xPos == yPos == -1:
-			self.bLockedTT = True
 
 	def update(self, fDelta):
 		# Only on the 2nd call to update can we update the scroll position correctly
@@ -942,13 +921,8 @@ class CvTechChooser:
 			self.scrollTo(self.demoOffs)
 			self.demoOffs = self.demoOffs + 50
 
-		if self.bLockedTT:
-			POINT = Win32.getCursorPos()
-			iX = POINT.x + self.iOffsetTT[0]
-			iY = POINT.y + self.iOffsetTT[1]
-			if iX < 0: iX = 0
-			if iY < 0: iY = 0
-			self.screen().moveItem("Tooltip", iX, iY, 0)
+		if self.tooltip.bLockedTT:
+			self.tooltip.handle(self.screen())
 
 		mousePos = Win32.getCursorPos()
 		if self.scrolling:
@@ -1013,7 +987,7 @@ class CvTechChooser:
 		if iCode == NotifyCode.NOTIFY_CHARACTER: # Character
 			if iData in (45, 49, 56): # Ctrl, Shift, Alt
 				if self.bUnitTT:
-					self.updateTooltip(screen, CyGameTextMgr().getUnitHelp(self.iUnitTT, False, True, True, None))
+					self.tooltip.handle(screen, CyGameTextMgr().getUnitHelp(self.iUnitTT, False, True, True, None))
 					self.bUnitTT = None
 			return 1
 		elif iCode == 17: # Key Up
@@ -1036,7 +1010,7 @@ class CvTechChooser:
 			return 1
 
 		# Remove potential Help Text
-		screen.hide("Tooltip")
+		self.tooltip.reset(screen)
 		self.iUnitTT = None
 		self.bUnitTT = False
 
@@ -1049,17 +1023,17 @@ class CvTechChooser:
 						szTxt = TRNSLTR.getText("TXT_KEY_MISC_TECH_REQUIRES_KNOWLEDGE_OF", (GC.getTechInfo(ID).getTextKey(),))
 					else:
 						szTxt = CyGameTextMgr().getTechHelp(ID, False, True, True, True, -1)
-					self.updateTooltip(screen, szTxt)
+					self.tooltip.handle(screen, szTxt)
 				elif TYPE == "UNIT":
-					self.updateTooltip(screen, CyGameTextMgr().getUnitHelp(ID, False, True, True, None))
+					self.tooltip.handle(screen, CyGameTextMgr().getUnitHelp(ID, False, True, True, None))
 					self.iUnitTT = ID
 					self.bUnitTT = True
 				elif TYPE == "BUILDING":
 					if CASE[0] == "OBS":
 						CvBuildingInfo = GC.getBuildingInfo(ID)
 						szTxt = TRNSLTR.getText("TXT_KEY_TECH_OBSOLETES", (CvBuildingInfo.getType(), CvBuildingInfo.getTextKey()))
-					else: szTxt = CyGameTextMgr().getBuildingHelp(ID, False, False, True, None, False)
-					self.updateTooltip(screen, szTxt)
+					else: szTxt = CyGameTextMgr().getBuildingHelp(ID, False, None, False, False, True)
+					self.tooltip.handle(screen, szTxt)
 		elif iCode == NotifyCode.NOTIFY_CLICKED: # click
 			if BASE == "WID":
 				if szFlag == "MOUSE_RBUTTONUP":
@@ -1112,8 +1086,8 @@ class CvTechChooser:
 			self.created = False
 			Win32.unregisterMouseWheelListener(self.mwlHandle)
 			del (
-				self.screenId, self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT, self.iUnitTT, self.bUnitTT,
-				self.xRes, self.yRes, self.aFontList, self.wCell, self.hCell, self.sIcon0, self.sIcon1, self.iSelectedTech,
+				self.screenId, self.InputData, self.iUnitTT, self.bUnitTT, self.xRes, self.yRes,
+				self.aFontList, self.wCell, self.hCell, self.sIcon0, self.sIcon1, self.iSelectedTech,
 				self.iPlayer, self.CyPlayer, self.CyTeam, self.iCurrentResearch, self.currentTechState, self.iCurrentEra, self.updates
 			)
 		print "CvTechChooser.onClose - DONE"

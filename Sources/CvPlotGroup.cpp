@@ -660,7 +660,6 @@ int CvPlotGroup::getNumCities()
 
 void CvPlotGroup::read(FDataStreamBase* pStream)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 

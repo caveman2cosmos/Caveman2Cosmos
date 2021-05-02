@@ -493,14 +493,14 @@ def assignStartingPlots():
 				player.AI_updateFoundValues(True)
 				#print "!-!"
 				iRange = player.startingPlotRange()
-				validFn = None
+				#validFn = None
 				# Loop through all plots in the region.
 				for iX in range(westX, eastX + 1):
 					for iY in range(southY, northY + 1):
 						pPlot = map.plot(iX, iY)
 						if pPlot.isWater(): continue
 						if areaID != pPlot.getArea(): continue
-						if validFn != None and not validFn(playerID, iX, iY): continue
+						#if validFn != None and not validFn(playerID, iX, iY): continue
 						val = pPlot.getFoundValue(playerID)
 						if val > iBestValue:
 							for invalid in min_dist:

@@ -54,32 +54,9 @@ CyMap* CyGlobalContext::getCyMap() const
 	return &cyMap;
 }
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-bool CyGlobalContext::enableMultiMaps()
-{
-	if (GC.getDefineINT("ENABLE_MULTI_MAPS"))
-	{
-		GC.enableMultiMaps();
-		return true;
-	}
-	return false;
-}
-
-bool CyGlobalContext::multiMapsEnabled() const
-{
-	return GC.multiMapsEnabled();
-}
-
 void CyGlobalContext::switchMap(int iMap)
 {
 	GC.switchMap((MapTypes)iMap);
-}
-
-int CyGlobalContext::getNumMapInfos() const
-{
-	return GC.getNumMapInfos();
 }
 
 CvMapInfo* CyGlobalContext::getMapInfo(int iMap) const
@@ -93,30 +70,6 @@ CyMap* CyGlobalContext::getMapByIndex(int iIndex)
 	cyMap = GC.getMapByIndex((MapTypes)iIndex);
 	return &cyMap;
 }
-
-int CyGlobalContext::getNumMaps() const
-{
-	return GC.getNumMaps();
-}
-
-void CyGlobalContext::updateMaps()
-{
-	GC.updateMaps();
-}
-
-void CyGlobalContext::initializeMap(int iMap)
-{
-	GC.initializeMap((MapTypes)iMap);
-}
-
-bool CyGlobalContext::mapInitialized(int iMap) const
-{
-	return GC.mapInitialized((MapTypes)iMap);
-}
-
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/	
 
 void CyGlobalContext::setIsInPedia(bool isInPedia)
 {
@@ -283,22 +236,15 @@ CvInfoBase* CyGlobalContext::getUnitCombatInfo(int i) const
 	return (i>=0 && i<GC.getNumUnitCombatInfos()) ? &GC.getUnitCombatInfo((UnitCombatTypes)i) : NULL;
 }
 
-//TB Promotion Line Mod begin
 CvPromotionLineInfo* CyGlobalContext::getPromotionLineInfo(int i) const
 {
 	return (i>=0 && i<GC.getNumPromotionLineInfos()) ? &GC.getPromotionLineInfo((PromotionLineTypes)i) : NULL;
 }
-//TB Promotion Line Mod end
 
 //CvTraitOptionEditsInfo* CyGlobalContext::getTraitOptionEditsInfo(int i) const
 //{
 //	return (i>=0 && i<GC.getNumTraitOptionEditsInfos()) ? &GC.getTraitOptionEditsInfo((TraitOptionEditsTypes)i) : NULL;
 //}
-
-CvMapCategoryInfo* CyGlobalContext::getMapCategoryInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumMapCategoryInfos()) ? &GC.getMapCategoryInfo((MapCategoryTypes)i) : NULL;
-}
 
 CvIdeaClassInfo* CyGlobalContext::getIdeaClassInfo(int i) const
 {

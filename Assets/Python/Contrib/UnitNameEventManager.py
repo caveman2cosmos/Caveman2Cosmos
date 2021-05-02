@@ -361,7 +361,7 @@ class UnitReName(object):
 			#BUGPrint("UnitNameEM-ini0 [isAdvanced-NO]")
 			zsUnitNameConv = "DEFAULT"
 
-		if not (zsUnitNameConv == "DEFAULT"):
+		if zsUnitNameConv != "DEFAULT":
 			return zsUnitNameConv
 
 		#BUGPrint("UnitNameEM-iniA [" + zsUnitNameConv + "]" + UnitCombat[11:])
@@ -370,7 +370,7 @@ class UnitReName(object):
 
 		#BUGPrint("UnitNameEM-iniB [" + zsUnitNameConv + "]")
 
-		if not (zsUnitNameConv == "DEFAULT"):
+		if zsUnitNameConv != "DEFAULT":
 			return zsUnitNameConv
 
 		#BUGPrint("UnitNameEM-iniC [" + zsUnitNameConv + "]")

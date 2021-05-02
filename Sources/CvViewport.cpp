@@ -591,11 +591,6 @@ int CvViewport::getMapFractalFlags() const
 	return m_pMap->getMapFractalFlags();
 }
 
-bool CvViewport::findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const
-{
-	return m_pMap->findWater(pPlot, iRange, bFreshWater);
-}
-
 bool CvViewport::isPlot(int iX, int iY) const
 {
 	return m_pMap->isPlot(getMapXFromViewportX(iX), getMapYFromViewportY(iY));

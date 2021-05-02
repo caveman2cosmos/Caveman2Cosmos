@@ -45,13 +45,11 @@ void CyGamePythonInterface()
 		.def("getSecretaryGeneral", &CyGame::getSecretaryGeneral, "int (int eVoteSource)")
 		.def("canHaveSecretaryGeneral", &CyGame::canHaveSecretaryGeneral, "bool (int eVoteSource)")
 		.def("getVoteSourceReligion", &CyGame::getVoteSourceReligion, "int (int /*VoteSourceTypes*/ eVoteSource)")
-		.def("setVoteSourceReligion", &CyGame::setVoteSourceReligion, "void (int /*VoteSourceTypes*/ eVoteSource, int /*ReligionTypes*/ eReligion, bool bAnnounce)")
 
 		.def("countCivPlayersAlive", &CyGame::countCivPlayersAlive, "int ()")
 		.def("countCivPlayersEverAlive", &CyGame::countCivPlayersEverAlive, "int ()")
 		.def("countCivTeamsAlive", &CyGame::countCivTeamsAlive, "int ()")
 		.def("countCivTeamsEverAlive", &CyGame::countCivTeamsEverAlive, "int ()")
-		.def("countHumanPlayersAlive", &CyGame::countHumanPlayersAlive, "int ()")
 
 		.def("countTotalCivPower", &CyGame::countTotalCivPower, "int ()")
 		.def("countTotalNukeUnits", &CyGame::countTotalNukeUnits, "int ()")
@@ -306,6 +304,8 @@ void CyGamePythonInterface()
 		.def("canEverSpread", &CyGame::canEverSpread, "bool (int iCorporation)")
 
 		.def("getC2CVersion", &CyGame::getC2CVersion, "const char* ()")
+
+		.def("assignStartingPlots", &CyGame::assignStartingPlots, "void (bool bScenario, bool bMapScript)")
 	;
 
 

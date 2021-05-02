@@ -26,7 +26,6 @@
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BAHAI_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_TECH_BAHAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BAHAI_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>

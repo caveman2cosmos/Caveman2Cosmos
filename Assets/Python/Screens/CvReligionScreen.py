@@ -653,18 +653,14 @@ class CvReligionScreen:
 			self.drawCityInfo(self.iReligionSelected)
 
 	def calculateBuilding (self, city, bldg):
-		if city.getNumBuilding(bldg) > 0:
+		if city.getNumRealBuilding(bldg) > 0:
 			return self.objectHave
-#			if city.getNumActiveBuilding(bldg) > 0:
-#				return self.objectHave
-#			else:
-#				return self.objectHaveObsolete
-		elif city.GetCy().getFirstBuildingOrder(bldg) != -1:
+		if city.GetCy().getFirstBuildingOrder(bldg) != -1:
 			return self.objectUnderConstruction
-		elif city.GetCy().canConstruct(bldg, False, False, False):
+		if city.GetCy().canConstruct(bldg, False, False, False):
 			return self.objectPossible
-		elif city.GetCy().canConstruct(bldg, True, False, False):
+		if city.GetCy().canConstruct(bldg, True, False, False):
 			return self.objectPossibleConcurrent
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 

@@ -2,7 +2,6 @@
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- Re-Modified by StrategyOnly -->
 <!-- Master Load File -->
-<!-- -->
 <Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<DefaultConfiguration>Modules_OrionsMods</DefaultConfiguration>
 	<ConfigurationInfos>
@@ -12,7 +11,7 @@
 			<Modules>
 				<Module>
 					<Directory>Mine_Warfare</Directory>
-					<bLoad>1</bLoad>
+					<bLoad>0</bLoad> <!-- WIP - stuff is unusable in this module -->
 				</Module>
 			</Modules>
 		</ConfigurationInfo>
