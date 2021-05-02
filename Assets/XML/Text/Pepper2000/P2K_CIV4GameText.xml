@@ -325,7 +325,7 @@
 		<Russian>Ñòðîèòü ñîëí. áàòàðåþ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SPACE_SOLAR_CONCENTRATOR</Tag>
+		<Tag>TXT_KEY_BUILD_SOLAR_CONCENTRATOR</Tag>
 		<English>Build [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Solar Concentrator[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Concentrateur Solaire[\LINK]</French>
 		<Russian>Ñòðîèòü ñîëí. êîíöåíòðàòîð</Russian>
