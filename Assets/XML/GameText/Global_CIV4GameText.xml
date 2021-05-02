@@ -29210,4 +29210,1028 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Concedi indipendenza a %s1_citylist</Italian>
 		<Spanish>Garantizar la independencia de %s1_citylist</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_CAN_CONSTRUCT</Tag>
+		<English>[ICON_BULLET]Can Construct[SPACE]</English>
+		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
+		<German>[ICON_BULLET]Erm&#246;glicht Bau von:[SPACE]</German>
+		<Italian>[ICON_BULLET]Pu&#242; costruire[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_CAN_CREATE</Tag>
+		<English>[ICON_BULLET]Can Create[SPACE]</English>
+		<French>[ICON_BULLET]Peut cr&#233;er :[SPACE]</French>
+		<German>[ICON_BULLET]Kann Folgendes erschaffen:[SPACE]</German>
+		<Italian>[ICON_BULLET]Pu&#242; creare[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Se puede crear[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_CAN_TRAIN</Tag>
+		<English>[ICON_BULLET]Can Train[SPACE]</English>
+		<French>[ICON_BULLET]Peut entra&#238;ner :[SPACE]</French>
+		<German>[ICON_BULLET]Ausbildung von:[SPACE]</German>
+		<Italian>[ICON_BULLET]Pu&#242; addestrare[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Puede preparar[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_ERA_ADVANCE</Tag>
+		<English>[ICON_BULLET]Advances to the [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT] Era</English>
+		<French>[ICON_BULLET]Avance &#224; l'&#233;poque : [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Fortschritt zum Zeitalter [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Avanza all'era [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Avanza a la era [NUM1:del:de la:de los:de las] [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_FIRST_FREE_TECH</Tag>
+		<English>[ICON_BULLET]First to Discover Receives a [COLOR_TECH_TEXT]Free Technology[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Faire une d&#233;couverte avant les autres octroie une [COLOR_TECH_TEXT]technologie[COLOR_REVERT] gratuite</French>
+		<German>[ICON_BULLET]Der erste Entdecker erh&#228;lt eine [COLOR_TECH_TEXT]freie Technologie[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Il primo che scopre questa tecnologia riceve [COLOR_TECH_TEXT]una tecnologia gratuitamente[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibir&#225; [COLOR_TECH_TEXT]una tecnolog&#237;a gratis[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_FIRST_FREE_TECHS</Tag>
+		<English>[ICON_BULLET]First to Discover Receives [COLOR_TECH_TEXT]%d1_Num Free Technologies[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Faire cette d&#233;couverte avant les autres octroie [COLOR_TECH_TEXT]%d1_Num technologies[COLOR_REVERT] gratuites</French>
+		<German>[ICON_BULLET]Der erste Entdecker erh&#228;lt [COLOR_TECH_TEXT]%d1_Num freie Technologien[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Il primo che scopre questa tecnologia riceve [COLOR_TECH_TEXT]%d1_Num tecnologie gratuitamente[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibir&#225; [COLOR_TECH_TEXT]%d1_Num tecnolog&#237;as gratis[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_GREAT_PERSON_DISCOVER</Tag>
+		<English>[ICON_BULLET]Can be researched by a [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Peut &#234;tre recherch&#233;e par un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT].</French>
+		<German>[ICON_BULLET]Kann von der Gro&#223;en Pers&#246;nlichkeit [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] erforscht werden</German>
+		<Italian>[ICON_BULLET]Pu&#242; essere ricercata da un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT].</Italian>
+		<Spanish>[ICON_BULLET]Esta tecnolog&#237;a puede investigarla un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_NUM_TURNS</Tag>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num Turns[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num tours[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num Runden[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turni][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_COASTAL_CITIES</Tag>
+		<English>unless they are coastal</English>
+		<French>sauf sur une c&#244;te</French>
+		<German>es sei denn, sie liegen an der K&#252;ste</German>
+		<Italian>a meno che non vi siano caselle costiere</Italian>
+		<Spanish>a menos que sean costeras</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_DEFENSE_MODIFIER</Tag>
+		<English>[NEWLINE][ICON_BULLET]Defending units get %D1%% strength</English>
+		<French>[NEWLINE][ICON_BULLET]Les unit&#233;s en d&#233;fense gagnent %D1%% en puissance</French>
+		<German>[NEWLINE][ICON_BULLET]Verteidigungseinheiten erhalten %D1%% St&#228;rke</German>
+		<Italian>[NEWLINE][ICON_BULLET]Le unit&#224; che difendono ottengono il %D1%% di forza</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Las unidades defensoras obtienen un %D1%% de fuerza</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_FRESH_WATER_CITIES</Tag>
+		<English>unless they are near fresh water</English>
+		<French>sauf pr&#232;s de l'eau douce</French>
+		<German>es sei denn, sie befinden sich in der N&#228;he von S&#252;&#223;wassergebieten</German>
+		<Italian>a meno che non vi sia acqua dolce nelle vicinanze</Italian>
+		<Spanish>a menos que est&#233;n cerca de agua dulce</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_IMPASSABLE</Tag>
+		<English>[NEWLINE][ICON_BULLET]Impassable terrain</English>
+		<French>[NEWLINE][ICON_BULLET]Terrain infranchissable</French>
+		<German>[NEWLINE][ICON_BULLET]Unpassierbares Gel&#228;nde</German>
+		<Italian>[NEWLINE][ICON_BULLET]Terreno invalicabile</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Terreno infranqueable</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MOVEMENT_COST</Tag>
+		<English>[NEWLINE][ICON_BULLET]Movement Cost: %d1[ICON_MOVES]</English>
+		<French>[NEWLINE][ICON_BULLET]Co&#251;t du mouvement : %d1[ICON_MOVES]</French>
+		<German>[NEWLINE][ICON_BULLET]Fortbewegungskosten: %d1[ICON_MOVES]</German>
+		<Italian>[NEWLINE][ICON_BULLET]Costo movimento: %d1[ICON_MOVES]</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Coste del movimiento: %d1 [ICON_MOVES]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_NEXT_TO_RIVER</Tag>
+		<English>[SPACE]adjacent to river</English>
+		<French>[SPACE]pr&#232;s d'une rivi&#232;re</French>
+		<German>[SPACE]an einen Fluss angrenzend</German>
+		<Italian>[SPACE]adiacente al fiume</Italian>
+		<Spanish>[SPACE]adyacente a un r&#237;o</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TIME_AD_SAVE</Tag>
+		<English>AD-%s1_Date</English>
+		<French>%s1_Date ap. J.C</French>
+		<German>n. Chr.-%s1_Date</German>
+		<Italian>d.C. - %s1_Date</Italian>
+		<Spanish>%s1_Date d. C.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TIME_BC_SAVE</Tag>
+		<English>BC-%s1_Date</English>
+		<French>%s1_Date av. J-C.</French>
+		<German>v. Chr.-%s1_Date</German>
+		<Italian>a. C. - %s1_Date</Italian>
+		<Spanish>%s1_Date a. C.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TIME_TURN</Tag>
+		<English>Turn: %d1_TurnNum</English>
+		<French>Tour : %d1_TurnNum</French>
+		<German>Runde: %d1_TurnNum</German>
+		<Italian>Turno: %d1_TurnNum</Italian>
+		<Spanish>Turno: %d1_TurnNum</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TIME_WEEK</Tag>
+		<English>Week %d1_WeekNum</English>
+		<French>Semaine %d1_WeekNum</French>
+		<German>Woche: %d1_WeekNum</German>
+		<Italian>Settimana %d1_WeekNum</Italian>
+		<Spanish>Semana: %d1_WeekNum</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_TITLE</Tag>
+		<English>The Greatest Civilizations</English>
+		<French>Les plus grandes Civilisations</French>
+		<German>Die erfolgreichsten Zivilisationen</German>
+		<Italian>Le civilt&#224; pi&#249; grandi</Italian>
+		<Spanish>Las mayores civilizaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_RANK1</Tag>
+		<English>Glorious</English>
+		<French>un chef glorieux</French>
+		<German>Glorreiche</German>
+		<Italian>glorioso:gloriosa</Italian>
+		<Spanish>Glorios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_RANK2</Tag>
+		<English>Great</English>
+		<French>un grand chef</French>
+		<German>Gro&#223;artige</German>
+		<Italian>grande:grande</Italian>
+		<Spanish>Grandios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_RANK3</Tag>
+		<English>Fine</English>
+		<French>un chef raffin&#233;</French>
+		<German>Beachtliche</German>
+		<Italian>eccellente:eccellente</Italian>
+		<Spanish>Adecuad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_RANK4</Tag>
+		<English>Mediocre</English>
+		<French>un chef m&#233;diocre</French>
+		<German>Mittelm&#228;&#223;ige</German>
+		<Italian>mediocre:mediocre</Italian>
+		<Spanish>Deslucid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_RANK5</Tag>
+		<English>Puny</English>
+		<French>un chef faible</French>
+		<German>Armselige</German>
+		<Italian>debole:debole</Italian>
+		<Spanish>Debiluch</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_RANK6</Tag>
+		<English>Pathetic</English>
+		<French>un chef pitoyable</French>
+		<German>J&#228;mmerliche</German>
+		<Italian>patetico:patetica</Italian>
+		<Spanish>Pat&#233;tic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_RANK7</Tag>
+		<English>Hopeless</English>
+		<French>un chef affligeant</French>
+		<German>Hoffnungslose</German>
+		<Italian>disperato:disperata</Italian>
+		<Spanish>Deshauciad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_RANK8</Tag>
+		<English>Forgotten</English>
+		<French>un chef oubli&#233;</French>
+		<German>Vergessene</German>
+		<Italian>dimenticato:dimenticata</Italian>
+		<Spanish>Olvidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_WEALTH</Tag>
+		<English>Wealthiest</English>
+		<French>riches</French>
+		<German>reichsten</German>
+		<Italian>pi&#249; ricca</Italian>
+		<Spanish>m&#225;s ricas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_POWER</Tag>
+		<English>Most Powerful</English>
+		<French>puissantes</French>
+		<German>m&#228;chtigsten</German>
+		<Italian>pi&#249; potente</Italian>
+		<Spanish>m&#225;s poderosas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_TECH</Tag>
+		<English>Most Advanced</English>
+		<French>avanc&#233;es</French>
+		<German>fortschrittlichsten</German>
+		<Italian>pi&#249; avanzata</Italian>
+		<Spanish>m&#225;s avanzadas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_CULTURE</Tag>
+		<English>Most Cultured</English>
+		<French>cultiv&#233;es</French>
+		<German>kultiviertesten</German>
+		<Italian>pi&#249; colta</Italian>
+		<Spanish>m&#225;s cultas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_SIZE</Tag>
+		<English>Largest</English>
+		<French>&#233;tendues</French>
+		<German>gr&#246;&#223;ten</German>
+		<Italian>pi&#249; ampia</Italian>
+		<Spanish>m&#225;s extensas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_TEXT1</Tag>
+		<English>%s1 has completed his greatest work,</English>
+		<French>%s1 vient d'achever sa plus grande oeuvre,</French>
+		<German>%s1 hat sein Lebenswerk vollbracht:</German>
+		<Italian>%s1 ha completato la sua pi&#249; Grande Opera,</Italian>
+		<Spanish>%s1 ha completado su mayor obra,</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_TEXT2</Tag>
+		<English>The %s1 Civilizations of the World!</English>
+		<French>les civilisations les plus %s1 du monde !</French>
+		<German>Die %s1 Zivilisationen der Welt!</German>
+		<Italian>La civilt&#224; %s1 del mondo!</Italian>
+		<Spanish>Las civilizaciones %s1 del mundo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_TEXT3</Tag>
+		<English>%s1_leader the %s2_rank</English>
+		<French>%s1_leader, %s2_rank</French>
+		<German>%s1_leader [NUM1:der:die:x:x] %s2_rank</German>
+		<Italian>%s1_leader [NUM1:il:la] %s2_rank</Italian>
+		<Spanish>%s1_leader, [NUM1:el:la:los:las] %s2_rank[NUM1:o:a:os:as]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_UNKNOWN</Tag>
+		<English>An Unknown Civilization</English>
+		<French>Une civilisation inconnue</French>
+		<German>Unbekannte Zivilisation</German>
+		<Italian>Una civilt&#224; sconosciuta</Italian>
+		<Spanish>Una civilizaci&#243;n desconocida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_ADOPT</Tag>
+		<English>Adopt[SPACE]</English>
+		<French>Adopter[SPACE]</French>
+		<German>Akzeptieren[SPACE]</German>
+		<Italian>Adotta[SPACE]</Italian>
+		<Spanish>Adoptar[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_CAPITULATE</Tag>
+		<English>Surrender and become other civ's Vassal State</English>
+		<French>Capituler et devenir l'&#233;tat vassal d'une autre civilisation</French>
+		<German>Kapitulieren und Vasallenstaat einer anderen Zivilisation werden</German>
+		<Italian>Arrenditi e diventa stato vassallo di un'altra civilt&#224;</Italian>
+		<Spanish>Rendirse y convertirse en el vasallo de otro estado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_CAPITULATE_STRING</Tag>
+		<English>Capitulation</English>
+		<French>
+			<Text>Capitulation</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kapitulation</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>
+			<Text>Capitolazione</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Capitulaci&#243;n</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_CONVERT</Tag>
+		<English>Convert[SPACE]</English>
+		<French>Convertir[SPACE]</French>
+		<German>Konvertieren:[SPACE]</German>
+		<Italian>Converti[SPACE]</Italian>
+		<Spanish>Convertirse al[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_DECLARE_WAR_ON</Tag>
+		<English>Declare War On</English>
+		<French>D&#233;clarer la guerre &#224; :</French>
+		<German>Krieg erkl&#228;ren gegen</German>
+		<Italian>Dichiara guerra a</Italian>
+		<Spanish>Declararle la guerra a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_DEFENSIVE_PACT</Tag>
+		<English>A Mutual Protection Pact - Each Party Agrees to Automatically Declare War if the Other Party is Attacked (Note: This Agreement is Automatically Canceled if Either Civilization Declares War on a Third Party.)</English>
+		<French>Pacte d'assistance mutuelle : chaque partie accepte de d&#233;clarer automatiquement la guerre si l'autre est attaqu&#233;e (remarque : ce pacte est automatiquement annul&#233; si l'une des civilisations d&#233;clare la guerre &#224; une troisi&#232;me).</French>
+		<German>Ein Verteidigungsb&#252;ndnis - Beide Parteien stimmen zu, den Angreifern der anderen Partei automatisch den Krieg zu erkl&#228;ren. (Hinweis: Dieses B&#252;ndnis wird automatisch hinf&#228;llig, wenn eine der beiden Zivilisationen einer dritten Partei den Krieg erkl&#228;rt.)</German>
+		<Italian>Un patto di protezione reciproca: ogni civilt&#224; accetta di dichiarare automaticamente guerra se la civilt&#224; alleata viene attaccata (Nota: il patto viene automaticamente annullato se una delle due civilt&#224; dichiara guerra a una terza nazione.)</Italian>
+		<Spanish>Un acuerdo de protecci&#243;n mutua: cada parte accede a declarar autom&#225;ticamente la guerra si alguien ataca a la otra (nota: este pacto queda revocado autom&#225;ticamente si cualquier parte le declara la guerra a un tercero).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_GOLD</Tag>
+		<English>Lump Sum of Gold to be Specified.</English>
+		<French>Somme en or &#224; sp&#233;cifier.</French>
+		<German>Festzulegender pauschaler Goldbetrag.</German>
+		<Italian>Somma unica d'oro da specificare.</Italian>
+		<Spanish>Suma de oro total a especificar.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_GOLD_PER_TURN</Tag>
+		<English>A Specified Amount of Gold Per Turn will be Deducted from the one Civ and Given to the Other.</English>
+		<French>Une somme d&#233;finie d'or sera pay&#233;e &#224; chaque tour par une civilisation &#224; l'autre.</French>
+		<German>Eine Zivilisation &#252;bergibt pro Runde einen bestimmten Goldbetrag an eine andere Zivilisation.</German>
+		<Italian>L'ammontare d'oro per turno indicato verr&#224; sottratto da una civilt&#224; e assegnato a un'altra.</Italian>
+		<Spanish>A una civilizaci&#243;n se le quitar&#225; una cantidad determinada de oro cada turno, que se entregar&#225; a la otra.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_GOLD_NUM</Tag>
+		<English>Gold (%d1_Num)</English>
+		<French>Or (%d1_Num)</French>
+		<German>Gold (%d1_Num)</German>
+		<Italian>Oro (%d1_Num)</Italian>
+		<Spanish>Oro (%d1_Num)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_GOLD_PER_TURN_NUM</Tag>
+		<English>Gold Per Turn (%d1_Num)</English>
+		<French>Or par tour (%d1_Num)</French>
+		<German>Gold pro Runde (%d1_Num)</German>
+		<Italian>Oro per turno (%d1_Num)</Italian>
+		<Spanish>Oro por turno (%d1_Num)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_MAKE_PEACE</Tag>
+		<English>Will cause %s1_You to Make Peace with %s2_Them.</English>
+		<French>Entra&#238;nera la paix entre %s1_You et %s2_Them.</French>
+		<German>Veranlasst %s1_You, mit %s2_Them Frieden zu schlie&#223;en.</German>
+		<Italian>Far&#224; in modo che %s1_You faccia pace con %s2_Them.</Italian>
+		<Spanish>Har&#225; que %s1_You firme la paz con %s2_Them.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_MAKE_WAR</Tag>
+		<English>Will cause %s1_You to Declare War on %s2_Them.</English>
+		<French>Entra&#238;nera une d&#233;claration de guerre  : %s1_You &#224; %s2_Them.</French>
+		<German>Veranlasst %s1_You, %s2_Them den Krieg zu erkl&#228;ren.</German>
+		<Italian>Far&#224; in modo che %s1_You dichiari guerra a %s2_Them.</Italian>
+		<Spanish>Har&#225; que %s1_You le declare la guerra a %s2_Them.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_MAKE_PEACE_WITH</Tag>
+		<English>Make Peace With</English>
+		<French>Faire la paix avec :</French>
+		<German>Frieden schlie&#223;en mit</German>
+		<Italian>Fai la pace con</Italian>
+		<Spanish>Firmar la paz con</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_MAPS</Tag>
+		<English>Will Reveal the Map to the Recipient.</English>
+		<French>R&#233;v&#233;lera la carte au b&#233;n&#233;ficiaire.</French>
+		<German>Stellt dem Empf&#228;nger die Karte zur Verf&#252;gung.</German>
+		<Italian>Riveler&#224; la mappa al destinatario.</Italian>
+		<Spanish>Mostrar&#225; el mapa al receptor.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_OPEN_BORDERS</Tag>
+		<English>Opens the Borders of the Two Civilizations, Generating Commerce from Trade Routes and Allowing Right-of-Passage for Units.</English>
+		<French>Ouvre les fronti&#232;res des 2 civilisations. Les voies commerciales g&#233;n&#232;rent du commerce et les unit&#233;s obtiennent un droit de passage.</French>
+		<German>&#214;ffnet die Grenzen zweier Zivilisationen, generiert Wirtschaft aus Handelswegen und gew&#228;hrt Einheiten das Durchreiserecht.</German>
+		<Italian>Apre i confini delle due civilt&#224;, generando il commercio dalle rotte commerciali e consentendo il diritto di passaggio per le unit&#224;.</Italian>
+		<Spanish>Abre las fronteras de dos civilizaciones, generando comercio a trav&#233;s de las rutas comerciales y confiriendo derecho de paso a las unidades.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_PEACE_TREATY_STRING</Tag>
+		<English>Peace Treaty (%d1_Num [NUM1:Turn:Turns])</English>
+		<French>Trait&#233; de paix (%d1_Num [NUM1:tour:tours])</French>
+		<German>Friedensvertrag (%d1_Num [NUM1:Runde:Runden])</German>
+		<Italian>Trattato di pace (%d1_Num [NUM1:turno:turni])</Italian>
+		<Spanish>Tratado de paz (%d1_Num [NUM1:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_PEACE_WITH</Tag>
+		<English>Peace with[SPACE]</English>
+		<French>Paix avec[SPACE]</French>
+		<German>Frieden mit[SPACE]</German>
+		<Italian>Pace con[SPACE]</Italian>
+		<Spanish>Paz con[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_PERMANENT_ALLIANCE</Tag>
+		<English>This Permanent Agreement Joins your Civilizations for the Rest of the Game.</English>
+		<French>Cet accord permanent unit vos civilisations jusqu'&#224; la fin de la partie.</French>
+		<German>Durch diese dauerhafte Vereinbarung schlie&#223;en sich Eure Zivilisationen f&#252;r den Rest des Spiels zusammen.</German>
+		<Italian>Questo patto permanente unir&#224; le vostre civilt&#224; fino alla fine della partita.</Italian>
+		<Spanish>Este acuerdo permanente une a vuestras civilizaciones para el resto de la partida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_RESOURCE</Tag>
+		<English>%s1_Bonus (1 of %d2)</English>
+		<French>%s1_Bonus (1 sur %d2)</French>
+		<German>%s1_Bonus (1 von %d2)</German>
+		<Italian>%s1_Bonus (1 di %d2)</Italian>
+		<Spanish>%s1_Bonus (1 de %d2)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_ROUTE_HELP_BASE</Tag>
+		<English>%s1 [ICON_COMMERCE]: Base profit</English>
+		<French>%s1 [ICON_COMMERCE] : b&#233;n&#233;fice de base</French>
+		<German>%s1 [ICON_COMMERCE]: Basisprofit</German>
+		<Italian>%s1 [ICON_COMMERCE]: Profitto base</Italian>
+		<Spanish>%s1 [ICON_COMMERCE]: Beneficio base</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_ROUTE_MOD_BUILDING</Tag>
+		<English>%D2%%: for %s1_building</English>
+		<French>%D2%% : pour %s1_building</French>
+		<German>%D2%%: f&#252;r Geb&#228;ude %s1_building</German>
+		<Italian>%D2%%: per l'edificio %s1_building</Italian>
+		<Spanish>%D2%%: Por %s1_building</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_ROUTE_MOD_POPULATION</Tag>
+		<English>%D1%%: for Population</English>
+		<French>%D1%% : pour la population</French>
+		<German>%D1%%: f&#252;r Bev&#246;lkerung</German>
+		<Italian>%D1%%: per la popolazione</Italian>
+		<Spanish>%D1%%: Por poblaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_ROUTE_MOD_CAPITAL</Tag>
+		<English>%D1%%: for connection to Capital</English>
+		<French>%D1%% : pour la liaison avec la capitale</French>
+		<German>%D1%%: f&#252;r Anbindung zur Hauptstadt</German>
+		<Italian>%D1%%: per collegamento con la capitale</Italian>
+		<Spanish>%D1%%: Por conexi&#243;n con la capital</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_ROUTE_MOD_OVERSEAS</Tag>
+		<English>%D1%%: for Overseas Trade</English>
+		<French>%D1%% : pour le commerce outre-mer</French>
+		<German>%D1%%: f&#252;r &#220;berseehandel</German>
+		<Italian>%D1%%: per il commercio d'oltreoceano</Italian>
+		<Spanish>%D1%%: Por comercio de ultramar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_ROUTE_MOD_FOREIGN</Tag>
+		<English>%D1%%: for Foreign Trade</English>
+		<French>%D1%% : pour le commerce ext&#233;rieur</French>
+		<German>%D1%%: f&#252;r Au&#223;enhandel</German>
+		<Italian>%D1%%: per il commercio estero</Italian>
+		<Spanish>%D1%%: Por comercio exterior</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_ROUTE_MOD_PEACE</Tag>
+		<English>%D1%%: for sustained Peace</English>
+		<French>%D1%% : pour une paix durable</French>
+		<German>%D1%%: f&#252;r anhaltenden Frieden</German>
+		<Italian>%D1%%: per il perdurare della pace</Italian>
+		<Spanish>%D1%%: Por la paz mantenida</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_ROUTE_TOTAL</Tag>
+		<English>%d1 [ICON_COMMERCE]: Total</English>
+		<French>%d1 [ICON_COMMERCE] : total</French>
+		<German>%d1 [ICON_COMMERCE]: Gesamt</German>
+		<Italian>%d1 [ICON_COMMERCE]: totale</Italian>
+		<Spanish>%d1 [ICON_COMMERCE]: Total</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_STOP_TRADING</Tag>
+		<English>Will cause %s1_You to Stop Trading with %s2_Them.</English>
+		<French>Entra&#238;nera la fin des &#233;changes commerciaux entre %s1_You et %s2_Them.</French>
+		<German>Veranlasst %s1_You, die Handelsbeziehungen mit %s2_Them einzustellen.</German>
+		<Italian>Far&#224; in modo che %s1_You interrompa il commercio con %s2_Them.</Italian>
+		<Spanish>Har&#225; que %s1_You deje de comerciar con %s2_Them.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_STOP_TRADING_WITH</Tag>
+		<English>Stop Trading With</English>
+		<French>Fin des &#233;changes commerciaux avec :</French>
+		<German>Einstellung des Handels mit</German>
+		<Italian>Interrompi il commercio con</Italian>
+		<Spanish>Dejar de comerciar con</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_VASSAL</Tag>
+		<English>Become other civ's Vassal State</English>
+		<French>Devenir l'&#233;tat vassal d'une autre civilisation</French>
+		<German>Vasallenstaat einer anderen Zivilisation werden</German>
+		<Italian>Diventa uno stato vassallo di un'altra civilt&#224;</Italian>
+		<Spanish>Convertirse en el estado vasallo de otra civilizaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_VASSAL_TREATY_STRING</Tag>
+		<English>Vassal State (%d1_Num [NUM1:Turn:Turns])</English>
+		<French>Etat vassal (%d1_Num [NUM1:tour:tours])</French>
+		<German>Vasallenstaat (%d1_Num [NUM1:Runde:Runden])</German>
+		<Italian>Stato vassallo (%d1_Num [NUM1:turno:turni])</Italian>
+		<Spanish>Estado vasallo (%d1_Num [NUM1:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_WAR_WITH</Tag>
+		<English>War with[SPACE]</English>
+		<French>Guerre avec[SPACE]</French>
+		<German>Krieg mit[SPACE]</German>
+		<Italian>Guerra con[SPACE]</Italian>
+		<Spanish>Guerra con[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_FREE_PROMOTIONS</Tag>
+		<English>[NEWLINE][SPACE][SPACE][ICON_BULLET]Free Promotion (%s1)</English>
+		<French>[NEWLINE][SPACE][SPACE][ICON_BULLET]Promotion gratuite (%s1)</French>
+		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]Freie Bef&#246;rderung (%s1)</German>
+		<Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]Promozione gratuita (%s1)</Italian>
+		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]Ascenso gratis (%s1)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_PLAYER_UNKNOWN</Tag>
+		<English>Unknown</English>
+		<French>Inconnu</French>
+		<German>Unbekannt</German>
+		<Italian>Sconosciuto</Italian>
+		<Spanish>Desconocido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_AIR_RANGE</Tag>
+		<English>%d1_Num Range</English>
+		<French>Rayon d'action %d1_Num</French>
+		<German>%d1_Num Reichweite</German>
+		<Italian>Raggio d'azione %d1_Num</Italian>
+		<Spanish>%d1_Num de alcance</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ATTACK</Tag>
+		<English>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Attack</English>
+		<French>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Attaque</French>
+		<German>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat-Angriff</German>
+		<Italian>[ICON_BULLET]%D1_Change%% all'attacco in %s2_TerrOrFeat</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% a ataque a %s2:2_TerrOrFeat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BARBARIAN_COMBAT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Change%% vs. Barbarians</English>
+		<French>[ICON_BULLET]%D1_Change %% contre barbares</French>
+		<German>[ICON_BULLET]%D1_Change%% gegen Barbaren</German>
+		<Italian>[ICON_BULLET]%D1_Change%% contro i barbari</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% contra B&#225;rbaros</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BOMBARD_RATE_SHORT</Tag>
+		<English>[ICON_BULLET]Bombard City: -%d1_Mod%%/Turn</English>
+		<French>[ICON_BULLET]Bombardement : -%d1_Mod%%/tour</French>
+		<German>[ICON_BULLET]Stadt bombardieren: -%d1_Mod%%/Runde</German>
+		<Italian>[ICON_BULLET]Bombarda citt&#224;: -%d1_Mod%%/turno</Italian>
+		<Spanish>[ICON_BULLET]Ca&#241;onear ciudad: -%d1_Mod%%/turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CANNOT_ENTER</Tag>
+		<English>[ICON_BULLET]Cannot Enter</English>
+		<French>[ICON_BULLET]Ne peut entrer dans :</French>
+		<German>[ICON_BULLET]Keine Fortbewegung auf</German>
+		<Italian>[ICON_BULLET]Non pu&#242; entrare nell'</Italian>
+		<Spanish>[ICON_BULLET]No puede entrar en</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CANNOT_CAPTURE</Tag>
+		<English>[ICON_BULLET]Cannot Capture Enemy Cities</English>
+		<French>[ICON_BULLET]Ne peut pas capturer de villes ennemies</French>
+		<German>[ICON_BULLET]Kann keine feindlichen St&#228;dte erobern</German>
+		<Italian>[ICON_BULLET]Non pu&#242; conquistare le citt&#224; nemiche</Italian>
+		<Spanish>[ICON_BULLET]No puede capturar ciudades enemigas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CAN</Tag>
+		<English>[ICON_BULLET]Can[SPACE]</English>
+		<French>[ICON_BULLET]Peut[SPACE]</French>
+		<German>[ICON_BULLET]Kann[SPACE]</German>
+		<Italian>[ICON_BULLET]Pu&#242;[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Puede[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CAN_NUKE</Tag>
+		<English>[ICON_BULLET]Can [LINK=CONCEPT_NUKES]Nuke[\LINK] Enemy Lands</English>
+		<French>[ICON_BULLET]Peut [LINK=CONCEPT_NUKES]atomiser[\LINK] le territoire ennemi</French>
+		<German>[ICON_BULLET]Kann feindliches Territorium mit [LINK=CONCEPT_NUKES]Atomraketen angreifen[\LINK]</German>
+		<Italian>[ICON_BULLET]Pu&#242; sganciare [LINK=CONCEPT_NUKES]bombe atomiche[\LINK] sui territori nemici</Italian>
+		<Spanish>[ICON_BULLET]Puede bombardear tierra enemiga con [LINK=CONCEPT_NUKES]armas nucleares[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CAN_SPREAD</Tag>
+		<English>[ICON_BULLET]Can Spread[SPACE]</English>
+		<French>[ICON_BULLET]Peut propager :[SPACE]</French>
+		<German>[ICON_BULLET]Verbreitet:[SPACE]</German>
+		<Italian>[ICON_BULLET]Pu&#242; diffondere[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Puede propagar el[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CAN_JOIN</Tag>
+		<English>[ICON_BULLET]Can Join City as[SPACE]</English>
+		<French>[ICON_BULLET]Peut rejoindre une ville en tant que :[SPACE]</French>
+		<German>[ICON_BULLET]Kann sich einer Stadt anschlie&#223;en als[SPACE]</German>
+		<Italian>[ICON_BULLET]Pu&#242; unirsi alla citt&#224; come[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Puede unirse a una ciudad como[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CAN_CONSTRUCT</Tag>
+		<English>[ICON_BULLET]Can Construct[SPACE]</English>
+		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
+		<German>[ICON_BULLET]Erm&#246;glicht Bau von:[SPACE]</German>
+		<Italian>[ICON_BULLET]Pu&#242; costruire[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CAN_EXPAND</Tag>
+		<English>[ICON_BULLET]Can Expand[SPACE]</English>
+		<French>[ICON_BULLET]Peut d&#233;velopper[SPACE]</French>
+		<German>[ICON_BULLET]Expansionsm&#246;glichkeit f&#252;r[SPACE]</German>
+		<Italian>[ICON_BULLET]Pu&#242; diffondere[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Puede expandir[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CITY_STRENGTH_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Change%% City Strength</English>
+		<French>[ICON_BULLET]Puissance de la ville %D1_Change%%</French>
+		<German>[ICON_BULLET]%D1_Change%% Stadtst&#228;rke</German>
+		<Italian>[ICON_BULLET]%D1_Change%% alla forza della citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% a la fuerza de la ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CITY_ATTACK_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Change%% City Attack</English>
+		<French>[ICON_BULLET]Attaque de ville %D1_Change%%</French>
+		<German>[ICON_BULLET]%D1_Change%% Stadtangriff</German>
+		<Italian>[ICON_BULLET]%D1_Change%% quando si attacca una citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% al atacar ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CITY_DEFENSE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Change%% City Defense</English>
+		<French>[ICON_BULLET]D&#233;fense de ville %D1_Change%%</French>
+		<German>[ICON_BULLET]%D1_Change%% Stadtverteidigung</German>
+		<Italian>[ICON_BULLET]%D1_Change%% di difesa della citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% al defender ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_COLLATERAL_DAMAGE_EXTRA</Tag>
+		<English>[ICON_BULLET]Causes Collateral Damage (%D1_Amount%%)</English>
+		<French>[ICON_BULLET]Provoque des dommages collat&#233;raux (%D1_Amount%%)</French>
+		<German>[ICON_BULLET]Verursacht Kollateralschaden (%D1_Amount%%)</German>
+		<Italian>[ICON_BULLET]Provoca danni collaterali (%D1_Amount%%)</Italian>
+		<Spanish>[ICON_BULLET]Inflige da&#241;os colaterales (%D1_Amount%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_COMBAT_LIMIT</Tag>
+		<English>[ICON_BULLET]Maximum %d1%% damage to enemy on attack</English>
+		<French>[ICON_BULLET]D&#233;g&#226;ts de %d1%% maximum inflig&#233;s &#224; l'ennemi lors d'une attaque</French>
+		<German>[ICON_BULLET]Maximal %d1%% Angriffsschaden auf Gegner</German>
+		<Italian>[ICON_BULLET]Al massimo %d1%% di danni al nemico per attacco</Italian>
+		<Spanish>[ICON_BULLET]Da&#241;o m&#225;ximo de %d1%% al enemigo en ataque</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DEFENDS_UNIT_FIRST</Tag>
+		<English>[ICON_BULLET]Defends first against %s1_unit_list</English>
+		<French>[ICON_BULLET]D&#233;fend d'abord contre %s1_unit_list</French>
+		<German>[ICON_BULLET]Nimmt als Erstes die Verteidigung gegen folgende Einheiten auf: %s1_unit_list</German>
+		<Italian>[ICON_BULLET]Difende primariamente contro %s1_unit_list</Italian>
+		<Spanish>[ICON_BULLET]Defiende primero contra %s1_unit_list</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DEFENSE</Tag>
+		<English>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Defense</English>
+		<French>[ICON_BULLET]%D1_Change%% en d&#233;fense sur des cases de %s2_TerrOrFeat</French>
+		<German>[ICON_BULLET]%D1_Change%% Verteidigung f&#252;r %s2_TerrOrFeat</German>
+		<Italian>[ICON_BULLET]%D1_Change%% di difesa nella %s2:2_TerrOrFeat</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% a defender %s2:2_TerrOrFeat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DISCOVER_TECH</Tag>
+		<English>[ICON_BULLET]Can Discover a Technology</English>
+		<French>[ICON_BULLET]Peut d&#233;couvrir une technologie</French>
+		<German>[ICON_BULLET]Kann eine Technologie entdecken</German>
+		<Italian>[ICON_BULLET]Permette la scoperta di una tecnologia</Italian>
+		<Spanish>[ICON_BULLET]Puede descubrir una tecnolog&#237;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXPLORE_RIVAL</Tag>
+		<English>[ICON_BULLET]Can Explore Rival Territory</English>
+		<French>[ICON_BULLET]Peut explorer le territoire ennemi</French>
+		<German>[ICON_BULLET]Kann gegnerisches Territorium erkunden</German>
+		<Italian>[ICON_BULLET]Pu&#242; esplorare il territorio rivale</Italian>
+		<Spanish>[ICON_BULLET]Puede explorar el territorio enemigo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXTRA_SIGHT</Tag>
+		<English>[ICON_BULLET]+1 Sight Across Water</English>
+		<French>[ICON_BULLET]Vision sur l'eau +1</French>
+		<German>[ICON_BULLET]+1 Sicht &#252;ber Wasser</German>
+		<Italian>[ICON_BULLET]+1 avvistamento sull'acqua</Italian>
+		<Spanish>[ICON_BULLET]+1 a avistar por el agua</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FLAT_MOVEMENT</Tag>
+		<English>[ICON_BULLET]Flat Movement Costs</English>
+		<French>[ICON_BULLET]Co&#251;t de d&#233;placement</French>
+		<German>[ICON_BULLET]Fortbewegungskosten - flach</German>
+		<Italian>[ICON_BULLET]Costi di movimento in pianura</Italian>
+		<Spanish>[ICON_BULLET]Costes de movimiento en llano</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FOUND_CITY</Tag>
+		<English>[ICON_BULLET]Can Found a [LINK=CONCEPT_CITIES]New City[\LINK]</English>
+		<French>[ICON_BULLET]Peut fonder une [LINK=CONCEPT_CITIES]nouvelle ville[\LINK]</French>
+		<German>[ICON_BULLET]Kann eine [LINK=CONCEPT_CITIES]neue Stadt[\LINK] gr&#252;nden</German>
+		<Italian>[ICON_BULLET]Pu&#242; fondare una [LINK=CONCEPT_CITIES]nuova citt&#224;[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Puede fundar una [LINK=CONCEPT_CITIES]nueva ciudad[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GOLDEN_AGE</Tag>
+		<English>[ICON_BULLET]Can Start a Golden Age</English>
+		<French>[ICON_BULLET]Peut d&#233;clencher un &#226;ge d'or</French>
+		<German>[ICON_BULLET]Kann ein Goldenes Zeitalter beginnen</German>
+		<Italian>[ICON_BULLET]Pu&#242; avviare l'Et&#224; dell'Oro</Italian>
+		<Spanish>[ICON_BULLET]Puede iniciar una edad de oro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_WORK</Tag>
+		<English>[ICON_BULLET]Can Create a Great Work (%D1_Change[ICON_CULTURE])</English>
+		<French>[ICON_BULLET]Peut cr&#233;er un chef d'oeuvre (%D1_Change[ICON_CULTURE])</French>
+		<German>[ICON_BULLET]Kann ein Gro&#223;es Bauwerk errichten (%D1_Change[ICON_CULTURE])</German>
+		<Italian>[ICON_BULLET]Pu&#242; creare una Grande Opera (%D1_Change[ICON_CULTURE])</Italian>
+		<Spanish>[ICON_BULLET]Puede crear una gran obra (%D1_Change [ICON_CULTURE])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HIDDEN_NATIONALITY</Tag>
+		<English>[ICON_BULLET]Hidden Nationality</English>
+		<French>[ICON_BULLET]Nationalit&#233; cach&#233;e</French>
+		<German>[ICON_BULLET]Versteckte Nationalit&#228;t</German>
+		<Italian>[ICON_BULLET]Nazionalit&#224; nascosta</Italian>
+		<Spanish>[ICON_BULLET]Nacionalidad oculta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HILLS_ATTACK</Tag>
+		<English>[ICON_BULLET]%D1_Change%% Hills Attack</English>
+		<French>[ICON_BULLET]Attaque sur des collines %D1_Change%%</French>
+		<German>[ICON_BULLET]%D1_Change%% Angriff auf H&#252;geln</German>
+		<Italian>[ICON_BULLET]%D1_Change%% all'attacco in collina</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% a atacar colinas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HILLS_DEFENSE</Tag>
+		<English>[ICON_BULLET]%D1_Change%% Hills Defense</English>
+		<French>[ICON_BULLET]D&#233;fense des collines %D1_Change%%</French>
+		<German>[ICON_BULLET]%D1_Change%% H&#252;gel-Verteidigung</German>
+		<Italian>[ICON_BULLET]%D1_Change%% di difesa in collina</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% a defender colinas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HILLS_STRENGTH</Tag>
+		<English>[ICON_BULLET]%D1_Change%% Hills Strength</English>
+		<French>[ICON_BULLET]Puissance dans les collines %D1_Change%%</French>
+		<German>[ICON_BULLET]%D1_Change%% St&#228;rke auf H&#252;geln</German>
+		<Italian>[ICON_BULLET]%D1_Change%% alla forza in collina</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% a la fuerza en colinas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HURRY_PRODUCTION</Tag>
+		<English>[ICON_BULLET]Can Hurry Production</English>
+		<French>[ICON_BULLET]Peut acc&#233;l&#233;rer la production</French>
+		<German>[ICON_BULLET]Kann die Produktion beschleunigen</German>
+		<Italian>[ICON_BULLET]Pu&#242; accelerare la produzione cittadina</Italian>
+		<Spanish>[ICON_BULLET]Puede acelerar la producci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_IGNORE_TERRAIN</Tag>
+		<English>[ICON_BULLET]Ignores Terrain Movement Costs</English>
+		<French>[ICON_BULLET]Ignore les p&#233;nalit&#233;s de mouvement du terrain</French>
+		<German>[ICON_BULLET]Ignoriert Fortbewegungskosten auf Gel&#228;nde</German>
+		<Italian>[ICON_BULLET]Ignora i costi di movimento sul terreno</Italian>
+		<Spanish>[ICON_BULLET]No le afectan los costes de movimiento por terreno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_IMPROVE_PLOTS</Tag>
+		<English>[ICON_BULLET]Can Improve Tiles</English>
+		<French>[ICON_BULLET]Peut am&#233;nager les cases</French>
+		<German>[ICON_BULLET]Kann Gel&#228;ndefelder modernisieren</German>
+		<Italian>[ICON_BULLET]Pu&#242; migliorare le caselle</Italian>
+		<Spanish>[ICON_BULLET]Puede mejorar casillas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INSTANCE_COST_MOD</Tag>
+		<English>Each Unit in Play Increases Base Cost by %d1%%</English>
+		<French>Chaque unit&#233; en jeu augmente le co&#251;t de base de %d1%%</French>
+		<German>F&#252;r jede Einheit im Spiel steigen die Basiskosten um %d1%%</German>
+		<Italian>Ogni unit&#224; in gioco aumenta il costo base di %d1%%</Italian>
+		<Spanish>Cada unidad en juego aumenta el coste base en un %d1%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INVISIBLE_ALL</Tag>
+		<English>[ICON_BULLET]Invisible to All Units</English>
+		<French>[ICON_BULLET]Invisible pour toutes les unit&#233;s</French>
+		<German>[ICON_BULLET]F&#252;r alle Einheiten unsichtbar</German>
+		<Italian>[ICON_BULLET]Invisibile a tutte le unit&#224;</Italian>
+		<Spanish>[ICON_BULLET]Invisible para todas las unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INVISIBLE_MOST</Tag>
+		<English>[ICON_BULLET]Invisible to Most Units</English>
+		<French>[ICON_BULLET]Invisible pour la plupart des unit&#233;s</French>
+		<German>[ICON_BULLET]F&#252;r die meisten Einheiten unsichtbar</German>
+		<Italian>[ICON_BULLET]Invisibile alla maggior parte delle unit&#224;</Italian>
+		<Spanish>[ICON_BULLET]Invisible para la mayor&#237;a de las unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LEADER</Tag>
+		<English>[ICON_BULLET]Can Provide %d1_Num Experience to Units in the Same Tile</English>
+		<French>[ICON_BULLET]Peut octroyer %d1_Num exp&#233;rience aux unit&#233;s dans la m&#234;me case</French>
+		<German>[ICON_BULLET]Kann %d1_Num Erfahrungspunkte auf Einheiten auf demselben Gel&#228;ndefeld &#252;bertragen</German>
+		<Italian>[ICON_BULLET]Pu&#242; dare %d1_Num di esperienza alle unit&#224; presenti nella stessa casella</Italian>
+		<Spanish>[ICON_BULLET]Puede dar un total de %d1_Num de experiencia a las unidades en la misma casilla</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LEADER_EXPERIENCE</Tag>
+		<English>[ICON_BULLET]Can Provide up to %d1 XP to Each Unit in the Same Tile</English>
+		<French>[ICON_BULLET]Permet &#224; chaque unit&#233; dans la m&#234;me case d'obtenir jusqu'&#224; %d1 EXP</French>
+		<German>[ICON_BULLET]Kann bis zu %d1 EP auf jede Einheit auf demselben Gel&#228;ndefeld &#252;bertragen</German>
+		<Italian>[ICON_BULLET]Pu&#242; dare %d1 di esperienza alle unit&#224; presenti nella stessa casella</Italian>
+		<Spanish>[ICON_BULLET]Puede dar hasta %d1 PX a cada unidad que est&#233; en la misma casilla.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MOVEMENT</Tag>
+		<English>[ICON_BULLET]%D1_Change %s2_MoveType Movement</English>
+		<French>[ICON_BULLET]%D1_Change mouvement (%s2_MoveType)</French>
+		<German>[ICON_BULLET]%D1_Change Fortbewegung auf %s2_MoveType</German>
+		<Italian>[ICON_BULLET]%D1_Change al movimento %s2_MoveType</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change al movimiento por %s2_Move</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NATIONAL_UNIT_ALLOWED</Tag>
+		<English>[ICON_BULLET]National Unit (%d1_Num Allowed)</English>
+		<French>[ICON_BULLET]Unit&#233; nationale (limite : %d1_Num)</French>
+		<German>[ICON_BULLET]Nationale Einheit (%d1_Num zul&#228;ssig)</German>
+		<Italian>[ICON_BULLET]Unit&#224; nazionale (%d1_Num [NUM1:permessa:permesse])</Italian>
+		<Spanish>[ICON_BULLET]Unidad nacional (%d1_Num [NUM1:permitida:permitidas])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NATIONAL_UNIT_LEFT</Tag>
+		<English>[SPACE]National Unit: %d1_Num Left</English>
+		<French>[SPACE]Unit&#233; nationale : reste %d1_Num</French>
+		<German>[SPACE]Nationale Einheit: %d1_Num &#252;brig</German>
+		<Italian>[SPACE]Unit&#224; nazionale: %d1_Num [NUM1:rimanente:rimanenti]</Italian>
+		<Spanish>[SPACE]Unidad nacional: %d1_Num [NUM1:restante:restantes]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NO_DEFENSE_BONUSES</Tag>
+		<English>[ICON_BULLET]Doesn't Receive Defensive Bonuses</English>
+		<French>[ICON_BULLET]Ne b&#233;n&#233;ficie d'aucun bonus de d&#233;fense</French>
+		<German>[ICON_BULLET]Erh&#228;lt keine Verteidigungsboni</German>
+		<Italian>[ICON_BULLET]Non riceve bonus difensivi</Italian>
+		<Spanish>[ICON_BULLET]No recibe bonificaciones defensivas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NO_NUKES</Tag>
+		<English>[COLOR_WARNING_TEXT]Nuclear Weapons are Banned[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Armes nucl&#233;aires interdites[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Atomwaffen sind verboten[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Le armi nucleari sono vietate[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Las armas nucleares est&#225;n prohibidas[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ONLY_DEFENSIVE</Tag>
+		<English>[ICON_BULLET]Can Only Defend</English>
+		<French>[ICON_BULLET]Ne peut que se d&#233;fendre</French>
+		<German>[ICON_BULLET]Kann nur verteidigen</German>
+		<Italian>[ICON_BULLET]Pu&#242; solo difendere</Italian>
+		<Spanish>[ICON_BULLET]S&#243;lo puede defender</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PARADROP_RANGE</Tag>
+		<English>[ICON_BULLET]Can perform paradrops (Range=%d1_range)</English>
+		<French>[ICON_BULLET]Peut sauter en parachute (Port&#233;e=%d1_range)</French>
+		<German>[ICON_BULLET]Kann Fallschirmspr&#252;nge absolvieren (Reichweite=%d1_range)</German>
+		<Italian>[ICON_BULLET]Pu&#242; lanciarsi col paracadute (Raggio d'azione%d1_range)</Italian>
+		<Spanish>[ICON_BULLET]Puede realizar desembarcos a&#233;reos (alcance = %d1_range)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_REQUIRED_TO_BUILD</Tag>
+		<English>[ICON_BULLET]Can be built by[SPACE]</English>
+		<French>[ICON_BULLET]Peut &#234;tre construit par[SPACE]</French>
+		<German>[ICON_BULLET]Kann errichtet werden von[SPACE]</German>
+		<Italian>[ICON_BULLET]L'unit&#224; pu&#242; essere costruita da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Construible por[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_REQUIRES_HOLY_CITY</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires %F1_RelIcon Holy City[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert la ville sainte %F1_RelIcon[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert die Heilige Stadt der Religion %F1_RelIcon[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede una Citt&#224; Santa %F1_RelIcon[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una ciudad santa del %F1_RelIcon[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_STACK</Tag>
+		<English>Unit Stack (%d1):</English>
+		<French>Tas d'unit&#233;s (%d1) :</French>
+		<German>Einheitenstapel (%d1):</German>
+		<Italian>Gruppo unit&#224; (%d1):</Italian>
+		<Spanish>Apilamiento (%d1):</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_STRENGTH</Tag>
+		<English>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Strength</English>
+		<French>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Force</French>
+		<German>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat-St&#228;rke</German>
+		<Italian>[ICON_BULLET]%D1_Change%% alla forza in %s2_TerrOrFeat</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% a fuerza en %s2:2_TerrOrFeat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TEAM_UNIT_ALLOWED</Tag>
+		<English>[ICON_BULLET]Team Unit (%d1_Num Allowed)</English>
+		<French>[ICON_BULLET]Unit&#233; d'&#233;quipe (limite : %d1_Num)</French>
+		<German>[ICON_BULLET]Teameinheit (%d1_Num zul&#228;ssig)</German>
+		<Italian>[ICON_BULLET]Unit&#224; di squadra (%d1_Num [NUM1:permessa:permesse])</Italian>
+		<Spanish>[ICON_BULLET]Unidad de equipo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TEAM_UNIT_LEFT</Tag>
+		<English>[SPACE]Team Unit: %d1_Num Left</English>
+		<French>[SPACE]Unit&#233; d'&#233;quipe : reste %d1_Num</French>
+		<German>[SPACE]Teameinheit: %d1_Num &#252;brig</German>
+		<Italian>[SPACE]Unit&#224; di squadra: %d1_Num [NUM1:rimanente:rimanenti]</Italian>
+		<Spanish>[SPACE]Unidad de equipo: %d1_Num [NUM1:restante:restantes]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TURNS</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]%d1_Num Turns[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]%d1_Num tours[COLOR_REVERT]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]%d1_Num Runden[COLOR_REVERT]</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turni][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VISIBILITY_MOVE_RANGE</Tag>
+		<English>[ICON_BULLET]Unit may not reveal undiscovered terrain except inside a player's territory</English>
+		<French>[ICON_BULLET]L'unit&#233; ne peut r&#233;v&#233;ler des cases terrain qu'&#224; l'int&#233;rieur du territoire du joueur</French>
+		<German>[ICON_BULLET]Einheit darf unentdecktes Gel&#228;nde nicht erkunden, au&#223;er innerhalb des Territoriums eines Spielers</German>
+		<Italian>[ICON_BULLET]L'unit&#224; non pu&#242; rivelare terreni inesplorati se non nel territorio del giocatore</Italian>
+		<Spanish>[ICON_BULLET]La unidad no puede revelar terreno oculto excepto en el territorio del jugador</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORKERS_FASTER</Tag>
+		<English>[ICON_BULLET]Workers Build Improvements %D1_Change%% Faster</English>
+		<French>[ICON_BULLET]Vitesse de construction des am&#233;nagements : %D1_Change%%</French>
+		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Change%% schneller</German>
+		<Italian>[ICON_BULLET]I lavoratori realizzano i miglioramenti il %D1_Change%% pi&#249; rapidamente</Italian>
+		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Change%% m&#225;s r&#225;pido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORLD_UNIT_ALLOWED</Tag>
+		<English>[ICON_BULLET]World Unit (%d1_Num Allowed)</English>
+		<French>[ICON_BULLET]Unit&#233; mondiale (limite : %d1_NumAllowed)</French>
+		<German>[ICON_BULLET]Welteinheit (%d1_Num zul&#228;ssig)</German>
+		<Italian>[ICON_BULLET]Unit&#224; mondiale (%d1_Num [NUM1:permessa:permesse])</Italian>
+		<Spanish>[ICON_BULLET]Unidad mundial (%d1_Num [NUM1:permitida:permitidas])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORLD_UNIT_LEFT</Tag>
+		<English>[SPACE]World Unit: %d1_Num Left</English>
+		<French>[SPACE]Unit&#233; mondiale : reste %d1_Num</French>
+		<German>[SPACE]Welteinheit: %d1_Num &#252;brig</German>
+		<Italian>[SPACE]Unit&#224; mondiale: %d1_Num [NUM1:rimanente:rimanenti]</Italian>
+		<Spanish>[SPACE]Unidad mundial: %d1_Num [NUM1:restante:restantes]</Spanish>
+	</TEXT>
 </Civ4GameText>
