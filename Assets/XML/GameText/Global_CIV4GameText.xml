@@ -24015,4 +24015,492 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>, %d1 Pop</Italian>
 		<Spanish>, %d1 pob</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BUILD_ONLY_WATER</Tag>
+		<English>[ICON_BULLET]Built only in Water</English>
+		<French>[ICON_BULLET]Construction uniquement dans l'eau</French>
+		<German>[ICON_BULLET]Kann nur im Wasser errichtet werden</German>
+		<Italian>[ICON_BULLET]Si pu&#242; costruire solo in acqua</Italian>
+		<Spanish>[ICON_BULLET]Solo se construye en el agua</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_CARRIES_IRRIGATION</Tag>
+		<English>[ICON_BULLET]Carries [LINK=CONCEPT_IRRIGATION]Irrigation[\LINK]</English>
+		<French>[ICON_BULLET]Assure [LINK=CONCEPT_IRRIGATION]l'irrigation[\LINK]</French>
+		<German>[ICON_BULLET]F&#246;rdert [LINK=CONCEPT_IRRIGATION]Bew&#228;sserung[\LINK]</German>
+		<Italian>[ICON_BULLET]Trasporta [LINK=CONCEPT_IRRIGATION]l'irrigazione[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Da [LINK=CONCEPT_IRRIGATION]riego[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_CHANCE_DISCOVER</Tag>
+		<English>[ICON_BULLET]Small chance of discovering[SPACE]</English>
+		<French>[ICON_BULLET]Faibles chances de d&#233;couvrir :[SPACE]</French>
+		<German>[ICON_BULLET]Geringe Entdeckungschance[SPACE]</German>
+		<Italian>[ICON_BULLET]Una piccola probabilit&#224; di scoprire[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Peque&#241;a probabilidad de descubrir[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_DEFENSE_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% Tile Defense</English>
+		<French>[ICON_BULLET]D&#233;fense de la case %D1%%</French>
+		<German>[ICON_BULLET]%D1%% Gel&#228;ndefeld-Verteidigung</German>
+		<Italian>[ICON_BULLET]%D1%% difensiva della casella</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la defensa de la casilla</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_DEFENSE_MODIFIER_EXTRA</Tag>
+		<English>[ICON_BULLET]Acts as a city for combat purposes</English>
+		<French>[ICON_BULLET]Agit comme une ville pour les combats</French>
+		<German>[ICON_BULLET]Dient als Standort f&#252;r milit&#228;rische Zwecke</German>
+		<Italian>[ICON_BULLET]Ai fini dei combattimenti, equivalgono a una citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]Hace las veces de ciudad a efectos de combate.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MORE_GROWTH</Tag>
+		<English>[ICON_BULLET]Gives terrain a higher chance to spread</English>
+		<French>[ICON_BULLET]Augmente les chances de d&#233;veloppement du terrain</French>
+		<German>[ICON_BULLET]Gel&#228;nde hat eine h&#246;here Ausbreitungsschance</German>
+		<Italian>[ICON_BULLET]D&#224; al terreno una maggiore probabilit&#224; di espandersi</Italian>
+		<Spanish>[ICON_BULLET]Da m&#225;s posibilidades de propagarse a un terreno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_NO_BUILD_FRESH_WATER</Tag>
+		<English>[ICON_BULLET]Cannot be built near Fresh Water</English>
+		<French>[ICON_BULLET]Construction impossible pr&#232;s de l'eau douce</French>
+		<German>[ICON_BULLET]Kann nicht in der N&#228;he von S&#252;&#223;wassergebieten errichtet werden</German>
+		<Italian>[ICON_BULLET]Non pu&#242; essere costruito vicino all'acqua dolce</Italian>
+		<Spanish>[ICON_BULLET]No se puede construir cerca de agua dulce</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ONLY_BUILD_FLATLANDS</Tag>
+		<English>[ICON_BULLET]Can only be built on Flatlands</English>
+		<French>[ICON_BULLET]Construction uniquement sur les plaines</French>
+		<German>[ICON_BULLET]Kann nur im Flachland errichtet werden</German>
+		<Italian>[ICON_BULLET]Si pu&#242; costruire solo in pianura</Italian>
+		<Spanish>[ICON_BULLET]Solo se puede construir en llanos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_REQUIRES_RIVER</Tag>
+		<English>[ICON_BULLET]Requires River</English>
+		<French>[ICON_BULLET]Requiert une rivi&#232;re</French>
+		<German>[ICON_BULLET]Erfordert einen Fluss</German>
+		<Italian>[ICON_BULLET]Richiede un fiume</Italian>
+		<Spanish>[ICON_BULLET]Requiere un r&#237;o</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WITH_TECH</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_YieldIcon with [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_YieldIcon avec : [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_YieldIcon mit der Technologie [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_YieldIcon con [NUM3:il:la:gli:le] [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_YieldIcon con [NUM3:el:la:los:las] [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_ENTIRE_HISTORY</Tag>
+		<English>Entire History</English>
+		<French>Toute l'histoire</French>
+		<German>Ges. Geschichte</German>
+		<Italian>Intera storia</Italian>
+		<Spanish>Toda la historia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_GRAPH</Tag>
+		<English>GRAPH</English>
+		<French>GRAPHIQUE</French>
+		<German>DIAGRAMM</German>
+		<Italian>GRAFICO</Italian>
+		<Spanish>GR&#193;FICA</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_RIVAL_BEST</Tag>
+		<English>Rival Best</English>
+		<French>Meilleur rival</French>
+		<German>Besten herausfordern</German>
+		<Italian>Migliore rivale</Italian>
+		<Spanish>Mejor rival</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_RIVAL_WORST</Tag>
+		<English>Rival Worst</English>
+		<French>Pire rival</French>
+		<German>Schlechtesten herausfordern</German>
+		<Italian>Peggiore rivale</Italian>
+		<Spanish>Peor rival</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_SCREEN_STATISTICS_TITLE</Tag>
+		<English>Statistics</English>
+		<French>Statistiques</French>
+		<German>Statistik</German>
+		<Italian>Statistiche</Italian>
+		<Spanish>Estad&#237;sticas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_SCREEN_TIME_PLAYED</Tag>
+		<English>Time Played</English>
+		<French>Temps de jeu</French>
+		<German>Bisherige Spieldauer</German>
+		<Italian>Tempo di gioco</Italian>
+		<Spanish>Tiempo jugado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_SCREEN_CITIES_BUILT</Tag>
+		<English>Cities Built</English>
+		<French>Villes fond&#233;es</French>
+		<German>Gegr&#252;ndete St&#228;dte</German>
+		<Italian>Citt&#224; costruite</Italian>
+		<Spanish>Ciudades construidas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_SCREEN_CITIES_RAZED</Tag>
+		<English>Cities Razed</English>
+		<French>Villes ras&#233;es</French>
+		<German>Vernichtete St&#228;dte</German>
+		<Italian>Citt&#224; distrutte</Italian>
+		<Spanish>Ciudades arrasadas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_SCREEN_RELIGIONS_FOUNDED</Tag>
+		<English>Religions Founded</English>
+		<French>Religions fond&#233;es</French>
+		<German>Gegr&#252;ndete Religionen</German>
+		<Italian>Religioni fondate</Italian>
+		<Spanish>Religiones fundadas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_SCREEN_KILLED</Tag>
+		<English>Killed</English>
+		<French>Morts</French>
+		<German>Gefallene</German>
+		<Italian>Uccisi</Italian>
+		<Spanish>Bajas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_SCREEN_LOST</Tag>
+		<English>Lost</English>
+		<French>Pertes</French>
+		<German>Verluste</German>
+		<Italian>Persi</Italian>
+		<Spanish>P&#233;rdidas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_SCREEN_BUILT</Tag>
+		<English>Built</English>
+		<French>Constructions</French>
+		<German>Errichtet</German>
+		<Italian>Realizzati</Italian>
+		<Spanish>Construido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_ESCAPE</Tag>
+		<English>Escape</English>
+		<French>Echap</French>
+		<German>Esc</German>
+		<Italian>Esc</Italian>
+		<Spanish>Esc</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_BACKSPACE</Tag>
+		<English>Backspace</English>
+		<French>Retour arri&#232;re</French>
+		<German>R&#252;cktaste</German>
+		<Italian>Indietro</Italian>
+		<Spanish>Retroceso</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_ENTER</Tag>
+		<English>Enter</English>
+		<French>Entr&#233;e</French>
+		<German>Eingabetaste</German>
+		<Italian>Invio</Italian>
+		<Spanish>Intro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_LEFT_CONTROL_KEY</Tag>
+		<English>Left Control Key</English>
+		<French>Ctrl gauche</French>
+		<German>Strg links</German>
+		<Italian>Ctrl sinistro</Italian>
+		<Spanish>Ctrl izq.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_LEFT_SHIFT_KEY</Tag>
+		<English>Left Shift Key</English>
+		<French>Maj gauche</French>
+		<German>Umschalten links</German>
+		<Italian>Maiusc sinistro</Italian>
+		<Spanish>May&#250;s izq.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_RIGHT_SHIFT_KEY</Tag>
+		<English>Right Shift Key</English>
+		<French>Maj droite</French>
+		<German>Umschalten rechts</German>
+		<Italian>Maiusc destro</Italian>
+		<Spanish>May&#250;s der.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_NUM_PAD_STAR</Tag>
+		<English>Num Pad *</English>
+		<French>* pav&#233; num</French>
+		<German>Ziffernblock *</German>
+		<Italian>TastNum *</Italian>
+		<Spanish>* (num.)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_LEFT_ALT_KEY</Tag>
+		<English>Left Alt Key</English>
+		<French>Alt gauche</French>
+		<German>Alt</German>
+		<Italian>Alt sinistro</Italian>
+		<Spanish>Alt izq.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_SPACE_KEY</Tag>
+		<English>Space Key</English>
+		<French>Espace</French>
+		<German>Leertaste</German>
+		<Italian>Barra spaziatrice</Italian>
+		<Spanish>Espacio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_CAPS_LOCK</Tag>
+		<English>Caps Lock</English>
+		<French>Verr.Maj</French>
+		<German>Feststelltaste</German>
+		<Italian>Bloc Maiusc</Italian>
+		<Spanish>Bloq May&#250;s</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_NUM_LOCK</Tag>
+		<English>Num Lock</English>
+		<French>Verr.Num</French>
+		<German>Num</German>
+		<Italian>Bloc Num</Italian>
+		<Spanish>Bloq Num</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_SCROLL_KEY</Tag>
+		<English>Scroll Key</English>
+		<French>Arr&#234;t d&#233;fil</French>
+		<German>Rollen</German>
+		<Italian>Bloc Scorr</Italian>
+		<Spanish>Bloq Despl</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_NUMPAD_NUMBER</Tag>
+		<English>Numpad %d1_Num</English>
+		<French>%d1_Num pav&#233; num</French>
+		<German>Ziffernblock %d1_Num</German>
+		<Italian>TastNum %d1_Num</Italian>
+		<Spanish>%d1_Num (num.)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_NUMPAD_MINUS</Tag>
+		<English>Numpad Minus</English>
+		<French>Moins pav&#233; num</French>
+		<German>Zifferblock Minus</German>
+		<Italian>TastNum -</Italian>
+		<Spanish>- (num.)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_NUMPAD_PLUS</Tag>
+		<English>Numpas Plus</English>
+		<French>Plus pav&#233; num</French>
+		<German>Ziffernblock Plus</German>
+		<Italian>TastNum +</Italian>
+		<Spanish>+ (num.)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_NUMPAD_PERIOD</Tag>
+		<English>Numpad .</English>
+		<French>. pav&#233; num</French>
+		<German>Ziffernblock ,</German>
+		<Italian>TastNum .</Italian>
+		<Spanish>. (num.)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_NUMPAD_EQUALS</Tag>
+		<English>Numpad =</English>
+		<French>= pav&#233; num</French>
+		<German>Ziffernblock =</German>
+		<Italian>TastNum =</Italian>
+		<Spanish>= (num.)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_NUMPAD_ENTER_KEY</Tag>
+		<English>Numpad Enter Key</English>
+		<French>Entr&#233;e pav&#233; num</French>
+		<German>Ziffernblock Enter</German>
+		<Italian>TastNum Invio</Italian>
+		<Spanish>Intro (num.)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_RIGHT_CONTROL_KEY</Tag>
+		<English>Right Control Key</English>
+		<French>Ctrl droite</French>
+		<German>Strg rechts</German>
+		<Italian>Ctrl destro</Italian>
+		<Spanish>Ctrl der.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_VOLUME_DOWN</Tag>
+		<English>Volume Down</English>
+		<French>Volume -</French>
+		<German>Leiser</German>
+		<Italian>Abbassa volume</Italian>
+		<Spanish>Volumen -</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_VOLUME_UP</Tag>
+		<English>Volume Up</English>
+		<French>Volume +</French>
+		<German>Lauter</German>
+		<Italian>Alza volume</Italian>
+		<Spanish>Volumen +</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_NUMPAD_COMMA</Tag>
+		<English>Numpad ,</English>
+		<French>, pav&#233; num</French>
+		<German>Ziffernblock .</German>
+		<Italian>TastNum .</Italian>
+		<Spanish>, (num.)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_NUMPAD_SLASH</Tag>
+		<English>Numpad /</English>
+		<French>/ pav&#233; num</French>
+		<German>Ziffernblock /</German>
+		<Italian>TastNum /</Italian>
+		<Spanish>/ (num.)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_SYSRQ</Tag>
+		<English>SYSRQ</English>
+		<French>Syst</French>
+		<German>S-Abf</German>
+		<Italian>Stamp/R Sist</Italian>
+		<Spanish>Impr Pant</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_RIGHT_ALT_KEY</Tag>
+		<English>Right Alt Key</English>
+		<French>Alt droite</French>
+		<German>Alt Gr</German>
+		<Italian>Alt Gr</Italian>
+		<Spanish>Alt der.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_PAUSE_KEY</Tag>
+		<English>Pause Key</English>
+		<French>Pause</French>
+		<German>Pause</German>
+		<Italian>Pausa</Italian>
+		<Spanish>Pausa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_HOME_KEY</Tag>
+		<English>Home Key</English>
+		<French>Orig</French>
+		<German>Pos1</German>
+		<Italian>Home</Italian>
+		<Spanish>Inicio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_UP_ARROW</Tag>
+		<English>Up Arrow</English>
+		<French>Fl&#232;che haut</French>
+		<German>Pfeil nach oben</German>
+		<Italian>Freccia su</Italian>
+		<Spanish>Flecha arriba</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_PAGE_UP</Tag>
+		<English>Page Up</English>
+		<French>Page Haut</French>
+		<German>Bild auf</German>
+		<Italian>PagSu</Italian>
+		<Spanish>Re P&#225;g</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_LEFT_ARROW</Tag>
+		<English>Left Arrow</English>
+		<French>Fl&#232;che gauche</French>
+		<German>Pfeil nach links</German>
+		<Italian>Freccia sinistra</Italian>
+		<Spanish>Flecha izq.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_RIGHT_ARROW</Tag>
+		<English>Right Arrow</English>
+		<French>Fl&#232;che droite</French>
+		<German>Pfeil nach rechts</German>
+		<Italian>Freccia destra</Italian>
+		<Spanish>Flecha der.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_END_KEY</Tag>
+		<English>End Key</English>
+		<French>Fin</French>
+		<German>Ende</German>
+		<Italian>Fine</Italian>
+		<Spanish>Fin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_DOWN_ARROW</Tag>
+		<English>Down Arrow</English>
+		<French>Fl&#232;che bas</French>
+		<German>Pfeil nach unten</German>
+		<Italian>Freccia gi&#249;</Italian>
+		<Spanish>Flecha abajo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_PAGE_DOWN</Tag>
+		<English>Page Down</English>
+		<French>Page Bas</French>
+		<German>Bild ab</German>
+		<Italian>PagGi&#249;</Italian>
+		<Spanish>Av P&#225;g</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_INSERT_KEY</Tag>
+		<English>Insert Key</English>
+		<French>Inser</French>
+		<German>Einfg</German>
+		<Italian>Ins</Italian>
+		<Spanish>Insert</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KEYBOARD_DELETE_KEY</Tag>
+		<English>Delete</English>
+		<French>Suppr</French>
+		<German>Entf</German>
+		<Italian>Canc</Italian>
+		<Spanish>Supr</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CIV_DESCRIPTION</Tag>
+		<English>%s1_leader of %s2_civ_short_name</English>
+		<French>%s1_leader des %s2_civ_short_name</French>
+		<German>%s1_leader von %s2_civ_short_name</German>
+		<Italian>%s1_leader della civilt&#224; %s2:2_civ_short_name</Italian>
+		<Spanish>%s1_leader de %s2_civ_short_name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LIBERATE_CITY</Tag>
+		<English>Liberate</English>
+		<French>Lib&#233;rer</French>
+		<German>Befreien</German>
+		<Italian>Libera</Italian>
+		<Spanish>Liberar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LIBERATE_CITY_HELP</Tag>
+		<English>Gift the city of %s1_city to %s2_player</English>
+		<French>Donner la ville de %s1_city au joueur %s2_player</French>
+		<German>Geschenk der Stadt %s1_city f&#252;r %s2_player</German>
+		<Italian>Dona la citt&#224; di %s1_city a %s2_player</Italian>
+		<Spanish>Donarle la ciudad de %s1_city a %s2_player</Spanish>
+	</TEXT>
 </Civ4GameText>
