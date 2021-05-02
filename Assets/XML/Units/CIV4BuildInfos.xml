@@ -906,7 +906,7 @@
 			<Type>BUILD_SCAVENGING_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_SCAVENGING_CAMP_KILL</Description>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
+			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>10</iCost>
 			<bKill>1</bKill>
@@ -1187,7 +1187,7 @@
 			<Type>BUILD_FRUIT_GATHERING_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
+			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
@@ -1232,7 +1232,7 @@
 			<Type>BUILD_GRAPE_GATHERING_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
+			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
@@ -1385,7 +1385,7 @@
 			<Type>BUILD_PLANT_GATHERING_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_PLANT_GATHERING_CAMP_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
+			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
@@ -3371,7 +3371,7 @@
 			<Type>BUILD_WOOD_GATHERER_KILL</Type>
 			<Description>TXT_KEY_BUILD_WOOD_GATHERER_KILL</Description>
 			<PrereqTech>TECH_WOODWORKING</PrereqTech>
-			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
+			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
