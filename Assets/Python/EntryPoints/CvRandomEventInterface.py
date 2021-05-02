@@ -77,50 +77,50 @@ def canTriggerBlessedSea2(argsList):
   return True
 
 def applyBlessedSea2(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	#iEvent = argsList[0]
+	kTriggeredData = argsList[1]
 
-  iBuilding = -1
+	iBuilding = -1
 
-  if (-1 != kTriggeredData.eReligion):
-    for i in xrange(GC.getNumBuildingInfos()):
-      if (GC.getBuildingInfo(i).getSpecialBuildingType() == GC.getInfoTypeForString("SPECIALBUILDING_TEMPLE")):
-        if (GC.getBuildingInfo(i).getReligionType() == kTriggeredData.eReligion):
-          iBuilding = i
-          break
+	if -1 != kTriggeredData.eReligion:
+		for i in xrange(GC.getNumBuildingInfos()):
+			if GC.getBuildingInfo(i).getSpecialBuildingType() == GC.getInfoTypeForString("SPECIALBUILDING_TEMPLE"):
+				if GC.getBuildingInfo(i).getReligionType() == kTriggeredData.eReligion:
+					iBuilding = i
+					break
 
-  if (iBuilding == -1):
-    return
+	if (iBuilding == -1):
+		return
 
-  for loopCity in GC.getPlayer(kTriggeredData.ePlayer).cities():
-    if loopCity.getPopulation() >= 5:
-      if loopCity.canConstruct(iBuilding, False, False, True):
-        loopCity.setNumRealBuilding(iBuilding, 1)
+	for loopCity in GC.getPlayer(kTriggeredData.ePlayer).cities():
+		if loopCity.getPopulation() >= 5:
+			if loopCity.canConstruct(iBuilding, False, False, True):
+				loopCity.setNumRealBuilding(iBuilding, 1)
 
 
 def canApplyBlessedSea2(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	#iEvent = argsList[0]
+	kTriggeredData = argsList[1]
 
-  iBuilding = -1
+	iBuilding = -1
 
-  if (-1 != kTriggeredData.eReligion):
-    for i in xrange(GC.getNumBuildingInfos()):
-      if (GC.getBuildingInfo(i).getSpecialBuildingType() == GC.getInfoTypeForString("SPECIALBUILDING_TEMPLE")):
-        if (GC.getBuildingInfo(i).getReligionType() == kTriggeredData.eReligion):
-          iBuilding = i
-          break
+	if -1 != kTriggeredData.eReligion:
+		for i in xrange(GC.getNumBuildingInfos()):
+			if GC.getBuildingInfo(i).getSpecialBuildingType() == GC.getInfoTypeForString("SPECIALBUILDING_TEMPLE"):
+				if GC.getBuildingInfo(i).getReligionType() == kTriggeredData.eReligion:
+					iBuilding = i
+					break
 
 
-  if (iBuilding == -1):
-    return False
+	if (iBuilding == -1):
+		return False
 
-  for loopCity in GC.getPlayer(kTriggeredData.ePlayer).cities():
-    if loopCity.getPopulation() >= 5:
-      if loopCity.canConstruct(iBuilding, False, False, True):
-        return True
+	for loopCity in GC.getPlayer(kTriggeredData.ePlayer).cities():
+		if loopCity.getPopulation() >= 5:
+			if loopCity.canConstruct(iBuilding, False, False, True):
+				return True
 
-  return False
+	return False
 
 
 ######## HOLY MOUNTAIN ###########
@@ -243,41 +243,38 @@ def doHolyMountainRevealed(argsList):
 ######## MARATHON ###########
 
 def canTriggerMarathon(argsList):
-  kTriggeredData = argsList[0]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  otherPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
-  team = GC.getTeam(player.getTeam())
+	kTriggeredData = argsList[0]
+	player = GC.getPlayer(kTriggeredData.ePlayer)
+	otherPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
 
-  if (team.AI_getAtWarCounter(otherPlayer.getTeam()) == 1):
-    for loopUnit in otherPlayer.units():
-      plot = loopUnit.plot()
-      if (not plot.isNone()):
-        if (plot.getOwner() == kTriggeredData.ePlayer):
-          return True
+	if GC.getTeam(player.getTeam()).AI_getAtWarCounter(otherPlayer.getTeam()) == 1:
+		for loopUnit in otherPlayer.units():
+			plot = loopUnit.plot()
+			if not plot.isNone():
+				if plot.getOwner() == kTriggeredData.ePlayer:
+					return True
 
   return False
 
 ######## WEDDING FEUD ###########
 
 def doWeddingFeud2(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	#iEvent = argsList[0]
+	kTriggeredData = argsList[1]
 
-  for loopCity in GC.getPlayer(kTriggeredData.ePlayer).cities():
-    if loopCity.isHasReligion(kTriggeredData.eReligion):
-      loopCity.changeHappinessTimer(30)
+	for loopCity in GC.getPlayer(kTriggeredData.ePlayer).cities():
+		if loopCity.isHasReligion(kTriggeredData.eReligion):
+			loopCity.changeHappinessTimer(30)
 
-  return 1
+	return 1
 
 def getHelpWeddingFeud2(argsList):
-  iEvent = argsList[0]
-  event = GC.getEventInfo(iEvent)
-  kTriggeredData = argsList[1]
-  religion = GC.getReligionInfo(kTriggeredData.eReligion)
+	#iEvent = argsList[0]
+	#event = GC.getEventInfo(iEvent)
+	kTriggeredData = argsList[1]
+	religion = GC.getReligionInfo(kTriggeredData.eReligion)
 
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_WEDDING_FEUD_2_HELP", (GC.getDefineINT("TEMP_HAPPY"), 30, religion.getChar()))
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_WEDDING_FEUD_2_HELP", (GC.getTEMP_HAPPY(), 30, religion.getChar()))
 
 def canDoWeddingFeud3(argsList):
   iEvent = argsList[0]
@@ -7470,33 +7467,17 @@ def doVolcanoSleep(argsList):
   doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT")))
 
 def getHelpVolcanoEruption1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_ERUPTION_1_HELP", ())
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_ERUPTION_1_HELP", ())
 
 def getHelpVolcanoSleep(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_SLEEP_HELP", ())
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_SLEEP_HELP", ())
 
 def getHelpVolcanoExtinction(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_EXTINCTION_HELP", ())
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_EXTINCTION_HELP", ())
 
 ### Fire events for C2C
 
 def doMinorFire(argsList):
-	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
 	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
@@ -7534,7 +7515,6 @@ def doMinorFire(argsList):
 
 
 def doMajorFire(argsList):
-	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
 	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
@@ -7578,7 +7558,6 @@ def doMajorFire(argsList):
 			CyCity.setNumRealBuilding(iBurnBuilding, 0)
 
 def doCatastrophicFire(argsList):
-	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
 	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
@@ -7637,28 +7616,21 @@ def getHelpCatastrophicFire(argsList):
   return TRNSLTR.getText("TXT_KEY_EVENT_FIRE_CATASTROPHIC_1_HELP",())
 
 def canTriggerBlarneyVisit(argsList):
-	if not GAME.getGameTurn() % 50:
-		return True
-	return False
+	return not GAME.getGameTurn() % 50
 
 def doGlobalWarming(argsList):
-	iEvent = argsList[0]
-	kTriggeredData = argsList[1]
-
-	# ToDo - Preallocate all these type indexes
 	FEATURE_ICE = GC.getInfoTypeForString("FEATURE_ICE")
 	TERRAIN_ICE = GC.getInfoTypeForString("TERRAIN_ICE")
 	TERRAIN_PERMAFROST = GC.getInfoTypeForString("TERRAIN_PERMAFROST")
 	TERRAIN_TUNDRA = GC.getInfoTypeForString("TERRAIN_TUNDRA")
 	TERRAIN_TAIGA = GC.getInfoTypeForString("TERRAIN_TAIGA")
 
-	PLOT_LAND = GC.getInfoTypeForString("PLOT_LAND")
+	PLOT_LAND = PlotTypes.PLOT_LAND
 
 	iNumPlots = GC.getMap().numPlots()
 	countIce = 1
 	iGW = 0
-	for i in xrange(iNumPlots):
-		plot = GC.getMap().plotByIndex(i)
+	for plot in GC.getMap().plots():
 		iFeature = plot.getFeatureType()
 		if iFeature == FEATURE_ICE:
 			iGW -= 5
@@ -7737,8 +7709,7 @@ def doGlobalWarming(argsList):
 	maxRand = GAME.getEstimateEndTurn() * iNumPlots
 	iIce = 2*iNumPlots / countIce
 
-	for i in xrange(iNumPlots):
-		plot = GC.getMap().plotByIndex(i)
+	for plot in GC.getMap().plots():
 		randGW = GAME.getSorenRandNum(maxRand, "Global Warming index of plot affected")
 		if iGW <= randGW:
 			continue
@@ -7959,7 +7930,6 @@ def helpNativegood2(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_NATIVEGOOD2_1HELP",())
 
 def ApplyNativegood2(argsList):
-	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
 
 	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
@@ -7992,85 +7962,71 @@ def ApplyNativegood2(argsList):
 ######## Native Good 3 -- gold ###########
 
 def canApplyNativegood3(argsList):
-  return False
-  kTriggeredData = argsList[0]
+	return False
+	kTriggeredData = argsList[0]
 
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if (player.getNativeOpinion()>=4):
-          if (0):
-                  for iLoopPlayer in xrange(GC.getMAX_PC_PLAYERS()):
-                          loopPlayer = GC.getPlayer(iLoopPlayer)
-                          if loopPlayer.isAlive():
-                                  szBuffer = "canApplyNativegood3 -- was ge 4"
-                                  CyInterface().addMessage(iLoopPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_WHITE"), -1, -1, True, True)
-          return 1
-  else:
-          for iLoopPlayer in xrange(GC.getMAX_PC_PLAYERS()):
-                  if (0):
-                          loopPlayer = GC.getPlayer(iLoopPlayer)
-                          if loopPlayer.isAlive():
-                                  szBuffer = "canApplyNativegood3 -- was lt 4"
-                                  CyInterface().addMessage(iLoopPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_WHITE"), -1, -1, True, True)
-          return 0
+	if player.getNativeOpinion() >= 4:
+		if (0):
+			for iLoopPlayer in xrange(GC.getMAX_PC_PLAYERS()):
+				loopPlayer = GC.getPlayer(iLoopPlayer)
+				if loopPlayer.isAlive():
+					szBuffer = "canApplyNativegood3 -- was ge 4"
+					CyInterface().addMessage(iLoopPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_WHITE"), -1, -1, True, True)
+		return 1
+	else:
+		for iLoopPlayer in xrange(GC.getMAX_PC_PLAYERS()):
+			if (0):
+				loopPlayer = GC.getPlayer(iLoopPlayer)
+					if loopPlayer.isAlive():
+						szBuffer = "canApplyNativegood3 -- was lt 4"
+						CyInterface().addMessage(iLoopPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_WHITE"), -1, -1, True, True)
+		return 0
 
 def helpNativegood3(argsList):
-        iEvent = argsList[0]
-        kTriggeredData = argsList[1]
-
-        szHelp = TRNSLTR.getText("TXT_KEY_EVENT_NATIVEGOOD3_1HELP",())
-
-        return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_NATIVEGOOD3_1HELP",())
 
 def ApplyNativegood3(argsList):
-        iEvent = argsList[0]
-        kTriggeredData = argsList[1]
+	kTriggeredData = argsList[1]
 
-        player = GC.getPlayer(kTriggeredData.ePlayer)
-        player.changeGold(50 + GAME.getSorenRandNum(50, "random native gold"))
+	GC.getPlayer(kTriggeredData.ePlayer).changeGold(50 + GAME.getSorenRandNum(50, "random native gold"))
 
 ######## Native Good 4 -- Ancient Tech ###########
 
 def canApplyNativegood4(argsList):
-  return False
-  kTriggeredData = argsList[0]
+	return False
+	kTriggeredData = argsList[0]
 
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if (player.getCurrentEra()<=3):
-          return 0
+	if player.getCurrentEra() <= 3:
+		return 0
 
-  if (player.getNativeOpinion()>=5):
-          if (0):
-                  for iLoopPlayer in xrange(GC.getMAX_PC_PLAYERS()):
-                          loopPlayer = GC.getPlayer(iLoopPlayer)
-                          if loopPlayer.isAlive():
-                                  szBuffer = "canApplyNativegood4 -- was ge 4"
-                                  CyInterface().addMessage(iLoopPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_WHITE"), -1, -1, True, True)
-          return 1
-  else:
-          for iLoopPlayer in xrange(GC.getMAX_PC_PLAYERS()):
-                  if (0):
-                          loopPlayer = GC.getPlayer(iLoopPlayer)
-                          if loopPlayer.isAlive():
-                                  szBuffer = "canApplyNativegood4 -- was lt 4"
-                                  CyInterface().addMessage(iLoopPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_WHITE"), -1, -1, True, True)
-          return 0
+	if player.getNativeOpinion() >= 5:
+		if (0):
+			for iLoopPlayer in xrange(GC.getMAX_PC_PLAYERS()):
+				loopPlayer = GC.getPlayer(iLoopPlayer)
+				if loopPlayer.isAlive():
+					szBuffer = "canApplyNativegood4 -- was ge 4"
+					CyInterface().addMessage(iLoopPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_WHITE"), -1, -1, True, True)
+		return 1
+	else:
+		for iLoopPlayer in xrange(GC.getMAX_PC_PLAYERS()):
+			if (0):
+				loopPlayer = GC.getPlayer(iLoopPlayer)
+				if loopPlayer.isAlive():
+					szBuffer = "canApplyNativegood4 -- was lt 4"
+					CyInterface().addMessage(iLoopPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_WHITE"), -1, -1, True, True)
+		return 0
 
 def helpNativegood4(argsList):
-        iEvent = argsList[0]
-        kTriggeredData = argsList[1]
-
-        szHelp = TRNSLTR.getText("TXT_KEY_EVENT_NATIVEGOOD4_HELP",())
-
-        return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_NATIVEGOOD4_HELP",())
 
 def ApplyNativegood4(argsList):
-        iEvent = argsList[0]
-        kTriggeredData = argsList[1]
+	kTriggeredData = argsList[1]
 
-        player = GC.getPlayer(kTriggeredData.ePlayer)
-        player.grantOldTech()
+	GC.getPlayer(kTriggeredData.ePlayer).grantOldTech()
 
 ### Missions ####
 
@@ -8157,7 +8113,7 @@ def doRemoveWVSlavery(argsList):
 		iUnitFreedSlave = GC.getInfoTypeForString("UNIT_FREED_SLAVE")
 		iUnitEntertain = GC.getInfoTypeForString("UNIT_STORY_TELLER")
 		iUnitMerCaravan = GC.getInfoTypeForString("UNIT_EARLY_MERCHANT_C2C")
-		iUnitFoodMerchant = GC.getInfoTypeForString("UNIT_EARLY_FOOD_MERCHANT_C2C")
+		#iUnitFoodMerchant = GC.getInfoTypeForString("UNIT_EARLY_FOOD_MERCHANT_C2C")
 		iUnitHealth = GC.getInfoTypeForString("UNIT_HEALER")
 
 		bMessage = iPlayer == GAME.getActivePlayer()
@@ -8586,8 +8542,7 @@ def doSacrificeCaptive(argsList):
 	if pUnit == None:
 		return # False call
 
-	pPlayer = GC.getPlayer( pUnit.getOwner( ) )
-	iPlayer = pPlayer.getID( )
+	pPlayer = GC.getPlayer(pUnit.getOwner())
 	pCity = pUnit.plot().getPlotCity()
 
 	if pCity == None:
