@@ -179,9 +179,9 @@
 	<ElementType name="bGraphicalOnly" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNational" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGlobal" content="textOnly" dt:type="boolean"/>
-	<ElementType name="BuildInfo"/>
-	<ElementType name="BuildInfos" content="eltOnly">
-		<element type="BuildInfo" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="CreatingBuild"/>
+	<ElementType name="CreatingBuilds" content="eltOnly">
+		<element type="CreatingBuild" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="TerrainInfo" content="eltOnly">
 		<element type="Type"/>
@@ -680,7 +680,7 @@
 	<!-- Super forts C2C adaptation end -->
 	<ElementType name="ImprovementInfo" content="eltOnly">
 		<element type="Type"/>
-		<element type="BuildInfos" minOccurs="0"/>
+		<element type="CreatingBuilds" minOccurs="0"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
