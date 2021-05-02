@@ -15,7 +15,7 @@ class PediaPromotion:
 		self.H_TOP_ROW = H_TOP_ROW = (H_PEDIA_PAGE - H_BOT_ROW * 3) / 4
 		self.H_BOT_ROW = H_BOT_ROW
 
-		self.S_ICON = S_ICON = H_TOP_ROW - 10
+		self.S_ICON = H_TOP_ROW - 10
 
 		self.Y_MID_ROW = Y_TOP_ROW + H_TOP_ROW
 		self.H_MID_LEFT = H_PEDIA_PAGE - H_BOT_ROW - H_TOP_ROW
@@ -36,7 +36,7 @@ class PediaPromotion:
 		screen = self.main.screen()
 
 		iWidGen				= WidgetTypes.WIDGET_GENERAL
-		iWidJuToPromo		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION
+		#iWidJuToPromo		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION
 		iWidJuToUnitCombat	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT
 		iPanelBlue50		= PanelStyles.PANEL_STYLE_BLUE50
 		iFontGame			= FontTypes.GAME_FONT
