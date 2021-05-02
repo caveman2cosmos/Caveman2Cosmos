@@ -372,13 +372,12 @@ class UnitReName(object):
 
 		#BUGPrint("UnitNameEM-iniB [" + zsUnitNameConv + "]")
 
-		if zsUnitNameConv != "DEFAULT":
-			return zsUnitNameConv
+		#if zsUnitNameConv != "DEFAULT":
+		#	return zsUnitNameConv
 
 		#BUGPrint("UnitNameEM-iniC [" + zsUnitNameConv + "]")
 
-		zsUnitNameConv = UnitNamingOpt.getDefault()
-		return zsUnitNameConv
+		return UnitNamingOpt.getDefault()
 
 
 	def getUnitCombat(self, pUnit):

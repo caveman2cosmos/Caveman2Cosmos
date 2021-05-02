@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <mod id="UnitNaming" name="Unit Naming" author="Ruff_Hi" version="1.0" date="09/02/2007" url="http://forums.civfanatics.com/showthread.php?t=241801">
-	<options id="UnitNaming" file="UnitNamingNew.ini">
+	<options id="UnitNaming" file="Unit Naming.ini">
 		<section id="UnitName">
 			<option id="Enabled" key="Enabled" type="boolean" default="True"/>
 			<option id="UseAdvanced" key="UseAdvanced" type="boolean" default="False" get="isAdvanced" set="setAdvanced"/>
 			<option id="Default" key="Default" type="string" default="^ut^ ^cnt[n][u]^ (^ct^)"/>
-			<accessor get="getByCombatType" set="setByCombatType" args="combatType" id="Combat_%s"/>
+			<!--accessor get="getByCombatType" set="setByCombatType" args="combatType" id="Combat_%s"/-->
 		</section>
 	</options>
 	<options id="AdvUnitNaming" file="Adv Unit Naming.ini">

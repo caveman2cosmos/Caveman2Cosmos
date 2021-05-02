@@ -107,7 +107,6 @@ v. 0.41
 """
 
 from CvPythonExtensions import *
-import CvUtil
 from CvUtil import *
 import CvMapGeneratorUtil
 from CvMapGeneratorUtil import *

@@ -261,15 +261,12 @@
 IsStandAlone = False
 if __name__ != "__main__":
     from CvPythonExtensions import *
-    import CvUtil
     import CvMapGeneratorUtil
 
 from array import array
 from random import random,randint,seed
 import math
 import sys
-import time
-import os
 
 # Options
 OPTION_MapSeed = 10

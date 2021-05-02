@@ -8156,7 +8156,7 @@ bool CvSpawnInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMinAreaPlotsPerUnitType, L"iMinAreaPlotsPerUnitType");
 	pXML->GetOptionalChildXmlValByName(&m_iStartDate, L"iStartDate", -200000);
 	pXML->GetOptionalChildXmlValByName(&m_iEndDate, L"iEndDate", 50000);
-	pXML->GetOptionalChildXmlValByName(&m_bTreatAsBarbarian, L"bTreatAsBarbarian", true);
+	pXML->GetOptionalChildXmlValByName(&m_bTreatAsBarbarian, L"bTreatAsBarbarian", false);
 	pXML->GetOptionalChildXmlValByName(&m_bNeutralOnly, L"bNeutralOnly", true);
 	pXML->GetOptionalChildXmlValByName(&m_bNoSpeedNormalization, L"bNoSpeedNormalization");
 	pXML->GetOptionalChildXmlValByName(&m_bNotInView, L"bNotInView");

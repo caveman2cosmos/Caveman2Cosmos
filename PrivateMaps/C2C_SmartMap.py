@@ -33,7 +33,7 @@ from CvMapGeneratorUtil import TerrainGenerator
 from CvMapGeneratorUtil import FeatureGenerator
 import pickle
 from math import pi
-import sys, os, inspect, _winreg
+import os, _winreg
 
 ##########################################################################
 #stuff the user may want to configure
