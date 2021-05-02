@@ -24503,4 +24503,2953 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Dona la citt&#224; di %s1_city a %s2_player</Italian>
 		<Spanish>Donarle la ciudad de %s1_city a %s2_player</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_LEGAL_LINE_1</Tag>
+		<English>&#169;2007 Take-Two Interactive Software and its subsidiaries. Developed by Firaxis Games. Sid Meier's Civilization IV: Warlords, Civ, Civilization, 2K Games, the 2K logo, Firaxis Games, the Firaxis Games logo and Take-Two Interactive Software are all trademarks and/or registered trademarks of Take-Two Interactive Software, Inc. in the USA and/or foreign countries.  GameSpy and the "Powered by GameSpy" design are trademarks of GameSpy Industries, Inc. All other marks and trademarks are the property of their respective owners. Uses Bink Video (Copyright &#169;1997-2007 by RAD Game Tools, Inc.). Uses Miles Sound System &#169;1991-2007 by RAD Game Tools, Inc.). Portions of this software are included under license from Numerical Design, Ltd. (&#169;2007) and Scaleform Corporation (&#169;2007). Unauthorized copying,reverse engineering, transmission, public performance, rental, pay for play, or circumvention of copy protection is strictly prohibited. All rights reserved. </English>
+		<French>&#169;2007 Take-Two Interactive Software et ses filiales. D&#233;velopp&#233; par Firaxis Games. Sid Meier's Civilization IV: Warlords, Civ, Civilization, 2K Games, le logo 2K, Firaxis Games, le logo Firaxis Games et Take-Two Interactive Software sont des marques commerciales et/ou des marques d&#233;pos&#233;es de Take-Two Interactive Software, Inc. aux Etats-Unis et/ou les pays &#233;trangers. GameSpy et l'inscription "Powered by GameSpy" sont des marques commerciales de GameSpy Industries, Inc. Toutes les autres marques et marques commerciales sont la propri&#233;t&#233; de leurs propri&#233;taires respectifs. Utilise Bink Video (Copyright &#169;1997-2007 par RAD Game Tools, Inc.). Utilise Miles Sound System (Copyright &#169;1991-2007 par RAD Game Tools, Inc.). Des &#233;l&#233;ments de ce logiciel sont utilis&#233;s avec l'accord de Numerical Design, Ltd. (&#169;2007) et de Scaleform Corporation (&#169;2007). La copie non autoris&#233;e, la d&#233;compilation, la transmission, la pr&#233;sentation publique, la location, l'utilisation commerciale ou le contournement des dispositifs anti-copie sont strictement interdits. Tous droits r&#233;serv&#233;s.</French>
+		<German>&#169; 2007 Take-Two Interactive Software und Tochtergesellschaften. Entwickelt von Firaxis Games. Sid Meier's Civilization IV: Warlords, Civ, Civilization, 2K Games, das 2K Games-Logo, Firaxis Games, das Firaxis Game-Logo und Take-Two Interactive Software sind Warenzeichen bzw. eingetragene Warenzeichen von Take-Two Interactive Software, Inc. GameSpy und das "Powered by GameSpy"-Design sind Warenzeichen von GameSpy Industries, Inc. Alle anderen Warenzeichen sind Eigentum der jeweiligen Inhaber. Verwendet Bink Video (Copyright &#169; 1997 - 2007 RAD Game Tools, Inc.). Verwendet Miles Sound System &#169; 1991 - 2007 RAD Game Tools, Inc.). Teile dieser Software sind unter Lizenz von Numerical Design, Ltd. (&#169; 2007) und Scaleform Corporation (&#169; 2007) enthalten. Das unberechtigte Kopieren, die Zur&#252;ckentwicklung (Reverse Engineering), &#220;bertragung, &#246;ffentliche Auff&#252;hrung, Vermietung, das Spielen gegen Zahlung eines Entgelts und die Umgehung von Urheberschutzma&#223;nahmen sind strengstens untersagt. Alle Rechte vorbehalten. </German>
+		<Italian>&#169;2007 Take-Two Interactive Software e sue sussidiarie. Sviluppato da Firaxis Games. Sid Meier's Civilization IV: Warlords, Civ, Civilization, 2K Games, il logo 2K, Firaxis Games, il logo Firaxis Games e Take-Two Interactive Software sono tutti marchi e/o marchi registrati di Take-Two Interactive Software, Inc. in USA e/o altre nazioni. GameSpy e il design "Powered by GameSpy" sono marchi di GameSpy Industries, Inc. Tutti gli altri marchi e marchi registrati sono di propriet&#224; dei rispettivi detentori. Utilizza Bink Video, Copyright &#169; 1997-2007 di RAD Game Tools, Inc. Utilizza Miles Sound System, Copyright &#169; 1991-2007 di RAD Game Tools, Inc.). Parti di questo software sono incluse sotto licenza. &#169;2007 Numerical Design, Ltd. e Scaleform Corporation (&#169;2007). La copia non autorizzata, la proiezione pubblica, il noleggio, il gioco a pagamento o l'aggiramento della protezione &#232; rigorosamente proibita. Tutti i diritti riservati. </Italian>
+		<Spanish>&#169;2007 Take-Two Interactive Software y sus subsidiarias. Desarrollado por Firaxis Games. Sid Meier_s Civilization IV: Warlords, Civ, Civilization, 2K Games, el logotipo de 2K, Firaxis Games, el logotipo de Firaxis Games y Take-Two Interactive Software son marcas comerciales o marcas comerciales registradas de Take-Two Interactive Software, Inc.  GameSpy y el dise&#241;o "Powered by GameSpy" son marcas comerciales de GameSpy Industries, Inc. Todas las dem&#225;s marcas y marcas comerciales pertenecen a sus respectivos titulares. Se utiliza Bink Video (Copyright &#169;1997-2007 de RAD Game Tools, Inc.). Se utiliza Miles Sound System &#169;1991-2007 de RAD Game Tools, Inc.). Algunas partes de este software se incluyen con licencia de Numerical Design, Ltd. (&#169;2007) y Scaleform Corporation (&#169;2007). Queda estrictamente prohibida cualquiera de las siguientes acciones sin autorizaci&#243;n previa: copia, ingenier&#237;a inversa, transmisi&#243;n, demostraci&#243;n p&#250;blica, alquiler, pago por uso del programa o intento de saltarse la protecci&#243;n anticopia. Todos los derechos reservados. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_LEGAL_LINE_2</Tag>
+		<English>All trademarks are the property of their respective owners.</English>
+		<French>Toutes les marques commerciales sont la propri&#233;t&#233; de leurs d&#233;tenteurs respectifs.</French>
+		<German>Alle Warenzeichen sind Eigentum der jeweiligen Inhaber.</German>
+		<Italian>Tutti i marchi registrati sono propriet&#224; dei rispettivi detentori.</Italian>
+		<Spanish>Todas las marcas comerciales pertenecen a sus respectivos titulares.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU</Tag>
+		<English>Open Main Menu</English>
+		<French>Ouvrir le menu principal</French>
+		<German>Hauptmen&#252; &#246;ffnen</German>
+		<Italian>Apri il menu principale</Italian>
+		<Spanish>Abrir men&#250; principal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_SETUP_OPTIONS</Tag>
+		<English>Options</English>
+		<French>Options</French>
+		<German>Optionen</German>
+		<Italian>Opzioni</Italian>
+		<Spanish>Opciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_FORCED_DISCONNECT_INGAME</Tag>
+		<English>Someone else has logged in using this account.  Exiting to main menu...</English>
+		<French>Quelqu'un s'est connect&#233; en utilisant votre compte. Retour au menu principal...</French>
+		<German>Es ist bereits jemand auf diesem Account eingeloggt. Zur&#252;ck zum Hauptmen&#252; ...</German>
+		<Italian>Qualcun altro ha effettuato il login usando questo account. Ritorno al menu principale...</Italian>
+		<Spanish>Otra persona ha iniciado sesi&#243;n con esta cuenta.  Saliendo al men&#250; principal...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_PLAYER</Tag>
+		<English>Player</English>
+		<French>Joueur</French>
+		<German>Spieler</German>
+		<Italian>Giocatore</Italian>
+		<Spanish>Jugador</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_BALANCED</Tag>
+		<English>Balanced</English>
+		<French>Equilibr&#233;</French>
+		<German>Ausgewogen</German>
+		<Italian>Bilanciato</Italian>
+		<Spanish>Equilibrado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_1_PER_PLAYER</Tag>
+		<English>1 Per Player</English>
+		<French>1 par joueur</French>
+		<German>1 pro Spieler</German>
+		<Italian>1 per giocatore</Italian>
+		<Spanish>1 por jugador</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_ARBORIA_DESCR</Tag>
+		<English>A massive single continent contains a grassland-forest paradise, rich in wildlife.</English>
+		<French>Un immense continent contenant une for&#234;t luxuriante dot&#233;e d'une faune et d'une flore extr&#234;mement riches.</French>
+		<German>Auf einem riesigen einzelnen Kontinent befindet sich ein Paradies aus Grasland und Wald mit reicher Tier- und Pflanzenwelt.</German>
+		<Italian>Un singolo, enorme continente che contiene foreste e praterie, ricche di fauna.</Italian>
+		<Spanish>Un paraíso de praderas y bosques, rico en fauna, se concentra en un continente, único y enorme.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_ARCHIPELAGO_DESCR</Tag>
+		<English>The ultimate water map for Civilization IV. Powerful navies not optional!</English>
+		<French>La carte marine par excellence pour Civilization IV. Il faudra une flotte puissante !</French>
+		<German>Die ultimative Wasserkarte f&#252;r Civilization IV. Schlagkr&#228;ftige Marineflotten sind hier ein Muss!</German>
+		<Italian>La mappa acquatica definitiva di Civilization IV: una potente flotta navale &#232; d'obbligo!</Italian>
+		<Spanish>El mapa acu&#225;tico definitivo para Civilization IV. Las armadas poderosas no son opcionales.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_ARCHIPELAGO</Tag>
+		<English>Archipelago</English>
+		<French>Archipel</French>
+		<German>Archipel</German>
+		<Italian>Arcipelago</Italian>
+		<Spanish>Archipi&#233;lago</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_ARITITY</Tag>
+		<English>Aridity Level</English>
+		<French>Taux d'aridité</French>
+		<German>Dürrestufe</German>
+		<Italian>Livello aridità</Italian>
+		<Spanish>Nivel de aridez</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_BALANCED_DESCR</Tag>
+		<English>A round Pangaea where all players are guaranteed to have the most vital strategic resources within a few plots of their starting location.</English>
+		<French>Une Pang&#233;e circulaire dans laquelle tous les joueurs disposent de toutes les ressources strat&#233;giques &#224; quelques cases de leur point de d&#233;part.</French>
+		<German>Ein runder Pang&#228;a-Kontinent, auf dem allen Spielern im Umkreis weniger Gel&#228;ndefelder um ihre Startstandorte die meisten lebensnotwendigen strategischen Ressourcen zur Verf&#252;gung stehen.</German>
+		<Italian>Una Pangea circolare dove tutti i giocatori dispongono delle risorse strategiche fondamentali a poca distanza dal punto di partenza.</Italian>
+		<Spanish>Una Pangea perfecta en la que todos los jugadores cuentan con los recursos estrat&#233;gicos m&#225;s vitales a pocas casillas de su lugar de salida.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_BIG_AND_SMALL_DESCR</Tag>
+		<English>Realistic world with highly random landmasses big and small. Most civs starts on continents. Some may start in island chains.</English>
+		<French>La carte affiche en m&#234;me temps les grands et les petits continents. Vous pouvez les s&#233;parer ou les laisser se superposer.</French>
+		<German>Die Karte weist eine Mischung gro&#223;er und kleiner Landmassen aus. Sie k&#246;nnen die beiden geografischen Landfl&#228;chenarten separieren oder zuf&#228;llig mischen.</German>
+		<Italian>La mappa fornisce un mix di grandi e piccole zone di terraferma. Puoi tenere separati i due tipi oppure scegliere una sovrapposizione casuale.</Italian>
+		<Spanish>El mapa proporciona una combinaci&#243;n de masas terrestres grandes y peque&#241;as. Es posible mantener ambos tipos separados o bien solaparlos en un conglomerado creado al azar.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_CENTER_REGION</Tag>
+		<English>Center Region</English>
+		<French>R&#233;gion du centre</French>
+		<German>Zentralgebiet</German>
+		<Italian>Centra regione</Italian>
+		<Spanish>Centrar regi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_CLUSTERED</Tag>
+		<English>Clustered</English>
+		<French>Regroup&#233;es</French>
+		<German>Geb&#252;ndelt</German>
+		<Italian>Gruppi</Italian>
+		<Spanish>Api&#241;adas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_CONTINENTS_DESCR</Tag>
+		<English>Randomly generated map with two or more continents.</English>
+		<French>Carte g&#233;n&#233;r&#233;e al&#233;atoirement avec deux continents ou plus.</French>
+		<German>Zuf&#228;llig generierte Karte mit zwei oder mehr Kontinenten.</German>
+		<Italian>Genera casualmente una mappa con due o pi&#249; continenti.</Italian>
+		<Spanish>Mapa generado al azar con dos o m&#225;s continentes.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_CONTINENTS_SIZE</Tag>
+		<English>Continents Size</English>
+		<French>Taille des continents</French>
+		<German>Kontinentgr&#246;&#223;e</German>
+		<Italian>Dimensione dei continenti</Italian>
+		<Spanish>Tama&#241;o de los continentes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_COPY</Tag>
+		<English>Copy</English>
+		<French>Copie</French>
+		<German>Kopie</German>
+		<Italian>Copia</Italian>
+		<Spanish>Copia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_CUSTOM_CONTINENTS_DESCR</Tag>
+		<English>You choose how many continents there will be.</English>
+		<French>Vous choisissez le nombre de continents que comptera le monde.</French>
+		<German>W&#228;hlen Sie, wie viele Kontinente auf der Karte vorhanden sein sollen.</German>
+		<Italian>Puoi scegliere quanti continenti saranno presenti nella mappa.</Italian>
+		<Spanish>T&#250; escoges cu&#225;ntos continentes habr&#225;.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_DENSE_PEAKS</Tag>
+		<English>Dense Peaks</English>
+		<French>Sommets denses</French>
+		<German>Hohe Gipfeldichte</German>
+		<Italian>Montagne numerose</Italian>
+		<Spanish>Picos densos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_DESERT</Tag>
+		<English>Desert</English>
+		<French>D&#233;sert</French>
+		<German>W&#252;ste</German>
+		<Italian>Deserto</Italian>
+		<Spanish>Desierto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_DONUT_DESCR</Tag>
+		<English>Circular continent on a square map. You control the type of terrain that will appear in the hole of the donut.</English>
+		<French>Continent circulaire sur une carte carr&#233;e. Vous contr&#244;lerez le type de terrain qui appara&#238;tra au centre du cercle.</French>
+		<German>Runder Kontinent auf einer quadratischen Karte. Sie bestimmen die Geländeart im Loch des Donuts.</German>
+		<Italian>Un continente circolare su una mappa quadrata. Tu avrai il controllo del tipo di terreno che apparirà nel centro della &quot;ciambella&quot;.</Italian>
+		<Spanish>Un continente circular en un mapa cuadrado. Controlas todos los tipos de terreno que aparecerán en el agujero del roscón.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_EARTH_70</Tag>
+		<English>Earthlike (70%% water)</English>
+		<French>Semblable à la Terre (70% d'eau)</French>
+		<German>Erdähnlich (70%% Wasser)</German>
+		<Italian>Simile alla Terra (70%% acqua)</Italian>
+		<Spanish>Similar a la Tierra (70%% agua)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_EARTH_60</Tag>
+		<English>60%% water</English>
+		<French>60% d'eau</French>
+		<German>60%% Wasser</German>
+		<Italian>60%% acqua</Italian>
+		<Spanish>60%% agua</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_EXTRAS</Tag>
+		<English>Extras</English>
+		<French>Extras</French>
+		<German>Extras</German>
+		<Italian>Extra</Italian>
+		<Spanish>Extras</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_FEW_TINY_ISLANDS</Tag>
+		<English>Few Tiny Islands</English>
+		<French>Quelques &#238;lots</French>
+		<German>Wenige winzige Inseln</German>
+		<Italian>Poche isole minuscole</Italian>
+		<Spanish>Pocas islas diminutas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_FRACTAL_DESCR</Tag>
+		<English>An unpredictable map type.</English>
+		<French>Un type de carte impr&#233;visible.</French>
+		<German>Ein unvorhersehbarer Kartentyp.</German>
+		<Italian>Un tipo di mappa imprevedibile.</Italian>
+		<Spanish>Un tipo de mapa inesperado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_GLOBAL_HIGHLANDS_DESCR</Tag>
+		<English>A global version of the Highlands map, this map brings a wide variety of mountainous options to a standard oceanic world. This is an extra large map type!</English>
+		<French>Enti&#232;rement recouverte de collines et de montagnes, cette carte offre une grande diversit&#233; de r&#233;gions rocheuses. Attention, cette carte est immense !</French>
+		<German>In dieser globalen Version der Hochlandkarte wird der ozeanischen Welt eine Vielzahl von Gebirgen hinzugefügt. Eine extrem große Karte!</German>
+		<Italian>Versione globale di quella delle Highlands, questa mappa offre diverse opzioni montuose in un mondo tipicamente oceanico. Si tratta di una mappa grandissima!</Italian>
+		<Spanish>Una versión completa del mapa de las Tierras Altas. Dicho mapa da una amplia variedad de opciones montañosas para un mundo oceánico estándar. &#201;ste es un mapa de tipo extragrande.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_HILLS</Tag>
+		<English>Hills</English>
+		<French>Collines</French>
+		<German>Hills</German>
+		<Italian>Colline</Italian>
+		<Spanish>Colina</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_INLAND_SEA_DESCR</Tag>
+		<English>A large sea inhabits the center, surrounded by a thick ring of land.</English>
+		<French>Un vaste oc&#233;an central est entour&#233; d'un large anneau de terre.</French>
+		<German>In der Mitte dieser Karte befindet sich ein gro&#223;es Meer, das von einem dicken Landring umschlossen ist.</German>
+		<Italian>Un ampio mare riempie il centro della mappa, circondato da uno spesso anello di terra.</Italian>
+		<Spanish>Un gran mar puebla el centro, rodeado por un grueso anillo de tierra.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_INVERSION</Tag>
+		<English>Inversion</English>
+		<French>Inversion</French>
+		<German>Invertierung</German>
+		<Italian>Inversione</Italian>
+		<Spanish>Inversi&#243;n</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_ISLANDS_DESCR</Tag>
+		<English>Each player starts on their own randomly generated island. Extra islands (large or small) may be added.</English>
+		<French>Chaque joueur commence sur une &#238;le g&#233;n&#233;r&#233;e al&#233;atoirement. Des &#238;les suppl&#233;mentaires de tailles diverses peuvent &#233;galement appara&#238;tre.</French>
+		<German>Jeder Spieler beginnt auf einer eigenen zuf&#228;llig generierten Insel. Es k&#246;nnen zus&#228;tzliche Inseln (gro&#223; oder klein) hinzugef&#252;gt werden.</German>
+		<Italian>Ogni giocatore comincia su una propria isola, generata casualmente. Possono aggiungersi delle isole extra (grosse o piccole).</Italian>
+		<Spanish>Cada jugador empieza en una isla generada al azar. Pueden a&#241;adirse islas adicionales (mayores o menores).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_ISLANDS</Tag>
+		<English>Islands</English>
+		<French>Iles</French>
+		<German>Inseln</German>
+		<Italian>Isole</Italian>
+		<Spanish>Islas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_ISLANDS_MIXED_IN</Tag>
+		<English>Islands Mixed In</English>
+		<French>M&#233;lange des &#238;les</French>
+		<German>Gemischte Inseln</German>
+		<Italian>Isole mischiate</Italian>
+		<Spanish>Islas mezcladas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_ISLANDS_SIZE</Tag>
+		<English>Islands Size</English>
+		<French>Taille des &#238;les</French>
+		<German>Inselgr&#246;&#223;e</German>
+		<Italian>Dimensione delle isole</Italian>
+		<Spanish>Tama&#241;o de las islas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_ISLAND_OVERLAP</Tag>
+		<English>Island Overlap</English>
+		<French>Superposition des &#238;les</French>
+		<German>Insel&#252;berlagerung</German>
+		<Italian>Sovrapposizione isole</Italian>
+		<Spanish>Solapamiento de islas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_ISLAND_REGION_SEPARATE</Tag>
+		<English>Island Region Separate</English>
+		<French>S&#233;paration des r&#233;gions insulaires</French>
+		<German>Separate Inselregionen</German>
+		<Italian>Separa regioni isolane</Italian>
+		<Spanish>Regi&#243;n de islas separada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_LAKES</Tag>
+		<English>Lakes (30%% water)</English>
+		<French>Lacs (30% d'eau)</French>
+		<German>Seen (30%% Wasser)</German>
+		<Italian>Laghi (30%% acqua)</Italian>
+		<Spanish>Lagos (30%% agua)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_LAKES_DESCR</Tag>
+		<English>Randomly generated world without oceans but dotted by lakes.</English>
+		<French>Le monde g&#233;n&#233;r&#233; al&#233;atoirement ne contient pas d'oc&#233;an, uniquement des lacs.</French>
+		<German>Zuf&#228;llig generierte Welt ohne Ozeane, aber mit Seen gespickt.</German>
+		<Italian>Genera casualmente una mappa senza oceani, ma con diversi laghi.</Italian>
+		<Spanish>Un mundo generado al azar, sin oc&#233;anos pero salpicado de lagos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_LANDMASS_SIZE</Tag>
+		<English>Landmass Size</English>
+		<French>Taille continents</French>
+		<German>Landmassengr&#246;&#223;e</German>
+		<Italian>Dimensione massa terra</Italian>
+		<Spanish>Tama&#241;o de la masa de tierra</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_LANDMASS_TYPE</Tag>
+		<English>Landmass Type</English>
+		<French>Type continents</French>
+		<German>Landmassentyp</German>
+		<Italian>Tipo massa terra</Italian>
+		<Spanish>Tipo de masa de tierra</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_LEFT_AND_RIGHT_DESCR</Tag>
+		<English>2-4 Continents arranged in East and West hemispheres, separated by ocean. Smaller islands may also be present.</English>
+		<French>2 &#224; 4 continents organis&#233;s en deux h&#233;misph&#232;res, s&#233;par&#233;s par l'oc&#233;an. De plus petites &#238;les peuvent aussi &#234;tre pr&#233;sentes.</French>
+		<German>2 - 4 Kontinente in der Ost- und der Westhemisphäre, die durch einen Ozean voneinander getrennt sind. Es könnte auch kleinere Inseln geben.</German>
+		<Italian>2-4 continenti disposti negli emisferi orientale e occidentale, separati dall'oceano. Possono esserci anche isole più piccole.</Italian>
+		<Spanish>Entre dos y cuatro continentes situados en ambos hemisferios, separados por el océano. También habrá pequeñas islas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_MANY_TINY_ISLANDS</Tag>
+		<English>Many Tiny Islands</English>
+		<French>Beaucoup d'&#238;lots</French>
+		<German>Viele winzige Inseln</German>
+		<Italian>Molte isole minuscole</Italian>
+		<Spanish>Muchas islas diminutas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_MASSIVE_CONTINENTS</Tag>
+		<English>Massive Continents</English>
+		<French>Continents massifs</French>
+		<German>Massive Kontinente</German>
+		<Italian>Continenti enormi</Italian>
+		<Spanish>Continentes enormes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_MEDITERRANEAN</Tag>
+		<English>Mediterranean</English>
+		<French>Méditerranéen</French>
+		<German>Mediterran</German>
+		<Italian>Mediterraneo</Italian>
+		<Spanish>Mediterráneo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_MIRROR_DESCR</Tag>
+		<English>Land-based map, randomly generates half a world in the west then mirrors it exactly in the east.</English>
+		<French>Cette carte "terrestre" g&#233;n&#232;re al&#233;atoirement une moiti&#233; de monde &#224; l'ouest, qui est ensuite exactement reproduite &#224; l'est.</French>
+		<German>Bei dieser landorientierten Karte wird zun&#228;chst eine H&#228;lfte der Welt im Westen generiert und diese wird dann im Osten exakt gespiegelt.</German>
+		<Italian>Una mappa terrestre, genera casualmente mezzo mondo nella parte ovest e lo ribalta esattamente nella parte est.</Italian>
+		<Spanish>Un mapa principalmente de tierra que genera al azar medio mundo en el oeste y lo refleja exactamente en el este.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_MIRROR_TYPE</Tag>
+		<English>Mirror Type</English>
+		<French>Type miroir</French>
+		<German>Spiegelungsart</German>
+		<Italian>Tipo a specchio</Italian>
+		<Spanish>Tipo de espejo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_MOUNTAIN_PATTERN</Tag>
+		<English>Mountain Pattern</English>
+		<French>Forme montagnes</French>
+		<German>Bergmuster</German>
+		<Italian>Struttura montuosa</Italian>
+		<Spanish>Disposici&#243;n de las monta&#241;as</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_MOUNTAIN_DENSITY</Tag>
+		<English>Mountain Density</English>
+		<French>Densit&#233; montagnes</French>
+		<German>Bergdichte</German>
+		<Italian>Densit&#224; montuosa</Italian>
+		<Spanish>Densidad de las monta&#241;as</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_NATURAL</Tag>
+		<English>Natural</English>
+		<French>Naturel</French>
+		<German>Nat&#252;rlich</German>
+		<Italian>Naturale</Italian>
+		<Spanish>Natural</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_NORMAL_CONTINENTS</Tag>
+		<English>Normal Continents</English>
+		<French>Continents normaux</French>
+		<German>Normale Kontinente</German>
+		<Italian>Continenti normali</Italian>
+		<Spanish>Continentes normales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_NORMAL_PEAKS</Tag>
+		<English>Normal Peaks</English>
+		<French>Sommets normaux</French>
+		<German>Normale Gipfeldichte</German>
+		<Italian>Montagne normali</Italian>
+		<Spanish>Picos normales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_NO_JUNGLES</Tag>
+		<English>No Jungle</English>
+		<French>Aucune jungle</French>
+		<German>Kein Dschungel</German>
+		<Italian>Nessuna giungla</Italian>
+		<Spanish>Sin selva</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_NO_ICE</Tag>
+		<English>No ice</English>
+		<French>Pas de glace</French>
+		<German>Kein Eis</German>
+		<Italian>No ghiaccio</Italian>
+		<Spanish>Sin hielo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_NO_TINY_ISLANDS</Tag>
+		<English>No Tiny Islands</English>
+		<French>Pas d'&#238;lots</French>
+		<German>Keine winzigen Inseln</German>
+		<Italian>Nessuna isola minuscola</Italian>
+		<Spanish>Sin islas diminutas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_NUMBER_OF_CONTINENTS</Tag>
+		<English>Number of Continents</English>
+		<French>Nombre de continents</French>
+		<German>Anzahl der Kontinente</German>
+		<Italian>Numero di continenti</Italian>
+		<Spanish>N&#250;mero de continentes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_NUMBER_OF_LARGE_ISLANDS</Tag>
+		<English>Number of Large Islands</English>
+		<French>Nombre de grandes &#238;les</French>
+		<German>Anzahl der gro&#223;en Inseln</German>
+		<Italian>Numero di isole grandi</Italian>
+		<Spanish>N&#250;mero de grandes islas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_NUMBER_OF_TINY_ISLANDS</Tag>
+		<English>Number of Tiny Islands</English>
+		<French>Nombre d'&#238;lots</French>
+		<German>Anzahl der winzigen Inseln</German>
+		<Italian>Numero di isole minuscole</Italian>
+		<Spanish>N&#250;mero de islas diminutas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_OCEAN</Tag>
+		<English>Ocean</English>
+		<French>Oc&#233;an</French>
+		<German>Ozean</German>
+		<Italian>Oceano</Italian>
+		<Spanish>Oc&#233;ano</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_ONE_PER_TEAM</Tag>
+		<English>One Per Team</English>
+		<French>1 par &#233;quipe</French>
+		<German>1 pro Team</German>
+		<Italian>Una per squadra</Italian>
+		<Spanish>Una por equipo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_OPPOSITE</Tag>
+		<English>Opposite</English>
+		<French>Inverse</French>
+		<German>Entgegengesetzt</German>
+		<Italian>Opposto</Italian>
+		<Spanish>Opuesto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_PANGAEA</Tag>
+		<English>Pangaea</English>
+		<French>Pangée</French>
+		<German>Pangäa</German>
+		<Italian>Pangea</Italian>
+		<Spanish>Pangea</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_PANGAEA_DESCR</Tag>
+		<English>Pan-Gaia: "One Earth," a massive single continent.</English>
+		<French>Pan-Gaia: "Une terre", un seul et &#233;norme continent.</French>
+		<German>Pang&#228;a: "Eine Erde", ein einziger gewaltiger Kontinent.</German>
+		<Italian>Pan-Gaia: "Una terra", un enorme continente.</Italian>
+		<Spanish>Pan-gea ("una Tierra"), un solo continente enorme.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_PEAKS</Tag>
+		<English>Peaks</English>
+		<French>Montagnes</French>
+		<German>Gipfel</German>
+		<Italian>Montagne</Italian>
+		<Spanish>Picos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_PRESSED</Tag>
+		<English>Pressed</English>
+		<French>Serr&#233;</French>
+		<German>Gedr&#228;ngt</German>
+		<Italian>Pressato</Italian>
+		<Spanish>Escaso</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_RANDOM</Tag>
+		<English>Random</English>
+		<French>Al&#233;atoire</French>
+		<German>Zuf&#228;llig</German>
+		<Italian>Casuale</Italian>
+		<Spanish>Al azar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_REFLECTION</Tag>
+		<English>Reflection</English>
+		<French>Reflet</French>
+		<German>Reflexion</German>
+		<Italian>Riflesso</Italian>
+		<Spanish>Reflexi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_RIDGELINES</Tag>
+		<English>Ridgelines</English>
+		<French>Lignes de cr&#234;tes</French>
+		<German>Gebirgsketten</German>
+		<Italian>Catene</Italian>
+		<Spanish>Cadenas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_SCATTERED</Tag>
+		<English>Scattered</English>
+		<French>Dispers&#233;es</French>
+		<German>Vereinzelt</German>
+		<Italian>Sparsa</Italian>
+		<Spanish>Diseminadas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_SEVERAL_EXTRAS</Tag>
+		<English>Several Extras</English>
+		<French>Plusieurs extras</French>
+		<German>Einige Extras</German>
+		<Italian>Diversi extra</Italian>
+		<Spanish>Extras varios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_SHORELINE</Tag>
+		<English>Shoreline</English>
+		<French>C&#244;te</French>
+		<German>K&#252;ste</German>
+		<Italian>Riva</Italian>
+		<Spanish>Litoral</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_SHUFFLE_DESCR</Tag>
+		<English>Randomly creates a Pangaea, Continents, Archipelago, or Fractal map.</English>
+		<French>Cr&#233;e al&#233;atoirement une carte Pang&#233;e, Continents, Archipel ou Mixte.</French>
+		<German>Erstellt auf Zufallsbasis eine Pang&#228;a-, Kontinent-, Archipel- oder Fraktal-Karte.</German>
+		<Italian>Genera casualmente una mappa Pangea, Continenti, Arcipelago o Frattale.</Italian>
+		<Spanish>Genera al azar un mapa de tipo Pangea, Continentes, Archipi&#233;lago o Fractal.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_SMALL_CONTINENTS</Tag>
+		<English>Small Continents</English>
+		<French>Petits continents</French>
+		<German>Kleine Kontinente</German>
+		<Italian>Continenti piccoli</Italian>
+		<Spanish>Continentes peque&#241;os</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_SMALL_LAKES</Tag>
+		<English>Small Lakes</English>
+		<French>Petits lacs</French>
+		<German>Kleine Seen</German>
+		<Italian>Laghi piccoli</Italian>
+		<Spanish>Lagos peque&#241;os</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_SNAKY_CONTINENTS</Tag>
+		<English>Snaky Continents</English>
+		<French>Continents sinueux</French>
+		<German>Gewundene Kontinente</German>
+		<Italian>Continenti tortuosi</Italian>
+		<Spanish>Continentes tortuosos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_SOLID</Tag>
+		<English>Solid</English>
+		<French>Solide</French>
+		<German>Solide</German>
+		<Italian>Solido</Italian>
+		<Spanish>Compacto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_START_TOGETHER</Tag>
+		<English>Start Together</English>
+		<French>Commencer ensemble</French>
+		<German>Gemeinsamer Start</German>
+		<Italian>Cominciare assieme</Italian>
+		<Spanish>Empezar juntos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_START_SEPARATED</Tag>
+		<English>Start Separated</English>
+		<French>Commencer s&#233;par&#233;ment</French>
+		<German>Separater Start</German>
+		<Italian>Cominciare separati</Italian>
+		<Spanish>Empezar separados</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_START_ANYWHERE</Tag>
+		<English>Start Anywhere</English>
+		<French>Commencer n'importe o&#249;</French>
+		<German>Beliebiger Start</German>
+		<Italian>Cominciare dappertutto</Italian>
+		<Spanish>Empezar en cualquier lado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_TEAM_SETTING</Tag>
+		<English>Team Setting</English>
+		<French>Param&#232;tres &#233;quipes</French>
+		<German>Teameinstellung</German>
+		<Italian>Impostazione squadre</Italian>
+		<Spanish>Configuraci&#243;n del equipo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_TERRA</Tag>
+		<English>Randomized Actual Earth</English>
+		<French>Randomisation de la Terre actuelle</French>
+		<German>Zufällige Anordnung der Erde</German>
+		<Italian>Terra odierna casuale</Italian>
+		<Spanish>Tierra real al azar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_TERRA_OLD_WORLD_START</Tag>
+		<English>Randomized Actual Earth (Old World Start)</English>
+		<French>Randomisation de la Terre actuelle (départ : Antiquité)</French>
+		<German>Zufällige Anordnung der Erde (Start Alte Welt)</German>
+		<Italian>Terra odierna casuale (partenza Vecchio Mondo)</Italian>
+		<Spanish>Tierra real al azar (inicio en Viejo Mundo)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_TERRA_DESCR</Tag>
+		<English>Terra generates random land masses similar to those of the planet Earth. All players begin in the Old World. These maps are extra large!</English>
+		<French>Des continents similaires &#224; ceux de la Terre sont cr&#233;&#233;s al&#233;atoirement. Tous les joueurs commencent dans l'Antiquit&#233;. Ces cartes sont immenses !</French>
+		<German>Terra generiert zuf&#228;llige Landfl&#228;chen, &#228;hnlich wie die auf dem Planeten Erde. Alle Spieler beginnen zun&#228;chst in der Alten Welt. Diese Kartenvarianten sind besonders gro&#223;!</German>
+		<Italian>Terra genera delle masse terrestri casuali simili a quelle del nostro pianeta. Tutti i giocatori iniziano nel Vecchio Mondo. Queste mappe sono grandissime!</Italian>
+		<Spanish>Terra genera al azar masas de tierra similares a las del planeta Tierra. Todos los jugadores empiezan en el Viejo Mundo. &#161;Estos mapas son supergrandes!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_THIN_PEAKS</Tag>
+		<English>Thin Peaks</English>
+		<French>Sommets rares</French>
+		<German>Geringe Gipfeldichte</German>
+		<Italian>Montagne diradate</Italian>
+		<Spanish>Picos esbeltos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_TILTED_AXIS_DESCR</Tag>
+		<English>Worlds with a tilted planetary axis (turned on their side) have more severe summers and winters, but their overall climates are similar to standard worlds.</English>
+		<French>Les mondes dont l'axe plan&#233;taire a &#233;t&#233; renvers&#233; connaissent des &#233;t&#233;s plus torrides et des hivers plus rudes, mais sont similaires aux mondes normaux.</French>
+		<German>In Welten mit einer schiefen planetaren Achse (seitlich gedreht) gibt es extremere Sommer und Winter, die allgemeinen Klimabedingungen &#228;hneln jedoch denen der Standardwelten.</German>
+		<Italian>I mondi con l'asse planetario inclinato (ruotato sul fianco) hanno estati e inverni pi&#249; severi, ma il clima generale &#232; simile ai mondi normali.</Italian>
+		<Spanish>Los mundos con un eje inclinado tienen inviernos y veranos m&#225;s inclementes pero su clima en general es similar al de los mundos est&#225;ndar.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_TINY_ISLANDS</Tag>
+		<English>Tiny Islands</English>
+		<French>Ilots</French>
+		<German>Winzige Inseln</German>
+		<Italian>Isole minuscole</Italian>
+		<Spanish>Islas diminutas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_VARIED</Tag>
+		<English>Varied</English>
+		<French>Vari&#233;</French>
+		<German>Abwechslungsreich</German>
+		<Italian>Vario</Italian>
+		<Spanish>Variado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_VARIOUS_TINY_ISLANDS</Tag>
+		<English>Various Tiny Islands</English>
+		<French>Plusieurs &#238;lots vari&#233;s</French>
+		<German>Diverse winzige Inseln</German>
+		<Italian>Varie isole minuscole</Italian>
+		<Spanish>Varias islas diminutas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_WET</Tag>
+		<English>Wet</English>
+		<French>Humide</French>
+		<German>Feucht</German>
+		<Italian>Umido</Italian>
+		<Spanish>Húmedo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_WIDE_CONTINENTS</Tag>
+		<English>Wide Continents</English>
+		<French>Continents larges</French>
+		<German>Weitl&#228;ufige Kontinente</German>
+		<Italian>Continenti ampi</Italian>
+		<Spanish>Continentes amplios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAX_LATITUDE</Tag>
+		<English>[COLOR_WARNING_TEXT]Can build at a maximum latitude of %d1 degrees[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Peut construire &#224; une latitude maximale de %d1 degr&#233;s.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann bis zu einem Breitengrad von %d1 bauen[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Pu&#242; costruire alla latitudine massima di %d1 gradi[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Se puede construir a una latitud m&#225;xima de %d1 grados.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMBERS_TITLE</Tag>
+		<English>Members</English>
+		<French>Membres</French>
+		<German>Mitglieder</German>
+		<Italian>Membri</Italian>
+		<Spanish>Miembros</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MILITARY_ADVISOR_UNIT_TOGGLE_ON</Tag>
+		<English>Show individual units</English>
+		<French>Afficher unit&#233;s individuelles</French>
+		<German>Einzelne Einheiten anzeigen</German>
+		<Italian>Mostra unit&#224; individuali</Italian>
+		<Spanish>Mostrar unidades individuales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MILITARY_ADVISOR_UNIT_TOGGLE_OFF</Tag>
+		<English>Hide individual units</English>
+		<French>Masquer unit&#233;s individuelles</French>
+		<German>Einzelne Einheiten ausblenden</German>
+		<Italian>Nascondi unit&#224; individuali</Italian>
+		<Spanish>Ocultar unidades individuales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINIMIZED_CHANGE_RELIGION</Tag>
+		<English>You can now convert to [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] as a State Religion...</English>
+		<French>Vous pouvez maintenant adopter la religion : [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] comme religion d'&#233;tat...</French>
+		<German>Ihr k&#246;nnt jetzt die Religion [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] als Staatsreligion einsetzen ...</German>
+		<Italian>Ora puoi scegliere la religione [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] come ufficiale...</Italian>
+		<Spanish>Ya pod&#233;is adoptar el [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] como religi&#243;n oficial...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINIMIZED_CHANGE_CIVIC</Tag>
+		<English>You can now adopt the [COLOR_HIGHLIGHT_TEXT]%s1_Civic[COLOR_REVERT] Civic...</English>
+		<French>Vous pouvez maintenant adopter la doctrine : [COLOR_HIGHLIGHT_TEXT]%s1_Civic[COLOR_REVERT]...</French>
+		<German>Ihr k&#246;nnt jetzt die Staatsform [COLOR_HIGHLIGHT_TEXT]%s1_Civic[COLOR_REVERT] verwenden ...</German>
+		<Italian>Adesso puoi adottare la forma di governo [COLOR_HIGHLIGHT_TEXT]%s1_Civic[COLOR_REVERT]...</Italian>
+		<Spanish>Ya pod&#233;is adoptar el principio [NUM1:del:de la:de los:de las] [COLOR_HIGHLIGHT_TEXT]%s1_Civic[COLOR_REVERT]...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_UNIT</Tag>
+		<English>You have trained a unit ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) in %s2_City...</English>
+		<French>Vous avez entra&#238;n&#233; une nouvelle unit&#233; ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) &#224; %s2_City...</French>
+		<German>Ihr habt eine Einheit ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) in %s2_City ausgebildet ...</German>
+		<Italian>Hai addestrato l'unit&#224; ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) a %s2_City...</Italian>
+		<Spanish>Hab&#233;is entrenado a [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT] en %s2_City...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_BUILDING</Tag>
+		<English>You have constructed a building ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) in %s2_City...</English>
+		<French>Vous avez construit un b&#226;timent ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) &#224; %s2_City...</French>
+		<German>Ihr habt ein Geb&#228;ude ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) in %s2_City errichtet ...</German>
+		<Italian>Hai costruito l'edificio ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) a %s2_City...</Italian>
+		<Spanish>Hab&#233;is construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] en %s2_City...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_PROJECT</Tag>
+		<English>You have created a project ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) in %s2_City...</English>
+		<French>Vous avez cr&#233;&#233; un projet ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) &#224; %s2_City...</French>
+		<German>Ihr habt ein Projekt ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) in %s2_City erschaffen ...</German>
+		<Italian>Hai creato il progetto ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) a %s2_City...</Italian>
+		<Spanish>Hab&#233;is creado [COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT] en %s2_City...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION</Tag>
+		<English>Choose production in %s1_City...</English>
+		<French>Choix de la production de %s1_City...</French>
+		<German>W&#228;hlt die Produktion in %s1_City ...</German>
+		<Italian>Scegli la produzione a %s1_City...</Italian>
+		<Spanish>Elegid la producci&#243;n de %s1_City...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINIMIZED_CHOOSE_TECH_FREE</Tag>
+		<English>Choose a free technology...</English>
+		<French>Choisissez une technologie...</French>
+		<German>W&#228;hlt eine freie Technologie ...</German>
+		<Italian>Scegli una tecnologia gratuita...</Italian>
+		<Spanish>Elegid una tecnolog&#237;a gratis...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINIMIZED_CHOOSE_TECH</Tag>
+		<English>Choose a new technology to research...</English>
+		<French>Choisissez une nouvelle technologie &#224; rechercher...</French>
+		<German>W&#228;hlt eine neue zu erforschende Technologie ...</German>
+		<Italian>Scegli una nuova tecnologia da ricercare...</Italian>
+		<Spanish>Elegid una nueva tecnolog&#237;a que investigar...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MIN_LATITUDE</Tag>
+		<English>[COLOR_WARNING_TEXT]Can build at a minimum latitude of %d1 degrees[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Peut construire &#224; une latitude minimale de %d1 degr&#233;s.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann ab einem Breitengrad von %d1 bauen[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Pu&#242; costruire alla latitudine minima di %d1 gradi[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Se puede construir a una latitud m&#237;nima de %d1 grados.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ADJUST_COMMERCE_RATE</Tag>
+		<English>[ICON_BULLET]Can Adjust %F1_CmrcIcon Rate</English>
+		<French>[ICON_BULLET]Peut modifier la production de : %F1_CmrcIcon</French>
+		<German>[ICON_BULLET]Kann die %F1_CmrcIcon-Rate anpassen</German>
+		<Italian>[ICON_BULLET]Pu&#242; regolare il ritmo del %F1_CmrcIcon</Italian>
+		<Spanish>[ICON_BULLET]Puede ajustar el ritmo del %F1_CmrcIcon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ADVANCED_START_PEACE_REMAINING</Tag>
+		<English>%d1 [NUM1:turn:turns] of Universal Peace Remaining</English>
+		<French>%d1 [NUM1:tour restant:tours restants] de Paix Universelle</French>
+		<German>%d1 [NUM1:Runde:Runden] Universellen Friedens verbleiben</German>
+		<Italian>%d1 [NUM1:turno:turni] di pace universale rimanenti</Italian>
+		<Spanish>%d1 [NUM1:turno restante:turnos restantes] de paz universal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_AI</Tag>
+		<English>[SPACE][AI]</English>
+		<French>[SPACE][IA]</French>
+		<German>[SPACE][KI]</German>
+		<Italian>[SPACE][IA]</Italian>
+		<Spanish>[SPACE][IA]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ALONG_RIVER</Tag>
+		<English>[SPACE]along River</English>
+		<French>[SPACE]pr&#232;s d'une rivi&#232;re</French>
+		<German>[SPACE]entlang eines Flusses</German>
+		<Italian>[SPACE]lungo il fiume</Italian>
+		<Spanish>[SPACE]junto a un r&#237;o</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ALREADY_STATE_REL</Tag>
+		<English>It is your current State Religion</English>
+		<French>Il s'agit d&#233;j&#224; de votre religion d'&#233;tat</French>
+		<German>Das ist bereits Eure Staatsreligion</German>
+		<Italian>&#200; gi&#224; la nostra religione ufficiale</Italian>
+		<Spanish>&#201;sa ya es vuestra religi&#243;n oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ALTERNATIVELY_DERIVED</Tag>
+		<English>[ICON_BULLET][COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] alternatively derived from %s2_AltTech</English>
+		<French>[ICON_BULLET]Technologie [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] d&#233;riv&#233;e de : %s2_AltTech</French>
+		<German>[ICON_BULLET]Die Technologie [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] entstand alternativ aus der Technologie %s2_AltTech</German>
+		<Italian>[ICON_BULLET][COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] derivata in alternativa dalla tecnologia %s2_AltTech</Italian>
+		<Spanish>[ICON_BULLET][NUM1:El:La:Los:Las] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] puede derivar alternativamente de %s2_AltTech</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ALT_DECLARE_WAR</Tag>
+		<English>(&lt;ALT> to Declare War)</English>
+		<French>(&lt;ALT> pour d&#233;clarer la guerre)</French>
+		<German>(&lt;ALT> f&#252;r eine Kriegserkl&#228;rung)</German>
+		<Italian>(&lt;ALT> per dichiarare guerra)</Italian>
+		<Spanish>(&lt;ALT> para declarar la guerra)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ALT_SELECT</Tag>
+		<English>(&lt;ALT> to select All Units)</English>
+		<French>(&lt;ALT> pour s&#233;lectionner toutes les unit&#233;s)</French>
+		<German>(&lt;ALT> zur Auswahl aller Einheiten)</German>
+		<Italian>(&lt;ALT> per selezionare tutte le unit&#224;)</Italian>
+		<Spanish>(&lt;ALT> para seleccionar todas las unidades)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ANGER_TURNS</Tag>
+		<English>[ICON_BULLET]%D1_Change[ICON_UNHAPPY] for %d2_Num Turns</English>
+		<French>[ICON_BULLET]%D1_Change[ICON_UNHAPPY] pendant %d2_Num tours</French>
+		<German>[ICON_BULLET]%D1_Change[ICON_UNHAPPY] f&#252;r %d2_Num [NUM2:Runde:Runden]</German>
+		<Italian>[ICON_BULLET]%D1_Change[ICON_UNHAPPY] per %d2_Num [NUM2:turno:turni]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change [ICON_UNHAPPY] durante %d2_Num [NUM2:turno:turnos]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ANGRY_CITIZEN</Tag>
+		<English>Angry Citizen (Refuses to work...)</English>
+		<French>Citoyen furieux (Refuse de travailler...)</French>
+		<German>W&#252;tender B&#252;rger (verweigert die Arbeit ...)</German>
+		<Italian>Cittadino arrabbiato (rifiuta di lavorare...)</Italian>
+		<Spanish>Ciudadano enfadado (se niega a trabajar...)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ANOTHER_REVOLUTION_RECENTLY</Tag>
+		<English>[SPACE]because of recent Revolution</English>
+		<French>[SPACE]&#224; cause d'une r&#233;volution</French>
+		<German>[SPACE]wegen k&#252;rzlicher Revolution</German>
+		<Italian>[SPACE]C'&#232; stata un'altra rivoluzione recentemente</Italian>
+		<Spanish>[SPACE]debido a una reciente revoluci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_BONUS_TRADE</Tag>
+		<English>%D1: "We appreciate the years you have supplied us with resources."</English>
+		<French>%D1 : "Nous vous remercions pour les ann&#233;es que vous avez pass&#233;es &#224; nous fournir des ressources."</French>
+		<German>%D1: "Wir sind dankbar f&#252;r all die Jahre, in denen Ihr uns Ressourcen geliefert habt."</German>
+		<Italian>%D1: "Apprezziamo il supporto di risorse fornito in questi anni."</Italian>
+		<Spanish>%D1: "Valoramos los a&#241;os que nos hab&#233;is proporcionado recursos."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_DEFENSIVE_PACT</Tag>
+		<English>%D1: "Our Defensive Pact proves that we are close friends."</English>
+		<French>%D1 : "Notre pacte de d&#233;fense prouve la solidit&#233; de notre amiti&#233;."</French>
+		<German>%D1: "Unser Verteidigungsb&#252;ndnis unterstreicht unsere freundschaftliche Verbundenheit."</German>
+		<Italian>%D1: "La nostra alleanza difensiva dimostra che siamo buoni amici."</Italian>
+		<Spanish>%D1: "Nuestro acuerdo de protecci&#243;n demuestra que somos muy amigos."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_DIFFERENT_RELIGION</Tag>
+		<English>%D1: "We are upset that you have fallen under the sway of a heathen religion."</English>
+		<French>%D1 : "Votre conversion &#224; une religion pa&#239;enne nous a profond&#233;ment contrari&#233;s."</French>
+		<German>%D1: "Wir sind entsetzt, dass Ihr in die F&#228;nge einer heidnischen Religion geraten seid!"</German>
+		<Italian>%D1: "Siamo amareggiati del fatto che siate caduti schiavi di una religione empia."</Italian>
+		<Spanish>%D1: "Nos trastorna que hay&#225;is ca&#237;do bajo el influjo de una religi&#243;n infiel."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_EXTRA_GOOD</Tag>
+		<English>%D1: "Past events have brought our people together."</English>
+		<French>%D1 : "Les &#233;v&#233;nements pass&#233;s prouvent qu'on peut vous faire confiance."</French>
+		<German>%D1: "Die vergangenen Ereignisse haben Eure guten Absichten bewiesen."</German>
+		<Italian>%D1: "Gli eventi passati hanno unito i nostri popoli."</Italian>
+		<Spanish>%D1: "Los acontecimientos pasados nos han demostrado vuestra bondad."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_EXTRA_BAD</Tag>
+		<English>%D1: "Past events have drawn our people apart."</English>
+		<French>%D1 : "Les &#233;v&#233;nements pass&#233;s prouvent qu'on ne peut vous faire confiance."</French>
+		<German>%D1: "Die vergangenen Ereignisse haben Eure schlechten Absichten bewiesen. "</German>
+		<Italian>%D1: "Gli eventi passati hanno diviso i nostri popoli."</Italian>
+		<Spanish>%D1: "Los acontecimientos pasados nos han demostrado vuestra maldad. "</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_FAVORITE_CIVIC</Tag>
+		<English>%D1: "You have wisely chosen your Civics."</English>
+		<French>%D1 : "Vous avez choisi votre doctrine avec sagesse."</French>
+		<German>%D1: "Ihr habt Eure Staatsformen weise gew&#228;hlt!"</German>
+		<Italian>%D1: "Hai scelto con saggezza le tue forme di governo."</Italian>
+		<Spanish>%D1: "Hab&#233;is escogido con prudencia vuestros principios."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_FREEDOM</Tag>
+		<English>%D1: "You have granted us our independence!"</English>
+		<French>%D1: "Vous nous avez accord&#233; l'ind&#233;pendance!"</French>
+		<German>%D1: "Ihr habt uns unsere Unabh&#228;ngigkeit gegeben!"</German>
+		<Italian>%D1: "Ci hai promesso l'indipendenza!"</Italian>
+		<Spanish>%D1: "Nos hab&#233;is concedido la independencia."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_LAND_TARGET</Tag>
+		<English>%D1: "Our close borders spark tensions."</English>
+		<French>%D1 : "Il y a des tensions le long de nos fronti&#232;res."</French>
+		<German>%D1: "Unsere geschlossenen Grenzen sorgen f&#252;r Spannungen!"</German>
+		<Italian>%D1: "C'&#232; della tensione al confine."</Italian>
+		<Spanish>%D1: "Nuestras fronteras cerradas suscitan tensiones."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_MEMORY</Tag>
+		<English>%D1: %s2</English>
+		<French>%D1 : %s2</French>
+		<German>%D1: %s2</German>
+		<Italian>%D1: %s2</Italian>
+		<Spanish>%D1: %s2</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_OPEN_BORDERS</Tag>
+		<English>%D1: "Our Open Borders have brought our people close together."</English>
+		<French>%D1 : "Le libre passage a rapproch&#233; nos deux peuples."</French>
+		<German>%D1: "Die &#214;ffnung unserer Grenzen hat unsere V&#246;lker n&#228;her gebracht."</German>
+		<Italian>%D1: "Il nostro accordo di diritto di passaggio ha permesso ai nostri popoli di avvicinarsi"</Italian>
+		<Spanish>%D1: "La apertura de fronteras ha acercado m&#225;s a nuestros pueblos."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_PEACE</Tag>
+		<English>%D1: "Years of peace have strengthened our relations."</English>
+		<French>%D1 : "Des ann&#233;es de paix ont renforc&#233; nos relations."</French>
+		<German>%D1: "Jahre des Friedens haben unsere Beziehungen gest&#228;rkt."</German>
+		<Italian>%D1: "I molti anni di pace hanno rinsaldato i nostri rapporti."</Italian>
+		<Spanish>%D1: "A&#241;os de paz han fortalecido nuestras relaciones."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_RIVAL_DEFENSIVE_PACT</Tag>
+		<English>%D1: "We are upset that you have signed Defensive Pacts with our rivals."</English>
+		<French>%D1 : "Nous sommes contrari&#233;s d'apprendre que vous avez sign&#233; un pacte de d&#233;fense avec nos ennemis."</French>
+		<German>%D1: "Wir sch&#228;tzen es gar nicht, dass Ihr Verteidigungsb&#252;ndnisse mit unseren Gegnern schlie&#223;t!"</German>
+		<Italian>%D1: "Siamo sconvolti dal fatto che tu abbia firmato alleanze difensive con i nostri rivali."</Italian>
+		<Spanish>%D1: "Nos trastorna que hay&#225;is firmado acuerdos de protecci&#243;n con nuestros rivales."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_RIVAL_TRADE</Tag>
+		<English>%D1: "You have traded with our worst enemies!"</English>
+		<French>%D1 : "Vous avez commerc&#233; avec nos ennemis jur&#233;s !"</French>
+		<German>%D1: "Ihr habt mit unseren schlimmsten Feinden Handel betrieben!"</German>
+		<Italian>%D1: "Hai commerciato con i nostri peggior nemici!"</Italian>
+		<Spanish>%D1: "&#161;Hab&#233;is comerciado con nuestros peores enemigos!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_RIVAL_VASSAL</Tag>
+		<English>%D1: "We are worried about our rivals being vassals to your empire!"</English>
+		<French>%D1 : "Nous nous inqui&#233;tons de voir nos rivaux devenir vos vassaux !"</French>
+		<German>%D1: "Wir haben Bedenken, weil unsere Gegner Eurem Reich als Vasallen dienen!"</German>
+		<Italian>%D1: "Il fatto che i nostri rivali siano tuoi vassalli ci preoccupa!"</Italian>
+		<Spanish>%D1: "Nos preocupa que nuestros rivales se conviertan en vasallos de vuestro imperio."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_SAME_RELIGION</Tag>
+		<English>%D1: "We care for our brothers and sisters of the faith."</English>
+		<French>%D1 : "Nous nous pr&#233;occupons de ceux qui partagent notre foi."</French>
+		<German>%D1: "Wir stehen zu unseren Glaubensbr&#252;dern und -schwestern."</German>
+		<Italian>%D1: "Ci preoccupiamo dei nostri fratelli e delle nostre sorelle."</Italian>
+		<Spanish>%D1: "Nos preocupamos por nuestros hermanos y hermanas de fe."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_SHARE_WAR</Tag>
+		<English>%D1: "Our mutual military struggle brings us closer together."</English>
+		<French>%D1 : "Notre engagement militaire commun nous rapproche."</French>
+		<German>%D1: "Unsere gemeinsamen milit&#228;rischen Aktivit&#228;ten schwei&#223;en uns enger zusammen."</German>
+		<Italian>%D1: "I nostri reciproci aiuti militari ci rendono molto vicini l'un l'altro."</Italian>
+		<Spanish>%D1: "Nuestra mutua lucha militar nos acerca m&#225;s."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_TRADE</Tag>
+		<English>%D1: "Our trade relations have been fair and forthright."</English>
+		<French>%D1 : "Nos relations commerciales ont toujours &#233;t&#233; loyales et honn&#234;tes."</French>
+		<German>%D1: "Unsere Handelsbeziehungen sind geradlinig und fair."</German>
+		<Italian>%D1: "I nostri rapporti commerciali sono stati equi e onesti."</Italian>
+		<Spanish>%D1: "Nuestras relaciones comerciales han sido buenas y leales."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_WAR</Tag>
+		<English>%D1: "This war spoils our relationship."</English>
+		<French>%D1 : "Cette guerre nuit &#224; nos relations."</French>
+		<German>%D1: "Dieser Krieg beeintr&#228;chtigt unsere Beziehungen!"</German>
+		<Italian>%D1: "Questa guerra rovina i nostri rapporti."</Italian>
+		<Spanish>%D1: "Esta guerra echa por tierra nuestras relaciones."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CANNOT_CHANGE_CIVICS</Tag>
+		<English>Cannot change Civics</English>
+		<French>La doctrine choisie ne peut &#234;tre instaur&#233;e</French>
+		<German>Kann keine Staatsformen &#228;ndern</German>
+		<Italian>Impossibile cambiare con le forme di governo selezionate</Italian>
+		<Spanish>No se puede cambiar de principios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CANNOT_CONVERT_TO</Tag>
+		<English>Cannot Convert to [COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT]</English>
+		<French>Conversion impossible : [COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT]</French>
+		<German>Kann nicht zur Religion [COLOR_HIGHLIGHT_TEXT]%s1_RelName konvertieren[COLOR_REVERT]</German>
+		<Italian>Impossibile convertirsi a: [COLOR_HIGHLIGHT_TEXT]%s1:2_RelName[COLOR_REVERT]</Italian>
+		<Spanish>No se puede convertir al [COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CANNOT_DECLARE_WAR</Tag>
+		<English>[COLOR_WARNING_TEXT]Cannot declare war!!![COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Impossible de d&#233;clarer la guerre ![COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann keinen Krieg erkl&#228;ren!!![COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Impossibile dichiarare guerra![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]&#161;No se puede declarar la guerra![COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT</Tag>
+		<English>[ICON_BULLET]Can [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Am&#233;nagement possible : [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Erm&#246;glicht die Modernisierung [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Pu&#242; [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Se puede [COLOR_HIGHLIGHT_TEXT]%s1:2_ImpName[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CAN_BUILD</Tag>
+		<English>[ICON_BULLET]Can Build[SPACE]</English>
+		<French>[ICON_BULLET]Construction possible de :[SPACE]</French>
+		<German>[ICON_BULLET]Kann Folgendes errichten:[SPACE]</German>
+		<Italian>[ICON_BULLET]Pu&#242; costruire[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Se puede construir[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CAN_CONSTRUCT_BUILDING</Tag>
+		<English>[ICON_BULLET]Can Construct [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Construction possible de : [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Erm&#246;glicht Bau von: [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Permette di costruire l'edificio [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Se pueden construir [COLOR_BUILDING_TEXT]%s1:2_BldgName[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CAPITULATE</Tag>
+		<English>Capitulation</English>
+		<French>Capitulation</French>
+		<German>Kapitulation</German>
+		<Italian>Capitolazione</Italian>
+		<Spanish>Capitulaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CAPITULATE_AGREEMENT</Tag>
+		<English>%s1_vassal_name has capitulated and is now a vassal state of %s2_master_name</English>
+		<French>%s1_vassal_name a capitul&#233;, et est d&#233;sormais un &#233;tat vassal de : %s2_master_name</French>
+		<German>%s1_vassal_name hat kapituliert und dient %s2_master_name von nun an als Vasallenstaat.</German>
+		<Italian>%s1_vassal_name si &#232; arreso e ha accettato di diventare uno stato vassallo di %s2_master_name</Italian>
+		<Spanish>%s1_vassal_name ha capitulado y ahora es un estado vasallo de %s2_master_name.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CAPTURED_CITY</Tag>
+		<English>You have captured %s1_CityName!!!</English>
+		<French>Vous avez captur&#233; %s1_CityName !</French>
+		<German>Ihr habt die Stadt %s1_CityName eingenommen!!!</German>
+		<Italian>Hai conquistato %s1_CityName!!!</Italian>
+		<Spanish>Hab&#233;is capturado %s1_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CENTERS_MAP</Tag>
+		<English>[ICON_BULLET]Centers [LINK=CONCEPT_MAPS]World Map[\LINK]</English>
+		<French>[ICON_BULLET]Centre la [LINK=CONCEPT_MAPS]carte du monde[\LINK]</French>
+		<German>[ICON_BULLET]Zentriert die [LINK=CONCEPT_MAPS]Weltkarte[\LINK]</German>
+		<Italian>[ICON_BULLET]Centra la [LINK=CONCEPT_MAPS]mappa[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Centra el [LINK=CONCEPT_MAPS]mapamundi[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CHANGE_RESEARCH</Tag>
+		<English>Click to change research...</English>
+		<French>Cliquez pour changer de sujet de recherche...</French>
+		<German>Hier klicken, um das Forschungsprojekt zu &#228;ndern ...</German>
+		<Italian>Clicca per cambiare la ricerca...</Italian>
+		<Spanish>Hacer clic para cambiar la investigaci&#243;n...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CITY_HAS_BEEN_FOUNDED</Tag>
+		<English>%s1_CityName has been founded.</English>
+		<French>Fondation de %s1_CityName.</French>
+		<German>Die Stadt %s1_CityName wurde gegr&#252;ndet.</German>
+		<Italian>%s1_CityName &#232; stata fondata.</Italian>
+		<Spanish>Se ha fundado %s1_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CITY_IS_FOUNDED</Tag>
+		<English>%s1_CityName is founded.</English>
+		<French>La ville de %s1_CityName est fond&#233;e.</French>
+		<German>Die Stadt %s1_CityName wird gegr&#252;ndet.</German>
+		<Italian>%s1_CityName fondata.</Italian>
+		<Spanish>Se funda %s1_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CITY_LIBERATED</Tag>
+		<English>In a gracious act of generosity, %s2_player has liberated %s1_city, which passed under %s3_civ_adjective control.</English>
+		<French>Dans un &#233;lan de g&#233;n&#233;rosit&#233;, %s2_player a lib&#233;r&#233; la ville : %s1_city, qui est pass&#233;e sous contr&#244;le %s3:1_civ_adjective.</French>
+		<German>In einer großzügigen Geste hat %s2_player die Stadt %s1_city befreit, die sich jetzt unter der %s3:2_civ_adjective Herrschaft befindet.</German>
+		<Italian>In un momento di generosità, %s2_player ha liberato %s1_city, che è passata sotto il controllo %s3_civ_adjective.</Italian>
+		<Spanish>En un gracioso acto de generosidad, %s2_player ha liberado %s1_city, que ha pasado a control %s3:1_civ_adjective.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CITY_NATIONALITY</Tag>
+		<English>City Nationality:</English>
+		<French>Nationalit&#233; de la ville :</French>
+		<German>Stadt-Nationalit&#228;t:</German>
+		<Italian>Nazionalit&#224; della citt&#224;:</Italian>
+		<Spanish>Nacionalidad de la ciudad:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CITY_RAZED_BY</Tag>
+		<English>%s1_CityName is razed by the %s2_CivName!!!</English>
+		<French>La ville de %s1_CityName est ras&#233;e par les %s2_CivName !</French>
+		<German>Das %s2:2_CivName vernichtet die Stadt %s1_CityName!!!</German>
+		<Italian>%s1_CityName &#232; stata razziata dall'%s2_CivName!!!</Italian>
+		<Spanish>%s1_CityName, arrasada por el %s2_CivName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CITY_REVOLTED_JOINED</Tag>
+		<English>%s1_CityName has revolted and joined the %s2_CivName!</English>
+		<French>La ville de %s1_CityName s'est r&#233;volt&#233;e et a rejoint les %s2_CivName !</French>
+		<German>Nach einer Revolte hat sich die Stadt %s1_CityName dem %s2:3_CivName angeschlossen!</German>
+		<Italian>%s1_CityName si &#232; rivoltata e si &#232; unita all'%s2_CivName!</Italian>
+		<Spanish>%s1_CityName se ha rebelado y se ha unido al %s2_CivName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CITY_REVOLTS_JOINS</Tag>
+		<English>%s1_CityName revolts and joins the %s2_CivName!</English>
+		<French>La ville de %s1_CityName se r&#233;volte et rejoint les %s2_CivName !</French>
+		<German>Die Stadt %s1_CityName revoltiert und schlie&#223;t sich dem %s2:3_CivName an!</German>
+		<Italian>%s1_CityName si rivolta e si unisce all'%s2_CivName!</Italian>
+		<Spanish>%s1_CityName se rebela y se une al %s2_CivName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CLEARING_FEATURE_BONUS</Tag>
+		<English>Clearing a %s1_FeatName has created %d2_Num [ICON_PRODUCTION] for %s3_CityName.</English>
+		<French>Le d&#233;frichage de %s1_FeatName rapporte %d2_Num [ICON_PRODUCTION] &#224; %s3_CityName.</French>
+		<German>Die Entfernung der Gel&#228;ndeart %s1_FeatName hat %d2_Num [ICON_PRODUCTION] f&#252;r die Stadt %s3_CityName eingebracht.</German>
+		<Italian>Sgombrando una casella di %s1_FeatName si &#232; creata %d2_Num [ICON_PRODUCTION] per %s3_CityName.</Italian>
+		<Spanish>Despejar [NUM1:el:la:los:las] %s1_FeatName ha generado %d2_Num [ICON_PRODUCTION] para %s3_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CLICK_TO_CANCEL</Tag>
+		<English>Click to Cancel</English>
+		<French>Cliquez pour annuler</French>
+		<German>Hier klicken, um abzubrechen</German>
+		<Italian>Clicca per annullare</Italian>
+		<Spanish>Hacer clic para cancelar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_COLONY_MAINT_FLOAT</Tag>
+		<English>%s1_MaintNum [ICON_GOLD]: Colonial expenses</English>
+		<French>%s1_MaintNum [ICON_GOLD] : D&#233;penses coloniales</French>
+		<German>%s1_MaintNum [ICON_GOLD]: Kolonialausgaben</German>
+		<Italian>%s1_MaintNum [ICON_GOLD]: spese per le colonie</Italian>
+		<Spanish>%s1_MaintNum [ICON_GOLD]: Gastos coloniales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_COMBAT_EXPERIENCE</Tag>
+		<English>Combat Experience</English>
+		<French>Exp&#233;rience du combat</French>
+		<German>Kampferfahrung</German>
+		<Italian>Esperienza da combattimento</Italian>
+		<Spanish>Experiencia por combate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_COMPLETED_WONDER_CHOOSE_TECH</Tag>
+		<English>You have completed %s1_BldgName! Choose a free technology...</English>
+		<French>Vous avez achev&#233; : %s1_BldgName ! Choisissez une technologie gratuite...</French>
+		<German>Ihr habt das Geb&#228;ude %s1_BldgName fertig gestellt! W&#228;hlt eine freie Technologie ...</German>
+		<Italian>Hai completato la costruzione dell'edificio %s1_BldgName! Scegli una tecnologia gratuita...</Italian>
+		<Spanish>Hab&#233;is completado %s1_BldgName. Elegid una tecnolog&#237;a gratis...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_COMPLETES_WONDER</Tag>
+		<English>%s1_PlyrName completes %s2_BldgName</English>
+		<French>%s1_PlyrName ach&#232;ve la construction de : %s2_BldgName</French>
+		<German>%s1_PlyrName stellt das Geb&#228;ude %s2_BldgName fertig</German>
+		<Italian>%s1_PlyrName ha completato la costruzione dell'edificio %s2_BldgName</Italian>
+		<Spanish>%s1_PlyrName ha completado %s2_BldgName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_COMPLETES_PROJECT</Tag>
+		<English>%s1_PlyrName completes %s2_PrjctName!</English>
+		<French>%s1_PlyrName termine %s2_PrjctName!</French>
+		<German>%s1_PlyrName stellt %s2_PrjctName fertig!</German>
+		<Italian>%s1_PlyrName ha completato %s2_PrjctName!</Italian>
+		<Spanish>%s1_PlyrName ha completado %s2_PrjctName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CONTACT_LEADER</Tag>
+		<English>Contact %s1_PlyrName of %s2_CivName</English>
+		<French>Contacter %s1_PlyrName des %s2_CivName</French>
+		<German>%s1_PlyrName von der Zivilisation %s2_CivName kontaktieren</German>
+		<Italian>Contatta il giocatore %s1_PlyrName della civilt&#224; %s2:2_CivName</Italian>
+		<Spanish>Contactar con %s1_PlyrName del %s2_CivName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CORPORATION_FAILED_TO_SPREAD</Tag>
+		<English>Your %s1_UnitName has failed to expand %F2_RelIcon into %s3_CityName!</English>
+		<French>Votre %s1_UnitName n'a pas r&#233;ussi &#224; d&#233;velopper la religion : %F2_RelIcon &#224; %s3_CityName !</French>
+		<German>%F2_RelIcon konnte von Eurer Einheit %s1_UnitName nicht nach %s3_CityName expandiert werden!</German>
+		<Italian>La tua unit&#224; %s1_UnitName non &#232; riuscita a diffondere la religione %F2_RelIcon a %s3_CityName!</Italian>
+		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:no ha logrado:no ha logrado:no han logrado:no han logrado] expandir el %F2_RelIcon en %s3_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CORPORATION_FOUNDED</Tag>
+		<English>%s1_CorpName has been incorporated in %s2_CityName!</English>
+		<French>La soci&#233;t&#233; commerciale %s1_CorpName a &#233;t&#233; fond&#233;e &#224; %s2_CityName !</French>
+		<German>Die Kapitalgesellschaft %s1_CorpName wurde in %s2_CityName gegr&#252;ndet!</German>
+		<Italian>La %s1_CorpName &#232; stata fondata a %s2_CityName!</Italian>
+		<Spanish>&#161;%s1_CorpName se ha incorporado a %s2_CityName!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CORPORATION_FOUNDED_UNKNOWN</Tag>
+		<English>%s1_CorpName has been incorporated in a distant land!</English>
+		<French>La soci&#233;t&#233; commerciale %s1_CorpName a &#233;t&#233; fond&#233;e dans un pays lointain !</French>
+		<German>Die Kapitalgesellschaft %s1_CorpName wurde in einem entfernten Land gegr&#252;ndet!</German>
+		<Italian>La %s1_CorpName &#232; stata fondata in terre lontane!</Italian>
+		<Spanish>&#161;%s1_CorpName se ha incorporado a una tierra lejana!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CORPORATION_MAINT_FLOAT</Tag>
+		<English>%s1_MaintNum [ICON_GOLD]: Corporation payments</English>
+		<French>%s1_MaintNum [ICON_GOLD] : paiements de soci&#233;t&#233; commerciale</French>
+		<German>%s1_MaintNum [ICON_GOLD]: Unternehmenszahlungen</German>
+		<Italian>%s1_MaintNum [ICON_GOLD]: pagamenti corporativi</Italian>
+		<Spanish>%s1_MaintNum [ICON_GOLD]: Pagos a la corporaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CORPORATION_SPREAD</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]%s1_CorpName[COLOR_REVERT] has expanded into %s2_CityName.</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]La soci&#233;t&#233; commerciale %s1_CorpName[COLOR_REVERT] s'est d&#233;velopp&#233;e &#224; %s2_CityName.</French>
+		<German>Die Kapitalgesellschaft [COLOR_HIGHLIGHT_TEXT]%s1_CorpName[COLOR_REVERT] hat nach %s2_CityName expandiert.</German>
+		<Italian>La [COLOR_HIGHLIGHT_TEXT]%s1_CorpName[COLOR_REVERT] si &#232; estesa a %s2_CityName.</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]%s1_CorpName[COLOR_REVERT] se ha expandido a %s2_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CORPORATION_SPREAD_BONUS</Tag>
+		<English>%s1_corporation has brought %s2_bonus to %s3_city. Increase this bonus by acquiring more %s4_bonus_list.</English>
+		<French>%s1_corporation a amen&#233; un bonus en %s2_bonus &#224; %s3_city. Augmentez ce bonus en obtenant une quantit&#233; en %s4_bonus_list plus importante.</French>
+		<German>%s1_corporation hat %s3_city den Bonus %s2_bonus verschafft. Steigern Sie diesen Bonus, indem Sie mehr %s4_bonus_list erwerben.</German>
+		<Italian>%s1_corporation ha portato %s2_bonus a %s3_city. Incrementa il bonus acquisendo altri %s4_bonus_list.</Italian>
+		<Spanish>La %s1_corporation ha llevado %s2_bonus a %s3_city. Para aumentar esta bonificaci&#243;n, adquiere m&#225;s %s4_bonus_list.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CREATED_PROJECT_IN_LIMITED</Tag>
+		<English>You have created %s1_PrjctName in %s2_CityName.</English>
+		<French>Vous avez cr&#233;&#233; : %s1_PrjctName &#224; %s2_CityName.</French>
+		<German>Das Projekt %s1_PrjctName wurde in %s2_CityName fertig gestellt.</German>
+		<Italian>Hai creato il progetto %s1_PrjctName a %s2_CityName.</Italian>
+		<Spanish>Hab&#233;is creado %s1_PrjctName en %s2_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CTRL_SELECT</Tag>
+		<English>(&lt;CTRL> to select All %s1 Units)</English>
+		<French>(&lt;CTRL> pour s&#233;lectionner toutes les unit&#233;s de %s1)</French>
+		<German>(&lt;STRG> zur Auswahl aller %s1-Einheiten)</German>
+		<Italian>(&lt;CTRL> per selezionare %s1)</Italian>
+		<Spanish>(&lt;CTRL> para seleccionar [NUM1:todos los:todas las:todos los:todas las] %s1:2)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CTRL_SHIFT</Tag>
+		<English>(&lt;CTRL> to shift by %d1 [NUM1:Unit:Units])</English>
+		<French>(&lt;CTRL> pour modifier de %d1 [NUM1:unit&#233;:unit&#233;s])</French>
+		<German>(&lt;STRG> zum Durchschalten je %d1 [NUM1:Einheit:Einheiten])</German>
+		<Italian>(&lt;CTRL> per spostarsi di %d1 unit&#224;</Italian>
+		<Spanish>(&lt;CTRL> para cambiar %d1 [NUM1:unidad:unidades])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CTRL_TRADE</Tag>
+		<English>(&lt;CTRL> for Trade Table)</English>
+		<French>(&lt;CTRL> pour ouvrir la table des n&#233;gociations)</French>
+		<German>(&lt;STRG> f&#252;r Verhandlungstisch)</German>
+		<Italian>(&lt;CTRL> per la tabella commerciale)</Italian>
+		<Spanish>(&lt;CTRL> para ir a la tabla de intercambios)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CULTURE</Tag>
+		<English>Culture: %d1_Curr/%d2_Need [ICON_CULTURE]</English>
+		<French>Culture : %d1_Curr/%d2_Need [ICON_CULTURE]</French>
+		<German>Kultur: %d1_Curr/%d2_Need [ICON_CULTURE]</German>
+		<Italian>Cultura: %d1_Curr/%d2_Need [ICON_CULTURE]</Italian>
+		<Spanish>Cultura: %d1_Curr/%d2_Need [ICON_CULTURE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CULTURE_FLOAT</Tag>
+		<English>Culture: %s1_Curr/%d2_Need [ICON_CULTURE]</English>
+		<French>Culture : %s1_Curr/%d2_Need [ICON_CULTURE]</French>
+		<German>Kultur: %s1_Curr/%d2_Need [ICON_CULTURE]</German>
+		<Italian>Cultura: %s1_Curr/%d2_Need [ICON_CULTURE]</Italian>
+		<Spanish>Cultura: %s1_Curr/%d2_Need [ICON_CULTURE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CULTURE_LEVEL</Tag>
+		<English>%s1_CityName has achieved %s2_LevelName Culture!</English>
+		<French>%s1_CityName a d&#233;sormais un niveau culturel %s2_LevelName !</French>
+		<German>%s1_CityName hat die Kulturstufe %s2_LevelName erreicht!</German>
+		<Italian>%s1_CityName ha raggiunto il livello culturale %s2_LevelName!</Italian>
+		<Spanish>%s1_CityName ya tiene cultura %s2_LevelName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CULTURE_LEVEL_UNKNOWN</Tag>
+		<English>An unknown city has achieved %s1_LevelName Culture!</English>
+		<French>Une cit&#233; inconnue a d&#233;sormais un niveau culturel %s1_LevelName !</French>
+		<German>Eine unbekannte Stadt hat die Kulturstufe %s1_LevelName erreicht!</German>
+		<Italian>Una citt&#224; sconosciuta ha raggiunto il livello culturale %s1_LevelName!</Italian>
+		<Spanish>Una ciudad desconocida ya tiene cultura %s1_LevelName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DEAL</Tag>
+		<!-- Can be units, techs, bonuses, cities -->
+		<English>%s1 gives %s2 to %s3 for %s4</English>
+		<French>%s1 donne %s2 &#224; %s3 contre %s4</French>
+		<German>%s1 &#252;bergibt %s2 an %s3 und erh&#228;r daf&#252;r %s4</German>
+		<Italian>%s1 d&#224; %s2 a %s3 per %s4</Italian>
+		<Spanish>%s1 le da %s2 a %s3 a cambio de %s4</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DEAL_ONESIDED</Tag>
+		<!-- Can be units, techs, bonuses, cities -->
+		<English>%s1 gives %s2 to %s3</English>
+		<French>%s1 donne %s2 &#224; %s3</French>
+		<German>%s1 &#252;bergibt %s2 an %s3</German>
+		<Italian>%s1 d&#224; %s2 a %s3</Italian>
+		<Spanish>%s1 le da %s2 a %s3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DEAL_ONESIDED_OURS</Tag>
+		<!-- Can be units, techs, bonuses, cities -->
+		<English>%s1 to %s2</English>
+		<French>%s1 &#224; %s2</French>
+		<German>%s1 an %s2</German>
+		<Italian>%s1 a %s2</Italian>
+		<Spanish>%s1 a %s2</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DEAL_ONESIDED_THEIRS</Tag>
+		<!-- Can be units, techs, bonuses, cities -->
+		<English>%s1 from %s2</English>
+		<French>%s1 de %s2</French>
+		<German>%s1 von %s2</German>
+		<Italian>%s1 da %s2</Italian>
+		<Spanish>%s1 de %s2</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DEAL_NO_CANCEL</Tag>
+		<English>This deal can be canceled in %d1 [NUM1:turn:turns]</English>
+		<French>Ce march&#233; pourra &#234;tre annul&#233; dans %d1 [NUM1:tour:tours]</French>
+		<German>Dieser Handel kann in %d1 [NUM1:Runde:Runden] aufgek&#252;ndigt werden</German>
+		<Italian>Questo affare pu&#242; essere annullato tra %d1 [NUM1:turno:turni]</Italian>
+		<Spanish>Este trato puede cancelarse en %d1 [NUM1:turno:turnos]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DEAL_NO_CANCEL_EVER</Tag>
+		<English>This deal cannot be canceled</English>
+		<French>Cet accord ne peut &#234;tre annul&#233;</French>
+		<German>Diese Vereinbarung kann nicht aufgek&#252;ndigt werden.</German>
+		<Italian>Questo accordo non pu&#242; essere annullato</Italian>
+		<Spanish>Este trato no puede cancelarse.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DECLARED_WAR_ON_YOU</Tag>
+		<English>%s1_PlyrName has declared war on you!</English>
+		<French>%s1_PlyrName vous a d&#233;clar&#233; la guerre !</French>
+		<German>%s1_PlyrName hat Euch den Krieg erkl&#228;rt!</German>
+		<Italian>%s1_PlyrName ti ha dichiarato guerra!</Italian>
+		<Spanish>%s1_PlyrName os han declarado la guerra.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DECREASE_RATE</Tag>
+		<English>Decrease %s1_CmrcType Rate by %d2_Mod%%</English>
+		<French>R&#233;duit la production (Taux : %s1_CmrcType) de %d2_Mod%%</French>
+		<German>Wirtschaftsrate f&#252;r %s1_CmrcType um %d2_Mod%% senken</German>
+		<Italian>Diminuisce il ritmo %s1_CmrcType del %d2_Mod%%</Italian>
+		<Spanish>Disminuir ritmo de %s1_CmrcType en un %d2_Mod%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DEFEAT</Tag>
+		<English>You have been defeated!!!</English>
+		<French>Vous essuyez une d&#233;faite !!!</French>
+		<German>Wir wurden besiegt!!!</German>
+		<Italian>Sei stato sconfitto!!!</Italian>
+		<Spanish>&#161;Os han derrotado!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DEFENSIVE_PACT</Tag>
+		<English>Defensive Pact</English>
+		<French>Pacte de d&#233;fense</French>
+		<German>Verteidigungsb&#252;ndnis</German>
+		<Italian>Alleanza difensiva</Italian>
+		<Spanish>Acuerdo de protecci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DESTROYED_CITY</Tag>
+		<English>You have destroyed the city of %s1_CityName!!!</English>
+		<French>Vous avez d&#233;truit la ville de %s1_CityName !</French>
+		<German>Ihr habt die Stadt %s1_CityName zerst&#246;rt!!!</German>
+		<Italian>Hai distrutto la citt&#224; di %s1_CityName!</Italian>
+		<Spanish>Hab&#233;is destruido la ciudad de %s1_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DISCONNECTED</Tag>
+		<English>[SPACE][Disconnected]</English>
+		<French>[SPACE][D&#233;connexion]</French>
+		<German>[SPACE][Unterbrochen]</German>
+		<Italian>[SPACE][Disconnesso]</Italian>
+		<Spanish>[SPACE][Desconectado]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE</Tag>
+		<English>You have discovered a source of [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] near %s2_CityName!</English>
+		<French>Vous avez d&#233;couvert une source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] pr&#232;s de %s2_CityName !</French>
+		<German>Ihr habt in der N&#228;he der Stadt %s2_CityName ein Vorkommen des Bonusguts [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] entdeckt!</German>
+		<Italian>Hai scoperto una risorsa di [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] vicino a %s2_CityName!</Italian>
+		<Spanish>Hab&#233;is descubierto una fuente de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] cerca de %s2_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DISTANCE_FROM_PALACE</Tag>
+		<English>Distance from Palace</English>
+		<French>Distance du palais</French>
+		<German>Entfernung zum Palast</German>
+		<Italian>Distanza dal palazzo</Italian>
+		<Spanish>Lejan&#237;a con palacio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_EMPIRE_SPLIT</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]%s1_leader has placed %s3_leader in charge of their overseas colonies of %s2_civ[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]%s1_leader a confi&#233; &#224; %s3_leader le commandement de ses colonies de %s2_civ[COLOR_REVERT]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]%s1_leader hat %s3_leader die F&#252;hrung der &#220;berseekolonien der Zivilisation %s2_civ &#252;bergeben[COLOR_REVERT]</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1_leader ha affidato a %s3_leader il comando delle colonie oltremare di %s2_civ[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]%s1_leader ha puesto a %s3_leader a cargo de sus colonias de ultramar de %s2_civ[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENABLES</Tag>
+		<English>[ICON_BULLET]Enables[SPACE]</English>
+		<French>[ICON_BULLET]Permet[SPACE]:[SPACE]</French>
+		<German>[ICON_BULLET]Erm&#246;glicht:[SPACE]</German>
+		<Italian>[ICON_BULLET]Permette[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Permite[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENABLES_BRIDGE_BUILDING</Tag>
+		<English>[ICON_BULLET]Enables Bridge Building</English>
+		<French>[ICON_BULLET]Permet la construction de ponts</French>
+		<German>[ICON_BULLET]Erm&#246;glicht den Br&#252;ckenbau</German>
+		<Italian>[ICON_BULLET]Abilita la costruzione di ponti</Italian>
+		<Spanish>[ICON_BULLET]Permite la construcci&#243;n de puentes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENABLES_DEFENSIVE_PACTS</Tag>
+		<English>[ICON_BULLET]Enables Defensive Pacts</English>
+		<French>[ICON_BULLET]Permet les pactes de d&#233;fense</French>
+		<German>[ICON_BULLET]Erm&#246;glicht Verteidigungsb&#252;ndnisse</German>
+		<Italian>[ICON_BULLET]Abilita le alleanze difensive</Italian>
+		<Spanish>[ICON_BULLET]Permite los acuerdos de protecci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENABLES_GOLD_TRADING</Tag>
+		<English>[ICON_BULLET]Enables [LINK=CONCEPT_TRADE]Gold Trading[\LINK] via Diplomacy</English>
+		<French>[ICON_BULLET]Permet [LINK=CONCEPT_TRADE]l'&#233;change d'or[\LINK] par voie diplomatique</French>
+		<German>[ICON_BULLET][LINK=CONCEPT_TRADE]Erm&#246;glicht den Goldhandel[\LINK] auf diplomatischem Weg</German>
+		<Italian>[ICON_BULLET]Abilita [LINK=CONCEPT_TRADE]lo scambio d'oro[\LINK] mediante la Diplomazia</Italian>
+		<Spanish>[ICON_BULLET]Permite [LINK=CONCEPT_TRADE]intercambiar oro[\LINK] mediante la diplomacia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENABLES_MAP_TRADING</Tag>
+		<English>[ICON_BULLET]Enables [LINK=CONCEPT_TRADE]Map Trading[\LINK]</English>
+		<French>[ICON_BULLET]Permet [LINK=CONCEPT_TRADE]l'&#233;change de cartes[\LINK]</French>
+		<German>[ICON_BULLET][LINK=CONCEPT_TRADE]Erm&#246;glicht den Kartenhandel[\LINK]</German>
+		<Italian>[ICON_BULLET]Abilita lo [LINK=CONCEPT_TRADE]scambio di mappe[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Permite [LINK=CONCEPT_TRADE]intercambiar mapas[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENABLES_ON_TERRAIN</Tag>
+		<English>[ICON_BULLET]Enables %F1_Icon on %s2_TerrainName</English>
+		<French>[ICON_BULLET]Permet %F1_Icon sur : %s2_TerrainName</French>
+		<German>[ICON_BULLET]Erm&#246;glicht %F1_Icon auf der Gel&#228;ndeart %s2_TerrainName</German>
+		<Italian>[ICON_BULLET]Abilita %F1_Icon sul terreno %s2_TerrainName</Italian>
+		<Spanish>[ICON_BULLET]Permite %F1_Icon en %s2:2_TerrainName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENABLES_OPEN_BORDERS</Tag>
+		<English>[ICON_BULLET]Enables [LINK=CONCEPT_BORDERS]Open Borders[\LINK]</English>
+		<French>[ICON_BULLET]Permet le [LINK=CONCEPT_BORDERS]libre passage[\LINK]</French>
+		<German>[ICON_BULLET]Erm&#246;glicht die [LINK=CONCEPT_BORDERS]&#214;ffnung der Grenzen[\LINK]</German>
+		<Italian>[ICON_BULLET]Abilita il [LINK=CONCEPT_BORDERS]diritto di passaggio[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Permite la [LINK=CONCEPT_BORDERS]apertura de fronteras[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENABLES_PERM_ALLIANCES</Tag>
+		<English>[ICON_BULLET]Enables Permanent Alliances</English>
+		<French>[ICON_BULLET]Permet les alliances permanentes</French>
+		<German>[ICON_BULLET]Erm&#246;glicht Allianzen</German>
+		<Italian>[ICON_BULLET]Abilita le alleanze permanenti</Italian>
+		<Spanish>[ICON_BULLET]Permite las alianzas permanentes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENABLES_TECH_TRADING</Tag>
+		<English>[ICON_BULLET]Enables [LINK=CONCEPT_TRADE]Technology Trading[\LINK]</English>
+		<French>[ICON_BULLET]Permet [LINK=CONCEPT_TRADE]l'&#233;change de technologies[\LINK]</French>
+		<German>[ICON_BULLET][LINK=CONCEPT_TRADE]Erm&#246;glicht den Technologiehandel[\LINK]</German>
+		<Italian>[ICON_BULLET]Abilita lo [LINK=CONCEPT_TRADE]scambio di tecnologie[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Permite [LINK=CONCEPT_TRADE]intercambiar tecnolog&#237;a[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENABLES_VASSAL_STATES</Tag>
+		<English>[ICON_BULLET]Enables Vassal States</English>
+		<French>[ICON_BULLET]Permet les Etats vassaux</French>
+		<German>[ICON_BULLET]Erm&#246;glicht Vasallenstaaten</German>
+		<Italian>[ICON_BULLET]Abilita gli stati vassalli</Italian>
+		<Spanish>[ICON_BULLET]Permite estados vasallos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENEMY_DEFENSES_REDUCED_TO</Tag>
+		<English>Your %s1_UnitName has reduced the defenses of %s2_CityName to %d3_Num%%!</English>
+		<French>Votre %s1_UnitName a r&#233;duit les d&#233;fenses de %s2_CityName &#224; %d3_Num%% !</French>
+		<German>Eure Einheit %s1_UnitName hat den Verteidigungswert in %s2_CityName auf %d3_Num%% gesenkt!</German>
+		<Italian>La tua unit&#224; %s1_UnitName ha ridotto le difese di %s2_CityName a %d3_Num%%!</Italian>
+		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha:ha:han:han] reducido las defensas de %s2_CityName en un %d3_Num%%.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_EXTRA_MOVES</Tag>
+		<English>[ICON_BULLET]%D1_Change Extra Moves for %s2_Name</English>
+		<French>[ICON_BULLET]%D1_Change mouvement suppl&#233;mentaire pour : %s2_Name</French>
+		<German>[ICON_BULLET]%D1_Change zus&#228;tzliche Fortbewegung f&#252;r Einheit %s2_Name</German>
+		<Italian>[ICON_BULLET]%D1_Change movimenti extra per le unit&#224; di %s2:2_Name</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change [NUM1:movimiento adicional:movimientos adicionales] para %s2_Name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FEATURE_GROWN_NEAR_CITY</Tag>
+		<English>A %s1_FeatName has grown near %s2_CityName!</English>
+		<French>Une %s1_FeatName a pouss&#233; pr&#232;s de %s2_CityName !</French>
+		<German>Die Gel&#228;ndeart %s1_FeatName ist nahe der Stadt %s2_CityName entstanden!</German>
+		<Italian>Vicino a %s2_CityName [NUM1:&#232; sorto:&#232; sorta] %s1_FeatName</Italian>
+		<Spanish>Ha aparecido [NUM1:un:una:unos:unas] %s1_FeatName cerca de %s2_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FEAT_GOOD_HEALTH</Tag>
+		<English>%D1_Change[ICON_HEALTHY] from %s2_FeatName</English>
+		<French>%D1_Change[ICON_HEALTHY] (%s2_FeatName)</French>
+		<German>%D1_Change[ICON_HEALTHY] durch Gel&#228;ndeart %s2_FeatName</German>
+		<Italian>%D1_Change[ICON_HEALTHY] per %s2_FeatName</Italian>
+		<Spanish>%D1_Change [ICON_HEALTHY] por %s2_FeatName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FEAT_HEALTH</Tag>
+		<English>%D1_Change[ICON_UNHEALTHY] from %s2_FeatName</English>
+		<French>%D1_Change[ICON_UNHEALTHY] (%s2_FeatName)</French>
+		<German>%D1_Change[ICON_UNHEALTHY] durch Gel&#228;ndeart %s2_FeatName</German>
+		<Italian>%D1_Change[ICON_UNHEALTHY] per %s2_FeatName</Italian>
+		<Spanish>%D1_Change [ICON_UNHEALTHY] por %s2_FeatName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FIRST_DISCOVER_FOUNDS</Tag>
+		<English>[ICON_BULLET]First to Discover Founds[SPACE]</English>
+		<French>[ICON_BULLET]Le premier qui fait cette d&#233;couverte fonde :[SPACE]</French>
+		<German>[ICON_BULLET]Erster Entdecker gr&#252;ndet:[SPACE]</German>
+		<Italian>[ICON_BULLET]Il primo che scopre questa tecnologia fonda[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]El primero en descubrir funda[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FIRST_DISCOVER_INCORPORATES</Tag>
+		<English>[ICON_BULLET]First to Discover Incorporates[SPACE]</English>
+		<French>[ICON_BULLET]Le premier &#224; d&#233;couvrir fonde[SPACE]</French>
+		<German>[ICON_BULLET]Erster Entdecker gr&#252;ndet[SPACE]</German>
+		<Italian>[ICON_BULLET]Il primo a scoprire fonda[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]El primero en descubrir se incorpora[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FIRST_TECH_CHOOSE_FREE</Tag>
+		<English>Your Civilization is the first to discover [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]! Choose a free technology...</English>
+		<French>Votre civilisation est la premi&#232;re &#224; d&#233;couvrir la technologie ([COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]) ! Choisissez une technologie gratuite...</French>
+		<German>Eure Zivilisation hat erstmals die Technologie [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] entdeckt! W&#228;hlt eine freie Technologie ...</German>
+		<Italian>La tua civilt&#224; &#232; la prima a scoprire la tecnologia [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]! Scegli una tecnologia gratuita...</Italian>
+		<Spanish>Vuestra civilizaci&#243;n ha sido la primera en descubrir [NUM1:el:la:los:las] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]. Elegid una tecnolog&#237;a gratis...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FOOD_THRESHOLD</Tag>
+		<English>Food: %d1_Num/%d2_Threshold [ICON_FOOD]</English>
+		<French>Nourriture : %d1_Num/%d2_Threshold [ICON_FOOD]</French>
+		<German>Nahrung: %d1_Num/%d2_Threshold [ICON_FOOD]</German>
+		<Italian>Cibo: %d1_Num/%d2_Threshold [ICON_FOOD]</Italian>
+		<Spanish>Alimentos: %d1_Num/%d2_Threshold [ICON_FOOD]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FORCED_SPECIALIST</Tag>
+		<English>(%d1_Num Forced)</English>
+		<French>(%d1_Num forc&#233;s)</French>
+		<German>(%d1_Num gezwungen)</German>
+		<Italian>(%d1_Num forzato)</Italian>
+		<Spanish>(%d1_Num [NUM1:forzado:forzados])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FOUNDED_IN</Tag>
+		<English>Founded in %s1_DateStr</English>
+		<French>Fondation en %s1_DateStr</French>
+		<German>Gegr&#252;ndet %s1_DateStr</German>
+		<Italian>Fondata nel %s1_DateStr</Italian>
+		<Spanish>se fund&#243; en el a&#241;o %s1_DateStr</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FREE_SPECIALIST</Tag>
+		<English>(Free Specialist)</English>
+		<French>(Sp&#233;cialiste gratuit)</French>
+		<German>(Freier Spezialist)</German>
+		<Italian>(Specialista gratis)</Italian>
+		<Spanish>(Especialista gratis)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_GENERAL_KILLED</Tag>
+		<English>%s1_warlord has died in combat!</English>
+		<French>%s1_warlord est mort au combat !</French>
+		<German>%s1_warlord ist im Kampf gefallen!</German>
+		<Italian>%s1_warlord &#232; morto in battaglia!</Italian>
+		<Spanish>&#161;%s1_warlord ha muerto en combate!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_GLOBAL_WARMING_NEAR_CITY</Tag>
+		<English>Global Warming strikes near %s1_CityName!</English>
+		<French>Alerte ! R&#233;chauffement plan&#233;taire pr&#232;s de %s1_CityName !</French>
+		<German>Nahe der Stadt %s1_CityName zeigen sich Auswirkungen der globalen Erw&#228;rmung!</German>
+		<Italian>Gli effetti del riscaldamento globale colpiscono %s1_CityName!</Italian>
+		<Spanish>El calentamiento global causa efecto cerca de %s1_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_GOLD</Tag>
+		<English>Gold (%d1_Num)</English>
+		<French>Or (%d1_Num)</French>
+		<German>Gold (%d1_Num)</German>
+		<Italian>Oro (%d1_Num)</Italian>
+		<Spanish>Oro (%d1_Num)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_GOLD_PER_TURN</Tag>
+		<English>Gold Per Turn (%d1_Num)</English>
+		<French>Or par tour (%d1_Num)</French>
+		<German>Gold pro Runde (%d1_Num)</German>
+		<Italian>Oro per turno (%d1_Num)</Italian>
+		<Spanish>Oro por turno (%d1_Num)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_GOOD_HEALTH_FROM_BONUSES</Tag>
+		<English>%D1_Change[ICON_HEALTHY] from Bonuses</English>
+		<French>%D1_Change[ICON_HEALTHY] (bonus)</French>
+		<German>%D1_Change[ICON_HEALTHY] durch Boni</German>
+		<Italian>%D1_Change[ICON_HEALTHY] per i bonus</Italian>
+		<Spanish>%D1_Change [ICON_HEALTHY] por bonificaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_GOOD_HEALTH_FROM_CIV</Tag>
+		<English>%D1_Change[ICON_HEALTHY] from Civilization</English>
+		<French>%D1_Change[ICON_HEALTHY] (civilisation)</French>
+		<German>%D1_Change[ICON_HEALTHY] durch Zivilisation</German>
+		<Italian>%D1_Change[ICON_HEALTHY] per la civilt&#224;</Italian>
+		<Spanish>%D1_Change [ICON_HEALTHY] por civilizaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_GOOD_HEALTH_FROM_HANDICAP</Tag>
+		<English>%D1_Change[ICON_HEALTHY] from Difficulty Level</English>
+		<French>%D1_Change[ICON_HEALTHY] (niveau de difficult&#233;)</French>
+		<German>%D1_Change[ICON_HEALTHY] durch Schwierigkeitsgrad</German>
+		<Italian>%D1_Change[ICON_HEALTHY] per il livello di difficolt&#224;</Italian>
+		<Spanish>%D1_Change [ICON_HEALTHY] por nivel de dificultad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_GOOD_HEALTH_FROM_POWER</Tag>
+		<English>%D1_Change[ICON_HEALTHY] from Power</English>
+		<French>%D1_Change[ICON_HEALTHY] (&#233;lectricit&#233;)</French>
+		<German>%D1_Change[ICON_HEALTHY] durch Energie</German>
+		<Italian>%D1_Change[ICON_HEALTHY] per l'energia</Italian>
+		<Spanish>%D1_Change [ICON_HEALTHY] por energ&#237;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_GP_BORN</Tag>
+		<English>%s1_GPName has been born in %s2_CityName!</English>
+		<French>Naissance de %s1_GPName &#224; %s2_CityName !</French>
+		<German>Die Gro&#223;e Pers&#246;nlichkeit %s1_GPName wurde in %s2_CityName geboren!</German>
+		<Italian>%s1_GPName &#232; nato a %s2_CityName!</Italian>
+		<Spanish>%s1_GPName ha nacido en %s2_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_GP_BORN_SOMEWHERE</Tag>
+		<English>%s1_GPName has been born in a far away land!</English>
+		<French>Naissance de %s1_GPName dans un pays lointain !</French>
+		<German>Die Gro&#223;e Pers&#246;nlichkeit %s1_GPName wurde in einem fernen Land geboren!</German>
+		<Italian>%s1_GPName &#232; [NUM1:nato:nata] in una terra lontana!</Italian>
+		<Spanish>%s1_GPName ha nacido en una tierra muy lejana.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_GP_BORN_FIELD</Tag>
+		<English>%s1_GreatPersonName has emerged in the field</English>
+		<French>%s1_GreatPersonName s'est r&#233;v&#233;l&#233; sur le champ de bataille</French>
+		<German>%s1_GreatPersonName im Feld entstanden</German>
+		<Italian>%s1_GreatPersonName si &#232; distinto sul campo</Italian>
+		<Spanish>Ha aparecido %s1_GreatPersonName en el campo de batalla</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_GREAT_PERSON</Tag>
+		<English>Great Person: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</English>
+		<French>Personnage illustre : %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</French>
+		<German>Gro&#223;e Pers&#246;nlichkeit: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</German>
+		<Italian>Grande Personaggio: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</Italian>
+		<Spanish>Grandes personajes: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HAPPINESS_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappyOrUn in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HAVENT_MET_CIV</Tag>
+		<English>[COLOR_WARNING_TEXT]We have not yet met this Civilization!!![COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Nous ne connaissons pas encore cette civilisation ![COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Wir hatten noch keinen Kontakt zu dieser Zivilisation!!![COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Non abbiamo ancora incontrato questa civilt&#224;![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]A&#250;n no nos hemos encontrado con esa civilizaci&#243;n.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HEALTH_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUn in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUn dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HealthOrUn in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HealthOrUn in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HealthOrUn en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HEALTH_EXTRA</Tag>
+		<English>%D1_Change[ICON_HEALTHY] from Extra Health</English>
+		<French>%D1_Change[ICON_HEALTHY] de sant&#233; suppl&#233;mentaire</French>
+		<German>%D1_Change[ICON_HEALTHY] wegen gr&#246;&#223;erer Gesundheit</German>
+		<Italian>%D1_Change[ICON_HEALTHY] da salute extra</Italian>
+		<Spanish>%D1_Change [ICON_HEALTHY] por salud adicional</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HEALTH_FROM_BONUSES</Tag>
+		<English>%D1_Change[ICON_UNHEALTHY] from Bonuses</English>
+		<French>%D1_Change[ICON_UNHEALTHY] (bonus)</French>
+		<German>%D1_Change[ICON_UNHEALTHY] durch Boni</German>
+		<Italian>%D1_Change[ICON_UNHEALTHY] per i bonus</Italian>
+		<Spanish>%D1_Change [ICON_UNHEALTHY] por bonificaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HEALTH_FROM_CIV</Tag>
+		<English>%D1_Change[ICON_UNHEALTHY] from Civilization</English>
+		<French>%D1_Change[ICON_UNHEALTHY] (civilisation)</French>
+		<German>%D1_Change[ICON_UNHEALTHY] durch Zivilisation</German>
+		<Italian>%D1_Change[ICON_UNHEALTHY] per la civilt&#224;</Italian>
+		<Spanish>%D1_Change [ICON_UNHEALTHY] por civilizaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HEALTH_FROM_ESPIONAGE</Tag>
+		<English>%D1_Change[ICON_UNHEALTHY] from Poisoned Water</English>
+		<French>%D1_Change[ICON_UNHEALTHY] en raison de l'eau toxique</French>
+		<German>%D1_Change[ICON_UNHEALTHY] durch vergiftetes Wasser</German>
+		<Italian>%D1_Change[ICON_UNHEALTHY] per acqua avvelenata</Italian>
+		<Spanish>%D1_Change [ICON_UNHEALTHY] por agua envenenada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HEALTH_FROM_FRESH_WATER</Tag>
+		<English>%D1_Change[ICON_HEALTHY] from Fresh Water</English>
+		<French>%D1_Change[ICON_HEALTHY] (eau douce)</French>
+		<German>%D1_Change[ICON_HEALTHY] durch S&#252;&#223;wasser</German>
+		<Italian>%D1_Change[ICON_HEALTHY] per acqua dolce</Italian>
+		<Spanish>%D1_Change [ICON_HEALTHY] por agua dulce</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HEALTH_FROM_HANDICAP</Tag>
+		<English>%D1_Change[ICON_UNHEALTHY] from Difficulty Level</English>
+		<French>%D1_Change[ICON_UNHEALTHY] (niveau de difficult&#233;)</French>
+		<German>%D1_Change[ICON_UNHEALTHY] durch Schwierigkeitsgrad</German>
+		<Italian>%D1_Change[ICON_UNHEALTHY] per il livello di difficolt&#224;</Italian>
+		<Spanish>%D1_Change [ICON_UNHEALTHY] por nivel de dificultad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HEALTH_FROM_POP</Tag>
+		<English>%D1_Change[ICON_UNHEALTHY] from Population</English>
+		<French>%D1_Change[ICON_UNHEALTHY] (population)</French>
+		<German>%D1_Change[ICON_UNHEALTHY] durch Bev&#246;lkerung</German>
+		<Italian>%D1_Change[ICON_UNHEALTHY] per la popolazione</Italian>
+		<Spanish>%D1_Change [ICON_UNHEALTHY] por poblaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HEALTH_FROM_POWER</Tag>
+		<English>%D1_Change[ICON_UNHEALTHY] from Power</English>
+		<French>%D1_Change[ICON_UNHEALTHY] (&#233;lectricit&#233;)</French>
+		<German>%D1_Change[ICON_UNHEALTHY] durch Energie</German>
+		<Italian>%D1_Change[ICON_UNHEALTHY] per l'energia</Italian>
+		<Spanish>%D1_Change [ICON_UNHEALTHY] por energ&#237;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_COMMERCE_TRAIT</Tag>
+		<English>[ICON_BULLET]%D1%%%F2 for %s3_trait leader</English>
+		<French>[ICON_BULLET]%D1%%%F2 pour un dirigeant %s3_trait</French>
+		<German>[ICON_BULLET]%D1%%%F2 f&#252;r %s3:2_trait Staatsoberhaupt</German>
+		<Italian>[ICON_BULLET]%D1%%%F2 per un leader %s3_trait</Italian>
+		<Spanish>[ICON_BULLET]%D1%% %F2 por l&#237;der %s3_trait</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_CORPORATION_COMMERCE</Tag>
+		<English>[ICON_BULLET]%D1%F2 from Corporations</English>
+		<French>[ICON_BULLET]%D1%F2 gr&#226;ce aux soci&#233;t&#233;s commerciales</French>
+		<German>[ICON_BULLET]%D1%F2 durch Kapitalgesellschaften</German>
+		<Italian>[ICON_BULLET]%D1%F2 dalle corporazioni</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2 por corporaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_GREATPEOPLE_BASE_RATE</Tag>
+		<English>Base Great Person Rate = %D1[ICON_GREATPEOPLE]</English>
+		<French>Taux de d&#233;part Personnage illustre = %D1[ICON_GREATPEOPLE]</French>
+		<German>Grundwert f&#252;r Gro&#223;e Pers&#246;nlichkeiten = %D1[ICON_GREATPEOPLE]</German>
+		<Italian>Ritmo base dei Grandi Personaggi = %D1[ICON_GREATPEOPLE]</Italian>
+		<Spanish>Tasa inicial de grandes personajes = %D1 [ICON_GREATPEOPLE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_GREATPEOPLE_CIVICS</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] from Civics</English>
+		<French>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] de la doctrine</French>
+		<German>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] durch Staatsformen</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] dalle forme di governo</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a [ICON_GREATPEOPLE] por principios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_GREATPEOPLE_FINAL</Tag>
+		<English>Final Great Person Rate = %D1[ICON_GREATPEOPLE]</English>
+		<French>Taux final Personnage illustre = %D1[ICON_GREATPEOPLE]</French>
+		<German>Endg&#252;ltiger Wert f&#252;r Gro&#223;e Pers&#246;nlichkeiten = %D1[ICON_GREATPEOPLE]</German>
+		<Italian>Ritmo finale dei Grandi Personaggi = %D1[ICON_GREATPEOPLE]</Italian>
+		<Spanish>Tasa final de grandes personajes = %D1 [ICON_GREATPEOPLE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_GREATPEOPLE_TRAIT</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] for %s2_trait leader</English>
+		<French>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] pour un chef %s2_trait</French>
+		<German>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] f&#252;r %s2_trait leader</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] per la personalit&#224; %s2_trait:2</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a [ICON_GREATPEOPLE] por l&#237;der %s2:1_trait</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PRODUCTION_TO_COMMERCE</Tag>
+		<English>[ICON_BULLET]%D1%F2 from [ICON_PRODUCTION]</English>
+		<French>[ICON_BULLET]%D1%F2 ([ICON_PRODUCTION])</French>
+		<German>[ICON_BULLET]%D1%F2 durch [ICON_PRODUCTION]</German>
+		<Italian>[ICON_BULLET]%D1%F2 dalla [ICON_PRODUCTION]</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2 por [ICON_PRODUCTION]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PRODUCTION_TO_COMMERCE_FLOAT</Tag>
+		<English>[ICON_BULLET]%s1 %F2 from [ICON_PRODUCTION]</English>
+		<French>[ICON_BULLET]%s1 %F2 ([ICON_PRODUCTION])</French>
+		<German>[ICON_BULLET]%s1 %F2 durch [ICON_PRODUCTION]</German>
+		<Italian>[ICON_BULLET]%s1 %F2 da [ICON_PRODUCTION]</Italian>
+		<Spanish>[ICON_BULLET]%s1 %F2 de [ICON_PRODUCTION]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_CHOPS</Tag>
+		<English>From chopping: %d1[ICON_PRODUCTION]</English>
+		<French>En coupant du bois : %d1[ICON_PRODUCTION]</French>
+		<German>Durch Abholzung: %d1[ICON_PRODUCTION]</German>
+		<Italian>Dal legname: %d1[ICON_PRODUCTION]</Italian>
+		<Spanish>De la tala: %d1[ICON_PRODUCTION]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_FOOD</Tag>
+		<English>[ICON_BULLET]%D1[ICON_PRODUCTION] from %D2[ICON_FOOD] surplus</English>
+		<French>[ICON_BULLET]%D1[ICON_PRODUCTION] de %D2[ICON_FOOD] en exc&#233;dent</French>
+		<German>[ICON_BULLET]%D1[ICON_PRODUCTION] durch %D2[ICON_FOOD]-&#220;berschuss</German>
+		<Italian>[ICON_BULLET]%D1[ICON_PRODUCTION] dal surplus di %D2[ICON_FOOD]</Italian>
+		<Spanish>[ICON_BULLET]%D1 [ICON_PRODUCTION] por %D2 [ICON_FOOD] en exceso</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_MILITARY</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for military units</English>
+		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour les unit&#233;s militaires</French>
+		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] f&#252;r Milit&#228;reinheiten</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per le unit&#224; militari</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] de unidades militares</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_MOD_BONUS</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for %s2_unit_or_building with access to %s3_bonus</English>
+		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour : %s2_unit_or_building ayant acc&#232;s &#224; : %s3_bonus</French>
+		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] f&#252;r %s2_unit_or_building mit Zugang zum Bonusgut %s3_bonus</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per %s2_unit_or_building con accesso a %s3_bonus</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] de %s2_unit_or_building con acceso a %s3_bonus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_NATIONAL_WONDER</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for building a National Wonder</English>
+		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour la construction d'une merveille nationale</French>
+		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] f&#252;r die Errichtung eines Nationalen Wunders</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per la costruzione di una Meraviglia Nazionale</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] por construir una maravilla nacional</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_OVERFLOW</Tag>
+		<English>Overflow from previous build: %d1[ICON_PRODUCTION]</English>
+		<French>Exc&#233;dent de la production pr&#233;c&#233;dente: %d1[ICON_PRODUCTION]</French>
+		<German>&#220;berschuss aus vorherigem Bauprojekt: %d1[ICON_PRODUCTION]</German>
+		<Italian>In eccedenza dalla precedente costruzione: %d1[ICON_PRODUCTION]</Italian>
+		<Spanish>En exceso por construcci&#243;n anterior: %d1 [ICON_PRODUCTION]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_RELIGION</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for having %s2_religion as a State Religion</English>
+		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] si cette religion (%s2_religion) est votre religion d'&#233;tat</French>
+		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] f&#252;r die Religion %s2_religion als Staatsreligion</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per avere come religione ufficiale la religione %s2:2_religion</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] por tener el %s2_religion como religi&#243;n oficial.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_SPACESHIP</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for building a Spaceship Component</English>
+		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour la construction d'un &#233;l&#233;ment du vaisseau spatial</French>
+		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] f&#252;r die Errichtung einer Raumschiffkomponente</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per la costruzione di un componente dell'astronave</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] por construir un componente para naves espaciales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_TEAM_WONDER</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for building a Team Wonder</English>
+		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour la construction d'une merveille d'&#233;quipe</French>
+		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] f&#252;r die Errichtung eines Teamwunders</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per la costruzione di una Meraviglia di squadra</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] por construir una maravilla de equipo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_TRAIT</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for %s2_unit_or_building by %s3_trait leader</English>
+		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour : %s2_unit_or_building avec un dirigeant %s3_trait</French>
+		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] f&#252;r %s2_unit_or_building f&#252;r %s3:2_trait Staatsoberhaupt</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per %s2_unit_or_building con un leader %s3_trait</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] de %s2_unit_or_building por l&#237;der %s3_trait</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_WONDER</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for building a World Wonder</English>
+		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour la construction d'une merveille mondiale</French>
+		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] f&#252;r die Errichtung eines Weltwunders</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per la costruzione di una Grande Meraviglia</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] por construir una maravilla del mundo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_RELIGION_COMMERCE</Tag>
+		<English>[ICON_BULLET]%D1%F2 from Religion</English>
+		<French>[ICON_BULLET]%D1%F2 en raison de la religion</French>
+		<German>[ICON_BULLET]%D1%F2 durch Religion</German>
+		<Italian>[ICON_BULLET]%D1%F2 dalla religione</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2 por religi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_YIELD_BONUS</Tag>
+		<English>[ICON_BULLET]%D1%%%F2 from Resources</English>
+		<French>[ICON_BULLET]%D1%%%F2 (ressources)</French>
+		<German>[ICON_BULLET]%D1%%%F2 durch Ressourcen</German>
+		<Italian>[ICON_BULLET]%D1%%%F2 dalle risorse</Italian>
+		<Spanish>[ICON_BULLET]%D1%% %F2 por recursos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_YIELD_CAPITAL</Tag>
+		<English>[ICON_BULLET]%D1%%%F2 for Capital</English>
+		<French>[ICON_BULLET]%D1%%%F2 (capitale)</French>
+		<German>[ICON_BULLET]%D1%%%F2 f&#252;r Hauptstadt</German>
+		<Italian>[ICON_BULLET]%D1%%%F2 dalla capitale</Italian>
+		<Spanish>[ICON_BULLET]%D1%% %F2 por capital</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_YIELD_CIVICS</Tag>
+		<English>[ICON_BULLET]%D1%%%F2 from Civics</English>
+		<French>[ICON_BULLET]%D1%%%F2 (doctrine)</French>
+		<German>[ICON_BULLET]%D1%%%F2 durch Staatsformen</German>
+		<Italian>[ICON_BULLET]%D1%%%F2 dalle forme di governo</Italian>
+		<Spanish>[ICON_BULLET]%D1%% %F2 por principios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_YIELD_POWER</Tag>
+		<English>[ICON_BULLET]%D1%%%F2 from Power</English>
+		<French>[ICON_BULLET]%D1%%%F2 (&#233;lectricit&#233;)</French>
+		<German>[ICON_BULLET]%D1%%%F2 durch Energie</German>
+		<Italian>[ICON_BULLET]%D1%%%F2 dall'energia</Italian>
+		<Spanish>[ICON_BULLET]%D1%% %F2 por energ&#237;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HISTORICAL_INFO</Tag>
+		<English>Get Historical Information for %s1_Name</English>
+		<French>Obtenir informations historiques sur %s1_Name</French>
+		<German>Historische Informationen &#252;ber %s1:2_Name abfragen</German>
+		<Italian>Scopri le informazioni storiche di %s1_Name</Italian>
+		<Spanish>Obtener informaci&#243;n hist&#243;rica [NUM1:del:de la:de los:de las] %s1_Name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HURRY_PROD</Tag>
+		<English>Hurry %s1_ProdName</English>
+		<French>Acc&#233;l&#233;rer la production de : %s1_ProdName</French>
+		<German>%s1_ProdName beschleunigen</German>
+		<Italian>Accelera %s1_ProdName</Italian>
+		<Spanish>Acelerar %s1_ProdName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HURRY_GOLD</Tag>
+		<English>[ICON_BULLET]Costs %d1_Num Gold</English>
+		<French>[ICON_BULLET]Co&#251;t en or : %d1_Num</French>
+		<German>[ICON_BULLET]Kostet %d1_Num Gold</German>
+		<Italian>[ICON_BULLET]Costa %d1_Num [NUM1:oro:ori]</Italian>
+		<Spanish>[ICON_BULLET]Cuesta %d1_Num de oro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HURRY_POP</Tag>
+		<English>[ICON_BULLET]Costs %d1_Num Population</English>
+		<French>[ICON_BULLET]Co&#251;t en population : %d1_Num</French>
+		<German>[ICON_BULLET]Kostet %d1_Num Bev&#246;lkerung</German>
+		<Italian>[ICON_BULLET]Costa %d1_Num abitanti</Italian>
+		<Spanish>[ICON_BULLET]Cuesta %d1_Num de poblaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_INCREASE_RATE</Tag>
+		<English>Increase %s1_CmrcType Rate by %d2_Mod%%</English>
+		<French>Augmente la production (Taux : %s1_CmrcType) de %d2_Mod%%</French>
+		<German>Wirtschaftsrate f&#252;r %s1_CmrcType um %d2_Mod%% erh&#246;hen</German>
+		<Italian>Aumenta il ritmo %s1_CmrcType del %d2_Mod%%</Italian>
+		<Spanish>Aumentar ritmo de %s1_CmrcType en un %d2_Mod%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_IRRIGATION_ANYWHERE</Tag>
+		<English>[ICON_BULLET]Can Build [LINK=IMPROVEMENT_FARM]Farms[\LINK] without Irrigation</English>
+		<French>[ICON_BULLET]Construction de [LINK=IMPROVEMENT_FARM]fermes[\LINK] possible sans irrigation</French>
+		<German>[ICON_BULLET]Kann [LINK=IMPROVEMENT_FARM]Bauernh&#246;fe[\LINK] ohne Bew&#228;sserung errichten</German>
+		<Italian>[ICON_BULLET]Permette di costruire [LINK=IMPROVEMENT_FARM]fattorie[\LINK] senza irrigazione</Italian>
+		<Spanish>[ICON_BULLET]Se pueden construir [LINK=IMPROVEMENT_FARM]granjas[\LINK] sin riego</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_LEADS_TO</Tag>
+		<English>[NEWLINE][ICON_BULLET]Leads to[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET]M&#232;ne vers :[SPACE]</French>
+		<German>[NEWLINE][ICON_BULLET]F&#252;hrt zu:[SPACE]</German>
+		<Italian>[NEWLINE][ICON_BULLET]Conduce a[SPACE]</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Lleva a[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_MAINT_INFO</Tag>
+		<English>Maintenance Represents the Total Cost of Governening this City.</English>
+		<French>Le co&#251;t d'entretien est le co&#251;t total de la gestion de cette ville</French>
+		<German>Der Unterhalt repr&#228;sentiert die Gesamtkosten f&#252;r die Verwaltung dieser Stadt.</German>
+		<Italian>Il mantenimento rappresenta il costo totale necessario per governare questa citt&#224;.</Italian>
+		<Spanish>El mantenimiento representa el coste total de gobernar esta ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_MASTER</Tag>
+		<English>Master</English>
+		<French>Ma&#238;tre</French>
+		<German>Hegemon</German>
+		<Italian>Signore</Italian>
+		<Spanish>Se&#241;or</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_MASTER_AREA_LOSS</Tag>
+		<English>[NEWLINE]Master Land: %d1%% of Original (Vassal breaks free at %d2%%)</English>
+		<French>[NEWLINE]Territoire principal : %d1 %% de l'initial (Vassal libre &#224; %d2 %%)</French>
+		<German>[NEWLINE]Landbesitz Hegemon: %d1%% der Ursprungsgr&#246;&#223;e (Losl&#246;sung des Vasallen bei %d2%%)</German>
+		<Italian>[NEWLINE]Territorio del Signore: %d1%% di quello originario (il Vassallo si libera a %d2%%)</Italian>
+		<Spanish>[NEWLINE]Tierra del se&#241;or: %d1%% de la original (el vasallo se libera al %d2%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_MAX_POP_HURRY</Tag>
+		<English>[SPACE][COLOR_WARNING_TEXT](Max Avail: %d1_Num)[COLOR_REVERT]</English>
+		<French>[SPACE][COLOR_WARNING_TEXT](maximum : %d1_Num)[COLOR_REVERT]</French>
+		<German>[SPACE][COLOR_WARNING_TEXT](Max.: %d1_Num)[COLOR_REVERT]</German>
+		<Italian>[SPACE][COLOR_WARNING_TEXT](Max: %d1_Num)[COLOR_REVERT]</Italian>
+		<Spanish>[SPACE][COLOR_WARNING_TEXT](M&#225;x.: %d1_Num)[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_MAX_SPECIALISTS</Tag>
+		<English>[COLOR_WARNING_TEXT]Max: %d1_Num[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Maximum : %d1_Num[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Max.: %d1_Num[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Max: %d1_Num[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]M&#225;x.: %d1_Num[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_MELTDOWN_CITY</Tag>
+		<English>A Nuclear Meltdown has occurred in %s1_CityName!!!</English>
+		<French>Une r&#233;action nucl&#233;aire s'est produite dans la ville de %s1_CityName !</French>
+		<German>In %s1_CityName hat eine atomare Kernschmelze stattgefunden!!!</German>
+		<Italian>Disastro nucleare a %s1_CityName!!!</Italian>
+		<Spanish>&#161;Ha habido un accidente nuclear en %s1_CityName!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_MIN_CITY_POP</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires a Population of %d1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Il faut une population de %d1[COLOR_REVERT].</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert eine Bev&#246;lkerungsgr&#246;&#223;e von %d1[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede una popolazione di %d1[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere %d1 de poblaci&#243;n[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_MIN_CULTURE_PERCENT</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires Culture of at least %d1%% Own Nationality[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert la culture d'au moins %d1%% citoyens de votre nationalit&#233;[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert einen Kulturwert von mindestens %d1%% der eigenen Nationalit&#228;t[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede una cultura di almeno %d1%%[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere al menos un %d1%% de Cultura de nacionalidad propia[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_NO_PALACE_PENALTY</Tag>
+		<English>No Palace Penalty</English>
+		<French>Aucune p&#233;nalit&#233; de palais</French>
+		<German>Keine Palaststrafe</German>
+		<Italian>Nessuna penalit&#224; per il palazzo</Italian>
+		<Spanish>Sin penalizaci&#243;n por lejan&#237;a con palacio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_NO_STATE_RELIGION</Tag>
+		<English>No State Religion</English>
+		<French>Aucune religion d'&#233;tat</French>
+		<German>Keine Staatsreligion</German>
+		<Italian>Ness. relig. uff.</Italian>
+		<Spanish>Sin religi&#243;n oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_NO_UNIT</Tag>
+		<English>No Unit</English>
+		<French>Aucune unit&#233;</French>
+		<German>Keine Einheit</German>
+		<Italian>Nessuna unit&#224;</Italian>
+		<Spanish>Sin unidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_NUM_CITIES_FLOAT</Tag>
+		<English>%s1_MaintNum [ICON_GOLD]: Number of Cities</English>
+		<French>%s1_MaintNum [ICON_GOLD] : nombre de villes</French>
+		<German>%s1_MaintNum [ICON_GOLD]: Anzahl der St&#228;dte</German>
+		<Italian>%s1_MaintNum [ICON_GOLD]: numero di citt&#224;</Italian>
+		<Spanish>%s1_MaintNum [ICON_GOLD]: Cantidad de ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_NUM_MAINT_FLOAT</Tag>
+		<English>%s1_NumMaint [ICON_GOLD]:[SPACE]</English>
+		<French>%s1_NumMaint [ICON_GOLD] :[SPACE]</French>
+		<German>%s1_NumMaint [ICON_GOLD]:[SPACE]</German>
+		<Italian>%s1_NumMaint [ICON_GOLD]:[SPACE]</Italian>
+		<Spanish>%s1_NumMaint [ICON_GOLD]:[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_NUM_MS</Tag>
+		<English>[SPACE][%d1_Num ms]</English>
+		<French>[SPACE][%d1_Num ms]</French>
+		<German>[SPACE][%d1_Num ms]</German>
+		<Italian>[SPACE][%d1_Num ms]</Italian>
+		<Spanish>[SPACE][%d1_Num ms]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_OPEN_BORDERS</Tag>
+		<English>Open Borders</English>
+		<French>Libre passage</French>
+		<German>Offene Grenzen</German>
+		<Italian>Diritto di passaggio</Italian>
+		<Spanish>Apertura de fronteras</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_OUR_DEAL</Tag>
+		<!-- Can be units, techs, bonuses, cities -->
+		<English>%s1 to %s2 for %s3</English>
+		<French>%s1 &#224; %s2 contre %s3</French>
+		<German>%s1 an %s2 f&#252;r %s3</German>
+		<Italian>%s1 a %s2 per %s3</Italian>
+		<Spanish>%s1 a %s2 a cambio de %s3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PEACE_TREATY</Tag>
+		<English>Peace Treaty (%d1_Num Turns)</English>
+		<French>Trait&#233; de paix (%d1_Num tours)</French>
+		<German>Friedensvertrag (%d1_Num Runden)</German>
+		<Italian>Trattato di pace (%d1_Num Turni)</Italian>
+		<Spanish>Tratado de paz (%d1_Num [NUM1:turno:turnos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PERMANENT_ALLIANCE</Tag>
+		<English>Permanent Alliance</English>
+		<French>Alliance permanente</French>
+		<German>Allianz</German>
+		<Italian>Alleanza permanente</Italian>
+		<Spanish>Alianza permanente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PLAYERS_SIGN_DEFENSIVE_PACT</Tag>
+		<English>%s1 signs defensive pact with %s2</English>
+		<French>%s1 signe un pacte de d&#233;fense avec %s2</French>
+		<German>%s1 unterzeichnet ein Verteidigungsabkommen mit %s2</German>
+		<Italian>%s1 firma un'alleanza difensiva con %s2</Italian>
+		<Spanish>%s1 ha firmado un acuerdo de protecci&#243;n con %s2.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PLAYER_GOLDEN_AGE_BEGINS</Tag>
+		<English>%s1_PlyrName's Golden Age begins</English>
+		<French>L'&#226;ge d'or de %s1_PlyrName commence</French>
+		<German>F&#252;r %s1_PlyrName beginnt ein Goldenes Zeitalter</German>
+		<Italian>L'Et&#224; dell'Oro di %s1_PlyrName inizia</Italian>
+		<Spanish>Empieza la edad de oro de %s1_PlyrName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PLAYER_GOLDEN_AGE_ENDED</Tag>
+		<English>%s1_PlyrName's Golden Age has ended...</English>
+		<French>L'&#226;ge d'or de %s1_PlyrName a pris fin...</French>
+		<German>Das Goldene Zeitalter f&#252;r %s1_PlyrName ist beendet ...</German>
+		<Italian>L'Et&#224; dell'Oro di %s1_PlyrName &#232; terminata!</Italian>
+		<Spanish>Ha terminado la edad de oro de %s1_PlyrName...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PLAYER_GOLDEN_AGE_HAS_BEGUN</Tag>
+		<English>%s1_PlyrName's Golden Age has begun!!!</English>
+		<French>L'&#226;ge d'or de %s1_PlyrName vient de commencer !</French>
+		<German>F&#252;r %s1_PlyrName hat ein Goldenes Zeitalter begonnen!!!</German>
+		<Italian>L'Et&#224; dell'Oro di %s1_PlyrName &#232; iniziata!</Italian>
+		<Spanish>Ha empezado la edad de oro de %s1_PlyrName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PLAYER_PERMANENT_ALLIANCE</Tag>
+		<English>%s1_PlyrName has made a Permanent Alliance with %s2_TeamName!</English>
+		<French>%s1_PlyrName a forg&#233; une alliance permanente avec %s2_TeamName !</French>
+		<German>%s1_PlyrName hat eine Allianz mit dem Team %s2_TeamName geschlossen!</German>
+		<Italian>%s1_PlyrName ha siglato un'alleanza permanente con la squadra %s2_TeamName!</Italian>
+		<Spanish>%s1_PlyrName ha firmado una alianza permanente con %s2_TeamName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_POS_GOLD_PER_TURN</Tag>
+		<English>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/Turn)[COLOR_REVERT]</English>
+		<French>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/tour)[COLOR_REVERT]</French>
+		<German>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/Runde)[COLOR_REVERT]</German>
+		<Italian>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/Turno)[COLOR_REVERT]</Italian>
+		<Spanish>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/turno)[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PROB</Tag>
+		<English>Probabilities:</English>
+		<French>Probabilit&#233;s :</French>
+		<German>Wahrscheinlichkeiten:</German>
+		<Italian>Probabilit&#224;:</Italian>
+		<Spanish>Probabilidad:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_RECEIVED_GOLD</Tag>
+		<English>[SPACE]You have received %d1_Num gold!</English>
+		<French>[SPACE]Vous avez re&#231;u %d1_Num en or !</French>
+		<German>[SPACE]Ihr habt %d1_Num Gold erhalten!</German>
+		<Italian>[SPACE]Hai ricevuto %d1_Num oro!</Italian>
+		<Spanish>[SPACE]Hab&#233;is recibido %d1_Num de oro.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_REFUSES_TO_TALK</Tag>
+		<English>[COLOR_WARNING_TEXT]Refuses to Talk!!![COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Refuse de vous parler ![COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Ist nicht gespr&#228;chsbereit!!![COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Rifiuta di parlare![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]&#161;Se niega a hablar![COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_RELIGION_SPREAD</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT] has spread in %s2_CityName.</English>
+		<French>Cette religion ([COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT]) s'est propag&#233;e jusqu'&#224; %s2_CityName</French>
+		<German>Die Religion [COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT] wurde in %s2_CityName verbreitet.</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT] si &#232; [NUM1:diffuso:diffusa] a %s2_CityName.</Italian>
+		<Spanish>El [COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT] se ha propagado por %s2_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_RELOAD</Tag>
+		<English>Session %d1_number starts</English>
+		<French>Lancement de la session %d1_number</French>
+		<German>Session %d1_number beginnt</German>
+		<Italian>Inizio della sessione %d1_number</Italian>
+		<Spanish>La sesi&#243;n %d1_number est&#225; empezando</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_REL_FOUNDED</Tag>
+		<English>%s1_RelName has been founded in %s2_CityName!</English>
+		<French>La religion (%s1_RelName) a &#233;t&#233; fond&#233;e &#224; %s2_CityName !</French>
+		<German>Die Religion %s1_RelName wurde in %s2_CityName entdeckt!</German>
+		<Italian>%s1_RelName &#232; [NUM1:stato fondato:stata fondata] a %s2_CityName!</Italian>
+		<Spanish>Se ha fundado el %s1_RelName en %s2_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_REL_FOUNDED_UNKNOWN</Tag>
+		<English>%s1_RelName has been founded in a distant land!</English>
+		<French>La religion (%s1_RelName) a &#233;t&#233; fond&#233;e dans un pays lointain !</French>
+		<German>Die Religion %s1_RelName wurde in einem fernen Land entdeckt!</German>
+		<Italian>%s1_RelName &#232; [NUM1:stato fondato:stata fondata] in una terra lontana!</Italian>
+		<Spanish>Se ha fundado el %s1_RelName en una tierra lejana.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_REL_FOUNDED_MOVIE</Tag>
+		<English>You have founded %s1_religion</English>
+		<French>Vous avez fond&#233; : %s1_religion</French>
+		<German>Ihr habt die Religion %s1_religion gegr&#252;ndet</German>
+		<Italian>Hai fondato la religione %s1_religion</Italian>
+		<Spanish>Has fundado el %s1_religion</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_REVEALS_MAP</Tag>
+		<English>[ICON_BULLET]Reveals [LINK=CONCEPT_MAPS]World Map[\LINK]</English>
+		<French>[ICON_BULLET]R&#233;v&#232;le la [LINK=CONCEPT_MAPS]carte du monde[\LINK]</French>
+		<German>[ICON_BULLET]Zeigt die [LINK=CONCEPT_MAPS]Weltkarte[\LINK]</German>
+		<Italian>[ICON_BULLET]Svela la [LINK=CONCEPT_MAPS]mappa[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Revela el [LINK=CONCEPT_MAPS]mapamundi[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_REVEALS</Tag>
+		<English>[ICON_BULLET]Reveals[SPACE]</English>
+		<French>[ICON_BULLET]R&#233;v&#232;le :[SPACE]</French>
+		<German>[ICON_BULLET]Zeigt:[SPACE]</German>
+		<Italian>[ICON_BULLET]Rivela[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Revela[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_REVOLT_IN_CITY</Tag>
+		<English>A %s1_CivAdj revolt has taken place in %s2_CityName!</English>
+		<French>Les %s1_CivAdj se r&#233;voltent &#224; %s2_CityName !</French>
+		<German>In %s2_CityName hat eine %s1:3_CivAdj Revolte stattgefunden!</German>
+		<Italian>Una rivolta %s1_CivAdj &#232; scoppiata a %s2_CityName!</Italian>
+		<Spanish>Ha tenido lugar una rebeli&#243;n %s1:2_CivAdj en %s2_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_REVOLUTION_HAS_BEGUN</Tag>
+		<English>The revolution has begun!!!</English>
+		<French>La r&#233;volution a &#233;clat&#233; !</French>
+		<German>Die Revolution hat begonnen!!!</German>
+		<Italian>La rivoluzione &#232; cominciata!</Italian>
+		<Spanish>Ha empezado la revoluci&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_REVOLUTION_OVER</Tag>
+		<English>The anarchy is over! Your government is re-established.</English>
+		<French>L'anarchie a disparu ! Votre gouvernement a repris le contr&#244;le.</French>
+		<German>Die Anarchiephase ist vor&#252;ber! Eure Regierung wurde wieder eingesetzt.</German>
+		<Italian>L'anarchia &#232; terminata, &#232; stato ristabilito il governo.</Italian>
+		<Spanish>La anarqu&#237;a toca a su fin. Se ha restaurado vuestro gobierno.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_RIVERS</Tag>
+		<English>Rivers</English>
+		<French>
+			<Text>Fleuves</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Fl&#252;sse</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Fiumi</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>R&#237;os</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_SHIFT_SEND_CHAT</Tag>
+		<English>(&lt;SHIFT> to Send Chat Message)</English>
+		<French>(&lt;MAJ> pour envoyer un message)</French>
+		<German>(&lt;UMSCHALTEN> zum Senden einer Chat-Nachricht)</German>
+		<Italian>(&lt;MAIUSC> per spedire i messaggi di chat)</Italian>
+		<Spanish>(&lt;May&#250;s> para enviar mensaje de chat)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_SOMEONE_DECLARED_WAR</Tag>
+		<English>%s1_PlyrName has declared war on %s2_PlyrName!</English>
+		<French>%s1_PlyrName a d&#233;clar&#233; la guerre &#224; %s2_PlyrName !</French>
+		<German>%s1_PlyrName hat %s2_PlyrName den Krieg erkl&#228;rt!</German>
+		<Italian>%s1_PlyrName ha dichiarato guerra a %s2_PlyrName!</Italian>
+		<Spanish>%s1_PlyrName le ha declarado la guerra a %s2_PlyrName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_SOMEONE_DECLARES_WAR</Tag>
+		<English>%s1_PlyrName declares war on %s2_PlyrName!</English>
+		<French>%s1_PlyrName d&#233;clare la guerre &#224; %s2_PlyrName !</French>
+		<German>%s1_PlyrName erkl&#228;rt %s2_PlyrName den Krieg!</German>
+		<Italian>%s1_PlyrName dichiara guerra a %s2_PlyrName!</Italian>
+		<Spanish>%s1_PlyrName le declara la guerra a %s2_PlyrName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_SOMEONE_FIRST_TO_TECH</Tag>
+		<English>%s1_PlyrName is the first to discover %s2_TechName!</English>
+		<French>%s1_PlyrName d&#233;couvre en premier la technologie : %s2_TechName !</French>
+		<German>%s1_PlyrName hat erstmals die Technologie %s2_TechName entdeckt!</German>
+		<Italian>%s1_PlyrName &#232; il primo a scoprire la tecnologia %s2_TechName!</Italian>
+		<Spanish>%s1_PlyrName ha sido el primero en descubrir [NUM1:el:la:los:las] %s2_TechName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_SOMEONE_HAS_COMPLETED</Tag>
+		<English>%s1_PlyrName has completed %s2_PrjctName!</English>
+		<French>%s1_PlyrName a achev&#233; : %s2_PrjctName !</French>
+		<German>%s1_PlyrName hat das Projekt %s2_PrjctName abgeschlossen!</German>
+		<Italian>%s1_PlyrName ha completato %s2_PrjctName!</Italian>
+		<Spanish>%s1_PlyrName ha completado %s2_PrjctName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_SOMEONE_MADE_PEACE</Tag>
+		<English>%s1_PlyrName has made peace with %s2_PlyrName!</English>
+		<French>%s1_PlyrName a fait la paix avec %s2_PlyrName !</French>
+		<German>%s1_PlyrName hat mit %s2_PlyrName Frieden geschlossen!</German>
+		<Italian>%s1_PlyrName ha siglato la pace con %s2_PlyrName!</Italian>
+		<Spanish>%s1_PlyrName ha firmado la paz con %s2_PlyrName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_SPREAD_IRRIGATION</Tag>
+		<English>[ICON_BULLET][LINK=IMPROVEMENT_FARM]Farms[\LINK] Spread [LINK=CONCEPT_IRRIGATION]Irrigation[\LINK]</English>
+		<French>[ICON_BULLET]Les [LINK=IMPROVEMENT_FARM]fermes[\LINK] r&#233;pandent [LINK=CONCEPT_IRRIGATION]l'irrigation[\LINK]</French>
+		<German>[ICON_BULLET][LINK=IMPROVEMENT_FARM]Bauernh&#246;fe[\LINK] verbreiten [LINK=CONCEPT_IRRIGATION]Bew&#228;sserung[\LINK]</German>
+		<Italian>[ICON_BULLET]Le [LINK=IMPROVEMENT_FARM]fattorie[\LINK] diffondono [LINK=CONCEPT_IRRIGATION]l'irrigazione[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Las [LINK=IMPROVEMENT_FARM]granjas[\LINK] propagan el [LINK=CONCEPT_IRRIGATION]riego[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_STRIKE</Tag>
+		<English>[SPACE][COLOR_NEGATIVE_TEXT]STRIKE[COLOR_REVERT]</English>
+		<French>[SPACE][COLOR_NEGATIVE_TEXT]GREVE[COLOR_REVERT]</French>
+		<German>[SPACE][COLOR_NEGATIVE_TEXT]STREIK[COLOR_REVERT]</German>
+		<Italian>[SPACE][COLOR_NEGATIVE_TEXT]SCIOPERO[COLOR_REVERT]</Italian>
+		<Spanish>[SPACE][COLOR_NEGATIVE_TEXT]HUELGA[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_SURRENDER_REVOLT</Tag>
+		<English>%s1_team_vassal has broken free from %s2_team_master and is once again a free state.</English>
+		<French>%s1_team_vassal a rompu avec son suzerain %s2_team_master et est &#224; nouveau un &#233;tat libre.</French>
+		<German>%s1_team_vassal hat sich von dem Hegemon %s2_team_master losgesagt und ist damit wieder ein freies Reich.</German>
+		<Italian>%s1_team_vassal ha rinunciato alla protezione di %s2_team_master ed &#232; tornato a essere uno stato libero.</Italian>
+		<Spanish>%s1_team_vassal ha roto sus cadenas con %s2_team_master y vuelve a ser un estado libre.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TECH_REQUIRES_KNOWLEDGE_OF</Tag>
+		<English>[ICON_BULLET]This Technology Requires the Knowledge of %s1_Name</English>
+		<French>[ICON_BULLET]Cette technologie requiert la connaissance de : %s1_Name</French>
+		<German>[ICON_BULLET]Diese Technologie erfordert folgendes Wissen: %s1_Name</German>
+		<Italian>[ICON_BULLET]Questa tecnologia richiede la conoscenza [NUM1:del:della:dei:delle] %s1_Name</Italian>
+		<Spanish>[ICON_BULLET]Esta tecnolog&#237;a requiere conocer [NUM1:el:la:los:las] %s1_Name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TIME_SPENT</Tag>
+		<English>Time spent: %d1 hours, %d2 minutes</English>
+		<French>Temps &#233;coul&#233; : %d1 heures et %d2 minutes</French>
+		<German>Verbrauchte Zeit: %d1 Stunden, %d2 Minuten</German>
+		<Italian>Tempo trascorso: %d1 ore, %d2 minuti</Italian>
+		<Spanish>Tiempo transcurrido: %d1 [NUM1:hora:horas], %d2 [NUM2:minuto:minutos]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TOTAL_UNHEALTHY</Tag>
+		<English>%d1_Num[ICON_UNHEALTHY] Total Unhealthiness</English>
+		<French>%d1_Num[ICON_UNHEALTHY] (total maladie)</French>
+		<German>%d1_Num[ICON_UNHEALTHY] Krankheit gesamt</German>
+		<Italian>%d1_Num[ICON_UNHEALTHY] Malasanit&#224; totale</Italian>
+		<Spanish>Insalubridad total: %d1_Num [ICON_UNHEALTHY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TOTAL_HEALTHY</Tag>
+		<English>%d1_Num[ICON_HEALTHY] Total Health</English>
+		<French>%D1_Change[ICON_HEALTHY] (total sant&#233;)</French>
+		<German>%d1_Num[ICON_HEALTHY] Gesundheit gesamt</German>
+		<Italian>%d1_Num[ICON_HEALTHY] Salute totale</Italian>
+		<Spanish>Salud total: %d1_Num [ICON_HEALTHY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TOTAL_MAINT_FLOAT</Tag>
+		<English>%s1_Num [ICON_GOLD] Total Maintenance</English>
+		<French>%s1_Num [ICON_GOLD] : co&#251;t total d'entretien</French>
+		<German>%s1_Num [ICON_GOLD] Unterhalt gesamt</German>
+		<Italian>%s1_Num [ICON_GOLD] mantenimento totale</Italian>
+		<Spanish>%s1_Num [ICON_GOLD] de mantenimiento total</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TRADE_ROUTES</Tag>
+		<English>[ICON_BULLET]%D1_Change Trade [NUM1:Routes:Routes] per City</English>
+		<French>[ICON_BULLET]%D1_Change route commerciale par ville</French>
+		<German>[ICON_BULLET]%D1_Change [NUM1:Handelsweg:Handelswege] pro Stadt</German>
+		<Italian>[ICON_BULLET]%D1_Change rotte commerciali per citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change [NUM1:ruta comercial:rutas comerciales] por ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TRADE_ROUTE_PLUNDER</Tag>
+		<English>%d3[ICON_GOLD] [NUM3:was:were] plundered by a %s1_unit outside %s2_city.</English>
+		<French>%d3[ICON_GOLD] [NUM3:a &#233;t&#233; pill&#233;:ont &#233;t&#233; pill&#233;s] par une unit&#233; : %s1_unit &#224; l'ext&#233;rieur de la ville : %s2_city.</French>
+		<German>%d3[ICON_GOLD] [NUM3:wurde:wurden] von einer Einheit %s1_unit au&#223;erhalb von %s2_city gepl&#252;ndert.</German>
+		<Italian>%d3[ICON_GOLD] [NUM3:&#232; stato saccheggiato:sono stati saccheggiati] dall'unit&#224; %s1_unit fuori %s2_city.</Italian>
+		<Spanish>%d3 [ICON_GOLD] [NUM3:saqueado:saqueados] por [NUM1:un:una:unos:unas] %s1_unit a las afueras de %s2_city.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TRADE_ROUTE_PLUNDERED</Tag>
+		<English>Your %s1_unit has plundered %d3[ICON_GOLD] outside %s2_city!</English>
+		<French>Votre unit&#233; : %s1_unit a pill&#233; %d3[ICON_GOLD] &#224; l'ext&#233;rieur de la ville : %s2_city!</French>
+		<German>Eure Einheit %s1_unit hat %d3[ICON_GOLD] au&#223;erhalb von %s2_city gepl&#252;ndert!</German>
+		<Italian>La tua unit&#224; %s1_unit ha saccheggiato %d3[ICON_GOLD] fuori %s2_city!</Italian>
+		<Spanish>&#161;[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_unit [NUM1:ha:ha:han:han] saqueado %d3 [ICON_GOLD] a las afueras de %s2_city!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TURNS_LEFT</Tag>
+		<English>%d1 [NUM1:Turn:Turns] Left!</English>
+		<French>Il reste %d1 [NUM1:tour:tours] !</French>
+		<German>Noch %d1 [NUM1:Runde:Runden]!</German>
+		<Italian>%d1 [NUM1:turno rimasto:turni rimasti]!</Italian>
+		<Spanish>[NUM1:Queda:Quedan] %d1 [NUM1:turno:turnos]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TURNS_LEFT_TO_VICTORY</Tag>
+		<English>%d1 [NUM1:Turn:Turns] to Victory!</English>
+		<French>%d1 [NUM1:tour:tours] avant la victoire !</French>
+		<German>%d1 [NUM1:Runde:Runden] zum Sieg!</German>
+		<Italian>%d1 [NUM1:turno:turni] alla vittoria!</Italian>
+		<Spanish>&#161;%d1 [NUM1:turno:turnos] para la victoria!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TURN_BEGINS</Tag>
+		<English>Your turn has begun!</English>
+		<French>Votre tour a commenc&#233; !</French>
+		<German>Ihr seid am Zug!</German>
+		<Italian>&#200; iniziato il tuo turno!</Italian>
+		<Spanish>Ha empezado vuestro turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_TURN_OR_TURNS</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:Turn:Turns][COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:tour:tours][COLOR_REVERT]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:Runde:Runden][COLOR_REVERT]</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turni][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT] </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_UNHEALTH_EXTRA</Tag>
+		<English>%D1_Change[ICON_UNHEALTHY] penalty</English>
+		<French>%D1_Change[ICON_UNHEALTHY] : p&#233;nalit&#233;</French>
+		<German>%D1_Change[ICON_UNHEALTHY]-Malus</German>
+		<Italian>%D1_Change penalit&#224; [ICON_UNHEALTHY]</Italian>
+		<Spanish>%D1_Change [ICON_UNHEALTHY] de penalizaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_UNITS_ON_STRIKE</Tag>
+		<English>Your units are on strike!!!</English>
+		<French>Vos unit&#233;s sont en gr&#232;ve !</French>
+		<German>Eure Einheiten befinden sich im Streik!!!</German>
+		<Italian>Le tue unit&#224; sono in sciopero!</Italian>
+		<Spanish>Vuestras unidades est&#225;n en huelga.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_UNIT_BUILDING_HURRY</Tag>
+		<English>[COLOR_WARNING_TEXT]Can only Hurry Production of a Unit or a Building.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Ne peut acc&#233;l&#233;rer la production que d'une unit&#233; ou d'un b&#226;timent.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nur die Produktion einer Einheit oder eines Geb&#228;udes beschleunigen.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Puoi solamente accelerare la produzione di un'unit&#224; o un edificio.[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Solo se puede acelerar la producci&#243;n de una unidad o un edificio.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_UNIT_DISBANDED_NO_MONEY</Tag>
+		<English>%s1_UnitName was disbanded because of a lack of funds!</English>
+		<French>%s1_UnitName : unit&#233; dissoute par manque de fonds !</French>
+		<German>Die Einheit %s1_UnitName wurde wegen Kapitalmangel aufgel&#246;st!</German>
+		<Italian>%s1_UnitName &#232; [NUM1:stato congedato:stata congedata] per carenza di fondi!</Italian>
+		<Spanish>[NUM1:Un:Una:Unos:Unas] %s1_UnitName se [NUM1:ha disuelto:ha disuelto:han disuelto:han disuelto] por falta de fondos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_UNKNOWN_CIRC_GLOBE</Tag>
+		<English>A distant Civilization has circumnavigated the Globe!</English>
+		<French>Une exp&#233;dition d'une civilisation lointaine a r&#233;ussi le premier tour du monde !</French>
+		<German>Eine ferne Zivilisation hat die Welt umsegelt!</German>
+		<Italian>Una civilt&#224; lontana ha circumnavigato il pianeta!</Italian>
+		<Spanish>Una civilizaci&#243;n lejana ha circunnavegado el globo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_UNKNOWN_FIRST_TO_TECH</Tag>
+		<English>A distant civilization is the first to discover %s1_TechName!</English>
+		<French>Une civilisation lointaine a d&#233;couvert la technologie [COLOR_HIGHLIGHT_TEXT]%s1_TechName[COLOR_REVERT] en premier !</French>
+		<German>Eine ferne Zivilisation hat erstmals die Technologie %s1_TechName entdeckt!</German>
+		<Italian>Una civilt&#224; lontana ha scoperto la tecnologia %s1_TechName!</Italian>
+		<Spanish>Una civilizaci&#243;n lejana ha sido la primera en descubrir [NUM1:el:la:los:las] %s1_TechName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_VASSAL</Tag>
+		<English>Vassal State</English>
+		<French>Etat vassal</French>
+		<German>Vasallenstaat</German>
+		<Italian>Stato vassallo</Italian>
+		<Spanish>Estado vasallo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_VASSAL_AGREEMENT</Tag>
+		<English>%s1_vassal_name has agreed to become a vassal state of %s2_master_name</English>
+		<French>%s1_vassal_name souhaite devenir un &#233;tat vassal de : %s2_master_name</French>
+		<German>Die Zivilisation von %s1_vassal_name willigt ein, %s2_master_name als Vasallenstaat zu dienen</German>
+		<Italian>%s1_vassal_name ha accettato di diventare uno stato vassallo di %s2_master_name</Italian>
+		<Spanish>%s1_vassal_name ha accedido a convertirse en estado vasallo de %s2_master_name.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_VASSAL_AREA_LOSS</Tag>
+		<English>[NEWLINE]Land: %d1%% of Original (free at %d2%%)</English>
+		<French>[NEWLINE]Territoire : %d1 %% de l'initial (libre &#224; %d2 %%)</French>
+		<German>[NEWLINE]Landbesitz: %d1%% der Ursprungsgr&#246;&#223;e (Losl&#246;sung bei %d2%%)</German>
+		<Italian>[NEWLINE]Territorio: %d1%% di quello originario (libero a %d2%%)</Italian>
+		<Spanish>[NEWLINE]Tierra: %d1%% de la original (libre al %d2%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_VASSAL_LAND_STATS</Tag>
+		<English>[NEWLINE]Land: %d1%% of Master (free at %d2%%)</English>
+		<French>[NEWLINE]Territoire : %d1 %% du principal (libre &#224; %d2 %%)</French>
+		<German>[NEWLINE]Landbesitz: %d1%% des Hegemons (Losl&#246;sung bei %d2%%)</German>
+		<Italian>[NEWLINE]Territorio: %d1%% del Signore (libero a %d2%%)</Italian>
+		<Spanish>[NEWLINE]Tierra: %d1%% del se&#241;or (libre al %d2%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_VASSAL_POPULATION_STATS</Tag>
+		<English>[NEWLINE]Population: %d1%% of Master (free at %d2%%)</English>
+		<French>[NEWLINE]Population : %d1 %% du principal (libre &#224; %d2 %%)</French>
+		<German>[NEWLINE]Bev&#246;lkerung: %d1%% des Hegemons (Losl&#246;sung bei %d2%%)</German>
+		<Italian>[NEWLINE]Popolazione: %d1%% del Signore (libera a %d2%%)</Italian>
+		<Spanish>[NEWLINE]Poblaci&#243;n: %d1%% del se&#241;or (libre al %d2%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_VASSAL_REVOLT</Tag>
+		<English>%s1_team_vassal has renounced the protection of %s2_team_master and is once again a free state.</English>
+		<French>%s1_team_vassal a renonc&#233; &#224; la protection de son suzerain %s2_team_master. Il s'agit &#224; nouveau d'un &#233;tat libre.</French>
+		<German>%s1_team_vassal verzichtet auf den Schutz der Zivilisation von %s2_team_master und ist damit wieder ein freies Reich.</German>
+		<Italian>%s1_team_vassal ha rinunciato alla protezione di %s2_team_master ed &#232; tornato a essere uno stato libero.</Italian>
+		<Spanish>%s1_team_vassal ha renunciado a la protecci&#243;n de %s2_team_master y vuelve a ser un estado libre.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_VASSAL_SHORT</Tag>
+		<English>Vassal</English>
+		<French>Vassal</French>
+		<German>Vasall</German>
+		<Italian>Vassallo</Italian>
+		<Spanish>Vasallo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WAIT_MORE_TURNS</Tag>
+		<English>Wait %d1_Num more [NUM1:Turn:Turns]</English>
+		<French>Attendre encore %d1_Num [NUM1:tour:tours]</French>
+		<German>Noch %d1_Num [NUM1:Runde:Runden] warten</German>
+		<Italian>Aspetta %d1_Num [NUM1:turno:turni]</Italian>
+		<Spanish>Esperar %d1_Num [NUM1:turno:turnos] m&#225;s</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WATER_WORK</Tag>
+		<English>[ICON_BULLET]Can Work Water Tiles</English>
+		<French>[ICON_BULLET]Peut travailler les cases d'eau</French>
+		<German>[ICON_BULLET]Kann Wasser-Gel&#228;ndefelder bewirtschaften</German>
+		<Italian>[ICON_BULLET]Permette di usare le caselle d'acqua</Italian>
+		<Spanish>[ICON_BULLET]Se puede trabajar en casillas de agua</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WE_LOVE_KING_MAINT</Tag>
+		<English>No Maintenance costs while city is celebrating!</English>
+		<French>Aucun co&#251;t de maintenance pendant les festivit&#233;s de la ville !</French>
+		<German>Keine Unterhaltskosten w&#228;hrend der Feierlichkeiten in der Stadt!</German>
+		<Italian>Durante le celebrazioni nella citt&#224;, non c'&#232; nessun costo di mantenimento!</Italian>
+		<Spanish>No hay costes de mantenimiento mientras la ciudad est&#225; de celebraciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WHAT_TO_RESEARCH_NEXT</Tag>
+		<English>What would you like to research next?</English>
+		<French>Dans quel domaine souhaitez-vous poursuivre vos recherches ?</French>
+		<German>Was wollt Ihr als N&#228;chstes erforschen?</German>
+		<Italian>Cosa vuoi ricercare dopo?</Italian>
+		<Spanish>&#191;Qu&#233; quer&#233;is investigar a continuaci&#243;n?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WHILE_IN_ANARCHY</Tag>
+		<English>[SPACE]While in Anarchy</English>
+		<French>[SPACE]pendant l'anarchie</French>
+		<German>[SPACE]W&#228;hrend einer Anarchiephase</German>
+		<Italian>[SPACE]Mentre si &#232; in anarchia</Italian>
+		<Spanish>[SPACE]mientras reina la anarqu&#237;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WINS_VICTORY</Tag>
+		<English>%s1_PlyrName Wins a %s2_VctryName Victory!!!!</English>
+		<French>%s1_PlyrName remporte une victoire de type : %s2_VctryName !</French>
+		<German>%s1_PlyrName tr&#228;gt den Sieg in der Kategorie %s2_VctryName davon!!!!</German>
+		<Italian>%s1_PlyrName conquista una vittoria %s2_VctryName!</Italian>
+		<Spanish>%s1_PlyrName ha obtenido una victoria %s2_VctryName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WITH_IRRIGATION</Tag>
+		<English>[SPACE]with [LINK=CONCEPT_IRRIGATION]Irrigation[\LINK]</English>
+		<French>[SPACE]avec [LINK=CONCEPT_IRRIGATION]Irrigation[\LINK]</French>
+		<German>[SPACE]mit [LINK=CONCEPT_IRRIGATION]Bew&#228;sserung[\LINK]</German>
+		<Italian>[SPACE]con [LINK=CONCEPT_IRRIGATION]irrigazione[\LINK]</Italian>
+		<Spanish>[SPACE]con [LINK=CONCEPT_IRRIGATION]riego[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WORLD_MAP</Tag>
+		<English>World Map</English>
+		<French>Carte du monde</French>
+		<German>Weltkarte</German>
+		<Italian>Mappa</Italian>
+		<Spanish>Mapamundi</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_MISC_YOUR_AIR_UNIT_ABORTED</Tag>
+		<English>Your %s1_UnitName was forced to abort its mission by an enemy %s2_EnUName</English>
+		<French>[NUM2:Un:Une:] %s2_EnUName [NUM2:ennemi:ennemie] a contraint votre %s1_UnitName &#224; abandonner sa mission</French>
+		<German>Eure Einheit %s1_UnitName wurde von einer feindlichen Einheit %s2_EnUName gezwungen, ihre Mission abzubrechen</German>
+		<Italian>La tua unit&#224; %s1_UnitName &#232; stata costretta ad abbandonare la missione dall'unit&#224; nemica %s2_EnUName</Italian>
+		<Spanish>[NUM2:Un:Una:Unos:Unas] %s2_EnUName [NUM2:enemigo ha obligado:enemiga ha obligado:enemigos han obligado:enemigas han obligado] a [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName a cancelar su misi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOUR_AIR_UNIT_DAMAGED</Tag>
+		<English>Your %s1_UnitName was damaged by an enemy %s2_EnUName (%d3%%)</English>
+		<French>Votre %s1_UnitName a subi des d&#233;g&#226;ts inflig&#233;s par [NUM2:un:une]%s2_EnUName [NUM2:ennemi:ennemie] (%d3%%)</French>
+		<German>Eure Einheit %s1_UnitName wurde von einer feindlichen Einheit %s2_EnUName besch&#228;digt (%d3%%)</German>
+		<Italian>La tua unit&#224; %s1_UnitName &#232; stata danneggiata dall'unit&#224; nemica %s2_EnUName! (%d3%%)</Italian>
+		<Spanish>[NUM2:Un:Una:Unos:Unas] %s2_EnUName del enemigo [NUM2:ha da&#241;ado:ha da&#241;ado:han da&#241;ado:han da&#241;ado] a [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOUR_UNITS_DAMAGED_BY_FLANKING</Tag>
+		<English>A %s1_unit has damaged %d2 of our units by flanking our defensive positions.</English>
+		<French>Une unit&#233; : %s1_unit a endommag&#233; %d2 de nos unit&#233;s en contournant nos positions d&#233;fensives.</French>
+		<German>Eine Einheit %s1_unit hat %d2 unserer Einheiten durch Flankieren unserer Verteidigungsstellungen besch&#228;digt.</German>
+		<Italian>Un'unit&#224; %s1_unit ha danneggiato %d2 delle nostre unit&#224; aggirando le nostre posizioni difensive.</Italian>
+		<Spanish>[NUM1:Un:Una:Unos:Unas] %s1_unit [NUM1:ha:ha:han:han] da&#241;ado %d2 de tus unidades al flanquear nuestras posiciones defensivas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOUR_UNIT_DIED_BY_FLANKING</Tag>
+		<English>Your %s1_UnitName been killed from a %s3_civilization %s2_EnUName flank attack</English>
+		<French>Votre unit&#233; [NUM2:de:d':] %s1_UnitName a &#233;t&#233; tu&#233;e suite &#224; une attaque de flanc lanc&#233;e par les %s2_EnUName (%s3_civilization)</French>
+		<German>Eure Einheit %s1_UnitName ist bei einem Flankenangriff der %s3:2_civilization Einheit %s2_EnUName umgekommen</German>
+		<Italian>La tua unit&#224; %s1_UnitName &#232; stata distrutta dall'attacco ai fianchi dell'unit&#224; %s2_EnUName %s3:2_civilization</Italian>
+		<Spanish>Un flanqueo [NUM2:del:de la:de los:de las] %s2_EnUName de la civilizaci&#243;n %s3:2_civilization ha destruido [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_ABORTED_ENEMY_AIR</Tag>
+		<English>Your %s1_UnitName has forced a %s3_owner_adjective %s2_EnUName to abort its mission</English>
+		<French>Votre unit&#233; : %s1_UnitName a contraint l'unit&#233; : %s2_EnUName (%s3_owner_adjective) &#224; abandonner sa mission.</French>
+		<German>Eure Einheit %s1_UnitName hat eine %s3:3_owner_adjective feindliche Einheit %s2_EnUName gezwungen, ihre Mission abzubrechen</German>
+		<Italian>La tua unit&#224; %s1_UnitName ha costretto l'unit&#224; %s2_EnUName %s3:2_owner_adjective ad abbandonare la missione</Italian>
+		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha obligado:ha obligado:han obligado:han obligado] a [NUM2:un:una:unos:unas] %s2_EnUName del enemigo %s3:1_owner_adjective a cancelar su misi&#243;n.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_AIR_UNIT_HURT</Tag>
+		<English>Your %s1_UnitName was intercepted by an enemy %s2_EnUName! (%d3%% Damage)</English>
+		<French>Votre %s1_UnitName a &#233;t&#233; intercept&#233; par une unit&#233; ennemie (%s2_EnUName) ! (%d3%% de d&#233;g&#226;ts)</French>
+		<German>Eure Einheit %s1_UnitName wurde von einer feindlichen Einheit %s2_EnUName abgefangen! (%d3%% Schaden)</German>
+		<Italian>La tua unit&#224; %s1_UnitName &#232; stata intecettata dall'unit&#224; nemica %s2_EnUName! (%d3%% danno)</Italian>
+		<Spanish>[NUM2:Un:Una:Unos:Unas] %s2_EnUName del enemigo [NUM2:ha:ha:han:han] interceptado a [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName. (%d3%% de da&#241;o)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR</Tag>
+		<English>Your %s1_UnitName was attacked by an enemy %s2_EnUName! (%d3_Damage%% Damage)</English>
+		<French>Votre %s1_UnitName [NUM1:a &#233;t&#233; attaqu&#233;:a &#233;t&#233; attaqu&#233;e:ont &#233;t&#233; attaqu&#233;s:a &#233;t&#233; attaqu&#233;es] par [NUM2:un:une:des:des] %s2_EnUName ! (%d3_Damage%% de d&#233;g&#226;ts)</French>
+		<German>Eure Einheit %s1_UnitName wurde von einer feindlichen Einheit %s2_EnUName angegriffen!</German>
+		<Italian>La tua unit&#224; di %s1_UnitName &#232; stata attaccata dall'unit&#224; nemica di %s2_EnUName!</Italian>
+		<Spanish>[NUM2:Un:Una:Unos:Unas] %s2_EnUName del enemigo [NUM2:ha:ha:han:han] atacado a [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName (%d3_Damage%% de da&#241;o)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_ATTACK_BY_AIR</Tag>
+		<English>Your %s1_UnitName has attacked an enemy %s2_EnUName! (%d3_Damage%% Damage)</English>
+		<French>Votre %s1_UnitName a attaqu&#233; [NUM2:un:une:des:des] %s2_EnUName ! (%d3_Damage%% de d&#233;g&#226;ts)</French>
+		<German>Eure Einheit %s1_UnitName hat eine feindliche Einheit %s2_EnUName angegriffen!</German>
+		<Italian>La tua unit&#224; di %s1_UnitName ha attaccato un'unit&#224; nemica di %s2_EnUName!</Italian>
+		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha:ha:han:han] atacado a [NUM2:un:una:unos:unas] %s2_EnUName del enemigo. (%d3_Damage%% de da&#241;o)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_DAMAGED_ENEMY_AIR</Tag>
+		<English>Your %s1_UnitName has damaged a %s4_owner_adjective %s2_EnUName (%d3%%)</English>
+		<French>Votre %s1_UnitName a inflig&#233; des d&#233;g&#226;ts &#224; [NUM2:un:une] %s2_EnUName (%s4_owner_adjective) (%d3%%)</French>
+		<German>Eure Einheit %s1_UnitName hat einer %s4:2_owner_adjective Einheit %s2_EnUName Schaden zugef&#252;gt (%d3%%)</German>
+		<Italian>La tua unit&#224; %s1_UnitName ha danneggiato l'unit&#224; %s4:2_owner_adjective %s2_EnUName! (%d3%%)</Italian>
+		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha da&#241;ado:ha da&#241;ado:han da&#241;ado:han da&#241;ado] a [NUM2:un:una:unos:unas] %s2_EnUName del enemigo %s4:1_owner_adjective (%d3%%)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_DAMAGED_UNITS_BY_FLANKING</Tag>
+		<English>Your %s1_unit has damaged %d2 units by flanking the enemy positions.</English>
+		<French>Votre unit&#233; : %s1_unit a endommag&#233; %d2 unit&#233;s en contournant les positions ennemies.</French>
+		<German>Eure Einheit %s1_unit hat %d2 Einheiten durch Flankieren der gegnerischen Stellungen besch&#228;digt.</German>
+		<Italian>La tua unit&#224; %s1_unit ha danneggiato %d2 unit&#224; aggirando le posizioni nemiche.</Italian>
+		<Spanish>[NUM1:Tu:Tu:Tus:Tus] %s1_unit [NUM1:ha:ha:han:han] da&#241;ado %d2 [NUM2:unidad:unidades] al flanquear las posiciones enemigas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_DECLARED_WAR_ON</Tag>
+		<English>You have declared war on %s1_TeamName!</English>
+		<French>Vous avez d&#233;clar&#233; la guerre &#224; %s1_TeamName !</French>
+		<German>Ihr habt dem Team %s1_TeamName den Krieg erkl&#228;rt!</German>
+		<Italian>Hai dichiarato guerra alla squadra %s1_TeamName!</Italian>
+		<Spanish>Le hab&#233;is declarado la guerra a %s1_TeamName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_DEFENSES_REDUCED_TO</Tag>
+		<English>Your defenses in %s1_CityName have been reduced to %d2_Num%% by a %s3_UnitName!</English>
+		<French>Les d&#233;fenses de %s1_CityName ont &#233;t&#233; r&#233;duites &#224; %d2_Num%% - %s3_UnitName!</French>
+		<German>Euer Verteidigungswert in %s1_CityName wurde auf %d2_Num%% gesenkt - %s3_UnitName!</German>
+		<Italian>Le tue difese di %s1_CityName sono state ridotte a %d2_Num%% - %s3_UnitName!</Italian>
+		<Spanish>Vuestras defensas en %s1_CityName han sido reducidas en un %d2_Num%% - %s3_UnitName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_DISCOVERED_TECH</Tag>
+		<English>You have discovered %s1_TechName!</English>
+		<French>Vous avez d&#233;couvert : %s1_TechName !</French>
+		<German>Ihr habt die Technologie %s1_TechName entdeckt!</German>
+		<Italian>Hai scoperto [NUM1:lo:la:i:le] %s1_TechName!</Italian>
+		<Spanish>Hab&#233;is descubierto [NUM1:el:la:los:las] %s1_TechName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_DISCOVERED_BONUS</Tag>
+		<English>You have discovered a source of [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] near %s2_CityName!</English>
+		<French>Vous avez d&#233;couvert une source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] pr&#232;s de %s2_CityName !</French>
+		<German>Ihr habt in der N&#228;he der Stadt %s2_CityName ein Vorkommen des Bonusguts [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] entdeckt!</German>
+		<Italian>Hai scoperto una risorsa di [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] vicino a %s2_CityName!</Italian>
+		<Spanish>Hab&#233;is descubierto una fuente de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] cerca de %s2_CityName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_HURT_ENEMY_AIR</Tag>
+		<English>Your %s1_UnitName has intercepted a %s4_owner_adjective %s2_EnUName! (%d3%% Damage)</English>
+		<French>Votre %s1_UnitName a intercept&#233; une unit&#233; ennemie (%s2_EnUName  %s4_owner_adjective) ! (%d3%% de d&#233;g&#226;ts)</French>
+		<German>Eure Einheit %s1_UnitName hat eine feindliche Einheit %s2_EnUName (%s4_owner_adjective) abgefangen! (%d3%% Schaden)</German>
+		<Italian>La tua unit&#224; %s1_UnitName ha intercettato l'unit&#224; nemica (%s4_owner_adjective) %s2_EnUName! (%d3%% danno)</Italian>
+		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha:ha:han:han] interceptado a [NUM2:un:una:unos:unas] %s2_EnUName del enemigo (%s4_owner_adjective) (%d3%% de da&#241;o)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED</Tag>
+		<English>A %s1_ImpName has been destroyed by a %s3_civ_adjective %s2_UnitName!</English>
+		<French>Destruction de 1 %s1_ImpName - %s2_UnitName (%s3_civ_adjective) !</French>
+		<German>Eine Modernisierung %s1_ImpName wurde zerst&#246;rt - %s2_UnitName (%s3_civ_adjective)!</German>
+		<Italian>[NUM1:Un:Una] %s1_ImpName &#232; [NUM1:stato distrutto:stata distrutta] - %s2_UnitName (%s3_civ_adjective)!</Italian>
+		<Spanish>[NUM1:Un:Una:Unos:Unas] %s1_ImpName [NUM1:ha sido destruido:ha sido destruida:han sido destruidos:han sido destruidas] - %s2_UnitName (%s3_civ_adjective).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_KILLED_UNIT_BY_FLANKING</Tag>
+		<English>Your %s1_UnitName has killed a %s3_civilization %s2_EnUName by flank attack</English>
+		<French>Votre %s1_UnitName a lanc&#233; une attaque de flanc et tu&#233; [NUM2:un:une:] %s2_EnUName (%s3_civilization)</French>
+		<German>Eure Einheit %s1_UnitName hat eine %s3:3_civilization Einheit %s2_EnUName im Flankenangriff geschlagen</German>
+		<Italian>La tua unit&#224; %s1_UnitName ha distrutto con un attacco ai fianchi l'unit&#224; %s2_EnUName %s3:2_civilization</Italian>
+		<Spanish>Un flanqueo de [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName ha destruido [NUM2:el:la:los:las] %s2_EnUName de la civilizaci&#243;n %s3:2_civilization</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_MADE_PEACE_WITH</Tag>
+		<English>You have made peace with %s1_TeamName!</English>
+		<French>Vous avez fait la paix avec %s1_TeamName!</French>
+		<German>Ihr habt Frieden mit Team %s1_TeamName geschlossen!</German>
+		<Italian>Hai fatto pace con %s1_TeamName!</Italian>
+		<Spanish>Hab&#233;is firmado la paz con %s1_TeamName</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK_UNKNOWN</Tag>
+		<English>Your forces are under attack!</English>
+		<French>Vos troupes sont attaqu&#233;es !</French>
+		<German>Eure Truppen werden angegriffen!</German>
+		<Italian>Le tue forze sono sotto attacco!</Italian>
+		<Spanish>Atacan a vuestras fuerzas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_UNIT_DESTROYED_IMP</Tag>
+		<English>Your %s1_UnitName has destroyed a %s2_ImpName!</English>
+		<French>Votre %s1_UnitName a d&#233;truit 1 %s2_ImpName !</French>
+		<German>Eure Einheit %s1_UnitName hat eine Modernisierung %s2_ImpName zerst&#246;rt!</German>
+		<Italian>La tua unit&#224; %s1_UnitName ha distrutto [NUM2:un:una] %s2_ImpName!</Italian>
+		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha:ha:han:han] destruido [NUM2:un:una:unos:unas] %s2_ImpName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_UNIT_FAIL_DESTROY_IMP</Tag>
+		<English>Your %s1_UnitName has failed to destroy the %s2_ImpName!</English>
+		<French>Votre unit&#233; (%s1_UnitName) n'a pas pu d&#233;truire 1 %s2_ImpName !</French>
+		<German>Eurer Einheit %s1_UnitName ist es nicht gelungen, die Modernisierung %s2_ImpName zu zerst&#246;ren!</German>
+		<Italian>[NUM1:Il tuo: La tua: I tuoi: Le tue] %s1_UnitName non sono riusciti a distruggere %s2_ImpName!</Italian>
+		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName no [NUM1:ha:ha:han:han] conseguido destruir [NUM2:un:una:unos:unas] %s2_ImpName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_UNKNOWN</Tag>
+		<English>While defending, your %s1_UnitName was destroyed by a %s2_EnUName!</English>
+		<French>En se d&#233;fendant, votre unit&#233; (%s1_UnitName) a &#233;t&#233; d&#233;truite par l'unit&#233; ennemie : %s2_EnUName !</French>
+		<German>Eure Einheit %s1_UnitName wurde w&#228;hrend eines Verteidigungsman&#246;vers von einer Einheit %s2_EnUName vernichtet!</German>
+		<Italian>Difendendo, la tua unit&#224; %s1_UnitName &#232; stata distrutta dall'unit&#224; nemica %s2_EnUName!</Italian>
+		<Spanish>Mientras se [NUM1:defend&#237;a:defend&#237;a:defend&#237;an:defend&#237;an], [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName [NUM1:ha sido destruido:ha sido destruida:han sido destruidos:han sido destruidas] por [NUM2:un:una:unos:unas] %s2_EnUName.</Spanish>
+	</TEXT>
 </Civ4GameText>
