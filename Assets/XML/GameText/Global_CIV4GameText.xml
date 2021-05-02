@@ -30234,4 +30234,487 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>[SPACE]Unit&#224; mondiale: %d1_Num [NUM1:rimanente:rimanenti]</Italian>
 		<Spanish>[SPACE]Unidad mundial: %d1_Num [NUM1:restante:restantes]</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VASSAL_DEMAND_TRIBUTE</Tag>
+		<English>Demand tribute from %s1_player</English>
+		<French>Exiger le versement d'un tribut &#224; %s1_player</French>
+		<German>Tribut von %s1_player fordern</German>
+		<Italian>Esigi un tributo da %s1_player</Italian>
+		<Spanish>Exigirle tributo a %s1_player</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VASSAL_GRANT_TRIBUTE</Tag>
+		<English>The %s1_civ (%s2_player) demands a tribute of %s3_resource. Will you comply?</English>
+		<French>Les %s1_civ (%s2_player) exigent le versement d'un tribut : %s3_resource. Vous soumettez-vous ?</French>
+		<German>%s1_civ (%s2_player) fordert einen Tribut in Form der Ressource %s3_resource. Wollt Ihr der Forderung nachkommen?</German>
+		<Italian>%s1_civ (%s2_player) esige un tributo di %s3_resource. Obbedirai?</Italian>
+		<Spanish>El %s1_civ (%s2_player) exige un tributo de %s3_resource. &#191;Lo vais a pagar?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VASSAL_GRANT_TRIBUTE_YES</Tag>
+		<English>Yes, anything to keep them happy</English>
+		<French>Oui, nous ferons tout ce qu'ils veulent</French>
+		<German>Ja, Hauptsache, sie sind zufrieden.</German>
+		<Italian>S&#236;, purch&#233; non siano in collera con me</Italian>
+		<Spanish>S&#237;, lo que sea por tenerlo contento</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VASSAL_GRANT_TRIBUTE_NO</Tag>
+		<English>Never! (Declare WAR!)</English>
+		<French>Jamais ! (D&#233;clarer la GUERRE !)</French>
+		<German>Niemals! (KRIEG erkl&#228;ren!)</German>
+		<Italian>Mai! (Dichiara GUERRA!)</Italian>
+		<Spanish>&#161;Jam&#225;s! (Declarar la guerra)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VASSAL_GRANT_TRIBUTE_ACCEPTED</Tag>
+		<English>%s1_player has agreed to supply %s2_player with %s3_resource</English>
+		<French>%s1_player a accept&#233; d'approvisionner %s2_player en %s3_resource</French>
+		<German>%s1_player hat sich einverstanden erkl&#228;rt, %s2_player die Ressource %s3_resource zu &#252;berlassen.</German>
+		<Italian>%s1_player ha accettato di fornire %s3_resource a %s2_player</Italian>
+		<Spanish>%s1_player ha accedido a proporcionarle %s3_resource a %s2_player</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_RESET</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Mission Failed! All progress of %s1_player towards a %s2_victory has been lost![COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Echec de la mission ! Toute la progression du joueur %s1_player vers une %s2_victory a &#233;t&#233; perdue ![COLOR_REVERT]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Mission gescheitert! Der gesamte Fortschritt von %s1_player in Richtung %s2_victory ist verloren![COLOR_REVERT]</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Missione fallita! Tutti i progressi di %s1_player verso una vittoria di tipo %s2_victory sono andati perduti![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]&#161;Misi&#243;n fallida! &#161;Se han perdido todos los progresos de %s1_player hacia una %s2_victory![COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_PLAYER_VOTES</Tag>
+		<English>[SPACE](%d1 [NUM1:Vote:Votes])</English>
+		<French>[SPACE](%d1 [NUM1:Vote:Votes])</French>
+		<German>[SPACE](%d1 [NUM1:Stimme:Stimmen])</German>
+		<Italian>[SPACE](%d1 [NUM1:Voto:Voti])</Italian>
+		<Spanish>[SPACE](%d1 [NUM1:voto:votos])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_ELECTION</Tag>
+		<!-- %s1 = Player name   -->
+		<English>Election triggered by %s1</English>
+		<French>Election d&#233;clench&#233;e par l'%s1</French>
+		<German>Wahl durch %s1 initiiert</German>
+		<Italian>Elezioni sollecitate da %s1</Italian>
+		<Spanish>Votaci&#243;n iniciada por %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_BUILT</Tag>
+		<!-- %s1 = player name  -->
+		<English>Built by %s1</English>
+		<French>Construction par %s1</French>
+		<German>Von %s1 errichtet</German>
+		<Italian>Costruito da %s1</Italian>
+		<Spanish>Construcci&#243;n terminada por %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_CITY_CULTURE</Tag>
+		<!-- %s1 = TXT_KEY_CULTURELEVEL_   -->
+		<English>%d1 cities with %s2 Culture</English>
+		<French>%d1 villes avec un niveau de culture %s2</French>
+		<German>%d1 St&#228;dte mit Kulturstufe %s2</German>
+		<Italian>%d1 citt&#224; con cultura %s2</Italian>
+		<Spanish>%d1 ciudades con cultura %s2</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_ELIMINATE_ALL</Tag>
+		<English>Eliminate all rivals</English>
+		<French>Elimination de tous les rivaux</French>
+		<German>Alle Gegner ausl&#246;schen</German>
+		<Italian>Elimina tutti i rivali</Italian>
+		<Spanish>Eliminar a todos los rivales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_HIGHEST_SCORE</Tag>
+		<English>Highest score at %s1</English>
+		<French>Meilleur score : %s1</French>
+		<German>H&#246;chste Punktzahl: %s1</German>
+		<Italian>Maggior punteggio nel %s1</Italian>
+		<Spanish>Mayor puntuaci&#243;n en %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_NOT_BUILT</Tag>
+		<English>Not yet built</English>
+		<French>Pas encore construit(e)</French>
+		<German>Noch nicht errichtet</German>
+		<Italian>Non ancora costruito</Italian>
+		<Spanish>Sin construir a&#250;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENT_CULTURE</Tag>
+		<English>%d1%% of Culture</English>
+		<French>%d1%% de culture</French>
+		<German>%d1%% der Kultur</German>
+		<Italian>%d1%% di cultura</Italian>
+		<Spanish>%d1%% de cultura</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENT_LAND</Tag>
+		<English>%d1%% of Land Area</English>
+		<French>%d1%% de la surface des terres</French>
+		<German>%d1%% des Landgebiets</German>
+		<Italian>%d1%% della superficie</Italian>
+		<Spanish>%d1%% del &#225;rea terrestre</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENT_POP</Tag>
+		<English>%d1%% of World Population</English>
+		<French>%d1%% de la population mondiale</French>
+		<German>%d1%% der Weltbev&#246;lkerung</German>
+		<Italian>%d1%% della popolazione mondiale</Italian>
+		<Spanish>%d1%% de la poblaci&#243;n mundial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENT_RELIGION</Tag>
+		<English>%d1%% of Religion Influence</English>
+		<French>%d1%% d'influence religieuse</French>
+		<German>%d1%% des religi&#246;sen Einflusses</German>
+		<Italian>%d1%% di influenza religiosa</Italian>
+		<Spanish>%d1%% de influencia religiosa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_RIVALS_LEFT</Tag>
+		<English>Rivals left:</English>
+		<French>Rivaux restants :</French>
+		<German>Verbleibende Gegner:</German>
+		<Italian>Rivali rimasti:</Italian>
+		<Spanish>Rivales restantes:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TEAM_HAS_LAUNCHED</Tag>
+		<English>%s1_team_name has launched a spaceship!</English>
+		<French>L'&#233;quipe %s1_team_name a lanc&#233; son vaisseau spatial !</French>
+		<German>Das Team %s1_team_name hat sein Raumschiff gestartet!</German>
+		<Italian>%s1_team_name ha lanciato un'astronave!</Italian>
+		<Spanish>&#161;%s1_team_name ha lanzado una nave espacial!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_YOU_HAVE_LAUNCHED</Tag>
+		<English>You have launched your spaceship!</English>
+		<French>Vous avez lanc&#233; votre vaisseau spatial !</French>
+		<German>Ihr habt Euer Raumschiff gestartet!</German>
+		<Italian>Hai lanciato la tua astronave!</Italian>
+		<Spanish>&#161;Se ha lanzado una nave espacial!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTESOURCE_FULL_MEMBER</Tag>
+		<English>Full Member</English>
+		<French>Membre permanent</French>
+		<German>Vollmitglied</German>
+		<Italian>Membro a pieno titolo</Italian>
+		<Spanish>Miembro de pleno derecho</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTESOURCE_VOTING_MEMBER</Tag>
+		<English>Voting Member</English>
+		<French>Membre votant</French>
+		<German>Wahlberechtigtes Mitglied</German>
+		<Italian>Membro votante</Italian>
+		<Spanish>Miembro votante</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_RESULTS</Tag>
+		<English>%s1_institution voting members have announced their decision: %s2_resolution</English>
+		<French>Les membres de l'institution %s1_institution ont annonc&#233; leur d&#233;cision : %s2_resolution</French>
+		<German>Die wahlberechtigten Mitglieder der Institution %s1_institution haben ihre Entscheidung bekannt gegeben: %s2_resolution</German>
+		<Italian>I membri votanti di %s1_institution hanno annunciato la loro decisione: %s2_resolution</Italian>
+		<Spanish>Los miembros con derecho a voto de %s1_institution han anunciado su decisión: %s2_resolution</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_SOURCE_RELIGION</Tag>
+		<English>Leaders of %s1_religion have a vision of uniting all %s2_religion_adjective faithful under the %s3_building.</English>
+		<French>Les dirigeants de la religion : %s1_religion veulent unifier tous les fid&#232;les %s2:2_religion_adjective dans le b&#226;timent : %s3_building.</French>
+		<German>Staatsoberh&#228;upter der Religion %s1_religion hatten die Vision, alle %s2:2_religion_adjective Gl&#228;ubigen unter dem Geb&#228;ude %s3_building zu vereinen.</German>
+		<Italian>I leader della religione %s1_religion condividono l'idea di unire tutti i fedeli %s2_religion_adjective sotto l'edificio %s3_building.</Italian>
+		<Spanish>Los l&#237;deres del %s1_religion tienen la visi&#243;n de unir a todos los fieles %s2:3_religion_adjective bajo el edificio [NUM3:del:de la:de los:de las] %s3_building.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTING_TITLE</Tag>
+		<English>Resolutions</English>
+		<French>R&#233;solutions</French>
+		<German>Resolutionen</German>
+		<Italian>Risoluzione</Italian>
+		<Spanish>Resoluciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WAR_WEAR_HELP</Tag>
+		<English>War Weariness: %d1</English>
+		<French>Lassitude de la guerre : %d1</French>
+		<German>Kriegsm&#252;digkeit: %d1</German>
+		<Italian>Stanchezza della guerra: %d1</Italian>
+		<Spanish>Hast&#237;o b&#233;lico: %d1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_ADD_BUILDINGS</Tag>
+		<English>Add Buildings</English>
+		<French>Ajouter b&#226;timents</French>
+		<German>Geb&#228;ude</German>
+		<Italian>Aggiungi edifici</Italian>
+		<Spanish>Agregar edificios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_AS_ADD_TECH</Tag>
+		<English>Add Tech</English>
+		<French>Ajouter techno.</French>
+		<German>Tech. hinzuf&#252;gen</German>
+		<Italian>Aggiungi tecnologia</Italian>
+		<Spanish>A&#241;adir tecnolog&#237;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_AS_COST_THIS_LOCATION</Tag>
+		<English>Cost Here: [ICON_GOLD]%d1_Amount</English>
+		<French>Co&#251;t ici : [ICON_GOLD]%d1_Amount</French>
+		<German>Kosten hier: [ICON_GOLD]%d1_Amount</German>
+		<Italian>Costo qui: [ICON_GOLD]%d1_Amount</Italian>
+		<Spanish>Coste aqu&#237;: [ICON_GOLD] %d1_Amount</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_AS_MAX_UNITS_PER_CITY</Tag>
+		<English>[COLOR_WARNING_TEXT]Maximum %d1 [NUM1:unit:units] per city[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]%d1 [NUM1:Unit&#233;:Unit&#233;s] maximum par ville[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Maximal %d1 [NUM1:Einheit:Einheiten] pro Stadt[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Massimo %d1 unit&#224; per citt&#224;[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]M&#225;ximo de %d1 [NUM1:unidad:unidades] por ciudad[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_AS_POINTS</Tag>
+		<English>[ICON_GOLD]%d1_Num</English>
+		<French>[ICON_GOLD]%d1_Num</French>
+		<German>[ICON_GOLD]%d1_Num</German>
+		<Italian>[ICON_GOLD]%d1_Num</Italian>
+		<Spanish>[ICON_GOLD] %d1_Num</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_AS_POPULATION</Tag>
+		<English>Population Point</English>
+		<French>Point de population</French>
+		<German>Bev&#246;lkerungspunkt</German>
+		<Italian>Punto della popolazione</Italian>
+		<Spanish>Punto de poblaci&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_AS_SELECTED_TECH_COST</Tag>
+		<English>Cost: [ICON_GOLD]%d1_Num/%d2_num</English>
+		<French>Co&#251;t : [ICON_GOLD]%d1_Num/%d2_num</French>
+		<German>Kosten: [ICON_GOLD]%d1_Num/%d2_num</German>
+		<Italian>Costo: [ICON_GOLD]%d1_Num/%d2_num</Italian>
+		<Spanish>Coste: [ICON_GOLD]%d1_Num/%d2_num</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_CITY_ADD</Tag>
+		<English>Add</English>
+		<French>Ajouter</French>
+		<German>Hinzuf&#252;gen</German>
+		<Italian>Aggiungi</Italian>
+		<Spanish>A&#241;adir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_CITY_ADD_REMOVE</Tag>
+		<English>Select to Add or Remove:</English>
+		<French>S&#233;lection &#224; ajouter ou supprimer :</French>
+		<German>Zum Hinzuf&#252;gen oder Entfernen ausw&#228;hlen:</German>
+		<Italian>Seleziona Aggiungi o Rimuovi:</Italian>
+		<Spanish>Seleccionar para a&#241;adir o eliminar:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_CITY_ALL</Tag>
+		<English>All</English>
+		<French>Tout</French>
+		<German>Alle</German>
+		<Italian>Tutte</Italian>
+		<Spanish>Todas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_CITY_DATA</Tag>
+		<English>City Data</English>
+		<French>Donn&#233;es ville</French>
+		<German>Stadtdaten</German>
+		<Italian>Dati della citt&#224;</Italian>
+		<Spanish>Datos de la ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_CITY_EDIT_POP</Tag>
+		<English>Enter Population Adjustment:</English>
+		<French>Ajustement de la population :</French>
+		<German>Bev&#246;lkerungsanpassung eingeben:</German>
+		<Italian>Regola la popolazione:</Italian>
+		<Spanish>Introducir ajustes a la poblaci&#243;n:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_CITY_EDIT_CULTURE</Tag>
+		<English>[SPACE]Adjust Culture: (%d1)</English>
+		<French>[SPACE]Ajuster culture : (%d1)</French>
+		<German>[SPACE]Kultur anpassen: (%d1)</German>
+		<Italian>[SPACE]Regola la cultura: (%d1)</Italian>
+		<Spanish>[SPACE]Ajustar cultura: (%d1)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_CITY_NOCHANGE</Tag>
+		<English>No Change</English>
+		<French>Aucun changement</French>
+		<German>Keine &#196;nderung</German>
+		<Italian>Nessun cambiamento</Italian>
+		<Spanish>Sin cambios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_CITY_NOTHING</Tag>
+		<English>Nothing</English>
+		<French>Rien</French>
+		<German>Ohne</German>
+		<Italian>Nessuna</Italian>
+		<Spanish>Ninguna</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_CITY_REMOVE</Tag>
+		<English>Remove</English>
+		<French>Supprimer</French>
+		<German>Entfernen</German>
+		<Italian>Rimuovi</Italian>
+		<Spanish>Eliminar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_CULTURE</Tag>
+		<English>Culture:</English>
+		<French>Culture :</French>
+		<German>Kultur:</German>
+		<Italian>Cultura:</Italian>
+		<Spanish>Cultura:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_GOLD</Tag>
+		<English>Gold:</English>
+		<French>Or :</French>
+		<German>Gold:</German>
+		<Italian>Oro:</Italian>
+		<Spanish>Oro:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_HEADER_CITY_EDIT</Tag>
+		<English>City Editor:</English>
+		<French>Editeur de villes :</French>
+		<German>Stadteditor:</German>
+		<Italian>Editor cittadino:</Italian>
+		<Spanish>Editor de ciudades:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_HOLYCITY</Tag>
+		<English>Holycity</English>
+		<French>Ville sainte</French>
+		<German>Heilige Stadt</German>
+		<Italian>Citt&#224; Santa</Italian>
+		<Spanish>Ciudad santa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_LANDMARK_START</Tag>
+		<English>Enter Landmark Text</English>
+		<French>Texte monument</French>
+		<German>Wahrzeichenbeschreibung eingeben</German>
+		<Italian>Inserisci il testo del punto di riferimento</Italian>
+		<Spanish>Escribe el texto del lugar de referencia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_PLOT_TYPE_MOUNTAIN</Tag>
+		<English>Change plot to a mountain</English>
+		<French>Changer case en montagne</French>
+		<German>Gel&#228;ndefeld in Berggel&#228;nde &#228;ndern</German>
+		<Italian>Cambia la casella in una montagna</Italian>
+		<Spanish>Cambiar casilla a monta&#241;a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_PLOT_TYPE_HILL</Tag>
+		<English>Change plot to a hill</English>
+		<French>Changer case en colline</French>
+		<German>Gel&#228;ndefeld in H&#252;gelgel&#228;nde &#228;ndern</German>
+		<Italian>Cambia la casella in una collina</Italian>
+		<Spanish>Cambiar casilla a colina</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_PLOT_TYPE_PLAINS</Tag>
+		<English>Change plot to a plain</English>
+		<French>Changer case en plaine</French>
+		<German>Gel&#228;ndefeld in Ebenengel&#228;nde &#228;ndern</German>
+		<Italian>Cambia la casella in una pianura</Italian>
+		<Spanish>Cambiar casilla a llanura</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_PLOT_TYPE_OCEAN</Tag>
+		<English>Change plot to an ocean</English>
+		<French>Changer case en oc&#233;an</French>
+		<German>Gel&#228;ndefeld in Ozeangel&#228;nde &#228;ndern</German>
+		<Italian>Cambia la casella in un oceano</Italian>
+		<Spanish>Cambiar casilla a oc&#233;ano</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_POPULATION</Tag>
+		<English>Population:</English>
+		<French>Population :</French>
+		<German>Bev&#246;lkerung:</German>
+		<Italian>Popolazione:</Italian>
+		<Spanish>Poblaci&#243;n:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_RIVER_PLACEMENT</Tag>
+		<English>Enter river placement mode</English>
+		<French>Mode placement de rivi&#232;re</French>
+		<German>Flussplatzierungsmodus starten</German>
+		<Italian>Modalit&#224; disposizione dei fiumi</Italian>
+		<Spanish>Activar modo "Colocar r&#237;o"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_SCRIPT</Tag>
+		<English>Enter your script name</English>
+		<French>Saisissez le nom de votre script</French>
+		<German>Skriptnamen eingeben</German>
+		<Italian>Inserisci il nome del tuo script</Italian>
+		<Spanish>Escribe el nombre de la secuencia de comandos</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_WIDGET_CREATE_GROUP</Tag>
+		<English>Creates a Group</English>
+		<French>Cr&#233;er un groupe</French>
+		<German>Bildet eine Gruppe</German>
+		<Italian>Crea un gruppo</Italian>
+		<Spanish>Crea un grupo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WIDGET_DELETE_GROUP</Tag>
+		<English>Separates the Group</English>
+		<French>Diviser le groupe</French>
+		<German>L&#246;st eine Gruppe auf</German>
+		<Italian>Separa il gruppo</Italian>
+		<Spanish>Separa el grupo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WIDGET_END_TURN</Tag>
+		<English>End Turn [COLOR_HIGHLIGHT_TEXT]&lt;SHIFT-ENTER>[COLOR_REVERT]</English>
+		<French>Fin du tour [COLOR_HIGHLIGHT_TEXT]&lt;MAJ-ENTREE>[COLOR_REVERT]</French>
+		<German>Runde beenden [COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALTEN-EINGABETASTE>[COLOR_REVERT]</German>
+		<Italian>Fine turno [COLOR_HIGHLIGHT_TEXT]&lt;MAIUSC-INVIO>[COLOR_REVERT]</Italian>
+		<Spanish>Terminar turno [COLOR_HIGHLIGHT_TEXT]&lt;MAY&#218;S-INTRO>[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WIDGET_LAUNCH_VICTORY</Tag>
+		<English>Launch Spaceship</English>
+		<French>Lancer vaisseau spatial</French>
+		<German>Raumschiff starten</German>
+		<Italian>Lancia l'astronave</Italian>
+		<Spanish>Lanzar nave espacial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WITH_SPACE</Tag>
+		<English>[SPACE]with[SPACE]</English>
+		<French>[SPACE]avec[SPACE]</French>
+		<German>[SPACE]mit[SPACE]</German>
+		<Italian>[SPACE]con[SPACE]</Italian>
+		<Spanish>[SPACE]con[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ZOOM_CITY_HELP</Tag>
+		<English>Enter the city screen for this City</English>
+		<French>Afficher l'&#233;cran de la ville pour cette ville</French>
+		<German>Den Stadt-Bildschirm dieser Stadt betreten</German>
+		<Italian>Accedi alla schermata cittadina di questa citt&#224;</Italian>
+		<Spanish>Entrar en la pantalla de la ciudad.</Spanish>
+	</TEXT>
 </Civ4GameText>
