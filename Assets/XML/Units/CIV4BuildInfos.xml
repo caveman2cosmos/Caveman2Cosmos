@@ -4824,7 +4824,7 @@
 					<TerrainType>TERRAIN_TUNDRA</TerrainType>
 					<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 					<iTime>200</iTime>
-				</TerrainStruct>				
+				</TerrainStruct>
 			</TerrainStructs>
 			<Button>,Art/Interface/Buttons/Buildings/Factory.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,2</Button>
 		</BuildInfo>
@@ -6433,22 +6433,6 @@
 			<Button>,Art/Interface/Buttons/Builds/BuildChopDown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,8</Button>
 		</BuildInfo>
 		<!-- DEFENSIVE IMPROVEMENTS (LAND) -->
-		<!-- Listening Node | Independent -->
-		<BuildInfo>
-			<Type>BUILD_LISTENING_NODE</Type>
-			<Description>TXT_KEY_BUILD_LISTENING_NODE</Description>
-			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
-			<iTime>1000</iTime>
-			<iCost>300</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_LISTENING_NODE</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_F</HotKey>
-			<bCtrlDown>1</bCtrlDown>
-			<bShiftDown>1</bShiftDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/radar/radar_button.dds</Button>
-		</BuildInfo>
 		<!-- Radar Watchtower | End -->
 		<BuildInfo>
 			<Type>BUILD_RADAR_TOWER</Type>
@@ -11175,20 +11159,6 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,5,5</Button>
 		</BuildInfo>
-		<!-- Submerged Town (Deep) -->
-		<!-- <BuildInfo>
-			<Type>BUILD_SUBMERGED_TOWN_DEEP</Type>
-			<Description>TXT_KEY_BUILD_SUBMERGED_TOWN_DEEP</Description>
-			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
-			<iTime>300</iTime>
-			<iCost>200</iCost>
-			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_T</HotKey>
-			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,5,5</Button>
-		</BuildInfo> -->
 		<!-- Sea Air Defense -->
 		<BuildInfo>
 			<Type>BUILD_AQUATIC_ANTI_AIR_DEFENSE</Type>

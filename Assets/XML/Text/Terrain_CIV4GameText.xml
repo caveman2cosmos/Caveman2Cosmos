@@ -237,12 +237,6 @@
 		<Russian>Ïðåñíîâîä. áåðåã</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_FRESHWATER_OCEAN</Tag>
-		<English>Freshwater Ocean</English>
-		<German>Süßwasserozean</German>
-		<Russian>Ïðåñíîâîä. îêåàí</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_FRESHWATER_SEA</Tag>
 		<English>Freshwater Sea</English>
 		<German>Süßwassermeer</German>

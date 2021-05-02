@@ -10,7 +10,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SCIENTOLOGY_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCIENTOLOGY_CATHEDRAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SCIENTOLOGY_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCIENTOLOGY_CATHEDRAL</ArtDefineTag>
 			<MapCategoryTypes>
@@ -84,7 +83,6 @@
 			<Type>BUILDING_SCIENTOLOGY_MONASTERY</Type>
 			<Description>TXT_KEY_BUILDING_SCIENTOLOGY_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCIENTOLOGY_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SCIENTOLOGY_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCIENTOLOGY_MONASTERY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -140,7 +138,6 @@
 			<Type>BUILDING_SCIENTOLOGY_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_SCIENTOLOGY_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCIENTOLOGY_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SCIENTOLOGY_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCIENTOLOGY_SHRINE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -189,7 +186,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SCIENTOLOGY_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCIENTOLOGY_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SCIENTOLOGY_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCIENTOLOGY_TEMPLE</ArtDefineTag>
 			<MapCategoryTypes>

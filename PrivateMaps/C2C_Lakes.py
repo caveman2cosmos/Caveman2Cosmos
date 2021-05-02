@@ -9,10 +9,8 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
-import sys
-from CvMapGeneratorUtil import FractalWorld
+#from CvMapGeneratorUtil import FractalWorld
 from CvMapGeneratorUtil import TerrainGenerator
 from CvMapGeneratorUtil import FeatureGenerator
 #from CvMapGeneratorUtil import BonusBalancer
@@ -130,7 +128,6 @@ def minStartingDistanceModifier():
 
 def findStartingArea(argsList):
 	"make sure all players are on the biggest area"
-	[playerID] = argsList
 	return gc.getMap().findBiggestArea(False).getID()
 
 # Subclass to customize sea level effects.

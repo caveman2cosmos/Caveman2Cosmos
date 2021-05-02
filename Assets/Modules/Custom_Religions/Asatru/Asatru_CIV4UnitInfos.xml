@@ -22,7 +22,6 @@
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ASATRU_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASATRU_MISSIONARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ASATRU_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
@@ -78,7 +77,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LOKI</Description>
 			<Civilopedia>TXT_KEY_UNIT_VIKING_BESERKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VIKING_BESERKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>

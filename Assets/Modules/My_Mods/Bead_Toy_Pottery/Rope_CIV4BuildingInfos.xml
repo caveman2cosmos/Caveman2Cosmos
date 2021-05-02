@@ -11,7 +11,6 @@
 			<Type>BUILDING_ROPE_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_ROPE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROPE_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ROPE_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ROPE_FACTORY</ArtDefineTag>
@@ -81,7 +80,6 @@
 			<Type>BUILDING_ROPE_WEAVER</Type>
 			<Description>TXT_KEY_BUILDING_ROPE_WEAVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROPE_WEAVER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ROPE_WEAVER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ROPE_WEAVER</ArtDefineTag>

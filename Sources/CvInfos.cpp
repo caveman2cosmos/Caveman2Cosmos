@@ -8156,7 +8156,7 @@ bool CvSpawnInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMinAreaPlotsPerUnitType, L"iMinAreaPlotsPerUnitType");
 	pXML->GetOptionalChildXmlValByName(&m_iStartDate, L"iStartDate", -200000);
 	pXML->GetOptionalChildXmlValByName(&m_iEndDate, L"iEndDate", 50000);
-	pXML->GetOptionalChildXmlValByName(&m_bTreatAsBarbarian, L"bTreatAsBarbarian", true);
+	pXML->GetOptionalChildXmlValByName(&m_bTreatAsBarbarian, L"bTreatAsBarbarian", false);
 	pXML->GetOptionalChildXmlValByName(&m_bNeutralOnly, L"bNeutralOnly", true);
 	pXML->GetOptionalChildXmlValByName(&m_bNoSpeedNormalization, L"bNoSpeedNormalization");
 	pXML->GetOptionalChildXmlValByName(&m_bNotInView, L"bNotInView");
@@ -31424,9 +31424,10 @@ void CvTutorialInfo::copyNonDefaults(const CvTutorialInfo* pClassInfo)
 //	Game options and their default values
 //
 //
-CvGameOptionInfo::CvGameOptionInfo() :
-m_bDefault(false),
-m_bVisible(true)
+CvGameOptionInfo::CvGameOptionInfo()
+	: m_bDefault(false)
+	, m_bVisible(true)
+	, m_bCanChangeMidGame(true)
 {
 }
 
@@ -31438,13 +31439,13 @@ CvGameOptionInfo::~CvGameOptionInfo()
 
 bool CvGameOptionInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
 	}
 	pXML->GetOptionalChildXmlValByName(&m_bDefault, L"bDefault");
 	pXML->GetOptionalChildXmlValByName(&m_bVisible, L"bVisible", true);
+	pXML->GetOptionalChildXmlValByName(&m_bCanChangeMidGame, L"bCanChangeMidGame");
 
 	pXML->SetOptionalVectorWithDelayedResolution(m_aEnforcesGameOptionOnTypes, L"EnforcesGameOptionOnTypes");
 	pXML->SetOptionalVectorWithDelayedResolution(m_aEnforcesGameOptionOffTypes, L"EnforcesGameOptionOffTypes");
@@ -31460,18 +31461,18 @@ void CvGameOptionInfo::copyNonDefaults(const CvGameOptionInfo* pClassInfo)
 
 	if (getDefault() == bDefault) m_bDefault = pClassInfo->getDefault();
 	if (getVisible()) m_bVisible = pClassInfo->getVisible();
+	if (m_bCanChangeMidGame) m_bCanChangeMidGame = pClassInfo->canChangeMidGame();
 
-	//TB's Tags
 	GC.copyNonDefaultDelayedResolutionVector(m_aEnforcesGameOptionOnTypes, pClassInfo->m_aEnforcesGameOptionOnTypes);
 	GC.copyNonDefaultDelayedResolutionVector(m_aEnforcesGameOptionOffTypes, pClassInfo->m_aEnforcesGameOptionOffTypes);
 }
 
-void CvGameOptionInfo::getCheckSum(unsigned int& iSum) const
+void CvGameOptionInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bDefault);
 	CheckSum(iSum, m_bVisible);
+	CheckSum(iSum, m_bCanChangeMidGame);
 
-	//TB's Tags
 	CheckSumC(iSum, m_aEnforcesGameOptionOnTypes);
 	CheckSumC(iSum, m_aEnforcesGameOptionOffTypes);
 }

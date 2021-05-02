@@ -589,15 +589,6 @@
 		<Russian>Строить [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Маяк[\LINK] (Риф)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
-		<English>Build [LINK=IMPROVEMENT_LISTENING_NODE]Listening Node[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_LISTENING_NODE]Station d'écoute[\LINK]</French>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_LISTENING_NODE]nodo d'ascolto[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_LISTENING_NODE]Nodo de escucha[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_LISTENING_NODE]Boję Nasłuchową[\LINK]</Polish>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LISTENING_NODE]Öåíòð ÐÝÁ[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIST_SCREEN_HOVER</Tag>
 		<English>Shows the Build List Screen.</English>
 		<French>Affiche l'écran des Listes de constructions.</French>
@@ -1035,10 +1026,6 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SUBMERGED_TOWN]zatopione miasto[\LINK]</Polish>
 		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_SUBMERGED_TOWN]Ïîäâîäíûé ãîðîä[\LINK]</Russian>
 	</TEXT>
-	<!-- <TEXT>
-		<Tag>TXT_KEY_BUILD_SUBMERGED_TOWN_DEEP</Tag>
-		<English>Build [LINK=IMPROVEMENT_SUBMERGED_TOWN_DEEP]Submerged Town (Deep)[\LINK]</English>
-	</TEXT> -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUBURBS</Tag>
 		<English>Build [LINK=IMPROVEMENT_SUBURBS]Suburbs[\LINK]</English>
@@ -1400,5 +1387,37 @@
 		<Tag>TXT_KEY_BUILD_FISHING_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK]</English>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WHALING_BOATS</Tag>
+		<English>Create [LINK=IMPROVEMENT_WHALING_BOATS]Whaling Boats[\LINK]</English>
+		<French>construire des [LINK=IMPROVEMENT_WHALING_BOATS]baleiniers[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_WHALING_BOATS]Walfänger[\LINK] bauen</German>
+		<Italian>Creare delle [LINK=IMPROVEMENT_WHALING_BOATS]baleniere[\LINK]</Italian>
+		<Spanish>Crear [LINK=IMPROVEMENT_WHALING_BOATS]barcos balleneros[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SCRUB_FALLOUT</Tag>
+		<English>Scrub [LINK=FEATURE_FALLOUT]Fallout[\LINK]</English>
+		<French>[LINK=FEATURE_FALLOUT]Décontaminer[\LINK]</French>
+		<German>[LINK=FEATURE_FALLOUT]Fallout-Entfernung[\LINK]</German>
+		<Italian>Bonificare le [LINK=FEATURE_FALLOUT]scorie radioattive[\LINK]</Italian>
+		<Spanish>Descontaminar [LINK=FEATURE_FALLOUT]lluvia radiactiva[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_OFFSHORE_PLATFORM</Tag>
+		<English>Create [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]Offshore Platform[\LINK]</English>
+		<French>construire une [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]plate-forme offshore[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_OFFSHORE_PLATFORM]Bohrinsel[\LINK] errichten</German>
+		<Italian>Creare una [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]piattaforma petrolifera[\LINK]</Italian>
+		<Spanish>Crear una [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]plataforma petrolífera[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FISHING_BOATS</Tag>
+		<English>Create [LINK=IMPROVEMENT_FISHING_BOATS]Fishing Boats[\LINK]</English>
+		<French>construire des [LINK=IMPROVEMENT_FISHING_BOATS]bateaux de pêche[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_FISHING_BOATS]Fischerboote[\LINK] bauen</German>
+		<Italian>Construire dei [LINK=IMPROVEMENT_FISHING_BOATS]pescherecci[\LINK]</Italian>
+		<Spanish>Crear [LINK=IMPROVEMENT_FISHING_BOATS]barcos pesqueros[\LINK]</Spanish>
 	</TEXT>
 </Civ4GameText>

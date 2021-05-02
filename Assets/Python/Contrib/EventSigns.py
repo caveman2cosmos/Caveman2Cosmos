@@ -8,8 +8,6 @@
 ##
 
 from CvPythonExtensions import *
-from operator import itemgetter
-
 import BugUtil
 import CvUtil
 import CvRandomEventInterface

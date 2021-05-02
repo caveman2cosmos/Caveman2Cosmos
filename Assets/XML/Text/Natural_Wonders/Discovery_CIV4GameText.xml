@@ -66,11 +66,6 @@
 		<Russian>Îòêðûâ ïðèðîäíîå ÷óäî ïåðâûì, âû ïîëó÷èòå áîëüøå âûãîäû, ÷åì òå, êòî îòêðîþò åãî ïîçæå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Tag>
-		<English>Free when you discover the Natural Wonder through exploring the map.</English>
-		<Russian>Бесплатно, когда вы откроете для себя Чудо Природы, исследуя карту.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISCOVERY_NGORONGORO_CRATER</Tag>
 		<English>Discovery - Ngorongoro Crater</English>
 		<Russian>Èññëåäîâàíèå (Íãîðîíãîðî)</Russian>
@@ -228,10 +223,5 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOVIE_AUYANTEPUI_PEDIA</Tag>
 		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MOVIE_AUYANTEPUI_STRATEGY</Tag>
-		<English>If you have Auyantepui in your nation you will get a free "Hit Animated Movie" whenever you build an Animation Studio.</English>
-		<Russian>Если у вас есть Ауянтепуи в вашей стране, вы получите бесплатные «Анимационные хиты» всякий раз, когда вы строите анимационную студию.</Russian>
 	</TEXT>
 </Civ4GameText>

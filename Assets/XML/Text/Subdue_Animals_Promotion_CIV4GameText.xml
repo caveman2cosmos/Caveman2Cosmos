@@ -18,22 +18,4 @@
 		<Polish>Wzrok Łowcy II</Polish>
 		<Russian>Ïðèöåë II</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SUBDUE_ANIMAL</Tag>
-		<English>Subdue Animal</English>
-		<French>
-			<Text>Dompteur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Tierbändigung</Text>
-			<Gender>Neuter</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Domatore</Italian>
-		<Spanish>Domar animales</Spanish>
-		<Polish>Poskrom Zwierzę</Polish>
-		<Russian>Öàðü çâåðåé</Russian>
-	</TEXT>
 </Civ4GameText>

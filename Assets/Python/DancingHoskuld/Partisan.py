@@ -309,12 +309,10 @@ def onCityAcquired(argsList):
 
 								# Find all EnemyUnits near the partisan
 								lEnemyUnits = []
-								for iiXLoop in range(iiX - 1, iiX + 2, 1):
-									for iiYLoop in range(iiY - 1, iiY + 2, 1):
-										CyPlotX = CyMap().plot(iiXLoop, iiYLoop)
-										if CyPlotX.isVisibleEnemyUnit(iOwnerOld):
-											for i in range(CyPlotX.getNumUnits()):
-												lEnemyUnits.append(CyPlotX.getUnit(i))
+								for CyPlotX in CyCity.plot().rect(1, 1):
+									if CyPlotX.isVisibleEnemyUnit(iOwnerOld):
+										for CyUnitX in CyPlotX.units():
+											lEnemyUnits.append(CyUnitX)
 
 								if lEnemyUnits:
 

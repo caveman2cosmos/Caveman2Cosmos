@@ -206,35 +206,35 @@
 	<!-- Replacements added by AIAndy -->
 	<ElementType name="ReplacementCondition"/>
 	<ElementType name="ReplacementID"/>
- <!-- Expressions added by AIAndy -->
- <ElementType name="Constant" content="textOnly"/>
- <ElementType name="Is" content="textOnly"/>
- <ElementType name="Python" content="textOnly"/>
- <ElementType name="BoolExpr"/>
- <ElementType name="Not"/>
- <ElementType name="And"/>
- <ElementType name="Or"/>
- <ElementType name="BEqual"/>
- <ElementType name="If"/>
- <ElementType name="IntegrateOr"/>
- <ElementType name="GOMType" content="textOnly"/>
- <ElementType name="ID" content="textOnly"/>
- <ElementType name="Has" content="eltOnly">
-	<element type="GOMType" minOccurs="1" maxOccurs="*"/>
-	<element type="ID" minOccurs="1" maxOccurs="*"/>
- </ElementType>
- <ElementType name="Greater"/>
- <ElementType name="GreaterEqual"/>
- <ElementType name="Equal"/>
- <ElementType name="Random"/>
- <ElementType name="Adapt"/>
- <ElementType name="Plus"/>
- <ElementType name="Minus"/>
- <ElementType name="Mult"/>
- <ElementType name="Div"/>
- <ElementType name="IntegrateSum"/>
- <ElementType name="IntegrateAvg"/>
- <ElementType name="IntegrateCount"/>
+	<!-- Expressions added by AIAndy -->
+	<ElementType name="Constant" content="textOnly"/>
+	<ElementType name="Is" content="textOnly"/>
+	<ElementType name="Python" content="textOnly"/>
+	<ElementType name="BoolExpr"/>
+	<ElementType name="Not"/>
+	<ElementType name="And"/>
+	<ElementType name="Or"/>
+	<ElementType name="BEqual"/>
+	<ElementType name="If"/>
+	<ElementType name="IntegrateOr"/>
+	<ElementType name="GOMType" content="textOnly"/>
+	<ElementType name="ID" content="textOnly"/>
+	<ElementType name="Has" content="eltOnly">
+		<element type="GOMType" minOccurs="1" maxOccurs="*"/>
+		<element type="ID" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Greater"/>
+	<ElementType name="GreaterEqual"/>
+	<ElementType name="Equal"/>
+	<ElementType name="Random"/>
+	<ElementType name="Adapt"/>
+	<ElementType name="Plus"/>
+	<ElementType name="Minus"/>
+	<ElementType name="Mult"/>
+	<ElementType name="Div"/>
+	<ElementType name="IntegrateSum"/>
+	<ElementType name="IntegrateAvg"/>
+	<ElementType name="IntegrateCount"/>
 	<!-- PropertyManipulators added by AIAndy -->
 	<ElementType name="PropertySourceType" content="textOnly"/>
 	<ElementType name="PropertyInteractionType" content="textOnly"/>
@@ -300,12 +300,12 @@
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="PropertyManipulators" content="eltOnly" order="many">
-	<element type="PropertySource" minOccurs="0" maxOccurs="*"/>
-	<element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertySource" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
 		<element type="PropertyPropagator" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="Type" content="textOnly"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE -->
+	<!-- XMLCOPY				02/20/2008			MRGENIE -->
 	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bForceDelete" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iForceInsertLocation" content="textOnly" dt:type="int"/>
@@ -316,7 +316,7 @@
 	<ElementType name="OrDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
 	</ElementType>
-<!-- XMLCOPY				END					MRGENIE -->
+	<!-- XMLCOPY				END					MRGENIE -->
 	<ElementType name="iMaxGlobalInstances" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxPlayerInstances" content="textOnly" dt:type="int"/>
 	<ElementType name="iExtraPlayerInstances" content="textOnly" dt:type="int"/>
@@ -734,13 +734,13 @@
 	<ElementType name="ConstructCondition"/>
 	<ElementType name="GenericBuildingInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE -->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE -->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description"/>
 		<element type="ArtDefineTag"/>
 	</ElementType>
@@ -754,13 +754,13 @@
 		<element type="iMaxPlayerInstances" minOccurs="0"/>
 		<element type="iExtraPlayerInstances" minOccurs="0"/>
 		<element type="VictoryThresholds" minOccurs="0"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE -->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE -->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="SpecialBuildingType" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
@@ -1073,13 +1073,13 @@
 	<ElementType name="Button" content="textOnly"/>
 	<ElementType name="SpecialBuildingInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE -->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE -->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="ObsoleteTech" minOccurs="0"/>
 		<element type="TechPrereq" minOccurs="0"/>

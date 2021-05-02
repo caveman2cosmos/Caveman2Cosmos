@@ -10,7 +10,6 @@ import WBPlayerUnits
 import WBReligionScreen
 import WBCorporationScreen
 import WBInfoScreen
-import WorldBuilder
 import Popup
 GC = CyGlobalContext()
 

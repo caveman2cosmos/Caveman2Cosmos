@@ -29,14 +29,6 @@
 #    Please tell me.
 #  -----
 
-#  =====================
-#  Temudjin 15.July.2010
-#  =====================
-
-#	Changelog
-#	---------
-#	1.00					initial release
-#
 from CvPythonExtensions import *
 import CvMapGeneratorUtil
 import inspect

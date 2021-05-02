@@ -13,7 +13,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BIOPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIOPUNK_EMBASSY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BIOPUNK_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIOPUNK_EMBASSY</ArtDefineTag>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
@@ -36,7 +35,6 @@
 			<Type>BUILDING_PROTEIN_ARTIST</Type>
 			<Description>TXT_KEY_BUILDING_PROTEIN_ARTIST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROTEIN_ARTIST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PROTEIN_ARTIST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROTEIN_ARTIST</ArtDefineTag>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
@@ -69,7 +67,6 @@
 			<Type>BUILDING_MICROBIOLOGY_ARTIST</Type>
 			<Description>TXT_KEY_BUILDING_MICROBIOLOGY_ARTIST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MICROBIOLOGY_ARTIST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MICROBIOLOGY_ARTIST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MICROBIOLOGY_ARTIST</ArtDefineTag>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
@@ -113,7 +110,6 @@
 			<Type>BUILDING_ANIMAL_DESIGNER</Type>
 			<Description>TXT_KEY_BUILDING_ANIMAL_DESIGNER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_DESIGNER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_DESIGNER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_DESIGNER</ArtDefineTag>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
@@ -158,7 +154,6 @@
 			<Type>BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA</Type>
 			<Description>TXT_KEY_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA</ArtDefineTag>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
@@ -197,7 +192,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESIGNED_ANIMAL_SHOW</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DESIGNED_ANIMAL_SHOW</MovieDefineTag>
@@ -241,7 +235,6 @@
 			<Type>BUILDING_PURE_ORGANIC_CITY</Type>
 			<Description>TXT_KEY_BUILDING_PURE_ORGANIC_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PURE_ORGANIC_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PURE_ORGANIC_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PURE_ORGANIC_CITY</ArtDefineTag>
 			<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
@@ -284,7 +277,6 @@
 			<Type>BUILDING_BIOPUNK_LAB</Type>
 			<Description>TXT_KEY_BUILDING_BIOPUNK_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIOPUNK_LAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BIOPUNK_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIOPUNK_LAB</ArtDefineTag>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
@@ -319,7 +311,6 @@
 			<Type>BUILDING_PHEROMONE_LAB</Type>
 			<Description>TXT_KEY_BUILDING_PHEROMONE_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PHEROMONE_LAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PHEROMONE_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PHEROMONE_LAB</ArtDefineTag>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
@@ -351,7 +342,6 @@
 			<Type>BUILDING_SPECIES_REVIVAL_LAB</Type>
 			<Description>TXT_KEY_BUILDING_SPECIES_REVIVAL_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPECIES_REVIVAL_LAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SPECIES_REVIVAL_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SPECIES_REVIVAL_LAB</ArtDefineTag>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
@@ -384,7 +374,6 @@
 			<Type>BUILDING_WEAPONIZED_FLORA</Type>
 			<Description>TXT_KEY_BUILDING_WEAPONIZED_FLORA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WEAPONIZED_FLORA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WEAPONIZED_FLORA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WEAPONIZED_FLORA</ArtDefineTag>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
@@ -419,7 +408,6 @@
 			<Type>BUILDING_DESIGNED_ANIMAL_ZOO</Type>
 			<Description>TXT_KEY_BUILDING_DESIGNED_ANIMAL_ZOO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNED_ANIMAL_ZOO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DESIGNED_ANIMAL_ZOO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESIGNED_ANIMAL_ZOO</ArtDefineTag>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
@@ -463,7 +451,6 @@
 			<Type>BUILDING_CHIMERA_SURGERY_CLINIC</Type>
 			<Description>TXT_KEY_BUILDING_CHIMERA_SURGERY_CLINIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHIMERA_SURGERY_CLINIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CHIMERA_SURGERY_CLINIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHIMERA_SURGERY_CLINIC</ArtDefineTag>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>

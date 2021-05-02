@@ -1720,12 +1720,6 @@
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_EXPLORE_DISTANT</Tag>
-		<English>Do Research Mission</English>
-		<French>Faire une Mission de Recherche</French>
-		<Russian>Íà÷àòü ìèññèþ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_DISTANT_COSMOS</Tag>
 		<English>Do Research Mission</English>
 		<French>Faire une Mission de Recherche</French>
@@ -1733,12 +1727,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_DISTANT_COSMOS_MESSAGE</Tag>
-		<English>Mission Successful!</English>
-		<French>Mission Réussie !</French>
-		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_EXPLORE_DISTANT_MESSAGE</Tag>
 		<English>Mission Successful!</English>
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
@@ -2170,12 +2158,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ïëàíåò çåìíîé ãðóïïû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASTEROID_REWARD</Tag>
 		<English>Mission Reward (Asteroid)</English>
 		<French>Retour de Mission (Asteroid)</French>
@@ -2186,12 +2168,6 @@
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ïëàíåò çåìíîé ãðóïïû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ASTEROID_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATTACKSHIP</Tag>
@@ -2206,12 +2182,6 @@
 		<Russian>Áîåâîé êîðàáëü äëÿ ñîëíå÷íîé ñèñòåìû. Ïðåäíàçíà÷åí äëÿ âòîðæåíèÿ â êîëîíèþ Î'Íèëà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ATTACKSHIP_STRATEGY</Tag>
-		<English>Offense Solar System attack unit.</English>
-		<French>Unité Offensive pour le Système solaire.</French>
-		<Russian>Offense Solar System attack unit.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_BACTERIA_SWARM</Tag>
 		<English>Bacteria Swarm</English>
 		<French>Essain de bactéries</French>
@@ -2221,12 +2191,6 @@
 		<Tag>TXT_KEY_UNIT_BACTERIA_SWARM_PEDIA</Tag>
 		<English>A swarm of bacteria that can cross interstellar voids.</English>
 		<Russian>Ðîé áàêòåðèé, êîòîðûå ìîãóò ïåðåñåêàòü ìåæçâåçäíûå ïóñòîòû.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_BACTERIA_SWARM_STRATEGY</Tag>
-		<English>Planned for use in Cosmic and Transcendent Era evolution.</English>
-		<French>Prévu pour une utilisation dans l'évolution de l'ère cosmique et transcendante.</French>
-		<Russian>Ïëàíèðóåòñÿ èñïîëüçîâàòü äëÿ ýâîëþöèè â Êîñìè÷åñêîé è Òðàíñöåíäåíòíîé Ýðå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRACEWELL_PROBE</Tag>
@@ -2241,12 +2205,6 @@
 		<Russian>Çîíä äëÿ èññëåäîâàíèÿ ãàëàêòèêè. Ýòî ñàìîâîñïðîèçâîäÿùååñÿ, èñêóññòâåííî èíòåëëåêòóàëüíîå óñòðîéñòâî.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BRACEWELL_PROBE_STRATEGY</Tag>
-		<English>Send to the Orion Arm or beyond, then explore.</English>
-		<French>Envoyer dans le bras d'Orion ou au-delà, puis explorer.</French>
-		<Russian>Îòïðàâüòå åãî â ðóêàâ Îðèîíà èëè äàëüøå, çàòåì ïðîâîäèòå ðàçâåäêó.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTURED_ASTEROID</Tag>
 		<English>Captured Asteroid</English>
 		<French>Astéroide capturé</French>
@@ -2257,12 +2215,6 @@
 		<English>An asteroid captured for economic use.</English>
 		<French>Un astéroïde capturé à des fins économiques.</French>
 		<Russian>Àñòåðîèä, çàõâà÷åííûé äëÿ õîçÿéñòâåííîãî èñïîëüçîâàíèÿ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAPTURED_ASTEROID_STRATEGY</Tag>
-		<English>Build asteroid buildings</English>
-		<French>Construit des bâtiments d'astéroides</French>
-		<Russian>Ñòðîèòåëüñòâî øàõò è äð. îáúåêòîâ íà ïîâåðõíîñòè àñòåðîèäà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTURED_COMET</Tag>
@@ -2277,12 +2229,6 @@
 		<Russian>Êîìåòà, çàõâà÷åííàÿ äëÿ õîçÿéñòâåííîãî èñïîëüçîâàíèÿ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAPTURED_COMET_STRATEGY</Tag>
-		<English>Build asteroid buildings. The Captured Comet does the same things as Captured Asteroid but a bit better.</English>
-		<French>Construit des bâtiments d'astéroides. The Comète capturée does the same things as Astéroide capturé but a bit better.</French>
-		<Russian>Ñòðîéòå àñòåðîèäíûå ïîñòðîéêè. Çàõâà÷åííàÿ êîìåòà äàåò òîò æå ýôôåêò, ÷òî è çàõâà÷åííûé àñòåðîèä, íî íåìíîãî áîëüøèé.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHRONOFORM_SHIP</Tag>
 		<English>Chronoforming Ship</English>
 		<French>Vaisseau Chronomorphe</French>
@@ -2295,19 +2241,13 @@
 		<Russian>Êîðàáëü-õðîíîôîðìåð ñïîñîáåí ìàíèïóëèðîâàòü ïðîñòðàíñòâîì è âðåìåíåì, ñîçäàâàÿ ïîðòàëû âíå îáû÷íîãî ïðîñòðàíñòâà-âðåìåíè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CHRONOFORM_SHIP_STRATEGY</Tag>
-		<English>Advanced worker.</English>
-		<French>Ouvrier avancé chronomorphe.</French>
-		<Russian>Ïðîäâèíóòûé ðàáîòíèê.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNARSETTLER</Tag>
 		<English>Cislunar Settler</English>
 		<French>Colon Cislunaire</French>
 		<Russian>Ëóííûé ïîñåëåíåö</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CISLUNARSETTLER_HOVER</Tag>
+		<Tag>TXT_KEY_UNIT_CISLUNARSETTLER_HELP</Tag>
 		<English>[ICON_BULLET]Can build cities in Cislunar Space</English>
 		<French>[ICON_BULLET]Peut construire les Villes de l'espace cislunaire</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà è êîëîíèè â îêîëîëóííîì ïðîñòðàíñòâå</Russian>
@@ -2325,12 +2265,6 @@
 		<Russian>Îñíîâíîé çàùèòíèê ëóííûõ êîëîíèé.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CISLUNAR_INFANTRY_STRATEGY</Tag>
-		<English>Defensive only.</English>
-		<French>Uniquement Défenseur.</French>
-		<Russian>Òîëüêî äëÿ îáîðîíû.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNAR_INVADER</Tag>
 		<English>Cislunar Invasion Force</English>
 		<French>Force d'invasion Cislunaire</French>
@@ -2343,12 +2277,6 @@
 		<Russian>Øòóðìîâîé êîðàáëü äëÿ îêîëîëóííîãî ïðîñòðàíñòâà. Ïðåäíàçíà÷åí äëÿ âòîðæåíèÿ íà êîñìè÷åñêèå ñòàíöèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CISLUNAR_INVADER_STRATEGY</Tag>
-		<English>Offense Cislunar space attack unit.</English>
-		<French>Unité d'attaque pour l'espace cislunaire.</French>
-		<Russian>Àòàêóþùèé îðáèòàëüíûé øòóðìîâèê.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNAR_REWARD</Tag>
 		<English>Mission Reward (Cislunar)</English>
 		<French>Retour de Mission (Cislunar)</French>
@@ -2359,12 +2287,6 @@
 		<English>A reward from exploring cislunar space</English>
 		<French>Une récompense de l'exploration de l'espace cislunaire space</French>
 		<Russian>Íàãðàäà îò èçó÷åíèÿ îêîëîëóííîãî ïðîñòðàíñòâà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CISLUNAR_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNAR_WORKER</Tag>
@@ -2384,10 +2306,6 @@
 		<English>Space worker used to build earliest improvements on Moon, Mars and Venus. It also can be transformed to Lunar bulldozer to build lunar mines and route.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_STRATEGY</Tag>
-		<English>Use this unit to build Lunar Outpost improvement - place, where you can send Lunar settlers to build Lunar cities.[NEWLINE]Turn it to lunar bulldozer (requires Lunar Bases tech) on Moon, so you can get resources.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
 		<English>Cosmic Worker</English>
 		<French>Ouvrier Cosmique</French>
@@ -2398,12 +2316,6 @@
 		<English>This highly advanced worker can freely move about all terrains and build almost anything in space.</English>
 		<French>Cet Ouvrier très avancé peut se déplacer librement sur tous les terrains et construire presque n'importe quoi dans l'espace.</French>
 		<Russian>Ýòîò âûñîêîïðîôåññèîíàëüíûé ðàáîòíèê ìîæåò ñâîáîäíî ïåðåäâèãàòüñÿ ïî ëþáîé ìåñòíîñòè è ñòðîèòü ïðàêòè÷åñêè âñå â êîñìîñå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_COSMIC_WORKER_STRATEGY</Tag>
-		<English>Advanced worker.</English>
-		<French>Ouvrier avancé pour le Cosmos.</French>
-		<Russian>Çâåçäîëåò-õðîíîôîðìåð.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORK_CREW</Tag>
@@ -2418,12 +2330,6 @@
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COSMIC_WORK_CREW_STRATEGY</Tag>
-		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
-		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
-		<Russian>Áðèãàäû êîñìè÷åñêèõ ðàáîòíèêîâ, ìîíòàæíèêîâ è ñâàðùèêîâ ïîìîãàþò óñêîðèòü ðîñò êîñìè÷åñêèõ è îðáèòàëüíûõ ãîðîäîâ, äîáàâëÿÿ áîíóñû ê ïðîèçâîäñòâó.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW</Tag>
 		<English>Cybernetic Work Crew</English>
 		<French>Equipage d'ouvriers Cybernetic</French>
@@ -2434,12 +2340,6 @@
 		<English>These brave workers go out into space.</English>
 		<French>Ces braves ouvriers sortent dans l'espace.</French>
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW_STRATEGY</Tag>
-		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
-		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
-		<Russian>Áðèãàäû êèáåðíåòè÷åñêèõ ðàáîòíèêîâ, ìîíòàæíèêîâ è ñâàðùèêîâ ïîìîãàþò óñêîðèòü ðîñò êîñìè÷åñêèõ è îðáèòàëüíûõ ãîðîäîâ, äîáàâëÿÿ áîíóñû ê ïðîèçâîäñòâó.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEEPSPACE_INFANTRY</Tag>
@@ -2454,12 +2354,6 @@
 		<Russian>Îñíîâíîé çàùèòíèê êîëîíèé Ñîëíå÷íîé ñèñòåìû.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEEPSPACE_INFANTRY_STRATEGY</Tag>
-		<English>Defensive only.</English>
-		<French>Uniquement Défenseur.</French>
-		<Russian>Òîëüêî äëÿ îáîðîíû.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD</Tag>
 		<English>Mission Reward (Distant Cosmos)</English>
 		<French>Retour de Mission (Distant Cosmos)</French>
@@ -2470,12 +2364,6 @@
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ïëàíåò çåìíîé ãðóïïû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENERGY_ENTITY</Tag>
@@ -2490,12 +2378,6 @@
 		<Russian>Ýíåðãåòè÷åñêèé ñãóñòîê, êîòîðûé ìîæåò ïåðåñåêàòü ìåæïðîñòðàíñòâåííûå ïóñòîòû.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ENERGY_ENTITY_STRATEGY</Tag>
-		<English>Planned for use in Cosmic and Transcendent Era evolution.</English>
-		<French>Prévu pour une utilisation dans l'évolution de l'ère cosmique et transcendante.</French>
-		<Russian>Ïëàíèðóåòñÿ èñïîëüçîâàòü äëÿ ýâîëþöèè â Êîñìè÷åñêîé è Òðàíñöåíäåíòíîé Ýðå.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_EUROPA_REWARD</Tag>
 		<English>Mission Reward (Europa)</English>
 		<French>Retour de Mission (Europa)</French>
@@ -2506,12 +2388,6 @@
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ïîÿñà àñòåðîèäîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EUROPA_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXOPLANET_REWARD</Tag>
@@ -2526,12 +2402,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ âíåøíèõ ïëàíåò-ãèãàíòîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXOPLANET_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALACTIC_CORE_REWARD</Tag>
 		<English>Mission Reward (Galactic Core)</English>
 		<French>Retour de Mission (Galactic Core)</French>
@@ -2542,12 +2412,6 @@
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ëóí ãàçîâûõ ãèãàíòîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_GALACTIC_CORE_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALACTIC_REWARD</Tag>
@@ -2562,19 +2426,13 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ðóêàâîâ Ìëå÷íîãî ïóòè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GALACTIC_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET</Tag>
 		<English>Heavy Rocket</English>
 		<French>Fusée Lourde</French>
 		<Russian>Òÿæåëàÿ ðàêåòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_HOVER</Tag>
+		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_HELP</Tag>
 		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE]Upgrade to a space settler on Space Station Lv. 3</English>
 		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.[NEWLINE]Améliore les colons spatiaqux sur la Station spatiale de Niv. 3</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Õîòÿ ýòî óñòðîéñòâî ñîáðàíî íà Çåìëå, îíî ïîëåçíî òîëüêî çà ïðåäåëàìè ðîäíîé ïëàíåòû.[NEWLINE]Îáíîâëåíèå äî êîñìè÷åñêîãî ïîñåëåíöà íà óðîâíå êîñìè÷åñêîé ñòàíöèè. 3</Russian>
@@ -2584,12 +2442,6 @@
 		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.</English>
 		<French>Cette fusée lourde développée commercialement est une mise à niveau de vos anciennes navettes spatiales.</French>
 		<Russian>Ýòà òÿæåëàÿ, êîììåð÷åñêè ðàçðàáîòàííàÿ ðàêåòà ÿâëÿåòñÿ îáíîâëåíèåì âàøèõ ñòàðûõ êîñìè÷åñêèõ êîðàáëåé.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_STRATEGY</Tag>
-		<English>Build space stations in low-Earth orbit, or conduct missions on space stations, or upgrade it to cislunar/lunar/planetary settlers in Space Station Lv. 3 improvement.</English>
-		<French>Construire des stations spatiales en orbite terrestre basse ou effectuer des missions sur des stations spatiales.</French>
-		<Russian>Ñòðîéòå êîñìè÷åñêèå ñòàíöèè íà îêîëîçåìíîé îðáèòå èëè âûïîëíÿéòå ìèññèè íà êîñìè÷åñêèõ ñòàíöèÿõ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW</Tag>
@@ -2604,19 +2456,13 @@
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW_STRATEGY</Tag>
-		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
-		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
-		<Russian>Áðèãàäû ðàáîòíèêîâ-òðàíñëþäåé, ìîíòàæíèêîâ è ñâàðùèêîâ ïîìîãàþò óñêîðèòü ðîñò êîñìè÷åñêèõ è îðáèòàëüíûõ ãîðîäîâ, äîáàâëÿÿ áîíóñû ê ïðîèçâîäñòâó.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSHIP</Tag>
 		<English>Hyperseedship</English>
 		<French>HyperVaisseau-Colonisateur</French>
 		<Russian>Ãèïåðêîðàáëü-ìàòêà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HYPERSHIP_HOVER</Tag>
+		<Tag>TXT_KEY_UNIT_HYPERSHIP_HELP</Tag>
 		<English>[ICON_BULLET]Can build cities in extragalactic space, Distant Cosmos and Hyperspace. Upon settling transforms terrain into Hyperspace</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans l'espace extragalactique, le Cosmos lointain et l'Hyperespace. Lors de la colonisation, le terrain se transforme en hyperespace</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà âî âíåãàëàêòè÷åñêîì êîñìîñå, äàëüíåì êîñìîñå è ãèïåðïðîñòðàíñòâå[NEWLINE][ICON_BULLET]Ïîñëå çàñåëåíèÿ ïðåâðàùàåò ìåñòíîñòü â ãèïåðïðîñòðàíñòâî</Russian>
@@ -2634,12 +2480,6 @@
 		<Russian>Çàùèòíûé îòðÿä äëÿ êîëîíèé â ãèïåðêîñìîñå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HYPERSPACE_DEFENDER_STRATEGY</Tag>
-		<English>For defense</English>
-		<French>Pour la défense</French>
-		<Russian>Îáîðîíèòåëüíûé îòðÿä</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSPACE_REWARD</Tag>
 		<English>Mission Reward (Hyperspace)</English>
 		<French>Retour de Mission (Hyperespace)</French>
@@ -2650,12 +2490,6 @@
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ âíåøíèõ ïëàíåò-ãèãàíòîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HYPERSPACE_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPER_BATTLECRUISER</Tag>
@@ -2670,12 +2504,6 @@
 		<Russian>Ñàìàÿ ïðîäâèíóòàÿ íàñòóïàòåëüíàÿ åäèíèöà. Ìîæåò ïåðåñå÷ü ëþáóþ òåððèòîðèþ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HYPER_BATTLECRUISER_STRATEGY</Tag>
-		<English>Offense interstellar space attack unit.</English>
-		<French>Unité offensive pour l'espace interstellaire.</French>
-		<Russian>Êîðàáëü-øòóðìîâèê, ïðåäíàçíà÷åííûé äëÿ àòàêè ýêçîïëàíåò.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD</Tag>
 		<English>Mission Reward (Inner Solar System)</English>
 		<French>Retour de Mission (Inner Solar System)</French>
@@ -2688,12 +2516,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ Ñîëíå÷íîé ñèñòåìû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE</Tag>
 		<English>Interdimensional Probe</English>
 		<French>Sonde Interdimensional</French>
@@ -2703,12 +2525,6 @@
 		<Tag>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE_PEDIA</Tag>
 		<English>The Interdimensional Probe can explore hyperspace and other exotic locations.</English>
 		<Russian>Ìåæïðîñòðàíñòâåííûé çîíä ìîæåò èññëåäîâàòü ãèïåðïðîñòðàíñòâî è äðóãèå ýêçîòè÷åñêèå ëîêàöèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE_STRATEGY</Tag>
-		<English>Send to hyperspace, then explore.</English>
-		<French>Envoyer dans l'hyperespace, puis explorer.</French>
-		<Russian>Îòïðàâüòå åãî â ãèïåðêîñìîñ, çàòåì èññëåäóéòå åãî.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERGALACTIC_REWARD</Tag>
@@ -2723,12 +2539,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ìåæãàëàêòè÷åñêîãî ïðîñòðàíñòâà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INTERGALACTIC_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD</Tag>
 		<English>Mission Reward (Interstellar Life)</English>
 		<French>Retour de Mission (Interstellar Life)</French>
@@ -2741,12 +2551,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ Òèòàíà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_PROBE</Tag>
 		<English>Interstellar Probe</English>
 		<French>Sonde Interstellar</French>
@@ -2756,12 +2560,6 @@
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_PROBE_PEDIA</Tag>
 		<English>An interstellar probe to explore nearby stars</English>
 		<Russian>Ìåæçâåçäíûé çîíä äëÿ èññëåäîâàíèÿ áëèæàéøèõ çâåçä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_INTERSTELLAR_PROBE_STRATEGY</Tag>
-		<English>Send to another star, then explore.</English>
-		<French>Envoyer à une autre étoile, puis explorer.</French>
-		<Russian>Îòïðàâüòå åãî â íóæíóþ çâåçäíóþ ñèñòåìó, çàòåì èññëåäóéòå åå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_REWARD</Tag>
@@ -2776,12 +2574,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ìåæçâåçäíîãî ïðîñòðàíñòâà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INTERSTELLAR_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_WORKER</Tag>
 		<English>Interstellar Workcraft</English>
 		<French>Vaisseau-ouvrier Interstellaire</French>
@@ -2792,12 +2584,6 @@
 		<English>Worker in interstellar space</English>
 		<French>in interstellaire space Ouvrier</French>
 		<Russian>Ðàáî÷èé ìåæçâåçäíîãî ïðîñòðàíñòâà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_INTERSTELLAR_WORKER_STRATEGY</Tag>
-		<English>Works Interstellar Space</English>
-		<French>Travaille dans l'Espace Interstellaire</French>
-		<Russian>Ïðåäíàçíà÷åí äëÿ ðàáîòû â ìåæçâåçäíîì ïðîñòðàíñòâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INT_BATTLECRUISER</Tag>
@@ -2812,12 +2598,6 @@
 		<Russian>Øòóðìîâîé êîðàáëü ìåæçâåçäíîãî ïðîñòðàíñòâà. Ïðåäíàçíà÷åí äëÿ âòîðæåíèÿ â êîëîíèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INT_BATTLECRUISER_STRATEGY</Tag>
-		<English>Offense interstellar space attack unit.</English>
-		<French>Unité offensive pour l'espace interstellaire.</French>
-		<Russian>Îñíîâíàÿ óäàðíàÿ åäèíèöà êîñìîôëîòà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_INT_INVADER</Tag>
 		<English>Interstellar Invader</English>
 		<French>Envahisseur Interstellaire</French>
@@ -2828,12 +2608,6 @@
 		<English>An attack ship for interstellar space. Meant for invading colonies.</English>
 		<French>Un vaisseau d'attaque pour l'espace interstellaire. Destiné à envahir les colonies.</French>
 		<Russian>Îñíîâíîé áîåâîé êîðàáëü ìåæçâåçäíîãî ïðîñòðàíñòâà. Ïðåäíàçíà÷åí äëÿ âòîðæåíèÿ â êîëîíèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_INT_INVADER_STRATEGY</Tag>
-		<English>Offense interstellar space attack unit.</English>
-		<French>Unité d'attaque pour l'espace interstellaire.</French>
-		<Russian>Óíèâåðñàëüíûé àòàêóþùèé êîðàáëü êîñìîôëîòà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUPITER_REWARD</Tag>
@@ -2848,12 +2622,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ âíåøíèõ ïëàíåò-ãèãàíòîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_JUPITER_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_KBO_REWARD</Tag>
 		<English>Mission Reward (KBO)</English>
 		<French>Retour de Mission (KBO)</French>
@@ -2864,12 +2632,6 @@
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ âíåøíèõ ïëàíåò-ãèãàíòîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_KBO_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIFE_SWARM</Tag>
@@ -2884,12 +2646,6 @@
 		<Russian>Ðîé ïðîäâèíóòûõ ôîðì æèçíè, êîòîðûé ìîæåò ïåðåñåêàòü ìåæãàëàêòè÷åñêèå ïóñòîòû.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LIFE_SWARM_STRATEGY</Tag>
-		<English>Planned for use in Cosmic and Transcendent Era evolution.</English>
-		<French>Prévu pour une utilisation dans l'évolution de l'ère cosmique et transcendante.</French>
-		<Russian>Ïëàíèðóåòñÿ èñïîëüçîâàòü äëÿ ýâîëþöèè â Êîñìè÷åñêîé è Òðàíñöåíäåíòíîé Ýðå.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOE_REWARD</Tag>
 		<English>Mission Reward (Low Earth Orbit)</English>
 		<French>Retour de Mission (Orbite terrestre basse)</French>
@@ -2902,19 +2658,13 @@
 		<Russian>Íàãðàäà çà çàâåðøåíèå èññëåäîâàíèÿ îðáèòû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LOE_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNARSETTLER</Tag>
 		<English>Lunar Settler</English>
 		<French>Colon Lunaire</French>
 		<Russian>Ëóííûé êîëîíèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNARSETTLER_HOVER</Tag>
+		<Tag>TXT_KEY_UNIT_LUNARSETTLER_HELP</Tag>
 		<English>[ICON_BULLET]Can build cities on the Moon [NEWLINE][ICON_BULLET]Can settle only on [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Oupost[\LINK] and [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK] improvements.</English>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà íà ëóííîé ïîâåðõíîñòè</Russian>
 	</TEXT>
@@ -2929,10 +2679,6 @@
 		<English>Early lunar worker dedicated to resource extraction.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER_STRATEGY</Tag>
-		<English>Build this unit to extract resources on Moon. Construction Ships can be turned into a Lunar Bulldozer at owned Lunar Bases.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_INFANTRY</Tag>
 		<English>Lunar Infantry</English>
 		<French>Infanterie lunaire</French>
@@ -2945,12 +2691,6 @@
 		<Russian>Îñíîâíîé ïåõîòíûé îòðÿä ëóííûõ êîëîíèé.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNAR_INFANTRY_STRATEGY</Tag>
-		<English>For lunar offense and defense</English>
-		<French>Rôle Polyvalent (offensif et défensif) pour la Lune</French>
-		<Russian>Äëÿ àòàêè èëè çàùèòû</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_REWARD</Tag>
 		<English>Mission Reward (Lunar)</English>
 		<French>Retour de Mission (Lunar)</French>
@@ -2961,12 +2701,6 @@
 		<English>A reward from exploring the Moon</English>
 		<French>Une récompense de l'exploration de la Lune</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ Ëóíû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNAR_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_WORKER</Tag>
@@ -2987,12 +2721,6 @@
 		<Russian>Áîëåå ïðîäâèíóòûé òèï êîñìè÷åñêîãî ðàáîòíèêà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MAGSAIL_WORKER_STRATEGY</Tag>
-		<English>Works Cislunar Space and can harvest asteroids</English>
-		<French>Peut travailler sur l'espace cislunaire et récolter les astéroides</French>
-		<Russian>Ìîæåò ðàáîòàòü â îêîëîëóííîì ïðîñòðàíñòâå è ðàçðàáàòûâàòü àñòåðîèäû</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARSSETTLER</Tag>
 		<English>Martian Settler</English>
 		<French>Colon Martien</French>
@@ -3011,12 +2739,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ äàëüíèõ ïëàíåò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MARS_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARTIAN_INFANTRY</Tag>
 		<English>Martian Infantry</English>
 		<French>Infanterie Martienne</French>
@@ -3027,12 +2749,6 @@
 		<English>Basic unit for Martian colonies.</English>
 		<French>Unité de base pour les colonies martiennes.</French>
 		<Russian>Îñíîâíàÿ ïåõîòà äëÿ ìàðñèàíñêèõ êîëîíèé.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MARTIAN_INFANTRY_STRATEGY</Tag>
-		<English>For Martian offense and defense</English>
-		<French>Rôle Polyvalent (offensif et défensif) pour l'espace martien</French>
-		<Russian>Ãîäíû êàê äëÿ àòàêè, òàê è äëÿ îáîðîíû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARTIAN_WORKER</Tag>
@@ -3053,12 +2769,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ ïîÿñà Êîéïåðà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MERCURY_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_MULTIVERSE_REWARD</Tag>
 		<English>Mission Reward (Multiverse)</English>
 		<French>Retour de Mission (Multiverse)</French>
@@ -3069,12 +2779,6 @@
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ýêçîïëàíåò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MULTIVERSE_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NANOWORKER</Tag>
@@ -3089,12 +2793,6 @@
 		<Russian>Ïðîäâèíóòûé ðàáîòíèê. Ðîé íàíîáîòîâ íà ñîëíå÷íîé ýíåðãèè, êîòîðûå ìîãóò ñâîáîäíî ïåðåìåùàòüñÿ ïî âñåé Ñîëíå÷íîé ñèñòåìå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NANOWORKER_STRATEGY</Tag>
-		<English>Advanced Solar System worker.</English>
-		<French>Ouvrier avancé du Système Solaire.</French>
-		<Russian>Ïðîäâèíóòûé ðàáîòíèê Ñîëíå÷íîé ñèñòåìû.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEPTUNE_REWARD</Tag>
 		<English>Mission Reward (Neptune)</English>
 		<French>Retour de Mission (Neptune)</French>
@@ -3107,19 +2805,13 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ Îáëàêà Îîðòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NEPTUNE_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_ONEILLSETTLER</Tag>
 		<English>Deep Space Settler</English>
 		<French>Colon Espace lointain</French>
 		<Russian>Êîñìè÷åñêèé êîëîíèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ONEILLSETTLER_HOVER</Tag>
+		<Tag>TXT_KEY_UNIT_ONEILLSETTLER_HELP</Tag>
 		<English>[ICON_BULLET]Can build cities in the solar system</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans le système solaire</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò îñíîâàòü ãîðîä â ïðåäåëàõ Ñîëíå÷íîé ñèñòåìû</Russian>
@@ -3137,12 +2829,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ äàëüíåãî êîñìîñà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_OORT_CLOUD_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD</Tag>
 		<English>Mission Reward (Outer Solar System)</English>
 		<French>Retour de Mission (Outer Solar System)</French>
@@ -3155,19 +2841,13 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îêðàèí Ñîëíå÷íîé ñèñòåìû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANETARYSETTLER</Tag>
 		<English>Planetary Settler</English>
 		<French>Colon Planétaire</French>
 		<Russian>Ïëàíåòàðíûé êîëîíèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PLANETARYSETTLER_HOVER</Tag>
+		<Tag>TXT_KEY_UNIT_PLANETARYSETTLER_HELP</Tag>
 		<English>[ICON_BULLET]Can build cities on Mars and Venus</English>
 		<French>[ICON_BULLET]Peut construire les Villes sur Mars et Vénus</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò îñíîâàòü ãîðîä íà ìàðñèàíñêîé èëè âåíåðèàíñêîé ïîâåðõíîñòè</Russian>
@@ -3185,12 +2865,6 @@
 		<Russian>Ñòàíäàðòíûé îòðÿä äëÿ äàëüíèõ êîëîíèé.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PLANETARY_INFANTRY_STRATEGY</Tag>
-		<English>For planetary offense and defense</English>
-		<French>Rôle Polyvalent (offensif et défensif) pour toutes les planètes.</French>
-		<Russian>Ãîäåí äëÿ àòàêè è çàùèòû äàëüíèõ êîñìè÷åñêèõ êîëîíèé</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANET_PROBE</Tag>
 		<English>Interplanetary Probe</English>
 		<French>Sonde Interplanétaire</French>
@@ -3201,12 +2875,6 @@
 		<English>An interplanetary probe to explore the Solar System</English>
 		<French>Une sonde interplanétaire pour explorer le système solaire</French>
 		<Russian>Ìåæïëàíåòíûé çîíä äëÿ èññëåäîâàíèÿ Ñîëíå÷íîé ñèñòåìû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_PLANET_PROBE_STRATEGY</Tag>
-		<English>Send to another planet, then explore.</English>
-		<French>Envoyer sur une autre planète, puis explorer.</French>
-		<Russian>Îòïðàâüòå åãî íà äðóãóþ ïëàíåòó, çàòåì èññëåäóéòå åå ïîâåðõíîñòü.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW</Tag>
@@ -3221,12 +2889,6 @@
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW_STRATEGY</Tag>
-		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
-		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
-		<Russian>Áðèãàäû ðàáîòíèêîâ-ïîñòëþäåé, ìîíòàæíèêîâ è ñâàðùèêîâ ïîìîãàþò óñêîðèòü ðîñò êîñìè÷åñêèõ è îðáèòàëüíûõ ãîðîäîâ, äîáàâëÿÿ áîíóñû ê ïðîèçâîäñòâó.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUANTUM_PROBE</Tag>
 		<English>Quantum Probe</English>
 		<French>Sonde Quantum</French>
@@ -3236,12 +2898,6 @@
 		<Tag>TXT_KEY_UNIT_QUANTUM_PROBE_PEDIA</Tag>
 		<English>The Quantum Probe uses quantum ramjet technology to break the boundaries of the observable universe.</English>
 		<Russian>Êâàíòîâûé çîíä èñïîëüçóåò òåõíîëîãèþ êâàíòîâîãî ÏÂÐÄ, ÷òîáû ïðåîäîëåòü ãðàíèöû íàáëþäàåìîé âñåëåííîé.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_QUANTUM_PROBE_STRATEGY</Tag>
-		<English>Send to distant cosmos, then explore.</English>
-		<French>Envoyer dans un cosmos lointain, puis explorer.</French>
-		<Russian>Îòïðàâüòå åãî â äàëüíèé êîñìîñ, çàòåì èññëåäóéòå åãî.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SATELLITE</Tag>
@@ -3256,12 +2912,6 @@
 		<Russian>Ñïóòíèê ÿâÿëåòñÿ âàøèì ñàìûì ïåðâûì þíèòîì â áëèæíåì êîñìîñå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SATELLITE_STRATEGY</Tag>
-		<English>Send to low-Earth orbit, then explore.</English>
-		<French>Envoyer en orbite terrestre basse, puis explorer.</French>
-		<Russian>Äåðæèòå åãî íà îêîëîçåìíîé îðáèòå äëÿ òî÷íîé ðàçâåäêè ïîâåðõíîñòè.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SATURN_REWARD</Tag>
 		<English>Mission Reward (Saturn)</English>
 		<French>Retour de Mission (Saturn)</French>
@@ -3272,12 +2922,6 @@
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ â ãèïåðêîñìîñå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SATURN_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEDNOID_REWARD</Tag>
@@ -3292,12 +2936,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ ìóëüòèâñåëåííîé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SEDNOID_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW</Tag>
 		<English>Shapeshifting Work Crew</English>
 		<French>Equipage d'ouvriers Shapeshifting</French>
@@ -3308,12 +2946,6 @@
 		<English>These brave workers go out into space.</English>
 		<French>Ces braves ouvriers sortent dans l'espace.</French>
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW_STRATEGY</Tag>
-		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
-		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
-		<Russian>Áðèãàäû êîñìè÷åñêèõ ðàáîòíèêîâ, ìîíòàæíèêîâ è ñâàðùèêîâ ïîìîãàþò óñêîðèòü ðîñò êîñìè÷åñêèõ è îðáèòàëüíûõ ãîðîäîâ, äîáàâëÿÿ áîíóñû ê ïðîèçâîäñòâó.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLARSAIL_WORKER</Tag>
@@ -3328,12 +2960,6 @@
 		<Russian>Ñàìûé ðàííèé ðàáîòíèê áëèæíåãî êîñìîñà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SOLARSAIL_WORKER_STRATEGY</Tag>
-		<English>Works Cislunar Space and can harvest asteroids</English>
-		<French>Peut travailler sur l'espace Cislunaire et récolter les astéroides</French>
-		<Russian>Ìîæåò ðàáîòàòü â îêîëîëóííîì ïðîñòðàíñòâå è ðàçðàáàòûâàòü àñòåðîèäû</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD</Tag>
 		<English>Mission Reward (Solar System Life)</English>
 		<French>Retour de Mission (Solar System Life)</French>
@@ -3346,12 +2972,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ àðòåôàêòîâ ïîãèáøèõ êñåíîöèâèëèçàöèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLAR_WORKER</Tag>
 		<English>Solar Workship</English>
 		<French>Vaisseau-atelier Solaire</French>
@@ -3362,7 +2982,7 @@
 		<English>[ICON_BULLET]This unit can build route on Orbit terrain enabling trade and resource flow between Earth and space colonies.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SPACEUNIT_HOVER</Tag>
+		<Tag>TXT_KEY_UNIT_SPACEUNIT_HELP</Tag>
 		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.</English>
 		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Õîòÿ ýòî óñòðîéñòâî ìîæåò áûòü ïîñòðîåíî íà Çåìëå, õîòÿ ïîëåçíî òîëüêî çà åå ïðåäåëàìè.</Russian>
@@ -3380,12 +3000,6 @@
 		<Russian>Ýòî êîñìè÷åñêèé ÷åëíîê. Åãî îñíîâíàÿ ðàáîòà - ñòðîèòåëüñòâî è ñíàáæåíèå âàøèõ êîñìè÷åñêèõ ñòàíöèé.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SPACE_SHUTTLE_STRATEGY</Tag>
-		<English>Build space stations in low-Earth orbit or conduct missions on space stations.</English>
-		<French>Construire des stations spatiales en orbite terrestre basse ou effectuer des missions sur des stations spatiales.</French>
-		<Russian>Ñòðîéòå êîñìè÷åñêèå ñòàíöèè íà îêîëîçåìíîé îðáèòå èëè âûïîëíÿéòå ìèññèè íà êîñìè÷åñêèõ ñòàíöèÿõ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACE_WORK_CREW</Tag>
 		<English>Space Work Crew</English>
 		<French>Equipage d'ouvriers de l'espace</French>
@@ -3396,12 +3010,6 @@
 		<English>These brave workers go out into space.</English>
 		<French>Ces braves ouvriers sortent dans l'espace.</French>
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SPACE_WORK_CREW_STRATEGY</Tag>
-		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
-		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
-		<Russian>Áðèãàäû ïîëèìîðôíûõ ðàáîòíèêîâ, ìîíòàæíèêîâ è ñâàðùèêîâ ïîìîãàþò óñêîðèòü ðîñò êîñìè÷åñêèõ è îðáèòàëüíûõ ãîðîäîâ, äîáàâëÿÿ áîíóñû ê ïðîèçâîäñòâó.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS1_REWARD</Tag>
@@ -3416,12 +3024,6 @@
 		<Russian>Íàãðàäà îò âàøåé êîñìè÷åñêîé ñòàíöèè íà îêîëîçåìíîé îðáèòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SS1_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS2_REWARD</Tag>
 		<English>Mission Reward (Space Station Lv. 2)</English>
 		<French>Retour de Mission (Station spatiale Niv. 2)</French>
@@ -3432,12 +3034,6 @@
 		<English>A reward from your Low Earth Orbit space station</English>
 		<French>Une récompense de votre station spatiale de basse orbite terrestre</French>
 		<Russian>Íàãðàäà îò âàøåé êîñìè÷åñêîé ñòàíöèè íà îêîëîçåìíîé îðáèòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SS2_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS3_REWARD</Tag>
@@ -3452,12 +3048,6 @@
 		<Russian>Íàãðàäà îò âàøåé êîñìè÷åñêîé ñòàíöèè íà îêîëîçåìíîé îðáèòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SS3_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP</Tag>
 		<English>Lunar Supply Ship</English>
 		<French>Vaisseau de ravitaillement</French>
@@ -3466,10 +3056,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_PEDIA</Tag>
 		<English>Early space unit dedicated to supply of Lunar colonies.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_STRATEGY</Tag>
-		<English>Use this unit to build buildings in Lunar colonies.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TITAN_REWARD</Tag>
@@ -3484,12 +3070,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ äàëüíèõ ìèðîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TITAN_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW</Tag>
 		<English>Transhuman Work Crew</English>
 		<French>Equipage d'ouvriers Transhuman</French>
@@ -3500,12 +3080,6 @@
 		<English>These brave workers go out into space.</English>
 		<French>Ces braves ouvriers sortent dans l'espace.</French>
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW_STRATEGY</Tag>
-		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
-		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
-		<Russian>Áðèãàäû ðàáîòíèêîâ-íîîñàïèåíòîâ, ìîíòàæíèêîâ è ñâàðùèêîâ ïîìîãàþò óñêîðèòü ðîñò êîñìè÷åñêèõ è îðáèòàëüíûõ ãîðîäîâ, äîáàâëÿÿ áîíóñû ê ïðîèçâîäñòâó.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD</Tag>
@@ -3520,12 +3094,6 @@
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ çà îðáèòîé Íåïòóíà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_URANUS_REWARD</Tag>
 		<English>Mission Reward (Uranus)</English>
 		<French>Retour de Mission (Uranus)</French>
@@ -3536,12 +3104,6 @@
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ äàëüíåãî êîñìîñà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_URANUS_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENUS_INFANTRY</Tag>
@@ -3556,12 +3118,6 @@
 		<Russian>Áàçîâûé îòðÿä äëÿ âåíåðèàíñêèõ êîëîíèé.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_VENUS_INFANTRY_STRATEGY</Tag>
-		<English>For Venus offense and defense</English>
-		<French>Rôle Polyvalent (offensif et défensif) pour la planète Vénus</French>
-		<Russian>Ãîäíû äëÿ àòàêè è îáîðîíû êîëîíèé íà Âåíåðå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENUS_REWARD</Tag>
 		<English>Mission Reward (Venus)</English>
 		<French>Retour de Mission (Vénus)</French>
@@ -3572,12 +3128,6 @@
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ äàëüíåãî êîñìîñà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_VENUS_REWARD_STRATEGY</Tag>
-		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
-		<Russian>Ñâîáîäíîå ñòðîèòåëüñòâî èëè ðàçâèòèå íàóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENUS_SETTLER</Tag>
@@ -3602,12 +3152,6 @@
 		<English>The Von Neumann probe is more advanced than the Bracewell probe. It can seed life and travel to nearby galaxies.</English>
 		<French>La sonde Von Neumann est plus avancée que la sonde Bracewell. Il peut semer la vie et voyager dans les galaxies voisines.</French>
 		<Russian>Çîíä ôîí Íåéìàíà áîëåå ïðîäâèíóò, ÷åì çîíä Áðåéñâåëëà. Îí ìîæåò ñåÿòü æèçíü è ïóòåøåñòâîâàòü â áëèçëåæàùèå ãàëàêòèêè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_VON_NEUMANN_PROBE_STRATEGY</Tag>
-		<English>Send to another galaxy, then explore.</English>
-		<French>Envoyer vers une autre galaxie, puis explorer.</French>
-		<Russian>Îòïðàâüòå åãî â íóæíóþ ãàëàêòèêó, çàòåì èññëåäóéòå åå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVI</Tag>
@@ -3652,7 +3196,7 @@
 		<Russian>Êîðàáëü Ïîêîëåíèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORLDSHIP2_HOVER</Tag>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP2_HELP</Tag>
 		<English>[ICON_BULLET]Can build cities in the Orion Arm and Milky Way</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans le bras d'Orion et la Voie lactée</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â ðóêàâå Îðèîíà â ãàëàêòèêå Ìëå÷íûé Ïóòü</Russian>
@@ -3664,7 +3208,7 @@
 		<Russian>Çâåçäîëåò Àëüêóáüåððå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORLDSHIP3_HOVER</Tag>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP3_HELP</Tag>
 		<English>[ICON_BULLET]Can build cities in the Milky Way and Universe</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans la Voie lactée, et tout l'Univers</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â îñòàëüíîé ÷àñòè Ìëå÷íîãî Ïóòè è ïðî÷èõ ãàëàêòèêàõ</Russian>
@@ -3676,7 +3220,7 @@
 		<Russian>Êâàíòîâûé êîðàáëü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORLDSHIP4_HOVER</Tag>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP4_HELP</Tag>
 		<English>[ICON_BULLET]Can build cities in the Universe and beyond</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans l'Univers, et plus loin</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæíî ñòðîèòü ãîðîäà â ëþáîì ñåêòîðå Âñåëåííîé è çà åå ïðåäåëàìè</Russian>
@@ -3694,13 +3238,7 @@
 		<Russian>Îñíîâíîé çàùèòíûé îòðÿä äàëüíèõ êîëîíèé.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORLDSHIP_DEFENDER_STRATEGY</Tag>
-		<English>Defensive only.</English>
-		<French>Uniquement Défenseur.</French>
-		<Russian>Òîëüêî äëÿ îáîðîíû.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORLDSHIP_HOVER</Tag>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP_HELP</Tag>
 		<English>[ICON_BULLET]Can build cities in the Transtellar space and Star terrains</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â Îáëàêå Îîðòà è ìåæçâåçäíîì ïðîñòðàíñòâå</Russian>
@@ -3738,13 +3276,28 @@
 		<English>Lunar Exploration Unit.</English>
 		<Italian>Unità da esplorazione lunare.</Italian>
 		<Polish>Łazik - rodzaj sondy kosmicznej, posiadający możliwość poruszania się po powierzchni ciała, na którym wylądował (planety lub księżyca, w planach także planetoid). Łazik, dzięki swojej mobilności, ma dużą przewagę nad tradycyjnym lądownikiem w kwestii wyboru miejsca i obiektu badań, jednak jego wysłanie jest znacznie droższe ze względu na konieczność umieszczenia systemu napędowego wewnątrz sondy, co znacznie zwiększa jej wagę. Do łazików zaliczane są głównie pojazdy bezzałogowe, ale łazikiem księżycowym był też nazywany załogowy Lunar Roving Vehicle, używany w misjach programu Apollo.</Polish>
-		<Russian>[TAB]Ëóííûé ðàçâåäîâàòåëüíûé þíèò.</Russian>
+		<Russian>Ëóííûé ðàçâåäîâàòåëüíûé þíèò.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNAR_ROVER_STRATEGY</Tag>
-		<English>The Lunar Rover is the first unit you can send to the Lunar Map, (once we get Multi-Maps). The method of sending units between maps still needs some work.</English>
-		<French>Le Véhicule Lunaire est la première unité que vous pouvez envoyer à la carte lunaire, (une fois que nous obtenons plusieurs cartes). La méthode d'envoi d'unités entre les cartes nécessite encore quelques travaux.</French>
-		<Italian>Il rover lunare è la prima unità che può essere mandata sulla Luna (quando verranno implementate le Multi-Maps).</Italian>
-		<Polish>Łazik Księżycowy to pierwszy pojazd jaki możesz wysłać na księżyc.</Polish>
+		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
+		<English>Build [LINK=IMPROVEMENT_LISTENING_NODE]Listening Node[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_LISTENING_NODE]Station d'écoute[\LINK]</French>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LISTENING_NODE]nodo d'ascolto[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LISTENING_NODE]Nodo de escucha[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LISTENING_NODE]Boję Nasłuchową[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LISTENING_NODE]Öåíòð ÐÝÁ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LISTENING_NODE</Tag>
+		<English>Listening Node</English>
+		<French>Station d'écoute</French>
+		<Italian>Nodo d'ascolto</Italian>
+		<Spanish>
+			<Text>Nodo de escucha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Boja Nasłuchowa</Polish>
+		<Russian>Óçåë ñâÿçè</Russian>
 	</TEXT>
 </Civ4GameText>

@@ -49,16 +49,12 @@
 ###############################################################################################################
 
 from CvPythonExtensions import *
-
 import CvScreenEnums
 import CvEventInterface
 import Popup as PyPopup
-
 import BugConfigTracker
-
 import math
 import SystemPaths as SP
-
 # BUG - Options
 import BugCore
 CityScreenOpt = BugCore.game.CityScreen
@@ -1121,17 +1117,17 @@ class RevolutionWatchAdvisor:
 
 		start = time.clock()
 		# Draw the city list...
-		self.drawContents (page)
+		self.drawContents(page)
 		end = time.clock()
 		print "drawContents: " + str(end - start) + "s"
 
-	def calculateFounded (self, city, szKey, arg):
+	def calculateFounded(self, city, szKey, arg):
 
 		# City founded date...
 		iTurnTime = city.getGameTurnFounded()
 		return unicode(CyGameTextMgr().getTimeStr(iTurnTime, False))
 
-	def calculateFeatures (self, city, szKey, arg):
+	def calculateFeatures(self, city, szKey, arg):
 
 		szReturn = ""
 
@@ -1994,7 +1990,7 @@ class RevolutionWatchAdvisor:
 		return outText
 # RevolutionDCM - end
 
-	def drawContents (self, page):
+	def drawContents(self, page):
 		""" Function to draw the contents of the cityList passed in. """
 
 		screen = self.getScreen()
@@ -2215,22 +2211,22 @@ class RevolutionWatchAdvisor:
 			# Now hand off to the C++ API
 			self.updateAppropriateCitySelection(page, player.getNumCities())
 
-	def HandleSpecialistPlus (self, inputClass):
+	def HandleSpecialistPlus(self, inputClass):
 		""" Handles when any Specialist Plus is pushed."""
 
 		#CyInterface().setDirty(InterfaceDirtyBits.Domestic_Advisor_DIRTY_BIT, True)
 		return 0
 
-	def HandleSpecialistMinus (self, inputClass):
+	def HandleSpecialistMinus(self, inputClass):
 		""" Handles when any Specialist Minus is pushed."""
 
 		CyInterface().setDirty(InterfaceDirtyBits.REVOLUTION_WATCH_ADVISOR_DIRTY_BIT, True)
 		return 0
 
-	def RevolutionWatchExit (self, inputClass):
+	def RevolutionWatchExit(self, inputClass):
 		return 0
 
-	def handleInput (self, inputClass):
+	def handleInput(self, inputClass):
 		""" Handles the input for this screen..."""
 
 		code = inputClass.getNotifyCode()
@@ -2331,7 +2327,7 @@ class RevolutionWatchAdvisor:
 	def updateScreen(self):
 		""" Updates the screen."""
 
-		self.drawContents()
+		self.drawContents(self.currentPage)
 
 		return
 
@@ -2377,7 +2373,7 @@ class RevolutionWatchAdvisor:
 
 	def save(self, inputClass):
 		name = SP.joinModDir("UserSettings", "CustomRevAdv", "CustomRevAdv.txt")
-		if SP.isfile(name):
+		if SP.isFile(name):
 			file = open(name, 'w')
 
 			if(file != 0):
@@ -2716,9 +2712,9 @@ class RevolutionWatchAdvisor:
 
 		self.PAGES = None
 		name = SP.joinModDir("UserSettings", "CustomRevAdv", "CustomRevAdv.txt")
-		if not SP.isfile(name):
+		if not SP.isFile(name):
 			name = SP.joinModDir("UserSettings", "CustomRevAdv.txt")
-		if SP.isfile(name):
+		if SP.isFile(name):
 			BugConfigTracker.add("CDA_Config", name)
 			try:
 				file = open(name, 'r')

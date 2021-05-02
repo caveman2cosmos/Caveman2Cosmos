@@ -5,7 +5,6 @@
 			<Type>BUILDING_HYPESPACE_PORTAL</Type>
 			<Description>TXT_KEY_BUILDING_HYPESPACE_PORTAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPESPACE_PORTAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPESPACE_PORTAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPESPACE_PORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -26,7 +25,6 @@
 			<Type>BUILDING_RESIDENTIAL_PORTAL</Type>
 			<Description>TXT_KEY_BUILDING_RESIDENTIAL_PORTAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESIDENTIAL_PORTAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RESIDENTIAL_PORTAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RESIDENTIAL_PORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -49,7 +47,6 @@
 			<Type>BUILDING_TESSERACT_HOMES</Type>
 			<Description>TXT_KEY_BUILDING_TESSERACT_HOMES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TESSERACT_HOMES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TESSERACT_HOMES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TESSERACT_HOMES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -75,7 +72,6 @@
 			<Type>BUILDING_ESCHER_CITY</Type>
 			<Description>TXT_KEY_BUILDING_ESCHER_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ESCHER_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ESCHER_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ESCHER_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -105,7 +101,6 @@
 			<Type>BUILDING_HYPERCITY</Type>
 			<Description>TXT_KEY_BUILDING_HYPERCITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERCITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERCITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERCITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -131,7 +126,6 @@
 			<Type>BUILDING_11_DIMENSIONAL_CITY</Type>
 			<Description>TXT_KEY_BUILDING_11_DIMENSIONAL_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_11_DIMENSIONAL_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_11_DIMENSIONAL_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_11_DIMENSIONAL_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -154,7 +148,6 @@
 			<Type>BUILDING_TOROIDAL_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_TOROIDAL_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOROIDAL_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOROIDAL_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TOROIDAL_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -177,7 +170,6 @@
 			<Type>BUILDING_REAL_PROJECTIVE_SPACE_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_REAL_PROJECTIVE_SPACE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_REAL_PROJECTIVE_SPACE_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_REAL_PROJECTIVE_SPACE_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REAL_PROJECTIVE_SPACE_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -202,7 +194,6 @@
 			<Type>BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -224,7 +215,6 @@
 			<Type>BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -252,7 +242,6 @@
 			<Type>BUILDING_HYPERSPACE_IMPORTER</Type>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_IMPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_IMPORTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERSPACE_IMPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_IMPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -272,7 +261,6 @@
 			<Type>BUILDING_HYPERSPACE_COMMERCIAL_CENTER</Type>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_COMMERCIAL_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_COMMERCIAL_CENTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERSPACE_COMMERCIAL_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_COMMERCIAL_CENTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -300,7 +288,6 @@
 			<Type>BUILDING_HYPERSPACE_EXPORTER</Type>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_EXPORTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERSPACE_EXPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_EXPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -329,7 +316,6 @@
 			<Type>BUILDING_HYPERSPACE_TOURISM_AGENCY</Type>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_TOURISM_AGENCY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_TOURISM_AGENCY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERSPACE_TOURISM_AGENCY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_TOURISM_AGENCY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -350,7 +336,6 @@
 			<Type>BUILDING_5D_ARTIFICIAL_GRAVITY</Type>
 			<Description>TXT_KEY_BUILDING_5D_ARTIFICIAL_GRAVITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_5D_ARTIFICIAL_GRAVITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_5D_ARTIFICIAL_GRAVITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_5D_ARTIFICIAL_GRAVITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -375,7 +360,6 @@
 			<Type>BUILDING_HYPERSPACE_WAREHOUSE</Type>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_WAREHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_WAREHOUSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERSPACE_WAREHOUSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_WAREHOUSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -398,7 +382,6 @@
 			<Type>BUILDING_HYPERSPACE_POWER_PLANT</Type>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_POWER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_POWER_PLANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERSPACE_POWER_PLANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_POWER_PLANT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -421,7 +404,6 @@
 			<Type>BUILDING_RESOURCE_RIFT</Type>
 			<Description>TXT_KEY_BUILDING_RESOURCE_RIFT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_RIFT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RESOURCE_RIFT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RESOURCE_RIFT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -443,7 +425,6 @@
 			<Type>BUILDING_HYPERFACTORY</Type>
 			<Description>TXT_KEY_BUILDING_HYPERFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERFACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERFACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERFACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -489,7 +470,6 @@
 			<Type>BUILDING_TESSERACT_ASSEMBLER</Type>
 			<Description>TXT_KEY_BUILDING_TESSERACT_ASSEMBLER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TESSERACT_ASSEMBLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TESSERACT_ASSEMBLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TESSERACT_ASSEMBLER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -516,7 +496,6 @@
 			<Type>BUILDING_PERSONAL_HYPERCRAFT_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_PERSONAL_HYPERCRAFT_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PERSONAL_HYPERCRAFT_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PERSONAL_HYPERCRAFT_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PERSONAL_HYPERCRAFT_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -541,7 +520,6 @@
 			<Type>BUILDING_11_DIMENSIONAL_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_11_DIMENSIONAL_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_11_DIMENSIONAL_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_11_DIMENSIONAL_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_11_DIMENSIONAL_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -566,7 +544,6 @@
 			<Type>BUILDING_FORMAL_CONSTRUCTION_CENTER</Type>
 			<Description>TXT_KEY_BUILDING_FORMAL_CONSTRUCTION_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FORMAL_CONSTRUCTION_CENTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FORMAL_CONSTRUCTION_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FORMAL_CONSTRUCTION_CENTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -592,7 +569,6 @@
 			<Type>BUILDING_HYPERPLANET</Type>
 			<Description>TXT_KEY_BUILDING_HYPERPLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERPLANET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERPLANET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERPLANET</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -633,7 +609,6 @@
 			<Type>BUILDING_NON_CAUSAL_ENGINEERING_FIRM</Type>
 			<Description>TXT_KEY_BUILDING_NON_CAUSAL_ENGINEERING_FIRM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NON_CAUSAL_ENGINEERING_FIRM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NON_CAUSAL_ENGINEERING_FIRM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NON_CAUSAL_ENGINEERING_FIRM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -660,7 +635,6 @@
 			<Type>BUILDING_INFLATON_FIELD</Type>
 			<Description>TXT_KEY_BUILDING_INFLATON_FIELD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INFLATON_FIELD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_INFLATON_FIELD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INFLATON_FIELD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -690,7 +664,6 @@
 			<Type>BUILDING_OPEN_FRW_UNIVERSE</Type>
 			<Description>TXT_KEY_BUILDING_OPEN_FRW_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OPEN_FRW_UNIVERSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_OPEN_FRW_UNIVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OPEN_FRW_UNIVERSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -726,7 +699,6 @@
 			<Type>BUILDING_SIMULATED_UNIVERSE</Type>
 			<Description>TXT_KEY_BUILDING_SIMULATED_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SIMULATED_UNIVERSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SIMULATED_UNIVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SIMULATED_UNIVERSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -796,7 +768,6 @@
 			<Type>BUILDING_POINCARE_DODECAHEDRAL_SPACE</Type>
 			<Description>TXT_KEY_BUILDING_POINCARE_DODECAHEDRAL_SPACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_POINCARE_DODECAHEDRAL_SPACE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_POINCARE_DODECAHEDRAL_SPACE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POINCARE_DODECAHEDRAL_SPACE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -817,7 +788,6 @@
 			<Type>BUILDING_PICARD_HORN</Type>
 			<Description>TXT_KEY_BUILDING_PICARD_HORN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PICARD_HORN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PICARD_HORN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PICARD_HORN</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -839,7 +809,6 @@
 			<Type>BUILDING_EKPYROTIC_UNIVERSE</Type>
 			<Description>TXT_KEY_BUILDING_EKPYROTIC_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EKPYROTIC_UNIVERSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EKPYROTIC_UNIVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EKPYROTIC_UNIVERSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -863,7 +832,6 @@
 			<Type>BUILDING_TRANSFINITE_STRUCTURES</Type>
 			<Description>TXT_KEY_BUILDING_TRANSFINITE_STRUCTURES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSFINITE_STRUCTURES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TRANSFINITE_STRUCTURES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRANSFINITE_STRUCTURES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -885,7 +853,6 @@
 			<Type>BUILDING_LANDSCAPE_MULTIVERSE</Type>
 			<Description>TXT_KEY_BUILDING_LANDSCAPE_MULTIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDSCAPE_MULTIVERSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LANDSCAPE_MULTIVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LANDSCAPE_MULTIVERSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -909,7 +876,6 @@
 			<Type>BUILDING_YOTTAVERSE</Type>
 			<Description>TXT_KEY_BUILDING_YOTTAVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_YOTTAVERSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_YOTTAVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_YOTTAVERSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -939,7 +905,6 @@
 			<Type>BUILDING_HYPERSPACE_CONSTRUCTION_CENTER</Type>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_CONSTRUCTION_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_CONSTRUCTION_CENTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERSPACE_CONSTRUCTION_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_CONSTRUCTION_CENTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -964,7 +929,6 @@
 			<Type>BUILDING_QUANTUM_GRAPH_MANIFESTATION</Type>
 			<Description>TXT_KEY_BUILDING_QUANTUM_GRAPH_MANIFESTATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_QUANTUM_GRAPH_MANIFESTATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_QUANTUM_GRAPH_MANIFESTATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QUANTUM_GRAPH_MANIFESTATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -987,7 +951,6 @@
 			<Type>BUILDING_HYPERSPACE_MEDIA_CENTER</Type>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_MEDIA_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_MEDIA_CENTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERSPACE_MEDIA_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_MEDIA_CENTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1006,7 +969,6 @@
 			<Type>BUILDING_HYPERSPACE_RESEARCH_PROBE</Type>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_RESEARCH_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_RESEARCH_PROBE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERSPACE_RESEARCH_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_RESEARCH_PROBE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1027,7 +989,6 @@
 			<Type>BUILDING_GENESIS_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_GENESIS_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GENESIS_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GENESIS_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GENESIS_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1053,7 +1014,6 @@
 			<Type>BUILDING_SIMULATED_CIVILIZATION</Type>
 			<Description>TXT_KEY_BUILDING_SIMULATED_CIVILIZATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SIMULATED_CIVILIZATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SIMULATED_CIVILIZATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SIMULATED_CIVILIZATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1076,7 +1036,6 @@
 			<Type>BUILDING_HYPERSPACE_GOVERNING_COUNCIL</Type>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_GOVERNING_COUNCIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_GOVERNING_COUNCIL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERSPACE_GOVERNING_COUNCIL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_GOVERNING_COUNCIL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1102,7 +1061,6 @@
 			<Type>BUILDING_ALTERNATE_HISTORY</Type>
 			<Description>TXT_KEY_BUILDING_ALTERNATE_HISTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALTERNATE_HISTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ALTERNATE_HISTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ALTERNATE_HISTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1127,7 +1085,6 @@
 			<Type>BUILDING_ANCESTOR_RESURRECTION</Type>
 			<Description>TXT_KEY_BUILDING_ANCESTOR_RESURRECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANCESTOR_RESURRECTION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANCESTOR_RESURRECTION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCESTOR_RESURRECTION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1153,7 +1110,6 @@
 			<Type>BUILDING_GAME_OF_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_GAME_OF_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GAME_OF_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GAME_OF_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_OF_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1176,7 +1132,6 @@
 			<Type>BUILDING_NEW_BIG_BANG</Type>
 			<Description>TXT_KEY_BUILDING_NEW_BIG_BANG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEW_BIG_BANG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NEW_BIG_BANG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEW_BIG_BANG</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1206,7 +1161,6 @@
 			<Type>BUILDING_TRANSFINITE_SUPERCOMPUTER</Type>
 			<Description>TXT_KEY_BUILDING_TRANSFINITE_SUPERCOMPUTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSFINITE_SUPERCOMPUTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TRANSFINITE_SUPERCOMPUTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRANSFINITE_SUPERCOMPUTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1235,7 +1189,6 @@
 			<Type>BUILDING_CONSCIOUS_UNIVERSE</Type>
 			<Description>TXT_KEY_BUILDING_CONSCIOUS_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONSCIOUS_UNIVERSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CONSCIOUS_UNIVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CONSCIOUS_UNIVERSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1258,7 +1211,6 @@
 			<Type>BUILDING_HYPERCOMPUTRONIUM_STRUCTURES</Type>
 			<Description>TXT_KEY_BUILDING_HYPERCOMPUTRONIUM_STRUCTURES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERCOMPUTRONIUM_STRUCTURES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERCOMPUTRONIUM_STRUCTURES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERCOMPUTRONIUM_STRUCTURES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1281,7 +1233,6 @@
 			<Type>BUILDING_METAVERSE_EDUCATION</Type>
 			<Description>TXT_KEY_BUILDING_METAVERSE_EDUCATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAVERSE_EDUCATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_METAVERSE_EDUCATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METAVERSE_EDUCATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1318,7 +1269,6 @@
 			<Type>BUILDING_METAVERSE_ENTERTAINMENT</Type>
 			<Description>TXT_KEY_BUILDING_METAVERSE_ENTERTAINMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAVERSE_ENTERTAINMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_METAVERSE_ENTERTAINMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METAVERSE_ENTERTAINMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1348,7 +1298,6 @@
 			<Type>BUILDING_METAVERSE_VR_CENTER</Type>
 			<Description>TXT_KEY_BUILDING_METAVERSE_VR_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAVERSE_VR_CENTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_METAVERSE_VR_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METAVERSE_VR_CENTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1383,7 +1332,6 @@
 			<Type>BUILDING_ENERGY_CANNON</Type>
 			<Description>TXT_KEY_BUILDING_ENERGY_CANNON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENERGY_CANNON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ENERGY_CANNON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENERGY_CANNON</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1406,7 +1354,6 @@
 			<Type>BUILDING_TIME_TRAP</Type>
 			<Description>TXT_KEY_BUILDING_TIME_TRAP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIME_TRAP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TIME_TRAP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TIME_TRAP</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1430,7 +1377,6 @@
 			<Type>BUILDING_SEP_FIELD</Type>
 			<Description>TXT_KEY_BUILDING_SEP_FIELD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SEP_FIELD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SEP_FIELD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEP_FIELD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1448,7 +1394,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HYPERURANION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERURANION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYPERURANION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERURANION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HYPERURANION</MovieDefineTag>
@@ -1481,7 +1426,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_FAIRYLAND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FAIRYLAND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FAIRYLAND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FAIRYLAND</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FAIRYLAND</MovieDefineTag>
@@ -1514,7 +1458,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_COSMIC_AC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMIC_AC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COSMIC_AC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_AC</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COSMIC_AC</MovieDefineTag>
@@ -1572,7 +1515,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_UNIVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSE</MovieDefineTag>

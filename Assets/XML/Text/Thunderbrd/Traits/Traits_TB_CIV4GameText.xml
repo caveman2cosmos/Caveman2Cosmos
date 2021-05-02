@@ -5693,7 +5693,7 @@ Vorteile:
 	[ICON_BULLET]eine Handelsroute mehr pro Stadt (Die Händler sind in der Lage, potenzielle Rivalen zu beschwichtigen.)
 	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Es kann nur am Minimum trainiert werden, da alles andere zu Panik wegen vermeintlicher bevorstehender Konflikte führen würde.)
 	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Die eigenen Truppen lassen aus Angst vor Racheaktionen eher Gnade walten.)
-	</German>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY3</Tag>
@@ -5747,7 +5747,7 @@ Vorteile:
 	[ICON_BULLET]eine Handelsroute mehr pro Stadt (Die Händler sind in der Lage, potenzielle Rivalen zu beschwichtigen.)
 	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Es kann nur am Minimum trainiert werden, da alles andere zu Panik wegen vermeintlicher bevorstehender Konflikte führen würde.)
 	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Die eigenen Truppen lassen aus Angst vor Racheaktionen eher Gnade walten.)
-	</German>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY_PEDIA</Tag>

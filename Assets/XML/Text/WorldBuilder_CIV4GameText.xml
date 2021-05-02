@@ -389,11 +389,6 @@
 		<Russian>Ïåðåõâàò ÿäåðí. çàðÿäîâ: %d1</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_WB_OWNER</Tag>
-		<English>Owner</English>
-		<Russian>Владелец</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_WB_PLAYER_DATA</Tag>
 		<English>Player Data</English>
 		<Russian>Данные игрока</Russian>

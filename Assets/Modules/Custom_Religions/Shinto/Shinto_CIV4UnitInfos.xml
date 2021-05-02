@@ -27,7 +27,6 @@
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SHINTO_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHINTO_MISSIONARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SHINTO_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
