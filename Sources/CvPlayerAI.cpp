@@ -25279,28 +25279,20 @@ bool CvPlayerAI::AI_advancedStartPlaceExploreUnits(bool bLand)
 				int iOtherPlotCount = 0;
 				int iGoodyCount = 0;
 				int iExplorerCount = 0;
-				int iAreaId = pLoopArea->getID();
+				const int iAreaId = pLoopArea->getID();
 
-				int iRange = 4;
-				for (int iX = -iRange; iX <= iRange; iX++)
+				foreach_(const CvPlot* pLoopPlot2, pLoopPlot->rect(4, 4))
 				{
-					for (int iY = -iRange; iY <= iRange; iY++)
+					iExplorerCount += pLoopPlot2->plotCount(PUF_isUnitAIType, eUnitAI, -1, NULL, NO_PLAYER, getTeam());
+					if (pLoopPlot2->getArea() == iAreaId)
 					{
-						CvPlot* pLoopPlot2 = plotXY(pLoopPlot->getX(), pLoopPlot->getY(), iX, iY);
-						if (NULL != pLoopPlot2)
+						if (pLoopPlot2->isGoody())
 						{
-							iExplorerCount += pLoopPlot2->plotCount(PUF_isUnitAIType, eUnitAI, -1, NULL, NO_PLAYER, getTeam());
-							if (pLoopPlot2->getArea() == iAreaId)
-							{
-								if (pLoopPlot2->isGoody())
-								{
-									iGoodyCount++;
-								}
-								if (pLoopPlot2->getTeam() != getTeam())
-								{
-									iOtherPlotCount++;
-								}
-							}
+							iGoodyCount++;
+						}
+						if (pLoopPlot2->getTeam() != getTeam())
+						{
+							iOtherPlotCount++;
 						}
 					}
 				}
@@ -25519,47 +25511,39 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 				{
 					if (GC.getImprovementInfo(pLoopPlot->getImprovementType()).isImprovementBonusTrade(eBonus))
 					{
-						int iBonusValue = AI_bonusVal(eBonus, 1);
+						const int iBonusValue = AI_bonusVal(eBonus, 1);
 						if (iBonusValue > 9)
 						{
 							int iBestValue = 0;
-							CvPlot* pBestPlot = NULL;
-							int iRange = 2;
-							for (int iX = -iRange; iX <= iRange; iX++)
+							const CvPlot* pBestPlot = NULL;
+							foreach_(const CvPlot* pLoopPlot2, pLoopPlot->rect(2, 2))
 							{
-								for (int iY = -iRange; iY <= iRange; iY++)
+								if (pLoopPlot2->getOwner() == getID())
 								{
-									CvPlot* pLoopPlot2 = plotXY(pLoopPlot->getX(), pLoopPlot->getY(), iX, iY);
-									if (pLoopPlot2 != NULL)
+									if (pLoopPlot2->isConnectedToCapital() || pLoopPlot2->isCity())
 									{
-										if (pLoopPlot2->getOwner() == getID())
+										int iValue = 1000;
+										if (pLoopPlot2->isCity())
 										{
-											if ((pLoopPlot2->isConnectedToCapital()) || pLoopPlot2->isCity())
+											iValue += 100;
+											if (pLoopPlot2->getPlotCity()->isCapital())
 											{
-												int iValue = 1000;
-												if (pLoopPlot2->isCity())
-												{
-													iValue += 100;
-													if (pLoopPlot2->getPlotCity()->isCapital())
-													{
-														iValue += 100;
-													}
-												}
-												if (pLoopPlot2->isRoute())
-												{
-													iValue += 100;
-												}
-												int iDistance = GC.getMap().calculatePathDistance(pLoopPlot, pLoopPlot2);
-												if (iDistance > 0)
-												{
-													iValue /= (1 + iDistance);
+												iValue += 100;
+											}
+										}
+										if (pLoopPlot2->isRoute())
+										{
+											iValue += 100;
+										}
+										const int iDistance = GC.getMap().calculatePathDistance(pLoopPlot, pLoopPlot2);
+										if (iDistance > 0)
+										{
+											iValue /= (1 + iDistance);
 
-													if (iValue > iBestValue)
-													{
-														iBestValue = iValue;
-														pBestPlot = pLoopPlot2;
-													}
-												}
+											if (iValue > iBestValue)
+											{
+												iBestValue = iValue;
+												pBestPlot = pLoopPlot2;
 											}
 										}
 									}
@@ -25578,7 +25562,7 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 				if (pLoopPlot->getRouteType() == NO_ROUTE)
 				{
 					int iRouteYieldValue = 0;
-					RouteTypes eRoute = (AI_bestAdvancedStartRoute(pLoopPlot, &iRouteYieldValue));
+					const RouteTypes eRoute = AI_bestAdvancedStartRoute(pLoopPlot, &iRouteYieldValue);
 					if (eRoute != NO_ROUTE && iRouteYieldValue > 0)
 					{
 						doAdvancedStartAction(ADVANCEDSTARTACTION_ROUTE, pLoopPlot->getX(), pLoopPlot->getY(), eRoute, true);

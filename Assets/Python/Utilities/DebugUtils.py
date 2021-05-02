@@ -197,7 +197,7 @@ def applyWonderMovie(iPlayer, userData, popupReturn):
 
 
 # Event 1002
-def initTechsCheat(argsList):
+def initTechsCheat():
 	popup = PyPopup.PyPopup(1002, EventContextTypes.EVENTCONTEXT_ALL)
 	popup.setHeaderString("Tech & Gold Cheat!")
 	popup.createPullDown()

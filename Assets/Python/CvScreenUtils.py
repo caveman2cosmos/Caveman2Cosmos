@@ -9,9 +9,8 @@
 ##        2) Create a class derived from CvScreenUtils in that file ' class <Mod>ScreenUtils(CvScreenUtils): '
 ##        3) Copy into Python\EntryPoints\ a copy of CvScreenUtilsInterface
 ##        4) Change normalScreenUtils to use your mod ScreenUtils ' normalScreenUtils = <Mod>ScreenUtils.<Mod>ScreenUtils '
-"""
-import ScreenInput as PyScreenInput
 
+"""
 class CvScreenUtils:
     # Place any screens that you would like to handle input in HandleInputMap
     # You can also overwrite control from the default interface by returning 1 from any function

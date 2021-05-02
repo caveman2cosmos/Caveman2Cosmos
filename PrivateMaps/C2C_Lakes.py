@@ -9,10 +9,8 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
-import sys
-from CvMapGeneratorUtil import FractalWorld
+#from CvMapGeneratorUtil import FractalWorld
 from CvMapGeneratorUtil import TerrainGenerator
 from CvMapGeneratorUtil import FeatureGenerator
 #from CvMapGeneratorUtil import BonusBalancer

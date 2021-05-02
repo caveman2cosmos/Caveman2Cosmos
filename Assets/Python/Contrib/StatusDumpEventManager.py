@@ -1,10 +1,8 @@
 ## Ruff StatusDump
 
 from CvPythonExtensions import *
-import autolog
 import time
 import BugCore
-import string
 import BugFile
 
 GC = CyGlobalContext()
