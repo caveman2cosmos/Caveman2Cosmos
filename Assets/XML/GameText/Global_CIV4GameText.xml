@@ -16352,22 +16352,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Ayuda del teclado num&#233;rico</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_MOVEMENT_RANGE</Tag>
-		<English>Show Movement Range</English>
-		<French>Afficher distance de mouvement</French>
-		<German>Fortbewegungsradius einblenden</German>
-		<Italian>Mostra il raggio di movimento</Italian>
-		<Spanish>Mostrar alcance del movimiento</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_FROZEN_UNITS</Tag>
-		<English>Unit Animations Frozen</English>
-		<French>Unit&#233;s non-anim&#233;es</French>
-		<German>Einheitenanimationen gestoppt</German>
-		<Italian>Blocca le animazioni delle unit&#224;</Italian>
-		<Spanish>Animaciones de unidades est&#225;ticas</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NO_UNIT_CYCLING</Tag>
 		<English>No Unit Cycling</English>
 		<French>Impossible de faire d&#233;filer les unit&#233;s</French>
@@ -16414,22 +16398,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Kein Kamerazoom im Kampf</German>
 		<Italian>Disattiva lo zoom della visuale durante i combattimenti</Italian>
 		<Spanish>La c&#225;mara no se acerca durante el combate.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_MOVEMENT_RANGE_HELP</Tag>
-		<English>Show movement range for the active unit</English>
-		<French>Voir le rayon d'action de l'unit&#233; active.</French>
-		<German>Fortbewegungsradius f&#252;r aktive Einheit einblenden</German>
-		<Italian>Mostra il raggio di movimento dell'unit&#224; attiva</Italian>
-		<Spanish>Muestra el alcance del movimiento de la unidad activa.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLAYER_OPTION_FROZEN_UNITS_HELP</Tag>
-		<English>No unit animations</English>
-		<French>Pas d'animations pour les unit&#233;s.</French>
-		<German>Keine animierten Einheiten</German>
-		<Italian>Disattiva le animazioni delle unit&#224;</Italian>
-		<Spanish>Sin animaciones de las unidades.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_ADVISOR_POPUPS_HELP</Tag>
@@ -16624,14 +16592,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Juego</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_INPUT</Tag>
-		<English>Input</English>
-		<French>Commandes</French>
-		<German>Eingabe</German>
-		<Italian>Comandi</Italian>
-		<Spanish>Entrada</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_GRAPHICS</Tag>
 		<English>Graphics</English>
 		<French>Graphismes</French>
@@ -16672,14 +16632,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Borrar perfil</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_DEFAULT_PROFILE</Tag>
-		<English>Default Profile</English>
-		<French>Profil par d&#233;faut</French>
-		<German>Standardprofil</German>
-		<Italian>Profilo predefinito</Italian>
-		<Spanish>Perfil predeterminado</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_LOADED_PROFILE</Tag>
 		<English>%s1_Profile Loaded!</English>
 		<French>Profil %s1_Profile charg&#233; !</French>
@@ -16712,36 +16664,12 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Fallo al cargar. Puede que la versi&#243;n del perfil no se corresponda con el sistema actual.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_NO_CONTENT</Tag>
-		<English>No Content</English>
-		<French>Aucun contenu</French>
-		<German>Kein Inhalt</German>
-		<Italian>Nessun contenuto</Italian>
-		<Spanish>Sin contenido</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SINGLE_UNIT</Tag>
 		<English>Single Unit Graphics</English>
 		<French>Graphismes unit&#233; seule</French>
 		<German>Grafik als einzelne Einheit</German>
 		<Italian>Grafica unit&#224; singola</Italian>
 		<Spanish>Gr&#225;ficos de unidad individual</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_PERFORMANCE</Tag>
-		<English>Performance</English>
-		<French>Performances</French>
-		<German>Performance</German>
-		<Italian>Prestazioni</Italian>
-		<Spanish>Rendimiento</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_QUALITY</Tag>
-		<English>Quality</English>
-		<French>Qualit&#233;</French>
-		<German>Qualit&#228;t</German>
-		<Italian>Qualit&#224;</Italian>
-		<Spanish>Calidad</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SCREEN_RES</Tag>
@@ -16808,14 +16736,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Volumen de la interfaz</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_SOFT_LOUD</Tag>
-		<English>Soft        Loud</English>
-		<French>Faible      Fort</French>
-		<German>Leise        Laut</German>
-		<Italian>Basso        Alto</Italian>
-		<Spanish>Bajo        Alto</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_NO_SOUND</Tag>
 		<English>No Sound</English>
 		<French>Muet</French>
@@ -16880,14 +16800,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Alarma activada</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_ALARMHOURS</Tag>
-		<English>Alarm Hours</English>
-		<French>Heures du r&#233;veil</French>
-		<German>Alarm Stunden</German>
-		<Italian>Allarme ore</Italian>
-		<Spanish>Horas de alarma</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_HOURS</Tag>
 		<English>Alarm Hours:</English>
 		<French>Heures :</French>
@@ -16902,46 +16814,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Minuten:</German>
 		<Italian>Minuti:</Italian>
 		<Spanish>Minutos</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_ALARMMINUTES</Tag>
-		<English>Alarm Minutes</English>
-		<French>Minutes r&#233;veil</French>
-		<German>Alarm Minuten</German>
-		<Italian>Allarme minuti</Italian>
-		<Spanish>Minutos de alarma</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_GIVE_FILENAME</Tag>
-		<English>Please provide a valid filename</English>
-		<French>Saisissez un nom de fichier valide</French>
-		<German>Bitte g&#252;ltigen Dateinamen eingeben</German>
-		<Italian>Fornisci un nome di file valido</Italian>
-		<Spanish>Introduce un nombre de archivo v&#225;lido</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_WARNING1</Tag>
-		<English>This option is disabled for now due to incompatibility with the interface system; it can be set in the .ini</English>
-		<French>Cette option est d&#233;sactiv&#233;e pour cause d'incompatibilit&#233; avec l'interface syst&#232;me. Le probl&#232;me peut &#234;tre corrig&#233; dans le fichier .ini</French>
-		<German>Diese Option ist wegen Inkompatibilit&#228;t mit dem Interface-System vorl&#228;ufig deaktiviert. Sie kann in der .ini eingestellt werden</German>
-		<Italian>Questa opzione &#232; disabilitata per il momento, a causa dell'incompatibilit&#224; con l'interfaccia; pu&#242; essere impostata nel file .ini</Italian>
-		<Spanish>Esta opci&#243;n est&#225; desactivada de momento debido a una incompatibilidad con el sistema de la interfaz. Puede configurarse en el archivo .ini</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_WARNING2</Tag>
-		<English>Warning: Resolutions other than 1024x768 are incompatible with the interface system</English>
-		<French>Attention : les r&#233;solutions autres que 1024x768 sont incompatibles avec l'interface syst&#232;me</French>
-		<German>Hinweis: Andere Aufl&#246;sungen als 1024x768 sind nicht mit dem Interface-System kompatibel</German>
-		<Italian>Attenzione: le risoluzioni superiori a 1024x768 sono incompatibili con l'interfaccia</Italian>
-		<Spanish>Aviso: las resoluciones que no sean la de 1024 x 768 son incompatibles con el sistema de la interfaz.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_WARNING3</Tag>
-		<English>Delete the active profile in the Civ4/Profiles/ folder to return to 1024x768</English>
-		<French>Supprimez le profil actif dans le r&#233;pertoire Civ4/Profiles/ pour repasser en 1024x768</French>
-		<German>Aktives Profil im Verzeichnis Civ4/Profiles/ l&#246;schen, um zur Aufl&#246;sung 1024x768 zur&#252;ckzukehren</German>
-		<Italian>Elimina il profilo attivo nella directory Civ4/Profiles/ per ritornare a 1024x768</Italian>
-		<Spanish>Borra el perfil activo en la carpeta Civ4/Profiles para restablecer la resoluci&#243;n de 1024 x 768</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_NEED_TO_RESTART</Tag>
@@ -17000,36 +16872,12 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Nivel de calidad del renderizado</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_SCREEN_SET_CLOCK</Tag>
-		<English>Set Clock</English>
-		<French>R&#233;gler horloge</French>
-		<German>Uhr einstellen</German>
-		<Italian>Imposta orologio</Italian>
-		<Spanish>Poner en hora</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_SCREEN_RESET_CLOCK</Tag>
-		<English>Reset Clock</English>
-		<French>R&#233;initialiser horloge</French>
-		<German>Uhr zur&#252;cksetzen</German>
-		<Italian>Azzera orologio</Italian>
-		<Spanish>Poner a cero</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SCREEN_OTHER</Tag>
 		<English>Other</English>
 		<French>Autre</French>
 		<German>Sonstige</German>
 		<Italian>Altro</Italian>
 		<Spanish>Otros</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OPTIONS_SCREEN_TEXTURE_QUALITY_LEVEL</Tag>
-		<English>Texture Quality Level</English>
-		<French>Qualit&#233; des textures</French>
-		<German>Texturqualit&#228;tsstufe</German>
-		<Italian>Livello qualit&#224; texture</Italian>
-		<Spanish>Nivel de calidad de las texturas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_EFFECTS_DISABLED</Tag>
@@ -17505,14 +17353,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Pingen Sie ein Gel&#228;ndefeld an, um Ihre Mitstreiter darauf aufmerksam zu machen.</German>
 		<Italian>Segnala un punto per richiamare l'attenzione dei tuoi compagni di squadra.</Italian>
 		<Spanish>Hac&#233;is que destaque una casilla para llamar la atenci&#243;n sobre ella a vuestros compa&#241;eros de equipo.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ACTION_PREVIOUS_UNIT</Tag>
-		<English>Previous Unit</English>
-		<French>Unit&#233; pr&#233;c&#233;dente</French>
-		<German>Vorherige Einheit</German>
-		<Italian>Unit&#224; precedente</Italian>
-		<Spanish>Unidad anterior</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_PREVIOUS_CITY</Tag>
@@ -18243,28 +18083,12 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Forzar velocidad de juego</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FORCE_CONTROL_SPEED_DESC</Tag>
-		<English>Disable the control for changing game speed</English>
-		<French>D&#233;sactiver la commande de changement de vitesse du jeu</French>
-		<German>&#196;nderung der Spielgeschwindigkeit deaktivieren</German>
-		<Italian>Disabilita i comandi per cambiare la velocit&#224; di gioco</Italian>
-		<Spanish>Para desactivar el control que permite cambiar la velocidad de juego.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FORCE_CONTROL_HANDICAP</Tag>
 		<English>Force Handicap</English>
 		<French>Forcer handicap</French>
 		<German>Handicap erzwingen</German>
 		<Italian>Forza handicap</Italian>
 		<Spanish>Forzar h&#225;ndicap</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FORCE_CONTROL_HANDICAP_DESC</Tag>
-		<English>Disable the control for changing player handicap</English>
-		<French>D&#233;sactiver la commande de changement de handicap du joueur</French>
-		<German>&#196;nderung des Spieler-Handicaps deaktivieren</German>
-		<Italian>Disabilita i comandi per cambiare l'handicap del giocatore</Italian>
-		<Spanish>Para desactivar el control que permite cambiar el h&#225;ndicap del jugador.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FORCE_CONTROL_OPTIONS</Tag>
@@ -18275,14 +18099,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Forzar opciones de partida</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FORCE_CONTROL_OPTIONS_DESC</Tag>
-		<English>Disable the controls for selecting specific game options</English>
-		<French>D&#233;sactiver la commande pour sp&#233;cifier les options du jeu</French>
-		<German>&#196;nderung bestimmter Spieloptionen deaktivieren</German>
-		<Italian>Disabilita i comandi per la selezione di opzioni di gioco specifiche</Italian>
-		<Spanish>Para desactivar los controles que permiten seleccionar opciones de partida concretas.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FORCE_CONTROL_VICTORIES</Tag>
 		<English>Force Victories</English>
 		<French>Forcer victoires</French>
@@ -18291,28 +18107,12 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Forzar victorias</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FORCE_CONTROL_VICTORIES_DESC</Tag>
-		<English>Disable the controls for selecting specific victory conditions</English>
-		<French>D&#233;sactiver les commandes de choix de conditions de victoire sp&#233;cifiques</French>
-		<German>&#196;nderung bestimmter Siegbedingungen deaktivieren</German>
-		<Italian>Disabilita i comandi per la selezione di specifiche condizioni di vittoria</Italian>
-		<Spanish>Para desactivar los controles que permiten seleccionar condiciones de victoria concretas.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FORCE_CONTROL_MAX_TURNS</Tag>
 		<English>Force Max Turns</English>
 		<French>Forcer tours maxi</French>
 		<German>Max. Runden erzwingen</German>
 		<Italian>Forza il numero massimo di turni</Italian>
 		<Spanish>Forzar l&#237;mite de turnos</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FORCE_CONTROL_MAX_TURNS_DESC</Tag>
-		<English>Disable the controls for setting maximum number of turns</English>
-		<French>D&#233;sactiver les commandes de d&#233;finition du nombre maximum de tours</French>
-		<German>&#196;nderung der maximalen Rundenzahl deaktivieren</German>
-		<Italian>Disabilita i comandi delle impostazioni per il numero massimo di turni</Italian>
-		<Spanish>Para desactivar los controles que permiten determinar un n&#250;mero m&#225;ximo de turnos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FORCE_CONTROL_MAX_CITY_ELIMINATION</Tag>
@@ -18427,14 +18227,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Solo unos cuantos pueden contarse entre las filas de los inmortales.  Esto resulta una prueba demoledora para todos, excepto para los m&#225;s experimentados.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HANDICAP_DIETY_HELP</Tag>
-		<English>The ultimate test for only the best Civ players. Can it be beat?</English>
-		<French>L'ultime &#233;preuve, r&#233;serv&#233;e aux meilleurs joueurs. Serez-vous &#224; la hauteur ?</French>
-		<German>Diese ultimative Pr&#252;fung bestehen nur die besten Civ-Spieler aller Zeiten. Geh&#246;ren auch Sie dazu?</German>
-		<Italian>La prova definitiva per i migliori giocatori di Civilization. Ce la farai?</Italian>
-		<Spanish>La prueba definitiva, solo para los mejores jugadores del Civi. &#191;Podr&#225; superarla alguien?</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_HURRY_POPULATION</Tag>
 		<English>Can Sacrifice Population to Finish Production in a City</English>
 		<French>Peut sacrifier de la population pour achever la production dans une ville</French>
@@ -18513,14 +18305,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Eingabemodus Weltkarte</German>
 		<Italian>Modalit&#224; 'Comandi globali'</Italian>
 		<Spanish>Modo Datos globales</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INTERFACEMODE_DRAG</Tag>
-		<English>Drag Mode</English>
-		<French>Rotation</French>
-		<German>Ziehmodus</German>
-		<Italian>Modalit&#224; 'Trascina'</Italian>
-		<Spanish>Modo Arrastrar</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO</Tag>
@@ -23582,14 +23366,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Treibt Handel</German>
 		<Italian>Commercer&#224;</Italian>
 		<Spanish>Intercambia</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FOREIGN_ADVISOR_NOT_FOR_TRADE_2</Tag>
-		<English>Won't Trade</English>
-		<French>N'&#233;changera pas</French>
-		<German>Treibt keinen Handel</German>
-		<Italian>Non commercer&#224;</Italian>
-		<Spanish>No intercambia</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOREIGN_ADVISOR_GLANCE</Tag>

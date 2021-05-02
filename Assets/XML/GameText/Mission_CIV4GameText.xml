@@ -876,14 +876,6 @@
 		<Spanish>Construir mejora</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_PATROL_TO_HELP</Tag>
-		<English>Set your unit to patrol (repeats a goto path indefinitely)</English>
-		<French>Ordonner &#224; l'unit&#233; de patrouiller entre sa position et le point indiqu&#233; (l'unit&#233; ob&#233;it &#224; deux ordres Aller &#224; ind&#233;finiment).</French>
-		<German>Versetzen Sie die Einheit in den Patrouillenmodus.</German>
-		<Italian>Ordina all'unit&#224; di pattugliare la zona (ripetendo lo stesso percorso a tempo indeterminato).</Italian>
-		<Spanish>Para poner la unidad a patrullar (recorrer indefinidamente un camino)</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_MOVE_TO_HELP</Tag>
 		<English>Set your unit to move to a specific plot</English>
 		<French>Ordonner &#224; l'unit&#233; de rejoindre une position sur la carte.</French>
@@ -1058,22 +1050,6 @@
 		<German>Der [COLOR_UNIT_TEXT]Vorstand[COLOR_REVERT] wird geopfert, damit die Kapitalgesellschaft in die Stadt expandieren kann.</German>
 		<Italian>Con questo ordine, si sacrifica un [COLOR_UNIT_TEXT]Funzionario[COLOR_REVERT], ma la corporazione si espande nella citt&#224;.</Italian>
 		<Spanish>Esta orden consumir&#225; a la unidad de [COLOR_UNIT_TEXT]Ejecutivo[COLOR_REVERT] pero expandir&#225; su corporaci&#243;n en la ciudad.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_TRADE_NET_TO</Tag>
-		<English>Trade Route To</English>
-		<French>>Route commerciale vers</French>
-		<German>Handelsweg nach</German>
-		<Italian>Itinerario commerciale</Italian>
-		<Spanish>Ruta comercial a</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_TRADE_NET_TO_HELP</Tag>
-		<English>This order causes the workboat to build a sea trade route to the location selected. The workboat will follow the shortest path to the location. The workboat wakes when it has completed the assignment.</English>
-		<French>Ordonner au Bateau-atelier de construire une route commerciale jusqu'&#224; l'endroit s&#233;lectionn&#233;. Le bateau-atelier suivra le chemin le plus court et sera de nouveau disponible lorsqu'il aura termin&#233; sa mission</French>
-		<German>Das Arbeitsboot beginnt, einen Seehandelsweg zur ausgew&#228;hlten Stelle zu errichten. Das Arbeitsboot w&#228;hlt den k&#252;rzesten Weg, um zu dieser Stelle zu gelangen. Wenn es die Aufgabe erf&#252;llt hat, ist das Arbeitsboot erneut einsatzbereit.</German>
-		<Italian>Con questo ordine, si obbliga una barca da lavoro a creare una rotta commerciale marina verso il luogo prescelto. La barca da lavoro far&#224; il percorso pi&#249; breve per raggiungere il punto e rimarr&#224; in attesa di ordini quando avr&#224; completato il proprio incarico.</Italian>
-		<Spanish>Con esta orden hac&#233;is que un barco faenero construya una ruta comercial mar&#237;tima al lugar seleccionado. El barco faenero seguir&#225; el camino m&#225;s corto hasta dicho lugar. Se despertar&#225; cuando haya cumplido su cometido.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SEAPATROL</Tag>

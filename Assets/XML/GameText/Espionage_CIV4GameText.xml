@@ -431,14 +431,6 @@
 		<Spanish>Propagar anarqu&#237;a</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ESPIONAGE_SCREEN_TOTAL_NUM_EPS</Tag>
-		<English>Total EPs Made Per Turn: %D1_Num</English>
-		<French>Total de PE gagn&#233;s par tour : %D1_Num</French>
-		<German>Gesamt-SP pro Runde: %D1_Num</German>
-		<Italian>PS totali per turno: %D1_Num</Italian>
-		<Spanish>Total de PE ganados por turno: %D1_Num</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_SEE_RESEARCH</Tag>
 		<English>Can See Research</English>
 		<French>Peut voir l'&#233;tat des recherches</French>
