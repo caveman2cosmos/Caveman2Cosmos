@@ -30701,4 +30701,52 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Accedi alla schermata cittadina di questa citt&#224;</Italian>
 		<Spanish>Entrar en la pantalla de la ciudad.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAPPINESS_TRAIT</Tag>
+		<English>[ICON_BULLET]%D1_change[ICON_HAPPY] for %s2_trait leaders</English>
+		<French>[ICON_BULLET]%D1_change[ICON_HAPPY] pour les dirigeants avec le trait %s2_trait</French>
+		<German>[ICON_BULLET]%D1_change[ICON_HAPPY] f&#252;r %s2:2_trait Staatsoberhaupt</German>
+		<Italian>[ICON_BULLET]%D1_change[ICON_HAPPY] con un leader %s2_trait</Italian>
+		<Spanish>[ICON_BULLET]%D1_change [ICON_HAPPY] con l&#237;der %s2:1_trait</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMESTIC_ADVISOR_FOUNDED</Tag>
+		<English>Founded</English>
+		<French>Fondation</French>
+		<German>Gegr.</German>
+		<Italian>Fondato</Italian>
+		<Spanish>Fundada en</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMESTIC_ADVISOR_NAME</Tag>
+		<English>Name</English>
+		<French>Nom</French>
+		<German>Name</German>
+		<Italian>Nome</Italian>
+		<Spanish>Nombre</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMESTIC_ADVISOR_PRODUCING</Tag>
+		<English>Producing</English>
+		<French>Production</French>
+		<German>Produziert</German>
+		<Italian>Realizzando</Italian>
+		<Spanish>Produce</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CAN_MOVE_IMPASSABLE</Tag>
+		<English>[ICON_BULLET]Can Move through Impassable Terrain</English>
+		<French>[ICON_BULLET]Peut se d&#233;placer sur des terrains infranchissables.</French>
+		<German>[ICON_BULLET]Kann sich durch unpassierbares Gel&#228;nde bewegen</German>
+		<Italian>[ICON_BULLET]Pu&#242; attraversare il terreno invalicabile</Italian>
+		<Spanish>[ICON_BULLET]Puede moverse por terreno infranqueable</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VASSAL_TRIBUTE_NOT_POSSIBLE</Tag>
+		<English>Vassal tribute is not possible. Try again later.</English>
+		<French>Tribut de vassal impossible. R&#233;essayez plus tard.</French>
+		<German>Es sind zurzeit keine Vasallentribute m&#246;glich. Versucht es sp&#228;ter noch einmal.</German>
+		<Italian>Impossibile imporre un tributo al vassallo. Riprova pi&#249; tardi.</Italian>
+		<Spanish>No es posible el tributo del vasallo. Intentadlo m&#225;s tarde.</Spanish>
+	</TEXT>
 </Civ4GameText>
