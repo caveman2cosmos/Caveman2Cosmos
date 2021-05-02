@@ -28794,4 +28794,420 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Quando legato a un'unit&#224;:</Italian>
 		<Spanish>Cuando se agrega a una unidad:</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REFUSE_GIFT</Tag>
+		<English>[COLOR_WARNING_TEXT]%s1_Leader will not accept the gift.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]%s1_Leader n'acceptera pas ce pr&#233;sent.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]%s1_Leader wird die Schenkung nicht akzeptieren.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]%s1_Leader non accetter&#224; il dono[COLOR_REVERT].</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]%s1_Leader no aceptar&#225; el regalo.[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_ALL_CITIES</Tag>
+		<English>All Cities (if State [ICON_RELIGION])</English>
+		<French>Toutes les villes (si [ICON_RELIGION] d'&#233;tat)[SPACE]</French>
+		<German>Alle St&#228;dte (bei Staatsreligion [ICON_RELIGION])</German>
+		<Italian>Tutte le citt&#224; (se c'&#232; la religione ufficiale [ICON_RELIGION])</Italian>
+		<Spanish>Todas las ciudades (si hay [ICON_RELIGION])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_BIRTH_RATE_MOD</Tag>
+		<English>%D1%% [ICON_GREATPEOPLE] Birth Rate</English>
+		<French>Taux de natalit&#233; [ICON_GREATPEOPLE] %D1%%</French>
+		<German>%D1%% Geburtenrate [ICON_GREATPEOPLE]</German>
+		<Italian>%D1%% [ICON_GREATPEOPLE] tasso di natalit&#224;</Italian>
+		<Spanish>%D1%% a la tasa de natalidad de [ICON_GREATPEOPLE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_BUILDING_PROD_MOD</Tag>
+		<English>%D1%%[ICON_PRODUCTION] for Buildings</English>
+		<French>%D1%%[ICON_PRODUCTION] pour les b&#226;timents</French>
+		<German>%D1%%[ICON_PRODUCTION] f&#252;r Geb&#228;ude</German>
+		<Italian>%D1%%[ICON_PRODUCTION] per gli edifici</Italian>
+		<Spanish>%D1%% a la [ICON_PRODUCTION] de edificios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_CONVERT</Tag>
+		<English>Convert</English>
+		<French>Convertir</French>
+		<German>Konvertieren</German>
+		<Italian>Conversione</Italian>
+		<Spanish>Convertir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_FOUNDED_FIRST</Tag>
+		<English>[ICON_BULLET]Founded by First to Discover [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Religion fond&#233;e par le premier &#224; d&#233;couvrir : [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Durch den ersten Entdecker der Technologie [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] gegr&#252;ndet</German>
+		<Italian>[ICON_BULLET]Fondato dalla prima civilit&#224; che scopre [NUM1:il:la:i:le] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Fundado por el primero en descubrir [NUM1:el:la:los:las] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_FOUNDER_RECEIVES_NUM</Tag>
+		<English>[ICON_BULLET]Founder Receives [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] (%d2_num)</English>
+		<French>[ICON_BULLET]L'arm&#233;e du fondateur s'enrichit de l'unit&#233; : [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] (%d2_num)</French>
+		<German>[ICON_BULLET]Begr&#252;nder erh&#228;lt die Einheit [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] (%d2_num)</German>
+		<Italian>[ICON_BULLET]Il fondatore riceve l'unit&#224; [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] (%d2_num)</Italian>
+		<Spanish>[ICON_BULLET]El fundador recibe [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] (%d2_num)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_FREE_XP</Tag>
+		<English>%D1 XP</English>
+		<French>%D1 EXP</French>
+		<German>%D1 EP</German>
+		<Italian>%D1 XP</Italian>
+		<Spanish>%D1 PX</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_HOLY_CITY</Tag>
+		<English>Holy City (if State [ICON_RELIGION])</English>
+		<French>Ville sainte (si [ICON_RELIGION] d'&#233;tat)[SPACE]</French>
+		<German>Heilige Stadt (bei Staatsreligion [ICON_RELIGION])</German>
+		<Italian>Citt&#224; Santa (se c'&#232; la religione ufficiale [ICON_RELIGION])</Italian>
+		<Spanish>Ciudad santa (si hay [ICON_RELIGION] oficial)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_SCREEN_DATE_FOUNDED</Tag>
+		<English>Date Founded:</English>
+		<French>Date de fondation :</French>
+		<German>Gr&#252;ndungsdatum:</German>
+		<Italian>Data di fondazione:</Italian>
+		<Spanish>Fecha de fundaci&#243;n:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_SCREEN_HOLY_CITY</Tag>
+		<English>Holy City:</English>
+		<French>Ville sainte :</French>
+		<German>Heilige Stadt:</German>
+		<Italian>Citt&#224; Santa:</Italian>
+		<Spanish>Ciudad santa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_SCREEN_INFLUENCE</Tag>
+		<English>Influence:</English>
+		<French>Influence :</French>
+		<German>Einfluss:</German>
+		<Italian>Influenza:</Italian>
+		<Spanish>Influencia:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_SCREEN_NOT_FOUNDED</Tag>
+		<English>Not Founded</English>
+		<French>Non fond&#233;e</French>
+		<German>Nicht gegr&#252;ndet</German>
+		<Italian>Non fondata</Italian>
+		<Spanish>Sin fundar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_SCREEN_NO_STATE</Tag>
+		<English>No State</English>
+		<French>Aucune religion</French>
+		<German>Keine Religion</German>
+		<Italian>Ness. relig. uff.</Italian>
+		<Spanish>No oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_SCREEN_TITLE</Tag>
+		<English>Religion Advisor</English>
+		<French>Conseiller religieux</French>
+		<German>Religionsberater</German>
+		<Italian>Consigliere religioso</Italian>
+		<Spanish>Consejero religioso</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_UNIT_PROD_MOD</Tag>
+		<English>%D1%%[ICON_PRODUCTION] for Units</English>
+		<French>%D1%%[ICON_PRODUCTION] pour les unit&#233;s</French>
+		<German>%D1%%[ICON_PRODUCTION] f&#252;r Einheiten</German>
+		<Italian>%D1%%[ICON_PRODUCTION] per le unit&#224;</Italian>
+		<Spanish>%D1%% a la [ICON_PRODUCTION] de unidades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_UNKNOWN</Tag>
+		<English>a Religion</English>
+		<French>une religion</French>
+		<German>eine Religion</German>
+		<Italian>una religione</Italian>
+		<Spanish>una religi&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RENAME_UNIT</Tag>
+		<English>Rename Unit:</English>
+		<French>Renommer unit&#233;</French>
+		<German>Einheit umbenennen:</German>
+		<Italian>Rinomina unit&#224;:</Italian>
+		<Spanish>Cambiar nombre de unidad:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REPLAY_SCREEN_TITLE</Tag>
+		<English>Replay</English>
+		<French>Film</French>
+		<German>Wiederholen</German>
+		<Italian>Replay</Italian>
+		<Spanish>Repetici&#243;n</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REPLAY_SCREEN_PLAY</Tag>
+		<English>Play</English>
+		<French>Lecture</French>
+		<German>Abspielen</German>
+		<Italian>Avvia</Italian>
+		<Spanish>Reproducir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REPLAY_SCREEN_NEXT</Tag>
+		<English>Next</English>
+		<French>Suivant</French>
+		<German>Weiter</German>
+		<Italian>Successivo</Italian>
+		<Spanish>Adelante</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REPLAY_SCREEN_STOP</Tag>
+		<English>Stop</English>
+		<French>Stop</French>
+		<German>Stopp</German>
+		<Italian>Ferma</Italian>
+		<Spanish>Detener</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REPLAY_SCREEN_SPEED</Tag>
+		<English>Speed</English>
+		<French>Vitesse</French>
+		<German>Geschwindigkeit</German>
+		<Italian>Velocit&#224;</Italian>
+		<Spanish>Velocidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REPLAY_SCREEN_SCORE</Tag>
+		<English>Score</English>
+		<French>Score</French>
+		<German>Punkte</German>
+		<Italian>Punteggio</Italian>
+		<Spanish>Puntuaci&#243;n</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_RIVALS_MET</Tag>
+		<English>Rivals Met</English>
+		<French>Rivaux rencontr&#233;s</French>
+		<German>Feindbegegnungen</German>
+		<Italian>Rivali incontrati</Italian>
+		<Spanish>Rivales encontrados</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SCORE_BREAKDOWN</Tag>
+		<English>%d1 from Population (%d2_pop/%d3_pop_max)[NEWLINE]%d4 from Land (%d5_land/%d6_land_max)[NEWLINE]%d7 from Technology (%d8_tech/%d9_tech_max)[NEWLINE]%d10 from Wonders (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Total Score = %d13[NEWLINE]Score by winning this turn = %d14</English>
+		<French>%d1 pour population (%d2_pop/%d3_pop_max)[NEWLINE]%d4 pour territoire (%d5_land/%d6_land_max)[NEWLINE]%d7 pour technologies (%d8_tech/%d9_tech_max)[NEWLINE]%d10 pour Merveilles (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Score total = %d13[NEWLINE]Score si victoire &#224; ce tour = %d14</French>
+		<German>%d1 f&#252;r Bev&#246;lkerung (%d2_pop/%d3_pop_max)[NEWLINE]%d4 f&#252;r Land (%d5_land/%d6_land_max)[NEWLINE]%d7 f&#252;r Technologie (%d8_tech/%d9_tech_max)[NEWLINE]%d10 f&#252;r Wunder (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Gesamtpunkte = %d13[NEWLINE]Punkte f&#252;r Sieg in dieser Runde = %d14</German>
+		<Italian>%d1 dalla popolazione (%d2_pop/%d3_pop_max)[NEWLINE]%d4 dal territorio (%d5_land/%d6_land_max)[NEWLINE]%d7 dalla tecnologia (%d8_tech/%d9_tech_max)[NEWLINE]%d10 dalle Meraviglie (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Punteggio totale = %d13[NEWLINE]Punteggio vincendo durante questo turno = %d14</Italian>
+		<Spanish>%d1 por poblaci&#243;n (%d2_pop/%d3_pop_max)[NEWLINE]%d4 por territorio (%d5_land/%d6_land_max)[NEWLINE]%d7 por tecnolog&#237;a (%d8_tech/%d9_tech_max)[NEWLINE]%d10 por maravillas (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Puntuaci&#243;n total = %d13[NEWLINE]Puntuaci&#243;n por ganar este turno = %d14</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SCREEN_CONTINUE</Tag>
+		<English>Continue</English>
+		<French>Continuer</French>
+		<German>Fortfahren</German>
+		<Italian>Continua</Italian>
+		<Spanish>Continuar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SETTINGS_DIFFICULTY</Tag>
+		<English>%s1 Difficulty</English>
+		<French>Difficult&#233; : %s1</French>
+		<German>Schwierigkeit: %s1</German>
+		<Italian>Difficolt&#224; %s1</Italian>
+		<Spanish>Dificultad: %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SETTINGS_CLIMATE</Tag>
+		<English>%s1 Climate</English>
+		<French>Climat : %s1</French>
+		<German>Klima: %s1</German>
+		<Italian>Clima %s1</Italian>
+		<Spanish>Clima: %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SETTINGS_MAP_SIZE</Tag>
+		<English>%s1 World Size</English>
+		<French>Taille du monde : %s1</French>
+		<German>Weltgr&#246;&#223;e %s1</German>
+		<Italian>Dimensione mondo %s1</Italian>
+		<Spanish>Tama&#241;o del mundo: %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SETTINGS_SEA_LEVEL</Tag>
+		<English>%s1 Sea Level</English>
+		<French>Niveau de la mer : %s1</French>
+		<German>Meeresspiegel: %s1</German>
+		<Italian>Livello del mare %s1</Italian>
+		<Spanish>Nivel del mar: %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SETTINGS_STARTING_ERA</Tag>
+		<English>%s1 Starting Era</English>
+		<French>Ere de d&#233;part : %s1</French>
+		<German>Startzeitalter %s1</German>
+		<Italian>Era iniziale %s1</Italian>
+		<Spanish>&#201;poca de inicio: %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SETTINGS_GAME_SPEED</Tag>
+		<English>%s1 Game Speed</English>
+		<French>Vitesse du jeu : %s1</French>
+		<German>Spielgeschwindigkeit: %s1</German>
+		<Italian>Velocit&#224; di gioco %s1</Italian>
+		<Spanish>Velocidad de juego: %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SHIFT</Tag>
+		<English>Shift+</English>
+		<French>Maj+</French>
+		<German>Umschalten+</German>
+		<Italian>Maiusc+</Italian>
+		<Spanish>May&#250;s+</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIDS_TIPS</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Sid's Tips: [COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Conseils de Sid : [COLOR_REVERT]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Sids Tipps: [COLOR_REVERT]</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Il suggerimento di Sid: [COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]Consejo de Sid: [COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACESHIP_CHANCE_OF_SUCCESS</Tag>
+		<English>Mission Success: %d1%%</English>
+		<French>R&#233;ussite de la mission : %d1%%</French>
+		<German>Erfolg der Mission: %d1%%</German>
+		<Italian>Successo in missione: %d1%%</Italian>
+		<Spanish>&#201;xito de la misi&#243;n: %d1%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_TYPE_BUTTON</Tag>
+		<English>Type</English>
+		<French>Type</French>
+		<German>Typ</German>
+		<Italian>Tipo</Italian>
+		<Spanish>Tipo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_ZOOM_BUTTON</Tag>
+		<English>Zoom</English>
+		<French>Zoom</French>
+		<German>Zoom</German>
+		<Italian>Zoom</Italian>
+		<Spanish>Acercar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_ADD_BUTTON</Tag>
+		<English>Add</English>
+		<French>Ajouter</French>
+		<German>Hinzuf&#252;gen</German>
+		<Italian>Aggiungi</Italian>
+		<Spanish>A&#241;adir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_LAUNCH_BUTTON</Tag>
+		<English>Launch</English>
+		<French>Lancer</French>
+		<German>Start</German>
+		<Italian>Lancia</Italian>
+		<Spanish>Lanzar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_TRAVEL_TIME_LABEL</Tag>
+		<English>Estimated Travel Time: %d1 turns</English>
+		<French>Temps de trajet estim&#233; : %d1 tours</French>
+		<German>Voraussichtliche Reisezeit: %d1 Runden</German>
+		<Italian>Durata prevista del viaggio: %d1 turni</Italian>
+		<Spanish>Tiempo estimado de viaje: %d1 [NUM1:turno:turnos]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_COMPLETED_LABEL</Tag>
+		<English>Completed: %d1 of %d2</English>
+		<French>Avancement des travaux : %d1 sur %d2</French>
+		<German>Fertig gestellt: %d1 von %d2</German>
+		<Italian>Completati: %d1 su %d2</Italian>
+		<Spanish>Completado: %d1 de %d2</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_REQUIRED_LABEL</Tag>
+		<English>Required: %d1</English>
+		<French>Requis : %d1</French>
+		<German>Ben&#246;tigt: %d1</German>
+		<Italian>Necessari: %d1</Italian>
+		<Spanish>Se necesita: %d1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_IN_PRODUCTION_LABEL</Tag>
+		<English>In Production: %d1</English>
+		<French>En production : %d1</French>
+		<German>In Produktion: %d1</German>
+		<Italian>In produzione: %d1</Italian>
+		<Spanish>En producci&#243;n: %d1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_ARRIVAL</Tag>
+		<English>Estimated arrival</English>
+		<French>Arriv&#233;e pr&#233;vue</French>
+		<German>Voraussichtliche Ankunft</German>
+		<Italian>Arrivo previsto</Italian>
+		<Spanish>Llegada estimada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_ADD_COMPONENT</Tag>
+		<English>Please add it to your spaceship</English>
+		<French>Veuillez l'ajouter &#224; votre vaisseau spatial</French>
+		<German>Bitte zum Raumschiff hinzuf&#252;gen</German>
+		<Italian>Aggiungilo all'astronave</Italian>
+		<Spanish>A&#241;adid este componente a vuestra nave espacial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_WELCOME</Tag>
+		<English>Welcome to your spaceship</English>
+		<French>Bienvenue dans votre vaisseau spatial</French>
+		<German>Willkommen an Bord Eures Raumschiffs</German>
+		<Italian>Benvenuto sull'astronave</Italian>
+		<Spanish>&#201;sta es vuestra nave espacial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPACE_SHIP_ALPHA_CENTAURI</Tag>
+		<English>Welcome to Alpha Centauri!</English>
+		<French>Bienvenue sur Alpha du Centaure !</French>
+		<German>Willkommen auf Alpha Centauri!</German>
+		<Italian>Benvenuto su Alpha Centauri!</Italian>
+		<Spanish>Bienvenido a Alpha Centauri.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_EXPERIENCE</Tag>
+		<English>[ICON_BULLET]New Military Units Receive %D1_Change Experience Points</English>
+		<French>[ICON_BULLET]Les nouvelles unit&#233;s militaires re&#231;oivent %D1_Change points d'exp&#233;rience</French>
+		<German>[ICON_BULLET]Neue Milit&#228;reinheiten erhalten %D1_Change Erfahrungspunkte</German>
+		<Italian>[ICON_BULLET]Le nuove unit&#224; militari ricevono %D1_Change punti esperienza</Italian>
+		<Spanish>[ICON_BULLET]Las nuevas unidades militares reciben %D1_Change [NUM1:punto de experiencia:puntos de experiencia]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_EXPERIENCE_SHORT</Tag>
+		<English>%D1 XP</English>
+		<French>%D1 EXP</French>
+		<German>%D1 EP</German>
+		<Italian>%D1 PE</Italian>
+		<Spanish>%D1 PX</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIAL_BUILDING_VALID</Tag>
+		<English>You may now build %s1_building</English>
+		<French>Vous pouvez maintenant construire [NUM1:le:la:l'] %s1_building</French>
+		<German>Ihr k&#246;nnt nun das Geb&#228;ude %s1_building errichten</German>
+		<Italian>Ora puoi costruire [NUM1:un:una] %s1_building</Italian>
+		<Spanish>Ya pod&#233;is construir [NUM1:el:la:los:las] %s1_building</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPLIT_EMPIRE</Tag>
+		<English>Grant Independence to %s1_citylist</English>
+		<French>Accorder l'ind&#233;pendance &#224; %s1_citylist</French>
+		<German>Unabh&#228;ngigkeit von %s1_citylist erkl&#228;ren</German>
+		<Italian>Concedi indipendenza a %s1_citylist</Italian>
+		<Spanish>Garantizar la independencia de %s1_citylist</Spanish>
+	</TEXT>
 </Civ4GameText>

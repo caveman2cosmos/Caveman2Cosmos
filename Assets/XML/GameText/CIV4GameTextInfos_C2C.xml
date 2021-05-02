@@ -922,4 +922,16 @@
 		<Italian>Gli abitanti del villaggio sono ostili!</Italian>
 		<Spanish>Los aldeanos son hostiles.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_DUMP_TURN</Tag>
+		<English>Turn</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_DUMP_PLAYER_NAME</Tag>
+		<English>Player name</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_DUMP_LEADER_CIV</Tag>
+		<English>Civ leader</English>
+	</TEXT>
 </Civ4GameText>
