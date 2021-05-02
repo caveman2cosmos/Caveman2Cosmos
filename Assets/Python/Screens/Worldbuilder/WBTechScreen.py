@@ -247,7 +247,7 @@ class WBTechScreen:
 
 		if iCode == 4: # Mouse Enter
 			if BASE == "TECH":
-				self.WB.updateTooltip(screen, CyGameTextMgr().getTechHelp(ID, False, True, False, True, -1))
+				self.WB.tooltip.handle(screen, CyGameTextMgr().getTechHelp(ID, False, True, False, True, -1))
 
 		elif not iCode: # click
 

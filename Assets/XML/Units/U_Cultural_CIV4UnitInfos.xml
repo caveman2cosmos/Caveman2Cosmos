@@ -27,7 +27,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INCAN_QUECHUA</Description>
 			<Civilopedia>TXT_KEY_UNIT_INCAN_QUECHUA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_INCAN_QUECHUA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -139,7 +138,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AZTEC_JAGUAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_AZTEC_JAGUAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AZTEC_JAGUAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
@@ -279,7 +277,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CELTIC_GALLIC_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_CELTIC_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CELTIC_GALLIC_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -370,7 +367,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ROME_PRAETORIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_ROME_PRAETORIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ROME_PRAETORIAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -466,7 +462,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GREEK_PHALANX</Description>
 			<Civilopedia>TXT_KEY_UNIT_GREEK_PHALANX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREEK_PHALANX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -583,7 +578,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUMERIAN_VULTURE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SUMERIAN_VULTURE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SUMERIAN_VULTURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -693,7 +687,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NATIVE_AMERICA_DOG_SOLDIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_NATIVE_AMERICA_DOG_SOLDIER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NATIVE_AMERICA_DOG_SOLDIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -787,7 +780,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_JAPAN_SAMURAI</Description>
 			<Civilopedia>TXT_KEY_UNIT_JAPAN_SAMURAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_JAPAN_SAMURAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -885,7 +877,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VIKING_BESERKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_VIKING_BESERKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VIKING_BESERKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1003,7 +994,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ZULU_IMPI</Description>
 			<Civilopedia>TXT_KEY_UNIT_ZULU_IMPI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ZULU_IMPI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1122,7 +1112,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MAYA_HOLKAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAYA_HOLKAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HOLKAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1242,7 +1231,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HOLY_ROMAN_LANDSKNECHT</Description>
 			<Civilopedia>TXT_KEY_UNIT_HOLY_ROMAN_LANDSKNECHT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HOLY_ROMAN_LANDSKNECHT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1336,7 +1324,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FRENCH_MUSKETEER</Description>
 			<Civilopedia>TXT_KEY_UNIT_FRENCH_MUSKETEER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FRENCH_MUSKETEER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1443,7 +1430,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OTTOMAN_JANISSARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_OTTOMAN_JANISSARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OTTOMAN_JANISSARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1554,7 +1540,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ETHIOPIAN_OROMO_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_ETHIOPIAN_OROMO_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ETHIOPIAN_OROMO_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1672,7 +1657,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ENGLISH_REDCOAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_ENGLISH_REDCOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ENGLISH_REDCOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1779,7 +1763,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AMERICAN_NAVY_SEAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_AMERICAN_NAVY_SEAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AMERICAN_NAVY_SEAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1895,7 +1878,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MALI_SKIRMISHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MALI_SKIRMISHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MALI_SKIRMISHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2008,7 +1990,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BABYLON_BOWMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_BABYLON_BOWMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BABYLON_BOWMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2089,7 +2070,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHINA_CHOKONU</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHINA_CHOKONU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHINA_CHOKONU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2187,7 +2167,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HITTITES_HITTITE_CHARIOT</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHARIOT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHARIOT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2298,7 +2277,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EGYPT_WARCHARIOT</Description>
 			<Civilopedia>TXT_KEY_UNIT_EGYPT_WARCHARIOT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_EGYPT_WARCHARIOT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2410,7 +2388,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PERIA_IMMORTAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_PERIA_IMMORTAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PERIA_IMMORTAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2530,7 +2507,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CARTHAGE_NUMIDIAN_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARTHAGE_NUMIDIAN_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CARTHAGE_NUMIDIAN_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2688,7 +2664,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MONGOL_KESHIK</Description>
 			<Civilopedia>TXT_KEY_UNIT_MONGOL_KESHIK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MONGOL_KESHIK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2833,7 +2808,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ARABIA_CAMELARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ARABIA_CAMELARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ARABIA_CAMELARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2963,7 +2937,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BYZANTINE_CATAPHRACT</Description>
 			<Civilopedia>TXT_KEY_UNIT_BYZANTINE_CATAPHRACT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BYZANTINE_CATAPHRACT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -3104,7 +3077,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SPANISH_CONQUISTADOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPANISH_CONQUISTADOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SPANISH_CONQUISTADOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -3308,7 +3280,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RUSSIA_COSSACK</Description>
 			<Civilopedia>TXT_KEY_UNIT_RUSSIA_COSSACK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RUSSIA_COSSACK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -3502,7 +3473,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SIAM_ELEPHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_SIAM_ELEPHANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SIAM_ELEPHANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -3620,7 +3590,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GERMAN_PANZER</Description>
 			<Civilopedia>TXT_KEY_UNIT_GERMAN_PANZER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GERMAN_PANZER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -3752,7 +3721,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KOREAN_HWACHA</Description>
 			<Civilopedia>TXT_KEY_UNIT_KOREAN_HWACHA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CATAPULT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -3863,7 +3831,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PORTUGAL_CARRACK</Description>
 			<Civilopedia>TXT_KEY_UNIT_PORTUGAL_CARRACK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PORTUGAL_CARRACK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -3971,7 +3938,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NETHERLANDS_OOSTINDIEVAARDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_NETHERLANDS_OOSTINDIEVAARDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NETHERLANDS_OOSTINDIEVAARDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -4076,7 +4042,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TOMAHAWK_THROWER</Description>
 			<Civilopedia>TXT_KEY_UNIT_TOMAHAWK_THROWER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TOMAHAWK_THROWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -4202,7 +4167,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SKI_PATROL</Description>
 			<Civilopedia>TXT_KEY_UNIT_SKI_PATROL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SKI_PATROL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -4327,7 +4291,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ASSYRIAN_REDU</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASSYRIAN_REDU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ASSYRIAN_REDU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -4443,7 +4406,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DIGGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DIGGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DIGGER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -4558,7 +4520,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KOA</Description>
 			<Civilopedia>TXT_KEY_UNIT_KOA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KOA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -4654,7 +4615,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_APACHE_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_APACHE_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -4837,7 +4797,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHEROKEE_RIFLEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHEROKEE_RIFLEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MUSKETMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -4968,7 +4927,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MEXICO_RURALES</Description>
 			<Civilopedia>TXT_KEY_UNIT_MEXICO_RURALES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MEXICO_RURALES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -5124,7 +5082,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OLMEC_EAGLE_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_CLUBMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CLUBMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -5202,36 +5159,6 @@
 		<UnitInfo>
 			<Type>UNIT_CANADIAN_MOUNTIE</Type>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
-			<UniqueNames>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_A_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_O_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_C_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_E_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_K_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_D_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_H_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_DEPOT_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_J_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_B_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_G_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_L_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_M_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_V_DIVISION_1</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_A_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_O_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_C_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_E_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_K_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_D_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_H_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_DEPOT_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_J_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_B_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_G_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_L_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_M_DIVISION_2</UniqueName>
-				<UniqueName>TXT_KEY_UNIQUE_NAME_V_DIVISION_2</UniqueName>
-			</UniqueNames>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_LAW_ENFORCEMENT</SubCombatType>
@@ -5266,7 +5193,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CANADIAN_MOUNTIE</Description>
 			<Civilopedia>TXT_KEY_UNIT_MOUNTIE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MOUNTIE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -5455,7 +5381,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INDONESIAN_SILAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_SILAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SILAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -5553,7 +5478,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BRAZILIAN_BANDEIRANTE</Description>
 			<Civilopedia>TXT_KEY_UNIT_BANDEIRANTE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BANDEIRANTE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -5663,7 +5587,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ISRAELI_MACCABEE</Description>
 			<Civilopedia>TXT_KEY_UNIT_MACCABEE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MACCABEE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -5754,7 +5677,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SWISS_PIKEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_SWISS_PIKEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SWISS_PIKEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -5860,7 +5782,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KHMER_PHAKAK</Description>
 			<Civilopedia>TXT_KEY_UNIT_KHMER_PHAKAK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KHMER_PHAKAK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -6004,7 +5925,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TIBETIAN_DOB_DOB</Description>
 			<Civilopedia>TXT_KEY_UNIT_DOB_DOB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DOB_DOB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -6105,7 +6025,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LIGHTNING_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIGHTNING_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LIGHTNING_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -6215,7 +6134,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_COYOTE_RUNNER</Description>
 			<Civilopedia>TXT_KEY_UNIT_COYOTE_RUNNER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_COYOTE_RUNNER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -6310,7 +6228,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NAVAJO_RIFLEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAVAJO_RIFLEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NAVAJO_RIFLEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PILLAGE</DefaultUnitAI>
 			<UnitAIs>
@@ -6503,7 +6420,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHEYENNE_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHEYENNE_RIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHEYENNE_RIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -6654,7 +6570,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_COMANCHE_HORSE_ARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_COMANCHE_HORSE_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_COMANCHE_HORSE_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -6792,7 +6707,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_IRONWOOD_CLUBMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_IRONWOOD_CLUBMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_IRONWOOD_CLUBMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -6890,7 +6804,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INUIT_HARPOONER</Description>
 			<Civilopedia>TXT_KEY_UNIT_INUIT_HARPOONER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_JAVELINEER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7013,7 +6926,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BLACKWOOD_ARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BLACKWOOD_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7101,7 +7013,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SHARKTOOTH_ARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHARKTOOTH_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7181,7 +7092,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CARIB_BLOWGUNNER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARIB_BLOWGUNNER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CARIB_BLOWGUNNER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
@@ -7294,7 +7204,6 @@
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CREE_TRACKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CREE_TRACKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CREE_TRACKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
@@ -7375,7 +7284,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HURON_MANLET</Description>
 			<Civilopedia>TXT_KEY_UNIT_HURON_MANLET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HURON_MANLET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7486,7 +7394,6 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_KLAMATH_RIFLEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_KLAMATH_RIFLEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KLAMATH_RIFLEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7593,7 +7500,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NOOTKA_CLUBMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_NOOTKA_CLUBMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NOOTKA_CLUBMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7694,7 +7600,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KATARA</Description>
 			<Civilopedia>TXT_KEY_UNIT_KATARA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KATARA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7798,7 +7703,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BOOMERANG_THROWER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOOMERANG_THROWER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BOOMERANG_THROWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
@@ -7900,7 +7804,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_POMBOS</Description>
 			<Civilopedia>TXT_KEY_UNIT_POMBOS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_POMBOS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8015,7 +7918,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SACRED_BAND</Description>
 			<Civilopedia>TXT_KEY_UNIT_SACRED_BAND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SACRED_BAND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8135,7 +8037,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NAKHARAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAKHARAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NAKHARAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8282,7 +8183,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SAVANNA_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_SAVANNA_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SAVANNA_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8467,7 +8367,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BENIN_WAR_BOW</Description>
 			<Civilopedia>TXT_KEY_UNIT_BENIN_WAR_BOW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BENIN_WAR_BOW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8552,7 +8451,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WINGED_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_WINGED_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WINGED_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8691,7 +8589,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_YEOMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_YEOMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_YEOMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8797,7 +8694,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TARKAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TARKAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TARKAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8944,7 +8840,6 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_DOLPHIN_MECH</Description>
 			<Civilopedia>TXT_KEY_UNIT_DOLPHIN_MECH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DOLPHIN_MECH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9078,7 +8973,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_HERERO_REBEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_HERERO_REBEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HERERO_REBEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
@@ -9266,7 +9160,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MANCHU_HORSEARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MANCHU_HORSEARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MANCHU_HORSEARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9418,7 +9311,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HUSSAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUSSAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HUSSAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9613,7 +9505,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LLANERO</Description>
 			<Civilopedia>TXT_KEY_UNIT_LLANERO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LLANERO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9811,7 +9702,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SWAZI_TRACKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SWAZI_TRACKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SWAZI_TRACKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9910,7 +9800,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_UIGHUR_KNIGHT</Description>
 			<Civilopedia>TXT_KEY_UNIT_UIGHUR_KNIGHT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UIGHUR_KNIGHT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10051,7 +9940,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MENALAMBA</Description>
 			<Civilopedia>TXT_KEY_UNIT_MENALAMBA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MENALAMBA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10163,7 +10051,6 @@
 			<DefaultUnitAI>UNITAI_CITY_SPECIAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VIETCONG</Description>
 			<Civilopedia>TXT_KEY_UNIT_VIETCONG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VIETCONG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
@@ -10286,7 +10173,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KALLARANI</Description>
 			<Civilopedia>TXT_KEY_UNIT_KALLARANI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KALLARANI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10388,7 +10274,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_URUMI_SWORDSMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_URUMI_SWORDSMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_URUMI_SWORDSMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10494,7 +10379,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_XIFOS</Description>
 			<Civilopedia>TXT_KEY_UNIT_XIFOS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_XIFOS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10591,7 +10475,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RAJPUT</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAJPUT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RAJPUT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10678,7 +10561,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ADZE_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_ADZE_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ADZE_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10785,7 +10667,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PYGMY_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_PYGMY_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PYGMY_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10890,7 +10771,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AXE_THROWER</Description>
 			<Civilopedia>TXT_KEY_UNIT_AXE_THROWER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AXE_THROWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -11006,7 +10886,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TEWHATEWHA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TEWHATEWHA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TEWHATEWHA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -11110,7 +10989,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PAPUAN_CANNIBAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_PAPUAN_CANNIBAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PAPUAN_CANNIBAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -11199,7 +11077,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HIGHLANDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HIGHLANDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HIGHLANDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -11312,7 +11189,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TUAREG_CAMEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_TUAREG_CAMEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TUAREG_CAMEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -11446,7 +11322,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FULANI_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_FULANI_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FULANI_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -11619,7 +11494,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HUAMINCA</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUAMINCA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HUAMINCA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -11730,7 +11604,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TIGERCLAW</Description>
 			<Civilopedia>TXT_KEY_UNIT_TIGERCLAW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TIGERCLAW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -11843,7 +11716,6 @@
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SOMALI_PIRATE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SOMALI_PIRATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SOMALI_PIRATE_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_PIRATE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -11983,7 +11855,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ELMETI</Description>
 			<Civilopedia>TXT_KEY_UNIT_ELMETI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ELMETI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -12125,7 +11996,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GURKHA</Description>
 			<Civilopedia>TXT_KEY_UNIT_GURKHA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GURKHA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -12233,7 +12103,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HUSKARL</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUSKARL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HUSKARL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -12327,7 +12196,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_JAEGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_JAEGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_JAEGER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -12422,7 +12290,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BLACK_GUARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_BLACK_GUARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BLACK_GUARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -12524,7 +12391,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KUSH_ARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_KUSH_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KUSH_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -12613,7 +12479,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MANDEKALU</Description>
 			<Civilopedia>TXT_KEY_UNIT_MANDEKALU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MANDEKALU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -12794,7 +12659,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MASAI_MORAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MASAI_MORAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MASAI_MORAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -12914,7 +12778,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PHOENICAN_BIREME</Description>
 			<Civilopedia>TXT_KEY_UNIT_PHOENICAN_BIREME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PHOENICAN_BIREME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -13060,7 +12923,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SEPOY</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEPOY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SEPOY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -13168,7 +13030,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TURKOMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TURKOMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TURKOMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -13303,7 +13164,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SIYU_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SIYU_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SIYU_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -13411,7 +13271,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ROZVI</Description>
 			<Civilopedia>TXT_KEY_UNIT_ROZVI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ROZVI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -13509,7 +13368,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SURKU</Description>
 			<Civilopedia>TXT_KEY_UNIT_SURKU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SURKU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -13592,7 +13450,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TOMOL</Description>
 			<Civilopedia>TXT_KEY_UNIT_TOMOL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TOMOL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -13709,7 +13566,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GRIVPANVAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_GRIVPANVAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GRIVPANVAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -13847,7 +13703,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SHAN_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHAN_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SHAN_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -13967,7 +13822,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FLAIL_ELEPHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_FLAIL_ELEPHANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FLAIL_ELEPHANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -14099,7 +13953,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MAHOUT_LANCER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAHOUT_LANCER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAHOUT_LANCER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -14227,7 +14080,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HOWDAH</Description>
 			<Civilopedia>TXT_KEY_UNIT_HOWDAH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HOWDAH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -14353,7 +14205,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GUDARI</Description>
 			<Civilopedia>TXT_KEY_UNIT_GUDARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GUDARI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -14461,7 +14312,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MAMBISE</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAMBISE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAMBISE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -14660,7 +14510,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BOER_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOER_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BOER_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -14846,7 +14695,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RAPANUIWORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAPANUIWORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RAPANUIWORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -15139,7 +14987,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HAITIAN_REBEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_HAITIAN_REBEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HAITIAN_REBEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -15246,7 +15093,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SAXON_RAIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SAXON_RAIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SAXON_RAIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -15347,7 +15193,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DAI_CHUI</Description>
 			<Civilopedia>TXT_KEY_UNIT_DAI_CHUI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DAI_CHUI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -15489,7 +15334,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SPARTAN_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPARTAN_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SPARTAN_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -15579,7 +15423,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_STONEWALL_BRIGADE</Description>
 			<Civilopedia>TXT_KEY_UNIT_STONEWALL_BRIGADE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONEWALL_BRIGADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -15690,7 +15533,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TURTLE_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_TURTLE_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TURTLE_SHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -15808,7 +15650,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_UHLAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_UHLAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UHLAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -16001,7 +15842,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_YUMI_ARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_YUMI_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_YUMI_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -16096,7 +15936,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SHANG_CHARIOT</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHANG_CHARIOT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SHANG_CHARIOT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -16205,7 +16044,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CATAMARAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_CATAMARAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CATAMARAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -16311,7 +16149,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NEW_ZEALAND_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_NEW_ZEALAND_INFANTRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NEW_ZEALAND_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -16416,7 +16253,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_INNISKILLING</Description>
 			<Civilopedia>TXT_KEY_UNIT_INNISKILLING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_INNISKILLING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
@@ -16590,7 +16426,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MATNU</Description>
 			<Civilopedia>TXT_KEY_UNIT_MATNU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MATNU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -16674,7 +16509,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SPIRIT_WALKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPIRIT_WALKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SPIRIT_WALKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -16782,7 +16616,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_YURUPARI</Description>
 			<Civilopedia>TXT_KEY_UNIT_YURUPARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_YURUPARI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -16887,7 +16720,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_THORAX_HOPLITE</Description>
 			<Civilopedia>TXT_KEY_UNIT_THORAX_HOPLITE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_THORAX_HOPLITE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -17010,7 +16842,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BRIGADE_PIRON</Description>
 			<Civilopedia>TXT_KEY_UNIT_BRIGADE_PIRON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BRIGADE_PIRON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -17109,7 +16940,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BLOOD_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BLOOD_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BLOOD_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -17223,7 +17053,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FORTY_NINER</Description>
 			<Civilopedia>TXT_KEY_UNIT_FORTY_NINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FORTY_NINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -17623,7 +17452,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DAHOMEY_MINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_DAHOMEY_MINO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DAHOMEY_MINO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -17742,7 +17570,6 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_DENE_SLED_DOGS</Description>
 			<Civilopedia>TXT_KEY_UNIT_DENE_SLED_DOGS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DENE_SLED_DOGS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -17857,7 +17684,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AGRIANIAN_AXEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_AGRIANIAN_AXEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AGRIANIAN_AXEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -17982,7 +17808,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HAIDA_WAR_CANOE</Description>
 			<Civilopedia>TXT_KEY_UNIT_HAIDA_WAR_CANOE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HAIDA_WAR_CANOE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -18093,7 +17918,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PLUMED_ARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_PLUMED_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PLUMED_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -18171,7 +17995,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LEIDANG</Description>
 			<Civilopedia>TXT_KEY_UNIT_LEIDANG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LEIDANG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -18267,7 +18090,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MAROON</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAROON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAROON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -18376,7 +18198,6 @@
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HEADHUNTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEADHUNTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HEADHUNTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
@@ -18474,7 +18295,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_JADE_AXEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_JADE_AXEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_JADE_AXEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -18581,7 +18401,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYPASPISTAI</Description>
 			<Civilopedia>TXT_KEY_UNIT_HYPASPISTAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HYPASPISTAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -18699,7 +18518,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SAKA_CATAPHRACT</Description>
 			<Civilopedia>TXT_KEY_UNIT_SAKA_CATAPHRACT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SAKA_CATAPHRACT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -18840,7 +18658,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CUACHIC</Description>
 			<Civilopedia>TXT_KEY_UNIT_CUACHIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CUACHIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -18941,7 +18758,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SI_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SI_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SI_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -19054,7 +18870,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PICTISH_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_PICTISH_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PICTISH_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -19147,7 +18962,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_QIANG_PIKEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_QIANG_PIKEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_QIANG_PIKEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -19240,7 +19054,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AXEMAN_ROXOLANI</Description>
 			<Civilopedia>TXT_KEY_UNIT_AXEMAN_ROXOLANI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AXEMAN_ROXOLANI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -19365,7 +19178,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SAVARAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_SAVARAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SAVARAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -19515,7 +19327,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SCYTHIAN_HORSE_ARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SCYTHIAN_HORSE_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SCYTHIAN_HORSE_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -19623,10 +19434,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 				<FreePromotion>
-					<PromotionType>PROMOTION_MARKSMAN1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
 					<PromotionType>PROMOTION_HIT_AND_RUN</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
@@ -19664,7 +19471,6 @@
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SIBERIAN_TRACKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SIBERIAN_TRACKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SIBERIAN_TRACKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -19767,7 +19573,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MIG_29</Description>
 			<Civilopedia>TXT_KEY_UNIT_MIG_29_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MIG_29_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -19889,7 +19694,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KUOMINTANG</Description>
 			<Civilopedia>TXT_KEY_UNIT_KUOMINTANG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KUOMINTANG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -19998,7 +19802,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TLATILCO_WAR_PRIEST</Description>
 			<Civilopedia>TXT_KEY_UNIT_TLATILCO_WAR_PRIEST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TLATILCO_WAR_PRIEST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -20111,7 +19914,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TLAXCALTEC_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TLAXCALTEC_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TLAXCALTEC_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -20213,7 +20015,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_APOLLONIAN_GUARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_APOLLONIAN_GUARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_APOLLONIAN_GUARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -20322,7 +20123,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BARUD_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BARUD_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BARUD_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -20453,7 +20253,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ANDAMAN_PYGMIES</Description>
 			<Civilopedia>TXT_KEY_UNIT_ANDAMAN_PYGMIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANDAMAN_PYGMIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -20531,7 +20330,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WIRUTI</Description>
 			<Civilopedia>TXT_KEY_UNIT_WIRUTI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WIRUTI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -20636,7 +20434,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_CHWEZI_ELITES</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHWEZI_ELITES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHWEZI_ELITES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20732,7 +20529,6 @@
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ALUNA_SHAMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_ALUNA_SHAMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ALUNA_SHAMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<UnitUpgrades>
@@ -20860,7 +20656,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RWENZURURU_SOLDIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_RWENZURURU_SOLDIER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RWENZURURU_SOLDIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -20995,7 +20790,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PESHMERGA</Description>
 			<Civilopedia>TXT_KEY_UNIT_PESHMERGA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PESHMERGA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -21101,7 +20895,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KANDAKE_VETERANS</Description>
 			<Civilopedia>TXT_KEY_UNIT_KANDAKE_VETERANS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KANDAKE_VETERANS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -21227,7 +21020,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KUSHAN_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_KUSHAN_RIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KUSHAN_RIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -21390,7 +21182,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OIL_TANKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_OIL_TANKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OIL_TANKER_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MERCHANT_SHIP_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -21485,7 +21276,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LA_PLATA_MOSQUETERO</Description>
 			<Civilopedia>TXT_KEY_UNIT_LA_PLATA_MOSQUETERO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LA_PLATA_MOSQUETERO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -21595,7 +21385,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_COURLAND_JAEGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_COURLAND_JAEGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_COURLAND_JAEGER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -21708,7 +21497,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_UNITA_FORCES</Description>
 			<Civilopedia>TXT_KEY_UNIT_UNITA_FORCES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UNITA_FORCES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -21823,7 +21611,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_HEZBOLLAH</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEZBOLLAH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HEZBOLLAH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<DefaultUnitAI>UNITAI_PILLAGE</DefaultUnitAI>
 			<UnitAIs>
@@ -22024,7 +21811,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_GARAMANTES</Description>
 			<Civilopedia>TXT_KEY_UNIT_GARAMANTES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GARAMANTES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
@@ -22205,7 +21991,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PETYHORCY</Description>
 			<Civilopedia>TXT_KEY_UNIT_PETYHORCY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PETYHORCY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -22350,7 +22135,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DUGUNDIZ</Description>
 			<Civilopedia>TXT_KEY_UNIT_DUGUNDIZ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DUGUNDIZ_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -22464,7 +22248,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LULE_NOMADS</Description>
 			<Civilopedia>TXT_KEY_UNIT_LULE_NOMADS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LULE_NOMADS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -22809,7 +22592,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MWAANTA_GAAND</Description>
 			<Civilopedia>TXT_KEY_UNIT_MWAANTA_GAAND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MWAANTA_GAAND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -22919,7 +22701,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SCORTAMAREVA</Description>
 			<Civilopedia>TXT_KEY_UNIT_SCORTAMAREVA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SCORTAMAREVA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -23041,7 +22822,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MEIONE_CARAVAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MEIONE_CARAVAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MEIONE_CARAVAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -23145,7 +22925,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_FADY_SHAMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_FADY_SHAMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FADY_SHAMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -23278,7 +23057,6 @@
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MALACCAN_PIRATE</Description>
 			<Civilopedia>TXT_KEY_UNIT_MALACCAN_PIRATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MALACCAN_PIRATE_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_PIRATE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -23409,7 +23187,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TERCIO_PIKEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TERCIO_PIKEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TERCIO_PIKEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -23517,7 +23294,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MAMELUK</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAMELUK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAMELUK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -23671,7 +23447,6 @@
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BISON_WARDENS</Description>
 			<Civilopedia>TXT_KEY_UNIT_BISON_WARDENS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BISON_WARDENS_STRATEGY</Strategy>
 			<UnitUpgrades>
 				<UnitType>UNIT_GAME_HUNTER</UnitType>
 			</UnitUpgrades>
@@ -23770,7 +23545,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_MANIQ_SPEAKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MANIQ_SPEAKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MANIQ_SPEAKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -23883,7 +23657,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_STEPPE_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_STEPPE_RIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEPPE_RIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
@@ -24058,7 +23831,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MEDE_RETINUES</Description>
 			<Civilopedia>TXT_KEY_UNIT_MEDE_RETINUES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MEDE_RETINUES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -24177,7 +23949,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MOTU_ARCHERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_MOTU_ARCHERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MOTU_ARCHERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -24267,7 +24038,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ISOKELEKEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_ISOKELEKEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ISOKELEKEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -24375,7 +24145,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TREASURE_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_TREASURE_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TREASURE_SHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -24473,7 +24242,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RIVER_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_RIVER_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RIVER_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -24835,7 +24603,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KIKKULI_CHARIOT</Description>
 			<Civilopedia>TXT_KEY_UNIT_KIKKULI_CHARIOT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KIKKULI_CHARIOT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -24961,7 +24728,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MOUNTED_GRENADIERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_MOUNTED_GRENADIERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MOUNTED_GRENADIERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -25155,7 +24921,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_HUACA_GUARDIANS</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUACA_GUARDIANS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HUACA_GUARDIANS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -25305,7 +25070,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_MOCOVI_TRACKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MOCOVI_TRACKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MOCOVI_TRACKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
@@ -25488,7 +25252,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_MOHAWK_TRACKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MOHAWK_TRACKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MOHAWK_TRACKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
@@ -25668,7 +25431,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_KALLAWAYA</Description>
 			<Civilopedia>TXT_KEY_UNIT_KALLAWAYA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KALLAWAYA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -25799,7 +25561,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SIEGE_ELEPHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_SIEGE_ELEPHANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SIEGE_ELEPHANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -25947,7 +25708,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CZIBCZA_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_CZIBCZA_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CZIBCZA_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -26057,7 +25817,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MURRI_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_MURRI_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MURRI_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -26139,7 +25898,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_PETRA_GUARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_PETRA_GUARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PETRA_GUARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -26287,7 +26045,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TLATOANI_BOWMANS</Description>
 			<Civilopedia>TXT_KEY_UNIT_TLATOANI_BOWMANS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TLATOANI_BOWMANS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -26367,7 +26124,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_KHOISAN_RUNNER</Description>
 			<Civilopedia>TXT_KEY_UNIT_KHOISAN_RUNNER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KHOISAN_RUNNER_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -26491,7 +26247,6 @@
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PERSIAN_POET</Description>
 			<Civilopedia>TXT_KEY_UNIT_PERSIAN_POET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PERSIAN_POET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<UnitUpgrades>
@@ -26616,7 +26371,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_NAZCA_HEADHUNTERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAZCA_HEADHUNTERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NAZCA_HEADHUNTERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<UnitAIs>
@@ -26742,7 +26496,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GOBIR_LANCER</Description>
 			<Civilopedia>TXT_KEY_UNIT_GOBIR_LANCER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GOBIR_LANCER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -26942,7 +26695,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NOK_MERCHANTS</Description>
 			<Civilopedia>TXT_KEY_UNIT_NOK_MERCHANTS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NOK_MERCHANTS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -27088,7 +26840,6 @@
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BUSH_TRACKERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_BUSH_TRACKERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BUSH_TRACKERS_STRATEGY</Strategy>
 			<UnitUpgrades>
 				<UnitType>UNIT_BIG_GAME_HUNTER</UnitType>
 			</UnitUpgrades>
@@ -27203,7 +26954,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NORMAN_KNIGHT</Description>
 			<Civilopedia>TXT_KEY_UNIT_NORMAN_KNIGHT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NORMAN_KNIGHT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -27376,7 +27126,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ODAWA_TRADERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_ODAWA_TRADERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ODAWA_TRADERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -27477,7 +27226,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ARABIAN_GALLIOT</Description>
 			<Civilopedia>TXT_KEY_UNIT_ARABIAN_GALLIOT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ARABIAN_GALLIOT_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MERCHANT_SHIP_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -27605,7 +27353,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_TREASURE_GUARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_TREASURE_GUARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TREASURE_GUARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -27748,7 +27495,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ORANG_BOWMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_ORANG_BOWMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ORANG_BOWMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -27836,7 +27582,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TWAFO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TWAFO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TWAFO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -27975,7 +27720,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PAIUTE_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_PAIUTE_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PAIUTE_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -28185,7 +27929,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_SSG</Description>
 			<Civilopedia>TXT_KEY_UNIT_SSG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SSG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
@@ -28395,7 +28138,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PLO_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_PLO_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PLO_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -28530,7 +28272,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_PUBLIC_FORCES</Description>
 			<Civilopedia>TXT_KEY_UNIT_PUBLIC_FORCES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PUBLIC_FORCES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -28719,7 +28460,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LOS_MARINOS</Description>
 			<Civilopedia>TXT_KEY_UNIT_LOS_MARINOS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LOS_MARINOS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -28840,7 +28580,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MAHSUD_ATTAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAHSUD_ATTAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAHSUD_ATTAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -29012,7 +28751,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PERUVIAN_CONQUISTADOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_PERUVIAN_CONQUISTADOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PERUVIAN_CONQUISTADOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -29218,7 +28956,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KRISS_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_KRISS_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KRISS_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -29313,7 +29050,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LIGHT_HOPLITE</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIGHT_HOPLITE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LIGHT_HOPLITE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -29421,7 +29157,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WAPITI</Description>
 			<Civilopedia>TXT_KEY_UNIT_WAPITI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WAPITI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -29526,7 +29261,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ARJOS</Description>
 			<Civilopedia>TXT_KEY_UNIT_ARJOS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ARJOS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -29633,7 +29367,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AKIMEL_BRIGADE</Description>
 			<Civilopedia>TXT_KEY_UNIT_AKIMEL_BRIGADE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AKIMEL_BRIGADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -29740,7 +29473,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RED_FOX_ARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_RED_FOX_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RED_FOX_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -29826,7 +29558,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_POYA_LONGSPEARS</Description>
 			<Civilopedia>TXT_KEY_UNIT_POYA_LONGSPEARS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_POYA_LONGSPEARS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -29920,7 +29651,6 @@
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WANQARA</Description>
 			<Civilopedia>TXT_KEY_UNIT_WANQARA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WANQARA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<UnitUpgrades>
@@ -29982,8 +29712,8 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
-									<ID>ADAPT_DEFAULT</ID>
-									<Constant>12</Constant>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
 									</Adapt>
 								</iCommerce>
 							</Commerces>
@@ -30034,7 +29764,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RESIN_CARAVAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_RESIN_CARAVAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RESIN_CARAVAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -30142,7 +29871,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHUO_QIANG</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHUO_QIANG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHUO_QIANG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -30254,7 +29982,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ZHUGE_NO</Description>
 			<Civilopedia>TXT_KEY_UNIT_ZHUGE_NO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ZHUGE_NO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -30359,7 +30086,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_UJEN_CHOOHA</Description>
 			<Civilopedia>TXT_KEY_UNIT_UJEN_CHOOHA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UJEN_CHOOHA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -30486,7 +30212,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_QUEBEC_DEFENDERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_QUEBEC_DEFENDERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_QUEBEC_DEFENDERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -30599,7 +30324,6 @@
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BOLA_HUNTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOLA_HUNTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BOLA_HUNTER_STRATEGY</Strategy>
 			<UnitUpgrades>
 				<UnitType>UNIT_GAME_HUNTER</UnitType>
 			</UnitUpgrades>
@@ -30697,7 +30421,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KHAGAN_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_KHAGAN_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KHAGAN_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -30879,7 +30602,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHULLPAS</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHULLPAS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHULLPAS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -30981,7 +30703,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_ILLINIWEK_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_ILLINIWEK_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ILLINIWEK_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -31112,7 +30833,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RHODESIA_NATIVE_REGIMENT</Description>
 			<Civilopedia>TXT_KEY_UNIT_RHODESIA_NATIVE_REGIMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RHODESIA_NATIVE_REGIMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -31216,7 +30936,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_BEGGAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BEGGAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BEGGAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PILLAGE</DefaultUnitAI>
 			<UnitAIs>
@@ -31397,7 +31116,6 @@
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MAGOS</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAGOS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAGOS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<UnitUpgrades>
@@ -31449,8 +31167,8 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
-									<ID>ADAPT_DEFAULT</ID>
-									<Constant>5</Constant>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>5</Constant>
 									</Adapt>
 								</iCommerce>
 							</Commerces>
@@ -31465,8 +31183,8 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
-									<ID>ADAPT_DEFAULT</ID>
-									<Constant>10</Constant>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
 									</Adapt>
 								</iCommerce>
 							</Commerces>
@@ -31527,7 +31245,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TOFANGCHI</Description>
 			<Civilopedia>TXT_KEY_UNIT_TOFANGCHI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TOFANGCHI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -31643,7 +31360,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_REINDEER_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_REINDEER_RIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_REINDEER_RIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -31789,7 +31505,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MATAAFA_BRIGADE</Description>
 			<Civilopedia>TXT_KEY_UNIT_MATAAFA_BRIGADE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MATAAFA_BRIGADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -31898,7 +31613,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AMAZON_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_AMAZON_RIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AMAZON_RIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -32075,7 +31789,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KATARI_INSURGENTS</Description>
 			<Civilopedia>TXT_KEY_UNIT_KATARI_INSURGENTS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KATARI_INSURGENTS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -32190,7 +31903,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SIPAHI</Description>
 			<Civilopedia>TXT_KEY_UNIT_SIPAHI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SIPAHI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -32357,7 +32069,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_KHANUNGESE</Description>
 			<Civilopedia>TXT_KEY_UNIT_KHANUNGESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KHANUNGESE_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -32489,7 +32200,6 @@
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SABAR_DRUMMER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SABAR_DRUMMER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SABAR_DRUMMER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<UnitUpgrades>
@@ -32535,8 +32245,8 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
-									<ID>ADAPT_DEFAULT</ID>
-									<Constant>6</Constant>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
 									</Adapt>
 								</iCommerce>
 							</Commerces>
@@ -32551,8 +32261,8 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>
 									<Adapt>
-									<ID>ADAPT_DEFAULT</ID>
-									<Constant>12</Constant>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
 									</Adapt>
 								</iCommerce>
 							</Commerces>
@@ -32605,7 +32315,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FUNJ_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_FUNJ_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FUNJ_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -32778,7 +32487,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_HAJDUK</Description>
 			<Civilopedia>TXT_KEY_UNIT_HAJDUK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HAJDUK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PILLAGE</DefaultUnitAI>
 			<UnitAIs>
@@ -33006,7 +32714,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TUCUME</Description>
 			<Civilopedia>TXT_KEY_UNIT_TUCUME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TUCUME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -33122,7 +32829,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GASTRAPHETES</Description>
 			<Civilopedia>TXT_KEY_UNIT_GASTRAPHETES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GASTRAPHETES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -33229,7 +32935,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SINTASHTA_CHARIOT</Description>
 			<Civilopedia>TXT_KEY_UNIT_SINTASHTA_CHARIOT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SINTASHTA_CHARIOT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -33349,7 +33054,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_ZBOJNIK</Description>
 			<Civilopedia>TXT_KEY_UNIT_ZBOJNIK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ZBOJNIK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
@@ -33557,7 +33261,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CARANTANIAN_MERCENARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARANTANIAN_MERCENARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CARANTANIAN_MERCENARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -33658,7 +33361,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NIAM_NIAM</Description>
 			<Civilopedia>TXT_KEY_UNIT_NIAM_NIAM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NIAM_NIAM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
@@ -33855,7 +33557,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AZAWAD_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_AZAWAD_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AZAWAD_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -34007,7 +33708,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DARFUR_MILITIA</Description>
 			<Civilopedia>TXT_KEY_UNIT_DARFUR_MILITIA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DARFUR_MILITIA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -34108,7 +33808,6 @@
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_JAIPONGAN_DANCER</Description>
 			<Civilopedia>TXT_KEY_UNIT_JAIPONGAN_DANCER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_JAIPONGAN_DANCER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<UnitUpgrades>
@@ -34230,7 +33929,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_BOSNEGERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOSNEGERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BOSNEGERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PILLAGE</DefaultUnitAI>
 			<UnitAIs>
@@ -34456,7 +34154,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KAROLINER</Description>
 			<Civilopedia>TXT_KEY_UNIT_KAROLINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KAROLINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -34573,7 +34270,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OMUCHTAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_OMUCHTAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OMUCHTAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -34692,7 +34388,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KATIPUNAN_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_KATIPUNAN_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KATIPUNAN_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -34902,7 +34597,6 @@
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAHITIAN_RIDERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAHITIAN_RIDERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TAHITIAN_RIDERS_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_PIRATE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -35125,7 +34819,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAIRONA_REBELS</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAIRONA_REBELS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TAIRONA_REBELS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -35225,7 +34918,6 @@
 			<DefaultUnitAI>UNITAI_CITY_SPECIAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PEN_HUO_QI</Description>
 			<Civilopedia>TXT_KEY_UNIT_PEN_HUO_QI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PEN_HUO_QI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -35346,7 +35038,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_MOUND_GUARDIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MOUND_GUARDIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MOUND_GUARDIAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -35481,7 +35172,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BANYAN_XEBEC</Description>
 			<Civilopedia>TXT_KEY_UNIT_BANYAN_XEBEC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BANYAN_XEBEC_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MERCHANT_SHIP_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -35573,7 +35263,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SERENGETI_RANGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SERENGETI_RANGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SERENGETI_RANGER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -35739,7 +35428,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_UACUSECHA</Description>
 			<Civilopedia>TXT_KEY_UNIT_UACUSECHA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UACUSECHA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -35834,7 +35522,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TASMANIAN_DEVILS</Description>
 			<Civilopedia>TXT_KEY_UNIT_TASMANIAN_DEVILS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TASMANIAN_DEVILS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -35938,7 +35625,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ZAGON</Description>
 			<Civilopedia>TXT_KEY_UNIT_ZAGON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ZAGON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -36128,7 +35814,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_TEXAS_RANGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_TEXAS_RANGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TEXAS_RANGER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -36280,7 +35965,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_THRACIAN_PELTAST</Description>
 			<Civilopedia>TXT_KEY_UNIT_THRACIAN_PELTAST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_THRACIAN_PELTAST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -36393,7 +36077,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DOUJIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_DOUJIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DOUJIAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -36518,7 +36201,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HEAVY_TARKHAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEAVY_TARKHAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HEAVY_TARKHAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -36689,7 +36371,6 @@
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WALLABY_HUNTERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_WALLABY_HUNTERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WALLABY_HUNTERS_STRATEGY</Strategy>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARDEN</UnitType>
 			</UnitUpgrades>
@@ -36793,7 +36474,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_YAOTLALLI_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_YAOTLALLI_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_YAOTLALLI_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -36914,7 +36594,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BACTRIAN_CATAPHRACT</Description>
 			<Civilopedia>TXT_KEY_UNIT_BACTRIAN_CATAPHRACT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BACTRIAN_CATAPHRACT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -37056,7 +36735,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GUAYKURU</Description>
 			<Civilopedia>TXT_KEY_UNIT_GUAYKURU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GUAYKURU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -37241,7 +36919,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_NUKULEKA_WARRIORS</Description>
 			<Civilopedia>TXT_KEY_UNIT_NUKULEKA_WARRIORS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NUKULEKA_WARRIORS_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -37378,7 +37055,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KHINGILA_WARRIORS</Description>
 			<Civilopedia>TXT_KEY_UNIT_KHINGILA_WARRIORS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KHINGILA_WARRIORS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -37473,7 +37149,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TUCANO_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_TUCANO_MERCHANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TUCANO_MERCHANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
@@ -37576,7 +37251,6 @@
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SABLE_TRAPPER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SABLE_TRAPPER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SABLE_TRAPPER_STRATEGY</Strategy>
 			<UnitUpgrades>
 				<UnitType>UNIT_GAME_HUNTER</UnitType>
 			</UnitUpgrades>
@@ -37676,7 +37350,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WHEELED_TANK</Description>
 			<Civilopedia>TXT_KEY_UNIT_WHEELED_TANK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WHEELED_TANK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -37812,7 +37485,6 @@
 			<DefaultUnitAI>UNITAI_CITY_SPECIAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_57TH_INFANTRY_REGIMENT</Description>
 			<Civilopedia>TXT_KEY_UNIT_57TH_INFANTRY_REGIMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_57TH_INFANTRY_REGIMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -37940,7 +37612,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ZAPOROZKI_KOZAK</Description>
 			<Civilopedia>TXT_KEY_UNIT_ZAPOROZKI_KOZAK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ZAPOROZKI_KOZAK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -38144,7 +37815,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HERNANDARIAS_REGIMENTO</Description>
 			<Civilopedia>TXT_KEY_UNIT_HERNANDARIAS_REGIMENTO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HERNANDARIAS_REGIMENTO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -38311,7 +37981,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BOROBUDUR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOROBUDUR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BOROBUDUR_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MERCHANT_SHIP_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -38439,7 +38108,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_JADID_GRENADIERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_JADID_GRENADIERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_JADID_GRENADIERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -38570,7 +38238,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FIGURINE_POTTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_FIGURINE_POTTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FIGURINE_POTTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -38670,7 +38337,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VANAU_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_VANAU_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VANAU_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -38792,7 +38458,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GALLIOT</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALLIOT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GALLIOT_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MERCHANT_SHIP_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -38927,7 +38592,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SAUD_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_SAUD_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SAUD_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -39128,7 +38792,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_ORDER_OF_THE_DRAGON</Description>
 			<Civilopedia>TXT_KEY_UNIT_ORDER_OF_THE_DRAGON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ORDER_OF_THE_DRAGON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -39241,7 +38904,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VANDAL_PILLAGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_VANDAL_PILLAGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VANDAL_PILLAGER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -39407,7 +39069,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WARAY_RIDERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARAY_RIDERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WARAY_RIDERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -39587,7 +39248,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_ORONAO_WATCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ORONAO_WATCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ORONAO_WATCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -39728,7 +39388,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AKAVAI</Description>
 			<Civilopedia>TXT_KEY_UNIT_AKAVAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AKAVAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -39868,7 +39527,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PATAMAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_PATAMAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PATAMAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -39980,7 +39638,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WAYUU_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_WAYUU_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WAYUU_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -40175,7 +39832,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_YU_SPEARMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_YU_SPEARMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_YU_SPEARMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -40299,7 +39955,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DAREN</Description>
 			<Civilopedia>TXT_KEY_UNIT_DAREN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DAREN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -40459,7 +40114,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ZHUGE_KESHIK</Description>
 			<Civilopedia>TXT_KEY_UNIT_ZHUGE_KESHIK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ZHUGE_KESHIK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -40613,7 +40267,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_YAGHAN_HUNTERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_YAGHAN_HUNTERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_YAGHAN_HUNTERS_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -40745,7 +40398,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_RIMYURA_WARRIORS</Description>
 			<Civilopedia>TXT_KEY_UNIT_RIMYURA_WARRIORS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RIMYURA_WARRIORS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -40867,7 +40519,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KARAWETARI</Description>
 			<Civilopedia>TXT_KEY_UNIT_KARAWETARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KARAWETARI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -40954,7 +40605,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MBARZ_BALSYF</Description>
 			<Civilopedia>TXT_KEY_UNIT_MBARZ_BALSYF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MBARZ_BALSYF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -41049,7 +40699,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_YOLNGU_MESSENGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_YOLNGU_MESSENGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_YOLNGU_MESSENGER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
@@ -41134,7 +40783,6 @@
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SAMBUK</Description>
 			<Civilopedia>TXT_KEY_UNIT_SAMBUK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SAMBUK_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_PIRATE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -41272,7 +40920,6 @@
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BASHKIR_SHAMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_BASHKIR_SHAMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BASHKIR_SHAMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<UnitUpgrades>
@@ -41395,7 +41042,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ZENU_GOLDSMITHS</Description>
 			<Civilopedia>TXT_KEY_UNIT_ZENU_GOLDSMITHS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ZENU_GOLDSMITHS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -41492,7 +41138,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SHEBA_ELITES</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHEBA_ELITES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SHEBA_ELITES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -41583,7 +41228,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CIBOLA_PEASANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_CIBOLA_PEASANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CIBOLA_PEASANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -41940,7 +41584,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CORNUTI</Description>
 			<Civilopedia>TXT_KEY_UNIT_CORNUTI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CORNUTI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -42040,7 +41683,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FOREST_GUARDIANS</Description>
 			<Civilopedia>TXT_KEY_UNIT_FOREST_GUARDIANS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FOREST_GUARDIANS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -42199,7 +41841,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MARHATHEGNOZ</Description>
 			<Civilopedia>TXT_KEY_UNIT_MARHATHEGNOZ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MARHATHEGNOZ_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -42383,7 +42024,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MEHARISTS</Description>
 			<Civilopedia>TXT_KEY_UNIT_MEHARISTS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MEHARISTS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -42529,7 +42169,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MAHOGANY_WOODCUTTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAHOGANY_WOODCUTTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAHOGANY_WOODCUTTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -42890,7 +42529,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MUJAHIDEEN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MUJAHIDEEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MUJAHIDEEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -43013,7 +42651,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DE_SUCRE_DRAGOONS</Description>
 			<Civilopedia>TXT_KEY_UNIT_DE_SUCRE_DRAGOONS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DE_SUCRE_DRAGOONS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -43178,7 +42815,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PALADIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_PALADIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PALADIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -43323,7 +42959,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GAEROAS</Description>
 			<Civilopedia>TXT_KEY_UNIT_GAEROAS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GAEROAS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -43440,7 +43075,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BOYARS</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOYARS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BOYARS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -43617,7 +43251,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GENOAN_MERCENARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_GENOAN_MERCENARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GENOAN_MERCENARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -43717,7 +43350,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CABANAGEM_REBEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_CABANAGEM_REBEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CABANAGEM_REBEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -43849,7 +43481,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CANARI_BOWMANS</Description>
 			<Civilopedia>TXT_KEY_UNIT_CANARI_BOWMANS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CANARI_BOWMANS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -43931,7 +43562,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_CAPAYAN_AXEMANS</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPAYAN_AXEMANS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CAPAYAN_AXEMANS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -44064,7 +43694,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KON_TIKI</Description>
 			<Civilopedia>TXT_KEY_UNIT_KON_TIKI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KON_TIKI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -44201,7 +43830,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BALLESTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BALLESTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BALLESTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -44293,7 +43921,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_AKSUM_MERCHANTS</Description>
 			<Civilopedia>TXT_KEY_UNIT_AKSUM_MERCHANTS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AKSUM_MERCHANTS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -44392,7 +44019,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BALEARIC_SLINGERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_BALEARIC_SLINGERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BALEARIC_SLINGERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -44487,7 +44113,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_WARRIORS_OF_THE_CLOUDS</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARRIORS_OF_THE_CLOUDS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WARRIORS_OF_THE_CLOUDS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -44613,7 +44238,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_QHATUQ</Description>
 			<Civilopedia>TXT_KEY_UNIT_QHATUQ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_QHATUQ_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -44711,7 +44335,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GAZAVAT_WARRIORS</Description>
 			<Civilopedia>TXT_KEY_UNIT_GAZAVAT_WARRIORS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GAZAVAT_WARRIORS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -44825,7 +44448,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHILEAN_CORVETTE</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHILEAN_CORVETTE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHILEAN_CORVETTE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -44974,7 +44596,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_YUPANQUI_BOWMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_YUPANQUI_BOWMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_YUPANQUI_BOWMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -45061,7 +44682,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_MIDEWIWIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MIDEWIWIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MIDEWIWIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -45187,7 +44807,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ASVARAN_SARDAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASVARAN_SARDAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ASVARAN_SARDAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -45361,7 +44980,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BEAD_HUCKSTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BEAD_HUCKSTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BEAD_HUCKSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -45468,7 +45086,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_SEARCH_BLOC</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEARCH_BLOC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SEARCH_BLOC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -45634,7 +45251,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PATAGONIAN_ARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_PATAGONIAN_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PATAGONIAN_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -45723,7 +45339,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SAMOSTRELAC</Description>
 			<Civilopedia>TXT_KEY_UNIT_SAMOSTRELAC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SAMOSTRELAC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -45833,7 +45448,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VOZOVA_HRADBA</Description>
 			<Civilopedia>TXT_KEY_UNIT_VOZOVA_HRADBA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VOZOVA_HRADBA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -45955,7 +45569,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FALXMEN</Description>
 			<Civilopedia>TXT_KEY_UNIT_FALXMEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FALXMEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -46055,7 +45668,6 @@
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NGAYAU</Description>
 			<Civilopedia>TXT_KEY_UNIT_NGAYAU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NGAYAU_STRATEGY</Strategy>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARDEN</UnitType>
 			</UnitUpgrades>
@@ -46164,7 +45776,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KALARIPAYATT</Description>
 			<Civilopedia>TXT_KEY_UNIT_KALARIPAYATT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KALARIPAYATT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -46266,7 +45877,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OILAT_KESHIK</Description>
 			<Civilopedia>TXT_KEY_UNIT_OILAT_KESHIK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OILAT_KESHIK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -46431,7 +46041,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_IWIA_BATTALION</Description>
 			<Civilopedia>TXT_KEY_UNIT_IWIA_BATTALION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_IWIA_BATTALION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -46534,7 +46143,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_HOPLOMACHUS</Description>
 			<Civilopedia>TXT_KEY_UNIT_HOPLOMACHUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HOPLOMACHUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -46679,7 +46287,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KUTAMA_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_KUTAMA_INFANTRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KUTAMA_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -46782,7 +46389,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FYRDMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_FYRDMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FYRDMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -46887,7 +46493,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GONE_DAU</Description>
 			<Civilopedia>TXT_KEY_UNIT_GONE_DAU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GONE_DAU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -47058,7 +46663,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_TARKKA_AMPUJA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TARKKA_AMPUJA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TARKKA_AMPUJA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
@@ -47242,7 +46846,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BRABANT_MERCENARIES</Description>
 			<Civilopedia>TXT_KEY_UNIT_BRABANT_MERCENARIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BRABANT_MERCENARIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -47325,7 +46928,6 @@
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SEAL_HUNTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEAL_HUNTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SEAL_HUNTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -47437,7 +47039,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FURAWI_TECHNICAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_FURAWI_TECHNICAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FURAWI_TECHNICAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -47577,7 +47178,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SOTAROAS</Description>
 			<Civilopedia>TXT_KEY_UNIT_SOTAROAS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SOTAROAS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -47674,7 +47274,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GAUCHO_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_GAUCHO_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GAUCHO_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -47875,7 +47474,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MONASPA_GUARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_MONASPA_GUARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MONASPA_GUARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -48024,7 +47622,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SONINKE_SWORDSMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_SONINKE_SWORDSMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SONINKE_SWORDSMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -48114,7 +47711,6 @@
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KETABDAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_KETABDAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KETABDAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<UnitUpgrades>
@@ -48225,7 +47821,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ALBANIAN_JANISSARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_ALBANIAN_JANISSARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ALBANIAN_JANISSARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -48341,7 +47936,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHAPUL</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHAPUL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHAPUL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -48482,7 +48076,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ASHINA_ELITE</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASHINA_ELITE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ASHINA_ELITE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -48572,7 +48165,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_KALANG_MATAI</Description>
 			<Civilopedia>TXT_KEY_UNIT_KALANG_MATAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KALANG_MATAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -48688,7 +48280,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_MADEIRA_AXEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MADEIRA_AXEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MADEIRA_AXEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -48820,7 +48411,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_KARAI_PYHARE</Description>
 			<Civilopedia>TXT_KEY_UNIT_KARAI_PYHARE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KARAI_PYHARE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PILLAGE</DefaultUnitAI>
 			<UnitAIs>
@@ -49054,7 +48644,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ALVARADO_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_ALVARADO_CAVALRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ALVARADO_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -49255,7 +48844,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUGAR_CLIPPER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SUGAR_CLIPPER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SUGAR_CLIPPER_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MERCHANT_SHIP_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -49346,7 +48934,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TIGURINI_SCOUTS</Description>
 			<Civilopedia>TXT_KEY_UNIT_TIGURINI_SCOUTS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TIGURINI_SCOUTS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -49452,7 +49039,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HEMUDU_HUNTERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEMUDU_HUNTERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HEMUDU_HUNTERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -49544,7 +49130,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MYRH_CARAVAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MYRH_CARAVAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MYRH_CARAVAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -49669,7 +49254,6 @@
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RAZZIA_PIRATES</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAZZIA_PIRATES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RAZZIA_PIRATES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
@@ -49834,7 +49418,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TRADE_JUNK</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRADE_JUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRADE_JUNK_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MERCHANT_SHIP_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -49925,7 +49508,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_COPENA_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_COPENA_MERCHANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_COPENA_MERCHANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -50033,7 +49615,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_PUEBLO_REBEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_PUEBLO_REBEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PUEBLO_REBEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
@@ -50222,7 +49803,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BALAMOB_SLINGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BALAMOB_SLINGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BALAMOB_SLINGER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -50302,7 +49882,6 @@
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TESHUB_PRIEST</Description>
 			<Civilopedia>TXT_KEY_UNIT_TESHUB_PRIEST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TESHUB_PRIEST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<UnitUpgrades>
@@ -50439,7 +50018,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYKSOSI_CHARIOT</Description>
 			<Civilopedia>TXT_KEY_UNIT_HYKSOSI_CHARIOT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HYKSOSI_CHARIOT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -50555,7 +50133,6 @@
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LIBURNA</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIBURNA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LIBURNA_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_PIRATE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -50775,7 +50352,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BILOG</Description>
 			<Civilopedia>TXT_KEY_UNIT_BILOG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BILOG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -50877,7 +50453,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_HARAPPA_WATCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HARAPPA_WATCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HARAPPA_WATCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -51026,7 +50601,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PASDARAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_PASDARAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PASDARAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -51134,7 +50708,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PANGCAH_IMPANTERYA</Description>
 			<Civilopedia>TXT_KEY_UNIT_PANGCAH_IMPANTERYA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PANGCAH_IMPANTERYA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -51247,7 +50820,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_REPUBLICAN_GUARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_REPUBLICAN_GUARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_REPUBLICAN_GUARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -51353,7 +50925,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TARUMA_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TARUMA_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TARUMA_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -51471,7 +51042,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_JOMON_HUNTING_DOGS</Description>
 			<Civilopedia>TXT_KEY_UNIT_JOMON_HUNTING_DOGS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_JOMON_HUNTING_DOGS_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -51565,7 +51135,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KNARR</Description>
 			<Civilopedia>TXT_KEY_UNIT_KNARR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KNARR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -51693,7 +51262,6 @@
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TSAVO_HUNTERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_TSAVO_HUNTERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TSAVO_HUNTERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -51793,7 +51361,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BATYRS</Description>
 			<Civilopedia>TXT_KEY_UNIT_BATYRS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BATYRS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -51996,7 +51563,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MOBILE_TREBUCHET</Description>
 			<Civilopedia>TXT_KEY_UNIT_MOBILE_TREBUCHET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MOBILE_TREBUCHET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -52097,7 +51663,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KHITAN_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_KHITAN_INFANTRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KHITAN_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -52196,7 +51761,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MAIZE_CARAVAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAIZE_CARAVAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAIZE_CARAVAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -52289,7 +51853,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ERNA</Description>
 			<Civilopedia>TXT_KEY_UNIT_ERNA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ERNA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -52407,7 +51970,6 @@
 			<DefaultUnitAI>UNITAI_PARADROP</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ROYAL_SPECIAL_FORCES</Description>
 			<Civilopedia>TXT_KEY_UNIT_ROYAL_SPECIAL_FORCES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ROYAL_SPECIAL_FORCES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -52503,7 +52065,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GLADIATOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_GLADIATOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GLADIATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
-        <UnitInfo>
+		<UnitInfo>
 			<Type>UNIT_AIRSHIP</Type>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
 			<SubCombatTypes>
@@ -28,7 +28,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_AIRSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_AIRSHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AIRSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -99,7 +98,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BARRAGE_BALLOON</Description>
 			<Civilopedia>TXT_KEY_UNIT_BALLOON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BALLOON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -169,7 +167,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EARLY_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_EARLY_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -255,7 +252,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_P51_MUSTANG</Description>
 			<Civilopedia>TXT_KEY_UNIT_P51_MUSTANG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_P51_MUSTANG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -337,7 +333,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EARLYJET</Description>
 			<Civilopedia>TXT_KEY_UNIT_EARLY_JET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_EARLY_JET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -429,7 +424,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_F111_AARDVARK</Description>
 			<Civilopedia>TXT_KEY_UNIT_F111_AARDVARK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F111_AARDVARK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -532,7 +526,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_JET_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_JET_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_JET_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -636,7 +629,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MODERN_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MODERN_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MODERN_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -753,7 +745,6 @@
 			</InvisibilityIntensityTypes>
 			<Description>TXT_KEY_UNIT_SCRAMJET</Description>
 			<Civilopedia>TXT_KEY_UNIT_SCRAMJET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SCRAMJET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -868,7 +859,6 @@
 			</InvisibilityIntensityTypes>
 			<Description>TXT_KEY_UNIT_ORBITAL_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ORBITAL_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ORBITAL_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -959,7 +949,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BOMBER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BOMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1049,7 +1038,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_B52_BOMBER</Description>
 			<Civilopedia>TXT_KEY_UNIT_B52_BOMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_B52_BOMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1151,7 +1139,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_B1_LANCER</Description>
 			<Civilopedia>TXT_KEY_UNIT_B1_LANCER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_B1_LANCER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1255,7 +1242,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EARLYSTEALTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_STEALTH_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEALTH_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1367,7 +1353,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_STEALTH_BOMBER</Description>
 			<Civilopedia>TXT_KEY_UNIT_STEALTH_BOMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEALTH_BOMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1488,7 +1473,6 @@
 			</InvisibilityIntensityTypes>
 			<Description>TXT_KEY_UNIT_ORBITAL_BOMBER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ORBITAL_BOMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ORBITAL_BOMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1582,7 +1566,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FIGHTER_BOMBER</Description>
 			<Civilopedia>TXT_KEY_UNIT_FIGHTER_BOMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FIGHTER_BOMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1697,7 +1680,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_A10_BOMBER</Description>
 			<Civilopedia>TXT_KEY_UNIT_A10_BOMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_A10_BOMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1809,7 +1791,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_UAV</Description>
 			<Civilopedia>TXT_KEY_UNIT_UAV_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UAV_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1915,7 +1896,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SEAPLANE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEAPLANE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SEAPLANE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2029,7 +2009,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Help>TXT_KEY_UNIT_CARRIER_OPS_HELP</Help>
 			<PrereqAndBuildings>
@@ -2143,7 +2122,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_F4_PHANTOM</Description>
 			<Civilopedia>TXT_KEY_UNIT_F4_PHANTOM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F4_PHANTOM_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_CARRIER_OPS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2269,7 +2247,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_F14_TOMCAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_F14_TOMCAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F14_TOMCAT_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_CARRIER_OPS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2386,7 +2363,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_F18_HORNET</Description>
 			<Civilopedia>TXT_KEY_UNIT_F18_HORNET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F18_HORNET_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_CARRIER_OPS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2507,7 +2483,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_F104_STARFIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_F104_STARFIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F104_STARFIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2608,7 +2583,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_STRIKE_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_STRIKE_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STRIKE_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2710,7 +2684,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_F22_RAPTOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_F22_RAPTOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F22_RAPTOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2805,7 +2778,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RECON_PLANE</Description>
 			<Civilopedia>TXT_KEY_UNIT_RECON_PLANE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RECON_PLANE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2896,7 +2868,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SR71</Description>
 			<Civilopedia>TXT_KEY_UNIT_SR71_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SR71_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2994,7 +2965,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DRONE</Description>
 			<Civilopedia>TXT_KEY_UNIT_DRONE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DRONE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -3064,978 +3034,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_ATOMIC</Type>
-			<Combat>UNITCOMBAT_BOMBERS</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_VEHICULAR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_A2G_RADIOACTIVE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_FULLY_AUTOMATIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ARMOR_AIRCRAFT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_GARGANTUAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_AIRCRAFT</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_ATOMIC</Description>
-			<Civilopedia>TXT_KEY_UNIT_TACTICAL_NUKE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ATOMIC_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bMechanized>1</bMechanized>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ICBM</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_FISSION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_AVIATION</PrereqTech>
-			</TechTypes>
-			<BonusType>BONUS_URANIUM</BonusType>
-			<PrereqBonuses>
-				<BonusType>BONUS_HEAVY_WATER</BonusType>
-			</PrereqBonuses>
-			<iCost>1405</iCost>
-			<iBaseUpkeep>6</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iNukeRange>1</iNukeRange>
-			<iAirRange>7</iAirRange>
-			<iAirCombat>1</iAirCombat>
-			<iAirCombatLimit>10</iAirCombatLimit>
-			<iXPValueAttack>6</iXPValueAttack>
-			<iXPValueDefense>6</iXPValueDefense>
-			<iAsset>5</iAsset>
-			<iPower>1000</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>0.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_A_BOMB</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_HYDROGEN</Type>
-			<Combat>UNITCOMBAT_DOOM</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_RADIOACTIVE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_HYDROGEN</Description>
-			<Civilopedia>TXT_KEY_UNIT_ICBM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ICBM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bNukeImmune>1</bNukeImmune>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ICBM</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_MODERN_WARFARE</PrereqTech>
-			<BonusType>BONUS_URANIUM</BonusType>
-			<PrereqBonuses>
-				<BonusType>BONUS_HEAVY_WATER</BonusType>
-			</PrereqBonuses>
-			<iCost>2360</iCost>
-			<iAdvancedStartCost>150</iAdvancedStartCost>
-			<iBaseUpkeep>11</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iNukeRange>2</iNukeRange>
-			<iAsset>5</iAsset>
-			<iPower>40</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_HYDROGEN_BOMB</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_NUKES</PrereqGameOption>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TACTICAL_NUKE</Type>
-			<Special>SPECIALUNIT_MISSILE</Special>
-			<Combat>UNITCOMBAT_DOOM</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_RADIOACTIVE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_TACTICAL_NUKE</Description>
-			<Civilopedia>TXT_KEY_UNIT_TACTICAL_NUKE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TACTICAL_NUKE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ICBM</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
-			<BonusType>BONUS_URANIUM</BonusType>
-			<PrereqBonuses>
-				<BonusType>BONUS_HEAVY_WATER</BonusType>
-			</PrereqBonuses>
-			<iCost>1750</iCost>
-			<iBaseUpkeep>6</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iAirRange>4</iAirRange>
-			<iNukeRange>1</iNukeRange>
-			<iXPValueDefense>6</iXPValueDefense>
-			<iEvasionProbability>50</iEvasionProbability>
-			<iAsset>5</iAsset>
-			<iPower>1000</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>0.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_TACTICAL_NUKE</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_MRBM</Type>
-			<Special>SPECIALUNIT_MISSILE</Special>
-			<Combat>UNITCOMBAT_DOOM</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_RADIOACTIVE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MRBM</Description>
-			<Civilopedia>TXT_KEY_UNIT_TACTICAL_NUKE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TACTICAL_NUKE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ICBM</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
-			<BonusType>BONUS_URANIUM</BonusType>
-			<iCost>1665</iCost>
-			<iAdvancedStartCost>150</iAdvancedStartCost>
-			<iBaseUpkeep>6</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iAirRange>8</iAirRange>
-			<iNukeRange>1</iNukeRange>
-			<iXPValueDefense>4</iXPValueDefense>
-			<iEvasionProbability>32</iEvasionProbability>
-			<iAsset>5</iAsset>
-			<iPower>30</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>0.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MRBM</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_NUKES</PrereqGameOption>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_IRBM</Type>
-			<Special>SPECIALUNIT_MISSILE</Special>
-			<Combat>UNITCOMBAT_DOOM</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_RADIOACTIVE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_IRBM</Description>
-			<Civilopedia>TXT_KEY_UNIT_TACTICAL_NUKE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TACTICAL_NUKE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ICBM</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
-			<BonusType>BONUS_URANIUM</BonusType>
-			<iCost>2085</iCost>
-			<iAdvancedStartCost>150</iAdvancedStartCost>
-			<iBaseUpkeep>6</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iAirRange>16</iAirRange>
-			<iNukeRange>1</iNukeRange>
-			<iXPValueDefense>4</iXPValueDefense>
-			<iEvasionProbability>25</iEvasionProbability>
-			<iAsset>5</iAsset>
-			<iPower>30</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>0.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_IRBM</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_NUKES</PrereqGameOption>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_BIOLOGICAL_WARFARE_MISSILE</Type>
-			<Special>SPECIALUNIT_MISSILE</Special>
-			<Capture>UNIT_BIOLOGICAL_WARFARE_MISSILE</Capture>
-			<Combat>UNITCOMBAT_MISSILE</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_BIOLOGICAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_MISSILE_AIR</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_BIOLOGICAL_WARFARE_MISSILE</Description>
-			<Civilopedia>TXT_KEY_UNIT_BIOLOGICAL_WARFARE_MISSILE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BIOLOGICAL_WARFARE_MISSILE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_MISSILE_AIR</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_ATTACK_AIR</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BIOLOGICAL_WARFARE_LAB</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
-			<iCost>1765</iCost>
-			<iAdvancedStartCost>90</iAdvancedStartCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iNukeRange>0</iNukeRange>
-			<iAirRange>4</iAirRange>
-			<iAirCombat>40</iAirCombat>
-			<iAirCombatLimit>100</iAirCombatLimit>
-			<iEvasionProbability>65</iEvasionProbability>
-			<iCollateralDamage>100</iCollateralDamage>
-			<iCollateralDamageLimit>60</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>8</iCollateralDamageMaxUnits>
-			<iAsset>3</iAsset>
-			<iPower>120</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>10.0</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_BIOLOGICAL_WARFARE_MISSILE</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_POISON_NUKE</Type>
-			<Special>SPECIALUNIT_MISSILE</Special>
-			<Combat>UNITCOMBAT_DOOM</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_BIOLOGICAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_POISON_NUKE</Description>
-			<Civilopedia>TXT_KEY_UNIT_POISON_NUKE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_POISON_NUKE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ICBM</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BIOLOGICAL_WARFARE_LAB</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
-			<iCost>2030</iCost>
-			<iAdvancedStartCost>120</iAdvancedStartCost>
-			<iBaseUpkeep>11</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iAirRange>-1</iAirRange>
-			<iNukeRange>0</iNukeRange>
-			<iXPValueDefense>4</iXPValueDefense>
-			<iEvasionProbability>50</iEvasionProbability>
-			<iAsset>4</iAsset>
-			<iPower>40</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>10.0</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_BBM</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_NUKES</PrereqGameOption>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_POISON_NOVA</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<Combat>UNITCOMBAT_DOOM</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_BIOLOGICAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_POISON_NOVA</Description>
-			<Civilopedia>TXT_KEY_UNIT_POISON_NOVA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_POISON_NOVA_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ICBM</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BIOLOGICAL_WARFARE_LAB</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_DNA_COMPUTING</PrereqTech>
-			<iCost>5000</iCost>
-			<iAdvancedStartCost>260</iAdvancedStartCost>
-			<iBaseUpkeep>21</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iAirRange>-1</iAirRange>
-			<iNukeRange>0</iNukeRange>
-			<iXPValueDefense>4</iXPValueDefense>
-			<iEvasionProbability>50</iEvasionProbability>
-			<iAsset>5</iAsset>
-			<iPower>50</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>10.0</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_PLAGUE_BRINGER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_NUKES</PrereqGameOption>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_FUSION_NUKE</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Combat>UNITCOMBAT_DOOM</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_RADIOACTIVE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FUSION_NUKE</Description>
-			<Civilopedia>TXT_KEY_UNIT_FUSION_NUKE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FUSION_NUKE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bNukeImmune>1</bNukeImmune>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ICBM</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_FUSION</PrereqTech>
-			<iCost>4200</iCost>
-			<iAdvancedStartCost>500</iAdvancedStartCost>
-			<iBaseUpkeep>21</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iNukeRange>0</iNukeRange>
-			<iEvasionProbability>50</iEvasionProbability>
-			<iAsset>5</iAsset>
-			<iPower>50</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_TACTICAL_FUSI</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_NUKES</PrereqGameOption>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_FUSION_NOVA</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<Combat>UNITCOMBAT_DOOM</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_RADIOACTIVE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FUSION_NOVA</Description>
-			<Civilopedia>TXT_KEY_UNIT_FUSION_NOVA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FUSION_NOVA_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bNukeImmune>1</bNukeImmune>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ICBM</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_SHIELDING</PrereqTech>
-			<iCost>7700</iCost>
-			<iAdvancedStartCost>500</iAdvancedStartCost>
-			<iBaseUpkeep>33</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iNukeRange>1</iNukeRange>
-			<iEvasionProbability>75</iEvasionProbability>
-			<iAsset>5</iAsset>
-			<iPower>60</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_FUSION_NOVA</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_NUKES</PrereqGameOption>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_EXPERIMENTAL</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<Combat>UNITCOMBAT_DOOM</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_RADIOACTIVE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_EXPERIMENTAL</Description>
-			<Civilopedia>TXT_KEY_UNIT_EXPERIMENTAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_EXPERIMENTAL_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bNukeImmune>1</bNukeImmune>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ICBM</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
-			<BonusType>BONUS_URANIUM</BonusType>
-			<iCost>5400</iCost>
-			<iAdvancedStartCost>1000</iAdvancedStartCost>
-			<iBaseUpkeep>26</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iNukeRange>20</iNukeRange>
-			<iEvasionProbability>50</iEvasionProbability>
-			<iAsset>5</iAsset>
-			<iPower>60</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_PEACE_MAKER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_NUKES</PrereqGameOption>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TURN</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<Combat>UNITCOMBAT_DOOM</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_PSYCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_TURN</Description>
-			<Civilopedia>TXT_KEY_UNIT_TURN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TURN_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bInvisible>1</bInvisible>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bNukeImmune>1</bNukeImmune>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ICBM</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MIND_CONTROL_CENTER</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_MIND_UPLOADING</PrereqTech>
-			<iCost>6200</iCost>
-			<iBaseUpkeep>6</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iNukeRange>0</iNukeRange>
-			<iAsset>5</iAsset>
-			<iPower>60</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_YAM</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_NUKES</PrereqGameOption>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_V1</Type>
-			<Special>SPECIALUNIT_MISSILE</Special>
-			<Capture>UNIT_V1</Capture>
-			<Combat>UNITCOMBAT_MISSILE</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_GUIDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_MISSILE_AIR</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_V1</Description>
-			<Civilopedia>TXT_KEY_UNIT_V1_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_V1_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitUpgrades>
-				<UnitType>UNIT_GUIDED_MISSILE</UnitType>
-			</UnitUpgrades>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_MISSILE_AIR</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_ROCKETRY</PrereqTech>
-			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>760</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iAirRange>3</iAirRange>
-			<iAirCombat>20</iAirCombat>
-			<iAirCombatLimit>100</iAirCombatLimit>
-			<iXPValueDefense>6</iXPValueDefense>
-			<iEvasionProbability>100</iEvasionProbability>
-			<iBombRate>10</iBombRate>
-			<iAsset>3</iAsset>
-			<iPower>49</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>0.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_V1</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-			<bDCMAirBomb1>0</bDCMAirBomb1>
-			<bDCMAirBomb2>1</bDCMAirBomb2>
-			<bDCMAirBomb3>1</bDCMAirBomb3>
-			<bDCMAirBomb4>1</bDCMAirBomb4>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_GUIDED_MISSILE</Type>
-			<Special>SPECIALUNIT_MISSILE</Special>
-			<Capture>UNIT_GUIDED_MISSILE</Capture>
-			<Combat>UNITCOMBAT_MISSILE</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_GUIDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_MISSILE_AIR</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_GUIDED_MISSILE</Description>
-			<Civilopedia>TXT_KEY_UNIT_GUIDED_MISSILE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GUIDED_MISSILE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitUpgrades>
-				<UnitType>UNIT_PRECISION_ATTACK_MISSILE</UnitType>
-			</UnitUpgrades>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_MISSILE_AIR</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
-			<BonusType>BONUS_MICROCHIPS</BonusType>
-			<PrereqBonuses>
-				<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			</PrereqBonuses>
-			<iCost>2865</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iAirRange>4</iAirRange>
-			<iAirCombat>50</iAirCombat>
-			<iAirCombatLimit>100</iAirCombatLimit>
-			<iXPValueDefense>6</iXPValueDefense>
-			<iEvasionProbability>100</iEvasionProbability>
-			<iBombRate>16</iBombRate>
-			<iAsset>3</iAsset>
-			<iPower>162</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>0.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_GUIDED_MISSILE</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-			<bDCMAirBomb1>0</bDCMAirBomb1>
-			<bDCMAirBomb2>1</bDCMAirBomb2>
-			<bDCMAirBomb3>1</bDCMAirBomb3>
-			<bDCMAirBomb4>1</bDCMAirBomb4>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_PRECISION_ATTACK_MISSILE</Type>
-			<Special>SPECIALUNIT_MISSILE</Special>
-			<Capture>UNIT_PRECISION_ATTACK_MISSILE</Capture>
-			<Combat>UNITCOMBAT_MISSILE</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_WARHEAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DETONATE_GUIDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_UNMANNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_AIR</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_MISSILE_AIR</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_PRECISION_ATTACK_MISSILE</Description>
-			<Civilopedia>TXT_KEY_UNIT_PRECISION_ATTACK_MISSILE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PRECISION_ATTACK_MISSILE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
-			<bMechanized>1</bMechanized>
-			<bSuicide>1</bSuicide>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_MISSILE_AIR</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
-			<BonusType>BONUS_MICROCHIPS</BonusType>
-			<PrereqBonuses>
-				<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			</PrereqBonuses>
-			<iCost>2865</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
-			<iMoves>1</iMoves>
-			<iAirRange>6</iAirRange>
-			<iAirCombat>80</iAirCombat>
-			<iAirCombatLimit>100</iAirCombatLimit>
-			<iXPValueDefense>6</iXPValueDefense>
-			<iEvasionProbability>100</iEvasionProbability>
-			<iCityAttack>50</iCityAttack>
-			<iHillsAttack>50</iHillsAttack>
-			<iBombRate>32</iBombRate>
-			<iAsset>4</iAsset>
-			<iPower>300</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>0.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_PRECISION_ATTACK_MISSILE</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-			<bDCMAirBomb1>0</bDCMAirBomb1>
-			<bDCMAirBomb2>1</bDCMAirBomb2>
-			<bDCMAirBomb3>1</bDCMAirBomb3>
-			<bDCMAirBomb4>1</bDCMAirBomb4>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

@@ -141,7 +141,7 @@ class CvMADNukesManager:
 
 		self.drawOutgoingWarheadsContent(screen)
 
-		screen.setRenderInterfaceOnly(True);
+		screen.setRenderInterfaceOnly(True)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 		screen.showWindowBackground(False)
 
@@ -244,7 +244,7 @@ class CvMADNukesManager:
 		for iUnitID in range(GCgetPlayer(GCgetGame().getActivePlayer()).getNumUnits()):
 			objUnit = GCgetPlayer(GCgetGame().getActivePlayer()).getUnit(iUnitID)
 
-			self.selectedUnitHash[iUnitID] = False;
+			self.selectedUnitHash[iUnitID] = False
 
 			if(objUnit.getUnitAIType() != UnitAITypes.UNITAI_ICBM):
 				continue
@@ -312,7 +312,7 @@ class CvMADNukesManager:
 		for iCityID in range(GCgetPlayer(iActivePlayer).getNumCities()):
 			objCity = GCgetPlayer(iActivePlayer).getCity(iCityID)
 
-			self.selectedCityHash[iCityID] = False;
+			self.selectedCityHash[iCityID] = False
 
 			iTotalCityCount += 1
 			if(objCity.getMADIncoming() == 0):

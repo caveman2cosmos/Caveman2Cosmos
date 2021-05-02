@@ -143,7 +143,8 @@ public:
 	int hurryProduction(int /*HurryTypes*/ iHurry) const;
 	int flatHurryAngerLength() const;
 
-	int getNumBuilding(int /*BuildingTypes*/ iIndex) const;
+	void setNumRealBuilding(int /*BuildingTypes*/ iIndex, int iNewValue);
+	int getNumRealBuilding(int /*BuildingTypes*/ iIndex) const;
 	int getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const;
 	bool isFreeBuilding(int /*BuildingTypes*/ iIndex) const;
 	int getID() const;
@@ -230,6 +231,7 @@ public:
 	int getMilitaryProductionModifier() const;
 	int getSpaceProductionModifier() const;
 	int getExtraTradeRoutes() const;
+	int getMaxTradeRoutes() const;
 	void changeExtraTradeRoutes(int iChange);
 	int getTradeRouteModifier() const;
 	int getForeignTradeRouteModifier() const;
@@ -279,8 +281,7 @@ public:
 	int getCultureThreshold() const;
 	int getSeaPlotYield(int /*YieldTypes*/ eIndex) const;
 
-	int getBaseYieldRate(int /*YieldTypes*/ eIndex) const;
-	void changeBaseYieldRate(int /*YieldTypes*/ eIndex, int iNewValue);
+	int getPlotYield(int /*YieldTypes*/ eIndex) const;
 
 	int getBaseYieldRateModifier(int /*YieldTypes*/ eIndex, int iExtra) const;
 	int getYieldRate(int /*YieldTypes*/ eIndex) const;
@@ -400,8 +401,6 @@ public:
 	int getEspionageDefenseModifier() const;
 
 	bool isWorkingPlot(const CyPlot& kPlot) const;
-	int getNumRealBuilding(int /*BuildingTypes*/ iIndex) const;
-	void setNumRealBuilding(int /*BuildingTypes*/ iIndex, int iNewValue);
 	bool isHasReligion(int /*ReligionTypes*/ iIndex) const;
 	void setHasReligion(int /*ReligionTypes*/ iIndex, bool bNewValue, bool bAnnounce, bool bArrows);
 	bool isHasCorporation(int /*CorporationTypes*/ iIndex) const;

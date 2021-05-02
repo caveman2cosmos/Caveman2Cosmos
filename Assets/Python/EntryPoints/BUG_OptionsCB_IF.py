@@ -1,5 +1,7 @@
 # BUG_OptionsCB_IF
 
+from CvPythonExtensions import CyGlobalContext
+
 # Initialize callback interface
 def init():
 	global g_options, g_screen
@@ -59,3 +61,8 @@ def handleBugSliderChanged(argsList):
 	option = g_options.getOption(szName)
 	if option is not None:
 		option.setValue(iValue)
+
+def handleGameOptionChange(argsList):
+	bValue, szName = argsList
+	GC = CyGlobalContext()
+	GC.getGame().setOption(GC.getInfoTypeForString(szName), bValue)

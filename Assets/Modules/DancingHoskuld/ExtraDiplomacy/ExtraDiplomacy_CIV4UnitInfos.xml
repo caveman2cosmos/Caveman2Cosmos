@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Unit Infos -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -27,7 +26,6 @@
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DIPLOMAT_MESSENGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DIPLOMAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DIPLOMAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
@@ -72,7 +70,8 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<!--Actions>
+			<!--
+			<Actions>
 				<Action>
 					<MissionType>MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE</MissionType>
 					<iCost>20</iCost>
@@ -191,7 +190,6 @@
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DIPLOMAT_EARLY</Description>
 			<Civilopedia>TXT_KEY_UNIT_DIPLOMAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DIPLOMAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
@@ -221,9 +219,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<!--
-iCost>150</iCost
-			-->
+			<!-- iCost>150</iCost -->
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
@@ -266,7 +262,6 @@ iCost>150</iCost
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DIPLOMAT_INDUST</Description>
 			<Civilopedia>TXT_KEY_UNIT_DIPLOMAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DIPLOMAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
@@ -298,9 +293,7 @@ iCost>150</iCost
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<!--
-iCost>300</iCost
-			-->
+			<!-- iCost>300</iCost -->
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<iPower>6</iPower>
@@ -343,7 +336,6 @@ iCost>300</iCost
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DIPLOMAT_MODERN</Description>
 			<Civilopedia>TXT_KEY_UNIT_DIPLOMAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DIPLOMAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
@@ -372,9 +364,7 @@ iCost>300</iCost
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<!--
-iCost>450</iCost
-			-->
+			<!-- iCost>450</iCost -->
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>

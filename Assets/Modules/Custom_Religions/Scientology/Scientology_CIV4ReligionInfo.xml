@@ -2,7 +2,6 @@
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- Modified by the World of Civilization Team -->
 <!-- Religion Infos -->
-<!-- -->
 <Civ4ReligionInfo xmlns="x-schema:../../../XML/Schema/C2C_CIV4GameInfoSchema.xml">
 	<ReligionInfos>
 		<ReligionInfo>

@@ -11,7 +11,6 @@
 			<Type>BUILDING_CERAMICS_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_CERAMICS_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CERAMICS_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CERAMICS_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CERAMICS_FACTORY</ArtDefineTag>
@@ -79,7 +78,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_LEAD_INGOTS</BonusType>
@@ -110,7 +109,6 @@
 			<Type>BUILDING_PORCELAIN_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_PORCELAIN_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PORCELAIN_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PORCELAIN_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_PORCELAIN_FACTORY</ArtDefineTag>
@@ -157,7 +155,6 @@
 			</BonusCommerceModifiers>
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<!-- Properties diffusion -->
 			<Properties>
 				<Property>
@@ -179,7 +176,6 @@
 			<Type>BUILDING_PORCELAIN_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_PORCELAIN_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PORCELAIN_WORKSHOP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PORCELAIN_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_PORCELAIN_WORKSHOP</ArtDefineTag>
@@ -227,7 +223,6 @@
 			</BonusCommerceModifiers>
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<!-- Properties diffusion -->
 			<Properties>
 				<Property>
@@ -250,7 +245,6 @@
 			<Type>BUILDING_POTTER</Type>
 			<Description>TXT_KEY_BUILDING_POTTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_POTTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_POTTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_POTTER</ArtDefineTag>
@@ -317,7 +311,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_LEAD_INGOTS</BonusType>
@@ -357,7 +351,6 @@
 			<Type>BUILDING_POTTERS_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_POTTERS_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_POTTERS_WORKSHOP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_POTTERS_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_POTTERS_WORKSHOP</ArtDefineTag>
@@ -427,7 +420,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_LEAD_INGOTS</BonusType>
@@ -458,7 +451,6 @@
 			<Type>BUILDING_TERRACOTTA_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_TERRACOTTA_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRACOTTA_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRACOTTA_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TERRACOTTA_FACTORY</ArtDefineTag>
@@ -494,7 +486,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses-->
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<!-- Properties diffusion -->
 			<Properties>
 				<Property>
@@ -516,7 +507,6 @@
 			<Type>BUILDING_TERRACOTTA_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_TERRACOTTA_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRACOTTA_WORKSHOP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRACOTTA_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TERRACOTTA_WORKSHOP</ArtDefineTag>
@@ -553,7 +543,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<!-- Properties diffusion -->
 			<Properties>
 				<Property>

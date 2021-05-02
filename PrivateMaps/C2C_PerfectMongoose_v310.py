@@ -855,10 +855,10 @@ def CubicInterpolate(v0, v1, v2, v3, mu):
 
 
 def BicubicInterpolate(v, muX, muY):
-	a0 = CubicInterpolate(v[1],	 v[2],	v[3],	 v[4],	muX);
-	a1 = CubicInterpolate(v[5],	 v[6],	v[7],	 v[8],	muX);
-	a2 = CubicInterpolate(v[9],	 v[10], v[11], v[12], muX);
-	a3 = CubicInterpolate(v[13], v[14], v[15], v[16], muX);
+	a0 = CubicInterpolate(v[1],	 v[2],	v[3],	 v[4],	muX)
+	a1 = CubicInterpolate(v[5],	 v[6],	v[7],	 v[8],	muX)
+	a2 = CubicInterpolate(v[9],	 v[10], v[11], v[12], muX)
+	a3 = CubicInterpolate(v[13], v[14], v[15], v[16], muX)
 	return CubicInterpolate(a0, a1, a2, a3, muY)
 
 
@@ -871,10 +871,10 @@ def CubicDerivative(v0, v1, v2, v3, mu):
 
 
 def BicubicDerivative(v, muX, muY):
-	a0 = CubicInterpolate(v[1],	 v[2],	v[3],	 v[4],	muX);
-	a1 = CubicInterpolate(v[5],	 v[6],	v[7],	 v[8],	muX);
-	a2 = CubicInterpolate(v[9],	 v[10], v[11], v[12], muX);
-	a3 = CubicInterpolate(v[13], v[14], v[15], v[16], muX);
+	a0 = CubicInterpolate(v[1],	 v[2],	v[3],	 v[4],	muX)
+	a1 = CubicInterpolate(v[5],	 v[6],	v[7],	 v[8],	muX)
+	a2 = CubicInterpolate(v[9],	 v[10], v[11], v[12], muX)
+	a3 = CubicInterpolate(v[13], v[14], v[15], v[16], muX)
 	return CubicDerivative(a0, a1, a2, a3, muY)
 
 
@@ -1439,9 +1439,9 @@ class AreaMap:
 				if xRightExtreme >= seg.xRight + landOffset:
 					if debugReport:
 						print "finished with line"
-					break; #past the end of the parent line and this line ends
+					break #past the end of the parent line and this line ends
 			elif lineFound == False and xRightExtreme >= seg.xRight + landOffset:
-				break; #past the end of the parent line and no line found
+				break #past the end of the parent line and no line found
 			else:
 				continue #keep looking for more line segments
 		if lineFound == True: #still a line needing to be put on stack
@@ -1568,7 +1568,7 @@ class ElevationMap(FloatMap):
 								self.data[i] = self.seaLevelThreshold
 
 
-	def GetDifferenceAroundHex(x, y):
+	def GetDifferenceAroundHex(self, x, y):
 		avg = self.GetAverageInHex(x, y, 1)
 		i = self.GetIndex(x, y)
 		return self.data[i] - avg
@@ -3247,7 +3247,7 @@ class RiverMap:
 		for y in range(mc.height):
 			for x in range(mc.width):
 				i = GetIndex(x, y)
-				maxHeight = 0.0;
+				maxHeight = 0.0
 				for yy in range(y, y - 2, -1):
 					for xx in range(x, x + 2):
 						ii = GetIndex(xx, yy)
@@ -3322,7 +3322,7 @@ class RiverMap:
 		for y in range(mc.height):
 			for x in range(mc.width):
 				i = GetIndex(x, y)
-				avg = 0.0;
+				avg = 0.0
 				for yy in range(y, y - 2, -1):
 					for xx in range(x, x + 2):
 						ii = GetIndex(xx, yy)
@@ -3612,9 +3612,9 @@ class BonusPlacer:
 				if (mc.BonusMaxGroupSize == -1):
 					maxAdd = (gc.getMap().getWorldSize() / 2) + 3
 				elif (mc.BonusMaxGroupSize == 0):
-					maxAdd = PRand.randint(1, gc.getGame().countCivPlayersEverAlive());
+					maxAdd = PRand.randint(1, gc.getGame().countCivPlayersEverAlive())
 				else:
-					maxAdd = PRand.randint(1, mc.BonusMaxGroupSize);
+					maxAdd = PRand.randint(1, mc.BonusMaxGroupSize)
 				for dx in range(-groupRange, groupRange + 1):
 					for dy in range(-groupRange, groupRange + 1):
 						 #NEW CODE - Fuyu

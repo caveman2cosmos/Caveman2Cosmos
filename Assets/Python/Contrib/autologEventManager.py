@@ -340,9 +340,9 @@ class AutoLogEvent(AbstractAutoLogEvent):
 				year = TRNSLTR.getText("TXT_KEY_TIME_AD", (year,))
 
 			if iMaxTurns:
-				sTurn = "%i/%i" %(GAME.getElapsedGameTurns() + 1 + AutologOpt.get4000BCTurn(), iMaxTurns)
+				sTurn = "%i/%i" %(GAME.getElapsedGameTurns() + 1 + AutologOpt.getStartDateTurn(), iMaxTurns)
 			else:
-				sTurn = "%i" % GAME.getElapsedGameTurns() + 1 + AutologOpt.get4000BCTurn()
+				sTurn = "%i" % GAME.getElapsedGameTurns() + 1 + AutologOpt.getStartDateTurn()
 
 			Logger.writeLog_pending_flush()
 			Logger.writeLog_pending("")

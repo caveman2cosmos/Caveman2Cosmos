@@ -2,7 +2,6 @@
 from CvPythonExtensions import *
 import CvScreensInterface as UP
 import HandleInputUtil
-import PythonToolTip as pyTT
 
 # globals
 GC = CyGlobalContext()
@@ -67,10 +66,10 @@ class CvCivicsScreen:
 
 		import InputData
 		self.InputData = InputData.instance
-		# Tool Tip
-		self.szTxtTT = ""
-		self.iOffsetTT = []
-		self.bLockedTT = False
+
+		import PythonToolTip
+		self.tooltip = PythonToolTip.PythonToolTip()
+
 		# Resolution
 		import ScreenResolution as SR
 		self.xRes = xRes = SR.x
@@ -420,37 +419,12 @@ class CvCivicsScreen:
 			screen.deleteWidget(self.getNextWidget())
 		self.nWidgetCount = 0
 
-	# Tooltip
-	def updateTooltip(self, screen, szTxt, xPos = -1, yPos = -1, uFont = ""):
-		if not szTxt:
-			return
-		if szTxt != self.szTxtTT:
-			self.szTxtTT = szTxt
-			if not uFont:
-				uFont = self.aFontList[6]
-			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szTxt, uFont, "Tooltip")
-			POINT = Win32.getCursorPos()
-			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
-		else:
-			if xPos == yPos == -1:
-				POINT = Win32.getCursorPos()
-				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
-			screen.moveToFront("Tooltip")
-			screen.show("Tooltip")
-		if xPos == yPos == -1:
-			self.bLockedTT = True
-
 	#--------------------------#
 	# Base operation functions #
 	#||||||||||||||||||||||||||#
 	def update(self, fDelta):
-		if self.bLockedTT:
-			POINT = Win32.getCursorPos()
-			iX = POINT.x + self.iOffsetTT[0]
-			iY = POINT.y + self.iOffsetTT[1]
-			if iX < 0: iX = 0
-			if iY < 0: iY = 0
-			self.getScreen().moveItem("Tooltip", iX, iY, 0)
+		if self.tooltip.bLockedTT:
+			self.tooltip.handle(self.getScreen())
 
 	def handleInput(self, inputClass):
 		screen = self.getScreen()
@@ -477,22 +451,22 @@ class CvCivicsScreen:
 			CASE = szSplit[2:]
 		else:
 			CASE = [0]
-		# Remove potential Help Text
-		screen.hide("Tooltip")
+
+		self.tooltip.reset(screen)
 
 		if iCode == NotifyCode.NOTIFY_CURSOR_MOVE_ON:
 
 			if BASE == "WID":
 
 				if TYPE == "CIVIC":
-					if CASE[0] == "TEXT":
-						if ID != self.iCivicDisplayed:
-							self.setCivicText(screen, ID)
-					else:
-						self.updateTooltip(screen, GTM.parseCivicInfo(ID, False, True, False), uFont=self.aFontList[4])
+					if CASE[0] != "TEXT":
+						self.tooltip.handle(screen, GTM.parseCivicInfo(ID, False, True, False), uFont=self.aFontList[4])
+
+					elif ID != self.iCivicDisplayed:
+						self.setCivicText(screen, ID)
 
 			elif NAME == "CivicDisplay":
-				self.updateTooltip(screen, "Toggle Display Type")
+				self.tooltip.handle(screen, "Toggle Display Type")
 
 		elif iCode == NotifyCode.NOTIFY_CURSOR_MOVE_OFF:
 
@@ -570,9 +544,8 @@ class CvCivicsScreen:
 		# Clean up
 		screen = self.getScreen()
 		screen.setDying(True)
-		del self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT
-		del self.nWidgetCount, self.CyPlayer, self.iPlayer, self.iPlayerAct
-		del self.xRes, self.yRes, self.xMid, self.iSize, self.aFontList
-		del self.H_EDGE, self.Y_STAT_BAR, self.Y_MID_STAT_BAR, self.iCivicDisplayed
-		del self.civicListPerOption, self.currentCivics, self.originalCivics, self.aCoordList
-		del self.bDebug, self.bCanRevolution, self.HILITE, self.CANCEL, self.ScPnl
+		del self.InputData, self.nWidgetCount, self.CyPlayer, self.iPlayer, self.iPlayerAct, \
+			self.xRes, self.yRes, self.xMid, self.iSize, self.aFontList, \
+			self.H_EDGE, self.Y_STAT_BAR, self.Y_MID_STAT_BAR, self.iCivicDisplayed, \
+			self.civicListPerOption, self.currentCivics, self.originalCivics, self.aCoordList, \
+			self.bDebug, self.bCanRevolution, self.HILITE, self.CANCEL, self.ScPnl

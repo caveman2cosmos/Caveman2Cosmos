@@ -16,7 +16,7 @@
 			</option>
 
 			<!-- Automate Pillage Options: -->
-			 <option id="AvoidEnemyUnits" key="AvoidEnemyUnits" type="boolean" default="False" get="isAvoidEnemyUnits" set="setAvoidEnemyUnits">
+			<option id="AvoidEnemyUnits" key="AvoidEnemyUnits" type="boolean" default="False" get="isAvoidEnemyUnits" set="setAvoidEnemyUnits">
 				<change module="AutomatedSettings" function="changedAvoidEnemyUnits"/>
 			</option>
 
@@ -46,7 +46,7 @@
 			</option>
 
 			<list id="AutoHuntMinimumAttackOdds" key="AutoHuntMinimumAttackOdds" type="int" default="50"
-					values="100, 95, 90, 85, 80, 75, 70 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 0" 
+					values="100, 95, 90, 85, 80, 75, 70 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 0"
 					get="getAutoHuntMinimumAttackOdds" set="setAutoHuntMinimumAttackOdds">
 				<change module="AutomatedSettings" function="changedAutoHuntMinimumAttackOdds"/>
 			</list>
@@ -69,7 +69,7 @@
 			</option>
 
 			<list id="AutoPatrolMinimumAttackOdds" key="AutoPatrolMinimumAttackOdds" type="int" default="65"
-					values="100, 95, 90, 85, 80, 75, 70 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 0" 
+					values="100, 95, 90, 85, 80, 75, 70 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 0"
 					get="getAutoPatrolMinimumAttackOdds" set="setAutoPatrolMinimumAttackOdds">
 				<change module="AutomatedSettings" function="changedAutoPatrolMinimumAttackOdds"/>
 			</list>
@@ -84,7 +84,7 @@
 			</option>
 
 			<list id="AutoDefenseMinimumAttackOdds" key="AutoDefenseMinimumAttackOdds" type="int" default="75"
-					values="100, 95, 90, 85, 80, 75, 70 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 0" 
+					values="100, 95, 90, 85, 80, 75, 70 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 0"
 					get="getAutoDefenseMinimumAttackOdds" set="setAutoDefenseMinimumAttackOdds">
 				<change module="AutomatedSettings" function="changedAutoDefenseMinimumAttackOdds"/>
 			</list>
@@ -123,7 +123,7 @@
 			</option>
 
 			<list id="AutoPirateMinimumAttackOdds" key="AutoPirateMinimumAttackOdds" type="int" default="75"
-					values="100, 95, 90, 85, 80, 75, 70 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 0" 
+					values="100, 95, 90, 85, 80, 75, 70 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 0"
 					get="getAutoPirateMinimumAttackOdds" set="setAutoPirateMinimumAttackOdds">
 				<change module="AutomatedSettings" function="changedAutoPirateMinimumAttackOdds"/>
 			</list>
@@ -147,7 +147,7 @@
 			</option>
 
 			<list id="MinimumUpgradeGold" key="MinimumUpgradeGold" type="int" default="75"
-					values="50000, 40000, 30000, 25000, 22500, 20000, 19000, 18000, 17000, 16000, 15000, 14500, 14000, 13500, 13000, 12500, 12000, 11500, 11000, 10500, 10000, 9500, 9000, 8500, 8000, 7500, 7000, 6500, 6000, 5500, 5000, 4750, 4500, 4250, 4000, 3750, 3500, 3250, 3000, 2750, 2500, 2250, 2000, 1900, 1800, 1700, 1600, 1500, 1400, 1300, 1200, 1100, 1000, 950, 900, 850, 800, 750, 700, 650, 600, 550, 500, 475, 450, 425, 400, 375, 350, 325, 300, 275, 250, 225, 200, 175, 150, 125, 100, 75, 50, 40, 30, 25, 20, 15, 10, 5, 0" 
+					values="50000, 40000, 30000, 25000, 22500, 20000, 19000, 18000, 17000, 16000, 15000, 14500, 14000, 13500, 13000, 12500, 12000, 11500, 11000, 10500, 10000, 9500, 9000, 8500, 8000, 7500, 7000, 6500, 6000, 5500, 5000, 4750, 4500, 4250, 4000, 3750, 3500, 3250, 3000, 2750, 2500, 2250, 2000, 1900, 1800, 1700, 1600, 1500, 1400, 1300, 1200, 1100, 1000, 950, 900, 850, 800, 750, 700, 650, 600, 550, 500, 475, 450, 425, 400, 375, 350, 325, 300, 275, 250, 225, 200, 175, 150, 125, 100, 75, 50, 40, 30, 25, 20, 15, 10, 5, 0"
 					get="getMinimumUpgradeGold" set="setMinimumUpgradeGold">
 				<change module="AutomatedSettings" function="changedMinimumUpgradeGold"/>
 			</list>

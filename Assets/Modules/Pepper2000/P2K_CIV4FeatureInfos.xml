@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Feature -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Feature -->
 <Civ4FeatureInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<FeatureInfos>
 		<!-- Oort Cloud -->
@@ -28,7 +27,7 @@
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Sednoid -->
+		<!-- Sednoid -->
 		<FeatureInfo>
 			<Type>FEATURE_SEDNOID</Type>
 			<Description>TXT_KEY_FEATURE_SEDNOID</Description>
@@ -46,7 +45,7 @@
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Blue Dwarf -->
+		<!-- Blue Dwarf -->
 		<FeatureInfo>
 			<Type>FEATURE_BLUE_DWARF</Type>
 			<Description>TXT_KEY_FEATURE_BLUE_DWARF</Description>
@@ -61,14 +60,14 @@
 					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Blue Giant -->
+		<!-- Blue Giant -->
 		<FeatureInfo>
 			<Type>FEATURE_BLUE_SUPERGIANT</Type>
 			<Description>TXT_KEY_FEATURE_BLUE_SUPERGIANT</Description>
@@ -76,7 +75,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_BLUE_SUPERGIANT</ArtDefineTag>
 			<iPopDestroys>-1</iPopDestroys>
 			<bNoCity>1</bNoCity>
-            <iMovement>2</iMovement>
+			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
@@ -84,14 +83,14 @@
 					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Brown Dwarf -->
+		<!-- Brown Dwarf -->
 		<FeatureInfo>
 			<Type>FEATURE_BROWN_DWARF</Type>
 			<Description>TXT_KEY_FEATURE_BROWN_DWARF</Description>
@@ -109,7 +108,7 @@
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Carbon Planet -->
+		<!-- Carbon Planet -->
 		<FeatureInfo>
 			<Type>FEATURE_CARBON_PLANET</Type>
 			<Description>TXT_KEY_FEATURE_CARBON_PLANET</Description>
@@ -120,14 +119,14 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Chthonian Planet -->
+		<!-- Chthonian Planet -->
 		<FeatureInfo>
 			<Type>FEATURE_CHTHONIAN_PLANET</Type>
 			<Description>TXT_KEY_FEATURE_CHTHONIAN_PLANET</Description>
@@ -138,14 +137,14 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Desert Planet -->
+		<!-- Desert Planet -->
 		<FeatureInfo>
 			<Type>FEATURE_DESERT_PLANET</Type>
 			<Description>TXT_KEY_FEATURE_DESERT_PLANET</Description>
@@ -156,14 +155,14 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Dwarf Galaxy-->
+		<!-- Dwarf Galaxy-->
 		<FeatureInfo>
 			<Type>FEATURE_DWARF_GALAXY</Type>
 			<Description>TXT_KEY_FEATURE_DWARF_GALAXY</Description>
@@ -174,7 +173,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
@@ -185,7 +184,7 @@
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Galaxy -->
+		<!-- Galaxy -->
 		<FeatureInfo>
 			<Type>FEATURE_GALAXY</Type>
 			<Description>TXT_KEY_FEATURE_GALAXY</Description>
@@ -196,7 +195,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
@@ -207,7 +206,7 @@
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Hot Jupiter -->
+		<!-- Hot Jupiter -->
 		<FeatureInfo>
 			<Type>FEATURE_HOT_JUPITER</Type>
 			<Description>TXT_KEY_FEATURE_HOT_JUPITER</Description>
@@ -218,14 +217,14 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Mini Neptune -->
+		<!-- Mini Neptune -->
 		<FeatureInfo>
 			<Type>FEATURE_MINI_NEPTUNE</Type>
 			<Description>TXT_KEY_FEATURE_MINI_NEPTUNE</Description>
@@ -236,14 +235,14 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Planetary Ring -->
+		<!-- Planetary Ring -->
 		<FeatureInfo>
 			<Type>FEATURE_PLANETARY_RING</Type>
 			<Description>TXT_KEY_FEATURE_PLANETARY_RING</Description>
@@ -254,14 +253,14 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Quasar -->
+		<!-- Quasar -->
 		<FeatureInfo>
 			<Type>FEATURE_QUASAR</Type>
 			<Description>TXT_KEY_FEATURE_QUASAR</Description>
@@ -269,7 +268,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_QUASAR</ArtDefineTag>
 			<iPopDestroys>-1</iPopDestroys>
 			<bNoCity>1</bNoCity>
-            <iMovement>2</iMovement>
+			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
@@ -280,7 +279,7 @@
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Rogue Planet -->
+		<!-- Rogue Planet -->
 		<FeatureInfo>
 			<Type>FEATURE_ROGUE_PLANET</Type>
 			<Description>TXT_KEY_FEATURE_ROGUE_PLANET</Description>
@@ -291,14 +290,14 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Small Moon -->
+		<!-- Small Moon -->
 		<FeatureInfo>
 			<Type>FEATURE_SMALL_MOON</Type>
 			<Description>TXT_KEY_FEATURE_SMALL_MOON</Description>
@@ -309,14 +308,14 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Super Earth -->
+		<!-- Super Earth -->
 		<FeatureInfo>
 			<Type>FEATURE_SUPER_EARTH</Type>
 			<Description>TXT_KEY_FEATURE_SUPER_EARTH</Description>
@@ -327,29 +326,29 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- White Dwarf -->
+		<!-- White Dwarf -->
 		<FeatureInfo>
 			<Type>FEATURE_WHITE_DWARF</Type>
 			<Description>TXT_KEY_FEATURE_WHITE_DWARF</Description>
 			<Civilopedia>TXT_KEY_FEATURE_WHITE_DWARF_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_WHITE_DWARF</ArtDefineTag>
-            <iPopDestroys>-1</iPopDestroys>
+			<iPopDestroys>-1</iPopDestroys>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
@@ -360,37 +359,37 @@
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Water Planet -->
+		<!-- Water Planet -->
 		<FeatureInfo>
 			<Type>FEATURE_OCEAN_PLANET</Type>
 			<Description>TXT_KEY_FEATURE_OCEAN_PLANET</Description>
 			<Civilopedia>TXT_KEY_FEATURE_OCEAN_PLANET_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_OCEAN_PLANET</ArtDefineTag>
-            <iMovement>2</iMovement>
-            <iPopDestroys>-1</iPopDestroys>
+			<iMovement>2</iMovement>
+			<iPopDestroys>-1</iPopDestroys>
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_ASTEROIDS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-        <!-- Supermassive Black Hole -->
+		<!-- Supermassive Black Hole -->
 		<FeatureInfo>
 			<Type>FEATURE_SUPERMASSIVE_BLACK_HOLE</Type>
 			<Description>TXT_KEY_FEATURE_SUPERMASSIVE_BLACK_HOLE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_SUPERMASSIVE_BLACK_HOLE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_SUPERMASSIVE_BLACK_HOLE</ArtDefineTag>
-            <iPopDestroys>-1</iPopDestroys>
+			<iPopDestroys>-1</iPopDestroys>
 			<bNoCity>1</bNoCity>
-            <iMovement>2</iMovement>
+			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
@@ -524,11 +523,11 @@
 					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-                <TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>

@@ -262,7 +262,6 @@ void CvReachablePlotSet::Populate(int iRange)
 {
 	PROFILE_FUNC();
 
-	MEMORY_TRACK_EXEMPT();
 
 	if ( m_bCachable )
 	{

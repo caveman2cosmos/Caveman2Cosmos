@@ -5,7 +5,6 @@
 			<Type>BUILDING_TITAN_BASE</Type>
 			<Description>TXT_KEY_BUILDING_TITAN_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TITAN_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -30,7 +29,6 @@
 			<Type>BUILDING_TITAN_AIR_TRANSPORT</Type>
 			<Description>TXT_KEY_BUILDING_TITAN_AIR_TRANSPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_AIR_TRANSPORT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TITAN_AIR_TRANSPORT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_AIR_TRANSPORT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -53,7 +51,6 @@
 			<Type>BUILDING_TITAN_FERTILIZER_PLANT</Type>
 			<Description>TXT_KEY_BUILDING_TITAN_FERTILIZER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_FERTILIZER_PLANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TITAN_FERTILIZER_PLANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_FERTILIZER_PLANT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -78,7 +75,6 @@
 			<Type>BUILDING_TITAN_HYDROCARBON_REFINERY</Type>
 			<Description>TXT_KEY_BUILDING_TITAN_HYDROCARBON_REFINERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_HYDROCARBON_REFINERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TITAN_HYDROCARBON_REFINERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_HYDROCARBON_REFINERY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -103,7 +99,6 @@
 			<Type>BUILDING_TITAN_BIOFACTORY</Type>
 			<Description>TXT_KEY_BUILDING_TITAN_BIOFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_BIOFACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TITAN_BIOFACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_BIOFACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -129,7 +124,6 @@
 			<Type>BUILDING_TITAN_AMMONIA_ERUPTION</Type>
 			<Description>TXT_KEY_BUILDING_TITAN_AMMONIA_ERUPTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_AMMONIA_ERUPTION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TITAN_AMMONIA_ERUPTION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_AMMONIA_ERUPTION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -151,7 +145,6 @@
 			<Type>BUILDING_TITAN_SF6</Type>
 			<Description>TXT_KEY_BUILDING_TITAN_SF6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_SF6_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TITAN_SF6_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_SF6</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -172,7 +165,6 @@
 			<Type>BUILDING_TITAN_CONTINENT</Type>
 			<Description>TXT_KEY_BUILDING_TITAN_CONTINENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_CONTINENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TITAN_CONTINENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_CONTINENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -198,7 +190,6 @@
 			<Type>BUILDING_TITAN_ECOSYSTEM</Type>
 			<Description>TXT_KEY_BUILDING_TITAN_ECOSYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_ECOSYSTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TITAN_ECOSYSTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_ECOSYSTEM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -220,7 +211,6 @@
 			<Type>BUILDING_TITAN_SUPERCOMPUTER</Type>
 			<Description>TXT_KEY_BUILDING_TITAN_SUPERCOMPUTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_SUPERCOMPUTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TITAN_SUPERCOMPUTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_SUPERCOMPUTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -242,7 +232,6 @@
 			<Type>BUILDING_TITAN_ARCOLOGY</Type>
 			<Description>TXT_KEY_BUILDING_TITAN_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_ARCOLOGY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TITAN_ARCOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_ARCOLOGY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -270,7 +259,6 @@
 			<Type>BUILDING_TITAN_NITROGEN_EXPORTER</Type>
 			<Description>TXT_KEY_BUILDING_TITAN_NITROGEN_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_NITROGEN_EXPORTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TITAN_NITROGEN_EXPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_NITROGEN_EXPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -298,7 +286,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_TITAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_TITAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_TITAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_TITAN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_TITAN</MovieDefineTag>
@@ -338,7 +325,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_COMPUTRONIUM_TITAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COMPUTRONIUM_TITAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COMPUTRONIUM_TITAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COMPUTRONIUM_TITAN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COMPUTRONIUM_TITAN</MovieDefineTag>

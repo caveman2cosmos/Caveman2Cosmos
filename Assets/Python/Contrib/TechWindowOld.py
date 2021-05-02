@@ -273,7 +273,7 @@ class CvTechSplashScreen:
 		for eLoopBuilding in range(GC.getNumBuildingInfos()):
 			bTechFound = 0
 			if (isTechRequiredForBuilding(self.iTech, eLoopBuilding)):
-	        	screen.attachImageButton( panelName2, "", GC.getBuildingInfo(eLoopBuilding).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM,
+				screen.attachImageButton( panelName2, "", GC.getBuildingInfo(eLoopBuilding).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM,
 						WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, eLoopBuilding, 1, False )
 
 		# Improvements
@@ -296,7 +296,7 @@ class CvTechSplashScreen:
 #---Eingef�gt START - kann komplett gel�scht werden --------------
                 # Improvements
 		for j in range(GC.getNumBuildInfos()):
-				bTechFound = 0;
+				bTechFound = 0
 				if (GC.getBuildInfo(j).getTechPrereq() == -1):
 					bTechFound = 0
 					for k in range(GC.getNumFeatureInfos()):

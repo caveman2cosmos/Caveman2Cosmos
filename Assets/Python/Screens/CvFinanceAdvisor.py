@@ -1,5 +1,4 @@
 from CvPythonExtensions import *
-import PythonToolTip as pyTT
 
 # globals
 GC = CyGlobalContext()
@@ -17,11 +16,11 @@ class CvFinanceAdvisor:
 		screen = self.getScreen()
 		if screen.isActive():
 			return
-		# Tool Tip
-		self.szTextTT = ""
-		self.iOffsetTT = []
-		self.bLockedTT = False
-		G = GC.getGame()
+
+		import PythonToolTip
+		self.tooltip = PythonToolTip.PythonToolTip()
+
+		GAME = GC.getGame()
 		# Get screen resolution.
 		import ScreenResolution as SR
 		self.xRes = xRes = SR.x
@@ -47,7 +46,7 @@ class CvFinanceAdvisor:
 		self.Y_BOT_TEXT = yRes - H_EDGE_PANEL + 10
 
 		self.CyPlayer = CyPlayer = GC.getActivePlayer()
-		self.iPlayer = iPlayer = G.getActivePlayer()
+		self.iPlayer = iPlayer = GAME.getActivePlayer()
 		self.nWidgetCount = 0
 
 		self.goldFromCivs = 0
@@ -76,7 +75,7 @@ class CvFinanceAdvisor:
 		screen.setLabel("FinAdv_Header", "", uFontEdge + TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_TITLE",()), 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 0, 0)
 		screen.setText("FinAdv_Exit", "", uFontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
-		if G.isDebugMode():
+		if GAME.isDebugMode():
 			DD = "FinAdv_DebugDD"
 			screen.addDropDownBoxGFC(DD, 8, 0, 300, eWidGen, -1, -1, FontTypes.GAME_FONT)
 			for iPlayerX in range(GC.getMAX_PLAYERS()):
@@ -602,25 +601,6 @@ class CvFinanceAdvisor:
 			i -= 1
 		self.nWidgetCount = 0
 
-	# Tooltip
-	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
-		if not szText:
-			return
-		if szText != self.szTextTT:
-			self.szTextTT = szText
-			if not uFont:
-				uFont = self.aFontList[6]
-			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			POINT = Win32.getCursorPos()
-			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
-		else:
-			if xPos == yPos == -1:
-				POINT = Win32.getCursorPos()
-				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
-			screen.moveToFront("Tooltip")
-			screen.show("Tooltip")
-		if xPos == yPos == -1:
-			self.bLockedTT = True
 
 	#--------------------------#
 	# Base operation functions #
@@ -629,27 +609,22 @@ class CvFinanceAdvisor:
 		if CyInterface().isDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT):
 			CyInterface().setDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT, False)
 			self.updateContents()
-		if self.bLockedTT:
-			POINT = Win32.getCursorPos()
-			iX = POINT.x + self.iOffsetTT[0]
-			iY = POINT.y + self.iOffsetTT[1]
-			if iX < 0: iX = 0
-			if iY < 0: iY = 0
-			self.getScreen().moveItem("Tooltip", iX, iY, 0)
+		if self.tooltip.bLockedTT:
+			self.tooltip.handle(self.getScreen())
 
 	# Will handle the input for this screen...
-	def handleInput (self, inputClass):
+	def handleInput(self, inputClass):
 
 		iCode	= inputClass.eNotifyCode
 		NAME	= inputClass.szFunctionName
 
 		screen = self.getScreen()
-		screen.hide("Tooltip") # Remove potential Help Text
+		self.tooltip.reset(screen)
 
 		if iCode == 4: # Mouse Enter
 
 			if NAME == "unitUpkeep":
-				self.updateTooltip(screen, CyGameTextMgr().getFinanceUnitUpkeepString(self.iPlayer))
+				self.tooltip.handle(screen, CyGameTextMgr().getFinanceUnitUpkeepString(self.iPlayer))
 
 		elif iCode == 11: # List Select
 			self.iPlayer = screen.getPullDownData("FinAdv_DebugDD", inputClass.iData)
@@ -663,4 +638,4 @@ class CvFinanceAdvisor:
 		screen = self.getScreen()
 		screen.setDying(True)
 		del self.nWidgetCount, self.CyPlayer, self.iPlayer, self.bStrike, self.aFontList, self.iconCommerceList, \
-			self.szTreasury, self.yCommerceSlider, self.yBuildingExpenses, self.szTextTT, self.iOffsetTT, self.bLockedTT
+			self.szTreasury, self.yCommerceSlider, self.yBuildingExpenses

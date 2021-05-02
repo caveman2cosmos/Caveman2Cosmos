@@ -4966,7 +4966,7 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-		</CivicInfo>		
+		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_MILITARY</CivicOptionType>
 			<Type>CIVIC_MILITIA</Type>
@@ -5310,16 +5310,16 @@
 			<SpecialistValids/>
 			<UnitCombatProductionModifiers>
 				<UnitCombatProductionModifier>
-						<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-						<iProductionModifier>20</iProductionModifier>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
-						<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-						<iProductionModifier>15</iProductionModifier>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iProductionModifier>15</iProductionModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
-						<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-						<iProductionModifier>15</iProductionModifier>
+					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<iProductionModifier>15</iProductionModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 			<BuildingHappinessChanges/>
@@ -5438,8 +5438,8 @@
 					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
-						<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-						<iProductionModifier>15</iProductionModifier>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iProductionModifier>15</iProductionModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
@@ -11336,16 +11336,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges>
-				<!--
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GUILDS</ImprovementType>
-					<ImprovementYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-					</ImprovementYields>
-				</ImprovementYieldChange>
-				-->
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COTTAGE</ImprovementType>
 					<ImprovementYields>
@@ -11833,7 +11823,7 @@
 				<iYield>1</iYield>
 				<iYield>0</iYield>
 			</LandmarkYieldChanges>
-		</CivicInfo>		
+		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
 			<Type>CIVIC_SURVIVAL</Type>
@@ -19322,7 +19312,7 @@
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<Flavors/>
-		</CivicInfo>		
+		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
 			<Type>CIVIC_HUNTER_GATHERING</Type>
@@ -20375,7 +20365,7 @@
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 			<Flavors/>
-		</CivicInfo>		
+		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GARBAGE</CivicOptionType>
 			<Type>CIVIC_GARBAGE_ANYWHERE</Type>

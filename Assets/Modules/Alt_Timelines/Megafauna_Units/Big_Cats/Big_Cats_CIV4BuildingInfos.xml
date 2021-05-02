@@ -9,7 +9,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BIG_CAT_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIG_CAT_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BIG_CAT_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIG_CAT_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BIG_CAT_TRAINER</MovieDefineTag>
@@ -21,7 +20,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</FreeBuilding>
-            <Bonus>BONUS_CAT</Bonus>
+			<Bonus>BONUS_CAT</Bonus>
 			<iCost>624</iCost>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
@@ -71,7 +70,6 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_BIG_CAT_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIG_CAT_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BIG_CAT_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIG_CAT_TRAINER_EFFECT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
@@ -83,7 +81,6 @@
 			<Type>BUILDING_ANIMAL_TOTEM_CATS</Type>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_TOTEM_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
@@ -136,7 +133,6 @@
 			<Type>BUILDING_POLICE_CAT</Type>
 			<Description>TXT_KEY_BUILDING_POLICE_CAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_POLICE_CAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_POLICE_CAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POLICE_CAT</ArtDefineTag>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
@@ -148,7 +144,6 @@
 			</MapCategoryTypes>
 			<iCost>800</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAsset>2</iAsset>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>

@@ -928,7 +928,7 @@ class Revolution:
 							revIdxHist['Events'][0] += iThisRevIdxChange
 							RevData.updateCityVal(cityX,'RevIdxHistory',revIdxHist)
 
-			if( not sumRevIdx == 0 ) :
+			if sumRevIdx != 0:
 				if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Avg net effect for %s: %d"%(pPlayer.getCivilizationDescription(0),sumRevIdx))
 
 

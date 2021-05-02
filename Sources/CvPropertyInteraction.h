@@ -22,6 +22,7 @@ public:
 	CvPropertyInteraction();
 	CvPropertyInteraction(PropertyTypes eSourceProperty, PropertyTypes eTargetProperty);
 	virtual ~CvPropertyInteraction();
+
 	PropertyTypes getSourceProperty() const;
 	PropertyTypes getTargetProperty() const;
 	void setSourceProperty(PropertyTypes eProperty);
@@ -33,7 +34,7 @@ public:
 	int getRelationData() const;
 	void setRelationData(int iRelationData);
 
-	bool isActive(CvGameObject* pObject) const;
+	bool isActive(const CvGameObject* pObject) const;
 
 	virtual PropertyInteractionTypes getType() const = 0;
 
@@ -43,7 +44,7 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertyInteraction* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertyInteraction* pProp);
 
 	virtual void getCheckSum(unsigned int& iSum) const;
 protected:
@@ -73,7 +74,7 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertyInteraction* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertyInteraction* pProp);
 
 	virtual void getCheckSum(unsigned int& iSum) const;
 
@@ -100,7 +101,7 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertyInteraction* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertyInteraction* pProp);
 
 	virtual void getCheckSum(unsigned int& iSum) const;
 
@@ -128,7 +129,7 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertyInteraction* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertyInteraction* pProp);
 
 	virtual void getCheckSum(unsigned int& iSum) const;
 

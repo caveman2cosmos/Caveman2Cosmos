@@ -422,15 +422,15 @@ class WBGameDataScreen:
 
 				if iMaxTurns:
 					iEstimateEndTurn = iGameTurn + iMaxTurns
-					self.GAME.setEstimateEndTurn(iGameTurn + iMaxTurns);
+					self.GAME.setEstimateEndTurn(iGameTurn + iMaxTurns)
 				else:
-					iEstimateEndTurn = 0;
+					iEstimateEndTurn = 0
 					gameSpeed = self.GC.getGameSpeedInfo(self.GAME.getGameSpeedType())
 
 					for i in xrange(gameSpeed.getNumTurnIncrements()):
-						iEstimateEndTurn += gameSpeed.getGameTurnInfo(i).iNumGameTurnsPerIncrement;
+						iEstimateEndTurn += gameSpeed.getGameTurnInfo(i).iNumGameTurnsPerIncrement
 
-					self.GAME.setEstimateEndTurn(iEstimateEndTurn);
+					self.GAME.setEstimateEndTurn(iEstimateEndTurn)
 
 				screen.hide("EstimateEndTurn")
 				screen.modifyLabel("EstimateEndTurn", self.szEstimateEndTurn % iEstimateEndTurn, 1<<0)
@@ -587,7 +587,7 @@ class WBGameDataScreen:
 		if iCode == 4: # Mouse Enter
 
 			if NAME == "GameOption":
-				self.WB.updateTooltip(screen, self.GC.getGameOptionInfo(ID).getHelp())
+				self.WB.tooltip.handle(screen, self.GC.getGameOptionInfo(ID).getHelp())
 
 		elif not iCode: # click
 

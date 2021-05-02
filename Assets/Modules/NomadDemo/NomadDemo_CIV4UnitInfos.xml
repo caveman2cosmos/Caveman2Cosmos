@@ -3,7 +3,6 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- ReModified by StrategyOnly -->
-<!-- -->
 <!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
@@ -11,57 +10,57 @@
 			<Type>UNIT_BAND</Type>
 			<iCombat>2</iCombat>
 			<iAnimalCombat>50</iAnimalCombat>
-      <PropertyManipulators>
-        <PropertyPropagator>
-          <PropertyPropagatorType>PROPERTYPROPAGATOR_GATHER</PropertyPropagatorType>
-          <PropertyType>PROPERTY_FRUIT</PropertyType>
-          <TargetObjectType>GAMEOBJECT_PLOT</TargetObjectType>
-          <TargetRelationType>RELATION_NEAR</TargetRelationType>
-          <iTargetDistance>1</iTargetDistance>
-          <iAmountPerTurn>20</iAmountPerTurn>
-        </PropertyPropagator>
-        <PropertyPropagator>
-          <PropertyPropagatorType>PROPERTYPROPAGATOR_GATHER</PropertyPropagatorType>
-          <PropertyType>PROPERTY_HUNT</PropertyType>
-          <TargetObjectType>GAMEOBJECT_PLOT</TargetObjectType>
-          <TargetRelationType>RELATION_NEAR</TargetRelationType>
-          <iTargetDistance>1</iTargetDistance>
-          <iAmountPerTurn>20</iAmountPerTurn>
-        </PropertyPropagator>
-        <PropertyPropagator>
-          <PropertyPropagatorType>PROPERTYPROPAGATOR_GATHER</PropertyPropagatorType>
-          <PropertyType>PROPERTY_MATERIAL</PropertyType>
-          <TargetObjectType>GAMEOBJECT_PLOT</TargetObjectType>
-          <TargetRelationType>RELATION_NEAR</TargetRelationType>
-          <iTargetDistance>1</iTargetDistance>
-          <iAmountPerTurn>20</iAmountPerTurn>
-        </PropertyPropagator>
-        <PropertyPropagator>
-          <PropertyPropagatorType>PROPERTYPROPAGATOR_GATHER</PropertyPropagatorType>
-          <PropertyType>PROPERTY_LORE</PropertyType>
-          <TargetObjectType>GAMEOBJECT_PLOT</TargetObjectType>
-          <TargetRelationType>RELATION_NEAR</TargetRelationType>
-          <iTargetDistance>1</iTargetDistance>
-          <iAmountPerTurn>20</iAmountPerTurn>
-        </PropertyPropagator>
-      </PropertyManipulators>
-      <Actions>
+			<PropertyManipulators>
+				<PropertyPropagator>
+					<PropertyPropagatorType>PROPERTYPROPAGATOR_GATHER</PropertyPropagatorType>
+					<PropertyType>PROPERTY_FRUIT</PropertyType>
+					<TargetObjectType>GAMEOBJECT_PLOT</TargetObjectType>
+					<TargetRelationType>RELATION_NEAR</TargetRelationType>
+					<iTargetDistance>1</iTargetDistance>
+					<iAmountPerTurn>20</iAmountPerTurn>
+				</PropertyPropagator>
+				<PropertyPropagator>
+					<PropertyPropagatorType>PROPERTYPROPAGATOR_GATHER</PropertyPropagatorType>
+					<PropertyType>PROPERTY_HUNT</PropertyType>
+					<TargetObjectType>GAMEOBJECT_PLOT</TargetObjectType>
+					<TargetRelationType>RELATION_NEAR</TargetRelationType>
+					<iTargetDistance>1</iTargetDistance>
+					<iAmountPerTurn>20</iAmountPerTurn>
+				</PropertyPropagator>
+				<PropertyPropagator>
+					<PropertyPropagatorType>PROPERTYPROPAGATOR_GATHER</PropertyPropagatorType>
+					<PropertyType>PROPERTY_MATERIAL</PropertyType>
+					<TargetObjectType>GAMEOBJECT_PLOT</TargetObjectType>
+					<TargetRelationType>RELATION_NEAR</TargetRelationType>
+					<iTargetDistance>1</iTargetDistance>
+					<iAmountPerTurn>20</iAmountPerTurn>
+				</PropertyPropagator>
+				<PropertyPropagator>
+					<PropertyPropagatorType>PROPERTYPROPAGATOR_GATHER</PropertyPropagatorType>
+					<PropertyType>PROPERTY_LORE</PropertyType>
+					<TargetObjectType>GAMEOBJECT_PLOT</TargetObjectType>
+					<TargetRelationType>RELATION_NEAR</TargetRelationType>
+					<iTargetDistance>1</iTargetDistance>
+					<iAmountPerTurn>20</iAmountPerTurn>
+				</PropertyPropagator>
+			</PropertyManipulators>
+			<Actions>
 				<Action>
 					<MissionType>MISSION_NOMAD_DEFENDER</MissionType>
 					<bKill>0</bKill>
 					<PropertyCost>
-					  <Property>
-					    <PropertyType>PROPERTY_FRUIT</PropertyType>
-					    <iPropertyValue>60</iPropertyValue>
-					  </Property>
-					  <Property>
-					    <PropertyType>PROPERTY_HUNT</PropertyType>
-					    <iPropertyValue>40</iPropertyValue>
-					  </Property>
-					  <Property>
-					    <PropertyType>PROPERTY_MATERIAL</PropertyType>
-					    <iPropertyValue>100</iPropertyValue>
-					  </Property>
+						<Property>
+							<PropertyType>PROPERTY_FRUIT</PropertyType>
+							<iPropertyValue>60</iPropertyValue>
+						</Property>
+						<Property>
+							<PropertyType>PROPERTY_HUNT</PropertyType>
+							<iPropertyValue>40</iPropertyValue>
+						</Property>
+						<Property>
+							<PropertyType>PROPERTY_MATERIAL</PropertyType>
+							<iPropertyValue>100</iPropertyValue>
+						</Property>
 					</PropertyCost>
 					<ActionOutcomes>
 						<Outcome>
@@ -75,18 +74,18 @@
 					<MissionType>MISSION_NOMAD_RESEARCH</MissionType>
 					<bKill>0</bKill>
 					<PropertyCost>
-					  <Property>
-					    <PropertyType>PROPERTY_FRUIT</PropertyType>
-					    <iPropertyValue>30</iPropertyValue>
-					  </Property>
-					  <Property>
-					    <PropertyType>PROPERTY_HUNT</PropertyType>
-					    <iPropertyValue>30</iPropertyValue>
-					  </Property>
-					  <Property>
-					    <PropertyType>PROPERTY_LORE</PropertyType>
-					    <iPropertyValue>100</iPropertyValue>
-					  </Property>
+						<Property>
+							<PropertyType>PROPERTY_FRUIT</PropertyType>
+							<iPropertyValue>30</iPropertyValue>
+						</Property>
+						<Property>
+							<PropertyType>PROPERTY_HUNT</PropertyType>
+							<iPropertyValue>30</iPropertyValue>
+						</Property>
+						<Property>
+							<PropertyType>PROPERTY_LORE</PropertyType>
+							<iPropertyValue>100</iPropertyValue>
+						</Property>
 					</PropertyCost>
 					<ActionOutcomes>
 						<Outcome>
@@ -115,18 +114,18 @@
 					<MissionType>MISSION_NOMAD_RECON</MissionType>
 					<bKill>0</bKill>
 					<PropertyCost>
-					  <Property>
-					    <PropertyType>PROPERTY_FRUIT</PropertyType>
-					    <iPropertyValue>25</iPropertyValue>
-					  </Property>
-					  <Property>
-					    <PropertyType>PROPERTY_HUNT</PropertyType>
-					    <iPropertyValue>100</iPropertyValue>
-					  </Property>
-					  <Property>
-					    <PropertyType>PROPERTY_MATERIAL</PropertyType>
-					    <iPropertyValue>75</iPropertyValue>
-					  </Property>
+						<Property>
+							<PropertyType>PROPERTY_FRUIT</PropertyType>
+							<iPropertyValue>25</iPropertyValue>
+						</Property>
+						<Property>
+							<PropertyType>PROPERTY_HUNT</PropertyType>
+							<iPropertyValue>100</iPropertyValue>
+						</Property>
+						<Property>
+							<PropertyType>PROPERTY_MATERIAL</PropertyType>
+							<iPropertyValue>75</iPropertyValue>
+						</Property>
 					</PropertyCost>
 					<ActionOutcomes>
 						<Outcome>
@@ -136,7 +135,7 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
-      </Actions>
+			</Actions>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

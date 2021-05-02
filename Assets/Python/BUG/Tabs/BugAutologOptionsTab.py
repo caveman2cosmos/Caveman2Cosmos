@@ -28,7 +28,7 @@ class BugAutologOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.attachHSeparator(column, column + "Sep1")
 		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
-		self.addIntDropdown(screen, left, left, "Autolog__4000BC")
+		self.addIntDropdown(screen, left, left, "Autolog__StartDate")
 		self.addCheckbox(screen, left, "Autolog__DefaultFileName")
 		self.addCheckbox(screen, left, "Autolog__IBT")
 		self.addCheckbox(screen, left, "Autolog__ColorCoding")
@@ -102,7 +102,6 @@ class BugAutologOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, col3, "Autolog__LogWar")
 		self.addCheckbox(screen, col4, "Autolog__LogVassals")
 		self.addCheckbox(screen, col5, "Autolog__LogCivics")
-		#self.addCheckbox(screen, col3, "Autolog__LogTradeAll")
 
 		screen.attachHSeparator(right, right + "Sep7a")
 		screen.attachHSeparator(left, left + "Sep7b")

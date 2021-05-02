@@ -6,7 +6,6 @@
 			<Description>TXT_KEY_ROUTE_TRAIL</Description>
 			<iValue>1</iValue>
 			<iAdvancedStartCost>5</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>100</iMovement>
 			<iFlatMovement>100</iFlatMovement>
 			<BonusType>NONE</BonusType>
@@ -20,7 +19,6 @@
 			<Description>TXT_KEY_ROUTE_PATH</Description>
 			<iValue>2</iValue>
 			<iAdvancedStartCost>6</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>80</iMovement>
 			<iFlatMovement>80</iFlatMovement>
 			<BonusType>NONE</BonusType>
@@ -34,7 +32,6 @@
 			<Description>TXT_KEY_ROUTE_ROAD</Description>
 			<iValue>3</iValue>
 			<iAdvancedStartCost>12</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>60</iMovement>
 			<iFlatMovement>60</iFlatMovement>
 			<BonusType>NONE</BonusType>
@@ -48,7 +45,6 @@
 			<Description>TXT_KEY_ROUTE_PAVED_ROAD</Description>
 			<iValue>4</iValue>
 			<iAdvancedStartCost>8</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>40</iMovement>
 			<iFlatMovement>40</iFlatMovement>
 			<BonusType>BONUS_STONE</BonusType>
@@ -62,7 +58,6 @@
 			<Description>TXT_KEY_ROUTE_RAILROAD</Description>
 			<iValue>5</iValue>
 			<iAdvancedStartCost>18</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>40</iMovement>
 			<iFlatMovement>16</iFlatMovement>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
@@ -88,7 +83,6 @@
 			<!-- <iValue>6</iValue> -->
 			<iValue>7</iValue>
 			<iAdvancedStartCost>18</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>36</iMovement>
 			<iFlatMovement>12</iFlatMovement>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
@@ -106,7 +100,6 @@
 			<Description>TXT_KEY_ROUTE_HIGHWAY</Description>
 			<iValue>6</iValue>
 			<iAdvancedStartCost>12</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>22</iMovement>
 			<iFlatMovement>22</iFlatMovement>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
@@ -120,7 +113,6 @@
 			<Description>TXT_KEY_ROUTE_MAGLEV</Description>
 			<iValue>8</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>22</iMovement>
 			<iFlatMovement>11</iFlatMovement>
 			<BonusType>BONUS_COPPER_WARES</BonusType>
@@ -143,7 +135,6 @@
 			<Description>TXT_KEY_ROUTE_VACTRAIN</Description>
 			<iValue>9</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>24</iMovement>
 			<iFlatMovement>8</iFlatMovement>
 			<BonusType>BONUS_TITANIUM_WARES</BonusType>
@@ -165,7 +156,6 @@
 			<Description>TXT_KEY_ROUTE_GRAVITY_TRAIN</Description>
 			<iValue>10</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>15</iMovement>
 			<iFlatMovement>5</iFlatMovement>
 			<BonusType>BONUS_LIQUID_METAL</BonusType>
@@ -182,7 +172,6 @@
 			<Description>TXT_KEY_ROUTE_JUMPLANE</Description>
 			<iValue>11</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>15</iMovement>
 			<iFlatMovement>3</iFlatMovement>
 			<BonusType>NONE</BonusType>
@@ -200,7 +189,6 @@
 			<Description>TXT_KEY_ROUTE_TUNNEL</Description>
 			<iValue>1</iValue>
 			<iAdvancedStartCost>20</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>55</iMovement>
 			<iFlatMovement>22</iFlatMovement>
 			<bSeaTunnel>1</bSeaTunnel>

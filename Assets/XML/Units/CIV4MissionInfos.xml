@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Mission Infos -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Mission Infos -->
 <Civ4MissionInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<!--Changes must be reflected in CvEnums.h-->
 	<MissionInfos>
@@ -706,7 +705,7 @@
 		<MissionInfo>
 			<Type>MISSION_BEGIN_COMBAT</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_BEGIN_COMBAT</EntityEventType>
 			<iTime>0</iTime>
@@ -717,7 +716,7 @@
 		<MissionInfo>
 			<Type>MISSION_END_COMBAT</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_END_COMBAT</EntityEventType>
 			<iTime>0</iTime>
@@ -728,7 +727,7 @@
 		<MissionInfo>
 			<Type>MISSION_AIRSTRIKE</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_AIRSTRIKE</EntityEventType>
 			<iTime>16</iTime>
@@ -739,7 +738,7 @@
 		<MissionInfo>
 			<Type>MISSION_SURRENDER</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_SURRENDER</EntityEventType>
 			<iTime>10</iTime>
@@ -750,7 +749,7 @@
 		<MissionInfo>
 			<Type>MISSION_CAPTURED</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_CAPTURED</EntityEventType>
 			<iTime>8</iTime>
@@ -761,7 +760,7 @@
 		<MissionInfo>
 			<Type>MISSION_IDLE</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_IDLE</EntityEventType>
 			<iTime>0</iTime>
@@ -772,7 +771,7 @@
 		<MissionInfo>
 			<Type>MISSION_DIE</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_DIE</EntityEventType>
 			<iTime>0</iTime>
@@ -783,7 +782,7 @@
 		<MissionInfo>
 			<Type>MISSION_DAMAGE</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_DAMAGE</EntityEventType>
 			<iTime>0</iTime>
@@ -794,7 +793,7 @@
 		<MissionInfo>
 			<Type>MISSION_MULTI_SELECT</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_MULTI_SELECT</EntityEventType>
 			<iTime>0</iTime>
@@ -805,7 +804,7 @@
 		<MissionInfo>
 			<Type>MISSION_MULTI_DESELECT</Type>
 			<Description>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Description>
-			<Help>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_MULTI_DESELECT</EntityEventType>
 			<iTime>0</iTime>
@@ -1690,7 +1689,7 @@
 			<Button>Art/Interface/MainScreen/CityScreen/slave_tutor.dds</Button>
 		</MissionInfo>
 		<!--
- Removed until they can only speed up military production
+		Removed until they can only speed up military production
 		<MissionInfo>
 			<Type>MISSION_JOIN_CITY_AS_SLAVE_MILITARY</Type>
 			<Description>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_MILITARY</Description>
@@ -1704,7 +1703,7 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_military.dds</Button>
 		</MissionInfo>
-		-->
+ 		-->
 		<MissionInfo>
 			<Type>MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Type>
 			<Description>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Description>
@@ -1734,7 +1733,7 @@
 		<MissionInfo>
 			<Type>MISSION_REMOVE_WV_SLAVERY</Type>
 			<Description>TXT_KEY_MISSION_REMOVE_WV_SLAVERY</Description>
-			<Help>TXT_KEY_MISSION_REMOVE_WV_SLAVERY</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1760,7 +1759,7 @@
 		<MissionInfo>
 			<Type>MISSION_REMOVE_WV_CANNIBALISM</Type>
 			<Description>TXT_KEY_MISSION_REMOVE_WV_CANNIBALISM</Description>
-			<Help>TXT_KEY_MISSION_REMOVE_WV_CANNIBALISM</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1786,7 +1785,7 @@
 		<MissionInfo>
 			<Type>MISSION_REMOVE_WV_HUMAN_SACRIFICE</Type>
 			<Description>TXT_KEY_MISSION_REMOVE_WV_HUMAN_SACRIFICE</Description>
-			<Help>TXT_KEY_MISSION_REMOVE_WV_HUMAN_SACRIFICE</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>

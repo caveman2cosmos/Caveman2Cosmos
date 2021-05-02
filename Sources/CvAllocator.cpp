@@ -163,7 +163,7 @@ unsigned int memSize(void* a)
 
 namespace MemTrack
 {
-	std::ofstream mem_log("memory.log");
+	std::ofstream mem_log("Mods/Caveman2Cosmos/memory.log");
 	/* ------------------------------------------------------------ */
 	/* --------------------- class BlockHeader -------------------- */
 	/* ------------------------------------------------------------ */

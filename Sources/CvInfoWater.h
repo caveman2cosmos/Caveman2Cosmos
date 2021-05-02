@@ -48,15 +48,7 @@ public:
 	DllExport const TCHAR *getTransitionTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-/************************************************************************************************/
-/* XMLCOPY                                 11/20/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void copyNonDefaults(CvWaterPlaneInfo* pClassInfo, CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
+	void copyNonDefaults(CvWaterPlaneInfo* pClassInfo);
 
 protected:
 
@@ -102,15 +94,7 @@ public:
 	DllExport const TCHAR * getBaseTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-/************************************************************************************************/
-/* XMLCOPY                                 11/20/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void copyNonDefaults(CvTerrainPlaneInfo* pClassInfo, CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
+	void copyNonDefaults(CvTerrainPlaneInfo* pClassInfo);
 
 protected:
 
@@ -149,15 +133,7 @@ public:
 	DllExport const TCHAR * getBaseTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-/************************************************************************************************/
-/* XMLCOPY                                 11/20/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void copyNonDefaults(CvCameraOverlayInfo* pClassInfo, CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
+	void copyNonDefaults(CvCameraOverlayInfo* pClassInfo);
 
 protected:
 

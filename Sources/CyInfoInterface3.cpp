@@ -27,8 +27,6 @@ void CyInfoPythonInterface3()
 
 		// Arrays
 		.def("getYield", &CvTerrainInfo::getYield, "int (int i)")
-		.def("getRiverYieldChange", &CvTerrainInfo::getRiverYieldChange, "int (int i)")
-		.def("getHillsYieldChange", &CvTerrainInfo::getHillsYieldChange, "int (int i)")
 	;
 
 
@@ -151,15 +149,8 @@ void CyInfoPythonInterface3()
 		.def("getMovieSound", &CvCorporationInfo::getMovieSound, "string ()")
 		.def("getSound", &CvCorporationInfo::getSound, "string ()")
 
-/************************************************************************************************/
-/* TGA_INDEXATION                          03/25/08                                MRGENIE      */
-/*                                                                                              */
-/* reorganizing the Religion vector by checking the TGAIndex of the xml and placing everything  */
-/* properly                                                                                     */
-/************************************************************************************************/
-
 		// Arrays
-		.def("getPrereqBonus", &CvCorporationInfo::getPrereqBonus, "int (int i)")
+		.def("getPrereqBonuses", &CvCorporationInfo::cyGetPrereqBonuses)
 		.def("getCommerceProduced", &CvCorporationInfo::getCommerceProduced, "int (int i)")
 		.def("getYieldProduced", &CvCorporationInfo::getYieldProduced, "int (int i)")
 	;
@@ -204,10 +195,6 @@ void CyInfoPythonInterface3()
 		.def("getOceanMinAreaSize", &CvWorldInfo::getOceanMinAreaSize, "int ()")
 	;
 
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	python::class_<CvMapInfo, python::bases<CvInfoBase> >("CvMapInfo")
 
 		.def("getGridWidth", &CvMapInfo::getGridWidth, "int ()")
@@ -215,18 +202,7 @@ void CyInfoPythonInterface3()
 		.def("getWrapX", &CvMapInfo::getWrapX, "int ()")
 		.def("getWrapY", &CvMapInfo::getWrapY, "int ()")
 		.def("getMapScript", &CvMapInfo::getMapScript, "string ()")
-		/*.def("isTechShareMap", &CvMapInfo::isTechShareMap, "bool (int i)")*/
 	;
-
-
-	python::class_<CvMapSwitchInfo, python::bases<CvInfoBase> >("CvMapSwitchInfo")
-		.def("getMap", &CvMapSwitchInfo::getMap, "int ()")
-		.def("getEvent", &CvMapSwitchInfo::getEvent, "string ()")
-	;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
-
 
 	python::class_<CvClimateInfo, python::bases<CvInfoBase> >("CvClimateInfo")
 

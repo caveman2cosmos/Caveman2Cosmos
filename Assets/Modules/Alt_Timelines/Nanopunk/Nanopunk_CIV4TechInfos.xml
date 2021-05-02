@@ -6,7 +6,6 @@
 			<Type>TECH_NANOPUNK</Type>
 			<Description>TXT_KEY_TECH_NANOPUNK</Description>
 			<Civilopedia>TXT_KEY_TECH_NANOPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_NANOPUNK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<Quote>TXT_KEY_TECH_NANOPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_NANOPUNK</Sound>
@@ -19,8 +18,8 @@
 				<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_HYPERSONIC_FLIGHT</PrereqTech>
 				<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
+				<PrereqTech>TECH_HYPERSONIC_FLIGHT</PrereqTech>
 			</AndPreReqs>
 			<!-- System -->
 			<iAsset>48</iAsset>
