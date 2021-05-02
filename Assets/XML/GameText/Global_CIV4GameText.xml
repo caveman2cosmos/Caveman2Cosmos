@@ -16224,14 +16224,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>T&#233;rmino</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PITBOSS_LEADER</Tag>
-		<English>Leader</English>
-		<French>Chef</French>
-		<German>Staatsoberhaupt</German>
-		<Italian>Leader</Italian>
-		<Spanish>L&#237;der</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_ADVISOR_POPUPS</Tag>
 		<English>Advisor Pop-Ups</English>
 		<French>Info-bulle du conseiller</French>
