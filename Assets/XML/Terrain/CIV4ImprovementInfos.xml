@@ -3,9 +3,8 @@
 	- Terraforming and Feature changing "improvements", indicated by a corresponding FeatureChange
 	or TerrainChange tag in the Civ4BuildInfos, don't get placed as improvements ingame. The entry here
 	only controls allowing/disallowing by current plot, e.g. FeatureMakesValids or TerrainMakesValids.
-	- Ordering of entries roughly mimics that of CIV4BuildInfos
-	- SUMBERGED_TOWN_DEEP is currently unused, instead SUBMERGED_TOWN unlocks the ability to build at lower
-	depths with tech advancement. Could stand to be separated if someone cares to flesh out a difference.
+	- Ordering of entries roughly mimics that of CIV4CreatingBuilds
+	- SUBMERGED_TOWN unlocks the ability to build at lower depths with tech advancement. 
 -->
 <Civ4ImprovementInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<ImprovementInfos>
@@ -2333,6 +2332,7 @@
 			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Mushroom Gatherer -> Vertical Farm -->
+		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MUSHROOM_GATHERER</Type>
 			<CreatingBuilds>
@@ -2743,6 +2743,7 @@
 			</PropertyManipulators>
 		</ImprovementInfo>
 		<!-- Tar Gatherer* -> Hydrocarbon Well -->
+		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TAR_GATHERER</Type>
 			<CreatingBuilds>
@@ -3169,6 +3170,7 @@
 			</RouteYieldChanges>
 		</ImprovementInfo>
 		<!-- Salt Gatherer* -> Quarry (Information Lifestyle Obsolete) -->
+		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SALT_GATHERER</Type>
 			<CreatingBuilds>
@@ -4202,6 +4204,7 @@
 			</PropertyManipulators>
 		</ImprovementInfo>
 		<!-- Seed Camp -> (Various, Classical) -->
+		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SEED_CAMP</Type>
 			<BuildInfos>
@@ -4323,6 +4326,7 @@
 			</AlternativeImprovementUpgradeTypes>
 		</ImprovementInfo>
 		<!-- Seasonal Camp -> (Various, Renaissance Lifestyle) -->
+		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SEASONAL_CAMP</Type>
 			<BuildInfos>
@@ -7157,6 +7161,7 @@
 			<ImprovementUpgrade>IMPROVEMENT_QUARRY</ImprovementUpgrade>
 		</ImprovementInfo>
 		<!-- Stone Tools Workshop -> Mine OR Early Quarry Lifestyle -->
+		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_STONE_TOOLS_WORKSHOP</Type>
 			<CreatingBuilds>
@@ -10014,6 +10019,7 @@
 		</ImprovementInfo>
 		<!-- PREHISTORIC CAMPS -->
 		<!-- Jungle Camp | End - Information Lifestyle -->
+		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_JUNGLE_CAMP</Type>
 			<BuildInfos>
@@ -10191,6 +10197,7 @@
 			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Desert Camp | End - Information Lifestyle -->
+		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_DESERT_CAMP</Type>
 			<BuildInfos>
@@ -10340,6 +10347,7 @@
 			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Wetlands Camp | End - Information Lifestyle -->
+		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WETLANDS_CAMP</Type>
 			<BuildInfos>
@@ -10731,6 +10739,7 @@
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<!-- Wooden Watchtower -> Stone Watchtower -->
+		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WOODEN_WATCHTOWER</Type>
 			<BuildInfos>
@@ -11143,6 +11152,7 @@
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<!-- Fortified Cave -> Fortified Cave w/Cache -->
+		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FORTIFIED_CAVE</Type>
 			<BuildInfos>
@@ -11170,6 +11180,7 @@
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<!-- Palisade -> Fort -->
+		<!-- Kill Switchpoint: Sedentary Lifestyle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WOODEN_PALISADE</Type>
 			<CreatingBuilds>
@@ -12062,6 +12073,7 @@
 			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Fishing Camp -> (Various, Wireless Electricity obsolete) -->
+		<!-- Kill Switchpoint: Rudder -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FISHING_CAMP</Type>
 			<BuildInfos>
@@ -12225,6 +12237,7 @@
 			</BonusTypeStructs>
 		</ImprovementInfo>
 		<!-- Harvest Kelp -->
+		<!-- Kill Switchpoint: Rudder -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HARVEST_KELP</Type>
 			<BuildInfos>
