@@ -127,13 +127,6 @@ def spawnUnit(iUnit, pPlot, pPlayer):
 	pPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 	return 1
 
-def findInfoTypeNum(infoGetter, numInfos, typeStr):
-	if typeStr == 'NONE':
-		return -1
-	idx = GC.getInfoTypeForString(typeStr)
-	assert(idx != -1, "Can't find type enum for type tag %s" % typeStr)
-	return idx
-
 def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
 	if cdUnit.iExtraCombatPercent:
 		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_EXTRA_COMBAT_PERCENT",(cdUnit.iExtraCombatPercent * iChange,))
