@@ -2123,7 +2123,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREEDOM_HAPPINESS</Tag>
 		<English>[ICON_BULLET]Decreases [ICON_UNHAPPY] equal to %d1%% population</English>
-		<Russian>[ICON_BULLET][ICON_HAPPY] Ïîâûøåíèå äëÿ âñåõ öèâèëèçàöèé áåç [LINK=literal]%s1_CivicName[\LINK]</Russian>
+		<Russian>[ICON_BULLET][ICON_HAPPY] Ïîâûøåíèå äëÿ âñåõ öèâèëèçàöèé áåç %s1_CivicName</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_CHURCH</Tag>

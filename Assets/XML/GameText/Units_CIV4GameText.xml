@@ -17907,7 +17907,7 @@
 		<Italian>[ICON_BULLET]%D1_Change%% alla Respinta contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%% Repel contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% do Odepchnięcia vs: [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
-		<Russian>[ICON_BULLET]%D1_Change%% шанс отразить атаку [LINK=s2_Type]%s3_TypeName[\LINK]</Russian>
+		<Russian>[ICON_BULLET]%D1_Change%% шанс отразить атаку [LINK=%s2_Type]%s3_TypeName[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REPLICATION_MECHANIC</Tag>
@@ -23644,7 +23644,7 @@
 		<Italian>[ICON_BULLET]%D1_Change%% alla Ritirata contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%% Withdraw contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% do Wycofania się vs: [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
-		<Russian>[ICON_BULLET]%D1_Change%% шанса отступить в бою с [LINK=s2_Type]%s3_TypeName[\LINK]</Russian>
+		<Russian>[ICON_BULLET]%D1_Change%% шанса отступить в бою с [LINK=%s2_Type]%s3_TypeName[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WOLF</Tag>

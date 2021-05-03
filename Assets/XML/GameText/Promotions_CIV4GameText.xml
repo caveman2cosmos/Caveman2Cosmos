@@ -6684,7 +6684,7 @@
 		<Italian>[ICON_BULLET]%D1_Mod alla Schivata contro [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod Dodge contra [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod do Uniku vs: [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod óêëîíåíèå ïðîòèâ [LINK=literal]%s2_Against[\LINK]</Russian>
+		<Russian>[ICON_BULLET]%D1_Mod óêëîíåíèå ïðîòèâ [LINK=%s2_AgainstType]%s2_Against[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DOMAIN_CARGO_CHANGE_TEXT</Tag>
@@ -9425,7 +9425,7 @@
 		<Italian>[ICON_BULLET]%D1_Mod%% allo Sbaraglio contro [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% Knockback contra [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do Odrzucenia vs: [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% îãëóøåíèÿ ïðîòèâ [LINK=literal]%s2_Against[\LINK]</Russian>
+		<Russian>[ICON_BULLET]%D1_Mod%% îãëóøåíèÿ ïðîòèâ [LINK=%s2_AgainstType]%s2_Against[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LAND_WARRIOR1</Tag>
@@ -12405,7 +12405,7 @@
 		<Italian>[ICON_BULLET]%D1_Mod%% alla Respinta contro [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% Repel contra [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do Odepchnięcia vs: [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% îòðàæåíèå ïðîòèâ [LINK=literal]%s2_Against[\LINK]</Russian>
+		<Russian>[ICON_BULLET]%D1_Mod%% îòðàæåíèå ïðîòèâ [LINK=%s2_AgainstType]%s2_Against[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RESCUE_DOG1</Tag>
@@ -12686,7 +12686,7 @@
 		<Italian>[ICON_BULLET]%D1_Mod%% ai colpi stordenti contro [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% Round Stun Chance contra [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do Oszołomienia vs: [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% øàíñ îãëóøèòü ïðîòèâ [LINK=literal]%s2_Against[\LINK]</Russian>
+		<Russian>[ICON_BULLET]%D1_Mod%% øàíñ îãëóøèòü ïðîòèâ [LINK=%s2_AgainstType]%s2_Against[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RUGGED1_DESC</Tag>
