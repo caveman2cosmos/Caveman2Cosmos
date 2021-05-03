@@ -720,27 +720,11 @@ bool CvXMLLoadUtility::LoadGlobalText()
 				break;
 
 			case 5:
-				szLanguage = "Finnish";
-				break;
-
-			case 6:
-				szLanguage = "Hungarian";
-				break;
-
-			case 7:
 				szLanguage = "Polish";
 				break;
 
-			case 8:
+			case 6:
 				szLanguage = "Russian";
-				break;
-
-			case 9:
-				szLanguage = "Chinese";
-				break;
-
-			case 10:
-				szLanguage = "Portuguese";
 				break;
 
 			default:

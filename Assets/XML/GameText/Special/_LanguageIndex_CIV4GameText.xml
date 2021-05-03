@@ -43,26 +43,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANGUAGE_5</Tag>
-		<English>Finnish</English>
-		<French>Finnois</French>
-		<German>Finnisch</German>
-		<Italian>Finlandese</Italian>
-		<Spanish>Finlandés</Spanish>
-		<Polish>Fiński</Polish>
-		<Russian>Èñïàíñêèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LANGUAGE_6</Tag>
-		<English>Hungarian</English>
-		<French>Hongrois</French>
-		<German>Ungarisch</German>
-		<Italian>Ungherese</Italian>
-		<Spanish>Húngaro</Spanish>
-		<Polish>Węgierski</Polish>
-		<Russian>Âåíãåðñêèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LANGUAGE_7</Tag>
 		<English>Polish</English>
 		<French>Polonais</French>
 		<German>Polnisch</German>
@@ -72,7 +52,7 @@
 		<Russian>Ïîëüñêèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LANGUAGE_8</Tag>
+		<Tag>TXT_KEY_LANGUAGE_6</Tag>
 		<English>Russian</English>
 		<French>Russe</French>
 		<German>Russisch</German>
@@ -80,25 +60,5 @@
 		<Spanish>Ruso</Spanish>
 		<Polish>Rosyjski</Polish>
 		<Russian>Русский</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LANGUAGE_9</Tag>
-		<English>Chinese</English>
-		<French>Chinois</French>
-		<German>Chinesisch</German>
-		<Italian>Cinese</Italian>
-		<Spanish>Chino</Spanish>
-		<Polish>Chiński</Polish>
-		<Russian>Китайский</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LANGUAGE_10</Tag>
-		<English>Portuguese</English>
-		<French>Portugais</French>
-		<German>Portugiesisch</German>
-		<Italian>Portoghese</Italian>
-		<Spanish>Portugués</Spanish>
-		<Polish>Portugalski</Polish>
-		<Russian>ßïîíñêèé</Russian>
 	</TEXT>
 </Civ4GameText>
