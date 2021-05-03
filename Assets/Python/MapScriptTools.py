@@ -29,14 +29,6 @@
 #    Please tell me.
 #  -----
 
-#  =====================
-#  Temudjin 15.July.2010
-#  =====================
-
-#	Changelog
-#	---------
-#	1.00					initial release
-#
 from CvPythonExtensions import *
 import CvMapGeneratorUtil
 import inspect
@@ -44,6 +36,7 @@ import inspect
 GC = CyGlobalContext()
 
 DEBUG = False
+bInitialized = False
 
 #################################################
 ### Defined Class Instances
@@ -77,16 +70,6 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 			callModule = stackList[1][1]
 		print "[MST] callModule: %s" %callModule
 
-	########################
-	### initialization check
-	########################
-	global bInitialized
-	try:
-		test = bInitialized
-		bInitialized = True
-	except:
-		bInitialized = False
-
 	###########################
 	### civ universal constants
 	###########################
@@ -113,7 +96,7 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	# define known terrains
 	etOcean		= GC.getInfoTypeForString('TERRAIN_OCEAN')
 	etCoast		= GC.getInfoTypeForString('TERRAIN_COAST')
-	etDesert	= GC.getInfoTypeForString('TERRAIN_DESERT')	# FlatArid, RockyArid
+	etDesert	= GC.getTERRAIN_DESERT()	# FlatArid, RockyArid
 	etPlains	= GC.getInfoTypeForString('TERRAIN_PLAINS')	# FlatMoist, RockyMoist
 	etGrass 	= GC.getInfoTypeForString('TERRAIN_GRASSLAND')	# FlatRainy, RockyRainy
 	etTundra	= GC.getInfoTypeForString('TERRAIN_TAIGA')	# RockyMoist, FlatPolar
@@ -127,8 +110,8 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 
 	# define known features
 	efIce			= GC.getInfoTypeForString('FEATURE_ICE')
-	efForest		= GC.getInfoTypeForString('FEATURE_FOREST')
-	efJungle		= GC.getInfoTypeForString('FEATURE_JUNGLE')
+	efForest		= GC.getFEATURE_FOREST()
+	efJungle		= GC.getFEATURE_JUNGLE()
 	efKelp			= GC.getInfoTypeForString('FEATURE_KELP') # coast
 
 	################################
@@ -175,13 +158,14 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	##############################
 	### Not available at init time
 	##############################
-
-	sprint = ""
+	global bInitialized
 	if not bInitialized:
+		bInitialized = True
 		if DEBUG:
 			mapStats.mapStatistics()
 	else:
 		global sClimateType, sSeaType, bTeams, mapGetLatitude
+		sprint = ""
 		#######################
 		### retrieve parameters
 		#######################
@@ -4979,12 +4963,12 @@ class MapPrint:
 		# feature dictionaries
 		# --------------------
 		self.__featureDict = {
-			efIce											: ["�", "Ice"	],
-			GC.getInfoTypeForString('FEATURE_FALLOUT')		: ["*", "Fallout"],
-			efJungle										: ["j", "Jungle"],
-			efForest										: ["f", "Forest"],
-			GC.getInfoTypeForString('FEATURE_OASIS')		: ["O", "Oasis"],
-			GC.getInfoTypeForString('FEATURE_FLOOD_PLAINS')	: ["p", "FloodPlains"]
+			efIce										: ["�", "Ice"	],
+			GC.getInfoTypeForString('FEATURE_FALLOUT')	: ["*", "Fallout"],
+			efJungle									: ["j", "Jungle"],
+			efForest									: ["f", "Forest"],
+			GC.getInfoTypeForString('FEATURE_OASIS')	: ["O", "Oasis"],
+			GC.getFEATURE_FLOOD_PLAINS()				: ["p", "FloodPlains"]
 		}
 		self.__featureDict[GC.getInfoTypeForString('FEATURE_SWAMP')] = ["w", "Swamp"]
 		self.__featureDict[efKelp]									 = ["=", "Kelp"]

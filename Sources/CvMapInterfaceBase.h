@@ -96,7 +96,6 @@ public:
 	virtual CvArea* findBiggestArea(bool bWater) const = 0;
 
 	virtual int getMapFractalFlags() const = 0;
-	virtual bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const = 0;
 
 	virtual bool isPlot(int iX, int iY) const = 0;
 	virtual int numPlots() const = 0;

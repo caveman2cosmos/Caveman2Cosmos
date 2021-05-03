@@ -10,7 +10,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RODNOVERY_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RODNOVERY_CATHEDRAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RODNOVERY_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODNOVERY_CATHEDRAL</ArtDefineTag>
 			<MapCategoryTypes>
@@ -83,7 +82,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RODNOVERY_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RODNOVERY_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RODNOVERY_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODNOVERY_MONASTERY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -149,7 +147,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RODNOVERY_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RODNOVERY_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RODNOVERY_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODNOVERY_TEMPLE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -210,7 +207,6 @@
 			<Type>BUILDING_RODNOVERY_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_RODNOVERY_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RODNOVERY_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RODNOVERY_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODNOVERY_SHRINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RODNOVERY_SHRINE</MovieDefineTag>

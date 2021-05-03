@@ -2,7 +2,6 @@
 ## Copyright Firaxis Games 2005
 ## Improvements to this screen by Almightix - thanks
 from CvPythonExtensions import *
-import ScreenInput
 import CvScreenEnums
 
 # globals
@@ -137,7 +136,7 @@ class TheScreen:
 		screen.setLabel("EA_Header", "", uFontEdge + TRNSLTR.getText("TXT_KEY_ESPIONAGE_SCREEN",()), 1<<2, iResX / 2, 0, 0, iFontTitle, iWidGen, 0, 0)
 		screen.setText("EA_Btn_Exit", "", uFontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT",()), 1<<1, iResX - 16, 0, 0, iFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
-		iCol = GC.getInfoTypeForString("COLOR_YELLOW")
+		iCol = GC.getCOLOR_YELLOW()
 		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_ESPIONAGE_MISSIONS_TAB", ())
 		szTxtCol = TRNSLTR.changeTextColor(szTxt, iCol)
 		dX = iResX / 2

@@ -261,15 +261,12 @@
 IsStandAlone = False
 if __name__ != "__main__":
     from CvPythonExtensions import *
-    import CvUtil
     import CvMapGeneratorUtil
 
 from array import array
 from random import random,randint,seed
 import math
 import sys
-import time
-import os
 
 # Options
 OPTION_MapSeed = 10
@@ -3919,11 +3916,11 @@ class Areamap :
                 if xRightExtreme >= seg.xRight + landOffset:
                     if debugReport:
                         print "finished with line"
-                    break; #past the end of the parent line and this line ends
+                    break #past the end of the parent line and this line ends
             elif lineFound == False and xRightExtreme >= seg.xRight + landOffset:
                 if debugReport:
                     print "no additional lines found"
-                break; #past the end of the parent line and no line found
+                break #past the end of the parent line and no line found
             else:
                 continue #keep looking for more line segments
         if lineFound == True: #still a line needing to be put on stack
@@ -4037,7 +4034,7 @@ class RiverMap :
         for y in range(mc.height):
             for x in range(mc.width):
                 i = GetIndex(x,y)
-                maxHeight = 0.0;
+                maxHeight = 0.0
                 for yy in range(y,y-2,-1):
                     for xx in range(x,x+2):
                         ii = GetIndex(xx,yy)
@@ -4110,7 +4107,7 @@ class RiverMap :
         for y in range(mc.height):
             for x in range(mc.width):
                 i = GetIndex(x,y)
-                avg = 0.0;
+                avg = 0.0
                 for yy in range(y,y-2,-1):
                     for xx in range(x,x+2):
                         ii = GetIndex(xx,yy)
@@ -6639,7 +6636,6 @@ def afterGeneration():
 
 if __name__ == "__main__":
     IsStandAlone = True
-    import sys
     mc.UsePythonRandom = True
     try:
         arg1 = sys.argv[1]

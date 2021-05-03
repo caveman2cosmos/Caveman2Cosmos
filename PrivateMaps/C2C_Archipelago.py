@@ -9,9 +9,8 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
-from CvMapGeneratorUtil import FractalWorld
+#from CvMapGeneratorUtil import FractalWorld
 from CvMapGeneratorUtil import TerrainGenerator
 from CvMapGeneratorUtil import FeatureGenerator
 #from CvMapGeneratorUtil import BonusBalancer
@@ -124,7 +123,6 @@ class ArchipelagoFractalWorld(CvMapGeneratorUtil.FractalWorld):
 
 def generatePlotTypes():
 	"Generates a very grainy world so we get lots of islands."
-	gc = CyGlobalContext()
 	map = CyMap()
 	fractal_world = ArchipelagoFractalWorld()
 	NiTextOut("Setting Plot Types (Python Archipelago) ...")
@@ -464,7 +462,6 @@ def assignStartingPlots():
 	#print("Oceans: ", oceans)
 
 	# Now assign the start plots!
-	plot_assignments = {}
 	min_dist = []
 	# Loop through players/regions.
 	for assignLoop in range(iPlayers):
@@ -552,9 +549,6 @@ def assignStartingPlots():
 					return
 			else: break # This player has been assigned a start plot.
 
-	#print plot_assignments
-	#print "..."
-
 	# Successfully assigned start plots, continue back to C++
 	return None
 
@@ -569,11 +563,7 @@ def findStartingPlot(argsList):
 		return
 
 	# Identify the best land area available to this player.
-	global areas
-	global area_values
-	global iBestArea
-	gc = CyGlobalContext()
-	map = CyMap()
+	global areas, area_values, iBestArea
 	iBestValue = 0
 	iBestArea = -1
 	areas = CvMapGeneratorUtil.getAreas()

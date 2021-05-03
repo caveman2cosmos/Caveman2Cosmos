@@ -2326,14 +2326,14 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>DIPLO_SURYAVARAMAN_MIDDLE</SoundID>
-			<Filename>Sounds/Diplomacy/Suryavaraman _Middle</Filename>
+			<Filename>Sounds/Diplomacy/Suryavaraman_Middle</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>DIPLO_SURYAVARAMAN_LATE</SoundID>
-			<Filename>Sounds/Diplomacy/Suryavaraman_ Late</Filename>
+			<Filename>Sounds/Diplomacy/Suryavaraman_Late</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

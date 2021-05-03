@@ -74,24 +74,10 @@
 		<German>Dies ist ein automatischer Effekt, der mit der Erforschung einer bestimmten Technologie aktiviert wird. Er hat keinen direkten Effekt, sondern dient der Vereinfachung von Updates, bei denen neue Mythen hinzugefügt oder bestehende verändert werden.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Tag>
-		<English>Free building provided as the effect of another.</English>
-		<French>Bâtiment gratuit obtenu comme effet d'un autre</French>
-		<Polish>Darmowy budynek dostarczany jako efekt innego budynku.</Polish>
-		<Russian>Бесплатная постройка, предусмотренная в качестве эффекта от другого здания или Чуда Света.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Tag>
 		<English>Animal Stories buildings represents educational boost from animals after invention of [LINK=TECH_LITERATURE]Literature[\LINK] - needs [LINK=BUILDING_LIBRARY]Library[\LINK] to create [LINK=BUILDING_ANIMAL_STORIES_REQUIRE]Animal Stories Requirement[\LINK].[NEWLINE]This is done to declutter Library building.</English>
 		<French>Les bâtiments des histoires animales représentent un coup de pouce éducatif provenant des animaux, après l'invention de la [LINK=TECH_LITERATURE]Littérature[\LINK] - nécessite une [LINK=BUILDING_LIBRARY]Bibliothèque[\LINK]</French>
 		<Russian>«Сказки о животных» представляют собой образовательное улучшение от прирученных животных после изучения [LINK=TECH_LITERATURE]Литературы[\LINK] - требуются [LINK=BUILDING_LIBRARY]Библиотеки[\LINK] для создания [LINK=BUILDING_ANIMAL_STORIES_REQUIRE]Сказки о животном[\LINK].[NEWLINE]Это реализовано, как дополнение к библиотекам.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Tag>
-		<English>Pseudo national wonder gives free story building in all cities.</English>
-		<French>Sorte de Merveille nationale qui donne un bâtiment histoire gratuit dans chaque ville</French>
-		<Polish>Pseudo Cud Narodowy. Dostarcza darmowe Opowieści do wszystkich Twoich miast.</Polish>
-		<Russian>Êâàçè-íàöèîíàëüíîå ÷óäî ïðåäîñòàâëÿåò áåñïëàòíûå ýôôåêòû îò ñêàçîê âî âñå ãîðîäà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Tag>
@@ -110,12 +96,6 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_REQUIRE</Tag>
 		<English>Autobuild - Animal Stories Requirement</English>
 		<Russian>Сказка о животном</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Tag>
-		<English>The Animal Story buildings provide Education. They are built by subdued animals and story tellers.[NEWLINE]They can be built in every city, as they aren't pseudo National Wonders unlike Myth and Stories.</English>
-		<French>Les Bâtiments d'Histoire des animaux procure de l'Education. Ils sont construits par des animaux apprivoisés ou des conteurs d'histoires</French>
-		<Polish>Budynki Opowieściu o zwierztach dostarczają Edukacji. Powstają dzieki pochwyconym zwierztom i Gawdziarzom.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_MYTH</Tag>
@@ -762,23 +742,11 @@
 		<Russian>Ñêàçêà îá ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Tag>
-		<English>Free building provided by the same Myth. Make the Myth building a pseudo National Wonder as you only need one.</English>
-		<French>Des Bâtiments gratuits sont construits par le Mythe éponyme. Ils font du Mythe une pseudo-merveille nationale vu qu'il n'y en a besoin que d'une.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Tag>
 		<English>The six elements make up everything. They are Earth, Air (Sky), Water (Sea), Stone, Metal and Fire. They lose all benefit with Chemistry.</English>
 		<French>Tout est formé à partir de 6 éléments. Ce sont la Terre, l'Air (Ciel), l'Eau (Mer), la Pierre, le Métal et le Feu. Ils perdent tout leurs avantages avec la Chimie</French>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Tag>
-		<English>The Elemental Myths provide a small amount of science and education. They are required for many other buildings.</English>
-		<French>Les Mythes des Éléments confèrent un petit bonus d'éducation et de recherche. Ils sont requis pour la construction d'autres bâtiments.</French>
-		<Polish>Mity Żywiołów dostarczają małe ilości nauki i edukacji. Są wymagane do budowy wielu innyc budynków.</Polish>
-		<Russian>Ìèôû îá ýëåìåíòàõ îáåñïå÷èâàþò íåáîëüøîå êîëè÷åñòâî íàóêè è îáðàçîâàíèÿ. Îíè íåîáõîäèìû äëÿ ìíîãèõ äðóãèõ çäàíèé.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_MYTH_EFFECT</Tag>
@@ -1486,11 +1454,6 @@
 		<English>Myths associated with formations found in the landscape.</English>
 		<French>Les Mythes associés aux paysages et éléments trouvés dans la nature.</French>
 		<Polish>Mity związane z formacjami terenu.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Tag>
-		<English>The Landform Myths provide a small amount of science and education.</English>
-		<French>Les mythes associés aux éléments et paysages procurent un léger bonus en science et en éducation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEVIATHAN_MYTH_EFFECT</Tag>
@@ -3518,7 +3481,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Tag>
-		<English>TBD</English>
+		<English>The [COLOR_UNIT_TEXT] black caiman [COLOR_REVERT] (Melanosuchus niger), also black caiman, belongs to the alligator family like all caimans. With a maximum length of 6 meters, it is one of the largest predators in South America, along with the Orinoco crocodile. With its broad snout, it resembles the Mississippi alligator. [NEWLINE] Little is known about the black caimans. Most of the specimens live in the Amazon basin. Their mound nests made of earth and parts of plants are similar in shape to those of the crocodile caimans, but are larger. Young animals probably feed on insects and snails, later they also hunt fish, birds, mammals and lizards (also other caiman species). Like most crocodiles, they are nocturnal. [NEWLINE] The black caiman can hardly be found in open areas. Adult males were often hunted in the past because of the beautiful skin that, unlike other crocodile skins, does not contain small bones. Since the females live withdrawn to lay their eggs, the populations quickly recovered.</English>
 		<German>Der [COLOR_UNIT_TEXT]Mohrenkaiman[COLOR_REVERT] (Melanosuchus niger), auch Schwarzer Kaiman, gehört wie alle Kaimane zur Familie der Alligatoren. Mit einer Maximallänge von 6 Metern gehört er neben dem Orinoko-Krokodil zu den größten Räubern Südamerikas. Mit seiner breiten Schnauze ähnelt er dem Mississippi-Alligator.[NEWLINE]Über die Mohrenkaimane ist nur wenig bekannt. Die meisten Exemplare leben im Amazonasbecken. Ihre Hügelnester aus Erde und Pflanzenteilen ähneln in ihrer Form denen der Krokodilkaimane, sind allerdings größer. Jungtiere ernähren sich wahrscheinlich von Insekten und Schnecken, später jagen sie auch Fische, Vögel, Säugetiere sowie Echsen (auch andere Kaimanarten). Wie die meisten Krokodile sind sie nachtaktiv.[NEWLINE]In offenen Gegenden ist der Mohrenkaiman kaum noch zu finden. Ausgewachsene Männchen wurden in der Vergangenheit wegen der schönen Haut, die im Gegensatz zu anderen Krokodilhäuten keine kleinen Knochen enthält, oft gejagt. Da die Weibchen zur Eiablage zurückgezogen leben, erholten sich die Bestände jedoch schnell wieder.</German>
 		<Polish>Kajmany (Caimaninae) podrodzina gadów z rodziny aligatorów, obejmująca gatunki z rodzajów Caiman, Melanosuchus i Paleosuchus. Kajmany mają duże płytki kostne wzmacniające rogowe tarczki brzuszne. Długość dorosłych kajmanów od 1,5 kajman Schneidera (Paleosuchus trigonatus) do 4,5 m kajman czarny (Melanosuchus niger) (choć prehistoryczne kajmany, takie jak Purussaurus, osiągały nawet 11 m długości). Występują w Ameryce Zrodkowej i Południowej.</Polish>
 	</TEXT>
@@ -4695,14 +4658,6 @@
 		<Russian>Ìàë. ìîð. êðîêîäèë</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SALTWATER_CROC_STRATEGY</Tag>
-		<English>Capture salt water crocodiles if you can. They can be used to build special buildings in a costal city.</English>
-		<French>Capturez des crocodiles d'eau de mer si vous le pouvez. Ils peuvent être utilisés pour construire des bâtiments spéciaux dans une ville côtière.</French>
-		<German>Fange Salzwasserkrokodile nach Möglichkeit ein. Sie können für den Bau spezieller Gebäude in Küstenstädten benutzt werden.</German>
-		<Italian>Cattura i coccodrilli marini se riesci. Possono essere usati per costruire edifici speciali in una città costiera.</Italian>
-		<Spanish>Captura los cocodrilos marinos si puedes. Pueden ser utilizados para construir edificios especiales en una ciudad costera.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAEAGLE</Tag>
 		<English>Steller's Sea Eagle</English>
 		<French>
@@ -4773,12 +4728,6 @@
 		<Tag>TXT_KEY_UNIT_SEAOTTER_PEDIA</Tag>
 		<English>The sea otter (Enhydra lutris) is a marine mammal native to the coasts of the northern and eastern North Pacific Ocean. Adult sea otters typically weigh between 14 and 45 kg (30 and 100 lb), making them the heaviest members of the weasel family, but among the smallest marine mammals. Unlike most marine mammals, the sea otter's primary form of insulation is an exceptionally thick coat of fur, the densest in the animal kingdom. Although it can walk on land, the sea otter lives mostly in the ocean.[PARAGRAPH:2]The sea otter inhabits offshore environments, where it dives to the sea floor to forage. It preys mostly on marine invertebrates such as sea urchins, various molluscs and crustaceans, and some species of fish. Its foraging and eating habits are noteworthy in several respects. First, its use of rocks to dislodge prey and to open shells makes it one of the few mammal species to use tools. In most of its range, it is a keystone species, controlling sea urchin populations which would otherwise inflict extensive damage to kelp forest ecosystems. Its diet includes prey species that are also valued by humans as food, leading to conflicts between sea otters and fisheries.[PARAGRAPH:2]Sea otters, whose numbers were once estimated at 150,000 - 300,000, were hunted extensively for their fur between 1741 and 1911, and the world population fell to 1,000 - 2,000 individuals in a fraction of their historic range. A subsequent international ban on hunting, conservation efforts, and reintroduction programs into previously populated areas have contributed to numbers rebounding, and the species now occupies about two-thirds of its former range. The recovery of the sea otter is considered an important success in marine conservation, although populations in the Aleutian Islands and California have recently declined or have plateaued at depressed levels. For these reasons, the sea otter remains classified as an endangered species.</English>
 		<German>Der [COLOR_UNIT_TEXT]Seeotter[COLOR_REVERT], auch Kalan oder Meerotter (Enhydra lutris), ist ein Raubtier aus der Marderfamilie und neben dem Küstenotter die einzige Art, die nur im Meer lebt. In der Ökologie stellt der Seeotter eine Schlüsselart dar, da er trotz seines geringen Vorkommens großen Einfluss auf die Artenvielfalt hat. Die meisten Exemplare leben heute an den Küsten des Beringmeers in Alaska, auf den Aleuten und den Kommandeurinseln.[NEWLINE]Mit maximal 150 cm Körperlänge inklusive Schwanz gehört der Seeotter zu den größten Mardern. Das sehr dichte Fell ist dunkelbraun, am Kopf etwas heller, jedoch ohne isolierende Fettschicht, was unter den Meeressäugern einzigartig ist. Er ist sehr gut an das Wasser angepasst, was man an den nach hinten versetzten Hinterbeinen und den Schwimmhäuten zwischen den Zehen erkennt. Durch die wesentlich kleineren Vorderpfoten ähneln seine Bewegungsabläufe denen der Ohrenrobben. Der Schwanz ist im Gegensatz zu anderen Ottern abgeflacht, des Weiteren hat er nur 32 Zähne (anstatt der für Otter üblichen 36). Der Seeotter ist das einzige Raubtier mit nur zwei Paar Schneidezähnen im Unterkiefer. Die kräftigen Backenzähne eignen sich gut zum Zerbeißen von Muscheln oder Schnecken. Auch Werkzeuge werden oft benutzt, um die harten Schalen aufzubrechen. Häufig stehen pflanzenfressende Seeigel aus den Tangwäldern auf dem Speiseplan, was wiederum zum Erhalt dieser Wälder beiträgt. Der Seeotter kann sogar Salzwasser trinken, wobei das überschüssige Salz durch die großen Nieren wieder ausgeschieden wird. Da er im Wasser schläft, umwickelt er sich zuvor mit Seetang, um nicht abgetrieben zu werden. So schützen Mütter auch ihre Jungen, wenn sie auf Nahrungssuche gehen.[NEWLINE]Seeotterfell ist sehr lange haltbar und war schon kurz nach der Entdeckung der Art im Jahre 1741 äußerst begehrt, besonders als Mantelbesatz für russische und chinesische Würdenträger. Durch die Jagd wurden die Tiere fast ausgerottet, weswegen der Handel mit Otterfellen seit 1911 verboten ist. Die Bestände haben sich seitdem erholt. Aktuelle Gefahren drohen dem Seeotter vor allem durch ölverschmutzte Gewässer. Der größte Fressfeind ist der Große Schwertwal. In der Gesellschaft wird der Seeotter als possierlich dargestellt, was auch daran liegt, dass ein auf dem Rücken liegender Seeotter die Vorderpfoten so anhebt, als würde er winken. Er ziert u.a. Postkarten und T-Shirts und steht Modell für Plüschtiere.</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SEA_ANIMAL_STRATEGY</Tag>
-		<English>A few sea animals hunt unprotected rafts! Beware!!</English>
-		<French>Quelques animaux marins chassent les radeaux non protégés! Il faut se méfier!!</French>
-		<German>Einige Meerestiere jagen ungeschützte Flöße! Vorsicht!!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STAG_DEER</Tag>
@@ -5416,6 +5365,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_OPOSSUM</Tag>
 		<English>Subdued Opossum</English>
 		<French>Opossum (App.)</French>
+		<German>
+			<Text>Gefangenes Opossum:Gefangenen Opossums:Gefangenen Opossum:Gefangene Opossum:Gefangene Opossums:Gefangenen Opossums:Gefangenen Opossums:Gefangenen Opossums</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Îïîññóì (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -5435,6 +5389,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PLATYPUS</Tag>
 		<English>Subdued Platypus</English>
 		<French>Ornithorynque (App.)</French>
+		<German>
+			<Text>Gefangenes Schnabeltier:Gefangenen Schnabeltiers:Gefangenen Schnabeltier:Gefangene Schnabeltier:Gefangene Schnabeltiere:Gefangenen Schnabeltiere:Gefangenen Schnabeltieren:Gefangenen Schnabeltiere</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Ornitorinco addomesticato</Text>
 			<Gender>Male</Gender>
@@ -5453,6 +5412,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_POSSUM</Tag>
 		<English>Subdued Brushtail Possum</English>
 		<French>Phalanger commun (App.)</French>
+		<German>
+			<Text>Gefangener Kusu:Gefangenen Kusus:Gefangenen Kusu:Gefangenen Kusu:Gefangene Kusus:Gefangenen Kusus:Gefangenen Kusus:Gefangenen Kusus</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Ïîññóì (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -5466,6 +5430,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PYGMYHIPPO</Tag>
 		<English>Subdued Pygmy Hippo</English>
 		<French>Hippopotame nain (App.)</French>
+		<German>
+			<Text>Gefangenes Zwergflusspferd:Gefangenen Zwergflusspferds:Gefangenen Zwergflusspferd:Gefangene Zwergflusspferd:Gefangene Zwergflusspferde:Gefangenen Zwergflusspferde:Gefangenen Zwergflusspferden:Gefangenen Zwergflusspferde</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Карликовый бегемот (ручн.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -5514,6 +5483,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_SABRETOOTH</Tag>
 		<English>Subdued Sabretooth</English>
 		<French>Tigre dents de Sabre (App.)</French>
+		<German>
+			<Text>Gefangener Säbelzahntiger:Gefangenen Säbelzahntigers:Gefangenen Säbelzahntiger:Gefangenen Säbelzahntiger:Gefangene Säbelzahntiger:Gefangenen Säbelzahntiger:Gefangenen Säbelzahntiger:Gefangenen Säbelzahntiger</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Tygrys Szablozębny</Polish>
 		<Russian>Ñàáëåçóáûé òèãð (ðó÷í.)</Russian>
 	</TEXT>
@@ -5538,16 +5512,6 @@
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lion des mers</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_TARANTULA</Tag>
-		<English>Subdued Tarantula</English>
-		<French>
-			<Text>Tarentule (App.)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Russian>Òàðàíòóë (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Tarantula
@@ -5561,6 +5525,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_THYLACINE</Tag>
 		<English>Subdued Thylacine</English>
 		<French>Thylacine (App.)</French>
+		<German>
+			<Text>Gefangener Beutelwolf:Gefangenen Beutelwolfs:Gefangenen Beutelwolf:Gefangenen Beutelwolf:Gefangene Beutelwölfe:Gefangenen Beutelwölfe:Gefangenen Beutelwölfen:Gefangenen Beutelwölfe</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Ñóì÷àòûé âîëê (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -5574,6 +5543,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH</Tag>
 		<English>Subdued Tree Sloth</English>
 		<French>Paresseux (App.)</French>
+		<German>
+			<Text>Gefangenes Dreifinger-Faultier:Gefangenen Dreifinger-Faultiers:Gefangenen Dreifinger-Faultier:Gefangene Dreifinger-Faultier:Gefangene Dreifinger-Faultiere:Gefangenen Dreifinger-Faultiere:Gefangenen Dreifinger-Faultieren:Gefangenen Dreifinger-Faultiere</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Ëåíèâåö (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -5615,6 +5589,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangenes Breitmaulnashorn:Gefangenen Breitmaulnashorns:Gefangenen Breitmaulnashorn:Gefangene Breitmaulnashorn:Gefangene Breitmaulnashörner:Gefangenen Breitmaulnashörner:Gefangenen Breitmaulnashörnern:Gefangenen Breitmaulnashörner</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Rinoceronte bianco ammaestrato</Italian>
 		<Polish>Poskromiony Nosorożec Biały</Polish>
 		<Russian>Áåëûé íîñîðîã (ðó÷í.)</Russian>
@@ -5781,22 +5760,34 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THYLACINE</Tag>
 		<English>Thylacine</English>
+		<German>
+			<Text>Beutelwolf:Beutelwolfs:Beutelwolf:Beutelwolf:Beutelwölfe:Beutelwölfe:Beutelwölfen:Beutelwölfe</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Ñóì÷àòûé âîëê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THYLACINE_PEDIA</Tag>
 		<English>The thylacine (Thylacinus cynocephalus, Greek for "dog-headed pouched one") was the largest known carnivorous marsupial of modern times. It is commonly known as the Tasmanian tiger (because of its striped back) or the Tasmanian wolf. Native to continental Australia, Tasmania and New Guinea, it is thought to have become extinct in the 20th century. It was the last extant member of its family, Thylacinidae; specimens of other members of the family have been found in the fossil record dating back to the early Miocene.[PARAGRAPH:2]The thylacine had become extremely rare or extinct on the Australian mainland before British settlement of the continent, but it survived on the island of Tasmania along with several other endemic species, including the Tasmanian devil. Intensive hunting encouraged by bounties is generally blamed for its extinction, but other contributing factors may have been disease, the introduction of dogs, and human encroachment into its habitat. Despite its official classification as extinct, sightings are still reported, though none have been conclusively proven.[PARAGRAPH:2]Surviving evidence suggests that it was a relatively shy, nocturnal creature with the general appearance of a medium-to-large-size dog, except for its stiff tail and abdominal pouch (which was reminiscent of a kangaroo) and a series of dark transverse stripes that radiated from the top of its back (making it look a bit like a tiger).[PARAGRAPH:2]Like the tigers and wolves of the Northern Hemisphere, from which it obtained two of its common names, the thylacine was an apex predator. As a marsupial, it was not closely related to these placental mammals, but because of convergent evolution it displayed the same general form and adaptations. Its closest living relative is thought to be either the Tasmanian devil or numbat. The thylacine was one of only two marsupials to have a pouch in both sexes (the other being the water opossum). The male thylacine had a pouch that acted as a protective sheath, covering his external reproductive organs while he ran through thick brush. The thylacine has been described as a formidable predator because of its ability to survive and hunt prey in extremely sparsely populated areas.[PARAGRAPH:2]The thylacine is a candidate for cloning and other molecular science projects due to its recent demise and the existence of several well preserved specimens.</English>
+		<German>Der [COLOR_UNIT_TEXT]Beutelwolf[COLOR_REVERT] (Thylacinus cynocephalus) war ein Beuteltier des australischen Kontinents und die größte räuberisch lebende Art nach der quartären Aussterbewelle. Beutelwölfe erreichten eine maximale Kopf-Rumpf-Länge von 130 cm mit einem bis zu 65 cm langen Schwanz. Die Schulterhöhe betrug etwa 60 cm. Männchen wogen 19-20 kg, Weibchen waren deutlich leichter. Auf dem kurzen, grau bis gelbgrauen Fell zeichneten sich deutlich dunkle Querstreifen ab, die sich am hinteren Teil des Körpers und am Schwanz befanden und als Tarnung dienten. Daher existiert auch die Bezeichnung "Beuteltiger". Ansonsten war der Beutelwolf einigen Arten aus der Familie der Hunde recht ähnlich. Auffällig war, dass er seinen Unterkiefer bis zu 90° weit aufklappen konnte.[NEWLINE]Er lebte in in offenen Waldgebieten und Grasländern, war meist nachtaktiv und eher ein Einzelgänger. Vermutlich ernährte er sich von kleinen Tieren wie Wallabys und Beuteldachsen. Er war ein ausdauernder Läufer und konnte sich auf die Hinterbeine stellen, wobei der Schwanz als Stütze diente. Seine Laute ähnelten denen von Hunden. Ein Wurf umfasste zwei bis vier Jungtiere, die ihre ersten drei Monate im Beutel verbrachten. Sie wurden schätzungsweise 12-14 Jahre alt.[NEWLINE]Bis zur ersten Besiedelung des australischen Kontinents waren Beutelwölfe weit verbreitet, wie Felszeichnungen der Aborigines zeigen. Auf dem Festland und Neuguinea starben sie ca. 3000 v.Chr. aus. Ein möglicher Grund dafür sind Dingos, die zuvor eingeführt wurden und sie als Konkurrenten verdrängt haben. Auch die zunehmende menschliche Bevölkerung könnte durch Bejagung mitverantwortlich sein. In Tasmanien überlebte der Beutelwolf länger. Mit der Einführung der Schafe im 19. Jahrhundert galt er jedoch als blutrünstiger Jäger und wurde systematisch getötet. Schafe standen jedoch nicht auf der Speisekarte des Beutelwolfs, sie fielen meist ausgewilderten Hunden zum Opfer. Ab 1910 wurde er aufgrund der Seltenheit in verschiedenen Zoos gehalten. Schutzmaßnahmen kamen jedoch zu spät, der letzte frei lebende Beutelwolf wurde 1930 getötet. In Gefangenschaft starb das letzte Tier 1936, nachdem Zuchtversuche erfolglos blieben. Daher gilt der Beutelwolf als ausgestorben. Dennoch wird immer wieder von Sichtungen in Tasmanien berichtet. 2005 setzte die Zeitschrift "The Bulletin" deshalb eine hohe Belohnung für den Beweis eines lebenden Tieres aus.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TREESLOTH</Tag>
 		<English>Three-toed Sloth</English>
 		<French>Paresseux</French>
+		<German>
+			<Text>Dreifinger-Faultier:Dreifinger-Faultiers:Dreifinger-Faultier:Dreifinger-Faultier:Dreifinger-Faultiere:Dreifinger-Faultiere:Dreifinger-Faultieren:Dreifinger-Faultiere</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Ëåíèâåö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TREESLOTH_PEDIA</Tag>
 		<English>The Tree Sloth, grey parrot or Congo Tree Sloth (Psittacus erithacus) is an Old World parrot in the family Psittacidae.[PARAGRAPH:2]The Tree Sloth is a medium-sized, predominantly grey, black-billed parrot which weighs 400 g, with a length of 33 cm and an average wingspan of 4652 cm. The tail and undertail coverts are red, in comparison to the maroon of the smaller Timneh Parrot. Both sexes appear similar.[PARAGRAPH:2]The colouration of juveniles similar to that of adults, however the eye is typically dark grey to black, in comparison to the greyish eyes of the adult birds. The undertail coverts are also tinged with grey.</English>
 		<French>Les paresseux sont des mammifères arboricoles d'Amérique tropicale qui constituent le sous-ordre des Folivora1. Ce sont des animaux de taille moyenne au mode de vie original: ils sont presque toujours suspendus à l'envers dans les arbres et se déplacent avec lenteur. Ils possèdent de longues griffes.</French>
+		<German>[COLOR_UNIT_TEXT]Dreifinger-Faultiere[COLOR_REVERT] bilden die einzige Gattung der gleichnamigen Familie. Der Name bezieht sich auf die Anzahl der Finger an den Vordergliedmaßen. Der gelegentlich verwendete Name "Dreizehen-Faultiere" ist missverständlich, da sowohl diese auch die Zweifinger-Faultiere an den Hinterfüßen drei Zehen haben. Ihre Heimat sind vor allem die Regenwälder Mittel- und Südamerikas. Dreifinger-Faultiere erreichen - ähnlich wie ihre zweifingrigen Verwandten - eine Länge von 40 bis 80 cm und ein Gewicht von 3 bis 10 kg. Ihr Kopf ist klein, ebenso die Augen. Die Ohren sind im Fell verborgen. Die Gliedmaßen sind lang und kräftig, wobei die vorderen Extremitäten deutlich länger sind. Hände und Füße besitzen jeweils drei Strahlen mit scharfen Krallen. Die anderen beiden Strahlen sind noch rudimentär vorhanden. Die Tiere haben einen kurzen Schwanz, der bei den Zweifinger-Faultieren fehlt. Das Fell ist grau oder graubraun, einige Arten besitzen eine auffällige Zeichnung im Gesicht und auf dem Rücken. Die Haare sind vom Bauch weg gescheitelt, damit Regenwasser abfließen kann. In der Regenzeit bildet das Deckhaar einen Lebensraum für Algen, die den Tieren teilweise als Tarnung dienen.[NEWLINE]Dreifinger-Faultiere geben kaum Laute von sich. Meist sind es Pfiffe wie das "ai" des Weißkehl-Faultiers, was ihm seinen Trivialnamen verliehen hat. Des Weiteren sind die Tiere kurzsichtig, wobei die Jungtiere noch besser sehen als die ausgewachsenen. Die meiste Zeit verbringen die Dreifinger-Faultiere in den Baumkronen, hängen kopfunter, fressen und schlafen. Im Gegensatz zu Zweifinger-Faultieren haben sie keinen festen Tag-Nacht-Rhythmus. Ihr gesamtes Leben läuft auf Sparflamme, die Nahrung ist nährstoffarm (vorwiegend Blätter) und die Bewegungen sind langsam (maximal 4 bis 5 Meter pro Minute). Die Stoffwechselrate ist sehr niedrig und auch die Körpertemperatur ist niedriger als bei den meisten anderen Säugetieren. Die Tiere kommen nur auf den Boden, um ihre Notdurft zu verrichten. Dort sind ihre Bewegungen nur ein unbeholfenes Krabbeln. Allerdings sind sie gute Schwimmer. Dreifinger-Faultiere sind Einzelgänger, die nur zur Paarung (welche natürlich im Baum stattfindet) zusammentreffen. Ihre Feinde sind vor allem Raubkatzen, aber auch Greifvögel und Riesenschlangen.[NEWLINE]Seit der Entdeckung durch die Europäer galten die Tiere als faul und antriebslos, ws sich im Namen widerspiegelt. In Gefangenschaft werden sie aufgrund ihrer spezialisierten Ernährung kaum gehalten. Deshalb sieht man in Zoos eher ihre zweifingrigen Verwandten, die weniger anspruchsvoll sind. Die meisten Arten sind nicht gefährdet. Lokal betriebene Rodungen wirken sich jedoch negativ auf die Bestände aus.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIPER</Tag>
@@ -5914,12 +5905,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALRUS_PEDIA</Tag>
 		<English>The walrus (Odobenus rosmarus) is a large flippered marine mammal with a discontinuous circumpolar distribution in the Arctic Ocean and sub-Arctic seas of the Northern Hemisphere. The walrus is the only living species in the Odobenidae family and Odobenus genus. It is subdivided into three subspecies: the Atlantic walrus (O. rosmarus rosmarus) which lives in the Atlantic Ocean, the Pacific walrus (O. rosmarus divergens) which lives in the Pacific Ocean, and O. rosmarus laptevi, which lives in the Laptev Sea.[PARAGRAPH:2]The walrus is easily recognized by its prominent tusks, whiskers and great bulk. Adult Pacific males can weigh more than 1,700 kilograms (3,700 lb) and, among pinnipeds, are exceeded in size only by the two species of elephant seals. It resides primarily in shallow oceanic shelf habitat, spending a significant proportion of its life on sea ice in pursuit of its preferred diet of benthic bivalve mollusks. It is a relatively long-lived, social animal and is considered a keystone species in Arctic marine ecosystems.[PARAGRAPH:2]The walrus has played a prominent role in the cultures of many indigenous Arctic peoples, who have hunted the walrus for its meat, fat, skin, tusks and bone. In the 19th and early 20th centuries, the walrus was the object of heavy commercial exploitation for blubber and ivory and its numbers declined rapidly. Its global population has since rebounded, though the Atlantic and Laptev populations remain fragmented and at historically depressed levels.</English>
-		<German>Beim Walross (Odobenus rosmarus) handelt es sich um eine große Robbenart, die in den kalten Meeren der nördlichen Hemisphäre heimisch ist. Walrossbullen können bis zu 3,5 m lang werden und ein Gewicht von über 1200 kg erreichen. Weibchen sind dagegen deutlich kleiner und leichter.[PARAGRAPH:2]Walrosse verfügen über markante Stoßzähne, die auch Hauer genannt werden. Sie sind bei beiden Geschlechtern vorhanden, bei Männchen aber in der Regel länger und voluminöser. Es wurden schon Stoßzähne von 1-m-Rekordlänge dokumentiert. Walrosshauer sind wahre Multifunktionswerkzeuge. Die Tiere verteidigen sich damit gegen Fressfeinde, brechen damit Atemlöcher ins Eis, nutzen sie zur Fortbewegung, zur Abstützung des Kopfes oder ziehen sich damit an Land. Außerdem sind die Stoßzähne auch Statussymbole, mit denen dominante Tiere beiderlei Geschlechts die Rangordnung untermauern.[PARAGRAPH:2]Walrosse leben in großen Herden an den Küsten von Inseln oder am Packeisrand, die meist nach Geschlechtern getrennt sind. Außergewöhnlich ist der zweijährige Fortpflanzungsrhythmus, der dadurch bedingt ist, dass nach der Paarung im Januar/Februar das Ei zunächst 5 Monate ruht, bis die eigentliche elfmonatige Tragezeit beginnt.[PARAGRAPH:2]Das Walross hat für den Menschen schon immer eine bedeutende Rolle gespielt. Die arktischen Völker verwendeten praktisch alle Körperteile eines erlegten Walrosses, sei es als Nahrung oder als Material zum Heizen (Tran), zum Hüttenbau (Knochen und Stoßzähne) und zur Herstellung von Booten und Kleidung (Haut). Durch skrupellose intensive Bejagung mit modernen Waffen zur Gewinnung des Elfenbeins, aber auch durch die Verschmutzung des Lebensraums insbesondere durch Ölunglücke wurden die Populationen stark dezimiert. Nachdem vor allem die USA und Russland eine Reihe von Schutzmaßnahmen starteten, hat sich der Bestand aber wieder etwas erholt.</German>
+		<German>Beim Walross (Odobenus rosmarus) handelt es sich um eine große Robbenart, die in den kalten Meeren der nördlichen Hemisphäre heimisch ist. Walrossbullen können bis zu 3,5 m lang werden und ein Gewicht von über 1200 kg erreichen. Weibchen sind dagegen deutlich kleiner und leichter.[NEWLINE]Walrosse verfügen über markante Stoßzähne, die auch Hauer genannt werden. Sie sind bei beiden Geschlechtern vorhanden, bei Männchen aber in der Regel länger und voluminöser. Es wurden schon Stoßzähne von 1-m-Rekordlänge dokumentiert. Walrosshauer sind wahre Multifunktionswerkzeuge. Die Tiere verteidigen sich damit gegen Fressfeinde, brechen damit Atemlöcher ins Eis, nutzen sie zur Fortbewegung, zur Abstützung des Kopfes oder ziehen sich damit an Land. Außerdem sind die Stoßzähne auch Statussymbole, mit denen dominante Tiere beiderlei Geschlechts die Rangordnung untermauern. Walrosse leben in großen Herden an den Küsten von Inseln oder am Packeisrand, die meist nach Geschlechtern getrennt sind. Außergewöhnlich ist der zweijährige Fortpflanzungsrhythmus, der dadurch bedingt ist, dass nach der Paarung im Januar/Februar das Ei zunächst 5 Monate ruht, bis die eigentliche elfmonatige Tragezeit beginnt.[NEWLINE]Das Walross hat für den Menschen schon immer eine bedeutende Rolle gespielt. Die arktischen Völker verwendeten praktisch alle Körperteile eines erlegten Walrosses, sei es als Nahrung oder als Material zum Heizen (Tran), zum Hüttenbau (Knochen und Stoßzähne) oder zur Herstellung von Booten und Kleidung (Haut). Durch skrupellose intensive Bejagung mit modernen Waffen zur Gewinnung des Elfenbeins, aber auch durch die Verschmutzung des Lebensraums insbesondere durch Ölunglücke wurden die Populationen stark dezimiert. Nachdem vor allem die USA und Russland eine Reihe von Schutzmaßnahmen starteten, hat sich der Bestand aber wieder etwas erholt.</German>
 		<Polish>Mors (koń morski, łac. Odobenus rosmarus) gatunek dużego drapieżnego ssaka morskiego, jedyny współcześnie żyjący przedstawiciel dawniej licznej w gatunki rodziny morsowatych (Odobenidae) i jedyny gatunek z rodzaju Odobenus. Mors pełnił ważną rolę w życiu mieszkańców Arktyki, którzy polowali na niego dla mięsa, skór, tłuszczu, ciosów i kości.[PARAGRAPH:2]Morsy występują na wodach przybrzeżnych Arktyki, wzdłuż wybrzeży Ameryki Północnej i Rosji. Mors najbardziej lubi płytkie wody w pobliżu pływających pól lodowych, więc można go również zobaczyć jak pływa na krach lodowych.[PARAGRAPH:2]TMors ma ciężkie ciało osiągające długość od 2,5 do 4,2 m, osłonięte grubą na 3,5 cm niemal nagą (słabo owłosioną), pofałdowaną skórą. Masa ciała mieści się w przedziale od 400 do 1700 kg; samce są większe od samic. Morsy z Oceanu Spokojnego są większe od występujących w Atlantyku. Barwa skóry od jasnobrązowej do cynamonowobrązowej, podczas wygrzewania się na słońcu kolor zmienia się na różowy wskutek rozszerzania się naczyń krwionośnych. Na brzuchu i piersiach skóra jest ciemniejsza. Morsy żyjące w Oceanie Spokojnym mają więcej wąsów czuciowych od tych z Atlantyku. Wszystkie kończyny morsa są przekształcone w płetwy. Przednie kończyny są większe od tylnych i stanowią główny narząd ruchu. U młodych morsów dostrzega się rzadkie owłosienie skóry, dorosłe mają skórę bardzo słabo owłosioną. Na górnej wardze występują liczne włosy czuciowe. W uzębieniu wyróżniają się górne kły obecne u samców i u samic, szczególnie silnie rozwinięte u samców, mogą dorastać do metra długości, ale przeciętna ich długość wynosi ok. 50 cm. Masa największych kłów przekracza 5 kg. Kły morsów mają budowę podobną do ciosów słoni.[PARAGRAPH:2]Mors nie jest gatunkiem zagrożonym wyginięciem, ale liczebność jest poważnie obniżona w wyniku dawnych polowań. Nadal prowadzone jest kłusownictwo dla ich ciosów, odkąd zdobywanie kości słoniowej jest nielegalne. Głównym naturalnym wrogiem morsów jest orka i rzadko niedźwiedź polarny, który tylko w wyjątkowych sytuacjach jest zdolny upolować młodego bądź schorowanego morsa.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WHALESHARK_PEDIA</Tag>
 		<English>The Whale Shark is the largest fish in the entire Ocean. The whale part in its name describes his length which is comparable to whales. They are also filter feeders like whales. Basically, they swim through the water and use their immense gills as a filter, capturing plankton and vegetation as it swims.</English>
+		<German>Der [COLOR_UNIT_TEXT]Walhai[COLOR_REVERT] (Rhincodon typus) ist der größte Fisch und damit auch der größte Hai der Gegenwart. Er lebt in den tropischen und subtropischen Meeren und hält sich sowohl küstennah als auch küstenfern auf. Weibliche Walhaie können Berechnungen zufolge bis zu 14,5 m lang und wahrscheinlich über 12 t schwer werden. Die Männchen sind deutlich kleiner. Die Färbung des Walhais ist gräulich, bläulich oder bräunlich. Während der Bauch hell ist, befinden sich auf dem Rücken Streifen und Flecken, die Querlinien bilden. Als einzige Haiart ist sein Maul endständig (an der Spitze der Schnauze) und besitzt ca. 3600 kleine Zähne in mehr als 300 Reihen.[NEWLINE]Zur Nahrungsaufnahme saugt er Wasser (bis zu 6000 Liter pro Stunde) an und presst es durch die Kiemen wieder aus, wobei Plankton und kleine Meeresbewohner herausgefiltert werden. Häufig "steht" er dabei senkrecht, manchmal ragt der Kopf aus dem Wasser und bewegt sich hin und her. Ein Walhai kann bis zu 100 Jahre alt werden, seine Geschlechtsreife erreicht er mit 10 bis 30 Jahren. Über die Fortpflanzung und die Entwicklung der Jungtiere ist wenig bekannt. 1953 wurde im Golf von Mexiko ein 30 cm langes Ei gefunden, das ein 36 cm großes Embryo enthielt.[NEWLINE]Der Walhai zählt zu den stark gefährdeten Tieren und befindet sich auf der Roten Liste. Durch Fischerei, Aquakulturen, Ölbohrungen, Schiffsverkehr und menschliche Freizeitaktivitäten nehmen die Bestände weiter ab.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WHITE_RHINO</Tag>
@@ -5929,6 +5921,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Breitmaulnashorn:Breitmaulnashorns:Breitmaulnashorn:Breitmaulnashorn:Breitmaulnashörner:Breitmaulnashörner:Breitmaulnashörnern:Breitmaulnashörner</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Rinoceronte bianco</Italian>
 		<Polish>Nosorożec Biały</Polish>
 		<Russian>Áåëûé íîñîðîã</Russian>
@@ -5941,6 +5938,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Das [COLOR_UNIT_TEXT]Breitmaulnashorn[COLOR_REVERT] (Ceratotherium simum) gehört zu den größten Landsäugetieren. Teilweise wird es auch Weißes Nashorn genannt, was sich vom englischen Trivialnamen ableitet. Es lebt in den Grassavannen Afrikas. Die Größe der Tiere variiert regional stark, die durchschnittliche Kopf-Rumpf-Länge beträgt 340 bis 380 cm bei einer Schulterhöhe von 150 bis 180 cm. Kühe wiegen 1,8 bis 2 t, Bullen sind etwas schwerer. Der Körper mit den kurzen Gliedmaßen wirkt massig, der Kopf hängt tief und der Nacken bildet einen mächtigen Buckel. Die Haut ist schiefergrau, ca. 2 cm dick und dicht und bildet leichte Falten. Haare befinden sich nur an den Ohrrändern, dem Schwanzende und den Augenlidern. Das breite Maul ohne Greiffortsatz unterscheidet das Breitmaulnashorn vom ebenfalls in Afrika lebenden Spitzmaulnashorn. Auf der Nase befindet sich ein großes Horn, auf der Stirn ein kleineres. Beide bestehen aus Keratin und wachsen ein Leben lang weiter. Das Horn dient hauptsächlich als Waffe bei Konkurrenzkämpfen.[NEWLINE]Das Breitmaulnashorn besitzt einen ausgeprägten Geruchssinn, kann aber wie alle Nashörner schlecht sehen. Zur Kommunikation dienen verschiedene Lautäußerungen, einige davon im Infraschallbereich. Die dämmerungsaktiven Tiere leben meist in kleinen Gruppen, die aus Weibchen und Jungtieren bestehen. Größere Verbände bilden sich an Wasserstellen. Bei Gefahr igeln sie sich ein, stellen sich also kreisfömig mit nach außen gerichteten Hörnern auf. Bullen sind Einzelgänger mit festen Revieren, die sie mit Kot und Urin markieren. Die Nahrung besteht aus verschiedenen Gräsern, wobei fast die Hälfte der aktiven Zeit mit Fressen verbracht wird. Der Wasserbedarf wird möglichst täglich gedeckt, jedoch kommt das Breitmaulnashorn auch ein bis zwei Tage ohne Wasser aus. An heißen Tagen liegt es häufig regungslos in der Suhlstelle. Natürliche Feinde hat es kaum, nur Löwen greifen manchmal Jungtiere an. Eine symbiotische Beziehung gibt es mit verschiedenen Vogelarten, die Insekten von der Nashornhaut picken.[NEWLINE]Man unterscheidet zwei Unterarten, das Südliche und das Nördliche Breitmaulnashorn. Während sich die südliche Unterart nach starker Dezimierung besonders im Hluhluwe-Umfolozi-Park bei Durban wieder erholt hat, gilt die nördliche Unerart in freier Wildbahn als ausgerottet. Verschiedene Zuchtprogramme in tschechischen und kenianischen Zoos gestalten sich schwierig.</German>
 		<Italian>Rinoceronte bianco</Italian>
 		<Polish>Nosorożec Biały</Polish>
 		<Russian>Áåëûå íîñîðîãè</Russian>

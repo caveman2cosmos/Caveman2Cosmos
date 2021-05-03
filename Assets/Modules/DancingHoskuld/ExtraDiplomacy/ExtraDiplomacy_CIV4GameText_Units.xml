@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DIPLOMAT_EARLY</Tag>
+		<English>Diplomat - Classic</English>
+		<French>Diplomate - Classique</French>
+		<Italian>
+			<Text>Diplomatico - Era classica</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Dyplomata - Klasyczny</Polish>
+		<Russian>Äèïëîìàò (äðåâíîñòü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DIPLOMAT_INDUST</Tag>
+		<English>Diplomat - Industrial Era</English>
+		<French>Diplomate - Ere Industrielle</French>
+		<Italian>
+			<Text>Diplomatico - Era industriale</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Dyplomata - Era Przemysłowa</Polish>
+		<Russian>Äèïëîìàò (èíäóñòð.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DIPLOMAT_MESSENGER</Tag>
+		<English>Diplomat - Negotiator</English>
+		<French>Diplomate - Messager</French>
+		<Italian>
+			<Text>Diplomatico - Messaggero</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Dyplomata - Posłaniec</Polish>
+		<Russian>Ãîíåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DIPLOMAT_MODERN</Tag>
+		<English>Diplomat - Modern Era</English>
+		<French>Diplomate - Ere Moderne</French>
+		<Italian>
+			<Text>Diplomatico - Era moderna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Dyplomata - Współczesność</Polish>
+		<Russian>Äèïëîìàò (ñîâð.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DIPLOMAT_PEDIA</Tag>
+		<English>A diplomat is a person appointed by a state to conduct diplomacy with another state or international organization. The main functions of diplomats revolve around the representation and protection of the interests and nationals of the sending state, as well as the promotion of information and friendly relations.[PARAGRAPH:2]Diplomats are the oldest form of any of the foreign policy institutions of the state, predating by centuries foreign ministers and ministerial offices.</English>
+		<Italian>Un diplomatico è una persona designata da uno Stato per condurre la diplomazia con un'altra organizzazione statale o internazionale. Le principali funzioni dei diplomatici ruotano intorno alla rappresentanza e alla tutela degli interessi e dei cittadini dello Stato che li invia, così come la promozione di informazioni e delle relazioni amichevoli.[PARAGRAPH:2]I diplomatici sono la più antica forma di politica estera, anticipando di secoli i ministri degli esteri e gli uffici ministeriali.</Italian>
+		<Polish>Dyplomata lub przedstawiciel dyplomatyczny (ang. diplomatic representative, fr. représentant diplomatique, niem. diplomatischer Vertreter) oficjalny przedstawiciel państwa za granicą, czyli zatrudniony w dyplomacji. Państwo, które dyplomata reprezentuje nazywamy państwem wysyłającym, zaś państwo, w którym jest akredytowany państwem przyjmującym. Wszyscy przedstawiciele dyplomatyczni akredytowani w określonym państwie tworzą jego korpus dyplomatyczny.</Polish>
+	</TEXT>
+</Civ4GameText>

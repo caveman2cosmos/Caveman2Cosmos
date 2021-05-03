@@ -295,12 +295,6 @@
 		<Russian>[SPACE]Одна из женщин племени понравилась вашим разведчикам!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
-		<English>Pedia</English>
-		<French>Pédia</French>
-		<Russian>ЦИВИЛОПЕДИЯ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_PREREQUISITE</Tag>
 		<English>[ICON_BULLET]May only exist on a %s1_MapCat.</English>
 		<German>[ICON_BULLET]kann nur auf einem %s1_MapCat existieren</German>
@@ -333,6 +327,34 @@
 		<Tag>TXT_KEY_MISC_CRIMINAL_CAUGHT</Tag>
 		<English>The %s1_CivAdj %s2_UnitName responsible was foiled in his efforts and spotted in the process!</English>
 		<French>Le responsable %s2_UnitName %s1_CivAdj a été repéré et son action déjouée!</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_BASE_YIELD</Tag>
+		<English>Base %s1: %d2 %F3</English>
+		<French>%s1 de base : %d2 %F3</French>
+		<German>Grundwert %s1: %d2 %F3</German>
+		<Italian>%s1 base: %d2 %F3</Italian>
+		<Spanish>%s1 base: %d2 %F3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE</Tag>
+		<English>[ICON_BULLET]%D1 %F2 from %s3</English>
+		<French>[ICON_BULLET]%D1 %F2 en raison de %s3</French>
+		<German>[ICON_BULLET]%D1 %F2 durch %s3</German>
+		<Italian>[ICON_BULLET]%D1 %F2 [NUM3:da:dai] %s3</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2 por %s3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_YIELD_OTHER</Tag>
+		<English>[ICON_BULLET]%D1 %F2 from other</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD</Tag>
+		<English>Sum: %d1%% = %s2%F3</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_FINAL_YIELD</Tag>
+		<English>Total: %d1 %F2</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE</Tag>
@@ -432,15 +454,6 @@
 		<Tag>TXT_KEY_MISC_YOUR_CRIMINAL_CAUGHT</Tag>
 		<English>Your %s1_UnitName was thwarted and is now on the run from the law!</English>
 		<French>Votre %s1_UnitName a été contrecarré et est maintenant en fuite pour échapper aux autorités!</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_TECH_YIELD</Tag>
-		<English>%s1: %D2%F3 (with [LINK=%s4_BonusType]%s5_Bonus[\LINK])</English>
-		<French>%s1 : %D2%F3 (avec [LINK=%s4_BonusType]%s5_Bonus[\LINK])</French>
-		<German>%s1: %D2%F3 (mit [LINK=%s4_BonusType]%s5_Bonus[\LINK])</German>
-		<Italian>%s1: %D2%F3 (con [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Italian>
-		<Spanish>%s1: %D2 %F3 (con [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Spanish>
-		<Russian>%s1: %D2%F3 (с [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PER_POP</Tag>

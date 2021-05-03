@@ -10,7 +10,6 @@ import WBPlayerUnits
 import WBReligionScreen
 import WBCorporationScreen
 import WBInfoScreen
-import WorldBuilder
 import Popup
 GC = CyGlobalContext()
 
@@ -168,15 +167,6 @@ class WBCityEditScreen:
 		screen.setLabel("CityChangeCultureText", "Background", sText, 1<<0, iX + 50, iY + 1, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		iY += 30
-		for i in xrange(YieldTypes.NUM_YIELD_TYPES):
-			iYield = pCity.getBaseYieldRate(YieldTypes(i))
-			screen.setButtonGFC("BaseYieldPlus" + str(i), "", "", iX, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, i, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
-			screen.setButtonGFC("BaseYieldMinus" + str(i), "", "", iX + 25, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, i, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
-			sText = CyTranslator().getText("TXT_KEY_WB_BASE_YIELD", (GC.getYieldInfo(i).getDescription(), iYield,))
-			sText = u"%s%c" %(sText, GC.getYieldInfo(i).getChar())
-			screen.setLabel("BaseYieldText" + str(i), "Background", "<font=3>" + sText + "</font>", 1<<0, iX + 50, iY + 1, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-			iY += 30
-
 		screen.setButtonGFC("CityFoodPlus", "", "", iX, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, -1, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
 		screen.setButtonGFC("CityFoodMinus", "", "", iX + 25, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, -1, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
 		sText = u"<font=3>%s: %d/%d%c</font>" %(CyTranslator().getText("TXT_WORD_FOOD",()), pCity.getFood(), pCity.growthThreshold(), GC.getYieldInfo(YieldTypes.YIELD_FOOD).getChar())
@@ -406,14 +396,6 @@ class WBCityEditScreen:
 			iIndex = screen.getSelectedPullDownID("CityOwner")
 			GC.getPlayer(screen.getPullDownData("CityOwner", iIndex)).acquireCity(pCity, False, True)
 			self.interfaceScreen(pPlot.getPlotCity())
-
-		elif inputClass.getFunctionName().find("BaseYield") > -1:
-			iYield = YieldTypes(inputClass.getData2())
-			if inputClass.getData1() == 1030:
-				pCity.changeBaseYieldRate(iYield, iChange)
-			elif inputClass.getData1() == 1031:
-				pCity.changeBaseYieldRate(iYield, - min(iChange, pCity.getBaseYieldRate(iYield)))
-			self.placeStats()
 
 		elif inputClass.getFunctionName().find("CityPopulation") > -1:
 			if inputClass.getData1() == 1030:

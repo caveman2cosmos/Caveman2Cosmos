@@ -358,7 +358,7 @@ def getHandoverUnitTypes(CyCity):
 	if iCounter == UnitTypes.NO_UNIT: iCounter = iBestDefender
 	if iAttack == UnitTypes.NO_UNIT: iAttack = iCounter
 
-	return [GC.getInfoTypeForString("UNIT_WORKER"), iBestDefender, iCounter, iAttack]
+	return [GC.getUNIT_WORKER(), iBestDefender, iCounter, iAttack]
 
 def getUprisingUnitTypes(CyCity):
 	# Returns list of units that can be given to violent rebel uprisings, odds of giving are set by the relative number of times a unit type appears in list

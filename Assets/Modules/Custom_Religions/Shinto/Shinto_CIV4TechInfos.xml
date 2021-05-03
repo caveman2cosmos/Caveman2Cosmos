@@ -5,7 +5,6 @@
 			<Type>TECH_SHINTO</Type>
 			<Description>TXT_KEY_TECH_SHINTO</Description>
 			<Civilopedia>TXT_KEY_TECH_SHINTO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_SHINTO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<bGlobal>1</bGlobal>

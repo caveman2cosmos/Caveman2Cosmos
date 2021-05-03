@@ -30190,7 +30190,7 @@
 					</UnitMeshGroup>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_FLAMETHROWER_MEAST</EarlyArtDefineTag>
-							<LateArtDefineTag>ART_DEF_UNIT_FLAMETHROWER_MEAST</LateArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_FLAMETHROWER_MEAST</LateArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_FLAMETHROWER_MEAST</MiddleArtDefineTag>
 					</UnitMeshGroup>
 					<UnitMeshGroup>

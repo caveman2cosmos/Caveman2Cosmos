@@ -13,7 +13,6 @@
 
 from CvPythonExtensions import *
 import Popup as PyPopup
-
 import RevEvents
 import BarbarianCiv
 import AIAutoPlay
@@ -21,9 +20,7 @@ import ChangePlayer
 import Revolution
 import DynamicCivNames
 import RevInstances
-
 import BugCore
-import RevDCM
 
 GC = CyGlobalContext()
 GAME = GC.getGame()

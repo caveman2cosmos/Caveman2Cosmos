@@ -21,7 +21,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 		bDebug = GAME.isDebugMode()
 		bCheat = GAME.cheatCodesEnabled()
 
-		tab = self.createTab(screen)
+		self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		column = self.addOneColumnLayout(screen, panel)
 		left, right = self.addTwoColumnLayout(screen, column, "Options", False)

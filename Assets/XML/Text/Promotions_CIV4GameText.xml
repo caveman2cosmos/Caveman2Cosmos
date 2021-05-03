@@ -136,22 +136,6 @@
 		<Russian>Àíòèêëåðèêàë</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_ARCHER_AID</Tag>
-		<English>Archer Aid Promotion Line</English>
-		<French>Spécialisation d'Archer Secouriste</French>
-		<Italian>Aiuto mirato</Italian>
-		<Polish>Linia Promocji: Wsparcie Łuczników</Polish>
-		<Russian>Ïîìîùü ëó÷íèêîâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_ARCTIC_NOMAD</Tag>
-		<English>Arctic Nomad Promotion Line</English>
-		<French>Spécialisation Nomade artique</French>
-		<Italian>Nomade artico</Italian>
-		<Polish>Linia Promocji: Arktyczny Nomada</Polish>
-		<Russian>Àðêòè÷åñêèé êî÷åâíèê</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ARMED_GUARD</Tag>
 		<English>Armed Guard Promotion Line</English>
 		<French>Spécialisation Garde Armé</French>
@@ -172,22 +156,6 @@
 		<French>Spécialisation Barrage de fléchés</French>
 		<Polish>Linia Promocji: Grad Strzał</Polish>
 		<Russian>Øêâàë ñòðåë</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_ATTRITION</Tag>
-		<English>Raider Promotion Line</English>
-		<French>Spécialisation Raid</French>
-		<Italian>Raid</Italian>
-		<Spanish>Incursion</Spanish>
-		<Polish>Linia Promocji: Najeźdźca</Polish>
-		<Russian>Íàáåã</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_AVIATION_DECEPTION</Tag>
-		<English>Aviation Deception Promotion Line</English>
-		<French>Spécialisation Tromperie Aérienne</French>
-		<Italian>Inganno</Italian>
-		<Polish>Linia Promocji: Oszukanie Lotnictwa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BACKSTAB</Tag>
@@ -738,15 +706,6 @@
 		<Russian>Õèìè÷åñêîå îðóæèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_CHIVALRY</Tag>
-		<English>Chivalry Promotion Line</English>
-		<French>Spécialisation Code de chevalerie</French>
-		<Italian>Codice cavalleresco</Italian>
-		<Spanish>Cedigo de caballerea</Spanish>
-		<Polish>Linia Promocji: Rycerskość</Polish>
-		<Russian>Ðûöàðñòâî</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CITYRAIDER</Tag>
 		<English>City Raider Promotion Line</English>
 		<French>Spécialisation Assaillant</French>
@@ -760,15 +719,6 @@
 		<English>Political Clout Promotion Line</English>
 		<French>Spécialisation 'Clout' Politique</French>
 		<German>Politischer Einfluss</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_COASTAL</Tag>
-		<English>Pirate Promotion Line</English>
-		<French>Spécialisation Pirate</French>
-		<Italian>Pirata</Italian>
-		<Spanish>Piraterea</Spanish>
-		<Polish>Linia Promocji: Pirat</Polish>
-		<Russian>Ïèðàòñòâî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_COASTAL_ASSAULT</Tag>
@@ -912,14 +862,6 @@
 		<Russian>Àëãîðèòìû çàùèòû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_DESERT_NOMAD</Tag>
-		<English>Desert Nomad Promotion Line</English>
-		<French>Spécialisation Nomade du Désert</French>
-		<Italian>Nomade del deserto</Italian>
-		<Polish>Linia Promocji: Pustynny Nomada</Polish>
-		<Russian>Ïóñòûííûé êî÷åâíèê</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DESERT_WORKER</Tag>
 		<English>Desert Worker Promotion Line</English>
 		<French>Spécialisation Ouvrier du Desert</French>
@@ -938,28 +880,12 @@
 		<Russian>Ñàíèòàðíàÿ ñëóæáà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_DIVINE_MIGHT</Tag>
-		<English>Divine Might Promotion Line</English>
-		<French>Spécialisation Puissance Divine</French>
-		<German>Göttliche Macht</German>
-		<Polish>Linia Promocji: Boska Moca</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DRILL</Tag>
 		<English>Drill Promotion Line</English>
 		<French>Spécialisation Exercice</French>
 		<Italian>Addestramento</Italian>
 		<Polish>Linia Promocji: Musztra</Polish>
 		<Russian>Âîåííàÿ ïîäãîòîâêà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_EARLY_RANGED_ARMOR</Tag>
-		<English>Ranged Armor Promotion Line</English>
-		<French>Armure distance</French>
-		<Italian>Corazza a distanza</Italian>
-		<Spanish>Armaduras a distancia</Spanish>
-		<Polish>Linia Promocji: Pancerz balistyczny</Polish>
-		<Russian>Äèíàìè÷åñêàÿ çàùèòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EDUCATE</Tag>
@@ -977,26 +903,10 @@
 		<Russian>Ýëåêòðîìàãíèòíàÿ áðîíÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_ELITE_MIGHT</Tag>
-		<English>Elite Might Promotion Line</English>
-		<French>Spécialisation Unité d'Elite</French>
-		<German>Elitäre Stärke</German>
-		<Polish>Linia Promocji: Elitarna Moc</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ENCLOSE</Tag>
 		<English>Enclose Promotion Line</English>
 		<French>Spécialisation Enclave</French>
 		<German>Einschließen</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_ENGINEERCORPS</Tag>
-		<English>Engineer Corps Promotion Line</English>
-		<French>Spécialisation Corps du Genie</French>
-		<Italian>Genieri</Italian>
-		<Spanish>Ingeniero</Spanish>
-		<Polish>Linia Promocji: Korpus Inżynierów</Polish>
-		<Russian>Èíæåíåðíûå âîéñêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ENHANCED_MARCH</Tag>
@@ -1011,22 +921,6 @@
 		<French>Spécialisation Piège</French>
 		<German>Falle</German>
 		<Polish>Linia Promocji: Usidlić</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_EPIC_MIGHT</Tag>
-		<English>Epic Might Promotion Line</English>
-		<French>Spécialisation Force Épique</French>
-		<German>Monumentale Stärke</German>
-		<Polish>Linia Promocji: Epicka Moc</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_MELEE_ARMOR</Tag>
-		<English>Early Armor Promotion Line</English>
-		<French>Armure Antique</French>
-		<Italian>Corazze antiche</Italian>
-		<Spanish>Armaduras antiguas</Spanish>
-		<Polish>Linia Promocji: Wczesny Pancerz</Polish>
-		<Russian>Ðàííÿÿ áðîíÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</Tag>
@@ -1054,13 +948,6 @@
 		<Italian>Evasione</Italian>
 		<Polish>Linia Promocji: Mistrz Ucieczki</Polish>
 		<Russian>Ìàñòåð ïîáåãà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_EXCEPTIONAL_MIGHT</Tag>
-		<English>Exceptional Might Promotion Line</English>
-		<French>Spécialisation Force exceptionnelle</French>
-		<German>Außergewöhnliche Stärke</German>
-		<Polish>Linia Promocji: Wyjątkowa Moc</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EXCESSIVE</Tag>
@@ -1154,15 +1041,6 @@
 		<Russian>Врач</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_FLAMING</Tag>
-		<English>Flaming Arrows Promotion Line</English>
-		<French>Spécialisation Flèches enflammées</French>
-		<Italian>Frecce incendiarie</Italian>
-		<Spanish>Flechas incendiarias</Spanish>
-		<Polish>Linia Promocji: Płonące Strzały</Polish>
-		<Russian>Îãíåííûå ñòðåëû</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FLANKING</Tag>
 		<English>Flanking Promotion Line</English>
 		<French>Spécialisation Contournement</French>
@@ -1245,28 +1123,11 @@
 		<Russian>Ïàðòèçàíñêàÿ âîéíà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_GUERILLAWAR</Tag>
-		<English>Guerilla Warfare Promotion Line</English>
-		<French>Spécialisation Armes de Guerilla</French>
-		<Italian>Partigiano</Italian>
-		<Spanish>Guerrilla</Spanish>
-		<Polish>Linia Promocji: Walka Partyzancka</Polish>
-		<Russian>Ïàðòèçàí</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_HAIL_OF_STONES</Tag>
 		<English>Hail of Stones Promotion Line</English>
 		<French>Spécialisation Grêle de pierres</French>
 		<Polish>Linia Promocji: Grad Kamieni</Polish>
 		<Russian>Ãðàä êàìíåé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_HARDY</Tag>
-		<English>Hardy Promotion Line</English>
-		<French>Spécialisation Vigueur</French>
-		<Italian>Rinvigorito</Italian>
-		<Polish>Linia Promocji: Wytrzymałość</Polish>
-		<Russian>Âûíîñëèâûé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_HAWK_EYES</Tag>
@@ -1285,14 +1146,6 @@
 		<English>Herding Promotion Line</English>
 		<French>Spécialisation Berger</French>
 		<Polish>Linia Promocji: Pasterstwo</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_HEROIC</Tag>
-		<English>Heroic Promotion Line</English>
-		<French>Spécialisation Heros</French>
-		<Italian>Eroico</Italian>
-		<Polish>Linia Promocji: Heroiczność</Polish>
-		<Russian>Ãåðîèçì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_HIDE_IN_SHADOWS</Tag>
@@ -1378,16 +1231,6 @@
 		<English>Identify Promotion Line</English>
 		<French>Spécialisation identification</French>
 		<German>Identifizieren</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_IMPERIAL</Tag>
-		<English>Imperial Promotion Line</English>
-		<French>Spécialisation Imperial</French>
-		<German>Ruhm</German>
-		<Italian>Guardia imperiale</Italian>
-		<Spanish>Imperial</Spanish>
-		<Polish>Linia Promocji: Cesarski</Polish>
-		<Russian>Èìïåðñêàÿ ãâàðäèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_IMPERIALIST</Tag>
@@ -1533,16 +1376,6 @@
 		<Russian>Ìàðîäåð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_MARKSMAN</Tag>
-		<English>Marksman Promotion Line</English>
-		<French>Spécialisation Tireur d'élite</French>
-		<German>Scharfschütze</German>
-		<Italian>Tiratore scelto</Italian>
-		<Spanish>Punterea</Spanish>
-		<Polish>Linia Promocji: Snajper</Polish>
-		<Russian>Ìåòêîñòü</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MARTIAL_ARTS</Tag>
 		<English>Martial Arts Promotion Line</English>
 		<French>Spécialisation Arts martiaux</French>
@@ -1568,14 +1401,6 @@
 		<Russian>Ìåãàëîìàíüÿê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_MELEE_AID</Tag>
-		<English>Melee Aid Promotion Line</English>
-		<French>Spécialisation Secouriste</French>
-		<Italian>Sussidio pesante</Italian>
-		<Polish>Linia Promocji: Wsparcie Wojowników</Polish>
-		<Russian>Ðóêîïàøíàÿ ïîääåðæêà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MIGHT</Tag>
 		<English>Might Promotion Line</English>
 		<French>Spécialisation Puissance</French>
@@ -1588,38 +1413,6 @@
 		<Italian>Morale</Italian>
 		<Polish>Linia Promocji: Morale</Polish>
 		<Russian>Áîåâàÿ ìîðàëü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_MOUNTED_AID</Tag>
-		<English>Mounted Aid Promotion Line</English>
-		<French>Spécialisation Secouriste Monté</French>
-		<Italian>Sussidio di mobility</Italian>
-		<Polish>Linia Promocji: Wsparcie Jazdy</Polish>
-		<Russian>Ïîìîùü êàâàëåðèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_NATIVE_HIGHLANDER</Tag>
-		<English>Native Highlander Promotion Line</English>
-		<French>Spécialisation Natif des Highlands</French>
-		<Italian>Nativo delle colline</Italian>
-		<Polish>Linia Promocji: Rdzenny Odkrywca Wzgórz</Polish>
-		<Russian>Ïëåìåííîé ãîðåö</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_NATIVE_PLAINSMEN</Tag>
-		<English>Native Plainsmen Promotion Line</English>
-		<French>Spécialisation Natif des plaines</French>
-		<Italian>Nativo delle pianure</Italian>
-		<Polish>Linia Promocji: Rdzenny Odkrywca Równin</Polish>
-		<Russian>Ñòåïíÿê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_NATIVE_WOODSMAN</Tag>
-		<English>Native Woodsman Promotion Line</English>
-		<French>Spécialisation Natif des Forêts</French>
-		<Italian>Nativo dei boschi</Italian>
-		<Polish>Linia Promocji: Rdzenny Odkrywca Lasów</Polish>
-		<Russian>Ëåñíîé âîèí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_NAVIGATION</Tag>
@@ -1956,29 +1749,12 @@
 		<Russian>Äðîæü çåìëè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_SCOUT_AID</Tag>
-		<English>Scout Aid Promotion Line</English>
-		<French>Spécialisation d'Eclaireur Secouriste</French>
-		<Italian>Sussidio dell'esploratore</Italian>
-		<Polish>Linia Promocji: Wsparcie Zwiadu</Polish>
-		<Russian>Ðàçâåäêà ìåñòíîñòè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SEAFARING</Tag>
 		<English>Seafaring Promotion Line</English>
 		<French>Spécialisation Navigateur</French>
 		<Italian>Marinaio</Italian>
 		<Polish>Linia Promocji: Marynarstwo</Polish>
 		<Russian>Ìîðåõîä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_SEAMANSHIP</Tag>
-		<English>Seamanship Promotion Line</English>
-		<French>Spécialisation Marine</French>
-		<Italian>Marinaio</Italian>
-		<Spanish>Nautica</Spanish>
-		<Polish>Linia Promocji: Żeglarstwo</Polish>
-		<Russian>Èñêóññòâî ìîðåïëàâàíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SEA_CREATURE</Tag>
@@ -2017,12 +1793,6 @@
 		<French>Spécialisation Guérison Auto.</French>
 		<German>Selbstheilung</German>
 		<Polish>Linia Promocji: Samoleczenie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_SELF_REPAIR</Tag>
-		<English>Self Repair Promotion Line</English>
-		<French>Spécialisation Réparation Auto.</French>
-		<Polish>Linia Promocji: Samonaprawa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SENSORS</Tag>
@@ -2085,14 +1855,6 @@
 		<Russian>Óêëîíåíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_SIEGE_AID</Tag>
-		<English>Siege Aid Promotion Line</English>
-		<French>Spécialisation Support de Siege</French>
-		<Italian>Sussidio di assedio</Italian>
-		<Polish>Linia Promocji: Wsparcie Oblężnicze</Polish>
-		<Russian>Îñàäíàÿ ïîääåðæêà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SILVERTONGUE</Tag>
 		<English>Silver Tongue Promotion Line</English>
 		<French>Spécialisation Langue de velours</French>
@@ -2138,15 +1900,6 @@
 		<Russian>Îïûò áîðüáû ñ âàðâàðàìè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_SPEED</Tag>
-		<English>Speed Promotion Line</English>
-		<French>Spécialisation Vitesse</French>
-		<German>Geschwindigkeit</German>
-		<Italian>Speed Velocity</Italian>
-		<Polish>Linia Promocji: Szybkość</Polish>
-		<Russian>Ñêîðîñòü</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SPIRITUAL</Tag>
 		<English>Spiritual Promotion Line</English>
 		<French>Spécialisation Spiritualité</French>
@@ -2169,13 +1922,6 @@
 		<Italian>Stallo</Italian>
 		<Polish>Linia Promocji: Stoisko</Polish>
 		<Russian>Çàñëîí</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_STANDARD_MIGHT</Tag>
-		<English>Standard Might Promotion Line</English>
-		<French>Spécialisation Force Standard</French>
-		<German>Standardstärke</German>
-		<Polish>Linia Promocji: Standardowa Moc</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_STANDOUT</Tag>
@@ -2225,13 +1971,6 @@
 		<Russian>Ðóêîïàøíûé áîé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_SUPERIOR_MIGHT</Tag>
-		<English>Superior Might Promotion Line</English>
-		<French>Spécialisation Puissance Supérieure</French>
-		<German>Überlegene Stärke</German>
-		<Polish>Linia Promocji: Super Moc</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SURPRISE</Tag>
 		<English>Status (Surprise) Promotion Line</English>
 		<French>Spécialisation Statut (Surprise)</French>
@@ -2274,14 +2013,6 @@
 		<Italian>Analisi del terreno</Italian>
 		<Polish>Linia Promocji: Analizator Terenu</Polish>
 		<Russian>Àíàëèç ìåñòíîñòè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_TEST_EQUIPMENT</Tag>
-		<English>Test Equipment Promotion Line</English>
-		<French>Spécialisation Équipement de Test</French>
-		<Italian>Equipaggiamento prototipo</Italian>
-		<Polish>Linia Promocji: Testowy Ekwipunek</Polish>
-		<Russian>Òåñòîâîå ñíàðÿæåíèå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_TO_THE_DEATH</Tag>
@@ -2388,14 +2119,6 @@
 		<English>Warrior's Intuition Promotion Line</English>
 		<French>Spécialisation Intuition du Guerrier</French>
 		<German>Kriegerintuition</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_WATERWAYS</Tag>
-		<English>Waterways Promotion Line</English>
-		<French>Spécialisation Navigateur</French>
-		<Italian>Nativo delle paludi</Italian>
-		<Polish>Linia Promocji: Szlaki Wodne</Polish>
-		<Russian>Àìôèáèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_WAYLAY</Tag>
@@ -2581,15 +2304,6 @@
 		<Russian>Адепт</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ADVANCED_AIRBORNE_COMBAT_TRAINING</Tag>
-		<English>Advanced Airborne Combat Training</English>
-		<French>Formation Supérieure du Combat Aéroporté</French>
-		<German>Fortgeschrittenes Luftkampftraining</German>
-		<Spanish>Entrenamiento avanzado en combate aéreo</Spanish>
-		<Polish>Zaawansowane Szkolenia Wojskowe Spadochroniarzy</Polish>
-		<Russian>Äåñàíòíèê I</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AFFLICTION_FORTITUDE_CHANGE_MODIFIER_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Change%% resistance and overcome bonus against the %s2_PromotionName affliction.</English>
 		<French>[ICON_BULLET]%D1_Change%% de résistance et de bonus contre les effets de %s2_PromotionName.</French>
@@ -2662,60 +2376,12 @@
 		<Russian>Àãðåññèâíûé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AID1</Tag>
-		<English>Aid I</English>
-		<French>Soutien I</French>
-		<German>Hilfe I</German>
-		<Italian>Aiuto I</Italian>
-		<Spanish>Apoyo I</Spanish>
-		<Polish>Wsparcie I</Polish>
-		<Russian>Îðóæåíîñåö I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AID2</Tag>
-		<English>Aid II</English>
-		<French>Soutien II</French>
-		<German>Hilfe II</German>
-		<Italian>Aiuto II</Italian>
-		<Spanish>Apoyo II</Spanish>
-		<Polish>Wsparcie II</Polish>
-		<Russian>Îðóæåíîñåö II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AID3</Tag>
-		<English>Aid III</English>
-		<French>Soutien III</French>
-		<German>Hilfe III</German>
-		<Italian>Aiuto III</Italian>
-		<Spanish>Apoyo III</Spanish>
-		<Polish>Wsparcie III</Polish>
-		<Russian>Îðóæåíîñåö III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AID_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Change Aid (%s2_Type)</English>
 		<French>[ICON_BULLET]%D1_Change Soutien (%s2_Type)</French>
 		<Italian>[ICON_BULLET]%D1_Change Supporto (%s2_Type)</Italian>
 		<Polish>[ICON_BULLET]%D1_Change Pomoc (%s2_Type)</Polish>
 		<Russian>[ICON_BULLET]%D1_Change к поддержке (%s2_Type)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AIRBORNE_COMBAT_TRAINING</Tag>
-		<English>Airborne Combat Training</English>
-		<French>Formation du Combat Aéroporté</French>
-		<German>Luftkampftraining</German>
-		<Spanish>Entrenamiento en combate aéreo</Spanish>
-		<Polish>Szkolenia Wojskowe Spadochroniarzy</Polish>
-		<Russian>Âîçäóøíûé äåñàíò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AIRBORNE_COMBAT_VETERAN</Tag>
-		<English>Airborne Combat Veteran</English>
-		<French>Vétéran du Combat Aéroporté</French>
-		<German>Luftkampf-Veteran</German>
-		<Spanish>Veterano en combate aéreo</Spanish>
-		<Polish>Spadochroniarz Weteran</Polish>
-		<Russian>Äåñàíòíèê II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AIR_DEFENSE1</Tag>
@@ -2754,16 +2420,6 @@
 		<German>[ICON_BULLET]%d1%% Änderung zum Luftkampflimit</German>
 		<Spanish>[ICON_BULLET]%d1%% al límite de combate aéreo</Spanish>
 		<Polish>[ICON_BULLET]%d1%% zmiany do Limitu Walki Powietrznej</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AIR_MOVE_TEXT</Tag>
-		<English>[ICON_BULLET]%D1_Change Air Movement Range</English>
-		<French>[ICON_BULLET]%D1_Change d'Autonomie en vol</French>
-		<German>[ICON_BULLET]%D1_Change Flugreichweite</German>
-		<Italian>[ICON_BULLET]%D1_Change al raggio di movimento aereo</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change al alcance de movimiento aéreo</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change zasięg lotu</Polish>
-		<Russian>[ICON_BULLET]%D1_Change Óâåëè÷åíèå ðàäèóñà äîñÿãàåìîñòè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AIR_REFUEL</Tag>
@@ -3005,72 +2661,6 @@
 		<Russian>Âîäîëåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ARCHER_AID1</Tag>
-		<English>Ranged Aid I</English>
-		<French>
-			<Text>Soutien étendu I</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Fernhilfe I</German>
-		<Italian>
-			<Text>Aiuto mirato I</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos a distancia I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Ogniowe I</Polish>
-		<Russian>Ïðèêðûòèå I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ARCHER_AID2</Tag>
-		<English>Ranged Aid II</English>
-		<French>
-			<Text>Soutien étendu II</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Fernhilfe II</German>
-		<Italian>
-			<Text>Aiuto mirato II</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos a distancia II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Ogniowe II</Polish>
-		<Russian>Ïðèêðûòèå II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ARCHER_AID3</Tag>
-		<English>Ranged Aid III</English>
-		<French>
-			<Text>Soutien étendu III</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Fernhilfe III</German>
-		<Italian>
-			<Text>Aiuto mirato III</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos a distancia III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Ogniowe III</Polish>
-		<Russian>Ïðèêðûòèå III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARIES</Tag>
 		<English>Aries</English>
 		<French>Bélier</French>
@@ -3192,72 +2782,6 @@
 		<Russian>Øêâàë ñòðåë III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ARTILLERYAP</Tag>
-		<English>Armor-Piercing Shells</English>
-		<French>
-			<Text>Munitions Transperçantes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Panzerbrechende Geschosse</German>
-		<Italian>
-			<Text>Munizioni perforanti</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Proyectiles perforantes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Pociski Przeciwpancerne</Polish>
-		<Russian>Áðîíåáîéíûå ñíàðÿäû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ARTILLERYCOUNTER</Tag>
-		<English>Counter-Battery Fire</English>
-		<French>
-			<Text>Tir de Contre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Artillerieduell</German>
-		<Italian>
-			<Text>Fuoco contraereo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Fuego antiaéreo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Ostrzał Kontr-Artyleryjski</Polish>
-		<Russian>Êîíòðáàòàðåéíûé îãîíü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ARTILLERYSUPP</Tag>
-		<English>Suppression Fire</English>
-		<French>
-			<Text>Tir de Suppression</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Unterstützungsfeuer</German>
-		<Italian>
-			<Text>Fuoco di soppressione</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Fuego de cobertura</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Ogień Zaporowy</Polish>
-		<Russian>Ïîäàâëÿþùèé îãîíü</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ASSASSIN_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Assassination: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Assassinat: %D1_Change</French>
@@ -3276,100 +2800,12 @@
 		<Russian>Ñïåöèàëèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ASTRO</Tag>
+		<Tag>TXT_KEY_PROMOTION_ASTRO_HELP</Tag>
 		<English>[ICON_BULLET]Astrological Sign</English>
 		<French>[ICON_BULLET]Signe Astrologique</French>
 		<Spanish>[ICON_BULLET]Signo astrológico: hay una cierta probabilidad de obtenerlo al entrenar una unidad</Spanish>
 		<Polish>[ICON_BULLET]Znak Zodiaku</Polish>
 		<Russian>[ICON_BULLET]Çíàêè Çîäèàêà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ATTACK1</Tag>
-		<English>Attack I</English>
-		<French>
-			<Text>Attaque I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Angriff I</German>
-		<Italian>
-			<Text>Attacco I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ataque I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Atak I</Polish>
-		<Russian>Íàïàäåíèå I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ATTACK2</Tag>
-		<English>Attack II</English>
-		<French>
-			<Text>Attaque II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Angriff II</German>
-		<Italian>
-			<Text>Attacco II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ataque II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Atak II</Polish>
-		<Russian>Íàïàäåíèå II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ATTACK3</Tag>
-		<English>Attack III</English>
-		<French>
-			<Text>Attaque III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Angriff III</German>
-		<Italian>
-			<Text>Attacco III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ataque III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Atak III</Polish>
-		<Russian>Íàïàäåíèå III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ATTACK4</Tag>
-		<English>Attack IV</English>
-		<French>
-			<Text>Attaque IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Angriff IV</German>
-		<Italian>
-			<Text>Attacco IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ataque IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Atak IV</Polish>
-		<Russian>Íàïàäåíèå IV</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ATTACK_MODIFIER_TEXT</Tag>
@@ -3395,72 +2831,6 @@
 		<Italian>[ICON_BULLET]Rimuove una causa per cui l'unità è in grado di attaccare solo città.</Italian>
 		<Polish>[ICON_BULLET]Odejmuje jedną możliwość do szturmu na miasto</Polish>
 		<Russian>[ICON_BULLET]Убирает возможность атаковать города этому отряду.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ATTRITION1</Tag>
-		<English>Raider I</English>
-		<French>
-			<Text>Raid I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Plünderer I</German>
-		<Italian>
-			<Text>Raid I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Incursión I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Najeźdźca I</Polish>
-		<Russian>Íàáåã I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ATTRITION2</Tag>
-		<English>Raider II</English>
-		<French>
-			<Text>Raid II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Plünderer II</German>
-		<Italian>
-			<Text>Raid II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Incursión II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Najeźdźca II</Polish>
-		<Russian>Íàáåã II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ATTRITION3</Tag>
-		<English>Raider III</English>
-		<French>
-			<Text>Raid III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Plünderer III</German>
-		<Italian>
-			<Text>Raid III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Incursión III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Najeźdźca III</Polish>
-		<Russian>Íàáåã III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AUTOMATIC_REPAIRS1</Tag>
@@ -3491,13 +2861,6 @@
 		<Spanish>Reparación automática MK III</Spanish>
 		<Polish>Automatyczne Naprawy III</Polish>
 		<Russian>Àâòîðåìîíò III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AUTO_ACQUIRE_TEXT</Tag>
-		<English>[ICON_BULLET]This promotion is automatically acquired once the prerequisites are met.</English>
-		<French>[ICON_BULLET]Promotion acquise automatiquement lorsque les pré-requis sont atteints.</French>
-		<Spanish>[ICON_BULLET]Este ascenso se adquiere automáticamente una vez cumplidos los requisitos</Spanish>
-		<Polish>[ICON_BULLET]Promocja automatycznie przyznawana przy spełnieniu warunków.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BACKSTAB1</Tag>
@@ -3886,28 +3249,6 @@
 		<Russian>Áåðñåðê III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BERZERKER4</Tag>
-		<English>Berzerker IV</English>
-		<French>
-			<Text>Barbare IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Berserker IV</German>
-		<Italian>
-			<Text>Berzerker IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Bersérker IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Berserker IV</Polish>
-		<Russian>Áåðñåðê IV</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BETTER_SKILL</Tag>
 		<English>Quality Up(Better Skill)</English>
 		<French>
@@ -4047,33 +3388,6 @@
 		</French>
 		<Polish>Bełty Przebijające III</Polish>
 		<Russian>Ïðîíèêàþùèé óðîí III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BOMB1</Tag>
-		<English>Exploding Shot I</English>
-		<French>De Projectile Explosif I</French>
-		<German>Explosives Geschoss I</German>
-		<Spanish>Proyectil explosivo I</Spanish>
-		<Polish>Eksplodujące Strzały I</Polish>
-		<Russian>Âçðûâ÷àòêà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BOMB2</Tag>
-		<English>Exploding Shot II</English>
-		<French>De Projectile Explosif II</French>
-		<German>Explosives Geschoss II</German>
-		<Spanish>Proyectil explosivo II</Spanish>
-		<Polish>Eksplodujące Strzały II</Polish>
-		<Russian>Âçðûâ÷àòêà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BOMB3</Tag>
-		<English>Exploding Shot III</English>
-		<French>De Projectile Explosif III</French>
-		<German>Explosives Geschoss III</German>
-		<Spanish>Proyectil explosivo III</Spanish>
-		<Polish>Eksplodujące Strzały III</Polish>
-		<Russian>Âçðûâ÷àòêà III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BOMBARDING1</Tag>
@@ -4239,12 +3553,6 @@
 		<French>Chasseur de Primes III</French>
 		<German>Kopfgeldjäger III</German>
 		<Russian>Охотник за головами III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BOUNTY_HUNTER_HELP</Tag>
-		<English>Makes the unit capable of transporting captives. In general this is beneficial to transport them quickly, hidden, or navally. Warning: Only one type of Special Unit Category can be loaded on any given unit and this promotion will replace other types of Special Units that can be loaded onto this unit as a result. In otherwords, it will dedicate this unit to ONLY being able to carry captives. Will also give some added carry space for this purpose. This is not to be envisioned in the same way that you might envision carrying units on a ship normally... it's instead a matter of being a 'chain gang' leader and commander. Also be warned that loaded captives will reduce the combat, withdrawal and pursuit effectiveness of the units transporting them. Each adds an increasing penalty so the more loaded, the more burdened and penalized the transporting unit becomes. This is because captives will generally attempt to free themselves during conflict which distracts their captors.</English>
-		<French>Permet à cette unité de transporter des prisonniers. En général, il est intéressant de pouvoir les transporter rapidement, caché. Attention: un seul type d'unité spéciale peut être chargé, et la promotion remplacera la possibilité de transporter d'autres unités spéciales. En d'autres mot, cette unité ne pourra transporter que des prisonniers, et bénéficiera d'une capacité de soute légèrement plus grande. L'unité qui transporte les prisonniers perd automatiquement en puissance au combat, et probabilité de fuite ou retraite, avec cumul de malus en fonction du nombre d'unités transportées.</French>
-		<Russian>Делает отряд способным захватывать и эскортировать пленников. Как правило, их выгодно транспортировать быстро, скрытно или по морю. Предупреждение: только один тип специальной категории юнитов может быть загружен на любой данный отряд, и эта акция заменит другие типы специальных юнитов, которые могут быть загружены на данный отряд. Другими словами, он в результате предоставит этому отряду ТОЛЬКО способности эскортировать пленников. Также даст дополнительное пространство для сопровождения для этой цели. Это не должно быть похоже на то, как вы обычно представляете перевозку войск на корабле... это больше похоже на лидерство и статус командира «сводного отряда». Также имейте в виду, что прикрепленные пленники снизят эффективность боя, вывода и преследования подразделений, которые их эскортируют. Каждый добавляет нарастающий штраф, так что чем больше отряд загружен, тем больше он будет обременен и тем больше штрафы к бою будет у конвоя. Это потому, что пленники, как правило, пытаются освободиться во время битвы, который отвлекает их поработителей.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BRONZE_ARMOR</Tag>
@@ -5485,20 +4793,6 @@
 		<Russian>Êîçåðîã</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CARGO</Tag>
-		<English>Cargo</English>
-		<French>
-			<Text>Transporteur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Fracht</German>
-		<Italian>Trasportatore</Italian>
-		<Spanish>Transporte I</Spanish>
-		<Polish>Ładunek</Polish>
-		<Russian>Ãðóçîïîäúåìíîñòü</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CAUTIOUS1</Tag>
 		<English>Cautious I</English>
 		<French>
@@ -5607,19 +4901,6 @@
 		</Spanish>
 		<Polish>Ostrożny V</Polish>
 		<Russian>Îñòîðîæíîñòü V</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CAVE_DWELLER</Tag>
-		<English>Cave Dweller</English>
-		<French>Habitant de Grotte</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CELEBRITY</Tag>
-		<English>Celebrity</English>
-		<French>Célébrité</French>
-		<Spanish>Famoso</Spanish>
-		<Polish>Sława</Polish>
-		<Russian>Ïðîñëàâëåííûé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CELEBRITY_TEXT</Tag>
@@ -5853,72 +5134,6 @@
 		<Russian>Õèìè÷åñêîå îðóæèå III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CHIVALRY1</Tag>
-		<English>Chivalry I</English>
-		<French>
-			<Text>Chevalerie I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Ritterlichkeit I</German>
-		<Italian>
-			<Text>Codice cavalleresco I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Código de caballería I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Rycerskość I</Polish>
-		<Russian>Ðûöàðñòâî I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CHIVALRY2</Tag>
-		<English>Chivalry II</English>
-		<French>
-			<Text>Chevalerie II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Ritterlichkeit II</German>
-		<Italian>
-			<Text>Codice cavalleresco II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Código de caballería II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Rycerskość II</Polish>
-		<Russian>Ðûöàðñòâî II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CHIVALRY3</Tag>
-		<English>Chivalry III</English>
-		<French>
-			<Text>Chevalerie III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Ritterlichkeit III</German>
-		<Italian>
-			<Text>Codice cavalleresco III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Código de caballería III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Rycerskość III</Polish>
-		<Russian>Ðûöàðñòâî III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CITYRAIDER1</Tag>
 		<English>City Raider I</English>
 		<French>
@@ -5995,28 +5210,6 @@
 		<Russian>Øòóðì IV</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CITY_GARRISON4</Tag>
-		<English>City Garrison IV</English>
-		<French>
-			<Text>Garnison IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Stadtverteidigung IV</German>
-		<Italian>
-			<Text>Guarnigione IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Guarnición de ciudad IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Miejski Garnizon IV</Polish>
-		<Russian>Ãàðíèçîí IV</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CITY_RAIDER5</Tag>
 		<English>City Raider V</English>
 		<French>
@@ -6089,72 +5282,6 @@
 		</Spanish>
 		<Polish>Amunicja Kultury Clovis</Polish>
 		<Russian>Ðàííÿÿ àìóíèöèÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_COASTAL1</Tag>
-		<English>Pirate I</English>
-		<French>
-			<Text>Pirate I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Pirat I</German>
-		<Italian>
-			<Text>Pirata I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Piratería I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Pirat I</Polish>
-		<Russian>Ïèðàò I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_COASTAL2</Tag>
-		<English>Pirate II</English>
-		<French>
-			<Text>Pirate II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Pirat II</German>
-		<Italian>
-			<Text>Pirata II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Piratería II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Pirat II</Polish>
-		<Russian>Ïèðàò II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_COASTAL3</Tag>
-		<English>Pirate III</English>
-		<French>
-			<Text>Pirate III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Pirat III</German>
-		<Italian>
-			<Text>Pirata III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Piratería III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Pirat III</Polish>
-		<Russian>Ïèðàò III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COASTAL_ASSAULT1</Tag>
@@ -6949,28 +6076,6 @@
 		<Russian>[ICON_BULLET]%D1_Mod%% шанса крит. урона против [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CROWDED</Tag>
-		<English>Crowded</English>
-		<French>
-			<Text>Serré</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Gedrängt</German>
-		<Italian>
-			<Text>Affollato</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Abarrotado</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Niezłomny</Polish>
-		<Russian>Ïåðåïîëíåíèå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CROWS_NEST1</Tag>
 		<English>Crow's Nest I</English>
 		<French>Nid de corbeau I</French>
@@ -7228,94 +6333,6 @@
 		<Russian>Ïîñâÿùåííûé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DEFENCE1</Tag>
-		<English>Defence I</English>
-		<French>
-			<Text>Défense I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Verteidigung I</German>
-		<Italian>
-			<Text>Difesa I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Defensa I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Obrona I</Polish>
-		<Russian>Çàùèòà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DEFENCE2</Tag>
-		<English>Defence II</English>
-		<French>
-			<Text>Défense II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Verteidigung II</German>
-		<Italian>
-			<Text>Difesa II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Defensa II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Obrona II</Polish>
-		<Russian>Çàùèòà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DEFENCE3</Tag>
-		<English>Defence III</English>
-		<French>
-			<Text>Défense III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Verteidigung III</German>
-		<Italian>
-			<Text>Difesa III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Defensa III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Obrona III</Polish>
-		<Russian>Çàùèòà III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DEFENCE4</Tag>
-		<English>Defence IV</English>
-		<French>
-			<Text>Défense IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Verteidigung IV</German>
-		<Italian>
-			<Text>Difesa IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Defensa IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Obrona IV</Polish>
-		<Russian>Çàùèòà IV</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEFENSE_MODIFIER_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Change%% modifier to Defense</English>
 		<French>[ICON_BULLET]%D1_Change%% Modif. en Défense</French>
@@ -7367,14 +6384,6 @@
 		<French>[ICON_BULLET]%D1_Change%% Démoralisation (moins de puissance en Défense lors d'un tour.)</French>
 		<Italian>[ICON_BULLET]%D1_Change%% Demoralizzazione (forza persa dalla difesa in un certo turno.)</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% z Demoralizacji</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DEMORALIZER</Tag>
-		<English>Demoralizer</English>
-		<French>Sapeur de Moral</French>
-		<Spanish>Desmoralizador</Spanish>
-		<Polish>Demoralizator</Polish>
-		<Russian>Óñòðàøèòåëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEPLETE_MP_HELP</Tag>
@@ -7437,20 +6446,6 @@
 		<French>[ICON_BULLET]%D1_Change%% Détermination (Puissance supplémentaire en Défense lors d'un tour.)</French>
 		<Italian>[ICON_BULLET]%D1_Change%% Determinazione (forza aggiunta alla difesa in un certo turno.)</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% z Determinacji</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DIGIN_TEXT</Tag>
-		<English>[ICON_BULLET]%D1_Change%% Dig In bonus when fortifying.</English>
-		<French>[ICON_BULLET]%D1_Change%% Bonus de Retranchement si fortifié.</French>
-		<Italian>[ICON_BULLET]%D1_Change%% di bonus di trinceramento quando si fortifica.</Italian>
-		<Polish>[ICON_BULLET]%D1_Change%% Bonusu Fortyfikacji.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DILLON_M134_MINIGUN</Tag>
-		<English>Dillon Aero M134 Minigun</English>
-		<French>M134 Minigun de Dillon Aero</French>
-		<Spanish>Ametralladora Dillon Aero M134</Spanish>
-		<Polish>Minigun</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DISEASE_CONTROL1</Tag>
@@ -7673,78 +6668,6 @@
 		<Russian>Ñàíèòàð IX</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT1</Tag>
-		<English>Divine Might I</English>
-		<French>Puissance Divine I</French>
-		<German>Göttliche Macht I</German>
-		<Polish>Boska Moca I</Polish>
-		<Russian>Áîæåñòâ. ñèëà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT2</Tag>
-		<English>Divine Might II</English>
-		<French>Puissance Divine II</French>
-		<German>Göttliche Macht II</German>
-		<Polish>Boska Moca II</Polish>
-		<Russian>Áîæåñòâ. ñèëà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT3</Tag>
-		<English>Divine Might III</English>
-		<French>Puissance Divine III</French>
-		<German>Göttliche Macht III</German>
-		<Polish>Boska Moca III</Polish>
-		<Russian>Áîæåñòâ. ñèëà III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT4</Tag>
-		<English>Divine Might IV</English>
-		<French>Puissance Divine IV</French>
-		<German>Göttliche Macht IV</German>
-		<Polish>Boska Moca IV</Polish>
-		<Russian>Áîæåñòâ. ñèëà IV</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT5</Tag>
-		<English>Divine Might V</English>
-		<French>Puissance Divine V</French>
-		<German>Göttliche Macht V</German>
-		<Polish>Boska Moca V</Polish>
-		<Russian>Áîæåñòâ. ñèëà V</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT6</Tag>
-		<English>Divine Might VI</English>
-		<French>Puissance Divine VI</French>
-		<German>Göttliche Macht VI</German>
-		<Polish>Boska Moca VI</Polish>
-		<Russian>Áîæåñòâ. ñèëà VI</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT7</Tag>
-		<English>Divine Might VII</English>
-		<French>Puissance Divine VII</French>
-		<German>Göttliche Macht VII</German>
-		<Polish>Boska Moca VII</Polish>
-		<Russian>Áîæåñòâ. ñèëà VII</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT8</Tag>
-		<English>Divine Might VIII</English>
-		<French>Puissance Divine VIII</French>
-		<German>Göttliche Macht VIII</German>
-		<Polish>Boska Moca VIII</Polish>
-		<Russian>Áîæåñòâ. ñèëà VIII</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT9</Tag>
-		<English>Divine Might IX</English>
-		<French>Puissance Divine IX</French>
-		<German>Göttliche Macht IX</German>
-		<Polish>Boska Moca IX</Polish>
-		<Russian>Áîæåñòâ. ñèëà IX</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DODGE_MODIFIER_TEXT</Tag>
 		<English>[ICON_BULLET]Additional %D1_Change%% Dodge</English>
 		<French>[ICON_BULLET]Esquive supplémentaire: %D1_Change%%</French>
@@ -7916,15 +6839,6 @@
 		<Polish>[ICON_BULLET]%D1_Change%% Wszystkich punktów HP by rozpocząć ucieczkę</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ECM</Tag>
-		<English>Electronic Counter Measures</English>
-		<French>Contremesures Electroniques</French>
-		<German>Elektronische Gegenmaßnahmen</German>
-		<Spanish>Contramedidas electrónicas</Spanish>
-		<Polish>Elektroniczne Systemy Zaradcze</Polish>
-		<Russian>ÐÝÏ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EDUCATE1</Tag>
 		<English>Educate I</English>
 		<French>Instruction I</French>
@@ -8035,62 +6949,6 @@
 		<Russian>ÝÌ-áðîíÿ III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT1</Tag>
-		<English>Elite Might I</English>
-		<French>Unité d'Elite I</French>
-		<German>Elitäre Stärke I</German>
-		<Polish>Elitarna Moc I</Polish>
-		<Russian>Ýëèòàðíàÿ ñèëà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT2</Tag>
-		<English>Elite Might II</English>
-		<French>Unité d'Elite II</French>
-		<German>Elitäre Stärke II</German>
-		<Polish>Elitarna Moc II</Polish>
-		<Russian>Ýëèòàðíàÿ ñèëà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT3</Tag>
-		<English>Elite Might III</English>
-		<French>Unité d'Elite III</French>
-		<German>Elitäre Stärke III</German>
-		<Polish>Elitarna Moc III</Polish>
-		<Russian>Ýëèòàðíàÿ ñèëà III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT4</Tag>
-		<English>Elite Might IV</English>
-		<French>Unité d'Elite IV</French>
-		<German>Elitäre Stärke IV</German>
-		<Polish>Elitarna Moc IV</Polish>
-		<Russian>Ýëèòàðíàÿ ñèëà IV</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT5</Tag>
-		<English>Elite Might V</English>
-		<French>Unité d'Elite V</French>
-		<German>Elitäre Stärke V</German>
-		<Polish>Elitarna Moc V</Polish>
-		<Russian>Ýëèòàðíàÿ ñèëà V</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT6</Tag>
-		<English>Elite Might VI</English>
-		<French>Unité d'Elite VI</French>
-		<German>Elitäre Stärke VI</German>
-		<Polish>Elitarna Moc VI</Polish>
-		<Russian>Ýëèòàðíàÿ ñèëà VI</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT7</Tag>
-		<English>Elite Might VII</English>
-		<French>Unité d'Elite VII</French>
-		<German>Elitäre Stärke VII</German>
-		<Polish>Elitarna Moc VII</Polish>
-		<Russian>Ýëèòàðíàÿ ñèëà VII</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EMERGING_COMPETENCE</Tag>
 		<English>Quality Up(Emerging Competence)</English>
 		<French>
@@ -8138,72 +6996,6 @@
 		<Russian>[ICON_BULLET]%D1_Change к стойкости</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ENGINEERCORPS1</Tag>
-		<English>Siege Engineering I</English>
-		<French>
-			<Text>Technique de Siège I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Belagerungstechnik I</German>
-		<Italian>
-			<Text>Tecniche d'assedio I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Técnicas de asedio I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Inżynieria Oblężnicza I</Polish>
-		<Russian>Îñàäà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ENGINEERCORPS2</Tag>
-		<English>Siege Engineering II</English>
-		<French>
-			<Text>Technique de Siège II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Belagerungstechnik II</German>
-		<Italian>
-			<Text>Tecniche d'assedio II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Técnicas de asedio II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Inżynieria Oblężnicza II</Polish>
-		<Russian>Îñàäà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ENGINEERCORPS3</Tag>
-		<English>Siege Engineering III</English>
-		<French>
-			<Text>Technique de Siège III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Belagerungstechnik III</German>
-		<Italian>
-			<Text>Tecniche d'assedio III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Técnicas de asedio III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Inżynieria Oblężnicza III</Polish>
-		<Russian>Îñàäà III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENTRAPMENT1</Tag>
 		<English>Ensnare I</English>
 		<French>
@@ -8238,70 +7030,6 @@
 		<German>Falle III</German>
 		<Polish>Usidlić III</Polish>
 		<Russian>Çàïàäíÿ III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT1</Tag>
-		<English>Epic Might I</English>
-		<French>Force Epique I</French>
-		<German>Monumentale Stärke I</German>
-		<Polish>Epicka Moc I</Polish>
-		<Russian>Ýïè÷åñêàÿ ñèëà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT2</Tag>
-		<English>Epic Might II</English>
-		<French>Force Epique II</French>
-		<German>Monumentale Stärke II</German>
-		<Polish>Epicka Moc II</Polish>
-		<Russian>Ýïè÷åñêàÿ ñèëà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT3</Tag>
-		<English>Epic Might III</English>
-		<French>Force Epique III</French>
-		<German>Monumentale Stärke III</German>
-		<Polish>Epicka Moc III</Polish>
-		<Russian>Ýïè÷åñêàÿ ñèëà III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT4</Tag>
-		<English>Epic Might IV</English>
-		<French>Force Epique IV</French>
-		<German>Monumentale Stärke IV</German>
-		<Polish>Epicka Moc IV</Polish>
-		<Russian>Ýïè÷åñêàÿ ñèëà IV</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT5</Tag>
-		<English>Epic Might V</English>
-		<French>Force Epique V</French>
-		<German>Monumentale Stärke V</German>
-		<Polish>Epicka Moc V</Polish>
-		<Russian>Ýïè÷åñêàÿ ñèëà V</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT6</Tag>
-		<English>Epic Might VI</English>
-		<French>Force Epique VI</French>
-		<German>Monumentale Stärke VI</German>
-		<Polish>Epicka Moc VI</Polish>
-		<Russian>Ýïè÷åñêàÿ ñèëà VI</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT7</Tag>
-		<English>Epic Might VII</English>
-		<French>Force Epique VII</French>
-		<German>Monumentale Stärke VII</German>
-		<Polish>Epicka Moc VII</Polish>
-		<Russian>Ýïè÷åñêàÿ ñèëà VII</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT8</Tag>
-		<English>Epic Might VIII</English>
-		<French>Force Epique VIII</French>
-		<German>Monumentale Stärke VIII</German>
-		<Polish>Epicka Moc VIII</Polish>
-		<Russian>Ýïè÷åñêàÿ ñèëà VIII</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EQUIPMENT_TEXT</Tag>
@@ -8360,16 +7088,6 @@
 		<Russian>[ICON_BULLET]Получает [ICON_ESPIONAGE] вместе с [ICON_GOLD] при грабеже</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EVADE_INTERCEPTION_TEXT</Tag>
-		<English>[ICON_BULLET]Evade Interception (%d1_Amount%% Chance)</English>
-		<French>[ICON_BULLET]Peut échapper à une Interception (%d1_Amount%% Chance)</French>
-		<German>[ICON_BULLET]Abfangen umgehen (Erfolgsaussicht: %d1_Amount%%)</German>
-		<Italian>[ICON_BULLET]Evita l'intercettazione (%d1_Amount%% di Chance)</Italian>
-		<Spanish>[ICON_BULLET]Puede evitar la interceptación (probabilidad del %d1_Amount%%)</Spanish>
-		<Polish>[ICON_BULLET]Unikanie przechwycenia (%d1_Amount%% Chance)</Polish>
-		<Russian>[ICON_BULLET]èçáåæàòü ïåðåõâàòà (%d1_Amount%% øàíñ)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EVASION_TEXT_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Detection Evasion Bonus</English>
 		<French>[ICON_BULLET]%d1_percent%% Bonus pour échapper à la Détection</French>
@@ -8377,54 +7095,6 @@
 		<Italian>[ICON_BULLET]%d1_percent%% Bonus Anti-Intercettazione</Italian>
 		<Spanish>[ICON_BULLET]Bonificación del %d1_percent%% a la evasión de la detección</Spanish>
 		<Polish>[ICON_BULLET]+%d1_percent%% do szansy na uniknięcie wykrycia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EXCEPTIONAL_MIGHT1</Tag>
-		<English>Exceptional Might I</English>
-		<French>Force Exceptionelle I</French>
-		<German>Außergewöhnliche Stärke I</German>
-		<Polish>Wyjątkowa Moc I</Polish>
-		<Russian>Íåîáû÷àéíàÿ ñèëà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EXCEPTIONAL_MIGHT2</Tag>
-		<English>Exceptional Might II</English>
-		<French>Force Exceptionelle II</French>
-		<German>Außergewöhnliche Stärke II</German>
-		<Polish>Wyjątkowa Moc II</Polish>
-		<Russian>Íåîáû÷àéíàÿ ñèëà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EXCEPTIONAL_MIGHT3</Tag>
-		<English>Exceptional Might III</English>
-		<French>Force Exceptionelle III</French>
-		<German>Außergewöhnliche Stärke III</German>
-		<Polish>Wyjątkowa Moc III</Polish>
-		<Russian>Íåîáû÷àéíàÿ ñèëà III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EXCEPTIONAL_MIGHT4</Tag>
-		<English>Exceptional Might IV</English>
-		<French>Force Exceptionelle IV</French>
-		<German>Außergewöhnliche Stärke IV</German>
-		<Polish>Wyjątkowa Moc IV</Polish>
-		<Russian>Íåîáû÷àéíàÿ ñèëà IV</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EXCEPTIONAL_MIGHT5</Tag>
-		<English>Exceptional Might V</English>
-		<French>Force Exceptionelle V</French>
-		<German>Außergewöhnliche Stärke V</German>
-		<Polish>Wyjątkowa Moc V</Polish>
-		<Russian>Íåîáû÷àéíàÿ ñèëà V</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EXCEPTIONAL_MIGHT6</Tag>
-		<English>Exceptional Might VI</English>
-		<French>Force Exceptionelle VI</French>
-		<German>Außergewöhnliche Stärke VI</German>
-		<Polish>Wyjątkowa Moc VI</Polish>
-		<Russian>Íåîáû÷àéíàÿ ñèëà VI</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EXCILE_ADD_TEXT</Tag>
@@ -8437,38 +7107,12 @@
 		<French>[ICON_BULLET]Enlève la possibilité pour l'unité d'être considérée en exil.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EXPANSIONIST</Tag>
-		<English>Expansionist Promotion</English>
-		<French>
-			<Text>Promotion Expansionniste</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Expansionist</German>
-		<Italian>
-			<Text>Espansionista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Expansionista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Promocja od Ekspansjonizmu</Polish>
-		<Russian>Ýêñïàíñèîíèñò</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EXTRA_DROP_RANGE_TEXT</Tag>
 		<English>[ICON_BULLET]+%d1 Paradrop Range</English>
 		<French>[ICON_BULLET]+%d1 Autonomie Pour les Missions Aériennes</French>
 		<German>[ICON_BULLET]+%d1 Reichweite für Fallschirmsprünge</German>
 		<Spanish>[ICON_BULLET]+%d1 al alcance de las misiones de paracaidismo</Spanish>
 		<Polish>[ICON_BULLET]+%d1 do Zasięgu Spadochroniarzy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EXTRA_STRENGTH_TEXT</Tag>
-		<English>[ICON_BULLET]+%d1 [ICON_STRENGTH]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FAKE_IDENTITY1</Tag>
@@ -8852,72 +7496,6 @@
 		<Russian>Âðà÷ VII</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FLAMING1</Tag>
-		<English>Flaming Arrows I</English>
-		<French>
-			<Text>Flèches Enflammées I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Brennende Pfeile I</German>
-		<Italian>
-			<Text>Frecce incendiarie I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Flechas incendiarias I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Płonące Strzały I</Polish>
-		<Russian>Îãíåííûå ñòðåëû I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FLAMING2</Tag>
-		<English>Flaming Arrows II</English>
-		<French>
-			<Text>Flèches Enflammées II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Brennende Pfeile II</German>
-		<Italian>
-			<Text>Frecce incendiarie II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Flechas incendiarias II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Płonące Strzały II</Polish>
-		<Russian>Îãíåííûå ñòðåëû II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FLAMING3</Tag>
-		<English>Flaming Arrows III</English>
-		<French>
-			<Text>Flèches Enflammées III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Brennende Pfeile III</German>
-		<Italian>
-			<Text>Frecce incendiarie III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Flechas incendiarias III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Płonące Strzały III</Polish>
-		<Russian>Îãíåííûå ñòðåëû III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FLANKING1</Tag>
 		<English>Flanking I</English>
 		<French>
@@ -9215,123 +7793,11 @@
 		<Russian>Ïîñòðîåíèå III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FORT1</Tag>
-		<English>Fort Bonus I</English>
-		<French>
-			<Text>Bonus De Fort I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Bonus Fortezza I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ayuda de la fortaleza I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Obrona Fortu I</Polish>
-		<Russian>Óêðåïëåííîñòü I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FORT2</Tag>
-		<English>Fort Bonus II</English>
-		<French>
-			<Text>Bonus De Fort II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Bonus Fortezza II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ayuda de la fortaleza II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Obrona Fortu II</Polish>
-		<Russian>Óêðåïëåííîñòü II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FORT3</Tag>
-		<English>Fort Bonus III</English>
-		<French>
-			<Text>Bonus De Fort III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Bonus Fortezza III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ayuda de la fortaleza III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Obrona Fortu III</Polish>
-		<Russian>Óêðåïëåííîñòü III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FORT4</Tag>
-		<English>Fort Bonus IV</English>
-		<French>
-			<Text>Bonus De Fort IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Bonus Fortezza IV</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ayuda de la fortaleza IV</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Obrona Fortu IV</Polish>
-		<Russian>Óêðåïëåííîñòü IV</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FORT5</Tag>
-		<English>Fort Bonus V</English>
-		<French>
-			<Text>Bonus De Fort V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Bonus Fortezza V</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ayuda de la fortaleza V</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Obrona Fortu V</Polish>
-		<Russian>Óêðåïëåííîñòü V</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FORTITUDE_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Fortitude</English>
 		<French>[ICON_BULLET]%D1_Change%% de Courage</French>
 		<Italian>[ICON_BULLET]%D1_Change%% Forza d'animo</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% Hart</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FORT_COLLAT_DEF_TEXT</Tag>
-		<English>[ICON_BULLET]%D1_Change%% Fortified Collateral Defense.</English>
-		<French>[ICON_BULLET]%D1_Change%% Défense Fortifié contre Dom. Coll.</French>
-		<Italian>[ICON_BULLET]%D1_Change%% difesa fortificata contro il danno collaterale.</Italian>
-		<Polish>[ICON_BULLET]%D1_Change%% Obrona Ufortyfikowania.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FORT_REPEL_TEXT</Tag>
@@ -9688,20 +8154,6 @@
 		<Russian>Âåëèêèé îõîòíèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_GREAT_MERCENARY</Tag>
-		<English>Great Mercenary</English>
-		<French>
-			<Text>Mercenaire Illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Großer Söldner</German>
-		<Italian>Mercenario illustre</Italian>
-		<Spanish>Gran mercenario</Spanish>
-		<Polish>Wielki Najemnik</Polish>
-		<Russian>Âåëèêèé íàåìíèê</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GREEN_WARDEN</Tag>
 		<English>Green Warden</English>
 		<French>Gardien vert</French>
@@ -9826,72 +8278,6 @@
 		<Russian>Ïàðòèçàíñêàÿ âîéíà III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_GUERILLAWAR1</Tag>
-		<English>Partisan I</English>
-		<French>
-			<Text>Partisan I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Partisanenkampf I</German>
-		<Italian>
-			<Text>Partigiano I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Partisano I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Partyzant I</Polish>
-		<Russian>Ïàðòèçàí I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_GUERILLAWAR2</Tag>
-		<English>Partisan II</English>
-		<French>
-			<Text>Partisan II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Partisanenkampf II</German>
-		<Italian>
-			<Text>Partigiano II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Partisano II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Partyzant II</Polish>
-		<Russian>Ïàðòèçàí II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_GUERILLAWAR3</Tag>
-		<English>Partisan III</English>
-		<French>
-			<Text>Partisan III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Partisanenkampf III</German>
-		<Italian>
-			<Text>Partigiano III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Partisano III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Partyzant III</Polish>
-		<Russian>Ïàðòèçàí III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HAIL_OF_STONES1</Tag>
 		<English>Hail of Stones I</English>
 		<French>
@@ -9986,88 +8372,6 @@
 		<Russian>Остроглаз III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HAWK_RANGE1</Tag>
-		<English>Range I</English>
-		<French>Portée I</French>
-		<German>Reichweite I</German>
-		<Italian>Portata I</Italian>
-		<Spanish>Alcance I</Spanish>
-		<Polish>Zasięg I</Polish>
-		<Russian>Äàëüíîñòü I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HAWK_RANGE2</Tag>
-		<English>Range II</English>
-		<French>Portée II</French>
-		<German>Reichweite II</German>
-		<Italian>Portata II</Italian>
-		<Spanish>Alcance II</Spanish>
-		<Polish>Zasięg II</Polish>
-		<Russian>Äàëüíîñòü II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HAWK_SEEKING1</Tag>
-		<English>Recognition I</English>
-		<French>Reconnaissance I</French>
-		<German>Erkennen I</German>
-		<Italian>Ricognizione I</Italian>
-		<Spanish>Reconocimiento I</Spanish>
-		<Polish>Rozpoznanie I</Polish>
-		<Russian>Îðèåíòèðîâàíèå I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HAWK_SEEKING2</Tag>
-		<English>Recognition II</English>
-		<French>Reconnaissance II</French>
-		<German>Erkennen II</German>
-		<Italian>Ricognizione II</Italian>
-		<Spanish>Reconocimiento II</Spanish>
-		<Polish>Rozpoznanie II</Polish>
-		<Russian>Îðèåíòèðîâàíèå II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HAWK_SEEKING_1_TEXT</Tag>
-		<English>[ICON_BULLET]+1 Visibility Range when recognizing</English>
-		<French>[ICON_BULLET]+1 de Vision lors des missions d'éclaireur</French>
-		<German>[ICON_BULLET]+1 Sichtweite beim Erkennen</German>
-		<Italian>[ICON_BULLET]+1 al raggio di visibilità durante le missioni di ricognizione</Italian>
-		<Spanish>[ICON_BULLET]+1 al alcance de la visibilidad en las misiones de reconocimiento</Spanish>
-		<Polish>[ICON_BULLET]+1 do zasięgu widzenia</Polish>
-		<Russian>[ICON_BULLET]+1 Äèàïàçîí Âèäèìîñòè ïðè îáíàðóæåíèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HAWK_SEEKING_2_TEXT</Tag>
-		<English>[ICON_BULLET]+1 Visibility Range when recognizing</English>
-		<French>[ICON_BULLET]+1 de Vision lors des missions d'éclaireur</French>
-		<German>[ICON_BULLET]+1 Sichtweite beim Erkennen</German>
-		<Italian>[ICON_BULLET]+1 al raggio di visibilità durante le missioni di ricognizione</Italian>
-		<Spanish>[ICON_BULLET]+1 al alcance de la visibilidad en las misiones de reconocimiento</Spanish>
-		<Polish>[ICON_BULLET]+1 do zasięgu widzenia</Polish>
-		<Russian>[ICON_BULLET]+1 Äèàïàçîí Âèäèìîñòè ïðè îáíàðóæåíèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HEAL</Tag>
-		<English>Heal</English>
-		<French>
-			<Text>Soins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Heiler</German>
-		<Italian>
-			<Text>Guaritore</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Sanador</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Zdrowie</Polish>
-		<Russian>Ëå÷åíèå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HEAL1</Tag>
 		<English>Heal (All) I</English>
 		<French>Soigne (Tous) I</French>
@@ -10137,38 +8441,6 @@
 		<Russian>Òåïëîâèçîðû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HEAVY</Tag>
-		<English>Heavy</English>
-		<French>
-			<Text>Lourd</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Schwer</German>
-		<Italian>
-			<Text>Pesante</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pesado</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Ciężki</Polish>
-		<Russian>Òÿæåñòü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HERBAL_CURES</Tag>
-		<English>Herbal Cures</English>
-		<French>
-			<Text>Remèdes à base de plantes</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Polish>Leczenie Ziołami</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HERDING1</Tag>
 		<English>Herding I</English>
 		<French>
@@ -10191,115 +8463,6 @@
 		<Russian>Ïàñòóõ II</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HERO1</Tag>
-		<English>Exceptional</English>
-		<French>
-			<Text>Exceptionnel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Außergewöhnlich</German>
-		<Italian>
-			<Text>Eccezionale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Excepcional</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wyjątkowy</Polish>
-		<Russian>Èñêëþ÷èòåëüíîñòü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HERO2</Tag>
-		<English>Extraordinary</English>
-		<French>
-			<Text>Extraordinaire</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Außerordentlich</German>
-		<Italian>
-			<Text>Straordinario</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Extraordinario</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Niezwykły</Polish>
-		<Russian>Ïîðàçèòåëüíîñòü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HERO3</Tag>
-		<English>Hero</English>
-		<French>
-			<Text>Héros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Held</German>
-		<Italian>
-			<Text>Eroe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Héroe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Bohater I</Polish>
-		<Russian>Ãåðîé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HERO4</Tag>
-		<English>Legendary Hero</English>
-		<French>
-			<Text>Héros Légendaire</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Legendärer Held</German>
-		<Italian>
-			<Text>Eroe leggendario</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Héroe legendario</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Legendarny Bohater</Polish>
-		<Russian>Ëåãåíäàðíûé ãåðîèçì</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HERO5</Tag>
-		<English>Avatar</English>
-		<French>
-			<Text>Avatar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Avatar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Avatar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Awatar</Polish>
-		<Russian>Àâàòàð</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HEROIC</Tag>
 		<English>Heroic I</English>
 		<French>Héroique I</French>
@@ -10318,42 +8481,6 @@
 		<Spanish>Heroico II</Spanish>
 		<Polish>Bohater II</Polish>
 		<Russian>Ãåðîèçì II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HEROIC_STRENGTH1</Tag>
-		<English>Heroic Strength I</English>
-		<French>Force Héroique I</French>
-		<German>Heldenhafte Stärke I</German>
-		<Spanish>Fuerza heroica I</Spanish>
-		<Polish>Heroiczna Siła I</Polish>
-		<Russian>Âèòÿçü I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HEROIC_STRENGTH2</Tag>
-		<English>Heroic Strength II</English>
-		<French>Force Héroique II</French>
-		<German>Heldenhafte Stärke II</German>
-		<Spanish>Fuerza heroica II</Spanish>
-		<Polish>Heroiczna Siła II</Polish>
-		<Russian>Âèòÿçü II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HEROIC_STRENGTH3</Tag>
-		<English>Heroic Strength III</English>
-		<French>Force Héroique III</French>
-		<German>Heldenhafte Stärke III</German>
-		<Spanish>Fuerza heroica III</Spanish>
-		<Polish>Heroiczna Siła III</Polish>
-		<Russian>Âèòÿçü III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HE_SHELLS</Tag>
-		<English>High-explosive Shells</English>
-		<French>Munitions Explosives</French>
-		<Italian>Proiettli ad alto esplosivo</Italian>
-		<Spanish>Proyectiles altamente explosivos</Spanish>
-		<Polish>Naboje Wybuchowe</Polish>
-		<Russian>Ôóãàñíûå ñíàðÿäû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HIDDEN_NATIONALITY_ADDS_TEXT</Tag>
@@ -10468,36 +8595,6 @@
 		<Russian>Óäàðü è áåãè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HN_CAPTIVE</Tag>
-		<English>Hidden Nationality (Captive)</English>
-		<French>Nationalité cachée (Prisonnier)</French>
-		<Russian>Скрытая национальность (пленник)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HN_CAPTIVE_HELP</Tag>
-		<English>Automatically assigned to captives and workers when Hidden Nationality units capture them. Will automatically be removed as soon as the unit moves into your own territory.</English>
-		<French>Assigné automatiquement aux prisonniers et ouvriers lorsque des unités avec nationalité cachée les capture. sera supprimé automatiquement dès que l'unité entrera dans son territoire.</French>
-		<Russian>Автоматически присваивается пленникам и рабочим при захвате отрядами со скрытой национальностью. Квалификация будет автоматически удалена, как только отряд переместится на вашу территорию.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HN_PIRATE_CREW</Tag>
-		<English>Hidden Nationality (Pirate Crew)</English>
-		<French>Nationalité cachée (Equipage Pirate)</French>
-		<Russian>Скрытая национальность (пиратская шайка)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HN_WAR_PRIZE</Tag>
-		<English>Hidden Nationality (War Prize)</English>
-		<French>Nationalité cachée (Prise de guerre)</French>
-		<Russian>Скрытая национальность (военнопленный)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HN_WAR_PRIZE_HELP</Tag>
-		<English>Automatically assigned to units that can be converted to military use for your nation when captured by a unit with Hidden Nationality. Can be very valuable to have these units that maintain Hidden Nationality themselves, however, the promotion will vanish if you ever move a unit with this promotion into your own territory.</English>
-		<French>Assigné automatiquement aux unités qui peuvent être converties en unités militaire, lorsque capturées par une unité avec la nationalité cachée. Cela peut être très intéressant pour ces unités de garder elles-mêmes la nationalité cachée. Par contre, la promotion sera supprimée automatiquement dès que l'unité entrera dans son territoire.</French>
-		<Russian>Автоматически присваивается отрядам, которые могут быть улучшены до бойцов для вашей цивилизации при захвате юнитом со скрытой национальностью. Может быть очень ценно иметь обладать подобными отрядами, которые сами сохраняют скрытую национальность, однако эта особенность исчезает, если вы когда-нибудь переместите подобный отряд на свою территорию.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HOLY_TRINITY</Tag>
 		<English>Holy Trinity</English>
 		<French>Sainte Trinité</French>
@@ -10506,22 +8603,6 @@
 		<Spanish>Santa Trinidad</Spanish>
 		<Polish>Trójca Święta</Polish>
 		<Russian>Ñâÿùåííàÿ òðèàäà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HORDE_AID</Tag>
-		<English>Whippet MKA Horde bonus</English>
-		<French>
-			<Text>Bonus 'Whippet MKA' Horde</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Spanish>
-			<Text>Bonificación por horda de "Whippet MKA"</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Premia Whippet MKA</Polish>
-		<Russian>Варварская гончая</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HOWL</Tag>
@@ -10570,24 +8651,6 @@
 		<Spanish>Cazador III</Spanish>
 		<Polish>Łowca III</Polish>
 		<Russian>Îõîòíèê III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HUNTER4</Tag>
-		<English>Hunter IV</English>
-		<French>Chasseur IV</French>
-		<German>Jäger IV</German>
-		<Spanish>Cazador IV</Spanish>
-		<Polish>Łowca IV</Polish>
-		<Russian>Îõîòíèê IV</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HUNTER5</Tag>
-		<English>Hunter V</English>
-		<French>Chasseur V</French>
-		<German>Jäger V</German>
-		<Spanish>Cazador V</Spanish>
-		<Polish>Łowca V</Polish>
-		<Russian>Îõîòíèê V</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUNTER_GREAT</Tag>
@@ -10860,72 +8923,6 @@
 		<Russian>[ICON_BULLET]Отнимает возможность у отряда игнорировать зоны контроля.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_IMPERIAL1</Tag>
-		<English>Glorious I</English>
-		<French>
-			<Text>Glorieux I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Ruhm I</German>
-		<Italian>
-			<Text>Glorioso I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gloria I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Chwalebny I</Polish>
-		<Russian>Ñëàâà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_IMPERIAL2</Tag>
-		<English>Glorious II</English>
-		<French>
-			<Text>Glorieux II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Ruhm II</German>
-		<Italian>
-			<Text>Glorioso II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gloria II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Chwalebny II</Polish>
-		<Russian>Ñëàâà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_IMPERIAL3</Tag>
-		<English>Glorious III</English>
-		<French>
-			<Text>Glorieux III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Ruhm III</German>
-		<Italian>
-			<Text>Glorioso III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gloria III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Chwalebny III</Polish>
-		<Russian>Ñëàâà III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_IMPERIAL_GUARD</Tag>
 		<English>Imperial Guard</English>
 		<French>
@@ -11028,24 +9025,6 @@
 		<Italian>[ICON_BULLET]Ruba 4% delle risorse nemiche di [ICON_RESEARCH] quando vince una battaglia</Italian>
 		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_RESEARCH]</Polish>
 		<Russian>[ICON_BULLET]Êðàäåò 4% [ICON_RESEARCH] èç çàïàñîâ ïðîòèâíèêà ïîñëå ïîáåäû â ñðàæåíèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INFILTRATION</Tag>
-		<English>Infiltration</English>
-		<Italian>Infiltrazione</Italian>
-		<Spanish>Infiltración</Spanish>
-		<Polish>Infiltracja</Polish>
-		<Russian>Ïðîíèêíîâåíèå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INFILTRATION_TEXT</Tag>
-		<English>[ICON_BULLET]Can enter rival territory</English>
-		<French>[ICON_BULLET]Peut entrer en territoire étranger</French>
-		<German>[ICON_BULLET]Kann fremdes Territorium betreten</German>
-		<Italian>[ICON_BULLET]Può entrare in territorio nemico.</Italian>
-		<Spanish>[ICON_BULLET]Puede entrar en territorio enemigo</Spanish>
-		<Polish>[ICON_BULLET]Może wejść na teren przeciwnika</Polish>
-		<Russian>[ICON_BULLET]Ìîæåò âîéòè íà ÷óæóþ òåððèòîðèþ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE1</Tag>
@@ -11258,28 +9237,6 @@
 		</Spanish>
 		<Polish>Przechwytywanie II</Polish>
 		<Russian>Ïåðåõâàò II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INTERCEPTION3</Tag>
-		<English>Interception III</English>
-		<French>
-			<Text>Interception III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Abfangen III</German>
-		<Italian>
-			<Text>Intercettazione III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Intercepción III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Przechwytywanie III</Polish>
-		<Russian>Ïåðåõâàò III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INTERCEPT_TEXT_SPY</Tag>
@@ -11683,28 +9640,6 @@
 		<Russian>Âåñû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_LIGHT</Tag>
-		<English>Light</English>
-		<French>
-			<Text>Lumière</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Leicht</German>
-		<Italian>
-			<Text>Luce</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ligero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Lekki</Polish>
-		<Russian>Ëåãêîñòü</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LINE_PRIORITY</Tag>
 		<English>[ICON_BULLET]Promotion Line Rank: %d1_PromotionLine</English>
 		<French>[ICON_BULLET]Rang: %d1_PromotionLine</French>
@@ -12059,82 +9994,6 @@
 		<Russian>Ìàðø</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MARKSMAN1</Tag>
-		<English>Marksmanship I</English>
-		<French>
-			<Text>Tireur I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Scharfschütze I</German>
-		<Italian>
-			<Text>Tiratore scelto I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Puntería I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Strzelec Wyborowy I</Polish>
-		<Russian>Ìåòêîñòü I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MARKSMAN2</Tag>
-		<English>Marksmanship II</English>
-		<French>
-			<Text>Tireur II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Scharfschütze II</German>
-		<Italian>
-			<Text>Tiratore scelto II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Puntería II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Strzelec Wyborowy II</Polish>
-		<Russian>Ìåòêîñòü II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MARKSMAN3</Tag>
-		<English>Marksmanship III</English>
-		<French>
-			<Text>Tireur III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Scharfschütze III</German>
-		<Italian>
-			<Text>Tiratore scelto III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Puntería III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Strzelec Wyborowy III</Polish>
-		<Russian>Ìåòêîñòü III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MARTIAL_ARTS</Tag>
-		<English>Martial Arts</English>
-		<French>Arts Martiaux</French>
-		<German>Kampfkunst</German>
-		<Italian>Arti marziali</Italian>
-		<Spanish>Artes marciales I</Spanish>
-		<Polish>Sztuki Walki</Polish>
-		<Russian>Áîåâûå èñêóññòâà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MARTIAL_ARTS1</Tag>
 		<English>Martial Arts I</English>
 		<French>Arts Martiaux I</French>
@@ -12183,81 +10042,6 @@
 		<Russian>[ICON_BULLET]+%d1 óâåëè÷åíèÿ ìàêñ. êîëè÷åñòâà îòðÿäîâ, ïîëó÷àþùèõ ñîïóòñòâ. óùåðá</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MECH_ONLY_TEXT</Tag>
-		<English>**Only Available to Mechanized Units**</English>
-		<French>**Uniquement Disponible pour des Unites Mechanise**</French>
-		<German>**Nur verfügbar für mechanische Einheiten**</German>
-		<Spanish>**Solo disponible para Unidades mecanizadas**</Spanish>
-		<Polish>**Dostępne tylko dla jednostek Mechanicznych**</Polish>
-		<Russian>**Ðàáîòàåò òîëüêî äëÿ Ìåõàí. îòðÿäîâ**</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MEDIC1</Tag>
-		<English>Medic I</English>
-		<French>
-			<Text>Infirmier I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Sanitäter I</German>
-		<Italian>
-			<Text>Medico I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Médica I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Medyk I</Polish>
-		<Russian>Ìåäèê I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MEDIC2</Tag>
-		<English>Medic II</English>
-		<French>
-			<Text>Infirmier II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Sanitäter II</German>
-		<Italian>
-			<Text>Medico II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Médica II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Medyk II</Polish>
-		<Russian>Ìåäèê II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MEDIC3</Tag>
-		<English>Medic III</English>
-		<French>
-			<Text>Infirmier III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Sanitäter III</German>
-		<Italian>
-			<Text>Medico III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Médica III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Medyk III</Polish>
-		<Russian>Ìåäèê III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MEDIUM_RANGE_SUPPORT_PERCENT_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]+%d1_Amount%% to Medium Range Support Value</English>
 		<French>[ICON_BULLET]+%d1_Amount%% à la Valeur du Soutien Moyenne Portée</French>
@@ -12275,94 +10059,6 @@
 		</French>
 		<Polish>Mega Promień</Polish>
 		<Russian>Ìåãà-ëó÷</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MELEE_AID1</Tag>
-		<English>Heavy Aid I</English>
-		<French>
-			<Text>Soutien Lourd I</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Schwere Hilfstruppe I</German>
-		<Italian>
-			<Text>Sussidio Pesante I</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de unidad pesada I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Ciężkie Wsparcie I</Polish>
-		<Russian>Ïîäêðåïëåíèå I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MELEE_AID2</Tag>
-		<English>Heavy Aid II</English>
-		<French>
-			<Text>Soutien Lourd II</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Schwere Hilfstruppe II</German>
-		<Italian>
-			<Text>Sussidio Pesante II</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de unidad pesada II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Ciężkie Wsparcie II</Polish>
-		<Russian>Ïîäêðåïëåíèå II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MELEE_AID3</Tag>
-		<English>Heavy Aid III</English>
-		<French>
-			<Text>Soutien Lourd III</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Schwere Hilfstruppe III</German>
-		<Italian>
-			<Text>Sussidio Pesante III</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de unidad pesada III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Ciężkie Wsparcie III</Polish>
-		<Russian>Ïîäêðåïëåíèå III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MERCENARY</Tag>
-		<English>Mercenary</English>
-		<French>
-			<Text>Mercenaire</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Söldner</German>
-		<Italian>
-			<Text>Mercenario</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mercenario</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Najemnik</Polish>
-		<Russian>Íàåìíèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MERGED_INTO_BATTALION</Tag>
@@ -12682,72 +10378,6 @@
 		<Russian>Ïîêîðèòåëü âåðøèí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MOUNTED_AID1</Tag>
-		<English>Mobility Aid I</English>
-		<French>
-			<Text>Soutien Mobilité I</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Mobile Hilfe I</German>
-		<Italian>
-			<Text>Sussidio Di Mobilit_ I</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de unidad móvil I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Mobilności I</Polish>
-		<Russian>Ïîìîùü êàâàëåðèè I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MOUNTED_AID2</Tag>
-		<English>Mobility Aid II</English>
-		<French>
-			<Text>Soutien Mobilité II</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Mobile Hilfe II</German>
-		<Italian>
-			<Text>Sussidio Di Mobilit_ II</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de unidad móvil II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Mobilności II</Polish>
-		<Russian>Ïîìîùü êàâàëåðèè II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MOUNTED_AID3</Tag>
-		<English>Mobility Aid III</English>
-		<French>
-			<Text>Soutien Mobilité III</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Mobile Hilfe III</German>
-		<Italian>
-			<Text>Sussidio Di Mobilit_ III</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de unidad móvil III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Mobilności III</Polish>
-		<Russian>Ïîìîùü êàâàëåðèè III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MOVING_PILLAGE_TEXT</Tag>
 		<English>[ICON_BULLET]Automatically pillages improvements on move.</English>
 		<French>[ICON_BULLET]Réalise automatiquement les pillages des aménagements lors de ses déplacements.</French>
@@ -12763,40 +10393,6 @@
 		<Spanish>Muyahidín</Spanish>
 		<Polish>Mudżahedin</Polish>
 		<Russian>Ìîäæàõåä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MULTIPLE_TARGET1</Tag>
-		<English>Multiple Target Acquisition I</English>
-		<French>Acquisition Multiple de Cibles I</French>
-		<German>Multiple Zielerfassung I</German>
-		<Spanish>Fijación de múltiples objetivos I</Spanish>
-		<Polish>Namierzanie Wielu Celi I</Polish>
-		<Russian>Ñîïðîâîæäåíèå I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MULTIPLE_TARGET2</Tag>
-		<English>Multiple Target Acquisition II</English>
-		<French>Acquisition Multiple de Cibles II</French>
-		<German>Multiple Zielerfassung II</German>
-		<Spanish>Fijación de múltiples objetivos II</Spanish>
-		<Polish>Namierzanie Wielu Celi II</Polish>
-		<Russian>Ñîïðîâîæäåíèå II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MULTIPLE_TARGET3</Tag>
-		<English>Multiple Target Acquisition III</English>
-		<French>Acquisition Multiple de Cibles III</French>
-		<German>Multiple Zielerfassung III</German>
-		<Spanish>Fijación de múltiples objetivos III</Spanish>
-		<Polish>Namierzanie Wielu Celi III</Polish>
-		<Russian>Ñîïðîâîæäåíèå III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MUST_MAINTAIN_TEXT</Tag>
-		<English>[ICON_BULLET]If for any reason the prerequisites are no longer met, this promotion will be lost.</English>
-		<French>[ICON_BULLET]Si pour une raison quelconque les pré-requis ne sont plus remplis, cette promotion sera perdue.</French>
-		<Spanish>[ICON_BULLET]Si por alguna razón deja de cumplirse alguno de los requisitos, este ascenso se perderá</Spanish>
-		<Polish>[ICON_BULLET]Jeśli któryś warunek przestaje być spełniony: promocja znika.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NANOIDS</Tag>
@@ -12829,27 +10425,6 @@
 		<Spanish>Bombas de napalm</Spanish>
 		<Polish>Napalm</Polish>
 		<Russian>Íàïàëìîâûå áîìáû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NATION</Tag>
-		<English>Nationalist</English>
-		<French>
-			<Text>Nationaliste</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Nazionalista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Nacionalista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Nacjonalista</Polish>
-		<Russian>Íàöèîíàëèçì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NATURAL_TALENT</Tag>
@@ -13002,14 +10577,6 @@
 		<English>[ICON_BULLET]Trait - Never Invisible: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Toujours visible : %D1_Change</French>
 		<German>[ICON_BULLET]Verhinderte Unsichtbarkeit: %D1_Change</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_MECHS_TEXT</Tag>
-		<English>**Unavailable to Mechanized Units**</English>
-		<French>**Non Disponible pour des Unites Mechanise**</French>
-		<German>**Nicht verfügbar für mechanische Einheiten**</German>
-		<Spanish>**No disponible para Unidades mecanizadas**</Spanish>
-		<Polish>**Niedostępne dla jednostek Mechanicznych**</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NO_SPREAD_CITY_TO_UNIT_TEXT</Tag>
@@ -13259,26 +10826,6 @@
 		</Spanish>
 		<Polish>Przytłaczanie</Polish>
 		<Russian>Êðóøèòåëü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_OVERWRITES_POST</Tag>
-		<English>[SPACE]when acquired</English>
-		<French>[SPACE]lorsque acquis</French>
-		<German>[SPACE]wenn erhalten</German>
-		<Italian>[SPACE]quando viene otteuta</Italian>
-		<Spanish>[SPACE]una vez conseguido</Spanish>
-		<Polish>[SPACE]kiedy osiągnięty</Polish>
-		<Russian>[SPACE]Êîãäà ïðèîáðåòåíî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_OVERWRITES_PRE</Tag>
-		<English>[ICON_BULLET]Removes[SPACE]</English>
-		<French>[ICON_BULLET]Enlève[SPACE]</French>
-		<German>[ICON_BULLET]Entfernt[SPACE]</German>
-		<Italian>[ICON_BULLET]Rimuove[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]Elimina[SPACE]</Spanish>
-		<Polish>[ICON_BULLET]Odesłanie[SPACE]</Polish>
-		<Russian>[ICON_BULLET]Óäàëèòü[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_OV_MOVE_TEXT</Tag>
@@ -13638,16 +11185,6 @@
 		<Spanish>Piscis</Spanish>
 		<Polish>Ryby</Polish>
 		<Russian>Ðûáû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POISON_ARROWS</Tag>
-		<English>Poisoned Tips</English>
-		<French>Flèches empoisonnées</French>
-		<German>Vergiftete Pfeile</German>
-		<Italian>Frecce avvelenate</Italian>
-		<Spanish>Flechas empozoñadas</Spanish>
-		<Polish>Zatrute Strzały</Polish>
-		<Russian>Îòðàâëåííûå ñòðåëû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_POISON_PROB_TEXT</Tag>
@@ -14185,13 +11722,6 @@
 		<Russian>Статус (Ускорен. марш)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_QUICK_RIDE_STATUS</Tag>
-		<English>Status (Quick Ride)</English>
-		<French>Statut (Déplacement rapide)</French>
-		<German>Eilritt</German>
-		<Russian>Статус (Быстрая езда)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RACING_DOG1</Tag>
 		<English>Racing Dog I</English>
 		<French>
@@ -14476,15 +12006,6 @@
 		<Russian>Äàëüíîñòü II</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RANGE3</Tag>
-		<English>Range III</English>
-		<French>Porté III</French>
-		<German>Reichweite III</German>
-		<Spanish>Alcance III</Spanish>
-		<Polish>Zasięg III</Polish>
-		<Russian>Äàëüíîñòü III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RANGED_BOMBARD_DIRECT_TEXT</Tag>
 		<English>[ICON_BULLET]Ranged Assault is likely to strike lead defender</English>
 		<French>[ICON_BULLET]Assaut à distance cible le défenseur principal</French>
@@ -14667,36 +12188,6 @@
 		<English>Status (Remove Surprise)</English>
 		<French>Statut (Enlever Surprise)</French>
 		<German>Nicht überraschen</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REPAIR1</Tag>
-		<English>Repair I</English>
-		<French>Réparation I</French>
-		<German>Reparatur I</German>
-		<Italian>Riparazioni I</Italian>
-		<Spanish>Reparación I</Spanish>
-		<Polish>Naprawa I</Polish>
-		<Russian>Ïî÷èíêà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REPAIR2</Tag>
-		<English>Repair II</English>
-		<French>Réparation II</French>
-		<German>Reparatur II</German>
-		<Italian>Riparazioni II</Italian>
-		<Spanish>Reparación II</Spanish>
-		<Polish>Naprawa II</Polish>
-		<Russian>Ïî÷èíêà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REPAIR3</Tag>
-		<English>Repair III</English>
-		<French>Réparation III</French>
-		<German>Reparatur III</German>
-		<Italian>Riparazioni III</Italian>
-		<Spanish>Reparación III</Spanish>
-		<Polish>Naprawa III</Polish>
-		<Russian>Ïî÷èíêà III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT</Tag>
@@ -14988,15 +12479,6 @@
 		<Russian>[ICON_BULLET]Ãðàáåæè [ICON_RESEARCH] â äîáàâëåíèå ê [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RESPAWN</Tag>
-		<English>Respawn</English>
-		<French>Réanimation</French>
-		<German>Wiedergeburt</German>
-		<Spanish>Reaparición</Spanish>
-		<Polish>Odrodzenie</Polish>
-		<Russian>Âîçðîæäåíèå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_ADVENTURER_DESC</Tag>
 		<English>Adventurer (Hero)</English>
 		<French>Aventurier (Héros)</French>
@@ -15005,25 +12487,6 @@
 		<Spanish>Aventurero</Spanish>
 		<Polish>Poszukiwacz Przygód (Bohater)</Polish>
 		<Russian>Àâàíòþðèñò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_APPRENTICE_DESC</Tag>
-		<English>Apprentice (Hero)</English>
-		<French>Apprenti (Héros)</French>
-		<German>Apprentice</German>
-		<Italian>Apprendista</Italian>
-		<Spanish>Aprendiz</Spanish>
-		<Polish>Czeladnik (Bohater)</Polish>
-		<Russian>Íàïàðíèê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_APPRENTICE_HELP</Tag>
-		<English>[ICON_BULLET]30% survival chance upon losing a battle. [ICON_BULLET]Plunders 4% of Enemy [ICON_ESPIONAGE] Reserves on Combat Victory.</English>
-		<French>[ICON_BULLET]30% probabilité de survie après la défaite. [ICON_BULLET]Pille 4% des points d'[ICON_ESPIONAGE] en cas de Victoire.</French>
-		<Italian>[ICON_BULLET]30% di chance di sopravvivenza quando perde una battaglia. [ICON_BULLET]Saccheggia 4% delle riserve nemiche di [ICON_ESPIONAGE] dalle vittorie in combattimento.</Italian>
-		<Spanish>[ICON_BULLET]Probabilidad del 30% de sobrevivir tras una derrota[ICON_BULLET]Saquea un 4% de las reservas de [ICON_ESPIONAGE] enemigas en caso de victoria</Spanish>
-		<Polish>[ICON_BULLET]30% na przetrwanie przegranej bitwy. [ICON_BULLET]Po zwycięstwie grabi 4% wrogich zapasów [ICON_ESPIONAGE]</Polish>
-		<Russian>[ICON_BULLET]30% ê øàíñó âûæèòü ïðè ïðîèãðûøå ñðàæåíèÿ. [ICON_BULLET]Êðàäåò 4% [ICON_ESPIONAGE] èç ðåçåðâîâ ïðîòèâíèêà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_BANDIT_DESC</Tag>
@@ -15086,24 +12549,6 @@
 		<Russian>Âåðíûé ñëóãà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_MERCHANT_DESC</Tag>
-		<English>Merchant (Hero)</English>
-		<French>Marchand (Héros)</French>
-		<German>Merchant</German>
-		<Italian>Mercante</Italian>
-		<Spanish>Mercader</Spanish>
-		<Polish>Kupiec (Bohater)</Polish>
-		<Russian>Êóïåö</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_MERCHANT_HELP</Tag>
-		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_GOLD] Reserves on Combat Victory</English>
-		<French>[ICON_BULLET]Pille 4% des réserves d'[ICON_GOLD] en cas de victoire</French>
-		<Italian>[ICON_BULLET]Saccheggia 4% delle riserve nemiche di [ICON_GOLD] dalle vittorie in combattimento</Italian>
-		<Spanish>[ICON_BULLET]Saquea un 4% de las reservas de [ICON_GOLD] enemigas en caso de victoria</Spanish>
-		<Polish>[ICON_BULLET]Po zwycięstwie grabi 4% wrogich zapasów [ICON_GOLD]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_MESSENGER_DESC</Tag>
 		<English>Messenger (Hero)</English>
 		<French>Messager (Héros)</French>
@@ -15121,24 +12566,6 @@
 		<Spanish>[ICON_BULLET]Probabilidad del 10% de curarse completamente tras una victoria</Spanish>
 		<Polish>[ICON_BULLET]10% szansa na wyleczenie po zwycięskiej walce</Polish>
 		<Russian>[ICON_BULLET]10% øàíñ èñöåëèòüñÿ ïîñëå ïîáåäû â áèòâå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_MINISTER_DESC</Tag>
-		<English>Minister (Hero)</English>
-		<French>Ministre (Héros)</French>
-		<German>Minister</German>
-		<Italian>Ministro</Italian>
-		<Spanish>Ministro</Spanish>
-		<Polish>Minister (Bohater)</Polish>
-		<Russian>Ìèíèñòð</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_MINISTER_HELP</Tag>
-		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_RESEARCH] Reserves on Combat Victory</English>
-		<French>[ICON_BULLET]Pille 4% des points de [ICON_RESEARCH] en cas de Victoire</French>
-		<Italian>[ICON_BULLET]Saccheggia 4% delle riserve nemiche di [ICON_RESEARCH] dalle vittorie in combattimento</Italian>
-		<Spanish>[ICON_BULLET]Saquea un 4% de las reservas de [ICON_RESEARCH] enemigas en caso de victoria</Spanish>
-		<Polish>[ICON_BULLET]Po zwycięstwie grabi 4% wrogich zapasów [ICON_RESEARCH]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_PRIEST_DESC</Tag>
@@ -15211,36 +12638,6 @@
 		<Russian>Îñâÿùåííàÿ áðîíÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RIVER_COMBAT</Tag>
-		<English>T72 River Combat Bonus</English>
-		<French>
-			<Text>Bonus Combat en rivière 'T72'</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>T72 Flusskampf-Bonus</German>
-		<Italian>
-			<Text>Bonus di combattimento T72 sui fiumi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Bonificación al combate en ríos del T72</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Premia T72</Polish>
-		<Russian>Ðå÷íîé áîé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ROAMING_BANDIT</Tag>
-		<English>Roaming Bandit</English>
-		<French>Bandit errant</French>
-		<Spanish>Bandido errante</Spanish>
-		<Polish>Bandyta</Polish>
-		<Russian>Áðîäÿãà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ROLLING_THUNDER1</Tag>
 		<English>Rolling Thunder I</English>
 		<French>
@@ -15272,16 +12669,6 @@
 		</French>
 		<Polish>Piorun Kulisty III</Polish>
 		<Russian>Ãðîìîâåðæåö III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ROOKIE</Tag>
-		<English>Rookie Pilot</English>
-		<French>Pilote Recrue</French>
-		<German>Rekruten-Pilot</German>
-		<Italian>Pilota novellino</Italian>
-		<Spanish>Piloto novato</Spanish>
-		<Polish>Pilot Nowicjusz</Polish>
-		<Russian>Ìîëîäîé ïèëîò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ROUND_STUN_PROB_TEXT</Tag>
@@ -15446,138 +12833,6 @@
 		<Russian>Ñêîðïèîí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SCOUT_AID1</Tag>
-		<English>Scout Aid I</English>
-		<French>
-			<Text>Soutien Scout I</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Hilfsspäher I</German>
-		<Italian>
-			<Text>Sussidio Dell'Esploratore I</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de reconocimiento I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Zwiadu I</Polish>
-		<Russian>Ðàçâåäêà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SCOUT_AID2</Tag>
-		<English>Scout Aid II</English>
-		<French>
-			<Text>Soutien Scout II</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Hilfsspäher II</German>
-		<Italian>
-			<Text>Sussidio Dell'Esploratore II</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de reconocimiento II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Zwiadu II</Polish>
-		<Russian>Ðàçâåäêà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SCOUT_AID3</Tag>
-		<English>Scout Aid III</English>
-		<French>
-			<Text>Soutien Scout III</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Hilfsspäher III</German>
-		<Italian>
-			<Text>Sussidio Dell'Esploratore III</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos de reconocimiento III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Zwiadu III</Polish>
-		<Russian>Ðàçâåäêà III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SEAMANSHIP1</Tag>
-		<English>Seamanship I</English>
-		<French>
-			<Text>Matelot I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Seefahrtskunst I</German>
-		<Italian>
-			<Text>Marinaio I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Náutica I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Żeglarz I</Polish>
-		<Russian>Ëîöìàí I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SEAMANSHIP2</Tag>
-		<English>Seamanship II</English>
-		<French>
-			<Text>Matelot II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Seefahrtskunst II</German>
-		<Italian>
-			<Text>Marinaio II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Náutica II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Żeglarz II</Polish>
-		<Russian>Ëîöìàí II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SEAMANSHIP3</Tag>
-		<English>Seamanship III</English>
-		<French>
-			<Text>Matelot III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Seefahrtskunst III</German>
-		<Italian>
-			<Text>Marinaio III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Náutica III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Żeglarz III</Polish>
-		<Russian>Ëîöìàí III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SEA_CREATURE1</Tag>
 		<English>Sea Creature I</English>
 		<French>
@@ -15682,16 +12937,6 @@
 		<Spanish>Seguridad III</Spanish>
 		<Polish>Bezpieczeństwo III</Polish>
 		<Russian>Áåçîïàñíîñòü III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SEEKING</Tag>
-		<English>Seeking</English>
-		<French>Chercheur</French>
-		<German>Aufspüren</German>
-		<Italian>Cercatore</Italian>
-		<Spanish>Búsqueda</Spanish>
-		<Polish>Szukający</Polish>
-		<Russian>Èñêàòåëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SEGMENTED_ARMOR</Tag>
@@ -16144,72 +13389,6 @@
 		<Russian>Óêëîíåíèå III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SIEGE_AID1</Tag>
-		<English>Siege Aid I</English>
-		<French>
-			<Text>Soutien Siège I</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Belagerungshilfe I</German>
-		<Italian>
-			<Text>Sussidio Di Assedio I</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos al asedio I</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Oblężnicze I</Polish>
-		<Russian>Îñàäíàÿ ïîääåðæêà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SIEGE_AID2</Tag>
-		<English>Siege Aid II</English>
-		<French>
-			<Text>Soutien Siège II</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Belagerungshilfe II</German>
-		<Italian>
-			<Text>Sussidio Di Assedio II</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos al asedio II</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Oblężnicze II</Polish>
-		<Russian>Îñàäíàÿ ïîääåðæêà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SIEGE_AID3</Tag>
-		<English>Siege Aid III</English>
-		<French>
-			<Text>Soutien Siège III</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Belagerungshilfe III</German>
-		<Italian>
-			<Text>Sussidio Di Assedio III</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Refuerzos al asedio III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wsparcie Oblężnicze III</Polish>
-		<Russian>Îñàäíàÿ ïîääåðæêà III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SILVER_TONGUE1</Tag>
 		<English>Silver Tongue I</English>
 		<French>
@@ -16282,15 +13461,6 @@
 		</French>
 		<Polish>Poziom Niżej (Poprostu Przeciętny)</Polish>
 		<Russian>Çàóðÿäíîñòü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SKIRMISHER</Tag>
-		<English>Skirmisher</English>
-		<French>Escarmouche</French>
-		<German>Scharmützler</German>
-		<Spanish>Hostigador</Spanish>
-		<Polish>Harcownik</Polish>
-		<Russian>Çàñòðåëüùèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SLAVE_MASTER1</Tag>
@@ -16725,29 +13895,6 @@
 		<Russian>Мишень III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SPY_SUCCESS_TEXT</Tag>
-		<English>%D1% Chance of Spying Success</English>
-		<French>%D1% de Succès de l'Espionnage</French>
-		<German>%D1% Erfolgsaussicht von Spionage</German>
-		<Spanish>Probabilidad de éxito: %D1%</Spanish>
-		<Polish>%D1% szansy na udane szpiegowanie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SPY_SUICIDE_TEXT</Tag>
-		<English>%d1 Chance of not revealing home nation when caught</English>
-		<French>%d1 de Prob. de ne pas révéler sa nationalité lorsque capturé</French>
-		<German>%d1 Erfolgsaussicht, bei Gefangennahme die Heimatnation nicht zu verraten</German>
-		<Spanish>Probabilidad del %d1% de no revelar la nacionalidad al ser capturado</Spanish>
-		<Polish>%d1 szansy na nieujawnienie narodowości podczas schwytania</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STACK_EFFECT_TEXT</Tag>
-		<English>[ICON_BULLET]This promotion may be selected multiple times, its effects will stack with each selection.</English>
-		<French>[ICON_BULLET]Cette promotion peut être choisie plusieurs fois, les effets sont cumulés.</French>
-		<Spanish>[ICON_BULLET]Se puede seleccionar este ascenso en múltiples ocasiones; los efectos de cada selección se acumularán</Spanish>
-		<Polish>[ICON_BULLET]Promocja może być wielokrotnie wybrana, efekt będzie się grupować.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_STALK_PREY</Tag>
 		<English>Stalk Prey</English>
 		<French>
@@ -16879,126 +14026,12 @@
 		<Russian>Çàñëîí V</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STALWART1</Tag>
-		<English>Stalwart I</English>
-		<French>
-			<Text>Vigoureux I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Tapfer I</German>
-		<Italian>
-			<Text>Vigoroso I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Robusto I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Oddany I</Polish>
-		<Russian>Ñòîéêîñòü I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STALWART2</Tag>
-		<English>Stalwart II</English>
-		<French>
-			<Text>Vigoureux II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Tapfer II</German>
-		<Italian>
-			<Text>Vigoroso II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Robusto II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Oddany II</Polish>
-		<Russian>Ñòîéêîñòü II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STALWART3</Tag>
-		<English>Stalwart III</English>
-		<French>
-			<Text>Vigoureux III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Tapfer III</German>
-		<Italian>
-			<Text>Vigoroso III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Robusto III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Oddany III</Polish>
-		<Russian>Ñòîéêîñòü III</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_STAMPEDE_TEXT</Tag>
 		<English>[ICON_BULLET]Causes unit to fight until it or all defenders are dead.</English>
 		<French>[ICON_BULLET]L'unité combat jusqu'à ce qu'elle-même ou tous les défenseurs sont morts.</French>
 		<Italian>[ICON_BULLET]Costringe l'unità a combattere finché muore oppure sconfigge i difensori.</Italian>
 		<Polish>[ICON_BULLET]Powoduje, że jednostka walczy dopóki ona lub wszycy obrońcy nie zginą.</Polish>
 		<Russian>[ICON_BULLET]Îòðÿä ñðàæàåòñÿ äî òåõ ïîð, ïîêà îí èëè âñå çàùèòíèêè íå ïîãèáíóò â áîþ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STANDARD_MIGHT1</Tag>
-		<English>Standard Might I</English>
-		<French>
-			<Text>Force standard I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Standardstärke I</German>
-		<Polish>Standardowa Siła I</Polish>
-		<Russian>Îáû÷íàÿ ñèëà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STANDARD_MIGHT2</Tag>
-		<English>Standard Might II</English>
-		<French>
-			<Text>Force standard II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Standardstärke II</German>
-		<Polish>Standardowa Siła II</Polish>
-		<Russian>Îáû÷íàÿ ñèëà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STANDARD_MIGHT3</Tag>
-		<English>Standard Might III</English>
-		<French>
-			<Text>Force standard III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Standardstärke III</German>
-		<Polish>Standardowa Siła III</Polish>
-		<Russian>Îáû÷íàÿ ñèëà III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STANDARD_MIGHT4</Tag>
-		<English>Standard Might IV</English>
-		<French>
-			<Text>Force standard IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Standardstärke IV</German>
-		<Polish>Standardowa Siła IV</Polish>
-		<Russian>Îáû÷íàÿ ñèëà IV</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_STANDOUT_STATUS</Tag>
@@ -17226,15 +14259,6 @@
 		<Russian>Êàìåííîå îðóæèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STRATEGIC_WITHDRAWAL</Tag>
-		<English>Strategic Withdrawal</English>
-		<French>Retrait Stratégique</French>
-		<German>Strategischer Rückzug</German>
-		<Spanish>Retirada estratégica</Spanish>
-		<Polish>Strategiczna Ucieczka</Polish>
-		<Russian>Îòñòóïëåíèå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_STREET_FIGHTER1</Tag>
 		<English>Street Fighter I</English>
 		<French>
@@ -17341,46 +14365,6 @@
 		<Russian>[ICON_BULLET]Добавляет %s1_SubCombatClass в список боевых классов подразделения.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SUPERIOR_MIGHT1</Tag>
-		<English>Superior Might I</English>
-		<French>Puissance Supérieure I</French>
-		<German>Überlegene Stärke I</German>
-		<Polish>Ponadprzeciętna Siła I</Polish>
-		<Russian>Ñâåðõñèëà I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SUPERIOR_MIGHT2</Tag>
-		<English>Superior Might II</English>
-		<French>Puissance Supérieure II</French>
-		<German>Überlegene Stärke II</German>
-		<Polish>Ponadprzeciętna Siła II</Polish>
-		<Russian>Ñâåðõñèëà II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SUPERIOR_MIGHT3</Tag>
-		<English>Superior Might III</English>
-		<French>Puissance Supérieure III</French>
-		<German>Überlegene Stärke III</German>
-		<Polish>Ponadprzeciętna Siła III</Polish>
-		<Russian>Ñâåðõñèëà III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SUPERIOR_MIGHT4</Tag>
-		<English>Superior Might IV</English>
-		<French>Puissance Supérieure IV</French>
-		<German>Überlegene Stärke IV</German>
-		<Polish>Ponadprzeciętna Siła IV</Polish>
-		<Russian>Ñâåðõñèëà IV</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SUPERIOR_MIGHT5</Tag>
-		<English>Superior Might V</English>
-		<French>Puissance Supérieure V</French>
-		<German>Überlegene Stärke V</German>
-		<Polish>Ponadprzeciętna Siła V</Polish>
-		<Russian>Ñâåðõñèëà V</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUPER_CAVITATION</Tag>
 		<English>Super Cavitation</English>
 		<French>Supercavitation</French>
@@ -17389,16 +14373,6 @@
 		<Spanish>Supercavitación</Spanish>
 		<Polish>Super Kawitacja</Polish>
 		<Russian>Ñóïåðêàâèòàöèÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SUPER_GUERRILLA</Tag>
-		<English>Super Guerrilla</English>
-		<French>Super Guérilla</French>
-		<German>Superguerrilla</German>
-		<Italian>Super-guerrigliero</Italian>
-		<Spanish>Súperguerrilla</Spanish>
-		<Polish>Super Partyzant</Polish>
-		<Russian>Ìàñòåð çàñàä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUPPRESIVE_FIRE</Tag>
@@ -17428,33 +14402,6 @@
 		<French>Statut (Surprise)</French>
 		<German>Überraschen</German>
 		<Russian>Статус (Сюрприз)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SURVIVOR1</Tag>
-		<English>Survivor I</English>
-		<French>Rescapé I</French>
-		<German>Überlebender I</German>
-		<Spanish>Superviviente I</Spanish>
-		<Polish>Przeżycie I</Polish>
-		<Russian>Âûæèâøèé I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SURVIVOR2</Tag>
-		<English>Survivor II</English>
-		<French>Rescapé II</French>
-		<German>Überlebender II</German>
-		<Spanish>Superviviente II</Spanish>
-		<Polish>Przeżycie II</Polish>
-		<Russian>Âûæèâøèé II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SURVIVOR3</Tag>
-		<English>Survivor III</English>
-		<French>Rescapé III</French>
-		<German>Überlebender III</German>
-		<Spanish>Superviviente III</Spanish>
-		<Polish>Przeżycie III</Polish>
-		<Russian>Âûæèâøèé III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SURVIVOR_TEXT</Tag>
@@ -17753,14 +14700,6 @@
 		<French>[ICON_BULLET]Peut seulement avoir la promotion lorsque situé sur des cases avec le type de terrain '%s1_Feature' (ou plusieurs types spécifiques en cas de liste).</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_THUG</Tag>
-		<English>Murderous Bandit</English>
-		<French>Bandit Sanguinaire</French>
-		<Spanish>Bandido sanguinario</Spanish>
-		<Polish>Morderczy Bandyta</Polish>
-		<Russian>Ãîëîâîðåç</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TIRES_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Tires (less strength per attack in a given turn.)</English>
 		<French>[ICON_BULLET]%D1_Change%% Fatigue (moins de puissance en attaque lors d'un tour.)</French>
@@ -17859,16 +14798,6 @@
 		<German>Bis zum Tode IV</German>
 		<Polish>Do Śmierci IV</Polish>
 		<Russian>Ñìåðòîíîñíûé IV</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRACKING</Tag>
-		<English>Tracker</English>
-		<French>Pisteur</French>
-		<German>Fährtensucher</German>
-		<Italian>Cercatore di tracce</Italian>
-		<Spanish>Rastreo</Spanish>
-		<Polish>Tropiciel</Polish>
-		<Russian>Ñëåäîïûò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRACK_SCENT1</Tag>
@@ -18175,26 +15104,6 @@
 		<Russian>Òðàíñ. ïåõîòû III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRAPPER1</Tag>
-		<English>Trapper I</English>
-		<French>Trappeur I</French>
-		<German>Fallensteller I</German>
-		<Italian>Costruttore di trappole I</Italian>
-		<Spanish>Trampero I</Spanish>
-		<Polish>Traper I</Polish>
-		<Russian>Çâåðîëîâ I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRAPPER2</Tag>
-		<English>Trapper II</English>
-		<French>Trappeur II</French>
-		<German>Fallensteller II</German>
-		<Italian>Costruttore di trappole II</Italian>
-		<Spanish>Trampero II</Spanish>
-		<Polish>Traper II</Polish>
-		<Russian>Çâåðîëîâ II</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_AVOID_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Value%% chance to Avoid Triggering %s2_trap traps.</English>
 		<French>[ICON_BULLET]%D1_Value%% chances d'éviter de déclencher les pièges %s2_trap.</French>
@@ -18353,16 +15262,6 @@
 		<Polish>[ICON_BULLET]Dolegliwość ma %D1_Change%% więcej szansy na wyleczenie u %s2_UnitCombat.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_INTERCEPT_AIRCRAFT</Tag>
-		<English>[ICON_BULLET]Can Intercept Aircraft (%d1_Amount%% Chance)</English>
-		<French>[ICON_BULLET]Peut Intercepter des avions (%d1_Amount%% de chance)</French>
-		<German>[ICON_BULLET]kann Lufteinheiten abfangen (Erfolgsaussicht: %d1_Amount%%)</German>
-		<Italian>[ICON_BULLET]Può intercettare gli aerei (%d1_Amount%% di probabilità)</Italian>
-		<Spanish>[ICON_BULLET]Puede interceptar aeronaves (probabilidad del %d1_Amount%%)</Spanish>
-		<Polish>[ICON_BULLET]Umożliwia przechwycenie samolotu (%d1_Amount%% de chance)</Polish>
-		<Russian>[ICON_BULLET]âîçìîæíîñòü ïåðåõâàòà àâèàöèè (%d1_Amount%% Chance)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UNNERVE_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Unnerve Value</English>
 		<French>[ICON_BULLET]%D1_Change%% Perturbation</French>
@@ -18447,16 +15346,6 @@
 		<Russian>[ICON_BULLET]Убирает возможность улучшить где угодно данный отряд.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UPGRADE_DISCOUNT</Tag>
-		<English>Upgrade Discount</English>
-		<French>Améliorations moins coûteuses</French>
-		<German>Verbilligte Modernisierung</German>
-		<Italian>Miglioramenti più economici</Italian>
-		<Spanish>Actualizaciones baratas</Spanish>
-		<Polish>Tańsze Ulepszanie</Polish>
-		<Russian>Ñêèäêà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_TEXT_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Free Preparation Bonus</English>
 		<French>[ICON_BULLET]%d1_percent%% Bonus de Préparation Libre</French>
@@ -18465,28 +15354,6 @@
 		<Spanish>[ICON_BULLET]Bonificación del %d1_percent%% a la preparación</Spanish>
 		<Polish>[ICON_BULLET]o %d1_percent%% mniejszy koszt misji</Polish>
 		<Russian>[ICON_BULLET]%d1_percent%% ñêèäêà ê ñòîèìîñòè àïãðåéäà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_URANIUM_AMMO</Tag>
-		<English>Uranium Ammunition</English>
-		<French>
-			<Text>Munitions Irradiés</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Urangeschosse</German>
-		<Italian>
-			<Text>Munizioni all'uranio impoverito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Munición de uranio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Amunicja z Uranu</Polish>
-		<Russian>Óðàíîâûå áîåïðèïàñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_URBAN_TACTICS1</Tag>
@@ -18529,15 +15396,6 @@
 		<Russian>Îïûòíûé ïèëîò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_VICTORY_ADJACENT</Tag>
-		<English>Field Hospital</English>
-		<French>Hôpital de Terrain</French>
-		<German>Feldlazarett</German>
-		<Spanish>Hospital de batalla</Spanish>
-		<Polish>Szpital Polowy</Polish>
-		<Russian>Ïîëåâîé ãîñïèòàëü</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_VICTORY_ADJACENT_TEXT</Tag>
 		<English>[ICON_BULLET]+%d1%% Chance to Heal Friendly Units within one tile on Combat Victory</English>
 		<French>[ICON_BULLET]+%d1%% Chances de soigner les unités alliées de la case en cas de Victoire</French>
@@ -18545,15 +15403,6 @@
 		<Spanish>[ICON_BULLET]Probabilidad del %d1%% de curar a unidades propias en un radio de 1 casilla en cada victoria</Spanish>
 		<Polish>[ICON_BULLET]+%d1%% szansy na wyleczenie wszystkich jednostek na tym samym polu po wygranej walce</Polish>
 		<Russian>[ICON_BULLET]+%d1%% шанса исцеления дружественных отрядов на одной с ним клетке после победы в бою</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_VICTORY_HEAL</Tag>
-		<English>Field Medic</English>
-		<French>Practicien de Terrain</French>
-		<German>Feldsanitäter</German>
-		<Spanish>Médico de batalla</Spanish>
-		<Polish>Medyk Polowy</Polish>
-		<Russian>Ôåëüäøåð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_VICTORY_HEAL_TEXT</Tag>
@@ -18570,15 +15419,6 @@
 		<French>[ICON_BULLET]Récupère les profits d'un pillage en cas de Victoire (Les aménagements restent intacts cependant).</French>
 		<Spanish>[ICON_BULLET]Obtiene los beneficios de un saqueo en cada victoria (sin perderse la mejora)</Spanish>
 		<Polish>[ICON_BULLET]Czerpanie zysków z Plądrowania po Wygranej Walce (nie niszczy ulepszeń).</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_VICTORY_STACK</Tag>
-		<English>Field Surgeon</English>
-		<French>Chirurgien de Terrain</French>
-		<German>Feldarzt</German>
-		<Spanish>Cirujano de batalla</Spanish>
-		<Polish>Chirurg Polowy</Polish>
-		<Russian>Ïîëåâîé õèðóðã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_VICTORY_STACK_TEXT</Tag>
@@ -18727,16 +15567,6 @@
 		<Spanish>Combate en desierto III</Spanish>
 		<Polish>Walka Pustynna III</Polish>
 		<Russian>Ïóñòûííûé âîèí III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WARRIOR</Tag>
-		<English>Warrior</English>
-		<French>Guerrier</French>
-		<German>Krieger</German>
-		<Italian>Guerriero</Italian>
-		<Spanish>Guerrero</Spanish>
-		<Polish>Wojownik</Polish>
-		<Russian>Âîèí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WARRIORS_INTUITION1</Tag>
@@ -19017,26 +15847,6 @@
 		<Russian>Ïîëÿðíèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WITHDRAW_ON_HILL_TEXT</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Withdraw when battle is on Hills</English>
-		<French>[ICON_BULLET]%D1_Mod%% de repli lors d'un combat sur des Collines</French>
-		<German>[ICON_BULLET]%D1_Mod%% Rückzugswahrscheinlichkeit (Hügel)</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% alla Ritirata quando la battaglia è in collina</Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod%% Withdraw contra when battle is on Hills</Spanish>
-		<Polish>[ICON_BULLET]%D1_Mod%% szansy uciekczki jeśli walka odbywa się na Wzgórzach</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% шанса отступить, если бой идет в холмах</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WITHDRAW_ON_PEAK_TEXT</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Withdraw when battle is on Peaks</English>
-		<French>[ICON_BULLET]%D1_Mod%% de repli lors d'un combat sur des Montagnes</French>
-		<German>[ICON_BULLET]%D1_Mod%% Rückzugswahrscheinlichkeit (Gebirge)</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% alla Ritirata quando la battaglia è in montagna</Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod%% Withdraw contra when battle is on Peaks</Spanish>
-		<Polish>[ICON_BULLET]%D1_Mod%% szansy uciekczki jeśli walka odbywa się w Górach</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% шанса отступить, если бой идет в горах</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Withdraw when battle is on [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% de repli lors d'un combat sur: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
@@ -19147,5 +15957,37 @@
 		<Tag>TXT_KEY_PROMOTION_DEF_WARN_TEXT</Tag>
 		<English>[COLOR_WARNING_TEXT]If the unit with this promotion cannot gain Defensive Bonuses, they will not gain inapplicable promotion benefits.[COLOR_REVERT]</English>
 		<Russian>[COLOR_WARNING_TEXT]Если отряд с этой квалификацией не имеет защитных бонусов, он не получает от них несовместимые преимущества.[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_GREAT_GENERAL</Tag>
+		<English>Lead by Warlord</English>
+		<French>Dirigé par un seigneur de guerre</French>
+		<German>Führung durch Kriegsherr</German>
+		<Italian>Guerriero al comando</Italian>
+		<Spanish>Bajo el liderato de un Caudillo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_LEADERSHIP</Tag>
+		<English>Leadership</English>
+		<French>Commandement</French>
+		<German>Führerschaft</German>
+		<Italian>Comando</Italian>
+		<Spanish>Liderazgo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_MORALE</Tag>
+		<English>Morale</English>
+		<French>Moral</French>
+		<German>Kampfmoral</German>
+		<Italian>Morale</Italian>
+		<Spanish>Moral</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_TACTICS</Tag>
+		<English>Tactics</English>
+		<French>Tactiques</French>
+		<German>Taktik</German>
+		<Italian>Tattica</Italian>
+		<Spanish>Tácticas</Spanish>
 	</TEXT>
 </Civ4GameText>

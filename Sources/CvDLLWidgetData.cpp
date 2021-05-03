@@ -2363,30 +2363,9 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			{
 				if (!(GET_PLAYER(pHeadSelectedUnit->getOwner()).canFound(pMissionPlot->getX(), pMissionPlot->getY())))
 				{
-					bool bValid = true;
+					const int iRange = GC.getMIN_CITY_RANGE();
 
-					int iRange = GC.getMIN_CITY_RANGE();
-
-					for (int iDX = -(iRange); iDX <= iRange; iDX++)
-					{
-						if (!bValid) break;
-
-						for (int iDY = -(iRange); iDY <= iRange; iDY++)
-						{
-							CvPlot* pLoopPlot	= plotXY(pMissionPlot->getX(), pMissionPlot->getY(), iDX, iDY);
-
-							if (pLoopPlot != NULL)
-							{
-								if (pLoopPlot->isCity())
-								{
-									bValid = false;
-									break;
-								}
-							}
-						}
-					}
-
-					if (!bValid)
+					if (algo::any_of(pMissionPlot->rect(iRange, iRange), bind(CvPlot::isCity, _1, false, NO_TEAM)))
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CANNOT_FOUND", GC.getMIN_CITY_RANGE()));
@@ -2414,7 +2393,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_SPREAD)
 			{
-				ReligionTypes eReligion = ((ReligionTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData()));
+				const ReligionTypes eReligion = (ReligionTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData();
 
 				if (pMissionCity != NULL)
 				{
@@ -2496,26 +2475,22 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						CvWStringBuffer szBonusList;
 						bool bValid = false;
 						bool bFirst = true;
-						for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+						foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 						{
-							BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
-							if (NO_BONUS != eBonus)
+							if (!bFirst)
 							{
-								if (!bFirst)
-								{
-									szBonusList.append(L", ");
-								}
-								else
-								{
-									bFirst = false;
-								}
-								szBonusList.append(GC.getBonusInfo(eBonus).getDescription());
+								szBonusList.append(L", ");
+							}
+							else
+							{
+								bFirst = false;
+							}
+							szBonusList.append(GC.getBonusInfo(eBonus).getDescription());
 
-								if (pMissionCity->hasBonus(eBonus))
-								{
-									bValid = true;
-									break;
-								}
+							if (pMissionCity->hasBonus(eBonus))
+							{
+								bValid = true;
+								break;
 							}
 						}
 
@@ -2865,10 +2840,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					// Yield delta from terrain change
 					if ( (NO_TERRAIN != ePlotTerrain) && bIsTerrainChange)
 					{
-						iYield += GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getYield(iI) +
-							(ePlotRiverSide ? GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getRiverYieldChange(iI) : 0);
-						iYield -= GC.getTerrainInfo(ePlotTerrain).getYield(iI) +
-							(ePlotRiverSide ? GC.getTerrainInfo(ePlotTerrain).getRiverYieldChange(iI) : 0);
+						iYield += GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getYield(iI);
+						iYield -= GC.getTerrainInfo(ePlotTerrain).getYield(iI);
 					}
 
 					if (iYield != 0)

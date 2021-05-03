@@ -25,14 +25,6 @@
 		<Russian>Òåêóùàÿ ïîääåðæêà:</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COMBAT_ARMOR</Tag>
-		<English>[ICON_BULLET]Armor: %D1_Bonus%%</English>
-		<French>[ICON_BULLET]Armure: %D1_Bonus%%</French>
-		<Italian>[ICON_BULLET]Armatura: %D1_Bonus%%</Italian>
-		<Polish>[ICON_BULLET]Pancerz: %D1_Bonus%%</Polish>
-		<Russian>[ICON_BULLET]Áðîíÿ: %D1_Bonus%%</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_ARMOR</Tag>
 		<English>Attacker Armor:</English>
 		<French>Armure de l'Attaquant:</French>
@@ -93,7 +85,7 @@
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_HIT_MODIFIER</Tag>
 		<English>Defender to Hit Modifier/Round:</English>
 		<French>Modificateur de Défense/Round:</French>
-		<German>Verteidigungsmodifikator pro Runde:</German>		
+		<German>Verteidigungsmodifikator pro Runde:</German>
 		<Italian>Modificatore di difesa per turno:</Italian>
 		<Polish>Celność Obrońcy / Runda:</Polish>
 	</TEXT>
@@ -125,20 +117,6 @@
 		<French>Total Armure du Défenseur:</French>
 		<Italian>Armatura totale dei difensori:</Italian>
 		<Polish>Cały Pancerz Obrońcy:</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_ARMOR_VS_PUNCTURE_NOTE</Tag>
-		<English>Note: Armor is not reflected in the odds to hit each round.</English>
-		<French>Note: l'Armure n'est pas prise en compte dans les probabilités de coup de chaque round.</French>
-		<Italian>Nota: l'armatura non è tenuta in conto nelle probabilità di danni ogni colpo.</Italian>
-		<Polish>Uwaga: Pancerz nie wpływa na szanse uderzenia.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_ATTACKER_ARMOR_VS_PUNCTURE</Tag>
-		<English>Attacker Armor: %d1 - Defender Puncture: %d2 = Adjusted Total: %d3</English>
-		<French>Armure de l'Attaquant: %d1 - Perforation du Défenseur: %d2 = Total ajusté: %d3</French>
-		<Italian>Armatura dell'attaccante: %d1 - Perforazione del difensore: %d2 = Totale corretto: %d3</Italian>
-		<Polish>Pancerz Atakującego: %d1 - Przebicie Obrońcy: %d2 = Wynik: %d3</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_CHANCE_CRITICAL</Tag>
@@ -211,13 +189,6 @@
 		<Polish>Modyfikator Przebicia podczas Silnego Ataku:</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COMBAT_ATTACKER_WILL_AFFLICT</Tag>
-		<English>Attacker Will Afflict:</English>
-		<French>L'Attaquant va infliger:</French>
-		<Italian>Gli attaccanti infliggeranno:</Italian>
-		<Polish>Atakujący zada:</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACK_FROM_SIZE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Bonus%% from Size Differential</English>
 		<French>[ICON_BULLET]%D1_Bonus%% de la différence de taille</French>
@@ -256,39 +227,6 @@
 		<English>Breakdown: %d1_chance%% chance per round of reducing city defenses by %d2_damage%%. Opponent Repel values modify this Chance. Damage modified by City Bombard Defense.</English>
 		<French>Démolition: %d1_chance%% Prob. par round de réduire les défense de la ville de %d2_damage%%. Les valeurs d'Expulsion de l'adversaire modifient cette probabilité.</French>
 		<Polish>Załamanie się: %d1_chance%% szansa za każdą turę redukowania obrony miasta. przez %d2_damage%%. Wrogie Odstraszanie modyfikuje tą szansę. Obrażenia zmodyfikowane przez Obroną Miasta przed Bombardowaniem.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_CLASS_NOT_ON_GAME_OPTION</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Not Available to Units on the %s1_Option Game Option being active.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Non disponible lorsque l'option de jeu %s1_Option est active.[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]bei aktivierter Einstellung "%s1_Option" nicht verfügbar[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non è disponibile per le unità se l'opzione %s1_Option è attiva.[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek na %s1_Change%% Opcja Gry jest aktywna.[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Íå äîñòóïíî äëÿ þíèòîâ, åñëè àêòèâèðîâàí(à) %s1_Option.[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_CLASS_ON_GAME_OPTION</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Not Available to Units without the %s1_Option Game Option being active.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert l'option de jeu %s1_Option.[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nur bei aktivierter Einstellung "%s1_Option" verfügbar[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non è disponibile per le unità se l'opzione %s1_Option è inattiva.[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek bez %s1_Change%% Opcja Gry jest aktywna.[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Íå äîñòóïåí äëÿ îòðÿäîâ áåç %s1_Option çàäåéñòâîâàííûõ èãðîâûõ îïöèé.[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_DAMAGE_MODIFIER</Tag>
-		<English>[ICON_BULLET]Damage Modifier: %D1_Bonus%</English>
-		<French>[ICON_BULLET]Modif. de dégâts: %D1_Bonus%</French>
-		<German>[ICON_BULLET]%D1_Bonus% Schaden</German>
-		<Polish>[ICON_BULLET]Modyfikator Obrażeń: %D1_Bonus%</Polish>
-		<Russian>[ICON_BULLET]Модификатор урона: %D1_Bonus%</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_DEFENDER_ARMOR_VS_PUNCTURE</Tag>
-		<English>Defender Armor: %d1 - Attacker Puncture: %d2 = Adjusted Total: %d3</English>
-		<French>Armure du Défenseur: %d1 - Perforation de l'Attaquant: %d2 = Total ajusté: %d3</French>
-		<Italian>Armatura del difensore: %d1 - Perforazione dell'attaccante: %d2 = Totale corretto: %d3</Italian>
-		<Polish>Pancerz Obrońcy: %d1 - Przebicie Atakującego: %d2 = Wynik: %d3</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_CHANCE_CRITICAL</Tag>
@@ -362,13 +300,6 @@
 		<Polish>Modyfikator Przebicia podczas Silnego Ataku</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COMBAT_DEFENDER_WILL_AFFLICT</Tag>
-		<English>Defender Will Afflict:</English>
-		<French>Le Défenseur va infliger:</French>
-		<Italian>I difensori affliggeranno:</Italian>
-		<Polish>Obrońca zada:</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENSE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Bonus%% from Defense Modifier</English>
 		<French>[ICON_BULLET]%D1_Bonus%% de Modif. de défense</French>
@@ -391,13 +322,6 @@
 		<Italian>[ICON_BULLET]%D1_Bonus%% dalla Determinazione</Italian>
 		<Polish>[ICON_BULLET]%D1_Bonus%% z Determinacji</Polish>
 		<Russian>[ICON_BULLET]%D1_Bonus%% бонус от Воодушевления</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_DUMMY</Tag>
-		<English>Dummy</English>
-		<French>Mannequin</French>
-		<Polish>manekin</Polish>
-		<Russian>Мишень</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_FIGHT_TO_DEATH</Tag>
@@ -706,14 +630,6 @@
 		<Russian>[ICON_BULLET]Шанс отступить в бою с %s2_Type: %D1_Bonus%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COMBAT_PUNCTURE</Tag>
-		<English>[ICON_BULLET]Puncture: %D1_Bonus</English>
-		<French>[ICON_BULLET]Perforation: %D1_Bonus</French>
-		<Italian>[ICON_BULLET]Perforazione: %D1_Bonus</Italian>
-		<Polish>[ICON_BULLET]Przebicie: %D1_Bonus</Polish>
-		<Russian>[ICON_BULLET]Колющий урон: %D1_Bonus</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_COMBAT_RAMPAGE</Tag>
 		<English>[ICON_BULLET]%D1_Bonus%% from Rampage bonus</English>
 		<French>[ICON_BULLET]%D1_Bonus%% Bonus (Frénésie)</French>
@@ -726,13 +642,6 @@
 		<French>Probabilité totale d'étourdissement par Round (Attaquant):</French>
 		<Italian>Probabilità totali di stordimento per turno (Attaccante):</Italian>
 		<Polish>Całkowita Szansa Atakującego na Oszołomienie:</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_ROUND_STUN_ATTACKER_MINUS_ATTACKER_ENDURANCE</Tag>
-		<English>Minus Attacker Endurance Modifier:</English>
-		<French>Modif. d'Endurance de l'Attaquant:</French>
-		<Italian>Modificatore dovuto alla Persistenza dell'attaccante:</Italian>
-		<Polish>Minusowy Modyfikator Wytrzymałości Atakującego:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_ATTACKER_MINUS_DEFENDER_ENDURANCE</Tag>
@@ -974,28 +883,6 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Russian>Ðóêîâîäèòåëè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_AIR</Tag>
-		<English>Air</English>
-		<French>
-			<Text>Unités Aériennes</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Lufteinheiten:Lufteinheiten:Lufteinheiten:Lufteinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>Unità aeree</Italian>
-		<Spanish>
-			<Text>Unidad aérea:Unidades aéreas</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Myśliwce</Polish>
-		<Russian>Âîçäóøíûå þíèòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_AIR_RECON</Tag>
@@ -1831,32 +1718,6 @@
 		</Spanish>
 		<Polish>Jednostki łucznicze</Polish>
 		<Russian>Ëó÷íèêè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ARMOR</Tag>
-		<English>Armored</English>
-		<French>
-			<Text>Unités blindées</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Gepanzerte Einheiten:Gepanzerte Einheiten:Gepanzerte Einheiten:Gepanzerte Einheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Unità corazzata:Unità corazzate</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Unidad blindada:Unidades blindadas</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Jednostki pancerne</Polish>
-		<Russian>Áðîíåòåõíèêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ARMOR_AIRCRAFT</Tag>
@@ -4525,28 +4386,6 @@
 		<Russian>Êîìàíäèðû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CONTROL</Tag>
-		<English>Controllers</English>
-		<French>
-			<Text>Unités de Contrôle</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Kontrolleinheiten:Kontrolleinheiten:Kontrolleinheiten:Kontrolleinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>Unità di controllo</Italian>
-		<Spanish>
-			<Text>Controlador:Controladores</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Kontroler Jednostek</Polish>
-		<Russian>Êîíòðîëåðû</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CORVETTE</Tag>
 		<English>Corvette</English>
 		<Polish>Korwety</Polish>
@@ -6449,12 +6288,6 @@
 		<Russian>Êóëüòóðà(Ëóçèòàíû)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LYDIANS</Tag>
-		<English>Culture (Lydians)</English>
-		<French>(Culture) Lydiens</French>
-		<Russian>Êóëüòóðà(Ëèäèéñêàÿ)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MALAGASY</Tag>
 		<English>Culture (Malagasy)</English>
 		<French>(Culture) Malagache</French>
@@ -6790,22 +6623,6 @@
 		<Russian>Êóëüòóðà(Íàñêà)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NEANDERTHAL</Tag>
-		<English>Culture (Neanderthal)</English>
-		<French>
-			<Text>(Culture) Néanderthal</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Spanish>
-			<Text>Neandertal:Unidades de la cultura neandertal</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Kultura (Neanderthalska)</Polish>
-		<Russian>Êóëüòóðà(Íåàíäåðòàë.)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NEPALESE</Tag>
 		<English>Culture (Nepalese)</English>
 		<French>
@@ -6949,12 +6766,6 @@
 		<English>Culture (Paiute)</English>
 		<French>(Culture) Païute</French>
 		<Russian>Êóëüòóðà(Ïàéþòû)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAKISTAN</Tag>
-		<English>Culture (Pakistan)</English>
-		<French>(Culture) Pakistanaise</French>
-		<Russian>Êóëüòóðà(Ïàêèñòàíñêàÿ)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAKISTANI</Tag>
@@ -7482,12 +7293,6 @@
 		</Spanish>
 		<Polish>Kultura (Siuksów)</Polish>
 		<Russian>Êóëüòóðà(Ñèó)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SLOVAKIAN</Tag>
-		<English>Culture (Slovakian)</English>
-		<French>(Culture) Slovaque</French>
-		<Russian>Êóëüòóðà(Ñëîâàöêàÿ)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SLOVENIAN</Tag>
@@ -9307,22 +9112,6 @@
 		<Russian>Âåðáëþäû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_MAMMAL_CANINE</Tag>
-		<English>Mammal (Canine)</English>
-		<French>
-			<Text>(Mammifères) Canins</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Spanish>
-			<Text>Canino:Mamíferos caninos</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Ssak (Pies)</Polish>
-		<Russian>Ñîáàêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_MAMMAL_CERVID</Tag>
 		<English>Mammal (Cervid)</English>
 		<French>
@@ -10115,32 +9904,6 @@
 		<French>Nanomorphe</French>
 		<Polish>Nanomorficzny</Polish>
 		<Russian>Íàíîìîðôû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_NAVAL</Tag>
-		<English>Naval</English>
-		<French>
-			<Text>Unités navales</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Marineeinheiten:Marineeinheiten:Marineeinheiten:Marineeinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Unità navale:Unità navali</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Unidad naval: Unidades navales</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Jednostki morskie</Polish>
-		<Russian>Âîåííî-ìîðñêèå þíèòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_NAVAL_COMBATANT</Tag>
@@ -15474,5 +15237,10 @@
 		</Spanish>
 		<Polish>Statek Wormhole</Polish>
 		<Russian>Âàðï-çâåçäîëåò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_NOMAD</Tag>
+		<English>Nomads</English>
+		<French>Nomades</French>
 	</TEXT>
 </Civ4GameText>

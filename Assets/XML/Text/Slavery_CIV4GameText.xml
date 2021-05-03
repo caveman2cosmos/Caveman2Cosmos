@@ -45,7 +45,7 @@
 		<English>Zoroastrianism prohibits the owning of slaves. If you have in the city or as your state religion then your people will be angry if you also run Slavery. Zoroastrianism missionaries (Magi) can also end slavery in your nation like a Great Person can.</English>
 		<Italian>Lo zoroastrismo proibisce la schiavitù; se lo zoroastrismo è presente in città o è la tua religione ufficiale, i cittadini si arrabbieranno se permetti la schiavitù. I magi, missionari di Zoroastro, possono eliminare la schiavitù dalla tua nazione proprio come farebbe un Grande Personaggio.</Italian>
 		<Polish>Zaratusztrianizm potępiał niewolnictwo w każdej postaci.</Polish>
-		<Russian>[TAB]Ó÷åíèå Çàðàòóñòðû çàïðåùàåò èíñòèòóò ðàáîâëàäåíèÿ. Åñëè â âàøåì ãîðîäå Çîðîàñòðèçì áóäåò ïðåäñòàâëåí â êà÷åñòâå ðàçðåøåííîé èëè ãîñóäàðñòâåííîé ðåëèãèè, òîãäà âàøè ëþäè áóäóò ïðîÿâëÿòü íåäîâîëüñòâî, ðàâíî êàê è â ñëó÷àå ââåäåíèÿ Ðàáîâëàäåíèÿ. Ìèññèîíåðû çîðîàñòðèçìà (âîëõâû) íàðàâíå ñ Âåëèêèìè ëþäüìè òàêæå ñïîñîáíû ëèêâèäèðîâàòü ðàáîâëàäåíèå â ñâîåé ñòðàíå.</Russian>
+		<Russian>Ó÷åíèå Çàðàòóñòðû çàïðåùàåò èíñòèòóò ðàáîâëàäåíèÿ. Åñëè â âàøåì ãîðîäå Çîðîàñòðèçì áóäåò ïðåäñòàâëåí â êà÷åñòâå ðàçðåøåííîé èëè ãîñóäàðñòâåííîé ðåëèãèè, òîãäà âàøè ëþäè áóäóò ïðîÿâëÿòü íåäîâîëüñòâî, ðàâíî êàê è â ñëó÷àå ââåäåíèÿ Ðàáîâëàäåíèÿ. Ìèññèîíåðû çîðîàñòðèçìà (âîëõâû) íàðàâíå ñ Âåëèêèìè ëþäüìè òàêæå ñïîñîáíû ëèêâèäèðîâàòü ðàáîâëàäåíèå â ñâîåé ñòðàíå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND</Tag>
@@ -181,13 +181,6 @@
 		<Russian>Ðàá. òðóä (óáîðêà)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Tag>
-		<English>Build the various Slave Compounds to get access to specialised settled slaves.</English>
-		<French>Construisez divers Camps d'esclaves pour avoir accès à des spécialistes esclaves dans votre ville.</French>
-		<Italian>Costruisci le diverse baracche degli schiavi per ottenere l'accesso a diversi schiavi specializzati.</Italian>
-		<Russian>Создавайте различные формы «Рабского труда», чтобы получить доступ к городским рабам-специалистам.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_MARKET_HELP</Tag>
 		<English>[ICON_BULLET]Slave Market increases the outcomes from using Captives as Slaves - e.g. increases amount of gold you get from selling a captive into slavery.</English>
 		<French>[ICON_BULLET]Le marché d'esclaves augmente les bénéfices de l'utilisation de prisonnier en tant qu'esclaves, ainsi que l'or que vous pouvez obtenir de la vente d'esclaves.</French>
@@ -225,14 +218,7 @@
 		<French>Esclavage...</French>
 		<Italian>Schiavismo...</Italian>
 		<Polish>Niewolnictwo...</Polish>
-		<Russian>[TAB]Ðàáîâëàäåíèå....</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WV_SLAVERY_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Worldview - Slavery[COLOR_REVERT] indicates slavery is OK in your nation at this time. It can only be removed by a Great Person or Lawyer. It opens up the slave buildings and improves results from using captives as slaves.</English>
-		<French>La [COLOR_UNIT_TEXT]Vision du monde - Esclavage[COLOR_REVERT] indique que l'esclavage est considéré comme normal au sein de votre nation. Peut uniquement être enlevé par un personnage illustre ou un avocat. Il permet l'accès à des bâtiments spécifiques pour l'esclavage, et augmente les chances de capturer des prisonniers esclaves.</French>
-		<Italian>La [COLOR_UNIT_TEXT]Concezione del mondo - Schiavismo[COLOR_REVERT] è un edificio fittizio che indica che nella tua nazione la schiavitù è legale. Può essere rimossa solo da una Grande Persona o da un uomo di legge. Sblocca tutti gli edifici legati agli schiavi e migliora i risultati ottenuti dai tuoi prigionieri.</Italian>
-		<Russian>[COLOR_UNIT_TEXT]Ðàáîâëàäåëü÷åñêîå ìèðîâîççðåíèå[COLOR_REVERT] îáîçíà÷àåò ïîçèòèâíîå îòíîøåíèå ê ðàáîâëàäåíèþ íà äàííûé ìîìåíò. Îíî ìîæåò áûòü çàïðåùåíî òîëüêî Âåëèêèìè ëþäüìè èëè Àäâîêàòàìè. Îíî ïîçâîëÿåò ñîçäàâàòü ðàáîâëàä. ïîñòðîéêè è ïîâûøàòü ïðîèçâîäèòåëüíîñòü, èñïîëüçóÿ ïëåííèêîâ â êà÷åñòâå ðàáîâ.</Russian>
+		<Russian>Ðàáîâëàäåíèå....</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SETTLED_SLAVE</Tag>
@@ -325,14 +311,6 @@
 		<Russian>Îòêàçàòüñÿ îò òðàäèöèè ðàáîâëàäåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_REMOVE_WV_SLAVERY_HELP</Tag>
-		<English>Slavery is no longer acceptable in your cities. Unit is consumed.</English>
-		<French>L'Esclavage n'est plus accepté dans vos villes. Les unités sont libérées.</French>
-		<Italian>La schiavitù non è più legale nella tua città. L'unità viene consumata.</Italian>
-		<Polish>Niewolnictwo nie jest już akceptowane w Twoich miastach. Jednostka zostaje usunięta.</Polish>
-		<Russian>Ðàáñòâî áîëåå íåïðèåìëåìî â âàøèõ ãîðîäàõ. Îòðÿä èñ÷åçàåò.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_SELL_CAPTIVE</Tag>
 		<English>Sell your captive into slavery for money.</English>
 		<French>Vendre vos prisonniers comme esclaves.</French>
@@ -347,22 +325,6 @@
 		<Italian>Più grande è l'infrastruttura schiavista, più soldi otterrai.</Italian>
 		<Polish>Czym większa infrastuktura niewolnicza tym większe pieniądze.</Polish>
 		<Russian>×åì áîëüøå ó âàñ áóäåò ïîñòðîåê äëÿ ðàáîâ, òåì áîëüøå âû çàðàáîòàåòå äåíåã.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MSG_NO_SLAVERY</Tag>
-		<English>Your nation has banned slavery.</English>
-		<French>Votre nation a banni l'esclavage.</French>
-		<Italian>La tua nazione ha vietato la schiavitù.</Italian>
-		<Polish>Twój naród przestał zakazał niewolnictwa.</Polish>
-		<Russian>Â âàøåé ñòðàíå çàïðåùåíî ðàáñòâî.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MSG_SLAVERY_OK</Tag>
-		<English>Slavery is now considered OK in your nation.</English>
-		<French>L'Esclavage est considéré comme acceptable par votre nation.</French>
-		<Italian>La schiavitù è ora legale nella tua nazione.</Italian>
-		<Polish>Niewolnictwo jest od teraz akceptowane w Twoim imperium.</Polish>
-		<Russian>Â âàøåé ñòðàíå ñòàëî ëåãàëèçîâàíî Ðàáîâëàäåíèå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_SLAVE_MARKET_SOLD</Tag>
@@ -564,7 +526,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_CITIZEN_PEDIA</Tag>
-		<English>Settled Citizen TBD - When whipping they are used after ant Settled Slaves and before general population population.</English>
+		<English>Settled Citizen WIP - When whipping they are used after ant Settled Slaves and before general population population.</English>
 		<Italian>CONCETTO NON ANCORA REALIZZATO: quando viene sacrificata la popolazione cittadina, i cittadini sedentari vengono usati dopo gli schiavi sedentari ma prima della popolazione normale.</Italian>
 		<Polish>Osiadły Obywatel - Kiedy przyspieszasz budowę możesz ich użyć ich zamiast populacji miasta.</Polish>
 		<Russian>Подселенные горожане - в случае принудительного труда они используются после городских рабов и перед остальным населением.</Russian>
@@ -661,7 +623,7 @@
 		<English>Captives can join a city as a Settled Slave specialists if the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] is active. If you end the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] these specialists wil become units depending on their speciality.[NEWLINE][ICON_BULLET]Settled Slave (Entertainment) become [LINK=UNIT_STORY_TELLER]Story Tellers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Food) become Food Caravans or better. (check if AI has been done for these)[NEWLINE][ICON_BULLET]Settled Slave (Health) become [LINK=UNIT_HEALER]Healers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Production) become [LINK=UNIT_EARLY_MERCHANT_C2C]Early Merchants[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave, Settled Slave (Commerce and Tutor) become either become population or immigrants - one for each 3 slaves. Left overs become [LINK=UNIT_FREED_SLAVE]Captive - Freed Slaves[\LINK].(To be done) When whipping population to build they are first to go.</English>
 		<Italian>I prigionieri possono unirsi alla città come schiavi sedentari se la [LINK=CONCEPT_WORLD_VIEW]Concezione del mondo - Schiavitù[\LINK] è attiva. Quando la [LINK=CONCEPT_WORLD_VIEW]Concezione del mondo - Schiavitù[\LINK] termina questi specialisti diventano unità in base alla loro specializzazione.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati all'intrattenimento diventano [LINK=UNIT_STORY_TELLER]Cantastorie[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati al cibo diventano carovane di cibo o meglio. (L'IA per questi non è ancora stata realizzata)[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati alla salute diventano [LINK=UNIT_HEALER]Guaritori[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati alla produzione diventano [LINK=UNIT_EARLY_MERCHANT_C2C]Mercanti primitivi[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari generici e quelli legati al commercio e all'insegnamento diventano popolazione o immigrati - uno per goni 3 slavi. I rimanenti diventano [LINK=UNIT_FREED_SLAVE]Prigionieri - Schiavi liberati[\LINK].CONCETTO NON ANCORA REALIZZATO: quando viene sacrificata la popolazione cittadina, gli schiavi sedentari sono i primi ad essere sacrificati.</Italian>
 		<Polish>Jeńcy moga dołączyć do miasto jako Osiadli Niewolnicy (specjaliści) jeśli [LINK=CONCEPT_WORLD_VIEW]Swiatopogląd - Niewolnictwo[\LINK] jest aktywny. Jeśli zakończysz działanie tego Swiatopoglądu to Ci specjaliśc zamienią się w jednostki (w zależności od typu specjalizacji).[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Rozrywka) zostają [LINK=UNIT_STORY_TELLER]Opowiadaczami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Żywność) zostaje Kawananą Żywności lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Zdrowie) zostają [LINK=UNIT_HEALER]Uzdrowicielami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Produkcja) zostają [LINK=UNIT_EARLY_MERCHANT_C2C]Wczesnymi Kupcami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik, Osiadły Niewolnik (Bogactwo i Nauczanie) zwiększają populację lub zostają immigrantami. [LINK=UNIT_FREED_SLAVE]Wyzwoleni Niewolnicy[\LINK] - Kiedy przyspieszasz budowę możesz ich użyć ich zamiast populacji miasta.</Polish>
-		<Russian>[TAB]Пленники могут присоединиться к городу в качестве поселенных рабов-специалистов, если активно мировоззрение [LINK=CONCEPT_WORLD_VIEW]Рабовладение[\LINK]. В случае отмены [LINK=CONCEPT_WORLD_VIEW]Рабства[\LINK] в вашей державе эти специалисты станут соответствующими отрядами в зависимости от их специальности:[NEWLINE][ICON_BULLET]Рабы (культура) становятся [LINK=UNIT_STORY_TELLER]Сказителями[\LINK] или их более продвинутыми аналогами;[NEWLINE][ICON_BULLET]Рабы (пища) становятся продовольственными караванами;[NEWLINE][ICON_BULLET]Рабы (здоровье) становятся [LINK=UNIT_HEALER]Хилерами[\LINK] или их более продвинутыми аналогами;[NEWLINE][ICON_BULLET]Рабы (продукция) становятся [LINK=UNIT_EARLY_MERCHANT_C2C]Менялами[\LINK] или их более продвинутыми аналогами;[NEWLINE][ICON_BULLET]Рабы (деньги и наука) и пр. городские рабы становятся либо обычными жителями, либо иммигрантами - по одному на каждых 3 рабов. Все прочие становятся [LINK=UNIT_FREED_SLAVE]Пленными работниками[\LINK]. В случае использования принудительного труда эта категория жителей потратится в числе первых.</Russian>
+		<Russian>Пленники могут присоединиться к городу в качестве поселенных рабов-специалистов, если активно мировоззрение [LINK=CONCEPT_WORLD_VIEW]Рабовладение[\LINK]. В случае отмены [LINK=CONCEPT_WORLD_VIEW]Рабства[\LINK] в вашей державе эти специалисты станут соответствующими отрядами в зависимости от их специальности:[NEWLINE][ICON_BULLET]Рабы (культура) становятся [LINK=UNIT_STORY_TELLER]Сказителями[\LINK] или их более продвинутыми аналогами;[NEWLINE][ICON_BULLET]Рабы (пища) становятся продовольственными караванами;[NEWLINE][ICON_BULLET]Рабы (здоровье) становятся [LINK=UNIT_HEALER]Хилерами[\LINK] или их более продвинутыми аналогами;[NEWLINE][ICON_BULLET]Рабы (продукция) становятся [LINK=UNIT_EARLY_MERCHANT_C2C]Менялами[\LINK] или их более продвинутыми аналогами;[NEWLINE][ICON_BULLET]Рабы (деньги и наука) и пр. городские рабы становятся либо обычными жителями, либо иммигрантами - по одному на каждых 3 рабов. Все прочие становятся [LINK=UNIT_FREED_SLAVE]Пленными работниками[\LINK]. В случае использования принудительного труда эта категория жителей потратится в числе первых.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PRODUCTION</Tag>
