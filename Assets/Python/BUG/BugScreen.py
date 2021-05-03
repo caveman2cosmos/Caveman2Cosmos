@@ -107,9 +107,9 @@ class BugTab:
 			szText += localText.getText(self.txt_key, ())
 		szText += u"</font>"
 		if not self.enabled:
-			szText = localText.changeTextColor(szText, gc.getInfoTypeForString("COLOR_GREY"))
+			szText = localText.changeTextColor(szText, gc.getCOLOR_GREY())
 		elif self.active:
-			szText = localText.changeTextColor(szText, gc.getInfoTypeForString("COLOR_YELLOW"))
+			szText = localText.changeTextColor(szText, gc.getCOLOR_YELLOW())
 		return szText
 
 

@@ -3278,4 +3278,26 @@
 		<Polish>Łazik - rodzaj sondy kosmicznej, posiadający możliwość poruszania się po powierzchni ciała, na którym wylądował (planety lub księżyca, w planach także planetoid). Łazik, dzięki swojej mobilności, ma dużą przewagę nad tradycyjnym lądownikiem w kwestii wyboru miejsca i obiektu badań, jednak jego wysłanie jest znacznie droższe ze względu na konieczność umieszczenia systemu napędowego wewnątrz sondy, co znacznie zwiększa jej wagę. Do łazików zaliczane są głównie pojazdy bezzałogowe, ale łazikiem księżycowym był też nazywany załogowy Lunar Roving Vehicle, używany w misjach programu Apollo.</Polish>
 		<Russian>Ëóííûé ðàçâåäîâàòåëüíûé þíèò.</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
+		<English>Build [LINK=IMPROVEMENT_LISTENING_NODE]Listening Node[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_LISTENING_NODE]Station d'écoute[\LINK]</French>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LISTENING_NODE]nodo d'ascolto[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LISTENING_NODE]Nodo de escucha[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LISTENING_NODE]Boję Nasłuchową[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LISTENING_NODE]Öåíòð ÐÝÁ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LISTENING_NODE</Tag>
+		<English>Listening Node</English>
+		<French>Station d'écoute</French>
+		<Italian>Nodo d'ascolto</Italian>
+		<Spanish>
+			<Text>Nodo de escucha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Boja Nasłuchowa</Polish>
+		<Russian>Óçåë ñâÿçè</Russian>
+	</TEXT>
 </Civ4GameText>

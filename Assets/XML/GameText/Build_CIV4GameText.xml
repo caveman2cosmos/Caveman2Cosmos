@@ -589,15 +589,6 @@
 		<Russian>Строить [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Маяк[\LINK] (Риф)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
-		<English>Build [LINK=IMPROVEMENT_LISTENING_NODE]Listening Node[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_LISTENING_NODE]Station d'écoute[\LINK]</French>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_LISTENING_NODE]nodo d'ascolto[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_LISTENING_NODE]Nodo de escucha[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_LISTENING_NODE]Boję Nasłuchową[\LINK]</Polish>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LISTENING_NODE]Öåíòð ÐÝÁ[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIST_SCREEN_HOVER</Tag>
 		<English>Shows the Build List Screen.</English>
 		<French>Affiche l'écran des Listes de constructions.</French>
