@@ -408,32 +408,6 @@
 		<Russian>В современном использовании коттедж обычно представляет собой скромное, часто уютное жилище, обычно в сельской или полусельской местности. Однако в городах есть жилища в стиле коттеджей, а в таких местах, как Канада, этот термин вообще не имеет коннотации размера (ср. священник или отшельник). В Соединенном Королевстве термин коттедж также имеет тенденцию обозначать сельские жилища традиционной постройки, хотя он также может применяться к жилищам современной постройки, которые спроектированы так, чтобы напоминать традиционные («имитирующие коттеджи»).</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_CRASHED_PROBE</Tag>
-		<English>Crashed Probe</English>
-		<French>
-			<Text>Sonde Spatiale Crashée</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>Relitto di sonda spaziale</Italian>
-		<Spanish>
-			<Text>Restos de sonda espacial</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Zniszczona Sonda</Polish>
-		<Russian>Ðàçáèòûé çîíä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_CRASHED_PROBE_PEDIA</Tag>
-		<English>Crashed Probes are Goody Huts for space.</English>
-		<French>Le Sondes spatiales crashées sont des sources de bonus dans l'Espace.</French>
-		<Italian>I relitti di sonde spaziali sostituiscono i villaggi tribali nello spazio.</Italian>
-		<Spanish>Los Restos de sonda espacial son las Aldeas tribales del espacio.</Spanish>
-		<Polish>Zniszczona Sonda</Polish>
-		<Russian>Разбитые зонды - игровой аналог туземных деревень для космоса.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CULTURE_RANGE</Tag>
 		<English>[ICON_BULLET]Influences plots within a distance of %d1_Num</English>
 		<French>[ICON_BULLET]Influences des parcelles dans un rayon de %d1_Num</French>
