@@ -20,7 +20,7 @@ GC = CyGlobalContext()
 GAME = GC.getGame()
 TRNSLTR = CyTranslator()
 
-#RevOpt = BugCore.game.Revolution
+RevOpt = BugCore.game.Revolution
 
 g_DynamicCivNames = None
 
