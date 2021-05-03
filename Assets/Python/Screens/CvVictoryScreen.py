@@ -75,8 +75,8 @@ class CvVictoryScreen:
 		screen.setLabel("VS_Header", "", szfontEdge + TRNSLTR.getText("TXT_WORD_GAME",()), 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 1, 2)
 		screen.setText("VS_Btn_Exit", "", szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
-		self.COLOR_GREEN = GC.getInfoTypeForString("COLOR_GREEN")
-		self.COLOR_YELLOW = iCol = GC.getInfoTypeForString("COLOR_YELLOW")
+		self.COLOR_GREEN = GC.getCOLOR_GREEN()
+		self.COLOR_YELLOW = iCol = GC.getCOLOR_YELLOW()
 		szTxt = szfontEdge + TRNSLTR.getText("TXT_KEY_MAIN_MENU_VICTORIES", ())
 		szTxtCol = TRNSLTR.changeTextColor(szTxt, iCol)
 		dX = xRes / 4

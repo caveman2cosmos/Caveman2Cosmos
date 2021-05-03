@@ -218,7 +218,7 @@ class CvReligionScreen:
 			szName = self.getReligionTextName(iRel)
 			szLabel = GC.getReligionInfo(iRel).getDescription()
 #			if (self.iReligionSelected == iRel):
-#				szLabel = localText.changeTextColor(szLabel, GC.getInfoTypeForString("COLOR_YELLOW"))
+#				szLabel = localText.changeTextColor(szLabel, GC.getCOLOR_YELLOW())
 			screen.setLabelAt(szName, szArea, szLabel, 1<<2, self.X_SCROLLABLE_RELIGION_AREA + xLoop, self.Y_RELIGION_NAME, self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			xLoop += self.DX_RELIGION
 
@@ -228,7 +228,7 @@ class CvReligionScreen:
 		szName = self.getReligionTextName(self.NUM_RELIGIONS)
 		szLabel = localText.getText("TXT_KEY_RELIGION_SCREEN_NO_STATE", ())
 #		if (self.iReligionSelected == self.NUM_RELIGIONS):
-#			szLabel = localText.changeTextColor(szLabel, GC.getInfoTypeForString("COLOR_YELLOW"))
+#			szLabel = localText.changeTextColor(szLabel, GC.getCOLOR_YELLOW())
 		screen.setLabelAt(szName, szArea, szLabel, 1<<2,  self.X_SCROLLABLE_RELIGION_AREA + xLoop, self.Y_RELIGION_NAME, self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 
@@ -375,12 +375,12 @@ class CvReligionScreen:
 		self.objectUnderConstruction = self.hammerIcon
 
 		# add the colors dependant on the statuses
-		self.objectHave = localText.changeTextColor (self.objectIsPresent, GC.getInfoTypeForString("COLOR_GREEN")) #"x"
-		self.objectNotPossible = localText.changeTextColor (self.objectIsNotPresent, GC.getInfoTypeForString("COLOR_RED")) #"-"
-		self.objectPossible = localText.changeTextColor (self.objectCanBeBuild, GC.getInfoTypeForString("COLOR_BLUE")) #"o"
-		self.objectHaveObsolete = localText.changeTextColor (self.objectIsPresent, GC.getInfoTypeForString("COLOR_WHITE")) #"x"
-		self.objectNotPossibleConcurrent = localText.changeTextColor (self.objectIsNotPresent, GC.getInfoTypeForString("COLOR_YELLOW")) #"-"
-		self.objectPossibleConcurrent = localText.changeTextColor (self.objectCanBeBuild, GC.getInfoTypeForString("COLOR_YELLOW")) #"o"
+		self.objectHave = localText.changeTextColor (self.objectIsPresent, GC.getCOLOR_GREEN()) #"x"
+		self.objectNotPossible = localText.changeTextColor (self.objectIsNotPresent, GC.getCOLOR_RED()) #"-"
+		self.objectPossible = localText.changeTextColor (self.objectCanBeBuild, GC.getCOLOR_BLUE()) #"o"
+		self.objectHaveObsolete = localText.changeTextColor (self.objectIsPresent, GC.getCOLOR_WHITE()) #"x"
+		self.objectNotPossibleConcurrent = localText.changeTextColor (self.objectIsNotPresent, GC.getCOLOR_YELLOW()) #"-"
+		self.objectPossibleConcurrent = localText.changeTextColor (self.objectCanBeBuild, GC.getCOLOR_YELLOW()) #"o"
 
 		self.szCities = localText.getText("TXT_KEY_BUG_RELIGIOUS_CITY", ())
 		self.szTemples = localText.getText("TXT_KEY_BUG_RELIGIOUS_TEMPLE", ())
