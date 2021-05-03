@@ -12894,34 +12894,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<WorldSoundscapeAudioScript>ASSS_FOREST_SELECT_AMB</WorldSoundscapeAudioScript>
-		</ImprovementInfo>
-		<!-- Indigenous People (Barb Diplomacy placeholder? Inquire with DH, not currently used afaik) -->
-		<ImprovementInfo>
-			<Type>IMPROVEMENT_INDIGENOUS_COMMUNITY</Type>
-			<Description>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_INDIGENOUS_COMMUNITY</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>-1</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>-1</iYieldChange>
-			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
-			<bRequiresFeature>1</bRequiresFeature>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iPillageGold>50</iPillageGold>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_EDUCATION</PrereqTech>
-					<TechYields>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-						<iYield>4</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
-			<bGraphicalOnly>1</bGraphicalOnly>
-		</ImprovementInfo>
+		</ImprovementInfo>		
 		<!-- City -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CITY</Type>
