@@ -12894,7 +12894,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<WorldSoundscapeAudioScript>ASSS_FOREST_SELECT_AMB</WorldSoundscapeAudioScript>
-		</ImprovementInfo>		
+		</ImprovementInfo>
 		<!-- City -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CITY</Type>
