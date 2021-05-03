@@ -4,13 +4,12 @@
 # Version 1.5
 
 from CvPythonExtensions import *
-
 import RevData
 from RevCivicsUtils import *
 from RevTraitsUtils import *
 from RevBuildingsUtils import *
-
 import BugCore
+import DynamicCivNames
 
 # globals
 GC = CyGlobalContext()

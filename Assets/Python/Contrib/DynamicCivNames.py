@@ -1,8 +1,7 @@
 from CvPythonExtensions import *
 from BugEventManager import g_eventManager as EM
-import BugCore.game.RevDCM as REV_OPTIONS
+from BugCore.game.RevDCM import isDYNAMIC_CIV_NAMES
 import CvUtil
-import Popup as PyPopup
 import RevDefs
 import SdToolKit as SDTK
 import RevUtils
@@ -13,44 +12,42 @@ TRNSLTR = CyTranslator()
 
 bEnabled = False
 
-femaleLeaders = (
-	GC.getInfoTypeForString("LEADER_BOUDICA"),
-	GC.getInfoTypeForString("LEADER_ELIZABETH"),
-	GC.getInfoTypeForString("LEADER_HATSHEPSUT"),
-	GC.getInfoTypeForString("LEADER_VICTORIA"),
-	GC.getInfoTypeForString("LEADER_ATOTOZTLI"),
-	GC.getInfoTypeForString("LEADER_CLEOPATRA"),
-	GC.getInfoTypeForString("LEADER_DIDO"),
-	GC.getInfoTypeForString("LEADER_JOANOFARC"),
-	GC.getInfoTypeForString("LEADER_NEFERTITI"),
-	GC.getInfoTypeForString("LEADER_THEODORA"),
-	GC.getInfoTypeForString("LEADER_WU")
-)
-
 
 def isEnabled():
-	return REV_OPTIONS.isDYNAMIC_CIV_NAMES()
+	return isDYNAMIC_CIV_NAMES()
 
 
 def init():
-	global bEnabled
+	global bEnabled, femaleLeaders
 	if bEnabled:
 		return
 	EM.addEventHandler("BeginPlayerTurn", onBeginPlayerTurn)
 	EM.addEventHandler("setPlayerAlive", onSetPlayerAlive)
-	EM.addEventHandler("kbdEvent", onKbdEvent)
 	EM.addEventHandler("cityAcquired", onCityAcquired)
 	EM.addEventHandler("cityBuilt", onCityBuilt)
 	EM.addEventHandler("vassalState", onVassalState)
 	EM.addEventHandler("addTeam", onAddTeam)
 
-	#RevOpt = BugCore.game.Revolution
-	#bTeamNaming = RevOpt.isTeamNaming()
-	#bLeaveHumanName = RevOpt.isLeaveHumanPlayerName()
+	femaleLeaders = (
+		GC.getInfoTypeForString("LEADER_BOUDICA"),
+		GC.getInfoTypeForString("LEADER_ELIZABETH"),
+		GC.getInfoTypeForString("LEADER_HATSHEPSUT"),
+		GC.getInfoTypeForString("LEADER_VICTORIA"),
+		GC.getInfoTypeForString("LEADER_ATOTOZTLI"),
+		GC.getInfoTypeForString("LEADER_CLEOPATRA"),
+		GC.getInfoTypeForString("LEADER_DIDO"),
+		GC.getInfoTypeForString("LEADER_JOANOFARC"),
+		GC.getInfoTypeForString("LEADER_NEFERTITI"),
+		GC.getInfoTypeForString("LEADER_THEODORA"),
+		GC.getInfoTypeForString("LEADER_WU")
+	)
+
+	#bTeamNaming = REV_OPTIONS.isTeamNaming()
+	#bLeaveHumanName = REV_OPTIONS.isLeaveHumanPlayerName()
 
 	if not GAME.isFinalInitialized or GAME.getGameTurn() == GAME.getStartTurn():
-		for idx in xrange(GC.getMAX_PC_PLAYERS()):
-			self.onSetPlayerAlive([idx, GC.getPlayer(idx).isAlive()])
+		for i in xrange(GC.getMAX_PC_PLAYERS()):
+			onSetPlayerAlive([i, GC.getPlayer(i).isAlive()])
 
 	bEnabled = True
 
@@ -61,11 +58,13 @@ def uninit():
 		return
 	EM.removeEventHandler("BeginPlayerTurn", onBeginPlayerTurn)
 	EM.removeEventHandler("setPlayerAlive", onSetPlayerAlive)
-	EM.removeEventHandler("kbdEvent", onKbdEvent)
 	EM.removeEventHandler("cityAcquired", onCityAcquired)
 	EM.removeEventHandler("cityBuilt", onCityBuilt)
 	EM.removeEventHandler("vassalState", onVassalState)
 	EM.removeEventHandler("addTeam", onAddTeam)
+
+	for i in range(GC.getMAX_PC_PLAYERS()):
+		resetName(i)
 
 	bEnabled = False
 
@@ -73,18 +72,6 @@ def uninit():
 def blankHandler(playerID, netUserData, popupReturn):
 	""" Dummy handler to take the second event for popup """
 	return
-
-def onKbdEvent(argsList):
-	'keypress handler'
-	#eventType, key, mx, my, px, py = argsList
-	eventType = argsList[0]; key = argsList[1]
-
-	if eventType == RevDefs.EventKeyDown:
-		theKey = int(key)
-
-		# For debug or trial only
-		if theKey == int(InputTypes.KB_U) and self.customEM.bShift and self.customEM.bCtrl:
-			self.showNewNames()
 
 
 def onBeginPlayerTurn(argsList):
@@ -104,7 +91,7 @@ def onBeginPlayerTurn(argsList):
 		pPlayer = GC.getPlayer(iPlayer)
 
 		if pPlayer.isAnarchy():
-			self.setNewNameByCivics(iPlayer)
+			setNewNameByCivics(iPlayer)
 			return
 
 		if pPlayer.isAlive() and SDTK.sdObjectExists("Revolution", pPlayer):
@@ -112,20 +99,20 @@ def onBeginPlayerTurn(argsList):
 			if not prevCivics == None:
 				for i in xrange(GC.getNumCivicOptionInfos()):
 					if not prevCivics[i] == pPlayer.getCivics(i):
-						self.setNewNameByCivics(iPlayer)
+						setNewNameByCivics(iPlayer)
 						return
 
 			revTurn = SDTK.sdObjectGetVal( "Revolution", pPlayer, 'RevolutionTurn' )
 			if revTurn is not None and GAME.getGameTurn() - revTurn == 30 and pPlayer.getNumCities() > 0:
 				# "Graduate" from rebel name
-				self.setNewNameByCivics(iPlayer)
+				setNewNameByCivics(iPlayer)
 				return
 
 		if pPlayer.isAlive() and SDTK.sdObjectExists("BarbarianCiv", pPlayer):
 			barbTurn = SDTK.sdObjectGetVal("BarbarianCiv", pPlayer, 'SpawnTurn')
 			if barbTurn is not None and GAME.getGameTurn() - barbTurn == 30:
 				# "Graduate" from barb civ name
-				self.setNewNameByCivics(iPlayer)
+				setNewNameByCivics(iPlayer)
 				return
 
 		if (pPlayer.isAlive()
@@ -134,31 +121,34 @@ def onBeginPlayerTurn(argsList):
 		and (pPlayer.getCurrentEra() > 0 or pPlayer.getTotalPopulation() >= 3)
 		):
 			# Graduate from game start name
-			self.setNewNameByCivics(iPlayer)
+			setNewNameByCivics(iPlayer)
 			return
+
 
 def onCityAcquired(argsList):
 	city = argsList[2]
 	owner = GC.getPlayer(city.getOwner())
 	if owner.isAlive() and not owner.isNPC() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
-		self.setNewNameByCivics(owner.getID())
+		setNewNameByCivics(owner.getID())
+
 
 def onCityBuilt(argsList):
 	owner = GC.getPlayer(argsList[0].getOwner())
 	if owner.isAlive() and not owner.isNPC() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
-		self.setNewNameByCivics(owner.getID())
+		setNewNameByCivics(owner.getID())
+
 
 def onVassalState(argsList):
 	iVassal = argsList[1]
 	for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
 		if GC.getPlayer(iPlayer).getTeam() == iVassal:
-			self.setNewNameByCivics(iPlayer)
+			setNewNameByCivics(iPlayer)
 
 
 def setNewNameByCivics(iPlayer):
-	#if self.bLeaveHumanName and (GC.getPlayer(iPlayer).isHuman() or GAME.getActivePlayer() == iPlayer):
+	#if bLeaveHumanName and (GC.getPlayer(iPlayer).isHuman() or GAME.getActivePlayer() == iPlayer):
 	#	return
-	[newCivDesc, newCivShort, newCivAdj] = self.newNameByCivics(iPlayer)
+	[newCivDesc, newCivShort, newCivAdj] = newNameByCivics(iPlayer)
 
 	if not newCivDesc == GC.getPlayer(iPlayer).getCivilizationDescription(0):
 		szMessage = TRNSLTR.getText("TXT_KEY_MOD_DCN_NEWCIV_NAME_DESC", (newCivDesc,))
@@ -172,9 +162,9 @@ def onSetPlayerAlive(argsList):
 	bNewValue = argsList[1]
 	if bNewValue and iPlayerID < GC.getMAX_PC_PLAYERS():
 		pPlayer = GC.getPlayer(iPlayerID)
-		#if self.bLeaveHumanName and (pPlayer.isHuman() or GAME.getActivePlayer() == iPlayerID):
+		#if bLeaveHumanName and (pPlayer.isHuman() or GAME.getActivePlayer() == iPlayerID):
 		#	return
-		[newCivDesc, newCivShort, newCivAdj] = self.nameForNewPlayer( iPlayerID )
+		[newCivDesc, newCivShort, newCivAdj] = nameForNewPlayer(iPlayerID)
 
 		# Pass to pPlayer seems to require a conversion to 'ascii'
 		pPlayer.setCivName(newCivDesc, newCivShort, newCivAdj)
@@ -186,22 +176,7 @@ def onAddTeam(argsList):
 	for i in xrange(GC.getMAX_PC_PLAYERS()):
 		pPlayer = GC.getPlayer(i)
 		if pPlayer.isAlive() and pPlayer.getTeam() in (eTeam1, eTeam2):
-			self.setNewNameByCivics(i)
-
-
-def showNewNames(self):
-	bodStr = 'New names for all civs:\n\n'
-
-	for i in xrange(GC.getMAX_PC_PLAYERS()):
-		pPlayer = GC.getPlayer(i)
-		if pPlayer.isAlive():
-			curDesc = pPlayer.getCivilizationDescription(0)
-			[newName,newShort,newAdj] = self.newNameByCivics(i)
-			bodStr += curDesc + '\t-> ' + newName + '\n'
-
-	popup = PyPopup.PyPopup()
-	popup.setBodyString(bodStr)
-	popup.launch()
+			setNewNameByCivics(i)
 
 
 def nameForNewPlayer(iPlayer):
@@ -304,7 +279,7 @@ def nameForNewPlayer(iPlayer):
 		# Name civs at beginning of game
 		return [TRNSLTR.getText("TXT_KEY_MOD_DCN_TRIBE", ())%(curAdj), curShort, curAdj]
 
-	return self.newNameByCivics(iPlayer)
+	return newNameByCivics(iPlayer)
 
 
 def newNameByCivics(iPlayer, bVerbose = True, bForceUpdate = False):
@@ -348,42 +323,42 @@ def newNameByCivics(iPlayer, bVerbose = True, bForceUpdate = False):
 	if SDTK.sdObjectExists("Revolution", pPlayer):
 		SDTK.sdObjectGetVal("Revolution", pPlayer, 'RevolutionTurn')
 
-	if( SDTK.sdObjectExists( "BarbarianCiv", pPlayer ) ):
-		barbTurn = SDTK.sdObjectGetVal( "BarbarianCiv", pPlayer, 'SpawnTurn' )
+	if SDTK.sdObjectExists("BarbarianCiv", pPlayer):
+		barbTurn = SDTK.sdObjectGetVal("BarbarianCiv", pPlayer, 'SpawnTurn')
 	else:
 		barbTurn = None
 
-	if( not pPlayer.isAlive() ):
+	if not pPlayer.isAlive():
 		newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_REFUGEES", ())%(curAdj)
 		return [newName, curShort, curAdj]
 
 	if pPlayer.isRebel():
 		# Maintain name of rebels from Revolution Mod
 		if bForceUpdate:
-			return self.nameForNewPlayer(iPlayer)
+			return nameForNewPlayer(iPlayer)
 		else:
 			return [curDesc, curShort, curAdj]
-	elif( pPlayer.isMinorCiv() and not barbTurn == None ):
+	elif pPlayer.isMinorCiv() and barbTurn is not None:
 		# Maintain minor civ name
 		if bForceUpdate:
-			return self.nameForNewPlayer(iPlayer)
+			return nameForNewPlayer(iPlayer)
 		else:
 			return [curDesc, curShort, curAdj]
-	elif( not barbTurn == None and GAME.getGameTurn() - barbTurn < 20 and pPlayer.getNumCities() < 4 ):
+	elif barbTurn is not None and GAME.getGameTurn() - barbTurn < 20 and pPlayer.getNumCities() < 4:
 		# Maintain name of BarbarianCiv created player
 		if bForceUpdate:
-			return self.nameForNewPlayer(iPlayer)
+			return nameForNewPlayer(iPlayer)
 		else:
 			return [curDesc, curShort, curAdj]
 
 	# Special options for teams and permanent alliances
-	#if self.bTeamNaming and pTeam.getNumMembers() > 1: # and pTeam.getPermanentAllianceTradingCount() > 0:
+	#if bTeamNaming and pTeam.getNumMembers() > 1: # and pTeam.getPermanentAllianceTradingCount() > 0:
 	if pTeam.getNumMembers() > 1: # and pTeam.getPermanentAllianceTradingCount() > 0:
 		if pTeam.getNumMembers() == 2:
 			iLeader = pTeam.getLeaderID()
 			newName = GC.getPlayer(iLeader).getCivilizationAdjective(0) + "-"
 			for idx in xrange(GC.getMAX_PC_PLAYERS()):
-				if( not idx == iLeader and GC.getPlayer(idx).getTeam() == pTeam.getID() ):
+				if idx != iLeader and GC.getPlayer(idx).getTeam() == pTeam.getID():
 					newName += GC.getPlayer(idx).getCivilizationAdjective(0)
 					break
 			newName += TRNSLTR.getText("TXT_KEY_MOD_DCN_ALLIANCE", ())
@@ -596,7 +571,8 @@ def newNameByCivics(iPlayer, bVerbose = True, bForceUpdate = False):
 
 	return [newName, curShort, curAdj]
 
-def resetName(iPlayer, bVerbose = True):
+
+def resetName(iPlayer):
 	pPlayer = GC.getPlayer(iPlayer)
 	civInfo = GC.getCivilizationInfo(pPlayer.getCivilizationType())
 	origAdj = civInfo.getAdjective(0)

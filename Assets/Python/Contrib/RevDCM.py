@@ -17,7 +17,6 @@
 from CvPythonExtensions import *
 import BugOptions
 import BugCore
-import DynamicCivNames
 
 GC = CyGlobalContext()
 RevDCMOpt = BugCore.game.RevDCM
@@ -97,12 +96,12 @@ def changedHiddenAttitude(option, value):
 	GC.setDefineINT("SHOW_HIDDEN_ATTITUDE", RevDCMOpt.isHiddenAttitude())
 
 def changedDYNAMIC_CIV_NAMES(option, value):
+	import DynamicCivNames
 	assert(RevDCMOpt.isDYNAMIC_CIV_NAMES() == value)
 	if value:
-		init()
+		DynamicCivNames.init()
 	else:
-		uninit()
-
+		DynamicCivNames.uninit()
 
 def setXMLOptionsfromIniFile():
 	print "Reinitialising RevDCM SDK variables"
