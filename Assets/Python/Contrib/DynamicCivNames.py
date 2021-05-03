@@ -13,8 +13,6 @@ import Popup as PyPopup
 import RevDefs
 import SdToolKit as SDTK
 import RevUtils
-import LeaderCivNames
-#import BugCore
 
 GC = CyGlobalContext()
 GAME = GC.getGame()
@@ -42,8 +40,6 @@ class DynamicCivNames:
 		self.customEM.addEventHandler('cityBuilt', self.onCityBuilt)
 		self.customEM.addEventHandler("vassalState", self.onVassalState)
 		self.customEM.addEventHandler("addTeam", self.onAddTeam)
-
-		LeaderCivNames.setup()
 
 		if not GAME.isFinalInitialized or GAME.getGameTurn() == GAME.getStartTurn():
 			for idx in xrange(GC.getMAX_PC_PLAYERS()):
@@ -141,13 +137,11 @@ class DynamicCivNames:
 	def onCityAcquired(self, argsList):
 		city = argsList[2]
 		owner = GC.getPlayer(city.getOwner())
-
 		if owner.isAlive() and not owner.isNPC() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
 			self.setNewNameByCivics(owner.getID())
 
 	def onCityBuilt(self, argsList):
 		owner = GC.getPlayer(argsList[0].getOwner())
-
 		if owner.isAlive() and not owner.isNPC() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
 			self.setNewNameByCivics(owner.getID())
 
@@ -159,11 +153,8 @@ class DynamicCivNames:
 
 
 	def setNewNameByCivics(self, iPlayer):
-		'''
-		if self.bLeaveHumanName and (GC.getPlayer(iPlayer).isHuman() or GAME.getActivePlayer() == iPlayer):
-			CvUtil.pyPrint("	Name - Leaving name for human player")
-			return
-		'''
+		#if self.bLeaveHumanName and (GC.getPlayer(iPlayer).isHuman() or GAME.getActivePlayer() == iPlayer):
+		#	return
 		[newCivDesc, newCivShort, newCivAdj] = self.newNameByCivics(iPlayer)
 
 		if not newCivDesc == GC.getPlayer(iPlayer).getCivilizationDescription(0):
@@ -178,12 +169,8 @@ class DynamicCivNames:
 		bNewValue = argsList[1]
 		if bNewValue and iPlayerID < GC.getMAX_PC_PLAYERS():
 			pPlayer = GC.getPlayer(iPlayerID)
-
-			'''
-			if self.bLeaveHumanName and (pPlayer.isHuman() or GAME.getActivePlayer() == iPlayerID):
-				CvUtil.pyPrint("	Name - Leaving name for human player")
-				return
-			'''
+			#if self.bLeaveHumanName and (pPlayer.isHuman() or GAME.getActivePlayer() == iPlayerID):
+			#	return
 			[newCivDesc, newCivShort, newCivAdj] = self.nameForNewPlayer( iPlayerID )
 
 			# Pass to pPlayer seems to require a conversion to 'ascii'
@@ -218,15 +205,9 @@ class DynamicCivNames:
 		# Assigns a new name to a recently created player from either
 		# BarbarianCiv or Revolution components
 		pPlayer = GC.getPlayer(iPlayer)
-
-		if (not GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV)
-		and pPlayer.getLeaderType() in LeaderCivNames.LeaderCivNames.keys()
-		):
-			curDesc, curShort, curAdj = LeaderCivNames.LeaderCivNames[pPlayer.getLeaderType()]
-		else:
-			curShort = pPlayer.getCivilizationShortDescription(0)
-			curDesc = pPlayer.getCivilizationDescription(0)
-			curAdj = pPlayer.getCivilizationAdjective(0)
+		curShort = pPlayer.getCivilizationShortDescription(0)
+		curDesc = pPlayer.getCivilizationDescription(0)
+		curAdj = pPlayer.getCivilizationAdjective(0)
 
 		if not pPlayer.isAlive():
 			return [TRNSLTR.getText("TXT_KEY_MOD_DCN_REFUGEES", ())%(curAdj), curShort, curAdj]
@@ -238,7 +219,6 @@ class DynamicCivNames:
 
 		if pPlayer.isRebel():
 			# To name rebels in Revolution mod
-
 			sLiberation = TRNSLTR.getText("TXT_KEY_MOD_DCN_LIBERATION_FRONT", ()).replace('%s','').strip()
 			sGuerillas = TRNSLTR.getText("TXT_KEY_MOD_DCN_GUERILLAS", ()).replace('%s','').strip()
 			sRebels = TRNSLTR.getText("TXT_KEY_MOD_DCN_REBELS", ()).replace('%s','').strip()
@@ -266,7 +246,6 @@ class DynamicCivNames:
 					newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_REBELS", ())%(curAdj)
 
 			return [newName, curShort, curAdj]
-
 
 		if SDTK.sdObjectExists("BarbarianCiv", pPlayer):
 			barbTurn = SDTK.sdObjectGetVal("BarbarianCiv", pPlayer, 'SpawnTurn')
@@ -318,7 +297,6 @@ class DynamicCivNames:
 
 			return [newName, curShort, curAdj]
 
-
 		if GAME.getGameTurn() == GAME.getStartTurn() and GAME.getCurrentEra() < 1:
 			# Name civs at beginning of game
 			return [TRNSLTR.getText("TXT_KEY_MOD_DCN_TRIBE", ())%(curAdj), curShort, curAdj]
@@ -328,7 +306,6 @@ class DynamicCivNames:
 
 	def newNameByCivics(self, iPlayer, bVerbose = True, bForceUpdate = False):
 		# Assigns a new name to a player based on their civics choices
-
 		pPlayer = GC.getPlayer(iPlayer)
 		capital = pPlayer.getCapitalCity()
 		pTeam = GC.getTeam(pPlayer.getTeam())
@@ -364,10 +341,6 @@ class DynamicCivNames:
 
 		bPacifist = (pPlayer.getCivics(GC.getInfoTypeForString("CIVICOPTION_MILITARY")) == GC.getInfoTypeForString("CIVIC_PACIFISM"))
 
-		if( not GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV) ):
-			if( pPlayer.getLeaderType() in LeaderCivNames.LeaderCivNames.keys() ):
-				[curDesc, curShort, curAdj] = LeaderCivNames.LeaderCivNames[pPlayer.getLeaderType()]
-
 		newName = curDesc
 		if SDTK.sdObjectExists("Revolution", pPlayer):
 			SDTK.sdObjectGetVal("Revolution", pPlayer, 'RevolutionTurn')
@@ -402,9 +375,7 @@ class DynamicCivNames:
 
 
 		# Special options for teams and permanent alliances
-		'''
-		if self.bTeamNaming and pTeam.getNumMembers() > 1: # and pTeam.getPermanentAllianceTradingCount() > 0:
-		'''
+		#if self.bTeamNaming and pTeam.getNumMembers() > 1: # and pTeam.getPermanentAllianceTradingCount() > 0:
 		if pTeam.getNumMembers() > 1: # and pTeam.getPermanentAllianceTradingCount() > 0:
 			if pTeam.getNumMembers() == 2:
 				iLeader = pTeam.getLeaderID()
@@ -625,20 +596,9 @@ class DynamicCivNames:
 
 	def resetName(self, iPlayer, bVerbose = True):
 		pPlayer = GC.getPlayer(iPlayer)
-		'''
-		if (not GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV)
-		and (not self.bLeaveHumanName or not pPlayer.isHuman() and GAME.getActivePlayer() != iPlayer)
-		and pPlayer.getLeaderType() in LeaderCivNames.LeaderCivNames.keys()
-		):
-		'''
-		if (not GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV) 
-		and pPlayer.getLeaderType() in LeaderCivNames.LeaderCivNames.keys()
-		):
-			origDesc, origShort, origAdj = LeaderCivNames.LeaderCivNames[pPlayer.getLeaderType()]
-		else:
-			civInfo = GC.getCivilizationInfo(pPlayer.getCivilizationType())
-			origAdj = civInfo.getAdjective(0)
-			origDesc = civInfo.getDescription()
-			origShort = civInfo.getShortDescription(0)
+		civInfo = GC.getCivilizationInfo(pPlayer.getCivilizationType())
+		origAdj = civInfo.getAdjective(0)
+		origDesc = civInfo.getDescription()
+		origShort = civInfo.getShortDescription(0)
 
-		GC.getPlayer(iPlayer).setCivName(origDesc, origShort, origAdj)
+		pPlayer.setCivName(origDesc, origShort, origAdj)
