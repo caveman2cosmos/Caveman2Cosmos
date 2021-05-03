@@ -17,6 +17,7 @@
 from CvPythonExtensions import *
 import BugOptions
 import BugCore
+import DynamicCivNames
 # Globals
 GC = CyGlobalContext()
 RevDCMOpt = BugCore.game.RevDCM
@@ -95,10 +96,6 @@ def changedLIMITED_RELIGIONS_EXCEPTIONS (option, value):
 def changedHiddenAttitude(option, value):
 	GC.setDefineINT("SHOW_HIDDEN_ATTITUDE", RevDCMOpt.isHiddenAttitude())
 
-#Dynamic Civ Names
-def changedDYNAMIC_CIV_NAMES(option, value):
-	GC.setDefineINT("DYNAMIC_CIV_NAMES", RevDCMOpt.isDYNAMIC_CIV_NAMES())
-
 
 def setXMLOptionsfromIniFile():
 	print "Reinitialising RevDCM SDK variables"
@@ -124,8 +121,6 @@ def setXMLOptionsfromIniFile():
 	GC.setDefineINT("LIMITED_RELIGIONS_EXCEPTIONS", 0)
 	#Hidden Attitude
 	GC.setDefineINT("SHOW_HIDDEN_ATTITUDE", RevDCMOpt.isHiddenAttitude())
-	#Dynamic Civ Names
-	GC.setDefineINT("DYNAMIC_CIV_NAMES", RevDCMOpt.isDYNAMIC_CIV_NAMES())
 
 def resetOptions():
 	revDCMoptions = BugOptions.getOptions("RevDCM").options
@@ -138,5 +133,6 @@ def resetOptions():
 	for i in range(len(ActionOptions)):
 		ActionOptions[i].resetValue()
 
+	DynamicCivNames.reset(None, RevDCMOpt.isDYNAMIC_CIV_NAMES())
 	setXMLOptionsfromIniFile()
 	RevDCMOpt.setReset(False)

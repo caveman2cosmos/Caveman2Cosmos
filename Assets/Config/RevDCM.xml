@@ -15,7 +15,7 @@
 				<change module="RevDCM" function="changedHiddenAttitude"/>
 			</option>
 			<option id="DYNAMIC_CIV_NAMES" key="DYNAMIC_CIV_NAMES" type="boolean" default="True" get="isDYNAMIC_CIV_NAMES" set="setDYNAMIC_CIV_NAMES">
-				<change module="RevDCM" function="changedDYNAMIC_CIV_NAMES"/>
+				<change module="DynamicCivNames" function="reset"/>
 			</option> 
 		</section>
 		<section id="RevDCM_seige">

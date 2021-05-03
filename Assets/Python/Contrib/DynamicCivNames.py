@@ -1,15 +1,8 @@
-# DynamicCivNames
-#
-# by jdog5000
-# Version 1.0
-#
-# French compatibility from calvitix
-#
-
 from CvPythonExtensions import *
+from BugEventManager import g_eventManager as EM
+import BugCore.game.RevDCM as REV_OPTIONS
 import CvUtil
 import Popup as PyPopup
-# --------- Revolution mod -------------
 import RevDefs
 import SdToolKit as SDTK
 import RevUtils
@@ -18,29 +11,49 @@ GC = CyGlobalContext()
 GAME = GC.getGame()
 TRNSLTR = CyTranslator()
 
-RevOpt = BugCore.game.Revolution
-
 g_DynamicCivNames = None
+
+
+def reset(option, bValue):
+	global g_DynamicCivNames
+	assert(REV_OPTIONS.isDYNAMIC_CIV_NAMES() == bValue)
+	if REV_OPTIONS.isDYNAMIC_CIV_NAMES():
+		init()
+	elif g_DynamicCivNames is not None:
+		uninit()
+
+def init():
+	global g_DynamicCivNames
+	g_DynamicCivNames = DynamicCivNames()
+
+	EM.addEventHandler("BeginPlayerTurn", g_DynamicCivNames.onBeginPlayerTurn)
+	EM.addEventHandler("setPlayerAlive", g_DynamicCivNames.onSetPlayerAlive)
+	EM.addEventHandler("kbdEvent", g_DynamicCivNames.onKbdEvent)
+	EM.addEventHandler("cityAcquired", g_DynamicCivNames.onCityAcquired)
+	EM.addEventHandler("cityBuilt", g_DynamicCivNames.onCityBuilt)
+	EM.addEventHandler("vassalState", g_DynamicCivNames.onVassalState)
+	EM.addEventHandler("addTeam", g_DynamicCivNames.onAddTeam)
+
+def uninit():
+	global g_DynamicCivNames
+		
+	EM.removeEventHandler("BeginPlayerTurn", g_DynamicCivNames.onBeginPlayerTurn)
+	EM.removeEventHandler("setPlayerAlive", g_DynamicCivNames.onSetPlayerAlive)
+	EM.removeEventHandler("kbdEvent", g_DynamicCivNames.onKbdEvent)
+	EM.removeEventHandler("cityAcquired", g_DynamicCivNames.onCityAcquired)
+	EM.removeEventHandler("cityBuilt", g_DynamicCivNames.onCityBuilt)
+	EM.removeEventHandler("vassalState", g_DynamicCivNames.onVassalState)
+
+	del g_DynamicCivNames
+	g_DynamicCivNames = None
+
 
 class DynamicCivNames:
 
-	def __init__(self, customEM, RevOpt):
-		global g_DynamicCivNames
-		g_DynamicCivNames = self
-
-		self.RevOpt = RevOpt
-		self.customEM = customEM
-
-		#self.bTeamNaming = True #RevOpt.isTeamNaming()
-		#self.bLeaveHumanName = False #RevOpt.isLeaveHumanPlayerName()
-
-		self.customEM.addEventHandler("BeginPlayerTurn", self.onBeginPlayerTurn)
-		self.customEM.addEventHandler("setPlayerAlive", self.onSetPlayerAlive)
-		self.customEM.addEventHandler("kbdEvent", self.onKbdEvent)
-		self.customEM.addEventHandler("cityAcquired", self.onCityAcquired)
-		self.customEM.addEventHandler('cityBuilt', self.onCityBuilt)
-		self.customEM.addEventHandler("vassalState", self.onVassalState)
-		self.customEM.addEventHandler("addTeam", self.onAddTeam)
+	def __init__(self):
+		#RevOpt = BugCore.game.Revolution
+		#self.bTeamNaming = RevOpt.isTeamNaming()
+		#self.bLeaveHumanName = RevOpt.isLeaveHumanPlayerName()
 
 		if not GAME.isFinalInitialized or GAME.getGameTurn() == GAME.getStartTurn():
 			for idx in xrange(GC.getMAX_PC_PLAYERS()):
@@ -61,12 +74,7 @@ class DynamicCivNames:
 		)
 
 	def removeEventHandlers(self):
-		self.customEM.removeEventHandler("BeginPlayerTurn", self.onBeginPlayerTurn)
-		self.customEM.removeEventHandler("setPlayerAlive", self.onSetPlayerAlive)
-		self.customEM.removeEventHandler("kbdEvent", self.onKbdEvent)
-		self.customEM.removeEventHandler("cityAcquired", self.onCityAcquired)
-		self.customEM.removeEventHandler('cityBuilt', self.onCityBuilt)
-		self.customEM.removeEventHandler("vassalState", self.onVassalState)
+		return
 
 	def blankHandler(self, playerID, netUserData, popupReturn):
 		""" Dummy handler to take the second event for popup """
@@ -330,7 +338,7 @@ class DynamicCivNames:
 			civInfo = GC.getCivilizationInfo(pPlayer.getCivilizationType())
 			origDesc = civInfo.getDescription()
 
-		iLanguage = GC.getGame().getCurrentLanguage()
+		iLanguage = GAME.getCurrentLanguage()
 		bFrench = iLanguage == 1 #0 - English, 1 - French, 2 - German, 3 - Italian, 4 - Spanish
 
 		eGovCivic = pPlayer.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
