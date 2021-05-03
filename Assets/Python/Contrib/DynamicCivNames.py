@@ -99,7 +99,7 @@ def onBeginPlayerTurn(argsList):
 						setNewNameByCivics(iPlayer)
 						return
 
-			revTurn = SDTK.sdObjectGetVal( "Revolution", pPlayer, 'RevolutionTurn' )
+			revTurn = SDTK.sdObjectGetVal("Revolution", pPlayer, 'RevolutionTurn')
 			if revTurn is not None and GAME.getGameTurn() - revTurn == 30 and pPlayer.getNumCities() > 0:
 				# "Graduate" from rebel name
 				setNewNameByCivics(iPlayer)
@@ -228,8 +228,8 @@ def nameForNewPlayer(iPlayer):
 
 	if barbTurn is not None and GAME.getGameTurn() - barbTurn < 20:
 		# To name BarbarianCiv created civs
-		numCities = SDTK.sdObjectGetVal( "BarbarianCiv", pPlayer, 'NumCities' )
-		cityString = SDTK.sdObjectGetVal( "BarbarianCiv", pPlayer, 'CapitalName' )
+		numCities = SDTK.sdObjectGetVal("BarbarianCiv", pPlayer, 'NumCities')
+		cityString = SDTK.sdObjectGetVal("BarbarianCiv", pPlayer, 'CapitalName')
 
 		if pPlayer.isMinorCiv():
 			if currentEra > 2:
@@ -279,7 +279,7 @@ def nameForNewPlayer(iPlayer):
 	return newNameByCivics(iPlayer)
 
 
-def newNameByCivics(iPlayer, bVerbose = True, bForceUpdate = False):
+def newNameByCivics(iPlayer):
 	# Assigns a new name to a player based on their civics choices
 	pPlayer = GC.getPlayer(iPlayer)
 	capital = pPlayer.getCapitalCity()
@@ -330,23 +330,11 @@ def newNameByCivics(iPlayer, bVerbose = True, bForceUpdate = False):
 		return [newName, curShort, curAdj]
 
 	if pPlayer.isRebel():
-		# Maintain name of rebels from Revolution Mod
-		if bForceUpdate:
-			return nameForNewPlayer(iPlayer)
-		else:
-			return [curDesc, curShort, curAdj]
+		return [curDesc, curShort, curAdj]	# Maintain name of rebels from Revolution Mod
 	elif pPlayer.isMinorCiv() and barbTurn is not None:
-		# Maintain minor civ name
-		if bForceUpdate:
-			return nameForNewPlayer(iPlayer)
-		else:
-			return [curDesc, curShort, curAdj]
+		return [curDesc, curShort, curAdj]	# Maintain minor civ name
 	elif barbTurn is not None and GAME.getGameTurn() - barbTurn < 20 and pPlayer.getNumCities() < 4:
-		# Maintain name of BarbarianCiv created player
-		if bForceUpdate:
-			return nameForNewPlayer(iPlayer)
-		else:
-			return [curDesc, curShort, curAdj]
+		return [curDesc, curShort, curAdj]	# Maintain name of BarbarianCiv created player
 
 	# Special options for teams and permanent alliances
 	#if bTeamNaming and pTeam.getNumMembers() > 1: # and pTeam.getPermanentAllianceTradingCount() > 0:
@@ -392,9 +380,9 @@ def newNameByCivics(iPlayer, bVerbose = True, bForceUpdate = False):
 	# Main naming conditions
 	if RevUtils.isCommunism(iPlayer):
 		if RevUtils.isCanDoElections(iPlayer) and not bNoRealElections:
-			if not bForceUpdate and (sSocRep in curDesc or sPeoplesRep in curDesc):
+			if sSocRep in curDesc or sPeoplesRep in curDesc:
 				newName = curDesc
-			elif 50 > GAME.getSorenRandNum(100,'Rev: Naming'):
+			elif 50 > GAME.getSorenRandNum(100, 'Rev: Naming'):
 				newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_SOC_REP", ())%(curShort)
 			else:
 				newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_PEOPLES_REP", ())%(curShort)
@@ -410,7 +398,7 @@ def newNameByCivics(iPlayer, bVerbose = True, bForceUpdate = False):
 		sRepublic = TRNSLTR.getText("TXT_KEY_MOD_DCN_REPUBLIC", ())
 
 		if pPlayer.getNumCities() == 1:
-			if not bForceUpdate and (curDesc.startswith(TRNSLTR.getText("TXT_KEY_MOD_DCN_FREE", ())) or ((sRepOf in curDesc or sRepublic in curDesc) and cityString in curDesc)):
+			if (curDesc.startswith(TRNSLTR.getText("TXT_KEY_MOD_DCN_FREE", ())) or ((sRepOf in curDesc or sRepublic in curDesc) and cityString in curDesc)):
 				newName = curDesc
 
 			elif 40 > GAME.getSorenRandNum(100,'Rev: Naming'):
@@ -424,7 +412,7 @@ def newNameByCivics(iPlayer, bVerbose = True, bForceUpdate = False):
 			else:
 				newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_REPUBLIC_OF_CITY", ())%(curAdj,cityString)
 		else:
-			if (not bFederal and not bConfederation and not bForceUpdate
+			if (not bFederal and not bConfederation
 			and sRepublic in curDesc and sPeoplesRep not in curDesc and sSocRep not in curDesc
 			and curDesc.startswith(TRNSLTR.getText("TXT_KEY_MOD_DCN_FREE", ()))
 			):
@@ -465,7 +453,7 @@ def newNameByCivics(iPlayer, bVerbose = True, bForceUpdate = False):
 		else:
 			empString = TRNSLTR.getText("TXT_KEY_MOD_DCN_PLAIN_EMPIRE", ())
 
-		if not bForceUpdate and empString in curDesc:
+		if empString in curDesc:
 			newName = curDesc
 		elif 70 > GAME.getSorenRandNum(100,'Rev: Naming') and not TRNSLTR.getText("TXT_KEY_MOD_DCN_REICH", ()) in empString:
 			newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_THE_BLANK_OF", ())%(empString,curShort)
@@ -515,7 +503,7 @@ def newNameByCivics(iPlayer, bVerbose = True, bForceUpdate = False):
 					newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_GREAT_KINGDOM", ())%(curAdj,sKingdom)
 			else:
 				sOf = TRNSLTR.getText("TXT_KEY_MOD_DCN_THE_BLANK_OF", ()).replace('%s','')
-				if not bForceUpdate and sKingdom in curDesc and (not sOf in curDesc or pPlayer.getNumCities < 6) and not sGreat in curDesc:
+				if sKingdom in curDesc and (not sOf in curDesc or pPlayer.getNumCities < 6) and not sGreat in curDesc:
 					newName = curDesc
 				elif 50 <= GAME.getSorenRandNum(100,'Rev: Naming'):
 					newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_THE_BLANK_OF", ())%(sKingdom,curShort)
@@ -538,7 +526,7 @@ def newNameByCivics(iPlayer, bVerbose = True, bForceUpdate = False):
 				else:
 					empString = TRNSLTR.getText("TXT_KEY_MOD_DCN_TERRITORY", ())
 
-			if not bForceUpdate and empString in curDesc and not GAME.getGameTurn() == 0:
+			if empString in curDesc and not GAME.getGameTurn() == 0:
 				newName = curDesc
 			elif 50 <= GAME.getSorenRandNum(100,'Rev: Naming'):
 				newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_THE_BLANK_OF", ())%(empString,curShort)
