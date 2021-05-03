@@ -304,7 +304,7 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moderno Mulino a vento[\LINK] (Schiavo)</Italian>
 		<Spanish>Construye un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moderno Molino de viento[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERN_WINDMILL]WspóBczesny MByn[\LINK] (Prace Przym.)</Polish>
-		<Russian>Строить [LINK=IMPROVEMENT_MODERNWINDMILL]Современную ветряную мельницу[\LINK] (принуд.)</Russian>
+		<Russian>Строить [LINK=IMPROVEMENT_MODERN_WINDMILL]Современную ветряную мельницу[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MOUNTAIN_MINE_SLAVE</Tag>

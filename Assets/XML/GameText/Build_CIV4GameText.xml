@@ -300,7 +300,7 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_FACTORY]Fabbrica[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_FACTORY]Fábrica[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_FACTORY]Fabrykę[\LINK]</Polish>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_3FACTORY]Ôàáðèêó[\LINK]</Russian>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FACTORY]Ôàáðèêó[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FARM</Tag>
