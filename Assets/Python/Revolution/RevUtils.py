@@ -4,10 +4,10 @@
 # Version 1.5
 
 from CvPythonExtensions import *
-import RevData
 from RevCivicsUtils import *
 from RevTraitsUtils import *
 from RevBuildingsUtils import *
+import RevData
 import BugCore
 import DynamicCivNames
 
@@ -15,6 +15,7 @@ import DynamicCivNames
 GC = CyGlobalContext()
 GAME = GC.getGame()
 RevOpt = BugCore.game.Revolution
+RevDCMOpt = BugCore.game.RevDCM
 
 gameSpeedMod = None
 
@@ -703,12 +704,12 @@ def changeCiv(playerIdx, newCivType = -1, newLeaderType = -1, teamIdx = -1):
 	player = GC.getPlayer(playerIdx)
 	oldCivType = player.getCivilizationType()
 	oldLeaderType = player.getLeaderType()
-	if newCivType >= 0 and not newCivType == oldCivType:
+	if newCivType >= 0 and newCivType != oldCivType:
 		player.changeCiv(newCivType)
-		if DynamicCivNames.isEnabled():
+		if RevDCMOpt.isDYNAMIC_CIV_NAMES():
 			DynamicCivNames.resetName(playerIdx)
 			DynamicCivNames.setNewNameByCivics(playerIdx)
-	if newLeaderType >= 0 and not newLeaderType == oldLeaderType:
+	if newLeaderType >= 0 and newLeaderType != oldLeaderType:
 		player.setName("")
 		player.changeLeader(newLeaderType)
 

@@ -1,8 +1,6 @@
 from CvPythonExtensions import *
-from BugEventManager import g_eventManager as EM
-from BugCore.game.RevDCM import isDYNAMIC_CIV_NAMES
+from CvEventInterface import getEventManager
 import CvUtil
-import RevDefs
 import SdToolKit as SDTK
 import RevUtils
 
@@ -13,14 +11,11 @@ TRNSLTR = CyTranslator()
 bEnabled = False
 
 
-def isEnabled():
-	return isDYNAMIC_CIV_NAMES()
-
-
 def init():
 	global bEnabled, femaleLeaders
-	if bEnabled:
-		return
+	if bEnabled: return
+
+	EM = getEventManager()
 	EM.addEventHandler("BeginPlayerTurn", onBeginPlayerTurn)
 	EM.addEventHandler("setPlayerAlive", onSetPlayerAlive)
 	EM.addEventHandler("cityAcquired", onCityAcquired)
@@ -54,8 +49,9 @@ def init():
 
 def uninit():
 	global bEnabled
-	if not bEnabled:
-		return
+	if not bEnabled: return
+
+	EM = getEventManager()
 	EM.removeEventHandler("BeginPlayerTurn", onBeginPlayerTurn)
 	EM.removeEventHandler("setPlayerAlive", onSetPlayerAlive)
 	EM.removeEventHandler("cityAcquired", onCityAcquired)
@@ -64,7 +60,8 @@ def uninit():
 	EM.removeEventHandler("addTeam", onAddTeam)
 
 	for i in range(GC.getMAX_PC_PLAYERS()):
-		resetName(i)
+		if GC.getPlayer(i).isAlive():
+			resetName(i)
 
 	bEnabled = False
 
