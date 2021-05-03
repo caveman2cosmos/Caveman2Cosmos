@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Dan McGarry (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Turn Timer -->
+<Civ4TurnTimerInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
+	<TurnTimerInfos>
+		<TurnTimerInfo>
+			<Type>TURNTIMER_STATIC</Type>
+			<Description>TXT_KEY_TURNTIMER_STATIC</Description>
+			<iBaseTime>240</iBaseTime>
+			<iCityBonus>3</iCityBonus>
+			<iUnitBonus>1</iUnitBonus>
+			<iFirstTurnMultiplier>4</iFirstTurnMultiplier>
+		</TurnTimerInfo>
+		<TurnTimerInfo>
+			<Type>TURNTIMER_SNAIL</Type>
+			<Description>TXT_KEY_TURNTIMER_SNAIL</Description>
+			<iBaseTime>360</iBaseTime>
+			<iCityBonus>36</iCityBonus>
+			<iUnitBonus>12</iUnitBonus>
+			<iFirstTurnMultiplier>6</iFirstTurnMultiplier>
+		</TurnTimerInfo>
+		<TurnTimerInfo>
+			<Type>TURNTIMER_SLOW</Type>
+			<Description>TXT_KEY_TURNTIMER_SLOW</Description>
+			<iBaseTime>180</iBaseTime>
+			<iCityBonus>18</iCityBonus>
+			<iUnitBonus>6</iUnitBonus>
+			<iFirstTurnMultiplier>5</iFirstTurnMultiplier>
+		</TurnTimerInfo>
+		<TurnTimerInfo>
+			<Type>TURNTIMER_MEDIUM</Type>
+			<Description>TXT_KEY_TURNTIMER_MEDIUM</Description>
+			<iBaseTime>120</iBaseTime>
+			<iCityBonus>12</iCityBonus>
+			<iUnitBonus>4</iUnitBonus>
+			<iFirstTurnMultiplier>4</iFirstTurnMultiplier>
+		</TurnTimerInfo>
+		<TurnTimerInfo>
+			<Type>TURNTIMER_FAST</Type>
+			<Description>TXT_KEY_TURNTIMER_FAST</Description>
+			<iBaseTime>100</iBaseTime>
+			<iCityBonus>9</iCityBonus>
+			<iUnitBonus>3</iUnitBonus>
+			<iFirstTurnMultiplier>3</iFirstTurnMultiplier>
+		</TurnTimerInfo>
+		<TurnTimerInfo>
+			<Type>TURNTIMER_BLAZING</Type>
+			<Description>TXT_KEY_TURNTIMER_BLAZING</Description>
+			<iBaseTime>80</iBaseTime>
+			<iCityBonus>6</iCityBonus>
+			<iUnitBonus>2</iUnitBonus>
+			<iFirstTurnMultiplier>2</iFirstTurnMultiplier>
+		</TurnTimerInfo>
+	</TurnTimerInfos>
+</Civ4TurnTimerInfo>
