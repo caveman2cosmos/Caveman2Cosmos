@@ -53,6 +53,7 @@ class TechPrefs:
 				if (iFlavorValue > 0):
 					pTech.setFlavorValue(iFlavor, iFlavorValue)
 					self.lTechsByFlavor[iFlavor].append((-iFlavorValue, iTech, pTech))
+					bHasFlavor = True
 
 			# hook up prereq techs
 			for i in range(self.NUM_AND_PREREQS):

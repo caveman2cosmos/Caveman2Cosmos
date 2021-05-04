@@ -108,5 +108,7 @@ def GameFontScreen():
 					screen.setTableText(TABLE, 4, iRow, info.getType(), "", eWidGen, 1, 2, 1<<0)
 				iMax -= 1
 			i += 1
+		else: continue
+
 
 	screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)

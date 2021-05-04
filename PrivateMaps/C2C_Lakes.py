@@ -128,6 +128,7 @@ def minStartingDistanceModifier():
 
 def findStartingArea(argsList):
 	"make sure all players are on the biggest area"
+	[playerID] = argsList
 	return gc.getMap().findBiggestArea(False).getID()
 
 # Subclass to customize sea level effects.

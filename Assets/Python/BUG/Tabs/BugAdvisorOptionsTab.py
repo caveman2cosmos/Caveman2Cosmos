@@ -15,7 +15,7 @@ class BugAdvisorOptionsTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "Advisors", "Advisors")
 
 	def create(self, screen):
-		self.createTab(screen)
+		tab = self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		left, center, right = self.addThreeColumnLayout(screen, panel, panel, True)
 

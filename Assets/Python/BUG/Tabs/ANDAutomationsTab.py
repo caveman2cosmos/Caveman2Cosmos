@@ -18,7 +18,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "AutomatedSettings", "Automations")
 
 	def create(self, screen):
-		self.createTab(screen)
+		tab = self.createTab(screen)
 		panel = self.createMainPanel(screen)
 
 		#Standard Settings

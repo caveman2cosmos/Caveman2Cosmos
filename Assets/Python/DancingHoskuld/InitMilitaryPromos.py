@@ -23,10 +23,10 @@ def init():
 		GC.getInfoTypeForString('FEATURE_CORAL_REEF_LIGHTHOUSE')
 	]
 	aTreeList = [
-		GC.getFEATURE_FOREST(),
+		GC.getInfoTypeForString('FEATURE_FOREST'),
 		GC.getInfoTypeForString('FEATURE_FOREST_YOUNG'),
 		GC.getInfoTypeForString('FEATURE_FOREST_ANCIENT'),
-		GC.getFEATURE_JUNGLE(),
+		GC.getInfoTypeForString('FEATURE_JUNGLE'),
 		GC.getInfoTypeForString('FEATURE_BAMBOO')
 	]
 	giMilInstCivic = GC.getInfoTypeForString("CIVIC_MARTIAL")
@@ -65,7 +65,7 @@ def onUnitBuilt( argsList):
 				iTundra = GC.getInfoTypeForString('TERRAIN_TUNDRA')
 				iPermafrost = GC.getInfoTypeForString('TERRAIN_TUNDRA')
 				iSnow = GC.getInfoTypeForString('TERRAIN_ICE')
-				iDesert = GC.getTERRAIN_DESERT()
+				iDesert = GC.getInfoTypeForString('TERRAIN_DESERT')
 				iDunes = GC.getInfoTypeForString('TERRAIN_DUNES')
 				iSaltFlats = GC.getInfoTypeForString('TERRAIN_SALT_FLATS')
 				iBarren = GC.getInfoTypeForString('TERRAIN_BARREN')

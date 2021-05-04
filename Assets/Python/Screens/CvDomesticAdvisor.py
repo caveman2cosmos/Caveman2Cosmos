@@ -76,10 +76,10 @@ class CvDomesticAdvisor:
 
 		if self.bInitialize:
 			# Creates Dictionaries we couldn't on init.
-			iYellow	= GC.getCOLOR_YELLOW()
-			iRed	= GC.getCOLOR_RED()
-			iGreen	= GC.getCOLOR_GREEN()
-			iBlue	= GC.getCOLOR_BLUE()
+			iYellow	= GC.getInfoTypeForString("COLOR_YELLOW")
+			iRed	= GC.getInfoTypeForString("COLOR_RED")
+			iGreen	= GC.getInfoTypeForString("COLOR_GREEN")
+			iBlue	= GC.getInfoTypeForString("COLOR_BLUE")
 			iCyan	= GC.getInfoTypeForString("COLOR_CYAN")
 			self.iRed = iRed
 

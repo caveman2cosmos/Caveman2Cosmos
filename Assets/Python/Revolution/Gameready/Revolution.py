@@ -216,9 +216,9 @@ class Revolution:
 		except:
 			print "[ERROR] Could not run RebelTypes.setup()"
 
-		self.iNationalismTech = GC.getInfoTypeForString(RevDefs.sXMLNationalism)
-		self.iLiberalismTech = GC.getInfoTypeForString(RevDefs.sXMLLiberalism)
-		self.iSciMethodTech = GC.getInfoTypeForString(RevDefs.sXMLSciMethod)
+		self.iNationalismTech = CvUtil.findInfoTypeNum(GC.getTechInfo,GC.getNumTechInfos(), RevDefs.sXMLNationalism)
+		self.iLiberalismTech = CvUtil.findInfoTypeNum(GC.getTechInfo,GC.getNumTechInfos(), RevDefs.sXMLLiberalism)
+		self.iSciMethodTech = CvUtil.findInfoTypeNum(GC.getTechInfo,GC.getNumTechInfos(), RevDefs.sXMLSciMethod)
 
 		self.showLocalEffect = int(self.showLocalEffect*RevUtils.getGameSpeedMod())
 
@@ -3850,7 +3850,7 @@ class Revolution:
 					cultPlayer = None
 
 			# Don't incarnate as either of these
-			iBarbarian = GC.getInfoTypeForString(RevDefs.sXMLBarbarian)
+			iBarbarian = CvUtil.findInfoTypeNum(GC.getCivilizationInfo,GC.getNumCivilizationInfos(),RevDefs.sXMLBarbarian)
 			# Civs not currently in the game
 			availableCivs = []
 			# Civs with similar style to cultOwner, if they exist
@@ -4042,8 +4042,8 @@ class Revolution:
 #-------------------------------------------------------------------------------------------------
 
 		pTeam = GC.getTeam( pPlayer.getTeam() )
-		iAggressive = GC.getInfoTypeForString(RevDefs.sXMLAggressive)
-		iSpiritual = GC.getInfoTypeForString(RevDefs.sXMLSpiritual)
+		iAggressive = CvUtil.findInfoTypeNum(GC.getTraitInfo,GC.getNumTraitInfos(),RevDefs.sXMLAggressive)
+		iSpiritual = CvUtil.findInfoTypeNum(GC.getTraitInfo,GC.getNumTraitInfos(),RevDefs.sXMLSpiritual)
 		numRevCities = len(revData.cityList)
 
 		pRevPlayer = None
@@ -4845,8 +4845,8 @@ class Revolution:
 
 		pTeam = GC.getTeam(pPlayer.getTeam())
 
-		iAggressive = GC.getInfoTypeForString(RevDefs.sXMLAggressive)
-		iSpiritual = GC.getInfoTypeForString(RevDefs.sXMLSpiritual)
+		iAggressive = CvUtil.findInfoTypeNum(GC.getTraitInfo, GC.getNumTraitInfos(), RevDefs.sXMLAggressive)
+		iSpiritual = CvUtil.findInfoTypeNum(GC.getTraitInfo, GC.getNumTraitInfos(), RevDefs.sXMLSpiritual)
 		numRevCities = len(cityList)
 		capital = pPlayer.getCapitalCity()
 		capitalArea = capital.area().getID()
@@ -4891,7 +4891,7 @@ class Revolution:
 				# Do switch
 				newCivicOption = GC.getCivicInfo( newCivic ).getCivicOptionType()
 				pPlayer.setCivics( newCivicOption, newCivic )
-				iSpiritual = GC.getInfoTypeForString(RevDefs.sXMLSpiritual)
+				iSpiritual = CvUtil.findInfoTypeNum(GC.getTraitInfo,GC.getNumTraitInfos(),RevDefs.sXMLSpiritual)
 				pPlayer.changeRevolutionTimer(5)
 				if( not pPlayer.hasTrait(iSpiritual) ) :
 					if( pPlayer.getCurrentEra() > GC.getNumEraInfos()/2 ) :
@@ -5216,7 +5216,7 @@ class Revolution:
 							pCity.changeNumRevolts(pPlayer.getID(), -1)
 
 
-				iGoodyMap = GC.getInfoTypeForString(RevDefs.sXMLGoodyMap)
+				iGoodyMap = CvUtil.findInfoTypeNum(GC.getGoodyInfo,GC.getNumGoodyInfos(),RevDefs.sXMLGoodyMap)
 
 				if( not 'iJoinPlayer' in revData.dict.keys() ) :
 					# Grant independence
@@ -5827,7 +5827,7 @@ class Revolution:
 			pJoinTeam = GC.getTeam( joinPlayer.getTeam() )
 
 			iNumPlayerCities = pPlayer.getNumCities()
-			iGoodyMap = GC.getInfoTypeForString(RevDefs.sXMLGoodyMap)
+			iGoodyMap = CvUtil.findInfoTypeNum(GC.getGoodyInfo,GC.getNumGoodyInfos(),RevDefs.sXMLGoodyMap)
 
 			for pCity in cityList :
 				# Move units out of city
@@ -6234,8 +6234,8 @@ class Revolution:
 		if self.LOG_DEBUG:
 			CvUtil.pyPrint("  Revolt - Spawning %s revolutionaries!!!"%(pRevPlayer.getCivilizationAdjective(0)))
 
-		iGoodyMap = GC.getInfoTypeForString(RevDefs.sXMLGoodyMap)
-		iGeneral = GC.getInfoTypeForString(RevDefs.sXMLGeneral)
+		iGoodyMap = CvUtil.findInfoTypeNum(GC.getGoodyInfo, GC.getNumGoodyInfos(), RevDefs.sXMLGoodyMap)
+		iGeneral = CvUtil.findInfoTypeNum(GC.getUnitInfo, GC.getNumUnitInfos(), RevDefs.sXMLGeneral)
 		iSpy = pRevPlayer.getBestUnitType(UnitAITypes.UNITAI_SPY)
 		iSettler = pRevPlayer.getBestUnitType(UnitAITypes.UNITAI_SETTLE)
 		iScout = pRevPlayer.getBestUnitType(UnitAITypes.UNITAI_EXPLORE)

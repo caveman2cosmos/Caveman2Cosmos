@@ -15,7 +15,7 @@ class BugUnitNameOptionsTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "UnitNaming", "Unit Naming")
 
 	def create(self, screen):
-		self.createTab(screen)
+		tab = self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		column = self.addOneColumnLayout(screen, panel)
 

@@ -47,11 +47,11 @@ class CvForeignAdvisor:
 		self.aBonusTuple = [aBonusList0, aBonusList1, aBonusList2]
 		self.bDebug = bDebug = GAME.isDebugMode()
 		self.aColMap = aColMap = {
-			"WHITE"			: GC.getCOLOR_WHITE(),
-			"YELLOW"		: GC.getCOLOR_YELLOW(),
-			"RED"			: GC.getCOLOR_RED(),
-			"GREEN"			: GC.getCOLOR_GREEN(),
-			"BLUE"			: GC.getCOLOR_BLUE(),
+			"WHITE"			: GC.getInfoTypeForString("COLOR_WHITE"),
+			"YELLOW"		: GC.getInfoTypeForString("COLOR_YELLOW"),
+			"RED"			: GC.getInfoTypeForString("COLOR_RED"),
+			"GREEN"			: GC.getInfoTypeForString("COLOR_GREEN"),
+			"BLUE"			: GC.getInfoTypeForString("COLOR_BLUE"),
 			"CYAN"			: GC.getInfoTypeForString("COLOR_CYAN"),
 			"CITY_GREEN"	: GC.getInfoTypeForString("COLOR_CITY_GREEN")
 		}

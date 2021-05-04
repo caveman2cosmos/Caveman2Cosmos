@@ -2885,6 +2885,70 @@
 			<ImprovementUpgrade>IMPROVEMENT_LUNAR_MINE</ImprovementUpgrade>
 		</ImprovementInfo>
 		<ImprovementInfo>
+			<Type>IMPROVEMENT_CRASHED_PROBE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_CRASHED_PROBE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_CRASHED_PROBE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_CRASHED_PROBE</ArtDefineTag>
+			<bActsAsCity>0</bActsAsCity>
+			<bGoody>1</bGoody>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iTilesPerGoody>40</iTilesPerGoody>
+			<iGoodyRange>3</iGoodyRange>
+			<iAirBombDefense>-1</iAirBombDefense>
+			<TerrainMakesValids>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARTIAN_ICE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARTIAN_PERMAFROST</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARTIAN_DESERT</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARTIAN_DUNES</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARTIAN_BARREN</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARTIAN_PLAINS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARTIAN_ROCKY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+			</TerrainMakesValids>
+			<WorldSoundscapeAudioScript>ASSS_FOREST_SELECT_AMB</WorldSoundscapeAudioScript>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>
+		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_SMALL</Type>
 			<CreatingBuilds>
 				<CreatingBuild>BUILD_COLONY_HABITAT_SMALL</CreatingBuild>

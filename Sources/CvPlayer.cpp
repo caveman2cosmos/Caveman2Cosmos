@@ -6134,52 +6134,63 @@ bool CvPlayer::canRaze(CvCity* pCity) const
 
 void CvPlayer::raze(CvCity* pCity)
 {
+	wchar_t szBuffer[1024];
+	PlayerTypes eHighestCulturePlayer;
+	int iI, iJ;
+
 	if (!canRaze(pCity))
 	{
 		return;
 	}
+
 	FAssert(pCity->getOwner() == getID());
 
-	wchar_t szBuffer[1024];
-	{
-		const PlayerTypes eHighestCulturePlayer = pCity->findHighestCulture();
+	eHighestCulturePlayer = pCity->findHighestCulture();
 
-		if (eHighestCulturePlayer != NO_PLAYER && GET_PLAYER(eHighestCulturePlayer).getTeam() != getTeam())
+	if (eHighestCulturePlayer != NO_PLAYER)
+	{
+		if (GET_PLAYER(eHighestCulturePlayer).getTeam() != getTeam())
 		{
 			GET_PLAYER(eHighestCulturePlayer).AI_changeMemoryCount(getID(), MEMORY_RAZED_CITY, 1);
 		}
 	}
 
-	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+	for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
 		if (pCity->isHolyCity((ReligionTypes)iI))
 		{
-			for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+			for (iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 			{
-				if (GET_PLAYER((PlayerTypes)iJ).isAlive() && iJ != getID() && GET_PLAYER((PlayerTypes)iJ).getStateReligion() == (ReligionTypes)iI)
+				if (GET_PLAYER((PlayerTypes)iJ).isAlive() && iJ != getID()
+				&& GET_PLAYER((PlayerTypes)iJ).getStateReligion() == (ReligionTypes)iI)
 				{
 					GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(getID(), MEMORY_RAZED_HOLY_CITY, 1);
 				}
 			}
 		}
 	}
-	swprintf(szBuffer, gDLL->getText("TXT_KEY_MISC_DESTROYED_CITY", pCity->getNameKey()).GetCString());
-	AddDLLMessage(
-		getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYRAZE", MESSAGE_TYPE_MAJOR_EVENT,
-		ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_GREEN(), pCity->getX(), pCity->getY(), true, true
-	);
 
-	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != getID() && pCity->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
+
+		swprintf(szBuffer, gDLL->getText("TXT_KEY_MISC_DESTROYED_CITY", pCity->getNameKey()).GetCString());
+		AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYRAZE", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_GREEN(), pCity->getX(), pCity->getY(), true, true);
+	}
+
+	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	{
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != getID()
+		&& pCity->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 		{
 			swprintf(szBuffer, gDLL->getText("TXT_KEY_MISC_CITY_HAS_BEEN_RAZED_BY", pCity->getNameKey(), getCivilizationDescriptionKey()).GetCString());
 			AddDLLMessage(
-				(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYRAZED", MESSAGE_TYPE_MAJOR_EVENT,
-				ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY(), true, true
+				(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
+				szBuffer, "AS2D_CITYRAZED", MESSAGE_TYPE_MAJOR_EVENT,
+				ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(),
+				GC.getCOLOR_RED(), pCity->getX(), pCity->getY(), true, true
 			);
 		}
 	}
+
 	swprintf(szBuffer, gDLL->getText("TXT_KEY_MISC_CITY_RAZED_BY", pCity->getNameKey(), getCivilizationDescriptionKey()).GetCString());
 	GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, pCity->getX(), pCity->getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
 
@@ -6205,14 +6216,14 @@ void CvPlayer::disband(CvCity* pCity)
 
 bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvUnit* pUnit) const
 {
+	CvCity* pCity;
 	const EraTypes eEra = (EraTypes)GC.getGoodyInfo(eGoody).getEraType();
+	const EraTypes eNotEra = (EraTypes)GC.getGoodyInfo(eGoody).getNotEraType();
 
 	if (eEra != NO_ERA && eEra != getCurrentEra())
 	{
 		return false;
 	}
-	const EraTypes eNotEra = (EraTypes)GC.getGoodyInfo(eGoody).getNotEraType();
-
 	if (eNotEra != NO_ERA && eNotEra == getCurrentEra())
 	{
 		return false;
@@ -6231,9 +6242,10 @@ bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvU
 		return false;
 	}
 
-	bool bFound = false;
+	bool bFound;
 	if (GC.getGoodyInfo(eGoody).isTech())
 	{
+		bFound = false;
 		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
 			if (GC.getTechInfo((TechTypes) iI).isGoodyTech() && canResearch((TechTypes)iI))
@@ -6254,7 +6266,14 @@ bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvU
 
 	if (GC.getGoodyInfo(eGoody).getGoodyUnit() != NO_UNIT)
 	{
-		if (GC.getGoodyInfo(eGoody).isNaval() != pPlot->isWater())
+		if (GC.getGoodyInfo(eGoody).isNaval())
+		{
+			if (!pPlot->isWater())
+			{
+				return false;
+			}
+		}
+		else if (pPlot->isWater())
 		{
 			return false;
 		}
@@ -6268,12 +6287,19 @@ bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvU
 
 	if (GC.getGoodyInfo(eGoody).getBarbarianUnit() != NO_UNIT)
 	{
-		if (GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS) || pUnit == NULL)
+		if (GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
 		{
 			return false;
 		}
 
-		if (GC.getGoodyInfo(eGoody).isNaval() != pPlot->isWater())
+		if (GC.getGoodyInfo(eGoody).isNaval())
+		{
+			if (!pPlot->isWater())
+			{
+				return false;
+			}
+		}
+		else if (pPlot->isWater())
 		{
 			return false;
 		}
@@ -6281,6 +6307,15 @@ bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvU
 		if (getNumCities() == 0)
 		{
 			return false;
+		}
+		if (getNumCities() == 1)
+		{
+			pCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), NO_PLAYER, getTeam());
+
+			if (pCity != NULL && plotDistance(pPlot->getX(), pPlot->getY(), pCity->getX(), pCity->getY()) <= (8 - getNumCities()))
+			{
+				return false;
+			}
 		}
 	}
 	const int iCount = GC.getGoodyInfo(eGoody).getNumMapTypes();

@@ -77,8 +77,7 @@ class DynamicCivNames:
 
 	def onKbdEvent(self, argsList):
 		'keypress handler'
-		#eventType, key, mx, my, px, py = argsList
-		eventType = argsList[0]; key = argsList[1]
+		eventType, key, mx, my, px, py = argsList
 
 		if eventType == RevDefs.EventKeyDown:
 			theKey = int(key)
@@ -89,8 +88,7 @@ class DynamicCivNames:
 
 
 	def onBeginPlayerTurn(self, argsList):
-		#iGameTurn = argsList[0]
-		iPlayer = argsList[1]
+		iGameTurn, iPlayer = argsList
 
 		# Stuff at end of previous players turn
 		iPrevPlayer = iPlayer - 1
@@ -139,7 +137,7 @@ class DynamicCivNames:
 				return
 
 	def onCityAcquired(self, argsList):
-		city = argsList[2]
+		owner, playerType, city, bConquest, bTrade = argsList
 		owner = GC.getPlayer(city.getOwner())
 
 		if owner.isAlive() and not owner.isNPC() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
@@ -369,8 +367,10 @@ class DynamicCivNames:
 				[curDesc, curShort, curAdj] = LeaderCivNames.LeaderCivNames[pPlayer.getLeaderType()]
 
 		newName = curDesc
-		if SDTK.sdObjectExists("Revolution", pPlayer):
-			SDTK.sdObjectGetVal("Revolution", pPlayer, 'RevolutionTurn')
+		if( SDTK.sdObjectExists( "Revolution", pPlayer ) ):
+			revTurn = SDTK.sdObjectGetVal( "Revolution", pPlayer, 'RevolutionTurn' )
+		else:
+			revTurn = None
 
 		if( SDTK.sdObjectExists( "BarbarianCiv", pPlayer ) ):
 			barbTurn = SDTK.sdObjectGetVal( "BarbarianCiv", pPlayer, 'SpawnTurn' )

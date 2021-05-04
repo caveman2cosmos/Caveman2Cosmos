@@ -607,13 +607,22 @@ float CvPlot::getSymbolSize() const
 		{
 			return 1.6f;
 		}
-		return 1.2f;
+		else
+		{
+			return 1.2f;
+		}
 	}
-	if (isShowCitySymbols())
+	else
 	{
-		return 1.2f;
+		if (isShowCitySymbols())
+		{
+			return 1.2f;
+		}
+		else
+		{
+			return 0.8f;
+		}
 	}
-	return 0.8f;
 }
 
 
@@ -1062,13 +1071,13 @@ bool CvPlot::updateSymbolsInternal()
 {
 	PROFILE_FUNC();
 
-	deleteAllSymbols();
-	if (!isGraphicsVisible(ECvPlotGraphics::SYMBOLS) || !isRevealed(GC.getGame().getActiveTeam(), true))
+	if (!isGraphicsVisible(ECvPlotGraphics::SYMBOLS))
 	{
 		return false;
 	}
+	deleteAllSymbols();
 
-	if (isShowCitySymbols() || gDLL->getInterfaceIFace()->isShowYields() && !gDLL->getInterfaceIFace()->isCityScreenUp())
+	if (isRevealed(GC.getGame().getActiveTeam(), true) && (isShowCitySymbols() || (gDLL->getInterfaceIFace()->isShowYields() && !(gDLL->getInterfaceIFace()->isCityScreenUp()))))
 	{
 		int yieldAmounts[NUM_YIELD_TYPES];
 		int maxYield = 0;
@@ -1085,9 +1094,11 @@ bool CvPlot::updateSymbolsInternal()
 
 		if (maxYield)
 		{
-			const int iMaxYieldStack = GC.getMAX_YIELD_STACK();
+			int maxYieldStack = GC.getMAX_YIELD_STACK();
+
 			CvSymbol *pSymbol5x = addSymbol();
 			CvSymbol *pSymbol= addSymbol();
+
 
 			for (int iYieldType = 0; iYieldType < NUM_YIELD_TYPES; iYieldType++)
 			{
@@ -1097,12 +1108,12 @@ bool CvPlot::updateSymbolsInternal()
 				{
 					if (iYield > 29)
 					{
-						gDLL->getSymbolIFace()->setTypeYield(pSymbol5x, iYieldType, iMaxYieldStack-1);
+						gDLL->getSymbolIFace()->setTypeYield(pSymbol5x, iYieldType, maxYieldStack-1);
 						gDLL->getSymbolIFace()->setTypeYield(pSymbol, iYieldType, 4);
 					}
 					else if (iYield > 4)
 					{
-						const int iYieldBig = iYield / 5;
+						int iYieldBig = iYield / 5;
 						iYield -= 5 * iYieldBig;
 						gDLL->getSymbolIFace()->setTypeYield(pSymbol5x, iYieldType, iYieldBig + 4);
 
@@ -1112,12 +1123,12 @@ bool CvPlot::updateSymbolsInternal()
 						}
 						else
 						{
-							gDLL->getSymbolIFace()->setTypeYield(pSymbol, iYieldType, iMaxYieldStack);
+							gDLL->getSymbolIFace()->setTypeYield(pSymbol, iYieldType, maxYieldStack);
 						}
 					}
 					else
 					{
-						gDLL->getSymbolIFace()->setTypeYield(pSymbol5x, iYieldType, iMaxYieldStack);
+						gDLL->getSymbolIFace()->setTypeYield(pSymbol5x, iYieldType, maxYieldStack);
 						gDLL->getSymbolIFace()->setTypeYield(pSymbol, iYieldType, iYield);
 					}
 				}
@@ -1131,7 +1142,7 @@ bool CvPlot::updateSymbolsInternal()
 		}
 		return true;
 	}
-	return false;
+	else { return false; }
 }
 
 
@@ -1139,10 +1150,11 @@ void CvPlot::updateMinimapColor()
 {
 	PROFILE_FUNC();
 
-	if (!shouldHaveGraphics())
+	if ( !shouldHaveGraphics() )
 	{
 		return;
 	}
+
 	gDLL->getInterfaceIFace()->setMinimapColor(MINIMAPMODE_TERRITORY, getViewportX(),getViewportY(), plotMinimapColor(), STANDARD_MINIMAP_ALPHA);
 }
 
@@ -1355,101 +1367,118 @@ void CvPlot::verifyUnitValidPlot()
 
 void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 {
+	CLLNode<IDInfo>* pUnitNode;
+	CvUnit* pLoopUnit;
 	CLinkList<IDInfo> oldUnits;
+	CvWString szBuffer;
 
 	GC.getGame().changeNukesExploded(1);
 
-	foreach_(CvPlot* plotX, rect(iRange, iRange))
+	foreach_(CvPlot* pLoopPlot, rect(iRange, iRange))
 	{
-		CvCity* city = plotX->getPlotCity();
+		// if we remove roads, don't remove them on the city... XXX
 
-		if (city == NULL && !plotX->isWater() && !plotX->isImpassable()
-		&& (NO_FEATURE == plotX->getFeatureType() || !GC.getFeatureInfo(plotX->getFeatureType()).isNukeImmune())
-		&& GC.getGame().getSorenRandNum(100, "Nuke Fallout") < GC.getDefineINT("NUKE_FALLOUT_PROB"))
+		CvCity* pLoopCity = pLoopPlot->getPlotCity();
+
+		if (pLoopCity == NULL)
 		{
-			plotX->setImprovementType(NO_IMPROVEMENT);
-			plotX->setFeatureType((FeatureTypes)GC.getDefineINT("NUKE_FEATURE"));
+			if (!(pLoopPlot->isWater()) && !(pLoopPlot->isImpassable()))
+			{
+				if (NO_FEATURE == pLoopPlot->getFeatureType() || !GC.getFeatureInfo(pLoopPlot->getFeatureType()).isNukeImmune())
+				{
+					if (GC.getGame().getSorenRandNum(100, "Nuke Fallout") < GC.getDefineINT("NUKE_FALLOUT_PROB"))
+					{
+						pLoopPlot->setImprovementType(NO_IMPROVEMENT);
+						pLoopPlot->setFeatureType((FeatureTypes)(GC.getDefineINT("NUKE_FEATURE")));
+					}
+				}
+			}
 		}
+
 		oldUnits.clear();
 
-		CLLNode<IDInfo>* pUnitNode = plotX->headUnitNode();
+		pUnitNode = pLoopPlot->headUnitNode();
 
 		while (pUnitNode != NULL)
 		{
 			oldUnits.insertAtEnd(pUnitNode->m_data);
-			pUnitNode = plotX->nextUnitNode(pUnitNode);
+			pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
 		}
 
 		pUnitNode = oldUnits.head();
 
 		while (pUnitNode != NULL)
 		{
-			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+			pLoopUnit = ::getUnit(pUnitNode->m_data);
 			pUnitNode = oldUnits.next(pUnitNode);
 
-			if (pLoopUnit != NULL && pLoopUnit != pNukeUnit && !pLoopUnit->isMADEnabled() && !pLoopUnit->isNukeImmune() && !pLoopUnit->isDelayedDeath())
+			if (pLoopUnit != NULL)
 			{
-				int iNukeDamage = 
-				(
-					GC.getDefineINT("NUKE_UNIT_DAMAGE_BASE")
-					+ GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_1"), "Nuke Damage 1")
-					+ GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_2"), "Nuke Damage 2")
-				);
-				if (city != NULL)
+				// < M.A.D. Nukes Start >
+				if (pLoopUnit != pNukeUnit && !pLoopUnit->isMADEnabled())
+				//if (pLoopUnit != pNukeUnit)
+				// < M.A.D. Nukes End   >
 				{
-					iNukeDamage *= std::max(0, city->getNukeModifier() + 100);
-					iNukeDamage /= 100;
-				}
+					if (!pLoopUnit->isNukeImmune() && !pLoopUnit->isDelayedDeath())
+					{
+						int iNukeDamage = (GC.getDefineINT("NUKE_UNIT_DAMAGE_BASE") + GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_1"), "Nuke Damage 1") + GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_2"), "Nuke Damage 2"));
 
-				if (pLoopUnit->canFight() || pLoopUnit->airBaseCombatStr() > 0)
-				{
-					pLoopUnit->changeDamage(iNukeDamage, ((pNukeUnit != NULL) ? pNukeUnit->getOwner() : NO_PLAYER));
-				}
-				else if (iNukeDamage >= GC.getDefineINT("NUKE_NON_COMBAT_DEATH_THRESHOLD"))
-				{
-					pLoopUnit->kill(true, ((pNukeUnit != NULL) ? pNukeUnit->getOwner() : NO_PLAYER));
+						if (pLoopCity != NULL)
+						{
+							iNukeDamage *= std::max(0, (pLoopCity->getNukeModifier() + 100));
+							iNukeDamage /= 100;
+						}
+
+						if (pLoopUnit->canFight() || pLoopUnit->airBaseCombatStr() > 0)
+						{
+							pLoopUnit->changeDamage(iNukeDamage, ((pNukeUnit != NULL) ? pNukeUnit->getOwner() : NO_PLAYER));
+						}
+						else if (iNukeDamage >= GC.getDefineINT("NUKE_NON_COMBAT_DEATH_THRESHOLD"))
+						{
+							pLoopUnit->kill(true, ((pNukeUnit != NULL) ? pNukeUnit->getOwner() : NO_PLAYER));
+						}
+					}
 				}
 			}
 		}
 
-		if (city != NULL)
+		if (pLoopCity != NULL)
 		{
-			const int iPop = city->getPopulation();
-			if (iPop < 2 && plotX == this)
-			{
-				GC.getGame().addDestroyedCityName(city->getName());
-				city->kill(true);
-				continue;
-			}
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 			{
-				if (city->getNumRealBuilding((BuildingTypes)iI) > 0 && !GC.getBuildingInfo((BuildingTypes)iI).isNukeImmune()
+				if (pLoopCity->getNumRealBuilding((BuildingTypes)iI) > 0 && !GC.getBuildingInfo((BuildingTypes)iI).isNukeImmune()
 				&& GC.getGame().getSorenRandNum(100, "Building Nuked") < GC.getDefineINT("NUKE_BUILDING_DESTRUCTION_PROB"))
 				{
-					city->setNumRealBuilding((BuildingTypes) iI, 0);
+					pLoopCity->setNumRealBuilding((BuildingTypes) iI, 0);
 				}
 			}
-			const int iNukedPopulation =
-			(
-				iPop * std::max(0, city->getNukeModifier() + 100)
-				*
-				(
-					GC.getDefineINT("NUKE_POPULATION_DEATH_BASE")
-					+ GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_POPULATION_DEATH_RAND_1"), "Population Nuked 1")
-					+ GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_POPULATION_DEATH_RAND_2"), "Population Nuked 2")
-				)
-				/ 10000
-			);
-			city->changePopulation(-std::min(iPop - 1, iNukedPopulation));
+
+			int iNukedPopulation = ((pLoopCity->getPopulation() * (GC.getDefineINT("NUKE_POPULATION_DEATH_BASE") + GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_POPULATION_DEATH_RAND_1"), "Population Nuked 1") + GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_POPULATION_DEATH_RAND_2"), "Population Nuked 2"))) / 100);
+
+			iNukedPopulation *= std::max(0, (pLoopCity->getNukeModifier() + 100));
+			iNukedPopulation /= 100;
+
+			pLoopCity->changePopulation(-(std::min((pLoopCity->getPopulation() - 1), iNukedPopulation)));
 		}
 	}
+
 	CvEventReporter::getInstance().nukeExplosion(this, pNukeUnit);
 }
 
 
 bool CvPlot::isConnectedTo(const CvCity* pCity) const
 {
-	return isOwned() && (getPlotGroup(getOwner()) == pCity->plotGroup(getOwner()) || getPlotGroup(pCity->getOwner()) == pCity->plotGroup(pCity->getOwner()));
+	// Super Forts begin *AI_worker* (had to remove the assert and replace it with an if-else)
+	//FAssert(isOwned());
+	if(isOwned())
+	{
+		return ((getPlotGroup(getOwner()) == pCity->plotGroup(getOwner())) || (getPlotGroup(pCity->getOwner()) == pCity->plotGroup(pCity->getOwner())));
+	}
+	else
+	{
+		return false;
+	}
+	// Super Forts end
 }
 
 
@@ -1469,6 +1498,7 @@ bool CvPlot::isConnectedToCapital(PlayerTypes ePlayer) const
 			return isConnectedTo(pCapitalCity);
 		}
 	}
+
 	return false;
 }
 
@@ -1486,7 +1516,7 @@ int CvPlot::getPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) c
 
 bool CvPlot::isPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const
 {
-	return getPlotGroupConnectedBonus(ePlayer, eBonus) > 0;
+	return (getPlotGroupConnectedBonus(ePlayer, eBonus) > 0);
 }
 
 

@@ -15,7 +15,7 @@ class BugCityScreenOptionsTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "CityScreen", "City Screen")
 
 	def create(self, screen):
-		self.createTab(screen)
+		tab = self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		column = self.addOneColumnLayout(screen, panel)
 

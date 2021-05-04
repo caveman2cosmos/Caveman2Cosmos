@@ -246,6 +246,12 @@ class CvTechSplashScreen:
         				screen.attachImageButton( panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False )
 #---Eingef�gt ENDE ------------------------------------------------
 
+                # Allows
+		# szAllowsTitleDesc = u"<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_ALLOWS", ()) + ":" + u"</font>"
+		# szAllowsTitleWidget = "AllowsTitle"
+		# screen.setText(szAllowsTitleWidget, "", szAllowsTitleDesc, 1<<0,
+		# 	       self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+
 		# Units Enabled
 		szUnitsTitleDesc = u"<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_UNITS_ENABLED", ()) + ":" + u"</font>"
 		szUnitsTitleWidget = "UnitsTitle"

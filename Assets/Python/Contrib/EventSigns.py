@@ -523,7 +523,7 @@ def applySaltpeter(argsList):
 	# Add landmark for initial plot, if there is still a yield change
 	placeLandmark(CyPlot, sEventType, iFood, iProd, iComm, True, -1)
 
-	iForest = GC.getFEATURE_FOREST()
+	iForest = GC.getInfoTypeForString('FEATURE_FOREST')
 
 	listPlots = []
 	for CyPlot in MAP.plots():

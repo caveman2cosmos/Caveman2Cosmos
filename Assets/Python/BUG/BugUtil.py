@@ -626,8 +626,7 @@ def doHotSeatCheck(args):
 	Called during EndPlayerTurn, fires SwitchHotSeatPlayer event during a hot seat
 	game when the active player's turn ends.
 	"""
-	#iGameTurn = args[0]
-	ePlayer = args[1]
+	iGameTurn, ePlayer = args
 	GAME = CyGame()
 	if GAME.isHotSeat() and ePlayer == GAME.getActivePlayer():
 		CvEventInterface.getEventManager().fireEvent("SwitchHotSeatPlayer", ePlayer)

@@ -16,7 +16,7 @@ class BugConfigTrackerTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "System", "System")
 
 	def create(self, screen):
-		self.createTab(screen)
+		tab = self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		column = self.addOneColumnLayout(screen, panel)
 
