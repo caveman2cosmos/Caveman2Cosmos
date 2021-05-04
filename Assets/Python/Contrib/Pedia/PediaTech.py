@@ -54,7 +54,7 @@ class PediaTech:
 		eWidJuToBuilding	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
 		eWidJuToDerTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH
 		eWidJuToProject		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT
-		eWidJuToReqTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_REQUIRED_TECH
+		#eWidJuToReqTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_REQUIRED_TECH
 		eWidJuToUnit		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT
 		ePnlBlue50	= PanelStyles.PANEL_STYLE_BLUE50
 		eFontTitle	= FontTypes.TITLE_FONT
@@ -280,7 +280,7 @@ class PediaTech:
 			x = 4
 			y = H_SCROLL / 2 - 12
 			for entry in aList1:
-				NAME = entry[0]
+				#NAME = entry[0]
 				if entry[0] == "TXT":
 					x += entry[3]
 					screen.setLabelAt(aName(), Pnl, entry[1], entry[2], x, y, 0, eFontTitle, eWidGen, 0, 0)
