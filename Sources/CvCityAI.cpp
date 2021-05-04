@@ -203,7 +203,7 @@ void CvCityAI::SendLog(CvWString function, CvWString message)
 	CvWString aiType = "CvCityAI";
 	
 	
-	logAIJson(aiType,this->getName(), function,  message);
+	//logAIJson(aiType,this->getName(), function,  message);
 
 }
 
@@ -11495,50 +11495,47 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &
 	{
 		peBestBuild = NO_BUILD;
 	}
+	bool bWorked = false;
+	bool bHasBonusImprovement = false;
+	bool bEmphasizeIrrigation = false;
+	const bool bLeaveForest = GET_PLAYER(getOwner()).isOption(PLAYEROPTION_LEAVE_FORESTS);
+	const bool bSafeAutomation = GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION);
+	
 	const ImprovementTypes eCurrentPlotImprovement = pPlot->getImprovementType();
-	const CvImprovementInfo* plotImpprovementInfo = eCurrentPlotImprovement != NO_IMPROVEMENT ? &GC.getImprovementInfo(eCurrentPlotImprovement) : NULL;
-	FAssertMsg(pPlot->getOwner() == getOwner(), "pPlot must be owned by this city's owner");
-	const BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(getTeam());
+	BonusTypes eNonObsoleteBonus = NO_BONUS;
+	int aiBestDiffYields[NUM_YIELD_TYPES] = { 0,0,0 };
+	int iBestValue = 0;
+	BuildTypes eBestBuild = NO_BUILD;
 
+	const FeatureTypes eFeature = pPlot->getFeatureType();
+	const CvFeatureInfo* currentFeature = eFeature != NO_FEATURE ? &GC.getFeatureInfo(eFeature) : NULL;
+	
+	const CvImprovementInfo* currentPlotImprovementInfo = eCurrentPlotImprovement != NO_IMPROVEMENT ? &GC.getImprovementInfo(eCurrentPlotImprovement) : NULL;
+	FAssertMsg(pPlot->getOwner() == getOwner(), "pPlot must be owned by this city's owner");
 	
 
-	bool bHasBonusImprovement = false;
-
-	if(eNonObsoleteBonus != NO_BONUS && eCurrentPlotImprovement != NO_IMPROVEMENT)
-	{
-		bHasBonusImprovement = !plotImpprovementInfo->isImprovementBonusTrade(eNonObsoleteBonus) && !plotImpprovementInfo->isUniversalTradeBonusProvider();
-		//consider looking for if the upgraded version of improvement can handle the bonus, but for now we skip this
-	}
-	int aiBestDiffYields[NUM_YIELD_TYPES] = { 0,0,0 };
+	pPlot->getVisibleBonusState(eNonObsoleteBonus, bHasBonusImprovement, bWorked);
 
 	//If a worker is already building a build, force that Build.
 	BuildTypes eForcedBuild = algo::find_if(
 		pPlot->units() | transformed(CvUnit::fn::getBuildType()),
 		BuildsAnyImprovement()
 	).get_value_or(NO_BUILD);
-	
-		int iBestValue = 0;
-	BuildTypes eBestBuild = NO_BUILD;
 
+	
 	if(eForcedBuild != NO_BUILD)
 	{
 		peBestBuild = eForcedBuild;
 		return;
 	}
-	
-	bool bEmphasizeIrrigation = false;
+			
 	
 	if(!bHasBonusImprovement)
 	{
 		bEmphasizeIrrigation = AI_checkIrrigationSpread(pPlot);
 	}
-	const FeatureTypes eFeature = pPlot->getFeatureType();
-	const CvFeatureInfo* currentFeature = eFeature != NO_FEATURE ? &GC.getFeatureInfo(eFeature) : NULL;
-
-	const bool bLeaveForest = GET_PLAYER(getOwner()).isOption(PLAYEROPTION_LEAVE_FORESTS);
-	const bool bSafeAutomation = GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION);
-
-
+	
+	
 	//AI_clearfeaturevalue needs to be rewritten to work with new priorities
 	int iClearFeatureValue = currentFeature ? AI_clearFeatureValue(getCityPlotIndex(pPlot)) : 0;
 
@@ -11549,11 +11546,8 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &
 
 		if (!pPlot->canBuildImprovement(ePotentialImprovement, getTeam())) continue;
 
-		int iBestTempBuildValue = 0;
 		BuildTypes eBestTempBuild = NO_BUILD;
 
-		int iValue = 0;
-		
 		bool bIgnoreFeature = false;
 		bool bValid = false;
 
@@ -11564,15 +11558,11 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &
 		//check if improvement is a fort or watchtower, then its a no.
 		else if (!potentialImprovementInfo.isActsAsCity() && potentialImprovementInfo.getVisibilityChange() == 0)
 		{
-			SendLog("eBestTempBuild", "eBestTempBuildType count");
-			SendLog("eBestTempBuild", CvWString::format(L"%lld", potentialImprovementInfo.getNumBuildTypes()));
-			SendLog("eBestTempImprovement", potentialImprovementInfo.getType());
+			int iValue = 0;
+			int iBestTempBuildValue = 0;
+			if (potentialImprovementInfo.getNumBuildTypes() > 1) continue;
 			foreach_(const BuildTypes eBuildType, potentialImprovementInfo.getBuildTypes())
-			//for (int iJ = 0; iJ < potentialImprovementInfo.getNumBuildTypes(); iJ++)
 			{
-				//const BuildTypes eBuildType = potentialImprovementInfo.getImprovementBuildType(iJ);
-				SendLog("eBestTempBuild", CvWString::format(L"%lld", eBuildType));
-
 				if (GC.getBuildInfo(eBuildType).getImprovement() == ePotentialImprovement
 					&& GET_PLAYER(getOwner()).canBuild(pPlot, eBuildType, false, false, false))
 				{
@@ -11589,7 +11579,6 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &
 					SendLog("eBestTempBuild", "eBestTempBuildType");
 					SendLog("eBestTempBuild", GC.getBuildInfo(eBestTempBuild).getType());
 					SendLog("eBestTempBuild plotIndex", CvWString::format(L"%lld", pPlot->getWorkingCity()->getCityPlotIndex(pPlot)));
-					//SendLog("eBestTempBuild iteration, and plotIndex", CvWString::format(L"%lld %lld", iJ, pPlot->getWorkingCity()->getCityPlotIndex(pPlot)));
 				}
 			}
 			if (eBestTempBuild == NO_BUILD) continue;
