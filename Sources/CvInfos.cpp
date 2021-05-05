@@ -30553,7 +30553,7 @@ void CvLandscapeInfo::copyNonDefaults(const CvLandscapeInfo* pClassInfo)
 //////////////////////////////////////////////////////////////////////////
 
 // static
-int CvGameText::NUM_LANGUAGES = 11;
+int CvGameText::NUM_LANGUAGES = 7;
 CvWString CvGameText::m_szLanguage = L"";
 
 int CvGameText::getNumLanguages() const

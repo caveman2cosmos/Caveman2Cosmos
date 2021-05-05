@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Basic Infos -->
+<Civ4MonthInfos xmlns="x-schema:../Schema/C2C_CIV4BasicInfoSchema.xml">
+	<MonthInfos>
+		<MonthInfo>
+			<Type>MONTH_JANUARY</Type>
+			<Description>TXT_KEY_MONTH_JANUARY</Description>
+		</MonthInfo>
+		<MonthInfo>
+			<Type>MONTH_FEBRUARY</Type>
+			<Description>TXT_KEY_MONTH_FEBRUARY</Description>
+		</MonthInfo>
+		<MonthInfo>
+			<Type>MONTH_MARCH</Type>
+			<Description>TXT_KEY_MONTH_MARCH</Description>
+		</MonthInfo>
+		<MonthInfo>
+			<Type>MONTH_APRIL</Type>
+			<Description>TXT_KEY_MONTH_APRIL</Description>
+		</MonthInfo>
+		<MonthInfo>
+			<Type>MONTH_MAY</Type>
+			<Description>TXT_KEY_MONTH_MAY</Description>
+		</MonthInfo>
+		<MonthInfo>
+			<Type>MONTH_JUNE</Type>
+			<Description>TXT_KEY_MONTH_JUNE</Description>
+		</MonthInfo>
+		<MonthInfo>
+			<Type>MONTH_JULY</Type>
+			<Description>TXT_KEY_MONTH_JULY</Description>
+		</MonthInfo>
+		<MonthInfo>
+			<Type>MONTH_AUGUST</Type>
+			<Description>TXT_KEY_MONTH_AUGUST</Description>
+		</MonthInfo>
+		<MonthInfo>
+			<Type>MONTH_SEPTEMBER</Type>
+			<Description>TXT_KEY_MONTH_SEPTEMBER</Description>
+		</MonthInfo>
+		<MonthInfo>
+			<Type>MONTH_OCTOBER</Type>
+			<Description>TXT_KEY_MONTH_OCTOBER</Description>
+		</MonthInfo>
+		<MonthInfo>
+			<Type>MONTH_NOVEMBER</Type>
+			<Description>TXT_KEY_MONTH_NOVEMBER</Description>
+		</MonthInfo>
+		<MonthInfo>
+			<Type>MONTH_DECEMBER</Type>
+			<Description>TXT_KEY_MONTH_DECEMBER</Description>
+		</MonthInfo>
+	</MonthInfos>
+</Civ4MonthInfos>

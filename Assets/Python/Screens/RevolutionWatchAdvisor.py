@@ -286,8 +286,6 @@ class RevolutionWatchAdvisor:
 				("REVOLUTION_INDEX",		85,		"int",	CyCity.getRevolutionIndex,None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REVOLUTION_INDEX_ADVISOR_SIMPLE\", ()).upper()"),
 				("REVOLUTION_STATUS",		85,		"text",	self.getRevolutionStatusText,None,				0,									None,									None,						"localText.getText(\"TXT_KEY_REV_STATUS\", ()).upper()"),
 				("LOCAL_REV_INDEX",			85,		"int",	CyCity.getLocalRevIndex,None,					0,									None,									None,						"localText.getText(\"TXT_KEY_LOCAL_REV_INDEX_ADVISOR_SIMPLE\", ()).upper()"),
-				("DELTA_TREND",				85,		"int",	self.getDeltaTrendVal,	None,					0,									None,									None,						"localText.getText(\"TXT_KEY_DELTA_TREND_ADVISOR_SIMPLE\", ()).upper()"),
-				("DELTA_TREND_TEXT",		85,		"text",	self.getDeltaTrendText,	None,					0,									None,									None,						"localText.getText(\"TXT_KEY_DELTA_TREND_ADVISOR_SIMPLE\", ()).upper()"),
 				("REV_HAPPINESS",			85,		"int",	self.getRevHappinessVal,None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REV_WATCH_HAPPINESS\", ()).upper()"),
 				("REV_HAPPINESS_TEXT",		85,		"text",	self.getRevHappinessText,None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REV_WATCH_HAPPINESS\", ()).upper()"),
 				("REV_DISTANCE",			85,		"int",	self.getRevDistanceVal,	None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REV_WATCH_DISTANT\", ()).upper()"),

@@ -38,11 +38,6 @@
 			<Civilopedia>TXT_KEY_CONCEPT_BORDERS_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
-			<Type>CONCEPT_BTS_BUILDINGS</Type>
-			<Description>TXT_KEY_BTS_BUILDINGS</Description>
-			<Civilopedia>TXT_KEY_BTS_BUILDINGS_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
 			<Type>CONCEPT_BTS_CIVS</Type>
 			<Description>TXT_KEY_BTS_CIVS</Description>
 			<Civilopedia>TXT_KEY_BTS_CIVS_PEDIA</Civilopedia>
