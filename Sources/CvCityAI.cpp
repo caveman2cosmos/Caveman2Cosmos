@@ -8558,12 +8558,12 @@ void CvCityAI::AI_updateBestBuild()
 	}
 	for(int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++)
 	{
-		SendLog("existingImprovement Value", GC.getImprovementInfo(currentYieldList[iPlotCounter].currentImprovement).getType());
-		SendLog("optimalImprovement Value", GC.getImprovementInfo(optimalYieldList[iPlotCounter].currentImprovement).getType());
-		SendLog("updateBestBuild", CvWString::format(L"{\"plot\": %lld \"existingBuild\": %lld, \"newBuild\": %lld",
-													iPlotCounter,
-		                                             currentYieldList[iPlotCounter].yieldValue,
-		                                             optimalYieldList[iPlotCounter].yieldValue));
+		//SendLog("existingImprovement Value", GC.getImprovementInfo(currentYieldList[iPlotCounter].currentImprovement).getType());
+		//SendLog("optimalImprovement Value", GC.getImprovementInfo(optimalYieldList[iPlotCounter].currentImprovement).getType());
+		//SendLog("updateBestBuild", CvWString::format(L"{\"plot\": %lld \"existingBuild\": %lld, \"newBuild\": %lld",
+		//											iPlotCounter,
+		//                                             currentYieldList[iPlotCounter].yieldValue,
+		//                                             optimalYieldList[iPlotCounter].yieldValue));
 		
 		if(currentYieldList[iPlotCounter].yieldValue >= optimalYieldList[iPlotCounter].yieldValue)
 		{
