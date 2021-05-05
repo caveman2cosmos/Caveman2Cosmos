@@ -97,7 +97,6 @@ def changedHiddenAttitude(option, value):
 
 def changedDYNAMIC_CIV_NAMES(option, value):
 	import DynamicCivNames
-	assert(RevDCMOpt.isDYNAMIC_CIV_NAMES() == value)
 	if value:
 		DynamicCivNames.init()
 	else:
