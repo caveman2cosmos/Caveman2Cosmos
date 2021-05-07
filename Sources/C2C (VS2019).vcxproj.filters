@@ -25,6 +25,12 @@
     <Filter Include="Header Files\InfoClasses">
       <UniqueIdentifier>{176d085c-21c8-4b21-bae7-70b8815878b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\SupportModules">
+      <UniqueIdentifier>{f78cd592-6e51-4d6d-b7c2-9ec217001b35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SupportModules">
+      <UniqueIdentifier>{ef8aee7b-1fc1-45c2-83a6-40d5de25929f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="_precompile.cpp">

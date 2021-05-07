@@ -8406,8 +8406,6 @@ std::vector<int> CvCityAI::AI_calculateOutputRatio(int food, int production, int
 
 void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vector<plotInfo> &currentYieldList)
 {
-	CvWString yieldNames[3] = { "food", "production", "commerce" };
-
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	bool bIgnoreFeature = false;
 	const int activeWorkerMissions = kPlayer.AI_plotTargetMissionAIs(plot, MISSIONAI_BUILD);
@@ -8435,11 +8433,18 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vecto
 
 					currentYieldList[iPlotCounter].yields[iYieldType] = yieldIncrease + natureYield;
 				}
-				
 			}
 		}
 	}
 	currentYieldList[iPlotCounter].currentImprovement = plot->getImprovementType();
+	currentYieldList[iPlotCounter].currentBonus = plot->getBonusType();
+	
+	if(currentYieldList[iPlotCounter].currentBonus != NO_BONUS && currentYieldList[iPlotCounter].currentImprovement != NO_IMPROVEMENT)
+	{
+		CvImprovementInfo *currentImprovement = &GC.getImprovementInfo(currentYieldList[iPlotCounter].currentImprovement);
+		currentYieldList[iPlotCounter].bonusImproved = currentImprovement->isUniversalTradeBonusProvider();
+	}
+	
 	
 	//if plot does not have active worker mission, take existing yield
 	for (int yieldTypes = 0; yieldTypes < NUM_YIELD_TYPES; yieldTypes++)
@@ -8448,9 +8453,10 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vecto
 	}
 	currentYieldList[iPlotCounter].yieldValue = AI_yieldValue(
 		currentYieldList[iPlotCounter].yields, NULL, false, bIgnoreFeature, false, false, true, true);
+	if (currentYieldList[iPlotCounter].bonusImproved) currentYieldList[iPlotCounter].yieldValue += 1000;
 }
 
-void CvCityAI::AI_getBestPlotValue(std::vector<int> &ratios,int iPlotCounter, CvPlot *plot,std::vector<plotInfo> &currentYieldList, std::vector<plotInfo> &optimalYieldList, int iDesiredFoodChange)
+void CvCityAI::AI_getBestPlotValue(std::vector<int> &ratios,int iPlotCounter, CvPlot *plot, std::vector<plotInfo> &optimalYieldList, int iDesiredFoodChange)
 {
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	BuildTypes eBuild = NO_BUILD;
@@ -8459,8 +8465,7 @@ void CvCityAI::AI_getBestPlotValue(std::vector<int> &ratios,int iPlotCounter, Cv
 
 	const int iHealth = goodHealth() - badHealth();
 	
-	AI_newbestPlotBuild(plot, optimalYieldList[iPlotCounter].yieldValue, optimalYieldList[iPlotCounter].currentBuild,
-	                 ratios[YIELD_FOOD], ratios[YIELD_PRODUCTION], ratios[YIELD_COMMERCE]);
+	AI_newbestPlotBuild(plot, &optimalYieldList[iPlotCounter], ratios[YIELD_FOOD], ratios[YIELD_PRODUCTION], ratios[YIELD_COMMERCE]);
 	
 	eBuild = optimalYieldList[iPlotCounter].currentBuild;
 	if(eBuild != NO_BUILD)
@@ -8483,6 +8488,13 @@ void CvCityAI::AI_getBestPlotValue(std::vector<int> &ratios,int iPlotCounter, Cv
 		}
 		optimalYieldList[iPlotCounter].yieldValue = AI_yieldValue(
 			optimalYieldList[iPlotCounter].yields, NULL, false, bIgnoreFeature, false, false, true, true);
+
+		if(optimalYieldList[iPlotCounter].currentBonus != NO_BONUS && optimalYieldList[iPlotCounter].currentImprovement != NO_IMPROVEMENT)
+		{
+			CvImprovementInfo *potentialImprovement = &GC.getImprovementInfo(optimalYieldList[iPlotCounter].currentImprovement);
+			optimalYieldList[iPlotCounter].bonusImproved = potentialImprovement->isImprovementBonusTrade(optimalYieldList[iPlotCounter].currentBonus);
+			optimalYieldList[iPlotCounter].yieldValue += 1000;
+		} 
 	}
 }
 
@@ -8496,7 +8508,6 @@ void CvCityAI::AI_updateBestBuild()
 	}
 	m_bestBuildValuesStale = false;
 
-	
 	const int numCityPlots = getNumCityPlots();
 	std::vector<int> ratios = AI_calculateOutputRatio(this->getBaseYieldRate(YIELD_FOOD), this->getBaseYieldRate(YIELD_PRODUCTION), this->getBaseYieldRate(YIELD_COMMERCE));
 	std::vector<plotInfo> currentYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
@@ -8540,8 +8551,6 @@ void CvCityAI::AI_updateBestBuild()
 		iDesiredFoodChange = (iDesiredFoodChange + 3) / 2;
 	}
 
-	SendLog("ratios", CvWString::format(L"%lld %lld %lld", ratios[YIELD_FOOD], ratios[YIELD_PRODUCTION], ratios[YIELD_COMMERCE]));
-
 	for (int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++) // start at 1, 0 is the plot of the city
 	{
 		currentYieldList[iPlotCounter].index = iPlotCounter;
@@ -8554,17 +8563,10 @@ void CvCityAI::AI_updateBestBuild()
 		if (loopedPlot->getWorkingCity() == this) currentYieldList[iPlotCounter].worked = true;
 		
 		AI_getCurrentPlotValue(iPlotCounter,loopedPlot, currentYieldList);
-		AI_getBestPlotValue(ratios, iPlotCounter, loopedPlot, currentYieldList, optimalYieldList, iDesiredFoodChange);
+		AI_getBestPlotValue(ratios, iPlotCounter, loopedPlot, optimalYieldList, iDesiredFoodChange);
 	}
 	for(int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++)
-	{
-		//SendLog("existingImprovement Value", GC.getImprovementInfo(currentYieldList[iPlotCounter].currentImprovement).getType());
-		//SendLog("optimalImprovement Value", GC.getImprovementInfo(optimalYieldList[iPlotCounter].currentImprovement).getType());
-		//SendLog("updateBestBuild", CvWString::format(L"{\"plot\": %lld \"existingBuild\": %lld, \"newBuild\": %lld",
-		//											iPlotCounter,
-		//                                             currentYieldList[iPlotCounter].yieldValue,
-		//                                             optimalYieldList[iPlotCounter].yieldValue));
-		
+	{	
 		if(currentYieldList[iPlotCounter].yieldValue >= optimalYieldList[iPlotCounter].yieldValue)
 		{
 			m_aeBestBuild[iPlotCounter] = NO_BUILD;
@@ -11485,16 +11487,18 @@ bool CvCityAI::AI_checkIrrigationSpread(CvPlot* pPlot)
 	}
 	return bEmphasizeIrrigation;
 }
-void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &peBestBuild, int iFoodPriority, int iProductionPriority, int iCommercePriority)
+void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority)
 {
-	if (piBestValue != NULL)
+	if (plotInfo != NULL)
 	{
-		piBestValue = 0;
+		plotInfo->yieldValue = 0;
+		plotInfo->currentBuild = NO_BUILD;
 	}
-	if (peBestBuild != NULL)
+	else
 	{
-		peBestBuild = NO_BUILD;
+		return;
 	}
+
 	bool bWorked = false;
 	bool bHasBonusImprovement = false;
 	bool bEmphasizeIrrigation = false;
@@ -11525,7 +11529,7 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &
 	
 	if(eForcedBuild != NO_BUILD)
 	{
-		peBestBuild = eForcedBuild;
+		plotInfo->currentBuild = eForcedBuild;
 		return;
 	}
 			
@@ -11616,12 +11620,8 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &
 
 			if(eNonObsoleteBonus != NO_BONUS)
 			{
-				SendLog("eNonObsoleteBonus", "plot has bonus");
-				SendLog("eNonObsoleteBonus", GC.getBonusInfo(eNonObsoleteBonus).getType());
 				if(!bHasBonusImprovement)
 				{
-					SendLog("eNonObsoleteBonus", "bonus is improved with:");
-					SendLog("eNonObsoleteBonus", GC.getImprovementInfo(pPlot->getImprovementType()).getType());
 					if(potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus))
 					{
 						if (potentialFinalImprovementInfo->isImprovementBonusTrade(eNonObsoleteBonus))
@@ -11669,8 +11669,6 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &
 					iValue -= 1000;
 				}	
 			}
-			SendLog("checking value", "");
-			SendLog("iValue after bonus evaluation", CvWString::format(L"%lld", iValue));
 			if(iValue >= 0)
 			{
 				int aiFinalYields[NUM_YIELD_TYPES];
@@ -11683,8 +11681,8 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &
 			}
 			if (iValue > iBestTempBuildValue)
 			{
-				piBestValue = iValue;
-				peBestBuild = eBestTempBuild;
+				plotInfo->yieldValue = iValue;
+				plotInfo->currentBuild = eBestTempBuild;
 			}
 		}
 		
