@@ -33,8 +33,10 @@ struct plotInfo
 	int index;
 	bool worked;
 	bool owned;
+	bool bonusImproved;
 	int yieldValue;
 	short yields[NUM_YIELD_TYPES];
+	BonusTypes currentBonus;
 	ImprovementTypes currentImprovement;
 	FeatureTypes currentFeature;
 	BuildTypes currentBuild;
