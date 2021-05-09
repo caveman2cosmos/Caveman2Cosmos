@@ -720,27 +720,11 @@ bool CvXMLLoadUtility::LoadGlobalText()
 				break;
 
 			case 5:
-				szLanguage = "Finnish";
-				break;
-
-			case 6:
-				szLanguage = "Hungarian";
-				break;
-
-			case 7:
 				szLanguage = "Polish";
 				break;
 
-			case 8:
+			case 6:
 				szLanguage = "Russian";
-				break;
-
-			case 9:
-				szLanguage = "Chinese";
-				break;
-
-			case 10:
-				szLanguage = "Portuguese";
 				break;
 
 			default:
@@ -763,7 +747,7 @@ bool CvXMLLoadUtility::LoadGlobalText()
 	std::vector<CvString> aszFiles;
 	std::vector<CvString> aszModfiles;
 
-	gDLL->enumerateFiles(aszFiles, "xml\\text\\*.xml");
+	gDLL->enumerateFiles(aszFiles, "xml\\GameText\\*.xml");
 
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 05/23/08                                MRGENIE      */

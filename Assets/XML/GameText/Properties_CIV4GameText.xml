@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTIES_PROPERTIES</Tag>
+		<English>Properties</English>
+		<French>Propriétés</French>
+		<German>Effekte</German>
+		<Spanish>Propiedades</Spanish>
+		<Russian>Ñâîéñòâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_ACTIVE</Tag>
+		<English>with </English>
+		<French>avec: </French>
+		<Spanish>con </Spanish>
+		<Russian>åñëè </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION</Tag>
+		<English>Air Pollution</English>
+		<French>Pollution de L'air</French>
+		<German>Luftverschmutzung</German>
+		<Spanish>Polución del aire</Spanish>
+		<Russian>Óðîâ. Çàãðÿçíåíèÿ Âîçäóõà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION_CHANGE</Tag>
+		<English>[ICON_BULLET]Changes Air Pollution rate by %D1</English>
+		<French>[ICON_BULLET]Change le Taux de pollution de l'air de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia el nivel de polución del aire en %D1</Spanish>
+		<Russian>[ICON_BULLET]Óðîâåíü Çàãðÿçíåíèÿ Âîçäóõà èçìåíèòñÿ íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]Changes Air Pollution rate in all cities by %D1</English>
+		<French>[ICON_BULLET]Change le Taux de pollution de l'air dans toutes les villes de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia el nivel de polución del aire en %D1 en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]Óðîâåíü Çàãðÿçíåíèÿ Âîçäóõà èçìåíèòñÿ âî âñåõ ãîðîäàõ íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION_DISPLAY</Tag>
+		<English>Air Pollution rate: %D1</English>
+		<French>Taux de poll. de l'air: %D1</French>
+		<Spanish>Polución del aire: %D1</Spanish>
+		<Russian>Óðîâ. Çàãðÿçíåíèÿ Âîçäóõà: %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION_PREREQ_MAX</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs an Air Pollution rate of at most %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Taux de pollution de l'air au maximum de %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere un nivel de polución del aire de como máximo %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü â óðîâåíü Çàãðÿçíåíèÿ Âîçäóõà ìàêñèìóì %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION_PREREQ_MIN</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs an Air Pollution rate of at least %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Taux de pollution de l'air d'au moins %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere un nivel de polución del aire de al menos %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü â óðîâíå Çàãðÿçíåíèÿ âîçäóõà, ïî êðàéíåé ìåðå, %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_BUILDING_DISPLAY</Tag>
+		<English>[ICON_BULLET]Exists between %D1 and %D2</English>
+		<French>[ICON_BULLET]Existe entre %D1 et %D2</French>
+		<German>[ICON_BULLET]automatischer Effekt im Bereich von %D1 und %D2</German>
+		<Spanish>[ICON_BULLET]Existe entre %D1 y %D2</Spanish>
+		<Russian>[ICON_BULLET]Ñóùåñòâóåò ìåæäó %D1 è %D2</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_BUILDING_DISPLAY_OVER</Tag>
+		<English>[ICON_BULLET]Exists above %D1</English>
+		<French>[ICON_BULLET]Existe au-dessus de %D1</French>
+		<German>[ICON_BULLET]automatischer Effekt bei mehr als %D1</German>
+		<Spanish>[ICON_BULLET]Existe por encima de %D1</Spanish>
+		<Russian>[ICON_BULLET]Ñóùåñòâóåò âûøå %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_BUILDING_DISPLAY_UNDER</Tag>
+		<English>[ICON_BULLET]Exists below %D1</English>
+		<French>[ICON_BULLET]Existe en-dessous de %D1</French>
+		<German>[ICON_BULLET]automatischer Effekt bei weniger als %D1</German>
+		<Spanish>[ICON_BULLET]Existe por debajo de %D1</Spanish>
+		<Russian>[ICON_BULLET]Ñóùåñòâóåò íèæå %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_CRIME</Tag>
+		<English>Crime</English>
+		<French>Criminalité</French>
+		<German>Kriminalität</German>
+		<Italian>Criminalità</Italian>
+		<Spanish>Criminalidad</Spanish>
+		<Russian>Óðîâåíü Ïðåñòóïíîñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_CRIME_CHANGE</Tag>
+		<English>[ICON_BULLET]Changes crime rate by %D1</English>
+		<French>[ICON_BULLET]Change le Taux de Criminalité de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia la tasa de Criminalidad en %D1</Spanish>
+		<Russian>[ICON_BULLET]Óðîâåíü ïðåñòóïíîñòè èçìåíèòñÿ íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_CRIME_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]Changes crime rate in all cities by %D1</English>
+		<French>[ICON_BULLET]Change le Taux de Criminalité dans toutes les villes de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia la tasa de Criminalidad en %D1 en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]Óðîâåíü ïðåñòóïíîñòè èçìåíèòñÿ âî âñåõ ãîðîäàõ íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_CRIME_DISPLAY</Tag>
+		<English>Crime rate: %D1</English>
+		<French>Taux de Crim.: %D1</French>
+		<Spanish>Criminalidad: %D1</Spanish>
+		<Russian>Óðîâåíü Ïðåñòóïíîñòè: %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_CRIME_PREREQ_MAX</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs a crime rate of at most %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Taux de Criminalité au maximum de %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una tasa de Criminalidad de como máximo %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü â óðîâíå ïðåñòóïíîñòè ìàêñèìàëüíî %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_CRIME_PREREQ_MIN</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs a crime rate of at least %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Taux de Criminalité d'au moins %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una tasa de Criminalidad de al menos %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü â óðîâåíå ïðåñòóïíîñòè, ïî êðàéíåé ìåðå, %D1 [COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_DISEASE</Tag>
+		<English>Disease</English>
+		<French>Maladie</French>
+		<German>Krankheiten</German>
+		<Spanish>Enfermedad</Spanish>
+		<Russian>Óðîâåíü Çàáîëåâàåìîñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_DISEASE_CHANGE</Tag>
+		<English>[ICON_BULLET]Changes Disease rate by %D1</English>
+		<French>[ICON_BULLET]Change le Taux de maladie de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia la tasa de Enfermedad en %D1</Spanish>
+		<Russian>[ICON_BULLET]Óðîâåíü Çàáîëåâàåìîñòè èçìåíèòñÿ íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_DISEASE_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]Changes Disease rate in all cities by %D1</English>
+		<French>[ICON_BULLET]Change le Taux de maladie dans toutes les villes de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia la tasa de Enfermedad en %D1 en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]Óðîâåíü Çàáîëåâàåìîñòè èçìåíèòñÿ âî âñåõ ãîðîäàõ íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_DISEASE_DISPLAY</Tag>
+		<English>Disease rate: %D1</English>
+		<French>Taux de maladie: %D1</French>
+		<Spanish>Enfermedad: %D1</Spanish>
+		<Russian>Óðîâåíü Çàáîëåâàåìîñòè: %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_DISEASE_PREREQ_MAX</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs a Disease rate of at most %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Taux de maladie au maximum de %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una tasa de Enfermedad de como máximo %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü â óðîâíå çàáîëåâàåìîñòè ìàêñèìóì %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_DISEASE_PREREQ_MIN</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs a Disease rate of at least %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Taux de maladie d'au moins %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una tasa de Enfermedad de al menos %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü â óðîâíå Çàáîëåâàåìîñòè, ïî êðàéíåé ìåðå, %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_EDUCATION</Tag>
+		<English>Education</English>
+		<German>Bildung</German>
+		<Spanish>Educación</Spanish>
+		<Russian>Îáðàçîâàíèå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_EDUCATION_CHANGE</Tag>
+		<English>[ICON_BULLET]Changes Education rate by %D1</English>
+		<French>[ICON_BULLET]Change le Taux d'Education de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia el nivel de Educación en %D1</Spanish>
+		<Russian>[ICON_BULLET]Èçìåíåíèå ðàñõîäîâ íà îáðàçîâàíèå íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_EDUCATION_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]Changes Education rate in all cities by %D1</English>
+		<French>[ICON_BULLET]Change le Taux d'Education dans toutes les villes de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia el nivel de Educación en %D1 en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]Èçìåíåíèå ðàñõîäîâ íà îáðàçîâàíèå âî âñåõ ãîðîäàõ íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_EDUCATION_DISPLAY</Tag>
+		<English>Education rate: %D1</English>
+		<French>Taux d'Education: %D1</French>
+		<Spanish>Nivel educativo: %D1</Spanish>
+		<Russian>Ãðàìîòíîñòü: %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_EDUCATION_PREREQ_MAX</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs a Education rate of at most %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Taux d'Education au maximum de %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere un nivel de Educación de como máximo %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Íåîáõîäèì óðîâåíü îáðàçîâàíèÿ áîëåå %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_EDUCATION_PREREQ_MIN</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs a Education rate of at least %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Taux d'Education d'au moins %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere un nivel de Educación de al menos %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Íåîáõîäèì óðîâåíü îáðàçîâàíèÿ íå ìåíåå %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY</Tag>
+		<English>Flammability</English>
+		<French>Risque d'incendie</French>
+		<German>Brandgefahr</German>
+		<Italian>Rischio d'incendio</Italian>
+		<Spanish>Inflamabilidad</Spanish>
+		<Polish>Palność</Polish>
+		<Russian>Âîñïëàìåíÿåìîñòü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_CHANGE</Tag>
+		<English>[ICON_BULLET]Changes flammability by %D1</English>
+		<French>[ICON_BULLET]Change le risque d'incendie de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia la inflamabilidad en %D1</Spanish>
+		<Russian>[ICON_BULLET]Âîñïëàìåíÿåìîñòü èçìåíèòñÿ íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]Changes flammability in all cities by %D1</English>
+		<French>[ICON_BULLET]Change le risque d'incendie dans toutes les villes de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia la inflamabilidad en %D1 en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]Âîñïëàìåíÿåìîñòü èçìåíèòñÿ âî âñåõ ãîðîäàõ íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_DISPLAY</Tag>
+		<English>Flammability: %D1</English>
+		<French>Risque d'incendie: %D1</French>
+		<Spanish>Inflamabilidad: %D1</Spanish>
+		<Russian>Âîñïëàìåíÿåìîñòü: %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_PREREQ_MAX</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs a flammability of at most %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un risque d'incendie au maximum de %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una inflamabilidad de como máximo %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü Âîñïëàìåíÿåìîñòü ìàêñèìóì %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_PREREQ_MIN</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs a flammability of at least %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un risque d'incendie d'au moins %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una inflamabilidad de al menos %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü Âîñïëàìåíÿåìîñòè, ïî êðàéíåé ìåðå, %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_GLOBAL_SOURCED</Tag>
+		<English>General property sources (population, decay): %D1 / Turn</English>
+		<French>Sources générales (population...): %D1 / Tour</French>
+		<German>Einfluss von anderen Quellen (Bevölkerung etc.): %D1 pro Runde</German>
+		<Spanish>Incremento general (población, decaída...): %D1/turno</Spanish>
+		<Russian>Îáùèå èñòî÷íèêè (íàñåëåíèå, ðàñïàä): %D1 / õîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_PER_TURN</Tag>
+		<English>/ Turn</English>
+		<French>/ Tour</French>
+		<German>pro Runde</German>
+		<Spanish>/turno</Spanish>
+		<Russian>/ Õîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_PER_TURN_DECAY</Tag>
+		<English>decay / Turn (above</English>
+		<French>dim. / Tour (au-dessus de</French>
+		<Spanish>caída/turno (por encima de</Spanish>
+		<Russian>ðàñïàä / õîä (âûøå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_PER_TURN_LIMIT</Tag>
+		<English>/ Turn (limit</English>
+		<French>/ Tour (limite</French>
+		<Spanish>/turno (límite:</Spanish>
+		<Russian>/ Õîä (ëèìèò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_SOURCED_CONSTANT</Tag>
+		<English>Constant building sources: %D1 / Turn</English>
+		<French>Sources bâtiments: %D1 / Tour</French>
+		<German>Einfluss von Gebäuden: %D1 pro Runde</German>
+		<Spanish>Incremento gradual por edificios: %D1/turno</Spanish>
+		<Russian>Ïîñòîÿííûå ñòðîèòåëüíûå èñòî÷íèêè: %D1 / õîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_TOURISM</Tag>
+		<English>Tourism</English>
+		<French>Tourisme</French>
+		<Spanish>Turismo</Spanish>
+		<Russian>Òóðèçì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_TOURISM_CHANGE</Tag>
+		<English>[ICON_BULLET]Changes Tourism rate by %D1</English>
+		<French>[ICON_BULLET]Change le Taux de Tourisme de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia la Atracción turística en %D1</Spanish>
+		<Russian>[ICON_BULLET]Èçìåíèòü óðîâåíü òóðèçìà íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_TOURISM_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]Changes Tourism rate in all cities by %D1</English>
+		<French>[ICON_BULLET]Change le Taux de Tourisme dans toutes les villes de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia la Atracción turística en %D1 en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]Èçìåíèòü óðîâåíü òóðèçìà âî âñåõ ãîðîäàõ íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_TOURISM_DISPLAY</Tag>
+		<English>Tourism rate: %D1</English>
+		<French>Taux de Tourisme: %D1</French>
+		<Spanish>Atracción turística: %D1</Spanish>
+		<Russian>Óðîâåíü òóðèçìà: %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_TOURISM_PREREQ_MAX</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs a Tourism rate of at most %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Taux de Tourisme au maximum de %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una Atracción turística de como máximo %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Íåîáõîäèì óðîâåíü òóðèçìà áîëåå %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_TOURISM_PREREQ_MIN</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs a Tourism rate of at least %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Taux de Tourisme d'au moins %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una Atracción turística de al menos %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Íåîáõîäèì óðîâåíü òóðèçìà íå ìåíåå %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_WATER_POLLUTION</Tag>
+		<English>Water Pollution</English>
+		<French>Pollution de L'eau</French>
+		<German>Wasserverschmutzung</German>
+		<Spanish>Polución del agua</Spanish>
+		<Russian>Óðîâåíü Çàãðÿçíåíèÿ Âîäû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_WATER_POLLUTION_CHANGE</Tag>
+		<English>[ICON_BULLET]Changes Water Pollution rate by %D1</English>
+		<French>[ICON_BULLET]Change le Taux de pollution de l'eau de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia el nivel de Polución del agua en %D1</Spanish>
+		<Russian>[ICON_BULLET]Óðîâåíü Çàãðÿçíåíèÿ Âîäû èçìåíèòñÿ íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_WATER_POLLUTION_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]Changes Water Pollution rate in all cities by %D1</English>
+		<French>[ICON_BULLET]Change le Taux de pollution de l'eau dans toutes les villes de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia el nivel de Polución del agua en %D1 en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]Óðîâåíü Çàãðÿçíåíèÿ Âîäû èçìåíèòñÿ âî âñåõ ãîðîäàõ íà %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_WATER_POLLUTION_DISPLAY</Tag>
+		<English>Water Pollution rate: %D1</English>
+		<French>Taux de poll. de l'eau: %D1</French>
+		<Spanish>Polución del agua: %D1</Spanish>
+		<Russian>Óðîâåíü Çàãðÿçíåíèÿ Âîäû: %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_WATER_POLLUTION_PREREQ_MAX</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs a Water Pollution rate of at most %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Taux de pollution de l'eau au maximum de %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere un nivel de Polución del agua de como máximo %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü â Óðîâåíå Çàãðÿçíåíèÿ âîäû ìàêñèìóì %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_WATER_POLLUTION_PREREQ_MIN</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs a Water Pollution rate of at least %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Taux de pollution de l'eau d'au moins %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere un nivel de Polución del agua de al menos %D1[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü â Óðîâåíå Çàãðÿçíåíèÿ Âîäû, ïî êðàéíåé ìåðå, %D1[COLOR_REVERT]</Russian>
+	</TEXT>
+</Civ4GameText>

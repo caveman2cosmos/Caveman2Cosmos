@@ -166,7 +166,7 @@ class CvDanQuayle:
 		for i in range(len(self.leaders)):
 			szText = self.leaders[i]
 			if (szLeaderText == szText):
-				szText = localText.getColorText(szText, (), gc.getInfoTypeForString("COLOR_YELLOW"))
+				szText = localText.getColorText(szText, (), gc.getCOLOR_YELLOW())
 			else:
 				szText = localText.getText(szText, ())
 

@@ -8,8 +8,6 @@
 ##
 
 from CvPythonExtensions import *
-from operator import itemgetter
-
 import BugUtil
 import CvUtil
 import CvRandomEventInterface
@@ -525,7 +523,7 @@ def applySaltpeter(argsList):
 	# Add landmark for initial plot, if there is still a yield change
 	placeLandmark(CyPlot, sEventType, iFood, iProd, iComm, True, -1)
 
-	iForest = GC.getInfoTypeForString('FEATURE_FOREST')
+	iForest = GC.getFEATURE_FOREST()
 
 	listPlots = []
 	for CyPlot in MAP.plots():

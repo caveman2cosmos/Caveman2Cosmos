@@ -709,7 +709,7 @@ public:
 	bool canReconAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool recon(int iX, int iY);
 
-	bool canAirBomb(const CvPlot* pPlot) const;
+	bool canAirBomb() const;
 	bool canAirBombAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb(int iX, int iY);
 
@@ -1743,7 +1743,7 @@ public:
 	DllExport int getSelectionSoundScript() const;
 
 // Dale - AB: Bombing START
-	bool canAirBomb1(const CvPlot* pPlot) const;
+	bool canAirBomb1() const;
 	bool canAirBomb1At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb1(int iX, int iY);
 	bool canAirBomb2(const CvPlot* pPlot) const;

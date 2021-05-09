@@ -141,11 +141,6 @@ int CyMap::getMapFractalFlags()
 	return m_pMap ? m_pMap->getMapFractalFlags() : -1;
 }
 
-bool CyMap::findWater(CyPlot* pPlot, int iRange, bool bFreshWater)
-{
-	return m_pMap ? m_pMap->findWater(pPlot->getPlot(), iRange, bFreshWater) : false;
-}
-
 bool CyMap::isPlot(int iX, int iY)
 {
 	return m_pMap ? m_pMap->isPlot(iX, iY) : false;

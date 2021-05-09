@@ -9,7 +9,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BEAR_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEAR_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BEAR_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAR_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BEAR_RIDER</MovieDefineTag>
@@ -69,7 +68,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAR_TRAINER_EFFECT</ArtDefineTag>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
@@ -108,7 +106,6 @@
 			<Type>BUILDING_BEAR_TRAINER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BEAR_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEAR_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BEAR_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAR_TRAINER_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -132,7 +129,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_BEARS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_TOTEM_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_BEAR_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>

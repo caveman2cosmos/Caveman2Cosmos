@@ -28,7 +28,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_AIRSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_AIRSHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AIRSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -99,7 +98,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BARRAGE_BALLOON</Description>
 			<Civilopedia>TXT_KEY_UNIT_BALLOON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BALLOON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -169,7 +167,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EARLY_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_EARLY_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -255,7 +252,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_P51_MUSTANG</Description>
 			<Civilopedia>TXT_KEY_UNIT_P51_MUSTANG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_P51_MUSTANG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -337,7 +333,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EARLYJET</Description>
 			<Civilopedia>TXT_KEY_UNIT_EARLY_JET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_EARLY_JET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -429,7 +424,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_F111_AARDVARK</Description>
 			<Civilopedia>TXT_KEY_UNIT_F111_AARDVARK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F111_AARDVARK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -532,7 +526,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_JET_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_JET_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_JET_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -636,7 +629,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MODERN_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MODERN_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MODERN_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -753,7 +745,6 @@
 			</InvisibilityIntensityTypes>
 			<Description>TXT_KEY_UNIT_SCRAMJET</Description>
 			<Civilopedia>TXT_KEY_UNIT_SCRAMJET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SCRAMJET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -868,7 +859,6 @@
 			</InvisibilityIntensityTypes>
 			<Description>TXT_KEY_UNIT_ORBITAL_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ORBITAL_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ORBITAL_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -959,7 +949,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BOMBER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BOMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1049,7 +1038,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_B52_BOMBER</Description>
 			<Civilopedia>TXT_KEY_UNIT_B52_BOMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_B52_BOMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1151,7 +1139,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_B1_LANCER</Description>
 			<Civilopedia>TXT_KEY_UNIT_B1_LANCER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_B1_LANCER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1255,7 +1242,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EARLYSTEALTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_STEALTH_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEALTH_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1367,7 +1353,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_STEALTH_BOMBER</Description>
 			<Civilopedia>TXT_KEY_UNIT_STEALTH_BOMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEALTH_BOMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1488,7 +1473,6 @@
 			</InvisibilityIntensityTypes>
 			<Description>TXT_KEY_UNIT_ORBITAL_BOMBER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ORBITAL_BOMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ORBITAL_BOMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1582,7 +1566,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FIGHTER_BOMBER</Description>
 			<Civilopedia>TXT_KEY_UNIT_FIGHTER_BOMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FIGHTER_BOMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1697,7 +1680,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_A10_BOMBER</Description>
 			<Civilopedia>TXT_KEY_UNIT_A10_BOMBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_A10_BOMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1809,7 +1791,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_UAV</Description>
 			<Civilopedia>TXT_KEY_UNIT_UAV_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UAV_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1915,7 +1896,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SEAPLANE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEAPLANE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SEAPLANE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2029,7 +2009,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Help>TXT_KEY_UNIT_CARRIER_OPS_HELP</Help>
 			<PrereqAndBuildings>
@@ -2143,7 +2122,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_F4_PHANTOM</Description>
 			<Civilopedia>TXT_KEY_UNIT_F4_PHANTOM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F4_PHANTOM_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_CARRIER_OPS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2269,7 +2247,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_F14_TOMCAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_F14_TOMCAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F14_TOMCAT_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_CARRIER_OPS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2386,7 +2363,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_F18_HORNET</Description>
 			<Civilopedia>TXT_KEY_UNIT_F18_HORNET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F18_HORNET_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_CARRIER_OPS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2507,7 +2483,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_F104_STARFIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_F104_STARFIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F104_STARFIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2608,7 +2583,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_STRIKE_FIGHTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_STRIKE_FIGHTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STRIKE_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2710,7 +2684,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_F22_RAPTOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_F22_RAPTOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F22_RAPTOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2805,7 +2778,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RECON_PLANE</Description>
 			<Civilopedia>TXT_KEY_UNIT_RECON_PLANE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RECON_PLANE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2896,7 +2868,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SR71</Description>
 			<Civilopedia>TXT_KEY_UNIT_SR71_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SR71_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2994,7 +2965,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DRONE</Description>
 			<Civilopedia>TXT_KEY_UNIT_DRONE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DRONE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -3064,6 +3034,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-		</UnitInfo>		
+		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

@@ -261,15 +261,12 @@
 IsStandAlone = False
 if __name__ != "__main__":
     from CvPythonExtensions import *
-    import CvUtil
     import CvMapGeneratorUtil
 
 from array import array
 from random import random,randint,seed
 import math
 import sys
-import time
-import os
 
 # Options
 OPTION_MapSeed = 10
@@ -1467,10 +1464,6 @@ def ShuffleList(theList):
                 shuffled.append(preshuffle[n])
                 del preshuffle[n]
         return shuffled
-
-def GetInfoType(string):
-	cgc = CyGlobalContext()
-	return cgc.getInfoTypeForString(string)
 
 def GetDistance(x,y,dx,dy):
     distance = math.sqrt(abs((float(x - dx) * float(x - dx)) + (float(y - dy) * float(y - dy))))

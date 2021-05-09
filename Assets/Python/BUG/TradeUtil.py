@@ -333,10 +333,8 @@ def initCorporationBonuses():
 	for eCorp in range(GC.getNumCorporationInfos()):
 		corp = GC.getCorporationInfo(eCorp)
 		bonuses = set()
-		for i in range(GC.getNUM_CORPORATION_PREREQ_BONUSES()):
-			eBonus = corp.getPrereqBonus(i)
-			if eBonus != -1:
-				bonuses.add(eBonus)
+		for eBonus in corp.getPrereqBonuses():
+			bonuses.add(eBonus)
 		CORP_BONUSES[eCorp] = bonuses
 
 def getTradeableBonuses(fromPlayer, eToPlayer):

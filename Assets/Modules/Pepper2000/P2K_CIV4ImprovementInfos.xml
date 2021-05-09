@@ -47,7 +47,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<iUniqueRange>2</iUniqueRange>
-			<ImprovementPillage>IMPROVEMENT_SPACE_STATION_LV1</ImprovementPillage>			
+			<ImprovementPillage>IMPROVEMENT_SPACE_STATION_LV1</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_SPACE_STATION_LV3</ImprovementUpgrade>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -916,15 +916,15 @@
 					<TerrainType>TERRAIN_JUPITER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-			<TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_SATURN</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-			<TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_URANUS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-			<TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_NEPTUNE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
@@ -1297,7 +1297,7 @@
 			<iUniqueRange>2</iUniqueRange>
 			<iPillageGold>200</iPillageGold>
 			<TechYieldChanges>
-			<TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_ARTIFICIAL_STARS</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
@@ -2676,70 +2676,6 @@
 				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementUpgrade>IMPROVEMENT_LUNAR_MINE</ImprovementUpgrade>
-		</ImprovementInfo>
-		<ImprovementInfo>
-			<Type>IMPROVEMENT_CRASHED_PROBE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_CRASHED_PROBE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_CRASHED_PROBE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_CRASHED_PROBE</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
-			<bGoody>1</bGoody>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iTilesPerGoody>40</iTilesPerGoody>
-			<iGoodyRange>3</iGoodyRange>
-			<iAirBombDefense>-1</iAirBombDefense>
-			<TerrainMakesValids>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARTIAN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARTIAN_PERMAFROST</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARTIAN_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARTIAN_DUNES</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARTIAN_BARREN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARTIAN_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARTIAN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-			</TerrainMakesValids>
-			<WorldSoundscapeAudioScript>ASSS_FOREST_SELECT_AMB</WorldSoundscapeAudioScript>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_SMALL</Type>

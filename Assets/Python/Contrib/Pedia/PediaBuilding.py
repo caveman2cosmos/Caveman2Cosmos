@@ -365,12 +365,8 @@ class PediaBuilding:
 		iType = CvTheBuildingInfo.getFoundsCorporation()
 		if iType != -1:
 			CvCorporationInfo = GC.getCorporationInfo(iType)
-			nOr = 0
-			while True:
-				if CvCorporationInfo.getPrereqBonus(nOr) > -1:
-					nOr += 1
-				else:
-					break
+			lPrereqBonuses = CvCorporationInfo.getPrereqBonuses()
+			nOr = len(lPrereqBonuses)
 			if bPlus:
 				if nOr:
 					screen.attachLabel(panelName, "", szAnd)
@@ -379,7 +375,7 @@ class PediaBuilding:
 			if nOr > 1:
 				screen.attachLabel(panelName, "", szBracketL)
 			for i in range(nOr):
-				iType = CvCorporationInfo.getPrereqBonus(i)
+				iType = lPrereqBonuses[i]
 				if i != 0:
 					screen.attachLabel(panelName, "", szOr)
 				screen.attachImageButton(panelName, szChild + str(iType), GC.getBonusInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)

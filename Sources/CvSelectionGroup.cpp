@@ -137,7 +137,7 @@ bool CvSelectionGroup::sentryAlert() const
 
 	if (NULL != pHeadUnit)
 	{
-		foreach_(const CvPlot* pPlot, CvPlot::rect(pHeadUnit->getX(), pHeadUnit->getY(), iMaxRange, iMaxRange))
+		foreach_(const CvPlot* pPlot, pHeadUnit->plot()->rect(iMaxRange, iMaxRange))
 		{
 			if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION)
 			&& pPlot->isVisibleEnemyUnit(pHeadUnit))
@@ -173,7 +173,7 @@ bool CvSelectionGroup::sentryAlertSameDomainType() const
 	const CvUnit* pHeadUnit = ((iIndex == -1) ? NULL : getUnitAt(iIndex));
 	if (NULL != pHeadUnit)
 	{
-		foreach_(const CvPlot* pPlot, CvPlot::rect(pHeadUnit->getX(), pHeadUnit->getY(), iMaxRange, iMaxRange))
+		foreach_(const CvPlot* pPlot, pHeadUnit->plot()->rect(iMaxRange, iMaxRange))
 		{
 			if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION))
 			{
@@ -2863,7 +2863,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 			break;
 
 		case INTERFACEMODE_AIRBOMB:
-			if (pLoopUnit->canAirBomb(pLoopUnit->plot()))
+			if (pLoopUnit->canAirBomb())
 			{
 				return true;
 			}
@@ -2895,7 +2895,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 
 		// Dale - AB: Bombing
 		case INTERFACEMODE_AIRBOMB1:
-			if (pLoopUnit->canAirBomb1(pLoopUnit->plot()))
+			if (pLoopUnit->canAirBomb1())
 			{
 				return true;
 			}
@@ -5887,8 +5887,9 @@ namespace {
 	}
 }
 
-// split this group into two new groups, one of iSplitSize, the other the remaining units
-// split up each unit AI type as evenly as possible
+// split this group into two groups, one of iSplitSize, the other the remaining units
+// this group can survive this function as the remainder group.
+// split up each unit AI type as evenly as possible, mirrors origninal group composition.
 CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadUnit, CvSelectionGroup** ppOtherGroup)
 {
 	if (iSplitSize <= 0)
@@ -5910,7 +5911,7 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 		return NULL;
 	}
 
-	UnitAITypes eOldHeadAI = pOldHeadUnit->AI_getUnitAIType();
+	const UnitAITypes eOldHeadAI = pOldHeadUnit->AI_getUnitAIType();
 
 	// if pNewHeadUnit NULL, then we will use our current head to head the new split group of target size
 	if (pNewHeadUnit == NULL)
@@ -5918,19 +5919,10 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 		pNewHeadUnit = pOldHeadUnit;
 	}
 
-	// the AI of the new head (the remainder will get the AI of the old head)
-	// UnitAITypes eNewHeadAI = pNewHeadUnit->AI_getUnitAIType();
-
 	// pRemainderHeadUnit is the head unit of the group that contains the remainder of units
 	CvUnit* pRemainderHeadUnit = NULL;
 
-	// if the new head is not the old head, then make the old head the remainder head
-	bool bSplitingHead = (pOldHeadUnit == pNewHeadUnit);
-	if (!bSplitingHead)
-	{
-		pRemainderHeadUnit = pOldHeadUnit;
-	}
-	else
+	if (pOldHeadUnit == pNewHeadUnit)
 	{
 		// try to find remainder head with same AI as head, if we cannot find one, we will leave the remaining units in this group
 		unit_iterator fitr = std::find_if(beginUnits(), endUnits(), bst::bind(isValidHeadUnit, pNewHeadUnit, eOldHeadAI, _1));
@@ -5939,14 +5931,17 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 			pRemainderHeadUnit = *fitr;
 		}
 	}
+	else // if the new head is not the old head, then make the old head the remainder head
+	{
+		pRemainderHeadUnit = pOldHeadUnit;
+	}
 
-	CvSelectionGroup* pSplitGroup = NULL;
 	// Default to leaving remaining units in this group
 	CvSelectionGroup* pRemainderGroup = this;
 
 	// make the new group for the new head
 	pNewHeadUnit->joinGroup(NULL);
-	pSplitGroup = pNewHeadUnit->getGroup();
+	CvSelectionGroup* pSplitGroup = pNewHeadUnit->getGroup();
 	FAssertMsg(pSplitGroup != NULL, "join resulted in NULL group");
 
 	// make a new group for the remainder, if non-null
@@ -5961,42 +5956,53 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 	// split units by AI type
 	typedef stdext::hash_map< UnitAITypes, std::vector<CvUnit*> > UnitGrouping;
 	UnitGrouping unitGroups;
-	foreach_ (CvUnit* unit, units())
+	foreach_(CvUnit* unit, units())
 	{
 		unitGroups[unit->AI_getUnitAIType()].push_back(unit);
 	}
 
-	int sourceGroupSize = getNumUnits();
+	const int sourceGroupSize = getNumUnits();
 
-	// interleave units into a new list
-	foreach_ (const std::vector<CvUnit*>& unitsOfType, unitGroups | map_values)
+	// Interlace units into the two groups, new group takes its fair share from each AI type proportionally to orignial group
+	int iUnitsSplitOffCount = 1;
+	foreach_(const std::vector<CvUnit*>& unitsOfType, unitGroups | map_values)
 	{
-		//const std::vector<CvUnit*>& unitsOfType = itr->second;
-		// We want to take a proportion of the units equal to the proportional size of iSplitSize relative to the original group.
-		// i.e. we going to take our fair share (+1 so we don't suffer rounding errors)
-		int countForThisAIType = std::min(1 + iSplitSize * unitsOfType.size() / sourceGroupSize, unitsOfType.size());
-		// Make sure we don't exceed the requested units for the split group (this might not really matter)
-		countForThisAIType = std::min(countForThisAIType, iSplitSize - pSplitGroup->getNumUnits());
 		int idx = 0;
-		for (; idx < countForThisAIType; ++idx)
+		if (iSplitSize - iUnitsSplitOffCount > 0)
 		{
-			unitsOfType[idx]->joinGroup(pSplitGroup);
+			// We want to take a proportion of the units equal to the proportional size of iSplitSize relative to the original group.
+			// i.e. we going to take our fair share (+1 so we don't suffer rounding errors)
+			int countForThisAIType = std::min(1 + iSplitSize * unitsOfType.size() / sourceGroupSize, unitsOfType.size());
+			// Make sure we don't exceed the requested units for the split group (this might not really matter)
+			countForThisAIType = std::min(countForThisAIType, iSplitSize - iUnitsSplitOffCount);
+
+			for (; idx < countForThisAIType; ++idx)
+			{
+				unitsOfType[idx]->joinGroup(pSplitGroup);
+				iUnitsSplitOffCount++;
+			}
 		}
-		for (; idx < static_cast<int>(unitsOfType.size()); ++idx)
+		if (pRemainderGroup != this) // Toffer, no point for a unit in this group to join this group...
 		{
-			unitsOfType[idx]->joinGroup(pRemainderGroup);
+			for (; idx < static_cast<int>(unitsOfType.size()); ++idx)
+			{
+				unitsOfType[idx]->joinGroup(pRemainderGroup);
+			}
+		}
+		else if (iSplitSize <= iUnitsSplitOffCount)
+		{
+			break; // Toffer - Job done.
 		}
 	}
 
-	FAssertMsg(getNumUnits() == 0, "Source group in split action wasn't fully emptied");
+	FAssertMsg(pRemainderGroup == this || getNumUnits() == 0, "Source group in split action wasn't fully emptied");
 	FAssertMsg(pSplitGroup->getNumUnits() == iSplitSize, "New split group didn't meet requested size");
-	FAssertMsg(!pRemainderGroup || pRemainderGroup->getNumUnits() == sourceGroupSize - iSplitSize, "New remainder group didn't meet expected size");
+	FAssertMsg(pRemainderGroup->getNumUnits() == 1 + sourceGroupSize - iSplitSize, "New remainder group didn't meet expected size");
 
 	if (ppOtherGroup != NULL)
 	{
 		*ppOtherGroup = pRemainderGroup;
 	}
-
 	return pSplitGroup;
 }
 
