@@ -3,7 +3,7 @@ from os import path, mkdir
 
 def init():
 	import sys
-	global userDir, modDir, userSettingsDir
+	global userDir, modDir, userSettingsDir, dirBtS
 
 	#############################################
 	def __getRegValue(subkey, name):
