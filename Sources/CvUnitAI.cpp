@@ -2278,10 +2278,10 @@ void CvUnitAI::AI_workerMove()
 	}
 	// Super Forts end
 
-	if (AI_StrategicForts())
-	{
-		return;
-	}
+	//if (AI_StrategicForts())
+	//{
+	//	return;
+	//}
 
 	if (bCanRoute && AI_routeTerritory())
 	{
@@ -22312,10 +22312,10 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 {
 	PROFILE_FUNC();
 
-	if (AI_StrategicForts())
-	{
-		return true;
-	}
+	//if (AI_StrategicForts())
+	//{
+	//	return true;
+	//}
 	BuildTypes eBestBuild = NO_BUILD;
 	CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
