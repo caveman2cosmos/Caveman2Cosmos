@@ -5,7 +5,7 @@
 			<option id="Enabled" key="Enabled" type="boolean" default="True"/>
 			<option id="UseAdvanced" key="UseAdvanced" type="boolean" default="False" get="isAdvanced" set="setAdvanced"/>
 			<option id="Default" key="Default" type="string" default="^ut^ ^cnt[n][u]^ (^ct^)"/>
-			<accessor get="getByCombatType" set="setByCombatType" args="combatType" id="Combat_%s"/>
+			<!--accessor get="getByCombatType" set="setByCombatType" args="combatType" id="Combat_%s"/-->
 		</section>
 	</options>
 	<options id="AdvUnitNaming" file="Adv Unit Naming.ini">

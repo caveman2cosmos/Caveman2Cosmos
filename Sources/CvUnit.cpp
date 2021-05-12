@@ -12539,7 +12539,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 {
 	PROFILE_FUNC();
 
-	if (eUnit == NO_UNIT || !upgradeAvailable(m_eUnitType, eUnit) || !GET_PLAYER(getOwner()).canTrain(eUnit))
+	if (eUnit == NO_UNIT || !upgradeAvailable(m_eUnitType, eUnit) || !GET_PLAYER(getOwner()).canTrain(eUnit, false, false, true))
 	{
 		return NULL;
 	}
