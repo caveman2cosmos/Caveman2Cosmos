@@ -19,9 +19,9 @@ class WoodlandCycle:
 		self.TERRAIN_LUSH = GC.getInfoTypeForString('TERRAIN_LUSH')
 		self.FEATURE_FOREST_BURNT = GC.getInfoTypeForString('FEATURE_FOREST_BURNT')
 		self.FEATURE_FOREST_YOUNG = GC.getInfoTypeForString('FEATURE_FOREST_YOUNG')
-		self.FEATURE_FOREST = GC.getFEATURE_FOREST()
+		self.FEATURE_FOREST = GC.getInfoTypeForString('FEATURE_FOREST')
 		self.FEATURE_FOREST_ANCIENT = GC.getInfoTypeForString('FEATURE_FOREST_ANCIENT')
-		self.FEATURE_JUNGLE = GC.getFEATURE_JUNGLE()
+		self.FEATURE_JUNGLE = GC.getInfoTypeForString('FEATURE_JUNGLE')
 		self.FEATURE_BAMBOO = GC.getInfoTypeForString('FEATURE_BAMBOO')
 
 	def onGameStart(self, argsList): self.cache()
