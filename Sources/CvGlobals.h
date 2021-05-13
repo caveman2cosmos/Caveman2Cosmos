@@ -703,7 +703,14 @@ public:
 	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(DECLARE_GET_METHOD)
 	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
 
-	DO_FOR_EACH_INFO_TYPE(DECLARE_GET_METHOD)
+#define DECLARE_GET_METHOD_WITH_FASSERT(dataType, VAR) \
+	dataType get##VAR() const \
+	{ \
+		FAssert(m_##VAR != -1); \
+		return m_##VAR; \
+	}
+
+	DO_FOR_EACH_INFO_TYPE(DECLARE_GET_METHOD_WITH_FASSERT)
 
 #define DECLARE_IS_METHOD(dataType, VAR) \
 	dataType is##VAR() const { return m_##VAR; }
