@@ -4924,7 +4924,6 @@ class MapPrint:
 	__mapText      = ""
 	__mapLegend    = ""
 	__diffMaps     = {}
-	manaDict       = {}				# for mana boni; for use by 'CrystallMana' module or 'WildMana' mod
 
 	# initialize dictionaries
 	def initialize( self ):
