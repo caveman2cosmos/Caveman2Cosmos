@@ -23,10 +23,10 @@ def init():
 		GC.getInfoTypeForString('FEATURE_CORAL_REEF_LIGHTHOUSE')
 	]
 	aTreeList = [
-		GC.getFEATURE_FOREST(),
+		GC.getInfoTypeForString('FEATURE_FOREST'),
 		GC.getInfoTypeForString('FEATURE_FOREST_YOUNG'),
 		GC.getInfoTypeForString('FEATURE_FOREST_ANCIENT'),
-		GC.getFEATURE_JUNGLE(),
+		GC.getInfoTypeForString('FEATURE_JUNGLE'),
 		GC.getInfoTypeForString('FEATURE_BAMBOO')
 	]
 	giMilInstCivic = GC.getInfoTypeForString("CIVIC_MARTIAL")
