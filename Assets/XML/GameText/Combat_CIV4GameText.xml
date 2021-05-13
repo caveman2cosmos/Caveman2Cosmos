@@ -8144,20 +8144,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ERA_ATOMIC</Tag>
-		<English>Era (Modern)</English>
-		<French>
-			<Text>(Ère) Moderne</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>(Epoche) Moderne</German>
-		<Spanish>
-			<Text>Edad Moderna:Unidades de la Edad Moderna</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Era (Współczesna)</Polish>
-		<Russian>Ýðà(Ìîäåðí)</Russian>
+		<English>Era (Atomic)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ERA_CLASSICAL</Tag>

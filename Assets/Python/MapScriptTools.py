@@ -96,7 +96,7 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	# define known terrains
 	etOcean		= GC.getInfoTypeForString('TERRAIN_OCEAN')
 	etCoast		= GC.getInfoTypeForString('TERRAIN_COAST')
-	etDesert	= GC.getTERRAIN_DESERT()	# FlatArid, RockyArid
+	etDesert	= GC.getInfoTypeForString('TERRAIN_DESERT')	# FlatArid, RockyArid
 	etPlains	= GC.getInfoTypeForString('TERRAIN_PLAINS')	# FlatMoist, RockyMoist
 	etGrass 	= GC.getInfoTypeForString('TERRAIN_GRASSLAND')	# FlatRainy, RockyRainy
 	etTundra	= GC.getInfoTypeForString('TERRAIN_TAIGA')	# RockyMoist, FlatPolar
@@ -110,8 +110,8 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 
 	# define known features
 	efIce			= GC.getInfoTypeForString('FEATURE_ICE')
-	efForest		= GC.getFEATURE_FOREST()
-	efJungle		= GC.getFEATURE_JUNGLE()
+	efForest		= GC.getInfoTypeForString('FEATURE_FOREST')
+	efJungle		= GC.getInfoTypeForString('FEATURE_JUNGLE')
 	efKelp			= GC.getInfoTypeForString('FEATURE_KELP') # coast
 
 	################################
@@ -4924,7 +4924,6 @@ class MapPrint:
 	__mapText      = ""
 	__mapLegend    = ""
 	__diffMaps     = {}
-	manaDict       = {}				# for mana boni; for use by 'CrystallMana' module or 'WildMana' mod
 
 	# initialize dictionaries
 	def initialize( self ):
