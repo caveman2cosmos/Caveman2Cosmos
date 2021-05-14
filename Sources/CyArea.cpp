@@ -3,13 +3,18 @@
 #include "CyArea.h"
 
 //
-// Python wrapper class for CvArea 
+// Python wrapper class for CvArea
 //
 
-CyArea::CyArea() : m_pArea(NULL) {}
+CyArea::CyArea() : m_pArea(NULL)
+{
+	FErrorMsg("Error");
+}
 
-CyArea::CyArea(CvArea* pArea) : m_pArea(pArea) {}
-
+CyArea::CyArea(CvArea* pArea) : m_pArea(pArea)
+{
+	FAssert(pArea != NULL);
+}
 
 int CyArea::calculateTotalBestNatureYield() const
 {
