@@ -1828,7 +1828,6 @@
 		<element type="PropertyInfo" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="bDefault" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bCanChangeMidGame" content="textOnly" dt:type="boolean"/>
 	<ElementType name="GameOptionInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -1841,7 +1840,6 @@
 		<element type="GenericCategory" minOccurs="0"/>
 		<element type="bDefault" minOccurs="0"/>
 		<element type="bVisible" minOccurs="0"/>
-		<element type="bCanChangeMidGame" minOccurs="0"/>
 		<element type="EnforcesGameOptionOnTypes" minOccurs="0"/>
 		<element type="EnforcesGameOptionOffTypes" minOccurs="0"/>
 	</ElementType>
