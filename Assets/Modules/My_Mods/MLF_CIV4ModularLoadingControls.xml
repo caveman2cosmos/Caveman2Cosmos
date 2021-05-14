@@ -10,10 +10,6 @@
 			<Description>Bunch of various projects</Description>
 			<Modules>
 				<Module>
-					<Directory>Bead_Toy_Pottery</Directory>
-					<bLoad>1</bLoad> <!-- Later era resource producers require earlier era producers - early ones don't obsolete. -->
-				</Module>
-				<Module>
 					<Directory>Extinction</Directory>
 					<bLoad>0</bLoad> <!-- WIP module -->
 				</Module>
