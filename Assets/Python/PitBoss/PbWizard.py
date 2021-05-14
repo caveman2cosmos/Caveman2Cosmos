@@ -10,7 +10,6 @@ from CvPythonExtensions import *
 import wx
 import wx.wizard
 import wx.lib.scrolledpanel
-import time
 import string
 
 bPublic = True

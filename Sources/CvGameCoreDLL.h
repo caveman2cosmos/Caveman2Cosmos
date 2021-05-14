@@ -138,6 +138,8 @@ DECLARE_FLAGS(ECacheAccess::flags);
 //
 // Feature macros
 //
+#define OUTBREAKS_AND_AFFLICTIONS
+// #define BATTLEWORN
 // #define STRENGTH_IN_NUMBERS
 // #define GLOBAL_WARMING
 // #define THE_GREAT_WALL
@@ -181,11 +183,7 @@ int64_t intSqrt64(const uint64_t iValue);
 int intPow(const int x, const int p);
 int64_t intPow64(const int64_t x, const int p);
 
-#define	MEMORY_TRACK()
-#define MEMORY_TRACK_EXEMPT()
-#define MEMORY_TRACE_FUNCTION()
-#define MEMORY_TRACK_NAME(x)
-
+const std::string getModDir();
 //
 // Python
 //

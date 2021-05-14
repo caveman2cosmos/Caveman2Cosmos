@@ -689,9 +689,8 @@ public:
 	static void CopyNonDefaultsFromVector(std::vector<T>& target, const std::vector<T>& source)
 	{
 		foreach_(const T& it, source)
-		//for (typename std::vector<T>::const_iterator it = source.begin(), end = source.end(); it != end; ++it)
 		{
-			if (it > -1 && !std::contains(target, it))
+			if (it > -1 && !algo::contains(target, it))
 			{
 				target.push_back(it);
 			}

@@ -33,7 +33,7 @@ from CvMapGeneratorUtil import TerrainGenerator
 from CvMapGeneratorUtil import FeatureGenerator
 import pickle
 from math import pi
-import sys, os, inspect, _winreg
+import os, _winreg
 
 ##########################################################################
 #stuff the user may want to configure
@@ -3612,18 +3612,12 @@ def beforeGeneration():
 		if selection_names_and_values[i][0] != "Wrap:":
 			cachedMenuChoices[i] = 0
 
-def afterGeneration():
-	OutputMessage("Python: SmartMap: Step 6B afterGeneration Post generation cleanup")
-	checkForBadPlots()
-
 #this helper wraps the NiTextOut and also prints to the hapdebugger
 def OutputMessage(message):
 	NiTextOut(message)
 	print message
 
-import os
 import os.path
-import _winreg
 
 def regRead(registry, path, field):
 	pathKey = _winreg.OpenKey(registry, path)
@@ -5574,6 +5568,7 @@ class OasisFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 				pPlot.setFeatureType(self.featureForest, 0)
 
 def afterGeneration():
+	checkForBadPlots()
 	CvMapGeneratorUtil.placeC2CBonuses()
 
 # 9.0

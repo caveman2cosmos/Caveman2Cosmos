@@ -36,7 +36,6 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_HELLSMOUTH_DOG</Description>
 			<Civilopedia>TXT_KEY_UNIT_HELLSMOUTH_DOG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HELLSMOUTH_DOG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
@@ -144,7 +143,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_UNDEAD_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UNDEAD_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<UnitUpgrades>
@@ -420,7 +418,6 @@
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VOODOO_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_VOODOO_MISSIONARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VOODOO_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>

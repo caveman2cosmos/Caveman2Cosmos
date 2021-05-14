@@ -3,12 +3,14 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Improvement -->
 <Civ4ImprovementInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<ImprovementInfos>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MACHU_PICCHU</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_MACHU_PICCHU</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_BUILDING_MACHU_PICCHU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MACHU_PICCHU_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MACHU_PICCHU</ArtDefineTag>
@@ -20,12 +22,12 @@
 			<bPermanent>1</bPermanent>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
-                    <TerrainMakesValids>
-                        <TerrainMakesValid>
-                            <TerrainType>TERRAIN_PEAK</TerrainType>
-                            <bMakesValid>1</bMakesValid>
-                        </TerrainMakesValid>
-                    </TerrainMakesValids>
+			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_PEAK</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+			</TerrainMakesValids>
 		</ImprovementInfo>
 	</ImprovementInfos>
 </Civ4ImprovementInfos>

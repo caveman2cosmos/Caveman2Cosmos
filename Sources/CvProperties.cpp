@@ -224,7 +224,7 @@ void CvProperties::changeValueByProperty(PropertyTypes eProp, int iChange)
 }
 
 // helper function for propagating change
-void callChangeValueByProperty(CvGameObject* pObject, PropertyTypes eProp, int iChange)
+void callChangeValueByProperty(const CvGameObject* pObject, PropertyTypes eProp, int iChange)
 {
 	pObject->getProperties()->changeValueByProperty(eProp, iChange);
 }

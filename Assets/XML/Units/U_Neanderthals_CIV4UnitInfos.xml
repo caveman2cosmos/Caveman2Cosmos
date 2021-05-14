@@ -26,7 +26,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_NEANDERTHAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NEANDERTHAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -89,7 +88,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -164,7 +162,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_BRUTE</Description>
 			<Civilopedia>TXT_KEY_UNIT_BRUTE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BRUTE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -260,7 +257,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_THROWER</Description>
 			<Civilopedia>TXT_KEY_UNIT_STONE_THROWER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_THROWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
@@ -371,7 +367,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_SLINGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SLINGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SLINGER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_THROWING</Combat>
@@ -478,7 +473,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WATCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WATCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WATCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
@@ -607,7 +601,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_ENFORCER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ENFORCERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ENFORCERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
@@ -738,7 +731,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WANDERER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WANDERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WANDERER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
@@ -830,7 +822,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_GATHERER</Description>
 			<Civilopedia>TXT_KEY_UNIT_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GATHERER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
@@ -979,7 +970,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WISE_WOMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_WISE_WOMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WISE_WOMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
@@ -1091,7 +1081,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_HEALER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEALER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HEALER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
@@ -1199,7 +1188,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_SHEPHERD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHEPHERD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SHEPHERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
@@ -1321,7 +1309,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRAINED_DOG</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARDOG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRAINEDDOG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1425,7 +1412,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRIBAL_GUARDIAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Domain>DOMAIN_IMMOBILE</Domain>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
@@ -1498,7 +1484,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_KAYAK</Description>
 			<Civilopedia>TXT_KEY_UNIT_KAYAK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KAYAK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
@@ -1618,7 +1603,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WAR_CANOE</Description>
 			<Civilopedia>TXT_KEY_UNIT_WAR_CANOE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WAR_CANOE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
@@ -1727,7 +1711,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_CANOE</Description>
 			<Civilopedia>TXT_KEY_UNIT_CANOE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CANOE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
@@ -1840,7 +1823,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_RAFT</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAFT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RAFT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
@@ -1962,7 +1944,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WORKBOAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
@@ -2098,7 +2079,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_LOG_RAM</Description>
 			<Civilopedia>TXT_KEY_UNIT_LOG_RAM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LOG_RAM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -2204,7 +2184,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_ELEPHANT_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ELEPHANT_RIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ELEPHANT_RIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
@@ -2328,7 +2307,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_SPEARMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OBSIDIAN_SPEARMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -2430,7 +2408,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_STONE_SPEARMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_SPEARMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -2536,7 +2513,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WOODEN_SPEARMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_WOODEN_SPEARMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WOODEN_SPEARMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -2636,7 +2612,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_SWORDSMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OBSIDIAN_SWORDSMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -2736,7 +2711,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_AXEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OBSIDIAN_AXEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -2842,7 +2816,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_STONE_AXEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_AXEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -2951,7 +2924,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_MACEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OBSIDIAN_MACEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -3053,7 +3025,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_MACEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_STONE_MACEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_MACEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -3164,7 +3135,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_HUNTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HUNTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -3270,7 +3240,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRACKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HUNTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -3370,7 +3339,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_CHASER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHASER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHASER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -3453,7 +3421,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_SCOUT</Description>
 			<Civilopedia>TXT_KEY_UNIT_SCOUT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SCOUT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
@@ -3559,113 +3526,10 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CAPTIVE_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPTIVE_MILITARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CAPTIVE_MILITARY_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_CAPTIVE_MILITARY_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<Builds>
-				<Build>
-					<BuildType>BUILD_TRAIL_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FARM_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MINE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_QUARRY_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_CAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COTTAGE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HAMLET_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VILLAGE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TOWN_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DRAIN_SWAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORMATION_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERJACK_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKING_CAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKING_CAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-			</Builds>
 			<Buildings>
 				<BuildingType>BUILDING_WV_SLAVERY</BuildingType>
 				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
@@ -3684,7 +3548,6 @@
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<bNoRevealMap>1</bNoRevealMap>
-			<iWorkRate>350</iWorkRate>
 			<iBaseHurry>20</iBaseHurry>
 			<iHurryMultiplier>2</iHurryMultiplier>
 			<iAsset>1</iAsset>
@@ -3890,5 +3753,5 @@
 				</Action>
 			</Actions>
 		</UnitInfo>
-    </UnitInfos>
+	</UnitInfos>
 </Civ4UnitInfos>

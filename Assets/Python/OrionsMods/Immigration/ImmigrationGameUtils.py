@@ -23,12 +23,3 @@ class ImmigrationGameUtils:
 					Immigration.doImmigrantPlacementAI(CyUnit, CyCity, CyPlayer, iPlayer, True)
 					return True
 		return False
-
-
-
-
-
-
-
-
-

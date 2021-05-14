@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- ReModified by StrategyOnly -->
-	<!-- -->
-	<!-- Improvement -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- ReModified by StrategyOnly -->
+<!-- Improvement -->
 <Civ4ImprovementInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<ImprovementInfos>
 		<!-- Meosoamerican Temple -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MESOAMERICAN_TEMPLE</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_MESOAMERICAN_TEMPLE</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_MESOAMERICAN_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ANCIENT_TEMPLE</ArtDefineTag>
@@ -99,6 +101,9 @@
 		<!-- Stone Circle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_STONE_CIRCLE</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_STONE_CIRCLE</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_STONE_CIRCLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONEHENGE</ArtDefineTag>
@@ -188,6 +193,9 @@
 		<!-- Pyramids -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PYRAMIDS</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_PYRAMIDS</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_PYRAMIDS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PYRAMIDS</ArtDefineTag>
@@ -273,6 +281,9 @@
 		<!-- Asian Temple -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_ASIAN_TEMPLE</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_ASIAN_TEMPLE</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_ASIAN_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ASIAN_TEMPLE</ArtDefineTag>
@@ -354,6 +365,9 @@
 		<!-- Ziggurat -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_ZIGGURAT</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_ZIGGURAT</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_ZIGGURAT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ZIGGARUT</ArtDefineTag>

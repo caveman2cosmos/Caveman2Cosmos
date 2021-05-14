@@ -5,7 +5,6 @@
 			<Type>BUILDING_PALEOLITHIC_BIRD_STORY</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_BIRD_STORY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -30,18 +29,17 @@
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_BIRD_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_BIRD_STORIES</ArtDefineTag>
 			<MapCategoryTypes>
@@ -67,18 +65,17 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_BIRD_STORY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -96,18 +93,17 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_CAT_STORY</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_CAT_STORY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -132,18 +128,17 @@
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_CAT_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_CAT_STORIES</ArtDefineTag>
 			<MapCategoryTypes>
@@ -169,18 +164,17 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_CAT_STORY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -198,18 +192,17 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_DOG_STORY</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_DOG_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_DOG_STORY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -233,29 +226,28 @@
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
-			     <PropertySource>
-				    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-				    <iAmountPerTurn>-1</iAmountPerTurn>
-				    <Active>
-					<Has>
-			   			<GOMType>GOM_TECH</GOMType>
-			   			<ID>TECH_PALEONTOLOGY</ID>
-					</Has>
-				</Active>
-    			</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_PALEONTOLOGY</ID>
+						</Has>
+					</Active>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_DOG_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_DOG_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_DOG_STORIES</ArtDefineTag>
 			<MapCategoryTypes>
@@ -280,18 +272,17 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_DOG_STORY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -308,29 +299,28 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
-			     <PropertySource>
-				    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-				    <iAmountPerTurn>-1</iAmountPerTurn>
-				    <Active>
-					<Has>
-			   			<GOMType>GOM_TECH</GOMType>
-			   			<ID>TECH_PALEONTOLOGY</ID>
-					</Has>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_PALEONTOLOGY</ID>
+						</Has>
 					</Active>
-    			</PropertySource>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MARSUPIAL_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
@@ -355,18 +345,17 @@
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			         <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
@@ -392,18 +381,17 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MARSUPIAL_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
@@ -421,11 +409,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			         <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 	</BuildingInfos>

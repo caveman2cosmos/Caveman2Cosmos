@@ -7,7 +7,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DIGITAL_LIFESTYLE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -36,7 +35,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DIGITAL_IDENTITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIGITAL_IDENTITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DIGITAL_IDENTITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DIGITAL_IDENTITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -60,7 +58,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GENE_EDITING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GENE_EDITING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GENE_EDITING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GENE_EDITING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -83,7 +80,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DESIGNER_BABIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNER_BABIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DESIGNER_BABIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESIGNER_BABIES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -103,7 +99,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COGNITIVE_ENHANCEMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -124,7 +119,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NOVEL_SENSES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NOVEL_SENSES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NOVEL_SENSES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NOVEL_SENSES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -150,14 +144,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ENLIGHTENMENT</Type>
+			<Type>BUILDING_ENLIGHTENED</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ENLIGHTENMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ENLIGHTENMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ENLIGHTENMENT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ENLIGHTENED</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ENLIGHTENED_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ENLIGHTENMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENLIGHTENED</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -186,7 +179,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_LUNARIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNARIS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LUNARIS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LUNARIS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -224,7 +216,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MARTIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -272,7 +263,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ROBOTIC_BODY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROBOTIC_BODY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ROBOTIC_BODY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ROBOTIC_BODY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -302,7 +292,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INDEFINITE_LIFESPAN</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -320,14 +309,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZERO_G</Type>
+			<Type>BUILDING_ZERO_G_ADAPTATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ZERO_G</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZERO_G_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ZERO_G_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ZERO_G_ADAPTATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ZERO_G_ADAPTATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZERO_G</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ZERO_G_ADAPTATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -352,7 +340,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_WINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WINGS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WINGS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WINGS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -379,7 +366,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GILLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GILLS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GILLS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GILLS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -406,7 +392,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_HEAT_TOLERANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HEAT_TOLERANCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HEAT_TOLERANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HEAT_TOLERANCE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -433,7 +418,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_COLD_TOLERANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COLD_TOLERANCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COLD_TOLERANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COLD_TOLERANCE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -465,7 +449,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_RADIATION_TOLERANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RADIATION_TOLERANCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RADIATION_TOLERANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RADIATION_TOLERANCE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -492,7 +475,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COLLECTIVE_CONSCIOUSNESS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -522,14 +504,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NANOMORPHICS_BEINGS</Type>
+			<Type>BUILDING_NANOMORPHISM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_NANOMORPHISM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NANOMORPHISM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NANOMORPHICS_BEINGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NANOMORPHISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -558,14 +539,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INFORMATION_BEING</Type>
+			<Type>BUILDING_INFORMATION_BASED</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_INFORMATION_BEING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INFORMATION_BEING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_INFORMATION_BEING_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_INFORMATION_BASED</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INFORMATION_BASED_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INFORMATION_BEING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INFORMATION_BASED</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -590,7 +570,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_TRANSAPIENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSAPIENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TRANSAPIENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRANSAPIENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -615,14 +594,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HUMAN_ALIEN_HYBRID</Type>
+			<Type>BUILDING_ALIEN_HYBRID</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ALIEN_HYBRID</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ALIEN_HYBRID_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_ALIEN_HYBRID</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ALIEN_HYBRID</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -674,14 +652,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_IMMORTAL_BEING</Type>
+			<Type>BUILDING_IMMORTAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_IMMORTAL_BEING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_IMMORTAL_BEING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_IMMORTAL_BEING_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_IMMORTAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_IMMORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_IMMORTAL_BEING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_IMMORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -712,14 +689,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PURE_INFORMATION_BEING</Type>
+			<Type>BUILDING_PURE_ENERGY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_PURE_INFORMATION_BEING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PURE_INFORMATION_BEING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PURE_INFORMATION_BEING_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_PURE_ENERGY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PURE_ENERGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PURE_INFORMATION_BEING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PURE_ENERGY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -744,14 +720,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HIGH_DIMENSIONAL_BEING</Type>
+			<Type>BUILDING_HIGH_DIMENSIONAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_HIGH_DIMENSIONAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HIGH_DIMENSIONAL_BEING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HIGH_DIMENSIONAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -796,7 +771,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ARCHAILECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARCHAILECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ARCHAILECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARCHAILECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -822,14 +796,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NONSPATIAL_BEINGS</Type>
+			<Type>BUILDING_NONSPATIAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_NONSPATIAL_BEINGS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NONSPATIAL_BEINGS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NONSPATIAL_BEINGS_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_NONSPATIAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NONSPATIAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NONSPATIAL_BEINGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NONSPATIAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -849,14 +822,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ATEMPORAL_BEINGS</Type>
+			<Type>BUILDING_ATEMPORAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ATEMPORAL_BEINGS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ATEMPORAL_BEINGS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ATEMPORAL_BEINGS_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ATEMPORAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ATEMPORAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ATEMPORAL_BEINGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ATEMPORAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -874,7 +846,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_METAPHYSICAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAPHYSICAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_METAPHYSICAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METAPHYSICAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -921,7 +892,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CRISPR_CAS9_BACTERIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRISPR_CAS9_BACTERIA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CRISPR_CAS9_BACTERIA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CRISPR_CAS9_BACTERIA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -948,7 +918,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_C4_CROPS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_C4_CROPS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_C4_CROPS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_C4_CROPS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -978,7 +947,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLUORESCENT_BACTERIA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1008,7 +976,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_STRUCTURAL_BACTERIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STRUCTURAL_BACTERIA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_STRUCTURAL_BACTERIA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STRUCTURAL_BACTERIA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1031,7 +998,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NONPHOTOSYNTHETIC_PLANTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NONPHOTOSYNTHETIC_PLANTS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NONPHOTOSYNTHETIC_PLANTS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NONPHOTOSYNTHETIC_PLANTS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1066,7 +1032,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SILICON_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SILICON_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SILICON_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SILICON_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1130,7 +1095,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_HYDROGEN_PEROXIDE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYDROGEN_PEROXIDE_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYDROGEN_PEROXIDE_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYDROGEN_PEROXIDE_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1160,7 +1124,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SULFURIC_ACID_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SULFURIC_ACID_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SULFURIC_ACID_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SULFURIC_ACID_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1187,7 +1150,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_METAL_OXIDE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAL_OXIDE_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_METAL_OXIDE_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METAL_OXIDE_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1224,7 +1186,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_HYDROGEN_SULFIDE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYDROGEN_SULFIDE_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HYDROGEN_SULFIDE_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYDROGEN_SULFIDE_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1263,7 +1224,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_AMMONIA_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AMMONIA_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AMMONIA_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMMONIA_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1305,7 +1265,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_METHANE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METHANE_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_METHANE_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METHANE_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1338,7 +1297,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_LIQUID_NITROGEN_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LIQUID_NITROGEN_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LIQUID_NITROGEN_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LIQUID_NITROGEN_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1378,7 +1336,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_JUPITER_CLOUD_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JUPITER_CLOUD_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JUPITER_CLOUD_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JUPITER_CLOUD_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1405,7 +1362,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SILICON_DIOXIDE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SILICON_DIOXIDE_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SILICON_DIOXIDE_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SILICON_DIOXIDE_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1453,7 +1409,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SUPERCRITICAL_CO2_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SUPERCRITICAL_CO2_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SUPERCRITICAL_CO2_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SUPERCRITICAL_CO2_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1500,7 +1455,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_PARTICLE_LIFEFORMS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PARTICLE_LIFEFORMS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PARTICLE_LIFEFORMS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PARTICLE_LIFEFORMS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1527,7 +1481,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DUST_PLASMA_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DUST_PLASMA_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DUST_PLASMA_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DUST_PLASMA_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1575,7 +1528,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1602,7 +1554,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_TRUE_VACUUM_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRUE_VACUUM_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TRUE_VACUUM_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRUE_VACUUM_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1629,7 +1580,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_PAN_DIMENSIONAL_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PAN_DIMENSIONAL_LIFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PAN_DIMENSIONAL_LIFE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PAN_DIMENSIONAL_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>

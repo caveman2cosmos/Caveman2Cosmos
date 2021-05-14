@@ -208,16 +208,12 @@
 ##
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
 import BugUtil
 
 from array	import array
 from random import random, randint, seed, shuffle
 import math
-import sys
-import time
-import os
 #import profile
 
 
@@ -2659,11 +2655,6 @@ def ShuffleList(theList):
 				shuffled.append(preshuffle[n])
 				del preshuffle[n]
 		return shuffled
-
-
-def GetInfoType(string):
-	cgc = CyGlobalContext()
-	return cgc.getInfoTypeForString(string)
 
 
 def GetDistance(x, y, dx, dy):

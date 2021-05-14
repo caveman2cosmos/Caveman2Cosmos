@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Civ4LeaderHeadInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
 	<LeaderHeadInfos>
-	<LeaderHeadInfo>
+		<LeaderHeadInfo>
 			<Type>LEADER_YAGAN</Type>
 			<Description>TXT_KEY_LEADER_YAGAN</Description>
 			<Civilopedia>TXT_KEY_LEADER_YAGAN_PEDIA</Civilopedia>

@@ -2730,7 +2730,7 @@
 			<Description>TXT_KEY_CIV_OTTOMAN_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_OTTOMAN_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_OTTOMAN_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CHANGED_CIV_OTTOMAN_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_OTTOMAN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_OTTOMANS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_CRESCENT</ArtStyleType>
@@ -3525,7 +3525,7 @@
 			<Description>TXT_KEY_CIV_VIKING_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_VIKING_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_VIKING_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CHANGED_CIV_VIKING_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_VIKING_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_PURPLE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_VIKINGS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_NORSE</ArtStyleType>
@@ -3835,7 +3835,7 @@
 				<City>TXT_KEY_CITY_NAME_VEJLE</City>
 				<City>TXT_KEY_CITY_NAME_HERNING</City>
 				<City>TXT_KEY_CITY_NAME_NAESTVED</City>
- 				<City>TXT_KEY_CITY_NAME_SILKEBORG</City>
+				<City>TXT_KEY_CITY_NAME_SILKEBORG</City>
 				<City>TXT_KEY_CITY_NAME_FREDERICIA</City>
 				<City>TXT_KEY_CITY_NAME_VIBORG</City>
 				<City>TXT_KEY_CITY_NAME_HOLSTEBRO</City>

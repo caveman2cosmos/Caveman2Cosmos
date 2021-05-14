@@ -29,14 +29,6 @@
 #    Please tell me.
 #  -----
 
-#  =====================
-#  Temudjin 15.July.2010
-#  =====================
-
-#	Changelog
-#	---------
-#	1.00					initial release
-#
 from CvPythonExtensions import *
 import CvMapGeneratorUtil
 import inspect
@@ -44,6 +36,7 @@ import inspect
 GC = CyGlobalContext()
 
 DEBUG = False
+bInitialized = False
 
 #################################################
 ### Defined Class Instances
@@ -76,16 +69,6 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 		if len(stackList) > 1:
 			callModule = stackList[1][1]
 		print "[MST] callModule: %s" %callModule
-
-	########################
-	### initialization check
-	########################
-	global bInitialized
-	try:
-		test = bInitialized
-		bInitialized = True
-	except:
-		bInitialized = False
 
 	###########################
 	### civ universal constants
@@ -175,13 +158,14 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	##############################
 	### Not available at init time
 	##############################
-
-	sprint = ""
+	global bInitialized
 	if not bInitialized:
+		bInitialized = True
 		if DEBUG:
 			mapStats.mapStatistics()
 	else:
 		global sClimateType, sSeaType, bTeams, mapGetLatitude
+		sprint = ""
 		#######################
 		### retrieve parameters
 		#######################
@@ -4939,7 +4923,6 @@ class MapPrint:
 	__mapText      = ""
 	__mapLegend    = ""
 	__diffMaps     = {}
-	manaDict       = {}				# for mana boni; for use by 'CrystallMana' module or 'WildMana' mod
 
 	# initialize dictionaries
 	def initialize( self ):
@@ -4978,12 +4961,12 @@ class MapPrint:
 		# feature dictionaries
 		# --------------------
 		self.__featureDict = {
-			efIce											: ["�", "Ice"	],
-			GC.getInfoTypeForString('FEATURE_FALLOUT')		: ["*", "Fallout"],
-			efJungle										: ["j", "Jungle"],
-			efForest										: ["f", "Forest"],
-			GC.getInfoTypeForString('FEATURE_OASIS')		: ["O", "Oasis"],
-			GC.getInfoTypeForString('FEATURE_FLOOD_PLAINS')	: ["p", "FloodPlains"]
+			efIce										: ["�", "Ice"	],
+			GC.getInfoTypeForString('FEATURE_FALLOUT')	: ["*", "Fallout"],
+			efJungle									: ["j", "Jungle"],
+			efForest									: ["f", "Forest"],
+			GC.getInfoTypeForString('FEATURE_OASIS')	: ["O", "Oasis"],
+			GC.getFEATURE_FLOOD_PLAINS()				: ["p", "FloodPlains"]
 		}
 		self.__featureDict[GC.getInfoTypeForString('FEATURE_SWAMP')] = ["w", "Swamp"]
 		self.__featureDict[efKelp]									 = ["=", "Kelp"]

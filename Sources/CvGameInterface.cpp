@@ -15,6 +15,7 @@
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CvImprovementInfo.h"
 
 void CvGame::updateColoredPlots()
 {
@@ -474,12 +475,25 @@ void CvGame::updateColoredPlots()
 
 			if (iMaxAirRange > 0)
 			{
-				foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iMaxAirRange, iMaxAirRange))
+				const CvPlot* pFromPlot = pHeadSelectedUnit->plot();
+				const CvSelectionGroup* pGroup = pHeadSelectedUnit->getGroup();
+
+				foreach_(const CvPlot* pLoopPlot, pFromPlot->rect(iMaxAirRange, iMaxAirRange))
 				{
-					if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
+					if (pLoopPlot->isVisible(pHeadSelectedUnit->getTeam(), false) && plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
 					{
 						NiColorA color(GC.getColorInfo(GC.getCOLOR_WHITE()).getColor());
-						color.a = 0.4f;
+						if (pGroup->canBombardAtRanged(pFromPlot, pLoopPlot->getX(), pLoopPlot->getY()))
+						{
+							if (pLoopPlot->getNumVisibleEnemyCombatUnits(pHeadSelectedUnit->getOwner()))
+							{
+								color.r = 0.0f;
+								color.b = 0.0f;
+							}
+							else color.b = 0.0f;
+						}
+						else color.a = 0.33f;
+
 						gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, PLOT_STYLE_TARGET, PLOT_LANDSCAPE_LAYER_BASE);
 					}
 				}
@@ -506,7 +520,7 @@ void CvGame::updateColoredPlots()
 
 			if (iMaxAirRange > 0)
 			{
-				foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iMaxAirRange, iMaxAirRange))
+				foreach_(const CvPlot* pLoopPlot, pHeadSelectedUnit->plot()->rect(iMaxAirRange, iMaxAirRange))
 				{
 					if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
 					{
@@ -520,7 +534,7 @@ void CvGame::updateColoredPlots()
 		else if(pHeadSelectedUnit->airRange() > 0) //other ranged units
 		{
 			const int iRange = pHeadSelectedUnit->airRange();
-			foreach_(CvPlot* pTargetPlot, CvPlot::rect(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iRange, iRange))
+			foreach_(CvPlot* pTargetPlot, pHeadSelectedUnit->plot()->rect(iRange, iRange))
 			{
 				if (pTargetPlot->isVisible(pHeadSelectedUnit->getTeam(), false)
 				&& plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pTargetPlot->getX(), pTargetPlot->getY()) <= iRange
@@ -557,7 +571,7 @@ void CvGame::updateColoredPlots()
 
 			const int iRange = 4;
 
-			foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iRange, iRange))
+			foreach_(const CvPlot* pLoopPlot, pHeadSelectedUnit->plot()->rect(iRange, iRange))
 			{
 				if (pLoopPlot->area() == pHeadSelectedUnit->area() || pLoopPlot->isAdjacentToArea(pHeadSelectedUnit->area()))
 				{
@@ -596,7 +610,7 @@ void CvGame::updateColoredPlots()
 					foreach_(const CvUnit* pLoopUnit, kPlayer.units()
 					| filtered(CvUnit::fn::isBlockading()))
 					{
-						foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pLoopUnit->getX(), pLoopUnit->getY(), iBlockadeRange, iBlockadeRange)
+						foreach_(const CvPlot* pLoopPlot, pLoopUnit->plot()->rect(iBlockadeRange, iBlockadeRange)
 						| filtered(CvPlot::fn::isRevealed(getActiveTeam(), false)))
 						{
 							if (GC.getMap().calculatePathDistance(pLoopUnit->plot(),pLoopPlot) > iBlockadeRange)

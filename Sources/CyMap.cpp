@@ -23,10 +23,6 @@ CyMap::CyMap(CvMap* pMap) : m_pMap(pMap)
 {
 }
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-
 int CyMap::getType()
 {
 	return m_pMap ? m_pMap->getType() : NO_MAP;
@@ -36,6 +32,11 @@ CyMap& CyMap::operator=(CvMap& kMap)
 {
 	m_pMap = &kMap;
 	return *this;
+}
+
+bool CyMap::plotsInitialized() const
+{
+	return m_pMap->plotsInitialized();
 }
 
 bool CyMap::viewportsEnabled()
@@ -88,10 +89,6 @@ void CyMap::bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool 
 	GC.getCurrentViewport()->bringIntoView(iX, iY, NULL, bLookAt, bForceCenter, bDisplayCityScreen, bSelectCity, bAddSelectedCity);
 }
 
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
-
 void CyMap::erasePlots()
 {
 	if (m_pMap)
@@ -143,11 +140,6 @@ CyArea* CyMap::findBiggestArea(bool bWater)
 int CyMap::getMapFractalFlags()
 {
 	return m_pMap ? m_pMap->getMapFractalFlags() : -1;
-}
-
-bool CyMap::findWater(CyPlot* pPlot, int iRange, bool bFreshWater)
-{
-	return m_pMap ? m_pMap->findWater(pPlot->getPlot(), iRange, bFreshWater) : false;
 }
 
 bool CyMap::isPlot(int iX, int iY)
@@ -269,9 +261,10 @@ int CyMap::getNumBonusesOnLand(int /* BonusTypes */ eIndex)
 python::list CyMap::plots() const
 {
 	python::list list = python::list();
+
 	for (int i = 0, numPlots = m_pMap->numPlots(); i < numPlots; i++)
 	{
-		list.append(new CyPlot(m_pMap->plotByIndex(i)));
+		list.append(CyPlot(m_pMap->plotByIndex(i)));
 	}
 	return list;
 }

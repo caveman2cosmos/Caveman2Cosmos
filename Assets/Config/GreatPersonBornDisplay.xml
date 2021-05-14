@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!--
-    Spart's new Great Person is Born Display
+	Spart's new Great Person is Born Display
 -->
 <mod id="GreatPersonBornDisplay" module="GreatPersonBornDisplay">
- 	<event type="greatPersonBorn" function="onGreatPersonBorn"/>
+	<event type="greatPersonBorn" function="onGreatPersonBorn"/>
 
 </mod>
 

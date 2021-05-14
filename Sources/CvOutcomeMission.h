@@ -29,7 +29,7 @@ public:
 //	IntExpr* getCost();
 	GameObjectTypes getPayerType() const;
 
-	bool isPossible(CvUnit* pUnit, bool bTestVisible = false) const;
+	bool isPossible(const CvUnit* pUnit, bool bTestVisible = false) const;
 	void buildDisplayString(CvWStringBuffer& szBuffer, CvUnit* pUnit);
 	void execute(CvUnit* pUnit);
 

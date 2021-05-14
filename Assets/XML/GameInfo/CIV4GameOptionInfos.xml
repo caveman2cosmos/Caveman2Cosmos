@@ -2,8 +2,8 @@
 <!-- TB Notes regarding EnforcesGameOptionOnTypes and EnforcesGameOptionOffTypes (same formatting for Off, just change all Ons to Offs in the following)
 	Formatting: (note: may use this set multiple times to indicate more options that fall under the same enforcement guideline)
 			<EnforcesGameOptionOnTypes>
- 				<GameOptionType>GAMEOPTION_WHATEVERYOUWANNAINDICATE</GameOptionType>
- 			</EnforcesGameOptionOnTypes>
+				<GameOptionType>GAMEOPTION_WHATEVERYOUWANNAINDICATE</GameOptionType>
+			</EnforcesGameOptionOnTypes>
 	These tags, if used, go under bVisible and EnforcesGameOptionOnTypes comes before EnforcesGameOptionOffTypes.
 	EnforcesGameOptionOn will turn on indicated option(s) as the game is initialized, regardless of whether the indicated option(s) were set on or not.
 	EnforcesGameOptionOff does the opposite: turns the indicated option(s) off if the option with the tag in use is on.
@@ -23,6 +23,7 @@
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_START_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NEW_RANDOM_SEED</Type>
@@ -30,13 +31,15 @@
 			<Help>TXT_KEY_GAMEOPTION_NEW_RANDOM_SEED_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_LOCK_MODS</Type>
 			<Description>TXT_KEY_GAMEOPTION_LOCK_MODS</Description>
-			<Help>TXT_KEY_GAMEOPTION_LOCK_MODS</Help>
+			<Help>TXT_KEY_GAMEOPTION_LOCK_MODS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_GOODY_HUTS</Type>
@@ -44,6 +47,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NO_GOODY_HUTS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_FUTURE</Type>
@@ -51,6 +55,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NO_FUTURE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_COMPLETE_KILLS</Type>
@@ -58,6 +63,7 @@
 			<Help>TXT_KEY_GAMEOPTION_COMPLETE_KILLS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_EVENTS</Type>
@@ -65,6 +71,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NO_EVENTS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<!-- This one must always be the eight option as the exe has hardcoded it as such -->
@@ -73,6 +80,7 @@
 			<Help>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_UNITED_NATIONS</Type>
@@ -80,6 +88,7 @@
 			<Help>TXT_KEY_GAMEOPTION_UNITED_NATIONS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_ADVANCED_DIPLOMACY</Type>
@@ -87,6 +96,7 @@
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_DIPLOMACY_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_ADVANCED_ECONOMY</Type>
@@ -94,9 +104,10 @@
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 			<EnforcesGameOptionOnTypes>
- 				<GameOptionType>GAMEOPTION_ADVANCED_DIPLOMACY</GameOptionType>
- 			</EnforcesGameOptionOnTypes>
+				<GameOptionType>GAMEOPTION_ADVANCED_DIPLOMACY</GameOptionType>
+			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_REALISTIC_CORPORATIONS</Type>
@@ -104,6 +115,7 @@
 			<Help>TXT_KEY_GAMEOPTION_REALISTIC_CORPORATIONS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_ADVANCED_ESPIONAGE</Type>
@@ -111,6 +123,7 @@
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ESPIONAGE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_CITY_RAZING</Type>
@@ -118,6 +131,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NO_CITY_RAZING_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_CITY_FLIPPING</Type>
@@ -125,6 +139,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NO_CITY_FLIPPING_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_FLIPPING_AFTER_CONQUEST</Type>
@@ -132,6 +147,7 @@
 			<Help>TXT_KEY_GAMEOPTION_FLIPPING_AFTER_CONQUEST_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_REALISTIC_CULTURE_SPREAD</Type>
@@ -139,6 +155,7 @@
 			<Help>TXT_KEY_GAMEOPTION_REALISTIC_CULTURE_SPREAD_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_1_CITY_TILE_FOUNDING</Type>
@@ -146,6 +163,7 @@
 			<Help>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 			<EnforcesGameOptionOffTypes>
 				<GameOptionType>GAMEOPTION_MIN_CITY_BORDER</GameOptionType>
 			</EnforcesGameOptionOffTypes>
@@ -156,6 +174,7 @@
 			<Help>TXT_KEY_GAMEOPTION_MIN_CITY_BORDER_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_LARGER_CITIES</Type>
@@ -163,6 +182,7 @@
 			<Help>TXT_KEY_GAMEOPTION_LARGER_CITIES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_OVEREXPANSION_PENALTIES</Type>
@@ -170,6 +190,7 @@
 			<Help>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_UNLIMITED_WONDERS</Type>
@@ -177,6 +198,7 @@
 			<Help>TXT_KEY_GAMEOPTION_UNLIMITED_WONDERS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_UNLIMITED_NATIONAL_UNITS</Type>
@@ -184,6 +206,7 @@
 			<Help>TXT_KEY_GAMEOPTION_UNLIMITED_NATIONAL_UNITS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_MAXIMUM_POPULATION</Type>
@@ -191,6 +214,7 @@
 			<Help>TXT_KEY_GAMEOPTION_MAXIMUM_POPULATION_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_MORE_RIVERS</Type>
@@ -198,6 +222,7 @@
 			<Help>TXT_KEY_GAMEOPTION_MORE_RIVERS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_MORE_RESOURCES</Type>
@@ -205,6 +230,7 @@
 			<Help>TXT_KEY_GAMEOPTION_MORE_RESOURCES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_PERSONALIZED_MAP</Type>
@@ -212,6 +238,7 @@
 			<Help>TXT_KEY_GAMEOPTION_PERSONALIZED_MAP_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_BARBARIANS</Type>
@@ -219,6 +246,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NO_BARBARIANS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 			<EnforcesGameOptionOffTypes>
 				<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
 			</EnforcesGameOptionOffTypes>
@@ -229,6 +257,7 @@
 			<Help>TXT_KEY_GAMEOPTION_RAGING_BARBARIANS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_BARBARIAN_WORLD</Type>
@@ -236,6 +265,7 @@
 			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_BARBARIAN_CIV</Type>
@@ -243,6 +273,7 @@
 			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_CIV_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_BARBARIANS_ALWAYS_RAZE</Type>
@@ -250,6 +281,7 @@
 			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NEANDERTHAL_CITIES</Type>
@@ -257,6 +289,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NEANDERTHAL_CITIES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_TELEPORT_HUNTING_AWARDS</Type>
@@ -264,6 +297,7 @@
 			<Help>TXT_KEY_GAMEOPTION_TELEPORT_HUNTING_AWARDS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_PEACE_AMONG_NPCS</Type>
@@ -271,6 +305,7 @@
 			<Help>TXT_KEY_GAMEOPTION_PEACE_AMONG_NPCS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_ANIMALS_STAY_OUT</Type>
@@ -278,6 +313,7 @@
 			<Help>TXT_KEY_GAMEOPTION_ANIMALS_STAY_OUT_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_RECKLESS_ANIMALS</Type>
@@ -285,6 +321,7 @@
 			<Help>TXT_KEY_GAMEOPTION_RECKLESS_ANIMALS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_DANGEROUS_WILDLIFE</Type>
@@ -292,6 +329,7 @@
 			<Help>TXT_KEY_GAMEOPTION_DANGEROUS_WILDLIFE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 			<EnforcesGameOptionOffTypes>
 				<GameOptionType>GAMEOPTION_ANIMALS_STAY_OUT</GameOptionType>
 			</EnforcesGameOptionOffTypes>
@@ -302,6 +340,7 @@
 			<Help>TXT_KEY_GAMEOPTION_PICK_RELIGION_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_LIMITED_RELIGIONS</Type>
@@ -309,6 +348,7 @@
 			<Help>TXT_KEY_GAMEOPTION_LIMITED_RELIGIONS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_INQUISITIONS</Type>
@@ -316,6 +356,7 @@
 			<Help>TXT_KEY_GAMEOPTION_INQUISITIONS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_RELIGION_DECAY</Type>
@@ -323,6 +364,7 @@
 			<Help>TXT_KEY_GAMEOPTION_RELIGION_DECAY_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_DIVINE_PROPHETS</Type>
@@ -330,6 +372,7 @@
 			<Help>TXT_KEY_GAMEOPTION_DIVINE_PROPHETS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_RELIGIOUS_DISABLING</Type>
@@ -337,6 +380,7 @@
 			<Help>TXT_KEY_GAMEOPTION_RELIGIOUS_DISABLING_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_RANDOM_PERSONALITIES</Type>
@@ -344,6 +388,7 @@
 			<Help>TXT_KEY_GAMEOPTION_RANDOM_PERSONALITIES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_PERMANENT_ALLIANCES</Type>
@@ -351,6 +396,7 @@
 			<Help>TXT_KEY_GAMEOPTION_PERMANENT_ALLIANCES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_START_AS_MINORS</Type>
@@ -358,6 +404,7 @@
 			<Help>TXT_KEY_GAMEOPTION_START_AS_MINORS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_CULTURALLY_LINKED_STARTS</Type>
@@ -365,6 +412,7 @@
 			<Help>TXT_KEY_GAMEOPTION_CULTURALLY_LINKED_STARTS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_VASSAL_STATES</Type>
@@ -372,6 +420,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_REVOLUTION</Type>
@@ -379,6 +428,7 @@
 			<Help>TXT_KEY_GAMEOPTION_REVOLUTION_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_AGGRESSIVE_AI</Type>
@@ -386,6 +436,7 @@
 			<Help>TXT_KEY_GAMEOPTION_AGGRESSIVE_AI_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_RUTHLESS_AI</Type>
@@ -393,6 +444,7 @@
 			<Help>TXT_KEY_GAMEOPTION_RUTHLESS_AI_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_TECH_TRADING</Type>
@@ -400,6 +452,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NO_TECH_TRADING_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_TECH_BROKERING</Type>
@@ -407,6 +460,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NO_TECH_BROKERING_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_TECH_DIFFUSION</Type>
@@ -414,6 +468,7 @@
 			<Help>TXT_KEY_GAMEOPTION_TECH_DIFFUSION_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_WIN_FOR_LOSING</Type>
@@ -421,6 +476,7 @@
 			<Help>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_BEELINE_STINGS</Type>
@@ -428,6 +484,7 @@
 			<Help>TXT_KEY_GAMEOPTION_BEELINE_STINGS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Type>
@@ -435,6 +492,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_UPSCALED_RESEARCH_COSTS</Type>
@@ -442,6 +500,7 @@
 			<Help>TXT_KEY_GAMEOPTION_UPSCALED_RESEARCH_COSTS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS</Type>
@@ -449,6 +508,7 @@
 			<Help>TXT_KEY_GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_NEGATIVE_TRAITS</Type>
@@ -456,6 +516,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NO_NEGATIVE_TRAITS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_PURE_TRAITS</Type>
@@ -463,6 +524,7 @@
 			<Help>TXT_KEY_GAMEOPTION_PURE_TRAITS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_START_NO_POSITIVE_TRAITS</Type>
@@ -470,6 +532,7 @@
 			<Help>TXT_KEY_GAMEOPTION_START_NO_POSITIVE_TRAITS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_LEADERHEAD_LEVELUPS</Type>
@@ -477,6 +540,7 @@
 			<Help>TXT_KEY_GAMEOPTION_LEADERHEAD_LEVELUPS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_COMPLEX_TRAITS</Type>
@@ -484,6 +548,7 @@
 			<Help>TXT_KEY_GAMEOPTION_COMPLEX_TRAITS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_LS612_TRAITS</Type>
@@ -491,6 +556,7 @@
 			<Help>TXT_KEY_GAMEOPTION_LS612_TRAITS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_VANILLA_COMBAT_ENGINE</Type>
@@ -498,6 +564,7 @@
 			<Help>TXT_KEY_GAMEOPTION_VANILLA_COMBAT_ENGINE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_SIZE_MATTERS</Type>
@@ -505,6 +572,7 @@
 			<Help>TXT_KEY_GAMEOPTION_SIZE_MATTERS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_FIGHT_OR_FLIGHT</Type>
@@ -512,6 +580,7 @@
 			<Help>TXT_KEY_GAMEOPTION_FIGHT_OR_FLIGHT_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_HIDE_AND_SEEK</Type>
@@ -519,9 +588,10 @@
 			<Help>TXT_KEY_GAMEOPTION_HIDE_AND_SEEK_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 			<EnforcesGameOptionOnTypes>
- 				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
- 			</EnforcesGameOptionOnTypes>
+				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_WITHOUT_WARNING</Type>
@@ -529,6 +599,7 @@
 			<Help>TXT_KEY_GAMEOPTION_WITHOUT_WARNING_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS</Type>
@@ -536,6 +607,7 @@
 			<Help>TXT_KEY_GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_STRENGTH_IN_NUMBERS</Type>
@@ -543,6 +615,7 @@
 			<Help>TXT_KEY_GAMEOPTION_STRENGTH_IN_NUMBERS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_HEART_OF_WAR</Type>
@@ -550,6 +623,7 @@
 			<Help>TXT_KEY_GAMEOPTION_HEART_OF_WAR_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_BATTLEWORN</Type>
@@ -557,6 +631,7 @@
 			<Help>TXT_KEY_GAMEOPTION_BATTLEWORN_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_UPRANGE</Type>
@@ -564,6 +639,7 @@
 			<Help>TXT_KEY_GAMEOPTION_UPRANGE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_EQUIPMENT</Type>
@@ -571,6 +647,7 @@
 			<Help>TXT_KEY_GAMEOPTION_EQUIPMENT_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 			<EnforcesGameOptionOnTypes>
 				<GameOptionType>GAMEOPTION_UPRANGE</GameOptionType>
 			</EnforcesGameOptionOnTypes>
@@ -581,6 +658,7 @@
 			<Help>TXT_KEY_GAMEOPTION_ONGOING_TRAINING_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_SAD</Type>
@@ -588,6 +666,7 @@
 			<Help>TXT_KEY_GAMEOPTION_SAD_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_REALISTIC_SIEGE</Type>
@@ -595,6 +674,7 @@
 			<Help>TXT_KEY_GAMEOPTION_REALISTIC_SIEGE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_ZONE_OF_CONTROL</Type>
@@ -602,6 +682,7 @@
 			<Help>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_AMNESTY</Type>
@@ -609,6 +690,7 @@
 			<Help>TXT_KEY_GAMEOPTION_AMNESTY_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_FIXED_BORDERS</Type>
@@ -616,6 +698,7 @@
 			<Help>TXT_KEY_GAMEOPTION_FIXED_BORDERS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_GREAT_COMMANDERS</Type>
@@ -623,6 +706,7 @@
 			<Help>TXT_KEY_GAMEOPTION_GREAT_COMMANDERS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_INFINITE_XP</Type>
@@ -630,6 +714,7 @@
 			<Help>TXT_KEY_GAMEOPTION_INFINITE_XP_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS</Type>
@@ -637,6 +722,7 @@
 			<Help>TXT_KEY_GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_MORE_XP_TO_LEVEL</Type>
@@ -644,6 +730,7 @@
 			<Help>TXT_KEY_GAMEOPTION_MORE_XP_TO_LEVEL_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_DOWNSIZING_IS_PROFITABLE</Type>
@@ -651,6 +738,7 @@
 			<Help>TXT_KEY_GAMEOPTION_DOWNSIZING_IS_PROFITABLE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_ADVANCED_NUKES</Type>
@@ -658,6 +746,7 @@
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_NUKES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_NUKES</Type>
@@ -665,6 +754,7 @@
 			<Help>TXT_KEY_GAMEOPTION_NO_NUKES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_ONE_CITY_CHALLENGE</Type>
@@ -672,6 +762,7 @@
 			<Help>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_CHALLENGE_CUT_LOSERS</Type>
@@ -679,6 +770,7 @@
 			<Help>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_CHALLENGE_HIGH_TO_LOW</Type>
@@ -686,6 +778,7 @@
 			<Help>TXT_KEY_GAMEOPTION_CHALLENGE_HIGH_TO_LOW_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY</Type>
@@ -693,6 +786,7 @@
 			<Help>TXT_KEY_GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_ADVANCED_ROUTES</Type>
@@ -700,6 +794,7 @@
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<bCanChangeMidGame>1</bCanChangeMidGame>
 		</GameOptionInfo>
 	</GameOptionInfos>
 </Civ4GameOptionInfos>
