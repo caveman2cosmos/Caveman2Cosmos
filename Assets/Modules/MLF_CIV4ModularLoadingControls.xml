@@ -34,10 +34,6 @@
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
-					<Directory>ls612</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
 					<Directory>StrategyOnly</Directory>
 					<bLoad>1</bLoad>
 				</Module>
