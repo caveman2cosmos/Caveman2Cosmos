@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- ForceControlInfos - This structure describes the name for each multiplayer option. -->
+<Civ4ForceControlInfos xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
+	<ForceControlInfos>
+		<ForceControlInfo>
+			<Type>FORCECONTROL_SPEED</Type>
+			<Description>TXT_KEY_FORCE_CONTROL_SPEED</Description>
+			<Help/>
+			<bDefault>0</bDefault>
+		</ForceControlInfo>
+		<ForceControlInfo>
+			<Type>FORCECONTROL_HANDICAP</Type>
+			<Description>TXT_KEY_FORCE_CONTROL_HANDICAP</Description>
+			<Help/>
+			<bDefault>0</bDefault>
+		</ForceControlInfo>
+		<ForceControlInfo>
+			<Type>FORCECONTROL_OPTIONS</Type>
+			<Description>TXT_KEY_FORCE_CONTROL_OPTIONS</Description>
+			<Help/>
+			<bDefault>0</bDefault>
+		</ForceControlInfo>
+		<ForceControlInfo>
+			<Type>FORCECONTROL_VICTORIES</Type>
+			<Description>TXT_KEY_FORCE_CONTROL_VICTORIES</Description>
+			<Help/>
+			<bDefault>0</bDefault>
+		</ForceControlInfo>
+		<ForceControlInfo>
+			<Type>FORCECONTROL_MAX_TURNS</Type>
+			<Description>TXT_KEY_FORCE_CONTROL_MAX_TURNS</Description>
+			<Help/>
+			<bDefault>0</bDefault>
+		</ForceControlInfo>
+		<ForceControlInfo>
+			<Type>FORCECONTROL_MAX_CITY_ELIMINATION</Type>
+			<Description>TXT_KEY_FORCE_CONTROL_MAX_CITY_ELIMINATION</Description>
+			<Help/>
+			<bDefault>0</bDefault>
+		</ForceControlInfo>
+		<ForceControlInfo>
+			<Type>FORCECONTROL_ADVANCED_START</Type>
+			<Description>TXT_KEY_FORCE_ADVANCED_START</Description>
+			<Help>TXT_KEY_FORCE_ADVANCED_START</Help>
+			<bDefault>0</bDefault>
+		</ForceControlInfo>
+	</ForceControlInfos>
+</Civ4ForceControlInfos>

@@ -127,7 +127,6 @@ public:
 		{
 			if ( m_nextBucketToAllocate == m_nextBucketIndex )
 			{
-				MEMORY_TRACK_EXEMPT();
 
 				std::vector<AllocationType>* newBucket = new std::vector<AllocationType>();
 

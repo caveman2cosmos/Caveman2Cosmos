@@ -61,5 +61,8 @@ Sources/profile.json
 
 FPKTemp/
 
-*.log
-Logs
+Logs/
+UserSettings/
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/caveman2cosmos/v16/.suo

@@ -6,7 +6,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DEER_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEER_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEER_RIDER</MovieDefineTag>
@@ -15,7 +14,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-            <Bonus>BONUS_DEER</Bonus>
+			<Bonus>BONUS_DEER</Bonus>
 			<iCost>624</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iMinLatitude>45</iMinLatitude>
@@ -57,7 +56,6 @@
 			<Type>BUILDING_DEER_TRAINER_HERITAGE</Type>
 			<Description>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER_HERITAGE</ArtDefineTag>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
@@ -99,7 +97,6 @@
 			<Type>BUILDING_DEER_TRAINER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEER_TRAINER_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER_HERITAGE</ArtDefineTag>
@@ -121,7 +118,6 @@
 			<Type>BUILDING_ANIMAL_TOTEM_DEER</Type>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_TOTEM_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>

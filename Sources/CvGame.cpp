@@ -33,11 +33,10 @@
 
 #pragma warning( disable : 4355 )
 CvGame::CvGame()
-: m_GameObject()
-, m_Properties(this)
-, m_iChokePointCalculationVersion(0)
-, m_eCurrentMap(MAP_INITIAL)
-
+	: m_GameObject()
+	, m_Properties(this)
+	, m_iChokePointCalculationVersion(0)
+	, m_eCurrentMap(MAP_EARTH)
 {
 	m_aiRankPlayer = new int[MAX_PLAYERS];        // Ordered by rank...
 	m_aiPlayerRank = new int[MAX_PLAYERS];        // Ordered by player ID...
@@ -653,18 +652,12 @@ void CvGame::uninit()
 
 	if ( CvPlayerAI::areStaticsInitialized() )
 	{
-		for (int i = 0; i < GC.getNumMapInfos(); i++)
-		{
-			if ( GC.mapInitialized((MapTypes)i) )
-			{
-				// Cast to the internal class
-				CvMap&	map = GC.getMapByIndex((MapTypes)i);
+		CvMapInitData defaultMapData;
 
-				CvMapInitData defaultMapData;
-
-				map.reset(&defaultMapData);
-			}
-		}
+		algo::for_each(GC.getMaps()
+			| filtered(bind(CvMap::plotsInitialized, _1))
+			, bind(CvMap::reset, _1, &defaultMapData)
+		);
 
 		for(int i = 0; i < MAX_PLAYERS; i++)
 		{
@@ -1157,7 +1150,7 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 	{
 		// Python override - Most mapscripts overide
 		bool bAssignStartingPlots = false;
-		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "assignStartingPlots", bAssignStartingPlots)
+		if (Cy::call_override(GC.getMap().getMapScript(), "assignStartingPlots", bAssignStartingPlots)
 		&& bAssignStartingPlots)
 		{
 			return;
@@ -1453,13 +1446,10 @@ void CvGame::normalizeRemovePeaks()
 
 			if (pStartingPlot != NULL)
 			{
-				foreach_(CvPlot* pLoopPlot, CvPlot::rect(pStartingPlot->getX(), pStartingPlot->getY(), 3, 3))
-				{
-					if (pLoopPlot->isPeak())
-					{
-						pLoopPlot->setPlotType(PLOT_HILLS);
-					}
-				}
+				algo::for_each(pStartingPlot->rect(3, 3)
+					| filtered(bind(CvPlot::isPeak, _1))
+					, bind(CvPlot::setPlotType, _1, PLOT_HILLS, true, true)
+				);
 			}
 		}
 	}
@@ -1540,7 +1530,7 @@ void CvGame::normalizeRemoveBadFeatures()
 
 				const int iMaxRange = CITY_PLOTS_RADIUS + 2;
 
-				foreach_(CvPlot* pLoopPlot, CvPlot::rect(pStartingPlot->getX(), pStartingPlot->getY(), iMaxRange, iMaxRange))
+				foreach_(CvPlot* pLoopPlot, pStartingPlot->rect(iMaxRange, iMaxRange))
 				{
 					const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 
@@ -2102,7 +2092,7 @@ void CvGame::normalizeStartingPlots()
 	PROFILE_FUNC();
 
 	if ((!GC.getInitCore().getWBMapScript() || GC.getInitCore().getWBMapNoPlayers())
-	&& !Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeStartingPlotLocations")
+	&& !Cy::call_override(GC.getMap().getMapScript(), "normalizeStartingPlotLocations")
 	&& !isOption(GAMEOPTION_CULTURALLY_LINKED_STARTS))
 	{
 		normalizeStartingPlotLocations();
@@ -2113,42 +2103,42 @@ void CvGame::normalizeStartingPlots()
 		return;
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddRiver")  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeAddRiver")  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
 	{
 		normalizeAddRiver();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemovePeaks"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeRemovePeaks"))
 	{
 		normalizeRemovePeaks();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddLakes"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeAddLakes"))
 	{
 		normalizeAddLakes();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemoveBadFeatures"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeRemoveBadFeatures"))
 	{
 		normalizeRemoveBadFeatures();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemoveBadTerrain"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeRemoveBadTerrain"))
 	{
 		normalizeRemoveBadTerrain();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddFoodBonuses"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeAddFoodBonuses"))
 	{
 		normalizeAddFoodBonuses();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddGoodTerrain"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeAddGoodTerrain"))
 	{
 		normalizeAddGoodTerrain();
 	}
 
-	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddExtras"))
+	if (!Cy::call_override(GC.getMap().getMapScript(), "normalizeAddExtras"))
 	{
 		normalizeAddExtras();
 	}
@@ -2210,7 +2200,6 @@ int CvGame::getTeamClosenessScore(int** aaiDistances, int* aiStartingLocs)
 
 void CvGame::update()
 {
-	MEMORY_TRACE_FUNCTION();
 
 #ifdef LOG_AI
 	gPlayerLogLevel = getBugOptionINT("Autolog__BBAILevel", 0);
@@ -2393,7 +2382,6 @@ void CvGame::updateScore(bool bForce)
 {
 	PROFILE_FUNC();
 
-	MEMORY_TRACE_FUNCTION();
 
 	bool abPlayerScored[MAX_PC_PLAYERS];
 	bool abTeamScored[MAX_PC_TEAMS];
@@ -2718,8 +2706,8 @@ bool CvGame::selectionListIgnoreBuildingDefense() const
 
 void CvGame::implementDeal(PlayerTypes eWho, PlayerTypes eOtherWho, CLinkList<TradeData>* pOurList, CLinkList<TradeData>* pTheirList, bool bForce)
 {
-	FAssertMsg(eWho != NO_PLAYER, "Who is not assigned a valid value");
-	FAssertMsg(eOtherWho != NO_PLAYER, "OtherWho is not assigned a valid value");
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eWho)
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eOtherWho)
 	FAssertMsg(eWho != eOtherWho, "eWho is not expected to be equal with eOtherWho");
 
 	CvDeal* pDeal = addDeal();
@@ -3429,7 +3417,7 @@ void CvGame::setGameTurn(int iNewValue)
 	if (getGameTurn() != iNewValue)
 	{
 		GC.getInitCore().setGameTurn(iNewValue);
-		FAssert(getGameTurn() >= 0);
+		FASSERT_NOT_NEGATIVE(getGameTurn())
 
 		if (m_iDateTurn == iNewValue - 1)
 		{
@@ -3501,7 +3489,7 @@ int CvGame::getMaxTurns() const
 void CvGame::setMaxTurns(int iNewValue)
 {
 	GC.getInitCore().setMaxTurns(iNewValue);
-	FAssert(getMaxTurns() >= 0);
+	FASSERT_NOT_NEGATIVE(getMaxTurns())
 }
 
 
@@ -3520,7 +3508,7 @@ int CvGame::getMaxCityElimination() const
 void CvGame::setMaxCityElimination(int iNewValue)
 {
 	GC.getInitCore().setMaxCityElimination(iNewValue);
-	FAssert(getMaxCityElimination() >= 0);
+	FASSERT_NOT_NEGATIVE(getMaxCityElimination())
 }
 
 int CvGame::getNumAdvancedStartPoints() const
@@ -3532,7 +3520,7 @@ int CvGame::getNumAdvancedStartPoints() const
 void CvGame::setNumAdvancedStartPoints(int iNewValue)
 {
 	GC.getInitCore().setNumAdvancedStartPoints(iNewValue);
-	FAssert(getNumAdvancedStartPoints() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumAdvancedStartPoints())
 }
 
 int CvGame::getStartTurn() const
@@ -3687,7 +3675,7 @@ int CvGame::getTargetScore() const
 void CvGame::setTargetScore(int iNewValue)
 {
 	GC.getInitCore().setTargetScore(iNewValue);
-	FAssert(getTargetScore() >= 0);
+	FASSERT_NOT_NEGATIVE(getTargetScore())
 }
 
 
@@ -3714,7 +3702,7 @@ int CvGame::countNumHumanGameTurnActive() const
 void CvGame::changeNumGameTurnActive(int iChange)
 {
 	m_iNumGameTurnActive += iChange;
-	FAssert(m_iNumGameTurnActive >= 0);
+	FASSERT_NOT_NEGATIVE(m_iNumGameTurnActive)
 }
 
 
@@ -3725,7 +3713,7 @@ int CvGame::getNumCities() const
 void CvGame::changeNumCities(int iChange)
 {
 	m_iNumCities += iChange;
-	FAssert(m_iNumCities >= 0);
+	FASSERT_NOT_NEGATIVE(m_iNumCities)
 }
 
 
@@ -3771,7 +3759,7 @@ int CvGame::getTotalPopulation() const
 void CvGame::changeTotalPopulation(int iChange)
 {
 	m_iTotalPopulation += iChange;
-	FAssert(m_iTotalPopulation >= 0);
+	FASSERT_NOT_NEGATIVE(m_iTotalPopulation)
 }
 
 
@@ -3786,7 +3774,7 @@ void CvGame::changeTradeRoutes(int iChange)
 	if (iChange != 0)
 	{
 		m_iTradeRoutes += iChange;
-		FAssert(getTradeRoutes() >= 0);
+		FASSERT_NOT_NEGATIVE(getTradeRoutes())
 
 		updateTradeRoutes();
 	}
@@ -3810,7 +3798,7 @@ void CvGame::changeFreeTradeCount(int iChange)
 		const bool bOldFreeTrade = isFreeTrade();
 
 		m_iFreeTradeCount += iChange;
-		FAssert(m_iFreeTradeCount >= 0);
+		FASSERT_NOT_NEGATIVE(m_iFreeTradeCount)
 
 		if (bOldFreeTrade != isFreeTrade())
 		{
@@ -3833,7 +3821,7 @@ bool CvGame::isNoNukes() const
 void CvGame::changeNoNukesCount(int iChange)
 {
 	m_iNoNukesCount += iChange;
-	FAssert(m_iNoNukesCount >= 0);
+	FASSERT_NOT_NEGATIVE(m_iNoNukesCount)
 }
 
 
@@ -3848,7 +3836,7 @@ void CvGame::setSecretaryGeneralTimer(VoteSourceTypes eVoteSource, int iNewValue
 {
 	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource)
 	m_aiSecretaryGeneralTimer[eVoteSource] = iNewValue;
-	FAssert(getSecretaryGeneralTimer(eVoteSource) >= 0);
+	FASSERT_NOT_NEGATIVE(getSecretaryGeneralTimer(eVoteSource))
 }
 
 
@@ -3869,7 +3857,7 @@ void CvGame::setVoteTimer(VoteSourceTypes eVoteSource, int iNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource)
 	m_aiVoteTimer[eVoteSource] = iNewValue;
-	FAssert(getVoteTimer(eVoteSource) >= 0);
+	FASSERT_NOT_NEGATIVE(getVoteTimer(eVoteSource))
 }
 
 
@@ -4005,7 +3993,8 @@ int CvGame::getAIAutoPlay(PlayerTypes iPlayer) const
 
 void CvGame::setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 {
-	FAssert(iNewValue >= 0);
+	FASSERT_NOT_NEGATIVE(iNewValue)
+
 	if (isForcedAIAutoPlay(iPlayer) && !bForced)
 	{
 		return;
@@ -4043,7 +4032,7 @@ void CvGame::changeAIAutoPlay(PlayerTypes iPlayer, int iChange)
 
 bool CvGame::isForcedAIAutoPlay(PlayerTypes iPlayer) const
 {
-	FAssert(getForcedAIAutoPlay(iPlayer) >= 0)
+	FASSERT_NOT_NEGATIVE(getForcedAIAutoPlay(iPlayer))
 	return getForcedAIAutoPlay(iPlayer) > 0;
 }
 
@@ -4054,7 +4043,7 @@ int CvGame::getForcedAIAutoPlay(PlayerTypes iPlayer) const
 
 void CvGame::setForcedAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 {
-	FAssert(iNewValue >= 0);
+	FASSERT_NOT_NEGATIVE(iNewValue)
 
 	if (!bForced)
 	{
@@ -4202,7 +4191,7 @@ void CvGame::changeDiploVote(VoteSourceTypes eVoteSource, int iChange)
 		}
 
 		m_aiDiploVote[eVoteSource] += iChange;
-		FAssert(getDiploVoteCount(eVoteSource) >= 0);
+		FASSERT_NOT_NEGATIVE(getDiploVoteCount(eVoteSource))
 
 		if (!m_bRecalculatingModifiers)
 		{
@@ -4977,7 +4966,7 @@ void CvGame::setPlayerRank(PlayerTypes ePlayer, int iRank)
 		}
 	}
 	m_aiPlayerRank[ePlayer] = iRank;
-	FAssert(getPlayerRank(ePlayer) >= 0);
+	FASSERT_NOT_NEGATIVE(getPlayerRank(ePlayer))
 }
 
 
@@ -4995,7 +4984,7 @@ void CvGame::setPlayerScore(PlayerTypes ePlayer, int iScore)
 	if (getPlayerScore(ePlayer) != iScore)
 	{
 		m_aiPlayerScore[ePlayer] = iScore;
-		FAssert(getPlayerScore(ePlayer) >= 0);
+		FASSERT_NOT_NEGATIVE(getPlayerScore(ePlayer))
 
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 	}
@@ -5033,7 +5022,7 @@ void CvGame::setTeamRank(TeamTypes eTeam, int iRank)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 	m_aiTeamRank[eTeam] = iRank;
-	FAssert(getTeamRank(eTeam) >= 0);
+	FASSERT_NOT_NEGATIVE(getTeamRank(eTeam))
 }
 
 
@@ -5048,7 +5037,7 @@ void CvGame::setTeamScore(TeamTypes eTeam, int iScore)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 	m_aiTeamScore[eTeam] = iScore;
-	FAssert(getTeamScore(eTeam) >= 0);
+	FASSERT_NOT_NEGATIVE(getTeamScore(eTeam))
 }
 
 
@@ -5214,7 +5203,7 @@ void CvGame::changeForceCivicCount(CivicTypes eIndex, int iChange)
 		const bool bOldForceCivic = isForceCivic(eIndex);
 
 		m_paiForceCivicCount[eIndex] += iChange;
-		FAssert(getForceCivicCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getForceCivicCount(eIndex))
 
 		if (bOldForceCivic != isForceCivic(eIndex))
 		{
@@ -5472,7 +5461,6 @@ void CvGame::makeSpecialBuildingValid(SpecialBuildingTypes eIndex, bool bAnnounc
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 				{
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(
 						(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_SPECIAL_BUILDING_VALID", GC.getSpecialBuildingInfo(eIndex).getTextKeyWide()),
@@ -5564,7 +5552,6 @@ void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAn
 				{
 					if (pHolyCity->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 					{
-						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME_LONG(),
 							gDLL->getText(
@@ -5578,7 +5565,6 @@ void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAn
 					}
 					else
 					{
-						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME_LONG(),
 							gDLL->getText(
@@ -5692,7 +5678,6 @@ void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bA
 					{
 						if (pHeadquarters->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 						{
-							MEMORY_TRACK_EXEMPT();
 							AddDLLMessage(
 								(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME_LONG(),
 								szBuffer, GC.getCorporationInfo(eIndex).getSound(),
@@ -5702,7 +5687,6 @@ void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bA
 						}
 						else
 						{
-							MEMORY_TRACK_EXEMPT();
 							AddDLLMessage(
 								(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME_LONG(),
 								gDLL->getText("TXT_KEY_MISC_CORPORATION_FOUNDED_UNKNOWN", GC.getCorporationInfo(eIndex).getTextKeyWide()),
@@ -5808,7 +5792,7 @@ void CvGame::setName(const TCHAR* szName)
 
 bool CvGame::isDestroyedCityName(CvWString& szName) const
 {
-	return std::contains(m_aszDestroyedCities, szName);
+	return algo::contains(m_aszDestroyedCities, szName);
 }
 
 void CvGame::addDestroyedCityName(const CvWString& szName)
@@ -5819,7 +5803,7 @@ void CvGame::addDestroyedCityName(const CvWString& szName)
 
 bool CvGame::isGreatPersonBorn(CvWString& szName) const
 {
-	return std::contains(m_aszGreatPeopleBorn, szName);
+	return algo::contains(m_aszGreatPeopleBorn, szName);
 }
 
 void CvGame::addGreatPersonBornName(const CvWString& szName)
@@ -5832,7 +5816,6 @@ void CvGame::addGreatPersonBornName(const CvWString& szName)
 
 void CvGame::doTurn()
 {
-	MEMORY_TRACE_FUNCTION();
 	PROFILE_BEGIN("CvGame::doTurn()");
 
 	// END OF TURN
@@ -5998,7 +5981,6 @@ void CvGame::doTurn()
 
 void CvGame::doDeals()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	verifyDeals();
 
@@ -6014,17 +5996,12 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 {
 	const CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)iSpawnInfo);
 	//logging::logMsg("C2C.log", "Spawn thread start for %s\n", spawnInfo.getType());
-	plots->clear();
 
 	if (spawnInfo.getRateOverride() == 0)
 	{
 		return;
 	}
-	const PlayerTypes ePlayer = spawnInfo.getPlayer();
-
-	if (spawnInfo.getTreatAsBarbarian()
-	&& GET_PLAYER(ePlayer).isHominid()
-	&& GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
+	if (spawnInfo.getTreatAsBarbarian() && GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
 	{
 		return;
 	}
@@ -6043,7 +6020,7 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 				{
 					return;
 				}
-				if (!bAnyTeamHasPrereqTech && GET_TEAM((TeamTypes)iI).isHasTech(ePrereqTech))
+				if (GET_TEAM((TeamTypes)iI).isHasTech(ePrereqTech))
 				{
 					bAnyTeamHasPrereqTech = true;
 					break;
@@ -6073,6 +6050,8 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 	const bool bWildAnimal = unitInfo.isWildAnimal();
 	const bool bAnimalBarred = spawnInfo.getNeutralOnly() || bWildAnimal && GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT);
 
+	const PlayerTypes ePlayer = spawnInfo.getPlayer();
+
 	for (int i = 0; i < GC.getMap().numPlots(); ++i)
 	{
 		CvPlot* pPlot = GC.getMap().plotByIndex(i);
@@ -6083,6 +6062,24 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 			{
 				continue;
 			}
+			// TB - Actually, here the unit is selected already based on the spawn info itself.
+			// Ensure that pPlot has the MapType of the unit... no need to include MapTypes on the Spawn Info file.
+			{
+				const int iCount = unitInfo.getNumMapTypes();
+				bool bFound = (iCount < 1);
+				for (int iI = 0; !bFound && iI < iCount; iI++)
+				{
+					if (pPlot->isMapType((MapTypes)unitInfo.getMapType(iI)))
+					{
+						bFound = true;
+					}
+				}
+				if (!bFound)
+				{
+					continue;
+				}
+			}
+
 			// Encroaching animals?
 			if (
 				bWildAnimal
@@ -6215,19 +6212,15 @@ namespace Game {
 
 void CvGame::doSpawns(PlayerTypes ePlayer)
 {
-	MEMORY_TRACE_FUNCTION();
 	PROFILE_FUNC();
 
-	std::vector<std::vector<CvPlot*> > validPlots;
-	validPlots.resize(GC.getNumSpawnInfos());
-
-	//	We need to know the number of each unit type in each area, which is not soemthign CvArea
+	//	We need to know the number of each unit type in each area, which is not soemthing CvArea
 	//	can do (nor worth implementing it there), so do a pre-pass here to build that data
 	std::map< int, std::map<int,int> >	areaPopulationMap;
 
 	for (int i = 0; i < GC.getMap().numPlots(); ++i)
 	{
-		CvPlot* pPlot = GC.getMap().plotByIndex(i);
+		const CvPlot* pPlot = GC.getMap().plotByIndex(i);
 
 		foreach_(const CvUnit* pLoopUnit, pPlot->units() | filtered(CvUnit::fn::getOwner() == ePlayer))
 		{
@@ -6238,42 +6231,35 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			else areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()] = 1;
 		}
 	}
+	const bool bRagingBarbarians = isOption(GAMEOPTION_RAGING_BARBARIANS);
+	const bool bSizeMatters = isOption(GAMEOPTION_SIZE_MATTERS);
 
-	std::vector<int> aRandomList;
-	CvWString szNewNameBuffer;
-
-	for(int j = 0; j < GC.getNumSpawnInfos(); j++)
+	for (int j = 0; j < GC.getNumSpawnInfos(); j++)
 	{
-		const SpawnTypes eSpawn = (SpawnTypes)j;
+		const SpawnTypes eSpawn = static_cast<SpawnTypes>(j);
 		const CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)j);
 
 		//TB Note: It is at this point that we need to isolate out the player type on spawn info.
 		//I think for the sake of speed and data efficiency we can get away with a singular player reference rather than
 		//making it possible to specify more than one on a spawn info.
 
-		if ( spawnInfo.getPlayer() != ePlayer )
+		if (spawnInfo.getPlayer() != ePlayer || spawnInfo.getRateOverride() == 0 || bSizeMatters && spawnInfo.getNumSpawnGroup() > 1)
 		{
 			continue;
 		}
 
-		if (isOption(GAMEOPTION_SIZE_MATTERS) && spawnInfo.getNumSpawnGroup() > 1)
-		{
-			continue;
-		}
-		if ( spawnInfo.getRateOverride() == 0 )
-		{
-			continue;
-		}
+		std::vector<CvPlot*> validPlots;
 
-		enumSpawnPlots(j, &(validPlots[j]));
+		enumSpawnPlots(j, &validPlots);
 
-		int iPlotNum = validPlots[j].size();
+		const int iPlotNum = validPlots.size();
 		logging::logMsg("C2C.log", "Spawn thread finished and joined for %s, found %d valid plots.", spawnInfo.getType(), iPlotNum);
 
 		if (iPlotNum == 0)
 		{
 			continue;
 		}
+		algo::random_shuffle(validPlots, SorenRand("Spawn Shuffle"));
 
 		double adjustedSpawnRate = (double)spawnInfo.getTurnRate();
 		double fGlobalSpawnRate = (double)spawnInfo.getGlobalTurnRate() * iPlotNum / 100.0;
@@ -6283,86 +6269,55 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 		}
 		else if (fGlobalSpawnRate > 0)
 		{
-			adjustedSpawnRate = 1/(1/adjustedSpawnRate + 1/fGlobalSpawnRate);
+			adjustedSpawnRate = 1 / (1 / adjustedSpawnRate + 1 / fGlobalSpawnRate);
 		}
 
-		if ( !spawnInfo.getNoSpeedNormalization() )
+		if (!spawnInfo.getNoSpeedNormalization())
 		{
-			adjustedSpawnRate = (adjustedSpawnRate*((GC.getGameSpeedInfo(getGameSpeedType()).getTrainPercent()+666)/3) / 100);
+			adjustedSpawnRate = adjustedSpawnRate * (GC.getGameSpeedInfo(getGameSpeedType()).getTrainPercent()+666) / 300;
 		}
 
 		if (isOption(GAMEOPTION_PEACE_AMONG_NPCS))
 		{
-			adjustedSpawnRate *= (100+GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getSpawnRateNPCPeaceModifier());
+			adjustedSpawnRate *= 100 + GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getSpawnRateNPCPeaceModifier();
 		}
 		else
 		{
-			adjustedSpawnRate *= (100+GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getSpawnRateModifier());
+			adjustedSpawnRate *= 100 + GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getSpawnRateModifier();
 		}
-		adjustedSpawnRate /= 100;
-		//	Adjust for any rate override
-		adjustedSpawnRate = (adjustedSpawnRate*100)/spawnInfo.getRateOverride();
+		// Adjust for any rate override
+		adjustedSpawnRate /= spawnInfo.getRateOverride();
 
+		int iMinAreaPlotsPerPlayerUnit = spawnInfo.getMinAreaPlotsPerPlayerUnit();
+		int iMinAreaPlotsPerUnitType = spawnInfo.getMinAreaPlotsPerUnitType();
 
-		//	Double for barbarians if raging
-		const bool bIsBarbarian = spawnInfo.getTreatAsBarbarian();
-		int iMaxAreaTotalDensity = spawnInfo.getMaxAreaTotalDensity();
-		int iMaxAreaUnitDensity = spawnInfo.getMaxAreaUnitDensity();
-		if (bIsBarbarian && isOption(GAMEOPTION_RAGING_BARBARIANS))
+		// Double for barbarians if raging
+		if (bRagingBarbarians && spawnInfo.getTreatAsBarbarian())
 		{
 			adjustedSpawnRate /= 2;
-			iMaxAreaTotalDensity /= 2;
-			iMaxAreaUnitDensity /= 2;
+			iMinAreaPlotsPerPlayerUnit = iMinAreaPlotsPerPlayerUnit * 3/4;
+			iMinAreaPlotsPerUnitType = iMinAreaPlotsPerUnitType * 2/3;
 		}
 
 		logging::logMsg("C2C.log", "Spawn chance per plot for %s is 1 to %d .", spawnInfo.getType(), (int)adjustedSpawnRate);
 
-		int spawnCount = 0;
 		//So we ARE going by spawn here but it's still a random check per plot rather than placing an amount.  Before this, determine how many should spawn this round, then pick a plot for each of those spawns.
 		//The density factor is going to be interesting.  Perhaps each plot should get a likelihood value and vary that by the density factor around that plot.
 		//The spawn rate... is high more likely or low and what kind of numeric range are we working with?
+
+		/* Toffer - Disable this, this should be cached far less often than for each player each end turn. Not worth it.
 		foreach_(CvArea* pArea, GC.getMap().areas())
 		{
-			const int iValidPlots = algo::count_if(validPlots[j], CvPlot::fn::area() == pArea);
+			const int iValidPlots = algo::count_if(validPlots, CvPlot::fn::area() == pArea);
 			pArea->setNumValidPlotsbySpawn(eSpawn, iValidPlots);
 		}
+		*/
+		const UnitTypes eUnit = spawnInfo.getUnitType();
+		const int iMaxLocalDensity = spawnInfo.getMaxLocalDensity();
+		int spawnCount = 0;
 
-		foreach_(const CvPlot* pPlot, validPlots[j])
+		foreach_(const CvPlot* pPlot, validPlots)
 		{
-			const int iArea = pPlot->getArea();
-			const CvArea* pArea = pPlot->area();
-			const int iTotalAreaSize = pArea->getNumTiles();
-			int iLocalSpawnRate = (int)adjustedSpawnRate;
-			//TB Spawn Modification Begin
-			//Automatically adapts chances of spawn to normalize between units that have a huge amount of plots available to spawn in and those that have relatively few.
-			//Keeping in mind higher is less chance.
-			const int iValidPlotsThisArea = pArea->getNumValidPlotsbySpawn(eSpawn);
-			int iFrequencyAdjustment = (iValidPlotsThisArea * 100)/iTotalAreaSize;//Produces the % of plots valid in area. - note: divide by 0 should be literally impossible or we wouldn't have gotten this far as there would not be a plot to be checking this.
-			iFrequencyAdjustment += 50;// Thus 1% becomes 51% while 90% becomes 140%
-
-			iLocalSpawnRate *= iFrequencyAdjustment;
-			iLocalSpawnRate /= 100;
-			//TB Spawn Modification End
-
-
-			//Actually, here the unit is selected already based on the spawn info itself.  Derive that then derive the MapCategoryTypes
-			//of the unit and ensure that pPlot has the MapCategoryType of the unit.  Easy... no need to include MapCategoryTypes on the
-			//Spawn Info file.
-			const int iCount = GC.getUnitInfo(spawnInfo.getUnitType()).getNumMapCategoryTypes();
-			bool bFound = (iCount < 1);
-			for (int iI = 0; iI < iCount; iI++)
-			{
-				if (pPlot->isMapCategoryType((MapCategoryTypes)GC.getUnitInfo(spawnInfo.getUnitType()).getMapCategoryType(iI)))
-				{
-					bFound = true;
-				}
-			}
-			if (!bFound)
-			{
-				continue;
-			}
-			//Note: correct MapCategoryType checks throughout the code so that if one is valid that gets checked later, the validation is still there!
-
 			// Safety valve - if there are over a certain number of total barbarian units in existance halt all spawns
 			// else the game can run into fatal issues when it uses up the entire id space of units (8191 at once per player)
 			if (GET_PLAYER(ePlayer).getNumUnits() > MAX_BARB_UNITS_FOR_SPAWNING)
@@ -6370,44 +6325,49 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 				break;
 			}
 
-			// Could be in the threads but this way the units already spawned in this turn by this system are considered
-			// iMaxAreaTotalDensity isn't really meant for small areas where units cannot wander out of the local 49 plot spawn area.
-			if (iTotalAreaSize > (iMaxAreaTotalDensity > 49 ? iMaxAreaTotalDensity : 49)
-			&& iTotalAreaSize / std::max(1, pPlot->area()->getUnitsPerPlayer(ePlayer)) <= iMaxAreaTotalDensity)
+			const CvArea* pArea = pPlot->area();
+			const int iTotalAreaSize = pArea->getNumTiles();
+
+			// Toffer - Bar spawn if player has the max unit density allowed in this area.
+			//	Ignore small areas, max local density limit will be adequate for those.
+			if (iTotalAreaSize > std::max(49, iMinAreaPlotsPerPlayerUnit))
 			{
-				continue;
+				const int iPlayerUnitsInArea = pArea->getUnitsPerPlayer(ePlayer);
+				if (iPlayerUnitsInArea > 0 && iTotalAreaSize / iPlayerUnitsInArea <= iMinAreaPlotsPerPlayerUnit)
+				{
+					continue;
+				}
 			}
+			//TB Spawn Modification Begin
+			// Automatically adapts chances of spawn to normalize between units that have a huge amount of plots available to spawn in and those that have relatively few.
+			// Keeping in mind higher is less chance.
+			// Produces the % of plots valid in area, base 50 so 1% becomes 51% while 90% becomes 140%
+			//const int iFrequencyAdjustment = 50 + pArea->getNumValidPlotsbySpawn(eSpawn) * 100 / iTotalAreaSize;
+
+			int iLocalSpawnRate = (int)adjustedSpawnRate/* * iFrequencyAdjustment / 100*/;
+			//TB Spawn Modification End
 
 			//	Adjust spawn rate for area ownership percentage
-			if (!pPlot->isWater() && pPlot->area()->getNumCities() == pPlot->area()->getCitiesPerPlayer(ePlayer))
+			if (!pPlot->isWater() && pArea->getNumCities() == pArea->getCitiesPerPlayer(BARBARIAN_PLAYER) + pArea->getCitiesPerPlayer(NEANDERTHAL_PLAYER))
 			{
 				// No non-barb cities so dramatically reduce spawns since its essentially an unplayed-in area for now
 				iLocalSpawnRate *= 10;
 			}
-			else
+			else // Adjust spawn rate upward by up to tripling the normal rate in proportion with how little wilderness is left in this area
 			{
-				const int percentOccupied = (100*pPlot->area()->getNumOwnedTiles())/pPlot->area()->getNumTiles();
-				//	Adjust spawn rate upward by up to trebbleing the normal rate in proportion with how
-				//	little wilderness is left in this area
-				iLocalSpawnRate = iLocalSpawnRate * 100 / (100 + 2*percentOccupied);
+				iLocalSpawnRate *= 100;
+				iLocalSpawnRate /= 100 + 200 * pArea->getNumOwnedTiles() / pArea->getNumTiles();
 			}
 
 			if (getSorenRandNum(std::max(1, iLocalSpawnRate), "Unit spawn") == 0)
 			{
+				const int iArea = pPlot->getArea();
 				// Check area unit type density not exceeded if specified
-				if (iMaxAreaUnitDensity != 0)
+				if (iMinAreaPlotsPerUnitType > 0
+				&& areaPopulationMap[iArea].find(eUnit) != areaPopulationMap[iArea].end()
+				&& areaPopulationMap[iArea][eUnit] >= iTotalAreaSize / iMinAreaPlotsPerUnitType)
 				{
-					int	iExistingUnits = 0;
-
-					if (areaPopulationMap[pPlot->getArea()].find(spawnInfo.getUnitType()) != areaPopulationMap[pPlot->getArea()].end())
-					{
-						iExistingUnits = areaPopulationMap[pPlot->getArea()][spawnInfo.getUnitType()];
-					}
-
-					if (iExistingUnits >= std::max(1, iTotalAreaSize / iMaxAreaUnitDensity))
-					{
-						continue; // Total area density exceeded
-					}
+					continue; // Total area density exceeded
 				}
 
 				// Check local max density not already exceeded
@@ -6419,39 +6379,37 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 				const int LocalRange = 3;
 				const int TotalLocalArea = (LocalRange * 2 + 1) * (LocalRange * 2 + 1);
 
-				foreach_(const CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), LocalRange, LocalRange))
+				foreach_(const CvPlot* pLoopPlot, pPlot->rect(LocalRange, LocalRange))
 				{
-					if (pLoopPlot->area() == pPlot->area())
+					if (pLoopPlot->area() == pArea)
 					{
 						localAreaSize++;
-						localUnitTypeCount += pLoopPlot->plotCount(PUF_isUnitType, spawnInfo.getUnitType());
-						localPlayerUnitCount += pLoopPlot->plotCount(PUF_isPlayer, spawnInfo.getPlayer());
+						localUnitTypeCount += pLoopPlot->plotCount(PUF_isUnitType, eUnit);
+						localPlayerUnitCount += pLoopPlot->plotCount(PUF_isPlayer, ePlayer);
 					}
 				}
-				// We know that localAreaSize > 0 because pLoopPlot == pPlot in one of the above iterations.
 				if (localUnitTypeCount == 0
 				// Max 0.50 unit per plot in local area owned by spawn owner.
 				|| localPlayerUnitCount * 100 / localAreaSize < 50
 				// Max local density limit for this specific unit type.
-				&& localUnitTypeCount * 100 / localAreaSize < spawnInfo.getMaxLocalDensity() * 100 / TotalLocalArea)
+				&& localUnitTypeCount * 100 / localAreaSize < iMaxLocalDensity * 100 / TotalLocalArea)
 				{
-					//	Spawn a new unit
-					CvUnitInfo& kUnit = GC.getUnitInfo(spawnInfo.getUnitType());
+					// Spawn a new unit
+					CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
-					CvUnit* pUnit = GET_PLAYER(ePlayer).initUnit(spawnInfo.getUnitType(), pPlot->getX(), pPlot->getY(), (UnitAITypes)kUnit.getDefaultUnitAIType(), NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
+					CvUnit* pUnit = GET_PLAYER(ePlayer).initUnit(eUnit, pPlot->getX(), pPlot->getY(), (UnitAITypes)kUnit.getDefaultUnitAIType(), NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
 					if (pUnit == NULL)
 					{
 						FErrorMsg("pUnit is expected to be assigned a valid unit object");
 						return;
 					}
 
-					if (isOption(GAMEOPTION_SIZE_MATTERS))
+					if (bSizeMatters)
 					{
 						const int iCount = kUnit.getNumGroupSpawnUnitCombatTypes();
 						if (iCount > 0)
 						{
-							//clear old list
-							aRandomList.clear();
+							std::vector<int> aRandomList;
 							//generate random list
 							for (int iIndex = 0; iIndex < iCount; iIndex++)
 							{
@@ -6461,47 +6419,43 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 								}
 							}
 							//generate result from list
-							const int iListCount = (int)aRandomList.size();
-							const int iResult = getSorenRandNum(iListCount, "Spawn Group Random Roll");
-							const int iFinalIndex = aRandomList[iResult];
+							const int iFinalIndex = aRandomList[getSorenRandNum(aRandomList.size(), "Spawn Group Random Roll")];
 							const UnitCombatTypes eGroupVolume = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).eUnitCombat;
-							CvWString szTitle = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).m_szTitle;
+							const CvWString szTitle = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).m_szTitle;
+
 							//remove old group volume unitcombat
 							if (eGroupVolume != NO_UNITCOMBAT)
 							{
 								for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 								{
-									if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase() != -10)
+									const UnitCombatTypes eUnitCombat = static_cast<UnitCombatTypes>(iI);
+
+									if (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() != -10 && pUnit->isHasUnitCombat(eUnitCombat) && eUnitCombat != eGroupVolume)
 									{
-										const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
-										if (pUnit->isHasUnitCombat(eUnitCombat) && eUnitCombat != eGroupVolume)
-										{
-											const int iDifference = GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
-											CvUnit::normalizeUnitPromotions(pUnit, iDifference,
-												bst::bind(Game::isGroupUpgradePromotion, pUnit, _2),
-												bst::bind(Game::isGroupDowngradePromotion, pUnit, _2)
-											);
-										}
+										CvUnit::normalizeUnitPromotions(
+											pUnit,
+											GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase(),
+											bst::bind(Game::isGroupUpgradePromotion, pUnit, _2),
+											bst::bind(Game::isGroupDowngradePromotion, pUnit, _2)
+										);
 									}
 								}
 							}
 							//adjust the name of the unit
 							if (!szTitle.empty())
 							{
-								szNewNameBuffer.append(gDLL->getText(szTitle, pUnit->getNameKey()));
-								pUnit->setName(szNewNameBuffer);
-								szNewNameBuffer.clear();
-								szTitle.clear();
+								pUnit->setName(gDLL->getText(szTitle, pUnit->getNameKey()));
 							}
 						}
 					}
 					pUnit->finishMoves();
 					spawnCount++;
+					areaPopulationMap[iArea][eUnit]++;
 
 					// Spawn unit group
-					if (!isOption(GAMEOPTION_SIZE_MATTERS))
+					if (!bSizeMatters)
 					{
-						for(int k = 0; k < spawnInfo.getNumSpawnGroup(); k++)
+						for (int k = 0; k < spawnInfo.getNumSpawnGroup(); k++)
 						{
 							kUnit = GC.getUnitInfo(spawnInfo.getSpawnGroup(k));
 
@@ -6509,6 +6463,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 							FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 							pUnit->finishMoves();
 							spawnCount++;
+							areaPopulationMap[iArea][spawnInfo.getSpawnGroup(k)]++;
 						}
 					}
 				}
@@ -6521,7 +6476,6 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 #ifdef GLOBAL_WARMING
 void CvGame::doGlobalWarming()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	// Loop to look for environmentalism written by EmperorFool
 	bool abTreeHugger[MAX_PC_PLAYERS];
@@ -6622,7 +6576,7 @@ void CvGame::doGlobalWarming()
 				continue;
 			}
 			// Toffer - Multimap note - Need to make this whole thing specific to which map global warming is happening on.
-			// For now we could restrict these effects to earth mapcategory terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
+			// For now we could restrict these effects to earth maptype terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
 			CvPlot* pPlot = GC.getMap().syncRandPlot(RANDPLOT_NOT_CITY); // GWMod removed check for water tile M.A.
 
 			if (pPlot == NULL)
@@ -6712,7 +6666,6 @@ void CvGame::doGlobalWarming()
 
 				if (pCity != NULL && pPlot->isVisible(pCity->getTeam(), false))
 				{
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(
 						pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_MISC_GLOBAL_WARMING_NEAR_CITY", pCity->getNameKey()),
@@ -6736,7 +6689,7 @@ void CvGame::doGlobalWarming()
 				continue;
 			}
 			// Toffer - Multimap note - Need to make this whole thing specific to which map the nukes were used on.
-			// For now we could restrict these effects to earth mapcategory terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
+			// For now we could restrict these effects to earth maptype terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
 			CvPlot* pPlot = GC.getMap().syncRandPlot(RANDPLOT_LAND | RANDPLOT_NOT_CITY);
 
 			if (pPlot == NULL)
@@ -6775,7 +6728,6 @@ void CvGame::doGlobalWarming()
 
 				if (pCity != NULL && pPlot->isVisible(pCity->getTeam(), false))
 				{
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(
 						pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_MISC_NUCLEAR_WINTER_NEAR_CITY", pCity->getNameKey()),
@@ -6792,8 +6744,6 @@ void CvGame::doGlobalWarming()
 
 void CvGame::doHeadquarters()
 {
-	MEMORY_TRACE_FUNCTION();
-
 	if (Cy::call_optional(PYGameModule, "doHeadquarters"))
 	{
 		return;
@@ -6825,9 +6775,9 @@ void CvGame::doHeadquarters()
 				&& kLoopTeam.isHasTech(eTechPrereq)
 				&& kLoopTeam.getNumCities() > 0)
 				{
-					for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+					foreach_(const BonusTypes eBonus, kCorporation.getPrereqBonuses())
 					{
-						if (NO_BONUS != kCorporation.getPrereqBonus(i) && kLoopTeam.hasBonus((BonusTypes)kCorporation.getPrereqBonus(i)))
+						if (kLoopTeam.hasBonus(eBonus))
 						{
 							int iValue = getSorenRandNum(10, "Found Corporation (Team)");
 
@@ -6858,10 +6808,9 @@ void CvGame::doHeadquarters()
 
 					if (playerX.isAliveAndTeam(eBestTeam) && playerX.getNumCities() > 0)
 					{
-						for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+						foreach_(const BonusTypes eBonus, kCorporation.getPrereqBonuses())
 						{
-							const BonusTypes eBonus = (BonusTypes)kCorporation.getPrereqBonus(i);
-							if (NO_BONUS != eBonus && playerX.hasBonus(eBonus))
+							if (playerX.hasBonus(eBonus))
 							{
 								int iValue = getSorenRandNum(25, "Found Corporation (Player)") - playerX.getNumAvailableBonuses(eBonus);
 
@@ -6892,7 +6841,6 @@ void CvGame::doHeadquarters()
 
 void CvGame::doDiploVote()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	doVoteResults();
 	doVoteSelection();
@@ -6901,7 +6849,6 @@ void CvGame::doDiploVote()
 
 void CvGame::createBarbarianCities(bool bNeanderthal)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (
 		getMaxCityElimination() > 0
@@ -7009,7 +6956,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	}
 
 	// Find plot
-	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
+	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
 	const int iUnownedTilesThreshold = GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity();
 
 	int iBestValue = 0;
@@ -7019,7 +6966,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-		if (pLoopPlot->isMapCategoryType(earth) && !pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
+		if (pLoopPlot->isMapType(earth) && !pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
 		{
 			int iTargetCities = pLoopPlot->area()->getNumUnownedTiles();
 
@@ -7152,7 +7099,6 @@ namespace {
 
 void CvGame::createBarbarianUnits()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (Cy::call<bool>(PYGameModule, "createBarbarianUnits"))
 	{
@@ -7292,7 +7238,6 @@ void CvGame::createBarbarianUnits()
 void CvGame::updateMoves()
 {
 	PROFILE_FUNC();
-	MEMORY_TRACE_FUNCTION();
 
 	int aiShuffle[MAX_PLAYERS];
 
@@ -7438,7 +7383,7 @@ void CvGame::testAlive()
 {
 	PROFILE_FUNC();
 
-	if (m_eCurrentMap != MAP_INITIAL)	// XXX - Currently players are killed after switching to a new map.
+	if (m_eCurrentMap != MAP_EARTH)	// XXX - Currently players are killed after switching to a new map.
 		return;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -7637,7 +7582,6 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 void CvGame::testVictory()
 {
 	PROFILE_FUNC();
-	MEMORY_TRACE_FUNCTION();
 
 	if (getVictory() != NO_VICTORY || getGameState() == GAMESTATE_EXTENDED || !Cy::call<bool>(PYGameModule, "isVictoryTest"))
 	{
@@ -7739,7 +7683,6 @@ void CvGame::testVictory()
 						{
 							if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 							{
-								MEMORY_TRACK_EXEMPT();
 
 								if (GET_PLAYER((PlayerTypes)iI).getTeam() == eBestTeam)
 								{
@@ -7770,7 +7713,6 @@ void CvGame::testVictory()
 							{
 								if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 								{
-									MEMORY_TRACK_EXEMPT();
 
 									if (GET_PLAYER((PlayerTypes)iI).getTeam() == eBestTeam)
 									{
@@ -7802,7 +7744,6 @@ void CvGame::testVictory()
 					{
 						if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 						{
-							MEMORY_TRACK_EXEMPT();
 							AddDLLMessage(
 								(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
 								gDLL->getText("TXT_KEY_MERCY_RULE_ABORTED").GetCString(),
@@ -9213,20 +9154,11 @@ bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationT
 	if (GC.getCorporationInfo(eCorporation1).isCompetingCorporation(eCorporation2) || GC.getCorporationInfo(eCorporation2).isCompetingCorporation(eCorporation1))
 		return true;
 
-	for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+	foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation1).getPrereqBonuses())
 	{
-		if (GC.getCorporationInfo(eCorporation1).getPrereqBonus(i) != NO_BONUS)
+		if (algo::contains(GC.getCorporationInfo(eCorporation2).getPrereqBonuses(), eBonus))
 		{
-			for (int j = 0; j < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++j)
-			{
-				if (GC.getCorporationInfo(eCorporation2).getPrereqBonus(j) != NO_BONUS)
-				{
-					if (GC.getCorporationInfo(eCorporation1).getPrereqBonus(i) == GC.getCorporationInfo(eCorporation2).getPrereqBonus(j))
-					{
-						return true;
-					}
-				}
-			}
+			return true;
 		}
 	}
 
@@ -9286,6 +9218,7 @@ void CvGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYiel
 	}
 }
 
+/* Toffer - Unused, but might be needed for recalc...
 void CvGame::removePlotExtraYield(int iX, int iY)
 {
 	for (std::vector<PlotExtraYield>::iterator it = m_aPlotExtraYields.begin(); it != m_aPlotExtraYields.end(); ++it)
@@ -9303,6 +9236,7 @@ void CvGame::removePlotExtraYield(int iX, int iY)
 		pPlot->updateYield();
 	}
 }
+*/
 
 int CvGame::getPlotExtraCost(int iX, int iY) const
 {
@@ -9386,7 +9320,6 @@ void CvGame::setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eR
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
-				MEMORY_TRACK_EXEMPT();
 				AddDLLMessage(
 					(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
 					szBuffer, GC.getReligionInfo(eReligion).getSound(),
@@ -9509,7 +9442,6 @@ int CvGame::getCultureThreshold(CultureLevelTypes eLevel) const
 
 void CvGame::doUpdateCacheOnTurn()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	// reset shrine count
 	m_iShrineBuildingCount = 0;
@@ -9769,7 +9701,6 @@ void CvGame::doVoteResults()
 				if (GET_PLAYER((PlayerTypes) iI).isAlive()
 				&& GET_PLAYER((PlayerTypes) iI).isVotingMember(eVoteSource))
 				{
-					MEMORY_TRACK_EXEMPT();
 					CvWString szMessage;
 					szMessage.Format(L"%s: %s", gDLL->getText("TXT_KEY_ELECTION_CANCELLED").GetCString(), GC.getVoteInfo(eVote).getDescription());
 					AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_NEW_ERA", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
@@ -9941,7 +9872,6 @@ void CvGame::doVoteResults()
 
 					if (bShow && bPassed)
 					{
-						MEMORY_TRACK_EXEMPT();
 
 						const CvWString szMessage = gDLL->getText("TXT_KEY_VOTE_RESULTS", GC.getVoteSourceInfo(eVoteSource).getTextKeyWide(), pVoteTriggered->kVoteOption.szText.GetCString());
 						AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_NEW_ERA", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
@@ -10050,7 +9980,7 @@ void CvGame::doVoteSelection()
 
 bool CvGame::isEventActive(EventTriggerTypes eTrigger) const
 {
-	return !std::contains(m_aeInactiveTriggers, eTrigger);
+	return !algo::contains(m_aeInactiveTriggers, eTrigger);
 }
 
 void CvGame::initEvents()
@@ -10108,7 +10038,7 @@ void CvGame::processBuilding(BuildingTypes eBuilding, int iChange)
 bool CvGame::pythonIsBonusIgnoreLatitudes() const
 {
 	bool lResult = false;
-	if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "isBonusIgnoreLatitude", lResult))
+	if (Cy::call_override(GC.getMap().getMapScript(), "isBonusIgnoreLatitude", lResult))
 	{
 		return lResult;
 	}
@@ -10121,12 +10051,12 @@ bool CvGame::foundBarbarianCity()
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
 
-	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
+	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
 
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
 		CvPlot* plotX = GC.getMap().plotByIndex(iPlot);
-		if (plotX->isWater() || plotX->isImpassable() || plotX->isCity() || plotX->getImprovementType() != NO_IMPROVEMENT || !plotX->isMapCategoryType(earth))
+		if (plotX->isWater() || plotX->isImpassable() || plotX->isCity() || plotX->getImprovementType() != NO_IMPROVEMENT || !plotX->isMapType(earth))
 		{
 			continue;
 		}
@@ -10243,7 +10173,6 @@ void CvGame::changeIncreasingDifficultyCounter(int iChange)
 
 void CvGame::doFinalFive()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 5)
 	{
@@ -10257,7 +10186,6 @@ void CvGame::doFinalFive()
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 				{
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(
 						(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_LOW_PLAYER_DROPPED").GetCString(),
@@ -10271,7 +10199,6 @@ void CvGame::doFinalFive()
 
 void CvGame::doHightoLow()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_HIGH_TO_LOW)
 	&& getGameTurn() >= GC.getDefineINT("HIGH_TO_LOW_FIRST_TURN_CHECK")
@@ -10284,7 +10211,6 @@ void CvGame::doHightoLow()
 				GC.getInitCore().reassignPlayerAdvanced((PlayerTypes)iI, getRankPlayer(countCivPlayersAlive() -1));
 				changeHighToLowCounter(1);
 
-				MEMORY_TRACK_EXEMPT();
 				AddDLLMessage(
 					(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
 					gDLL->getText("TXT_KEY_PLAYER_REASSIGNED").GetCString(),
@@ -10297,7 +10223,6 @@ void CvGame::doHightoLow()
 
 void CvGame::doIncreasingDifficulty()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	if (isOption(GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY))
 	{
@@ -10316,7 +10241,6 @@ void CvGame::doIncreasingDifficulty()
 					GET_PLAYER((PlayerTypes)iI).AI_makeAssignWorkDirty();
 					algo::for_each(GET_PLAYER((PlayerTypes)iI).cities(), CvCity::fn::setInfoDirty(true));
 
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(
 						(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_DIFFICULTY_INCREASED").GetCString(),
@@ -10330,7 +10254,6 @@ void CvGame::doIncreasingDifficulty()
 
 void CvGame::doFlexibleDifficulty()
 {
-	MEMORY_TRACE_FUNCTION();
 	logging::logMsg("C2C.log", "doFlexibleDifficulty");
 
 	const bool bFlexDiffForAI = isModderGameOption(MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY);
@@ -10494,7 +10417,6 @@ void CvGame::doFlexibleDifficulty()
 					{
 						if (iJ == iI) // Difficulty increased for us
 						{
-							MEMORY_TRACK_EXEMPT();
 							AddDLLMessage(
 								ePlayer, true, GC.getEVENT_MESSAGE_TIME(),
 								gDLL->getText(
@@ -10510,7 +10432,6 @@ void CvGame::doFlexibleDifficulty()
 						}
 						else // Difficulty increased for someone else
 						{
-							MEMORY_TRACK_EXEMPT();
 							AddDLLMessage(
 								(PlayerTypes)iJ, true, GC.getEVENT_MESSAGE_TIME(),
 								gDLL->getText(
@@ -11103,42 +11024,36 @@ void CvGame::addLandmarkSigns()
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 		if (pLoopPlot->getLandmarkType() != NO_LANDMARK)
 		{
-			szTextKey = "TXT_KEY_LANDMARK";
 			szSign.clear();
 			szName.clear();
 			switch (pLoopPlot->getLandmarkType())
 			{
 				case LANDMARK_BAY:
-					szTextKey.append((CvWString)"_BAY");
+					szTextKey = "TXT_KEY_LANDMARK_BAY";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_BAY_NAMES"), "Landmark Naming"))));
 					break;
-				case LANDMARK_ISLAND:
-					break;
 				case LANDMARK_FOREST:
-					szTextKey.append((CvWString)"_FOREST");
+					szTextKey = "TXT_KEY_LANDMARK_FOREST";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_FOREST_NAMES"), "Landmark Naming"))));
 					break;
 				case LANDMARK_JUNGLE:
-					szTextKey.append((CvWString)"_JUNGLE");
+					szTextKey = "TXT_KEY_LANDMARK_JUNGLE";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_JUNGLE_NAMES"), "Landmark Naming"))));
 					break;
 				case LANDMARK_PEAK:
-					szTextKey.append((CvWString)"_PEAK");
+					szTextKey = "TXT_KEY_LANDMARK_PEAK";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_PEAK_NAMES"), "Landmark Naming"))));
 					break;
 				case LANDMARK_MOUNTAIN_RANGE:
-					szTextKey.append((CvWString)"_MOUNTAINS");
+					szTextKey = "TXT_KEY_LANDMARK_MOUNTAINS";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_MOUNTAINS_NAMES"), "Landmark Naming"))));
 					break;
-				case LANDMARK_PLAINS:
-					break;
 				case LANDMARK_DESERT:
-					szTextKey.append((CvWString)"_DESERT");
+					szTextKey = "TXT_KEY_LANDMARK_DESERT";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_DESERT_NAMES"), "Landmark Naming"))));
 					break;
-				case LANDMARK_OCEAN:
 				case LANDMARK_LAKE:
-					szTextKey.append((CvWString)"_LAKE");
+					szTextKey = "TXT_KEY_LANDMARK_LAKE";
 					szTextKey.append(CvWString::format(L"_%d", (getSorenRandNum(GC.getDefineINT("NUM_LAKE_NAMES"), "Landmark Naming"))));
 					break;
 				default:
@@ -11156,7 +11071,7 @@ void CvGame::addLandmarkSigns()
 	}
 }
 
-//Marks nearby tiles as counted so that they will not recieve multiple signs
+//Marks nearby tiles as counted so that they will not receive multiple signs
 void CvGame::markBayPlots(const CvPlot* pPlot)
 {
 	//Marks all plots around the given plot, and all plots around the adjacent plots as counted
@@ -11259,7 +11174,6 @@ void CvGame::setModderGameOption(ModderGameOptionTypes eIndex, bool bNewValue)
 
 void CvGame::doFoundCorporations()
 {
-	MEMORY_TRACE_FUNCTION();
 
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
@@ -11757,6 +11671,10 @@ void CvGame::recalculateModifiers()
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+
+		// Toffer - Yield cache
+		pLoopPlot->recalculateBaseYield();
+
 		pLoopPlot->getProperties()->clearForRecalculate();
 
 		//	We will recalculate visibility from first principles
@@ -11883,13 +11801,13 @@ const CvProperties* CvGame::getPropertiesConst() const
 
 MapTypes CvGame::getCurrentMap() const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), m_eCurrentMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, m_eCurrentMap)
 	return m_eCurrentMap;
 }
 
 void CvGame::setCurrentMap(MapTypes eNewMap)
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eNewMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, eNewMap)
 	m_eCurrentMap = eNewMap;
 }
 
@@ -12015,7 +11933,7 @@ void CvGame::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex)
 	m_paiImprovementCount[eIndex] += iChange;
-	FAssert(getImprovementCount(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getImprovementCount(eIndex))
 }
 
 bool CvGame::isValidByGameOption(const CvUnitCombatInfo& info) const

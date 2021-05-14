@@ -26,7 +26,7 @@ class CvUnit;
 
 typedef std::vector<const CvReplayMessage*> ReplayMessageList;
 
-class CvGame
+class CvGame : bst::noncopyable
 {
 public:
 
@@ -645,7 +645,7 @@ public:
 
 	int getPlotExtraYield(int iX, int iY, YieldTypes eYield) const;
 	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iCost);
-	void removePlotExtraYield(int iX, int iY);
+	//void removePlotExtraYield(int iX, int iY); // Toffer - Unused, but might be needed for recalc...
 
 	int getPlotExtraCost(int iX, int iY) const;
 	void changePlotExtraCost(int iX, int iY, int iCost);

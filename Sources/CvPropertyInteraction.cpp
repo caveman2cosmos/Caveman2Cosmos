@@ -90,7 +90,7 @@ void CvPropertyInteraction::setRelationData(int iRelationData)
 	m_iRelationData = iRelationData;
 }
 
-bool CvPropertyInteraction::isActive(CvGameObject *pObject) const
+bool CvPropertyInteraction::isActive(const CvGameObject *pObject) const
 {
 	if ((m_eObjectType == NO_GAMEOBJECT) || (m_eObjectType == pObject->getGameObjectType()))
 	{

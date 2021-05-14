@@ -29,16 +29,9 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_DONKEY_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TAMED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_TAMED_DONKEY_PAIR_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
 			<Buildings>
 				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
@@ -103,15 +96,8 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TAMED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_TAMED_HORSE_PAIR_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitAIs>
-       			<UnitAI>
-					<UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
-				   <bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
 			<Buildings>
 				<BuildingType>BUILDING_HORSE_HERD</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
@@ -180,40 +166,13 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_WOLF_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TAMED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_TAMED_WOLF_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ATTACK</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_RESERVE</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_COUNTER</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-       			<UnitAI>
-					<UnitAIType>UNITAI_PILLAGE_COUNTER</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				 </UnitAI>
-       			 <UnitAI>
-					<UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
 			<Buildings>
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>

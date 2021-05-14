@@ -18,6 +18,7 @@
 #include "CvViewport.h"
 #include "CvXMLLoadUtility.h"
 #include "FVariableSystem.h"
+#include "CvImprovementInfo.h"
 #include <time.h> 
 #include <sstream>
 
@@ -132,7 +133,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_Profiler(NULL)
 	, m_VarSystem(NULL)
 	, m_fPLOT_SIZE(0)
-	, m_bMultimapsEnabled(false)
 	, m_bViewportsEnabled(false)
 	, m_iViewportFocusBorder(0)
 	, m_iViewportCenterOnSelectionCenterBorder(5)
@@ -183,7 +183,11 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_##VAR((dataType)0)
 
 	DO_FOR_EACH_GLOBAL_DEFINE(ADD_TO_CONSTRUCTOR)
-	DO_FOR_EACH_INFO_TYPE(ADD_TO_CONSTRUCTOR)
+
+#define ADD_INFO_TYPE_TO_CONSTRUCTOR(dataType, VAR) \
+	, m_##VAR((dataType)-1)
+
+	DO_FOR_EACH_INFO_TYPE(ADD_INFO_TYPE_TO_CONSTRUCTOR)
 {
 }
 
@@ -413,13 +417,10 @@ void cvInternalGlobals::init()
 
 	m_game = new CvGameAI;
 	
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	m_maps.push_back(new CvMap(MAP_INITIAL));
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+	for (int i = 0; i < NUM_MAPS; i++)
+	{
+		m_maps[i] = new CvMap((MapTypes)i);
+	}
 
 	CvPlayerAI::initStatics();
 	CvTeamAI::initStatics();
@@ -462,17 +463,10 @@ void cvInternalGlobals::uninit()
 
 	SAFE_DELETE(m_game);
 	
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	foreach_(const CvMap* map, m_maps)
 	{
 		SAFE_DELETE(map);
 	}
-	m_maps.clear();
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 	CvPlayerAI::freeStatics();
 	CvTeamAI::freeStatics();
@@ -602,11 +596,6 @@ DirectionTypes cvInternalGlobals::getXYDirection(int i, int j) const
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-bool cvInternalGlobals::multiMapsEnabled() const
-{
-	return m_bMultimapsEnabled;
-}
-
 bool cvInternalGlobals::viewportsEnabled() const
 {
 	return m_bViewportsEnabled;
@@ -619,38 +608,13 @@ bool cvInternalGlobals::getReprocessGreatWallDynamically() const
 
 int cvInternalGlobals::getNumMapInfos() const
 {
-	return multiMapsEnabled() ? m_paMapInfo.size() : 1;
-}
-
-int cvInternalGlobals::getNumMapSwitchInfos() const
-{
-	return m_paMapSwitchInfo.size();
+	return m_paMapInfo.size();
 }
 
 CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap)
 	return *(m_paMapInfo[eMap]);
-}
-
-CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(MapSwitchTypes eMapSwitch) const
-{
-	FASSERT_BOUNDS(0, GC.getNumMapSwitchInfos(), eMapSwitch)
-	return *(m_paMapSwitchInfo[eMapSwitch]);
-}
-
-void cvInternalGlobals::updateMaps()
-{
-	for (int i = 1; i < GC.getNumMapInfos(); i++)
-	{
-		m_maps.push_back(NULL);
-	}
-	FAssert(m_maps.size() == GC.getNumMapInfos());
-
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		GET_PLAYER((PlayerTypes)i).addContainersForEachMap();
-	}
 }
 
 void cvInternalGlobals::setResourceLayer(bool bOn)
@@ -1347,7 +1311,6 @@ CvInfoBase& cvInternalGlobals::getDomainInfo(DomainTypes e) const
 	return *(m_paDomainInfo[e]);
 }
 
-//TB Promotion Line Mod begin
 int cvInternalGlobals::getNumPromotionLineInfos() const
 {
 	return (int)m_paPromotionLineInfo.size();
@@ -1357,18 +1320,6 @@ CvPromotionLineInfo& cvInternalGlobals::getPromotionLineInfo(PromotionLineTypes 
 {
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), e)
 	return *(m_paPromotionLineInfo[e]);
-}
-//TB Promotion Line Mod end
-
-int cvInternalGlobals::getNumMapCategoryInfos() const
-{
-	return (int)m_paMapCategoryInfo.size();
-}
-
-CvMapCategoryInfo& cvInternalGlobals::getMapCategoryInfo(MapCategoryTypes e) const
-{
-	FASSERT_BOUNDS(0, GC.getNumMapCategoryInfos(), e)
-	return *(m_paMapCategoryInfo[e]);
 }
 
 int cvInternalGlobals::getNumIdeaClassInfos() const
@@ -2725,10 +2676,7 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paDenialInfo);
 	deleteInfoArray(m_paInvisibleInfo);
 	deleteInfoArray(m_paUnitCombatInfo);
-	//TB Promotion Line mod begin
 	deleteInfoArray(m_paPromotionLineInfo);
-	//TB Promotion Line mod end
-	deleteInfoArray(m_paMapCategoryInfo);
 	deleteInfoArray(m_paIdeaClassInfo);
 	deleteInfoArray(m_paIdeaInfo);
 	//deleteInfoArray(m_paTraitOptionEditsInfo);
@@ -2913,7 +2861,7 @@ void cvInternalGlobals::cacheInfoTypes()
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap);
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap);
 	FAssert(eMap != CURRENT_MAP);
 
 	GC.getMap().beforeSwitch();
@@ -2958,7 +2906,7 @@ CvMapExternal& cvInternalGlobals::getMapExternal() const
 
 CvMap& cvInternalGlobals::getMapByIndex(MapTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eIndex)
+	FASSERT_BOUNDS(0, NUM_MAPS, eIndex)
 	return *m_maps[eIndex];
 }
 
@@ -2977,36 +2925,9 @@ void cvInternalGlobals::reprocessSigns()
 		m_bSignsCleared = false;
 	}
 }
-
-void cvInternalGlobals::initializeMap(MapTypes eMap)
-{
-	OutputDebugString("Initializing Map: Start\n");
-	while ( m_maps.size() < (size_t)eMap )
-	{
-		//	Sparse or out of order initialization
-		m_maps.push_back(NULL);
-	}
-
-	FAssertMsg(m_maps[eMap] == NULL, "Memory leak allocating a map that already exists");
-
-	m_maps[eMap] = new CvMap(eMap);
-
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		GET_PLAYER((PlayerTypes)i).initContainersForMap(eMap);
-	}
-	OutputDebugString("Initializing Map: End\n");
-}
-
-bool cvInternalGlobals::mapInitialized(MapTypes eMap) const
-{
-	return (m_maps.size() > (size_t)eMap && m_maps[eMap] != NULL);
-}
-
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
-
 
 void cvInternalGlobals::addDelayedResolution(int *pType, CvString szString)
 {

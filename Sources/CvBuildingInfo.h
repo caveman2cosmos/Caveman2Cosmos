@@ -266,14 +266,12 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	// Afforess 12/9/09
 	int getFreePromotion_2() const					{ return m_iFreePromotion_2; }
 	int getFreePromotion_3() const					{ return m_iFreePromotion_3; }
 	int getPrereqVicinityBonus() const				{ return m_iPrereqVicinityBonus; }
 	int getPrereqRawVicinityBonus() const			{ return m_iPrereqRawVicinityBonus; }
 	int getGlobalPopulationgrowthratepercentage() const { return m_iGlobalPopulationgrowthratepercentage; }
 	int getPopulationgrowthratepercentage() const	{ return m_iPopulationgrowthratepercentage; }
-	bool isBuildOnlyOnPeaks() const					{ return m_bBuildOnlyOnPeaks; }
 	bool isPrereqPower() const						{ return m_bPrereqPower; }
 	bool isApplyFreePromotionOnMove() const			{ return m_bApplyFreePromotionOnMove; }
 	bool isNoEnemyPillagingIncome() const			{ return m_bNoEnemyPillagingIncome; }
@@ -446,9 +444,10 @@ public:
 	int getNumMayDamageAttackingUnitCombatTypes() const;
 	bool isMayDamageAttackingUnitCombatType(int i) const;
 
-	int getMapCategoryType(int i) const;
-	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i) const;
+	int getMapType(int i) const;
+	int getNumMapTypes() const;
+	bool isMapType(int i) const;
+	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
 
 	//integer vectors with pairing method without delayed resolution
 	int getNumUnitCombatRepelModifiers() const;
@@ -577,7 +576,6 @@ protected:
 	int m_iNumPopulationEmployed;
 	int m_iHappinessPercentPerPopulation;
 	int m_iHealthPercentPerPopulation;
-	bool m_bBuildOnlyOnPeaks;
 	bool m_bPrereqPower;
 	bool m_bApplyFreePromotionOnMove;
 	bool m_bNoEnemyPillagingIncome;
@@ -871,7 +869,7 @@ protected:
 	//std::vector<int> m_aiFreePromoTypes;
 	std::vector<int> m_aiUnitCombatRetrainTypes;
 	std::vector<int> m_aiMayDamageAttackingUnitCombatTypes;
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int> m_aiMapTypes;
 	//integer vectors with pairing without delayed resolution
 	UnitCombatModifierArray m_aUnitCombatRepelModifiers;
 	UnitCombatModifierArray m_aUnitCombatRepelAgainstModifiers;

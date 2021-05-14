@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Building Infos -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
@@ -12,7 +11,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANDEAN_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANDEAN_CATHEDRAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANDEAN_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ANDEAN_CATHEDRAL</ArtDefineTag>
@@ -58,7 +56,7 @@
 				<iCommerce>2</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ANDEANISM</ReligionType>
@@ -103,7 +101,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANDEAN_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANDEAN_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANDEAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ANDEAN_MONASTERY</ArtDefineTag>
@@ -139,7 +136,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ANDEANISM</ReligionType>
@@ -170,7 +167,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANDEAN_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANDEAN_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANDEAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ANDEAN_TEMPLE</ArtDefineTag>
@@ -202,7 +198,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ANDEANISM</ReligionType>
@@ -240,7 +236,6 @@
 			<Type>BUILDING_ANDEAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_ANDEAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANDEAN_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANDEAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ANDEAN_SHRINE</ArtDefineTag>
@@ -270,7 +265,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ANDEANISM</ReligionType>
@@ -298,7 +293,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DORADO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DORADO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DORADO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DORADO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DORADO</MovieDefineTag>
@@ -380,7 +374,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MACHU_PICCHU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MACHU_PICCHU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MACHU_PICCHU_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_MACHU_PICCHU_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MACHU_PICCHU</ArtDefineTag>

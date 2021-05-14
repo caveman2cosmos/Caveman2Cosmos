@@ -1708,7 +1708,9 @@ class CvSignDesc:
 		f.write("\tplotX=%d\n" % plot.getX())
 		f.write("\tplotY=%d\n" % plot.getY())
 		iPlayer = sign.getPlayerType()
-		f.write("\tplayerType=%d, (%s)\n" %(iPlayer, GC.getPlayer(iPlayer).getName().encode(fEncode)))
+		if iPlayer > -1:
+			f.write("\tplayerType=%d, (%s)\n" %(iPlayer, GC.getPlayer(iPlayer).getName().encode(fEncode)))
+		else: f.write("\tplayerType=%d\n" %iPlayer)
 		f.write("\tcaption=%s\n" % sign.getCaption())
 		f.write("EndSign\n")
 

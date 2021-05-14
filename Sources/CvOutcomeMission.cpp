@@ -66,12 +66,12 @@ GameObjectTypes CvOutcomeMission::getPayerType() const
 	return m_ePayerType;
 }
 
-void callSetPayer(CvGameObject* pObject, CvGameObject** ppPayer)
+void callSetPayer(const CvGameObject* pObject, const CvGameObject** ppPayer)
 {
 	*ppPayer = pObject;
 }
 
-bool CvOutcomeMission::isPossible(CvUnit* pUnit, bool bTestVisible) const
+bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 {
 	//if (!bTestVisible)
 	//{
@@ -101,7 +101,7 @@ bool CvOutcomeMission::isPossible(CvUnit* pUnit, bool bTestVisible) const
 	//{
 		if (!getPropertyCost()->isEmpty())
 		{
-			CvGameObject* pPayer = NULL;
+			const CvGameObject* pPayer = NULL;
 			if ((m_ePayerType == NO_GAMEOBJECT) || (m_ePayerType == GAMEOBJECT_UNIT))
 			{
 				pPayer = pUnit->getGameObject();
@@ -185,7 +185,7 @@ void CvOutcomeMission::execute(CvUnit* pUnit)
 
 	if (!getPropertyCost()->isEmpty())
 	{
-		CvGameObject* pPayer = NULL;
+		const CvGameObject* pPayer = NULL;
 		if ((m_ePayerType == NO_GAMEOBJECT) || (m_ePayerType == GAMEOBJECT_UNIT))
 		{
 			pPayer = pUnit->getGameObject();

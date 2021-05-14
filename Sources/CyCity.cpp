@@ -1139,14 +1139,9 @@ int CyCity::getSeaPlotYield(int /*YieldTypes*/ eIndex) const
 	return m_pCity->getSeaPlotYield((YieldTypes) eIndex);
 }
 
-int CyCity::getBaseYieldRate(int /*YieldTypes*/ eIndex) const
+int CyCity::getPlotYield(int /*YieldTypes*/ eIndex) const
 {
-	return m_pCity->getBaseYieldRate((YieldTypes)eIndex);
-}
-
-void CyCity::changeBaseYieldRate(int /*YieldTypes*/ eIndex, int iNewValue)
-{
-	m_pCity->changeBaseYieldRate((YieldTypes)eIndex, iNewValue);
+	return m_pCity->getPlotYield((YieldTypes)eIndex);
 }
 
 int CyCity::getBaseYieldRateModifier(int /*YieldTypes*/ eIndex, int iExtra) const

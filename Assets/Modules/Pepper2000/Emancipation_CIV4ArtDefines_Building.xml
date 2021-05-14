@@ -11,7 +11,7 @@
 			<KFM/>
 			<Button>Art/interface/buttons/buildings/emancipation_proclamation.dds</Button>
 		</BuildingArtInfo>
-        <BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>

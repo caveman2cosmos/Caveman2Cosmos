@@ -83,7 +83,6 @@ void	CvContractBroker::lookingForWork(const CvUnit* pUnit, int iMinPriority)
 	unitDetails.iMatchedToRequestSeqAnyPlot = -1;
 
 	{
-		MEMORY_TRACK_EXEMPT();
 	
 		m_advertisingUnits.push_back(unitDetails);
 	}
@@ -200,7 +199,6 @@ void	CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags,
 	}
 
 	{
-		MEMORY_TRACK_EXEMPT();
 
 		m_workRequests.insert(insertAt, newRequest);
 	}
@@ -220,7 +218,6 @@ void CvContractBroker::advertiseTender(const CvCity* pCity, int iMinPriority)
 	newTender.iCityId			= pCity->getID();
 
 	{
-		MEMORY_TRACK_EXEMPT();
 
 		m_advertisingTenders.push_back(newTender);
 	}
@@ -343,7 +340,7 @@ void CvContractBroker::finalizeTenderContracts()
 								tenderAllocations[iTenderAllocationKey] = 0;
 							}
 
-							FAssert(iTendersAlreadyInProcess >= 0);
+							FASSERT_NOT_NEGATIVE(iTendersAlreadyInProcess)
 
 							if ( iTendersAlreadyInProcess <= 0 )
 							{

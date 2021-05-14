@@ -51,7 +51,7 @@ typedef std::vector< std::pair<UnitTypes, PromotionTypes> > UnitPromotionArray;
 typedef std::vector< std::pair<CivilizationTypes, LeaderHeadTypes> > CivLeaderArray;
 typedef std::vector<TechTypes> techPath;
 
-class CvPlayer
+class CvPlayer : bst::noncopyable
 {
 public:
 	CvPlayer();
@@ -211,7 +211,6 @@ public:
 	void updateBuildingCommerce();
 	void updateReligionCommerce();
 	void updateCorporation();
-	void updateCityPlotYield();
 	void updateCitySight(bool bIncrement, bool bUpdatePlotGroups);
 	void updateTradeRoutes();
 	void updatePlunder(int iChange, bool bUpdatePlotGroups);
@@ -329,6 +328,8 @@ public:
 	int getInflationMod10000() const;
 	int64_t getInflationCost() const;
 	int64_t getFinalExpense() const;
+	short getProfitMargin(int &iTotalCommerce, int64_t &iNetIncome, int64_t &iNetExpenses, int iExtraExpense=0, int iExtraExpenseMod=0) const;
+	short getProfitMargin(int iExtraExpense=0, int iExtraExpenseMod=0) const;
 
 	int64_t calculateBaseNetGold() const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const;
@@ -1054,9 +1055,6 @@ public:
 	CLLNode<CvWString>* nextCityNameNode(CLLNode<CvWString>* pNode) const;
 	CLLNode<CvWString>* headCityNameNode() const;
 
-	void addContainersForEachMap();
-	void initContainersForMap(MapTypes mapIndex);
-
 	// plot groups iteration
 	DECLARE_INDEX_ITERATOR(const CvPlayer, CvPlotGroup, plot_group_iterator, firstPlotGroup, nextPlotGroup);
 	plot_group_iterator beginPlotGroups() const { return plot_group_iterator(this); }
@@ -1701,7 +1699,7 @@ public:
 	virtual int AI_totalUnitAIs(UnitAITypes eUnitAI) const = 0;
 	virtual int AI_totalAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0;
 	virtual int AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0;
-	virtual int AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const = 0;
+	virtual int AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const = 0;
 	virtual int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const = 0;
 
 	virtual int AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum = false, CivicTypes* paeSelectedCivics = NULL) const = 0;
@@ -2393,11 +2391,13 @@ protected:
 	void clearCanConstructCacheForGroup(SpecialBuildingTypes eSpecialBuilding, bool bIncludeCities = false) const;
 
 public:
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType) const;
 	void changePlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange);
 	void setPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange);
 	int countAfflictedUnits(PromotionLineTypes eAfflictionLine);
 	void recalculateAfflictedUnitCount();
+#endif
 };
 
 #endif

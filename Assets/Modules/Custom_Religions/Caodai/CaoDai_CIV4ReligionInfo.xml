@@ -2,18 +2,17 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Mark Cromer (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- March 2006 - Eusebius World Religion Mod -->
 <!-- commerce triplets: coin, beaker, culture -->
 <!--
-     TAKE NOTE...
-     The SDK portion of this mod overloads <GlobalReligionCommerces> so that they are added to
-     every city that has the religion, whether it is the state religion or not.  It also always adds
-     <HolyCityCommerces> whether the religion is the state religion or not.  It hard-codes shrines
-     to add 1 gold per city with religion.
-     Nothing will break if you change any of these, or whether you use the SDK part of the mod or not,
-     I just want you to understand what you are doing if you tweak these numbers.
-     Eusebius
+	TAKE NOTE...
+	The SDK portion of this mod overloads <GlobalReligionCommerces> so that they are added to
+	every city that has the religion, whether it is the state religion or not. It also always adds
+	<HolyCityCommerces> whether the religion is the state religion or not. It hard-codes shrines
+	to add 1 gold per city with religion.
+	Nothing will break if you change any of these, or whether you use the SDK part of the mod or not,
+	I just want you to understand what you are doing if you tweak these numbers.
+	Eusebius
 -->
 <!-- Religion -->
 <Civ4ReligionInfo xmlns="x-schema:../../../XML/Schema/C2C_CIV4GameInfoSchema.xml">

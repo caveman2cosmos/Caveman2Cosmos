@@ -12,7 +12,7 @@ BeginMap
 	world size=WORLDSIZE_LARGE
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
-	Randomize Resources=1
+	Randomize Resources=0
 EndMap
 BeginPlot
 	x=0,y=0
