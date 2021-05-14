@@ -670,7 +670,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCHAILECT_PEDIA</Tag>
-		<English>Postsapience - when you have 11 dimensions its easy to make good computer.[NEWLINE][LINK=BUILDING_HIGH_DIMENSIONAL]High Dimensional[\LINK]</English>
+		<English>Postsapience - when you have 11 dimensions its easy to make good computer.[NEWLINE]Required human modifications: [LINK=BUILDING_HIGH_DIMENSIONAL]High Dimensional[\LINK][NEWLINE]Leads to: [LINK=BUILDING_METAPHYSICAL]Metaphysical[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCONIC_TOWER</Tag>
@@ -983,7 +983,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATEMPORAL_PEDIA</Tag>
-		<English>You can now rewind or fast-forward omniverse as if it was video clip.[NEWLINE][LINK=BUILDING_HIGH_DIMENSIONAL]High Dimensional[\LINK]</English>
+		<English>You can now rewind or fast-forward omniverse as if it was video clip.[NEWLINE]Required human modifications: [LINK=BUILDING_HIGH_DIMENSIONAL]High Dimensional[\LINK][NEWLINE]Leads to: [LINK=BUILDING_METAPHYSICAL]Metaphysical[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATHLETIC_MEGACOMPLEX</Tag>
@@ -2522,7 +2522,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT_PEDIA</Tag>
-		<English>Beginning of true transhumanism - humans now can be much more productive.[NEWLINE][LINK=BUILDING_DESIGNER_BABIES]Designer Babies[\LINK]</English>
+		<English>Beginning of true transhumanism - humans now can be much more productive.[NEWLINE]Required human modifications: [LINK=BUILDING_DESIGNER_BABIES]Designer Babies[\LINK][NEWLINE]Leads to: [LINK=BUILDING_NOVEL_SENSES]Novel Senses[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLD_FUSION2</Tag>
@@ -2553,7 +2553,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLD_TOLERANCE_PEDIA</Tag>
-		<English>Advancements in material sciences allows humans to function in cryogenic temperature.[NEWLINE][LINK=BUILDING_ROBOTIC_BODY]Robotic Body[\LINK]</English>
+		<English>Advancements in material sciences allows humans to function in cryogenic temperature.[NEWLINE]Required human modifications: [LINK=BUILDING_ROBOTIC_BODY]Robotic Body[\LINK][NEWLINE]Leads to: [LINK=BUILDING_NANOMORPHISM]Nanomorphism[\LINK], [LINK=BUILDING_ALIEN_HYBRID]Alien Hybrid[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS</Tag>
@@ -2564,7 +2564,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS_PEDIA</Tag>
-		<English>Voluntary hivemind is now possible. At this point there is no difference between nature and technology.[NEWLINE][LINK=BUILDING_ENLIGHTENED]Enlightened[\LINK], [LINK=BUILDING_ROBOTIC_BODY]Robotic Body[\LINK]</English>
+		<English>Voluntary hivemind is now possible. At this point there is no difference between nature and technology.[NEWLINE]Required human modifications: [LINK=BUILDING_ENLIGHTENED]Enlightened[\LINK], [LINK=BUILDING_ROBOTIC_BODY]Robotic Body[\LINK][NEWLINE]Leads to: [LINK=BUILDING_NANOMORPHISM]Nanomorphism[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLONY_ECOSYSTEM</Tag>
@@ -3463,7 +3463,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_BABIES_PEDIA</Tag>
-		<English>At this stage DNA bugs can be permanently fixed.[NEWLINE][LINK=BUILDING_GENE_EDITING]Gene Editing[\LINK]</English>
+		<English>At this stage DNA bugs can be permanently fixed.[NEWLINE]Required human modifications: [LINK=BUILDING_GENE_EDITING]Gene Editing[\LINK][NEWLINE]Leads to: [LINK=BUILDING_COGNITIVE_ENHANCEMENT]Cognitive Enhancement[\LINK], [LINK=BUILDING_ENLIGHTENED]Enlightened[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_CASTE_LAW_ENFORCEMENT</Tag>
@@ -3529,7 +3529,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_IDENTITY_PEDIA</Tag>
-		<English>Most of humans are everpresent on internet.[NEWLINE][LINK=BUILDING_DIGITAL_LIFESTYLE]Digital Lifestyle[\LINK]</English>
+		<English>Most of humans are everpresent on internet.[NEWLINE]Required human modifications: [LINK=BUILDING_DIGITAL_LIFESTYLE]Digital Lifestyle[\LINK][NEWLINE]Leads to: [LINK=BUILDING_ENLIGHTENED]Enlightened[\LINK], [LINK=BUILDING_ROBOTIC_BODY]Robotic Body[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE</Tag>
@@ -3540,7 +3540,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE_PEDIA</Tag>
-		<English>Extensive use of social media and other IT has unforeseen consequences on humans for better or worse.</English>
+		<English>Extensive use of social media and other IT has unforeseen consequences on humans for better or worse.[NEWLINE]This is first ever human modification.[NEWLINE]Leads to: [LINK=BUILDING_DIGITAL_IDENTITY]Digital Identity[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_LOGISTICS_CENTER</Tag>
@@ -4004,7 +4004,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENLIGHTENED_PEDIA</Tag>
-		<English>Soft skills and virtues can come more naturally due to technological interventionism.[NEWLINE][LINK=BUILDING_DIGITAL_IDENTITY]Digital Identity[\LINK], [LINK=BUILDING_DESIGNER_BABIES]Designer Babies[\LINK]</English>
+		<English>Soft skills and virtues can come more naturally due to technological interventionism.[NEWLINE]Required human modifications: [LINK=BUILDING_DIGITAL_IDENTITY]Digital Identity[\LINK], [LINK=BUILDING_DESIGNER_BABIES]Designer Babies[\LINK][NEWLINE]Leads to: [LINK=BUILDING_INDEFINITE_LIFESPAN]Indefinite Lifespan[\LINK], [LINK=BUILDING_COLLECTIVE_CONSCIOUSNESS]Collective Consciousness[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENVIRONMENTAL_ART_STUDIO</Tag>
@@ -4876,7 +4876,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENE_EDITING_PEDIA</Tag>
-		<English>Advancements in biotechnology have exciting consequences for future of humanity.</English>
+		<English>Advancements in biotechnology have exciting consequences for future of humanity.[NEWLINE]This is base human modification, just like Digital Lifestyle.[NEWLINE]Leads to: [LINK=BUILDING_DESIGNER_BABIES]Designer Babies[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENE_ENHANCEMENT_LAB</Tag>
@@ -4927,7 +4927,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GILLS_PEDIA</Tag>
-		<English>Water or other liquids won't stop space mermaids.[NEWLINE][LINK=BUILDING_NOVEL_SENSES]Novel Senses[\LINK]</English>
+		<English>Water or other liquids won't stop space mermaids.[NEWLINE]Required human modifications: [LINK=BUILDING_NOVEL_SENSES]Novel Senses[\LINK][NEWLINE]Leads to: [LINK=BUILDING_ALIEN_HYBRID]Alien Hybrid[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLIESE_163C</Tag>
@@ -5194,7 +5194,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEAT_TOLERANCE_PEDIA</Tag>
-		<English>Advancements in material sciences allows humans to function at temperature of hundreds kelvins.[NEWLINE][LINK=BUILDING_ROBOTIC_BODY]Robotic Body[\LINK]</English>
+		<English>Advancements in material sciences allows humans to function at temperature of hundreds kelvins.[NEWLINE]Required human modifications: [LINK=BUILDING_ROBOTIC_BODY]Robotic Body[\LINK][NEWLINE]Leads to: [LINK=BUILDING_RADIATION_TOLERANCE]Radiation Tolerance[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEAVEN</Tag>
@@ -5275,7 +5275,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_PEDIA</Tag>
-		<English>Posthumans can transfer themselves into higher dimensions, as they are pretty much sentient physics.[NEWLINE][LINK=BUILDING_ALIEN_HYBRID]Alien Hybrid[\LINK], [LINK=BUILDING_IMMORTAL]Immortal[\LINK], [LINK=BUILDING_PURE_ENERGY]Pure Energy[\LINK]</English>
+		<English>Posthumans can transfer themselves into higher dimensions, as they are pretty much sentient physics.[NEWLINE]Required human modifications: [LINK=BUILDING_ALIEN_HYBRID]Alien Hybrid[\LINK], [LINK=BUILDING_IMMORTAL]Immortal[\LINK], [LINK=BUILDING_PURE_ENERGY]Pure Energy[\LINK][NEWLINE]Leads to: [LINK=BUILDING_ARCHAILECT]Archailect[\LINK], [LINK=BUILDING_NONSPATIAL]Nonspatial[\LINK], [LINK=BUILDING_ATEMPORAL]Atemporal[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HILLS_CLOUD_COLONY</Tag>
@@ -5416,7 +5416,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ALIEN_HYBRID_PEDIA</Tag>
-		<English>Xenocompatibility is nice bonus of being technological beings.[NEWLINE][LINK=BUILDING_WINGS]Wings[\LINK], [LINK=BUILDING_GILLS]Gills[\LINK], [LINK=BUILDING_COLD_TOLERANCE]Cold Tolerance[\LINK], [LINK=BUILDING_RADIATION_TOLERANCE]Radiation Tolerance[\LINK], at least one space adaptation: [LINK=BUILDING_LUNARIS]Lunaris[\LINK], [LINK=BUILDING_MARTIAN]Martian[\LINK], [LINK=BUILDING_ZERO_G_ADAPTATION]Zero G Adaptation[\LINK]</English>
+		<English>Xenocompatibility is nice bonus of being technological beings.[NEWLINE]Required human modifications: [LINK=BUILDING_WINGS]Wings[\LINK], [LINK=BUILDING_GILLS]Gills[\LINK], [LINK=BUILDING_COLD_TOLERANCE]Cold Tolerance[\LINK], [LINK=BUILDING_RADIATION_TOLERANCE]Radiation Tolerance[\LINK], at least one space adaptation: [LINK=BUILDING_LUNARIS]Lunaris[\LINK], [LINK=BUILDING_MARTIAN]Martian[\LINK], [LINK=BUILDING_ZERO_G_ADAPTATION]Zero G Adaptation[\LINK][NEWLINE]Leads to: [LINK=BUILDING_HIGH_DIMENSIONAL]High Dimensional[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUNGER_GAMES</Tag>
@@ -5748,7 +5748,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMMORTAL_PEDIA</Tag>
-		<English>Ragnarok proof posthumans can easily survive for billion years due to regular backups and good durability.[NEWLINE][LINK=BUILDING_INDEFINITE_LIFESPAN]Indefinite Lifespan[\LINK], [LINK=BUILDING_TRANSAPIENT]Transapient[\LINK]</English>
+		<English>Ragnarok proof posthumans can easily survive for billion years due to regular backups and good durability.[NEWLINE]Required human modifications: [LINK=BUILDING_INDEFINITE_LIFESPAN]Indefinite Lifespan[\LINK], [LINK=BUILDING_TRANSAPIENT]Transapient[\LINK][NEWLINE]Leads to: [LINK=BUILDING_HIGH_DIMENSIONAL]High Dimensional[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN</Tag>
@@ -5759,7 +5759,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN_PEDIA</Tag>
-		<English>Humans now can life 200 - 500 years depending on how accident prone they are. Slow interstellar travel isn't as scary anymore. [NEWLINE][LINK=BUILDING_ENLIGHTENED]Enlightened[\LINK]</English>
+		<English>Humans now can life 200 - 500 years depending on how accident prone they are. Slow interstellar travel isn't as scary anymore.[NEWLINE]Required human modifications: [LINK=BUILDING_ENLIGHTENED]Enlightened[\LINK][NEWLINE]Leads to: [LINK=BUILDING_IMMORTAL]Immortal[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUCED_RAIN</Tag>
@@ -5840,7 +5840,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFORMATION_BASED_PEDIA</Tag>
-		<English>Posthumans can be easily stored and transferred as information.[NEWLINE][LINK=BUILDING_NANOMORPHISM]Nanomorphism[\LINK]</English>
+		<English>Posthumans can be easily stored and transferred as information.[NEWLINE]Required human modifications: [LINK=BUILDING_NANOMORPHISM]Nanomorphism[\LINK][NEWLINE]Leads to: [LINK=BUILDING_TRANSAPIENT]Transapient[\LINK], [LINK=BUILDING_PURE_ENERGY]Pure Energy[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFRASOUND_DEFENSES</Tag>
@@ -7046,7 +7046,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNARIS_PEDIA</Tag>
-		<English>Adaptation of humans to space in low gravity conditions.[NEWLINE][LINK=BUILDING_NOVEL_SENSES]Novel Senses[\LINK]</English>
+		<English>Adaptation of humans to space in low gravity conditions.[NEWLINE]Required human modifications: [LINK=BUILDING_NOVEL_SENSES]Novel Senses[\LINK][NEWLINE]Leads to: [LINK=BUILDING_ALIEN_HYBRID]Alien Hybrid[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ALGAE_FARM</Tag>
@@ -7851,7 +7851,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_PEDIA</Tag>
-		<English>Adaptation of humans to space in medium gravity conditions.[NEWLINE][LINK=BUILDING_NOVEL_SENSES]Novel Senses[\LINK]</English>
+		<English>Adaptation of humans to space in medium gravity conditions.[NEWLINE]Required human modifications: [LINK=BUILDING_NOVEL_SENSES]Novel Senses[\LINK][NEWLINE]Leads to: [LINK=BUILDING_ALIEN_HYBRID]Alien Hybrid[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ALBEDO_REDUCTION</Tag>
@@ -8579,7 +8579,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAPHYSICAL_PEDIA</Tag>
-		<English>Entire civilization is one with omniverse, science, technology and physics.[NEWLINE][LINK=BUILDING_ARCHAILECT]Archailect[\LINK], [LINK=BUILDING_NONSPATIAL]Nonspatial[\LINK], [LINK=BUILDING_ATEMPORAL]Atemporal[\LINK]</English>
+		<English>Entire civilization is one with omniverse, science, technology and physics.[NEWLINE]Required human modifications: [LINK=BUILDING_ARCHAILECT]Archailect[\LINK], [LINK=BUILDING_NONSPATIAL]Nonspatial[\LINK], [LINK=BUILDING_ATEMPORAL]Atemporal[\LINK][NEWLINE]This is final stage of evolution.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAVERSE_EDUCATION</Tag>
@@ -9010,7 +9010,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NANOMORPHISM_PEDIA</Tag>
-		<English>At this point transhumans are now posthumans - nanotechnology based robots. Sentient grey goo is slowly consuming galaxy.[NEWLINE][LINK=BUILDING_COLD_TOLERANCE]Cold Tolerance[\LINK], [LINK=BUILDING_RADIATION_TOLERANCE]Radiation Tolerance[\LINK], [LINK=BUILDING_COLLECTIVE_CONSCIOUSNESS]Collective Consciousness[\LINK]</English>
+		<English>At this point transhumans are now posthumans - nanotechnology based robots. Sentient grey goo is slowly consuming galaxy.[NEWLINE]Required human modifications: [LINK=BUILDING_COLD_TOLERANCE]Cold Tolerance[\LINK], [LINK=BUILDING_RADIATION_TOLERANCE]Radiation Tolerance[\LINK], [LINK=BUILDING_COLLECTIVE_CONSCIOUSNESS]Collective Consciousness[\LINK][NEWLINE]Leads to: [LINK=BUILDING_INFORMATION_BASED]Information Based[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NANOTECH_CLOTHING</Tag>
@@ -9280,7 +9280,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NONSPATIAL_PEDIA</Tag>
-		<English>Traversing physical omniverse is now like traversing internet - distance doesn't matter anymore.[NEWLINE][LINK=BUILDING_HIGH_DIMENSIONAL]High Dimensional[\LINK]</English>
+		<English>Traversing physical omniverse is now like traversing internet - distance doesn't matter anymore.[NEWLINE]Required human modifications: [LINK=BUILDING_HIGH_DIMENSIONAL]High Dimensional[\LINK][NEWLINE]Leads to: [LINK=BUILDING_METAPHYSICAL]Metaphysical[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NON_CAUSAL_ENGINEERING_FIRM</Tag>
@@ -9341,7 +9341,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOVEL_SENSES_PEDIA</Tag>
-		<English>Increased cognitive capabilities allows for extended existing senses or novel ways of perceiving reality.[NEWLINE][LINK=BUILDING_COGNITIVE_ENHANCEMENT]Cognitive Enhancement[\LINK]</English>
+		<English>Increased cognitive capabilities allows for extended existing senses or novel ways of perceiving reality.[NEWLINE]Required human modifications: [LINK=BUILDING_COGNITIVE_ENHANCEMENT]Cognitive Enhancement[\LINK][NEWLINE]Leads to: [LINK=BUILDING_LUNARIS]Lunaris[\LINK], [LINK=BUILDING_MARTIAN]Martian[\LINK], [LINK=BUILDING_ZERO_G_ADAPTATION]Zero G Adaptation[\LINK], [LINK=BUILDING_WINGS]Wings[\LINK], [LINK=BUILDING_GILLS]Gills[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUCLEAR_DAMPER</Tag>
@@ -10356,7 +10356,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PURE_ENERGY_PEDIA</Tag>
-		<English>Pure energy just means matter doesn't matter much anymore - posthumans are one with physics at this stage.[NEWLINE][LINK=BUILDING_INFORMATION_BASED]Information Based[\LINK]</English>
+		<English>Pure energy just means matter doesn't matter much anymore - posthumans are one with physics at this stage.[NEWLINE]Required human modifications: [LINK=BUILDING_INFORMATION_BASED]Information Based[\LINK][NEWLINE]Leads to: [LINK=BUILDING_HIGH_DIMENSIONAL]High Dimensional[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUANTIFIED_HEALTH_CENTER</Tag>
@@ -10519,7 +10519,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RADIATION_TOLERANCE_PEDIA</Tag>
-		<English>Thermal and radiation damage control means easier expansion in space.[NEWLINE][LINK=BUILDING_HEAT_TOLERANCE]Heat Tolerance[\LINK]</English>
+		<English>Thermal and radiation damage control means easier expansion in space.[NEWLINE]Required human modifications: [LINK=BUILDING_HEAT_TOLERANCE]Heat Tolerance[\LINK][NEWLINE]Leads to: [LINK=BUILDING_NANOMORPHISM]Nanomorphism[\LINK], [LINK=BUILDING_ALIEN_HYBRID]Alien Hybrid[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAK_MESBA</Tag>
@@ -10810,7 +10810,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROBOTIC_BODY_PEDIA</Tag>
-		<English>Robotic body is much more resilient for space colonization, at this point humans are physically becoming one with technology.[NEWLINE][LINK=BUILDING_DIGITAL_IDENTITY]Digital Identity[\LINK]</English>
+		<English>Robotic body is much more resilient for space colonization, at this point humans are physically becoming one with technology.[NEWLINE]Required human modifications: [LINK=BUILDING_DIGITAL_IDENTITY]Digital Identity[\LINK][NEWLINE]Leads to: [LINK=BUILDING_HEAT_TOLERANCE]Heat Tolerance[\LINK], [LINK=BUILDING_COLD_TOLERANCE]Cold Tolerance[\LINK], [LINK=BUILDING_COLLECTIVE_CONSCIOUSNESS]Collective Consciousness[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROBOTIC_SURGEON</Tag>
@@ -12806,7 +12806,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRANSAPIENT_PEDIA</Tag>
-		<English>As information can be easily transferred, potential cognitive capacity is unlimited.[NEWLINE][LINK=BUILDING_INFORMATION_BASED]Information Based[\LINK]</English>
+		<English>As information can be easily transferred, potential cognitive capacity is unlimited.[NEWLINE]Required human modifications: [LINK=BUILDING_INFORMATION_BASED]Information Based[\LINK][NEWLINE]Leads to: [LINK=BUILDING_IMMORTAL]Immortal[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRANSATLANTIC_TUNNEL</Tag>
@@ -13932,7 +13932,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WINGS_PEDIA</Tag>
-		<English>Apes to Angels... You can look and fly as one now.[NEWLINE][LINK=BUILDING_NOVEL_SENSES]Novel Senses[\LINK]</English>
+		<English>Apes to Angels... You can look and fly as one now.[NEWLINE]Required human modifications: [LINK=BUILDING_NOVEL_SENSES]Novel Senses[\LINK][NEWLINE]Leads to: [LINK=BUILDING_ALIEN_HYBRID]Alien Hybrid[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WIRELESS_EV_CHARGING</Tag>
@@ -14113,7 +14113,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZERO_G_ADAPTATION_PEDIA</Tag>
-		<English>Adaptation of humans to microgravity conditions makes humans more spaceproof.[NEWLINE][LINK=BUILDING_NOVEL_SENSES]Novel Senses[\LINK]</English>
+		<English>Adaptation of humans to microgravity conditions makes humans more spaceproof.[NEWLINE]Required human modifications: [LINK=BUILDING_NOVEL_SENSES]Novel Senses[\LINK][NEWLINE]Leads to: [LINK=BUILDING_ALIEN_HYBRID]Alien Hybrid[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZERO_POINT_FACTORIES</Tag>
