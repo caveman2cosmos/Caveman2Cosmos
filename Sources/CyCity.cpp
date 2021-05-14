@@ -565,7 +565,8 @@ CyArea* CyCity::area() const
 
 CyArea* CyCity::waterArea() const
 {
-	return new CyArea(m_pCity->waterArea());
+	CvArea* waterArea = m_pCity->waterArea();
+	return waterArea ? new CyArea(waterArea) : NULL;
 }
 
 CyPlot* CyCity::getRallyPlot() const

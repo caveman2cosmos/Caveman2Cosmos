@@ -262,7 +262,8 @@ CyArea* CyPlot::area() const
 
 CyArea* CyPlot::waterArea() const
 {
-	return m_pPlot ? new CyArea(m_pPlot->waterArea()) : NULL;
+	CvArea* area = m_pPlot ? m_pPlot->waterArea() : NULL;
+	return area ? new CyArea(area) : NULL;
 }
 
 int CyPlot::getArea() const

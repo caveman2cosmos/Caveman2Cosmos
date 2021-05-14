@@ -1333,18 +1333,6 @@ class FeatureGenerator:
 			if self.forests.getHeight(iX, iY) >= self.iForestLevel:
 				pPlot.setFeatureType(self.featureForest, -1)
 
-def getAreas():
-	"Returns a list of CyArea objects representing all the areas in the map (land and water)"
-	MAP = CyMap()
-
-	areas = []
-	for i in range(MAP.getIndexAfterLastArea()):
-		area = MAP.getArea(i)
-		if not area.isNone():
-			areas.append(area)
-
-	return areas
-
 def findStartingPlot(playerID, validFn = None):
 	GC = CyGlobalContext()
 	MAP = GC.getMap()
