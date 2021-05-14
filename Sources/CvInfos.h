@@ -7714,20 +7714,21 @@ public:
 
 	DllExport bool getDefault() const { return m_bDefault; }
 	DllExport bool getVisible() const { return m_bVisible; }
-	bool canChangeMidGame() const	  { return m_bCanChangeMidGame; }
 
+	//TB Tags
 	const std::vector<GameOptionTypes>& getEnforcesGameOptionOnTypes() const  { return m_aEnforcesGameOptionOnTypes; }
 	const std::vector<GameOptionTypes>& getEnforcesGameOptionOffTypes() const { return m_aEnforcesGameOptionOffTypes; }
 
 	bool read(CvXMLLoadUtility* pXML);
+
 	void copyNonDefaults(const CvGameOptionInfo* pClassInfo);
-	void getCheckSum(uint32_t& iSum) const;
+
+	void getCheckSum(unsigned int& iSum) const;
 
 private:
 	bool m_bDefault;
 	bool m_bVisible;
-	bool m_bCanChangeMidGame;
-
+	//TB Tags
 	std::vector<GameOptionTypes> m_aEnforcesGameOptionOnTypes;
 	std::vector<GameOptionTypes> m_aEnforcesGameOptionOffTypes;
 };
