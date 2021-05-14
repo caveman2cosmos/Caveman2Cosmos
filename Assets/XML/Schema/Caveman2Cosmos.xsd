@@ -707,7 +707,6 @@
         <xs:element ref="Help"/>
         <xs:element ref="bDefault"/>
         <xs:element ref="bVisible"/>
-        <xs:element ref="bCanChangeMidGame"/>
         <xs:element minOccurs="0" ref="EnforcesGameOptionOnTypes"/>
         <xs:element minOccurs="0" ref="EnforcesGameOptionOffTypes"/>
       </xs:sequence>
@@ -832,7 +831,6 @@
   <xs:element name="Help" type="xs:string"/>
   <xs:element name="bDefault" type="Civ4Boolean"/>
   <xs:element name="bVisible" type="Civ4Boolean"/>
-  <xs:element name="bCanChangeMidGame" type="Civ4Boolean"/>
   <xs:element name="bLoad" type="Civ4Boolean"/>
   <xs:element name="DefaultConfiguration" type="xs:NCName"/>
   <xs:element name="Description" type="xs:NCName"/>
