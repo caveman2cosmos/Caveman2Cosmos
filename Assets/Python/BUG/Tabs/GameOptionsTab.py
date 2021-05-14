@@ -3,7 +3,7 @@ import BugOptionsTab
 
 class GameOptionsTab(BugOptionsTab.BugOptionsTab):
 
-	def __init__(self):
+	def __init__(self, screen):
 		BugOptionsTab.BugOptionsTab.__init__(self, "GameOptions", "Game Options")
 
 	def create(self, screen):
