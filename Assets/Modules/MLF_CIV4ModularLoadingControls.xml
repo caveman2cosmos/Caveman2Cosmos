@@ -30,14 +30,6 @@
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
-					<Directory>Static</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>ls612</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
 					<Directory>StrategyOnly</Directory>
 					<bLoad>1</bLoad>
 				</Module>
@@ -79,10 +71,6 @@
 				</Module>
 				<Module>
 					<Directory>zInterdependencies</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>zTerrains</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 			</Modules>

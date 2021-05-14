@@ -103,7 +103,6 @@
 		<tab module="BugSystemOptionsTab"/>
 		<tab module="BugCreditsOptionsTab"/>
 	</screen>
-	<load mod="Female Missionaries"/>
 	<load mod="CaptureSlaves"/>
 	<load mod="MasterModList"/>
 	<load mod="Partisan"/>

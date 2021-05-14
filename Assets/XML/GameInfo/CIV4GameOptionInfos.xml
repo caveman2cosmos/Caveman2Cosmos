@@ -550,6 +550,7 @@
 			<bVisible>1</bVisible>
 			<bCanChangeMidGame>0</bCanChangeMidGame>
 		</GameOptionInfo>
+		<!-- Delete all references to LS traits on @SAVEBREAK -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_LS612_TRAITS</Type>
 			<Description>TXT_KEY_GAMEOPTION_LS612_TRAITS</Description>

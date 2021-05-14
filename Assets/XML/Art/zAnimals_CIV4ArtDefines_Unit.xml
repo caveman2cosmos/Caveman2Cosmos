@@ -36,44 +36,6 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_FEMALE_BEASTMASTER_ANCIENT</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/beastmaster_female.dds</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/Female_Beastmaster_Anc/Warlord_Ancient_FX.nif</NIF>
-			<KFM>Art/Units/Warlord_Ancient/Warlord_Ancient.kfm</KFM>
-			<SHADERNIF>Art/Units/Female_Beastmaster_Anc/Warlord_Ancient_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>Bip01 Pelvis</ShadowAttachNode>
-				<fShadowScale>0.9</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<SelectionSound>AS3D_UN_SPY_SURR_VOX</SelectionSound>
-			<ActionSound>AS3D_UN_SPY_SURR_VOX</ActionSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_FEMALE_BEASTMASTER_MEDIEVAL</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/beastmaster_female.dds</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/Female_Beastmaster_Med/Warlord_Ancient_FX.nif</NIF>
-			<KFM>Art/Units/Warlord_Ancient/Warlord_Ancient.kfm</KFM>
-			<SHADERNIF>Art/Units/Female_Beastmaster_Med/Warlord_Ancient_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>Bip01 Pelvis</ShadowAttachNode>
-				<fShadowScale>0.9</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<SelectionSound>AS3D_UN_SPY_SURR_VOX</SelectionSound>
-			<ActionSound>AS3D_UN_SPY_SURR_VOX</ActionSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AARDVARK</Type>
 			<Button>Art/Interface/Buttons/Units/Aardvark.dds</Button>
 			<fScale>20.0</fScale>
