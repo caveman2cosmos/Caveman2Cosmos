@@ -3,6 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvImprovementInfo.h"
 #include "CvCity.h"
 #include "CvDeal.h"
 #include "CvDiploParameters.h"

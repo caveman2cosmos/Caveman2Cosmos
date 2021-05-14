@@ -3,6 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvImprovementInfo.h"
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CvContractBroker.h"
@@ -2277,10 +2278,10 @@ void CvUnitAI::AI_workerMove()
 	}
 	// Super Forts end
 
-	if (AI_StrategicForts())
-	{
-		return;
-	}
+	//if (AI_StrategicForts())
+	//{
+	//	return;
+	//}
 
 	if (bCanRoute && AI_routeTerritory())
 	{
@@ -21901,6 +21902,12 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 					eMission = MISSION_ROUTE_TO;
 				}
 			}
+			if (getGroup()->pushMissionInternal(eMission, pBestPlot->getX(), pBestPlot->getY(), isHuman() ? 0 : MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pBestPlot))
+			{
+				getGroup()->pushMission(MISSION_BUILD, eBestBuild, -1, 0, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, pBestPlot);
+
+				return true;
+			}
 		}
 
 		eBestBuild = AI_betterPlotBuild(pBestPlot, eBestBuild);
@@ -22305,10 +22312,10 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 {
 	PROFILE_FUNC();
 
-	if (AI_StrategicForts())
-	{
-		return true;
-	}
+	//if (AI_StrategicForts())
+	//{
+	//	return true;
+	//}
 	BuildTypes eBestBuild = NO_BUILD;
 	CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;

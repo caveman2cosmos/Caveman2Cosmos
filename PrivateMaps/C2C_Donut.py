@@ -279,11 +279,8 @@ def findStartingPlot(argsList):
 	[playerID] = argsList
 
 	def isValid(playerID, x, y):
-
 		pWaterArea = CyMap().plot(x, y).waterArea()
-		if pWaterArea.isNone():
-			return False
-		return not pWaterArea.isLake()
+		return pWaterArea is not None and not pWaterArea.isLake()
 
 	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
 

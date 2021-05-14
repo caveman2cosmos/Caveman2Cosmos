@@ -338,7 +338,6 @@ class CvEventManager:
 				self.TECH_GATHERING = GC.getInfoTypeForString("TECH_GATHERING")
 				# Beastmaster
 				self.UNIT_BEASTMASTER			= GC.getInfoTypeForString("UNIT_BEASTMASTER")
-				self.UNIT_FEMALE_BEASTMASTER	= GC.getInfoTypeForString("UNIT_FEMALE_BEASTMASTER")
 				# Biodome
 				self.aBiodomeList = aList = []
 				for iUnit in xrange(GC.getNumUnitInfos()):
@@ -2032,18 +2031,10 @@ class CvEventManager:
 				StarSigns.give(GC, TRNSLTR, GAME, CyUnit, CyUnit.getOwner(), bLand)
 
 		# Beastmaster
-		if self.UNIT_FEMALE_BEASTMASTER != -1 or self.UNIT_BEASTMASTER != -1:
+		if self.UNIT_BEASTMASTER != -1:
 			KEY = GC.getUnitInfo(CyUnit.getUnitType()).getType()
 			if KEY[:13] == 'UNIT_SUBDUED_' or KEY[:11] == 'UNIT_TAMED_':
-				if self.UNIT_FEMALE_BEASTMASTER != -1 and self.UNIT_BEASTMASTER != -1:
-					if 16 > GAME.getSorenRandNum(100, "Female Beastmaster"):
-						CyUnit.setLeaderUnitType(self.UNIT_FEMALE_BEASTMASTER)
-					else:
-						CyUnit.setLeaderUnitType(self.UNIT_BEASTMASTER)
-				elif self.UNIT_FEMALE_BEASTMASTER != -1:
-					CyUnit.setLeaderUnitType(self.UNIT_FEMALE_BEASTMASTER)
-				else:
-					CyUnit.setLeaderUnitType(self.UNIT_BEASTMASTER)
+				CyUnit.setLeaderUnitType(self.UNIT_BEASTMASTER)
 
 		# Inspired Missionary
 		aWonderTuple = self.aWonderTuple
@@ -2125,7 +2116,7 @@ class CvEventManager:
 
 		# Beastmaster
 		iLeaderUnit = CyUnit.getLeaderUnitType()
-		if iLeaderUnit != -1 and iLeaderUnit in (self.UNIT_BEASTMASTER, self.UNIT_FEMALE_BEASTMASTER):
+		if iLeaderUnit != -1 and iLeaderUnit in (self.UNIT_BEASTMASTER):
 			# This will prevent a 'beastmaster lost' message when the unit is killed.
 			CyUnit.setLeaderUnitType(-1)
 

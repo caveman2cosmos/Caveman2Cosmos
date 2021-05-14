@@ -189,9 +189,10 @@ public:
 	void AI_forceEmphasizeCulture(bool bNewValue);
 
 	void AI_markBestBuildValuesStale();
-	void AI_calculateOutputRatio(std::vector<int>& ratios, int food, int production, int commerce);
+	std::vector<int> AI_calculateOutputRatio(int food, int production, int commerce);
 	void AI_getCurrentPlotValue(int iPlotCounter, ::CvPlot* plot, std::vector<plotInfo>& currentYieldList);
-	void AI_getBestPlotValue(int iPlotCounter, CvPlot* plot, std::vector<plotInfo>& currentYieldList, std::vector<plotInfo>& optimalYieldList);
+	void AI_getBestPlotValue(std::vector<int>& ratios, int iPlotCounter, CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int
+	                         iDesiredFoodChange);
 	void AI_updateBestBuildForPlots();
 	int AI_getBestBuildValue(int iIndex) const;
 	int AI_totalBestBuildValue(const CvArea* pArea) const;
@@ -347,8 +348,11 @@ protected:
 
 	int AI_experienceWeight() const;
 	int AI_buildUnitProb() const;
+	bool AI_checkIrrigationSpread(CvPlot* pPlot);
+	void AI_newbestPlotBuild(CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority);
 
-	void AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peBestBuild, int iFoodPriority, int iProductionPriority, int iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange);
+	void AI_bestPlotBuild(CvPlot* pPlot, int& piBestValue, BuildTypes& peBestBuild, int iFoodPriority, int iProductionPriority, int
+	                      iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange);
 
 	int AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange);
 	void AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange );

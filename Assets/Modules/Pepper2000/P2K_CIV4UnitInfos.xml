@@ -2773,7 +2773,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_CONCENTRATOR</BuildType>
+					<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2906,7 +2906,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_CONCENTRATOR</BuildType>
+					<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3075,7 +3075,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_CONCENTRATOR</BuildType>
+					<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3257,7 +3257,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_CONCENTRATOR</BuildType>
+					<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

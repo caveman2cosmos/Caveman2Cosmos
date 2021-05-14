@@ -2,7 +2,6 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 import CvScreenEnums
-import CvMapGeneratorUtil
 import CvGFCScreen
 
 # globals
@@ -323,7 +322,7 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 
 		map = CyMap()
 
-		areas = CvMapGeneratorUtil.getAreas()
+		areas = map.areas()
 		area_sizes = [(area.getNumTiles(), area) for area in areas]
 		area_sizes.sort() # sort by size -- biggest area last
 		area_sizes.reverse() # biggest area first
