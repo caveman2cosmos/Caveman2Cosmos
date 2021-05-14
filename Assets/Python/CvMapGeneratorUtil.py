@@ -1097,7 +1097,7 @@ class TerrainGenerator:
 		self.terrainRockyCold = self.GC.getInfoTypeForString("TERRAIN_JAGGED")
 		self.terrainRocky = self.GC.getInfoTypeForString("TERRAIN_ROCKY")
 		self.terrainRockyArid = self.GC.getInfoTypeForString("TERRAIN_BADLAND")
-		self.terrainDesert = self.GC.getInfoTypeForString("TERRAIN_DESERT")
+		self.terrainDesert = self.GC.getTERRAIN_DESERT()
 		self.terrainPlains = self.GC.getInfoTypeForString("TERRAIN_PLAINS")
 		self.terrainGrass = self.GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 		self.terrainMarsh = self.GC.getInfoTypeForString("TERRAIN_MARSH")
@@ -1269,8 +1269,8 @@ class FeatureGenerator:
 
 	def __initFeatureTypes(self):
 		self.featureIce = self.GC.getInfoTypeForString("FEATURE_ICE")
-		self.featureJungle = self.GC.getInfoTypeForString("FEATURE_JUNGLE")
-		self.featureForest = self.GC.getInfoTypeForString("FEATURE_FOREST")
+		self.featureJungle = self.GC.getFEATURE_JUNGLE()
+		self.featureForest = self.GC.getFEATURE_FOREST()
 
 	def addFeatures(self):
 		"adds features to all plots as appropriate"

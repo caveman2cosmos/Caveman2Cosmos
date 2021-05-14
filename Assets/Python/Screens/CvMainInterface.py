@@ -254,17 +254,17 @@ class CvMainInterface:
 				(afm.getInterfaceArtInfo("OVERLAY_NOMOVE").getPath(), afm.getInterfaceArtInfo("OVERLAY_NOMOVE_INJURED").getPath()),
 				(afm.getInterfaceArtInfo("OVERLAY_NOMOVE_GG").getPath(), afm.getInterfaceArtInfo("OVERLAY_NOMOVE_INJURED_GG").getPath())]
 			# Cache Info Types
-			self.COLOR_RED			= GC.getInfoTypeForString('COLOR_RED')
-			self.COLOR_YELLOW		= GC.getInfoTypeForString('COLOR_YELLOW')
-			self.COLOR_GREEN		= GC.getInfoTypeForString('COLOR_GREEN')
+			self.COLOR_RED			= GC.getCOLOR_RED()
+			self.COLOR_YELLOW		= GC.getCOLOR_YELLOW()
+			self.COLOR_GREEN		= GC.getCOLOR_GREEN()
 			self.HURRY_POPULATION	= GC.getInfoTypeForString('HURRY_POPULATION')
 			self.HURRY_GOLD			= GC.getInfoTypeForString('HURRY_GOLD')
 			self.PROMOTION_LEADER	= GC.getInfoTypeForString('PROMOTION_LEADER')
 			# Cache Text
 			obj = TRNSLTR
-			self.szSystemReturn				= obj.getText("SYSTEM_RETURN", ())
-			self.szSystemWaiting			= obj.getText("SYSTEM_WAITING", ())
-			self.szSystemWaitingForYou		= obj.getText("SYSTEM_WAITING_FOR_YOU", ())
+			self.szSystemReturn				= obj.getText("TXT_KEY_SYSTEM_RETURN", ())
+			self.szSystemWaiting			= obj.getText("TXT_KEY_SYSTEM_WAITING", ())
+			self.szSystemWaitingForYou		= obj.getText("TXT_KEY_SYSTEM_WAITING_FOR_YOU", ())
 			self.szInterfaceCityGrowth		= obj.getText("INTERFACE_CITY_GROWTH", ())
 			self.szInterfaceCityStagnant	= obj.getText("INTERFACE_CITY_STAGNANT", ())
 			self.szInterfaceCityStarving	= obj.getText("INTERFACE_CITY_STARVING", ())
@@ -1207,19 +1207,19 @@ class CvMainInterface:
 			szOutput = ""
 			iFirstBadConnection = CyMessageControl().GetFirstBadConnection()
 			if GAME.isPaused(): # Pause overrides other messages
-				szOutput = TRNSLTR.getText("SYSTEM_GAME_PAUSED", (GC.getPlayer(GAME.getPausePlayer()).getNameKey(),))
+				szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_GAME_PAUSED", (GC.getPlayer(GAME.getPausePlayer()).getNameKey(),))
 			elif iFirstBadConnection != -1:
 				# Waiting on a bad connection to resolve
 				if CyMessageControl().GetConnState(iFirstBadConnection) == 1:
 					if GAME.isMPOption(MultiplayerOptionTypes.MPOPTION_ANONYMOUS):
-						szOutput = TRNSLTR.getText("SYSTEM_WAITING_FOR_PLAYER", (GC.getPlayer(iFirstBadConnection).getNameKey(), 0))
+						szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_WAITING_FOR_PLAYER", (GC.getPlayer(iFirstBadConnection).getNameKey(), 0))
 					else:
-						szOutput = TRNSLTR.getText("SYSTEM_WAITING_FOR_PLAYER", (GC.getPlayer(iFirstBadConnection).getNameKey(), (iFirstBadConnection + 1)))
+						szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_WAITING_FOR_PLAYER", (GC.getPlayer(iFirstBadConnection).getNameKey(), (iFirstBadConnection + 1)))
 				elif CyMessageControl().GetConnState(iFirstBadConnection) == 2:
 					if GAME.isMPOption(MultiplayerOptionTypes.MPOPTION_ANONYMOUS):
-						szOutput = TRNSLTR.getText("SYSTEM_PLAYER_JOINING", (GC.getPlayer(iFirstBadConnection).getNameKey(), 0))
+						szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_PLAYER_JOINING", (GC.getPlayer(iFirstBadConnection).getNameKey(), 0))
 					else:
-						szOutput = TRNSLTR.getText("SYSTEM_PLAYER_JOINING", (GC.getPlayer(iFirstBadConnection).getNameKey(), (iFirstBadConnection + 1)))
+						szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_PLAYER_JOINING", (GC.getPlayer(iFirstBadConnection).getNameKey(), (iFirstBadConnection + 1)))
 			elif CyIF.shouldDisplayWaitingOthers():
 				szOutput = self.szSystemWaiting
 			elif CyIF.shouldDisplayEndTurn():
