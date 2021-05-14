@@ -11520,6 +11520,12 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, plotInfo* plotInfo, int iFoodP
 
 	pPlot->getVisibleBonusState(eNonObsoleteBonus, bHasBonusImprovement, bWorked);
 
+	if(bHasBonusImprovement)
+	{
+		plotInfo->currentBonus = eNonObsoleteBonus;
+		plotInfo->worked = bWorked;
+	}
+
 	//If a worker is already building a build, force that Build.
 	BuildTypes eForcedBuild = algo::find_if(
 		pPlot->units() | transformed(CvUnit::fn::getBuildType()),
