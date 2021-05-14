@@ -86,7 +86,6 @@
 	<!--Mad Nukes Mod-->
 	<!-- Options Screen -->
 	<screen id="BUGFull">
-		<tab module="GameOptionsTab"/>
 		<tab module="BugGeneralOptionsTab"/>
 		<tab module="RevDCMOptionsTab"/>
 		<tab module="RoMOptionsTab"/>
