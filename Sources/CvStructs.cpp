@@ -19,7 +19,9 @@ plotInfo::plotInfo() :
 	index(0),
 	worked(false),
 	owned(false),
+	bonusImproved(false),
 	yieldValue(0),
+	currentBonus(NO_BONUS),
 	currentImprovement(NO_IMPROVEMENT),
 	currentFeature(NO_FEATURE),
 	currentBuild(NO_BUILD)

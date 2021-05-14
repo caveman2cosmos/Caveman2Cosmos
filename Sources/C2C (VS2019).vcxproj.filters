@@ -19,6 +19,18 @@
     <Filter Include="Source Files\Smart">
       <UniqueIdentifier>{786fdd94-8455-45ee-8b56-cbcd36fcc5e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\InfoClasses">
+      <UniqueIdentifier>{f1586103-9f6f-4ce2-ab9b-3aa8cb583ce0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InfoClasses">
+      <UniqueIdentifier>{176d085c-21c8-4b21-bae7-70b8815878b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SupportModules">
+      <UniqueIdentifier>{f78cd592-6e51-4d6d-b7c2-9ec217001b35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SupportModules">
+      <UniqueIdentifier>{ef8aee7b-1fc1-45c2-83a6-40d5de25929f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="_precompile.cpp">
@@ -43,9 +55,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CvBuildingGrouping.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CvBuildingInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CvBuildingList.cpp">
@@ -124,9 +133,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CvGlobals.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CvHallOfFameInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CvInfos.cpp">
@@ -474,6 +480,15 @@
     <ClCompile Include="..\boost_test\test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CvImprovementInfo.cpp">
+      <Filter>Source Files\InfoClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="CvHallOfFameInfo.cpp">
+      <Filter>Source Files\InfoClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="CvBuildingInfo.cpp">
+      <Filter>Source Files\InfoClasses</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h">
@@ -516,9 +531,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvBuildingGrouping.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvBuildingInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvBuildingList.h">
@@ -639,9 +651,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvGlobals.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvHallOfFameInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvInfoReplacements.h">
@@ -937,6 +946,15 @@
     </ClInclude>
     <ClInclude Include="GlobalDefines.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CvImprovementInfo.h">
+      <Filter>Header Files\InfoClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="CvHallOfFameInfo.h">
+      <Filter>Header Files\InfoClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="CvBuildingInfo.h">
+      <Filter>Header Files\InfoClasses</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -489,7 +489,7 @@ class MapConstants:
 				self.fLandPercent = .35
 			else:
 				self.fLandPercent = .55
-		print "Land percent = %f" % self.fLandPercent
+		print("Land percent = %f" % self.fLandPercent)
 
 mc = None
 
@@ -1101,7 +1101,7 @@ class ElevationMap(FloatMap):
 					self.data[i] += detailNoise.fBm(c1, c2, c3, c4, 6, fBaseFreq1, 1.4, .5, .6, 3, .0, .2)
 		self.Normalize()
 		if bAttenuate:
-			print "	Attenuating"
+			print("Attenuating")
 			fMinY = 0.05 * iHeightLoc
 			fMaxY = 0.95 * iHeightLoc
 			fSouthRange	 = mc.southAttenuationRange
@@ -1155,7 +1155,7 @@ class ElevationMap(FloatMap):
 		self.fLandHeight = FindThresholdFromPercent(self.data, fLandPercent)
 		timer.log()
 		# Handle Pangea and fill in random lakes.
-		print "\n", "Elevation Map - Post Process"
+		print("\n", "Elevation Map - Post Process")
 		timer = BugUtil.Timer('Elevation Map - Post Process')
 		if mc.bPangeaBreaker:
 			pb.breakPangeas()
@@ -1197,7 +1197,7 @@ class ElevationMap(FloatMap):
 					self.relAltMap3x3[i] = (myAlt - minAlt) * 0.2
 				else:
 					self.relAltMap3x3[i] = (myAlt - minAlt)
-		print "	Pits Found: %d" % n
+		print("Pits Found: %d" % n)
 		# Create a delta map version that excludes water tiles so hill and peak percent is relative to land.
 		# Also create a list of ocean elevations for later use in defining trenches.
 		bTrench = True
