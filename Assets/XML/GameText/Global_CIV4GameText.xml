@@ -10,10 +10,6 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_DEBUG</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LESS_GROWTH</Tag>
 		<English>[ICON_BULLET]Gives terrain a lower chance to spread</English>
 	</TEXT>
@@ -78,6 +74,10 @@
 		<English>TBD</English>
 	</TEXT>
 -->
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_DEBUG</Tag>
+		<English>Debug</English>
+	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_BUILDING_TAB</Tag>
 		<English>Building Tab</English>
