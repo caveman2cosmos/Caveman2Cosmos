@@ -36659,14 +36659,6 @@ void CvGameTextMgr::getGlobeLayerName(GlobeLayerTypes eType, int iOption, CvWStr
 			break;
 		}
 		break;
-	case GLOBE_LAYER_DEBUG:
-		switch(iOption)
-		{
-		case 1:
-			strName = "Debug info";
-			break;
-		}
-		break;
 	case GLOBE_LAYER_RELIGION:
 		strName = GC.getReligionInfo((ReligionTypes) iOption).getDescription();
 		break;

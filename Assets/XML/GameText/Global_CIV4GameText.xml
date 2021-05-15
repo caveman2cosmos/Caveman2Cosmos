@@ -75,10 +75,6 @@
 	</TEXT>
 -->
 	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_DEBUG</Tag>
-		<English>Debug</English>
-	</TEXT>
-	<TEXT>
 		<Tag>INTERFACE_BUILDING_TAB</Tag>
 		<English>Building Tab</English>
 		<French>Bâtiments</French>

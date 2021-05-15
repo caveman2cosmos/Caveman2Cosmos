@@ -1065,10 +1065,6 @@
 			<Path>Art/Interface/Globeview/ReligionLayer.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_GLOBELAYER_PLOTDEBUG</Type>
-			<Path>Art/Interface/Globeview/PlotDebugLayer.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_GLOBELAYER_STRATEGY</Type>
 			<Path>Art/Interface/Globeview/StrategyLayer.dds</Path>
 		</InterfaceArtInfo>

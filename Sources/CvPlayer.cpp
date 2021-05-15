@@ -26215,9 +26215,6 @@ void CvPlayer::getGlobeLayerColors(GlobeLayerTypes eGlobeLayerType, int iOption,
 	case GLOBE_LAYER_RESOURCE:
 		getResourceLayerColors((GlobeLayerResourceOptionTypes) iOption, aColors, aIndicators);
 		break;
-	case GLOBE_LAYER_DEBUG:
-		getDebugLayerColors((GlobeLayerResourceOptionTypes) iOption, aColors, aIndicators);
-		break;
 	case GLOBE_LAYER_RELIGION:
 		getReligionLayerColors((ReligionTypes) iOption, aColors, aIndicators);
 		break;
@@ -26437,81 +26434,6 @@ void CvPlayer::getUnitLayerColors(GlobeLayerUnitOptionTypes eOption, std::vector
 						}
 					}
 				}
-			}
-		}
-	}
-}
-
-void CvPlayer::getDebugLayerColors(GlobeLayerResourceOptionTypes eOption, std::vector<NiColorA>& aColors, std::vector<CvPlotIndicatorData>& aIndicators) const
-{
-	aColors.resize(GC.getCurrentViewport()->numPlots(), NiColorA(0, 0, 0, 0));
-	aIndicators.clear();
-
-	const NiColorA kBaseColor(1.0f, 0.0f, 0.0f, 1.0f);
-
-	int iTotalValue = 0;
-	int iDivisor = 1;
-	int iNumChokeValuedPlots = 0;
-
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
-	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-
-		int iValue = pLoopPlot->getChokeValue();
-
-		if ( iValue > 0 )
-		{
-			while( MAX_INT - iValue/iDivisor < iTotalValue )
-			{
-				iDivisor *= 2;
-				iTotalValue /= 2;
-			}
-
-			iTotalValue += iValue/iDivisor;
-			iNumChokeValuedPlots++;
-		}
-	}
-
-	float fAvgValue = (iNumChokeValuedPlots == 0 ? 0.0f : (float)iDivisor*((float)iTotalValue/(float)iNumChokeValuedPlots));
-
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
-	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-		PlayerTypes eOwner = pLoopPlot->getRevealedOwner(getTeam(), true);
-
-		// visibility query
-		if (pLoopPlot->isRevealed(getTeam(), true) && pLoopPlot->isInViewport())
-		{
-			int iIndex = GC.getCurrentViewport()->plotNum(pLoopPlot->getViewportX(), pLoopPlot->getViewportY());
-			int iValue = pLoopPlot->getChokeValue();
-
-			if ( iValue > 0 )
-			{
-				float fIntensity = ((float)iValue/fAvgValue)/10.0f + 0.3f;
-
-				if ( fIntensity > 1.0f )
-				{
-					fIntensity = 1.0f;
-				}
-
-				aColors[iIndex] = kBaseColor;
-				aColors[iIndex].a = fIntensity;
-
-				CvPlotIndicatorData kIndicator;
-				kIndicator.m_pUnit = NULL;
-				kIndicator.m_strLabel = "DEBUG";
-				kIndicator.m_strHelpText = "Test";
-				kIndicator.m_strIcon = "";
-
-				int x = pLoopPlot->getViewportX();
-				int y = pLoopPlot->getViewportY();
-				kIndicator.m_Target = NiPoint2(GC.getCurrentViewport()->plotXToPointX(x), GC.getCurrentViewport()->plotYToPointY(y));
-
-				kIndicator.m_kColor.r = kBaseColor.r;
-				kIndicator.m_kColor.b = kBaseColor.b;
-				kIndicator.m_kColor.g = kBaseColor.g;
-				kIndicator.m_eVisibility = PLOT_INDICATOR_VISIBLE_ONSCREEN_ONLY;
-				aIndicators.push_back(kIndicator);
 			}
 		}
 	}
