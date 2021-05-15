@@ -119,9 +119,6 @@ def doHolyCity():
 def doResearch(argsList):
 	return GameUtils.doResearch(argsList)
 
-def doGoody(argsList):
-	return GameUtils.doGoody(argsList)
-
 def doGrowth(argsList):
 	return GameUtils.doGrowth(argsList)
 

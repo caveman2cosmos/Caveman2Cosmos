@@ -327,10 +327,6 @@ class CvGameUtils:
 		#ePlayer = argsList[0]
 		return False
 
-	def doGoody(self, argsList):
-		#ePlayer, pPlot, pUnit, = argsList
-		return False
-
 	def doGrowth(self, argsList):
 		#pCity = argsList[0]
 		return False
