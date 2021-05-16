@@ -20128,7 +20128,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 						}
 						bFirst = false;
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_UNITCOMBAT_FREE_EXPERIENCE", iExperience, GC.getUnitCombatInfo(eCombat).getTextKeyWide()));
+						szBuffer.append(gDLL->getText("TXT_KEY_UNITCOMBATHELP_FREE_EXPERIENCE", iExperience, GC.getUnitCombatInfo(eCombat).getTextKeyWide()));
 						iTotalXPBonus += iExperience;
 					}
 				}
