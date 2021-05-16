@@ -5766,7 +5766,7 @@
 		<Polish>Samolot myśliwski, myśliwiec samolot bojowy przeznaczony przede wszystkim do zwalczania innych statków powietrznych i uzyskania przewagi powietrznej, jak i obrony własnych samolotów o innym przeznaczeniu, czym różni się od bombowców, służących do atakowania celów naziemnych, głównie przy użyciu bomb. Myśliwce z założenia są względnie małe, przeważnie jednomiejscowe, a przy tym silnie uzbrojone, szybkie i bardzo zwrotne.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EARLY_FOOD_MERCHANT_C2C</Tag>
+		<Tag>TXT_KEY_UNIT_EARLY_FOOD_MERCHANT</Tag>
 		<English>Food Merchant</English>
 		<French>Marchand primitif de nourriture</French>
 		<Polish>Wczesny Handlarz Żywnością</Polish>
@@ -5832,7 +5832,7 @@
 		<Russian>Ìåä. âåðòîëåò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EARLY_MERCHANT_C2C</Tag>
+		<Tag>TXT_KEY_UNIT_EARLY_MERCHANT</Tag>
 		<English>Supply Merchant</English>
 		<French>Marchand primitif</French>
 		<Italian>Mercante primitivo</Italian>

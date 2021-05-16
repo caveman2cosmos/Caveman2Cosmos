@@ -434,7 +434,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%F2_HappyOrHealth от доступа к [LINK=%s3_Bonus]%s4_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_BUILDING_HAPPINESS_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_BUILDING_HAPPINESS</Tag>
 		<English>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp from[SPACE]</English>
 		<French>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp de[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch Geländeart[SPACE]</German>
@@ -482,7 +482,7 @@
 		<Russian>[ICON_BULLET]В новых городах уже есть государственная религия.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_CIVIC_LEVEL_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_CIVIC_LEVEL_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% XP Needed for Unit Promotions</English>
 		<French>[ICON_BULLET]%D1%% EXP pour la promotion des unités</French>
 		<German>[ICON_BULLET]%D1%% EP für Einheitenbeförderungen erforderlich</German>
@@ -492,7 +492,7 @@
 		<Russian>[ICON_BULLET]%D1%% опыта для Квалификации отряда</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_CIVIC_UPKEEP_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_CIVIC_UPKEEP_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Civic Upkeep</English>
 		<French>[ICON_BULLET]%D1%% d'entretien doctrinal</French>
 		<German>[ICON_BULLET]%D1%% Unterhalt für Gesellschaftsform</German>
@@ -510,7 +510,7 @@
 		<Russian>[ICON_BULLET]Цивилизации могут получить эту черту, недоступную на выбор лидеру</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_COMMERCE_CHANGES_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_COMMERCE_CHANGES</Tag>
 		<English>[ICON_BULLET]%D1%F2_commerce/City</English>
 		<French>[ICON_BULLET]%D1%F2_commerce/ville</French>
 		<German>[ICON_BULLET]%D1%F2_commerce/Stadt</German>
@@ -520,7 +520,7 @@
 		<Russian>[ICON_BULLET]%D1%F2_commerce/город</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_COMMERCE_MODIFIERS_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_COMMERCE_MODIFIERS</Tag>
 		<English>[ICON_BULLET]%D1%% %F2_commerce</English>
 		<French>[ICON_BULLET]%D1%% au %F2_commerce</French>
 		<Spanish>[ICON_BULLET]%D1%% [NUM2:al:a la:a los:a las] %F2_commerce</Spanish>
@@ -666,7 +666,7 @@
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Лидеры с этой особенностью не могут выбирать черту %s1_Trait[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_DOUBLE_SPEED_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_DOUBLE_SPEED</Tag>
 		<English>[NEWLINE][ICON_BULLET]Double Production Speed of[SPACE]</English>
 		<French>[NEWLINE][ICON_BULLET]Double la vitesse de production de:[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]Doppelte Produktionsgeschwindigkeit für:[SPACE]</German>
@@ -781,7 +781,7 @@
 		<Russian>[ICON_BULLET]Удвоенная награда от туземных деревень и островов.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_EXTRA_YIELD_THRESHOLDS_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_EXTRA_YIELD_THRESHOLDS</Tag>
 		<English>[ICON_BULLET]+1%F1_yield on Plots with %d2%F3_yield</English>
 		<French>[ICON_BULLET]+1%F1_yield sur les cases avec: %d2%F3_yield</French>
 		<German>[ICON_BULLET]+1%F1_yield auf Geländefeldern mit %d2%F3_yield</German>
@@ -984,7 +984,7 @@
 		<Russian>[ICON_BULLET]Начинается Золотой век, когда %s1_GP рождается в городе игрока.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_GREAT_GENERAL_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_GREAT_GENERAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Great Military People Emergence</English>
 		<French>[ICON_BULLET]%D1%% Emergen de Général illustre</French>
 		<German>[ICON_BULLET]%D1%% Geburtenrate für Große Feldherren</German>
@@ -993,7 +993,7 @@
 		<Russian>[ICON_BULLET]%D1%% шансов на рождение Великого генерала</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_GREAT_PEOPLE_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_GREAT_PEOPLE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% [ICON_GREATPEOPLE] Birth Rate</English>
 		<French>[ICON_BULLET]Taux de natalité [ICON_GREATPEOPLE] %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Geburtenrate [ICON_GREATPEOPLE]</German>
@@ -1246,7 +1246,7 @@
 		<Russian>Èçîë.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_LESS_YIELD_THRESHOLDS_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_LESS_YIELD_THRESHOLDS</Tag>
 		<English>[ICON_BULLET]-1%F1_yield on Plots with %d2%F3_yield</English>
 		<French>[ICON_BULLET]-1%F1_yield sur les cases avec: %d2%F3_yield</French>
 		<German>[ICON_BULLET]-1%F1_yield auf Geländefeldern mit %d2%F3_yield</German>
@@ -1256,7 +1256,7 @@
 		<Russian>[ICON_BULLET]-1%F1_yield на участках с %d2%F3_yield</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_MAX_ANARCHY_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_MAX_ANARCHY</Tag>
 		<English>[ICON_BULLET]Max %d1 [NUM1:Turn:Turns] of Anarchy</English>
 		<French>[ICON_BULLET]%d1 [NUM1:tour:tours] d'anarchie maximum</French>
 		<German>[ICON_BULLET]Max. %d1 [NUM1:Runde:Runden] Unruhen</German>
@@ -1330,7 +1330,7 @@
 		<Russian>Ìåã.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_MIN_ANARCHY_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_MIN_ANARCHY</Tag>
 		<English>[ICON_BULLET]Min %d1 [NUM1:Turn:Turns] of Anarchy</English>
 		<French>[ICON_BULLET]%d1 [NUM1:tour:tours] d'anarchie minimum</French>
 		<German>[ICON_BULLET]Min. %d1 [NUM1:Runde:Runden] Unruhen</German>
@@ -1353,7 +1353,7 @@
 		<Russian>[ICON_BULLET]%D1_Amount к радиусу действия для всех типов ракет.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_NATIONAL_WONDER_PRODUCTION_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_NATIONAL_WONDER_PRODUCTION_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% National Wonder Production</English>
 		<French>[ICON_BULLET]Construction de merveilles nationales %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Produktion Nationaler Wunder</German>
@@ -1440,7 +1440,7 @@
 		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Отключается, когда используется опция %s2_Option[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_NO_ANARCHY_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_NO_ANARCHY</Tag>
 		<English>[ICON_BULLET]No Anarchy</English>
 		<French>[ICON_BULLET]Pas d'anarchie</French>
 		<German>[ICON_BULLET]Keine Unruhen</German>
@@ -1660,7 +1660,7 @@
 		<Russian>[COLOR_WARNING_TEXT] (%s1_Trait может заменить %s2_Trait)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_PRODUCTION_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_PRODUCTION_MODIFIER</Tag>
 		<English>[NEWLINE][ICON_BULLET]%D1%% Production of[SPACE]</English>
 		<French>[NEWLINE][ICON_BULLET]Production %D1%% plus rapide de:[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]%D1%% schnellere Produktion für:[SPACE]</German>
@@ -1880,7 +1880,7 @@
 		<Russian>[ICON_BULLET]%D1%% шанс на успешное распространение государственной религии вашими миссионерами.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_TEAM_WONDER_PRODUCTION_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_TEAM_WONDER_PRODUCTION_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Team Project Production</English>
 		<French>[ICON_BULLET]Construction de merveilles d'équipe %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Teamwunderproduktion</German>
@@ -1971,7 +1971,7 @@
 		<Russian>Òåìï.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_TRADE_YIELD_MODIFIERS_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_TRADE_YIELD_MODIFIERS</Tag>
 		<English>[ICON_BULLET]%D1%% %F2_yield from [ICON_TRADE]</English>
 		<French>[ICON_BULLET]%D1%% %F2_yield avec: [ICON_TRADE]</French>
 		<German>[ICON_BULLET]%D1%% %F2_yield durch [ICON_TRADE]</German>
@@ -2012,7 +2012,7 @@
 		<German>[ICON_BULLET]%D1%% Ausbildungsgeschwindigkeit von [LINK=%s2_CombatClass]%s3:3_CombatClass[\LINK]</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_WONDER_PRODUCTION_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_WONDER_PRODUCTION_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Wonder Production</English>
 		<French>[ICON_BULLET]Construction de merveilles %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Wunderproduktion</German>
@@ -2038,7 +2038,7 @@
 		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% быстрее</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_WORLD_WONDER_PRODUCTION_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_WORLD_WONDER_PRODUCTION_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% World Wonder Production</English>
 		<French>[ICON_BULLET]Construction de merveilles mondiales %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Weltwunderproduktion</German>
@@ -2048,7 +2048,7 @@
 		<Russian>[ICON_BULLET]%D1%% к строительству Великих Чудес</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_YIELD_CHANGES_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_YIELD_CHANGES</Tag>
 		<English>[ICON_BULLET]%D1%F2_yeild/City</English>
 		<French>[ICON_BULLET]%D1%F2_yeild/ville</French>
 		<German>[ICON_BULLET]%D1%F2_yeild/Stadt</German>
