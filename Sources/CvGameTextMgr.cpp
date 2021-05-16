@@ -9403,7 +9403,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 												szTempBuffer.Format(L"%d%c", iYieldChange, GC.getYieldInfo((YieldTypes)iK).getChar());
 
 											setListHelp(szString, L"\n", szTempBuffer, L", ", true);
-											szString.append(gDLL->getText("TXT_KEY_BONUS_WITH_IMPROVEMENT", improvement.getTextKeyWide()));
+											szString.append(gDLL->getText("TXT_KEY_BONUSHELP_WITH_IMPROVEMENT", improvement.getTextKeyWide()));
 										}
 									}
 									break;
@@ -21657,7 +21657,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		if (ePlayer != NO_PLAYER)
 		{
 			CvPlayer& kPlayer = GET_PLAYER(ePlayer);
-			szBuffer.append(gDLL->getText("TXT_KEY_BONUS_AVAILABLE_PLAYER", kPlayer.getNumAvailableBonuses((BonusTypes)(kBuilding.getFreeBonus())), kPlayer.getNameKey()));
+			szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_AVAILABLE_PLAYER", kPlayer.getNumAvailableBonuses((BonusTypes)(kBuilding.getFreeBonus())), kPlayer.getNameKey()));
 		}
 	}
 
@@ -26496,12 +26496,12 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 		if (NO_PLAYER != GC.getGame().getActivePlayer())
 		{
 			CvPlayer& kActivePlayer = GET_PLAYER(GC.getGame().getActivePlayer());
-			szBuffer.append(gDLL->getText("TXT_KEY_BONUS_AVAILABLE_PLAYER", kActivePlayer.getNumAvailableBonuses(eBonus), kActivePlayer.getNameKey()));
+			szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_AVAILABLE_PLAYER", kActivePlayer.getNumAvailableBonuses(eBonus), kActivePlayer.getNameKey()));
 
 			if (bTradingPlayer)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUS_AVAILABLE_PLAYER", GET_PLAYER(eTradingPlayer).getNumAvailableBonuses(eBonus), GET_PLAYER(eTradingPlayer).getNameKey()));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_AVAILABLE_PLAYER", GET_PLAYER(eTradingPlayer).getNumAvailableBonuses(eBonus), GET_PLAYER(eTradingPlayer).getNameKey()));
 			}
 			for (int iCorp = 0; iCorp < GC.getNumCorporationInfos(); ++iCorp)
 			{
@@ -26528,24 +26528,24 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 			if (kActivePlayer.getBonusImport(eBonus) > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUS_IMPORTS_PLAYER", kActivePlayer.getBonusImport(eBonus), kActivePlayer.getNameKey()));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_IMPORTS_PLAYER", kActivePlayer.getBonusImport(eBonus), kActivePlayer.getNameKey()));
 			}
 			if (kActivePlayer.getBonusExport(eBonus) > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUS_EXPORTS_PLAYER", kActivePlayer.getBonusExport(eBonus), kActivePlayer.getNameKey()));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_EXPORTS_PLAYER", kActivePlayer.getBonusExport(eBonus), kActivePlayer.getNameKey()));
 			}
 			if (bTradingPlayer)
 			{
 				if (GET_PLAYER(eTradingPlayer).getBonusImport(eBonus) > 0)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_BONUS_IMPORTS_PLAYER", GET_PLAYER(eTradingPlayer).getBonusImport(eBonus), GET_PLAYER(eTradingPlayer).getNameKey()));
+					szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_IMPORTS_PLAYER", GET_PLAYER(eTradingPlayer).getBonusImport(eBonus), GET_PLAYER(eTradingPlayer).getNameKey()));
 				}
 				if (GET_PLAYER(eTradingPlayer).getBonusExport(eBonus) > 0)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_BONUS_EXPORTS_PLAYER", GET_PLAYER(eTradingPlayer).getBonusExport(eBonus), GET_PLAYER(eTradingPlayer).getNameKey()));
+					szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_EXPORTS_PLAYER", GET_PLAYER(eTradingPlayer).getBonusExport(eBonus), GET_PLAYER(eTradingPlayer).getNameKey()));
 				}
 			}
 		}
@@ -26555,7 +26555,7 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 		if (GC.getBonusInfo(eBonus).getTechReveal() != NO_TECH)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_BONUS_REVEALED_BY", GC.getTechInfo((TechTypes)GC.getBonusInfo(eBonus).getTechReveal()).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_REVEALED_BY", GC.getTechInfo((TechTypes)GC.getBonusInfo(eBonus).getTechReveal()).getTextKeyWide()));
 		}
 	}
 
@@ -26575,15 +26575,15 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 				if (GC.getBonusInfo(eBonus).getHealth() > 0)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_BONUS_HEALTHY", GC.getBonusInfo(eBonus).getHealth()));
+					szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_HEALTHY", GC.getBonusInfo(eBonus).getHealth()));
 				}
 				else
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_BONUS_UNHEALTHY", -GC.getBonusInfo(eBonus).getHealth()));
+					szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_UNHEALTHY", -GC.getBonusInfo(eBonus).getHealth()));
 				}
 
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUS_WITH_IMPROVEMENT", GC.getImprovementInfo(eImprovement).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_WITH_IMPROVEMENT", GC.getImprovementInfo(eImprovement).getTextKeyWide()));
 			}
 
 			if (GC.getBonusInfo(eBonus).getHappiness() != 0)
@@ -26591,21 +26591,21 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 				if (GC.getBonusInfo(eBonus).getHappiness() > 0)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_BONUS_HAPPY", GC.getBonusInfo(eBonus).getHappiness()));
+					szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_HAPPY", GC.getBonusInfo(eBonus).getHappiness()));
 				}
 				else
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_BONUS_UNHAPPY", -GC.getBonusInfo(eBonus).getHappiness()));
+					szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_UNHAPPY", -GC.getBonusInfo(eBonus).getHappiness()));
 				}
 
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUS_WITH_IMPROVEMENT", GC.getImprovementInfo(eImprovement).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_WITH_IMPROVEMENT", GC.getImprovementInfo(eImprovement).getTextKeyWide()));
 			}
 		}
 		else if (GC.getImprovementInfo((ImprovementTypes)iLoopImprovement).isImprovementObsoleteBonusMakesValid(eBonus))
 		{
 			eImprovement = (ImprovementTypes)iLoopImprovement;
-			szBuffer.append(gDLL->getText("TXT_KEY_BONUS_OBSOLETED_VALIDATES_IMPROVEMENT", GC.getImprovementInfo(eImprovement).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_OBSOLETED_VALIDATES_IMPROVEMENT", GC.getImprovementInfo(eImprovement).getTextKeyWide()));
 		}
 
 	}
@@ -26619,15 +26619,15 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 			if (kBuilding.getBonusHappinessChanges(eBonus) > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUS_HAPPY", kBuilding.getBonusHappinessChanges(eBonus)));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_HAPPY", kBuilding.getBonusHappinessChanges(eBonus)));
 			}
 			else
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUS_UNHAPPY", -kBuilding.getBonusHappinessChanges(eBonus)));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_UNHAPPY", -kBuilding.getBonusHappinessChanges(eBonus)));
 			}
 
-			szBuffer.append(gDLL->getText("TXT_KEY_BONUS_WITH_IMPROVEMENT", kBuilding.getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_WITH_IMPROVEMENT", kBuilding.getTextKeyWide()));
 		}
 
 		if (kBuilding.getBonusHealthChanges(eBonus) != 0)
@@ -26635,15 +26635,15 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 			if (kBuilding.getBonusHealthChanges(eBonus) > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUS_HEALTHY", kBuilding.getBonusHealthChanges(eBonus)));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_HEALTHY", kBuilding.getBonusHealthChanges(eBonus)));
 			}
 			else
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BONUS_UNHEALTHY", -kBuilding.getBonusHealthChanges(eBonus)));
+				szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_UNHEALTHY", -kBuilding.getBonusHealthChanges(eBonus)));
 			}
 
-			szBuffer.append(gDLL->getText("TXT_KEY_BONUS_WITH_IMPROVEMENT", kBuilding.getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_BONUSHELP_WITH_IMPROVEMENT", kBuilding.getTextKeyWide()));
 		}
 	}
 

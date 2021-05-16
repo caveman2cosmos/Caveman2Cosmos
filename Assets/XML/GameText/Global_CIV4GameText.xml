@@ -19964,7 +19964,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Señor de %s1_player.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_AVAILABLE_PLAYER</Tag>
+		<Tag>TXT_KEY_BONUSHELP_AVAILABLE_PLAYER</Tag>
 		<English>[SPACE](%s2_player has %d1_num_bonus)[SPACE]</English>
 		<French>[SPACE](%s2_player a %d1_num_bonus)[SPACE]</French>
 		<German>[SPACE](%s2_player hat %d1_num_bonus)[SPACE]</German>
@@ -19972,7 +19972,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[SPACE](%s2_player tiene %d1_num_bonus)[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HEALTHY</Tag>
+		<Tag>TXT_KEY_BONUSHELP_HEALTHY</Tag>
 		<English>Healthy: +%d1_Change[ICON_HEALTHY]</English>
 		<French>Santé : +%d1_Change[ICON_HEALTHY]</French>
 		<German>Gesund: +%d1_Change[ICON_HEALTHY]</German>
@@ -19980,7 +19980,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Saludable: +%d1_Change [ICON_HEALTHY]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_REVEALED_BY</Tag>
+		<Tag>TXT_KEY_BONUSHELP_REVEALED_BY</Tag>
 		<English>[ICON_BULLET]Revealed by [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Apparaît avec : [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Durch die Technologie [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] verfügbar</German>
@@ -19988,7 +19988,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Se descubre gracias [NUM1:al:a la:a los:a las] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_UNHEALTHY</Tag>
+		<Tag>TXT_KEY_BONUSHELP_UNHEALTHY</Tag>
 		<English>Unhealthy: +%d1_Change[ICON_UNHEALTHY]</English>
 		<French>Maladie : +%d1_Change[ICON_UNHEALTHY]</French>
 		<German>Krank: +%d1_Change[ICON_UNHEALTHY]</German>
@@ -19996,7 +19996,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Insalubre: +%d1_Change [ICON_UNHEALTHY]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_WITH_IMPROVEMENT</Tag>
+		<Tag>TXT_KEY_BONUSHELP_WITH_IMPROVEMENT</Tag>
 		<English>(with %s1_ImpName)</English>
 		<French>(avec %s1_ImpName)</French>
 		<German>(durch die Modernisierung %s1_ImpName)</German>
