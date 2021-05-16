@@ -38,7 +38,7 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NO_INVISIBILIY_TEXT</Tag>
+		<Tag>TXT_KEY_NO_INVISIBILIY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
@@ -50,11 +50,11 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_FORTITUDE_MODIFIER_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FORTITUDE_MODIFIER_POSITIVE</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_FORTITUDE_MODIFIER_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FORTITUDE_MODIFIER_NEGATIVE</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
@@ -1068,14 +1068,14 @@
 		<Russian>[ICON_BULLET]%d1%% èíôëÿöèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AFFLICT_ON_ATTACK_IMMEDIATE_TEXT</Tag>
+		<Tag>TXT_KEY_AFFLICT_ON_ATTACK_IMMEDIATE</Tag>
 		<English>[ICON_BULLET]Afflict (Immediate): Instant %d1_Probability chance of inflicting %s2_PromotionName on striking your enemy.</English>
 		<French>[ICON_BULLET]Affliction (Immédiat): %d1_Probability chances d'infliger %s2_PromotionName en attaquant votre ennemi.</French>
 		<Italian>[ICON_BULLET]Afflizione (Immediata): %d1_Probability di chance di infliggere immediatamente %s2_PromotionName colpendo il nemico.</Italian>
 		<Polish>[ICON_BULLET]Dolegliwość (Bezpośrednia): Szansa: %d1_Probability na szybkie zadanie %s2_PromotionName przy ataku na jednostkę wroga.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AFFLICT_ON_ATTACK_TEXT</Tag>
+		<Tag>TXT_KEY_AFFLICT_ON_ATTACK</Tag>
 		<English>[ICON_BULLET]Afflict: At end of battle, %d1_Probability chance of inflicting %s2_PromotionName to an enemy you injured.</English>
 		<French>[ICON_BULLET]Afflict.: A l'issue du combat, %d1_Probability de chances d'infliger %s2_PromotionName à un ennemi blessé.</French>
 		<Italian>[ICON_BULLET]Afflizione: alla fine della battaglia, %d1_Probability di chance di infliggere %s2_PromotionName a un nemico che è stato ferito.</Italian>
@@ -1247,7 +1247,7 @@
 		<Russian>Аннулировать?</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ASSASSIN_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_ASSASSIN</Tag>
 		<English>[ICON_BULLET]This unit can initiate Assassinations against units on the same tile.</English>
 		<French>[ICON_BULLET]Cette unité peut réaliser des assassinats d'unités présentes sur la même case.</French>
 		<Russian>[ICON_BULLET]Этот юнит может совершить убийство выбранного отряда на одной с ним клетке.</Russian>
@@ -1357,13 +1357,13 @@
 		<Russian>Ïðèøëè âåñòè èç äàëüíèõ çåìåëü:</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BARB_COEXIST_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_BARB_COEXIST</Tag>
 		<English>[ICON_BULLET]At peace with humanoid NPC's.</English>
 		<French>[ICON_BULLET]En paix avec les PNJ humanoides.</French>
 		<Russian>[ICON_BULLET]В мире с гуманоидными отрядами.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BLEND_INTO_CITY_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_BLEND_INTO_CITY</Tag>
 		<English>[ICON_BULLET]Enters all cities peacefully.</English>
 		<French>[ICON_BULLET]Entre dans les Villes de manière pacifique.</French>
 		<German>[ICON_BULLET]kann beliebige Städte ohne Angriff betreten</German>
@@ -2598,7 +2598,7 @@
 		<Russian>Улучшает состояние %s1_Affliction одного отряда на том же участке.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CURE_AFFLICTION_TEXT</Tag>
+		<Tag>TXT_KEY_CURE_AFFLICTION</Tag>
 		<English>[ICON_BULLET]Cure: May remove or improve %s1_PromotionName on those afflicted.</English>
 		<French>[ICON_BULLET]Guérison: Peut enlever ou améliorer %s1_PromotionName pour ceux qui subissent une affliction.</French>
 		<Italian>[ICON_BULLET]Cura: può rimuovere o migliorare %s1_PromotionName alle unità sotto questo effetto.</Italian>
@@ -2606,7 +2606,7 @@
 		<Russian>[ICON_BULLET]Лечение: может удалить или улучшить %s1_PromotionName пораженным отрядам.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT</Tag>
+		<Tag>TXT_KEY_DAWN_OF_MAN</Tag>
 		<English>The sun rises on the year %s1_year. Since time immemorial, the %s2_civ people have lived a nomadic life. After years of wandering, they are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>Le soleil se lève sur l'an %s1_year. Depuis des temps immémoriaux, les peuplades %s2:3_civ vivent en nomades. Après des années d'errance, ils sont prêts à s'installer et à fonder votre première ville.[NEWLINE][NEWLINE]%s3_leader, votre peuple vous a confié le pouvoir absolu et s'en remet à vous pour bâtir une civilisation qui résistera à l'épreuve du temps!</French>
 		<German>Im Jahr %s1_year beginnt ein neues Zeitalter. Über unzählige Generationen führte Euer Volk ein nomadisches Leben. Aber nun ist die Zeit gekommen, die erste Stadt zu gründen und sesshaft zu werden. [COLOR_SELECTED_TEXT]%s3_leader[COLOR_REVERT], das %[s2_civ]e Volk hat Euch die absolute Macht anvertraut. Erbaut auf diesem Fundament eine Zivilisation, welche die Zeitalter überdauern wird!</German>
@@ -2656,7 +2656,7 @@
 		<Russian>[ICON_BULLET][COLOR_BLUE]Ó âàñ çàùèòíûé äîãîâîð[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_RANK_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_RANK</Tag>
 		<English>Rank</English>
 		<French>Rang</French>
 		<German>Rang</German>
@@ -3172,13 +3172,13 @@
 		<Russian>Эра трансчеловека исходит из предыдущей эры нанотехнологий. В эпоху Трансгуманизма многие представители человеческой расы модифицируют свое тело с помощью прогрессивных методов биотехнологии и киберимплантатов с целью самосовершенствования, а также для успешного конкурирования с все более совершенными машинами. Трансгуманистическое движение на самом деле берет начало еще в Информационную эпоху, но лишь с передовыми технологиями позднего нанотеха оно стало возможным. Если часть людей приветствовала приход новой эры с ее технологиями, то остальные придерживались противоположной точки зрения. Скептики, гуманисты старой закалки, некоторые ученые и религиозные консерваторы предостерегали общество о возможных негативных последствиях трансгуманизма, а другие просто в ужасе от мысли слияния человека и машины, пропагандируя идеи луддизма. Некоторые из трансгуманистов пытаются принудить людей к такому объединению. Грань между машиной и человеком начинает размываться, поскольку и сами машины становится ближе к человеку, обретая способность к эмоциям, многие развивают конкурирующие идеи, приводящие к дальнейшему конфликту. Транслюди, машинные фракции и обычные люди продолжают бороться, некоторые друг против друга или как союзники. Человечество также начинает в этот период колонизировать Солнечную систему, многие эмигрируют с Земли в поисках лучшей жизни или спасаясь от войн. Примитивные технологии терраформирования позволяет сделать Марс обитаемым, и в конечном итоге технологии постепенно совершенствуются, чтобы обеспечить строительство гигантских космических колоний. Война плавно переносится на просторы космоса, сначала посредством штурмовиков, разработанными на базе шаттлов, затем с помощью крупных кораблей, а также космическими роботами массивных размеров, некоторые пилотируемыми людьми. В конце концов, это приводит к возникновению межпланетных войн, когда звездолетам больше не требуется огромного количества времени, чтобы пересечь пространство между планетами. Некоторые из этих войн являются традиционными войнами для завоевания ресурсов, другие же порождены идеологическим противостоянием старых гуманистом и трансгуманистов, а также различные фракций машин, сражающихся в космосе.[NEWLINE]2150 - 2300 гг.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EXCILE_TEXT</Tag>
+		<Tag>TXT_KEY_EXCILE</Tag>
 		<English>[ICON_BULLET]Exiled from its own cultural border.</English>
 		<French>[ICON_BULLET]Exilé de ses frontières culturelles.</French>
 		<Russian>[ICON_BULLET]Изгнан за пределы собственных культурных границ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EXPERIENCE_PERCENT_TEXT</Tag>
+		<Tag>TXT_KEY_EXPERIENCE_PERCENT</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Experience Earned in Battle</English>
 		<French>[ICON_BULLET]%D1_Change%% Expérience acquise au Combat</French>
 		<German>[ICON_BULLET]%D1_Change%% Erfahrungsgewinn im Kampf</German>
@@ -4172,7 +4172,7 @@
 		<Russian>Ïðèðîñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_INSIDIOUSNESS_TEXT</Tag>
+		<Tag>TXT_KEY_INSIDIOUSNESS</Tag>
 		<English>[ICON_BULLET]Insidiousness (Ability to Evade Investigation): %s1_Amount%%</English>
 		<French>[ICON_BULLET]Insidiosité (Habileté à échapper à l'investigation): %s1_Amount%%</French>
 		<Russian>[ICON_BULLET]Беззаконие (Навык уклонения от сыщиков): %s1_Amount%%</Russian>
@@ -4367,7 +4367,7 @@
 		<Russian>Íàøè âîéñêà îáíàðóæèëè ñåêðåòíûé âõîä â %s1!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_INVESTIGATION_TEXT</Tag>
+		<Tag>TXT_KEY_INVESTIGATION</Tag>
 		<English>[ICON_BULLET]Investigation (Find Local Criminals): %s1_Amount%%</English>
 		<French>[ICON_BULLET]Investigation (Trouver les criminels locaux): %s1_Amount%%</French>
 		<German>[ICON_BULLET]Ermittlungen (zur Überführung von Straftätern): %s1_Amount%%</German>
@@ -9451,20 +9451,20 @@
 		<Russian>[ICON_BULLET]Íåò èíôëÿöèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NO_INVISIBILITY_TEXT</Tag>
+		<Tag>TXT_KEY_NO_INVISIBILITY</Tag>
 		<English>[ICON_BULLET]Never Invisible</English>
 		<French>[ICON_BULLET]Jamais Invisible</French>
 		<German>[ICON_BULLET]Diese Einheit ist niemals unsichtbar.</German>
 		<Russian>[ICON_BULLET]Всегда видим</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NO_NON_OWNED_CITY_TEXT</Tag>
+		<Tag>TXT_KEY_NO_NON_OWNED_CITY</Tag>
 		<English>[ICON_BULLET]This unit cannot enter a city that is not your own without attacking it.</English>
 		<French>[ICON_BULLET]Cette unité ne peut entrer dans une ville étrangère qu'en l'attaquant.</French>
 		<Russian>[ICON_BULLET]Этот отряд не может войти в город, не принадлежащий вам, не атакуя его.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NO_NON_TYPE_PROD_MODS_TEXT</Tag>
+		<Tag>TXT_KEY_NO_NON_TYPE_PROD_MODS</Tag>
 		<English>[ICON_BULLET]Does not get unit production modifers while training, except for those specifically for this unit type.</English>
 		<French>[ICON_BULLET]N'obtient pas de modificateurs de production d'unité pendant la formation, à l'exception de ceux spécifiquement pour ce type d'unité.</French>
 		<Russian>[ICON_BULLET]Не получает модификаторы к производству отрядов во время обучения, за исключением тех, которые специально предусмотрены для этого типа юнитов.</Russian>
@@ -9861,7 +9861,7 @@
 		<Russian>[COLOR_RED]Ïàðòèçàíû [COLOR_SELECTED_TEXT]è [COLOR_RED]Òåððîðèñòû [COLOR_SELECTED_TEXT]îêîëî %s1 ñðàæàþòñÿ ïðîòèâ íàøåé àðìèè!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PASSAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PASSAGE</Tag>
 		<English>[ICON_BULLET]This unit can enter territories you have a Right of Passage or Open Borders agreement with.</English>
 		<French>[ICON_BULLET]Cette unité peut entrer à l'intérieur des frontières lorsqu'il existe un droit de passage ou un Accord de frontières ouvertes</French>
 		<Russian>[ICON_BULLET]Этот отряд может входить на территории, с владельцами которых у вас есть право на проход или соглашение об открытых границах.</Russian>
@@ -14708,7 +14708,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Неизвестная держава</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UPGRADE_ANYWHERE_TEXT</Tag>
+		<Tag>TXT_KEY_UPGRADE_ANYWHERE</Tag>
 		<English>[ICON_BULLET]Can upgrade almost anywhere.</English>
 		<French>[ICON_BULLET]Peut être amélioré presque partout.</French>
 		<German>[ICON_BULLET]kann nahezu überall modernisiert werden</German>
@@ -15240,7 +15240,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[SPACE]ñ[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_WONDERS_SCREEN_TOP_CITIES_TEXT</Tag>
+		<Tag>TXT_KEY_WONDERS_SCREEN_TOP_CITIES</Tag>
 		<English>Top 5 Cities / Wonders</English>
 		<French>5 plus grandes villes</French>
 		<German>Beste 5 Städte</German>
@@ -15268,7 +15268,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Âëàäåëåö</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_WONDER_SCREEN_TEXT</Tag>
+		<Tag>TXT_KEY_WONDER_SCREEN</Tag>
 		<English>You have completed %s1</English>
 		<French>Vous avez achevé la construction de la merveille: [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT]!</French>
 		<German>Ihr habt [NUM2:den:die:das:die:die:die] %s1 fertig gestellt!</German>
@@ -18847,7 +18847,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Secretario General de la ONU</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CHOOSER_TITLE</Tag>
+		<Tag>TXT_KEY_TECHHELP_CHOOSER_TITLE</Tag>
 		<English>Technology Advisor</English>
 		<French>Conseiller scientifique</French>
 		<German>Technologieberater</German>
@@ -21690,7 +21690,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Promedio del rival</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_AGRICULTURE_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_AGRICULTURE</Tag>
 		<English>Crop Yield (Food)</English>
 		<French>Récolte (Nour.)</French>
 		<German>Getreideertrag (Nahrung)</German>
@@ -21706,7 +21706,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish> Mill. de fanegas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_ECONOMY_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_ECONOMY</Tag>
 		<English>GNP (Gold)</English>
 		<French>PNB (Or)</French>
 		<German>BSP (Gold)</German>
@@ -21722,7 +21722,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish> Mill. de oro</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_EXPORTS_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_EXPORTS</Tag>
 		<English>Exports</English>
 		<French>Exportations</French>
 		<German>Exporte</German>
@@ -21730,7 +21730,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Exportaciones</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_HAPPINESS_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_HAPPINESS</Tag>
 		<English>Approval Rate</English>
 		<French>Taux d'approbation</French>
 		<German>Billigungsrate</German>
@@ -21738,7 +21738,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Ritmo aprobación</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_HEALTH_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_HEALTH</Tag>
 		<English>Life Expectancy</English>
 		<French>Espérance de vie</French>
 		<German>Lebenserwartung</German>
@@ -21746,7 +21746,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Esperanza de vida</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_IMPORTS_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_IMPORTS</Tag>
 		<English>Imports</English>
 		<French>Importations</French>
 		<German>Importe</German>
@@ -21762,7 +21762,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish> Mill. de toneladas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_INDUSTRY_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_INDUSTRY</Tag>
 		<English>Mfg. Goods (Prod.)</English>
 		<French>March. (Prod.)</French>
 		<German>Ind. (Prod.)</German>
@@ -21770,7 +21770,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Merc.fabric.(Prod)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_LAND_AREA_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_LAND_AREA</Tag>
 		<English>Land Area</English>
 		<French>Territoire</French>
 		<German>Landgebiet</German>
@@ -21786,7 +21786,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish> Km cuad.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_MILITARY_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_MILITARY</Tag>
 		<English>Soldiers</English>
 		<French>Soldats</French>
 		<German>Soldaten</German>
@@ -21794,7 +21794,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Soldados</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_POPULATION_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_POPULATION</Tag>
 		<English>Population</English>
 		<French>Population</French>
 		<German>Bevölkerung</German>
@@ -21810,7 +21810,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish> Años</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_STRENGTH_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_STRENGTH</Tag>
 		<English>Strength</English>
 		<French>Puissance</French>
 		<German>Stärke</German>
@@ -21826,7 +21826,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Estadísticas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_VALUE_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_VALUE</Tag>
 		<English>Value</English>
 		<French>Valeur</French>
 		<German>Wert</German>

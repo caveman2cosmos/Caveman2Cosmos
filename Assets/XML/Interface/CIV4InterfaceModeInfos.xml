@@ -492,7 +492,7 @@
 		</InterfaceModeInfo>
 		<InterfaceModeInfo>
 			<Type>INTERFACEMODE_BOMBARD</Type>
-			<Description>TXT_KEY_CONCEPT_RBOMBARD_TEXT</Description>
+			<Description>TXT_KEY_CONCEPT_RBOMBARD</Description>
 			<Help>TXT_KEY_INTERFACEMODE_BOMBARD_HELP</Help>
 			<CursorType>CURSOR_AIRBOMB</CursorType>
 			<Mission>MISSION_RBOMBARD</Mission>

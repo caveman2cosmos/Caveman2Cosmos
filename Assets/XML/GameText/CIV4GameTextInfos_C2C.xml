@@ -318,7 +318,7 @@
 		<Russian>[ICON_BULLET]Все игроки могут строить [COLOR_BUILDING_TEXT][LINK=%s1_BldgType]%s2_BldgName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_CHANCE_OF_REVOLT_C2C</Tag>
+		<Tag>TXT_KEY_MISC_CHANCE_OF_REVOLT</Tag>
 		<English>Chance of Revolt: %s1_Chance%% (%s2_CityStrength%% Cultural Revolt Sentiment. %s3_Garrison%% total Revolt Protection from Units)</English>
 		<French>Chances de Révolte: %s1_Chance%% (%s2_CityStrength%% de Sentiment de Récolte Culturelle. %s3_Garrison%% de total de Protection contre la révolte, des Unités)</French>
 		<Russian>Угроза восстания: %s1_Chance%% (%s2_CityStrength%% из-за культурных различий. %s3_Garrison%% к общей защите от восстаний для отрядов).</Russian>

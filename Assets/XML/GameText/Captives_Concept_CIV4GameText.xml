@@ -10,7 +10,7 @@
 		<Russian>Мировоззрения в чем-то похожи на Парадигмы, но в них только два состояния - принятие или запрет. Они являются экспериментом и реализованы в виде зданий, а не Парадигм, из-за количественных ограничений. Ниже приведены текущие мировоззрения:[NEWLINE][NEWLINE][TAB][ICON_BULLET][BOLD]Каннибализм[\BOLD] - позволяет убивать пленных как животных.[NEWLINE][NEWLINE][TAB][ICON_BULLET][BOLD]Человеческие жертвоприношения[\BOLD] - позволяет приносить пленников в жертву богам и духам в обмен на прирост культуры и счастливые лица.[NEWLINE][NEWLINE][TAB][ICON_BULLET][BOLD]Рабовладение[\BOLD] - позволяет захватывать, продавать или заселять пленных как рабов.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_WORLD_VIEW_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_WORLD_VIEW</Tag>
 		<English>World View</English>
 		<French>Vision du Monde</French>
 		<Italian>Concezioni del mondo</Italian>

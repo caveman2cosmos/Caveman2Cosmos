@@ -8,7 +8,7 @@
 		<Russian>[H1]Àêòèâíàÿ îáîðîíà[\H1][PARAGRAPH:2]Â ýòîì ðåæèìå èñòðåáèòåëè, îõðàíÿþùèå òåððèòîðèþ, áóäóò àòàêîâàòü ïðèáëèæàþùèåñÿ âðàæåñêèå þíèòû. Ìåñòî áàçèðîâàíèÿ àâèàöèè ìîæåò áûòü ëþáûì (ãîðîä, àâèàíîñåö è ò.ä.). Èñòðåáèòåëè àâòîìàòè÷åñêè âñòóïÿò â áîé, åñëè ïðîòèâíèê ïîäîéäåò áëèæå, ÷åì íà 2 êëåòêè.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ACTIVE_DEFENSE_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ACTIVE_DEFENSE</Tag>
 		<English>Active Defense</English>
 		<French>Défense Active</French>
 		<German>Aktive Verteidigung</German>
@@ -21,7 +21,7 @@
 		<English>by PieceOfMind[PARAGRAPH:2]Right from the outset, make sure you understand that all odds in the Advanced Combat Odds display are rounded to 1 or 2 decimal places. Displayed odds of 100.00%, for example, could represent 99.995% or greater meaning the odds are not certain. Similarly, 0.00% does not mean zero odds - just very small odds.[PARAGRAPH:2]There are now four settings for the level of detail you wish to have displayed using this mod: Low, Medium, High and Everything! Medium is the default setting and recommended for most users.[PARAGRAPH:2]Advanced Combat Odds aims to be more accurate, relevant and informative than the original odds calculator. See the included text file for a list of features available at each detail setting.[NEWLINE][NEWLINE][BOLD]What do all the values mean?[\BOLD][PARAGRAPH:2][BOLD]Survival Odds:[\BOLD][PARAGRAPH:2]These are simple - the odds of both the attacker (green) and defender (red) surviving. Sometimes using units like catapults means the defender will have 100% odds; This is because the attacker cannot kill the defender and must withdraw before dealing a killing blow.[PARAGRAPH:2][BOLD]Victory:[\BOLD][PARAGRAPH:2]The odds of the attacker killing the defender. Also presented on this line is the number of XP the attacker would earn if he wins. At Medium detail and higher, there is an additional value on this line. This value is the average hitpoints of the attacker if he kills the defender.[PARAGRAPH:2][BOLD]Withdraw:[\BOLD][PARAGRAPH:2]These are the odds of a forced withdrawal from combat. Units like catapults and cannons, which have a combat limit, cannot kill a defending unit. Instead they can only damage the defender down to a certain level (e.g. 25HP for catapults, 20HP for cannons, 15HP for artillery). The XP a unit earns for withdrawal is 1XP. At the end of this line, the average values of both attacker and defender HP are presented for the withdrawal battle outcome (for Medium detail and higher). Note average defender HP on this line corresponds to the damage limit of the unit you are using to attack.[PARAGRAPH:2][BOLD]Retreat:[\BOLD][PARAGRAPH:2]If you are using units that have inherent retreat odds or that have earned promotions that give them retreat chances, then this line tells you the probability of your unit retreating. Units will only retreat if they are one hit away from being killed, and only when they are the attacker. The HP value presented on this line (Medium detail and higher) is the number of hitpoints the attacker would have if he were to retreat from the battle injured.[PARAGRAPH:2][BOLD]Defeat:[\BOLD][PARAGRAPH:2]The odds of the attacker being killed by the defender. The XP the defender will earn is displayed, along with the average number of hitpoints the defender will have if he survives combat (Medium detail and higher).[PARAGRAPH:2][BOLD]Detailed Attacker HP Outcomes:[\BOLD][PARAGRAPH:2]At the High and Everything, these values will be displayed directly under the battle outcomes representing the attacker surviving. For each number of hitpoints the attacker could possibly have, beside it you will find the probability of the unit exiting battle with that many hitpoints. There is also a coloured bar beside each outcome, to help visually identify the scope of the values. Note if there are retreat odds involved, the lowest HP value for the attacker will include the probability of retreat in its odds. Note the sum of all the HP outcomes should be the same as the odds of the attacker surviving.[PARAGRAPH:2][BOLD]Detailed Defender HP Outcomes:[\BOLD][PARAGRAPH:2]Much the same as Attacker HP Outcomes, except for the defender. Note the sum of all these values should be the odds of the defender surviving.[PARAGRAPH:2]Attacker/Defender damager per hit, number of hits required, odds of hits and CombatRatio: A lot of data is displayed on this line. The first two values are the amount of HP damage each of the attacker and defender (respectively) will cause per hit. Then after that, the number of hits required by each combatant are displayed. In green, is the number of hits required by the attacker to kill the defender or to force the attacker's withdrawal due to a combat limit. In red is the number of hits required for the defender to make to either kill the attacker or to make him retreat. Next, the odds displayed in green are the odds of the attacker for making a hit in each combat round. The defender's odds are just 100% minus this number. Finally on this line is the important value called the CombatRatio or simply R. This value is equal to the attacker's modified combat strength divided by the defender's modified combat strength. This number is important for many reasons - one being that it determines how many XP the attacker and defender can earn from combat. The value R takes both injured units and all combat related modifiers into account (e.g. promotions and defense bonuses).[PARAGRAPH:2][BOLD]Average HP: (High detail an above)[\BOLD][PARAGRAPH:2]This line simply gives the average hitpoints for each combatant after battle. Unlike the averages presented earlier, these averages include the possibility of the unit dying, so they better reflect the overall outcome of battle.[PARAGRAPH:2][BOLD]Unharmed:[\BOLD][PARAGRAPH:2]These odds are very simple. They are the odds of the attacker/defender exiting combat without taking a single hit i.e. unharmed. Units that are already injured are counted as winning unharmed if they don't take damage during the battle.[PARAGRAPH:2][BOLD]Unrounded XP:[\BOLD][PARAGRAPH:2]These values are shown at Everything detail only. These values are rounded down to the nearest whole number, and then forced to be within 1 and 10, to give the actual XP that can be earned by each combatant for killing their opponent.[PARAGRAPH:2][BOLD]XP range:[\BOLD][PARAGRAPH:2]This line is only shown at Everything detail, and it crams a lot of information on one line. In the middle, it presents the CombatRatio i.e. the R value, and the XP it corresponds to. On either side of it, the CombatRatios that would lead to different number of XP earned are shown. If you increase the value of R (for example, by taking a Combat promotion) then tipping it over the next value will cause your XP earned to drop by 1 point.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ADVANCED_COMBAT_ODDS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ADVANCED_COMBAT_ODDS</Tag>
 		<English>Advanced Combat Odds</English>
 		<French>Probabilité de Victoire</French>
 		<Spanish>Probabilidades de combate avanzadas</Spanish>
@@ -36,7 +36,7 @@
 		<Russian>[H1]Óëó÷øåííûé øïèîíàæ[\H1][NEWLINE][TAB]Óëó÷øåííûé øïèîíàæ äîáàâëÿåò ìíîæåñòâî íîâûõ ìèññèé øïèîíàæà äëÿ ïîäãîòîâêè è îðãàíèçàöèè õàîñà. Êðîìå òîãî óëó÷øåííûé øïèîíàæ ñîèçìåðÿåò âñå ïîâðåæäåíèÿ îò ìèññèé ñ èãðîâîé ñêîðîñòüþ, òàêèì îáðàçîì, ýôôåêòû ìèññèé áîëåå çàìåòíû íà ìåäëåííûõ ñêîðîñòÿõ è ìåíåå çàìåòíû íà áîëåå áûñòðûõ ñêîðîñòÿõ.[NEWLINE][H1]Íîâûå ìèññèè:[\H1][NEWLINE][NEWLINE][BOLD]Óñòàíîâêà ÿäåðíîãî óñòðîéñòâà[\BOLD][NEWLINE][TAB]Âûçûâàåò òåðìîÿäåðíûé âçðûâ â ãîðîäå, â êîòîðîì îí ïðåäâàðèòåëüíî óñòàíîâëåí. Ìîæåò âûçâàòü ãèáåëü ëþäåé, ðàçðóøåíèå ãîðîäñêîé èíôðàñòðóêòóðû, ðàñïðîñòðàíÿòü ðàäèîàêòèâíûå îñàäêè è âûçâàòü âîéíó, åñëè øïèîí ïîéìàí ñëèøêîì ïîçäíî.[NEWLINE][NEWLINE][BOLD]Îòêëþ÷åíèå ãîðîäñêîé ýëåêòðîñåòè[\BOLD][NEWLINE][NEWLINE][TAB]Âûçûâàåò ïîëíîå îòêëþ÷åíèå ïèòàíèÿ â ãîðîäå äëÿ íåñêîëüêèõ õîäîâ. Ëþáûå çäàíèÿ â ãîðîäå, êîòîðûå èñïîëüçóþò èëè òðåáóþò ýíåðãèè äëÿ ðàáîòû, ïðåêðàòÿò ôóíêöèîíèðîâàòü; îñîáåííî îïàñíî áëèæå ê êîíöó èãðû.[NEWLINE][NEWLINE][BOLD]Ïîìîùü ìÿòåæíèêàì[\BOLD][NEWLINE][NEWLINE][TAB]Äàåò ïîâñòàí÷åñêèì ãðóïïèðîâêàì ïîääåðæêó â ãîðîäå è êàðäèíàëüíî èçìåíÿåò îáùåñòâåííîå ìíåíèå â ïîëüçó ïîâñòàíöåâ. Ïðèìå÷àíèå: Òîëüêî ïðè èãðå ñ ðåâîëþöèÿìè.[NEWLINE][NEWLINE][BOLD]Íàöèîíàëüíàÿ àíàðõèÿ[\BOLD][NEWLINE][NEWLINE][TAB]Çàñòàâëÿåò ñòðàíó âïàäàòü â àíàðõèþ íà íåñêîëüêî õîäîâ, íàíîñÿ âðåä âñåì ãîðîäñêèì óëó÷øåíèÿì, ïðîèçâîäÿùèì çäàíèÿ èëè îòðÿäû, à òàê æå îñòàíàâëèâàåò ðîñò, èññëåäîâàíèå, äîõîä è äðóãèå íåîáõîäèìûå ôóíêöèè.[NEWLINE][NEWLINE][BOLD]Óñòðîèòü àíòèâîåííóþ àêöèþ ïðîòåñòà[\BOLD][NEWLINE][NEWLINE][TAB]Óñòðàèâàåò àíòèâîåííóþ àêöèþ ïðîòåñòà, êîòîðàÿ ìîæåò â áîëüøîé ñòåïåíè óâåëè÷èòü âîåííóþ óñòàëîñòü â ãîðîäå, ãäå îíà ïðîâîäèòñÿ.[NEWLINE][NEWLINE][BOLD]Âçÿòêà ãîðîäó[\BOLD][NEWLINE][NEWLINE][TAB]Ïëàòèò ãîðîäñêîìó ãóáåðíàòîðó áîëüøóþ äåíåæíóþ ñóììó, ÷òîáû ïåðåêëþ÷èòü ëîÿëüíîñòü ãîðîäà íà âàøó èìïåðèþ. Â ñåðüåçíîé ñòåïåíè âðåäèò îòíîøåíèÿì ñ ïðåæíèì âëàäåëüöåì.[NEWLINE][NEWLINE][BOLD]Ñàáîòèðîâàòü èññëåäîâàíèå[\BOLD][NEWLINE][NEWLINE][TAB]Ðàçðóøàåò âñå äîñòèæåíèÿ â èññëåäîâàíèÿõ ïî òåêóùåìó ïðîåêòó èãðîêîâ.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ADVANCED_ESPIONAGE_SPREAD_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ADVANCED_ESPIONAGE_SPREAD</Tag>
 		<English>Advanced Espionage</English>
 		<French>Espionnage Avancé</French>
 		<German>Verbesserte Spionage</German>
@@ -50,7 +50,7 @@
 		<French>Ce composant est un outil permettant de donner à l'IA votre civilisation pour un certain nombre de tours. Appuyer sur [BOLD]Ctrl-Shift-X[\BOLD] pour ouvrir la fenêtre AIAutoPlay, Sélectionnez le nombre de tours à automatiser et le type d'automatisme (Totale pour pas d'automatisation). Il y a également une nouvelle fonctionnalité où l'IA va uniquement déplacer les unités. Commencez le tour, effectuez les changements ou actions que vous souhaitez, puis appuyez sur [BOLD]Ctrl-Shift-M[\BOLD] et l'IA se chargera de terminer le tour. Vous pouvez aussi annuler l'automatisation en pressant à nouveau [BOLD]Ctrl-Shift-X[\BOLD], mais uniquement lorsqu'il n'y a pas de fenêtre active.[PARAGRAPH:2]En supplément, il y a une option de configuration permettant de fortifier toutes les unités fortifiées par l'IA à la fin de l'automatisation. Sans cela, toutes les unités seront actives.[PARAGRAPH:2]Pratique pour les débuggage, ou pour observer le comportement de l'IA, ou pour vous épargner les quelques tours vous séparant d'une victoire évidente ou pour esquiver des sections du jeu trop ennuyeuses.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_AIAUTOPLAY_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_AIAUTOPLAY</Tag>
 		<English>AI Autoplay</English>
 		<French>IA Automatique</French>
 		<Spanish>Juego automático de la IA</Spanish>
@@ -64,7 +64,7 @@
 		<Russian>[H1]Öåëè áîìáàðäèðîâêè[\H1][PARAGRAPH:2]Ïðè àâèàáîìáàðäèðîâêå ãîðîäà ìîæíî âûáðàòü îäíó èç ïÿòè öåëåé: óêðåïëåíèÿ (áîìáàðäèðîâêà îáúåêòîâ èëè óìåíüøåíèå ïðîöåíòíîãî ïîêàçàòåëÿ çàùèòû), çäàíèÿ (óíè÷òîæåíèå çäàíèé), çàâîäû (ðàçðóøåíèå ïðîèçâîäñòâåííûõ ñòðóêòóð), ïîðòû (ïîâðåæäåíèå èëè óíè÷òîæåíèå âðàæåñêîãî êîðàáëÿ) è ñòðàòåãè÷åñêèå öåëè (ïîïûòêà óíè÷òîæèòü òåêóùèé îáúåêò ïðîèçâîäñòâà). Ó÷òèòå: áîìáàðäèðîâùèê ìîæåò áûòü ïåðåõâà÷åí.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_AIR_BOMBING_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_AIR_BOMBING</Tag>
 		<English>Airbomb Missions</English>
 		<French>Missions de bombardement aérien</French>
 		<German>Luftbombardierungsmissionen</German>
@@ -260,7 +260,7 @@
 		<English>by SimCutie[PARAGRAPH:2]This Mod will allow you to cycle through your cities from the Main Interface screen. Above your minimap in the Main Interface screen are a white left and right arrow. Clicking one of them will do a single-click action (pulling up city information in main interface, without detailed citizen information,) on the closest city in the main view.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BUG_CITY_CYCLE_ARROWS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_BUG_CITY_CYCLE_ARROWS</Tag>
 		<English>City Cycle Arrows</English>
 		<Spanish>Flechas para recorrer ciudades</Spanish>
 		<Russian>Áûñòðûé ïðîñìîòð ãîðîäîâ</Russian>
@@ -270,7 +270,7 @@
 		<English>by Chinese American[PARAGRAPH:2]This will add a bar to the City View that will show many turns are left until Culture will expand in the current city screen, as well as turns to a Great Person in the city screen. You can turn off these bars from within the BUG Options Screen, under the General Tab.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BUG_CULTURAL_AND_GREAT_PERSON_TURNS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_BUG_CULTURAL_AND_GREAT_PERSON_TURNS</Tag>
 		<English>Cultural and Great Person Turns</English>
 		<Spanish>Turnos para expansión y Gran personaje</Spanish>
 		<Russian>Ïàíåëü êóëüòóðû è Â×</Russian>
@@ -280,7 +280,7 @@
 		<English>by EmperorFool[PARAGRAPH:2]The Great General Progress Bar adds a bar below your Technology Research bar that tells you how many turns until your next Great General. If in wide screen mode it will display to the left of the Research bar. One thing to note is the display of the bar will not automatically update after a battle, but you must enter a screen and exit out for it to display properly. From within The BUG Options Screen, on the General Tab, you can turn the Great General Bar on or off.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_PROGRESS_BAR_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_PROGRESS_BAR</Tag>
 		<English>Great General Progress Bar</English>
 		<Spanish>Barra de progreso hacia Gran general</Spanish>
 		<Russian>Îòñ÷åò âåëèêèõ ãåíåðàëîâ</Russian>
@@ -290,7 +290,7 @@
 		<English>by EmperorFool[PARAGRAPH:2]This mod provides an enhanced version of the Technology Chooser screen (F6). Along the bottom of the screen you will see five groups of three icons; each group consists of a great person icon and two technology icons. For each great person icon, the left technology icon shows which technology that great person will research given the technologies you have already researched. The right technology icon shows which technology they will research once you have researched all the technologies you have selected in the screen. Once a great person has no more technologies that it can research, it will show a red circle with a line through it for its technology icons; this is the same symbol used for "No State Religion".[PARAGRAPH:2][BOLD]Instructions[\BOLD][PARAGRAPH:2]You can enable or disable this mod using the BUG Options screen's (Ctrl-Alt-O) General tab. Simply toggle the "Great Person Research" check box in the first column.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_TECH_PREFERENCIES_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_TECH_PREFERENCIES</Tag>
 		<English>Great Person Technology Preferences</English>
 		<Spanish>Preferencias tecnológicas de Gran personaje</Spanish>
 		<Russian>Ðàñø. âûáîð òåõíîëîãèé äëÿ Â×</Russian>
@@ -300,7 +300,7 @@
 		<English>by ruff_hi[PARAGRAPH:2]With version 3.13 of Beyond the Sword, the Glance Screen within the Advisor Screen was removed for "being too ugly." We felt the information given in this screen was vital, and so returned it to the Foreign Advisor screen, but improved. We realigned the grid, as well as adding the attitude icons, and color coding the modifiers. It should now be easier to see where you stand with your rivals.[PARAGRAPH:2][BOLD]Instructions[\BOLD][PARAGRAPH:2]Go to the Foreign Advisor Screen from the Main Interface, and click on Glance.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BUG_IMPROVED_GLANCE_TAB_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_BUG_IMPROVED_GLANCE_TAB</Tag>
 		<English>Improved Glance Tab</English>
 		<Spanish>Pestaña "Mirar" mejorada</Spanish>
 		<Russian>Óëó÷øåííûé îáçîð</Russian>
@@ -310,7 +310,7 @@
 		<English>by Ruff_hi and EmperorFool[PARAGRAPH:2]The Military Advisor is now divided into two sections, Deployment, and the Sit-Rep (or Situation Report).[PARAGRAPH:2]The Deployment tab makes finding units easier by grouping units by location and unit type.[PARAGRAPH:2]The Sit-Rep tab is your all-in-one spot to find information related to your warmonging diplomacy. It displays the follow information:[PARAGRAPH:2][ICON_BULLET]Icon for each Civilization in the game.[PARAGRAPH:2][ICON_BULLET]A fist indicating that the Civilization "Has Enough on Their Hands", which usually means they are planning, or are engaged in a war that is taking all their resources.[PARAGRAPH:2][ICON_BULLET]An icon display who the Civilzations Worst Enemy is.[PARAGRAPH:2][ICON_BULLET]A Threat Indicator. This is not perfect, but gives you a rough idea what the threat level of attack from that civilization is towards you.[PARAGRAPH:2][ICON_BULLET]Columns showing Strategic Advantages, both yours and the other civlizations. This is useful so you don't go attacking rifles with swordsman![PARAGRAPH:2][ICON_BULLET]An indicator for if that civilization is a vassal of another.[PARAGRAPH:2][ICON_BULLET]An indicator if the civilization has a defensive pact.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BUG_MILITARY_ADVISOR_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_BUG_MILITARY_ADVISOR</Tag>
 		<English>BUG Military Advisor</English>
 		<Spanish>Consejero militar de BUG</Spanish>
 		<Russian>Íîâûé âîåííûé ñîâåòíèê</Russian>
@@ -320,7 +320,7 @@
 		<English>by TheLopez[PARAGRAPH:2]Just as the mod title says, this is not just another game clock mod. It is much, much more. This mod provides you the flexibility to most if not all of its different features. There are 12 main variables and one additional variable per era that can be used to configure the Not Just Another Game Clock Mod display information. Those variables are configurable within the BUG Options Screen.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BUG_NOT_JUST_ANOTHER_GAME_CLOCK_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_BUG_NOT_JUST_ANOTHER_GAME_CLOCK</Tag>
 		<English>Not Just Another Game Clock</English>
 		<Russian>Ïàíåëü èíôîðìàöèè</Russian>
 	</TEXT>
@@ -329,7 +329,7 @@
 		<English>Strategy Overlay allows player to plan where he wants to place his next cities by adding colored dots to the desired map plots. To activate Strategy Overlay edit mode, press [COLOR_HIGHLIGHT_TEXT]ALT-X[COLOR_REVERT]. Select desired color from the palette on the left and then mouse left button to place a dot to map plot. The plot is surrounded with city radius to give you a clear picture how the land will be used if city is placed on that plot. To remove dot from plot hover your mouse pointer over it and right click. Press [COLOR_HIGHLIGHT_TEXT]ALT-X[COLOR_REVERT] to exit Strategy Overlay edit mode. With [COLOR_HIGHLIGHT_TEXT]CTRL-X[COLOR_REVERT] you can turn on and off the overlay.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BUG_OVERLAY_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_BUG_OVERLAY</Tag>
 		<English>Strategy Overlay</English>
 		<Spanish>Capa estratégica</Spanish>
 		<Russian>Ñòðàòåãè÷åñêîå ïëàíèðîâàíèå</Russian>
@@ -339,7 +339,7 @@
 		<English>by EmperorFool[PARAGRAPH:2]You can enable or disable this mod using the BUG Options screen's (Ctrl-Alt-O) General tab. Simply toggle the "Raw Yield " check box in the first column under "City Screen". You can switch between the display of either Production, Commerce,or Food, by clicking on it's icon in the heard of the Yields display in the upper left quarter of the City Screen.[PARAGRAPH:2][BOLD]Raw Yields[\BOLD][PARAGRAPH:2]Raw Yields allows you to display a detailed breakdown of each of the tree production type: Commerce, Produce, and Food. To toggle between the modes, click on the icon representing each yield type in the Header. It will give you a detailed breakdown of what each raw yield is, as well as what the actual value is after modifers.[PARAGRAPH:2]It will add up the yields for worked tiles, all tiles in the cities control, or all tiles culturally owned. It will also eliminate the display of 0 values, to help reduce clutter and keep the list of buildings in the city as large as possible. Everything is displayed in a table format, and should be fairly easy to see what the raw yield a city is capable of as soon as you build it, so you know where to focus your improvements, and ensure your city is giving the most possible for your needs.[PARAGRAPH:2]This mod component was based of the original Raw Commerce Mod by Sevo.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BUG_RAW_YIELDS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_BUG_RAW_YIELDS</Tag>
 		<English>Raw Yields</English>
 		<Spanish>Rendimientos en bruto</Spanish>
 		<Russian>Ïàíåëü ðåñóðñîâ</Russian>
@@ -349,7 +349,7 @@
 		<English>by eotinb[PARAGRAPH:2][COLOR_HIGHLIGHT_TEXT]Alt+R[COLOR_REVERT]: Creates a pop up window in which you set the number of turns until the reminder goes off and the text of the reminder. When that turn comes around, your reminder will appear as a message on the screen and in the event log (but only for a few turns). Also an alarm noise will play to get your attention. You can have as many reminders pending as you like. As of now there is no way to eliminate a reminder (other than passing the turn it is set to go off) or any way to view the current reminders. If I get ambitious, I may include these features in a future version.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BUG_REMINDERS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_BUG_REMINDERS</Tag>
 		<English>Reminders</English>
 		<Spanish>Notificaciones</Spanish>
 		<Russian>Íàïîìèíàíèÿ</Russian>
@@ -359,7 +359,7 @@
 		<English>by EmperorFool[PARAGRAPH:2]Whip Assistant will tell you how many hammers of overflow you will have if you hurry production by sacrificing your population. The overflow you receive is put towards your next build. So, for example, you can whip a library for 2 population with 32 hammer overflow means that it will take 2 of your population, but you will get the library the next turn, plus 32 hammers to whatever you build next.[PARAGRAPH:2]Whip Assistant will also add a counter to the city screen telling you how many turns until the Unhappiness caused by the Whipping, will expire.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_BUG_WHIP_ASSISTANT_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_BUG_WHIP_ASSISTANT</Tag>
 		<English>Whip Assistant</English>
 		<Spanish>Asistente para sacrificio</Spanish>
 		<Russian>Ïîìîøíèê ðàáîâëàäåëüöà</Russian>
@@ -400,7 +400,7 @@
 		<Russian>Мод C2C добавляет в игру ряд типов местности, особенности местности, бонусы и улучшения местности. Caveman2Cosmos добавляет в игру множество базовых типов местности, особенностей местности и бонусы. Некоторые из них можно увидеть в Цивилопедии, но они еще до конца не включены в игру, все типы, особенности и бонусы ландшафта вне Земли попадают в эту категорию. [PARAGRAPH:2]На земных картах были внесены изменения в разнообразие наземных и водных ландшафтов. Новые типы наземных базовых ландшафтов: пустоши, дюны, заросли, болота, грязь, вечная мерзлота, скалы, обнажения породы и солончаки. Новые водные ландшафты - это полярное побережье, полярный океан, тропическое побережье и тропический океан. Обычное побережье и океан теперь представляют версии этих ландшафтов умеренного климата. В v37 и далее мы рассчитываем расширить количество этих водных ландшафтов. (См. [LINK=CONCEPT_WATER_TERRAINS]Водные участки[\LINK]).[PARAGRAPH:2]Особенности наземного ландшафта: древний лес, сожженный лес, заросли кактусов, пещеры, кратер, мангровые леса, молодой лес ( см. Раннее терриформирование), обнаженная порода, торфяное болото, дождевой лес, саванна, смоляная яма, торнадо (событие), пампасы, активные и потухшие вулканы (См. [LINK=CONCEPT_VOLCANO]Вулканы[\LINK]). На любом побережье встречаются кораллы, водоросли, рифы и морская трава.[PARAGRAPH:2]Бонусы разделены на те, что найдены на карте, те, которые сделаны зданиями, и специальные Культурные бонусы.[PARAGRAPH:2]См. также: [LINK=CONCEPT_NATURAL_WONDERS]Чудеса Природы[\LINK], ущерб от типа местности.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_C2C_TERRAINS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_C2C_TERRAINS</Tag>
 		<English>Terrain in C2C</English>
 		<German>Gelände in C2C</German>
 		<Russian>Ландшафт в C2C</Russian>
@@ -414,7 +414,7 @@
 		<Russian>[H1]Óëó÷øåíèÿ çàìêà[\H1][NEWLINE][TAB]Óëó÷øåíèÿ çàìêà äîáàâëÿþò íîâóþ ñèñòåìó óëó÷øåíèé, äåëàÿ çàìêè êëþ÷åâîé çàùèòíîé ñòðóêòóðîé.[NEWLINE][NEWLINE][TAB][BOLD]Ðîâ[\BOLD][NEWLINE][NEWLINE]Ðîâ ñîçäàåò çîíó êîíòðîëÿ íà âîñüìè ñìåæíûõ êëåòêàõ âîêðóã ãîðîäà. Ýòî âûíóäèò íàïàäàþùèå ñèëû ïðîòèâîñòîÿòü âàøåìó ãîðîäó íàïðÿìóþ èëè îòñòóïèòü âîêðóã íåãî.[NEWLINE][NEWLINE][TAB][BOLD]Àìáðàçóðà (Áîéíèöû)[\BOLD][NEWLINE][NEWLINE]Àìáðàçóðà äàåò ñòðåëêàì äîïîëíèòåëüíóþ çàùèòó ïðè îáîðîíå ãîðîäà.[NEWLINE][NEWLINE][TAB][BOLD]Áàøíè çàìêà[\BOLD][NEWLINE][NEWLINE]Êàæäûé õîä, âðàæåñêèå þíèòû, ñìåæíûå ñ ãîðîäîì, òåðÿþò 5% îò [COLOR_YELLOW]òåêóùåãî[COLOR_REVERT] çäîðîâüÿ.[NEWLINE][NEWLINE][TAB][BOLD]Êàòàêîìáû[\BOLD][NEWLINE][NEWLINE]Êàòàêîìáû - ëåãêèé ñïîñîá çàðàáîòàòü áîëüøå çîëîòà â ãîðîäàõ, îáåñïå÷èâàÿ ñåêðåòíûé ìàðøðóò êîíòðàáàíäû. Îíè íåñóò ñêðûòûé ðèñê, âðàæåñêèå çàõâàò÷èêè ìîãóò îáíàðóæèòü òàéíûé õîä â âàø ãîðîä è íà÷àòü íàïàäåíèå íà íåãî èçíóòðè.[NEWLINE][NEWLINE][TAB][BOLD]Ñòîðîæåâàÿ áàøíÿ[\BOLD][NEWLINE][NEWLINE]Ñòîðîæåâàÿ áàøíÿ - îáðàç è ñèìâîë âëàñòè âàøåé èìïåðèè. Îí çàùèùàåò âñå êëåòêè â ïîäêîíòðîëüíûõ ãîðîäàõ îò ïîòåðè êóëüòóðû â áîÿõ, à òàê æå äàåò âàøèì çàùèòíèêàì +50% çàùèòû. Åñëè ïðîèçîøëî õóäøåå è âàø ãîðîä ñî ñòîðîæåâîé áàøíåé çàõâà÷åí, çàõâàò÷èêè áóäóò èìåòü äåëî ñ òðåõêðàòíîé ïðîäîëæèòåëüíîñòüþ ñîïðîòèâëåíèÿ.[NEWLINE][NEWLINE][TAB][BOLD]Òÿæåëûå âîðîòà[\BOLD][NEWLINE][NEWLINE]Òÿæåëûå âîðîòà çàïðåùàþò âàø ãîðîä îò âðàæåñêèõ çàõâàò÷èêîâ. Âðàæåñêèå âîéñêà áóäóò íåñïîñîáíû íàïàñòü íà âàø ãîðîä, ïîêà åãî îáîðîíîñïîñîáíîñòü íå óïàäåò íèæå ïîðîãà â 25% çàùèòû.[NEWLINE][NEWLINE][TAB][BOLD]Òðàâíèê[\BOLD][NEWLINE][NEWLINE]Òðàâíèê îáåñïå÷èâàåò ìãíîâåííîå èçëå÷åíèå âàøèõ ðàíåíûõ âîéñê. Êàæäûé õîä, îäèí þíèò, âûáðàííûé ñëó÷àéíî, áóäåò ïîëíîñòüþ èçëå÷åí.[NEWLINE][NEWLINE][TAB][BOLD]Òåìíèöà[\BOLD][NEWLINE][NEWLINE]Òåìíèöà - óíèêàëüíîå çäàíèå.Îíà íå ïðèíîñèò âûãîäû â ìèðíîå âðåìÿ, íî âî âðåìÿ âîéíû åå âîçìîæíîñòè ðàñòóò. Êàæäûé âðàæåñêèé þíèò, êîòîðûé óìèðàåò, íàïàäàÿ íà ãîðîä ñ òåìíèöåé, äàåò âàøåìó ãîðîäó +1 [ICON_ESPIONAGE]/õîä. Êàæäûå 8 õîäîâ 1[ICON_ESPIONAGE]èñ÷åçàåò è äîëæåí áûòü ïîïîëíåí äðóãèìè æåðòâàìè. Ñïîñîáíîñòè òåìíèöû: ìàêñèìóì 10 [ICON_ESPIONAGE]/õîä.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_CASTLE_IMPROVEMENTS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_CASTLE_IMPROVEMENTS</Tag>
 		<English>Castle Improvements</English>
 		<French>Aménagements du Château</French>
 		<German>Schlossausbau</German>
@@ -606,7 +606,7 @@
 		<Russian>[H1]Ïðåñòóïëåíèÿ è Íàêàçàíèÿ[\H1][PARAGRAPH:2]Ïðåñòóïëåíèÿ è íàêàçàíèÿ â Ñaveman2Ñosmos ïðåòåðïåëè ñåðüåçíûå èçìåíåíèÿ. Òåïåðü, ïðåñòóïëåíèÿ ïðåäñòàâëÿþò ñîáîé íåêóþ îñîáåííîñòü, êîòîðàÿ áóäåò îòîáðàæàòüñÿ ïðè íàâåäåíèè óêàçàòåëÿ ìûøè íà êëåòêó èëè þíèò, ëèáî â ãîðîäñêîé ''Ïàíåëü ñâîéñòâ'', à òàêæå ó ñïåöèàëèñòîâ.[NEWLINE][NEWLINE]Ïðåñòóïëåíèÿ ôîðìèðóåòñÿ íà áàçå ðàñ÷åòà 3 î÷êà çà íàñåëåííûé ïóíêò, à òàêæå îáðàçóþòñÿ îò äåéñòâèé ðàçëè÷íûõ âèäîâ þíèòîâ è çäàíèé. Êîìáèíèðîâàííûé ìîäèôèêòîð ïðåñòóïíîñòè â ñêîáêàõ îòîáðàæàåò, ñêîëüêî ïðåñòóïíîñòè áóäåò íà ñëåäóþùåì õîäó â ýòîì ãîðîäå. Êëåòêè è ãîðîäà ñ î÷åíü áîëüøèì óðîâíåì ïðåñòóïíîñòè ðàñïðîñòðàíÿþò íåêîòîðûå ïðåñòóïëåíèÿ íà ñîñåäíèå êëåòêè, ñòàíîâÿñü òàêèì îáðàçîì åå ðàññàäíèêîì. Óðîâåíü ïðåñòóïíîñòè â ãîðîäå èëè íà îòäåëüíîé êëåòêå ñòàáèëèçèðóåòñÿ íà îòìåòêå ïðèìåðíî â äåñÿòü ðàç îò îáùåãî óðîâåíÿ ïðåñòóïíîñòè.[NEWLINE][NEWLINE]Óðîâåíü ïðåñòóïíîñòè ìîæåò áûòü îòðåãóëèðîâàí ñòðîèòåëüñòâîì ñïåöèàëüíûõ çäàíèé èëè þíèòîâ, óìåíüøàþùèõ çàñèëüå êðèìèíàëà. Åñëè óðîâåíü ïðåñòóïíîñòè äîñòèã 0 èëè íèæå, òî â âàøåì ãîðîäå íèêîãäà íå áóäåò íèêàêèõ ïðîáëåì ñ ïðåñòóïíîñòüþ. Ïîëèöåéñêèå ïîäðàçäåëåíèÿ òàêæå ìîãóò ñîâåðøàòü äåéñòâèÿ, êîòîðûå ñíèæàþò óðîâåíü ïðåñòóïíîñòè.[NEWLINE][NEWLINE]×ðåçìåðíûé óðîâåíü ïðåñòóïíîñòè â ãîðîäå ìîæåò ïðèâåñòè ê î÷åíü íåïðèÿòíûì ïîñëåäñòâèÿì. Êàæäûé ðàç, êàê âû ïðåâûñèòå îïðåäåëåííûé ïîðîã óðîâíÿ êðèìèíàëà â ãîðîäå, â íåì áóäóò àâòîìàòè÷åñêè ïîñòðîåíû ''çäàíèÿ'', âåðíåå ìîäèôèêàòîðû, óìåíüøàþùèå â íåì äîõîäû, íàóêó, êóëüòóðó, óõóäøàþùèå íàñòðîåíèÿ ãðàæäàí è óâåëè÷èâàþùèå ðèñê âîññòàíèé. Ýòè ïñåâäî-çäàíèÿ ìîãóò áûòü ñíåñåíû òîëüêî îäíèì ïóòåì, à èìåííî ñîêðàùåíèåì óðîâíÿ ïðåñòóïíîñòè âûøåèçëîæåííûìè ñïîñîáàìè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_CRIME_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_CRIME</Tag>
 		<English>Crime</English>
 		<Italian>Criminee</Italian>
 		<Spanish>Crimen</Spanish>
@@ -640,7 +640,7 @@
 		<Russian>[H1]Äèïëîìàòèÿ[\H1][PARAGRAPH:2]Ïî ìåðå òîãî êàê âàøè þíèòû [LINK=CONCEPT_EXPLORATION]èññëåäóþò[\LINK] òåððèòîðèþ, âàì íà÷íóò âñòðå÷àòüñÿ äðóãèå äåðæàâû: êàê âîèíñòâåííûå, òàê è âïîëíå ìèðîëþáèâûå. Íåêîòîðûå ëèäåðû íîðîâÿò íàïàêîñòèòü âàì çà âàøåé ñïèíîé, à òî è ïîïðîñòó âîòêíóòü êèíæàë ìåæäó ëîïàòîê, äðóãèå ïðåäïî÷èòàþò ÷åñòíóþ - íó, èëè ïî÷òè ÷åñòíóþ - èãðó. Ó÷èòåñü âçàèìîäåéñòâîâàòü ñ ñîñåäÿìè è ñîïåðíèêàìè. Äëÿ íåêîòîðûõ íàèáîëåå âåñêèì àðãóìåíòîì ñòàíåò âàøà ïîáåäîíîñíàÿ àðìèÿ, ñ äðóãèìè èìååò ñìûñë çàêëþ÷èòü ñäåëêó - äî òåõ ïîð ïîêà âû íå âîçíàìåðèòåñü ñòåðåòü èõ ñ ëèöà Çåìëè, ðàçóìååòñÿ. [PARAGRAPH:2]Äèïëîìàòèÿ - ìîùíûé èíñòðóìåíò. Îíà ïîçâîëÿåò îáìåíèâàòüñÿ òåõíîëîãèÿìè, ðåñóðñàìè, êàðòàìè, çîëîòîì, è äàæå ãîðîäàìè. Êðîìå òîãî, ñ åå ïîìîùüþ ìîæíî çàêëþ÷àòü äîãîâîðû î ñîâìåñòíîé îáîðîíå, îáúÿâëÿòü âîéíó è çàêëþ÷àòü ìèð. Â èãðå Civilization IV âàøè äèïëîìàòè÷åñêèå òàëàíòû âàæíû íå ìåíåå, ÷åì ïîëêîâîä÷åñêèå è ýêîíîìè÷åñêèå. [PARAGRAPH:2][H2]Ëèäåðû[\H2][PARAGRAPH:2]Íå çàáûâàéòå, ÷òî ó êàæäîãî ëèäåðà åñòü ñîáñòâåííûå öåëè. Îíè - êàê è âû - ñòðåìÿòñÿ ê ïîáåäå: ñ ïîìîùüþ îðóæèÿ, âûñîêèõ òåõíîëîãèé èëè êóëüòóðíîãî ïðåâîñõîäñòâà. Âåäÿ ïåðåãîâîðû, ìîæíî âû÷èñëèòü èç íàìåðåíèÿ: âîèíñòâåííûå äåðæàâû íå ïðîäàþò âîåííûå þíèòû, íàñòðîåííûé íà òåõíîëîãè÷åñêóþ ïîáåäó ëèäåð áóäåò ïðàâäàìè è íåïðàâäàìè èñêàòü íîâûå òåõíîëîãèè è ò.ï. Ïîäðîáíåå ñì. [LINK=CONCEPT_LEADERS]Ëèäåðû[\LINK].[PARAGRAPH:2][BOLD]Ïîäðîáíåå îá îòíîøåíèè[\BOLD]. Â ïðîöåññå èãðû êàæäûé ëèäåð ñôîðìèðóåò î âàñ ìíåíèå, îñíîâûâàÿñü íà ñèëå âàøåé äåðæàâû, íà òîì, âñòóïàëè ëè âû â êîíôëèêòû, çàêëþ÷àëè ëè ñîþçû ñ åãî âðàãàìè è äåðæèòå ëè ñëîâî. [PARAGRAPH:2]Îòíîøåíèå ëèäåðà ê âàì ìîæåò áûòü ïÿòè âèäîâ: äðóæáà, ñèìïàòèÿ, íåäîâåðèå, íåïðèÿçíü è âðàæäà. ×åì ëó÷øå ëèäåð ê âàì îòíîñèòñÿ, òåì ïðîùå ñ íèì äîãîâîðèòüñÿ î òîðãîâëå è òåì âûãîäíåå áóäåò ñäåëêà. Ìîæíî òîðãîâàòü è ñ âðàãàìè, íî â ýòîì ñëó÷àå ïðèãîòîâüòåñü ê íåïîìåðíûì öåíàì.[PARAGRAPH:2][BOLD]Îòêàç îò îáùåíèÿ[\BOLD]. Èíîãäà îñîáåííî ðàçîáèæåííûé ëèäåð ìîæåò è âîâñå îòêàçàòüñÿ ñ âàìè ðàçãîâàðèâàòü. Îáû÷íî ýòî ïðîèñõîäèò, êîãäà âàøè äåðæàâû âîþþò. Ïîäîæäèòå íåñêîëüêî õîäîâ, âîçìîæíî, âàø ñîáåñåäíèê ñìåíèò ãíåâ íà ìèëîñòü - îñîáåííî åñëè íà÷íåò ïðîèãðûâàòü.[PARAGRAPH:2][H2]Ðåæèì ïåðåãîâîðîâ[\H2][PARAGRAPH:2]Â ðåæèì ïåðåãîâîðîâ ìîæíî ïåðåéòè ñ ýêðàíà äèïëîìàòèè - èëè ùåëêíóâ èìÿ ëèäåðà íà ïàíåëè ñ÷åòà â ãëàâíîì èãðîâîì îêíå. Èíîãäà ëèäåðû ìîãóò ñàìè âñòóïàòü ñ âàìè â ïåðåãîâîðû - â ýòîì ñëó÷àå áóäåò îòêðûò ýêðàí äèïëîìàòèè.[PARAGRAPH:2][H2]Äèïëîìàòè÷åñêèå õîäû[\H2][PARAGRAPH:2]Â ðåæèìå ïåðåãîâîðîâ ó âàñ (êàê è ó ïðî÷èõ ëèäåðîâ) åñòü íåñêîëüêî âîçìîæíûõ õîäîâ.[PARAGRAPH:2][BOLD]Îáúÿâèòü âîéíó[\BOLD]. Âåæëèâûé ñïîñîá ïåðåéòè ê àãðåññèè. Ìåíåå âåæëèâûé - ââåñòè âîéñêà íà òåððèòîðèþ ñîñåäà, ñ êîòîðûì íåò ñîãëàøåíèÿ îá îòêðûòûõ ãðàíèöàõ.[PARAGRAPH:2][BOLD]Ïðåäëîæèòü ìèð[\BOLD]. Âîçìîæíîñòü äîñòóïíà òîëüêî â ñîñòîÿíèè âîéíû.[PARAGRAPH:2][BOLD]Òîðãîâëÿ[\BOLD]. Ïîïûòêà çàêëþ÷èòü ñ äðóãîé äåðæàâîé òîðãîâóþ ñäåëêó. Íà ýêðàíå ïîÿâëÿåòñÿ ïàíåëü òîðãîâëè.[PARAGRAPH:2][BOLD]Ïðîñìîòð òåêóùèõ ñäåëîê[\BOLD]. Ïîìèìî ðàçîâûõ ñäåëîê â èãðå èìåþòñÿ òàêæå "ãîäîâûå", êîòîðûå îñòàþòñÿ àêòóàëüíûìè íåêîòîðîå âðåìÿ (ñì. íèæå). Äàííàÿ êîìàíäà ïîçâîëÿåò ïðîñìàòðèâàòü âñå òåêóùèå ñäåëêè ñ âûáðàííûì ëèäåðîì.[PARAGRAPH:2][BOLD]Âûõîä[\BOLD]. Çàâåðøèòü ïåðåãîâîðû.[PARAGRAPH:2][H2]Êàê ïðåäëîæèòü ñäåëêó[\H2][PARAGRAPH:2]Íà ïàíåëè òîðãîâëè âñå ïðîäóêòû, êîòîðûå âû ìîæåòå âûñòàâèòü íà ïðîäàæó, ïåðå÷èñëåíû â ïðàâîì ñòîëáöå, à òîâàðû âàøåãî ïàðòíåðà - â ëåâîì. ×òîáû âûñòàâèòü òîâàð íà ïðîäàæó, ùåëêíèòå åãî â ñâîåì ñòîëáöå, à çàòåì ùåëêíèòå òîâàð äëÿ îáìåíà â ñòîëáöå ïàðòíåðà è íàæìèòå êíîïêó òîðãà. Åñëè ïàðòíåð ñîãëàñåí, ñäåëêà çàêëþ÷åíà. Åñëè îí îòêàçûâàåòñÿ, ìîæíî âûéòè èç ðåæèìà ïåðåãîâîðîâ èëè ïîïðîáîâàòü çàêëþ÷èòü åùå îäíó ñäåëêó. [PARAGRAPH:2]Åñëè ùåëêíóòü òîëüêî ïðåäìåò â ñòîëáöå ïàðòíåðà, ýòî áóäåò îáîçíà÷àòü, ÷òî âû òðåáóåòå äàíü - ïðèêàçûâàÿ ïàðòíåðó îòäàòü âàì ýòîò òîâàð äàðîì. Ðàçóìååòñÿ, åñòü øàíñ, ÷òî âû ïîëó÷èòå îòêàç, à îòíîøåíèå ê âàì â ëþáîì ñëó÷àå èçìåíèòñÿ ê õóäøåìó. Åñëè, íàïðîòèâ, ùåëêíóòü òîëüêî ñâîé òîâàð, ýòî áóäåò îçíà÷àòü, ÷òî âû ïåðåäàåòå åãî äàðîì, â êà÷åñòâå "àêòà äîáðîé âîëè". Îò ïîäàðêîâ íå îòêàæåòñÿ íè îäèí ëèäåð, è îíè íåðåäêî ïðèâîäÿò ê ïîâûøåíèþ âàøåé ðåïóòàöèè.[PARAGRAPH:2][H2]Êàê îòâåòèòü íà ïðåäëîæåíèå ñäåëêè[\H2][PARAGRAPH:2]Ïîëó÷èâ ïðåäëîæåíèå îò äðóãîãî ëèäåðà, ìîæíî ïðèíÿòü åãî èëè îòâåòèòü îòêàçîì. Â ïåðâîì ñëó÷àå ñäåëêà áóäåò çàêëþ÷åíà íåçàìåäëèòåëüíî, âî âòîðîì - ëèäåð ìîæåò ïîïðîñèòü âàñ î âñòðå÷íîì ïðåäëîæåíèè, çàâåðøèòü ïåðåãîâîðû èëè îáúÿâèòü âàì âîéíó.[PARAGRAPH:2][H2]Òîâàð, íå ïîäëåæàùèé îáìåíó[\H2][PARAGRAPH:2]Íàçâàíèÿ íåêîòîðûõ òîâàðîâ â ñòîëáöå âàøåãî ïàðòíåðà ìîãóò îòîáðàæàòüñÿ êðàñíûì øðèôòîì. Ýòî îçíà÷àåò, ÷òî ëèäåð íå ìîæåò - èëè íå æåëàåò - îáìåíèâàòüñÿ ýòèì òîâàðîì ñ âàìè, òàê ÷òî ïðåäëàãàòü ñäåëêó â ýòîì ñëó÷àå ñìûñëà íå èìååò. [PARAGRAPH:2][H2]Òåõíè÷åñêèå òðåáîâàíèÿ ê òîðãîâëå[\H2][PARAGRAPH:2]Äëÿ òîðãîâëè íåêîòîðûìè òîâàðàìè íåîáõîäèìî èìåòü äîñòóï ê îïðåäåëåííûì òåõíîëîãèÿì. Â íà÷àëå èãðû âàøè äèïëîìàòè÷åñêèå ñïîñîáíîñòè âåñüìà îãðàíè÷åíû. Ïðè ýòîì òåõíîëîãèåé íå îáÿçàòåëüíî äîëæíû âëàäåòü îáå ñòîðîíû - äîñòàòî÷íî, ÷òîáû åå çíàëè ëèáî âû, ëèáî âàø ïàðòíåð. Òàê, òîðãîâëÿ òåõíîëîãèÿìè çàáëîêèðîâàíà äî ðàçðàáîòêè òåõíîëîãèè [LINK=TECH_ALPHABET]Àëôàâèò[\LINK].[PARAGRAPH:2][H2]Òèïû ñäåëîê[\H2][PARAGRAPH:2]Ñóùåñòâóåò äâà òèïà òîâàðîâ: "åäèíîâðåìåííûå" è "ãîäîâûå" Ïåðâûå ìîæíî ìåíÿòü òîëüêî íà òàêèå æå åäèíîâðåìåííûå òîâàðû, âòîðûå - òîëüêî íà ãîäîâûå. Âíóòðè ãðóïïû òîâàðîì ìîæíî îáìåíèâàòüñÿ ñâîáîäíî: òàê, òåõíîëîãèþ ìîæíî îáìåíÿòü íà çîëîòî èëè êàðòó ìèðà, îäíàêî åäèíîâðåìåííûé òîâàð íåëüçÿ ìåíÿòü íà ãîäîâîé.[PARAGRAPH:2][BOLD]Åäèíîâðåìåííûå òîâàðû[\BOLD]. Òîâàðû äëÿ åäèíîâðåìåííûõ ñäåëîê. Ñþäà îòíîñÿòñÿ, íàïðèìåð, åäèíîâðåìåííî âûïëà÷èâàåìûå äåíåæíûå ñóììû, êàðòû, òåõíîëîãèè, ãîðîäà, ìèðíûå ñîãëàøåíèÿ è ò.ï.[PARAGRAPH:2][BOLD]Ãîäîâûå òîâàðû[\BOLD]. Ãîäîâûå ñäåëêè äëÿòñÿ íå ìåíåå 10 õîäîâ (áîëüøå, åñëè òîãî õîòÿò îáå ñòîðîíû, íî îòìåíèòü ñäåëêó äî èñòå÷åíèÿ ìèíèìàëüíîãî ñðîêà ìîæíî òîëüêî ïóòåì îáúÿâëåíèÿ âîéíû). Ê ãîäîâûì òîâàðàì îòíîñÿòñÿ ðåñóðñû è ðåãóëÿðíûå (ðàç â õîä) äåíåæíûå âûïëàòû.[PARAGRAPH:2][H2]Òîâàðû, ïîäëåæàùèå îáìåíó[\H2][PARAGRAPH:2][BOLD]Çîëîòî - åäèíîâðåìåííàÿ ñäåëêà. [\BOLD][PARAGRAPH:2]Çîëîòîé ñëèòîê. 1 åä. çîëîòà. 15 åä. çîëîòà... Äà õîòü ìèëëèàðä, åñëè îí ó âàñ åñòü ëèøíèé.[PARAGRAPH:2][BOLD]Çîëîòî/õîä - ãîäîâàÿ ñäåëêà[\BOLD][PARAGRAPH:2]Îïðåäåëåííîå êîëè÷åñòâî çîëîòà çà õîä: 2 åä./õîä. 30 åä./õîä. Ñäåëêà äëèòñÿ êàê ìèíèìóì 10 õîäîâ. Çàìåòüòå, ÷òî îò âûïîëíåíèÿ óñëîâèé ñäåëêè âàñ íå îñâîáîäÿò íè ïóñòàÿ êàçíà, íè àíàðõèÿ, íè ïðî÷èå áåäñòâèÿ. ×òîáû âûïëà÷èâàòü äîëã, âàø êàçíà÷åé áóäåò àâòîìàòè÷åñêè ëèêâèäèðîâàòü þíèòû è çäàíèÿ.[PARAGRAPH:2][BOLD]Êàðòà ìèðà - åäèíîâðåìåííàÿ ñäåëêà[\BOLD][PARAGRAPH:2]Èññëåäîâàííàÿ ïàðòíåðîì òåððèòîðèÿ ñòàíîâèòñÿ âèäèìîé âàì - è íàîáîðîò. (Ñì [LINK=CONCEPT_EXPLORATION]Èññëåäîâàíèå òåððèòîðèè[\LINK].)[PARAGRAPH:2][BOLD]Îòêðûòûå ãðàíèöû - ãîäîâàÿ ñäåëêà[\BOLD][PARAGRAPH:2]Âàøè þíèòû ñâîáîäíî ïåðåäâèãàþòñÿ ïî òåððèòîðèè ïàðòíåðà è íàîáîðîò. Â ñëó÷àå îáúÿâëåíèÿ âîéíû âàøè þíèòû áóäóò àâòîìàòè÷åñêè óáðàíû ñ âðàæåñêîé òåððèòîðèè è íàîáîðîò.[PARAGRAPH:2]Ãîðîäñêèå òîðãîâûå ïóòè áóäóò âêëþ÷àòü â ñåáÿ ãîðîäà äåðæàâû, ñ êîòîðîé ïîäïèñàí äîãîâîð îá îòêðûòûõ ãðàíèöàõ. Ïîñêîëüêó ìåæäóíàðîäíûå òîðãîâûå ïóòè çíà÷èòåëüíî ïðèáûëüíåå âíóòðåííèõ, ïîäïèñàíèå äîãîâîðà îá îòêðûòûõ ãðàíèöàõ ïðèâåäåò ê ñóùåñòâåííîìó ðîñòó êîììåðöèè â ãîðîäàõ. Äîõîä ìîãóò åùå áîëåå óâåëè÷èòü íåêîòîðûå [LINK=CONCEPT_BUILDINGS]çäàíèÿ[\LINK] è [LINK=CONCEPT_CIVICS]ïàðàäèãìû[\LINK].[PARAGRAPH:2][BOLD]Ñîãëàøåíèå î ñîâìåñòíîé îáîðîíå - ãîäîâàÿ ñäåëêà[\BOLD][PARAGRAPH:2]Åñëè îäíó èç ñòîðîí àòàêóåò òðåòüÿ äåðæàâà, âòîðàÿ ñòîðîíà àâòîìàòè÷åñêè îáúÿâëÿåò àãðåññîðó âîéíó. Ñîãëàøåíèå àâòîìàòè÷åñêè àííóëèðóåòñÿ, åñëè îäíà èç äåðæàâ-ó÷àñòíèêîâ ñàìà ñòàíîâèòñÿ àãðåññîðîì.[PARAGRAPH:2][BOLD]Ïîñòîÿííûé ñîþç - åäèíîâðåìåííàÿ ñäåëêà[\BOLD][PARAGRAPH:2]Äâå äåðæàâû ñòàíîâÿòñÿ îäíîé - ñ äâóìÿ ïðàâèòåëÿìè. Êàæäûé èç ëèäåðîâ ïðîäîëæàåò óïðàâëÿòü ñâîèìè þíèòàìè è ãîðîäàìè, îäíàêî âñå îñòàëüíîå - ðåñóðñû, òåõíîëîãèè, êàðòà è ïîáåäà/ïîðàæåíèå - ó íèõ îáùèå. Åñëè îäèí ó÷àñòíèê íà÷èíàåò âîéíó, âòîðîé àâòîìàòè÷åñêè âñòóïàåò â íåå. Åñëè îäèí ïîäïèñûâàåò äîãîâîð, âòîðîé îáÿçàí âûïîëíÿòü åãî óñëîâèÿ.[PARAGRAPH:2][BOLD]Òåõíîëîãèè - åäèíîâðåìåííàÿ ñäåëêà[\BOLD][PARAGRAPH:2]Âû ìãíîâåííî ïîëó÷àåòå äîñòóï ê ïðèîáðåòåííîé òåõíîëîãèè.[PARAGRAPH:2][BOLD]Ðåñóðñû - ãîäîâàÿ ñäåëêà[\BOLD][PARAGRAPH:2]Ïðè ïðîäàæå ðåñóðñîâ âû ïîëó÷àåòå èõ â òå÷åíèå âñåãî ñðîêà äåéñòâèÿ ñäåëêè. Ïðîäàâåö òåðÿåò âñå áîíóñû, äàâàåìûå ðåñóðñîì, åñëè òîëüêî íå îáëàäàåò åùå îäíèì èñòî÷íèêîì. Ïðèìåð: åñëè âàì ïðîäàëè æåëåçî, âû ìîæåòå ñîçäàâàòü âîåííûå þíèòû, äëÿ êîòîðûõ òðåáóåòñÿ æåëåçî. Ïðîäàâåö æå òåïåðü íå ìîæåò èõ ñîçäàâàòü, åñëè íå îáëàäàåò âòîðûì æåëåçíûì ðóäíèêîì.[PARAGRAPH:2][BOLD]Âîåííûé ñîþç - åäèíîâðåìåííàÿ ñäåëêà[\BOLD][PARAGRAPH:2]Îäíà äåðæàâà ìîæåò ïîïðîñèòü äðóãóþ îáúÿâèòü âîéíó òðåòüåé. Ïðè ýòîì ïåðâàÿ äåðæàâà ìîæåò ñàìà è íå íàõîäèòüñÿ â ñîñòîÿíèè âîéíû ñ òðåòüåé, íî òîãäà ëèäåð âòîðîé çàëîìèò çà ñâîè óñëóãè âåñüìà è âåñüìà ïðèëè÷íóþ öåíó.[PARAGRAPH:2][BOLD]Ãîðîäà - åäèíîâðåìåííàÿ ñäåëêà[\BOLD][PARAGRAPH:2]Ïàðòíåð ïåðåäàåò âàì îäèí èëè íåñêîëüêî ñâîèõ ãîðîäîâ. Åñëè ìåæäó âàìè äåéñòâóåò ñîãëàøåíèå îá îòêðûòûõ ãðàíèöàõ, âñå þíèòû îñòàþòñÿ íà ìåñòàõ. Â ïðîòèâíîì ñëó÷àå þíèòû ïåðåìåùàþòñÿ èç ãîðîäîâ íà ñâîþ òåððèòîðèþ. Ëèäåðû êðàéíå ðåäêî óñòóïàþò äðóãèì äåðæàâàì ãîðîäà, åñëè èõ ê òîìó íå ïðèíóæäàþò èñêëþ÷èòåëüíûå îáñòîÿòåëüñòâà - èëè âåñêèå àðãóìåíòû â âèäå ìîùíîé àðìèè.[PARAGRAPH:2][BOLD]Ñìåíà ïàðàäèãìû - åäèíîâðåìåííàÿ ñäåëêà[\BOLD][PARAGRAPH:2]Ñîãëàøåíèå î ñìåíå ñîöèàëüíîé ïàðàäèãìû. Êàæäûé ëèäåð îáëàäàåò "ëþáèìîé" ïàðàäèãìîé: Åêàòåðèíà, ê ïðèìåðó, áëàãîâîëèò ê "Íàñëåäíîìó ïðàâëåíèþ". Ëèäåðû íà÷èíàþò ëó÷øå ê âàì îòíîñèòüñÿ, åñëè âû ïðèíèìàåòå èõ ëþáèìóþ ïàðàäèãìó.[PARAGRAPH:2][BOLD]Îáðàùåíèå - åäèíîâðåìåííàÿ ñäåëêà[\BOLD][PARAGRAPH:2]Ñîãëàøåíèå î ñìåíå ãîñóäàðñòâåííîé ðåëèãèè íà ðåëèãèþ ïàðòíåðà. Ðåëèãèîçíûå ðàçíîãëàñèÿ ìåæäó äåðæàâàìè ìîãóò ïðèâîäèòü ê íàïðÿæåííîñòè è âçàèìíîìó íåäîâåðèþ. Îáðàùåíèå â ðåëèãèþ ïàðòíåðà - îòëè÷íûé ñïîñîá óêðåïèòü îòíîøåíèÿ.[PARAGRAPH:2][BOLD]Ìèðíîå ñîãëàøåíèå - îñîáûé àêò[\BOLD][PARAGRAPH:2]Ìåæäó âàìè è ïðîòèâíèêîì íàñòóïàåò ïåðåìèðèå. Âñå þíèòû óäàëÿþòñÿ ñ ÷óæîé òåððèòîðèè. Ïåðåìèðèå äëèòñÿ êàê ìèíèìóì 10 õîäîâ. Îïëà÷èâàåòñÿ òîëüêî çîëîòîì è òåõíîëîãèÿìè.[PARAGRAPH:2][BOLD]Ïðåêðàùåíèå îãíÿ - îñîáûé àêò[\BOLD][PARAGRAPH:2]Ìåæäó âàìè è ïðîòèâíèêîì íàñòóïàåò ïåðåìèðèå. Âñå þíèòû óäàëÿþòñÿ ñ ÷óæîé òåððèòîðèè. Ïðåêðàùåíèå îãíÿ ÿâëÿåòñÿ ðàçîâûì àêòîì: ñòîðîíû ìîãóò ñðàçó æå ñíîâà íà÷àòü âîéíó. Ñîãëàøåíèå î ïðåêðàùåíèè îãíÿ ìîæíî ïðåäëàãàòü òîëüêî îòäåëüíî îò äðóãèõ òîâàðîâ, èíà÷å îíî áóäåò ïðåîáðàçîâàíî â ìèðíûé äîãîâîð.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_DIPLOMACY_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ADVDIPLOMACY</Tag>
 		<English>Advanced Diplomacy</English>
 		<French>Diplomatie Avancée</French>
 		<German>Verbesserte Diplomatie</German>
@@ -684,7 +684,7 @@
 		<Russian>[H1]Äèíàìè÷åñêèé îïûò[\H1][NEWLINE][TAB]Îïûò îòðÿäà òåïåðü õðàíèòñÿ â äðîáíûõ çíà÷åíèÿõ è îòðÿäû ïðèîáðåòàþò îïûò äèíàìè÷åñêè, â çàâèñèìîñòè îò óñïåõà ñðàæåíèÿ è óäà÷è. ×åì ìåíåå âåðîÿòíî, ÷òî îòðÿä âûèãðàåò ñðàæåíèå, òåì áîëüøå îïûòà îí ïîëó÷èò (ìàêñèìóì 6XP â íàïàäåíèè èëè 3XP â çàùèòå). Îòðÿäû âñåãäà áóäóò ïîëó÷àòü ìèíèìóì â 0.25XP. ×åì ìåíüøå çäîðîâüÿ þíèò òåðÿåò â áîþ, òåì áîëüøå XP ìîæåò çàðàáîòàòü, èãðîêè âûíóæäåíû ñîâåðøàòü áîëåå ñòðàòåãè÷åñêèå àòàêè è áîëüøå íå ìîãóò ïîëó÷èòü çíà÷èòåëüíîå êîëè÷åñòâî XP, íàïàäàÿ íà î÷åíü ñëàáûõ ïðîòèâíèêîâ.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_DYNAMIC_EXPERIENCE_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_DYNAMIC_EXPERIENCE</Tag>
 		<English>Dynamic XP</English>
 		<French>EXP Dynamique</French>
 		<German>Dynamischer Erfahrungsgewinn</German>
@@ -701,7 +701,7 @@
 		<Russian>[H1]Íàåìíûå ãðàæäàíå[\H1][NEWLINE][TAB]Îïðåäåëåííûå çäàíèÿ íàíèìàþò âàøèõ ãðàæäàí. Âàøè ãðàæäàíå áóäóò ðàáîòàòü íà ñòðîèòåëüñòâå, îáåñïå÷åíèè, îíè îñòàþòñÿ ñâîáîäíûìè äëÿ ðàáîòû íà çåìëå èëè ñïåöèàëèñòàìè. Âû âèäèòå, ñêîëüêî ãðàæäàí íàíÿòî çäàíèÿìè âàøåãî ãîðîäà, ïðè ïðîñìîòðå âûïàäàþùåãî ìåíþ çàíÿòîñòè â ãîðîäñêîì èíòåðôåéñå (ñïðàâà îò íàçâàíèÿ ãîðîäà). Åñëè âàø ãîðîä èñïûòûâàåò íåäîñòàòîê â íàñåëåíèè, ÷òîáû óêîìïëåêòîâàòü âñå çäàíèÿ, òî îíè çàêðîþòñÿ, ïîêà ãîðîä íå äîñòèãíåò äîñòàòî÷íîé ÷èñëåíííîñòè íàñåëåíèÿ, ÷òîáû óïðàâëÿòü èìè ñíîâà.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_EMPLOYED_CITIZENS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_EMPLOYED_CITIZENS</Tag>
 		<English>Employed Citizens</English>
 		<French>Emploi des Citoyens</French>
 		<German>Bürger als Angestellte</German>
@@ -716,7 +716,7 @@
 		<Russian>[H1]Расширенный захват технологий[\H1] составители: Grave, Jeckel[PARAGRAPH:2]Сабмод «Расширенный захват технологий» был разработан, чтобы придать технический импульс завоеванию вражеских городов. Как только вы или ваши конкуренты захватывают вражеский город, формируется список технологий, которых нет в вашей державе или цивилизации противника. Из этого списка выбирается случайная технология.[PARAGRAPH:2][BOLD]Геймплей[\BOLD][PARAGRAPH:2]Захваченные города всегда дают минимум 25 процентов стоимости технологии плюс случайное количество колб;[PARAGRAPH:2]Случайная величина от 0 до ( кратная размеру города *5) процентов. Например, город с 4 жителями будет давать от 25% до 45% стоимости технологий. Предполагается, что значения конфигурации по умолчанию не были изменены;[PARAGRAPH:2]Города размером больше 15 жителей увеличивают шанс получить полную технологию. Например, город размером 20 жителей будет давать от 25 до 125 процентов стоимости технологий. Это предполагает, что значение конфигурации по умолчанию не было изменено;[PARAGRAPH:2]Несколько изменяемых параметров (Caveman2Cosmos config.ini) позволяют настроить то, как технологии будут передаваться из захваченного города цивилизации-завоевателю.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ENHANCED_TECH_CONQUEST_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ENHANCED_TECH_CONQUEST</Tag>
 		<English>Enhanced Tech Conquest</English>
 		<French>Conquête des Techs</French>
 		<Spanish>Conquista de tecnologías mejorada</Spanish>
@@ -733,7 +733,7 @@
 		<French>Ce mode graphique ajoute de la diversité aux graphismes en rassemblant des créations de modders et ceux non utilisé par Firaxis.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ETHNIC_CITYSTYLES_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ETHNIC_CITYSTYLES</Tag>
 		<English>Ethnic Citystyles</English>
 		<French>Styles des Villes par Ethnie</French>
 		<Spanish>Estilos arquitectónicos étnicos</Spanish>
@@ -786,7 +786,7 @@
 		<Russian>[H1]Áîé èñòðåáèòåëåé[\H1][PARAGRAPH:2]Èñòðåáèòåëè îäíîé äåðæàâû ìîãóò àòàêîâàòü èñòðåáèòåëè äðóãîé äåðæàâû êàê â âîçäóõå, òàê è íà çåìëå.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_FENGAGE_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_FENGAGE</Tag>
 		<English>Fighter Engagement</English>
 		<French>Engagement Aérien</French>
 		<German>Jägereinsatz</German>
@@ -803,7 +803,7 @@
 		<Russian>[H1]Ïîñòîÿííûå ãðàíèöû[\H1][PARAGRAPH:2]Ñ ïîñòîÿííûìè ãðàíèöàìè ó þíèòîâ åñòü íîâàÿ êîìàíäà ''òðåáîâàòü òåððèòîðèþ'', êîòîðóþ âû ìîæåòå ïðèìåíèòü íà âðàæåñêîé çåìëå. Âû òðåáóåòå åå, çàòåì íà ñëåäóþùåì õîäó, îíà ïåðåõîäèò ê âàì. Îäíàêî, åñëè ó âàøåé ñòðàíû íåò êóëüòóðû â òðåáóåìîé êëåòêå, âû äîëæíû ñîõðàíÿòü ïî êðàéíåé ìåðå îäèí îòðÿä íà íåé êàæäûé õîä, ÷òîáû íå ïîòåðÿòü åå ñíîâà (òî åñòü åñëè âû õîòèòå êëåòêè, äàëåêèå îò âàøèõ ãîðîäîâ, òî äîëæíû äåðæàòü ñèëû òàì, ÷òîáû óäåðæàòü èõ).[PARAGRAPH:2][BOLD]Ôîðòû êàê ãîðîäà:[\BOLD][NEWLINE] Äåëî â òîì, ÷òî âñå ôîðòû äåéñòâèòåëüíî äåéñòâóþò êàê ãîðîäà êîãäà äåëî äîõîäèò äî êóëüòóðû è ãðàíèöû. Îíè ðàñïðîñòðàíÿþò ìèíèìàëüíîå êîëè÷åñòâî êóëüòóðû â ñìåæíûõ êëåòêàõ, òàêèì îáðàçîì ïîçâîëÿÿ âàì èìåòü äîïîëíèòåëüíóþ òåððèòîðèþ áåç îòðÿäîâ, äàëåêèõ îò ãîðîäîâ, ïîêà âû äåðæèòå ôîðòû ïîä ñâîèì êîíòðîëåì. Âû äàæå íå íóæäàåòåñü â îòðÿäàõ â ôîðòàõ, íî ýòî ïîäîáíî íåçàùèùåííîìó ãîðîäó. Êàê òîëüêî ôîðòû çàõâà÷åíû (âî âðåìÿ âîéíû, êàê ãîðîäà), îíè äàþò íîâîìó âëàäåëüöó êîíòðîëü íàä îêðóæàþùèìè êëåòêàìè. Åñòü íåêîòîðûå äîïîëíèòåëüíûå ïðàâèëà: êîãäà ôîðò äåëèò ñìåæíóþ êëåòêó ñ ãîðîäîì ? òîãäà, ãîðîä - ?ãëàâíûé âëàäåëåö? êëåòêè, è âû äîëæíû çàõâàòèòü ñàì ãîðîä, ÷òîáû ïîëó÷èòü ñìåæíóþ êëåòêó (íî ôîðò, âû ïîëó÷àåòå, êàê òîëüêî çàõâàòèëè åãî),.[PARAGRAPH:2]Âî âðåìÿ âîéíû, åñëè ó êëåòêè áîëüøå âàøèõ êëåòîê, îêðóæàþùèõ åå, ÷åì âðàæåñêèõ, òðåáîâàíèÿ âûäâèãàþòñÿ àâòîìàòè÷åñêè, åñëè íèêàêèå âðàæåñêèå þíèòû åå íå çàùèùàþò. Ýòî äåëàåò ãðàíèöû ìåíåå èçìåëü÷åííûìè ê êîíöó âîéíû.[PARAGRAPH:2]Äîïîëíèòåëüíàÿ èíôîðìàöèÿ î ãðàíèöàõ âîêðóã ãîðîäîâ - êàæäàÿ êëåòêà ðÿäîì ñ ãîðîäîì ÂÑÅÃÄÀ ïðèíàäëåæèò âëàäåëüöó ýòîãî ãîðîäà. Ýòî äîïîëíèòåëüíàÿ ôóíêöèÿ, êîòîðàÿ ìîãëà áûòü õîðîøà äëÿ ïðîñòîãî BTS, íî ñ ïîñòîÿííûìè ãðàíèöàìè ýòî íåîáõîäèìîñòü (êîãäà öèâèëèçàöèÿ áåç ïîñòîÿííûõ ãðàíèö çàõâàòûâàåò ãîðîä öèâèëèçàöèè ñ ïîñòîÿííûìè ãðàíèöàìè, ó íåå ìîæåò âîçíèêíóòü ìíîãî ïðîáëåì ñ ýòèì ãîðîäîì, êîòîðûé áóäåò î÷åíü ñêîðî ïîëíîñòüþ îêðóæåí âðàæåñêèìè êëåòêàìè),.[PARAGRAPH:2]Åñëè âû íå èñïîëüçóåòå ïàðàäèãìó, êîòîðàÿ ''âûçûâàåò'' ïîñòîÿííûå ãðàíèöû, èãðà ïðîõîäèò êàê è ïðåæäå (òî åñòü êóëüòóðà îïðåäåëÿåò ãðàíèöû), íî êàê òîëüêî ó èãðîêà åñòü íåîáõîäèìûå ãðàæäàíñêèå èíñòèòóòû, âñÿ åãî òåððèòîðèÿ ñòàíîâèòñÿ 'ïîñòîÿííîé', íèêòî áîëüøå íå ìîæåò âçÿòü åå ïîñðåäñòâîì êóëüòóðû , è åãî þíèòû ïîëó÷àþò íîâóþ êîìàíäó äëÿ âûïîëíåíèÿ íà âðàæåñêîé òåððèòîðèè (?òðåáîâàòü òåððèòîðèþ?). Èãðîê âñå åùå ðàñøèðÿåò êóëüòóðîé ñâîè ãðàíèöû ïî íåçàíÿòîé òåððèòîðèè è ïî ñòðàíàì, ó êîòîðûõ íåò ïîñòîÿííûõ ãðàíèö (ïðåäñòàâüòå Ðèìñêóþ èìïåðèþ, êîòîðàÿ óñòàíîâèëà ñâîè ñîáñòâåííûå ãðàíèöû, íî âëèÿëà íà îêðóæàþùèå ïëåìåíà, ó êîòîðûõ íå áûëî ïîñòîÿííûõ ãðàíèö).[NEWLINE][NEWLINE][TAB][BOLD]Ïàðàäèãìû, êîòîðûå ïîçâîëÿþò ''Ïîñòîÿííûå ãðàíèöû'':[\BOLD][NEWLINE](÷òîáû èõ óñòàíîâèòü , äîëæíà áûòü, ïî êðàéíåé ìåðå, îäíà èç ñëåäóþùèõ ïàðàäèãì), [NEWLINE][NEWLINE][TAB][ICON_BULLET][LINK=CIVIC_MONARCHY]Ìîíàðõèÿ[\LINK][NEWLINE][TAB][ICON_BULLET][LINK=CIVIC_FEDERALISM]Ôåäåðàöèÿ[\LINK][NEWLINE][TAB][ICON_BULLET][LINK=CIVIC_TOTALITARIANISM]Ôàøèçì[\LINK][NEWLINE][TAB][ICON_BULLET][LINK=CIVIC_VASSALAGE]Âàññàëèòåò[\LINK][NEWLINE][TAB][ICON_BULLET][LINK=CIVIC_NATIONALIST]Íàöèîíàëèçì[\LINK][NEWLINE][TAB][ICON_BULLET][LINK=CIVIC_PLANNED]Ïëàíèðîâàíèå[\LINK][NEWLINE][TAB][ICON_BULLET][LINK=CIVIC_CORPORATISM]Êîðïîêðàòèÿ[\LINK][NEWLINE][TAB][ICON_BULLET][LINK=CIVIC_STATE_CHURCH]Ãîñ. ðåëèãèÿ[\LINK][PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_FIXED_BORDERS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_FIXED_BORDERS</Tag>
 		<English>Fixed Borders</English>
 		<French>Frontières Fixes</French>
 		<German>Feste Grenzen</German>
@@ -892,7 +892,7 @@
 		<Russian>[H1]Âåëèêèå êîìàíäèðû[\H1][NEWLINE][TAB]Âåëèêèå êîìàíäèðû - íîâîå ïðèìåíåíèå äëÿ âåëèêèõ ãåíåðàëîâ. Ðàíåå, èãðîêè ìîãëè òîëüêî ïîñåëèòü âåëèêèõ ãåíåðàëîâ â ãîðîäàõ èëè ïðèñîåäèíèòü èõ ê îòðÿäó è äàòü åìó îïûò. Âåëèêèå êîìàíäèðû äàþò âåëèêèì ãåíåðàëàì òðåòüþ ñïîñîáíîñòü, ñïîñîáíîñòü ïîâåñòè âîéñêà â ñðàæåíèå. Ïåðâîíà÷àëüíî íå ïðåäîñòàâëÿÿ ïðåèìóùåñòâà, âåëèêèé êîìàíäèð ïîëó÷èò îïûò îò óñïåøíîãî áîÿ íà òîé æå ñàìîé êëåòêå ÷òî äðóãèå äðóæåñòâåííûå îòðÿäû. Êîãäà âåëèêèé êîìàíäèð ïîëó÷èò ïðîäâèæåíèå, îí ñìîæåò âûáðàòü åãî èç ñîîòâåòñòâóþùåãî äåðåâà, ñïåöèàëüíî äëÿ íåãî ðàçðàáîòàííîãî. Ïðîäâèæåíèÿ íå ïîìîãàþò âåëèêîìó êîìàíäèðó, âåëèêèé êîìàíäèð íå ìîæåò ïðèíÿòü ó÷àñòèå â áîþ, íî îíè ïîìîãàþò ñîñåäíèì þíèòàì. Þíèòû, êîòîðûå íàõîäÿòñÿ â ãðóïïå ñ êîìàíäèðàìè, ïîëó÷àò ýôôåêòû ïîîùðåíèÿ, ñ ó÷åòîì áîëåå ìîùíîé àðìèè íà ïîëå áèòâû, äëÿ íàïàäåíèÿ è çàùèòû.[PARAGRAPH:2][BOLD]Äèàïàçîí êîìàíä:[\BOLD][NEWLINE]Êîìàíäèð èìååò äèàïàçîí êîìàíä, ïåðâîíà÷àëüíî îí ðàâåí íîëþ. Ýòî îçíà÷àåò, ÷òî îíè äàþò ïîìîùü è ïîîùðåíèÿ òîëüêî âîéñêàì íà òîé æå ñàìîé êëåòêå ÷òî è âåëèêèé êîìàíäèð. Ñ ðàñøèðåíèåì äèàïàçîíà óâåëè÷èâàåòñÿ òàêæå è ðàñïðîñòðàíåíèå ñîîòâåòñòâóþùèõ ýôôåêòîâ.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_GREAT_COMMANDERS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_GREAT_COMMANDERS</Tag>
 		<English>Great Commanders</English>
 		<French>Commandants Illustres</French>
 		<German>Große Anführer</German>
@@ -1092,7 +1092,7 @@
 		<French>par Moctezuma[PARAGRAPH:2][BOLD]Combat influence[\BOLD][PARAGRAPH:2]Les Combats affectent la culture des cases sur lesquelles ils se déroulent: un certain pourcentage de culture du Vainqueur est transféré sur la case, aux dépends de la culture du vaincu.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_INFLUENCE_DRIVEN_WAR_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_INFLUENCE_DRIVEN_WAR</Tag>
 		<English>Influence Driven War</English>
 		<French>Influence culturelle de la Guerre</French>
 		<Spanish>Influencia por la guerra</Spanish>
@@ -1105,7 +1105,7 @@
 		<Russian>[H1]Ñâÿòàÿ Èíêâèçèöèÿ[\H1][PARAGRAPH:2]Â òî âðåìÿ êàê îáû÷íûå ìèññèîíåðû çàíèìàþòñÿ ðàñïðîñòðàíåíèåì ñâîåé ãîñóäàðñòâåííîé ðåëèãèè, [COLOR_UNIT_TEXT]Èíêâèçèòîðû[COLOR_REVERT] èñïîëüçóþòñÿ äëÿ î÷èùåíèÿ ãîðîäîâ îò âñåõ íåãîñóäàðñòâåííûõ ðåëèãèé. Ïîäîáíî ìèññèîíåðàì, èõ îáùåå êîëè÷åñòâî íà îäíîãî èãðîêà îãðàíè÷èâàåòñÿ íå áîëåå ÷åì òðåìÿ þíèòàìè îäíîâðåìåííî. Â êà÷åñòâå çàùèòíèêà îôèöèàëüíîé ðåëèãèè èíêâèçèòîðû ÿâëÿþòñÿ äîâîëüíî ìîùíûì èíñòðóìåíòîì. Åñëè èñêîðåíåíèå åðåñè ïðîèçîøëî óñïåøíî, òî âñå íåãîñóäàðñòâåííûå ðåëèãèè è ñâÿçàííûå ñ íèìè êóëüòîâûå ïîñòðîéêè áóäóòóäàëåíû èç ãîðîäà. Áûëî ëè óäà÷íûì àóòîäàôå èëè ïðîâàëüíûì, íî èíêâèçèòîðà â îòëè÷èå îò ìèññèîíåðà ìîæíî ïîâòîðíî èñïîëüçîâàòü óæå íà ñëåäóþùåì õîäó. Òàêèì îáðàçîì ïîäãîòîâêà ñðàçó íåñêîëüêèõ èíêâèçèòîðîâ ìîæåò áûòü öåëåñîîáðàçíîé, åñëè òðåáóåòñÿ äîñòè÷ü ðåëèãèîçíîãî åäèíñòâà öèâèëèçàöèè.[PARAGRAPH:2][BOLD]Èíîçåìíûå èíêâèçèòîðû[\BOLD][PARAGRAPH:2]Âû òàêæå ìîæåòå äîïóñêàòü ê ñåáå èíîñòðàííûõ èíêèçèòîðîâ, åñëè áóäåò ñîáëþäåíî òðè íåîáõîäèìûõ ïðåäâàðèòåëüíûõ óñëîâèÿ:[PARAGRAPH:2]Äëÿ âîçìîæíîñòè îáó÷åíèÿ èíêâèçèòîðîâ â âàøåé öèâèëèçàöèè äîëæíà áûòü èññëåäîâàíà òåõíîëîãèÿ [COLOR_HIGHLIGHT_TEXT]Ôóíäàìåíòàëèçì[COLOR_REVERT], äîëæíû èìåòü ñîáñòâåííóþ ãîñóäàðñòâåíóþ ðåëèãèþ è ëþáóþ ðåëèãèîçíóþ ïàðàäèãìó íåòåðïèìóþ ê ÷óæåçåìíûì ðåëèãèÿì.[PARAGRAPH:2]Äëÿ òîãî, ÷òîáû èñïîëüçîâàòü èíêâèçèòîðà â íóæíîì ãîðîäå, â íåì äîëæíà èñïîâåäîâàòüñÿ ãîñóäàðñòâåííàÿ ðåëèãèÿ, à òàêæå äîëæíà áûòü ïðåäñòàâëåíà êàê ìèíèìóì îäíà íåãîñóäàðñòâåííàÿ ðåëèãèÿ.[PARAGRAPH:2]Äëÿ òîãî, ÷òîáû èñïîëüçîâàòü èíêâèçèòîðà â èíîñòðàííîì ãîðîäå, âàì íàäî ïîìèìî ñîáëþäåíèÿ äâóõ óêàçàííûõ âûøå óñëîâèé èìåòü [COLOR_HIGHLIGHT_TEXT]äîãîâîð îá îòêðûòûõ ãðàíèöàõ[COLOR_REVERT] ñ äðóãîé öèâèëèçàöèåé.[PARAGRAPH:2]Åñëè âû æåëàåòå ñûãðàòü ñ âêëþ÷åííûì ðåæèìîì [COLOR_HIGHLIGHT_TEXT]Îãðàíè÷åííûå ðåëèãèè[COLOR_REVERT], òîãäà ïðîñòî ïîäêëþ÷èòå åãî âî âêëàäêå RevDCM â íàñòðîéêàõ BUG Options (CTRL-ALT-O).[PARAGRAPH:2][BOLD]Âîçðîæäåíèå Ñâÿùåííûõ ãîðîäîâ[\BOLD][PARAGRAPH:2]Â èãðå ïðåäóñìîòðåíà âîçìîæíîñòü âîññòàíàâëèâàòü ðàçðóøåííûå â ïðåäûäóùèõ âîéíàõ èëè çà÷èùåííûå èíêâèçèöèåé Ñâÿùåííûå ãîðîäà íåãîñóäàðñòâåííûõ ðåëèãèé. Ïî óìîë÷àíèþ ýòà îïöèÿ îòêëþ÷åíà, íî âû âñåãäà ìîæåòå åå çàäåéñòâîâàòü ÷åðåç âêëàäêó íàñòðîåê â RevDCM èç ñïèñêà BUG Options (CTRL-ALT-O).[PARAGRAPH:2][BOLD]Çà÷èñòêà Ñâÿùåííûõ ãîðîäîâ[\BOLD][PARAGRAPH:2]Ýòà îñîáåííîñòü èãðû ïîçâîëèò âàøèì èíêâèçèòîðàì óñòðàèâàòü çà÷èñòêó Ñâÿùåííûõ ãîðîäîâ íåãîñóäàðñòâåííûõ ðåëèãèé ñ óäàëåíèåì âñåõ èìåþùèõñÿ òàì êóëüòîâûõ ïîñòðîåê. Ïî óìîë÷àíèþ ýòà îïöèÿ òàêæå îòêëþ÷åíà. Åñëè âû æåëàåòå çàäåéñòâîâàòü ýòó îñîáåííîñòü, âàì íóæíî âêëþ÷èòü ýòó íàñòðîéêó âî âêëàäêå RevDCM íà ýêðàíå BUG Options.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_INQUISITION_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_INQUISITION</Tag>
 		<English>Inquisition</English>
 		<Spanish>Inquisición</Spanish>
 		<Russian>Èíêâèçèöèÿ</Russian>
@@ -1119,7 +1119,7 @@
 		<Russian>[H1]Áîëüøèå ãîðîäà[\H1][PARAGRAPH:2]Ãîðîäà èãðîêà ìîãóò òåïåðü ðàñøèðÿòüñÿ äî ðàäèóñà â òðè êëåòêè. Ïîñëå òîãî, êàê ãîðîä äîñòèãàåò ''Âëèÿòåëüíîãî'' óðîâíÿ êóëüòóðû, òðåòèé ðàäèóñ, ñòàíåò äîñòóïåí, îáðàçóÿ ãîðîäà-ãèãàíòû. Èãðîêè ìîãóò èñïîëüçîâàòü ýòî ðàñøèðåíèå äëÿ äîñòóïà ê ðåñóðñàì. Îäíàêî, òî ÷òî òðåòèé ðàäèóñ êóëüòóðû òåïåðü âîçìîæåí, äåëàåò ïîääåðæàíèå âàøèõ êóëüòóðíûõ ãðàíèö áîëåå âàæíûì. Ïîòåðÿ äîñòóïà ê íåêîòîðûì øàõòàì âíåøíåãî êîëüöà ìîæåò ñòàòü ïðè÷èíîé ïîðàæåíèÿ èëè íåóäà÷è â âîéíå. Êðîìå òîãî, èãðîêè ñòîëêíóòñÿ ñ äðóãèìè íîâûìè òðóäíîñòÿìè. Ïîñêîëüêó ãîðîäà äîñòèãíóò íàìíîãî áîëåå âûñîêèõ óðîâíåé íàñåëåíèÿ èñ÷åðïûâàíèå åäû, çäîðîâüÿ è ñ÷àñòüÿ ãîðîäà ìîæåò ñòàòü ïðîáëåìàòè÷íûìè. Åñëè èõ ïëîõî ñîäåðæàòü, áîëåå êðóïíûå ãîðîäà ìîãóò äàæå ðåøèòü âîññòàòü ïðîòèâ âàøåãî ëèäåðñòâà. Èãðîêè äîëæíû òðàòèòü äîïîëíèòåëüíûå óñèëèÿ, ÷òîáû ñîõðàíÿòü ýòè ãîðîäà-ãèãàíòû çäîðîâûìè è ñ÷àñòëèâûìè.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_LARGER_CITIES_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_LARGER_CITIES</Tag>
 		<English>Larger Cities</English>
 		<French>Villes plus Larges</French>
 		<German>Größere Städte</German>
@@ -1264,7 +1264,7 @@
 		<Russian>[H1]Ãîñïîäñòâî[\H1][PARAGRAPH:2]Ãîñïîäñòâî - ñîâåðøåííî îòäåëüíîå óñëîâèå ïîáåäû. Åñëè îíî âûáðàíî, âñå äðóãèå óñëîâèÿ ïîáåäû ïðîèãíîðèðóþòñÿ. Ïîáåäà áóäåò îöåíåíà ïî îêîí÷àíèþ âðåìåíè, à íå êîãäà èãðîê äîñòèãàåò îñîáîé öåëè. ×òîáû ïîáåäèòü, èãðîêè äîëæíû èìåòü ìàêñèìóì î÷êîâ â êîíöå èãðû, è êîíå÷íî, âñå åùå áûòü æèâûìè.[PARAGRAPH:2][BOLD]Ðàñïðåäåëåíèå î÷êîâ[\BOLD][NEWLINE][NEWLINE][TAB][ICON_BULLET]1 î÷êî çà êëåòêó êîíòðîëèðóåìîé òåððèòîðèè [NEWLINE][TAB][ICON_BULLET]1 î÷êî çà ïðîöåíò íàñåëåíèÿ, êîòîðûì óïðàâëÿåò âàøà êîìàíäà[NEWLINE][TAB][ICON_BULLET]1 î÷êî çà ïðîöåíò ìèðîâîé êóëüòóðû , êîòîðîé îáëàäàåò âàøà êîìàíäà[NEWLINE][TAB][ICON_BULLET]1 î÷êî çà ïðîöåíò ìèðîâîé ðåëèãèè, êîòîðîé âû îáëàäàåòå[NEWLINE][TAB][TAB](ó÷èòûâàåòñÿ òîëüêî îñíîâíàÿ âàøà ðåëèãèÿ),[NEWLINE][TAB][ICON_BULLET]1 î÷êî çà ïðîöåíò îáùåé âîåííîé ìîùè â ìèðå â ýòî âðåìÿ[NEWLINE][TAB][ICON_BULLET]1 î÷êî çà ïðîöåíò ïîñòðîåííûõ ÷óäåñ [COLOR_HIGHLIGHT_TEXT][COLOR_REVERT][NEWLINE][TAB][ICON_BULLET]30 î÷êîâ çà êàæäûé ãîðîä, êîòîðûé äîñòèãàåò ëåãåíäàðíîãî óðîâíÿ[NEWLINE][TAB][ICON_BULLET]100 î÷êîâ íà êàæäóþ Öèâèëèçàöèþ, êîòîðàÿ çàïóñòèò êîñìè÷åñêèé êîðàáëü.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_MASTERY_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_MASTERY</Tag>
 		<English>Mastery Victory</English>
 		<French>Victoire de Maître</French>
 		<German>Meistersieg</German>
@@ -1305,7 +1305,7 @@
 		<Russian>[H1]Ãîðíûé ìîä[\H1][PARAGRAPH:2]Ãîðíûé ìîä âíîñèò íåñêîëüêî èçìåíåíèé â èãðó, ïî ñðàâíåíèþ ñî ñòàíäàðòíîé Öèâèëèçàöèåé. Ýòè èçìåíåíèÿ:[NEWLINE][NEWLINE][TAB][ICON_BULLET]Ãîðû ñòàíîâÿòñÿ ïðîõîäèìûìè äëÿ åäèíèö ñ íîâîé òåõíîëîãèåé, [LINK=TECH_MOUNTAINEERING]Àëüïèíèçì.[\LINK][NEWLINE][TAB][ICON_BULLET]Âîéñêà âî ãëàâå ñ âåëèêèì ãåíåðàëîì ìîãóò ïîëó÷èòü ñïåöèàëüíîå ïîâûøåíèå, êîòîðîå ïîçâîëÿåò åìó ïåðåñåêàòü Ãîðû äàæå äî èññëåäîâàíèÿ [LINK=TECH_MOUNTAINEERING]Àëüïèíèçìà.[\LINK][NEWLINE][TAB][ICON_BULLET]Ãîðû òåïåðü ïîèçâîäÿò òðè ìîëîòêà.[NEWLINE][TAB][ICON_BULLET]Ïîñëå òîãî, êàê îòðÿäû ñìîãóò ïåðåñåêàòü ãîðíûå ïèêè, ðàáî÷èå ìîãóò ïîñòðîèòü íà íèõ óëó÷øåíèÿ, òàêèå êàê[LINK=IMPROVEMENT_MINE]øàõòû[\LINK].[NEWLINE][TAB][ICON_BULLET]Â ãîðàõ ìîãóò áûòü ðåñóðñû.[NEWLINE][TAB][ICON_BULLET]Ïîñëå èñëåäîâàíèÿ [LINK=TECH_ALGEBRA]Àëãåáðû[\LINK], ãîðîäà ìîãóò áûòü îñíîâàíû íà ãîðàõ.		[NEWLINE][TAB][ICON_BULLET]Îïðåäåëåííûå çäàíèÿ, òàêèå êàê [LINK=BUILDING_SKI_RESORT]Ëûæíûé êóðîðò[\LINK] òðåáóþò, ÷òîáû ãîðîä áûë ðàñïîëîæåí â ãîðàõ.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_MOUNTAINS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_MOUNTAINS</Tag>
 		<English>Mountains Mod</English>
 		<French>Mod Montagnes</French>
 		<German>Gebirgsmodifikation</German>
@@ -1339,7 +1339,7 @@
 		<Russian>[H1]Ìíîæåñòâåííîå ïðîèçâîäñòâî[\H1][PARAGRAPH:2]Èãðîêè ìîãóò ñòðîèòü íåñêîëüêî þíèòîâ èëè çäàíèé â ãîðîäàõ êàæäûé õîä, åñëè ãîðîä ïðîèçâîäèò äîñòàòî÷íî ìîëîòêîâ, ÷òîáû ïîçâîëèòü ýòî. Ýòî î÷åíü ïîëåçíî â áîëåå ïîçäíåé èãðå, ãäå áîëåå äåøåâûå îòðÿäû ìîãóò ëåãêî áûòü ïðîèçâåäåíû ïî äâà èëè ïî òðè ðàçîì. ×òîáû èñïîëüçîâàòü Ìíîæåñòâåííîå Ïðîèçâîäñòâî, ïðîâåðüòå âûáîð ýòîé îïöèè è î÷åðåäü, â ãîðîäñêîé î÷åðåäè ñòðîèòåëüñòâà äîëæåí áûòü ïóíêò î ìíîæåñòâåííîì ïðîèçâîäñòâå. Åñëè ãîðîä áóäåò çàêàí÷èâàòü îáúåêò, áóäåò èìåòü ìîëîòêè â çàïàñå è äðóãîé îáúåêò â ãîðîäñêîé î÷åðåäè, òî ìîëîòêè áóäóò àâòîìàòè÷åñêè ïðèìåíåíû ê ñëåäóþùåìó â î÷åðåäè îáúåêòó. Åñëè íåò íèêàêèõ äîïîëíèòåëüíûõ îáúåêòîâ â î÷åðåäè, èãðà îáðàùàåòñÿ ñ íåþ êàê ïðåæäå, ïðåâðàùàÿ ïîòåðÿííîå ïðîèçâîäñòâî â íåáîëüøîå êîëè÷åñòâî çîëîòà.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_MULTIPLE_PRODUCTION_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_MULTIPLE_PRODUCTION</Tag>
 		<English>Multiple Production</English>
 		<French>Production Multiple</French>
 		<German>Mehrfachproduktion</German>
@@ -1386,7 +1386,7 @@
 		<Russian>[H1]Ðåäêèå ïîâûøåíèÿ[\H1][NEWLINE][TAB]Ðåäêèå ïîâûøåíèÿ - íîâûé ïóòü äëÿ îòðÿäîâ, ïîëó÷àþùèõ ïðîäâèæåíèÿ. Â êàæäîì ñðàæåíèè ó þíèòà åñòü øàíñ ïðèîáðåñòè ïîâûøåíèå, íà êîòîðîå îí èìååò ïðàâî ïîñëå ïîáåäû. Ýòîò øàíñ íå ñëó÷àåí, îí îïðåäåëåí øàíñàìè íà óñïåõ â áîþ, è òåì íàñêîëüêî õîðîøî îíè ïðåäâàðèòåëüíî ñôîðìèðîâàëèñü. Åñëè ó îòðÿäà áûë âûñîêèé øàíñ ïîáåäû, âîçìîæíîñòü òîãî, ÷òîáû áûòü ïîâûøåíûì â ñðàæåíèè íèçêà, íî åñëè øàíñû áûëè ìàëû è þíèò ïðåîäîëåë ñëîæíîñòè, øàíñ òîãî, ÷òîáû áûòü ïðîäâèíóòûì íàìíîãî âûøå. Àíàëîãè÷íî, åñëè þíèò èìåë õîðîøèå øàíñû â ñðàæåíèè è ïîòåðÿë ìèíèìóì çäîðîâüÿ, âîçìîæíîñòü ïðîäâèæåíèÿ óâåëè÷åíà. Åñëè þíèò åäâà âûæèë, âîçìîæíîñòü óìåíüøåíà. Åñëè þíèò ïîëó÷èò ïîâûøåíèå, òî îí íå ïîëó÷èò î÷êè îïûòà çà ýòî ñðàæåíèå.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_OCCASIONAL_PROMOTIONS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_OCCASIONAL_PROMOTIONS</Tag>
 		<English>Occasional Promotions</English>
 		<French>Promotions occasionelles</French>
 		<German>Spontane Beförderungen</German>
@@ -1402,7 +1402,7 @@
 		<Russian>[H1]Âûãîäíàÿ öåëü[\H1][PARAGRAPH:2]Óêðåïëåííûå àðòèëëåðèéñêèå þíèòû (ïóøêè è ò.ä.) àâòîìàòè÷åñêè îáíàðóæèâàþò âûãîäíûå öåëè, àòàêóÿ ïðîòèâíèêà, êîòîðûé ïðèáëèæàåòñÿ ê èõ ïîçèöèÿì. Îáñòðåë îñóùåñòâëÿåòñÿ â íà÷àëå õîäà àðòèëëåðèéñêîãî þíèòà.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_OPP_FIRE_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_OPP_FIRE</Tag>
 		<English>Opportunity Fire</English>
 		<French>Opportunité de tir</French>
 		<German>Gelegenheitstreffer</German>
@@ -1417,7 +1417,7 @@
 		<Russian>[H1]Îðáèòàëüíûå ñòðîåíèÿ[\H1][PARAGRAPH:2]Îðáèòàëüíûå ñîîðóæåíèÿ ÿâëÿþòñÿ îñîáûì òèïîì çäàíèé â ìîäå Ñaveman2Ñosmos. Â íàñòîÿùåå âðåìÿ áîíóñû îò ýòèõ ïîñòðîåê çàòðàãèâàþò â îñíîâíîì äîõîäû îò òîðãîâëè, òîãäà êàê â äðóãèõ ñôåðàõ îíè äàþò îáû÷íûå ýôôåêòû.[NEWLINE][NEWLINE]Åñëè ðàññìàòðèâàòü ïðèáûëè îò îðáèòàëüíûõ ñîîðóæåíèé, òî ôàêòè÷åñêàÿ òîðãîâëÿ ðàâíÿåòñÿ áàçîâîé ñòîèìîñòè îò îáùåãî êîëè÷åñòâà òàêèõ ñîîðóæåíèé è îðáèòàëüíîé èíôðàñòðóêòóðû âî âñåé öèâèëèçàöèè (ïîäðîáíîñòè íèæå), ëèáî îò íàñåëåíèÿ ãîðîäà, îò êîòîðîãî ïîë÷àåìûå ýôôåêòû áóäóò çíà÷èòåëüíî ìåíüøå.[NEWLINE][NEWLINE]Íåêîòîðûå çäàíèÿ îáîçíà÷àþòñÿ êàê îðáèòàëüíàÿ èíôðàñòðóêòóðà, à çíà÷èò, îíè ó÷èòûâàþòñÿ ïðè ïîäñ÷åòå ñóììû ýôôåêòîâ îò òîðãîâëè îò îðáèòàëüíûõ ñîîðóæåíèé. Òàêæå, äëÿ ïîëó÷åíèÿ ïîëíûõ ýôôåêòîâ îðáèòàëüíîãî çäàíèÿ, âàì íåîáõîäèìî èìåòü âñþ ïîëîæåííóþ îðáèòàëüíóþ èíôðàñòðóêòóðó â ãîðîäå, â ïðîòèâíîì ñëó÷àå âûãîäà îò íèõ áóäåò âäâîå ìåíüøå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ORBITAL_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ORBITAL</Tag>
 		<English>Orbital Buildings</English>
 		<French>Bâtiments Orbitaux</French>
 		<Italian>Edifici orbitali</Italian>
@@ -1447,7 +1447,7 @@
 		<Russian>[H1]Çàãðÿçíåíèå âîäû è àòìîñìôåðû[\H1][PARAGRAPH:2]Çàãðÿçíåíèå è ýôôåêòû îò íåãî ñóùåñòâåííî áûëè èçìåíåíû â Ñaveman2Ñosmos. Ñóùåñòâóåò äâà òèïà çàãðÿçíåíèÿ: âîçäóõà è âîäû.[NEWLINE][NEWLINE]Çàãðÿçíåíèå âîçäóõà ñîçäàåòñÿ îïðåäåëåííûìè çäàíèÿìè, ó÷àñòâóþùèõ â ñæèãàíèè ìóñîðà è ïð. îòõîäîâ, à òàêæå ïî áàçîâîìó ìîäèôèêàòîðó îò îáùåãî êîëè÷åñòâà íàñåëåíèÿ â ãîðîäå. Êðîìå òîãî, îíî âîçíèêàåò â ñèëó îïðåäåëåííûõ îñîáåííîñòåé. Ñòàäèè çàãðÿçíåíèÿ âîçäóõà áóäóò îïðåäåëÿòü óðîâíè çàãðÿçíåíèÿ âîçäóõà. Çàãðÿçíåíèå âîçäóõà ÿâëÿåòñÿ ðåàëèñòè÷íî ñìîäåëèðîâàííûì â çàâèñèìîñòè îò ðåëüåôà ìåñòíîñòè (ò. å. ãîðû áóäóò áëîêèðîâàòü åãî ðàñïðîñòðàíåíèå, à õîëìû - çàìåäëÿòü, è ò. ä.), òàê ÷òî ó âàñ áóäåò íîâûé óðîâåíü ñòðàòåãèè â áîðüáå ñ ýòîé ïðîáëåìîé.[NEWLINE][NEWLINE]Çàãðÿçíåíèå âîäû îáû÷íî âîçíèêàåò îò çäàíèé â ïðèáðåæíûõ ãîðîäàõ, à òàêæå îò íåêîòîðûõ ïîäâîäíûõ ðåñóðñîâ. Îíî íå ðàñïðîñòðàíÿåòñÿ â îêåàíàõ, ÷òî ñëóæèò ãëàâíûì ôàêòîðîì åãî çàìåäëåíèÿ. Çàãðÿçíåíèå âîäû áóäåò ñîêðàùàòüñÿ â ïîçäíèå ýïîõè èãðû îò ñòðîèòåëüñòâà ëþáûõ òèïîâ î÷èñòíûõ ñîîðóæåíèé.[NEWLINE][NEWLINE]×ðåçìåðíûé óðîâåíü çàãðÿçíåíèé âîäû è âîçäóõà ìîæåò ïðèâåñòè ê çàìåòíîìó ïàäåíèþ óðîâíÿ çäîðîâüÿ è íàñòðîåíèé ãðàæäàí â ãîðîäå, ãäå èõ óðîâåíü ñëèøêîì çàâûøåí. Îòîáðàæàåòñÿ ýòî â âèäå ''âðåäíûõ ïîñòðîåê'', âåðíåå ìîäèôèêàòîðîâ, óìåíüøàþùèõ âàì äîõîäû, çäîðîâüå è ìíîãîå äðóãîå â ãîðîäå. Óáðàòü ýòè ïñåâäî-çäàíèÿ ìîæíî ëèøü ñîêðàòèâ îáùèé óðîâåíü çàãðÿçíåíèé, óêàçàííûìè âûøå ñïîñîáàìè.[NEWLINE][NEWLINE]Ìàëî òîãî, çàãðÿçíåíèå âîçäóõà òàêæå âûçûâàåò ãëîáàëüíîå ïîòåïëåíèå. Óðîâíè çàãðÿçíåíèÿ ðàññ÷èòûâàþòñÿ ãëîáàëüíî, è âûñîêèå óðîâíè çàãðÿçíåíèé ïîâûøàþò ðèñêè äëÿ ïðåâðàùåíèÿ ïëîäîðîäíîé ìåñòíîñòè â áîëåå ñóõóþ ïîâåðõíîñòü. Ýòî â èòîãå ìîæåò ñäåëàòü ïëàíåòó íåïðèãîäíîé äëÿ æèçíè, íî êîíòðîëü íàä çàãðÿçíåíèÿìè ïîçâîëèò èçáåæàòü íàèõóäøèõ ïîñëåäñòâèé. Âû òàêæå ìîæåòå îáðàòèòü âñïÿòü ïðîöåññ ñ ïðè ïîìîùè Òåððàôîðìèðîâàíèÿ â ýïîõó Òðàíñ÷åëîâåêà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_POLLUTION_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_POLLUTION</Tag>
 		<English>Pollution</English>
 		<Italian>Inquinamento</Italian>
 		<Spanish>Polución</Spanish>
@@ -1505,7 +1505,7 @@
 		<Russian>[H1]Äàëüíÿÿ áîìáàðäèðîâêà[\H1][PARAGRAPH:2]Â ýòîì ñöåíàðèè îñàäíûå þíèòû ìîãóò áîìáàðäèðîâàòü íå òîëüêî ãîðîäà, íî è ïðîèçâîëüíûå êëåòêè ñ îáúåêòàìè è þíèòàìè. Äëÿ áîìáàðäèðîâêè íóæíî, êàê îáû÷íî, âûáðàòü çíà÷îê íà ïàíåëè óïðàâëåíèÿ. Îáû÷íàÿ àðòèëëåðèÿ áîìáàðäèðóåò òîëüêî ñîñåäíèå êëåòêè, à äàëüíîñòü äåéñòâèÿ òÿæåëîé àðòèëëåðèè äîõîäèò äî äâóõ êëåòîê.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_RBOMBARD_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_RBOMBARD</Tag>
 		<English>Ranged Assault</English>
 		<French>Attaque à distance</French>
 		<Russian>Äàëüíÿÿ áîìáàðäèðîâêà</Russian>
@@ -1519,7 +1519,7 @@
 		<Russian>[H1]Ðåàëèñòè÷íûå êîðïîðàöèè[\H1][NEWLINE][TAB]Ðåàëèñòè÷íûå êîðïîðàöèè äàþò ñâîáîäó êîðïîðàöèÿì, îíè áîëüøå íå êîíòðîëèðóþòñÿ ãîñóäàðñòâîì. Â òî âðåìÿ êàê ãîñóäàðñòâî ìîæåò âëàäåòü ãîðîäîì â êîòîðîì êîðïîðàöèÿ ðàáîòàåò èëè ñîäåðæèò øòàá-êâàðòèðó, âû íå ìîìîæåòå óïðàâëÿòü åå ðàñïðîñòðàíåíèåì, êðîìå ÷ðåçâû÷àéíûõ îáñòîÿòåëüñòâ. Ðóêîâîäèòåëè èëè þíèòû, êîòîðûå ìîãóò ðàñïðîñòðàíèòü êîðïîðàöèè, íå ìîãóò îáó÷àòüñÿ, êðîìå òåõ ñëó÷àåâ, êîãäà èñïîëüçóåòñÿ ïàðàäèãìà, êîòîðàÿ áëîêèðóåò èíîñòðàííûå êîðïîðàöèè. Êîðïîðàöèè áîëüøå íå îñíîâûâàþòñÿ þíèòàìè, çäàíèÿìè, èëè êàê-òî èíà÷å. Âìåñòî ýòîãî îíè îñíîâûâàþòñÿ ïðè íàëè÷èè íåêîòîðîé óäà÷è è íåêîòîðîé ñòðàòåãèè. Êàæäûé õîä, èãðà ïðîâåðÿåò óñëîâèÿ ïîÿâëåíèÿ ñóùåñòâóþùèõ êîðïîðàöèé . Óñëîâèÿ, ÿâëÿþùèåñÿ íåîáõîäèìûìè: ïî êðàéíåé ìåðå 3 èãðîêà èññëåäîâàëè òåõíîëîãèþ íåîáõîäèìóþ äëÿ êîðïîðàöèé è èìåþò íåîáõîäèìûå ðåñóðñû, ÷òîáû óïðàâëÿòü åþ. Êîðïîðàöèè îäîáðÿò ãîðîäà, êîòîðûå ïðåäëàãàþò ëó÷øèå óñëîâèÿ äëÿ íèõ, à òàêæå ãîðîäà ñ áîëüøèíñòâîì èëè âñåìè ðåñóðñàìè, â êîòîðûõ îíè íóæäàþòñÿ, îêàæóòñÿ â âûãîäå. Áûòü òåõíîëîãè÷åñêè ïðîäâèíóòûì ïîìîãàåò â íåáîëüøîé ñòåïåíè. Èãðà áóäåò ñëó÷àéíûì îáðàçîì êàæäûé õîä èñêàòü ìåñòî äëÿ øòàá-êâàðòèðû è åñëè øàíñ âûïàäåò, îíà áóäåò îñíîâàíà. Òàêæå êàæäûé õîä, êàæäûé ãîðîä ïðîâåðÿåòñÿ ñîñåäñêèìè êîðïîðàöèÿìè, (ïî÷òè òî÷íî òàê æå êàê ñåé÷àñ ðàáîòàåò ðàñïðîñòðàíåíèå ðåëèãèè) è îíè ïîïûòàþòñÿ ðàñïðîñòðàíèòüñÿ â âàø ãîðîä. Åñëè âàøè ãîðîäà áóäóò áîëåå âûãîäíûìè äëÿ êîðïîðàöèè, òî îíà áûñòðåå ðàñïðîñòðàíèòñÿ. Íàëè÷èå áîëüøîé äîðîæíîé ñåòè ïîìîæåò âàì ðàñïðîñòðàíèòü êîðïîðàöèè áîëåå áûñòðî. [NEWLINE][NEWLINE][TAB][BOLD]Êîðïîðàòèâíîå íàëîãîîáëîæåíèå è ñóáñèäèè[\BOLD][NEWLINE][NEWLINE][TAB]Âìåñòî òîãî, ÷òîáû ïëàòèòü ''îáñëóæèâàíèå'' êîðïîðàöèÿì, âû ìîæåòå ðåøèòü îáëîæèòü íàëîãîì èëè ñóáñèäèðîâàòü êîðïîðàöèè. Âàøå íàëîãîîáëîæåíèå èëè ñóáñèäèðîâàíèå çàâèñèò è óïðàâëÿåòñÿ âàøèìè ïàðàäèãìàìè. Ñóáñèäèðîâàíèå êîðïîðàöèé áóäåò ñòîèòü âàì äåíåã, íî çàñòàâèò êîðïîðàöèè îäîáðÿòü âûáîð âàøèõ ãîðîäîâ è ðàñïðîñòðàíÿòüñÿ â íèõ áûñòðåå. Íàëîãè äëÿ êîðïîðàöèé ïðîèçâåäóò äîõîä äëÿ âàøåé ñòðàíû, íî çàìåäëÿò ðàñïðîñòðàíåíèå êîðïîðàöèé. Åñëè âû îáëàãàåòå íàëîãîì êîðïîðàöèè ñëèøêîì ñèëüíî (îòíîñèòåëüíî äðóãèõ ñòðàí), êîðïîðàöèè ìîãóò ðåøèòü çàêðûòü ñâîè ôèëèàëû â âàøèõ ãîðîäàõ è íå áóäóò âîçâðàùàòüñÿ, ïîêà óñëîâèÿ íå óëó÷øàòñÿ.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_REALISTIC_CORPORATIONS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_REALISTIC_CORPORATIONS</Tag>
 		<English>Realistic Corporations</English>
 		<French>Corporations Réalistes</French>
 		<German>Realistische Kapitalgesellschaften</German>
@@ -1554,7 +1554,7 @@
 		<Russian>[H1]Ðåàëèñòè÷íîå ðàñïðîñòðàíåíèå êóëüòóðû[\H1][NEWLINE][TAB]Ðåàëèñòè÷íîå ðàñïðîñòðàíåíèå êóëüòóðû ïðèâíîñèò åñòåñòâåííîñòü â êóëüòóðíîå ðàñïðîñòðàíåíèå èç âàøèõ ãîðîäîâ. Êóëüòóðà ðàñïðîñòðàíÿåòñÿ áîëåå ìåäëåííî ïî ðåêàì, áîëåå âûñîêîìó ëàíäøàôòó, òàêîìó êàê õîëìû è ãîðû, ñ òðóäîì ïî ëåñèñòûì îáëàñòÿì è îêåàíñêèì êëåòêàì. Ïîñêîëüêó ýòî áîëåå åñòåñòâåííîå ðàñïðîñòðàíåíèå èìååò ýôôåêò îãðàíè÷åíèÿ âàøèõ êóëüòóðíûõ ãðàíèö, òðè íîâûõ ïðîìåæóòî÷íûõ óðîâíÿ êóëüòóðû áûëè äîáàâëåíû äëÿ ýòîãî ðåæèìà èãðû, ÷òîáû ðàñøèðèòü âàøè ãðàíèöû äàëüøå. Êîëè÷åñòâî ôàêòè÷åñêîé êóëüòóðû, ÷òîáû äîñòèãíóòü [COLOR_YELLOW]Ëåãåíäàðíîé êóëüòóðû[COLOR_REVERT]íå èçìåíåí.[NEWLINE][NEWLINE][TAB][BOLD]Óðîâíè êóëüòóðû[\BOLD][NEWLINE][NEWLINE][COLOR_HIGHLIGHT_TEXT][TAB][TAB]Áåäíàÿ[NEWLINE][TAB][TAB]Ìîëîäàÿ[NEWLINE][TAB][TAB]Ðàçâèâàþùàÿñÿ[NEWLINE][TAB][TAB]Çàìåòíàÿ[NEWLINE][TAB][TAB]Èçûñêàííàÿ[NEWLINE][TAB][TAB]Ýëåãàíòíàÿ[NEWLINE][TAB][TAB]Âëèÿòåëüíàÿ[NEWLINE][TAB][TAB]Âïå÷àòëÿþùàÿ[NEWLINE][TAB][TAB]Ëåãåíäàðíàÿ[NEWLINE][COLOR_REVERT][PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_REALISTIC_CULTURES_SPREAD_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_REALISTIC_CULTURES_SPREAD</Tag>
 		<English>Realistic Culture Spread</English>
 		<French>Propagation Culturelle Réaliste</French>
 		<German>Realistische Kulturausbreitung</German>
@@ -1666,7 +1666,7 @@
 		[PARAGRAPH:2]If you face civil war, the situation may become quite dire. Strong garrisons may be able to maintain some semblance of control in some of the revolting cities, but weaker garrisons may be run out of town and the revolutionaries will take the city. Your homeland will not be the same for generations if you face multiple revolting cities on the battlefield! In addition, rebellious cities that the rebels have not yet taken may turn out rebel reinforcements.[PARAGRAPH:2][BOLD]The Revolution Watch[\BOLD][PARAGRAPH:2]Clicking on the red fist button below the normal info buttons or pressing [BOLD]Ctrl-Shift-W[\BOLD] in the game will open the Revolution Watch popup. This popup displays which of your cities is in danger of rebelling, thinking about rebelling, or happy with your empire. In each category, the cities are ordered with the most rebellious towards the top. In addition, cities whose local situation is deterioirating are shown in orange. For specific information on how your civ-wide policies or the local city situation are effecting the rebelliousness of the city, scroll down and click the details button. This will open a new popup containing a lot of important information about the rebelliousness of your cities.[PARAGRAPH:2]At the top of this detail popup is an analysis of your national policies and situation. The effect of your civics, anarchy, golden age, empire size and fiscal situation are shown here. These affect all of your cities equally. Next is a city by city listing of local effects. The location of the city, the religions and cultures in the city, the happiness and healthiness of the people, the size of the city, the size of the city's garrison, and culture rate are all important factors you may see here. For both positive and negative effects the specific causes are ordered with the strongest first and grayscale indicating the intensity with whiter being more intense.[PARAGRAPH:2]Your civics can have a significant effect on how these local factors are felt. For example, running a theocracy will cause cities with non-state religions to be more rebellious, but keep cities with your state religion less rebellious. Representative government civics will greatly decrease the effects of distance on outlieing cities or colonies.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_REVDCM_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_REVDCM</Tag>
 		<English>Revolution</English>
 		<French>Révolution</French>
 		<Russian>Ðåâîëþöèè</Russian>
@@ -1695,7 +1695,7 @@
 		<Russian>[H1]Âàðâàðñêèå öèâèëèçàöèè[\H1][PARAGRAPH:2][BOLD]Ñîäåðæàíèå:[\BOLD][PARAGRAPH:2]Â äàííîì ñàáìîäå, âêëþ÷åííîì â Ñ2Ñ, âàðâàðñêèå ãîðîäà, ïðåäîñòàâëåííûå ñàìè ñåáå, ñî âðåìåíåì ìîãóò ïðåâðàòèòüñÿ â ïîëíîöåííûå öèâèëèçàöèè![PARAGRAPH:2][BOLD]Ïðèíöèïû ðàáîòû ñàáìîäà:[\BOLD][PARAGRAPH:2]Â èãðîâîé ìåõàíèêå èìååòñÿ íåñêîëüêî îïðåäåëåííûõ íþàíñîâ äëÿ ïðåîáðàçîâàíèÿ âàðâàðñêèõ ïîñåëåíèé è èõ âîçíèêíîâåíèÿ. Íà÷èíàÿ ñ âåðñèè ñàáìîäà 2.0, âàðâàðñêèå ïîñåëåíèÿ âïåðâûå ñïîñîáíû âûðàñòàòü äî ''ìàëûõ íàöèé''. Ýòè ãîðîäà-ãîñóäàðñòâà ïåðâîå âðåìÿ íå ìîãóò âåñòè íîðìàëüíóþ äèïëîìàòèþ, ïîñêîëüêó îíè âîþþò ñî âñåìè. Åñëè ýòîò âàðâàðñêèé ïîëèñ ñîâåðøàåò íå÷òî âûäàþùååñÿ, òî ó íåãî ïîÿâëÿåòñÿ ñâîé ëèäåð, à ãîðîä ñòàíîâèòñÿ ïîëíîöåííîé öèâèëèçàöèåé. Â ÷èñëî òðåáóåìûõ äîñòèæåíèé ìîãóò âõîäèòü îáøèðíûå çàâîåâàíèÿ, ðåçêèé äåìîãðàôè÷åñêèé ðîñò, äîñòèæåíèå î÷åíü âûñîêîãî óðîâíÿ êóëüòóðû, ñòðîèòåëüñòâî ×óäåñ Ñâåòà, è ò.ä.[PARAGRAPH:2][BOLD]Ïîäðîáíîñòè:[\BOLD][PARAGRAPH:2]Êàê ïðàâèëî ïðåâðàùåíèå âàðâàðñêîãî ãîðîäà â ìàëóþ íàöèþ èñõîäèò èç òåìïîâ ïðèðîñòà íàñåëåíèÿ è êóëüòóðû â íåì, à òàêæå êàêèå öèâèëèçàöèè ñ íèì ñîñåäñòâóþò, è ðàíåå çàõâà÷åííûìè âàðâàðàìè ãîðîäàìè. Êîãäà âîçíèêàåò ''ìàëàÿ íàöèÿ'', îíà áóäåò èçíà÷àëüíî êîíòðîëèðîâàòü ëèøü îäèí ãîðîä è íåêèé íàáîð þíèòîâ è óæå èçó÷åííûõ òåõíîëîãèé äëÿ äàëüíåéøåãî ðàçâèòèÿ. Òàê êàê îíè âñå åùå ÿâëÿþòñÿ ''ìàëûìè íàöèÿìè'', òî áóäóò ïðîäîëæàòü ïðåáûâàòü ñî âñåìè öèâèëèçàöèÿìè â ñîñòîÿíèè âîéíû, ïîýòîìó âû íå óâèäèòå èõ â ñïèñêå ñî ñ÷åòîì êîíêóðåíòîâ.[PARAGRAPH:2]Êàæäûé õîä èãðà áóäåò ïðîâåðÿòü ''ìàëûå íàöèè'' íà îïðåäåëåííûå ïàðàìåòðû è íàáðàííûå áàëëû, äîñòîéíû ëè îíè ñòàòü ïîëíîïðàâíîé öèâèëèçàöèåé. Â ñëó÷àå, åñëè ''ìàëàÿ íàöèÿ'' ïðîøëà ïðîâåðêó è ïîëó÷èëà ñòàòóñ ''íîðìàëüíîé'' öèâèëèçàöèè, òî îíà îáû÷íî âûáèðàåò îäíó èç äâóõ ÷åðò è òàêòèê: âîéíà èëè ñòðîèòåëüñòâî. Íàïðèìåð, åñëè â÷åðàøíèå ''ìàëûå íàöèè'' çàõâàòèëè íåêèé ãîðîä ó ñîñåäíåé öèâèëèçàöèè, òî îíè íåìåäëåííî ðàññåëÿþòñÿ â íåì è ïðîäîëæàþò áîðüáó ñ íåé â êà÷åñòâå ìèëèòàðèñòñêîé öèâèëèçàöèè. À åñëè ''ìàëàÿ íàöèÿ'' äîñòèãëà âûñîêîãî óðîâíÿ êóëüòóðû èëè çàâåðøèëà ñòðîèòåëüñòâà ×óäà Ñâåòà, òî îíà ñòàíîâèòñÿ ìèðíîé öèâèëèçàöèåé-ñòðîèòåëåì. Íàêîíåö, âîçìîæû îáà âàðèàíòà â ñëó÷àå, åñëè ''ìàëàÿ íàöèÿ'' çàõâàòèò êðóïíûé ãîðîä ñ îäíîé èëè íåñêîëüêèìè èñïîâåäóåìûìè òàì ðåëèãèÿìè.[PARAGRAPH:2]Â çàâèñèìîñòè îò âûáîðà ïóòè ìèëèòàðèñòà èëè ñòðîèòåëÿ, íîâîðîæäåííûå öèâèëèçàöèè ìîãóò ïîëó÷àòü ðàçëè÷íûå áîíóñû. Â ëþáîì ñëó÷àå, îíè ïîëó÷àþò ïîñëå ïðåîáðàçîâàíèÿ íåñêîëüêî çàùèòíûõ îòðÿäîâ è ðàáî÷èõ, à òàêæå íåñêîëüêî ëåêàðåé â çàâèñèìîñòè îò èãðîâîé ýïîõè ó áîëüøèíñòâà öèâèëèçàöèé. Êðîìå òîãî, îíè ïîëó÷àþò ïî îäíîìó [COLOR_UNIT_TEXT]Âåëèêîìó ÷åëîâåêó[COLOR_REVERT] (ñèìâîëèçèðóþùåãî îòöà-îñíîâàòåëÿ íàöèè èëè îðäû), â çàâèñèìîñòè îò òèïà åå îáüåäèíåíèÿ. Â èõ ñòîëèöå áóäóò íåïðåìåííî àìáàð è ãîðîäñêèå ñòåíû. Åñëè â îñíîâàííûõ/çàõâà÷åííûõ ãîðîäàõ áóäåò èìåòüñÿ èíîñòðàííàÿ êóëüòóðà, òî íîâàÿ öèâèëèçàöèÿ ïîëó÷èò ïîëîâèíó î÷êîâ îò èõ îáùåãî ñ÷åòà. Âñå âûøåïåðå÷èñëåííîå íåîáõîäèìî, ÷òîáû íîâè÷êè ìîãëè óñïåøíî êîíêóðèðîâàòü â äàëüíåéøåì ñ öèâèëèçàöèÿìè-ñòàðîæèëàìè.[PARAGRAPH:2]Íàèáîëåå èíòåðåñíîé ñ òî÷êè çðåíèÿ ðàçðàáîò÷èêîâ ñàáìîäà ÿâëÿåòñÿ ìèëèòàðèñòñêàÿ êîíñîëèäàöèÿ ''ìàëîé íàöèè''. Îíà ïðèçâàíà èìèòèðîâàòü â èãðå ñöåíàðèè èç ðåàëüíîé èñòîðèè ÷åëîâå÷åñòâà, âðîäå îñíîâàíèÿ èìïåðèè ×èíãèñõàíà èëè âàðâàðñêèõ êîðîëåâñòâ Âèêèíãîâ íà îáëîìêàõ Çàï. Ðèìñêîé èìïåðèè. Âñåãî ñóåñòâóþò ÷åòûðå óíèêàëüíûõ òèïà âàðâàðñêîãî ñåòòèíãà þíèòîâ: íîðìàíí, êîëåñíèöà, âñàäíèê, è ñáàëàíñèðîâàííûé òèïàæ. Âèêèíãè ñòðîèò òàêòèêó íà èñïîëüçîâàíèè ãðåáíûõ ñóäîâ è òÿæåëóþ ïåõîòó áëèæíåãî áîÿ, ñòèëü ''Êîëåñíèöû'' ïðåäïîëàãàåò ðàííþþ ýêñïàíñèþ ñ ïðèìåíåíèåì êîëåñíèö è ñåêèðîíîñöåâ, ''êàâàëåðèñòû'' áóäóò èñïîëüçîâàòü îðäû êîííûõ ëó÷íèêîâ (ëèáî ðûöàðåé - åñëè íà äâîðå äîñòàòî÷íî ïîçäíÿÿ ýïîõà), à ïîñëåäíèé òèïàæ ïîëó÷àåò ñòåêè þíèòîâ ñ óñðåäíåííûìè õàðàêòåðèñòèêàìè è íàâûêàìè. Âîåííàÿ ìîùü âíîâü âîçíèêøèõ öèâèëèçàöèé ìîæåò îêàçàòüñÿ âåñüìà ñëó÷àéíîé, è ëèøü âîçðàñòàåò, ÷åì ïîçäíåå áóäåò èãðîâàÿ ýïîõà. Øàíñû íà ìèëèòàðèñòñêèé ïóòü ðàçâèòèÿ ïîâûøàþòñÿ, åñëè íîâûé ëèäåð öèâèëèçàöèè áóäåò èìåòü ÷åðòû [COLOR_HIGHLIGHT_TEXT]Ìèëèòàðèñòà[COLOR_REVERT] èëè [COLOR_HIGHLIGHT_TEXT]Ýêñïàíñèîíèñòà[COLOR_REVERT].Íîâûå ìèëèòàðèñòñêèå öèâèëèçàöèè ïðè ýòîì áóäóò çàìåòíî îòñòàâàòü îò êîíêóðåíòîâ â ýêîíîìè÷åñêèõ è ñîöèàëüíûõ òåõíîëîãèÿõ. Òàêæå îíè ïîëó÷àò áåñïëàòíûå êàçàðìû â êàæäîì ãîðîäå. Ó ìèëèòàðèñòñêèõ öèâèëèçàöèé çàìåòíî ïîâûøàåòñÿ øàíñ ïî ñðàâíåíèþ ñ êîíêóðåíòàìè íà ïîÿâëåíèå [COLOR_UNIT_TEXT]Âåëèêîãî ãåíåðàëà[COLOR_REVERT].[PARAGRAPH:2]Åñëè æå ôîðìèðîâàíèå íîâîé öèâèëèçàöèè èäåò ïî ïóòè ''ñòðîèòåëÿ'', òî çäåñü ðàáîòàþò íåñêîëüêî èíûå ïðèíöèïû. Öèâèëèçàöèè ýòîãî òèïà ïîëó÷àò äâå áåñïëàòíûå òåõíîëîãèè, îäíó èç êîòîðûõ îíè ìîãóò èññëåäîâàòü ñàìûìè ïåðâûìè. Âäîáàâîê îíè ïîëó÷àþò [COLOR_UNIT_TEXT]Âåëèêîãî ÷åëîâåêà[COLOR_REVERT], êîòîðûé ìîæåò îòêðûòü áåñïëàòíî òåõíîëîãèþ èëè çàâåðøèòü ñòðîèòåëüñòâî ×óäà Ñâåòà. ×àñòåíüêî îíè ìîãóò ñòàòü îñíîâàòåëÿìè íîâîé [COLOR_HIGHLIGHT_TEXT]ìèðîâîé ðåëèãèè[COLOR_REVERT]. Ìèðíûå öèâèëèçàöèè òàêæå ïîëó÷àþò êó÷ó ìåëêèõ, íî ïðèÿòíûõ áîíóñîâ: äîï. ðàáî÷èé, áåñïëàòíûé ïîñåëåíåö, íåêîòîðûå çäàíèÿ, âðîäå áèáëèîòåêè, ìàÿêà, êóçíèöû (åñëè èìåþòñÿ íåîáõîäèìûå äëÿ ýòîãî òåõíîëîãèè).[PARAGRAPH:2][BOLD]Ïðèìå÷àíèÿ:[\BOLD][PARAGRAPH:2]Äëÿ òîãî, ÷òîáû ïîëó÷èòü ìàêñèìóì óäîâîëüñòâèÿ îò ýòîãî ñàáìîäà, íåîáõîäèìî óâåëè÷èòü ïëàíêó àãðåññèâíîñòè è àêòèâíîñòè âàðâàðîâ. Â ÷àñòíîñòè, íà ðàííåì ýòàïå äî ôîðìèðîâàíèÿ ïåðâûõ ''ìàëûõ íàöèé'', âàðâàðñêèå ãîðîäà ïîìîãóò çàïîëíèòü ïóñòóþùèå ïðîñòðàíñòâà íà ìèðîâîé êàðòå, ïîêà îñòàëüíûå èãðîêè íå óñïåëè íà÷àòü ýêñïàíñèþ. Ñ ýòîé îïöèåé, ïî âñåé âåðîÿòíîñòè, êàòû ñðåäíèõ ðàçìåðîâ óæå íà ðàííåì ýòàïå ìîãóò áûòü ïëîòíî çàñåëåíû.[PARAGRAPH:2]Äîâîëüíî çàáàâíî áóäåò íà÷àòü íîâóþ èãðó ñ ýòèì âêëþ÷åííûì ðåæèìîì ñ ãîðñòêîé öèâèëèçàöèé è íåñêîëüêèìè äåñÿòêàìè ïëåìåí âàðâàðîâ, çàïîëíÿþùèõ âñå ïóñòûå ïðîñòðàíñòâà íà êàðòå. Áóäüòå ãîòîâû ê òîìó, ÷òî âàì ïðåäñòîèò ðàç çà ðàçîì îòðàæàòü íåñëàáûå âàðâàðñêèå íàáåãè äèêèõ êî÷åâûõ îðä! Êðîìå òîãî, îïöèÿ [COLOR_HIGHLIGHT_TEXT]BarbarianCiv[COLOR_REVERT] óñïåøíî àäàïòèðîâàíà äëÿ ðàáîòû âìåñòå ñ ñàáìîäîì íà [COLOR_HIGHLIGHT_TEXT]Ðåâîëþöèè[COLOR_REVERT], ãåíåðèðóÿ ðàçëè÷íûõ âàðâàðñêèõ ìÿòåæíèêîâ è ïîâñòàíöåâ.[PARAGRAPH:2]Ñ ýòèì ðåæèìîì èãðû, ãåéìïëåé íà êàðòå Òåððû óæå íå áóäåò òàêèì óíûëûì êàê ðàíüøå, à êàðòà Çåìëè áóäåò ïëîòíî çàñåëåíà. Âìåñòå ñ îïöèåé, [COLOR_HIGHLIGHT_TEXT]NewWorldPolicy[COLOR_REVERT], ýòîò èãðîâîé ðåæèì ìîæåò èñïîëüçîâàòüñÿ â êà÷åñòâå óïðàâëÿþùåãî ìîäèôèêàòîðà ïîðÿäêà âîçíèêíîâåíèÿ è ïîâåäåíèÿ ''ìàëûõ íàöèé'' íà îïðåäåëåííîì êîíòèíåíòå, êîãäà òóäà ïðîíèêíóò ïåðâûå èññëåäîâàòåëè èëè êîëîíèçàòîðû. Ýòè íàñòðîéêè òàêæå ïîçâîëÿþò îïðåäåëèòü âçàèìîîòíîøåíèÿ è óðîâåíü ðàçâèòèÿ êîðåííûõ öèâèëèçàöèé ñ âàðâàðàìè è ''ìàëûìè íàöèÿìè'' äî òîãî, êàê íà íîâûé ìàòåðèê ñòóïèò íîãà êîëîíèçàòîðà/êîíêèñòàäîðà.[PARAGRAPH:2]Ìíîæåñòâî äðóãèõ ïàðàìåòðîâ ìîæíî íàñòðîèòü â ôàéëå Revolution.ini, âêëþ÷àÿ [COLOR_HIGHLIGHT_TEXT]MilitaryStrength[COLOR_REVERT] (âîåííóþ ìîùü), êîòîðàÿ îòâå÷àåò çà ÷àñòîòó âîçíèêíîâåíèé âàðâàðñêèõ íàøåñòâèé è èõ ìîùíîñòü, à òàêæå çàäàåò óñëîâèÿ äëÿ ïðåîáðàçîâàíèÿ âàðâàðîâ â ''ìàëûå íàöèè'' è äàëåå - â ïîëíîïðàâíûå öèâèëèçàöèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_REV_BARBARIANCIV_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_REV_BARBARIANCIV</Tag>
 		<English>BarbarianCiv</English>
 		<French>Civ Barbares</French>
 		<Russian>Èìïåðèÿ âàðâàðîâ</Russian>
@@ -1726,7 +1726,7 @@
 но все изменения имени генерируются в Python.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_REV_DYNAMIC_NAMES_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_REV_DYNAMIC_NAMES</Tag>
 		<English>Dynamic Civ Names</English>
 		<French>Titre de Civ Dynamique</French>
 		<Spanish>Nombres de civilización dinámicos</Spanish>
@@ -1739,7 +1739,7 @@
 		<Russian>[H1]Распространение технологий[\H1][PARAGRAPH:2][BOLD]Содержание:[\BOLD][PARAGRAPH:2]С данной активной настройкой цивилизации, которые сильно отстают в технологиях, но имеют много друзей, получат некоторые бесплатные очки исследования.[PARAGRAPH:2][BOLD]Как работает эта опция:[\BOLD][PARAGRAPH:2]Если некая цивилизация начинает заметно отставать от нескольких лидеров технологического развития, она получает шанс на научный прорыв. Всякий раз, когда такие страны значительно отстают, они получают бесплатные колбы для исследования всех доступных технологий. Количество бесплатных колбочек зависит от количества цивилизаций, с которыми они успели на этот момент установить контакт, от изученных ими технологий, и состояния их отношения. При этом шанс на получение солидных военных технологий снижен, поскольку цивилизации стараются хранить их в секрете. Если цивилизация отстает от горстки научных лидеров, они получат халявные доли процента исследования за ход. Если они отстают на дюжину или больше, то скорость еще больше возрастает.[PARAGRAPH:2]У распространения технологий есть ограничения, так что цивилизации не получают их бесплатно, а вынуждены сами делать последние, решающие исследования. Потолок дармовых колбочек и наук сравнительно низок в ранние эпохи и движется вверх по мере продолжения игровых эпох. Если наиболее передовая цивилизация-конкурент вырвалась далеко вперед, а страна-аутсайдер продолжает безнадежно отставать, в этом случае лимит временно отключается для того, чтобы удержать на плаву отсталые цивилизации.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_REV_TECH_DIFFUSION_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_REV_TECH_DIFFUSION</Tag>
 		<English>Tech Diffusion</English>
 		<Spanish>Difusión tecnológica</Spanish>
 		<Russian>Ðàñïðîñòðàíåíèå òåõíîëîãèé</Russian>
@@ -1752,7 +1752,7 @@
 		[ICON_BULLET] [COLOR_HIGHLIGHT_TEXT]Alt + E[COLOR_REVERT] - Add custom entry to Autolog.[PARAGRAPH:2]By default Autolog is disabled in this modpack.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_AUTOLOG_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_AUTOLOG</Tag>
 		<English>Autolog</English>
 		<Russian>Àâòîïðîòîêîë</Russian>
 	</TEXT>
@@ -1977,7 +1977,7 @@
 		</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_BETTER_BTS_AI_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_BETTER_BTS_AI</Tag>
 		<English>Better BTS AI</English>
 		<Spanish>IA de BtS mejorada</Spanish>
 		<Russian>Óëó÷øåííûé èíòåëëåêò</Russian>
@@ -1987,7 +1987,7 @@
 		<English>by Almighty Theo (and heavily modified by EmperorFool)[PARAGRAPH:2]Better Espionage Screen allows for more civilizations to be shown within the Espionage Screen, as well as vital information being color coded. From within the BUG Options Screen you can turn off color coding for ratios, as well as revert back to the original version of the Espionage Screen.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_BETTER_ESPIONAGE_SCREEN_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_BETTER_ESPIONAGE_SCREEN</Tag>
 		<English>Better Espionage Screen</English>
 		<French>Ecran d'Espionnage amélioré</French>
 		<Spanish>Consejero de Espionaje mejorado</Spanish>
@@ -2022,7 +2022,7 @@
 	[ICON_BULLET]Обновление Аркополиса до Аркополиса под куполом и, наконец, до города с продвинутым щитом. Строительная аркология также устаревает с батареями ПВО, которые постепенно выводятся за пределы города.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_BUILDING_UPGRADE_LINES_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_BUILDING_UPGRADE_LINES</Tag>
 		<English>Building Upgrade Lines</English>
 		<French>Chaînes d'Amélioration des Bâtiments</French>
 		<Spanish>Reemplazo de edificios</Spanish>
@@ -2060,7 +2060,7 @@
 минимальное количество золота до срабатывания оповещения.[PARAGRAPH:2][BOLD]Победа:[\BOLD][PARAGRAPH:2][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Предел доминирования: Население[COLOR_REVERT] - Если вы собираетесь одержать победу Доминированием по населению, вы можете установить нужный процент от этого предела до того, как сработает оповещение.[PARAGRAPH:2][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Предел доминирования: Территория[COLOR_REVERT] - Если вы собираетесь одержать победу Доминированием по величине территории, вы можете установить нужный процент от этого предела до того, как сработает оповещение.[PARAGRAPH:2]На экране BUG-опций во вкладке Alerts вы можете проверить, какие оповещения вы хотите или не желаете отображать в начале каждого хода.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_CIV4LERTS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_CIV4LERTS</Tag>
 		<English>Civ4lerts</English>
 		<French>Civ4lertes</French>
 		<Russian>Ñèñòåìà îïîâåùåíèé</Russian>
@@ -2351,7 +2351,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 [NEWLINE]Ïîìíèòå: åñëè ó âàñ âîçíèêëè ïðîáëåìû, êàêóþ èç ïàðàäèãì âûáðàòü, ïðîñòî âñïîìíèòå èñòîðèþ. Âåäü ìû ó÷èìñÿ íà ñâîèõ óñïåõàõ è íàøèõ îøèáêàõ!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_CIVICS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_CIVICS</Tag>
 		<English>Overhauled Civics</English>
 		<French>Doctrines Remaniées</French>
 		<German>Überarbeitete Gesellschaftsformen</German>
@@ -2364,7 +2364,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<French>Certains bâtiments de ce mod requiert de choisir une Doctrine spécifique pour être construits et utilisés</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_CIVIC_SPECIFIC_BUILDINGS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_CIVIC_SPECIFIC_BUILDINGS</Tag>
 		<English>Civic Specific Buildings</English>
 		<French>Bâtiments spécifiques aux Doctrines</French>
 		<Spanish>Edificios específicos de principios</Spanish>
@@ -2375,7 +2375,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<English>In Caveman2Cosmos all the improvements have been gone through drastic changes. First of all there's plenty of new improvement types and secondly all the improvements gain extra bonuses from later era techs and/or civics. One other major change how improvements work is that many improvements no longer require you to clear out forests or jungle from the plot before you can build the improvement. This means that, for example, [LINK=IMPROVEMENT_MINE]Mines[\LINK] can be built on all forest plots before you research [LINK=TECH_BRONZE_WORKING]Bronze Working[\LINK] and in fact Mine does get extra hammer when the plot has forest! Improvements like [LINK=IMPROVEMENT_FARM]farms[\LINK], [LINK=IMPROVEMENT_COTTAGE]cottages[\LINK] and [LINK=IMPROVEMENT_PLANTATION]plantation[\LINK] still require you to cut down the forests or jungles.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_IMPROVEMENTS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_IMPROVEMENTS</Tag>
 		<English>Improvements</English>
 		<Spanish>Mejoras</Spanish>
 		<Russian>Îáúåêòû</Russian>
@@ -2385,7 +2385,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<English>Limited Religions is a game feature which allows each player to found only one religion. In Caveman2Cosmos this setting is off by default but if you want to use this feature you can enable it from [COLOR_HIGHLIGHT_TEXT]BUG options[COLOR_REVERT] by pressing [COLOR_HIGHLIGHT_TEXT]CTRL-ALT-O[COLOR_REVERT] and choosing RevDCM option page.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_LIMITED_RELIGION_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_LIMITED_RELIGION</Tag>
 		<English>Limited Religions</English>
 		<Spanish>Religiones limitadas</Spanish>
 		<Russian>Ëèìèò ðåëèãèé</Russian>
@@ -2395,7 +2395,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<English>Rise of Mankind mod adds new terrain type [LINK=TERRAIN_MARSH]Marsh[\LINK] and new terrain feature [LINK=FEATURE_SWAMP]Peat Bog[\LINK]. Because of these terrain changes, the regular mapscripts from Civ 4, Warlords and from Beyond the Sword won't work correctly. For this reason all the default and other custom mapscripts have been disabled and all those mapscripts have been converted to work with Rise of Mankind mod. All the changed mapscripts start with the text "RoM_", if the mapscript you are trying to use does not have this prefix, you might encounter problems when game is generating the map. Some converted mapscripts are still unable to generate Marsh terrain (these require still some python "fixes" before they can place Marsh terrain) but new terrain feature Peat Bog should appear on all maps since it is set to appear also on tundra.[PARAGRAPH:2]Rise of Mankind adds 2 new map sizes: Giant and Gigantic. These maps are extra large and should be tried only on high end computers. There are still some issues with these new map sizes, meaning that some mapscripts won't work correctly for these new map sizes and the script won't place terrain correctly - more advanced mapscripts, like Smartmap, can handle these new map sizes without problems - if you encounter problems on Giant and Gigantic mapsizes on certain mapscripts, I recommend using max Huge map size.[PARAGRAPH:2]Basic mapscripts are shown in list when you click Single Player and then Play Now. Advanced mapscripts can be used in Custom Game.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_MAPSCRIPTS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_MAPSCRIPTS</Tag>
 		<English>Mapscripts</English>
 		<Spanish>Generadores de mapas</Spanish>
 		<Russian>Ãåíåðàòîð êàðò</Russian>
@@ -2405,7 +2405,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_MAPS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_MAPS</Tag>
 		<English>Maps and Scenarios</English>
 		<Spanish>Mapas y escenarios</Spanish>
 		<Russian>Êàðòû è ñöåíàðèè</Russian>
@@ -2432,7 +2432,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		The modules can be found from folder [COLOR_HIGHLIGHT_TEXT]'Caveman2Cosmos\Assets\Modules\Custom ArtStyles'[COLOR_REVERT]. To disable the module(s) just move civ specific folders with their subfolders from Custom ArtStyles -folder to folder [COLOR_HIGHLIGHT_TEXT]'Caveman2Cosmos\Assets\Unloaded Modules\Custom ArtStyles'[COLOR_REVERT]. After you have moved the folders and reloaded the mod, the game will skip loading these modules. To enable the modules again, just move them back to the original folder.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARTSTYLES_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARTSTYLES</Tag>
 		<English>Modules - Civ Specific UnitArtStyles</English>
 		<Spanish>Módulo - Estilos artísticos de unidad específicos</Spanish>
 		<Russian>Îïöèÿ - Íàöèîíàëüíûé ñòèëü</Russian>
@@ -2442,7 +2442,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<English>This module enhances Christianity religion by adding 3 knightly orders for it. The orders are Hospitaller, Templar and Teutonic Knightly orders. Each of these have building or national wonder and Great Wonder. These buildings are required for training each Order's unit types. The module is disabled by default. The module can be enabled by moving Holy Wars folder from 'Caveman2Cosmos\Assets\Unloaded Modules' folder to 'Caveman2Cosmos\Assets\Modules'</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_MODULE_HOLY_WARS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_MODULE_HOLY_WARS</Tag>
 		<English>Module - Holy Wars</English>
 		<Spanish>Módulo - Cruzadas</Spanish>
 		<Russian>Îïöèÿ - Ñâÿùåííûå âîéíû</Russian>
@@ -2452,7 +2452,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<English>Caveman2Cosmos comes with Static Leaderheads module. This module is entirely optional and is off by default. What it does is that it changes all default Beyond the Sword leaderheads (50 of them) to static versions ie. to versions which do not have animations. If enabled this speeds up the load times of leaderheads and game should use less graphical memory so this might help to late era memory allocation faults.[PARAGRAPH:2][BOLD]How to use[\BOLD][PARAGRAPH:2]The module can be found from folder [COLOR_HIGHLIGHT_TEXT]'Caveman2Cosmos\Assets\Unloaded Modules'[COLOR_REVERT]. To enable the module just move folder Static (with its subfolders) to folder [COLOR_HIGHLIGHT_TEXT]'Caveman2Cosmos\Assets\Modules'[COLOR_REVERT].</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_MODULE_STATIC_LH_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_MODULE_STATIC_LH</Tag>
 		<English>Module - Static Leaderheads</English>
 		<Spanish>Módulo - Líderes estáticos</Spanish>
 		<Russian>Îïöèÿ - Ñòàòè÷åñêèå ëèäåðû</Russian>
@@ -2470,7 +2470,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		All of these units are defensive units only and they can not capture cities. They also have hidden nationality so you can defend friendly neighbours during their wars without declaring war to anyone. The module can be disabled by moving UN Mission and all UN units from 'Caveman2Cosmos\Assets\Modules' folders to 'Caveman2Cosmos\Assets\Unloaded Modules'</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_MODULE_UN_FORCES_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_MODULE_UN_FORCES</Tag>
 		<English>Module - UN Peacekeeping Forces</English>
 		<Spanish>Módulo - Fuerzas de paz de la ONU</Spanish>
 		<Russian>Îïöèÿ - Ìèðîòâîðöû</Russian>
@@ -2480,7 +2480,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<English>[H1]No Building Graphics - module[\H1][PARAGRAPH:2]No Building Graphics module allows player to easily disable most regular building graphics in order to save RAM and stress less computer's graphics card. This module is off by default but you can enable it by moving NoBuildingGraphics folder (with its contents) from folder 'Caveman2Cosmos\Assets\Unloaded Modules\Custom Buildings' to folder 'Caveman2Cosmos\Assets\Modules\Custom Buildings'. If you using low end computer or are experiencing Memory Allocation Faults at some point of the game, you should try enabling this module as with it the game will use less memory.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_NO_BUILDING_GRAPHICS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_NO_BUILDING_GRAPHICS</Tag>
 		<English>Module - No Building Graphics</English>
 		<Spanish>Módulo - Sin gráficos de edificios</Spanish>
 		<Russian>Îïöèÿ - Áåç ãîðîäñêîé ãðàôèêè</Russian>
@@ -2494,7 +2494,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Russian>[H1]Ðåëèãèè[\H1][PARAGRAPH:2]Ìîä Caveman2Cosmos äîáàâëÿåò 4 íîâûå ðåëèãèè Äðåâíåãî Âîñòîêà: Êåìåòèçì, Ýëëèíèçì, Íàãóàëèçì è Çîðîàñòðèçì. Êðîìå òîãî, â ìîäå âñå ðåëèãèè ñòàíîâÿòñÿ áîëåå óíèêàëüíûìè, ÷òî îçíà÷àåò, ÷òî ìîäèôèêàòîðû òîðãîâëè, íàóêè, êóëüòóðû, îïûò âîåííûõ þíèòîâ â êàæäîé ðåëèãèè îòëè÷àþòñÿ îò äðóãèõ êîíôåññèé. Â îñíîâå èçìåíåíèé â ìîäå îòíîñèòåëüíî ðåëèãèè ëåæèò Eusebius World Religion Revival mod (äëÿ àääîíà Warlords).[PARAGRAPH:2][NEWLINE][TAB][ICON_BULLET]Íîâûå ðåëèãèè ïîçâîëÿþò ñòðîèòü íîâûé òèï êóëüòîâûõ ñîîðóæåíèé - Ïàíòåîíû, êîòîðûå â äðåâíîñòè è â àíòè÷íîñòè çàìåíÿþò áîëåå ïîçäíèå Ñîáîðû;[NEWLINE][TAB][ICON_BULLET]Áîëüøèíñòâî ðåëèãèé òåïåðü èìåþò êàê ìèíèìóì 2 ðåëèãèîçíûõ Âåëèêèõ ×óäà ñâåòà;[NEWLINE][TAB][ICON_BULLET]Äëÿ íåêîòîðûõ ðåëèãèé òàêæå ïðåäóñìîòðåíû Íàöèîíàëüíûå ×óäåñà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_RELIGION_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_RELIGION</Tag>
 		<English>Religions</English>
 		<Spanish>Religiones</Spanish>
 		<Russian>Ðåëèãèè</Russian>
@@ -2510,7 +2510,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Russian>[H1]Ðåëèãèîçíàÿ ïîáåäà[\H1][PARAGRAPH:2]Â ìîäå Caveman2Cosmos èìåþòñÿ íîâûå óñëîâèÿ äëÿ îäåðæàíèÿ Ðåëèãèîçíîé ïîáåäû ïî ñðàâíåíèþ ñ îðèãèíàëüíîé Civilization 4 Beyond the Sword. Èãðîê, æåëàþùèé äîñòè÷ü Ðåëèãèîçíîé ïîáåäû, äîëæåí âûïîëíèòü 5 ìèíèìàëüíûõ òðåáîâàíèé (î íèõ íèæå) äëÿ äîñòèæåíèÿ ïîëíîãî êîíôåññèîíàëüíîãî åäèíñòâà è íåïðåðåêàåìîãî àâòîðèòåòà è âëèÿíèÿ.[NEWLINE][NEWLINE][ICON_BULLET]Èãðîê äîëæåí èìåòü îôèöèàëüíóþ ãîñóäàðñòâåííóþ ðåëèãèþ;[NEWLINE][NEWLINE][ICON_BULLET]Ãîñóäàðñòâåííàÿ ðåëèãèÿ äîëæíà èñïîâåäîâàòüñÿ íå ìåíåå, ÷åì â 80% ãîðîäîâ öèâèëèçàöèè èãðîêà;[NEWLINE][NEWLINE][ICON_BULLET]Íè â îäíîì èç ãîðîäîâ èãðîêà íå äîëæíî áûòü íèêàêîé èíîé ðåëèãèè, êðîìå ãîñóäàðñòâåííîé;[NEWLINE][NEWLINE][ICON_BULLET]Ãëîáàëüíîå ðåëèãèîçíîå âëèÿíèå äîëæíî äîñòèãàòü ìèíèìàëüíîãî çíà÷åíèÿ, ðàâíîãî 75%;[NEWLINE][NEWLINE][ICON_BULLET]Èãðîê äîëæåí îáÿçàòåëüíî èìåòü ãëàâíóþ ñâÿòûíþ, ïðåäóñìîòðåííîé â åãî ãîñóäàðñòâåííîé ðåëèãèè, ëèáî ñîáîð, åñëè òàêîâîé íå èìååòñÿ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_RELIGIOUS_VICTORY_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_RELIGIOUS_VICTORY</Tag>
 		<English>Religious Victory</English>
 		<Spanish>Victoria religiosa</Spanish>
 		<Russian>Ðåëèãèîçíàÿ ïîáåäà</Russian>
@@ -2521,7 +2521,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Russian>[H1]Íàó÷íàÿ ïîáåäà[\H1][PARAGRAPH:2]Ìîä Caveman2Cosmos èìååò íîâûå óñëîâèÿ äëÿ ò.í. íàçûâàåìîé Íàó÷íîé Ïîáåäû. Äëÿ åå äîñòèæåíèÿ èãðîê äîëæåí èçó÷èòü ïîñëåäíèå èçîáðåòåíèÿ â äåðåâå òåõíîëîãèé, à çàòåì ïîñòðîèòü äîñòàòî÷íîå êîëè÷åñòâî Ðàéñêèõ ñàäîâ äëÿ ïîëó÷åíèÿ äîñòóïà ê âîçìîæíîñòè ñòðîèòü Âåëèêîå ×óäî ''Âðàòà Âîçíåñåíèÿ''. Êàê òîëüêî èãðîê çàâåðøèò ñòðîèòåëüñòâî ýòîãî ×óäà, îí îäåðæèâàåò Íàó÷íóþ Ïîáåäó â èãðå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_SCIENTIFIC_VICTORY_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_SCIENTIFIC_VICTORY</Tag>
 		<English>Scientific Victory</English>
 		<Spanish>Victoria científica</Spanish>
 		<Russian>Íàó÷íàÿ ïîáåäà</Russian>
@@ -2532,7 +2532,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<French>par TheLopez, modifié par Ruff_hi[PARAGRAPH:2]Ce mod d'amélioration de l'interface groupe les spécialistes au lieu de les afficher les uns à côté des autres.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_SPECIALIST_STACKER_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_SPECIALIST_STACKER</Tag>
 		<English>Specialist Stacker</English>
 		<French>Regroupement de Spécialistes</French>
 		<Spanish>Apilamiento de especialistas</Spanish>
@@ -2544,7 +2544,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Russian>[H1]Супершпионы[\H1][NEWLINE]автор Trojan Sheep[PARAGRAPH:2]У шпионов теперь есть Квалификации для улучшения их способностей. Подробности смотрите ниже.[PARAGRAPH:2]У шпионов теперь есть доступ к специальной миссии убийства. Это позволяет им уничтожать одиночные отряды за очки шпионажа, но сам не возвращается обратно в столицу после завершения миссии. Любое подразделение может быть уничтожено, если угодит в ловушку в одиночку. Стоимость миссии зависит как от количества молотков, так и от уровня отряда. Сложность миссии основана исключительно на уровне жертвы.[PARAGRAPH:2]Шпионы получают очки опыта от выполнения заданий (масштабируется по сложности), поимки вражеских шпионов и наличия в городе Разведслужбы (2) или Скотланд-Ярда (3).[PARAGRAPH:2]Новый счетчик шпионажа отображается рядом с именами игроков на табло.[PARAGRAPH:2]Теперь вы можете саботировать строительства зданий в городе независимо от того, есть ли в нем памятник.[PARAGRAPH:2]Теперь вы не всегда получаете штрафы за «недавние миссии».[PARAGRAPH:2][BOLD]Квалификации:[\BOLD][PARAGRAPH:1][ICON_BULLET]Хитрость I-III[PARAGRAPH:1][ICON_BULLET]Безопасность I-III[PARAGRAPH:1][ICON_BULLET]Импровизация I-V[PARAGRAPH:1][ICON_BULLET]Логистика I-III[PARAGRAPH:1][ICON_BULLET]Лояльность[PARAGRAPH:1][ICON_BULLET]Подстрекатель I-III[PARAGRAPH:1][ICON_BULLET]Алхимик I-III[PARAGRAPH:1][ICON_BULLET]Мастер побега I-II</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_SUPER_SPIES_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_SUPER_SPIES</Tag>
 		<English>Super Spies</English>
 		<Spanish>Superespías</Spanish>
 		<Russian>Ñóïåðøïèîíû</Russian>
@@ -2554,7 +2554,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<English>by ruff_hi[PARAGRAPH:2]This document explains the unit naming convention used in the BUG Mod. It documents what is meant to happen, not necessarily what actually happens. If you find a situation where this document differs from the unit name actually generated within the game, then please report it as a bug.[PARAGRAPH:2]Pressing [BOLD]Alt+Ctrl+N[\BOLD], you'll access a test window, where you can insert a naming convention and see the result applied to the first unit type and the first city you have built (this is why if you have not yet built a unit and a city, the test windows will not work). In the test window there are two "OK" buttons: one of them uses (and increases) the counter, the other doesn't: if you use the counter, the numbers "used" in the test window will not be available anymore in the game for that unit type (unless reloading the game, of course); on the other hand, to test some complex naming conventions, it is useful to use the counter.[PARAGRAPH:2][BOLD]Instructions[\BOLD][PARAGRAPH:2]This mod can be configured in the Unit Naming tab of the BUG Options Screen ([BOLD]Alt+Ctrl+O[\BOLD]). First of all, you have to enable it selecting the 'Enabled' checkbox. Then, you can insert your general naming convention in the 'Default' text box and specific naming conventions for each unit type in the text boxes below it; of course, these specific naming conventions will have an higher priority over the general one.[PARAGRAPH:2]You can also select the 'Use Advanced Methods' checkbox to enable the use of the advanced Era-related setting in the '[BOLD]Adv Unit Naming.ini[\BOLD]' file (to set or change these naming conventions, you have to manually edit this file); when set and enabled, these naming conventions have the highest priority over the general and the unit type ones.[PARAGRAPH:2]See '...Rise of Mankind\Docs from combined mods\BUG Mod Help-ENG.chm' for more info about Unit Naming. The help file describes in great detail what codes you can use to customize your unit names.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_UNIT_NAMING_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_UNIT_NAMING</Tag>
 		<English>Unit Naming</English>
 		<Spanish>Nomenclatura de unidades</Spanish>
 		<Russian>Èìåíà þíèòîâ</Russian>
@@ -2564,7 +2564,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<English>by asioasioasio[PARAGRAPH:2]This modification will extend the City Bar by around 25% it's normal size. This will allow for longer names many users experience when using translations of Civilization 4.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ROM_WIDER_CITY_BAR_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_ROM_WIDER_CITY_BAR</Tag>
 		<English>Wide City Bars</English>
 		<Spanish>Barras de ciudad más anchas</Spanish>
 		<Russian>Ðàñø. ãîðîäñêàÿ ïàíåëü</Russian>
@@ -2578,7 +2578,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Russian>[H1]Áåçæàëîñòíûå ïðîòèâíèêè[\H1][NEWLINE][TAB]Ýòà îïöèÿ ñäåëàåò êîìïüþòåðíûõ ïðîòèâíèêîâ íàìíîãî áîëåå èçîáðåòàòåëüíûìè è áîëåå íåïðèìèðèìûìè áîéöàìè, ÷åì â íîðìàëüíîì èëè àãðåññèâíîì ðåæèìå. ÈÈ áóäåò èñïîëüçîâàòü òåõíîëîãèè è çîëîòî, ÷òîáû íàíÿòü âîåííûõ ñîþçíèêîâ, ÷àñòî ðàçæèãàÿ ìàëåíüêèå ïîãðàíè÷íûå ñïîðû â íåèñòîâûå ìèðîâûå âîéíû, êîòîðûå â êîíå÷íîì ñ÷åòå áóäóò ðàáîòàòü íà èõ ïðåèìóùåñòâî. Îæèäàéòå íåîæèäàííûõ âûëàçîê, èëè, õóæå, ìîëíèåíîñíûå àòàêè íà ïëîõî çàùèùåííûå ïðèãðàíè÷íûå ãîðîäà è ïîãëîùåíèå ìåíüøèõ ãîðîäîâ-ãîñóäàðñòâ. ÈÈ áóäåò ïîìíèòü âàøè çëîóïîòðåáëåíèÿ äîâåðèåì áîëåå îñòðî; ýòî áîëåå ìóäðî ÷åì óìåðåòü áëàãîðîäíîé ñìåðòüþ è ñòàòü ñëåäóþùèì Áåíåäèêòîì Àðíîëüäîì. Íàêîíåö, ïîäîçðåâàéòå êàæäûé çàïðîñ ïðîòèâíèêà; îáû÷íûé çàïðîñ êàðòû ìîæåò ôàêòè÷åñêè áûòü ïîèñêîì áóäóùèõ ìåñò íàïàäåíèÿ, áóäòå ãîòîâû ê ïðåâåíòèâíîìó óäàðó.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_RUTHLESS_AI_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_RUTHLESS_AI</Tag>
 		<English>Ruthless AI</English>
 		<French>AI sans Merci</French>
 		<German>Skrupellose KI</German>
@@ -2595,7 +2595,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Russian>[H1]Îêðóæèòü è óíè÷òîæèòü[\H1][PARAGRAPH:2]Îêðóæèòü è óíè÷òîæèòü äîáàâëÿåò íîâûé áîåâîé ïðèçíàê, îäîáðÿÿ èãðîêîâ, îòðÿäû êîòîðûõ îêðóæàþò âðàæåñêèå þíèòû â ñðàæåíèè. Êîãäà áîëüøå ÷åì îäíî èç âàøèõ âîéñê îêðóæàåò âðàæåñêèé þíèò, îíè ïîëó÷àþò áîåâóþ ïðåìèþ ïðîòèâ âðàãà. ×åì áîëüøå þíèòîâ, îêðóæàþùèõ åãî, òåì áîëüøå ïðåìèÿ. Ýòî äåëàåò îñàäû ãîðîäîâ áîëåå ðåàëèñòè÷íûìè è ëåãêèìè äëÿ ïðîòèâíèêà, êîòîðûé ìîæåò ïîëíîñòüþ îêðóæèòü ãîðîä, ÷òîáû çàâîåâàòü åãî ðåàëèñòè÷íûì ñïîñîáîì. [PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_SAD_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_SAD</Tag>
 		<English>Surround and Destroy</English>
 		<French>Encercler et Détruire</French>
 		<German>Einkesselung</German>
@@ -2641,7 +2641,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Russian>[H1]Ìîðñêèå òîííåëè[\H1][PARAGRAPH:2]Ïîñëå èñëåäîâàíèÿ[LINK=TECH_CIVIL_ENGINEERING]Ãðàæäàíñêîãî ñòðîèòåëüñòâà[\LINK] èãðîêè ìîãóò ñòðîèòü ïîäâîäíûå òîííåëè, ÷òîáû ñîåäèíèòü êîíòèíåíòû äðóã ñ äðóãîì. Ýòè òîííåëè ïîçâîëÿþò þíèòàì ïåðåìåùàòüñÿ ïîä âîäîé è äîñòèãàòü çåìåëü, äëÿ ïîïàäàíèÿ â êîòîðûå ðàíåå òðåáîâàëñÿ ôëîò. Áóäüòå îñòîðîæíû, ìîðñêîé òîííåëü ìîæåò òàê æå ëåãêî èñïîëüçîâàòüñÿ äëÿ ëåãêîãî äîñòóïà âðàæåñêèõ âîéñê ê âàøèì ìàòåðèêîâûì ãîðîäàì â îáõîä âîåííî-ìîðñêîé îáîðîíû. [NEWLINE][NEWLINE][TAB][BOLD]Ñòðîèòåëüñòâî ìîðñêèõ òîííåëåé[\BOLD][NEWLINE][NEWLINE][ICON_BULLET]Ìîðñêèå òîííåëè òðåáóþò äîñòóïà ê [LINK=BONUS_STEEL_INGOTS]Ñòàëè[\LINK][NEWLINE][ICON_BULLET]Ìîðñêèå Òóííåëè ìîãóò áûòü ïîñòðîåíû òîëüêî [LINK=UNIT_WORKBOAT]Ðàáî÷èìè ëîäêàìè[\LINK], [LINK=UNIT_WORKBOAT_MODERN]Ìîäåðí. ðàá .ëîäêàìè[\LINK], è[LINK=UNIT_CONSTRUCT_SHIP]Ñòðîèòåëüíûìè ñóäàìè[\LINK].[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_SEA_TUNNELS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_SEA_TUNNELS</Tag>
 		<English>Sea Tunnels</English>
 		<French>Tunnels Aquatiques</French>
 		<German>Meerestunnel</German>
@@ -2709,7 +2709,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Russian>[H1]Îáúåäèíåííîå íàñòóïëåíèå[\H1][PARAGRAPH:2]Îòðÿä þíèòîâ ìîæíî áðîñèòü â áîé ïðîòèâ âðàæåñêîãî îòðÿäà. Âìåñòî ïîñëåäîâàòåëüíûõ ïîåäèíêîâ íà÷íåòñÿ ìàññîâîå ñðàæåíèå.[PARAGRAPH:2]Ïðè îáúåäèíåííîì íàñòóïëåíèè àâèàöèÿ ñîâåðøàåò áîåâîé âûëåò, àðòèëëåðèÿ îáñòðåëèâàåò ïðîòèâíèêà, ñòðåëêè (ëó÷íèêè è ò.ä.) àòàêóþò ñ äàëüíåé äèñòàíöèè, à þíèòû áëèæíåãî áîÿ ñðàæàþòñÿ íà ëèíèè ôðîíòà.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_STACK_ATTACK_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_STACK_ATTACK</Tag>
 		<English>Combined Arms Stack Attack</English>
 		<French>Attaque d'Armes Combinées</French>
 		<German>Kombinierter Einheiten-Stapelangriff</German>
@@ -2744,7 +2744,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Russian>[H1]Òåððàôîðìèðîâàíèå[\H1][PARAGRAPH:2]Ïîñëå èñëåäîâàíèÿ [LINK=TECH_WEATHER_CONTROL]Ïîãîäíîãî êîíòðîëÿ[\LINK], èãðîêè ìîãóò òåððàôîðìèðîâàòü ïëîõèå çåìëè â ïëîäîðîäíûå ïîëÿ. Ðàáî÷èå ïîëó÷àþò ñïîñîáíîñòü ê òåððàôîðìèðîâàíèþ è ìîãóò ïðåâðàòèòü õîëìû â ðàâíèíû, è â êîíå÷íîì ñ÷åòå, â ïîëÿ. Ýòî ïîçâîëèò Âàøèì ãîðîäàì ðàñòè, ïîñêîëüêó âàøà öèâèëèçàöèÿ äîñòèãàåò ñâîåãî ñîáñòâåííîãî ''Çîëîòîãî Âåêà."[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_TERRAFORMING_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_TERRAFORMING</Tag>
 		<English>Terraforming</English>
 		<French>Terraformation</French>
 		<Italian>Terraformazione</Italian>
@@ -2903,7 +2903,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Russian>Ðàäèóñ ãîðîäà äëÿ çäàíèé îçíà÷àåò, ÷òî íåêèé ðåñóðñ íóæåí â ïðåäåëàõ ìàêñèìàëüíîé ðàáî÷åé çîíû ãîðîäà. Ýòî îçíà÷àåò, ÷òî â ïðåäåëàõ ðàáî÷åé çîíû ãîðîäà äîëæåí áûòü ïðîëîæåí òîðãîâûé ïóòü äî êëåòêè ñ ðåñóðñîì.[PARAGRAPH:2]Çäàíèÿ â ãîðîäå òàêæå ìîãóò äàòü áîíóñû, íàïðèìåð, òàáóí ëîøàäåé, â ñëó÷àå îñâîåíèÿ êëåòêè ñ ñîîòâåòñòâóþùèì ðåñóðñîì ïðåäîñòàâèò áîíóñ ëîøàäåé è ãðàôó â ðàäèóñå ãîðîäà.[PARAGRAPH:2]Íåñêîëüêî ãîðîäîâ ìîãóò èìåòü îäèíàêîâóþ êàðòó ðåñóðñîâ â èõ ðàäèóñå, íî ëèøü îäèí ìîæåò ðàáîòàòü íà ó÷àñòêå.[PARAGRAPH:2]Èçíà÷àëüíî ðàáî÷èé ðàäèóñ ãîðîäà âûãëÿäèò êàê Áîëüøîé Êðåñò, íî ïî ìåðå ðîñòà êóëüòóðíûõ ãðàíèö ãîðîäà, ðàñòåò è åãî ðàáî÷èé ðàäèóñ (äî 3 êëåòîê îò öåíòðà).[PARAGRAPH:2]Äàííîå ïðàâèëî ðàáîòàåò, åñëè òîëüêî âû èñïîëüçóåòå îïöèþ Ðåàëèñòè÷íûé Ðîñò Êóëüòóðíûõ ãðàíèö.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_VICINITY_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_VICINITY</Tag>
 		<English>Vicinity</English>
 		<Russian>Ãîðîäñêîé ðàäèóñ</Russian>
 	</TEXT>
@@ -2932,7 +2932,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Russian>[H1]Âèäîâûå ýêðàíû[\H1][PARAGRAPH:2]×òîáû çàäåéñòâîâàòü â èãðå âèäîâûå ýêðàíû, ïåðåéäèòå â ôàéë Assets/XML/ParallelMaps_Globaldefines.xml, è èçìåíèòå çíà÷åíèå â ñòðîêå ENABLE_VIEWPORTS ñ 0 íà 1. Âèäîâîé ýêðàí - ýòî îêíî íà êàðòå (íà èãðîâîì ýêðàíå), îáîñîáëåííîå îò îñòàëüíîé ÷àñòè êàðòû ìèðà, çà ïðåäåëàì êîòîðîãî çàãðóæàåòñÿ ëèøü òîëüêî òî, ÷òî íóæíî äëÿ çàãðóçêè ìèíèìàëüíûõ ãðàôè÷åñêèõ ðåñóðñîâ. Âèäîâîé ýêðàí ìîæíî ïåðåìåùàòü ïî æåëàíèþ èãðîêà (èëè àâòîìàòè÷åñêè, íàïðèìåð, êîãäà çà åãî ïðåäåëàìè õîä ïåðåäàåòñÿ ñâîáîäíîìó þíèòó, îæèäàþùåìó ñâîåé î÷åðåäè), ãðàíèöû êîòîðîãî íåâèäèìû äëÿ ÈÈ, êîòîðûé ïî óìîë÷àíèþ âñåãäà âèäèò îäíó áîëüøóþ êàðòó ìèðà.[NEWLINE][NEWLINE]Ãëàâíîå åãî ïðåèìóùåñòâî çàêëþ÷àåòñÿ â òîì, ÷òî èãðà çàíèìàåò çíà÷èòåëüíî ìåíüøå ðåñóðñîâ ÎÇÓ äëÿ çàïóñêà íà áîëüøèõ êàðòàõ, òàê ÷òî â êîíå÷íîì èòîãå ýòî äîëæíî ðåøèòü ïðîáëåìó âûëåòîâ íà ðàáî÷èé ñòîë èç-çà óòå÷êè ïàìÿòè. Âìåñòå ñ òåì, âèäîâûå ýêðàíû èìåþò è ñâîè íåóäîáñòâà, à èìåííî íåîáõîäèìîñòü îæèäàòü ïîäçàãðóçêè êàðòû ïðè åãî ïåðåìåùåíèè, êîãäà âû ïåðåêëþ÷àåòåñü íà îæèäàþùèé ïðèêàç þíèò çà åãî òåêóùèìè ãðàíèöàìè, à òàêæå ðàçàåòå ïðèêàçû ïðè çàïðîñàõ î ñòðîèòåëüñòâå çäàíèé è þíèòîâ â ãîðîäàõ çà ãðàíèöåé ÂÝ. Êàê ïðàâèëî, ïðè ïåðåêëþ÷åíèè âèäîâîãî ýêðàíà íà äð. àêòèâíûé êóñî÷åê ìèðîâîé êàðòû èãðà ïîäòîðìàæèâàåò íà íåñêîëüêî ñåêóíä. Êðîìå òîãî, èãðà âáëèçè êðàåâ ÂÝ ìîæåò âûãëÿäåòü íåñêîëüêî ''ñòðàííîé'', ïîñêîëüêó òåêñòóðû ìíîãèõ îáúåêòîâ ìîãóò âûãëÿäåòü ''îáðóáëåííûìè''. Àâòî-ïåðåêëþ÷åíèÿ ÂÝ â íåêîòîðûõ ïîäîáíûõ ñèòóàöèÿõ ÷àñòè÷íî ìîãóò ðåøèòü óêàçàííóþ ïðîáëåìó.[NEWLINE][NEWLINE]Ïðè âêëþ÷åííîì âèäîâîì ýêðàíå èãðà ïåðâîíà÷àëüíî âûãëÿäèò òàêæå êàê è îáû÷íî. Åäèíñòâåííîå ñóùåñòâåííîå ðàçëè÷èå áóäåò çàêëþ÷àòüñÿ â òîì, ÷òî êàäðèðóþùàÿ ðàìêà íà êàðòå áóäåò âñÿêèé ðàç ïåðåçàãðóæàòüñÿ, åñëè ïîñòóïèò çàïðîñ íà êîìàíäó äëÿ þíèòà èëè ãîðîäà çà ïðåäåëàìè ÂÝ (íà ñàìîì äåëå ÷àñòîòó ïåðåìåùàíèé ýòîé ðàìêè îïðåäåëÿåò ïàðàìåòð VIEWPORT_FOCUS_BORDER ðåãóëèðóåìûé â BUG-mode). Åñëè âû õîòèòå ñîêðàòèòü ÷ðåçìåðíî ÷àñòîå ''ïðûãàíèå'' ÂÝ è íàäîåäëèâûå ïîäòîðìàæèâàþùèå ïåðåçàãðóçêè, òî ýòó ïðîáëåìó ìîæíî êóïèðîâàòü ïëàíèðîâàíèåì çàäàíèé äëÿ ãîðîäîâ. Åñëè âû âûñòðîèòå î÷åðåäü äëÿ çäàíèé íà íåñêîëüêî õîäîâ âïåðåä, òî ÷àñòîòà ïåðåìåùåíèé ÂÝ ðåçêî ñîêðàòèòñÿ è áóäåò çàòðàãèâàòü òîëüêî þíèòîâ. Ñóùåñòâóþò òàêæå åùå äâà ñïîñîáà ïåðåêëþ÷èòüñÿ â íóæíûé êîíêðåòíûé ãîðîä çà ïðåäåëàìè âèäîâîãî ýêðàíà:[NEWLINE]1)Àêòèâèðîâàòü èìÿ íóæíîãî ïîñåëåíèÿ íà ïàíåëè Ãëàâíîãî Ñîâåòíèêà, ïîñëå ÷åãî ÂÝ áóäåò öåíòðèðîâàòüñÿ íà íåì;[NEWLINE]2) Âûáðàòü ëþáîé îòðÿä íà ïàíåëè Âîåííîãî ñîâåòíèêà ñ öåëüþ ïåðåìåñòèòüñÿ ê íåìó, ïîñêîëüêó òàì ñîõðàíÿåòñÿ ïîëíàÿ ìèðîâàÿ êàðòà ñ ïîäñâåòêîé âñåõ þíèòîâ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_VIEWPORTS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_VIEWPORTS</Tag>
 		<English>Viewports</English>
 		<French>Vue partielle</French>
 		<Spanish>Vista parcial</Spanish>
@@ -2945,7 +2945,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Russian>За исключением вулканов, представленных среди [LINK=CONCEPT_NATURAL_WONDERS]Чудес Природы[\LINK], вулканы являются активным элементом карты. Они появляются из ниоткуда, извергаются, замирают и снова вырываются, только чтобы засыпать и в конечном итоге окончательно потухнуть. Появление, извержение, покой и вымирание контролируются системой событий BtS. Для них есть две графики: активный вулкан [LINK=FEATURE_VOLCANO_ACTIVE]действующий вулкан[\LINK] и [LINK=FEATURE_VOLCANO_DORMANT]спящий вулкан[\LINK].[PARAGRAPH:2]При [BOLD]извержении[\BOLD] вулкана он может уничтожать улучшения на карте и наносить урон отрядам, находящимся рядом с ним. Это не относится к городам или подразделениям в городе. Когда он активен, каждый участок вокруг вулкана производит дополнительную пищу. Этот бонус теряется, когда вулкан спит. Если вулкан потух, на участке появляются залежи обсидиана или серы.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_VOLCANO_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_VOLCANO</Tag>
 		<English>Volcano</English>
 		<German>Vulkane</German>
 		<Russian>Вулкан</Russian>
@@ -3018,7 +3018,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	[NEWLINE][BOLD]Глубина[\BOLD] будет влиять на то, когда и какие улучшения могут быть построены, а также на тип и стиль морского боя, который может произойти по ходу игры.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_WATER_TERRAINS_TEXT</Tag>
+		<Tag>TXT_KEY_CONCEPT_WATER_TERRAINS</Tag>
 		<English>Water Terrain</English>
 		<German>Gelände (Wasser)</German>
 		<Russian>Водные участки</Russian>

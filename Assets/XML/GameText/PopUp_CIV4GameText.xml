@@ -95,7 +95,7 @@
 		<Russian>Новый культ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_FAVORITE_RELIGION_TEXT</Tag>
+		<Tag>TXT_KEY_POPUP_FAVORITE_RELIGION</Tag>
 		<English>A wandering man has arrived in your capital, and he's talking about a religion, founded in the recent years in a far away land. The new religion is called %s1, and the wise man is so amazed by this religion, that he has decided to found a new school in your city to teach it to your citizens.</English>
 		<French>Un vagabond est arrivé dans votre capitale, et il parle d'une religion, fondée récemment dans un pays lointain. La découverte de cette nouvelle religion appelée %s1 a convaincu cet homme de fonder une école dans votre ville, pour y enseigner les préceptes à vos cityoens.</French>
 		<German>Ein Reisender hat deinen Palast erreicht, und er erzählt von einer Religion, die in den letzten Jahren in einem fernen Land begründet wurde. Die neue Religion wird %s1 genannt, und der weise Mann ist so sehr von ihr begeistert, dass er beschlossen hat, eine neue Schule in euerer Stadt zu errichten, um eure Bürger diese Religion zu lehren.</German>
