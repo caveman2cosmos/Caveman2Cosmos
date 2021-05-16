@@ -10,7 +10,7 @@
 		<Russian>[ICON_BULLET]Улучшится до [LINK=%s1_ImpType]%s2_ImpName[\LINK] через %d3_Num [NUM2:ход:ходов]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUILDS_FASTER_WITH</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_BUILDS_FASTER_WITH</Tag>
 		<English>Builds %d1_Mod%% faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Mod%% schneller mit Bonusgut [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
@@ -19,7 +19,7 @@
 		<Russian>Строит %d1_Mod%% быстрее, если есть [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DISABLES</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_DISABLES</Tag>
 		<English>[ICON_BULLET]Removes access to [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) from the city.</English>
 		<French>[ICON_BULLET]Interdit l'accès au bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) de la ville.</French>
 		<German>[ICON_BULLET]Entfernt den Bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) aus der Stadt.</German>
@@ -28,7 +28,7 @@
 		<Russian>[ICON_BULLET]Делает невозможным доступ к [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) в этом городе.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DOUBLE_SPEED_WITH</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_DOUBLE_SPEED_WITH</Tag>
 		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
@@ -37,7 +37,7 @@
 		<Russian>Удвоенная скорость производства, если есть [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FREE_IN_CITY</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_IN_CITY</Tag>
 		<English>[ICON_BULLET]Free [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] in Every City</English>
 		<French>[ICON_BULLET]1 [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] dans chaque ville</French>
 		<German>[ICON_BULLET]freies Gebäude [LINK=%s1_NameType][COLOR_BUILDING_TEXT]%s2_Name[COLOR_REVERT][\LINK] in jeder Stadt</German>
@@ -46,7 +46,7 @@
 		<Russian>[ICON_BULLET]Бесплатный [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] в каждом городе</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FREE_SPECIALIST</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIALIST</Tag>
 		<English>[ICON_BULLET]%D1_Change Free [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]%D1_Change Donne un [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] gratuit</French>
 		<German>[ICON_BULLET]%D1_Change freien Spezialisten [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</German>
@@ -55,7 +55,7 @@
 		<Russian>[ICON_BULLET]%D1_Change бесплатного [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FROM_IN_ALL_CITIES</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_FROM_IN_ALL_CITIES</Tag>
 		<English>[SPACE]from [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] in All Cities</English>
 		<French>[SPACE]de tous les [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] dans toutes les villes</French>
 		<German>[SPACE]durch [LINK=%s1_SpclstType]%s2:8_SpclstName[\LINK] in allen Städten</German>
@@ -64,7 +64,7 @@
 		<Russian>[SPACE]от [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] во всех городах</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LIKELY_TO_GENERATE</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_LIKELY_TO_GENERATE</Tag>
 		<English>[ICON_BULLET]City more likely to generate [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]La ville a plus de chance de générer : [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Erhöhte Wahrscheinlichkeit der Erzeugung von [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT] in der Stadt</German>
@@ -73,12 +73,12 @@
 		<Russian>[ICON_BULLET]Город с большей вероятностью генерирует [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NUKE_EXPLOSION_CHANCE</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_NUKE_EXPLOSION_CHANCE</Tag>
 		<English>[ICON_BULLET]Chance of Nuclear Meltdown: %d1_chance in 10000 each round</English>
 		<Russian>[ICON_BULLET]Вероятность ядерного взрыва: .%d1_chance%% на каждый раунд</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OBSOLETE_WITH</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_OBSOLETE_WITH</Tag>
 		<English>[COLOR_WARNING_TEXT]Obsolete with [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Obsolète avec : [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]veraltet durch die Technologie [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
@@ -87,11 +87,11 @@
 		<Russian>[COLOR_WARNING_TEXT]Устаревает из-за [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OBSOLETE_WITH_TO</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_OBSOLETE_WITH_TO</Tag>
 		<English>[SPACE](Turns into [LINK=%s1]%s2[\LINK])</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROVIDES</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES</Tag>
 		<English>[ICON_BULLET]Provides %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</English>
 		<French>[ICON_BULLET]Fournit %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</French>
 		<German>[ICON_BULLET]stellt das Bonusgut [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon) zur Verfügung (%d1_Num Einheit)</German>
@@ -100,7 +100,7 @@
 		<Russian>[ICON_BULLET]Дает %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROVIDES_POWER_WITH</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES_POWER_WITH</Tag>
 		<English>[ICON_BULLET]Provides Power with [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Fournit de l'électricité avec [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Liefert Energie mit dem Bonusgut [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</German>
@@ -109,13 +109,13 @@
 		<Russian>[ICON_BULLET]Обеспечивает энергией, если есть [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RELIGION_DECLARED</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_RELIGION_DECLARED</Tag>
 		<English>[ICON_BULLET]Some features only function if %F1_RelIcon is your State [ICON_RELIGION].</English>
 		<French>[ICON_BULLET]Certaines fonctionnalités ne sont disponibles que si %F1_RelIcon est votre [ICON_RELIGION] d'Etat.</French>
 		<Russian>[ICON_BULLET]Некоторые функции работают только если %F1_RelIcon является вашей государственной [ICON_RELIGION].</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REQUIRES_STRING</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_STRING</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</German>
@@ -139,13 +139,13 @@
 		<Russian>Измен. дохода:</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STATE_RELIGION_PREREQ</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_STATE_RELIGION_PREREQ</Tag>
 		<English>[ICON_BULLET]This building requires %F1_RelIcon to be your State [ICON_RELIGION].</English>
 		<French>[ICON_BULLET]Ce bâtiment nécessite %F1_RelIcon comme [ICON_RELIGION] d'Etat.</French>
 		<Russian>[ICON_BULLET]Эта постройка требует наличия %F1_RelIcon в качестве государственной [ICON_RELIGION].</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TURN_CITIZENS_INTO</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_TURN_CITIZENS_INTO</Tag>
 		<English>[ICON_BULLET]Can turn %d1_Num Citizens into [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Peut transformer %d1_Num citoyens en [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Kann %d1_Num Bürger in einen Spezialisten des Typs [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] verwandeln</German>
@@ -154,7 +154,7 @@
 		<Russian>[ICON_BULLET]Может сделать %d1_Num горожан [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TURN_CITIZEN_INTO</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_TURN_CITIZEN_INTO</Tag>
 		<English>[ICON_BULLET]Can turn 1 Citizen into [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Peut transformer un citoyen en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Kann 1 Bürger in einen Spezialisten des Typs [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT] verwandeln</German>
@@ -163,7 +163,7 @@
 		<Russian>[ICON_BULLET]Может сделать 1 горожанина [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WITH_BONUS</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_WITH_BONUS</Tag>
 		<English>[SPACE]with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>[SPACE]avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>[SPACE]mit [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
