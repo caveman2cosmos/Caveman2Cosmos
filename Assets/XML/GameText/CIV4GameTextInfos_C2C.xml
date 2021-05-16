@@ -715,7 +715,7 @@
 		<Russian>Примет [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ATTACK_MOD_VS_CLASS</Tag>
+		<Tag>TXT_KEY_UNITHELP_ATTACK_MOD_VS_CLASS</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Attack vs. [LINK=%s2_ClassType]%s3_Class[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% en attaque contre [LINK=%s2_ClassType]%s3_Class[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Angriff gegen Einheit [LINK=%s2_ClassType]%s3_Class[\LINK]</German>
@@ -724,7 +724,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% в бою с [LINK=%s2_ClassType]%s3_Class[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BOMBARD_RATE</Tag>
+		<Tag>TXT_KEY_UNITHELP_BOMBARD_RATE</Tag>
 		<English>[ICON_BULLET]Can Bombard City Defenses (-%d1_Mod%%/Turn)</English>
 		<French>[ICON_BULLET]Peut bombarder les défenses d'une ville (-%d1_Mod%%/tour)</French>
 		<German>[ICON_BULLET]kann Stadtbefestigungen bombardieren (-%d1_Mod%%/Runde)</German>
@@ -733,7 +733,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò áîìáèòü ãîðîäñêèå óêðåïëåíèÿ (-%d1_Mod%%/õîä)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BOMB_RATE</Tag>
+		<Tag>TXT_KEY_UNITHELP_BOMB_RATE</Tag>
 		<English>[ICON_BULLET]Can Destroy Tile Improvements and Bomb City Defenses (-%d1_Mod%%/Turn)</English>
 		<French>[ICON_BULLET]Peut détruire les aménagements et bombarder les défenses des villes (-%d1_Mod%%/tour)</French>
 		<German>[ICON_BULLET]kann Landschaftsverbesserungen zerstören und Stadtbefestigungen bombardieren (-%d1_Mod%%/Runde)</German>
@@ -742,7 +742,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò óíè÷òîæàòü îáúåêòû è áîìáèòü ãîðîäñêèå óêðåïëåíèÿ (-%d1_Mod%%/õîä)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BUILDS_FASTER</Tag>
+		<Tag>TXT_KEY_UNITHELP_BUILDS_FASTER</Tag>
 		<English>Builds %d1_Change%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit : %d1_Change%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Change%% schneller mit [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
@@ -751,7 +751,7 @@
 		<Russian>Строит %d1_Change%% быстрее, если есть [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COLLATERAL_IMMUNE</Tag>
+		<Tag>TXT_KEY_UNITHELP_COLLATERAL_IMMUNE</Tag>
 		<English>[ICON_BULLET]Immune to collateral damage from [LINK=%s1_unitsType]%s2_units[\LINK]</English>
 		<French>Immunité contre les dégâts collatéraux des [LINK=%s1_unitsType]%s2_units[\LINK]</French>
 		<German>[ICON_BULLET]Immun gegen Kollateralschaden durch die Einheit [LINK=%s1_unitsType]%s2_units[\LINK]</German>
@@ -760,7 +760,7 @@
 		<Russian>[ICON_BULLET]Невосприимчив к побочному ущербу от [LINK=%s1_unitsType]%s2_units[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEFENSE_MOD_VS_CLASS</Tag>
+		<Tag>TXT_KEY_UNITHELP_DEFENSE_MOD_VS_CLASS</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Defense vs. [LINK=%s2_ClassType]%s3_Class[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% en défense contre [LINK=%s2_ClassType]%s3_Class[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Verteidigung gegen [LINK=%s2_ClassType]%s3_Class[\LINK]</German>
@@ -769,7 +769,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% к защите против [LINK=%s2_ClassType]%s3_Class[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DOUBLE_SPEED</Tag>
+		<Tag>TXT_KEY_UNITHELP_DOUBLE_SPEED</Tag>
 		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%2_Bonus[\LINK]</German>
@@ -778,7 +778,7 @@
 		<Russian>Удвоенная скорость производства, если есть [LINK=%s1_BonusType]%s2_Bonus</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EVADE_INTERCEPTION</Tag>
+		<Tag>TXT_KEY_UNITHELP_EVADE_INTERCEPTION</Tag>
 		<English>[ICON_BULLET]Can Evade Interception (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut échapper à une interception (%d1_Amount%% de chance)</French>
 		<German>[ICON_BULLET]Rückzugsmöglichkeit bei Abfangversuch (Erfolgsaussicht: %d1_Amount%%)</German>
@@ -787,7 +787,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò óêëîíÿòüñÿ îò ïåðåõâàòà (âåðîÿòíîñòü %d1_Amount%%)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INTERCEPT_AIRCRAFT</Tag>
+		<Tag>TXT_KEY_UNITHELP_INTERCEPT_AIRCRAFT</Tag>
 		<English>[ICON_BULLET]Can Intercept Aircraft (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut intercepter des avions (%d1_Amount%% de chance)</French>
 		<German>[ICON_BULLET]kann Lufteinheiten abfangen (Erfolgsaussicht: %d1_Amount%%)</German>
@@ -796,7 +796,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò ïåðåõâàòèòü ýñêàäðèëüþ (øàíñ %d1_Amount%%)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MOD_VS_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_MOD_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% vs. [LINK=%s2_AgainstType]%s3_Type[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% contre : [LINK=%s2_AgainstType]%s3_Type[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% gegen [LINK=%s2_AgainstType]%s3_Type[\LINK]</German>
@@ -805,7 +805,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% против [LINK=%s2_AgainstType]%s3_Type[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MOD_VS_TYPE_NO_LINK</Tag>
+		<Tag>TXT_KEY_UNITHELP_MOD_VS_TYPE_NO_LINK</Tag>
 		<English>[ICON_BULLET]%D1_Change%% vs. %s2_Type</English>
 		<French>[ICON_BULLET]%D1_Change%% contre : %s2_Type</French>
 		<German>[ICON_BULLET]%D1_Change%% gegen %s2_Type</German>
@@ -813,7 +813,7 @@
 		<Spanish>[ICON_BULLET]%D1_Change%% contra %s2:2_Type</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WITHDRAWL_PROBABILITY</Tag>
+		<Tag>TXT_KEY_UNITHELP_WITHDRAWL_PROBABILITY</Tag>
 		<English>[ICON_BULLET]Can Withdraw from Combat (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut rompre le combat (%d1_Amount%% de chance)</French>
 		<German>[ICON_BULLET]Rückzugsmöglichkeit aus Gefechten (Erfolgsaussicht: %d1_Amount%%)</German>
@@ -822,7 +822,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò ïîêèäàòü ïîëå áîÿ (âåðîÿòíîñòü %d1_Amount%%)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WITHDRAWL_PROBABILITY_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_WITHDRAWL_PROBABILITY_SHORT</Tag>
 		<English>[ICON_BULLET]Withdrawal Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Chances de rompre le combat: %d1_Amount%%</French>
 		<German>[ICON_BULLET]Rückzugschance: %d1_Amount%%</German>

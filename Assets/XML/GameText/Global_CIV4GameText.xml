@@ -46,31 +46,31 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ENDURANCE</Tag>
+		<Tag>TXT_KEY_UNITHELP_ENDURANCE</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FORTITUDE_MODIFIER_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FORTITUDE_MODIFIER_POSITIVE_TEXT</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FORTITUDE_MODIFIER_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FORTITUDE_MODIFIER_NEGATIVE_TEXT</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_PRECISION_MODIFIER_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOT_PRECISION_MODIFIER_TOTAL_MODIFIER</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TIRING_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_TIRING_TOTAL_SHORT</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TIRING_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_TIRING_TOTAL</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRAP_DAMAGE</Tag>
+		<Tag>TXT_KEY_UNITHELP_TRAP_DAMAGE</Tag>
 		<English>TBD</English>
 	</TEXT>
 -->
@@ -14677,27 +14677,27 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Polish>Upadek wartości jazdy rycerskiej spowodował powstanie nowych formacji kawaleryjskich w skład których wchodzili żołnierze zaciężni (najemnicy). W XV wieku, obok tradycyjnych kopijników, pojawili się na polach bitew rajtarzy i arkebuzerzy uzbrojeni w broń palną. W XVI wieku powstała dragonia będąca początkowo konną piechotą. W Europie zachodniej jazda organizowała się na regimenty i kompanie. W Polsce w XV-tym wieku kawaleria dzieliła się na oddziały kopijnicze i strzelcze. W XVI wieku pojawiła się husaria, początkowo jazda lekka, z biegiem czasu stając się najcięższą kawalerią polską. Jazdę lżejszą w Polsce stanowili pancerni, zwani na Litwie petyhorcami, którzy z czasem stali się formacją średniozbrojną. Jazdę lekką stanowiły tzw. chorągwie wołoskie i tatarskie. W XVII wieku na zachodzie pojawili się kirasjerzy. W XVIII wieku w Polsce dawne pułki husarskie i pancerne przekształcono kawalerię narodową, a jazdę lekką na nowoczesnych ułanów. W czasach wojen napoleońskich pojawiły się oddziały lansjerów, szwoleżerów i strzelców konnych. W XIX wieku w związku z dalszym rozwojem broni palnej, znaczenie kawalerii upadło. Jednak jeszcze w czasie I wojny światowej wojska obu walczących stron zmobilizowały łącznie 63 dywizje jazdy, znaczną ich część rozwiązano zresztą w czasie trwania tej wojny.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NUM_STEALTH_STRIKES_ATTACK</Tag>
+		<Tag>TXT_KEY_UNITHELP_NUM_STEALTH_STRIKES_ATTACK</Tag>
 		<English>[ICON_BULLET]STEALTH ATTACK!: %d1_Num Stealth Strikes</English>
 		<French>[ICON_BULLET]Attaque furtive !: %d1_Num assauts furtifs</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NUM_STEALTH_STRIKES_DEFENSE</Tag>
+		<Tag>TXT_KEY_UNITHELP_NUM_STEALTH_STRIKES_DEFENSE</Tag>
 		<English>[ICON_BULLET]STEALTH DEFENSE!: %d1_Num Stealth Strikes</English>
 		<French>[ICON_BULLET]Défense furtive !: %d1_Num assauts furtifs</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_STEALTH_COMBAT_ATTACK</Tag>
+		<Tag>TXT_KEY_UNITHELP_STEALTH_COMBAT_ATTACK</Tag>
 		<English>[ICON_BULLET]STEALTH ATTACK!: %D1_Num%% Stealth Combat Modifier Factored in.</English>
 		<French>[ICON_BULLET]Attaque furtive !: %D1_Num%% Modificateur de combat furtif pris en compte.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_STEALTH_COMBAT_DEFENSE</Tag>
+		<Tag>TXT_KEY_UNITHELP_STEALTH_COMBAT_DEFENSE</Tag>
 		<English>[ICON_BULLET]STEALTH DEFENSE!: %D1_Num%% Stealth Combat Modifier Factored in.</English>
 		<French>[ICON_BULLET]Défense furtive !: %D1_Num%% Modificateur de combat furtif pris en compte.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_UPKEEP</Tag>
+		<Tag>TXT_KEY_UNITHELP_UPKEEP</Tag>
 		<English>Unit Upkeep</English>
 		<Russian>Содержание отряда</Russian>
 	</TEXT>
@@ -15624,7 +15624,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Íàæìèòå SHIFT äëÿ ïðîñìîòðà áîåâûõ êëàññîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REQUIRES_STRING</Tag>
+		<Tag>TXT_KEY_UNITHELP_REQUIRES_STRING</Tag>
 		<!-- %s1_Text = can be any building, bonus, civic etc -->
 		<English>[COLOR_WARNING_TEXT]Requires %s1_Text[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Text[COLOR_REVERT]</French>
@@ -29551,7 +29551,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Desconocido</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AIR_RANGE</Tag>
+		<Tag>TXT_KEY_UNITHELP_AIR_RANGE</Tag>
 		<English>%d1_Num Range</English>
 		<French>Rayon d'action %d1_Num</French>
 		<German>%d1_Num Reichweite</German>
@@ -29559,7 +29559,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>%d1_Num de alcance</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ATTACK</Tag>
+		<Tag>TXT_KEY_UNITHELP_ATTACK</Tag>
 		<English>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Attack</English>
 		<French>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Attaque</French>
 		<German>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat-Angriff</German>
@@ -29567,7 +29567,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change%% a ataque a %s2:2_TerrOrFeat</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BARBARIAN_COMBAT_MOD</Tag>
+		<Tag>TXT_KEY_UNITHELP_BARBARIAN_COMBAT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Change%% vs. Barbarians</English>
 		<French>[ICON_BULLET]%D1_Change %% contre barbares</French>
 		<German>[ICON_BULLET]%D1_Change%% gegen Barbaren</German>
@@ -29575,7 +29575,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change%% contra Bárbaros</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BOMBARD_RATE_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_BOMBARD_RATE_SHORT</Tag>
 		<English>[ICON_BULLET]Bombard City: -%d1_Mod%%/Turn</English>
 		<French>[ICON_BULLET]Bombardement : -%d1_Mod%%/tour</French>
 		<German>[ICON_BULLET]Stadt bombardieren: -%d1_Mod%%/Runde</German>
@@ -29583,7 +29583,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Cañonear ciudad: -%d1_Mod%%/turno</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CANNOT_ENTER</Tag>
+		<Tag>TXT_KEY_UNITHELP_CANNOT_ENTER</Tag>
 		<English>[ICON_BULLET]Cannot Enter</English>
 		<French>[ICON_BULLET]Ne peut entrer dans :</French>
 		<German>[ICON_BULLET]Keine Fortbewegung auf</German>
@@ -29591,7 +29591,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]No puede entrar en</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAN</Tag>
+		<Tag>TXT_KEY_UNITHELP_CAN</Tag>
 		<English>[ICON_BULLET]Can[SPACE]</English>
 		<French>[ICON_BULLET]Peut[SPACE]</French>
 		<German>[ICON_BULLET]Kann[SPACE]</German>
@@ -29599,7 +29599,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAN_NUKE</Tag>
+		<Tag>TXT_KEY_UNITHELP_CAN_NUKE</Tag>
 		<English>[ICON_BULLET]Can [LINK=CONCEPT_NUKES]Nuke[\LINK] Enemy Lands</English>
 		<French>[ICON_BULLET]Peut [LINK=CONCEPT_NUKES]atomiser[\LINK] le territoire ennemi</French>
 		<German>[ICON_BULLET]Kann feindliches Territorium mit [LINK=CONCEPT_NUKES]Atomraketen angreifen[\LINK]</German>
@@ -29607,7 +29607,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede bombardear tierra enemiga con [LINK=CONCEPT_NUKES]armas nucleares[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAN_SPREAD</Tag>
+		<Tag>TXT_KEY_UNITHELP_CAN_SPREAD</Tag>
 		<English>[ICON_BULLET]Can Spread[SPACE]</English>
 		<French>[ICON_BULLET]Peut propager :[SPACE]</French>
 		<German>[ICON_BULLET]Verbreitet:[SPACE]</German>
@@ -29615,7 +29615,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede propagar el[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAN_JOIN</Tag>
+		<Tag>TXT_KEY_UNITHELP_CAN_JOIN</Tag>
 		<English>[ICON_BULLET]Can Join City as[SPACE]</English>
 		<French>[ICON_BULLET]Peut rejoindre une ville en tant que :[SPACE]</French>
 		<German>[ICON_BULLET]Kann sich einer Stadt anschließen als[SPACE]</German>
@@ -29623,7 +29623,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede unirse a una ciudad como[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAN_CONSTRUCT</Tag>
+		<Tag>TXT_KEY_UNITHELP_CAN_CONSTRUCT</Tag>
 		<English>[ICON_BULLET]Can Construct[SPACE]</English>
 		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
@@ -29631,7 +29631,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAN_EXPAND</Tag>
+		<Tag>TXT_KEY_UNITHELP_CAN_EXPAND</Tag>
 		<English>[ICON_BULLET]Can Expand[SPACE]</English>
 		<French>[ICON_BULLET]Peut développer[SPACE]</French>
 		<German>[ICON_BULLET]Expansionsmöglichkeit für[SPACE]</German>
@@ -29639,7 +29639,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede expandir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CITY_STRENGTH_MOD</Tag>
+		<Tag>TXT_KEY_UNITHELP_CITY_STRENGTH_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Change%% City Strength</English>
 		<French>[ICON_BULLET]Puissance de la ville %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Stadtstärke</German>
@@ -29647,7 +29647,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change%% a la fuerza de la ciudad</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CITY_ATTACK_MOD</Tag>
+		<Tag>TXT_KEY_UNITHELP_CITY_ATTACK_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Change%% City Attack</English>
 		<French>[ICON_BULLET]Attaque de ville %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Stadtangriff</German>
@@ -29655,7 +29655,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change%% al atacar ciudades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CITY_DEFENSE_MOD</Tag>
+		<Tag>TXT_KEY_UNITHELP_CITY_DEFENSE_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Change%% City Defense</English>
 		<French>[ICON_BULLET]Défense de ville %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Stadtverteidigung</German>
@@ -29663,7 +29663,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change%% al defender ciudades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COLLATERAL_DAMAGE_EXTRA</Tag>
+		<Tag>TXT_KEY_UNITHELP_COLLATERAL_DAMAGE_EXTRA</Tag>
 		<English>[ICON_BULLET]Causes Collateral Damage (%D1_Amount%%)</English>
 		<French>[ICON_BULLET]Provoque des dommages collatéraux (%D1_Amount%%)</French>
 		<German>[ICON_BULLET]Verursacht Kollateralschaden (%D1_Amount%%)</German>
@@ -29671,7 +29671,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Inflige daños colaterales (%D1_Amount%%)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COMBAT_LIMIT</Tag>
+		<Tag>TXT_KEY_UNITHELP_COMBAT_LIMIT</Tag>
 		<English>[ICON_BULLET]Maximum %d1%% damage to enemy on attack</English>
 		<French>[ICON_BULLET]Dégâts de %d1%% maximum infligés à l'ennemi lors d'une attaque</French>
 		<German>[ICON_BULLET]Maximal %d1%% Angriffsschaden auf Gegner</German>
@@ -29679,7 +29679,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Daño máximo de %d1%% al enemigo en ataque</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEFENDS_UNIT_FIRST</Tag>
+		<Tag>TXT_KEY_UNITHELP_DEFENDS_UNIT_FIRST</Tag>
 		<English>[ICON_BULLET]Defends first against %s1_unit_list</English>
 		<French>[ICON_BULLET]Défend d'abord contre %s1_unit_list</French>
 		<German>[ICON_BULLET]Nimmt als Erstes die Verteidigung gegen folgende Einheiten auf: %s1_unit_list</German>
@@ -29687,7 +29687,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Defiende primero contra %s1_unit_list</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEFENSE</Tag>
+		<Tag>TXT_KEY_UNITHELP_DEFENSE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Defense</English>
 		<French>[ICON_BULLET]%D1_Change%% en défense sur des cases de %s2_TerrOrFeat</French>
 		<German>[ICON_BULLET]%D1_Change%% Verteidigung für %s2_TerrOrFeat</German>
@@ -29695,7 +29695,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change%% a defender %s2:2_TerrOrFeat</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DISCOVER_TECH</Tag>
+		<Tag>TXT_KEY_UNITHELP_DISCOVER_TECH</Tag>
 		<English>[ICON_BULLET]Can Discover a Technology</English>
 		<French>[ICON_BULLET]Peut découvrir une technologie</French>
 		<German>[ICON_BULLET]Kann eine Technologie entdecken</German>
@@ -29703,7 +29703,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede descubrir una tecnología</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXPLORE_RIVAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_EXPLORE_RIVAL</Tag>
 		<English>[ICON_BULLET]Can Explore Rival Territory</English>
 		<French>[ICON_BULLET]Peut explorer le territoire ennemi</French>
 		<German>[ICON_BULLET]Kann gegnerisches Territorium erkunden</German>
@@ -29711,7 +29711,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede explorar el territorio enemigo</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXTRA_SIGHT</Tag>
+		<Tag>TXT_KEY_UNITHELP_EXTRA_SIGHT</Tag>
 		<English>[ICON_BULLET]+1 Sight Across Water</English>
 		<French>[ICON_BULLET]Vision sur l'eau +1</French>
 		<German>[ICON_BULLET]+1 Sicht über Wasser</German>
@@ -29719,7 +29719,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]+1 a avistar por el agua</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FLAT_MOVEMENT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FLAT_MOVEMENT</Tag>
 		<English>[ICON_BULLET]Flat Movement Costs</English>
 		<French>[ICON_BULLET]Coût de déplacement</French>
 		<German>[ICON_BULLET]Fortbewegungskosten - flach</German>
@@ -29727,7 +29727,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Costes de movimiento en llano</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FOUND_CITY</Tag>
+		<Tag>TXT_KEY_UNITHELP_FOUND_CITY</Tag>
 		<English>[ICON_BULLET]Can Found a [LINK=CONCEPT_CITIES]New City[\LINK]</English>
 		<French>[ICON_BULLET]Peut fonder une [LINK=CONCEPT_CITIES]nouvelle ville[\LINK]</French>
 		<German>[ICON_BULLET]Kann eine [LINK=CONCEPT_CITIES]neue Stadt[\LINK] gründen</German>
@@ -29735,7 +29735,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede fundar una [LINK=CONCEPT_CITIES]nueva ciudad[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GOLDEN_AGE</Tag>
+		<Tag>TXT_KEY_UNITHELP_GOLDEN_AGE</Tag>
 		<English>[ICON_BULLET]Can Start a Golden Age</English>
 		<French>[ICON_BULLET]Peut déclencher un âge d'or</French>
 		<German>[ICON_BULLET]Kann ein Goldenes Zeitalter beginnen</German>
@@ -29743,7 +29743,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede iniciar una edad de oro</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_WORK</Tag>
+		<Tag>TXT_KEY_UNITHELP_GREAT_WORK</Tag>
 		<English>[ICON_BULLET]Can Create a Great Work (%D1_Change[ICON_CULTURE])</English>
 		<French>[ICON_BULLET]Peut créer un chef d'oeuvre (%D1_Change[ICON_CULTURE])</French>
 		<German>[ICON_BULLET]Kann ein Großes Bauwerk errichten (%D1_Change[ICON_CULTURE])</German>
@@ -29751,7 +29751,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede crear una gran obra (%D1_Change [ICON_CULTURE])</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HIDDEN_NATIONALITY</Tag>
+		<Tag>TXT_KEY_UNITHELP_HIDDEN_NATIONALITY</Tag>
 		<English>[ICON_BULLET]Hidden Nationality</English>
 		<French>[ICON_BULLET]Nationalité cachée</French>
 		<German>[ICON_BULLET]Versteckte Nationalität</German>
@@ -29759,7 +29759,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Nacionalidad oculta</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HILLS_ATTACK</Tag>
+		<Tag>TXT_KEY_UNITHELP_HILLS_ATTACK</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Hills Attack</English>
 		<French>[ICON_BULLET]Attaque sur des collines %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Angriff auf Hügeln</German>
@@ -29767,7 +29767,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change%% a atacar colinas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HILLS_DEFENSE</Tag>
+		<Tag>TXT_KEY_UNITHELP_HILLS_DEFENSE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Hills Defense</English>
 		<French>[ICON_BULLET]Défense des collines %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Hügel-Verteidigung</German>
@@ -29775,7 +29775,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change%% a defender colinas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HILLS_STRENGTH</Tag>
+		<Tag>TXT_KEY_UNITHELP_HILLS_STRENGTH</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Hills Strength</English>
 		<French>[ICON_BULLET]Puissance dans les collines %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Stärke auf Hügeln</German>
@@ -29783,7 +29783,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change%% a la fuerza en colinas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HURRY_PRODUCTION</Tag>
+		<Tag>TXT_KEY_UNITHELP_HURRY_PRODUCTION</Tag>
 		<English>[ICON_BULLET]Can Hurry Production</English>
 		<French>[ICON_BULLET]Peut accélérer la production</French>
 		<German>[ICON_BULLET]Kann die Produktion beschleunigen</German>
@@ -29791,7 +29791,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede acelerar la producción</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_IGNORE_TERRAIN</Tag>
+		<Tag>TXT_KEY_UNITHELP_IGNORE_TERRAIN</Tag>
 		<English>[ICON_BULLET]Ignores Terrain Movement Costs</English>
 		<French>[ICON_BULLET]Ignore les pénalités de mouvement du terrain</French>
 		<German>[ICON_BULLET]Ignoriert Fortbewegungskosten auf Gelände</German>
@@ -29799,7 +29799,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]No le afectan los costes de movimiento por terreno</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_IMPROVE_PLOTS</Tag>
+		<Tag>TXT_KEY_UNITHELP_IMPROVE_PLOTS</Tag>
 		<English>[ICON_BULLET]Can Improve Tiles</English>
 		<French>[ICON_BULLET]Peut aménager les cases</French>
 		<German>[ICON_BULLET]Kann Geländefelder modernisieren</German>
@@ -29807,7 +29807,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede mejorar casillas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INSTANCE_COST_MOD</Tag>
+		<Tag>TXT_KEY_UNITHELP_INSTANCE_COST_MOD</Tag>
 		<English>Each Unit in Play Increases Base Cost by %d1%%</English>
 		<French>Chaque unité en jeu augmente le coût de base de %d1%%</French>
 		<German>Für jede Einheit im Spiel steigen die Basiskosten um %d1%%</German>
@@ -29815,7 +29815,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Cada unidad en juego aumenta el coste base en un %d1%%</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INVISIBLE_ALL</Tag>
+		<Tag>TXT_KEY_UNITHELP_INVISIBLE_ALL</Tag>
 		<English>[ICON_BULLET]Invisible to All Units</English>
 		<French>[ICON_BULLET]Invisible pour toutes les unités</French>
 		<German>[ICON_BULLET]Für alle Einheiten unsichtbar</German>
@@ -29823,7 +29823,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Invisible para todas las unidades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INVISIBLE_MOST</Tag>
+		<Tag>TXT_KEY_UNITHELP_INVISIBLE_MOST</Tag>
 		<English>[ICON_BULLET]Invisible to Most Units</English>
 		<French>[ICON_BULLET]Invisible pour la plupart des unités</French>
 		<German>[ICON_BULLET]Für die meisten Einheiten unsichtbar</German>
@@ -29831,7 +29831,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Invisible para la mayoría de las unidades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LEADER</Tag>
+		<Tag>TXT_KEY_UNITHELP_LEADER</Tag>
 		<English>[ICON_BULLET]Can Provide %d1_Num Experience to Units in the Same Tile</English>
 		<French>[ICON_BULLET]Peut octroyer %d1_Num expérience aux unités dans la même case</French>
 		<German>[ICON_BULLET]Kann %d1_Num Erfahrungspunkte auf Einheiten auf demselben Geländefeld übertragen</German>
@@ -29839,7 +29839,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede dar un total de %d1_Num de experiencia a las unidades en la misma casilla</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LEADER_EXPERIENCE</Tag>
+		<Tag>TXT_KEY_UNITHELP_LEADER_EXPERIENCE</Tag>
 		<English>[ICON_BULLET]Can Provide up to %d1 XP to Each Unit in the Same Tile</English>
 		<French>[ICON_BULLET]Permet à chaque unité dans la même case d'obtenir jusqu'à %d1 EXP</French>
 		<German>[ICON_BULLET]Kann bis zu %d1 EP auf jede Einheit auf demselben Geländefeld übertragen</German>
@@ -29847,7 +29847,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede dar hasta %d1 PX a cada unidad que esté en la misma casilla.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MOVEMENT</Tag>
+		<Tag>TXT_KEY_UNITHELP_MOVEMENT</Tag>
 		<English>[ICON_BULLET]%D1_Change %s2_MoveType Movement</English>
 		<French>[ICON_BULLET]%D1_Change mouvement (%s2_MoveType)</French>
 		<German>[ICON_BULLET]%D1_Change Fortbewegung auf %s2_MoveType</German>
@@ -29855,7 +29855,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change al movimiento por %s2_Move</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NATIONAL_UNIT_ALLOWED</Tag>
+		<Tag>TXT_KEY_UNITHELP_NATIONAL_UNIT_ALLOWED</Tag>
 		<English>[ICON_BULLET]National Unit (%d1_Num Allowed)</English>
 		<French>[ICON_BULLET]Unité nationale (limite : %d1_Num)</French>
 		<German>[ICON_BULLET]Nationale Einheit (%d1_Num zulässig)</German>
@@ -29863,7 +29863,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Unidad nacional (%d1_Num [NUM1:permitida:permitidas])</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NATIONAL_UNIT_LEFT</Tag>
+		<Tag>TXT_KEY_UNITHELP_NATIONAL_UNIT_LEFT</Tag>
 		<English>[SPACE]National Unit: %d1_Num Left</English>
 		<French>[SPACE]Unité nationale : reste %d1_Num</French>
 		<German>[SPACE]Nationale Einheit: %d1_Num übrig</German>
@@ -29871,7 +29871,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[SPACE]Unidad nacional: %d1_Num [NUM1:restante:restantes]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NO_DEFENSE_BONUSES</Tag>
+		<Tag>TXT_KEY_UNITHELP_NO_DEFENSE_BONUSES</Tag>
 		<English>[ICON_BULLET]Doesn't Receive Defensive Bonuses</English>
 		<French>[ICON_BULLET]Ne bénéficie d'aucun bonus de défense</French>
 		<German>[ICON_BULLET]Erhält keine Verteidigungsboni</German>
@@ -29879,7 +29879,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]No recibe bonificaciones defensivas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NO_NUKES</Tag>
+		<Tag>TXT_KEY_UNITHELP_NO_NUKES</Tag>
 		<English>[COLOR_WARNING_TEXT]Nuclear Weapons are Banned[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Armes nucléaires interdites[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Atomwaffen sind verboten[COLOR_REVERT]</German>
@@ -29887,7 +29887,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[COLOR_WARNING_TEXT]Las armas nucleares están prohibidas[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ONLY_DEFENSIVE</Tag>
+		<Tag>TXT_KEY_UNITHELP_ONLY_DEFENSIVE</Tag>
 		<English>[ICON_BULLET]Can Only Defend</English>
 		<French>[ICON_BULLET]Ne peut que se défendre</French>
 		<German>[ICON_BULLET]Kann nur verteidigen</German>
@@ -29895,7 +29895,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Sólo puede defender</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PARADROP_RANGE</Tag>
+		<Tag>TXT_KEY_UNITHELP_PARADROP_RANGE</Tag>
 		<English>[ICON_BULLET]Can perform paradrops (Range=%d1_range)</English>
 		<French>[ICON_BULLET]Peut sauter en parachute (Portée=%d1_range)</French>
 		<German>[ICON_BULLET]Kann Fallschirmsprünge absolvieren (Reichweite=%d1_range)</German>
@@ -29903,7 +29903,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede realizar desembarcos aéreos (alcance = %d1_range)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REQUIRED_TO_BUILD</Tag>
+		<Tag>TXT_KEY_UNITHELP_REQUIRED_TO_BUILD</Tag>
 		<English>[ICON_BULLET]Can be built by[SPACE]</English>
 		<French>[ICON_BULLET]Peut être construit par[SPACE]</French>
 		<German>[ICON_BULLET]Kann errichtet werden von[SPACE]</German>
@@ -29911,7 +29911,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Construible por[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REQUIRES_HOLY_CITY</Tag>
+		<Tag>TXT_KEY_UNITHELP_REQUIRES_HOLY_CITY</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires %F1_RelIcon Holy City[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert la ville sainte %F1_RelIcon[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Erfordert die Heilige Stadt der Religion %F1_RelIcon[COLOR_REVERT]</German>
@@ -29919,7 +29919,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[COLOR_WARNING_TEXT]Requiere una ciudad santa del %F1_RelIcon[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_STACK</Tag>
+		<Tag>TXT_KEY_UNITHELP_STACK</Tag>
 		<English>Unit Stack (%d1):</English>
 		<French>Tas d'unités (%d1) :</French>
 		<German>Einheitenstapel (%d1):</German>
@@ -29927,7 +29927,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Apilamiento (%d1):</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_STRENGTH</Tag>
+		<Tag>TXT_KEY_UNITHELP_STRENGTH</Tag>
 		<English>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Strength</English>
 		<French>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Force</French>
 		<German>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat-Stärke</German>
@@ -29935,7 +29935,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change%% a fuerza en %s2:2_TerrOrFeat</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TEAM_UNIT_ALLOWED</Tag>
+		<Tag>TXT_KEY_UNITHELP_TEAM_UNIT_ALLOWED</Tag>
 		<English>[ICON_BULLET]Team Unit (%d1_Num Allowed)</English>
 		<French>[ICON_BULLET]Unité d'équipe (limite : %d1_Num)</French>
 		<German>[ICON_BULLET]Teameinheit (%d1_Num zulässig)</German>
@@ -29943,7 +29943,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Unidad de equipo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TEAM_UNIT_LEFT</Tag>
+		<Tag>TXT_KEY_UNITHELP_TEAM_UNIT_LEFT</Tag>
 		<English>[SPACE]Team Unit: %d1_Num Left</English>
 		<French>[SPACE]Unité d'équipe : reste %d1_Num</French>
 		<German>[SPACE]Teameinheit: %d1_Num übrig</German>
@@ -29951,7 +29951,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[SPACE]Unidad de equipo: %d1_Num [NUM1:restante:restantes]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TURNS</Tag>
+		<Tag>TXT_KEY_UNITHELP_TURNS</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]%d1_Num Turns[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%d1_Num tours[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]%d1_Num Runden[COLOR_REVERT]</German>
@@ -29959,7 +29959,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_VISIBILITY_MOVE_RANGE</Tag>
+		<Tag>TXT_KEY_UNITHELP_VISIBILITY_MOVE_RANGE</Tag>
 		<English>[ICON_BULLET]Unit may not reveal undiscovered terrain except inside a player's territory</English>
 		<French>[ICON_BULLET]L'unité ne peut révéler des cases terrain qu'à l'intérieur du territoire du joueur</French>
 		<German>[ICON_BULLET]Einheit darf unentdecktes Gelände nicht erkunden, außer innerhalb des Territoriums eines Spielers</German>
@@ -29967,7 +29967,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]La unidad no puede revelar terreno oculto excepto en el territorio del jugador</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORKERS_FASTER</Tag>
+		<Tag>TXT_KEY_UNITHELP_WORKERS_FASTER</Tag>
 		<English>[ICON_BULLET]Workers Build Improvements %D1_Change%% Faster</English>
 		<French>[ICON_BULLET]Vitesse de construction des aménagements : %D1_Change%%</French>
 		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Change%% schneller</German>
@@ -29975,7 +29975,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Change%% más rápido</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORLD_UNIT_ALLOWED</Tag>
+		<Tag>TXT_KEY_UNITHELP_WORLD_UNIT_ALLOWED</Tag>
 		<English>[ICON_BULLET]World Unit (%d1_Num Allowed)</English>
 		<French>[ICON_BULLET]Unité mondiale (limite : %d1_NumAllowed)</French>
 		<German>[ICON_BULLET]Welteinheit (%d1_Num zulässig)</German>
@@ -29983,7 +29983,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Unidad mundial (%d1_Num [NUM1:permitida:permitidas])</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORLD_UNIT_LEFT</Tag>
+		<Tag>TXT_KEY_UNITHELP_WORLD_UNIT_LEFT</Tag>
 		<English>[SPACE]World Unit: %d1_Num Left</English>
 		<French>[SPACE]Unité mondiale : reste %d1_Num</French>
 		<German>[SPACE]Welteinheit: %d1_Num übrig</German>
@@ -30506,7 +30506,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Produce</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAN_MOVE_IMPASSABLE</Tag>
+		<Tag>TXT_KEY_UNITHELP_CAN_MOVE_IMPASSABLE</Tag>
 		<English>[ICON_BULLET]Can Move through Impassable Terrain</English>
 		<French>[ICON_BULLET]Peut se déplacer sur des terrains infranchissables.</French>
 		<German>[ICON_BULLET]Kann sich durch unpassierbares Gelände bewegen</German>

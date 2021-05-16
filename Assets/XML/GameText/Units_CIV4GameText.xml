@@ -277,7 +277,7 @@
 		<Russian>Â êîíöå XX â. ðàêåòíûå êðåéñåðû ÂÌÔ ÑØÀ íà÷àëè îñíàùàòü ñèñòåìàìè ïðîòèâîðàêåòíîé îáîðîíû Aegis ("Ýãèäà"). Àìåðèêàíöû äîëãîå âðåìÿ ñîâåðøåíñòâîâàëè îáîðîíèòåëüíûå ñèñòåìû ñâîèõ êîðàáëåé. Ðàáîòû â ýòîé ñôåðå àêòèâèçèðîâàëèñü ïîñëå òîãî, êàê àðãåíòèíñêàÿ ðàêåòà ïîòîïèëà áðèòàíñêèé ýñìèíåö "Øåôôèëä" â 1982 ã. â õîäå âîéíû çà Ôîëêëåíäñêèå îñòðîâà.[PARAGRAPH:1]Ñèñòåìà "Èäæèñ" âêëþ÷àåò â ñåáÿ ñðåäñòâà ÏÂÎ è îáíàðóæåíèÿ ïîäâîäíûõ ëîäîê, ðàêåòíóþ óñòàíîâêó ïðîòèâîâîçäóøíîé îáîðîíû è îðóæèå "ïîñëåäíåé íàäåæäû" - ñïàðåííûå êðóïíîêàëèáåðíûå ïóëåìåòû "Âóëêàí". Êàê ïðàâèëî, êðåéñåðû "Èäæèñ" íåñóò ðàêåòû, ïîðàæàþùèå íàçåìíûå èëè ìîðñêèå öåëè, ÷àñòî îíè ñîïðîâîæäàþò óÿçâèìûå òðàíñïîðòíûå ýñêàäðû, çàùèùàÿ èõ îò âîçäóøíûõ è ìîðñêèõ àòàê.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AFFLICTION_FORTITUDE_MODIFIER_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_AFFLICTION_FORTITUDE_MODIFIER_NEGATIVE_TEXT</Tag>
 		<English>[ICON_BULLET]Affliction Synergy: %D1_Change%% more likely to contract %s2_Affliction.</English>
 		<French>[ICON_BULLET]Synergie des Affections: %D1_Change%% de chances supplémentaires de contracter: %s2_Affliction.</French>
 		<Italian>[ICON_BULLET]Sinergia di afflizioni: %D1_Change%% di probabilità in più di contrarre %s2_Affliction.</Italian>
@@ -285,7 +285,7 @@
 		<Russian>[ICON_BULLET]Синергия боли: %D1_Change%% с большей вероятностью заразится %s2_Affliction.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AFFLICTION_FORTITUDE_MODIFIER_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_AFFLICTION_FORTITUDE_MODIFIER_POSITIVE_TEXT</Tag>
 		<English>[ICON_BULLET]Inoculated: %D1_Change%% less likely to contract %s2_Affliction.</English>
 		<French>[ICON_BULLET]Vacciné: %D1_Change%% de chances en moins de contracter: %s2_Affliction.</French>
 		<Italian>[ICON_BULLET]Vaccinato: %D1_Change%% di probabilità in meno di contrarre %s2_Affliction.</Italian>
@@ -293,7 +293,7 @@
 		<Russian>[ICON_BULLET]Вакцинация: %D1_Change%% с меньшей вероятностью заразится %s2_Affliction.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AFFLICTION_TOLERANCE_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_AFFLICTION_TOLERANCE_NEGATIVE_TEXT</Tag>
 		<English>[ICON_BULLET]Allergic: Currently %D1_Change%% more likely to contract %s2_Affliction.</English>
 		<French>[ICON_BULLET]Allergie: actuellement %D1_Change%% de chances supplémentaires de contracter: %s2_Affliction.</French>
 		<Italian>[ICON_BULLET]Allergia: attualmente %D1_Change%% di probabilità in più di contrarre %s2_Affliction.</Italian>
@@ -301,7 +301,7 @@
 		<Russian>[ICON_BULLET]Аллергия: в настоящее время %D1_Change%% с большей вероятностью заразится %s2_Affliction.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AFFLICTION_TOLERANCE_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_AFFLICTION_TOLERANCE_POSITIVE_TEXT</Tag>
 		<English>[ICON_BULLET]Tolerance: Currently %D1_Change%% less likely to contract %s2_Affliction.</English>
 		<French>[ICON_BULLET]Tolérance: actuellement %D1_Change%% de chances en moins de contracter: %s2_Affliction.</French>
 		<Italian>[ICON_BULLET]Tolleranza: attualmente %D1_Change%% di chance di contrarre %s2_Affliction.</Italian>
@@ -447,7 +447,7 @@
 		<English>Ahmad Shah Durrani was the founder of the Durrani Empire and is regarded as the founder of the modern state of Afghanistan. He began his career by enlisting as a young soldier in the military of the Afsharid kingdom and quickly rose to become a commander of the Abdali Regiment, a cavalry of four thousand Abdali Pashtun soldiers. After the death of Nader Shah Afshar in 1747, Ahmad Shah Durrani was chosen as King of Afghanistan. Rallying his Afghan tribes and allies, he pushed east towards the Mughal and the Maratha empires of India, west towards the disintegrating Afsharid Empire of Persia, and north toward the Khanate of Bukhara. Within a few years, he extended his control from Khorasan in the west to Kashmir and North India in the east, and from the Amu Darya in the north to the Arabian Sea in the south.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AID</Tag>
+		<Tag>TXT_KEY_UNITHELP_AID</Tag>
 		<English>[ICON_BULLET]Aid (%s1_Type): Adds a bonus to units and cities on the same tile to Overcoming %s1_Type Afflictions by %d2_Amount</English>
 		<French>[ICON_BULLET]Santé: Ajoute un bonus de %d1_Amount%% à toutes les unités de la même case, pour la résistance à l'infection et l'éradiation des affections</French>
 		<Italian>[ICON_BULLET]Supporto: fornisce un bonus sulla stessa casella per resistere e superare Afflizione del %d1_Amount%%</Italian>
@@ -455,7 +455,7 @@
 		<Russian>[ICON_BULLET]Помощь (%s1_Type): добавляет отрядам и городам бонус устойчивости к болезни %s1_Type на %d2_Amount на той же клетке</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AID_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_AID_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Aid: Assists the chances for other units in stack to Overcome %s1_Type Afflictions by %s2_Amount</English>
 		<French>[ICON_BULLET]Santé : Augmente les chances pour les autres unités du groupe de surmonter l'affliction %s1_Type Afflictions de %s2_Amount</French>
 		<Italian>[ICON_BULLET]Supporto: aumenta le chance per le unità nella stessa casella di superare %s1_Type Afflizione del %s2_Amount</Italian>
@@ -463,7 +463,7 @@
 		<Russian>[ICON_BULLET]Помощь: повышает шансы других отрядов в стеке преодолеть болезнь %s1_Type на %s2_Amount</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AID_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_AID_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Aid (%s1_Type): %d2_Amount</English>
 		<French>[ICON_BULLET]Aide (%s1_Type): %d2_Amount</French>
 		<Italian>[ICON_BULLET]Supporto (%s1_Type): %d2_Amount</Italian>
@@ -873,7 +873,7 @@
 		<Russian>Ñëåäóþùåå ïîêîëåíèå êèáåð-ïåõîòèíöåâ. Îíè ìîäåðíèçèðîâàíû ñ ó÷åòîì âñåõ ïîñëåäíèõ òåõíîëîãèé, êîòîðûå îñòàâëÿþò îáû÷íóþ ïåõîòó äàëåêî ïîçàäè! Ïðîáëåìû áîåâîãî äóõà è íåïîä÷èíåíèå ïðèêàçàì îñòàëèñü â ïðîøëîì! Íè îäíà ìèññèÿ íå ÿâëÿåòñÿ ñëèøêîì òðóäíîé èëè ñëèøêîì ñàìîóáèéñòâåííîé - ñ òåõ ïîð êàê àíäðîèäû çäåñü!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ANIMAL_COMBAT_MOD</Tag>
+		<Tag>TXT_KEY_UNITHELP_ANIMAL_COMBAT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Change%% vs. Wild Animals</English>
 		<French>[ICON_BULLET]%D1_Change%% contre: Animaux sauvages</French>
 		<German>[ICON_BULLET]%D1_Change%% gegen Raubtiere</German>
@@ -883,13 +883,13 @@
 		<Russian>[ICON_BULLET]%D1_Change%% ïðîòèâ õèùíèêîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ANIMAL_IGNORES_BORDERS</Tag>
+		<Tag>TXT_KEY_UNITHELP_ANIMAL_IGNORES_BORDERS</Tag>
 		<English>[ICON_BULLET]This Animal has %d1_Causes Causes to Ignore border Restrictions.</English>
 		<French>[ICON_BULLET]Cet Animal a %d1_Causes de Raisons d'ignorer les restrictions de frontières.</French>
 		<Russian>[ICON_BULLET]Это животное имеет %d1_Causes шанс на игнорирование ограничения границ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ANIMAL_IGNORES_BORDERS_LONG</Tag>
+		<Tag>TXT_KEY_UNITHELP_ANIMAL_IGNORES_BORDERS_LONG</Tag>
 		<English>[ICON_BULLET]This Animal Ignores Border Restriction.</English>
 		<French>[ICON_BULLET]Cet Animal ignore les restrictions de frontières.</French>
 		<Italian>[ICON_BULLET]Questo animale ignora le restrizioni sui confini.</Italian>
@@ -897,7 +897,7 @@
 		<Russian>[ICON_BULLET]Это животное игнорирует ограничение границ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ANIMAL_IGNORES_BORDERS_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_ANIMAL_IGNORES_BORDERS_SHORT</Tag>
 		<English>[ICON_BULLET]Ignores Border Restriction</English>
 		<French>[ICON_BULLET]Ignore les restrictions de frontières</French>
 		<Italian>[ICON_BULLET]Ignora restrizioni sui confini</Italian>
@@ -916,7 +916,7 @@
 		<Russian>ßãóàð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ANIMAL_ON_KILL</Tag>
+		<Tag>TXT_KEY_UNITHELP_ANIMAL_ON_KILL</Tag>
 		<English>On kill</English>
 		<French>En cas de Victoire</French>
 		<German>Im Falle eines Sieges</German>
@@ -1186,7 +1186,7 @@
 		<Polish>Samochód pancerny to opancerzony pojazd kołowy, zwykle uzbrojony w armatę lub karabiny maszynowe, zazwyczaj umieszczone w wieży obrotowej. Podstawowym przeznaczeniem większości samochodów pancernych było rozpoznanie, rzadziej ich podstawowym przeznaczeniem była walka. Zazwyczaj pancerz samochodów pancernych chronił tylko przed pociskami karabinowymi i odłamkami. W zależności od masy i uzbrojenia czasami wyróżnia się lekkie, średnie i ciężkie samochody pancerne. Samochodów pancernych nie należy mylić z kołowymi transporterami opancerzonymi, których zadaniem jest przewożenie żołnierzy. Pierwsze samochody pancerne skonstruowano w pierwszej dekadzie XX wieku, apogeum ich rozwoju nastąpiło przed i w okresie II wojny światowej. Stopniowo powstające konstrukcje charakteryzowały się lepszymi własnościami w terenie i uzbrojeniem. Zamiast samochodów dwuosiowych z napędem na tylną oś, budowanych na podwoziach samochodów cywilnych, zaczęły powstawać konstrukcje z napędem na wszystkie koła, a liczba osi wzrosła w niektórych konstrukcjach do czterech.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ARMOR_BASE</Tag>
+		<Tag>TXT_KEY_UNITHELP_ARMOR_BASE</Tag>
 		<English>[ICON_BULLET]Reduces combat damaged suffered by %d1_Amount%% per round.</English>
 		<French>[ICON_BULLET]réduit les dégâts reçus au combat de %d1_Amount%% par coup.</French>
 		<Italian>[ICON_BULLET]Riduce il danno sofferto in combattimento del %d1_Amount%% per turno.</Italian>
@@ -1208,7 +1208,7 @@
 		<Russian>Òàíê Ì60</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ARMOR_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_ARMOR_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Armor: Reduces damage per hit: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Armure: Réduit les dégâts par coup: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Armatura: riduce il danno subito da ogni colpo: %d1_Amount%%</Italian>
@@ -1216,7 +1216,7 @@
 		<Russian>[ICON_BULLET]Броня: уменьшает урон от атаки: %d1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ARMOR_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_ARMOR_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Armor: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Armure: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Armatura: %d1_Amount%%</Italian>
@@ -1224,7 +1224,7 @@
 		<Russian>[ICON_BULLET]Броня: %d1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ARMOR_VS_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_ARMOR_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change Armor vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change d'Armure contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change Armor gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
@@ -1633,7 +1633,7 @@
 		<Russian>Àòîìíûé áîìáàðäèðîâùèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ATTACK_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_ATTACK_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% Attack Strength</English>
 		<French>[ICON_BULLET]%D1_Amount%% en Attaquant</French>
 		<German>[ICON_BULLET]%D1_Amount%% Angriff</German>
@@ -1641,7 +1641,7 @@
 		<Polish>[ICON_BULLET]%D1_Amount%% do Atkau</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ATTACK_MODIFIER_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_ATTACK_MODIFIER_SHORT</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% Attack Strength</English>
 		<French>[ICON_BULLET]Modif. d'Attaque: %d1_Amount%%</French>
 		<German>[ICON_BULLET]%d1_Amount%% Angriff</German>
@@ -3407,7 +3407,7 @@
 		<Russian>Canis Superior, которую обычно называют «собакой К-9» (которая является гомофоном собаки), является специально обученным псом для оказания помощи полиции и другим сотрудникам правоохранительных органов в их работе.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CANNOT_CAPTURE</Tag>
+		<Tag>TXT_KEY_UNITHELP_CANNOT_CAPTURE</Tag>
 		<English>[ICON_BULLET]Cannot Capture Enemy Cities or Units</English>
 		<French>[ICON_BULLET]Ne peut pas capturer de villes ou d'unités ennemies.</French>
 		<German>[ICON_BULLET]kann feindliche Städte nicht einnehmen und feindliche Einheiten nicht gefangen nehmen</German>
@@ -3452,7 +3452,7 @@
 		<Polish>Kanut II Wielki, (ok. 995-1035), od 1014 król duński, od 1016 król anglosaski. Syn Swena I Widłobrodego i córki Mieszka I i Świętosławy. Stworzył potężne państwo obejmujące Danię, Norwegię i Anglię. Podejmował wyprawy wojenne na Pomorze i Sambię. Sprzymierzył się z cesarzem niemieckim Konradem II przeciwko królowi polskiemu Mieszkowi II.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAN_ONLY_TRAVERSE</Tag>
+		<Tag>TXT_KEY_UNITHELP_CAN_ONLY_TRAVERSE</Tag>
 		<English>Can Not Traverse</English>
 		<French>Ne peut pas Traverser</French>
 		<German>Durchqueren unmöglich</German>
@@ -3481,7 +3481,7 @@
 		<English>The Capayanes were an indigenous people nowadays extinct that lived in Argentine territory. Their geographical area was partly of the provinces of La Rioja, Catamarca, San Juan, from the mountainous zone understood to be between the limit of La Rioja with Catamarca on Colorado river and the surroundings of Jachal river-Zanjón, in San Juan, including Andes, in the western part, up to the cords of the Velasco, where they were mixed with the Diaguitas. They occupied the fertile valleys of Famatina, Sanagasta, Yacampis, Guandacol and Jachal. They had as neighbors, in the northern part the diaguitas and in the southern part the huarpes.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAPTURE_PROBABILITY_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_CAPTURE_PROBABILITY_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% chance to Capture.</English>
 		<French>[ICON_BULLET]%D1%% de chances de capturer.</French>
 		<German>[ICON_BULLET]Gefangennahme: %D1%%</German>
@@ -3490,7 +3490,7 @@
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ çàõâàòèòü.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAPTURE_RESISTANCE_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_CAPTURE_RESISTANCE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% chance to avoid Capture.</English>
 		<French>[ICON_BULLET]%D1%% de chances d'éviter la Capture.</French>
 		<German>[ICON_BULLET]Gefangennahme entgehen: %D1%%</German>
@@ -3846,14 +3846,14 @@
 		<English>Chagatai Khan was the second son of Genghis Khan. He was Khan of the Chagatai Khanate from 1226-1242 C.E. The Chagatai language and Chagatai Turks take their names from him. He inherited most of what are now the five Central Asian states after the death of his father. He was also appointed by Genghis Khan to oversee the execution of the Yassa, the written code of law created by Genghis Khan, though that lasted only until Genghis Khan was crowned Khan of the Mongol Empire. The Empire later came to be known as the Chagatai Khanate, a descendant empire of the Mongol Empire. Chagatai Khan was considered hot-headed and somewhat temperamental by his relatives, because of his attitude of non-acceptance of Jochi as Great Khan. He was the most vocal about this issue among his relations. Chaghatai himself appears to have been a just and energetic governor, though perhaps rough and uncouth, and addicted to hard drinking. At any rate, he was animated by the soldier-like spirit of his father, and succeeded in keeping order among as heterogeneous a population as a kingdom was ever composed of.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CHANCE_OF_WORSENING</Tag>
+		<Tag>TXT_KEY_UNITHELP_CHANCE_OF_WORSENING</Tag>
 		<English>Afflicted with %s1_Affliction. Chance of worsening: %d1_Amount%%</English>
 		<French>Afffecté avec %s1_Affliction. Chance de déterioration: %d1_Amount%%</French>
 		<Italian>Afflitto da %s1_Affliction. Chance di peggioramento: %d1_Amount%%</Italian>
 		<Polish>Osłabiony przez: %s1_Affliction. Szansa na pogorszenie: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CHANCE_TO_OVERCOME</Tag>
+		<Tag>TXT_KEY_UNITHELP_CHANCE_TO_OVERCOME</Tag>
 		<English>Afflicted with %s1_Affliction. Chance of recovery: %d1_Amount%%</English>
 		<French>Afffecté avec %s1_Affliction. Chance de rémission: %d1_Amount%%</French>
 		<Italian>Afflitto da %s1_Affliction. Chance di recupero: %d1_Amount%%</Italian>
@@ -4210,7 +4210,7 @@
 		<Polish>W pewnych miejscach i okresach historycznych straż miejska czy gwardia miejska były formacjami stworzonymi to egzekwowania prawa, z reguły podporządkowane lokalnym władzom miejskim. Historycznie wiele miast posiadało swoje własne oddziały straży miejskiej, które w zależności od potrzeb służyły jako policja lub siły wojskowe.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CLASS_PRODUCTION_FAST_MOD</Tag>
+		<Tag>TXT_KEY_UNITHELP_CLASS_PRODUCTION_FAST_MOD</Tag>
 		<English>%[SPACE]Faster Training of[SPACE]</English>
 		<French>%[SPACE]Accélère l'entraînement de[SPACE]</French>
 		<German>%[SPACE]schnellere Ausbildung von[SPACE]</German>
@@ -4220,7 +4220,7 @@
 		<Russian>%[SPACE]Áûñòðîå îáó÷åíèå[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CLASS_PRODUCTION_SLOW_MOD</Tag>
+		<Tag>TXT_KEY_UNITHELP_CLASS_PRODUCTION_SLOW_MOD</Tag>
 		<English>%[SPACE]Slower Training of[SPACE]</English>
 		<French>%[SPACE]Ralenti l'entraînement de[SPACE]</French>
 		<German>%[SPACE]langsamere Ausbildung von[SPACE]</German>
@@ -4386,7 +4386,7 @@
 		<English>Cogs are ships that first appeared in the 10th century, and were widely used from around the 12th century on. Cogs were generally built of oak, which was an abundant Baltic timber. This vessel was fitted with a single mast and a square-rigged single sail. Even though this type of rigging prohibited sailing into the wind, it could be handled by a smaller crew, which reduced operational costs. These vessels were mostly associated with seagoing trade in medieval Europe, particularly in the Baltic Sea region.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COLD_DAMAGE_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_COLD_DAMAGE_SHORT</Tag>
 		<English>[ICON_BULLET]Cold Damage: %d1_Amount</English>
 		<French>[ICON_BULLET]Dégâts de froid: %d1_Amount</French>
 		<Italian>[ICON_BULLET]Danno da freddo: %d1_Amount</Italian>
@@ -4394,7 +4394,7 @@
 		<Russian>[ICON_BULLET]Урон холодом: %d1_Amount</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COLD_DAMAGE_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_COLD_DAMAGE_TOTAL</Tag>
 		<English>[ICON_BULLET]Cold Damage: Reduces Dodge and Precision by %d1_Amount%%</English>
 		<French>[ICON_BULLET]Dégâts de froid: réduit l'esquive et la précision de %d1_Amount%%</French>
 		<German>[ICON_BULLET]Kälteschaden: verringert Ausweichen und Präzision um %d1_Amount%%</German>
@@ -4403,7 +4403,7 @@
 		<Russian>[ICON_BULLET]Урон холодом: уменьшает уклонение и точность на %d1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COLD_IMMUNE</Tag>
+		<Tag>TXT_KEY_UNITHELP_COLD_IMMUNE</Tag>
 		<English>[ICON_BULLET]Immune to Cold Damage Penalties.</English>
 		<French>[ICON_BULLET]Immunisé contre les dégâts liés au froid.</French>
 		<Italian>[ICON_BULLET]Immune alle penalità da Danno da freddo.</Italian>
@@ -4411,7 +4411,7 @@
 		<Russian>[ICON_BULLET]Невосприимчив к штрафам от урона холодом.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COLLATERAL_DAMAGE_REVDCM</Tag>
+		<Tag>TXT_KEY_UNITHELP_COLLATERAL_DAMAGE_REVDCM</Tag>
 		<English>[ICON_BULLET]Up to %d1% Collateral to %d2 Unit(s)</English>
 		<French>[ICON_BULLET]Provoque des dommages collatéraux (Max %d1% pour %d2 Unités)</French>
 		<German>[ICON_BULLET]verursacht Kollateralschaden (max. %d1% bei %d2 [NUM2:Einheit:Einheiten])</German>
@@ -4458,7 +4458,7 @@
 		<Polish>Komancze słynęli z ogromnych stad koni, a także z mistrzowskiej umiejętności jazdy konnej. Byli uważani przez inne plemiona, a także przez białych za najlepszą kawalerię. Podobnie jak ich sprzymierzeńcy Kiowa, kradli oni konie Meksykanom oraz innym plemionom jako odwet za dawne utarczki. Mieli opanowane do perfekcji napady i porywanie całych stad koni, więc już wkrótce inni Indianie zaczęli się interesować ich stadninami, co pociągało za sobą kolejne potyczki. Konie służyły też w handlu zamiennym, dawano je jako prezenty "ślubne", wymieniano na strzelby. M.in. za ciągłe kradzieże bydła i koni Meksykanie walczyli długo i uporczywie z Komanczami. Komancze, jak większość Indian preryjnych, walczyli głównie konno. Stosowali m.in. taktykę walki partyzanckiej, atakując wroga z zaskoczenia, np. przed świtem, grabiąc, co się dało (konie, dobytek, broń, ludzi), i szybko wycofując się. Z powodu ataków Komanczów ich sąsiedzi mieli się na baczności, toteż wojownicy plemienia zapuszczali się w celach rabunkowych także w odległe rejony (Meksyk). Napadali zazwyczaj na wioski i obozowiska innych plemion oraz na pojedyncze gospodarstwa, które czasem podpalali; sporadycznie atakowali też niewielkie miasteczka. Podstawową bronią była lanca, tarcza oraz łuk. Nawet posiadanie jednostrzałowej broni palnej nie zmieniło faktu, że walczyli głównie łukami, ewentualnie kilkustrzałowymi karabinami, czy nawet pistoletami (mała ilość). Walcząc łukiem mogli osiągnąć wielką mobilność, a także zaskakiwali przeciwnika. Taktyka ta okazała się skuteczna, zwłaszcza przeciw innym plemionom. Walkę łukiem opanowali do perfekcji.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COMBAT_FLANKING_STRIKES</Tag>
+		<Tag>TXT_KEY_UNITHELP_COMBAT_FLANKING_STRIKES</Tag>
 		<English>[ICON_BULLET]%d1_Amount Strength [LINK=CONCEPT_FLANK_ATTACK]Flank attack[\LINK] against %s2_unitlist</English>
 		<French>[ICON_BULLET]%d1_Amount Force [LINK=CONCEPT_FLANK_ATTACK]Attaque de flanc[\LINK] contre %s2_unitlist</French>
 		<German>[ICON_BULLET]%d1_Amount Strength [LINK=CONCEPT_FLANK_ATTACK]Flankenangriff[\LINK] auf Einheit(en) %s2_unitlist</German>
@@ -4467,28 +4467,28 @@
 		<Polish>[ICON_BULLET]%d1_Amount Siły [LINK=CONCEPT_FLANK_ATTACK]Atak Skrzydłowy[\LINK] przeciwko %s2_unitlist</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COMBAT_MOD_PER_SIZE_LESS</Tag>
+		<Tag>TXT_KEY_UNITHELP_COMBAT_MOD_PER_SIZE_LESS</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% VS Each Size Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus petites: %D1_Amount%% par rang inférieur</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Mniejsze Jednostki: %D1_Amount%% na Poziom Wielkości mniej</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COMBAT_MOD_PER_SIZE_MORE</Tag>
+		<Tag>TXT_KEY_UNITHELP_COMBAT_MOD_PER_SIZE_MORE</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% VS Each Size Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus grandes: %D1_Amount%% par rang supérieur</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen größere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Większe Jednostki: %D1_Amount%% na Poziom Wielkości więcej</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COMBAT_MOD_PER_VOLUME_LESS</Tag>
+		<Tag>TXT_KEY_UNITHELP_COMBAT_MOD_PER_VOLUME_LESS</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% VS Each Group Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus petits: %D1_Amount%% par Nb d'unités en moins</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Mniejsze Grupy: %D1_Amount%% na Poziom Wielkości mniej</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COMBAT_MOD_PER_VOLUME_MORE</Tag>
+		<Tag>TXT_KEY_UNITHELP_COMBAT_MOD_PER_VOLUME_MORE</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% VS Each Group Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus grands: %D1_Amount%% par Nb d'unités suppl.</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen größere Gruppen (pro Stufe Größenunterschied)</German>
@@ -4575,7 +4575,7 @@
 		<English>According to some scholars, they are depicted on the Arch of Constantine, as the soldiers who are shown wearing horned helmets. On the relief representing the Battle of Verona (312) they are in the first lines, and they are depicted fighting with the bowmen in the relief of the Battle of the Milvian Bridge.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COST_MODIFIER_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_COST_MODIFIER_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Unit Support Cost: %D1_Amount%</English>
 		<French>[ICON_BULLET]Modif. du coût d'entretien: Coût modifié de %D1_Amount%</French>
 		<German>[ICON_BULLET]laufende Kosten: %D1_Amount%</German>
@@ -4583,7 +4583,7 @@
 		<Russian>[ICON_BULLET]Жалование отряду: %D1_Amount%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COST_MODIFIER_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_COST_MODIFIER_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Unit Support Cost: %d1_Amount%</English>
 		<French>[ICON_BULLET]Modif. du coût d'entretien: %d1_Amount%</French>
 		<German>[ICON_BULLET]laufende Kosten: %d1_Amount%</German>
@@ -4665,28 +4665,28 @@
 		<English>Cristina Calderón is the last living full-blooded Yaghan person. By 2004, Calderón (often referred to as simply Abuela, spanish for Grandmother) and her sister-in-law Emelinda Acuña were the only two remaining native speakers of the Yaghan language. After Acuña died at 84 years of age (October 12, 2005), Calderón became the last living full-blooded Yaghan person. With her granddaughter Cristina Zarraga and her sister Ursula Calderon she published a book of Yaghan stories called Hai Kur Mamashu Shis [I Want to Tell You a Story] in 2005.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CRITICAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_CRITICAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Critical Modifier: Unit gets a %d1_Amount%% modifier to Critical Hit chances each round of combat</English>
 		<French>[ICON_BULLET]Modif. Prob. Critique: L'Unité possède une modification de %d1_Amount%% de ses chances d'obtenir un coup critique à chaque round</French>
 		<Italian>[ICON_BULLET]Modificatore critico: l'unità ha una probabilità del %d1_Amount%% di compiere colppi critici per ogni round di combattimento</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Krytyczny: Jednostka Otrzymuje Modyfikator %d1_Amount%% do Krytycznego uderzenia podczas każdej rundy walki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CRITICAL_MODIFIER_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_CRITICAL_MODIFIER_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Critical Modifier: Your attacks have a %d1_Amount%% modifier to the chance to inflict a Critical Injury.</English>
 		<French>[ICON_BULLET]Modif Prob. Critique: Vos attaques possèdent une modification de %d1_Amount%% de chances d'infliger un coup critique.</French>
 		<Italian>[ICON_BULLET]Modificatore di colpi critici: i tuoi attacchi hanno una probabilità di %d1_Amount%%di infliggere ferite critiche.</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Krytycznego Uderzenia: Twoje ataki mają %d1_Amount%% szansy na zadanie Krytycznych Obrażeń.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CRITICAL_MODIFIER_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_CRITICAL_MODIFIER_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Critical Modifier: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Modif. Prob. critique: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Modificatore di colpi critici: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Krytycznego Uderzenia: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CRITICAL_VS_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_CRITICAL_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Critical Chance vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% de chances de Critique contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Critical Chance gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
@@ -4972,21 +4972,21 @@
 		<Polish>Kantońska jednostka kulturowa.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DAMAGE_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_DAMAGE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Damage dealt is modified by %D1_Amount%</English>
 		<French>[ICON_BULLET]Les dégâts subis par l'unité sont modifié de %D1_Amount%.</French>
 		<Polish>[ICON_BULLET]Zadawane przez jedn. obrażenia modyfikowane przez: %D1_Amount%.</Polish>
 		<Russian>[ICON_BULLET]Наносимый урон изменяется на %D1_Amount%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DAMAGE_MODIFIER_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_DAMAGE_MODIFIER_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Damage: %D1_Amount%</English>
 		<French>[ICON_BULLET]Modif. de dégâts: l'Unité subit %D1_Amount% dégâts</French>
 		<Polish>[ICON_BULLET]Modyfikator Obrażeń: Jedn. zadaje %D1_Amount obrażeń</Polish>
 		<Russian>[ICON_BULLET]Урон: %D1_Amount%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DAMAGE_MODIFIER_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_DAMAGE_MODIFIER_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Damage: %D1_Amount%</English>
 		<French>[ICON_BULLET]Modif. de dégâts: %D1_Amount%</French>
 		<Polish>[ICON_BULLET]Modyfikator Obrażeń: %D1_Amount%</Polish>
@@ -5035,21 +5035,21 @@
 		<German>Als [COLOR_UNIT_TEXT]Baumsteigerfrosch[COLOR_REVERT] (auch Pfeilgiftfrosch oder Farbfrosch) bezeichnet man eine Familie der Froschlurche. Es existieren ca. 170 Arten.[NEWLINE]Baumsteigerfrösche leben fast ausschließilich im mittel- und südamerikanischen Regenwald, die meisten von ihnen sind mit 12 bis 50 Millimetern sehr klein und farbenfroh. Weitere Merkmale sind das Fehlen der Gaumenbeine (Gesichtsschädelknochen) und der Schwimmhäute zwischen der ersten und zweiten bzw. der zweiten und dritten Zehe. Zur Fortpflanzung laichen die kleineren Arten auf Blättern, die größeren in Höhlen. Sie verzehren giftige Beutetiere wie Milben, Ameisen und Käfer, um ihren Giftvorrat, der über 200 Alkaloide umfasst, aufrecht zu erhalten. Nachzuchten in Gefangenschaft haben aufgrund des abweichenden Nahrungsangebots oft kein Hautgift mehr. Einige Arten sind von Natur aus ungiftig und tragen ihre auffälige Signalfarbe nur, um Fressfeinde zu täuschen (Mimikry).[NEWLINE]Indigene Völker benutzen das Gift bei der Jagd mit dem Blasrohr, indem sie es auf die Pfeile auftragen (daher die Bezeichnung Pfeilgiftfrosch). Jedoch bilden nur wenige Arten ein für den Menschen tödliches Gift aus. Einige Gattungen der Baumsteigerfrösche stehen unter Artenschutz, ihre Bestände sind durch illegalen Handel und die Abholzung des Regenwaldes stark gefährdet. In kühleren Regionen der Anden droht zudem ein Pilzbefall, der tödlich verlaufen kann.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEALS_COLD_DAMAGE</Tag>
+		<Tag>TXT_KEY_UNITHELP_DEALS_COLD_DAMAGE</Tag>
 		<English>[ICON_BULLET]Deals Cold Damage with its attacks.</English>
 		<French>[ICON_BULLET]Génère des dégâts liés au froid lors de ses attaques.</French>
 		<Italian>[ICON_BULLET]Attaccando, infligge Danno da freddo.</Italian>
 		<Polish>[ICON_BULLET]Zadaje Obrażenia od Zimna.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEALS_COLD_DAMAGE_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_DEALS_COLD_DAMAGE_SHORT</Tag>
 		<English>[ICON_BULLET]Deals Cold Damage on Attacks</English>
 		<French>[ICON_BULLET]En Attaquant, l'unité provoque des dégâts liés au froid.</French>
 		<Italian>[ICON_BULLET]Attaccando, infligge Danno da freddo</Italian>
 		<Polish>[ICON_BULLET]Zadaje Obrażenia od Zimna podczas Ataku</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEALS_COLD_DAMAGE_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_DEALS_COLD_DAMAGE_TOTAL</Tag>
 		<English>[ICON_BULLET]Damage this unit deals is Cold Damage.</English>
 		<French>[ICON_BULLET]Les dégâts infligés par cette unité sont liés au froid.</French>
 		<Italian>[ICON_BULLET]Quest'unità infligge Danno da freddo.</Italian>
@@ -5091,7 +5091,7 @@
 		<English>Dedan Kimathi Waciuri (31 October 1920 - 18 February 1957) born Kimathi wa Waciuri, was a leader of the Mau Mau which led an armed military struggle known as the Mau Mau uprising against the British colonial government in Kenya in the 1950s.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEFENSE_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_DEFENSE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% Defence Strength</English>
 		<French>[ICON_BULLET]%D1_Amount%% en Défendant</French>
 		<German>[ICON_BULLET]%D1_Amount%% Verteidigung</German>
@@ -5099,7 +5099,7 @@
 		<Polish>[ICON_BULLET]%D1_Amount%% do Obrony</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEFENSE_MODIFIER_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_DEFENSE_MODIFIER_SHORT</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% Defence Strength</English>
 		<French>[ICON_BULLET]Modif. de Défense: %d1_Amount%%</French>
 		<German>[ICON_BULLET]%d1_Amount%% Verteidigung</German>
@@ -5117,21 +5117,21 @@
 		<English>Demetrius I was a Greek king (reigned c. 200-180 BC) of Gandhara. He was the son of Euthydemus and succeeded him around 200 BC, after which he conquered extensive areas in what now is now Afghanistan and Pakistan. thus creating an Indo-Greek Kingdom far from Hellenistic Greece. He was never defeated in battle and was posthumously qualified as the Invincible (Aniketos) on the pedigree coins of his successor Agathocles.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEMORALIZATION</Tag>
+		<Tag>TXT_KEY_UNITHELP_DEMORALIZATION</Tag>
 		<English>[ICON_BULLET]Demoralization: Loses %d1_Amount%% strength per defense in a given round.</English>
 		<French>[ICON_BULLET]Démoralisation: perd %d1_Amount%% de puissance en défense lors d'un round.</French>
 		<Italian>[ICON_BULLET]Demoralizzazione: perde %d1_Amount%% di forza alla difesa in un certo turno.</Italian>
 		<Polish>[ICON_BULLET]Demoralizacja: Zabiera %d1_Amount%% Siły na obronę przez kilka rund.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEMORALIZATION_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_DEMORALIZATION_TOTAL</Tag>
 		<English>[ICON_BULLET]Demoralization: Loses %d1_Amount%% Strength/defense.</English>
 		<French>[ICON_BULLET]Démoralisation: perd %d1_Amount%% Force/défense.</French>
 		<Italian>[ICON_BULLET]Demoralizzazione: perde %d1_Amount%% forza/difesa.</Italian>
 		<Polish>[ICON_BULLET]Demoralizacja: Zabiera %d1_Amount%% Siły/Rundę.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEMORALIZATION_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_DEMORALIZATION_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Demoralization: -%d1_Amount%% strength/defense</English>
 		<French>[ICON_BULLET]Démoralisation: -%d1_Amount%% Force/défense</French>
 		<Italian>[ICON_BULLET]Demoralizzazione: -%d1_Amount%% forza/difesa</Italian>
@@ -5194,21 +5194,21 @@
 		<Russian>Ñîâð. ýñìèíåö</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DETERMINATION</Tag>
+		<Tag>TXT_KEY_UNITHELP_DETERMINATION</Tag>
 		<English>[ICON_BULLET]Determination: Gains +%d1_Amount%% additional strength per defense in a given round.</English>
 		<French>[ICON_BULLET]Détermination: gagne +%d1_Amount%% de puissance supplémentaire en défense lors d'un round.</French>
 		<Italian>[ICON_BULLET]Determinazione: ottiene +%d1_Amount%% di forza supplementare alla difesa in un certo turno.</Italian>
 		<Polish>[ICON_BULLET]Determinacja: Daje +%d1_Amount%% dodatkowej Siły na obronę przez kilka rund.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DETERMINATION_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_DETERMINATION_TOTAL</Tag>
 		<English>[ICON_BULLET]Determination: Gains %d1_Amount%% Strength/defense.</English>
 		<French>[ICON_BULLET]Détermination: gagne %d1_Amount%% Force/défense.</French>
 		<Italian>[ICON_BULLET]Determinazione: ottiene %d1_Amount%% forza/difesa.</Italian>
 		<Polish>[ICON_BULLET]Determinacja: Daje %d1_Amount%% Siły/Rundę.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DETERMINATION_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_DETERMINATION_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Determination: +%d1_Amount%% strength/defense</English>
 		<French>[ICON_BULLET]Détermination: +%d1_Amount%% Force/défense</French>
 		<Italian>[ICON_BULLET]Determinazione: +%d1_Amount%% forza/difesa</Italian>
@@ -5334,7 +5334,7 @@
 		<Russian>Âðà÷</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DODGE_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_DODGE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Modifies the base 50% Dodge by %d1_Amount%%</English>
 		<French>[ICON_BULLET]Modificateur d'Esquive: modifie l'esquive de base (50%%) de %d1_Amount</French>
 		<German>[ICON_BULLET]verändert die grundlegende 50% Wahrscheinlichkeit für Ausweichen um %d1_Amount%%</German>
@@ -5342,7 +5342,7 @@
 		<Polish>[ICON_BULLET]Modyfikator Uniku: Modyfikuje bazowy unik (50%%) o %d1_Amount</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DODGE_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_DODGE_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Dodge Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Esquive: Réduit les chances de votre adversaire de vous toucher à chaque coup porté durant le combat de %d1_Amount%%</French>
 		<German>[ICON_BULLET]Ausweichmodifikator: %d1_Amount%%</German>
@@ -5350,7 +5350,7 @@
 		<Polish>[ICON_BULLET]Unik: Zmniejsza szanse wroga na uderzenie w każdej turze walki o %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DODGE_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_DODGE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Dodge Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Esquive: %d1_Amount%%</French>
 		<German>[ICON_BULLET]Ausweichen: %d1_Amount%%</German>
@@ -5358,7 +5358,7 @@
 		<Polish>[ICON_BULLET]Unik: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DODGE_VS_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_DODGE_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change Dodge vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change d'Esquive contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change Ausweichen gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
@@ -5659,7 +5659,7 @@
 		<English>The Jugunthiz ("Youth") is a unit of lightly armed skirmisher troops who break up and harass enemy formations before the main battle lines meet, and act as a screen for heavy troops, taking losses in order to increase the odds of survival of more valuable "proven" warriors (Dugunthiz) who stand just behind. They must first prove themselves in battle in order to earn experience and status and fight beside their betters. Their skills also make them useful in springing tactical ambushes. Each warrior is armed with a bundle of throwing spears, a slightly longer spear for melee and a stout ovular shield, but they do not wear armor, being poor and of low status, but also choosing speed over protection.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DYNAMIC_DEFENSE</Tag>
+		<Tag>TXT_KEY_UNITHELP_DYNAMIC_DEFENSE</Tag>
 		<English>[ICON_BULLET]Dynamic Defense: Denies %d1_Amount%% Surround and Destroy Penalty when defending.</English>
 		<French>[ICON_BULLET]Défense Dynamique: Annule %d1_Amount%% des pénalités d'Encerclement lorsqu'il défend.</French>
 		<German>[ICON_BULLET]Dynamische Verteidigung: -%d1_Amount%% auf Einkesselungsstrafen in der Verteidigung</German>
@@ -5668,7 +5668,7 @@
 		<Russian>[ICON_BULLET]Динамич. защита: убирает %d1_Amount%% штраф от Окружения и уничтожения, когда обороняется.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DYNAMIC_DEFENSE_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_DYNAMIC_DEFENSE_TOTAL</Tag>
 		<English>[ICON_BULLET]Dynamic Defense: Resists %d1_Amount%% of Surround and Destroy penalties.</English>
 		<French>[ICON_BULLET]Défense dynamique: Résiste de %d1_Amount%% aux pénalités d'Encerclement.</French>
 		<German>[ICON_BULLET]Dynamische Verteidigung: -%d1_Amount%% auf Einkesselungsstrafen.</German>
@@ -5677,7 +5677,7 @@
 		<Russian>[ICON_BULLET]Динамич. защита: %d1_Amount%% к сопротивлению ущербу от окружения и уничтожения.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DYNAMIC_DEFENSE_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_DYNAMIC_DEFENSE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Dynamic Defense: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Défense Dynamique: %d1_Amount%%</French>
 		<German>[ICON_BULLET]Dynamische Verteidigung: %d1_Amount%%</German>
@@ -5864,7 +5864,7 @@
 		<Polish>Pierwsze czołgi, oznaczone Mark I weszły do akcji w bitwy pod Sommą, czołgi były użyte w roli wsparcia piechoty. Pierwsze zmasowane natarcie czołgów miało miejsce w czasie bitwy pod Cambrai. Jedyną niemiecką konstrukcją z okresu I wojny światowej był nieudany czołg A7V. Za najbardziej udany czołg I wojny światowej uważana jest francuska konstrukcja FT-17. Okres międzywojenny to czas prób i udoskonalania istniejących pomysłów. W większości krajów powstały konstrukcje czołgów "szybkich" i "piechoty" - przeznaczonych albo do niszczenia czołgów nieprzyjaciela i szybkich ataków na tyły wroga (czołg pościgowy) albo do wsparcia piechoty (czołg piechoty). W III Rzeszy oprócz czołgów lekkich (PzKpfw I, PzKpfw II) zaprojektowano dwa czołgi średnie - PzKpfw III (początkowo z armatą 37 mm, w późniejszym czasie z armatami większego kalibru) przeznaczony do zwalczania pojazdów nieprzyjaciela i PzKpfw IV (początkowo z krótkolufową armatą 75 mm) przeznaczonym do wspomagania piechoty. Pierwszymi czołgami uzbrojonymi w armaty "uniwersalne" (długolufowe armaty kalibru ponad 50 mm pozwalające na używanie skutecznej amunicji przeciwpancernej jak i odłamkowej i kruszącej) były radzieckie konstrukcje KW-1 i T-34.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EARLY_WITHDRAW</Tag>
+		<Tag>TXT_KEY_UNITHELP_EARLY_WITHDRAW</Tag>
 		<English>[ICON_BULLET]Starts Withdrawal at %d1_Amount%% HP</English>
 		<French>[ICON_BULLET]Vont commencer à se retirer du combat lorsque blessé de %d1_Amount%% PV, plutôt que de se battre jusqu'à la mort.</French>
 		<German>[ICON_BULLET]Rückzug bei %d1_Amount%% TP</German>
@@ -5873,7 +5873,7 @@
 		<Polish>[ICON_BULLET]Będzie próbowała uciec w każdej rundzie gdy będzie posiadać %d1_Amount%% HP, zamiast utrzymywać walkę aż do bliskiej śmierci.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EARLY_WITHDRAW_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_EARLY_WITHDRAW_TOTAL</Tag>
 		<English>[ICON_BULLET]Starts Withdrawal at %d1_Amount%% HP</English>
 		<French>[ICON_BULLET]Retrait rapide: Commence à se retirer dès la perte de %d1_Amount%% PV.</French>
 		<German>[ICON_BULLET]Rückzug bei %d1_Amount%% TP</German>
@@ -5882,7 +5882,7 @@
 		<Polish>[ICON_BULLET]Wczesna ucieczka: Próba ucieczki rozpoczyna się na %d1_Amount%% straconego HP.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EARLY_WITHDRAW_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_EARLY_WITHDRAW_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Starts Withdrawal at %d1_Amount%% HP</English>
 		<French>[ICON_BULLET]Retrait rapide: %d1_Amount%%</French>
 		<German>[ICON_BULLET]Rückzug bei %d1_Amount%% TP</German>
@@ -6051,7 +6051,7 @@
 		<Russian>Ýìó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ENCLOSE</Tag>
+		<Tag>TXT_KEY_UNITHELP_ENCLOSE</Tag>
 		<English>[ICON_BULLET]Enclose: Adds +%d1_Amount%% to the maximum possible Surround and Destroy bonus when surrounding.</English>
 		<French>[ICON_BULLET]Encercler: Ajoute +%d1_Amount%% au Bonus maximum de l'option Encercler et détruire.</French>
 		<German>[ICON_BULLET]Umzingeln: +%d1_Amount%% auf den maximal möglichen Einkesselungsbonus</German>
@@ -6060,7 +6060,7 @@
 		<Russian>[ICON_BULLET]Блокада: дает +%d1_Amount%% к максимально возможному радиусу окружения и снимает вражеские бонусы при окружении.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ENCLOSE_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_ENCLOSE_TOTAL</Tag>
 		<English>[ICON_BULLET]Enclose: Adds +%d1_Amount%% to the maximum Surround and Destroy bonus when surrounding.</English>
 		<French>[ICON_BULLET]Encercler: Ajoute +%d1_Amount%% au Bonus maximum de l'option Encercler et détruire.</French>
 		<German>[ICON_BULLET]Umzingeln: +%d1_Amount%% auf den maximalen Einkesselungsbonus</German>
@@ -6069,7 +6069,7 @@
 		<Russian>[ICON_BULLET]Блокада: дает +%d1_Amount%% к максимальному радиусу окружения и снимает вражеские бонусы при окружении.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ENCLOSE_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_ENCLOSE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Enclose: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Encerclement: %d1_Amount%%</French>
 		<German>[ICON_BULLET]Umzingeln: %d1_Amount%%</German>
@@ -6087,7 +6087,7 @@
 		<English>Endubis (c. 270-c. 300) was a King of the Kingdom of Aksum. He was among the earliest rulers in the Horn region to mint coins. This Aksumite currency was issued in gold and silver denominations.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ENDURANCE_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_ENDURANCE_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Endurance: %d1_Amount - Resists Elemental Damage Effects and counteracts penalties from Fatigue, Tires, and Frays (by round reductions in combat).</English>
 		<French>[ICON_BULLET]Endurance: %d1_Amount - Résiste aux effets des dégâts liés aux éléments et contre les pénalités liées à la fatigue, lassitude et Confusion.</French>
 		<Italian>[ICON_BULLET]Persistenza: %d1_Amount - resiste ai danni dagli elementi e contrasta le penalità da Fatica, Stanchezza e Confusione.</Italian>
@@ -6095,7 +6095,7 @@
 		<Russian>[ICON_BULLET]Выносливость: %d1_Amount к устойчивости к эффектам от стихийного урона и к штрафам от усталости, истощения или износа (за раунд битвы).</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ENDURANCE_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_ENDURANCE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Endurance: %d1_Amount</English>
 		<French>[ICON_BULLET]Endurance: %d1_Amount</French>
 		<Italian>[ICON_BULLET]Persistenza: %d1_Amount</Italian>
@@ -6165,7 +6165,7 @@
 		<Polish>Enrico (Henryk) Dandolo (ur. ok. 1107, zm. 1205) - doża Wenecji od 21 czerwca 1192 do 1 czerwca 1205. Był weneckim kupcem na Wschodzie, do rodzinnego miasta powrócił w 1171 roku, po konfiskacie dóbr weneckich na terenach Cesarstwa Bizantyjskiego. Karierę polityczną rozpoczął późno. W 1172 i 1184 roku był posłem weneckim w Konstantynopolu. Straciwszy wzrok przed 1183 rokiem, porzucił kupiectwo. Został wybrany dożą w 1193 roku. W polityce kierował się głuchą nienawiścią do Bizancjum; w dużej mierze było to spowodowane tym, że właśnie w Konstantynopolu doznał trwałego uszkodzenia wzroku. Był szarą eminencją i właściwym spiritus movens IV wyprawy krzyżowej. W kwietniu 1201 roku podpisał korzystny dla Wenecji traktat z krzyżowcami reprezentowanymi przez Gotfryda z Villehardouin, w którym zobowiązywał się do dostarczenia niezbędnych wyprawie środków transportu oraz zaopatrzenia. W zamian za to Wenecja miała otrzymać osiemdziesiąt pięć tysięcy grzywien kolońskich w srebrze oraz połowę zdobytych przez krucjatę obszarów. Jednocześnie Dandolo prowadził z muzułmanami negocjacje w sprawie przyznania Wenecjanom przywilejów w handlu z Egiptem, zobowiązał się także, że siły krzyżowców nie uderzą na Egipt (teoretyczny cel wyprawy). Chcąc wywiązać się z podjętych wobec Egipcjan zobowiązań, Dandolo zaczął manipulować wyprawą i kierować ją w zupełnie innym niż zakładany kierunku. Ponieważ krzyżowcy nie dostarczyli wymaganej w traktacie kwoty na czas, doża zaproponował, by w ramach jej spłaty zajęli dalmatyński port Zarę, dawną kolonię wenecką, znajdujący się wówczas pod zwierzchnictwem króla Węgier. Mimo sprzeciwu papieża, miasto zostało zdobyte i doszczętnie złupione. Doża i Wenecjanie zostali za ten czyn obłożeni ekskomuniką, lecz nie wpłynęło to na zmianę ich polityki. Wykorzystując osobę bizantyjskiego księcia Aleksego, któremu wyprawa miała przywrócić tron zagarnięty przez jego stryja Aleksego III, oraz potencjalną unię Kościołów greckiego i zachodniego (a raczej podporządkowanie tego pierwszego Zachodowi) krucjata ruszyła na Konstantynopol, zamiast na muzułmanów. Taki cel wyprawy spowodował, że papież nie mógł się jej sprzeciwić, gdyż (przynajmniej teoretycznie) mogła przynieść jedność Kościoła. Armia krzyżowców zdobyła ostatecznie Konstantynopol 13 kwietnia 1204 roku, a rozkazy ataku wydawał zdobywcom osobiście stary doża, stojąc na dziobie galery. Większość rozdzielonych po zdobyciu Konstantynopola ziem przypadła w udziale Wenecjanom. Zdobyli też połowę miejsc w specjalnej radzie, która wybrała łacińskiego cesarza Bizancjum. Te sukcesy to w dużym stopniu zasługa talentów dyplomatycznych doży. Dandolo zmarł w maju lub czerwcu (1 czerwca) 1205 roku w Konstantynopolu, gdzie został pochowany w kościele Hagia Sofia. Grób przetrwał do czasów obecnych.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ENSLAVEMENT_CHANCE</Tag>
+		<Tag>TXT_KEY_UNITHELP_ENSLAVEMENT_CHANCE</Tag>
 		<English>[ICON_BULLET]%D1% chance to create a slave from combat</English>
 		<French>[ICON_BULLET]%D1% de prob. de capturer des esclaves à l'issue du combat</French>
 		<German>[ICON_BULLET]%D1% Chance, nach dem Kampf einen Sklaven zu bekommen</German>
@@ -6220,7 +6220,7 @@
 		<Polish>Erwin Johannes Eugen Rommel (ur. 15 listopada 1891 w Heidenheim an der Brenz, zm. 14 października 1944 w Herrlingen) niemiecki feldmarszałek. Erwin Rommel był najmłodszym niemieckim feldmarszałkiem (Generalfeldmarschall) podczas II wojny światowej. Dowodził Afrika Korps niemieckim korpusem ekspedycyjnym w Afryce. Dzięki swoim znakomitym posunięciom i taktyce szybkiego przemieszczania wojsk stał się żywą legendą wśród żołnierzy niemieckich, ale przede wszystkim wśród aliantów. Ze względu na przebiegłość nazwany Lisem Pustyni (niem. Wustenfuchs). Pod koniec wojny (1944) został skierowany do Francji jako dowódca Grupy Armii B, z zadaniem poprawienia umocnień w Normandii, w obliczu spodziewanej alianckiej inwazji.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ESCAPE_SPY</Tag>
+		<Tag>TXT_KEY_UNITHELP_ESCAPE_SPY</Tag>
 		<English>[ICON_BULLET]Can Escape Capture (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut échapper à la Capture (%d1_Amount%% de Chances)</French>
 		<German>[ICON_BULLET]kann Gefangennahme entkommen (Erfolgsaussicht: %d1_Amount%%)</German>
@@ -6230,7 +6230,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò íå áûòü ïîéìàíûì (øàíñ %d1_Amount%%)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ESPIONAGE_MISSION</Tag>
+		<Tag>TXT_KEY_UNITHELP_ESPIONAGE_MISSION</Tag>
 		<English>[ICON_BULLET]Can Infiltrate another player's City (%D1_Change [ICON_ESPIONAGE])</English>
 		<French>[ICON_BULLET]Peut infiltrer la ville d'un autre joueur (%D1_Change [ICON_ESPIONAGE])</French>
 		<German>[ICON_BULLET]kann ausländische Städte infiltrieren (%D1_Change [ICON_ESPIONAGE])</German>
@@ -6282,7 +6282,7 @@
 		<Polish>Eugeniusz Sabaudzki (1663-1736), syn Eugeniusza Maurycego, księcia de Savoie-Carignan, hrabiego Soissons i Olimpii Mancini, dyplomata i generał w służbie austriackiej. Znakomity wódz w zwycięskich wojnach Austrii z Turcją i Francją, odniósł wielkie zwycięstwo w bitwie z armią turecką pod Zentą (1697). Do jego największych sukcesów militarnych zalicza się zwycięsko zakończone oblężenie twierdzy w Lille. W 1707 otrzymał od cara Rosji, Piotra I propozycję objęcia tronu polskiego, z której nie skorzystał. W latach 1714-1724 austriacki namiestnik Niderlandów. Znany opiekun nauki i sztuki.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EVADE_INTERCEPTION_SPY</Tag>
+		<Tag>TXT_KEY_UNITHELP_EVADE_INTERCEPTION_SPY</Tag>
 		<English>[ICON_BULLET]Can Evade Enemy Detection (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut échapper à la Détection par l'Ennemi(%d1_Amount%% de Chances)</French>
 		<German>[ICON_BULLET]Kann feindlicher Entdeckung entgehen (%d1_Amount%% Chance)</German>
@@ -6728,7 +6728,7 @@
 		<Russian>Èññëåäîâàòåëü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXPOSE_SPIES</Tag>
+		<Tag>TXT_KEY_UNITHELP_EXPOSE_SPIES</Tag>
 		<English>[ICON_BULLET]Helps Thwart Rival Spies</English>
 		<French>[ICON_BULLET]Aide à neutraliser les espions rivaux.</French>
 		<German>[ICON_BULLET]kann feindliche Spione enttarnen</German>
@@ -6941,7 +6941,7 @@
 		<English>Faruk Imam Muhammad (born on 15 July 1942 Bida, Nigeria) was a judge at the Kogi State Judiciary from January 1990 to 2007. Prior to this appointment, he was a lecturer at Ahmadu Bello University Zaria, from January 1975 to September 1988. He also worked with the Kwara State Judiciary, from June 1989 to January 1990.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FATIGUE</Tag>
+		<Tag>TXT_KEY_UNITHELP_FATIGUE</Tag>
 		<English>[ICON_BULLET]Fatigue: Loses %d1_Amount%% strength per round of battle during combat.</English>
 		<French>[ICON_BULLET]Fatigue: perd %d1_Amount%% de puissance par round durant le combat.</French>
 		<Italian>[ICON_BULLET]Fatica: perde %d1_Amount%% di forza per turno di battaglia durante i combattimenti.</Italian>
@@ -6949,7 +6949,7 @@
 		<Russian>[ICON_BULLET]Истощение: потеря %d1_Amount%% силы за раунд битвы во время сражения.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FATIGUE_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_FATIGUE_TOTAL</Tag>
 		<English>[ICON_BULLET]Fatigue: Loses %d1_Amount%% Strength/round.</English>
 		<French>[ICON_BULLET]Fatigue: perd %d1_Amount%% Force/round.</French>
 		<Italian>[ICON_BULLET]Fatica: perde %d1_Amount%% forza/turno.</Italian>
@@ -6957,7 +6957,7 @@
 		<Russian>[ICON_BULLET]Истощение: теряет %d1_Amount%% Сила/раунд.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FATIGUE_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FATIGUE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Fatigue: -%d1_Amount%% strength/rnd</English>
 		<French>[ICON_BULLET]Fatigue: -%d1_Amount%% Force/round</French>
 		<Italian>[ICON_BULLET]Fatica: -%d1_Amount%% forza/turno</Italian>
@@ -7154,28 +7154,28 @@
 		<English>Fire arrows are an early form of gunpowder solid fuel rocket which were attached to a shaft of the arrow to provide a propulsive force. The Chinese are credited with both the invention of the fire arrow and also the first use of fire arrows in a military warfare. The Chinese developed fire arrows from their previous invention of fireworks and gunpowder.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FLANK_SUPPORT_PERCENT_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FLANK_SUPPORT_PERCENT_TEXT</Tag>
 		<English>[ICON_BULLET]Flank Support: +%d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien en Contournement: +%d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto ai fianchi: +%d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Pomoc Skrzydłowa: +%d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FLANK_SUPPORT_PERCENT_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_FLANK_SUPPORT_PERCENT_TOTAL</Tag>
 		<English>[ICON_BULLET]Current Flank Support: %d1_Amount%% of this unit's Strength</English>
 		<French>[ICON_BULLET]Soutien de contournement actuel: %d1_Amount%% de la Puissance de l'Unité</French>
 		<Italian>[ICON_BULLET]Supporto attuale ai fianchi: %d1_Amount%% della forza di quest'unità</Italian>
 		<Polish>[ICON_BULLET]Aktualna Pomoc Skrzydłowa: %d1_Amount%% z Siły tej jednostki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FLANK_SUPPORT_PERCENT_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FLANK_SUPPORT_PERCENT_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Current Flank Support: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien de contournement actuel: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto attuale ai fianchi: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Aktualna Pomoc Skrzydłowa: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FLIES_TO_MOVE</Tag>
+		<Tag>TXT_KEY_UNITHELP_FLIES_TO_MOVE</Tag>
 		<English>[ICON_BULLET]Flies To Move</English>
 		<French>[ICON_BULLET]Se déplace en volant</French>
 		<Italian>[ICON_BULLET]Si muove volando</Italian>
@@ -7183,7 +7183,7 @@
 		<Russian>[ICON_BULLET]Äâèæ.: ïîëåò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FLIES_TO_MOVE_LONG</Tag>
+		<Tag>TXT_KEY_UNITHELP_FLIES_TO_MOVE_LONG</Tag>
 		<English>[ICON_BULLET]Flies to Move(May ignore non-flying pursuit, river and amphibious attack modifiers, tile movement modifiers, and may utilize coastal and unpassable tiles.)</English>
 		<French>[ICON_BULLET]Se déplace en volant (peut ignorer les poursuites, les modificateurs d'attaque (rivière/amphibie) de mouvement. peut utiliser les cases infranchissables.)</French>
 		<Italian>[ICON_BULLET]Si muove volando: ignora gli inseguimenti di unità non volanti, i modificatori per gli attacchi anfibi, i modificatori di movimento sulle caselle, può attraversare caselle di costa e di terreno invalicabile.</Italian>
@@ -7191,7 +7191,7 @@
 		<Russian>[ICON_BULLET]Движ.: полет (Игнорирует нелетающих преследователей, модификаторы атаки через реки и побережья, рельефы и типы местности и может пересекать прибрежные и непроходимые клетки.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FLIES_TO_MOVE_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FLIES_TO_MOVE_SHORT</Tag>
 		<English>[ICON_BULLET]Flies to Move</English>
 		<French>[ICON_BULLET]Se déplace en volant</French>
 		<Italian>[ICON_BULLET]Si muove volando</Italian>
@@ -7308,21 +7308,21 @@
 		<Polish>Swen Widłobrody - król duński (ok. 987-1014) i norweski (987-994), władca Anglii (1013-1014). Swen wyprawiał się na Anglię już w latach 90. X wieku, ale były to tylko wyprawy łupieżcze. Do zorganizowanego podboju przystąpił w 1002. 13 listopada tegoż roku, w dzień św. Brycjusza, na rozkaz angielskiego króla Ethelreda II wymordowano kilka setek duńskich osadników. Wśród ofiar znalazła się Gunhilda, siostra Swena, wraz ze swoim mężem i małym synkiem. Widłobrody postanowił zemścić się na angielskimi królu. Od tamtej pory na Anglię regularnie spadały niszczące duńskie najazdy - w latach 1002-1005 na Essex i Anglię Wschodnią, w latach 1006-1007 i 1009-1012. Anglosasi unikali groźby podboju duńskiego regularnie płacąc haracz zwany danegeld, który dochodził do astronomicznej sumy 50 tys. funtów złota i srebra.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FORTITUDE</Tag>
+		<Tag>TXT_KEY_UNITHELP_FORTITUDE</Tag>
 		<English>[ICON_BULLET]Fortitude: Resistance to Disease and Increased likelihood of Overcoming any Affliction by %d1_Amount%%</English>
 		<French>[ICON_BULLET]Fortitude: Résistance aux maladies, et %d1_Amount%% de chances supplémentaires de rémission des affections</French>
 		<Italian>[ICON_BULLET]Forza d'animo: resistenza a Malattia e probabilità maggiore del Superamento di Afflizione di %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Hart: Odporność na Choroby i zwiększa prawdopodobieństwo wyleczenia jakiejkolwiek dolegliwości o %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FORTITUDE_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_FORTITUDE_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Fortitude: Resists and improves chance to overcome Afflictions by %d1_Amount%%</English>
 		<French>[ICON_BULLET]Fortitude: Résiste et augmente les chances de surmonter les Affections de %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Forza d'animo: resiste e migliora le chance di superare Afflizione del %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Hart: Odporność i szansa na wyleczenie dolegliwości o %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FORTITUDE_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FORTITUDE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Fortitude: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Courage: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Forza d'animo: %d1_Amount%%</Italian>
@@ -7345,21 +7345,21 @@
 		<Italian>I cercatori d'oro della corsa all'oro in California divenero noti come Forty-Niners.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FORT_REPEL</Tag>
+		<Tag>TXT_KEY_UNITHELP_FORT_REPEL</Tag>
 		<English>[ICON_BULLET]Fortified Repel: Adds %d1_Amount Repel Value per turn fortified.</English>
 		<French>[ICON_BULLET]Expulsion Fortifié: Ajoute %d1_Amount à la Valeur d'Expulsion (par tour fortifié).</French>
 		<Italian>[ICON_BULLET]Respinta fortificato: aggiunge %d1_Amount al valore di respinta per ogni turno fortificato.</Italian>
 		<Polish>[ICON_BULLET]Odpychanie Fortyfikowania: Dodaje %d1_Amount do wartości odpychania na turę fortyfikowania.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FORT_REPEL_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_FORT_REPEL_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]+%d1_Amount Repel value/turn Fortified.</English>
 		<French>[ICON_BULLET]+%d1_Amount Expulsion (par tour fortifié).</French>
 		<Italian>[ICON_BULLET]+%d1_Amount di respinta/turno fortificato.</Italian>
 		<Polish>[ICON_BULLET]+%d1_Amount Odpychanie na turę.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FORT_REPEL_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FORT_REPEL_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Repel/turn fortified: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Expulsion/tour fortifié: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Respinta/turno fortificato: %d1_Amount%%</Italian>
@@ -7381,21 +7381,21 @@
 		<Polish>Francisco de Miranda, właśc. Sebastiąn Francisco de Miranda y Rodriguez (ur. 28 marca 1750 w Caracas, zm. 14 lipca 1816 w Kadyksie) wenezuelski rewolucjonista, którego plan wyzwolenia kolonii hiszpańskich w Ameryce się nie powiódł, lecz uważa się go za poprzednika Simóna Bolivara i innych, bardziej skutecznych południowoamerykańskich bojowników o niepodległość (Libertadores). Miranda jest nazywany Prekursorem Niepodległości Ameryki Łacińskiej (El Precursor).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FRAYS</Tag>
+		<Tag>TXT_KEY_UNITHELP_FRAYS</Tag>
 		<English>[ICON_BULLET]Frays: Loses %d1_Amount%% withdrawal chance per attack in a given round.</English>
 		<French>[ICON_BULLET]Confusion: perd %d1_Amount%% probabilité de retrait en attaque lors d'un round.</French>
 		<Spanish>[ICON_BULLET]Confusione: perde %d1_Amount%% di chance di ritirata per gli attaccanti in un certo turno.</Spanish>
 		<Polish>[ICON_BULLET]Pośpiech: Zabiera %d1_Amount%% szansy na ucieczkę na atak przez kilka rund</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FRAYS_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_FRAYS_TOTAL</Tag>
 		<English>[ICON_BULLET]Frays: Loses +%d1_Amount Withdraw Chance/attack.</English>
 		<French>[ICON_BULLET]Confusion: perd +%d1_Amount Chances de retrait/attaque.</French>
 		<Italian>[ICON_BULLET]Confusione: perde +%d1_Amount chance di ritirata/attacco.</Italian>
 		<Polish>[ICON_BULLET]Pośpiech: Zabiera +%d1_Amount Szans na Ucieczkę/Atak.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FRAYS_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FRAYS_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Frays: -%d1_Amount Withdrawal Chance/attack</English>
 		<French>[ICON_BULLET]Confusion: -%d1_Amount Chances de retrait/attaque</French>
 		<Italian>[ICON_BULLET]Confusione: -%d1_Amount chance di ritirata/attacco</Italian>
@@ -7501,21 +7501,21 @@
 		<Russian>Ôðåãàò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FRONT_SUPPORT_PERCENT_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FRONT_SUPPORT_PERCENT_TEXT</Tag>
 		<English>[ICON_BULLET]Front Support: +%d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien au Front: +%d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto al fronte: +%d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Pomoc Frontowa: +%d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FRONT_SUPPORT_PERCENT_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_FRONT_SUPPORT_PERCENT_TOTAL</Tag>
 		<English>[ICON_BULLET]Current Front Support: %d1_Amount%% of this unit's Strength</English>
 		<French>[ICON_BULLET]Soutien au Front actuel: %d1_Amount%% de la Puissance de l'Unité</French>
 		<Italian>[ICON_BULLET]Supporto attuale del fronte: %d1_Amount%% della forza di quest'unità</Italian>
 		<Polish>[ICON_BULLET]Aktualna Pomoc Frontowa: %d1_Amount%% z Siły tej jednostki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FRONT_SUPPORT_PERCENT_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FRONT_SUPPORT_PERCENT_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Current Front Support: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien au Front actuel: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto attuale del fronte: %d1_Amount%%</Italian>
@@ -8372,7 +8372,7 @@
 		<Russian>Ãðåíàäåð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GRID_X_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_GRID_X_TEXT</Tag>
 		<English>[ICON_BULLET]Tech: %s1_Tech Grid X: %d2_Value</English>
 		<French>[ICON_BULLET]Tech: %s1_Tech Grille X: %d2_Value</French>
 		<Polish>[ICON_BULLET]Tech: %s1_Tech Siatka X: %d2_Value</Polish>
@@ -8412,14 +8412,14 @@
 		<Polish>Gryzli</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_AUTO_PROMOTION_GROUPING</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_AUTO_PROMOTION_GROUPING</Tag>
 		<English>Auto Promoting</English>
 		<French>Promot. Auto</French>
 		<Spanish>Asciende automáticamente</Spanish>
 		<Russian>Àâòîêâàëèôèêàöèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_AUTO_UPGRADE_GROUPING</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_AUTO_UPGRADE_GROUPING</Tag>
 		<English>Auto Upgrading</English>
 		<French>Amélior. Auto</French>
 		<Spanish>Mejora automáticamente</Spanish>
@@ -8427,7 +8427,7 @@
 		<Russian>Àâòîìàòè÷åñêèå óëó÷øåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_COMBAT_GROUPING</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_COMBAT_GROUPING</Tag>
 		<English>Combat Type</English>
 		<French>Classe de Combat</French>
 		<German>Einheitenklasse</German>
@@ -8437,7 +8437,7 @@
 		<Russian>Òèï áîÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_COMBAT_GROUP_NONE</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_COMBAT_GROUP_NONE</Tag>
 		<English>None</English>
 		<French>Aucun</French>
 		<German>Keine</German>
@@ -8447,7 +8447,7 @@
 		<Russian>Íåò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_LEVEL_GROUP</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_LEVEL_GROUP</Tag>
 		<English>Level %s1</English>
 		<French>Niveau %s1</French>
 		<German>Stufe %s1</German>
@@ -8457,7 +8457,7 @@
 		<Russian>Óðîâåíü %s1</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_LEVEL_GROUPING</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_LEVEL_GROUPING</Tag>
 		<English>Level</English>
 		<French>Niveau</French>
 		<German>Stufe</German>
@@ -8467,7 +8467,7 @@
 		<Russian>Óðîâåíü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_LOCATION_GROUPING</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_LOCATION_GROUPING</Tag>
 		<English>Location</English>
 		<French>Emplacement</French>
 		<German>Standort</German>
@@ -8477,7 +8477,7 @@
 		<Russian>Ðàñïîëîæåíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_BARBARIAN_TERRITORY</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_LOCATION_GROUP_BARBARIAN_TERRITORY</Tag>
 		<English>Barbarian Territory</English>
 		<French>Territoire Barbare</French>
 		<German>Barbarisches Gebiet</German>
@@ -8487,7 +8487,7 @@
 		<Russian>Âàðâàðñêàÿ òåððèòîðèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_DOMESTIC_CITY</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_LOCATION_GROUP_DOMESTIC_CITY</Tag>
 		<English>Domestic City</English>
 		<French>Ville</French>
 		<German>Eigene Stadt</German>
@@ -8497,7 +8497,7 @@
 		<Russian>Ñâîé ãîðîä</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_DOMESTIC_TERRITORY</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_LOCATION_GROUP_DOMESTIC_TERRITORY</Tag>
 		<English>Domestic Territory</English>
 		<French>Territoire</French>
 		<German>Eigenes Gebiet</German>
@@ -8507,7 +8507,7 @@
 		<Russian>Ñâîÿ òåððèòîðèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_ENEMY_TERRITORY</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_LOCATION_GROUP_ENEMY_TERRITORY</Tag>
 		<English>Enemy Territory</English>
 		<French>Territoire Ennemi</French>
 		<German>Feindliches Gebiet</German>
@@ -8517,7 +8517,7 @@
 		<Russian>Âðàæåñêàÿ òåððèòîðèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_FRIENDLY_CITY</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_LOCATION_GROUP_FRIENDLY_CITY</Tag>
 		<English>Friendly City</English>
 		<French>Ville amie</French>
 		<German>Befreundete Stadt</German>
@@ -8527,7 +8527,7 @@
 		<Russian>Äðóæåñêèé ãîðîä</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_FRIENDLY_TERRITORY</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_LOCATION_GROUP_FRIENDLY_TERRITORY</Tag>
 		<English>Friendly Territory</English>
 		<French>Territoire ami</French>
 		<German>Befreundetes Gebiet</German>
@@ -8537,7 +8537,7 @@
 		<Russian>Äðóæåñêàÿ òåððèòîðèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_NEUTRAL_TERRITORY</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_LOCATION_GROUP_NEUTRAL_TERRITORY</Tag>
 		<English>Neutral Territory</English>
 		<French>Territoire Neutre</French>
 		<German>Neutrales Gebiet</German>
@@ -8547,7 +8547,7 @@
 		<Russian>Íåéòðàëüíàÿ òåððèòîðèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_TEAM_CITY</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_LOCATION_GROUP_TEAM_CITY</Tag>
 		<English>Team City</English>
 		<French>Ville du Groupe</French>
 		<German>Verbündete Stadt</German>
@@ -8557,7 +8557,7 @@
 		<Russian>Ãîðîä êîìàíäû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_TEAM_TERRITORY</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_LOCATION_GROUP_TEAM_TERRITORY</Tag>
 		<English>Team Territory</English>
 		<French>Territoire du Groupe</French>
 		<German>Verbündetes Gebiet</German>
@@ -8567,7 +8567,7 @@
 		<Russian>Òåððèòîðèÿ êîìàíäû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUPING</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUPING</Tag>
 		<English>Orders</English>
 		<French>Ordres</French>
 		<German>Befehle</German>
@@ -8577,7 +8577,7 @@
 		<Russian>Ïðèêàçû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AIRBOMBSETTINGS</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_AIRBOMBSETTINGS</Tag>
 		<English>Auto Air Bomb</English>
 		<French>Bombardement Aér. Auto</French>
 		<Spanish>Bombardeo aéreo automatizado</Spanish>
@@ -8585,7 +8585,7 @@
 		<Russian>Àâòîìàòè÷åñêàÿ áîìáàðäèðîâêà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AIRSTRIKESETTINGS</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_AIRSTRIKESETTINGS</Tag>
 		<English>Auto Air Strike</English>
 		<French>Raid Aérien Auto</French>
 		<Spanish>Ataque aéreo automatizado</Spanish>
@@ -8593,7 +8593,7 @@
 		<Russian>Àâòîìàòè÷åñêèå íàëåòû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AIRUNITCANDEFEND_TEXT</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_AIRUNITCANDEFEND_TEXT</Tag>
 		<English>Auto Air Patrol</English>
 		<French>Patrouilles Aér. Auto</French>
 		<Spanish>Patrulla aérea automatizada</Spanish>
@@ -8601,7 +8601,7 @@
 		<Russian>Àâòîìàòè÷åñêèé ïåðåõâàò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AUTO_BUILD</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_AUTO_BUILD</Tag>
 		<English>Auto Build Improvements</English>
 		<French>Construire Auto. les Améliorations</French>
 		<German>Modernisierungen errichten (automatisch)</German>
@@ -8611,7 +8611,7 @@
 		<Russian>Àâòîìàòè÷åñêè ñòðîèòü óëó÷øåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AUTO_CITY</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_AUTO_CITY</Tag>
 		<English>Auto Improve City</English>
 		<French>Améliorer Auto. la ville</French>
 		<German>Nächste Stadt modernisieren (automatisch)</German>
@@ -8621,7 +8621,7 @@
 		<Russian>Àâòîìàòè÷åñêè óëó÷øàòü ãîðîä</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AUTO_NETWORK</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_AUTO_NETWORK</Tag>
 		<English>Auto Trade Network</English>
 		<French>Construire Auto. Réseaux Comm.</French>
 		<German>Handelsnetz errichten (automatisch)</German>
@@ -8631,7 +8631,7 @@
 		<Russian>Àâòîìàòè÷åñêè ñòðîèòü òîðãîâûå ïóòè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AUTO_RELIGION</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_AUTO_RELIGION</Tag>
 		<English>Spread Religion/Corporation</English>
 		<French>Propager Religion/Corporation</French>
 		<German>Religion/Kapitalgesellschaft verbreiten</German>
@@ -8641,7 +8641,7 @@
 		<Russian>Ðàñïðîñòðàíåíèå ðåëèãèè/êîðïîðàöèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_BUILD</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_BUILD</Tag>
 		<English>Build Improvement</English>
 		<French>Construire Amélioration</French>
 		<German>Modernisierung errichten</German>
@@ -8651,7 +8651,7 @@
 		<Russian>Ïîñòðîéêà óëó÷øåíèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_CONSTRUCT</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_CONSTRUCT</Tag>
 		<English>Construct Building</English>
 		<French>Construire Bâtiment</French>
 		<German>Gebäude errichten</German>
@@ -8661,7 +8661,7 @@
 		<Russian>Ïîñòðîéêà ñòðîåíèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_DEFENSESETTINGS</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_DEFENSESETTINGS</Tag>
 		<English>Auto City Defense</English>
 		<French>Défense de la ville Auto</French>
 		<Spanish>Defensa de ciudad automatizada</Spanish>
@@ -8669,7 +8669,7 @@
 		<Russian>Àâòîçàùèòà ãîðîäà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_EXPLORE</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_EXPLORE</Tag>
 		<English>Explore</English>
 		<French>Explorer</French>
 		<German>Erkunden</German>
@@ -8679,7 +8679,7 @@
 		<Russian>Èññëåäîâàòü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_FORTIFY</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_FORTIFY</Tag>
 		<English>Fortify</English>
 		<French>Se Fortifier</French>
 		<German>Verschanzen</German>
@@ -8689,7 +8689,7 @@
 		<Russian>Óêðåïèòüñÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_GOTO</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_GOTO</Tag>
 		<English>Go To</English>
 		<French>Aller à</French>
 		<German>Gehe zu</German>
@@ -8699,7 +8699,7 @@
 		<Russian>Èäòè ê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_HEAL</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_HEAL</Tag>
 		<English>Heal</English>
 		<French>Guérison</French>
 		<German>Heilen</German>
@@ -8709,7 +8709,7 @@
 		<Russian>Ëå÷åíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_HUNTSETTINGS</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_HUNTSETTINGS</Tag>
 		<English>Auto Hunt</English>
 		<French>Traque Auto</French>
 		<Spanish>Caza automatizada</Spanish>
@@ -8717,7 +8717,7 @@
 		<Russian>Àâòî-îõîòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_INTERCEPT</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_INTERCEPT</Tag>
 		<English>Intercept</English>
 		<French>Intercepter</French>
 		<German>Abfangen</German>
@@ -8727,7 +8727,7 @@
 		<Russian>Ïåðåõâàò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_NONE</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_NONE</Tag>
 		<English>None</English>
 		<French>Aucun</French>
 		<German>Keine</German>
@@ -8737,7 +8737,7 @@
 		<Russian>Íåò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_OTHER</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_OTHER</Tag>
 		<English>Other</English>
 		<French>Autre</French>
 		<German>Andere</German>
@@ -8747,7 +8747,7 @@
 		<Russian>Äðóãîå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PATROL</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PATROL</Tag>
 		<English>Patrol</English>
 		<French>Patrouiller</French>
 		<German>Patrouille</German>
@@ -8757,7 +8757,7 @@
 		<Russian>Ïàòðóëü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PATROLSETTINGS</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PATROLSETTINGS</Tag>
 		<English>Auto Patrol</English>
 		<French>Patrouille Auto</French>
 		<Spanish>Patrulla automatizada</Spanish>
@@ -8765,7 +8765,7 @@
 		<Russian>Àâòîìàòè÷åñêîå ïàòðóëèðîâàíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PILLAGESETTINGS</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PILLAGESETTINGS</Tag>
 		<English>Auto Pillage</English>
 		<French>Pillage Auto</French>
 		<Spanish>Saqueo automatizado</Spanish>
@@ -8773,7 +8773,7 @@
 		<Russian>Àâòîìàòè÷åñêèé ãðàáåæ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PIRATESETTINGS</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PIRATESETTINGS</Tag>
 		<English>Auto Pirate</English>
 		<French>Piraterie Auto</French>
 		<Spanish>Piratería automatizada</Spanish>
@@ -8781,7 +8781,7 @@
 		<Russian>Àâòîìàòè÷åñêîå ïèðàòñòâî</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PLUNDER</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PLUNDER</Tag>
 		<English>Blockade</English>
 		<French>Bloquer</French>
 		<Italian>Embargo</Italian>
@@ -8790,21 +8790,21 @@
 		<Russian>Áëîêàäà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PROMOTESETTINGS</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PROMOTESETTINGS</Tag>
 		<English>Auto Promote</English>
 		<French>Promotions Auto</French>
 		<Spanish>Ascenso automatizado</Spanish>
 		<Polish>Automatyczna Promocja</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PROTECTSETTINGS</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PROTECTSETTINGS</Tag>
 		<English>Auto Protect</English>
 		<Spanish>Protección automatizada</Spanish>
 		<Polish>Automatyczna Ochrona</Polish>
 		<Russian>Àâòîìàòè÷åñêàÿ îõðàíà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_SENTRY</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_SENTRY</Tag>
 		<English>Sentry</English>
 		<French>Surveillance</French>
 		<German>Wache</German>
@@ -8814,7 +8814,7 @@
 		<Russian>Äîçîð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_SKIP</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_SKIP</Tag>
 		<English>Skip</English>
 		<French>Passe son tour</French>
 		<German>Runde überspringen</German>
@@ -8824,7 +8824,7 @@
 		<Russian>Ïðîïóñê õîäà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_SLEEP</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_SLEEP</Tag>
 		<English>Sleep</English>
 		<French>Dormir</French>
 		<German>Ausruhen</German>
@@ -8834,7 +8834,7 @@
 		<Russian>Ñïàòü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_UPGRADINGSETTINGS</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_UPGRADINGSETTINGS</Tag>
 		<English>Auto Upgrade</English>
 		<French>Améliorations Auto</French>
 		<Spanish>Mejora automatizada</Spanish>
@@ -8842,7 +8842,7 @@
 		<Russian>Àâòîóëó÷øåíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_PROMOTION_GROUPING</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_PROMOTION_GROUPING</Tag>
 		<English>Promotions</English>
 		<German>Beförderungen</German>
 		<Italian>Promozioni</Italian>
@@ -8851,7 +8851,7 @@
 		<Russian>Óëó÷øåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_PROMOTION_GROUP_NONE</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_PROMOTION_GROUP_NONE</Tag>
 		<English>None</English>
 		<French>Aucun</French>
 		<German>Keine</German>
@@ -8861,7 +8861,7 @@
 		<Russian>Íåò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPER_TYPE_GROUPING</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_TYPE_GROUPING</Tag>
 		<English>Unit Type</English>
 		<French>Type d'Unité</French>
 		<German>Einheitentyp</German>
@@ -8871,7 +8871,7 @@
 		<Russian>Òèï þíèòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPING_COMBAT</Tag>
+		<Tag>TXT_KEY_UNITHELP_GROUPING_COMBAT</Tag>
 		<English>Combat</English>
 		<German>Kampfart</German>
 		<Italian>Combattimento</Italian>
@@ -8880,7 +8880,7 @@
 		<Russian>Áîé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPING_HERO</Tag>
+		<Tag>TXT_KEY_UNITHELP_GROUPING_HERO</Tag>
 		<English>Hero</English>
 		<French>Héros</French>
 		<German>Held</German>
@@ -8890,7 +8890,7 @@
 		<Russian>Ãåðîé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPING_SINGLE</Tag>
+		<Tag>TXT_KEY_UNITHELP_GROUPING_SINGLE</Tag>
 		<English>None</English>
 		<French>Aucun</French>
 		<German>Keine</German>
@@ -10177,7 +10177,7 @@
 		<English>Like other Native peoples, the Huron needed siege weapons when they battled rival villages. One technique they developed was the mantlet, similar in function to those used in Roman and medieval armies. Two warriors would carry the mantlet (essentially a moveable wooden wall) to protect themselves from enemy arrow or musket fire until they reached their enemy's town walls, where the mantlet was used as a ladder to scale the walls and breach the town.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HURRY_FOOD</Tag>
+		<Tag>TXT_KEY_UNITHELP_HURRY_FOOD</Tag>
 		<English>[ICON_BULLET]Can Hurry Food (Adds Base: %d1)</English>
 		<French>[ICON_BULLET]Peut Créer un Surplus de Nourriture (Ajoute de Base: %d1)</French>
 		<German>[ICON_BULLET]Kann Nahrungsproduktion beschleunigen (Adds Base: %d1)</German>
@@ -10341,7 +10341,7 @@
 		<Polish>Władca i król (1580-1617) imperium Kanem-Bornu zlokalizowanego na terenie Czadu i Nigerii.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_IGNORE_ZONE_OF_CONTROL</Tag>
+		<Tag>TXT_KEY_UNITHELP_IGNORE_ZONE_OF_CONTROL</Tag>
 		<English>[ICON_BULLET]Ignores Zones of Control</English>
 		<French>[ICON_BULLET]Ignore les Zones de Contrôle</French>
 		<German>[ICON_BULLET]ignoriert Kontrollzonen</German>
@@ -10350,7 +10350,7 @@
 		<Russian>[ICON_BULLET]Игнорирует зону контроля</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_IGNORE_ZONE_OF_CONTROL_LONG</Tag>
+		<Tag>TXT_KEY_UNITHELP_IGNORE_ZONE_OF_CONTROL_LONG</Tag>
 		<English>[ICON_BULLET]Unit may ignore Zone of Control effects.</English>
 		<French>[ICON_BULLET]L'Unité ignore les effets des Zones de Contrôle.</French>
 		<Italian>[ICON_BULLET]L'unità può ignorare gli effetti delle zone di controllo.</Italian>
@@ -10358,7 +10358,7 @@
 		<Russian>[ICON_BULLET]Этот отряд невосприимчив к эффектам зоны контроля.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_IGNORE_ZONE_OF_CONTROL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_IGNORE_ZONE_OF_CONTROL_SHORT</Tag>
 		<English>[ICON_BULLET]Ignores Zones of Control</English>
 		<French>[ICON_BULLET]Ignore les Zones de Contrôle</French>
 		<Italian>[ICON_BULLET]Ignora le zone di controllo</Italian>
@@ -10419,7 +10419,7 @@
 		<Russian>Город должен иметь население не менее 10 горожан и потеряет 2 жителей после обучения 1 иммигранта. Иммигрант добавит 1 жителя, когда присоединится к городу с населением менее 7 горожан. Стоимость содержания состапвляет 2 золота за ход и прекращается, когда иммигрант присоединяется к городу.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_IMMUNITY_TO_COLD_DAMAGE</Tag>
+		<Tag>TXT_KEY_UNITHELP_IMMUNITY_TO_COLD_DAMAGE</Tag>
 		<English>[ICON_BULLET]Immune to Cold Damage Penalties.</English>
 		<French>[ICON_BULLET]Immunisé contre les pénalités engendrées par les dégâts liés au froid.</French>
 		<Italian>[ICON_BULLET]Immune alle penalità da Danno da freddo.</Italian>
@@ -10533,7 +10533,7 @@
 		<Russian>[ICON_BULLET] Òðåáóåò àêòèâíîé ãîñóäàðñòâåííîé ðåëèãèè [NEWLINE][ICON_BULLET] Èíñòèòèòóò âëàñòè "Íåòåðïèìîñòü" òîæå äîëæåí áûòü àêòèâåí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INTERCEPT_AIRCRAFT_SPY</Tag>
+		<Tag>TXT_KEY_UNITHELP_INTERCEPT_AIRCRAFT_SPY</Tag>
 		<English>[ICON_BULLET]Can Intercept Enemy Spies (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut Intercepter les Espions Ennemis (%d1_Amount%% de Chances)</French>
 		<German>[ICON_BULLET]Kann feindliche Spione abfangen (%d1_Amount%% Chance)</German>
@@ -10543,7 +10543,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò ïîéìàòü âðàæåñêèõ øïèîíîâ (øàíñ %d1_Amount%%)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INTERCEPT_AIRCRAFT_SPY_COUNTER</Tag>
+		<Tag>TXT_KEY_UNITHELP_INTERCEPT_AIRCRAFT_SPY_COUNTER</Tag>
 		<English>[ICON_BULLET]Improved Counter Espionage Missions (%d1_Amount%%)</English>
 		<French>[ICON_BULLET]Missions de Contre-Espionnage Améliorées (%d1_Amount%%)</French>
 		<German>[ICON_BULLET]Verbesserte Gegenspionage-Missionen (%d1_Amount%%)</German>
@@ -10730,7 +10730,7 @@
 		<Russian>Ìàêêàâåè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_IS_INQUISITOR</Tag>
+		<Tag>TXT_KEY_UNITHELP_IS_INQUISITOR</Tag>
 		<English>[ICON_BULLET]May conduct Inquisition Mission</English>
 		<French>[ICON_BULLET]Peut réaliser des Missions d'Inquisition</French>
 		<German>[ICON_BULLET]Kann Inquisitionen durchführen</German>
@@ -10740,7 +10740,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò ñîâåðøàòü èíêâèçèöèîííûå ìèññèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_IS_SPY</Tag>
+		<Tag>TXT_KEY_UNITHELP_IS_SPY</Tag>
 		<English>[ICON_BULLET]Can perform Espionage Missions in an opponent's territory. The longer the unit is stationary the lower the cost to perform a Mission</English>
 		<French>[ICON_BULLET]Peut exécuter des missions d'espionnage en territoire ennemi. Le coût d'exécution des missions décroît en fonction du temps de déploiement de votre unité.</French>
 		<German>[ICON_BULLET]kann Geheimdienstmissionen auf feindlichem Gebiet durchführen, je länger die Einheit zuvor am Einsatzort stationiert wurde, desto geringer sind die Missionskosten</German>
@@ -11758,42 +11758,42 @@
 		<Russian>Ðûöàðü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_KNOCKBACK</Tag>
+		<Tag>TXT_KEY_UNITHELP_KNOCKBACK</Tag>
 		<English>[ICON_BULLET]Knockback: %d1_Amount%% per round chance to force defenders to withdraw.</English>
 		<French>[ICON_BULLET]Ecrasement: %d1_Amount%% de chances par round de force le Défenseur à se retirer.</French>
 		<Italian>[ICON_BULLET]Sbaraglio: %d1_Amount%% di probabilità per turno di costringere i difensori a ritirarsi.</Italian>
 		<Polish>[ICON_BULLET]Odrzut: %d1_Amount%% szansy na rundę do zmuszenia obrońcy do ucieczki.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_KNOCKBACK_RETRIES</Tag>
+		<Tag>TXT_KEY_UNITHELP_KNOCKBACK_RETRIES</Tag>
 		<English>[ICON_BULLET]Beyond the first, unit attempts an additional %d1_Amount Knockback efforts when defending.</English>
 		<French>[ICON_BULLET]Après un premier essai, l'unité tente d'écraser %d1_Amount fois supplémentaire son adversaire en défendant.</French>
 		<Italian>[ICON_BULLET]Oltre al primo, l'unità ha un'ulteriore %d1_Amount di chance di Sbaraglio quando difende.</Italian>
 		<Polish>[ICON_BULLET]Poza pierwszym, jednostka próbuje wykonać dodatkowe %d1_Amount działań przy odrzucie przy obronie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_KNOCKBACK_RETRIES_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_KNOCKBACK_RETRIES_TOTAL</Tag>
 		<English>[ICON_BULLET]Knockback Retries: %d1_Amount</English>
 		<French>[ICON_BULLET]Essais d'écrasement: %d1_Amount</French>
 		<Italian>[ICON_BULLET]Tenativi di Sbaraglio: %d1_Amount</Italian>
 		<Polish>[ICON_BULLET]Próby Odrzutu: %d1_Amount</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_KNOCKBACK_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_KNOCKBACK_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Knockback: Force defender to withdraw, %d1_Amount%% chance/round.</English>
 		<French>[ICON_BULLET]Ecrasement: Force le défenseur à se retirer, %d1_Amount%% chance/round.</French>
 		<Italian>[ICON_BULLET]Sbaraglio: forza il difensore a ritirarsi, %d1_Amount%% di chance per turno.</Italian>
 		<Polish>[ICON_BULLET]Odrzut: Zmusza obrońcę do ucieczki, %d1_Amount%% szansy/rundę.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_KNOCKBACK_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_KNOCKBACK_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Knockback: %d1_Amount%% chance/rnd</English>
 		<French>[ICON_BULLET]Ecrasement: %d1_Amount%% chance/rnd</French>
 		<Italian>[ICON_BULLET]Sbaraglio: %d1_Amount%% chance/rnd</Italian>
 		<Polish>[ICON_BULLET]Odrzut: %d1_Amount%% szansy/rundę</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_KNOCKBACK_VS_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_KNOCKBACK_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Knockback vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% de Piétinement contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Knockback gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
@@ -12586,7 +12586,7 @@
 		<Russian>Ñòðåëîê ñ äë. ëóêîì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LONG_RANGE_SUPPORT_PERCENT_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_LONG_RANGE_SUPPORT_PERCENT_TEXT</Tag>
 		<English>[ICON_BULLET]Long Range Support: +%d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien Longue Portée: +%d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto a lungo raggio: +%d1_Amount%%</Italian>
@@ -12594,7 +12594,7 @@
 		<Russian>[ICON_BULLET]Дал. радиус поддержки: +%d1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LONG_RANGE_SUPPORT_PERCENT_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_LONG_RANGE_SUPPORT_PERCENT_TOTAL</Tag>
 		<English>[ICON_BULLET]Current Long Range Support: %d1_Amount%% of this unit's Strength</English>
 		<French>[ICON_BULLET]Soutien de Longue Portée actuel: %d1_Amount%% de la Puissance de l'Unité</French>
 		<Italian>[ICON_BULLET]Supporto attuale a lungo raggio: %d1_Amount%% della forza di quest'unità</Italian>
@@ -12602,7 +12602,7 @@
 		<Russian>[ICON_BULLET]Текущий дал. контроль: %d1_Amount%% к силе отряда</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LONG_RANGE_SUPPORT_PERCENT_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_LONG_RANGE_SUPPORT_PERCENT_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Current Long Range Support: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien de Longue Portée actuel: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto attuale a lungo raggio: %d1_Amount%%</Italian>
@@ -12763,7 +12763,7 @@
 		<English>The nomadic Lule of the plains, who in addition to their own language, spoke Tonocote, the local lingua franca and the language of Spanish catechism.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNGE</Tag>
+		<Tag>TXT_KEY_UNITHELP_LUNGE</Tag>
 		<English>[ICON_BULLET]Lunge: Gets +%d1_Amount%% Surround and Destroy Bonus when attacking.</English>
 		<French>[ICON_BULLET]Fente: Reçoit +%d1_Amount%% un bonus d'Encercler et Détruire Bonus en attaquant.</French>
 		<German>[ICON_BULLET]Ausfallschritt: Einheit erhält +%d1_Amount%% Einkesselungsbonus beim Angriff</German>
@@ -12772,7 +12772,7 @@
 		<Russian>[ICON_BULLET]Выпад: получает +%d1_Amount%% к сопутствующему урону и бонусу от убийств при атаке.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNGE_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_LUNGE_TOTAL</Tag>
 		<English>[ICON_BULLET]Lunge: Gets +%d1_Amount%% bonus from Surround and Destroy.</English>
 		<French>[ICON_BULLET]Fente: Reçoit +%d1_Amount%% un bonus d'Encercler et Détruire Bonus.</French>
 		<German>[ICON_BULLET]Ausfallschritt: +%d1_Amount%% Einkesselungsbonus</German>
@@ -12781,7 +12781,7 @@
 		<Russian>[ICON_BULLET]Выпад: получает +%d1_Amount%% к сопутствующему урону и бонусу от убийств.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNGE_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_LUNGE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Lunge: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Fente: %d1_Amount%%</French>
 		<German>[ICON_BULLET]Ausfallschritt: %d1_Amount%%</German>
@@ -13387,7 +13387,7 @@
 		<Polish>Maui bohater mitologii hawajskiej i całej Polinezji (znany na Nowej Zelandii, wyspach Samoa, Tahiti i Tonga). Posiada cechy boga-stwórcy (wydobył okoliczne wyspy z morza, podniósł sklepienie nieba, spowolnił bieg słońca), herosa kulturowego (zdobył dla ludzi ogień) i trickstera (z upodobaniem stosował podstępy i przemieniał swą postać, głównie na ptasią). Z kolei jego wyprawa do krainy zmarłych celem zdobycia nieśmiertelności (nieudana) spokrewnia go z bohaterami epickimi takimi jak Gilgamesz.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MAX_HP</Tag>
+		<Tag>TXT_KEY_UNITHELP_MAX_HP</Tag>
 		<English>[ICON_BULLET]Max HP: %d1 (usually 100.)</English>
 		<French>[ICON_BULLET]PV Max: %d1 (ref. 100.)</French>
 		<German>[ICON_BULLET]TP-Maximum: %d1 (i.d.R. 100)</German>
@@ -13396,7 +13396,7 @@
 		<Russian>[ICON_BULLET]Макс. HP: %d1 (обычно 100.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MAX_START_ERA</Tag>
+		<Tag>TXT_KEY_UNITHELP_MAX_START_ERA</Tag>
 		<English>[NEWLINE][ICON_BULLET]Can only be Built on %s1_Name and Earlier Starts</English>
 		<French>[NEWLINE][ICON_BULLET]Peut uniquement être constuit par %s1_Name et dans les premières Eres</French>
 		<German>[NEWLINE][ICON_BULLET]Kann nur gebaut werden bei %s1_Name und früheren Spielestarts</German>
@@ -13549,7 +13549,7 @@
 		<Russian>Медик - это общий термин для человека, занимающегося медициной, особенно неотложной медицинской помощи или первой помощи, например, техник неотложной медицинской помощи, фельдшер или военнослужащий, обученный медицине на поле боя. Это также может относиться к студенту-практиканту, ординатору или, в некоторых случаях, к врачу. Этот термин не применяется к медсестре, за исключением парамедицинских учреждений.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MEDIUM_RANGE_SUPPORT_PERCENT_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_MEDIUM_RANGE_SUPPORT_PERCENT_TEXT</Tag>
 		<English>[ICON_BULLET]Medium Range Support: +%d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien Moyenne Portée: +%d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto a medio raggio: +%d1_Amount%%</Italian>
@@ -13557,7 +13557,7 @@
 		<Russian>[ICON_BULLET]Средн. радиус поддержки: +%d1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MEDIUM_RANGE_SUPPORT_PERCENT_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_MEDIUM_RANGE_SUPPORT_PERCENT_TOTAL</Tag>
 		<English>[ICON_BULLET]Current Medium Range Support: %d1_Amount%% of this unit's Strength</English>
 		<French>[ICON_BULLET]Soutien de Moyenne Portée actuel: %d1_Amount%% de la Puissance de l'Unité</French>
 		<Italian>[ICON_BULLET]Supporto attuale a medio raggio: %d1_Amount%% della forza di quest'unità</Italian>
@@ -13565,7 +13565,7 @@
 		<Russian>[ICON_BULLET]Текущий средн. радиус контроля: %d1_Amount%% к силе отряда</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MEDIUM_RANGE_SUPPORT_PERCENT_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_MEDIUM_RANGE_SUPPORT_PERCENT_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Current Medium Range Support: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien de Moyenne Portée actuel: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto attuale a medio raggio: %d1_Amount%%</Italian>
@@ -14166,7 +14166,7 @@
 		<Russian>Ñîâð. äåñàíò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MODIFIER_PROPERTY_MANIP</Tag>
+		<Tag>TXT_KEY_UNITHELP_MODIFIER_PROPERTY_MANIP</Tag>
 		<English>[ICON_BULLET]From %s1_MOD:</English>
 		<French>[ICON_BULLET]De %s1_MOD:</French>
 		<Polish>[ICON_BULLET]Od %s1_MOD:</Polish>
@@ -14633,14 +14633,14 @@
 		<Polish>Armeńska jednostka kulturowa.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NAME_EM_DONT_INCREMENT_COUNTER</Tag>
+		<Tag>TXT_KEY_UNITHELP_NAME_EM_DONT_INCREMENT_COUNTER</Tag>
 		<English>Ok, don't increment counter</English>
 		<French>Ok, ne pas incrémenter le compteur</French>
 		<Spanish>Vale, no incrementar el contador</Spanish>
 		<Polish>Ok, nie podnoś licznika</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NAME_EM_HEADER_1</Tag>
+		<Tag>TXT_KEY_UNITHELP_NAME_EM_HEADER_1</Tag>
 		<English>Unit Name Testing (cancel to quit)</English>
 		<French>Test Nom d'Unités (Annuler pour quitter)</French>
 		<Italian>Testa nome dell'unità (Annulla per uscire)</Italian>
@@ -14648,7 +14648,7 @@
 		<Polish>Testowanie nazewnictwa jednostek (wyjdź by anulować)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NAME_EM_INCREMENT_COUNTER</Tag>
+		<Tag>TXT_KEY_UNITHELP_NAME_EM_INCREMENT_COUNTER</Tag>
 		<English>Ok, increment counter</English>
 		<French>Ok, incrémenter le compteur</French>
 		<Italian>Ok, incrementa il contatore</Italian>
@@ -14656,7 +14656,7 @@
 		<Polish>Ok, podnieś licznik</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NAME_EM_PROMPT_1</Tag>
+		<Tag>TXT_KEY_UNITHELP_NAME_EM_PROMPT_1</Tag>
 		<English>Enter a rename convention</English>
 		<French>Entrer une règle de renommage</French>
 		<Italian>Inserisci una regola di rinomina</Italian>
@@ -15294,7 +15294,7 @@
 		<English>The legendary religious zeal of the Normans was exercised in religious wars long before the First Crusade carved out a Norman principality in Antioch. They were major foreign participants in the Reconquista in Iberia. In 1018, Roger de Tosny travelled to the Iberian Peninsula to carve out a state for himself from Moorish lands, but failed. In 1064, during the War of Barbastro, William of Montreuil led the papal army and took a huge booty.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NO_BAD_GOODIES</Tag>
+		<Tag>TXT_KEY_UNITHELP_NO_BAD_GOODIES</Tag>
 		<English>[ICON_BULLET]Better Results from Tribal Villages</English>
 		<French>[ICON_BULLET]Meilleurs résultats avec les villages tribaux</French>
 		<German>[ICON_BULLET]versteht sich gut mit Eingeborenen</German>
@@ -15350,7 +15350,7 @@
 		<English>An Austronesian-speaking group linked to the archaeological construct known as the Lapita cultural complex reached and colonised Tonga around 1500-1000 BCE. Scholars have much debated the exact dates of the initial settlement of Tonga, but recently it has been thought that the first settlers came to the oldest town, Nukuleka, about 826 BCE,?8 years. Not much is known before European contact because of the lack of a writing system, but oral history has survived and been recorded after the arrival of the Europeans. The Tongan people first encountered Europeans in 1616 when the Dutch vessel Eendracht made a short visit to trade.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NUM_HEAL_SUPPORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_NUM_HEAL_SUPPORT</Tag>
 		<English>[ICON_BULLET]Heals %d1_Volume Unit(s)/turn. (%d3_Rem Remaining)</English>
 		<French>[ICON_BULLET]Soigne %d1_Volume Unité(s)/tour. (%d3_Rem Restant)</French>
 		<German>[ICON_BULLET]heilt %d1_Volume [NUM1:Einheit:Einheiten] pro Runde. (%d3_Rem verbleibend)</German>
@@ -15587,7 +15587,7 @@
 		<English>The territory that now constitutes Tajikistan was previously home to several ancient cultures, including the city of Sarazm of the Neolithic and the Bronze Age, and was later home to kingdoms ruled by people of different faiths and cultures, including the Oxus civilization, Andronovo culture, Buddhism, Nestorian Christianity, Zoroastrianism, and Manichaeism. The area has been ruled by numerous empires and dynasties, including the Achaemenid Empire, Sassanian Empire, Hephthalite Empire, Samanid Empire, Mongol Empire, Timurid dynasty, and the Russian Empire. As a result of the breakup of the Soviet Union, Tajikistan became an independent nation in 1991. A civil war was fought almost immediately after independence, lasting from 1992 to 1997. Since the end of the war, newly established political stability and foreign aid have allowed the country's economy to grow.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ONEUP_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_ONEUP_TEXT</Tag>
 		<English>[ICON_BULLET]Number of Extra Lives: %d1</English>
 		<French>[ICON_BULLET]Numero de extra vie: %d1</French>
 		<German>[ICON_BULLET]Anzahl zusätzlicher Leben: %d1</German>
@@ -15595,21 +15595,21 @@
 		<Polish>[ICON_BULLET]Liczba dodatkowych żyć: %d1</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ONSLAUGHT</Tag>
+		<Tag>TXT_KEY_UNITHELP_ONSLAUGHT</Tag>
 		<English>[ICON_BULLET]This unit attacks repeatedly until harmed.</English>
 		<French>[ICON_BULLET]Cette unité attaque sans s'arrêter jusqu'à ce qu'elle soit blessée.</French>
 		<Italian>[ICON_BULLET]Quest'unità continua ad attaccare finché non è danneggiata.</Italian>
 		<Polish>[ICON_BULLET]Jednostka będzie atakować póki nie otrzyma obrażeń.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ONSLAUGHT_LONG</Tag>
+		<Tag>TXT_KEY_UNITHELP_ONSLAUGHT_LONG</Tag>
 		<English>[ICON_BULLET]Attacks repeatedly until at less than full HP.</English>
 		<French>[ICON_BULLET]Attaque à plusieurs reprises jusqu'à son niveau de PV.</French>
 		<Italian>[ICON_BULLET]Attacca fino a che non ha più il massimo dei PV.</Italian>
 		<Polish>[ICON_BULLET]Ataki będą powtarzane póki HP nie spadnie poniżej 100%.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ONSLAUGHT_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_ONSLAUGHT_SHORT</Tag>
 		<English>[ICON_BULLET]Attacks until damaged</English>
 		<French>[ICON_BULLET]Attaque jusqu'à être endommagé</French>
 		<Italian>[ICON_BULLET]Attacca finché non sia danneggiato</Italian>
@@ -15849,21 +15849,21 @@
 		<Russian>Êàòàìàðàí - íàèáîëåå ðàííèé òèï êàíîý, êîòîðûé ìîã áû ïåðåäâèãàòüñÿ äàëåêî è áûñòðî. Îí áûë íåáîëüøèì è óÿçâèìûì äëÿ àòàê ñ âîåííûõ ñóäîâ..</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_OVERRUN</Tag>
+		<Tag>TXT_KEY_UNITHELP_OVERRUN</Tag>
 		<English>[ICON_BULLET]Overrun: +%d1_Amount%% vs Fortification bonuses.</English>
 		<French>[ICON_BULLET]Invasion: +%d1_Amount%% contre bonus de fortification.</French>
 		<Italian>[ICON_BULLET]Invasione: +%d1_Amount%% contro i bonus di fortificazione.</Italian>
 		<Polish>[ICON_BULLET]Inwazja: +%d1_Amount%% przeciwko bonusowi fortyfikowania.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_OVERRUN_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_OVERRUN_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Overrun: Ignores %d1_Amount%% fortification bonuses.</English>
 		<French>[ICON_BULLET]Invasion: Ignore %d1_Amount%% des bonus de fortification.</French>
 		<Italian>[ICON_BULLET]Invasione: Ignora %d1_Amount%% dei bonus di fortificazione.</Italian>
 		<Polish>[ICON_BULLET]Inwazja: Ignoruje %d1_Amount%% Bonusu od Ufortyfikowania.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_OVERRUN_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_OVERRUN_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Overrun: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Invasion: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Invasione: %d1_Amount%%</Italian>
@@ -16678,7 +16678,7 @@
 		<Russian>ББР, или Биологическая Баллистическая Ракета, является следующим шагом от Биоракеты. Эту ракету можно считать ядерной бомбой, поскольку она имеет разрушительные последствия, возникающие впоследствии удара. Используя генетические манипуляции, искусственные вирусы, содержащиеся в ней, это оружие поражает людей невиданными прежде заболеваниями, в то время как синтетический смог защищает вирусы от губительного воздействия ультрафиолетовых лучей Солнца, а также содержит пары соляной кислоты для одновременного разъедания металла. Если вирусные частицы попадают в воду, она загрязняется, уничтожая всю морскую жизнь и закупоривая все естественные каналы, такие как нефтяные отложения. [COLOR_NEGATIVE_TEXT]ВНИМАНИЕ:[COLOR_REVERT] инфекционные облака подвержены воздействию ветра и могут распространиться на соседние участки и это может привести к тому, что впоследствии будет уничтожено все живое на целых континентах, если не заблаговременно не позаботиться о дезинфекции.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POISON_PROB</Tag>
+		<Tag>TXT_KEY_UNITHELP_POISON_PROB</Tag>
 		<English>[ICON_BULLET]Poison Mastery: %D1_Amount%% Modifier to all Afflict Attempts.</English>
 		<French>[ICON_BULLET]Maîtrise des Poisons: %D1_Amount%% Modif. pour toutes les tentatives d'Affliction.</French>
 		<Italian>[ICON_BULLET]Maestria dei veleni: %D1_Amount%% a tutti i tentativi di Afflizione.</Italian>
@@ -16686,7 +16686,7 @@
 		<Russian>[ICON_BULLET]Îòðàâèòåëü: %D1_Amount%% Modifier to all Afflict Attempts.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POISON_PROB_MOD_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_POISON_PROB_MOD_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Poison Mastery: %D1_Amount%% Modifier to all Afflict probabilities from this unit.</English>
 		<French>[ICON_BULLET]Maîtrise du poison: modificateur %D1_Amount%% à toutes les probabilités d'affliction de cette unité</French>
 		<Italian>[ICON_BULLET]Maestria dei veleni: %D1_Amount%% alle probabilità di Afflizione da parte di questa unità.</Italian>
@@ -16694,7 +16694,7 @@
 		<Russian>[ICON_BULLET]Îïûòíûé îòðàâèòåëü: %D1_Amount%% Modifier to all Afflict probabilities from this unit.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POISON_PROB_MOD_TOTAL_MODIFIER_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_POISON_PROB_MOD_TOTAL_MODIFIER_SHORT</Tag>
 		<English>[ICON_BULLET]Poison Mastery: %D1_Amount%%</English>
 		<French>[ICON_BULLET]Maîtrise du poison: %D1_Amount%%</French>
 		<Italian>[ICON_BULLET]Maestria dei veleni: %D1_Amount%%</Italian>
@@ -16702,7 +16702,7 @@
 		<Russian>[ICON_BULLET]Îïûòí. îòðàâèòåëü: %D1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POISON_PROB_NEG</Tag>
+		<Tag>TXT_KEY_UNITHELP_POISON_PROB_NEG</Tag>
 		<English>[ICON_BULLET]Weak Poisoner: %D1_Amount%% Modifier to all Afflict Attempts.</English>
 		<French>[ICON_BULLET]Poison faible: %D1_Amount%% Modif. pour toutes les tentatives d'Affliction.</French>
 		<Italian>[ICON_BULLET]Avvelenatore debole: %D1_Amount%% a tutti i tentativi di Afflizione.</Italian>
@@ -16710,14 +16710,14 @@
 		<Russian>[ICON_BULLET]Ñëàáûé îòðàâèòåëü: %D1_Amount%% Modifier to all Afflict Attempts.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POISON_PROB_NEG_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_POISON_PROB_NEG_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Watered Down Poison: %D1_Amount%% Modifier to all Afflict probabilities from this unit.</English>
 		<French>[ICON_BULLET]Poison dilué : %D1_Amount%% Modificateur de toutes les probabilités d'affliction de cette unité.</French>
 		<Italian>[ICON_BULLET]Veleno diluito: %D1_Amount%% alle probabilità di Afflizione da parte di questa unità.</Italian>
 		<Polish>[ICON_BULLET]Osłabiona Trucizna: %D1_Amount%% modyfikator ze wszystkich prawdopodobieństw do zatrucia od tej jednostki.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POISON_PROB_NEG_TOTAL_MODIFIER_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_POISON_PROB_NEG_TOTAL_MODIFIER_SHORT</Tag>
 		<English>[ICON_BULLET]Watered Down Poison: %D1_Amount%%</English>
 		<French>[ICON_BULLET]Poison dilué: %D1_Amount%%</French>
 		<Italian>[ICON_BULLET]Veleno diluito: %D1_Amount%%</Italian>
@@ -16902,98 +16902,98 @@
 		<Russian>Боевая броня или их более легкая разновидность силовой брони является основной экипировкой для тяжелой пехоты будущего. Повышенная сопротивляемость боевой брони, внутренний климат-контроль и огневая мощь делают ее более эффективной, чем стандартную пехоту в различных ролях, но и намного дороже. Боевая броня впервые эволюционировала из экзоскелетов во время Звездной Лиги в начале двадцать восьмого века, но не получила широкого распространения на полях сражений, пока клан Волка не дебютировал с элементалем в середине двадцать девятого века. Армии Внутренней Сферы начали использовать боевую броню в середине тридцать первого века. Эти боевые костюмы были созданы на основе боевой брони клана, захваченной или спасенной во время операции «Возрождение».</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOTS</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOTS</Tag>
 		<English>[ICON_BULLET]Power Shots: Unit starts with %d1_Amount Power Shots - enhanced first rounds of battle</English>
 		<French>[ICON_BULLET]Coups puissants: L'Unité démarre avec %d1_Amount Coups puissants - disponibles lors des premiers rounds du combat</French>
 		<Italian>[ICON_BULLET]Colpi potenti: l'unità comincia con %d1_Amount colpi potenti - disponibili nei primi round di battaglia</Italian>
 		<Polish>[ICON_BULLET]Silne Uderzenia: Jednostki rozpoczynają z %d1_Amount Silnymi Uderzeniami - wzmocnienie pierwszej rundy bitwy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOTS_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOTS_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Power Shots: Your initial %d1_Amount attacks in each battle are enhanced.</English>
 		<French>[ICON_BULLET]Coups Puissants: Vos attaques en Coup Puissant sont augmentées de %d1_Amount lors de chaque combat.</French>
 		<Italian>[ICON_BULLET]Colpi potenti: i tuoi %d1_Amount di attacchi iniziali sono potenziati.</Italian>
 		<Polish>[ICON_BULLET]Silne Uderzenie: Twoje %d1_Amount początkowych ataków w każdej bitwie jest ulepszonych.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOTS_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOTS_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Power Shots: %d1_Amount</English>
 		<French>[ICON_BULLET]Coups puissants: %d1_Amount</French>
 		<Italian>[ICON_BULLET]Colpi potenti: %d1_Amount</Italian>
 		<Polish>[ICON_BULLET]Silne Uderzenie: %d1_Amount</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_COMBAT_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOT_COMBAT_MODIFIER</Tag>
 		<English>[ICON_BULLET]Power Shot Combat Modifier: Unit gets a %d1_Amount%% modifier to Combat during its Power Shots</English>
 		<French>[ICON_BULLET]Modif. Combat en CP: L'Unité possède une modification de %d1_Amount%% de Combat lors d'un Coup Puissant</French>
 		<Italian>[ICON_BULLET]Modificatore di combattimento dei colpi potenti: l'unità ottiene un modificatore del %d1_Amount%% al combattimento durante i colpi potenti</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Walki Silnego Uderzenia: Jednostka Otrzymuje Modyfikator %d1_Amount%% do Walki podczas silnych uderzeń</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_COMBAT_MODIFIER_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOT_COMBAT_MODIFIER_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Power Shot Combat Modifier: Your Power Shots are made with a %d1_Amount%% modifier to Combat Strength.</English>
 		<French>[ICON_BULLET]Modif. Combat lors de CP: Vos coups puissants sont portés avec une modification de %d1_Amount%% de puissance au combat.</French>
 		<Italian>[ICON_BULLET]Modificatore di combattimento per colpi potenti: i tuoi colpi potenti hanno un modificatore di %d1_Amount%% alla forza di combattimento.</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Silnego Uderzenia w Walce: Twoje uderzenia są większe o %d1_Amount%% modyfikatora Twojej Siły.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_COMBAT_MODIFIER_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOT_COMBAT_MODIFIER_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Power Shot Combat Modifier: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Modificateur de Combat (CP): %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Modificatore di combattimento per colpi potenti: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Silnego Uderzenia w Walce: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_CRITICAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOT_CRITICAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Power Shot Critical Modifier: Unit gets a %d1_Amount%% modifier to Critical Hit chances during its Power Shots</English>
 		<French>[ICON_BULLET]Modif. Coup critique en CP: L'Unité possède une modification de %d1_Amount%% de ses chances d'obtenir un coup critique lors d'un Coup Puissant</French>
 		<Italian>[ICON_BULLET]Modificatore ai colpi critici dei colpi potenti: l'unità ottiene un modificatore del %d1_Amount%% ai colpi critici durante i colpi potenti</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Krytyczny Silnego Uderzenia: Jednostka Otrzymuje Modyfikator %d1_Amount%% do Krytycznego uderzenia podczas silnych uderzeń</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_CRITICAL_MODIFIER_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOT_CRITICAL_MODIFIER_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Power Shot Critical Modifier: Your Power Shots are made with a %d1_Amount%% modifier to the chance to inflict a Critical Injury.</English>
 		<French>[ICON_BULLET]Modif. Prob. ciritque lors CP: Vos coups puissants sont portés avec une modification de %d1_Amount%% de chances d'infliger un coup critique.</French>
 		<Italian>[ICON_BULLET]Modificatore di colpi critici per colpi potenti: i tuoi colpi potenti hanno una probabilità di %d1_Amount%% di infliggere ferite critiche.</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Krytyczny Silnego Uderzenia: Twoje uderzenia są większe o %d1_Amount modyfikatora Twojej szansy na krytyczne uderzenie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_CRITICAL_MODIFIER_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOT_CRITICAL_MODIFIER_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Power Shot Critical Modifier: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Modif. Prob. ciritque (CP): %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Modificatore di colpi critici per colpi potenti: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Krytyczny Silnego Uderzenia: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_PRECISION_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOT_PRECISION_MODIFIER</Tag>
 		<English>[ICON_BULLET]Power Shot Precision Modifier: Unit gets a %d1_Amount modifier to Precision during its Power Shots</English>
 		<French>[ICON_BULLET]Modif. Précision en CP: L'Unité possède une modification de %d1_Amount de Précision lors d'un Coup Puissant</French>
 		<Italian>[ICON_BULLET]Modificatore di precisione dei colpi potenti: l'unità ottiene un modificatore del %d1_Amount%% alla precisione durante i colpi potenti</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Precyzji Silnego Uderzenia: Jednostka Otrzymuje Modyfikator %d1_Amount%% do Precyzji podczas silnych uderzeń</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_PRECISION_MODIFIER_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOT_PRECISION_MODIFIER_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Power Shot Precision Modifier: Your Power Shots are made with a %d1_Amount modifier to Precision.</English>
 		<French>[ICON_BULLET]Modif. Précision lors CP: Vos coups puissants sont portés avec une modification de %d1_Amount modifier en Précision.</French>
 		<Italian>[ICON_BULLET]Modificatore di precisione per colpi potenti: i tuoi colpi potenti hanno un modificatore di %d1_Amount%% alla Precisione.</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Precyzji Silnego Uderzenia: %d1_Amount</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_PUNCTURE_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOT_PUNCTURE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Power Shot Puncture Modifier: Unit gets a %d1_Amount modifier to Puncture during its Power Shots</English>
 		<French>[ICON_BULLET]Modif. Perforation en CP: L'Unité possède une modification de %d1_Amount de Perforation lors d'un Coup Puissant</French>
 		<Italian>[ICON_BULLET]Modificatore di perforazione dei colpi potenti: l'unità ottiene un modificatore del %d1_Amount%% alla perforazione durante i colpi potenti</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Przebicia Silnego Uderzenia: Jednostka Otrzymuje Modyfikator %d1_Amount%% do Przebicia podczas silnych uderzeń</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_PUNCTURE_MODIFIER_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOT_PUNCTURE_MODIFIER_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Power Shot Puncture Modifier: Your Power Shots are made with a %d1_Amount modifier to Puncture.</English>
 		<French>[ICON_BULLET]Modif. Perforation lors de CP: Vos coups puissants sont portés avec une modification de %d1_Amount en perforation.</French>
 		<Italian>[ICON_BULLET]Modificatore di perforazione per colpi potenti: i tuoi colpi potenti hanno un modificatore di %d1_Amount%% alla Perforazione.</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Przebica Silnego Uderzenia: Twoje uderzenia są większe o %d1_Amount modyfikatora Twojego Przebicia.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_PUNCTURE_MODIFIER_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_POWER_SHOT_PUNCTURE_MODIFIER_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Power Shot Puncture Modifier: %d1_Amount</English>
 		<French>[ICON_BULLET]Modif. Perforation (CP): %d1_Amount</French>
 		<Italian>[ICON_BULLET]Modificatore di perforazione per colpi potenti: %d1_Amount</Italian>
@@ -17038,28 +17038,28 @@
 		<English>Precision Attack Munition is used to attack vehicles, armor, bunkers, and other targets of opportunity. Uses 3 modes of guidance, GPS/INS, semi-active laser homing, and autonomous imaging infrared. Carries a multi-mode warhead effective against several types of targets. It also includes an online library of pictures of targets, so that it can visually identify what it is homing in on.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PRECISION_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_PRECISION_MODIFIER</Tag>
 		<English>[ICON_BULLET]Modifies the base 50% Precision by %d1_Amount</English>
 		<French>[ICON_BULLET]Modificateur de précision: modifie la précision de base (50%%) de %d1_Amount</French>
 		<Italian>[ICON_BULLET]Modificatore di Precisione: modifica il valore base (50%) di Precisione del %d1_Amount</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Precyzji: Modyfikuje bazową Precyzję (50%%) o %d1_Amount</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PRECISION_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_PRECISION_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Precision Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Précision: Augmente les chances de toucher votre adversaire à chaque coup porté durant le combat de %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Precisione: incrementa le probabilità del nemico di colpire del %d1_Amount%% per ogni round di combattimento</Italian>
 		<Polish>[ICON_BULLET]Precyzja: Zwiększa szanse na uderzenie wroga w każdej rundzie walki o %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PRECISION_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_PRECISION_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Precision Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Précision: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Precisione: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Precyzja: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PRECISION_VS_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_PRECISION_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change Precision vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change de Précision contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change Precision gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
@@ -17207,28 +17207,28 @@
 		<English>Many of the Pueblo people harbored a latent hostility toward the Spanish, primarily due to their denigration and prohibition of the traditional religion. The traditional economies of the pueblos were likewise disrupted, the people having been forced to labor on the encomiendas of the colonists. On the other hand, the Spanish had introduced new farming implements and provided some measure of security against Navajo and Apache raiding parties. As a result, they lived in relative peace with the Spanish since the founding of the Northern New Mexican colony in 1598.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PUNCTURE</Tag>
+		<Tag>TXT_KEY_UNITHELP_PUNCTURE</Tag>
 		<English>[ICON_BULLET]Reduces opponent's Armor value by %D1_Amount.</English>
 		<French>[ICON_BULLET]Réduit l'Armure adverse de %D1_Amount.</French>
 		<Italian>[ICON_BULLET]Riduce l'armatura del nemico del %D1_Amount.</Italian>
 		<Polish>[ICON_BULLET]Redukuje wartość Pancerza przeciwnika o %d1_Amount.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PUNCTURE_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_PUNCTURE_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Puncture: Reduces opponent Armor: %d1_Amount</English>
 		<French>[ICON_BULLET]Perforation: Réduit l'armure adverse: %d1_Amount</French>
 		<Italian>[ICON_BULLET]Perforazione: riduce l'armatura dei nemici: %d1_Amount</Italian>
 		<Polish>[ICON_BULLET]Przebicie: Redukcja Pancerza przeciwnika: %d1_Amount</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PUNCTURE_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_PUNCTURE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Puncture: %d1_Amount</English>
 		<French>[ICON_BULLET]Perforation: %d1_Amount</French>
 		<Italian>[ICON_BULLET]Perforazione: %d1_Amount</Italian>
 		<Polish>[ICON_BULLET]Przebicie: %d1_Amount</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PUNCTURE_VS_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_PUNCTURE_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change Puncture vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change de Perforation contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change Puncture gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
@@ -17237,7 +17237,7 @@
 		<Polish>[ICON_BULLET]%D1_Change do Przebicia vs: [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PURSUIT</Tag>
+		<Tag>TXT_KEY_UNITHELP_PURSUIT</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: peut ignorer la capacité de retrait de l'Ennemi (%d1_Amount%% de Chances)</French>
 		<German>[ICON_BULLET]Verfolgungsjagd - kann den Rückzug des Gegners verhindern (%d1_Amount%%)</German>
@@ -17246,7 +17246,7 @@
 		<Russian>[ICON_BULLET]Ïåðåõâàò: âîçìîæíîñòü çàïðåòèòü ïðîòèâíèêó âûéòè èç áîÿ (øàíñ %d1_Amount%%)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PURSUIT_PROBABILITY</Tag>
+		<Tag>TXT_KEY_UNITHELP_PURSUIT_PROBABILITY</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: peut ignorer le retrait de %d1_Amount%%</French>
 		<German>[ICON_BULLET]Verfolgungsjagd (Rückzug verhindern): %d1_Amount%%</German>
@@ -17255,7 +17255,7 @@
 		<Russian>[ICON_BULLET]Ïåðåõâàò: çàïðåòèòü ïðîòèâíèêó âûõîäèòü èç áîÿ %d1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PURSUIT_PROBABILITY_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_PURSUIT_PROBABILITY_SHORT</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: %d1_Amount%%</French>
 		<German>[ICON_BULLET]Verfolgungsjagd: %d1_Amount%%</German>
@@ -17264,7 +17264,7 @@
 		<Russian>[ICON_BULLET]Ïåðåõâàò: %d1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PURSUIT_VS_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_PURSUIT_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Pursuit vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% de Poursuite contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Verfolgung von [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
@@ -17497,7 +17497,7 @@
 		<Russian>Íàèáîëåå ðàííèé ìîðñêîé þíèò.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_RAGE</Tag>
+		<Tag>TXT_KEY_UNITHELP_RAGE</Tag>
 		<English>[ICON_BULLET]Rage: Gains +%d1_Amount%% additional strength per round of battle during combat.</English>
 		<French>[ICON_BULLET]Rage: gagne +%d1_Amount%% de puissance supplémentaire par round durant le combat.</French>
 		<Italian>[ICON_BULLET]Ira: ottiene +%d1_Amount%% di forza supplementare per ogni turno di battaglia durante i combattimenti.</Italian>
@@ -17505,7 +17505,7 @@
 		<Russian>[ICON_BULLET]Раж: получает +%d1_Amount%% прирост силы в сражении за раунд.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_RAGE_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_RAGE_TOTAL</Tag>
 		<English>[ICON_BULLET]Rage: Gains %d1_Amount%% Strength/round.</English>
 		<French>[ICON_BULLET]Rage: gagne %d1_Amount%% Force/round.</French>
 		<Italian>[ICON_BULLET]Ira: ottiene %d1_Amount%% forza/turno.</Italian>
@@ -17513,7 +17513,7 @@
 		<Russian>[ICON_BULLET]Раж: получает %d1_Amount%% к Силе/раунд.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_RAGE_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_RAGE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Rage: +%d1_Amount%% strength/rnd</English>
 		<French>[ICON_BULLET]Rage: +%d1_Amount%% Force/round</French>
 		<Italian>[ICON_BULLET]Ira: +%d1_Amount%% forza/turno</Italian>
@@ -17547,7 +17547,7 @@
 		<Polish>Pakistańska jednostka kulturowa.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_RAMPAGE</Tag>
+		<Tag>TXT_KEY_UNITHELP_RAMPAGE</Tag>
 		<English>[ICON_BULLET]Rampage: Gains +%d1_Amount%% additional strength per attack in a given round.</English>
 		<French>[ICON_BULLET]Frénésie: gagne +%d1_Amount%% de puissance supplémentaire en attaque lors d'un round.</French>
 		<Italian>[ICON_BULLET]Frenesia: ottiene +%d1_Amount%% di forza supplementare per ogni attacco in un certo turno.</Italian>
@@ -17555,7 +17555,7 @@
 		<Russian>[ICON_BULLET]Ярость: получает +%d1_Amount%% прирост силы за атаку в данном раунде.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_RAMPAGE_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_RAMPAGE_TOTAL</Tag>
 		<English>[ICON_BULLET]Rampage: Gains %d1_Amount%% Strength/attack.</English>
 		<French>[ICON_BULLET]Frénésie: gagne %d1_Amount%% Force/attaque.</French>
 		<Italian>[ICON_BULLET]Frenesia: ottiene %d1_Amount%% forza/turno.</Italian>
@@ -17563,7 +17563,7 @@
 		<Russian>[ICON_BULLET]Ярость: получает %d1_Amount%% к Силе/атаке.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_RAMPAGE_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_RAMPAGE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Rampage: +%d1_Amount%% strength/attack</English>
 		<French>[ICON_BULLET]Frénésie: +%d1_Amount%% Force/attaque</French>
 		<Italian>[ICON_BULLET]Frenesia: +%d1_Amount%% forza/turno</Italian>
@@ -17794,21 +17794,21 @@
 		<Russian>Ðèôîâàÿ àêóëà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REFLEXES</Tag>
+		<Tag>TXT_KEY_UNITHELP_REFLEXES</Tag>
 		<English>[ICON_BULLET]Reflexes: Gains +%d1_Amount%% additional withdrawal chance per attack in a given round.</English>
 		<French>[ICON_BULLET]Réflexes: gagne +%d1_Amount%% de probabilité de retrait en attaque lors d'un round.</French>
 		<Italian>[ICON_BULLET]Riflessi: ottiene +%d1_Amount%% di chance di ritirata per gli attaccanti in un certo turno.</Italian>
 		<Polish>[ICON_BULLET]Refleks: Daje +%d1_Amount%% dodatkową szansę na ucieczkę na atak przez kilka rund.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REFLEXES_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_REFLEXES_TOTAL</Tag>
 		<English>[ICON_BULLET]Reflexes: Gains +%d1_Amount Withdraw Chance/attack.</English>
 		<French>[ICON_BULLET]Réflexes: gagne +%d1_Amount Chances de retrait/attaque.</French>
 		<Italian>[ICON_BULLET]Riflessi: ottiene +%d1_Amount chance di ritirata/attacco.</Italian>
 		<Polish>[ICON_BULLET]Refleks: Daje +%d1_Amount Szans na Ucieczkę/Atak.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REFLEXES_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_REFLEXES_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Reflexes: +%d1_Amount Withdrawal Chance/attack</English>
 		<French>[ICON_BULLET]Réflexes: +%d1_Amount Chances de retrait/attaque</French>
 		<Italian>[ICON_BULLET]Riflessi: +%d1_Amount chance di ritirata/attacco</Italian>
@@ -17825,13 +17825,13 @@
 		<English>The reindeer has an important economic role for all circumpolar peoples, including the Saami, Nenets, Khants, Evenks, Yukaghirs, Chukchi, and Koryaks in Eurasia. It is believed that domestication started between the Bronze and Iron Ages. Siberian deer owners also use the reindeer to ride on (Siberian reindeer are larger than their Scandinavian relatives). For breeders, a single owner may own hundreds or even thousands of animals. The numbers of Russian herders have been drastically reduced since the fall of the Soviet Union. The sale of fur and meat is an important source of income. Reindeer were introduced into Alaska near the end of the 19th century; they interbreed with native caribou subspecies there. Reindeer herders on the Seward Peninsula have experienced significant losses to their herds from animals (such as wolves) following the wild caribou during their migrations.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_RELIGIOUS_COMBAT_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_RELIGIOUS_COMBAT_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% Religious Combat Modifier - applies against units that differ in religion to your unit - inverses to a penalty when foe is of same religion.</English>
 		<French>[ICON_BULLET]%D1_Amount%% Modificateur de combat religieux - s'applique aux unités dont la religion diffère de celle de votre unité - à l'inverse c'est une pénalité lorsque l'ennemi est de la même religion.</French>
 		<German>[ICON_BULLET]%D1_Amount%% Modifikator für Kämpfe gegen Einheiten anderer Religionen (Nebeneffekt: Nachteile in gleicher Höhe bei Kämpfen gegen Einheiten derselben Glaubensrichtung)</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_RELIGIOUS_COMBAT_MODIFIER_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_RELIGIOUS_COMBAT_MODIFIER_SHORT</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% Religious Combat Modifier</English>
 		<French>[ICON_BULLET]%D1_Amount%% Modificateur de combat religieux</French>
 		<German>[ICON_BULLET]%D1_Amount%% Modifikator für religiöse Auseinandersetzungen</German>
@@ -17858,7 +17858,7 @@
 		<Russian>Имперская гвардия или дворцовая гвардия - это особая группа войск (или их подразделений) империи, обычно тесно связанная с Императором или Императрицей. Как правило эти войска обладают более элитарным статусом, чем другие имперские силы, включая регулярные вооруженные силы, и сохраняют за собой особые права, привилегии и традиции. Поскольку глава государства часто хочет быть защищенным лучшими имеющимися солдатами, их численность и организация могут быть расширены для выполнения дополнительных задач. В постколониальный период термин использовался в разговорной и насмешливой форме для характеристики определенной должности или профессии, обычно политического деятеля или корпоративного должностного лица, который препятствует прямому общению с человеком.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REPEL</Tag>
+		<Tag>TXT_KEY_UNITHELP_REPEL</Tag>
 		<English>[ICON_BULLET]Repel: When defending, forces attackers to attempt withdraw at a %d1_Amount%% chance each round.</English>
 		<French>[ICON_BULLET]Expulsion: Lors de la défense, force les attaquants à abandonner les combats, avec une probabilité de %d1_Amount%% pour chaque round.</French>
 		<Italian>[ICON_BULLET]Respinta: in fase difensiva, forza gli attaccanti a cercare di ritirarsi con il %d1_Amount%% di probabilità ogni turno.</Italian>
@@ -17866,7 +17866,7 @@
 		<Russian>[ICON_BULLET]Отражение: при обороне заставляет атакующих врагов отступить с вероятностью %d1_Amount%% каждый раунд.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REPEL_RETRIES</Tag>
+		<Tag>TXT_KEY_UNITHELP_REPEL_RETRIES</Tag>
 		<English>[ICON_BULLET]Beyond the first, unit attempts an additional %d1_Amount Repel efforts when defending.</English>
 		<French>[ICON_BULLET]Après un premier essai, l'unité tente de repousser %d1_Amount fois supplémentaire son ennemi en défendant.</French>
 		<Italian>[ICON_BULLET]Oltre al primo, l'unità ha un'ulteriore %d1_Amount di chance di Respinta quando difende.</Italian>
@@ -17874,7 +17874,7 @@
 		<Russian>[ICON_BULLET]Помимо первого раза, отряд предпринимает дополнительные %d1_Amount попытки(ок) отражения при защите.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REPEL_RETRIES_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_REPEL_RETRIES_TOTAL</Tag>
 		<English>[ICON_BULLET]Repel Retries: %d1_Amount</English>
 		<French>[ICON_BULLET]Expulsion rapide: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Tentativi di Respinta: %d1_Amount</Italian>
@@ -17882,7 +17882,7 @@
 		<Russian>[ICON_BULLET]Отражение повторной атаки: %d1_Amount</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REPEL_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_REPEL_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Repel: Repels attackers %d1_Amount%% chance/round.</English>
 		<French>[ICON_BULLET]Expulsion: Repousse les Attaquants %d1_Amount%% chances par round.</French>
 		<Italian>[ICON_BULLET]Respinta: %d1_Amount%% di chance per turno di respingere gli attaccanti.</Italian>
@@ -17890,7 +17890,7 @@
 		<Russian>[ICON_BULLET]Отражение: отражает атаку противника %d1_Amount%% шанс/раунд.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REPEL_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_REPEL_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Repel: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Expulsion: +%d1_Amount%%</French>
 		<German>[ICON_BULLET]Repel: +%d1_Amount%%</German>
@@ -17900,7 +17900,7 @@
 		<Russian>[ICON_BULLET]Отражение: %d1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REPEL_VS_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_REPEL_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Repel vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% d'Expulsion contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Repel gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
@@ -17933,13 +17933,13 @@
 		<English>The Iraqi Republican Guard was a branch of the Iraqi military from 1969 to 2003, primarily during the presidency of Saddam Hussein. It later became the Republican Guard Corps, and then the Republican Guard Forces Command (RGFC) with its expansion into two corps. The Republican Guard was disbanded in 2003, after the invasion of Iraq by a U.S.-led international coalition.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REQUIRES</Tag>
+		<Tag>TXT_KEY_UNITHELP_REQUIRES</Tag>
 		<English>Valid for[SPACE]</English>
 		<German>für[SPACE]</German>
 		<Russian>Для получения бонусов требуется юнит[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REQUIRES_STATE_RELIGION</Tag>
+		<Tag>TXT_KEY_UNITHELP_REQUIRES_STATE_RELIGION</Tag>
 		<English>[ICON_BULLET]State Religion must be present in city to train</English>
 		<French>[ICON_BULLET]La religion d'Etat doit être présente dans cette ville pour pouvoir former les Inquisiteurs.</French>
 		<German>[ICON_BULLET]Staatsreligion muss in der Stadt vorhanden sein um auszubilden</German>
@@ -18244,28 +18244,28 @@
 		<Polish>Rostam to mityczny bohater Iranu, syn Zala i Rudabe. W pewien sposób, postać Rostama w tradycji historycznej jest zaskakująco analogiczna do postaci Surenasa, bohatera bitwy pod Carrhae. Jego postac otrzymała wiele cech historycznej osobowości Rostama. Ten ostatni zawsze był przedstawiany jako najpotężniejszy z paladynów Iranu, a atmosfera epizodów, w których się pojawia mocno przypomina okres Arsacydów, piwerwszej dynastii królewskiej Partów. Rostam został uwieczniony przez X wiecznego poetę perskiego Ferdousiego w Szahname, perskim eposie narodowym opowiadający tradycyjną historię Iranu od stworzenia świata do upadku dynastii Sasanidów.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ROUND_STUN_PROB</Tag>
+		<Tag>TXT_KEY_UNITHELP_ROUND_STUN_PROB</Tag>
 		<English>[ICON_BULLET]Round Stun: %d1_Amount%% of damage dealt is base chance to stun an opponent each round.</English>
 		<French>[ICON_BULLET]Etourdissement : %d1_Amount%% de dégâts infligés est une chance de base d'étourdir un adversaire à chaque tour.</French>
 		<Italian>[ICON_BULLET]Stordimento: %d1_Amount%% del danno inflitto è la chance base di stordire un avversario ad ogni turno.</Italian>
 		<Polish>[ICON_BULLET]Oszołomienie: %d1_Amount%% od zadanych obrażeń to bazowa szansa na oszołomienie wroga w każdej rundzie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ROUND_STUN_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_ROUND_STUN_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Round Stun: Chance to Stun Enemy equal to %d1_Amount%% of damage dealt each round</English>
 		<French>[ICON_BULLET] Étourdissement : Chances d'étourdir l'ennemi égale à %d1_Amount%% des dégâts infligés, et ce à chaque round</French>
 		<Italian>[ICON_BULLET]Colpi stordenti: le probabilità di stordire un nemico equivalgono al %d1_Amount%% del danno inflitto ad ogni turno</Italian>
 		<Polish>[ICON_BULLET]Oszołomienie: Szansa na ogłuszenie: %d1_Amount%% ilości zadanych obrażeń w każdej rundzie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ROUND_STUN_TOTAL_MODIFIER_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_ROUND_STUN_TOTAL_MODIFIER_SHORT</Tag>
 		<English>[ICON_BULLET]Round Stun: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Etourdissement: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Stordimento per turno: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Oszołomienie: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ROUND_STUN_VS_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_ROUND_STUN_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Round Stun Chance vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% de chances d'Etourdissement contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Round Stun Chance gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
@@ -18796,7 +18796,7 @@
 		<Polish>Sekretarz (Sagittarius serpentarius) - gatunek dużego ptaka drapieżnego, będący jedynym przedstawicielem rodziny sekretarzy (Sagittariidae). Występuje w Afryce subsaharyjskiej, od Senegalu do Somalii, aż po Przylądek Dobrej Nadziei na południu. Od innych ptaków drapieżnych odróżnia go nietypowa sylwetka, która jest przystosowaniem do specyficznego trybu życia. Ma stosunkowo długie nogi z długimi palcami, zaokrąglone skrzydła i zakrzywiony dziób. Dodatkowo na głowie ma ozdobny czubek. Obie płci ubarwione podobnie, samiec ma jedynie dłuższy czubek i dłuższy ogon. Z oddali lub w locie przypomina żurawia. Długi ogon w locie wystaje poza nogi, środkowe sterówki są wydłużone. Upierzenie głównie szarobiałe, lotki, nogawice, koniec ogona i czubka czarny. Na części twarzowej czerwona, naga skóra; u młodych ptaków jest ona koloru żółtego.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SEE_INVISIBLE</Tag>
+		<Tag>TXT_KEY_UNITHELP_SEE_INVISIBLE</Tag>
 		<English>[ICON_BULLET]Can See %F1_Name</English>
 		<French>[ICON_BULLET]Peut voir: %F1_Name</French>
 		<German>[ICON_BULLET]sieht %s1:5_Name</German>
@@ -19201,21 +19201,21 @@
 		<Russian>Теперь, когда внутренний роторный двигатель в значительной степени вытеснил традиционный бензиновый мотор, вполне естественно, что бронетранспортер был разработан с использованием новой технологии</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SHORT_RANGE_SUPPORT_PERCENT_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_SHORT_RANGE_SUPPORT_PERCENT_TEXT</Tag>
 		<English>[ICON_BULLET]Short Range Support: +%d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien Courte Portée: +%d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto a corto raggio: +%d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Pomoc Strzelnicza (Blisko): +%d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SHORT_RANGE_SUPPORT_PERCENT_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_SHORT_RANGE_SUPPORT_PERCENT_TOTAL</Tag>
 		<English>[ICON_BULLET]Current Short Range Support: %d1_Amount%% of this unit's Strength</English>
 		<French>[ICON_BULLET]Soutien de Courte Portée actuel: %d1_Amount%% de la Puissance de l'Unité</French>
 		<Italian>[ICON_BULLET]Supporto attuale a corto raggio: %d1_Amount%% della forza di quest'unità</Italian>
 		<Polish>[ICON_BULLET]Aktualna Pomoc Strzelnicza (Bliska): %d1_Amount%% z Siły tej jednostki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SHORT_RANGE_SUPPORT_PERCENT_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_SHORT_RANGE_SUPPORT_PERCENT_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Current Short Range Support: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien de Courte Portée actuel: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto attuale a corto raggio: %d1_Amount%%</Italian>
@@ -19750,7 +19750,7 @@
 		<English>The Soninke (also called Sarakole, Seraculeh, or Serahuli) are a Mand people who descend from the Bafour and are closely related to the Imraguen of Mauritania. They speak the Soninke language, a Mande language. They were the founders of the ancient empire of Ghana c. 750-1240 CE. Subgroups of Soninke include the Maraka and Wangara.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SORT_BOMBARD</Tag>
+		<Tag>TXT_KEY_UNITHELP_SORT_BOMBARD</Tag>
 		<English>Bombard</English>
 		<French>Bombardement</French>
 		<German>Beschuss</German>
@@ -19760,7 +19760,7 @@
 		<Russian>Áîìáàðä.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SORT_COLLATERAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_SORT_COLLATERAL</Tag>
 		<English>Collateral</English>
 		<French>Dégats Collatéraux</French>
 		<German>Kollateralschaden</German>
@@ -19770,7 +19770,7 @@
 		<Russian>Ïîáî÷íûé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SORT_MOVE</Tag>
+		<Tag>TXT_KEY_UNITHELP_SORT_MOVE</Tag>
 		<English>Move</English>
 		<French>Déplacement</French>
 		<German>Bewegung</German>
@@ -19780,7 +19780,7 @@
 		<Russian>Äâèæ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SORT_POWER</Tag>
+		<Tag>TXT_KEY_UNITHELP_SORT_POWER</Tag>
 		<English>Power</English>
 		<French>Puissance</French>
 		<German>Macht</German>
@@ -19790,7 +19790,7 @@
 		<Russian>Ýíåðãèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SORT_RANGE</Tag>
+		<Tag>TXT_KEY_UNITHELP_SORT_RANGE</Tag>
 		<English>Range</English>
 		<French>Portée</French>
 		<German>Reichweite</German>
@@ -19800,7 +19800,7 @@
 		<Russian>Äèñò.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SORT_STRENGTH</Tag>
+		<Tag>TXT_KEY_UNITHELP_SORT_STRENGTH</Tag>
 		<English>Strength</English>
 		<French>Force</French>
 		<German>Stärke</German>
@@ -19810,7 +19810,7 @@
 		<Russian>Ñèëà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SORT_WITHDRAWAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_SORT_WITHDRAWAL</Tag>
 		<English>Withdrawal</English>
 		<French>Retrait</French>
 		<German>Rückzug</German>
@@ -20127,21 +20127,21 @@
 		<English>The Batek do not consider this sharing of resources to be an act of kindness, they believe that all food items belong to the forest, so that the person who happens to be in possession of food has a moral obligation to share it. Since the dwellings are open, it is impossible to hoard food without others knowing about it, since selfishness is prohibited, it would not be considered stealing for another member of the camp to take food away from someone who was hoarding, if the taker was hungry.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_STAMPEDE</Tag>
+		<Tag>TXT_KEY_UNITHELP_STAMPEDE</Tag>
 		<English>[ICON_BULLET]Stampede: Will continue attacking until all defenders in the attacked plot are dead.</English>
 		<French>[ICON_BULLET]Suicidaire: Continue d'attaque jusqu'à ce que tous les défenseurs de la case soient morts.</French>
 		<Italian>[ICON_BULLET]Suicidio: continuerà ad attaccare fino alla morte di tutti i difensori della casella attaccata.</Italian>
 		<Polish>[ICON_BULLET]Popłoch: Kontynuuje atak dopóki wszyscy obrońcy na atakowanym polu nie będą martwi.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_STAMPEDE_LONG</Tag>
+		<Tag>TXT_KEY_UNITHELP_STAMPEDE_LONG</Tag>
 		<English>[ICON_BULLET]Stampede: Continues attacking until victory or death.</English>
 		<French>[ICON_BULLET]Suicidaire: Continue d'attaquer jusqu'à la victoire ou la mort.</French>
 		<Italian>[ICON_BULLET]Suicidio: continua ad attaccare, fino alla vittoria o alla morte.</Italian>
 		<Polish>[ICON_BULLET]Pęd: Kontynuuje atak do wygranej lub śmierci.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_STAMPEDE_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_STAMPEDE_SHORT</Tag>
 		<English>[ICON_BULLET]Stampede: Fights to the death</English>
 		<French>[ICON_BULLET]Suicidaire: Combat à mort</French>
 		<Italian>[ICON_BULLET]Suicidio: combatte fino alla morte.</Italian>
@@ -21322,7 +21322,7 @@
 		<Russian>Àëõèìèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TARGETS_UNIT_FIRST</Tag>
+		<Tag>TXT_KEY_UNITHELP_TARGETS_UNIT_FIRST</Tag>
 		<English>[ICON_BULLET]Targets any %s1_unit_list first in combat. If Assassination is possible, these units are also the list of units that may be targeted for assassination.</English>
 		<French>[ICON_BULLET]Cible toutes les unités %s1_unit_list en premier au combat. Si l'assassinat est possible, ces unités sont également la liste des unités qui peuvent être ciblées pour l'assassinat.</French>
 		<German>[ICON_BULLET]greift Einheiten vom Typ %s1_unit_list im Kampf zuerst an (wenn ein Mordanschlag möglich ist, werden diese Einheiten ebenfalls bevorzugt als Ziele ausgewählt)</German>
@@ -21412,7 +21412,7 @@
 		<English>With their unique personality, the Tasmanian devil has been the subject of numerous documentaries, fiction and non-fiction children's books. Royalties from Margaret Wild's Ruby Roars, about a Tasmanian devil, are going to research into DFTD. A 2005 Australian documentary on the Tasmanian devil, Terrors of Tasmania, directed and produced by David Parer and Elizabeth Parer-Cook, follows a female devil called Manganinnie through breeding season and the birth and rearing of her young. The documentary also looks at the effect of devil facial tumour disease and the conservation measures being taken to ensure survival of the Tasmanian devil. It has screened on television in Australia and in the United States on the National Geographic Channel.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAUNT</Tag>
+		<Tag>TXT_KEY_UNITHELP_TAUNT</Tag>
 		<English>[ICON_BULLET]Taunt Chance: %D1%%</English>
 		<French>[ICON_BULLET]Provocation: %D1%% de prob. d'être attaqué dans un groupe.</French>
 		<German>[ICON_BULLET]Provokation: %D1%%</German>
@@ -21785,7 +21785,7 @@
 		<Polish>Joaquim Jos da Silva Xavier, znany jako Tiradentes (August 16, 1746-April 21, 1792), był brazylijskim bojownikiem, który walczył przeciwko portugalskiej władzy kolonialnej w Minas Gerais. Został stracony, a jego ciało podzielono na części i rozwieziono po ulicach miast i wiosek ku przestrodze. Obecnie jest bohaterem narodowym Brazylii. 21 kwietnia obchodzi się jego święto.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TIRES</Tag>
+		<Tag>TXT_KEY_UNITHELP_TIRES</Tag>
 		<English>[ICON_BULLET]Tires: Loses %d1_Amount%% strength per attack in a given round.</English>
 		<French>[ICON_BULLET]Fatigue: perd %d1_Amount%% de puissance en attaque lors d'un round.</French>
 		<Italian>[ICON_BULLET]Stanchezza: perde %d1_Amount%% di forza per goni attacco in un certo turno.</Italian>
@@ -21998,7 +21998,7 @@
 		<English>Keying was a three-masted, 800-ton Foochow Chinese trading junk which sailed from China around the Cape of Good Hope to the United States and Britain between 1846 and 1848. Keying had been purchased in August 1846 in secrecy by British businessmen in Hong Kong, defying a Chinese law prohibiting the sale of Chinese ships to foreigners. She was renamed after the Manchu official Keying, based on an irregular romanization of his native name. The Keying was manned by 12 British and 30 Chinese sailors (the latter all Cantonese). She was commanded by Captain Charles Alfred Kellett, also British.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRADE_MISSION</Tag>
+		<Tag>TXT_KEY_UNITHELP_TRADE_MISSION</Tag>
 		<English>[ICON_BULLET]Can Conduct a Trade Mission (Base: %d1, Mult: x%d2)</English>
 		<French>[ICON_BULLET]Peut effectuer une mission commerciale (Base: %d1, Mult: x%d2)</French>
 		<German>[ICON_BULLET]kann eine Handelsmission ausführen (Basiswert: %d1, Mult.: x%d2)</German>
@@ -22045,49 +22045,49 @@
 		<Russian>Òðàíñïîðò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRAP_AVOID_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_TRAP_AVOID_TYPE</Tag>
 		<English>[ICON_BULLET]%d1_Change%% chance to Avoid Traps of [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%d1_Change%% chances d'éviter les pièges de [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<Russian>[ICON_BULLET]%d1_Change%% шанс избежать ловушек [LINK=%s2_Type]%s3_TypeName[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRAP_COMPLEXITY</Tag>
+		<Tag>TXT_KEY_UNITHELP_TRAP_COMPLEXITY</Tag>
 		<English>[ICON_BULLET]Disabling Complexity: %d1_value</English>
 		<French>[ICON_BULLET]Complexité du désactivage: %d1_value</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRAP_DISABLE_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_TRAP_DISABLE_TYPE</Tag>
 		<English>[ICON_BULLET]%d1_Change%% Disable Traps vs [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%d1_Change%% Désactive les pièges [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<Russian>[ICON_BULLET]%d1_Change%% шанса отключения ловушек против [LINK=%s2_Type]%s3_TypeName[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRAP_IMMUNE_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_TRAP_IMMUNE_TYPE</Tag>
 		<English>[ICON_BULLET]Immune to %s1_UnitCombat traps.</English>
 		<French>[ICON_BULLET] Immunisé contre les pièges %s1_UnitCombat.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRAP_NUM_ACTIVE_TRIGGERS</Tag>
+		<Tag>TXT_KEY_UNITHELP_TRAP_NUM_ACTIVE_TRIGGERS</Tag>
 		<English>[ICON_BULLET]May be triggered %d1_value times before final destruction.(%d2_rem remaining)</English>
 		<French>[ICON_BULLET]Peut être déclenché %d1_value fois avant sa destruction finale.(%d2_rem restant)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRAP_NUM_TRIGGERS</Tag>
+		<Tag>TXT_KEY_UNITHELP_TRAP_NUM_TRIGGERS</Tag>
 		<English>[ICON_BULLET]May be triggered %d1_value times before final destruction.</English>
 		<French>[ICON_BULLET]Peut être déclenché %d1_value fois avant sa destruction finale.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRAP_PROMOTION_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_TRAP_PROMOTION_TYPE</Tag>
 		<English>[ICON_BULLET]Gives a free %s1_Promotion promotion to any traps this unit sets. (As long as promotion is valid for that trap)</English>
 		<French>[ICON_BULLET] Donne une promotion %s1_Promotion gratuite à tous les pièges posés par cette unité. (Tant que la promotion est valable pour ce piège)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRAP_TRIGGER_BEFORE_ATTACK</Tag>
+		<Tag>TXT_KEY_UNITHELP_TRAP_TRIGGER_BEFORE_ATTACK</Tag>
 		<English>[ICON_BULLET]If this trap can trigger against an attacking foe, it will do so before combat begins, weakening the attacker before combat.</English>
 		<French>Si ce piège peut se déclencher contre un ennemi attaquant, il le fera avant le début du combat, affaiblissant l'attaquant avant le combat.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRAP_TRIGGER_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_TRAP_TRIGGER_TYPE</Tag>
 		<English>[ICON_BULLET]%d1_Change%% chance of Triggering when [LINK=%s2_Type]%s3_TypeName[\LINK] moves into armed tile.</English>
 		<French>[ICON_BULLET]%d1_Change%% chances de déclencher lorsque [LINK=%s2_Type]%s3_TypeName[\LINK] de déplace sur une case armée.</French>
 	</TEXT>
@@ -22721,7 +22721,7 @@
 		<Russian>Последние достижения в области робототехники привели к созданию этого чудесного разведывательного устройства. Все преимущества обычной разведки на мотоциклах, но без риска для ценных людей.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNNERVE</Tag>
+		<Tag>TXT_KEY_UNITHELP_UNNERVE</Tag>
 		<English>[ICON_BULLET]Unnerve: Unit counts as +%d1_Amount%% strength when surrounding.</English>
 		<French>[ICON_BULLET]Sang froid : L'unité compte pour +%d1_Amount%% de force lorsqu'elle est encerclée.</French>
 		<German>[ICON_BULLET]Entnerven: Einheit erhält +%d1_Amount%% Stärke beim Einkesseln von Gegnern</German>
@@ -22730,7 +22730,7 @@
 		<Russian>[ICON_BULLET]Задира: отряд получает +%d1_Amount%% прибавку к силе, когда окружает.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNNERVE_TOTAL</Tag>
+		<Tag>TXT_KEY_UNITHELP_UNNERVE_TOTAL</Tag>
 		<English>[ICON_BULLET]Unnerve: Counts as +%d1_Amount%% strength when surrounding.</English>
 		<French>[ICON_BULLET]Sang froid : Compte comme +%d1_Amount%% Puissance lorsqu'encerclé.</French>
 		<German>[ICON_BULLET]Entnerven: +%d1_Amount%% Stärke beim Einkesseln</German>
@@ -22739,7 +22739,7 @@
 		<Russian>[ICON_BULLET]Задира: дает прибавку к силе +%d1_Amount%% при окружении.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNNERVE_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_UNNERVE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Unnerve: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Sang froid: %d1_Amount%%</French>
 		<German>[ICON_BULLET]Entnerven: %d1_Amount%%</German>
@@ -22748,21 +22748,21 @@
 		<Russian>[ICON_BULLET]Задира: %d1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNYIELDING</Tag>
+		<Tag>TXT_KEY_UNITHELP_UNYIELDING</Tag>
 		<English>[ICON_BULLET]Unyielding: Subtracts %d1_Amount from enemy Knockback and Repel values.</English>
 		<French>[ICON_BULLET]Inflexible: Soustrait %d1_Amount des valeurs d'Expulsion/Ecrasement de l'ennemi.</French>
 		<Italian>[ICON_BULLET]Inflessibile: sottrae %d1_Amount dai valori nemici di sbaraglio e respinta.</Italian>
 		<Polish>[ICON_BULLET]Nieustępliwy: Odejmuje %d1_Amount z wrogiej wartości Odrzutu i Odpychania.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNYIELDING_TOTAL_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_UNYIELDING_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Unyielding: Ignores %d1_Amount%% Knockback and Repel.</English>
 		<French>[ICON_BULLET]Inflexible: Ignore %d1_Amount%% d'Expulsion et d'Ecrasement.</French>
 		<Italian>[ICON_BULLET]Inflessibile: Ignora %d1_Amount%% di sbaraglio e di respinta.</Italian>
 		<Polish>[ICON_BULLET]Nieustępliwy: Ignoruje %d1_Amount%% na Odrzut i Odepchnięcie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNYIELDING_TOTAL_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_UNYIELDING_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Unyielding: %d1_Amount%% vs Knockback/Repel</English>
 		<French>[ICON_BULLET]Inflexible: %d1_Amount%% contre l'Expulsion/Ecrasement</French>
 		<Italian>[ICON_BULLET]Inflessibile: %d1_Amount%% contro sbaraglio/respinta</Italian>
@@ -22916,7 +22916,7 @@
 		<Polish>Wicekról (hiszp. virrey, ang. viceroy) - urzędnik królewski, sprawujący władzę nad danym terytorium (w niektórych przypadkach oficjalnie nazwanym od tytułu - wicekrólestwem) w imieniu monarchy. Urząd ten jest analogiczny z funkcją namiestnika monarszego, czy też generalnego gubernatora (generał-gubernatora) kraju podległego monarsze.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_VICTORY_ADJACENT_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_VICTORY_ADJACENT_TEXT</Tag>
 		<English>[ICON_BULLET]%d1%% chance to heal self, %d2%% chance to heal all friendly units on the tile and %d3%% chance to heal all friendly units on an adjacent tile on a combat victory</English>
 		<French>[ICON_BULLET]%d1%% de chances de se soigner, %d2%% de chances de soigner toutes les unités amies sur la tuile et %d3%% de guérir toutes les unités amies sur une tuile adjacente lors d'une victoire au combat</French>
 		<German>[ICON_BULLET]%d1%% Chance sich selbst und %d2%% Chance alle befreundeten Einheiten auf dem eigenen Feld sowie %d3%% Chance alle befreundeten Einheiten auf einem benachbarten Feld nach erfolgreichem Kampf zu heilen</German>
@@ -22924,7 +22924,7 @@
 		<Polish>[ICON_BULLET]%d1%% do uleczenia samego siebie, %d2%% do uleczenia wszystkich jednostek na tym samym polu, %d3%% szans na uleczenie jednostek na przyległych polach po wygranej walce</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_VICTORY_STACK_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_VICTORY_STACK_TEXT</Tag>
 		<English>[ICON_BULLET]%d1%% chance to heal self and %d2%% chance to heal all friendly units on the tile on a combat victory</English>
 		<French>[ICON_BULLET]%d1%% de chances de se soigner et %d2%% de soigner toutes les unités amies sur la tuile lors d'une victoire au combat</French>
 		<German>[ICON_BULLET]%d1%% Chance sich selbst und %d2%% Chance alle befreundeten Einheiten auf dem eigenen Feld nach erfolgreichem Kampf zu heilen</German>
@@ -22987,7 +22987,7 @@
 		<English>In the 15th century, during the Hussite Wars, the Hussites developed tactics of using the tabors, called vozova hradba in Czech or Wagenburg by the Germans, as mobile fortifications. When the Hussite army faced a numerically superior opponent, the Bohemians usually formed a square of the armed wagons, joined them with iron chains, and defended the resulting fortification against charges of the enemy. Such a camp was easy to establish and practically invulnerable to enemy cavalry. The etymology of the word tabor may come from the Hussite fortress and modern day Czech city of Tabor, which itself is a name derived from biblical Jezreel mountain Tavor.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_VSBARBS</Tag>
+		<Tag>TXT_KEY_UNITHELP_VSBARBS</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Non-Animal Barbarians</English>
 		<French>[ICON_BULLET]%d1_Amount%% contre les unités barbares non-animales.</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen Barbaren</German>
@@ -22995,7 +22995,7 @@
 		<Polish>[ICON_BULLET]%d1_Amount%% przeciwko nie-zwierzęcym Barbarzyńcom</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_VSBARBS_MODIFIER</Tag>
+		<Tag>TXT_KEY_UNITHELP_VSBARBS_MODIFIER</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Non-Animal Barbarians</English>
 		<French>[ICON_BULLET]%d1_Amount%% contre les unités barbares non-animales</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen Barbaren</German>
@@ -23003,7 +23003,7 @@
 		<Polish>[ICON_BULLET]przeciwko nie-zwierzęcym Barbarzyńcom: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_VSBARBS_MODIFIER_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_VSBARBS_MODIFIER_SHORT</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Barbarians</English>
 		<French>[ICON_BULLET]%d1_Amount%% contre les Barbares</French>
 		<Italian>[ICON_BULLET]%d1_Amount%% contro i barbari</Italian>
@@ -23563,7 +23563,7 @@
 		<English>William Mariner (1791-1853) was an Englishman who lived in Tonga from 29 November 1806 to (probably) 8 November 1810. He later published Tonga Islands, an account of his experiences that is now one of the major sources of information on Tonga, before it was significantly influenced by European culture, Christianity or colonisation. As a teenager, Mariner was a ship's clerk aboard the British privateer Port au Prince. In 1806, while it was anchored off the Tongan island of Lifuka, in the Ha'apai island group, Port au Prince was seized by a chief named Finau Ulukalala. Most of the crew were killed during the capture of the ship, but the chief spared Mariner and a few crewmates. Mariner lived in Tonga for four years. After returning to England, Mariner he dictated a detailed account of his experiences, a description of Tongan society and culture, and a grammar and dictionary of the Tongan language.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WILL_RECEIVE_FREE_EXPERIENCE</Tag>
+		<Tag>TXT_KEY_UNITHELP_WILL_RECEIVE_FREE_EXPERIENCE</Tag>
 		<English>[COLOR_YELLOW]Free Starting Experience:[COLOR_REVERT]</English>
 		<French>[COLOR_YELLOW]Expérience de départ:[COLOR_REVERT]</French>
 		<German>[COLOR_YELLOW]Freie Erfahrungspunkte zu Beginn:[COLOR_REVERT]</German>
@@ -23637,7 +23637,7 @@
 		<German>In der Umgebung der frühen Siedlungen wuchsen jede Menge unbekannte Pflanzen. Zunächst wurden sie nur auf Genießbarkeit geprüft und für die Ernährung des Stammes genutzt. Durch dieses Ausprobieren wurde aber auch anderes Wissen gewonnen. Die Menschen erkannten, dass manche Pflanzen nicht nur für Unwohlsein sorgten, sondern den Anwender vergiften oder sogar töten konnten. So manch ein Kraut stellte sich im Gegenzug auch als nützlich heraus, um Krankheiten, Vergiftungen, Verletzungen oder Gebrechen zu lindern oder zu kurieren. Gerade ältere weise Frauen verfügten durch mündliche Überlieferung und aus eigenen Erfahrungen über ein profundes Wissen in Kräuter- und Heilkunde, sodass sie für ihren Stamm von unschätzbarem Wert waren.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WITHDRAW_VS_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_WITHDRAW_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Withdraw vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% de Repli contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Withdraw gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>

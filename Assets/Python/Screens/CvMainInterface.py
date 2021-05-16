@@ -3254,13 +3254,13 @@ class CvMainInterface:
 		x = x0 - wGroupButton
 		screen.addDropDownBoxGFC(ID, x, 140, wGroupButton, WidgetTypes.WIDGET_UNIT_GROUPING, 0, 0, FontTypes.SMALL_FONT)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_SINGLE
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_SINGLE", ()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_GROUPING_SINGLE", ()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_COMBAT
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_COMBAT", ()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_GROUPING_COMBAT", ()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_DOMAIN
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_DOMAIN", ()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_HERO
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_HERO", ()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_GROUPING_HERO", ()), TYPE, TYPE, SELECTED == TYPE)
 
 		ID = "CT|UnitSorting"
 		SELECTED = CyCity.getUnitListSorting()
@@ -3271,21 +3271,21 @@ class CvMainInterface:
 		TYPE = UnitSortTypes.UNIT_SORT_COST
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_COST",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_STRENGTH
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_STRENGTH",	()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_STRENGTH",	()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_MOVE
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_MOVE",		()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_MOVE",		()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_COLLATERAL
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_COLLATERAL",()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_COLLATERAL",()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_RANGE
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_RANGE",		()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_RANGE",		()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_BOMBARD
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_BOMBARD",	()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_BOMBARD",	()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_CARGO
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_CARGO",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_WITHDRAWAL
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_WITHDRAWAL",()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_WITHDRAWAL",()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_POWER
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_POWER",		()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_POWER",		()), TYPE, TYPE, SELECTED == TYPE)
 
 		iTab = self.iCityTab
 		if iTab:
@@ -3850,7 +3850,7 @@ class CvMainInterface:
 				screen.setTableColumnHeader(unitTable, 0, "", w - 70)
 				screen.setTableColumnHeader(unitTable, 1, "", 60)
 				# Stack Title
-				szBuffer = self.aFontList[3] + TRNSLTR.getText("TXT_KEY_UNIT_STACK", (iSelectionRange,))
+				szBuffer = self.aFontList[3] + TRNSLTR.getText("TXT_KEY_UNITHELP_STACK", (iSelectionRange,))
 				# Stack movement
 				iMinMoves = 100000
 				iMaxMoves = 0

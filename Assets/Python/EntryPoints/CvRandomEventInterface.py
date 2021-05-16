@@ -1187,7 +1187,7 @@ def canTriggerInterstate(argsList):
 	return GC.getPlayer(data.ePlayer).isCivic(GC.getInfoTypeForString("CIVIC_EGALITARIAN"))
 
 def getHelpInterstate(argsList):
-	return TRNSLTR.getText("TXT_KEY_UNIT_MOVEMENT", (1, GC.getRouteInfo(GC.getInfoTypeForString("ROUTE_HIGHWAY")).getTextKey()))
+	return TRNSLTR.getText("TXT_KEY_UNITHELP_MOVEMENT", (1, GC.getRouteInfo(GC.getInfoTypeForString("ROUTE_HIGHWAY")).getTextKey()))
 
 def applyInterstate(argsList):
 	data = argsList[1]
