@@ -8,7 +8,6 @@ from CvPythonExtensions import *
 import BugConfig
 import BugCore
 import BugUtil
-import GameOptionsTab
 
 def init(): return
 
@@ -26,7 +25,6 @@ class BugOptionsScreen:
 		self.iScreenHeight = 50
 		self.options = BugOptions.getOptions()
 		self.tabs = []
-		self.tabs.append(GameOptionsTab.GameOptionsTab())
 		self.reopen = False
 
 	def addTab(self, tab):

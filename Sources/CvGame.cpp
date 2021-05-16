@@ -221,9 +221,6 @@ void CvGame::init(HandicapTypes eHandicap)
 	// Alberts2: Recalculate which info class replacements are currently active
 	GC.updateReplacements();
 
-	// Alberts2: cache higly used Types
-	GC.cacheInfoTypes();
-
 	//TB: Set Statuses
 	setStatusPromotions();
 
@@ -2200,7 +2197,6 @@ int CvGame::getTeamClosenessScore(int** aaiDistances, int* aiStartingLocs)
 
 void CvGame::update()
 {
-
 #ifdef LOG_AI
 	gPlayerLogLevel = getBugOptionINT("Autolog__BBAILevel", 0);
 	gTeamLogLevel = gPlayerLogLevel;
@@ -2274,9 +2270,6 @@ void CvGame::update()
 				enforceOptionCompatibility(eGameOption);
 			}
 		}
-
-		// Alberts2: cache higly used Types
-		GC.cacheInfoTypes();
 
 		//TB: Set Statuses
 		setStatusPromotions();

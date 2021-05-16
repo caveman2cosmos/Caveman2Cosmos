@@ -126,7 +126,7 @@ class CvCivicsScreen:
 		screen.addPanel("StatPanel", "", "", True, True, 0, Y_STAT_BAR, xRes, H_STAT_BAR, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 		screen.addPanel("BottomPanel", "", "", True, False, 0, yRes - H_EDGE, xRes, H_EDGE, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 
-		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_CIVIC_SCREEN_UPKEEP", (self.CyPlayer.getCivicUpkeep(self.currentCivics, True), ))
+		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_CIVICHELP_SCREEN_UPKEEP", (self.CyPlayer.getCivicUpkeep(self.currentCivics, True), ))
 		screen.setLabel("", "", szTxt, 1<<2, xMid, 2, 0, eFontTitle, eWidGen, 1, 1)
 		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
 		screen.setText("CivicExit", "", szTxt, 1<<1, xRes - 8, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
@@ -392,7 +392,7 @@ class CvCivicsScreen:
 				CyPlayer = self.CyPlayer
 				font = self.aFontList[0]
 				iTurns = CyPlayer.getCivicAnarchyLength(self.currentCivics)
-				szTxt = TRNSLTR.getText("TXT_KEY_CIVIC_SCREEN_UPKEEP", (CyPlayer.getCivicUpkeep(self.currentCivics, True), ))
+				szTxt = TRNSLTR.getText("TXT_KEY_CIVICHELP_SCREEN_UPKEEP", (CyPlayer.getCivicUpkeep(self.currentCivics, True), ))
 				screen.setLabel("CivicsUpkeepText", "", font + szTxt, 1<<2, self.xMid, self.Y_STAT_BAR + 8, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 1)
 				szTxt = TRNSLTR.getText("TXT_KEY_ANARCHY_TURNS", (iTurns, ))
 				y = self.yRes - self.H_EDGE - 16

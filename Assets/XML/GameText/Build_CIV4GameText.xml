@@ -589,7 +589,7 @@
 		<Russian>Строить [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Маяк[\LINK] (Риф)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_LIST_SCREEN_HOVER</Tag>
+		<Tag>TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER</Tag>
 		<English>Shows the Build List Screen.</English>
 		<French>Affiche l'écran des Listes de constructions.</French>
 		<German>Zeigt die Bauliste an.</German>
@@ -860,7 +860,7 @@
 		<Russian>Âîññ. ëàíäøàôò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_REQUIRES_BONUS</Tag>
+		<Tag>TXT_KEY_BUILDHELP_REQUIRES_BONUS</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]To place with %s1_Build requires %s2_Bonus[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]A placer avec %s1_Build requiert %s2_Bonus[COLOR_REVERT]</French>
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Разместить с %s1_Build (требуется %s2_Bonus)[COLOR_REVERT]</Russian>
@@ -1337,12 +1337,12 @@
 		<Russian>[LINK=IMPROVEMENT_WOOD_GATHERER]Ñáîð äðåâåñèíû[\LINK] (Ñîáèðàòåëü)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_WORKER_SPEED_MODIFIER_ADDITIONAL</Tag>
+		<Tag>TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_Build]%s2_Build[\LINK]</English>
 		<Russian>, [LINK=%s1_Build]%s2_Build[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_WORKER_SPEED_MODIFIER_SPECIFIC</Tag>
+		<Tag>TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_SPECIFIC</Tag>
 		<English>[ICON_BULLET]%D1_Modifier%% modifier to worker speeds when they [LINK=%s2_Build]%s3_Build[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Modifier%% modif. du temps de construction lors de %s2_Build</French>
 		<German>[ICON_BULLET]%D1_Modifier%% Arbeitsgeschwindigkeit bei [LINK=%s2_Build]%s3_Build[\LINK]</German>

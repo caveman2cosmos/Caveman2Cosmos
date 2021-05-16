@@ -36,7 +36,7 @@
 		<Russian>Программа «Аполлон» была амбициозным проектом по отправке человека на Луну. Программа была задумана в конце 1950-х годов официальными лицами Соединенных Штатов, которые были потрясены лидерством Советского Союза в космической гонке. В 1961 году президент Джон Ф. Кеннеди заявил перед объединенным заседанием Конгресса: «Я считаю, что эта страна должна взять на себя обязательство достичь цели до конца этого десятилетия - высадить человека на Луну и благополучно вернуть его на Землю.[PARAGRAPH:1]Есть некоторые предположения о том, действительно ли сам президент Кеннеди верил в проект; некоторые говорят, что у него были серьезные вопросы о стоимости и научной осуществимости, и что его предложение было главным образом уловкой по связям с общественностью, чтобы поднять настроение Америки перед лицом предполагаемой советской космической угрозы. Но проект воспламенил воображение Америки, и работа пошла быстро.[PARAGRAPH:1]Руководителям программы «Аполлон» пришлось преодолеть невероятное количество сложных научных и инженерных проблем, чтобы добиться успеха. Путешествие включало множество отдельных этапов: восхождение с Земли, путешествие с Земли на Луну, спуск на Луну и возвращение на лунную орбиту, за которым следовало путешествие обратно на Землю, а затем спуск на поверхность Земли. Для этого требовалось транспортное средство с множеством различных возможностей, которое оставалось достаточно легким, чтобы его можно было вывести на орбиту с помощью имеющихся в то время ракет. (Проблема была сродни попытке создать комбинированную подводную лодку, вездеход и самолет, который мог бы буксировать Фольксваген «Жук».)[PARAGRAPH:1]Успех программы «Аполлон» и высадка человека на Луну в 1969 году является невероятным свидетельством изобретательности, мужества и настойчивости земной науки и инженеров, проявленных преданными мужчинами и женщинами.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_DISTANCE_MAINT_MOD</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_DISTANCE_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Distance to Palace</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié à la distance du Palais</French>
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di manutenzione derivanti dalla distanza dal palazzo</Italian>
@@ -69,7 +69,7 @@
 		<Russian>[ICON_BULLET]Óëó÷øàåò âñå òåððèòîðèè âíóòðè êóëüòóðíûõ ãðàíèö[NEWLINE][NEWLINE][NEWLINE][TAB]Технически проект «Эдем» - это самая большая в мире теплица, расположенная недалеко от города Сент-Остелл в Англии. Комплекс состоит из нескольких куполов, в которых обитают растения со всего мира, каждый из которых имитирует естественный биом. Купола состоят из сотен шестиугольников и нескольких пятиугольников, которые соединяют вместе все сооружение; каждая из них представляет собой прозрачную подушку из прочного пластика. Первый купол имитирует тропическую среду, второй - средиземноморскую среду с умеренно теплым климатом.[NEWLINE][NEWLINE][TAB]В Civ4 C2C идея развивается дальше и представляет собой глобальную попытку улучшить планету. Таким образом, завершение проекта улучшит на один уровень ландшафт в пределах культурных границ вашей державы. Улучшения ландшафта происходят по следующей схеме:[NEWLINE][NEWLINE]Ïóñòûíè - Ïîëÿ - Ðàâíèíû - Ëåñà[NEWLINE][NEWLINE]Ñíåãà - Òóíäðû - Ïîëÿ[NEWLINE][NEWLINE]Îêåàí - Ïîáåðåæüå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_ENABLES_NUKES</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_ENABLES_NUKES</Tag>
 		<English>Enables Nuclear Weapons for the Player that builds this</English>
 		<French>Permet au joueur l'ayant construit d'obtenir des armes Nucléaires</French>
 		<Italian>Attiva le bombe atomiche per il giocatore che completa questo progetto</Italian>
@@ -121,7 +121,7 @@
 		<Russian>Долли (5 июля 1996 г. - 14 февраля 2003 г.) была домашней овцой женского пола, ставшая первым млекопитающим, клонированным из взрослой соматической клетки с использованием процесса переноса ядра. Ее клонировали Ян Уилмут, Кейт Кэмпбелл и его коллеги из Института Рослина в Эдинбурге, Шотландия. Она родилась 5 июля 1996 года и дожила до шести лет, и журнал «Scientific American» назвал ее «самой известной овцой в мире».[PARAGRAPH:2]Долли была первым клоном, полученным из клетки взрослого млекопитающего (первым клонированным животным был азиатский карп в Китае в 1963 году Тонг Дичжоу). Производство Долли показало, что гены в ядре такой зрелой дифференцированной соматической клетки все еще способны возвращаться к недифференцированному тотипотентному состоянию, создавая клетку, которая затем может развиваться в любую часть животного. Однако этот процесс перепрограммирования несовершенен, и эмбрионы, полученные путем переноса ядра, часто демонстрируют аномальное развитие.[PARAGRAPH:2]Вследствие этих трудностей в развитии клонирование млекопитающих с помощью переноса ядра по-прежнему крайне неэффективно, и Долли - единственный ягненок, который дожил до взрослого возраста после 277 попыток. Тем не менее, ее рождение по-прежнему считается одним из важнейших этапов развития современной биологии. Уилмут, возглавлявший команду, создавшую Долли, объявил в 2007 году, что метод переноса ядер может никогда не оказаться достаточно эффективным для использования на людях.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_GLOBAL_MAINT_MOD</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_GLOBAL_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_MOD%% Maintenance Costs in All Cities</English>
 		<French>[ICON_BULLET]%D1_MOD%% de coût d'entretien dans toutes les Villes</French>
 		<Italian>[ICON_BULLET]%D1_MOD%% costi di manutenzione in tutte le città</Italian>
@@ -130,7 +130,7 @@
 		<Russian>[ICON_BULLET]%D1_MOD%% çàòðàòû íà îáñëóæèâàíèå âî âñåõ ãîðîäàõ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_HAPPINESS</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_HAPPINESS</Tag>
 		<English>[ICON_BULLET]All of the player's cities receive +%d1 [ICON_HAPPY]</English>
 		<French>[ICON_BULLET]+%d1 [ICON_HAPPY] dans toutes les Villes du Joueur</French>
 		<German>[ICON_BULLET]Alle Städte des Spielers erhalten +%d1 [ICON_HAPPY]</German>
@@ -140,7 +140,7 @@
 		<Russian>[ICON_BULLET]Âñå ãîðîäà èãðîêà ïîëó÷àþò +%d1 [ICON_HAPPY]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_HEALTH</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_HEALTH</Tag>
 		<English>[ICON_BULLET]All of the player's cities receive +%d1 [ICON_HEALTHY]</English>
 		<French>[ICON_BULLET]+%d1 [ICON_HEALTHY] dans toutes les Villes du Joueur</French>
 		<German>[ICON_BULLET]Alle Städte des Spielers erhalten +%d1 [ICON_HEALTHY]</German>
@@ -294,7 +294,7 @@
 		<Russian>Ðåëüñîòðîííàÿ ÏÐÎ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_NUM_CITIES_MAINT_MOD</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_NUM_CITIES_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Number of Cities</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié au nombre de Villes</French>
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di manutenzione dal numero di città</Italian>
@@ -608,7 +608,7 @@
 		<Russian>Интернет - это компьютерная сеть, соединенная проводом, телефонией и спутниковой связью. Эти компьютеры используют один и тот же язык, что позволяет быстро передавать информацию. Любой, у кого есть компьютер и модем (или другое подключение), может использовать Интернет для сбора информации, передачи новостей и мнений или для стрельбы по другим единомышленникам в галереях виртуальной реальности. За несколько лет своего существования Интернет кардинально изменил способ сбора и передачи информации, и невозможно предугадать весь потенциал сети.[PARAGRAPH:1]Интернет зародился в начале 1960-х годов. В то время дискуссия была чисто теоретической, поскольку компьютеров, соединений и общего языка еще не существовало. Учитывая, что это был разгар «холодной войны», не было и необходимого международного сотрудничества. Но у этой идеи было много сторонников, особенно в университетах и ??исследовательских лабораториях США, и к 1969 году четыре компьютера, расположенные по всей стране, поддерживали связь друг с другом через ARPA-Net.[PARAGRAPH:1]К середине 1980-х ядро сети было готово, протоколы связи были определены, и Интернет заработал. К началу 1990-х был написан первый язык Интернета (http) и опубликован первый браузер. Так родилась всемирная паутина.[PARAGRAPH:1]Интернет сегодня является одним из немногих великих проектов, созданных в основном отдельными людьми, а не организацией, такой как корпорация, религия или правительство. Различные части сети действительно были созданы и профинансированы Министерством обороны США, но большая часть из них объединилась органически, построена по частям профессорами, учеными и инженерами, возможно, не столько для личной выгоды, сколько потому, что они считали "информационное общество" - это идея, к которой стоит стремиться.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_UNHAPPINESS</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_UNHAPPINESS</Tag>
 		<English>[ICON_BULLET]All of the player's cities receive +%d1 [ICON_UNHAPPY]</English>
 		<French>[ICON_BULLET]+%d1 [ICON_UNHAPPY] dans toutes les Villes du Joueur</French>
 		<German>[ICON_BULLET]Alle Städte des Spielers erhalten +%d1 [ICON_UNHAPPY]</German>
@@ -618,7 +618,7 @@
 		<Russian>[ICON_BULLET]Âñå ãîðîäà èãðîêà ïîëó÷àþò +%d1 [ICON_UNHAPPY]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_UNHEALTH</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_UNHEALTH</Tag>
 		<English>[ICON_BULLET]All of the player's cities receive +%d1 [ICON_UNHEALTHY]</English>
 		<French>[ICON_BULLET]+%d1 [ICON_UNHEALTHY] dans toutes les Villes du Joueur</French>
 		<German>[ICON_BULLET]Alle Städte des Spielers erhalten +%d1 [ICON_UNHEALTHY]</German>
@@ -628,7 +628,7 @@
 		<Russian>[ICON_BULLET]Âñå ãîðîäà èãðîêà ïîëó÷àþò +%d1 [ICON_UNHEALTHY]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_WORLD_HAPPINESS</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_WORLD_HAPPINESS</Tag>
 		<English>[ICON_BULLET]All cities in the world receive +%d1 [ICON_HAPPY]</English>
 		<French>[ICON_BULLET]+%d1 [ICON_HAPPY] dans toutes les Villes du Monde</French>
 		<German>[ICON_BULLET]Alle Städte der Welt erhalten +%d1 [ICON_HAPPY]</German>
@@ -638,7 +638,7 @@
 		<Russian>[ICON_BULLET]Âñå ãîðîäà â ìèðå ïîëó÷àþò +%d1 [ICON_HAPPY]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_WORLD_HEALTH</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_WORLD_HEALTH</Tag>
 		<English>[ICON_BULLET]All cities in the world receive +%d1 [ICON_HEALTHY]</English>
 		<French>[ICON_BULLET]+%d1 [ICON_HEALTHY] dans toutes les Villes du Monde</French>
 		<German>[ICON_BULLET]Alle Städte der Welt erhalten +%d1 [ICON_HEALTHY]</German>
@@ -648,7 +648,7 @@
 		<Russian>[ICON_BULLET]Âñå ãîðîäà â ìèðå ïîëó÷àþò +%d1 [ICON_HEALTHY]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_WORLD_UNHAPPINESS</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_WORLD_UNHAPPINESS</Tag>
 		<English>[ICON_BULLET]All cities in the world receive +%d1 [ICON_UNHAPPY]</English>
 		<French>[ICON_BULLET]+%d1 [ICON_UNHAPPY] dans toutes les Villes du Monde</French>
 		<German>[ICON_BULLET]Alle Städte der Welt erhalten +%d1 [ICON_UNHAPPY]</German>
@@ -658,7 +658,7 @@
 		<Russian>[ICON_BULLET]Âñå ãîðîäà â ìèðå ïîëó÷àþò +%d1 [ICON_UNHAPPY]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_WORLD_UNHEALTH</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_WORLD_UNHEALTH</Tag>
 		<English>[ICON_BULLET]All cities in the world receive +%d1 [ICON_UNHEALTHY]</English>
 		<French>[ICON_BULLET]+%d1 [ICON_UNHEALTHY] dans toutes les Villes du Monde</French>
 		<German>[ICON_BULLET]Alle Städte der Welt erhalten +%d1 [ICON_UNHEALTHY]</German>

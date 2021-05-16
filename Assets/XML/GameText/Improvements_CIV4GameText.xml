@@ -146,7 +146,7 @@
 		<Russian>Áóé(Ðèô)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BOMBARD</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_BOMBARD</Tag>
 		<English>[ICON_BULLET]Can be bombarded</English>
 		<French>[ICON_BULLET]Peut être bombardé</French>
 		<German>[ICON_BULLET]Beschossen werden kann</German>
@@ -156,14 +156,14 @@
 		<Russian>[ICON_BULLET]Ìîæåò áûòü îáñòðåëÿí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BONUS_CHANGE</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_BONUS_CHANGE</Tag>
 		<English>[ICON_BULLET]When added to a plot, this improvement also adds a source of [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (if the resource is valid).</English>
 		<French>[ICON_BULLET]Lorsqu'installé sur une case, cet aménagement ajoute une source de [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (Si la ressource est valide).</French>
 		<Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
 		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå ñîçäàåò èñòî÷íèê [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (åñëè ðåñóðñ ÿâëÿåòñÿ äîñòóïíûì).</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_CHANGE_REMOVE</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_CHANGE_REMOVE</Tag>
 		<English>[ICON_BULLET]When added to a plot, this improvement immediately removes itself from the plot. (Useful for placing features and bonuses with upgrades, builds and razing.)</English>
 		<French>[ICON_BULLET]Lorsque construit sur une case, cet aménagement est enlevé (utile pour placer des fonctionnalités avec améliorations, constructions et destructions.)</French>
 		<Polish>[ICON_BULLET]Kiedy zostanie dodane do pola, to ulepszenie automatycznie usunie się z pola (użyteczne to umieszczania surowców i cech terenu z ulepszeniami).</Polish>
@@ -408,7 +408,7 @@
 		<Russian>В современном использовании коттедж обычно представляет собой скромное, часто уютное жилище, обычно в сельской или полусельской местности. Однако в городах есть жилища в стиле коттеджей, а в таких местах, как Канада, этот термин вообще не имеет коннотации размера (ср. священник или отшельник). В Соединенном Королевстве термин коттедж также имеет тенденцию обозначать сельские жилища традиционной постройки, хотя он также может применяться к жилищам современной постройки, которые спроектированы так, чтобы напоминать традиционные («имитирующие коттеджи»).</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_CULTURE_RANGE</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_CULTURE_RANGE</Tag>
 		<English>[ICON_BULLET]Influences plots within a distance of %d1_Num</English>
 		<French>[ICON_BULLET]Influences des parcelles dans un rayon de %d1_Num</French>
 		<German>[ICON_BULLET]Einflüsse Plots innerhalb einer Entfernung von %d1_Num</German>
@@ -523,7 +523,7 @@
 Ôåðìà - îáëàñòü çåìëè, èëè, äëÿ àêâàêóëüòóðû, îçåðà, ðåêè èëè ìîðÿ, âêëþ÷àÿ ðàçëè÷íûå ñòðóêòóðû, ïîñâÿùåííûå ïðåæäå âñåãî ïðàêòèêå ñîçäàíèÿ è ñáåðåæåíèÿ ïèùè (ñåëüõîçïðîäóêöèÿ, çåðíî, èëè äîìàøíèé ñêîò), âîëîêíà è, âñå â áîëüøåé ñòåïåíè, òîïëèâî. Ýòî - îñíîâíîå ñðåäñòâî ïðîèçâîäñòâà â ïðîèçâîäñòâå ïèùè. Ôåðìû ìîãóò áûòü ïðèíàäëåæàòü è óïðàâëÿòüñÿ îòäåëüíûì ëèöîì, ñåìüåé, îáùèíîé, êîðïîðàöèåé èëè êîìïàíèåé. Ôåðìà ìîæåò âëàäåòü ëþáûì ðàçìåðîì îò äîëè ãåêòàðà äî íåñêîëüêèõ òûñÿ÷ ãåêòàðîâ. - Wikipedia</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_FEATURE_CHANGE</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_FEATURE_CHANGE</Tag>
 		<English>[ICON_BULLET]When added to a plot, this improvement also changes the feature on the plot to [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (if feature is valid).</English>
 		<Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
 		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå èçìåíÿåò îñîáåííîñòè ýòîé êëåòêè äî [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (åñëè îñîáåííîñòü ÿâëÿåòñÿ äîñòóïíîé).</Russian>
@@ -642,7 +642,7 @@
 		<Russian>Òàéíàÿ ïåùåðà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_FORTIFY_TO_UPGRADE</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_FORTIFY_TO_UPGRADE</Tag>
 		<English>[ICON_BULLET]A unit must guard it to upgrade</English>
 		<French>[ICON_BULLET]Une unité doit la garder pour qu'elle évolue</French>
 		<German>[ICON_BULLET]Eine Unit muss stärken, um ein Upgrade</German>
@@ -759,7 +759,7 @@
 		<Russian>Геотермальная скважина проникает в мантию планеты и дает значительные минералы и энергию. Скважины оказывают значительное негативное экологическое воздействие. Бурение - это дистанционно управляемый метод добычи (извлечения) полезных ископаемых через скважины с помощью струй воды под высоким давлением. Этот процесс может осуществляться с поверхности земли, дна карьера, подземной шахты, плавучей платформы или судна через предварительно пробуренные скважины.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_GLOBAL</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_GLOBAL</Tag>
 		<English>[ICON_BULLET]May only be placed once in a game.</English>
 		<Russian>[ICON_BULLET]Может быть размещен только единожды за всю игру.</Russian>
 	</TEXT>
@@ -1089,21 +1089,21 @@
 		<Russian>Ïðîì. êîìïëåêñ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_IS_CAN_MOVE_SEA_UNITS</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_CAN_MOVE_SEA_UNITS</Tag>
 		<English>[ICON_BULLET]Allows Naval Units on the plot</English>
 		<French>[ICON_BULLET]Autorise les unités navales sur la case</French>
 		<Polish>[ICON_BULLET]Pozwala okrętom poruszać się po tym terenie</Polish>
 		<Russian>[ICON_BULLET]Позволяет кораблям и судам находиться на данной клетке</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_IS_UNIVERSAL_BONUS_PROVIDER</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_UNIVERSAL_BONUS_PROVIDER</Tag>
 		<English>[ICON_BULLET]Provides any tradable resource from the plot on which it is built</English>
 		<Spanish>[ICON_BULLET]Proporciona cualquier recurso intercambiable situado en la casilla donde se construya</Spanish>
 		<Polish>[ICON_BULLET]Dostarcza wszelkich surowców z pola na jakim został wybudowany.</Polish>
 		<Russian>[ICON_BULLET]Îáåñïå÷èâàåò ëþáîé òîðãóåìûé ðåñóðñ îò ó÷àñòêà, íà êîòîðîì îí ïîñòðîåí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_IS_ZOC_SOURCE</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_ZOC_SOURCE</Tag>
 		<English>[ICON_BULLET]Provides a zone of control</English>
 		<French>[ICON_BULLET]Procure une zone de contrôle</French>
 		<Spanish>[ICON_BULLET]Proporciona una zona de control</Spanish>
@@ -1404,7 +1404,7 @@
 		<Russian>Охота за грибами, сбор грибов и аналогичные термины описывают деятельность по собирательсттву грибов на дикой природе, чаще всего для употребления в пищу. Она весьма популярна в большинстве стран Европы, включая Северные, Балтийские и Славянские страны и Средиземноморский бассейн, а также в Австралии, Японии, Корее, Канаде, Индийском субконтиненте, а также на северо-западе, северо-востоке, Среднем Западе и Аппалачах США.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_NATIONAL</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_NATIONAL</Tag>
 		<English>[ICON_BULLET]May only be placed once by a given player.</English>
 		<Russian>[ICON_BULLET]Может быть размещен игроком только один раз.</Russian>
 	</TEXT>
@@ -1457,7 +1457,7 @@
 		<Russian>[COLOR_BUILDING_TEXT]Кочевые стада[COLOR_REVERT] - уже более подвинутый способ для пропитания, чем собирательство и охота на дичь...</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_NOT_ON_ANY_BONUS</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_NOT_ON_ANY_BONUS</Tag>
 		<English>[ICON_BULLET]May not be added to a plot that already has a resource, whether visible or not.</English>
 		<Polish>[ICON_BULLET]Nie można dodać do pola, które już posiada surowiec (widoczny lub nie)</Polish>
 		<Russian>[ICON_BULLET]Не может быть добавлен на участок, на котором уже есть видимый или не открытый еще ресурс.</Russian>
@@ -1568,7 +1568,7 @@
 		<Russian>Торф заготавливается как важный источник топлива в некоторых частях мира. По объему в мире насчитывается около 4 триллионов кубометров торфа, покрывающих в общей сложности около 2% общей площади суши (около 3 миллионов квадратных километров), содержащих около 8 миллиардов тераджоулей энергии.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_PILLAGE_YIELDS</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_PILLAGE_YIELDS</Tag>
 		<English>[ICON_BULLET]Pillage yields %d1_Num[ICON_GOLD] on average</English>
 		<French>[ICON_BULLET]Le pillage rapporte en moyenne %d1_Num[ICON_GOLD].</French>
 		<German>[ICON_BULLET]Plünderung bringt durchschnittlich %d1_Num[ICON_GOLD]</German>
@@ -1651,7 +1651,7 @@
 		<Russian>Îáðàáîòêà òðàâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_PLOT_CULTURE</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_PLOT_CULTURE</Tag>
 		<English>[ICON_BULLET]%D1_Change[ICON_CULTURE] for owner in plot</English>
 		<French>[ICON_BULLET]%D1_Change[ICON_CULTURE] pour le propriétaire dans la parcelle</French>
 		<German>[ICON_BULLET]%D1_Change[ICON_CULTURE] für Besitzer in Plot</German>
@@ -1733,7 +1733,7 @@
 		<Russian>Радиовышки излучают и передают радиосигналы.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_REQUIRES_PEAK</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_REQUIRES_PEAK</Tag>
 		<English>[ICON_BULLET]Requires peak</English>
 		<French>[ICON_BULLET]Requiert Montagnes</French>
 		<Russian>[ICON_BULLET]Требуется: Горная вершина</Russian>
@@ -1838,7 +1838,7 @@
 		<Russian>[COLOR_BUILDING_TEXT]Зернохранилища[COLOR_REVERT] впервые появились в каменном веке. Первобытные люди добывали пищу во время охоты и сбора злаков или корнеплодов. Зернохранилища были особыми местами, в которых [COLOR_UNIT_TEXT]Собиратели[COLOR_REVERT] хранили собранные семена, которые использовались для прокорма всего племени.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_SEE_FROM</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_SEE_FROM</Tag>
 		<English>[ICON_BULLET]%D1_Change Visibility Height</English>
 		<French>[ICON_BULLET]%D1_Change en Hauteur de Visibilité</French>
 		<Italian>[ICON_BULLET]%D1_Change visibilità Altezza</Italian>
@@ -2129,7 +2129,7 @@
 		<Russian>Древесная ферма - это частный лесопитомник, в котором ведется производство древесины. Термин «древесная ферма» также используется для обозначения плантаций деревьев, питомников деревьев и ферм по выращиванию рождественских елок. Поскольку древофермы управляются для ускорения роста, древесные фермы имеют тенденцию улавливать углерод быстрее, чем неуправляемые леса, учитывая только часть уравнения, связанную с секвестрацией, а не выбросы углерода из-за гниения, пожара или урожая. Тот факт, что управляемые лесные массивы обычно моложе, а молодые деревья растут быстрее и реже умирают, способствует этому различию.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UNIQUE_RANGE</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UNIQUE_RANGE</Tag>
 		<English>[ICON_BULLET]Cannot build another within a distance of %d1_Num</English>
 		<French>[ICON_BULLET]Impossible de construire un autre aménagement à une distance de moins de %d1_Num</French>
 		<German>[ICON_BULLET]Kann nicht bauen ein anderer in einem Abstand von %d1_Num</German>
@@ -2139,49 +2139,49 @@
 		<Russian>[ICON_BULLET]Íåâîçìîæíî ñòðîèòü íà ðàññòîÿíèè îò %d1_Num</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_BLOCKED</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_BLOCKED</Tag>
 		<English>[COLOR_YELLOW] No upgrade available[COLOR_REVERT]</English>
 		<Russian>[COLOR_YELLOW] Нет доступных обновлений[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_DESTROYS_FEATURE</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_DESTROYS_FEATURE</Tag>
 		<English>[COLOR_WARNING_TEXT]Will Destroy the %s1_Feature giving %D2_Amount production to %s3_CityName this round.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Détruit %s1_Feature, donnant %D2_Amount production à %s3_CityName pour ce tour.[COLOR_REVERT]</French>
 		<Polish>[COLOR_WARNING_TEXT]Zostanie zniszczone %s1_Feature przekazując %D2_Amount produkcji do %s3_CityName w tej turze.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Уничтожит %s1_Feature дав городу %s3_CityName %D2_Amount молотков на этом ходу.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_FROZEN</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_FROZEN</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT] Improvement upgrade frozen.[NEWLINE]Unfreeze by toggling city work here.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT] Un Aménagement n'a pu être amélioré.[NEWLINE]Il est possible de tenter à nouveau en répétant l'opération.[COLOR_REVERT]</French>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Улучшение объекта недоступно. Для снятия блокировки улучшения сделайте данную клетку нерабочей в окне города.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NEED_WORK</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_WORK</Tag>
 		<English>[SPACE]([COLOR_WARNING_TEXT]Need Work[COLOR_REVERT])</English>
 		<Russian>[SPACE]([COLOR_WARNING_TEXT]Клетка должна обрабатываться[COLOR_REVERT])</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NEED_GARRISON</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_GARRISON</Tag>
 		<English>[SPACE]([COLOR_WARNING_TEXT]Need Garrison[COLOR_REVERT])</English>
 		<Russian>[SPACE]([COLOR_WARNING_TEXT]Нужен гарнизон[COLOR_REVERT])</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NO</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NO</Tag>
 		<English>Bother me another time!</English>
 		<French>Pas d'amélioration possible (pas de tentative d'amélioration)</French>
 		<Polish>Nie ulepszaj (system nie będzie pytał się o to ponownie)</Polish>
 		<Russian>Не улучшать (не будут в дальнейшем попытки автоматического обновления.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_OPTIONS</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_OPTIONS</Tag>
 		<English>Your Improvement may upgrade. What upgrade would you like it to become?</English>
 		<French>Votre Aménagement peut être améliorée. Laquelle voulez-vous choisir?</French>
 		<Polish>Infrastruktura terenu może być ulepszona. Jakie ulepszenie pragniesz wybrać?</Polish>
 		<Russian>Ваше улучшение можно усовершенствовать. Какое обновление вы выберете?</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_RATE_MODIFIER</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Modifier%% modifier to upgrade rate on all improvements</English>
 		<French>[ICON_BULLET]%D1_Modifier%% modif. pour l'amélioration des aménagements</French>
 		<Italian>[ICON_BULLET]%D1_Modifier%% al tasso di crescita di tutti i miglioramenti delle caselle</Italian>
@@ -2189,17 +2189,17 @@
 		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости обновления всех улучшений</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_RATE_MODIFIER_ADDITIONAL</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_Improvement]%s2_Improvement[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_RATE_MODIFIER_END</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_END</Tag>
 		<English>Improvements</English>
 		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
 		<Russian> улучшения</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_RATE_MODIFIER_SPECIFIC</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_SPECIFIC</Tag>
 		<English>[ICON_BULLET]%D1_Modifier%% modifier to upgrade rate for [LINK=%s2_Improvement]%s3_Improvement[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Modifier%% modif. pour l'amélioration de [LINK=%s2_Improvement]%s3_Improvement[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Modifier%% Modernisierungsgeschwindigkeit von [LINK=%s2_Improvement]%s3_Improvement[\LINK]</German>
@@ -2208,14 +2208,14 @@
 		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости обновления [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_RETAINS_FEATURE</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RETAINS_FEATURE</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Will Safely Retain the %s1_Feature on this plot.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]maintient en place %s1_Feature sur cette case.[COLOR_REVERT]</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1_Feature bezpiecznie pozostanie na tym polu.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Сохраняет %s1_Feature на этой клетке.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_TURNS</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_TURNS</Tag>
 		<English>[SPACE](Upgrade: %d1_Num [NUM1:Turn:Turns]</English>
 		<Russian>[SPACE](Улучшение: %d1_Num [NUM1:ход:ходов]</Russian>
 	</TEXT>
@@ -2265,7 +2265,7 @@
 		<Russian>Деревня представляет собой сгруппированное человеческое поселение или сообщество, больше, чем деревня, с населением от нескольких сотен до нескольких тысяч (иногда десятков тысяч). Хотя часто она расположена в сельской местности, термин городская деревня также применяется к определенным городским поселениям. районы, такие как Уэст-Виллидж на Манхэттене, Нью-Йорке и Сайфи-Виллидж в Бейруте, Ливан, а также Хэмпстед-Виллидж в пригороде Лондона. Деревни обычно постоянные, с постоянными жилищами; однако временные деревни могут возникать. Кроме того, дома в деревне расположены довольно близко друг к другу, а не разбросаны широко по ландшафту, как рассредоточенное поселение.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_VISIBILITY_RANGE</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_VISIBILITY_RANGE</Tag>
 		<English>[ICON_BULLET]%D1_Change Visibility Range</English>
 		<French>[ICON_BULLET]Champ de vision %D1_Change</French>
 		<German>[ICON_BULLET]%D1_Change Sichtweite</German>

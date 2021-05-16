@@ -63,7 +63,7 @@
 					<BuildType>BUILD_BURN_VEGETATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
-				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<!-- Obsolete in: C2C_ERA_ANCIENT -->
 				<Build>
 					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>

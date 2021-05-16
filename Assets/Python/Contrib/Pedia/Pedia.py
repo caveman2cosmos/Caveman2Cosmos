@@ -149,6 +149,7 @@ class Pedia:
 		szCatWorldUnits			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_HERO", ())
 		szCatAnimals			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_ANIMALS", ())
 		szCatCulturalUnits		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_CULTURAL_UNITS", ())
+		szCatSpreadUnits		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SPREAD_UNITS", ())
 		szCatMiscUnits			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_MISC_UNITS", ())
 		szCatUnitTree			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_UNIT_UPGRADES", ())
 		szCatUnitCombat			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT", ())
@@ -233,7 +234,7 @@ class Pedia:
 		szTechSubCatList = list(szEraList)
 		szTechSubCatList.append(szChronology)
 		PEDIA_SUB_CONCEPTS 		= [szCatConcepts, szCatConceptsNew, szCatStrategy, szCatShortcuts, szCatHints, szCatEras]
-		PEDIA_SUB_UNITS_2		= [szCatWorldUnits, szCatCulturalUnits, szCatAnimals, szCatMiscUnits]
+		PEDIA_SUB_UNITS_2		= [szCatWorldUnits, szCatCulturalUnits, szCatAnimals, szCatSpreadUnits, szCatMiscUnits]
 		PEDIA_SUB_PROMOTIONS	= [szCatPromotions, szCatBuildUp, szCatStatus, szCatEquipment, szCatAffliction]
 		PEDIA_SUB_BUILDINGS_2	= [szCatNationalWonders, szCatGreatWonders, szCatGroupWonders, szCatSpecialBuildings, szCatC2CCutures, szCatRelBuildings, szCatAniBuildings]
 		PEDIA_SUB_BONUSES		= [szCatBonusesMap, szCatBonusesMan, szCatBonusesCult]
@@ -310,6 +311,7 @@ class Pedia:
 			szCatWorldUnits			: self.placeWorldUnits,
 			szCatAnimals			: self.placeAnimals,
 			szCatCulturalUnits		: self.placeCulturalUnits,
+			szCatSpreadUnits		: self.placeSpreadUnits,
 			szCatMiscUnits			: self.placeMiscUnits,
 			szCatUnitCombat			: self.placeUnitCombats,
 			szCatPromotions			: self.placePromotions,
@@ -468,13 +470,17 @@ class Pedia:
 			else:
 				iBonusClassType = None
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
-			aListAI = [UnitAITypes.UNITAI_MISSIONARY, UnitAITypes.UNITAI_PROPHET, UnitAITypes.UNITAI_ARTIST, UnitAITypes.UNITAI_SCIENTIST]
+			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
+			iCost = CvUnitInfo.getProductionCost()
 			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42): # 42 = UNITAI_SUBDUED_ANIMAL
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[2]
-			elif (iDefaultUnitAIType in aListAI) or (CvUnitInfo.getSpecialUnitType() == GC.getInfoTypeForString("SPECIALUNIT_CAPTIVE")):
+			elif (iDefaultUnitAIType in aListAI):
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[3]
+			elif iCost <= 0:
+				iCategory = self.PEDIA_UNITS_2
+				szSubCat = self.mapSubCat.get(iCategory)[4]
 			elif CvUnitInfo.getMaxGlobalInstances() == 1: ## World Unit
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[0]
@@ -731,30 +737,35 @@ class Pedia:
 	# Unit Lists
 	def placeUnits(self):
 		print "Creating item list for category: Units"
-		self.aList = self.getSortedUnitList(False, False, False, False)
+		self.aList = self.getSortedUnitList(False, False, False, False, False)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
 
 	def placeWorldUnits(self):
 		print "Creating item list for category: Heroes"
-		self.aList = self.getSortedUnitList(True, False, False, False)
+		self.aList = self.getSortedUnitList(True, False, False, False, False)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
 
 	def placeAnimals(self):
 		print "Creating item list for category: Animals"
-		self.aList = self.getSortedUnitList(False, True, False, False)
+		self.aList = self.getSortedUnitList(False, True, False, False, False)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
 
 	def placeCulturalUnits(self):
-		print "Creating item list for category: Animals"
-		self.aList = self.getSortedUnitList(False, False, True, False)
+		print "Creating item list for category: Cultural"
+		self.aList = self.getSortedUnitList(False, False, True, False, False)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
 
+	def placeSpreadUnits(self):
+		print "Creating item list for category: Corporate/Religion spreading Units"
+		self.aList = self.getSortedUnitList(False, False, False, True, False)
+		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
+		
 	def placeMiscUnits(self):
 		print "Creating item list for category: Misc Units"
-		self.aList = self.getSortedUnitList(False, False, False, True)
+		self.aList = self.getSortedUnitList(False, False, False, False, True)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
 
-	def getSortedUnitList(self, bWorld, bAnimals, bCultural, bMisc):
+	def getSortedUnitList(self, bWorld, bAnimals, bCultural, bSpread, bMisc):
 		aList = []
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
@@ -767,13 +778,19 @@ class Pedia:
 			else:
 				iBonusClassType = None
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
-			aListAI = [UnitAITypes.UNITAI_MISSIONARY, UnitAITypes.UNITAI_PROPHET, UnitAITypes.UNITAI_ARTIST, UnitAITypes.UNITAI_SCIENTIST]
+			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
+			iCost = CvUnitInfo.getProductionCost()
 			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42): # 42 = UNITAI_SUBDUED_ANIMAL
 				if bAnimals:
 					bValid = True
 				else:
 					continue
-			elif (iDefaultUnitAIType in aListAI) or (CvUnitInfo.getSpecialUnitType() == GC.getInfoTypeForString("SPECIALUNIT_CAPTIVE")):
+			elif (iDefaultUnitAIType in aListAI):
+				if bSpread:
+					bValid = True
+				else:
+					continue
+			elif iCost <= 0:
 				if bMisc:
 					bValid = True
 				else:
@@ -788,7 +805,7 @@ class Pedia:
 					bValid = True
 				else:
 					continue
-			elif bWorld or bAnimals or bCultural or bMisc:
+			elif bWorld or bAnimals or bCultural or bSpread or bMisc:
 				continue
 			elif szSubCat == self.szCatAllEras:
 				bValid = True

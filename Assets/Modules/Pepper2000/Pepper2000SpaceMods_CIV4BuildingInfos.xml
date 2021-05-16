@@ -144,13 +144,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ENLIGHTENMENT</Type>
+			<Type>BUILDING_ENLIGHTENED</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ENLIGHTENMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ENLIGHTENMENT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ENLIGHTENED</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ENLIGHTENED_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ENLIGHTENMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENLIGHTENED</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -309,13 +309,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZERO_G</Type>
+			<Type>BUILDING_ZERO_G_ADAPTATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ZERO_G</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZERO_G_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ZERO_G_ADAPTATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ZERO_G_ADAPTATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZERO_G</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ZERO_G_ADAPTATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -504,13 +504,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NANOMORPHICS_BEINGS</Type>
+			<Type>BUILDING_NANOMORPHISM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NANOMORPHISM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NANOMORPHISM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NANOMORPHICS_BEINGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NANOMORPHISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -539,13 +539,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INFORMATION_BEING</Type>
+			<Type>BUILDING_INFORMATION_BASED</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_INFORMATION_BEING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INFORMATION_BEING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_INFORMATION_BASED</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INFORMATION_BASED_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INFORMATION_BEING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INFORMATION_BASED</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -594,13 +594,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HUMAN_ALIEN_HYBRID</Type>
+			<Type>BUILDING_ALIEN_HYBRID</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ALIEN_HYBRID</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ALIEN_HYBRID_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_ALIEN_HYBRID</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ALIEN_HYBRID</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -652,13 +652,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_IMMORTAL_BEING</Type>
+			<Type>BUILDING_IMMORTAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_IMMORTAL_BEING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_IMMORTAL_BEING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_IMMORTAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_IMMORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_IMMORTAL_BEING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_IMMORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -689,13 +689,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PURE_INFORMATION_BEING</Type>
+			<Type>BUILDING_PURE_ENERGY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_PURE_INFORMATION_BEING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PURE_INFORMATION_BEING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PURE_ENERGY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PURE_ENERGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PURE_INFORMATION_BEING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PURE_ENERGY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -720,13 +720,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HIGH_DIMENSIONAL_BEING</Type>
+			<Type>BUILDING_HIGH_DIMENSIONAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HIGH_DIMENSIONAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HIGH_DIMENSIONAL_BEING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HIGH_DIMENSIONAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -796,13 +796,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NONSPATIAL_BEINGS</Type>
+			<Type>BUILDING_NONSPATIAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_NONSPATIAL_BEINGS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NONSPATIAL_BEINGS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NONSPATIAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NONSPATIAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NONSPATIAL_BEINGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NONSPATIAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -822,13 +822,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ATEMPORAL_BEINGS</Type>
+			<Type>BUILDING_ATEMPORAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ATEMPORAL_BEINGS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ATEMPORAL_BEINGS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ATEMPORAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ATEMPORAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ATEMPORAL_BEINGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ATEMPORAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

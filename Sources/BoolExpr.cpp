@@ -13,6 +13,7 @@
 #include "BoolExpr.h"
 #include "IntExpr.h"
 #include "CheckSum.h"
+#include "CvImprovementInfo.h"
 #include "FVariableSystem.h"
 #include "wchar_utils.h"
 

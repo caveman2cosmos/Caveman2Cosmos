@@ -39,9 +39,8 @@ def canTriggerBlessedSea(argsList):
 		return False
 
 	iOurLandmasses = 0
-	for i in xrange(MAP.getIndexAfterLastArea()):
-		area = MAP.getArea(i)
-		if not area.isNone() and not area.isWater() and area.getCitiesPerPlayer(data.ePlayer) > 0:
+	for area in MAP.areas():
+		if not area.isWater() and area.getCitiesPerPlayer(data.ePlayer) > 0:
 			iOurLandmasses += 1
 
 	if (iOurLandmasses > iOurMaxLandmass):
@@ -63,9 +62,8 @@ def canTriggerBlessedSea2(argsList):
   iOurMinLandmass = (3 * GC.getWorldInfo(map.getWorldSize()).getDefaultPlayers()) / 2
 
   iOurLandmasses = 0
-  for i in xrange(map.getIndexAfterLastArea()):
-    area = map.getArea(i)
-    if not area.isNone() and not area.isWater() and area.getCitiesPerPlayer(data.ePlayer) > 0:
+  for area in map.areas():
+    if not area.isWater() and area.getCitiesPerPlayer(data.ePlayer) > 0:
       iOurLandmasses += 1
 
   if (iOurLandmasses < iOurMinLandmass):
@@ -1189,7 +1187,7 @@ def canTriggerInterstate(argsList):
 	return GC.getPlayer(data.ePlayer).isCivic(GC.getInfoTypeForString("CIVIC_EGALITARIAN"))
 
 def getHelpInterstate(argsList):
-	return TRNSLTR.getText("TXT_KEY_UNIT_MOVEMENT", (1, GC.getRouteInfo(GC.getInfoTypeForString("ROUTE_HIGHWAY")).getTextKey()))
+	return TRNSLTR.getText("TXT_KEY_UNITHELP_MOVEMENT", (1, GC.getRouteInfo(GC.getInfoTypeForString("ROUTE_HIGHWAY")).getTextKey()))
 
 def applyInterstate(argsList):
 	data = argsList[1]
@@ -5822,8 +5820,6 @@ def canTriggerUnlimitedPower2(argsList):
   player = GC.getPlayer(data.ePlayer)
   eventCity = player.getCity(data.iCityId)
 
-  if (eventCity.area().isNone()):
-    return False
   if (eventCity.area().isCleanPower(player.getTeam())):
     return False
   if (player.getGold() < (eventCity.area().getNumCities() * 100)):
@@ -5981,12 +5977,12 @@ def getHelpSuperVirus3(argsList):
 	iSmartMedicine = GC.getInfoTypeForString("BONUS_SMART_MEDICINE")
 	if iSmartMedicine > 0:
 		if not CyCity.hasBonus(iSmartMedicine):
-			szHelp += "\n" + TRNSLTR.getText("TXT_KEY_BUILDING_REQUIRES_STRING", (GC.getBonusInfo(iSmartMedicine).getTextKey(),))
+			szHelp += "\n" + TRNSLTR.getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", (GC.getBonusInfo(iSmartMedicine).getTextKey(),))
 
 	iSmartDrugs = GC.getInfoTypeForString("TECH_SMART_DRUGS")
 	if iSmartDrugs > 0:
 		if not GC.getTeam(CyPlayer.getTeam()).isHasTech(iSmartDrugs):
-			szHelp += "\n" + TRNSLTR.getText("TXT_KEY_BUILDING_REQUIRES_STRING", (GC.getTechInfo(iSmartDrugs).getTextKeyWide(),))
+			szHelp += "\n" + TRNSLTR.getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", (GC.getTechInfo(iSmartDrugs).getTextKeyWide(),))
 
 	return szHelp
 
@@ -6175,7 +6171,7 @@ def getHelpNewWorld(argsList):
 
 		iNavigation = GC.getInfoTypeForString("TECH_NAVIGATION")
 		if iNavigation > -1 and not GC.getTeam(GC.getPlayer(argsList[1].ePlayer).getTeam()).isHasTech(iNavigation):
-			szHelp += "\n" + TRNSLTR.getText("TXT_KEY_BUILDING_REQUIRES_STRING", (GC.getTechInfo(iNavigation).getTextKeyWide(),))
+			szHelp += "\n" + TRNSLTR.getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", (GC.getTechInfo(iNavigation).getTextKeyWide(),))
 	return szHelp
 
 ##### VOLCANO C2C #####
