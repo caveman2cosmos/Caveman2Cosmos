@@ -11999,12 +11999,12 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 					if (bFirst)
 					{
 						szHelpString.append(NEWLINE);
-						szHelpString.append(gDLL->getText("TXT_KEY_BUILD_WORKER_SPEED_MODIFIER_SPECIFIC", iCurrentModifier, CvWString(GC.getBuildInfo(eTempBuild).getType()).GetCString(), GC.getBuildInfo(eTempBuild).getDescription()));
+						szHelpString.append(gDLL->getText("TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_SPECIFIC", iCurrentModifier, CvWString(GC.getBuildInfo(eTempBuild).getType()).GetCString(), GC.getBuildInfo(eTempBuild).getDescription()));
 						bFirst = false;
 					}
 					else
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_BUILD_WORKER_SPEED_MODIFIER_ADDITIONAL", CvWString(GC.getBuildInfo(eTempBuild).getType()).GetCString(), GC.getBuildInfo(eTempBuild).getDescription()));
+						szHelpString.append(gDLL->getText("TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_ADDITIONAL", CvWString(GC.getBuildInfo(eTempBuild).getType()).GetCString(), GC.getBuildInfo(eTempBuild).getDescription()));
 					}
 				}
 			}
@@ -31242,7 +31242,7 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 			for (int iJ = 0; iJ < build.getNumPrereqBonusTypes(); iJ++)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILD_REQUIRES_BONUS", build.getTextKeyWide(), GC.getBonusInfo((BonusTypes)build.getPrereqBonusType(iJ)).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDHELP_REQUIRES_BONUS", build.getTextKeyWide(), GC.getBonusInfo((BonusTypes)build.getPrereqBonusType(iJ)).getTextKeyWide()));
 			}
 		}
 	}

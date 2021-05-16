@@ -5393,7 +5393,7 @@ class CvMainInterface:
 				self.updateTooltip(screen, szTxt)
 
 			elif NAME == "BuildListBtn":
-				szTxt = TRNSLTR.getText("TXT_KEY_BUILD_LIST_SCREEN_HOVER", ())
+				szTxt = TRNSLTR.getText("TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER", ())
 				self.updateTooltip(screen, szTxt)
 
 			elif NAME == "MADScreenWidget":

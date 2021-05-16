@@ -20721,7 +20721,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla del mundo:maravillas del mundo] por ciudad[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_COST</Tag>
+		<Tag>TXT_KEY_BUILDHELP_COST</Tag>
 		<English>Cost: %d1_cost [ICON_GOLD]</English>
 		<French>Coût : %d1_cost [ICON_GOLD]</French>
 		<German>Kosten: %d1_cost [ICON_GOLD]</German>

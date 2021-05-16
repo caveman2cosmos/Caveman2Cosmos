@@ -3028,7 +3028,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 										// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ FEATURE BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
 										if (GC.getTechInfo(featureTechRequired).isDisable())
 										{
-											szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
+											szBuffer.append(gDLL->getText("TXT_KEY_BUILDHELP_PLOT_BLOCKED",
 												GC.getFeatureInfo(ePlotFeature).getTextKeyWide()));
 										}
 										else
@@ -3065,7 +3065,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 									// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ TERRAIN BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
 									if (GC.getTechInfo(terrainTechRequired).isDisable())
 									{
-										szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
+										szBuffer.append(gDLL->getText("TXT_KEY_BUILDHELP_PLOT_BLOCKED",
 											GC.getTerrainInfo(ePlotTerrain).getTextKeyWide()));
 									}
 									else
@@ -3430,7 +3430,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					if (GET_PLAYER(pHeadSelectedUnit->getOwner()).getBuildCost(pMissionPlot, eBuild) > 0)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_BUILD_COST", GET_PLAYER(pHeadSelectedUnit->getOwner()).getBuildCost(pMissionPlot, eBuild)));
+						szBuffer.append(gDLL->getText("TXT_KEY_BUILDHELP_COST", GET_PLAYER(pHeadSelectedUnit->getOwner()).getBuildCost(pMissionPlot, eBuild)));
 					}
 				}
 
