@@ -9,12 +9,10 @@ def beginDiplomacy(argsList):
 	commentArgsSize = argsList[1]
 	if commentArgsSize:
 		commentArgs = argsList[2:]
-		assert(len(commentArgs) == commentArgsSize, "comment args tuple size mismatch")
-		print "tuple size", len(commentArgs), ", commentArgsSize ", commentArgsSize
 	else:
 		commentArgs = []
 	diploClass = CvDiplomacy.CvDiplomacy()
-	diploClass.setAIComment(eComment, *commentArgs)	#unpack args tuple
+	diploClass.setAIComment(eComment, *commentArgs)
 
 def handleUserResponse(argsList):
 	"""First parameter of argsList is the comment they clicked on"""
