@@ -468,11 +468,12 @@ class Pedia:
 			else:
 				iBonusClassType = None
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
-			aListAI = [UnitAITypes.UNITAI_MISSIONARY, UnitAITypes.UNITAI_PROPHET, UnitAITypes.UNITAI_ARTIST, UnitAITypes.UNITAI_SCIENTIST]
+			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
+			iCost = CvUnitInfo.getProductionCost()
 			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42): # 42 = UNITAI_SUBDUED_ANIMAL
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[2]
-			elif (iDefaultUnitAIType in aListAI) or (CvUnitInfo.getSpecialUnitType() == GC.getInfoTypeForString("SPECIALUNIT_CAPTIVE")):
+			elif iCost <= 0 or (iDefaultUnitAIType in aListAI):
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[3]
 			elif CvUnitInfo.getMaxGlobalInstances() == 1: ## World Unit
@@ -767,13 +768,14 @@ class Pedia:
 			else:
 				iBonusClassType = None
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
-			aListAI = [UnitAITypes.UNITAI_MISSIONARY, UnitAITypes.UNITAI_PROPHET, UnitAITypes.UNITAI_ARTIST, UnitAITypes.UNITAI_SCIENTIST]
+			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
+			iCost = CvUnitInfo.getProductionCost()
 			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42): # 42 = UNITAI_SUBDUED_ANIMAL
 				if bAnimals:
 					bValid = True
 				else:
 					continue
-			elif (iDefaultUnitAIType in aListAI) or (CvUnitInfo.getSpecialUnitType() == GC.getInfoTypeForString("SPECIALUNIT_CAPTIVE")):
+			elif iCost <= 0 or (iDefaultUnitAIType in aListAI):
 				if bMisc:
 					bValid = True
 				else:

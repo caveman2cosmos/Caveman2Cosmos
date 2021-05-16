@@ -409,7 +409,6 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>1280</iCost>
 			<iBaseUpkeep>10</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iAsset>1</iAsset>
