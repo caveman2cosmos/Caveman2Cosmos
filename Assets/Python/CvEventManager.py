@@ -1133,11 +1133,11 @@ class CvEventManager:
 		if cdDefender.eOwner == cdDefender.eVisualOwner:
 			szDefenderName = GC.getPlayer(cdDefender.eOwner).getNameKey()
 		else:
-			szDefenderName = TRNSLTR.getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN", ())
+			szDefenderName = TRNSLTR.getText("TXT_KEY_TRAITHELP_PLAYER_UNKNOWN", ())
 		if cdAttacker.eOwner == cdAttacker.eVisualOwner:
 			szAttackerName = GC.getPlayer(cdAttacker.eOwner).getNameKey()
 		else:
-			szAttackerName = TRNSLTR.getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN", ())
+			szAttackerName = TRNSLTR.getText("TXT_KEY_TRAITHELP_PLAYER_UNKNOWN", ())
 
 		if not iIsAttacker:
 			combatMessage = TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_HIT", (szDefenderName, cdDefender.sUnitName, iDamage, cdDefender.iCurrHitPoints, cdDefender.iMaxHitPoints))

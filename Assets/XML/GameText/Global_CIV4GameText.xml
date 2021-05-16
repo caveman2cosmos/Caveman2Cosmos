@@ -29535,7 +29535,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Guerra con[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FREE_PROMOTIONS</Tag>
+		<Tag>TXT_KEY_TRAITHELP_FREE_PROMOTIONS</Tag>
 		<English>[NEWLINE][SPACE][SPACE][ICON_BULLET]Free Promotion (%s1)</English>
 		<French>[NEWLINE][SPACE][SPACE][ICON_BULLET]Promotion gratuite (%s1)</French>
 		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]Freie Beförderung (%s1)</German>
@@ -29543,7 +29543,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]Ascenso gratis (%s1)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_PLAYER_UNKNOWN</Tag>
+		<Tag>TXT_KEY_TRAITHELP_PLAYER_UNKNOWN</Tag>
 		<English>Unknown</English>
 		<French>Inconnu</French>
 		<German>Unbekannt</German>
