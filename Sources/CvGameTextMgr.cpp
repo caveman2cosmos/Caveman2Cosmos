@@ -815,13 +815,13 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			if (pUnit->getExtraCombatPercent() != 0)
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_STRENGTH_TEXT", pUnit->getExtraCombatPercent()));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STRENGTH", pUnit->getExtraCombatPercent()));
 			}
 
 			if (pUnit->stealthCombatModifierTotal() != 0 && GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_STEALTH_COMBAT_MODIFIER_TEXT", pUnit->stealthCombatModifierTotal()));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_COMBAT_MODIFIER", pUnit->stealthCombatModifierTotal()));
 			}
 
 			if (pUnit->attackCombatModifierTotal() != 0)
@@ -865,13 +865,13 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if (pUnit->cityAttackModifier() != 0)
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_CITY_ATTACK_TEXT", pUnit->cityAttackModifier()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CITY_ATTACK", pUnit->cityAttackModifier()));
 				}
 
 				if (pUnit->cityDefenseModifier() != 0)
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_CITY_DEFENSE_TEXT", pUnit->cityDefenseModifier()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CITY_DEFENSE", pUnit->cityDefenseModifier()));
 				}
 			}
 
@@ -1168,7 +1168,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_ARMOR_VERSUS_TEXT", pUnit->armorVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ARMOR_VERSUS", pUnit->armorVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
 				}
 			}
 
@@ -1201,7 +1201,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_PUNCTURE_VERSUS_TEXT", pUnit->punctureVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PUNCTURE_VERSUS", pUnit->punctureVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
 				}
 			}
 
@@ -1250,7 +1250,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_DODGE_VERSUS_TEXT", pUnit->dodgeVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DODGE_VERSUS", pUnit->dodgeVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
 				}
 			}
 
@@ -1284,7 +1284,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_PRECISION_VERSUS_TEXT", pUnit->precisionVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PRECISION_VERSUS", pUnit->precisionVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
 				}
 			}
 
@@ -1373,7 +1373,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_VERSUS_TEXT", pUnit->withdrawVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAW_VERSUS", pUnit->withdrawVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
 				}
 			}
 
@@ -1391,7 +1391,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT", pUnit->withdrawOnTerrainTotal((TerrainTypes)iI), CvWString(GC.getTerrainInfo((TerrainTypes) iI).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAW_ON", pUnit->withdrawOnTerrainTotal((TerrainTypes)iI), CvWString(GC.getTerrainInfo((TerrainTypes) iI).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
 				}
 			}
 
@@ -1409,7 +1409,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT", pUnit->withdrawOnFeatureTotal((FeatureTypes)iI), CvWString(GC.getFeatureInfo((FeatureTypes) iI).getType()).GetCString(), GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAW_ON", pUnit->withdrawOnFeatureTotal((FeatureTypes)iI), CvWString(GC.getFeatureInfo((FeatureTypes) iI).getType()).GetCString(), GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide()));
 				}
 			}
 /*
@@ -1449,7 +1449,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_PURSUIT_VERSUS_TEXT", pUnit->pursuitVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PURSUIT_VERSUS", pUnit->pursuitVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
 				}
 			}
 
@@ -1523,7 +1523,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_KNOCKBACK_VERSUS_TEXT", pUnit->knockbackVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_KNOCKBACK_VERSUS", pUnit->knockbackVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes) iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
 				}
 			}
 
@@ -1555,7 +1555,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			if (pUnit->isBlitz())
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_BLITZ_TEXT"));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BLITZ"));
 			}
 
 			//Stampede
@@ -1594,12 +1594,12 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if(pUnit->isSpy())
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_RADIATION_TEXT_SPY"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RADIATION_SPY"));
 				}
 				else
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_AMPHIB_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AMPHIB"));
 				}
 			}
 
@@ -1607,7 +1607,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			if (pUnit->isRiver())
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_RIVER_ATTACK_TEXT"));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RIVER_ATTACK"));
 			}
 
 			//First Strikes
@@ -1964,7 +1964,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_CRITICAL_VERSUS_TEXT", pUnit->criticalVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CRITICAL_VERSUS", pUnit->criticalVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
 				}
 			}
 				//Stun
@@ -1996,7 +1996,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_ROUND_STUN_VERSUS_TEXT", pUnit->roundStunVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ROUND_STUN_VERSUS", pUnit->roundStunVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
 				}
 			}
 			//Traps
@@ -2346,12 +2346,12 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if(pUnit->isSpy())
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_LOYALTY_TEXT_SPY"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LOYALTY_SPY"));
 				}
 				else
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_ALWAYS_HEAL_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ALWAYS_HEAL"));
 				}
 			}
 
@@ -2366,12 +2366,12 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if(pUnit->isSpy())
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_INSTIGATE_TEXT_SPY", pUnit->getExtraEnemyHeal()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSTIGATE_SPY", pUnit->getExtraEnemyHeal()));
 				}
 				else
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT", pUnit->getExtraEnemyHeal()) + gDLL->getText("TXT_KEY_PROMOTION_ENEMY_LANDS_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA_TEXT", pUnit->getExtraEnemyHeal()) + gDLL->getText("TXT_KEY_PROMOTION_ENEMY_LANDS"));
 				}
 			}
 
@@ -2380,12 +2380,12 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if(pUnit->isSpy())
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_INSTIGATE2_TEXT_SPY", pUnit->getExtraNeutralHeal()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSTIGATE2_SPY", pUnit->getExtraNeutralHeal()));
 				}
 				else
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT", pUnit->getExtraNeutralHeal()) + gDLL->getText("TXT_KEY_PROMOTION_NEUTRAL_LANDS_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA_TEXT", pUnit->getExtraNeutralHeal()) + gDLL->getText("TXT_KEY_PROMOTION_NEUTRAL_LANDS"));
 				}
 			}
 
@@ -2394,12 +2394,12 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if(pUnit->isSpy())
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_POISON_TEXT_SPY", pUnit->getExtraFriendlyHeal()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POISON_SPY", pUnit->getExtraFriendlyHeal()));
 				}
 				else
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT", pUnit->getExtraFriendlyHeal()) + gDLL->getText("TXT_KEY_PROMOTION_FRIENDLY_LANDS_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA_TEXT", pUnit->getExtraFriendlyHeal()) + gDLL->getText("TXT_KEY_PROMOTION_FRIENDLY_LANDS"));
 				}
 			}
 
@@ -2413,7 +2413,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			if (pUnit->getSameTileHeal() != 0)
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_SAME_TEXT", pUnit->getSameTileHeal()) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_SAME_TEXT", pUnit->getSameTileHeal()) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN"));
 			}
 
 			if (pUnit->hasHealUnitCombat())
@@ -2425,7 +2425,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					if (iVolume > 0)
 					{
 						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_SAME_TEXT", GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide(), iVolume) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
+						szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_SAME_TEXT", GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide(), iVolume) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN"));
 					}
 				}
 			}
@@ -2433,7 +2433,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			if (pUnit->getAdjacentTileHeal() != 0)
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_ADJACENT_TEXT", pUnit->getAdjacentTileHeal()) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_ADJACENT_TEXT", pUnit->getAdjacentTileHeal()) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN"));
 			}
 
 			if (pUnit->hasHealUnitCombat())
@@ -2445,7 +2445,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					if (iVolume > 0)
 					{
 						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_ADJACENT_TEXT", GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide(), iVolume) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
+						szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_ADJACENT_TEXT", GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide(), iVolume) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN"));
 					}
 				}
 			}
@@ -2472,7 +2472,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			if ((pUnit->getVictoryHeal() != 0) && (pUnit->getVictoryStackHeal() == 0))
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_VICTORY_HEAL_TEXT", pUnit->getVictoryHeal()));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VICTORY_HEAL", pUnit->getVictoryHeal()));
 			}
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
@@ -2551,7 +2551,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			if (pUnit->getSurvivorChance() != 0)
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_SURVIVOR_TEXT", pUnit->getSurvivorChance()));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SURVIVOR", pUnit->getSurvivorChance()));
 			}
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
@@ -2604,7 +2604,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			if (pUnit->getCollateralDamageProtection() > 0)
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_COLLATERAL_PROTECTION_TEXT", pUnit->getCollateralDamageProtection()));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COLLATERAL_PROTECTION", pUnit->getCollateralDamageProtection()));
 			}
 
 			//Map Interaction Mods
@@ -2797,38 +2797,38 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			if (pUnit->isPillageResearch())
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_RESEARCH_PILLAGE_TEXT"));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RESEARCH_PILLAGE"));
 			}
 
 			if (pUnit->isPillageEspionage())
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_ESPIONAGE_PILLAGE_TEXT"));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ESPIONAGE_PILLAGE"));
 			}
 
 			if (pUnit->isPillageMarauder())
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_MARAUDER_PILLAGE_TEXT"));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MARAUDER_PILLAGE"));
 			}
 
 			if (pUnit->isPillageOnMove())
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_MOVING_PILLAGE_TEXT"));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MOVING_PILLAGE"));
 			}
 
 			if (pUnit->isPillageOnVictory())
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_VICTORY_PILLAGE_TEXT"));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VICTORY_PILLAGE"));
 			}
 
 			//Celebrity
 			if (pUnit->getCelebrityHappy() != 0)
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_CELEBRITY_TEXT", pUnit->getCelebrityHappy()));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CELEBRITY", pUnit->getCelebrityHappy()));
 			}
 
 			//Worker details
@@ -2837,7 +2837,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if (pUnit->terrainWorkPercent((TerrainTypes)iI) > 0)
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", pUnit->terrainWorkPercent((TerrainTypes)iI), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK", pUnit->terrainWorkPercent((TerrainTypes)iI), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
 				}
 			}
 			for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
@@ -2845,7 +2845,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if (pUnit->featureWorkPercent((FeatureTypes)iI) > 0)
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", pUnit->featureWorkPercent((FeatureTypes)iI), GC.getFeatureInfo((FeatureTypes)iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK", pUnit->featureWorkPercent((FeatureTypes)iI), GC.getFeatureInfo((FeatureTypes)iI).getTextKeyWide()));
 				}
 			}
 			for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
@@ -2853,20 +2853,20 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if (pUnit->buildWorkPercent((BuildTypes)iI) > 0)
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", pUnit->buildWorkPercent((BuildTypes)iI), GC.getBuildInfo((BuildTypes)iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK", pUnit->buildWorkPercent((BuildTypes)iI), GC.getBuildInfo((BuildTypes)iI).getTextKeyWide()));
 				}
 			}
 
 			if (pUnit->hillsWorkModifier() > 0)
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_HILLS_WORK_TEXT", pUnit->hillsWorkModifier()));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_WORK", pUnit->hillsWorkModifier()));
 			}
 
 			if (pUnit->peaksWorkModifier() > 0)
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_PEAKS_WORK_TEXT", pUnit->peaksWorkModifier()));
+				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", pUnit->peaksWorkModifier()));
 			}
 
 			//Strength in Numbers offered support
@@ -3380,7 +3380,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if (pUnit->getExtraVisibilityRange() != 0)
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_VISIBILITY_TEXT", pUnit->getExtraVisibilityRange()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VISIBILITY", pUnit->getExtraVisibilityRange()));
 				}
 
 				//Movement
@@ -3405,25 +3405,25 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if (pUnit->isEnemyRoute())
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_ENEMY_ROADS_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ENEMY_ROADS"));
 				}
 
 				if (pUnit->isHillsDoubleMove())
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_HILLS_MOVE_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_MOVE"));
 				}
 
 				if (pUnit->isCanMovePeaks())
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_CAN_MOVE_PEAKS_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CAN_MOVE_PEAKS"));
 				}
 
 				if (pUnit->isCanLeadThroughPeaks())
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_CAN_LEAD_THROUGH_PEAKS_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CAN_LEAD_THROUGH_PEAKS"));
 				}
 
 				for (iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
@@ -3431,7 +3431,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					if (pUnit->isTerrainDoubleMove((TerrainTypes)iI))
 					{
 						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT", GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+						szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DOUBLE_MOVE", GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
 					}
 				}
 
@@ -3440,14 +3440,14 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					if (pUnit->isFeatureDoubleMove((FeatureTypes)iI))
 					{
 						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT", GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide()));
+						szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DOUBLE_MOVE", GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide()));
 					}
 				}
 
 				if (pUnit->getExtraMoveDiscount() != 0)
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_MOVE_DISCOUNT_TEXT", -(pUnit->getExtraMoveDiscount())));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MOVE_DISCOUNT", -(pUnit->getExtraMoveDiscount())));
 				}
 
 				szTempBuffer.clear();
@@ -3466,13 +3466,13 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if (pUnit->isDefensiveVictoryMove())
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_DV_MOVE_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DV_MOVE"));
 				}
 
 				if (pUnit->isOffensiveVictoryMove())
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_OV_MOVE_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_OV_MOVE"));
 				}
 
 				if (pUnit->canIgnoreZoneofControl())
@@ -3533,10 +3533,10 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				if (pUnit->isFreeDrop() && !pUnit->hasCannotMergeSplit())
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_FREE_DROP_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FREE_DROP"));
 
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_DROP_SIGHT_UNSEEN_TEXT"));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DROP_SIGHT_UNSEEN"));
 				}
 
 				//Experience
@@ -10503,12 +10503,12 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			if (GC.getTraitInfo(eTrait).getPromotionLine() != NO_PROMOTIONLINE)
 			{
 				szHelpString.append(NEWLINE);
-				szHelpString.append(gDLL->getText("TXT_KEY_PROMOTION_LINE_TEXT", GC.getPromotionLineInfo((PromotionLineTypes)GC.getTraitInfo(eTrait).getPromotionLine()).getDescription()));
+				szHelpString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE", GC.getPromotionLineInfo((PromotionLineTypes)GC.getTraitInfo(eTrait).getPromotionLine()).getDescription()));
 
 				if (GC.getTraitInfo(eTrait).getLinePriority() > 0)
 				{
 					szHelpString.append(NEWLINE);
-					szHelpString.append(gDLL->getText("TXT_KEY_PROMOTION_LINE_PRIORITY",GC.getTraitInfo(eTrait).getLinePriority()));
+					szHelpString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE_PRIORITY",GC.getTraitInfo(eTrait).getLinePriority()));
 				}
 			}
 			if (GC.getGame().getActivePlayer() != NO_PLAYER)
@@ -12815,7 +12815,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	//	if (kPromotion.getAIWeightbyUnitCombatType(iI).iModifier != 0)
 	//	{
 	//		szBuffer.append(pcNewline);
-	//		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TEMP_UCAIWEIGHT_TEXT", GC.getUnitCombatInfo(kPromotion.getAIWeightbyUnitCombatType(iI).eUnitCombat).getText(), kPromotion.getAIWeightbyUnitCombatType(iI).iModifier));
+	//		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TEMP_UCAIWEIGHT", GC.getUnitCombatInfo(kPromotion.getAIWeightbyUnitCombatType(iI).eUnitCombat).getText(), kPromotion.getAIWeightbyUnitCombatType(iI).iModifier));
 	//	}
 	//}
 	std::vector<PromotionTypes>	linePromotionsOwned;
@@ -12849,13 +12849,13 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_LINE_TEXT", GC.getPromotionLineInfo((PromotionLineTypes)kPromotion.getPromotionLine()).getDescription()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE", GC.getPromotionLineInfo((PromotionLineTypes)kPromotion.getPromotionLine()).getDescription()));
 	}
 
 	if (GC.getPromotionInfo(ePromotion).getLinePriority() > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_LINE_PRIORITY",kPromotion.getLinePriority()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LINE_PRIORITY",kPromotion.getLinePriority()));
 	}
 
 	//bools
@@ -13087,7 +13087,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (bIsBlitz)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BLITZ_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BLITZ"));
 	}
 	if (bIsAmphib)
 	{
@@ -13095,31 +13095,31 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_RADIATION_TEXT_SPY"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RADIATION_SPY"));
 		}
 		else
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AMPHIB_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AMPHIB"));
 		}
 		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AMPHIB_TEXT"));
+		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AMPHIB"));
 		//TSHEEP End
 	}
 	if (bIsRiver)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_RIVER_ATTACK_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RIVER_ATTACK"));
 	}
 	if (bIsEnemyRoute)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ENEMY_ROADS_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ENEMY_ROADS"));
 	}
 	if (bIsStatus)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STATUS_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STATUS"));
 	}
 	if (bIsNoSelfHeal)
 	{
@@ -13132,63 +13132,63 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_LOYALTY_TEXT_SPY"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LOYALTY_SPY"));
 		}
 		else
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ALWAYS_HEAL_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ALWAYS_HEAL"));
 		}
 		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ALWAYS_HEAL_TEXT"));
+		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ALWAYS_HEAL"));
 		//TSHEEP End
 	}
 	if (bIsHillsDoubleMove)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HILLS_MOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_MOVE"));
 	}
 	if (bIsCanMovePeaks)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CAN_MOVE_PEAKS_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CAN_MOVE_PEAKS"));
 	}
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
 	if (bIsCanLeadThroughPeaks)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CAN_LEAD_THROUGH_PEAKS_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CAN_LEAD_THROUGH_PEAKS"));
 	}
 	if (bIsAttackOnlyCitiesAdd)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ATTACK_ONLY_CITIES_ADD"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ATTACK_ONLY_CITIES_ADD"));
 	}
 	if (bIsAttackOnlyCitiesSubtract)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ATTACK_ONLY_CITIES_SUBTRACT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ATTACK_ONLY_CITIES_SUBTRACT"));
 	}
 	if (bIsIgnoreNoEntryLevelAdd)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_NO_ENTRY_LEVEL_ADD"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_NO_ENTRY_LEVEL_ADD"));
 	}
 	if (bIsIgnoreNoEntryLevelSubtract)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_NO_ENTRY_LEVEL_SUBTRACT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_NO_ENTRY_LEVEL_SUBTRACT"));
 	}
 	if (bIsIgnoreZoneofControlAdd)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_ZONE_OF_CONTROL_ADD"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_ZONE_OF_CONTROL_ADD"));
 	}
 	if (bIsIgnoreZoneofControlSubtract)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_ZONE_OF_CONTROL_SUBTRACT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_ZONE_OF_CONTROL_SUBTRACT"));
 	}
 	if (bIsZoneOfControl)
 	{
@@ -13198,141 +13198,141 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (bIsFliesToMoveAdd)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FLIES_TO_MOVE_ADD"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FLIES_TO_MOVE_ADD"));
 	}
 	if (bIsFliesToMoveSubtract)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FLIES_TO_MOVE_SUBTRACT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FLIES_TO_MOVE_SUBTRACT"));
 	}
 	if (bIsStampedeChange)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STAMPEDE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STAMPEDE"));
 	}
 	if (bIsRemoveStampede)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REMOVE_STAMPEDE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REMOVE_STAMPEDE"));
 	}
 	if (bIsOnslaughtChange)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ONSLAUGHT_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ONSLAUGHT"));
 	}
 	if (bIsParalyze)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PARALYZE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PARALYZE"));
 	}
 	if (bIsNoSpreadonBattle)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NO_SPREAD_ON_BATTLE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_SPREAD_ON_BATTLE"));
 	}
 	if (bIsNoSpreadUnitProximity)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NO_SPREAD_UNIT_PROXIMITY_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_SPREAD_UNIT_PROXIMITY"));
 	}
 	if (bIsNoSpreadUnittoCity)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NO_SPREAD_UNIT_TO_CITY_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_SPREAD_UNIT_TO_CITY"));
 	}
 	if (bIsNoSpreadCitytoUnit)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NO_SPREAD_CITY_TO_UNIT_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_SPREAD_CITY_TO_UNIT"));
 	}
 	if (bIsMakesDamageCold)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MAKES_DAMAGE_COLD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MAKES_DAMAGE_COLD"));
 	}
 	if (bIsMakesDamageNotCold)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MAKES_DAMAGE_NOT_COLD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MAKES_DAMAGE_NOT_COLD"));
 	}
 	if (bIsAddsColdImmunity)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ADDS_COLD_IMMUNITY_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ADDS_COLD_IMMUNITY"));
 	}
 	if (bIsRemovesColdImmunity)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REMOVES_COLD_IMMUNITY_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REMOVES_COLD_IMMUNITY"));
 	}
 	if (bIsCritical)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CRITICAL_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CRITICAL"));
 	}
 	if (bIsDefensiveVictoryMove)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DV_MOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DV_MOVE"));
 	}
 	if (bIsFreeDrop)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FREE_DROP_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FREE_DROP"));
 	}
 	if (bIsOffensiveVictoryMove)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_OV_MOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_OV_MOVE"));
 	}
 	if (bIsOneUp)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ONEUP_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ONEUP"));
 	}
 	if (bIsPillageEspionage)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ESPIONAGE_PILLAGE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ESPIONAGE_PILLAGE"));
 	}
 	if (bIsPillageMarauder)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MARAUDER_PILLAGE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MARAUDER_PILLAGE"));
 	}
 	if (bIsPillageOnMove)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MOVING_PILLAGE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MOVING_PILLAGE"));
 	}
 	if (bIsPillageOnVictory)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_VICTORY_PILLAGE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VICTORY_PILLAGE"));
 	}
 	if (bIsPillageResearch)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_RESEARCH_PILLAGE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RESEARCH_PILLAGE"));
 	}
 	if (bIsPrereqNormInvisible)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PREREQ_NORM_INVISIBLE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PREREQ_NORM_INVISIBLE"));
 	}
 
 	//independant bools
 	if (GC.getPromotionInfo(ePromotion).isEquipment())
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EQUIPMENT_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EQUIPMENT"));
 	}
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	if (GC.getPromotionInfo(ePromotion).isAffliction())
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICTION_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICTION"));
 	}
 #endif
 
@@ -13661,87 +13661,87 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (iGetControlPoints > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CONTROL_POINTS_TEXT", iGetControlPoints));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CONTROL_POINTS", iGetControlPoints));
 	}
 	if (iGetCommandRange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COMMAND_RANGE_TEXT", iGetCommandRange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COMMAND_RANGE", iGetCommandRange));
 	}
 	if (iExcileChange > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EXCILE_ADD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXCILE_ADD"));
 	}
 	if (iExcileChange < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EXCILE_REMOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXCILE_REMOVE"));
 	}
 	if (iPassageChange > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PASSAGE_ADD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PASSAGE_ADD"));
 	}
 	if (iPassageChange < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PASSAGE_REMOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PASSAGE_REMOVE"));
 	}
 	if (iNoNonOwnedCityEntryChange > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NONONOWNED_ADD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NONONOWNED_ADD"));
 	}
 	if (iNoNonOwnedCityEntryChange < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NONONOWNED_REMOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NONONOWNED_REMOVE"));
 	}
 	if (iBarbCoExistChange > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BARBCOEXIST_ADD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BARBCOEXIST_ADD"));
 	}
 	if (iBarbCoExistChange < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BARBCOEXIST_REMOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BARBCOEXIST_REMOVE"));
 	}
 	if (iBlendIntoCityChange > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BLENDCITY_ADD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BLENDCITY_ADD"));
 	}
 	if (iBlendIntoCityChange < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BLENDCITY_REMOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BLENDCITY_REMOVE"));
 	}
 	if (iUpgradeAnywhereChange > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UPGRADEANYWHERE_ADD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADEANYWHERE_ADD"));
 	}
 	if (iUpgradeAnywhereChange < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UPGRADEANYWHERE_REMOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADEANYWHERE_REMOVE"));
 	}
 	if (iMovesChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MOVE_TEXT", iMovesChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MOVE", iMovesChange));
 	}
 	if (iMoveDiscountChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MOVE_DISCOUNT_TEXT", -iMoveDiscountChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MOVE_DISCOUNT", -iMoveDiscountChange));
 	}
 	if (iAirRangeChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AIR_RANGE_TEXT", iAirRangeChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AIR_RANGE", iAirRangeChange));
 	}
 	if (iInterceptChange != 0)
 	{
@@ -13749,17 +13749,17 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INTERCEPT_TEXT_SPY", iInterceptChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT_SPY", iInterceptChange));
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INTERCEPT_TEXT_SPY_COUNTER", iInterceptChange * 5));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT_SPY_COUNTER", iInterceptChange * 5));
 		}
 		else
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INTERCEPT_TEXT", iInterceptChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT", iInterceptChange));
 		}
 		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INTERCEPT_TEXT", GC.getPromotionInfo(ePromotion).getInterceptChange()));
+		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT", GC.getPromotionInfo(ePromotion).getInterceptChange()));
 		//TSHEEP End
 	}
 	if (iEvasionChange != 0)
@@ -13768,15 +13768,15 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EVASION_TEXT_SPY", iEvasionChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EVASION_SPY", iEvasionChange));
 		}
 		else
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EVASION_TEXT", iEvasionChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EVASION", iEvasionChange));
 		}
 		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EVASION_TEXT", GC.getPromotionInfo(ePromotion).getEvasionChange()));
+		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EVASION", GC.getPromotionInfo(ePromotion).getEvasionChange()));
 		//TSHEEP End
 	}
 	if (iWithdrawalChange != 0)
@@ -13785,26 +13785,26 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ESCAPE_TEXT_SPY", iWithdrawalChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ESCAPE_SPY", iWithdrawalChange));
 		}
 		else
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAWAL_TEXT", iWithdrawalChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAWAL", iWithdrawalChange));
 		}
 		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAWAL_TEXT", GC.getPromotionInfo(ePromotion).getWithdrawalChange()));
+		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAWAL", GC.getPromotionInfo(ePromotion).getWithdrawalChange()));
 		//TSHEEP End
 	}
 	if (iAttackCombatModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ATTACK_MODIFIER_TEXT", iAttackCombatModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ATTACK_MODIFIER", iAttackCombatModifierChange));
 	}
 	if (iDefenseCombatModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEFENSE_MODIFIER_TEXT", iDefenseCombatModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEFENSE_MODIFIER", iDefenseCombatModifierChange));
 	}
 	if (iCombatModifierPerSizeMore != 0)
 	{
@@ -13814,32 +13814,32 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (iCombatModifierPerSizeLess != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_LESS", iCombatModifierPerSizeLess));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_SIZE_LESS", iCombatModifierPerSizeLess));
 	}
 	if (iCombatModifierPerVolumeMore != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_MORE", iCombatModifierPerVolumeMore));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_VOLUME_MORE", iCombatModifierPerVolumeMore));
 	}
 	if (iCombatModifierPerVolumeLess != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_LESS", iCombatModifierPerVolumeLess));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_VOLUME_LESS", iCombatModifierPerVolumeLess));
 	}
 	if (iPursuitChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PURSUIT_TEXT", iPursuitChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PURSUIT", iPursuitChange));
 	}
 	if (iEarlyWithdrawChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EARLY_WITHDRAW_TEXT", iEarlyWithdrawChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EARLY_WITHDRAW", iEarlyWithdrawChange));
 	}
 	if (iVSBarbsChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_VSBARBS_TEXT", iVSBarbsChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VSBARBS", iVSBarbsChange));
 	}
 	if (iReligiousCombatModifierChange != 0)
 	{
@@ -13849,17 +13849,17 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (iArmorChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ARMOR_TEXT", iArmorChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ARMOR", iArmorChange));
 	}
 	if (iPunctureChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PUNCTURE_TEXT", iPunctureChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PUNCTURE", iPunctureChange));
 	}
 	if (iDamageModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_MODIFIER_TEXT", iDamageModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_MODIFIER", iDamageModifierChange));
 	}
 	if (iUpkeepModifier != 0)
 	{
@@ -13874,264 +13874,264 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (iOverrunChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_OVERRUN_TEXT", iOverrunChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_OVERRUN", iOverrunChange));
 	}
 	if (iRepelChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REPEL_TEXT", iRepelChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REPEL", iRepelChange));
 	}
 	if (iFortRepelChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FORT_REPEL_TEXT", iFortRepelChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FORT_REPEL", iFortRepelChange));
 	}
 	if (iRepelRetriesChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REPEL_RETRIES_TEXT", iRepelRetriesChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REPEL_RETRIES", iRepelRetriesChange));
 	}
 	if (iUnyieldingChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNYIELDING_TEXT", iUnyieldingChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNYIELDING", iUnyieldingChange));
 	}
 	if (iKnockbackChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_KNOCKBACK_TEXT", iKnockbackChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_KNOCKBACK", iKnockbackChange));
 	}
 	if (iKnockbackRetriesChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_KNOCKBACK_RETRIES_TEXT", iKnockbackRetriesChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_KNOCKBACK_RETRIES", iKnockbackRetriesChange));
 	}
 	if (iRoundStunProbChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ROUND_STUN_PROB_TEXT", iRoundStunProbChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ROUND_STUN_PROB", iRoundStunProbChange));
 	}
 	if (iPoisonProbabilityModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POISON_PROB_TEXT", iPoisonProbabilityModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POISON_PROB", iPoisonProbabilityModifierChange));
 	}
 	if (iStrAdjperRndChange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_RAGE_TEXT", iStrAdjperRndChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RAGE", iStrAdjperRndChange));
 	}
 	else if (iStrAdjperRndChange < 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FATIGUE_TEXT", iStrAdjperRndChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FATIGUE", iStrAdjperRndChange));
 	}
 	if (iStrAdjperAttChange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_RAMPAGE_TEXT", iStrAdjperAttChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RAMPAGE", iStrAdjperAttChange));
 	}
 	else if (iStrAdjperAttChange < 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TIRES_TEXT", iStrAdjperAttChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TIRES", iStrAdjperAttChange));
 	}
 	if (iStrAdjperDefChange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DETERMINATION_TEXT", iStrAdjperDefChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DETERMINATION", iStrAdjperDefChange));
 	}
 	else if (iStrAdjperDefChange < 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEMORALIZATION_TEXT", iStrAdjperDefChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEMORALIZATION", iStrAdjperDefChange));
 	}
 	if (iWithdrawAdjperAttChange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REFLEXES_TEXT", iWithdrawAdjperAttChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REFLEXES", iWithdrawAdjperAttChange));
 	}
 	else if (iWithdrawAdjperAttChange < 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FRAYS_TEXT", iWithdrawAdjperAttChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FRAYS", iWithdrawAdjperAttChange));
 	}
 	if (iUnnerveChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNNERVE_TEXT", iUnnerveChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNNERVE", iUnnerveChange));
 	}
 	if (iEncloseChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ENCLOSE_TEXT", iEncloseChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ENCLOSE", iEncloseChange));
 	}
 	if (iLungeChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_LUNGE_TEXT", iLungeChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LUNGE", iLungeChange));
 	}
 	if (iDynamicDefenseChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DYNAMIC_DEFENSE_TEXT", iDynamicDefenseChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DYNAMIC_DEFENSE", iDynamicDefenseChange));
 	}
 	if (iStrengthChange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STRENGTHEN_TEXT", iStrengthChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STRENGTHEN", iStrengthChange));
 	}
 	else if (iStrengthChange < 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WEAKEN_TEXT", iStrengthChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WEAKEN", iStrengthChange));
 	}
 	if (iOvercomeProbability != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_OVERCOME_PROBABILITY_TEXT", iOvercomeProbability));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_OVERCOME_PROBABILITY", iOvercomeProbability));
 	}
 	if (iOvercomeAdjperTurn > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WEAROFF_TEXT", iOvercomeAdjperTurn));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WEAROFF", iOvercomeAdjperTurn));
 	}
 	else if (iOvercomeAdjperTurn < 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INTENSIFIES_TEXT", iOvercomeAdjperTurn));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTENSIFIES", iOvercomeAdjperTurn));
 	}
 	if (iFortitudeChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FORTITUDE_CHANGE_TEXT", iFortitudeChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FORTITUDE_CHANGE", iFortitudeChange));
 	}
 	if (iDamageperTurn != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_PER_TURN_TEXT", iDamageperTurn));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_PER_TURN", iDamageperTurn));
 	}
 	if (iStrAdjperTurn < 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STR_ADJ_PER_TURN_NEGATIVE_TEXT", iStrAdjperTurn));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STR_ADJ_PER_TURN_NEGATIVE", iStrAdjperTurn));
 	}
 	else if (iStrAdjperTurn > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STR_ADJ_PER_TURN_POSITIVE_TEXT", iStrAdjperTurn));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STR_ADJ_PER_TURN_POSITIVE", iStrAdjperTurn));
 	}
 	if (iWeakenperTurn > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WEAKEN_PER_TURN_POSITIVE_TEXT", iWeakenperTurn));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WEAKEN_PER_TURN_POSITIVE", iWeakenperTurn));
 	}
 	else if (iWeakenperTurn < 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WEAKEN_PER_TURN_NEGATIVE_TEXT", iWeakenperTurn));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WEAKEN_PER_TURN_NEGATIVE", iWeakenperTurn));
 	}
 	if (iCommunicability != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COMMUNICABILITY_TEXT", iCommunicability));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COMMUNICABILITY", iCommunicability));
 	}
 	if (iWorseningProbability != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PROBABILITY_OF_WORSENING_MODIFIER", iWorseningProbability));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PROBABILITY_OF_WORSENING_MODIFIER", iWorseningProbability));
 	}
 	if (iToleranceBuildup > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TOLERANCE_BUILDUP_TEXT", iToleranceBuildup));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TOLERANCE_BUILDUP", iToleranceBuildup));
 	}
 	else if (iToleranceBuildup < 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TOLERANCE_EROSION_TEXT", iToleranceBuildup));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TOLERANCE_EROSION", iToleranceBuildup));
 	}
 	if (iToleranceDecay > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TOLERANCE_DECAY_TEXT", iToleranceDecay));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TOLERANCE_DECAY", iToleranceDecay));
 	}
 	if (iToleranceDecay < 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TOLERANCE_DECAY_ADD_TEXT", iToleranceDecay));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TOLERANCE_DECAY_ADD", iToleranceDecay));
 	}
 #ifdef STRENGTH_IN_NUMBERS
 	if (iFrontSupportPercentChange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FRONT_SUPPORT_PERCENT_CHANGE_TEXT", iFrontSupportPercentChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FRONT_SUPPORT_PERCENT_CHANGE", iFrontSupportPercentChange));
 	}
 	if (iShortRangeSupportPercentChange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_SHORT_RANGE_SUPPORT_PERCENT_CHANGE_TEXT", iShortRangeSupportPercentChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SHORT_RANGE_SUPPORT_PERCENT_CHANGE", iShortRangeSupportPercentChange));
 	}
 	if (iMediumRangeSupportPercentChange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MEDIUM_RANGE_SUPPORT_PERCENT_CHANGE_TEXT", iMediumRangeSupportPercentChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MEDIUM_RANGE_SUPPORT_PERCENT_CHANGE", iMediumRangeSupportPercentChange));
 	}
 	if (iLongRangeSupportPercentChange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_LONG_RANGE_SUPPORT_PERCENT_CHANGE_TEXT", iLongRangeSupportPercentChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LONG_RANGE_SUPPORT_PERCENT_CHANGE", iLongRangeSupportPercentChange));
 	}
 	if (iFlankSupportPercentChange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FLANK_SUPPORT_PERCENT_CHANGE_TEXT", iFlankSupportPercentChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FLANK_SUPPORT_PERCENT_CHANGE", iFlankSupportPercentChange));
 	}
 #endif
 	if (iDodgeModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DODGE_MODIFIER_TEXT", iDodgeModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DODGE_MODIFIER", iDodgeModifierChange));
 	}
 	if (iPrecisionModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PRECISION_MODIFIER_TEXT", iPrecisionModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PRECISION_MODIFIER", iPrecisionModifierChange));
 	}
 	if (iPowerShotsChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POWER_SHOTS_TEXT", iPowerShotsChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOTS", iPowerShotsChange));
 	}
 	if (iPowerShotCombatModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POWER_SHOT_COMBAT_MODIFIER_TEXT", iPowerShotCombatModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOT_COMBAT_MODIFIER", iPowerShotCombatModifierChange));
 	}
 	if (iPowerShotPunctureModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POWER_SHOT_PUNCTURE_MODIFIER_TEXT", iPowerShotPunctureModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOT_PUNCTURE_MODIFIER", iPowerShotPunctureModifierChange));
 	}
 	if (iPowerShotPrecisionModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POWER_SHOT_PRECISION_MODIFIER_TEXT", iPowerShotPrecisionModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOT_PRECISION_MODIFIER", iPowerShotPrecisionModifierChange));
 	}
 	if (iPowerShotCriticalModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POWER_SHOT_CRITICAL_MODIFIER_TEXT", iPowerShotCriticalModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOT_CRITICAL_MODIFIER", iPowerShotCriticalModifierChange));
 	}
 	if (iCriticalModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CRITICAL_MODIFIER_TEXT", iCriticalModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CRITICAL_MODIFIER", iCriticalModifierChange));
 	}
 	if (iEnduranceChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ENDURANCE_TEXT", iEnduranceChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ENDURANCE", iEnduranceChange));
 	}
 	if (iInsidiousnessChange != 0)
 	{
@@ -14140,7 +14140,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		{
 			szTempBuffer.Format(L"%.1f", fValue/10);
 		}
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INSIDIOUSNESS_TEXT", szTempBuffer.GetCString()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSIDIOUSNESS", szTempBuffer.GetCString()));
 	}
 	if (iInvestigationChange != 0)
 	{
@@ -14149,68 +14149,68 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		{
 			szTempBuffer.Format(L"%.1f", fValue/10);
 		}
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INVESTIGATION_TEXT", szTempBuffer.GetCString()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INVESTIGATION", szTempBuffer.GetCString()));
 	}
 	if (iAssassinChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ASSASSIN_TEXT", iAssassinChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ASSASSIN", iAssassinChange));
 	}
 	bool bWithoutWarning = GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING);
 	if (iStealthStrikesChange != 0 && bWithoutWarning)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STEALTH_STRIKES_TEXT", iStealthStrikesChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_STRIKES", iStealthStrikesChange));
 	}
 	if (iStealthCombatModifierChange != 0 && bWithoutWarning)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STEALTH_COMBAT_MODIFIER_TEXT", iStealthCombatModifierChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_COMBAT_MODIFIER", iStealthCombatModifierChange));
 	}
 	if (iStealthDefenseChange != 0 && bWithoutWarning)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STEALTH_DEFENSE_CHANGE_TEXT", iStealthDefenseChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_DEFENSE_CHANGE", iStealthDefenseChange));
 	}
 	if (iDefenseOnlyChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEFENSE_ONLY_CHANGE_TEXT", iDefenseOnlyChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEFENSE_ONLY_CHANGE", iDefenseOnlyChange));
 	}
 	if (iNoInvisibilityChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NO_INVISIBILITY_CHANGE_TEXT", iNoInvisibilityChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_INVISIBILITY_CHANGE", iNoInvisibilityChange));
 	}
 	if (iTrapDamageMin != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TRAP_MIN_DAMAGE_TEXT", iTrapDamageMin));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_MIN_DAMAGE", iTrapDamageMin));
 	}
 	if (iTrapDamageMax != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TRAP_MAX_DAMAGE_TEXT", iTrapDamageMax));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_MAX_DAMAGE", iTrapDamageMax));
 	}
 	if (iTrapComplexity != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TRAP_COMPLEXITY_TEXT", iTrapComplexity));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_COMPLEXITY", iTrapComplexity));
 	}
 	if (iTrapNumTriggers != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TRAP_NUM_TRIGGERS_TEXT", iTrapNumTriggers));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_NUM_TRIGGERS", iTrapNumTriggers));
 	}
 	if (iTrapTriggerBeforeAttackChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TRAP_TRIGGER_BEFORE_ATTACK_TEXT", iTrapTriggerBeforeAttackChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_TRIGGER_BEFORE_ATTACK", iTrapTriggerBeforeAttackChange));
 	}
 	if (iVisibilityChange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_VISIBILITY_TEXT", iVisibilityChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VISIBILITY", iVisibilityChange));
 	}
 	if (iCaptureProbabilityModifierChange != 0)
 	{
@@ -14240,47 +14240,47 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (iMaxHPChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MAX_HP", iMaxHPChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MAX_HP", iMaxHPChange));
 	}
 	if (iStrengthModifier != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STRENGTH_MODIFIER", iStrengthModifier));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STRENGTH_MODIFIER", iStrengthModifier));
 	}
 	if (iAirCombatLimitChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AIR_LIMIT_CHANGE_TEXT", iAirCombatLimitChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AIR_LIMIT_CHANGE", iAirCombatLimitChange));
 	}
 	if (iCelebrityHappy != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CELEBRITY_TEXT", iCelebrityHappy));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CELEBRITY", iCelebrityHappy));
 	}
 	if (iCollateralDamageLimitChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COLLATERAL_LIMIT_CHANGE_TEXT", iCollateralDamageLimitChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COLLATERAL_LIMIT_CHANGE", iCollateralDamageLimitChange));
 	}
 	if (iCollateralDamageMaxUnitsChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MAX_UNITS_CHANGE_TEXT", iCollateralDamageMaxUnitsChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MAX_UNITS_CHANGE", iCollateralDamageMaxUnitsChange));
 	}
 	if (iCombatLimitChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COMBAT_LIMIT_TEXT", iCombatLimitChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COMBAT_LIMIT", iCombatLimitChange));
 	}
 	if (iExtraDropRange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EXTRA_DROP_RANGE_TEXT", iExtraDropRange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXTRA_DROP_RANGE", iExtraDropRange));
 	}
 	if (iSurvivorChance != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_SURVIVOR_TEXT", iSurvivorChance));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SURVIVOR", iSurvivorChance));
 	}
 	if (iSelfHealModifier != 0)
 	{
@@ -14290,74 +14290,74 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (iHealSupport != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEAL_SUPPORT_TEXT", iHealSupport));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEAL_SUPPORT", iHealSupport));
 	}
 	if (iVictoryAdjacentHeal != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_VICTORY_ADJACENT_TEXT", iVictoryAdjacentHeal));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VICTORY_ADJACENT", iVictoryAdjacentHeal));
 	}
 	if (iVictoryHeal != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_VICTORY_HEAL_TEXT", iVictoryHeal));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VICTORY_HEAL", iVictoryHeal));
 	}
 	if (iVictoryStackHeal != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_VICTORY_STACK_TEXT", iVictoryStackHeal));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VICTORY_STACK", iVictoryStackHeal));
 	}
 	if (iCargoChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CARGO_TEXT", iCargoChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CARGO", iCargoChange));
 	}
 	if (iCollateralDamageChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_TEXT", iCollateralDamageChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COLLATERAL_DAMAGE", iCollateralDamageChange));
 	}
 	if (iBombardRateChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BOMBARD_TEXT", iBombardRateChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BOMBARD", iBombardRateChange));
 	}
 	if (iDCMBombRangeChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_RANGE_TEXT", iDCMBombRangeChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_RANGE", iDCMBombRangeChange));
 	}
 	if (iDCMBombAccuracyChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_ACCURACY_TEXT", iDCMBombAccuracyChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_ACCURACY", iDCMBombAccuracyChange));
 	}
 	if (iRBombardDamageChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_TEXT", iRBombardDamageChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE", iRBombardDamageChange));
 	}
 	if (iRBombardDamageLimitChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_LIMIT_TEXT", iRBombardDamageLimitChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE_LIMIT", iRBombardDamageLimitChange));
 	}
 	if (iRBombardDamageMaxUnitsChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_MAX_UNITS_TEXT", iRBombardDamageMaxUnitsChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE_MAX_UNITS", iRBombardDamageMaxUnitsChange));
 	}
 	if (iFirstStrikesChange != 0)
 	{
 		if (iFirstStrikesChange == 1)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FIRST_STRIKE_TEXT", iFirstStrikesChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FIRST_STRIKE", iFirstStrikesChange));
 		}
 		else
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FIRST_STRIKES_TEXT", iFirstStrikesChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FIRST_STRIKES", iFirstStrikesChange));
 		}
 	}
 	if (iChanceFirstStrikesChange != 0)
@@ -14365,12 +14365,12 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if (iChanceFirstStrikesChange == 1)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FIRST_STRIKE_CHANCE_TEXT", iChanceFirstStrikesChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FIRST_STRIKE_CHANCE", iChanceFirstStrikesChange));
 		}
 		else
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FIRST_STRIKES_CHANCE_TEXT", iChanceFirstStrikesChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FIRST_STRIKES_CHANCE", iChanceFirstStrikesChange));
 		}
 	}
 	if (iEnemyHealChange != 0)
@@ -14379,15 +14379,15 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INSTIGATE_TEXT_SPY", iEnemyHealChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSTIGATE_SPY", iEnemyHealChange));
 		}
 		else
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT", iEnemyHealChange) + gDLL->getText("TXT_KEY_PROMOTION_ENEMY_LANDS_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA_TEXT", iEnemyHealChange) + gDLL->getText("TXT_KEY_PROMOTION_ENEMY_LANDS"));
 		}
 		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT", GC.getPromotionInfo(ePromotion).getEnemyHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_ENEMY_LANDS_TEXT"));
+		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA_TEXT", GC.getPromotionInfo(ePromotion).getEnemyHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_ENEMY_LANDS"));
 		//TSHEEP End
 	}
 	if (iNeutralHealChange != 0)
@@ -14396,15 +14396,15 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INSTIGATE2_TEXT_SPY", iNeutralHealChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSTIGATE2_SPY", iNeutralHealChange));
 		}
 		else
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT", iNeutralHealChange) + gDLL->getText("TXT_KEY_PROMOTION_NEUTRAL_LANDS_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA_TEXT", iNeutralHealChange) + gDLL->getText("TXT_KEY_PROMOTION_NEUTRAL_LANDS"));
 		}
 		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT", GC.getPromotionInfo(ePromotion).getNeutralHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_NEUTRAL_LANDS_TEXT"));
+		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA_TEXT", GC.getPromotionInfo(ePromotion).getNeutralHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_NEUTRAL_LANDS"));
 		//TSHEEP End
 	}
 	if (iFriendlyHealChange != 0)
@@ -14413,42 +14413,42 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POISON_TEXT_SPY", iFriendlyHealChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POISON_SPY", iFriendlyHealChange));
 		}
 		else
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT", iFriendlyHealChange) + gDLL->getText("TXT_KEY_PROMOTION_FRIENDLY_LANDS_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA_TEXT", iFriendlyHealChange) + gDLL->getText("TXT_KEY_PROMOTION_FRIENDLY_LANDS"));
 		}
 		//szBuffer.append(pcNewline);
-		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT", GC.getPromotionInfo(ePromotion).getFriendlyHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_FRIENDLY_LANDS_TEXT"));
+		//szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA_TEXT", GC.getPromotionInfo(ePromotion).getFriendlyHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_FRIENDLY_LANDS"));
 		//TSHEEP End
 	}
 	if (iSameTileHealChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_SAME_TEXT", iSameTileHealChange) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_SAME_TEXT", iSameTileHealChange) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN"));
 	}
 	if (iAdjacentTileHealChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_ADJACENT_TEXT", iAdjacentTileHealChange) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_ADJACENT_TEXT", iAdjacentTileHealChange) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN"));
 	}
 	if (iCombatPercent != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STRENGTH_TEXT", iCombatPercent));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STRENGTH", iCombatPercent));
 	}
 	if (iCityAttackPercent != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CITY_ATTACK_TEXT", iCityAttackPercent));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CITY_ATTACK", iCityAttackPercent));
 	}
 	if (iCityDefensePercent != 0)
 	{
 		bDefWarning = true;
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CITY_DEFENSE_TEXT", iCityDefensePercent));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CITY_DEFENSE", iCityDefensePercent));
 	}
 	if (iHillsAttackPercent != 0)
 	{
@@ -14458,22 +14458,22 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (iHillsDefensePercent != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HILLS_DEFENSE_TEXT", iHillsDefensePercent));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_DEFENSE", iHillsDefensePercent));
 	}
 	if (iWorkRate != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_RATE_TEXT", iWorkRate));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK_RATE", iWorkRate));
 	}
 	if (iHillsWorkPercent != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HILLS_WORK_TEXT", iHillsWorkPercent));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_WORK", iHillsWorkPercent));
 	}
 	if (iPeaksWorkPercent != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PEAKS_WORK_TEXT", iPeaksWorkPercent));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", iPeaksWorkPercent));
 	}
 	if (iRevoltProtection != 0)
 	{
@@ -14483,12 +14483,12 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (iCollateralDamageProtection != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COLLATERAL_PROTECTION_TEXT", iCollateralDamageProtection));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COLLATERAL_PROTECTION", iCollateralDamageProtection));
 	}
 	if (iPillageChange != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PILLAGE_CHANGE_TEXT", iPillageChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PILLAGE_CHANGE", iPillageChange));
 	}
 	if (iUpgradeDiscount != 0)
 	{
@@ -14496,66 +14496,66 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if(GC.getPromotionInfo(ePromotion).getSound()[5] == 'P')
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_TEXT_SPY", iUpgradeDiscount));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT_SPY", iUpgradeDiscount));
 		}
 		else if (100 == iUpgradeDiscount)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_FREE_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT_FREE"));
 		}
 		else
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_TEXT", iUpgradeDiscount));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT", iUpgradeDiscount));
 		}
 		/*if (100 == GC.getPromotionInfo(ePromotion).getUpgradeDiscount())
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_FREE_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT_FREE"));
 		}
 		else
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_TEXT", GC.getPromotionInfo(ePromotion).getUpgradeDiscount()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT", GC.getPromotionInfo(ePromotion).getUpgradeDiscount()));
 		}*/
 		//TSHEEP End
 	}
 	if (iExperiencePercent != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FASTER_EXPERIENCE_TEXT", iExperiencePercent));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FASTER_EXPERIENCE", iExperiencePercent));
 	}
 	if (iKamikazePercent != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_KAMIKAZE_TEXT", iKamikazePercent));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_KAMIKAZE", iKamikazePercent));
 	}
 	if (iHiddenNationality > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HIDDEN_NATIONALITY_ADDS_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HIDDEN_NATIONALITY_ADDS"));
 	}
 	else if (iHiddenNationality < 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HIDDEN_NATIONALITY_REMOVES_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HIDDEN_NATIONALITY_REMOVES"));
 	}
 	if ( iIsAnimalIgnoresBordersChange != 0 && !GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ANIMAL_IGNORES_BORDERS_TEXT", iIsAnimalIgnoresBordersChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ANIMAL_IGNORES_BORDERS", iIsAnimalIgnoresBordersChange));
 	}
 
 	if ( iNoDefensiveBonusChange > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_POSITIVE_TEXT", iNoDefensiveBonusChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_DEFENSIVE_BONUS_CHANGE_POSITIVE", iNoDefensiveBonusChange));
 	}
 
 	if ( iNoDefensiveBonusChange < 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE_TEXT", iNoDefensiveBonusChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE", iNoDefensiveBonusChange));
 	}
 
 
@@ -14581,17 +14581,17 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (eDomainCargoChange != NO_DOMAIN)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DOMAIN_CARGO_CHANGE_TEXT", GC.getDomainInfo(eDomainCargoChange).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DOMAIN_CARGO_CHANGE", GC.getDomainInfo(eDomainCargoChange).getTextKeyWide()));
 	}
 	if (bIsImmuneToFirstStrikes)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IMMUNE_FIRST_STRIKES_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IMMUNE_FIRST_STRIKES"));
 	}
 	if (eSpecialCargoChange != NO_SPECIALUNIT)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_SPECIAL_CARGO_CHANGE_TEXT", GC.getSpecialUnitInfo(eSpecialCargoChange).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SPECIAL_CARGO_CHANGE", GC.getSpecialUnitInfo(eSpecialCargoChange).getTextKeyWide()));
 	}
 	if (eNotSpecialCargoChange != NO_SPECIALUNIT)
 	{
@@ -14624,7 +14624,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			if (abIsIgnoreTerrainDamage[iI])
 			{
 				szBuffer.append(pcNewline);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_TERRAIN_DAMAGE", GC.getTerrainInfo((TerrainTypes)iI).getDescription()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_TERRAIN_DAMAGE", GC.getTerrainInfo((TerrainTypes)iI).getDescription()));
 			}
 		}
 	}
@@ -14653,31 +14653,31 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if (iImmediate[iI] > 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_IMMEDIATE_TEXT", iProbability[iI], GC.getPromotionLineInfo(aAfflictions[iI]).getDescription()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_IMMEDIATE", iProbability[iI], GC.getPromotionLineInfo(aAfflictions[iI]).getDescription()));
 		}
 		else if (iImmediate[iI] < 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_NOT_IMMEDIATE_TEXT", iProbability[iI], GC.getPromotionLineInfo(aAfflictions[iI]).getDescription()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_NOT_IMMEDIATE", iProbability[iI], GC.getPromotionLineInfo(aAfflictions[iI]).getDescription()));
 		}
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_TEXT", iProbability[iI], GC.getPromotionLineInfo(aAfflictions[iI]).getDescription()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK", iProbability[iI], GC.getPromotionLineInfo(aAfflictions[iI]).getDescription()));
 		}
 		if (iMelee[iI] > 0 && iDistance[iI] > 0)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_BOTH_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_BOTH"));
 		}
 		else
 		{
 			if (iMelee[iI] > 0)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_MELEE_TEXT"));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_MELEE"));
 			}
 			if (iDistance[iI] > 0)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_DISTANCE_TEXT"));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_DISTANCE"));
 			}
 		}
 	}
@@ -14702,7 +14702,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		for( iI = 0; iI < (int)aAfflictions.size(); iI++ )
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CURE_AFFLICTION_TEXT", GC.getPromotionLineInfo(aAfflictions[iI]).getDescription()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CURE_AFFLICTION", GC.getPromotionLineInfo(aAfflictions[iI]).getDescription()));
 		}
 
 		std::vector<int> afflictionModifier;
@@ -14720,7 +14720,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		for( iI = 0; iI < (int)aAfflictions.size(); iI++ )
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICTION_FORTITUDE_CHANGE_MODIFIER_TEXT", afflictionModifier[iI], GC.getPromotionLineInfo(aAfflictions[iI]).getDescription()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICTION_FORTITUDE_CHANGE_MODIFIER", afflictionModifier[iI], GC.getPromotionLineInfo(aAfflictions[iI]).getDescription()));
 		}
 	}
 #endif // OUTBREAKS_AND_AFFLICTIONS
@@ -14738,7 +14738,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	for( iI = 0; iI < (int)aUnitCombats.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_SUB_COMBAT_TEXT", GC.getUnitCombatInfo(aUnitCombats[iI]).getDescription()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SUB_COMBAT", GC.getUnitCombatInfo(aUnitCombats[iI]).getDescription()));
 	}
 
 	aUnitCombats.clear();
@@ -14754,7 +14754,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	for( iI = 0; iI < (int)aUnitCombats.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REMOVES_COMBAT_TEXT", GC.getUnitCombatInfo(aUnitCombats[iI]).getDescription()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REMOVES_COMBAT", GC.getUnitCombatInfo(aUnitCombats[iI]).getDescription()));
 	}
 
 
@@ -14771,7 +14771,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	for( iI = 0; iI < (int)aTrapSetWithPromotionType.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TRAP_PROMOTION_SET_TEXT", GC.getPromotionInfo(aTrapSetWithPromotionType[iI]).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_PROMOTION_SET", GC.getPromotionInfo(aTrapSetWithPromotionType[iI]).getTextKeyWide()));
 	}
 
 	std::vector<UnitCombatTypes> aTrapImmunityUnitCombatType;
@@ -14787,7 +14787,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	for( iI = 0; iI < (int)aTrapImmunityUnitCombatType.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TRAP_IMMUNITY_TEXT", GC.getUnitCombatInfo(aTrapImmunityUnitCombatType[iI]).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_IMMUNITY", GC.getUnitCombatInfo(aTrapImmunityUnitCombatType[iI]).getTextKeyWide()));
 	}
 
 	std::vector<UnitCombatTypes> aTargetUnitCombatType;
@@ -14803,7 +14803,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	for( iI = 0; iI < (int)aTargetUnitCombatType.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TARGET_UNITCOMBAT_TEXT", GC.getUnitCombatInfo(aTargetUnitCombatType[iI]).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TARGET_UNITCOMBAT", GC.getUnitCombatInfo(aTargetUnitCombatType[iI]).getTextKeyWide()));
 	}
 
 	std::vector<UnitCombatTypes> eUnitCombat;
@@ -14848,12 +14848,12 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if (iHeal[iI] > 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_SAME_TEXT", GC.getUnitCombatInfo(eUnitCombat[iI]).getTextKeyWide(), iHeal[iI]) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_SAME_TEXT", GC.getUnitCombatInfo(eUnitCombat[iI]).getTextKeyWide(), iHeal[iI]) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN"));
 		}
 		if (iAdjacentHeal[iI] > 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_ADJACENT_TEXT", GC.getUnitCombatInfo(eUnitCombat[iI]).getTextKeyWide(), iAdjacentHeal[iI]) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_ADJACENT_TEXT", GC.getUnitCombatInfo(eUnitCombat[iI]).getTextKeyWide(), iAdjacentHeal[iI]) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN"));
 		}
 	}
 
@@ -14875,7 +14875,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	for( iI = 0; iI < (int)aAddsBuildTypes.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ADDS_BUILD_TYPE_TEXT", GC.getBuildInfo(aAddsBuildTypes[iI]).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ADDS_BUILD_TYPE", GC.getBuildInfo(aAddsBuildTypes[iI]).getTextKeyWide()));
 	}
 
 	std::vector<InvisibleTypes> aNegatesInvisibilityType;
@@ -14907,7 +14907,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	for( iI = 0; iI < (int)aPrereqTerrainType.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TERRAIN_PREREQ_TEXT", GC.getTerrainInfo(aPrereqTerrainType[iI]).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TERRAIN_PREREQ", GC.getTerrainInfo(aPrereqTerrainType[iI]).getTextKeyWide()));
 	}
 
 	std::vector<FeatureTypes> aPrereqFeatureType;
@@ -14923,7 +14923,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	for( iI = 0; iI < (int)aPrereqFeatureType.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FEATURE_PREREQ_TEXT", GC.getFeatureInfo(aPrereqFeatureType[iI]).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FEATURE_PREREQ", GC.getFeatureInfo(aPrereqFeatureType[iI]).getTextKeyWide()));
 	}
 
 	std::vector<ImprovementTypes> aPrereqImprovementType;
@@ -14939,7 +14939,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	for( iI = 0; iI < (int)aPrereqImprovementType.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IMPROVEMENT_PREREQ_TEXT", GC.getImprovementInfo(aPrereqImprovementType[iI]).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IMPROVEMENT_PREREQ", GC.getImprovementInfo(aPrereqImprovementType[iI]).getTextKeyWide()));
 	}
 
 	for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
@@ -14947,7 +14947,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		for (iI = 0; iI < GC.getPromotionInfo(linePromotionsOwned[iJ]).getNumPrereqLocalBuildingTypes(); ++iI)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BUILDING_PREREQ_TEXT", GC.getBuildingInfo((BuildingTypes)GC.getPromotionInfo(linePromotionsOwned[iJ]).getPrereqLocalBuildingType(iI)).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BUILDING_PREREQ", GC.getBuildingInfo((BuildingTypes)GC.getPromotionInfo(linePromotionsOwned[iJ]).getPrereqLocalBuildingType(iI)).getTextKeyWide()));
 		}
 	}
 
@@ -14964,7 +14964,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	for( iI = 0; iI < (int)aPrereqPlotBonusType.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BONUS_PREREQ_TEXT", GC.getBonusInfo(aPrereqPlotBonusType[iI]).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BONUS_PREREQ", GC.getBonusInfo(aPrereqPlotBonusType[iI]).getTextKeyWide()));
 	}
 
 	//TerrainInfos
@@ -14990,28 +14990,28 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if (bIsTerrainDoubleMove)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT", GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DOUBLE_MOVE", GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
 		}
 		if (iTerrainAttackPercent != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ATTACK_TEXT", iTerrainAttackPercent, GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ATTACK", iTerrainAttackPercent, GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
 		}
 		if (iTerrainDefensePercent != 0)
 		{
 			bDefWarning = true;
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEFENSE_TEXT", iTerrainDefensePercent, GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEFENSE", iTerrainDefensePercent, GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
 		}
 		if (iTerrainWorkPercent != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", iTerrainWorkPercent, GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK", iTerrainWorkPercent, GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
 		}
 		if (iWithdrawOnTerrain != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT", iWithdrawOnTerrain, CvWString(GC.getTerrainInfo((TerrainTypes)iI).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAW_ON", iWithdrawOnTerrain, CvWString(GC.getTerrainInfo((TerrainTypes)iI).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
 		}
 		bIsTerrainDoubleMove = false;
 		iTerrainAttackPercent = 0;
@@ -15043,28 +15043,28 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if (bIsFeatureDoubleMove)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT", GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DOUBLE_MOVE", GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide()));
 		}
 		if (iFeatureAttackPercent != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ATTACK_TEXT", iFeatureAttackPercent, GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ATTACK", iFeatureAttackPercent, GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide()));
 		}
 		if (iFeatureDefensePercent != 0)
 		{
 			bDefWarning = true;
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEFENSE_TEXT", iFeatureDefensePercent, GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEFENSE", iFeatureDefensePercent, GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide()));
 		}
 		if (iFeatureWorkPercent != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", iFeatureWorkPercent, GC.getFeatureInfo((FeatureTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK", iFeatureWorkPercent, GC.getFeatureInfo((FeatureTypes)iI).getTextKeyWide()));
 		}
 		if (iWithdrawOnFeature != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT", iWithdrawOnFeature, CvWString(GC.getFeatureInfo((FeatureTypes)iI).getType()).GetCString(), GC.getFeatureInfo((FeatureTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAW_ON", iWithdrawOnFeature, CvWString(GC.getFeatureInfo((FeatureTypes)iI).getType()).GetCString(), GC.getFeatureInfo((FeatureTypes)iI).getTextKeyWide()));
 		}
 		bIsFeatureDoubleMove = false;
 		iFeatureAttackPercent = 0;
@@ -15084,7 +15084,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if (iBuildWorkPercent != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", iBuildWorkPercent, GC.getBuildInfo((BuildTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK", iBuildWorkPercent, GC.getBuildInfo((BuildTypes)iI).getTextKeyWide()));
 		}
 		iBuildWorkPercent = 0;
 	}
@@ -15100,7 +15100,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if (iDomainModifierPercent != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_VERSUS_TEXT", iDomainModifierPercent, CvWString(GC.getDomainInfo((DomainTypes)iI).getType()).GetCString(), GC.getDomainInfo((DomainTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VERSUS", iDomainModifierPercent, CvWString(GC.getDomainInfo((DomainTypes)iI).getType()).GetCString(), GC.getDomainInfo((DomainTypes)iI).getTextKeyWide()));
 		}
 	}
 
@@ -15154,107 +15154,107 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if (iUnitCombatContractChanceChange > 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNIT_COMBAT_COMMUNICABILITY_CHANGE_POSITIVE_TEXT", iUnitCombatContractChanceChange, GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_COMMUNICABILITY_CHANGE_POSITIVE", iUnitCombatContractChanceChange, GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription()));
 		}
 		else if (iUnitCombatContractChanceChange < 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNIT_COMBAT_COMMUNICABILITY_CHANGE_NEGATIVE_TEXT", iUnitCombatContractChanceChange, GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_COMMUNICABILITY_CHANGE_NEGATIVE", iUnitCombatContractChanceChange, GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription()));
 		}
 		if (iUnitCombatOvercomeChange > 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNIT_COMBAT_OVERCOME_CHANGE_POSITIVE_TEXT", iUnitCombatOvercomeChange, GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_OVERCOME_CHANGE_POSITIVE", iUnitCombatOvercomeChange, GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription()));
 		}
 		else if (iUnitCombatOvercomeChange < 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNIT_COMBAT_OVERCOME_CHANGE_NEGATIVE_TEXT", iUnitCombatOvercomeChange, GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_OVERCOME_CHANGE_NEGATIVE", iUnitCombatOvercomeChange, GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription()));
 		}
 		if (iFlankingStrengthbyUnitCombatTypeChange > 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FLANKING_STRENGTH_BY_UNIT_COMBAT_POSITIVE_TEXT", iFlankingStrengthbyUnitCombatTypeChange, GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FLANKING_STRENGTH_BY_UNIT_COMBAT_POSITIVE", iFlankingStrengthbyUnitCombatTypeChange, GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription()));
 		}
 		else if (iFlankingStrengthbyUnitCombatTypeChange < 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FLANKING_STRENGTH_BY_UNIT_COMBAT_NEGATIVE_TEXT", iFlankingStrengthbyUnitCombatTypeChange, GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FLANKING_STRENGTH_BY_UNIT_COMBAT_NEGATIVE", iFlankingStrengthbyUnitCombatTypeChange, GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription()));
 		}
 		if (iDisable != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TRAP_DISABLE_TEXT", iDisable, GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_DISABLE", iDisable, GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iAvoid != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TRAP_AVOID_TEXT", iAvoid, GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_AVOID", iAvoid, GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iTrigger != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TRAP_TRIGGER_TEXT", iTrigger, GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_TRIGGER", iTrigger, GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iAidChange != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AID_CHANGE_TEXT", iAidChange, GC.getPropertyInfo((PropertyTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AID_CHANGE", iAidChange, GC.getPropertyInfo((PropertyTypes)iI).getTextKeyWide()));
 		}
 		if (iUnitCombatModifierPercent != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_VERSUS_TEXT", iUnitCombatModifierPercent, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VERSUS", iUnitCombatModifierPercent, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iWithdrawVS != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_VERSUS_TEXT", iWithdrawVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAW_VERSUS", iWithdrawVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iPursuitVS != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PURSUIT_VERSUS_TEXT", iPursuitVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PURSUIT_VERSUS", iPursuitVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iRepelVS != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REPEL_VERSUS_TEXT", iRepelVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REPEL_VERSUS", iRepelVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iKnockbackVS != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_KNOCKBACK_VERSUS_TEXT", iKnockbackVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_KNOCKBACK_VERSUS", iKnockbackVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iPunctureVS != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PUNCTURE_VERSUS_TEXT", iPunctureVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PUNCTURE_VERSUS", iPunctureVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iArmorVS != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ARMOR_VERSUS_TEXT", iArmorVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ARMOR_VERSUS", iArmorVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iDodgeVS != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DODGE_VERSUS_TEXT", iDodgeVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DODGE_VERSUS", iDodgeVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iPrecisionVS != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PRECISION_VERSUS_TEXT", iPrecisionVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PRECISION_VERSUS", iPrecisionVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iCriticalVS != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CRITICAL_VERSUS_TEXT", iCriticalVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CRITICAL_VERSUS", iCriticalVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		if (iRoundStunVS != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ROUND_STUN_VERSUS_TEXT", iRoundStunVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ROUND_STUN_VERSUS", iRoundStunVS, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide()));
 		}
 		iDisable = 0;
 		iAvoid = 0;
@@ -15291,12 +15291,12 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 				if (iTechContractChanceChange > 0)
 				{
 					szBuffer.append(pcNewline);
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TECH_COMMUNICABILITY_CHANGE_POSITIVE_TEXT", iTechContractChanceChange, GC.getTechInfo((TechTypes)iI).getDescription()));
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TECH_COMMUNICABILITY_CHANGE_POSITIVE", iTechContractChanceChange, GC.getTechInfo((TechTypes)iI).getDescription()));
 				}
 				else if (iTechContractChanceChange < 0)
 				{
 					szBuffer.append(pcNewline);
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TECH_COMMUNICABILITY_CHANGE_NEGATIVE_TEXT", iTechContractChanceChange, GC.getTechInfo((TechTypes)iI).getDescription()));
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TECH_COMMUNICABILITY_CHANGE_NEGATIVE", iTechContractChanceChange, GC.getTechInfo((TechTypes)iI).getDescription()));
 				}
 				iTechContractChanceChange = 0;
 			}
@@ -15310,12 +15310,12 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 				if (iTechOvercomeChange > 0)
 				{
 					szBuffer.append(pcNewline);
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TECH_OVERCOME_CHANGE_POSITIVE_TEXT", iTechOvercomeChange, GC.getTechInfo((TechTypes)iI).getDescription()));
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TECH_OVERCOME_CHANGE_POSITIVE", iTechOvercomeChange, GC.getTechInfo((TechTypes)iI).getDescription()));
 				}
 				else if (iTechOvercomeChange < 0)
 				{
 					szBuffer.append(pcNewline);
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TECH_OVERCOME_CHANGE_NEGATIVE_TEXT", iTechOvercomeChange, GC.getTechInfo((TechTypes)iI).getDescription()));
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TECH_OVERCOME_CHANGE_NEGATIVE", iTechOvercomeChange, GC.getTechInfo((TechTypes)iI).getDescription()));
 				}
 				iTechOvercomeChange = 0;
 			}
@@ -15529,7 +15529,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if (iExtraChancePromotion != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_OUTCOME_TEXT", iExtraChancePromotion, CvWString(kOutcome.getType()).GetCString(), kOutcome.getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_OUTCOME", iExtraChancePromotion, CvWString(kOutcome.getType()).GetCString(), kOutcome.getTextKeyWide()));
 		}
 	}
 
@@ -15542,13 +15542,13 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (GC.getPromotionInfo(ePromotion).getLevelPrereq() > 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_LEVEL_PREREQ_TEXT", GC.getPromotionInfo(ePromotion).getLevelPrereq()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LEVEL_PREREQ", GC.getPromotionInfo(ePromotion).getLevelPrereq()));
 	}
 
 	if (bDefWarning)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEF_WARN_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEF_WARN"));
 	}
 
 	if (GC.getPromotionInfo(ePromotion).getHelp()[0] != '\0')
@@ -18579,27 +18579,27 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			if (kUnit.getDCMBombRange() > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_RANGE_TEXT", kUnit.getDCMBombRange()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_RANGE", kUnit.getDCMBombRange()));
 			}
 			if (kUnit.getDCMBombAccuracy() > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_ACCURACY_TEXT", kUnit.getDCMBombAccuracy()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_ACCURACY", kUnit.getDCMBombAccuracy()));
 			}
 			if (kUnit.getRBombardDamage() > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_TEXT", kUnit.getRBombardDamage()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE", kUnit.getRBombardDamage()));
 			}
 			if (kUnit.getRBombardDamageLimit() > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_LIMIT_TEXT", kUnit.getRBombardDamageLimit()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE_LIMIT", kUnit.getRBombardDamageLimit()));
 			}
 			if (kUnit.getRBombardDamageMaxUnits() > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_MAX_UNITS_TEXT", kUnit.getRBombardDamageMaxUnits()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE_MAX_UNITS", kUnit.getRBombardDamageMaxUnits()));
 			}
 		}
 
@@ -19305,7 +19305,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			if (kUnit.getTerrainWorkRateModifierType(iI) != 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", kUnit.getTerrainWorkRateModifierType(iI), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK", kUnit.getTerrainWorkRateModifierType(iI), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
 			}
 		}
 		for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
@@ -19313,7 +19313,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			if (kUnit.getFeatureWorkRateModifierType(iI) != 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", kUnit.getFeatureWorkRateModifierType(iI), GC.getFeatureInfo((FeatureTypes)iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK", kUnit.getFeatureWorkRateModifierType(iI), GC.getFeatureInfo((FeatureTypes)iI).getTextKeyWide()));
 			}
 		}
 		for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
@@ -19321,20 +19321,20 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			if (kUnit.getBuildWorkRateModifierType(iI) != 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", kUnit.getBuildWorkRateModifierType(iI), GC.getBuildInfo((BuildTypes)iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK", kUnit.getBuildWorkRateModifierType(iI), GC.getBuildInfo((BuildTypes)iI).getTextKeyWide()));
 			}
 		}
 
 		if (kUnit.getHillsWorkModifier() != 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HILLS_WORK_TEXT", kUnit.getHillsWorkModifier()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_WORK", kUnit.getHillsWorkModifier()));
 		}
 
 		if (kUnit.getPeaksWorkModifier() != 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PEAKS_WORK_TEXT", kUnit.getPeaksWorkModifier()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", kUnit.getPeaksWorkModifier()));
 		}
 
 #ifdef STRENGTH_IN_NUMBERS
@@ -20028,7 +20028,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		//Leader
 		if (NO_PROMOTION != kUnit.getLeaderPromotion())
 		{
-			szBuffer.append(CvWString::format(L"%s%c%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_KEY_PROMOTION_WHEN_LEADING").GetCString()));
+			szBuffer.append(CvWString::format(L"%s%c%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_KEY_PROMOTIONHELP_WHEN_LEADING").GetCString()));
 			parsePromotionHelp(szBuffer, (PromotionTypes)kUnit.getLeaderPromotion(), L"\n   ");
 		}
 
@@ -20282,7 +20282,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		if (kUnit.getNumHealSupport() != 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEAL_SUPPORT_TEXT", kUnit.getNumHealSupport()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEAL_SUPPORT", kUnit.getNumHealSupport()));
 		}
 
 		//Heal Unit Combat
@@ -20294,12 +20294,12 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			if (iHeal > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_SAME_TEXT", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide(), iHeal) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_SAME_TEXT", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide(), iHeal) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN"));
 			}
 			if (iAdjHeal > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_ADJACENT_TEXT", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide(), iAdjHeal) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_ADJACENT_TEXT", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide(), iAdjHeal) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN"));
 			}
 		}
 
@@ -20342,7 +20342,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			{
 				szTempBuffer.Format(L"%.1f", fValue/10);
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INSIDIOUSNESS_TEXT", szTempBuffer.GetCString()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSIDIOUSNESS", szTempBuffer.GetCString()));
 		}
 
 		if (kUnit.getInvestigation() != 0)
@@ -20352,20 +20352,20 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			{
 				szTempBuffer.Format(L"%.1f", fValue/10);
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INVESTIGATION_TEXT", szTempBuffer.GetCString()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INVESTIGATION", szTempBuffer.GetCString()));
 		}
 
 		bool bWithoutWarning = game.isOption(GAMEOPTION_WITHOUT_WARNING);
 		if (kUnit.getStealthStrikes() != 0 && bWithoutWarning)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STEALTH_STRIKES_TEXT", kUnit.getStealthStrikes()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_STRIKES", kUnit.getStealthStrikes()));
 		}
 
 		if (kUnit.getStealthCombatModifier() != 0 && bWithoutWarning)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STEALTH_COMBAT_MODIFIER_TEXT", kUnit.getStealthCombatModifier()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_COMBAT_MODIFIER", kUnit.getStealthCombatModifier()));
 		}
 
 		if (kUnit.isStealthDefense() && bWithoutWarning)
@@ -28301,56 +28301,56 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 	if (info.getExcileChange() > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EXCILE_ADD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXCILE_ADD"));
 	}
 	if (info.getExcileChange() < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EXCILE_REMOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXCILE_REMOVE"));
 	}
 
 	if (info.getPassageChange() > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PASSAGE_ADD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PASSAGE_ADD"));
 	}
 	if (info.getPassageChange() < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PASSAGE_REMOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PASSAGE_REMOVE"));
 	}
 
 	if (info.getNoNonOwnedCityEntryChange() > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NONONOWNED_ADD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NONONOWNED_ADD"));
 	}
 	if (info.getNoNonOwnedCityEntryChange() < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NONONOWNED_REMOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NONONOWNED_REMOVE"));
 	}
 
 	if (info.getBarbCoExistChange() > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BARBCOEXIST_ADD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BARBCOEXIST_ADD"));
 	}
 	if (info.getBarbCoExistChange() < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BARBCOEXIST_REMOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BARBCOEXIST_REMOVE"));
 	}
 
 	if (info.getBlendIntoCityChange() > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BLENDCITY_ADD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BLENDCITY_ADD"));
 	}
 	if (info.getBlendIntoCityChange() < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BLENDCITY_REMOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BLENDCITY_REMOVE"));
 	}
 
 	// integers
@@ -28606,7 +28606,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 					bFirstDisplay = false;
 				}
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AID_CHANGE_TEXT", info.getAidChange(iI), GC.getPropertyInfo((PropertyTypes)iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AID_CHANGE", info.getAidChange(iI), GC.getPropertyInfo((PropertyTypes)iI).getTextKeyWide()));
 			}
 		}
 	}
@@ -28621,7 +28621,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MOVE_TEXT", info.getMovesChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MOVE", info.getMovesChange()));
 	}
 
 	if (info.getMoveDiscountChange() != 0)
@@ -28633,7 +28633,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MOVE_DISCOUNT_TEXT", info.getMoveDiscountChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MOVE_DISCOUNT", info.getMoveDiscountChange()));
 	}
 
 	if (info.getAirRangeChange() != 0)
@@ -28645,7 +28645,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AIR_RANGE_TEXT", info.getAirRangeChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AIR_RANGE", info.getAirRangeChange()));
 	}
 
 	if (info.getInterceptChange() != 0)
@@ -28659,14 +28659,14 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if(info.isSpy())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INTERCEPT_TEXT_SPY", info.getInterceptChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT_SPY", info.getInterceptChange()));
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INTERCEPT_TEXT_SPY_COUNTER", info.getInterceptChange() * 5));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT_SPY_COUNTER", info.getInterceptChange() * 5));
 		}
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INTERCEPT_TEXT", info.getInterceptChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT", info.getInterceptChange()));
 		}
 	}
 
@@ -28681,12 +28681,12 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if(info.isSpy())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EVASION_TEXT_SPY", info.getEvasionChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EVASION_SPY", info.getEvasionChange()));
 		}
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EVASION_TEXT", info.getEvasionChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EVASION", info.getEvasionChange()));
 		}
 	}
 
@@ -28701,12 +28701,12 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if(info.isSpy())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ESCAPE_TEXT_SPY", info.getWithdrawalChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ESCAPE_SPY", info.getWithdrawalChange()));
 		}
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAWAL_TEXT", info.getWithdrawalChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAWAL", info.getWithdrawalChange()));
 		}
 	}
 
@@ -28719,7 +28719,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CARGO_TEXT", info.getCargoChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CARGO", info.getCargoChange()));
 	}
 
 	if (info.getSMCargoChange() != 0)
@@ -28731,7 +28731,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_SM_CARGO_TEXT", info.getSMCargoChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SM_CARGO", info.getSMCargoChange()));
 	}
 
 	if (info.getCollateralDamageChange() != 0)
@@ -28743,7 +28743,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_TEXT", info.getCollateralDamageChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COLLATERAL_DAMAGE", info.getCollateralDamageChange()));
 	}
 
 
@@ -28759,7 +28759,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_RANGE_TEXT", info.getDCMBombRangeBase()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_RANGE", info.getDCMBombRangeBase()));
 		}
 		if (info.getDCMBombAccuracyBase() != 0)
 		{
@@ -28770,7 +28770,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_ACCURACY_TEXT", info.getDCMBombAccuracyBase()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_ACCURACY", info.getDCMBombAccuracyBase()));
 		}
 		if (info.getRBombardDamageBase() != 0)
 		{
@@ -28781,7 +28781,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_TEXT", info.getRBombardDamageBase()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE", info.getRBombardDamageBase()));
 		}
 		if (info.getRBombardDamageLimitBase() != 0)
 		{
@@ -28792,7 +28792,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_LIMIT_TEXT", info.getRBombardDamageLimitBase()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE_LIMIT", info.getRBombardDamageLimitBase()));
 		}
 		if (info.getRBombardDamageMaxUnitsBase() != 0)
 		{
@@ -28803,7 +28803,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_MAX_UNITS_TEXT", info.getRBombardDamageMaxUnitsBase()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE_MAX_UNITS", info.getRBombardDamageMaxUnitsBase()));
 		}
 		if (info.isRBombardDirect() != 0)
 		{
@@ -28814,7 +28814,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_RANGED_BOMBARD_DIRECT_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RANGED_BOMBARD_DIRECT"));
 		}
 	}
 
@@ -28827,7 +28827,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BOMBARD_TEXT", info.getBombardRateChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BOMBARD", info.getBombardRateChange()));
 	}
 
 	if (info.getFirstStrikesChange() != 0)
@@ -28839,7 +28839,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FIRST_STRIKE_TEXT", info.getFirstStrikesChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FIRST_STRIKE", info.getFirstStrikesChange()));
 	}
 
 	if (info.getChanceFirstStrikesChange() != 0)
@@ -28851,7 +28851,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FIRST_STRIKE_CHANCE_TEXT", info.getChanceFirstStrikesChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FIRST_STRIKE_CHANCE", info.getChanceFirstStrikesChange()));
 	}
 
 	if (info.isNoSelfHeal())
@@ -28876,12 +28876,12 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if(info.isSpy())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INSTIGATE_TEXT_SPY", info.getEnemyHealChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSTIGATE_SPY", info.getEnemyHealChange()));
 		}
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT", info.getEnemyHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_ENEMY_LANDS_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA_TEXT", info.getEnemyHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_ENEMY_LANDS"));
 		}
 	}
 
@@ -28896,12 +28896,12 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if(info.isSpy())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INSTIGATE2_TEXT_SPY", info.getNeutralHealChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSTIGATE2_SPY", info.getNeutralHealChange()));
 		}
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT", info.getNeutralHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_NEUTRAL_LANDS_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA_TEXT", info.getNeutralHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_NEUTRAL_LANDS"));
 		}
 	}
 
@@ -28916,19 +28916,19 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if(info.isSpy())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POISON_TEXT_SPY", info.getFriendlyHealChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POISON_SPY", info.getFriendlyHealChange()));
 		}
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT", info.getFriendlyHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_FRIENDLY_LANDS_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_EXTRA_TEXT", info.getFriendlyHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_FRIENDLY_LANDS"));
 		}
 	}
 
 	if (info.getNumHealSupport() != 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEAL_SUPPORT_TEXT", info.getNumHealSupport()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEAL_SUPPORT", info.getNumHealSupport()));
 	}
 
 	if (info.getSameTileHealChange() != 0)
@@ -28940,7 +28940,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_SAME_TEXT", info.getSameTileHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_SAME_TEXT", info.getSameTileHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN"));
 	}
 
 	if (info.getAdjacentTileHealChange() != 0)
@@ -28952,7 +28952,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HEALS_ADJACENT_TEXT", info.getAdjacentTileHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_ADJACENT_TEXT", info.getAdjacentTileHealChange()) + gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_TURN"));
 	}
 
 	if (info.getCombatPercent() != 0)
@@ -28964,7 +28964,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STRENGTH_TEXT", info.getCombatPercent()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STRENGTH", info.getCombatPercent()));
 	}
 
 	if (info.getCombatModifierPerSizeMoreChange() != 0)
@@ -28988,7 +28988,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_LESS", info.getCombatModifierPerSizeLessChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_SIZE_LESS", info.getCombatModifierPerSizeLessChange()));
 	}
 
 	if (info.getCombatModifierPerVolumeMoreChange() != 0)
@@ -29000,7 +29000,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_MORE", info.getCombatModifierPerVolumeMoreChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_VOLUME_MORE", info.getCombatModifierPerVolumeMoreChange()));
 	}
 
 	if (info.getCombatModifierPerVolumeLessChange() != 0)
@@ -29012,7 +29012,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_LESS", info.getCombatModifierPerVolumeLessChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_VOLUME_LESS", info.getCombatModifierPerVolumeLessChange()));
 	}
 
 	if (info.getCityAttackPercent() != 0)
@@ -29024,7 +29024,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CITY_ATTACK_TEXT", info.getCityAttackPercent()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CITY_ATTACK", info.getCityAttackPercent()));
 	}
 
 	if (info.getCityDefensePercent() != 0)
@@ -29036,7 +29036,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CITY_DEFENSE_TEXT", info.getCityDefensePercent()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CITY_DEFENSE", info.getCityDefensePercent()));
 	}
 
 	if (info.getHillsAttackPercent() != 0)
@@ -29060,7 +29060,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HILLS_DEFENSE_TEXT", info.getHillsDefensePercent()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_DEFENSE", info.getHillsDefensePercent()));
 	}
 
 	if (info.getHillsWorkPercent() != 0)
@@ -29072,7 +29072,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HILLS_WORK_TEXT", info.getHillsWorkPercent()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_WORK", info.getHillsWorkPercent()));
 	}
 
 	if (info.getWorkRatePercent() != 0)
@@ -29084,7 +29084,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_RATE_TEXT", info.getWorkRatePercent()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK_RATE", info.getWorkRatePercent()));
 	}
 
 	if (info.getRevoltProtection() != 0)
@@ -29108,7 +29108,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COLLATERAL_PROTECTION_TEXT", info.getCollateralDamageProtection()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COLLATERAL_PROTECTION", info.getCollateralDamageProtection()));
 	}
 
 	if (info.getPillageChange() != 0)
@@ -29120,7 +29120,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PILLAGE_CHANGE_TEXT", info.getPillageChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PILLAGE_CHANGE", info.getPillageChange()));
 	}
 
 	if (info.getUpgradeDiscount() != 0)
@@ -29134,17 +29134,17 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if(info.isSpy())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_TEXT_SPY", info.getUpgradeDiscount()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT_SPY", info.getUpgradeDiscount()));
 		}
 		else if (100 == info.getUpgradeDiscount())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_FREE_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT_FREE"));
 		}
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_TEXT", info.getUpgradeDiscount()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT", info.getUpgradeDiscount()));
 		}
 	}
 
@@ -29157,7 +29157,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FASTER_EXPERIENCE_TEXT", info.getExperiencePercent()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FASTER_EXPERIENCE", info.getExperiencePercent()));
 	}
 
 	if (info.getKamikazePercent() != 0)
@@ -29181,7 +29181,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AIR_LIMIT_CHANGE_TEXT", info.getAirCombatLimitChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AIR_LIMIT_CHANGE", info.getAirCombatLimitChange()));
 	}
 
 	if (info.getCelebrityHappy() != 0)
@@ -29193,7 +29193,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CELEBRITY_TEXT", info.getCelebrityHappy()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CELEBRITY", info.getCelebrityHappy()));
 	}
 
 	if (info.getCollateralDamageLimitChange() != 0)
@@ -29205,7 +29205,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COLLATERAL_LIMIT_CHANGE_TEXT", info.getCollateralDamageLimitChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COLLATERAL_LIMIT_CHANGE", info.getCollateralDamageLimitChange()));
 	}
 
 	if (info.getCollateralDamageMaxUnitsChange() != 0)
@@ -29217,7 +29217,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MAX_UNITS_CHANGE_TEXT", info.getCollateralDamageMaxUnitsChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MAX_UNITS_CHANGE", info.getCollateralDamageMaxUnitsChange()));
 	}
 
 	if (info.getCombatLimitChange() != 0)
@@ -29229,7 +29229,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_COMBAT_LIMIT_TEXT", info.getCombatLimitChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COMBAT_LIMIT", info.getCombatLimitChange()));
 	}
 
 	if (info.getExtraDropRange() != 0)
@@ -29241,7 +29241,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EXTRA_DROP_RANGE_TEXT", info.getExtraDropRange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXTRA_DROP_RANGE", info.getExtraDropRange()));
 	}
 
 	if (info.getSurvivorChance() != 0)
@@ -29253,7 +29253,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_SURVIVOR_TEXT", info.getSurvivorChance()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SURVIVOR", info.getSurvivorChance()));
 	}
 
 	if (info.getVictoryAdjacentHeal())
@@ -29277,7 +29277,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_VICTORY_HEAL_TEXT", info.getVictoryHeal()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VICTORY_HEAL", info.getVictoryHeal()));
 	}
 
 	if (info.getVictoryStackHeal() != 0 && info.getVictoryAdjacentHeal() == 0)
@@ -29301,7 +29301,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ATTACK_MODIFIER_TEXT", info.getAttackCombatModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ATTACK_MODIFIER", info.getAttackCombatModifierChange()));
 	}
 
 	if (info.getDefenseCombatModifierChange() != 0)
@@ -29313,7 +29313,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEFENSE_MODIFIER_TEXT", info.getDefenseCombatModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEFENSE_MODIFIER", info.getDefenseCombatModifierChange()));
 	}
 
 	if (info.getPursuitChange() != 0)
@@ -29325,7 +29325,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PURSUIT_TEXT", info.getPursuitChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PURSUIT", info.getPursuitChange()));
 	}
 
 	if (info.getEarlyWithdrawChange() != 0)
@@ -29337,7 +29337,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EARLY_WITHDRAW_TEXT", info.getEarlyWithdrawChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EARLY_WITHDRAW", info.getEarlyWithdrawChange()));
 	}
 
 	if (info.getVSBarbsChange() != 0)
@@ -29349,7 +29349,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_VSBARBS_TEXT", info.getVSBarbsChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VSBARBS", info.getVSBarbsChange()));
 	}
 
 	if (info.getReligiousCombatModifierChange() != 0)
@@ -29373,7 +29373,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ARMOR_TEXT", info.getArmorChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ARMOR", info.getArmorChange()));
 	}
 
 	if (info.getPunctureChange() != 0)
@@ -29385,7 +29385,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PUNCTURE_TEXT", info.getPunctureChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PUNCTURE", info.getPunctureChange()));
 	}
 
 	if (info.getDamageModifierChange() != 0)
@@ -29397,7 +29397,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DAMAGE_MODIFIER_TEXT", info.getDamageModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_MODIFIER", info.getDamageModifierChange()));
 	}
 
 	if (info.getUpkeepModifier() != 0)
@@ -29433,7 +29433,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_OVERRUN_TEXT", info.getOverrunChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_OVERRUN", info.getOverrunChange()));
 	}
 
 	if (info.getRepelChange() != 0)
@@ -29445,7 +29445,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REPEL_TEXT", info.getRepelChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REPEL", info.getRepelChange()));
 	}
 
 	if (info.getFortRepelChange() != 0)
@@ -29457,7 +29457,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FORT_REPEL_TEXT", info.getFortRepelChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FORT_REPEL", info.getFortRepelChange()));
 	}
 
 	if (info.getRepelRetriesChange() != 0)
@@ -29469,7 +29469,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REPEL_RETRIES_TEXT", info.getRepelRetriesChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REPEL_RETRIES", info.getRepelRetriesChange()));
 	}
 
 	if (info.getUnyieldingChange() != 0)
@@ -29481,7 +29481,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNYIELDING_TEXT", info.getUnyieldingChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNYIELDING", info.getUnyieldingChange()));
 	}
 
 	if (info.getKnockbackChange() != 0)
@@ -29493,7 +29493,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_KNOCKBACK_TEXT", info.getKnockbackChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_KNOCKBACK", info.getKnockbackChange()));
 	}
 
 	if (info.getKnockbackRetriesChange() != 0)
@@ -29505,7 +29505,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_KNOCKBACK_RETRIES_TEXT", info.getKnockbackRetriesChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_KNOCKBACK_RETRIES", info.getKnockbackRetriesChange()));
 	}
 #ifdef BATTLEWORN
 	if (info.getStrAdjperAttChange() > 0)
@@ -29517,7 +29517,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_RAMPAGE_TEXT", info.getStrAdjperAttChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RAMPAGE", info.getStrAdjperAttChange()));
 	}
 
 	if (info.getStrAdjperAttChange() < 0)
@@ -29529,7 +29529,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TIRES_TEXT", info.getStrAdjperAttChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TIRES", info.getStrAdjperAttChange()));
 	}
 
 	if (info.getStrAdjperDefChange() > 0)
@@ -29541,7 +29541,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DETERMINATION_TEXT", info.getStrAdjperDefChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DETERMINATION", info.getStrAdjperDefChange()));
 	}
 
 	if (info.getStrAdjperDefChange() < 0)
@@ -29553,7 +29553,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEMORALIZATION_TEXT", info.getStrAdjperDefChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEMORALIZATION", info.getStrAdjperDefChange()));
 	}
 
 	if (info.getWithdrawAdjperAttChange() > 0)
@@ -29565,7 +29565,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REFLEXES_TEXT", info.getWithdrawAdjperAttChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REFLEXES", info.getWithdrawAdjperAttChange()));
 	}
 
 	if (info.getWithdrawAdjperAttChange() < 0)
@@ -29577,7 +29577,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FRAYS_TEXT", info.getWithdrawAdjperAttChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FRAYS", info.getWithdrawAdjperAttChange()));
 	}
 #endif // BATTLEWORN
 
@@ -29590,7 +29590,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNNERVE_TEXT", info.getUnnerveChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNNERVE", info.getUnnerveChange()));
 	}
 
 	if (info.getEncloseChange() != 0)
@@ -29602,7 +29602,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ENCLOSE_TEXT", info.getEncloseChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ENCLOSE", info.getEncloseChange()));
 	}
 
 	if (info.getLungeChange() != 0)
@@ -29614,7 +29614,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_LUNGE_TEXT", info.getLungeChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LUNGE", info.getLungeChange()));
 	}
 
 	if (info.getDynamicDefenseChange() != 0)
@@ -29626,7 +29626,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DYNAMIC_DEFENSE_TEXT", info.getDynamicDefenseChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DYNAMIC_DEFENSE", info.getDynamicDefenseChange()));
 	}
 
 	int iStrengthChange = info.getStrengthChange();
@@ -29640,7 +29640,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STRENGTHEN_TEXT", iStrengthChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STRENGTHEN", iStrengthChange));
 	}
 
 	if (iStrengthChange < 0)
@@ -29652,7 +29652,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WEAKEN_TEXT", iStrengthChange));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WEAKEN", iStrengthChange));
 	}
 
 	if (info.getFortitudeChange() != 0)
@@ -29664,7 +29664,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FORTITUDE_CHANGE_TEXT", info.getFortitudeChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FORTITUDE_CHANGE", info.getFortitudeChange()));
 	}
 
 #ifdef STRENGTH_IN_NUMBERS
@@ -29679,7 +29679,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FRONT_SUPPORT_PERCENT_CHANGE_TEXT", info.getFrontSupportPercentChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FRONT_SUPPORT_PERCENT_CHANGE", info.getFrontSupportPercentChange()));
 		}
 
 		if (info.getShortRangeSupportPercentChange() != 0)
@@ -29691,7 +29691,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_SHORT_RANGE_SUPPORT_PERCENT_CHANGE_TEXT", info.getShortRangeSupportPercentChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_SHORT_RANGE_SUPPORT_PERCENT_CHANGE", info.getShortRangeSupportPercentChange()));
 		}
 
 		if (info.getMediumRangeSupportPercentChange() != 0)
@@ -29703,7 +29703,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MEDIUM_RANGE_SUPPORT_PERCENT_CHANGE_TEXT", info.getMediumRangeSupportPercentChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MEDIUM_RANGE_SUPPORT_PERCENT_CHANGE", info.getMediumRangeSupportPercentChange()));
 		}
 
 		if (info.getLongRangeSupportPercentChange() != 0)
@@ -29715,7 +29715,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_LONG_RANGE_SUPPORT_PERCENT_CHANGE_TEXT", info.getLongRangeSupportPercentChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LONG_RANGE_SUPPORT_PERCENT_CHANGE", info.getLongRangeSupportPercentChange()));
 		}
 
 		if (info.getFlankSupportPercentChange() != 0)
@@ -29727,7 +29727,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FLANK_SUPPORT_PERCENT_CHANGE_TEXT", info.getFlankSupportPercentChange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FLANK_SUPPORT_PERCENT_CHANGE", info.getFlankSupportPercentChange()));
 		}
 	}
 #endif
@@ -29740,7 +29740,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DODGE_MODIFIER_TEXT", info.getDodgeModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DODGE_MODIFIER", info.getDodgeModifierChange()));
 	}
 
 	if (info.getPrecisionModifierChange() != 0)
@@ -29752,7 +29752,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PRECISION_MODIFIER_TEXT", info.getPrecisionModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PRECISION_MODIFIER", info.getPrecisionModifierChange()));
 	}
 
 	if (info.getPowerShotsChange() != 0)
@@ -29764,7 +29764,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POWER_SHOTS_TEXT", info.getPowerShotsChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOTS", info.getPowerShotsChange()));
 	}
 
 	if (info.getPowerShotCombatModifierChange() != 0)
@@ -29776,7 +29776,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POWER_SHOT_COMBAT_MODIFIER_TEXT", info.getPowerShotCombatModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOT_COMBAT_MODIFIER", info.getPowerShotCombatModifierChange()));
 	}
 
 	if (info.getPowerShotPunctureModifierChange() != 0)
@@ -29788,7 +29788,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POWER_SHOT_PUNCTURE_MODIFIER_TEXT", info.getPowerShotPunctureModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOT_PUNCTURE_MODIFIER", info.getPowerShotPunctureModifierChange()));
 	}
 
 	if (info.getPowerShotPrecisionModifierChange() != 0)
@@ -29800,7 +29800,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POWER_SHOT_PRECISION_MODIFIER_TEXT", info.getPowerShotPrecisionModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOT_PRECISION_MODIFIER", info.getPowerShotPrecisionModifierChange()));
 	}
 
 	if (info.getPowerShotCriticalModifierChange() != 0)
@@ -29812,7 +29812,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POWER_SHOT_CRITICAL_MODIFIER_TEXT", info.getPowerShotCriticalModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POWER_SHOT_CRITICAL_MODIFIER", info.getPowerShotCriticalModifierChange()));
 	}
 
 	if (info.getCriticalModifierChange() != 0)
@@ -29824,7 +29824,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CRITICAL_MODIFIER_TEXT", info.getCriticalModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CRITICAL_MODIFIER", info.getCriticalModifierChange()));
 	}
 
 	if (info.getEnduranceChange() != 0)
@@ -29836,7 +29836,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ENDURANCE_TEXT", info.getEnduranceChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ENDURANCE", info.getEnduranceChange()));
 	}
 
 	if (info.getRoundStunProbChange() != 0)
@@ -29848,7 +29848,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ROUND_STUN_PROB_TEXT", info.getRoundStunProbChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ROUND_STUN_PROB", info.getRoundStunProbChange()));
 	}
 
 	if (info.getPoisonProbabilityModifierChange() != 0)
@@ -29860,7 +29860,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_POISON_PROB_TEXT", info.getPoisonProbabilityModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_POISON_PROB", info.getPoisonProbabilityModifierChange()));
 	}
 
 	if (info.getCaptureProbabilityModifierChange() != 0)
@@ -29896,7 +29896,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HILLS_WORK_TEXT", info.getHillsWorkModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_WORK", info.getHillsWorkModifierChange()));
 	}
 
 	if (info.getPeaksWorkModifierChange() != 0)
@@ -29908,7 +29908,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PEAKS_WORK_TEXT", info.getPeaksWorkModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", info.getPeaksWorkModifierChange()));
 	}
 
 	if (info.getBreakdownChanceChange() != 0)
@@ -29956,7 +29956,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MAX_HP", info.getMaxHPChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MAX_HP", info.getMaxHPChange()));
 	}
 
 	if (info.getStrengthModifier() != 0)
@@ -29968,7 +29968,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STRENGTH_MODIFIER", info.getStrengthModifier()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STRENGTH_MODIFIER", info.getStrengthModifier()));
 	}
 
 	bool bWithoutWarning = GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING);
@@ -29981,7 +29981,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STEALTH_STRIKES_TEXT", info.getStealthStrikesChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_STRIKES", info.getStealthStrikesChange()));
 	}
 
 	if (info.getStealthCombatModifierChange() != 0 && bWithoutWarning)
@@ -29993,7 +29993,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STEALTH_COMBAT_MODIFIER_TEXT", info.getStealthCombatModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_COMBAT_MODIFIER", info.getStealthCombatModifierChange()));
 	}
 
 	if (info.getStealthDefenseChange() != 0 && bWithoutWarning)
@@ -30005,7 +30005,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STEALTH_DEFENSE_CHANGE_TEXT", info.getStealthDefenseChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STEALTH_DEFENSE_CHANGE", info.getStealthDefenseChange()));
 	}
 
 	if (info.getDefenseOnlyChange() != 0)
@@ -30017,7 +30017,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEFENSE_ONLY_CHANGE_TEXT", info.getDefenseOnlyChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEFENSE_ONLY_CHANGE", info.getDefenseOnlyChange()));
 	}
 
 	if (info.getNoInvisibilityChange() != 0 && GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
@@ -30029,7 +30029,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NO_INVISIBILITY_CHANGE_TEXT", info.getNoInvisibilityChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_INVISIBILITY_CHANGE", info.getNoInvisibilityChange()));
 	}
 
 	if (info.getNoCaptureChange() > 0)
@@ -30041,7 +30041,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ADDS_CANNOT_CAPTURE"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ADDS_CANNOT_CAPTURE"));
 	}
 	else if (info.getNoCaptureChange() < 0)
 	{
@@ -30052,7 +30052,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REMOVES_CANNOT_CAPTURE"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REMOVES_CANNOT_CAPTURE"));
 	}
 
 	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
@@ -30066,7 +30066,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT", info.getWithdrawOnTerrainTypeChange((TerrainTypes)iI), CvWString(GC.getTerrainInfo((TerrainTypes)iI).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAW_ON", info.getWithdrawOnTerrainTypeChange((TerrainTypes)iI), CvWString(GC.getTerrainInfo((TerrainTypes)iI).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
 		}
 	}
 
@@ -30081,7 +30081,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT", info.getWithdrawOnFeatureTypeChange((FeatureTypes)iI), CvWString(GC.getFeatureInfo((FeatureTypes)iI).getType()).GetCString(), GC.getFeatureInfo((FeatureTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAW_ON", info.getWithdrawOnFeatureTypeChange((FeatureTypes)iI), CvWString(GC.getFeatureInfo((FeatureTypes)iI).getType()).GetCString(), GC.getFeatureInfo((FeatureTypes)iI).getTextKeyWide()));
 		}
 	}
 
@@ -30095,7 +30095,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DV_MOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DV_MOVE"));
 	}
 
 	if (info.isFreeDrop())
@@ -30107,10 +30107,10 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FREE_DROP_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FREE_DROP"));
 
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DROP_SIGHT_UNSEEN_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DROP_SIGHT_UNSEEN"));
 	}
 
 	if (info.isOffensiveVictoryMove())
@@ -30122,7 +30122,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_OV_MOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_OV_MOVE"));
 	}
 
 	if (info.isOneUp())
@@ -30146,7 +30146,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ESPIONAGE_PILLAGE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ESPIONAGE_PILLAGE"));
 	}
 
 	if (info.isPillageMarauder())
@@ -30158,7 +30158,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MARAUDER_PILLAGE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MARAUDER_PILLAGE"));
 	}
 
 	if (info.isPillageOnMove())
@@ -30170,7 +30170,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MOVING_PILLAGE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MOVING_PILLAGE"));
 	}
 
 	if (info.isPillageOnVictory())
@@ -30182,7 +30182,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_VICTORY_PILLAGE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VICTORY_PILLAGE"));
 	}
 
 	if (info.isPillageResearch())
@@ -30194,7 +30194,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_RESEARCH_PILLAGE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RESEARCH_PILLAGE"));
 	}
 
 	if (info.isBlitz())
@@ -30206,7 +30206,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_BLITZ_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_BLITZ"));
 	}
 
 	if (info.isAmphib())
@@ -30220,12 +30220,12 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if(info.isSpy())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_RADIATION_TEXT_SPY"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RADIATION_SPY"));
 		}
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AMPHIB_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AMPHIB"));
 		}
 	}
 
@@ -30238,7 +30238,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_RIVER_ATTACK_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RIVER_ATTACK"));
 	}
 
 	if (info.isEnemyRoute())
@@ -30250,7 +30250,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ENEMY_ROADS_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ENEMY_ROADS"));
 	}
 
 	if (info.isAlwaysHeal())
@@ -30264,12 +30264,12 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		if(info.isSpy())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_LOYALTY_TEXT_SPY"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_LOYALTY_SPY"));
 		}
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ALWAYS_HEAL_TEXT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ALWAYS_HEAL"));
 		}
 	}
 
@@ -30282,7 +30282,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_HILLS_MOVE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_MOVE"));
 	}
 
 	if (info.isImmuneToFirstStrikes())
@@ -30294,7 +30294,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IMMUNE_FIRST_STRIKES_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IMMUNE_FIRST_STRIKES"));
 	}
 
 	if (info.isStampedeChange())
@@ -30306,7 +30306,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_STAMPEDE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_STAMPEDE"));
 	}
 
 	if (info.isRemoveStampede())
@@ -30318,7 +30318,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REMOVE_STAMPEDE_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REMOVE_STAMPEDE"));
 	}
 
 	if (info.getAnimalIgnoresBordersChange() != 0 && !GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
@@ -30330,7 +30330,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ANIMAL_IGNORES_BORDERS_TEXT", info.getAnimalIgnoresBordersChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ANIMAL_IGNORES_BORDERS", info.getAnimalIgnoresBordersChange()));
 	}
 
 	int iNoDefensiveBonusChange = info.getNoDefensiveBonusChange();
@@ -30345,11 +30345,11 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(NEWLINE);
 		if (iNoDefensiveBonusChange > 0)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_POSITIVE_TEXT", iNoDefensiveBonusChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_DEFENSIVE_BONUS_CHANGE_POSITIVE", iNoDefensiveBonusChange));
 		}
 		else if (iNoDefensiveBonusChange < 0)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE_TEXT", iNoDefensiveBonusChange));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE", iNoDefensiveBonusChange));
 		}
 	}
 
@@ -30362,7 +30362,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ONSLAUGHT_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ONSLAUGHT"));
 	}
 
 	if (info.isMakesDamageCold())
@@ -30374,7 +30374,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MAKES_DAMAGE_COLD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MAKES_DAMAGE_COLD"));
 	}
 
 	if (info.isMakesDamageNotCold())
@@ -30386,7 +30386,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_MAKES_DAMAGE_NOT_COLD_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_MAKES_DAMAGE_NOT_COLD"));
 	}
 
 	if (info.isAddsColdImmunity())
@@ -30398,7 +30398,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ADDS_COLD_IMMUNITY_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ADDS_COLD_IMMUNITY"));
 	}
 
 	if (info.isRemovesColdImmunity())
@@ -30410,7 +30410,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REMOVES_COLD_IMMUNITY_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REMOVES_COLD_IMMUNITY"));
 	}
 
 	if (info.isAttackOnlyCitiesAdd())
@@ -30422,7 +30422,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ATTACK_ONLY_CITIES_ADD"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ATTACK_ONLY_CITIES_ADD"));
 	}
 
 	if (info.isAttackOnlyCitiesSubtract())
@@ -30434,7 +30434,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ATTACK_ONLY_CITIES_SUBTRACT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ATTACK_ONLY_CITIES_SUBTRACT"));
 	}
 
 	if (info.isIgnoreNoEntryLevelAdd())
@@ -30446,7 +30446,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_NO_ENTRY_LEVEL_ADD"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_NO_ENTRY_LEVEL_ADD"));
 	}
 
 	if (info.isIgnoreNoEntryLevelSubtract())
@@ -30458,7 +30458,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_NO_ENTRY_LEVEL_SUBTRACT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_NO_ENTRY_LEVEL_SUBTRACT"));
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
@@ -30472,7 +30472,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_ZONE_OF_CONTROL_ADD"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_ZONE_OF_CONTROL_ADD"));
 		}
 		if (info.isIgnoreZoneofControlSubtract())
 		{
@@ -30483,7 +30483,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_ZONE_OF_CONTROL_SUBTRACT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_ZONE_OF_CONTROL_SUBTRACT"));
 		}
 	}
 
@@ -30496,7 +30496,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FLIES_TO_MOVE_ADD"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FLIES_TO_MOVE_ADD"));
 	}
 
 	if (info.isFliesToMoveSubtract())
@@ -30508,7 +30508,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FLIES_TO_MOVE_SUBTRACT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_FLIES_TO_MOVE_SUBTRACT"));
 	}
 
 	if (info.isCannotMergeSplit() && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
@@ -30520,7 +30520,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CANNOT_MERGE_SPLIT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CANNOT_MERGE_SPLIT"));
 	}
 
 	if (info.isCanMovePeaks())
@@ -30532,7 +30532,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CAN_MOVE_PEAKS_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CAN_MOVE_PEAKS"));
 	}
 
 	if (info.isCanLeadThroughPeaks())
@@ -30544,7 +30544,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CAN_LEAD_THROUGH_PEAKS_TEXT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CAN_LEAD_THROUGH_PEAKS"));
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && info.isZoneOfControl())
@@ -30573,7 +30573,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getDomainModifierPercent(iI) != 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_VERSUS_TEXT", info.getDomainModifierPercent(iI), CvWString(GC.getDomainInfo((DomainTypes)iI).getType()), GC.getDomainInfo((DomainTypes)iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_VERSUS", info.getDomainModifierPercent(iI), CvWString(GC.getDomainInfo((DomainTypes)iI).getType()), GC.getDomainInfo((DomainTypes)iI).getTextKeyWide()));
 			}
 		}
 	}
@@ -30593,7 +30593,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 					bFirstDisplay = false;
 				}
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CURE_AFFLICTION_TEXT", GC.getPromotionLineInfo((PromotionLineTypes)info.getCureAfflictionChangeType(iI)).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CURE_AFFLICTION", GC.getPromotionLineInfo((PromotionLineTypes)info.getCureAfflictionChangeType(iI)).getTextKeyWide()));
 			}
 		}
 	}
@@ -30610,7 +30610,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_TERRAIN_DAMAGE", GC.getTerrainInfo((TerrainTypes)info.getTerrainIgnoreDamageChangeType(iI)).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_IGNORE_TERRAIN_DAMAGE", GC.getTerrainInfo((TerrainTypes)info.getTerrainIgnoreDamageChangeType(iI)).getTextKeyWide()));
 		}
 	}
 
@@ -30625,7 +30625,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT", GC.getTerrainInfo((TerrainTypes)info.getTerrainDoubleMoveChangeType(iI)).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DOUBLE_MOVE", GC.getTerrainInfo((TerrainTypes)info.getTerrainDoubleMoveChangeType(iI)).getTextKeyWide()));
 		}
 	}
 
@@ -30640,7 +30640,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT", GC.getFeatureInfo((FeatureTypes)info.getFeatureDoubleMoveChangeType(iI)).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DOUBLE_MOVE", GC.getFeatureInfo((FeatureTypes)info.getFeatureDoubleMoveChangeType(iI)).getTextKeyWide()));
 		}
 	}
 
@@ -30659,7 +30659,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			for (iI = 0; iI < info.getNumAfflictionFortitudeChangeModifiers(); ++iI)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICTION_FORTITUDE_CHANGE_MODIFIER_TEXT", info.getAfflictionFortitudeChangeModifier(iI).iModifier, GC.getPromotionLineInfo((PromotionLineTypes)info.getAfflictionFortitudeChangeModifier(iI).ePromotionLine).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICTION_FORTITUDE_CHANGE_MODIFIER", info.getAfflictionFortitudeChangeModifier(iI).iModifier, GC.getPromotionLineInfo((PromotionLineTypes)info.getAfflictionFortitudeChangeModifier(iI).ePromotionLine).getTextKeyWide()));
 			}
 		}
 
@@ -30678,17 +30678,17 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 					if (info.getAfflictOnAttackChangeType(iI).iImmediate > 0)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_IMMEDIATE_TEXT", info.getAfflictOnAttackChangeType(iI).iProbabilityChange, GC.getPromotionLineInfo(info.getAfflictOnAttackChangeType(iI).eAfflictionLine).getTextKeyWide()));
+						szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_IMMEDIATE", info.getAfflictOnAttackChangeType(iI).iProbabilityChange, GC.getPromotionLineInfo(info.getAfflictOnAttackChangeType(iI).eAfflictionLine).getTextKeyWide()));
 					}
 					else if (info.getAfflictOnAttackChangeType(iI).iImmediate < 0)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_NOT_IMMEDIATE_TEXT", info.getAfflictOnAttackChangeType(iI).iProbabilityChange, GC.getPromotionLineInfo(info.getAfflictOnAttackChangeType(iI).eAfflictionLine).getTextKeyWide()));
+						szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_NOT_IMMEDIATE", info.getAfflictOnAttackChangeType(iI).iProbabilityChange, GC.getPromotionLineInfo(info.getAfflictOnAttackChangeType(iI).eAfflictionLine).getTextKeyWide()));
 					}
 					else
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_TEXT", info.getAfflictOnAttackChangeType(iI).iProbabilityChange, GC.getPromotionLineInfo(info.getAfflictOnAttackChangeType(iI).eAfflictionLine).getTextKeyWide()));
+						szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK", info.getAfflictOnAttackChangeType(iI).iProbabilityChange, GC.getPromotionLineInfo(info.getAfflictOnAttackChangeType(iI).eAfflictionLine).getTextKeyWide()));
 					}
 				}
 			}
@@ -30708,7 +30708,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TRAP_IMMUNITY_TEXT", GC.getUnitCombatInfo((UnitCombatTypes)info.getTrapImmunityUnitCombatType(iI)).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_IMMUNITY", GC.getUnitCombatInfo((UnitCombatTypes)info.getTrapImmunityUnitCombatType(iI)).getTextKeyWide()));
 		}
 	}
 
@@ -30725,7 +30725,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getTrapAvoidanceUnitCombatType(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TRAP_AVOID_TEXT", info.getTrapAvoidanceUnitCombatType(iI).iModifier, GC.getUnitCombatInfo((UnitCombatTypes)info.getTrapAvoidanceUnitCombatType(iI).eUnitCombat).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_TRAP_AVOID", info.getTrapAvoidanceUnitCombatType(iI).iModifier, GC.getUnitCombatInfo((UnitCombatTypes)info.getTrapAvoidanceUnitCombatType(iI).eUnitCombat).getTextKeyWide()));
 			}
 		}
 	}
@@ -30779,7 +30779,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getTerrainWorkChangeModifier(iI).eTerrain != NO_TERRAIN)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", info.getTerrainWorkChangeModifier(iI).iModifier, GC.getTerrainInfo((TerrainTypes)info.getTerrainWorkChangeModifier(iI).eTerrain).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK", info.getTerrainWorkChangeModifier(iI).iModifier, GC.getTerrainInfo((TerrainTypes)info.getTerrainWorkChangeModifier(iI).eTerrain).getTextKeyWide()));
 			}
 		}
 	}
@@ -30797,7 +30797,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getBuildWorkChangeModifier(iI).eBuild != NO_BUILD)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", info.getBuildWorkChangeModifier(iI).iModifier, GC.getBuildInfo((BuildTypes)info.getBuildWorkChangeModifier(iI).eBuild).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK", info.getBuildWorkChangeModifier(iI).iModifier, GC.getBuildInfo((BuildTypes)info.getBuildWorkChangeModifier(iI).eBuild).getTextKeyWide()));
 			}
 		}
 	}
@@ -30851,7 +30851,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getFeatureWorkChangeModifier(iI).eFeature != NO_FEATURE)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", info.getFeatureWorkChangeModifier(iI).iModifier, GC.getFeatureInfo((FeatureTypes)info.getFeatureWorkChangeModifier(iI).eFeature).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WORK", info.getFeatureWorkChangeModifier(iI).iModifier, GC.getFeatureInfo((FeatureTypes)info.getFeatureWorkChangeModifier(iI).eFeature).getTextKeyWide()));
 			}
 		}
 	}
@@ -30905,7 +30905,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getWithdrawVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_VERSUS_TEXT", info.getWithdrawVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getWithdrawVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getWithdrawVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAW_VERSUS", info.getWithdrawVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getWithdrawVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getWithdrawVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
 			}
 		}
 	}
@@ -30925,7 +30925,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (info.getPursuitVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PURSUIT_VERSUS_TEXT", info.getPursuitVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getPursuitVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getPursuitVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PURSUIT_VERSUS", info.getPursuitVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getPursuitVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getPursuitVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
 				}
 			}
 		}
@@ -30946,7 +30946,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (info.getRepelVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REPEL_VERSUS_TEXT", info.getRepelVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getRepelVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getRepelVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_REPEL_VERSUS", info.getRepelVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getRepelVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getRepelVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
 				}
 			}
 		}
@@ -30964,7 +30964,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				if (info.getKnockbackVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_KNOCKBACK_VERSUS_TEXT", info.getKnockbackVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getKnockbackVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getKnockbackVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_KNOCKBACK_VERSUS", info.getKnockbackVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getKnockbackVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getKnockbackVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
 				}
 			}
 		}
@@ -30983,7 +30983,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getPunctureVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PUNCTURE_VERSUS_TEXT", info.getPunctureVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getPunctureVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getPunctureVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PUNCTURE_VERSUS", info.getPunctureVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getPunctureVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getPunctureVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
 			}
 		}
 	}
@@ -31001,7 +31001,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getArmorVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ARMOR_VERSUS_TEXT", info.getArmorVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getArmorVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getArmorVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ARMOR_VERSUS", info.getArmorVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getArmorVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getArmorVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
 			}
 		}
 	}
@@ -31019,7 +31019,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getDodgeVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DODGE_VERSUS_TEXT", info.getDodgeVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getDodgeVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getDodgeVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DODGE_VERSUS", info.getDodgeVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getDodgeVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getDodgeVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
 			}
 		}
 	}
@@ -31037,7 +31037,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getPrecisionVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PRECISION_VERSUS_TEXT", info.getPrecisionVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getPrecisionVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getPrecisionVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PRECISION_VERSUS", info.getPrecisionVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getPrecisionVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getPrecisionVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
 			}
 		}
 	}
@@ -31055,7 +31055,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getCriticalVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CRITICAL_VERSUS_TEXT", info.getCriticalVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getCriticalVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getCriticalVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CRITICAL_VERSUS", info.getCriticalVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getCriticalVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getCriticalVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
 			}
 		}
 	}
@@ -31073,7 +31073,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getRoundStunVSUnitCombatTypeChange(iI).eUnitCombat != NO_UNITCOMBAT)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ROUND_STUN_VERSUS_TEXT", info.getRoundStunVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getRoundStunVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getRoundStunVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_ROUND_STUN_VERSUS", info.getRoundStunVSUnitCombatTypeChange(iI).iModifier, CvWString(GC.getUnitCombatInfo((UnitCombatTypes)info.getRoundStunVSUnitCombatTypeChange(iI).eUnitCombat).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)info.getRoundStunVSUnitCombatTypeChange(iI).eUnitCombat).getTextKeyWide()));
 			}
 		}
 	}
@@ -31086,7 +31086,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		{
 			szTempBuffer.Format(L"%.1f", fValue/10);
 		}
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INSIDIOUSNESS_TEXT", szTempBuffer.GetCString()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INSIDIOUSNESS", szTempBuffer.GetCString()));
 	}
 
 	if (info.getInvestigationChange() != 0)
@@ -31096,7 +31096,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		{
 			szTempBuffer.Format(L"%.1f", fValue/10);
 		}
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_INVESTIGATION_TEXT", szTempBuffer.GetCString()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INVESTIGATION", szTempBuffer.GetCString()));
 	}
 	//Propery Manipulators
 	if (info.getPropertyManipulators())

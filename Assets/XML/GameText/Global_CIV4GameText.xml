@@ -28335,7 +28335,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[SPACE](Proyecto mundial: %d1_Num [NUM1:restante:restantes])</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AIR_RANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_AIR_RANGE</Tag>
 		<English>[ICON_BULLET]%D1_Change Operational Range</English>
 		<French>[ICON_BULLET]%D1_Change Portée opérationnelle</French>
 		<German>[ICON_BULLET]%D1_Change Einsatzreichweite</German>
@@ -28343,7 +28343,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change de alcance operativo</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ALWAYS_HEAL_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ALWAYS_HEAL</Tag>
 		<English>[ICON_BULLET]Can Heal while Moving</English>
 		<French>[ICON_BULLET]Peut se soigner en mouvement</French>
 		<German>[ICON_BULLET]Kann während der Fortbewegung heilen</German>
@@ -28351,7 +28351,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Se cura a la vez que se mueve</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AMPHIB_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_AMPHIB</Tag>
 		<English>[ICON_BULLET]No Combat Penalty for Attacking from Sea</English>
 		<French>[ICON_BULLET]Aucune pénalité de combat en attaquant depuis la mer</French>
 		<German>[ICON_BULLET]Keine Kampfstrafe für Seeangriffe</German>
@@ -28359,7 +28359,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]No sufre penalización al combate por atacar desde el mar</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ATTACK_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ATTACK</Tag>
 		<English>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat Attack</English>
 		<French>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat Attaque</French>
 		<German>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat-Angriff</German>
@@ -28367,7 +28367,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Bonus%% a ataque a %s2:2_TerrFeat</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BLITZ_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_BLITZ</Tag>
 		<English>[ICON_BULLET]Can Attack Multiple Times per Turn</English>
 		<French>[ICON_BULLET]Peut attaquer plusieurs fois par tour</French>
 		<German>[ICON_BULLET]Kann mehrmals pro Runde angreifen</German>
@@ -28375,7 +28375,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede atacar varias veces por turno</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CARGO_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_CARGO</Tag>
 		<English>[ICON_BULLET]%D1_Change Cargo Space</English>
 		<French>[ICON_BULLET]%D1_Change Capacité d'emport</French>
 		<German>[ICON_BULLET]%D1_Change Frachtraum</German>
@@ -28383,7 +28383,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Bodega: %D1_Change</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CITY_ATTACK_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_CITY_ATTACK</Tag>
 		<English>[ICON_BULLET]%D1_Bonus%% City Attack</English>
 		<French>[ICON_BULLET]Attaque de ville %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Stadtangriff</German>
@@ -28391,7 +28391,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Bonus%% al atacar ciudades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CITY_DEFENSE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_CITY_DEFENSE</Tag>
 		<English>[ICON_BULLET]%D1_Bonus%% City Defense</English>
 		<French>[ICON_BULLET]Défense de ville %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Stadtverteidigung</German>
@@ -28399,7 +28399,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Bonus%% al defender ciudades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_COLLATERAL_PROTECTION_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_COLLATERAL_PROTECTION</Tag>
 		<English>[ICON_BULLET]Suffers %d1_percent%% less Collateral Damage</English>
 		<French>[ICON_BULLET]Dommages collatéraux réduits de %d1_percent%%</French>
 		<German>[ICON_BULLET]%d1_percent%% weniger Kollateralschäden</German>
@@ -28407,7 +28407,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Sufre un %d1_percent%% menos de daños colaterales</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DAMAGE_TURN_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DAMAGE_TURN</Tag>
 		<English>Damage/Turn</English>
 		<French>Dégâts/tour</French>
 		<German>Schaden/Runde</German>
@@ -28415,7 +28415,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Daño/turno</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DEFENSE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DEFENSE</Tag>
 		<English>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat Defense</English>
 		<French>[ICON_BULLET]Défense sur une case de %s2_TerrFeat %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Verteidigung für die Geländeart %s2_TerrFeat</German>
@@ -28423,7 +28423,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Bonus%% a defender %s2:2_TerrFeat</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DOUBLE_MOVE</Tag>
 		<English>[ICON_BULLET]Double Movement in %s1_TerrFeatType</English>
 		<French>[ICON_BULLET]Capacité de mouvement doublée sur : %s1_TerrFeatType</French>
 		<German>[ICON_BULLET]Doppelte Fortbewegung in folgendem Gelände: %s1_TerrFeatType</German>
@@ -28431,7 +28431,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Movimiento doble en %s1:2_TerrFeatType</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ENEMY_ROADS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ENEMY_ROADS</Tag>
 		<English>[ICON_BULLET]Can Use Enemy Roads</English>
 		<French>[ICON_BULLET]Peut se déplacer sur les routes ennemies</French>
 		<German>[ICON_BULLET]Kann feindliche Straßen nutzen</German>
@@ -28439,7 +28439,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede usar las carreteras enemigas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EVASION_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_EVASION</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Evasion Chance</English>
 		<French>>[ICON_BULLET]%D1_Change%% Chances de fuite</French>
 		<German>[ICON_BULLET]%D1_Change%% Ausweichwahrscheinlichkeit</German>
@@ -28447,7 +28447,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change%% probabilidad de evasión</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FASTER_EXPERIENCE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FASTER_EXPERIENCE</Tag>
 		<English>[ICON_BULLET]Gains %D1_percent%% Experience from Combat</English>
 		<French>[ICON_BULLET]Octroie %D1_percent%% expérience au combat</French>
 		<German>[ICON_BULLET]%D1_percent%% mehr Erfahrungspunkte durch Kampf</German>
@@ -28455,7 +28455,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Gana un %D1_percent%% de experiencia por combate</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HEALS_ADJACENT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_HEALS_ADJACENT</Tag>
 		<English>[ICON_BULLET]Heals Units in Adjacent Tiles Extra %d1_Heals%%[SPACE]</English>
 		<French>[ICON_BULLET]Soigne les unités dans les cases adjacentes de + %d1_Heals%%[SPACE]</French>
 		<German>[ICON_BULLET]Heilt Einheiten auf benachbarten Geländefeldern um zusätzliche %d1_Heals%%[SPACE]</German>
@@ -28463,7 +28463,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Cura a las unidades en casillas adyacentes un %d1_Amount%% más de[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HEALS_EXTRA_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_HEALS_EXTRA</Tag>
 		<English>[ICON_BULLET]Heals Extra %d1_Amount%%[SPACE]</English>
 		<French>[ICON_BULLET]Guérison + %d1_Amount%%[SPACE]</French>
 		<German>[ICON_BULLET]%d1_Amount%%[SPACE]zusätzliche Heilung[SPACE]</German>
@@ -28471,7 +28471,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Cura un %d1_Amount%% más de[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HILLS_DEFENSE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_HILLS_DEFENSE</Tag>
 		<English>[ICON_BULLET]%D1_Bonus%% Hills Defense</English>
 		<French>[ICON_BULLET]Défense de collines %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Hügel-Verteidigung</German>
@@ -28479,7 +28479,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Bonus%% a defender colinas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HILLS_MOVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_HILLS_MOVE</Tag>
 		<English>[ICON_BULLET]Double Movement in Hills</English>
 		<French>[ICON_BULLET]Capacité de mouvement doublée dans les collines</French>
 		<German>[ICON_BULLET]Doppelte Fortbewegung in Hügeln</German>
@@ -28487,7 +28487,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Movimiento doble en Colinas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_IMMUNE_FIRST_STRIKES_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_IMMUNE_FIRST_STRIKES</Tag>
 		<English>[ICON_BULLET]Immune to First Strikes</English>
 		<French>[ICON_BULLET]Insensible aux premières attaques</French>
 		<German>[ICON_BULLET]Immun gegen Erstangriffe</German>
@@ -28495,7 +28495,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Inmune a los ataques de iniciativa</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INTERCEPT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_INTERCEPT</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Interception Chance</English>
 		<French>[ICON_BULLET]%D1_Change%% Chances d'interception</French>
 		<German>[ICON_BULLET]%D1_Change%% Abfangwahrscheinlichkeit</German>
@@ -28503,7 +28503,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change%% probabilidad de intercepción</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_KAMIKAZE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_KAMIKAZE</Tag>
 		<English>[ICON_BULLET]Sacrificed in Combat in Exchange for %D1_percent%% [ICON_STRENGTH]</English>
 		<French>[ICON_BULLET]Sacrifié au combat en échange de %D1_percent%% [ICON_STRENGTH]</French>
 		<German>[ICON_BULLET]Wird im Austausch für %D1_percent%% [ICON_STRENGTH] im Gefecht geopfert</German>
@@ -28511,7 +28511,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Se sacrifica en combate a cambio de un %D1_percent%% de [ICON_STRENGTH]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PILLAGE_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PILLAGE_CHANGE</Tag>
 		<English>[ICON_BULLET]Yields %D1_percent%% [ICON_GOLD] from Pillaging</English>
 		<French>[ICON_BULLET]Le pillage rapporte %D1_percent%% [ICON_GOLD]</French>
 		<German>[ICON_BULLET]%D1_percent%% [ICON_GOLD] durch Plünderung</German>
@@ -28519,7 +28519,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Rinde un %D1_percent%% de [ICON_GOLD] en los saqueos</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RIVER_ATTACK_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_RIVER_ATTACK</Tag>
 		<English>[ICON_BULLET]No Combat Penalty for Crossing River</English>
 		<French>[ICON_BULLET]Aucune pénalité de combat en franchissant une rivière</French>
 		<German>[ICON_BULLET]Keine Kampfstrafe für Flussüberquerung</German>
@@ -28527,7 +28527,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]No sufre penalización al combate por cruzar un río</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STRENGTH_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_STRENGTH</Tag>
 		<English>[ICON_BULLET]%D1_Bonus%% Strength</English>
 		<French>[ICON_BULLET]Puissance %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Stärke</German>
@@ -28535,7 +28535,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Bonus%% a la fuerza</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_FREE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT_FREE</Tag>
 		<English>[ICON_BULLET]Free upgrades</English>
 		<French>[ICON_BULLET]Améliorations gratuites</French>
 		<German>[ICON_BULLET]Freie Modernisierungen</German>
@@ -28543,7 +28543,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Modernizaciones asequibles</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT</Tag>
 		<English>[ICON_BULLET]%d1_percent%% less [ICON_GOLD] to Upgrade</English>
 		<French>[ICON_BULLET]Coût de l'amélioration réduite de %d1_percent%% [ICON_GOLD]</French>
 		<German>[ICON_BULLET]%d1_percent%% weniger [ICON_GOLD] für Modernisierungen</German>
@@ -28551,7 +28551,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%d1_percent%% menos de [ICON_GOLD] para modernizar</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WHEN_LEADING</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_WHEN_LEADING</Tag>
 		<English>When attached to a unit:</English>
 		<French>Quand rattaché à une unité :</French>
 		<German>Wenn im Gefolge einer Einheit:</German>

@@ -506,7 +506,7 @@
 		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BOMBARD_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_BOMBARD</Tag>
 		<English>[ICON_BULLET]%D1_DmgChange%% City Bombard Damage</English>
 		<French>[ICON_BULLET]Dégâts bombardement %D1_DmgChange%%</French>
 		<German>[ICON_BULLET]%D1_DmgChange%% Stadtbombardierungsschaden</German>
@@ -515,7 +515,7 @@
 		<Russian>[ICON_BULLET]%D1_DmgChange%% ê óùåðáó îò áîìáàðäèðîâêè ãîðîäîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_COLLATERAL_DAMAGE</Tag>
 		<English>[ICON_BULLET]%D1_DmgChange%% Collateral Damage</English>
 		<French>[ICON_BULLET]Dommages collatéraux %D1_DmgChange%%</French>
 		<German>[ICON_BULLET]%D1_DmgChange%% Kollateralschaden</German>
@@ -524,7 +524,7 @@
 		<Russian>[ICON_BULLET]%D1_DmgChange%% ê ñîïóòñòâóþùåìó óùåðáó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ENEMY_LANDS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ENEMY_LANDS</Tag>
 		<English>Damage/Turn in Enemy Lands</English>
 		<French>Dégâts/tour en territoire ennemi</French>
 		<German>pro Runde in feindlichem Gebiet</German>
@@ -533,7 +533,7 @@
 		<Russian>(% óùåðáà çà õîä íà âðàæåñêîé òåððèòîðèè)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FIRST_STRIKES_CHANCE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKES_CHANCE</Tag>
 		<English>[ICON_BULLET]%D1_Change First Strike Chances</English>
 		<French>[ICON_BULLET]%D1_Change chances de première attaque</French>
 		<German>[ICON_BULLET]%D1_Change Erstschlagschancen</German>
@@ -542,7 +542,7 @@
 		<Russian>[ICON_BULLET]Âåðîÿòíîñòü Ïåðâîãî óäàðà: %D1_Change</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FIRST_STRIKES_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKES</Tag>
 		<English>[ICON_BULLET]%D1_Change First Strikes</English>
 		<French>[ICON_BULLET]%D1_Change premières attaques</French>
 		<German>[ICON_BULLET]%D1_Change [NUM1:Erstschlag:Erstschläge]</German>
@@ -551,7 +551,7 @@
 		<Russian>[ICON_BULLET]%D1_Change Ïåðâûõ óäàðà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FIRST_STRIKE_CHANCE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKE_CHANCE</Tag>
 		<English>[ICON_BULLET]%d1_Num Extra First Strike Chance</English>
 		<French>[ICON_BULLET]%d1_Num chance supplémentaire de première attaque</French>
 		<German>[ICON_BULLET]%d1_Num Zusatzchance für Erstschlag</German>
@@ -560,7 +560,7 @@
 		<Russian>[ICON_BULLET]Âåðîÿòíîñòü äîïîëíèòåëüíîãî Ïåðâîãî óäàðà (%d1_Num)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FIRST_STRIKE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKE</Tag>
 		<English>[ICON_BULLET]%d1_Num Extra First Strike</English>
 		<French>[ICON_BULLET]%d1_Num première attaque supplémentaire</French>
 		<German>[ICON_BULLET]%d1_Num [NUM1:Extra-Erstschlag:Extra-Erstschläge]</German>
@@ -569,7 +569,7 @@
 		<Russian>[ICON_BULLET]%d1_Num äîï. Ïåðâûé óäàð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FRIENDLY_LANDS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FRIENDLY_LANDS</Tag>
 		<English>Damage/Turn in Friendly Lands</English>
 		<French>Dégâts/tour en territoire allié</French>
 		<German>pro Runde auf befreundetem Gebiet</German>
@@ -578,7 +578,7 @@
 		<Russian>(% óùåðáà çà õîä íà äðóæåñòâåííîé òåððèòîðèè)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HEALS_SAME_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_HEALS_SAME</Tag>
 		<English>[ICON_BULLET]Heals Units in Same Tile Extra %d1_Amount%%[SPACE]</English>
 		<French>[ICON_BULLET]Soigne les unités dans la même case de + %d1_Amount%%[SPACE]</French>
 		<German>[ICON_BULLET]Extra-Heilung von Einheiten auf demselben Geländefeld um %d1_Amount%%[SPACE]</German>
@@ -587,7 +587,7 @@
 		<Russian>[ICON_BULLET]Ëå÷èò þíèòîâ íà îäíîé äîï. êëåòêå %d1_Amount%%[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MOVE_DISCOUNT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_MOVE_DISCOUNT</Tag>
 		<English>[ICON_BULLET]%D1_Discount Terrain Movement Cost</English>
 		<French>[ICON_BULLET]Coût de mouvement réduit de %D1_Discount</French>
 		<German>[ICON_BULLET]%D1_Discount Bewegungskosten</German>
@@ -596,7 +596,7 @@
 		<Russian>[ICON_BULLET]%D1_Discount ê øòðàôó ïåðåìåùåíèÿ ïî ïåðåñå÷åííîé ìåñòíîñòè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MOVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_MOVE</Tag>
 		<English>[ICON_BULLET]%D1_Change Movement Range</English>
 		<French>[ICON_BULLET]Rayon d'action %D1_Change</French>
 		<German>[ICON_BULLET]%D1_Change Bewegungsrate</German>
@@ -605,7 +605,7 @@
 		<Russian>[ICON_BULLET]%D1_Change Äèàïàçîíà äâèæåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NEUTRAL_LANDS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_NEUTRAL_LANDS</Tag>
 		<English>Damage/Turn in Neutral Lands</English>
 		<French>Dégâts/tour en territoire neutre</French>
 		<German>pro Runde auf neutralem Gebiet</German>
@@ -614,7 +614,7 @@
 		<Russian>(% óùåðáà çà õîä íà íåéòðàëüíîé òåððèòîðèè)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_VERSUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_VERSUS</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% vs. [LINK=%s2_AgainstType]%s3_Against[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% contre [LINK=%s2_AgainstType]%s3_Against[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% gegen [LINK=%s2_AgainstType]%s3_Against[\LINK]</German>
@@ -623,7 +623,7 @@
 		<Russian>[ICON_BULLET]%D1_Mod%% против [LINK=%s2_AgainstType]%s3_Against[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_VISIBILITY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_VISIBILITY</Tag>
 		<English>[ICON_BULLET]%D1_Change Visibility Range</English>
 		<French>[ICON_BULLET]Champ de vision %D1_Change</French>
 		<German>[ICON_BULLET]%D1_Change Sichtweite</German>
@@ -632,7 +632,7 @@
 		<Russian>[ICON_BULLET]%D1_Change Äèàïàçîíà âèäèìîñòè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WITHDRAWAL_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_WITHDRAWAL</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Withdrawal Chance</English>
 		<French>[ICON_BULLET]Chances de repli de %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Rückzugsmöglichkeit</German>

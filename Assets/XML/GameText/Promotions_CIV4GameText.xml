@@ -2278,18 +2278,18 @@
 		<Russian>Àñ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ADDS_BUILD_TYPE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ADDS_BUILD_TYPE</Tag>
 		<English>[ICON_BULLET]Adds %s1_Build to the unit's build capabilities.</English>
 		<French>[ICON_BULLET]Ajoute %s1_Build aux possibilité de construction de l'unité.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ADDS_CANNOT_CAPTURE</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ADDS_CANNOT_CAPTURE</Tag>
 		<English>[ICON_BULLET]Gives cause for unit to be unable to capture enemy Cities or Units</English>
 		<French>[ICON_BULLET]Rend l'unité incapable de capturer les villes ou unités ennemies</French>
 		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten: +1</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ADDS_COLD_IMMUNITY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ADDS_COLD_IMMUNITY</Tag>
 		<English>[ICON_BULLET]Causes unit to be immune to Cold Damage penalties.</English>
 		<French>[ICON_BULLET]Rend l'unité immunisée contre les pénalités engendrées par les dégâts liés au froid.</French>
 		<Italian>[ICON_BULLET]Fa in modo che l'unità sia immune dalle penalità da Danno da freddo.</Italian>
@@ -2304,50 +2304,50 @@
 		<Russian>Адепт</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AFFLICTION_FORTITUDE_CHANGE_MODIFIER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_AFFLICTION_FORTITUDE_CHANGE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Change%% resistance and overcome bonus against the %s2_PromotionName affliction.</English>
 		<French>[ICON_BULLET]%D1_Change%% de résistance et de bonus contre les effets de %s2_PromotionName.</French>
 		<Italian>[ICON_BULLET]%D1_Change%% di Resistenza e Superamento contro l'afflizione %s2_PromotionName.</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% do odporności i wyleczenia przeciwko %s2_PromotionName.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AFFLICTION_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_AFFLICTION</Tag>
 		<English>[ICON_BULLET]Affliction Promotion</English>
 		<French>[ICON_BULLET]'Promotion' Affection</French>
 		<Italian>[ICON_BULLET]Afflizione</Italian>
 		<Polish>[ICON_BULLET]Promocje (Rany)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_BOTH_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_BOTH</Tag>
 		<English>(Applies to Both Distance AND Melee Attacks)</English>
 		<French>(Appliq. aux Attaques de mélée et à Distance)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_DISTANCE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_DISTANCE</Tag>
 		<English>(Applies to Distance Attacks)</English>
 		<French>(Appliq. aux Attaques à Distance)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_IMMEDIATE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_IMMEDIATE</Tag>
 		<English>[ICON_BULLET]Gives %D1_chance% chance to immediately inflict %s2_PromotionName to struck enemy.</English>
 		<French>[ICON_BULLET]Donne %D1_chance% de chances d'infliger immédiatement %s2_PromotionName pour frapper l'ennemi.</French>
 		<Italian>[ICON_BULLET]Fornisce %D1_chance% di chance di infliggere immediatamente %s2_PromotionName ad un nemico colpito.</Italian>
 		<Polish>[ICON_BULLET]Daje %D1_chance% szansy do szybkiego zadania %s2_PromotionName przy uderzeniu wroga.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_MELEE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_MELEE</Tag>
 		<English>(Applies to Melee Attacks)</English>
 		<French>(Appliq. aux Attaques de Mélée)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_NOT_IMMEDIATE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK_NOT_IMMEDIATE</Tag>
 		<English>[ICON_BULLET]Gives %D1_chance% chance to inflict %s2_PromotionName to struck enemy, delayed until AFTER battle.</English>
 		<French>[ICON_BULLET]Donne %D1_chance% de chances d'infliger %s2_PromotionName pour frapper l'ennemi, à l'issue du combat.</French>
 		<Italian>[ICON_BULLET]Fornisce %D1_chance% di chance di infliggere %s2_PromotionName a un nemico colpito (vengono applicate DOPO la battaglia).</Italian>
 		<Polish>[ICON_BULLET]Daje %D1_chance% szansy do zadania %s2_PromotionName przy uderzeniu wroga, zaczyna działać po walce.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_AFFLICT_ON_ATTACK</Tag>
 		<English>[ICON_BULLET]Gives %D1_chance% chance to inflict %s2_PromotionName to struck enemy.</English>
 		<French>[ICON_BULLET]Donne %D1_chance% de chances d'infliger %s2_PromotionName pour frapper l'ennemi.</French>
 		<Italian>[ICON_BULLET]Fornisce %D1_chance% di chance di infliggere %s2_PromotionName a un nemico colpito.</Italian>
@@ -2376,7 +2376,7 @@
 		<Russian>Àãðåññèâíûé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AID_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_AID_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Change Aid (%s2_Type)</English>
 		<French>[ICON_BULLET]%D1_Change Soutien (%s2_Type)</French>
 		<Italian>[ICON_BULLET]%D1_Change Supporto (%s2_Type)</Italian>
@@ -2414,7 +2414,7 @@
 		<Russian>ÏÂÎ III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_AIR_LIMIT_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_AIR_LIMIT_CHANGE</Tag>
 		<English>[ICON_BULLET]%d1%% Change to Air Combat Limit</English>
 		<French>[ICON_BULLET]%d1%% Modif. à la limite de Combat Aérien</French>
 		<German>[ICON_BULLET]%d1%% Änderung zum Luftkampflimit</German>
@@ -2595,7 +2595,7 @@
 		<Russian>[ICON_BULLET]Бои с животными по-прежнему будут давать очки опыта, даже после превышения установленного лимита.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ANIMAL_IGNORES_BORDERS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ANIMAL_IGNORES_BORDERS</Tag>
 		<English>[ICON_BULLET]Gives this Animal %D1_Reasons Causes to Ignore Border Restrictions</English>
 		<French>[ICON_BULLET]Donne à cet Animal %D1_Reasons raisons d'ignorer les restrictions de frontière</French>
 		<Russian>[ICON_BULLET]Дает возможность этому животному %D1_Reasons игнорировать наличие границ</Russian>
@@ -2703,7 +2703,7 @@
 		<Russian>Часовой V</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ARMOR_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ARMOR</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Armor Value</English>
 		<French>[ICON_BULLET]%D1_Change%% Valeur d'Armure</French>
 		<Italian>[ICON_BULLET]%D1_Change%% valore dell'armatura</Italian>
@@ -2740,7 +2740,7 @@
 		<Russian>Óëó÷ø. áðîíÿ III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ARMOR_VERSUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ARMOR_VERSUS</Tag>
 		<English>[ICON_BULLET]%D1_Mod Armor vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod Armor contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod Armor gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
@@ -2782,7 +2782,7 @@
 		<Russian>Øêâàë ñòðåë III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ASSASSIN_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ASSASSIN</Tag>
 		<English>[ICON_BULLET]Trait - Assassination: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Assassinat: %D1_Change</French>
 		<German>[ICON_BULLET]Mordanschlag: %D1_Change</German>
@@ -2808,7 +2808,7 @@
 		<Russian>[ICON_BULLET]Çíàêè Çîäèàêà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ATTACK_MODIFIER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ATTACK_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Change%% modifier to Attack</English>
 		<French>[ICON_BULLET]%D1_Change%% Modif. en Attaque</French>
 		<German>[ICON_BULLET]%D1_Change%% Angriff</German>
@@ -2817,7 +2817,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% к атаке</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ATTACK_ONLY_CITIES_ADD</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ATTACK_ONLY_CITIES_ADD</Tag>
 		<English>[ICON_BULLET]Adds one cause for the unit to only be able to attack cities.</English>
 		<French>[ICON_BULLET]Ajoute la restriction de l'unité de ne pouvoir attaquer que les Villes.</French>
 		<Italian>[ICON_BULLET]Aggiunge una causa per cui l'unità è in grado di attaccare solo città.</Italian>
@@ -2825,7 +2825,7 @@
 		<Russian>[ICON_BULLET]Дает возможность атаковать города этому отряду.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ATTACK_ONLY_CITIES_SUBTRACT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ATTACK_ONLY_CITIES_SUBTRACT</Tag>
 		<English>[ICON_BULLET]Removes one cause for the unit to only be able to attack cities.</English>
 		<French>[ICON_BULLET]Enlève la restriction de l'unité à n'attaquer que les Villes.</French>
 		<Italian>[ICON_BULLET]Rimuove una causa per cui l'unità è in grado di attaccare solo città.</Italian>
@@ -3010,13 +3010,13 @@
 		<Russian>[ICON_BULLET]Бои с варварами по-прежнему будут давать очки опыта даже после превышения установленного лимита.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BARBCOEXIST_ADD_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_BARBCOEXIST_ADD</Tag>
 		<English>[ICON_BULLET]Adds a reason for the unit to treat Non-Animal Barbarians as friendly units and Barbarian cities as if they are your own.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité de considérer les unités Barbares humaines et les villes barbares comme appartenant au joueur.</French>
 		<Russian>[ICON_BULLET]Делает данный отряд по умолчанию нейтральным к варварам (но не животным), давая возможность мирного соседства с ними на одной клетке и посещения без боя варварских городов.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BARBCOEXIST_REMOVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_BARBCOEXIST_REMOVE</Tag>
 		<English>[ICON_BULLET]Removes a reason for the unit to treat Non-Animal Barbarians as friendly units and Barbarian cities as if they are your own.</English>
 		<French>[ICON_BULLET]Enlève la possibilité de considérer les unités Barbares humaines et les villes barbares comme appartenant au joueur.</French>
 		<Russian>[ICON_BULLET]Убирает нейтральный статус у данного отряда, делая его по умолчанию враждебным ко всем варварским подразделениям.</Russian>
@@ -3260,13 +3260,13 @@
 		<Russian>Ìàñòåð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BLENDCITY_ADD_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_BLENDCITY_ADD</Tag>
 		<English>[ICON_BULLET]Adds a reason for the unit to peacefully enter all cities, even those you are at war with.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité d'entrer de manière pacifique dans les villes, même pour celles en guerre.</French>
 		<German>[ICON_BULLET]friedliches Betreten aller Städte (selbst von Kriegsgegnern): +1</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BLENDCITY_REMOVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_BLENDCITY_REMOVE</Tag>
 		<English>[ICON_BULLET]Removes a reason for the unit to peacefully enter all cities, even those you are at war with.</English>
 		<French>[ICON_BULLET]Enlève la possibilité d'entrer de manière pacifique dans les villes, même pour celles en guerre.</French>
 		<German>[ICON_BULLET]friedliches Betreten aller Städte (selbst von Kriegsgegnern): -1</German>
@@ -3441,7 +3441,7 @@
 		<Russian>Êîñòÿíàÿ áðîíÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BONUS_PREREQ_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_BONUS_PREREQ</Tag>
 		<English>[ICON_BULLET]May only have promotion while on plots with a %s1_Bonus resource (or other specific resource(s) if also is listed).</English>
 		<French>[ICON_BULLET]Peut seulement avoir la promotion lorsque situé sur une case avec la ressource %s1_Bonus (ou d'autres ressources spécifique en cas de liste).</French>
 	</TEXT>
@@ -3639,7 +3639,7 @@
 		<Russian>Áðîíçîâîå îðóæèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BUILDING_PREREQ_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_BUILDING_PREREQ</Tag>
 		<English>[ICON_BULLET]May only have promotion while in a city with a %s1_Building constructed (or plots with other specific improvement(s) or specific buildings in a city if also listed).</English>
 		<French>[ICON_BULLET]Peut seulement avoir la promotion lorsque situé dans une ville avec le bâtiment '%s1_Building' construit (ou sur une case avec un aménagement spécifique, ou plusieurs bâtiments en cas de liste).</French>
 	</TEXT>
@@ -4757,7 +4757,7 @@
 		<Russian>Ðàê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CANNOT_MERGE_SPLIT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_CANNOT_MERGE_SPLIT</Tag>
 		<English>[ICON_BULLET]Makes the unit unable to merge or split.</English>
 		<French>[ICON_BULLET]Ne peut être groupée ou divisée.</French>
 		<German>[ICON_BULLET]kann weder aufgeteilt noch zusammengeführt werden</German>
@@ -4765,7 +4765,7 @@
 		<Polish>[ICON_BULLET]Zakazuje podziału/łączenia jednostki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CAN_LEAD_THROUGH_PEAKS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_CAN_LEAD_THROUGH_PEAKS</Tag>
 		<English>[ICON_BULLET]Can lead units through Peaks</English>
 		<French>[ICON_BULLET]Peut mener les unités à travers les montagnes</French>
 		<German>[ICON_BULLET]kann andere Einheiten durchs Gebirge führen</German>
@@ -4775,7 +4775,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò ïðèâåñòè îòðÿäû ÷åðåç Ïèêè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CAN_MOVE_PEAKS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_CAN_MOVE_PEAKS</Tag>
 		<English>[ICON_BULLET]Can Pass through Peaks</English>
 		<French>[ICON_BULLET]Peut passer les Sommets</French>
 		<German>[ICON_BULLET]kann Gebirge überqueren</German>
@@ -4903,7 +4903,7 @@
 		<Russian>Îñòîðîæíîñòü V</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CELEBRITY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_CELEBRITY</Tag>
 		<English>[ICON_BULLET]%D1_Happy [ICON_HAPPY] to any city the unit is in.</English>
 		<French>[ICON_BULLET]%D1_Happy [ICON_HAPPY] pour chaque ville où se trouve l'unité.</French>
 		<Russian>[ICON_BULLET]%D1_Happy [ICON_HAPPY] в любом городе, где находится юнит.</Russian>
@@ -5384,7 +5384,7 @@
 		<Russian>Полярный воин IV</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_COLLATERAL_LIMIT_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_COLLATERAL_LIMIT_CHANGE</Tag>
 		<English>[ICON_BULLET]%d1%% Change to Collateral Damage Limit</English>
 		<French>[ICON_BULLET]%d1%% Change la limite des dommages collatéraux</French>
 		<German>[ICON_BULLET]%d1%% Änderung zum Kollateralschadenlimit</German>
@@ -5565,7 +5565,7 @@
 		<Russian>Áîåâàÿ ïðîãðàììà 4.0</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_COMBAT_LIMIT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_COMBAT_LIMIT</Tag>
 		<English>[ICON_BULLET]%d1%% change to Maximum Damage Limit</English>
 		<French>[ICON_BULLET]Dommages Maximum est change par %d1%%</French>
 		<German>[ICON_BULLET]%d1%% Änderung zum maximalen Schadenslimit</German>
@@ -5676,7 +5676,7 @@
 		<Russian>Êîìàíäî</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_COMMAND_RANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_COMMAND_RANGE</Tag>
 		<English>[ICON_BULLET]+%d1_Num Command Range</English>
 		<French>[ICON_BULLET]+%d1_Num Portée de Commandement</French>
 		<German>[ICON_BULLET]+%d1_Num Kommandobereich</German>
@@ -5686,7 +5686,7 @@
 		<Russian>[ICON_BULLET]+%d1_Num к области командования</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_COMMUNICABILITY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_COMMUNICABILITY</Tag>
 		<English>[ICON_BULLET]Affliction can spread to other units: %D1_Change%% base chance</English>
 		<French>[ICON_BULLET]L'affliction peut se propager à d'autres unités : %D1_Change%% prob. de base</French>
 	</TEXT>
@@ -5775,7 +5775,7 @@
 		<Russian>Êîíòðîëü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CONTROL_POINTS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_CONTROL_POINTS</Tag>
 		<English>[ICON_BULLET]+%d1_Num Control Points</English>
 		<French>[ICON_BULLET]+%d1_Num Points de Contrôle</French>
 		<German>[ICON_BULLET]+%d1_Num Kontrollpunkte</German>
@@ -6050,7 +6050,7 @@
 		<Russian>Подавление V</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CRITICAL_MODIFIER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_CRITICAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Additional %D1_Change%% Critical Hit Chance per round of battle</English>
 		<French>[ICON_BULLET]Chances de coup critique supplémentaire: %D1_Change%%</French>
 		<Italian>[ICON_BULLET]Probabilità supplementare di colpi critici per ogni round di battaglia: %D1_Change%%</Italian>
@@ -6058,7 +6058,7 @@
 		<Russian>[ICON_BULLET]Дополнительно %D1_Change%% шанса критического удара за раунд битвы</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CRITICAL_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_CRITICAL</Tag>
 		<English>[ICON_BULLET]Critical Injury Promotion</English>
 		<French>[ICON_BULLET]Promotion Blessure critique</French>
 		<Italian>[ICON_BULLET]Promozione Ferita critica</Italian>
@@ -6066,7 +6066,7 @@
 		<Russian>[ICON_BULLET]Критический урон</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CRITICAL_VERSUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_CRITICAL_VERSUS</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Critical Chance vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% Critical Chance contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Critical Chance gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
@@ -6168,7 +6168,7 @@
 		<Russian>Þæíîàìåðèêàíñêèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CURE_AFFLICTION_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_CURE_AFFLICTION</Tag>
 		<English>[ICON_BULLET]Empowers the ability to remove %s1_PromotionName from those afflicted.</English>
 		<French>[ICON_BULLET]Donne la capacité d'ôter %s1_PromotionName à ceux qui en sont atteints.</French>
 		<Italian>[ICON_BULLET]Migliora l'abilità di rimuovere %s1_PromotionName dalle unità sotto questo effetto.</Italian>
@@ -6176,7 +6176,7 @@
 		<Russian>[ICON_BULLET]Дает возможность удалить %s1_PromotionName у отрядов.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DAMAGE_MODIFIER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DAMAGE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Damage Modifier: %D1_Change%</English>
 		<French>[ICON_BULLET]%D1_Change% Modif. de dégâts</French>
 		<German>[ICON_BULLET]%D1_Change% Schaden</German>
@@ -6184,7 +6184,7 @@
 		<Russian>[ICON_BULLET]Урон: %D1_Change%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DAMAGE_PER_TURN_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DAMAGE_PER_TURN</Tag>
 		<English>[ICON_BULLET]Deals %D1_Change Damage to unit each turn</English>
 		<French>[ICON_BULLET]Inflige %D1_Change de dégâts à chaque tour</French>
 		<Italian>[ICON_BULLET]Infligge %D1_Change di danno all'unità ogni turno</Italian>
@@ -6225,35 +6225,35 @@
 		<Russian>Áåãëåö III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DCM_BOMB_ACCURACY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DCM_BOMB_ACCURACY</Tag>
 		<English>[ICON_BULLET]Ranged Assault Accuracy: %D1_Value%%</English>
 		<French>[ICON_BULLET]Précision de l'Assaut à distance: %D1_Value%%</French>
 		<Polish>[ICON_BULLET]Celność ataku dystansowego: %D1_Value%%</Polish>
 		<Russian>[ICON_BULLET]Точность артобстрела: %D1_Value%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_LIMIT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE_LIMIT</Tag>
 		<English>[ICON_BULLET]Ranged Assault Damage Limit: %D1_Value%%</English>
 		<French>XP des spécialistes</French>
 		<Polish>[ICON_BULLET]Limit obrażeń ataku dystansowego: %D1_Value%%</Polish>
 		<Russian>[ICON_BULLET]Предел дальней атаки: %D1_Value%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_MAX_UNITS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE_MAX_UNITS</Tag>
 		<English>[ICON_BULLET]Ranged Assault Max Targets: %D1_Value</English>
 		<French>XP des spécialistes</French>
 		<Polish>[ICON_BULLET]Maks. ilość celów ataku dystansowego: %D1_Value</Polish>
 		<Russian>[ICON_BULLET]Макс. целей дальней атаки: %D1_Value</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE</Tag>
 		<English>[ICON_BULLET]Ranged Assault Damage: %D1_Value%%</English>
 		<French>[ICON_BULLET]Dégâts d'assaut à distance: %d1_Value%%</French>
 		<Polish>[ICON_BULLET]Obrażenia ataku dystansowego: %D1_Value%%</Polish>
 		<Russian>[ICON_BULLET]Урон от артобстрела: %D1_Value%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DCM_BOMB_RANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DCM_BOMB_RANGE</Tag>
 		<English>[ICON_BULLET]Ranged Assault Distance: %D1_Value</English>
 		<French>[ICON_BULLET]Distance d'Assaut: %D1_Value</French>
 		<Polish>[ICON_BULLET]Zasięg ataku dystansowego: %D1_Value</Polish>
@@ -6333,7 +6333,7 @@
 		<Russian>Ïîñâÿùåííûé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DEFENSE_MODIFIER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DEFENSE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Change%% modifier to Defense</English>
 		<French>[ICON_BULLET]%D1_Change%% Modif. en Défense</French>
 		<German>[ICON_BULLET]%D1_Change%% Verteidigung</German>
@@ -6342,7 +6342,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% к защите</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DEFENSE_ONLY_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DEFENSE_ONLY_CHANGE</Tag>
 		<English>[ICON_BULLET]Trait - Defense only: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Défense uniquement: %D1_Change</French>
 		<German>[ICON_BULLET]Reine Verteidigung: %D1_Change</German>
@@ -6379,7 +6379,7 @@
 		<Russian>Ïðîòîêîë çàùèòû 3.0</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DEMORALIZATION_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DEMORALIZATION</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Demoralization (less strength per Defense in a given turn.)</English>
 		<French>[ICON_BULLET]%D1_Change%% Démoralisation (moins de puissance en Défense lors d'un tour.)</French>
 		<Italian>[ICON_BULLET]%D1_Change%% Demoralizzazione (forza persa dalla difesa in un certo turno.)</Italian>
@@ -6441,7 +6441,7 @@
 		<Russian>Ïóñòûííûé ðàáîòíèê III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DETERMINATION_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DETERMINATION</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Determination (additional strength per Defense in a given turn.)</English>
 		<French>[ICON_BULLET]%D1_Change%% Détermination (Puissance supplémentaire en Défense lors d'un tour.)</French>
 		<Italian>[ICON_BULLET]%D1_Change%% Determinazione (forza aggiunta alla difesa in un certo turno.)</Italian>
@@ -6668,7 +6668,7 @@
 		<Russian>Ñàíèòàð IX</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DODGE_MODIFIER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DODGE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Additional %D1_Change%% Dodge</English>
 		<French>[ICON_BULLET]Esquive supplémentaire: %D1_Change%%</French>
 		<German>[ICON_BULLET]Ausweichen: %D1_Change%%</German>
@@ -6677,7 +6677,7 @@
 		<Russian>[ICON_BULLET]Äîá. óêëîíåíèå %D1_Change%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DODGE_VERSUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DODGE_VERSUS</Tag>
 		<English>[ICON_BULLET]%D1_Mod Dodge vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod Dodge contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod Ausweichen gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
@@ -6687,7 +6687,7 @@
 		<Russian>[ICON_BULLET]%D1_Mod óêëîíåíèå ïðîòèâ [LINK=%s2_AgainstType]%s2_Against[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DOMAIN_CARGO_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DOMAIN_CARGO_CHANGE</Tag>
 		<English>[ICON_BULLET]Outfits unit to transport %s1_Change Units [COLOR_WARNING_TEXT](And then allows NO OTHER domains!)[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Equipe l'unité pour transporter %s1_Change Unités</French>
 		<German>[ICON_BULLET]ermöglicht den Transport von %s1_Change</German>
@@ -6805,7 +6805,7 @@
 		<Russian>Ìóøòðà V</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DROP_SIGHT_UNSEEN_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DROP_SIGHT_UNSEEN</Tag>
 		<English>[ICON_BULLET]Can Paradrop on FoW Tiles</English>
 		<French>[ICON_BULLET]Peut être Parachuté dans le "Brouillard de Guerre"</French>
 		<German>[ICON_BULLET]Kann Fallschirmsprünge auch auf Feldern innerhalb des Nebels des Krieges durchführen</German>
@@ -6813,7 +6813,7 @@
 		<Polish>[ICON_BULLET]Zrzut możliwy na nieodkryte pola</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DV_MOVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DV_MOVE</Tag>
 		<English>[ICON_BULLET]+1 Move on Defensive Combat Victories</English>
 		<French>[ICON_BULLET]+1 déplacement en cas de Victoire Défensive</French>
 		<German>[ICON_BULLET]+1 Bewegung nach erfolgreicher Verteidigung</German>
@@ -6822,7 +6822,7 @@
 		<Russian>[ICON_BULLET]+1 к скорости после отраженной атаки</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DYNAMIC_DEFENSE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DYNAMIC_DEFENSE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Dynamic Defense Value</English>
 		<French>[ICON_BULLET]%D1_Change%% Défense Dynamique</French>
 		<German>[ICON_BULLET]%D1_Change%% auf Dynamische Verteidigung</German>
@@ -6831,7 +6831,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% к динамической защите</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EARLY_WITHDRAW_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_EARLY_WITHDRAW</Tag>
 		<English>[ICON_BULLET]Starts Withdrawal at %D1_Change%% HP</English>
 		<French>[ICON_BULLET]%D1_Change%% PV total pour commencer une retraite</French>
 		<German>[ICON_BULLET]Rückzug bei %D1_Change%% TP</German>
@@ -6981,7 +6981,7 @@
 		<Russian>Окружение III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ENCLOSE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ENCLOSE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Enclose Value</English>
 		<French>[ICON_BULLET]%D1_Change%% Encerclement</French>
 		<German>[ICON_BULLET]%D1_Change%% Einkreisen</German>
@@ -6990,7 +6990,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% шанса окружения</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ENDURANCE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ENDURANCE</Tag>
 		<English>[ICON_BULLET]%D1_Change Endurance</English>
 		<French>[ICON_BULLET]%D1_Change Endurance</French>
 		<Russian>[ICON_BULLET]%D1_Change к стойкости</Russian>
@@ -7032,7 +7032,7 @@
 		<Russian>Çàïàäíÿ III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EQUIPMENT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_EQUIPMENT</Tag>
 		<English>[ICON_BULLET]Equipment Promotion</English>
 		<French>[ICON_BULLET]Promotion Equipement</French>
 		<Italian>[ICON_BULLET]Promozioni dell'equipaggiamento</Italian>
@@ -7070,7 +7070,7 @@
 		<Russian>Ìàñòåð ïîáåãà II</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ESCAPE_TEXT_SPY</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ESCAPE_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Bonus Escape Chance</English>
 		<French>[ICON_BULLET]%d1_percent%% Bonus de Fuite (s'échapper)</French>
 		<German>[ICON_BULLET]%d1_percent%% Zusätzliche Fluchtchance</German>
@@ -7080,7 +7080,7 @@
 		<Russian>[ICON_BULLET]%d1_percent%% ê øàíñó ñêðûòüñÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ESPIONAGE_PILLAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ESPIONAGE_PILLAGE</Tag>
 		<English>[ICON_BULLET]Pillages [ICON_ESPIONAGE] in addition to [ICON_GOLD]</English>
 		<French>[ICON_BULLET]Récupère de l'[ICON_ESPIONAGE] en plus de l'[ICON_GOLD] lors des pillages</French>
 		<Spanish>[ICON_BULLET]Saquea [ICON_ESPIONAGE] además de [ICON_GOLD]</Spanish>
@@ -7088,7 +7088,7 @@
 		<Russian>[ICON_BULLET]Получает [ICON_ESPIONAGE] вместе с [ICON_GOLD] при грабеже</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EVASION_TEXT_SPY</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_EVASION_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Detection Evasion Bonus</English>
 		<French>[ICON_BULLET]%d1_percent%% Bonus pour échapper à la Détection</French>
 		<German>[ICON_BULLET]%d1_percent%% Bonus zum Entgehen einer Entdeckung</German>
@@ -7097,17 +7097,17 @@
 		<Polish>[ICON_BULLET]+%d1_percent%% do szansy na uniknięcie wykrycia</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EXCILE_ADD_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_EXCILE_ADD</Tag>
 		<English>[ICON_BULLET]Adds a reason for the unit to be considered an Excile.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité pour l'unité d'être considérée en exil.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EXCILE_REMOVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_EXCILE_REMOVE</Tag>
 		<English>[ICON_BULLET]Removes a reason for the unit to be considered an Excile.</English>
 		<French>[ICON_BULLET]Enlève la possibilité pour l'unité d'être considérée en exil.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_EXTRA_DROP_RANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_EXTRA_DROP_RANGE</Tag>
 		<English>[ICON_BULLET]+%d1 Paradrop Range</English>
 		<French>[ICON_BULLET]+%d1 Autonomie Pour les Missions Aériennes</French>
 		<German>[ICON_BULLET]+%d1 Reichweite für Fallschirmsprünge</German>
@@ -7169,7 +7169,7 @@
 		<Russian>Ôàíàòèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FATIGUE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FATIGUE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Fatigue (less strength per round.)</English>
 		<French>[ICON_BULLET]%D1_Change%% Fatigue (moins de puissance par round.)</French>
 		<Italian>[ICON_BULLET]%D1_Change%% Fatica (forza persa ogni turno.)</Italian>
@@ -7183,7 +7183,7 @@
 		<Russian>Àäåïò Ôàìýíü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FEATURE_PREREQ_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FEATURE_PREREQ</Tag>
 		<English>[ICON_BULLET]May only have promotion while on plots with %s1_Feature feature (or other specific feature(s) if also is listed).</English>
 		<French>[ICON_BULLET]Peut seulement avoir la promotion lorsque situé sur des case avec la caractéristique de terrain '%s1_Feature' (ou plusieurs aménagements spécifiques en cas de liste).</French>
 	</TEXT>
@@ -7562,7 +7562,7 @@
 		<Russian>Ôëàíãîâûé ìàíåâð III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FLANKING_STRENGTH_BY_UNIT_COMBAT_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FLANKING_STRENGTH_BY_UNIT_COMBAT_NEGATIVE</Tag>
 		<English>[ICON_BULLET]%D1_Change less Strength, and if totals negative, removes the Ability to Flank attack VS %s2_UnitCombat units.</English>
 		<French>[ICON_BULLET]%D1_Change moins de Puissance, et si le total est négatif, Enlève la capacité de mener les Attaques de Contournement contre les unités %s2_UnitCombat.</French>
 		<Italian>[ICON_BULLET]%D1_Change di forza in meno e, se il totale è negativo, rimuove l'abilità di effettuare attacchi ai fianchi VS %s2_UnitCombat units.</Italian>
@@ -7570,7 +7570,7 @@
 		<Russian>[ICON_BULLET]%D1_Change от Силы, и, если сумма отрицательна, отключается Способность фланговой атаки против отрядов %s2_UnitCombat.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FLANKING_STRENGTH_BY_UNIT_COMBAT_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FLANKING_STRENGTH_BY_UNIT_COMBAT_POSITIVE</Tag>
 		<English>[ICON_BULLET]%D1_Change more Strength, and possibly the Ability to Flank attack VS %s2_UnitCombat units.</English>
 		<French>[ICON_BULLET]%D1_Change de Puissance supplémentaire, et possibilité de mener des attaques de flanc contre les unités de type: %s2_UnitCombat.</French>
 		<Italian>[ICON_BULLET]%D1_Change di forza in più, e possibilmente l'abilità di attacchi ai fianchi VS %s2_UnitCombat units.</Italian>
@@ -7578,7 +7578,7 @@
 		<Russian>[ICON_BULLET]%D1_Change к Силе и, периодически, к фланговой атаке против отрядов %s2_UnitCombat.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FLANK_SUPPORT_PERCENT_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FLANK_SUPPORT_PERCENT_CHANGE</Tag>
 		<English>[ICON_BULLET]+%d1_Amount%% to Flank Support Value</English>
 		<French>[ICON_BULLET]+%d1_Amount%% à la Valeur de Soutien de Contournement</French>
 		<Italian>[ICON_BULLET]+%d1_Amount%% al valore di Supporto ai fianchi</Italian>
@@ -7586,7 +7586,7 @@
 		<Russian>[ICON_BULLET]+%d1_Amount%% пунктов к фланговой атаке</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FLIES_TO_MOVE_ADD</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FLIES_TO_MOVE_ADD</Tag>
 		<English>[ICON_BULLET]Adds one cause for the unit to fly when moving.</English>
 		<French>[ICON_BULLET]Ajoute la compétence de l'unité à se déplacer en volant.</French>
 		<German>[ICON_BULLET]Fliegende Fortbewegung: +1</German>
@@ -7595,7 +7595,7 @@
 		<Russian>[ICON_BULLET]Добавляет условие для полета отряда во время движения.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FLIES_TO_MOVE_SUBTRACT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FLIES_TO_MOVE_SUBTRACT</Tag>
 		<English>[ICON_BULLET]Removes one cause for the unit to fly when moving.</English>
 		<French>[ICON_BULLET]Enlève la compétence de l'unité à se déplacer en volant.</French>
 		<German>[ICON_BULLET]Fliegende Fortbewegung: -1</German>
@@ -7793,21 +7793,21 @@
 		<Russian>Ïîñòðîåíèå III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FORTITUDE_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FORTITUDE_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Fortitude</English>
 		<French>[ICON_BULLET]%D1_Change%% de Courage</French>
 		<Italian>[ICON_BULLET]%D1_Change%% Forza d'animo</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% Hart</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FORT_REPEL_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FORT_REPEL</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Repel value per turn fortified.</English>
 		<French>[ICON_BULLET]%D1_Change%% Expulsion (par tour fortifié).</French>
 		<Italian>[ICON_BULLET]%D1_Change%% valore di respinta per ogni turno fortificato.</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% Odpychanie (na turę fortyfikowania).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FRAYS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FRAYS</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Frays (less withdrawal likelihood per Attack in a given turn.)</English>
 		<French>[ICON_BULLET]%D1_Change%% Confusion (probabilité de retrait réduite en attaque lors d'un tour.)</French>
 		<Italian>[ICON_BULLET]%D1_Change%% Confusione (probabilità di ritirata perse per ogni attacco in un certo turno.)</Italian>
@@ -7820,7 +7820,7 @@
 		<Russian>Борец за свободу</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FREE_DROP_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FREE_DROP</Tag>
 		<English>[ICON_BULLET]No Movement Cost to Paradrop and Can Attack After Paradrop</English>
 		<French>[ICON_BULLET]Pas de cout de mouvement lors du parachutage, et Attaque possible</French>
 		<German>[ICON_BULLET]Fallschirmsprünge benötigen keine Bewegungspunkte und Angriffe werden unmittelbar nach einem Fallschirmsprung ermöglicht</German>
@@ -7829,7 +7829,7 @@
 		<Russian>[ICON_BULLET]Стоимость передвижения не снижается и можно атаковать после десантирования</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FRONT_SUPPORT_PERCENT_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FRONT_SUPPORT_PERCENT_CHANGE</Tag>
 		<English>[ICON_BULLET]+%d1_Amount%% to Front Support Value</English>
 		<French>[ICON_BULLET]+%d1_Amount%% à la Valeur du Soutien au Front</French>
 		<Italian>[ICON_BULLET]+%d1_Amount%% al valore di Supporto al fronte</Italian>
@@ -8407,7 +8407,7 @@
 		<Russian>Ëå÷åíèå V</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_ADJACENT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_ADJACENT</Tag>
 		<English>[ICON_BULLET]Assists in Healing %s1_UNITCOMBAT Units in Adjacent Tiles %D2_Heals%%[SPACE]</English>
 		<French>[ICON_BULLET]Porte Assistance aux unités %s1_UNITCOMBAT des cases adjacentes %D2_Heals%%[SPACE]</French>
 		<German>[ICON_BULLET]verbessert die Regeneration von Einheiten der Kategorie "%s1_UNITCOMBAT" auf angrenzenden Feldern um %D2_Heals%%[SPACE]</German>
@@ -8415,7 +8415,7 @@
 		<Russian>[ICON_BULLET]Ïîìîãàåò â ëå÷åíèè %s1_UNITCOMBAT îòðÿäîâ íà ñîñåäíèõ êëåòêàõ %D2_Heals%%[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HEALS_UNITCOMBAT_SAME_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_SAME</Tag>
 		<English>[ICON_BULLET]Assists in Healing %s1_UNITCOMBAT Units in Same Tile %D2_Amount%%[SPACE]</English>
 		<French>[ICON_BULLET]Porte Assistance aux unités %s1_UNITCOMBAT de la même case %D2_Amount%%[SPACE]</French>
 		<German>[ICON_BULLET]verbessert die Regeneration von Einheiten der Kategorie "%s1_UNITCOMBAT" auf dem gleichen Feld um %D2_Heals%%[SPACE]</German>
@@ -8423,7 +8423,7 @@
 		<Russian>[ICON_BULLET]Ïîìîãàåò â ëå÷åíèè %s1_UNITCOMBAT îòðÿäîâ íà ýòèõ æå êëåòêàõ %D2_Amount%%[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HEAL_SUPPORT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_HEAL_SUPPORT</Tag>
 		<English>[ICON_BULLET]Can heal %D1_Amount unit(s)/turn</English>
 		<French>[ICON_BULLET]Peut soigner %D1_Amount unité(s)/tour</French>
 		<German>[ICON_BULLET]kann %D1_Amount Einheiten pro Runde heilen</German>
@@ -8483,13 +8483,13 @@
 		<Russian>Ãåðîèçì II</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HIDDEN_NATIONALITY_ADDS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_HIDDEN_NATIONALITY_ADDS</Tag>
 		<English>[ICON_BULLET]Hides the unit's Nationality</English>
 		<French>[ICON_BULLET]Cache la nationalité de l'unité</French>
 		<Russian>[ICON_BULLET]Скрывает национальность отряда</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HIDDEN_NATIONALITY_REMOVES_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_HIDDEN_NATIONALITY_REMOVES</Tag>
 		<English>[ICON_BULLET]Reveals the unit's Nationality</English>
 		<French>[ICON_BULLET]Révèle la Nationalité de l'unité</French>
 		<Russian>[ICON_BULLET]Раскрывает национальность отряда</Russian>
@@ -8538,7 +8538,7 @@
 		<Russian>Ãîðåö</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HILLS_WORK_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_HILLS_WORK</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Work Speed on Hills</English>
 		<French>[ICON_BULLET]%D1_Change%% Vitesse de Travail sur les Collines</French>
 		<Italian>[ICON_BULLET]%D1_Change%% alla velocità di lavoro in collina</Italian>
@@ -8881,7 +8881,7 @@
 		<Russian>Опознание III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_IGNORE_NO_ENTRY_LEVEL_ADD</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_IGNORE_NO_ENTRY_LEVEL_ADD</Tag>
 		<English>[ICON_BULLET]Adds one cause for the unit to ignore Minimum Defense to Attack City requirements.</English>
 		<French>[ICON_BULLET]Ajoute la compétence de l'unité d'ignorer la défense minimale lors de l'attaque d'une Ville.</French>
 		<Italian>[ICON_BULLET]Aggiunge una causa per cui l'unità è in grado di ignorare il livello minimo di difesa di una città.</Italian>
@@ -8889,7 +8889,7 @@
 		<Russian>[ICON_BULLET]Добавляет шанс для отряда на игнорирование требования Минимальной защиты при штурме города.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_IGNORE_NO_ENTRY_LEVEL_SUBTRACT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_IGNORE_NO_ENTRY_LEVEL_SUBTRACT</Tag>
 		<English>[ICON_BULLET]Removes one cause for the unit to ignore Minimum Defense to Attack City requirements.</English>
 		<French>[ICON_BULLET]Enlève la compétence de l'unité d'ignorer la défense minimale lors de l'attaque d'une Ville.</French>
 		<Italian>[ICON_BULLET]Rimuove una causa per cui l'unità è in grado di ignorare il livello minimo di difesa di una città.</Italian>
@@ -8897,7 +8897,7 @@
 		<Russian>[ICON_BULLET]Устраняет причину, по которой отряд должен игнорировать требования Минимальной защиты при штурме города.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_IGNORE_TERRAIN_DAMAGE</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_IGNORE_TERRAIN_DAMAGE</Tag>
 		<English>[ICON_BULLET]Can Safely Traverse %s1 without recieving damage</English>
 		<French>[ICON_BULLET]Peut traverser %s1 sans recevoir de dommages</French>
 		<German>[ICON_BULLET]Kann %s1 sicher passieren, ohne Schaden zu nehmen</German>
@@ -8907,7 +8907,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò áëàãîïîëó÷íî ïåðåñå÷ü %s1 íå ïîëó÷àÿ ïîâðåæäåíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_IGNORE_ZONE_OF_CONTROL_ADD</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_IGNORE_ZONE_OF_CONTROL_ADD</Tag>
 		<English>[ICON_BULLET]Adds one cause for the unit to ignore Zones of Control.</English>
 		<French>[ICON_BULLET]Ajoute la compétence de l'unité d'ignorer les Zones de contrôle.</French>
 		<Italian>[ICON_BULLET]Aggiunge una causa per cui l'unità è in grado di ignorare le zone di controllo.</Italian>
@@ -8915,7 +8915,7 @@
 		<Russian>[ICON_BULLET]Добавляет возможность отряду иногда игнорировать зоны контроля.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_IGNORE_ZONE_OF_CONTROL_SUBTRACT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_IGNORE_ZONE_OF_CONTROL_SUBTRACT</Tag>
 		<English>[ICON_BULLET]Removes one cause for the unit to ignore Zones of Control.</English>
 		<French>[ICON_BULLET]Enlève la compétence de l'unité d'ignorer les Zones de contrôle.</French>
 		<Italian>[ICON_BULLET]Rimuove una causa per cui l'unità è in grado di ignorare le zone di controllo.</Italian>
@@ -8954,7 +8954,7 @@
 		<Russian>Ñîâðåìåííûé ðàäàð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_IMPROVEMENT_PREREQ_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_IMPROVEMENT_PREREQ</Tag>
 		<English>[ICON_BULLET]May only have promotion while on plots with %s1_Feature improvement (or other specific improvement(s) or specific buildings in a city if also listed).</English>
 		<French>[ICON_BULLET]Peut seulement avoir la promotion lorsque situé sur des case avec l'aménagement '%s1_Feature' (ou dans une ville avec un bâtiment spécifique, ou plusieurs aménagements en cas de liste).</French>
 	</TEXT>
@@ -9077,7 +9077,7 @@
 		<Russian>Мнимый купец III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INSIDIOUSNESS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_INSIDIOUSNESS</Tag>
 		<English>[ICON_BULLET]%s1_Change%% Insidiousness</English>
 		<French>[ICON_BULLET]%s1_Change%% Incidiosité</French>
 		<German>[ICON_BULLET]Hinterlist: %s1_Change%%</German>
@@ -9138,7 +9138,7 @@
 		<Russian>Вдохновитель IX</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INSTIGATE2_TEXT_SPY</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_INSTIGATE2_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Bonus City Revolt From Missions</English>
 		<French>[ICON_BULLET]%d1_percent%% Bonus de Mission de Révolte de Villes</French>
 		<German>[ICON_BULLET]%d1_percent%% Zusätzliche Stadtrevolten durch Missionen</German>
@@ -9148,7 +9148,7 @@
 		<Russian>[ICON_BULLET]%d1_percent%% Áîíóñ ê ýôôåêòó ïîäíÿòèÿ áóíòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INSTIGATE_TEXT_SPY</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_INSTIGATE_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Bonus Unrest From Missions</English>
 		<French>[ICON_BULLET]%d1_percent%% Bonus de Missions d'Agitation</French>
 		<German>[ICON_BULLET]%d1_percent%% Zusätzliche Unruhe durch Missionen</German>
@@ -9188,7 +9188,7 @@
 		<Russian>Ïîäñòðåêàòåëü III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INTENSIFIES_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_INTENSIFIES</Tag>
 		<English>[ICON_BULLET]Intensifies: Chance to Overcome is reduced by cumulative %D1_Change%% each turn</English>
 		<French>[ICON_BULLET]Intensification: La probabilité de supématie est réduite progressivement, de %D1_Change%% à chaque tour</French>
 		<Italian>[ICON_BULLET]Intensificazione: le chance di Superamento vengono ridotte di %D1_Change%% ogni turno</Italian>
@@ -9239,7 +9239,7 @@
 		<Russian>Ïåðåõâàò II</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INTERCEPT_TEXT_SPY</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_INTERCEPT_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Enemy Spy Detection Bonus</English>
 		<French>[ICON_BULLET]%d1_percent%% Bonus de Détection des Espions Ennemis</French>
 		<German>[ICON_BULLET]%d1_percent%% Bonus zur Entdeckung feindlicher Spione</German>
@@ -9249,7 +9249,7 @@
 		<Russian>[ICON_BULLET]%d1_percent%% ê ðàñêðûòèþ âðàæåñêèõ øïèîíîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INTERCEPT_TEXT_SPY_COUNTER</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_INTERCEPT_SPY_COUNTER</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Bonus To Counter Espionage Missions</English>
 		<French>[ICON_BULLET]%d1_percent%% Bonus des Missions de Contre-Espionnage</French>
 		<German>[ICON_BULLET]%d1_percent%% Bonus für Gegenspionage-Missionen</German>
@@ -9259,7 +9259,7 @@
 		<Russian>[ICON_BULLET]%d1_percent%% ê ìèññèÿì êîíòððàçâåäêè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INVESTIGATION_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_INVESTIGATION</Tag>
 		<English>[ICON_BULLET]%s1_Change%% Investigation</English>
 		<German>[ICON_BULLET]%s1_Change%% Ermittlungen</German>
 		<Russian>[ICON_BULLET]%s1_Change%% к Расследованию</Russian>
@@ -9402,7 +9402,7 @@
 		<Russian>Тонкий слух III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_KNOCKBACK_RETRIES_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_KNOCKBACK_RETRIES</Tag>
 		<English>[ICON_BULLET]%D1_Change Knockback attempts</English>
 		<French>[ICON_BULLET]%D1_Change Tentatives d'écrasement</French>
 		<Italian>[ICON_BULLET]%D1_Change tentativi di Sbaraglio</Italian>
@@ -9410,7 +9410,7 @@
 		<Russian>[ICON_BULLET]+%D1_Change ïîïûòêè îãëóøåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_KNOCKBACK_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_KNOCKBACK</Tag>
 		<English>[ICON_BULLET]%D1_Change%% chance per round to Knockback defenders.</English>
 		<French>[ICON_BULLET]%D1_Change%% chance par round d'Ecraser les défenseurs.</French>
 		<Italian>[ICON_BULLET]%D1_Change%% di chance per turno di mettere in fuga i difensori.</Italian>
@@ -9418,7 +9418,7 @@
 		<Russian>[ICON_BULLET]+%D1_Change%% øàíñà çà õîä îãëóøèòü îáîðîíÿþùåãîñÿ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_KNOCKBACK_VERSUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_KNOCKBACK_VERSUS</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Knockback vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% Knockback contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Knockback gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
@@ -9562,7 +9562,7 @@
 		<Russian>Ëåâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_LEVEL_PREREQ_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_LEVEL_PREREQ</Tag>
 		<English>[ICON_BULLET]Level Prerequisite: %d1_Change</English>
 		<French>[ICON_BULLET]Niveau pré-requis: %d1_Change</French>
 		<German>[ICON_BULLET]erforderliche Stufe: %d1_Change</German>
@@ -9640,7 +9640,7 @@
 		<Russian>Âåñû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_LINE_PRIORITY</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_LINE_PRIORITY</Tag>
 		<English>[ICON_BULLET]Promotion Line Rank: %d1_PromotionLine</English>
 		<French>[ICON_BULLET]Rang: %d1_PromotionLine</French>
 		<German>[ICON_BULLET]Rang: %d1_PromotionLine</German>
@@ -9649,7 +9649,7 @@
 		<Russian>[ICON_BULLET]Óðîâåíü: %d1_PromotionLine</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_LINE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_LINE</Tag>
 		<English>[ICON_BULLET]On the %s1_PromotionLine</English>
 		<French>[ICON_BULLET]%s1_PromotionLine</French>
 		<German>[ICON_BULLET]Beförderungsreihe: %s1_PromotionLine</German>
@@ -9769,7 +9769,7 @@
 		<Russian>Длинная рука III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_LONG_RANGE_SUPPORT_PERCENT_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_LONG_RANGE_SUPPORT_PERCENT_CHANGE</Tag>
 		<English>[ICON_BULLET]+%d1_Amount%% to Long Range Support Value</English>
 		<French>[ICON_BULLET]+%d1_Amount%% à la Valeur du Soutien Longue Portée</French>
 		<Italian>[ICON_BULLET]+%d1_Amount%% al valore di Supporto a lungo raggio</Italian>
@@ -9871,7 +9871,7 @@
 		<Russian>Âåðíîñòü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_LOYALTY_TEXT_SPY</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_LOYALTY_SPY</Tag>
 		<English>[ICON_BULLET]Never Reveals Nationality</English>
 		<French>[ICON_BULLET]Ne révèle jamais sa Nationalité</French>
 		<German>[ICON_BULLET]Verrät nie die Nationalität</German>
@@ -9881,14 +9881,14 @@
 		<Russian>[ICON_BULLET]Íèêîãäà íå ðàñêðûâàåò íàöèîíàëüíîñòü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_LUNGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_LUNGE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Lunge Value</English>
 		<French>[ICON_BULLET]%D1_Change%% en Fente</French>
 		<Italian>[ICON_BULLET]%D1_Change%% al valore di Affondo</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% Wartości Pchnięcia</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MAKES_DAMAGE_COLD_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_MAKES_DAMAGE_COLD</Tag>
 		<English>[ICON_BULLET]Makes the Damage this Unit deals Cold Damage.</English>
 		<French>[ICON_BULLET]L'unité inflige des dégâts liés au froid.</French>
 		<Italian>[ICON_BULLET]Fa in modo che l'unità infligga Danno da freddo.</Italian>
@@ -9896,7 +9896,7 @@
 		<Russian>[ICON_BULLET]Может наносить урон холодом враждебным отрядам.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MAKES_DAMAGE_NOT_COLD_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_MAKES_DAMAGE_NOT_COLD</Tag>
 		<English>[ICON_BULLET]Removes a cause this unit would have to be dealing Cold Damage.</English>
 		<French>[ICON_BULLET]L'unité n'inflige plus de dégâts liés au froid.</French>
 		<Italian>[ICON_BULLET]Rimuove una fonte di Danno da freddo per quest'unità.</Italian>
@@ -9964,7 +9964,7 @@
 		<Russian>[ICON_BULLET]Êðàäåò 4% [ICON_GOLD] èç çàïàñîâ ïðîòèâíèêà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MARAUDER_PILLAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_MARAUDER_PILLAGE</Tag>
 		<English>[ICON_BULLET]Pillages twice the [ICON_GOLD] and potentially twice the Improvement</English>
 		<French>[ICON_BULLET]Les pillages rapportent deux fois plus d'[ICON_GOLD], y compris pour les aménagements</French>
 		<Spanish>[ICON_BULLET]Saquea el doble de [ICON_GOLD] y potencialmente el doble de la mejora</Spanish>
@@ -10024,7 +10024,7 @@
 		<Russian>Áîåâûå èñêóññòâà III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MAX_HP</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_MAX_HP</Tag>
 		<English>[ICON_BULLET]Max HP: %D1%% (usually 100.)</English>
 		<French>[ICON_BULLET]PV Max: %D1%% (ref. 100.)</French>
 		<German>[ICON_BULLET]TP-Maximum: %D1%% (i.d.R. 100)</German>
@@ -10033,7 +10033,7 @@
 		<Russian>[ICON_BULLET]Ìàêñ. îïûò: %D1%% (îáû÷íî 100.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MAX_UNITS_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_MAX_UNITS_CHANGE</Tag>
 		<English>[ICON_BULLET]+%d1 Increase to Maximum Number of Units affected by Collateral Damage</English>
 		<French>[ICON_BULLET]+%d1 d'augmentation du numbre maximum d'unités affectées par les dégâts collatéraux</French>
 		<German>[ICON_BULLET]+%d1 Erhöhung der maximalen Anzahl von durch Kollateralschaden getroffene Einheiten</German>
@@ -10042,7 +10042,7 @@
 		<Russian>[ICON_BULLET]+%d1 óâåëè÷åíèÿ ìàêñ. êîëè÷åñòâà îòðÿäîâ, ïîëó÷àþùèõ ñîïóòñòâ. óùåðá</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MEDIUM_RANGE_SUPPORT_PERCENT_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_MEDIUM_RANGE_SUPPORT_PERCENT_CHANGE</Tag>
 		<English>[ICON_BULLET]+%d1_Amount%% to Medium Range Support Value</English>
 		<French>[ICON_BULLET]+%d1_Amount%% à la Valeur du Soutien Moyenne Portée</French>
 		<Italian>[ICON_BULLET]+%d1_Amount%% al valore di Supporto a medio raggio</Italian>
@@ -10378,7 +10378,7 @@
 		<Russian>Ïîêîðèòåëü âåðøèí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MOVING_PILLAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_MOVING_PILLAGE</Tag>
 		<English>[ICON_BULLET]Automatically pillages improvements on move.</English>
 		<French>[ICON_BULLET]Réalise automatiquement les pillages des aménagements lors de ses déplacements.</French>
 		<Spanish>[ICON_BULLET]Saquea automáticamente las mejoras en movimiento</Spanish>
@@ -10493,12 +10493,12 @@
 		<Russian>Íàâèãàöèÿ III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NONONOWNED_ADD_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_NONONOWNED_ADD</Tag>
 		<English>[ICON_BULLET]Adds a reason for the unit to be restricted from entering a city that is not your own without attacking it.</English>
 		<French>[ICON_BULLET]Ajoute la restriction pour l'unité de n'accéder à une ville qui n'est pas la possession du joueur qu'en l'attaquant.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NONONOWNED_REMOVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_NONONOWNED_REMOVE</Tag>
 		<English>[ICON_BULLET]Removes a reason for the unit to be restricted from entering a city that is not your own without attacking it.</English>
 		<French>[ICON_BULLET]Enlève la restriction pour l'unité de n'accéder à une ville qui n'est pas la possession du joueur qu'en l'attaquant.</French>
 	</TEXT>
@@ -10563,44 +10563,44 @@
 		<Russian>Íåëåòàëüíîå îðóæèå V</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE</Tag>
 		<English>[ICON_BULLET]Removes %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</English>
 		<French>[ICON_BULLET]Enlève les %D1_Reasons raisons(s) pour ne pas pouvoir bénéficier des bonus de combat de défense.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_NO_DEFENSIVE_BONUS_CHANGE_POSITIVE</Tag>
 		<English>[ICON_BULLET]Gives %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</English>
 		<French>[ICON_BULLET]Donne %D1_Reasons raisons(s) pour ne pas pouvoir bénéficier des bonus de combat de défense.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_INVISIBILITY_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_NO_INVISIBILITY_CHANGE</Tag>
 		<English>[ICON_BULLET]Trait - Never Invisible: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Toujours visible : %D1_Change</French>
 		<German>[ICON_BULLET]Verhinderte Unsichtbarkeit: %D1_Change</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_SPREAD_CITY_TO_UNIT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_NO_SPREAD_CITY_TO_UNIT</Tag>
 		<English>[ICON_BULLET]This Disease cannot be caught by a unit in a city suffering from an outbreak.</English>
 		<French>[ICON_BULLET]Cette maladie ne peut pas être transmise à une unité depuis une ville infectée.</French>
 		<Italian>[ICON_BULLET]Questa malattia non può essere contratta da un'unità stanziata in una città in cui è in corso un'epidemia.</Italian>
 		<Polish>[ICON_BULLET]Choroba nie może zostać złapana przez jednostkę w mieście, które cierpi z jej powodu.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_SPREAD_ON_BATTLE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_NO_SPREAD_ON_BATTLE</Tag>
 		<English>[ICON_BULLET]This Disease cannot be contracted from battle.</English>
 		<French>[ICON_BULLET]Cette maladie ne peut pas être contractée à l'issue d'un combat.</French>
 		<Italian>[ICON_BULLET]Questa malattia non può essere contratta in battaglia.</Italian>
 		<Polish>[ICON_BULLET]Choroba nie może zostać przejęta podczas walki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_SPREAD_UNIT_PROXIMITY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_NO_SPREAD_UNIT_PROXIMITY</Tag>
 		<English>[ICON_BULLET]This Disease cannot be contracted from other Units on the same plot.</English>
 		<French>[ICON_BULLET]Cette maladie ne peut pas être contractée par les autres unités de la même case.</French>
 		<Italian>[ICON_BULLET]Questa malattia non può essere contratta da altre unità sulla stessa casella.</Italian>
 		<Polish>[ICON_BULLET]Choroba nie może zostać przejęta przez inne jednostki na tym samym polu.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_SPREAD_UNIT_TO_CITY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_NO_SPREAD_UNIT_TO_CITY</Tag>
 		<English>[ICON_BULLET]This Disease cannot cause an outbreak in a city from units on the same plot.</English>
 		<French>[ICON_BULLET]Cette maladie ne peut pas se propager et infecter une ville lorsque les unités sont sur la même case.</French>
 		<Italian>[ICON_BULLET]Questa malattia non può causare un'epidemia in una città portata da unità su quella casella.</Italian>
@@ -10713,7 +10713,7 @@
 		<Russian>Ïî÷èâàþùèé íà ëàâðàõ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ONEUP_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ONEUP</Tag>
 		<English>[ICON_BULLET]This Promotion gives the Unit an Extra Life</English>
 		<French>[ICON_BULLET]Cet Promotion donne le Groupe une Vie Suplementaire</French>
 		<German>[ICON_BULLET]Diese Beförderung gibt dieser Einheit ein zusätzliches Leben</German>
@@ -10722,7 +10722,7 @@
 		<Russian>[ICON_BULLET]Эта квалификация дает отряду дополнительную жизнь</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ONSLAUGHT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ONSLAUGHT</Tag>
 		<English>[ICON_BULLET]Continues attack while at full [ICON_STRENGTH]</English>
 		<French>[ICON_BULLET]Continue l'Attaque dès que la [ICON_STRENGTH] est au Maximum</French>
 		<German>[ICON_BULLET]Setzt Angriff fort bei voller [ICON_STRENGTH]</German>
@@ -10782,7 +10782,7 @@
 		<Russian>Ïðèêàç Îðìàçäû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_OUTCOME_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_OUTCOME</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% to [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% à [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET][LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%%</German>
@@ -10792,14 +10792,14 @@
 		<Russian>[ICON_BULLET]%D1_Mod%% против [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_OVERCOME_PROBABILITY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_OVERCOME_PROBABILITY</Tag>
 		<English>[ICON_BULLET]Base chance to overcome: %D1_Change%%</English>
 		<French>[ICON_BULLET]Probabilité de Base de suprématie: %D1_Change%%</French>
 		<Italian>[ICON_BULLET]Chance base di superamento: %D1_Change%%</Italian>
 		<Polish>[ICON_BULLET]Bazowa szansa na wyleczenie: %D1_Change%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_OVERRUN_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_OVERRUN</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Overrun vs fortify bonuses.</English>
 		<French>[ICON_BULLET]%D1_Change%% Invasion contre bonus de fortification.</French>
 		<Italian>[ICON_BULLET]%D1_Change%% invasione contro i bonus di fortificazione.</Italian>
@@ -10828,7 +10828,7 @@
 		<Russian>Êðóøèòåëü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_OV_MOVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_OV_MOVE</Tag>
 		<English>[ICON_BULLET]+1 Move on Offensive Combat Victories</English>
 		<French>[ICON_BULLET]+1 déplacement en cas de Victoire offensive</French>
 		<German>[ICON_BULLET]+1 Bewegung nach erfolgreichem Angriff</German>
@@ -10918,7 +10918,7 @@
 		<Russian>Àóòèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PARALYZE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PARALYZE</Tag>
 		<English>[ICON_BULLET]Unit is Paralyzed until Overcome</English>
 		<French>[ICON_BULLET]L'Unité est paralysée jusqu'à la rémission</French>
 		<Italian>[ICON_BULLET]L'unità è paralizzata fino al Superamento</Italian>
@@ -10992,12 +10992,12 @@
 		<Russian>Ïàðàìåäèê III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PASSAGE_ADD_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PASSAGE_ADD</Tag>
 		<English>[ICON_BULLET]Adds a reason for the unit to be considered qualified to pass through territories with a Right of Passage or Open Borders agreement.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité pour l'unité de traverser les frontières avec un droit de passage ou un accord de frontière ouverte.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PASSAGE_REMOVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PASSAGE_REMOVE</Tag>
 		<English>[ICON_BULLET]Removes a reason for the unit to be considered qualified to pass through territories with a Right of Passage or Open Borders agreement.</English>
 		<French>[ICON_BULLET]Enlève la possibilité pour l'unité de traverser les frontières avec un droit de passage ou un accord de frontière ouverte.</French>
 	</TEXT>
@@ -11095,7 +11095,7 @@
 		<Russian>Ïàòðóëü III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PEAKS_WORK_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PEAKS_WORK</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Work Speed on Peaks</English>
 		<French>[ICON_BULLET]%D1_Change%% Vitesse de Travail sur Montagnes</French>
 		<Italian>[ICON_BULLET]%D1_Change%% alla velocità di lavoro in montagna</Italian>
@@ -11187,14 +11187,14 @@
 		<Russian>Ðûáû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POISON_PROB_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_POISON_PROB</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Poison Probability Modifier</English>
 		<French>[ICON_BULLET]%D1_Change%% Modificateur de prob. de poison</French>
 		<Italian>[ICON_BULLET]%D1_Change%% alla probabilità di Avvelenamento</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% do Modyfikatora Prawdopodobieństwa Trucizny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POISON_TEXT_SPY</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_POISON_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Bonus Unhealthiness From Missions</English>
 		<French>[ICON_BULLET]%d1_percent%% Bonus des Missions d'empoisonnement</French>
 		<German>[ICON_BULLET]%d1_percent%% Zusätzliche Ungesundheit durch Missionen</German>
@@ -11389,28 +11389,28 @@
 		<Russian>Ýíåðãåòè÷åñêèé ëó÷ II</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POWER_SHOTS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_POWER_SHOTS</Tag>
 		<English>[ICON_BULLET]Additional %D1_Change Power Shots</English>
 		<French>[ICON_BULLET]Coups Puissants supplémentaires: %D1_Change</French>
 		<Italian>[ICON_BULLET]Probabilità supplementare di Colpi potenti: %D1_Change</Italian>
 		<Polish>[ICON_BULLET]Dodatkowe Potężne Uderzenie: %D1_Change</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POWER_SHOT_COMBAT_MODIFIER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_POWER_SHOT_COMBAT_MODIFIER</Tag>
 		<English>[ICON_BULLET]Additional %D1_Change%% Combat during Power Shots</English>
 		<French>[ICON_BULLET]Combat supplémentaire lors d'un Coup Puissant: %D1_Change%%</French>
 		<Italian>[ICON_BULLET]Probabilità supplementare di combattimento durante colpi potenti: %D1_Change%%</Italian>
 		<Polish>[ICON_BULLET]Dodatkowa walka podczas Silnych Uderzeń: %D1_Change%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POWER_SHOT_CRITICAL_MODIFIER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_POWER_SHOT_CRITICAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Additional %D1_Change%% Critical Hit Chance per round of battle during Power Shots</English>
 		<French>[ICON_BULLET]Chances de coup critique supplémentaire lors d'un Coup Puissant: %D1_Change%%</French>
 		<Italian>[ICON_BULLET]Probabilità supplementare di colpi critici durante colpi potenti: %D1_Change%%</Italian>
 		<Polish>[ICON_BULLET]Dodatkowa Szansa na Krytyczne Uderzenie w każdej rundzie podczas Silnych Uderzeń: %D1_Change%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POWER_SHOT_PRECISION_MODIFIER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_POWER_SHOT_PRECISION_MODIFIER</Tag>
 		<English>[ICON_BULLET]Additional %D1_Change Precision during Power Shots</English>
 		<French>[ICON_BULLET]Précision supplémentaire lors d'un Coup Puissant: %D1_Change</French>
 		<German>[ICON_BULLET]Präzision bei Wuchtschüssen: %D1_Change</German>
@@ -11418,7 +11418,7 @@
 		<Polish>[ICON_BULLET]Dodatkowa Precyzja Podczas Silnych Uderzeń: %D1_Change</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POWER_SHOT_PUNCTURE_MODIFIER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_POWER_SHOT_PUNCTURE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Additional %D1_Change Puncture during Power Shots</English>
 		<French>[ICON_BULLET]Perforation supplémentaire lors d'un Coup Puissant: %D1_Change</French>
 		<Italian>[ICON_BULLET]Probabilità supplementare perforazione durante colpi potenti: %D1_Change</Italian>
@@ -11465,7 +11465,7 @@
 		<Russian>Ïðèöåëüíûé óäàð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PRECISION_MODIFIER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PRECISION_MODIFIER</Tag>
 		<English>[ICON_BULLET]Additional %D1_Change%% Precision</English>
 		<French>[ICON_BULLET]Précision supplémentaire: %D1_Change%%</French>
 		<German>[ICON_BULLET]Präzision: %D1_Change%%</German>
@@ -11474,7 +11474,7 @@
 		<Russian>[ICON_BULLET]Доб. к прицеливанию %D1_Change%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PRECISION_VERSUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PRECISION_VERSUS</Tag>
 		<English>[ICON_BULLET]%D1_Mod Precision vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod Precision contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod Präzision gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
@@ -11506,7 +11506,7 @@
 		<Russian>Êðîâîæàäíîñòü II</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PREREQ_NORM_INVISIBLE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PREREQ_NORM_INVISIBLE</Tag>
 		<English>[ICON_BULLET]Requires some invisibility to use</English>
 		<French>[ICON_BULLET]Requiert une capacité d'invisibilité</French>
 		<German>[ICON_BULLET]benötigt Unsichtbarkeit</German>
@@ -11555,7 +11555,7 @@
 		<Russian>Äåðåâÿííîå îðóæèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PROBABILITY_OF_WORSENING_MODIFIER</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PROBABILITY_OF_WORSENING_MODIFIER</Tag>
 		<English>[ICON_BULLET]Chance of Worsening Modifier: %D1_Amount%%</English>
 		<French>[ICON_BULLET]Modif des Chances de déterioration de l'Etat: %D1_Amount%%</French>
 		<Italian>[ICON_BULLET]Modificatore delle chance di peggioramento: %D1_Amount%%</Italian>
@@ -11634,7 +11634,7 @@
 		<Russian>Гордый пират</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PUNCTURE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PUNCTURE</Tag>
 		<English>[ICON_BULLET]%D1_Change Puncture Value</English>
 		<French>[ICON_BULLET]%D1_Change Valeur de Perforation</French>
 		<Italian>[ICON_BULLET]%D1_Change valore di perforazione</Italian>
@@ -11642,7 +11642,7 @@
 		<Russian>[ICON_BULLET]%D1_Change к прокалыванию</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PUNCTURE_VERSUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PUNCTURE_VERSUS</Tag>
 		<English>[ICON_BULLET]%D1_Mod Puncture vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod Puncture contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod Puncture gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
@@ -11652,7 +11652,7 @@
 		<Russian>[ICON_BULLET]%D1_Mod к колющему урону в бою с [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PURSUIT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PURSUIT</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %D1_Change%%</English>
 		<French>[ICON_BULLET]%D1_Change%% Chances de poursuite</French>
 		<German>[ICON_BULLET]Verfolgungsjagd: %d1_Amount%%</German>
@@ -11662,7 +11662,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% øàíñ ïåðåõâàòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PURSUIT_VERSUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_PURSUIT_VERSUS</Tag>
 		<English>[ICON_BULLET]Pursuit vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%%</English>
 		<French>[ICON_BULLET]%D1_Mod%% Poursuite contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Verfolgung von [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
@@ -11785,7 +11785,7 @@
 		<Russian>Ãîí÷àÿ III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RADIATION_TEXT_SPY</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_RADIATION_SPY</Tag>
 		<English>[ICON_BULLET]Creates fallout on sabotaged improvements.</English>
 		<French>[ICON_BULLET]Génère des dommages radioactifs lors du sabotage d'aménagements.</French>
 		<German>[ICON_BULLET]Verursacht radioaktiven Niederschlag auf sabotierten Modernisierungen.</German>
@@ -11804,7 +11804,7 @@
 		<Russian>ßäåðíûå çàðÿäû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_RAGE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Rage (additional strength per round.)</English>
 		<French>[ICON_BULLET]%D1_Change%% Rage (Puissance supplémentaire par round.)</French>
 		<Italian>[ICON_BULLET]%D1_Change%% Ira (forza aggiunta ogni turno.)</Italian>
@@ -11845,7 +11845,7 @@
 		<Russian>Äîæäü áîëòîâ III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RAMPAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_RAMPAGE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Rampage (additional strength per attack in a given turn.)</English>
 		<French>[ICON_BULLET]%D1_Change%% Frénésie (Puissance supplémentaire en attaque lors d'un tour.)</French>
 		<Italian>[ICON_BULLET]%D1_Change%% Frenesia (forza aggiunta per ogni attacco in un certo turno.)</Italian>
@@ -12006,7 +12006,7 @@
 		<Russian>Äàëüíîñòü II</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RANGED_BOMBARD_DIRECT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_RANGED_BOMBARD_DIRECT</Tag>
 		<English>[ICON_BULLET]Ranged Assault is likely to strike lead defender</English>
 		<French>[ICON_BULLET]Assaut à distance cible le défenseur principal</French>
 		<Polish>[ICON_BULLET]Ostrzał z dystansu najprawdopodobnie trafi w głównego obrońcę.</Polish>
@@ -12118,7 +12118,7 @@
 		<Russian>Царедворец III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REFLEXES_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_REFLEXES</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Reflexes (additional withdrawal likelihood per Attack in a given turn.)</English>
 		<French>[ICON_BULLET]%D1_Change%% Réflexes (probabilité de retrait accrue en attaque lors d'un tour.)</French>
 		<Italian>[ICON_BULLET]%D1_Change%% Riflessi (probabilità di ritirata aggiunte per ogni attacco in un certo turno.)</Italian>
@@ -12136,20 +12136,20 @@
 		<Russian>Óñèëåííûå êîíñòðóêöèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REMOVES_CANNOT_CAPTURE</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_REMOVES_CANNOT_CAPTURE</Tag>
 		<English>[ICON_BULLET]Removes a cause for unit to be unable to capture enemy Cities or Units</English>
 		<French>[ICON_BULLET]Enlève l'incapacité de l'unité de capturer les villes ou unités ennemies</French>
 		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und die Gefangennahme von Einheiten: -1</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REMOVES_COLD_IMMUNITY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_REMOVES_COLD_IMMUNITY</Tag>
 		<English>[ICON_BULLET]Removes a cause this unit would have to be immune to Cold Damage penalties.</English>
 		<French>[ICON_BULLET]Supprime la propriété de l'unité, à être immunisé contre les pénalités des dégâts liés au froid.</French>
 		<Italian>[ICON_BULLET]Rimuove una fonte di immunità dalle penalità di Danno da freddo per quest'unità.</Italian>
 		<Polish>[ICON_BULLET]Usuwa z jednostki Niewrażliwość na Obrażenia od Zimna.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REMOVES_COMBAT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_REMOVES_COMBAT</Tag>
 		<English>[ICON_BULLET]Removes %s1_SubCombatClass from the list of the unit's combat classes.</English>
 		<French>[ICON_BULLET]Enlève %s1_SubCombatClass de la liste des Classes de combat de l'unité.</French>
 		<German>[ICON_BULLET]aus Kategorie %s1_SubCombatClass entfernen</German>
@@ -12164,7 +12164,7 @@
 		<Russian>Статус (Удалить улучш. марш)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REMOVE_STAMPEDE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_REMOVE_STAMPEDE</Tag>
 		<English>[ICON_BULLET]Eliminates one source of Stampede Ability.</English>
 		<French>[ICON_BULLET]Elimine une source du comportement suicidaire.</French>
 		<Italian>[ICON_BULLET]Elimina una fonte dell'abilità Suicidio.</Italian>
@@ -12382,7 +12382,7 @@
 		<Russian>Ñóäîðåìîíò VII</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REPEL_RETRIES_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_REPEL_RETRIES</Tag>
 		<English>[ICON_BULLET]%D1_Change Repel attempts</English>
 		<French>[ICON_BULLET]%D1_Change Tentatives d'Expulsion</French>
 		<Italian>[ICON_BULLET]%D1_Change tentativi di Respinta</Italian>
@@ -12390,7 +12390,7 @@
 		<Russian>[ICON_BULLET]+%D1_Change øàíñà íà îòðàæåíèå àòàêè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REPEL_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_REPEL</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Repel vs Attackers.</English>
 		<French>[ICON_BULLET]%D1_Change%% Expulsion des Attaquants.</French>
 		<Italian>[ICON_BULLET]%D1_Change%% di respinta contro gli attaccanti.</Italian>
@@ -12398,7 +12398,7 @@
 		<Russian>[ICON_BULLET]+%D1_Change%% îòðàæåíèÿ àòàêóþùèõ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REPEL_VERSUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_REPEL_VERSUS</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Repel vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% Repel contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Repel gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
@@ -12471,7 +12471,7 @@
 		<Russian>Ñïàñàòåëü III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RESEARCH_PILLAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_RESEARCH_PILLAGE</Tag>
 		<English>[ICON_BULLET]Pillages [ICON_RESEARCH] in addition to [ICON_GOLD]</English>
 		<French>[ICON_BULLET]Récupère de la [ICON_RESEARCH] en plus de l'[ICON_GOLD] lors des pillages</French>
 		<Spanish>[ICON_BULLET]Saquea [ICON_RESEARCH] además de [ICON_GOLD]</Spanish>
@@ -12671,7 +12671,7 @@
 		<Russian>Ãðîìîâåðæåö III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ROUND_STUN_PROB_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ROUND_STUN_PROB</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Round Stun Probability</English>
 		<French>[ICON_BULLET]%D1_Change%% Probabilité d'étourdissement par Round</French>
 		<Italian>[ICON_BULLET]%D1_Change%% di probabilità di Stordimento per turno</Italian>
@@ -12679,7 +12679,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% âåðîÿòíîñòè îãëóøåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ROUND_STUN_VERSUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ROUND_STUN_VERSUS</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Round Stun Chance vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% Round Stun Chance contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Round Stun Chance gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
@@ -13322,7 +13322,7 @@
 		<Russian>Øîê III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SHORT_RANGE_SUPPORT_PERCENT_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_SHORT_RANGE_SUPPORT_PERCENT_CHANGE</Tag>
 		<English>[ICON_BULLET]+%d1_Amount%% to Short Range Support Value</English>
 		<French>[ICON_BULLET]+%d1_Amount%% à la Valeur du Soutien Courte Portée</French>
 		<Italian>[ICON_BULLET]+%d1_Amount%% al valore di Supporto a corto raggio</Italian>
@@ -13602,7 +13602,7 @@
 		<Russian>Êîìïàêòíûå áîìáû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SM_CARGO_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_SM_CARGO</Tag>
 		<English>[ICON_BULLET]%D1_Change Cargo Space (in Unit Volumes)</English>
 		<French>[ICON_BULLET]%D1_Change de Capacité d'emport (en Volume d'unités)</French>
 		<German>[ICON_BULLET]%D1_Change Frachtraum (in Unit Volumes)</German>
@@ -13692,7 +13692,7 @@
 		<Russian>Îïûò IV</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SPECIAL_CARGO_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_SPECIAL_CARGO_CHANGE</Tag>
 		<English>[ICON_BULLET]Outfits unit to transport %s1_Change Units [COLOR_WARNING_TEXT](And then allows NO OTHER type!)[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Equipe l'unité pour transporter %s1_Change Unités</French>
 		<German>[ICON_BULLET]ermöglicht den Transport von %s1:4_Change</German>
@@ -14026,7 +14026,7 @@
 		<Russian>Çàñëîí V</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STAMPEDE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_STAMPEDE</Tag>
 		<English>[ICON_BULLET]Causes unit to fight until it or all defenders are dead.</English>
 		<French>[ICON_BULLET]L'unité combat jusqu'à ce qu'elle-même ou tous les défenseurs sont morts.</French>
 		<Italian>[ICON_BULLET]Costringe l'unità a combattere finché muore oppure sconfigge i difensori.</Italian>
@@ -14041,7 +14041,7 @@
 		<Russian>Статус (Демаскирован)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STATUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_STATUS</Tag>
 		<English>[ICON_BULLET]Status Promotion</English>
 		<French>[ICON_BULLET]Promotion de Statut</French>
 		<German>[ICON_BULLET]Status</German>
@@ -14078,19 +14078,19 @@
 		<Russian>Íåâèäèìêà III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STEALTH_COMBAT_MODIFIER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_STEALTH_COMBAT_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Stealth Combat Modifier</English>
 		<French>[ICON_BULLET]%D1_Change%% Modif. de Combat furtif</French>
 		<German>[ICON_BULLET]%D1_Change%% Tarnmodifikator</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STEALTH_DEFENSE_CHANGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_STEALTH_DEFENSE_CHANGE</Tag>
 		<English>[ICON_BULLET]Trait - Stealth Defend: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Défense furtive: %D1_Change</French>
 		<German>[ICON_BULLET]Verteidigung gegen Tarnangriffe: %D1_Change</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STEALTH_STRIKES_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_STEALTH_STRIKES</Tag>
 		<English>[ICON_BULLET]%D1_Change Stealth Strikes</English>
 		<French>[ICON_BULLET]%D1_Change Assauts furtifs</French>
 		<German>[ICON_BULLET]%D1_Change [NUM1:Tarnangriff:Tarnangriffe]</German>
@@ -14327,7 +14327,7 @@
 		<Russian>Óëè÷íûé áîåö IV</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STRENGTHEN_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_STRENGTHEN</Tag>
 		<English>[ICON_BULLET]Strengthen: %D1_Change Strength</English>
 		<French>[ICON_BULLET]Puissance: %D1_Change Force</French>
 		<German>[ICON_BULLET]Stärkung: %D1_Change Stärke</German>
@@ -14336,27 +14336,27 @@
 		<Russian>[ICON_BULLET]Усиление: %D1_Change к Силе</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STRENGTH_MODIFIER</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_STRENGTH_MODIFIER</Tag>
 		<English>[ICON_BULLET]Strength Modifier: %D1%% (Subject to adjustment by Diminishing Return)</English>
 		<French>[ICON_BULLET]Modif. Force: %D1%% (peut être ajusté)</French>
 		<Polish>[ICON_BULLET]Modyfikator Siły: %D1%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STR_ADJ_PER_TURN_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_STR_ADJ_PER_TURN_NEGATIVE</Tag>
 		<English>[ICON_BULLET]Drops Unit's Base Strength by %D1_Change each turn - recovered when Overcome</English>
 		<French>[ICON_BULLET]Diminue la Puissance de %D1_Change à chaque tour - récupéré en cas de rémission</French>
 		<Italian>[ICON_BULLET]Diminuisce la forza base dell'unità del %D1_Change per turno - recupera con Superamento</Italian>
 		<Polish>[ICON_BULLET]Obniża siłę jednostki o %D1_Change w każdej turze - przywraca przy wyleczeniu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_STR_ADJ_PER_TURN_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_STR_ADJ_PER_TURN_POSITIVE</Tag>
 		<English>[ICON_BULLET]Enhances Unit's Base Strength by %D1_Change each turn - rescinded when Overcome</English>
 		<French>[ICON_BULLET]Augmente la Puissance de %D1_Change à chaque tour - annulé en cas de rémission</French>
 		<Italian>[ICON_BULLET]Aumenta la forza base dell'unità del %D1_Change per turno - perde con Superamento</Italian>
 		<Polish>[ICON_BULLET]Podwyższa siłę jednostki o %D1_Change w każdej turze - obniża przy wyleczeniu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SUB_COMBAT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_SUB_COMBAT</Tag>
 		<English>[ICON_BULLET]Adds %s1_SubCombatClass to the list of the unit's combat classes.</English>
 		<French>[ICON_BULLET]Ajoute %s1_SubCombatClass à la liste des Classes de combat de l'unité.</French>
 		<German>[ICON_BULLET]zu Kategorie "%s1_SubCombatClass" hinzufügen</German>
@@ -14404,7 +14404,7 @@
 		<Russian>Статус (Сюрприз)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SURVIVOR_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_SURVIVOR</Tag>
 		<English>[ICON_BULLET]+%d1%% Chance to Survive a Combat Loss</English>
 		<French>[ICON_BULLET]+%d1%% Chance de survivre après une Défaite</French>
 		<German>[ICON_BULLET]+%d1%% Chance einen verlorenen Kampf zu überleben</German>
@@ -14579,7 +14579,7 @@
 		<Russian>Ïîõèòèòåëü V</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TARGET_UNITCOMBAT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TARGET_UNITCOMBAT</Tag>
 		<English>[ICON_BULLET]Makes unit attack %s1_promo units first in a stack. (Also enables assassinations against them if the unit has that ability.)</English>
 		<French>[ICON_BULLET]Rend l'attaque d'unité %s1_promo en premier dans une pile. (Permet également des assassinats contre eux si l'unité a cette capacité.)</French>
 	</TEXT>
@@ -14612,28 +14612,28 @@
 		<Russian>Òåëåö</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TECH_COMMUNICABILITY_CHANGE_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TECH_COMMUNICABILITY_CHANGE_NEGATIVE</Tag>
 		<English>[ICON_BULLET]This Affliction is %D1_Change%% less likely to infect when %s2_Tech is known.</English>
 		<French>[ICON_BULLET]Cette affection a %D1_Change%% de chances en moins de se propager lorsque %s2_Tech est déjà découvert.</French>
 		<Italian>[ICON_BULLET]Quest'afflizione ha %D1_Change%% di probabilità in meno di colpire se conosci la tecnologia %s2_Tech.</Italian>
 		<Polish>[ICON_BULLET]Dolegliwość ma %D1_Change%% mniej szansy na rozprzestrzenienie gdy %s2_Tech jest znane.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TECH_COMMUNICABILITY_CHANGE_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TECH_COMMUNICABILITY_CHANGE_POSITIVE</Tag>
 		<English>[ICON_BULLET]This Affliction is %D1_Change%% more likely to infect when %s2_Tech is known.</English>
 		<French>[ICON_BULLET]Cette affection a %D1_Change%% de chances supplémentaires de se propager lorsque %s2_Tech est déjà découvert.</French>
 		<Italian>[ICON_BULLET]Quest'afflizione ha %D1_Change%% di probabilità in più di colpire se conosci la tecnologia %s2_Tech.</Italian>
 		<Polish>[ICON_BULLET]Dolegliwość ma %D1_Change%% więcej szansy na rozprzestrzenienie gdy %s2_Tech jest znane.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TECH_OVERCOME_CHANGE_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TECH_OVERCOME_CHANGE_NEGATIVE</Tag>
 		<English>[ICON_BULLET]This Affliction is %D1_Change%% less likely to be overcome when %s2_Tech is known.</English>
 		<French>[ICON_BULLET]Cette affection a %D1_Change%% de chances en moins d'être éradiquée lorsque %s2_Tech est déjà découvert.</French>
 		<Italian>[ICON_BULLET]Quest'afflizione ha %D1_Change%% di probabilità in meno di essere superata se conosci la tecnologia %s2_Tech.</Italian>
 		<Polish>[ICON_BULLET]Dolegliwość ma %D1_Change%% mniej szansy na rozprzestrzenienie gdy %s2_Tech jest znane.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TECH_OVERCOME_CHANGE_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TECH_OVERCOME_CHANGE_POSITIVE</Tag>
 		<English>[ICON_BULLET]This Affliction is %D1_Change%% more likely to be overcome when %s2_Tech is known.</English>
 		<French>[ICON_BULLET]Cette affection a %D1_Change%% de chances supplémentaires d'être éradiquée lorsque %s2_Tech est déjà découvert.</French>
 		<Italian>[ICON_BULLET]Quest'afflizione ha %D1_Change%% di probabilità in più di essere superata se conosci la tecnologia %s2_Tech.</Italian>
@@ -14661,7 +14661,7 @@
 		<Russian>Çàêàëåííîå îðóæèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TEMP_UCAIWEIGHT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TEMP_UCAIWEIGHT</Tag>
 		<English>[ICON_BULLET]%s1_UnitCombat%%: %d2_Amount%%</English>
 	</TEXT>
 	<TEXT>
@@ -14695,12 +14695,12 @@
 		<Russian>Ðåêîãíîñöèðîâêà 3.0</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TERRAIN_PREREQ_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TERRAIN_PREREQ</Tag>
 		<English>[ICON_BULLET]May only have promotion while on plots with %s1_Terrain terrain (or other specific terrain(s) if also is listed).</English>
 		<French>[ICON_BULLET]Peut seulement avoir la promotion lorsque situé sur des cases avec le type de terrain '%s1_Feature' (ou plusieurs types spécifiques en cas de liste).</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TIRES_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TIRES</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Tires (less strength per attack in a given turn.)</English>
 		<French>[ICON_BULLET]%D1_Change%% Fatigue (moins de puissance en attaque lors d'un tour.)</French>
 		<Italian>[ICON_BULLET]%D1_Change%% fatica (fatica persa per ogni attacco in un certo turno.)</Italian>
@@ -14708,24 +14708,24 @@
 		<Russian>[ICON_BULLET]%D1_Change%% к усталости (меньше силы при атаке в данный ход.)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TOLERANCE_BUILDUP_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TOLERANCE_BUILDUP</Tag>
 		<English>[ICON_BULLET]Each time a unit overcomes this Affliction it gains %D1_Change%% tolerance against it.</English>
 		<French>[ICON_BULLET]A chaque fois que l'unité surmonte l'Afflication, elle gagne %D1_Change%% en résistance.</French>
 		<Italian>[ICON_BULLET]Ogni volta che un'unità supera quest'afflizione riceve %D1_Change%% di tolleranza contro di essa.</Italian>
 		<Polish>[ICON_BULLET]Za każdym razem gdy jednostka wyleczy tą dolegliwość, otrzymuje %D1_Change%% tolerancji przeciwko niej.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TOLERANCE_DECAY_ADD_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TOLERANCE_DECAY_ADD</Tag>
 		<English>[ICON_BULLET]Each round a Unit or City experiences without this Affliction, it GAINS %d1_Change tolerance against it.</English>
 		<French>[ICON_BULLET]A chaque tour que l'unité ou la Ville passe sans cette afflication, elle GAGNE %d1_Change de tolérance contre celle-ci</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TOLERANCE_DECAY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TOLERANCE_DECAY</Tag>
 		<English>[ICON_BULLET]Each round a Unit or City experiences without this Affliction, it loses %d1_Change tolerance against it until all Tolerance has Decayed away entirely.</English>
 		<French>[ICON_BULLET]A chaque tour que l'unité ou la Ville passe sans cette afflication, elle perd %d1_Change de tolérance contre celle-ci, jusqu'à ce qu'elle soit entièrement parti.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TOLERANCE_EROSION_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TOLERANCE_EROSION</Tag>
 		<English>[ICON_BULLET]Each time a unit overcomes this Affliction it loses %D1_Change%% tolerance against it.</English>
 		<French>[ICON_BULLET]A chaque fois que l'unité surmonte l'Afflication, elle perd %D1_Change%% en résistance.</French>
 		<Italian>[ICON_BULLET]Ogni volta che un'unità supera quest'afflizione perde %D1_Change%% di tolleranza contro di essa.</Italian>
@@ -15104,52 +15104,52 @@
 		<Russian>Òðàíñ. ïåõîòû III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRAP_AVOID_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TRAP_AVOID</Tag>
 		<English>[ICON_BULLET]%D1_Value%% chance to Avoid Triggering %s2_trap traps.</English>
 		<French>[ICON_BULLET]%D1_Value%% chances d'éviter de déclencher les pièges %s2_trap.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRAP_COMPLEXITY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TRAP_COMPLEXITY</Tag>
 		<English>[ICON_BULLET]%D1_Change Disarm Complexity.</English>
 		<French>[ICON_BULLET]%D1_Change complexité pour Désarmer.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRAP_DISABLE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TRAP_DISABLE</Tag>
 		<English>[ICON_BULLET]%D1_Value to the ability to Disable %s2_trap traps.</English>
 		<French>[ICON_BULLET]%D1_Value à la capacité de désactiver les pièges %s2_trap.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRAP_IMMUNITY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TRAP_IMMUNITY</Tag>
 		<English>[ICON_BULLET]Immune to %s1_promo traps.</English>
 		<French>[ICON_BULLET]Immunisé aux pièges %s1_promo.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRAP_MAX_DAMAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TRAP_MAX_DAMAGE</Tag>
 		<English>[ICON_BULLET]%D1_Change Max Damage from Traps.</English>
 		<French>[ICON_BULLET]%D1_Change Dégâts Maximum des pièges.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRAP_MIN_DAMAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TRAP_MIN_DAMAGE</Tag>
 		<English>[ICON_BULLET]%D1_Change Min Damage from Traps.</English>
 		<French>[ICON_BULLET]%D1_Change Dégâts minimum des pièges.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRAP_NUM_TRIGGERS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TRAP_NUM_TRIGGERS</Tag>
 		<English>[ICON_BULLET]%D1_Change Charges</English>
 		<French>[ICON_BULLET]%D1_Change Charges</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRAP_PROMOTION_SET_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TRAP_PROMOTION_SET</Tag>
 		<English>[ICON_BULLET]Adds %s1_promo to valid Traps.</English>
 		<French>[ICON_BULLET]Ajoute %s1_promo aux pièges valides.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRAP_TRIGGER_BEFORE_ATTACK_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TRAP_TRIGGER_BEFORE_ATTACK</Tag>
 		<English>[ICON_BULLET]Trait - Trigger Before Combat: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Déclencher avant le combat: %D1_Change</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_TRAP_TRIGGER_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_TRAP_TRIGGER</Tag>
 		<English>[ICON_BULLET]%D1_Value%% chance to Trigger against %s2_trap units.</English>
 		<French>[ICON_BULLET]%D1_Value%% chances de déclencher les pièges contre l'unité : %s2_trap units.</French>
 	</TEXT>
@@ -15206,21 +15206,21 @@
 		<Russian>Áîã âîéíû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_COMMUNICABILITY_CHANGE_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_COMMUNICABILITY_CHANGE_NEGATIVE</Tag>
 		<English>[ICON_BULLET]This Affliction is %D1_Change%% less likely to infect a %s2_UnitCombat unit.</English>
 		<French>[ICON_BULLET]Cette affection a %D1_Change%% de chances en moins d'infecter les %s2_UnitCombat.</French>
 		<Italian>[ICON_BULLET]Quest'afflizione ha %D1_Change%% di probabilità in meno di infettare %s2_UnitCombat.</Italian>
 		<Polish>[ICON_BULLET]Dolegliwość ma %D1_Change%% mniej szansy na przeniesienie się na %s2_UnitCombat.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_COMMUNICABILITY_CHANGE_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_COMMUNICABILITY_CHANGE_POSITIVE</Tag>
 		<English>[ICON_BULLET]This Affliction is %D1_Change%% more likely to infect a %s2_UnitCombat unit.</English>
 		<French>[ICON_BULLET]Cette Affection a %D1_Change%% de chances supplémentaires d'infecter les %s2_UnitCombat.</French>
 		<Italian>[ICON_BULLET]Quest'afflizione ha %D1_Change%% di probabilità in più di infettare %s2_UnitCombat.</Italian>
 		<Polish>[ICON_BULLET]Dolegliwość ma %D1_Change%% więcej szansy na przeniesienia się na %s2_UnitCombat.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_LESS</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_SIZE_LESS</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Size Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus petites: %D1_Amount%% par rang inférieur</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Einheiten (pro Stufe Größenunterschied)</German>
@@ -15234,35 +15234,35 @@
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Większych Rozmiarów jednostki: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_LESS</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_VOLUME_LESS</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Group Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus petits: %D1_Amount%% par Nb d'unités en moins</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Mniejsze Grupy jednostek: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_MORE</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_VOLUME_MORE</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Group Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus grands: %D1_Amount%% par Nb d'unités suppl.</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen größere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Większych Grupy jednostek: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_OVERCOME_CHANGE_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_OVERCOME_CHANGE_NEGATIVE</Tag>
 		<English>[ICON_BULLET]This Affliction is %D1_Change%% less likely to be overcome by a %s2_UnitCombat unit.</English>
 		<French>[ICON_BULLET]Cette affection a %D1_Change%% de chances en moins d'être éradiqué par les %s2_UnitCombat.</French>
 		<Italian>[ICON_BULLET]Quest'afflizione ha %D1_Change%% di probabilità in meno di essere superata da %s2_UnitCombat.</Italian>
 		<Polish>[ICON_BULLET]Dolegliwość ma %D1_Change%% mniej szansy na wyleczenie u %s2_UnitCombat.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_OVERCOME_CHANGE_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_OVERCOME_CHANGE_POSITIVE</Tag>
 		<English>[ICON_BULLET]This Affliction is %D1_Change%% more likely to be overcome by a %s2_UnitCombat unit.</English>
 		<French>[ICON_BULLET]Cette affection a %D1_Change%% de chances supplémentaires d'être éradiquée par les %s2_UnitCombat.</French>
 		<Italian>[ICON_BULLET]Quest'afflizione ha %D1_Change%% di probabilità in più di essere superata da %s2_UnitCombat</Italian>
 		<Polish>[ICON_BULLET]Dolegliwość ma %D1_Change%% więcej szansy na wyleczenie u %s2_UnitCombat.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNNERVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UNNERVE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Unnerve Value</English>
 		<French>[ICON_BULLET]%D1_Change%% Perturbation</French>
 		<Italian>[ICON_BULLET]%D1_Change%% al valore di Snervamento</Italian>
@@ -15324,7 +15324,7 @@
 		<Russian>Ïîðàáîòèòåëü V</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNYIELDING_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UNYIELDING</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Unyielding value vs Knockback/Repel.</English>
 		<French>[ICON_BULLET]%D1_Change%% Inflexible contre l'Expulsion/Écrasement.</French>
 		<Italian>[ICON_BULLET]%D1_Change%% al valore di Inflessibile contro sbaraglio/respinta.</Italian>
@@ -15332,21 +15332,21 @@
 		<Russian>[ICON_BULLET]%D1_Change%% к Стойкости против Оглушения/Отражения.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UPGRADEANYWHERE_ADD_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UPGRADEANYWHERE_ADD</Tag>
 		<English>[ICON_BULLET]Adds a reason for the unit to be capable of upgrading anywhere.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité pour l'unité d'être améliorée n'importe où.</French>
 		<German>[ICON_BULLET]Modernisierung an jedem beliebigen Ort: +1</German>
 		<Russian>[ICON_BULLET]Дает возможность улучшить где угодно данный отряд.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UPGRADEANYWHERE_REMOVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UPGRADEANYWHERE_REMOVE</Tag>
 		<English>[ICON_BULLET]Removes a reason for the unit to be capable of upgrading anywhere.</English>
 		<French>[ICON_BULLET]Enlève la possibilité pour l'unité d'être améliorée n'importe où.</French>
 		<German>[ICON_BULLET]Modernisierung an jedem beliebigen Ort: -1</German>
 		<Russian>[ICON_BULLET]Убирает возможность улучшить где угодно данный отряд.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_TEXT_SPY</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UPGRADE_DISCOUNT_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Free Preparation Bonus</English>
 		<French>[ICON_BULLET]%d1_percent%% Bonus de Préparation Libre</French>
 		<German>[ICON_BULLET]%d1_percent%% Freier Vorbereitungsbonus</German>
@@ -15396,7 +15396,7 @@
 		<Russian>Îïûòíûé ïèëîò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_VICTORY_ADJACENT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_VICTORY_ADJACENT</Tag>
 		<English>[ICON_BULLET]+%d1%% Chance to Heal Friendly Units within one tile on Combat Victory</English>
 		<French>[ICON_BULLET]+%d1%% Chances de soigner les unités alliées de la case en cas de Victoire</French>
 		<German>[ICON_BULLET]+%d1%% befreundete Einheiten auf benachbarten Feldern nach erfolgreichem Kampf zu heilen</German>
@@ -15405,7 +15405,7 @@
 		<Russian>[ICON_BULLET]+%d1%% шанса исцеления дружественных отрядов на одной с ним клетке после победы в бою</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_VICTORY_HEAL_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_VICTORY_HEAL</Tag>
 		<English>[ICON_BULLET]+%d1%% Chance to Heal on Combat Victory</English>
 		<French>[ICON_BULLET]+%d1%% Chance pour guarir en cas de Victoire</French>
 		<German>[ICON_BULLET]+%d1%% Chance sich nach erfolgreichem Kampf zu heilen</German>
@@ -15414,14 +15414,14 @@
 		<Russian>[ICON_BULLET]+%d1%% шанса исцеления после победы в бою</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_VICTORY_PILLAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_VICTORY_PILLAGE</Tag>
 		<English>[ICON_BULLET]Reaps the Profits of Pillaging on a Combat Victory (no loss of improvement though).</English>
 		<French>[ICON_BULLET]Récupère les profits d'un pillage en cas de Victoire (Les aménagements restent intacts cependant).</French>
 		<Spanish>[ICON_BULLET]Obtiene los beneficios de un saqueo en cada victoria (sin perderse la mejora)</Spanish>
 		<Polish>[ICON_BULLET]Czerpanie zysków z Plądrowania po Wygranej Walce (nie niszczy ulepszeń).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_VICTORY_STACK_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_VICTORY_STACK</Tag>
 		<English>[ICON_BULLET]+%d1%% Chance to Heal Friendly Units sharing the tile on Combat Victory</English>
 		<French>[ICON_BULLET]+%d1%% Chance pour Traite notre Troupes qui sont sur le meme Endroit du Combat Victoire</French>
 		<German>[ICON_BULLET]+%d1%% Chance befreundete Einheiten auf dem eigenen Feld nach erfolgreichem Kampf zu heilen</German>
@@ -15437,7 +15437,7 @@
 		<Russian>Äåâà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_VSBARBS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_VSBARBS</Tag>
 		<English>[ICON_BULLET]+%d1_Change%% vs Non-Animal Barbarians</English>
 		<French>[ICON_BULLET]+%d1_Change%% contre les unités barbares non-animales</French>
 		<German>[ICON_BULLET]+%d1_Change%% gegen Barbaren</German>
@@ -15695,21 +15695,21 @@
 		<Russian>Путь Волка</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WEAKEN_PER_TURN_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_WEAKEN_PER_TURN_NEGATIVE</Tag>
 		<English>[ICON_BULLET]Enhances Unit's Combat % by %D1_Change each turn - rescinded when Overcome</English>
 		<French>[ICON_BULLET]Augmente le %% de Combat de %D1_Change chaque tour - annulé en cas de rémission</French>
 		<Italian>[ICON_BULLET]Aumenta la % di Combattimento dell'unità del %D1_Change per turno - perde con Superamento</Italian>
 		<Polish>[ICON_BULLET]Zwiększa % waleczności jednostki %D1_Change w każdej turze - obniża przy wyleczeniu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WEAKEN_PER_TURN_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_WEAKEN_PER_TURN_POSITIVE</Tag>
 		<English>[ICON_BULLET]Drops Unit's Combat % by %D1_Change each turn - recovered when Overcome</English>
 		<French>[ICON_BULLET]Diminue le % de Combat de %D1_Change chaque tour - récupéré en cas de rémission</French>
 		<Italian>[ICON_BULLET]Diminuisce la % di Combattimento dell'unità del %D1_Change per turno - recupera con Superamento</Italian>
 		<Polish>[ICON_BULLET]Obniża % waleczności jednostki o %D1_Change w każdej turze - przywraca przy wyleczeniu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WEAKEN_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_WEAKEN</Tag>
 		<English>[ICON_BULLET]Weaken: %D1_Change Strength</English>
 		<French>[ICON_BULLET]Faiblesse: %D1_Change de puissance</French>
 		<German>[ICON_BULLET]Schwächung: %D1_Change Stärke</German>
@@ -15748,7 +15748,7 @@
 		<Russian>Óëó÷ø. îðóæèå III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WEAROFF_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_WEAROFF</Tag>
 		<English>[ICON_BULLET]Wears off: Adds cumulative %D1_Change%% to Overcome each turn</English>
 		<French>[ICON_BULLET]Perturbé: Ajoute %D1_Change%% cumulable en suprématie à chaque tour</French>
 		<Italian>[ICON_BULLET]Affievolimento: le chance di Superamento aumentano di %D1_Change%% ogni turno</Italian>
@@ -15847,7 +15847,7 @@
 		<Russian>Ïîëÿðíèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_WITHDRAW_ON</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Withdraw when battle is on [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% de repli lors d'un combat sur: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Rückzugswahrscheinlichkeit ([LINK=%s2_Type]%s3_TypeName[\LINK])</German>
@@ -15857,7 +15857,7 @@
 		<Russian>[ICON_BULLET]%D1_Mod%% шанса отступить, если бой идет в [LINK=%s2_Type]%s3_TypeName[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WITHDRAW_VERSUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_WITHDRAW_VERSUS</Tag>
 		<English>[ICON_BULLET]Withdraw vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%%</English>
 		<French>[ICON_BULLET]%D1_Mod%% de repli contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Withdraw gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
@@ -15933,7 +15933,7 @@
 		<Russian>Åãåðü III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WORK_RATE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_WORK_RATE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Work Speed</English>
 		<French>[ICON_BULLET]%D1_Change%% Vitesse de Travail</French>
 		<Italian>[ICON_BULLET]%D1_Change%% alla velocità di lavoro</Italian>
@@ -15941,7 +15941,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% к скорости работы</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WORK_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_WORK</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Work Speed on %s2_Gameobject</English>
 		<French>[ICON_BULLET]%D1_Change%% Vitesse de Travail sur %s2_Gameobject</French>
 		<Spanish>[ICON_BULLET]%D1_Change%% de velocidad de trabajo en %s2_Gameobject</Spanish>
@@ -15954,7 +15954,7 @@
 		<Russian>Äçýí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_DEF_WARN_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_DEF_WARN</Tag>
 		<English>[COLOR_WARNING_TEXT]If the unit with this promotion cannot gain Defensive Bonuses, they will not gain inapplicable promotion benefits.[COLOR_REVERT]</English>
 		<Russian>[COLOR_WARNING_TEXT]Если отряд с этой квалификацией не имеет защитных бонусов, он не получает от них несовместимые преимущества.[COLOR_REVERT]</Russian>
 	</TEXT>
