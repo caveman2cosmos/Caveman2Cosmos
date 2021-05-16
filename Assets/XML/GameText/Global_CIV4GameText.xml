@@ -12856,7 +12856,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Stratégique</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_ALLOWS_IMPROVEMENT_UPGRADE</Tag>
+		<Tag>TXT_KEY_TECHHELP_ALLOWS_IMPROVEMENT_UPGRADE</Tag>
 		<English>[ICON_BULLET]Allows %s1 to upgrade to %s2.</English>
 		<French>[ICON_BULLET]Permet à %s1 d'être amélioré en %s2.</French>
 		<German>[ICON_BULLET]Erlaubt die Aufwertung von %s1 zu %s2.</German>
@@ -13070,7 +13070,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>«Иди позади людей со своим примером и будь трудолюбив в их делах». - Конфуций</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CORPORATION_MAINTENANCE</Tag>
+		<Tag>TXT_KEY_TECHHELP_CORPORATION_MAINTENANCE</Tag>
 		<English>[ICON_BULLET]%d1%% Corporation Maintenance</English>
 		<French>[ICON_BULLET]%d1%% de coût d'entretien des Corporations</French>
 		<German>[ICON_BULLET]%d1%% laufende Kosten für Kapitalgesellschaften</German>
@@ -13080,7 +13080,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[ICON_BULLET]%d1%% Îáñëóæèâàíèå êîðïîðàöèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_DISTANCE_MAINT</Tag>
+		<Tag>TXT_KEY_TECHHELP_DISTANCE_MAINT</Tag>
 		<English>[ICON_BULLET]No Maintenance Costs from Distance to Palace</English>
 		<French>[ICON_BULLET]Pas de coût d'entretien lié à la distance du Palais</French>
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento derivante dalla distanza dal palazzo</Italian>
@@ -13089,7 +13089,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[ICON_BULLET]Íåò çàòðàò íà îáñëóæèâàíèå îò ðàññòîÿíèÿ äî äâîðöà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_DISTANCE_MAINT_MOD</Tag>
+		<Tag>TXT_KEY_TECHHELP_DISTANCE_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Distance to Palace</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié à la distance du Palais</French>
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento derivanti dalla distanza dal palazzo</Italian>
@@ -13098,7 +13098,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå îò ðàññòîÿíèÿ äî äâîðöà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_ENABLES_DESERT_FARMING</Tag>
+		<Tag>TXT_KEY_TECHHELP_ENABLES_DESERT_FARMING</Tag>
 		<English>[ICON_BULLET]Can Farm Desert Tiles</English>
 		<French>[ICON_BULLET]Peut cultiver sur les cases de Désert</French>
 		<German>[ICON_BULLET]Kann Wüstenfelder bewirtschaften</German>
@@ -13108,14 +13108,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[ICON_BULLET]ìîæåò îáðàáîòàòü ïóñòûíþ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_FIRST_FREE_PROPHET</Tag>
+		<Tag>TXT_KEY_TECHHELP_FIRST_FREE_PROPHET</Tag>
 		<English>[ICON_BULLET]First to Discover Receives a [COLOR_TECH_TEXT]Free Great Prophet[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Le Premier à découvrir reçoit un [COLOR_TECH_TEXT]Prophète Illustre[COLOR_REVERT] Gratuit</French>
 		<Polish>[ICON_BULLET]Nagroda za pierwsze odkrycie: [COLOR_TECH_TEXT]Darnowy Wielki Prorok[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET]Первооткрыватель получит бесплатного [COLOR_TECH_TEXT]Великого пророка[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_GLOBAL</Tag>
+		<Tag>TXT_KEY_TECHHELP_GLOBAL</Tag>
 		<English>[ICON_BULLET]Can only be researched once in a game.</English>
 		<French>[ICON_BULLET]Ne peut être recherché qu'une seule fois dans une partie.</French>
 		<Russian>[ICON_BULLET]Можно исследовать лишь однажды за всю игру.</Russian>
@@ -13413,7 +13413,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Да будет тебе благосклонно солнце на небесах; пусть оно сделает благосклонными к тебе оба господина.[NEWLINE]Пусть ночь будет благосклонна к тебе; да будут к тебе благосклонны обе владычицы.[NEWLINE]Извлечение из 44 Текстов пирамид</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_MAINT_MOD</Tag>
+		<Tag>TXT_KEY_TECHHELP_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_MOD%% Maintenance Costs in All Cities</English>
 		<French>[ICON_BULLET]%D1_MOD%% de coût d'entretien dans toutes les Villes</French>
 		<Italian>[ICON_BULLET]%D1_MOD%% costi di mantenimento in tutte le città</Italian>
@@ -13450,7 +13450,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>«Тогда Тепеу и Кукумац сошлись вместе с ними, они совещались о жизни и свете, о том, чтобы появились свет и заря; кто должен заботиться об их пище и пропитании. Так пусть это свершится! Да будет заполнена пустота! Пусть воды отступят и образуют пустоту, пусть появится земля и будет прочной; пусть это свершится, - так говорили они». - из эпоса "Пополь Вух"</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_NUM_CITIES_MAINT</Tag>
+		<Tag>TXT_KEY_TECHHELP_NUM_CITIES_MAINT</Tag>
 		<English>[ICON_BULLET]No Maintenance Costs from Number of Cities</English>
 		<French>[ICON_BULLET]Pas de coût d'entretien lié au nombre de Villes</French>
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento dal numero di città</Italian>
@@ -13459,7 +13459,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[ICON_BULLET]Íåò çàòðàò íà îáñëóæèâàíèå îò ÷èñëà ãîðîäîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_NUM_CITIES_MAINT_MOD</Tag>
+		<Tag>TXT_KEY_TECHHELP_NUM_CITIES_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Number of Cities</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié au nombre de Villes</French>
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento dal numero di città</Italian>
@@ -13468,7 +13468,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå îò ÷èñëà ãîðîäîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_OBSOLETES_NO_LINK</Tag>
+		<Tag>TXT_KEY_TECHHELP_OBSOLETES_NO_LINK</Tag>
 		<English>[COLOR_WARNING_TEXT]Obsoletes %s1_Name[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Rend '%s1_Name' obsolète[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]veraltet: %s1_Name[COLOR_REVERT]</German>
@@ -13478,7 +13478,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[COLOR_WARNING_TEXT]Óñòàðåâàåò: %s1_Name[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_SPECIALIST_TECH_HAPPINESS_TYPE</Tag>
+		<Tag>TXT_KEY_TECHHELP_SPECIALIST_TECH_HAPPINESS_TYPE</Tag>
 		<English>[ICON_BULLET]%s1_Specialist gain %D2_Change%F3_HappOrUnhapp.</English>
 		<French>[ICON_BULLET]%s1_Specialist gagné %D2_Change%F3_HappOrUnhapp.</French>
 		<Italian>[ICON_BULLET]%s1_Specialist ottiene %D2_Change%F3_HappOrUnhapp.</Italian>
@@ -13486,7 +13486,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[ICON_BULLET]%s1_Specialist дает %D2_Change%F3_HappOrUnhapp.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_SPECIALIST_TECH_HEALTH_TYPE</Tag>
+		<Tag>TXT_KEY_TECHHELP_SPECIALIST_TECH_HEALTH_TYPE</Tag>
 		<English>[ICON_BULLET]%s1_Specialist gain %D2_Change%F3_HealthOrUnhealth.</English>
 		<French>[ICON_BULLET]%s1_Specialist gagné %D2_Change%F3_HealthOrUnhealth.</French>
 		<Italian>[ICON_BULLET]%s1_Specialist ottiene %D2_Change%F3_HealthOrUnhealth.</Italian>
@@ -28975,7 +28975,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Garantizar la independencia de %s1_citylist</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CAN_CONSTRUCT</Tag>
+		<Tag>TXT_KEY_TECHHELP_CAN_CONSTRUCT</Tag>
 		<English>[ICON_BULLET]Can Construct[SPACE]</English>
 		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
@@ -28983,7 +28983,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CAN_CREATE</Tag>
+		<Tag>TXT_KEY_TECHHELP_CAN_CREATE</Tag>
 		<English>[ICON_BULLET]Can Create[SPACE]</English>
 		<French>[ICON_BULLET]Peut créer :[SPACE]</French>
 		<German>[ICON_BULLET]Kann Folgendes erschaffen:[SPACE]</German>
@@ -28991,7 +28991,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Se puede crear[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CAN_TRAIN</Tag>
+		<Tag>TXT_KEY_TECHHELP_CAN_TRAIN</Tag>
 		<English>[ICON_BULLET]Can Train[SPACE]</English>
 		<French>[ICON_BULLET]Peut entraîner :[SPACE]</French>
 		<German>[ICON_BULLET]Ausbildung von:[SPACE]</German>
@@ -28999,7 +28999,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Puede preparar[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_ERA_ADVANCE</Tag>
+		<Tag>TXT_KEY_TECHHELP_ERA_ADVANCE</Tag>
 		<English>[ICON_BULLET]Advances to the [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT] Era</English>
 		<French>[ICON_BULLET]Avance à l'époque : [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Fortschritt zum Zeitalter [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</German>
@@ -29007,7 +29007,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Avanza a la era [NUM1:del:de la:de los:de las] [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_FIRST_FREE_TECH</Tag>
+		<Tag>TXT_KEY_TECHHELP_FIRST_FREE_TECH</Tag>
 		<English>[ICON_BULLET]First to Discover Receives a [COLOR_TECH_TEXT]Free Technology[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Faire une découverte avant les autres octroie une [COLOR_TECH_TEXT]technologie[COLOR_REVERT] gratuite</French>
 		<German>[ICON_BULLET]Der erste Entdecker erhält eine [COLOR_TECH_TEXT]freie Technologie[COLOR_REVERT]</German>
@@ -29015,7 +29015,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibirá [COLOR_TECH_TEXT]una tecnología gratis[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_FIRST_FREE_TECHS</Tag>
+		<Tag>TXT_KEY_TECHHELP_FIRST_FREE_TECHS</Tag>
 		<English>[ICON_BULLET]First to Discover Receives [COLOR_TECH_TEXT]%d1_Num Free Technologies[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Faire cette découverte avant les autres octroie [COLOR_TECH_TEXT]%d1_Num technologies[COLOR_REVERT] gratuites</French>
 		<German>[ICON_BULLET]Der erste Entdecker erhält [COLOR_TECH_TEXT]%d1_Num freie Technologien[COLOR_REVERT]</German>
@@ -29023,7 +29023,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibirá [COLOR_TECH_TEXT]%d1_Num tecnologías gratis[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_GREAT_PERSON_DISCOVER</Tag>
+		<Tag>TXT_KEY_TECHHELP_GREAT_PERSON_DISCOVER</Tag>
 		<English>[ICON_BULLET]Can be researched by a [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Peut être recherchée par un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT].</French>
 		<German>[ICON_BULLET]Kann von der Großen Persönlichkeit [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] erforscht werden</German>
@@ -29031,7 +29031,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Esta tecnología puede investigarla un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_NUM_TURNS</Tag>
+		<Tag>TXT_KEY_TECHHELP_NUM_TURNS</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num Turns[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num tours[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num Runden[COLOR_REVERT]</German>

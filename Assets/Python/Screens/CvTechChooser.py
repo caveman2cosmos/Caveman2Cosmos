@@ -1031,7 +1031,7 @@ class CvTechChooser:
 				elif TYPE == "BUILDING":
 					if CASE[0] == "OBS":
 						CvBuildingInfo = GC.getBuildingInfo(ID)
-						szTxt = TRNSLTR.getText("TXT_KEY_TECH_OBSOLETES", (CvBuildingInfo.getType(), CvBuildingInfo.getTextKey()))
+						szTxt = TRNSLTR.getText("TXT_KEY_TECHHELP_OBSOLETES", (CvBuildingInfo.getType(), CvBuildingInfo.getTextKey()))
 					else: szTxt = CyGameTextMgr().getBuildingHelp(ID, False, None, False, False, True)
 					self.tooltip.handle(screen, szTxt)
 		elif iCode == NotifyCode.NOTIFY_CLICKED: # click

@@ -668,7 +668,7 @@
 		<Russian>[COLOR_WARNING_TEXT]Требует [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (для любого игрока)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_FIRST_RECEIVES</Tag>
+		<Tag>TXT_KEY_TECHHELP_FIRST_RECEIVES</Tag>
 		<English>[ICON_BULLET]First to Discover receives a [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Faire cette découverte avant les autres octroie 1 [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Der erste Entdecker erhält eine Einheit: [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</German>
@@ -678,7 +678,7 @@
 		<Russian>[ICON_BULLET]Ïåðâîîòêðûâàòåëþ äîñòàåòñÿ [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_OBSOLETES</Tag>
+		<Tag>TXT_KEY_TECHHELP_OBSOLETES</Tag>
 		<English>[COLOR_WARNING_TEXT]Obsoletes [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Rend la technologie "[LINK=%s1_TechType]%s2_TechName[\LINK]" obsolète[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Veraltet: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>

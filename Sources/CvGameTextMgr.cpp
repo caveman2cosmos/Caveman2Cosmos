@@ -17423,19 +17423,19 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	if (kTech.getCorporationMaintenanceModifier() != 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_TECH_CORPORATION_MAINTENANCE", kTech.getCorporationMaintenanceModifier()));
+		szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_CORPORATION_MAINTENANCE", kTech.getCorporationMaintenanceModifier()));
 	}
 
 	if (kTech.isEnablesDesertFarming())
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_TECH_ENABLES_DESERT_FARMING"));
+		szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_ENABLES_DESERT_FARMING"));
 	}
 
 	if (kTech.isGlobal())
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_TECH_GLOBAL"));
+		szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_GLOBAL"));
 	}
 
 	for (iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
@@ -17453,7 +17453,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		if (GC.getImprovementInfo((ImprovementTypes)iI).getPrereqTech() == eTech && GC.getImprovementInfo((ImprovementTypes)iI).getImprovementPillage() != NO_IMPROVEMENT)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_ALLOWS_IMPROVEMENT_UPGRADE", GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo((ImprovementTypes)iI).getImprovementPillage()).getTextKeyWide(), GC.getImprovementInfo((ImprovementTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_ALLOWS_IMPROVEMENT_UPGRADE", GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo((ImprovementTypes)iI).getImprovementPillage()).getTextKeyWide(), GC.getImprovementInfo((ImprovementTypes)iI).getTextKeyWide()));
 		}
 	}
 
@@ -17568,7 +17568,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 				const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iI);
 				if (kUnit.getPrereqAndTech() == eTech)
 				{
-					szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECH_CAN_TRAIN").c_str());
+					szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECHHELP_CAN_TRAIN").c_str());
 					szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), kUnit.getDescription());
 					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 					bFirst = false;
@@ -17578,7 +17578,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 				{
 					if (kUnit.getPrereqAndTechs(iJ) == eTech)
 					{
-						szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECH_CAN_TRAIN").c_str());
+						szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECHHELP_CAN_TRAIN").c_str());
 						szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), kUnit.getDescription());
 						setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 						bFirst = false;
@@ -17601,7 +17601,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 					{
 						if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == eTech)
 						{
-							szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECH_CAN_CONSTRUCT").c_str());
+							szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECHHELP_CAN_CONSTRUCT").c_str());
 							szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
 							setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 							bFirst = false;
@@ -17612,7 +17612,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 							{
 								if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTechs(iJ) == eTech)
 								{
-									szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECH_CAN_CONSTRUCT").c_str());
+									szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECHHELP_CAN_CONSTRUCT").c_str());
 									szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
 									setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 									bFirst = false;
@@ -17635,7 +17635,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 				{
 					if (GC.getProjectInfo((ProjectTypes)iI).getTechPrereq() == eTech)
 					{
-						szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECH_CAN_CREATE").c_str());
+						szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECHHELP_CAN_CREATE").c_str());
 						szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_PROJECT_TEXT"), GC.getProjectInfo((ProjectTypes)iI).getDescription());
 						setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 						bFirst = false;
@@ -17677,7 +17677,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		if (GC.getTechInfo(eTech).getFirstFreeProphet() > -1 && GC.getGame().countKnownTechNumTeams(eTech) == 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_FIRST_FREE_PROPHET"));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_FIRST_FREE_PROPHET"));
 			bFirst = false;
 		}
 	}
@@ -17708,7 +17708,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 			if (bFirst)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_TECH_OBSOLETES", CvWString(GC.getPromotionInfo((PromotionTypes)iI).getType()).GetCString(), GC.getPromotionInfo((PromotionTypes)iI).getDescription()));
+				szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(GC.getPromotionInfo((PromotionTypes)iI).getType()).GetCString(), GC.getPromotionInfo((PromotionTypes)iI).getDescription()));
 				bFirst = false;
 			}
 			else
@@ -17787,7 +17787,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_NUM_TURNS", GET_PLAYER(GC.getGame().getActivePlayer()).getResearchTurnsLeft(eTech, (gDLL->ctrlKey() || !(gDLL->shiftKey())))));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_NUM_TURNS", GET_PLAYER(GC.getGame().getActivePlayer()).getResearchTurnsLeft(eTech, (gDLL->ctrlKey() || !(gDLL->shiftKey())))));
 
 			szTempBuffer.Format(L" (%d/%d %c)", GET_TEAM(GC.getGame().getActiveTeam()).getResearchProgress(eTech), GET_TEAM(GC.getGame().getActiveTeam()).getResearchCost(eTech), GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
 			szBuffer.append(szTempBuffer);
@@ -17807,7 +17807,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 					if (::getDiscoveryTech((UnitTypes)iI, GC.getGame().getActivePlayer()) == eTech)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_TECH_GREAT_PERSON_DISCOVER", kUnit.getTextKeyWide()));
+						szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_GREAT_PERSON_DISCOVER", kUnit.getTextKeyWide()));
 					}
 				}
 			}
@@ -17815,7 +17815,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 			if (GET_PLAYER(GC.getGame().getActivePlayer()).getCurrentEra() < GC.getTechInfo(eTech).getEra())
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_TECH_ERA_ADVANCE", GC.getEraInfo((EraTypes)GC.getTechInfo(eTech).getEra()).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_ERA_ADVANCE", GC.getEraInfo((EraTypes)GC.getTechInfo(eTech).getEra()).getTextKeyWide()));
 			}
 		}
 	}
@@ -27251,7 +27251,7 @@ void CvGameTextMgr::buildObsoleteString(CvWStringBuffer &szBuffer, int iItem, bo
 	{
 		szBuffer.append(NEWLINE);
 	}
-	szBuffer.append(gDLL->getText("TXT_KEY_TECH_OBSOLETES", CvWString(GC.getBuildingInfo((BuildingTypes)iItem).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes) iItem).getTextKeyWide()));
+	szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(GC.getBuildingInfo((BuildingTypes)iItem).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes) iItem).getTextKeyWide()));
 }
 
 void CvGameTextMgr::buildObsoleteBonusString(CvWStringBuffer &szBuffer, int iItem, bool bList, bool bPlayerContext)
@@ -27262,7 +27262,7 @@ void CvGameTextMgr::buildObsoleteBonusString(CvWStringBuffer &szBuffer, int iIte
 	{
 		szBuffer.append(NEWLINE);
 	}
-	szBuffer.append(gDLL->getText("TXT_KEY_TECH_OBSOLETES", CvWString(GC.getBonusInfo((BonusTypes)iItem).getType()).GetCString(), GC.getBonusInfo((BonusTypes) iItem).getTextKeyWide()));
+	szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(GC.getBonusInfo((BonusTypes)iItem).getType()).GetCString(), GC.getBonusInfo((BonusTypes) iItem).getTextKeyWide()));
 }
 
 void CvGameTextMgr::buildObsoleteSpecialString(CvWStringBuffer &szBuffer, int iItem, bool bList, bool bPlayerContext)
@@ -27273,7 +27273,7 @@ void CvGameTextMgr::buildObsoleteSpecialString(CvWStringBuffer &szBuffer, int iI
 	{
 		szBuffer.append(NEWLINE);
 	}
-	szBuffer.append(gDLL->getText("TXT_KEY_TECH_OBSOLETES_NO_LINK", GC.getSpecialBuildingInfo((SpecialBuildingTypes) iItem).getTextKeyWide()));
+	szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES_NO_LINK", GC.getSpecialBuildingInfo((SpecialBuildingTypes) iItem).getTextKeyWide()));
 }
 
 void CvGameTextMgr::buildMoveString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
@@ -27307,7 +27307,7 @@ void CvGameTextMgr::buildFreeUnitString(CvWStringBuffer &szBuffer, TechTypes eTe
 		{
 			szBuffer.append(NEWLINE);
 		}
-		szBuffer.append(gDLL->getText("TXT_KEY_TECH_FIRST_RECEIVES", CvWString(GC.getUnitInfo(eFreeUnit).getType()).GetCString(), GC.getUnitInfo(eFreeUnit).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_FIRST_RECEIVES", CvWString(GC.getUnitInfo(eFreeUnit).getType()).GetCString(), GC.getUnitInfo(eFreeUnit).getTextKeyWide()));
 	}
 }
 
@@ -27383,7 +27383,7 @@ void CvGameTextMgr::buildSpecialistHealthString(CvWStringBuffer &szBuffer, TechT
 			{
 				szBuffer.append(NEWLINE);
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_SPECIALIST_TECH_HEALTH_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), iSpecialistHealth, gDLL->getSymbolID(HEALTHY_CHAR)));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HEALTH_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), iSpecialistHealth, gDLL->getSymbolID(HEALTHY_CHAR)));
 		}
 		else if (iSpecialistHealth < 0)
 		{
@@ -27391,7 +27391,7 @@ void CvGameTextMgr::buildSpecialistHealthString(CvWStringBuffer &szBuffer, TechT
 			{
 				szBuffer.append(NEWLINE);
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_SPECIALIST_TECH_HEALTH_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), -iSpecialistHealth, gDLL->getSymbolID(UNHEALTHY_CHAR)));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HEALTH_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), -iSpecialistHealth, gDLL->getSymbolID(UNHEALTHY_CHAR)));
 		}
 	}
 }
@@ -27428,7 +27428,7 @@ void CvGameTextMgr::buildSpecialistHappinessString(CvWStringBuffer &szBuffer, Te
 			{
 				szBuffer.append(NEWLINE);
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_SPECIALIST_TECH_HAPPINESS_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR)));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HAPPINESS_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR)));
 		}
 		else if (iSpecialistHappiness < 0)
 		{
@@ -27436,7 +27436,7 @@ void CvGameTextMgr::buildSpecialistHappinessString(CvWStringBuffer &szBuffer, Te
 			{
 				szBuffer.append(NEWLINE);
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_SPECIALIST_TECH_HAPPINESS_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR)));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HAPPINESS_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR)));
 		}
 	}
 }
@@ -27454,11 +27454,11 @@ void CvGameTextMgr::buildFreeTechString(CvWStringBuffer &szBuffer, TechTypes eTe
 
 			if (GC.getTechInfo(eTech).getFirstFreeTechs() == 1)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_TECH_FIRST_FREE_TECH"));
+				szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_FIRST_FREE_TECH"));
 			}
 			else
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_TECH_FIRST_FREE_TECHS", GC.getTechInfo(eTech).getFirstFreeTechs()));
+				szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_FIRST_FREE_TECHS", GC.getTechInfo(eTech).getFirstFreeTechs()));
 			}
 		}
 	}
@@ -27699,7 +27699,7 @@ void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes 
 			{
 				if (GET_TEAM(GC.getGame().getActiveTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes)iImprovement).getObsoleteTech()))
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_TECH_OBSOLETES", CvWString(GC.getBuildInfo((BuildTypes)iImprovement).getType()).GetCString(), GC.getBuildInfo((BuildTypes)iImprovement).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(GC.getBuildInfo((BuildTypes)iImprovement).getType()).GetCString(), GC.getBuildInfo((BuildTypes)iImprovement).getTextKeyWide()));
 				}
 				else
 				{
@@ -38067,7 +38067,7 @@ void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, T
 		{
 			szBuffer.append(NEWLINE);
 		}
-		szBuffer.append(gDLL->getText("TXT_KEY_TECH_MAINT_MOD", GC.getTechInfo(eTech).getMaintenanceModifier()));
+		szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_MAINT_MOD", GC.getTechInfo(eTech).getMaintenanceModifier()));
 	}
 
 	if (GC.getTechInfo(eTech).getDistanceMaintenanceModifier() != 0)
@@ -38078,11 +38078,11 @@ void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, T
 		}
 		if (GC.getTechInfo(eTech).getDistanceMaintenanceModifier() <= -100)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_DISTANCE_MAINT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_DISTANCE_MAINT"));
 		}
 		else
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_DISTANCE_MAINT_MOD", GC.getTechInfo(eTech).getDistanceMaintenanceModifier()));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_DISTANCE_MAINT_MOD", GC.getTechInfo(eTech).getDistanceMaintenanceModifier()));
 		}
 	}
 
@@ -38094,11 +38094,11 @@ void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, T
 		}
 		if (GC.getTechInfo(eTech).getNumCitiesMaintenanceModifier() <= -100)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_NUM_CITIES_MAINT"));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_NUM_CITIES_MAINT"));
 		}
 		else
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_NUM_CITIES_MAINT_MOD", GC.getTechInfo(eTech).getNumCitiesMaintenanceModifier()));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_NUM_CITIES_MAINT_MOD", GC.getTechInfo(eTech).getNumCitiesMaintenanceModifier()));
 		}
 	}
 
