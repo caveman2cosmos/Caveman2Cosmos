@@ -27319,7 +27319,7 @@ void CvGameTextMgr::buildFeatureProductionString(CvWStringBuffer &szBuffer, Tech
 		{
 			szBuffer.append(NEWLINE);
 		}
-		szBuffer.append(gDLL->getText("TXT_KEY_FEATURE_PRODUCTION_MODIFIER", GC.getTechInfo(eTech).getFeatureProductionModifier()));
+		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_PRODUCTION_MODIFIER", GC.getTechInfo(eTech).getFeatureProductionModifier()));
 	}
 }
 
@@ -32251,11 +32251,11 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 	szHealth.Format(L"%.2f", 0.01f * abs(feature.getHealthPercent()));
 	if (feature.getHealthPercent() > 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FEATURE_GOOD_HEALTH", szHealth.GetCString()));
+		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHRLP_GOOD_HEALTH", szHealth.GetCString()));
 	}
 	else if (feature.getHealthPercent() < 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FEATURE_BAD_HEALTH", szHealth.GetCString()));
+		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_BAD_HEALTH", szHealth.GetCString()));
 	}
 
 	if (feature.getDefenseModifier() != 0)
@@ -32265,7 +32265,7 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 
 	if (feature.isAddsFreshWater())
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FEATURE_ADDS_FRESH_WATER"));
+		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_ADDS_FRESH_WATER"));
 	}
 
 	if (feature.isImpassable())
@@ -32280,22 +32280,22 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 
 	if (feature.isNoImprovement())
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FEATURE_NO_IMPROVEMENT"));
+		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_NO_IMPROVEMENT"));
 	}
 
 	if (feature.getPopDestroys() == -1)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FEATURE_POP_NEVER_DESTROYED"));
+		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_POP_NEVER_DESTROYED"));
 	}
 
 	if (feature.getPopDestroys() > -1 && feature.getPopDestroys() < 2)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FEATURE_POP_ALWAYS_DESTROYED"));
+		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_POP_ALWAYS_DESTROYED"));
 	}
 
 	if (feature.getPopDestroys() > 1)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_FEATURE_POP_DESTROYS", feature.getPopDestroys()));
+		szBuffer.append(gDLL->getText("TXT_KEY_FEATUREHELP_POP_DESTROYS", feature.getPopDestroys()));
 	}
 
 	const int iDamage = feature.getTurnDamage();

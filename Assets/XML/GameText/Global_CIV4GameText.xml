@@ -22866,7 +22866,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>(Salir al escritorio)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_ADDS_FRESH_WATER</Tag>
+		<Tag>TXT_KEY_FEATUREHELP_ADDS_FRESH_WATER</Tag>
 		<English>[NEWLINE][ICON_BULLET]Acts as a source of fresh water</English>
 		<French>[NEWLINE][ICON_BULLET]Agit comme une source d'eau douce</French>
 		<German>[NEWLINE][ICON_BULLET]Dient als Süßwasserquelle</German>
@@ -22874,7 +22874,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[NEWLINE][ICON_BULLET]Sirve como fuente de agua dulce</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_BAD_HEALTH</Tag>
+		<Tag>TXT_KEY_FEATUREHELP_BAD_HEALTH</Tag>
 		<!-- %s1 = TXT_KEY_FEATURE_ -->
 		<English>[NEWLINE][ICON_BULLET]+%s1[ICON_UNHEALTHY] in nearby cities</English>
 		<French>[NEWLINE][ICON_BULLET]+%s1[ICON_UNHEALTHY] dans les villes voisines</French>
@@ -22883,7 +22883,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[NEWLINE][ICON_BULLET]+%s1 [ICON_UNHEALTHY] a las ciudades cercanas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_GOOD_HEALTH</Tag>
+		<Tag>TXT_KEY_FEATUREHRLP_GOOD_HEALTH</Tag>
 		<!-- %s1 = TXT_KEY_FEATURE_ -->
 		<English>[NEWLINE][ICON_BULLET]+%s1[ICON_HEALTHY] in nearby cities</English>
 		<French>[NEWLINE][ICON_BULLET]+%s1[ICON_HEALTHY] dans les villes voisines</French>
@@ -22892,7 +22892,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[NEWLINE][ICON_BULLET]+%s1 [ICON_HEALTHY] a las ciudades cercanas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_PRODUCTION_MODIFIER</Tag>
+		<Tag>TXT_KEY_FEATUREHELP_PRODUCTION_MODIFIER</Tag>
 		<English>[ICON_BULLET]Workers Produce %D1_Change%% [ICON_PRODUCTION] from Chopping</English>
 		<French>[ICON_BULLET]Les ouvriers produisent %D1_Change%% [ICON_PRODUCTION] en coupant du bois</French>
 		<German>[ICON_BULLET]Bautrupps produzieren %D1_Change%% [ICON_PRODUCTION] durch Abholzung</German>

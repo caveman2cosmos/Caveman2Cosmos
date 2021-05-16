@@ -1,21 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_POP_ALWAYS_DESTROYED</Tag>
+		<Tag>TXT_KEY_FEATUREHELP_POP_ALWAYS_DESTROYED</Tag>
 		<English>[NEWLINE][ICON_BULLET]This feature is immediately destroyed when a city is founded on the same plot.</English>
 		<French>[NEWLINE][ICON_BULLET]Cette caractéristique est immédiatement détruite lorsqu'une ville est fondée sur le même terrain.</French>
 		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird sofort zerstört, wenn eine Stadt auf demselben Feld errichtet wird.</German>
 		<Russian>[NEWLINE][ICON_BULLET]Эта особенность немедленно разрушается, если будет заложен город на данном участке.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_POP_DESTROYS</Tag>
+		<Tag>TXT_KEY_FEATUREHELP_POP_DESTROYS</Tag>
 		<English>[NEWLINE][ICON_BULLET]This feature is destroyed by a city founded on the same plot as soon as the city achieves %d1_pop Population.</English>
 		<French>[NEWLINE][ICON_BULLET]Cette caractéristique est détruite par une ville fondée sur le même terrain dès que la ville atteint %d1_pop Population.</French>
 		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird zerstört, wenn eine Stadt auf demselben Feld auf Stufe %d1_pop anwächst.</German>
 		<Russian>[NEWLINE][ICON_BULLET]Эта особенность уничтожается городом, основанном на том же участке, как только население города достигнет %d1_pop.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_POP_NEVER_DESTROYED</Tag>
+		<Tag>TXT_KEY_FEATUREHELP_POP_NEVER_DESTROYED</Tag>
 		<English>[NEWLINE][ICON_BULLET]This feature is never destroyed by a city.</English>
 		<French>[NEWLINE][ICON_BULLET]Cette caractéristique n'est jamais détruite par une ville.</French>
 		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird niemals durch eine Stadt zerstört.</German>
