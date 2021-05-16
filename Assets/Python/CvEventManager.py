@@ -2393,7 +2393,7 @@ class CvEventManager:
 						strReligionName = GC.getReligionInfo(iReligion).getText()
 						popup = PyPopup.PyPopup(-1)
 						popup.setHeaderString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER",()))
-						popup.setBodyString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_TEXT", (strReligionName, strReligionName)))
+						popup.setBodyString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION", (strReligionName, strReligionName)))
 						popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 

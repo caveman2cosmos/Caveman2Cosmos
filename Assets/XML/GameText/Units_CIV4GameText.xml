@@ -277,7 +277,7 @@
 		<Russian>Â êîíöå XX â. ðàêåòíûå êðåéñåðû ÂÌÔ ÑØÀ íà÷àëè îñíàùàòü ñèñòåìàìè ïðîòèâîðàêåòíîé îáîðîíû Aegis ("Ýãèäà"). Àìåðèêàíöû äîëãîå âðåìÿ ñîâåðøåíñòâîâàëè îáîðîíèòåëüíûå ñèñòåìû ñâîèõ êîðàáëåé. Ðàáîòû â ýòîé ñôåðå àêòèâèçèðîâàëèñü ïîñëå òîãî, êàê àðãåíòèíñêàÿ ðàêåòà ïîòîïèëà áðèòàíñêèé ýñìèíåö "Øåôôèëä" â 1982 ã. â õîäå âîéíû çà Ôîëêëåíäñêèå îñòðîâà.[PARAGRAPH:1]Ñèñòåìà "Èäæèñ" âêëþ÷àåò â ñåáÿ ñðåäñòâà ÏÂÎ è îáíàðóæåíèÿ ïîäâîäíûõ ëîäîê, ðàêåòíóþ óñòàíîâêó ïðîòèâîâîçäóøíîé îáîðîíû è îðóæèå "ïîñëåäíåé íàäåæäû" - ñïàðåííûå êðóïíîêàëèáåðíûå ïóëåìåòû "Âóëêàí". Êàê ïðàâèëî, êðåéñåðû "Èäæèñ" íåñóò ðàêåòû, ïîðàæàþùèå íàçåìíûå èëè ìîðñêèå öåëè, ÷àñòî îíè ñîïðîâîæäàþò óÿçâèìûå òðàíñïîðòíûå ýñêàäðû, çàùèùàÿ èõ îò âîçäóøíûõ è ìîðñêèõ àòàê.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_AFFLICTION_FORTITUDE_MODIFIER_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_AFFLICTION_FORTITUDE_MODIFIER_NEGATIVE</Tag>
 		<English>[ICON_BULLET]Affliction Synergy: %D1_Change%% more likely to contract %s2_Affliction.</English>
 		<French>[ICON_BULLET]Synergie des Affections: %D1_Change%% de chances supplémentaires de contracter: %s2_Affliction.</French>
 		<Italian>[ICON_BULLET]Sinergia di afflizioni: %D1_Change%% di probabilità in più di contrarre %s2_Affliction.</Italian>
@@ -285,7 +285,7 @@
 		<Russian>[ICON_BULLET]Синергия боли: %D1_Change%% с большей вероятностью заразится %s2_Affliction.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_AFFLICTION_FORTITUDE_MODIFIER_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_AFFLICTION_FORTITUDE_MODIFIER_POSITIVE</Tag>
 		<English>[ICON_BULLET]Inoculated: %D1_Change%% less likely to contract %s2_Affliction.</English>
 		<French>[ICON_BULLET]Vacciné: %D1_Change%% de chances en moins de contracter: %s2_Affliction.</French>
 		<Italian>[ICON_BULLET]Vaccinato: %D1_Change%% di probabilità in meno di contrarre %s2_Affliction.</Italian>
@@ -293,7 +293,7 @@
 		<Russian>[ICON_BULLET]Вакцинация: %D1_Change%% с меньшей вероятностью заразится %s2_Affliction.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_AFFLICTION_TOLERANCE_NEGATIVE_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_AFFLICTION_TOLERANCE_NEGATIVE</Tag>
 		<English>[ICON_BULLET]Allergic: Currently %D1_Change%% more likely to contract %s2_Affliction.</English>
 		<French>[ICON_BULLET]Allergie: actuellement %D1_Change%% de chances supplémentaires de contracter: %s2_Affliction.</French>
 		<Italian>[ICON_BULLET]Allergia: attualmente %D1_Change%% di probabilità in più di contrarre %s2_Affliction.</Italian>
@@ -301,7 +301,7 @@
 		<Russian>[ICON_BULLET]Аллергия: в настоящее время %D1_Change%% с большей вероятностью заразится %s2_Affliction.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_AFFLICTION_TOLERANCE_POSITIVE_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_AFFLICTION_TOLERANCE_POSITIVE</Tag>
 		<English>[ICON_BULLET]Tolerance: Currently %D1_Change%% less likely to contract %s2_Affliction.</English>
 		<French>[ICON_BULLET]Tolérance: actuellement %D1_Change%% de chances en moins de contracter: %s2_Affliction.</French>
 		<Italian>[ICON_BULLET]Tolleranza: attualmente %D1_Change%% di chance di contrarre %s2_Affliction.</Italian>
@@ -7154,7 +7154,7 @@
 		<English>Fire arrows are an early form of gunpowder solid fuel rocket which were attached to a shaft of the arrow to provide a propulsive force. The Chinese are credited with both the invention of the fire arrow and also the first use of fire arrows in a military warfare. The Chinese developed fire arrows from their previous invention of fireworks and gunpowder.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_FLANK_SUPPORT_PERCENT_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FLANK_SUPPORT_PERCENT</Tag>
 		<English>[ICON_BULLET]Flank Support: +%d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien en Contournement: +%d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto ai fianchi: +%d1_Amount%%</Italian>
@@ -7501,7 +7501,7 @@
 		<Russian>Ôðåãàò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_FRONT_SUPPORT_PERCENT_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_FRONT_SUPPORT_PERCENT</Tag>
 		<English>[ICON_BULLET]Front Support: +%d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien au Front: +%d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto al fronte: +%d1_Amount%%</Italian>
@@ -8372,7 +8372,7 @@
 		<Russian>Ãðåíàäåð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_GRID_X_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_GRID_X</Tag>
 		<English>[ICON_BULLET]Tech: %s1_Tech Grid X: %d2_Value</English>
 		<French>[ICON_BULLET]Tech: %s1_Tech Grille X: %d2_Value</French>
 		<Polish>[ICON_BULLET]Tech: %s1_Tech Siatka X: %d2_Value</Polish>
@@ -8593,7 +8593,7 @@
 		<Russian>Àâòîìàòè÷åñêèå íàëåòû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_AIRUNITCANDEFEND_TEXT</Tag>
+		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_AIRUNITCANDEFEND</Tag>
 		<English>Auto Air Patrol</English>
 		<French>Patrouilles Aér. Auto</French>
 		<Spanish>Patrulla aérea automatizada</Spanish>
@@ -12586,7 +12586,7 @@
 		<Russian>Ñòðåëîê ñ äë. ëóêîì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_LONG_RANGE_SUPPORT_PERCENT_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_LONG_RANGE_SUPPORT_PERCENT</Tag>
 		<English>[ICON_BULLET]Long Range Support: +%d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien Longue Portée: +%d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto a lungo raggio: +%d1_Amount%%</Italian>
@@ -13549,7 +13549,7 @@
 		<Russian>Медик - это общий термин для человека, занимающегося медициной, особенно неотложной медицинской помощи или первой помощи, например, техник неотложной медицинской помощи, фельдшер или военнослужащий, обученный медицине на поле боя. Это также может относиться к студенту-практиканту, ординатору или, в некоторых случаях, к врачу. Этот термин не применяется к медсестре, за исключением парамедицинских учреждений.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_MEDIUM_RANGE_SUPPORT_PERCENT_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_MEDIUM_RANGE_SUPPORT_PERCENT</Tag>
 		<English>[ICON_BULLET]Medium Range Support: +%d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien Moyenne Portée: +%d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto a medio raggio: +%d1_Amount%%</Italian>
@@ -15587,7 +15587,7 @@
 		<English>The territory that now constitutes Tajikistan was previously home to several ancient cultures, including the city of Sarazm of the Neolithic and the Bronze Age, and was later home to kingdoms ruled by people of different faiths and cultures, including the Oxus civilization, Andronovo culture, Buddhism, Nestorian Christianity, Zoroastrianism, and Manichaeism. The area has been ruled by numerous empires and dynasties, including the Achaemenid Empire, Sassanian Empire, Hephthalite Empire, Samanid Empire, Mongol Empire, Timurid dynasty, and the Russian Empire. As a result of the breakup of the Soviet Union, Tajikistan became an independent nation in 1991. A civil war was fought almost immediately after independence, lasting from 1992 to 1997. Since the end of the war, newly established political stability and foreign aid have allowed the country's economy to grow.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_ONEUP_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_ONEUP</Tag>
 		<English>[ICON_BULLET]Number of Extra Lives: %d1</English>
 		<French>[ICON_BULLET]Numero de extra vie: %d1</French>
 		<German>[ICON_BULLET]Anzahl zusätzlicher Leben: %d1</German>
@@ -19201,7 +19201,7 @@
 		<Russian>Теперь, когда внутренний роторный двигатель в значительной степени вытеснил традиционный бензиновый мотор, вполне естественно, что бронетранспортер был разработан с использованием новой технологии</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_SHORT_RANGE_SUPPORT_PERCENT_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_SHORT_RANGE_SUPPORT_PERCENT</Tag>
 		<English>[ICON_BULLET]Short Range Support: +%d1_Amount%%</English>
 		<French>[ICON_BULLET]Soutien Courte Portée: +%d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Supporto a corto raggio: +%d1_Amount%%</Italian>
@@ -22916,7 +22916,7 @@
 		<Polish>Wicekról (hiszp. virrey, ang. viceroy) - urzędnik królewski, sprawujący władzę nad danym terytorium (w niektórych przypadkach oficjalnie nazwanym od tytułu - wicekrólestwem) w imieniu monarchy. Urząd ten jest analogiczny z funkcją namiestnika monarszego, czy też generalnego gubernatora (generał-gubernatora) kraju podległego monarsze.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_VICTORY_ADJACENT_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_VICTORY_ADJACENT</Tag>
 		<English>[ICON_BULLET]%d1%% chance to heal self, %d2%% chance to heal all friendly units on the tile and %d3%% chance to heal all friendly units on an adjacent tile on a combat victory</English>
 		<French>[ICON_BULLET]%d1%% de chances de se soigner, %d2%% de chances de soigner toutes les unités amies sur la tuile et %d3%% de guérir toutes les unités amies sur une tuile adjacente lors d'une victoire au combat</French>
 		<German>[ICON_BULLET]%d1%% Chance sich selbst und %d2%% Chance alle befreundeten Einheiten auf dem eigenen Feld sowie %d3%% Chance alle befreundeten Einheiten auf einem benachbarten Feld nach erfolgreichem Kampf zu heilen</German>
@@ -22924,7 +22924,7 @@
 		<Polish>[ICON_BULLET]%d1%% do uleczenia samego siebie, %d2%% do uleczenia wszystkich jednostek na tym samym polu, %d3%% szans na uleczenie jednostek na przyległych polach po wygranej walce</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_VICTORY_STACK_TEXT</Tag>
+		<Tag>TXT_KEY_UNITHELP_VICTORY_STACK</Tag>
 		<English>[ICON_BULLET]%d1%% chance to heal self and %d2%% chance to heal all friendly units on the tile on a combat victory</English>
 		<French>[ICON_BULLET]%d1%% de chances de se soigner et %d2%% de soigner toutes les unités amies sur la tuile lors d'une victoire au combat</French>
 		<German>[ICON_BULLET]%d1%% Chance sich selbst und %d2%% Chance alle befreundeten Einheiten auf dem eigenen Feld nach erfolgreichem Kampf zu heilen</German>
