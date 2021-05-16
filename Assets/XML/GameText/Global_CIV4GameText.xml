@@ -18847,7 +18847,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Secretario General de la ONU</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CHOOSER_TITLE</Tag>
+		<Tag>TXT_KEY_TECHHELP_CHOOSER_TITLE</Tag>
 		<English>Technology Advisor</English>
 		<French>Conseiller scientifique</French>
 		<German>Technologieberater</German>

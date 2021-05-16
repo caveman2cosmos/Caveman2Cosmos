@@ -714,7 +714,7 @@
 		</ControlInfo>
 		<ControlInfo>
 			<Type>CONTROL_TECH_CHOOSER</Type>
-			<Description>TXT_KEY_TECH_CHOOSER_TITLE</Description>
+			<Description>TXT_KEY_TECHHELP_CHOOSER_TITLE</Description>
 			<Help/>
 			<HotKey>KB_F6</HotKey>
 			<bAltDown>0</bAltDown>

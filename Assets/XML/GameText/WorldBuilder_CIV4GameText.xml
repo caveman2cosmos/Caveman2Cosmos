@@ -584,4 +584,8 @@
 		<English>Level</English>
 		<Russian>Óðîâåíü</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_IRRIGATION</Tag>
+		<English>Irrigation</English>
+	</TEXT>
 </Civ4GameText>
