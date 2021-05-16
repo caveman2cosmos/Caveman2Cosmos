@@ -2115,8 +2115,7 @@ class CvEventManager:
 							CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_GG_REVIVE", (szName,)), iPlayerL, 16, 'Art/Interface/Buttons/Great_Wonders/cyrustomb.dds', ColorTypes(11), iX, iY, True, True, bForce=False)
 
 		# Beastmaster
-		iLeaderUnit = CyUnit.getLeaderUnitType()
-		if iLeaderUnit != -1 and iLeaderUnit in (self.UNIT_BEASTMASTER):
+		if CyUnit.getLeaderUnitType() == self.UNIT_BEASTMASTER:
 			# This will prevent a 'beastmaster lost' message when the unit is killed.
 			CyUnit.setLeaderUnitType(-1)
 
