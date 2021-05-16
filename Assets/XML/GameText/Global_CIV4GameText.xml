@@ -20929,7 +20929,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Sin mantenimiento</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_DISTANCE_MAINT</Tag>
+		<Tag>TXT_KEY_CIVICHELP_DISTANCE_MAINT</Tag>
 		<English>[ICON_BULLET]No Maintenance Costs from Distance to Palace</English>
 		<French>[ICON_BULLET]Aucun coût d'entretien dû à l'éloignement du palais</French>
 		<German>[ICON_BULLET]Keine Unterhaltskosten wegen Entfernung zum Palast</German>
@@ -20937,7 +20937,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Sin costes de mantenimiento por lejanía con palacio</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_DISTANCE_MAINT_MOD</Tag>
+		<Tag>TXT_KEY_CIVICHELP_DISTANCE_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Distance to Palace</English>
 		<French>[ICON_BULLET]Coût d'entretien %D1_Mod%% dû à l'éloignement du palais</French>
 		<German>[ICON_BULLET]%D1_Mod%% Unterhaltskosten wegen Entfernung zum Palast</German>
@@ -20945,7 +20945,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Mod%% a los costes de mantenimiento por lejanía con palacio</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_EXPERIENCE_IN_BORDERS</Tag>
+		<Tag>TXT_KEY_CIVICHELP_EXPERIENCE_IN_BORDERS</Tag>
 		<English>[ICON_BULLET]%D1%% Experience gained from Combat within own Borders</English>
 		<French>[ICON_BULLET]Expérience obtenue suite au combat dans vos frontières : %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Erfahrungszuwachs durch Kämpfe innerhalb der eigenen Grenzen</German>
@@ -20953,7 +20953,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1%% de experiencia obtenida por combatir dentro de las fronteras propias.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_EXTRA_HEALTH</Tag>
+		<Tag>TXT_KEY_CIVICHELP_EXTRA_HEALTH</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUn in All Cities</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUn dans toutes les villes</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HealthOrUn in allen Städten</German>
@@ -20961,7 +20961,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HealthOrUn en todas las ciudades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_EXTRA_WAR_WEARINESS</Tag>
+		<Tag>TXT_KEY_CIVICHELP_EXTRA_WAR_WEARINESS</Tag>
 		<English>[ICON_BULLET]%D1_WarWearMod%% War [ICON_UNHAPPY]</English>
 		<French>[ICON_BULLET]%D1_WarWearMod%% [ICON_UNHAPPY] dû à la guerre</French>
 		<German>[ICON_BULLET]%D1_WarWearMod%% [ICON_UNHAPPY] wegen Krieg</German>
@@ -20969,7 +20969,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_WarWearMod%% al [ICON_UNHAPPY] bélico</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEATURE_HAPPINESS</Tag>
+		<Tag>TXT_KEY_CIVICHELP_FEATURE_HAPPINESS</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp from[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp[SPACE]</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch Geländeart[SPACE]</German>
@@ -20977,7 +20977,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_SPECIALISTS</Tag>
+		<Tag>TXT_KEY_CIVICHELP_FREE_SPECIALISTS</Tag>
 		<English>[ICON_BULLET]%D1_Change Free [NUM1:Specialist:Specialists] per City</English>
 		<French>[ICON_BULLET]%D1_Change spécialistes gratuits par ville</French>
 		<German>[ICON_BULLET]%D1_Change freie Spezialisten pro Stadt</German>
@@ -20985,7 +20985,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis por ciudad</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_XP</Tag>
+		<Tag>TXT_KEY_CIVICHELP_FREE_XP</Tag>
 		<English>[ICON_BULLET]New Units Receive %D1_Change Experience Points</English>
 		<French>[ICON_BULLET]Les nouvelles unités reçoivent %D1_Change XP</French>
 		<German>[ICON_BULLET]Neue Einheiten erhalten %D1_Change Erfahrungspunkte</German>
@@ -20993,7 +20993,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Las nuevas unidades reciben %D1_Change puntos de experiencia</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FROM_TRADE_ROUTES</Tag>
+		<Tag>TXT_KEY_CIVICHELP_FROM_TRADE_ROUTES</Tag>
 		<English>[SPACE]from Trade Routes ([ICON_TRADE])</English>
 		<French>[SPACE]des routes commerciales ([ICON_TRADE])</French>
 		<German>[SPACE]von Handelswegen ([ICON_TRADE])</German>
@@ -21001,7 +21001,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[SPACE]por rutas comerciales ([ICON_TRADE])</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_GREAT_PEOPLE_MOD</Tag>
+		<Tag>TXT_KEY_CIVICHELP_GREAT_PEOPLE_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Birth Rate</English>
 		<French>[ICON_BULLET]Taux de natalité %D1_Mod%%[ICON_GREATPEOPLE]</French>
 		<German>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Geburtenrate</German>
@@ -21009,7 +21009,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Mod%% a la tasa de natalidad de [ICON_GREATPEOPLE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_GREAT_PEOPLE_MOD_RELIGION</Tag>
+		<Tag>TXT_KEY_CIVICHELP_GREAT_PEOPLE_MOD_RELIGION</Tag>
 		<English>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Birth Rate in Cities with %F2_Religion</English>
 		<French>[ICON_BULLET]Taux de natalité %D1_Mod%%[ICON_GREATPEOPLE] dans les villes pratiquant : %F2_Religion</French>
 		<German>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Geburtenrate in Städten mit der Religion %F2_Religion</German>
@@ -21017,7 +21017,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Mod%% a la tasa de natalidad de [ICON_GREATPEOPLE] en ciudades que sigan el %F2_Religion</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_GREAT_PEOPLE_MOD_STATE_RELIGION</Tag>
+		<Tag>TXT_KEY_CIVICHELP_GREAT_PEOPLE_MOD_STATE_RELIGION</Tag>
 		<English>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Birth Rate in Cities with State %F2_Religion</English>
 		<French>[ICON_BULLET]Taux de natalité %D1_Mod%%[ICON_GREATPEOPLE] dans les villes ayant comme religion d'état : F2_Religion</French>
 		<German>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Geburtenrate in Städten mit der Staatsreligion %F2_Religion</German>
@@ -21025,7 +21025,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Mod%% a la tasa de natalidad de [ICON_GREATPEOPLE] en ciudades que tengan el %F2_Religion como religión oficial</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_GREAT_GENERAL_MOD</Tag>
+		<Tag>TXT_KEY_CIVICHELP_GREAT_GENERAL_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Great General Emergence</English>
 		<French>[ICON_BULLET]Emergence d'un Général illustre %D1_Mod%%</French>
 		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% Produktion Großer Generäle</German>
@@ -21033,7 +21033,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Mod%% a la aparición de Gran general</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_IMPROVEMENT_UPGRADE</Tag>
+		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_UPGRADE</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Growth for[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Mod%% de croissance pour[SPACE]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Wachstum für[SPACE]</German>
@@ -21041,7 +21041,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Mod%% al crecimiento por[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_IMPROVEMENT_YIELD_CHANGE</Tag>
+		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_YIELD_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
 		<German>[ICON_BULLET]%D1_Change%F2_Icon durch die Modernisierung[SPACE]</German>
@@ -21049,7 +21049,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_IN_ALL_CITIES</Tag>
+		<Tag>TXT_KEY_CIVICHELP_IN_ALL_CITIES</Tag>
 		<English>[SPACE]in All Cities</English>
 		<French>[SPACE]dans toutes les villes</French>
 		<German>[SPACE]in allen Städten</German>
@@ -21057,7 +21057,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[SPACE]en todas las ciudades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_IN_CAPITAL</Tag>
+		<Tag>TXT_KEY_CIVICHELP_IN_CAPITAL</Tag>
 		<English>[SPACE]in Capital</English>
 		<French>[SPACE]dans la capitale</French>
 		<German>[SPACE]in der Hauptstadt</German>
@@ -21065,7 +21065,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[SPACE]en la capital</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS</Tag>
+		<Tag>TXT_KEY_CIVICHELP_LARGEST_CITIES_HAPPINESS</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in %d3_NumCities Largest Cities</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans les %d3_NumCities plus grandes villes</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in den %d3_NumCities größten Städten</German>
@@ -21073,7 +21073,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en las %d3_NumCities mayores ciudades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MILITARY_PRODUCTION</Tag>
+		<Tag>TXT_KEY_CIVICHELP_MILITARY_PRODUCTION</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Military Unit Production</English>
 		<French>[ICON_BULLET]%D1_Mod%% de production d'unités militaires</French>
 		<German>[ICON_BULLET]%D1_Mod%% Produktion von Militäreinheiten</German>
@@ -21081,7 +21081,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Mod%% a la producción de unidades militares</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MILITARY_FOOD</Tag>
+		<Tag>TXT_KEY_CIVICHELP_MILITARY_FOOD</Tag>
 		<English>[ICON_BULLET]Military Units Produced with [ICON_FOOD]</English>
 		<French>[ICON_BULLET]Unités militaires produites avec : [ICON_FOOD]</French>
 		<German>[ICON_BULLET]Mit [ICON_FOOD] produzierte Militäreinheiten</German>
@@ -21089,7 +21089,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Las unidades militares se producen con [ICON_FOOD]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NON_STATE_REL_HAPPINESS_NO_STATE</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NON_STATE_REL_HAPPINESS_NO_STATE</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn per [ICON_RELIGION] in a City</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn par [ICON_RELIGION] dans une ville</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn je [ICON_RELIGION]-Religion in einer Stadt</German>
@@ -21097,7 +21097,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn por cada [ICON_RELIGION] en cada ciudad</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NON_STATE_REL_HAPPINESS_WITH_STATE</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NON_STATE_REL_HAPPINESS_WITH_STATE</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn per Non-State [ICON_RELIGION] in a City</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn par [ICON_RELIGION] non officielle dans une ville</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn je nichtstaatlicher Religion [ICON_RELIGION] in einer Stadt</German>
@@ -21105,7 +21105,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn por cada [ICON_RELIGION] no oficial en cada ciudad</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NO_BUILDING_UNHEALTHY</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NO_BUILDING_UNHEALTHY</Tag>
 		<English>[ICON_BULLET]No [ICON_UNHEALTHY] from Buildings</English>
 		<French>[ICON_BULLET]Pas de [ICON_UNHEALTHY] en raison des bâtiments</French>
 		<German>[ICON_BULLET]Nicht [ICON_UNHEALTHY] durch Gebäude</German>
@@ -21113,7 +21113,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]No hay [ICON_UNHEALTHY] por edificios</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NO_CORPORATIONS</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NO_CORPORATIONS</Tag>
 		<English>[ICON_BULLET]Corporations have no effect</English>
 		<French>[ICON_BULLET]Les sociétés commerciales n'ont aucun effet</French>
 		<German>[ICON_BULLET]Kapitalgesellschaften haben keine Auswirkung</German>
@@ -21121,7 +21121,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Las corporaciones no tienen efecto</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NO_FOREIGN_CORPORATIONS</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NO_FOREIGN_CORPORATIONS</Tag>
 		<English>[ICON_BULLET]Foreign Corporations have no effect</English>
 		<French>[ICON_BULLET]Les sociétés commerciales étrangères n'ont aucun effet</French>
 		<German>[ICON_BULLET]Fremde Kapitalgesellschaften haben keine Auswirkung</German>
@@ -21129,7 +21129,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Las corporaciones extranjeras no tienen efecto</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NO_FOREIGN_TRADE</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NO_FOREIGN_TRADE</Tag>
 		<English>[ICON_BULLET]No Foreign Trade Routes ([ICON_TRADE])</English>
 		<French>[ICON_BULLET]Aucune route commerciale étrangère</French>
 		<German>[ICON_BULLET]Keine fremden Handelswege ([ICON_TRADE])</German>
@@ -21137,7 +21137,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Sin rutas comerciales extranjeras ([ICON_TRADE])</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NO_MAINT_CORPORATION_MOD</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NO_MAINT_CORPORATION_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Corporations</English>
 		<French>[ICON_BULLET]%D1_Mod%% Coûts d'entretien des Sociétés commerciales</French>
 		<German>[ICON_BULLET]%D1_Mod%% Unterhaltskosten von Kapitalgesellschaften</German>
@@ -21145,7 +21145,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Mod%% a los costes de mantenimiento de las corporaciones</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NO_MAINT_CORPORATION</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NO_MAINT_CORPORATION</Tag>
 		<English>[ICON_BULLET]No Maintenance Costs from Corporations</English>
 		<French>[ICON_BULLET]Pas de coût d'entretien des Sociétés commerciales</French>
 		<German>[ICON_BULLET]Keine Unterhaltskosten von Kapitalgesellschaften</German>
@@ -21153,7 +21153,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Sin costes de mantenimiento de las corporaciones</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NO_MAINT_NUM_CITIES</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NO_MAINT_NUM_CITIES</Tag>
 		<English>[ICON_BULLET]No Maintenance Costs from Number of Cities</English>
 		<French>[ICON_BULLET]Aucun coût d'entretien dû au nombre de villes</French>
 		<German>[ICON_BULLET]Keine Unterhaltskosten für Anzahl der Städte</German>
@@ -21161,7 +21161,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Sin costes de mantenimiento por cantidad de ciudades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NO_MAINT_NUM_CITIES_MOD</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NO_MAINT_NUM_CITIES_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Number of Cities</English>
 		<French>[ICON_BULLET]Coût d'entretien %D1_Mod%% dû au nombre de villes</French>
 		<German>[ICON_BULLET]%D1_Mod%% Unterhaltskosten von Anzahl der Städte</German>
@@ -21169,7 +21169,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Mod%% a los costes de mantenimiento por cantidad de ciudades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NO_NON_STATE_SPREAD</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NO_NON_STATE_SPREAD</Tag>
 		<English>[ICON_BULLET]No Non-State [ICON_RELIGION] Spread</English>
 		<French>[ICON_BULLET]Aucune [ICON_RELIGION] propagée</French>
 		<German>[ICON_BULLET]Keine nichtstaatliche Religion [ICON_RELIGION] verbreitet</German>
@@ -21177,7 +21177,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]No se propaga ninguna [ICON_RELIGION] que no sea la oficial</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NO_POP_UNHEALTHY</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NO_POP_UNHEALTHY</Tag>
 		<English>[ICON_BULLET]No [ICON_UNHEALTHY] from City Population</English>
 		<French>[ICON_BULLET]Pas de [ICON_UNHEALTHY] en raison de la population de la ville</French>
 		<German>[ICON_BULLET]Nicht [ICON_UNHEALTHY] durch Stadtbevölkerung</German>
@@ -21185,7 +21185,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]No hay [ICON_UNHEALTHY] por población de la ciudad</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NO_STATE_RELIGION</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NO_STATE_RELIGION</Tag>
 		<English>[ICON_BULLET]No State [ICON_RELIGION]</English>
 		<French>[ICON_BULLET]Aucune [ICON_RELIGION] d'état</French>
 		<German>[ICON_BULLET]Keine Staatsreligion [ICON_RELIGION]</German>
@@ -21193,7 +21193,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Sin [ICON_RELIGION] oficial</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NO_WAR_WEARINESS</Tag>
+		<Tag>TXT_KEY_CIVICHELP_NO_WAR_WEARINESS</Tag>
 		<English>[ICON_BULLET]No War [ICON_UNHAPPY]</English>
 		<French>[ICON_BULLET]Pas de [ICON_UNHAPPY] dû à la guerre</French>
 		<German>[ICON_BULLET]Keine [ICON_UNHAPPY] wegen Krieg</German>
@@ -21201,7 +21201,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Sin [ICON_UNHAPPY] bélico</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_PER_SPECIALIST</Tag>
+		<Tag>TXT_KEY_CIVICHELP_PER_SPECIALIST</Tag>
 		<English>[SPACE]per Specialist</English>
 		<French>[SPACE]par spécialiste</French>
 		<German>[SPACE]pro Spezialist</German>
@@ -21209,7 +21209,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[SPACE]por cada especialista</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_RELIGION_HAPPINESS</Tag>
+		<Tag>TXT_KEY_CIVICHELP_RELIGION_HAPPINESS</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in Cities with State [ICON_RELIGION]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans les villes ayant comme religion  d'état [ICON_RELIGION]</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in Städten mit der Staatsreligion [ICON_RELIGION]</German>
@@ -21217,7 +21217,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en las ciudades con [ICON_RELIGION] oficial</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_REL_FREE_XP</Tag>
+		<Tag>TXT_KEY_CIVICHELP_REL_FREE_XP</Tag>
 		<English>[ICON_BULLET]%D1_XP Experience Points in Cities with %F2_RelIcon</English>
 		<French>[ICON_BULLET]%D1_XP EXP dans les villes ayant pour religion : %F2_RelIcon</French>
 		<German>[ICON_BULLET]%D1_XP Erfahrungspunkte in Städten mit der Religion %F2_RelIcon</German>
@@ -21225,7 +21225,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_XP puntos de experiencia en las ciudades con %F2_RelIcon</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_SCREEN_UPKEEP</Tag>
+		<Tag>TXT_KEY_CIVICHELP_SCREEN_UPKEEP</Tag>
 		<English>Upkeep: %d1[ICON_GOLD] per turn</English>
 		<French>Entretien : %d1[ICON_GOLD] par tour</French>
 		<German>Unterhalt: %d1[ICON_GOLD] pro Runde</German>
@@ -21233,7 +21233,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Mantenimiento: %d1 [ICON_GOLD] por turno</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_HAPPINESS</Tag>
+		<Tag>TXT_KEY_CIVICHELP_STATE_RELIGION_HAPPINESS</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in Cities with %F3_RelIcon</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans les villes ayant pour religion %F3_RelIcon</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in Städten mit der Religion %F3_RelIcon</German>
@@ -21241,7 +21241,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en las ciudades con %F3_RelIcon</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_STATE_REL_FREE_XP</Tag>
+		<Tag>TXT_KEY_CIVICHELP_STATE_REL_FREE_XP</Tag>
 		<English>[ICON_BULLET]%D1_XP Experience Points in Cities with State [ICON_RELIGION]</English>
 		<French>[ICON_BULLET]%D1_XP EXP dans les villes ayant une [ICON_RELIGION] d'état</French>
 		<German>[ICON_BULLET]%D1_XP Erfahrungspunkte in Städten mit der Staatsreligion [ICON_RELIGION]</German>
@@ -21249,7 +21249,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_XP [NUM1:punto de experiencia:puntos de experiencia] en las ciudades con [ICON_RELIGION] oficial</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_TRADE_ROUTES</Tag>
+		<Tag>TXT_KEY_CIVICHELP_TRADE_ROUTES</Tag>
 		<English>[ICON_BULLET]%D1_Change Trade Routes ([ICON_TRADE]) per City</English>
 		<French>[ICON_BULLET]%D1_Change routes commerciales par ville</French>
 		<German>[ICON_BULLET]%D1_Change Handelswege ([ICON_TRADE]) pro Stadt</German>
@@ -21257,7 +21257,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales ([ICON_TRADE]) por ciudad</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_UNIT_HAPPINESS</Tag>
+		<Tag>TXT_KEY_CIVICHELP_UNIT_HAPPINESS</Tag>
 		<English>[ICON_BULLET]%D1_PerUnit%F2_HappyOrSad per Military Unit Stationed in a City</English>
 		<French>[ICON_BULLET]%D1_PerUnit%F2_HappyOrSad par unité militaire en garnison dans une ville</French>
 		<German>[ICON_BULLET]%D1_PerUnit%F2_HappyOrSad pro in einer Stadt stationierter Militäreinheit</German>
@@ -21265,7 +21265,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_PerUnit %F2_HappyOrSad por cada unidad militar destacada en la ciudad</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_UNLIMTED</Tag>
+		<Tag>TXT_KEY_CIVICHELP_UNLIMTED</Tag>
 		<English>[ICON_BULLET]Unlimited[SPACE]</English>
 		<French>[ICON_BULLET]Sans limite[SPACE]</French>
 		<German>[ICON_BULLET]Unbegrenzt[SPACE]</German>
@@ -21273,7 +21273,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Sin límite[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_WORKER_SPEED</Tag>
+		<Tag>TXT_KEY_CIVICHELP_WORKER_SPEED</Tag>
 		<English>[ICON_BULLET]Workers Build Improvements %D1_Mod%% Faster</English>
 		<French>[ICON_BULLET]Vitesse de construction des aménagements : %D1_Mod%%</French>
 		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Mod%% schneller</German>
