@@ -12357,7 +12357,7 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 		if (GC.getSpecialistInfo(eSpecialist).getExperience() > 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_EXPERIENCE", GC.getSpecialistInfo(eSpecialist).getExperience()));
+			szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_EXPERIENCE", GC.getSpecialistInfo(eSpecialist).getExperience()));
 		}
 
 		int iUnitCombatExperience = 0;
@@ -12375,14 +12375,14 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			if (iUnitCombatExperience > 0)
 			{
 				szHelpString.append(NEWLINE);
-				szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_UNIT_COMBAT_EXPERIENCE", iUnitCombatExperience, GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide()));
+				szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_UNIT_COMBAT_EXPERIENCE", iUnitCombatExperience, GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide()));
 			}
 		}
 
 		if (GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange() != 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_BIRTH_RATE", GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange()));
+			szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_BIRTH_RATE", GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange()));
 		}
 
 		if (GC.getSpecialistInfo(eSpecialist).getInsidiousness() != 0)
@@ -12392,7 +12392,7 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			{
 				szTempBuffer.Format(L"%.1f", fValue/10);
 			}
-			szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_INSIDIOUSNESS", szTempBuffer.GetCString()));
+			szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_INSIDIOUSNESS", szTempBuffer.GetCString()));
 		}
 
 		if (GC.getSpecialistInfo(eSpecialist).getInvestigation() != 0)
@@ -12402,9 +12402,9 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			{
 				szTempBuffer.Format(L"%.1f", fValue/10);
 			}
-			szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_INVESTIGATION", szTempBuffer.GetCString()));
+			szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_INVESTIGATION", szTempBuffer.GetCString()));
 			//szHelpString.append(NEWLINE);
-			//szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_INVESTIGATION", GC.getSpecialistInfo(eSpecialist).getInvestigation()));
+			//szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_INVESTIGATION", GC.getSpecialistInfo(eSpecialist).getInvestigation()));
 		}
 
 /************************************************************************************************/
@@ -12435,11 +12435,11 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 				szHelpString.append(NEWLINE);
 				if (GC.getGame().getActivePlayer() != NO_PLAYER && pCity != NULL && GET_TEAM(pCity->getTeam()).isHasTech(eTech))
 				{
-					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HEALTH_TYPE_KNOWN", iSpecialistHealth, gDLL->getSymbolID(HEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HEALTH_TYPE_KNOWN", iSpecialistHealth, gDLL->getSymbolID(HEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 				}
 				else
 				{
-					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HEALTH_TYPE", iSpecialistHealth, gDLL->getSymbolID(HEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HEALTH_TYPE", iSpecialistHealth, gDLL->getSymbolID(HEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 				}
 			}
 			else if (iSpecialistHealth < 0)
@@ -12447,11 +12447,11 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 				szHelpString.append(NEWLINE);
 				if (GC.getGame().getActivePlayer() != NO_PLAYER && pCity != NULL && GET_TEAM(pCity->getTeam()).isHasTech(eTech))
 				{
-					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HEALTH_TYPE_KNOWN", -iSpecialistHealth, gDLL->getSymbolID(UNHEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HEALTH_TYPE_KNOWN", -iSpecialistHealth, gDLL->getSymbolID(UNHEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 				}
 				else
 				{
-					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HEALTH_TYPE", -iSpecialistHealth, gDLL->getSymbolID(UNHEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HEALTH_TYPE", -iSpecialistHealth, gDLL->getSymbolID(UNHEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 				}
 			}
 		}
@@ -12470,7 +12470,7 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			{
 				szTempBuffer.Format(L"%.2f", fValue/100);
 			}
-			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_SPECIALIST_PERCENT", szTempBuffer.GetCString(), (GC.getSpecialistInfo(eSpecialist).getHealthPercent() > 0 ? gDLL->getSymbolID(HEALTHY_CHAR) : gDLL->getSymbolID(UNHEALTHY_CHAR))).c_str());
+			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_SPECIALISTHELP_PERCENT", szTempBuffer.GetCString(), (GC.getSpecialistInfo(eSpecialist).getHealthPercent() > 0 ? gDLL->getSymbolID(HEALTHY_CHAR) : gDLL->getSymbolID(UNHEALTHY_CHAR))).c_str());
 			szHelpString.append(szFirstBuffer);
 		}
 //Team Project (1)
@@ -12496,11 +12496,11 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 				szHelpString.append(NEWLINE);
 				if (GC.getGame().getActivePlayer() != NO_PLAYER && pCity != NULL && GET_TEAM(pCity->getTeam()).isHasTech(eTech))
 				{
-					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HAPPINESS_TYPE_KNOWN", iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HAPPINESS_TYPE_KNOWN", iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 				}
 				else
 				{
-					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HAPPINESS_TYPE", iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HAPPINESS_TYPE", iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 				}
 			}
 			else if (iSpecialistHappiness < 0)
@@ -12508,11 +12508,11 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 				szHelpString.append(NEWLINE);
 				if (GC.getGame().getActivePlayer() != NO_PLAYER && pCity != NULL && GET_TEAM(pCity->getTeam()).isHasTech(eTech))
 				{
-					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HAPPINESS_TYPE_KNOWN", -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HAPPINESS_TYPE_KNOWN", -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 				}
 				else
 				{
-					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HAPPINESS_TYPE", -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HAPPINESS_TYPE", -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 				}
 			}
 		}
@@ -12531,7 +12531,7 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			{
 				szTempBuffer.Format(L"%.2f", fValue/100);
 			}
-			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_SPECIALIST_PERCENT", szTempBuffer.GetCString(), (GC.getSpecialistInfo(eSpecialist).getHappinessPercent() > 0 ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))).c_str());
+			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_SPECIALISTHELP_PERCENT", szTempBuffer.GetCString(), (GC.getSpecialistInfo(eSpecialist).getHappinessPercent() > 0 ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))).c_str());
 			szHelpString.append(szFirstBuffer);
 		}
 /************************************************************************************************/
@@ -12623,7 +12623,7 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 				{
 					szHelpString.append(L", ");
 				}
-				szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_EXPERIENCE_SHORT", iNumSpecialists * GC.getSpecialistInfo(eSpecialist).getExperience()));
+				szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_EXPERIENCE_SHORT", iNumSpecialists * GC.getSpecialistInfo(eSpecialist).getExperience()));
 			}
 
 			int iUnitCombatExperience = 0;
@@ -12644,7 +12644,7 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 					{
 						szHelpString.append(L", ");
 					}
-					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_UNIT_COMBAT_EXPERIENCE_SHORT", iUnitCombatExperience, GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide()));
+					szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_UNIT_COMBAT_EXPERIENCE_SHORT", iUnitCombatExperience, GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide()));
 				}
 			}
 
@@ -12652,7 +12652,7 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 			if (GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange() != 0)
 			{
 				szHelpString.append(L", ");
-				szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_BIRTH_RATE", iNumSpecialists * GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange()));
+				szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_BIRTH_RATE", iNumSpecialists * GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange()));
 			}
 
 	/************************************************************************************************/
@@ -12682,11 +12682,11 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 					szHelpString.append(L", ");
 					if (GC.getGame().getActivePlayer() != NO_PLAYER && GET_PLAYER(kCity.getOwner()).getID() != NO_PLAYER && GET_TEAM(kCity.getTeam()).isHasTech(eTech))
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HEALTH_TYPE_KNOWN", iNumSpecialists * iSpecialistHealth, gDLL->getSymbolID(HEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HEALTH_TYPE_KNOWN", iNumSpecialists * iSpecialistHealth, gDLL->getSymbolID(HEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 					}
 					else
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HEALTH_TYPE", iNumSpecialists * iSpecialistHealth, gDLL->getSymbolID(HEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HEALTH_TYPE", iNumSpecialists * iSpecialistHealth, gDLL->getSymbolID(HEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 					}
 				}
 				else if (iSpecialistHealth < 0)
@@ -12694,11 +12694,11 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 					szHelpString.append(L", ");
 					if (GC.getGame().getActivePlayer() != NO_PLAYER && GET_PLAYER(kCity.getOwner()).getID() != NO_PLAYER && GET_TEAM(kCity.getTeam()).isHasTech(eTech))
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HEALTH_TYPE_KNOWN", iNumSpecialists * -iSpecialistHealth, gDLL->getSymbolID(UNHEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HEALTH_TYPE_KNOWN", iNumSpecialists * -iSpecialistHealth, gDLL->getSymbolID(UNHEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 					}
 					else
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HEALTH_TYPE", iNumSpecialists * -iSpecialistHealth, gDLL->getSymbolID(UNHEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HEALTH_TYPE", iNumSpecialists * -iSpecialistHealth, gDLL->getSymbolID(UNHEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 					}
 				}
 			}
@@ -12719,7 +12719,7 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 				{
 					szTempBuffer.Format(L"%.2f", fValue/100);
 				}
-				szFirstBuffer.Format(L"%s%s, ", gDLL->getText("TXT_KEY_SPECIALIST_PERCENT", szTempBuffer.GetCString(), (GC.getSpecialistInfo(eSpecialist).getHealthPercent() > 0 ? gDLL->getSymbolID(HEALTHY_CHAR) : gDLL->getSymbolID(UNHEALTHY_CHAR))).c_str());
+				szFirstBuffer.Format(L"%s%s, ", gDLL->getText("TXT_KEY_SPECIALISTHELP_PERCENT", szTempBuffer.GetCString(), (GC.getSpecialistInfo(eSpecialist).getHealthPercent() > 0 ? gDLL->getSymbolID(HEALTHY_CHAR) : gDLL->getSymbolID(UNHEALTHY_CHAR))).c_str());
 				szHelpString.append(szFirstBuffer);
 			}
 
@@ -12745,11 +12745,11 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 					szHelpString.append(L", ");
 					if (GC.getGame().getActivePlayer() != NO_PLAYER && GET_PLAYER(kCity.getOwner()).getID() != NO_PLAYER && GET_TEAM(kCity.getTeam()).isHasTech(eTech))
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HAPPINESS_TYPE_KNOWN", iNumSpecialists * iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HAPPINESS_TYPE_KNOWN", iNumSpecialists * iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 					}
 					else
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HAPPINESS_TYPE", iNumSpecialists * iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HAPPINESS_TYPE", iNumSpecialists * iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 					}
 				}
 				else if (iSpecialistHappiness < 0)
@@ -12757,11 +12757,11 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 					szHelpString.append(L", ");
 					if (GC.getGame().getActivePlayer() != NO_PLAYER && GET_PLAYER(kCity.getOwner()).getID() != NO_PLAYER && GET_TEAM(kCity.getTeam()).isHasTech(eTech))
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HAPPINESS_TYPE_KNOWN", iNumSpecialists * -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HAPPINESS_TYPE_KNOWN", iNumSpecialists * -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 					}
 					else
 					{
-						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_TECH_HAPPINESS_TYPE", iNumSpecialists * -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
+						szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_TECH_HAPPINESS_TYPE", iNumSpecialists * -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
 					}
 				}
 			}
@@ -12780,7 +12780,7 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 				{
 					szTempBuffer.Format(L"%.2f", fValue/100);
 				}
-				szFirstBuffer.Format(L"%s%s, ", gDLL->getText("TXT_KEY_SPECIALIST_PERCENT", szTempBuffer.GetCString(), (GC.getSpecialistInfo(eSpecialist).getHappinessPercent() > 0 ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))).c_str());
+				szFirstBuffer.Format(L"%s%s, ", gDLL->getText("TXT_KEY_SPECIALISTHELP_PERCENT", szTempBuffer.GetCString(), (GC.getSpecialistInfo(eSpecialist).getHappinessPercent() > 0 ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))).c_str());
 				szHelpString.append(szFirstBuffer);
 			}
 		}
@@ -20101,7 +20101,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					}
 					bFirst = false;
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_SPECIALIST_FREE_EXPERIENCE", iExperience));
+					szBuffer.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_FREE_EXPERIENCE", iExperience));
 					iTotalXPBonus += iExperience;
 				}
 

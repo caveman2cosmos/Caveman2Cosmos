@@ -12024,7 +12024,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Àðòèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_BIRTH_RATE</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_BIRTH_RATE</Tag>
 		<English>[ICON_BULLET]%D1_ChangeRate[ICON_GREATPEOPLE] Birth Rate</English>
 		<French>Taux de natalité [ICON_BULLET]%D1_ChangeRate[ICON_GREATPEOPLE]</French>
 		<German>
@@ -12135,7 +12135,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Èíæåíåð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_FREE_EXPERIENCE</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_FREE_EXPERIENCE</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 from Specialists that Add to All Units[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 des Spécialistes[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 durch Spezialisten[COLOR_REVERT]</German>
@@ -12384,13 +12384,13 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Âåëèêèé øïèîí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_INSIDIOUSNESS</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_INSIDIOUSNESS</Tag>
 		<English>[ICON_BULLET]%s1_Change%% Insidiousness for Local Criminals</English>
 		<French>[ICON_BULLET]%s1_Change%% d'Incidiosité pour les criminels locaux</French>
 		<Russian>[ICON_BULLET]%s1_Change%% к Коварству для местных преступников</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_INVESTIGATION</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_INVESTIGATION</Tag>
 		<English>[ICON_BULLET]%s1_Change%% Investigation for Local Law Enforcement</English>
 		<French>[ICON_BULLET]%s1_Change%% Investigation pour le maintien de l'ordre local</French>
 		<German>[ICON_BULLET]%s1_Change%% Ermittlungen für lokale Strafverfolgung</German>
@@ -12477,7 +12477,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Äâîðÿíèí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_PERCENT</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_PERCENT</Tag>
 		<English>[ICON_BULLET]+%s1_Change %F2[SPACE]</English>
 	</TEXT>
 	<TEXT>
@@ -12569,7 +12569,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>Ðàáû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_TECH_HAPPINESS_TYPE</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_TECH_HAPPINESS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp if the %s3_Tech Tech is known.</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp lorsque la Tech: %s3_Tech a été découverte.</French>
 		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp se conosci la tecnologia %s3_Tech.</Italian>
@@ -12577,7 +12577,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp если изучена технология %s3_Tech.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_TECH_HAPPINESS_TYPE_KNOWN</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_TECH_HAPPINESS_TYPE_KNOWN</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth from knowledge of %s3_Tech Tech.</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth de la connaissance de %s3_Tech Tech.</French>
 		<Italian>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth dalla tecnologia %s3_Tech.</Italian>
@@ -12585,7 +12585,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp от технологии %s3_Tech.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_TECH_HEALTH_TYPE</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_TECH_HEALTH_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth if the %s3_Tech Tech is known.</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth lorsque la Tech: %s3_Tech a été découverte.</French>
 		<Italian>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth se conosci la tecnologia %s3_Tech.</Italian>
@@ -12593,7 +12593,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth если изучена технология %s3_Tech.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_TECH_HEALTH_TYPE_KNOWN</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_TECH_HEALTH_TYPE_KNOWN</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth from knowledge of %s3_Tech Tech.</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth de la connaissance de %s3_Tech Tech.</French>
 		<Italian>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth dalla tecnologia %s3_Tech.</Italian>
@@ -12601,7 +12601,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth от технологии %s3_Tech.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_UNIT_COMBAT_EXPERIENCE</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_UNIT_COMBAT_EXPERIENCE</Tag>
 		<English>[ICON_BULLET]%D1_Change Experience to %s2_UnitCombat type units trained in this city.</English>
 		<French>[ICON_BULLET]%D1_Change Experience pour les unités de type: %s2_UnitCombat entraînées dans cette Ville.</French>
 		<German>[ICON_BULLET]%D1_Change Erfahrung für %s2_UnitCombat, die in dieser Stadt ausgebildet werden.</German>
@@ -12610,7 +12610,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Russian>[ICON_BULLET]%D1_Change опыта всем типам %s2_UnitCombat обученным в данном городе.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_UNIT_COMBAT_EXPERIENCE_SHORT</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_UNIT_COMBAT_EXPERIENCE_SHORT</Tag>
 		<English>[ICON_BULLET]%D1_Change XP to %s2_UnitCombat units</English>
 		<French>[ICON_BULLET]%D1_Change XP pour les %s2_UnitCombat</French>
 		<Italian>[ICON_BULLET]%D1_Change XP a %s2_UnitCombat units</Italian>
@@ -28943,7 +28943,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Bienvenido a Alpha Centauri.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_EXPERIENCE</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_EXPERIENCE</Tag>
 		<English>[ICON_BULLET]New Military Units Receive %D1_Change Experience Points</English>
 		<French>[ICON_BULLET]Les nouvelles unités militaires reçoivent %D1_Change points d'expérience</French>
 		<German>[ICON_BULLET]Neue Militäreinheiten erhalten %D1_Change Erfahrungspunkte</German>
@@ -28951,7 +28951,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Las nuevas unidades militares reciben %D1_Change [NUM1:punto de experiencia:puntos de experiencia]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_EXPERIENCE_SHORT</Tag>
+		<Tag>TXT_KEY_SPECIALISTHELP_EXPERIENCE_SHORT</Tag>
 		<English>%D1 XP</English>
 		<French>%D1 EXP</French>
 		<German>%D1 EP</German>
