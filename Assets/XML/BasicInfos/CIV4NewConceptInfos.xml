@@ -14,7 +14,7 @@
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ADVANCED_DIPLOMACY</Type>
-			<Description>TXT_KEY_CONCEPT_DIPLOMACY</Description>
+			<Description>TXT_KEY_CONCEPT_ADVDIPLOMACY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_DIPLOMACY_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
