@@ -478,6 +478,10 @@
 		<Russian>Прочие юниты</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPREAD_UNITS</Tag>
+		<English>Spreading Units</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_NATIONAL_WONDERS</Tag>
 		<English>National Wonders</English>
 		<French>Merveilles Nationales</French>
