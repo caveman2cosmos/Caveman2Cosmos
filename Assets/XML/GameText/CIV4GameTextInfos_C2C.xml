@@ -462,7 +462,7 @@
 		<Russian>(за население)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_BUILDS_FASTER_WITH</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_BUILDS_FASTER_WITH</Tag>
 		<English>Builds %d1_Mod%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Mod%% schneller mit Bonusgut [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
@@ -471,7 +471,7 @@
 		<Russian>Строит %d1_Mod%% быстрее, если есть [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_DOUBLE_SPEED_WITH</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_DOUBLE_SPEED_WITH</Tag>
 		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
@@ -480,7 +480,7 @@
 		<Russian>Удвоенная скорость производства, если есть [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_REQUIRES</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRES</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</German>
@@ -489,7 +489,7 @@
 		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_REQUIRES_ANYONE</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRES_ANYONE</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires someone to create [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Quelqu'un est requis pour créer [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Jemand muss Folgendes erstellen: [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</German>
@@ -497,7 +497,7 @@
 		<Spanish>[COLOR_WARNING_TEXT]Se requiere que alguien cree: [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_REQUIRES_NO_CITY</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRES_NO_CITY</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</German>

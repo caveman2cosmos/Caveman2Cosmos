@@ -22171,7 +22171,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	if (kBuilding.isAllowsNukes())
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_ENABLES_NUKES"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_ENABLES_NUKES"));
 	}
 
 	if (kBuilding.isMapCentering())
@@ -24521,7 +24521,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		if (pCity != NULL && kBuilding.isAllowsNukes() && GC.getGame().isNoNukes())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_NO_NUKES"));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_NO_NUKES"));
 		}
 
 		BoolExpr* pExpr = kBuilding.getConstructCondition();
@@ -24714,11 +24714,11 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 			if (pCity == NULL)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_WORLD_NUM_ALLOWED", kProject.getMaxGlobalInstances()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_WORLD_NUM_ALLOWED", kProject.getMaxGlobalInstances()));
 			}
 			else
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_WORLD_NUM_LEFT", (kProject.getMaxGlobalInstances() - GC.getGame().getProjectCreatedCount(eProject) - GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getProjectMaking(eProject))));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_WORLD_NUM_LEFT", (kProject.getMaxGlobalInstances() - GC.getGame().getProjectCreatedCount(eProject) - GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getProjectMaking(eProject))));
 			}
 		}
 
@@ -24727,11 +24727,11 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 			if (pCity == NULL)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_TEAM_NUM_ALLOWED", kProject.getMaxTeamInstances()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_TEAM_NUM_ALLOWED", kProject.getMaxTeamInstances()));
 			}
 			else
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_TEAM_NUM_LEFT", (kProject.getMaxTeamInstances() - GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getProjectCount(eProject) - GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getProjectMaking(eProject))));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_TEAM_NUM_LEFT", (kProject.getMaxTeamInstances() - GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getProjectCount(eProject) - GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getProjectMaking(eProject))));
 			}
 		}
 	}
@@ -24739,97 +24739,97 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 	if (kProject.getNukeInterception() != 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_CHANCE_INTERCEPT_NUKES", kProject.getNukeInterception()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_CHANCE_INTERCEPT_NUKES", kProject.getNukeInterception()));
 	}
 
 	if (kProject.getTechShare() != 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_TECH_SHARE", kProject.getTechShare()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_TECH_SHARE", kProject.getTechShare()));
 	}
 	//DPII < Maintenance Modifiers >
 	if (kProject.getGlobalMaintenanceModifier() != 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_GLOBAL_MAINT_MOD", kProject.getGlobalMaintenanceModifier()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_GLOBAL_MAINT_MOD", kProject.getGlobalMaintenanceModifier()));
 	}
 
 	if (kProject.getDistanceMaintenanceModifier() != 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_DISTANCE_MAINT_MOD", kProject.getDistanceMaintenanceModifier()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_DISTANCE_MAINT_MOD", kProject.getDistanceMaintenanceModifier()));
 	}
 
 	if (kProject.getNumCitiesMaintenanceModifier() != 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_NUM_CITIES_MAINT_MOD", kProject.getNumCitiesMaintenanceModifier()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_NUM_CITIES_MAINT_MOD", kProject.getNumCitiesMaintenanceModifier()));
 	}
 	//DPII < Maintenance Modifiers >
 	if (kProject.isAllowsNukes())
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_ENABLES_NUKES"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_ENABLES_NUKES"));
 	}
 
 	if (kProject.getEveryoneSpecialUnit() != NO_SPECIALUNIT)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_ENABLES_SPECIAL", GC.getSpecialUnitInfo((SpecialUnitTypes)(kProject.getEveryoneSpecialUnit())).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_ENABLES_SPECIAL", GC.getSpecialUnitInfo((SpecialUnitTypes)(kProject.getEveryoneSpecialUnit())).getTextKeyWide()));
 	}
 
 	if (kProject.getEveryoneSpecialBuilding() != NO_SPECIALBUILDING)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_ENABLES_SPECIAL", GC.getSpecialBuildingInfo((SpecialBuildingTypes)(kProject.getEveryoneSpecialBuilding())).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_ENABLES_SPECIAL", GC.getSpecialBuildingInfo((SpecialBuildingTypes)(kProject.getEveryoneSpecialBuilding())).getTextKeyWide()));
 	}
 
 	if (kProject.getWorldHappiness() > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_WORLD_HAPPINESS", kProject.getWorldHappiness()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_WORLD_HAPPINESS", kProject.getWorldHappiness()));
 	}
 
 	else if (kProject.getWorldHappiness() < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_WORLD_UNHAPPINESS", -kProject.getWorldHappiness()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_WORLD_UNHAPPINESS", -kProject.getWorldHappiness()));
 	}
 
 	if (kProject.getWorldHealth() > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_WORLD_HEALTH", kProject.getWorldHealth()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_WORLD_HEALTH", kProject.getWorldHealth()));
 	}
 
 	else if (kProject.getWorldHealth() < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_WORLD_UNHEALTH", -kProject.getWorldHealth()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_WORLD_UNHEALTH", -kProject.getWorldHealth()));
 	}
 
 	if (kProject.getGlobalHappiness() > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_HAPPINESS", kProject.getGlobalHappiness()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_HAPPINESS", kProject.getGlobalHappiness()));
 	}
 
 	else if (kProject.getGlobalHappiness() < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_UNHAPPINESS", -kProject.getGlobalHappiness()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_UNHAPPINESS", -kProject.getGlobalHappiness()));
 	}
 
 	if (kProject.getGlobalHealth() > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_HEALTH", kProject.getGlobalHealth()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_HEALTH", kProject.getGlobalHealth()));
 	}
 
 	else if (kProject.getGlobalHealth() < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_UNHEALTH", -kProject.getGlobalHealth()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_UNHEALTH", -kProject.getGlobalHealth()));
 	}
 
 	if (kProject.getWorldTradeRoutes() > 0)
@@ -24865,7 +24865,7 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 			}
 
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_REQUIRED_FOR_VICTORY", szTempBuffer.GetCString(), GC.getVictoryInfo((VictoryTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_REQUIRED_FOR_VICTORY", szTempBuffer.GetCString(), GC.getVictoryInfo((VictoryTypes)iI).getTextKeyWide()));
 		}
 	}
 
@@ -24875,7 +24875,7 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 	{
 		if (GC.getProjectInfo((ProjectTypes)iI).getAnyoneProjectPrereq() == eProject)
 		{
-			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_PROJECT_REQUIRED_TO_CREATE_ANYONE").c_str());
+			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_PROJECTHELP_REQUIRED_TO_CREATE_ANYONE").c_str());
 			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_PROJECT_TEXT"), CvWString(GC.getProjectInfo((ProjectTypes)iI).getType()).GetCString(), GC.getProjectInfo((ProjectTypes)iI).getDescription());
 			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 			bFirst = false;
@@ -24890,7 +24890,7 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 		{
 			if ((pCity == NULL) || pCity->canCreate(((ProjectTypes)iI), false, true))
 			{
-				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_PROJECT_REQUIRED_TO_CREATE").c_str());
+				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_PROJECTHELP_REQUIRED_TO_CREATE").c_str());
 				szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_PROJECT_TEXT"), CvWString(GC.getProjectInfo((ProjectTypes)iI).getType()).GetCString(), GC.getProjectInfo((ProjectTypes)iI).getDescription());
 				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 				bFirst = false;
@@ -24907,7 +24907,7 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 				if (kProject.isAllowsNukes())
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_NO_NUKES"));
+					szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_NO_NUKES"));
 				}
 			}
 		}
@@ -24917,7 +24917,7 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 			if ((pCity == NULL) || (GC.getGame().getProjectCreatedCount((ProjectTypes)(kProject.getAnyoneProjectPrereq())) == 0))
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_REQUIRES_ANYONE", CvWString(GC.getProjectInfo((ProjectTypes)kProject.getAnyoneProjectPrereq()).getType()).GetCString(), GC.getProjectInfo((ProjectTypes)kProject.getAnyoneProjectPrereq()).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_REQUIRES_ANYONE", CvWString(GC.getProjectInfo((ProjectTypes)kProject.getAnyoneProjectPrereq()).getType()).GetCString(), GC.getProjectInfo((ProjectTypes)kProject.getAnyoneProjectPrereq()).getTextKeyWide()));
 			}
 		}
 
@@ -24930,12 +24930,12 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 					if (pCity != NULL)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_REQUIRES", CvWString(GC.getProjectInfo((ProjectTypes)iI).getType()).GetCString(), GC.getProjectInfo((ProjectTypes)iI).getTextKeyWide(), GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getProjectCount((ProjectTypes)iI), kProject.getProjectsNeeded(iI)));
+						szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_REQUIRES", CvWString(GC.getProjectInfo((ProjectTypes)iI).getType()).GetCString(), GC.getProjectInfo((ProjectTypes)iI).getTextKeyWide(), GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getProjectCount((ProjectTypes)iI), kProject.getProjectsNeeded(iI)));
 					}
 					else
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_REQUIRES_NO_CITY", CvWString(GC.getProjectInfo((ProjectTypes)iI).getType()).GetCString(), GC.getProjectInfo((ProjectTypes)iI).getTextKeyWide(), kProject.getProjectsNeeded(iI)));
+						szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_REQUIRES_NO_CITY", CvWString(GC.getProjectInfo((ProjectTypes)iI).getType()).GetCString(), GC.getProjectInfo((ProjectTypes)iI).getTextKeyWide(), kProject.getProjectsNeeded(iI)));
 					}
 				}
 			}
@@ -24946,7 +24946,7 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 			if (kProject.getVictoryPrereq() != NO_VICTORY)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_REQUIRES_STRING_VICTORY", GC.getVictoryInfo((VictoryTypes)(kProject.getVictoryPrereq())).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_REQUIRES_STRING_VICTORY", GC.getVictoryInfo((VictoryTypes)(kProject.getVictoryPrereq())).getTextKeyWide()));
 			}
 		}
 	}
@@ -24968,7 +24968,7 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_NUM_TURNS", pCity->getProductionTurnsLeft(eProject, ((gDLL->ctrlKey() || !(gDLL->shiftKey())) ? 0 : pCity->getOrderQueueLength()))));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_NUM_TURNS", pCity->getProductionTurnsLeft(eProject, ((gDLL->ctrlKey() || !(gDLL->shiftKey())) ? 0 : pCity->getOrderQueueLength()))));
 
 			iProduction = pCity->getProjectProduction(eProject);
 
@@ -25010,11 +25010,11 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 			}
 			if (kProject.getBonusProductionModifier(iI) == 100)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_DOUBLE_SPEED_WITH", CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes)iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_DOUBLE_SPEED_WITH", CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes)iI).getTextKeyWide()));
 			}
 			else
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_BUILDS_FASTER_WITH", kProject.getBonusProductionModifier(iI), CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes)iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_BUILDS_FASTER_WITH", kProject.getBonusProductionModifier(iI), CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes)iI).getTextKeyWide()));
 			}
 			if (!bCivilopediaText)
 			{

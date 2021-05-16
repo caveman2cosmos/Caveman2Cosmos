@@ -28229,7 +28229,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1_change%% de velocidad de producción con líder %s2:1_trait</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_CHANCE_INTERCEPT_NUKES</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_CHANCE_INTERCEPT_NUKES</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Chance of Intercepting [LINK=CONCEPT_NUKES]Nukes[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% de chance d'intercepter les [LINK=CONCEPT_NUKES]missiles nucléaires[\LINK]</French>
 		<German>[ICON_BULLET]Wahrscheinlichkeit von %D1_Mod%% zum Abfangen von [LINK=CONCEPT_NUKES]Atomraketen[\LINK]</German>
@@ -28237,7 +28237,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Probabilidad del %D1_Mod%% de interceptar [LINK=CONCEPT_NUKES]armas nucleares[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_ENABLES_SPECIAL</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_ENABLES_SPECIAL</Tag>
 		<!-- %s1_Name = Can be Buildings, Units, Projects, etc -->
 		<English>[ICON_BULLET]Enables %s1_Name (For all Players)</English>
 		<French>[ICON_BULLET]Permet : %s1_Name (pour tous les joueurs)</French>
@@ -28246,7 +28246,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Permite a todos los jugadores: %s1_Name</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_NO_NUKES</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_NO_NUKES</Tag>
 		<English>[COLOR_WARNING_TEXT][LINK=CONCEPT_NUKES]Nuclear Weapons[\LINK] are Banned[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT][LINK=CONCEPT_NUKES]Armes nucléaires[\LINK] interdites[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT][LINK=CONCEPT_NUKES]Atomwaffen[\LINK] sind verboten[COLOR_REVERT]</German>
@@ -28254,7 +28254,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[COLOR_WARNING_TEXT]Las [LINK=CONCEPT_NUKES]armas nucleares[\LINK] están prohibidas[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_NUM_TURNS</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_NUM_TURNS</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]%d1_Num Turns[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%d1_Num tours[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]%d1_Num Runden[COLOR_REVERT]</German>
@@ -28262,7 +28262,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_REQUIRED_FOR_VICTORY</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRED_FOR_VICTORY</Tag>
 		<English>[ICON_BULLET]%s1 Required for %s2_victory Victory</English>
 		<French>[ICON_BULLET]%s1 requis pour victoire %s2_victory</French>
 		<German>[ICON_BULLET]%s1 für den Siegtyp %s2_victory erforderlich</German>
@@ -28270,7 +28270,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Se necesita %s1 para la victoria %s2_victory</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_REQUIRED_TO_CREATE</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRED_TO_CREATE</Tag>
 		<English>Required to Create[SPACE]</English>
 		<French>Requis pour Créer :[SPACE]</French>
 		<German>Erforderlich zur Errichtung von[SPACE]</German>
@@ -28278,7 +28278,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Se requiere para Crear[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_REQUIRED_TO_CREATE_ANYONE</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRED_TO_CREATE_ANYONE</Tag>
 		<English>Required for Anyone to Create[SPACE]</English>
 		<French>Requis pour créer[SPACE]</French>
 		<German>Von jedem benötigt zur Erstellung von[SPACE]</German>
@@ -28286,7 +28286,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Necesario para que cualquiera pueda crear:[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_REQUIRES_STRING_VICTORY</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRES_STRING_VICTORY</Tag>
 		<!-- %s1_Name = TXT_KEY_VICTORY -->
 		<English>[ICON_BULLET]%s1_Name Victory must be Enabled</English>
 		<French>[ICON_BULLET]Requiert une victoire de type : %s1_Name</French>
@@ -28295,7 +28295,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Requiere una victoria %s1_Name</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_TEAM_NUM_ALLOWED</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_TEAM_NUM_ALLOWED</Tag>
 		<English>[ICON_BULLET]Team Project (%d1_Num Allowed)</English>
 		<French>[ICON_BULLET]Projet d'équipe (limite : %d1_Num)</French>
 		<German>[ICON_BULLET]Teamprojekt: (%d1_Num zulässig)</German>
@@ -28303,7 +28303,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Proyecto de equipo (%d1_Num [NUM1:permitido:permitidos])</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_TEAM_NUM_LEFT</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_TEAM_NUM_LEFT</Tag>
 		<English>[SPACE](Team Project: %d1_Num Left)</English>
 		<French>[SPACE](Projet d'équipe : reste %d1_Num)</French>
 		<German>[SPACE](Teamprojekt: %d1_Num übrig)</German>
@@ -28311,7 +28311,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[SPACE](Proyecto de equipo: %d1_Num [NUM1:restante:restantes])</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_TECH_SHARE</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_TECH_SHARE</Tag>
 		<English>[ICON_BULLET]Grants all Technologies acquired by any %d1_Num Known [NUM1:Civilization:Civilizations]</English>
 		<French>[ICON_BULLET]Octroie toutes les technologies acquises par %d1_Num [NUM1:civilisation connue:civilisations connues]</French>
 		<German>[ICON_BULLET]Stellt alle von %d1_Num bekannten [NUM1:Zivilisation:Zivilisationen] erworbenen Technologien zur Verfügung</German>
@@ -28319,7 +28319,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Otorga todas las tecnologías adquiridas por %d1_Num [NUM1:civilización cualquiera conocida:civilizaciones cualesquiera conocidas]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_WORLD_NUM_ALLOWED</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_WORLD_NUM_ALLOWED</Tag>
 		<English>[ICON_BULLET]World Project (%d1_Num Allowed)</English>
 		<French>[ICON_BULLET]Projet mondial (limite : %d1_Num)</French>
 		<German>[ICON_BULLET]Weltprojekt: (%d1_Num zulässig)</German>
@@ -28327,7 +28327,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Proyecto mundial (%d1_Num [NUM1:permitido:permitidos])</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_WORLD_NUM_LEFT</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_WORLD_NUM_LEFT</Tag>
 		<English>[SPACE](World Project: %d1_Num Left)</English>
 		<French>[SPACE](Projet mondial : reste %d1_Num)</French>
 		<German>[SPACE](Weltprojekt: %d1_Num übrig)</German>
