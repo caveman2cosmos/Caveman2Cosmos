@@ -19951,7 +19951,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			}
 			else
 			{
-				szTerrain = gDLL->getText("TXT_KEY_TERRAIN_UNTIL_TECH", CvWString(GC.getTerrainInfo(eTerrain).getType()).GetCString(), GC.getTerrainInfo(eTerrain).getTextKeyWide(), GC.getTechInfo(eTech).getTextKeyWide());
+				szTerrain = gDLL->getText("TXT_KEY_TERRAINHELP_UNTIL_TECH", CvWString(GC.getTerrainInfo(eTerrain).getType()).GetCString(), GC.getTerrainInfo(eTerrain).getTextKeyWide(), GC.getTechInfo(eTech).getTextKeyWide());
 			}
 			setListHelp(szBuffer, szTempBuffer, szTerrain, L", ", bFirst);
 			bFirst = false;
@@ -19984,7 +19984,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			}
 			else
 			{
-				szFeature = gDLL->getText("TXT_KEY_TERRAIN_UNTIL_TECH", CvWString(GC.getFeatureInfo(eFeature).getType()).GetCString(), GC.getFeatureInfo(eFeature).getTextKeyWide(), GC.getTechInfo(eTech).getTextKeyWide());
+				szFeature = gDLL->getText("TXT_KEY_TERRAINHELP_UNTIL_TECH", CvWString(GC.getFeatureInfo(eFeature).getType()).GetCString(), GC.getFeatureInfo(eFeature).getTextKeyWide(), GC.getTechInfo(eTech).getTextKeyWide());
 			}
 			setListHelp(szBuffer, szTempBuffer, szFeature, L", ", bFirst);
 			bFirst = false;
@@ -32239,12 +32239,12 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 	{
 		aiYields[iI] = feature.getRiverYieldChange(iI);
 	}
-	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_TERRAIN_NEXT_TO_RIVER"), aiYields);
+	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_TERRAINHELP_NEXT_TO_RIVER"), aiYields);
 
 
 	if (feature.getMovementCost() != 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_MOVEMENT_COST", feature.getMovementCost()));
+		szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_MOVEMENT_COST", feature.getMovementCost()));
 	}
 
 	CvWString szHealth;
@@ -32260,7 +32260,7 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 
 	if (feature.getDefenseModifier() != 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_DEFENSE_MODIFIER", feature.getDefenseModifier()));
+		szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_DEFENSE_MODIFIER", feature.getDefenseModifier()));
 	}
 
 	if (feature.isAddsFreshWater())
@@ -32270,12 +32270,12 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 
 	if (feature.isImpassable())
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_IMPASSABLE"));
+		szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_IMPASSABLE"));
 	}
 
 	if (feature.isNoCity())
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_NO_CITIES"));
+		szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_NO_CITIES"));
 	}
 
 	if (feature.isNoImprovement())
@@ -32301,7 +32301,7 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 	const int iDamage = feature.getTurnDamage();
 	if (iDamage > 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_TURN_DAMAGE", iDamage));
+		szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_TURN_DAMAGE", iDamage));
 	}
 
 	feature.getPropertyManipulators()->buildDisplayString(szBuffer);
@@ -32339,30 +32339,30 @@ void CvGameTextMgr::setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerr
 
 	if (terrain.getMovementCost() != 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_MOVEMENT_COST", terrain.getMovementCost()));
+		szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_MOVEMENT_COST", terrain.getMovementCost()));
 	}
 
 	if (terrain.getBuildModifier() != 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_BUILD_MODIFIER", terrain.getBuildModifier()));
+		szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_BUILD_MODIFIER", terrain.getBuildModifier()));
 	}
 
 	if (terrain.getDefenseModifier() != 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_DEFENSE_MODIFIER", terrain.getDefenseModifier()));
+		szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_DEFENSE_MODIFIER", terrain.getDefenseModifier()));
 	}
 
 	if (terrain.isImpassable())
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_IMPASSABLE"));
+		szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_IMPASSABLE"));
 	}
 	if (!terrain.isFound())
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_NO_CITIES"));
+		szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_NO_CITIES"));
 		bool bFirst = true;
 		if (terrain.isFoundCoast())
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_COASTAL_CITIES"));
+			szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_COASTAL_CITIES"));
 			bFirst = false;
 		}
 		if (!bFirst)
@@ -32371,7 +32371,7 @@ void CvGameTextMgr::setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerr
 		}
 		if (terrain.isFoundFreshWater())
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_FRESH_WATER_CITIES"));
+			szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_FRESH_WATER_CITIES"));
 			bFirst = false;
 		}
 	}
@@ -32381,7 +32381,7 @@ void CvGameTextMgr::setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerr
 		const int iDamage = -terrain.getHealthPercent();
 		if (iDamage != 0)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_TERRAIN_TURN_DAMAGE", iDamage));
+			szBuffer.append(gDLL->getText("TXT_KEY_TERRAINHELP_TURN_DAMAGE", iDamage));
 		}
 	}
 

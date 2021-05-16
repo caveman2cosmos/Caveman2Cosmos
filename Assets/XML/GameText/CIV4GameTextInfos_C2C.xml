@@ -688,7 +688,7 @@
 		<Russian>[COLOR_WARNING_TEXT]Óñòàðåâàåò: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_UNTIL_TECH</Tag>
+		<Tag>TXT_KEY_TERRAINHELP_UNTIL_TECH</Tag>
 		<English>[LINK=%s1_terrainType]%s2_terrain[\LINK] (until %s3_technology)</English>
 		<French>[LINK=%s1_terrainType]%s2_terrain[\LINK] (jusqu'à %s3_technology)</French>
 		<German>[LINK=%s1_terrainType]%s2_terrain[\LINK] (bis zur Technologie %s3_technology)</German>

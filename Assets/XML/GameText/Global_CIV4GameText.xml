@@ -29039,7 +29039,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_COASTAL_CITIES</Tag>
+		<Tag>TXT_KEY_TERRAINHELP_COASTAL_CITIES</Tag>
 		<English>unless they are coastal</English>
 		<French>sauf sur une côte</French>
 		<German>es sei denn, sie liegen an der Küste</German>
@@ -29047,7 +29047,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>a menos que sean costeras</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_DEFENSE_MODIFIER</Tag>
+		<Tag>TXT_KEY_TERRAINHELP_DEFENSE_MODIFIER</Tag>
 		<English>[NEWLINE][ICON_BULLET]Defending units get %D1%% strength</English>
 		<French>[NEWLINE][ICON_BULLET]Les unités en défense gagnent %D1%% en puissance</French>
 		<German>[NEWLINE][ICON_BULLET]Verteidigungseinheiten erhalten %D1%% Stärke</German>
@@ -29055,7 +29055,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[NEWLINE][ICON_BULLET]Las unidades defensoras obtienen un %D1%% de fuerza</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_FRESH_WATER_CITIES</Tag>
+		<Tag>TXT_KEY_TERRAINHELP_FRESH_WATER_CITIES</Tag>
 		<English>unless they are near fresh water</English>
 		<French>sauf près de l'eau douce</French>
 		<German>es sei denn, sie befinden sich in der Nähe von Süßwassergebieten</German>
@@ -29063,7 +29063,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>a menos que estén cerca de agua dulce</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_IMPASSABLE</Tag>
+		<Tag>TXT_KEY_TERRAINHELP_IMPASSABLE</Tag>
 		<English>[NEWLINE][ICON_BULLET]Impassable terrain</English>
 		<French>[NEWLINE][ICON_BULLET]Terrain infranchissable</French>
 		<German>[NEWLINE][ICON_BULLET]Unpassierbares Gelände</German>
@@ -29071,7 +29071,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[NEWLINE][ICON_BULLET]Terreno infranqueable</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_MOVEMENT_COST</Tag>
+		<Tag>TXT_KEY_TERRAINHELP_MOVEMENT_COST</Tag>
 		<English>[NEWLINE][ICON_BULLET]Movement Cost: %d1[ICON_MOVES]</English>
 		<French>[NEWLINE][ICON_BULLET]Coût du mouvement : %d1[ICON_MOVES]</French>
 		<German>[NEWLINE][ICON_BULLET]Fortbewegungskosten: %d1[ICON_MOVES]</German>
@@ -29079,7 +29079,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[NEWLINE][ICON_BULLET]Coste del movimiento: %d1 [ICON_MOVES]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_NEXT_TO_RIVER</Tag>
+		<Tag>TXT_KEY_TERRAINHELP_NEXT_TO_RIVER</Tag>
 		<English>[SPACE]adjacent to river</English>
 		<French>[SPACE]près d'une rivière</French>
 		<German>[SPACE]an einen Fluss angrenzend</German>
