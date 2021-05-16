@@ -10,7 +10,7 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_LESS_GROWTH</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_LESS_GROWTH</Tag>
 		<English>[ICON_BULLET]Gives terrain a lower chance to spread</English>
 	</TEXT>
 	<TEXT>
@@ -23772,7 +23772,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>, %d1 pob</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BUILD_ONLY_WATER</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_BUILD_ONLY_WATER</Tag>
 		<English>[ICON_BULLET]Built only in Water</English>
 		<French>[ICON_BULLET]Construction uniquement dans l'eau</French>
 		<German>[ICON_BULLET]Kann nur im Wasser errichtet werden</German>
@@ -23780,7 +23780,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Solo se construye en el agua</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_CARRIES_IRRIGATION</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_CARRIES_IRRIGATION</Tag>
 		<English>[ICON_BULLET]Carries [LINK=CONCEPT_IRRIGATION]Irrigation[\LINK]</English>
 		<French>[ICON_BULLET]Assure [LINK=CONCEPT_IRRIGATION]l'irrigation[\LINK]</French>
 		<German>[ICON_BULLET]Fördert [LINK=CONCEPT_IRRIGATION]Bewässerung[\LINK]</German>
@@ -23788,7 +23788,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Da [LINK=CONCEPT_IRRIGATION]riego[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_CHANCE_DISCOVER</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_CHANCE_DISCOVER</Tag>
 		<English>[ICON_BULLET]Small chance of discovering[SPACE]</English>
 		<French>[ICON_BULLET]Faibles chances de découvrir :[SPACE]</French>
 		<German>[ICON_BULLET]Geringe Entdeckungschance[SPACE]</German>
@@ -23796,7 +23796,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Pequeña probabilidad de descubrir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_DEFENSE_MODIFIER</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_DEFENSE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Tile Defense</English>
 		<French>[ICON_BULLET]Défense de la case %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Geländefeld-Verteidigung</German>
@@ -23804,7 +23804,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1%% a la defensa de la casilla</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_DEFENSE_MODIFIER_EXTRA</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_DEFENSE_MODIFIER_EXTRA</Tag>
 		<English>[ICON_BULLET]Acts as a city for combat purposes</English>
 		<French>[ICON_BULLET]Agit comme une ville pour les combats</French>
 		<German>[ICON_BULLET]Dient als Standort für militärische Zwecke</German>
@@ -23812,7 +23812,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Hace las veces de ciudad a efectos de combate.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_MORE_GROWTH</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_MORE_GROWTH</Tag>
 		<English>[ICON_BULLET]Gives terrain a higher chance to spread</English>
 		<French>[ICON_BULLET]Augmente les chances de développement du terrain</French>
 		<German>[ICON_BULLET]Gelände hat eine höhere Ausbreitungsschance</German>
@@ -23820,7 +23820,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Da más posibilidades de propagarse a un terreno</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_NO_BUILD_FRESH_WATER</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_NO_BUILD_FRESH_WATER</Tag>
 		<English>[ICON_BULLET]Cannot be built near Fresh Water</English>
 		<French>[ICON_BULLET]Construction impossible près de l'eau douce</French>
 		<German>[ICON_BULLET]Kann nicht in der Nähe von Süßwassergebieten errichtet werden</German>
@@ -23828,7 +23828,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]No se puede construir cerca de agua dulce</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_ONLY_BUILD_FLATLANDS</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_ONLY_BUILD_FLATLANDS</Tag>
 		<English>[ICON_BULLET]Can only be built on Flatlands</English>
 		<French>[ICON_BULLET]Construction uniquement sur les plaines</French>
 		<German>[ICON_BULLET]Kann nur im Flachland errichtet werden</German>
@@ -23836,7 +23836,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Solo se puede construir en llanos</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_REQUIRES_RIVER</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_REQUIRES_RIVER</Tag>
 		<English>[ICON_BULLET]Requires River</English>
 		<French>[ICON_BULLET]Requiert une rivière</French>
 		<German>[ICON_BULLET]Erfordert einen Fluss</German>
@@ -23844,7 +23844,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Requiere un río</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_WITH_TECH</Tag>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_WITH_TECH</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_YieldIcon with [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_YieldIcon avec : [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]%D1_Change%F2_YieldIcon mit der Technologie [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</German>
