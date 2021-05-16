@@ -15227,7 +15227,7 @@
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Mniejszych Rozmiarów jednostki: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_MORE</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_SIZE_MORE</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Size Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus grandes: %D1_Amount%% par rang supérieur</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen größere Einheiten (pro Stufe Größenunterschied)</German>

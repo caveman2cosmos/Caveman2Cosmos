@@ -13809,7 +13809,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	if (iCombatModifierPerSizeMore != 0)
 	{
 		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_MORE", iCombatModifierPerSizeMore));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_SIZE_MORE", iCombatModifierPerSizeMore));
 	}
 	if (iCombatModifierPerSizeLess != 0)
 	{
@@ -19613,7 +19613,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		if (kUnit.isAlwaysHostile())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_ALWAYS_HOSTILE"));
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_ALWAYS_HOSTILE"));
 		}
 
 		//Can Explore Rival Territory
@@ -28976,7 +28976,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_MORE", info.getCombatModifierPerSizeMoreChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_SIZE_MORE", info.getCombatModifierPerSizeMoreChange()));
 	}
 
 	if (info.getCombatModifierPerSizeLessChange() != 0)

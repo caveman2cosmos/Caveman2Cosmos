@@ -646,7 +646,7 @@
 		<English>Pedro de Alvarado and his army advanced along the Pacific coast unopposed until they reached the Samala River in western Guatemala. This region formed a part of the K'iche' kingdom, and a K'iche' army tried unsuccessfully to prevent the Spanish from crossing the river. Once across, the conquistadors ransacked nearby settlements in an effort to terrorise the K'iche'. On 8 February 1524 Alvarado's army fought a battle at Xetulul, called Zapotitlan by his Mexican allies (modern San Francisco Zapotitlan). Although suffering many injuries inflicted by defending K'iche' archers, the Spanish and their allies stormed the town and set up camp in the marketplace.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ALWAYS_HOSTILE</Tag>
+		<Tag>TXT_KEY_UNITHELP_ALWAYS_HOSTILE</Tag>
 		<English>[ICON_BULLET]Can Attack without Declaring War</English>
 		<French>[ICON_BULLET]Peut attaquer sans déclaration de guerre</French>
 		<German>[ICON_BULLET]kann ohne Kriegserklärung angreifen</German>
