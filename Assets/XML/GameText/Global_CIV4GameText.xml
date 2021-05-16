@@ -14697,7 +14697,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>[ICON_BULLET]Défense furtive !: %D1_Num%% Modificateur de combat furtif pris en compte.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_UPKEEP</Tag>
+		<Tag>TXT_KEY_UNITUPKEEP</Tag>
 		<English>Unit Upkeep</English>
 		<Russian>Содержание отряда</Russian>
 	</TEXT>
@@ -29551,7 +29551,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Desconocido</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_AIR_RANGE</Tag>
+		<Tag>TXT_KEY_UNITHELP_AIRRANGE</Tag>
 		<English>%d1_Num Range</English>
 		<French>Rayon d'action %d1_Num</French>
 		<German>%d1_Num Reichweite</German>

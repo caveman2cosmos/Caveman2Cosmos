@@ -17951,7 +17951,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		if (kUnit.getAirRange() > 0)
 		{
 			szBuffer.append(L", ");
-			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_AIR_RANGE", kUnit.getAirRange()));
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_AIRRANGE", kUnit.getAirRange()));
 		}
 
 // BUG - Starting Experience - start

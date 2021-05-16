@@ -248,7 +248,7 @@ class CvFinanceAdvisor:
 		self.goldFromCivs = goldFromCivs = CyPlayer.getGoldPerTurn()
 
 		y = -2
-		szText = TRNSLTR.getText("TXT_KEY_UNITHELP_UPKEEP", ())
+		szText = TRNSLTR.getText("TXT_KEY_UNITUPKEEP", ())
 		screen.setTextAt("unitUpkeep0", Pnl, uFont2 + szText, 1<<0, 6, y, 0, eGameFont, eWidGen, 1, 2)
 		screen.setLabelAt("unitUpkeep1", Pnl, uFont2 + str(iFinalUnitUpkeep), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 2)
 		iExpenses += iFinalUnitUpkeep
