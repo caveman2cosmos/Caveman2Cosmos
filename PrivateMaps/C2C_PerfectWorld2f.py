@@ -872,6 +872,10 @@ def ShuffleList(theList):
 				del preshuffle[n]
 		return shuffled
 
+def GetInfoType(string):
+	cgc = CyGlobalContext()
+	return cgc.getInfoTypeForString(string)
+
 def GetDistance(x,y,dx,dy):
 		distance = math.sqrt(abs((float(x - dx) * float(x - dx)) + (float(y - dy) * float(y - dy))))
 		return distance

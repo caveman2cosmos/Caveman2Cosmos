@@ -500,7 +500,7 @@ class CultureLink:
 class GeographicalCoordinate:
 
 	def __init__(self, sCivilizationType, dLatitude, dLongitude):
-		self.civ = gc.getInfoTypeForString(sCivilizationType)
+		self.civ = GetInfoType(sCivilizationType)
 		self.lat = dLatitude
 		self.lon = dLongitude
 
@@ -525,6 +525,13 @@ class GeographicalCoordinate:
 
 
 ## GLOBAL HELPER FUNCTIONS:
+
+def GetInfoType(sInfoType, bIgnoreTypos = False):
+	iInfoType = gc.getInfoTypeForString(sInfoType)
+	if iInfoType == -1 and not bIgnoreTypos:
+		arg = ("InfoType %s unknown! Probably just a Typing Error." % sInfoType)
+		raise ValueError, arg
+	return iInfoType
 
 def RealWorldDistance(pCoordA, pCoordB):
 	# equator radius and earth flattening (WGS-84)
