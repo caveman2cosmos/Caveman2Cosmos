@@ -14911,12 +14911,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_CITIES</Tag>
-		<English>Legendary Cities</English>
-		<French>Villes Légendaires</French>
-		<German>legendäre Städte</German>
-		<Spanish>Ciudades Legendarias</Spanish>
-		<Polish>Legendarne Miasta</Polish>
-		<Russian>Ãîðîäà-ëåãåíäû</Russian>
+		<English>Monumental Cities</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_CONDITION</Tag>
@@ -15064,7 +15059,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TOTAL_PEDIA</Tag>
-		<English>Mastery -- A combined victory requiring control of the majority of land, population, culture, and relgion on the planet.</English>
+		<English>Mastery -- A combined victory requiring control of the majority of land, population, culture, and religion on the planet.</English>
 		<French>Victoire de Maîtrise</French>
 		<German>Meitsersieg -- Ein kombinierter Sieg, der die Kontrolle über den Großteil der Landfläche, Bevölkerung, Kultur und Religion auf dem Planeten erfordert.</German>
 		<Italian>Mastery Victory</Italian>

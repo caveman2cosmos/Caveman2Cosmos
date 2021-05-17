@@ -7425,7 +7425,7 @@ int64_t CvTeam::getTotalVictoryScore() const
 	int tempScore = 0;
 
 	int totalTeamReligion = 0;
-	int totalTeamLegendaryCities = 0;
+	int totalTeamMonumentalCities = 0;
 
 	int64_t globalPowerHistory = 0;
 	int64_t teamPowerHistory = 0;
@@ -7496,7 +7496,7 @@ int64_t CvTeam::getTotalVictoryScore() const
 		}
 	}
 
-	// Get the number of legendary cities owned by this team
+	// Get the number of monumental cities owned by this team
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -7507,7 +7507,7 @@ int64_t CvTeam::getTotalVictoryScore() const
 				// -2 is correct.  We need -1 to change from 'total num' to 'last index', and -1 to get the top level.
 				if (pLoopCity->getCultureLevel() > GC.getNumCultureLevelInfos() - 2)
 				{
-					totalTeamLegendaryCities++;
+					totalTeamMonumentalCities++;
 				}
 			}
 		}
@@ -7548,10 +7548,10 @@ int64_t CvTeam::getTotalVictoryScore() const
 		}
 	}
 
-	// Add the legendary cities component
-	if (totalTeamLegendaryCities > 0)
+	// Add the monumental cities component
+	if (totalTeamMonumentalCities > 0)
 	{
-		iTotalVictoryScore += (30 * totalTeamLegendaryCities);
+		iTotalVictoryScore += (30 * totalTeamMonumentalCities);
 	}
 
 	// Add the Power component
