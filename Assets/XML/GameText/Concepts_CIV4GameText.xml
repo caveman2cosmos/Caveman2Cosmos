@@ -1529,7 +1529,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REALISTIC_CULTURES_SPREAD_PEDIA</Tag>
-		<English>Realistic Culture Spread creates a more natural style of cultural spread from your cities. Culture spreads more slowly over rivers, higher terrain like hills and peaks, heavily wooded areas, and ocean tiles. Because this more natural spread also has the effect of limiting your cultural borders, three new intermediate culture levels have been added for this game option only, to expand your borders farther. The amount of actual culture to reach [COLOR_YELLOW]Legendary Culture[COLOR_REVERT] is not altered.[NEWLINE][BOLD]Culture Levels[\BOLD]:
+		<English>Realistic Culture Spread creates a more natural style of cultural spread from your cities. Culture spreads more slowly over rivers, higher terrain like hills and peaks, heavily wooded areas, and ocean tiles. Because this more natural spread also has the effect of limiting your cultural borders, three new intermediate culture levels have been added for this game option only, to expand your borders farther. The amount of actual culture to reach [COLOR_YELLOW]Monumental Culture[COLOR_REVERT] is not altered.[NEWLINE][BOLD]Culture Levels[\BOLD]:
 		[ICON_BULLET] Poor
 		[ICON_BULLET] Fledgling
 		[ICON_BULLET] Developing
@@ -1538,7 +1538,9 @@
 		[ICON_BULLET] Elegant
 		[ICON_BULLET] Influential
 		[ICON_BULLET] Impressive
-		[ICON_BULLET] Legendary</English>
+		[ICON_BULLET] Illustrious
+		[ICON_BULLET] Phenomenal
+		[ICON_BULLET] Monumental</English>
 		<French>La Propagation Culturelle Réaliste créé un mode plus naturel de propagation de la culture de vos Villes. La culture de propage plus lentement par dessus les rivières, les terrains avec dénivelé comme les collines et les montagnes, les zones boisées et l'océan. Cette propagation a pour effet de limiter vos frontières culturelles, c'est pourquoi trois niveaux intermédiaires ont été prévus. Le quota de culture pour atteindre le niveau [COLOR_YELLOW]Légendaire[COLOR_REVERT] n'est pas modifié.</French>
 		<German>Durch diese Modifikation breitet sich die Kultur der Städte auf eine natürlichere Art und Weise aus. So dauert es jetzt wesentlich länger, bis sie über Flüsse, Hügel und Berge, aber auch durch stark bewaldetes Gebiet und über den Ozean verbreitet wird. Da dies auch die kulturellen Grenzen beschränkt, wurden speziell für diese Spieloption drei neue kulturelle Zwischenstufen eingeführt, durch die sich die Grenzen dann weiter verschieben können. Die Menge an Kultur, die für [COLOR_YELLOW]legendären Status[COLOR_REVERT] nötig ist, wurde nicht verändert.[NEWLINE][BOLD]Kulturstufen[\BOLD]:
 		[ICON_BULLET] Gering
