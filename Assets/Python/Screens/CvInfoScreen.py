@@ -800,7 +800,7 @@ class CvInfoScreen:
 		screen.setTableText(table, 0, 16, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_HAPPINESS", ()), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 0, 18, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_HEALTH", ()), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 0, 19, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_POPULATION_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 21, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_EXPORTS_TEXT", ()) + " - " + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_IMPORTS", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 21, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_EXPORTS", ()) + " - " + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_IMPORTS", ()), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 0, 22, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
 
 		screen.setTableText(table, 1, 0, str(iEconomy), "", eWidGen, 1, 2, 1<<0)
