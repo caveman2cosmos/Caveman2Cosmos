@@ -448,12 +448,12 @@ class CvVictoryScreen:
 							screen.setTableText(szTable, 3, iRefRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NO_HOLY", ()), "", eWidGen, 1, 2, 1<<0)
 
 
-					# Legendary Cultural Cities
-					iPlayerLegendaryCities, iWorldLegendaryCities = self.getLegendaryCities(iTeamAct)
-					iBestTeamLegendaryCities, iWorldLegendaryCities = self.getLegendaryCities(iBestTeam)
+					# Monumental Cultural Cities
+					iPlayerMonumentalCities, iWorldMonumentalCities = self.getMonumentalCities(iTeamAct)
+					iBestTeamMonumentalCities, iWorldMonumentalCities = self.getMonumentalCities(iBestTeam)
 
-					ourBestCities = self.getListCultureCitiesTeam(iTeamAct)[0:(iPlayerLegendaryCities + 3)]
-					theirBestCities = self.getListCultureCitiesTeam(iBestTeam)[0:(iBestTeamLegendaryCities+3)]
+					ourBestCities = self.getListCultureCitiesTeam(iTeamAct)[0:(iPlayerMonumentalCities + 3)]
+					theirBestCities = self.getListCultureCitiesTeam(iBestTeam)[0:(iBestTeamMonumentalCities+3)]
 
 					iRow = screen.appendTableRow(szTable)
 					iRefRow = iRow
@@ -463,7 +463,7 @@ class CvVictoryScreen:
 						iRow = screen.appendTableRow(szTable)
 						screen.setTableText(szTable, 0, iRow, ufont2 + ourBestCities[i][1].getName() + ":", "", eWidGen, 1, 2, 1<<1)
 						screen.setTableText(szTable, 1, iRow, ufont2 + str(ourBestCities[i][0]), "", eWidGen, 1, 2, 1<<0)
-						if iPlayerLegendaryCities >= i + 1:
+						if iPlayerMonumentalCities >= i + 1:
 							screen.setTableText(szTable, 2, iRow, ufont2 + u"%s" %(30), "", eWidGen, 1, 2, 1<<0)
 
 					if szUnknown:
@@ -1467,8 +1467,8 @@ class CvVictoryScreen:
 		return []
 
 
-	def getLegendaryCities(self, iTeam):
-		iLegendaryCities = 0
+	def getMonumentalCities(self, iTeam):
+		iMonumentalCities = 0
 		iTeamCities = 0
 		iThreshold = GC.getCultureLevelInfo(GC.getNumCultureLevelInfos()-1).getSpeedThreshold(GAME.getGameSpeedType())
 
@@ -1482,11 +1482,11 @@ class CvVictoryScreen:
 					bTeam = False
 				for CyCity in CyPlayerX.cities():
 					if CyCity.getCulture(iPlayerX) > iThreshold:
-						iLegendaryCities += 1
+						iMonumentalCities += 1
 						if bTeam:
 							iTeamCities += 1
 
-		return [iTeamCities, iLegendaryCities]
+		return [iTeamCities, iMonumentalCities]
 
 
 	def getTeamWonderScore(self, iTeam):
