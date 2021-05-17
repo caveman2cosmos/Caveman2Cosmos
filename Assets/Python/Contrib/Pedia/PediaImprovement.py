@@ -320,7 +320,7 @@ class PediaImprovement:
 			aList0.append(["ToolTip|TxtTT|Any_plot_feature1", "Art/bug/questionmark.dds"])
 
 		if CvTheImproveInfo.isRequiresIrrigation():
-			aList0.append(["ToolTip|TxtTT|TXT_KEY_WB_IRRIGATION1", "Art/Interface/Buttons/Buildings/Irrigation.dds"])
+			aList0.append(["ToolTip|TxtTT|TXT_KEY_IMPROVEMENTHELP_REQUIRES_IRRIGATION1", "Art/Interface/Buttons/Buildings/Irrigation.dds"])
 
 		if CvTheImproveInfo.isNoFreshWater():
 			aList0.append(["ToolTip|TxtTT|TXT_KEY_IMPROVEMENTHELP_NO_BUILD_FRESH_WATER1", "Art/bug/questionmark.dds"])

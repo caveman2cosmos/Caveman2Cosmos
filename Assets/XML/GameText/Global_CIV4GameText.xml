@@ -30521,4 +30521,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Impossibile imporre un tributo al vassallo. Riprova più tardi.</Italian>
 		<Spanish>No es posible el tributo del vasallo. Intentadlo más tarde.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_REQUIRES_IRRIGATION</Tag>
+		<English>[ICON_BULLET]Requires Irrigation</English>
+	</TEXT>
 </Civ4GameText>
