@@ -350,11 +350,10 @@ public:
 	int getProductionModifier(BuildingTypes eBuilding) const;
 	int getProductionModifier(ProjectTypes eProject) const;
 
-	int getProductionPerTurn(int iProductionModifier, ProductionCalc::flags flags) const;
+	int getProductionPerTurn(ProductionCalc::flags flags) const;
 
 	int getProductionDifference(const OrderData& orderData, ProductionCalc::flags flags) const;
 	int getCurrentProductionDifference(ProductionCalc::flags flags) const;
-	int getExtraProductionDifference(int iExtra) const;
 
 	bool canHurry(const HurryTypes eHurry, const bool bTestVisible = false) const;
 	int64_t getHurryGold(const HurryTypes eHurry, int iHurryCost = -1) const;
@@ -449,8 +448,8 @@ public:
 	int growthThreshold(const int iPopChange = 0) const;
 
 	int productionLeft() const;
-	int hurryCost(bool bExtra) const;
-	int getHurryCostModifier(bool bIgnoreNew = false) const;
+	int hurryCost() const;
+	int getHurryCostModifier() const;
 	int hurryPopulation(HurryTypes eHurry) const;
 	int hurryProduction(HurryTypes eHurry) const;
 	int flatHurryAngerLength() const;
@@ -824,6 +823,8 @@ public:
 
 	int getMaxFoodKeptPercent() const;
 	void changeMaxFoodKeptPercent(int iChange, bool bAdd);
+
+	int getMaxProductionOverflow() const;
 
 	int getOverflowProduction() const;
 	void setOverflowProduction(int iNewValue);
@@ -1747,7 +1748,6 @@ protected:
 	int m_iOverflowProduction;
 	int m_iFeatureProduction;
 
-	int m_iLostProductionBase;
 	int m_iSpecialistGoodHealth;
 	int m_iSpecialistBadHealth;
 	int m_iSpecialistHappiness;
@@ -2030,19 +2030,15 @@ protected:
 	bool doCheckProduction();
 	void doPromotion();
 
-	int getExtraProductionDifference(int iExtra, UnitTypes eUnit) const;
-	int getExtraProductionDifference(int iExtra, BuildingTypes eBuilding) const;
-	int getExtraProductionDifference(int iExtra, ProjectTypes eProject) const;
-	int getExtraProductionDifference(int iExtra, int iModifier) const;
-	int getHurryCostModifier(UnitTypes eUnit, bool bIgnoreNew) const;
-	int getHurryCostModifier(BuildingTypes eBuilding, bool bIgnoreNew) const;
-	int getHurryCostModifier(int iBaseModifier, int iProduction, bool bIgnoreNew) const;
-	int getHurryCost(bool bExtra, UnitTypes eUnit, bool bIgnoreNew) const;
-	int getHurryCost(bool bExtra, BuildingTypes eBuilding, bool bIgnoreNew) const;
-	int getHurryCost(bool bExtra, int iProductionLeft, int iHurryModifier, int iModifier) const;
+	int getHurryCostModifier(UnitTypes eUnit) const;
+	int getHurryCostModifier(BuildingTypes eBuilding) const;
+	int getHurryCostModifier(int iBaseModifier, int iExtraMod) const;
+	int getHurryCost(UnitTypes eUnit) const;
+	int getHurryCost(BuildingTypes eBuilding) const;
+	int getHurryCost(int iProductionLeft, int iHurryModifier) const;
 	int getHurryPopulation(HurryTypes eHurry, int iHurryCost) const;
-	bool canHurryUnit(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) const;
-	bool canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding, bool bIgnoreNew) const;
+	bool canHurryUnit(HurryTypes eHurry, UnitTypes eUnit) const;
+	bool canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding) const;
 	void recalculateMaxFoodKeptPercent();
 	void recalculatePopulationgrowthratepercentage();
 	virtual bool AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPlot = NULL, SpecialistTypes* peBestSpecialist = NULL) = 0;

@@ -4629,8 +4629,7 @@ bool CvCityAI::AI_canRushBuildingConstruction(BuildingTypes building)
 {
 	for (int iHurry = 0; iHurry < GC.getNumHurryInfos(); ++iHurry)
 	{
-		if (canHurryBuilding((HurryTypes)iHurry, building, true)
-			&& AI_getHappyFromHurry((HurryTypes)iHurry, building, true) > 0)
+		if (canHurryBuilding((HurryTypes)iHurry, building) && AI_getHappyFromHurry((HurryTypes)iHurry, building) > 0)
 		{
 			return true;
 		}
@@ -5075,9 +5074,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					int iBestHappy = 0;
 					for (int iI = 0; iI < GC.getNumHurryInfos(); iI++)
 					{
-						if (canHurryBuilding((HurryTypes)iI, eBuilding, true))
+						if (canHurryBuilding((HurryTypes)iI, eBuilding))
 						{
-							const int iHappyFromHurry = AI_getHappyFromHurry((HurryTypes)iI, eBuilding, true);
+							const int iHappyFromHurry = AI_getHappyFromHurry((HurryTypes)iI, eBuilding);
 							if (iHappyFromHurry > iBestHappy)
 							{
 								iBestHappy = iHappyFromHurry;
@@ -5997,7 +5996,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								if (canConstruct(eLoopBuilding))
 								{
 									const int iModifier = kBuilding.getBuildingProductionModifier(iI);
-									const int iOriginalCost = getHurryCost(true, eLoopBuilding, false);
+									const int iOriginalCost = getHurryCost(eLoopBuilding);
 									if (iModifier > -100)
 									{
 										const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
@@ -6026,7 +6025,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								if (kOwner.canConstruct(eLoopBuilding))
 								{
 									const int iModifier = kBuilding.getGlobalBuildingProductionModifier(iI);
-									const int iOriginalCost = getHurryCost(true, eLoopBuilding, false);
+									const int iOriginalCost = getHurryCost(eLoopBuilding);
 
 									if (iModifier > -100)
 									{
@@ -10726,9 +10725,6 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 	int aiYields[NUM_YIELD_TYPES];
 	int aiCommerceYieldsTimes100[NUM_COMMERCE_TYPES];
 
-	int iExtraProductionModifier = 0;
-	int iBaseProductionModifier = 100;
-
 	bool bEmphasizeFood = AI_isEmphasizeYield(YIELD_FOOD);
 	bool bFoodIsProduction = isFoodProduction();
 	bool bCanPopRush = GET_PLAYER(getOwner()).canPopRush();
@@ -10751,16 +10747,10 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 			int iOldCityYield = getBaseYieldRate((YieldTypes)iI);
 			//TB Traits end
 			int iNewCityYield = (bRemove ? (iOldCityYield - piYields[iI]) : (iOldCityYield + piYields[iI]));
-			int iModifier = getBaseYieldRateModifier((YieldTypes)iI);
-			if (iI == YIELD_PRODUCTION)
-			{
-				iBaseProductionModifier = iModifier;
-				iExtraProductionModifier = getProductionModifier();
-				iModifier += iExtraProductionModifier;
-			}
+			const int iModifier = getBaseYieldRateModifier((YieldTypes)iI);
 
-			iNewCityYield = (iNewCityYield * iModifier) / 100;
-			iOldCityYield = (iOldCityYield * iModifier) / 100;
+			iNewCityYield = iNewCityYield * iModifier / 100;
+			iOldCityYield = iOldCityYield * iModifier / 100;
 
 			// The yield of the citizen in question is the difference of total yields
 			// to account for rounding of modifiers
@@ -11032,7 +11022,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 					iSlaveryValue /= std::max(10, (growthThreshold() * (100 - getMaxFoodKeptPercent())));
 
 					iSlaveryValue *= 100;
-					iSlaveryValue /= getHurryCostModifier(true);
+					iSlaveryValue /= getHurryCostModifier();
 
 					iSlaveryValue *= iConsumptionByPopulation * 2;
 					iSlaveryValue /= iConsumptionByPopulation * 2 + std::max(1, iAdjustedFoodDifference);
@@ -11245,9 +11235,6 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 		}
 		else
 		{
-			iProductionValue *= iBaseProductionModifier;
-			iProductionValue /= (iBaseProductionModifier + iExtraProductionModifier);
-
 			iProductionValue += iSlaveryValue;
 			iProductionValue *= (100 + (bWorkerOptimization ? 0 : AI_specialYieldMultiplier(YIELD_PRODUCTION)));
 
@@ -12524,14 +12511,14 @@ int CvCityAI::AI_getHappyFromHurry(int iHurryPopulation) const
 	return 0;
 }
 
-int CvCityAI::AI_getHappyFromHurry(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) const
+int CvCityAI::AI_getHappyFromHurry(HurryTypes eHurry, UnitTypes eUnit) const
 {
-	return AI_getHappyFromHurry(getHurryPopulation(eHurry, getHurryCost(true, eUnit, bIgnoreNew)));
+	return AI_getHappyFromHurry(getHurryPopulation(eHurry, getHurryCost(eUnit)));
 }
 
-int CvCityAI::AI_getHappyFromHurry(HurryTypes eHurry, BuildingTypes eBuilding, bool bIgnoreNew) const
+int CvCityAI::AI_getHappyFromHurry(HurryTypes eHurry, BuildingTypes eBuilding) const
 {
-	return AI_getHappyFromHurry(getHurryPopulation(eHurry, getHurryCost(true, eBuilding, bIgnoreNew)));
+	return AI_getHappyFromHurry(getHurryPopulation(eHurry, getHurryCost(eBuilding)));
 }
 
 
@@ -14221,30 +14208,27 @@ int CvCityAI::AI_getMilitaryProductionRateRank() const
 	{
 		if ((DomainTypes)iI != DOMAIN_SEA)
 		{
-			iRate += ((getDomainProductionModifier((DomainTypes)iI)) / 10);
-			iRate += (getDomainFreeExperience((DomainTypes)iI));
+			iRate += getDomainProductionModifier((DomainTypes)iI) / 10;
+			iRate += getDomainFreeExperience((DomainTypes)iI);
 		}
 	}
-
-	iRate += (getProductionModifier() / 10);
+	iRate += getProductionModifier() / 10;
 	iRate += getFreeExperience();
 
 	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if (GC.getUnitCombatInfo((UnitCombatTypes)iI).isForMilitary())
 		{
-			iRate += (getUnitCombatProductionModifier((UnitCombatTypes)iI) / 10);
+			iRate += getUnitCombatProductionModifier((UnitCombatTypes)iI) / 10;
 			iRate += getUnitCombatFreeExperience((UnitCombatTypes)iI);
 		}
 	}
-
 	int iRank = 1;
 
 	foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
-		int iLoopRate = pLoopCity->getPopulation() + pLoopCity->getYieldRate(YIELD_PRODUCTION) - pLoopCity->getYieldRate(YIELD_COMMERCE);
-		if ((iLoopRate > iRate) ||
-			((iLoopRate == iRate) && (pLoopCity->getID() < getID())))
+		const int iLoopRate = pLoopCity->getPopulation() + pLoopCity->getYieldRate(YIELD_PRODUCTION) - pLoopCity->getYieldRate(YIELD_COMMERCE);
+		if (iLoopRate > iRate || (iLoopRate == iRate && pLoopCity->getID() < getID()))
 		{
 			iRank++;
 		}
@@ -14274,38 +14258,28 @@ int CvCityAI::AI_getNavalMilitaryProductionRateRank() const
 	{
 		return 0;
 	}
-
 	int iRate = getPopulation() + getYieldRate(YIELD_PRODUCTION) - getYieldRate(YIELD_COMMERCE);
 
+	iRate += getDomainProductionModifier(DOMAIN_SEA) / 10;
+	iRate += getDomainFreeExperience(DOMAIN_SEA);
 
-	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
-	{
-		if ((DomainTypes)iI == DOMAIN_SEA)
-		{
-			iRate += ((getDomainProductionModifier((DomainTypes)iI)) / 10);
-			iRate += (getDomainFreeExperience((DomainTypes)iI));
-		}
-	}
-
-	iRate += (getProductionModifier() / 10);
+	iRate += getProductionModifier() / 10;
 	iRate += getFreeExperience();
 
 	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if (GC.getUnitCombatInfo((UnitCombatTypes)iI).isForNavalMilitary())
 		{
-			iRate += (getUnitCombatProductionModifier((UnitCombatTypes)iI) / 10);
+			iRate += getUnitCombatProductionModifier((UnitCombatTypes)iI) / 10;
 			iRate += getUnitCombatFreeExperience((UnitCombatTypes)iI);
 		}
 	}
-
 	int iRank = 1;
 
 	foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
-		int iLoopRate = pLoopCity->getPopulation() + pLoopCity->getYieldRate(YIELD_PRODUCTION) - pLoopCity->getYieldRate(YIELD_COMMERCE);
-		if ((iLoopRate > iRate) ||
-			((iLoopRate == iRate) && (pLoopCity->getID() < getID())))
+		const int iLoopRate = pLoopCity->getPopulation() + pLoopCity->getYieldRate(YIELD_PRODUCTION) - pLoopCity->getYieldRate(YIELD_COMMERCE);
+		if (iLoopRate > iRate || (iLoopRate == iRate && pLoopCity->getID() < getID()))
 		{
 			iRank++;
 		}
@@ -15466,9 +15440,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 				for (int iI = 0; iI < GC.getNumHurryInfos(); iI++)
 				{
-					if (canHurryBuilding((HurryTypes)iI, eBuilding, true))
+					if (canHurryBuilding((HurryTypes)iI, eBuilding))
 					{
-						const int iHappyFromHurry = AI_getHappyFromHurry((HurryTypes)iI, eBuilding, true);
+						const int iHappyFromHurry = AI_getHappyFromHurry((HurryTypes)iI, eBuilding);
 						if (iHappyFromHurry > iBestHappy)
 						{
 							iBestHappy = iHappyFromHurry;
@@ -16377,7 +16351,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							if (canConstruct(eLoopBuilding))
 							{
 								const int iModifier = kBuilding.getBuildingProductionModifier(iI);
-								const int iOriginalCost = getHurryCost(true, eLoopBuilding, false);
+								const int iOriginalCost = getHurryCost(eLoopBuilding);
 								if (iModifier > -100)
 								{
 									const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
@@ -16404,7 +16378,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							if (canConstruct(eLoopBuilding))
 							{
 								const int iModifier = kBuilding.getGlobalBuildingProductionModifier(iI);
-								const int iOriginalCost = getHurryCost(true, eLoopBuilding, false);
+								const int iOriginalCost = getHurryCost(eLoopBuilding);
 
 								if (iModifier > -100)
 								{

@@ -6728,15 +6728,6 @@
 		<Russian>Îáùàÿ ïèùà: +0[ICON_FOOD]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_MOD_FROM</Tag>
-		<English>[ICON_BULLET]%d1%%[ICON_PRODUCTION] from %s2</English>
-		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour %s2</French>
-		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] für %s2</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per %s2</Italian>
-		<Spanish>[ICON_BULLET]%D1%%[ICON_PRODUCTION] por %s2</Spanish>
-		<Polish>[ICON_BULLET]%D1%%[ICON_PRODUCTION] dla %s2</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_SLIDER_PERCENT_FLOAT</Tag>
 		<English>-----------------------[NEWLINE]%d1%% of %d2[ICON_COMMERCE] = %s3%F4</English>
 		<French>-----------------------[NEWLINE]%d1%% sur %d2[ICON_COMMERCE] = %s3%F4</French>
@@ -26203,76 +26194,12 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]%D1 [ICON_PRODUCTION] por %D2 [ICON_FOOD] en exceso</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_MILITARY</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for military units</English>
-		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour les unités militaires</French>
-		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] für Militäreinheiten</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per le unità militari</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] de unidades militares</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_MOD_BONUS</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for %s2_unit_or_building with access to %s3_bonus</English>
-		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour : %s2_unit_or_building ayant accès à : %s3_bonus</French>
-		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] für %s2_unit_or_building mit Zugang zum Bonusgut %s3_bonus</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per %s2_unit_or_building con accesso a %s3_bonus</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] de %s2_unit_or_building con acceso a %s3_bonus</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_NATIONAL_WONDER</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for building a National Wonder</English>
-		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour la construction d'une merveille nationale</French>
-		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] für die Errichtung eines Nationalen Wunders</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per la costruzione di una Meraviglia Nazionale</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] por construir una maravilla nacional</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_PROD_OVERFLOW</Tag>
 		<English>Overflow from previous build: %d1[ICON_PRODUCTION]</English>
 		<French>Excédent de la production précédente: %d1[ICON_PRODUCTION]</French>
 		<German>Überschuss aus vorherigem Bauprojekt: %d1[ICON_PRODUCTION]</German>
 		<Italian>In eccedenza dalla precedente costruzione: %d1[ICON_PRODUCTION]</Italian>
 		<Spanish>En exceso por construcción anterior: %d1 [ICON_PRODUCTION]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_RELIGION</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for having %s2_religion as a State Religion</English>
-		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] si cette religion (%s2_religion) est votre religion d'état</French>
-		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] für die Religion %s2_religion als Staatsreligion</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per avere come religione ufficiale la religione %s2:2_religion</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] por tener el %s2_religion como religión oficial.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_SPACESHIP</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for building a Spaceship Component</English>
-		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour la construction d'un élément du vaisseau spatial</French>
-		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] für die Errichtung einer Raumschiffkomponente</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per la costruzione di un componente dell'astronave</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] por construir un componente para naves espaciales</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_TEAM_WONDER</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for building a Team Wonder</English>
-		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour la construction d'une merveille d'équipe</French>
-		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] für die Errichtung eines Teamwunders</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per la costruzione di una Meraviglia di squadra</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] por construir una maravilla de equipo</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_TRAIT</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for %s2_unit_or_building by %s3_trait leader</English>
-		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour : %s2_unit_or_building avec un dirigeant %s3_trait</French>
-		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] für %s2_unit_or_building für %s3:2_trait Staatsoberhaupt</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per %s2_unit_or_building con un leader %s3_trait</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] de %s2_unit_or_building por líder %s3_trait</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_WONDER</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for building a World Wonder</English>
-		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour la construction d'une merveille mondiale</French>
-		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] für die Errichtung eines Weltwunders</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per la costruzione di una Grande Meraviglia</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] por construir una maravilla del mundo</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_RELIGION_COMMERCE</Tag>

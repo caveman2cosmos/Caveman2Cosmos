@@ -167,12 +167,6 @@ def getConscriptUnitType(argsList):
 def canPickPlot(argsList):
 	return GameUtils.canPickPlot(argsList)
 
-def getUnitCostMod(argsList):
-	return GameUtils.getUnitCostMod(argsList)
-
-def getBuildingCostMod(argsList):
-	return GameUtils.getBuildingCostMod(argsList)
-
 def canUpgradeAnywhere(argsList):
 	return GameUtils.canUpgradeAnywhere(argsList)
 

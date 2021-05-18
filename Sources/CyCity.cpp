@@ -285,11 +285,6 @@ void CyCity::changeProduction(int iChange)
 	m_pCity->changeProduction(iChange);
 }
 
-int CyCity::getProductionModifier() const
-{
-	return m_pCity->getProductionModifier();
-}
-
 int CyCity::getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const
 {
 	return m_pCity->getCurrentProductionDifference(
@@ -872,6 +867,11 @@ void CyCity::changeFood(int iChange)
 int CyCity::getFoodKept() const
 {
 	return m_pCity->getFoodKept();
+}
+
+int CyCity::getMaxProductionOverflow() const
+{
+	return m_pCity->getMaxProductionOverflow();
 }
 
 int CyCity::getOverflowProduction() const

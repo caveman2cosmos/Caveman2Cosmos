@@ -4120,10 +4120,9 @@ class CvMainInterface:
 			screen.setBarPercentage("PopulationBar", InfoBarTypes.INFOBAR_RATE_EXTRA, 0.0)
 
 		bProcess = CyCity.isProductionProcess()
-		iProductionDiffNoFood = CyCity.getCurrentProductionDifference(True, True)
-		iProductionDiffJustFood = CyCity.getCurrentProductionDifference(False, True) - iProductionDiffNoFood
 
 		if bProcess or CyCity.getOrderQueueLength() < 1:
+			iProductionDiffNoFood = CyCity.getYieldRate(YieldTypes.YIELD_PRODUCTION)
 			if bProcess:
 				szTxt = CyCity.getProductionName()
 			else:
@@ -4132,6 +4131,8 @@ class CvMainInterface:
 			screen.setBarPercentage("ProductionBar", InfoBarTypes.INFOBAR_RATE, 0)
 			screen.setBarPercentage("ProductionBar", InfoBarTypes.INFOBAR_RATE_EXTRA, 0)
 		else:
+			iProductionDiffNoFood = CyCity.getCurrentProductionDifference(True, True)
+			iProductionDiffJustFood = CyCity.getCurrentProductionDifference(False, True) - iProductionDiffNoFood
 			iNeeded = CyCity.getProductionNeeded()
 			iStored = CyCity.getProduction()
 			screen.setBarPercentage("ProductionBar", InfoBarTypes.INFOBAR_STORED, float(iStored) / iNeeded)
@@ -4152,15 +4153,12 @@ class CvMainInterface:
 				iOverflow = CyCity.hurryProduction(HURRY_WHIP) - CyCity.productionLeft()
 				if CityOpt.isWhipAssistOverflowCountCurrentProduction():
 					iOverflow += CyCity.getCurrentProductionDifference(False, True)
-				iMaxOverflow = max(iNeeded, CyCity.getCurrentProductionDifference(False, False))
-				iLost = max(0, iOverflow - iMaxOverflow)
-				iOverflow = min(iOverflow, iMaxOverflow)
-				iItemModifier = CyCity.getProductionModifier()
-				iBaseModifier = CyCity.getBaseYieldRateModifier(YieldTypes.YIELD_PRODUCTION, 0)
-				iTotalModifier = CyCity.getBaseYieldRateModifier(YieldTypes.YIELD_PRODUCTION, iItemModifier)
-				iLost *= iBaseModifier
-				iLost /= max(1, iTotalModifier)
-				iOverflow = (iBaseModifier * iOverflow) / max(1, iTotalModifier)
+				iMaxOverflow = city.getMaxProductionOverflow()
+				iLost = iOverflow - iMaxOverflow
+				if iLost < 0: iLost = 0
+				if iOverflow > iMaxOverflow:
+					iOverflow = iMaxOverflow
+
 				if iLost > 0:
 					if CyCity.isProductionUnit():
 						iGoldPercent = GC.getDefineINT("MAXED_UNIT_GOLD_PERCENT")
@@ -4183,9 +4181,7 @@ class CvMainInterface:
 		screen.setHitTest("ProductionText", HitTestTypes.HITTEST_NOHIT)
 
 		szTxt = uFont2
-		if bProcess:
-			szTxt += str(CyCity.getYieldRate(YieldTypes.YIELD_PRODUCTION)) + self.iconYieldList[1]
-		elif bFoodProduction and iProductionDiffJustFood > 0:
+		if not bProcess and bFoodProduction and iProductionDiffJustFood > 0:
 			szTxt += str(iProductionDiffJustFood) + self.iconYieldList[0] + " + " + str(iProductionDiffNoFood) + self.iconYieldList[1]
 		else:
 			szTxt += str(iProductionDiffNoFood) + self.iconYieldList[1]
