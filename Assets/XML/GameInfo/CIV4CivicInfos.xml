@@ -121,35 +121,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -1615,7 +1615,7 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-2</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -1780,7 +1780,7 @@
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-3</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -2078,35 +2078,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -3872,35 +3872,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -5114,35 +5114,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -5258,7 +5258,7 @@
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-1</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 			<UnitProductionModifiers>
@@ -5868,7 +5868,7 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-5</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -5880,7 +5880,7 @@
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-5</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -6945,35 +6945,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -8426,35 +8426,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -10428,35 +10428,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -12089,35 +12089,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -13751,35 +13751,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -15036,35 +15036,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -16217,35 +16217,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -17687,35 +17687,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 			<CivicAttitudeChanges>
@@ -18867,35 +18867,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -19773,35 +19773,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
@@ -20872,35 +20872,35 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>-10</iFlavor>
+					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
