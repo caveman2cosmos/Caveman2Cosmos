@@ -150,17 +150,17 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iViewportCenterOnSelectionCenterBorder(5)
 	, m_szAlternateProfilSampleName("")
 	, m_paHints()
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	// MLF loading
 	, m_paModLoadControlVector(NULL)
 	, m_paModLoadControls(NULL)
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* MODULAR_LOADING_CONTROL                 END                                                  */
+	/************************************************************************************************/
 	, m_bXMLLogging(true)
 
 	// BBAI Options
@@ -180,7 +180,7 @@ cvInternalGlobals::cvInternalGlobals()
 	, iStuckUnitID(0)
 	, iStuckUnitCount(0)
 	, m_iniInitCore(NULL)
-	, m_loadedInitCore(NULL)
+	, m_loadedInitCore (NULL)
 	, m_bResourceLayerOn(false)
 	, m_iNumAnimationOperatorTypes(0)
 	, m_iNumFlavorTypes(0)
