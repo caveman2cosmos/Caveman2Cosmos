@@ -1401,7 +1401,7 @@
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>15</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
@@ -3359,7 +3359,7 @@
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>20</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
