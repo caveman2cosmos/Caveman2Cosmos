@@ -458,12 +458,11 @@ void cvInternalGlobals::init()
 	RPC_BINDING_HANDLE BindingHandle;
 	RPC_STATUS status = RpcStringBindingCompose(
 		(RPC_CSTR)"ba209999-0c6c-11d2-97cf-00c04f8eea45",
-		(RPC_CSTR)L"ncalrpc",           // Protocol sequence to use
-		//(RPC_CSTR)(getModDir() + "Server.exe").c_str(), // Server DNS or Netbios Name
-		(RPC_CSTR)"Server.exe", // Server DNS or Netbios Name
+		(RPC_CSTR)L"ncalrpc",
+		(RPC_CSTR)(getModDir() + "\\Assets\\Server.exe").c_str(), // Server DNS or Netbios Name
 		NULL,
 		NULL,
-		StringBinding
+		(RPC_CSTR*)&StringBinding
 	);
 
 	FAssert(status == RPC_S_OK);
