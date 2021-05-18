@@ -13,7 +13,7 @@ std::string modDir;
 // BUG - EXE/DLL Paths - start
 HANDLE dllModule = NULL;
 
-bool runProcess(const std::string& exe, const std::string& workingDir)
+bool runProcess(const std::string& exe, const std::string& workingDir, bool wait = true)
 {
 	STARTUPINFOA startupInfo;
 	ZeroMemory(&startupInfo, sizeof(startupInfo));
@@ -26,7 +26,7 @@ bool runProcess(const std::string& exe, const std::string& workingDir)
 	// HOWEVER: this DLL is loaded by LoadLibrary later in exe startup so we appear to have the required dlls already loaded at this point.
 	if (::CreateProcessA(NULL, (LPSTR)exe.c_str(), NULL, NULL, TRUE, 0, NULL, workingDir.c_str(), &startupInfo, &procInfo))
 	{
-		success = ::WaitForSingleObject(procInfo.hProcess, 1800000) == WAIT_OBJECT_0;
+		success = !wait || ::WaitForSingleObject(procInfo.hProcess, 1800000) == WAIT_OBJECT_0;
 	}
 	::CloseHandle(procInfo.hProcess);
 	::CloseHandle(procInfo.hThread);
@@ -89,6 +89,11 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 					MessageBox(0, "DLL update failed!", "ERROR!", 0);
 					return FALSE;
 				}
+			}
+			if (!runProcess(git_dir + "\\Assets\\Server.exe", git_dir + "\\Assets", false))
+			{
+				MessageBox(0, "Server failed", "ERROR!", 0);
+				return false;
 			}
 		}
 		logging::createLogsFolder();

@@ -1,0 +1,1 @@
+midl -win32 ITest.idl

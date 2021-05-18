@@ -55,6 +55,11 @@
 #include <set>
 #include <fstream>
 #include <queue>
+#include <Rpc.h>
+#include <Rpcndr.h>
+
+#pragma comment(lib, "rpcrt4")
+#pragma comment(lib, "ole32")
 
 //
 // Google sparsehash
@@ -290,6 +295,8 @@ namespace python = boost::python;
 //
 // Our code
 //
+//#include "ITest.h"
+//#include "ITest_c.c"
 #include "copy_iterator.h"
 #include "index_iterator_base.h"
 #include "logging.h"

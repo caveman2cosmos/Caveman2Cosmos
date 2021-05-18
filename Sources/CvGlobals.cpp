@@ -21,6 +21,8 @@
 #include "CvImprovementInfo.h"
 #include <time.h> 
 #include <sstream>
+#include "ITest.h"
+#include "ITest_c.c"
 
 static char gVersionString[1024] = { 0 };
 
@@ -47,6 +49,16 @@ void deleteInfoArray(std::vector<T*>& array)
 	}
 
 	array.clear();
+}
+
+void* __RPC_USER midl_user_allocate(size_t size)
+{
+    return malloc(size);
+}
+
+void __RPC_USER midl_user_free(void* p)
+{
+    free(p);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -138,17 +150,17 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iViewportCenterOnSelectionCenterBorder(5)
 	, m_szAlternateProfilSampleName("")
 	, m_paHints()
-	/************************************************************************************************/
-	/* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+/************************************************************************************************/
+/* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
+/*                                                                                              */
+/*                                                                                              */
+/************************************************************************************************/
 	// MLF loading
 	, m_paModLoadControlVector(NULL)
 	, m_paModLoadControls(NULL)
-	/************************************************************************************************/
-	/* MODULAR_LOADING_CONTROL                 END                                                  */
-	/************************************************************************************************/
+/************************************************************************************************/
+/* MODULAR_LOADING_CONTROL                 END                                                  */
+/************************************************************************************************/
 	, m_bXMLLogging(true)
 
 	// BBAI Options
@@ -168,7 +180,7 @@ cvInternalGlobals::cvInternalGlobals()
 	, iStuckUnitID(0)
 	, iStuckUnitCount(0)
 	, m_iniInitCore(NULL)
-	, m_loadedInitCore (NULL)
+	, m_loadedInitCore(NULL)
 	, m_bResourceLayerOn(false)
 	, m_iNumAnimationOperatorTypes(0)
 	, m_iNumFlavorTypes(0)
@@ -441,6 +453,28 @@ void cvInternalGlobals::init()
 	m_bResourceLayerOn = false;
 
 	OutputDebugString("Initializing Internal Globals: End");
+
+	unsigned short* StringBinding;
+	RPC_BINDING_HANDLE BindingHandle;
+	RPC_STATUS status = RpcStringBindingCompose(
+		(RPC_CSTR)"ba209999-0c6c-11d2-97cf-00c04f8eea45",
+		(RPC_CSTR)L"ncalrpc",           // Protocol sequence to use
+		//(RPC_CSTR)(getModDir() + "Server.exe").c_str(), // Server DNS or Netbios Name
+		(RPC_CSTR)"Server.exe", // Server DNS or Netbios Name
+		NULL,
+		NULL,
+		StringBinding
+	);
+
+	FAssert(status == RPC_S_OK);
+
+	status = RpcBindingFromStringBinding((RPC_CSTR)StringBinding, &BindingHandle);
+	FAssert(status == RPC_S_OK);
+	RpcStringFree((RPC_CSTR*)&StringBinding);
+
+	int value;
+	test(BindingHandle, 0, &value);
+	FAssert(value == 100);
 }
 
 //
