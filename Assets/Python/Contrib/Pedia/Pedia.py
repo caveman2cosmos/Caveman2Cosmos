@@ -1098,12 +1098,6 @@ class Pedia:
 	def placeLeaders(self):
 		print "Category: Leaders"
 		self.aList = self.getSortedList(GC.getNumLeaderHeadInfos(), GC.getLeaderHeadInfo)
-		list = self.aList
-		listCopy = list[:]
-		for item in listCopy:
-			if item[1] == GC.getDefineINT("BARBARIAN_LEADER"):
-				list.remove(item)
-		self.aList = list
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_LEADER, GC.getLeaderHeadInfo)
 
 	def getLeaderList(self):
