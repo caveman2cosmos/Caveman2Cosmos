@@ -230,14 +230,6 @@
 			<FavoriteReligion>RELIGION_MESOPOTAMISM</FavoriteReligion>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_EARP</Type>
-			<AndDependencyTypes>
-				<DependencyType>LEADER_EARP</DependencyType>
-				<DependencyType>RELIGION_SHAMANISM</DependencyType>
-			</AndDependencyTypes>
-			<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
-		</LeaderHeadInfo>
-		<LeaderHeadInfo>
 			<Type>LEADER_ELIZABETH</Type>
 			<AndDependencyTypes>
 				<DependencyType>LEADER_ELIZABETH</DependencyType>
@@ -358,14 +350,6 @@
 			<FavoriteReligion>RELIGION_SHINTO</FavoriteReligion>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_HOLLIDAY</Type>
-			<AndDependencyTypes>
-				<DependencyType>LEADER_HOLLIDAY</DependencyType>
-				<DependencyType>RELIGION_SHAMANISM</DependencyType>
-			</AndDependencyTypes>
-			<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
-		</LeaderHeadInfo>
-		<LeaderHeadInfo>
 			<Type>LEADER_ISABELLA</Type>
 			<AndDependencyTypes>
 				<DependencyType>LEADER_ISABELLA</DependencyType>
@@ -380,14 +364,6 @@
 				<DependencyType>RELIGION_NAGHUALISM</DependencyType>
 			</AndDependencyTypes>
 			<FavoriteReligion>RELIGION_NAGHUALISM</FavoriteReligion>
-		</LeaderHeadInfo>
-		<LeaderHeadInfo>
-			<Type>LEADER_JAMES</Type>
-			<AndDependencyTypes>
-				<DependencyType>LEADER_JAMES</DependencyType>
-				<DependencyType>RELIGION_SHAMANISM</DependencyType>
-			</AndDependencyTypes>
-			<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_JAYAVARMAN</Type>
@@ -446,14 +422,6 @@
 			<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_KELLY</Type>
-			<AndDependencyTypes>
-				<DependencyType>LEADER_KELLY</DependencyType>
-				<DependencyType>RELIGION_SHAMANISM</DependencyType>
-			</AndDependencyTypes>
-			<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
-		</LeaderHeadInfo>
-		<LeaderHeadInfo>
 			<Type>LEADER_KUBLAI_KHAN</Type>
 			<AndDependencyTypes>
 				<DependencyType>LEADER_KUBLAI_KHAN</DependencyType>
@@ -481,14 +449,6 @@
 			<Type>LEADER_LOGAN</Type>
 			<AndDependencyTypes>
 				<DependencyType>LEADER_LOGAN</DependencyType>
-				<DependencyType>RELIGION_SHAMANISM</DependencyType>
-			</AndDependencyTypes>
-			<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
-		</LeaderHeadInfo>
-		<LeaderHeadInfo>
-			<Type>LEADER_LOPEZ</Type>
-			<AndDependencyTypes>
-				<DependencyType>LEADER_LOPEZ</DependencyType>
 				<DependencyType>RELIGION_SHAMANISM</DependencyType>
 			</AndDependencyTypes>
 			<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
@@ -686,14 +646,6 @@
 			<FavoriteReligion>RELIGION_CHRISTIANITY</FavoriteReligion>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_SA</Type>
-			<AndDependencyTypes>
-				<DependencyType>LEADER_SA</DependencyType>
-				<DependencyType>RELIGION_CHRISTIANITY</DependencyType>
-			</AndDependencyTypes>
-			<FavoriteReligion>RELIGION_CHRISTIANITY</FavoriteReligion>
-		</LeaderHeadInfo>
-		<LeaderHeadInfo>
 			<Type>LEADER_SALADIN</Type>
 			<AndDependencyTypes>
 				<DependencyType>LEADER_SALADIN</DependencyType>
@@ -812,14 +764,6 @@
 				<DependencyType>RELIGION_SHINTO</DependencyType>
 			</AndDependencyTypes>
 			<FavoriteReligion>RELIGION_SHINTO</FavoriteReligion>
-		</LeaderHeadInfo>
-		<LeaderHeadInfo>
-			<Type>LEADER_VARGAS</Type>
-			<AndDependencyTypes>
-				<DependencyType>LEADER_VARGAS</DependencyType>
-				<DependencyType>RELIGION_CHRISTIANITY</DependencyType>
-			</AndDependencyTypes>
-			<FavoriteReligion>RELIGION_CHRISTIANITY</FavoriteReligion>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_VICTORIA</Type>
