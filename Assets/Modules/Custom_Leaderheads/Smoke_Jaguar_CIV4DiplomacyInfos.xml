@@ -5,64 +5,6 @@
 <Civ4DiplomacyInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4GameInfoSchema.xml">
 	<DiplomacyInfos>
 		<DiplomacyInfo>
-			<Type>AI_DIPLOCOMMENT_FIRST_CONTACT</Type>
-			<Responses>
-				<Response>
-					<Civilizations/>
-					<Leaders>
-						<Leader>
-							<LeaderType>LEADER_SMOKE_JAGUAR</LeaderType>
-							<bLeaderType>1</bLeaderType>
-						</Leader>
-					</Leaders>
-					<Attitudes/>
-					<DiplomacyPowers/>
-					<DiplomacyText>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_SMOKE_JAGUAR_1</Text>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_SMOKE_JAGUAR_2</Text>
-					</DiplomacyText>
-				</Response>
-			</Responses>
-		</DiplomacyInfo>
-		<DiplomacyInfo>
-			<Type>AI_DIPLOCOMMENT_REFUSE_TO_TALK</Type>
-			<Responses>
-				<Response>
-					<Civilizations/>
-					<Leaders>
-						<Leader>
-							<LeaderType>LEADER_SMOKE_JAGUAR</LeaderType>
-							<bLeaderType>1</bLeaderType>
-						</Leader>
-					</Leaders>
-					<Attitudes/>
-					<DiplomacyPowers/>
-					<DiplomacyText>
-						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_SMOKE_JAGUAR_1</Text>
-					</DiplomacyText>
-				</Response>
-			</Responses>
-		</DiplomacyInfo>
-		<DiplomacyInfo>
-			<Type>AI_DIPLOCOMMENT_NO_PEACE</Type>
-			<Responses>
-				<Response>
-					<Civilizations/>
-					<Leaders>
-						<Leader>
-							<LeaderType>LEADER_SMOKE_JAGUAR</LeaderType>
-							<bLeaderType>1</bLeaderType>
-						</Leader>
-					</Leaders>
-					<Attitudes/>
-					<DiplomacyPowers/>
-					<DiplomacyText>
-						<Text>AI_DIPLO_NO_PEACE_LEADER_SMOKE_JAGUAR_1</Text>
-					</DiplomacyText>
-				</Response>
-			</Responses>
-		</DiplomacyInfo>
-		<DiplomacyInfo>
 			<Type>AI_DIPLOCOMMENT_GREETINGS</Type>
 			<Responses>
 				<Response>
@@ -118,7 +60,7 @@
 			</Responses>
 		</DiplomacyInfo>
 		<DiplomacyInfo>
-			<Type>AI_DIPLOCOMMENT_DEMAND_TRIBUTE</Type>
+			<Type>AI_DIPLOCOMMENT_DEMAND_TRIBUTE_WEAKER</Type>
 			<Responses>
 				<Response>
 					<Civilizations/>
@@ -139,6 +81,11 @@
 						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SMOKE_JAGUAR_1</Text>
 					</DiplomacyText>
 				</Response>
+			</Responses>
+		</DiplomacyInfo>
+		<DiplomacyInfo>
+			<Type>AI_DIPLOCOMMENT_DEMAND_TRIBUTE_EQUAL</Type>
+			<Responses>
 				<Response>
 					<Civilizations/>
 					<Leaders>
@@ -158,6 +105,11 @@
 						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SMOKE_JAGUAR_1</Text>
 					</DiplomacyText>
 				</Response>
+			</Responses>
+		</DiplomacyInfo>
+		<DiplomacyInfo>
+			<Type>AI_DIPLOCOMMENT_DEMAND_TRIBUTE_STRONGER</Type>
+			<Responses>
 				<Response>
 					<Civilizations/>
 					<Leaders>
