@@ -208,6 +208,14 @@
 					<LeaderName>LEADER_SALADIN</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_ABUBAKR</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_HARUN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<CivilizationSelectionSound>AS3D_ARABIA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_ARABIA_ORDER</CivilizationActionSound>
@@ -302,6 +310,10 @@
 					<LeaderName>LEADER_ASHUR</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_SENNACHERIB</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_PERSIA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_BABYLON_SELECT</CivilizationSelectionSound>
@@ -391,6 +403,14 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_MONTEZUMA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_ATOTOZTLI</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_ITZCOATL</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -486,6 +506,10 @@
 					<LeaderName>LEADER_HAMMURABI</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_NEBUCHADREZZAR</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_PERSIA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_BABYLON_SELECT</CivilizationSelectionSound>
@@ -577,6 +601,14 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_JUSTINIAN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_BASIL</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_THEODORA</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -675,6 +707,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_HANNIBAL</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_DIDO</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -881,6 +917,14 @@
 					<LeaderName>LEADER_CHINESE_LEADER</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_TAIZONG</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_WU</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<CivilizationSelectionSound>AS3D_CHINA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_CHINA_ORDER</CivilizationActionSound>
@@ -984,6 +1028,14 @@
 					<LeaderName>LEADER_RAMESSES</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_CLEOPATRA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_NEFERTITI</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<CivilizationSelectionSound>AS3D_EGYPT_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_EGYPT_ORDER</CivilizationActionSound>
@@ -1085,6 +1137,10 @@
 				</Leader>
 				<Leader>
 					<LeaderName>LEADER_CHURCHILL</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_HENRY_VIII</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -1285,6 +1341,14 @@
 					<LeaderName>LEADER_DE_GAULLE</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_JOANOFARC</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_RICHELIEU</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_FRANCE_SELECT</CivilizationSelectionSound>
@@ -1386,6 +1450,10 @@
 				</Leader>
 				<Leader>
 					<LeaderName>LEADER_BISMARCK</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_HITLER</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -1712,6 +1780,10 @@
 					<LeaderName>LEADER_CHARLEMAGNE</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_CHARLES_V</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_GERMANY</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_HOLY_ROMAN_SELECT</CivilizationSelectionSound>
@@ -1811,6 +1883,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_HUAYNA_CAPAC</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_PACHACUTI</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -2050,6 +2126,14 @@
 					<LeaderName>LEADER_TOKUGAWA</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_HIROHITO</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_MEIJI</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_KOREA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_JAPAN_SELECT</CivilizationSelectionSound>
@@ -2141,6 +2225,10 @@
 					<LeaderName>LEADER_SURYAVARMAN</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_JAYAVARMAN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<CivilizationSelectionSound>AS3D_KHMER_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_KHMER_ORDER</CivilizationActionSound>
@@ -2229,6 +2317,14 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_WANGKON</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_KIM</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_SEJONG</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -2415,6 +2511,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_PACAL</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_SMOKE_JAGUAR</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -2720,6 +2820,14 @@
 					<LeaderName>LEADER_WILLEM_VAN_ORANJE</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_DE_WITT</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_WILHELMINA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_NETHERLANDS_SELECT</CivilizationSelectionSound>
@@ -3021,6 +3129,14 @@
 					<LeaderName>LEADER_JOAO</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_AFONSO</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+					<Leader>
+					<LeaderName>LEADER_HTN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_PORTUGAL_SELECT</CivilizationSelectionSound>
@@ -3134,6 +3250,14 @@
 					<LeaderName>LEADER_AUGUSTUS</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_CALIGULA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_HADRIAN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_BYZANTIUM</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_ROME_SELECT</CivilizationSelectionSound>
@@ -3231,6 +3355,18 @@
 				</Leader>
 				<Leader>
 					<LeaderName>LEADER_STALIN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_IVAN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_LENIN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_LEONIDAS</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -3420,6 +3556,14 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_ISABELLA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_FRANCO</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_PHILIP_II</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -3705,6 +3849,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_SHAKA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_CETSHWAYO</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -5166,7 +5314,6 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_INCA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_INCA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
