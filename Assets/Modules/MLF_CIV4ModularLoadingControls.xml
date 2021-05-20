@@ -10,11 +10,11 @@
 			<Description>Initialize ALL Modules by using the MLF file structure</Description>
 			<Modules>
 				<Module>
-					<Directory>Custom_Leaderheads</Directory>
+					<Directory>Custom_Civilizations</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
-					<Directory>Custom_Civilizations</Directory>
+					<Directory>Custom_Religions</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
@@ -35,10 +35,6 @@
 				</Module>
 				<Module>
 					<Directory>Thunderbrd</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>Custom_Religions</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>

@@ -219,7 +219,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<GoodyType>GOODY_GATHERER</GoodyType>
 				<GoodyType>GOODY_WORKER</GoodyType>
@@ -228,7 +228,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -513,7 +513,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<GoodyType>GOODY_GATHERER</GoodyType>
 				<GoodyType>GOODY_WORKER</GoodyType>
@@ -522,7 +522,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -801,7 +801,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -1107,7 +1107,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
