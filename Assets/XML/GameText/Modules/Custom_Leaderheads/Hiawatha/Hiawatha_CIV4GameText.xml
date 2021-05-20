@@ -1,5 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_HIAWATHA_1</Tag>
 		<English>Shall we have this lest your body sink in the forked river?</English>
@@ -67,4 +65,3 @@
 		<Polish>[H1]Hiawatha[\H1][NEWLINE][BOLD]Wizjoner Pięciu Narodów[\BOLD][NEWLINE][BOLD]Żył:[\BOLD] w XII, XV lub XVI wieku[NEWLINE][PARAGRAPH:2]Żyjący (według różnych przekazów) w XII, XV lub XVI wieku wódz irokeski, według ustnych przekazów irokeskich uczeń Wielkiego Rozjemcy Deganewidy, założyciela Konfederacji Pięciu Narodów. Wraz z Deganewidą miał rozpalić Wieczny Płomień, wokół którego zbierała się Wielka Rada Konfederacji Pięciu Narodów.</Polish>
 		<Russian>[H1]Гайавата[\H1][NEWLINE][BOLD]Провидец пяти племен[\BOLD][NEWLINE][BOLD]Годы жизни: [\BOLD]1100-е, 1400-е или 1500-е годы[NEWLINE][PARAGRAPH:2][BOLD]Биография:[\BOLD][NEWLINE][TAB]Гайавата (также известный как Айенватха или Ха-йо-го'ха), живший (в зависимости от версии истории) в 1100-х, 1400-х или 1500-х годах, был по-разному лидером народов онондага и могавков коренных американцев. Гайавата был последователем Великого Миротворца, пророка и духовного лидера, который считался основателем конфедерации ирокезов (называемой в народе Хауденосауни). Если Великий Миротворец был человеком идей, то Гайавата был политиком, который фактически претворял этот план в жизнь. Гайавата был умелым и харизматичным оратором и сыграл важную роль в убеждении народов ирокезов, сенека, онондага, онейда, каюга и могавков, группы коренных жителей Северной Америки, которые говорили на схожих языках, принять видение Великого миротворца и сплотиться, чтобы стать пятью народами конфедерации ирокезов. (Позже, в 1721 году, племя Тускарора присоединилась к конфедерации ирокезов, и они сталиизвестны, как Шесть племен).</Russian>
 	</TEXT>
-</Civ4GameText>

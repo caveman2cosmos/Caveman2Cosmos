@@ -1,5 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HAURAKI</Tag>
 		<English>Hauraki</English>
@@ -826,4 +824,3 @@
 		<Polish>Maorysi</Polish>
 		<Russian>ìàîðè</Russian>
 	</TEXT>
-</Civ4GameText>

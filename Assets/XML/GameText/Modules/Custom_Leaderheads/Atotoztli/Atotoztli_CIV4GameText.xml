@@ -1,5 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ATOTOZTLI_1</Tag>
 		<English>Welcome to the party, [CT_NAME].</English>
@@ -19,4 +17,3 @@
 		<Polish>[H1]Atotoztli[\H1][NEWLINE][BOLD]Cesarzowa Azteków[\BOLD][NEWLINE][PARAGRAPH:1][BOLD]Tło:[\BOLD][PARAGRAPH:1]Atotoztli (Nahuatl: Atotoztli) lub Huitzilxochtzin (Huitzilxochtzin) była córką Imperatora Moctezuma I i Chichimecacihuatzin, córki of Cuauhtototzin, władcy Cuauhnahuac. Poślubiła Tezozomoc, syna poprzedniego imperatora Itzcoatla.</Polish>
 		<Russian>[H1]Атотозтли[\H1][NEWLINE][BOLD]Правительница ацтеков[\BOLD][NEWLINE][BOLD]Годы правления: 1466 - 1472 гг.[\BOLD][NEWLINE][PARAGRAPH:1][BOLD]Биография:[\BOLD][TAB][PARAGRAPH:1]Атотозтли (классич. науатль: Атотоцтли) или Уицилопочтли (Huitzilxochtzin) была дочерью ацтекского правителя Монтесумы I и Чичимекациуатцин, дочери Куаутотоцина, правителя Куаутитлана. Она вышла замуж за Тесозмока, наследника предыдущего правителя Ицкоатля, и родила трех сыновей, которые впоследствии сами станут правителями: Ашаякатля, Тиска и Ауитцотля.</Russian>
 	</TEXT>
-</Civ4GameText>
