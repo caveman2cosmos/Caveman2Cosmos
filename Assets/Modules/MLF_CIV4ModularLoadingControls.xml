@@ -14,6 +14,10 @@
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
+					<Directory>Custom_Religions</Directory>
+					<bLoad>1</bLoad>
+				</Module>
+				<Module>
 					<Directory>OrionsMods</Directory>
 					<bLoad>1</bLoad>
 				</Module>
@@ -31,10 +35,6 @@
 				</Module>
 				<Module>
 					<Directory>Thunderbrd</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>Custom_Religions</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
