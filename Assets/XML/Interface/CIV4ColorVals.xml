@@ -817,13 +817,6 @@
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
-			<Type>COLOR_PLAYER_WHITE</Type>
-			<fRed>0.90</fRed>
-			<fGreen>0.90</fGreen>
-			<fBlue>0.90</fBlue>
-			<fAlpha>1.00</fAlpha>
-		</ColorVal>
-		<ColorVal>
 			<Type>COLOR_BROWNNEANDERTHAL1</Type>
 			<fRed>0.70</fRed>
 			<fGreen>0.05</fGreen>
