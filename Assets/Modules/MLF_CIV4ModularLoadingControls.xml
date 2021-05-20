@@ -10,10 +10,6 @@
 			<Description>Initialize ALL Modules by using the MLF file structure</Description>
 			<Modules>
 				<Module>
-					<Directory>Custom_Leaderheads</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
 					<Directory>Custom_Civilizations</Directory>
 					<bLoad>1</bLoad>
 				</Module>
