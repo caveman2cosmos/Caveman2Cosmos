@@ -3585,7 +3585,7 @@
 		<Russian>ìàîðè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_LEADER_WRUB_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_WRUB_1</Tag>
 		<English>Good days and pleasant nights, what do you think about this?.</English>
 		<French>Bons jours et nuits plaisantes, que pensez-vous de cela?.</French>
 		<Spanish>Buenos dias y placenteras noches, que opinas de esto?.</Spanish>
@@ -3593,7 +3593,7 @@
 		<Russian>Õîðîøåãî äíÿ, âîæäü ñòðàííûõ ëþäè, ÷òî òû äóìàòü íàñ÷åò ýòà èäåÿ?</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LEADER_WRUB_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_WRUB_1</Tag>
 		<English>Good days and pleasant nights, the neans dislike to take advantage of the weaks, but maybe you like to be in grace with the strongs...</English>
 		<French>Bons jours et nuits plaisantes, nous n'aimons pas tirer avantage des faibles, mais peut-être que vous voulez être dans de bonnes graces avec les plus forts...</French>
 		<Spanish>Buenos dias y placenteras noches, a los neans nos disgusta tomar ventaja de los debiles, pero quizas tu quieras estar en gracia con los fuertes...</Spanish>
@@ -3601,7 +3601,7 @@
 		<Russian>Õîðîøèå äíè è ïðèÿòíûå íî÷è, âîîáùå-òî íåïðèÿòíî èñïîëüçîâàòü ìîÿ ïðåèìóùåñòâî íàä òâîÿ íåìîùü, íî ìîæåò òâîÿ áóäåò áëàãîäàðíà çà ðåøèòåëüíîñòü...</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LEADER_WRUB_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_WRUB_1</Tag>
 		<English>Good days and pleasant nights, may your mighty people help the neans when they are in need.</English>
 		<French>Bons jours et nuits plaisantes, que votre brillant peuple puisse venir en aide à ceux dans le besoin.</French>
 		<Spanish>Buenos dias y placenteras noches, podria tu fabuloso pueblo ayudar a los neans cuando lo necesitan.</Spanish>
