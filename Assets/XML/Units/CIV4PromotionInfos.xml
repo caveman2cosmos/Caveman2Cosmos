@@ -19448,6 +19448,12 @@
 			<iLevelPrereq>5</iLevelPrereq>
 			<bRiver>1</bRiver>
 			<Button>Art/Interface/Buttons/Promotions/Master_hunter2.dds</Button>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_MASTER_HUNTER3</Type>
@@ -19460,38 +19466,13 @@
 			<iLevelPrereq>10</iLevelPrereq>
 			<bEnemyRoute>1</bEnemyRoute>
 			<Button>Art/Interface/Buttons/Promotions/Master_hunter3.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_SEA_MASTER_HUNTER1</Type>
-			<Description>TXT_KEY_PROMOTION_SEA_MASTER_HUNTER1</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_RAFT_BUILDING</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_SEA_MASTER_HUNTER</PromotionLine>
-			<iLinePriority>1</iLinePriority>
-			<Button>Art/Interface/Buttons/Promotions/Master_seahunter1.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_SEA_MASTER_HUNTER2</Type>
-			<Description>TXT_KEY_PROMOTION_SEA_MASTER_HUNTER2</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_SEA_MASTER_HUNTER1</PromotionPrereq>
-			<TechPrereq>TECH_SPEARFISHING</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_SEA_MASTER_HUNTER</PromotionLine>
-			<iLinePriority>2</iLinePriority>
-			<iLevelPrereq>5</iLevelPrereq>
-			<Button>Art/Interface/Buttons/Promotions/Master_seahunter2.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_SEA_MASTER_HUNTER3</Type>
-			<Description>TXT_KEY_PROMOTION_SEA_MASTER_HUNTER3</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_SEA_MASTER_HUNTER2</PromotionPrereq>
-			<TechPrereq>TECH_HARPOON_MAKING</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_SEA_MASTER_HUNTER</PromotionLine>
-			<iLinePriority>3</iLinePriority>
-			<iLevelPrereq>10</iLevelPrereq>
-			<Button>Art/Interface/Buttons/Promotions/Master_seahunter3.dds</Button>
-		</PromotionInfo>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+		</PromotionInfo>		
 		<PromotionInfo>
 			<Type>PROMOTION_CULTURE_AFRICAN</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURE_AFRICAN</Description>
