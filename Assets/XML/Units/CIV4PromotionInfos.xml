@@ -9263,7 +9263,6 @@
 			<Type>PROMOTION_BUSHMAN</Type>
 			<Description>TXT_KEY_PROMOTION_BUSHMAN</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NOMADISM</TechPrereq>
 			<TerrainAttacks>
 				<TerrainAttack>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -9330,7 +9329,6 @@
 			<Type>PROMOTION_CLIFF_WALKER</Type>
 			<Description>TXT_KEY_PROMOTION_CLIFF_WALKER</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NOMADISM</TechPrereq>
 			<iHillsAttack>10</iHillsAttack>
 			<iHillsDefense>10</iHillsDefense>
 			<TerrainAttacks>
@@ -9351,7 +9349,6 @@
 			<Type>PROMOTION_GREEN_WARDEN</Type>
 			<Description>TXT_KEY_PROMOTION_GREEN_WARDEN</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NOMADISM</TechPrereq>
 			<FeatureAttacks>
 				<FeatureAttack>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -9410,7 +9407,6 @@
 			<Type>PROMOTION_SAND_DEVIL</Type>
 			<Description>TXT_KEY_PROMOTION_SAND_DEVIL</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NOMADISM</TechPrereq>
 			<TerrainAttacks>
 				<TerrainAttack>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -9437,7 +9433,6 @@
 			<Type>PROMOTION_WINTERBORN</Type>
 			<Description>TXT_KEY_PROMOTION_WINTERBORN</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NOMADISM</TechPrereq>
 			<TerrainAttacks>
 				<TerrainAttack>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
