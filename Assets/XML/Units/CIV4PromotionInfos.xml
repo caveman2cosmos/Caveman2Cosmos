@@ -8214,6 +8214,12 @@
 			<iVisibilityChange>1</iVisibilityChange>
 			<iCombatPercent>10</iCombatPercent>
 			<Button>,Art/Interface/Buttons/Promotions/Sentry2.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,5,10</Button>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_SEA_CREATURE1</Type>
