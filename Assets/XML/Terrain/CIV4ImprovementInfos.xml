@@ -8230,8 +8230,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 			</RouteYieldChanges>
-			<iCulture>10</iCulture>
-			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
 		<!-- Town -> Suburb Era -->
 		<ImprovementInfo>
@@ -8380,8 +8378,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 			</RouteYieldChanges>
-			<iCulture>8</iCulture>
-			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
 		<!-- Village -> Town Era -->
 		<ImprovementInfo>
@@ -8531,7 +8527,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 			</RouteYieldChanges>
-			<iCulture>6</iCulture>
 		</ImprovementInfo>
 		<!-- Hamlet -> Village Era -->
 		<ImprovementInfo>
@@ -8598,7 +8593,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<iCulture>4</iCulture>
 		</ImprovementInfo>
 		<!-- Cottage -> Hamlet Era -->
 		<ImprovementInfo>
@@ -8844,7 +8838,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 			</RouteYieldChanges>
-			<iCulture>4</iCulture>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9028,7 +9021,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 			</RouteYieldChanges>
-			<iCulture>2</iCulture>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9200,7 +9192,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 			</RouteYieldChanges>
-			<iCulture>1</iCulture>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9476,8 +9467,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<iCulture>20</iCulture>
-			<iCultureRange>2</iCultureRange>
 		</ImprovementInfo>
 		<!-- Solar Panels | Independent -->
 		<ImprovementInfo>
@@ -9918,8 +9907,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<iUniqueRange>2</iUniqueRange>
-			<iCulture>2</iCulture>
-			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
 		<!-- Moai Statues | Independent -->
 		<ImprovementInfo>
@@ -10014,8 +10001,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<iUniqueRange>2</iUniqueRange>
-			<iCulture>2</iCulture>
-			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
 		<!-- PREHISTORIC CAMPS -->
 		<!-- Jungle Camp | End - Information Lifestyle -->
@@ -10541,7 +10526,6 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<iCulture>10</iCulture>
 			<iVisibilityChange>4</iVisibilityChange>
 			<iSeeFrom>3</iSeeFrom>
 			<iUniqueRange>0</iUniqueRange>
@@ -10636,7 +10620,6 @@
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_STONE_WATCHTOWER</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_RADAR_TOWER</ImprovementUpgrade>
-			<iCulture>10</iCulture>
 			<iVisibilityChange>3</iVisibilityChange>
 			<iSeeFrom>2</iSeeFrom>
 			<iUniqueRange>0</iUniqueRange>
@@ -10731,7 +10714,6 @@
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementUpgrade>
-			<iCulture>1</iCulture>
 			<iVisibilityChange>2</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
 			<iUniqueRange>0</iUniqueRange>
@@ -10827,7 +10809,6 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade>
-			<iCulture>1</iCulture>
 			<iVisibilityChange>1</iVisibilityChange>
 			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
@@ -13005,7 +12986,6 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<iCulture>10</iCulture>
 			<bBombardable>1</bBombardable>
 		</ImprovementInfo>
 		<!-- Sea Fort -->
@@ -13105,8 +13085,6 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<iCulture>10</iCulture>
-			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>2</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
 			<iUniqueRange>2</iUniqueRange>
