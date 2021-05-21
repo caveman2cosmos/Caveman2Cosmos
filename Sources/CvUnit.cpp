@@ -18719,23 +18719,8 @@ void CvUnit::calcUpkeep100()
 
 		if (iCalc > 0)
 		{
-			if (m_iUpkeepModifier > 0)
-			{
-				iCalc = iCalc * (100 + m_iUpkeepModifier) / 100;
-			}
-			else if (m_iUpkeepModifier < 0)
-			{
-				iCalc = iCalc * 100 / (100 - m_iUpkeepModifier);
-			}
-
-			if (m_iUpkeepMultiplierSM > 0)
-			{
-				iCalc = iCalc * (100 + m_iUpkeepMultiplierSM) / 100;
-			}
-			else if (m_iUpkeepMultiplierSM < 0)
-			{
-				iCalc = iCalc * 100 / (100 - m_iUpkeepMultiplierSM);
-			}
+			iCalc = getModifiedIntValue(iCalc, m_iUpkeepModifier);
+			iCalc = getModifiedIntValue(iCalc, m_iUpkeepMultiplierSM);
 
 			const int iOldUpkeep = m_iUpkeep100;
 			m_iUpkeep100 = std::max(0,  iCalc);

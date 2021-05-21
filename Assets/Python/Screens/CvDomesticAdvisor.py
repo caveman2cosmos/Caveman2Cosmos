@@ -705,16 +705,16 @@ class CvDomesticAdvisor:
 
 	def calculateWhipOverflow(self, city, szKey, arg):
 
-		if city.canHurry(self.HURRY_TYPE_POP, False):
-			iOverflow = city.hurryProduction(self.HURRY_TYPE_POP) - city.productionLeft()
-			if CityScreenOpt.isWhipAssistOverflowCountCurrentProduction():
-				iOverflow += city.getCurrentProductionDifference(True, False)
-			iMaxOverflow = min(city.getProductionNeeded(), iOverflow)
-			iOverflowGold = max(0, iOverflow - iMaxOverflow) * GC.getDefineINT("MAXED_UNIT_GOLD_PERCENT") / 100
-			iOverflow =  100 * iMaxOverflow / city.getBaseYieldRateModifier(GC.getInfoTypeForString("YIELD_PRODUCTION"), city.getProductionModifier())
-			return unicode(iOverflow), unicode(iOverflowGold)
-		else:
+		if not city.canHurry(self.HURRY_TYPE_POP, False):
 			return self.objectNotPossible, self.objectNotPossible
+
+		iOverflow = city.hurryProduction(self.HURRY_TYPE_POP) - city.productionLeft()
+		if CityScreenOpt.isWhipAssistOverflowCountCurrentProduction():
+			iOverflow += city.getCurrentProductionDifference(True, False)
+		iMaxOverflow = city.getMaxProductionOverflow()
+		iOverflowGold = max(0, iOverflow - iMaxOverflow) * GC.getDefineINT("MAXED_UNIT_GOLD_PERCENT") / 100
+		iOverflow = 100 * iMaxOverflow / city.getBaseYieldRateModifier(YieldTypes.YIELD_PRODUCTION, 0)
+		return unicode(iOverflow), unicode(iOverflowGold)
 
 	def calculateWhipAnger(self, city, szKey, arg):
 		iAnger = city.getHurryAngerTimer()

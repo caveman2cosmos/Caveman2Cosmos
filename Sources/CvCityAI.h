@@ -306,8 +306,8 @@ protected:
 	void AI_doHurry(bool bForce = false);
 	void AI_doEmphasize();
 	int AI_getHappyFromHurry(HurryTypes eHurry) const;
-	int AI_getHappyFromHurry(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) const;
-	int AI_getHappyFromHurry(HurryTypes eHurry, BuildingTypes eBuilding, bool bIgnoreNew) const;
+	int AI_getHappyFromHurry(HurryTypes eHurry, UnitTypes eUnit) const;
+	int AI_getHappyFromHurry(HurryTypes eHurry, BuildingTypes eBuilding) const;
 	int AI_getHappyFromHurry(int iHurryPopulation) const;
 	bool AI_doPanic();
 	int AI_calculateCulturePressure(bool bGreatWork = false) const;

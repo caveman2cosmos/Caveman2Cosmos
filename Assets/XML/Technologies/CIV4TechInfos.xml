@@ -11003,15 +11003,15 @@ Current techs which are not in this file:-
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>35</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>35</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>35</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
@@ -12357,11 +12357,11 @@ Current techs which are not in this file:-
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>55</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>25</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -12541,7 +12541,7 @@ Current techs which are not in this file:-
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>15</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -12737,7 +12737,7 @@ Current techs which are not in this file:-
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>15</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -13427,7 +13427,7 @@ Current techs which are not in this file:-
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>35</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -21329,7 +21329,7 @@ Current techs which are not in this file:-
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>15</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>

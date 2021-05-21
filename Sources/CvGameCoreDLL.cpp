@@ -687,6 +687,19 @@ int intPow(const int x, const int p)
 	}
 	return static_cast<int>(iResult);
 }
+
+int getModifiedIntValue(const int iValue, const int iMod)
+{
+	if (iMod > 0)
+	{
+		return iValue * (100 + iMod) / 100;
+	}
+	if (iMod < 0)
+	{
+		return iValue * 100 / (100 - iMod);
+	}
+	return iValue;
+}
 // ! Toffer
 
 const std::string getModDir()

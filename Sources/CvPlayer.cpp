@@ -7369,17 +7369,6 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 	//Thus placing it so that training factors influence the cost will cause settlers to be double scaled and the costs to go out of balance as a result.
 	iProductionNeeded += 100 * getUnitExtraCost(eUnit);
 
-	// Python cost modifier
-	if (GC.getUSE_GET_UNIT_COST_MOD_CALLBACK())
-	{
-		const int iResult = Cy::call<bool>(PYGameModule, "getUnitCostMod", Cy::Args() << getID() << eUnit);
-		if (iResult > 1)
-		{
-			iProductionNeeded *= iResult;
-			iProductionNeeded /= 100;
-		}
-	}
-
 	iProductionNeeded /= 100;
 
 	if (iProductionNeeded > MAX_INT)
@@ -7392,7 +7381,6 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 
 int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 {
-
 	const int iBaseCost = GC.getBuildingInfo(eBuilding).getProductionCost();
 	if (iBaseCost < 1)
 	{
@@ -7522,12 +7510,9 @@ int CvPlayer::getProductionModifier(UnitTypes eUnit) const
 {
 	int iMultiplier = 0;
 
-	if (!GC.getUnitInfo(eUnit).isNoNonTypeProdMods())
+	if (!GC.getUnitInfo(eUnit).isNoNonTypeProdMods() && GC.getUnitInfo(eUnit).isMilitaryProduction())
 	{
-		if (GC.getUnitInfo(eUnit).isMilitaryProduction())
-		{
-			iMultiplier += getMilitaryProductionModifier();
-		}
+		iMultiplier += getMilitaryProductionModifier();
 	}
 	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
@@ -7613,7 +7598,6 @@ int CvPlayer::getProductionModifier(ProjectTypes eProject) const
 	{
 		iMultiplier += getSpaceProductionModifier();
 	}
-
 	return iMultiplier;
 }
 
@@ -10596,38 +10580,12 @@ void CvPlayer::changeFreeUnitUpkeepMilitaryPopPercent(const int iChange)
 
 int CvPlayer::getFreeUnitUpkeepCivilian() const
 {
-	int iFreeUpkeep = getBaseFreeUnitUpkeepCivilian();
-
-	const int iMod = getFreeUnitUpkeepCivilianPopPercent();
-	if (iMod > 0)
-	{
-		iFreeUpkeep += getTotalPopulation() * (100 + iMod) / 100;
-	}
-	else if (iMod < 0)
-	{
-		iFreeUpkeep += getTotalPopulation() * 100 / (100 - iMod);
-	}
-	else iFreeUpkeep += getTotalPopulation();
-
-	return std::max(0, iFreeUpkeep);
+	return std::max(0, getBaseFreeUnitUpkeepCivilian() + getModifiedIntValue(getTotalPopulation(), getFreeUnitUpkeepCivilianPopPercent()));
 }
 
 int CvPlayer::getFreeUnitUpkeepMilitary() const
 {
-	int iFreeUpkeep = getBaseFreeUnitUpkeepMilitary();
-
-	const int iMod = getFreeUnitUpkeepMilitaryPopPercent();
-	if (iMod > 0)
-	{
-		iFreeUpkeep += getTotalPopulation() * (100 + iMod) / 100;
-	}
-	else if (iMod < 0)
-	{
-		iFreeUpkeep += getTotalPopulation() * 100 / (100 - iMod);
-	}
-	else iFreeUpkeep += getTotalPopulation();
-
-	return std::max(0, iFreeUpkeep);
+	return std::max(0, getBaseFreeUnitUpkeepMilitary() + getModifiedIntValue(getTotalPopulation(), getFreeUnitUpkeepMilitaryPopPercent()));
 }
 
 int CvPlayer::getCivilianUnitUpkeepMod() const
@@ -18071,7 +18029,7 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, const CvPlot*
 		return -1;
 	}
 
-	int iCost = (getProductionNeeded(eUnit) * GC.getUnitInfo(eUnit).getAdvancedStartCost()) / 100;
+	int iCost = getProductionNeeded(eUnit) * GC.getUnitInfo(eUnit).getAdvancedStartCost() / 100;
 	if (iCost < 0)
 	{
 		return -1;
@@ -18083,100 +18041,90 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, const CvPlot*
 		{
 			return -1;
 		}
+		return iCost;
 	}
-	else
-	{
-		CvCity* pCity = NULL;
 
+	if (pPlot->getOwner() != getID())
+	{
+		return -1;
+	}
+	CvCity* pCity = pPlot->getPlotCity();
+
+	if (NULL == pCity)
+	{
 		if (0 == GC.getDefineINT("ADVANCED_START_ALLOW_UNITS_OUTSIDE_CITIES"))
 		{
-			pCity = pPlot->getPlotCity();
+			return -1;
+		}
+		iCost = getModifiedIntValue(iCost, pCity->getProductionModifier(eUnit));
+	}
+	else iCost = getModifiedIntValue(iCost, getProductionModifier(eUnit));
 
-			if (NULL == pCity || pCity->getOwner() != getID())
+
+	if (bAdd)
+	{
+		int iMaxUnitsPerCity = GC.getDefineINT("ADVANCED_START_MAX_UNITS_PER_CITY");
+		if (iMaxUnitsPerCity >= 0)
+		{
+			if (GC.getUnitInfo(eUnit).isMilitarySupport() && getNumMilitaryUnits() >= iMaxUnitsPerCity * getNumCities())
 			{
 				return -1;
 			}
+		}
 
-			iCost *= 100;
-			iCost /= std::max(1, 100 + pCity->getProductionModifier(eUnit));
+		if (NULL != pCity)
+		{
+			if (!pCity->canTrain(eUnit))
+			{
+				return -1;
+			}
 		}
 		else
 		{
-			if (pPlot->getOwner() != getID())
+			if (!pPlot->canTrain(eUnit, false, false))
 			{
 				return -1;
 			}
 
-			iCost *= 100;
-			iCost /= std::max(1, 100 + getProductionModifier(eUnit));
-		}
-
-
-		if (bAdd)
-		{
-			int iMaxUnitsPerCity = GC.getDefineINT("ADVANCED_START_MAX_UNITS_PER_CITY");
-			if (iMaxUnitsPerCity >= 0)
+			if (pPlot->isImpassable() && !GC.getUnitInfo(eUnit).isCanMoveImpassable())
 			{
-				if (GC.getUnitInfo(eUnit).isMilitarySupport() && getNumMilitaryUnits() >= iMaxUnitsPerCity * getNumCities())
-				{
-					return -1;
-				}
+				return -1;
 			}
 
-			if (NULL != pCity)
+			if (pPlot->getFeatureType() != NO_FEATURE)
 			{
-				if (!pCity->canTrain(eUnit))
+				for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumFeatureImpassableTypes(); iI++)
 				{
-					return -1;
+					if ((FeatureTypes)GC.getUnitInfo(eUnit).getFeatureImpassableType(iI) == pPlot->getFeatureType())
+					{
+						TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getFeaturePassableTech(pPlot->getFeatureType());
+						if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
+						{
+							return -1;
+						}
+					}
 				}
 			}
 			else
 			{
-				if (!pPlot->canTrain(eUnit, false, false))
+				for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumTerrainImpassableTypes(); iI++)
 				{
-					return -1;
-				}
-
-				if (pPlot->isImpassable() && !GC.getUnitInfo(eUnit).isCanMoveImpassable())
-				{
-					return -1;
-				}
-
-				if (pPlot->getFeatureType() != NO_FEATURE)
-				{
-					for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumFeatureImpassableTypes(); iI++)
+					if ((TerrainTypes)GC.getUnitInfo(eUnit).getTerrainImpassableType(iI) == pPlot->getTerrainType())
 					{
-						if ((FeatureTypes)GC.getUnitInfo(eUnit).getFeatureImpassableType(iI) == pPlot->getFeatureType())
+						TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getTerrainPassableTech(pPlot->getTerrainType());
+						if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
 						{
-							TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getFeaturePassableTech(pPlot->getFeatureType());
-							if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
-							{
-								return -1;
-							}
-						}
-					}
-				}
-				else
-				{
-					for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumTerrainImpassableTypes(); iI++)
-					{
-						if ((TerrainTypes)GC.getUnitInfo(eUnit).getTerrainImpassableType(iI) == pPlot->getTerrainType())
-						{
-							TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getTerrainPassableTech(pPlot->getTerrainType());
-							if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
-							{
-								return -1;
-							}
+							return -1;
 						}
 					}
 				}
 			}
 		}
-		// Must be this unit at plot in order to remove
-		else if (algo::none_of(pPlot->units(), CvUnit::fn::getUnitType() == eUnit))
-		{
-			return -1;
-		}
+	}
+	// Must be this unit at plot in order to remove
+	else if (algo::none_of(pPlot->units(), CvUnit::fn::getUnitType() == eUnit))
+	{
+		return -1;
 	}
 	return iCost;
 }
@@ -18392,9 +18340,7 @@ int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, c
 		{
 			return -1;
 		}
-
-		iCost *= 100;
-		iCost /= std::max(1, 100 + pCity->getProductionModifier(eBuilding));
+		iCost = getModifiedIntValue(iCost, pCity->getProductionModifier(eBuilding));
 
 		if (!bAdd)
 		{
@@ -25313,12 +25259,10 @@ int CvPlayer::getNewCityProductionValue() const
 	{
 		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iJ);
 
-		if (GC.getBuildingInfo(eBuilding).getFreeStartEra() != NO_ERA)
+		if (GC.getBuildingInfo(eBuilding).getFreeStartEra() != NO_ERA
+		&& GC.getGame().getStartEra() >= GC.getBuildingInfo(eBuilding).getFreeStartEra())
 		{
-			if (GC.getGame().getStartEra() >= GC.getBuildingInfo(eBuilding).getFreeStartEra())
-			{
-				iValue += (100 * getProductionNeeded(eBuilding)) / std::max(1, 100 + getProductionModifier(eBuilding));
-			}
+			iValue += 100 * getProductionNeeded(eBuilding) / std::max(1, 100 + getProductionModifier(eBuilding));
 		}
 	}
 
