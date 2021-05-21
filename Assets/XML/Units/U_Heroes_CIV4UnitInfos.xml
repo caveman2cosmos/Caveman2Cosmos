@@ -15502,6 +15502,7 @@
 				</FreePromotion>
 			</FreePromotions>
 			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
+			<NotGameOption>GAMEOPTION_NO_EVENTS</NotGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LEONIDAS</Type>
