@@ -17,13 +17,13 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
-			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<FreePromotion>PROMOTION_AN</FreePromotion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>132</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iDefense>15</iDefense>
@@ -81,6 +81,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -90,7 +91,7 @@
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>132</iCost>
 			<iConquestProb>0</iConquestProb>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -162,6 +163,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -169,7 +171,7 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>132</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
@@ -235,6 +237,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -242,7 +245,7 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>132</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
@@ -301,6 +304,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -308,7 +312,7 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>132</iCost>
 			<iConquestProb>0</iConquestProb>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -367,9 +371,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>132</iCost>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>
@@ -406,9 +411,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>132</iCost>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>
@@ -447,7 +453,8 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+			<iCost>132</iCost>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>
@@ -484,9 +491,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>132</iCost>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>

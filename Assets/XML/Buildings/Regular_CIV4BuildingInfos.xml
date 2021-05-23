@@ -22308,10 +22308,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+			<PrereqTech>TECH_REINCARNATION</PrereqTech>
 			<Bonus>BONUS_COW</Bonus>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
-			<iCost>184</iCost>
+			<iCost>200</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -27820,13 +27820,13 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+			<PrereqTech>TECH_REINCARNATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_ELEPHANTS</Bonus>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
-			<iCost>184</iCost>
+			<iCost>200</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -68365,7 +68365,7 @@
 				<Bonus>BONUS_MARBLE</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<iCost>160</iCost>
+			<iCost>132</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -70806,7 +70806,7 @@
 				<BuildingType>BUILDING_JADE_MERCHANT_IMPORTER</BuildingType>
 				<BuildingType>BUILDING_JADE_MERCHANT_VICINITY</BuildingType>
 			</PrereqOrBuildings>
-			<iCost>139</iCost>
+			<iCost>132</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -78425,12 +78425,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_SCULPTURES</Bonus>
-			</PrereqBonuses>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
-			<iCost>160</iCost>
+			<PrereqTech>TECH_MUMMIFICATION</PrereqTech>
+			<iCost>139</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -86043,7 +86041,7 @@
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
 			</AndDependencyTypes>
-			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MASONRY</PrereqTech>
 			</TechTypes>
@@ -88716,7 +88714,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SACRIFICIAL_ALTAR</BuildingType>
 			</ReplacementBuildings>
-			<iCost>139</iCost>
+			<iCost>132</iCost>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iHappiness>1</iHappiness>
 			<SpecialistCounts>

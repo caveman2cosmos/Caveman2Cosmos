@@ -3306,7 +3306,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -3324,7 +3324,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4508,7 +4508,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>1104</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5851,7 +5851,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7379,7 +7379,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7769,7 +7769,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -7781,7 +7781,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>708</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9421,7 +9421,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13048,7 +13048,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>

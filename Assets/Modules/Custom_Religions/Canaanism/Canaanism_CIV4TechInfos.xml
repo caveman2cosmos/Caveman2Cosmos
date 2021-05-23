@@ -27,7 +27,7 @@
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+				<PrereqTech>TECH_MAGIC</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_CANAANISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_CANAANISM</Sound>

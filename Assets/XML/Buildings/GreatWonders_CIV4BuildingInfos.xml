@@ -10687,7 +10687,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+				<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
@@ -11264,10 +11264,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ARTEMIS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ARTEMIS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+			<PrereqTech>TECH_DIPLOMACY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<iCost>1104</iCost>
+			<iCost>1404</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
