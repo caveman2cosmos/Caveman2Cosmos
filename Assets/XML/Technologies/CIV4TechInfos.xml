@@ -8246,8 +8246,8 @@ Current techs which are not in this file:-
 			<Description>TXT_KEY_TECH_ASTROLOGY</Description>
 			<Civilopedia>TXT_KEY_TECH_ASTROLOGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>614</iCost>
-			<Era>C2C_ERA_CLASSICAL</Era>
+			<iCost>309</iCost>
+			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>16</iAsset>
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>

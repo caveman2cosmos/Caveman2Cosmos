@@ -12,9 +12,6 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech></PrereqTech>
-			</AndPreReqs>
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<iGridX>23</iGridX>

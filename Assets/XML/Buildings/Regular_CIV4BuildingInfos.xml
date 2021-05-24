@@ -5281,7 +5281,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
-			<iCost>243</iCost>
+			<iCost>192</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -32320,7 +32320,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PSYCHIC</BuildingType>
 			</ReplacementBuildings>
-			<iCost>243</iCost>
+			<iCost>192</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -86052,7 +86052,7 @@
 				<Bonus>BONUS_MARBLE</Bonus>
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
-			<iCost>160</iCost>
+			<iCost>146</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
