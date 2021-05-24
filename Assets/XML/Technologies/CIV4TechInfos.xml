@@ -6093,9 +6093,6 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_DIVINATION</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_HERITAGE</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MATRIARCHY_QUOTE</Quote>
 			<Sound>AS2D_TECH_MATRIARCHY</Sound>
 			<SoundMP>AS2D_TECH_MATRIARCHY</SoundMP>
@@ -6139,9 +6136,6 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_DIVINATION</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_STARGAZING</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_RESURRECTION_QUOTE</Quote>
 			<Sound>AS2D_TECH_RESURRECTION</Sound>
 			<SoundMP>AS2D_TECH_RESURRECTION</SoundMP>
@@ -6455,8 +6449,6 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_RESURRECTION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
-				<PrereqTech>TECH_FOLK_DANCE</PrereqTech>
 				<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MAGIC_QUOTE</Quote>
@@ -6756,7 +6748,6 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_DUALISM</PrereqTech>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_KARMA_QUOTE</Quote>
 			<Sound>AS2D_TECH_KARMA</Sound>
@@ -8893,7 +8884,6 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FOLK_DANCE</PrereqTech>
 				<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DRAMA_QUOTE</Quote>
@@ -9123,9 +9113,6 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_DRAMA</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MUSICAL_NOTATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_MUSICAL_NOTATION</Sound>
 			<SoundMP>AS2D_TECH_MP_MUSIC</SoundMP>
