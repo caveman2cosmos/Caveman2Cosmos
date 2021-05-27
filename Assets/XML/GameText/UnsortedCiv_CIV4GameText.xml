@@ -2736,11 +2736,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_JIVARO_SHORT_DESC</Tag>
-		<English>Head Hunters</English>
-		<French>Jivaros</French>
-		<Italian>Cacciatori di teste</Italian>
-		<Polish>Jiwaro</Polish>
-		<Russian>Õèâàðî</Russian>
+		<English>Jivaro</English>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HEKE_1</Tag>

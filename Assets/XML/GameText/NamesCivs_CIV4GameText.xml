@@ -652,12 +652,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_DENMARK_DESC</Tag>
-		<English>Denmark</English>
-		<French>Danemark</French>
-		<German>Reich der Dänen</German>
-		<Spanish>Imperio Danés</Spanish>
-		<Polish>Dania</Polish>
-		<Russian>Äàíèÿ</Russian>
+		<English>Danish Empire</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_DENMARK_PEDIA</Tag>
@@ -1785,7 +1780,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NATIVE_AMERICA_DESC</Tag>
-		<English>Sioux</English>
+		<English>Sioux Empire</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NATIVE_AMERICA_SHORT_DESC</Tag>
@@ -2450,29 +2445,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_UNITED_STATES_DESC</Tag>
-		<English>
-			<Text>United States</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
-		<French>
-			<Text>Empire américain</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Reich der Amerikaner</German>
-		<Italian>
-			<Text>Stati Uniti</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Imperio Estadounidense</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Stany Zjednoczone</Polish>
-		<Russian>ÑØÀ</Russian>
+		<English>American Empire</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_UNITED_STATES_SHORT_DESC</Tag>
