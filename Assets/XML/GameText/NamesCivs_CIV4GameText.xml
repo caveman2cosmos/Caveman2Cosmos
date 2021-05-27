@@ -9,10 +9,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_BEAST_DESC</Tag>
-		<English>Fauna Beasts</English>
-		<French>Faune Bestiale</French>
-		<German>Bestien</German>
-		<Russian>Íåéòðàëüíàÿ ôàóíà</Russian>
+		<English>NPC Beasts</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_BEAST_DESC_SHORT</Tag>
@@ -37,10 +34,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREDATOR_DESC</Tag>
-		<English>Fauna Predators</English>
-		<French>Faune prédatrice</French>
-		<German>Raubtiere</German>
-		<Russian>Õèùíàÿ ôàóíà</Russian>
+		<English>NPC Predators</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREDATOR_DESC_SHORT</Tag>
@@ -65,10 +59,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREY_DESC</Tag>
-		<English>Fauna Creatures</English>
-		<French>Faune - Créatures</French>
-		<German>Kreaturen</German>
-		<Russian>Ìèðíàÿ ôàóíà</Russian>
+		<English>NPC Creatures</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREY_DESC_SHORT</Tag>
@@ -394,25 +385,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BARBARIAN_DESC</Tag>
-		<English>Barbarian State</English>
-		<French>
-			<Text>Empire barbare</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Reich der Barbaren</German>
-		<Italian>
-			<Text>Territorio barbaro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Territorio de los bárbaros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Terytorium barbarzyńskie</Polish>
-		<Russian>Âàðâàðñêèå ïëåìåíà</Russian>
+		<English>NPC Barbarian</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BARBARIAN_PEDIA</Tag>
@@ -1325,7 +1298,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_INSECTOID_DESC</Tag>
-		<English>Insectoids</English>
+		<English>NPC Insectoids</English>
 		<French>Insectoïdes</French>
 		<German>Insektoiden</German>
 		<Russian>Èíñåêòîèäû</Russian>
@@ -1865,7 +1838,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_DESC</Tag>
-		<English>Neanderthals</English>
+		<English>NPC Neanderthals</English>
 		<French>Néanderthaliens</French>
 		<German>Reich der Neandertaler</German>
 		<Russian>Íåàíäåðòàëüöû</Russian>
