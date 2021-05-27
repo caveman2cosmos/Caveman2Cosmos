@@ -1785,47 +1785,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NATIVE_AMERICA_DESC</Tag>
-		<English>Native American Empire</English>
-		<French>
-			<Text>Empire amérindien</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Reich der Indianer</German>
-		<Italian>
-			<Text>Impero dei Nativi americani</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Imperio Sioux</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Imperium Siuksów</Polish>
-		<Russian>Ñîþç ïëåìåí</Russian>
+		<English>Sioux</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NATIVE_AMERICA_SHORT_DESC</Tag>
-		<English>Native America</English>
-		<French>
-			<Text>Amérindiens</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Indianerreich</German>
-		<Italian>
-			<Text>America indiana</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Nación sioux</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Siuksów</Polish>
-		<Russian>Èíäåéöû</Russian>
+		<English>Sioux</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NETHERLANDS_ADJECTIVE</Tag>
