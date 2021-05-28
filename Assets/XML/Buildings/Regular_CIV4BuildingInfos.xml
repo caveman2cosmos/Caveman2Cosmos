@@ -26482,7 +26482,7 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<iCost>178</iCost>
+			<iCost>356</iCost>
 			<CommerceAttacks>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -87762,7 +87762,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_DUNGEON</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>89</iCost>
+			<iCost>178</iCost>
 			<CommerceModifiers>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>-5</iCommerce>
@@ -87799,7 +87799,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>44</iCost>
+			<iCost>89</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -87836,7 +87836,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>44</iCost>
+			<iCost>89</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -87873,7 +87873,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>44</iCost>
+			<iCost>89</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -87916,7 +87916,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>44</iCost>
+			<iCost>89</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -87953,7 +87953,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>44</iCost>
+			<iCost>89</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -87990,7 +87990,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>44</iCost>
+			<iCost>89</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -88027,7 +88027,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>44</iCost>
+			<iCost>89</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
