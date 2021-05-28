@@ -10366,7 +10366,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUPREME_COURT</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>150</iCost>
+			<iCost>1685</iCost>
 			<FreeBuilding>BUILDING_SMOKING_PROHIBITION</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
@@ -10402,7 +10402,7 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
-			<iCost>150</iCost>
+			<iCost>1345</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -10489,7 +10489,7 @@
 				<BuildingType>BUILDING_DEPARTMENT_ENERGY</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>150</iCost>
+			<iCost>1345</iCost>
 			<FreeBuilding>BUILDING_CLEANAIR_ACT_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
@@ -10531,7 +10531,7 @@
 				<BuildingType>BUILDING_DEPARTMENT_WATER</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>150</iCost>
+			<iCost>1345</iCost>
 			<FreeBuilding>BUILDING_CLEANWATER_ACT_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
@@ -10729,7 +10729,7 @@
 				<BuildingType>BUILDING_NATIONAL_FIRE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>150</iCost>
+			<iCost>1080</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -10787,7 +10787,7 @@
 				<BuildingType>BUILDING_GCA</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>150</iCost>
+			<iCost>1475</iCost>
 			<FreeBuilding>BUILDING_TIRE_RECYCLE_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>

@@ -67892,7 +67892,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>710</iCost>
+			<iCost>1030</iCost>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
