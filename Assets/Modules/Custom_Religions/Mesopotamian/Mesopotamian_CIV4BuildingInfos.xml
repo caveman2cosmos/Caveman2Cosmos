@@ -91,7 +91,7 @@
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>132</iCost>
+			<iCost>160</iCost>
 			<iConquestProb>0</iConquestProb>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -171,7 +171,7 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>132</iCost>
+			<iCost>160</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
@@ -245,7 +245,7 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>132</iCost>
+			<iCost>160</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
@@ -312,7 +312,7 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>132</iCost>
+			<iCost>160</iCost>
 			<iConquestProb>0</iConquestProb>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -374,7 +374,7 @@
 			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>132</iCost>
+			<iCost>160</iCost>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>
@@ -414,7 +414,7 @@
 			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>132</iCost>
+			<iCost>160</iCost>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>
@@ -454,7 +454,7 @@
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
-			<iCost>132</iCost>
+			<iCost>160</iCost>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>
@@ -494,7 +494,7 @@
 			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>132</iCost>
+			<iCost>160</iCost>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>

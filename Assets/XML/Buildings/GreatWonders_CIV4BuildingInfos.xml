@@ -1946,7 +1946,7 @@
 			</TechTypes>
 			<ObsoleteTech>TECH_DIVINE_RIGHT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_CHICHEN_ITZA_2</ObsoletesToBuilding>
-			<iCost>792</iCost>
+			<iCost>876</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>

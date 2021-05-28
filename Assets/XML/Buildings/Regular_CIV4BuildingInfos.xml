@@ -68365,7 +68365,7 @@
 				<Bonus>BONUS_MARBLE</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<iCost>132</iCost>
+			<iCost>160</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -78428,7 +78428,7 @@
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<PrereqTech>TECH_MUMMIFICATION</PrereqTech>
-			<iCost>139</iCost>
+			<iCost>160</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
