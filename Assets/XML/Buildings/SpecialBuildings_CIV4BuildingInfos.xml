@@ -10446,7 +10446,7 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
-			<iCost>150</iCost>
+			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_CARPOOL_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
@@ -10574,7 +10574,7 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
-			<iCost>150</iCost>
+			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_SHUTTLE_SERVICE_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
@@ -10632,7 +10632,7 @@
 				<BuildingType>BUILDING_NATIONAL_FIRE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>150</iCost>
+			<iCost>800</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -10682,7 +10682,7 @@
 				<BuildingType>BUILDING_POLICE_ACADEMY</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>150</iCost>
+			<iCost>800</iCost>
 			<FreeBuilding>BUILDING_GOOD_NEIGHBORHOOD_WATCH</FreeBuilding>
 			<iAsset>1</iAsset>
 			<iAIWeight>1</iAIWeight>
@@ -10830,7 +10830,7 @@
 				<BuildingType>BUILDING_POLICE_ACADEMY</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>150</iCost>
+			<iCost>870</iCost>
 			<FreeBuilding>BUILDING_GOOD_YOUTH_CURFEW</FreeBuilding>
 			<iAsset>1</iAsset>
 			<iAIWeight>1</iAIWeight>

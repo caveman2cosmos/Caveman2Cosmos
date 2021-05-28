@@ -8599,7 +8599,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>4260</iCost>
+			<iCost>4440</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
