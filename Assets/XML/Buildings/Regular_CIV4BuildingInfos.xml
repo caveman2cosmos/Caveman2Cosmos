@@ -6545,7 +6545,7 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
-			<iCost>140</iCost>
+			<iCost>280</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
