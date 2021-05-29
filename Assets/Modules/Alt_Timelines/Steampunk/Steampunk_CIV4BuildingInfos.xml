@@ -66,7 +66,7 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iAsset>5</iAsset>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -120,7 +120,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PANOPTICON_PRISON</Type>
@@ -165,7 +165,7 @@
 					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MADSCIENTIST_CASTLE</Type>
@@ -243,7 +243,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COAL_DYNAMO</Type>
@@ -292,7 +292,7 @@
 					<iAmountPerTurn>30</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WOOD_DYNAMO</Type>
@@ -341,7 +341,7 @@
 					<iAmountPerTurn>15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEAT_DYNAMO</Type>
@@ -390,7 +390,7 @@
 					<iAmountPerTurn>25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEMO_ACADEMY</Type>
@@ -447,7 +447,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDIAN_EMBASSY</Type>

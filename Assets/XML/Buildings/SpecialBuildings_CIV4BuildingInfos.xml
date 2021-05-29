@@ -458,7 +458,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_1_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
@@ -515,7 +515,7 @@
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 				<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -567,7 +567,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -619,7 +619,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -671,7 +671,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -723,7 +723,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -775,7 +775,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -827,7 +827,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -883,7 +883,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -939,7 +939,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -995,7 +995,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -1047,7 +1047,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -1103,7 +1103,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -1155,7 +1155,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -1211,7 +1211,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -1264,7 +1264,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -1320,7 +1320,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -1372,7 +1372,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -1428,7 +1428,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -1480,7 +1480,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -1537,7 +1537,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -1591,7 +1591,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -1646,7 +1646,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
@@ -8310,7 +8310,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_MDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -8345,7 +8345,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -8387,7 +8387,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -8423,7 +8423,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqInCityBuildings>
@@ -8637,7 +8637,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_MDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
@@ -8672,7 +8672,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_MDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -8807,7 +8807,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_MDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqBonuses>
@@ -8876,7 +8876,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_MDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -8951,7 +8951,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -8995,7 +8995,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -9031,7 +9031,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -9066,7 +9066,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqInCityBuildings>
@@ -9102,7 +9102,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -9181,7 +9181,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqInCityBuildings>
@@ -9354,7 +9354,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_MDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
@@ -9419,7 +9419,7 @@
 			<Description>TXT_KEY_BUILDING_LONGHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LONGHOUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -9571,7 +9571,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_MDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqBonuses>
@@ -9610,7 +9610,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqInCityBuildings>
@@ -9647,7 +9647,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -9732,7 +9732,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -9799,7 +9799,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_MDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
@@ -9841,7 +9841,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_MDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
@@ -10855,7 +10855,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_ANTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>4</iPrereqPopulation>
+			<iPrereqPopulation>2</iPrereqPopulation>
 			<PrereqTech>TECH_COOKING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHappiness>-1</iHappiness>
@@ -10874,7 +10874,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_APHIDS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>12</iPrereqPopulation>
+			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_VEGETABLES</VicinityBonus>
@@ -10904,7 +10904,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_BEDBUGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>10</iPrereqPopulation>
+			<iPrereqPopulation>5</iPrereqPopulation>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHappiness>-1</iHappiness>
@@ -10928,7 +10928,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_COCKROACHES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHappiness>-1</iHappiness>
@@ -10958,7 +10958,7 @@
 			<Description>TXT_KEY_BUILDING_PEST_CROWS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iMaxLatitude>70</iMaxLatitude>
-			<iPrereqPopulation>12</iPrereqPopulation>
+			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CARCASS</VicinityBonus>
@@ -10990,7 +10990,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_FLEAS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>4</iPrereqPopulation>
+			<iPrereqPopulation>2</iPrereqPopulation>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DOG</VicinityBonus>
@@ -11018,7 +11018,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_FLIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>4</iPrereqPopulation>
+			<iPrereqPopulation>2</iPrereqPopulation>
 			<PrereqTech>TECH_COOKING</PrereqTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RAW_MEAT</VicinityBonus>
@@ -11051,7 +11051,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_GOPHERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>14</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
@@ -11076,7 +11076,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_LICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>8</iPrereqPopulation>
+			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHappiness>-1</iHappiness>
@@ -11100,7 +11100,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_LOCUST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>8</iPrereqPopulation>
+			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
@@ -11123,7 +11123,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_MOSQUITOES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -11165,7 +11165,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_MOTHS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>12</iPrereqPopulation>
+			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqTech>TECH_TEXTILE_LOOM</PrereqTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CLOTH</VicinityBonus>
@@ -11194,7 +11194,7 @@
 			<Description>TXT_KEY_BUILDING_PEST_PIGEONS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iMaxLatitude>70</iMaxLatitude>
-			<iPrereqPopulation>14</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
@@ -11221,7 +11221,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_RACCOONS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>14</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHappiness>-1</iHappiness>
@@ -11249,7 +11249,7 @@
 			<Description>TXT_KEY_BUILDING_PEST_RATS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iMaxLatitude>80</iMaxLatitude>
-			<iPrereqPopulation>8</iPrereqPopulation>
+			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
@@ -11296,7 +11296,7 @@
 			<Description>TXT_KEY_BUILDING_PEST_SEAGULLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iMaxLatitude>80</iMaxLatitude>
-			<iPrereqPopulation>14</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<bWater>1</bWater>
 			<PrereqVicinityBonuses>
@@ -11327,7 +11327,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_SLUGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>10</iPrereqPopulation>
+			<iPrereqPopulation>5</iPrereqPopulation>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_VEGETABLES</VicinityBonus>
@@ -11354,7 +11354,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_TERMITES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>10</iPrereqPopulation>
+			<iPrereqPopulation>5</iPrereqPopulation>
 			<PrereqTech>TECH_COOKING</PrereqTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WOOD</VicinityBonus>
@@ -11379,7 +11379,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_TICKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DOG</VicinityBonus>
@@ -11407,7 +11407,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEST_WASPS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
-			<iPrereqPopulation>12</iPrereqPopulation>
+			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqTech>TECH_APICULTURE</PrereqTech>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
@@ -12401,7 +12401,7 @@
 			<Description>TXT_KEY_BUILDING_SCOTLAND_YARD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCOTLAND_YARD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<CommerceChanges>
 				<iCommerce>-25</iCommerce>
@@ -12456,7 +12456,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ACADEMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<CommerceModifiers>
@@ -13393,7 +13393,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_STANDARDIZATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<GlobalCommerceModifiers>
 				<iCommerce>2</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -13690,7 +13690,7 @@
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_LOANSHARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LOANSHARK_PEDIA</Civilopedia>
 			<PrereqTech>TECH_USURY</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
