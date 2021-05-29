@@ -14820,7 +14820,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_FIST</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -14861,10 +14860,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_FEATHER</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_EGGS</Bonus>
 			</PrereqBonuses>
@@ -14908,7 +14904,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_SHADOWS</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -14957,10 +14952,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_CENTAUR</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>
 				<Bonus>BONUS_ELEPHANTS</Bonus>
@@ -15007,7 +14999,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WARRIOR</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -15050,10 +15041,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WAVES</ArtDefineTag>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -15094,7 +15082,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WIND</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -15135,7 +15122,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WILD</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -15176,7 +15162,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_LEECH</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -15217,7 +15202,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WOLF</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_DOG</Bonus>
 			</PrereqBonuses>
