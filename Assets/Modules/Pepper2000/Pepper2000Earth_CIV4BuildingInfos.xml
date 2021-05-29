@@ -8624,6 +8624,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTAL_JEWELLER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CRYSTAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CRYSTAL_JEWELLER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRYSTAL_JEWELLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -8632,7 +8633,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CRYSTALPUNK</PrereqTech>
 			<iCost>5455</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -8647,6 +8647,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENERGIZED_CRYSTAL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CRYSTAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ENERGIZED_CRYSTAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENERGIZED_CRYSTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -8655,7 +8656,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CRYSTALPUNK</PrereqTech>
 			<iCost>5455</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -10888,6 +10888,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CENTER_FOR_STUDY_CIVILIZATION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CENTER_FOR_STUDY_CIVILIZATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_STUDY_CIVILIZATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -10896,7 +10897,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_SPACEPUNK</PrereqTech>
 			<iCost>8755</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10941,6 +10941,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PHILOSOPHERS_CASTLE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CRYSTAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PHILOSOPHERS_CASTLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PHILOSOPHERS_CASTLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -10949,7 +10950,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CRYSTALPUNK</PrereqTech>
 			<iCost>5455</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10972,7 +10972,7 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CRYSTAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CRYSTALPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRYSTALPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -10982,7 +10982,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CRYSTALPUNK</PrereqTech>
 			<iCost>32730</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10997,7 +10996,7 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SPACEPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPACEPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -11007,7 +11006,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_SPACEPUNK</PrereqTech>
 			<iCost>52530</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11022,7 +11020,7 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STAR</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STARPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STARPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -11032,7 +11030,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_STARPUNK</PrereqTech>
 			<iCost>110130</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12605,6 +12602,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEO_PYRAMID</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STAR</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_NEO_PYRAMID</Description>
@@ -12616,7 +12614,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_STARPUNK</PrereqTech>
 			<iCost>110130</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -21102,6 +21099,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTARCTIC_SKYSCRAPER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CRYSTAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANTARCTIC_SKYSCRAPER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANTARCTIC_SKYSCRAPER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -21110,7 +21108,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CRYSTALPUNK</PrereqTech>
 			<iCost>5455</iCost>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -23437,6 +23434,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STARGATE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STAR</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STARGATE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STARGATE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -23445,7 +23443,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_STARPUNK</PrereqTech>
 			<iCost>18355</iCost>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
