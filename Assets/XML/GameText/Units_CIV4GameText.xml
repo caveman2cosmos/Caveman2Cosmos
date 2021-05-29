@@ -44,11 +44,6 @@
 		<English>Current city production has been hurried</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALUNIT_UNITED_NATIONS</Tag>
-		<English>United Nations unit</English>
-		<French>Agent des Nations unies</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_007</Tag>
 		<English>Top Secret Agent</English>
 		<French>Agent Top Secret</French>

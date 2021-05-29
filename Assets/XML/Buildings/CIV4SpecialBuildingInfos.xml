@@ -2,13 +2,9 @@
 <Civ4SpecialBuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<SpecialBuildingInfos>
 		<SpecialBuildingInfo>
+			<!-- @SAVEBREAK Remove this on savebreak -->
 			<Type>SPECIALBUILDING_BOMB_SHELTER</Type>
-			<Description>TXT_KEY_SPECIALBUILDING_BOMB_SHELTER</Description>
-			<ObsoleteTech>NONE</ObsoleteTech>
-			<TechPrereq>NONE</TechPrereq>
-			<TechPrereqAnyone>TECH_FISSION</TechPrereqAnyone>
-			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BombShelters.dds</Button>
+			<bValid>0</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_TEMPLE</Type>
