@@ -6796,7 +6796,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>444</iCost>
+			<iCost>296</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>
 				<iYield>2</iYield>
