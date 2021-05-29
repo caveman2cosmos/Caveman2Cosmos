@@ -10,7 +10,6 @@
 			<Sound>AS2D_TECH_BAHAI</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Bahai.dds</Button>
-			<iCost>5187</iCost>
 			<bGlobal>1</bGlobal>
 			<Era>C2C_ERA_INDUSTRIAL</Era>
 			<OrPreReqs>
@@ -19,6 +18,7 @@
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<iGridX>62</iGridX>
+			<iCost>62</iCost>
 			<iGridY>13</iGridY>
 			<Flavors>
 				<Flavor>

@@ -166,6 +166,7 @@ class Pedia:
 		szCatSpecialBuildings	= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BUILDINGS_SPECIAL", ())
 		szCatRelBuildings		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS", ())
 		szCatAniBuildings		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_ANIMALISTIC_BUILDINGS", ())
+		szCatSpaceBuildings		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SPACE_BUILDINGS", ())
 		szCatBuildingTree		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BUILDING_TREE", ())
 		szCatProjects			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_PROJECT", ())
 		szCatSpecialists		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SPECIALIST", ())
@@ -236,7 +237,7 @@ class Pedia:
 		PEDIA_SUB_CONCEPTS 		= [szCatConcepts, szCatConceptsNew, szCatStrategy, szCatShortcuts, szCatHints, szCatEras]
 		PEDIA_SUB_UNITS_2		= [szCatWorldUnits, szCatCulturalUnits, szCatAnimals, szCatSpreadUnits, szCatMiscUnits]
 		PEDIA_SUB_PROMOTIONS	= [szCatPromotions, szCatBuildUp, szCatStatus, szCatEquipment, szCatAffliction]
-		PEDIA_SUB_BUILDINGS_2	= [szCatNationalWonders, szCatGreatWonders, szCatGroupWonders, szCatSpecialBuildings, szCatC2CCutures, szCatRelBuildings, szCatAniBuildings]
+		PEDIA_SUB_BUILDINGS_2	= [szCatNationalWonders, szCatGreatWonders, szCatGroupWonders, szCatSpecialBuildings, szCatC2CCutures, szCatRelBuildings, szCatAniBuildings, szCatSpaceBuildings]
 		PEDIA_SUB_BONUSES		= [szCatBonusesMap, szCatBonusesMan, szCatBonusesCult]
 		PEDIA_SUB_LANDSCAPE		= [szCatTerrains, szCatFeatures, szCatNaturalWonders, szCatImprovements, szCatRoutes]
 		PEDIA_SUB_LEADERSHIP	= [szCatCivs, szCatLeaders, szCatTraits, szCatCivics, szCatReligions]
@@ -327,6 +328,7 @@ class Pedia:
 			szCatSpecialBuildings	: self.placeSpeBuildings,
 			szCatRelBuildings		: self.placeRelBuildings,
 			szCatAniBuildings		: self.placeAniBuildings,
+			szCatSpaceBuildings		: self.placeSpaceBuildings,
 			szCatProjects			: self.placeProjects,
 			szCatSpecialists		: self.placeSpecialists,
 			szCatTerrains			: self.placeTerrains,
@@ -767,12 +769,20 @@ class Pedia:
 
 	def getSortedUnitList(self, bWorld, bAnimals, bCultural, bSpread, bMisc):
 		aList = []
+		aListDict = {}
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
 			CvBonusInfo = GC.getBonusInfo(CvUnitInfo.getPrereqAndBonus())
+			
+			TechReq = CvUnitInfo.getPrereqAndTech()
+			try:
+				iTechLoc = GC.getTechInfo(TechReq).getGridX()
+			except:
+				iTechLoc = 0
+			
 			if CvBonusInfo:
 				iBonusClassType = CvBonusInfo.getBonusClassType()
 			else:
@@ -814,9 +824,13 @@ class Pedia:
 				if szSubCat == aSubCatList[iEra]:
 					bValid = True
 			if bValid:
-				aList.append((CvUnitInfo.getDescription(), i))
+				aListDict[(iTechLoc, i)] = (CvUnitInfo.getDescription(), i)
+				aList.append((iTechLoc, i))				
 				bValid = False
 		aList.sort()
+		for i in xrange(len(aList)):
+			key = aList[i]
+			aList[i] = aListDict[key]
 		return aList
 
 	# Promotion Lists
@@ -913,14 +927,27 @@ class Pedia:
 		print "Category: Animalistic Buildings"
 		self.aList = self.getBuildingList(6)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, GC.getBuildingInfo)
+		
+	def placeSpaceBuildings(self):
+		print "Category: Space Buildings"
+		self.aList = self.getBuildingList(7)
+		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, GC.getBuildingInfo)
 
 	def getBuildingList(self, iBuildingType):
 		aList = []
+		aListDict = {}
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
+			TechReq = CvBuildingInfo.getPrereqAndTech()
+
+			try:
+				iTechLoc = GC.getTechInfo(TechReq).getGridX()
+			except:
+				iTechLoc = 0
+
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
 			if iBuildingType != -1:
@@ -934,9 +961,13 @@ class Pedia:
 					if szSubCat == aSubCatList[iEra]:
 						bValid = True
 			if bValid:
-				aList.append((CvBuildingInfo.getDescription(), i))
+				aListDict[(iTechLoc, i)] = (CvBuildingInfo.getDescription(), i)
+				aList.append((iTechLoc, i))
 				bValid = False
 		aList.sort()
+		for i in xrange(len(aList)):
+			key = aList[i]
+			aList[i] = aListDict[key]
 		return aList
 
 	def getBuildingType(self, CvBuildingInfo, iBuilding):
@@ -945,6 +976,8 @@ class Pedia:
 		if iSpecialBuilding != -1:
 			if iSpecialBuilding == GC.getInfoTypeForString("SPECIALBUILDING_C2C_CULTURE"):
 				return 4
+			if iSpecialBuilding == GC.getInfoTypeForString("SPECIALBUILDING_SPACE"):
+				return 7
 			if GC.getSpecialBuildingInfo(iSpecialBuilding).getType().find("_GROUP_") != -1:
 				return 2
 		if szStrat.find("Myth -", 0, 6) + szStrat.find("Myth (B) -", 0, 10) + szStrat.find("Myth (L) -", 0, 10) + szStrat.find("Myth Effect -", 0, 13) + szStrat.find("Story -", 0, 7) + szStrat.find("Story (B) -", 0, 11) + szStrat.find("Stories -", 0, 9) + szStrat.find("Stories (B) -", 0, 13) + szStrat.find("Stories Effect -", 0, 16) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -11:

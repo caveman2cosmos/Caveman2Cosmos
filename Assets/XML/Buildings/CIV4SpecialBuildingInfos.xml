@@ -187,5 +187,14 @@
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
 		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
+			<Type>SPECIALBUILDING_SPACE</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_SPACE</Description>
+			<ObsoleteTech>NONE</ObsoleteTech>
+			<TechPrereq>NONE</TechPrereq>
+			<TechPrereqAnyone>NONE</TechPrereqAnyone>
+			<bValid>1</bValid>
+			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+		</SpecialBuildingInfo>
 	</SpecialBuildingInfos>
 </Civ4SpecialBuildingInfos>

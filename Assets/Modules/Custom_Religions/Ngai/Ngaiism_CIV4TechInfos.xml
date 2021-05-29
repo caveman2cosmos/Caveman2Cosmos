@@ -7,7 +7,6 @@
 			<Civilopedia>TXT_KEY_TECH_NGAIISM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
-			<iCost>242</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_DUALISM</PrereqTech>
@@ -18,6 +17,7 @@
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<iGridX>28</iGridX>
+			<iCost>28</iCost>
 			<iGridY>13</iGridY>
 			<Flavors>
 				<Flavor>

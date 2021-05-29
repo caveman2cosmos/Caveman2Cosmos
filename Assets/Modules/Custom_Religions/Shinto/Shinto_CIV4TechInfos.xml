@@ -8,7 +8,6 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<bGlobal>1</bGlobal>
-			<iCost>242</iCost>
 			<OrPreReqs>
 				<PrereqTech>TECH_LEISURE</PrereqTech>
 			</OrPreReqs>
@@ -18,6 +17,7 @@
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<iGridX>28</iGridX>
+			<iCost>28</iCost>
 			<iGridY>3</iGridY>
 			<Flavors>
 				<Flavor>

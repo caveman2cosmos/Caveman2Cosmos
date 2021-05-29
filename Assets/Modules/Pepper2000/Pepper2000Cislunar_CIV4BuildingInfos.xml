@@ -3,6 +3,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_STATION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_STATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -49,6 +50,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_STORM_SHELTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_STORM_SHELTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_STORM_SHELTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -74,6 +76,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_TELESCOPE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_TELESCOPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_TELESCOPE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -92,6 +95,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_AGRICULTURAL_LAB</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_AGRICULTURAL_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_AGRICULTURAL_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -142,6 +146,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_MATERIALS_LAB</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_MATERIALS_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_MATERIALS_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -188,6 +193,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SATELLITE_FACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SATELLITE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SATELLITE_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -209,6 +215,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SUPPLY_BASE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SUPPLY_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SUPPLY_BASE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -260,6 +267,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_EMP</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_EMP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_EMP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -283,6 +291,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_GOV</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_GOV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_GOV_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -358,6 +367,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_VR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_VR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_VR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -389,6 +399,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_JUNK</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SPACE_JUNK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPACE_JUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -409,6 +420,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -433,6 +445,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -466,6 +479,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_DRYDOCK</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -505,6 +519,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_LABS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -529,6 +544,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_FACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -566,6 +582,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZERO_G_SPORTS_ARENA</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -584,6 +601,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEROG_MEDICAL_LAB</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -602,6 +620,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MICROSATELLITE_CONSTELLATION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -624,6 +643,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DOCKING_BAY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DOCKING_BAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DOCKING_BAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -662,6 +682,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AEROGEL_SHIELDING</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_AEROGEL_SHIELDING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AEROGEL_SHIELDING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -690,6 +711,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INFLATABLE_HABITAT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INFLATABLE_HABITAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INFLATABLE_HABITAT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -708,6 +730,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SOLAR_ARRAY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SOLAR_ARRAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -727,6 +750,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ION_CANNON</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ION_CANNON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ION_CANNON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -749,6 +773,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TURBOLIFT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TURBOLIFT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TURBOLIFT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -771,6 +796,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_REFUELING_STATION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_REFUELING_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_REFUELING_STATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -804,6 +830,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ASTEROID_MINE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ASTEROID_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ASTEROID_MINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -828,28 +855,10 @@
 				<iYield>1</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-			</MapCategoryTypes>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>25</iYield>
-			</YieldChanges>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -878,6 +887,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SHIELDING</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SHIELDING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SHIELDING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -898,6 +908,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_CLOAKING</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_CLOAKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_CLOAKING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -934,6 +945,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -962,6 +974,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_HOTEL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_HOTEL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1002,6 +1015,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIG_BANG_OBSERVATORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BIG_BANG_OBSERVATORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIG_BANG_OBSERVATORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1025,6 +1039,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_BIOFACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_BIOFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_BIOFACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1060,6 +1075,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SPACEPORT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SPACEPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SPACEPORT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1092,6 +1108,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ADVANCED_COOLING_SYSTEM</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ADVANCED_COOLING_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ADVANCED_COOLING_SYSTEM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1114,6 +1131,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ORGANIC_COLONY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ORGANIC_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ORGANIC_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1154,6 +1172,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_ACCELERATOR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1175,6 +1194,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SOCIAL_ENGINEERING</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SOCIAL_ENGINEERING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SOCIAL_ENGINEERING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1216,6 +1236,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NANOSATELLITE_CONSTELLATION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iCost>1500</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -1239,6 +1260,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRYONIC_BODY_STORAGE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CRYONIC_BODY_STORAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRYONIC_BODY_STORAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1268,6 +1290,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_BIOLOGICAL_CORE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_BIOLOGICAL_CORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_BIOLOGICAL_CORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1295,6 +1318,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ONEILL_CYLINDER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ONEILL_CYLINDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ONEILL_CYLINDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1321,6 +1345,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_DEFENSES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_DEFENSES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_DEFENSES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1346,6 +1371,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SECURITY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SECURITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SECURITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1377,6 +1403,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_QUANTUM_THRUSTERS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_QUANTUM_THRUSTERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_QUANTUM_THRUSTERS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1402,6 +1429,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NUCLEAR_DAMPER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NUCLEAR_DAMPER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NUCLEAR_DAMPER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1424,6 +1452,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DYSON_HARROP_SATELLITE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DYSON_HARROP_SATELLITE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DYSON_HARROP_SATELLITE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1447,6 +1476,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_CLAYTRONIC</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_CLAYTRONIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_CLAYTRONIC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1470,6 +1500,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRASH_ATOMIZER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRASH_ATOMIZER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRASH_ATOMIZER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1495,6 +1526,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WORMHOLE_TO_EARTH</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WORMHOLE_TO_EARTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORMHOLE_TO_EARTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1520,6 +1552,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_BLACK_HOLE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1542,6 +1575,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DILATON_GENERATOR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DILATON_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DILATON_GENERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1568,6 +1602,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GIGAVERSE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GIGAVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIGAVERSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1599,6 +1634,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAMORPHIC_CISLUNAR_STATION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_METAMORPHIC_CISLUNAR_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAMORPHIC_CISLUNAR_STATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1624,6 +1660,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOOD_REPLICATOR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FOOD_REPLICATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOOD_REPLICATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1644,6 +1681,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANET_CLOUD</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PLANET_CLOUD</Description>
@@ -1687,6 +1725,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_PRISON</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>1056</iCost>
@@ -1713,6 +1752,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENERGY_BEAM_NETWORK</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK</Description>
@@ -1742,6 +1782,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ANTIMATTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER</Description>
@@ -1767,6 +1808,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SOLAR_SATELLITES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES</Description>
@@ -1801,6 +1843,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_MINING_COMPLEX</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX</Description>
@@ -1840,6 +1883,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_L5_COLONY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_L5_COLONY</Description>
@@ -1877,6 +1921,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</Description>
@@ -1909,6 +1954,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELYSIUM</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ELYSIUM</Description>
@@ -1953,6 +1999,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEUS_CANNON</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ZEUS_CANNON</Description>

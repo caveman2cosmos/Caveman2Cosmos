@@ -7,7 +7,6 @@
 			<Civilopedia>TXT_KEY_TECH_YORUBA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
-			<iCost>187</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_CEREMONY</PrereqTech>
@@ -18,6 +17,7 @@
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<iGridX>26</iGridX>
+			<iCost>26</iCost>
 			<iGridY>15</iGridY>
 			<Flavors>
 				<Flavor>

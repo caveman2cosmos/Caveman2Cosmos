@@ -3,6 +3,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_COLONY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -41,6 +42,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_CITY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -90,6 +92,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_METRO</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_METRO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_METRO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -134,6 +137,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_MEGACITY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_MEGACITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_MEGACITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -171,6 +175,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_ARCOLOGY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_ARCOLOGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -209,6 +214,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_COMMUNICATION_BEACON</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_COMMUNICATION_BEACON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_COMMUNICATION_BEACON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -233,6 +239,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_EXPANDED_HABITAT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_EXPANDED_HABITAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_EXPANDED_HABITAT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -257,6 +264,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SOLAR_ARRAY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SOLAR_ARRAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -279,6 +287,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_HYDROPONICS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_HYDROPONICS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_HYDROPONICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -308,6 +317,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_RADIATION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_RADIATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_RADIATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -339,6 +349,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_FACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -376,6 +387,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_MINE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_MINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -402,6 +414,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_BIOFACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_BIOFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_BIOFACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -460,6 +473,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_HYDROPONICS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_HYDROPONICS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_HYDROPONICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -503,6 +517,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_HITECH</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_HITECH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_HITECH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -537,6 +552,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_MAGLEV</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_MAGLEV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_MAGLEV_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -559,31 +575,8 @@
 			<Bonus>BONUS_MARTIAN_MANUFACTURED_GOODS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARS_CYCLER</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_MARS_CYCLER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARS_CYCLER_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARS_CYCLER</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_MARS_CYCLER</MovieDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
-			<iCost>10110</iCost>
-			<CommerceChanges>
-				<iCommerce>600</iCommerce>
-			</CommerceChanges>
-			<FreeBuilding>BUILDING_MARS_CYCLER_EFFECT</FreeBuilding>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
-			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_MARS_CYCLER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_CYCLER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_CYCLER_EFFECT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -608,6 +601,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_CAVES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_CAVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_CAVES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -633,6 +627,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_FUSION_PLANT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_FUSION_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_FUSION_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -674,6 +669,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_WATER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_WATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_WATER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -697,6 +693,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_GEOLOGY_LAB</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_GEOLOGY_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_GEOLOGY_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -723,6 +720,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ASTEROID_MINE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ASTEROID_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ASTEROID_MINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -743,6 +741,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_LFTR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_LFTR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_LFTR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -768,6 +767,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_AREOTHERMAL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_AREOTHERMAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_AREOTHERMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -792,6 +792,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_TRADE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_TRADE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_TRADE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -814,6 +815,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_SEA</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_SEA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_SEA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -868,6 +870,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_MONUMENT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_MONUMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_MONUMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -910,6 +913,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -946,6 +950,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_DEUTERIUM_EXPORTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_EXPORTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -969,6 +974,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_DNT_IMPORTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_DNT_IMPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_DNT_IMPORTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1005,6 +1011,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_DEUTERIUM_MINE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_MINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1026,6 +1033,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ENTERTAINMENT_COMPLEX</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ENTERTAINMENT_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ENTERTAINMENT_COMPLEX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1050,6 +1058,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_GOVERNMENT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_GOVERNMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_GOVERNMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1078,6 +1087,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1114,6 +1124,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_RARE_MINERAL_EXPORTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_RARE_MINERAL_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_RARE_MINERAL_EXPORTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1137,6 +1148,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SIMULATED_WORLD</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_SIMULATED_WORLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SIMULATED_WORLD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1168,6 +1180,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SKYSCRAPER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_SKYSCRAPER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SKYSCRAPER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1196,6 +1209,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ALGAE_FARM</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ALGAE_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ALGAE_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1223,6 +1237,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_BROADBAND</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_BROADBAND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_BROADBAND_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1254,6 +1269,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ZOO</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ZOO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ZOO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1280,6 +1296,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SKYHOOK</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_SKYHOOK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SKYHOOK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1316,6 +1333,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PHOBOS_INDUSTRIAL_COMPLEX</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PHOBOS_INDUSTRIAL_COMPLEX</Description>
@@ -1341,6 +1359,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SPACEPORT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_SPACEPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SPACEPORT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1361,6 +1380,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_VERTICAL_FARM</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_VERTICAL_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_VERTICAL_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1404,6 +1424,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_FROST_CANNON</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_FROST_CANNON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_FROST_CANNON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1430,6 +1451,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_HOTEL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_HOTEL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1456,6 +1478,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_GARDEN</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_GARDEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_GARDEN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1490,6 +1513,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_ECO</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_ECO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_ECO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1521,6 +1545,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ALBEDO_REDUCTION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ALBEDO_REDUCTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ALBEDO_REDUCTION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1542,6 +1567,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_AMMONIA_BOMBARDMENT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_AMMONIA_BOMBARDMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_AMMONIA_BOMBARDMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1565,6 +1591,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_CFC_GENERATOR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_CFC_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_CFC_GENERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1594,6 +1621,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_CO2_SUBLIMATION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_CO2_SUBLIMATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_CO2_SUBLIMATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1614,6 +1642,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_NOMAD</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_NOMAD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_NOMAD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1639,6 +1668,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ECOPOIESIS_REACTOR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ECOPOIESIS_REACTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ECOPOIESIS_REACTOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1677,6 +1707,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_MAGNETIC_FIELD_GENERATOR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_MAGNETIC_FIELD_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_MAGNETIC_FIELD_GENERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1707,6 +1738,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_MASS_DRIVER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_MASS_DRIVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_MASS_DRIVER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1735,6 +1767,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1756,6 +1789,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_FARM</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1784,6 +1818,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_CLAYTRONIC_CITY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_CLAYTRONIC_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_CLAYTRONIC_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1806,6 +1841,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_STARPORT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_STARPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_STARPORT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1833,6 +1869,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_URBAN_MARS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_URBAN_MARS</Description>
@@ -1879,6 +1916,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_TERRA</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MARS_TERRA</Description>
@@ -1939,6 +1977,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_TERRA_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARS_TERRA_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_TERRA_EFFECT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1972,6 +2011,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RING_OF_MARS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_RING_OF_MARS</Description>
@@ -2015,6 +2055,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_DEFENSE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MARTIAN_DEFENSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_DEFENSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2041,6 +2082,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERAVERSE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TERAVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERAVERSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>

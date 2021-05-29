@@ -7,10 +7,10 @@
 			<Civilopedia>TXT_KEY_TECH_CANAANISM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
-			<iCost>309</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iGridX>30</iGridX>
+			<iCost>30</iCost>
 			<iGridY>17</iGridY>
 			<Flavors>
 				<Flavor>

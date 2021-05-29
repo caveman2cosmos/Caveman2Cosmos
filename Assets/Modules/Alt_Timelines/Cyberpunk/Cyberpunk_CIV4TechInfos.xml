@@ -12,7 +12,6 @@
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/cyberpunk.dds</Button>
 			<!-- Main properties -->
-			<iCost>67710</iCost>
 			<Era>C2C_ERA_TRANSHUMAN</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_SIMULATED_REALITY</PrereqTech>
@@ -21,6 +20,7 @@
 			<iAsset>50</iAsset>
 			<iPower>10</iPower>
 			<iGridX>113</iGridX>
+			<iCost>113</iCost>
 			<iGridY>7</iGridY>
 			<bTrade>1</bTrade>
 			<iAITradeModifier>10</iAITradeModifier>

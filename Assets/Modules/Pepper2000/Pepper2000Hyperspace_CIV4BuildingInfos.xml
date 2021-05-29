@@ -3,6 +3,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_HYPESPACE_PORTAL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPESPACE_PORTAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPESPACE_PORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -23,6 +24,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RESIDENTIAL_PORTAL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RESIDENTIAL_PORTAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESIDENTIAL_PORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -45,6 +47,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TESSERACT_HOMES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TESSERACT_HOMES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TESSERACT_HOMES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -70,6 +73,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ESCHER_CITY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ESCHER_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ESCHER_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -99,6 +103,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERCITY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERCITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERCITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -124,6 +129,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_11_DIMENSIONAL_CITY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_11_DIMENSIONAL_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_11_DIMENSIONAL_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -146,6 +152,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOROIDAL_COLONY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TOROIDAL_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOROIDAL_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -168,6 +175,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REAL_PROJECTIVE_SPACE_COLONY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_REAL_PROJECTIVE_SPACE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_REAL_PROJECTIVE_SPACE_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -192,6 +200,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -213,6 +222,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -240,6 +250,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_IMPORTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_IMPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_IMPORTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -259,6 +270,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_COMMERCIAL_CENTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_COMMERCIAL_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_COMMERCIAL_CENTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -286,6 +298,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_EXPORTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_EXPORTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -314,6 +327,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_TOURISM_AGENCY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_TOURISM_AGENCY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_TOURISM_AGENCY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -334,6 +348,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_5D_ARTIFICIAL_GRAVITY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_5D_ARTIFICIAL_GRAVITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_5D_ARTIFICIAL_GRAVITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -358,6 +373,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_WAREHOUSE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_WAREHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_WAREHOUSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -380,6 +396,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_POWER_PLANT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_POWER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_POWER_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -402,6 +419,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RESOURCE_RIFT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RESOURCE_RIFT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_RIFT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -423,6 +441,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERFACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERFACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -468,6 +487,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TESSERACT_ASSEMBLER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TESSERACT_ASSEMBLER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TESSERACT_ASSEMBLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -494,6 +514,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PERSONAL_HYPERCRAFT_FACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PERSONAL_HYPERCRAFT_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PERSONAL_HYPERCRAFT_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -518,6 +539,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_11_DIMENSIONAL_FACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_11_DIMENSIONAL_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_11_DIMENSIONAL_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -542,6 +564,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FORMAL_CONSTRUCTION_CENTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FORMAL_CONSTRUCTION_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FORMAL_CONSTRUCTION_CENTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -567,6 +590,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERPLANET</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERPLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERPLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -607,6 +631,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NON_CAUSAL_ENGINEERING_FIRM</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NON_CAUSAL_ENGINEERING_FIRM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NON_CAUSAL_ENGINEERING_FIRM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -633,6 +658,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INFLATON_FIELD</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INFLATON_FIELD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INFLATON_FIELD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -662,6 +688,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OPEN_FRW_UNIVERSE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OPEN_FRW_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OPEN_FRW_UNIVERSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -697,6 +724,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SIMULATED_UNIVERSE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SIMULATED_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SIMULATED_UNIVERSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -766,6 +794,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POINCARE_DODECAHEDRAL_SPACE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_POINCARE_DODECAHEDRAL_SPACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_POINCARE_DODECAHEDRAL_SPACE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -786,6 +815,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PICARD_HORN</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PICARD_HORN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PICARD_HORN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -807,6 +837,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EKPYROTIC_UNIVERSE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_EKPYROTIC_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EKPYROTIC_UNIVERSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -830,6 +861,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSFINITE_STRUCTURES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSFINITE_STRUCTURES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSFINITE_STRUCTURES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -851,6 +883,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LANDSCAPE_MULTIVERSE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LANDSCAPE_MULTIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDSCAPE_MULTIVERSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -874,6 +907,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_YOTTAVERSE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_YOTTAVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_YOTTAVERSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -903,6 +937,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_CONSTRUCTION_CENTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_CONSTRUCTION_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_CONSTRUCTION_CENTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -927,6 +962,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUANTUM_GRAPH_MANIFESTATION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_QUANTUM_GRAPH_MANIFESTATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_QUANTUM_GRAPH_MANIFESTATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -949,6 +985,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_MEDIA_CENTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_MEDIA_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_MEDIA_CENTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -967,6 +1004,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_RESEARCH_PROBE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_RESEARCH_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_RESEARCH_PROBE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -987,6 +1025,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GENESIS_COLONY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GENESIS_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GENESIS_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1012,6 +1051,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SIMULATED_CIVILIZATION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SIMULATED_CIVILIZATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SIMULATED_CIVILIZATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1034,6 +1074,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_GOVERNING_COUNCIL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERSPACE_GOVERNING_COUNCIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_GOVERNING_COUNCIL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1059,6 +1100,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALTERNATE_HISTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ALTERNATE_HISTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALTERNATE_HISTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1083,6 +1125,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCESTOR_RESURRECTION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANCESTOR_RESURRECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANCESTOR_RESURRECTION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1108,6 +1151,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GAME_OF_LIFE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GAME_OF_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GAME_OF_LIFE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1130,6 +1174,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEW_BIG_BANG</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NEW_BIG_BANG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEW_BIG_BANG_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1159,6 +1204,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSFINITE_SUPERCOMPUTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSFINITE_SUPERCOMPUTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSFINITE_SUPERCOMPUTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1187,6 +1233,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONSCIOUS_UNIVERSE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CONSCIOUS_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONSCIOUS_UNIVERSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1209,6 +1256,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERCOMPUTRONIUM_STRUCTURES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERCOMPUTRONIUM_STRUCTURES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERCOMPUTRONIUM_STRUCTURES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1231,6 +1279,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAVERSE_EDUCATION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_METAVERSE_EDUCATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAVERSE_EDUCATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1267,6 +1316,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAVERSE_ENTERTAINMENT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_METAVERSE_ENTERTAINMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAVERSE_ENTERTAINMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1296,6 +1346,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAVERSE_VR_CENTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_METAVERSE_VR_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAVERSE_VR_CENTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1330,6 +1381,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENERGY_CANNON</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ENERGY_CANNON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENERGY_CANNON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1352,6 +1404,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIME_TRAP</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TIME_TRAP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIME_TRAP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1375,6 +1428,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEP_FIELD</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SEP_FIELD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SEP_FIELD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1390,6 +1444,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERURANION</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HYPERURANION</Description>
@@ -1422,6 +1477,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FAIRYLAND</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_FAIRYLAND</Description>
@@ -1454,6 +1510,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_AC</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_COSMIC_AC</Description>
@@ -1511,6 +1568,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_UNIVERSE</Description>

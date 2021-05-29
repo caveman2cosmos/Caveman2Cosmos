@@ -12,7 +12,6 @@
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/retrospace.dds</Button>
 			<!-- Main properties -->
-			<iCost>13181</iCost>
 			<Era>C2C_ERA_ATOMIC</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_NUCLEAR_POWER</PrereqTech>
@@ -25,6 +24,7 @@
 			<iAsset>48</iAsset>
 			<iPower>10</iPower>
 			<iGridX>80</iGridX>
+			<iCost>80</iCost>
 			<iGridY>13</iGridY>
 			<bTrade>1</bTrade>
 			<iAITradeModifier>10</iAITradeModifier>

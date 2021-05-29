@@ -6,7 +6,6 @@
 			<Description>TXT_KEY_TECH_ANDEANISM</Description>
 			<Civilopedia>TXT_KEY_TECH_ANDEANISM_PEDIA</Civilopedia>
 			<bGlobal>1</bGlobal>
-			<iCost>242</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_DIVINATION</PrereqTech>
@@ -17,6 +16,7 @@
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<iGridX>28</iGridX>
+			<iCost>28</iCost>
 			<iGridY>17</iGridY>
 			<Flavors>
 				<Flavor>
