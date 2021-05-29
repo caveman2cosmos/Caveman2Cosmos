@@ -12766,10 +12766,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_HARVARD_UNIVERSITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -12874,10 +12871,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_BOLOGNA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -12982,10 +12976,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_SALAMANCA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -13091,9 +13082,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_COIMBRA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANATOMY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_EDUCATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -13201,9 +13189,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_BARCELONA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANATOMY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_EDUCATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -13311,9 +13296,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MONTPELLIER_UNIVERSITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANATOMY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_EDUCATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -13422,9 +13404,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SORBONNE_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_EDUCATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -13528,9 +13507,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_BASEL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_EDUCATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -13634,9 +13610,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_JAGIELLONIAN_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_EDUCATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -13739,10 +13712,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_MURCIA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_MURCIA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_BANKING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_BANKING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -13845,10 +13815,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_OXFORD_UNIVERSITY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_OXFORD_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_BANKING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_BANKING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -13956,10 +13923,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_EDINBURGH</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_EDINBURGH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_BANKING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_BANKING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -14062,7 +14026,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_PADUA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_PADUA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -14138,7 +14101,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_CAMBRIDGE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_CAMBRIDGE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -14214,7 +14176,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HEIDELBERG_UNIVERSITY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HEIDELBERG_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>

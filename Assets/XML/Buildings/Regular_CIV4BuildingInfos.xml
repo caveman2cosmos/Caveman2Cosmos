@@ -424,6 +424,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_ADVENTURE_FRANCHISE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_FRANCHISE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_FRANCHISE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -434,9 +435,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_ADVENTURE</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -1345,6 +1343,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALUMINUM_CO_R_AND_D</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ALUMINUM_CO_R_AND_D</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_6_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -1355,9 +1354,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ROCKETRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_6</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -8523,6 +8519,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_RESTAURANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -8533,9 +8530,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_MCDOWELLS</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -13013,6 +13007,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_BULLSEYE_STORE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_STORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_STORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -13023,9 +13018,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_BULLSEYE</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -13204,6 +13196,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_BURGERWORLD_RESTAURANT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_RESTAURANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_RESTAURANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -13214,9 +13207,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_BURGERWORLD</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -16402,6 +16392,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CEREAL_MILLS_FACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CEREAL_MILLS_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_1_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -16412,9 +16403,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_1</PrereqCorporation>
 			<PrereqInCityBuildings>
@@ -18972,15 +18960,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIVILIZED_JEWELERS_STORE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CIVILIZED_JEWELERS_STORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_7_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTION_PICTURES</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_7</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -22507,6 +22493,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CREATIVE_CONSTRUCTIONS_OFFICE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CREATIVE_CONSTRUCTIONS_OFFICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_4_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -22517,9 +22504,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMBUSTION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_4</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -26783,6 +26767,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_EWTRADE_STORE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_EWTRADE_STORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EWTRADE_STORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -26793,9 +26778,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_EWTRADE</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -27955,6 +27937,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_EMPCLOTH_STORE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_STORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_STORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -27965,9 +27948,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_EMPCLOTH</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -30031,6 +30011,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_FASHION_STORE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_FASHION_STORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_FASHION_STORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -30041,9 +30022,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_FASHION</PrereqCorporation>
 			<iCost>950</iCost>
@@ -47714,6 +47692,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_MALLWART_STORE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MALLWART_STORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MALLWART_STORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -47724,9 +47703,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_MALLWART</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -51123,6 +51099,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_MILEHIGH_FRANCHISE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_FRANCHISE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_FRANCHISE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -51133,9 +51110,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_MILEHIGH</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -52046,6 +52020,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINING_INC_SURVEY_OFFICE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MINING_INC_SURVEY_OFFICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_5_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -52056,9 +52031,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_5</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -52906,6 +52878,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_MOBBY_STORE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MOBBY_STORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOBBY_STORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -52916,9 +52889,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_MOBBY</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -53732,6 +53702,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_MOONBEAN_SHOP</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_SHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_SHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -53742,9 +53713,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_MOONBEAN</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -65819,6 +65787,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_RED_THEATER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_RED_THEATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_RED_THEATER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -65829,9 +65798,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTION_PICTURES</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_RED</PrereqCorporation>
 			<PrereqInCityBuildings>
@@ -68471,6 +68437,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_SAFARI_GUIDE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_SAFARI_GUIDE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_SAFARI_GUIDE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -68481,9 +68448,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_SAFARI</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -71549,6 +71513,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SID_SUSHI_RESTAURANT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SID_SUSHI_RESTAURANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_2_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -71560,7 +71525,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
 				<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -74300,6 +74264,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STANDARD_ETHANOL_DISTILLERY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STANDARD_ETHANOL_DISTILLERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_3_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -74310,9 +74275,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_3</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -81558,6 +81520,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_ULTSOLDIER_TRAINER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_TRAINER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -81568,9 +81531,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LOGISTICS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_ULTSOLDIER</PrereqCorporation>
 			<PrereqOrBuildings>
@@ -85420,6 +85380,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_WONKA_SHOP</Type>
+			<SpecialBuildingType>SPECIALBUILDING_CORPORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_WONKA_SHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_WONKA_SHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -85430,9 +85391,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_WONKA</PrereqCorporation>
 			<PrereqInCityBuildings>
@@ -87270,13 +87228,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_MINING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_METAL_MYTH_EFFECT</FreeBuilding>
-			<iCost>132</iCost>
+			<iCost>30</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -87309,6 +87264,15 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_METAL_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_COPPER_NEAR</BuildingType>
+				<BuildingType>BUILDING_AUTOBUILD_GOLD_NEAR</BuildingType>
+				<BuildingType>BUILDING_AUTOBUILD_SILVER_NEAR</BuildingType>
+				<BuildingType>BUILDING_AUTOBUILD_TIN_NEAR</BuildingType>
+				<BuildingType>BUILDING_AUTOBUILD_IRON_NEAR</BuildingType>
+				<BuildingType>BUILDING_AUTOBUILD_LEAD_NEAR</BuildingType>
+				<BuildingType>BUILDING_AUTOBUILD_PLATINUM_NEAR</BuildingType>
+			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

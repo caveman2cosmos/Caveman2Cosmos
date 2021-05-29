@@ -97,15 +97,6 @@
 			<Button>Art/Interface/Buttons/Buildings/btn_fusionsreactor.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
-			<Type>SPECIALBUILDING_CORPORATION_HQ</Type>
-			<Description>TXT_KEY_SPECIALBUILDING_CORPORATION_HQ</Description>
-			<ObsoleteTech>NONE</ObsoleteTech>
-			<TechPrereq>NONE</TechPrereq>
-			<TechPrereqAnyone>NONE</TechPrereqAnyone>
-			<bValid>1</bValid>
-			<Button>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,9</Button>
-		</SpecialBuildingInfo>
-		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_WORLD_BANK</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_WORLD_BANK</Description>
 			<ObsoleteTech>NONE</ObsoleteTech>
@@ -124,10 +115,46 @@
 			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
+			<Type>SPECIALBUILDING_CORPORATION_HQ</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_CORPORATION_HQ</Description>
+			<ObsoleteTech>NONE</ObsoleteTech>
+			<TechPrereq>TECH_CORPORATION</TechPrereq>
+			<TechPrereqAnyone>NONE</TechPrereqAnyone>
+			<bValid>1</bValid>
+			<Button>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,9</Button>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
+			<Type>SPECIALBUILDING_CORPORATION</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_CORPORATION</Description>
+			<ObsoleteTech>NONE</ObsoleteTech>
+			<TechPrereq>TECH_CORPORATION</TechPrereq>
+			<TechPrereqAnyone>NONE</TechPrereqAnyone>
+			<bValid>1</bValid>
+			<Button>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,9</Button>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
+			<Type>SPECIALBUILDING_GUILD</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_GUILD</Description>
+			<ObsoleteTech>NONE</ObsoleteTech>
+			<TechPrereq>TECH_GUILDS</TechPrereq>
+			<TechPrereqAnyone>NONE</TechPrereqAnyone>
+			<bValid>1</bValid>
+			<Button>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,9</Button>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
+			<Type>SPECIALBUILDING_ACHIEVEMENT</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_ACHIEVEMENT</Description>
+			<ObsoleteTech>NONE</ObsoleteTech>
+			<TechPrereq>TECH_WRITING</TechPrereq>
+			<TechPrereqAnyone>NONE</TechPrereqAnyone>
+			<bValid>1</bValid>
+			<Button>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,9</Button>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</Description>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<TechPrereq>NONE</TechPrereq>
+			<TechPrereq>TECH_EDUCATION</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bValid>1</bValid>

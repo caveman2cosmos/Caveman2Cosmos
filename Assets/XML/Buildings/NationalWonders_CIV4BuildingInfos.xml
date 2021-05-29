@@ -1728,16 +1728,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_APOTHECARY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_APOTHECARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -1786,6 +1784,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_ARTIST</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1793,9 +1792,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_ARTIST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_GUILDS</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -1838,16 +1834,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_BAKER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_BAKER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -1890,16 +1884,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_BLACKSMITH</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_BLACKSMITH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SMITHING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -1948,13 +1940,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_BUTCHER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_BUTCHER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2003,16 +1995,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_CARPENTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_CARPENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SURVEYING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_SURVEYING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2055,6 +2045,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_CLERKS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2062,9 +2053,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_CLERKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PAPER</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_GUILDS</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2113,6 +2101,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_CRAFTS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2120,9 +2109,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_CRAFTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_GUILDS</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2171,16 +2157,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_DRAPERS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_DRAPERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_HERALDRY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2235,6 +2219,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_EQUESTRIAN</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2242,9 +2227,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_EQUESTRIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_GUILDS</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2293,16 +2275,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_FISHMONGER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_FISHMONGER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_RUDDER</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_RUDDER</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2345,16 +2325,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_GLASSBLOWERS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_GLASSBLOWERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_STAINED_GLASS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_STAINED_GLASS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2397,6 +2375,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_GOLDSMITH</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2404,9 +2383,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_GOLDSMITH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_BANKING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_GUILDS</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2449,16 +2425,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_GROCERS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_GROCERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2507,16 +2481,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_LUMBER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_LUMBER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SURVEYING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_SURVEYING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2559,16 +2531,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_MASON</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_MASON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2617,16 +2587,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_MERCERS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_MERCERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_USURY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_USURY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2675,16 +2643,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_POTTERS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_POTTERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_STAINED_GLASS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_STAINED_GLASS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2727,16 +2693,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_SERVANTS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_SERVANTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2780,16 +2744,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_TAILOR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_TAILOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_HERALDRY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2832,16 +2794,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_VICTUALLERS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GUILD_VICTUALLERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
