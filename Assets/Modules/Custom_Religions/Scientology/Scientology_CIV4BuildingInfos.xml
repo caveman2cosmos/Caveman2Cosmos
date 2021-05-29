@@ -91,7 +91,7 @@
 			<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
 			<PrereqReligion>RELIGION_SCIENTOLOGY</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>1230</iCost>
+			<iCost>1180</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
