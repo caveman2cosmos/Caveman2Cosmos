@@ -80,105 +80,105 @@
 			<Description>TXT_KEY_SPECIALBUILDING_CORPORATION_HQ</Description>
 			<TechPrereq>TECH_CORPORATION</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/Interface/Buttons/Great_Wonders/corpo_cereal_mills.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_CORPORATION</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_CORPORATION</Description>
 			<TechPrereq>TECH_CORPORATION</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,9</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_GUILD</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_GUILD</Description>
 			<TechPrereq>TECH_GUILDS</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/Interface/Buttons/National_Wonders/apothecary_guild.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_ACHIEVEMENT</Description>
 			<TechPrereq>TECH_WRITING</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/Interface/Buttons/National_Wonders/achievment_cultural.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_PUNK_MEGAFAUNA</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_PUNK_MEGAFAUNA</Description>
 			<TechPrereq>TECH_MEGAFAUNA_DOMESTICATION</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/Interface/Buttons/TechTree/megafaunadomestication.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_PUNK_CLOCK</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_PUNK_CLOCK</Description>
 			<TechPrereq>TECH_CLOCKPUNK</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/Interface/Buttons/TechTree/clockpunk.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_PUNK_STEAM</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_PUNK_STEAM</Description>
 			<TechPrereq>TECH_STEAMPUNK</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/Interface/Buttons/TechTree/steampunk.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_PUNK_DIESEL</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_PUNK_DIESEL</Description>
 			<TechPrereq>TECH_DIESELPUNK</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/Interface/Buttons/TechTree/dieselpunk.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_PUNK_ATOM</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_PUNK_ATOM</Description>
 			<TechPrereq>TECH_ATOMPUNK</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/Interface/Buttons/TechTree/retrospace.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_PUNK_NANO</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_PUNK_NANO</Description>
 			<TechPrereq>TECH_NANOPUNK</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/Interface/Buttons/TechTree/nanopunk.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_PUNK_BIO</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_PUNK_BIO</Description>
 			<TechPrereq>TECH_BIOPUNK</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/Interface/Buttons/TechTree/biopunk.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_PUNK_CYBER</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_PUNK_CYBER</Description>
 			<TechPrereq>TECH_CYBERPUNK</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/Interface/Buttons/TechTree/cyberpunk.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_PUNK_CRYSTAL</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_PUNK_CRYSTAL</Description>
 			<TechPrereq>TECH_CRYSTALPUNK</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/interface/buttons/TechTree/crystalpunk.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_PUNK_SPACE</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_PUNK_SPACE</Description>
 			<TechPrereq>TECH_SPACEPUNK</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/interface/buttons/TechTree/spacepunk.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_PUNK_STAR</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_PUNK_STAR</Description>
 			<TechPrereq>TECH_STARPUNK</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>Art/interface/buttons/TechTree/starpunk.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</Type>
@@ -186,7 +186,7 @@
 			<TechPrereq>TECH_EDUCATION</TechPrereq>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+			<Button>,Art/Interface/Buttons/TechTree/Education.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,2,6</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_GROUP_ANCIENT_WAYS</Type>
