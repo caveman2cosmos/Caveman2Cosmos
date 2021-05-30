@@ -10,7 +10,6 @@
 		<BuildInfo>
 			<Type>BUILD_MACHU_PICCHU</Type>
 			<Description>TXT_KEY_BUILD_MACHU_PICCHU</Description>
-			<Help/>
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
 			<iTime>400</iTime>
 			<iCost>0</iCost>
