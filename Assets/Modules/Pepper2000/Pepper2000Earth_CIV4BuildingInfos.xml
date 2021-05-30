@@ -1707,7 +1707,7 @@
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<Bonus>BONUS_COPPER_WARES</Bonus>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1738,7 +1738,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<FreeBonus>BONUS_WOODWIND_INSTRUMENTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -2563,7 +2563,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>14</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2635,7 +2635,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BLOCKCHAIN_AUTHENTICATION</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>15</iPrereqPopulation>
+			<iPrereqPopulation>8</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2696,7 +2696,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BLOCKCHAIN_AUTHENTICATION</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>15</iPrereqPopulation>
+			<iPrereqPopulation>8</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2721,7 +2721,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BLOCKCHAIN_AUTHENTICATION</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>15</iPrereqPopulation>
+			<iPrereqPopulation>8</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2796,7 +2796,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2824,7 +2824,7 @@
 				<BuildingType>BUILDING_EFFECT_GPS</BuildingType>
 				<BuildingType>BUILDING_AUTOMATED_PARKING_GARAGE</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2860,7 +2860,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLASMA_ARC_RECYCLING</Type>
@@ -2905,7 +2905,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2950,7 +2950,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>10</iPrereqPopulation>
+			<iPrereqPopulation>5</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2983,7 +2983,7 @@
 				<BuildingType>BUILDING_DIGITAL_ADVERTISING_FIRM</BuildingType>
 				<BuildingType>BUILDING_MEGACORPORATE_HEADQUARTERS</BuildingType>
 			</PrereqOrBuildings>
-			<iPrereqPopulation>20</iPrereqPopulation>
+			<iPrereqPopulation>10</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ADVANCED_COPPERWORKS</Type>
@@ -3438,7 +3438,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>10</iPrereqPopulation>
+			<iPrereqPopulation>5</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3476,7 +3476,7 @@
 				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
 			</PrereqOrBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEMANTIC_WEB</Type>
@@ -3751,7 +3751,7 @@
 				<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<FreeBonus>BONUS_SYNTHETIC_RUBBER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -5519,7 +5519,7 @@
 				<BuildingType>BUILDING_MEGATOWER_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_FACIAL_RECOGNITION_SOFTWARE</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8183,7 +8183,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<iPrereqPopulation>15</iPrereqPopulation>
+			<iPrereqPopulation>8</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSAL_RESTAURANT</Type>
@@ -11567,7 +11567,7 @@
 				<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
 				<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 			</PrereqOrBuildings>
-			<iPrereqPopulation>40</iPrereqPopulation>
+			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MORLOCK</Type>
@@ -12107,7 +12107,7 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Properties>
 				<Property>
@@ -18278,7 +18278,7 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEASTEAD</Type>
@@ -18310,7 +18310,7 @@
 				<BuildingType>BUILDING_WAVE_FARM</BuildingType>
 				<BuildingType>BUILDING_OCEAN_THERMAL_POWER_PLANT</BuildingType>
 			</PrereqOrBuildings>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18394,7 +18394,7 @@
 				<BuildingType>BUILDING_WAVE_FARM</BuildingType>
 				<BuildingType>BUILDING_OCEAN_THERMAL_POWER_PLANT</BuildingType>
 			</PrereqOrBuildings>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -18432,7 +18432,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OCEAN_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENERGY_ISLAND</Type>
@@ -20341,7 +20341,7 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iPrereqPopulation>40</iPrereqPopulation>
+			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SONGDO_INTERNATIONAL_BUSINESS_DISTRICT</Type>
@@ -20376,7 +20376,7 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iPrereqPopulation>40</iPrereqPopulation>
+			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</Type>
@@ -20417,7 +20417,7 @@
 				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
 				<BuildingType>BUILDING_MONORAIL_STATION</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>40</iPrereqPopulation>
+			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HUDSON_YARDS</Type>
@@ -20447,7 +20447,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>40</iPrereqPopulation>
+			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KING_ABDULLAH_ECONOMIC_CITY</Type>
@@ -20475,7 +20475,7 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<iPrereqPopulation>40</iPrereqPopulation>
+			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEOM</Type>
@@ -20512,7 +20512,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SELF_CONSTRUCTION_FIRM</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>40</iPrereqPopulation>
+			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RATIONAL_CITY</Type>
@@ -23880,7 +23880,7 @@
 				<BuildingType>BUILDING_ASCENDED_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_METAPHYSICAL</Bonus>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<iGlobalPopulationChange>-30</iGlobalPopulationChange>
 			<VictoryThresholds>
 				<VictoryThreshold>

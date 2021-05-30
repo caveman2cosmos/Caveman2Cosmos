@@ -58,7 +58,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -98,7 +98,7 @@
 				<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CYBER_INSECT_LAB</Type>
@@ -166,7 +166,7 @@
 				<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INSECT_MANIPULATION_LAB</Type>
@@ -200,7 +200,7 @@
 				<BuildingType>BUILDING_CYBER_INSECT_LAB</BuildingType>
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DREAM_PROPAGANDA</Type>
@@ -229,7 +229,7 @@
 				<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

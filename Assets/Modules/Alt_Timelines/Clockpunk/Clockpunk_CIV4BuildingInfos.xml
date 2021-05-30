@@ -43,7 +43,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<iCost>380</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -84,7 +84,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>770</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iMaintenanceModifier>5</iMaintenanceModifier>
@@ -126,7 +126,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>380</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<YieldChanges>
@@ -159,7 +159,7 @@
 				<Bonus>BONUS_BRASS_WARES</Bonus>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>380</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<HealUnitCombatTypes>
@@ -200,7 +200,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iCost>380</iCost>
 			<iAirUnitCapacity>2</iAirUnitCapacity>

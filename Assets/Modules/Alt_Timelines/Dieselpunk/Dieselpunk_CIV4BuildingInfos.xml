@@ -72,7 +72,7 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -115,7 +115,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -149,7 +149,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIRIGIBLE_TERMINAL</Type>
@@ -177,7 +177,7 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 				<BuildingType>BUILDING_EMPIRE_STATE_BUILDING</BuildingType>
 			</PrereqOrBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FARNSWORTH_LAB</Type>
@@ -204,7 +204,7 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_THEREMIN_FACTORY</Type>
@@ -240,7 +240,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RADIOPLEX</Type>
@@ -289,7 +289,7 @@
 				</Flavor>
 			</Flavors>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLIGHT_SCHOOL</Type>
