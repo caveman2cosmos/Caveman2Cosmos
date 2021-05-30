@@ -12228,6 +12228,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_HARVEST_KELP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HARVEST_KELP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HARVEST_KELP</ArtDefineTag>
+			<PrereqTech>TECH_FISHING</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<YieldChanges>
 				<iYield>1</iYield>

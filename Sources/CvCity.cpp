@@ -19866,12 +19866,8 @@ bool CvCity::isProductionWonder() const
 
 	if (headOrder && headOrder->eOrderType == ORDER_CONSTRUCT)
 	{
-		const BuildingTypes eBuilding = headOrder->getBuildingType();
-		return isWorldWonder(eBuilding) 
-			|| isTeamWonder(eBuilding) 
-			|| isNationalWonder(eBuilding);
+		return isLimitedWonder(headOrder->getBuildingType());
 	}
-
 	return false;
 }
 

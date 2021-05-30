@@ -14,7 +14,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ASPATIAL_ROUTE</Tag>
-		<English>Build [LINK=ROUTE_ASPATIAL_ROUTE]Aspatial Route[\LINK]</English>
+		<English>Make [LINK=ROUTE_ASPATIAL_ROUTE]Aspatial Route[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_ASPATIAL_ROUTE]Route Aspatiale[\LINK]</French>
 		<Russian>Îòêðûòü àñòð. âðàòà</Russian>
 	</TEXT>
@@ -26,15 +26,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BIOTIC_GALAXY</Tag>
-		<English>Terraform [LINK=IMPROVEMENT_BIOTIC_GALAXY]Galaxy[\LINK]</English>
-		<French>Terraformer la [LINK=IMPROVEMENT_BIOTIC_GALAXY]Galaxie[\LINK]</French>
-		<Russian>Ïðåîáðàç. ãàëàêòèêó</Russian>
+		<English>Build [LINK=IMPROVEMENT_BIOTIC_GALAXY]Biotic Galaxy[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BIOTIC_NEUTRON_STAR</Tag>
-		<English>Terraform [LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Neutron Star[\LINK]</English>
-		<French>Terraformer une [LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Étoile à Neutron[\LINK]</French>
-		<Russian>Òåððàôîðì. íåéòð. çâåçäû</Russian>
+		<English>Build [LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Biotic Neutron Star[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BLUE_SUPERGIANT_COLONY</Tag>
@@ -68,7 +64,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COMPACT_WORMHOLE</Tag>
-		<English>Build [LINK=ROUTE_COMPACT_WORMHOLE]Compact Wormhole[\LINK]</English>
+		<English>Make [LINK=ROUTE_COMPACT_WORMHOLE]Compact Wormhole[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_COMPACT_WORMHOLE]Compact Trou de Ver[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=ROUTE_COMPACT_WORMHOLE]Ìàëóþ ÷åðâîòî÷èíó[\LINK]</Russian>
 	</TEXT>
@@ -104,13 +100,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HELIOFORMED_BROWN_DWARF</Tag>
-		<English>Helioform [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Brown Dwarf[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Helioformed Brown Dwarf[\LINK]</English>
 		<French>Hélioformer une [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Naine Brune[\LINK]</French>
 		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Êîðè÷íåâûé êàðëèê[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYPERLANE</Tag>
-		<English>Build [LINK=ROUTE_HYPERLANE]Hyperlane[\LINK]</English>
+		<English>Make [LINK=ROUTE_HYPERLANE]Hyperlane[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_HYPERLANE]Hyperligne[\LINK]</French>
 		<Russian>Ïðîëîæèòü ãèïåðëàéí</Russian>
 	</TEXT>
@@ -236,7 +232,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MEGAWORMHOLE</Tag>
-		<English>Build [LINK=ROUTE_MEGAWORMHOLE]Megawormhole[\LINK]</English>
+		<English>Make [LINK=ROUTE_MEGAWORMHOLE]Megawormhole[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_MEGAWORMHOLE]Méga-Trou de Ver[\LINK]</French>
 		<Russian>Ñîçäàòü [LINK=ROUTE_MEGAWORMHOLE]Áîë. ÷åðâîòî÷èíó[\LINK]</Russian>
 	</TEXT>
@@ -266,7 +262,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ORBITAL_TRAJECTORY</Tag>
-		<English>Build [LINK=ROUTE_ORBITAL_TRAJECTORY]Orbital Trajectory[\LINK]</English>
+		<English>Make [LINK=ROUTE_ORBITAL_TRAJECTORY]Orbital Trajectory[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_ORBITAL_TRAJECTORY]Trajectoire Orbitale[\LINK]</French>
 		<Russian>Ïðîëîæèòü îðáèò. òðàåêòîðèþ</Russian>
 	</TEXT>
@@ -284,15 +280,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLACE_ASTEROID</Tag>
-		<English>Place [LINK=IMPROVEMENT_PLACE_ASTEROID]Asteroid[\LINK]</English>
-		<French>Place [LINK=IMPROVEMENT_PLACE_ASTEROID]Astéroide[\LINK]</French>
-		<Russian>Çàêðåïèòü [LINK=IMPROVEMENT_PLACE_ASTEROID]Àñòåðîèä[\LINK]</Russian>
+		<English>Create [LINK=FEATURE_ASTEROIDS]Asteroid[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLACE_GALAXY</Tag>
-		<English>Place [LINK=IMPROVEMENT_PLACE_GALAXY]Galaxy[\LINK]</English>
-		<French>Place [LINK=IMPROVEMENT_PLACE_GALAXY]Galaxie[\LINK]</French>
-		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_PLACE_GALAXY]Ãàëàêòèêó[\LINK]</Russian>
+		<English>Create [LINK=FEATURE_GALAXY]Galaxy[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SATELLITE_STATION</Tag>
@@ -314,9 +306,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_TRAJECTORY</Tag>
-		<English>Build [LINK=ROUTE_SOLAR_TRAJECTORY]Solar Trajectory[\LINK]</English>
-		<French>Construire un [LINK=ROUTE_SOLAR_TRAJECTORY]Trajectoire Solaire[\LINK]</French>
-		<Russian>Ïðîëîæèòü ñîëí. òðàåêòîðèþ</Russian>
+		<English>Make [LINK=ROUTE_SOLAR_TRAJECTORY]Solar Trajectory[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_SOLAR_ARRAY</Tag>
@@ -338,15 +328,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV2</Tag>
-		<English>Upgrade [LINK=IMPROVEMENT_SPACE_STATION_LV2]Space Station to Lv. 2[\LINK]</English>
-		<French>Upgrade [LINK=IMPROVEMENT_SPACE_STATION_LV2]Station spatiale to Niv. 2[\LINK]</French>
-		<Russian>Óëó÷øèòü äî [LINK=IMPROVEMENT_SPACE_STATION_LV2]Êîñìè÷. ñòàíöèè 2 óð.[\LINK]</Russian>
+		<English>Build [LINK=IMPROVEMENT_SPACE_STATION_LV2]Space Station Lv. 2[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV3</Tag>
-		<English>Upgrade [LINK=IMPROVEMENT_SPACE_STATION_LV3]Space Station to Lv. 3[\LINK]</English>
-		<French>Upgrade [LINK=IMPROVEMENT_SPACE_STATION_LV3]Station spatiale to Niv. 3[\LINK]</French>
-		<Russian>Óëó÷øèòü äî [LINK=IMPROVEMENT_SPACE_STATION_LV2]Êîñìè÷. ñòàíöèè 3 óð.[\LINK]</Russian>
+		<English>Build [LINK=IMPROVEMENT_SPACE_STATION_LV3]Space Station Lv. 3[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPIRITUAL_REALM</Tag>
@@ -380,51 +366,37 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORMED_PLANET</Tag>
-		<English>Terraform [LINK=IMPROVEMENT_TERRAFORMED_PLANET]Planet[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_TERRAFORMED_PLANET]Terraformed Planet[\LINK]</English>
 		<French>Terraformer la [LINK=IMPROVEMENT_TERRAFORMED_PLANET]Planète[\LINK]</French>
 		<Russian>Òåððàôîðì. ïëàíåòó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_BRANESPACE</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_BRANESPACE]Chronoform Toward Branespace[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_BRANESPACE]Chronoformer en Espace de Brane[\LINK]</French>
-		<Russian>Õðîíîôîðì. â Áðàíó</Russian>
+		<English>Terraform towards [LINK=TERRAIN_BRANESPACE]Branespace[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_FUTURE</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_FUTURE]Chronoform Toward the Future[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_FUTURE]Chronoformer vers le Futur[\LINK]</French>
-		<Russian>Õðîíîôîðì. â áóäóùåå</Russian>
+		<English>Terraform towards [LINK=TERRAIN_DISTANT_FUTURE]Distant Future[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_HYPERSPACE</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_HYPERSPACE]Chronoform Toward Hyperspace[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_HYPERSPACE]Chronoformer en Hyperespace[\LINK]</French>
-		<Russian>Õðîíîôîðì. äî ãèïåðêîñì.</Russian>
+		<English>Terraform towards [LINK=TERRAIN_HYPERSPACE]Hyperspace[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_MARS</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_MARS]Terraform Toward Green Mars[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_MARS]Terraformer vers une planète Mars Verte[\LINK]</French>
-		<Russian>Òåððàôîðì. äî Çåëåíîé ëóíû</Russian>
+		<English>Terraform towards [LINK=TERRAIN_GREEN_MARS]Green Mars[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_MOON</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_MOON]Terraform Toward Green Moon[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_MOON]Terraformer vers une Lune Verte[\LINK]</French>
-		<Russian>Òåððàôîðìèðîâàòü ëóíó</Russian>
+		<English>Terraform towards [LINK=TERRAIN_GREEN_MOON]Green Moon[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_NEUTRON_STAR</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_NEUTRON_STAR]Induce A Supernova[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_NEUTRON_STAR]Induire une Supernova[\LINK]</French>
-		<Russian>Âçîðâàòü Ñâåðõíîâóþ</Russian>
+		<English>Terraform towards [LINK=TERRAIN_NEUTRON_STAR]Neutron Star[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_PAST</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_PAST]Chronoform Toward the Past[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TERRAFORM_PAST]Chronoformer vers le Passé[\LINK]</French>
-		<Russian>Õðîíîôîðì. â ïðîøëîå</Russian>
+		<English>Terraform towards [LINK=TERRAIN_DISTANT_PAST]Distant Past[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TIME_MANIFOLD</Tag>
@@ -434,9 +406,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TRUE_VACUUM</Tag>
-		<English>[LINK=IMPROVEMENT_TRUE_VACUUM]Collapse the Vacuum[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_TRUE_VACUUM]Réduire le vide[\LINK]</French>
-		<Russian>Ñâåðíóòü âàêóóì</Russian>
+		<English>Build [LINK=IMPROVEMENT_TRUE_VACUUM]True Vacuum[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_VENUS_AERIAL_FARM</Tag>
@@ -452,7 +422,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WORMHOLE</Tag>
-		<English>Build [LINK=ROUTE_WORMHOLE]Wormhole[\LINK]</English>
+		<English>Make [LINK=ROUTE_WORMHOLE]Wormhole[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_WORMHOLE]Trou de Ver[\LINK]</French>
 		<Russian>Ïðîëîæèòü ÷åðâîòî÷èíó</Russian>
 	</TEXT>
@@ -3245,12 +3215,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_PATH</Tag>
-		<English>Build [LINK=ROUTE_LUNAR_PATH]Lunar Path[\LINK]</English>
+		<English>Make [LINK=ROUTE_LUNAR_PATH]Lunar Path[\LINK]</English>
 		<Russian>Ïðîëîæèòü [LINK=ROUTE_LUNAR_PATH]Ëóí. òðàññó[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANETARY_MAGLEV</Tag>
-		<English>Build [LINK=ROUTE_PLANETARY_MAGLEV]Planetary Maglev[\LINK]</English>
+		<English>Make [LINK=ROUTE_PLANETARY_MAGLEV]Planetary Maglev[\LINK]</English>
 		<Russian>Ñòðîèòü [LINK=ROUTE_PLANETARY_MAGLEV]Ìîíîðåëüñ[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
