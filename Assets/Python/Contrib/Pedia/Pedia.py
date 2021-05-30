@@ -166,6 +166,7 @@ class Pedia:
 		szCatSpecialBuildings	= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BUILDINGS_SPECIAL", ())
 		szCatRelBuildings		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS", ())
 		szCatAniBuildings		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_ANIMALISTIC_BUILDINGS", ())
+		szCatSpaceBuildings		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SPACE_BUILDINGS", ())
 		szCatBuildingTree		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BUILDING_TREE", ())
 		szCatProjects			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_PROJECT", ())
 		szCatSpecialists		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SPECIALIST", ())
@@ -237,7 +238,7 @@ class Pedia:
 		PEDIA_SUB_CONCEPTS 		= [szCatConcepts, szCatConceptsNew, szCatStrategy, szCatShortcuts, szCatHints, szCatEras]
 		PEDIA_SUB_UNITS_2		= [szCatWorldUnits, szCatCulturalUnits, szCatAnimals, szCatSpreadUnits, szCatMiscUnits]
 		PEDIA_SUB_PROMOTIONS	= [szCatPromotions, szCatBuildUp, szCatStatus, szCatEquipment, szCatAffliction]
-		PEDIA_SUB_BUILDINGS_2	= [szCatNationalWonders, szCatGreatWonders, szCatGroupWonders, szCatSpecialBuildings, szCatC2CCutures, szCatRelBuildings, szCatAniBuildings]
+		PEDIA_SUB_BUILDINGS_2	= [szCatNationalWonders, szCatGreatWonders, szCatGroupWonders, szCatSpecialBuildings, szCatC2CCutures, szCatRelBuildings, szCatAniBuildings, szCatSpaceBuildings]
 		PEDIA_SUB_BONUSES		= [szCatBonusesMap, szCatBonusesMan, szCatBonusesCult, szCatBonusesTech]
 		PEDIA_SUB_LANDSCAPE		= [szCatTerrains, szCatFeatures, szCatNaturalWonders, szCatImprovements, szCatRoutes]
 		PEDIA_SUB_LEADERSHIP	= [szCatCivs, szCatLeaders, szCatTraits, szCatCivics, szCatReligions]
@@ -328,6 +329,7 @@ class Pedia:
 			szCatSpecialBuildings	: self.placeSpeBuildings,
 			szCatRelBuildings		: self.placeRelBuildings,
 			szCatAniBuildings		: self.placeAniBuildings,
+			szCatSpaceBuildings		: self.placeSpaceBuildings,
 			szCatProjects			: self.placeProjects,
 			szCatSpecialists		: self.placeSpecialists,
 			szCatTerrains			: self.placeTerrains,
@@ -918,6 +920,11 @@ class Pedia:
 		print "Category: Animalistic Buildings"
 		self.aList = self.getBuildingList(6)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, GC.getBuildingInfo)
+		
+	def placeSpaceBuildings(self):
+		print "Category: Space Buildings"
+		self.aList = self.getBuildingList(7)
+		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, GC.getBuildingInfo)
 
 	def getBuildingList(self, iBuildingType):
 		aList = []
@@ -947,6 +954,9 @@ class Pedia:
 	def getBuildingType(self, CvBuildingInfo, iBuilding):
 		szStrat = CvBuildingInfo.getDescription()
 		iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
+		
+		if not CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")):
+			return 7
 		if iSpecialBuilding != -1:
 			if iSpecialBuilding == GC.getInfoTypeForString("SPECIALBUILDING_C2C_CULTURE"):
 				return 4

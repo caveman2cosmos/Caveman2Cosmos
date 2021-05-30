@@ -231,8 +231,11 @@
 			<Type>BUILDING_ALHAMBRA_2</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_ALHAMBRA</Description>
+			<Description>TXT_KEY_BUILDING_ALHAMBRA_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALHAMBRA_PEDIA</Civilopedia>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -335,6 +338,9 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_ANGKOR_WAT_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANGKOR_WAT_PEDIA</Civilopedia>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1905,6 +1911,9 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CHEOMSEONGDAE_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHEOMSEONGDAE_PEDIA</Civilopedia>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2002,6 +2011,9 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CHICHEN_ITZA_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHICHEN_ITZA_PEDIA</Civilopedia>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2633,6 +2645,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EDINBURGH_CASTLE_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EDINBURGH_CASTLE_PEDIA</Civilopedia>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
