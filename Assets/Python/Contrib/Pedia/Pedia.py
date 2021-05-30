@@ -861,13 +861,25 @@ class Pedia:
 
 	def getPromotionList(self, iType):
 		aList = []
+		ListDict = {}
 		for iPromotion in xrange(GC.getNumPromotionInfos()):
 			CvPromotionInfo = GC.getPromotionInfo(iPromotion)
 			szPromoName = CvPromotionInfo.getDescription()
+			TechReq = CvPromotionInfo.getTechPrereq()
 			iPromotionType = self.getPromotionType(CvPromotionInfo)
+			
+			try:
+				iTechLoc = GC.getTechInfo(TechReq).getGridX()
+			except:
+				iTechLoc = 0
+			
 			if iType == iPromotionType:
-				aList.append((szPromoName, iPromotion))
+				ListDict[(iTechLoc, iPromotion)] = (szPromoName, iPromotion)
+				aList.append((iTechLoc, iPromotion))
 		aList.sort()
+		for iPromotion in xrange(len(aList)):
+			key = aList[iPromotion]
+			aList[iPromotion] = ListDict[key]
 		return aList
 
 	def getPromotionType(self, CvPromotionInfo):
@@ -1311,7 +1323,7 @@ class Pedia:
 
 			if getInfo == GC.getImprovementInfo:
 				TechReq = item.getPrereqTech()
-			elif getInfo == GC.getCivicInfo or getInfo == GC.getPromotionInfo or getInfo == GC.getBuildInfo:
+			elif getInfo == GC.getCivicInfo or getInfo == GC.getBuildInfo:
 				TechReq = item.getTechPrereq()
 			else:
 				pass
