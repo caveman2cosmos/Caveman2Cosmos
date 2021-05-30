@@ -14745,8 +14745,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 							iValueDivisor = 2;
 						}
 
-						bool bIsWonder = isNationalWonder(eLoopBuilding) || isWorldWonder(eLoopBuilding) || isTeamWonder(eLoopBuilding);
-						int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4));
+						const int iNumInstancesToScore = isLimitedWonder(eLoopBuilding) ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4);
 
 						//	If the building is enabled by multiple categories just count it at half value always
 						//	This isn't strictly accurate, but because civic evaluation works by linarly combining
@@ -14788,7 +14787,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 									iTempValue);
 							}
 						}
-
 						iValue += iTempValue;
 					}
 				}
@@ -14826,8 +14824,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 									iValueDivisor = 2;
 								}
 
-								bool bIsWonder = isNationalWonder(eLoopBuilding) || isWorldWonder(eLoopBuilding) || isTeamWonder(eLoopBuilding);
-								int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4));
+								const int iNumInstancesToScore = isLimitedWonder(eLoopBuilding) ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4);
 
 								//	If the building is enabled by multiple categories just count it at half value always
 								//	This isn't strictly accurate, but because civic evaluation works by linarly combining
@@ -14836,7 +14833,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 								if (bHasMultipleEnablingCivicCategories || bHasEnablingCivic)
 								{
 									//Estimate value from capital city
-									iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (12 * iValueDivisor);
+									iTempValue = pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore / (12 * iValueDivisor);
 									if (gPlayerLogLevel > 2)
 									{
 										logBBAI("Civic %S jointly religiously enables building %S with value %d",
@@ -14845,10 +14842,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 											iTempValue);
 									}
 								}
-								else if (!bHasEnablingCivic)
+								else
 								{
 									//Estimate value from capital city
-									iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
+									iTempValue = pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore / (6 * iValueDivisor);
 									if (gPlayerLogLevel > 2)
 									{
 										logBBAI("Civic %S religiously enables building %S with value %d",
@@ -14866,59 +14863,45 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			iTempValue = 0;
 			if (!kCivic.isAllReligionsActive())
 			{
-				CivicTypes eCurrentCivic = getCivics((CivicOptionTypes)kCivic.getCivicOptionType());
-				ReligionTypes eCurrentReligion = getStateReligion();
-				bool bHasEnablingCivic = (hasAllReligionsActive());
-				bool bHasMultipleEnablingCivicCategories = (getAllReligionsActiveCount() > 1);
+				const ReligionTypes eCurrentReligion = getStateReligion();
+				const bool bHasEnablingCivic = hasAllReligionsActive();
+				const bool bHasMultipleEnablingCivicCategories = getAllReligionsActiveCount() > 1;
 
-				for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+				if (bHasEnablingCivic || bHasMultipleEnablingCivicCategories)
 				{
-					const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-
-					if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == NO_TECH || GC.getTechInfo((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()).getEra() <= getCurrentEra())
+					for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 					{
-						if (getBuildingCount((BuildingTypes)iI) > 0)
+						const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+
+						if (getBuildingCount(eLoopBuilding) > 0
+						&&
+						(
+							GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == NO_TECH
+							||
+							GC.getTechInfo((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()).getEra() <= getCurrentEra()
+						)
+						&& GC.getBuildingInfo(eLoopBuilding).getReligionType() != eCurrentReligion)
 						{
-							if (GC.getBuildingInfo(eLoopBuilding).getReligionType() != eCurrentReligion)
+							//Loses us the ability to construct the building
+							int iValueDivisor = bHasMultipleEnablingCivicCategories ? 12 : 6;
+
+							if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH
+							&& !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()))
 							{
-								int iValueDivisor = 1;
-
-								if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH &&
-									!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()))
-								{
-									iValueDivisor = 2;
-								}
-
-								bool bIsWonder = isNationalWonder(eLoopBuilding) || isWorldWonder(eLoopBuilding) || isTeamWonder(eLoopBuilding);
-								int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4));
-
-								if (bHasMultipleEnablingCivicCategories)
-								{
-									//Loses us the ability to construct the building
-									iTempValue = -(pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (12 * iValueDivisor);
-									if (gPlayerLogLevel > 2)
-									{
-										logBBAI("Civic %S religiously disables building %S with value %d",
-											kCivic.getDescription(),
-											GC.getBuildingInfo(eLoopBuilding).getDescription(),
-											iTempValue);
-									}
-								}
-								else if (bHasEnablingCivic)
-								{
-									//Loses us the ability to construct the building
-									iTempValue = -(pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
-									if (gPlayerLogLevel > 2)
-									{
-										logBBAI("Civic %S religiously disables building %S with value %d",
-											kCivic.getDescription(),
-											GC.getBuildingInfo(eLoopBuilding).getDescription(),
-											iTempValue);
-									}
-								}
-
-								iValue += iTempValue;
+								iValueDivisor *= 2;
 							}
+							const int iNumInstancesToScore = (isLimitedWonder(eLoopBuilding) ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4));
+
+							iTempValue = pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore / iValueDivisor;
+
+							if (gPlayerLogLevel > 2)
+							{
+								logBBAI("Civic %S religiously disables building %S with value %d",
+									kCivic.getDescription(),
+									GC.getBuildingInfo(eLoopBuilding).getDescription(),
+									iTempValue);
+							}
+							iValue -= iTempValue;
 						}
 					}
 				}

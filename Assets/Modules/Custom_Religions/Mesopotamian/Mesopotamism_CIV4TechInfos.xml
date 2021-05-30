@@ -10,15 +10,12 @@
 			<iCost>110</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<OrPreReqs>
-				<PrereqTech>TECH_CASTE_SYSTEM</PrereqTech>
+				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_POTTERY</PrereqTech>
-			</AndPreReqs>
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
-			<iGridX>22</iGridX>
-			<iGridY>19</iGridY>
+			<iGridX>23</iGridX>
+			<iGridY>15</iGridY>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>

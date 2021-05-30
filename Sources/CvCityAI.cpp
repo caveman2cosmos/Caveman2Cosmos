@@ -14551,22 +14551,14 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		return true;
 	}
 
-	bool bIsWonder = isWorldWonder(eBuilding) ||
-		isTeamWonder(eBuilding) ||
-		isNationalWonder(eBuilding) ||
-		isLimitedWonder(eBuilding);
-
 	if ((iFocusFlags & ~BUILDINGFOCUS_WONDEROK) == BUILDINGFOCUS_WORLDWONDER)
 	{
-		return bIsWonder;
+		return isLimitedWonder(eBuilding);
 	}
 
-	if ((iFocusFlags & BUILDINGFOCUS_WONDEROK) != 0)
+	if ((iFocusFlags & BUILDINGFOCUS_WONDEROK) != 0 && isLimitedWonder(eBuilding))
 	{
-		if (bIsWonder)
-		{
-			return true;
-		}
+		return true;
 	}
 
 	if ((iFocusFlags & BUILDINGFOCUS_BIGCULTURE) != 0)
@@ -14650,8 +14642,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_GOLD) != 0)
 	{
-		iFocusFlags |= BUILDINGFOCUS_MAINTENANCE;
-
 		if (buildingModifiesCommerceYields ||
 			buildingHasTradeRouteValue(eBuilding) ||
 			kBuilding.getCommerceChange(COMMERCE_GOLD) > 0 ||
@@ -14666,6 +14656,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		{
 			return true;
 		}
+		iFocusFlags |= BUILDINGFOCUS_MAINTENANCE;
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_RESEARCH) != 0)
 	{
@@ -14703,36 +14694,25 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_DEFENSE) != 0)
 	{
-		bool bSAD = false;
-		bool bSIN = false;
-		bool bZoC = false;
-
-		if (GC.getGame().isOption(GAMEOPTION_SAD))
-		{
-			bSAD = (kBuilding.getLocalDynamicDefense() > 0);
-		}
-
 #ifdef STRENGTH_IN_NUMBERS
 		if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
-			bSIN = ((kBuilding.getFrontSupportPercentModifier() > 0) ||
-				(kBuilding.getShortRangeSupportPercentModifier() > 0) ||
-				(kBuilding.getMediumRangeSupportPercentModifier() > 0) ||
-				(kBuilding.getLongRangeSupportPercentModifier() > 0) ||
-				(kBuilding.getFlankSupportPercentModifier() > 0));
+			if (kBuilding.getFrontSupportPercentModifier() > 0
+			|| kBuilding.getShortRangeSupportPercentModifier() > 0
+			|| kBuilding.getMediumRangeSupportPercentModifier() > 0
+			|| kBuilding.getLongRangeSupportPercentModifier() > 0
+			|| kBuilding.getFlankSupportPercentModifier() > 0)
+			{
+				return true;
+			}
 		}
 #endif
-		if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
-		{
-			bZoC = kBuilding.isZoneOfControl();
-		}
-
 		if (kBuilding.getDefenseModifier() > 0 ||
 			kBuilding.getBombardDefenseModifier() > 0 ||
 			kBuilding.getAllCityDefenseModifier() > 0 ||
 			kBuilding.isNeverCapture() ||
 			kBuilding.isNukeImmune() ||
-			bZoC ||
+			GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && kBuilding.isZoneOfControl() ||
 			kBuilding.getLineOfSight() > 0 ||
 			kBuilding.getUnitCombatExtraStrength(NO_UNITCOMBAT) > 0 ||
 			kBuilding.getAdjacentDamagePercent() > 0 ||
@@ -14741,8 +14721,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getNoEntryDefenseLevel() > 0 ||
 			kBuilding.getNumUnitFullHeal() > 0 ||
 			kBuilding.isAreaBorderObstacle() ||
-			bSAD ||
-			bSIN ||
+			GC.getGame().isOption(GAMEOPTION_SAD) && kBuilding.getLocalDynamicDefense() > 0 ||
 			kBuilding.getLocalCaptureProbabilityModifier() > 0 ||
 			kBuilding.getLocalCaptureResistanceModifier() > 0 ||
 			kBuilding.getNationalCaptureResistanceModifier() > 0 ||
@@ -14761,78 +14740,66 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_HAPPY) != 0)
 	{
-		bool bTechHapp = false;
+		// Toffer - ToDo - change to iterate the techs cached in the building vector rather than iterate through all techs to see if they are in the vector.
 		if (kBuilding.getNumTechHappinessTypes() > 0)
 		{
 			for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI))
+				if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI) && kBuilding.getTechHappinessType(iI) > 0)
 				{
-					if (kBuilding.getTechHappinessType(iI) > 0)
-					{
-						bTechHapp = true;
-					}
+					return true;
 				}
 			}
 		}
-		if (kBuilding.getHappiness() > 0 ||
-			kBuilding.getAreaHappiness() > 0 ||
-			kBuilding.getGlobalHappiness() > 0 ||
-			kBuilding.getStateReligionHappiness() > 0 ||
-			kBuilding.isNoUnhappiness() ||
-			kBuilding.getWarWearinessModifier() < 0 ||
-			kBuilding.getGlobalWarWearinessModifier() < 0 ||
-			kBuilding.getCommerceHappiness(NO_COMMERCE) > 0 ||
-			kBuilding.getBonusHappinessChanges(NO_BONUS) > 0 ||
-			kBuilding.getBuildingHappinessChanges(NO_BUILDING) > 0 ||
-			kBuilding.getTechHappinessChanges(NO_TECH) > 0 ||
-			GET_PLAYER(getOwner()).getExtraBuildingHappiness(eBuilding) > 0 ||
-			bTechHapp
-			)
+		if (kBuilding.getHappiness() > 0
+		|| kBuilding.getAreaHappiness() > 0
+		|| kBuilding.getGlobalHappiness() > 0
+		|| kBuilding.getStateReligionHappiness() > 0
+		|| kBuilding.isNoUnhappiness()
+		|| kBuilding.getWarWearinessModifier() < 0
+		|| kBuilding.getGlobalWarWearinessModifier() < 0
+		|| kBuilding.getCommerceHappiness(NO_COMMERCE) > 0
+		|| kBuilding.getBonusHappinessChanges(NO_BONUS) > 0
+		|| kBuilding.getBuildingHappinessChanges(NO_BUILDING) > 0
+		|| kBuilding.getTechHappinessChanges(NO_TECH) > 0
+		|| GET_PLAYER(getOwner()).getExtraBuildingHappiness(eBuilding) > 0)
 		{
 			return true;
 		}
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_HEALTHY) != 0)
 	{
-		bool bTechHealth = false;
+		// Toffer - ToDo - change to iterate the techs cached in the building vector rather than iterate through all techs to see if they are in the vector.
 		if (kBuilding.getNumTechHealthTypes() > 0)
 		{
 			for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI))
+				if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI) && kBuilding.getTechHealthType(iI) > 0)
 				{
-					if (kBuilding.getTechHealthType(iI) > 0)
-					{
-						bTechHealth = true;
-					}
+					return true;
 				}
 			}
 		}
-		if (kBuilding.getHealth() > 0 ||
-			kBuilding.getAreaHealth() > 0 ||
-			kBuilding.getGlobalHealth() > 0 ||
-			kBuilding.isNoUnhealthyPopulation() ||
-			kBuilding.isBuildingOnlyHealthy() ||
-			kBuilding.getBonusHealthChanges(NO_BONUS) > 0 ||
-			kBuilding.getTechHealthChanges(NO_TECH) > 0 ||
-			kBuilding.getHealthPercentPerPopulation() > 0 ||
-			GET_PLAYER(getOwner()).getExtraBuildingHealth(eBuilding) > 0 ||
-			bTechHealth
-			)
+		if (kBuilding.getHealth() > 0
+		|| kBuilding.getAreaHealth() > 0
+		|| kBuilding.getGlobalHealth() > 0
+		|| kBuilding.isNoUnhealthyPopulation()
+		|| kBuilding.isBuildingOnlyHealthy()
+		|| kBuilding.getBonusHealthChanges(NO_BONUS) > 0
+		|| kBuilding.getTechHealthChanges(NO_TECH) > 0
+		|| kBuilding.getHealthPercentPerPopulation() > 0
+		|| GET_PLAYER(getOwner()).getExtraBuildingHealth(eBuilding) > 0)
 		{
 			return true;
 		}
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_DOMAINSEA) != 0)
 	{
-		iFocusFlags |= BUILDINGFOCUS_EXPERIENCE;
-
-		if (kBuilding.getDomainProductionModifier(DOMAIN_SEA) > 0 ||
-			kBuilding.getDomainFreeExperience(DOMAIN_SEA) > 0)
+		if (kBuilding.getDomainProductionModifier(DOMAIN_SEA) > 0 || kBuilding.getDomainFreeExperience(DOMAIN_SEA) > 0)
 		{
 			return true;
 		}
+		iFocusFlags |= BUILDINGFOCUS_EXPERIENCE;
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_EXPERIENCE) != 0)
 	{
@@ -14881,12 +14848,9 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_ESPIONAGE) != 0)
 	{
-		if (kBuilding.getEspionageDefenseModifier() > 0)
-		{
-			return true;
-		}
 		if (buildingModifiesCommerceYields ||
 			buildingHasTradeRouteValue(eBuilding) ||
+			kBuilding.getEspionageDefenseModifier() > 0 ||
 			kBuilding.getCommerceChange(COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getCommercePerPopChange(COMMERCE_ESPIONAGE) > 0 ||
 			kBuilding.getCommerceModifier(COMMERCE_ESPIONAGE) > 0 ||
@@ -14900,14 +14864,10 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			return true;
 		}
 	}
-	if ((iFocusFlags & BUILDINGFOCUS_CAPITAL) != 0)
+	if ((iFocusFlags & BUILDINGFOCUS_CAPITAL) != 0 && kBuilding.isCapital())
 	{
-		if (kBuilding.isCapital())
-		{
-			return true;
-		}
+		return true;
 	}
-
 	return false;
 }
 

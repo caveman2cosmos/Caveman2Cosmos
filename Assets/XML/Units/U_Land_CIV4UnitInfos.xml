@@ -33166,6 +33166,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<NotGameOption>GAMEOPTION_NO_EVENTS</NotGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NOBLE</Type>

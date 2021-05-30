@@ -9,10 +9,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_BEAST_DESC</Tag>
-		<English>Fauna Beasts</English>
-		<French>Faune Bestiale</French>
-		<German>Bestien</German>
-		<Russian>Íåéòðàëüíàÿ ôàóíà</Russian>
+		<English>NPC Beasts</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_BEAST_DESC_SHORT</Tag>
@@ -37,10 +34,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREDATOR_DESC</Tag>
-		<English>Fauna Predators</English>
-		<French>Faune prédatrice</French>
-		<German>Raubtiere</German>
-		<Russian>Õèùíàÿ ôàóíà</Russian>
+		<English>NPC Predators</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREDATOR_DESC_SHORT</Tag>
@@ -65,10 +59,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREY_DESC</Tag>
-		<English>Fauna Creatures</English>
-		<French>Faune - Créatures</French>
-		<German>Kreaturen</German>
-		<Russian>Ìèðíàÿ ôàóíà</Russian>
+		<English>NPC Creatures</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREY_DESC_SHORT</Tag>
@@ -394,25 +385,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BARBARIAN_DESC</Tag>
-		<English>Barbarian State</English>
-		<French>
-			<Text>Empire barbare</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Reich der Barbaren</German>
-		<Italian>
-			<Text>Territorio barbaro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Territorio de los bárbaros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Terytorium barbarzyńskie</Polish>
-		<Russian>Âàðâàðñêèå ïëåìåíà</Russian>
+		<English>NPC Barbarian</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BARBARIAN_PEDIA</Tag>
@@ -652,12 +625,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_DENMARK_DESC</Tag>
-		<English>Denmark</English>
-		<French>Danemark</French>
-		<German>Reich der Dänen</German>
-		<Spanish>Imperio Danés</Spanish>
-		<Polish>Dania</Polish>
-		<Russian>Äàíèÿ</Russian>
+		<English>Danish Empire</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_DENMARK_PEDIA</Tag>
@@ -1330,7 +1298,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_INSECTOID_DESC</Tag>
-		<English>Insectoids</English>
+		<English>NPC Insectoids</English>
 		<French>Insectoïdes</French>
 		<German>Insektoiden</German>
 		<Russian>Èíñåêòîèäû</Russian>
@@ -1785,47 +1753,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NATIVE_AMERICA_DESC</Tag>
-		<English>Native American Empire</English>
-		<French>
-			<Text>Empire amérindien</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Reich der Indianer</German>
-		<Italian>
-			<Text>Impero dei Nativi americani</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Imperio Sioux</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Imperium Siuksów</Polish>
-		<Russian>Ñîþç ïëåìåí</Russian>
+		<English>Sioux Empire</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NATIVE_AMERICA_SHORT_DESC</Tag>
-		<English>Native America</English>
-		<French>
-			<Text>Amérindiens</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Indianerreich</German>
-		<Italian>
-			<Text>America indiana</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Nación sioux</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Siuksów</Polish>
-		<Russian>Èíäåéöû</Russian>
+		<English>Sioux</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NETHERLANDS_ADJECTIVE</Tag>
@@ -1906,7 +1838,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_DESC</Tag>
-		<English>Neanderthals</English>
+		<English>NPC Neanderthals</English>
 		<French>Néanderthaliens</French>
 		<German>Reich der Neandertaler</German>
 		<Russian>Íåàíäåðòàëüöû</Russian>
@@ -2486,29 +2418,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_UNITED_STATES_DESC</Tag>
-		<English>
-			<Text>United States</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
-		<French>
-			<Text>Empire américain</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Reich der Amerikaner</German>
-		<Italian>
-			<Text>Stati Uniti</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Imperio Estadounidense</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Stany Zjednoczone</Polish>
-		<Russian>ÑØÀ</Russian>
+		<English>American Empire</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_UNITED_STATES_SHORT_DESC</Tag>

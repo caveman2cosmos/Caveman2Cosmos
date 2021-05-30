@@ -3944,17 +3944,17 @@ int CvCity::getProductionNeeded(const OrderData& order) const
 
 int CvCity::getProductionNeeded(UnitTypes eUnit) const
 {
-	return getModifiedIntValue(GET_PLAYER(getOwner()).getProductionNeeded(eUnit), -getProductionModifier(eUnit));
+	return std::max(1, getModifiedIntValue(GET_PLAYER(getOwner()).getProductionNeeded(eUnit), -getProductionModifier(eUnit)));
 }
 
 int CvCity::getProductionNeeded(BuildingTypes eBuilding) const
 {
-	return getModifiedIntValue(GET_PLAYER(getOwner()).getProductionNeeded(eBuilding), -getProductionModifier(eBuilding));
+	return std::max(1, getModifiedIntValue(GET_PLAYER(getOwner()).getProductionNeeded(eBuilding), -getProductionModifier(eBuilding)));
 }
 
 int CvCity::getProductionNeeded(ProjectTypes eProject) const
 {
-	return getModifiedIntValue(GET_PLAYER(getOwner()).getProductionNeeded(eProject), -getProductionModifier(eProject));
+	return std::max(1, getModifiedIntValue(GET_PLAYER(getOwner()).getProductionNeeded(eProject), -getProductionModifier(eProject)));
 }
 
 int CvCity::getProductionTurnsLeft() const
@@ -19866,12 +19866,8 @@ bool CvCity::isProductionWonder() const
 
 	if (headOrder && headOrder->eOrderType == ORDER_CONSTRUCT)
 	{
-		const BuildingTypes eBuilding = headOrder->getBuildingType();
-		return isWorldWonder(eBuilding) 
-			|| isTeamWonder(eBuilding) 
-			|| isNationalWonder(eBuilding);
+		return isLimitedWonder(headOrder->getBuildingType());
 	}
-
 	return false;
 }
 

@@ -10,12 +10,11 @@
 			<Type>BUILDING_BIOPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BIOPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIOPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIOPUNK_EMBASSY</ArtDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -33,11 +32,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROTEIN_ARTIST</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PROTEIN_ARTIST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROTEIN_ARTIST_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROTEIN_ARTIST</ArtDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -61,15 +60,15 @@
 				<BuildingType>BUILDING_PROTEIN_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MICROBIOLOGY_ARTIST</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MICROBIOLOGY_ARTIST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MICROBIOLOGY_ARTIST_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MICROBIOLOGY_ARTIST</ArtDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -97,7 +96,7 @@
 				<BuildingType>BUILDING_MICROBIOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -108,11 +107,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_DESIGNER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANIMAL_DESIGNER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_DESIGNER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_DESIGNER</ArtDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -140,7 +139,7 @@
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -152,11 +151,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA</ArtDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -177,7 +176,7 @@
 				<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -188,6 +187,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESIGNED_ANIMAL_SHOW</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW</Description>
@@ -195,7 +195,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESIGNED_ANIMAL_SHOW</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DESIGNED_ANIMAL_SHOW</MovieDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -222,7 +221,7 @@
 				<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -233,14 +232,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PURE_ORGANIC_CITY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PURE_ORGANIC_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PURE_ORGANIC_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PURE_ORGANIC_CITY</ArtDefineTag>
 			<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_BIOPUNK</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -271,15 +268,15 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOPUNK_LAB</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BIOPUNK_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIOPUNK_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIOPUNK_LAB</ArtDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -297,7 +294,7 @@
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -309,11 +306,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PHEROMONE_LAB</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PHEROMONE_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PHEROMONE_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PHEROMONE_LAB</ArtDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -329,7 +326,7 @@
 				<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -340,11 +337,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPECIES_REVIVAL_LAB</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SPECIES_REVIVAL_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPECIES_REVIVAL_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SPECIES_REVIVAL_LAB</ArtDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -361,7 +358,7 @@
 				<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -372,11 +369,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WEAPONIZED_FLORA</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WEAPONIZED_FLORA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WEAPONIZED_FLORA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WEAPONIZED_FLORA</ArtDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -394,7 +391,7 @@
 			</PrereqInCityBuildings>
 			<iAdjacentDamagePercent>20</iAdjacentDamagePercent>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iLocalRepel>20</iLocalRepel>
 			<PropertyManipulators>
 				<PropertySource>
@@ -406,11 +403,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESIGNED_ANIMAL_ZOO</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DESIGNED_ANIMAL_ZOO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNED_ANIMAL_ZOO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESIGNED_ANIMAL_ZOO</ArtDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -433,7 +430,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -449,11 +446,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIMERA_SURGERY_CLINIC</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CHIMERA_SURGERY_CLINIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHIMERA_SURGERY_CLINIC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHIMERA_SURGERY_CLINIC</ArtDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -477,7 +474,7 @@
 				<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

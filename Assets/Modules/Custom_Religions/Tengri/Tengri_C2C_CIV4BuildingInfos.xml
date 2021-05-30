@@ -20,7 +20,7 @@
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<Bonus>BONUS_HORSE</Bonus>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>104</iCost>
+			<iCost>98</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>

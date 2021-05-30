@@ -199,7 +199,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -874,7 +874,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MISSIONARY_TRAINING_CENTER</Type>
@@ -1158,7 +1158,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MORMON_SEMINARY</Type>
@@ -1240,7 +1240,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -1905,7 +1905,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_OASIS_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1988,7 +1988,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_FALL_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2153,7 +2153,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_OUTCROP_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2254,7 +2254,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_VOLCANO_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2359,7 +2359,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CORAL_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2464,7 +2464,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_REEF_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>

@@ -245,7 +245,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -279,7 +279,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -313,7 +313,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -347,7 +347,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -381,7 +381,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -464,7 +464,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>68</iCost>
+			<iCost>80</iCost>
 			<iHealth>1</iHealth>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
@@ -515,7 +515,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -552,7 +552,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -589,7 +589,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -626,7 +626,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -663,7 +663,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -703,7 +703,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
@@ -732,7 +732,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
@@ -770,7 +770,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_APPLE</VicinityBonus>
@@ -799,7 +799,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_APPLE</VicinityBonus>
@@ -837,7 +837,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_BANANA</VicinityBonus>
@@ -866,7 +866,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_BANANA</VicinityBonus>
@@ -904,7 +904,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_COCONUT</VicinityBonus>
@@ -933,7 +933,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_COCONUT</VicinityBonus>
@@ -971,7 +971,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_DATES</VicinityBonus>
@@ -1000,7 +1000,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_DATES</VicinityBonus>
@@ -1038,7 +1038,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_FIG</VicinityBonus>
@@ -1067,7 +1067,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_FIG</VicinityBonus>
@@ -1105,7 +1105,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
@@ -1134,7 +1134,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
@@ -1172,7 +1172,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GUAVAS</VicinityBonus>
@@ -1201,7 +1201,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GUAVAS</VicinityBonus>
@@ -1239,7 +1239,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_LEMONS</VicinityBonus>
@@ -1268,7 +1268,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_LEMONS</VicinityBonus>
@@ -1306,7 +1306,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MANGO</VicinityBonus>
@@ -1335,7 +1335,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MANGO</VicinityBonus>
@@ -1373,7 +1373,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MELONS</VicinityBonus>
@@ -1402,7 +1402,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MELONS</VicinityBonus>
@@ -1440,7 +1440,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
@@ -1469,7 +1469,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
@@ -1507,7 +1507,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_OLIVES</VicinityBonus>
@@ -1536,7 +1536,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_OLIVES</VicinityBonus>
@@ -1574,7 +1574,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PAPAYA</VicinityBonus>
@@ -1603,7 +1603,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PAPAYA</VicinityBonus>
@@ -1641,7 +1641,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PISTACHIO</VicinityBonus>
@@ -1670,7 +1670,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PISTACHIO</VicinityBonus>
@@ -1708,7 +1708,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_POMEGRANATE</VicinityBonus>
@@ -1737,7 +1737,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_POMEGRANATE</VicinityBonus>
@@ -1775,7 +1775,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PRICKLY_PEAR</VicinityBonus>
@@ -1804,7 +1804,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PRICKLY_PEAR</VicinityBonus>
@@ -1842,7 +1842,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PUMPKIN</VicinityBonus>
@@ -1871,7 +1871,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PUMPKIN</VicinityBonus>
@@ -1909,7 +1909,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_SQUASH</VicinityBonus>
@@ -1938,7 +1938,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_SQUASH</VicinityBonus>
@@ -1976,7 +1976,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_KAVA</VicinityBonus>
@@ -2005,7 +2005,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_KAVA</VicinityBonus>

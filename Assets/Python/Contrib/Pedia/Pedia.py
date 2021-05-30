@@ -1286,8 +1286,11 @@ class Pedia:
 
 	def getItsEra(self, CvItsInfo):
 		CvTechInfo = GC.getTechInfo(CvItsInfo.getPrereqAndTech())
-		if CvTechInfo == None:
+		iCost = GC.getTechInfo(CvItsInfo.getProductionCost())
+		if CvTechInfo == None and iCost < 1:
 			iEra = 0
+		elif CvTechInfo == None and iCost >= 1:
+			iEra = 1
 		else:
 			iEra = CvTechInfo.getEra() + 1
 		i = 0
