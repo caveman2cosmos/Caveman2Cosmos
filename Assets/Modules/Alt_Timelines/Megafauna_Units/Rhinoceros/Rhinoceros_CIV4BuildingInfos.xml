@@ -7,6 +7,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_RHINO_TRAINER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_RHINO_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RHINO_TRAINER_PEDIA</Civilopedia>
@@ -14,7 +15,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RHINO_TRAINER</MovieDefineTag>
 			<ObsoleteTech>TECH_ARMORED_CAVALRY</ObsoleteTech>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -55,6 +55,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RHINO_TRAINER_HERITAGE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -64,9 +65,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			</TechTypes>
 			<FreeBuilding>BUILDING_RHINO_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -117,15 +115,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TOTEM_RHINO</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_RHINO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_RHINO_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
