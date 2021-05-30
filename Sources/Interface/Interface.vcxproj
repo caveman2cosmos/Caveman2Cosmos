@@ -110,9 +110,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="ITest.acf" />
+    <None Include="Example1.acf" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="ITest.idl" />
+    <Midl Include="Example1.idl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

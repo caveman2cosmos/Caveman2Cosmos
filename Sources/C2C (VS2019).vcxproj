@@ -341,6 +341,7 @@
     <ClCompile Include="FDataIOStream.cpp" />
     <ClCompile Include="FDialogTemplate.cpp" />
     <ClCompile Include="IntExpr.cpp" />
+    <ClCompile Include="$(SolutionDir)\Interfaces\ITest_c.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm2.h" />
@@ -498,6 +499,7 @@
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Win32.h" />
+    <ClInclude Include="$(SolutionDir)\Interfaces\ITest.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

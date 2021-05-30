@@ -1,6 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
-
+#include "c2c_rpc.h"
 #include <psapi.h>
 
 static CRITICAL_SECTION g_cPythonSection;
@@ -13,7 +13,7 @@ std::string modDir;
 // BUG - EXE/DLL Paths - start
 HANDLE dllModule = NULL;
 
-bool runProcess(const std::string& exe, const std::string& workingDir, bool wait = true)
+bool runProcess(const std::string& exe, const std::string& workingDir)
 {
 	STARTUPINFOA startupInfo;
 	ZeroMemory(&startupInfo, sizeof(startupInfo));
@@ -26,7 +26,7 @@ bool runProcess(const std::string& exe, const std::string& workingDir, bool wait
 	// HOWEVER: this DLL is loaded by LoadLibrary later in exe startup so we appear to have the required dlls already loaded at this point.
 	if (::CreateProcessA(NULL, (LPSTR)exe.c_str(), NULL, NULL, TRUE, 0, NULL, workingDir.c_str(), &startupInfo, &procInfo))
 	{
-		success = !wait || ::WaitForSingleObject(procInfo.hProcess, 1800000) == WAIT_OBJECT_0;
+		success = ::WaitForSingleObject(procInfo.hProcess, 1800000) == WAIT_OBJECT_0;
 	}
 	::CloseHandle(procInfo.hProcess);
 	::CloseHandle(procInfo.hThread);
@@ -90,12 +90,9 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 					return FALSE;
 				}
 			}
-			if (!runProcess(git_dir + "\\Assets\\CvGameCoreServer.exe", git_dir + "\\Assets", false))
-			{
-				MessageBox(0, "Server failed", "ERROR!", 0);
-				return false;
-			}
 		}
+		rpc::createServerProcess();
+
 		logging::createLogsFolder();
 		logging::deleteLogs();
 		}

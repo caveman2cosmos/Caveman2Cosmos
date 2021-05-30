@@ -1,0 +1,6 @@
+[
+   implicit_handle(handle_t hExample1Binding)
+]
+interface Example1
+{
+}
