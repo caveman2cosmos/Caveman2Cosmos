@@ -1114,25 +1114,39 @@ class Pedia:
 
 	def getBonusList(self, iType):
 		aList = []
+		ListDict = {}		
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
+			TechReq = CvBonusInfo.getTechReveal()
+			
+			try:
+				iTechLoc = GC.getTechInfo(TechReq).getGridX()
+			except:
+				iTechLoc = 0
+			
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
 				if not iType:
-					aList.append((szName, iBonus))
+					ListDict[(iTechLoc, iBonus)] = (szName, iBonus)
+					aList.append((iTechLoc, iBonus))
 			elif BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS:
 				if iType == 3:
-					aList.append((szName, iBonus))
+					ListDict[(iTechLoc, iBonus)] = (szName, iBonus)
+					aList.append((iTechLoc, iBonus))
 			elif BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE:
 				if iType == 2:
-					aList.append((szName, iBonus))
+					ListDict[(iTechLoc, iBonus)] = (szName, iBonus)
+					aList.append((iTechLoc, iBonus))
 			elif iType == 1:
-				aList.append((szName, iBonus))
+				ListDict[(iTechLoc, iBonus)] = (szName, iBonus)
+				aList.append((iTechLoc, iBonus))
 		aList.sort()
+		for iBonus in xrange(len(aList)):
+			key = aList[iBonus]
+			aList[iBonus] = ListDict[key]
 		return aList
-
 
 	def placeImprovements(self):
 		print "Category: Improvements"
