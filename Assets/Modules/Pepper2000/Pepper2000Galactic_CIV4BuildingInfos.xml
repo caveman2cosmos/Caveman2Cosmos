@@ -1343,7 +1343,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_ICARUS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_SPACE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PROJECT_ICARUS</Description>
@@ -1352,6 +1352,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROJECT_ICARUS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PROJECT_ICARUS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_SPACEPUNK</PrereqTech>
 			<iCost>5448</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1377,7 +1378,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_PERSEPHONE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_SPACE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PROJECT_PERSEPHONE</Description>
@@ -1389,6 +1390,9 @@
 			<iCost>6195</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<PrereqTech>TECH_CLOSED_ECONOMIES</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SPACEPUNK</PrereqTech>
+			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
 			</MapCategoryTypes>
