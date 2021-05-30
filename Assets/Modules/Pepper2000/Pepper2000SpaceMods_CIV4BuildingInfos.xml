@@ -1028,7 +1028,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SILICON_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SILICON_LIFE</Description>
@@ -1092,7 +1091,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDROGEN_PEROXIDE_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_HYDROGEN_PEROXIDE_LIFE</Description>
@@ -1122,7 +1120,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SULFURIC_ACID_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SULFURIC_ACID_LIFE</Description>
@@ -1149,7 +1146,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAL_OXIDE_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_METAL_OXIDE_LIFE</Description>
@@ -1186,7 +1182,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDROGEN_SULFIDE_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_HYDROGEN_SULFIDE_LIFE</Description>
@@ -1225,7 +1220,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMMONIA_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_AMMONIA_LIFE</Description>
@@ -1267,7 +1261,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METHANE_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_METHANE_LIFE</Description>
@@ -1300,7 +1293,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LIQUID_NITROGEN_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_LIQUID_NITROGEN_LIFE</Description>
@@ -1340,7 +1332,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JUPITER_CLOUD_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_JUPITER_CLOUD_LIFE</Description>
@@ -1367,7 +1358,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SILICON_DIOXIDE_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SILICON_DIOXIDE_LIFE</Description>
@@ -1415,7 +1405,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPERCRITICAL_CO2_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SUPERCRITICAL_CO2_LIFE</Description>
@@ -1462,7 +1451,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARTICLE_LIFEFORMS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_PARTICLE_LIFEFORMS</Description>
@@ -1489,7 +1477,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUST_PLASMA_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DUST_PLASMA_LIFE</Description>
@@ -1537,7 +1524,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</Description>
@@ -1564,7 +1550,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRUE_VACUUM_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_TRUE_VACUUM_LIFE</Description>
@@ -1591,7 +1576,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PAN_DIMENSIONAL_LIFE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_PAN_DIMENSIONAL_LIFE</Description>

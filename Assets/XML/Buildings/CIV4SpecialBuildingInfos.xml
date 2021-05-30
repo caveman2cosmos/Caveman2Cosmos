@@ -221,10 +221,5 @@
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bValid>1</bValid>
 		</SpecialBuildingInfo>
-		<SpecialBuildingInfo>
-			<Type>SPECIALBUILDING_SPACE</Type>
-			<Description>TXT_KEY_SPECIALBUILDING_SPACE</Description>
-			<bValid>1</bValid>
-		</SpecialBuildingInfo>
 	</SpecialBuildingInfos>
 </Civ4SpecialBuildingInfos>

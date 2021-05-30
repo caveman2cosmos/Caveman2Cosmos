@@ -3,7 +3,6 @@
 	<BuildingInfos>		
 		<BuildingInfo>
 			<Type>BUILDING_URBAN_MOON</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_URBAN_MOON</Description>
@@ -36,7 +35,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOON_TERRA</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MOON_TERRA</Description>
@@ -84,7 +82,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOON_TERRA_EFFECT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MOON_TERRA_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOON_TERRA_EFFECT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -118,7 +115,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNA_RING</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_LUNA_RING</Description>
@@ -147,7 +143,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_CENTRIFUGAL_HABITAT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_CENTRIFUGAL_HABITAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_CENTRIFUGAL_HABITAT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -171,7 +166,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_ARCOLOGY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ARCOLOGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -199,7 +193,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_COMETARY_BOMBARDMENT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_COMETARY_BOMBARDMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_COMETARY_BOMBARDMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -225,7 +218,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SOIL_GENERATOR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_SOIL_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SOIL_GENERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -250,7 +242,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SEA</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_SEA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SEA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -286,7 +277,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MITHRIL_FOUNDRY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MITHRIL_FOUNDRY</Description>
@@ -319,7 +309,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_DEFENSES</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_DEFENSES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_DEFENSES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -346,7 +335,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_BASE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_BASE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -374,7 +362,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_WATER_EXTRACTION_FACILITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -406,7 +393,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_ROCK_QUARRY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_ROCK_QUARRY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ROCK_QUARRY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -444,7 +430,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_CONCRETE_MILL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_CONCRETE_MILL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_CONCRETE_MILL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -490,7 +475,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_GLASS_FACTORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_GLASS_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_GLASS_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -518,7 +502,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_HYDROPONICS_FARM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_HYDROPONICS_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_HYDROPONICS_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -550,7 +533,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_ALGAE_FARM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_ALGAE_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ALGAE_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -598,7 +580,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_ALGAE_LAB</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_ALGAE_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ALGAE_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -654,7 +635,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_LAUNCH_SITE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_LAUNCH_SITE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_LAUNCH_SITE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -692,7 +672,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_ALUMINIUM_EXTRACTION_FACILITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_ALUMINIUM_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ALUMINIUM_EXTRACTION_FACILITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -743,7 +722,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_IRON_EXTRACTION_FACILITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_IRON_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_IRON_EXTRACTION_FACILITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -797,7 +775,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_TITANIUM_EXTRACTION_FACILITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_TITANIUM_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_TITANIUM_EXTRACTION_FACILITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -848,7 +825,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_MANGANESE_EXTRACTION_FACILITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_MANGANESE_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_MANGANESE_EXTRACTION_FACILITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -898,7 +874,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_MAGNESIUM_EXTRACTION_FACILITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_MAGNESIUM_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_MAGNESIUM_EXTRACTION_FACILITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -948,7 +923,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_ORGANIC_POLYMERE_FACTORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_ORGANIC_POLYMERE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ORGANIC_POLYMERE_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1020,7 +994,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_RESEARCH_BASE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_RESEARCH_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_RESEARCH_BASE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1132,7 +1105,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_GREENHOUSE_COMPLEX</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_GREENHOUSE_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_GREENHOUSE_COMPLEX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -1178,7 +1150,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_MANUFACTURING_PLANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_MANUFACTURING_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_MANUFACTURING_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1268,7 +1239,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SPACE_PORT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_SPACE_PORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SPACE_PORT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1323,7 +1293,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_HOTEL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_HOTEL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1353,7 +1322,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_ASSEMBLY_PLANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_ASSEMBLY_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ASSEMBLY_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1409,7 +1377,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1462,7 +1429,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SHIPYARD</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_SHIPYARD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SHIPYARD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -1551,7 +1517,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_DROID_FACTORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_DROID_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_DROID_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1612,7 +1577,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SOLAR_ARRAY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_LUNAR_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SOLAR_ARRAY_PEDIA</Civilopedia>
@@ -1646,7 +1610,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_PARCOLOGY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_PARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_PARCOLOGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1691,7 +1654,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_KREEP_MINE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_KREEP_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_KREEP_MINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1731,7 +1693,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_HE3_EXTRACTION_FACILITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_HE3_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_HE3_EXTRACTION_FACILITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1773,7 +1734,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_OBSERVATORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_OBSERVATORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_OBSERVATORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1827,7 +1787,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_CHEMICAL_STORAGE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_CHEMICAL_STORAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_CHEMICAL_STORAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1850,7 +1809,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1871,7 +1829,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_FERTILIZER_STORAGE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_FERTILIZER_STORAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_FERTILIZER_STORAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1895,7 +1852,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SOLAR_PANELS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_SOLAR_PANELS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SOLAR_PANELS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -1921,7 +1877,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_BUG_FARM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_BUG_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_BUG_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -1957,7 +1912,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_FISH_FARM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_FISH_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_FISH_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -2006,7 +1960,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_ROCKET_FUEL_REFIENERY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_ROCKET_FUEL_REFIENERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ROCKET_FUEL_REFIENERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -2059,7 +2012,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_BIOMASS_POWERPLANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LUNAR_BIOMASS_POWERPLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_BIOMASS_POWERPLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>

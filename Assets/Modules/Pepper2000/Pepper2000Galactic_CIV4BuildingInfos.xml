@@ -3,7 +3,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_COLONY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSTELLAR_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -29,7 +28,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OORT_CLOUD_BASE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OORT_CLOUD_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OORT_CLOUD_BASE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -65,7 +63,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OORT_CLOUD_DEUTERIUM_MINE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OORT_CLOUD_DEUTERIUM_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OORT_CLOUD_DEUTERIUM_MINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -97,7 +94,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OORT_CLOUD_SOLAR_ARRAY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OORT_CLOUD_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OORT_CLOUD_SOLAR_ARRAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -136,7 +132,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OORT_CLOUD_MINE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OORT_CLOUD_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OORT_CLOUD_MINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -166,7 +161,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROGUE_OUTPOST</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ROGUE_OUTPOST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROGUE_OUTPOST_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -205,7 +199,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROGUE_RESUPPLY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ROGUE_RESUPPLY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROGUE_RESUPPLY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -239,7 +232,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROGUE_BEACON</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ROGUE_BEACON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROGUE_BEACON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -274,7 +266,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROGUE_REBEL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ROGUE_REBEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROGUE_REBEL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -332,7 +323,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_ROGUE_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_ROGUE_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_ROGUE_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -364,7 +354,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_SUBTERRANEAN_CITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSTELLAR_SUBTERRANEAN_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_SUBTERRANEAN_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -392,7 +381,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_SUBTERRANEAN_FARM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSTELLAR_SUBTERRANEAN_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_SUBTERRANEAN_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -418,7 +406,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_CUSTOMS_CENTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSTELLAR_CUSTOMS_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_CUSTOMS_CENTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -448,7 +435,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_REST_STOP</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSTELLAR_REST_STOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_REST_STOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -474,7 +460,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_SCOUTING_FLEET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSTELLAR_SCOUTING_FLEET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_SCOUTING_FLEET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -500,7 +485,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUSION_MEGACOMPLEX</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FUSION_MEGACOMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FUSION_MEGACOMPLEX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -520,7 +504,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUARK_FUSION_POWER_PLANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_QUARK_FUSION_POWER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_QUARK_FUSION_POWER_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -545,7 +528,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_HYDROGEN_MAP</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_HYDROGEN_MAP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_HYDROGEN_MAP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -567,7 +549,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LASER_HIGHWAY_RELAY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LASER_HIGHWAY_RELAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LASER_HIGHWAY_RELAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -590,7 +571,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUSSARD_RAMJET_PORT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BUSSARD_RAMJET_PORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BUSSARD_RAMJET_PORT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -616,7 +596,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STARLIGHT_POWER_PLANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STARLIGHT_POWER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STARLIGHT_POWER_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -635,7 +614,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DARK_MATTER_HEATING</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DARK_MATTER_HEATING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DARK_MATTER_HEATING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -675,7 +653,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALDERSON_DISK</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ALDERSON_DISK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALDERSON_DISK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -707,7 +684,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALDERSON_DISK_TERACITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ALDERSON_DISK_TERACITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALDERSON_DISK_TERACITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -735,7 +711,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALDERSON_DISK_FANTASY_ZONE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ALDERSON_DISK_FANTASY_ZONE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALDERSON_DISK_FANTASY_ZONE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -768,7 +743,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALDERSON_DISK_MENAGERIE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ALDERSON_DISK_MENAGERIE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALDERSON_DISK_MENAGERIE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -799,7 +773,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOROIDAL_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TOROIDAL_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOROIDAL_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -824,7 +797,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HELIOFORMED_GAS_GIANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HELIOFORMED_GAS_GIANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HELIOFORMED_GAS_GIANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -850,7 +822,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONTACT_PROTOCOLS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CONTACT_PROTOCOLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONTACT_PROTOCOLS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -874,7 +845,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERPLANETARY_HIVEMIND</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERPLANETARY_HIVEMIND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERPLANETARY_HIVEMIND_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -906,7 +876,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PORTAL_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PORTAL_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PORTAL_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -932,7 +901,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_ARTIFICIAL_BROWN_DWARF</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSTELLAR_ARTIFICIAL_BROWN_DWARF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_ARTIFICIAL_BROWN_DWARF_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -958,7 +926,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_ARTIFICIAL_ROCKY_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSTELLAR_ARTIFICIAL_ROCKY_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_ARTIFICIAL_ROCKY_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -981,7 +948,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_ROGUE_GAS_GIANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSTELLAR_ROGUE_GAS_GIANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_ROGUE_GAS_GIANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1004,7 +970,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_ARTIFICIAL_RED_DWARF</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSTELLAR_ARTIFICIAL_RED_DWARF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_ARTIFICIAL_RED_DWARF_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1026,7 +991,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_DYSON_SPHERE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRANSTELLAR_DYSON_SPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_DYSON_SPHERE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1049,7 +1013,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ADVANCED_NUCLEAR_ENGINE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ADVANCED_NUCLEAR_ENGINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ADVANCED_NUCLEAR_ENGINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1072,7 +1035,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUSION_ENGINE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FUSION_ENGINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FUSION_ENGINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1092,7 +1054,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PULSAR_NAVIGATION</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PULSAR_NAVIGATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PULSAR_NAVIGATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1117,7 +1078,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_DATA_COLLECTION</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_DATA_COLLECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_DATA_COLLECTION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1156,7 +1116,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIRCULAR_WASTE_MANAGEMENT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CIRCULAR_WASTE_MANAGEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIRCULAR_WASTE_MANAGEMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1181,7 +1140,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRYONIC_SLEEPING_QUARTERS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CRYONIC_SLEEPING_QUARTERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRYONIC_SLEEPING_QUARTERS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1202,7 +1160,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MIND_STORAGE_SERVER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MIND_STORAGE_SERVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MIND_STORAGE_SERVER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1227,7 +1184,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARTIFICIALLY_INTELLIGENT_SHIP</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ARTIFICIALLY_INTELLIGENT_SHIP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARTIFICIALLY_INTELLIGENT_SHIP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1251,7 +1207,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GENE_ENHANCEMENT_LAB</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GENE_ENHANCEMENT_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GENE_ENHANCEMENT_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1273,7 +1228,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAK_MESBA</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_RAK_MESBA</Description>
@@ -1306,7 +1260,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GODWHEEL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GODWHEEL</Description>
@@ -1343,7 +1296,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_ICARUS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PROJECT_ICARUS</Description>
@@ -1352,7 +1305,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROJECT_ICARUS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PROJECT_ICARUS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACEPUNK</PrereqTech>
 			<iCost>5448</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1378,7 +1330,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_PERSEPHONE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PROJECT_PERSEPHONE</Description>
@@ -1390,9 +1342,6 @@
 			<iCost>6195</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<PrereqTech>TECH_CLOSED_ECONOMIES</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SPACEPUNK</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
 			</MapCategoryTypes>
@@ -1419,7 +1368,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STARDATE_CALENDAR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_STARDATE_CALENDAR</Description>
@@ -1451,7 +1399,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_COLONY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1477,7 +1424,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MILKY_WAY_COLONY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MILKY_WAY_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MILKY_WAY_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1504,7 +1450,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_AGGRESSIVE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_AGGRESSIVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_AGGRESSIVE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1528,7 +1473,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_COMMERCIAL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_COMMERCIAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_COMMERCIAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1559,7 +1503,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_EXPLORATORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_EXPLORATORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_EXPLORATORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1586,7 +1529,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_INDUSTRIOUS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_INDUSTRIOUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_INDUSTRIOUS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1613,7 +1555,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_OBEDIENT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_OBEDIENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_OBEDIENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1644,7 +1585,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_PARADISE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_PARADISE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_PARADISE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1691,7 +1631,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_REBELLIOUS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_REBELLIOUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_REBELLIOUS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1719,7 +1658,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLONY_EUGENICS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_COLONY_EUGENICS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COLONY_EUGENICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1744,7 +1682,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROGRAMMED_WORK_ETHIC</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PROGRAMMED_WORK_ETHIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROGRAMMED_WORK_ETHIC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1767,7 +1704,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NOOCRACY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NOOCRACY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NOOCRACY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1798,7 +1734,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOLACRACY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HOLACRACY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOLACRACY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1829,7 +1764,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MACHINE_RULE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MACHINE_RULE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MACHINE_RULE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1861,7 +1795,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GERONTOCRACY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GERONTOCRACY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GERONTOCRACY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1888,7 +1821,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UTOPIAN_SPACE_COLONY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_UTOPIAN_SPACE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UTOPIAN_SPACE_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1914,7 +1846,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_MEDIA_CENTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_MEDIA_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_MEDIA_CENTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1954,7 +1885,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANETARY_LANDING</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PLANETARY_LANDING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLANETARY_LANDING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1976,7 +1906,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_SETTLEMENT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_SETTLEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_SETTLEMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1999,7 +1928,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPITAL_CITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAPITAL_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAPITAL_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2048,7 +1976,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_AERIAL_CITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_AERIAL_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_AERIAL_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2080,7 +2007,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ECUMENOPOLIS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ECUMENOPOLIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ECUMENOPOLIS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2114,7 +2040,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RINGWORLD_CITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RINGWORLD_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RINGWORLD_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2142,7 +2067,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPHEREWORLD</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SPHEREWORLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPHEREWORLD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2178,7 +2102,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_METROPOLIS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_METROPOLIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_METROPOLIS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2202,7 +2125,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PORTAL_CITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PORTAL_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PORTAL_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2248,7 +2170,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIDALLY_LOCKED</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TIDALLY_LOCKED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIDALLY_LOCKED_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2288,7 +2209,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINI_NEPTUNE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MINI_NEPTUNE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MINI_NEPTUNE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2320,7 +2240,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPER_JUPITER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SUPER_JUPITER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SUPER_JUPITER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2352,7 +2271,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPER_EARTH</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SUPER_EARTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SUPER_EARTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2383,7 +2301,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OCEAN_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OCEAN_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OCEAN_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2415,7 +2332,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESERT_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DESERT_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESERT_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2447,7 +2363,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARBON_PLANET_BASE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CARBON_PLANET_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CARBON_PLANET_BASE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2479,7 +2394,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHTHONIAN_PLANET_BASE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CHTHONIAN_PLANET_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHTHONIAN_PLANET_BASE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2507,7 +2421,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENDED_STAR_SYSTEM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ASCENDED_STAR_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASCENDED_STAR_SYSTEM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2544,7 +2457,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STAR_COLONY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STAR_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STAR_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2567,7 +2479,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_FARM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2592,7 +2503,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SELF_REPLICATING_FACTORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SELF_REPLICATING_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SELF_REPLICATING_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2638,7 +2548,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WARP_DRIVE_FACTORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WARP_DRIVE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WARP_DRIVE_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2666,7 +2575,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINING_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MINING_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MINING_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2708,7 +2616,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDUSTRIAL_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INDUSTRIAL_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INDUSTRIAL_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2793,7 +2700,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FARM_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FARM_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FARM_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2818,7 +2724,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACKHOLE_POWER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BLACKHOLE_POWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLACKHOLE_POWER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2854,7 +2759,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KUGELBLITZ_POWER_PLANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_KUGELBLITZ_POWER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KUGELBLITZ_POWER_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2882,7 +2786,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PAIR_PRODUCTION_PLANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PAIR_PRODUCTION_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PAIR_PRODUCTION_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2910,7 +2813,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STAR_SCOOP</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STAR_SCOOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STAR_SCOOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2936,7 +2838,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STELLAR_FUSION_POWER_PLANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STELLAR_FUSION_POWER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STELLAR_FUSION_POWER_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2960,7 +2861,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPERNOVA_MINE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SUPERNOVA_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SUPERNOVA_MINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3002,7 +2902,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PRECIOUS_METAL_GENERATOR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PRECIOUS_METAL_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PRECIOUS_METAL_GENERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3028,7 +2927,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WHITE_HOLE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WHITE_HOLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WHITE_HOLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3067,7 +2965,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AEROPONICS_ARCOLOGY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_AEROPONICS_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AEROPONICS_ARCOLOGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3090,7 +2987,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONSCIOUS_MATERIAL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CONSCIOUS_MATERIAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONSCIOUS_MATERIAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3118,7 +3014,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MATTER_GENERATOR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MATTER_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MATTER_GENERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3144,7 +3039,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AB_FOUNDRY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_AB_FOUNDRY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AB_FOUNDRY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3173,7 +3067,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACKHOLE_FACTORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BLACKHOLE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLACKHOLE_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3209,7 +3102,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTRONIUM_FACTORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_COMPUTRONIUM_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COMPUTRONIUM_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3237,7 +3129,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PHILOTE_PRODUCER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PHILOTE_PRODUCER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PHILOTE_PRODUCER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3262,7 +3153,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNOBTAINIUM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_UNOBTAINIUM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNOBTAINIUM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3286,7 +3176,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PERSONAL_STARCRAFT_FACTORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PERSONAL_STARCRAFT_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PERSONAL_STARCRAFT_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3314,7 +3203,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIDALLY_LOCKED_WIND</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TIDALLY_LOCKED_WIND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIDALLY_LOCKED_WIND_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3336,7 +3224,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMATED_PREON_STAR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANIMATED_PREON_STAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMATED_PREON_STAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3366,7 +3253,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DYSON_SPHERE_HEAT_RECOVERY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DYSON_SPHERE_HEAT_RECOVERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DYSON_SPHERE_HEAT_RECOVERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3392,7 +3278,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3446,7 +3331,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DARK_MATTER_REACTOR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DARK_MATTER_REACTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DARK_MATTER_REACTOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3472,7 +3356,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZERO_POINT_POWER_INTERSTELLAR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ZERO_POINT_POWER_INTERSTELLAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZERO_POINT_POWER_INTERSTELLAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3503,7 +3386,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPTURED_ROGUE_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAPTURED_ROGUE_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAPTURED_ROGUE_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3526,7 +3408,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RINGWORLD</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RINGWORLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RINGWORLD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3551,7 +3432,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DYSON_SWARM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DYSON_SWARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DYSON_SWARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3579,7 +3459,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONSCIOUS_STAR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CONSCIOUS_STAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONSCIOUS_STAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3605,7 +3484,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DYSON_SPHERE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DYSON_SPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DYSON_SPHERE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3630,7 +3508,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MATRIOSHKA_BRAIN</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MATRIOSHKA_BRAIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MATRIOSHKA_BRAIN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3708,7 +3585,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOPOPOLIS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TOPOPOLIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOPOPOLIS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3735,7 +3611,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARTIFICIAL_MOON</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ARTIFICIAL_MOON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARTIFICIAL_MOON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3766,7 +3641,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPTURED_NEUTRON_STAR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAPTURED_NEUTRON_STAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAPTURED_NEUTRON_STAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3799,7 +3673,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOLLOW_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HOLLOW_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOLLOW_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3822,7 +3695,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OSMIUM_CORE_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OSMIUM_CORE_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OSMIUM_CORE_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3846,7 +3718,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3880,7 +3751,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOGEOCOMPUTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BIOGEOCOMPUTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIOGEOCOMPUTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3928,7 +3798,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_GAS_GIANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_GAS_GIANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_GAS_GIANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3958,7 +3827,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_ASTEROID_MINE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_ASTEROID_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_ASTEROID_MINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3984,7 +3852,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMET_DUST_COLLECTOR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_COMET_DUST_COLLECTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COMET_DUST_COLLECTOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4013,7 +3880,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERIOR_STAR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERIOR_STAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERIOR_STAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4039,7 +3905,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WORLDHOUSE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WORLDHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORLDHOUSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4063,7 +3928,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GAS_GIANT_SURFACE_SHELL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GAS_GIANT_SURFACE_SHELL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GAS_GIANT_SURFACE_SHELL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4090,7 +3954,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARTIFICIAL_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ARTIFICIAL_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARTIFICIAL_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4121,7 +3984,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANETARY_SHELLWORLD</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PLANETARY_SHELLWORLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLANETARY_SHELLWORLD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4147,7 +4009,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTRONIUM_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_COMPUTRONIUM_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COMPUTRONIUM_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4173,7 +4034,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOLOGRAPHIC_UNIVERSE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HOLOGRAPHIC_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOLOGRAPHIC_UNIVERSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4211,7 +4071,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_BIOMARKER_CATALOGUE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GALACTIC_BIOMARKER_CATALOGUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_BIOMARKER_CATALOGUE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4235,7 +4094,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEMORY_CRYSTAL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MEMORY_CRYSTAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEMORY_CRYSTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4255,7 +4113,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACK_HOLE_COMPUTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BLACK_HOLE_COMPUTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLACK_HOLE_COMPUTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4287,7 +4144,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ETERNAL_INTELLIGENCE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ETERNAL_INTELLIGENCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ETERNAL_INTELLIGENCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4331,7 +4187,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FULL_SPATIAL_EMULATION_STUDIO</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FULL_SPATIAL_EMULATION_STUDIO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FULL_SPATIAL_EMULATION_STUDIO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4354,7 +4209,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SELECTIVE_DECOHERENCE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SELECTIVE_DECOHERENCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SELECTIVE_DECOHERENCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4378,7 +4232,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEUTRON_STAR_COMPUTATIONAL_SUBSTRATE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NEUTRON_STAR_COMPUTATIONAL_SUBSTRATE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEUTRON_STAR_COMPUTATIONAL_SUBSTRATE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4408,7 +4261,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAVITON_DETECTOR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GRAVITON_DETECTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRAVITON_DETECTOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4431,7 +4283,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_XENOARCHEOLOGIST</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_XENOARCHEOLOGIST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_XENOARCHEOLOGIST_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4463,7 +4314,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_SUPERCOMPUTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GALACTIC_SUPERCOMPUTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_SUPERCOMPUTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4486,7 +4336,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_AC</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GALACTIC_AC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_AC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4527,7 +4376,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CEPHEID_BEACON</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CEPHEID_BEACON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CEPHEID_BEACON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4551,7 +4399,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EVENT_HORIZON_PROBE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_EVENT_HORIZON_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EVENT_HORIZON_PROBE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4585,7 +4432,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACK_HOLE_INTERIOR_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BLACK_HOLE_INTERIOR_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLACK_HOLE_INTERIOR_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4622,7 +4468,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STAR_CLUSTER_COLONY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STAR_CLUSTER_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STAR_CLUSTER_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4652,7 +4497,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CORE_COLONY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GALACTIC_CORE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_CORE_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4681,7 +4525,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERAEARTH</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TERAEARTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERAEARTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4727,7 +4570,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEBULA_REBEL_BASE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NEBULA_REBEL_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEBULA_REBEL_BASE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4785,7 +4627,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACKHOLE_COLONY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BLACKHOLE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLACKHOLE_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4818,7 +4659,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WHITE_DWARF_COLONY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WHITE_DWARF_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WHITE_DWARF_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4849,7 +4689,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EVENT_HORIZON_CITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_EVENT_HORIZON_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EVENT_HORIZON_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4882,7 +4721,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACK_HOLE_EM_POPULATION</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BLACK_HOLE_EM_POPULATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLACK_HOLE_EM_POPULATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4916,7 +4754,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEUTRON_STAR_COLONY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NEUTRON_STAR_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEUTRON_STAR_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4948,7 +4785,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LILLIPUTIAN_CITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LILLIPUTIAN_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LILLIPUTIAN_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4973,7 +4809,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4994,7 +4829,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEUTRINO_SCANNER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NEUTRINO_SCANNER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEUTRINO_SCANNER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5020,7 +4854,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANETARY_AWARENESS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PLANETARY_AWARENESS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLANETARY_AWARENESS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5054,7 +4887,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHRONOTON_CANNON</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CHRONOTON_CANNON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHRONOTON_CANNON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5079,7 +4911,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FALSE_VACUUM_TRAP</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FALSE_VACUUM_TRAP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FALSE_VACUUM_TRAP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5108,7 +4939,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOLECULAR_DISRUPTION_DEVICE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MOLECULAR_DISRUPTION_DEVICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOLECULAR_DISRUPTION_DEVICE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5133,7 +4963,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRACTOR_BEAM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRACTOR_BEAM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRACTOR_BEAM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5158,7 +4987,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REINFORCED_DYSON_SPHERE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_REINFORCED_DYSON_SPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_REINFORCED_DYSON_SPHERE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5181,7 +5009,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DARK_LIGHT_BEACON</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DARK_LIGHT_BEACON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DARK_LIGHT_BEACON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5206,7 +5033,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARADISE_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PARADISE_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PARADISE_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5244,7 +5070,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOTIC_SPHEREWORLD</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BIOTIC_SPHEREWORLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIOTIC_SPHEREWORLD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5298,7 +5123,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANETARY_ZOO</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PLANETARY_ZOO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLANETARY_ZOO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5333,7 +5157,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSPECIES_COMMUNITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSPECIES_COMMUNITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSPECIES_COMMUNITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5362,7 +5185,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ADAPTED_HUMAN</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ADAPTED_HUMAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ADAPTED_HUMAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5388,7 +5210,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_STADIUM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_STADIUM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_STADIUM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5412,7 +5233,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEGENERATE_ERA_SURVIVAL_PLAN</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DEGENERATE_ERA_SURVIVAL_PLAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEGENERATE_ERA_SURVIVAL_PLAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5444,7 +5264,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DYSON_SPHERE_PORTAL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DYSON_SPHERE_PORTAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DYSON_SPHERE_PORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5475,7 +5294,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DYSON_SHUTTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DYSON_SHUTTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DYSON_SHUTTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5500,7 +5318,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WORMHOLE_BEACON</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WORMHOLE_BEACON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORMHOLE_BEACON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5535,7 +5352,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WORMHOLE_TRADE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WORMHOLE_TRADE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORMHOLE_TRADE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5581,7 +5397,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIMEHOLE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TIMEHOLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIMEHOLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5612,7 +5427,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_SAIL_NETWORK</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_SAIL_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_SAIL_NETWORK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5642,7 +5456,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEUTRINO_BEACON</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NEUTRINO_BEACON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEUTRINO_BEACON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5666,7 +5479,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHKADOV_THRUSTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SHKADOV_THRUSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHKADOV_THRUSTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5686,7 +5498,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_STARPORT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_STARPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_STARPORT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5722,7 +5533,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_PORT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GALACTIC_PORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_PORT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5750,7 +5560,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_TOURIST_AGENCY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_TOURIST_AGENCY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_TOURIST_AGENCY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5773,7 +5582,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPERLUMINAL_SHKADOV_THRUSTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SUPERLUMINAL_SHKADOV_THRUSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SUPERLUMINAL_SHKADOV_THRUSTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5804,7 +5612,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_NETWORK_NODE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_NETWORK_NODE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_NETWORK_NODE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5830,7 +5637,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_NODE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_COSMIC_NODE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMIC_NODE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5864,7 +5670,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUSINESS_DISTRICT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BUSINESS_DISTRICT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BUSINESS_DISTRICT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5890,7 +5695,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RESIDENTIAL_DISTRICT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RESIDENTIAL_DISTRICT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESIDENTIAL_DISTRICT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5918,7 +5722,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STAR_ROAD</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STAR_ROAD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STAR_ROAD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5946,7 +5749,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERMAGLEV</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HYPERMAGLEV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERMAGLEV_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -5974,7 +5776,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EXAVERSE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_EXAVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EXAVERSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6012,7 +5813,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_HYPERPORT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_HYPERPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_HYPERPORT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6039,7 +5839,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_ADMINISTRATION</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_ADMINISTRATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_ADMINISTRATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6117,7 +5916,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONTROLLED_BREEDING</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CONTROLLED_BREEDING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONTROLLED_BREEDING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6148,7 +5946,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESIGNER_CASTE_LAW_ENFORCEMENT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DESIGNER_CASTE_LAW_ENFORCEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNER_CASTE_LAW_ENFORCEMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6187,7 +5984,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESIGNER_CASTE_MAINTENANCE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DESIGNER_CASTE_MAINTENANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNER_CASTE_MAINTENANCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6206,7 +6002,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESIGNER_CASTE_MISSION_CONTROL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DESIGNER_CASTE_MISSION_CONTROL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNER_CASTE_MISSION_CONTROL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6230,7 +6025,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PRISON_PLANET</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PRISON_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PRISON_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6261,7 +6055,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_BANISHMENT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_COSMIC_BANISHMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMIC_BANISHMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6285,7 +6078,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIME_ABYSS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TIME_ABYSS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIME_ABYSS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6328,7 +6120,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIME_POLICE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TIME_POLICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIME_POLICE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6361,7 +6152,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MILKY_WAY_CLUSTER_BRAIN</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MILKY_WAY_CLUSTER_BRAIN</Description>
@@ -6401,7 +6191,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARGUS_ARRAY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ARGUS_ARRAY</Description>
@@ -6446,7 +6235,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CORE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GALACTIC_CORE</Description>
@@ -6478,7 +6266,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EARTH_BACKUP</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_EARTH_BACKUP</Description>
@@ -6524,7 +6311,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WORMHOLE_NETWORK</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_WORMHOLE_NETWORK</Description>
@@ -6550,7 +6336,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_NEWS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GALACTIC_NEWS</Description>
@@ -6590,7 +6375,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARTIFICIAL_CONSTELLATION</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ARTIFICIAL_CONSTELLATION</Description>
@@ -6628,7 +6412,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EARTH_20</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_EARTH_20</Description>
@@ -6660,7 +6443,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANDROMEDA</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ANDROMEDA</Description>
@@ -6690,7 +6472,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CORE_BASE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GALACTIC_CORE_BASE</Description>
@@ -6722,7 +6503,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CORE_DYSON_SPHERE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GALACTIC_CORE_DYSON_SPHERE</Description>
@@ -6766,7 +6546,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANTOR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TRANTOR</Description>
@@ -6810,7 +6589,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ONYX</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ONYX</Description>
@@ -6834,7 +6612,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROTOS_MANDATE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PROTOS_MANDATE</Description>
@@ -6860,7 +6637,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CENTERPOINT_STATION</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CENTERPOINT_STATION</Description>
@@ -6889,7 +6665,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_OLYMPICS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_OLYMPICS</Description>
@@ -6928,7 +6703,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GLIESE_667CC</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GLIESE_667CC</Description>
@@ -6969,7 +6743,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GLIESE_581D</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GLIESE_581D</Description>
@@ -7008,7 +6781,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROXIMA_CENTAURI</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PROXIMA_CENTAURI</Description>
@@ -7053,7 +6825,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WOLF_1061C</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_WOLF_1061C</Description>
@@ -7099,7 +6870,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HD_85512B</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HD_85512B</Description>
@@ -7144,7 +6914,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GLIESE_163C</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GLIESE_163C</Description>
@@ -7191,7 +6960,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KEPLER_186F</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_KEPLER_186F</Description>
@@ -7237,7 +7005,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KEPLER_22B</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_KEPLER_22B</Description>
@@ -7282,7 +7049,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PERSEUS_ARM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PERSEUS_ARM</Description>
@@ -7324,7 +7090,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NORMA_AND_OUTER_ARM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_NORMA_AND_OUTER_ARM</Description>
@@ -7370,7 +7135,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCUTUM_CRUX_ARM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SCUTUM_CRUX_ARM</Description>
@@ -7414,7 +7178,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARINA_SAGITTARIUS_ARM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CARINA_SAGITTARIUS_ARM</Description>
@@ -7455,7 +7218,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYADES_STAR_CLUSTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HYADES_STAR_CLUSTER</Description>
@@ -7501,7 +7263,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NGC_6811</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_NGC_6811</Description>
@@ -7543,7 +7304,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CYGNUS_X1</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CYGNUS_X1</Description>

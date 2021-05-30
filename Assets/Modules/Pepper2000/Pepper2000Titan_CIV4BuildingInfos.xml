@@ -3,7 +3,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_BASE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TITAN_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_BASE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -28,7 +27,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_AIR_TRANSPORT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TITAN_AIR_TRANSPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_AIR_TRANSPORT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -51,7 +49,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_FERTILIZER_PLANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TITAN_FERTILIZER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_FERTILIZER_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -76,7 +73,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_HYDROCARBON_REFINERY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TITAN_HYDROCARBON_REFINERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_HYDROCARBON_REFINERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -101,7 +97,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_BIOFACTORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TITAN_BIOFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_BIOFACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -127,7 +122,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_AMMONIA_ERUPTION</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TITAN_AMMONIA_ERUPTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_AMMONIA_ERUPTION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -149,7 +143,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_SF6</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TITAN_SF6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_SF6_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -170,7 +163,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_CONTINENT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TITAN_CONTINENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_CONTINENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -196,7 +188,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_ECOSYSTEM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TITAN_ECOSYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_ECOSYSTEM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -218,7 +209,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_SUPERCOMPUTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TITAN_SUPERCOMPUTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_SUPERCOMPUTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -240,7 +230,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_ARCOLOGY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TITAN_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_ARCOLOGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -268,7 +257,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_NITROGEN_EXPORTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TITAN_NITROGEN_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_NITROGEN_EXPORTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -294,7 +282,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_TITAN</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_TITAN</Description>
@@ -334,7 +321,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTRONIUM_TITAN</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_COMPUTRONIUM_TITAN</Description>

@@ -3,7 +3,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_COLONY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -50,7 +49,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_CITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -80,7 +78,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_SURFACE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_SURFACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -120,7 +117,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_ARCOLOGY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_ARCOLOGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -162,7 +158,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_SKY_ARCOLOGY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_SKY_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_SKY_ARCOLOGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -190,7 +185,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_SOLAR_ARRAY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_SOLAR_ARRAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -214,7 +208,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_VERTICAL_WIND_FARM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_VERTICAL_WIND_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_VERTICAL_WIND_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -241,7 +234,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_OXYGEN_GENERATOR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_OXYGEN_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_OXYGEN_GENERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -266,7 +258,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_HYDROGEN_GENERATOR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_HYDROGEN_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_HYDROGEN_GENERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -289,7 +280,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_CARBONWORKS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_CARBONWORKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_CARBONWORKS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -327,7 +317,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_MAGLEV</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_MAGLEV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_MAGLEV_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -351,7 +340,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_ECOSYSTEM</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_ECOSYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_ECOSYSTEM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -374,7 +362,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_HYDROGEN_BOMBARDMENT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_HYDROGEN_BOMBARDMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_HYDROGEN_BOMBARDMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -400,7 +387,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_GOVERNING_COUNCIL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_GOVERNING_COUNCIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_GOVERNING_COUNCIL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -427,7 +413,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_ENTERTAINMENT_COMPLEX</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_ENTERTAINMENT_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_ENTERTAINMENT_COMPLEX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -446,7 +431,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_TRADE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_TRADE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_TRADE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -470,7 +454,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_DEUTERIUM_EXPORTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_DEUTERIUM_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_DEUTERIUM_EXPORTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -492,7 +475,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_BROADBAND</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_BROADBAND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_BROADBAND_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -524,7 +506,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_SURFACE_PROBE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -550,7 +531,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_SURFACE_SCOOP</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_SCOOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_SCOOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -576,7 +556,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_ORBITAL_SOLAR_ARRAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -601,7 +580,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_SURFACE_FACTORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -628,7 +606,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_FUSION_PLANT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_FUSION_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_FUSION_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -651,7 +628,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_BIOTIC_ATMOSPHERE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_BIOTIC_ATMOSPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_BIOTIC_ATMOSPHERE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -688,7 +664,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_HOTEL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_HOTEL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -724,7 +699,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_CO2_REMOVAL</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_CO2_REMOVAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_CO2_REMOVAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -748,7 +722,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CALCIUM_MINE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CALCIUM_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CALCIUM_MINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -770,7 +743,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CALCIUM_CARBONATE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CALCIUM_CARBONATE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CALCIUM_CARBONATE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -794,7 +766,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AGRODOME</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_AGRODOME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AGRODOME_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -819,7 +790,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_MEGAFACTORY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_MEGAFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_MEGAFACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -845,7 +815,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_CLAYTRONIC_CITY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_CLAYTRONIC_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_CLAYTRONIC_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -869,7 +838,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_DEATH_RAY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VENUS_DEATH_RAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_DEATH_RAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -896,7 +864,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_TERRA</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_VENUS_TERRA</Description>
@@ -940,7 +907,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_VENUS_EFFECT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -974,7 +940,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPTURED_IO</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CAPTURED_IO</Description>
@@ -1013,7 +978,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_ARTIFICIAL_ROTATION</Type>
-			<SpecialBuildingType>SPECIALBUILDING_SPACE</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_VENUS_ARTIFICIAL_ROTATION</Description>
