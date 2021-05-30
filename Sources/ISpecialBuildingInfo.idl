@@ -1,8 +1,0 @@
-[
-	uuid (ba209999-0c6c-11d2-97cf-00c04f8eea45),
-	version(1.0),
-]
-interface ITest
-{
-	short test([in] int index, [out] int* value);
-}

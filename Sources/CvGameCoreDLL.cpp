@@ -90,7 +90,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 					return FALSE;
 				}
 			}
-			if (!runProcess(git_dir + "\\Assets\\Server.exe", git_dir + "\\Assets", false))
+			if (!runProcess(git_dir + "\\Assets\\CvGameCoreServer.exe", git_dir + "\\Assets", false))
 			{
 				MessageBox(0, "Server failed", "ERROR!", 0);
 				return false;

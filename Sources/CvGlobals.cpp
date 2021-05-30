@@ -21,8 +21,7 @@
 #include "CvImprovementInfo.h"
 #include <time.h> 
 #include <sstream>
-#include "ITest.h"
-#include "ITest_c.c"
+#include "c2c_rpc.h"
 
 static char gVersionString[1024] = { 0 };
 
@@ -454,26 +453,7 @@ void cvInternalGlobals::init()
 
 	OutputDebugString("Initializing Internal Globals: End");
 
-	unsigned short* StringBinding;
-	RPC_BINDING_HANDLE BindingHandle;
-	RPC_STATUS status = RpcStringBindingCompose(
-		(RPC_CSTR)"ba209999-0c6c-11d2-97cf-00c04f8eea45",
-		(RPC_CSTR)L"ncalrpc",
-		(RPC_CSTR)(getModDir() + "\\Assets\\Server.exe").c_str(), // Server DNS or Netbios Name
-		NULL,
-		NULL,
-		(RPC_CSTR*)&StringBinding
-	);
-
-	FAssert(status == RPC_S_OK);
-
-	status = RpcBindingFromStringBinding((RPC_CSTR)StringBinding, &BindingHandle);
-	FAssert(status == RPC_S_OK);
-	RpcStringFree((RPC_CSTR*)&StringBinding);
-
-	int value;
-	test(BindingHandle, 0, &value);
-	FAssert(value == 100);
+	rpc::init();
 }
 
 //
