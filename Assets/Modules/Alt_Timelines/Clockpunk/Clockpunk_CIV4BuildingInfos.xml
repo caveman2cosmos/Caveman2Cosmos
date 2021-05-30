@@ -10,12 +10,11 @@
 			<Type>BUILDING_CLOCKPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CLOCKPUNK_EMBASSY</ArtDefineTag>
-			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -35,16 +34,16 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOMATION_CLOCK</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_AUTOMATION_CLOCK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOMATION_CLOCK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AUTOMATION_CLOCK</ArtDefineTag>
-			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<iCost>380</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -74,20 +73,18 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORCHESTRION_THEATER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ORCHESTRION_THEATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORCHESTRION_THEATER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORCHESTRION_THEATER</ArtDefineTag>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<PrereqTech>TECH_REALISM</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>770</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iMaintenanceModifier>5</iMaintenanceModifier>
@@ -116,12 +113,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STEPRECKONER_MANUFACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STEPRECKONER_MANUFACTORY</ArtDefineTag>
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
-			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_COPPER_WARES</Bonus>
@@ -129,7 +126,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>380</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<YieldChanges>
@@ -144,12 +141,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLOCKWORK_WORKSHOP</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CLOCKWORK_WORKSHOP</ArtDefineTag>
 			<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
-			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -162,7 +159,7 @@
 				<Bonus>BONUS_BRASS_WARES</Bonus>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>380</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<HealUnitCombatTypes>
@@ -193,17 +190,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLOCKPUNK_AIRPORT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CLOCKPUNK_AIRPORT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_EARLY_AIRPORT</ConstructSound>
-			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iCost>380</iCost>
 			<iAirUnitCapacity>2</iAirUnitCapacity>

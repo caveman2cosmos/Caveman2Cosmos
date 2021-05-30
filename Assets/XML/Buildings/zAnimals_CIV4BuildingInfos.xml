@@ -15235,14 +15235,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RATITE_HERD</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RATITE_HERD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RATITE_HERD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RATITE_HERD</ArtDefineTag>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_FEATHERS</FreeBonus>

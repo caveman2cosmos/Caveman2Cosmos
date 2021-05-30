@@ -10,12 +10,11 @@
 			<Type>BUILDING_DIESELPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DIESELPUNK_EMBASSY</ArtDefineTag>
-			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -34,6 +33,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AERODROME</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_AERODROME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AERODROME_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -42,7 +42,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_DIESELPUNK</Bonus>
-			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAirlift>2</iAirlift>
@@ -73,19 +72,17 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAND_AERODROME</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GRAND_AERODROME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRAND_AERODROME_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_AERODROME</ArtDefineTag>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			</TechTypes>
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -118,11 +115,12 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZUSE_COMPUTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ZUSE_COMPUTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZUSE_COMPUTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -133,9 +131,6 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<PrereqTech>TECH_EARLY_COMPUTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			</TechTypes>
 			<iCost>1130</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -154,19 +149,17 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIRIGIBLE_TERMINAL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DIRIGIBLE_TERMINAL</ArtDefineTag>
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
-			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ZEPPELINS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ZEPPELINS</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -184,18 +177,16 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 				<BuildingType>BUILDING_EMPIRE_STATE_BUILDING</BuildingType>
 			</PrereqOrBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FARNSWORTH_LAB</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FARNSWORTH_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FARNSWORTH_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FARNSWORTH_LAB</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -213,18 +204,16 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_THEREMIN_FACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_THEREMIN_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THEREMIN_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_THEREMIN_FACTORY</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -251,15 +240,15 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RADIOPLEX</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RADIOPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RADIOPLEX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RADIOPLEX</ArtDefineTag>
-			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -300,7 +289,7 @@
 				</Flavor>
 			</Flavors>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLIGHT_SCHOOL</Type>
