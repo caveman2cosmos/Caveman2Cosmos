@@ -61,9 +61,9 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)Example1Server.exe</OutputFile>
+      <OutputFile>$(SolutionDir)..\Assets\$(MSBuildProjectName).exe</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(OutDir)Example1Server.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)..\Assets\$(MSBuildProjectName).pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
@@ -87,7 +87,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)Example1Server.exe</OutputFile>
+      <OutputFile>$(SolutionDir)..\Assets\$(MSBuildProjectName).exe</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -97,13 +97,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CvGameCoreServer.cpp" />
-    <ClCompile Include="..\Interface\Example1_s.c">
-      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level3</WarningLevel>
-      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level3</WarningLevel>
-    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\Interface\ITest_s.c" />
+    <ClCompile Include="$(SolutionDir)\Interface\IServerUtils_s.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Interface\Example1.h" />
+    <ClInclude Include="$(SolutionDir)\Interface\ITest.h" />
+    <ClInclude Include="$(SolutionDir)\Interface\IServerUtils.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Interface\Interface.vcxproj">

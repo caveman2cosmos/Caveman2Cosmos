@@ -189,6 +189,13 @@
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="$(SolutionDir)\Interfaces\IServerUtils_c.c">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\Interfaces\ITest_c.c">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\Server\CvGameCoreServer.cpp" />
     <ClCompile Include="..\boost_test\test.cpp" />
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
@@ -341,7 +348,6 @@
     <ClCompile Include="FDataIOStream.cpp" />
     <ClCompile Include="FDialogTemplate.cpp" />
     <ClCompile Include="IntExpr.cpp" />
-    <ClCompile Include="$(SolutionDir)\Interfaces\ITest_c.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm2.h" />
@@ -499,7 +505,6 @@
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Win32.h" />
-    <ClInclude Include="$(SolutionDir)\Interfaces\ITest.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
@@ -517,6 +522,12 @@
   <ItemGroup>
     <Natvis Include="C2C.natvis" />
     <Natvis Include="std.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(SolutionDir)Interface\Interface.vcxproj">
+      <Project>{6536ebec-014e-4d6b-97be-223137694ca8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

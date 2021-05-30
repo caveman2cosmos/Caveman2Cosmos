@@ -1,0 +1,8 @@
+[
+   uuid(00000001-EAF3-4A7A-A0F2-BCE4C30DA77E),
+   version(1.0)
+]
+interface IServerUtils
+{
+   void Output([in, string] const char* szOutput);
+}

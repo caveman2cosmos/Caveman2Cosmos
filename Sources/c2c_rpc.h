@@ -7,7 +7,7 @@ namespace rpc
 {
 	void createServerProcess();
 	void init();
-	void FRpcAssert(const char* szFunction, RPC_STATUS status);
+	void FRpcAssert(RPC_STATUS status);
 }
 
 #endif

@@ -1,7 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "c2c_rpc.h"
-#include "Interface//ITest_c.c"
 #include "Interface//ITest.h"
+#include "Interface//IServerUtils_c.c"
 //#include <Rpc.h>
 //#include <Rpcndr.h>
 
@@ -31,38 +31,39 @@ namespace rpc
 		//status = RPC_STATUS RpcNsBindingImportBeginA(RPC_C_NS_SYNTAX_DEFAULT, (RPC_CSTR)"CvGameCoreServerEP", ITest_v1_0_s_ifspec, rpcBindingVector, ImportContext);
 
 		status = RpcBindingFromStringBinding((RPC_CSTR)"ncalrpc:[CvGameCoreServer]", &hITestBinding);
-		FRpcAssert("RpcBindingFromStringBinding()", status);
+		FRpcAssert(status);
 */
-	   unsigned char* szStringBinding = NULL;
+	   unsigned char* szBinding = NULL;
 
-	   // Creates a string binding handle.
-	   // This function is nothing more than a printf.
-	   // Connection is not done here.
-	   status = RpcStringBindingCompose(
-		  NULL, // UUID to bind to.
+		status = RpcStringBindingCompose(NULL,
 		  reinterpret_cast<unsigned char*>("ncacn_ip_tcp"), // Use TCP/IP
-															// protocol.
 		  reinterpret_cast<unsigned char*>("localhost"), // TCP/IP network
-														 // address to use.
 		  reinterpret_cast<unsigned char*>("4747"), // TCP/IP port to use.
-		  NULL, // Protocol dependent network options to use.
-		  &szStringBinding); // String binding output.
+		  NULL, &szBinding);
 
-		FRpcAssert("RpcStringBindingCompose()", status);
+		FRpcAssert(status);
 
-	   // Validates the format of the string binding handle and converts
-	   // it to a binding handle.
-	   // Connection is not done here either.
-	   status = RpcBindingFromStringBinding(
-		  szStringBinding, // The string binding to validate.
-		  &hITestBinding); // Put the result in the implicit binding
-							  // handle defined in the IDL file.
-		FRpcAssert("RpcBindingFromStringBinding()", status);
+		status = RpcBindingFromStringBinding(szBinding, &hIServerUtilsBinding);
+		FRpcAssert(status);
 
-		rpc_test();
+		RpcTryExcept
+		{
+			Output("Test");
+		}
+		RpcExcept(1)
+		{
+			std::cerr << "Runtime reported exception " << RpcExceptionCode() << std::endl;
+		}
+		RpcEndExcept
+
+		status = RpcStringFree(&szBinding);
+		FRpcAssert(status);
+
+		status = RpcBindingFree(&hIServerUtilsBinding);
+		FRpcAssert(status);
 	}
 
-	void FRpcAssert(const char* szFunction, RPC_STATUS status)
+	void FRpcAssert(RPC_STATUS status)
 	{
 //#ifdef _DEBUG
 		if (FAILED(status))
@@ -72,7 +73,7 @@ namespace rpc
 				FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS | FORMAT_MESSAGE_MAX_WIDTH_MASK,
 				NULL, status, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPTSTR)&pBuffer, 0, NULL
 			);
-			FErrorMsg(str(bst::format("%s failed. %s (%ud)") %szFunction %(LPTSTR)pBuffer %status).c_str());
+			FErrorMsg(str(bst::format("Rpc error: %s (%ud)") %(LPTSTR)pBuffer %status).c_str());
 			LocalFree(pBuffer);
 		}
 //#endif
