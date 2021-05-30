@@ -1304,8 +1304,23 @@ class Pedia:
 
 	def getSortedList(self, numInfos, getInfo):
 		list = []
+		ListDict = {}				
+			
 		for i in xrange(numInfos):
 			item = getInfo(i)
+
+			if getInfo == GC.getImprovementInfo:
+				TechReq = item.getPrereqTech()
+			elif getInfo == GC.getCivicInfo or getInfo == GC.getPromotionInfo or getInfo == GC.getBuildInfo:
+				TechReq = item.getTechPrereq()
+			else:
+				pass
+			
+			try:
+				iTechLoc = GC.getTechInfo(TechReq).getGridX()
+			except:
+				iTechLoc = 0			
+			
 			if item:
 				bValid = True
 				try:
@@ -1313,8 +1328,12 @@ class Pedia:
 				except:
 					pass
 				if (bValid):
-					list.append((item.getDescription(), i))
+					ListDict[(iTechLoc, i)] = (item.getDescription(), i)
+					list.append((iTechLoc, i))
 		list.sort()
+		for i in xrange(len(list)):
+			key = list[i]
+			list[i] = ListDict[key]
 		return list
 
 	def getItsEra(self, CvItsInfo):
