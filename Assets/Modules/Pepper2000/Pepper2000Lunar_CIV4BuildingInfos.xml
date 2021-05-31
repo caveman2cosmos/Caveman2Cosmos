@@ -1,6 +1,27 @@
 <?xml version="1.0" ?>
 <Civ4BuildingInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
-	<BuildingInfos>		
+	<BuildingInfos>
+		<BuildingInfo>
+			<Type>BUILDING_LUNAR_OUTPOST</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
+			<Description>TXT_KEY_BUILDING_LUNAR_OUTPOST</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LUNAR_OUTPOST_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_LUNAR_OUTPOST</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LUNAR_OUTPOST</MovieDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<CommerceChanges>
+				<iCommerce>-100</iCommerce>
+				<iCommerce>25</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>50</iCommerce>
+			</CommerceChanges>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_URBAN_MOON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -140,6 +161,22 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_LUNA_RING_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_LUNA_RING_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LUNA_RING_EFFECT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_LUNA_RING_EFFECT</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_LUNAR_MEGASTRUCTURES</PrereqTech>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>20</iYield>
+			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_CENTRIFUGAL_HABITAT</Type>

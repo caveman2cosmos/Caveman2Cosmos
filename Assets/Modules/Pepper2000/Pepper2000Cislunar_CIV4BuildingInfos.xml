@@ -828,7 +828,26 @@
 				<iYield>1</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-		</BuildingInfo>		
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
+			<iHurryCostModifier>10000</iHurryCostModifier>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+			</MapCategoryTypes>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>25</iYield>
+			</YieldChanges>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM</Description>

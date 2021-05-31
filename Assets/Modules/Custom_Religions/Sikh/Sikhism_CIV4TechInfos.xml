@@ -11,9 +11,9 @@
 			<Era>C2C_ERA_RENAISSANCE</Era>
 			<bGlobal>1</bGlobal>
 			<iGridX>52</iGridX>
-			<iCost>52</iCost>
 			<iGridY>11</iGridY>
 			<Advisor>ADVISOR_RELIGION</Advisor>
+			<iCost>2528</iCost>
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<Flavors>

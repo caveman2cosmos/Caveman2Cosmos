@@ -6,6 +6,7 @@
 			<Description>TXT_KEY_TECH_ASATRU</Description>
 			<Civilopedia>TXT_KEY_TECH_ASATRU_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
+			<iCost>499</iCost>
 			<bGlobal>1</bGlobal>
 			<Era>C2C_ERA_CLASSICAL</Era>
 			<OrPreReqs>
@@ -14,7 +15,6 @@
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<iGridX>34</iGridX>
-			<iCost>34</iCost>
 			<iGridY>1</iGridY>
 			<Flavors>
 				<Flavor>

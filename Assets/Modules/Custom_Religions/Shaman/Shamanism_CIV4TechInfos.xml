@@ -7,11 +7,11 @@
 			<Civilopedia>TXT_KEY_TECH_SHAMANISM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
+			<iCost>34</iCost>
 			<Era>C2C_ERA_PREHISTORIC</Era>
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<iGridX>14</iGridX>
-			<iCost>14</iCost>
 			<iGridY>15</iGridY>
 			<Flavors>
 				<Flavor>

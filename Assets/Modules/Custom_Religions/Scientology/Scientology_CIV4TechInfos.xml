@@ -6,9 +6,9 @@
 			<Description>TXT_KEY_TECH_SCIENTOLOGY</Description>
 			<Civilopedia>TXT_KEY_TECH_SCIENTOLOGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
+			<iCost>11665</iCost>
 			<Era>C2C_ERA_ATOMIC</Era>
 			<iGridX>77</iGridX>
-			<iCost>77</iCost>
 			<iGridY>7</iGridY>
 			<bGlobal>1</bGlobal>
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
