@@ -1172,7 +1172,7 @@ class Pedia:
 
 	def placeImprovements(self):
 		print "Category: Improvements"
-		self.aList = self.getSortedList(GC.getNumImprovementInfos(), GC.getImprovementInfo)
+		self.aList = self.getTimeSortedList(GC.getNumImprovementInfos(), GC.getImprovementInfo)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_IMPROVEMENT, GC.getImprovementInfo)
 
 	def placeRoutes(self):
@@ -1182,7 +1182,7 @@ class Pedia:
 
 	def placeBuilds(self):
 		print "Category: Worker Builds"
-		self.aList = self.getSortedList(GC.getNumBuildInfos(), GC.getBuildInfo)
+		self.aList = self.getTimeSortedList(GC.getNumBuildInfos(), GC.getBuildInfo)
 		self.placeItems("Builds", GC.getBuildInfo)
 
 	def placeCivs(self):
@@ -1205,7 +1205,7 @@ class Pedia:
 
 	def placeCivics(self):
 		print "Category: Civics"
-		self.aList = self.getSortedList(GC.getNumCivicInfos(), GC.getCivicInfo)
+		self.aList = self.getTimeSortedList(GC.getNumCivicInfos(), GC.getCivicInfo)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC, GC.getCivicInfo)
 
 	def placeReligions(self):
@@ -1363,8 +1363,22 @@ class Pedia:
 		self.nWidgetCount += 1
 		return szName
 
-
 	def getSortedList(self, numInfos, getInfo):
+		list = []
+		for i in xrange(numInfos):
+			item = getInfo(i)
+			if item:
+				bValid = True
+				try:
+					bValid = not item.isGraphicalOnly()
+				except:
+					pass
+				if (bValid):
+					list.append((item.getDescription(), i))
+		list.sort()
+		return list
+
+	def getTimeSortedList(self, numInfos, getInfo):
 		list = []
 		ListDict = {}				
 			
