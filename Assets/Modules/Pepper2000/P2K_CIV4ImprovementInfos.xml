@@ -3790,7 +3790,6 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<iCulture>10</iCulture>
 			<iVisibilityChange>5</iVisibilityChange>
 			<iSeeFrom>4</iSeeFrom>
 			<iUniqueRange>2</iUniqueRange>

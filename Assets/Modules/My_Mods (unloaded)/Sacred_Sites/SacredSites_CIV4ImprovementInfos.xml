@@ -95,8 +95,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<iUniqueRange>2</iUniqueRange>
-			<iCulture>2</iCulture>
-			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
 		<!-- Stone Circle -->
 		<ImprovementInfo>
@@ -187,8 +185,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<iUniqueRange>2</iUniqueRange>
-			<iCulture>2</iCulture>
-			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
 		<!-- Pyramids -->
 		<ImprovementInfo>
@@ -275,8 +271,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<iUniqueRange>2</iUniqueRange>
-			<iCulture>2</iCulture>
-			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
 		<!-- Asian Temple -->
 		<ImprovementInfo>
@@ -359,8 +353,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<iUniqueRange>2</iUniqueRange>
-			<iCulture>2</iCulture>
-			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
 		<!-- Ziggurat -->
 		<ImprovementInfo>
@@ -459,8 +451,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<iUniqueRange>2</iUniqueRange>
-			<iCulture>2</iCulture>
-			<iCultureRange>1</iCultureRange>
 		</ImprovementInfo>
 	</ImprovementInfos>
 </Civ4ImprovementInfos>

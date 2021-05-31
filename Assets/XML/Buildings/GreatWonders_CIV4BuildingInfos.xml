@@ -73,7 +73,7 @@
 			<Description>TXT_KEY_BUILDING_ADAM_SMITH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ADAM_SMITH_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
@@ -155,7 +155,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
@@ -231,8 +231,11 @@
 			<Type>BUILDING_ALHAMBRA_2</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_ALHAMBRA</Description>
+			<Description>TXT_KEY_BUILDING_ALHAMBRA_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALHAMBRA_PEDIA</Civilopedia>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -267,7 +270,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ANGKOR_WAT</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_ANGKOR_WAT_2</ObsoletesToBuilding>
@@ -335,6 +338,9 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_ANGKOR_WAT_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANGKOR_WAT_PEDIA</Civilopedia>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -373,7 +379,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SUNDIAL</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_BRONZE_WARES</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STARGAZERS_HUT</BuildingType>
@@ -407,7 +413,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_AON_CENTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -469,7 +475,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SCULPTURE</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
@@ -719,7 +725,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<PrereqTech>TECH_ASCENSION</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -777,7 +783,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MUSEUM</BuildingType>
 			</PrereqInCityBuildings>
@@ -856,7 +862,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
 			</PrereqInCityBuildings>
@@ -910,7 +916,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SEXTANT</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
@@ -955,7 +961,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BIG_BEN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_TOWNCLOCK</BuildingType>
@@ -1015,7 +1021,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BNS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<iCost>7380</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>10</iHappiness>
@@ -1183,7 +1189,7 @@
 			<ConstructSound>AS2D_BUILD_BOLSHOI</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_REALISM</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
 			</PrereqInCityBuildings>
@@ -1290,7 +1296,7 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GARRISON</BuildingType>
 				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
@@ -1351,7 +1357,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BROADWAY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INCANDESCENT_LIGHTING</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_THEATRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -1479,7 +1485,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BURJ_KHALIFA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CONGLOMERATES</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -1575,7 +1581,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RECORDING_STUDIO</BuildingType>
 			</PrereqInCityBuildings>
@@ -1624,7 +1630,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_BONE</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
@@ -1674,7 +1680,7 @@
 			<ConstructSound>AS2D_BUILD_RECYCLING_CENTER</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_RECYCLING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<iCost>8850</iCost>
 			<iGlobalHealth>1</iGlobalHealth>
@@ -1749,7 +1755,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CONFUCIAN_TEMPLE</BuildingType>
 			</PrereqInCityBuildings>
@@ -1841,7 +1847,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CHEOMSEONGDAE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_CHEOMSEONGDAE</ConstructSound>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqTech>TECH_STARGAZING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MASONRY</PrereqTech>
@@ -1905,6 +1911,9 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CHEOMSEONGDAE_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHEOMSEONGDAE_PEDIA</Civilopedia>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1939,7 +1948,7 @@
 			<Description>TXT_KEY_BUILDING_CHICHEN_ITZA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHICHEN_ITZA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
@@ -2002,6 +2011,9 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CHICHEN_ITZA_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHICHEN_ITZA_PEDIA</Civilopedia>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2037,7 +2049,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LEGALIZED_GAMBLING</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -2103,7 +2115,7 @@
 			<ConstructSound>AS2D_BUILD_CIRCUS_MAXIMUS</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_HIPPODROME</BuildingType>
@@ -2186,7 +2198,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CN_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_NATIONAL_TV_STATION</BuildingType>
@@ -2246,7 +2258,7 @@
 			<ConstructSound>AS2D_BUILD_OBSERVATORY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_BOOKS</Bonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -2324,7 +2336,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
@@ -2390,7 +2402,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CHRIST_THE_REDEEMER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_RADIO</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>5220</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2438,7 +2450,7 @@
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CONFUCIANISM</PrereqReligion>
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
@@ -2557,7 +2569,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_EDINBURGH_CASTLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_CASTLE</ConstructSound>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2633,6 +2645,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EDINBURGH_CASTLE_OBSOLETE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EDINBURGH_CASTLE_PEDIA</Civilopedia>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2667,7 +2682,7 @@
 			<ConstructSound>AS2D_BUILD_UNIVERSITY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_INCANDESCENT_LIGHTING</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<iCost>4800</iCost>
 			<CommerceModifiers>
@@ -2733,7 +2748,7 @@
 			<ConstructSound>AS2D_BUILD_UNIVERSITY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_THEORY_OF_RELATIVITY</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
@@ -2882,7 +2897,7 @@
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
@@ -3054,7 +3069,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_FORT_KNOX</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_GOLD_INGOTS</Bonus>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -3170,7 +3185,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GENOMIC_E</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_COMPUTERS</Bonus>
@@ -3247,7 +3262,7 @@
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MEGACORPORATIONS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STOCKMARKET</BuildingType>
 			</PrereqInCityBuildings>
@@ -3281,7 +3296,7 @@
 			<Description>TXT_KEY_BUILDING_GLOBE_THEATRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GLOBE_THEATRE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_THEATRE</BuildingType>
@@ -3410,7 +3425,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqInCityBuildings>
@@ -3457,7 +3472,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EARTH_FESTIVAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EARTH_FESTIVAL</MovieDefineTag>
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_MARBLE</Bonus>
@@ -3647,7 +3662,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_FESTIVAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FIRE_FESTIVAL</MovieDefineTag>
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_PEAT</Bonus>
 				<Bonus>BONUS_TAR</Bonus>
@@ -3842,7 +3857,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARINE_FESTIVAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MARINE_FESTIVAL</MovieDefineTag>
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_PEARLS</Bonus>
 				<Bonus>BONUS_FISH</Bonus>
@@ -4067,7 +4082,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SKY_FESTIVAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SKY_FESTIVAL</MovieDefineTag>
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_INCENSE</Bonus>
 				<Bonus>BONUS_INDIGO</Bonus>
@@ -4257,7 +4272,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MOTION_PICTURES</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4506,7 +4521,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
 			</PrereqInCityBuildings>
@@ -4594,7 +4609,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HERMITAGE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>3330</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -4681,7 +4696,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HIMEJI_CASTLE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_VASSALAGE</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
@@ -4813,7 +4828,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_SIAMESE</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -4837,7 +4852,7 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>15</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
@@ -4867,7 +4882,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HOLLYWOOD</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MOTION_PICTURES</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MOVIE_STUDIO</BuildingType>
 			</PrereqInCityBuildings>
@@ -4967,7 +4982,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HUMPHREY_METRODOME</MovieDefineTag>
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
 			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</PrereqInCityBuildings>
@@ -5103,7 +5118,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DOG_SHOW</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DOG_SHOW</MovieDefineTag>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_DOG</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
@@ -5153,7 +5168,7 @@
 			<ConstructSound>AS2D_BUILD_UNIVERSITY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_PHYSICS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
@@ -5268,7 +5283,7 @@
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_ACOUSTICS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_AUTOMATIC_WEAPONS</ObsoleteTech>
 			<iCost>2280</iCost>
 			<BonusProductionModifiers>
@@ -5346,7 +5361,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CALCULUS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
@@ -5427,7 +5442,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CRUSADE</MovieDefineTag>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
@@ -5496,7 +5511,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_KINGDOM_CENTRE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CONGLOMERATES</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -5605,7 +5620,7 @@
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_SCULPTURES</Bonus>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
@@ -5670,7 +5685,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_LA_BREA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
@@ -5864,7 +5879,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
@@ -5929,7 +5944,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PISA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
 			<iCost>1920</iCost>
@@ -5984,7 +5999,7 @@
 			<ConstructSound>AS2D_BUILD_UNIVERSITY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_THERMODYNAMICS</ObsoleteTech>
 			<iCost>2064</iCost>
 			<CommerceModifiers>
@@ -6186,7 +6201,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LEGALIZED_GAMBLING</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -6251,7 +6266,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MAGELLAN</MovieDefineTag>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_NAVIGATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
@@ -6320,7 +6335,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MARCO_POLO</MovieDefineTag>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_COMPASS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_COMMUNISM</ObsoleteTech>
 			<iCost>2280</iCost>
 			<CommerceChanges>
@@ -6463,7 +6478,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MAUSOLEUM_OF_MAUSSOLLOS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_CEMENT</Bonus>
@@ -6601,7 +6616,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
@@ -6659,7 +6674,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DEEPSEA_MISSION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEEPSEA_MISSION</MovieDefineTag>
 			<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqBonuses>
@@ -6699,7 +6714,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EARTHCORE_MISSION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EARTHCORE_MISSION</MovieDefineTag>
 			<PrereqTech>TECH_SUBTERRANEAN_EXPLORATION</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_NANOTUBES</Bonus>
 				<Bonus>BONUS_TITANIUM_WARES</Bonus>
@@ -6796,7 +6811,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>444</iCost>
+			<iCost>296</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>
 				<iYield>2</iYield>
@@ -6879,7 +6894,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
@@ -6926,7 +6941,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<PrereqTech>TECH_SMART_DUST</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_NANOBOTS</Bonus>
 			<iCost>32730</iCost>
 			<HealUnitCombatTypes>
@@ -6970,7 +6985,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SHIELD</MovieDefineTag>
 			<fVisibilityPriority>1000</fVisibilityPriority>
 			<PrereqTech>TECH_ADVANCED_SHIELDING</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
 			</PrereqInCityBuildings>
@@ -7003,7 +7018,7 @@
 			<ConstructSound>AS2D_BUILD_NEUSCHWANSTEIN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ROMANTICISM</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -7128,7 +7143,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_GOLD_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_TERRACOTTA</Bonus>
@@ -7193,7 +7208,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NOTRE_DAME</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STAINED_GLASS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
 			<iCost>1992</iCost>
 			<BonusProductionModifiers>
@@ -7260,7 +7275,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ATHLETICS</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_COLOSSEUM</BuildingType>
@@ -7302,7 +7317,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_SILVER_WARES</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANOR</BuildingType>
@@ -7366,7 +7381,7 @@
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
@@ -7531,7 +7546,7 @@
 			<ConstructSound>AS2D_BUILD_PYRAMID</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
@@ -7614,7 +7629,7 @@
 			<ConstructSound>AS2D_BUILD_MARKETPLACE</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1992</iCost>
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
@@ -7661,7 +7676,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PLATO</MovieDefineTag>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
@@ -7735,7 +7750,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>10240000</fVisibilityPriority>
 			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCitiesPrereq>4</iCitiesPrereq>
 			<iCost>1512</iCost>
 			<iHealth>1</iHealth>
@@ -7792,7 +7807,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEDITATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<iCost>1920</iCost>
 			<CommerceChanges>
@@ -7854,7 +7869,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PROTEOMIC_E</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_COMPUTERS</Bonus>
@@ -8071,7 +8086,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ROCK_AND_ROLL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>6480</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -8123,7 +8138,7 @@
 			<ConstructSound>AS2D_BUILD_OBSERVATORY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_BOURGEOIS</CivicOption>
@@ -8181,7 +8196,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_EARLY_COMPUTING</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_RADIO_TELESCOPE</BuildingType>
@@ -8251,7 +8266,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEDITATION</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_GOLD_WARES</Bonus>
@@ -8313,7 +8328,7 @@
 			<ConstructSound>AS2D_BUILD_LABORATORY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_COMPUTER_NETWORKS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_MICROCHIPS</Bonus>
 			<iCost>8850</iCost>
 			<GlobalCommerceModifiers>
@@ -8358,7 +8373,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_SILK</Bonus>
 			</PrereqBonuses>
@@ -8444,7 +8459,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -8493,7 +8508,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
@@ -8563,7 +8578,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SMITHSONIAN</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_MUSEUM</ConstructSound>
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MUSEUM</BuildingType>
@@ -8664,7 +8679,7 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>15</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
@@ -8689,7 +8704,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_TOWER</MovieDefineTag>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_GLASSWARE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_TITANIUM_WARES</Bonus>
@@ -8731,7 +8746,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GENESIS_BIOLOGY</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_COMPUTERS</Bonus>
@@ -9117,7 +9132,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LEGALIZED_GAMBLING</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -9235,7 +9250,7 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_MILITARY_SCIENCE</ObsoleteTech>
 			<iCost>1296</iCost>
 			<iGreatGeneralRateModifier>50</iGreatGeneralRateModifier>
@@ -9244,7 +9259,7 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>50</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
@@ -9265,7 +9280,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SYDNEY_OPERA_HOUSE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_REALISM</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqAmountBuildings>
@@ -9335,7 +9350,7 @@
 			<ConstructSound>AS2D_BUILD_TECH_CAPITOL</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TERRA_COMPUTER</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>38430</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9445,7 +9460,7 @@
 			<Description>TXT_KEY_BUILDING_TERRACOTTA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRACOTTA_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1200</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -9502,7 +9517,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_APOSTOLIC_PALACE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PAPACY</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<iTeamsPrereq>3</iTeamsPrereq>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
@@ -9637,7 +9652,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LASER</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ACCELERATOR</BuildingType>
@@ -9685,7 +9700,7 @@
 			<ConstructSound>AS2D_BUILD_COLOSSUS</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqOrBuildings>
@@ -9757,7 +9772,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 			</PrereqOrBuildings>
@@ -9867,7 +9882,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GATEWAY_ARCH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<iCost>4800</iCost>
 			<CommerceChanges>
@@ -9917,7 +9932,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MODERN_ART</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MUSEUM</BuildingType>
 				<BuildingType>BUILDING_ART_GALLERY</BuildingType>
@@ -10021,7 +10036,7 @@
 			<ConstructSound>AS2D_BUILD_GREATLIBRARY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
@@ -10094,7 +10109,7 @@
 			<ConstructSound>AS2D_BUILD_LIGHTHOUSE</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
@@ -10165,7 +10180,7 @@
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ALGEBRA</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -10279,7 +10294,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GREAT_WALL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1296</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -10348,7 +10363,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HAGIA_SOPHIA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
 			<iCost>1800</iCost>
 			<BonusProductionModifiers>
@@ -10410,7 +10425,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_DUALISM</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1008</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -10569,7 +10584,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_KREMLIN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_FIBER_OPTICS</ObsoleteTech>
 			<iCost>5940</iCost>
 			<BonusProductionModifiers>
@@ -10622,7 +10637,7 @@
 			<ConstructSound>AS2D_BUILD_ORACLE</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIVINATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1008</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -10687,7 +10702,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+				<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
@@ -10773,7 +10788,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PENTAGON</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LOGISTICS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
@@ -10820,7 +10835,7 @@
 			<ConstructSound>AS2D_BUILD_PYRAMID</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_SCULPTURE</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_SCULPTURES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
@@ -10878,7 +10893,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SISTINE_CHAPEL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PERSPECTIVE</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>2136</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -10945,7 +10960,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SPACE_ELEVATOR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<iCost>24870</iCost>
 			<BonusProductionModifiers>
@@ -11016,7 +11031,7 @@
 			<ConstructSound>AS2D_BUILD_PYRAMID</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_SCULPTURE</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_MARBLE</Bonus>
@@ -11078,7 +11093,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SPIRAL_MINARET</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<iCost>2640</iCost>
 			<BonusProductionModifiers>
@@ -11139,7 +11154,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_STATUE_OF_LIBERTY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqAmountBuildings>
@@ -11212,7 +11227,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TAJ_MAHAL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<iCost>3330</iCost>
 			<CommerceChanges>
@@ -11264,10 +11279,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ARTEMIS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ARTEMIS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqTech>TECH_DIPLOMACY</PrereqTech>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<iCost>1104</iCost>
+			<iCost>1404</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -11416,7 +11431,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_THREE_GORGES_DAM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
@@ -11465,7 +11480,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_UNITED_NATIONS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iTeamsPrereq>3</iTeamsPrereq>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
@@ -11506,7 +11521,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NATIONAL_ZOO</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_AQUA</BuildingType>
@@ -11561,7 +11576,7 @@
 			<Description>TXT_KEY_BUILDING_THEATRE_OF_DIONYSUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THEATRE_OF_DIONYSUS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_DRAMA</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_THEATRE</BuildingType>
@@ -11639,7 +11654,7 @@
 			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MESOAMERICAN_CATHEDRAL</BuildingType>
@@ -11758,7 +11773,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TRANSAMERICA_PYRAMID</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -11816,7 +11831,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TRUMP_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -11879,7 +11894,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_SCULPTURES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_SILVER_WARES</Bonus>
@@ -11929,7 +11944,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_SANKORE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PAPER</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<iCost>2064</iCost>
 			<BonusProductionModifiers>
@@ -12165,7 +12180,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WALL_STREET</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STOCK_BROKERING</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_STOCKMARKET</BuildingType>
@@ -12279,7 +12294,7 @@
 			<ConstructSound>AS2D_BUILD_WESTPOINT</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
-			<iPrereqPopulation>15</iPrereqPopulation>
+			<iPrereqPopulation>8</iPrereqPopulation>
 			<iLevelPrereq>12</iLevelPrereq>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
@@ -12330,7 +12345,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WIKIPEDIA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -12369,7 +12384,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WILLIS_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -12576,7 +12591,7 @@
 			<ConstructSound>AS2D_BUILD_UNIVERSITY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PRESS_AGENCY</BuildingType>
 			</PrereqInCityBuildings>
@@ -12640,7 +12655,7 @@
 			<ConstructSound>AS2D_BUILD_WTC</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -12684,7 +12699,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_X_GAMES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_X_GAMES</MovieDefineTag>
 			<PrereqTech>TECH_EXTREME_SPORTS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
@@ -12766,11 +12781,8 @@
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_HARVARD_UNIVERSITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -12874,11 +12886,8 @@
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_BOLOGNA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -12982,11 +12991,8 @@
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_SALAMANCA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -13091,10 +13097,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_COIMBRA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANATOMY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_EDUCATION</PrereqTech>
-			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -13201,10 +13204,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_BARCELONA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANATOMY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_EDUCATION</PrereqTech>
-			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -13311,10 +13311,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MONTPELLIER_UNIVERSITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANATOMY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_EDUCATION</PrereqTech>
-			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -13422,10 +13419,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SORBONNE_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_EDUCATION</PrereqTech>
-			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -13528,10 +13522,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_BASEL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_EDUCATION</PrereqTech>
-			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -13634,10 +13625,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_JAGIELLONIAN_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_EDUCATION</PrereqTech>
-			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -13739,11 +13727,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_MURCIA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_MURCIA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_BANKING</PrereqTech>
-			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<PrereqTech>TECH_BANKING</PrereqTech>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -13845,11 +13830,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_OXFORD_UNIVERSITY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_OXFORD_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_BANKING</PrereqTech>
-			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<PrereqTech>TECH_BANKING</PrereqTech>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -13956,11 +13938,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_EDINBURGH</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_EDINBURGH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_BANKING</PrereqTech>
-			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<PrereqTech>TECH_BANKING</PrereqTech>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -14062,8 +14041,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_PADUA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_PADUA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -14138,8 +14116,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_CAMBRIDGE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_CAMBRIDGE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -14214,8 +14191,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HEIDELBERG_UNIVERSITY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HEIDELBERG_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -14309,7 +14285,7 @@
 					<iProductionModifier>30</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14348,7 +14324,7 @@
 			</SpecialistCounts>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14439,7 +14415,7 @@
 			</SpecialistCounts>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14481,7 +14457,7 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_THE_ATOMIUM</Type>
@@ -14528,7 +14504,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 			</SpecialistCommerceChanges>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14551,7 +14527,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_EVELPIDON_MILITARY_ACADEMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
-			<iPrereqPopulation>15</iPrereqPopulation>
+			<iPrereqPopulation>8</iPrereqPopulation>
 			<iLevelPrereq>12</iLevelPrereq>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
@@ -14603,7 +14579,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_REPUBLIC_OF_CHINA_NAVAL_ACADEMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GRAND_WAR</PrereqTech>
-			<iPrereqPopulation>15</iPrereqPopulation>
+			<iPrereqPopulation>8</iPrereqPopulation>
 			<iLevelPrereq>12</iLevelPrereq>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
@@ -14655,7 +14631,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_IMPERIAL_JAPANESE_NAVAL_ACADEMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GRAND_WAR</PrereqTech>
-			<iPrereqPopulation>15</iPrereqPopulation>
+			<iPrereqPopulation>8</iPrereqPopulation>
 			<iLevelPrereq>12</iLevelPrereq>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
@@ -14707,7 +14683,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ROYAL_AIR_FORCE_ACADEMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
-			<iPrereqPopulation>15</iPrereqPopulation>
+			<iPrereqPopulation>8</iPrereqPopulation>
 			<iLevelPrereq>12</iLevelPrereq>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
@@ -14759,7 +14735,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ACCADEMIA_AERONAUTICA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
-			<iPrereqPopulation>15</iPrereqPopulation>
+			<iPrereqPopulation>8</iPrereqPopulation>
 			<iLevelPrereq>12</iLevelPrereq>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
@@ -14813,7 +14789,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_COPPER_WARES</Bonus>
 			</PrereqBonuses>
-			<iPrereqPopulation>15</iPrereqPopulation>
+			<iPrereqPopulation>8</iPrereqPopulation>
 			<ObsoleteTech>TECH_TORTURE</ObsoleteTech>
 			<iCost>1008</iCost>
 			<CommerceModifiers>
@@ -14859,7 +14835,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_FIST</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -14900,10 +14875,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_FEATHER</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_EGGS</Bonus>
 			</PrereqBonuses>
@@ -14947,7 +14919,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_SHADOWS</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -14996,10 +14967,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_CENTAUR</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>
 				<Bonus>BONUS_ELEPHANTS</Bonus>
@@ -15046,7 +15014,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WARRIOR</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -15089,10 +15056,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WAVES</ArtDefineTag>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -15133,7 +15097,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WIND</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -15174,7 +15137,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WILD</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -15215,7 +15177,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_LEECH</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -15256,7 +15217,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WOLF</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_DOG</Bonus>
 			</PrereqBonuses>
@@ -15302,7 +15262,7 @@
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_TURQUOISE</Bonus>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -15357,7 +15317,7 @@
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -15414,7 +15374,7 @@
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<PrereqBonuses>
 				<BonusType>BONUS_ROMAN</BonusType>
@@ -15476,7 +15436,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LEAD_GLASS</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_GLAZE_MAKER</BuildingType>
@@ -16312,7 +16272,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16418,7 +16378,7 @@
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
 			<iAdjacentDamagePercent>25</iAdjacentDamagePercent>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
@@ -16497,7 +16457,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16545,7 +16505,7 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Help>TXT_KEY_BUILDING_APPIAN_WAY_HELP</Help>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -16640,7 +16600,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BANK</BuildingType>
@@ -16719,7 +16679,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 			</SpecialistCommerceChanges>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ENGINEERING_SCHOOL</BuildingType>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -16774,7 +16734,7 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
@@ -16853,7 +16813,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CLOSED_BORDERS</CivicOption>
@@ -16914,7 +16874,7 @@
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
 				<BuildingType>BUILDING_BARRICADES</BuildingType>
 			</PrereqOrBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Help>TXT_KEY_BUILDING_BLARNEY_HELP</Help>
 			<PropertyManipulators>
 				<PropertySource>
@@ -17060,7 +17020,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TUMULUS</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TUMULUS</BuildingType>
@@ -17118,7 +17078,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
@@ -17202,7 +17162,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -17279,7 +17239,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</SpecialistExtraCommerces>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17323,7 +17283,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DINO_PARK</Type>
@@ -17375,7 +17335,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
@@ -17407,7 +17367,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_DISNEYLAND_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_ANIMATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
@@ -17485,7 +17445,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ROADS</BuildingType>
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
@@ -17644,7 +17604,7 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Help>TXT_KEY_BUILDING_FIELD_GOLD_HELP</Help>
 			<PrereqOrCivics>
 				<PrereqCivic>
@@ -17764,7 +17724,7 @@
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<Help>TXT_KEY_BUILDING_GOLDEN_SPIKE_HELP</Help>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -18086,7 +18046,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18149,7 +18109,7 @@
 				<BuildingType>BUILDING_CCC</BuildingType>
 				<BuildingType>BUILDING_LUXOR</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18226,7 +18186,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<iLineOfSight>1</iLineOfSight>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PropertyManipulators>
 				<PropertySource>
@@ -18434,7 +18394,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CASINO</BuildingType>
@@ -18497,7 +18457,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RAILROAD_STATION</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_RAILROAD_STATION</BuildingType>
@@ -18557,7 +18517,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_MARXIST</CivicOption>
@@ -18622,7 +18582,7 @@
 				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
 			</PrereqOrBuildings>
 			<iLineOfSight>2</iLineOfSight>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SCAPA_FLOW</BuildingType>
 			</PrereqNotInCityBuildings>
@@ -18669,7 +18629,7 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18727,7 +18687,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18819,7 +18779,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18974,7 +18934,7 @@
 				<BuildingType>BUILDING_DRYDOCK</BuildingType>
 				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
 			</PrereqOrBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PEARL_HARBOR</BuildingType>
 			</PrereqNotInCityBuildings>
@@ -19030,7 +18990,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARKET</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BAZAAR</BuildingType>
@@ -19099,7 +19059,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TUMULUS</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TUMULUS</BuildingType>
@@ -19149,7 +19109,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<FreePromotion_2>PROMOTION_MARTIAL_ARTS2</FreePromotion_2>
 			<FreePromotion_3>PROMOTION_MARTIAL_ARTS3</FreePromotion_3>
 			<PropertyManipulators>
@@ -19355,7 +19315,7 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<iLineOfSight>3</iLineOfSight>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOKYO_TOWER</Type>
@@ -19398,7 +19358,7 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<iLineOfSight>2</iLineOfSight>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TROYES_FAIR</Type>
@@ -19441,7 +19401,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARKET</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BAZAAR</BuildingType>
@@ -19526,7 +19486,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BROADWAY</BuildingType>
 				<BuildingType>BUILDING_HOLLYWOOD</BuildingType>
@@ -19578,7 +19538,7 @@
 					<iHealthChange>-1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ART_GALLERY</BuildingType>
@@ -19668,7 +19628,7 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19721,7 +19681,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19866,7 +19826,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<bOrbital>1</bOrbital>
 		</BuildingInfo>
 	</BuildingInfos>

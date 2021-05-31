@@ -78,9 +78,9 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WRITING</PrereqTech>
+				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_AZTEC</BonusType>
 			<iCost>750</iCost>
@@ -168,9 +168,6 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
-			</TechTypes>
 			<BonusType>BONUS_AZTEC</BonusType>
 			<iCost>750</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -15502,6 +15499,7 @@
 				</FreePromotion>
 			</FreePromotions>
 			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
+			<NotGameOption>GAMEOPTION_NO_EVENTS</NotGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LEONIDAS</Type>
@@ -15567,9 +15565,9 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_SPARTAN</BonusType>
 			<PrereqBonuses>
@@ -23422,9 +23420,9 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WRITING</PrereqTech>
+				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_LYDIAN</BonusType>
 			<iCost>750</iCost>
@@ -26528,9 +26526,9 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WRITING</PrereqTech>
+				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_NOK</BonusType>
 			<iCost>750</iCost>

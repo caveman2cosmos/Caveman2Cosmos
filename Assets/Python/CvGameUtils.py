@@ -435,14 +435,6 @@ class CvGameUtils:
 		#pPlot = argsList[0]
 		return true
 
-	def getUnitCostMod(self, argsList):
-		#iPlayer, iUnit = argsList
-		return -1
-
-	def getBuildingCostMod(self, argsList):
-		#iPlayer, iCityID, iBuilding = argsList
-		return -1
-
 	def canUpgradeAnywhere(self, argsList):
 		#pUnit = argsList
 		return 0

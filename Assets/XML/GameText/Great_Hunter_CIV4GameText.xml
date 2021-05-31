@@ -24,14 +24,6 @@
 		<Russian>Îïûòíûé îõîòíèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_SEA_MASTER_HUNTER</Tag>
-		<English>Master Sea Hunter</English>
-		<French>Maître Chasseur des Mers</French>
-		<German>Meisterjäger des Meeres</German>
-		<Polish>Wybitny Morski Łowca</Polish>
-		<Russian>Îïûòíûé ðûáàê</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MASTER_HUNTER1</Tag>
 		<English>Master Hunter I</English>
 		<French>Maître Chasseur I</French>
@@ -54,30 +46,6 @@
 		<German>Meisterjäger III</German>
 		<Polish>Wybitny Łowca III</Polish>
 		<Russian>Îïûòíûé îõîòíèê III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SEA_MASTER_HUNTER1</Tag>
-		<English>Master Sea Hunter I</English>
-		<French>Maître Chasseur des Mers I</French>
-		<German>Meisterjäger des Meeres I</German>
-		<Polish>Wybitny Morski Łowca I</Polish>
-		<Russian>Îïûòíûé ðûáàê I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SEA_MASTER_HUNTER2</Tag>
-		<English>Master Sea Hunter II</English>
-		<French>Maître Chasseur des Mers II</French>
-		<German>Meisterjäger des Meeres II</German>
-		<Polish>Wybitny Morski Łowca II</Polish>
-		<Russian>Îïûòíûé ðûáàê II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SEA_MASTER_HUNTER3</Tag>
-		<English>Master Sea Hunter III</English>
-		<French>Maître Chasseur des Mers III</French>
-		<German>Meisterjäger des Meeres III</German>
-		<Polish>Wybitny Morski Łowca III</Polish>
-		<Russian>Îïûòíûé ðûáàê III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_BIG_GAME_HUNTER</Tag>

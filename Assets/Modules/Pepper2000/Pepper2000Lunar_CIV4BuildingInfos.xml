@@ -1630,7 +1630,7 @@
 			</PrereqBonuses>
 			<FreeBuilding>BUILDING_LUNAR_SOLAR_PANELS</FreeBuilding>
 			<bPower>1</bPower>
-			<iCost>19500</iCost>
+			<iCost>7800</iCost>
 			<iHurryCostModifier>1000000</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<YieldChanges>

@@ -12,9 +12,6 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
-			</AndPreReqs>
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<iGridX>34</iGridX>

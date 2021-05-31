@@ -409,7 +409,6 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>1280</iCost>
 			<iBaseUpkeep>10</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iAsset>1</iAsset>
@@ -33167,6 +33166,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<NotGameOption>GAMEOPTION_NO_EVENTS</NotGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NOBLE</Type>
@@ -42122,7 +42122,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_EARLY_FOOD_MERCHANT_C2C</Description>
+			<Description>TXT_KEY_UNIT_EARLY_FOOD_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_FOOD_CARAVAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
@@ -42445,7 +42445,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_EARLY_MERCHANT_C2C</Description>
+			<Description>TXT_KEY_UNIT_EARLY_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TRADE_CARAVAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>

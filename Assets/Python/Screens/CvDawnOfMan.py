@@ -121,7 +121,7 @@ class CvDawnOfMan:
 		# Main Body text
 		szDawnTitle = "<font=3>" + TRNSLTR.getText("TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE", ()).upper()
 		screen.setLabel("", "", szDawnTitle, 1<<2,	X_TEXT_PANEL + (W_TEXT_PANEL / 2), Y_TEXT_PANEL + 15, -2.0, FontTypes.GAME_FONT, eWidGen, 1, 1)
-		bodyString = TRNSLTR.getText("TXT_KEY_DAWN_OF_MAN_TEXT", (CyGameTextMgr().getTimeStr(G.getGameTurn(), False), CyPlayer.getCivilizationAdjectiveKey(), CyPlayer.getNameKey()))
+		bodyString = TRNSLTR.getText("TXT_KEY_DAWN_OF_MAN", (CyGameTextMgr().getTimeStr(G.getGameTurn(), False), CyPlayer.getCivilizationAdjectiveKey(), CyPlayer.getNameKey()))
 		screen.addMultilineText("", bodyString, X_TEXT_PANEL + iMarginSpace, Y_TEXT_PANEL + iMarginSpace + iTEXT_PANEL_MARGIN, W_TEXT_PANEL - (iMarginSpace * 2), H_TEXT_PANEL - (iMarginSpace * 2) - 75, eWidGen, 1, 1, 1<<0)
 
 		screen.setButtonGFC("", EXIT_TEXT, "", X_EXIT, Y_EXIT, W_EXIT, H_EXIT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD)

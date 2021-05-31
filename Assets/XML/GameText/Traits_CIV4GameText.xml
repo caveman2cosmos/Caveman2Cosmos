@@ -62,7 +62,7 @@
 		<Russian>Çåìë.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_AIR_UNIT_CAPACITY</Tag>
+		<Tag>TXT_KEY_TRAITHELP_AIR_UNIT_CAPACITY</Tag>
 		<English>[ICON_BULLET]%D1_Amount Air Unit Capacity in all cities.</English>
 		<French>[ICON_BULLET]%D1_Amount de capacité d'accueil d'unité aériennes dans toutes les Villes.</French>
 		<Italian>[ICON_BULLET]%D1_Amount alla capacità aerea in tutte le città.</Italian>
@@ -278,7 +278,7 @@
 		<Russian>Áåçá.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ATTITUDE_MODIFIER_NEGATIVE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_ATTITUDE_MODIFIER_NEGATIVE</Tag>
 		<English>[ICON_BULLET]%D1_Num Diplomacy Penalty (inverts to a bonus with Leaders with same trait)</English>
 		<French>[ICON_BULLET]%D1_Num Pénalité Diplomatique (se compense avec un bonus pour un Leader du meme trait)</French>
 		<German>[ICON_BULLET]Diplomatische Strafe: %D1_Num (wird zu einem Bonus bei Anführern mit derselben Charaktereigenschaft)</German>
@@ -287,7 +287,7 @@
 		<Russian>[ICON_BULLET]%D1_Num штрафа к Дипломатии (превращается в бонус с лидерами с той же чертой)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ATTITUDE_MODIFIER_POSITIVE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_ATTITUDE_MODIFIER_POSITIVE</Tag>
 		<English>[ICON_BULLET]%D1_Num Diplomacy Bonus with other Leaders</English>
 		<French>[ICON_BULLET]%D1_Num Bonus Diplomatique envers les autres Leaders</French>
 		<German>[ICON_BULLET]%D1_Num Diplomatiebonus</German>
@@ -410,7 +410,7 @@
 		<Russian>Ãðóá.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_BOMBARD_DEFENSE_MOD</Tag>
+		<Tag>TXT_KEY_TRAITHELP_BOMBARD_DEFENSE_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Damage to Defenses and Units from Bombardment and Ranged Assault in all cities</English>
 		<French>[ICON_BULLET]%D1_Mod%% de Protection des Bombardements dans toutes les villes</French>
 		<German>[ICON_BULLET]%D1_Mod%% Schaden an der Verteidigung durch Bombardierung in all cities</German>
@@ -419,22 +419,22 @@
 		<Russian>[ICON_BULLET]%D1_Mod%% ущерба защитным сооружениям и отрядам от обстрела и дальнего боя во всех городах</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_BONUS_HAPPINESS_CHANGE_ADDITIONAL</Tag>
+		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</English>
 		<French>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_BONUS_HAPPINESS_CHANGE_END</Tag>
+		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_END</Tag>
 		<English>Resources</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_BONUS_HAPPINESS_CHANGE_FIRST</Tag>
+		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_FIRST</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrHealth from access to [LINK=%s3_Bonus]%s4_Bonus[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappyOrHealth de l'accès aux Ressources : [LINK=%s3_Bonus]%s4_Bonus[\LINK]</French>
 		<Russian>[ICON_BULLET]%D1_Change%F2_HappyOrHealth от доступа к [LINK=%s3_Bonus]%s4_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_BUILDING_HAPPINESS_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_BUILDING_HAPPINESS</Tag>
 		<English>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp from[SPACE]</English>
 		<French>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp de[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch Geländeart[SPACE]</German>
@@ -444,7 +444,7 @@
 		<Russian>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp от[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CAPITAL_XP_MODIFIER</Tag>
+		<Tag>TXT_KEY_TRAITHELP_CAPITAL_XP_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in a Capital or Government Center</English>
 		<French>[ICON_BULLET]%D1%% EXP gratuite à toutes les unités formées dans la capitale ou un centre gouvernemental</French>
 		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella capitale</Italian>
@@ -458,7 +458,7 @@
 		<Russian>Õàðèçìàòè÷åñêèé áûë ââåäåí ñ ïàêåòîì ðàñøèðåíèÿ Warlords (âìåñòå ñ Èìïåðèàëèñòîì è Çàùèòíèêîì) è ýòî íåñîìíåííî ëó÷øàÿ òðîéêà íîâûõ îñîáåííîñòåé. Ýòî ÿñíàÿ îñîáåííîñòü ìèëèòàðèñòà, ãëàâíûì îáðàçîì èç-çà ñîêðàùåíèÿ òðåáîâàíèé XP äëÿ êàæäîãî óëó÷øåíèÿ. Âðàæäóÿ ðàíî, âû ìîæåòå íàêîïèòü ìîùü ñèëüíîóëó÷øåííûõ âåòåðàíñêèõ þíèòîâ êîòîðûõ âû ìîæåòå ïðîäîëæàòü ìîäåðíèçèðîâàòü â ïðîöåññå èãðû.[PARAGRAPH:1]Äîïîëíèòåëüíîå ñ÷àñòüå îò îñîáåííîñòåé è äâà ñòðîåíèÿ òàêæå ïîìîãóò ñ ìèëèòàðèñòîì, òàê êàê ýòî óìåíüøàåò âîåííóþ óñòàëîñòü. Ýòî òàêæå äîëæíî ïîìî÷ü âàì ìàòåðèàëüíî; êîãäà âû çàïóñòèòå CE èëè SE èëè èõ ãèáðèä, áîëüøå íàñåëåíèÿ èç-çà ïîäíÿòîé âåðõóøêè ñ÷àñòüÿ âñåãäà ïîäðàçóìåâàåò áîëåå ñèëüíóþ ýêîíîìèêó.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MYSTICISM]Ìèñòèöèçì[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_AGRICULTURE]Çåìëåäåëèå[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ANIMAL_HUSBANDRY]Æèâîòíîâîäñòâî[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_RADIO]Ðàäèî[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASS_MEDIA]ÑÌÈ[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STONEHENGE]Ñòîóíõåäæ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HEROIC_EPIC]Ãåðîè÷åñêèé ýïîñ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_WEST_POINT]Âåñò-Ïîéíò[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_EIFFEL_TOWER]Ýéôåëåâà áàøíÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_PENTAGON]Ïåíòàãîí[\LINK][PARAGRAPH:1][H1]Ëó÷øèå ñòðîåíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_MONUMENT]Ïàìÿòíèê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BARRACKS]Êàçàðìû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STABLE]Êîíþøíÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_DRYDOCK]Ñóõîé äîê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BROADCAST_TOWER]Òåëåáàøíÿ[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_VASSALAGE]Âàññàëüíàÿ çàâèñèìîñòü[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_THEOCRACY]Òåîêðàòèÿ[\LINK][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Êîãäà âû õîðèçìàòè÷åñêèé, ðàíî îòïðàâëÿéòåñü íà âîéíó, ÷òîáû ñîáðàòü óëó÷øåíèÿ è ïîñòðîèòü âàøó àðìèþ âåòåðàíîâ. Èãðà ñ âàðâàðàìè, äàæå ÿðîñòíûìè âàðâàðàìè åñëè âêëþ÷åíà, ïîçâîëÿåò âàì áûñòðåå íàêàïëèâàòü áîëüøå óëó÷øåíèé, òàêèì îáðàçîì âû âåðîÿòíî áóäåòå èìåòü ìîùíóþ àðìèþ ê òîìó âðåìåíè, êîãäà âû ñòîëêíåòåñü ñ âàðâàðàìè è áóäåòå ãîòîâû óäèâèòü âàøèõ ñîñåäåé.[PARAGRAPH:1]Òàêæå óáåäèòåñü, ÷òî èñïîëüçîâàëè â ñâîèõ èíòåðåñàõ ïîäíÿòóþ âåðõóøêó ñ÷àñòüÿ. Óäåëèòå ïåðâîñòåïåííîå âíèìàíèå ðîñòó â ðàííåé èãðå: ãàðàíòèðóéòå, ÷òî êàæäûé ãîðîä èìååò õîðîøèå ðåñóðñû ïèùè, ïðÿìî ê ãëèíÿíîé ïîñóäå, òàê ÷òîáû âû ìîãëè ïîñòðîèòü àìáàð, è ïîñòðîéòå ðàáî÷èõ òàê ÷òî âû ìîæåòå îáåñïå÷èâàòü âñåõ âàøèõ äîïîëíèòåëüíûõ ãðàæäàí ðàáîòîé èìåÿ óëó÷øåííûå êëåòêè. Äåëàéòå ðàáî÷èõ è ïîñåëåíöåâ â ìàêñèìàëüíî âîçìîæíîé ñòåïåíè óñêîðÿÿ èõ ñòðîèòåëüñòâî è âîçâðàùàéòå âàøè ãîðîäà ê ðîñòó èõ íàñåëåíèÿ.[PARAGRAPH:1]Ìèñòèöèçì è ÑÌÈ ÿâëÿþòñÿ î÷åâèäíûìè òåõíè÷åñêèìè öåëÿìè, ÷òîáû ïîçâîëèòü óëó÷øàþùèå ñ÷àñòüå ñòðîåíèÿ (êîòîðûå, ê ñîæàëåíèþ, äåëàþòñÿ íå äåøåâî èç-çà îñîáåííîñòåé; Õàðèçìàòè÷åñêèé - îäíà èç íåìíîãèõ îñîáåííîñòåé áåç äåøåâîãî çäàíèÿ). Àëüòåðíàòèâíî, âû ìîæåòå äâèãàòüñÿ ïðÿìî ê Ðàäèî è ïîñòîèòü Ýéôåëåâó áàøíþ, êîòîðàÿ äàñò âàì ñâîáîäíóþ òåëåâûøêó â êàæäîì èç âàøèõ ãîðîäîâ.[PARAGRAPH:1]Ñòîóíõåäæ òàêæå ïðèâëåêàòåëüíîå ÷óäî, òàê êàê äàåò âàì ñâîáîäíûé ïàìÿòíèê â êàæäîì ãîðîäå. Îäíàêî, ïîìíèòå, ÷òî òå ïàìÿòíèêè âîëøåáíî èñ÷åçàþò, êàê òîëüêî âû îáíàðóæèâàåòå Êàëåíäàðü (Àñòðîíîìèþ â BtS). Òåëåáàøíè è Ýéôåëåâà áàøíÿ, íàïðîòèâ, íèêîãäà íå óñòàðåâàåò. Òàêæå, ëþáîé ïàìÿòíèê êîòîðûé âû ñòðîèòå íåïîñðåäñòâåííî îñòàåòñÿ ïðîèçâîäèòü êóëüòóðó, è êóëüòóðà óäâàèâàåòñÿ ïîñëå 1000 ãîäîâ.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Êàê óïîìèíàëîñü âûøå, â òî âðåìÿ êàê Õàðèçìàòèê óâåëè÷èâàåò ýôôåêòû äâóõ çäàíèé, ó íåãî íåò äåøåâûõ çäàíèé, îãðàíè÷åíèå ýòî ðàçäåëÿåò òîëüêî ñ îñîáåííîñòÿìè Ôèíàíñèñòà è Èìïåðèàëèñòà.[PARAGRAPH:1]Áàëàíñèðîâàíèå ðàííåãî ðîñòà ñ ïîòðåáíîñòüþ èìåòü áîëüøîå êîëè÷åñòâî ðàáî÷èõ ãàðàíòèðóÿ òåì äîïîëíèòåëüíûì ãðàæäàíàì èìåòü óëó÷øåííûå êëåòêè äëÿ ðàáîòû ìîæåò áûòü òðóäíûì. Â äîïîëíåíèå ê îáåñïå÷åíèþ êàæäîãî ãîðîäà ïî êðàéíåé ìåðå îäíèì ðåñóðñîì ïèùè, òàêæå ïðîáóéòå ãàðàíòèðîâàòü, ÷òî åñòü ëåñà äëÿ îæèâëåííî-ðóáÿùèõ ðàáî÷èõ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CITY_START_CULTURE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_CITY_START_CULTURE</Tag>
 		<English>[ICON_BULLET]New cities begin with %D1 culture</English>
 		<French>[ICON_BULLET]Les nouvelles Villes commencent avec %D1 culture</French>
 		<Italian>[ICON_BULLET]Le nuove città cominciano con %D1 cultura</Italian>
@@ -466,7 +466,7 @@
 		<Russian>[ICON_BULLET]Новые города начинают с %D1 культуры.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CITY_START_POPULATION</Tag>
+		<Tag>TXT_KEY_TRAITHELP_CITY_START_POPULATION</Tag>
 		<English>[ICON_BULLET]New cities begin with %D1 population.</English>
 		<French>[ICON_BULLET]Les nouvelles Villes commencent avec %D1 population.</French>
 		<Italian>[ICON_BULLET]Le nuove città cominciano con %D1 popolazione.</Italian>
@@ -474,7 +474,7 @@
 		<Russian>[ICON_BULLET]Новые города начинают с %D1 населения.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CITY_START_STATE_RELIGION</Tag>
+		<Tag>TXT_KEY_TRAITHELP_CITY_START_STATE_RELIGION</Tag>
 		<English>[ICON_BULLET]New cities begin with the State Religion.</English>
 		<French>[ICON_BULLET]Les nouvelles Villes commencent avec la religion d'Etat.</French>
 		<Italian>[ICON_BULLET]Le nuove città cominciano con la religione di stato.</Italian>
@@ -482,7 +482,7 @@
 		<Russian>[ICON_BULLET]В новых городах уже есть государственная религия.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CIVIC_LEVEL_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_CIVIC_LEVEL_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% XP Needed for Unit Promotions</English>
 		<French>[ICON_BULLET]%D1%% EXP pour la promotion des unités</French>
 		<German>[ICON_BULLET]%D1%% EP für Einheitenbeförderungen erforderlich</German>
@@ -492,7 +492,7 @@
 		<Russian>[ICON_BULLET]%D1%% опыта для Квалификации отряда</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CIVIC_UPKEEP_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_CIVIC_UPKEEP_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Civic Upkeep</English>
 		<French>[ICON_BULLET]%D1%% d'entretien doctrinal</French>
 		<German>[ICON_BULLET]%D1%% Unterhalt für Gesellschaftsform</German>
@@ -502,7 +502,7 @@
 		<Russian>[ICON_BULLET]%D1%% для обслуживания Парадигм</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CIVILIZATION</Tag>
+		<Tag>TXT_KEY_TRAITHELP_CIVILIZATION</Tag>
 		<English>[ICON_BULLET]Civilizations can Earn this Trait - Not available for Leader selections</English>
 		<French>[ICON_BULLET]Les Civilizations peuvent avoir ce Trait - N'est pas disponible à la sélection</French>
 		<Italian>[ICON_BULLET]Le civiltà possono ottenere questo tratto; non è disponibile nella selezione dei leader</Italian>
@@ -510,7 +510,7 @@
 		<Russian>[ICON_BULLET]Цивилизации могут получить эту черту, недоступную на выбор лидеру</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_COMMERCE_CHANGES_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_COMMERCE_CHANGES</Tag>
 		<English>[ICON_BULLET]%D1%F2_commerce/City</English>
 		<French>[ICON_BULLET]%D1%F2_commerce/ville</French>
 		<German>[ICON_BULLET]%D1%F2_commerce/Stadt</German>
@@ -520,7 +520,7 @@
 		<Russian>[ICON_BULLET]%D1%F2_commerce/город</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_COMMERCE_MODIFIERS_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_COMMERCE_MODIFIERS</Tag>
 		<English>[ICON_BULLET]%D1%% %F2_commerce</English>
 		<French>[ICON_BULLET]%D1%% au %F2_commerce</French>
 		<Spanish>[ICON_BULLET]%D1%% [NUM2:al:a la:a los:a las] %F2_commerce</Spanish>
@@ -641,7 +641,7 @@
 		<Russian>Èíòð.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_DISABLED_OFF</Tag>
+		<Tag>TXT_KEY_TRAITHELP_DISABLED_OFF</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when playing the Developing Leader Option[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs ayant activé l'option Développement des Leader[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nur bei aktivierter Einstellung "Führungskräfteentwicklung" verfügbar[COLOR_REVERT]</German>
@@ -650,7 +650,7 @@
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Эта черта доступна только лидерам при игре в режиме с «Развивающимися лидерами».[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_DISABLED_ON</Tag>
+		<Tag>TXT_KEY_TRAITHELP_DISABLED_ON</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when not playing the Developing Leader Option[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs n'utilisant pas l'option Développement des Leader[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]bei aktivierter Einstellung "Führungskräfteentwicklung" nicht verfügbar[COLOR_REVERT]</German>
@@ -659,14 +659,14 @@
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Эта черта доступна только лидерам, если не включена опция «Развивающиеся лидеры».[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_DISALLOWED</Tag>
+		<Tag>TXT_KEY_TRAITHELP_DISALLOWED</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Leaders with this trait may not select %s1_Trait Trait[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Les leaders possédant ce trait ne peuvent pas sélectionner le Trait : %s1_Trait[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]"%s1_Trait" nicht gleichzeitig auswählbar[COLOR_REVERT]</German>
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Лидеры с этой особенностью не могут выбирать черту %s1_Trait[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_DOUBLE_SPEED_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_DOUBLE_SPEED</Tag>
 		<English>[NEWLINE][ICON_BULLET]Double Production Speed of[SPACE]</English>
 		<French>[NEWLINE][ICON_BULLET]Double la vitesse de production de:[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]Doppelte Produktionsgeschwindigkeit für:[SPACE]</German>
@@ -676,7 +676,7 @@
 		<Russian>[NEWLINE][ICON_BULLET]Двойная скорость производства[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_DRAFT_ON_CAPTURE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_DRAFT_ON_CAPTURE</Tag>
 		<English>[ICON_BULLET]Automatically Drafts new units in newly conquered cities.</English>
 		<French>[ICON_BULLET]Enrôle automatiquement des unités dans les Villes nouvellement conquises.</French>
 		<Italian>[ICON_BULLET]Recluta automaticamente nuove unità nelle città appena conquistate.</Italian>
@@ -773,7 +773,7 @@
 		<Russian>Ýêñïàíñèîíèñò íå âûãëÿäèò âåëèêèì ñ ïåðâîãî âçãëÿäà. Ôàêòè÷åñêè, îí ñíà÷àëà êàæåòñÿ ïðèíàäëåæèò ê êàòåãîðèè "ñëàáûõ" ÷åðò, ïîäîáíî Çàùèòíèêó. Â êîíöå êîíöîâ, çäîðîâüå íå áîëüøàÿ ïðîáëåìà; ïðîáëåìà ñ÷àñòüå, êîòîðîå îãðàíè÷èâàåò âàø ðîñò â íà÷àëå èãðû. È êàê òîëüêî âû ïðèâûêíåòå ê áîëåçíåííûì çåëåíûì çàâèòêàì, ïëàâàþùèì âîêðóã âàøåãî ãîðîäà, âû ïîíèìàåòå, ÷òî åãî ýôôåêòû îáû÷íî íå òàê ïëîõè. Ïðîáëåìû çäîðîâüÿ òîëüêî íåìíîãî çàìåäëÿþò ðîñò.[PARAGRAPH:1]Íî äåðæèòåñü. Àìáàðû--äåøåâûå äëÿ Ýêñïàíñèâíûõ ëèäåðîâ--ÿâëÿþòñÿ îäíèì èç ñàìûõ ïîëåçíûõ çäàíèé â èãðå. Ñ çåðíîì îíè îáåñïå÷èâàþò äîïîëíèòåëüíîå çäîðîâüå. Íî ÷òî åùå áîëåå âàæíî îíè ïîçâîëÿþò âàì óñèëèâàòü ðàáñòâî áûñòðåå çàíîâî âûðàùèâàÿ âàøå ïîæåðòâîâàííîå íàñåëåíèå.[PARAGRAPH:1]È ñ ïàò÷à 2.08 Warlords, Ýêñïàíñèâíûé ïîëó÷èë íåîáõîäèìîå ïîâûøåíèå áëàãîäàðÿ íåìíîãî áîëåå äåøåâûì ðàáî÷èì. Âû ìîæåòå âñåãäà èñïîëüçîâàòü áîëüøå ðàáî÷èõ, îñîáåííî â íà÷àëå èãðû.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_POTTERY]Ãëèíÿíàÿ ïîñóäà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_COMPASS]Êîìïàñ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BRONZE_WORKING]Áðîíçîâîå ëèòüå[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MATHEMATICS]Ìàòåìàòèêà[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HANGING_GARDEN]Âèñÿ÷èå ñàäû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_NOTRE_DAME]Íîòð-Äàì[\LINK][PARAGRAPH:1][H1]Ëó÷øèå çäàíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GRANARY]Àìáàð[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HARBOR]Ãàâàíü[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Ïðÿìî ê ãëèíÿíîé ïîñóäå. Ñòðîéòå (èëè ïîäñòåãíèòå) âàøè äåøåâûå àìáàðû. Ïîäñòåãíèòå íåêîòîðûõ è ïðîäîëæàéòå ïîäñòåãèâàòü.[PARAGRAPH:1]Ñïåöèàëüíî èçó÷èòå êàê ëó÷øå âñåãî óñèëèòü ãðàæäàíñêîå ðàáñòâî ÷òîáû ìàêñèìèçèðîâàòü âûõîä ìîëîòêîâ çà ïðåäåëû ïðèíóæäåíèÿ, äåëàÿ îáà è ñòðîåíèå êîòîðîå âû ïðèíóæäàåòå è ñëåäóþùåå ñòðîåíèå äåøåâûì. Áëàãîäàðÿ àìáàðó, íàñåëåíèå âûðàñòåò ñíîâà áûñòðåå, ïîçâîëÿÿ âàì ïðèíóäèòü èõ ñíîâà.[PARAGRAPH:1]Î÷åâèäíî, ñòðîéòå áîëüøå Ðàáî÷èõ, òàê êàê îíè áîëåå äåøåâû äëÿ âàñ, è ïîìåùàéòå èõ íà ðàáîòó. Óëó÷øèòå âàøè êëåòêè è ñîåäèíÿéòå âàùè ðåñóðñû áûñòðåå. Òîëüêî ïîìíèòå ÷òî +25% äëÿ ñòðîèòåëüñòâà ðàáî÷èõ óñêîðÿåòñÿ ìîëîòêàìè, à íå ïèùåé, òàêèì îáðàçîì âû äîëæíû áóäåòå óëó÷øèòü íåêîòîðûå êëåòêè ñ õîðîøèì ïðîèçâîäñòâîì è ðàáîòàòü ñ íèìè ïîêà ðàáî÷èé ñòðîèòñÿ ÷òîáû ïîëó÷èòü ïðåèìóùåñòâî îò ýòîãî. Òàê êàê ãàâàíè äåøåâû, ïðîáóéòå ïðåòåíäîâàòü íà íåñêîëüêî ïðèáðåæíûõ ãîðîäîâ òàêèì îáðàçîì âû ìîæåòå óñèëèòü ïðåèìóùåñòâà ýòîãî äåøåâîãî çäàíèÿ.[PARAGRAPH:1]Òàêæå èùèòå âîçìîæíîñòü èñïîëüçîâàòü ÷òî çäîðîâüå +2. Âíà÷àëå, âû ìîæåòå ïîìåñòèòü, ãîðîä ïðÿìèêîì â äæóíãëè, íàïðèìåð, èëè îêðóæåííûé ïîéìàìè. Êðîìå òîãî, âû ìîæåòå ñòðîèòü óõóäøàþùèå çäîðîâüå çäàíèÿ ïîäîáíûå êóçíèöå è ôàáðèêå ñ ìåíüøèì áåñïîêîéñòâîì î èõ âîçäåéñòâèè íà çäîðîâüå. Âû ìîæåòå âûðóáèòü áîëüøå ëåñîâ, ïîòîìó ÷òî âû íå íóæäàåòåñü â èõ âûãîäàõ çäîðîâüÿ (ñëåäîâàòåëüíî ïðèâëåêàòåëüíû òåõíîëîãèè Áðîíçîâîãî ëèòüÿ è Ìàòåìàòèêè). Òîëüêî èìåéòå â âèäó, ÷òî ÷åðòà íå äåëàåò âàøè ãîðîäà íåóêðîòèìûìè, è âû áóäåòå èìåòü ñâîå áåñïîêîéñòâî ñ èõ çäîðîâüåì--òîëüêî ãîðàçäî ïîçæå ÷åì ðàíî.[PARAGRAPH:1]Âèñÿ÷èå ñàäû ÿâëÿþòñÿ ïðèâëåêàòåëüíûì ÷óäîì äëÿ Ýêñïàíñèâíîãî. Ýòî ìîæåò íå ïîêàçàòüñÿ òàê ñíà÷àëà--ÿ óæå èìåþ ïîâûøåíèå çäîðîâüÿ, ÷òî ìíå áîëüøå íàäî? Ïîñêîëüêó âû ïðåñëåäóåòå ñòðàòåãèþ êîòîðàÿ âûäâèãàåò îáîëî÷êó çäîðîâüÿ âàøèõ ãîðîäîâ, èìåííî ïîýòîìó. ß ëþáëþ ÷óäåñà è çäàíèÿ, êîòîðûå äàëåå óâåëè÷èâàþò âûãîäû îñîáåííîñòåé (âîò ïî÷åìó ÿ ëþáëþ ïðîáîâàòü ñòðîèòü Ïàðôåíîí êîãäà ÿ èãðàþ êàê ôèëîñîôñêèé ëèäåð, äëÿ ïðèìåðà). Âèñÿ÷èå ñàäû òàêæå îáåñïå÷èâàþò áîëüøåå êîëè÷åñòâî ãðàæäàí äëÿ ïðèíóæäåíèÿ. È ýé--GPP âïåðåä ê âåëèêîìó èíæåíåðó! Âû äîëæíû ëþáèòü ýòî.[PARAGRAPH:1]Íîòð-Äàì òàêæå ìîæåò áûòü óäîáíûì. Åñëè âû ïðèíóæäàåòå òî âàøè ðóêè êðîâîòî÷àò,ïîâûøåíèå ñ÷àñòüÿ îò áîëüøîãî ñîáîðà ìîæåò áûòü äåéñòâèòåëüíî î÷åíü äîëãîæäàííûì.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Ïîäîáíî ìíîãèì äðóãèì îñîáåííîñòÿì òàêèì êàê Ìåöåíàò, ýôôåêòû Ýêñïàíñèîíèñòà óìåíüøàþòñÿ, ïðè ïðîäîëæåíèè èãðû. Ïîÿâëÿþòñÿ äðóãèå ñðåäñòâà óâåëè÷åíèÿ çäîðîâüÿ, äåøåâûå çäàíèÿ - ðàííèå, è ê êîíöó èãðû, êàê òîëüêî âàøà ñåòü æåëåçíîé äîðîãè âûïîëíåíà, âàøå ïðîñòîðíîå, äåøåâûå ðàáî÷èå íà÷èíàþò ñòàíîâèòüñÿ ïðàçäíûìè. Âû ìîæåòå òàêæå ïåðåêëþ÷èòü îò ïàðàäèãìû Ðàáñòâà, òåðÿÿ îäíî èç îñíîâíûõ âûãîä äåøåâûõ àìáàðîâ.[PARAGRAPH:1]È êàê ñ áîëüøèíñòâîì äðóãèõ ÷åðò, Ýêñïàíñèâíûé íå îáåñïå÷èâàåò íèêàêîãî ïðÿìîãî ýêîíîìè÷åñêîãî ýôôåêòà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_EXTRA_GOODY</Tag>
+		<Tag>TXT_KEY_TRAITHELP_EXTRA_GOODY</Tag>
 		<English>[ICON_BULLET]Gains a second result from Goody Huts and Islands.</English>
 		<French>[ICON_BULLET]Reçoit un second cadeau des Huttes et Iles.</French>
 		<Italian>[ICON_BULLET]Ottieni un secondo bonus da villaggi tribali e isole sconosciute.</Italian>
@@ -781,7 +781,7 @@
 		<Russian>[ICON_BULLET]Удвоенная награда от туземных деревень и островов.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_EXTRA_YIELD_THRESHOLDS_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_EXTRA_YIELD_THRESHOLDS</Tag>
 		<English>[ICON_BULLET]+1%F1_yield on Plots with %d2%F3_yield</English>
 		<French>[ICON_BULLET]+1%F1_yield sur les cases avec: %d2%F3_yield</French>
 		<German>[ICON_BULLET]+1%F1_yield auf Geländefeldern mit %d2%F3_yield</German>
@@ -874,7 +874,7 @@
 		<Russian>Ýòî ÿâëÿåòñÿ âåñüìà âåðîÿòíî ñàìîé ñèëüíîé îñîáåííîñòüþ, êàê ìèíèìóì íà óðîâíÿõ äî Èìïåðàòîðà, òàê ÷òî ìíîãèå èãðîêè ðàññìàòðèâàþò Ôèíàíñèñòà êàê "êîñòûëü" è èçáåãàþò ëèäåðîâ ñ ýòîé ÷åðòîé ïîòîìó ÷òî îíè ÷óâñòâóþò, ÷òî ýòî ïðåäëàãàåò íåñïðàâåäëèâîå ïðåèìóùåñòâî. Ðàçðàáîò÷èêè èãðû ïî-âèäèìîìó ñîãëàñèëèñü ñ ýòèì, ñëåäîâàòåëüíî â îäíîì èç ðàííèõ ïàò÷åé îíè óäàëèëè äâîéíóþ ñêîðîñòü ïðîèçâîäñòâà áàíêîâ ÷òîáû óìåíüøèòü åãî ìîùü. Äàæå â ýòîì ñëó÷àå, Ôèíàíñîâûé îñòàåòñÿ äåéñòâèòåëüíî óæàñíûé îñîáåííîñòüþ.[PARAGRAPH:1]Ñíà÷àëà, ýòî êàæåòñÿ åäâà ðàçëè÷èìûì: +1[ICON_COMMERCE] íà íåêîòîðûõ êëåòêàõ? Íó è ÷òî?[PARAGRAPH:1]Îòâåò, êîíå÷íî, ýòîò: ýòî - ýêîíîìèêà, ãëóïåö. Ñêàæèòå, ÷òî âû õîòèòå î âîåííûõ, èññëåäîâàíèÿõ, ðåëèãèè, è äðóãèõ ýëåìåíòàõ èãðû; â êîíå÷íîì ñ÷åòå, âàøà öèâèëèçàöèÿ òðåáóåò çäðàâîé ýêîíîìèêè ÷òîáû ïîääåðæèâàòü âñå îñòàëüíîå, ÷òî âû äåëàåòå. Âîåííûå þíèòû òðåáóþò äåíåæíîãî ñîäåðæàíèÿ, áîëüøå òîãî, åñëè îíè âíå âàøåé òåððèòîðèè. Ãîðîäà àíàëîãè÷íî èìåþò çàòðàòû îáñëóæèâàíèÿ, çàäåðæèâàÿ âàøó ñêîðîñòü ðàñøèðåíèÿ è òðåáóÿ îò âàñ ãàðàíòèé ÷òî êàæäûé ãîðîä ìîæåò òàê èëè èíà÷å çàïëàòèòü çà ñåáÿ. È âû äîëæíû ïîääåðæèâàòü íà âûñîêîì óðîâíå òåõíîëîãèè è áûòü â ñîñòîÿíèè îòêëàäûâàòü êàïèòàëû, ÷òîáû ïîääåðæàòü èññëåäîâàíèÿ. Ôèíàíñîâàÿ ÷åðòà äåëàåò âñå ýòè çàäà÷è íåìíîãî ëåã÷å--åñëè îáðàáîòàíî õîðîøî, íàìíîãî ëåã÷å.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_POTTERY]Ãëèíÿíàÿ ïîñóäà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CURRENCY]Äåíüãè[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_GUILDS]Ãèëüäèè[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BANKING]Áàíêîâñêîå äåëî[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_LIBERALISM]Ëèáåðàëèçì[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_PRINTING_PRESS]Ïå÷àòíûé ñòàíîê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_DEMOCRACY]Äåìîêðàòèÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CORPORATION]Êîðïîðàöèè[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COLOSSUS]Êîëîññ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_WALL_STREET]Óîëë Ñòðèò[\LINK][PARAGRAPH:1][H1]Ëó÷øèå çäàíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_MARKET]Ðûíîê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GROCER]Òîðãîâûå ðÿäû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BANK]Áàíê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIBRARY]Áèáëèîòåêà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_UNIVERSITY]Óíèâåðñèòåò[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_OBSERVATORY]Îáñåðâàòîðèÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LABORATORY]Ëàáîðàòîðèÿ[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Ãëàâíûé ñïîñîá óñèëèòü ôèíàíñîâóþ ÷åðòó ÿâëÿåòñÿ î÷åíü ïðÿìûì: äîìîâîé çàâàë. Äà, ïðîâåðåííàÿ Cottage Economy - äîìîâàÿ ýêîíîìèêà, èëè CE. Èìåéòå âàøèõ [LINK=UNIT_WORKER]ðàáî÷èõ[\LINK] çàëîæèòå òàê ìíîãî [LINK=IMPROVEMENT_COTTAGE]äîìîâ[\LINK] ñêîëüêî âàøå íàñåëåíèå ìîæåò îáðàáîòàòü è åùå îáðàáàòûâàÿ äðóãèå ðÿäîìñòîÿùèå êëåòêè òàêæå. ß îñîáåííî ëþáëþ ïîìåùàòü äîìà íà ïðèáðåæíûõ êëåòêàõ ëóãîâ, ïîñêîëüêó Ôèíàíñîâàÿ âûãîäà óìèðàåò, êàê òîëüêî äîì ïîñòðîåí, è 2 ïèùè êîðìèò ãðàæäàíèíà, îáðàáîòûâàþùåãî êëåòêó (ïîéìû, ñ 3 ïèùè, åùå ëó÷øå äëÿ äîìîâ, ïîääåðæèâàÿ ãîðîäñêîé ðîñò íàðÿäó ñ ýêîíîìèêîé). Òîëüêî ïîìíèòå, ÷òî âàì, âåðîÿòíî, ïðèäåòñÿ îðîñèòü íåêîòîðûå èç ýòèõ êëåòîê âìåñòî ýòîãî, ðàçìåñòèâ ôåðìû íà íèõ, ÷òîáû êîðìèòü è âûðàñòèòü âàøå íàñåëåíèå è/èëè ñâÿçàòü èððèãàöèåé äðóãóþ êëåòêó. Óäîñòîâåðüòåñü, ÷òî âû èìååòå ãðàæäàí, îáðàáîòûâàþùèõ äîìà óñòîé÷èâî, îäíàêî, ïîñêîëüêó ýòî - åäèíñòâåííûé ñïîñîá çàñòàâèòü èõ âûðàñòèòü è óâåëè÷èâàòü èõ äîõîä.[PARAGRAPH:1]Êðîìå òîãî, áóäüòå â ïîèñêàõ ðåñóðñîâ, êîòîðûå îáåñïå÷èâàþò äîïîëíèòåëüíóþ òîðãîâëþ. Äðàãîöåííûå êàìíè, çîëîòî, è ñåðåáðî ÿâëÿþòñÿ î÷åâèäíûìè öåëÿìè, íî ñïåöèè, øåëê, è âèíî õîðîøè òàêæå; âñå îíè çàðàáîòàþò äëÿ âàñ âûãîäó +1[ICON_COMMERCE] â äîïîëíåíèå ê äîïîëíèòåëüíîé òîðãîâëå ðåñóðñà. Âàì íåîáõîäèìî ïðåòåíäîâàòü íà ýòè ðåñóðñû, ãàðàíòèðóéòå, ÷òî îíè íàõîäÿòñÿ â êðóãå ãîðîäà, è óëó÷øåíû è çàòåì îáðàáîòûâàþòñÿ ãðàæäàíèíîì. Áîëüøèíñòâî áîãàòûõ òîðãîâëåé ðåñóðñîâ òàêæå óâåëè÷èâàåò ñ÷àñòüå, ÷òî îçíà÷àåò, ÷òî âû ìîæåòå âûðàñòèòü âàøè äðóãèå áîëüøèå ãîðîäà è, çà õîä îáðàáîòàòü áîëüøå äîìîâ è äðóãèå áîãàòûå òîðãîâëåé êëåòêè.[PARAGRAPH:1]Òàê âû áóäåòå èìåòü âñå ÷òî ïðèíîñèò äîïîëíèòåëüíàÿ òîðãîâëÿ, óäåëèòå ïåðâîñòåïåííîå âíèìàíèå çäàíèÿì, êîòîðûå äåëàþò ÷òî-òî ñ ýòèì, è òåõíîëîãèÿì êîòîðûå âêëþ÷àþò èõ. Áèáëèîòåêè, ìîíàñòûðè, óíèâåðñèòåòû, îáñåðâàòîðèè è ëàáîðàòîðèè âñå óìíîæàþò êîëè÷åñòâî èññëåäîâàíèé, êîòîðîå âû ïðåîáðàçîâûâàåòå èç òîðãîâëè ÷åðåç ñëàéäåð íàóêè, â òî âðåìÿ êàê ðûíêè, òîðãîâûå ðÿäû è áàíêè óìíîæàþò ëþáîå îñòàâøååñÿ çîëîòî. Â äîáàâëåíèå, Ïå÷àòíûé ïðåññ óâåëè÷èò äîõîä ñ âàøèõ èíâåñòèöèé â äîìà, òàêæå êàê ïàðàäèãìà Ñâîáîäà ñëîâà. Ýìàíñèïàöèÿ çàñòàâèò ëþáûå äîìà âûðàñòàòü áûñòðåå.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Ñíà÷àëà, Ôèíàíñîâûé íå îáåñïå÷èâàåò íèêàêîé ïðÿìîé âûãîäû ê êëåòêå, êîòîðàÿ íå îáåñïå÷èâàåò êàê ìèíèìóì 2 òîðãîâëè. Ýòî ìîæåò çàñòàâèòü âàñ îòêàçàòüñÿ ðàáîòàòü ñ êëåòêàìè áåç âûãîäû, äàæå ïðè òîì, ÷òî âû áóäåòå íóæäàòüñÿ â íèõ. Ýòî îçíà÷àåò ÷òî ïðîèçâîäñòâî ãîðîäà, êîòîðûé ãëàâíûì îáðàçîì îáðàáàòûâàåò áîãàòûå ìîëîòêàìè à íå áîãàòûå òîðãîâëåé êëåòêè, íå ïðèîáðåòàÿ íåïîñðåäñòâåííîãî âûèãðûøà èç îñîáåííîñòåé. Âû áóäåòå, îäíàêî, íóæäàòüñÿ ïî êðàéíåé ìåðå â îäíîì ïðîèçâîäÿùåì ãîðîäå, ïðåäïî÷òèòåëüíî áîëüøå, òàê ÷òî íå ïðîïóñêàéòå èõ â ïîëüçó ãîðîäîâ òîðãîâëè. Òî æå ñàìîå ïîäõîäèò äëÿ óñîâåðøåíñòâîâàíèé êëåòêè. Äà, âû ìîæåòå ïîìåñòèòü äîì íà õîëì ïîëÿ. Íî íóæíî ýòî âàì? Ðóäíèê îáåñïå÷èë áû âåñüìà íåîáõîäèìûå ìîëîòêè, ÷åãî êîììåð÷åñêèì ãîðîäàì ÷àñòî õðîíè÷åñêè íåõâàòàåò.[PARAGRAPH:1]Ñàìàÿ áîëüøàÿ ïðîáëåìà ñ Ôèíàíñîâûì, îäíàêî, ÿâëÿåòñÿ óÿçâèìîñòü âàøåé ýêîíîìèêè, îñîáåííî ñ òå÷åíèåì âðåìåíè. Òðåáóåòñÿ ìíîãî õîäîâ çàñòàâèòü äîì ïðåâðàòèòüñÿ â ãîðîä, íî ýòè èíâåñòèöèè ìîãóò áûòü áûñòðî óíè÷òîæåíû íåñêîëüêèìè ãðàáÿùèìè âðàæåñêèìè þíèòàìè. È çíà÷èòåëüíîå êîëè÷åñòâî çîëîòà êîòîðîå ìîæåò áûòü ïîëó÷åíî îò îãðàáëåííûõ äîìîâ î÷åíü ñîáëàçíÿåò ÈÈ. Âû áóäåòå íóæäàòüñÿ ñòàâèòü â ãàðíèçîí âàøèõ ëó÷øèõ, ñòàðåéøèõ êîììåð÷åñêèõ ãîðîäîâ àíòèãðàáÿùèõ þíèòîâ, åñëè âû èäåòå âîåâàòü. Òàêæå ïðîáóéòå èìåòü âàøè ëó÷øèå ãîðîäà òîðãîâëè âíóòðè îñíîâû âàøåé èìïåðèè, à íå íà áîëåå óÿçâèìûõ ãðàíèöàõ èëè áåðåãîâîé ëèíèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FLIGHT_RANGE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_FLIGHT_RANGE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Flight Operation Range for Air units.</English>
 		<French>[ICON_BULLET]%D1_Amount de portée opérationnelle pour les unités aériennes.</French>
 		<Italian>[ICON_BULLET]%D1_Amount al raggio d'azione per le unità aeree.</Italian>
@@ -939,14 +939,14 @@
 		<Russian>Êñåí.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FREE_PROMOTION_UNITCOMBAT</Tag>
+		<Tag>TXT_KEY_TRAITHELP_FREE_PROMOTION_UNITCOMBAT</Tag>
 		<English>[ICON_BULLET]Free [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] Promotion for[SPACE]</English>
 		<French>[ICON_BULLET]Promotion [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] gratuite pour[SPACE]</French>
 		<German>[ICON_BULLET]freie Beförderung [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] für[SPACE]</German>
 		<Russian>[ICON_BULLET]Бесплатные Квалификации [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] для[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FREE_SPEC_NW</Tag>
+		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_NW</Tag>
 		<English>[ICON_BULLET]Gets a Free Specialist for each National Wonder where built.</English>
 		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Nationale construite.</French>
 		<Italian>[ICON_BULLET]Ottieni uno specialista gratuito per ogni Meraviglia Nazionale nella città in cui è costruito.</Italian>
@@ -954,7 +954,7 @@
 		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Национальное Чудо, где оно построено.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FREE_SPEC_TP</Tag>
+		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_TP</Tag>
 		<English>[ICON_BULLET]Gets a Free Specialist for each Team Project where built.</English>
 		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Projet d'Equipe construit.</French>
 		<Italian>[ICON_BULLET]Ottieni uno specialista gratuito per ogni Progetto di squadra nella città in cui è costruito.</Italian>
@@ -962,7 +962,7 @@
 		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждый завершенный командный проект.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FREE_SPEC_WW</Tag>
+		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_WW</Tag>
 		<English>[ICON_BULLET]Gets a Free Specialist for each World Wonder where built.</English>
 		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Mondiale construite.</French>
 		<Italian>[ICON_BULLET]Ottieni uno specialista gratuito per ogni Grande Meraviglia nella città in cui è costruito.</Italian>
@@ -970,13 +970,13 @@
 		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Чудо Света, где оно построено.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP</Tag>
+		<Tag>TXT_KEY_TRAITHELP_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP</Tag>
 		<English>[ICON_BULLET]Free military unit upkeep per 100 population: %D1</English>
 		<German>[ICON_BULLET]freie militärische Einheiten pro 100 Bürger: %D1</German>
 		<Russian>[ICON_BULLET]Бесплатных отрядов на каждые 100 жителей: %D1</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_GOLDEN_AGE_ON_BIRTH_OF_GP_TYPE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_GOLDEN_AGE_ON_BIRTH_OF_GP_TYPE</Tag>
 		<English>[ICON_BULLET]Starts a Golden Age when a %s1_GP is born in an owned city.</English>
 		<French>[ICON_BULLET]Démarre l'Age d'Or lorsqu'un %s1_GP est né dans la ville.</French>
 		<Italian>[ICON_BULLET]Comincia un'età dell'oro quando un %s1_GP nasce in una tua città.</Italian>
@@ -984,7 +984,7 @@
 		<Russian>[ICON_BULLET]Начинается Золотой век, когда %s1_GP рождается в городе игрока.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_GREAT_GENERAL_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_GREAT_GENERAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Great Military People Emergence</English>
 		<French>[ICON_BULLET]%D1%% Emergen de Général illustre</French>
 		<German>[ICON_BULLET]%D1%% Geburtenrate für Große Feldherren</German>
@@ -993,7 +993,7 @@
 		<Russian>[ICON_BULLET]%D1%% шансов на рождение Великого генерала</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_GREAT_PEOPLE_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_GREAT_PEOPLE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% [ICON_GREATPEOPLE] Birth Rate</English>
 		<French>[ICON_BULLET]Taux de natalité [ICON_GREATPEOPLE] %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Geburtenrate [ICON_GREATPEOPLE]</German>
@@ -1003,13 +1003,13 @@
 		<Russian>[ICON_BULLET]%D1%% [ICON_GREATPEOPLE] ур. рождаемости</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_HOLY_CITY_NON_STATE_REL_XP_MODIFIER</Tag>
+		<Tag>TXT_KEY_TRAITHELP_HOLY_CITY_NON_STATE_REL_XP_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in Holy Cities of Non-State Religions</English>
 		<French>[ICON_BULLET]%D1%% EXP Gratuite pour toutes les unités formées dans les Villes Saintes des religions non étatiques</French>
 		<Russian>[ICON_BULLET]%D1%% бесплатного опыта всем отрядам, обученным в Священных городах негос. религий</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_HOLY_CITY_STATE_REL_XP_MODIFIER</Tag>
+		<Tag>TXT_KEY_TRAITHELP_HOLY_CITY_STATE_REL_XP_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in the Holy City of your State Religion</English>
 		<French>[ICON_BULLET]%D1%% Expérience gratuite pour toutes les unités formées dans la ville sainte de votre religion d'État</French>
 		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella Città santa della tua religione di stato.</Italian>
@@ -1246,7 +1246,7 @@
 		<Russian>Èçîë.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_LESS_YIELD_THRESHOLDS_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_LESS_YIELD_THRESHOLDS</Tag>
 		<English>[ICON_BULLET]-1%F1_yield on Plots with %d2%F3_yield</English>
 		<French>[ICON_BULLET]-1%F1_yield sur les cases avec: %d2%F3_yield</French>
 		<German>[ICON_BULLET]-1%F1_yield auf Geländefeldern mit %d2%F3_yield</German>
@@ -1256,7 +1256,7 @@
 		<Russian>[ICON_BULLET]-1%F1_yield на участках с %d2%F3_yield</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_MAX_ANARCHY_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_MAX_ANARCHY</Tag>
 		<English>[ICON_BULLET]Max %d1 [NUM1:Turn:Turns] of Anarchy</English>
 		<French>[ICON_BULLET]%d1 [NUM1:tour:tours] d'anarchie maximum</French>
 		<German>[ICON_BULLET]Max. %d1 [NUM1:Runde:Runden] Unruhen</German>
@@ -1266,7 +1266,7 @@
 		<Russian>[ICON_BULLET]Макс. %d1 [NUM1:Turn:Turns] к продолжительности Анархии</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_MAX_TRADE_ROUTES</Tag>
+		<Tag>TXT_KEY_TRAITHELP_MAX_TRADE_ROUTES</Tag>
 		<English>[ICON_BULLET]%D1_Change to Maximum possible Trade Routes ([ICON_TRADE]) per City</English>
 		<French>[ICON_BULLET]%D1_Change de nombre maximum de routes commerciales ([ICON_TRADE]) par ville</French>
 		<Italian>[ICON_BULLET]%D1_Change al numero massimo di rotte commerciali ([ICON_TRADE]) per città</Italian>
@@ -1330,7 +1330,7 @@
 		<Russian>Ìåã.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_MIN_ANARCHY_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_MIN_ANARCHY</Tag>
 		<English>[ICON_BULLET]Min %d1 [NUM1:Turn:Turns] of Anarchy</English>
 		<French>[ICON_BULLET]%d1 [NUM1:tour:tours] d'anarchie minimum</French>
 		<German>[ICON_BULLET]Min. %d1 [NUM1:Runde:Runden] Unruhen</German>
@@ -1339,7 +1339,7 @@
 		<Russian>[ICON_BULLET]Мин. %d1 [NUM1:Turn:Turns] к продолжительности Анархии</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_MISSILE_CARGO_SPACE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_MISSILE_CARGO_SPACE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Cargo Space for all Missile Carrying units.</English>
 		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités de transport de missiles.</French>
 		<Italian>[ICON_BULLET]%D1_Amount allo spazio di trasporto per tutte le unità che trasportano missili.</Italian>
@@ -1347,13 +1347,13 @@
 		<Russian>[ICON_BULLET]%D1_Amount к грузоподъемности для всех ракетоносцев.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_MISSILE_RANGE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_MISSILE_RANGE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Mission Operation Range for Missile units.</English>
 		<French>[ICON_BULLET]%D1_Amount Portée opérationnelle pour les unités de missiles.</French>
 		<Russian>[ICON_BULLET]%D1_Amount к радиусу действия для всех типов ракет.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_NATIONAL_WONDER_PRODUCTION_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_NATIONAL_WONDER_PRODUCTION_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% National Wonder Production</English>
 		<French>[ICON_BULLET]Construction de merveilles nationales %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Produktion Nationaler Wunder</German>
@@ -1363,7 +1363,7 @@
 		<Russian>[ICON_BULLET]%D1%% производства Национальных чудес</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_NAVAL_CARGO_SPACE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_NAVAL_CARGO_SPACE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Cargo Space for all transport-capable Naval units.</English>
 		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités navales de transport.</French>
 		<Italian>[ICON_BULLET]%D1_Amount allo spazio di trasporto per tutte le unità navali da trasporto.</Italian>
@@ -1371,7 +1371,7 @@
 		<Russian>[ICON_BULLET]%D1_Amount к грузоподъемности для всех транспортных судов.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_NEGATIVE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_NEGATIVE</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This is a Negative Trait[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]C'est un Trait Négatif[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]negative Charaktereigenschaft[COLOR_REVERT]</German>
@@ -1406,7 +1406,7 @@
 		<Russian>Êî÷.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_NONSTATE_RELIGIOUS_COMMERCE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_NONSTATE_RELIGIOUS_COMMERCE</Tag>
 		<English>[ICON_BULLET]Non State [ICON_RELIGION] Still produces base [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH] amounts.</English>
 		<French>
 			<Text>[ICON_BULLET]Le [ICON_RELIGION] (non officielle) produit encore [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Text>
@@ -1424,7 +1424,7 @@
 		<Russian>[ICON_BULLET]Негосударственная религия [ICON_RELIGION] по-прежнему производит базовые очки [ICON_CULTURE], [ICON_GOLD] и [ICON_RESEARCH].</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_NON_STATE_REL_SPREAD_MODIFIER</Tag>
+		<Tag>TXT_KEY_TRAITHELP_NON_STATE_REL_SPREAD_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% chance to Spread Non State Religion with your Missionaries.</English>
 		<French>[ICON_BULLET]%D1%% chances de propager la religion non étatique avec vos missionnaires.</French>
 		<Italian>[ICON_BULLET]%D1%% di diffondere una religione non di stato con i tuoi missionari.</Italian>
@@ -1432,7 +1432,7 @@
 		<Russian>[ICON_BULLET]%D1%% шанс распространить негосударственную религию вашими миссионерами.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_NOT_ON_GAME_OPTION</Tag>
+		<Tag>TXT_KEY_TRAITHELP_NOT_ON_GAME_OPTION</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Deactivated when the %s2_Option Game Option is in use[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]désactivé lorsque l'option %s2_Option est active[COLOR_REVERT]</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Inattivo se l'opzione %s2_Option è attivata[COLOR_REVERT]</Italian>
@@ -1440,7 +1440,7 @@
 		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Отключается, когда используется опция %s2_Option[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_NO_ANARCHY_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_NO_ANARCHY</Tag>
 		<English>[ICON_BULLET]No Anarchy</English>
 		<French>[ICON_BULLET]Pas d'anarchie</French>
 		<German>[ICON_BULLET]Keine Unruhen</German>
@@ -1450,7 +1450,7 @@
 		<Russian>[ICON_BULLET]Нет Анархии</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_NO_UPKEEP</Tag>
+		<Tag>TXT_KEY_TRAITHELP_NO_UPKEEP</Tag>
 		<English>[ICON_BULLET]No Upkeep Costs for %s1 Civics</English>
 		<French>[ICON_BULLET]Aucun coût d'entretien pour: %s1</French>
 		<German>[ICON_BULLET]keine laufenden Kosten für %s1</German>
@@ -1460,7 +1460,7 @@
 		<Russian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%s1 íå òðåáóåò çàòðàò íà ñîäåðæàíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ON_GAME_OPTION</Tag>
+		<Tag>TXT_KEY_TRAITHELP_ON_GAME_OPTION</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Only active when the %s1_Option Game Option is in use[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]actif uniquement lorsque l'option %s1_Option est active[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]nur bei aktivierter Einstellung "%s1_Option" verfügbar[COLOR_REVERT]</German>
@@ -1636,7 +1636,7 @@
 		<Russian>Ïîï.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_PREREQ_AND_ENTRY</Tag>
+		<Tag>TXT_KEY_TRAITHELP_PREREQ_AND_ENTRY</Tag>
 		<English>[COLOR_WARNING_TEXT] and %s1_trait[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT] et %s1_trait[COLOR_REVERT]</French>
 		<Italian>[COLOR_WARNING_TEXT] e %s1_trait[COLOR_REVERT]</Italian>
@@ -1644,7 +1644,7 @@
 		<Russian>[COLOR_WARNING_TEXT] и %s1_trait[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_PREREQ_BEGIN</Tag>
+		<Tag>TXT_KEY_TRAITHELP_PREREQ_BEGIN</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]You currently require %s1_trait[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Il vous faut le trait %s1_trait[COLOR_REVERT]</French>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede %s1_trait[COLOR_REVERT]</Italian>
@@ -1652,7 +1652,7 @@
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Вам в настоящее время требуется %s1_trait[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_PREREQ_OR_ENTRY</Tag>
+		<Tag>TXT_KEY_TRAITHELP_PREREQ_OR_ENTRY</Tag>
 		<English>[COLOR_WARNING_TEXT] (%s1_Trait may substitute for %s2_Trait)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT] (%s1_Trait peut remplacer %s2_Trait)[COLOR_REVERT]</French>
 		<Italian>[COLOR_WARNING_TEXT] (%s1_Trait può sostituire %s2_Trait)[COLOR_REVERT]</Italian>
@@ -1660,7 +1660,7 @@
 		<Russian>[COLOR_WARNING_TEXT] (%s1_Trait может заменить %s2_Trait)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_PRODUCTION_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_PRODUCTION_MODIFIER</Tag>
 		<English>[NEWLINE][ICON_BULLET]%D1%% Production of[SPACE]</English>
 		<French>[NEWLINE][ICON_BULLET]Production %D1%% plus rapide de:[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]%D1%% schnellere Produktion für:[SPACE]</German>
@@ -1872,7 +1872,7 @@
 		<Russian>Êàê ó Ôèíàíñèñòà, ó Ìèñòèêà íàèáîëüøàÿ ñèëà ïðèõîäèò îò åãå ïîëîæèòåëüíîãî âîçäåéñòâèÿ íà âàøó ýêîíîìèêó. Àíàðõèÿ îçíà÷àåò ýòî äëÿ îäíîãî õîäà èëè áîëüøå, âàøè ãîðîäà íè÷åãî íå âûðàùèâàþò èëè ñòðîÿò, âàøà êóëüòóðà íå óâåëè÷èâàåòñÿ, GPP íå íàêàïëèâàþòñÿ, äîìà íå ðàñòóò, è òàê äàëåå. Ìèñòèê îçíà÷àåò, ÷òî âû èçáåãàåòå ýòèõ ïåðèîäîâ ýêîíîìè÷åñêîãî çàñòîÿ; ýòî äîëæíî ïðèâåñòè ê òîìó, ÷òî âû áóäåòå â ñîñòîÿíèè èññëåäîâàòü ïî êðàéíåé ìåðå îäíó èëè äâå äîïîëíèòåëüíûõ òåõíîëîãèè, ïîñòðîèòü íåñêîëüêî áîëüøå þíèòîâ è çäàíèé, ïðîèçâåñòè áîëüøå çíàìåíèòîñòåé, è òàê äàëåå, ïî ñðàâíåíèþ ñ íå-Ìèñòè÷åñêîé öèâèëèçàöèåé.[PARAGRAPH:1]Â îòëè÷èå îò íåñêîëüêèõ äðóãèõ îñîáåííîñòåé, ýôôåêòû Ìèñòèêà íå óìåíüøàþòñÿ ïîçäíåå â èãðå. Íàïðîòèâ, ïîñêîëüêó áîëüøå ïàðàäèãì è ðåëèãèé ñòàíîâÿòñÿ äîñòóïíûìè, âû ìîæåòå õîòåòü è äîëæíû èçìåíÿòü ïàðàäèãìû ÷àùå, è Ìèñòèê ïîçâîëÿåò âàì äåëàòü ýòî.[PARAGRAPH:1]Îäíàêî, ýòà ÷åðòà ñïîëçàåò, ïî ìîåìó ìíåíèþ, îò òîãî, ÷òîáû áûòü îäíîé èç ñàìûõ ñèëüíûõ ê òîìó, ÷òîáû áûòü ÷åðòîé ñðåäíåé ñèëû. Ýòî â îñíîâíîì èç-çà ïàêåòà ðàñøèðåíèé Beyond the Sword. Îòêðîâåííî, ìíîãèå îñïàðèâàþò ìîå âêëþ÷åíèå ýòîãî â "Ñèëüíóþ" êàòåãîðèþ äëÿ íà÷àëà. Íî Beyond the Sword óìåíüøèë åãî ñèëó ñäåëàâ åãî ýôôåêòû ëåãêèìè äëÿ ïîëó÷åíèÿ. Âû òåïåðü äîëæíû èñïîëüçîâàòü òîëüêî îäíó çíàìåíèòîñòü, à íå äâå, ÷òîáû âûçûâàòü âàø ïåðâûé Çîëîòîé âåê; è âû ìîæåòå òåïåðü èçìåíèòü ïàðàäèãìû, áåç àíàðõèè â òå÷åíèå Çîëîòîãî âåêà. Ýòî òîëüêî îäíî èç ìíîãèõ ãäå Çîëîòîé âåê áûë óëó÷øåí è ñäåëàí áîëåå ïðèâëåêàòåëüíûì â Beyond the Sword.[PARAGRAPH:1]Êðîìå òîãî, â ñëåäóþùåé èãðå, êîãäà âû èìååòå äîñòóï êî âñåì ïàðàäèãìàì è Ìèñòèê îáû÷íî ñàìûé ñèëüíûé, âû ìîæåòå òåïåðü äîñòèãíóòü òåõ æå ñàìûõ ýôôåêòîâ, ñòðîÿ íîâîå ÷óäî Ñòàòóÿ ñïàñèòåëÿ, êîòîðûé íå òîëüêî äàåò âàì âîçìîæíîñòè Ìèñòèêà èçìåíåíèÿ ïàðàäèãì áåç àíàðõèè; âû ìîæåòå òàêæå èçìåíÿòü ïàðàäèãìû, íå îæèäàÿ ñìåíû õîäà, óæå íå ãîâîðÿ î îáû÷íûõ ïÿòè! (Çàìåòêà: â ïàò÷å BtS 3.13, ýòî áûëî çàìåíåíî íà 1 õîä îæèäàíèÿ ìåæäó èçìåíåíèÿìè ïàðàäèãì.)[PARAGRAPH:1]Ïîýòîì Ìèñòèê, ïî ìîåìó ìíåíèþ, óïàë îò ñèëüíîãî äî ñðåäíåãî íå èç-çà ñîáñòâåííîé îøèáêè, íî ÷åðåç áîëåå ëåãêèé äîñòóï ê åãî âûãîäàì íå-Ìèñòè÷åñêèì ëèäåðàì.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET]Òå, êîòîðûå âêëþ÷àþò ïàðàäèãìû (íàïðèìåð. [LINK=TECH_CODE_OF_LAWS]Ñâîä çàêîíîâ[\LINK])[PARAGRAPH:1][ICON_BULLET]Òå, êîòîðûå îòêðûâàþò ðåëèãèè (íàïðèìåð. [LINK=TECH_MEDITATION]Ìåäèòàöèÿ[\LINK])[PARAGRAPH:1][ICON_BULLET][LINK=TECH_DIVINE_RIGHT]Áîæåñòâåííîå ïðàâî[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_PAPER]Áóìàãà[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_PYRAMID]Ïèðàìèäû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_SANKORE]Óíèâåðñèòåò Ñàíêîðå[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_SPIRAL_MINARET]Ìèíàðåò Àëü-Ìàëüâèÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_APOSTOLIC_PALACE]Àïîñòîëüñêèé äâîðåö[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_SHWEDAGON_PAYA]Øâåäàãîí-Ïàÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_SISTINE_CHAPEL]Ñèêñòèíñêàÿ êàïåëëà[\LINK][PARAGRAPH:1][H1]Ëó÷øèå çäàíèÿ[\H1][PARAGRAPH:1][ICON_BULLET]Õðàìû[PARAGRAPH:1][ICON_BULLET]Ìîíàñòûðè[PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][ICON_BULLET]Ïî÷òè âñå îíè--åñëè ýòî ïðåäëàãàåò ñòîÿùóþ âûãîäó è ñîîòâåòñòâóåò âàøåé ñòðàòåãèè, ïåðåõîäèòå íà íåå.[PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Íåò àíàðõèè íå îçíà÷àåò, ÷òî âû ìîæåòå ïðèíÿòü ïàðàäèãìó ïðÿìî òîò÷àñ, êàê òîëüêî ýòî äîñòóïíî, è ïîëó÷èòü åå ïðåèìóùåñòâà íåìåäëåííî, âìåñòî òîãî, ÷òîáû æäàòü, ÷òîáû èçìåíèòü íåñêîëüêî ïàðàäèãì ñðàçó êàê áëàãîðàçóìíûé íå-Ìèñòèê ëèäåð ñäåëàë áû. Òàê æå, åñëè ïàðàäèãìà ïðèíåñëà áû ïîëüçó âàì, íå êîëåáèòåñü ñäåëàòü ýòî. Åäèíñòâåííîå îãðàíè÷åíèå, êîòîðîå âû èìååòå, æäàòü ïÿòü õîäîâ, ïîêà âû íå ñìîæåòå èçìåíèòü ïàðàäèãìû ñíîâà.[PARAGRAPH:1]Åñòü òàêæå äèïëîìàòè÷åñêèå âûãîäû. Âû ìîæåòå ëåãêî ìåíÿòü ðåëèãèþ èëè èçìåíèòü íà áëàãîïðèÿòñòâóåìóþ ïàðàäèãìó èùà ðàñïîëîæåíèÿ äðóãîé öèâèëèçàöèè. Êàê òîëüêî âû ïîëó÷àåòå òî, â ÷åì âû íóæäàåòåñü îò íèõ--ñêàæåì, òîðãîâëÿ òåõíîëîãèåé--âû ìîæåòå ñìåíèòü ðåëèãèþ èëè ïàðàäèãìó íàçàä òàê æå ëåãêî. Îäíàêî, äåéñòâèòåëüíî èìåéòå â âèäó ÷òî äèïëîìàòè÷åñêèå ïðåìèè äëÿ ðàçäåëåííûõ ðåëèãèé èëè ëþáèìûõ ïàðàäèãì ìîæåò çàíÿòü íåñêîëüêî õîäîâ ÷òîáû íàêîïèòüñÿ äî ñóùåñòâåííîãî óðîâíÿ.[PARAGRAPH:1]Ïèðàìèäû ïðèâëåêàòåëüíîå ÷óäî äëÿ Ìèñòè÷åñêîãî ëèäåðà, òàê êàê îíè ðàíî âêëþ÷àþò âñå ïðàâèòåëüñòâåííûå ïàðàäèãìû, ðàçðåøàÿ âàì óñèëèâàòü îñîáåííîñòü â íà÷àëå èãðû. Î÷åâèäíî, ëþáàÿ òåõíîëîãèÿ, êîòîðàÿ ïîçâîëÿåò ïàðàäèãìó, öåííà è äîëæíà áûòü ïðèîðèòèçèðîâàíà--åñëè ïàðàäèãìà ÿâëÿåòñÿ ñòîÿùåé. Â Beyond the Sword, Øâåäàãîí-Ïàÿ òàêæå ïðèâëåêàòåëüíà, òàê êàê ýòî ðåëèãèîçíûé ýêâèâàëåíò Ïèðàìèä, âêëþ÷àþùèé âñå ðåëèãèîçíûå ïàðàäèãìû.[PARAGRAPH:1]Õðàìû ñêðîìíûå çäàíèÿ, ñîçäàþùèå +1 êóëüòóðû è äåðæàùèå îäíîãî ñ÷àñòëèâîãî ãðàæäàíèíà. Îäíàêî, äåøåâûå õðàìû Ìèñòèêà ìîãóò äåéñòâèòåëüíî çàñèÿòü åñëè âû ïîñòðîèòå Ìèíàðåò Àëü-Ìàëüâèÿ (âêëþ÷àåìûé Áîæåñòâåííûì Ïðàâîì), Óíèâåðñèòåò Ñàíêîðå (Áóìàãà), è Àïîñòîëüñêèé äâîðåö (Òåîëîãèÿ). Ýòè ÷óäåñà çàñòàâëÿþò õðàìû âàøåé ãîñóäàðñòâåííîé ðåëèãèè ïðîèçâåñòè +1 çîëîòî, +2 èññëåäîâàíèÿ, è +2 ìîëîòêà, ñîîòâåòñòâåííî. (Ïîæàëóéñòà îòìåòüòå ÷òî, åñëè âû íå ïîñòðîèòå AP, âû ìîæåòå âñå æå ïîëó÷àòü åãî +2 ïîâûøåíèÿ ìîëîòêà äëÿ âñåõ ðåëèãèîçíûõ çäàíèé ïðèíèìàÿ ðåëèãèþ AP êàê âàøó ãîñóäàðñòâåííóþ ðåëèãèþ.) Òîëüêî çíàéòå ÷òî ñòðîèòåëüñòâî îäíîãî èëè íåñêîëüêèõ ýòèõ ÷óäåñ äåëàåò ïàðàäèãìó Ñâîáîäû ñîâåñòè íåïðèâëåêàòåëüíîé, è ïîíèæàåò ïðèîðèòåò Êîìïüþòåðîâ è ÑÌÈ, ïðè êîòîðûõ óñòàðåâàþò ÷óäåñà.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Ìèñòèê ÿâëÿåòñÿ èíâåðñèåé ÷åðòû ïîäîáíîé Ìåöåíàòó: îíà î÷åíü ñëàáà â íà÷àëå èãðû, êîãäà åñòü íåìíîãî äîñòóïíûõ ïàðàäèãì. Åãî âûãîäû ïðèáûâàþò ïîçæå, ïîñêîëüêó áîëüøå ïàðàäèãì ïðèáûâàåò äëÿ ïîäêëþ÷åíèÿ. Ðåàëüíî, áîëüøèíñòâî âàøèõ èçìåíåíèé ïàðàäèãì ïðîèçîéäåò â ñåðåäèíå èãðû, õîòÿ î÷åâèäíî ýòî ìîæåò èçìåíèòüñÿ, íî â áîëüøèíñòâå èãð ÿ áåðó ìåíüøå ïðåèìóùåñòâ îñîáåííîñòè Ìèñòèêà â ïîçäíåé èãðå.[PARAGRAPH:1]Êðîìå òîãî, â òî âðåìÿ êàê Ìèñòèê ìîæåò ïîçâîëèòü âàì "ñîõðàíèòü äåíüãè", â îòëè÷èè îò Ôèíàíñèñòà, ýòà ÷åðòà íåïîñðåäñòâåííî èõ íå ïðîèçâîäèò. Âû äîëæíû áóäåòå èìåòü íîðìàëüíóþ ýêîíîìèêó, êàê îáû÷íî.[PARAGRAPH:1]Âû ìîæåòå ñîáëàçíèòüñÿ, êîãäà èãðàåòå êàê ëèäåð Ìèñòèê, ïåðåêëþ÷àòü ê ëþáîé ïàðàäèãìå, êàê òîëüêî ýòî äîñòóïíî. Ïîìíèòå, ÷òî íåêîòîðûå ïàðàäèãìû èìåþò âûñîêèå çàòðàòû îáñëóæèâàíèÿ ïî ñðàâíåíèþ ñ äðóãèìè; óáåäèòåñü ÷òî ïàðàäèãìà ïîëåçíà â íåêîòîðîì îòíîøåíèè ïåðåä èçìåíåíèåì. Òàêæå ïîìíèòå, ÷òî òîëüêî ïîòîìó, ÷òî ïàðàäèãìà ñäåëàëàñü äîñòóïíûé, ýòî íå îçíà÷àåò, ÷òî ýòî îáÿçàòåëüíî îïòèìàëüíî äëÿ âàñ â ýòîé òî÷êå â èãðå. Ðàññìîòðèòå âàø âûáîð òùàòåëüíî è óäîñòîâåðüòåñü, ÷òî âàøè ïàðàäèãìû âïèñûâàþòñÿ â âàøó ïîëíóþ ñòðàòåãèþ è îáñòîÿòåëüñòâà â ïðåäåëàõ èãðû.[PARAGRAPH:1]×òîáû ïîëó÷àòü âûãîäû äåøåâûõ õðàìîâ, âû íóæäàåòåñü â ãîñóäàðñòâåííîé ðåëèãèè. Âû áóäåòå ïîýòîìó íóæäàòüñÿ â îòêðûòèè ðåëèãèè èëè ðàñïðîñòðàíåíèè åå ê âàì. Êðîìå òîãî, âû, âîçìîæíî, íóæäàåòåñü èëè õîòèòå ïðèíÿòü ãîñóäàðñòâåííóþ ðåëèãèþ î÷åíü ðàíî, è ýòî ìîæåò èìåòü äèïëîìàòè÷åñêèå ïîñëåäñòâèÿ äëÿ âàñ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_STATE_REL_SPREAD_MODIFIER</Tag>
+		<Tag>TXT_KEY_TRAITHELP_STATE_REL_SPREAD_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% chance to Spread State Religion with your Missionaries.</English>
 		<French>[ICON_BULLET]%D1%% de chances de propager la religion d'État avec vos missionnaires.</French>
 		<Italian>[ICON_BULLET]%D1%% di diffondere la religione di stato con i tuoi missionari.</Italian>
@@ -1880,7 +1880,7 @@
 		<Russian>[ICON_BULLET]%D1%% шанс на успешное распространение государственной религии вашими миссионерами.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_TEAM_WONDER_PRODUCTION_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_TEAM_WONDER_PRODUCTION_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Team Project Production</English>
 		<French>[ICON_BULLET]Construction de merveilles d'équipe %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Teamwunderproduktion</German>
@@ -1890,7 +1890,7 @@
 		<Russian>[ICON_BULLET]%D1%% к скорости для Командных проектов</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_TECH_PREREQ</Tag>
+		<Tag>TXT_KEY_TRAITHELP_TECH_PREREQ</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Requires knowledge of %s1_TechName[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert la connaissance de %s1_TechName[COLOR_REVERT]</French>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede la conoscenza della tecnologia %s1_TechName[COLOR_REVERT]</Italian>
@@ -1898,17 +1898,17 @@
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Требуется знание %s1_TechName[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_TECH_RESEARCH_MODIFIER_ADDITIONAL</Tag>
+		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_Tech]%s2_Tech[\LINK]</English>
 		<French>, [LINK=%s1_Tech]%s2_Tech[\LINK]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_TECH_RESEARCH_MODIFIER_END</Tag>
+		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_END</Tag>
 		<English>Technologies</English>
 		<Russian>Технологии</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_TECH_RESEARCH_MODIFIER_FIRST</Tag>
+		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_FIRST</Tag>
 		<English>[ICON_BULLET]Research %D1_Change%% as fast as normal when researching [LINK=%s2_Tech]%s3_Tech[\LINK]</English>
 		<French>[ICON_BULLET]Recherche %D1_Change%% plus vite que la normale lors de la recherche de [LINK=%s2_Tech]%s3_Tech[\LINK]</French>
 		<Russian>[ICON_BULLET]Исследование [LINK=%s2_Tech]%s3_Tech[\LINK] на %D1_Change%% быстрее обычного</Russian>
@@ -1971,7 +1971,7 @@
 		<Russian>Òåìï.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_TRADE_YIELD_MODIFIERS_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_TRADE_YIELD_MODIFIERS</Tag>
 		<English>[ICON_BULLET]%D1%% %F2_yield from [ICON_TRADE]</English>
 		<French>[ICON_BULLET]%D1%% %F2_yield avec: [ICON_TRADE]</French>
 		<German>[ICON_BULLET]%D1%% %F2_yield durch [ICON_TRADE]</German>
@@ -1981,38 +1981,38 @@
 		<Russian>[ICON_BULLET]%D1%% %F2_yield от [ICON_TRADE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_ADDITIONAL</Tag>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English>
 		<French>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_END</Tag>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_END</Tag>
 		<English>Unit Types</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_FIRST</Tag>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_FIRST</Tag>
 		<English>[ICON_BULLET]%D1 Experience to all newly trained [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
 		<French>[ICON_BULLET]%D1 Expérience à tous les nouvelles unités formées de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
 		<German>[ICON_BULLET]%D1 Erfahrungspunkte für alle neu ausgebildeten [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</German>
 		<Russian>[ICON_BULLET]%D1 опыта всем недавно обученным [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_ADDITIONAL</Tag>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English>
 		<French>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_END</Tag>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_END</Tag>
 		<English>Unit Types</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_FIRST</Tag>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_FIRST</Tag>
 		<English>[ICON_BULLET]%D1%% Production speed when training [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
 		<French>[ICON_BULLET]%D1%% Vitesse de production lors de l'entraînement des unités de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
 		<German>[ICON_BULLET]%D1%% Ausbildungsgeschwindigkeit von [LINK=%s2_CombatClass]%s3:3_CombatClass[\LINK]</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_WONDER_PRODUCTION_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_WONDER_PRODUCTION_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Wonder Production</English>
 		<French>[ICON_BULLET]Construction de merveilles %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Wunderproduktion</German>
@@ -2022,7 +2022,7 @@
 		<Russian>[ICON_BULLET]%D1%% к строительству Чудес</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_WORKER_SPEED_NEGATIVE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_NEGATIVE</Tag>
 		<English>[ICON_BULLET]Workers build improvements with a %D1_Modifier%% speed penalty</English>
 		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements avec un pénalité de %D1_Modifier%%</French>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Modifier%% più lentamente</Italian>
@@ -2030,7 +2030,7 @@
 		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% медленнее</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_WORKER_SPEED_POSITIVE</Tag>
+		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_POSITIVE</Tag>
 		<English>[ICON_BULLET]Workers build improvements %D1_Modifier%% faster</English>
 		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements %D1_Modifier%% plus vite</French>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Modifier%% più velocemente</Italian>
@@ -2038,7 +2038,7 @@
 		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% быстрее</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_WORLD_WONDER_PRODUCTION_MODIFIER_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_WORLD_WONDER_PRODUCTION_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% World Wonder Production</English>
 		<French>[ICON_BULLET]Construction de merveilles mondiales %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Weltwunderproduktion</German>
@@ -2048,7 +2048,7 @@
 		<Russian>[ICON_BULLET]%D1%% к строительству Великих Чудес</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_YIELD_CHANGES_C2C</Tag>
+		<Tag>TXT_KEY_TRAITHELP_YIELD_CHANGES</Tag>
 		<English>[ICON_BULLET]%D1%F2_yeild/City</English>
 		<French>[ICON_BULLET]%D1%F2_yeild/ville</French>
 		<German>[ICON_BULLET]%D1%F2_yeild/Stadt</German>

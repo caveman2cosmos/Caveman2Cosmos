@@ -1288,32 +1288,29 @@ class RevolutionWatchAdvisor:
 		return szReturn
 
 	def calculateWhipPopulation (self, city, szKey, arg):
-
-		if (city.canHurry(self.HURRY_TYPE_POP, False)):
+		if city.canHurry(self.HURRY_TYPE_POP, False):
 			return unicode(city.hurryPopulation(self.HURRY_TYPE_POP))
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculateWhipOverflowProduction (self, city, szKey, arg):
-
 		return self.calculateWhipOverflow(city, szKey, arg)[0]
 
 	def calculateWhipOverflowGold (self, city, szKey, arg):
-
 		return self.calculateWhipOverflow(city, szKey, arg)[1]
 
 	def calculateWhipOverflow (self, city, szKey, arg):
 
-		if (city.canHurry(self.HURRY_TYPE_POP, False)):
-			iOverflow = city.hurryProduction(self.HURRY_TYPE_POP) - city.productionLeft()
-			if CityScreenOpt.isWhipAssistOverflowCountCurrentProduction():
-				iOverflow = iOverflow + city.getCurrentProductionDifference(True, False)
-			iMaxOverflow = min(city.getProductionNeeded(), iOverflow)
-			iOverflowGold = max(0, iOverflow - iMaxOverflow) * gc.getDefineINT("MAXED_UNIT_GOLD_PERCENT") / 100
-			iOverflow =  100 * iMaxOverflow / city.getBaseYieldRateModifier(gc.getInfoTypeForString("YIELD_PRODUCTION"), city.getProductionModifier())
-			return unicode(iOverflow), unicode(iOverflowGold)
-		else:
+		if not city.canHurry(self.HURRY_TYPE_POP, False):
 			return self.objectNotPossible, self.objectNotPossible
+
+		iOverflow = city.hurryProduction(self.HURRY_TYPE_POP) - city.productionLeft()
+		if CityScreenOpt.isWhipAssistOverflowCountCurrentProduction():
+			iOverflow = iOverflow + city.getCurrentProductionDifference(True, False)
+		iMaxOverflow = city.getMaxProductionOverflow()
+		iOverflowGold = max(0, iOverflow - iMaxOverflow) * gc.getDefineINT("MAXED_UNIT_GOLD_PERCENT") / 100
+		iOverflow =  100 * iMaxOverflow / city.getBaseYieldRateModifier(gc.getInfoTypeForString("YIELD_PRODUCTION"), 0)
+		return unicode(iOverflow), unicode(iOverflowGold)
 
 	def calculateHurryGoldCost (self, city, szKey, arg):
 

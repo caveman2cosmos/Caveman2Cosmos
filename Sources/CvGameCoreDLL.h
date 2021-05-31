@@ -183,6 +183,8 @@ int64_t intSqrt64(const uint64_t iValue);
 int intPow(const int x, const int p);
 int64_t intPow64(const int64_t x, const int p);
 
+int getModifiedIntValue(const int iValue, const int iMod);
+
 const std::string getModDir();
 //
 // Python

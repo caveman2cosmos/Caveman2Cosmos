@@ -1,21 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_POP_ALWAYS_DESTROYED</Tag>
+		<Tag>TXT_KEY_FEATUREHELP_POP_ALWAYS_DESTROYED</Tag>
 		<English>[NEWLINE][ICON_BULLET]This feature is immediately destroyed when a city is founded on the same plot.</English>
 		<French>[NEWLINE][ICON_BULLET]Cette caractéristique est immédiatement détruite lorsqu'une ville est fondée sur le même terrain.</French>
 		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird sofort zerstört, wenn eine Stadt auf demselben Feld errichtet wird.</German>
 		<Russian>[NEWLINE][ICON_BULLET]Эта особенность немедленно разрушается, если будет заложен город на данном участке.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_POP_DESTROYS</Tag>
+		<Tag>TXT_KEY_FEATUREHELP_POP_DESTROYS</Tag>
 		<English>[NEWLINE][ICON_BULLET]This feature is destroyed by a city founded on the same plot as soon as the city achieves %d1_pop Population.</English>
 		<French>[NEWLINE][ICON_BULLET]Cette caractéristique est détruite par une ville fondée sur le même terrain dès que la ville atteint %d1_pop Population.</French>
 		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird zerstört, wenn eine Stadt auf demselben Feld auf Stufe %d1_pop anwächst.</German>
 		<Russian>[NEWLINE][ICON_BULLET]Эта особенность уничтожается городом, основанном на том же участке, как только население города достигнет %d1_pop.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_POP_NEVER_DESTROYED</Tag>
+		<Tag>TXT_KEY_FEATUREHELP_POP_NEVER_DESTROYED</Tag>
 		<English>[NEWLINE][ICON_BULLET]This feature is never destroyed by a city.</English>
 		<French>[NEWLINE][ICON_BULLET]Cette caractéristique n'est jamais détruite par une ville.</French>
 		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird niemals durch eine Stadt zerstört.</German>
@@ -74,7 +74,7 @@
 		<Russian>Термин «пустошь» или просто бесплодные земли описывает территорию, где рост растений сильно угнетен неблагоприятными условиями, а существуюие виды как правило низкорослые или отличаются малым биоразнообразием. Сильные ветра, климат, засоление почв, неплодородная или токсичной почва или чрезмерная эксплуатация земли человеком - вот ключевые факторы, приводящие к замедленной вегетации растений.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_BUILD_MODIFIER</Tag>
+		<Tag>TXT_KEY_TERRAINHELP_BUILD_MODIFIER</Tag>
 		<English>[NEWLINE][ICON_BULLET]Improvements take %D1%% time to build</English>
 		<French>[NEWLINE][ICON_BULLET]La construction d'aménagements prend %D1%% tours</French>
 		<German>[NEWLINE][ICON_BULLET]erforderliche Zeit für Ausbau: %D1%%</German>
@@ -727,7 +727,7 @@
 		<Russian>У этого ландшафта есть все категории карт. Полезен для тестирования.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_NO_CITIES</Tag>
+		<Tag>TXT_KEY_TERRAINHELP_NO_CITIES</Tag>
 		<English>[NEWLINE][ICON_BULLET]Cannot build cities here[SPACE]</English>
 		<French>[NEWLINE][ICON_BULLET]Impossible de construire une ville ici[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]keine Stadtgründung möglich[SPACE]</German>
@@ -1095,7 +1095,7 @@
 		<Russian>В физической географии тундра - это тип биома, где росту деревьев препятствуют низкие температуры и короткие вегетационные периоды. Термин тундра происходит от русского языка (тундра) от кильдинского саамского слова tundar «нагорье», «безлесный горный тракт». Существует три типа тундры: арктическая тундра, альпийская тундра и антарктическая тундра. В тундре растительность состоит из карликовых кустарников, осок и трав, мхов и лишайников. Отдельные деревья растут в некоторых районах тундры. Слово «тундра» обычно относится только к тем участкам, где недра вечной мерзлоты или постоянно мерзлая почва. Тундра вечной мерзлоты охватывает обширные территории севера России и Канады. Полярная тундра является домом для нескольких народов, в основном кочевых оленеводов, таких как нганасан и ненцы в зоне вечной мерзлоты.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_TURN_DAMAGE</Tag>
+		<Tag>TXT_KEY_TERRAINHELP_TURN_DAMAGE</Tag>
 		<English>[NEWLINE][ICON_BULLET]Damage per Turn: %d1_Amt%%</English>
 		<French>[NEWLINE][ICON_BULLET]Dégâts par Tour: %d1_Amt%%</French>
 		<German>[NEWLINE][ICON_BULLET]Schaden pro Runde: %d1_Amt%%</German>

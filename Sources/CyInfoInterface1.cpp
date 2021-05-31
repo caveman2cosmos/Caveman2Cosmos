@@ -471,6 +471,9 @@ void CyInfoPythonInterface1()
 		.def("getBonusYieldModifier", &CvBuildingInfo::getBonusYieldModifier, "int (int i, int j)")
 
 		.def("getProperties", &CvBuildingInfo::getProperties, python::return_value_policy<python::reference_existing_object>(), "CvProperties ()")
+		
+		//Extract map category of building
+		.def("isMapType", &CvBuildingInfo::isMapType, "bool (int i)")
 
 		//TB Combat Mods (Buildings) begin
 		//integers

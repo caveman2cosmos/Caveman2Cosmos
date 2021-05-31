@@ -13,37 +13,6 @@
 		<Polish>Oswajanie zwierząt to nie udamawianie. Oswojone zwierzęta mogą być później tresowane.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BEASTMASTER</Tag>
-		<English>Beastmaster</English>
-		<French>
-			<Text>Dompteur:Dompteurs</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</French>
-		<German>
-			<Text>Tierfuehrer:Tierfuehrer:Tierfuehrer:Tierfuehrer:Tierfuehrer:Tierfuehrer:Tierfuehrer:Tierfuehrer</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
-			<Plural>1:1:1:1:1:1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Domatore:Domatori</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Beastmaster:Beastmaster</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Treser Bestii</Polish>
-		<Russian>Äðåññèðîâùèê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_BEASTMASTER_PEDIA</Tag>
-		<English>Animal training refers to teaching animals specific responses to specific conditions or stimuli. Training may be for purposes such as companionship, detection, protection, and entertainment. The type of training an animal receives will vary depending on the training method used and the purpose for training the animal. For example, a seeing eye dog will be trained to achieve a different goal than a wild animal in a circus.</English>
-		<Polish>Tresura, tresowanie (niem. Dressur z fr. dresser) - zespół działań mających na celu przyzwyczajenie, wdrożenie (nauczenie) zwierząt do wykonywania określonych czynności przez wielokrotne ich powtarzanie w jednakowych okolicznościach, wyrabianie lub wytwarzanie przez człowieka odruchów warunkowych u zwierząt, czasem prostych nawyków poprzez stosowanie systemu nagród i kar.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_AARDVARK</Tag>
 		<English>Tamed Aardvark</English>
 		<French>

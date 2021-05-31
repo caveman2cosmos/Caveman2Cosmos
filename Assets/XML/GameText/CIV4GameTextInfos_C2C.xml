@@ -10,7 +10,7 @@
 		<Russian>[ICON_BULLET]Улучшится до [LINK=%s1_ImpType]%s2_ImpName[\LINK] через %d3_Num [NUM2:ход:ходов]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUILDS_FASTER_WITH</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_BUILDS_FASTER_WITH</Tag>
 		<English>Builds %d1_Mod%% faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Mod%% schneller mit Bonusgut [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
@@ -19,7 +19,7 @@
 		<Russian>Строит %d1_Mod%% быстрее, если есть [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DISABLES</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_DISABLES</Tag>
 		<English>[ICON_BULLET]Removes access to [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) from the city.</English>
 		<French>[ICON_BULLET]Interdit l'accès au bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) de la ville.</French>
 		<German>[ICON_BULLET]Entfernt den Bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) aus der Stadt.</German>
@@ -28,7 +28,7 @@
 		<Russian>[ICON_BULLET]Делает невозможным доступ к [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) в этом городе.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DOUBLE_SPEED_WITH</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_DOUBLE_SPEED_WITH</Tag>
 		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
@@ -37,7 +37,7 @@
 		<Russian>Удвоенная скорость производства, если есть [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FREE_IN_CITY</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_IN_CITY</Tag>
 		<English>[ICON_BULLET]Free [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] in Every City</English>
 		<French>[ICON_BULLET]1 [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] dans chaque ville</French>
 		<German>[ICON_BULLET]freies Gebäude [LINK=%s1_NameType][COLOR_BUILDING_TEXT]%s2_Name[COLOR_REVERT][\LINK] in jeder Stadt</German>
@@ -46,7 +46,7 @@
 		<Russian>[ICON_BULLET]Бесплатный [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] в каждом городе</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FREE_SPECIALIST</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIALIST</Tag>
 		<English>[ICON_BULLET]%D1_Change Free [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]%D1_Change Donne un [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] gratuit</French>
 		<German>[ICON_BULLET]%D1_Change freien Spezialisten [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</German>
@@ -55,7 +55,7 @@
 		<Russian>[ICON_BULLET]%D1_Change бесплатного [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FROM_IN_ALL_CITIES</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_FROM_IN_ALL_CITIES</Tag>
 		<English>[SPACE]from [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] in All Cities</English>
 		<French>[SPACE]de tous les [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] dans toutes les villes</French>
 		<German>[SPACE]durch [LINK=%s1_SpclstType]%s2:8_SpclstName[\LINK] in allen Städten</German>
@@ -64,7 +64,7 @@
 		<Russian>[SPACE]от [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] во всех городах</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LIKELY_TO_GENERATE</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_LIKELY_TO_GENERATE</Tag>
 		<English>[ICON_BULLET]City more likely to generate [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]La ville a plus de chance de générer : [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Erhöhte Wahrscheinlichkeit der Erzeugung von [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT] in der Stadt</German>
@@ -73,12 +73,12 @@
 		<Russian>[ICON_BULLET]Город с большей вероятностью генерирует [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NUKE_EXPLOSION_CHANCE</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_NUKE_EXPLOSION_CHANCE</Tag>
 		<English>[ICON_BULLET]Chance of Nuclear Meltdown: %d1_chance in 10000 each round</English>
 		<Russian>[ICON_BULLET]Вероятность ядерного взрыва: .%d1_chance%% на каждый раунд</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OBSOLETE_WITH</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_OBSOLETE_WITH</Tag>
 		<English>[COLOR_WARNING_TEXT]Obsolete with [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Obsolète avec : [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]veraltet durch die Technologie [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
@@ -87,11 +87,11 @@
 		<Russian>[COLOR_WARNING_TEXT]Устаревает из-за [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OBSOLETE_WITH_TO</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_OBSOLETE_WITH_TO</Tag>
 		<English>[SPACE](Turns into [LINK=%s1]%s2[\LINK])</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROVIDES</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES</Tag>
 		<English>[ICON_BULLET]Provides %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</English>
 		<French>[ICON_BULLET]Fournit %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</French>
 		<German>[ICON_BULLET]stellt das Bonusgut [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon) zur Verfügung (%d1_Num Einheit)</German>
@@ -100,7 +100,7 @@
 		<Russian>[ICON_BULLET]Дает %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROVIDES_POWER_WITH</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES_POWER_WITH</Tag>
 		<English>[ICON_BULLET]Provides Power with [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Fournit de l'électricité avec [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Liefert Energie mit dem Bonusgut [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</German>
@@ -109,13 +109,13 @@
 		<Russian>[ICON_BULLET]Обеспечивает энергией, если есть [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RELIGION_DECLARED</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_RELIGION_DECLARED</Tag>
 		<English>[ICON_BULLET]Some features only function if %F1_RelIcon is your State [ICON_RELIGION].</English>
 		<French>[ICON_BULLET]Certaines fonctionnalités ne sont disponibles que si %F1_RelIcon est votre [ICON_RELIGION] d'Etat.</French>
 		<Russian>[ICON_BULLET]Некоторые функции работают только если %F1_RelIcon является вашей государственной [ICON_RELIGION].</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REQUIRES_STRING</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_STRING</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</German>
@@ -124,7 +124,7 @@
 		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLOT_BLOCKED</Tag>
+		<Tag>TXT_KEY_BUILDHELP_PLOT_BLOCKED</Tag>
 		<English>[COLOR_WARNING_TEXT]Cannot be constructed on a %s1_Name![COLOR_REVERT]</English>
 		<Russian>[COLOR_WARNING_TEXT]Невозможно построить в %s1_Name![COLOR_REVERT]</Russian>
 	</TEXT>
@@ -139,13 +139,13 @@
 		<Russian>Измен. дохода:</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STATE_RELIGION_PREREQ</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_STATE_RELIGION_PREREQ</Tag>
 		<English>[ICON_BULLET]This building requires %F1_RelIcon to be your State [ICON_RELIGION].</English>
 		<French>[ICON_BULLET]Ce bâtiment nécessite %F1_RelIcon comme [ICON_RELIGION] d'Etat.</French>
 		<Russian>[ICON_BULLET]Эта постройка требует наличия %F1_RelIcon в качестве государственной [ICON_RELIGION].</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TURN_CITIZENS_INTO</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_TURN_CITIZENS_INTO</Tag>
 		<English>[ICON_BULLET]Can turn %d1_Num Citizens into [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Peut transformer %d1_Num citoyens en [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Kann %d1_Num Bürger in einen Spezialisten des Typs [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] verwandeln</German>
@@ -154,7 +154,7 @@
 		<Russian>[ICON_BULLET]Может сделать %d1_Num горожан [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TURN_CITIZEN_INTO</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_TURN_CITIZEN_INTO</Tag>
 		<English>[ICON_BULLET]Can turn 1 Citizen into [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Peut transformer un citoyen en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Kann 1 Bürger in einen Spezialisten des Typs [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT] verwandeln</German>
@@ -163,7 +163,7 @@
 		<Russian>[ICON_BULLET]Может сделать 1 горожанина [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WITH_BONUS</Tag>
+		<Tag>TXT_KEY_BUILDINGHELP_WITH_BONUS</Tag>
 		<English>[SPACE]with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>[SPACE]avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>[SPACE]mit [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
@@ -172,7 +172,7 @@
 		<Russian>[SPACE]с [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_BUILDING_HAPPINESS</Tag>
+		<Tag>TXT_KEY_CIVICHELP_BUILDING_HAPPINESS</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp from [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp : [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch das Gebäude [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</German>
@@ -181,7 +181,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp от [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_REQUIRES</Tag>
+		<Tag>TXT_KEY_CIVICHELP_REQUIRES</Tag>
 		<English>[COLOR_RED]Requires [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_RED]Req. [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</French>
 		<German>[COLOR_RED]Erfordert die Technologie [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
@@ -318,7 +318,7 @@
 		<Russian>[ICON_BULLET]Все игроки могут строить [COLOR_BUILDING_TEXT][LINK=%s1_BldgType]%s2_BldgName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_CHANCE_OF_REVOLT_C2C</Tag>
+		<Tag>TXT_KEY_MISC_CHANCE_OF_REVOLT</Tag>
 		<English>Chance of Revolt: %s1_Chance%% (%s2_CityStrength%% Cultural Revolt Sentiment. %s3_Garrison%% total Revolt Protection from Units)</English>
 		<French>Chances de Révolte: %s1_Chance%% (%s2_CityStrength%% de Sentiment de Récolte Culturelle. %s3_Garrison%% de total de Protection contre la révolte, des Unités)</French>
 		<Russian>Угроза восстания: %s1_Chance%% (%s2_CityStrength%% из-за культурных различий. %s3_Garrison%% к общей защите от восстаний для отрядов).</Russian>
@@ -462,7 +462,7 @@
 		<Russian>(за население)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_BUILDS_FASTER_WITH</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_BUILDS_FASTER_WITH</Tag>
 		<English>Builds %d1_Mod%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Mod%% schneller mit Bonusgut [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
@@ -471,7 +471,7 @@
 		<Russian>Строит %d1_Mod%% быстрее, если есть [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_DOUBLE_SPEED_WITH</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_DOUBLE_SPEED_WITH</Tag>
 		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
@@ -480,7 +480,7 @@
 		<Russian>Удвоенная скорость производства, если есть [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_REQUIRES</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRES</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</German>
@@ -489,7 +489,7 @@
 		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_REQUIRES_ANYONE</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRES_ANYONE</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires someone to create [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Quelqu'un est requis pour créer [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Jemand muss Folgendes erstellen: [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</German>
@@ -497,7 +497,7 @@
 		<Spanish>[COLOR_WARNING_TEXT]Se requiere que alguien cree: [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_REQUIRES_NO_CITY</Tag>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRES_NO_CITY</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</German>
@@ -506,7 +506,7 @@
 		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BOMBARD_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_BOMBARD</Tag>
 		<English>[ICON_BULLET]%D1_DmgChange%% City Bombard Damage</English>
 		<French>[ICON_BULLET]Dégâts bombardement %D1_DmgChange%%</French>
 		<German>[ICON_BULLET]%D1_DmgChange%% Stadtbombardierungsschaden</German>
@@ -515,7 +515,7 @@
 		<Russian>[ICON_BULLET]%D1_DmgChange%% ê óùåðáó îò áîìáàðäèðîâêè ãîðîäîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_COLLATERAL_DAMAGE</Tag>
 		<English>[ICON_BULLET]%D1_DmgChange%% Collateral Damage</English>
 		<French>[ICON_BULLET]Dommages collatéraux %D1_DmgChange%%</French>
 		<German>[ICON_BULLET]%D1_DmgChange%% Kollateralschaden</German>
@@ -524,7 +524,7 @@
 		<Russian>[ICON_BULLET]%D1_DmgChange%% ê ñîïóòñòâóþùåìó óùåðáó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ENEMY_LANDS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_ENEMY_LANDS</Tag>
 		<English>Damage/Turn in Enemy Lands</English>
 		<French>Dégâts/tour en territoire ennemi</French>
 		<German>pro Runde in feindlichem Gebiet</German>
@@ -533,7 +533,7 @@
 		<Russian>(% óùåðáà çà õîä íà âðàæåñêîé òåððèòîðèè)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FIRST_STRIKES_CHANCE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKES_CHANCE</Tag>
 		<English>[ICON_BULLET]%D1_Change First Strike Chances</English>
 		<French>[ICON_BULLET]%D1_Change chances de première attaque</French>
 		<German>[ICON_BULLET]%D1_Change Erstschlagschancen</German>
@@ -542,7 +542,7 @@
 		<Russian>[ICON_BULLET]Âåðîÿòíîñòü Ïåðâîãî óäàðà: %D1_Change</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FIRST_STRIKES_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKES</Tag>
 		<English>[ICON_BULLET]%D1_Change First Strikes</English>
 		<French>[ICON_BULLET]%D1_Change premières attaques</French>
 		<German>[ICON_BULLET]%D1_Change [NUM1:Erstschlag:Erstschläge]</German>
@@ -551,7 +551,7 @@
 		<Russian>[ICON_BULLET]%D1_Change Ïåðâûõ óäàðà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FIRST_STRIKE_CHANCE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKE_CHANCE</Tag>
 		<English>[ICON_BULLET]%d1_Num Extra First Strike Chance</English>
 		<French>[ICON_BULLET]%d1_Num chance supplémentaire de première attaque</French>
 		<German>[ICON_BULLET]%d1_Num Zusatzchance für Erstschlag</German>
@@ -560,7 +560,7 @@
 		<Russian>[ICON_BULLET]Âåðîÿòíîñòü äîïîëíèòåëüíîãî Ïåðâîãî óäàðà (%d1_Num)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FIRST_STRIKE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKE</Tag>
 		<English>[ICON_BULLET]%d1_Num Extra First Strike</English>
 		<French>[ICON_BULLET]%d1_Num première attaque supplémentaire</French>
 		<German>[ICON_BULLET]%d1_Num [NUM1:Extra-Erstschlag:Extra-Erstschläge]</German>
@@ -569,7 +569,7 @@
 		<Russian>[ICON_BULLET]%d1_Num äîï. Ïåðâûé óäàð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FRIENDLY_LANDS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_FRIENDLY_LANDS</Tag>
 		<English>Damage/Turn in Friendly Lands</English>
 		<French>Dégâts/tour en territoire allié</French>
 		<German>pro Runde auf befreundetem Gebiet</German>
@@ -578,7 +578,7 @@
 		<Russian>(% óùåðáà çà õîä íà äðóæåñòâåííîé òåððèòîðèè)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HEALS_SAME_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_HEALS_SAME</Tag>
 		<English>[ICON_BULLET]Heals Units in Same Tile Extra %d1_Amount%%[SPACE]</English>
 		<French>[ICON_BULLET]Soigne les unités dans la même case de + %d1_Amount%%[SPACE]</French>
 		<German>[ICON_BULLET]Extra-Heilung von Einheiten auf demselben Geländefeld um %d1_Amount%%[SPACE]</German>
@@ -587,7 +587,7 @@
 		<Russian>[ICON_BULLET]Ëå÷èò þíèòîâ íà îäíîé äîï. êëåòêå %d1_Amount%%[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MOVE_DISCOUNT_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_MOVE_DISCOUNT</Tag>
 		<English>[ICON_BULLET]%D1_Discount Terrain Movement Cost</English>
 		<French>[ICON_BULLET]Coût de mouvement réduit de %D1_Discount</French>
 		<German>[ICON_BULLET]%D1_Discount Bewegungskosten</German>
@@ -596,7 +596,7 @@
 		<Russian>[ICON_BULLET]%D1_Discount ê øòðàôó ïåðåìåùåíèÿ ïî ïåðåñå÷åííîé ìåñòíîñòè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MOVE_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_MOVE</Tag>
 		<English>[ICON_BULLET]%D1_Change Movement Range</English>
 		<French>[ICON_BULLET]Rayon d'action %D1_Change</French>
 		<German>[ICON_BULLET]%D1_Change Bewegungsrate</German>
@@ -605,7 +605,7 @@
 		<Russian>[ICON_BULLET]%D1_Change Äèàïàçîíà äâèæåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NEUTRAL_LANDS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_NEUTRAL_LANDS</Tag>
 		<English>Damage/Turn in Neutral Lands</English>
 		<French>Dégâts/tour en territoire neutre</French>
 		<German>pro Runde auf neutralem Gebiet</German>
@@ -614,7 +614,7 @@
 		<Russian>(% óùåðáà çà õîä íà íåéòðàëüíîé òåððèòîðèè)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_VERSUS_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_VERSUS</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% vs. [LINK=%s2_AgainstType]%s3_Against[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% contre [LINK=%s2_AgainstType]%s3_Against[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% gegen [LINK=%s2_AgainstType]%s3_Against[\LINK]</German>
@@ -623,7 +623,7 @@
 		<Russian>[ICON_BULLET]%D1_Mod%% против [LINK=%s2_AgainstType]%s3_Against[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_VISIBILITY_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_VISIBILITY</Tag>
 		<English>[ICON_BULLET]%D1_Change Visibility Range</English>
 		<French>[ICON_BULLET]Champ de vision %D1_Change</French>
 		<German>[ICON_BULLET]%D1_Change Sichtweite</German>
@@ -632,7 +632,7 @@
 		<Russian>[ICON_BULLET]%D1_Change Äèàïàçîíà âèäèìîñòè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WITHDRAWAL_TEXT</Tag>
+		<Tag>TXT_KEY_PROMOTIONHELP_WITHDRAWAL</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Withdrawal Chance</English>
 		<French>[ICON_BULLET]Chances de repli de %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Rückzugsmöglichkeit</German>
@@ -668,7 +668,7 @@
 		<Russian>[COLOR_WARNING_TEXT]Требует [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (для любого игрока)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_FIRST_RECEIVES</Tag>
+		<Tag>TXT_KEY_TECHHELP_FIRST_RECEIVES</Tag>
 		<English>[ICON_BULLET]First to Discover receives a [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Faire cette découverte avant les autres octroie 1 [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Der erste Entdecker erhält eine Einheit: [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</German>
@@ -678,7 +678,7 @@
 		<Russian>[ICON_BULLET]Ïåðâîîòêðûâàòåëþ äîñòàåòñÿ [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_OBSOLETES</Tag>
+		<Tag>TXT_KEY_TECHHELP_OBSOLETES</Tag>
 		<English>[COLOR_WARNING_TEXT]Obsoletes [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Rend la technologie "[LINK=%s1_TechType]%s2_TechName[\LINK]" obsolète[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Veraltet: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
@@ -688,7 +688,7 @@
 		<Russian>[COLOR_WARNING_TEXT]Óñòàðåâàåò: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_UNTIL_TECH</Tag>
+		<Tag>TXT_KEY_TERRAINHELP_UNTIL_TECH</Tag>
 		<English>[LINK=%s1_terrainType]%s2_terrain[\LINK] (until %s3_technology)</English>
 		<French>[LINK=%s1_terrainType]%s2_terrain[\LINK] (jusqu'à %s3_technology)</French>
 		<German>[LINK=%s1_terrainType]%s2_terrain[\LINK] (bis zur Technologie %s3_technology)</German>
@@ -715,7 +715,7 @@
 		<Russian>Примет [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ATTACK_MOD_VS_CLASS</Tag>
+		<Tag>TXT_KEY_UNITHELP_ATTACK_MOD_VS_CLASS</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Attack vs. [LINK=%s2_ClassType]%s3_Class[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% en attaque contre [LINK=%s2_ClassType]%s3_Class[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Angriff gegen Einheit [LINK=%s2_ClassType]%s3_Class[\LINK]</German>
@@ -724,7 +724,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% в бою с [LINK=%s2_ClassType]%s3_Class[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BOMBARD_RATE</Tag>
+		<Tag>TXT_KEY_UNITHELP_BOMBARD_RATE</Tag>
 		<English>[ICON_BULLET]Can Bombard City Defenses (-%d1_Mod%%/Turn)</English>
 		<French>[ICON_BULLET]Peut bombarder les défenses d'une ville (-%d1_Mod%%/tour)</French>
 		<German>[ICON_BULLET]kann Stadtbefestigungen bombardieren (-%d1_Mod%%/Runde)</German>
@@ -733,7 +733,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò áîìáèòü ãîðîäñêèå óêðåïëåíèÿ (-%d1_Mod%%/õîä)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BOMB_RATE</Tag>
+		<Tag>TXT_KEY_UNITHELP_BOMB_RATE</Tag>
 		<English>[ICON_BULLET]Can Destroy Tile Improvements and Bomb City Defenses (-%d1_Mod%%/Turn)</English>
 		<French>[ICON_BULLET]Peut détruire les aménagements et bombarder les défenses des villes (-%d1_Mod%%/tour)</French>
 		<German>[ICON_BULLET]kann Landschaftsverbesserungen zerstören und Stadtbefestigungen bombardieren (-%d1_Mod%%/Runde)</German>
@@ -742,7 +742,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò óíè÷òîæàòü îáúåêòû è áîìáèòü ãîðîäñêèå óêðåïëåíèÿ (-%d1_Mod%%/õîä)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BUILDS_FASTER</Tag>
+		<Tag>TXT_KEY_UNITHELP_BUILDS_FASTER</Tag>
 		<English>Builds %d1_Change%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit : %d1_Change%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Change%% schneller mit [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
@@ -751,7 +751,7 @@
 		<Russian>Строит %d1_Change%% быстрее, если есть [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_COLLATERAL_IMMUNE</Tag>
+		<Tag>TXT_KEY_UNITHELP_COLLATERAL_IMMUNE</Tag>
 		<English>[ICON_BULLET]Immune to collateral damage from [LINK=%s1_unitsType]%s2_units[\LINK]</English>
 		<French>Immunité contre les dégâts collatéraux des [LINK=%s1_unitsType]%s2_units[\LINK]</French>
 		<German>[ICON_BULLET]Immun gegen Kollateralschaden durch die Einheit [LINK=%s1_unitsType]%s2_units[\LINK]</German>
@@ -760,7 +760,7 @@
 		<Russian>[ICON_BULLET]Невосприимчив к побочному ущербу от [LINK=%s1_unitsType]%s2_units[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DEFENSE_MOD_VS_CLASS</Tag>
+		<Tag>TXT_KEY_UNITHELP_DEFENSE_MOD_VS_CLASS</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Defense vs. [LINK=%s2_ClassType]%s3_Class[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% en défense contre [LINK=%s2_ClassType]%s3_Class[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Verteidigung gegen [LINK=%s2_ClassType]%s3_Class[\LINK]</German>
@@ -769,7 +769,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% к защите против [LINK=%s2_ClassType]%s3_Class[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DOUBLE_SPEED</Tag>
+		<Tag>TXT_KEY_UNITHELP_DOUBLE_SPEED</Tag>
 		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%2_Bonus[\LINK]</German>
@@ -778,7 +778,7 @@
 		<Russian>Удвоенная скорость производства, если есть [LINK=%s1_BonusType]%s2_Bonus</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EVADE_INTERCEPTION</Tag>
+		<Tag>TXT_KEY_UNITHELP_EVADE_INTERCEPTION</Tag>
 		<English>[ICON_BULLET]Can Evade Interception (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut échapper à une interception (%d1_Amount%% de chance)</French>
 		<German>[ICON_BULLET]Rückzugsmöglichkeit bei Abfangversuch (Erfolgsaussicht: %d1_Amount%%)</German>
@@ -787,7 +787,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò óêëîíÿòüñÿ îò ïåðåõâàòà (âåðîÿòíîñòü %d1_Amount%%)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_INTERCEPT_AIRCRAFT</Tag>
+		<Tag>TXT_KEY_UNITHELP_INTERCEPT_AIRCRAFT</Tag>
 		<English>[ICON_BULLET]Can Intercept Aircraft (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut intercepter des avions (%d1_Amount%% de chance)</French>
 		<German>[ICON_BULLET]kann Lufteinheiten abfangen (Erfolgsaussicht: %d1_Amount%%)</German>
@@ -796,7 +796,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò ïåðåõâàòèòü ýñêàäðèëüþ (øàíñ %d1_Amount%%)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MOD_VS_TYPE</Tag>
+		<Tag>TXT_KEY_UNITHELP_MOD_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% vs. [LINK=%s2_AgainstType]%s3_Type[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% contre : [LINK=%s2_AgainstType]%s3_Type[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% gegen [LINK=%s2_AgainstType]%s3_Type[\LINK]</German>
@@ -805,7 +805,7 @@
 		<Russian>[ICON_BULLET]%D1_Change%% против [LINK=%s2_AgainstType]%s3_Type[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MOD_VS_TYPE_NO_LINK</Tag>
+		<Tag>TXT_KEY_UNITHELP_MOD_VS_TYPE_NO_LINK</Tag>
 		<English>[ICON_BULLET]%D1_Change%% vs. %s2_Type</English>
 		<French>[ICON_BULLET]%D1_Change%% contre : %s2_Type</French>
 		<German>[ICON_BULLET]%D1_Change%% gegen %s2_Type</German>
@@ -813,7 +813,7 @@
 		<Spanish>[ICON_BULLET]%D1_Change%% contra %s2:2_Type</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WITHDRAWL_PROBABILITY</Tag>
+		<Tag>TXT_KEY_UNITHELP_WITHDRAWL_PROBABILITY</Tag>
 		<English>[ICON_BULLET]Can Withdraw from Combat (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut rompre le combat (%d1_Amount%% de chance)</French>
 		<German>[ICON_BULLET]Rückzugsmöglichkeit aus Gefechten (Erfolgsaussicht: %d1_Amount%%)</German>
@@ -822,7 +822,7 @@
 		<Russian>[ICON_BULLET]Ìîæåò ïîêèäàòü ïîëå áîÿ (âåðîÿòíîñòü %d1_Amount%%)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WITHDRAWL_PROBABILITY_SHORT</Tag>
+		<Tag>TXT_KEY_UNITHELP_WITHDRAWL_PROBABILITY_SHORT</Tag>
 		<English>[ICON_BULLET]Withdrawal Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Chances de rompre le combat: %d1_Amount%%</French>
 		<German>[ICON_BULLET]Rückzugschance: %d1_Amount%%</German>

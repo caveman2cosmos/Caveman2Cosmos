@@ -16,10 +16,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
-			<iCost>150</iCost>
+			<iCost>1310</iCost>
 			<FreeBuilding>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</FreeBuilding>
 			<iHappinessPercentPerPopulation>5</iHappinessPercentPerPopulation>
-			<iAIWeight>1000</iAIWeight>
+			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</Type>

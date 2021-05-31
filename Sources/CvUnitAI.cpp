@@ -3079,7 +3079,7 @@ void CvUnitAI::AI_attackCityMove()
 	}
 
 	//	Super forts - allow stack to split after fort capture as well as city
-	bool bInCity = plot()->isCity(true);
+	bool bInCity = plot()->isCity(false);
 
 	if( bInCity && plot()->getOwner() == getOwner() )
 	{

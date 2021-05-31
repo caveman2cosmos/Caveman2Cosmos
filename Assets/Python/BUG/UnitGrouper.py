@@ -99,7 +99,7 @@ class UnitTypeGrouping(Grouping):
 	Ex: Warrior, Maceman, Panzer
 	"""
 	def __init__(self):
-		Grouping.__init__(self, "type", "TXT_KEY_UNIT_GROUPER_TYPE_GROUPING")
+		Grouping.__init__(self, "type", "TXT_KEY_UNITGROUPER_TYPE_GROUPING")
 
 		for i in range(gc.getNumUnitInfos()):
 			info = gc.getUnitInfo(i)
@@ -115,10 +115,10 @@ class UnitCombatGrouping(Grouping):
 	Ex: None, Melee, Gunpowder, Naval
 	"""
 	def __init__(self):
-		Grouping.__init__(self, "combat", "TXT_KEY_UNIT_GROUPER_COMBAT_GROUPING")
+		Grouping.__init__(self, "combat", "TXT_KEY_UNITGROUPER_COMBAT_GROUPING")
 		self.NONE = 0
 
-		self._addGroup(Group(self, self.NONE, "TXT_KEY_UNIT_GROUPER_COMBAT_GROUP_NONE"))
+		self._addGroup(Group(self, self.NONE, "TXT_KEY_UNITGROUPER_COMBAT_GROUP_NONE"))
 		for i in range(gc.getNumUnitCombatInfos()):
 			info = gc.getUnitCombatInfo(i)
 			if info:
@@ -133,12 +133,12 @@ class LevelGrouping(Grouping):
 	Units over level MAX_LEVEL are put into the MAX_LEVEL group.
 	"""
 	def __init__(self):
-		Grouping.__init__(self, "level", "TXT_KEY_UNIT_GROUPER_LEVEL_GROUPING")
+		Grouping.__init__(self, "level", "TXT_KEY_UNITGROUPER_LEVEL_GROUPING")
 
 		self.MAX_LEVEL = 50
 		for i in range(self.MAX_LEVEL):
-			self._addGroup(Group(self, i, BugUtil.getText("TXT_KEY_UNIT_GROUPER_LEVEL_GROUP", (str(i),))))
-		self._addGroup(Group(self, self.MAX_LEVEL, BugUtil.getText("TXT_KEY_UNIT_GROUPER_LEVEL_GROUP", ("%d+" % self.MAX_LEVEL,))))
+			self._addGroup(Group(self, i, BugUtil.getText("TXT_KEY_UNITGROUPER_LEVEL_GROUP", (str(i),))))
+		self._addGroup(Group(self, self.MAX_LEVEL, BugUtil.getText("TXT_KEY_UNITGROUPER_LEVEL_GROUP", ("%d+" % self.MAX_LEVEL,))))
 
 	def calcGroupKeys(self, unit, player, team):
 		return (max(0, min(unit.getLevel(), self.MAX_LEVEL)),)
@@ -149,11 +149,11 @@ class PromotionGrouping(Grouping):
 	Ex: Combat 1, Cover, Tactics
 	"""
 	def __init__(self):
-		Grouping.__init__(self, "promo", "TXT_KEY_UNIT_GROUPER_PROMOTION_GROUPING")
+		Grouping.__init__(self, "promo", "TXT_KEY_UNITGROUPER_PROMOTION_GROUPING")
 
 		self.NONE = 0
 		self.NO_PROMOS = (0,)
-		self._addGroup(Group(self, self.NONE, "TXT_KEY_UNIT_GROUPER_PROMOTION_GROUP_NONE"))
+		self._addGroup(Group(self, self.NONE, "TXT_KEY_UNITGROUPER_PROMOTION_GROUP_NONE"))
 		for i in range(gc.getNumPromotionInfos()):
 			info = gc.getPromotionInfo(i)
 			if info:
@@ -174,7 +174,7 @@ class LocationGrouping(Grouping):
 	Ex: Domestic City, Friendly City, Enemy Territory
 	"""
 	def __init__(self):
-		Grouping.__init__(self, "loc", "TXT_KEY_UNIT_GROUPER_LOCATION_GROUPING")
+		Grouping.__init__(self, "loc", "TXT_KEY_UNITGROUPER_LOCATION_GROUPING")
 		(
 			self.DOMESTIC_CITY,
 			self.DOMESTIC_TERRITORY,
@@ -187,15 +187,15 @@ class LocationGrouping(Grouping):
 			self.BARBARIAN_TERRITORY
 		) = range(9)
 
-		self._addGroup(Group(self, self.DOMESTIC_CITY, "TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_DOMESTIC_CITY"))
-		self._addGroup(Group(self, self.DOMESTIC_TERRITORY, "TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_DOMESTIC_TERRITORY"))
-		self._addGroup(Group(self, self.TEAM_CITY, "TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_TEAM_CITY"))
-		self._addGroup(Group(self, self.TEAM_TERRITORY, "TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_TEAM_TERRITORY"))
-		self._addGroup(Group(self, self.FRIENDLY_CITY, "TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_FRIENDLY_CITY"))
-		self._addGroup(Group(self, self.FRIENDLY_TERRITORY, "TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_FRIENDLY_TERRITORY"))
-		self._addGroup(Group(self, self.NEUTRAL_TERRITORY, "TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_NEUTRAL_TERRITORY"))
-		self._addGroup(Group(self, self.ENEMY_TERRITORY, "TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_ENEMY_TERRITORY"))
-		self._addGroup(Group(self, self.BARBARIAN_TERRITORY, "TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_BARBARIAN_TERRITORY"))
+		self._addGroup(Group(self, self.DOMESTIC_CITY, "TXT_KEY_UNITGROUPER_LOCATION_GROUP_DOMESTIC_CITY"))
+		self._addGroup(Group(self, self.DOMESTIC_TERRITORY, "TXT_KEY_UNITGROUPER_LOCATION_GROUP_DOMESTIC_TERRITORY"))
+		self._addGroup(Group(self, self.TEAM_CITY, "TXT_KEY_UNITGROUPER_LOCATION_GROUP_TEAM_CITY"))
+		self._addGroup(Group(self, self.TEAM_TERRITORY, "TXT_KEY_UNITGROUPER_LOCATION_GROUP_TEAM_TERRITORY"))
+		self._addGroup(Group(self, self.FRIENDLY_CITY, "TXT_KEY_UNITGROUPER_LOCATION_GROUP_FRIENDLY_CITY"))
+		self._addGroup(Group(self, self.FRIENDLY_TERRITORY, "TXT_KEY_UNITGROUPER_LOCATION_GROUP_FRIENDLY_TERRITORY"))
+		self._addGroup(Group(self, self.NEUTRAL_TERRITORY, "TXT_KEY_UNITGROUPER_LOCATION_GROUP_NEUTRAL_TERRITORY"))
+		self._addGroup(Group(self, self.ENEMY_TERRITORY, "TXT_KEY_UNITGROUPER_LOCATION_GROUP_ENEMY_TERRITORY"))
+		self._addGroup(Group(self, self.BARBARIAN_TERRITORY, "TXT_KEY_UNITGROUPER_LOCATION_GROUP_BARBARIAN_TERRITORY"))
 
 	def calcGroupKeys(self, unit, player, team):
 		plot = unit.plot()
@@ -234,35 +234,35 @@ class OrderGrouping(Grouping):
 	Ex: Fortify, Go To, Blockade
 	"""
 	def __init__(self):
-		Grouping.__init__(self, "order", "TXT_KEY_UNIT_GROUPER_ORDER_GROUPING")
+		Grouping.__init__(self, "order", "TXT_KEY_UNITGROUPER_ORDER_GROUPING")
 
-		self._addGroup(Group(self, 0, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_NONE"))
-		self._addGroup(Group(self, 1, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_SKIP"))
-		self._addGroup(Group(self, 2, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_SLEEP"))
-		self._addGroup(Group(self, 3, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_FORTIFY"))
-		self._addGroup(Group(self, 4, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_HEAL"))
-		self._addGroup(Group(self, 5, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_SENTRY"))
-		self._addGroup(Group(self, 6, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_INTERCEPT"))
-		self._addGroup(Group(self, 7, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PATROL"))
-		self._addGroup(Group(self, 8, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PLUNDER"))
-		self._addGroup(Group(self, 9, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_BUILD"))
-		self._addGroup(Group(self, 10, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_CONSTRUCT"))
-		self._addGroup(Group(self, 11, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_GOTO"))
-		self._addGroup(Group(self, 12, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_EXPLORE"))
-		self._addGroup(Group(self, 13, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AUTO_BUILD"))
-		self._addGroup(Group(self, 14, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AUTO_NETWORK"))
-		self._addGroup(Group(self, 15, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AUTO_CITY"))
-		self._addGroup(Group(self, 16, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AUTO_RELIGION"))
-		self._addGroup(Group(self, 17, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PILLAGESETTINGS"))
-		self._addGroup(Group(self, 18, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_HUNTSETTINGS"))
-		self._addGroup(Group(self, 19, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_DEFENSESETTINGS"))
-		self._addGroup(Group(self, 20, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PATROLSETTINGS"))
-		self._addGroup(Group(self, 21, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PIRATESETTINGS"))
-		self._addGroup(Group(self, 22, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AIRSTRIKESETTINGS"))
-		self._addGroup(Group(self, 23, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AIRBOMBSETTINGS"))
-		self._addGroup(Group(self, 24, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AIRUNITCANDEFEND_TEXT"))
-		self._addGroup(Group(self, 25, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PROTECTSETTINGS"))
-		self._addGroup(Group(self, 26, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_OTHER"))
+		self._addGroup(Group(self, 0, "TXT_KEY_UNITGROUPER_ORDER_GROUP_NONE"))
+		self._addGroup(Group(self, 1, "TXT_KEY_UNITGROUPER_ORDER_GROUP_SKIP"))
+		self._addGroup(Group(self, 2, "TXT_KEY_UNITGROUPER_ORDER_GROUP_SLEEP"))
+		self._addGroup(Group(self, 3, "TXT_KEY_UNITGROUPER_ORDER_GROUP_FORTIFY"))
+		self._addGroup(Group(self, 4, "TXT_KEY_UNITGROUPER_ORDER_GROUP_HEAL"))
+		self._addGroup(Group(self, 5, "TXT_KEY_UNITGROUPER_ORDER_GROUP_SENTRY"))
+		self._addGroup(Group(self, 6, "TXT_KEY_UNITGROUPER_ORDER_GROUP_INTERCEPT"))
+		self._addGroup(Group(self, 7, "TXT_KEY_UNITGROUPER_ORDER_GROUP_PATROL"))
+		self._addGroup(Group(self, 8, "TXT_KEY_UNITGROUPER_ORDER_GROUP_PLUNDER"))
+		self._addGroup(Group(self, 9, "TXT_KEY_UNITGROUPER_ORDER_GROUP_BUILD"))
+		self._addGroup(Group(self, 10, "TXT_KEY_UNITGROUPER_ORDER_GROUP_CONSTRUCT"))
+		self._addGroup(Group(self, 11, "TXT_KEY_UNITGROUPER_ORDER_GROUP_GOTO"))
+		self._addGroup(Group(self, 12, "TXT_KEY_UNITGROUPER_ORDER_GROUP_EXPLORE"))
+		self._addGroup(Group(self, 13, "TXT_KEY_UNITGROUPER_ORDER_GROUP_AUTO_BUILD"))
+		self._addGroup(Group(self, 14, "TXT_KEY_UNITGROUPER_ORDER_GROUP_AUTO_NETWORK"))
+		self._addGroup(Group(self, 15, "TXT_KEY_UNITGROUPER_ORDER_GROUP_AUTO_CITY"))
+		self._addGroup(Group(self, 16, "TXT_KEY_UNITGROUPER_ORDER_GROUP_AUTO_RELIGION"))
+		self._addGroup(Group(self, 17, "TXT_KEY_UNITGROUPER_ORDER_GROUP_PILLAGESETTINGS"))
+		self._addGroup(Group(self, 18, "TXT_KEY_UNITGROUPER_ORDER_GROUP_HUNTSETTINGS"))
+		self._addGroup(Group(self, 19, "TXT_KEY_UNITGROUPER_ORDER_GROUP_DEFENSESETTINGS"))
+		self._addGroup(Group(self, 20, "TXT_KEY_UNITGROUPER_ORDER_GROUP_PATROLSETTINGS"))
+		self._addGroup(Group(self, 21, "TXT_KEY_UNITGROUPER_ORDER_GROUP_PIRATESETTINGS"))
+		self._addGroup(Group(self, 22, "TXT_KEY_UNITGROUPER_ORDER_GROUP_AIRSTRIKESETTINGS"))
+		self._addGroup(Group(self, 23, "TXT_KEY_UNITGROUPER_ORDER_GROUP_AIRBOMBSETTINGS"))
+		self._addGroup(Group(self, 24, "TXT_KEY_UNITGROUPER_ORDER_GROUP_AIRUNITCANDEFEND"))
+		self._addGroup(Group(self, 25, "TXT_KEY_UNITGROUPER_ORDER_GROUP_PROTECTSETTINGS"))
+		self._addGroup(Group(self, 26, "TXT_KEY_UNITGROUPER_ORDER_GROUP_OTHER"))
 
 		self._AutomationMap = {
 			AutomateTypes.AUTOMATE_CITY	: 15,
@@ -330,13 +330,13 @@ class AutoUpgradeGrouping(Grouping):
 	Ex: AUTOMATE_UPGRADING
 	"""
 	def __init__(self):
-		Grouping.__init__(self, "autoupgrading", "TXT_KEY_UNIT_GROUPER_AUTO_UPGRADE_GROUPING")
+		Grouping.__init__(self, "autoupgrading", "TXT_KEY_UNITGROUPER_AUTO_UPGRADE_GROUPING")
 		(
 			self.ORDER_AUTO_UPGRADING,
 			self.ORDER_NONE,
 		) = range(2)
-		self._addGroup(Group(self, self.ORDER_AUTO_UPGRADING, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_UPGRADINGSETTINGS"))
-		self._addGroup(Group(self, self.ORDER_NONE, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_NONE"))
+		self._addGroup(Group(self, self.ORDER_AUTO_UPGRADING, "TXT_KEY_UNITGROUPER_ORDER_GROUP_UPGRADINGSETTINGS"))
+		self._addGroup(Group(self, self.ORDER_NONE, "TXT_KEY_UNITGROUPER_ORDER_GROUP_NONE"))
 
 	def calcGroupKeys(self, unit, player, team):
 		if unit.isAutoUpgrading():
@@ -349,13 +349,13 @@ class AutoPromoteGrouping(Grouping):
 	Ex: AUTOMATE_PROMOTIONS
 	"""
 	def __init__(self):
-		Grouping.__init__(self, "autopromotion", "TXT_KEY_UNIT_GROUPER_AUTO_PROMOTION_GROUPING")
+		Grouping.__init__(self, "autopromotion", "TXT_KEY_UNITGROUPER_AUTO_PROMOTION_GROUPING")
 		(
 			self.ORDER_AUTO_PROMOTIONS,
 			self.ORDER_NONE,
 		) = range(2)
-		self._addGroup(Group(self, self.ORDER_AUTO_PROMOTIONS, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PROMOTESETTINGS"))
-		self._addGroup(Group(self, self.ORDER_NONE, "TXT_KEY_UNIT_GROUPER_ORDER_GROUP_NONE"))
+		self._addGroup(Group(self, self.ORDER_AUTO_PROMOTIONS, "TXT_KEY_UNITGROUPER_ORDER_GROUP_PROMOTESETTINGS"))
+		self._addGroup(Group(self, self.ORDER_NONE, "TXT_KEY_UNITGROUPER_ORDER_GROUP_NONE"))
 
 	def calcGroupKeys(self, unit, player, team):
 		if unit.isAutoPromoting():

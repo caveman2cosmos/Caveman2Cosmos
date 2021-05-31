@@ -421,10 +421,6 @@
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>NEW_HURRY_MODIFIER</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>CONSCRIPT_MIN_CITY_POPULATION</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
