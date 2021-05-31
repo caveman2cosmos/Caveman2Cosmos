@@ -15,7 +15,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</ArtDefineTag>
 			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			<TechTypes>
-				<PreReqTech>TECH_SHIP_BUILDING</PreReqTech>
+				<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			</TechTypes>	
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
@@ -62,7 +62,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_PISCES</ArtDefineTag>
 			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			<TechTypes>
-				<PreReqTech>TECH_HORSE_BREEDING</PreReqTech>
+				<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			</TechTypes>	
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
@@ -113,7 +113,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_TAURUS</ArtDefineTag>
 			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			<TechTypes>
-				<PreReqTech>TECH_ANCIENT_MACHINERY</PreReqTech>
+				<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			</TechTypes>	
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
@@ -166,7 +166,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_GEMINI</ArtDefineTag>
 			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			<TechTypes>
-				<PreReqTech>TECH_ANCIENT_MACHINERY</PreReqTech>
+				<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			</TechTypes>	
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
@@ -216,7 +216,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</ArtDefineTag>
 			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			<TechTypes>
-				<PreReqTech>TECH_LAW_ENFORCEMENT</PreReqTech>
+				<PrereqTech>TECH_LAW_ENFORCEMENT</PrereqTech>
 			</TechTypes>	
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
@@ -268,7 +268,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</ArtDefineTag>
 			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			<TechTypes>
-				<PreReqTech>TECH_HORSE_BREEDING</PreReqTech>
+				<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			</TechTypes>	
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
@@ -317,7 +317,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</ArtDefineTag>
 			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			<TechTypes>
-				<PreReqTech>TECH_SHIP_BUILDING</PreReqTech>
+				<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			</TechTypes>	
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
@@ -367,7 +367,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_ARIES</ArtDefineTag>
 			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			<TechTypes>
-				<PreReqTech>TECH_LAW_ENFORCEMENT</PreReqTech>
+				<PrereqTech>TECH_LAW_ENFORCEMENT</PrereqTech>
 			</TechTypes>	
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
@@ -414,7 +414,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_CANCER</ArtDefineTag>
 			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			<TechTypes>
-				<PreReqTech>TECH_MILITARY_TRAINING</PreReqTech>
+				<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			</TechTypes>	
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
@@ -465,7 +465,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_LEO</ArtDefineTag>
 			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			<TechTypes>
-				<PreReqTech>TECH_MILITARY_TRAINING</PreReqTech>
+				<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			</TechTypes>	
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
@@ -512,7 +512,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_VIRGO</ArtDefineTag>
 			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			<TechTypes>
-				<PreReqTech>TECH_ANCIENT_MACHINERY</PreReqTech>
+				<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			</TechTypes>	
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
@@ -559,7 +559,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_LIBRA</ArtDefineTag>
 			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			<TechTypes>
-				<PreReqTech>TECH_ANCIENT_MACHINERY</PreReqTech>
+				<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			</TechTypes>	
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
