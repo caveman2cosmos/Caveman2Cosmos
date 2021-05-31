@@ -608,10 +608,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_FIST</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_COMMUNITY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_COMMUNITY</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -652,10 +649,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_FEATHER</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ARCHERY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -696,11 +690,8 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_SHADOWS</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
-			<TechTypes>
-				<PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -748,10 +739,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_CENTAUR</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -792,10 +780,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WARRIOR</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -838,10 +823,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WAVES</ArtDefineTag>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -882,11 +864,8 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WIND</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
-			<TechTypes>
-				<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -926,11 +905,8 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WILD</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
-			<TechTypes>
-				<PrereqTech>TECH_HUNTING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -970,7 +946,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_LEECH</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>444</iCost>
 			<UnitCombatProdModifiers>
@@ -1011,7 +986,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WOLF</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_DOG</Bonus>
 			</PrereqBonuses>
