@@ -17892,9 +17892,11 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		bNormalView = true;
 	}
 
-/*
-	//TBGRIDX
-	int iX = GC.getTechInfo((TechTypes)GC.getUnitInfo(eUnit).getPrereqAndTech()).getGridX();
+	//TBGRIDX	
+	int iX = 0;
+	if ((TechTypes)GC.getUnitInfo(eUnit).getPrereqAndTech() != -1)
+		iX = GC.getTechInfo((TechTypes)GC.getUnitInfo(eUnit).getPrereqAndTech()).getGridX();
+	 
 	TechTypes eMostAdvancedTech = (TechTypes)GC.getUnitInfo(eUnit).getPrereqAndTech();
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
@@ -17916,7 +17918,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_GRID_X", GC.getTechInfo(eMostAdvancedTech).getTextKeyWide(), iX));
 	}
-*/
+
 	if (!bCivilopediaText)
 	{
 		szBuffer.append(NEWLINE);
