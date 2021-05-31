@@ -831,7 +831,7 @@ class Pedia:
 				if szSubCat == aSubCatList[iEra]:
 					bValid = True
 			if bValid:
-				aListDict[(iTechLoc, iTechRow, CvUnitInfo.getDescription())] = (str(iTechLoc)+"/"+str(iTechRow)+": "+CvUnitInfo.getDescription(), i)
+				aListDict[(iTechLoc, iTechRow, CvUnitInfo.getDescription())] = (str(iTechLoc)+": "+CvUnitInfo.getDescription(), i)
 				aList.append((iTechLoc, iTechRow, CvUnitInfo.getDescription()))				
 				bValid = False
 		aList.sort()
@@ -883,7 +883,7 @@ class Pedia:
 				iTechRow = 0
 			
 			if iType == iPromotionType:
-				ListDict[(iTechLoc, iTechRow, szPromoName)] = (str(iTechLoc)+"/"+str(iTechRow)+": "+szPromoName, iPromotion)
+				ListDict[(iTechLoc, iTechRow, szPromoName)] = (str(iTechLoc)+": "+szPromoName, iPromotion)
 				aList.append((iTechLoc, iTechRow, szPromoName))
 		aList.sort()
 		for iPromotion in xrange(len(aList)):
@@ -1010,7 +1010,7 @@ class Pedia:
 					if szSubCat == aSubCatList[iEra]:
 						bValid = True
 			if bValid:
-				aListDict[(iTechLoc, iTechRow, CvBuildingInfo.getDescription())] = (str(iTechLoc)+"/"+str(iTechRow)+": "+CvBuildingInfo.getDescription(), i)
+				aListDict[(iTechLoc, iTechRow, CvBuildingInfo.getDescription())] = (str(iTechLoc)+": "+CvBuildingInfo.getDescription(), i)
 				aList.append((iTechLoc, iTechRow, CvBuildingInfo.getDescription()))
 				bValid = False
 		aList.sort()
@@ -1164,18 +1164,18 @@ class Pedia:
 			
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
 				if not iType:
-					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+"/"+str(iTechRow)+": "+szName, iBonus)
+					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+": "+szName, iBonus)
 					aList.append((iTechLoc, iTechRow, szName))
 			elif BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS:
 				if iType == 3:
-					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+"/"+str(iTechRow)+": "+szName, iBonus)
+					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+": "+szName, iBonus)
 					aList.append((iTechLoc, iTechRow, szName))
 			elif BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE:
 				if iType == 2:
-					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+"/"+str(iTechRow)+": "+szName, iBonus)
+					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+": "+szName, iBonus)
 					aList.append((iTechLoc, iTechRow, szName))
 			elif iType == 1:
-				ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+"/"+str(iTechRow)+": "+szName, iBonus)
+				ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+": "+szName, iBonus)
 				aList.append((iTechLoc, iTechRow,szName))
 		aList.sort()
 		for iBonus in xrange(len(aList)):
@@ -1419,7 +1419,7 @@ class Pedia:
 				except:
 					pass
 				if (bValid):
-					ListDict[(iTechLoc, iTechRow, item.getDescription())] = (str(iTechLoc)+"/"+str(iTechRow)+": "+item.getDescription(), i)
+					ListDict[(iTechLoc, iTechRow, item.getDescription())] = (str(iTechLoc)+": "+item.getDescription(), i)
 					list.append((iTechLoc, iTechRow, item.getDescription()))
 		list.sort()
 		for i in xrange(len(list)):
