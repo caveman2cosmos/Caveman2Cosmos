@@ -202,7 +202,7 @@
 			<Description>TXT_KEY_SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bValid>1</bValid>
-		</SpecialBuildingInfo>		
+		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</Description>

@@ -19473,7 +19473,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-		</PromotionInfo>		
+		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_CULTURE_AFRICAN</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURE_AFRICAN</Description>
