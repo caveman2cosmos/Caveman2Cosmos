@@ -785,8 +785,10 @@ class Pedia:
 			TechReq = CvUnitInfo.getPrereqAndTech()
 			try:
 				iTechLoc = GC.getTechInfo(TechReq).getGridX()
+				iTechRow = GC.getTechInfo(TechReq).getGridY()
 			except:
 				iTechLoc = 0
+				iTechRow = 0
 			
 			if CvBonusInfo:
 				iBonusClassType = CvBonusInfo.getBonusClassType()
@@ -829,8 +831,8 @@ class Pedia:
 				if szSubCat == aSubCatList[iEra]:
 					bValid = True
 			if bValid:
-				aListDict[(iTechLoc, CvUnitInfo.getDescription())] = (str(iTechLoc)+": "+CvUnitInfo.getDescription(), i)
-				aList.append((iTechLoc, CvUnitInfo.getDescription()))				
+				aListDict[(iTechLoc, iTechRow, CvUnitInfo.getDescription())] = (str(iTechLoc)+"/"+str(iTechRow)+": "+CvUnitInfo.getDescription(), i)
+				aList.append((iTechLoc, iTechRow, CvUnitInfo.getDescription()))				
 				bValid = False
 		aList.sort()
 		for i in xrange(len(aList)):
@@ -875,12 +877,14 @@ class Pedia:
 			
 			try:
 				iTechLoc = GC.getTechInfo(TechReq).getGridX()
+				iTechRow = GC.getTechInfo(TechReq).getGridY()
 			except:
 				iTechLoc = 0
+				iTechRow = 0
 			
 			if iType == iPromotionType:
-				ListDict[(iTechLoc, szPromoName)] = (str(iTechLoc)+": "+szPromoName, iPromotion)
-				aList.append((iTechLoc, szPromoName))
+				ListDict[(iTechLoc, iTechRow, szPromoName)] = (str(iTechLoc)+"/"+str(iTechRow)+": "+szPromoName, iPromotion)
+				aList.append((iTechLoc, iTechRow, szPromoName))
 		aList.sort()
 		for iPromotion in xrange(len(aList)):
 			key = aList[iPromotion]
@@ -961,16 +965,20 @@ class Pedia:
 			TechMainReq = CvBuildingInfo.getPrereqAndTech()
 			if GC.getTechInfo(TechMainReq) != None:
 				iTechMainLoc = GC.getTechInfo(TechMainReq).getGridX()
+				iTechMainRow = GC.getTechInfo(TechMainReq).getGridY()
 			else:
 				iTechMainLoc = 0
+				iTechMainRow = 0
 			
 			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
 			if iSpecialBuilding != -1:
 				TechSpecialReq = GC.getSpecialBuildingInfo(iSpecialBuilding).getTechPrereq()
 				if TechSpecialReq != -1:
 					iTechSpecialLoc = GC.getTechInfo(TechSpecialReq).getGridX()
+					iTechSpecialRow = GC.getTechInfo(TechSpecialReq).getGridY()
 			else:
 				iTechSpecialLoc = 0
+				iTechSpecialRow = 0
 				
 			iRelPrereq1 = CvBuildingInfo.getPrereqReligion()
 			iRelPrereq2 = CvBuildingInfo.getReligionType()
@@ -981,10 +989,13 @@ class Pedia:
 					TechReligionReq = GC.getReligionInfo(iReligionBuilding).getTechPrereq()
 					if TechReligionReq != -1:
 						iTechReligionLoc = GC.getTechInfo(TechReligionReq).getGridX()
+						iTechReligionRow = GC.getTechInfo(TechReligionReq).getGridY()
 			else:
-				iTechReligionLoc = 0		
+				iTechReligionLoc = 0
+				iTechReligionRow = 0
 
 			iTechLoc = max(iTechMainLoc, iTechSpecialLoc, iTechReligionLoc)
+			iTechRow = max(iTechMainRow, iTechSpecialRow, iTechReligionRow)
 			
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
@@ -999,8 +1010,8 @@ class Pedia:
 					if szSubCat == aSubCatList[iEra]:
 						bValid = True
 			if bValid:
-				aListDict[(iTechLoc, CvBuildingInfo.getDescription())] = (str(iTechLoc)+": "+CvBuildingInfo.getDescription(), i)
-				aList.append((iTechLoc, CvBuildingInfo.getDescription()))
+				aListDict[(iTechLoc, iTechRow, CvBuildingInfo.getDescription())] = (str(iTechLoc)+"/"+str(iTechRow)+": "+CvBuildingInfo.getDescription(), i)
+				aList.append((iTechLoc, iTechRow, CvBuildingInfo.getDescription()))
 				bValid = False
 		aList.sort()
 		for i in xrange(len(aList)):
@@ -1146,24 +1157,26 @@ class Pedia:
 			
 			try:
 				iTechLoc = GC.getTechInfo(TechReq).getGridX()
+				iTechRow = GC.getTechInfo(TechReq).getGridY()
 			except:
 				iTechLoc = 0
+				iTechRow = 0
 			
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
 				if not iType:
-					ListDict[(iTechLoc, szName)] = (str(iTechLoc)+": "+szName, iBonus)
-					aList.append((iTechLoc, szName))
+					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+"/"+str(iTechRow)+": "+szName, iBonus)
+					aList.append((iTechLoc, iTechRow, szName))
 			elif BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS:
 				if iType == 3:
-					ListDict[(iTechLoc, szName)] = (str(iTechLoc)+": "+szName, iBonus)
-					aList.append((iTechLoc, szName))
+					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+"/"+str(iTechRow)+": "+szName, iBonus)
+					aList.append((iTechLoc, iTechRow, szName))
 			elif BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE:
 				if iType == 2:
-					ListDict[(iTechLoc, szName)] = (str(iTechLoc)+": "+szName, iBonus)
-					aList.append((iTechLoc, szName))
+					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+"/"+str(iTechRow)+": "+szName, iBonus)
+					aList.append((iTechLoc, iTechRow, szName))
 			elif iType == 1:
-				ListDict[(iTechLoc, szName)] = (str(iTechLoc)+": "+szName, iBonus)
-				aList.append((iTechLoc, szName))
+				ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+"/"+str(iTechRow)+": "+szName, iBonus)
+				aList.append((iTechLoc, iTechRow,szName))
 		aList.sort()
 		for iBonus in xrange(len(aList)):
 			key = aList[iBonus]
@@ -1394,8 +1407,10 @@ class Pedia:
 			
 			try:
 				iTechLoc = GC.getTechInfo(TechReq).getGridX()
+				iTechRow = GC.getTechInfo(TechReq).getGridY()
 			except:
-				iTechLoc = 0			
+				iTechLoc = 0	
+				iTechRow = 0				
 			
 			if item:
 				bValid = True
@@ -1404,8 +1419,8 @@ class Pedia:
 				except:
 					pass
 				if (bValid):
-					ListDict[(iTechLoc, item.getDescription())] = (str(iTechLoc)+": "+item.getDescription(), i)
-					list.append((iTechLoc, item.getDescription()))
+					ListDict[(iTechLoc, iTechRow, item.getDescription())] = (str(iTechLoc)+"/"+str(iTechRow)+": "+item.getDescription(), i)
+					list.append((iTechLoc, iTechRow, item.getDescription()))
 		list.sort()
 		for i in xrange(len(list)):
 			key = list[i]
