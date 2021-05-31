@@ -17267,7 +17267,12 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	{
 		szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), GC.getTechInfo(eTech).getDescription());
 		szBuffer.append(szTempBuffer);
+		szBuffer.append(NEWLINE);
 	}
+	
+	const CvTechInfo& kTech = GC.getTechInfo(eTech);	
+	szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_XGRID",kTech.getGridX()));
+	szBuffer.append(NEWLINE);
 
 	FAssert(GC.getGame().getActivePlayer() != NO_PLAYER || !bPlayerContext);
 
@@ -17371,7 +17376,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	//	Enables permanent alliances...
 	buildPermanentAllianceString(szBuffer, eTech, true, bPlayerContext);
 
-	const CvTechInfo& kTech = GC.getTechInfo(eTech);
 	//   Enables Embassies...
 	buildEmbassyString(szBuffer, eTech, true, bPlayerContext);
 

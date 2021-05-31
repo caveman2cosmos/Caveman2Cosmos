@@ -30447,4 +30447,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_IMPROVEMENTHELP_REQUIRES_IRRIGATION</Tag>
 		<English>[ICON_BULLET]Requires Irrigation</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_XGRID</Tag>
+		<English> Location of tech: %d1</English>
+	</TEXT>
 </Civ4GameText>
