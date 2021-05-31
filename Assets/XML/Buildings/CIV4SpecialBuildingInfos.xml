@@ -224,9 +224,7 @@
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</Description>
-			<ObsoleteTech>NONE</ObsoleteTech>
 			<TechPrereq>TECH_CLASSICAL_LIFESTYLE</TechPrereq>
-			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
