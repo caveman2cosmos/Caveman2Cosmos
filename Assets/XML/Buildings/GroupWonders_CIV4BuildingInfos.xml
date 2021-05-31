@@ -13,10 +13,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</ArtDefineTag>
-			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
-			</TechTypes>	
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
@@ -60,10 +60,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_PISCES</ArtDefineTag>
-			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
-			</TechTypes>	
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
@@ -90,7 +90,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
-			</CommerceModifiers>	
+			</CommerceModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -111,10 +111,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_TAURUS</ArtDefineTag>
-			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
-			</TechTypes>	
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
@@ -143,7 +143,7 @@
 			</Flavors>
 			<CommerceModifiers>
 				<iCommerce>10</iCommerce>
-			</CommerceModifiers>	
+			</CommerceModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -164,10 +164,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_GEMINI</ArtDefineTag>
-			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
-			</TechTypes>	
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
@@ -193,7 +193,7 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</CommerceModifiers>	
+			</CommerceModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -214,10 +214,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</ArtDefineTag>
-			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			<PrereqTech>TECH_LAW_ENFORCEMENT</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_LAW_ENFORCEMENT</PrereqTech>
-			</TechTypes>	
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
@@ -245,7 +245,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
-			</CommerceModifiers>	
+			</CommerceModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -266,10 +266,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</ArtDefineTag>
-			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
-			</TechTypes>	
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
@@ -294,7 +294,7 @@
 			</Flavors>
 			<YieldModifiers>
 				<iYield>10</iYield>
-			</YieldModifiers>	
+			</YieldModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -315,10 +315,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</ArtDefineTag>
-			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
-			</TechTypes>	
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
@@ -344,7 +344,7 @@
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>10</iYield>
-			</YieldModifiers>	
+			</YieldModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -365,10 +365,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_ARIES</ArtDefineTag>
-			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			<PrereqTech>TECH_LAW_ENFORCEMENT</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_LAW_ENFORCEMENT</PrereqTech>
-			</TechTypes>	
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
@@ -390,7 +390,7 @@
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
-			</Flavors>	
+			</Flavors>
 			<iWarWearinessModifier>-25</iWarWearinessModifier>
 			<PropertyManipulators>
 				<PropertySource>
@@ -412,10 +412,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_CANCER</ArtDefineTag>
-			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
-			</TechTypes>	
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
@@ -437,7 +437,7 @@
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
-			</Flavors>	
+			</Flavors>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -463,10 +463,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_LEO</ArtDefineTag>
-			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
-			</TechTypes>	
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
@@ -510,10 +510,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_VIRGO</ArtDefineTag>
-			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
-			</TechTypes>	
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
@@ -557,10 +557,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_LIBRA</ArtDefineTag>
-			<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
-			</TechTypes>	
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
@@ -1277,5 +1277,5 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-	</BuildingInfos>	
-</Civ4BuildingInfos>		
+	</BuildingInfos>
+</Civ4BuildingInfos>
