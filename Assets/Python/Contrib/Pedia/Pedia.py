@@ -958,13 +958,34 @@ class Pedia:
 		bValid = False
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
-			TechReq = CvBuildingInfo.getPrereqAndTech()
+			TechMainReq = CvBuildingInfo.getPrereqAndTech()
+			if GC.getTechInfo(TechMainReq) != None:
+				iTechMainLoc = GC.getTechInfo(TechMainReq).getGridX()
+			else:
+				iTechMainLoc = 0
+			
+			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
+			if iSpecialBuilding != -1:
+				TechSpecialReq = GC.getSpecialBuildingInfo(iSpecialBuilding).getTechPrereq()
+				if TechSpecialReq != -1:
+					iTechSpecialLoc = GC.getTechInfo(TechSpecialReq).getGridX()
+			else:
+				iTechSpecialLoc = 0
+				
+			iRelPrereq1 = CvBuildingInfo.getPrereqReligion()
+			iRelPrereq2 = CvBuildingInfo.getReligionType()
+			iRelPrereq3 = CvBuildingInfo.getPrereqStateReligion()
+			if iRelPrereq1 != -1 or iRelPrereq2 != -1 or iRelPrereq3 != -1:
+				iReligionBuilding = max(iRelPrereq1, iRelPrereq2, iRelPrereq3)
+				if iReligionBuilding != -1:
+					TechReligionReq = GC.getReligionInfo(iReligionBuilding).getTechPrereq()
+					if TechReligionReq != -1:
+						iTechReligionLoc = GC.getTechInfo(TechReligionReq).getGridX()
+			else:
+				iTechReligionLoc = 0		
 
-			try:
-				iTechLoc = GC.getTechInfo(TechReq).getGridX()
-			except:
-				iTechLoc = 0
-
+			iTechLoc = max(iTechMainLoc, iTechSpecialLoc, iTechReligionLoc)
+			
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
 			if iBuildingType != -1:
