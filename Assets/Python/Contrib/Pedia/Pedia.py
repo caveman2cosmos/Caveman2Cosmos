@@ -976,6 +976,9 @@ class Pedia:
 				if TechSpecialReq != -1:
 					iTechSpecialLoc = GC.getTechInfo(TechSpecialReq).getGridX()
 					iTechSpecialRow = GC.getTechInfo(TechSpecialReq).getGridY()
+				elif TechSpecialReq == -1:
+					iTechSpecialLoc = 0
+					iTechSpecialRow = 0
 			else:
 				iTechSpecialLoc = 0
 				iTechSpecialRow = 0
@@ -990,6 +993,9 @@ class Pedia:
 					if TechReligionReq != -1:
 						iTechReligionLoc = GC.getTechInfo(TechReligionReq).getGridX()
 						iTechReligionRow = GC.getTechInfo(TechReligionReq).getGridY()
+				elif iReligionBuilding == -1:
+					iTechReligionLoc = 0
+					iTechReligionRow = 0
 			else:
 				iTechReligionLoc = 0
 				iTechReligionRow = 0
