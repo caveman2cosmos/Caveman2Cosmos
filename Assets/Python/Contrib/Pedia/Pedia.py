@@ -1038,7 +1038,7 @@ class Pedia:
 				return 2
 		if szStrat.find("Myth -", 0, 6) + szStrat.find("Myth (B) -", 0, 10) + szStrat.find("Myth (L) -", 0, 10) + szStrat.find("Myth Effect -", 0, 13) + szStrat.find("Story -", 0, 7) + szStrat.find("Story (B) -", 0, 11) + szStrat.find("Stories -", 0, 9) + szStrat.find("Stories (B) -", 0, 13) + szStrat.find("Stories Effect -", 0, 16) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -11:
 			return 6
-		elif CvBuildingInfo.getReligionType() != -1 or CvBuildingInfo.getPrereqReligion() != -1:
+		elif CvBuildingInfo.getReligionType() != -1 or CvBuildingInfo.getPrereqReligion() != -1 or CvBuildingInfo.getPrereqStateReligion() != -1:
 			return 5
 		elif CvBuildingInfo.getProductionCost() == -1 or CvBuildingInfo.isAutoBuild():
 			return 3
