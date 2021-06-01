@@ -15595,6 +15595,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OLD_CITY_WALLS</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_OLD_CITY_WALLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WALLS_PEDIA</Civilopedia>
 			<ReplacementBuildings>
