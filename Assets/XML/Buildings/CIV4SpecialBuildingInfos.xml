@@ -202,7 +202,7 @@
 			<Description>TXT_KEY_SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bValid>1</bValid>
-		</SpecialBuildingInfo>		
+		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</Description>
@@ -220,6 +220,14 @@
 			<Description>TXT_KEY_SPECIALBUILDING_GROUP_DELUXE_WINERIES</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bValid>1</bValid>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
+			<Type>SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_GROUP_ASTROLOGICAL_INFLUENCES</Description>
+			<TechPrereq>TECH_CLASSICAL_LIFESTYLE</TechPrereq>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bValid>1</bValid>
+			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
 		</SpecialBuildingInfo>
 	</SpecialBuildingInfos>
 </Civ4SpecialBuildingInfos>

@@ -15990,4 +15990,32 @@
 		<Italian>Tattica</Italian>
 		<Spanish>Tácticas</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_JUPITER</Tag>
+		<English>Influence of Jupiter</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_MARS</Tag>
+		<English>Influence of Mars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_SATURN</Tag>
+		<English>Influence of Saturn</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_MERCURY</Tag>
+		<English>Influence of Mercury</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_THE_SUN</Tag>
+		<English>Influence of the Sun</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_THE_MOON</Tag>
+		<English>Influence of the Moon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_VENUS</Tag>
+		<English>Influence of Venus</English>
+	</TEXT>
 </Civ4GameText>
