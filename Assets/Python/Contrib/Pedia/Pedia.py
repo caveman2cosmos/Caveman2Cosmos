@@ -476,19 +476,19 @@ class Pedia:
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
 			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
 			iCost = CvUnitInfo.getProductionCost()
-			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42) and CvUnitInfo.getNumUnitUpgrades() < 1: # 42 = UNITAI_SUBDUED_ANIMAL
+			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42) and CvUnitInfo.getNumUnitUpgrades() == 0: # 42 = UNITAI_SUBDUED_ANIMAL
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[2]
-			elif (iDefaultUnitAIType in aListAI) and CvUnitInfo.getNumUnitUpgrades() < 1:
+			elif (iDefaultUnitAIType in aListAI) and CvUnitInfo.getNumUnitUpgrades() == 0:
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[3]			
-			elif CvUnitInfo.getMaxGlobalInstances() == 1 and CvUnitInfo.getNumUnitUpgrades() < 1: ## World Unit
+			elif CvUnitInfo.getMaxGlobalInstances() == 1 and CvUnitInfo.getNumUnitUpgrades() == 0: ## World Unit
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[0]
-			elif iBonusClassType == GC.getInfoTypeForString("BONUSCLASS_CULTURE") and CvUnitInfo.getNumUnitUpgrades() < 1:
+			elif iBonusClassType == GC.getInfoTypeForString("BONUSCLASS_CULTURE") and CvUnitInfo.getNumUnitUpgrades() == 0:
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[1]
-			elif CvUnitInfo.getNumUnitUpgrades() < 1:
+			elif CvUnitInfo.getNumUnitUpgrades() == 0:
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[4]
 			else:
@@ -797,27 +797,27 @@ class Pedia:
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
 			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
 			iCost = CvUnitInfo.getProductionCost()
-			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42) and CvUnitInfo.getNumUnitUpgrades() < 1: # 42 = UNITAI_SUBDUED_ANIMAL
+			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42) and CvUnitInfo.getNumUnitUpgrades() == 0: # 42 = UNITAI_SUBDUED_ANIMAL
 				if bAnimals:
 					bValid = True
 				else:
 					continue
-			elif (iDefaultUnitAIType in aListAI) and CvUnitInfo.getNumUnitUpgrades() < 1:
+			elif (iDefaultUnitAIType in aListAI) and CvUnitInfo.getNumUnitUpgrades() == 0:
 				if bSpread:
 					bValid = True
 				else:
 					continue
-			elif CvUnitInfo.getMaxGlobalInstances() != -1 and CvUnitInfo.getNumUnitUpgrades() < 1:
+			elif CvUnitInfo.getMaxGlobalInstances() != -1 and CvUnitInfo.getNumUnitUpgrades() == 0:
 				if bWorld:
 					bValid = True
 				else:
 					continue
-			elif iBonusClassType == GC.getInfoTypeForString("BONUSCLASS_CULTURE") and CvUnitInfo.getNumUnitUpgrades() < 1:
+			elif iBonusClassType == GC.getInfoTypeForString("BONUSCLASS_CULTURE") and CvUnitInfo.getNumUnitUpgrades() == 0:
 				if bCultural:
 					bValid = True
 				else:
 					continue
-			elif CvUnitInfo.getNumUnitUpgrades() < 1:
+			elif CvUnitInfo.getNumUnitUpgrades() == 0:
 				if bMisc:
 					bValid = True
 				else:
@@ -1029,20 +1029,20 @@ class Pedia:
 		szStrat = CvBuildingInfo.getDescription()
 		iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
 		
-		if not CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")) and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() > 1):
+		if not CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")) and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
 			return 7
 		if iSpecialBuilding != -1:
 			if iSpecialBuilding == GC.getInfoTypeForString("SPECIALBUILDING_C2C_CULTURE"):
 				return 4
 			if GC.getSpecialBuildingInfo(iSpecialBuilding).getType().find("_GROUP_") != -1:
 				return 2
-		if szStrat.find("Myth -", 0, 6) + szStrat.find("Myth (B) -", 0, 10) + szStrat.find("Myth (L) -", 0, 10) + szStrat.find("Myth Effect -", 0, 13) + szStrat.find("Story -", 0, 7) + szStrat.find("Story (B) -", 0, 11) + szStrat.find("Stories -", 0, 9) + szStrat.find("Stories (B) -", 0, 13) + szStrat.find("Stories Effect -", 0, 16) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -11 and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() > 1):
+		if szStrat.find("Myth -", 0, 6) + szStrat.find("Myth (B) -", 0, 10) + szStrat.find("Myth (L) -", 0, 10) + szStrat.find("Myth Effect -", 0, 13) + szStrat.find("Story -", 0, 7) + szStrat.find("Story (B) -", 0, 11) + szStrat.find("Stories -", 0, 9) + szStrat.find("Stories (B) -", 0, 13) + szStrat.find("Stories Effect -", 0, 16) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -11 and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
 			return 6
-		elif (CvBuildingInfo.getReligionType() != -1 or CvBuildingInfo.getPrereqReligion() != -1 or CvBuildingInfo.getPrereqStateReligion() != -1) and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() > 1):
+		elif (CvBuildingInfo.getReligionType() != -1 or CvBuildingInfo.getPrereqReligion() != -1 or CvBuildingInfo.getPrereqStateReligion() != -1) and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
 			return 5
-		elif (CvBuildingInfo.getProductionCost() == -1 or CvBuildingInfo.isAutoBuild()) and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() > 1):
+		elif (CvBuildingInfo.getProductionCost() == -1 or CvBuildingInfo.isAutoBuild()) and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
 			return 3
-		elif isWorldWonder(iBuilding) or CvBuildingInfo.getHolyCity() > 1:
+		elif isWorldWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1:
 			return 1
 		elif isNationalWonder(iBuilding):
 			return 0
