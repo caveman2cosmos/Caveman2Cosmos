@@ -22746,23 +22746,6 @@
 		<Polish>[ICON_BULLET]Nieustępliwy: %d1_Amount%% przeciwko Odepchnięcie/Odrzut</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_URBAN_HORSEMAN</Tag>
-		<English>Post-apocalyptic Urban Horseman</English>
-		<French>Cavalier Urbain</French>
-		<Spanish>
-			<Text>Jinete urbano</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Nowoczesna Konnica</Polish>
-		<Russian>Ãîðîäñêîé âñàäíèê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_URBAN_HORSEMAN_PEDIA</Tag>
-		<English>Urban horsemen have resorted to using horses instead of mechanized vehicles, because computerized vehicles are vulnerable to cyber attacks and are more easily located by tracking devices and scanning equipment. The horse is a low tech solution to a problem created by advanced technology. These mounted urban soldiers are propelled by their desparation and their hope that any change will be for the better.</English>
-		<Polish>Nowoczesna Konnica to jednostka, którą możesz zwerbowac jeśli z jakiś powodów nie masz dostępu do nowoczesnych pojazdów.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_URHO_KEKKONEN</Tag>
 		<English>Urho Kekkonen</English>
 		<Russian>Óðõî Êåêêîíåí</Russian>
