@@ -789,6 +789,20 @@ class Pedia:
 			except:
 				iTechLoc = 0
 				iTechRow = 0
+				
+			u = 0
+			iUpgrades = CvUnitInfo.getNumUnitUpgrades()
+			if CvUnitInfo.getNumUnitUpgrades() > 0:
+				for u in xrange(iUpgrades):
+					desc = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getDescription()
+					try:
+						tech = GC.getTechInfo(GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getPrereqAndTech()).getGridX()
+					except:
+						tech = 0		
+					dist = tech - iTechLoc
+					if dist < 1:
+						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade: "+str(tech)+" - "+desc+" -> Distance: "+str(dist)
+					
 			
 			if CvBonusInfo:
 				iBonusClassType = CvBonusInfo.getBonusClassType()
