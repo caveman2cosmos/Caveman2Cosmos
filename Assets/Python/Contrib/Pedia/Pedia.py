@@ -790,18 +790,20 @@ class Pedia:
 				iTechLoc = 0
 				iTechRow = 0
 				
-			u = 0
-			iUpgrades = CvUnitInfo.getNumUnitUpgrades()
+			iCost = CvUnitInfo.getProductionCost()
 			if CvUnitInfo.getNumUnitUpgrades() > 0:
-				for u in xrange(iUpgrades):
-					desc = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getDescription()
+				for u in xrange(CvUnitInfo.getNumUnitUpgrades()):
+					upgradedDesc = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getDescription()
+					upgradedCost = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getProductionCost()
+					upgradedTech = GC.getTechInfo(GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getPrereqAndTech())
 					try:
-						tech = GC.getTechInfo(GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getPrereqAndTech()).getGridX()
+						upgradedTechLoc = upgradedTech.getGridX()
 					except:
-						tech = 0		
-					dist = tech - iTechLoc
-					if dist < 1:
-						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade: "+str(tech)+" - "+desc+" -> Distance: "+str(dist)
+						upgradedTechLoc = 0		
+					dist = upgradedTechLoc - iTechLoc
+					costdiff = upgradedCost - iCost
+					if costdiff < 0:
+						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade: "+str(upgradedTechLoc)+" - "+upgradedDesc+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)
 					
 			
 			if CvBonusInfo:
@@ -809,8 +811,7 @@ class Pedia:
 			else:
 				iBonusClassType = None
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
-			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
-			iCost = CvUnitInfo.getProductionCost()
+			aListAI = [UnitAITypes.UNITAI_MISSIONARY]			
 			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42) and CvUnitInfo.getNumUnitUpgrades() == 0: # 42 = UNITAI_SUBDUED_ANIMAL
 				if bAnimals:
 					bValid = True
