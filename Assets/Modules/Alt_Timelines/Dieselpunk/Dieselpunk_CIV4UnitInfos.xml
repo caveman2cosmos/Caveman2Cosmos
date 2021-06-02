@@ -569,8 +569,8 @@
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
-				<UnitType>UNIT_P51_MUSTANG</UnitType>
-				<UnitType>UNIT_FIGHTER_BOMBER</UnitType>
+				<UnitType>UNIT_EARLYJET</UnitType>
+				<UnitType>UNIT_A10_BOMBER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
