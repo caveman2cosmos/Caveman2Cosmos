@@ -6491,7 +6491,7 @@
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_LIGHT_CROSSBOWMAN</UnitType>
-				<UnitType>UNIT_OXYBELES</UnitType>
+				<UnitType>UNIT_SCORPION</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -10097,7 +10097,7 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
 				<UnitType>UNIT_CHARIOT</UnitType>
-				<UnitType>UNIT_CHARIOTARCHER</UnitType>
+				<UnitType>UNIT_HORSE_ARCHER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
