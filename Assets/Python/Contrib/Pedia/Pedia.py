@@ -802,8 +802,10 @@ class Pedia:
 						upgradedTechLoc = 0		
 					dist = upgradedTechLoc - iTechLoc
 					costdiff = upgradedCost - iCost
-					if costdiff < 0:
+					if CvUnitInfo.getNumUnitUpgrades() == 1:
 						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade: "+str(upgradedTechLoc)+" - "+upgradedDesc+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)
+					elif CvUnitInfo.getNumUnitUpgrades() > 1:
+						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade #"+str(u)+"/"+str(CvUnitInfo.getNumUnitUpgrades())+": "+str(upgradedTechLoc)+" - "+upgradedDesc+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)
 					
 			
 			if CvBonusInfo:
