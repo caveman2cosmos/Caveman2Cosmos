@@ -4173,7 +4173,8 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
-				<UnitType>UNIT_SPECIAL_FORCES</UnitType>
+				<UnitType>UNIT_HTSNIPER</UnitType>
+				<UnitType>UNIT_SPECIAL_INFANTRY</UnitType>
 				<UnitType>UNIT_HITECH_MARINE</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
@@ -10995,7 +10996,7 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
-				<UnitType>UNIT_STONE_MACEMAN</UnitType>
+				<UnitType>UNIT_EARLY_MACEMAN</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -22252,11 +22253,7 @@
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
 			<UnitUpgrades>
-				<UnitType>UNIT_WORKBUFFALO</UnitType>
-				<UnitType>UNIT_WORKELEPHANT</UnitType>
-				<UnitType>UNIT_WORKMULE</UnitType>
-				<UnitType>UNIT_WORKLLAMA</UnitType>
-				<UnitType>UNIT_WORKCAMEL</UnitType>
+				<UnitType>UNIT_WORKER_INDUSTRIAL</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -24246,11 +24243,7 @@
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
 			<UnitUpgrades>
-				<UnitType>UNIT_WORKBUFFALO</UnitType>
-				<UnitType>UNIT_WORKELEPHANT</UnitType>
-				<UnitType>UNIT_WORKMULE</UnitType>
-				<UnitType>UNIT_WORKLLAMA</UnitType>
-				<UnitType>UNIT_WORKCAMEL</UnitType>
+				<UnitType>UNIT_WORKER_INDUSTRIAL</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -28586,7 +28579,7 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
-				<UnitType>UNIT_LANCER</UnitType>
+				<UnitType>UNIT_DRAGOON</UnitType>
 				<UnitType>UNIT_CAVALRY</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
@@ -32836,7 +32829,7 @@
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_LIGHT_CROSSBOWMAN</UnitType>
-				<UnitType>UNIT_OXYBELES</UnitType>
+				<UnitType>UNIT_SCORPION</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -32943,7 +32936,7 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
 				<UnitType>UNIT_CHARIOT</UnitType>
-				<UnitType>UNIT_CHARIOTARCHER</UnitType>
+				<UnitType>UNIT_HORSE_ARCHER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -37821,7 +37814,7 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
-				<UnitType>UNIT_LANCER</UnitType>
+				<UnitType>UNIT_DRAGOON</UnitType>
 				<UnitType>UNIT_CAVALRY</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
@@ -41232,11 +41225,7 @@
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
 			<UnitUpgrades>
-				<UnitType>UNIT_WORKBUFFALO</UnitType>
-				<UnitType>UNIT_WORKELEPHANT</UnitType>
-				<UnitType>UNIT_WORKMULE</UnitType>
-				<UnitType>UNIT_WORKLLAMA</UnitType>
-				<UnitType>UNIT_WORKCAMEL</UnitType>
+				<UnitType>UNIT_WORKER_INDUSTRIAL</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -42173,11 +42162,7 @@
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
 			<UnitUpgrades>
-				<UnitType>UNIT_WORKBUFFALO</UnitType>
-				<UnitType>UNIT_WORKELEPHANT</UnitType>
-				<UnitType>UNIT_WORKMULE</UnitType>
-				<UnitType>UNIT_WORKLLAMA</UnitType>
-				<UnitType>UNIT_WORKCAMEL</UnitType>
+				<UnitType>UNIT_WORKER_INDUSTRIAL</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -42657,7 +42642,7 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
-				<UnitType>UNIT_LANCER</UnitType>
+				<UnitType>UNIT_DRAGOON</UnitType>
 				<UnitType>UNIT_CAVALRY</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
@@ -44026,7 +44011,7 @@
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_LIGHT_CROSSBOWMAN</UnitType>
-				<UnitType>UNIT_OXYBELES</UnitType>
+				<UnitType>UNIT_SCORPION</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -45883,7 +45868,7 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
-				<UnitType>UNIT_LANCER</UnitType>
+				<UnitType>UNIT_DRAGOON</UnitType>
 				<UnitType>UNIT_CAVALRY</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
@@ -49810,7 +49795,7 @@
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_LIGHT_CROSSBOWMAN</UnitType>
-				<UnitType>UNIT_OXYBELES</UnitType>
+				<UnitType>UNIT_SCORPION</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -50026,7 +50011,7 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
 				<UnitType>UNIT_CHARIOT</UnitType>
-				<UnitType>UNIT_CHARIOTARCHER</UnitType>
+				<UnitType>UNIT_HORSE_ARCHER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
