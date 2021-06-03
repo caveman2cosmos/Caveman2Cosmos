@@ -14410,9 +14410,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DRUG_TRADE</PrereqTech>
 			<VicinityBonus>BONUS_HEMP</VicinityBonus>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_DRUG_PROHIBITION</BuildingType>
-			</ReplacementBuildings>
 			<iCost>252</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -19637,9 +19634,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DRUG_TRADE</PrereqTech>
 			<VicinityBonus>BONUS_COCA</VicinityBonus>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_DRUG_PROHIBITION</BuildingType>
-			</ReplacementBuildings>
 			<iCost>252</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -31943,9 +31937,6 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DEER</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_DRUG_PROHIBITION</BuildingType>
-			</ReplacementBuildings>
 			<iCost>132</iCost>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -43809,9 +43800,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<VicinityBonus>BONUS_KAVA</VicinityBonus>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_DRUG_PROHIBITION</BuildingType>
-			</ReplacementBuildings>
 			<iCost>50</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -60569,9 +60557,6 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PEYOTE</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_DRUG_PROHIBITION</BuildingType>
-			</ReplacementBuildings>
 			<iCost>252</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -62834,9 +62819,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DRUG_TRADE</PrereqTech>
 			<VicinityBonus>BONUS_OPIUM</VicinityBonus>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_DRUG_PROHIBITION</BuildingType>
-			</ReplacementBuildings>
 			<iCost>252</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -80781,7 +80763,15 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
-			<Bonus>BONUS_DRUGS</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_DRUGS</Bonus>
+				<Bonus>BONUS_COCA</Bonus>
+				<Bonus>BONUS_KAVA</Bonus>
+				<Bonus>BONUS_OPIUM</Bonus>
+				<Bonus>BONUS_PEYOTE</Bonus>
+				<Bonus>BONUS_HEMP</Bonus>
+				<Bonus>BONUS_TOBACCO</Bonus>
+			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
 				<BuildingType>BUILDING_MYSTIC_HUT</BuildingType>
