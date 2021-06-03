@@ -805,7 +805,7 @@ class Pedia:
 					if CvUnitInfo.getNumUnitUpgrades() == 1:
 						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade: "+str(upgradedTechLoc)+" - "+upgradedDesc+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)
 					elif CvUnitInfo.getNumUnitUpgrades() > 1:
-						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade #"+str(u)+"/"+str(CvUnitInfo.getNumUnitUpgrades())+": "+str(upgradedTechLoc)+" - "+upgradedDesc+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)
+						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade #"+str(u+1)+"/"+str(CvUnitInfo.getNumUnitUpgrades())+": "+str(upgradedTechLoc)+" - "+upgradedDesc+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)
 					
 			
 			if CvBonusInfo:
