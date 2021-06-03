@@ -802,12 +802,16 @@ class Pedia:
 						upgradedTechLoc = 0		
 					dist = upgradedTechLoc - iTechLoc
 					costdiff = upgradedCost - iCost
+					
+					upgradedUnit = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u))
+					secondUpgradeList = []
+					for u2 in xrange(upgradedUnit.getNumUnitUpgrades()):
+						secondUpgradeList.append(GC.getUnitInfo(upgradedUnit.getUnitUpgrade(u2)).getDescription())					
 					if CvUnitInfo.getNumUnitUpgrades() == 1:
 						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade: "+str(upgradedTechLoc)+" - "+upgradedDesc+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)
 					elif CvUnitInfo.getNumUnitUpgrades() > 1:
-						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade #"+str(u+1)+"/"+str(CvUnitInfo.getNumUnitUpgrades())+": "+str(upgradedTechLoc)+" - "+upgradedDesc+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)
-					
-			
+						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade #"+str(u+1)+"/"+str(CvUnitInfo.getNumUnitUpgrades())+": "+str(upgradedTechLoc)+" - "+upgradedDesc+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)+" Upgrade of upgrade"+str(secondUpgradeList)
+						
 			if CvBonusInfo:
 				iBonusClassType = CvBonusInfo.getBonusClassType()
 			else:
