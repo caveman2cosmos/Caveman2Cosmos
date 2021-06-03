@@ -793,7 +793,7 @@ class Pedia:
 			iCost = CvUnitInfo.getProductionCost()
 			if CvUnitInfo.getNumUnitUpgrades() > 0:
 				for u in xrange(CvUnitInfo.getNumUnitUpgrades()):
-					upgradedDesc = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getDescription()
+					upgradedDesc = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getType()
 					upgradedCost = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getProductionCost()
 					upgradedTech = GC.getTechInfo(GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getPrereqAndTech())
 					try:
@@ -806,11 +806,11 @@ class Pedia:
 					upgradedUnit = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u))
 					secondUpgradeList = []
 					for u2 in xrange(upgradedUnit.getNumUnitUpgrades()):
-						secondUpgradeList.append(GC.getUnitInfo(upgradedUnit.getUnitUpgrade(u2)).getDescription())					
+						secondUpgradeList.append(GC.getUnitInfo(upgradedUnit.getUnitUpgrade(u2)).getType())					
 					if CvUnitInfo.getNumUnitUpgrades() == 1:
-						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade: "+str(upgradedTechLoc)+" - "+upgradedDesc+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)
+						print str(iTechLoc)+" - "+str(CvUnitInfo.getType())+"; Upgrade: "+str(upgradedTechLoc)+" - "+str(upgradedDesc)+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)
 					elif CvUnitInfo.getNumUnitUpgrades() > 1:
-						print str(iTechLoc)+" - "+CvUnitInfo.getDescription()+"; Upgrade #"+str(u+1)+"/"+str(CvUnitInfo.getNumUnitUpgrades())+": "+str(upgradedTechLoc)+" - "+upgradedDesc+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)+" Upgrade of upgrade"+str(secondUpgradeList)
+						print str(iTechLoc)+" - "+str(CvUnitInfo.getType())+"; Upgrade #"+str(u+1)+"/"+str(CvUnitInfo.getNumUnitUpgrades())+": "+str(upgradedTechLoc)+" - "+str(upgradedDesc)+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)+" Upgrade of upgrade"+str(secondUpgradeList)
 						
 			if CvBonusInfo:
 				iBonusClassType = CvBonusInfo.getBonusClassType()
