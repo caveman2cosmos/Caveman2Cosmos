@@ -12398,7 +12398,7 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 	{
 		iPrice = applySMRank(iPrice, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 	}
-	return iPrice;
+	return std::max(1, iPrice);
 }
 
 
