@@ -5352,13 +5352,16 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeExtraCityDefenseRecoverySpeedModifier(kBuilding.getCityDefenseRecoverySpeedModifier() * iChange);
 	}
 
-	// TODO reform loop to iterate on the mappings
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessTypes())
 	{
-		const TechTypes eTechX = static_cast<TechTypes>(iI);
-		changeTechHappiness(eTechX, kBuilding.getTechHappiness(eTechX) * iChange);
-		changeTechHealth(eTechX, kBuilding.getTechHealthType(eTechX) * iChange);
+		changeTechHappiness(modifier.first, modifier.second * iChange);
 	}
+
+	foreach_(const TechModifier& modifier, kBuilding.getTechHealthTypes())
+	{
+		changeTechHealth(modifier.first, modifier.second * iChange);
+	}
+
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		const SpecialistTypes eSpecialistX = static_cast<SpecialistTypes>(iI);

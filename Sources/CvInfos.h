@@ -282,7 +282,7 @@ public:
 	const IDValueMap<TechTypes, int>& getTechHappinessTypes() const { return m_aTechHappinessTypes; }
 
 	//int getNumTechHealthTypes() const;
-	int getTechHealthType(TechTypes eTech) const;
+	int getTechHealth(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHealthTypes() const { return m_aTechHealthTypes; }
 
 	int getNumUnitCombatExperienceTypes() const;

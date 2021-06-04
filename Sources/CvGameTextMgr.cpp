@@ -12406,11 +12406,10 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			//szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_INVESTIGATION", GC.getSpecialistInfo(eSpecialist).getInvestigation()));
 		}
 
-		int iSpecialistHealth = 0;
 		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
 			const TechTypes eTech = ((TechTypes)iI);
-			iSpecialistHealth = GC.getSpecialistInfo(eSpecialist).getTechHealthTypes().getValue(eTech);
+			int iSpecialistHealth = GC.getSpecialistInfo(eSpecialist).getTechHealth(eTech);
 			if (GC.getGame().getActivePlayer() == NO_PLAYER && pCity != NULL)
 			{
 				iSpecialistHealth += pCity->getTechSpecialistHealth(eTech);
@@ -12632,8 +12631,7 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 			for (iI = 0; iI < GC.getNumTechInfos(); iI++)
 			{
 				const TechTypes eTech = ((TechTypes)iI);
-				int iSpecialistHealth = GC.getSpecialistInfo(eSpecialist).getTechHealthTypes().getValue(eTech);
-
+				int iSpecialistHealth = GC.getSpecialistInfo(eSpecialist).getTechHealth(eTech);
 				if (GC.getGame().getActivePlayer() == NO_PLAYER && GET_PLAYER(kCity.getOwner()).getID() != NO_PLAYER)
 				{
 					iSpecialistHealth += kCity.getTechSpecialistHealth(eTech);
@@ -27147,7 +27145,7 @@ void CvGameTextMgr::buildSpecialistHealthString(CvWStringBuffer &szBuffer, TechT
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo((SpecialistTypes)iI);
-		const int iSpecialistHealth = kSpecialist.getTechHealthTypes().getValue(eTech);
+		const int iSpecialistHealth = kSpecialist.getTechHealth(eTech);
 
 		if (iSpecialistHealth > 0)
 		{
@@ -27185,15 +27183,15 @@ void CvGameTextMgr::buildSpecialistHappinessString(CvWStringBuffer &szBuffer, Te
 {
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		const SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
-		const int iSpecialistHappiness = GC.getSpecialistInfo(eSpecialist).getTechHappiness(eTech);
+		const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo((SpecialistTypes)iI);
+		const int iSpecialistHappiness = kSpecialist.getTechHappiness(eTech);
 		if (iSpecialistHappiness > 0)
 		{
 			if (bList)
 			{
 				szBuffer.append(NEWLINE);
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HAPPINESS_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR)));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HAPPINESS_TYPE", kSpecialist.getTextKeyWide(), iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR)));
 		}
 		else if (iSpecialistHappiness < 0)
 		{
@@ -27201,7 +27199,7 @@ void CvGameTextMgr::buildSpecialistHappinessString(CvWStringBuffer &szBuffer, Te
 			{
 				szBuffer.append(NEWLINE);
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HAPPINESS_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR)));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HAPPINESS_TYPE", kSpecialist.getTextKeyWide(), -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR)));
 		}
 	}
 }

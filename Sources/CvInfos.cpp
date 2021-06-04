@@ -846,11 +846,11 @@ int CvSpecialistInfo::getTechHappiness(TechTypes eTech) const
 //	return (int)m_aTechHealthTypes.size();
 //}
 
-//int CvSpecialistInfo::getTechHealthType(TechTypes eTech) const
-//{
-//	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
-//	return m_aTechHealthTypes.getValue(eTech);
-//}
+int CvSpecialistInfo::getTechHealth(TechTypes eTech) const
+{
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	return m_aTechHealthTypes.getValue(eTech);
+}
 
 int CvSpecialistInfo::getNumUnitCombatExperienceTypes() const
 {
