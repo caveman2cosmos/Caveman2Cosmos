@@ -18579,7 +18579,6 @@ CvWorldInfo::CvWorldInfo() :
 ,m_iAdvancedStartPointsMod(0)
 ,m_iCommandersLevelThresholdsPercent(0)
 ,m_iOceanMinAreaSize(0)
-, m_Percent()
 { }
 
 //------------------------------------------------------------------------------------------------------
