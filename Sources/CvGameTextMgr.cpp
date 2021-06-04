@@ -21064,7 +21064,7 @@ void CvGameTextMgr::setBuildingActualEffects(CvWStringBuffer &szBuffer, CvWStrin
 }
 
 
-void buildingHelpTechModifiers(/*in out*/ CvWStringBuffer& szBuffer, const IDValueMap<TechTypes, int, 0>& modifierArray, const PlayerTypes ePlayer, const TeamTypes eTeam, const char* const textKeyKnown, const char* const textKeyUnknown, const int symbolCharPositive, const int symbolCharNegative)
+void buildingHelpTechModifiers(/*in out*/ CvWStringBuffer& szBuffer, const IDValueMap<TechTypes, int>& modifierArray, const PlayerTypes ePlayer, const TeamTypes eTeam, const char* const textKeyKnown, const char* const textKeyUnknown, const int symbolCharPositive, const int symbolCharNegative)
 {
 	// tepid argument for using iterator instead of indexing: https://stackoverflow.com/a/776629/6402065
 	// TODO: test that on this compiler

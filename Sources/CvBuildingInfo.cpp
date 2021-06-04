@@ -1684,20 +1684,20 @@ int CvBuildingInfo::getTechOutbreakLevelChange(int iTech) const
 	return 0;
 }
 
-int CvBuildingInfo::getNumTechHappinessTypes() const
-{
-	return m_aTechHappinessTypes.size();
-}
+//int CvBuildingInfo::getNumTechHappinessTypes() const
+//{
+//	return (int)m_aTechHappinessTypes.size();
+//}
 
 int CvBuildingInfo::getTechHappinessType(TechTypes eTech) const
 {
 	return m_aTechHappinessTypes.getValue(eTech);
 }
 
-int CvBuildingInfo::getNumTechHealthTypes() const
-{
-	return m_aTechHealthTypes.size();
-}
+//int CvBuildingInfo::getNumTechHealthTypes() const
+//{
+//	return m_aTechHealthTypes.size();
+//}
 
 int CvBuildingInfo::getTechHealthType(TechTypes eTech) const
 {
@@ -3846,8 +3846,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalPairVector<TechModifierArray, TechTypes, int>(&m_aTechOutbreakLevelChanges, L"TechOutbreakLevelChanges");
 
-	m_aTechHappinessTypes.readWithDelayedResolution(pXML, L"TechHappinessTypes");
-	m_aTechHealthTypes.readWithDelayedResolution(pXML, L"TechHealthTypes");
+	m_aTechHappinessTypes.read(pXML, L"TechHappinessTypes");
+	m_aTechHealthTypes.read(pXML, L"TechHealthTypes");
 
 	//Arrays
 	pXML->SetVariableListTagPair(&m_pabHurry, L"Hurrys", GC.getNumHurryInfos());
@@ -5242,8 +5242,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	m_aTechHappinessTypes.copyNonDefaultDelayedResolution(pClassInfo->getTechHealthTypes());
-	m_aTechHealthTypes.copyNonDefaultDelayedResolution(pClassInfo->getTechHealthTypes());
+	m_aTechHappinessTypes.copyNonDefaults(pClassInfo->getTechHealthTypes());
+	m_aTechHealthTypes.copyNonDefaults(pClassInfo->getTechHealthTypes());
 
 	//Arrays
 	for ( int i = 0; i < GC.getNumHurryInfos(); i++ )

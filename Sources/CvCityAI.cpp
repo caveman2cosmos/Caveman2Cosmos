@@ -14742,7 +14742,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	{
 		foreach_(const TechModifier& pair, kBuilding.getTechHappinessTypes())
 		{
-			if (GET_TEAM(getTeam()).isHasTech(pair.first))
+			if (GET_TEAM(getTeam()).isHasTech(pair.first) && pair.second > 0)
 			{
 				return true;
 			}

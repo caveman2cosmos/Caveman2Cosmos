@@ -20,19 +20,6 @@
 template <class ID_, class Value_, Value_ defaultValue = static_cast<Value_>(0)>
 struct IDValueMap
 {
-/*
-	template <class ID_, class Value_>
-	struct pair2
-	{
-		pair(ID_ otherID, Value_ otherValue)
-			: type(otherID)
-			, value(otherValue)
-		{}
-
-		const ID_ type;
-		const Value_ value;
-	};
-*/
 	typedef std::pair<ID_, Value_> pair_t;
 
 	void read(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName)
@@ -67,15 +54,16 @@ struct IDValueMap
 		{
 			m_map.clear();
 			const int iNumSibs = pXML->GetXmlChildrenNumber();
-			m_map.resize(iNumSibs);
 
 			if (iNumSibs > 0)
 			{
+				m_map.resize(iNumSibs);
+
 				if (pXML->TryMoveToXmlFirstChild())
 				{
-					CvString szTextVal;
 					foreach_(pair_t& pair, m_map)
 					{
+						CvString szTextVal;
 						if (pXML->GetChildXmlVal(szTextVal))
 						{
 							Value_ modifier = defaultValue;
@@ -111,12 +99,12 @@ struct IDValueMap
 	{
 		if (m_map.empty())
 		{
-			const std::vector<std::pair<ID_, Value_> >& otherVector = other.m_map;
+			const std::vector<pair_t>& otherVector = other.m_map;
 			const int num = otherVector.size();
 			m_map.resize(num);
 			for (int i = 0; i < num; i++)
 			{
-				m_map[i] = std::make_pair(static_cast<ID_>(-1), otherVector[i].second);
+				m_map[i] = std::make_pair((ID_)-1, otherVector[i].second);
 				GC.copyNonDefaultDelayedResolution((int*)&m_map[i].first, (int*)&otherVector[i].first);
 			}
 		}
@@ -126,15 +114,6 @@ struct IDValueMap
 	{
 		foreach_(const pair_t& pair, m_map)
 			GC.removeDelayedResolution((int*)&pair.first);
-	}
-
-	void getCheckSum(uint32_t& iSum) const
-	{
-		foreach_(const pair_t& pair, m_map)
-		{
-			CheckSum(iSum, pair.first);
-			CheckSum(iSum, pair.second);
-		}
 	}
 
 	Value_ getValue(ID_ id) const
@@ -152,19 +131,6 @@ struct IDValueMap
 				return true;
 		return false;
 	}
-
-	int size() const
-	{
-		return (int)m_map.size();
-	}
-
-	//const pair_t& operator[](int i) const
-	//{
-	//	FASSERT_BOUNDS(0, size(), i)
-	//	return m_map[i];
-	//}
-
-	//operator std::vector<pair_t>() const { return m_map; }
 
 	typedef typename std::vector<pair_t>::iterator        iterator;
 	typedef typename std::vector<pair_t>::const_iterator  const_iterator;

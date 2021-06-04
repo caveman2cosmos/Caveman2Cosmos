@@ -277,13 +277,13 @@ public:
 	int getInsidiousness() const;
 	int getInvestigation() const;
 
-	int getNumTechHappinessTypes() const;
+	//int getNumTechHappinessTypes() const;
 	int getTechHappinessType(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHappinessTypes() const { return m_aTechHappinessTypes; }
 
 	//int getNumTechHealthTypes() const;
 	int getTechHealthType(TechTypes eTech) const;
-	const IDValueMap<TechTypes, int, 0>& getTechHealthTypes() const { return m_aTechHealthTypes; }
+	const IDValueMap<TechTypes, int>& getTechHealthTypes() const { return m_aTechHealthTypes; }
 
 	int getNumUnitCombatExperienceTypes() const;
 	const UnitCombatModifier& getUnitCombatExperienceType(int iUnitCombat) const;
@@ -326,8 +326,8 @@ protected:
 	//Team Project (1)
 	//TB Specialist Tags
 	// int vector utilizing struct with delayed resolution
-	IDValueMap<TechTypes, int, 0> m_aTechHappinessTypes;
-	IDValueMap<TechTypes, int, 0> m_aTechHealthTypes;
+	IDValueMap<TechTypes, int> m_aTechHappinessTypes;
+	IDValueMap<TechTypes, int> m_aTechHealthTypes;
 	std::vector<UnitCombatModifier> m_aUnitCombatExperienceTypes;
 	std::vector<UnitCombatModifier> m_aUnitCombatExperienceTypesNull;
 

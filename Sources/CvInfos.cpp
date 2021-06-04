@@ -830,15 +830,14 @@ int CvSpecialistInfo::getInvestigation() const
 	return m_iInvestigation;
 }
 
-// int vector utilizing struct with delayed resolution
-int CvSpecialistInfo::getNumTechHappinessTypes() const
-{
-	return (int)m_aTechHappinessTypes.size();
-}
+//int CvSpecialistInfo::getNumTechHappinessTypes() const
+//{
+//	return (int)m_aTechHappinessTypes.size();
+//}
 
 int CvSpecialistInfo::getTechHappinessType(TechTypes eTech) const
 {
-	FASSERT_BOUNDS(0, getNumTechHappinessTypes(), eTech)
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
 	return m_aTechHappinessTypes.getValue(eTech);
 }
 

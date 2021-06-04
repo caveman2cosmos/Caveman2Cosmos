@@ -11,6 +11,8 @@
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+#include "IDValuemap.h"
+
 class BoolExpr;
 class CvArtInfoBuilding;
 class CvArtInfoMovie;
@@ -471,13 +473,13 @@ public:
 	int getNumTechOutbreakLevelChanges() const;
 	int getTechOutbreakLevelChange(int iTech) const;
 
-	int getNumTechHappinessTypes() const;
+	//int getNumTechHappinessTypes() const;
 	int getTechHappinessType(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHappinessTypes() const { return m_aTechHappinessTypes; }
 
-	int getNumTechHealthTypes() const;
+	//int getNumTechHealthTypes() const;
 	int getTechHealthType(TechTypes eTech) const;
-	const IDValueMap<TechTypes, int, 0>& getTechHealthTypes() const { return m_aTechHealthTypes; }
+	const IDValueMap<TechTypes, int>& getTechHealthTypes() const { return m_aTechHealthTypes; }
 
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
@@ -879,7 +881,7 @@ protected:
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
 	IDValueMap<TechTypes, int> m_aTechHappinessTypes;
-	IDValueMap<TechTypes, int, 0> m_aTechHealthTypes;
+	IDValueMap<TechTypes, int> m_aTechHealthTypes;
 
 	int** m_ppaiLocalSpecialistYieldChange;
 	int** m_ppaiLocalSpecialistCommerceChange;
