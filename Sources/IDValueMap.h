@@ -24,7 +24,28 @@ struct IDValueMap
 
 	void read(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName)
 	{
-		pXML->SetOptionalPairVector<std::vector<pair_t>, ID_, Value_>(&m_map, szRootTagName);
+		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
+		{
+			m_map.clear();
+			if (pXML->TryMoveToXmlFirstChild())
+			{
+				do
+				{
+					if (pXML->TryMoveToXmlFirstChild())
+					{
+						CvString szTextVal;
+						pXML->GetXmlVal(szTextVal);
+						const ID_ type = (ID_)GC.getOrCreateInfoTypeForString(szTextVal);
+						Value_ value = defaultValue;
+						pXML->GetNextXmlVal(&value);
+						m_map.push_back(std::make_pair(type, value));
+						pXML->MoveToXmlParent();
+					}
+				} while (pXML->TryMoveToXmlNextSibling());
+				pXML->MoveToXmlParent();
+			}
+			pXML->MoveToXmlParent();
+		}
 	}
 
 	void readWithDelayedResolution(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName)
