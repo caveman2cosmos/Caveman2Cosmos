@@ -474,7 +474,7 @@ public:
 	int getTechOutbreakLevelChange(int iTech) const;
 
 	//int getNumTechHappinessTypes() const;
-	int getTechHappinessType(TechTypes eTech) const;
+	int getTechHappiness(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHappinessTypes() const { return m_aTechHappinessTypes; }
 
 	//int getNumTechHealthTypes() const;

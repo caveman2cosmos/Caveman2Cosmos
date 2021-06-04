@@ -149,7 +149,7 @@ bool BuildingFilterIsUnhappiness::isFilteredBuilding(const CvPlayer *pPlayer, Cv
 	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
 	foreach_(const TechModifier& pair, buildingInfo.getTechHappinessTypes())
 	{
-		if (pair.first < 0)
+		if (pair.second < 0)
 			return true;
 	}
 	return buildingInfo.getHappiness() < 0

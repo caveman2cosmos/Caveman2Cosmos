@@ -5356,7 +5356,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		const TechTypes eTechX = static_cast<TechTypes>(iI);
-		changeTechHappiness(eTechX, kBuilding.getTechHappinessType(eTechX) * iChange);
+		changeTechHappiness(eTechX, kBuilding.getTechHappiness(eTechX) * iChange);
 		changeTechHealth(eTechX, kBuilding.getTechHealthType(eTechX) * iChange);
 	}
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
@@ -24052,7 +24052,7 @@ void CvCity::updateExtraTechSpecialistHappiness()
 			if (GET_TEAM(getTeam()).isHasTech(eTech))
 			{
 				iRunningTotal += iSpecificSpecialistCount * getTechSpecialistHappinessTypes(eTech, eSpecialist);
-				iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHappinessTypes().getValue(eTech);
+				iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHappiness(eTech);
 			}
 		}
 	}

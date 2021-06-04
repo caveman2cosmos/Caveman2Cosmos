@@ -1689,7 +1689,7 @@ int CvBuildingInfo::getTechOutbreakLevelChange(int iTech) const
 //	return (int)m_aTechHappinessTypes.size();
 //}
 
-int CvBuildingInfo::getTechHappinessType(TechTypes eTech) const
+int CvBuildingInfo::getTechHappiness(TechTypes eTech) const
 {
 	return m_aTechHappinessTypes.getValue(eTech);
 }

@@ -835,7 +835,7 @@ int CvSpecialistInfo::getInvestigation() const
 //	return (int)m_aTechHappinessTypes.size();
 //}
 
-int CvSpecialistInfo::getTechHappinessType(TechTypes eTech) const
+int CvSpecialistInfo::getTechHappiness(TechTypes eTech) const
 {
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
 	return m_aTechHappinessTypes.getValue(eTech);
