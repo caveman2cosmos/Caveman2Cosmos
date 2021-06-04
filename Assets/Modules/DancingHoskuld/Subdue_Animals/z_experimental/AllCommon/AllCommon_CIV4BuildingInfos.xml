@@ -349,13 +349,11 @@
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_TARANTULA_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BUG_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TARANTULA_MYTH_EFFECT</BuildingType>
-			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUG_MYTH_EFFECT</Type>

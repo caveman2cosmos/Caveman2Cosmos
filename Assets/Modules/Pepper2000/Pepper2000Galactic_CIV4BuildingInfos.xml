@@ -2203,9 +2203,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINI_NEPTUNE</Type>
@@ -2234,9 +2234,9 @@
 				<iYield>8</iYield>
 				<iYield>30</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPER_JUPITER</Type>
@@ -2265,9 +2265,9 @@
 				<iYield>10</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPER_EARTH</Type>
@@ -2295,9 +2295,9 @@
 			<YieldChanges>
 				<iYield>15</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OCEAN_PLANET</Type>
@@ -2326,9 +2326,9 @@
 				<iYield>5</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESERT_PLANET</Type>
@@ -2357,9 +2357,9 @@
 				<iYield>3</iYield>
 				<iYield>40</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARBON_PLANET_BASE</Type>
@@ -2388,9 +2388,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHTHONIAN_PLANET_BASE</Type>
@@ -2415,9 +2415,9 @@
 				<iYield>5</iYield>
 				<iYield>250</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENDED_STAR_SYSTEM</Type>
@@ -2567,9 +2567,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_WARP_DRIVES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
