@@ -24208,7 +24208,7 @@ void CvCity::updateExtraTechSpecialistHealth()
 			if (GET_TEAM(getTeam()).isHasTech(eTech))
 			{
 				iRunningTotal += iSpecificSpecialistCount * getTechSpecialistHealthTypes(eTech, eSpecialist);
-				iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHealthTypes().getValue(eTech);
+				iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHealth(eTech);
 			}
 		}
 	}
