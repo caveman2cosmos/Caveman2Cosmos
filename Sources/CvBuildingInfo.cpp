@@ -2441,7 +2441,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_iPrereqAndBonus = pXML->GetInfoClass(szTextVal);
 
 	//Alberts2 PrereqBonuses
-	pXML->SetOptionalIntVector(&m_aePrereqOrBonuses, L"PrereqBonuses");
+	pXML->SetOptionalVector(&m_aePrereqOrBonuses, L"PrereqBonuses");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"NoBonus");
 	m_iNoBonus = pXML->GetInfoClass(szTextVal);
@@ -5301,7 +5301,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	//Alberts2 PrereqBonuses
 	if (!pClassInfo->m_aePrereqOrBonuses.empty())
 	{
-		CvXMLLoadUtility::CopyNonDefaultsFromIntVector(m_aePrereqOrBonuses, pClassInfo->m_aePrereqOrBonuses);
+		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrBonuses, pClassInfo->m_aePrereqOrBonuses);
 	}
 
 	if (getMaxGlobalInstances() == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
