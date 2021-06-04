@@ -304,7 +304,7 @@ public:
 
 	int getUnitProductionModifier(int i) const;
 	int getPrereqOrVicinityBonuses(int i) const;
-	const std::vector<BonusTypes> getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
+	const std::vector<BonusTypes>& getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
 
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
@@ -472,12 +472,12 @@ public:
 	int getTechOutbreakLevelChange(int iTech) const;
 
 	int getNumTechHappinessTypes() const;
-	int getTechHappinessType(int iTech) const;
-	const TechModifierArray& getTechHappinessTypeArray() const { return m_aTechHappinessTypes; }
+	int getTechHappinessType(TechTypes eTech) const;
+	const IDValueMap<TechTypes, int>& getTechHappinessTypes() const { return m_aTechHappinessTypes; }
 
 	int getNumTechHealthTypes() const;
-	int getTechHealthType(int iTech) const;
-	const TechModifierArray& getTechHealthTypeArray() const { return m_aTechHealthTypes; }
+	int getTechHealthType(TechTypes eTech) const;
+	const IDValueMap<TechTypes, int, 0>& getTechHealthTypes() const { return m_aTechHealthTypes; }
 
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
@@ -878,8 +878,8 @@ protected:
 	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
-	TechModifierArray m_aTechHappinessTypes;
-	TechModifierArray m_aTechHealthTypes;
+	IDValueMap<TechTypes, int> m_aTechHappinessTypes;
+	IDValueMap<TechTypes, int, 0> m_aTechHealthTypes;
 
 	int** m_ppaiLocalSpecialistYieldChange;
 	int** m_ppaiLocalSpecialistCommerceChange;
