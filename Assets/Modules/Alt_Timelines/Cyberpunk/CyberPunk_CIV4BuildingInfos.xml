@@ -196,9 +196,9 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CYBER_INSECT_LAB</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>

@@ -10201,10 +10201,8 @@
 			</PrereqNotInCityBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PLATYPUS_MYTH_EFFECT</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MONOTREMES_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15122,9 +15120,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -26945,10 +26943,8 @@
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CAPUCHIN_MYTH_EFFECT</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_NEW_W_MONKEY_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
