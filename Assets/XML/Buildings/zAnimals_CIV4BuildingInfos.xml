@@ -13699,7 +13699,7 @@
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
-			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
+			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<Bonus>BONUS_DOG</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
