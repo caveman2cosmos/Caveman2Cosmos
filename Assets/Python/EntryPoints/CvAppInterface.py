@@ -59,8 +59,6 @@ def preGameStart():
 	CvScreensInterface.showMainInterface()
 
 def recalculateModifiers():
-	import BugGameUtils
-	BugGameUtils.getDispatcher().getBaseUtils().reset()
 	import CvRandomEventInterface
 	CvRandomEventInterface.recalculateModifiers()
 

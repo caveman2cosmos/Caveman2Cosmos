@@ -5691,7 +5691,6 @@ void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 			changeUnitCombatFreeExperience(GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).eUnitCombat, GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).iModifier * iChange);
 		}
 	}
-
 }
 
 
@@ -19304,11 +19303,11 @@ PlayerTypes CvCity::getLiberationPlayer(bool bConquest) const
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
-		CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
+		const CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
 
 		if (playerX.isAlive())
 		{
-			CvCity* pCapital = playerX.getCapitalCity();
+			const CvCity* pCapital = playerX.getCapitalCity();
 			if (NULL != pCapital)
 			{
 				int iCapitalDistance = ::plotDistance(getX(), getY(), pCapital->getX(), pCapital->getY());
@@ -19902,7 +19901,7 @@ void CvCity::changeSpecialistGoodHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iSpecialistGoodHealth += iChange;
-		FAssert(getSpecialistGoodHealth() >= 0);
+		FASSERT_NOT_NEGATIVE(getSpecialistGoodHealth());
 
 		AI_setAssignWorkDirty(true);
 
@@ -19934,7 +19933,7 @@ void CvCity::changeSpecialistHappiness(int iChange)
 	if (iChange != 0)
 	{
 		m_iSpecialistHappiness += iChange;
-		FAssert(getSpecialistHappiness() >= 0);
+		FASSERT_NOT_NEGATIVE(getSpecialistHappiness());
 
 		AI_setAssignWorkDirty(true);
 
@@ -22672,7 +22671,7 @@ void CvCity::recalculateModifiers()
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		int	iSpecialistCount = getSpecialistCount((SpecialistTypes)iI);
+		const int iSpecialistCount = getSpecialistCount((SpecialistTypes)iI);
 
 		if (iSpecialistCount > 0)
 		{
