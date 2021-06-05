@@ -1480,7 +1480,6 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		for (size_t projectIdx = 0; projectIdx < projects.size(); projectIdx++)
 		{
 			const ProjectBuildItem& projectBuildItem = projects[projectIdx];
-			const CvProjectInfo& unitInfo = GC.getProjectInfo(projectBuildItem.type);
 
 			// Retrieve the Index
 			if (projectBuildItem.type != eProductionProject && pCity->canCreate((ProjectTypes)projectBuildItem.type))
