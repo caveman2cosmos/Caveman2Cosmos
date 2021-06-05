@@ -134,7 +134,7 @@ public:
 	}
 	
 	// This adds a replacement or updates an existing one
-	void addReplacement(uint uiID, uint uiReplID, BoolExpr* pCondition, T* pInfo, bool bPassTwo = false)
+	void addReplacement(uint uiID, uint uiReplID, BoolExpr* pCondition, T* pInfo/*, bool bPassTwo = false*/)
 	{
 //		CvInfoReplacement<T>* pExisting = getReplacement(iID, iReplID);
 //		if (pExisting)
