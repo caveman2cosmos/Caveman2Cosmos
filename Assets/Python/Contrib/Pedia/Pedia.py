@@ -790,8 +790,31 @@ class Pedia:
 				iTechLoc = 0
 				iTechRow = 0
 				
+			iUnitBonusReq = CvUnitInfo.getPrereqAndBonus()			
+			if GC.getBonusInfo(iUnitBonusReq) != None:
+				bonusTechReq = GC.getBonusInfo(iUnitBonusReq).getTechCityTrade()
+				if GC.getTechInfo(bonusTechReq) != None:
+					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+				else:
+					bonusTechLoc = 0
+				if bonusTechLoc > iTechLoc:
+					print CvUnitInfo.getType()+" - Singular AND bonus prereq late!"
+					
+			bonusTechLocList = []
+			for bonusOr in xrange(25):
+				if CvUnitInfo.getPrereqOrBonuses(bonusOr) != -1:
+					bonusTechReq = GC.getBonusInfo(CvUnitInfo.getPrereqOrBonuses(bonusOr)).getTechCityTrade()
+					if GC.getTechInfo(bonusTechReq) != None:
+						bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+						bonusTechLocList.append(bonusTechLoc)
+					else:
+						bonusTechLoc = 0
+						bonusTechLocList.append(bonusTechLoc)
+			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
+				print CvUnitInfo.getType()+" - Earliest OR bonus prereq late!"
+				
 			iCost = CvUnitInfo.getProductionCost()
-			if CvUnitInfo.getNumUnitUpgrades() > 0:
+			if 0: #CvUnitInfo.getNumUnitUpgrades() > 0:
 				for u in xrange(CvUnitInfo.getNumUnitUpgrades()):
 					upgradedDesc = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getType()
 					upgradedCost = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getProductionCost()
