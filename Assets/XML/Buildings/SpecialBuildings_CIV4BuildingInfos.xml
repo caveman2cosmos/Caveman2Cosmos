@@ -7243,7 +7243,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DISEASE_SWINEFLU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
-			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<Bonus>BONUS_PIG</Bonus>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-3</iHealth>
@@ -7400,6 +7400,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EFFECT_NATIONAL_ACADEMY_DATABASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EFFECT_NATIONAL_ACADEMY_DATABASE_PEDIA</Civilopedia>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<iHealth>3</iHealth>
 			<iHappiness>3</iHappiness>
@@ -8005,6 +8006,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MERCANTILISMGOLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MERCANTILISMGOLD_PEDIA</Civilopedia>
+			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_GOLD_ORE</Bonus>
 			</PrereqBonuses>
@@ -8031,6 +8033,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MERCANTILISMSILVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MERCANTILISMSILVER_PEDIA</Civilopedia>
+			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_SILVER_ORE</Bonus>
 			</PrereqBonuses>
