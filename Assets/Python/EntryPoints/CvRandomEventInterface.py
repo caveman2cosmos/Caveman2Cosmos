@@ -24,7 +24,7 @@ def recalculateModifiers():
 	for i in range(GC.getMAX_PLAYERS()):
 		pInterstateEventTriggerData = GC.getPlayer(i).getEventOccured(eInterstateEvent)
 		if pInterstateEventTriggerData is not None:
-			applyInterstate(eInterstateEvent, pInterstateEventTriggerData)
+			applyInterstate((eInterstateEvent, pInterstateEventTriggerData))
 			
 
 ######## BLESSED SEA ###########
