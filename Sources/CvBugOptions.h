@@ -21,10 +21,7 @@ Calls out to the CvAppInterface Python module to check user options.
 // Text prepended to option name if no XML key given
 #define OPTION_XML_PREFIX "BULL__"
 
-void logMsg(const char* format, ...);
-
-bool isBug();
-void setIsBug(bool bIsBug);
+void setIsBug();
 
 bool getDefineBOOL(const char* xmlKey, bool bDefault = false);
 int getDefineINT(const char* xmlKey, int iDefault = 0);

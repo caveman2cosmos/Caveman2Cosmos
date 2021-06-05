@@ -1,13 +1,12 @@
 <?xml version="1.0"?>
-	<!-- Modified by Strategyonly -->
-	<!-- ###################################################################################### -->
+<!-- Modified by Strategyonly -->
+<!-- ###################################################################################### -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_BIRD_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_BIRD_DANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIRD_DANCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIRD_DANCE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -32,18 +31,9 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DANCE_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DANCE_HALL</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -64,7 +54,6 @@
 			<Type>BUILDING_FOX_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_FOX_DANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FOX_DANCE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -89,18 +78,9 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DANCE_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DANCE_HALL</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>

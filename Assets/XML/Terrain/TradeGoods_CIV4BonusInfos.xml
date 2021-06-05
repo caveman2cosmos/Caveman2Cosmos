@@ -9,13 +9,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_CARVED_EMU_EGGS</ArtDefineTag>
 			<TechReveal>TECH_PICTOGRAPHS</TechReveal>
 			<TechCityTrade>TECH_PICTOGRAPHS</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CRYSTAL_GLASSWARE</Type>
@@ -47,13 +42,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_FINE_STONEWARE</ArtDefineTag>
 			<TechReveal>TECH_BARTER</TechReveal>
 			<TechCityTrade>TECH_BARTER</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HAWAIIAN_SURFBOARDS</Type>
@@ -63,13 +53,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_HAWAIIAN_SURFBOARDS</ArtDefineTag>
 			<TechReveal>TECH_MARTIAL_ARTS</TechReveal>
 			<TechCityTrade>TECH_MARTIAL_ARTS</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HIT_MOVIES</Type>
@@ -79,13 +64,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_HIT_MOVIES</ArtDefineTag>
 			<TechReveal>TECH_MOTION_PICTURES</TechReveal>
 			<TechCityTrade>TECH_MOTION_PICTURES</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HIT_MUSICALS</Type>
@@ -95,13 +75,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_HIT_MUSICALS</ArtDefineTag>
 			<TechReveal>TECH_INCANDESCENT_LIGHTING</TechReveal>
 			<TechCityTrade>TECH_INCANDESCENT_LIGHTING</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HIT_SINGLES</Type>
@@ -111,13 +86,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_HIT_SINGLES</ArtDefineTag>
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JADE_DEATH_MASKS</Type>
@@ -127,13 +97,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_JADE_DEATH_MASKS</ArtDefineTag>
 			<TechReveal>TECH_PERSONAL_ADORNMENTS</TechReveal>
 			<TechCityTrade>TECH_PERSONAL_ADORNMENTS</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LIANGZHU_JADES</Type>
@@ -176,13 +141,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_OSTRICH_FEATHERS</ArtDefineTag>
 			<TechReveal>TECH_POULTRY_DOMESTICATION</TechReveal>
 			<TechCityTrade>TECH_POULTRY_DOMESTICATION</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_OSTRICH_LEATHER</Type>
@@ -192,13 +152,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_OSTRICH_LEATHER</ArtDefineTag>
 			<TechReveal>TECH_POULTRY_DOMESTICATION</TechReveal>
 			<TechCityTrade>TECH_POULTRY_DOMESTICATION</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_RED_AND_BLACK_CERAMICS</Type>
@@ -208,13 +163,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_RED_AND_BLACK_CERAMICS</ArtDefineTag>
 			<TechReveal>TECH_GLASS_BLOWING</TechReveal>
 			<TechCityTrade>TECH_GLASS_BLOWING</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
 			<iHealth>1</iHealth>
-			<iHappiness>0</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SHANG_JADE_RITUAL_ITEMS</Type>
@@ -246,13 +196,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_WINE_CHAMPAGNE</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WINE_VINTAGE_RED</Type>
@@ -262,13 +207,9 @@
 			<ArtDefineTag>ART_DEF_BONUS_WINE_VINTAGE_RED</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WINE_VINTAGE_WHITE</Type>
@@ -278,13 +219,8 @@
 			<ArtDefineTag>ART_DEF_BONUS_WINE_VINTAGE_WHITE</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 	</BonusInfos>
 </Civ4BonusInfos>

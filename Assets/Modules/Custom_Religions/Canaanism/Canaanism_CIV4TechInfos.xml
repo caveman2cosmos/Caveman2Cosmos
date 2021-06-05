@@ -5,11 +5,9 @@
 			<Type>TECH_CANAANISM</Type>
 			<Description>TXT_KEY_TECH_CANAANISM</Description>
 			<Civilopedia>TXT_KEY_TECH_CANAANISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_CANAANISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>309</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iGridX>30</iGridX>
@@ -29,7 +27,7 @@
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+				<PrereqTech>TECH_MAGIC</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_CANAANISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_CANAANISM</Sound>

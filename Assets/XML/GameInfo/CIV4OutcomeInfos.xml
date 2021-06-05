@@ -617,23 +617,6 @@
 			<bCity>1</bCity>
 		</OutcomeInfo>
 		<OutcomeInfo>
-			<Type>OUTCOME_SET_CAPTIVE_FREE</Type>
-			<Description>TXT_KEY_OUTCOME_SET_CAPTIVE_FREE</Description>
-			<Message>TXT_KEY_OUTCOME_SET_CAPTIVE_FREE_MESSAGE</Message>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>1</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_SLAVE_SALE_NOT_SLAVERY</Type>
-			<Description>TXT_KEY_OUTCOME_SELL_CAPTIVE_NOT_SLAVERY</Description>
-			<Message>TXT_KEY_OUTCOME_SELL_CAPTIVE_MESSAGE</Message>
-			<PrereqTech>TECH_TRADE</PrereqTech>
-			<bNeutralTerritory>0</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>1</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
 			<Type>OUTCOME_HURRY_PRODUCTION</Type>
 			<Description>TXT_KEY_OUTCOME_HURRY_PRODUCTION</Description>
 			<Message>TXT_KEY_OUTCOME_HURRY_PRODUCTION_MESSAGE</Message>

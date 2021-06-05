@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
@@ -10,7 +9,6 @@
 			<Type>BUILDING_BURIAL_GOODS_CAVE</Type>
 			<Description>TXT_KEY_BUILDING_BURIAL_GOODS_CAVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BURIAL_GOODS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BURIAL_GOODS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BURIAL_GOODS_CAVE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -29,7 +27,6 @@
 			<Type>BUILDING_BURIAL_GOODS_EARTH</Type>
 			<Description>TXT_KEY_BUILDING_BURIAL_GOODS_EARTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BURIAL_GOODS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BURIAL_GOODS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BURIAL_GOODS_EARTH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -48,7 +45,6 @@
 			<Type>BUILDING_BURIAL_GOODS_FIRE</Type>
 			<Description>TXT_KEY_BUILDING_BURIAL_GOODS_FIRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BURIAL_GOODS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BURIAL_GOODS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BURIAL_GOODS_FIRE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -67,7 +63,6 @@
 			<Type>BUILDING_BURIAL_GOODS_SKY</Type>
 			<Description>TXT_KEY_BUILDING_BURIAL_GOODS_SKY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BURIAL_GOODS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BURIAL_GOODS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BURIAL_GOODS_SKY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -86,7 +81,6 @@
 			<Type>BUILDING_GRAVE_GOODS</Type>
 			<Description>TXT_KEY_BUILDING_GRAVE_GOODS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BURIAL_GOODS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BURIAL_GOODS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAVE_GOODS</ArtDefineTag>
 			<MapCategoryTypes>
@@ -105,22 +99,10 @@
 			</PrereqInCityBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BURIAL_TRADITION_CAVE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BURIAL_TRADITION_EARTH</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BURIAL_TRADITION_FIRE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BURIAL_TRADITION_SKY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BURIAL_TRADITION_CAVE</BuildingType>
+				<BuildingType>BUILDING_BURIAL_TRADITION_EARTH</BuildingType>
+				<BuildingType>BUILDING_BURIAL_TRADITION_FIRE</BuildingType>
+				<BuildingType>BUILDING_BURIAL_TRADITION_SKY</BuildingType>
 			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>

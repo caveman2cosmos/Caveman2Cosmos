@@ -3,6 +3,10 @@
 #ifndef CvContractBroker_h__
 #define CvContractBroker_h__
 
+class CvCity;
+class CvUnit;
+class CvUnitSelectionCriteria;
+
 //	Define this to have cities advertise units needs and tender for the business of building them
 #define	USE_UNIT_TENDERING
 
@@ -83,9 +87,7 @@ typedef struct
 //			to do what is asked of it (move to a location, join a group being current options)
 //		4)	If no suitable work is available continue with its own unit AI for low priority actions
 //
-class CvUnit;
-
-class CvContractBroker
+class CvContractBroker : bst::noncopyable
 {
 public:
 	CvContractBroker();

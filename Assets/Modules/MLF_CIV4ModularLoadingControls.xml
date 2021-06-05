@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-	<!-- Re-Modified by StrategyOnly -->
-	<!-- Master Load File -->
-	<!-- -->
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Re-Modified by StrategyOnly -->
+<!-- Master Load File -->
 <Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Xml\Schema\Caveman2Cosmos.xsd">
 	<DefaultConfiguration>Modules_Main_1</DefaultConfiguration>
 	<ConfigurationInfos>
 		<ConfigurationInfo>
 			<Type>Modules_Main_1</Type>
 			<Description>Initialize ALL Modules by using the MLF file structure</Description>
-			<Modules>				
+			<Modules>
 				<Module>
-					<Directory>Custom_Leaderheads</Directory>
+					<Directory>Custom_Civilizations</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
-					<Directory>Custom_Civilizations</Directory>
+					<Directory>Custom_Religions</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
@@ -31,23 +30,11 @@
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
-					<Directory>Static</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>ls612</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
 					<Directory>StrategyOnly</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
 					<Directory>Thunderbrd</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>Custom_Religions</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
@@ -80,10 +67,6 @@
 				</Module>
 				<Module>
 					<Directory>zInterdependencies</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-                <Module>
-					<Directory>zTerrains</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 			</Modules>

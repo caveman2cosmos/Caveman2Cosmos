@@ -6,7 +6,8 @@
 // structs.h
 
 #include "CvString.h"
-#include "CvGlobals.h"
+
+class BoolExpr;
 
 // XXX these should not be in the DLL per se (if the user changes them, we are screwed...)
 
@@ -23,6 +24,24 @@ typedef std::vector< std::pair<PromotionLineTypes, int> > PromotionLineModifierA
 typedef std::vector< std::pair<InvisibleTypes, int> > InvisibilityArray;
 typedef std::vector< std::pair<EraTypes, int> > EraArray;
 typedef std::vector< std::pair<PropertyTypes, int> > AidArray;
+
+struct plotInfo
+{
+	plotInfo();
+	std::string ToJSON();
+
+	int index;
+	bool worked;
+	bool owned;
+	bool bonusImproved;
+	int yieldValue;
+	short yields[NUM_YIELD_TYPES];
+	BonusTypes currentBonus;
+	ImprovementTypes currentImprovement;
+	FeatureTypes currentFeature;
+	BuildTypes currentBuild;
+};
+
 struct AidStruct
 {	
 	PropertyTypes eProperty;
@@ -188,13 +207,6 @@ struct CivicOptionTypeBool
 	operator int() const {return (int)eCivicOption;}
 	bool operator< (const CivicOptionTypeBool& rhs) const {return (int)eCivicOption < (int)rhs.eCivicOption;}
 };
-struct GameOptionTypeBool
-{	
-	GameOptionTypes eGameOption;
-	bool bBool;
-	operator int() const {return (int)eGameOption;}
-	bool operator< (const GameOptionTypeBool& rhs) const {return (int)eGameOption < (int)rhs.eGameOption;}
-};
 struct HealUnitCombat
 {	
 	UnitCombatTypes eUnitCombat;
@@ -211,6 +223,13 @@ struct GroupSpawnUnitCombat
 	operator int() const {return (int)eUnitCombat;}
 	bool operator< (const GroupSpawnUnitCombat& rhs) const {return (int)eUnitCombat < (int)rhs.eUnitCombat;}
 };
+struct ImprovementBuildTypes
+{
+	BuildTypes eBuildType;
+	operator int() const { return eBuildType; }
+	bool operator< (const ImprovementBuildTypes& rhs) const { return (int)eBuildType < (int)rhs.eBuildType; }
+};
+
 struct InvisibleTerrainChanges
 {	
 	InvisibleTypes eInvisible;
@@ -286,7 +305,7 @@ struct PlaceBonusTypes
 	TechTypes ePrereqTech;
 	TerrainTypes ePrereqTerrain;
 	FeatureTypes ePrereqFeature;
-	MapCategoryTypes ePrereqMapCategory;
+	MapTypes ePrereqMap;
 	operator int() const {return (int)eBonus;}
 	bool operator< (const PlaceBonusTypes& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
 };
@@ -335,7 +354,7 @@ struct IDInfo
 	}
 };
 
-struct GameTurnInfo				// Exposed to Python
+struct GameTurnInfo
 {
 	int iMonthIncrement;
 	int iNumGameTurnsPerIncrement;
@@ -353,7 +372,7 @@ struct GameTurnInfo				// Exposed to Python
 #define	INTERNAL_AUXILIARY_ORDER_IDATA(iData)	(short)(((iData) & 0xffff0000) >> 16)
 #define	PACK_INTERNAL_ORDER_IDATA(iBase, iAux)	(((unsigned int)(iBase) & 0xFFFF) | (((unsigned int)(iAux)) << 16))
 
-struct OrderData // Exposed to Python
+struct OrderData
 {
 	OrderTypes eOrderType;
 	union {
@@ -516,7 +535,7 @@ STATIC_ASSERT(sizeof(OrderData) == sizeof(_oldOrderData), OrderData_struct_size_
 //	Contract auxiliary flags
 #define	AUX_CONTRACT_FLAG_IS_UNIT_CONTRACT	0x01
 
-struct MissionData				// Exposed to Python
+struct MissionData
 {
 	MissionTypes eMissionType;
 	int iData1;
@@ -533,7 +552,7 @@ struct MissionData				// Exposed to Python
 	{}
 };
 
-struct TradeData // Exposed to Python
+struct TradeData
 {
 	TradeableItems m_eItemType; //What type of item is this
 	int m_iData; //Any additional data?

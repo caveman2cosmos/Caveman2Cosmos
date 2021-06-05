@@ -35,6 +35,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 #include "CvGameCoreDLL.h"
+#include "CvAllocator.h"
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -48,13 +49,13 @@ extern void CreateMiniDump(EXCEPTION_POINTERS *pep);
 
 void* CvMalloc(size_t size)
 {
-	if (g_DLL)
+	if (gDLL)
 	{
 		void* result = NULL;
 
 		try
 		{
-			result = g_DLL->newMem(size, __FILE__, __LINE__);
+			result = gDLL->newMem(size, __FILE__, __LINE__);
 
 #ifdef _DEBUG
 			memset(result, 0xDA, size);
@@ -80,12 +81,12 @@ void CvFree(void* p)
 	if (p == NULL)
 		return;
 
-	if (g_DLL)
+	if (gDLL)
 	{
 #ifdef _DEBUG
-		memset(p, 0xFA, g_DLL->memSize(p));
+		memset(p, 0xFA, gDLL->memSize(p));
 #endif
-		g_DLL->delMem(p, __FILE__, __LINE__);
+		gDLL->delMem(p, __FILE__, __LINE__);
 
 	}
 	else
@@ -96,14 +97,14 @@ void CvFree(void* p)
 
 void* CvMallocArray(size_t size)
 {
-	if (g_DLL)
+	if (gDLL)
 	{
 		//OutputDebugString("Alloc [safe]");
 
 		void* result = NULL;
 		try
 		{
-			result = g_DLL->newMemArray(size, __FILE__, __LINE__);
+			result = gDLL->newMemArray(size, __FILE__, __LINE__);
 #ifdef _DEBUG
 			memset(result, 0xDA, size);
 #endif
@@ -126,12 +127,12 @@ void CvFreeArray(void* p)
 	if (p == NULL)
 		return;
 
-	if (g_DLL)
+	if (gDLL)
 	{
 #ifdef _DEBUG
-		memset(p, 0xFA, g_DLL->memSize(p));
+		memset(p, 0xFA, gDLL->memSize(p));
 #endif
-		g_DLL->delMemArray(p, __FILE__, __LINE__);
+		gDLL->delMemArray(p, __FILE__, __LINE__);
 	}
 	else
 	{
@@ -143,14 +144,14 @@ void* reallocMem(void* a, unsigned int uiBytes, const char* pcFile, int iLine)
 {
 	void* result;
 
-	result = g_DLL->reallocMem(a, uiBytes, pcFile, iLine);
+	result = gDLL->reallocMem(a, uiBytes, pcFile, iLine);
 
 	return result;
 }
 
 unsigned int memSize(void* a)
 {
-	unsigned int result = g_DLL->memSize(a);
+	unsigned int result = gDLL->memSize(a);
 
 	return result;
 }
@@ -162,7 +163,7 @@ unsigned int memSize(void* a)
 
 namespace MemTrack
 {
-	std::ofstream mem_log("memory.log");
+	std::ofstream mem_log("Mods/Caveman2Cosmos/memory.log");
 	/* ------------------------------------------------------------ */
 	/* --------------------- class BlockHeader -------------------- */
 	/* ------------------------------------------------------------ */

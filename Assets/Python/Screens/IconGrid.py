@@ -1,10 +1,4 @@
-
 from CvPythonExtensions import *
-import CvUtil
-import ScreenInput
-import CvScreenEnums
-import math
-
 
 # globals
 gc = CyGlobalContext()
@@ -237,7 +231,7 @@ class IconGrid:
 			if (self.showRowHeader):
  				currentY += self.rowHeaderHeight
 				self.screen.setLabel( self.rowName + str(rowIndex) + "name", ""
-									, "<font=3>" + rowData.rowHeader + "</font>", CvUtil.FONT_LEFT_JUSTIFY
+									, "<font=3>" + rowData.rowHeader + "</font>", 1<<0
 									, self.xStart + 5, self.firstRowY + (self.totalRowHeight + self.rowSpace) * rowIndex - 3
 									, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
@@ -266,7 +260,7 @@ class IconGrid:
  							textY += self.rowHeaderHeight
 						text = rowData.cells[startIndex + offset].text
 						self.screen.setLabel( self.rowName + str(rowIndex) + "_" + str(startIndex + offset), ""
-											, "<font=3>" + text + "</font>", CvUtil.FONT_LEFT_JUSTIFY
+											, "<font=3>" + text + "</font>", 1<<0
 											, currentX + 6, textY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 						currentX += self.textColWidth[startIndex + offset] + self.colSpace
 
@@ -290,7 +284,7 @@ class IconGrid:
 				elif (self.columns[startIndex + offset] == GRID_TEXT_COLUMN):
 					text = rowData.cells[startIndex + offset].text
 					self.screen.setLabel( self.rowName + str(rowIndex) + "_" + str(startIndex + offset), ""
-										, "<font=3>" + text + "</font>", CvUtil.FONT_LEFT_JUSTIFY
+										, "<font=3>" + text + "</font>", 1<<0
 										, currentX + 6, self.firstRowY + (self.totalRowHeight + self.rowSpace) * rowIndex + 28
 										, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 					currentX += self.textColWidth[startIndex + offset] + self.colSpace

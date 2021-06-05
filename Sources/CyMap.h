@@ -5,27 +5,23 @@
 
 //
 // Python wrapper class for CvMap 
-// SINGLETON
 //
 
 class CyPlot;
 class CvMap;
-class CyCity;
-class CySelectionGroup;
 class CyArea;
+
 class CyMap
 {
 public:
 	CyMap();
-	explicit CyMap(CvMap* pMap);		// Call from C++
-	//const CvMapInterfaceBase* getMap() const { return m_pMap; }	// Call from C++
-	bool isNone() const { return m_pMap == NULL; }
-	
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
+	explicit CyMap(CvMap* pMap); // Call from C++
+	//const CvMapInterfaceBase* getMap() const { return m_pMap; } // Call from C++
+
 	int getType();
 	CyMap& operator = (CvMap& kMap);
+
+	bool plotsInitialized() const;
 
 	bool viewportsEnabled();
 	int	getViewportWidth();
@@ -38,19 +34,8 @@ public:
 
 	void closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom);
 	void bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity);
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/	
-	
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/29/08                                jdog5000      */
-/*                                                                                              */
-/* Used by barbarian civ                                                                        */
-/************************************************************************************************/
+
 	void verifyUnitValidPlot();
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 	void erasePlots();
 	void setRevealedPlots(int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly);
@@ -60,13 +45,9 @@ public:
 	void updateVisibility();
 	CyPlot* syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTimeout);
 
-	CyCity* findCity(int iX, int iY, int /*PlayerTypes*/ eOwner, int /*TeamTypes*/ eTeam, bool bSameArea, bool bCoastalOnly, int /*TeamTypes*/ eTeamAtWarWith, int /*DirectionTypes*/ eDirection, CyCity* pSkipCity);
-	CySelectionGroup* findSelectionGroup(int iX, int iY, int /*PlayerTypes*/ eOwner, bool bReadyToSelect, bool bWorkers);
-
 	CyArea* findBiggestArea(bool bWater);
 
 	int getMapFractalFlags();
-	bool findWater(CyPlot* pPlot, int iRange, bool bFreshWater);
 	bool isPlot(int iX, int iY);
 	int numPlots();
 	int plotNum(int iX, int iY);
@@ -95,15 +76,17 @@ public:
 	int getNumBonuses(int /* BonusTypes */ eIndex);
 	int getNumBonusesOnLand(int /* BonusTypes */ eIndex);
 
+	python::list plots() const;
 	CyPlot* plotByIndex(int iIndex);
 	CyPlot* sPlotByIndex(int iIndex);
 	CyPlot* plot(int iX, int iY);
 	CyPlot* sPlot(int iX, int iY) ;
 	CyPlot* pointToPlot(float fX, float fY);
-	int getIndexAfterLastArea();
+
 	int getNumAreas();
 	int getNumLandAreas();
 	CyArea* getArea(int iID);
+	python::list areas() const;
 	void recalculateAreas();
 	void resetPathDistance();
 
@@ -119,22 +102,9 @@ public:
 	int getLastPathStepNum() const;
 	CyPlot* getLastPathPlotByIndex(int index) const;
 
-	// Super Forts begin *canal* *choke*
+	// Super Forts *canal* *choke*
 	void calculateCanalAndChokePoints();
-	// Super Forts end
 
-	// PYTHON HELPER FUNCTIONS
-	//int getNumPlayerOwnedPlots(int /*PlayerTypes*/ iPlayer);
-/************************************************************************************************/
-/* Afforess	                  Start		 07/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	python::tuple firstArea(bool bRev);	// returns tuple of (CyArea, iterOut)
-	python::tuple nextArea(int iterIn, bool bRev);		// returns tuple of (CyArea, iterOut)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 protected:
 	CvMap* m_pMap;
 };

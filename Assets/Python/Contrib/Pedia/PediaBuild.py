@@ -104,7 +104,7 @@ class PediaBuild:
 					szStats += " " + TRNSLTR.getText("TXT_KEY_PEDIA_AND_BUILD_TIME", ()) + " ("
 				else:
 					szStats += " " + TRNSLTR.getText("TXT_KEY_PEDIA_BUILD_TIME", ()) + " ("
-				szStats += szTime + TRNSLTR.getText("TXT_KEY_PEDIA_TURNS_FEATURE_BUILD_TIME", ())
+				szStats += szTime + " " + TRNSLTR.getText("TXT_KEY_PEDIA_TURNS_FEATURE_BUILD_TIME", ())
 				if CyPlayer:
 					szStats += " * ("
 					if fGameSpeedMod:
@@ -116,7 +116,7 @@ class PediaBuild:
 							index += 2
 						else:
 							index += 3
-						szStats += szGameSpeedMod[:index] + TRNSLTR.getText("TXT_KEY_PEDIA_FROM_GAME_SPEED", ())
+						szStats += szGameSpeedMod[:index] + " " + TRNSLTR.getText("TXT_KEY_PEDIA_FROM_GAME_SPEED", ())
 						if fEraMod:
 							szStats += " * ("
 					if fEraMod:
@@ -128,7 +128,7 @@ class PediaBuild:
 							index += 2
 						else:
 							index += 3
-						szStats += szEraMod[:index] + TRNSLTR.getText("TXT_KEY_PEDIA_FROM_STARING_ERA", ())
+						szStats += szEraMod[:index] + " " + TRNSLTR.getText("TXT_KEY_PEDIA_FROM_STARING_ERA", ())
 		if szStats:
 			screen.addMultilineText(aName(), uFont3b + szStats, self.X_MAIN_L + 4, self.Y_MAIN_L, W_STATS - 8, self.H_MAIN_L, iWidGen, 0, 0, 1<<0)
 		# Construct & Requires
@@ -258,7 +258,7 @@ class PediaBuild:
 						index += 2
 					else:
 						index += 3
-					szText = uFont2b + COLOR + szText[:index] + "<color=255,255,255,255> " + TRNSLTR.getText("TXT_KEY_WB_TURNS", ())
+					szText = uFont2b + COLOR + szText[:index] + "<color=255,255,255,255> " + TRNSLTR.getText("TXT_KEY_TURNS", ())
 					screen.setLabelAt(aName(), Panel, szText, 1<<2, iOne12, 6, 0, iFontGame, iWidGen, 1, 1)
 				# Col 4 - Removed?
 				Panel = "Remove" + str(iRow)

@@ -28,7 +28,7 @@
 //			<< pLoopPlot->isConnectedTo(this);
 //
 //		if (SCvDebug::checkMode(NoVicinityBonusDebug)
-//			SCvInternalGlobals::engineUtils()->MessageBox(msg, "");
+//			gDLL->MessageBox(msg, "");
 //		...
 //	}
 //

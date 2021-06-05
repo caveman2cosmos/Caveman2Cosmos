@@ -11,8 +11,6 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
-import ScreenInput
 import string
 
 gc = CyGlobalContext()
@@ -72,7 +70,7 @@ class SevoPediaSpecialist:
 		splitText = string.split(szSpecialText, "\n")
 		for special in splitText:
 			if len(special) != 0:
-				screen.appendListBoxString(listName, special, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+				screen.appendListBoxString(listName, special, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 
 
@@ -81,7 +79,7 @@ class SevoPediaSpecialist:
 		panelName = self.top.getNextWidgetName()
 		screen.addPanel(panelName, "", "", True, True, self.X_TEXT, self.Y_TEXT, self.W_TEXT, self.H_TEXT, PanelStyles.PANEL_STYLE_BLUE50)
 		szText = gc.getSpecialistInfo(self.iSpecialist).getCivilopedia()
-		screen.attachMultilineText(panelName, "Text", szText, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.attachMultilineText(panelName, "Text", szText, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 
 

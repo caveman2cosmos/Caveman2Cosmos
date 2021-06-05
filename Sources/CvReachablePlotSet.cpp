@@ -1,6 +1,10 @@
 //	Class representing a set of plots reachable in a fixed number of tiles with given flags
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvMap.h"
+#include "CvPlot.h"
 #include "CvReachablePlotSet.h"
 #include "CvSelectionGroup.h"
 
@@ -258,7 +262,6 @@ void CvReachablePlotSet::Populate(int iRange)
 {
 	PROFILE_FUNC();
 
-	MEMORY_TRACK_EXEMPT();
 
 	if ( m_bCachable )
 	{

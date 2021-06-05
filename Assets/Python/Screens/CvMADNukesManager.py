@@ -5,15 +5,10 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
-import PyHelpers
-
-PyPlayer = PyHelpers.PyPlayer
-PyInfo = PyHelpers.PyInfo
 
 # globals
-gc = CyGlobalContext()
-ArtFileMgr = CyArtFileMgr()
+GC = CyGlobalContext()
+AFM = CyArtFileMgr()
 localText = CyTranslator()
 
 OUTGOING_WARHEADS = "OutgoingWarheads"
@@ -134,7 +129,7 @@ class CvMADNukesManager:
 		self.nWidgetCount = 0
 
 		screen.setDimensions(screen.centerX(0), screen.centerY(0), self.W_SCREEN, self.H_SCREEN)
-		screen.addDDSGFC(self.BACKGROUND_ID, ArtFileMgr.getInterfaceArtInfo("MAD_NUKES_MANAGER_BACKGROUND").getPath(), 0, 0, self.W_SCREEN, self.H_SCREEN, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.addDDSGFC(self.BACKGROUND_ID, AFM.getInterfaceArtInfo("MAD_NUKES_MANAGER_BACKGROUND").getPath(), 0, 0, self.W_SCREEN, self.H_SCREEN, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		self.initMinimap(screen)
 
@@ -146,7 +141,7 @@ class CvMADNukesManager:
 
 		self.drawOutgoingWarheadsContent(screen)
 
-		screen.setRenderInterfaceOnly(True);
+		screen.setRenderInterfaceOnly(True)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 		screen.showWindowBackground(False)
 
@@ -159,7 +154,7 @@ class CvMADNukesManager:
 
 		# Header...
 		self.szHeader = self.getNextWidgetName()
-		screen.setText(self.szHeader, "Background", self.TITLE, CvUtil.FONT_CENTER_JUSTIFY, self.X_SCREEN, self.Y_TITLE, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setText(self.szHeader, "Background", self.TITLE, 1<<2, self.X_SCREEN, self.Y_TITLE, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		screen.setHitTest(self.szHeader,HitTestTypes.HITTEST_NOHIT)
 
 
@@ -169,9 +164,9 @@ class CvMADNukesManager:
 		self.EXIT_TEXT = u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>"
 
 		screen.addPanel( "TechBottomPanel", u"", u"", True, False, 0, 713, self.W_SCREEN, 55, PanelStyles.PANEL_STYLE_BOTTOMBAR )
-		screen.setText(self.OUTGOING_ID, "Background", self.OUTGOING_TEXT, CvUtil.FONT_LEFT_JUSTIFY, self.X_OUTGOING, self.Y_OUTGOING, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		screen.setText(self.INCOMING_ID, "Background", self.INCOMING_TEXT, CvUtil.FONT_LEFT_JUSTIFY, self.X_INCOMING, self.Y_INCOMING, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		screen.setText(self.EXIT_ID, "Background", self.EXIT_TEXT, CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXIT, self.Y_EXIT, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
+		screen.setText(self.OUTGOING_ID, "Background", self.OUTGOING_TEXT, 1<<0, self.X_OUTGOING, self.Y_OUTGOING, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.setText(self.INCOMING_ID, "Background", self.INCOMING_TEXT, 1<<0, self.X_INCOMING, self.Y_INCOMING, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.setText(self.EXIT_ID, "Background", self.EXIT_TEXT, 1<<1, self.X_EXIT, self.Y_EXIT, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 
 
 	def initMinimap(self, screen):
@@ -234,22 +229,22 @@ class CvMADNukesManager:
 		screen.addPanel(OUTGOING_WARHEADS_PANEL, u"", "", False, False, 24, 60, 350, 708-60, PanelStyles.PANEL_STYLE_MAIN)
 		screen.addPanel(OUTGOING_WARHEADS_INNER_PANEL, u"", "", True, True, 34, 60+10+40, 330, 708-(70+15+35), PanelStyles.PANEL_STYLE_IN)
 		screen.addPanel(OUTGOING_LABEL_PANEL, u"", "", False, False, 29, 60+10, 340, 35, PanelStyles.PANEL_STYLE_MAIN)
-		screen.setText(self.OUTGOING_LABEL_ID, "Background", self.OUTGOING_LABEL_TEXT, CvUtil.FONT_CENTER_JUSTIFY, 24+(350/2), 60+10+7, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.setText(self.OUTGOING_LABEL_ID, "Background", self.OUTGOING_LABEL_TEXT, 1<<2, 24+(350/2), 60+10+7, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		screen.setHitTest(self.OUTGOING_LABEL_ID,HitTestTypes.HITTEST_NOHIT)
 
 		screen.addPanel(OUTGOING_SUMMARY_PANEL, u"", "", False, False, 420, self.Y_MAP+self.H_MAP+5, 580, self.H_SCREEN-(self.Y_MAP+self.H_MAP+5)-60, PanelStyles.PANEL_STYLE_MAIN)
 		screen.addPanel(OUTGOING_SUMMARY_INNER_PANEL, u"", "", True, False, 425+5, self.Y_MAP+self.H_MAP+15+40, 580-20, self.H_SCREEN-(self.Y_MAP+self.H_MAP+5)-(70+35+15), PanelStyles.PANEL_STYLE_IN)
 		screen.addPanel(OUTGOING_SUMMARY_LABEL_PANEL, u"", "", False, False, 425, self.Y_MAP+self.H_MAP+15, 570, 35, PanelStyles.PANEL_STYLE_MAIN)
-		screen.setText(self.OUTGOING_SUMMARY_LABEL_ID, "Background", self.OUTGOING_SUMMARY_LABEL_TEXT, CvUtil.FONT_CENTER_JUSTIFY, 425+(570/2), self.Y_MAP+self.H_MAP+15+7, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.setText(self.OUTGOING_SUMMARY_LABEL_ID, "Background", self.OUTGOING_SUMMARY_LABEL_TEXT, 1<<2, 425+(570/2), self.Y_MAP+self.H_MAP+15+7, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		screen.setHitTest(self.OUTGOING_SUMMARY_LABEL_ID,HitTestTypes.HITTEST_NOHIT)
 
 		iCounter = 0
 		iTotalNukeCount = 0
 
-		for iUnitID in range(gc.getPlayer(gc.getGame().getActivePlayer()).getNumUnits()):
-			objUnit = gc.getPlayer(gc.getGame().getActivePlayer()).getUnit(iUnitID)
+		for iUnitID in range(GCgetPlayer(GCgetGame().getActivePlayer()).getNumUnits()):
+			objUnit = GCgetPlayer(GCgetGame().getActivePlayer()).getUnit(iUnitID)
 
-			self.selectedUnitHash[iUnitID] = False;
+			self.selectedUnitHash[iUnitID] = False
 
 			if(objUnit.getUnitAIType() != UnitAITypes.UNITAI_ICBM):
 				continue
@@ -267,12 +262,12 @@ class CvMADNukesManager:
 			screen.attachPanel("UnitPanel%s" %(iUnitID), "UnitInnerPanel%s" %(iUnitID), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
 			screen.attachLabel( "UnitInnerPanel%s" %(iUnitID), "UnitInnerPanel%sfill1" %(iUnitID), "            Located At: %s" %(objUnit.plot().getPlotCity().getName()))
 			screen.attachLabel( "UnitInnerPanel%s" %(iUnitID), "UnitInnerPanel%sfill2" %(iUnitID), "            Targetting: %s" %(objUnit.getMADTargetPlot().getPlotCity().getName()))
-			screen.attachLabel( "UnitInnerPanel%s" %(iUnitID), "UnitInnerPanel%sfill3" %(iUnitID), "            City Owned By: %s" %(gc.getPlayer(objUnit.getMADTargetPlot().getPlotCity().getOwner()).getName()))
+			screen.attachLabel( "UnitInnerPanel%s" %(iUnitID), "UnitInnerPanel%sfill3" %(iUnitID), "            City Owned By: %s" %(GCgetPlayer(objUnit.getMADTargetPlot().getPlotCity().getOwner()).getName()))
 
 #			screen.attachLabel( "UnitPanel%s" %(iUnitID), "UnitPanel%sfill1" %(iUnitID), "            " )
 			screen.addCheckBoxGFCAt( "UnitPanel%s" %(iUnitID), "UnitCheckbox%s" %(iUnitID)
-							   , gc.getUnitInfo(objUnit.getUnitType()).getButton()
-							   , ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath()
+							   , GCgetUnitInfo(objUnit.getUnitType()).getButton()
+							   , AFM.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath()
 							   , 1, 2, 46, 46, WidgetTypes.WIDGET_GENERAL, iUnitID, iUnitID, ButtonStyles.BUTTON_STYLE_LABEL, False)
 			iCounter +=1
 
@@ -300,24 +295,24 @@ class CvMADNukesManager:
 		screen.addPanel(INCOMING_WARHEADS_PANEL, u"", "", False, False, 24, 60, 350, 708-60, PanelStyles.PANEL_STYLE_MAIN)
 		screen.addPanel(INCOMING_WARHEADS_INNER_PANEL, u"", "", True, True, 34, 60+10+40, 330, 708-(70+15+35), PanelStyles.PANEL_STYLE_IN)
 		screen.addPanel(INCOMING_LABEL_PANEL, u"", "", False, False, 29, 60+10, 340, 35, PanelStyles.PANEL_STYLE_MAIN)
-		screen.setText(self.INCOMING_LABEL_ID, "Background", self.INCOMING_LABEL_TEXT, CvUtil.FONT_CENTER_JUSTIFY, 24+(350/2), 60+10+7, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.setText(self.INCOMING_LABEL_ID, "Background", self.INCOMING_LABEL_TEXT, 1<<2, 24+(350/2), 60+10+7, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		screen.setHitTest(self.INCOMING_LABEL_ID,HitTestTypes.HITTEST_NOHIT)
 
 		screen.addPanel(INCOMING_SUMMARY_PANEL, u"", "", False, False, 420, self.Y_MAP+self.H_MAP+5, 580, self.H_SCREEN-(self.Y_MAP+self.H_MAP+5)-60, PanelStyles.PANEL_STYLE_MAIN)
 		screen.addPanel(INCOMING_SUMMARY_INNER_PANEL, u"", "", True, False, 425+5, self.Y_MAP+self.H_MAP+15+40, 580-20, self.H_SCREEN-(self.Y_MAP+self.H_MAP+5)-(70+35+15), PanelStyles.PANEL_STYLE_IN)
 		screen.addPanel(INCOMING_SUMMARY_LABEL_PANEL, u"", "", False, False, 425, self.Y_MAP+self.H_MAP+15, 570, 35, PanelStyles.PANEL_STYLE_MAIN)
-		screen.setText(self.INCOMING_SUMMARY_LABEL_ID, "Background", self.INCOMING_SUMMARY_LABEL_TEXT, CvUtil.FONT_CENTER_JUSTIFY, 425+(570/2), self.Y_MAP+self.H_MAP+15+7, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.setText(self.INCOMING_SUMMARY_LABEL_ID, "Background", self.INCOMING_SUMMARY_LABEL_TEXT, 1<<2, 425+(570/2), self.Y_MAP+self.H_MAP+15+7, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		screen.setHitTest(self.INCOMING_SUMMARY_LABEL_ID,HitTestTypes.HITTEST_NOHIT)
 
 		iCounter = 0
 		iTotalCityCount = 0
 		iTotalThreatCount = 0
-		iActivePlayer = gc.getGame().getActivePlayer()
+		iActivePlayer = GCgetGame().getActivePlayer()
 
-		for iCityID in range(gc.getPlayer(iActivePlayer).getNumCities()):
-			objCity = gc.getPlayer(iActivePlayer).getCity(iCityID)
+		for iCityID in range(GCgetPlayer(iActivePlayer).getNumCities()):
+			objCity = GCgetPlayer(iActivePlayer).getCity(iCityID)
 
-			self.selectedCityHash[iCityID] = False;
+			self.selectedCityHash[iCityID] = False
 
 			iTotalCityCount += 1
 			if(objCity.getMADIncoming() == 0):
@@ -332,8 +327,8 @@ class CvMADNukesManager:
 
 #			screen.attachLabel( "CityPanel%s" %(iCityID), "CityPanel%sfill1" %(iCityID), "            " )
 			screen.addCheckBoxGFCAt( "CityPanel%s" %(iCityID), "CityCheckbox%s" %(iCityID)
-							   , gc.getMissionInfo(gc.getInfoTypeForString("MISSION_PRETARGET_NUKE")).getButton()
-							   , ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath()
+							   , GCgetMissionInfo(GCgetInfoTypeForString("MISSION_PRETARGET_NUKE")).getButton()
+							   , AFM.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath()
 							   , 1, 2, 46, 46, WidgetTypes.WIDGET_GENERAL, iCityID, iCityID, ButtonStyles.BUTTON_STYLE_LABEL, False)
 			iCounter +=1
 			iTotalThreatCount += objCity.getMADIncoming()
@@ -368,10 +363,10 @@ class CvMADNukesManager:
 
 		screen.minimapClearAllFlashingTiles()
 
-		objPlayer = gc.getPlayer(gc.getGame().getActivePlayer())
-		iPlayer = gc.getGame().getActivePlayer()
+		objPlayer = GCgetPlayer(GCgetGame().getActivePlayer())
+		iPlayer = GCgetGame().getActivePlayer()
 
-		iTargetColor = gc.getInfoTypeForString("COLOR_RED")
+		iTargetColor = GCgetInfoTypeForString("COLOR_RED")
 
 		for iUnitID in self.selectedUnitHash.keys():
 
@@ -383,7 +378,7 @@ class CvMADNukesManager:
 				continue
 
 			objUnit = objPlayer.getUnit(iUnitID)
-			iColor = gc.getPlayerColorInfo(gc.getPlayer(iPlayer).getPlayerColor()).getColorTypePrimary()
+			iColor = GCgetPlayerColorInfo(GCgetPlayer(iPlayer).getPlayerColor()).getColorTypePrimary()
 
 			#screen.setMinimapColor(MinimapModeTypes.MINIMAPMODE_MILITARY, objUnit.getX(), objUnit.getY(), iColor, 0.6)
 
@@ -401,7 +396,7 @@ class CvMADNukesManager:
 				continue
 
 			objCity = objPlayer.getCity(iCityID)
-			iColor = gc.getPlayerColorInfo(gc.getPlayer(iPlayer).getPlayerColor()).getColorTypePrimary()
+			iColor = GCgetPlayerColorInfo(GCgetPlayer(iPlayer).getPlayerColor()).getColorTypePrimary()
 
 			screen.minimapFlashPlot(objCity.getX(), objCity.getY(), iColor, -1)
 
@@ -421,7 +416,7 @@ class CvMADNukesManager:
 			if(inputClass.getFunctionName() == "UnitCheckbox"):
 
 				#screen.setText( "TopPanelDebugMsg", "TopPanel", inputClass.getFunctionName()+"%s %s %s" %(inputClass.getData1(),(inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED), screen.getCheckBoxState(inputClass.getFunctionName()+"%s" %(inputClass.getData1())))
-				#			, CvUtil.FONT_RIGHT_JUSTIFY, 1010, 20, -10, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+				#			, 1<<1, 1010, 20, -10, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 
 				self.selectedUnitHash[inputClass.getData1()] = screen.getCheckBoxState(inputClass.getFunctionName()+"%s" %(inputClass.getData1()))
@@ -430,7 +425,7 @@ class CvMADNukesManager:
 			if(inputClass.getFunctionName() == "CityCheckbox"):
 
 				#screen.setText( "TopPanelDebugMsg", "TopPanel", inputClass.getFunctionName()+"%s %s %s" %(inputClass.getData1(),(inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED), screen.getCheckBoxState(inputClass.getFunctionName()+"%s" %(inputClass.getData1())))
-				#			, CvUtil.FONT_RIGHT_JUSTIFY, 1010, 20, -10, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+				#			, 1<<1, 1010, 20, -10, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 
 				self.selectedCityHash[inputClass.getData1()] = screen.getCheckBoxState(inputClass.getFunctionName()+"%s" %(inputClass.getData1()))

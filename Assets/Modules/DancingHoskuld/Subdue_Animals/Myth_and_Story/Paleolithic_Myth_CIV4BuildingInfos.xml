@@ -5,7 +5,6 @@
 			<Type>BUILDING_PALEOLITHIC_BIRD_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_BIRD_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -44,32 +43,22 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_BIRD_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -81,7 +70,6 @@
 			<Type>BUILDING_PALEOLITHIC_CAT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_CAT_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -119,32 +107,22 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_CAT_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -156,7 +134,6 @@
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -194,32 +171,22 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>

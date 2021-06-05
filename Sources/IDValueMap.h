@@ -13,34 +13,11 @@
 
 class CvXMLLoadUtility;
 
-// ValueType will usually be int, only value types that are supported by FDataStreamBase as overloaded read and write will work without template specialization
 // The maps are assumed to be small, so a vector of pairs is used
 template <class ValueType, ValueType& defaultValue>
 class IDValueMap
 {
 public:
-	void read(FDataStreamBase* pStream)
-	{
-		unsigned int iSize = 0;
-		pStream->Read(&iSize);
-		m_map.resize(iSize);
-		for (unsigned int i = 0; i < iSize; i++)
-		{
-			pStream->Read(&(m_map[i].first));
-			pStream->Read(&(m_map[i].second));
-		}
-	}
-
-	void write(FDataStreamBase* pStream)
-	{
-		pStream->Write(m_map.size());
-		for (unsigned int i = 0; i < m_map.size(); i++)
-		{
-			pStream->Write(m_map[i].first);
-			pStream->Write(m_map[i].second);
-		}
-	}
-
 	// Call this method with the XML set to the parent node
 	void read(CvXMLLoadUtility* pXML)
 	{
@@ -53,7 +30,7 @@ public:
 				if (pXML->TryMoveToXmlFirstChild())
 				{
 					pXML->GetXmlVal(szTextVal);
-					int iID = GC.getOrCreateInfoTypeForString(szTextVal);
+					const int iID = GC.getOrCreateInfoTypeForString(szTextVal);
 					ValueType val = defaultValue;
 					pXML->GetNextXmlVal(&val);
 					setValue(iID, val);
@@ -65,12 +42,12 @@ public:
 		}
 	}
 
-	void copyNonDefaults(IDValueMap<ValueType, defaultValue>* pMap, CvXMLLoadUtility* pXML)
+	void copyNonDefaults(const IDValueMap<ValueType, defaultValue>* pMap)
 	{
 		for (unsigned int i = 0; i < pMap->m_map.size(); i++)
 		{
 			bool bNotFound = true;
-			int iID = pMap->m_map[i].first;
+			const int iID = pMap->m_map[i].first;
 			for (unsigned int j = 0; j < m_map.size(); j++)
 			{
 				if (iID == m_map[j].first)

@@ -1,7 +1,10 @@
 // CvTaggedSaveFormatWrapper.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvPopupInfo.h"
 
 #ifdef _DEBUG
 //#define	DETAILED_TRACE	1
@@ -653,7 +656,6 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
-		//TB Promotion Line Mod begin
 	case REMAPPED_CLASS_TYPE_PROMOTIONLINES:
 		entry.numClasses = GC.getNumPromotionLineInfos();
 		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
@@ -665,13 +667,12 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
-		//TB Promotion Line Mod end
-	case REMAPPED_CLASS_TYPE_MAPCATEGORIES:
-		entry.numClasses = GC.getNumMapCategoryInfos();
+	case REMAPPED_CLASS_TYPE_MAPS:
+		entry.numClasses = NUM_MAPS;
 		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			const CvMapCategoryInfo& info = GC.getMapCategoryInfo((MapCategoryTypes)i);
+			const CvMapInfo& info = GC.getMapInfo((MapTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1073,7 +1074,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_COMBATINFOS);
 	//TB Promotion Line Mod begin
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_PROMOTIONLINES);
-	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MAPCATEGORIES);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MAPS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_IDEACLASSES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_IDEAS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_TRAITS);
@@ -1151,13 +1152,11 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 		case REMAPPED_CLASS_TYPE_COMBATINFOS:
 			result = GC.getNumUnitCombatInfos();
 			break;
-			//TB Promotion Line Mod begin
 		case REMAPPED_CLASS_TYPE_PROMOTIONLINES:
 			result = GC.getNumPromotionLineInfos();
 			break;
-			//TB Promotion Line Mod end
-		case REMAPPED_CLASS_TYPE_MAPCATEGORIES:
-			result = GC.getNumMapCategoryInfos();
+		case REMAPPED_CLASS_TYPE_MAPS:
+			result = NUM_MAPS;
 			break;
 		case REMAPPED_CLASS_TYPE_IDEACLASSES:
 			result = GC.getNumIdeaClassInfos();
@@ -3977,12 +3976,12 @@ CvTaggedSaveFormatWrapper::close()
 {
 	if ( m_inUse )
 	{
-		for( std::vector<CvWString>::iterator itr = m_warnings.begin(); itr != m_warnings.end(); ++itr )
+		foreach_(const CvWString& it, m_warnings)
 		{
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_SAVE_INFO_LOST);
 			if (NULL != pInfo)
 			{
-				pInfo->setText((*itr).c_str());
+				pInfo->setText(it.c_str());
 				gDLL->getInterfaceIFace()->addPopup(pInfo);
 			}
 		}

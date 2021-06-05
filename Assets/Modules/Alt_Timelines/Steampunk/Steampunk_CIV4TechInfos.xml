@@ -6,7 +6,6 @@
 			<Type>TECH_STEAMPUNK</Type>
 			<Description>TXT_KEY_TECH_STEAMPUNK</Description>
 			<Civilopedia>TXT_KEY_TECH_STEAMPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_STEAMPUNK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>5460</iCost>
 			<Era>C2C_ERA_INDUSTRIAL</Era>

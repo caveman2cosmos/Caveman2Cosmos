@@ -3,16 +3,15 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_BISON_TRAINER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BISON_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BISON_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BISON_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BISON_TRAINER</MovieDefineTag>
 			<ObsoleteTech>TECH_CAVALRY_TACTICS</ObsoleteTech>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -50,44 +49,23 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BISON_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BISON_HERD</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MUSKOX_CAMP</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BISON_CAMP</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BISON_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BISON_HERD</BuildingType>
+				<BuildingType>BUILDING_MUSKOX_CAMP</BuildingType>
+				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
+				<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BISON_TRAINER_HERITAGE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER_EFFECT</ArtDefineTag>
 			<ObsoleteTech>TECH_CAVALRY_TACTICS</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -122,7 +100,6 @@
 			<Type>BUILDING_BISON_TRAINER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BISON_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BISON_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BISON_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -141,13 +118,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TOTEM_BISON</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_BISON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_TOTEM_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_BISON_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -160,14 +136,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BISON_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BISON_TRAINER_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BISON_TRAINER</BuildingType>
+				<BuildingType>BUILDING_BISON_TRAINER_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -185,10 +155,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_STABLE</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BISON_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BISON_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>

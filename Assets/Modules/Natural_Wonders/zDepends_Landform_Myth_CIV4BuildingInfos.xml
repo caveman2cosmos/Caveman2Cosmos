@@ -8,11 +8,6 @@
 					<FeatureType>FEATURE_PLATY_BARRINGER_CRATER</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FALL_MYTH</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_NGORONGORO_CRATER</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
@@ -35,29 +30,14 @@
 					<FeatureType>FEATURE_PLATY_FUJI</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VOLCANO_MYTH</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_SOPKA</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VOLCANO_MYTH</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_KRAKATOA</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VOLCANO_MYTH</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_KILIMANJARO</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
@@ -71,29 +51,14 @@
 					<FeatureType>FEATURE_PLATY_FUJI</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FIRE_FESTIVAL</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_SOPKA</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FIRE_FESTIVAL</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_KRAKATOA</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FIRE_FESTIVAL</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_KILIMANJARO</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
@@ -107,29 +72,14 @@
 					<FeatureType>FEATURE_PLATY_FUJI</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_SOPKA</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_KRAKATOA</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_KILIMANJARO</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
@@ -143,29 +93,14 @@
 					<FeatureType>FEATURE_PLATY_FUJI</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VOLCANOLOGY_LAB</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_SOPKA</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VOLCANOLOGY_LAB</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_KRAKATOA</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
-			</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VOLCANOLOGY_LAB</Type>
-			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_KILIMANJARO</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
@@ -227,14 +162,9 @@
 			<Type>BUILDING_METEORITE_LAB</Type>
 			<PrereqOrFeature>
 				<PrereqFeature>
-						<FeatureType>FEATURE_PLATY_BARRINGER_CRATER</FeatureType>
-						<bPrereqFeature>1</bPrereqFeature>
-					</PrereqFeature>
-				</PrereqOrFeature>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_METEORITE_LAB</Type>
-			<PrereqOrFeature>
+					<FeatureType>FEATURE_PLATY_BARRINGER_CRATER</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PLATY_NGORONGORO_CRATER</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>

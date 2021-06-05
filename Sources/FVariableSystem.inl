@@ -197,7 +197,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, bool & bValue ) 
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_BOOL );
+	FAssert(pkVariable->m_eType == FVARTYPE_BOOL);
 	bValue = pkVariable->m_bValue;
 	return true;
 }
@@ -218,7 +218,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, char & cValue ) 
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_CHAR );
+	FAssert(pkVariable->m_eType == FVARTYPE_CHAR);
 	cValue = pkVariable->m_cValue;
 	return true;
 }
@@ -239,7 +239,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, uint8_t& ucValue
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_UCHAR );
+	FAssert(pkVariable->m_eType == FVARTYPE_UCHAR);
 	ucValue = pkVariable->m_ucValue;
 	return true;
 }
@@ -260,7 +260,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, short & wValue )
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_SHORT );
+	FAssert(pkVariable->m_eType == FVARTYPE_SHORT);
 	wValue = pkVariable->m_wValue;
 	return true;
 }
@@ -281,7 +281,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, uint16_t& uwValu
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_USHORT );
+	FAssert(pkVariable->m_eType == FVARTYPE_USHORT);
 	uwValue = pkVariable->m_uwValue;
 	return true;
 }
@@ -302,7 +302,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, int & iValue ) c
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_INT );
+	FAssert(pkVariable->m_eType == FVARTYPE_INT);
 	iValue = pkVariable->m_iValue;
 	return true;
 }
@@ -323,7 +323,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, uint & uiValue )
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_UINT );
+	FAssert(pkVariable->m_eType == FVARTYPE_UINT);
 	uiValue = pkVariable->m_uiValue;
 	return true;
 }
@@ -374,7 +374,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, float & fValue )
 		}
 		break;
 	default:
-		assert(false);
+		FAssert(false);
 		break;
 	}
 
@@ -427,7 +427,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, double & dValue 
 		}
 		break;
 	default:
-		assert(false);
+		FAssert(false);
 		break;
 	}
 
@@ -450,7 +450,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, const char * & p
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_STRING );
+	FAssert(pkVariable->m_eType == FVARTYPE_STRING);
 	pszValue = pkVariable->m_szValue;
 	return true;
 }
@@ -471,7 +471,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, const wchar_t * 
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_WSTRING );
+	FAssert(pkVariable->m_eType == FVARTYPE_WSTRING);
 	pwszValue = pkVariable->m_wszValue;
 	return true;
 }

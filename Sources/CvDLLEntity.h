@@ -13,7 +13,7 @@
 // 3. Add a wrapper function (for convenience) to this file and implement it in the corresponding cpp
 //
 
-#include "CvEnums.h"
+//#include "CvEnums.h"
 
 class CvCityEntity;
 class CvEntity;

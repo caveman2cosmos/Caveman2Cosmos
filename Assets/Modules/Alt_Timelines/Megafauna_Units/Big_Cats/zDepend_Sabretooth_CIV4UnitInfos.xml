@@ -5,9 +5,6 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_SABRETOOTH</Type>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_SUBDUED_SABRETOOTH</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>

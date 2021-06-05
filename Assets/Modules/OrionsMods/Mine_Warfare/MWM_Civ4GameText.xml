@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_HELP</Tag>
+		<English>[ICON_BULLET]-50% Cost for Mines and Mine Fields[NEWLINE][ICON_BULLET]Provides Anti-Tank capability</English>
+		<Russian>[ICON_BULLET]-50% от стоимости для мин и минных полей[NEWLINE][ICON_BULLET]Дает противотанковую защиту</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Tag>
+		<English>Misc - Advanced Mine Technology Center</English>
+		<Italian>Centro tecnologico per le mine avanzate</Italian>
+		<Russian>Öåíòð òåõíîëîãèè âçðûâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_PEDIA</Tag>
+		<English>The Advanced Mine Technology Center is a National Wonder designed to boost the output production and effective power of Mines. The advanced technology learned in this facility is required to construct Nuclear Mines.</English>
+		<Russian>Центр взрывных технологий - это национальное чудо, созданное для повышения производительности и эффективности наземных и морских мин. Передовые технологии, изученные на этом испытательном полионе, необходимы для создания ядерных минных полей.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INVISIBLE_LAND_MINE</Tag>
+		<English>Mines</English>
+		<French>
+			<Text>Mines</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Mines</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mines</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mines</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Russian>Ìèíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INVISIBLE_NAVAL_MINE</Tag>
+		<English>Mines</English>
+		<French>
+			<Text>Mines</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Mines</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mines</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mines</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Russian>Ìèíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LAND_MINE_FIELD_HELP</Tag>
+		<English>[ICON_BULLET]Harmless Until Armed.</English>
+		<Russian>[ICON_BULLET]Безопасна до установки.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LAND_MINE_HELP</Tag>
+		<English>[ICON_BULLET]Harmless until armed.</English>
+		<Russian>[ICON_BULLET]Безопасна до установки.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MINE_SWEEPER_HELP</Tag>
+		<English>[ICON_BULLET]Can remove mines.</English>
+		<Russian>[ICON_BULLET]Может удалять мины.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ARM_MINE</Tag>
+		<English>Arm mine</English>
+		<Russian>Óñòàíîâèòü ìèíó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ARM_MINE_HELP</Tag>
+		<English>Place the armed Mine on the plot to blow up enemy units.</English>
+		<Russian>Поместите мину на участок для подрыва отрядов противника.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DETONATE_NUCLEAR_MINE</Tag>
+		<English>Detonate Nuclear Mine</English>
+		<Russian>Âçîðâàòü ÿäåðíóþ ìèíó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SWEEP_FOR_LAND_MINE</Tag>
+		<English>Sweep the plot looking for mines.</English>
+		<Russian>Обыск участка на наличие мин.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SWEEP_FOR_LAND_MINE_HELP</Tag>
+		<English>Remove any enemy mines you find.</English>
+		<Russian>Удалить все найденные вражеские мины.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SWEEP_FOR_SEA_MINE</Tag>
+		<English>Sweep the plot looking for mines.</English>
+		<Russian>Обыск участка на наличие мин.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SWEEP_FOR_SEA_MINE_HELP</Tag>
+		<English>Remove any enemy mines you find.</English>
+		<Russian>Удалить все найденные вражеские мины.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NAVAL_MINE_FIELD_HELP</Tag>
+		<English>[ICON_BULLET]Harmless until armed.[NEWLINE][COLOR_WARNING_TEXT]Requires Harbor[COLOR_REVERT]</English>
+		<Russian>[ICON_BULLET]Безопасна до установки.[NEWLINE][COLOR_WARNING_TEXT]Требуется: Гавань[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NAVAL_MINE_HELP</Tag>
+		<English>[ICON_BULLET]Harmless until armed.</English>
+		<Russian>[ICON_BULLET]Безопасна до установки.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ARM_MINE</Tag>
+		<English>Arm Mine</English>
+		<Russian>Óñòàíîâèòü ìèíó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ARM_MINE_MESSAGE</Tag>
+		<English>Your mine is armed and immoble.</English>
+		<Russian>Ваша мина установлена в режим ожидания.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_DETONATE_NUCLEAR_MINE_MESSAGE</Tag>
+		<English>Your nuclear mine has exploded.</English>
+		<Russian>Ваша ядерная мина сдетонировала.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_MINE_ARMED</Tag>
+		<English>Status (Mine Armed)</English>
+		<Russian>Óñòàíîâêà ìèí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_MINE_WARFARE</Tag>
+		<English>Mine Warfare Units</English>
+		<Russian>Ìèíåðû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LAND_MINE</Tag>
+		<English>Land Mine</English>
+		<Russian>Ìèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LAND_MINE_FIELD</Tag>
+		<English>Land Mine Field</English>
+		<Russian>Ìèííîå ïîëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LAND_MINE_PEDIA</Tag>
+		<English>The Land Mine is a self-contained explosive device placed on land to destroy ground troops or vehicles. Mines must be armed to explode after reaching their destination, where they are left to wait until they are triggered by contact with an enemy unit. The exception is the nuclear land mine, which remains dormant until detonated by the owner. Naval mines can be used offensively, to hamper enemy units or lock them into a peninsula; or defensively, to protect friendly units and create "safe" zones.</English>
+		<Russian>Наземная мина представляет собой автономное взрывное устройство, размещаемое на земле для поражения наземных войск или транспортных средств. Мины должны быть взведены, чтобы сработать при контакте с вражеским отрядом. Исключением является ядерная мина, которая остается бездействующей до тех пор, пока ей не будет дана команда к детонации. Морские мины могут быть использованы в наступательных целях, чтобы препятствовать движению вражеским соединениям или запирать их в узких фарватерах; или в обороне, чтобы защитить дружественные отряды и создать «безопасные» зоны.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LAND_MINE_SWEEPER</Tag>
+		<English>Land Mine Sweeper</English>
+		<French>Détecteur de Mines Terrestres</French>
+		<Russian>Ñàïåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LAND_MINE_SWEEPER_PEDIA</Tag>
+		<English>The Land Mine Sweeper is a special unit designed to counter the threat posed by land mines. Minesweepers generally detect then neutralize mines in advance of other army operations.</English>
+		<Russian>Сапер - это особый отряд, необходимый для противодействия угрозе, создаваемой наземными минами. Саперные роты сначала обнаруживают, а затем обезвреживают мины, как правило, перед другими наземными операциями.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NAVAL_MINE</Tag>
+		<English>Naval Mine</English>
+		<Russian>Ìîðñêàÿ ìèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NAVAL_MINE_FIELD</Tag>
+		<English>Naval Mine Field</English>
+		<Russian>Ìîðñêîå ìèííîå ïîëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NAVAL_MINE_PEDIA</Tag>
+		<English>Naval mines are self-contained explosive devices placed in water to destroy ships or submarines. Mines must be armed to explode after reaching their destination, where they are left to wait until they are triggered by contact with an enemy ship. The exception is the nuclear naval mine, which remains dormant until detonated by the owner. Naval mines can be used offensively, to hamper enemy ships or lock them into a harbor; or defensively, to protect friendly ships and create "safe" zones.</English>
+		<Russian>Морские мины представляют собой автономные взрывные устройства, помещенные в воду для уничтожения кораблей или подводных лодок. Мины должны быть взведены в боевой режим, чтобы сдетонировать при контакте с вражеским кораблем. Исключение составляет ядерная морская мина, которая остается бездействующей до тех пор, пока владелец не подаст команду к детонации. Морские мины могут быть использованы в наступательных целях, чтобы препятствовать прохождению вражеских кораблей или запирать их в гавани; либо в обороне, чтобы защитить дружественные корабли и создать «безопасные» зоны.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER</Tag>
+		<English>Naval Mine Sweeper</English>
+		<Russian>Ìèííûé òðàëüùèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER_PEDIA</Tag>
+		<English>The Naval Mine Sweeper is a small naval warship designed to counter the threat posed by naval mines. Minesweepers generally detect then neutralize mines in advance of other naval operations.</English>
+		<Russian>Минный тральщик - это небольшой военный корабль, предназначенный для противодействия угрозе, создаваемой морскими минами. Как правило тральщики обнаруживают, а затем обезвреживают мины перед другими военно-морскими операциями.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NUCLEAR_LAND_MINE</Tag>
+		<English>Nuclear Land Mine</English>
+		<Russian>ßäåðíîå ìèííîå ïîëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NUCLEAR_LAND_MINE_HELP</Tag>
+		<English>[ICON_BULLET]Harmless Until Armed.[NEWLINE][COLOR_WARNING_TEXT]Requires Advanced Mine Technology Center Wonder[COLOR_REVERT]</English>
+		<Russian>[ICON_BULLET]Безопасна до установки.[NEWLINE][COLOR_WARNING_TEXT]Требуется: Центр технологии взрыва[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE</Tag>
+		<English>Nuclear Naval Mine</English>
+		<Russian>Ìîðñêàÿ ÿäåðíàÿ ìèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE_HELP</Tag>
+		<English>[ICON_BULLET]Harmless Until Armed.[NEWLINE][COLOR_WARNING_TEXT]Requires Harbor[COLOR_REVERT][NEWLINE][COLOR_WARNING_TEXT]Requires Advanced Mine Technology Center Wonder [COLOR_REVERT]</English>
+		<Russian>[ICON_BULLET]Безопасна до установки.[NEWLINE][COLOR_WARNING_TEXT]Требуется: Гавань[COLOR_REVERT][NEWLINE][COLOR_WARNING_TEXT]Требуется: Центр технологии взрыва[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DETONATE_NUCLEAR_MINE</Tag>
+		<English>Detonate Nuclear mine</English>
+		<Russian>Взорвать ядерную мину</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DETONATE_LAND_MINE</Tag>
+		<English>Detonate Land Mine</English>
+		<Russian>Взорвать мину</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DETONATE_LAND_MINE_MESSAGE</Tag>
+		<English>Detonated Land Mine</English>
+		<Russian>Взорвалась мина</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DETONATE_SEA_MINE</Tag>
+		<English>Detonate Sea Mine</English>
+		<Russian>Взорвать морскую мину</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_DETONATE_SEA_MINE_MESSAGE</Tag>
+		<English>Sea mine was detonated</English>
+		<Russian>Взорвалась морская мина</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_SWEEP_FOR_LAND_MINE_MESSAGE</Tag>
+		<English>Sweeping land mines</English>
+		<Russian>Обезвреживание мин</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_SWEEP_FOR_SEA_MINE_MESSAGE</Tag>
+		<English>Sweeping sea mines</English>
+		<Russian>Траление морских мин</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SWEEP_FOR_LAND_MINE</Tag>
+		<English>Sweep land mines</English>
+		<Russian>Обезвредить мины</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SWEEP_FOR_SEA_MINE</Tag>
+		<English>Sweep sea mines</English>
+		<Russian>Тралить мины</Russian>
+	</TEXT>
+</Civ4GameText>

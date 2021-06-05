@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http:/www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Unit art path information -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http:/www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Unit art path information -->
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<UnitArtInfos>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ATTACKSHIP</Type>
 			<Button>art/interface/buttons/units/attack_ship.dds</Button>
 			<fScale>0.36</fScale>
@@ -31,7 +30,7 @@
 			<SelectionSound>AS3D_UN_GUNSHIP_FORT</SelectionSound>
 			<ActionSound>AS3D_UN_GUNSHIP_FORT</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_INTERSTELLAR_BATTLECRUISER</Type>
 			<Button>art/interface/buttons/units/battlecruiser.dds</Button>
 			<fScale>0.75</fScale>
@@ -64,7 +63,7 @@
 			<SelectionSound>AS3D_UN_DREAD_FORT</SelectionSound>
 			<ActionSound>AS3D_UN_DREAD_FORT</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MARS_WORKER</Type>
 			<Button>art/interface/buttons/units/martian_worker.dds</Button>
 			<fScale>0.44</fScale>
@@ -81,7 +80,7 @@
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_VENUS_WORKER</Type>
 			<Button>art/interface/buttons/units/venus_worker.dds</Button>
 			<fScale>0.44</fScale>
@@ -98,7 +97,7 @@
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MARS_SETTLER</Type>
 			<Button>art/interface/buttons/units/martian_settler.dds</Button>
 			<fScale>0.44</fScale>
@@ -115,7 +114,7 @@
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_VENUS_SETTLER</Type>
 			<Button>art/interface/buttons/units/venus_settler.dds</Button>
 			<fScale>0.44</fScale>
@@ -132,7 +131,7 @@
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CISLUNAR_WORKER</Type>
 			<Button>art/interface/buttons/units/cislunar_workcraft.dds</Button>
 			<fScale>0.5</fScale>
@@ -155,7 +154,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SOLAR_WORKER</Type>
 			<Button>art/interface/buttons/units/solar_workcraft.dds</Button>
 			<fScale>0.5</fScale>
@@ -178,7 +177,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SOLARSAIL_SHIP</Type>
 			<Button>art/interface/buttons/units/solar_sail_workcraft.dds</Button>
 			<fScale>0.5</fScale>
@@ -201,7 +200,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MAGSAIL_SHIP</Type>
 			<Button>art/interface/buttons/units/magsail_workcraft.dds</Button>
 			<fScale>0.5</fScale>
@@ -224,7 +223,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SPACE_WORK_CREW</Type>
 			<Button>art/interface/buttons/units/space_work_crew.dds</Button>
 			<fScale>0.5</fScale>
@@ -248,7 +247,7 @@
 			<SelectionSound>AS3D_UN_JET_COMMAND_PATROL</SelectionSound>
 			<ActionSound>AS3D_UN_JET_COMMAND_PATROL</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CYBERNETIC_WORK_CREW</Type>
 			<Button>art/interface/buttons/units/cybernetic_work_crew.dds</Button>
 			<fScale>0.5</fScale>
@@ -272,7 +271,7 @@
 			<SelectionSound>AS3D_UN_JET_COMMAND_PATROL</SelectionSound>
 			<ActionSound>AS3D_UN_JET_COMMAND_PATROL</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TRANSHUMAN_WORK_CREW</Type>
 			<Button>art/interface/buttons/units/transhuman_work_crew.dds</Button>
 			<fScale>0.5</fScale>
@@ -296,7 +295,7 @@
 			<SelectionSound>AS3D_UN_JET_COMMAND_PATROL</SelectionSound>
 			<ActionSound>AS3D_UN_JET_COMMAND_PATROL</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_POSTHUMAN_WORK_CREW</Type>
 			<Button>art/interface/buttons/units/posthuman_work_crew.dds</Button>
 			<fScale>0.5</fScale>
@@ -320,7 +319,7 @@
 			<SelectionSound>AS3D_UN_JET_COMMAND_PATROL</SelectionSound>
 			<ActionSound>AS3D_UN_JET_COMMAND_PATROL</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_COSMIC_WORK_CREW</Type>
 			<Button>art/interface/buttons/units/cosmic_work_crew.dds</Button>
 			<fScale>0.5</fScale>
@@ -344,7 +343,7 @@
 			<SelectionSound>AS3D_UN_JET_COMMAND_PATROL</SelectionSound>
 			<ActionSound>AS3D_UN_JET_COMMAND_PATROL</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SHAPESHIFTING_WORK_CREW</Type>
 			<Button>art/interface/buttons/units/shapeshifting_work_crew.dds</Button>
 			<fScale>0.5</fScale>
@@ -368,7 +367,7 @@
 			<SelectionSound>AS3D_UN_JET_COMMAND_PATROL</SelectionSound>
 			<ActionSound>AS3D_UN_JET_COMMAND_PATROL</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_HYPERINTELLIGENT_WORK_CREW</Type>
 			<Button>art/interface/buttons/units/hyperintelligent_work_crew.dds</Button>
 			<fScale>0.5</fScale>
@@ -392,7 +391,7 @@
 			<SelectionSound>AS3D_UN_JET_COMMAND_PATROL</SelectionSound>
 			<ActionSound>AS3D_UN_JET_COMMAND_PATROL</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SATELLITE</Type>
 			<Button>art/interface/buttons/units/satellite.dds</Button>
 			<fScale>0.40</fScale>
@@ -424,7 +423,7 @@
 			<SelectionSound>AS3D_UN_TANK_FORT</SelectionSound>
 			<ActionSound>AS3D_UN_TANK_FORT</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SPACE_SHUTTLE</Type>
 			<Button>art/interface/buttons/units/space_shuttle.dds</Button>
 			<fScale>0.5</fScale>
@@ -448,7 +447,7 @@
 			<SelectionSound>AS3D_UN_JET_COMMAND_PATROL</SelectionSound>
 			<ActionSound>AS3D_UN_JET_COMMAND_PATROL</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_HEAVY_ROCKET</Type>
 			<Button>art/interface/buttons/units/heavy_rocket.dds</Button>
 			<fScale>0.5</fScale>
@@ -472,7 +471,7 @@
 			<SelectionSound>AS3D_UN_JET_COMMAND_PATROL</SelectionSound>
 			<ActionSound>AS3D_UN_JET_COMMAND_PATROL</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_PLANET_PROBE</Type>
 			<Button>art/interface/buttons/units/interplanetary_probe.dds</Button>
 			<fScale>0.40</fScale>
@@ -504,7 +503,7 @@
 			<SelectionSound>AS3D_UN_TANK_FORT</SelectionSound>
 			<ActionSound>AS3D_UN_TANK_FORT</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_INTERSTELLAR_PROBE</Type>
 			<Button>art/interface/buttons/units/interstellar_probe.dds</Button>
 			<fScale>0.40</fScale>
@@ -536,7 +535,7 @@
 			<SelectionSound>AS3D_UN_TANK_FORT</SelectionSound>
 			<ActionSound>AS3D_UN_TANK_FORT</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_BRACEWELL_PROBE</Type>
 			<Button>art/interface/buttons/units/bracewell_probe.dds</Button>
 			<fScale>0.40</fScale>
@@ -568,7 +567,7 @@
 			<SelectionSound>AS3D_UN_TANK_FORT</SelectionSound>
 			<ActionSound>AS3D_UN_TANK_FORT</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_VON_NEUMANN_PROBE</Type>
 			<Button>art/interface/buttons/units/von_neumann_probe.dds</Button>
 			<fScale>0.40</fScale>
@@ -600,7 +599,7 @@
 			<SelectionSound>AS3D_UN_TANK_FORT</SelectionSound>
 			<ActionSound>AS3D_UN_TANK_FORT</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_QUANTUM_PROBE</Type>
 			<Button>art/interface/buttons/units/quantum_probe.dds</Button>
 			<fScale>0.40</fScale>
@@ -632,7 +631,7 @@
 			<SelectionSound>AS3D_UN_TANK_FORT</SelectionSound>
 			<ActionSound>AS3D_UN_TANK_FORT</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_INTERDIMENSIONAL_PROBE</Type>
 			<Button>art/interface/buttons/units/interdimensional_probe.dds</Button>
 			<fScale>0.40</fScale>
@@ -664,7 +663,7 @@
 			<SelectionSound>AS3D_UN_TANK_FORT</SelectionSound>
 			<ActionSound>AS3D_UN_TANK_FORT</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CAPTURED_ASTEROID</Type>
 			<Button>art/interface/buttons/units/captured_asteroid.dds</Button>
 			<fScale>0.1</fScale>
@@ -684,7 +683,7 @@
 			<SelectionSound>AS3D_UN_FERAL_FORT_VOX</SelectionSound>
 			<ActionSound>AS3D_UN_FERAL_FORT_VOX</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CAPTURED_COMET</Type>
 			<Button>art/interface/buttons/units/captured_comet.dds</Button>
 			<fScale>0.1</fScale>
@@ -704,7 +703,7 @@
 			<SelectionSound>AS3D_UN_FERAL_FORT_VOX</SelectionSound>
 			<ActionSound>AS3D_UN_FERAL_FORT_VOX</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_INTERSTELLAR_WORKER</Type>
 			<Button>art/interface/buttons/units/interstellar_workcraft.dds</Button>
 			<fScale>0.5</fScale>
@@ -727,7 +726,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_LOE_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/low_earth_orbit.dds</Button>
 			<fScale>0.5</fScale>
@@ -750,7 +749,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SS1_REWARD</Type>
 			<Button>art/interface/buttons/improvements/space_station_1.dds</Button>
 			<fScale>0.5</fScale>
@@ -773,7 +772,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SS2_REWARD</Type>
 			<Button>art/interface/buttons/improvements/space_station_2.dds</Button>
 			<fScale>0.5</fScale>
@@ -796,7 +795,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SS3_REWARD</Type>
 			<Button>art/interface/buttons/improvements/space_station_3.dds</Button>
 			<fScale>0.5</fScale>
@@ -819,7 +818,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CISLUNAR_REWARD</Type>
 			<Button>art/interface/buttons/improvements/cislunar_trajectory.dds</Button>
 			<fScale>0.5</fScale>
@@ -842,7 +841,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_LUNAR_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/moon.dds</Button>
 			<fScale>0.5</fScale>
@@ -865,7 +864,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_INNER_SOLAR_SYSTEM_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/inner_solar_system.dds</Button>
 			<fScale>0.5</fScale>
@@ -888,7 +887,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_OUTER_SOLAR_SYSTEM_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/outer_solar_system.dds</Button>
 			<fScale>0.5</fScale>
@@ -911,7 +910,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TRANSNEPTUNIAN_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/transneptunian.dds</Button>
 			<fScale>0.5</fScale>
@@ -934,7 +933,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_INTERSTELLAR_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/transtellar.dds</Button>
 			<fScale>0.5</fScale>
@@ -957,7 +956,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_GALACTIC_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/orion_arm.dds</Button>
 			<fScale>0.5</fScale>
@@ -980,7 +979,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_INTERGALACTIC_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/galaxy.dds</Button>
 			<fScale>0.5</fScale>
@@ -1003,7 +1002,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MERCURY_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/mercury.dds</Button>
 			<fScale>0.5</fScale>
@@ -1026,7 +1025,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_VENUS_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/venus.dds</Button>
 			<fScale>0.5</fScale>
@@ -1049,7 +1048,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MARS_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/mars.dds</Button>
 			<fScale>0.5</fScale>
@@ -1072,7 +1071,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ASTEROID_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/asteroid_surface.dds</Button>
 			<fScale>0.5</fScale>
@@ -1095,7 +1094,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_JUPITER_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/jupiter.dds</Button>
 			<fScale>0.5</fScale>
@@ -1118,7 +1117,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_EUROPA_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/europa.dds</Button>
 			<fScale>0.5</fScale>
@@ -1141,7 +1140,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SATURN_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/saturn.dds</Button>
 			<fScale>0.5</fScale>
@@ -1164,7 +1163,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TITAN_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/titan.dds</Button>
 			<fScale>0.5</fScale>
@@ -1187,7 +1186,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_URANUS_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/uranus.dds</Button>
 			<fScale>0.5</fScale>
@@ -1210,7 +1209,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_NEPTUNE_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/neptune.dds</Button>
 			<fScale>0.5</fScale>
@@ -1233,7 +1232,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_KBO_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/kuiper_belt_object.dds</Button>
 			<fScale>0.5</fScale>
@@ -1256,7 +1255,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SEDNOID_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/sednoid.dds</Button>
 			<fScale>0.5</fScale>
@@ -1279,7 +1278,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_EXOPLANET_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/super_earth.dds</Button>
 			<fScale>0.5</fScale>
@@ -1302,7 +1301,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_OORT_CLOUD_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/oort_cloud.dds</Button>
 			<fScale>0.5</fScale>
@@ -1325,7 +1324,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_DISTANT_COSMOS_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/distant_cosmos.dds</Button>
 			<fScale>0.5</fScale>
@@ -1348,7 +1347,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_HYPERSPACE_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/hyperspace.dds</Button>
 			<fScale>0.5</fScale>
@@ -1371,7 +1370,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MULTIVERSE_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/branespace.dds</Button>
 			<fScale>0.5</fScale>
@@ -1394,7 +1393,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ANCIENT_CIVILIZATION_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/abandoned_civilization.dds</Button>
 			<fScale>0.5</fScale>
@@ -1417,7 +1416,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SOLAR_SYSTEM_LIFE_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/extraterrestrial_microbes.dds</Button>
 			<fScale>0.5</fScale>
@@ -1440,7 +1439,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_INTERSTELLAR_LIFE_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/xenoflora.dds</Button>
 			<fScale>0.5</fScale>
@@ -1463,7 +1462,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_GALACTIC_CORE_REWARD</Type>
 			<Button>art/interface/buttons/worldbuilder/galactic_core.dds</Button>
 			<fScale>0.5</fScale>
@@ -1486,7 +1485,7 @@
 			<SelectionSound>AS3D_UN_SPACESHIP_FORTIFY</SelectionSound>
 			<ActionSound>AS3D_UN_SPACESHIP_FORTIFY</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_NANOWORKER</Type>
 			<Button>art/interface/buttons/units/nanoworker.dds</Button>
 			<fScale>0.3</fScale>
@@ -1506,7 +1505,7 @@
 			<SelectionSound>AS3D_UN_FERAL_FORT_VOX</SelectionSound>
 			<ActionSound>AS3D_UN_FERAL_FORT_VOX</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_COSMIC_WORKER</Type>
 			<Button>art/interface/buttons/units/cosmic_worker.dds</Button>
 			<fScale>0.3</fScale>
@@ -1526,7 +1525,7 @@
 			<SelectionSound>AS3D_UN_FERAL_FORT_VOX</SelectionSound>
 			<ActionSound>AS3D_UN_FERAL_FORT_VOX</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_BACTERIA_SWARM</Type>
 			<Button>art/interface/buttons/units/interstellar_bacteria_swarm.dds</Button>
 			<fScale>0.3</fScale>
@@ -1546,7 +1545,7 @@
 			<SelectionSound>AS3D_UN_FERAL_FORT_VOX</SelectionSound>
 			<ActionSound>AS3D_UN_FERAL_FORT_VOX</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_LIFE_SWARM</Type>
 			<Button>art/interface/buttons/units/intergalactic_life_swarm.dds</Button>
 			<fScale>0.3</fScale>
@@ -1566,7 +1565,7 @@
 			<SelectionSound>AS3D_UN_FERAL_FORT_VOX</SelectionSound>
 			<ActionSound>AS3D_UN_FERAL_FORT_VOX</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ENERGY_ENTITY</Type>
 			<Button>art/interface/buttons/units/energy_entity.dds</Button>
 			<fScale>0.3</fScale>
@@ -1586,7 +1585,7 @@
 			<SelectionSound>AS3D_UN_FERAL_FORT_VOX</SelectionSound>
 			<ActionSound>AS3D_UN_FERAL_FORT_VOX</ActionSound>
 		</UnitArtInfo>
-        <UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CHRONOFORM_SHIP</Type>
 			<Button>art/interface/buttons/units/chronoform_ship.dds</Button>
 			<fScale>0.5</fScale>

@@ -41,7 +41,7 @@ class AdminFrame(wx.Frame):
 		menuBar = wx.MenuBar()
 		strFile = localText.getText("TXT_KEY_PITBOSS_FILE", ())
 		strFile = localText.stripHTML(strFile)
-		menuBar.Append(menu, strFile);
+		menuBar.Append(menu, strFile)
 		self.SetMenuBar(menuBar)
 
 		# Create our arrays of information and controls

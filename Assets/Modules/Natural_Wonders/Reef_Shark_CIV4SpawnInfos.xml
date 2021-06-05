@@ -4,11 +4,11 @@
 		<SpawnInfo>
 			<Type>SPAWN_REEF_SHARK_NATIVE</Type>
 			<UnitType>UNIT_REEF_SHARK</UnitType>
-			<PlayerType>43</PlayerType>
+			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>

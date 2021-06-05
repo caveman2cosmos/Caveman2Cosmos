@@ -1,6 +1,5 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
-import CvUtil
 from CvPythonExtensions import *
 
 class PyPopup:
@@ -36,20 +35,20 @@ class PyPopup:
 		self.popup.addSeparator()
 
 	# Header String
-	def	setHeaderString( self, strText, uiFlags = CvUtil.FONT_CENTER_JUSTIFY ):
+	def	setHeaderString( self, strText, uiFlags = 1<<2 ):
 		"sets the header text"
 		self.popup.setHeaderString( strText, uiFlags )
 
 	# Body String
-	def	setBodyString( self, strText, uiFlags = CvUtil.FONT_LEFT_JUSTIFY ):
+	def	setBodyString( self, strText, uiFlags = 1<<0 ):
 		"sets the body text"
 		self.popup.setBodyString( strText, uiFlags )
 
-	def setPythonBodyString( self, strText, strName, strHelpText, uiFlags = CvUtil.FONT_LEFT_JUSTIFY ):
+	def setPythonBodyString( self, strText, strName, strHelpText, uiFlags = 1<<0 ):
 		"PYTHON - sets a body string with help text"
 		self.popup.setPythonBodyString( strText, strName, strHelpText, uiFlags )
 
-	def setPythonBodyStringXY( self, strText, strName, strHelpText, iX = -1, iY = -1, uiFlags = CvUtil.FONT_LEFT_JUSTIFY ):
+	def setPythonBodyStringXY( self, strText, strName, strHelpText, iX = -1, iY = -1, uiFlags = 1<<0 ):
 		self.popup.setPythonBodyStringXY( strText, strName, strHelpText, iX, iY, uiFlags )
 
 	# Radio Buttons

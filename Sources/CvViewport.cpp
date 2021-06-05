@@ -1,4 +1,11 @@
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvCity.h"
+#include "CvPlot.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
+#include "CvViewport.h"
 
 CvViewport::CvViewport(CvMap* pMap, bool bIsFullMapContext) 
 	: m_pMap(pMap)
@@ -582,11 +589,6 @@ CvArea* CvViewport::findBiggestArea(bool bWater) const
 int CvViewport::getMapFractalFlags() const
 {
 	return m_pMap->getMapFractalFlags();
-}
-
-bool CvViewport::findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const
-{
-	return m_pMap->findWater(pPlot, iRange, bFreshWater);
 }
 
 bool CvViewport::isPlot(int iX, int iY) const

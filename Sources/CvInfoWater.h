@@ -16,13 +16,10 @@
 #ifndef CV_WATERINFO_H
 #define CV_WATERINFO_H
 
-#include "CvInfos.h"
-#include "CvEnums.h"
-
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
+class CvInfoBase;
 class CvXMLLoadUtility;
-
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
@@ -31,7 +28,7 @@ class CvXMLLoadUtility;
 //  DESC:   
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvWaterPlaneInfo :public CvInfoBase
+class CvWaterPlaneInfo : public CvInfoBase
 {
 public:
 
@@ -51,15 +48,7 @@ public:
 	DllExport const TCHAR *getTransitionTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-/************************************************************************************************/
-/* XMLCOPY                                 11/20/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void copyNonDefaults(CvWaterPlaneInfo* pClassInfo, CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
+	void copyNonDefaults(CvWaterPlaneInfo* pClassInfo);
 
 protected:
 
@@ -84,7 +73,7 @@ protected:
 //  DESC:   
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvTerrainPlaneInfo :public CvInfoBase
+class CvTerrainPlaneInfo : public CvInfoBase
 {
 public:
 
@@ -105,15 +94,7 @@ public:
 	DllExport const TCHAR * getBaseTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-/************************************************************************************************/
-/* XMLCOPY                                 11/20/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void copyNonDefaults(CvTerrainPlaneInfo* pClassInfo, CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
+	void copyNonDefaults(CvTerrainPlaneInfo* pClassInfo);
 
 protected:
 
@@ -140,7 +121,7 @@ protected:
 //  DESC:   
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCameraOverlayInfo :public CvInfoBase
+class CvCameraOverlayInfo : public CvInfoBase
 {
 public:
 
@@ -152,15 +133,7 @@ public:
 	DllExport const TCHAR * getBaseTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-/************************************************************************************************/
-/* XMLCOPY                                 11/20/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void copyNonDefaults(CvCameraOverlayInfo* pClassInfo, CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
+	void copyNonDefaults(CvCameraOverlayInfo* pClassInfo);
 
 protected:
 

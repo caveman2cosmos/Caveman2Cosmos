@@ -34,7 +34,7 @@
 		<German>Bauen [LINK=IMPROVEMENT_STONE_CIRCLE]Steinkreis[\LINK]</German>
 		<Italian>Costruisci [LINK=IMPROVEMENT_STONE_CIRCLE]Cerchio di pietre[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_CIRCLE]Círculo de piedras[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Kamienny Krąg[\LINK]</Polish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_CIRCLE]Kamienny Krąg[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ZIGGURAT</Tag>

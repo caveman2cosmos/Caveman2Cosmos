@@ -12,8 +12,7 @@
 #ifndef CV_BUILDING_SORT_H
 #define CV_BUILDING_SORT_H
 
-#include "CvEnums.h"
-
+class CvCity;
 class CvPlayer;
 
 enum BuildingSortTypes

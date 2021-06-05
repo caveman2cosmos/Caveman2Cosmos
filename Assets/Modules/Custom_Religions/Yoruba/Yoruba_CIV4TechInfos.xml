@@ -5,19 +5,15 @@
 			<Type>TECH_YORUBA</Type>
 			<Description>TXT_KEY_TECH_YORUBA</Description>
 			<Civilopedia>TXT_KEY_TECH_YORUBA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_YORUBA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>187</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_CEREMONY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
-				<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
-				<PrereqTech>TECH_FOLK_DANCE</PrereqTech>
+				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</AndPreReqs>
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>

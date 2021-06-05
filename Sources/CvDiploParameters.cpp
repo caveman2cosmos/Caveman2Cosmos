@@ -1,5 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvDiploParameters.h"
+#include "FVariableSystem.h"
 
 CvDiploParameters::CvDiploParameters(PlayerTypes ePlayer) :
 	m_eWhoTalkingTo(ePlayer),

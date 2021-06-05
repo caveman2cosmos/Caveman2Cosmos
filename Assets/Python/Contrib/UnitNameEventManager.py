@@ -71,7 +71,6 @@ from CvPythonExtensions import *
 import CvUtil
 import BugUtil
 import BugCore
-import PlayerUtil
 import Roman
 import RandomNameUtils
 import random
@@ -114,14 +113,13 @@ class UnitNameEventManager:
 		self.eventMgr = eventManager
 
 		self.UnitNameConv = "^ut^ ^cntu[n]^ of ^ct^"
-		self.Prompt = localText.getText("TXT_KEY_UNIT_NAME_EM_PROMPT_1",())
+		self.Prompt = localText.getText("TXT_KEY_UNITHELP_NAME_EM_PROMPT_1",())
 		#~ self.Prompt = "Enter a rename convention"
 
 	def __eventUnitRenameBegin(self, argsList):
-		header = localText.getText("TXT_KEY_UNIT_NAME_EM_HEADER_1",())  #BugUtil.getPlainText("TXT_KEY_REMINDER_HEADER")
-		#~ header = "Unit Name Testing (cancel to quit)"  #BugUtil.getPlainText("TXT_KEY_REMINDER_HEADER")
-		prompt = self.Prompt   #"Enter a rename convention"   #BugUtil.getPlainText("TXT_KEY_REMINDER_PROMPT")
-		ok = BugUtil.getPlainText("TXT_KEY_MAIN_MENU_OK")
+		header = localText.getText("TXT_KEY_UNITHELP_NAME_EM_HEADER_1",())
+		prompt = self.Prompt   #"Enter a rename convention"
+		#ok = BugUtil.getPlainText("TXT_KEY_MAIN_MENU_OK")
 		cancel = BugUtil.getPlainText("TXT_KEY_POPUP_CANCEL")
 		popup = PyPopup.PyPopup(RENAME_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF)
 		popup.setHeaderString(header)
@@ -129,8 +127,8 @@ class UnitNameEventManager:
 		popup.createPythonEditBox(self.UnitNameConv, "Enter the unit name convention that you want to test.", 0)
 #		popup.createPythonCheckBoxes(1, 0)
 #		popup.setPythonCheckBoxText(0, "Check to increment counters", "Note: if checked, units named in-game commence from counter used in testing.", 0)
-		popup.addButton(localText.getText("TXT_KEY_UNIT_NAME_EM_DONT_INCREMENT_COUNTER",()))
-		popup.addButton(localText.getText("TXT_KEY_UNIT_NAME_EM_INCREMENT_COUNTER",()))
+		popup.addButton(localText.getText("TXT_KEY_UNITHELP_NAME_EM_DONT_INCREMENT_COUNTER",()))
+		popup.addButton(localText.getText("TXT_KEY_UNITHELP_NAME_EM_INCREMENT_COUNTER",()))
 		#~ popup.addButton("Ok, don't increment counter")
 		#~ popup.addButton("Ok, increment counter")
 		popup.addButton(cancel)
@@ -196,12 +194,12 @@ class BuildUnitName(AbstractBuildUnitName):
 		self.config = None
 
 	def onKbdEvent(self, argsList):
-		eventType,key,mx,my,px,py = argsList
+		#eventType, key, mx, my, px, py = argsList
+		eventType = argsList[0]; key = argsList[1]
 		if eventType == self.eventMgr.EventKeyDown:
 			if key == InputTypes.KB_N and self.eventMgr.bCtrl and self.eventMgr.bAlt:
 				if UnitNamingOpt.isEnabled():
 					self.eventMgr.beginEvent(RENAME_EVENT_ID)
-
 		return 0
 
 	def onUnitBuilt(self, argsList):
@@ -363,22 +361,23 @@ class UnitReName(object):
 			#BUGPrint("UnitNameEM-ini0 [isAdvanced-NO]")
 			zsUnitNameConv = "DEFAULT"
 
-		if not (zsUnitNameConv == "DEFAULT"):
+		if zsUnitNameConv != "DEFAULT":
 			return zsUnitNameConv
 
 		#BUGPrint("UnitNameEM-iniA [" + zsUnitNameConv + "]" + UnitCombat[11:])
 
-		zsUnitNameConv = UnitNamingOpt.getByCombatType(UnitCombat[11:])
+		#Apparently it needs entire list of unitcombats in relevant config xml file.
+		#It should be done procedurally instead of spamming three different files.
+		#zsUnitNameConv = UnitNamingOpt.getByCombatType(UnitCombat[11:])
 
 		#BUGPrint("UnitNameEM-iniB [" + zsUnitNameConv + "]")
 
-		if not (zsUnitNameConv == "DEFAULT"):
-			return zsUnitNameConv
+		#if zsUnitNameConv != "DEFAULT":
+		#	return zsUnitNameConv
 
 		#BUGPrint("UnitNameEM-iniC [" + zsUnitNameConv + "]")
 
-		zsUnitNameConv = UnitNamingOpt.getDefault()
-		return zsUnitNameConv
+		return UnitNamingOpt.getDefault()
 
 
 	def getUnitCombat(self, pUnit):

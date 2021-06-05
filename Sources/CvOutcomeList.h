@@ -11,9 +11,10 @@
 #ifndef CV_OUTCOME_LIST_H
 #define CV_OUTCOME_LIST_H
 
-#include "CvOutcome.h"
-
+class CvPlot;
+class CvOutcome;
 class CvUnit;
+class CvXMLLoadUtility;
 
 class CvOutcomeList
 {
@@ -36,7 +37,7 @@ public:
 	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& kUnit) const;
 	
 	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"Outcomes");
-	void copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvOutcomeList* pOutcomeList);
 
 	void getCheckSum(unsigned int& iSum) const;
 protected:

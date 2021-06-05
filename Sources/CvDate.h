@@ -11,7 +11,7 @@
 #ifndef CV_DATE_H
 #define CV_DATE_H
 
-#include "CvEnums.h"
+//#include "CvEnums.h"
 
 struct CvDateIncrement;
 

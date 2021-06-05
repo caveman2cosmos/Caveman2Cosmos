@@ -5,8 +5,13 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvMapExternal.h"
-
+#include "CvPlot.h"
+#include "CvTaggedSaveFormatWrapper.h"
+#include "CvViewport.h"
 
 CvMapExternal::CvMapExternal() : m_proxiedMap(NULL),
 								 m_bMapCoordinates(false)
@@ -69,12 +74,6 @@ void CvMapExternal::updateFog()
 }
 
 
-void CvMapExternal::updateVisibility()
-{
-	m_proxiedMap->updateVisibility();
-}
-
-
 void CvMapExternal::updateSymbolVisibility()
 {
 	m_proxiedMap->updateSymbolVisibility();
@@ -97,15 +96,12 @@ CvCity* CvMapExternal::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eT
 	return m_proxiedMap->findCity(iX, iY, eOwner, eTeam, bSameArea, bCoastalOnly, eTeamAtWarWith, eDirection, pSkipCity);
 }
 
-CvSelectionGroup* CvMapExternal::findSelectionGroup(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers) const
-{
-	return m_proxiedMap->findSelectionGroup(iX, iY, eOwner, bReadyToSelect, bWorkers);
-}
 
 bool CvMapExternal::isPlot(int iX, int iY) const
 {
 	return m_proxiedMap->isPlot(iX, iY);
 }
+
 
 int CvMapExternal::numPlots() const
 {
@@ -113,27 +109,9 @@ int CvMapExternal::numPlots() const
 }
 
 
-int CvMapExternal::plotNum(int iX, int iY) const
-{
-	return m_proxiedMap->plotNum(iX, iY);
-}
-
-
-int CvMapExternal::pointXToPlotX(float fX) const
-{
-	return m_proxiedMap->pointXToPlotX(fX);
-}
-
-
 float CvMapExternal::plotXToPointX(int iX)
 {
 	return m_proxiedMap->plotXToPointX(iX);
-}
-
-
-int CvMapExternal::pointYToPlotY(float fY) const
-{
-	return m_proxiedMap->pointYToPlotY(fY);
 }
 
 
@@ -152,18 +130,6 @@ int CvMapExternal::getGridWidth() const
 int CvMapExternal::getGridHeight() const
 {
 	return m_proxiedMap->getGridHeight();
-}
-
-
-int CvMapExternal::getLandPlots() const
-{
-	return m_proxiedMap->getLandPlots();
-}
-
-
-int CvMapExternal::getOwnedPlots() const
-{
-	return m_proxiedMap->getOwnedPlots();
 }
 
 
@@ -191,33 +157,9 @@ WorldSizeTypes CvMapExternal::getWorldSize()
 }
 
 
-ClimateTypes CvMapExternal::getClimate() const
-{
-	return m_proxiedMap->getClimate();
-}
-
-
-SeaLevelTypes CvMapExternal::getSeaLevel() const
-{
-	return m_proxiedMap->getSeaLevel();
-}
-
-
-int CvMapExternal::getNumCustomMapOptions() const
-{
-	return m_proxiedMap->getNumCustomMapOptions();
-}
-
-
-CustomMapOptionTypes CvMapExternal::getCustomMapOption(int iOption) const
-{
-	return m_proxiedMap->getCustomMapOption(iOption);
-}
-
-
 CvPlot* CvMapExternal::plotByIndex(int iIndex) const
 {
-	FAssert(0 <= iIndex && iIndex < numPlots());
+	FASSERT_BOUNDS(0, numPlots(), iIndex)
 	CvPlot* result = m_proxiedMap->plotByIndex(iIndex);
 
 	if (result == NULL)
@@ -247,58 +189,30 @@ CvPlot* CvMapExternal::pointToPlot(float fX, float fY)
 }
 
 
-int CvMapExternal::getNumAreas() const
-{
-	return m_proxiedMap->getNumAreas();
-}
-
-
-int CvMapExternal::getNumLandAreas() const
-{
-	return m_proxiedMap->getNumLandAreas();
-}
-
-
 // Serialization:
 void CvMapExternal::read(FDataStreamBase* pStream)
 {
 	PROFILE_FUNC();
 
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
-	bool bInitialized = false;
+#ifndef BREAK_SAVES
 	bool bMultiMapFormat = false;
 
 	WRAPPER_READ(wrapper, "CvMapExternal", &bMultiMapFormat);
+#endif
 
-	if ( bMultiMapFormat )
+	foreach_(CvMap* map, GC.getMaps())
 	{
-		for (int i = 0; i < GC.getNumMapInfos(); i++)
+		bool bInitialized = false;
+		WRAPPER_READ(wrapper, "CvMapExternal", &bInitialized);
+
+		if (bInitialized)
 		{
-			WRAPPER_READ(wrapper, "CvMapExternal", &bInitialized);
-
-			if (bInitialized)
-			{
-				//	If this is a load straight from the startup menus then only map 0 will
-				//	have been initialized, so any others in the save must be initialized too before
-				//	they can be loaded
-				if ( !GC.mapInitialized((MapTypes)i) )
-				{
-					GC.initializeMap((MapTypes)i);
-				}
-
-				// Cast to the internal class
-				CvMap&	map = GC.getMapByIndex((MapTypes)i);
-
-				map.read(pStream);
-			}
+			map->read(pStream);
 		}
-	}
-	else
-	{
-		GC.getMap().read(pStream);
 	}
 
 	GC.getCurrentViewport()->setActionState(VIEWPORT_ACTION_STATE_LOADING);
@@ -308,26 +222,25 @@ void CvMapExternal::write(FDataStreamBase* pStream)
 {
 	PROFILE_FUNC();
 
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
+#ifndef BREAK_SAVES
 	bool bMultiMapFormat = true;	//	Always save in multimap format
 
 	WRAPPER_WRITE(wrapper, "CvMapExternal", bMultiMapFormat);
+#endif
 
-	for (int iI = 0; iI < GC.getNumMapInfos(); iI++)
+	foreach_(CvMap* map, GC.getMaps())
 	{
-		bool bInitialized = GC.mapInitialized((MapTypes)iI);
+		const bool bInitialized = map->plotsInitialized();
 
 		WRAPPER_WRITE(wrapper, "CvMapExternal", bInitialized);
 
-		if ( bInitialized )
+		if (bInitialized)
 		{
-			// Cast to the internal class
-			CvMap&	map = GC.getMapByIndex((MapTypes)iI);
-
-			map.write(pStream);
+			map->write(pStream);
 		}
 	}
 }

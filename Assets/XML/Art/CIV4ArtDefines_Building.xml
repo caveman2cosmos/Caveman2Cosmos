@@ -42,6 +42,16 @@
 			<Button>,Art/Interface/Buttons/Buildings/Wall.dds,Art/Interface/Buttons/Buildings_Atlas.dds,8,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OLD_CITY_WALLS</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Wall.dds,Art/Interface/Buttons/Buildings_Atlas.dds,8,7</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EARTHWALL</Type>
 			<LSystem>LSYSTEM_EARTHWALL</LSystem>
 			<bAnimated>0</bAnimated>
@@ -283,16 +293,6 @@
 			<Button>,Art/Interface/Buttons/Buildings/Forge.dds,Art/Interface/Buttons/Buildings_Atlas.dds,1,9</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MALI_MINT</Type>
-			<LSystem>LSYSTEM_2x2</LSystem>
-			<bAnimated>1</bAnimated>
-			<fScale>1.32</fScale>
-			<fInterfaceScale>0.67</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Mali Mint/Mali_mint.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/Forge.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,3</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FACTORY</Type>
 			<LSystem>LSYSTEM_4x2</LSystem>
 			<bAnimated>0</bAnimated>
@@ -453,16 +453,6 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/einstein_laboratory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KOREAN_SEOWON</Type>
-			<LSystem>LSYSTEM_2x2</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>1</fScale>
-			<fInterfaceScale>0.6</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Seowan/Seowan.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/University.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,4</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OBSERVATORY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
@@ -563,16 +553,6 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Nagualism/Mayan_ballcourt.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BABYLON_GARDEN</Type>
-			<LSystem>LSYSTEM_3x3</LSystem>
-			<bAnimated>1</bAnimated>
-			<fScale>1.3</fScale>
-			<fInterfaceScale>0.4</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Babylonian_Garden/Babylonian_Garden.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/HangingGardens.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,2,7</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BROADCAST_TOWER</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
@@ -633,16 +613,6 @@
 			<Button>,Art/Interface/Buttons/Buildings/Grocer.dds,Art/Interface/Buttons/Buildings_Atlas.dds,8,11</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PERSIAN_APOTHECARY</Type>
-			<LSystem>LSYSTEM_2x2</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>1.5</fScale>
-			<fInterfaceScale>0.44</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Persian Apothecary/Apothecary.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/Grocer.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,3</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BANK</Type>
 			<LSystem>LSYSTEM_1x2</LSystem>
 			<bAnimated>0</bAnimated>
@@ -701,16 +671,6 @@
 			<NIF>Art/Structures/Buildings/Courthouse/Courthouse.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/National_Wonders/district_courthouse.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HOLY_ROMAN_RATHAUS</Type>
-			<LSystem>LSYSTEM_3x2</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>2.0</fScale>
-			<fInterfaceScale>0.35</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/HRE_RathHouse/HRE_RathHouse.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/Courthouse.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,1,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SUMERIAN_ZIGGURAT</Type>
@@ -1531,16 +1491,6 @@
 			<NIF>Art/Structures/Buildings/Military_Academy/Military_Academy.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/WestPoint.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,1</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ETHIOPIAN_STELE</Type>
-			<LSystem>LSYSTEM_2x3</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>5.0</fScale>
-			<fInterfaceScale>0.35</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/EthiopianStele/EthiopianStele.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/Obelisk.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,2,8</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NATIVE_AMERICA_TOTEM</Type>
@@ -11062,7 +11012,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Great_Wonders/winery_vintage_red.dds</Button>
+			<Button>Art/Interface/Buttons/group_wonders/winery_vintage_red.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CHAMPAGNE</Type>
@@ -11072,7 +11022,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Great_Wonders/winery_champagne.dds</Button>
+			<Button>Art/Interface/Buttons/group_wonders/winery_champagne.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_VINTAGE_WHITE_WINE</Type>
@@ -11082,7 +11032,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Great_Wonders/winery_vintage_white.dds</Button>
+			<Button>Art/Interface/Buttons/group_wonders/winery_vintage_white.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CRAFT_HUT</Type>
@@ -26432,7 +26382,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Wonders/Art/valleykings.dds</Button>
+			<Button>Art/Interface/Buttons/Great_Wonders/valleykings.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BIG_BEN</Type>
@@ -28174,6 +28124,16 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_thylacine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TRADITION_ARCHERY_EFFECT</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/trad_archer_w.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TRADITION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -28181,7 +28141,17 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/tradition.dds</Button>
+			<Button>Art/Interface/Buttons/national_wonders/tradition_sstar_button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TRADITION_ASTHETIC_APPRECIATION</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/Buttons/buildings/tradition_w.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TRADITION_SSTAR</Type>
@@ -28701,7 +28671,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Goods/harappan_fake_gems.dds</Button>
+			<Button>art/interface/buttons/great_wonders/harappan_fake_gems.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TERRA_SIGILLATA_WORKSHOP</Type>
@@ -31882,6 +31852,126 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM />
 			<Button>art/fastbreederreactor.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/buttons/Group_Wonders/AquariusBuilding.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_PISCES</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/buttons/Group_Wonders/PiscesBuilding.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_ARIES</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/buttons/Group_Wonders/AriesBuilding.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_TAURUS</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/buttons/Group_Wonders/TaurusBuilding.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_GEMINI</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/buttons/Group_Wonders/GeminiBuilding.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_CANCER</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/buttons/Group_Wonders/CancerBuilding.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_LEO</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/buttons/Group_Wonders/LeoBuilding.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_VIRGO</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/buttons/Group_Wonders/VirgoBuilding.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_LIBRA</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/buttons/Group_Wonders/LibraBuilding.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/buttons/Group_Wonders/ScorpioBuilding.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/buttons/Group_Wonders/SagittariusBuilding.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/buttons/Group_Wonders/CapricornBuilding.dds</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

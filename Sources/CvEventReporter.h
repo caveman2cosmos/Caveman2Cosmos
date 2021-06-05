@@ -13,10 +13,11 @@
 
 struct CvStatBase;
 struct TradeData;
-class CvUnit;
 class CvCity;
 class CvPlot;
 class CvSelectionGroup;
+class CvUnit;
+
 class CvEventReporter
 {
 	friend class CyStatistics;
@@ -40,7 +41,7 @@ public:
 	DllExport void windowActivation(bool bActive);
 	void mapRegen();
 
-	void gameEnd();
+	void gameEnd(int iGameTurn);
 	void beginGameTurn(int iGameTurn);
 	void endGameTurn(int iGameTurn);
 	void preEndGameTurn(int iGameTurn);
@@ -151,8 +152,5 @@ private:
 	CvDllPythonEvents m_kPythonEventMgr;
 	CvStatistics m_kStatistics;
 };
-
-// helper
-#define EVENT_REPORTER CvEventReporter::getInstance()	
 
 #endif	// CvEventReporter_h

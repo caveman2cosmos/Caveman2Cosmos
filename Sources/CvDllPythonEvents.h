@@ -5,6 +5,9 @@
 
 #include "CvPython.h"
 
+class CvCity;
+class CvPlot;
+class CvUnit;
 class CyArgsList;
 class CvSelectionGroup;
 
@@ -20,7 +23,7 @@ public:
 	void reportUpdate(float fDeltaTime);
 	void reportUnInit();
 	void reportGameStart();
-	void reportGameEnd();
+	void reportGameEnd(int iGameTurn);
 	void reportWindowActivation(bool bActive);
 	void reportMapRegen();
 

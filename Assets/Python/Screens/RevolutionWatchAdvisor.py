@@ -49,20 +49,12 @@
 ###############################################################################################################
 
 from CvPythonExtensions import *
-
-import PyHelpers
 import CvScreenEnums
 import CvEventInterface
 import Popup as PyPopup
-
-import BugPath
 import BugConfigTracker
-
 import math
-import os.path
-
-PyPlayer = PyHelpers.PyPlayer
-
+import SystemPaths as SP
 # BUG - Options
 import BugCore
 CityScreenOpt = BugCore.game.CityScreen
@@ -294,8 +286,6 @@ class RevolutionWatchAdvisor:
 				("REVOLUTION_INDEX",		85,		"int",	CyCity.getRevolutionIndex,None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REVOLUTION_INDEX_ADVISOR_SIMPLE\", ()).upper()"),
 				("REVOLUTION_STATUS",		85,		"text",	self.getRevolutionStatusText,None,				0,									None,									None,						"localText.getText(\"TXT_KEY_REV_STATUS\", ()).upper()"),
 				("LOCAL_REV_INDEX",			85,		"int",	CyCity.getLocalRevIndex,None,					0,									None,									None,						"localText.getText(\"TXT_KEY_LOCAL_REV_INDEX_ADVISOR_SIMPLE\", ()).upper()"),
-				("DELTA_TREND",				85,		"int",	self.getDeltaTrendVal,	None,					0,									None,									None,						"localText.getText(\"TXT_KEY_DELTA_TREND_ADVISOR_SIMPLE\", ()).upper()"),
-				("DELTA_TREND_TEXT",		85,		"text",	self.getDeltaTrendText,	None,					0,									None,									None,						"localText.getText(\"TXT_KEY_DELTA_TREND_ADVISOR_SIMPLE\", ()).upper()"),
 				("REV_HAPPINESS",			85,		"int",	self.getRevHappinessVal,None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REV_WATCH_HAPPINESS\", ()).upper()"),
 				("REV_HAPPINESS_TEXT",		85,		"text",	self.getRevHappinessText,None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REV_WATCH_HAPPINESS\", ()).upper()"),
 				("REV_DISTANCE",			85,		"int",	self.getRevDistanceVal,	None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REV_WATCH_DISTANT\", ()).upper()"),
@@ -312,16 +302,16 @@ class RevolutionWatchAdvisor:
 				("REV_GARRISON_TEXT",		85,		"text",	self.getRevGarrisonText,None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REV_WATCH_GARRISON\", ()).upper()"),
 				("REV_DISORDER",			85,		"int",	self.getRevDisorderVal,	None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REV_WATCH_DISORDER\", ()).upper()"),
 				("REV_DISORDER_TEXT",		85,		"text",	self.getRevDisorderText,None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REV_WATCH_DISORDER\", ()).upper()"),
-				("ADVISE_CULTURE",			150,	"text",	None,					None,					0,									self.advise,							"Culture",					"localText.getText(\"TXT_KEY_CONCEPT_CULTURE\", ()).upper()"),
+				("ADVISE_CULTURE",			150,	"text",	None,					None,					0,									self.advise,							"Culture",					"localText.getText(\"TXT_WORD_CULTURE\", ()).upper()"),
 #				("ADVISE_MILITARY",			150,	"text",	None,					None,					0,									self.advise,							"Military",					"localText.getText(\"TXT_KEY_ADVISOR_MILITARY\", ()).upper()"),
 #				("ADVISE_NUTTY",			150,	"text",	None,					None,					0,									self.advise,							"Nutty",					"u\"NUTTY\""),
 				("ADVISE_RELIGION",			150,	"text",	None,					None,					0,									self.advise,							"Religion",					"localText.getText(\"TXT_KEY_CONCEPT_RELIGION\", ()).upper()"),
 #				("ADVISE_RESEARCH",			150,	"text",	None,					None,					0,									self.advise,							"Research",					"localText.getText(\"TXT_KEY_COMMERCE_RESEARCH\", ()).upper()"),
 #				("ADVISE_SPACESHIP",		150,	"text",	None,					None,					0,									self.advise,							"Spaceship",				"localText.getText(\"TXT_KEY_CONCEPT_SPACESHIP\", ()).upper()"),
 #				("AUTOMATION",				80,		"text",	None,					None,					0,									self.calculateAutomation,				None,						"u\"AUTO\""),
-				("BASE_COMMERCE",			38,		"int",	None,					CyCity.getBaseYieldRate, YieldTypes.YIELD_COMMERCE,			None,									None,						"u\"B\" + self.commerceIcon"),
-				("BASE_FOOD",				38,		"int",	None,					CyCity.getBaseYieldRate, YieldTypes.YIELD_FOOD,				None,									None,						"u\"B\" + self.foodIcon"),
-				("BASE_PRODUCTION",			38,		"int",	None,					CyCity.getBaseYieldRate, YieldTypes.YIELD_PRODUCTION,		None,									None,						"u\"B\" + self.hammerIcon"),
+				("BASE_COMMERCE",			38,		"int",	None,					CyCity.getPlotYield,	YieldTypes.YIELD_COMMERCE,			None,									None,						"u\"B\" + self.commerceIcon"),
+				("BASE_FOOD",				38,		"int",	None,					CyCity.getPlotYield,	YieldTypes.YIELD_FOOD,				None,									None,						"u\"B\" + self.foodIcon"),
+				("BASE_PRODUCTION",			38,		"int",	None,					CyCity.getPlotYield,	YieldTypes.YIELD_PRODUCTION,		None,									None,						"u\"B\" + self.hammerIcon"),
 #				("CONSCRIPT_UNIT",			90,		"text",	None,					None,					0,									self.calculateConscriptUnit,			None,						"localText.getText(\"TXT_KEY_CONCEPT_DRAFT\", ()).upper()"),
 #				("COULD_CONSCRIPT_UNIT",	90,		"text",	None,					None,					0,									self.calculatePotentialConscriptUnit,	None,						"localText.getText(\"TXT_KEY_CONCEPT_DRAFT\", ()).upper() + u\"#\""),
 #				("CORPORATIONS",			90,		"text",	None,					None,					0,									self.calculateCorporations,				None,						"localText.getText(\"TXT_KEY_CONCEPT_CORPORATIONS\", ()).upper()"),
@@ -536,12 +526,12 @@ class RevolutionWatchAdvisor:
 		self.objectUnderConstruction = self.hammerIcon
 
 		# add the colors dependant on the statuses
-		self.objectHave = localText.changeTextColor (self.objectIsPresent, gc.getInfoTypeForString("COLOR_GREEN")) #"x"
-		self.objectNotPossible = localText.changeTextColor (self.objectIsNotPresent, gc.getInfoTypeForString("COLOR_RED")) #"-"
-		self.objectPossible = localText.changeTextColor (self.objectCanBeBuild, gc.getInfoTypeForString("COLOR_BLUE")) #"o"
-		self.objectHaveObsolete = localText.changeTextColor (self.objectIsPresent, gc.getInfoTypeForString("COLOR_WHITE")) #"x"
-		self.objectNotPossibleConcurrent = localText.changeTextColor (self.objectIsNotPresent, gc.getInfoTypeForString("COLOR_YELLOW")) #"-"
-		self.objectPossibleConcurrent = localText.changeTextColor (self.objectCanBeBuild, gc.getInfoTypeForString("COLOR_YELLOW")) #"o"
+		self.objectHave = localText.changeTextColor (self.objectIsPresent, gc.getCOLOR_GREEN()) #"x"
+		self.objectNotPossible = localText.changeTextColor (self.objectIsNotPresent, gc.getCOLOR_RED()) #"-"
+		self.objectPossible = localText.changeTextColor (self.objectCanBeBuild, gc.getCOLOR_BLUE()) #"o"
+		self.objectHaveObsolete = localText.changeTextColor (self.objectIsPresent, gc.getCOLOR_WHITE()) #"x"
+		self.objectNotPossibleConcurrent = localText.changeTextColor (self.objectIsNotPresent, gc.getCOLOR_YELLOW()) #"-"
+		self.objectPossibleConcurrent = localText.changeTextColor (self.objectCanBeBuild, gc.getCOLOR_YELLOW()) #"o"
 
 		# Corporation Yield and Commerce values by Bonus
 		# Maps are { bonus -> { yield/commerce -> { corporation -> value } } }
@@ -550,28 +540,27 @@ class RevolutionWatchAdvisor:
 		self.bonusCorpCommerces = {}
 		for eCorp in range(gc.getNumCorporationInfos()):
 			info = gc.getCorporationInfo(eCorp)
-			for i in range(gc.getNUM_CORPORATION_PREREQ_BONUSES()):
-				eBonus = info.getPrereqBonus(i)
-				if (eBonus >= 0):
-					for eYield in range(YieldTypes.NUM_YIELD_TYPES):
-						iYieldValue = info.getYieldProduced(eYield)
-						if (iYieldValue != 0):
-							if (not self.bonusCorpYields.has_key(eBonus)):
-								self.bonusCorpYields[eBonus] = {}
-							if (not self.bonusCorpYields[eBonus].has_key(eYield)):
-								self.bonusCorpYields[eBonus][eYield] = {}
-							if (not self.bonusCorpYields[eBonus][eYield].has_key(eCorp)):
-								self.bonusCorpYields[eBonus][eYield][eCorp] = iYieldValue
+			for eBonus in info.getPrereqBonuses():
 
-					for eCommerce in range(CommerceTypes.NUM_COMMERCE_TYPES):
-						iCommerceValue = info.getCommerceProduced(eCommerce)
-						if (iCommerceValue != 0):
-							if (not self.bonusCorpCommerces.has_key(eBonus)):
-								self.bonusCorpCommerces[eBonus] = {}
-							if (not self.bonusCorpCommerces[eBonus].has_key(eCommerce)):
-								self.bonusCorpCommerces[eBonus][eCommerce] = {}
-							if (not self.bonusCorpCommerces[eBonus][eCommerce].has_key(eCorp)):
-								self.bonusCorpCommerces[eBonus][eCommerce][eCorp] = iCommerceValue
+				for eYield in range(YieldTypes.NUM_YIELD_TYPES):
+					iYieldValue = info.getYieldProduced(eYield)
+					if (iYieldValue != 0):
+						if (not self.bonusCorpYields.has_key(eBonus)):
+							self.bonusCorpYields[eBonus] = {}
+						if (not self.bonusCorpYields[eBonus].has_key(eYield)):
+							self.bonusCorpYields[eBonus][eYield] = {}
+						if (not self.bonusCorpYields[eBonus][eYield].has_key(eCorp)):
+							self.bonusCorpYields[eBonus][eYield][eCorp] = iYieldValue
+
+				for eCommerce in range(CommerceTypes.NUM_COMMERCE_TYPES):
+					iCommerceValue = info.getCommerceProduced(eCommerce)
+					if (iCommerceValue != 0):
+						if (not self.bonusCorpCommerces.has_key(eBonus)):
+							self.bonusCorpCommerces[eBonus] = {}
+						if (not self.bonusCorpCommerces[eBonus].has_key(eCommerce)):
+							self.bonusCorpCommerces[eBonus][eCommerce] = {}
+						if (not self.bonusCorpCommerces[eBonus][eCommerce].has_key(eCorp)):
+							self.bonusCorpCommerces[eBonus][eCommerce][eCorp] = iCommerceValue
 
 		self.loadPages()
 
@@ -736,9 +725,9 @@ class RevolutionWatchAdvisor:
 			# Colors to highlight with for each type of number (Must be here,
 			#  because C++ functions aren't available upon startup of CIV)
 			self.COLOR_DICT = {
-				"PROBLEM": gc.getInfoTypeForString("COLOR_RED"),
-				"NEUTRAL": gc.getInfoTypeForString("COLOR_YELLOW"),
-				"GREAT": gc.getInfoTypeForString("COLOR_GREEN"),
+				"PROBLEM": gc.getCOLOR_RED(),
+				"NEUTRAL": gc.getCOLOR_YELLOW(),
+				"GREAT": gc.getCOLOR_GREEN(),
 				}
 
 		self.switchPage(self.PAGES[0]["name"])
@@ -763,15 +752,15 @@ class RevolutionWatchAdvisor:
 	def getCurrentCity (self):
 		""" Get the current selected city."""
 		screen = self.getScreen()
-		iPlayer = PyPlayer(CyGame().getActivePlayer())
-		cityList = iPlayer.getCityList()
-		for i in range(len(cityList)):
-			if screen.isRowSelected(self.currentPage, i):
-				for j in range(len(cityList)):
-					if(cityList[j].getName() == screen.getTableText(self.currentPage, 1, i)):
-						return cityList[j].city
+		lCity = gc.getActivePlayer().cities()
 
+		for i in xrange(len(lCity)):
+			if screen.isRowSelected(self.currentPage, i):
+				for city in lCity:
+					if city.getName() == screen.getTableText(self.currentPage, 1, i):
+						return city
 		return None
+
 
 	def getNumSpecialistInfos (self):
 		""" Get the number of specialist types (that WE deal with)."""
@@ -809,14 +798,13 @@ class RevolutionWatchAdvisor:
 # BUG - Colony Split - start
 
 		player = gc.getActivePlayer()
-		if (player.canSplitEmpire()):
-			self.bCanLiberate = True
-		else:
+		if not player.canSplitEmpire():
 			self.bCanLiberate = False
 			for loopCity in player.cities():
 				if loopCity.getLiberationPlayer(False) != -1:
 					self.bCanLiberate = True
 					break
+		else: self.bCanLiberate = True
 
 		if (self.bCanLiberate):
 			screen.setImageButton( self.SPLIT_NAME, "", self.X_SPLIT, self.Y_SPLIT, 28, 28, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_FREE_COLONY).getActionInfoIndex(), -1 )
@@ -951,8 +939,8 @@ class RevolutionWatchAdvisor:
 		#			screen.show( szName )
 
 	def hideSpecialists (self):
-		pass
 		""" Function to hide all the specialists and the accompanying data."""
+		pass
 		#screen = self.getScreen()
 		#
 		# Hide Everything related to specialists
@@ -1127,17 +1115,17 @@ class RevolutionWatchAdvisor:
 
 		start = time.clock()
 		# Draw the city list...
-		self.drawContents (page)
+		self.drawContents(page)
 		end = time.clock()
 		print "drawContents: " + str(end - start) + "s"
 
-	def calculateFounded (self, city, szKey, arg):
+	def calculateFounded(self, city, szKey, arg):
 
 		# City founded date...
 		iTurnTime = city.getGameTurnFounded()
 		return unicode(CyGameTextMgr().getTimeStr(iTurnTime, False))
 
-	def calculateFeatures (self, city, szKey, arg):
+	def calculateFeatures(self, city, szKey, arg):
 
 		szReturn = ""
 
@@ -1153,7 +1141,7 @@ class RevolutionWatchAdvisor:
 		# add National Wonders
 		for i in range(gc.getNumBuildingInfos()):
 			info = gc.getBuildingInfo(i)
-			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and city.getNumBuilding(i) > 0 and not info.isCapital():
+			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and city.getNumRealBuilding(i) > 0 and not info.isCapital():
 				# Use bullets as markers for National Wonders
 				szReturn += self.bulletIcon
 
@@ -1179,17 +1167,13 @@ class RevolutionWatchAdvisor:
 
 	def calculateThreats(self, city, szKey, arg):
 
-		szReturn = u""
+		team = gc.getTeam(gc.getGame().getActiveTeam())
 
-		player = PyPlayer(CyGame().getActivePlayer())
-
-		for i in range(gc.getMAX_PLAYERS()):
-			if player.getTeam().isAtWar(gc.getPlayer(i).getTeam()):
-				if city.isVisible(gc.getPlayer(i).getTeam(), False):
-					szReturn = self.angryIcon
-					break
-
-		return szReturn
+		for iTeamX in range(gc.getMAX_TEAMS()):
+			if team.isAtWar(iTeamX):
+				if city.isVisible(iTeamX, False):
+					return self.angryIcon
+		return ""
 
 	def calculateNetHappiness (self, city, szKey="", arg=0):
 		return city.happyLevel() - city.unhappyLevel(0)
@@ -1240,7 +1224,7 @@ class RevolutionWatchAdvisor:
 		nTotalTradeProfit = 0
 
 		# For each trade route possible
-		for nTradeRoute in range (gc.getDefineINT("MAX_TRADE_ROUTES")):
+		for nTradeRoute in xrange(city.getMaxTradeRoutes()):
 			# Get the next trade city
 			pTradeCity = city.getTradeCity(nTradeRoute)
 			# Not quite sure what this does but it's in the MainInterface
@@ -1262,7 +1246,7 @@ class RevolutionWatchAdvisor:
 		nRoutes = 0
 
 		# For each trade route possible
-		for nTradeRoute in range (gc.getDefineINT("MAX_TRADE_ROUTES")):
+		for nTradeRoute in xrange(city.getMaxTradeRoutes()):
 			# Get the next trade city
 			pTradeCity = city.getTradeCity(nTradeRoute)
 			# Not quite sure what this does but it's in the MainInterface
@@ -1304,39 +1288,36 @@ class RevolutionWatchAdvisor:
 		return szReturn
 
 	def calculateWhipPopulation (self, city, szKey, arg):
-
-		if (city.canHurry(self.HURRY_TYPE_POP, False)):
+		if city.canHurry(self.HURRY_TYPE_POP, False):
 			return unicode(city.hurryPopulation(self.HURRY_TYPE_POP))
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculateWhipOverflowProduction (self, city, szKey, arg):
-
 		return self.calculateWhipOverflow(city, szKey, arg)[0]
 
 	def calculateWhipOverflowGold (self, city, szKey, arg):
-
 		return self.calculateWhipOverflow(city, szKey, arg)[1]
 
 	def calculateWhipOverflow (self, city, szKey, arg):
 
-		if (city.canHurry(self.HURRY_TYPE_POP, False)):
-			iOverflow = city.hurryProduction(self.HURRY_TYPE_POP) - city.productionLeft()
-			if CityScreenOpt.isWhipAssistOverflowCountCurrentProduction():
-				iOverflow = iOverflow + city.getCurrentProductionDifference(True, False)
-			iMaxOverflow = min(city.getProductionNeeded(), iOverflow)
-			iOverflowGold = max(0, iOverflow - iMaxOverflow) * gc.getDefineINT("MAXED_UNIT_GOLD_PERCENT") / 100
-			iOverflow =  100 * iMaxOverflow / city.getBaseYieldRateModifier(gc.getInfoTypeForString("YIELD_PRODUCTION"), city.getProductionModifier())
-			return unicode(iOverflow), unicode(iOverflowGold)
-		else:
+		if not city.canHurry(self.HURRY_TYPE_POP, False):
 			return self.objectNotPossible, self.objectNotPossible
+
+		iOverflow = city.hurryProduction(self.HURRY_TYPE_POP) - city.productionLeft()
+		if CityScreenOpt.isWhipAssistOverflowCountCurrentProduction():
+			iOverflow = iOverflow + city.getCurrentProductionDifference(True, False)
+		iMaxOverflow = city.getMaxProductionOverflow()
+		iOverflowGold = max(0, iOverflow - iMaxOverflow) * gc.getDefineINT("MAXED_UNIT_GOLD_PERCENT") / 100
+		iOverflow =  100 * iMaxOverflow / city.getBaseYieldRateModifier(gc.getInfoTypeForString("YIELD_PRODUCTION"), 0)
+		return unicode(iOverflow), unicode(iOverflowGold)
 
 	def calculateHurryGoldCost (self, city, szKey, arg):
 
-		if (city.canHurry(self.HURRY_TYPE_GOLD, False)):
-			return unicode(city.hurryGold(self.HURRY_TYPE_GOLD))
-		else:
-			return self.objectNotPossible
+		if city.canHurry(self.HURRY_TYPE_GOLD, False):
+			return unicode(city.getHurryGold(self.HURRY_TYPE_GOLD))
+
+		return self.objectNotPossible
 
 	def calculatePotentialConscriptUnit (self, city, szKey, arg):
 
@@ -1527,7 +1508,7 @@ class RevolutionWatchAdvisor:
 				if city.getProductionName() == self.HEADER_DICT[szKey]: # In production
 					szReturn = "(" + szReturn + ")"
 
-			elif city.getNumBuilding(self.BUILDING_DICT[szKey]) > 0: # Obsolete buildings
+			elif city.getNumBuilding(self.BUILDING_DICT[szKey]) > 0: # Disabled buildings
 				if self.BUILDING_ICONS_DICT[szKey].find(self.cultureIcon):
 					szReturn = self.stripStr(szReturn, self.cultureIcon)
 					szReturn += self.cultureIcon
@@ -1652,22 +1633,20 @@ class RevolutionWatchAdvisor:
 
 	def findGlobalBaseYieldRateRank (self, city, szKey, arg):
 
-		L = []
+		aList = []
 		for i in range(gc.getMAX_PLAYERS()):
-			cl = PyPlayer(i).getCityList()
-			for c in cl:
-				L.append(c.city.getBaseYieldRate(arg))
+			for cityX in gc.getPlayer(i).cities():
+				L.append(cityX.getPlotYield(arg))
 
-		y = city.getBaseYieldRate(arg)
-		return len([i for i in L if i > y]) + 1
+		y = city.getPlotYield(arg)
+		return len([i for i in aList if i > y]) + 1
 
 	def findGlobalYieldRateRank (self, city, szKey, arg):
 
 		L = []
 		for i in range(gc.getMAX_PLAYERS()):
-			cl = PyPlayer(i).getCityList()
-			for c in cl:
-				L.append(c.city.getYieldRate(arg))
+			for cityX in gc.getPlayer(i).cities():
+				L.append(cityX.getYieldRate(arg))
 
 		y = city.getYieldRate(arg)
 		return len([i for i in L if i > y]) + 1
@@ -1676,30 +1655,19 @@ class RevolutionWatchAdvisor:
 
 		L = []
 		for i in range(gc.getMAX_PLAYERS()):
-			cl = PyPlayer(i).getCityList()
-			for c in cl:
-				L.append(c.city.getCommerceRate(arg))
+			for cityX in gc.getPlayer(i).cities():
+				L.append(cityX.getCommerceRate(arg))
 
 		y = city.getCommerceRate(arg)
 		return len([i for i in L if i > y]) + 1
 
 
 	def canAdviseToConstruct(self, city, i):
-
-		info = gc.getBuildingInfo(i)
 		if not city.canConstruct(i, True, False, False):
 			return False
+		info = gc.getBuildingInfo(i)
 		if info.isGovernmentCenter() or info.isCapital():
 			return False
-
-		if info.getObsoleteTech() != TechTypes.NO_TECH and PyPlayer(CyGame().getActivePlayer()).getTeam().isHasTech(info.getObsoleteTech()):
-			return False
-
-		sinfo = gc.getSpecialBuildingInfo(info.getSpecialBuildingType())
-
-		if sinfo:
-			if sinfo.getObsoleteTech() != TechTypes.NO_TECH and PyPlayer(CyGame().getActivePlayer()).getTeam().isHasTech(sinfo.getObsoleteTech()):
-				return False
 
 		return True
 
@@ -1707,8 +1675,6 @@ class RevolutionWatchAdvisor:
 
 		bestOrder = -1
 		bestData = 0.0
-
-		player = PyPlayer(CyGame().getActivePlayer())
 
 		# For all cities, start with growth
 		if self.calculateNetHappiness(city) > 2 and self.calculateNetHealth(city) > 2:
@@ -1745,7 +1711,8 @@ class RevolutionWatchAdvisor:
 							bestData = value
 
 		# First pass
-		if(bestOrder == -1):
+		if bestOrder == -1:
+			player = gc.getActivePlayer()
 			for i in range(gc.getNumBuildingInfos()):
 				if self.canAdviseToConstruct(city, i):
 					info = gc.getBuildingInfo(i)
@@ -1767,7 +1734,7 @@ class RevolutionWatchAdvisor:
 							bestOrder = i
 							bestData = value
 					elif type == "Nutty":
-						value = math.sin(float(info.getProductionCost()) * city.getBaseYieldRate(YieldTypes.YIELD_COMMERCE)) + 1
+						value = math.sin(float(info.getProductionCost()) * city.getPlotYield(YieldTypes.YIELD_COMMERCE)) + 1
 						if value > bestData:
 							bestOrder = i
 							bestData = value
@@ -1781,19 +1748,19 @@ class RevolutionWatchAdvisor:
 					elif type == "Spaceship":
 						if not city.isPower():
 							if info.isPower():
-								value = city.getBaseYieldRate(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
+								value = city.getPlotYield(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
 								if value > bestData:
 									bestOrder = i
 									bestData = value
 
 						if city.findBaseYieldRateRank(YieldTypes.YIELD_PRODUCTION) < 12:
-							value = city.getBaseYieldRate(YieldTypes.YIELD_PRODUCTION) * 2 * info.getYieldModifier(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
+							value = city.getPlotYield(YieldTypes.YIELD_PRODUCTION) * 2 * info.getYieldModifier(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
 							if value > bestData:
 								bestOrder = i
 								bestData = value
 
 						if city.findBaseYieldRateRank(YieldTypes.YIELD_COMMERCE) < player.getNumCities() / 2:
-							value = city.getBaseYieldRate(YieldTypes.YIELD_COMMERCE) * info.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH) / float(info.getProductionCost())
+							value = city.getPlotYield(YieldTypes.YIELD_COMMERCE) * info.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH) / float(info.getProductionCost())
 							if value > bestData:
 								bestOrder = i
 								bestData = value
@@ -1887,24 +1854,23 @@ class RevolutionWatchAdvisor:
 		trendText = "-"
 		if trend > 10*showTrend:
 			trendText = localText.getText("TXT_ADVISOR_RAPIDLY_WORSENING", ())
-			trendText = localText.changeTextColor (trendText, gc.getInfoTypeForString("COLOR_RED"))
+			trendText = localText.changeTextColor (trendText, gc.getCOLOR_RED())
 		elif trend > showTrend:
 			trendText = localText.getText("TXT_ADVISOR_WORSENING", ())
 			trendText = localText.changeTextColor (trendText, gc.getInfoTypeForString("COLOR_PLAYER_ORANGE"))
 		elif trend < -showTrend:
 			trendText = localText.getText("TXT_ADVISOR_IMPROVING", ())
-			trendText = localText.changeTextColor (trendText, gc.getInfoTypeForString("COLOR_GREEN"))
+			trendText = localText.changeTextColor (trendText, gc.getCOLOR_GREEN())
 		else:
 			trendText = localText.getText("TXT_ADVISOR_FLAT", ())
-			trendText = localText.changeTextColor (trendText, gc.getInfoTypeForString("COLOR_WHITE"))
+			trendText = localText.changeTextColor (trendText, gc.getCOLOR_WHITE())
 		return trendText
 
 	def getRevolutionStatusText(self, city):
-		value  = city.getRevolutionIndex()
 		critical = RevInstances.RevolutionInst.alwaysViolentThreshold
 		danger = RevInstances.RevolutionInst.revInstigatorThreshold
-		warning = RevInstances.RevolutionInst.revReadyFrac*RevInstances.RevolutionInst.revInstigatorThreshold
-		return self.parseText(value, warning, danger, critical)
+		warning = RevInstances.RevolutionInst.revReadyFrac * RevInstances.RevolutionInst.revInstigatorThreshold
+		return self.parseText(city.getRevolutionIndex(), warning, danger, critical)
 
 	def getRevHappinessVal(self, city):
 		revIdxHist = RevData.getCityVal(city,'RevIdxHistory')
@@ -1938,7 +1904,7 @@ class RevolutionWatchAdvisor:
 		danger = 10
 		warning = 3
 		text = self.parseText(value, warning, danger, critical)
-		irrelevant = localText.changeTextColor(localText.getText("TXT_ADVISOR_POSITIVE",()), gc.getInfoTypeForString("COLOR_GREEN"))
+		irrelevant = localText.changeTextColor(localText.getText("TXT_ADVISOR_POSITIVE",()), gc.getCOLOR_GREEN())
 		if text == irrelevant : text = "-"
 		return text
 
@@ -1996,33 +1962,33 @@ class RevolutionWatchAdvisor:
 		danger = 10
 		warning = 3
 		text = self.parseText(value, warning, danger, critical)
-		irrelevant = localText.changeTextColor(localText.getText("TXT_ADVISOR_POSITIVE",()), gc.getInfoTypeForString("COLOR_GREEN"))
+		irrelevant = localText.changeTextColor(localText.getText("TXT_ADVISOR_POSITIVE",()), gc.getCOLOR_GREEN())
 		if text == irrelevant : text = localText.getText("TXT_KEY_REV_NONE", ())
 		return text
 
 	def parseText(self, value, thresholdWarning, thresholdDanger, thresholdCritical):
 		outText = "-"
-		if( value >= thresholdCritical) :
+		if value >= thresholdCritical:
 			outText = localText.getText("TXT_ADVISOR_CRITICAL", ())
-			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_RED"))
-		elif( value >= thresholdDanger) :
+			outText = localText.changeTextColor (outText, gc.getCOLOR_RED())
+
+		elif value >= thresholdDanger:
 			outText = localText.getText("TXT_KEY_REV_WATCH_DANGER", ())
 			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_PLAYER_ORANGE"))
-		elif( value >= thresholdWarning) :
+
+		elif value >= thresholdWarning:
 			outText = localText.getText("TXT_KEY_REV_WATCH_WARNING", ())
-			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_YELLOW"))
-		else :
+			outText = localText.changeTextColor (outText, gc.getCOLOR_YELLOW())
+		else:
 			outText = localText.getText("TXT_ADVISOR_POSITIVE", ())
-			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_GREEN"))
+			outText = localText.changeTextColor (outText, gc.getCOLOR_GREEN())
 		return outText
 # RevolutionDCM - end
 
-	def drawContents (self, page):
+	def drawContents(self, page):
 		""" Function to draw the contents of the cityList passed in. """
 
 		screen = self.getScreen()
-		iPlayer = PyPlayer(CyGame().getActivePlayer())
-		cityList = iPlayer.getCityList()
 
 		# Hide building icons
 		for i in range(gc.getNumBuildingInfos()):
@@ -2034,7 +2000,7 @@ class RevolutionWatchAdvisor:
 		for i, p in enumerate(self.PAGES):
 			screen.addPullDownString(self.PAGES_DD_NAME, p["name"], i, i, i == self.currentPageNum )
 
-		if(self.customizing):
+		if self.customizing:
 
 			# Build the page definition table
 			screen.addTableControlGFC (self.CUSTOMIZE_PAGE, 4, self.nTableX, self.nTableY, self.nHalfTableWidth, self.nShortTableLength, True, False, 32, 32, TableStyles.TABLE_STYLE_STANDARD )
@@ -2104,6 +2070,8 @@ class RevolutionWatchAdvisor:
 
 		# If displaying the normal advisor screen (not the customization interface)
 		else:
+			player = gc.getActivePlayer()
+			lCity = player.cities()
 
 			dDict = self.columnDict
 
@@ -2112,18 +2080,16 @@ class RevolutionWatchAdvisor:
 
 			# RevolutionDCM - revolution legend control 4
 			# Build the table
-			if not self.PAGES[self.currentPageNum]["showSpecControls"] and \
-				not self.PAGES[self.currentPageNum]["showRevolutionLegend"] and \
-				not self.PAGES[self.currentPageNum]["showGPLegend"]:
-				screen.addTableControlGFC (page, len (dDict) + 1, self.nTableX, self.nTableY, self.nTableWidth, self.nTableLength, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD )
-			else:
-				screen.addTableControlGFC (page, len (dDict) + 1, self.nTableX, self.nTableY, self.nTableWidth, self.nShortTableLength, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD )
+			if (not self.PAGES[self.currentPageNum]["showSpecControls"]
+			and not self.PAGES[self.currentPageNum]["showRevolutionLegend"]
+			and not self.PAGES[self.currentPageNum]["showGPLegend"]
+			):
+				screen.addTableControlGFC(page, len (dDict) + 1, self.nTableX, self.nTableY, self.nTableWidth, self.nTableLength, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
+			else: screen.addTableControlGFC(page, len (dDict) + 1, self.nTableX, self.nTableY, self.nTableWidth, self.nShortTableLength, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 
 			screen.enableSelect (page, True)
 			screen.enableSort (page)
 			screen.setStyle(page, "Table_StandardCiv_Style")
-
-			cityRange = range(len(cityList))
 
 			zoomArt = ArtFileMgr.getInterfaceArtInfo("INTERFACE_BUTTONS_CITYSELECTION").getPath()
 
@@ -2131,15 +2097,11 @@ class RevolutionWatchAdvisor:
 			screen.setTableColumnHeader (page, 0, "", 30 )
 
 			# Add blank rows to the table
-			for i in cityRange:
-				screen.appendTableRow (page)
-				if (cityList[i].getName() in self.listSelectedCities):
-					screen.selectRow( page, i, True )
-#				if not self.PAGES[self.currentPageNum]["showSpecControls"]:
-#					szWidgetName = "ZoomCity" + str(i)
-#					screen.setImageButton( szWidgetName, zoomArt, 0, 0, 24, 24, WidgetTypes.WIDGET_ZOOM_CITY, cityList[i].getOwner(), cityList[i].getID() )
-#					screen.attachControlToTableCell( szWidgetName, page, i, 0 )
-				screen.setTableText( page, 0, i, "", zoomArt, WidgetTypes.WIDGET_ZOOM_CITY, cityList[i].getOwner(), cityList[i].getID(), 1<<0)
+			for i, city in enumerate(lCity):
+				screen.appendTableRow(page)
+				if city.getName() in self.listSelectedCities:
+					screen.selectRow(page, i, True)
+				screen.setTableText(page, 0, i, "", zoomArt, WidgetTypes.WIDGET_ZOOM_CITY, city.getOwner(), city.getID(), 1<<0)
 
 			# Order the columns
 			columns = []
@@ -2152,21 +2114,21 @@ class RevolutionWatchAdvisor:
 
 			# Loop through the columns first. This is unintuitive, but faster.
 			for value, key in columns:
-
 				try:
 					columnDef = self.COLUMNS_LIST[self.COLUMNS_INDEX[key]]
 					type = columnDef[2]
-					if (type == "bldg"):
+					if type == "bldg":
 						building = columnDef[7]
 						buildingInfo = self.BUILDING_INFO_LIST[building]
 						screen.setTableColumnHeader (page, value + 1, "", self.columnWidth[key])
 						szName = "BLDG_BTN_%d" % building
 						x = iBuildingButtonX + (self.columnWidth[key] - self.BUILDING_BUTTON_X_SIZE) / 2
-						screen.setImageButton (szName, buildingInfo.getButton(),
-											   x, iBuildingButtonY, self.BUILDING_BUTTON_X_SIZE, self.BUILDING_BUTTON_Y_SIZE,
-											   WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, building, -1)
-					else:
-						screen.setTableColumnHeader (page, value + 1, "<font=2>" + self.HEADER_DICT[key] + "</font>", self.columnWidth[key] )
+						screen.setImageButton(
+							szName, buildingInfo.getButton(), x, iBuildingButtonY,
+							self.BUILDING_BUTTON_X_SIZE, self.BUILDING_BUTTON_Y_SIZE,
+							WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, building, -1
+						)
+					else: screen.setTableColumnHeader(page, value + 1, "<font=2>" + self.HEADER_DICT[key] + "</font>", self.columnWidth[key])
 
 					iBuildingButtonX += self.columnWidth[key]
 
@@ -2187,30 +2149,29 @@ class RevolutionWatchAdvisor:
 						funcTableWrite = screen.setTableText
 						justify = 1<<2
 					else:
-						return;
+						return
 
 					colorFunc = self.ColorCityValues
 
-					if(columnDef[3]):
+					if columnDef[3]:
 						calcFunc = columnDef[3]
-						# Loop through the cities
-						for i in cityRange:
-							szValue = colorFunc(unicode(calcFunc(cityList[i].city)), key)
+
+						for i, city in enumerate(lCity):
+							szValue = colorFunc(unicode(calcFunc(city)), key)
 							funcTableWrite (page, value + 1, i, szValue, "", WidgetTypes.WIDGET_GENERAL, -1, -1, justify)
 
-					elif(columnDef[4]):
+					elif columnDef[4]:
 						calcFunc = columnDef[4]
-						# Loop through the cities
-						for i in cityRange:
-							szValue = colorFunc(unicode(calcFunc(cityList[i].city, columnDef[5])), key)
+
+						for i, city in enumerate(lCity):
+							szValue = colorFunc(unicode(calcFunc(city, columnDef[5])), key)
 							funcTableWrite (page, value + 1, i, szValue, "", WidgetTypes.WIDGET_GENERAL, -1, -1, justify)
 
 					else:
 						calcFunc = columnDef[6]
 
-						# Loop through the cities
-						for i in cityRange:
-							szValue = colorFunc(unicode(calcFunc(cityList[i].city, key, columnDef[7])), key)
+						for i, city in enumerate(lCity):
+							szValue = colorFunc(unicode(calcFunc(city, key, columnDef[7])), key)
 							funcTableWrite (page, value + 1, i, szValue, "", WidgetTypes.WIDGET_GENERAL, -1, -1, justify)
 
 				except KeyError:
@@ -2243,24 +2204,24 @@ class RevolutionWatchAdvisor:
 			screen.moveToBack (self.BACKGROUND_ID)
 
 			# Now hand off to the C++ API
-			self.updateAppropriateCitySelection (page, len( iPlayer.getCityList() ) )
+			self.updateAppropriateCitySelection(page, player.getNumCities())
 
-	def HandleSpecialistPlus (self, inputClass):
+	def HandleSpecialistPlus(self, inputClass):
 		""" Handles when any Specialist Plus is pushed."""
 
 		#CyInterface().setDirty(InterfaceDirtyBits.Domestic_Advisor_DIRTY_BIT, True)
 		return 0
 
-	def HandleSpecialistMinus (self, inputClass):
+	def HandleSpecialistMinus(self, inputClass):
 		""" Handles when any Specialist Minus is pushed."""
 
 		CyInterface().setDirty(InterfaceDirtyBits.REVOLUTION_WATCH_ADVISOR_DIRTY_BIT, True)
 		return 0
 
-	def RevolutionWatchExit (self, inputClass):
+	def RevolutionWatchExit(self, inputClass):
 		return 0
 
-	def handleInput (self, inputClass):
+	def handleInput(self, inputClass):
 		""" Handles the input for this screen..."""
 
 		code = inputClass.getNotifyCode()
@@ -2282,7 +2243,7 @@ class RevolutionWatchAdvisor:
 				if (inputClass.getMouseX() == 0):
 					screen.hideScreen()
 
-					CyInterface().selectCity(gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), True);
+					CyInterface().selectCity(gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), True)
 
 					popupInfo = CyPopupInfo()
 					popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
@@ -2302,7 +2263,7 @@ class RevolutionWatchAdvisor:
 						self.showSpecialists()
 
 					# And pass it back to the screen
-					self.updateAppropriateCitySelection( self.currentPage, len( PyPlayer(CyGame().getActivePlayer()).getCityList() ) )
+					self.updateAppropriateCitySelection(self.currentPage, gc.getActivePlayer().getNumCities())
 
 					return 1
 
@@ -2323,7 +2284,7 @@ class RevolutionWatchAdvisor:
 				screen = CyGInterfaceScreen( "RevolutionWatchAdvisor", CvScreenEnums.REVOLUTION_WATCH_ADVISOR )
 				screen.hideScreen()
 
-				CyInterface().selectCity(gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), True);
+				CyInterface().selectCity(gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), True)
 
 				popupInfo = CyPopupInfo()
 				popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
@@ -2361,7 +2322,7 @@ class RevolutionWatchAdvisor:
 	def updateScreen(self):
 		""" Updates the screen."""
 
-		self.drawContents()
+		self.drawContents(self.currentPage)
 
 		return
 
@@ -2406,8 +2367,8 @@ class RevolutionWatchAdvisor:
 				self.listSelectedCities.append(screen.getTableText(page, 1, i))
 
 	def save(self, inputClass):
-		name = BugPath.findSettingsFile("CustomRevAdv.txt", "CustomRevAdv")
-		if (name):
+		name = SP.joinModDir("UserSettings", "CustomRevAdv", "CustomRevAdv.txt")
+		if SP.isFile(name):
 			file = open(name, 'w')
 
 			if(file != 0):
@@ -2745,10 +2706,10 @@ class RevolutionWatchAdvisor:
 	def loadPages(self):
 
 		self.PAGES = None
-		name = BugPath.findSettingsFile("CustomRevAdv.txt", "CustomRevAdv")
-		if (not name):
-			name = BugPath.findSettingsFile("CustomRevAdv.txt")
-		if (name):
+		name = SP.joinModDir("UserSettings", "CustomRevAdv", "CustomRevAdv.txt")
+		if not SP.isFile(name):
+			name = SP.joinModDir("UserSettings", "CustomRevAdv.txt")
+		if SP.isFile(name):
 			BugConfigTracker.add("CDA_Config", name)
 			try:
 				file = open(name, 'r')

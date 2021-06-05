@@ -150,18 +150,11 @@ class PediaFeature:
 				else:
 					szTemp += " (<color=0,230,0,255>+"
 				szTemp += str(iTemp) + (u'%c' % (GC.getYieldInfo(k).getChar())) + "</color>River)"
-			iTemp = CvTheFeature.getHillsYieldChange(k)
-			if iTemp:
-				if iTemp < 0:
-					szTemp += " (<color=255,0,0,255>"
-				else:
-					szTemp += " (<color=0,230,0,255>+"
-				szTemp += str(iTemp) + (u'%c' % (GC.getYieldInfo(k).getChar())) + "</color>Hill)"
 		if szTemp:
 			szTxt += "\n" + szTemp
 		iTemp = CvTheFeature.getTurnDamage()
 		if iTemp:
-			szTxt += "\nHazzard: %d%% damage per turn" % iTemp
+			szTxt += "\nHazard: %d%% damage per turn" % iTemp
 		iTemp = CvTheFeature.getWarmingDefense()
 		if iTemp:
 			szTxt += "\nGlobal Warming Defense Factor: %d" % iTemp

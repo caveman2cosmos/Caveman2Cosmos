@@ -18,7 +18,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "AutomatedSettings", "Automations")
 
 	def create(self, screen):
-		tab = self.createTab(screen)
+		self.createTab(screen)
 		panel = self.createMainPanel(screen)
 
 		#Standard Settings
@@ -181,7 +181,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 			self.buildNames = [(0,0)] * iNumBuilds
 			# Strip the <link="IMPROVEMENT_FOOBAR"> and </link> pair from the description while retaining the bit between them
 			for iI in range(iNumBuilds):
-				szDescription = CvUtil.remove_diacriticals(GC.getBuildInfo(iI).getDescription())
+				szDescription = CvUtil.convertToAscii(GC.getBuildInfo(iI).getDescription())
 				szNewDescription = ""
 				iStartIndex = szDescription.rfind("<link")
 				iEndIndex = szDescription.rfind("'>") + 2
@@ -195,19 +195,18 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 				self.buildNames[iI] = szNewDescription
 
 		GAME = GC.getGame()
-		CyPlayer = GC.getPlayer(GAME.getActivePlayer())
-		CyTeam = GC.getTeam(GAME.getActiveTeam())
+		player = GC.getPlayer(GAME.getActivePlayer())
+		team = GC.getTeam(GAME.getActiveTeam())
 
 		TRNSLTR = CyTranslator()
 		iNumBuilds = GC.getNumBuildInfos()
 		if self.ANewDawnOpt.isShowCityAutomations():
-			CyCity, i = CyPlayer.firstCity(False)
-			while CyCity:
+			for cityX in player.cities():
 				if not bFirst:
 					self.addSpacer(screen, left, "City Spacer")
 				bFirst = False
 
-				szCityName = CvUtil.remove_diacriticals(CyCity.getName())
+				szCityName = CvUtil.convertToAscii(cityX.getName())
 
 				self.addLabel(screen, left, TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", (szCityName,)), TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", (szCityName,)), None, False, True)
 				col1, col2, col3, col4, col5 = self.addMultiColumnLayout(screen, left, 5, "Automate_Workers")
@@ -215,12 +214,12 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 				iCount = 0
 				for j in range(iNumBuilds):
 					CvBuildInfo = GC.getBuildInfo(j)
-					if CyTeam.isHasTech(CvBuildInfo.getTechPrereq()):
+					if team.isHasTech(CvBuildInfo.getTechPrereq()):
 
 						columnKey = (col1, col2, col3, col4, col5)[iCount % 5]
 
 						control = str(szCityName + CvBuildInfo.getDescription() + "Check")
-						bEnabled = CyCity.isAutomatedCanBuild(j)
+						bEnabled = cityX.isAutomatedCanBuild(j)
 
 						szNewDescription = self.buildNames[j]
 
@@ -228,23 +227,22 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 						screen.setToolTip(control, TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD", (szCityName, szNewDescription)))
 
 						iCount += 1
-				CyCity, i = CyPlayer.nextCity(i, False)
 
 			self.addSpacer(screen, left, "City Spacer")
 		self.addLabel(screen, left, "AutomatedSettings__NationalWorkerSettings")
 		self.addLabel(screen, left, "AutomatedSettings__NationalWorkerSettingsHover")
 		col1, col2, col3, col4, col5 = self.addMultiColumnLayout(screen, left, 5, "Automate_Workers")
 
-		szNameKey = CyPlayer.getNameKey()
+		szNameKey = player.getNameKey()
 		iCount = 0
 		for i in range(iNumBuilds):
 			CvBuildInfo = GC.getBuildInfo(i)
-			if CyTeam.isHasTech(CvBuildInfo.getTechPrereq()):
+			if team.isHasTech(CvBuildInfo.getTechPrereq()):
 
 				columnKey = (col1, col2, col3, col4, col5)[iCount % 5]
 
-				control = CvUtil.remove_diacriticals(szNameKey + CvBuildInfo.getDescription() + "Check")
-				bEnabled = CyPlayer.isAutomatedCanBuild(i)
+				control = CvUtil.convertToAscii(szNameKey + CvBuildInfo.getDescription() + "Check")
+				bEnabled = player.isAutomatedCanBuild(i)
 
 				szNewDescription = self.buildNames[i]
 

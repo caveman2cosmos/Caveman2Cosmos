@@ -3,15 +3,14 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_GIRAFFE_TRAINER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GIRAFFE_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GIRAFFE_TRAINER</MovieDefineTag>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -49,21 +48,15 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GIRAFFE_TRAINER_HERITAGE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER_HERITAGE</ArtDefineTag>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
@@ -71,9 +64,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			</TechTypes>
 			<FreeBuilding>BUILDING_GIRAFFE_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -105,7 +95,6 @@
 			<Type>BUILDING_GIRAFFE_TRAINER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GIRAFFE_TRAINER_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER_HERITAGE</ArtDefineTag>
@@ -125,16 +114,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TOTEM_GIRAFFE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_TOTEM_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -147,14 +133,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -172,28 +152,19 @@
 		<BuildingInfo>
 			<Type>BUILDING_STABLE</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLO_FIELD</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARAVAN_POST</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>

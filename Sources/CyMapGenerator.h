@@ -16,6 +16,7 @@
 
 class CvMapGenerator;
 class CyPlot;
+
 class CyMapGenerator
 {	
 public:
@@ -30,7 +31,7 @@ public:
 	void generatePlotTypes();
 	void generateTerrain();
 
-	void setPlotTypes(boost::python::list& listPlotTypes);
+	void setPlotTypes(python::list& listPlotTypes);
 
 protected:
 	CvMapGenerator* m_pMapGenerator;

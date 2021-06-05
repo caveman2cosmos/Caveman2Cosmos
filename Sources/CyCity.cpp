@@ -1,4 +1,6 @@
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvCity.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlot.h"
@@ -283,11 +285,6 @@ void CyCity::changeProduction(int iChange)
 	m_pCity->changeProduction(iChange);
 }
 
-int CyCity::getProductionModifier() const
-{
-	return m_pCity->getProductionModifier();
-}
-
 int CyCity::getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const
 {
 	return m_pCity->getCurrentProductionDifference(
@@ -486,9 +483,9 @@ int CyCity::productionLeft() const
 	return m_pCity->productionLeft();
 }
 
-int CyCity::hurryGold(int /*HurryTypes*/ iHurry) const
+int64_t CyCity::getHurryGold(int /*HurryTypes*/ iHurry) const
 {
-	return m_pCity->hurryGold((HurryTypes)iHurry);
+	return m_pCity->getHurryGold((HurryTypes)iHurry);
 }
 
 int CyCity::hurryPopulation(int /*HurryTypes*/ iHurry) const
@@ -506,9 +503,14 @@ int CyCity::flatHurryAngerLength() const
 	return m_pCity->flatHurryAngerLength();
 }
 
-int CyCity::getNumBuilding(int /*BuildingTypes*/ iIndex) const
+void CyCity::setNumRealBuilding(int /*BuildingTypes*/ iIndex, int iNewValue)
 {
-	return iIndex != -1 ? m_pCity->getNumBuilding((BuildingTypes) iIndex) : 0;
+	m_pCity->setNumRealBuilding((BuildingTypes) iIndex, iNewValue);
+}
+
+int CyCity::getNumRealBuilding(int /*BuildingTypes*/ iIndex) const
+{
+	return m_pCity->getNumRealBuilding((BuildingTypes) iIndex);
 }
 
 int CyCity::getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const
@@ -558,7 +560,8 @@ CyArea* CyCity::area() const
 
 CyArea* CyCity::waterArea() const
 {
-	return new CyArea(m_pCity->waterArea());
+	CvArea* waterArea = m_pCity->waterArea();
+	return waterArea ? new CyArea(waterArea) : NULL;
 }
 
 CyPlot* CyCity::getRallyPlot() const
@@ -866,6 +869,11 @@ int CyCity::getFoodKept() const
 	return m_pCity->getFoodKept();
 }
 
+int CyCity::getMaxProductionOverflow() const
+{
+	return m_pCity->getMaxProductionOverflow();
+}
+
 int CyCity::getOverflowProduction() const
 {
 	return m_pCity->getOverflowProduction();
@@ -899,6 +907,11 @@ int CyCity::getSpaceProductionModifier() const
 int CyCity::getExtraTradeRoutes() const
 {
 	return m_pCity->getExtraTradeRoutes();
+}
+
+int CyCity::getMaxTradeRoutes() const
+{
+	return m_pCity->getMaxTradeRoutes();
 }
 
 void CyCity::changeExtraTradeRoutes(int iChange)
@@ -1106,6 +1119,11 @@ int /*PlayerTypes*/ CyCity::getOriginalOwner() const
 	return m_pCity->getOriginalOwner();
 }
 
+void CyCity::setOriginalOwner(int iPlayer)
+{
+	return m_pCity->setOriginalOwner((PlayerTypes)iPlayer);
+}
+
 int /*CultureLevelTypes*/ CyCity::getCultureLevel() const
 {
 	return m_pCity->getCultureLevel();
@@ -1121,14 +1139,9 @@ int CyCity::getSeaPlotYield(int /*YieldTypes*/ eIndex) const
 	return m_pCity->getSeaPlotYield((YieldTypes) eIndex);
 }
 
-int CyCity::getBaseYieldRate(int /*YieldTypes*/ eIndex) const
+int CyCity::getPlotYield(int /*YieldTypes*/ eIndex) const
 {
-	return m_pCity->getBaseYieldRate((YieldTypes)eIndex);
-}
-
-void CyCity::changeBaseYieldRate(int /*YieldTypes*/ eIndex, int iNewValue)
-{
-	m_pCity->changeBaseYieldRate((YieldTypes)eIndex, iNewValue);
+	return m_pCity->getPlotYield((YieldTypes)eIndex);
 }
 
 int CyCity::getBaseYieldRateModifier(int /*YieldTypes*/ eIndex, int iExtra) const
@@ -1533,16 +1546,6 @@ int CyCity::getEspionageDefenseModifier() const
 bool CyCity::isWorkingPlot(const CyPlot& kPlot) const
 {
 	return m_pCity->isWorkingPlot(kPlot.getPlot());
-}
-
-int CyCity::getNumRealBuilding(int /*BuildingTypes*/ iIndex) const
-{
-	return m_pCity->getNumRealBuilding((BuildingTypes) iIndex);
-}
-
-void CyCity::setNumRealBuilding(int /*BuildingTypes*/ iIndex, int iNewValue)
-{
-	m_pCity->setNumRealBuilding((BuildingTypes) iIndex, iNewValue);
 }
 
 bool CyCity::isHasReligion(int /*ReligionTypes*/ iIndex) const

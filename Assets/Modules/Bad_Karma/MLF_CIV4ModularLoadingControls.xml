@@ -2,7 +2,6 @@
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- Re-Modified by StrategyOnly -->
 <!-- Master Load File -->
-<!-- -->
 <Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<DefaultConfiguration>Bad_Karma_1</DefaultConfiguration>
 	<ConfigurationInfos>
@@ -10,7 +9,7 @@
 			<Type>Bad_Karma_1</Type>
 			<Description>All the Modules concerned with Bad_Karma events, units and buildings.</Description>
 			<Modules>
-				<Module> <!-- Available and  OK with Very Bad Locusts -->
+				<Module> <!-- Available and OK with Very Bad Locusts -->
 					<Directory>Locusts_Normal</Directory>
 					<bLoad>0</bLoad>
 				</Module>
@@ -30,8 +29,8 @@
 					<Directory>War_Of_The_Worlds</Directory>
 					<bLoad>0</bLoad>
 				</Module>
-				 <!-- For buildings, that can ruin cities and countryside -->
-				  <!-- By default is disabled, but you can enable it - it doesn't show message and there may be other issues. -->
+				<!-- For buildings, that can ruin cities and countryside -->
+				<!-- By default is disabled, but you can enable it - it doesn't show message and there may be other issues. -->
 				<Module>
 					<Directory>Building_Meltdown</Directory>
 					<bLoad>0</bLoad>

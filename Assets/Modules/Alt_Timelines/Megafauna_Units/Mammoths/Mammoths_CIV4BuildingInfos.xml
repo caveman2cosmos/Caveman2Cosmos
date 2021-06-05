@@ -10,7 +10,6 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_HERD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_HERD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MAMMOTH_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_HERD</ArtDefineTag>
 			<MapCategoryTypes>
@@ -45,16 +44,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAMMOTH_TRAINER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MAMMOTH_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAMMOTH_TRAINER</MovieDefineTag>
 			<ObsoleteTech>TECH_ARMORED_VEHICLES</ObsoleteTech>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -66,7 +64,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-            <Bonus>BONUS_MAMMOTH</Bonus>
+			<Bonus>BONUS_MAMMOTH</Bonus>
 			<iCost>624</iCost>
 			<iMinLatitude>40</iMinLatitude>
 			<iHealth>-1</iHealth>
@@ -113,32 +111,20 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
+				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAMMOTH_TRAINER_HERITAGE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER_EFFECT</ArtDefineTag>
 			<ObsoleteTech>TECH_ARMORED_VEHICLES</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -178,7 +164,6 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MAMMOTH_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER_EFFECT</ArtDefineTag>
 			<ObsoleteTech>TECH_ARMORED_VEHICLES</ObsoleteTech>
@@ -203,7 +188,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-            </BuildingInfo>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MASTER_HUNTER_TRADITION</Type>
 			<BonusHappinessChanges>
@@ -216,37 +201,25 @@
 		<BuildingInfo>
 			<Type>BUILDING_SHEARING_BARN</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STABLE</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLO_FIELD</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARAVAN_POST</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>

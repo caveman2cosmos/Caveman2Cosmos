@@ -93,9 +93,6 @@ def canConstruct(argsList):
 def cannotConstruct(argsList):
 	return GameUtils.cannotConstruct(argsList)
 
-def cannotCreate(argsList):
-	return GameUtils.cannotCreate(argsList)
-
 def cannotMaintain(argsList):
 	return GameUtils.cannotMaintain(argsList)
 
@@ -109,10 +106,6 @@ def AI_unitUpdate(argsList):
 	'AI moves units - return 0 to let AI handle it, return 1 to say that it was handled in python'
 	return GameUtils.AI_unitUpdate(argsList)
 
-def AI_doWar(argsList):
-	'AI decides whether to make war or peace - return 0 to let AI handle it, return 1 to say that it was handled in python'
-	return GameUtils.AI_doWar(argsList)
-
 def AI_doDiplo(argsList):
 	'AI decides does diplomacy for the turn - return 0 to let AI handle it, return 1 to say that it was handled in python'
 	return GameUtils.AI_doDiplo(argsList)
@@ -122,9 +115,6 @@ def calculateScore(argsList):
 
 def doHolyCity():
 	return GameUtils.doHolyCity()
-
-def doGold(argsList):
-	return GameUtils.doGold(argsList)
 
 def doResearch(argsList):
 	return GameUtils.doResearch(argsList)
@@ -176,12 +166,6 @@ def getConscriptUnitType(argsList):
 
 def canPickPlot(argsList):
 	return GameUtils.canPickPlot(argsList)
-
-def getUnitCostMod(argsList):
-	return GameUtils.getUnitCostMod(argsList)
-
-def getBuildingCostMod(argsList):
-	return GameUtils.getBuildingCostMod(argsList)
 
 def canUpgradeAnywhere(argsList):
 	return GameUtils.canUpgradeAnywhere(argsList)

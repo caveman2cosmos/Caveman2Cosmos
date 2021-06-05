@@ -5,11 +5,9 @@
 			<Type>TECH_DRUIDIC_TRADITIONS</Type>
 			<Description>TXT_KEY_TECH_DRUIDIC_TRADITIONS</Description>
 			<Civilopedia>TXT_KEY_TECH_DRUIDIC_TRADITIONS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_DRUIDIC_TRADITIONS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>34</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_PREHISTORIC</Era>
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>

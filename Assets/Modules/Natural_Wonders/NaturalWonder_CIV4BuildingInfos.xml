@@ -13,7 +13,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_AUYANTEPUI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_AUYANTEPUI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_AUYANTEPUI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -119,7 +118,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -239,7 +237,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_MT_SINAI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_MT_SINAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_MT_SINAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -322,7 +319,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_MT_EVEREST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_MT_EVEREST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_MT_EVEREST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -433,7 +429,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_MT_FUJI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_MT_FUJI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_MT_FUJI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -522,7 +517,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_BAIKAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_BAIKAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_BAIKAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -618,7 +612,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_BARRINGER_CRATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_BARRINGER_CRATER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_BARRINGER_CRATER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -692,7 +685,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_BASALT_ORGAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_BASALT_ORGAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_BASALT_ORGAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -770,7 +762,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_DEVILS_TABLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_DEVILS_TABLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_DEVILS_TABLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -840,7 +831,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_SOPKA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_SOPKA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_SOPKA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -919,7 +909,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_KRAKATOA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_KRAKATOA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_KRAKATOA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -1007,7 +996,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_NGORONGORO_CRATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_NGORONGORO_CRATER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_NGORONGORO_CRATER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -1109,7 +1097,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_NUKUORO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_NUKUORO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_NUKUORO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -1184,7 +1171,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_PAMUKKALE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_PAMUKKALE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_PAMUKKALE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -1271,7 +1257,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -1356,7 +1341,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_SHARK_BAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_SHARK_BAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_SHARK_BAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -1463,7 +1447,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_SUGARLOAF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_SUGARLOAF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_SUGARLOAF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -1523,7 +1506,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_ULURU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_ULURU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_ULURU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -1613,7 +1595,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_VICTORIA_FALLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_VICTORIA_FALLS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_VICTORIA_FALLS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -1715,7 +1696,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_KILIMANJARO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_KILIMANJARO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_KILIMANJARO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -1803,7 +1783,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_DEAD_SEA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_DEAD_SEA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_DEAD_SEA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
@@ -1909,9 +1888,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_OASIS_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_OASIS</FeatureType>
@@ -1922,7 +1901,11 @@
 				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<FreeBuilding>BUILDING_OASIS_MYTH_EFFECT</FreeBuilding>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_OASIS_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
+			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1937,6 +1920,25 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iAsset>2</iAsset>
+			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_OASIS_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_OASIS_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1961,14 +1963,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FALL_MYTH</Type>
@@ -1977,9 +1971,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_FALL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CRATER</FeatureType>
@@ -1990,7 +1984,11 @@
 				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<FreeBuilding>BUILDING_FALL_MYTH_EFFECT</FreeBuilding>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_FALL_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
+			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2019,6 +2017,25 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iAsset>2</iAsset>
+			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FALL_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_FALL_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2043,14 +2060,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OUTCROP_MYTH</Type>
@@ -2059,9 +2068,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_OUTCROP_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -2140,7 +2149,11 @@
 				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<FreeBuilding>BUILDING_OUTCROP_MYTH_EFFECT</FreeBuilding>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_OUTCROP_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
+			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2169,6 +2182,25 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iAsset>2</iAsset>
+			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_OUTCROP_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_OUTCROP_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2193,14 +2225,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VOLCANO_MYTH</Type>
@@ -2209,12 +2233,16 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_VOLCANO_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -2222,7 +2250,11 @@
 				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<FreeBuilding>BUILDING_VOLCANO_MYTH_EFFECT</FreeBuilding>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_VOLCANO_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
+			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2251,6 +2283,25 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iAsset>2</iAsset>
+			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VOLCANO_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_VOLCANO_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2275,14 +2326,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORAL_MYTH</Type>
@@ -2291,9 +2334,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CORAL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
@@ -2312,7 +2355,11 @@
 				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<FreeBuilding>BUILDING_CORAL_MYTH_EFFECT</FreeBuilding>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CORAL_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
+			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2341,6 +2388,25 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iAsset>2</iAsset>
+			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CORAL_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_CORAL_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2365,14 +2431,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REEF_MYTH</Type>
@@ -2381,9 +2439,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_REEF_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_REEF</FeatureType>
@@ -2402,7 +2460,11 @@
 				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<FreeBuilding>BUILDING_REEF_MYTH_EFFECT</FreeBuilding>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_REEF_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
+			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2431,6 +2493,25 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iAsset>2</iAsset>
+			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_REEF_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_REEF_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2455,14 +2536,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

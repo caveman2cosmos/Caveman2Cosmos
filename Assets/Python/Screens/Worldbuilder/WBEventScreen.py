@@ -131,8 +131,7 @@ class WBEventScreen:
 		screen.setTableColumnHeader("WBEventUnit", 1, "", 24)
 		screen.setTableColumnHeader("WBEventUnit", 2, "", iWidth - 48)
 
-		for i in xrange(pPlot.getNumUnits()):
-			pUnitX = pPlot.getUnit(i)
+		for pUnitX in pPlot.units():
 			if pUnitX.isNone(): continue
 			iRow = screen.appendTableRow("WBEventUnit")
 			sText = pUnitX.getName()
@@ -209,7 +208,7 @@ class WBEventScreen:
 			return
 		iHeight = (screen.getYResolution()/2 - self.iTable_Y - 2) / 24 * 24 + 2
 
-		sHeader = CyTranslator().getText("TXT_KEY_WB_CITY", ()) + " II"
+		sHeader = CyTranslator().getText("TXT_WORD_CITY", ()) + " II"
 		screen.addTableControlGFC("WBOtherCity", 1, screen.getXResolution() * 3/5 + 10, self.iTable_Y, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader("WBOtherCity", 0, "", iWidth)
 

@@ -5,7 +5,6 @@
 			<Type>BUILDING_HORSE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -38,18 +37,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HORSE_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HORSE_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HORSE_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -61,7 +56,6 @@
 			<Type>BUILDING_HORSE_STORY</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
@@ -82,12 +76,9 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HORSE_STORIES_EFFECT</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HORSE_STORIES_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -100,7 +91,6 @@
 			<Type>BUILDING_HORSE_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
@@ -114,14 +104,11 @@
 			<FreeBuilding>BUILDING_HORSE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HORSE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HORSE_STORIES_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HORSE_STORIES_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -140,7 +127,6 @@
 			<Type>BUILDING_HORSE_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>

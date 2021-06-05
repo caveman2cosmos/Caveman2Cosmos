@@ -3,11 +3,10 @@
 #ifndef CvPathGenerator_h__
 #define CvPathGenerator_h__
 
-#include <queue>
-
 //#define	DYNAMIC_PATH_STRUCTURE_VALIDATION
 
-//	Forward declarations of helper classes
+class CvMap;
+class CvPlot;
 class CvPathNode;
 class CvPathGenerator;
 class CvSelectionGroup;
@@ -128,7 +127,6 @@ public:
 		{
 			if ( m_nextBucketToAllocate == m_nextBucketIndex )
 			{
-				MEMORY_TRACK_EXEMPT();
 
 				std::vector<AllocationType>* newBucket = new std::vector<AllocationType>();
 
@@ -189,7 +187,6 @@ typedef struct
 
 //	Forward declarations of helper classes
 class CvPathPlotInfoStore;
-class CvPathGenerator;
 class CvPathGeneratorPlotInfo;
 
 class CvNodeCostInfo
@@ -217,7 +214,6 @@ typedef struct
 
 //	Forward declarations of helper classes
 class CvPathPlotInfoStore;
-class CvPathGenerator;
 class CvPathGeneratorPlotInfo;
 
 class CvPathGenerator : public CvPathGeneratorBase

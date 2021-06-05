@@ -6,10 +6,10 @@
 #include <boost155/type_traits.hpp>
 #include <boost155/utility/enable_if.hpp>
 
-#include "FAssert.h"
-#include "CvGlobals.h"
-#include "CvString.h"
+//#include "FAssert.h"
+//#include "CvString.h"
 #include "CyArgsList.h"
+#include "CvGlobals.h"
 
 #define FPythonAssert(expr, moduleName, functionName) FAssertMsg(expr, CvString::format("%s.%s", moduleName, functionName).c_str()) 
 
@@ -43,6 +43,15 @@ namespace Cy											\
 
 namespace Cy
 {
+	template <class Item_>
+	const python::list makeList(const std::vector<Item_>& vector)
+	{
+		python::list list = python::list();
+		foreach_(const Item_& i, vector)
+			list.append((int)i);
+		return list;
+	}
+
 	template < class Ty_ >
 	struct base_type
 	{
@@ -225,6 +234,8 @@ namespace Cy
 	// NO RETURN VALUE, NO ARGUMENTS ============================================================================
 	inline void call(const char* const moduleName, const char* const functionName, bool* bSucceeded = NULL)
 	{
+		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName);
 		FPythonAssert(bOK, moduleName, functionName);
 		if (bSucceeded != NULL)
@@ -236,12 +247,16 @@ namespace Cy
 	// Return call success, no assert
 	inline bool call_optional(const char* const moduleName, const char* const functionName)
 	{
+		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		return gDLL->getPythonIFace()->callFunction(moduleName, functionName);
 	}
 
 	// Check for success and default impl flag
 	inline bool call_override(const char* const moduleName, const char* const functionName)
 	{
+		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		return gDLL->getPythonIFace()->callFunction(moduleName, functionName)
 			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl();
 	}
@@ -250,6 +265,8 @@ namespace Cy
 	template < class ReturnValueTy_ >
 	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName, bool* bSucceeded = NULL)
 	{
+		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy = PythonReturnVarMapping<ReturnValueTy_>::default_value;
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy);
 		FPythonAssert(bOK, moduleName, functionName);
@@ -264,6 +281,8 @@ namespace Cy
 	template < class ReturnValueTy_ >
 	inline bool call_optional(const char* const moduleName, const char* const functionName, ReturnValueTy_& rval)
 	{
+		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
 		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy))
 		{
@@ -285,6 +304,8 @@ namespace Cy
 		bool
 	>::type call_override(const char* const moduleName, const char* const functionName, ReturnValueTy_& rval)
 	{
+		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
 		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy)
 			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl())
@@ -298,6 +319,8 @@ namespace Cy
 	// NO RETURN VALUE, ARGUMENTS ============================================================================
 	inline void call(const char* const moduleName, const char* const functionName, const Cy::Args& args, bool* bSucceeded = NULL)
 	{
+		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs());
 		FPythonAssert(bOK, moduleName, functionName);
 		if (bSucceeded != NULL)
@@ -308,12 +331,16 @@ namespace Cy
 
 	inline bool call_optional(const char* const moduleName, const char* const functionName, const Cy::Args& args)
 	{
+		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		return gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs());
 	}
 
 	// Check for success and default impl flag
 	inline bool call_override(const char* const moduleName, const char* const functionName, const Cy::Args& args)
 	{
+		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		return gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs()) 
 			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl();
 	}
@@ -322,6 +349,8 @@ namespace Cy
 	template < class ReturnValueTy_ >
 	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName, const Cy::Args& args, bool* bSucceeded = NULL)
 	{
+		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy = PythonReturnVarMapping<ReturnValueTy_>::default_value;
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy);
 		FPythonAssert(bOK, moduleName, functionName);
@@ -335,6 +364,8 @@ namespace Cy
 	template < class ReturnValueTy_ >
 	inline bool call_optional(const char* const moduleName, const char* const functionName, const Cy::Args& args, ReturnValueTy_& rval)
 	{
+		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
 		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy))
 		{
@@ -348,6 +379,8 @@ namespace Cy
 	template < class ReturnValueTy_ >
 	inline bool call_override(const char* const moduleName, const char* const functionName, const Cy::Args& args, ReturnValueTy_& rval)
 	{
+		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
+
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
 		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy)
 			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl())

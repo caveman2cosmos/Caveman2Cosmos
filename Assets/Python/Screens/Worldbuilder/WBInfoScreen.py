@@ -295,15 +295,13 @@ class WBInfoScreen:
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 				pPlayerX = GC.getPlayer(iPlayerX)
 				if pPlayerX.isAlive():
-					(loopUnit, i) = pPlayerX.firstUnit(False)
-					while(loopUnit):
+					for loopUnit in pPlayerX.units():
 						iItemX = loopUnit.getUnitType()
 						if iPlayerX == iSelectedPlayer:
 							lItems[iItemX][1] += 1
 						lItems[iItemX][2] += 1
 						if not [loopUnit.getX(), loopUnit.getY()] in lItems[iItemX][5]:
 							lItems[iItemX][5].append([iPlayerX, loopUnit.getID()])
-						(loopUnit, i) = pPlayerX.nextUnit(i, False)
 		elif iMode == 1:
 			iData1 = 7873
 			for i in xrange(GC.getNumPromotionInfos()):
@@ -312,8 +310,7 @@ class WBInfoScreen:
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 				pPlayerX = GC.getPlayer(iPlayerX)
 				if pPlayerX.isAlive():
-					(loopUnit, i) = pPlayerX.firstUnit(False)
-					while(loopUnit):
+					for loopUnit in pPlayerX.units():
 						for iItemX in xrange(GC.getNumPromotionInfos()):
 							if loopUnit.isHasPromotion(iItemX):
 								if iPlayerX == iSelectedPlayer:
@@ -321,7 +318,6 @@ class WBInfoScreen:
 								lItems[iItemX][2] += 1
 								if not [loopUnit.getX(), loopUnit.getY()] in lItems[iItemX][5]:
 									lItems[iItemX][5].append([iPlayerX, loopUnit.getID()])
-						(loopUnit, i) = pPlayerX.nextUnit(i, False)
 		elif iMode == 2:
 			iData1 = 7870
 			for i in xrange(GC.getNumBuildingInfos()):
@@ -332,7 +328,7 @@ class WBInfoScreen:
 				if pPlayerX.isAlive():
 					for loopCity in pPlayerX.cities():
 						for iItemX in xrange(GC.getNumBuildingInfos()):
-							if loopCity.getNumBuilding(iItemX) > 0:
+							if loopCity.getNumRealBuilding(iItemX) > 0:
 								if iPlayerX == iSelectedPlayer:
 									lItems[iItemX][1] += 1
 								lItems[iItemX][2] += 1
@@ -362,10 +358,8 @@ class WBInfoScreen:
 			for i in xrange(GC.getNumReligionInfos()):
 				Info = GC.getReligionInfo(i)
 				lItems.append([Info.getDescription(), pPlayer.getHasReligionCount(i), CyGame().countReligionLevels(i), i, Info.getButton(), []])
-			for i in xrange(CyMap().numPlots()):
-				pPlot = CyMap().plotByIndex(i)
-				if pPlot.isNone(): continue
-				if pPlot.isCity():
+			for pPlot in CyMap().plots():
+				if not pPlot.isNone() and pPlot.isCity():
 					pCity = pPlot.getPlotCity()
 					for iItemX in xrange(GC.getNumReligionInfos()):
 						if pCity.isHasReligion(iItemX):
@@ -377,8 +371,7 @@ class WBInfoScreen:
 			for i in xrange(GC.getNumCorporationInfos()):
 				Info = GC.getCorporationInfo(i)
 				lItems.append([Info.getDescription(), pPlayer.getHasCorporationCount(i), CyGame().countCorporationLevels(i), i, Info.getButton(), []])
-			for i in xrange(CyMap().numPlots()):
-				pPlot = CyMap().plotByIndex(i)
+			for pPlot in CyMap().plots():
 				if pPlot.isNone(): continue
 				if pPlot.isCity():
 					pCity = pPlot.getPlotCity()
@@ -391,8 +384,7 @@ class WBInfoScreen:
 			for i in xrange(GC.getNumTerrainInfos()):
 				Info = GC.getTerrainInfo(i)
 				lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-			for i in xrange(CyMap().numPlots()):
-				pPlot = CyMap().plotByIndex(i)
+			for pPlot in CyMap().plots():
 				if pPlot.isNone(): continue
 				iItemX = pPlot.getTerrainType()
 				if iItemX == -1: continue
@@ -407,8 +399,7 @@ class WBInfoScreen:
 			for i in xrange(GC.getNumFeatureInfos()):
 				Info = GC.getFeatureInfo(i)
 				lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-			for i in xrange(CyMap().numPlots()):
-				pPlot = CyMap().plotByIndex(i)
+			for pPlot in CyMap().plots():
 				if pPlot.isNone(): continue
 				iItemX = pPlot.getFeatureType()
 				if iItemX == -1: continue
@@ -423,8 +414,7 @@ class WBInfoScreen:
 			for i in xrange(GC.getNumBonusInfos()):
 				Info = GC.getBonusInfo(i)
 				lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-			for i in xrange(CyMap().numPlots()):
-				pPlot = CyMap().plotByIndex(i)
+			for pPlot in CyMap().plots():
 				if pPlot.isNone(): continue
 				iItemX = pPlot.getBonusType(-1)
 				if iItemX == -1: continue
@@ -439,8 +429,7 @@ class WBInfoScreen:
 			for i in xrange(GC.getNumImprovementInfos()):
 				Info = GC.getImprovementInfo(i)
 				lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-			for i in xrange(CyMap().numPlots()):
-				pPlot = CyMap().plotByIndex(i)
+			for pPlot in CyMap().plots():
 				if pPlot.isNone(): continue
 				iItemX = pPlot.getImprovementType()
 				if iItemX == -1: continue
@@ -455,8 +444,7 @@ class WBInfoScreen:
 			for i in xrange(GC.getNumRouteInfos()):
 				Info = GC.getRouteInfo(i)
 				lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-			for i in xrange(CyMap().numPlots()):
-				pPlot = CyMap().plotByIndex(i)
+			for pPlot in CyMap().plots():
 				if pPlot.isNone(): continue
 				iItemX = pPlot.getRouteType()
 				if iItemX == -1: continue

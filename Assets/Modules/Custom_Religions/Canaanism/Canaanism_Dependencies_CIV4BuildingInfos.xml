@@ -13,10 +13,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_BELIEF_RESURRECTION</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CANAANISM_TEMPLE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_CANAANISM_TEMPLE</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>

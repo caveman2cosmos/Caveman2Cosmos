@@ -1,4 +1,4 @@
-version: 40.1.{build}
+version: 41.2.{build}
 image: Visual Studio 2019
 # skip_tags is important or you will get an infinite build loop when we apply release tags
 skip_tags: true
@@ -36,11 +36,7 @@ build_script:
 - cmd: >-
     call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%APPVEYOR_BUILD_FOLDER%\Tools\CI\fix_sources_timestamps.ps1"
 
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" Debug build
-
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" Release build
-
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\_TrimFBuildCache.bat"
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\_AppveyorTestBuild.bat"
 
 test_script:
 - cmd: >-

@@ -4,16 +4,9 @@
 from CvPythonExtensions import *
 from CvScreenEnums import *
 import types
-
 import CvMainInterface
-
 import CvOptionsScreen
 import CvReplayScreen
-
-#import CvDiplomacy
-
-import CvEventInterface
-import CvPopupInterface
 import ScreenInput as PyScreenInput
 
 import BugCore
@@ -140,9 +133,7 @@ def showTopCivs():
 
 def showInfoScreen(argsList):
 	if CyGame().getActivePlayer() != -1:
-		iTabID = argsList[0]
-		iEndGame = argsList[1]
-		screenMap[INFO_SCREEN].showScreen(-1, iTabID, iEndGame)
+		screenMap[INFO_SCREEN].interfaceScreen(argsList[0], argsList[1])
 
 def showDebugInfoScreen():
 	screenMap[DEBUG_INFO_SCREEN].interfaceScreen()
@@ -403,7 +394,7 @@ def WorldBuilderNormalPlayerTabModeCB():
 # Called by the exe for WB and AS #
 #---------------------------------#
 def WorldBuilderOnAdvancedStartBrushSelected(argsList):
-	iList, iIndex, iTab = argsList;
+	iList, iIndex, iTab = argsList
 	print "WorldBuilderOnAdvancedStartBrushSelected, iList=%d, iIndex=%d, type=%d" %(iList, iIndex, iTab)
 	if iTab == advancedStartScreen.getTechTab():
 		showTechChooser()

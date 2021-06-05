@@ -11,8 +11,6 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
-import ScreenInput
 import string
 
 gc = CyGlobalContext()
@@ -103,7 +101,7 @@ class SevoPediaReligion:
 		splitText = string.split( szSpecialText, "\n" )
 		for special in splitText:
 			if len( special ) != 0:
-				screen.appendListBoxString( listName, special, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+				screen.appendListBoxString( listName, special, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0 )
 
 # Rise of Mankind 2.9
 	def placeBuilding(self):
@@ -115,7 +113,7 @@ class SevoPediaReligion:
 			# buildings have several options for religions so need to check them all, only one of them needs to be True
 			iPrereq = gc.getBuildingInfo(iBuilding).getPrereqReligion()
 			iPrereq2 = gc.getBuildingInfo(iBuilding).getReligionType()
-			iPrereq3 = gc.getBuildingInfo(iBuilding).getStateReligion()
+			iPrereq3 = gc.getBuildingInfo(iBuilding).getPrereqStateReligion()
 			iPrereq4 = gc.getBuildingInfo(iBuilding).getGlobalReligionCommerce()
 			if (iPrereq == self.iReligion or iPrereq2 == self.iReligion or iPrereq3 == self.iReligion):
 				screen.attachImageButton(panelName, "", gc.getBuildingInfo(iBuilding).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, iBuilding, 1, False)
@@ -143,7 +141,7 @@ class SevoPediaReligion:
 		panelName = self.top.getNextWidgetName()
 		screen.addPanel( panelName, "", "", True, True, self.X_TEXT, self.Y_TEXT, self.W_TEXT, self.H_TEXT, PanelStyles.PANEL_STYLE_BLUE50 )
 		szText = gc.getReligionInfo(self.iReligion).getCivilopedia()
-		screen.attachMultilineText( panelName, "Text", szText, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.attachMultilineText( panelName, "Text", szText, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 
 

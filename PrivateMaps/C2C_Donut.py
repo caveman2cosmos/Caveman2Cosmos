@@ -8,12 +8,11 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
 from math import sqrt
-from CvMapGeneratorUtil import FractalWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
+#from CvMapGeneratorUtil import FractalWorld
+#from CvMapGeneratorUtil import TerrainGenerator
+#from CvMapGeneratorUtil import FeatureGenerator
 #from CvMapGeneratorUtil import BonusBalancer
 
 #balancer = BonusBalancer()
@@ -260,7 +259,7 @@ def generateTerrainTypes():
 class DonutFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 	def addIceAtPlot(self, pPlot, iX, iY, lat):
 		# We don' need no steeking ice. M'kay? Alrighty then.
-		ice = 0
+		return
 		
 	def addJunglesAtPlot(self, pPlot, iX, iY, lat):
 		if (CyMap().getCustomMapOption(1) == 1): pass #No Jungles option
@@ -280,11 +279,8 @@ def findStartingPlot(argsList):
 	[playerID] = argsList
 
 	def isValid(playerID, x, y):
-
 		pWaterArea = CyMap().plot(x, y).waterArea()
-		if pWaterArea.isNone():
-			return False
-		return not pWaterArea.isLake()
+		return pWaterArea is not None and not pWaterArea.isLake()
 
 	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
 

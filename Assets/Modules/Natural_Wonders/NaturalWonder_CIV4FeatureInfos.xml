@@ -25,6 +25,11 @@
 			<Description>TXT_KEY_FEATURE_GREAT_BARRIER</Description>
 			<Civilopedia>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
+			<YieldChanges>
+				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>2</iYieldChange>
+			</YieldChanges>
 			<iMovement>5</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iTurnDamage>15</iTurnDamage>
@@ -52,12 +57,16 @@
 			<Type>FEATURE_GREAT_BARRIER_REEF_BEACON</Type>
 			<Description>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_BEACON</Description>
 			<Civilopedia>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF_BEACON</ArtDefineTag>
+			<YieldChanges>
+				<iYieldChange>2</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>3</iYieldChange>
+			</YieldChanges>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iTurnDamage>5</iTurnDamage>
 			<bNoCity>1</bNoCity>
-			<bNoImprovement>1</bNoImprovement>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -81,11 +90,15 @@
 			<Type>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</Type>
 			<Description>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF_LIGHTHOUSE</ArtDefineTag>
+			<YieldChanges>
+				<iYieldChange>2</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+				<iYieldChange>4</iYieldChange>
+			</YieldChanges>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<bNoCity>1</bNoCity>
-			<bNoImprovement>1</bNoImprovement>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>

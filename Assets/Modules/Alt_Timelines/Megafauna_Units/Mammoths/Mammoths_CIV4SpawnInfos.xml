@@ -4,10 +4,10 @@
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_MAMMOTH_RIDER</Type>
 			<UnitType>UNIT_NEANDERTHAL_MAMMOTH_RIDER</UnitType>
-			<PlayerType>41</PlayerType>
+			<PlayerType>49</PlayerType>
 			<iGlobalTurns>800</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>

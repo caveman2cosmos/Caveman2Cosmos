@@ -191,17 +191,19 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getNumCityNames", &CyPlayer::getNumCityNames, "int ()")
 		.def("getCityName", &CyPlayer::getCityName, "std::wstring (int iIndex)")
 
-		.def("cities", &CyPlayer::cities/*, python::return_value_policy<python::manage_new_object>()*/)
+		.def("cities", &CyPlayer::cities)
 		.def("firstCity", &CyPlayer::firstCity, "tuple(CyCity, int iterOut) (bool bReverse) - gets the first city")
 		.def("nextCity", &CyPlayer::nextCity, "tuple(CyCity, int iterOut) (int iterIn, bool bReverse) - gets the next city")
 		.def("getNumCities", &CyPlayer::getNumCities, "int ()")
 		.def("getCity", &CyPlayer::getCity, python::return_value_policy<python::manage_new_object>(), "CyCity* (int iID)")
 
+		.def("units", &CyPlayer::units)
 		.def("firstUnit", &CyPlayer::firstUnit, "tuple(CyUnit, int iterOut) (bool bReverse) - gets the first unit")
 		.def("nextUnit", &CyPlayer::nextUnit, "tuple(CyUnit, int iterOut) (int iterIn, bool bReverse) - gets the next unit")
 		.def("getNumUnits", &CyPlayer::getNumUnits, "int ()")
 		.def("getUnit", &CyPlayer::getUnit, python::return_value_policy<python::manage_new_object>(), "CyUnit* (int iID)")
 
+		.def("groups", &CyPlayer::groups)
 		.def("getNumSelectionGroups", &CyPlayer::getNumSelectionGroups, "int ()")
 		.def("getSelectionGroup", &CyPlayer::getSelectionGroup, python::return_value_policy<python::manage_new_object>(), "CvSelectionGroup* (int iID)")
 

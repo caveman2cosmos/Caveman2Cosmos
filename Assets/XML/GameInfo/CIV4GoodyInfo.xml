@@ -627,7 +627,7 @@
 			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
-			<Type>GOODY_MODERN_WORKER</Type>
+			<Type>GOODY_MODERN_WORKER2</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
 			<FreeUnit>UNIT_WORKER_MODERN</FreeUnit>

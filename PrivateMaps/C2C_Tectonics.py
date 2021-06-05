@@ -662,7 +662,7 @@ class voronoiMap:
 					self.heightMap[i] = self.heightMap[i] - 1
 
 
-	def min( height, left, right, top, bottom ):
+	def min(self, height, left, right, top, bottom):
 		minHeight = height
 		if ( minHeight > left ):
 			minHeight = left
@@ -2067,7 +2067,7 @@ def findStartingPlot(argsList):
 	allOnBest = userInputLandmass == 7 # "Terra"
 	isolatedStarts = userInputLandmass == 4 # "Islands"
 
-	areas = CvMapGeneratorUtil.getAreas()
+	areas = MAP.areas()
 	areaValue = {}
 	for area in areas:
 		if area.isWater(): continue
@@ -2112,7 +2112,7 @@ def findStartingPlot(argsList):
 						players = 2
 				value = areaValue[area.getID()] / (1 + 2*players)
 				if value > bestAreaValue:
-					bestAreaValue = value;
+					bestAreaValue = value
 					bestArea = area.getID()
 
 			#-----

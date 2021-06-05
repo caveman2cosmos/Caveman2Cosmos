@@ -67,7 +67,7 @@ class SpellDumpDefaultLights(NifSpell):
 
     def branchinspect(self, branch):
         # stick to main tree nodes, and material and texture properties
-        return True 
+        return True
         #branch.__class__.__name__ == 'NiDirectionalLight'
         # isinstance(branch, (NifFormat.NiDirectionalLight))
 
@@ -75,9 +75,8 @@ class SpellDumpDefaultLights(NifSpell):
         if branch.__class__.__name__ == 'NiDirectionalLight': # and branch.get_global_display() == '__MAX_Default_Light':
             print ('NiDirectionalLight in ' + self.stream.name)
             return False
-        else:
-            # keep looking for blocks of interest
-            return True
+        # keep looking for blocks of interest
+        return True
 
 class SpellRemoveDefaultLights(SpellDelBranches):
     """Remove default lights."""
@@ -184,7 +183,7 @@ class NifToaster(pyffi.spells.nif.NifToaster):
         "opt_cleanfarnif": "modify_cleanfarnif",
         }
     DEFAULT_OPTIONS = dict(
-        raisetesterror=False, 
+        raisetesterror=False,
         verbose=0,
         pause=False,
         exclude=[],
@@ -192,21 +191,21 @@ class NifToaster(pyffi.spells.nif.NifToaster):
         examples=False,
         spells=False,
         interactive=False,
-        helpspell=False, 
-        dryrun=False, 
-        prefix="", 
-        suffix="", 
+        helpspell=False,
+        dryrun=False,
+        prefix="",
+        suffix="",
         arg="",
-        createpatch=False, 
-        applypatch=False, 
-        diffcmd="", 
+        createpatch=False,
+        applypatch=False,
+        diffcmd="",
         patchcmd="",
         series=False,
-        skip=[], 
+        skip=[],
         only=[],
-        jobs=16, 
+        jobs=16,
         refresh=32,
-        sourcedir="", 
+        sourcedir="",
         destdir="",
         archives=False,
         resume=False,

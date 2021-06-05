@@ -7,8 +7,9 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameAI.h"
 #include "CvDate.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
 
 CvDate::CvDate()
 {
@@ -82,11 +83,11 @@ CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 		calculateEndDates(eActualGameSpeed);
 	}
 
-	for (std::vector<CvDateIncrement>::const_iterator it = aIncrements.begin(); it != aIncrements.end(); ++it)
+	foreach_(const CvDateIncrement& it, aIncrements)
 	{
-		if (*this < it->m_endDate)
+		if (*this < it.m_endDate)
 		{
-			return *it;
+			return it;
 		}
 	}
 	return aIncrements[aIncrements.size()-1];

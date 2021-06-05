@@ -1,7 +1,9 @@
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvReplayInfo.h"
 #include "CvReplayMessage.h"
@@ -328,9 +330,8 @@ void CvReplayInfo::addReplayMessage(CvReplayMessage* pMessage)
 
 void CvReplayInfo::clearReplayMessageMap()
 {
-	for (ReplayMessageList::const_iterator itList = m_listReplayMessages.begin(); itList != m_listReplayMessages.end(); ++itList)
+	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
-		const CvReplayMessage* pMessage = *itList;
 		if (NULL != pMessage)
 		{
 			delete pMessage;
@@ -581,7 +582,7 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 		}
 		else
 		{
-			m_szMapScriptName = gDLL->getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN");
+			m_szMapScriptName = gDLL->getText("TXT_KEY_TRAITHELP_PLAYER_UNKNOWN");
 		}
 		stream.Read(&iType);
 		m_eWorldSize = (WorldSizeTypes)iType;

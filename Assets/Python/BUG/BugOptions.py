@@ -108,7 +108,6 @@ Each file can have multiple sections.
 from CvPythonExtensions import *
 import BugConfig
 import BugInit
-import BugPath
 import SystemPaths as SP
 import BugUtil
 import ColorUtil
@@ -170,7 +169,7 @@ class IniFile(object):
 		self.config.addInitialComment("")
 		self.config.addInitialComment(BugUtil.getPlainText("TXT_KEY_BUG_CREATED_BY_HEADER"))
 		self.config.addInitialComment()
-		defaultHeader = BugUtil.getPlainText("TXT_KEY_BUG_DEFAULT") + ": "
+		defaultHeader = BugUtil.getPlainText("TXT_WORD_DEFAULT") + ": "
 		for option in self.options:
 			if not option.isParameterized():
 				section = self.getSection(option.getSection())

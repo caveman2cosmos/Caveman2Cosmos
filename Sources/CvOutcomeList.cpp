@@ -7,7 +7,14 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvOutcome.h"
+#include "CvOutcomeList.h"
+#include "CvPlot.h"
+#include "CvUnit.h"
 #include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
 
 CvOutcomeList::~CvOutcomeList()
 {
@@ -27,7 +34,7 @@ int CvOutcomeList::getNumOutcomes() const
 
 bool CvOutcomeList::isPossible(const CvUnit &kUnit) const
 {
-	int iNum = getNumOutcomes();
+	const int iNum = getNumOutcomes();
 	if (iNum <= 0)
 		return false;
 
@@ -44,7 +51,7 @@ bool CvOutcomeList::isPossible(const CvUnit &kUnit) const
 
 bool CvOutcomeList::isPossibleSomewhere(const CvUnit &kUnit) const
 {
-	int iNum = getNumOutcomes();
+	const int iNum = getNumOutcomes();
 	if (iNum <= 0)
 		return false;
 
@@ -61,7 +68,7 @@ bool CvOutcomeList::isPossibleSomewhere(const CvUnit &kUnit) const
 
 bool CvOutcomeList::isPossibleInPlot(const CvUnit &kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
-	int iNum = getNumOutcomes();
+	const int iNum = getNumOutcomes();
 	if (iNum <= 0)
 		return false;
 
@@ -232,7 +239,7 @@ bool CvOutcomeList::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 	return true;
 }
 
-void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtility* pXML)
+void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList)
 {
 	if (isEmpty())
 	{
@@ -247,7 +254,7 @@ void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtilit
 
 void CvOutcomeList::getCheckSum(unsigned int& iSum) const
 {
-	int num = getNumOutcomes();
+	const int num = getNumOutcomes();
 	for (int index = 0; index < num; index++)
 	{
 		m_aOutcome[index]->getCheckSum(iSum);

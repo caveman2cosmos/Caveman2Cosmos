@@ -1,17 +1,14 @@
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
 
 #include <psapi.h>
-
-//
-// Discord RPC
-//
-#include "discord.h"
-C_DiscordRPCCommunication* pDiscord = nullptr;
 
 static CRITICAL_SECTION g_cPythonSection;
 #ifdef USE_INTERNAL_PROFILER
 static CRITICAL_SECTION cSampleSection;
 #endif
+
+std::string modDir;
 
 // BUG - EXE/DLL Paths - start
 HANDLE dllModule = NULL;
@@ -68,6 +65,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		GetModuleFileNameA((HMODULE)dllModule, pathBuffer, sizeof(pathBuffer));
 		std::string dllPath = pathBuffer;
 		std::string dllDir = dllPath.substr(0, dllPath.length() - strlen("CvGameCoreDLL.dll"));
+		modDir = dllDir;
 		std::string tokenFile = dllDir + "\\..\\git_directory.txt";
 		std::ifstream stream(tokenFile.c_str());
 		// If we loaded the directory token file we are in a dev environment and should run FPKLive, and check for DLL changes
@@ -75,6 +73,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		{
 			std::string git_dir;
 			std::getline(stream, git_dir);
+			modDir = git_dir;
 
 			if(!runProcess(git_dir + "\\Tools\\FPKLive.exe", git_dir + "\\Tools"))
 			{
@@ -92,9 +91,8 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				}
 			}
 		}
-
-		pDiscord = new C_DiscordRPCCommunication(dllDir);
-		discordWorkDirectory = dllDir;
+		logging::createLogsFolder();
+		logging::deleteLogs();
 		}
 		break;
 	case DLL_THREAD_ATTACH:
@@ -487,7 +485,7 @@ void IFPEnd()
 	//OutputDebugString("IFPEnd\n");
 	QueryPerformanceFrequency(&freq);
 
-	g_DLL->logMsg("IFP_log.txt","Fn\tTime (mS)\tMain thread time (mS)\tAvg time\t#calls\tChild time\tSelf time\tParent\tAlternate Time\n");
+	gDLL->logMsg("IFP_log.txt","Fn\tTime (mS)\tMain thread time (mS)\tAvg time\t#calls\tChild time\tSelf time\tParent\tAlternate Time\n");
 
 	for(int i = 0; i < numSamples; i++ )
 	{
@@ -504,7 +502,7 @@ void IFPEnd()
 					(int)((1000*sampleList[i]->Accumulator[RESERVED_THREAD_SLOT].QuadPart)/freq.QuadPart) - (int)((1000*sampleList[i]->ChildrenSampleTime[RESERVED_THREAD_SLOT].QuadPart)/freq.QuadPart),
 					sampleList[i]->Parent == -1 ? "" : sampleList[sampleList[i]->Parent]->Name,
 					(int)((1000*sampleList[i]->AlternateSampleSetTime[RESERVED_THREAD_SLOT].QuadPart)/freq.QuadPart));
-			g_DLL->logMsg("IFP_log.txt",buffer);
+			gDLL->logMsg("IFP_log.txt",buffer);
 		}
 	}
 }
@@ -689,4 +687,22 @@ int intPow(const int x, const int p)
 	}
 	return static_cast<int>(iResult);
 }
+
+int getModifiedIntValue(const int iValue, const int iMod)
+{
+	if (iMod > 0)
+	{
+		return iValue * (100 + iMod) / 100;
+	}
+	if (iMod < 0)
+	{
+		return iValue * 100 / (100 - iMod);
+	}
+	return iValue;
+}
 // ! Toffer
+
+const std::string getModDir()
+{
+	return modDir;
+}

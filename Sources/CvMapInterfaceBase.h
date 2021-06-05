@@ -12,10 +12,12 @@
 //-----------------------------------------------------------------------------
 //
 
-
-#include "CvArea.h"
 #include "CvPlot.h"
 
+class CvArea;
+class CvCity;
+class CvMapExternal;
+class CvSelectionGroup;
 
 //
 // holds initialization info
@@ -35,12 +37,10 @@ struct CvMapInitData
 	{ }
 };
 
-
 //
 // CvMapInterfaceBase
 //
-class CvMapExternal;
-class CvMapInterfaceBase
+class CvMapInterfaceBase : bst::noncopyable
 {
 public:
 	CvMapInterfaceBase();
@@ -66,44 +66,43 @@ public:
 /***** Parallel Maps - End *****/
 /*******************************/
 
-	virtual void erasePlots() = 0;																			// Exposed to Python
-	virtual void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false) = 0;		// Exposed to Python
-	virtual void setAllPlotTypes(PlotTypes ePlotType) = 0;												// Exposed to Python
+	virtual void erasePlots() = 0;
+	virtual void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false) = 0;
+	virtual void setAllPlotTypes(PlotTypes ePlotType) = 0;
 
-	virtual void doTurn() = 0;																			
+	virtual void doTurn() = 0;
 
 	virtual void updateFlagSymbols() = 0;
 
 	virtual void updateFog() = 0;
-	virtual void updateVisibility() = 0;																// Exposed to Python
+	virtual void updateVisibility() = 0;
 	virtual void updateSymbolVisibility() = 0;
 	virtual void updateSymbols() = 0;
-	virtual void updateMinimapColor() = 0;															// Exposed to Python
+	virtual void updateMinimapColor() = 0;
 	virtual void updateSight(bool bIncrement, bool bUpdatePlotGroups = true) = 0;
 	virtual void updateIrrigated() = 0;
 	virtual void updateCenterUnit() = 0;
 	virtual void updateWorkingCity() = 0;
-	virtual void updateMinOriginalStartDist(const CvArea* pArea) = 0;										// Exposed to Python
+	virtual void updateMinOriginalStartDist(const CvArea* pArea) = 0;
 	virtual void updateYield() = 0;
 
 	virtual void verifyUnitValidPlot() = 0;
 
-	virtual CvPlot* syncRandPlot(int iFlags = 0, int iArea = -1, int iMinUnitDistance = -1, int iTimeout = 100) = 0;// Exposed to Python 
+	virtual CvPlot* syncRandPlot(int iFlags = 0, int iArea = -1, int iMinUnitDistance = -1, int iTimeout = 100) = 0;
 
-	virtual CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, const CvCity* pSkipCity = NULL) const = 0;	// Exposed to Python
-	virtual CvSelectionGroup* findSelectionGroup(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, bool bReadyToSelect = false, bool bWorkers = false) const = 0;				// Exposed to Python
+	virtual CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, const CvCity* pSkipCity = NULL) const = 0;
+	virtual CvSelectionGroup* findSelectionGroup(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, bool bReadyToSelect = false, bool bWorkers = false) const = 0;
 
-	virtual CvArea* findBiggestArea(bool bWater) const = 0;																						// Exposed to Python
+	virtual CvArea* findBiggestArea(bool bWater) const = 0;
 
-	virtual int getMapFractalFlags() const = 0;																												// Exposed to Python
-	virtual bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const = 0;										// Exposed to Python
+	virtual int getMapFractalFlags() const = 0;
 
-	virtual bool isPlot(int iX, int iY) const = 0;																		// Exposed to Python
-	virtual int numPlots() const = 0; 																								// Exposed to Python
+	virtual bool isPlot(int iX, int iY) const = 0;
+	virtual int numPlots() const = 0;
 
-	virtual int plotNum(int iX, int iY) const = 0;																		// Exposed to Python
-	virtual int plotX(int iIndex) const = 0;																										// Exposed to Python
-	virtual int plotY(int iIndex) const = 0;																										// Exposed to Python
+	virtual int plotNum(int iX, int iY) const = 0;
+	virtual int plotX(int iIndex) const = 0;
+	virtual int plotY(int iIndex) const = 0;
 
 	virtual int pointXToPlotX(float fX) const = 0;
 	virtual float plotXToPointX(int iX) const = 0;
@@ -114,33 +113,33 @@ public:
 	virtual float getWidthCoords() const = 0;
 	virtual float getHeightCoords() const = 0;
 
-	virtual int maxPlotDistance() const = 0;																								// Exposed to Python
-	virtual int maxStepDistance() const = 0;																								// Exposed to Python
+	virtual int maxPlotDistance() const = 0;
+	virtual int maxStepDistance() const = 0;
 
-	virtual int getGridWidth() const = 0;																		// Exposed to Python
-	virtual int getGridHeight() const = 0;																	// Exposed to Python
-	virtual int getLandPlots() const = 0;																					// Exposed to Python
+	virtual int getGridWidth() const = 0;
+	virtual int getGridHeight() const = 0;
+	virtual int getLandPlots() const = 0;
 
-	virtual int getOwnedPlots() const = 0;																				// Exposed to Python
+	virtual int getOwnedPlots() const = 0;
 
-	virtual int getTopLatitude() const = 0;																									// Exposed to Python
-	virtual int getBottomLatitude() const = 0;																							// Exposed to Python
+	virtual int getTopLatitude() const = 0;
+	virtual int getBottomLatitude() const = 0;
 
-	virtual bool isWrapX() const = 0;																							// Exposed to Python
-	virtual bool isWrapY() const = 0;																							// Exposed to Python
+	virtual bool isWrapX() const = 0;
+	virtual bool isWrapY() const = 0;
 	virtual bool isWrap() const = 0;
-	virtual WorldSizeTypes getWorldSize() const = 0;															// Exposed to Python
-	virtual ClimateTypes getClimate() const = 0;																	// Exposed to Python
-	virtual SeaLevelTypes getSeaLevel() const = 0;																// Exposed to Python
+	virtual WorldSizeTypes getWorldSize() const = 0;
+	virtual ClimateTypes getClimate() const = 0;
+	virtual SeaLevelTypes getSeaLevel() const = 0;
 
 	virtual int getNumCustomMapOptions() const = 0;
-	virtual CustomMapOptionTypes getCustomMapOption(int iOption) const = 0;				// Exposed to Python
+	virtual CustomMapOptionTypes getCustomMapOption(int iOption) const = 0;
 
-	virtual CvPlot* plotByIndex(int iIndex) const = 0;											// Exposed to Python
-	virtual CvPlot* plot(int iX, int iY) const = 0;													// Exposed to Python
+	virtual CvPlot* plotByIndex(int iIndex) const = 0;
+	virtual CvPlot* plot(int iX, int iY) const = 0;
 	virtual CvPlot* pointToPlot(float fX, float fY) const = 0;
 
-	virtual int getNumAreas() const = 0;														// Exposed to Python
+	virtual int getNumAreas() const = 0;
 	virtual int getNumLandAreas() const = 0;
 
 	// Serialization:

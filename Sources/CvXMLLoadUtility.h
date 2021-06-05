@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef XML_LOAD_UTILITY_H
+#define XML_LOAD_UTILITY_H
+
 //  $Header:
 //------------------------------------------------------------------------------------------------
 //
@@ -12,30 +15,15 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
-#ifndef XML_LOAD_UTILITY_H
-#define XML_LOAD_UTILITY_H
 
-#include "CvGlobals.h"
 #include "FVariableSystem.h"
 
-#include <xercesc/dom/DOM.hpp>
-#include <xercesc/util/XMLString.hpp>
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/parsers/XercesDOMParser.hpp>
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-#include <xercesc/framework/MemBufInputSource.hpp>
-#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
-#include <xercesc/framework/Wrapper4InputSource.hpp>
-#include <xercesc/validators/common/Grammar.hpp>
-
-class FXmlSchemaCache;
-class FXml;
+class CvInternalGlobals;
 class CvGameText;
 class CvCacheObject;
 class CvImprovementBonusInfo;
+class FXmlSchemaCache;
+class FXml;
 
 class ParserErrorHandler : public xercesc::ErrorHandler
 {
@@ -221,7 +209,7 @@ public:
 						"a name of %s global definition, found '%s'\n", 
 						filePath, typeid(T).name(), typeid(T).name(), nodeTextC);
 					xercesc::XMLString::release(&filePath);
-					logMsg(szLog);
+					logging::logMsg("xml.log", szLog);
 					gDLL->MessageBox(szLog, "Error");
 					xercesc::XMLString::release(&nodeTextC);
 					return false;
@@ -342,7 +330,7 @@ public:
 		char szLog[2000];
 		sprintf(szLog, "XML model (DOM) error: %s : No text in the element '%s'", filePath, nodeTextC);
 		xercesc::XMLString::release(&filePath);
-		logMsg(szLog);
+		logging::logMsg("xml.log", szLog);
 		gDLL->MessageBox(szLog, "Error");
 		return NULL;
 	}
@@ -622,10 +610,36 @@ public:
 	void SetVariableListTagPair(std::vector<int>, const wchar_t* szRootTagName,
 		int iInfoBaseLength, int iDefaultListVal = 0);
 
-	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName) { return SetOptionalVector<int>(aInfos, szRootTagName); }
+	template <class T>
+	void SetOptionalVectorWithDelayedResolution(std::vector<T>& aInfos, const wchar_t* szRootTagName)
+	{
+		if (TryMoveToXmlFirstChild(szRootTagName))
+		{
+			aInfos.clear();
+			const int iNumSibs = GetXmlChildrenNumber();
+			aInfos.resize(iNumSibs);
+			CvString szTextVal;
 
-	void SetOptionalIntVectorWithDelayedResolution(std::vector<int>& aInfos, const wchar_t* szRootTagName);
-	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, const std::vector<int>& source) { return CopyNonDefaultsFromVector<int>(target, source); }
+			if (0 < iNumSibs)
+			{
+				if (GetChildXmlVal(szTextVal))
+				{
+					for (int j = 0; j < iNumSibs; j++)
+					{
+						GC.addDelayedResolution((int*)&(aInfos[j]), szTextVal);
+						if (!GetNextXmlVal(szTextVal))
+						{
+							break;
+						}
+					}
+
+					MoveToXmlParent();
+				}
+			}
+
+			MoveToXmlParent();
+		}
+	}
 
 	template<class T1, class T2, class T3>
 	void SetOptionalPairVector(T1* aInfos, const wchar_t* szRootTagName)
@@ -670,11 +684,11 @@ public:
 	template<class T>
 	static void CopyNonDefaultsFromVector(std::vector<T>& target, const std::vector<T>& source)
 	{
-		for (typename std::vector<T>::const_iterator it = source.begin(), end = source.end(); it != end; ++it)
+		foreach_(const T& it, source)
 		{
-			if ((*it) > -1 && find(target.begin(), target.end(), *it) == target.end())
+			if (it > -1 && !algo::contains(target, it))
 			{
-				target.push_back(*it);
+				target.push_back(it);
 			}
 		}
 
@@ -733,26 +747,7 @@ public:
 	inline bool CheckDependency();
 
 	static void RemoveTGAFiller();
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 10/19/07                                MRGENIE      */
-/*                                                                                              */
-/* Needs to be public for CvXMLLoadUtilityModTools                                              */
-/************************************************************************************************/
-#ifdef _DEBUG	
-	void XmlArtTagVerification(char* format, ... );
-#endif
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/30/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void logMLF(char* format, ... );
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
+
 	static void showXMLError(const char* const format, ...);
 
 	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
@@ -848,40 +843,6 @@ private:
 	CvWString CreateKeyStringFromKBCode(const TCHAR* pszHotKey);
 
 	void orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, int iLength);
-
-	void logMsg(char* format, ... );
-	void logMsgW(wchar_t* format, ... );
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   10/10/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-#ifdef _DEBUG
-	void logXmlCheckDoubleTypes(char* format, ... );
-#endif
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/20/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//#ifdef _DEBUG	
-	void logXmlDependencyTypes(char* format, ... );
-//#endif
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void logXML(char* format, ... );
-	/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 };
 
 //

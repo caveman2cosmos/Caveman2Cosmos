@@ -1,6 +1,7 @@
 
 #include "CvGameCoreDLL.h"
-
+#include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvPlotPaging.h"
 
 #include <psapi.h>
@@ -224,8 +225,7 @@ void CvPlotPaging::UpdatePaging()
 {
 	// Check if the paging setting changed
 	bool bPagingEnabled = getBugOptionBOOL("MainInterface__EnableGraphicalPaging", true);
-	GC.setGraphicalDetailPagingEnabled(bPagingEnabled);
-	
+
 	if(bPagingEnabled || (!bPagingEnabled && g_bWasGraphicsPagingEnabled))
 	{
 		const CvPlot* lookatPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
@@ -259,7 +259,7 @@ void CvPlotPaging::UpdatePaging()
 			win32::Stopwatch pageTimer;
 			pageTimer.Start();
 
-			const CvMap& map = GC.getMap();
+			//const CvMap& map = GC.getMap();
 			
 			bool timedout = false;
 			for (std::vector<PlotDist>::iterator itr = plots.begin(); !timedout && itr != plots.end(); ++itr)

@@ -13,7 +13,6 @@ void CySelectionGroupInterface()
 	OutputDebugString("Python Extension Module - CySelectionGroupInterface\n");
 
 	python::class_<CySelectionGroup>("CySelectionGroup")
-		.def("isNone", &CySelectionGroup::isNone, "bool () - is this CySelectionGroup instance valid?")
 		.def("pushMission", &CySelectionGroup::pushMission, "void (eMission, iData1, iData2, iFlags, bAppend, bManual, eMissionAI, pMissionAIPlot, pMissionAIUnit)")
 		.def("canStartMission", &CySelectionGroup::canStartMission, "bool (int iMission, int iData1, int iData2, CyPlot* pPlot, bool bTestVisible)")
 
@@ -45,5 +44,5 @@ void CySelectionGroupInterface()
 		.def("getHeadUnit", &CySelectionGroup::getHeadUnit, python::return_value_policy<python::manage_new_object>(), "CyUnit* ()")
 		.def("getMissionType", &CySelectionGroup::getMissionType, "int (int iNode)")
 		.def("getMissionData1", &CySelectionGroup::getMissionData1, "int (int iNode)")
-		;
+	;
 }

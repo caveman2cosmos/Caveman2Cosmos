@@ -1,5 +1,8 @@
-#include "CvCity.h"
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvMap.h"
+#include "CvPlot.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlot.h"
@@ -259,7 +262,8 @@ CyArea* CyPlot::area() const
 
 CyArea* CyPlot::waterArea() const
 {
-	return m_pPlot ? new CyArea(m_pPlot->waterArea()) : NULL;
+	CvArea* area = m_pPlot ? m_pPlot->waterArea() : NULL;
+	return area ? new CyArea(area) : NULL;
 }
 
 int CyPlot::getArea() const
@@ -359,7 +363,7 @@ bool CyPlot::isHills() const
 
 bool CyPlot::isPeak() const
 {
-	return m_pPlot ? m_pPlot->isPeak2(true) : false;
+	return m_pPlot ? m_pPlot->isAsPeak() : false;
 }
 
 void CyPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGraphics)
@@ -574,6 +578,20 @@ void CyPlot::changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*Invis
 	if (m_pPlot) m_pPlot->changeInvisibleVisibilityCount((TeamTypes) eTeam, (InvisibleTypes) eInvisible, iChange, iIntensity);
 }
 
+python::list CyPlot::units() const
+{
+	python::list list = python::list();
+
+	if (m_pPlot)
+	{
+		foreach_(CvUnit* unit, m_pPlot->units())
+		{
+			list.append(CyUnit(unit));
+		}
+	}
+	return list;
+}
+
 int CyPlot::getNumUnits() const
 {
 	return m_pPlot ? m_pPlot->getNumUnits() : -1;
@@ -607,4 +625,18 @@ bool CyPlot::isInViewport() const
 CyPlot* CyPlot::cloneToViewport() const
 {
 	return new CyPlot(m_pPlot, true);
+}
+
+python::list CyPlot::rect(int halfWid, int halfHgt) const
+{
+	python::list list = python::list();
+
+	if (m_pPlot)
+	{
+		foreach_(CvPlot* plot, m_pPlot->rect(halfWid, halfHgt))
+		{
+			list.append(CyPlot(plot));
+		}
+	}
+	return list;
 }

@@ -554,13 +554,55 @@
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
 			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fScale>0.45</fScale>
+			<fInterfaceScale>1</fInterfaceScale>
 			<Button>Art/Interface/Buttons/baseterrain/reef.dds</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
-						<ModelFile>Art/Terrain/Resources/Stone/Stone.nif</ModelFile>
+						<ModelFile>art/terrain/features/Reef/Reef.nif</ModelFile>
+						<Connections/>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Interface/Buttons/baseterrain/reef.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_REEF_BEACON</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.45</fScale>
+			<fInterfaceScale>1</fInterfaceScale>
+			<Button>Art/Interface/Buttons/baseterrain/reef.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>art/terrain/features/Reef/ReefBeacon.nif</ModelFile>
+						<Connections/>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Interface/Buttons/baseterrain/reef.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_REEF_LIGHTHOUSE</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.45</fScale>
+			<fInterfaceScale>1</fInterfaceScale>
+			<Button>Art/Interface/Buttons/baseterrain/reef.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>art/terrain/features/Reef/ReefLighthouse.nif</ModelFile>
 						<Connections/>
 					</FeatureArtPiece>
 				</FeatureArtPieces>
@@ -596,13 +638,55 @@
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
 			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>1.0</fScale>
+			<fScale>0.45</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<Button>Art/Interface/Buttons/terrainfeatures/coral.dds</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
-						<ModelFile>Art/terrain/features/coral/wheat.nif</ModelFile>
+						<ModelFile>Art/terrain/features/coral/coral.nif</ModelFile>
+						<Connections/>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Interface/Buttons/terrainfeatures/Coral.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_CORAL_REEF_BEACON</Type>
+			<bAnimated>1</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.45</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Interface/Buttons/terrainfeatures/coral.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/terrain/features/coral/CoralBeacon.nif</ModelFile>
+						<Connections/>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Interface/Buttons/terrainfeatures/coral.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_CORAL_REEF_LIGHTHOUSE</Type>
+			<bAnimated>1</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.45</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Interface/Buttons/terrainfeatures/coral.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/terrain/features/coral/CoralLighthouse.nif</ModelFile>
 						<Connections/>
 					</FeatureArtPiece>
 				</FeatureArtPieces>

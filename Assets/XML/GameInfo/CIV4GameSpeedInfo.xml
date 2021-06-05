@@ -19,8 +19,6 @@
 				iHurryConscriptAngerPercent = How long unhappiness from hurrying or drafting lasts. Normal is 100
 				iHurryPercent			= Amount of gold or population needed to hurry production. Normal is 100
 				iImprovementPercent		= How fast tile improvements upgrade to the next level (eg cottages to hamlets). Normal is 100
-				iInflationOffset		= How long the initial period of no inflation lasts. Normal is 100
-				iInflationPercent		= The rate at which inflation increases. Normal is 27
 				iOccupationTurnsPopulationPercent = The percentage of the city population size that is added as turns of revolt after city capture.
 													It is added on top of the minimum number of turns defined in GlobalDefines.xml as BASE_REVOLT_OCCUPATION_TURNS.
 				iResearchPercent		= How fast technologies are researched. Normal is 100
@@ -74,8 +72,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>1000</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>100</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>4000</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -174,8 +170,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>800</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>80</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>3200</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -274,8 +268,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>600</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>60</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>2400</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -374,8 +366,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>400</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>40</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>1600</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -474,8 +464,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>300</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>30</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>1200</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -574,8 +562,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>200</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>20</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>800</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -674,8 +660,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>100</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>10</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>400</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -774,8 +758,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>50</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>5</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>200</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -874,8 +856,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>25</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>2</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>100</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -981,8 +961,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>1000</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>100</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>4000</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1088,8 +1066,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>800</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>80</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>3200</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1195,8 +1171,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>600</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>60</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>2400</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1302,8 +1276,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>400</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>40</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>1600</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1409,8 +1381,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>300</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>30</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>1200</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1516,8 +1486,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>200</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>20</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>800</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1623,8 +1591,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>100</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>10</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>400</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1730,8 +1696,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>50</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>5</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>200</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1837,8 +1801,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iVictoryDelayPercent>25</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>2</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>100</iTraitGainPercent>
-			<iInflationPercent>0</iInflationPercent>
-			<iInflationOffset>0</iInflationOffset>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>

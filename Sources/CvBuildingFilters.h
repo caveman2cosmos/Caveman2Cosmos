@@ -12,6 +12,7 @@
 #ifndef CV_BUILDING_FILTERS_H
 #define CV_BUILDING_FILTERS_H
 
+class CvCity;
 class CvPlayer;
 
 enum BuildingFilterTypes
