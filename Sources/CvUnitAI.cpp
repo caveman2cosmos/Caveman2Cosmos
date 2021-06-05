@@ -6307,10 +6307,6 @@ void CvUnitAI::AI_greatHunterMove()
 	}
 
 	std::vector<UnitAITypes> aeUnitAITypes;
-	int iDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 2);
-
-	bool bOffenseWar = (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE);
-	bool bCanDefend = getGroup()->canDefend();
 
 	int iGHrandom = GC.getGame().getSorenRandNum(5, "AI Great Hunter Decision");
 
@@ -6408,10 +6404,6 @@ void CvUnitAI::AI_greatAdmiralMove()
 	PROFILE_FUNC();
 
 	std::vector<UnitAITypes> aeUnitAITypes;
-	int iDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 2);
-
-	bool bOffenseWar = (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE);
-	bool bCanDefend = getGroup()->canDefend();
 
 	int iGArandom = GC.getGame().getSorenRandNum(4, "AI Great Admiral Decision");
 
@@ -7287,8 +7279,6 @@ void CvUnitAI::AI_pirateSeaMove()
 	{
 		return;
 	}
-
-	int iMinimumOdds = GET_PLAYER(getOwner()).getModderOption(MODDEROPTION_AUTO_PIRATE_MIN_COMBAT_ODDS);
 
 	CvArea* pWaterArea;
 
@@ -10546,13 +10536,6 @@ void CvUnitAI::AI_missileAirMove()
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity = plot()->getPlotCity();
-
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						10/21/08	Solver & jdog5000	*/
-/* 																			*/
-/* 	Air AI																	*/
-/********************************************************************************/
 	// includes forts
 	if (!isCargo() && plot()->isCity(true))
 	{
@@ -10567,9 +10550,6 @@ void CvUnitAI::AI_missileAirMove()
 			}
 		}
 	}
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
 
 	if (isCargo())
 	{
@@ -13978,20 +13958,9 @@ bool CvUnitAI::AI_spreadCorporation()
 	{
 		return false;
 	}
-/*************************************************************************************************/
-/**	Xienwolf Tweak							03/20/09											**/
-/**																								**/
-/**										Firaxis Typo Fix										**/
-/*************************************************************************************************/
-/**								---- Start Original Code ----									**
-	bool bHasHQ = (GET_TEAM(getTeam()).hasHeadquarters((CorporationTypes)iI));
-/**								----  End Original Code  ----									**/
-	bool bHasHQ = (GET_TEAM(getTeam()).hasHeadquarters(eCorporation));
-/*************************************************************************************************/
-/**	Tweak									END													**/
-/*************************************************************************************************/
 
-	int iBestValue = 0;
+	bool bHasHQ = (GET_TEAM(getTeam()).hasHeadquarters(eCorporation));
+
 	CvPlot* pBestPlot = NULL;
 	CvPlot* pBestSpreadPlot = NULL;
 
@@ -16389,7 +16358,6 @@ bool CvUnitAI::AI_safety(int iRange)
 	const int iSearchRange = AI_searchRange(iRange);
 
 	const bool bAnimalDanger = GET_PLAYER(getOwner()).AI_getVisiblePlotDanger(plot(),1,true);
-	const int iImpassableCount = GET_PLAYER(getOwner()).AI_unitImpassableCount(getUnitType());
 
 	//GC.getGame().logOOSSpecial(3,iValue,getID());
 	const CvPlot* pBestPlot = NULL;
@@ -17290,8 +17258,6 @@ bool CvUnitAI::AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh
 	iBestValue = 0;
 	pBestPlot = NULL;
 	pBestExplorePlot = NULL;
-
-	int iImpassableCount = GET_PLAYER(getOwner()).AI_unitImpassableCount(getUnitType());
 
 	CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, iSearchRange);
 
@@ -20163,7 +20129,6 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 	}
 
 	int iCargoCount = getGroup()->getCargo();
-	int iCargoVolume = getGroup()->getCargo(true);
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
 	CvPlot* pBestAssaultPlot = NULL;
@@ -20521,8 +20486,6 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 {
 	PROFILE_FUNC();
 
-	bool bIsAttackCity = (getUnitAICargo(UNITAI_ATTACK_CITY) > 0);
-
 	FAssert(getGroup()->hasCargo());
 
 	if (!canCargoAllMove() || !getGroup()->canAllMove())
@@ -20540,7 +20503,6 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 		}
 	}
 
-	int iCargo = getGroup()->getCargo();
 	//Never Called
 	//TBHERE (Group Count or Group Volume?)
 	int iBestValue = 0;
@@ -23083,8 +23045,6 @@ bool CvUnitAI::AI_workerReleaseDefenderIfNotNeeded() const
 		{
 			if ( !AI_workerNeedsDefender(plot()) )
 			{
-				CvSelectionGroup* pOldGroup = getGroup();
-
 				if( gUnitLogLevel >= 3 )
 				{
 					logBBAI("	Worker for player %d (%S) at (%d,%d) releasing escort",
@@ -26139,7 +26099,6 @@ bool CvUnitAI::AI_moveToStagingCity()
 						iBestValue = iPriority;
 					}
 
-					int iDistance = iPathTurns;
 					orderedTargets.insert(std::make_pair(iPriority,std::make_pair(pLoopCity,iValue)));
 				}
 				//else
@@ -27523,7 +27482,6 @@ bool CvUnitAI::AI_RbombardPlot(int iRange, int iBonusValueThreshold)
 {
 	PROFILE_FUNC();
 
-	int iPathTurns = 0;
 	int iValue = 0;
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
@@ -28086,7 +28044,6 @@ bool CvUnitAI::AI_caravan(bool bAnyCity)
 
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
-	CvPlot* pBestHurryPlot = NULL;
 
 	//Avoid using Great People
 	if (getUnitInfo().getProductionCost() < 0)
@@ -29189,7 +29146,6 @@ void CvUnitAI::AI_autoAirStrike()
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity = plot()->getPlotCity();
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	CvArea* pArea = area();
 
@@ -30545,7 +30501,6 @@ bool CvUnitAI::AI_fulfillImmediateHealerNeed(const CvPlot* pPlot)
 
 int CvUnitAI::scoreCityHealerNeed(const UnitCombatTypes eUnitCombat, const DomainTypes eDomain, const CvCity* city) const
 {
-	const CvPlayer& player = GET_PLAYER(getOwner());
 	if (city->area() != area() || !AI_plotValid(city->plot()))
 		return 0;
 	CvPlot* targetPlot = city->plot();
@@ -31499,7 +31454,6 @@ bool CvUnitAI::generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathT
 void CvUnitAI::setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd)
 {
 	int iIndex = (int)eUnitAI;
-	int iI = 0;
 
 	if (bAdd)
 	{

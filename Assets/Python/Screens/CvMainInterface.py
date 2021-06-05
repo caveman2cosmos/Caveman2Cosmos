@@ -4153,7 +4153,7 @@ class CvMainInterface:
 				iOverflow = CyCity.hurryProduction(HURRY_WHIP) - CyCity.productionLeft()
 				if CityOpt.isWhipAssistOverflowCountCurrentProduction():
 					iOverflow += CyCity.getCurrentProductionDifference(False, True)
-				iMaxOverflow = city.getMaxProductionOverflow()
+				iMaxOverflow = CyCity.getMaxProductionOverflow()
 				iLost = iOverflow - iMaxOverflow
 				if iLost < 0: iLost = 0
 				if iOverflow > iMaxOverflow:

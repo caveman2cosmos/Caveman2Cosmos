@@ -2414,9 +2414,9 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZETTAVERSE</Type>

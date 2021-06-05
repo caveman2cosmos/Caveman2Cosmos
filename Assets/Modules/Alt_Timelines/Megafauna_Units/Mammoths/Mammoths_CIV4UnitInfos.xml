@@ -1050,12 +1050,6 @@
 			<Type>UNIT_WORKER</Type>
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKMAMMOTH</UnitType>
-				<UnitType>UNIT_WORKANIMAL</UnitType>
-				<UnitType>UNIT_WORKBUFFALO</UnitType>
-				<UnitType>UNIT_WORKELEPHANT</UnitType>
-				<UnitType>UNIT_WORKMULE</UnitType>
-				<UnitType>UNIT_WORKLLAMA</UnitType>
-				<UnitType>UNIT_WORKCAMEL</UnitType>
 			</UnitUpgrades>
 		</UnitInfo>
 		<UnitInfo>

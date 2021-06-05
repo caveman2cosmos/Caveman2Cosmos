@@ -1729,7 +1729,6 @@ void CvNetChooseMergeUnit::Execute()
 
 			int iTotalGroupOffset = 1;
 			int iTotalQualityOffset = 0;
-			bool bSet = false;
 			pUnit1->setFortifyTurns(0);
 			pUnit2->setFortifyTurns(0);
 			pUnit3->setFortifyTurns(0);
@@ -1887,8 +1886,6 @@ void CvNetConfirmSplitUnit::Execute()
 
 			int iTotalGroupOffset = -1;
 			int iTotalQualityOffset = 0;
-			bool bHasAdjusted = false;
-			bool bSet = false;
 			pUnit0->setFortifyTurns(0);
 			for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 			{
