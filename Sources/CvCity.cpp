@@ -23353,7 +23353,6 @@ int CvCity::getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) con
 void CvCity::doOutbreakCheck(PromotionLineTypes eAfflictionLine)
 {
 	const PropertyTypes ePropertyType = GC.getPromotionLineInfo(eAfflictionLine).getPropertyType();
-	const CvPropertyInfo& kInfo = GC.getPropertyInfo(ePropertyType);
 	const CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
 	BuildingTypes eBuilding;
 	CvWString szBuffer;
@@ -23447,7 +23446,6 @@ void CvCity::doOutbreakCheck(PromotionLineTypes eAfflictionLine)
 void CvCity::doOvercomeCheck(PromotionLineTypes eAfflictionLine)
 {
 	const PropertyTypes ePropertyType = GC.getPromotionLineInfo(eAfflictionLine).getPropertyType();
-	const CvPropertyInfo& kInfo = GC.getPropertyInfo(ePropertyType);
 	const CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
 	int iHighestLinePriority = 0;
 	BuildingTypes eBuilding;

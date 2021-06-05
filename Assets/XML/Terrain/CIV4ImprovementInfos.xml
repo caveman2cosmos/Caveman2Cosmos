@@ -4,7 +4,7 @@
 	or TerrainChange tag in the Civ4CreatingBuilds, don't get placed as improvements ingame. The entry here
 	only controls allowing/disallowing by current plot, e.g. FeatureMakesValids or TerrainMakesValids.
 	- Ordering of entries roughly mimics that of CIV4CreatingBuilds
-	- SUBMERGED_TOWN unlocks the ability to build at lower depths with tech advancement. 
+	- SUBMERGED_TOWN unlocks the ability to build at lower depths with tech advancement.
 -->
 <Civ4ImprovementInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<ImprovementInfos>

@@ -14850,16 +14850,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL</Tag>
-		<English>Homo Neanderthalensis</English>
-		<French>Homme de Néanderthal</French>
-		<Italian>Uomo di Neanderthal</Italian>
-		<Spanish>
-			<Text>Homo neanderthalensis</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Neandertalczyk</Polish>
-		<Russian>Íåàíäåðòàëåö</Russian>
+		<English>Neanderthal Clubman</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_BRUTE</Tag>
@@ -14892,7 +14883,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_ENFORCER</Tag>
-		<English>Neanderthal Enforcer</English>
+		<English>Neanderthal Enforcers</English>
 		<French>
 			<Text>Force de l'Ordre Néanderthal</Text>
 			<Gender>Female</Gender>
@@ -15026,7 +15017,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_TRAINED_DOG</Tag>
-		<English>Neanderthal Trained Dog</English>
+		<English>Neanderthal Trained Dogs</English>
 		<French>Chien dressé de Néanderthal</French>
 		<Russian>Неанд. дресс. пес</Russian>
 	</TEXT>
@@ -15049,16 +15040,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR</Tag>
-		<English>Neanderthal Warrior</English>
-		<French>Guerrier du Néanderthal</French>
-		<Italian>Guerriero di Neanderthal</Italian>
-		<Spanish>
-			<Text>Guerrero neandertal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wojownik Neandertalczyków</Polish>
-		<Russian>Íåàíäåðòàëüñêèé âîèí</Russian>
+		<English>Spiked Clubman</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR_PEDIA</Tag>
@@ -15090,7 +15072,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WOODEN_SPEARMAN</Tag>
-		<English>Neanderthal Wooden Spearman</English>
+		<English>Neanderthal Wood Spearman</English>
 		<French>Lancier de Néanderthal</French>
 		<Russian>Неанд. копьеносец</Russian>
 	</TEXT>
@@ -22762,23 +22744,6 @@
 		<French>[ICON_BULLET]Inflexible: %d1_Amount%% contre l'Expulsion/Ecrasement</French>
 		<Italian>[ICON_BULLET]Inflessibile: %d1_Amount%% contro sbaraglio/respinta</Italian>
 		<Polish>[ICON_BULLET]Nieustępliwy: %d1_Amount%% przeciwko Odepchnięcie/Odrzut</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_URBAN_HORSEMAN</Tag>
-		<English>Urban Horseman</English>
-		<French>Cavalier Urbain</French>
-		<Spanish>
-			<Text>Jinete urbano</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Nowoczesna Konnica</Polish>
-		<Russian>Ãîðîäñêîé âñàäíèê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_URBAN_HORSEMAN_PEDIA</Tag>
-		<English>Urban horsemen have resorted to using horses instead of mechanized vehicles, because computerized vehicles are vulnerable to cyber attacks and are more easily located by tracking devices and scanning equipment. The horse is a low tech solution to a problem created by advanced technology. These mounted urban soldiers are propelled by their desparation and their hope that any change will be for the better.</English>
-		<Polish>Nowoczesna Konnica to jednostka, którą możesz zwerbowac jeśli z jakiś powodów nie masz dostępu do nowoczesnych pojazdów.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URHO_KEKKONEN</Tag>

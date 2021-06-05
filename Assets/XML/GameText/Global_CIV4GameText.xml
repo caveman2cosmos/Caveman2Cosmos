@@ -20480,6 +20480,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Se requiere para construir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD</Tag>
+		<English>[ICON_BULLET]May be needed to Build[SPACE]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD_ANYWHERE</Tag>
+		<English>[ICON_BULLET]Needed to Build anywhere in empire:[SPACE]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_LIST</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires[SPACE][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert :[SPACE][COLOR_REVERT]</French>

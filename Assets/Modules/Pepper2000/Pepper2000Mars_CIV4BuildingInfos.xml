@@ -227,9 +227,9 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_EXPANDED_HABITAT</Type>
@@ -272,9 +272,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -326,9 +326,9 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<iHealth>3</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -357,9 +357,9 @@
 				<iYield>1</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_MARTIAN_ROCKS</Bonus>
 			<FreeBonus>BONUS_MARTIAN_MANUFACTURED_GOODS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -394,9 +394,9 @@
 				<iYield>0</iYield>
 				<iYield>30</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_MARTIAN_ROCKS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -487,10 +487,8 @@
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -553,9 +551,9 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_MARTIAN_MANUFACTURED_GOODS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -666,10 +664,8 @@
 			</TechYieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARTIAN_DEUTERIUM_MINE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -689,9 +685,9 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_CARBON_DIOXIDE_ICE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -808,9 +804,9 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_SEA</Type>
@@ -885,9 +881,9 @@
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
@@ -937,10 +933,8 @@
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_CYBERNETIC_CHLOROPLASTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -962,10 +956,8 @@
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_DNT_IMPORTER</Type>
@@ -996,10 +988,8 @@
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_DIAMOND_NANOTHREADS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -1020,9 +1010,9 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ENTERTAINMENT_COMPLEX</Type>
@@ -1044,9 +1034,9 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<iHappiness>5</iHappiness>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_GOVERNMENT</Type>
@@ -1064,9 +1054,9 @@
 			<iFreeSpecialist>1</iFreeSpecialist>
 			<PrereqCultureLevel>CULTURELEVEL_ELEGANT</PrereqCultureLevel>
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1105,10 +1095,8 @@
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_NOVUS_CHEMICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -1130,10 +1118,8 @@
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SIMULATED_WORLD</Type>
@@ -1155,9 +1141,9 @@
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
 			<iHappiness>3</iHappiness>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1190,9 +1176,9 @@
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ALGAE_FARM</Type>
@@ -1248,9 +1234,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ZOO</Type>
@@ -1273,10 +1259,8 @@
 			<iHappiness>2</iHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_ECO</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SKYHOOK</Type>
@@ -1301,10 +1285,8 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -1335,9 +1317,9 @@
 				<iYield>120</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_MARS_MINE</FreeBuilding>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SPACEPORT</Type>
@@ -1355,9 +1337,9 @@
 			<CommerceChanges>
 				<iCommerce>500</iCommerce>
 			</CommerceChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_VERTICAL_FARM</Type>
@@ -1382,10 +1364,8 @@
 			<iHealth>1</iHealth>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -1476,10 +1456,8 @@
 			<iHealth>1</iHealth>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARTIAN_WATER</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1503,9 +1481,9 @@
 			</MapCategoryTypes>
 			<iHappiness>1</iHappiness>
 			<iHealth>2</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1536,9 +1514,9 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_AMMONIA_BOMBARDMENT</Type>
@@ -1558,10 +1536,8 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_CFC_GENERATOR</Type>
@@ -1580,9 +1556,9 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -1608,9 +1584,9 @@
 			<YieldChanges>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_NOMAD</Type>
@@ -1633,9 +1609,9 @@
 				<iYield>60</iYield>
 			</YieldChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ECOPOIESIS_REACTOR</Type>
@@ -1654,9 +1630,9 @@
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<iHealth>1</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1693,10 +1669,8 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_HITECH</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1728,10 +1702,8 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY</Type>
@@ -1750,9 +1722,9 @@
 				<iYield>0</iYield>
 				<iYield>60</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_FARM</Type>
@@ -1775,10 +1747,8 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_ECO</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_MARTIAN_CROPS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>

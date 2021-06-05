@@ -3087,7 +3087,6 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 		case INTERFACEMODE_SHADOW_UNIT:
 			if (pLoopUnit != NULL)
 			{
-				int iValidShadowUnits = 0;
 				foreach_(CvUnit* pLoopUnit, pPlot->units())
 				{
 					if (pLoopUnit->canShadowAt(pPlot, pLoopUnit))
