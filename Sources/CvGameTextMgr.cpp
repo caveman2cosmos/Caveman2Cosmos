@@ -20554,7 +20554,7 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 		}
 
 
-		BoolExpr* pExpr = GC.getUnitInfo(eUnit).getTrainCondition();
+		const BoolExpr* pExpr = GC.getUnitInfo(eUnit).getTrainCondition();
 		if (pExpr)
 		{
 			bool bEval = false;
@@ -22445,7 +22445,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	{
 		for (int iI = 0; iI < kBuilding.getNumFreePromoTypes(); iI++)
 		{
-			BoolExpr* pExpr = kBuilding.getFreePromoType(iI).m_pExprFreePromotionCondition;
+			const BoolExpr* pExpr = kBuilding.getFreePromoType(iI).m_pExprFreePromotionCondition;
 			if (pExpr)
 			{
 				const PromotionTypes ePromo = (PromotionTypes) kBuilding.getFreePromoType(iI).ePromotion;
@@ -24344,7 +24344,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_NO_NUKES"));
 		}
 
-		BoolExpr* pExpr = kBuilding.getConstructCondition();
+		const BoolExpr* pExpr = kBuilding.getConstructCondition();
 		if (pExpr && (!pCity || !pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject()))))
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));

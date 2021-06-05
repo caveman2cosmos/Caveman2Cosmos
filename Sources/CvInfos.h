@@ -2172,7 +2172,7 @@ public:
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	BoolExpr* getTrainCondition() const;
+	const BoolExpr* getTrainCondition() const;
 
 protected:
 	int m_iMaxGlobalInstances;
@@ -2746,9 +2746,9 @@ public:
 	TechTypes getPrereqTechType() const;
 	TechTypes getObsoleteTechType() const;
 
-	BoolExpr* getSpawnCondition() const;
+	const BoolExpr* getSpawnCondition() const;
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	UnitTypes				m_eUnitType;

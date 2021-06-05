@@ -8040,7 +8040,6 @@ CvSpawnInfo::~CvSpawnInfo()
 
 bool CvSpawnInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	CvString szTextVal2;
 
@@ -8216,7 +8215,7 @@ void CvSpawnInfo::copyNonDefaults(CvSpawnInfo* pClassInfo)
 	// not yet implemented
 }
 
-BoolExpr* CvSpawnInfo::getSpawnCondition() const
+const BoolExpr* CvSpawnInfo::getSpawnCondition() const
 {
 	return m_pExprSpawnCondition;
 }
@@ -8405,7 +8404,7 @@ int CvSpawnInfo::getRateOverride() const
 	return m_iRateOverride;
 }
 
-void CvSpawnInfo::getCheckSum(unsigned int &iSum) const
+void CvSpawnInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eUnitType);
 	CheckSum(iSum, m_ePrereqTechType);

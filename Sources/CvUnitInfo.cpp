@@ -1215,7 +1215,7 @@ void CvUnitInfo::setCommandType(int iNewType)
 	m_iCommandType = iNewType;
 }
 
-BoolExpr* CvUnitInfo::getTrainCondition() const
+const BoolExpr* CvUnitInfo::getTrainCondition() const
 {
 	return m_pExprTrainCondition;
 }

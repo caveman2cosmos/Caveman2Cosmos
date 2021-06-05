@@ -493,7 +493,7 @@ public:
 
 	int getMaxPopAllowed() const;
 
-	//BoolExpr* getFreePromotionCondition();
+	//cost BoolExpr* getFreePromotionCondition();
 	//Struct
 	int getNumFreePromoTypes() const;
 	//FreePromoTypes& getFreePromoType(int iPromotion);
@@ -522,13 +522,13 @@ public:
 
 	bool readPass3();
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	bool isNewCityFree(CvGameObject* pObject);
+	bool isNewCityFree(const CvGameObject* pObject);
 
-	BoolExpr* getConstructCondition() const;
+	const BoolExpr* getConstructCondition() const;
 
 	int getVictoryThreshold(int i) const;
 
