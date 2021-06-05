@@ -443,7 +443,7 @@ void CyInfoPythonInterface1()
 		.def("getPrereqAndTechs", &CvBuildingInfo::getPrereqAndTechs, "int (int i)")
 		.def("getPrereqOrBonuses", &CvBuildingInfo::getPrereqOrBonuses, "int (int i)")
 		.def("getPrereqOrVicinityBonuses", &CvBuildingInfo::getPrereqOrVicinityBonuses, "int (int i)")
-		//.def("getPrereqOrRawVicinityBonuses", &CvBuildingInfo::getPrereqOrRawVicinityBonuses, "int ()")
+		.def("getPrereqOrRawVicinityBonuses", &CvBuildingInfo::cyGetPrereqOrRawVicinityBonuses)
 		
 		.def("getNumPrereqOrBonuses", &CvBuildingInfo::getNumPrereqOrBonuses, "int ()")
 		.def("getPrereqNumOfBuilding", &CvBuildingInfo::getPrereqNumOfBuilding, "int (int i)")
