@@ -34108,9 +34108,15 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_VOLCANOLOGY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_GEOTHERMAL_ENERGY</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
+			<PrereqOrImprovement>
+				<PrereqImprovement>
+					<ImprovementType>IMPROVEMENT_GEOTHERMAL_FACTORY</ImprovementType>
+					<bPrereqImprovement>1</bPrereqImprovement>
+				</PrereqImprovement>
+			</PrereqOrImprovement>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
