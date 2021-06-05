@@ -1202,7 +1202,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 		}
 	}
 
-	CvXMLLoadUtility::CopyNonDefaultsFromIntVector(m_aiFeatureChangeTypes, pClassInfo->m_aiFeatureChangeTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiFeatureChangeTypes, pClassInfo->m_aiFeatureChangeTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiMapTypes, pClassInfo->m_aiMapTypes);
 
 }
