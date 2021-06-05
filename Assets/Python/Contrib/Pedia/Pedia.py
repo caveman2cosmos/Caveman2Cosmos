@@ -1082,20 +1082,20 @@ class Pedia:
 				print CvBuildingInfo.getType()+" - Earliest OR vicinity bonus prereq late!"
 			bonusTechLocList = []
 
-			bonusReqList = []
-			bonusTechReqList = []
-			bonusReqList.append(CvBuildingInfo.getPrereqOrRawVicinityBonuses())
-			for bonusOrVicRaw in xrange(len(bonusReqList)):				
-				bonusTechReqList.append(GC.getBonusInfo(bonusReqList[bonusOrVicRaw]).getTechReveal())
-				if GC.getTechInfo(bonusReqList[bonusOrVicRaw]) != None:
-					bonusTechLoc = GC.getTechInfo(bonusTechReqList[bonusOrVicRaw]).getGridX()
-					bonusTechLocList.append(bonusTechLoc)
-				else:
-					bonusTechLoc = 0
-					bonusTechLocList.append(bonusTechLoc)
-			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
-				print CvBuildingInfo.getType()+" - Earliest OR raw vicinity bonus prereq late!"
-			bonusTechLocList = []
+			#bonusReqList = []
+			#bonusTechReqList = []
+			#bonusReqList.append(CvBuildingInfo.getPrereqOrRawVicinityBonuses())
+			#for bonusOrVicRaw in xrange(len(bonusReqList)):				
+			#	bonusTechReqList.append(GC.getBonusInfo(bonusReqList[bonusOrVicRaw]).getTechReveal())
+			#	if GC.getTechInfo(bonusReqList[bonusOrVicRaw]) != None:
+			#		bonusTechLoc = GC.getTechInfo(bonusTechReqList[bonusOrVicRaw]).getGridX()
+			#		bonusTechLocList.append(bonusTechLoc)
+			#	else:
+			#		bonusTechLoc = 0
+			#		bonusTechLocList.append(bonusTechLoc)
+			#if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
+			#	print CvBuildingInfo.getType()+" - Earliest OR raw vicinity bonus prereq late!"
+			#bonusTechLocList = []
 
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
