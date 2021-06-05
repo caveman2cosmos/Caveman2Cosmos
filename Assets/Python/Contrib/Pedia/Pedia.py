@@ -977,13 +977,15 @@ class Pedia:
 
 	def getBuildingList(self, iBuildingType):
 		aList = []
-		aListDict = {}
+		bonusTechLocList = []
+		aListDict = {}		
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			TechMainReq = CvBuildingInfo.getPrereqAndTech()
+			
 			if GC.getTechInfo(TechMainReq) != None:
 				iTechMainLoc = GC.getTechInfo(TechMainReq).getGridX()
 				iTechMainRow = GC.getTechInfo(TechMainReq).getGridY()
@@ -1024,6 +1026,77 @@ class Pedia:
 			iTechLoc = max(iTechMainLoc, iTechSpecialLoc, iTechReligionLoc)
 			iTechRow = max(iTechMainRow, iTechSpecialRow, iTechReligionRow)
 			
+			iBuildingBonusReq = CvBuildingInfo.getPrereqAndBonus()
+			iBuildingVicinityBonusReq = CvBuildingInfo.getPrereqVicinityBonus()
+			iBuildingRawVicinityBonusReq = CvBuildingInfo.getPrereqRawVicinityBonus()
+			
+			if GC.getBonusInfo(iBuildingBonusReq) != None:
+				bonusTechReq = GC.getBonusInfo(iBuildingBonusReq).getTechCityTrade()
+				if GC.getTechInfo(bonusTechReq) != None:
+					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+				else:
+					bonusTechLoc = 0
+				if bonusTechLoc > iTechLoc:
+					print CvBuildingInfo.getType()+" - Singular AND bonus prereq late!"
+					
+			if GC.getBonusInfo(iBuildingVicinityBonusReq) != None:
+				bonusTechReq = GC.getBonusInfo(iBuildingVicinityBonusReq).getTechCityTrade()
+				if GC.getTechInfo(bonusTechReq) != None:
+					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+				else:
+					bonusTechLoc = 0
+				if bonusTechLoc > iTechLoc:
+					print CvBuildingInfo.getType()+" - Singular AND vicinity bonus prereq late!"
+					
+			if GC.getBonusInfo(iBuildingRawVicinityBonusReq) != None:
+				bonusTechReq = GC.getBonusInfo(iBuildingRawVicinityBonusReq).getTechReveal()
+				if GC.getTechInfo(bonusTechReq) != None:
+					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+				else:
+					bonusTechLoc = 0
+				if bonusTechLoc > iTechLoc:
+					print CvBuildingInfo.getType()+" - Singular AND raw vicinity bonus prereq late!"
+				
+			for bonusOr in xrange(CvBuildingInfo.getNumPrereqOrBonuses()):
+				bonusTechReq = GC.getBonusInfo(CvBuildingInfo.getPrereqOrBonuses(bonusOr)).getTechCityTrade()
+				if GC.getTechInfo(bonusTechReq) != None:
+					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+					bonusTechLocList.append(bonusTechLoc)
+				else:
+					bonusTechLoc = 0
+					bonusTechLocList.append(bonusTechLoc)
+			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
+				print CvBuildingInfo.getType()+" - Earliest OR bonus prereq late!"
+			bonusTechLocList = []
+			
+			for bonusOrVic in xrange(25):
+				if CvBuildingInfo.getPrereqOrVicinityBonuses(bonusOrVic) != -1:
+					bonusTechReq = GC.getBonusInfo(CvBuildingInfo.getPrereqOrVicinityBonuses(bonusOrVic)).getTechCityTrade()
+					if GC.getTechInfo(bonusTechReq) != None:
+						bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+						bonusTechLocList.append(bonusTechLoc)
+					else:
+						bonusTechLoc = 0
+						bonusTechLocList.append(bonusTechLoc)
+			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
+				print CvBuildingInfo.getType()+" - Earliest OR vicinity bonus prereq late!"
+			bonusTechLocList = []
+
+			bonusReqList = []
+			bonusTechReqList = []
+			bonusReqList.append(CvBuildingInfo.getPrereqOrRawVicinityBonuses())
+			for bonusOrVicRaw in xrange(len(bonusReqList)):				
+				bonusTechReqList.append(GC.getBonusInfo(bonusReqList[bonusOrVicRaw]).getTechReveal())
+				if GC.getTechInfo(bonusReqList[bonusOrVicRaw]) != None:
+					bonusTechLoc = GC.getTechInfo(bonusTechReqList[bonusOrVicRaw]).getGridX()
+					bonusTechLocList.append(bonusTechLoc)
+				else:
+					bonusTechLoc = 0
+					bonusTechLocList.append(bonusTechLoc)
+			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
+				print CvBuildingInfo.getType()+" - Earliest OR raw vicinity bonus prereq late!"
+			bonusTechLocList = []
+
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
 			if iBuildingType != -1:
