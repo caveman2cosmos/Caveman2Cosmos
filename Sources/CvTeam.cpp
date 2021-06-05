@@ -7983,7 +7983,7 @@ void CvTeam::recalculateModifiers()
 		m_aiExtraMoves[iI] = 0;
 	}
 
-	for (int iI = 0, numRouteInfos = GC.getNumRouteInfos(); iI < numRouteInfos; iI++)
+	for (int iI = 0, num = GC.getNumRouteInfos(); iI < num; iI++)
 	{
 		m_paiRouteChange[iI] = 0;
 	}
