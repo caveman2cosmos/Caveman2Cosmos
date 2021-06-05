@@ -156,12 +156,12 @@ struct DomainModifier
 	operator int() const {return (int)eDomain;}
 	bool operator< (const DomainModifier& rhs) const {return (int)eDomain < (int)rhs.eDomain;}
 };
-struct TechModifier
+struct TechModifier2
 {	
 	TechTypes eTech;
 	int iModifier;
 	operator int() const {return (int)eTech;}
-	bool operator< (const TechModifier& rhs) const {return (int)eTech < (int)rhs.eTech;}
+	bool operator< (const TechModifier2& rhs) const {return (int)eTech < (int)rhs.eTech;}
 };
 struct BuildingModifier
 {	

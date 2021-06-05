@@ -1684,38 +1684,25 @@ int CvBuildingInfo::getTechOutbreakLevelChange(int iTech) const
 	return 0;
 }
 
-int CvBuildingInfo::getNumTechHappinessTypes() const
+//int CvBuildingInfo::getNumTechHappinessTypes() const
+//{
+//	return (int)m_aTechHappinessTypes.size();
+//}
+
+int CvBuildingInfo::getTechHappiness(TechTypes eTech) const
 {
-	return m_aTechHappinessTypes.size();
+	return m_aTechHappinessTypes.getValue(eTech);
 }
 
-int CvBuildingInfo::getTechHappinessType(int iTech) const
-{
-	for (TechModifierArray::const_iterator it = m_aTechHappinessTypes.begin(); it != m_aTechHappinessTypes.end(); ++it)
-	{
-		if ((*it).first == (TechTypes)iTech)
-		{
-			return (*it).second;
-		}
-	}
-	return 0;
-}
+//int CvBuildingInfo::getNumTechHealthTypes() const
+//{
+//	return m_aTechHealthTypes.size();
+//}
 
-int CvBuildingInfo::getNumTechHealthTypes() const
+int CvBuildingInfo::getTechHealthType(TechTypes eTech) const
 {
-	return m_aTechHealthTypes.size();
-}
-
-int CvBuildingInfo::getTechHealthType(int iTech) const
-{
-	for (TechModifierArray::const_iterator it = m_aTechHealthTypes.begin(); it != m_aTechHealthTypes.end(); ++it)
-	{
-		if ((*it).first == (TechTypes)iTech)
-		{
-			return (*it).second;
-		}
-	}
-	return 0;
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	return m_aTechHealthTypes.getValue(eTech);
 }
 
 bool CvBuildingInfo::isHurry(int i) const
@@ -3859,10 +3846,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalPairVector<TechModifierArray, TechTypes, int>(&m_aTechOutbreakLevelChanges, L"TechOutbreakLevelChanges");
 
-//Team Project (1)
-	pXML->SetOptionalPairVector<TechModifierArray, TechTypes, int>(&m_aTechHappinessTypes, L"TechHappinessTypes");
-
-	pXML->SetOptionalPairVector<TechModifierArray, TechTypes, int>(&m_aTechHealthTypes, L"TechHealthTypes");
+	m_aTechHappinessTypes.read(pXML, L"TechHappinessTypes");
+	m_aTechHealthTypes.read(pXML, L"TechHealthTypes");
 
 	//Arrays
 	pXML->SetVariableListTagPair(&m_pabHurry, L"Hurrys", GC.getNumHurryInfos());
@@ -5257,26 +5242,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-//Team Project (1)
-	if (getNumTechHappinessTypes()==0)
-	{
-		for (int i=0; i < pClassInfo->getNumTechHappinessTypes(); i++)
-		{
-			const TechTypes eTech = ((TechTypes)i);
-			const int iChange = pClassInfo->getTechHappinessType(i);
-			m_aTechHappinessTypes.push_back(std::make_pair(eTech, iChange));
-		}
-	}
-
-	if (getNumTechHealthTypes()==0)
-	{
-		for (int i=0; i < pClassInfo->getNumTechHealthTypes(); i++)
-		{
-			const TechTypes eTech = ((TechTypes)i);
-			const int iChange = pClassInfo->getTechHealthType(i);
-			m_aTechHealthTypes.push_back(std::make_pair(eTech, iChange));
-		}
-	}
+	m_aTechHappinessTypes.copyNonDefaults(pClassInfo->getTechHealthTypes());
+	m_aTechHealthTypes.copyNonDefaults(pClassInfo->getTechHealthTypes());
 
 	//Arrays
 	for ( int i = 0; i < GC.getNumHurryInfos(); i++ )

@@ -11028,7 +11028,6 @@
 			<iInflation>20</iInflation>
 			<iHurryCostModifier>-50</iHurryCostModifier>
 			<iHurryInflationModifier>20</iHurryInflationModifier>
-			<iSharedCivicTradeRouteModifier>-25</iSharedCivicTradeRouteModifier>
 			<iRealCorporationMaintenanceModifier>-50</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>

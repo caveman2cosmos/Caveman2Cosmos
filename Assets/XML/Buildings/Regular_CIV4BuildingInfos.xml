@@ -8538,11 +8538,6 @@
 			</PrereqOrBuildings>
 			<iCost>800</iCost>
 			<iHealth>-2</iHealth>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
@@ -13026,11 +13021,6 @@
 			</PrereqOrBuildings>
 			<iCost>800</iCost>
 			<iHealth>2</iHealth>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_APPLE</BonusType>
@@ -13215,11 +13205,6 @@
 			</PrereqOrBuildings>
 			<iCost>800</iCost>
 			<iHealth>-2</iHealth>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
@@ -26780,11 +26765,6 @@
 			</PrereqOrBuildings>
 			<iCost>800</iCost>
 			<iHealth>2</iHealth>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SILK</BonusType>
@@ -33162,11 +33142,6 @@
 			<CommerceModifiers>
 				<iCommerce>3</iCommerce>
 			</CommerceModifiers>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -34133,9 +34108,15 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_VOLCANOLOGY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_GEOTHERMAL_ENERGY</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
+			<PrereqOrImprovement>
+				<PrereqImprovement>
+					<ImprovementType>IMPROVEMENT_GEOTHERMAL_FACTORY</ImprovementType>
+					<bPrereqImprovement>1</bPrereqImprovement>
+				</PrereqImprovement>
+			</PrereqOrImprovement>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
@@ -43973,11 +43954,6 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>368</iCost>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<GlobalCommerceModifiers>
 				<iCommerce>5</iCommerce>
 			</GlobalCommerceModifiers>
@@ -47697,11 +47673,6 @@
 			</PrereqOrBuildings>
 			<iCost>800</iCost>
 			<iHealth>2</iHealth>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_APPLE</BonusType>
@@ -51561,11 +51532,6 @@
 				<iCommerce>-25</iCommerce>
 				<iCommerce>-25</iCommerce>
 			</CommerceModifiers>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<iHappinessPercentPerPopulation>50</iHappinessPercentPerPopulation>
 			<iMaintenanceModifier>-25</iMaintenanceModifier>
@@ -52883,11 +52849,6 @@
 			</PrereqOrBuildings>
 			<iCost>800</iCost>
 			<iHealth>1</iHealth>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
@@ -54329,11 +54290,6 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>10</iAsset>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Properties>
@@ -65551,11 +65507,6 @@
 				<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1180</iCost>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_PHONOGRAPHS</BonusType>
@@ -68433,11 +68384,6 @@
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1280</iCost>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_ELEPHANTS</BonusType>
@@ -81525,11 +81471,6 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1130</iCost>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_AMMUNITION</BonusType>
@@ -88708,11 +88649,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
