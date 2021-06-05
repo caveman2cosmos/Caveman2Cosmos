@@ -52470,7 +52470,7 @@
 			<bRiver>1</bRiver>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
-				<VicinityBonus>BONUS_SHRIMP</VicinityBonus>
+				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
 			</PrereqRawVicinityBonuses>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<iCost>35</iCost>
@@ -64908,7 +64908,7 @@
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
-				<VicinityBonus>BONUS_CRAB</VicinityBonus>
+				<VicinityBonus>BONUS_CORN</VicinityBonus>
 			</PrereqRawVicinityBonuses>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<iCost>35</iCost>
@@ -69854,7 +69854,7 @@
 			<bWater>1</bWater>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
-				<VicinityBonus>BONUS_CLAM</VicinityBonus>
+				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			</PrereqRawVicinityBonuses>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<iCost>35</iCost>
