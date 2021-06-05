@@ -18,7 +18,10 @@
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
-			<Bonus>BONUS_BRICKS</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_BRICKS</Bonus>
+				<Bonus>BONUS_MARBLE</Bonus>
+			</PrereqBonuses>
 			<FreePromotion>PROMOTION_AN</FreePromotion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
