@@ -12329,7 +12329,6 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			}
 			else
 			{
-				//Team Project (1)
 				aiYields[iI] = ((pCity == NULL) ? GET_PLAYER(GC.getGame().getActivePlayer()).specialistYield(eSpecialist, ((YieldTypes)iI)) : pCity->specialistYield(eSpecialist, ((YieldTypes)iI)));
 			}
 		}
@@ -12403,24 +12402,10 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			//szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_INVESTIGATION", GC.getSpecialistInfo(eSpecialist).getInvestigation()));
 		}
 
-/************************************************************************************************/
-/* Specialists Enhancements, by Supercheese 10/9/09											 */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-//Team Project (1)
-		int iSpecialistHealth = 0;
 		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
-			iSpecialistHealth = 0;
-			TechTypes eTech = ((TechTypes)iI);
-			for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumTechHealthTypes(); iJ++)
-			{
-				if (GC.getSpecialistInfo(eSpecialist).getTechHealthType(iJ).eTech == eTech)
-				{
-					iSpecialistHealth += GC.getSpecialistInfo(eSpecialist).getTechHealthType(iJ).iModifier;
-				}
-			}
+			const TechTypes eTech = ((TechTypes)iI);
+			int iSpecialistHealth = GC.getSpecialistInfo(eSpecialist).getTechHealth(eTech);
 			if (GC.getGame().getActivePlayer() == NO_PLAYER && pCity != NULL)
 			{
 				iSpecialistHealth += pCity->getTechSpecialistHealth(eTech);
@@ -12469,19 +12454,10 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_SPECIALISTHELP_PERCENT", szTempBuffer.GetCString(), (GC.getSpecialistInfo(eSpecialist).getHealthPercent() > 0 ? gDLL->getSymbolID(HEALTHY_CHAR) : gDLL->getSymbolID(UNHEALTHY_CHAR))).c_str());
 			szHelpString.append(szFirstBuffer);
 		}
-//Team Project (1)
-		int iSpecialistHappiness = 0;
 		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
-			iSpecialistHappiness = 0;
-			TechTypes eTech = ((TechTypes)iI);
-			for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumTechHappinessTypes(); iJ++)
-			{
-				if (GC.getSpecialistInfo(eSpecialist).getTechHappinessType(iJ).eTech == eTech)
-				{
-					iSpecialistHappiness += GC.getSpecialistInfo(eSpecialist).getTechHappinessType(iJ).iModifier;
-				}
-			}
+			const TechTypes eTech = ((TechTypes)iI);
+			int iSpecialistHappiness = GC.getSpecialistInfo(eSpecialist).getTechHappiness(eTech);
 			if (GC.getGame().getActivePlayer() == NO_PLAYER && pCity != NULL)
 			{
 				iSpecialistHappiness += pCity->getTechSpecialistHappiness(eTech);
@@ -12578,7 +12554,7 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 
 	for (int iLoopSpecialist = 0; iLoopSpecialist < GC.getNumSpecialistInfos(); iLoopSpecialist++)
 	{
-		SpecialistTypes eSpecialist = (SpecialistTypes)iLoopSpecialist;
+		const SpecialistTypes eSpecialist = (SpecialistTypes)iLoopSpecialist;
 		int iNumSpecialists = kCity.getFreeSpecialistCount(eSpecialist);
 
 		if (iNumSpecialists > 0)
@@ -12592,7 +12568,6 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 
 			for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 			{
-//Team Project (1)
 				aiYields[iI] = iNumSpecialists * kCity.specialistYield(eSpecialist, ((YieldTypes)iI));
 			}
 
@@ -12622,11 +12597,10 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 				szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_EXPERIENCE_SHORT", iNumSpecialists * GC.getSpecialistInfo(eSpecialist).getExperience()));
 			}
 
-			int iUnitCombatExperience = 0;
 			for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{
-				iUnitCombatExperience = 0;
-				UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
+				int iUnitCombatExperience = 0;
+				const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
 				for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumUnitCombatExperienceTypes(); iJ++)
 				{
 					if (GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iJ).eUnitCombat == eUnitCombat)
@@ -12644,30 +12618,16 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 				}
 			}
 
-//Team Project (1)
 			if (GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange() != 0)
 			{
 				szHelpString.append(L", ");
 				szHelpString.append(gDLL->getText("TXT_KEY_SPECIALISTHELP_BIRTH_RATE", iNumSpecialists * GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange()));
 			}
 
-	/************************************************************************************************/
-	/* Specialists Enhancements, by Supercheese 10/9/09											 */
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
-			int iSpecialistHealth = 0;
 			for (iI = 0; iI < GC.getNumTechInfos(); iI++)
 			{
-				iSpecialistHealth = 0;
-				TechTypes eTech = ((TechTypes)iI);
-				for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumTechHealthTypes(); iJ++)
-				{
-					if (GC.getSpecialistInfo(eSpecialist).getTechHealthType(iJ).eTech == eTech)
-					{
-						iSpecialistHealth += GC.getSpecialistInfo(eSpecialist).getTechHealthType(iJ).iModifier;
-					}
-				}
+				const TechTypes eTech = ((TechTypes)iI);
+				int iSpecialistHealth = GC.getSpecialistInfo(eSpecialist).getTechHealth(eTech);
 				if (GC.getGame().getActivePlayer() == NO_PLAYER && GET_PLAYER(kCity.getOwner()).getID() != NO_PLAYER)
 				{
 					iSpecialistHealth += kCity.getTechSpecialistHealth(eTech);
@@ -12719,18 +12679,10 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 				szHelpString.append(szFirstBuffer);
 			}
 
-			int iSpecialistHappiness = 0;
 			for (iI = 0; iI < GC.getNumTechInfos(); iI++)
 			{
-				iSpecialistHappiness = 0;
-				TechTypes eTech = ((TechTypes)iI);
-				for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumTechHappinessTypes(); iJ++)
-				{
-					if (GC.getSpecialistInfo(eSpecialist).getTechHappinessType(iJ).eTech == eTech)
-					{
-						iSpecialistHappiness += GC.getSpecialistInfo(eSpecialist).getTechHappinessType(iJ).iModifier;
-					}
-				}
+				const TechTypes eTech = ((TechTypes)iI);
+				int iSpecialistHappiness = GC.getSpecialistInfo(eSpecialist).getTechHappiness(eTech);
 				if (GC.getGame().getActivePlayer() == NO_PLAYER && GET_PLAYER(kCity.getOwner()).getID() != NO_PLAYER)
 				{
 					iSpecialistHappiness += kCity.getTechSpecialistHappiness(eTech);
@@ -21101,85 +21053,14 @@ void CvGameTextMgr::setBuildingActualEffects(CvWStringBuffer &szBuffer, CvWStrin
 }
 
 
-void buildingHelpTechAndSpecialistModifiers_Old(const CvBuildingInfo& kBuilding, CvWStringBuffer& szBuffer, PlayerTypes ePlayer, TeamTypes eTeam)
-{
-	int iTechHappiness = 0;
-	int iTechHealth = 0;
-
-	bool bHasTechHappinessTypes = kBuilding.getNumTechHappinessTypes() > 0;
-	bool bHasTechHealthTypes = kBuilding.getNumTechHealthTypes() > 0;
-	for (int techInfoIdx = 0; techInfoIdx < GC.getNumTechInfos(); techInfoIdx++)
-	{
-		TechTypes eTech = ((TechTypes)techInfoIdx);
-
-		if (bHasTechHappinessTypes)
-		{
-			iTechHappiness = kBuilding.getTechHappinessType(eTech);
-			if (iTechHappiness > 0)
-			{
-				szBuffer.append(NEWLINE);
-				if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_TECH_HAPPINESS_TYPE_KNOWN", iTechHappiness, gDLL->getSymbolID(HAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
-				}
-				else
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_TECH_HAPPINESS_TYPE", iTechHappiness, gDLL->getSymbolID(HAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
-				}
-			}
-			else if (iTechHappiness < 0)
-			{
-				szBuffer.append(NEWLINE);
-				if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_TECH_HAPPINESS_TYPE_KNOWN", -iTechHappiness, gDLL->getSymbolID(UNHAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
-				}
-				else
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_TECH_HAPPINESS_TYPE", -iTechHappiness, gDLL->getSymbolID(UNHAPPY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
-				}
-			}
-		}
-
-		if (bHasTechHealthTypes)
-		{
-			iTechHealth = kBuilding.getTechHealthType(eTech);
-			if (iTechHealth > 0)
-			{
-				szBuffer.append(NEWLINE);
-				if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_TECH_HEALTH_TYPE_KNOWN", iTechHealth, gDLL->getSymbolID(HEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
-				}
-				else
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_TECH_HEALTH_TYPE", iTechHealth, gDLL->getSymbolID(HEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
-				}
-			}
-			else if (iTechHealth < 0)
-			{
-				szBuffer.append(NEWLINE);
-				if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_TECH_HEALTH_TYPE_KNOWN", -iTechHealth, gDLL->getSymbolID(UNHEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
-				}
-				else
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_TECH_HEALTH_TYPE", -iTechHealth, gDLL->getSymbolID(UNHEALTHY_CHAR), GC.getTechInfo(eTech).getTextKeyWide()));
-				}
-			}
-		}
-	}
-}
-
-void buildingHelpTechModifiers(/*in out*/ CvWStringBuffer& szBuffer, const TechModifierArray& modifierArray, const PlayerTypes ePlayer, const TeamTypes eTeam, const char* const textKeyKnown, const char* const textKeyUnknown, const int symbolCharPositive, const int symbolCharNegative)
+void buildingHelpTechModifiers(/*in out*/ CvWStringBuffer& szBuffer, const IDValueMap<TechTypes, int>& modifierArray, const PlayerTypes ePlayer, const TeamTypes eTeam, const char* const textKeyKnown, const char* const textKeyUnknown, const int symbolCharPositive, const int symbolCharNegative)
 {
 	// tepid argument for using iterator instead of indexing: https://stackoverflow.com/a/776629/6402065
 	// TODO: test that on this compiler
-	for (TechModifierArray::const_iterator itr = modifierArray.begin(); itr != modifierArray.end(); ++itr)
+	foreach_(const TechModifier& pair, modifierArray)
 	{
-		const TechTypes& tech = itr->first;
-		const int& modifier = itr->second;
+		const TechTypes& tech = pair.first;
+		const int& modifier = pair.second;
 		if (modifier > 0)
 		{
 			szBuffer.append(NEWLINE);
@@ -21203,10 +21084,10 @@ void buildingHelpTechModifiers(/*in out*/ CvWStringBuffer& szBuffer, const TechM
 
 void buildingHelpTechAndSpecialistModifiers(/* in out*/ CvWStringBuffer& szBuffer, const CvBuildingInfo& kBuilding, const PlayerTypes ePlayer, const TeamTypes eTeam)
 {
-	buildingHelpTechModifiers(szBuffer, kBuilding.getTechHappinessTypeArray(), ePlayer, eTeam,
+	buildingHelpTechModifiers(szBuffer, kBuilding.getTechHappinessTypes(), ePlayer, eTeam,
 		"TXT_KEY_BUILDINGHELP_TECH_HAPPINESS_TYPE_KNOWN", "TXT_KEY_BUILDINGHELP_TECH_HAPPINESS_TYPE",
 		HAPPY_CHAR, UNHAPPY_CHAR);
-	buildingHelpTechModifiers(szBuffer, kBuilding.getTechHealthTypeArray(), ePlayer, eTeam,
+	buildingHelpTechModifiers(szBuffer, kBuilding.getTechHealthTypes(), ePlayer, eTeam,
 		"TXT_KEY_BUILDINGHELP_TECH_HEALTH_TYPE_KNOWN", "TXT_KEY_BUILDINGHELP_TECH_HEALTH_TYPE",
 		HEALTHY_CHAR, UNHEALTHY_CHAR);
 }
@@ -27301,20 +27182,10 @@ void CvGameTextMgr::buildHealthRateString(CvWStringBuffer &szBuffer, TechTypes e
 //Team Project (1)
 void CvGameTextMgr::buildSpecialistHealthString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {
-	int iI;
-	int iJ;
-	int iSpecialistHealth = 0;
-	for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		iSpecialistHealth = 0;
-		SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
-		for (iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumTechHealthTypes(); iJ++)
-		{
-			if (GC.getSpecialistInfo(eSpecialist).getTechHealthType(iJ).eTech == eTech)
-			{
-				iSpecialistHealth += GC.getSpecialistInfo(eSpecialist).getTechHealthType(iJ).iModifier;
-			}
-		}
+		const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo((SpecialistTypes)iI);
+		const int iSpecialistHealth = kSpecialist.getTechHealth(eTech);
 
 		if (iSpecialistHealth > 0)
 		{
@@ -27322,7 +27193,7 @@ void CvGameTextMgr::buildSpecialistHealthString(CvWStringBuffer &szBuffer, TechT
 			{
 				szBuffer.append(NEWLINE);
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HEALTH_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), iSpecialistHealth, gDLL->getSymbolID(HEALTHY_CHAR)));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HEALTH_TYPE", kSpecialist.getTextKeyWide(), iSpecialistHealth, gDLL->getSymbolID(HEALTHY_CHAR)));
 		}
 		else if (iSpecialistHealth < 0)
 		{
@@ -27330,7 +27201,7 @@ void CvGameTextMgr::buildSpecialistHealthString(CvWStringBuffer &szBuffer, TechT
 			{
 				szBuffer.append(NEWLINE);
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HEALTH_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), -iSpecialistHealth, gDLL->getSymbolID(UNHEALTHY_CHAR)));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HEALTH_TYPE", kSpecialist.getTextKeyWide(), -iSpecialistHealth, gDLL->getSymbolID(UNHEALTHY_CHAR)));
 		}
 	}
 }
@@ -27352,22 +27223,15 @@ void CvGameTextMgr::buildSpecialistHappinessString(CvWStringBuffer &szBuffer, Te
 {
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		int iSpecialistHappiness = 0;
-		SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
-		for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumTechHappinessTypes(); iJ++)
-		{
-			if (GC.getSpecialistInfo(eSpecialist).getTechHappinessType(iJ).eTech == eTech)
-			{
-				iSpecialistHappiness += GC.getSpecialistInfo(eSpecialist).getTechHappinessType(iJ).iModifier;
-			}
-		}
+		const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo((SpecialistTypes)iI);
+		const int iSpecialistHappiness = kSpecialist.getTechHappiness(eTech);
 		if (iSpecialistHappiness > 0)
 		{
 			if (bList)
 			{
 				szBuffer.append(NEWLINE);
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HAPPINESS_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR)));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HAPPINESS_TYPE", kSpecialist.getTextKeyWide(), iSpecialistHappiness, gDLL->getSymbolID(HAPPY_CHAR)));
 		}
 		else if (iSpecialistHappiness < 0)
 		{
@@ -27375,7 +27239,7 @@ void CvGameTextMgr::buildSpecialistHappinessString(CvWStringBuffer &szBuffer, Te
 			{
 				szBuffer.append(NEWLINE);
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HAPPINESS_TYPE", GC.getSpecialistInfo(eSpecialist).getTextKeyWide(), -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR)));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_SPECIALIST_TECH_HAPPINESS_TYPE", kSpecialist.getTextKeyWide(), -iSpecialistHappiness, gDLL->getSymbolID(UNHAPPY_CHAR)));
 		}
 	}
 }

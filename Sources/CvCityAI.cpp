@@ -14725,15 +14725,11 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_HAPPY) != 0)
 	{
-		// Toffer - ToDo - change to iterate the techs cached in the building vector rather than iterate through all techs to see if they are in the vector.
-		if (kBuilding.getNumTechHappinessTypes() > 0)
+		foreach_(const TechModifier& modifier, kBuilding.getTechHappinessTypes())
 		{
-			for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+			if (GET_TEAM(getTeam()).isHasTech(modifier.first) && modifier.second > 0)
 			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI) && kBuilding.getTechHappinessType(iI) > 0)
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		if (kBuilding.getHappiness() > 0
@@ -14754,15 +14750,11 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_HEALTHY) != 0)
 	{
-		// Toffer - ToDo - change to iterate the techs cached in the building vector rather than iterate through all techs to see if they are in the vector.
-		if (kBuilding.getNumTechHealthTypes() > 0)
+		foreach_(const TechModifier& modifier, kBuilding.getTechHealthTypes())
 		{
-			for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+			if (GET_TEAM(getTeam()).isHasTech(modifier.first) && modifier.second > 0)
 			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI) && kBuilding.getTechHealthType(iI) > 0)
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		if (kBuilding.getHealth() > 0

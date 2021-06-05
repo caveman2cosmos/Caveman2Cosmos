@@ -5352,13 +5352,16 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeExtraCityDefenseRecoverySpeedModifier(kBuilding.getCityDefenseRecoverySpeedModifier() * iChange);
 	}
 
-	// TODO reform loop to iterate on the mappings
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessTypes())
 	{
-		const TechTypes eTechX = static_cast<TechTypes>(iI);
-		changeTechHappiness(eTechX, kBuilding.getTechHappinessType(eTechX) * iChange);
-		changeTechHealth(eTechX, kBuilding.getTechHealthType(eTechX) * iChange);
+		changeTechHappiness(modifier.first, modifier.second * iChange);
 	}
+
+	foreach_(const TechModifier& modifier, kBuilding.getTechHealthTypes())
+	{
+		changeTechHealth(modifier.first, modifier.second * iChange);
+	}
+
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		const SpecialistTypes eSpecialistX = static_cast<SpecialistTypes>(iI);
@@ -24041,28 +24044,22 @@ void CvCity::updateExtraTechSpecialistHappiness()
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
+		const SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
 		iBaseSpecialistCount += specialistCount(eSpecialist);
-		int iSpecificSpecialistCount = specialistCount(eSpecialist);
+		const int iSpecificSpecialistCount = specialistCount(eSpecialist);
 		for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
 		{
-			TechTypes eTech = ((TechTypes)iJ);
+			const TechTypes eTech = ((TechTypes)iJ);
 			if (GET_TEAM(getTeam()).isHasTech(eTech))
 			{
 				iRunningTotal += iSpecificSpecialistCount * getTechSpecialistHappinessTypes(eTech, eSpecialist);
-				for (int iK = 0; iK < GC.getSpecialistInfo(eSpecialist).getNumTechHappinessTypes(); iK++)
-				{
-					if (GC.getSpecialistInfo(eSpecialist).getTechHappinessType(iK).eTech == eTech)
-					{
-						iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHappinessType(iK).iModifier;
-					}
-				}
+				iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHappiness(eTech);
 			}
 		}
 	}
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
-		TechTypes eTech = ((TechTypes)iI);
+		const TechTypes eTech = ((TechTypes)iI);
 		if (GET_TEAM(getTeam()).isHasTech(eTech))
 		{
 			iRunningTotal += iBaseSpecialistCount * getTechSpecialistHappiness(eTech);
@@ -24200,29 +24197,22 @@ void CvCity::updateExtraTechSpecialistHealth()
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
+		const SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
 		iBaseSpecialistCount += specialistCount(eSpecialist);
-		int iSpecificSpecialistCount = specialistCount(eSpecialist);
+		const int iSpecificSpecialistCount = specialistCount(eSpecialist);
 		for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
 		{
-			TechTypes eTech = ((TechTypes)iJ);
+			const TechTypes eTech = ((TechTypes)iJ);
 			if (GET_TEAM(getTeam()).isHasTech(eTech))
 			{
 				iRunningTotal += iSpecificSpecialistCount * getTechSpecialistHealthTypes(eTech, eSpecialist);
-				for (int iK = 0; iK < GC.getSpecialistInfo(eSpecialist).getNumTechHealthTypes(); iK++)
-				{
-					TechTypes kTech = GC.getSpecialistInfo(eSpecialist).getTechHealthType(iK).eTech;
-					if (kTech == eTech)
-					{
-						iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHealthType(iK).iModifier;
-					}
-				}
+				iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHealth(eTech);
 			}
 		}
 	}
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
-		TechTypes eTech = ((TechTypes)iI);
+		const TechTypes eTech = ((TechTypes)iI);
 		if (GET_TEAM(getTeam()).isHasTech(eTech))
 		{
 			iRunningTotal += iBaseSpecialistCount * getTechSpecialistHealth(eTech);

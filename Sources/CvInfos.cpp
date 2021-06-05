@@ -728,18 +728,9 @@ CvSpecialistInfo::~CvSpecialistInfo()
 	SAFE_DELETE_ARRAY(m_piYieldChange);
 	SAFE_DELETE_ARRAY(m_piCommerceChange);
 	SAFE_DELETE_ARRAY(m_piFlavorValue);
-	//TB Specialist Tags
-	//Team Project (1)
-	// int vector utilizing struct with delayed resolution
-	for (int i=0; i<(int)m_aTechHappinessTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aTechHappinessTypes[i]));
-	}
 
-	for (int i=0; i<(int)m_aTechHealthTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aTechHealthTypes[i]));
-	}
+	m_aTechHappinessTypes.removeDelayedResolution();
+	m_aTechHealthTypes.removeDelayedResolution();
 
 	for (int i=0; i<(int)m_aUnitCombatExperienceTypes.size(); i++)
 	{
@@ -839,27 +830,26 @@ int CvSpecialistInfo::getInvestigation() const
 	return m_iInvestigation;
 }
 
-// int vector utilizing struct with delayed resolution
-int CvSpecialistInfo::getNumTechHappinessTypes() const
+//int CvSpecialistInfo::getNumTechHappinessTypes() const
+//{
+//	return (int)m_aTechHappinessTypes.size();
+//}
+
+int CvSpecialistInfo::getTechHappiness(TechTypes eTech) const
 {
-	return (int)m_aTechHappinessTypes.size();
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	return m_aTechHappinessTypes.getValue(eTech);
 }
 
-const TechModifier& CvSpecialistInfo::getTechHappinessType(int iTech) const
-{
-	FASSERT_BOUNDS(0, getNumTechHappinessTypes(), iTech)
-	return m_aTechHappinessTypes[iTech];
-}
+//int CvSpecialistInfo::getNumTechHealthTypes() const
+//{
+//	return (int)m_aTechHealthTypes.size();
+//}
 
-int CvSpecialistInfo::getNumTechHealthTypes() const
+int CvSpecialistInfo::getTechHealth(TechTypes eTech) const
 {
-	return (int)m_aTechHealthTypes.size();
-}
-
-const TechModifier& CvSpecialistInfo::getTechHealthType(int iTech) const
-{
-	FASSERT_BOUNDS(0, getNumTechHealthTypes(), iTech)
-	return m_aTechHealthTypes[iTech];
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech)
+	return m_aTechHealthTypes.getValue(eTech);
 }
 
 int CvSpecialistInfo::getNumUnitCombatExperienceTypes() const
@@ -931,52 +921,8 @@ bool CvSpecialistInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iInsidiousness, L"iInsidiousness");
 	pXML->GetOptionalChildXmlValByName(&m_iInvestigation, L"iInvestigation");
 
-	// int vector utilizing struct with delayed resolution
-	if(pXML->TryMoveToXmlFirstChild(L"TechHappinessTypes"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"TechHappinessType" );
-		m_aTechHappinessTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
-
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"TechHappinessType"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"TechType");
-					pXML->GetChildXmlValByName(&(m_aTechHappinessTypes[i].iModifier), L"iModifier");
-					GC.addDelayedResolution((int*)&(m_aTechHappinessTypes[i].eTech), szTextVal);
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"TechHappinessType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"TechHealthTypes"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"TechHealthType" );
-		m_aTechHealthTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
-
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"TechHealthType"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"TechType");
-					pXML->GetChildXmlValByName(&(m_aTechHealthTypes[i].iModifier), L"iModifier");
-					GC.addDelayedResolution((int*)&(m_aTechHealthTypes[i].eTech), szTextVal);
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"TechHealthType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
+	m_aTechHappinessTypes.readWithDelayedResolution(pXML, L"TechHappinessTypes");
+	m_aTechHealthTypes.readWithDelayedResolution(pXML, L"TechHealthTypes");
 
 	if(pXML->TryMoveToXmlFirstChild(L"UnitCombatExperienceTypes"))
 	{
@@ -1060,28 +1006,8 @@ void CvSpecialistInfo::copyNonDefaults(const CvSpecialistInfo* pClassInfo)
 	if (getInsidiousness() == iDefault) m_iInsidiousness = pClassInfo->getInsidiousness();
 	if (getInvestigation() == iDefault) m_iInvestigation = pClassInfo->getInvestigation();
 
-	// int vectors utilizing struct with delayed resolution
-	if (getNumTechHappinessTypes() == 0)
-	{
-		const int iNum = pClassInfo->getNumTechHappinessTypes();
-		m_aTechHappinessTypes.resize(iNum);
-		for (int i=0; i<iNum; i++)
-		{
-			m_aTechHappinessTypes[i].iModifier = pClassInfo->m_aTechHappinessTypes[i].iModifier;
-			GC.copyNonDefaultDelayedResolution((int*)&(m_aTechHappinessTypes[i].eTech), (int*)&(pClassInfo->m_aTechHappinessTypes[i].eTech));
-		}
-	}
-
-	if (getNumTechHealthTypes() == 0)
-	{
-		const int iNum = pClassInfo->getNumTechHealthTypes();
-		m_aTechHealthTypes.resize(iNum);
-		for (int i=0; i<iNum; i++)
-		{
-			m_aTechHealthTypes[i].iModifier = pClassInfo->m_aTechHealthTypes[i].iModifier;
-			GC.copyNonDefaultDelayedResolution((int*)&(m_aTechHealthTypes[i].eTech), (int*)&(pClassInfo->m_aTechHealthTypes[i].eTech));
-		}
-	}
+	m_aTechHappinessTypes.copyNonDefaultDelayedResolution(pClassInfo->getTechHappinessTypes());
+	m_aTechHealthTypes.copyNonDefaultDelayedResolution(pClassInfo->getTechHealthTypes());
 
 	if (getNumUnitCombatExperienceTypes() == 0)
 	{
@@ -1117,25 +1043,10 @@ void CvSpecialistInfo::getCheckSum(unsigned int& iSum) const
 	// int
 	CheckSum(iSum, m_iInsidiousness);
 	CheckSum(iSum, m_iInvestigation);
+	CheckSumC(iSum, m_aTechHappinessTypes);
+	CheckSumC(iSum, m_aTechHealthTypes);
 
-	// int vectors utilizing struct with delayed resolution
-	int iNumElements;
-
-	iNumElements = m_aTechHappinessTypes.size();
-	for (int i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aTechHappinessTypes[i].eTech);
-		CheckSum(iSum, m_aTechHappinessTypes[i].iModifier);
-	}
-
-	iNumElements = m_aTechHealthTypes.size();
-	for (int i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aTechHealthTypes[i].eTech);
-		CheckSum(iSum, m_aTechHealthTypes[i].iModifier);
-	}
-
-	iNumElements = m_aUnitCombatExperienceTypes.size();
+	int iNumElements = m_aUnitCombatExperienceTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
 		CheckSum(iSum, m_aUnitCombatExperienceTypes[i].eUnitCombat);
@@ -12849,7 +12760,6 @@ m_iNumGoodies(0),
 m_piGoodies(NULL)
 
 ,m_iRevolutionIndexPercent(0)
-,m_Percent()
 ,m_PropertyManipulators()
 {
 }
@@ -13235,8 +13145,7 @@ void CvHandicapInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iAIPerEraModifier);
 	CheckSum(iSum, m_iAIAdvancedStartPercent);
 	CheckSum(iSum, m_iNumGoodies);
-
-	m_Percent.getCheckSum(iSum);
+	CheckSumC(iSum, m_Percent);
 
 	m_PropertyManipulators.getCheckSum(iSum);
 
@@ -13339,12 +13248,7 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(&m_iRevolutionIndexPercent, L"iRevolutionIndexPercent");
 
-	if (pXML->TryMoveToXmlFirstChild(L"Percents"))
-	{
-		m_Percent.read(pXML);
-
-		pXML->MoveToXmlParent();
-	}
+	m_Percent.read(pXML, L"Percents");
 
 	m_PropertyManipulators.read(pXML);
 
@@ -13502,7 +13406,7 @@ void CvHandicapInfo::copyNonDefaults(const CvHandicapInfo* pClassInfo)
 
 	if (getRevolutionIndexPercent() == iDefault) m_iRevolutionIndexPercent = pClassInfo->getRevolutionIndexPercent();
 
-	m_Percent.copyNonDefaults(&pClassInfo->m_Percent);
+	m_Percent.copyNonDefaults(pClassInfo->m_Percent);
 
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators);
 }
@@ -13546,7 +13450,6 @@ m_bEndDatesCalculated(false)
 //TB GameSpeed begin
 ,m_iTraitGainPercent(0)
 //TB GameSpeed end
-,m_Percent()
 {
 }
 
@@ -13788,12 +13691,7 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(&m_iTraitGainPercent, L"iTraitGainPercent");
 
-	if (pXML->TryMoveToXmlFirstChild(L"Percents"))
-	{
-		m_Percent.read(pXML);
-
-		pXML->MoveToXmlParent();
-	}
+	m_Percent.read(pXML, L"Percents");
 
 	return true;
 }
@@ -13840,7 +13738,7 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 	if (getTraitGainPercent() == iDefault) m_iTraitGainPercent = pClassInfo->getTraitGainPercent();
 	//TB GameSpeed end
 
-	m_Percent.copyNonDefaults(&pClassInfo->m_Percent);
+	m_Percent.copyNonDefaults(pClassInfo->m_Percent);
 }
 
 void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
@@ -13877,7 +13775,7 @@ void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iTraitGainPercent);
 	//TB GameSpeed end
 
-	m_Percent.getCheckSum(iSum);
+	CheckSumC(iSum, m_Percent);
 }
 
 
@@ -18648,7 +18546,6 @@ CvWorldInfo::CvWorldInfo() :
 ,m_iAdvancedStartPointsMod(0)
 ,m_iCommandersLevelThresholdsPercent(0)
 ,m_iOceanMinAreaSize(0)
-,m_Percent()
 { }
 
 //------------------------------------------------------------------------------------------------------
@@ -18802,12 +18699,8 @@ bool CvWorldInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCommandersLevelThresholdsPercent, L"iCommandersLevelThresholdsPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iOceanMinAreaSize, L"iOceanMinAreaSize");
 
-	if (pXML->TryMoveToXmlFirstChild(L"Percents"))
-	{
-		m_Percent.read(pXML);
+	m_Percent.read(pXML, L"Percents");
 
-		pXML->MoveToXmlParent();
-	}
 	return true;
 }
 
@@ -18841,7 +18734,7 @@ void CvWorldInfo::copyNonDefaults(const CvWorldInfo* pClassInfo)
 	if (getCommandersLevelThresholdsPercent() == iDefault) m_iCommandersLevelThresholdsPercent = pClassInfo->getCommandersLevelThresholdsPercent();
 	if (m_iOceanMinAreaSize == iDefault) m_iOceanMinAreaSize = pClassInfo->getOceanMinAreaSize();
 
-	m_Percent.copyNonDefaults(&pClassInfo->m_Percent);
+	m_Percent.copyNonDefaults(pClassInfo->m_Percent);
 }
 
 void CvWorldInfo::getCheckSum(unsigned int& iSum) const
@@ -18867,8 +18760,7 @@ void CvWorldInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iAdvancedStartPointsMod);
 	CheckSum(iSum, m_iCommandersLevelThresholdsPercent);
 	CheckSum(iSum, m_iOceanMinAreaSize);
-
-	m_Percent.getCheckSum(iSum);
+	CheckSumC(iSum, m_Percent);
 }
 
 /*********************************/
@@ -23827,13 +23719,13 @@ int CvTraitInfo::getNumTechResearchModifiers() const
 	return (int)m_aTechResearchModifiers.size();
 }
 
-TechModifier CvTraitInfo::getTechResearchModifier(int iTech) const
+TechModifier2 CvTraitInfo::getTechResearchModifier(int iTech) const
 {
 	FASSERT_BOUNDS(0, getNumTechResearchModifiers(), iTech)
 
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
-		TechModifier kMod = m_aTechResearchModifiers[iTech];
+		TechModifier2 kMod = m_aTechResearchModifiers[iTech];
 		if (isNegativeTrait() && kMod.iModifier > 0)
 		{
 			kMod.iModifier = 0;
@@ -24712,7 +24604,7 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 			{
 				if (!pXML->CheckDependency())
 					continue;
-				TechModifier kMod;
+				TechModifier2 kMod;
 				pXML->GetChildXmlValByName(szTextVal, L"TechType");
 				kMod.eTech = (TechTypes)pXML->GetInfoClass(szTextVal);
 				pXML->GetChildXmlValByName(&kMod.iModifier, L"iModifier");
