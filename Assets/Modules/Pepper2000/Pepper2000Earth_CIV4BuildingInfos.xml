@@ -6031,9 +6031,9 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ONLINE_WAREHOUSE</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTONOMOUS_MINE</Type>
@@ -11645,9 +11645,9 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AUTOMATED_HIGHWAY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -12675,9 +12675,9 @@
 				<iYield>2</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PERIODIC_TABLE</Type>

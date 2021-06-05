@@ -14233,7 +14233,6 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_ARMOR_M60</UnitType>
-				<UnitType>UNIT_MODERN_ARMOR</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -14337,7 +14336,6 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_ARMOR_M60</UnitType>
-				<UnitType>UNIT_MODERN_ARMOR</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -26997,10 +26995,6 @@
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_THIEF</UnitType>
-				<UnitType>UNIT_ROGUE</UnitType>
-				<UnitType>UNIT_BURGLAR</UnitType>
-				<UnitType>UNIT_ASSASSIN</UnitType>
-				<UnitType>UNIT_CUTTHROAT</UnitType>
 			</UnitUpgrades>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
@@ -29842,7 +29836,6 @@
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_CUTTHROAT</UnitType>
-				<UnitType>UNIT_PARTISAN</UnitType>
 			</UnitUpgrades>
 			<iCost>200</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
@@ -39230,7 +39223,6 @@
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SURGEON</UnitType>
-				<UnitType>UNIT_MEDIC</UnitType>
 			</UnitUpgrades>
 			<iCost>310</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>

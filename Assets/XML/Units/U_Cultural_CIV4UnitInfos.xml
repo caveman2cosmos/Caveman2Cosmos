@@ -2944,7 +2944,6 @@
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
-				<UnitType>UNIT_CUIRASSIER</UnitType>
 				<UnitType>UNIT_CHIVALRY</UnitType>
 			</UnitUpgrades>
 			<FlankingStrikes>
@@ -3601,7 +3600,6 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_ARMOR_M60</UnitType>
-				<UnitType>UNIT_MODERN_ARMOR</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -8046,7 +8044,6 @@
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
-				<UnitType>UNIT_CUIRASSIER</UnitType>
 				<UnitType>UNIT_CHIVALRY</UnitType>
 			</UnitUpgrades>
 			<FlankingStrikes>
@@ -28580,7 +28577,6 @@
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_DRAGOON</UnitType>
-				<UnitType>UNIT_CAVALRY</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -35628,7 +35624,6 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_CARABINIER</UnitType>
 				<UnitType>UNIT_LANCER</UnitType>
-				<UnitType>UNIT_DRAGOON</UnitType>
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
@@ -37815,7 +37810,6 @@
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_DRAGOON</UnitType>
-				<UnitType>UNIT_CAVALRY</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -42643,7 +42637,6 @@
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_DRAGOON</UnitType>
-				<UnitType>UNIT_CAVALRY</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -45869,7 +45862,6 @@
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_DRAGOON</UnitType>
-				<UnitType>UNIT_CAVALRY</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -48639,7 +48631,6 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_CARABINIER</UnitType>
 				<UnitType>UNIT_LANCER</UnitType>
-				<UnitType>UNIT_DRAGOON</UnitType>
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
