@@ -2247,6 +2247,7 @@ public:
 	int CvUnitInfo::getPrereqAndBuilding(int i) const;
 	int CvUnitInfo::getNumPrereqAndBuildings() const;
 	bool CvUnitInfo::isPrereqAndBuilding(int i) const;
+	bool CvUnitInfo::isPrereqOrBuilding(int i) const;
 
 	int getTargetUnit(int i) const;
 	int getNumTargetUnits() const;
