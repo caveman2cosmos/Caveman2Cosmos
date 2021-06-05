@@ -3240,8 +3240,6 @@ void CvTeamAI::AI_setWarSuccess(TeamTypes eIndex, int iNewValue)
 
 			if (playerA.isAliveAndTeam(getID()))
 			{
-				const TeamTypes eTeamA = playerA.getTeam();
-
 				for (int iB = 0; iB < MAX_PC_PLAYERS; iB++)
 				{
 					if (GET_PLAYER((PlayerTypes)iB).isAliveAndTeam(eIndex))
@@ -3474,9 +3472,6 @@ void CvTeamAI::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvTeamAI", &m_iLimitedWarPowerRatio);
 	WRAPPER_READ(wrapper, "CvTeamAI", &m_iDogpileWarRand);
 	WRAPPER_READ(wrapper, "CvTeamAI", &m_iMakePeaceRand);
-
-	int iID = getID();
-
 	WRAPPER_READ_OBJECT_END(wrapper);
 
 /* Needed if getMaxCivPlayers return MAX_PC_PLAYERS, now it returns MAX_PLAYERS-1.

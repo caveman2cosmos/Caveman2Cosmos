@@ -6229,7 +6229,6 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 	for (int j = 0; j < GC.getNumSpawnInfos(); j++)
 	{
-		const SpawnTypes eSpawn = static_cast<SpawnTypes>(j);
 		const CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)j);
 
 		//TB Note: It is at this point that we need to isolate out the player type on spawn info.

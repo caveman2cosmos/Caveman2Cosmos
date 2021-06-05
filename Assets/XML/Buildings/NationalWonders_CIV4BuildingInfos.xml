@@ -5127,11 +5127,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>100</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iMilitaryProductionModifier>25</iMilitaryProductionModifier>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
