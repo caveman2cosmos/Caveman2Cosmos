@@ -709,8 +709,8 @@ public:
 				{
 					for (int j = 0; j < iNumSibs; j++)
 					{
-						T value = static_cast<T>(GetInfoClass(szTextVal));
-						if (value > -1  && find(aInfos->begin(), aInfos->end(), value) == aInfos->end())
+						const T value = static_cast<T>(GetInfoClass(szTextVal));
+						if (value > -1  && !algo::contains(*aInfos, value))
 						{
 							aInfos->push_back(value);
 						}

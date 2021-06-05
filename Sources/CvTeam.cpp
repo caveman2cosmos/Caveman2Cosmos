@@ -7960,6 +7960,7 @@ void CvTeam::recalculateModifiers()
 		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
 			m_ppiBuildingCommerceChange[iI][iJ] = 0;
+			m_ppiBuildingCommerceModifier[iI][iJ] = 0;
 		}
 		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{
@@ -7969,10 +7970,6 @@ void CvTeam::recalculateModifiers()
 		for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
 		{
 			m_ppiBuildingSpecialistChange[iI][iJ] = 0;
-		}
-		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
-		{
-			m_ppiBuildingCommerceModifier[iI][iJ] = 0;
 		}
 	}
 
@@ -7984,6 +7981,11 @@ void CvTeam::recalculateModifiers()
 	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
 	{
 		m_aiExtraMoves[iI] = 0;
+	}
+
+	for (int iI = 0, num = GC.getNumRouteInfos(); iI < num; iI++)
+	{
+		m_paiRouteChange[iI] = 0;
 	}
 	// Recalculate player modifiers
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)

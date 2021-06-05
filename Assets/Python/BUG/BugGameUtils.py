@@ -264,9 +264,6 @@ class Dispatcher:
 		bound.__module__ = func.__module__
 		return bound
 
-	def getBaseUtils(self):
-		return self._baseUtils
-
 
 ## Callback
 
