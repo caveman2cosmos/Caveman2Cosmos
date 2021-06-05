@@ -1140,7 +1140,6 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 					}
 					else if (m_pBestTerminalNode->m_iMovementRemaining != 0)
 					{
-						int iBestCostTo = MAX_INT;
 #ifdef LIGHT_VALIDATION
 						if (bValidate)
 						{
