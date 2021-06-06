@@ -6118,18 +6118,7 @@ class MapStats:
 
 	# get technology prerequisites
 	def getTechPrereqLists( self, iTech ):
-		andTech = []
-		orTech = []
-		if iTech in range( GC.getNumTechInfos() ):
-			i = 0
-			while GC.getTechInfo(iTech).getPrereqAndTechs(i) in range( GC.getNumTechInfos() ):
-				andTech.append( GC.getTechInfo(iTech).getPrereqAndTechs(i) )
-				i += 1
-			i = 0
-			while GC.getTechInfo(iTech).getPrereqOrTechs(i) in range( GC.getNumTechInfos() ):
-				orTech.append( GC.getTechInfo(iTech).getPrereqOrTechs(i) )
-				i += 1
-		return andTech, orTech
+		return GC.getTechInfo(iTech).getPrereqAndTechs(), GC.getTechInfo(iTech).getPrereqOrTechs()
 
 	# get technology level
 	def getTechLevel( self, iTech ):
