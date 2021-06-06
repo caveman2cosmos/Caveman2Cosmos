@@ -1009,6 +1009,7 @@ class Pedia:
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			TechMainReq = CvBuildingInfo.getPrereqAndTech()
 			
+			#Assuming tech types aren't more advanced than main tech requirement
 			if GC.getTechInfo(TechMainReq) != None:
 				iTechMainLoc = GC.getTechInfo(TechMainReq).getGridX()
 				iTechMainRow = GC.getTechInfo(TechMainReq).getGridY()
@@ -1016,6 +1017,7 @@ class Pedia:
 				iTechMainLoc = 0
 				iTechMainRow = 0
 			
+			#Tech requirement as defined in special building infos (core tech)
 			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
 			if iSpecialBuilding != -1:
 				TechSpecialReq = GC.getSpecialBuildingInfo(iSpecialBuilding).getTechPrereq()
@@ -1028,7 +1030,8 @@ class Pedia:
 			else:
 				iTechSpecialLoc = 0
 				iTechSpecialRow = 0
-				
+			
+			#tech requirement derived from location of religion in tech tree
 			iRelPrereq1 = CvBuildingInfo.getPrereqReligion()
 			iRelPrereq2 = CvBuildingInfo.getReligionType()
 			iRelPrereq3 = CvBuildingInfo.getPrereqStateReligion()
@@ -1046,13 +1049,17 @@ class Pedia:
 				iTechReligionLoc = 0
 				iTechReligionRow = 0
 
+			#Pick most advanced tech
 			iTechLoc = max(iTechMainLoc, iTechSpecialLoc, iTechReligionLoc)
-			iTechRow = max(iTechMainRow, iTechSpecialRow, iTechReligionRow)
+			if iTechLoc == iTechMainLoc:
+				iTechRow = iTechMainRow
+			elif iTechLoc == iTechSpecialLoc:			
+				iTechRow = iTechSpecialRow
+			elif iTechLoc == iTechReligionLoc:
+				iTechRow = iTechReligionRow
 			
+			#<Bonus>BONUS_X
 			iBuildingBonusReq = CvBuildingInfo.getPrereqAndBonus()
-			iBuildingVicinityBonusReq = CvBuildingInfo.getPrereqVicinityBonus()
-			iBuildingRawVicinityBonusReq = CvBuildingInfo.getPrereqRawVicinityBonus()
-			
 			if GC.getBonusInfo(iBuildingBonusReq) != None:
 				bonusTechReq = GC.getBonusInfo(iBuildingBonusReq).getTechCityTrade()
 				if GC.getTechInfo(bonusTechReq) != None:
@@ -1061,7 +1068,9 @@ class Pedia:
 					bonusTechLoc = 0
 				if bonusTechLoc > iTechLoc:
 					print CvBuildingInfo.getType()+" - Singular AND bonus prereq late!"
-					
+			
+			#<VicinityBonus>BONUS_X
+			iBuildingVicinityBonusReq = CvBuildingInfo.getPrereqVicinityBonus()
 			if GC.getBonusInfo(iBuildingVicinityBonusReq) != None:
 				bonusTechReq = GC.getBonusInfo(iBuildingVicinityBonusReq).getTechCityTrade()
 				if GC.getTechInfo(bonusTechReq) != None:
@@ -1071,6 +1080,8 @@ class Pedia:
 				if bonusTechLoc > iTechLoc:
 					print CvBuildingInfo.getType()+" - Singular AND vicinity bonus prereq late!"
 					
+			#<RawVicinityBonus>BONUS_X
+			iBuildingRawVicinityBonusReq = CvBuildingInfo.getPrereqRawVicinityBonus()
 			if GC.getBonusInfo(iBuildingRawVicinityBonusReq) != None:
 				bonusTechReq = GC.getBonusInfo(iBuildingRawVicinityBonusReq).getTechReveal()
 				if GC.getTechInfo(bonusTechReq) != None:
@@ -1080,6 +1091,7 @@ class Pedia:
 				if bonusTechLoc > iTechLoc:
 					print CvBuildingInfo.getType()+" - Singular AND raw vicinity bonus prereq late!"
 				
+			#<PrereqBonuses>
 			for bonusOr in xrange(CvBuildingInfo.getNumPrereqOrBonuses()):
 				bonusTechReq = GC.getBonusInfo(CvBuildingInfo.getPrereqOrBonuses(bonusOr)).getTechCityTrade()
 				if GC.getTechInfo(bonusTechReq) != None:
@@ -1092,6 +1104,7 @@ class Pedia:
 				print CvBuildingInfo.getType()+" - Earliest OR bonus prereq late!"
 			bonusTechLocList = []
 			
+			#<PrereqVicinityBonuses>
 			for bonusOrVic in xrange(25):
 				if CvBuildingInfo.getPrereqOrVicinityBonuses(bonusOrVic) != -1:
 					bonusTechReq = GC.getBonusInfo(CvBuildingInfo.getPrereqOrVicinityBonuses(bonusOrVic)).getTechCityTrade()
@@ -1105,6 +1118,7 @@ class Pedia:
 				print CvBuildingInfo.getType()+" - Earliest OR vicinity bonus prereq late!"
 			bonusTechLocList = []
 
+			#<PrereqRawVicinityBonuses>
 			for bonusOrVicRaw in CvBuildingInfo.getPrereqOrRawVicinityBonuses():
 				bonusTechReq = GC.getBonusInfo(bonusOrVicRaw).getTechReveal()
 				if bonusTechReq > -1:
