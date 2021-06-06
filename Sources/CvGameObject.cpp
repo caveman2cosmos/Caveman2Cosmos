@@ -747,8 +747,6 @@ void CvGameObject::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 {
 	//CvString szBuffer;
-	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
-	const int iNum = kInfo.getNumPropertyBuildings();
 	//TB Combat Mods (disease special manifestation and removal system)
 	//const PropertyTypes eDiseaseType = GC.getPROPERTY_DISEASE();
 
@@ -756,15 +754,14 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 	//{
 	//
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-	if (!kInfo.isOAType() || !GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+	if (!GC.getPropertyInfo(eProperty).isOAType() || !GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 #endif
 	{
 		//TB Combat Mods end
 		if (!GET_PLAYER(m_pCity->getOwner()).isNPC())
 		{
-			for (int i=0; i<iNum; i++)
+			foreach_(const PropertyBuilding& kBuilding, GC.getPropertyInfo(eProperty).getPropertyBuildings())
 			{
-				const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
 				const bool bHasBuilding = m_pCity->getNumActiveBuilding(kBuilding.eBuilding) > 0;
 				const bool bInRange = (iNewValue >= kBuilding.iMinValue) && (iNewValue <= kBuilding.iMaxValue);
 				if (!bInRange)
@@ -806,12 +803,8 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 {
 	PROFILE_FUNC();
 
-	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
-	const int iNum = kInfo.getNumPropertyPromotions();
-
-	for (int i=0; i<iNum; i++)
+	foreach_(const PropertyPromotion& kPromotion, GC.getPropertyInfo(eProperty).getPropertyPromotions())
 	{
-		const PropertyPromotion& kPromotion = kInfo.getPropertyPromotion(i);
 		const bool bHasPromotion = m_pUnit->isHasPromotion(kPromotion.ePromotion);
 		const bool bInRange = (iNewValue >= kPromotion.iMinValue) && (iNewValue <= kPromotion.iMaxValue);
 		if (!bInRange)
@@ -869,7 +862,6 @@ bool CvGameObjectPlayer::isTag(TagTypes eTag) const
 	{
 		case TAG_ANARCHY:
 			return m_pPlayer->isAnarchy();
-			break;
 	}
 	return false;
 }

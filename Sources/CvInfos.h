@@ -8571,10 +8571,14 @@ public:
 	CvWString getChangeAllCitiesDisplayText() const;
 	CvWString getPrereqMinDisplayText() const;
 	CvWString getPrereqMaxDisplayText() const;
+
 	const PropertyBuilding& getPropertyBuilding(int index) const;
 	int getNumPropertyBuildings() const;
+	const std::vector<PropertyBuilding>& getPropertyBuildings() const { return m_aPropertyBuildings; }
+
 	const PropertyPromotion& getPropertyPromotion(int index) const;
 	int getNumPropertyPromotions() const;
+	const std::vector<PropertyPromotion>& getPropertyPromotions() const { return m_aPropertyPromotions; }
 
 	int getChangePropagator(const GameObjectTypes eFrom, const GameObjectTypes eTo) const;
 
@@ -8590,7 +8594,7 @@ public:
 
 	void copyNonDefaults(const CvPropertyInfo* pClassInfo);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
