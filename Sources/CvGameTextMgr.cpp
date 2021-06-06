@@ -23611,10 +23611,9 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	for (int i=0; i<GC.getNumPropertyInfos(); i++)
 	{
 		const CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)i);
-		int iNum = kInfo.getNumPropertyBuildings();
-		for (int j=0; j<iNum; j++)
+		foreach_(const PropertyBuilding& propBuilding, kInfo.getPropertyBuildings())
 		{
-			if (kInfo.getPropertyBuilding(j).eBuilding == eBuilding)
+			if (propBuilding.eBuilding == eBuilding)
 			{
 				szBuffer.append(NEWLINE);
 				int iMinVal = kInfo.getPropertyBuilding(j).iMinValue;
