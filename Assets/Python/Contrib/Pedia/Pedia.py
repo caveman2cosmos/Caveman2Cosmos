@@ -1000,7 +1000,7 @@ class Pedia:
 
 	def getBuildingList(self, iBuildingType):
 		aList = []
-		bonuslist = [-1]*GC.getNumBonusInfos()
+		#bonuslist = [-1]*GC.getNumBonusInfos() Checking if earliest resource producer is unlocked on resource tech reveal is slow.
 		bonusTechLocList = []
 		aListDict = {}		
 		iCategory, szSubCat = self.SECTION
@@ -1060,25 +1060,26 @@ class Pedia:
 				iTechRow = iTechReligionRow				
 			
 			#Finds if earliest resource producer tech requirement and tech enable of resource are in same column
-			for bonus in xrange(GC.getNumBonusInfos()):
-				if CvBuildingInfo.getFreeBonus() == bonus:
-					bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
-					if GC.getTechInfo(bonusTechReq) != None:
-						bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
-						if bonuslist[bonus] == -1:
-							bonuslist[bonus] = iTechLoc
-						elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
-							bonuslist[bonus] = iTechLoc
-					
-				for j in range(CvBuildingInfo.getNumExtraFreeBonuses()):
-					if CvBuildingInfo.getExtraFreeBonus(j) == bonus:
+			if 0:
+				for bonus in xrange(GC.getNumBonusInfos()):
+					if CvBuildingInfo.getFreeBonus() == bonus:
 						bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
 						if GC.getTechInfo(bonusTechReq) != None:
 							bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
 							if bonuslist[bonus] == -1:
 								bonuslist[bonus] = iTechLoc
 							elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
-								bonuslist[bonus] = iTechLoc					
+								bonuslist[bonus] = iTechLoc
+						
+					for j in range(CvBuildingInfo.getNumExtraFreeBonuses()):
+						if CvBuildingInfo.getExtraFreeBonus(j) == bonus:
+							bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
+							if GC.getTechInfo(bonusTechReq) != None:
+								bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+								if bonuslist[bonus] == -1:
+									bonuslist[bonus] = iTechLoc
+								elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
+									bonuslist[bonus] = iTechLoc					
 			
 			#<Bonus>BONUS_X
 			iBuildingBonusReq = CvBuildingInfo.getPrereqAndBonus()
@@ -1172,10 +1173,11 @@ class Pedia:
 			key = aList[i]
 			aList[i] = aListDict[key]
 			
-		for bonustype in xrange(len(bonuslist)):
-			if bonuslist[bonustype] != -1 and GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()) != None and not GC.getBonusInfo(bonustype).getConstAppearance() > 0:
-				if bonuslist[bonustype] - GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX() != 0:
-					print GC.getBonusInfo(bonustype).getType()+" "+str(GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX())+" Earliest bonus producer located at: "+str(bonuslist[bonustype])
+		if 0:
+			for bonustype in xrange(len(bonuslist)):
+				if bonuslist[bonustype] != -1 and GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()) != None and not GC.getBonusInfo(bonustype).getConstAppearance() > 0:
+					if bonuslist[bonustype] - GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX() != 0:
+						print GC.getBonusInfo(bonustype).getType()+" "+str(GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX())+" Earliest bonus producer located at: "+str(bonuslist[bonustype])
 		return aList
 
 	def getBuildingType(self, CvBuildingInfo, iBuilding):
