@@ -108,11 +108,9 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 	if (equal(pXML->GetXmlTagName(), L"And"))
 	{
 		// this is an And node, check number of children
-		//if (pXML->GetXmlChildrenNumber() < 2)
 		if (pXML->GetXmlChildrenNumber() < 2)
 		{
 			// no real And node
-			//if (pXML->TryMoveToXmlFirstChild())
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// there is a subexpression, so no simple constant
@@ -130,14 +128,12 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		}
 		else
 		{
-			//if (pXML->TryMoveToXmlFirstChild())
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
 				const BoolExpr* pExpr = read(pXML);
 				
 				// read nodes until there are no more siblings
-				//while (pXML->TryMoveToXmlNextSibling())
 				while (pXML->TryMoveToXmlNextSibling())
 				{
 					pExpr = new BoolExprAnd(pExpr, read(pXML));
@@ -155,7 +151,6 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		if (pXML->GetXmlChildrenNumber() < 2)
 		{
 			// no real Or node
-			//if (pXML->TryMoveToXmlFirstChild())
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// there is a subexpression, so no simple constant
@@ -173,7 +168,6 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		}
 		else
 		{
-			//if (pXML->TryMoveToXmlFirstChild())
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
@@ -201,7 +195,6 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		}
 		else
 		{
-			//if (pXML->TryMoveToXmlFirstChild())
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
@@ -229,7 +222,6 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		}
 		else
 		{
-			//if (pXML->TryMoveToXmlFirstChild())
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
@@ -258,7 +250,6 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		}
 		else
 		{
-			//if (pXML->TryMoveToXmlFirstChild())
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
@@ -287,7 +278,6 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		}
 		else
 		{
-			//if (pXML->TryMoveToXmlFirstChild())
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
@@ -316,7 +306,6 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		}
 		else
 		{
-			//if (pXML->TryMoveToXmlFirstChild())
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the if node

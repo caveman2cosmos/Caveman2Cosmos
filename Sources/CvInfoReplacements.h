@@ -57,7 +57,7 @@ public:
 
 	bool checkCondition()
 	{
-		return m_pCondition->evaluate(cvInternalGlobals::getInstance().getGame().getGameObject());
+		return m_pCondition->evaluate(GC.getGame().getGameObject());
 	}
 
 	T* getInfo() const

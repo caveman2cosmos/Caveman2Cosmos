@@ -20560,7 +20560,7 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 			bool bEval = false;
 			if (pCity)
 			{
-				bEval = pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject())); // Const wegcasten ist hier ok da evaluate nicht wirklich etwas ändert
+				bEval = pExpr->evaluate(pCity->getGameObject());
 			}
 			if (!bEval)
 			{
@@ -24345,7 +24345,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		}
 
 		const BoolExpr* pExpr = kBuilding.getConstructCondition();
-		if (pExpr && (!pCity || !pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject()))))
+		if (pExpr && (!pCity || !pExpr->evaluate(pCity->getGameObject())))
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
 			pExpr->buildDisplayString(szBuffer);

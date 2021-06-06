@@ -155,7 +155,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp);
 
-	virtual void getCheckSum(unsigned int& iSum) const;
+	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	AttributeTypes m_eAttribute;

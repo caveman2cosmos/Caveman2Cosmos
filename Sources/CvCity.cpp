@@ -23073,7 +23073,7 @@ int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 	int iSum = 0;
 	foreach_(const CvPropertySource* pSource, GC.getPropertyInfo(eProperty).getPropertyManipulators()->getSources())
 	{
-		if (pSource->isActive(const_cast<CvGameObjectCity*>(getGameObject())))
+		if (pSource->isActive(getGameObject()))
 		{
 			iSum += pSource->getSourcePredict(getGameObject(), getPropertiesConst()->getValueByProperty(eProperty));
 		}
