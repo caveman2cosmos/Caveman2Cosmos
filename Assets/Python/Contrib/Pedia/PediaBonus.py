@@ -103,7 +103,7 @@ class PediaBonus:
 					if (CvBuildingInfo.getExtraFreeBonus(i) == iTheBonus):
 						aSourceOfBonus.append(iBuilding)
 						break
-			if CvBuildingInfo.getPrereqVicinityBonus() == iTheBonus:
+			if CvBuildingInfo.getPrereqVicinityBonus() == iTheBonus or CvBuildingInfo.getPrereqRawVicinityBonus() == iTheBonus:
 				aVicinityBuildings.append(iBuilding)
 			if bValid:
 				if CvBuildingInfo.getPrereqAndBonus() == iTheBonus :
