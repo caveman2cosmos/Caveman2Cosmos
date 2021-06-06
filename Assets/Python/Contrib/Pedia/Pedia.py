@@ -1115,6 +1115,33 @@ class Pedia:
 				print CvBuildingInfo.getType()+" - Earliest OR raw vicinity bonus prereq late!"
 			bonusTechLocList = []
 
+			def getGOMAndBonuses(CyBoolExpr, l):
+				if CyBoolExpr is not None:
+					type = CyBoolExpr.getType()
+					if type == BoolExprTypes.BOOLEXPR_AND:
+						getGOMAndBonuses(CyBoolExpr.getFirstExpr(), l)
+						getGOMAndBonuses(CyBoolExpr.getSecondExpr(), l)
+					elif type == BoolExprTypes.BOOLEXPR_HAS \
+					and CyBoolExpr.getGOMType() == GOMTypes.GOM_BONUS:
+						l.append(CyBoolExpr.getID())
+
+			andBonusList = []
+			getGOMAndBonuses(CvBuildingInfo.getConstructCondition(), andBonusList)
+			if andBonusList:
+				GC.getGame().log("Python.log", str("\nGOM and bonuses for %s:" %CvBuildingInfo.getDescription()))
+				for eBonus in andBonusList:
+					GC.getGame().log("Python.log", str(GC.getBonusInfo(eBonus).getDescription()))
+
+			for bonusAndGOM in andBonusList:
+				bonusTechReq = GC.getBonusInfo(bonusAndGOM).getTechReveal()
+				if bonusTechReq > -1:
+					bonusTechLocList.append(GC.getTechInfo(bonusTechReq).getGridX())
+				else:
+					bonusTechLocList.append(0)
+			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
+				print CvBuildingInfo.getType()+" - Earliest OR raw vicinity bonus prereq late!"
+			bonusTechLocList = []
+
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
 			if iBuildingType != -1:

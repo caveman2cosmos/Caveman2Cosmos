@@ -279,8 +279,7 @@ public:
 	void addPlayer(int /*PlayerTypes*/ eNewPlayer, int /*LeaderHeadTypes*/ eLeader, int /*CivilizationTypes*/ eCiv, bool bSetAlive );
 	void changeHumanPlayer( int /*PlayerTypes*/ eOldHuman , int /*PlayerTypes*/ eNewHuman );
 	void addReplayMessage(int /*ReplayMessageTypes*/ eType, int /*PlayerTypes*/ ePlayer, std::wstring pszText, int iPlotX, int iPlotY, int /*ColorTypes*/ eColor);
-	void log(TCHAR* str);
-	void logw(std::wstring str);
+	void log(const char* file, const char* msg) const;
 
 	int getCultureThreshold(int /*CultureLevelTypes*/ eLevel) const;
 

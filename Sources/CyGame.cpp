@@ -1069,14 +1069,9 @@ void CyGame::changeHumanPlayer(int eOldHuman, int eNewHuman)
 	m_pGame.changeHumanPlayer((PlayerTypes)eOldHuman, (PlayerTypes)eNewHuman);
 }
 
-void CyGame::logw(std::wstring str)
+void CyGame::log(const char* file, const char* msg) const
 {
-	logging::logMsgW("C2C.log", (wchar_t*)(CvString(str) + "\n").c_str());
-}
-
-void CyGame::log(TCHAR* str)
-{
-	logging::logMsg("C2C.log", str);
+	logging::logMsg(file, msg);
 }
 
 void CyGame::addReplayMessage(int /*ReplayMessageTypes*/ eType, int /*PlayerTypes*/ ePlayer, std::wstring pszText, int iPlotX, int iPlotY, int /*ColorTypes*/ eColor)

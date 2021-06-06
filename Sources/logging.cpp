@@ -20,20 +20,17 @@ namespace logging
 
 	void logMsg(const char* file, const char* msg, ...)
 	{
-		if (GC.isXMLLogging())
-		{
-			static char buf[2048];
-			_vsnprintf(buf, 2048 -4, msg, (char*)(&msg +1));
-			strcat(buf, "\n");
+		static char buf[2048];
+		_vsnprintf(buf, 2048 -4, msg, (char*)(&msg +1));
+		strcat(buf, "\n");
 
-			const std::string path = getModDir() + "\\Logs\\" + file;
-			std::fstream stream(path.c_str(), std::ios::out | std::ios::app);
-			FAssert(stream.is_open())
-			stream << buf;
-			stream.close();
+		const std::string path = getModDir() + "\\Logs\\" + file;
+		std::fstream stream(path.c_str(), std::ios::out | std::ios::app);
+		FAssert(stream.is_open())
+		stream << buf;
+		stream.close();
 
-			OutputDebugString(buf);
-		}
+		OutputDebugString(buf);
 	}
 
 	void logMsgW(const char* file, const wchar_t* msg, ...)
