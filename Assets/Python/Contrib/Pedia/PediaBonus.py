@@ -106,7 +106,7 @@ class PediaBonus:
 			if CvBuildingInfo.getPrereqVicinityBonus() == iTheBonus or CvBuildingInfo.getPrereqRawVicinityBonus() == iTheBonus:
 				aVicinityBuildings.append(iBuilding)
 			#Trigger this loop only if building has Or Vicinity prereq at first place!
-			if iBonus in CvBuildingInfo.getPrereqOrVicinityBonuses():
+			if iTheBonus in CvBuildingInfo.getPrereqOrVicinityBonuses():
 				aVicinityBuildings.append(iBuilding)
 			for iBonus in CvBuildingInfo.getPrereqOrRawVicinityBonuses():
 				if iBonus == iTheBonus:
