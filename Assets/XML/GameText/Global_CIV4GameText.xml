@@ -10590,27 +10590,27 @@
 		<Russian>Òðåáóåòñÿ[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REQUIRES_VICINITY_BONUS</Tag>
+		<Tag>TXT_KEY_REQUIRES_BONUS_VICINITY</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires %s1_Text in city and in city vicinity, or manufactured locally.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert %s1_Text en ville, à proximité de la ville, ou fabriqué localement.[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: %s1_Text (hergestellt oder abgebaut im Stadtradius)[COLOR_REVERT]</German>
 		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò %s1_Text в городском радиусе[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REQUIRES_IN_CITY_VICINITY</Tag>
+		<Tag>TXT_KEY_REQUIRES_BONUS_VICINITY_ONEOF</Tag>
 		<English>[COLOR_WARNING_TEXT]Bonus required in city and in city vicinity, or manufactured locally:[SPACE]</English>
 		<French>[COLOR_WARNING_TEXT]Bonus requis dans la ville et ses environs, ou fabriqué localement:[SPACE]</French>
 		<Russian>[COLOR_WARNING_TEXT]Íåîáõîäèì îõâàò ãîðîäñêîé ãðàíèöåé:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REQUIRES_RAW_VICINITY_BONUS</Tag>
+		<Tag>TXT_KEY_REQUIRES_BONUS_RAWVICINITY</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires %s1_Text in City Vicinity, or manufactured locally (No need for improvement)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert %s1_Text à proximité de la ville, ou fabriqué localement (Pas besoin d'aménagement)[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: %s1_Text (hergestellt oder vorhanden im Stadtradius)[COLOR_REVERT]</German>
 		<Russian>[COLOR_WARNING_TEXT]Требует %s1_Text в городском радиусе или изготовлено на месте (нет необходимости в улучшении)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REQUIRES_RAW_IN_CITY_VICINITY</Tag>
+		<Tag>TXT_KEY_REQUIRES_BONUS_RAWVICINITY_ONEOF</Tag>
 		<English>[COLOR_WARNING_TEXT]Bonus required in city vicinity, or manufactured locally (No need for improvement):[SPACE]</English>
 		<French>[COLOR_WARNING_TEXT]Bonus requis dans les environs de la ville ou fabriqué localement (pas besoin d'amélioration):[SPACE]</French>
 		<Russian>[COLOR_WARNING_TEXT]Бонус, расположенный в окрестностях города или произведенный на месте (не требует улучшения):[SPACE]</Russian>
