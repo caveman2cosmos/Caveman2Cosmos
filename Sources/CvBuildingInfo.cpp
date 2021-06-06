@@ -1838,7 +1838,7 @@ bool CvBuildingInfo::EnablesUnits() const
 			const BoolExpr* condition = kUnit.getTrainCondition();
 			if (condition != NULL)
 			{
-				if (condition->getInvolvesGOM(&(*queries.begin()), &(*queries.end())))
+				if (condition->getInvolvesGOM(queries))
 				{
 					m_bEnablesUnits = true;
 					return m_bEnablesUnits;

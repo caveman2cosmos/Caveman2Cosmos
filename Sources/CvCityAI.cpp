@@ -4523,7 +4523,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					const BoolExpr* condition = GC.getBuildingInfo((BuildingTypes)iI).getConstructCondition();
 					if (condition != NULL)
 					{
-						if (condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE)
+						if (condition->evaluateChange(pObject, queries) == BOOLEXPR_CHANGE_BECOMES_TRUE)
 						{
 							bEnablesCondition = true;
 						}
@@ -15108,7 +15108,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						if (!bEnablesCondition)
 						{
 							const BoolExpr* condition = GC.getBuildingInfo(eType).getConstructCondition();
-							bEnablesCondition = condition != NULL && condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE;
+							bEnablesCondition = condition != NULL && condition->evaluateChange(pObject, queries) == BOOLEXPR_CHANGE_BECOMES_TRUE;
 						}
 						if (bEnablesCondition && canConstructInternal(eType, false, false, false, true, eBuilding))
 						{
@@ -15657,7 +15657,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							const BoolExpr* condition = kUnit.getTrainCondition();
 							if (condition != NULL)
 							{
-								if (condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE)
+								if (condition->evaluateChange(pObject, queries) == BOOLEXPR_CHANGE_BECOMES_TRUE)
 								{
 									bUnitIsEnabler = true;
 								}

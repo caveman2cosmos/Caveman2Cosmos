@@ -3280,7 +3280,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				queries.push_back(query);
 			}
 
-			const BoolExprChange result = kBuilding.getConstructCondition()->evaluateChange(pObject, &(*queries.begin()), &(*queries.end()));
+			const BoolExprChange result = kBuilding.getConstructCondition()->evaluateChange(pObject, queries);
 			if ((result == BOOLEXPR_CHANGE_REMAINS_FALSE) || (result == BOOLEXPR_CHANGE_BECOMES_FALSE))
 			{
 				return false;
