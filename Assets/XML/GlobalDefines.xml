@@ -369,28 +369,8 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>NUM_UNIT_AND_TECH_PREREQS</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_BUILDING_AND_TECH_PREREQS</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>BASE_RESEARCH_RATE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_UNIT_PREREQ_OR_BONUSES</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_BUILDING_PREREQ_OR_BONUSES</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_ROUTE_PREREQ_OR_BONUSES</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_CITY_POPULATION</DefineName>

@@ -207,7 +207,6 @@ class CityDemolish:
 						CyMessageControl().sendModNetMessage(902, iPlayer, CyUnit.getID(), 0, 0)
 						break
 
-			NUM_UNIT_AND_TECH_PREREQS = GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")
 			CyTeam = GC.getTeam(CyPlayer.getTeam())
 			# Settler
 			if iOwnCulturePop > 0 or iForeignPop > 2:

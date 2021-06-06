@@ -26,7 +26,6 @@ class BarbarianCiv:
 		self.customEM = customEM
 		self.BARBARIAN_PLAYER = GC.getBARBARIAN_PLAYER()
 		self.MAX_PC_PLAYERS = GC.getMAX_PC_PLAYERS()
-		self.NUM_UNIT_AND_TECH_PREREQS = GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")
 
 		self.customEM.addEventHandler("BeginGameTurn", self.onBeginGameTurn)
 
