@@ -218,8 +218,6 @@ public:
 	bool isSS_BRIBE() const { return GC.isSS_BRIBE(); }
 	bool isSS_ASSASSINATE() const { return GC.isSS_ASSASSINATE(); }
 
-	int getNUM_BUILDING_PREREQ_OR_BONUSES() const { return GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); }
-
 	int getMAX_PC_PLAYERS() const { return GC.getMAX_PC_PLAYERS(); }
 	int getMAX_PLAYERS() const { return GC.getMAX_PLAYERS(); }
 	int getMAX_PC_TEAMS() const { return GC.getMAX_PC_TEAMS(); }

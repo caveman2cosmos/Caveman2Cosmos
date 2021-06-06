@@ -466,32 +466,17 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 		return true;
 	}
 
-	for (int iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
-	{
-		if (info.getPrereqAndTechs(iI) == eTech)
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::contains(info.getPrereqAndTechs(), eTech);
 }
 
 bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 {
 	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
 
-	if (info.getPrereqAndTech() == eTech)
+	if (info.getPrereqAndTech() == eTech
+	|| algo::contains(info.getPrereqAndTechs(), eTech))
 	{
 		return true;
-	}
-
-	for (int iI = 0; iI < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iI++)
-	{
-		if (info.getPrereqAndTechs(iI) == eTech)
-		{
-			return true;
-		}
 	}
 
 	const SpecialBuildingTypes eSpecial = (SpecialBuildingTypes)info.getSpecialBuildingType();

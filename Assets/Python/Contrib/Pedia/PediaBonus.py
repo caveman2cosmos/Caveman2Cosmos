@@ -106,21 +106,15 @@ class PediaBonus:
 			if CvBuildingInfo.getPrereqVicinityBonus() == iTheBonus or CvBuildingInfo.getPrereqRawVicinityBonus() == iTheBonus:
 				aVicinityBuildings.append(iBuilding)
 			#Trigger this loop only if building has Or Vicinity prereq at first place!
-			if CvBuildingInfo.getPrereqOrVicinityBonuses(0) != -1:
-				for iBonus in xrange(GC.getNUM_BUILDING_PREREQ_OR_BONUSES()):
-					if CvBuildingInfo.getPrereqOrVicinityBonuses(iBonus) == iTheBonus:
-						aVicinityBuildings.append(iBuilding)
+			if iTheBonus in CvBuildingInfo.getPrereqOrVicinityBonuses():
+				aVicinityBuildings.append(iBuilding)
 			for iBonus in CvBuildingInfo.getPrereqOrRawVicinityBonuses():
 				if iBonus == iTheBonus:
 					aVicinityBuildings.append(iBuilding)
 			if bValid:
-				if CvBuildingInfo.getPrereqAndBonus() == iTheBonus :
+				if CvBuildingInfo.getPrereqAndBonus() == iTheBonus \
+				or iTheBonus in CvBuildingInfo.getPrereqOrBonuses():
 					aNeededByBuildings.append(iBuilding)
-				else:
-					for i in xrange(CvBuildingInfo.getNumPrereqOrBonuses()):
-						if CvBuildingInfo.getPrereqOrBonuses(i) == iTheBonus:
-							aNeededByBuildings.append(iBuilding)
-							break
 		# Loop through all units and find those connected to the bonus.
 		aNeededByUnits = []
 		aAffectedUnits = []
@@ -130,12 +124,8 @@ class PediaBonus:
 			if CvUnitInfo.getPrereqAndBonus() == iTheBonus:
 				aNeededByUnits.append(iUnit)
 				bValid = False
-			else:
-				#Check Or prereq only if unit has it at first place!
-				if CvUnitInfo.getPrereqOrBonuses(0) != -1:
-					for i in xrange(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
-						if CvUnitInfo.getPrereqOrBonuses(i) == iTheBonus:
-							aNeededByUnits.append(iUnit)
+			elif iTheBonus in CvUnitInfo.getPrereqOrBonuses():
+				aNeededByUnits.append(iUnit)
 			if bValid:
 				iBonusProductionModifier = CvUnitInfo.getBonusProductionModifier(iTheBonus)
 				if iBonusProductionModifier:

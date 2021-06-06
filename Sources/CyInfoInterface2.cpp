@@ -11,7 +11,6 @@ void CyInfoPythonInterface2()
 	OutputDebugString("Python Extension Module - CyInfoPythonInterface2\n");
 
 	python::class_<CvRouteModelInfo, python::bases<CvInfoBase> >("CvRouteModelInfo")
-
 	;
 
 	python::class_<CvCivilizationInfo, python::bases<CvInfoBase> >("CvCivilizationInfo")
@@ -19,7 +18,6 @@ void CyInfoPythonInterface2()
 		.def("getArtStyleType", &CvCivilizationInfo::getArtStyleType, "int ()")
 		.def("getNumCityNames", &CvCivilizationInfo::getNumCityNames, "int ()")
 		.def("getNumLeaders", &CvCivilizationInfo::getNumLeaders, "int ()")
-
 
 		.def("isAIPlayable", &CvCivilizationInfo::isAIPlayable, "bool ()")
 		.def("isPlayable", &CvCivilizationInfo::isPlayable, "bool ()")
@@ -151,14 +149,10 @@ void CyInfoPythonInterface2()
 		// Arrays
 		.def("getYieldChange", &CvRouteInfo::getYieldChange, "int (int i)")
 		.def("getTechMovementChange", &CvRouteInfo::getTechMovementChange, "int (int i)")
-		.def("getPrereqOrBonus", &CvRouteInfo::getPrereqOrBonus, "int (int i)")
+		.def("getPrereqOrBonuses", &CvRouteInfo::cyGetPrereqOrBonuses)
 	;
 
 	python::class_<CvImprovementBonusInfo, python::bases<CvInfoBase> >("CvImprovementBonusInfo")
-
-
-
-		// Arrays
 		.def("getYieldChange", &CvImprovementBonusInfo::getYieldChange, "int (int i)")
 	;
 
@@ -284,6 +278,5 @@ void CyInfoPythonInterface2()
 
 	python::class_<CvCommerceInfo, python::bases<CvInfoBase> >("CvCommerceInfo")
 		.def("getChar", &CvCommerceInfo::getChar, "int ()")
-
 	;
 }

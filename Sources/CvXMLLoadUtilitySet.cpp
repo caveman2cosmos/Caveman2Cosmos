@@ -885,7 +885,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.m_paPropertyInfo, "CIV4PropertyInfos", "GameInfo", L"/Civ4PropertyInfos/PropertyInfos/PropertyInfo", false);
 	LoadGlobalClassInfo(GC.m_paSpecialistInfo, "CIV4SpecialistInfos", "GameInfo", L"/Civ4SpecialistInfos/SpecialistInfos/SpecialistInfo", false, &GC.m_SpecialistInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paVoteSourceInfo, "CIV4VoteSourceInfos", "GameInfo", L"/Civ4VoteSourceInfos/VoteSourceInfos/VoteSourceInfo", false);
-	LoadGlobalClassInfo(GC.m_paTechInfo, "CIV4TechInfos", "Technologies", L"/Civ4TechInfos/TechInfos/TechInfo", true, &GC.m_TechInfoReplacements);
+	LoadGlobalClassInfo(GC.m_paTechInfo, "CIV4TechInfos", "Technologies", L"/Civ4TechInfos/TechInfos/TechInfo", false, &GC.m_TechInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paFeatureInfo, "CIV4FeatureInfos", "Terrain", L"/Civ4FeatureInfos/FeatureInfos/FeatureInfo", false, &GC.m_FeatureInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paReligionInfo, "CIV4ReligionInfo", "GameInfo", L"/Civ4ReligionInfo/ReligionInfos/ReligionInfo", false, &GC.m_ReligionInfoReplacements);
 	// TGA indexation - important must do before anything else
@@ -1737,7 +1737,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 				GetOptionalChildXmlValByName(&bForceOverwrite, L"bForceOverwrite");
 
 				// (4) Read off the Replacement condition
-				uint uiReplacementID = 0;
+				uint32_t uiReplacementID = 0;
 				std::auto_ptr<BoolExpr> pReplacementCondition;
 				if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size())
 				{
@@ -1763,7 +1763,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 					if (GC.getInfoTypeForString(szTypeName, true) == -1)
 					{
 						// (5-1) Does not exist
-						uint uiAppendPosition = aInfos.size();
+						const uint32_t uiAppendPosition = aInfos.size();
 						if (szTypeReplace.empty())
 						{
 							aInfos.push_back(pClassInfo.release());
@@ -1784,7 +1784,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 					else
 					{
 						// (5-2) Found at uiExistPosition
-						uint uiExistPosition = GC.getInfoTypeForString(szTypeName);
+						const uint32_t uiExistPosition = GC.getInfoTypeForString(szTypeName);
 						FAssertMsg(uiExistPosition != -1, "Couldn't find info type");
 						if (szTypeReplace.empty())
 						{
@@ -1845,7 +1845,7 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 			{
 				char* tmp = xercesc::XMLString::transcode(GetCurrentXMLElement()->getNodeName());
 				char* tmp2 = xercesc::XMLString::transcode(GetCurrentXMLElement()->getTextContent());
-				CvString errorMsg = CvString::format("Missing Element, %s, %s", tmp, tmp2);
+				const CvString errorMsg = CvString::format("Missing Element, %s, %s", tmp, tmp2);
 				xercesc::XMLString::release(&tmp);
 				xercesc::XMLString::release(&tmp2);
 				FErrorMsg(errorMsg)

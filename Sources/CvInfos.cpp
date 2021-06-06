@@ -14,6 +14,7 @@
 #include "CvGlobals.h"
 #include "CvInfos.h"
 #include "CvPlayerAI.h"
+#include "CvPython.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 #include "CvImprovementInfo.h"
@@ -1122,8 +1123,6 @@ m_bDCMAirBombTech2(0),
 // Dale - AB: Bombing END
 m_piDomainExtraMoves(NULL),
 m_piFlavorValue(NULL),
-m_piPrereqOrTechs(NULL),
-m_piPrereqAndTechs(NULL),
 m_pbCommerceFlexible(NULL),
 m_pbTerrainTrade(NULL),
 //ls612: Tech Commerce Modifiers
@@ -1158,20 +1157,13 @@ CvTechInfo::~CvTechInfo()
 {
 	SAFE_DELETE_ARRAY(m_piDomainExtraMoves);
 	SAFE_DELETE_ARRAY(m_piFlavorValue);
-	SAFE_DELETE_ARRAY(m_piPrereqOrTechs);
-	SAFE_DELETE_ARRAY(m_piPrereqAndTechs);
 	SAFE_DELETE_ARRAY(m_pbCommerceFlexible);
 	SAFE_DELETE_ARRAY(m_pbTerrainTrade);
 	SAFE_DELETE_ARRAY(m_piCommerceModifier);
-
-	for (int i=0; i<(int)m_aPrereqBuilding.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aPrereqBuilding[i]));
-	}
-	for (int i=0; i<(int)m_aPrereqOrBuilding.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aPrereqOrBuilding[i]));
-	}
+	GC.removeDelayedResolutionVector(m_piPrereqOrTechs);
+	GC.removeDelayedResolutionVector(m_piPrereqAndTechs);
+	GC.removeDelayedResolutionVector(m_aPrereqBuilding);
+	GC.removeDelayedResolutionVector(m_aPrereqOrBuilding);
 	GC.removeDelayedResolution((int*)&m_iFirstFreeUnit);
 	GC.removeDelayedResolution((int*)&m_iFirstFreeProphet);
 }
@@ -1435,14 +1427,24 @@ int CvTechInfo::getFlavorValue(int i) const
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
-int CvTechInfo::getPrereqOrTechs(int i) const
+const std::vector<TechTypes>& CvTechInfo::getPrereqOrTechs() const
 {
-	return m_piPrereqOrTechs ? m_piPrereqOrTechs[i] : -1;
+	return m_piPrereqOrTechs;
 }
 
-int CvTechInfo::getPrereqAndTechs(int i) const
+const python::list CvTechInfo::cyGetPrereqOrTechs() const
 {
-	return m_piPrereqAndTechs ? m_piPrereqAndTechs[i] : -1;
+	return Cy::makeList(m_piPrereqOrTechs);
+}
+
+const std::vector<TechTypes>& CvTechInfo::getPrereqAndTechs() const
+{
+	return m_piPrereqAndTechs;
+}
+
+const python::list CvTechInfo::cyGetPrereqAndTechs() const
+{
+	return Cy::makeList(m_piPrereqAndTechs);
 }
 
 bool CvTechInfo::isCommerceFlexible(int i) const
@@ -1580,7 +1582,6 @@ bool CvTechInfo::isGlobal() const
 
 bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -1740,91 +1741,8 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bGlobal, L"bGlobal");
 	//TB Tech Tags end
 
-	return true;
-}
-
-bool CvTechInfo::readPass2(CvXMLLoadUtility* pXML)
-{
-	CvString szTextVal;
-
-	CvString szDebugBuffer;
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-	if (pXML->TryMoveToXmlFirstChild(L"OrPreReqs"))
-	{
-		const int iNumSibs = pXML->GetXmlChildrenNumber();
-		FAssertMsg((0 < GC.getNUM_OR_TECH_PREREQS()) ,"Allocating zero or less memory in SetGlobalUnitInfo");
-
-		if (GC.isXMLLogging())
-		{
-			szDebugBuffer.Format("OrPrereqs for tech %s: %i entries", getType(), iNumSibs);
-			gDLL->logMsg("CvTechInfo_readPass2.log", szDebugBuffer.c_str());
-		}
-
-		if (0 < iNumSibs)
-		{
-			pXML->CvXMLLoadUtility::InitList(&m_piPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS(), -1);
-			if (pXML->GetChildXmlVal(szTextVal))
-			{
-				FAssertMsg((iNumSibs <= GC.getNUM_OR_TECH_PREREQS()) ,"There are more siblings than memory allocated for them in SetGlobalUnitInfo");
-				for (int j = 0; j < iNumSibs; ++j)
-				{
-					m_piPrereqOrTechs[j] = GC.getInfoTypeForString(szTextVal);
-					if (!pXML->GetNextXmlVal(szTextVal))
-					{
-						break;
-					}
-				}
-
-				pXML->MoveToXmlParent();
-			}
-		}
-		else
-		{
-			SAFE_DELETE_ARRAY(m_piPrereqOrTechs);
-		}
-
-		pXML->MoveToXmlParent();
-	}
-
-	if (pXML->TryMoveToXmlFirstChild(L"AndPreReqs"))
-	{
-		const int iNumSibs = pXML->GetXmlChildrenNumber();
-		FAssertMsg((0 < GC.getNUM_AND_TECH_PREREQS()) ,"Allocating zero or less memory in SetGlobalUnitInfo");
-
-		if (GC.isXMLLogging())
-		{
-			szDebugBuffer.Format("AndPrereqs for tech %s: %i entries", getType(), iNumSibs);
-			gDLL->logMsg("CvTechInfo_readPass2.log", szDebugBuffer.c_str());
-		}
-
-		if (0 < iNumSibs)
-		{
-			pXML->CvXMLLoadUtility::InitList(&m_piPrereqAndTechs, GC.getNUM_AND_TECH_PREREQS(), -1);
-			if (pXML->GetChildXmlVal(szTextVal))
-			{
-				FAssertMsg((iNumSibs <= GC.getNUM_AND_TECH_PREREQS()) ,"There are more siblings than memory allocated for them in SetGlobalUnitInfo");
-				for (int j = 0; j < iNumSibs; ++j)
-				{
-					m_piPrereqAndTechs[j] = GC.getInfoTypeForString(szTextVal);
-					if (!pXML->GetNextXmlVal(szTextVal))
-					{
-						break;
-					}
-				}
-
-				pXML->MoveToXmlParent();
-			}
-		}
-		else
-		{
-			SAFE_DELETE_ARRAY(m_piPrereqAndTechs);
-		}
-
-		pXML->MoveToXmlParent();
-	}
+	pXML->SetOptionalVectorWithDelayedResolution(m_piPrereqOrTechs, L"OrPreReqs");
+	pXML->SetOptionalVectorWithDelayedResolution(m_piPrereqAndTechs, L"AndPreReqs");
 
 	return true;
 }
@@ -1943,31 +1861,6 @@ void CvTechInfo::copyNonDefaults(const CvTechInfo* pClassInfo)
 	//TB Tech Tags
 	if (isGlobal() == bDefault) m_bGlobal = pClassInfo->isGlobal();
 	//TB Tech Tags end
-
-	// Readpass2 stuff
-	for ( int j = 0; j < GC.getNUM_OR_TECH_PREREQS(); j++)
-	{
-		if ( getPrereqOrTechs(j) != pClassInfo->getPrereqOrTechs(j) )
-		{
-			if ( NULL == m_piPrereqOrTechs )
-			{
-				CvXMLLoadUtility::InitList(&m_piPrereqOrTechs,GC.getNUM_OR_TECH_PREREQS(),-1);
-			}
-			m_piPrereqOrTechs[j] = pClassInfo->getPrereqOrTechs(j);
-		}
-	}
-	for ( int j = 0; j < GC.getNUM_AND_TECH_PREREQS(); j++)
-	{
-		if ( getPrereqAndTechs(j) != pClassInfo->getPrereqAndTechs(j) )
-		{
-			if ( NULL == m_piPrereqAndTechs )
-			{
-				CvXMLLoadUtility::InitList(&m_piPrereqAndTechs,GC.getNUM_AND_TECH_PREREQS(),-1);
-			}
-			m_piPrereqAndTechs[j] = pClassInfo->getPrereqAndTechs(j);
-		}
-	}
-
 	if (!isEmbassyTrading()) m_bEmbassyTrading = pClassInfo->isEmbassyTrading();
 	if (!isCanPassPeaks()) m_bCanPassPeaks = pClassInfo->isCanPassPeaks();
 	if (!isMoveFastPeaks()) m_bMoveFastPeaks = pClassInfo->isMoveFastPeaks();
@@ -2023,58 +1916,11 @@ void CvTechInfo::copyNonDefaults(const CvTechInfo* pClassInfo)
 			GC.copyNonDefaultDelayedResolution((int*)&(m_aPrereqOrBuilding[i].eBuilding), (int*)&(pClassInfo->m_aPrereqOrBuilding[i].eBuilding));
 		}
 	}
+	GC.copyNonDefaultDelayedResolutionVector(m_piPrereqOrTechs, pClassInfo->getPrereqOrTechs());
+	GC.copyNonDefaultDelayedResolutionVector(m_piPrereqAndTechs, pClassInfo->getPrereqAndTechs());
 }
 
-void CvTechInfo::copyNonDefaultsReadPass2(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
-{
-	int iTextDefault = -1;
-	bool bOverride = false;
-
-	// If the modder has something here, we assume he wants to override the tech definitions
-	for ( int i = 0; i < GC.getNUM_OR_TECH_PREREQS(); i++ )
-	{
-		if (bOver || pClassInfo->getPrereqOrTechs(i) != iTextDefault )
-		{
-			bOverride = true;
-			break;
-		}
-	}
-	if ( bOverride)
-	{
-		if ( NULL == m_piPrereqOrTechs )
-		{
-			m_piPrereqOrTechs = new int[GC.getNUM_OR_TECH_PREREQS()];
-		}
-		for ( int i = 0; i < GC.getNUM_OR_TECH_PREREQS(); i++ )
-		{
-			m_piPrereqOrTechs[i] = pClassInfo->getPrereqOrTechs(i);
-		}
-	}
-
-	bOverride = false;
-	// If the modder has something here, we assume he wants to override the tech definitions
-	for ( int i = 0; i < GC.getNUM_AND_TECH_PREREQS(); i++ )
-	{
-		if (bOver || pClassInfo->getPrereqAndTechs(i) != iTextDefault )
-		{
-			bOverride = true;
-			break;
-		}
-	}
-	if ( bOverride)
-	{
-		if ( NULL == m_piPrereqAndTechs )
-		{
-			m_piPrereqAndTechs = new int[GC.getNUM_AND_TECH_PREREQS()];
-		}
-		for ( int i = 0; i < GC.getNUM_AND_TECH_PREREQS(); i++ )
-		{
-			m_piPrereqAndTechs[i] = pClassInfo->getPrereqAndTechs(i);
-		}
-	}
-}
-
-void CvTechInfo::getCheckSum(unsigned int& iSum) const
+void CvTechInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iAdvisorType);
 	CheckSum(iSum, m_iAIWeight);
@@ -2118,8 +1964,8 @@ void CvTechInfo::getCheckSum(unsigned int& iSum) const
 
 	CheckSum(iSum, m_piDomainExtraMoves, NUM_DOMAIN_TYPES);
 	CheckSum(iSum, m_piFlavorValue, GC.getNumFlavorTypes());
-	CheckSum(iSum, m_piPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS());
-	CheckSum(iSum, m_piPrereqAndTechs, GC.getNUM_AND_TECH_PREREQS());
+	CheckSumC(iSum, m_piPrereqOrTechs);
+	CheckSumC(iSum, m_piPrereqAndTechs);
 	CheckSum(iSum, m_pbCommerceFlexible, NUM_COMMERCE_TYPES);
 	CheckSum(iSum, m_pbTerrainTrade, GC.getNumTerrainInfos());
 	//ls612: Tech Commerce Modifiers
@@ -14601,7 +14447,6 @@ m_bSeaTunnel(false),
 m_iPrereqBonus(NO_BONUS),
 m_piYieldChange(NULL),
 m_piTechMovementChange(NULL),
-m_piPrereqOrBonuses(NULL),
 m_PropertyManipulators()
 {
 	m_zobristValue = GC.getGame().getSorenRand().getInt();
@@ -14618,7 +14463,6 @@ CvRouteInfo::~CvRouteInfo()
 {
 	SAFE_DELETE_ARRAY(m_piYieldChange);
 	SAFE_DELETE_ARRAY(m_piTechMovementChange);
-	SAFE_DELETE_ARRAY(m_piPrereqOrBonuses);
 }
 
 int CvRouteInfo::getAdvancedStartCost() const
@@ -14651,11 +14495,6 @@ int CvRouteInfo::getPrereqBonus() const
 	return m_iPrereqBonus;
 }
 
-bool CvRouteInfo::isAnyPrereqOrBonus() const
-{
-	return m_piPrereqOrBonuses != NULL;
-}
-
 int CvRouteInfo::getYieldChange(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
@@ -14673,14 +14512,18 @@ int CvRouteInfo::getTechMovementChange(int i) const
 	return m_piTechMovementChange ? m_piTechMovementChange[i] : 0;
 }
 
-int CvRouteInfo::getPrereqOrBonus(int i) const
+const std::vector<BonusTypes>& CvRouteInfo::getPrereqOrBonuses() const
 {
-	return m_piPrereqOrBonuses ? m_piPrereqOrBonuses[i] : -1;
+	return m_piPrereqOrBonuses;
+}
+
+const python::list CvRouteInfo::cyGetPrereqOrBonuses() const
+{
+	return Cy::makeList(m_piPrereqOrBonuses);
 }
 
 bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	//shouldHaveType = true;
 	if (!CvInfoBase::read(pXML))
@@ -14719,44 +14562,7 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_piTechMovementChange, L"TechMovementChanges", GC.getNumTechInfos());
 
-	if (pXML->TryMoveToXmlFirstChild(L"PrereqOrBonuses"))
-	{
-		//int iNumChildren = pXML->GetXmlChildrenNumber();
-		FAssertMsg((0 < GC.getNUM_ROUTE_PREREQ_OR_BONUSES()) ,"Allocating zero or less memory in SetGlobalUnitInfo");
-		FAssertMsg((pXML->GetXmlChildrenNumber() <= GC.getNUM_ROUTE_PREREQ_OR_BONUSES()) ,"There are more siblings than memory allocated for them in SetGlobalUnitInfo");
-
-		if (0 < pXML->GetXmlChildrenNumber())
-		{
-			pXML->CvXMLLoadUtility::InitList(&m_piPrereqOrBonuses, GC.getNUM_ROUTE_PREREQ_OR_BONUSES(), -1);
-			if (pXML->TryMoveToXmlFirstChild())
-			{
-				int j = 0;
-				do
-				{
-					if (pXML->GetChildXmlVal(szTextVal))
-					{
-						OutputDebugString(szTextVal.c_str());
-						m_piPrereqOrBonuses[j] = pXML->GetInfoClass(szTextVal);
-						++j;
-						pXML->MoveToXmlParent();
-					}
-				}
-				while (pXML->TryMoveToXmlNextSibling());
-
-				pXML->MoveToXmlParent();
-			}
-		}
-		else
-		{
-			SAFE_DELETE_ARRAY(m_piPrereqOrBonuses);
-		}
-
-		pXML->MoveToXmlParent();
-	}
-	else
-	{
-		SAFE_DELETE_ARRAY(m_piPrereqOrBonuses);
-	}
+	pXML->SetOptionalVector(&m_piPrereqOrBonuses, L"PrereqOrBonuses");
 
 	m_PropertyManipulators.read(pXML);
 
@@ -14811,18 +14617,12 @@ void CvRouteInfo::copyNonDefaults(const CvRouteInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0;  i < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); i++)
-	{
-		if (getPrereqOrBonus(i) == iDefault)
-		{
-			m_piPrereqOrBonuses[i] = pClassInfo->getPrereqOrBonus(i);
-		}
-	}
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_piPrereqOrBonuses, pClassInfo->getPrereqOrBonuses());
 
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators);
 }
 
-void CvRouteInfo::getCheckSum(unsigned int& iSum) const
+void CvRouteInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iAdvancedStartCost);
 
@@ -14837,7 +14637,7 @@ void CvRouteInfo::getCheckSum(unsigned int& iSum) const
 
 	CheckSum(iSum, m_piYieldChange, NUM_YIELD_TYPES);
 	CheckSum(iSum, m_piTechMovementChange, GC.getNumTechInfos());
-	CheckSum(iSum, m_piPrereqOrBonuses, GC.getNUM_ROUTE_PREREQ_OR_BONUSES());
+	CheckSumC(iSum, m_piPrereqOrBonuses);
 
 	m_PropertyManipulators.getCheckSum(iSum);
 }
@@ -20542,9 +20342,6 @@ int* CvCorporationInfo::getCommerceChangeArray() const
 {
 	return m_piCommerceChange;
 }
-
-
-// Arrays
 
 const std::vector<BonusTypes>& CvCorporationInfo::getPrereqBonuses() const
 {
@@ -35636,12 +35433,11 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 
 CvUnitCombatInfo::~CvUnitCombatInfo()
 {
-
 	SAFE_DELETE_ARRAY(m_piDomainModifierPercent);
 
-	for (int i=0; i<(int)m_aOutcomeMissions.size(); i++)
+	foreach_(const CvOutcomeMission* outcomeMission, m_aOutcomeMissions)
 	{
-		SAFE_DELETE(m_aOutcomeMissions[i]);
+		SAFE_DELETE(outcomeMission);
 	}
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
@@ -39317,9 +39113,9 @@ void CvUnitCombatInfo::getCheckSum(unsigned int& iSum) const
 {
 	m_KillOutcomeList.getCheckSum(iSum);
 
-	for (int i=0; i<(int)m_aOutcomeMissions.size(); i++)
+	foreach_(const CvOutcomeMission* outcomeMission, m_aOutcomeMissions)
 	{
-		m_aOutcomeMissions[i]->getCheckSum(iSum);
+		outcomeMission->getCheckSum(iSum);
 	}
 
 	// Textual References
@@ -39794,11 +39590,11 @@ const CvOutcomeList* CvUnitCombatInfo::getActionOutcomeList(int index) const
 
 const CvOutcomeList* CvUnitCombatInfo::getActionOutcomeListByMission(MissionTypes eMission) const
 {
-	for (int i = 0; i < (int) m_aOutcomeMissions.size(); i++)
+	foreach_(const CvOutcomeMission* outcomeMission, m_aOutcomeMissions)
 	{
-		if (m_aOutcomeMissions[i]->getMission() == eMission)
+		if (outcomeMission->getMission() == eMission)
 		{
-			return m_aOutcomeMissions[i]->getOutcomeList();
+			return outcomeMission->getOutcomeList();
 		}
 	}
 	return NULL;
@@ -39811,11 +39607,11 @@ const CvOutcomeMission* CvUnitCombatInfo::getOutcomeMission(int index) const
 
 CvOutcomeMission* CvUnitCombatInfo::getOutcomeMissionByMission(MissionTypes eMission) const
 {
-	for (int i = 0; i < (int) m_aOutcomeMissions.size(); i++)
+	foreach_(CvOutcomeMission* outcomeMission, m_aOutcomeMissions)
 	{
-		if (m_aOutcomeMissions[i]->getMission() == eMission)
+		if (outcomeMission->getMission() == eMission)
 		{
-			return m_aOutcomeMissions[i];
+			return outcomeMission;
 		}
 	}
 	return NULL;
