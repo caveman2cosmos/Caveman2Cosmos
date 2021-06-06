@@ -311,6 +311,8 @@ public:
 	int getUnitProductionModifier(int i) const;
 
 	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const { return m_piPrereqOrVicinityBonuses; }
+	python::list cyGetPrereqOrVicinityBonuses() const { return Cy::makeList(m_piPrereqOrVicinityBonuses); }
+
 	const std::vector<BonusTypes>& getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
 	python::list cyGetPrereqOrRawVicinityBonuses() const { return Cy::makeList(m_aePrereqOrRawVicinityBonuses); }
 

@@ -20657,7 +20657,7 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 				if (pCity == NULL || !pCity->canTrain(eUnit))
 				{
 					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_BONUS_VICINITY_ONEOF").c_str());
-					setListHelp(szBuffer, szTempBuffer, gDLL->getText("TXT_KEY_LINK", CvWString(GC.getBonusInfo((BonusTypes)GC.getUnitInfo(eUnit).getPrereqOrVicinityBonuses(iI)).getType()).GetCString(), GC.getBonusInfo((BonusTypes)GC.getUnitInfo(eUnit).getPrereqOrVicinityBonuses(iI)).getDescription()), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+					setListHelp(szBuffer, szTempBuffer, gDLL->getText("TXT_KEY_LINK", CvWString(GC.getBonusInfo(ePreReqBonus).getType()).GetCString(), GC.getBonusInfo(ePreReqBonus).getDescription()), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 					bFirst = false;
 				}
 			}
@@ -24103,7 +24103,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			if (pCity == NULL || !pCity->hasVicinityBonus(ePrereqBonus))
 			{
 				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_BONUS_VICINITY_ONEOF").c_str());
-				setListHelp(szBonusList, szTempBuffer, gDLL->getText("TXT_KEY_LINK", CvWString(GC.getBonusInfo((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iI)).getType()).GetCString(), GC.getBonusInfo((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iI)).getDescription()), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+				setListHelp(szBonusList, szTempBuffer, gDLL->getText("TXT_KEY_LINK", CvWString(GC.getBonusInfo(ePrereqBonus).getType()).GetCString(), GC.getBonusInfo(ePrereqBonus).getDescription()), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 				bFirst = false;
 			}
 			else if (NULL != pCity)

@@ -434,7 +434,7 @@ void CyInfoPythonInterface1()
 		.def("getDomainProductionModifier", &CvBuildingInfo::getDomainProductionModifier, "int (int i)")
 		.def("getPrereqAndTechs", &CvBuildingInfo::cyGetPrereqAndTechs)
 		.def("getPrereqOrBonuses", &CvBuildingInfo::cyGetPrereqOrBonuses)
-		.def("getPrereqOrVicinityBonuses", &CvBuildingInfo::getPrereqOrVicinityBonuses, "int (int i)")
+		.def("getPrereqOrVicinityBonuses", &CvBuildingInfo::cyGetPrereqOrVicinityBonuses)
 		.def("getPrereqOrRawVicinityBonuses", &CvBuildingInfo::cyGetPrereqOrRawVicinityBonuses)
 		
 		.def("getNumPrereqOrBonuses", &CvBuildingInfo::getNumPrereqOrBonuses, "int ()")
