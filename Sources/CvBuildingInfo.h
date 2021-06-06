@@ -441,11 +441,6 @@ public:
 	bool isDamageAttackerCapable() const;
 	bool isQuarantine() const;
 
-	//boolean vectors without delayed resolution
-	//int getFreePromoType(int i) const;
-	//int getNumFreePromoTypes() const;
-	//bool isFreePromoType(int i);
-
 	int getUnitCombatRetrainType(int i) const;
 	int getNumUnitCombatRetrainTypes() const;
 	bool isUnitCombatRetrainType(int i) const;
@@ -503,11 +498,8 @@ public:
 
 	//BoolExpr* getFreePromotionCondition();
 	//Struct
-	int getNumFreePromoTypes() const;
-	//FreePromoTypes& getFreePromoType(int iPromotion);
-	const FreePromoTypes& getFreePromoType(int iPromotion) const;
-
-	const std::vector<int>& getFreeTraitTypes() const { return m_aiFreeTraitTypes; }
+	const std::vector<FreePromoTypes>& getFreePromoTypes() const { return m_aFreePromoTypes; }
+	const std::vector<TraitTypes>& getFreeTraitTypes() const { return m_aiFreeTraitTypes; }
 
 	int getNumHealUnitCombatTypes() const;
 	const HealUnitCombat& getHealUnitCombatType(int iUnitCombat) const;
@@ -911,7 +903,7 @@ protected:
 	BoolExpr* m_pExprFreePromotionCondition;*/
 	//Structs
 	std::vector<FreePromoTypes> m_aFreePromoTypes;
-	std::vector<int> m_aiFreeTraitTypes;
+	std::vector<TraitTypes> m_aiFreeTraitTypes;
 	std::vector<HealUnitCombat> m_aHealUnitCombatTypes;
 	std::vector<EnabledCivilizations> m_aEnabledCivilizationTypes;
 	std::vector<BonusAidModifiers> m_aBonusAidModifiers;

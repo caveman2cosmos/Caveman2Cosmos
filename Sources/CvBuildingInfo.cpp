@@ -1417,29 +1417,6 @@ bool CvBuildingInfo::isQuarantine() const
 	return m_bQuarantine;
 }
 
-//Structs
-int CvBuildingInfo::getNumFreePromoTypes() const
-{
-	return (int)m_aFreePromoTypes.size();
-}
-
-const FreePromoTypes& CvBuildingInfo::getFreePromoType(int iPromotion) const
-{
-	FASSERT_BOUNDS(0, getNumFreePromoTypes(), iPromotion)
-	return m_aFreePromoTypes[iPromotion];
-}
-
-int CvBuildingInfo::getNumFreeTraitTypes() const
-{
-	return (int)m_aiFreeTraitTypes.size();
-}
-
-int CvBuildingInfo::getFreeTraitType(int iIndex) const
-{
-	FASSERT_BOUNDS(0, getNumFreeTraitTypes(), iIndex)
-	return m_aiFreeTraitTypes[iIndex];
-}
-
 int CvBuildingInfo::getNumHealUnitCombatTypes() const
 {
 	return (int)m_aHealUnitCombatTypes.size();

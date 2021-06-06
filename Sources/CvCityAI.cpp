@@ -5166,7 +5166,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 						if (kBuilding.getRevIdxDistanceModifier() != 0 && (!isCapital()))
 						{
-							CvCity* pCapital = kOwner.getCapitalCity();
+							const CvCity* pCapital = kOwner.getCapitalCity();
 							if (pCapital != NULL)
 							{
 								int iCapitalDistance = ::plotDistance(getX(), getY(), pCapital->getX(), pCapital->getY());
@@ -5259,23 +5259,22 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					{
 						iTempValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_3());
 					}
-					for (int iI = 0; iI < kBuilding.getNumFreePromoTypes(); iI++)
+					foreach_(const FreePromoTypes& freePromoType, kBuilding.getFreePromoTypes())
 					{
-						if (kBuilding.getFreePromoType(iI).ePromotion)
+						if (freePromoType.ePromotion)
 						{
-							if (kBuilding.getFreePromoType(iI).m_pExprFreePromotionCondition)
+							if (freePromoType.m_pExprFreePromotionCondition)
 							{
-								iTempValue += (AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromoType(iI).ePromotion) / 2);
+								iTempValue += (AI_getPromotionValue(freePromoType.ePromotion) / 2);
 							}
 							else
 							{
-								iTempValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromoType(iI).ePromotion);
+								iTempValue += AI_getPromotionValue(freePromoType.ePromotion);
 							}
 						}
 					}
-					for (int iI = 0; iI < kBuilding.getNumFreeTraitTypes(); iI++)
+					foreach_(const TraitTypes eTrait, kBuilding.getFreeTraitTypes())
 					{
-						TraitTypes eTrait = (TraitTypes)kBuilding.getFreeTraitType(iI);
 						if (GC.getTraitInfo(eTrait).isCivilizationTrait())
 						{
 							if (!GC.getTraitInfo(eTrait).isNegativeTrait())
@@ -14784,7 +14783,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getFreePromotion_3() != NO_PROMOTION ||
 			kBuilding.isApplyFreePromotionOnMove() ||
 			kBuilding.EnablesUnits() ||
-			kBuilding.getNumFreePromoTypes() > 0 ||
+			!kBuilding.getFreePromoTypes().empty() ||
 			kBuilding.getNumUnitCombatRetrainTypes() > 0 ||
 			kBuilding.getNationalCaptureProbabilityModifier() > 0 ||
 			kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0 ||
@@ -15543,20 +15542,19 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				{
 					promotionValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromotion_3());
 				}
-				for (int iI = 0; iI < kBuilding.getNumFreePromoTypes(); iI++)
+				foreach_(const FreePromoTypes& freePromoType, kBuilding.getFreePromoTypes())
 				{
-					if (kBuilding.getFreePromoType(iI).ePromotion)
+					if (freePromoType.ePromotion)
 					{
-						if (kBuilding.getFreePromoType(iI).m_pExprFreePromotionCondition)
+						if (freePromoType.m_pExprFreePromotionCondition)
 						{
-							promotionValue += (AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromoType(iI).ePromotion) / 2);
+							promotionValue += (AI_getPromotionValue(freePromoType.ePromotion) / 2);
 						}
-						else promotionValue += AI_getPromotionValue((PromotionTypes)kBuilding.getFreePromoType(iI).ePromotion);
+						else promotionValue += AI_getPromotionValue(freePromoType.ePromotion);
 					}
 				}
-				for (int iI = 0; iI < kBuilding.getNumFreeTraitTypes(); iI++)
+				foreach_(const TraitTypes eTrait, kBuilding.getFreeTraitTypes())
 				{
-					const TraitTypes eTrait = (TraitTypes)kBuilding.getFreeTraitType(iI);
 					if (GC.getTraitInfo(eTrait).isCivilizationTrait())
 					{
 						if (!GC.getTraitInfo(eTrait).isNegativeTrait())
