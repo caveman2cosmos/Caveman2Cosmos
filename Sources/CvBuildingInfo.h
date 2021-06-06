@@ -495,7 +495,7 @@ public:
 
 	int getMaxPopAllowed() const;
 
-	//BoolExpr* getFreePromotionCondition();
+	//cost BoolExpr* getFreePromotionCondition();
 	//Struct
 	int getNumFreePromoTypes() const;
 	//FreePromoTypes& getFreePromoType(int iPromotion);
@@ -524,13 +524,13 @@ public:
 
 	bool readPass3();
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	bool isNewCityFree(CvGameObject* pObject);
+	bool isNewCityFree(const CvGameObject* pObject);
 
-	BoolExpr* getConstructCondition() const;
+	const BoolExpr* getConstructCondition() const;
 
 	int getVictoryThreshold(int i) const;
 
@@ -824,8 +824,8 @@ protected:
 	CvProperties m_PrereqPlayerMinProperties;
 	CvProperties m_PrereqPlayerMaxProperties;
 
-	BoolExpr* m_pExprNewCityFree;
-	BoolExpr* m_pExprConstructCondition;
+	const BoolExpr* m_pExprNewCityFree;
+	const BoolExpr* m_pExprConstructCondition;
 
 	std::vector<BuildingCommerceChange> m_aGlobalBuildingCommerceChanges;
 
@@ -895,13 +895,12 @@ protected:
 	std::vector<int> m_vReplacementBuilding;
 	std::vector<int> m_vReplacedBuilding;
 
-protected:
 	bool* m_pabHurry;
 
 	int m_iMaxPopAllowed;
 
 	/*
-	BoolExpr* m_pExprFreePromotionCondition;*/
+	const BoolExpr* m_pExprFreePromotionCondition;*/
 	//Structs
 	std::vector<FreePromoTypes> m_aFreePromoTypes;
 	std::vector<int> m_aiFreeTraitTypes;

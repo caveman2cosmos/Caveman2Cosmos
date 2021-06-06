@@ -4498,7 +4498,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			{
 				PROFILE("CvCityAI::AI_bestBuildingThreshold.EnablesOthers");
 
-				CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());
+				const CvGameObjectCity* pObject = getGameObject();
 				// add the extra building and its bonuses to the override to see if they influence the construct condition of this building
 				std::vector<GOMOverride> queries;
 				GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
@@ -4520,10 +4520,10 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				{
 					// check if this building enables the construct condition of another building
 					bool bEnablesCondition = false;
-					BoolExpr* condition = GC.getBuildingInfo((BuildingTypes)iI).getConstructCondition();
+					const BoolExpr* condition = GC.getBuildingInfo((BuildingTypes)iI).getConstructCondition();
 					if (condition != NULL)
 					{
-						if (condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE)
+						if (condition->evaluateChange(pObject, queries) == BOOLEXPR_CHANGE_BECOMES_TRUE)
 						{
 							bEnablesCondition = true;
 						}
@@ -15080,7 +15080,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 			if (building.EnablesOtherBuildings())
 			{
-				CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());
+				const CvGameObjectCity* pObject = getGameObject();
 
 				// add the extra building and its bonuses to the override to see if they influence the construct condition of this building
 				std::vector<GOMOverride> queries;
@@ -15101,14 +15101,14 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				for (int iJ = 0; iJ < iNumBuildings; iJ++)
 				{
 					const BuildingTypes eType = static_cast<BuildingTypes>(iJ);
-					if (buildingsToCalculate.find(eType) == buildingsToCalculate.end() && getNumRealBuilding(eType) == 0)
+					if (!algo::contains(buildingsToCalculate, eType) && getNumRealBuilding(eType) == 0)
 					{
 						// check if this building enables the construct condition of another building
 						bool bEnablesCondition = GC.getBuildingInfo(eType).isPrereqInCityBuilding(iBuilding) || GC.getBuildingInfo(eType).isPrereqOrBuilding(iBuilding);
 						if (!bEnablesCondition)
 						{
-							BoolExpr* condition = GC.getBuildingInfo(eType).getConstructCondition();
-							bEnablesCondition = condition != NULL && condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE;
+							const BoolExpr* condition = GC.getBuildingInfo(eType).getConstructCondition();
+							bEnablesCondition = condition != NULL && condition->evaluateChange(pObject, queries) == BOOLEXPR_CHANGE_BECOMES_TRUE;
 						}
 						if (bEnablesCondition && canConstructInternal(eType, false, false, false, true, eBuilding))
 						{
@@ -15122,10 +15122,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	{
 		PROFILE("CvCityAI::CalculateAllBuildingValues.Loop");
 		// Calculate all possible (by focus) values for each building type
-		for (std::set<BuildingTypes>::const_iterator itr = buildingsToCalculate.begin(); itr != buildingsToCalculate.end(); ++itr)
+		foreach_(const BuildingTypes& eBuilding, buildingsToCalculate)
 		{
-			const BuildingTypes eBuilding = *itr;
-
 			if (NO_BUILDING == eBuilding || cachedBuildingValues->HasValues(eBuilding) || !buildingMayHaveAnyValue(eBuilding, iFocusFlags))
 			{
 				continue;
@@ -15613,7 +15611,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				{
 					PROFILE("CalculateAllBuildingValues.NotDeveloping");
 
-					CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());
+					const CvGameObjectCity* pObject = getGameObject();
 					// add the extra building and its bonuses to the override to see if they influence the train condition of a unit
 					std::vector<GOMOverride> queries;
 					GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
@@ -15656,10 +15654,10 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						if (bUnitIsOtherwiseEnabled)
 						{
 							// check if this building enables the train condition of this unit
-							BoolExpr* condition = kUnit.getTrainCondition();
+							const BoolExpr* condition = kUnit.getTrainCondition();
 							if (condition != NULL)
 							{
-								if (condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE)
+								if (condition->evaluateChange(pObject, queries) == BOOLEXPR_CHANGE_BECOMES_TRUE)
 								{
 									bUnitIsEnabler = true;
 								}

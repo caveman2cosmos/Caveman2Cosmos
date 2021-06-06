@@ -86,7 +86,7 @@ struct PlotTeamVisibilityIntensity
 struct FreePromoTypes
 {	
 	PromotionTypes ePromotion;
-	BoolExpr* m_pExprFreePromotionCondition;
+	const BoolExpr* m_pExprFreePromotionCondition;
 	operator int() const {return (int)ePromotion;}
 	bool operator< (const FreePromoTypes& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
 };

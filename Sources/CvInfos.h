@@ -2172,7 +2172,7 @@ public:
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	BoolExpr* getTrainCondition() const;
+	const BoolExpr* getTrainCondition() const;
 
 protected:
 	int m_iMaxGlobalInstances;
@@ -2201,7 +2201,7 @@ protected:
 	std::vector<CvString> m_aszCivilizationNamesforPass3;
 	std::vector<CvWString> m_aszCivilizationNamesValueforPass3;
 
-	BoolExpr* m_pExprTrainCondition;
+	const BoolExpr* m_pExprTrainCondition;
 
 public:
 	int getDCMBombRange() const;
@@ -2746,9 +2746,9 @@ public:
 	TechTypes getPrereqTechType() const;
 	TechTypes getObsoleteTechType() const;
 
-	BoolExpr* getSpawnCondition() const;
+	const BoolExpr* getSpawnCondition() const;
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	UnitTypes				m_eUnitType;
@@ -2784,7 +2784,7 @@ private:
 	std::vector<TerrainTypes>	m_featureTerrainTypes;
 	std::vector<UnitTypes>		m_spawnGroup;
 
-	BoolExpr*				m_pExprSpawnCondition;
+	const BoolExpr*				m_pExprSpawnCondition;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

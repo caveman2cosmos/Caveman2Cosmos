@@ -479,6 +479,8 @@ void CyInfoPythonInterface1()
 		//Extract map category of building
 		.def("isMapType", &CvBuildingInfo::isMapType, "bool (int i)")
 
+		.def("getConstructCondition", &CvBuildingInfo::getConstructCondition, python::return_value_policy<python::reference_existing_object>())
+
 		//TB Combat Mods (Buildings) begin
 		//integers
 		//boolean vectors without delayed resolution

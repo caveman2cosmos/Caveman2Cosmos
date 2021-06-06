@@ -1835,10 +1835,10 @@ bool CvBuildingInfo::EnablesUnits() const
 		{
 			const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
 
-			BoolExpr* condition = kUnit.getTrainCondition();
+			const BoolExpr* condition = kUnit.getTrainCondition();
 			if (condition != NULL)
 			{
-				if (condition->getInvolvesGOM(&(*queries.begin()), &(*queries.end())))
+				if (condition->getInvolvesGOM(queries))
 				{
 					m_bEnablesUnits = true;
 					return m_bEnablesUnits;
@@ -1888,7 +1888,7 @@ bool CvBuildingInfo::EnablesUnits() const
 	return m_bEnablesUnits;
 }
 
-void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
+void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bNoLimit);
 	CheckSum(iSum, m_iVictoryPrereq);
@@ -5428,18 +5428,18 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	}
 }
 
-bool CvBuildingInfo::isNewCityFree(CvGameObject* pObject)
+bool CvBuildingInfo::isNewCityFree(const CvGameObject* pObject)
 {
 	return m_pExprNewCityFree && m_pExprNewCityFree->evaluate(pObject);
 }
 
-BoolExpr* CvBuildingInfo::getConstructCondition() const
+const BoolExpr* CvBuildingInfo::getConstructCondition() const
 {
 	return m_pExprConstructCondition;
 }
 
 //TB Building Tags
-//BoolExpr* CvBuildingInfo::getFreePromotionCondition()
+//const BoolExpr* CvBuildingInfo::getFreePromotionCondition()
 //{
 //	return m_pExprFreePromotionCondition;
 //}
