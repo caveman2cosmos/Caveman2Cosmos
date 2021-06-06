@@ -198,13 +198,15 @@ class PediaUnit:
 		# Bonus Req
 		szChild = PF + "BONUS"
 		nOr = 0
-		for j in xrange(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
-			iType = CvTheUnitInfo.getPrereqOrBonuses(j)
-			if iType == -1:
-				break
-			aList0.append(iType)
-			n += 1
-			nOr += 1
+		#Check this loop only if unit has OR prereq at first place
+		if CvTheUnitInfo.getPrereqOrBonuses(0) != -1:
+			for j in xrange(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
+				iType = CvTheUnitInfo.getPrereqOrBonuses(j)
+				if iType == -1:
+					break
+				aList0.append(iType)
+				n += 1
+				nOr += 1
 		iType = CvTheUnitInfo.getPrereqAndBonus()
 		if iType != -1 or aList0:
 			if aReqList:

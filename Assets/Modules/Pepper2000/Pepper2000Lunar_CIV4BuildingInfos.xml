@@ -1561,10 +1561,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_PLASTIC_ELECTRONICS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ANDROIDS</PrereqTech>
 			<Bonus>BONUS_MICROCHIPS</Bonus>
 			<ConstructCondition>
 				<And>
@@ -1576,7 +1573,7 @@
 			</ConstructCondition>
 			<FreeBonus>BONUS_ANDROIDS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iCost>1300</iCost>
+			<iCost>1500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>

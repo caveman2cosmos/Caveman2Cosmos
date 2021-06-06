@@ -20663,7 +20663,7 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 				if ((pCity == NULL) || !(pCity->canTrain(eUnit)))
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_VICINITY_BONUS", GC.getBonusInfo((BonusTypes)(GC.getUnitInfo(eUnit).getPrereqVicinityBonus())).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_BONUS_VICINITY", GC.getBonusInfo((BonusTypes)(GC.getUnitInfo(eUnit).getPrereqVicinityBonus())).getTextKeyWide(), CvWString(GC.getBonusInfo((BonusTypes)(GC.getUnitInfo(eUnit).getPrereqVicinityBonus())).getType()).GetCString()));
 				}
 			}
 
@@ -20675,8 +20675,8 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 				{
 					if ((pCity == NULL) || !(pCity->canTrain(eUnit)))
 					{
-						szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_IN_CITY_VICINITY").c_str());
-						setListHelp(szBuffer, szTempBuffer, GC.getBonusInfo((BonusTypes) GC.getUnitInfo(eUnit).getPrereqOrVicinityBonuses(iI)).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+						szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_BONUS_VICINITY_ONEOF").c_str());
+						setListHelp(szBuffer, szTempBuffer, gDLL->getText("TXT_KEY_LINK", CvWString(GC.getBonusInfo((BonusTypes)GC.getUnitInfo(eUnit).getPrereqOrVicinityBonuses(iI)).getType()).GetCString(), GC.getBonusInfo((BonusTypes)GC.getUnitInfo(eUnit).getPrereqOrVicinityBonuses(iI)).getDescription()), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 						bFirst = false;
 					}
 				}
@@ -24109,14 +24109,14 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		&& (pCity == NULL || !pCity->hasVicinityBonus((BonusTypes)kBuilding.getPrereqVicinityBonus())))
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_VICINITY_BONUS", GC.getBonusInfo((BonusTypes)kBuilding.getPrereqVicinityBonus()).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_BONUS_VICINITY", GC.getBonusInfo((BonusTypes)kBuilding.getPrereqVicinityBonus()).getTextKeyWide(), CvWString(GC.getBonusInfo((BonusTypes)kBuilding.getPrereqVicinityBonus()).getType()).GetCString()));
 		}
 
 		if (kBuilding.getPrereqRawVicinityBonus() != NO_BONUS
 		&& (pCity == NULL || !pCity->hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqRawVicinityBonus())))
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_RAW_VICINITY_BONUS", GC.getBonusInfo((BonusTypes)kBuilding.getPrereqRawVicinityBonus()).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_BONUS_RAWVICINITY", GC.getBonusInfo((BonusTypes)kBuilding.getPrereqRawVicinityBonus()).getTextKeyWide(), CvWString(GC.getBonusInfo((BonusTypes)kBuilding.getPrereqRawVicinityBonus()).getType()).GetCString()));
 		}
 
 		CvWStringBuffer szBonusList;
@@ -24128,8 +24128,8 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			{
 				if (pCity == NULL || !pCity->hasVicinityBonus((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iI)))
 				{
-					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_IN_CITY_VICINITY").c_str());
-					setListHelp(szBonusList, szTempBuffer, GC.getBonusInfo((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iI)).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_BONUS_VICINITY_ONEOF").c_str());
+					setListHelp(szBonusList, szTempBuffer, gDLL->getText("TXT_KEY_LINK", CvWString(GC.getBonusInfo((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iI)).getType()).GetCString(), GC.getBonusInfo((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iI)).getDescription()), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 					bFirst = false;
 				}
 				else if (NULL != pCity)
@@ -24153,8 +24153,8 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		{
 			if (pCity == NULL || !pCity->hasRawVicinityBonus(bonus))
 			{
-				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_RAW_IN_CITY_VICINITY").c_str());
-				setListHelp(szRawBonusList, szTempBuffer, GC.getBonusInfo(bonus).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_BONUS_RAWVICINITY_ONEOF").c_str());
+				setListHelp(szRawBonusList, szTempBuffer, gDLL->getText("TXT_KEY_LINK", CvWString(GC.getBonusInfo(bonus).getType()).GetCString(), GC.getBonusInfo(bonus).getDescription()), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 				bFirst = false;
 			}
 			else if (NULL != pCity)

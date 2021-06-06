@@ -677,8 +677,8 @@
 			<Civilopedia>TXT_KEY_BONUS_DRIED_FISH_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DRIED_FISH</ArtDefineTag>
-			<TechReveal>TECH_FISHING</TechReveal>
-			<TechCityTrade>TECH_FISHING</TechCityTrade>
+			<TechReveal>TECH_TRAP_FISHING</TechReveal>
+			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Dried Fruit -->
@@ -991,8 +991,8 @@
 			<Civilopedia>TXT_KEY_BONUS_GEMSTONE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GEMSTONE</ArtDefineTag>
-			<TechReveal>TECH_BARTER</TechReveal>
-			<TechCityTrade>TECH_BARTER</TechCityTrade>
+			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
+			<TechCityTrade>TECH_SOFT_HAMMER_PERCUSSION</TechCityTrade>
 			<iAITradeModifier>7</iAITradeModifier>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
@@ -1505,8 +1505,8 @@
 			<Civilopedia>TXT_KEY_BONUS_MARTIAN_ROCKS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_ROCKS</ArtDefineTag>
-			<TechReveal>TECH_PLANETARY_EXPLORATION</TechReveal>
-			<TechCityTrade>TECH_PLANETARY_EXPLORATION</TechCityTrade>
+			<TechReveal>TECH_PLANETARY_EXTRACTION</TechReveal>
+			<TechCityTrade>TECH_PLANETARY_EXTRACTION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Marzipan -->
@@ -1677,8 +1677,8 @@
 			<Civilopedia>TXT_KEY_BONUS_NETS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NETS</ArtDefineTag>
-			<TechReveal>TECH_FISHING</TechReveal>
-			<TechCityTrade>TECH_FISHING</TechCityTrade>
+			<TechReveal>TECH_TRAP_FISHING</TechReveal>
+			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Neuroimplants -->
@@ -2025,8 +2025,8 @@
 			<Civilopedia>TXT_KEY_BONUS_PUMICE_STONE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PUMICE_STONE</ArtDefineTag>
-			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
-			<TechCityTrade>TECH_SOFT_HAMMER_PERCUSSION</TechCityTrade>
+			<TechReveal>TECH_GATHERING</TechReveal>
+			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Pyrite -->

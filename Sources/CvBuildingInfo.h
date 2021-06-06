@@ -11,6 +11,7 @@
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+#include "CvPython.h"
 #include "IDValuemap.h"
 
 class BoolExpr;
@@ -307,6 +308,7 @@ public:
 	int getUnitProductionModifier(int i) const;
 	int getPrereqOrVicinityBonuses(int i) const;
 	const std::vector<BonusTypes>& getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
+	python::list cyGetPrereqOrRawVicinityBonuses() const { return Cy::makeList(m_aePrereqOrRawVicinityBonuses); }
 
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
