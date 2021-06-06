@@ -23,6 +23,7 @@
 #include "CvDLLEntity.h"
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CvImprovementInfo.h"
 
 static CvEntity* g_dummyEntity = NULL;
 static CvUnit*	 g_dummyUnit = NULL;
@@ -1489,7 +1490,6 @@ void CvUnit::doTurn()
 
 	if (baseCombatStr() > 0)
 	{
-		FeatureTypes eFeature = plot()->getFeatureType();
 		if (plot()->getFeatureTurnDamage() != 0)
 		{
 			changeDamagePercent(plot()->getFeatureTurnDamage(), NO_PLAYER);
@@ -4788,7 +4788,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				//GC.getGame().logOOSSpecial(53, getID(), getMoves(), getDamage());
-				CvSelectionGroup* pSelectionGroup = getGroup();
 				checkRemoveSelectionAfterAttack();
 
 				if (getGroup() != NULL)
@@ -8194,7 +8193,6 @@ int CvUnit::healTurns(const CvPlot* pPlot) const
 int CvUnit::healTurnsAsType(const CvPlot* pPlot, UnitCombatTypes eHealAsType) const
 {
 	int iNumTurns = MAX_INT;
-	int iBestNumTurns = MAX_INT;
 	int iHealAs = 0;
 
 	if (getHealAsDamage(eHealAsType) > 0)
@@ -9048,7 +9046,6 @@ bool CvUnit::airBomb(int iX, int iY)
 	int iMis0, iMis1, iMis2, iMis3, iMis4, iMis5;
 	iMis0 = iMis1 = iMis2 = iMis3 = iMis4 = iMis5 = 0;
 	int iI, iCount = 0;
-	CvUnit* pUnit = NULL;
 	// ! Dale
 
 	if (!canAirBombAt(plot(), iX, iY))
@@ -12397,7 +12394,7 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 	{
 		iPrice = applySMRank(iPrice, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 	}
-	return iPrice;
+	return std::max(1, iPrice);
 }
 
 
@@ -12455,8 +12452,7 @@ bool CvUnit::isReadyForUpgrade() const
 	{
 		return false;
 	}
-	if (plot()->getTeam() != getTeam()
-	&& !(isUpgradeAnywhere() || GET_PLAYER(getOwner()).isUpgradeAnywhere()))
+	if (plot()->getTeam() != getTeam() && !isUpgradeAnywhere() && !GET_PLAYER(getOwner()).isUpgradeAnywhere())
 	{
 		return false;
 	}
@@ -12469,7 +12465,7 @@ bool CvUnit::isReadyForUpgrade() const
 // does not search all cities, only checks the closest one
 bool CvUnit::hasUpgrade(bool bSearch) const
 {
-	return (getUpgradeCity(bSearch) != NULL);
+	return getUpgradeCity(bSearch) != NULL;
 }
 
 // has upgrade is used to determine if an upgrade is possible,
@@ -12478,7 +12474,7 @@ bool CvUnit::hasUpgrade(bool bSearch) const
 // does not search all cities, only checks the closest one
 bool CvUnit::hasUpgrade(UnitTypes eUnit, bool bSearch) const
 {
-	return (getUpgradeCity(eUnit, bSearch) != NULL);
+	return getUpgradeCity(eUnit, bSearch) != NULL;
 }
 
 // finds the 'best' city which has a valid upgrade for the unit,
@@ -12494,30 +12490,34 @@ CvCity* CvUnit::getUpgradeCity(bool bSearch) const
 	UnitAITypes eUnitAI = AI_getUnitAIType();
 	CvArea* pArea = area();
 
-	int iCurrentValue = kPlayer.AI_unitValue(getUnitType(), eUnitAI, pArea);
+	const int iCurrentValue = kPlayer.AI_unitValue(getUnitType(), eUnitAI, pArea);
 
 	int iBestSearchValue = MAX_INT;
 	CvCity* pBestUpgradeCity = NULL;
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		int iNewValue = kPlayer.AI_unitValue(((UnitTypes)iI), eUnitAI, pArea);
-		if (iNewValue > iCurrentValue)
+		const UnitTypes eUnitX = static_cast<UnitTypes>(iI);
+		if (upgradeAvailable(m_eUnitType, eUnitX) && kPlayer.canTrain(eUnitX))
 		{
-			int iSearchValue;
-			CvCity* pUpgradeCity = getUpgradeCity((UnitTypes)iI, bSearch, &iSearchValue);
-			if (pUpgradeCity != NULL)
+			int iNewValue = kPlayer.AI_unitValue(eUnitX, eUnitAI, pArea);
+			if (iNewValue > iCurrentValue)
 			{
-				// if not searching or close enough, then this match will do
-				if (!bSearch || iSearchValue < 16)
+				int iSearchValue;
+				CvCity* pUpgradeCity = getUpgradeCity(eUnitX, bSearch, &iSearchValue);
+				if (pUpgradeCity != NULL)
 				{
-					return pUpgradeCity;
-				}
+					// if not searching or close enough, then this match will do
+					if (!bSearch || iSearchValue < 16)
+					{
+						return pUpgradeCity;
+					}
 
-				if (iSearchValue < iBestSearchValue)
-				{
-					iBestSearchValue = iSearchValue;
-					pBestUpgradeCity = pUpgradeCity;
+					if (iSearchValue < iBestSearchValue)
+					{
+						iBestSearchValue = iSearchValue;
+						pBestUpgradeCity = pUpgradeCity;
+					}
 				}
 			}
 		}
@@ -12536,7 +12536,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 {
 	PROFILE_FUNC();
 
-	if (eUnit == NO_UNIT || !upgradeAvailable(getUnitType(), eUnit))
+	if (eUnit == NO_UNIT || !upgradeAvailable(m_eUnitType, eUnit) || !GET_PLAYER(getOwner()).canTrain(eUnit, false, false, true))
 	{
 		return NULL;
 	}
@@ -12572,8 +12572,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 				return NULL;
 			}
 
-			if (kUnitInfo.getDomainCargo() != NO_DOMAIN
-			&& kUnitInfo.getDomainCargo() != pLoopUnit->getDomainType())
+			if (kUnitInfo.getDomainCargo() != NO_DOMAIN && kUnitInfo.getDomainCargo() != pLoopUnit->getDomainType())
 			{
 				return NULL;
 			}
@@ -12592,9 +12591,9 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	{
 		// air units can travel any distance
 		const bool bIgnoreDistance = getDomainType() == DOMAIN_AIR;
+		const CvArea* pMyArea = (bCoastalOnly && !plot()->isWater()) ? plot()->waterArea() : area();
 
 		const TeamTypes eTeam = getTeam();
-		const int iArea = getArea();
 		const int iX = getX();
 		const int iY = getY();
 
@@ -12607,11 +12606,10 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
 					// if coastal only, then make sure we are coast
-					CvArea* pWaterArea = bCoastalOnly ? pLoopCity->waterArea() : NULL;
+					CvArea* pCityArea = bCoastalOnly ? pLoopCity->waterArea() : pLoopCity->area();
 
-					if (!bCoastalOnly || pLoopCity->waterArea() != NULL && !pWaterArea->isLake()
-					// can this city tran this unit?
-					&& pLoopCity->canTrain(eUnit, false, false, true))
+					// Toffer, units should not be compelled to travel between areas just to get an upgrade.
+					if ((bIgnoreDistance || pMyArea == pCityArea) && pLoopCity->canTrain(eUnit, false, false, true))
 					{
 						// if we do not care about distance, then the first match will do
 						if (bIgnoreDistance)
@@ -12625,11 +12623,6 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 						}
 						int iValue = plotDistance(iX, iY, pLoopCity->getX(), pLoopCity->getY());
 
-						// if not same area, not as good (lower numbers are better)
-						if (iArea != pLoopCity->getArea() && (!bCoastalOnly || iArea != pWaterArea->getID()))
-						{
-							iValue *= 16;
-						}
 						// if we cannot path there, not as good (lower numbers are better)
 						if (!generatePath(pLoopCity->plot(), 0, true))
 						{
@@ -17270,7 +17263,6 @@ void CvUnit::setHealAsDamage(UnitCombatTypes eHealAsType, int iNewValue, PlayerT
 
 	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eHealAsType);
 
-	const int iOldValue = info->m_iHealAsDamage;
 	info->m_iHealAsDamage = range(iNewValue, 0, maxHitPoints());
 
 	int iHighestDamage = 0;
@@ -18722,23 +18714,8 @@ void CvUnit::calcUpkeep100()
 
 		if (iCalc > 0)
 		{
-			if (m_iUpkeepModifier > 0)
-			{
-				iCalc = iCalc * (100 + m_iUpkeepModifier) / 100;
-			}
-			else if (m_iUpkeepModifier < 0)
-			{
-				iCalc = iCalc * 100 / (100 - m_iUpkeepModifier);
-			}
-
-			if (m_iUpkeepMultiplierSM > 0)
-			{
-				iCalc = iCalc * (100 + m_iUpkeepMultiplierSM) / 100;
-			}
-			else if (m_iUpkeepMultiplierSM < 0)
-			{
-				iCalc = iCalc * 100 / (100 - m_iUpkeepMultiplierSM);
-			}
+			iCalc = getModifiedIntValue(iCalc, m_iUpkeepModifier);
+			iCalc = getModifiedIntValue(iCalc, m_iUpkeepMultiplierSM);
 
 			const int iOldUpkeep = m_iUpkeep100;
 			m_iUpkeep100 = std::max(0,  iCalc);
@@ -25599,7 +25576,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	//	Use condensed format now - only save non-default array elements
-	int itest = GC.getNumPromotionLineInfos();
 	for(iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
 		if ( getAfflictOnAttackTypeProbability((PromotionLineTypes)iI) != 0 ||
@@ -26205,7 +26181,6 @@ void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	int iDistanceAttackCommunicability = 0;
-	int iBestDistanceAttackCommunicability = 0;
 	std::vector<int> m_iAfflictionIndex;
 	bool bAffliction = false;
 	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
@@ -29141,7 +29116,6 @@ void CvUnit::doOpportunityFire()
 void CvUnit::doActiveDefense()
 {
 	int iDamage, iUnitDamage;
-	CvPlot* pAttackPlot = NULL;
 	CvUnit* pDefender = NULL;
 	CvCity* pCity = NULL;
 	bool bSuccess = false;
@@ -31083,7 +31057,6 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 	{
 		FAssertMsg(maxHitPoints() - iAttackerInitialDamage > 0, "Attacker is Dead!");
 		int iHealthPercent = (maxHitPoints() - getDamage()) * 100 / std::max(1, (maxHitPoints() - iAttackerInitialDamage));
-		int iPromotionChanceModifier = iHealthPercent * iHealthPercent / maxHitPoints();
 		iNonLethalAttackWinChance *= 10;
 		int iOdds = std::max(iWinningOdds, iNonLethalAttackWinChance);
 		int iPromotionChance = (GC.getCOMBAT_DIE_SIDES() - iOdds)/* * (100 + iPromotionChanceModifier) / 100*/;
@@ -31135,7 +31108,6 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 	{
 		FAssertMsg(pDefender->maxHitPoints() - iDefenderInitialDamage > 0, "Defender is Dead!");
 		int iHealthPercent = (pDefender->maxHitPoints() - pDefender->getDamage()) * 100 / std::max(1, (pDefender->maxHitPoints() - iDefenderInitialDamage));
-		int iPromotionChanceModifier = iHealthPercent * iHealthPercent / pDefender->maxHitPoints();
 		iNonLethalDefenseWinChance *= 10;
 		iNonLethalDefenseWinChance = std::max(0, (GC.getCOMBAT_DIE_SIDES() - iNonLethalDefenseWinChance));
 		int iOdds = std::min(iWinningOdds, iNonLethalDefenseWinChance);
@@ -31792,7 +31764,6 @@ void CvUnit::doOvercomeAttempt(PromotionLineTypes eAfflictionLine)
 	CvWString szBuffer;
 	int iOvercomeChance = getChancetoOvercome(eAfflictionLine);
 	int iOvercomeRollResult;
-	CvPlot* pPlot = plot();
 
 	iOvercomeRollResult = GC.getGame().getSorenRandNum(100, "Overcome");
 	if (iOvercomeRollResult < iOvercomeChance)
@@ -32005,7 +31976,6 @@ int CvUnit::getChancetoContract(PromotionLineTypes eAfflictionLine, int iCommuni
 		return 0;
 	}
 
-	int iWorseningModifier = 0;
 	int	iContract = GC.getPromotionLineInfo(eAfflictionLine).getCommunicability();
 	if (iCommunicableExposure > 0 && iCommunicableExposure > iContract)
 	{
@@ -34251,7 +34221,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	bool bAfflictk = kPromotion.isAffliction();
 #endif
-	bool bEquipk = kPromotion.isEquipment();
+	//bool bEquipk = kPromotion.isEquipment();
 
 	if (!bIsFreePromotion)
 	{
@@ -34536,7 +34506,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 
 		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 		{
-			UnitCombatTypes ePrereq = (UnitCombatTypes)iI;
 			if (GC.getPromotionInfo(ePromotion).getUnitCombat(iI))
 			{
 				bHasPrereq = true;
@@ -37789,7 +37758,6 @@ void CvUnit::doMerge()
 
 		int iTotalGroupOffset = 1;
 		int iTotalQualityOffset = 0;
-		bool bSet = false;
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
 			PromotionTypes ePromotion = ((PromotionTypes)iI);
@@ -37936,8 +37904,6 @@ void CvUnit::doSplit()
 
 		int iTotalGroupOffset = -1;
 		int iTotalQualityOffset = 0;
-		bool bHasAdjusted = false;
-		bool bSet = false;
 		pUnit0->setFortifyTurns(0);
 
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -40988,7 +40954,6 @@ bool CvUnit::doAmbush(bool bAssassinate)
 		{
 			GET_PLAYER(getOwner()).setAmbushingUnit(getID());
 			CvPlot* pPlot = plot();
-			int iOdds = 0;
 			if (pPlot != NULL)
 			{
 				CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);

@@ -221,9 +221,6 @@ void CvGame::init(HandicapTypes eHandicap)
 	// Alberts2: Recalculate which info class replacements are currently active
 	GC.updateReplacements();
 
-	// Alberts2: cache higly used Types
-	GC.cacheInfoTypes();
-
 	//TB: Set Statuses
 	setStatusPromotions();
 
@@ -2200,7 +2197,6 @@ int CvGame::getTeamClosenessScore(int** aaiDistances, int* aiStartingLocs)
 
 void CvGame::update()
 {
-
 #ifdef LOG_AI
 	gPlayerLogLevel = getBugOptionINT("Autolog__BBAILevel", 0);
 	gTeamLogLevel = gPlayerLogLevel;
@@ -2274,9 +2270,6 @@ void CvGame::update()
 				enforceOptionCompatibility(eGameOption);
 			}
 		}
-
-		// Alberts2: cache higly used Types
-		GC.cacheInfoTypes();
 
 		//TB: Set Statuses
 		setStatusPromotions();
@@ -6236,7 +6229,6 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 	for (int j = 0; j < GC.getNumSpawnInfos(); j++)
 	{
-		const SpawnTypes eSpawn = static_cast<SpawnTypes>(j);
 		const CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)j);
 
 		//TB Note: It is at this point that we need to isolate out the player type on spawn info.
@@ -9218,6 +9210,7 @@ void CvGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYiel
 	}
 }
 
+/* Toffer - Unused, but might be needed for recalc...
 void CvGame::removePlotExtraYield(int iX, int iY)
 {
 	for (std::vector<PlotExtraYield>::iterator it = m_aPlotExtraYields.begin(); it != m_aPlotExtraYields.end(); ++it)
@@ -9235,6 +9228,7 @@ void CvGame::removePlotExtraYield(int iX, int iY)
 		pPlot->updateYield();
 	}
 }
+*/
 
 int CvGame::getPlotExtraCost(int iX, int iY) const
 {
@@ -11612,7 +11606,7 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 
 void CvGame::recalculateModifiers()
 {
-	OutputDebugString(CvString::format("Start profiling(false) for modifier recalc\n").c_str());
+	OutputDebugString("Start profiling(false) for modifier recalc\n");
 	startProfilingDLL(false);
 	PROFILE_FUNC();
 
@@ -11669,6 +11663,10 @@ void CvGame::recalculateModifiers()
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+
+		// Toffer - Yield cache
+		pLoopPlot->recalculateBaseYield();
+
 		pLoopPlot->getProperties()->clearForRecalculate();
 
 		//	We will recalculate visibility from first principles
@@ -11776,7 +11774,7 @@ void CvGame::recalculateModifiers()
 	}
 
 	stopProfilingDLL(false);
-	OutputDebugString(CvString::format("Stop profiling(false) after modifier recalc\n").c_str());
+	OutputDebugString("Stop profiling(false) after modifier recalc\n");
 }
 
 CvProperties* CvGame::getProperties()

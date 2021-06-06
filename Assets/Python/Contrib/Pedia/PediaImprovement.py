@@ -124,13 +124,6 @@ class PediaImprovement:
 				else:
 					szYield += " (<color=0,230,0,255>+"
 				szYield += str(iRiverYieldChange) + szChar + "</color>River)"
-			iHillsYieldChange = CvTheImproveInfo.getHillsYieldChange(k)
-			if iHillsYieldChange:
-				if iHillsYieldChange < 0:
-					szYield += " (<color=255,0,0,255>"
-				else:
-					szYield += " (<color=0,230,0,255>+"
-				szYield += str(iHillsYieldChange) + szChar + "</color>Hill)"
 			iFreshwaterYieldChange = CvTheImproveInfo.getIrrigatedYieldChange(k)
 			if iFreshwaterYieldChange:
 				if iFreshwaterYieldChange < 0:
@@ -311,26 +304,26 @@ class PediaImprovement:
 			aList0.append([PF + "CONCEPT_NEW" + str(GC.getInfoTypeForString("CONCEPT_WATER_TERRAINS")), "Art/Interface/Buttons/BaseTerrain/Ocean.dds"])
 
 		if CvTheImproveInfo.isPeakImprovement():
-			aList0.append([PF + "TERRAIN" + str(nTerrains - 2) + "|" + str(n), GC.getTerrainInfo(nTerrains - 2).getButton()])
+			aList0.append([PF + "TERRAIN" + str(GC.getInfoTypeForString("TERRAIN_PEAK")) + "|" + str(n), "Art/Interface/Buttons/BaseTerrain/Peak.dds"])
 			n += 1
 		elif not CvTheImproveInfo.isPeakMakesValid():
-			aList0.append([PF + "TERRAIN" + str(nTerrains - 2) + "|" + str(n), GC.getTerrainInfo(nTerrains - 2).getButton(), "NOT"])
+			aList0.append([PF + "TERRAIN" + str(GC.getInfoTypeForString("TERRAIN_PEAK")) + "|" + str(n), "Art/Interface/Buttons/BaseTerrain/Peak.dds", "NOT"])
 			n += 1
 
 		if CvTheImproveInfo.isRequiresFlatlands():
-			aList0.append(["ToolTip|TxtTT|TXT_KEY_IMPROVEMENT_ONLY_BUILD_FLATLANDS1", "Art/Interface/Buttons/BaseTerrain/Grassland.dds"])
+			aList0.append(["ToolTip|TxtTT|TXT_KEY_IMPROVEMENTHELP_ONLY_BUILD_FLATLANDS1", "Art/Interface/Buttons/BaseTerrain/Grassland.dds"])
 
 		if CvTheImproveInfo.isRequiresRiverSide():
-			aList0.append(["ToolTip|TxtTT|TXT_KEY_IMPROVEMENT_REQUIRES_RIVER1", "Art/Interface/Buttons/WorldBuilder/River_Placement.dds"])
+			aList0.append(["ToolTip|TxtTT|TXT_KEY_IMPROVEMENTHELP_REQUIRES_RIVER1", "Art/Interface/Buttons/WorldBuilder/River_Placement.dds"])
 
 		if CvTheImproveInfo.isRequiresFeature():
 			aList0.append(["ToolTip|TxtTT|Any_plot_feature1", "Art/bug/questionmark.dds"])
 
 		if CvTheImproveInfo.isRequiresIrrigation():
-			aList0.append(["ToolTip|TxtTT|TXT_KEY_WB_IRRIGATION1", "Art/Interface/Buttons/Buildings/Irrigation.dds"])
+			aList0.append(["ToolTip|TxtTT|TXT_KEY_IMPROVEMENTHELP_REQUIRES_IRRIGATION1", "Art/Interface/Buttons/Buildings/Irrigation.dds"])
 
 		if CvTheImproveInfo.isNoFreshWater():
-			aList0.append(["ToolTip|TxtTT|TXT_KEY_IMPROVEMENT_NO_BUILD_FRESH_WATER1", "Art/bug/questionmark.dds"])
+			aList0.append(["ToolTip|TxtTT|TXT_KEY_IMPROVEMENTHELP_NO_BUILD_FRESH_WATER1", "Art/bug/questionmark.dds"])
 
 		szChild = PF + "TERRAIN"
 		for i in range(nTerrains):

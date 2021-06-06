@@ -2,7 +2,6 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 import CvScreenEnums
-import CvMapGeneratorUtil
 import CvGFCScreen
 
 # globals
@@ -106,19 +105,16 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 		d_TableData[0] = self.setTeams()
 
 		strBuffer = ""
-		iconName = "Error"
-		entry = "None"
 		list_loopRowData = []
 
 		for x in range(self.iNumTeams):
-
 			strBuffer = gc.getTeam(x).getName()
 			list_loopRowData.append(strBuffer)
 			strBuffer = ""
 
 			for y in range(self.iNumTeams):
 				pTeamX = gc.getTeam(x)
-				pTeamY = gc.getTeam(y)
+				#pTeamY = gc.getTeam(y)
 
 				# if the same team
 				if x != y:
@@ -167,7 +163,6 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 		d_TableData[0] = self.setPlayers()
 
 		strBuffer = ""
-		iconName = "None"
 		list_loopRowData = []
 
 		for x in range(self.iNumPlayers):
@@ -181,7 +176,7 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 				pPlayerY = gc.getPlayer(y)
 
 				pTeamX = gc.getTeam(pPlayerX.getTeam())
-				pTeamY = gc.getTeam(pPlayerY.getTeam())
+				#pTeamY = gc.getTeam(pPlayerY.getTeam())
 
 				# if the same Player
 				if ( not x == y ):
@@ -327,7 +322,7 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 
 		map = CyMap()
 
-		areas = CvMapGeneratorUtil.getAreas()
+		areas = map.areas()
 		area_sizes = [(area.getNumTiles(), area) for area in areas]
 		area_sizes.sort() # sort by size -- biggest area last
 		area_sizes.reverse() # biggest area first
@@ -378,7 +373,7 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 			loopRowData = []
 
 		# Add last row of totals:
-		last_row = len(areas) + 1
+		#last_row = len(areas) + 1
 		loopRowData.append("Total")
 		loopRowData.append(map.numPlots())
 		loopRowData.append("")
@@ -487,7 +482,7 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 
 		if ( inputClass.getNotifyCode() == int(NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED) ) :
 			#return
-			szPulldownID = str(inputClass.getID())
+			#szPulldownID = str(inputClass.getID())
 			# Get the ID that was selected...
 			iSelectedID = screen.getSelectedPullDownID( self.szDebugInfoPulldownID )
 			self.deleteAllWidgets()

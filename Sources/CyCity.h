@@ -93,7 +93,6 @@ public:
 	int getProjectProductionTurnsLeft(int /*ProjectTypes*/ eProject, int iNum) const;
 	void setProduction(int iNewValue);
 	void changeProduction(int iChange);
-	int getProductionModifier() const;
 	int getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const;
 
 	bool canHurry(int /*HurryTypes*/ iHurry, bool bTestVisible) const;
@@ -224,6 +223,7 @@ public:
 	void setFood(int iNewValue);
 	void changeFood(int iChange);
 	int getFoodKept() const;
+	int getMaxProductionOverflow() const;
 	int getOverflowProduction() const;
 	void setOverflowProduction(int iNewValue);
 	int getFeatureProduction() const;
@@ -281,8 +281,7 @@ public:
 	int getCultureThreshold() const;
 	int getSeaPlotYield(int /*YieldTypes*/ eIndex) const;
 
-	int getBaseYieldRate(int /*YieldTypes*/ eIndex) const;
-	void changeBaseYieldRate(int /*YieldTypes*/ eIndex, int iNewValue);
+	int getPlotYield(int /*YieldTypes*/ eIndex) const;
 
 	int getBaseYieldRateModifier(int /*YieldTypes*/ eIndex, int iExtra) const;
 	int getYieldRate(int /*YieldTypes*/ eIndex) const;

@@ -196,8 +196,6 @@ class Dispatcher:
 		self._setDefault("doCombat", False)
 		self._setDefault("getConscriptUnitType", UnitTypes.NO_UNIT)
 		self._setDefault("canPickPlot", True)
-		self._setDefault("getUnitCostMod", -1)
-		self._setDefault("getBuildingCostMod", -1)
 		self._setDefault("canUpgradeAnywhere", False)
 		self._setDefault("getWidgetHelp", u"")
 
@@ -265,9 +263,6 @@ class Dispatcher:
 		bound = lambda *args: func(utils, *args)
 		bound.__module__ = func.__module__
 		return bound
-
-	def getBaseUtils(self):
-		return self._baseUtils
 
 
 ## Callback

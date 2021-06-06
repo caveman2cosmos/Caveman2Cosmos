@@ -610,10 +610,6 @@ public:
 	void SetVariableListTagPair(std::vector<int>, const wchar_t* szRootTagName,
 		int iInfoBaseLength, int iDefaultListVal = 0);
 
-	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName) { return SetOptionalVector<int>(aInfos, szRootTagName); }
-
-	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, const std::vector<int>& source) { return CopyNonDefaultsFromVector<int>(target, source); }
-
 	template <class T>
 	void SetOptionalVectorWithDelayedResolution(std::vector<T>& aInfos, const wchar_t* szRootTagName)
 	{
@@ -713,8 +709,8 @@ public:
 				{
 					for (int j = 0; j < iNumSibs; j++)
 					{
-						T value = static_cast<T>(GetInfoClass(szTextVal));
-						if (value > -1  && find(aInfos->begin(), aInfos->end(), value) == aInfos->end())
+						const T value = static_cast<T>(GetInfoClass(szTextVal));
+						if (value > -1  && !algo::contains(*aInfos, value))
 						{
 							aInfos->push_back(value);
 						}

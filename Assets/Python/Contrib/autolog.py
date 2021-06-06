@@ -73,9 +73,9 @@ class autologInstance:
 			year = TRNSLTR.getText("TXT_KEY_TIME_AD", (year,))
 
 		if iMaxTurns:
-			zTurn = "%i/%i" % (GAME.getElapsedGameTurns() + AutologOpt.get4000BCTurn(), iMaxTurns)
+			zTurn = "%i/%i" % (GAME.getElapsedGameTurns() + AutologOpt.getStartDateTurn(), iMaxTurns)
 		else:
-			zTurn = "%i" %(GAME.getElapsedGameTurns() + AutologOpt.get4000BCTurn())
+			zTurn = "%i" %(GAME.getElapsedGameTurns() + AutologOpt.getStartDateTurn())
 
 		self.writeMsg(TRNSLTR.getText("TXT_KEY_AUTOLOG_TURN", (zTurn, year, time.strftime("%d-%b-%Y %H:%M:%S"))), vBold=True, vUnderline=True)
 		self.bStarted = True

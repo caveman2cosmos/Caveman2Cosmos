@@ -195,6 +195,7 @@
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
+    <ClCompile Include="CvImprovementInfo.cpp" />
     <ClCompile Include="logging.cpp" />
     <ClCompile Include="Win32.cpp" />
     <ClCompile Include="StackWalker.cpp" />
@@ -393,6 +394,7 @@
     <ClInclude Include="CvDLLUtilityIFaceBase.h" />
     <ClInclude Include="CvDLLWidgetData.h" />
     <ClInclude Include="CvDLLXMLIFaceBase.h" />
+    <ClInclude Include="CvImprovementInfo.h" />
     <ClInclude Include="index_iterator_base.h" />
     <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />

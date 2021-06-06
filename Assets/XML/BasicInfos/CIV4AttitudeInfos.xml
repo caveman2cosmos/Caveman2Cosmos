@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Basic Infos -->
+<Civ4AttitudeInfos xmlns="x-schema:../Schema/C2C_CIV4BasicInfoSchema.xml">
+	<AttitudeInfos>
+		<AttitudeInfo>
+			<Type>ATTITUDE_FURIOUS</Type>
+			<Description>TXT_KEY_ATTITUDE_FURIOUS</Description>
+		</AttitudeInfo>
+		<AttitudeInfo>
+			<Type>ATTITUDE_ANNOYED</Type>
+			<Description>TXT_KEY_ATTITUDE_ANNOYED</Description>
+		</AttitudeInfo>
+		<AttitudeInfo>
+			<Type>ATTITUDE_CAUTIOUS</Type>
+			<Description>TXT_KEY_ATTITUDE_CAUTIOUS</Description>
+		</AttitudeInfo>
+		<AttitudeInfo>
+			<Type>ATTITUDE_PLEASED</Type>
+			<Description>TXT_KEY_ATTITUDE_PLEASED</Description>
+		</AttitudeInfo>
+		<AttitudeInfo>
+			<Type>ATTITUDE_FRIENDLY</Type>
+			<Description>TXT_KEY_ATTITUDE_FRIENDLY</Description>
+		</AttitudeInfo>
+	</AttitudeInfos>
+</Civ4AttitudeInfos>

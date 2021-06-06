@@ -13242,7 +13242,7 @@
 			<Button>Art/interface/buttons/buildings/novel_senses.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ENLIGHTENMENT</Type>
+			<Type>ART_DEF_BUILDING_ENLIGHTENED</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13292,7 +13292,7 @@
 			<Button>Art/interface/buttons/buildings/indefinite_lifespan.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZERO_G</Type>
+			<Type>ART_DEF_BUILDING_ZERO_G_ADAPTATION</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13362,7 +13362,7 @@
 			<Button>Art/interface/buttons/buildings/collective_consciousness.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NANOMORPHICS_BEINGS</Type>
+			<Type>ART_DEF_BUILDING_NANOMORPHISM</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13372,7 +13372,7 @@
 			<Button>Art/interface/buttons/buildings/nanomorphics_beings.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INFORMATION_BEING</Type>
+			<Type>ART_DEF_BUILDING_INFORMATION_BASED</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13392,7 +13392,7 @@
 			<Button>Art/interface/buttons/buildings/transapient.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HUMAN_ALIEN_HYBRID</Type>
+			<Type>ART_DEF_BUILDING_ALIEN_HYBRID</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13402,7 +13402,7 @@
 			<Button>Art/interface/buttons/buildings/human_alien_hybrid.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_IMMORTAL_BEING</Type>
+			<Type>ART_DEF_BUILDING_IMMORTAL</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13412,7 +13412,7 @@
 			<Button>Art/interface/buttons/buildings/immortal_being.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PURE_INFORMATION_BEING</Type>
+			<Type>ART_DEF_BUILDING_PURE_ENERGY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13422,7 +13422,7 @@
 			<Button>Art/interface/buttons/buildings/pure_information_being.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HIGH_DIMENSIONAL_BEING</Type>
+			<Type>ART_DEF_BUILDING_HIGH_DIMENSIONAL</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13442,7 +13442,7 @@
 			<Button>Art/interface/buttons/buildings/archailect.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NONSPATIAL_BEINGS</Type>
+			<Type>ART_DEF_BUILDING_NONSPATIAL</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13452,7 +13452,7 @@
 			<Button>Art/interface/buttons/buildings/nonspatial_beings.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ATEMPORAL_BEINGS</Type>
+			<Type>ART_DEF_BUILDING_ATEMPORAL</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

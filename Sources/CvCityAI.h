@@ -5,7 +5,13 @@
 #ifndef CIV4_CITY_AI_H
 #define CIV4_CITY_AI_H
 
+#include <vector>
+#include <vector>
+#include <vector>
+#include <vector>
+
 #include "CvCity.h"
+#include "CvPlayerAI.h"
 
 //	Possible focus flags to use when evaluating buildings
 #define BUILDINGFOCUS_FOOD					(1 << 1)
@@ -92,6 +98,7 @@ public:
 	void AI_init();
 	void AI_uninit();
 	void AI_reset();
+	void SendLog(CvWString function, CvWString message);
 
 	void AI_doTurn();
 
@@ -182,6 +189,11 @@ public:
 	void AI_forceEmphasizeCulture(bool bNewValue);
 
 	void AI_markBestBuildValuesStale();
+	std::vector<int> AI_calculateOutputRatio(int food, int production, int commerce);
+	void AI_getCurrentPlotValue(int iPlotCounter, ::CvPlot* plot, std::vector<plotInfo>& currentYieldList);
+	void AI_getBestPlotValue(std::vector<int>& ratios, int iPlotCounter, CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int
+	                         iDesiredFoodChange);
+	void AI_updateBestBuildForPlots();
 	int AI_getBestBuildValue(int iIndex) const;
 	int AI_totalBestBuildValue(const CvArea* pArea) const;
 
@@ -194,6 +206,7 @@ public:
 
 	BuildTypes AI_getBestBuild(int iIndex) const;
 	int AI_countBestBuilds(const CvArea* pArea) const;
+	BuildTypes GetShortestBuildTimeOnPlot(CvPlot* plot) const;
 	void AI_updateBestBuild();
 
 	virtual int AI_cityValue() const;
@@ -293,8 +306,8 @@ protected:
 	void AI_doHurry(bool bForce = false);
 	void AI_doEmphasize();
 	int AI_getHappyFromHurry(HurryTypes eHurry) const;
-	int AI_getHappyFromHurry(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) const;
-	int AI_getHappyFromHurry(HurryTypes eHurry, BuildingTypes eBuilding, bool bIgnoreNew) const;
+	int AI_getHappyFromHurry(HurryTypes eHurry, UnitTypes eUnit) const;
+	int AI_getHappyFromHurry(HurryTypes eHurry, BuildingTypes eBuilding) const;
 	int AI_getHappyFromHurry(int iHurryPopulation) const;
 	bool AI_doPanic();
 	int AI_calculateCulturePressure(bool bGreatWork = false) const;
@@ -335,8 +348,11 @@ protected:
 
 	int AI_experienceWeight() const;
 	int AI_buildUnitProb() const;
+	bool AI_checkIrrigationSpread(CvPlot* pPlot);
+	void AI_newbestPlotBuild(CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority);
 
-	void AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peBestBuild, int iFoodPriority, int iProductionPriority, int iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange);
+	void AI_bestPlotBuild(CvPlot* pPlot, int& piBestValue, BuildTypes& peBestBuild, int iFoodPriority, int iProductionPriority, int
+	                      iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange);
 
 	int AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange);
 	void AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange );

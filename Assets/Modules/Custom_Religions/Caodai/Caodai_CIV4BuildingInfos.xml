@@ -13,7 +13,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAODAI_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAODAI_CATHEDRAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CAODAI_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_CATHEDRAL</ArtDefineTag>
 			<ReligionType>RELIGION_CAO_DAI</ReligionType>
@@ -78,7 +77,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAODAI_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAODAI_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CAODAI_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_MONASTERY</ArtDefineTag>
 			<ReligionType>RELIGION_CAO_DAI</ReligionType>
@@ -125,7 +123,6 @@
 			</AndDependencyTypes>
 			<Description>TXT_KEY_BUILDING_CAODAI_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAODAI_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CAODAI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_SHRINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CAODAI_SHRINE</MovieDefineTag>
@@ -169,7 +166,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAODAI_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAODAI_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CAODAI_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_TEMPLE</ArtDefineTag>
 			<ReligionType>RELIGION_CAO_DAI</ReligionType>

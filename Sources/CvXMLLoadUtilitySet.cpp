@@ -10,7 +10,9 @@
 #include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilitySetMod.h"
 #include "FVariableSystem.h"
+#include "CvImprovementInfo.h"
 #include <iostream>
+#include "CvInitCore.h"
 
 // Macro for Setting Global Art Defines
 #define INIT_XML_GLOBAL_LOAD(xmlInfoPath, infoArray, numInfos)  SetGlobalClassInfo(infoArray, xmlInfoPath, numInfos);
@@ -720,27 +722,11 @@ bool CvXMLLoadUtility::LoadGlobalText()
 				break;
 
 			case 5:
-				szLanguage = "Finnish";
-				break;
-
-			case 6:
-				szLanguage = "Hungarian";
-				break;
-
-			case 7:
 				szLanguage = "Polish";
 				break;
 
-			case 8:
+			case 6:
 				szLanguage = "Russian";
-				break;
-
-			case 9:
-				szLanguage = "Chinese";
-				break;
-
-			case 10:
-				szLanguage = "Portuguese";
 				break;
 
 			default:
@@ -763,7 +749,7 @@ bool CvXMLLoadUtility::LoadGlobalText()
 	std::vector<CvString> aszFiles;
 	std::vector<CvString> aszModfiles;
 
-	gDLL->enumerateFiles(aszFiles, "xml\\text\\*.xml");
+	gDLL->enumerateFiles(aszFiles, "xml\\GameText\\*.xml");
 
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 05/23/08                                MRGENIE      */
@@ -1190,7 +1176,9 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 	DestroyFXml();
 
 	GC.getInitCore().calculateAssetCheckSum();
-	
+
+	GC.cacheInfoTypes();
+
 	OutputDebugString("Loading PostMenu Infos: End");
 
 	return true;

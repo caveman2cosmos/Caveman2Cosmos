@@ -10,7 +10,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_AN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -18,13 +17,13 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
-			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<FreePromotion>PROMOTION_AN</FreePromotion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>132</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iDefense>15</iDefense>
@@ -77,12 +76,12 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ENKI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENKI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ENKI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENKI</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -159,12 +158,12 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ENLIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENLIL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ENLIL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENLIL</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -233,12 +232,12 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INANNA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INANNA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_INANNA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INANNA</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -300,12 +299,12 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_KI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -367,12 +366,12 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_KI_WHEAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_WHEAT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -407,12 +406,12 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_KI_CORN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_CORN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -447,7 +446,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_KI_RICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_RICE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -455,6 +453,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<iCost>160</iCost>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -487,12 +486,12 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_KI_POTATO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_POTATO</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -526,7 +525,6 @@
 			<Type>BUILDING_MESO_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_MESO_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TMESO_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MESO_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BABEL</ArtDefineTag>
 			<MapCategoryTypes>

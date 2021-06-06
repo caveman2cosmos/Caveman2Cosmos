@@ -79,7 +79,7 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 
 					if (pLoopPlot != NULL && pLoopPlot->area() == pArea)
 					{
-						BonusTypes eOtherBonus = pLoopPlot->getBonusType();
+						const BonusTypes eOtherBonus = pLoopPlot->getBonusType();
 						if (eOtherBonus == eBonus || eOtherBonus != NO_BONUS && GC.getBonusInfo(eOtherBonus).getBonusClassType() == iBonusClass)
 						{
 							return false;
@@ -161,20 +161,10 @@ bool CvMapGenerator::canPlaceGoodyAt(ImprovementTypes eImprovement, int iX, int 
 		return false;
 	}
 
-	int iUniqueRange = GC.getImprovementInfo(eImprovement).getGoodyUniqueRange();
-	for (int iDX = -iUniqueRange; iDX <= iUniqueRange; iDX++)
-	{
-		for (int iDY = -iUniqueRange; iDY <= iUniqueRange; iDY++)
-		{
-			const CvPlot* pLoopPlot = plotXY(iX, iY, iDX, iDY);
-			if (pLoopPlot != NULL && pLoopPlot->getImprovementType() == eImprovement)
-			{
-				return false;
-			}
-		}
-	}
-
-	return true;
+	const int iUniqueRange = GC.getImprovementInfo(eImprovement).getGoodyUniqueRange();
+	return algo::none_of(pPlot->rect(iUniqueRange, iUniqueRange),
+		bind(CvPlot::getImprovementType, _1) == eImprovement
+	);
 }
 
 

@@ -183,7 +183,10 @@ int64_t intSqrt64(const uint64_t iValue);
 int intPow(const int x, const int p);
 int64_t intPow64(const int64_t x, const int p);
 
+int getModifiedIntValue(const int iValue, const int iMod);
+
 const std::string getModDir();
+
 //
 // Python
 //
@@ -274,6 +277,12 @@ namespace python = boost::python;
 
 // Stupid define comes from windows and interferes with our stuff
 #undef Yield
+
+//
+// Compiler warnings
+//
+#pragma warning( 3: 4100 ) // unreferenced formal parameter
+//#pragma warning( 3: 4189 ) // local variable is initialized but not referenced
 
 //
 // Json

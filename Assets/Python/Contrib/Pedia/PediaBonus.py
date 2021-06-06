@@ -316,15 +316,15 @@ class PediaBonus:
 						X_UNIT = X_COL_1 + W_BUIL + 8
 				builPanel = aName()
 				unitPanel = aName()
-				screen.addPanel(builPanel, TRNSLTR.getText("TXT_KEY_BONUS_EFFECTS_BUILDING", ()), "", False, True, X_COL_1, Y_BOT_ROW_3, W_BUIL, H_BOT_ROW, ePanelBlue50)
-				screen.addPanel(unitPanel, TRNSLTR.getText("TXT_KEY_BONUS_EFFECTS_UNIT", ()), "", False, True, X_UNIT, Y_BOT_ROW_3, W_UNIT, H_BOT_ROW, ePanelBlue50)
+				screen.addPanel(builPanel, TRNSLTR.getText("TXT_KEY_BONUSHELP_EFFECTS_BUILDING", ()), "", False, True, X_COL_1, Y_BOT_ROW_3, W_BUIL, H_BOT_ROW, ePanelBlue50)
+				screen.addPanel(unitPanel, TRNSLTR.getText("TXT_KEY_BONUSHELP_EFFECTS_UNIT", ()), "", False, True, X_UNIT, Y_BOT_ROW_3, W_UNIT, H_BOT_ROW, ePanelBlue50)
 			elif aAffectedBuildings:
 				builPanel = aName()
-				szBuild = TRNSLTR.getText("TXT_KEY_BONUS_EFFECTS_BUILDING", ())
+				szBuild = TRNSLTR.getText("TXT_KEY_BONUSHELP_EFFECTS_BUILDING", ())
 				screen.addPanel(builPanel, szBuild, "", False, True, X_COL_1, Y_BOT_ROW_3, W_PEDIA_PAGE, H_BOT_ROW, ePanelBlue50)
 			else:
 				unitPanel = aName()
-				szUnit = TRNSLTR.getText("TXT_KEY_BONUS_EFFECTS_UNIT", ())
+				szUnit = TRNSLTR.getText("TXT_KEY_BONUSHELP_EFFECTS_UNIT", ())
 				screen.addPanel(unitPanel, szUnit, "", False, True, X_COL_1, Y_BOT_ROW_3, W_PEDIA_PAGE, H_BOT_ROW, ePanelBlue50)
 			if aAffectedBuildings:
 				for iBuilding in aAffectedBuildings:

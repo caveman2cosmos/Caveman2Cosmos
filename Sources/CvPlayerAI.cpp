@@ -3,6 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvImprovementInfo.h"
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CvDeal.h"
@@ -14,12 +15,15 @@
 #include "CvPlot.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
+
+#include "CvDiploParameters.h"
 #include "CvPopupInfo.h"
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CvInitCore.h"
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  08/21/09								jdog5000	  */
@@ -2644,7 +2648,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	int iSpecialFoodMinus = 0;
 	int iSpecialProduction = 0;
 	int iSpecialCommerce = 0;
-	int iYieldLostHere = 0;
 
 	bool bNeutralTerritory = true;
 
@@ -3155,8 +3158,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			{
 				iMaxDistanceFromCapital = std::max(iMaxDistanceFromCapital, plotDistance(iCapitalX, iCapitalY, pLoopCity->getX(), pLoopCity->getY()));
 			}
-
-			int iDistanceToCapital = plotDistance(iCapitalX, iCapitalY, iX, iY);
 
 			FAssert(iMaxDistanceFromCapital > 0);
 			iValue *= 100 + (((bAdvancedStart ? 80 : 50) * std::max(0, (iMaxDistanceFromCapital - iDistance))) / iMaxDistanceFromCapital);
@@ -4200,8 +4201,8 @@ int CvPlayerAI::AI_goldTarget() const
 		iMultiplier += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
 		iMultiplier += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
 		iMultiplier += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-		iMultiplier += GC.getHandicapInfo(GC.getGame().getHandicapType()).getTrainPercent();
-		iMultiplier += GC.getHandicapInfo(GC.getGame().getHandicapType()).getConstructPercent();
+		iMultiplier += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAITrainPercent();
+		iMultiplier += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIConstructPercent();
 		iMultiplier /= 5;
 
 		iGold += (getNumCities() * 3 + getTotalPopulation() / 3);
@@ -4209,7 +4210,11 @@ int CvPlayerAI::AI_goldTarget() const
 		iGold *= iMultiplier;
 		iGold /= 100;
 
-		iGold += ( (iMultiplier * GC.getGame().getElapsedGameTurns()) / (((GC.getGame().isOption(GAMEOPTION_NO_EVENTS))? 10 : 6) * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent()) );
+		const int eventmult = GC.getGame().isOption(GAMEOPTION_NO_EVENTS) ? 10 : 6;
+		const int speedmult = (eventmult * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent());
+		const int turnmult = iMultiplier * GC.getGame().getElapsedGameTurns();
+
+		iGold += (turnmult / speedmult);
 
 		iGold *= (100 + calculateInflationRate());
 		iGold /= 100;
@@ -4223,11 +4228,11 @@ int CvPlayerAI::AI_goldTarget() const
 
 		// Afforess 02/01/10
 		if (!GET_TEAM(getTeam()).isGoldTrading() || !GET_TEAM(getTeam()).isTechTrading() || GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
-		{// Don't bother saving gold if we can't trade it for anything
+		{ // Don't bother saving gold if we can't trade it for anything
 			iGold /= 3;
 		}
 		else if (GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
-		{// Gold is less useful without tech brokering
+		{ // Gold is less useful without tech brokering
 			iGold *= 3;
 			iGold /= 4;
 		}
@@ -4257,7 +4262,6 @@ int CvPlayerAI::AI_goldTarget() const
 
 	return iGold + AI_getExtraGoldTarget();
 }
-
 
 TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAsync, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor) const
 {
@@ -5173,7 +5177,6 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 					iTempValue += (kImprovement.getYieldChange(iK) * 200);
 					iTempValue += (kImprovement.getRiverSideYieldChange(iK) * 100);
-					iTempValue += (kImprovement.getHillsYieldChange(iK) * 100);
 					iTempValue += (kImprovement.getIrrigatedYieldChange(iK) * 150);
 
 					// land food yield is more valueble
@@ -9503,7 +9506,6 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 
 			// find the first coastal city
 			CvCity* pCoastalCity = NULL;
-			CvCity* pUnconnectedCoastalCity = NULL;
 			if (iCoastalCityCount > 0)
 			{
 				pCoastalCity = findBestCoastalCity();
@@ -10059,7 +10061,6 @@ int CvPlayerAI::AI_corporationBonusVal(BonusTypes eBonus) const
 		int iCorpCount = getHasCorporationCount((CorporationTypes)iCorporation);
 		if (iCorpCount > 0)
 		{
-			int iNumCorpBonuses = 0;
 			iCorpCount += getNumCities() / 6 + 1;
 			const CvCorporationInfo& kCorp = GC.getCorporationInfo((CorporationTypes)iCorporation);
 			foreach_(const BonusTypes ePrereqBonus, kCorp.getPrereqBonuses())
@@ -12995,7 +12996,6 @@ int CvPlayerAI::AI_executiveValue(const CvArea* pArea, CorporationTypes eCorpora
 {
 	const CvTeam& kTeam = GET_TEAM(getTeam());
 	const CvGame& kGame = GC.getGame();
-	const CvCorporationInfo& kCorp = GC.getCorporationInfo(eCorporation);
 
 	int iSpreadInternalValue = 100;
 	int iSpreadExternalValue = 0;
@@ -14425,8 +14425,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	{
 		if ( m_iCityGrowthValueBase == -1 )
 		{
-			int iCityCount = 0;
-
 			iTempValue = 0;
 
 			foreach_(const CvCity* pLoopCity, cities())
@@ -14703,8 +14701,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 							iValueDivisor = 2;
 						}
 
-						bool bIsWonder = isNationalWonder(eLoopBuilding) || isWorldWonder(eLoopBuilding) || isTeamWonder(eLoopBuilding);
-						int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4));
+						const int iNumInstancesToScore = isLimitedWonder(eLoopBuilding) ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4);
 
 						//	If the building is enabled by multiple categories just count it at half value always
 						//	This isn't strictly accurate, but because civic evaluation works by linarly combining
@@ -14746,7 +14743,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 									iTempValue);
 							}
 						}
-
 						iValue += iTempValue;
 					}
 				}
@@ -14761,7 +14757,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			iTempValue = 0;
 			if (kCivic.isAllReligionsActive())
 			{
-				CivicTypes eCurrentCivic = getCivics((CivicOptionTypes)kCivic.getCivicOptionType());
 				ReligionTypes eCurrentReligion = getStateReligion();
 				bool bHasEnablingCivic = (hasAllReligionsActive());
 				bool bHasMultipleEnablingCivicCategories = (getAllReligionsActiveCount() > 1);
@@ -14784,8 +14779,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 									iValueDivisor = 2;
 								}
 
-								bool bIsWonder = isNationalWonder(eLoopBuilding) || isWorldWonder(eLoopBuilding) || isTeamWonder(eLoopBuilding);
-								int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4));
+								const int iNumInstancesToScore = isLimitedWonder(eLoopBuilding) ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4);
 
 								//	If the building is enabled by multiple categories just count it at half value always
 								//	This isn't strictly accurate, but because civic evaluation works by linarly combining
@@ -14794,7 +14788,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 								if (bHasMultipleEnablingCivicCategories || bHasEnablingCivic)
 								{
 									//Estimate value from capital city
-									iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (12 * iValueDivisor);
+									iTempValue = pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore / (12 * iValueDivisor);
 									if (gPlayerLogLevel > 2)
 									{
 										logBBAI("Civic %S jointly religiously enables building %S with value %d",
@@ -14803,10 +14797,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 											iTempValue);
 									}
 								}
-								else if (!bHasEnablingCivic)
+								else
 								{
 									//Estimate value from capital city
-									iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
+									iTempValue = pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore / (6 * iValueDivisor);
 									if (gPlayerLogLevel > 2)
 									{
 										logBBAI("Civic %S religiously enables building %S with value %d",
@@ -14824,59 +14818,45 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			iTempValue = 0;
 			if (!kCivic.isAllReligionsActive())
 			{
-				CivicTypes eCurrentCivic = getCivics((CivicOptionTypes)kCivic.getCivicOptionType());
-				ReligionTypes eCurrentReligion = getStateReligion();
-				bool bHasEnablingCivic = (hasAllReligionsActive());
-				bool bHasMultipleEnablingCivicCategories = (getAllReligionsActiveCount() > 1);
+				const ReligionTypes eCurrentReligion = getStateReligion();
+				const bool bHasEnablingCivic = hasAllReligionsActive();
+				const bool bHasMultipleEnablingCivicCategories = getAllReligionsActiveCount() > 1;
 
-				for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+				if (bHasEnablingCivic || bHasMultipleEnablingCivicCategories)
 				{
-					const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-
-					if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == NO_TECH || GC.getTechInfo((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()).getEra() <= getCurrentEra())
+					for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 					{
-						if (getBuildingCount((BuildingTypes)iI) > 0)
+						const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+
+						if (getBuildingCount(eLoopBuilding) > 0
+						&&
+						(
+							GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == NO_TECH
+							||
+							GC.getTechInfo((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()).getEra() <= getCurrentEra()
+						)
+						&& GC.getBuildingInfo(eLoopBuilding).getReligionType() != eCurrentReligion)
 						{
-							if (GC.getBuildingInfo(eLoopBuilding).getReligionType() != eCurrentReligion)
+							//Loses us the ability to construct the building
+							int iValueDivisor = bHasMultipleEnablingCivicCategories ? 12 : 6;
+
+							if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH
+							&& !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()))
 							{
-								int iValueDivisor = 1;
-
-								if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH &&
-									!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()))
-								{
-									iValueDivisor = 2;
-								}
-
-								bool bIsWonder = isNationalWonder(eLoopBuilding) || isWorldWonder(eLoopBuilding) || isTeamWonder(eLoopBuilding);
-								int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4));
-
-								if (bHasMultipleEnablingCivicCategories)
-								{
-									//Loses us the ability to construct the building
-									iTempValue = -(pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (12 * iValueDivisor);
-									if (gPlayerLogLevel > 2)
-									{
-										logBBAI("Civic %S religiously disables building %S with value %d",
-											kCivic.getDescription(),
-											GC.getBuildingInfo(eLoopBuilding).getDescription(),
-											iTempValue);
-									}
-								}
-								else if (bHasEnablingCivic)
-								{
-									//Loses us the ability to construct the building
-									iTempValue = -(pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
-									if (gPlayerLogLevel > 2)
-									{
-										logBBAI("Civic %S religiously disables building %S with value %d",
-											kCivic.getDescription(),
-											GC.getBuildingInfo(eLoopBuilding).getDescription(),
-											iTempValue);
-									}
-								}
-
-								iValue += iTempValue;
+								iValueDivisor *= 2;
 							}
+							const int iNumInstancesToScore = (isLimitedWonder(eLoopBuilding) ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4));
+
+							iTempValue = pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore / iValueDivisor;
+
+							if (gPlayerLogLevel > 2)
+							{
+								logBBAI("Civic %S religiously disables building %S with value %d",
+									kCivic.getDescription(),
+									GC.getBuildingInfo(eLoopBuilding).getDescription(),
+									iTempValue);
+							}
+							iValue -= iTempValue;
 						}
 					}
 				}
@@ -15129,7 +15109,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 			//iTemp *= pCapital->AI_yieldMultiplier((YieldTypes)iI);
 			//iTemp /= 100;
-			iTempValue += (kCivic.getCapitalYieldModifier(iI) * pCapital->getBaseYieldRate((YieldTypes)iI))/80;
+			iTempValue += (kCivic.getCapitalYieldModifier(iI) * pCapital->getPlotYield((YieldTypes)iI))/80;
 		}
 		iTempValue += ((kCivic.getTradeYieldModifier(iI) * getNumCities()) / 11);
 
@@ -16608,8 +16588,6 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 						{
 							for (int iProject = 0; iProject < GC.getNumProjectInfos(); iProject++)
 							{
-								ProjectTypes eProject = (ProjectTypes)iProject;
-
 								int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, iProject);
 
 								if (iValue > iBestValue)
@@ -20680,7 +20658,6 @@ void CvPlayerAI::AI_doDiplo()
 												{
 													paiMilitaryUnits[iJ] = -1;
 												}
-												CvUnit* pBestUnit = NULL;
 												int iNumTradableUnits = 0;
 												CvUnit* pLoopUnit;
 												for (iJ = 0, pLoopUnit = GET_PLAYER((PlayerTypes)iI).firstUnit(&iLoop); pLoopUnit != NULL; iJ++, pLoopUnit = GET_PLAYER((PlayerTypes)iI).nextUnit(&iLoop))
@@ -21570,7 +21547,6 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 	{
 		return 0;
 	}
-	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(kTriggeredData.m_eTrigger);
 	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	int iNumCities = getNumCities();
@@ -25241,28 +25217,20 @@ bool CvPlayerAI::AI_advancedStartPlaceExploreUnits(bool bLand)
 				int iOtherPlotCount = 0;
 				int iGoodyCount = 0;
 				int iExplorerCount = 0;
-				int iAreaId = pLoopArea->getID();
+				const int iAreaId = pLoopArea->getID();
 
-				int iRange = 4;
-				for (int iX = -iRange; iX <= iRange; iX++)
+				foreach_(const CvPlot* pLoopPlot2, pLoopPlot->rect(4, 4))
 				{
-					for (int iY = -iRange; iY <= iRange; iY++)
+					iExplorerCount += pLoopPlot2->plotCount(PUF_isUnitAIType, eUnitAI, -1, NULL, NO_PLAYER, getTeam());
+					if (pLoopPlot2->getArea() == iAreaId)
 					{
-						CvPlot* pLoopPlot2 = plotXY(pLoopPlot->getX(), pLoopPlot->getY(), iX, iY);
-						if (NULL != pLoopPlot2)
+						if (pLoopPlot2->isGoody())
 						{
-							iExplorerCount += pLoopPlot2->plotCount(PUF_isUnitAIType, eUnitAI, -1, NULL, NO_PLAYER, getTeam());
-							if (pLoopPlot2->getArea() == iAreaId)
-							{
-								if (pLoopPlot2->isGoody())
-								{
-									iGoodyCount++;
-								}
-								if (pLoopPlot2->getTeam() != getTeam())
-								{
-									iOtherPlotCount++;
-								}
-							}
+							iGoodyCount++;
+						}
+						if (pLoopPlot2->getTeam() != getTeam())
+						{
+							iOtherPlotCount++;
 						}
 					}
 				}
@@ -25481,47 +25449,39 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 				{
 					if (GC.getImprovementInfo(pLoopPlot->getImprovementType()).isImprovementBonusTrade(eBonus))
 					{
-						int iBonusValue = AI_bonusVal(eBonus, 1);
+						const int iBonusValue = AI_bonusVal(eBonus, 1);
 						if (iBonusValue > 9)
 						{
 							int iBestValue = 0;
-							CvPlot* pBestPlot = NULL;
-							int iRange = 2;
-							for (int iX = -iRange; iX <= iRange; iX++)
+							const CvPlot* pBestPlot = NULL;
+							foreach_(const CvPlot* pLoopPlot2, pLoopPlot->rect(2, 2))
 							{
-								for (int iY = -iRange; iY <= iRange; iY++)
+								if (pLoopPlot2->getOwner() == getID())
 								{
-									CvPlot* pLoopPlot2 = plotXY(pLoopPlot->getX(), pLoopPlot->getY(), iX, iY);
-									if (pLoopPlot2 != NULL)
+									if (pLoopPlot2->isConnectedToCapital() || pLoopPlot2->isCity())
 									{
-										if (pLoopPlot2->getOwner() == getID())
+										int iValue = 1000;
+										if (pLoopPlot2->isCity())
 										{
-											if ((pLoopPlot2->isConnectedToCapital()) || pLoopPlot2->isCity())
+											iValue += 100;
+											if (pLoopPlot2->getPlotCity()->isCapital())
 											{
-												int iValue = 1000;
-												if (pLoopPlot2->isCity())
-												{
-													iValue += 100;
-													if (pLoopPlot2->getPlotCity()->isCapital())
-													{
-														iValue += 100;
-													}
-												}
-												if (pLoopPlot2->isRoute())
-												{
-													iValue += 100;
-												}
-												int iDistance = GC.getMap().calculatePathDistance(pLoopPlot, pLoopPlot2);
-												if (iDistance > 0)
-												{
-													iValue /= (1 + iDistance);
+												iValue += 100;
+											}
+										}
+										if (pLoopPlot2->isRoute())
+										{
+											iValue += 100;
+										}
+										const int iDistance = GC.getMap().calculatePathDistance(pLoopPlot, pLoopPlot2);
+										if (iDistance > 0)
+										{
+											iValue /= (1 + iDistance);
 
-													if (iValue > iBestValue)
-													{
-														iBestValue = iValue;
-														pBestPlot = pLoopPlot2;
-													}
-												}
+											if (iValue > iBestValue)
+											{
+												iBestValue = iValue;
+												pBestPlot = pLoopPlot2;
 											}
 										}
 									}
@@ -25540,7 +25500,7 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 				if (pLoopPlot->getRouteType() == NO_ROUTE)
 				{
 					int iRouteYieldValue = 0;
-					RouteTypes eRoute = (AI_bestAdvancedStartRoute(pLoopPlot, &iRouteYieldValue));
+					const RouteTypes eRoute = AI_bestAdvancedStartRoute(pLoopPlot, &iRouteYieldValue);
 					if (eRoute != NO_ROUTE && iRouteYieldValue > 0)
 					{
 						doAdvancedStartAction(ADVANCEDSTARTACTION_ROUTE, pLoopPlot->getX(), pLoopPlot->getY(), eRoute, true);
@@ -25700,7 +25660,6 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 
 	iLastPointsTotal = getAdvancedStartPoints();
 	iCityPoints = std::min(iCityPoints, iLastPointsTotal);
-	int iArea = -1; //getStartingPlot()->getArea();
 
 	//Spend econ points on a tech?
 	int iTechRand = 90 + GC.getGame().getSorenRandNum(20, "AI AS Buy Tech 1");
@@ -26262,7 +26221,6 @@ void CvPlayerAI::AI_doEnemyUnitData()
 
 	int iI;
 
-	int iOldTotal = 0;
 	int iNewTotal = 0;
 
 	// Count enemy land and sea units visible to us
@@ -27255,7 +27213,6 @@ CvCity* CvPlayerAI::getReligiousVictoryTarget(const CvUnit *pUnit, const bool bN
 	}
 
 	const CvPlot* pUnitPlot = pUnit->plot();
-	const CvTeam& pTeam = GET_TEAM(getTeam());
 	const ReligionTypes eStateReligion = getStateReligion();
 
 	CvCity* pBestCity = NULL;
@@ -27444,7 +27401,6 @@ void CvPlayerAI::AI_setConsiderReligiousVictory()
 	int iStateReligionInfluence = GC.getGame().calculateReligionPercent(eStateReligion);
 	int iI;
 	int iVictoryTarget;
-	CvTeamAI& pTeamAI = GET_TEAM(getTeam());
 
 	if(!hasHolyCity(eStateReligion))
 	{
@@ -27946,8 +27902,6 @@ int CvPlayerAI::AI_corporationTradeVal(CorporationTypes eCorporation, PlayerType
 
 	for(int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
-		const CvCorporationInfo& kCorp = GC.getCorporationInfo((CorporationTypes)iI);
-
 		if (iI != eCorporation)
 		{
 			if (hasHeadquarters((CorporationTypes)iI))

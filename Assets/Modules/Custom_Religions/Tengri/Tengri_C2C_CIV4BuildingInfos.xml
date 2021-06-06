@@ -9,7 +9,6 @@
 			<Type>BUILDING_TENGRII_HORSE_BREEDER</Type>
 			<Description>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TENGRII_HORSE_BREEDER</ArtDefineTag>
 			<MapCategoryTypes>
@@ -21,7 +20,7 @@
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<Bonus>BONUS_HORSE</Bonus>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>104</iCost>
+			<iCost>98</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>

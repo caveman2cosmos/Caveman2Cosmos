@@ -350,16 +350,10 @@ public:
 	int getProductionModifier(BuildingTypes eBuilding) const;
 	int getProductionModifier(ProjectTypes eProject) const;
 
-//	int getOverflowProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, int iDiff, int iModifiedProduction) const;
-//	int getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow) const;
-
-	int getOverflowProductionDifference() const;
-	// int getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow, bool bYield = true) const;
-	int getProductionPerTurn(int iProductionModifier, ProductionCalc::flags flags) const;
+	int getProductionPerTurn(ProductionCalc::flags flags) const;
 
 	int getProductionDifference(const OrderData& orderData, ProductionCalc::flags flags) const;
 	int getCurrentProductionDifference(ProductionCalc::flags flags) const;
-	int getExtraProductionDifference(int iExtra) const;
 
 	bool canHurry(const HurryTypes eHurry, const bool bTestVisible = false) const;
 	int64_t getHurryGold(const HurryTypes eHurry, int iHurryCost = -1) const;
@@ -454,8 +448,8 @@ public:
 	int growthThreshold(const int iPopChange = 0) const;
 
 	int productionLeft() const;
-	int hurryCost(bool bExtra) const;
-	int getHurryCostModifier(bool bIgnoreNew = false) const;
+	int hurryCost() const;
+	int getHurryCostModifier() const;
 	int hurryPopulation(HurryTypes eHurry) const;
 	int hurryProduction(HurryTypes eHurry) const;
 	int flatHurryAngerLength() const;
@@ -560,7 +554,7 @@ public:
 
 	//TB Combat Mods (Buildings) end
 	//TB Traits begin
-	int getModifiedBaseYieldRate(YieldTypes eIndex) const;
+	int getBaseYieldRate(YieldTypes eIndex) const;
 	//TB Traits end
 	bool isQuarantined() const;
 	int getQuarantinedCount() const;
@@ -830,9 +824,11 @@ public:
 	int getMaxFoodKeptPercent() const;
 	void changeMaxFoodKeptPercent(int iChange, bool bAdd);
 
+	int getMaxProductionOverflow() const;
+
 	int getOverflowProduction() const;
 	void setOverflowProduction(int iNewValue);
-	void changeOverflowProduction(int iChange, int iProductionModifier);
+	void changeOverflowProduction(int iChange);
 
 	int getFeatureProduction() const;
 	void setFeatureProduction(int iNewValue);
@@ -976,17 +972,21 @@ public:
 	void changeRiverPlotYield(YieldTypes eIndex, int iChange);
 
 	int getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false);
-	int getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingTypes eBuilding);
-	int getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const;
+	int getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding);
+	int getAdditionalBaseYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const;
+	int getAdditionalBaseYieldModifierByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const;
 
-	int getAdditionalYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
-	int getAdditionalBaseYieldRateBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
+	int getYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist) const;
 
-	int getBaseYieldRate(YieldTypes eIndex) const;
+	int getPlotYield(YieldTypes eIndex) const;
 	int getBaseYieldRateModifier(YieldTypes eIndex, int iExtra = 0) const;
 	int getYieldRate(YieldTypes eIndex) const;
-	void setBaseYieldRate(YieldTypes eIndex, int iNewValue);
-	void changeBaseYieldRate(YieldTypes eIndex, int iChange);
+	void changePlotYield(YieldTypes eIndex, int iChange);
+
+	int getExtraYield(YieldTypes eIndex) const;
+	void changeExtraYield(YieldTypes eIndex, int iChange);
+
+	void onYieldChange();
 
 	int popYield(YieldTypes eIndex) const;
 	int getBaseYieldPerPopRate(YieldTypes eIndex) const;
@@ -1390,9 +1390,7 @@ public:
 	bool isInquisitionConditions() const;
 	int calculateCorporationHealth() const;
 	int calculateCorporationHappiness() const;
-	int getExtraYieldTurns() const;
-	void changeExtraYieldTurns (int iChange);
-	void setExtraYieldTurns(int iNewVal);
+
 	BuildTypes findChopBuild(FeatureTypes eFeature) const;
 	CultureLevelTypes getOccupationCultureLevel() const;
 	void setOccupationCultureLevel(CultureLevelTypes eNewValue);
@@ -1750,7 +1748,6 @@ protected:
 	int m_iOverflowProduction;
 	int m_iFeatureProduction;
 
-	int m_iLostProductionBase;
 	int m_iSpecialistGoodHealth;
 	int m_iSpecialistBadHealth;
 	int m_iSpecialistHappiness;
@@ -1764,7 +1761,6 @@ protected:
 
 	bool m_bBuiltFoodProducedUnit;
 	bool m_bResetTechs;
-	int m_iExtraYieldTurns;
 	int m_iLineOfSight;
 	int m_iLandmarkAngerTimer;
 	int m_iInvasionChance;
@@ -1927,6 +1923,7 @@ protected:
 	int* m_aiSeaPlotYield;
 	int* m_aiRiverPlotYield;
 	int* m_aiBaseYieldRate;
+	int* m_aiExtraYield;
 	int* m_aiBaseYieldPerPopRate;
 	int* m_aiYieldRateModifier;
 	int* m_aiPowerYieldRateModifier;
@@ -2033,19 +2030,15 @@ protected:
 	bool doCheckProduction();
 	void doPromotion();
 
-	int getExtraProductionDifference(int iExtra, UnitTypes eUnit) const;
-	int getExtraProductionDifference(int iExtra, BuildingTypes eBuilding) const;
-	int getExtraProductionDifference(int iExtra, ProjectTypes eProject) const;
-	int getExtraProductionDifference(int iExtra, int iModifier) const;
-	int getHurryCostModifier(UnitTypes eUnit, bool bIgnoreNew) const;
-	int getHurryCostModifier(BuildingTypes eBuilding, bool bIgnoreNew) const;
-	int getHurryCostModifier(int iBaseModifier, int iProduction, bool bIgnoreNew) const;
-	int getHurryCost(bool bExtra, UnitTypes eUnit, bool bIgnoreNew) const;
-	int getHurryCost(bool bExtra, BuildingTypes eBuilding, bool bIgnoreNew) const;
-	int getHurryCost(bool bExtra, int iProductionLeft, int iHurryModifier, int iModifier) const;
+	int getHurryCostModifier(UnitTypes eUnit) const;
+	int getHurryCostModifier(BuildingTypes eBuilding) const;
+	int getHurryCostModifier(int iBaseModifier, int iExtraMod) const;
+	int getHurryCost(UnitTypes eUnit) const;
+	int getHurryCost(BuildingTypes eBuilding) const;
+	int getHurryCost(int iProductionLeft, int iHurryModifier) const;
 	int getHurryPopulation(HurryTypes eHurry, int iHurryCost) const;
-	bool canHurryUnit(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) const;
-	bool canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding, bool bIgnoreNew) const;
+	bool canHurryUnit(HurryTypes eHurry, UnitTypes eUnit) const;
+	bool canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding) const;
 	void recalculateMaxFoodKeptPercent();
 	void recalculatePopulationgrowthratepercentage();
 	virtual bool AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPlot = NULL, SpecialistTypes* peBestSpecialist = NULL) = 0;
@@ -2238,6 +2231,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateBuildingCommerce);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateCorporation);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateYield);
+		DECLARE_MAP_FUNCTOR(CvCity, void, onYieldChange);
 		DECLARE_MAP_FUNCTOR(CvCity, void, clearTradeRoutes);
 		DECLARE_MAP_FUNCTOR(CvCity, void, setBuildingListInvalid);
 		DECLARE_MAP_FUNCTOR(CvCity, void, clearModifierTotals);
@@ -2275,7 +2269,7 @@ public:
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeAreaBuildingCount, BuildingTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeSpecialistCount, SpecialistTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, processVoteSourceBonus, VoteSourceTypes, bool);
-		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeBaseYieldRate, YieldTypes, int);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeExtraYield, YieldTypes, int);
 
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isCapital);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isNoUnhappiness);
@@ -2309,7 +2303,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCultureTimes100, PlayerTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getYieldRate, YieldTypes);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getModifiedBaseYieldRate, YieldTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getBaseYieldRate, YieldTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, const CvPlotGroup*, plotGroup, PlayerTypes);
 
 		DECLARE_MAP_FUNCTOR_CONST_2(CvCity, bool, isRevealed, TeamTypes, bool);

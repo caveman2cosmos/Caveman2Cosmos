@@ -1,6 +1,5 @@
 from CvPythonExtensions import *
 from operator import itemgetter
-from string import split
 
 import CvScreenEnums
 import CvScreensInterface as UP
@@ -263,9 +262,9 @@ class CvMainInterface:
 			self.PROMOTION_LEADER	= GC.getInfoTypeForString('PROMOTION_LEADER')
 			# Cache Text
 			obj = TRNSLTR
-			self.szSystemReturn				= obj.getText("SYSTEM_RETURN", ())
-			self.szSystemWaiting			= obj.getText("SYSTEM_WAITING", ())
-			self.szSystemWaitingForYou		= obj.getText("SYSTEM_WAITING_FOR_YOU", ())
+			self.szSystemReturn				= obj.getText("TXT_KEY_SYSTEM_RETURN", ())
+			self.szSystemWaiting			= obj.getText("TXT_KEY_SYSTEM_WAITING", ())
+			self.szSystemWaitingForYou		= obj.getText("TXT_KEY_SYSTEM_WAITING_FOR_YOU", ())
 			self.szInterfaceCityGrowth		= obj.getText("INTERFACE_CITY_GROWTH", ())
 			self.szInterfaceCityStagnant	= obj.getText("INTERFACE_CITY_STAGNANT", ())
 			self.szInterfaceCityStarving	= obj.getText("INTERFACE_CITY_STARVING", ())
@@ -1208,19 +1207,19 @@ class CvMainInterface:
 			szOutput = ""
 			iFirstBadConnection = CyMessageControl().GetFirstBadConnection()
 			if GAME.isPaused(): # Pause overrides other messages
-				szOutput = TRNSLTR.getText("SYSTEM_GAME_PAUSED", (GC.getPlayer(GAME.getPausePlayer()).getNameKey(),))
+				szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_GAME_PAUSED", (GC.getPlayer(GAME.getPausePlayer()).getNameKey(),))
 			elif iFirstBadConnection != -1:
 				# Waiting on a bad connection to resolve
 				if CyMessageControl().GetConnState(iFirstBadConnection) == 1:
 					if GAME.isMPOption(MultiplayerOptionTypes.MPOPTION_ANONYMOUS):
-						szOutput = TRNSLTR.getText("SYSTEM_WAITING_FOR_PLAYER", (GC.getPlayer(iFirstBadConnection).getNameKey(), 0))
+						szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_WAITING_FOR_PLAYER", (GC.getPlayer(iFirstBadConnection).getNameKey(), 0))
 					else:
-						szOutput = TRNSLTR.getText("SYSTEM_WAITING_FOR_PLAYER", (GC.getPlayer(iFirstBadConnection).getNameKey(), (iFirstBadConnection + 1)))
+						szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_WAITING_FOR_PLAYER", (GC.getPlayer(iFirstBadConnection).getNameKey(), (iFirstBadConnection + 1)))
 				elif CyMessageControl().GetConnState(iFirstBadConnection) == 2:
 					if GAME.isMPOption(MultiplayerOptionTypes.MPOPTION_ANONYMOUS):
-						szOutput = TRNSLTR.getText("SYSTEM_PLAYER_JOINING", (GC.getPlayer(iFirstBadConnection).getNameKey(), 0))
+						szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_PLAYER_JOINING", (GC.getPlayer(iFirstBadConnection).getNameKey(), 0))
 					else:
-						szOutput = TRNSLTR.getText("SYSTEM_PLAYER_JOINING", (GC.getPlayer(iFirstBadConnection).getNameKey(), (iFirstBadConnection + 1)))
+						szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_PLAYER_JOINING", (GC.getPlayer(iFirstBadConnection).getNameKey(), (iFirstBadConnection + 1)))
 			elif CyIF.shouldDisplayWaitingOthers():
 				szOutput = self.szSystemWaiting
 			elif CyIF.shouldDisplayEndTurn():
@@ -3255,13 +3254,13 @@ class CvMainInterface:
 		x = x0 - wGroupButton
 		screen.addDropDownBoxGFC(ID, x, 140, wGroupButton, WidgetTypes.WIDGET_UNIT_GROUPING, 0, 0, FontTypes.SMALL_FONT)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_SINGLE
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_SINGLE", ()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_GROUPING_SINGLE", ()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_COMBAT
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_COMBAT", ()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_GROUPING_COMBAT", ()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_DOMAIN
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_DOMAIN", ()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_HERO
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_HERO", ()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_GROUPING_HERO", ()), TYPE, TYPE, SELECTED == TYPE)
 
 		ID = "CT|UnitSorting"
 		SELECTED = CyCity.getUnitListSorting()
@@ -3272,21 +3271,21 @@ class CvMainInterface:
 		TYPE = UnitSortTypes.UNIT_SORT_COST
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_COST",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_STRENGTH
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_STRENGTH",	()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_STRENGTH",	()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_MOVE
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_MOVE",		()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_MOVE",		()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_COLLATERAL
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_COLLATERAL",()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_COLLATERAL",()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_RANGE
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_RANGE",		()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_RANGE",		()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_BOMBARD
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_BOMBARD",	()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_BOMBARD",	()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_CARGO
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_CARGO",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_WITHDRAWAL
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_WITHDRAWAL",()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_WITHDRAWAL",()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_POWER
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_POWER",		()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNITHELP_SORT_POWER",		()), TYPE, TYPE, SELECTED == TYPE)
 
 		iTab = self.iCityTab
 		if iTab:
@@ -3316,23 +3315,23 @@ class CvMainInterface:
 		TYPE = BuildingSortTypes.BUILDING_SORT_COST
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_COST",					()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_SCIENCE
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_BUILDING_SORT_SCIENCE",	()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_BUILDINGHELP_SORT_SCIENCE",	()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_ESPIONAGE
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_ESPIONAGE",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_CULTURE
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_CULTURE",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_GOLD
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_BUILDING_SORT_GOLD",		()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_BUILDINGHELP_SORT_GOLD",		()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_FOOD
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_FOOD",					()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_PRODUCTION
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_PRODUCTION",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_HAPPINESS
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_BUILDING_SORT_HAPPINESS",	()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_BUILDINGHELP_SORT_HAPPINESS",	()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_HEALTH
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_BUILDING_SORT_HEALTH",	()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_BUILDINGHELP_SORT_HEALTH",	()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_CRIME
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_BUILDING_SORT_CRIME",		()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_BUILDINGHELP_SORT_CRIME",		()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_FLAMMABILITY
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_PROPERTY_FLAMMABILITY",	()), TYPE, TYPE, SELECTED == TYPE)
 
@@ -3851,7 +3850,7 @@ class CvMainInterface:
 				screen.setTableColumnHeader(unitTable, 0, "", w - 70)
 				screen.setTableColumnHeader(unitTable, 1, "", 60)
 				# Stack Title
-				szBuffer = self.aFontList[3] + TRNSLTR.getText("TXT_KEY_UNIT_STACK", (iSelectionRange,))
+				szBuffer = self.aFontList[3] + TRNSLTR.getText("TXT_KEY_UNITHELP_STACK", (iSelectionRange,))
 				# Stack movement
 				iMinMoves = 100000
 				iMaxMoves = 0
@@ -4121,10 +4120,9 @@ class CvMainInterface:
 			screen.setBarPercentage("PopulationBar", InfoBarTypes.INFOBAR_RATE_EXTRA, 0.0)
 
 		bProcess = CyCity.isProductionProcess()
-		iProductionDiffNoFood = CyCity.getCurrentProductionDifference(True, True)
-		iProductionDiffJustFood = CyCity.getCurrentProductionDifference(False, True) - iProductionDiffNoFood
 
 		if bProcess or CyCity.getOrderQueueLength() < 1:
+			iProductionDiffNoFood = CyCity.getYieldRate(YieldTypes.YIELD_PRODUCTION)
 			if bProcess:
 				szTxt = CyCity.getProductionName()
 			else:
@@ -4133,6 +4131,8 @@ class CvMainInterface:
 			screen.setBarPercentage("ProductionBar", InfoBarTypes.INFOBAR_RATE, 0)
 			screen.setBarPercentage("ProductionBar", InfoBarTypes.INFOBAR_RATE_EXTRA, 0)
 		else:
+			iProductionDiffNoFood = CyCity.getCurrentProductionDifference(True, True)
+			iProductionDiffJustFood = CyCity.getCurrentProductionDifference(False, True) - iProductionDiffNoFood
 			iNeeded = CyCity.getProductionNeeded()
 			iStored = CyCity.getProduction()
 			screen.setBarPercentage("ProductionBar", InfoBarTypes.INFOBAR_STORED, float(iStored) / iNeeded)
@@ -4153,15 +4153,12 @@ class CvMainInterface:
 				iOverflow = CyCity.hurryProduction(HURRY_WHIP) - CyCity.productionLeft()
 				if CityOpt.isWhipAssistOverflowCountCurrentProduction():
 					iOverflow += CyCity.getCurrentProductionDifference(False, True)
-				iMaxOverflow = max(iNeeded, CyCity.getCurrentProductionDifference(False, False))
-				iLost = max(0, iOverflow - iMaxOverflow)
-				iOverflow = min(iOverflow, iMaxOverflow)
-				iItemModifier = CyCity.getProductionModifier()
-				iBaseModifier = CyCity.getBaseYieldRateModifier(YieldTypes.YIELD_PRODUCTION, 0)
-				iTotalModifier = CyCity.getBaseYieldRateModifier(YieldTypes.YIELD_PRODUCTION, iItemModifier)
-				iLost *= iBaseModifier
-				iLost /= max(1, iTotalModifier)
-				iOverflow = (iBaseModifier * iOverflow) / max(1, iTotalModifier)
+				iMaxOverflow = CyCity.getMaxProductionOverflow()
+				iLost = iOverflow - iMaxOverflow
+				if iLost < 0: iLost = 0
+				if iOverflow > iMaxOverflow:
+					iOverflow = iMaxOverflow
+
 				if iLost > 0:
 					if CyCity.isProductionUnit():
 						iGoldPercent = GC.getDefineINT("MAXED_UNIT_GOLD_PERCENT")
@@ -4184,9 +4181,7 @@ class CvMainInterface:
 		screen.setHitTest("ProductionText", HitTestTypes.HITTEST_NOHIT)
 
 		szTxt = uFont2
-		if bProcess:
-			szTxt += str(CyCity.getYieldRate(YieldTypes.YIELD_PRODUCTION)) + self.iconYieldList[1]
-		elif bFoodProduction and iProductionDiffJustFood > 0:
+		if not bProcess and bFoodProduction and iProductionDiffJustFood > 0:
 			szTxt += str(iProductionDiffJustFood) + self.iconYieldList[0] + " + " + str(iProductionDiffNoFood) + self.iconYieldList[1]
 		else:
 			szTxt += str(iProductionDiffNoFood) + self.iconYieldList[1]
@@ -5394,7 +5389,7 @@ class CvMainInterface:
 				self.updateTooltip(screen, szTxt)
 
 			elif NAME == "BuildListBtn":
-				szTxt = TRNSLTR.getText("TXT_KEY_BUILD_LIST_SCREEN_HOVER", ())
+				szTxt = TRNSLTR.getText("TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER", ())
 				self.updateTooltip(screen, szTxt)
 
 			elif NAME == "MADScreenWidget":

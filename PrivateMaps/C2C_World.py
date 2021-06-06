@@ -22,8 +22,8 @@
 from CvPythonExtensions import *
 from array  import array
 from random import random, uniform, randint, seed, shuffle
-from math import fmod, pi, cos, sin, sqrt
-import sys, os, inspect, _winreg
+from math import pi, cos, sin, sqrt
+import os, _winreg
 import cPickle as pickle
 import BugUtil, NaturalWonders
 
@@ -3175,12 +3175,7 @@ class BonusPlacer:
 	def AssignBonusAreas(self, numBonuses, bonusListLoc):
 		GC = CyGlobalContext()
 		MAP = GC.getMap()
-		# Build area list
-		self.areas = areas = []
-		for i in xrange(MAP.getIndexAfterLastArea()):
-			area = MAP.getArea(i)
-			if not area.isNone():
-				areas.append(area)
+		self.areas = areas = MAP.areas()
 
 		bonusDictLoc = self.bonusDict
 		for i in xrange(numBonuses):
@@ -3427,11 +3422,7 @@ class StartingPlotFinder:
 		shuffle(player_list)
 		print "Number of players: %d" % iNumPlayers
 		# Build area list
-		areas = []
-		for i in xrange(MAP.getIndexAfterLastArea()):
-			area = MAP.getArea(i)
-			if not area.isNone():
-				areas.append(area)
+		areas = MAP.areas()
 		# old/new world status
 		# Get official areas and make corresponding lists that determines
 		# old world vs. new world and also the pre-settled value.
@@ -3886,7 +3877,7 @@ class StartPlot:
 
 	def isCoast(self):
 		waterArea = CyMap().plot(self.x, self.y).waterArea()
-		return not waterArea.isNone() and not waterArea.isLake()
+		return waterArea is not None and not waterArea.isLake()
 
 	def isRiverSide(self):
 		return CyMap().plot(self.x, self.y).isRiverSide()
