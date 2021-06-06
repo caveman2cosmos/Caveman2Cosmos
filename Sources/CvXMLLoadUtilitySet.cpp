@@ -2643,54 +2643,6 @@ void CvXMLLoadUtility::SetImprovementBonuses(CvImprovementBonusInfo** ppImprovem
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   SetAndLoadVar(int** ppiVar, int iDefault)
-//
-//  PURPOSE :   set the variable to a default and load it from the xml if there are any children
-//
-//------------------------------------------------------------------------------------------------------
-bool CvXMLLoadUtility::SetAndLoadVar(int** ppiVar, int iDefault)
-{
-	int iNumChildren;
-	int* piVar;
-	bool bReturn = false;
-	int i; // loop counter
-
-	bReturn = true;
-
-	// get the total number of children the current xml node has
-	iNumChildren = GetXmlChildrenNumber();
-
-	// allocate memory
-	InitList(ppiVar, iNumChildren, iDefault);
-
-	// set the a local pointer to the newly allocated memory
-	piVar = *ppiVar;
-
-	// if the call to the function that sets the current xml node to it's first non-comment
-	// child and sets the parameter with the new node's value succeeds
-	if (GetChildXmlVal(&piVar[0]))
-	{
-		// loop through all the siblings, we start at 1 since we already got the first sibling
-		for (i=1;i<iNumChildren;i++)
-		{
-			// if the call to the function that sets the current xml node to it's next non-comment
-			// sibling and sets the parameter with the new node's value does not succeed
-			// we will break out of this for loop
-			if (!GetNextXmlVal(&piVar[i]))
-			{
-				break;
-			}
-		}
-
-		// set the current xml node to it's parent node
-		MoveToXmlParent();
-	}
-
-	return bReturn;
-}
-
-//------------------------------------------------------------------------------------------------------
-//
 //  FUNCTION:   SetVariableListTagPair(	int **ppiList, const TCHAR* szRootTagName,
 //										int iInfoBaseSize, int iInfoBaseLength, int iDefaultListVal)
 //
