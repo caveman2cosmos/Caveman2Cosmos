@@ -1771,7 +1771,7 @@ bool CvBuildingInfo::EnablesOtherBuildings() const
 				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
 					if (GC.getBuildingInfo((BuildingTypes)iJ).getPrereqAndBonus() == eFreeBonus
-					|| algo::contains(GC.getBuildingInfo((BuildingTypes)iJ).getPrereqOrBonuses(iI), eFreeBonus))
+					|| algo::contains(GC.getBuildingInfo((BuildingTypes)iJ).getPrereqOrBonuses(), eFreeBonus))
 					{
 						m_bEnablesOtherBuildingsValue = true;
 						break;
@@ -5195,7 +5195,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	//Alberts2 PrereqBonuses
 	if (!pClassInfo->m_aePrereqOrBonuses.empty())
 	{
-		CvXMLLoadUtility::CopyNonDefaultsFromIntVector(m_aePrereqOrBonuses, pClassInfo->m_aePrereqOrBonuses);
+		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrBonuses, pClassInfo->m_aePrereqOrBonuses);
 	}
 
 	if (getMaxGlobalInstances() == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
@@ -5395,6 +5395,10 @@ BonusTypes CvBuildingInfo::getPrereqOrBonuses(int i) const
 	return static_cast<BonusTypes>(m_aePrereqOrBonuses[i]);
 }
 
+const python::list CvBuildingInfo::cyGetPrereqOrBonuses() const
+{
+	return Cy::makeList(m_aePrereqOrBonuses);
+}
 
 bool CvBuildingInfo::isPrereqOrBuilding(const int i) const
 {

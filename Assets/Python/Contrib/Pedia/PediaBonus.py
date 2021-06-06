@@ -106,13 +106,9 @@ class PediaBonus:
 			if CvBuildingInfo.getPrereqVicinityBonus() == iTheBonus:
 				aVicinityBuildings.append(iBuilding)
 			if bValid:
-				if CvBuildingInfo.getPrereqAndBonus() == iTheBonus :
+				if CvBuildingInfo.getPrereqAndBonus() == iTheBonus \
+				or iTheBonus in CvBuildingInfo.getPrereqOrBonuses():
 					aNeededByBuildings.append(iBuilding)
-				else:
-					for i in range(CvBuildingInfo.getNumPrereqOrBonuses()):
-						if CvBuildingInfo.getPrereqOrBonuses(i) == iTheBonus:
-							aNeededByBuildings.append(iBuilding)
-							break
 		# Loop through all units and find those connected to the bonus.
 		aNeededByUnits = []
 		aAffectedUnits = []

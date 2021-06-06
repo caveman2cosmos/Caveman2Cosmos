@@ -1353,12 +1353,12 @@ void CvUnitInfo::addUnitToUpgradeChain(int i)
 }
 
 
-const std::vector<TechTypes>& CvBuildingInfo::getPrereqAndTechs() const
+const std::vector<TechTypes>& CvUnitInfo::getPrereqAndTechs() const
 {
 	return m_piPrereqAndTechs;
 }
 
-const python::list CvBuildingInfo::cyGetPrereqAndTechs() const
+const python::list CvUnitInfo::cyGetPrereqAndTechs() const
 {
 	return Cy::makeList(m_piPrereqAndTechs);
 }

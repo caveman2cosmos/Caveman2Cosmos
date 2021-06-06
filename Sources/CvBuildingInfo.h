@@ -633,6 +633,7 @@ public:
 	int getNumPrereqOrBonuses() const;
 	BonusTypes getPrereqOrBonuses(int i) const;
 	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
+	const python::list cyGetPrereqOrBonuses() const;
 
 protected:
 	int m_iVictoryPrereq;

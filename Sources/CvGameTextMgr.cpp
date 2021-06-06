@@ -31531,7 +31531,6 @@ void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, b
 {
 	CvWString szTempBuffer;
 	CvWString szFirstBuffer;
-	int iI;
 
 	if (NO_ROUTE == eRoute)
 	{
@@ -31577,16 +31576,12 @@ void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, b
 		}
 	}
 
-	if (info.isAnyPrereqOrBonus())
+	if (info.getPrereqOrBonuses().size() > 0)
 	{
 		bool bQualified = true;
 
-		for (iI = 0; iI < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); iI++)
+		foreach_(const BonusTypes eBonusOrPrereq, info.getPrereqOrBonuses())
 		{
-			BonusTypes eBonusOrPrereq = (BonusTypes)info.getPrereqOrBonus((BonusTypes)iI);
-			if (eBonusOrPrereq == NO_BONUS)
-				continue;
-
 			if (GC.getGame().getActivePlayer() != NO_PLAYER && GET_PLAYER(GC.getGame().getActivePlayer()).hasBonus(eBonusOrPrereq))
 			{
 				bQualified = false;
@@ -31596,12 +31591,8 @@ void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, b
 		if (bQualified)
 		{
 
-			for (iI = 0; iI < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); iI++)
+			foreach_(const BonusTypes eBonusOrPrereq, info.getPrereqOrBonuses())
 			{
-				BonusTypes eBonusOrPrereq = (BonusTypes)info.getPrereqOrBonus((BonusTypes)iI);
-				if (eBonusOrPrereq == NO_BONUS)
-					continue;
-
 				if (GC.getGame().getActivePlayer() == NO_PLAYER || !GET_PLAYER(GC.getGame().getActivePlayer()).hasBonus(eBonusOrPrereq))
 				{
 					szBuffer.append(gDLL->getText("TXT_KEY_ROUTE_REQUIRES_BONUS_OR", GC.getBonusInfo(eBonusOrPrereq).getTextKeyWide()));
