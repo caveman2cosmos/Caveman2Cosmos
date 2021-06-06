@@ -131,9 +131,11 @@ class PediaBonus:
 				aNeededByUnits.append(iUnit)
 				bValid = False
 			else:
-				for i in range(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
-					if CvUnitInfo.getPrereqOrBonuses(i) == iTheBonus:
-						aNeededByUnits.append(iUnit)
+				#Check Or prereq only if unit has it at first place!
+				if CvUnitInfo.getPrereqOrBonuses(0) != -1:
+					for i in range(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
+						if CvUnitInfo.getPrereqOrBonuses(i) == iTheBonus:
+							aNeededByUnits.append(iUnit)
 			if bValid:
 				iBonusProductionModifier = CvUnitInfo.getBonusProductionModifier(iTheBonus)
 				if iBonusProductionModifier:
