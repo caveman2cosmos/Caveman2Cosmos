@@ -7417,12 +7417,10 @@ int64_t CvTeam::getTotalVictoryScore() const
 	int64_t iTotalVictoryScore = 0;
 
 	int64_t globalCulture = 0;
-	int globalThreeCityCulture = 0;
 	int globalPopulation = 0;
 	int globalWonderScore = 0;
 
 	int teamWonderScore = 0;
-	int tempScore = 0;
 
 	int totalTeamReligion = 0;
 	int totalTeamMonumentalCities = 0;
@@ -7624,7 +7622,6 @@ void CvTeam::changeBuildingYieldChange(BuildingTypes eIndex1, YieldTypes eIndex2
 
 	if (iChange != 0)
 	{
-		const int iOldValue = getBuildingYieldChange(eIndex1, eIndex2);
 		m_ppiBuildingYieldChange[eIndex1][eIndex2] += iChange;
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -7963,6 +7960,7 @@ void CvTeam::recalculateModifiers()
 		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
 			m_ppiBuildingCommerceChange[iI][iJ] = 0;
+			m_ppiBuildingCommerceModifier[iI][iJ] = 0;
 		}
 		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{
@@ -7972,10 +7970,6 @@ void CvTeam::recalculateModifiers()
 		for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
 		{
 			m_ppiBuildingSpecialistChange[iI][iJ] = 0;
-		}
-		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
-		{
-			m_ppiBuildingCommerceModifier[iI][iJ] = 0;
 		}
 	}
 
@@ -7987,6 +7981,11 @@ void CvTeam::recalculateModifiers()
 	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
 	{
 		m_aiExtraMoves[iI] = 0;
+	}
+
+	for (int iI = 0, num = GC.getNumRouteInfos(); iI < num; iI++)
+	{
+		m_paiRouteChange[iI] = 0;
 	}
 	// Recalculate player modifiers
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)

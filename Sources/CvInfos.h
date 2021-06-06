@@ -26,10 +26,6 @@
 //#include "IntExpr.h"
 #include "IDValueMap.h"
 
-#pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
-#pragma warning( disable: 4127 )
-
-
 extern bool shouldHaveType;
 
 class CvXMLLoadUtility;
@@ -78,16 +74,16 @@ public:
 	DllExport const wchar_t* getHelp() const;
 	const wchar_t* getStrategy() const;
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
+	virtual void read(FDataStreamBase*) {}
+	virtual void write(FDataStreamBase*) {}
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual bool readPass2(CvXMLLoadUtility* /*pXML*/) { FErrorMsg("Override this"); return false; }
+	virtual bool readPass2(CvXMLLoadUtility*) { FErrorMsg("Override this"); return false; }
 	virtual bool readPass3() { FErrorMsg("Override this"); return false; }
 	virtual void copyNonDefaults(const CvInfoBase* pClassInfo);
-	virtual void copyNonDefaultsReadPass2(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false)
+	virtual void copyNonDefaultsReadPass2(CvInfoBase*, CvXMLLoadUtility*, bool = false)
 	{ /* AIAndy: Default implementation for full copy of info without knowledge of one/twopass */ }
-	virtual void getCheckSum(unsigned int& iSum) const { };
+	virtual void getCheckSum(unsigned int&) const { };
 	virtual const wchar_t* getExtraHoverText() const { return L""; };
 
 protected:
@@ -276,12 +272,14 @@ public:
 	// int
 	int getInsidiousness() const;
 	int getInvestigation() const;
-	// int vector utilizing struct with delayed resolution
-	int getNumTechHappinessTypes() const;
-	const TechModifier& getTechHappinessType(int iTech) const;
 
-	int getNumTechHealthTypes() const;
-	const TechModifier& getTechHealthType(int iTech) const;
+	//int getNumTechHappinessTypes() const;
+	int getTechHappiness(TechTypes eTech) const;
+	const IDValueMap<TechTypes, int>& getTechHappinessTypes() const { return m_aTechHappinessTypes; }
+
+	//int getNumTechHealthTypes() const;
+	int getTechHealth(TechTypes eTech) const;
+	const IDValueMap<TechTypes, int>& getTechHealthTypes() const { return m_aTechHealthTypes; }
 
 	int getNumUnitCombatExperienceTypes() const;
 	const UnitCombatModifier& getUnitCombatExperienceType(int iUnitCombat) const;
@@ -324,8 +322,8 @@ protected:
 	//Team Project (1)
 	//TB Specialist Tags
 	// int vector utilizing struct with delayed resolution
-	std::vector<TechModifier> m_aTechHappinessTypes;
-	std::vector<TechModifier> m_aTechHealthTypes;
+	IDValueMap<TechTypes, int> m_aTechHappinessTypes;
+	IDValueMap<TechTypes, int> m_aTechHealthTypes;
 	std::vector<UnitCombatModifier> m_aUnitCombatExperienceTypes;
 	std::vector<UnitCombatModifier> m_aUnitCombatExperienceTypesNull;
 
@@ -2251,6 +2249,7 @@ public:
 	int CvUnitInfo::getPrereqAndBuilding(int i) const;
 	int CvUnitInfo::getNumPrereqAndBuildings() const;
 	bool CvUnitInfo::isPrereqAndBuilding(int i) const;
+	bool CvUnitInfo::isPrereqOrBuilding(int i) const;
 
 	int getTargetUnit(int i) const;
 	int getNumTargetUnits() const;
@@ -5954,7 +5953,7 @@ public:
 	DomainModifier getDomainProductionModifier(int iDomain) const;
 
 	int getNumTechResearchModifiers() const;
-	TechModifier getTechResearchModifier(int iTech) const;
+	TechModifier2 getTechResearchModifier(int iTech) const;
 
 	int getNumBuildingProductionModifiers() const;
 	BuildingModifier getBuildingProductionModifier(int iBuilding) const;
@@ -6180,7 +6179,7 @@ protected:
 	std::vector<DisallowedTraitType> m_aDisallowedTraitTypes;
 	std::vector<DomainModifier> m_aDomainFreeExperiences;
 	std::vector<DomainModifier> m_aDomainProductionModifiers;
-	std::vector<TechModifier> m_aTechResearchModifiers;
+	std::vector<TechModifier2> m_aTechResearchModifiers;
 	std::vector<BuildingModifier> m_aBuildingProductionModifiers;
 	std::vector<SpecialBuildingModifier> m_aSpecialBuildingProductionModifiers;
 	std::vector<BuildingModifier> m_aBuildingHappinessModifiers;
@@ -7431,8 +7430,8 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
+	virtual void read(FDataStreamBase*) {}
+	virtual void write(FDataStreamBase*) {}
 
 	static void setLanguage(const CvWString& szLanguage) { m_szLanguage = szLanguage; }
 

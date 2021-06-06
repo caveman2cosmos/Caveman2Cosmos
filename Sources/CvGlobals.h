@@ -2195,33 +2195,33 @@ public:
 		return NUM_GRAPHICLEVELS;
 	}
 	// code to cache infos was deleted. https://github.com/caveman2cosmos/Caveman2Cosmos/issues/751
-	DllExport bool readBuildingInfoArray(FDataStreamBase* pStream)		{ return false; }
-	DllExport bool readTechInfoArray(FDataStreamBase* pStream)			{ return false; }
-	DllExport bool readUnitInfoArray(FDataStreamBase* pStream)			{ return false; }
-	DllExport bool readLeaderHeadInfoArray(FDataStreamBase* pStream)	{ return false; }
-	DllExport bool readCivilizationInfoArray(FDataStreamBase* pStream)	{ return false; }
-	DllExport bool readPromotionInfoArray(FDataStreamBase* pStream)		{ return false; }
-	DllExport bool readDiplomacyInfoArray(FDataStreamBase* pStream)		{ return false; }
-	DllExport bool readCivicInfoArray(FDataStreamBase* pStream)			{ return false; }
-	DllExport bool readHandicapInfoArray(FDataStreamBase* pStream)		{ return false; }
-	DllExport bool readBonusInfoArray(FDataStreamBase* pStream)			{ return false; }
-	DllExport bool readImprovementInfoArray(FDataStreamBase* pStream)	{ return false; }
-	DllExport bool readEventInfoArray(FDataStreamBase* pStream)			{ return false; }
-	DllExport bool readEventTriggerInfoArray(FDataStreamBase* pStream)	{ return false; }
+	DllExport bool readBuildingInfoArray(FDataStreamBase*)		{ return false; }
+	DllExport bool readTechInfoArray(FDataStreamBase*)			{ return false; }
+	DllExport bool readUnitInfoArray(FDataStreamBase*)			{ return false; }
+	DllExport bool readLeaderHeadInfoArray(FDataStreamBase*)	{ return false; }
+	DllExport bool readCivilizationInfoArray(FDataStreamBase*)	{ return false; }
+	DllExport bool readPromotionInfoArray(FDataStreamBase*)		{ return false; }
+	DllExport bool readDiplomacyInfoArray(FDataStreamBase*)		{ return false; }
+	DllExport bool readCivicInfoArray(FDataStreamBase*)			{ return false; }
+	DllExport bool readHandicapInfoArray(FDataStreamBase*)		{ return false; }
+	DllExport bool readBonusInfoArray(FDataStreamBase*)			{ return false; }
+	DllExport bool readImprovementInfoArray(FDataStreamBase*)	{ return false; }
+	DllExport bool readEventInfoArray(FDataStreamBase*)			{ return false; }
+	DllExport bool readEventTriggerInfoArray(FDataStreamBase*)	{ return false; }
 
-	DllExport void writeBuildingInfoArray(FDataStreamBase* pStream)		{}
-	DllExport void writeTechInfoArray(FDataStreamBase* pStream)			{}
-	DllExport void writeUnitInfoArray(FDataStreamBase* pStream)			{}
-	DllExport void writeLeaderHeadInfoArray(FDataStreamBase* pStream)	{}
-	DllExport void writeCivilizationInfoArray(FDataStreamBase* pStream)	{}
-	DllExport void writePromotionInfoArray(FDataStreamBase* pStream)	{}
-	DllExport void writeDiplomacyInfoArray(FDataStreamBase* pStream)	{}
-	DllExport void writeCivicInfoArray(FDataStreamBase* pStream)		{}
-	DllExport void writeHandicapInfoArray(FDataStreamBase* pStream)		{}
-	DllExport void writeBonusInfoArray(FDataStreamBase* pStream)		{}
-	DllExport void writeImprovementInfoArray(FDataStreamBase* pStream)	{}
-	DllExport void writeEventInfoArray(FDataStreamBase* pStream)		{}
-	DllExport void writeEventTriggerInfoArray(FDataStreamBase* pStream)	{}
+	DllExport void writeBuildingInfoArray(FDataStreamBase*)		{ }
+	DllExport void writeTechInfoArray(FDataStreamBase*)			{ }
+	DllExport void writeUnitInfoArray(FDataStreamBase*)			{ }
+	DllExport void writeLeaderHeadInfoArray(FDataStreamBase*)	{ }
+	DllExport void writeCivilizationInfoArray(FDataStreamBase*)	{ }
+	DllExport void writePromotionInfoArray(FDataStreamBase*)	{ }
+	DllExport void writeDiplomacyInfoArray(FDataStreamBase*)	{ }
+	DllExport void writeCivicInfoArray(FDataStreamBase*)		{ }
+	DllExport void writeHandicapInfoArray(FDataStreamBase*)		{ }
+	DllExport void writeBonusInfoArray(FDataStreamBase*)		{ }
+	DllExport void writeImprovementInfoArray(FDataStreamBase*)	{ }
+	DllExport void writeEventInfoArray(FDataStreamBase*)		{ }
+	DllExport void writeEventTriggerInfoArray(FDataStreamBase*)	{ }
 };
 
 extern CvGlobals gGlobalsProxy;	// for debugging

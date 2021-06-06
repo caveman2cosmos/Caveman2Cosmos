@@ -249,9 +249,9 @@
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COW</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 			</PrereqInCityBuildings>
@@ -329,9 +329,9 @@
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 			</PrereqInCityBuildings>
@@ -369,9 +369,9 @@
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 			</PrereqInCityBuildings>
@@ -551,9 +551,9 @@
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COW</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 			</PrereqInCityBuildings>
@@ -625,9 +625,9 @@
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 			</PrereqInCityBuildings>
@@ -662,9 +662,9 @@
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 			</PrereqInCityBuildings>

@@ -12,9 +12,6 @@ GAME = GC.getGame()
 class CvGameUtils:
 
 	def __init__(self):
-		self.reset()
-
-	def reset(self):
 		# Cache
 		self.fScoreFreeMod = GC.getDefineINT("SCORE_FREE_PERCENT") / 100.0
 		self.SCORE_POPULATION_FACTOR = GC.getDefineINT("SCORE_POPULATION_FACTOR")

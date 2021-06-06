@@ -1271,6 +1271,14 @@ bool CvUnitInfo::isPrereqAndBuilding(int i) const
 	}
 	return true;
 }
+bool CvUnitInfo::isPrereqOrBuilding(int i) const
+{
+	if (find(m_aiPrereqOrBuildings.begin(), m_aiPrereqOrBuildings.end(), i) == m_aiPrereqOrBuildings.end())
+	{
+		return false;
+	}
+	return true;
+}
 
 //Struct Vector
 int CvUnitInfo::getTargetUnit(int i) const
@@ -4245,7 +4253,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	int j=0;				//loop counter
 	int k=0;				//loop counter
-	int iNumSibs=0;				// the number of siblings the current xml node has
 	int iIndexVal;
 
 	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);

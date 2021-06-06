@@ -1490,7 +1490,6 @@ void CvUnit::doTurn()
 
 	if (baseCombatStr() > 0)
 	{
-		FeatureTypes eFeature = plot()->getFeatureType();
 		if (plot()->getFeatureTurnDamage() != 0)
 		{
 			changeDamagePercent(plot()->getFeatureTurnDamage(), NO_PLAYER);
@@ -4789,7 +4788,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				//GC.getGame().logOOSSpecial(53, getID(), getMoves(), getDamage());
-				CvSelectionGroup* pSelectionGroup = getGroup();
 				checkRemoveSelectionAfterAttack();
 
 				if (getGroup() != NULL)
@@ -8195,7 +8193,6 @@ int CvUnit::healTurns(const CvPlot* pPlot) const
 int CvUnit::healTurnsAsType(const CvPlot* pPlot, UnitCombatTypes eHealAsType) const
 {
 	int iNumTurns = MAX_INT;
-	int iBestNumTurns = MAX_INT;
 	int iHealAs = 0;
 
 	if (getHealAsDamage(eHealAsType) > 0)
@@ -9049,7 +9046,6 @@ bool CvUnit::airBomb(int iX, int iY)
 	int iMis0, iMis1, iMis2, iMis3, iMis4, iMis5;
 	iMis0 = iMis1 = iMis2 = iMis3 = iMis4 = iMis5 = 0;
 	int iI, iCount = 0;
-	CvUnit* pUnit = NULL;
 	// ! Dale
 
 	if (!canAirBombAt(plot(), iX, iY))
@@ -17267,7 +17263,6 @@ void CvUnit::setHealAsDamage(UnitCombatTypes eHealAsType, int iNewValue, PlayerT
 
 	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eHealAsType);
 
-	const int iOldValue = info->m_iHealAsDamage;
 	info->m_iHealAsDamage = range(iNewValue, 0, maxHitPoints());
 
 	int iHighestDamage = 0;
@@ -25581,7 +25576,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	//	Use condensed format now - only save non-default array elements
-	int itest = GC.getNumPromotionLineInfos();
 	for(iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
 		if ( getAfflictOnAttackTypeProbability((PromotionLineTypes)iI) != 0 ||
@@ -26187,7 +26181,6 @@ void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	int iDistanceAttackCommunicability = 0;
-	int iBestDistanceAttackCommunicability = 0;
 	std::vector<int> m_iAfflictionIndex;
 	bool bAffliction = false;
 	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
@@ -29123,7 +29116,6 @@ void CvUnit::doOpportunityFire()
 void CvUnit::doActiveDefense()
 {
 	int iDamage, iUnitDamage;
-	CvPlot* pAttackPlot = NULL;
 	CvUnit* pDefender = NULL;
 	CvCity* pCity = NULL;
 	bool bSuccess = false;
@@ -31065,7 +31057,6 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 	{
 		FAssertMsg(maxHitPoints() - iAttackerInitialDamage > 0, "Attacker is Dead!");
 		int iHealthPercent = (maxHitPoints() - getDamage()) * 100 / std::max(1, (maxHitPoints() - iAttackerInitialDamage));
-		int iPromotionChanceModifier = iHealthPercent * iHealthPercent / maxHitPoints();
 		iNonLethalAttackWinChance *= 10;
 		int iOdds = std::max(iWinningOdds, iNonLethalAttackWinChance);
 		int iPromotionChance = (GC.getCOMBAT_DIE_SIDES() - iOdds)/* * (100 + iPromotionChanceModifier) / 100*/;
@@ -31117,7 +31108,6 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 	{
 		FAssertMsg(pDefender->maxHitPoints() - iDefenderInitialDamage > 0, "Defender is Dead!");
 		int iHealthPercent = (pDefender->maxHitPoints() - pDefender->getDamage()) * 100 / std::max(1, (pDefender->maxHitPoints() - iDefenderInitialDamage));
-		int iPromotionChanceModifier = iHealthPercent * iHealthPercent / pDefender->maxHitPoints();
 		iNonLethalDefenseWinChance *= 10;
 		iNonLethalDefenseWinChance = std::max(0, (GC.getCOMBAT_DIE_SIDES() - iNonLethalDefenseWinChance));
 		int iOdds = std::min(iWinningOdds, iNonLethalDefenseWinChance);
@@ -31774,7 +31764,6 @@ void CvUnit::doOvercomeAttempt(PromotionLineTypes eAfflictionLine)
 	CvWString szBuffer;
 	int iOvercomeChance = getChancetoOvercome(eAfflictionLine);
 	int iOvercomeRollResult;
-	CvPlot* pPlot = plot();
 
 	iOvercomeRollResult = GC.getGame().getSorenRandNum(100, "Overcome");
 	if (iOvercomeRollResult < iOvercomeChance)
@@ -31987,7 +31976,6 @@ int CvUnit::getChancetoContract(PromotionLineTypes eAfflictionLine, int iCommuni
 		return 0;
 	}
 
-	int iWorseningModifier = 0;
 	int	iContract = GC.getPromotionLineInfo(eAfflictionLine).getCommunicability();
 	if (iCommunicableExposure > 0 && iCommunicableExposure > iContract)
 	{
@@ -34233,7 +34221,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	bool bAfflictk = kPromotion.isAffliction();
 #endif
-	bool bEquipk = kPromotion.isEquipment();
+	//bool bEquipk = kPromotion.isEquipment();
 
 	if (!bIsFreePromotion)
 	{
@@ -34518,7 +34506,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 
 		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 		{
-			UnitCombatTypes ePrereq = (UnitCombatTypes)iI;
 			if (GC.getPromotionInfo(ePromotion).getUnitCombat(iI))
 			{
 				bHasPrereq = true;
@@ -37771,7 +37758,6 @@ void CvUnit::doMerge()
 
 		int iTotalGroupOffset = 1;
 		int iTotalQualityOffset = 0;
-		bool bSet = false;
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
 			PromotionTypes ePromotion = ((PromotionTypes)iI);
@@ -37918,8 +37904,6 @@ void CvUnit::doSplit()
 
 		int iTotalGroupOffset = -1;
 		int iTotalQualityOffset = 0;
-		bool bHasAdjusted = false;
-		bool bSet = false;
 		pUnit0->setFortifyTurns(0);
 
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -40970,7 +40954,6 @@ bool CvUnit::doAmbush(bool bAssassinate)
 		{
 			GET_PLAYER(getOwner()).setAmbushingUnit(getID());
 			CvPlot* pPlot = plot();
-			int iOdds = 0;
 			if (pPlot != NULL)
 			{
 				CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);

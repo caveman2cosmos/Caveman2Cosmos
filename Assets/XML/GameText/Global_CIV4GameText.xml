@@ -20472,6 +20472,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Se requiere para entrenar[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_TRAIN</Tag>
+		<English>[ICON_BULLET]May be needed to Train[SPACE]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRED_TO_BUILD</Tag>
 		<English>[ICON_BULLET]Required to Build[SPACE]</English>
 		<French>[ICON_BULLET]Requis pour construire :[SPACE]</French>

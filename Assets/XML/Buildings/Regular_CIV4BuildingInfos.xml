@@ -618,9 +618,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_AGAVE_PLANTATION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<VicinityBonus>BONUS_PRICKLY_PEAR</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SUGAR</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -1630,9 +1630,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<VicinityBonus>BONUS_SAPPHIRES</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_IRON_ORE</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 			</PrereqInCityBuildings>
@@ -1698,9 +1698,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PEARLS</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<Bonus>BONUS_NETS</Bonus>
 			<iCost>80</iCost>
 			<YieldChanges>
@@ -2610,9 +2610,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_HORSE</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 			</PrereqInCityBuildings>
@@ -8043,9 +8043,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRRIGATION</PrereqTech>
 			<VicinityBonus>BONUS_CORN</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COFFEE</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>160</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -8073,9 +8073,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRRIGATION</PrereqTech>
 			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_TEA</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>160</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -8132,9 +8132,9 @@
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
 			<bRiver>1</bRiver>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<iCost>35</iCost>
 			<YieldChanges>
@@ -8538,11 +8538,6 @@
 			</PrereqOrBuildings>
 			<iCost>800</iCost>
 			<iHealth>-2</iHealth>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
@@ -9891,9 +9886,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRRIGATION</PrereqTech>
 			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COFFEE</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>160</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -11005,9 +11000,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORCHARDS</PrereqTech>
 			<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COFFEE</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>139</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -13026,11 +13021,6 @@
 			</PrereqOrBuildings>
 			<iCost>800</iCost>
 			<iHealth>2</iHealth>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_APPLE</BonusType>
@@ -13215,11 +13205,6 @@
 			</PrereqOrBuildings>
 			<iCost>800</iCost>
 			<iHealth>-2</iHealth>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
@@ -13604,9 +13589,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRRIGATION</PrereqTech>
 			<VicinityBonus>BONUS_POTATOES</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_TEA</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>160</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -15984,9 +15969,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRRIGATION</PrereqTech>
 			<VicinityBonus>BONUS_RICE</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SUGAR</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>160</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -17225,9 +17210,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORCHARDS</PrereqTech>
 			<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_TEA</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>139</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -26481,9 +26466,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORCHARDS</PrereqTech>
 			<VicinityBonus>BONUS_BANANA</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COFFEE</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>139</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -26780,11 +26765,6 @@
 			</PrereqOrBuildings>
 			<iCost>800</iCost>
 			<iHealth>2</iHealth>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SILK</BonusType>
@@ -27863,9 +27843,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<VicinityBonus>BONUS_JADE</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_LEAD_ORE</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 			</PrereqInCityBuildings>
@@ -28301,9 +28281,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SPICES</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>132</iCost>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -33162,11 +33142,6 @@
 			<CommerceModifiers>
 				<iCommerce>3</iCommerce>
 			</CommerceModifiers>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -33432,9 +33407,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<VicinityBonus>BONUS_POTATOES</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SPICES</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>153</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -33464,9 +33439,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<VicinityBonus>BONUS_RUBIES</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SALT</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 			</PrereqInCityBuildings>
@@ -34133,9 +34108,15 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_VOLCANOLOGY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_GEOTHERMAL_ENERGY</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
+			<PrereqOrImprovement>
+				<PrereqImprovement>
+					<ImprovementType>IMPROVEMENT_GEOTHERMAL_FACTORY</ImprovementType>
+					<bPrereqImprovement>1</bPrereqImprovement>
+				</PrereqImprovement>
+			</PrereqOrImprovement>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
@@ -34551,9 +34532,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<VicinityBonus>BONUS_CLAM</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_WHALE</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>80</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -35018,9 +34999,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
@@ -39490,9 +39471,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRRIGATION</PrereqTech>
 			<VicinityBonus>BONUS_MELONS</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SUGAR</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>160</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -43973,11 +43954,6 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>368</iCost>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<GlobalCommerceModifiers>
 				<iCommerce>5</iCommerce>
 			</GlobalCommerceModifiers>
@@ -46002,9 +45978,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORCHARDS</PrereqTech>
 			<VicinityBonus>BONUS_LEMONS</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SPICES</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>139</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -47114,9 +47090,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COFFEE</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>92</iCost>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -47697,11 +47673,6 @@
 			</PrereqOrBuildings>
 			<iCost>800</iCost>
 			<iHealth>2</iHealth>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_APPLE</BonusType>
@@ -49617,9 +49588,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_LLAMA</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 			</PrereqInCityBuildings>
@@ -51503,9 +51474,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<VicinityBonus>BONUS_WHEAT</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_TEA</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>118</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -51561,11 +51532,6 @@
 				<iCommerce>-25</iCommerce>
 				<iCommerce>-25</iCommerce>
 			</CommerceModifiers>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<iHappinessPercentPerPopulation>50</iHappinessPercentPerPopulation>
 			<iMaintenanceModifier>-25</iMaintenanceModifier>
@@ -52503,9 +52469,9 @@
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
 			<bRiver>1</bRiver>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
-			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_SHRIMP</VicinityBonus>
-			</PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
+				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
+			</PrereqRawVicinityBonuses>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<iCost>35</iCost>
 			<YieldChanges>
@@ -52883,11 +52849,6 @@
 			</PrereqOrBuildings>
 			<iCost>800</iCost>
 			<iHealth>1</iHealth>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
@@ -54329,11 +54290,6 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>10</iAsset>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Properties>
@@ -54582,9 +54538,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<VicinityBonus>BONUS_BISON</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -58334,9 +58290,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PEARLS</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>132</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -59370,9 +59326,9 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<Bonus>BONUS_NETS</Bonus>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PEARLS</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>132</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -59820,9 +59776,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SPICES</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>92</iCost>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -59886,9 +59842,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORCHARDS</PrereqTech>
 			<VicinityBonus>BONUS_APPLE</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_TEA</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>139</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -61102,9 +61058,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>86</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -61283,9 +61239,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORCHARDS</PrereqTech>
 			<VicinityBonus>BONUS_BANANA</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SUGAR</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>139</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -62246,9 +62202,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORCHARDS</PrereqTech>
 			<VicinityBonus>BONUS_APPLE</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SUGAR</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>139</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -64951,9 +64907,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
-			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_CRAB</VicinityBonus>
-			</PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
+				<VicinityBonus>BONUS_CORN</VicinityBonus>
+			</PrereqRawVicinityBonuses>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<iCost>35</iCost>
 			<YieldChanges>
@@ -65289,9 +65245,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRRIGATION</PrereqTech>
 			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SUGAR</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>160</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -65551,11 +65507,6 @@
 				<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1180</iCost>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_PHONOGRAPHS</BonusType>
@@ -66747,9 +66698,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 			</PrereqInCityBuildings>
@@ -68433,11 +68384,6 @@
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1280</iCost>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_ELEPHANTS</BonusType>
@@ -69907,9 +69853,9 @@
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
 			<bWater>1</bWater>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
-			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_CLAM</VicinityBonus>
-			</PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
+				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
+			</PrereqRawVicinityBonuses>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<iCost>35</iCost>
 			<YieldChanges>
@@ -70777,9 +70723,9 @@
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<Bonus>BONUS_NETS</Bonus>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_WHALE</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>80</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -70835,9 +70781,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>86</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -70980,9 +70926,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SILK</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>132</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -73355,9 +73301,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<VicinityBonus>BONUS_WHEAT</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SUGAR</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>118</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -74125,9 +74071,9 @@
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<Bonus>BONUS_NETS</Bonus>
 			<VicinityBonus>BONUS_CLAM</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PEARLS</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>80</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -76480,9 +76426,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<VicinityBonus>BONUS_POTATOES</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SUGAR</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<iCost>153</iCost>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -81525,11 +81471,6 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1130</iCost>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_AMMUNITION</BonusType>
@@ -85587,9 +85528,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -85849,9 +85790,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_HORSE</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 			</PrereqInCityBuildings>
@@ -88708,11 +88649,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>

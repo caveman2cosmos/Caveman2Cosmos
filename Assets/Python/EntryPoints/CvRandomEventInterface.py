@@ -19,6 +19,14 @@ GAME = GC.getGame()
 TRNSLTR = CyTranslator()
 
 
+def recalculateModifiers():
+	eInterstateEvent = GC.getInfoTypeForString("EVENT_INTERSTATE_1")
+	for i in range(GC.getMAX_PLAYERS()):
+		pInterstateEventTriggerData = GC.getPlayer(i).getEventOccured(eInterstateEvent)
+		if pInterstateEventTriggerData is not None:
+			applyInterstate((eInterstateEvent, pInterstateEventTriggerData))
+			
+
 ######## BLESSED SEA ###########
 
 def getHelpBlessedSea1(argsList):

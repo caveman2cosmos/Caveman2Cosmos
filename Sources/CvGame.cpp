@@ -6229,7 +6229,6 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 	for (int j = 0; j < GC.getNumSpawnInfos(); j++)
 	{
-		const SpawnTypes eSpawn = static_cast<SpawnTypes>(j);
 		const CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)j);
 
 		//TB Note: It is at this point that we need to isolate out the player type on spawn info.
@@ -11607,7 +11606,7 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 
 void CvGame::recalculateModifiers()
 {
-	OutputDebugString(CvString::format("Start profiling(false) for modifier recalc\n").c_str());
+	OutputDebugString("Start profiling(false) for modifier recalc\n");
 	startProfilingDLL(false);
 	PROFILE_FUNC();
 
@@ -11775,7 +11774,7 @@ void CvGame::recalculateModifiers()
 	}
 
 	stopProfilingDLL(false);
-	OutputDebugString(CvString::format("Stop profiling(false) after modifier recalc\n").c_str());
+	OutputDebugString("Stop profiling(false) after modifier recalc\n");
 }
 
 CvProperties* CvGame::getProperties()

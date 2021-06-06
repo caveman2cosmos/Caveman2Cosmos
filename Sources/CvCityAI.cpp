@@ -1975,7 +1975,6 @@ void CvCityAI::AI_chooseProduction()
 
 	//TB Note: min 1 hunter goes under the priority level of settling initiation because this is exploitable with ambushers (or just plain bad luck for the hunters which is not unlikely).  Destroy all hunters and you cripple growth.
 	//Koshling - made having at least 1 hunter a much higher priority
-	int iUnitValue = 0;
 	int iNeededExplorers = player.AI_neededExplorers(pArea);
 	int iNeededHunters = player.AI_neededHunters(pArea);
 	int iExplorerDeficitPercent = (iNeededExplorers == 0) ? 0 : ((iNeededExplorers - player.AI_totalAreaUnitAIs(pArea, UNITAI_EXPLORE)) * 100) / iNeededExplorers;
@@ -4723,7 +4722,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 	int iGoldValueAssessmentModifier = kOwner.AI_goldValueAssessmentModifier();
 
-	bool bProvidesPower = (kBuilding.isPower() || ((kBuilding.getPowerBonus() != NO_BONUS) && hasBonus((BonusTypes)(kBuilding.getPowerBonus()))) || kBuilding.isAreaCleanPower());
+	//bool bProvidesPower = (kBuilding.isPower() || ((kBuilding.getPowerBonus() != NO_BONUS) && hasBonus((BonusTypes)(kBuilding.getPowerBonus()))) || kBuilding.isAreaCleanPower());
 
 	//Don't consider a building if it causes the city to immediately start shrinking from unhealthiness
 	//For that purpose ignore bad health and unhappiness from Espionage.
@@ -4749,7 +4748,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 		return 0;
 	}
 
-	int iTotalPopulation = kOwner.getTotalPopulation();
 	int iNumCities = kOwner.getNumCities();
 	int iNumCitiesInArea = area()->getCitiesPerPlayer(getOwner());
 
@@ -8457,12 +8455,9 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vecto
 
 void CvCityAI::AI_getBestPlotValue(std::vector<int> &ratios,int iPlotCounter, CvPlot *plot, std::vector<plotInfo> &optimalYieldList, int iDesiredFoodChange)
 {
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	BuildTypes eBuild = NO_BUILD;
 
 	bool bIgnoreFeature = false;
-
-	const int iHealth = goodHealth() - badHealth();
 	
 	AI_newbestPlotBuild(plot, &optimalYieldList[iPlotCounter], ratios[YIELD_FOOD], ratios[YIELD_PRODUCTION], ratios[YIELD_COMMERCE]);
 	
@@ -8507,7 +8502,6 @@ void CvCityAI::AI_updateBestBuild()
 	}
 	m_bestBuildValuesStale = false;
 
-	const int numCityPlots = getNumCityPlots();
 	std::vector<int> ratios = AI_calculateOutputRatio(this->getBaseYieldRate(YIELD_FOOD), this->getBaseYieldRate(YIELD_PRODUCTION), this->getBaseYieldRate(YIELD_COMMERCE));
 	std::vector<plotInfo> currentYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
 	std::vector<plotInfo> optimalYieldList = std::vector<plotInfo>(NUM_CITY_PLOTS);
@@ -8534,9 +8528,6 @@ void CvCityAI::AI_updateBestBuild()
 	}
 	else iTargetSize = std::min(iTargetSize, getPopulation() + (happyLevel() - unhappyLevel()));
 
-
-
-	int iFoodMultiplier = 100;
 
 	int iFoodTotal = this->getYieldRate(YIELD_FOOD);
 
@@ -8603,7 +8594,6 @@ void CvCityAI::AI_updateBestBuildForPlots()
 	int iHillFoodDeficit = 0;
 	int iFoodTotal = GC.getYieldInfo(YIELD_FOOD).getMinCity();
 	int iProductionTotal = GC.getYieldInfo(YIELD_PRODUCTION).getMinCity();
-	int iCommerceTotal = GC.getYieldInfo(YIELD_COMMERCE).getMinCity();
 	int iWorkerCount = 0;
 	int iWorkableFood = 0;
 	int iWorkableFoodPlotCount = 0;
@@ -8949,8 +8939,6 @@ void CvCityAI::AI_updateBestBuildForPlots()
 	{
 		if (iI != CITY_HOME_PLOT)
 		{
-			const int iLastBestBuildValue = m_aiBestBuildValue[iI];
-			const BuildTypes eLastBestBuildType = m_aeBestBuild[iI];
 			m_aiBestBuildValue[iI] = 0;
 			m_aeBestBuild[iI] = NO_BUILD;
 
@@ -11490,18 +11478,15 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, plotInfo* plotInfo, int iFoodP
 	bool bHasBonusImprovement = false;
 	bool bEmphasizeIrrigation = false;
 	const bool bLeaveForest = GET_PLAYER(getOwner()).isOption(PLAYEROPTION_LEAVE_FORESTS);
-	const bool bSafeAutomation = GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION);
 	
 	const ImprovementTypes eCurrentPlotImprovement = pPlot->getImprovementType();
 	BonusTypes eNonObsoleteBonus = NO_BONUS;
-	int aiBestDiffYields[NUM_YIELD_TYPES] = { 0,0,0 };
 	int iBestValue = 0;
 	BuildTypes eBestBuild = NO_BUILD;
 
 	const FeatureTypes eFeature = pPlot->getFeatureType();
 	const CvFeatureInfo* currentFeature = eFeature != NO_FEATURE ? &GC.getFeatureInfo(eFeature) : NULL;
 	
-	const CvImprovementInfo* currentPlotImprovementInfo = eCurrentPlotImprovement != NO_IMPROVEMENT ? &GC.getImprovementInfo(eCurrentPlotImprovement) : NULL;
 	FAssertMsg(pPlot->getOwner() == getOwner(), "pPlot must be owned by this city's owner");
 	
 
@@ -11534,7 +11519,7 @@ void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, plotInfo* plotInfo, int iFoodP
 	
 	
 	//AI_clearfeaturevalue needs to be rewritten to work with new priorities
-	int iClearFeatureValue = currentFeature ? AI_clearFeatureValue(getCityPlotIndex(pPlot)) : 0;
+	//int iClearFeatureValue = currentFeature ? AI_clearFeatureValue(getCityPlotIndex(pPlot)) : 0;
 
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
@@ -14740,15 +14725,11 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_HAPPY) != 0)
 	{
-		// Toffer - ToDo - change to iterate the techs cached in the building vector rather than iterate through all techs to see if they are in the vector.
-		if (kBuilding.getNumTechHappinessTypes() > 0)
+		foreach_(const TechModifier& modifier, kBuilding.getTechHappinessTypes())
 		{
-			for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+			if (GET_TEAM(getTeam()).isHasTech(modifier.first) && modifier.second > 0)
 			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI) && kBuilding.getTechHappinessType(iI) > 0)
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		if (kBuilding.getHappiness() > 0
@@ -14769,15 +14750,11 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_HEALTHY) != 0)
 	{
-		// Toffer - ToDo - change to iterate the techs cached in the building vector rather than iterate through all techs to see if they are in the vector.
-		if (kBuilding.getNumTechHealthTypes() > 0)
+		foreach_(const TechModifier& modifier, kBuilding.getTechHealthTypes())
 		{
-			for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+			if (GET_TEAM(getTeam()).isHasTech(modifier.first) && modifier.second > 0)
 			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI) && kBuilding.getTechHealthType(iI) > 0)
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		if (kBuilding.getHealth() > 0
@@ -14982,7 +14959,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	const bool bCleanPower = pArea->isCleanPower(eTeam);
 	const bool bDevelopingCity = isDevelopingCity();
 	const bool bCapital = isCapital();
-	const bool bPower = isPower();
 	const bool bCanPopRush = kOwner.canPopRush();
 	const bool bAreaAlone = kOwner.AI_isAreaAlone(pArea);
 	const bool bZOC = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL);
@@ -17434,7 +17410,6 @@ bool CvCityAI::AI_chooseHealerUnit(int iMinNeeded)
 		{
 			UnitCombatTypes eUnitCombat = (UnitCombatTypes)iI;
 			PlayerTypes ePlayer = getOwner();
-			CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 			int iOverloadCount = 0;
 			int iOverloadCountLand = 0;
 			int iOverloadCountSea = 0;
@@ -17728,8 +17703,7 @@ bool CvCityAI::AI_establishSeeInvisibleCoverage()
 		for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 		{
 			UnitTypes eBestUnit = NO_UNIT;
-			int iUnitValue = 0;
-			InvisibleTypes eVisible = (InvisibleTypes)iI;
+			const InvisibleTypes eVisible = (InvisibleTypes)iI;
 			CvUnitSelectionCriteria criteria;
 			criteria.m_eVisibility = eVisible;
 			criteria.m_bNoNegativeProperties = true;
