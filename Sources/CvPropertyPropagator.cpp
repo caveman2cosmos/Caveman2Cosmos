@@ -50,19 +50,9 @@ PropertyTypes CvPropertyPropagator::getProperty() const
 	return m_eProperty;
 }
 
-void CvPropertyPropagator::setProperty(PropertyTypes eProperty)
-{
-	m_eProperty = eProperty;
-}
-
 GameObjectTypes CvPropertyPropagator::getObjectType() const
 {
 	return m_eObjectType;
-}
-
-void CvPropertyPropagator::setObjectType(GameObjectTypes eObjectType)
-{
-	m_eObjectType = eObjectType;
 }
 
 RelationTypes CvPropertyPropagator::getRelation() const
@@ -70,19 +60,9 @@ RelationTypes CvPropertyPropagator::getRelation() const
 	return m_eRelation;
 }
 
-void CvPropertyPropagator::setRelation(RelationTypes eRelation)
-{
-	m_eRelation = eRelation;
-}
-
 int CvPropertyPropagator::getRelationData() const
 {
 	return m_iRelationData;
-}
-
-void CvPropertyPropagator::setRelationData(int iRelationData)
-{
-	m_iRelationData = iRelationData;
 }
 
 RelationTypes CvPropertyPropagator::getTargetRelation() const
@@ -90,29 +70,14 @@ RelationTypes CvPropertyPropagator::getTargetRelation() const
 	return m_eTargetRelation;
 }
 
-void CvPropertyPropagator::setTargetRelation(RelationTypes eTargetRelation)
-{
-	m_eTargetRelation = eTargetRelation;
-}
-
 int CvPropertyPropagator::getTargetRelationData() const
 {
 	return m_iTargetRelationData;
 }
 
-void CvPropertyPropagator::setTargetRelationData(int iRelationData)
-{
-	m_iTargetRelationData = iRelationData;
-}
-
 GameObjectTypes CvPropertyPropagator::getTargetObjectType() const
 {
 	return m_eTargetObjectType;
-}
-
-void CvPropertyPropagator::setTargetObjectType(GameObjectTypes eObjectType)
-{
-	m_eTargetObjectType = eObjectType;
 }
 
 bool CvPropertyPropagator::isActive(const CvGameObject* pObject) const
@@ -131,7 +96,7 @@ bool CvPropertyPropagator::isActive(const CvGameObject* pObject) const
 	return false;
 }
 
-void CvPropertyPropagator::getTargetObjects(const CvGameObject* pObject, std::vector<const CvGameObject*>& apGameObjects)
+void CvPropertyPropagator::getTargetObjects(const CvGameObject* pObject, std::vector<const CvGameObject*>& apGameObjects) const
 {
 	apGameObjects.push_back(pObject);
 	if (m_eTargetObjectType != NO_GAMEOBJECT)
