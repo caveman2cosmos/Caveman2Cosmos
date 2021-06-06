@@ -105,6 +105,12 @@ class PediaBonus:
 						break
 			if CvBuildingInfo.getPrereqVicinityBonus() == iTheBonus or CvBuildingInfo.getPrereqRawVicinityBonus() == iTheBonus:
 				aVicinityBuildings.append(iBuilding)
+			for iBonus in range(GC.getNUM_BUILDING_PREREQ_OR_BONUSES()):
+				if CvBuildingInfo.getPrereqOrVicinityBonuses(iBonus) == iTheBonus:
+					aVicinityBuildings.append(iBuilding)
+			for iBonus in CvBuildingInfo.getPrereqOrRawVicinityBonuses():
+				if iBonus == iTheBonus:
+					aVicinityBuildings.append(iBuilding)
 			if bValid:
 				if CvBuildingInfo.getPrereqAndBonus() == iTheBonus :
 					aNeededByBuildings.append(iBuilding)
