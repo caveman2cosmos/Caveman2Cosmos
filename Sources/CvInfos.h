@@ -2201,7 +2201,7 @@ protected:
 	std::vector<CvString> m_aszCivilizationNamesforPass3;
 	std::vector<CvWString> m_aszCivilizationNamesValueforPass3;
 
-	BoolExpr* m_pExprTrainCondition;
+	const BoolExpr* m_pExprTrainCondition;
 
 public:
 	int getDCMBombRange() const;
@@ -2784,7 +2784,7 @@ private:
 	std::vector<TerrainTypes>	m_featureTerrainTypes;
 	std::vector<UnitTypes>		m_spawnGroup;
 
-	BoolExpr*				m_pExprSpawnCondition;
+	const BoolExpr*				m_pExprSpawnCondition;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

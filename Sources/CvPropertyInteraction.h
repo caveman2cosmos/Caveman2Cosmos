@@ -53,7 +53,7 @@ protected:
 	GameObjectTypes m_eObjectType;
 	RelationTypes m_eRelation;
 	int m_iRelationData;
-	BoolExpr* m_pExprActive;
+	const BoolExpr* m_pExprActive;
 };
 
 

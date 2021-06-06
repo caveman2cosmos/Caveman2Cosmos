@@ -502,13 +502,13 @@ void CvGameObject::foreachRelated(GameObjectTypes eType, RelationTypes eRelation
 }
 
 // helper function to call function if expression true
-void callFuncIf(const CvGameObject* pObject, BoolExpr* pExpr, bst::function<void (const CvGameObject*)> func)
+void callFuncIf(const CvGameObject* pObject, const BoolExpr* pExpr, bst::function<void (const CvGameObject*)> func)
 {
 	if (pExpr->evaluate(pObject))
 		func(pObject);
 }
 
-void CvGameObject::foreachRelatedCond(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(const CvGameObject*)> func, BoolExpr* pExpr, int iData) const
+void CvGameObject::foreachRelatedCond(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(const CvGameObject*)> func, const BoolExpr* pExpr, int iData) const
 {
 	if (pExpr)
 	{
@@ -546,7 +546,7 @@ void CvGameObject::enumerateRelated(std::vector<const CvGameObject*>& kEnum, Gam
 	foreachRelated(eType, eRelation, bst::bind(addToVector, _1, &kEnum), iData);
 }
 
-void CvGameObject::enumerateRelatedCond(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, BoolExpr* pExpr, int iData) const
+void CvGameObject::enumerateRelatedCond(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, const BoolExpr* pExpr, int iData) const
 {
 	foreachRelatedCond(eType, eRelation, bst::bind(addToVector, _1, &kEnum), pExpr, iData);
 }

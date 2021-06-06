@@ -64,7 +64,7 @@ BoolExpr::~BoolExpr()
 {
 }
 
-BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
+const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 {
 	// In general we assume no comments to simplify reading code
 
@@ -87,7 +87,7 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		if (pXML->TryMoveToXmlFirstChild())
 		{
 			// there is a subexpression, so no simple constant
-			BoolExpr* pExpr = read(pXML);
+			const BoolExpr* pExpr = read(pXML);
 			pXML->MoveToXmlParent();
 			return new BoolExprNot(pExpr);
 		}
@@ -116,7 +116,7 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// there is a subexpression, so no simple constant
-				BoolExpr* pExpr = read(pXML);
+				const BoolExpr* pExpr = read(pXML);
 				pXML->MoveToXmlParent();
 				return pExpr;
 			}
@@ -134,7 +134,7 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
-				BoolExpr* pExpr = read(pXML);
+				const BoolExpr* pExpr = read(pXML);
 				
 				// read nodes until there are no more siblings
 				//while (pXML->TryMoveToXmlNextSibling())
@@ -159,7 +159,7 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// there is a subexpression, so no simple constant
-				BoolExpr* pExpr = read(pXML);
+				const BoolExpr* pExpr = read(pXML);
 				pXML->MoveToXmlParent();
 				return pExpr;
 			}
@@ -177,7 +177,7 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
-				BoolExpr* pExpr = read(pXML);
+				const BoolExpr* pExpr = read(pXML);
 				
 				// read nodes until there are no more siblings
 				while (pXML->TryMoveToXmlNextSibling())
@@ -205,7 +205,7 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
-				BoolExpr* pExpr = read(pXML);
+				const BoolExpr* pExpr = read(pXML);
 				
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
@@ -233,8 +233,8 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
-				std::auto_ptr<IntExpr> pExpr(IntExpr::read(pXML));
-				BoolExpr* pBExpr = NULL;
+				std::auto_ptr<const IntExpr> pExpr(IntExpr::read(pXML));
+				const BoolExpr* pBExpr = NULL;
 				
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
@@ -262,8 +262,8 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
-				std::auto_ptr<IntExpr> pExpr(IntExpr::read(pXML));
-				BoolExpr* pBExpr = NULL;
+				std::auto_ptr<const IntExpr> pExpr(IntExpr::read(pXML));
+				const BoolExpr* pBExpr = NULL;
 				
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
@@ -291,8 +291,8 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
-				std::auto_ptr<IntExpr> pExpr(IntExpr::read(pXML));
-				BoolExpr* pBExpr = NULL;
+				std::auto_ptr<const IntExpr> pExpr(IntExpr::read(pXML));
+				const BoolExpr* pBExpr = NULL;
 				
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
@@ -320,9 +320,9 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the if node
-				BoolExpr* pIfExpr = read(pXML);
-				BoolExpr* pThenExpr = NULL;
-				BoolExpr* pElseExpr = NULL;
+				const BoolExpr* pIfExpr = read(pXML);
+				const BoolExpr* pThenExpr = NULL;
+				const BoolExpr* pElseExpr = NULL;
 				
 				// read the then node
 				if (pXML->TryMoveToXmlNextSibling())
@@ -346,16 +346,16 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 	{
 		CvString szTextVal;
 		pXML->GetChildXmlValByName(szTextVal, L"RelationType");
-		RelationTypes eRelation = (RelationTypes) pXML->GetInfoClass(szTextVal);
+		const RelationTypes eRelation = (RelationTypes) pXML->GetInfoClass(szTextVal);
 		int iData = -1;
 		pXML->GetOptionalChildXmlValByName(&iData, L"iDistance", -1);
 		pXML->GetChildXmlValByName(szTextVal, L"GameObjectType");
-		GameObjectTypes eType = (GameObjectTypes) pXML->GetInfoClass(szTextVal);
+		const GameObjectTypes eType = (GameObjectTypes) pXML->GetInfoClass(szTextVal);
 		
 		// Find the expression and read it
 		if (pXML->TryMoveToXmlFirstChild())
 		{
-			BoolExpr* pExpr = NULL;
+			const BoolExpr* pExpr = NULL;
 			do
 			{
 				//if (!GETXML->IsLastLocatedNodeCommentNode(pXML->GetXML()))
@@ -418,7 +418,7 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 	if (pXML->TryMoveToXmlFirstChild())
 	{
 		// there is a subexpression, so no simple constant
-		BoolExpr* pExpr = read(pXML);
+		const BoolExpr* pExpr = read(pXML);
 		pXML->MoveToXmlParent();
 		return pExpr;
 	}

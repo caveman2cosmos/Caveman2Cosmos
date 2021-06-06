@@ -822,8 +822,8 @@ protected:
 	CvProperties m_PrereqPlayerMinProperties;
 	CvProperties m_PrereqPlayerMaxProperties;
 
-	BoolExpr* m_pExprNewCityFree;
-	BoolExpr* m_pExprConstructCondition;
+	const BoolExpr* m_pExprNewCityFree;
+	const BoolExpr* m_pExprConstructCondition;
 
 	std::vector<BuildingCommerceChange> m_aGlobalBuildingCommerceChanges;
 
@@ -893,13 +893,12 @@ protected:
 	std::vector<int> m_vReplacementBuilding;
 	std::vector<int> m_vReplacedBuilding;
 
-protected:
 	bool* m_pabHurry;
 
 	int m_iMaxPopAllowed;
 
 	/*
-	BoolExpr* m_pExprFreePromotionCondition;*/
+	const BoolExpr* m_pExprFreePromotionCondition;*/
 	//Structs
 	std::vector<FreePromoTypes> m_aFreePromoTypes;
 	std::vector<int> m_aiFreeTraitTypes;
