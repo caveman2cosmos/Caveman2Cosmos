@@ -1056,7 +1056,26 @@ class Pedia:
 			elif iTechLoc == iTechSpecialLoc:			
 				iTechRow = iTechSpecialRow
 			elif iTechLoc == iTechReligionLoc:
-				iTechRow = iTechReligionRow
+				iTechRow = iTechReligionRow				
+				
+			#Finds if earliest resource producer tech requirement and tech enable of resource are in same column
+			for bonus in xrange(GC.getNumBonusInfos()):
+				if CvBuildingInfo.getFreeBonus() == bonus:
+					bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
+					if GC.getTechInfo(bonusTechReq) != None:
+						bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+					else:
+						bonusTechLoc = 0
+					print GC.getBonusInfo(bonus).getType()+"	"+str(bonusTechLoc)+"	"+CvBuildingInfo.getType()+"	"+str(iTechLoc)
+					
+				for j in range(CvBuildingInfo.getNumExtraFreeBonuses()):
+					if CvBuildingInfo.getExtraFreeBonus(j) == bonus:
+						bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
+						if GC.getTechInfo(bonusTechReq) != None:
+							bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+						else:
+							bonusTechLoc = 0
+						print GC.getBonusInfo(bonus).getType()+"	"+str(bonusTechLoc)+"	"+CvBuildingInfo.getType()+"	"+str(iTechLoc)
 			
 			#<Bonus>BONUS_X
 			iBuildingBonusReq = CvBuildingInfo.getPrereqAndBonus()
