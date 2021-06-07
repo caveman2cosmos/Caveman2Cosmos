@@ -23,14 +23,11 @@ public:
 	CvPropertySource();
 	explicit CvPropertySource(PropertyTypes eProperty);
 	virtual ~CvPropertySource();
+
 	PropertyTypes getProperty() const;
-	void setProperty(PropertyTypes eProperty);
 	GameObjectTypes getObjectType() const;
-	void setObjectType(GameObjectTypes eObjectType);
 	RelationTypes getRelation() const;
-	void setRelation(RelationTypes eRelation);
 	int getRelationData() const;
-	void setRelationData(int iRelationData);
 
 	virtual bool isActive(const CvGameObject* pObject) const;
 

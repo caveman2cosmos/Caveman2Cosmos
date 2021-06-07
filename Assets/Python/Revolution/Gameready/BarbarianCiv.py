@@ -26,7 +26,6 @@ class BarbarianCiv:
 		self.customEM = customEM
 		self.BARBARIAN_PLAYER = GC.getBARBARIAN_PLAYER()
 		self.MAX_PC_PLAYERS = GC.getMAX_PC_PLAYERS()
-		self.NUM_UNIT_AND_TECH_PREREQS = GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")
 
 		self.customEM.addEventHandler("BeginGameTurn", self.onBeginGameTurn)
 
@@ -468,9 +467,8 @@ class BarbarianCiv:
 			iTech = CvUnitInfo.getPrereqAndTech()
 			if iTech > -1 and not CyTeam.isHasTech(iTech):
 				continue
-			for i in range(self.NUM_UNIT_AND_TECH_PREREQS):
-				iTech = CvUnitInfo.getPrereqAndTechs(i)
-				if iTech > -1 and not CyTeam.isHasTech(iTech):
+			for iTech in CvUnitInfo.getPrereqAndTechs():
+				if not CyTeam.isHasTech(iTech):
 					break
 			else:
 				aList.append(iUnit); break
