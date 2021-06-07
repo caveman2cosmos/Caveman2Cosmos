@@ -17829,15 +17829,12 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		TechTypes tTech = (TechTypes)iI;
-		for (int iJ = 0; iJ < GC.getNUM_UNIT_AND_TECH_PREREQS(); iJ++)
+		if (algo::contains(GC.getUnitInfo(eUnit).getPrereqAndTechs(), tTech))
 		{
-			if (GC.getUnitInfo(eUnit).getPrereqAndTechs(iJ) == tTech)
+			if (GC.getTechInfo(tTech).getGridX() > iX)
 			{
-				if (GC.getTechInfo(tTech).getGridX() > iX)
-				{
-					iX = GC.getTechInfo(tTech).getGridX();
-					eMostAdvancedTech = tTech;
-				}
+				iX = GC.getTechInfo(tTech).getGridX();
+				eMostAdvancedTech = tTech;
 			}
 		}
 	}
