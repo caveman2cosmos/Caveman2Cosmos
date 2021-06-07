@@ -1738,7 +1738,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 
 				// (4) Read off the Replacement condition
 				uint32_t uiReplacementID = 0;
-				std::auto_ptr<BoolExpr> pReplacementCondition;
+				std::auto_ptr<const BoolExpr> pReplacementCondition;
 				if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size())
 				{
 					uiReplacementID = CvInfoReplacements<T>::getReplacementIDForString(szTypeReplace);
@@ -1864,7 +1864,7 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 			GetOptionalChildXmlValByName(&bForceOverwrite, L"bForceOverwrite");
 			// (4) Read off the Replacement condition
 			uint uiReplacementID = 0;
-			bst::shared_ptr<BoolExpr> pReplacementCondition;
+			bst::shared_ptr<const BoolExpr> pReplacementCondition;
 			if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size()) {
 				uiReplacementID = CvInfoReplacements<T>::getReplacementIDForString(szTypeReplace);
 				if (TryMoveToXmlFirstChild(L"ReplacementCondition")) {

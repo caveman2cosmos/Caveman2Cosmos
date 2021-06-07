@@ -3271,7 +3271,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				queries.push_back(query);
 			}
 
-			BoolExprChange result = kBuilding.getConstructCondition()->evaluateChange(pObject, &(*queries.begin()), &(*queries.end()));
+			const BoolExprChange result = kBuilding.getConstructCondition()->evaluateChange(pObject, queries);
 			if ((result == BOOLEXPR_CHANGE_REMAINS_FALSE) || (result == BOOLEXPR_CHANGE_BECOMES_FALSE))
 			{
 				return false;
@@ -23057,7 +23057,7 @@ int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 	int iSum = 0;
 	foreach_(const CvPropertySource* pSource, GC.getPropertyInfo(eProperty).getPropertyManipulators()->getSources())
 	{
-		if (pSource->isActive(const_cast<CvGameObjectCity*>(getGameObject())))
+		if (pSource->isActive(getGameObject()))
 		{
 			iSum += pSource->getSourcePredict(getGameObject(), getPropertiesConst()->getValueByProperty(eProperty));
 		}

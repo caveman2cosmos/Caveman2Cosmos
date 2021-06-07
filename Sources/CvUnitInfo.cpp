@@ -1213,7 +1213,7 @@ void CvUnitInfo::setCommandType(int iNewType)
 	m_iCommandType = iNewType;
 }
 
-BoolExpr* CvUnitInfo::getTrainCondition() const
+const BoolExpr* CvUnitInfo::getTrainCondition() const
 {
 	return m_pExprTrainCondition;
 }
@@ -2685,7 +2685,7 @@ bool CvUnitInfo::isSubCombatType(int i) const
 	return find(m_aiSubCombatTypes.begin(), m_aiSubCombatTypes.end(), i) != m_aiSubCombatTypes.end();
 }
 
-std::vector<int>& CvUnitInfo::getSubCombatTypes()
+const std::vector<int>& CvUnitInfo::getSubCombatTypes() const
 {
 	return m_aiSubCombatTypes;
 }
