@@ -2280,6 +2280,7 @@ void CvGame::update()
 		//	on significant events (discovery of mountaineering by someone,
 		//	terra-forming leading to water<->land transformations, etc.)
 		ensureChokePointsEvaluated();
+		gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
 		// Toffer - Attempt to fix the lack of unit cycle process on load
 		gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
 	}
@@ -4584,11 +4585,11 @@ void CvGame::setFinalInitialized(bool bNewValue)
 	OutputDebugString("Setting FinalInitialized: Start");
 	PROFILE_FUNC();
 
-	if (isFinalInitialized() != bNewValue)
+	if (m_bFinalInitialized != bNewValue)
 	{
 		m_bFinalInitialized = bNewValue;
 
-		if (isFinalInitialized())
+		if (bNewValue)
 		{
 			updatePlotGroups();
 

@@ -695,6 +695,7 @@ void CvGame::updateTestEndTurn()
 {
 	PROFILE_FUNC();
 	const CvPlayer& player = GET_PLAYER(getActivePlayer());
+	FAssertMsg(player.isHuman(), "Why would exe call this for AI players?")
 
 	if (!player.isTurnActive())
 	{
@@ -709,7 +710,8 @@ void CvGame::updateTestEndTurn()
 		}
 	}
 	else if (!player.hasBusyUnit()
-	&& !player.hasReadyUnit(gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL && !player.isOption(PLAYEROPTION_NO_UNIT_CYCLING)))
+	&& !player.hasReadyUnit(gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL
+	&& !player.isOption(PLAYEROPTION_NO_UNIT_CYCLING)))
 	{
 		if (!gDLL->getInterfaceIFace()->isForcePopup())
 		{
@@ -717,28 +719,24 @@ void CvGame::updateTestEndTurn()
 		}
 		else if (!player.hasAutoUnit())
 		{
-			bool bDisplayEndTurn = player.isOption(PLAYEROPTION_WAIT_END_TURN) || !gDLL->getInterfaceIFace()->isHasMovedUnit();
+			const bool bDecisionlessTurn = !player.getTurnHadUIInteraction();
 
-			if (player.isHuman() && !player.getTurnHadUIInteraction() && getBugOptionBOOL("MainInterface__AutoEndDecisionlessTurns", false))
-			{
-				//OutputDebugString("Auto-ending turn (no UI interaction detected)\n");
-				bDisplayEndTurn = false;
-			}
-
-			if (bDisplayEndTurn || isHotSeat() || isPbem())
+			if (isHotSeat() || isPbem()
+			|| bDecisionlessTurn && !getBugOptionBOOL("MainInterface__AutoEndDecisionlessTurns", false)
+			|| !bDecisionlessTurn && player.isOption(PLAYEROPTION_WAIT_END_TURN))
 			{
 				gDLL->getInterfaceIFace()->setEndTurnMessage(true);
-
-				//stopProfilingDLL(true);
+				return;
 			}
-			else if (gDLL->getInterfaceIFace()->getEndTurnCounter() > 0)
+
+			if (gDLL->getInterfaceIFace()->getEndTurnCounter() > 0)
 			{
 				gDLL->getInterfaceIFace()->changeEndTurnCounter(-1);
 			}
 			else
 			{
 				CvMessageControl::getInstance().sendTurnComplete();
-				gDLL->getInterfaceIFace()->setEndTurnCounter(3); // XXX
+				gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
 			}
 		}
 		else if (!gDLL->shiftKey())
