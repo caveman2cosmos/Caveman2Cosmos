@@ -132,6 +132,13 @@ struct IDValueMap
 		return false;
 	}
 
+	const python::list makeList() const
+	{
+		python::list list = python::list();
+		foreach_(const pair_t& pair, m_map)
+		return list;
+	}
+
 	typedef typename std::vector<pair_t>::iterator        iterator;
 	typedef typename std::vector<pair_t>::const_iterator  const_iterator;
 
