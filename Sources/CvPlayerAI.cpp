@@ -4596,30 +4596,25 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, const std::vect
 		for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
 		{
 			bool bIsORPreReq = false;
-			for (int iK = 0; iK < GC.getNUM_OR_TECH_PREREQS(); iK++)
+			foreach_(const TechTypes ePrereq, GC.getTechInfo((TechTypes)iJ).getPrereqOrTechs())
 			{
-				const TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqOrTechs(iK);
-				if (ePrereq != NO_TECH)
+				if (ePrereq == eTech)
 				{
-					if (ePrereq == eTech)
-					{
-						bIsORPreReq = true;
-					}
-					else if (GET_TEAM(getTeam()).isHasTech(ePrereq))
-					{
-						// Already got an OR pre-req, another makes no difference
-						bIsORPreReq = false;
-						break;
-					}
+					bIsORPreReq = true;
+				}
+				else if (GET_TEAM(getTeam()).isHasTech(ePrereq))
+				{
+					// Already got an OR pre-req, another makes no difference
+					bIsORPreReq = false;
+					break;
 				}
 			}
 
 			bool bIsANDPreReq = false;
 			int iANDPrereqs = 0;
-			for (int iK = 0; iK < GC.getNUM_AND_TECH_PREREQS(); iK++)
+			foreach_(const TechTypes ePrereq, GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs())
 			{
-				const TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs(iK);
-				if (ePrereq != NO_TECH && !GET_TEAM(getTeam()).isHasTech(ePrereq))
+				if (!GET_TEAM(getTeam()).isHasTech(ePrereq))
 				{
 					iANDPrereqs++;
 					if (ePrereq == eTech)
@@ -4632,8 +4627,8 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, const std::vect
 			if (bIsORPreReq || bIsANDPreReq)
 			{
 				// Consider all the AND pre-reqs as worth 33% of the follow on, and significant OR as 25%
-				int	iANDPercentage = (bIsANDPreReq ? 33/iANDPrereqs : 0);
-				int	iORPercentage = (bIsORPreReq ? 25 : 0);
+				const int iANDPercentage = (bIsANDPreReq ? 33/iANDPrereqs : 0);
+				const int iORPercentage = (bIsORPreReq ? 25 : 0);
 
 				iTotalWeight += iANDPercentage + iORPercentage;
 
@@ -9551,18 +9546,15 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 						int iBonusORVal	= 0;
 						int	iHasOther = 0;
 
-						for (iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
+						foreach_(const BonusTypes ePrereqBonus, kLoopUnit.getPrereqOrBonuses())
 						{
-							if ( kLoopUnit.getPrereqOrBonuses(iJ) != NO_BONUS )
+							if (ePrereqBonus == eBonus)
 							{
-								if (kLoopUnit.getPrereqOrBonuses(iJ) == eBonus)
-								{
-									iBonusORVal = 40;
-								}
-								else if ( getNumAvailableBonuses((BonusTypes)kLoopUnit.getPrereqOrBonuses(iJ)) > 0 )
-								{
-									iHasOther += getNumAvailableBonuses((BonusTypes)kLoopUnit.getPrereqOrBonuses(iJ));
-								}
+								iBonusORVal = 40;
+							}
+							else if (getNumAvailableBonuses(ePrereqBonus) > 0)
+							{
+								iHasOther += getNumAvailableBonuses(ePrereqBonus);
 							}
 						}
 
@@ -9733,21 +9725,18 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 							bool bGetsOR = false;
 							bool bRequiresOR = false;
 
-							for (iJ = 0; iJ < kLoopBuilding.getNumPrereqOrBonuses(); iJ++)
+							foreach_(const BonusTypes ePrereqBonus, kLoopBuilding.getPrereqOrBonuses())
 							{
-								if (kLoopBuilding.getPrereqOrBonuses(iJ) != NO_BONUS)
-								{
-									bRequiresOR = true;
+								bRequiresOR = true;
 
-									if ( kLoopBuilding.getPrereqOrBonuses(iJ) == eBonus )
-									{
-										bGetsOR = true;
-									}
-									else if ( hasBonus((BonusTypes)kLoopBuilding.getPrereqOrBonuses(iJ)) )
-									{
-										bHasOR = true;
-										break;
-									}
+								if (ePrereqBonus == eBonus)
+								{
+									bGetsOR = true;
+								}
+								else if (hasBonus(ePrereqBonus))
+								{
+									bHasOR = true;
+									break;
 								}
 							}
 
@@ -9813,14 +9802,11 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 								{
 									bHasTechForBuilding = false;
 								}
-								for (int iPrereqIndex = 0; bHasTechForBuilding && iPrereqIndex < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iPrereqIndex++)
+								foreach_(const TechTypes ePrereqTech, kLoopBuilding.getPrereqAndTechs())
 								{
-									if (kLoopBuilding.getPrereqAndTechs(iPrereqIndex) != NO_TECH)
+									if (!kTeam.isHasTech(ePrereqTech))
 									{
-										if (!(kTeam.isHasTech((TechTypes)(kLoopBuilding.getPrereqAndTechs(iPrereqIndex)))))
-										{
-											bHasTechForBuilding = false;
-										}
+										bHasTechForBuilding = false;
 									}
 								}
 
@@ -9995,12 +9981,9 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 						{
 							iTempValue += 80;
 						}
-						for (iJ = 0; iJ < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); iJ++)
+						if (algo::contains(GC.getRouteInfo(eRoute).getPrereqOrBonuses(), eBonus))
 						{
-							if (GC.getRouteInfo(eRoute).getPrereqOrBonus(iJ) == eBonus)
-							{
-								iTempValue += 40;
-							}
+							iTempValue += 40;
 						}
 						if ((eBestRoute != NO_ROUTE) && (GC.getRouteInfo(getBestRoute()).getValue() > GC.getRouteInfo(eRoute).getValue()))
 						{
@@ -10142,10 +10125,6 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 {
 	PROFILE_FUNC();
 
-	AttitudeTypes eAttitude;
-	bool bStrategic;
-	int iI, iJ;
-
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 
 	if (isHuman() && GET_PLAYER(ePlayer).isHuman())
@@ -10188,7 +10167,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 		return DENIAL_JOKING;
 	}
 
-	bStrategic = false;
+	bool bStrategic = false;
 
 /************************************************************************************************/
 /* Fuyu & Afforess				   Start		 6/22/10										*/
@@ -10197,7 +10176,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 /************************************************************************************************/
 //disregard obsolete units
 	const CvCity* pCapitalCity = getCapitalCity();
-	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
 		if (!GC.getGame().canEverTrain((UnitTypes)iI))
 		{
@@ -10211,21 +10190,14 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 /************************************************************************************************/
 /* Fuyu						  END															*/
 /************************************************************************************************/
-		if (GC.getUnitInfo((UnitTypes) iI).getPrereqAndBonus() == eBonus)
+		if (GC.getUnitInfo((UnitTypes) iI).getPrereqAndBonus() == eBonus
+		|| algo::contains(GC.getUnitInfo((UnitTypes) iI).getPrereqOrBonuses(), eBonus))
 		{
 			bStrategic = true;
 		}
-
-		for (iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
-		{
-			if (GC.getUnitInfo((UnitTypes) iI).getPrereqOrBonuses(iJ) == eBonus)
-			{
-				bStrategic = true;
-			}
-		}
 	}
 
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		if (GET_TEAM(getTeam()).isObsoleteBuilding((BuildingTypes)iI)
 		|| !GC.getGame().canEverConstruct((BuildingTypes)iI))
@@ -10233,24 +10205,16 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 			continue;
 		}
 
-		if (GC.getBuildingInfo((BuildingTypes) iI).getPrereqAndBonus() == eBonus)
+		if (GC.getBuildingInfo((BuildingTypes) iI).getPrereqAndBonus() == eBonus
+		|| algo::contains(GC.getBuildingInfo((BuildingTypes)iI).getPrereqOrBonuses(), eBonus))
 		{
 			bStrategic = true;
-		}
-
-		for (iJ = 0; iJ < GC.getBuildingInfo((BuildingTypes)iI).getNumPrereqOrBonuses(); iJ++)
-		{
-			if (GC.getBuildingInfo((BuildingTypes) iI).getPrereqOrBonuses(iJ) == eBonus)
-			{
-				bStrategic = true;
-				break;
-			}
 		}
 	}
 
 	// XXX marble and stone???
 
-	eAttitude = AI_getAttitude(ePlayer);
+	const AttitudeTypes eAttitude = AI_getAttitude(ePlayer);
 
 	if (bStrategic)
 	{
@@ -28246,13 +28210,13 @@ int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 			int iHasOrBonusCount = 0;
 			bool bFound = false;
 
-			for (int iK = 0; iK < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iK++)
+			foreach_(const BonusTypes ePrereqBonus, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses())
 			{
-				if (GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses(iK) == eBonus)
+				if (ePrereqBonus == eBonus)
 				{
 					bFound = true;
 				}
-				else if (hasBonus((BonusTypes)GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses(iK)))
+				else if (hasBonus(ePrereqBonus))
 				{
 					iHasOrBonusCount++;
 				}

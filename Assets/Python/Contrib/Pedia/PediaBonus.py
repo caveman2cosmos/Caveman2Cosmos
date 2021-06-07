@@ -84,14 +84,14 @@ class PediaBonus:
 		aNeededByBuildings = []
 		aAffectedBuildings = []
 		aSourceOfBonus = []
-		for iBuilding in range(GC.getNumBuildingInfos()):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			bValid = True
 			if CvBuildingInfo.getBonusHealthChanges(iTheBonus) or CvBuildingInfo.getBonusHappinessChanges(iTheBonus) or CvBuildingInfo.getBonusProductionModifier(iTheBonus):
 				aAffectedBuildings.append(iBuilding)
 				bValid = False
 			else:
-				for eYield in range(eNumYieldTypes):
+				for eYield in xrange(eNumYieldTypes):
 					if CvBuildingInfo.getBonusYieldModifier(iTheBonus, eYield):
 						aAffectedBuildings.append(iBuilding)
 						bValid = False
@@ -99,39 +99,33 @@ class PediaBonus:
 			if CvBuildingInfo.getFreeBonus() == iTheBonus:
 				aSourceOfBonus.append(iBuilding)
 			else:
-				for i in range(CvBuildingInfo.getNumExtraFreeBonuses()):
+				for i in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 					if (CvBuildingInfo.getExtraFreeBonus(i) == iTheBonus):
 						aSourceOfBonus.append(iBuilding)
 						break
 			if CvBuildingInfo.getPrereqVicinityBonus() == iTheBonus or CvBuildingInfo.getPrereqRawVicinityBonus() == iTheBonus:
 				aVicinityBuildings.append(iBuilding)
-			for iBonus in range(GC.getNUM_BUILDING_PREREQ_OR_BONUSES()):
-				if CvBuildingInfo.getPrereqOrVicinityBonuses(iBonus) == iTheBonus:
-					aVicinityBuildings.append(iBuilding)
+			#Trigger this loop only if building has Or Vicinity prereq at first place!
+			if iTheBonus in CvBuildingInfo.getPrereqOrVicinityBonuses():
+				aVicinityBuildings.append(iBuilding)
 			for iBonus in CvBuildingInfo.getPrereqOrRawVicinityBonuses():
 				if iBonus == iTheBonus:
 					aVicinityBuildings.append(iBuilding)
 			if bValid:
-				if CvBuildingInfo.getPrereqAndBonus() == iTheBonus :
+				if CvBuildingInfo.getPrereqAndBonus() == iTheBonus \
+				or iTheBonus in CvBuildingInfo.getPrereqOrBonuses():
 					aNeededByBuildings.append(iBuilding)
-				else:
-					for i in range(CvBuildingInfo.getNumPrereqOrBonuses()):
-						if CvBuildingInfo.getPrereqOrBonuses(i) == iTheBonus:
-							aNeededByBuildings.append(iBuilding)
-							break
 		# Loop through all units and find those connected to the bonus.
 		aNeededByUnits = []
 		aAffectedUnits = []
 		bValid = True
-		for iUnit in range(GC.getNumUnitInfos()):
+		for iUnit in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(iUnit)
 			if CvUnitInfo.getPrereqAndBonus() == iTheBonus:
 				aNeededByUnits.append(iUnit)
 				bValid = False
-			else:
-				for i in range(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
-					if CvUnitInfo.getPrereqOrBonuses(i) == iTheBonus:
-						aNeededByUnits.append(iUnit)
+			elif iTheBonus in CvUnitInfo.getPrereqOrBonuses():
+				aNeededByUnits.append(iUnit)
 			if bValid:
 				iBonusProductionModifier = CvUnitInfo.getBonusProductionModifier(iTheBonus)
 				if iBonusProductionModifier:
@@ -154,7 +148,7 @@ class PediaBonus:
 			else:
 				szTxt = szfont4b + "<color=200,240,120,255>" + TRNSLTR.getText("TXT_KEY_PEDIA_LATITUDE", ()) + " &#177 " + str(iMinLatitude) + "&#176  &#187  &#177 " + str(iMaxLatitude) + "&#176"
 		szChange = ""
-		for k in range(eNumYieldTypes):
+		for k in xrange(eNumYieldTypes):
 			iYieldChange = CvTheBonusInfo.getYieldChange(k)
 			if iYieldChange:
 				if iYieldChange < 0:
@@ -216,13 +210,13 @@ class PediaBonus:
 		# Improvement
 		aImpList = []
 		if bMapBonus:
-			for iImprovement in range(GC.getNumImprovementInfos()):
+			for iImprovement in xrange(GC.getNumImprovementInfos()):
 				CvImprovementInfo = GC.getImprovementInfo(iImprovement)
 				if CvImprovementInfo.isImprovementBonusTrade(iTheBonus) and not CvImprovementInfo.isActsAsCity():
 					szYield = " " + szBonusChar
 				else:
 					szYield = ""
-				for k in range(eNumYieldTypes):
+				for k in xrange(eNumYieldTypes):
 					iYieldChange = CvImprovementInfo.getImprovementBonusYield(iTheBonus, k)
 					if iYieldChange:
 						iYieldChange += CvImprovementInfo.getYieldChange(k)
@@ -264,7 +258,7 @@ class PediaBonus:
 				for i, iBuilding in enumerate(aSourceOfBonus):
 					screen.attachImageButton(sobPanel, "", GC.getBuildingInfo(iBuilding).getButton(), enumGBS, eWidJuToBuilding, iBuilding, 1, False)
 			if aImpList:
-				for i in range(len(aImpList)):
+				for i in xrange(len(aImpList)):
 					childPanelName = aName()
 					screen.attachPanel(impPanel, childPanelName, "", "", True, True, ePanelEmpty)
 					screen.attachImageButton(childPanelName, "", GC.getImprovementInfo(aImpList[i][0]).getButton(), enumGBS, eWidJuToImprove, aImpList[i][0], 1, False)

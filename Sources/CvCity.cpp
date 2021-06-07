@@ -2483,16 +2483,13 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 	{
 		bool bHasAnyVicinityBonus = false;
 		bool bRequiresAnyVicinityBonus = false;
-		for (int iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iI++)
+		foreach_(const BonusTypes ePreReqBonus, kUnit.getPrereqOrVicinityBonuses())
 		{
-			if (kUnit.getPrereqOrVicinityBonuses(iI) != NO_BONUS)
+			bRequiresAnyVicinityBonus = true;
+			if (hasVicinityBonus(ePreReqBonus))
 			{
-				bRequiresAnyVicinityBonus = true;
-				if (hasVicinityBonus((BonusTypes)kUnit.getPrereqOrVicinityBonuses(iI)))
-				{
-					bHasAnyVicinityBonus = true;
-					break;
-				}
+				bHasAnyVicinityBonus = true;
+				break;
 			}
 		}
 		if (bRequiresAnyVicinityBonus && !bHasAnyVicinityBonus)
@@ -3074,17 +3071,14 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 		bool bRequiresBonus = false;
 		bool bNeedsBonus = true;
-		for (int iI = 0; iI < kBuilding.getNumPrereqOrBonuses(); iI++)
+		foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrBonuses())
 		{
-			if (kBuilding.getPrereqOrBonuses(iI) != NO_BONUS)
-			{
-				bRequiresBonus = true;
+			bRequiresBonus = true;
 
-				if (hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iI)))
-				{
-					bNeedsBonus = false;
-					break;
-				}
+			if (hasBonus(ePrereqBonus))
+			{
+				bNeedsBonus = false;
+				break;
 			}
 		}
 		if (bRequiresBonus && bNeedsBonus)
@@ -3216,16 +3210,13 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	{
 		bool bHasAnyVicinityBonus = false;
 		bool bRequiresAnyVicinityBonus = false;
-		for (int iI = 0; iI < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); iI++)
+		foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrVicinityBonuses())
 		{
-			if (kBuilding.getPrereqOrVicinityBonuses(iI) != NO_BONUS)
+			bRequiresAnyVicinityBonus = true;
+			if (hasVicinityBonus(ePrereqBonus))
 			{
-				bRequiresAnyVicinityBonus = true;
-				if (hasVicinityBonus((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iI)))
-				{
-					bHasAnyVicinityBonus = true;
-					break;
-				}
+				bHasAnyVicinityBonus = true;
+				break;
 			}
 		}
 		if (bRequiresAnyVicinityBonus && !bHasAnyVicinityBonus)
@@ -3280,7 +3271,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				queries.push_back(query);
 			}
 
-			BoolExprChange result = kBuilding.getConstructCondition()->evaluateChange(pObject, &(*queries.begin()), &(*queries.end()));
+			const BoolExprChange result = kBuilding.getConstructCondition()->evaluateChange(pObject, queries);
 			if ((result == BOOLEXPR_CHANGE_REMAINS_FALSE) || (result == BOOLEXPR_CHANGE_BECOMES_FALSE))
 			{
 				return false;
@@ -3587,7 +3578,7 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 	{
 		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
 
-		if (getNumActiveBuilding(eBuilding) > 0 && GC.getBuildingInfo(eBuilding).getNumFreePromoTypes() > 0)
+		if (getNumActiveBuilding(eBuilding) > 0 && !GC.getBuildingInfo(eBuilding).getFreePromoTypes().empty())
 		{
 			assignPromotionsFromBuildingChecked(GC.getBuildingInfo(eBuilding), pUnit);
 		}
@@ -4994,9 +4985,8 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		PROFILE("CvCity::processBuilding.part2");
 
 		const bool bChange = (iChange == 1);
-		for (int iI = 0; iI < kBuilding.getNumFreeTraitTypes(); iI++)
+		foreach_(const TraitTypes eTrait, kBuilding.getFreeTraitTypes())
 		{
-			const TraitTypes eTrait = (TraitTypes) kBuilding.getFreeTraitType(iI);
 			if (GC.getTraitInfo(eTrait).isCivilizationTrait())
 			{
 				GET_PLAYER(getOwner()).setHasTrait(eTrait, bChange);
@@ -20416,7 +20406,7 @@ void CvCity::doPromotion()
 
 		if (kBuilding.isApplyFreePromotionOnMove())
 		{
-			const bool bHasFreePromofromList = kBuilding.getNumFreePromoTypes() > 0;
+			const bool bHasFreePromofromList = !kBuilding.getFreePromoTypes().empty();
 
 			const PromotionTypes ePromotion1 = (PromotionTypes)kBuilding.getFreePromotion();
 			const PromotionTypes ePromotion2 = (PromotionTypes)kBuilding.getFreePromotion_2();
@@ -20769,16 +20759,13 @@ void CvCity::checkBuildings(bool bAlertOwner)
 						bool bHasORVicinityBonus = false;
 						bool bNeedsORVicinityBonus = false;
 
-						for (int iJ = 0; iJ < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); iJ++)
+						foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrVicinityBonuses())
 						{
-							if (kBuilding.getPrereqOrVicinityBonuses(iJ) != NO_BONUS)
+							bNeedsORVicinityBonus = true;
+							if (hasVicinityBonus(ePrereqBonus))
 							{
-								bNeedsORVicinityBonus = true;
-								if (hasVicinityBonus((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iJ)))
-								{
-									bHasORVicinityBonus = true;
-									break;
-								}
+								bHasORVicinityBonus = true;
+								break;
 							}
 						}
 
@@ -20831,16 +20818,13 @@ void CvCity::checkBuildings(bool bAlertOwner)
 						bool bHasORBonus = false;
 						bool bNeedsORBonus = false;
 
-						for (int iJ = 0; iJ < kBuilding.getNumPrereqOrBonuses(); iJ++)
+						foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrBonuses())
 						{
-							if (kBuilding.getPrereqOrBonuses(iJ) != NO_BONUS)
+							bNeedsORBonus = true;
+							if (hasBonus(ePrereqBonus))
 							{
-								bNeedsORBonus = true;
-								if (hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iJ)))
-								{
-									bHasORBonus = true;
-									break;
-								}
+								bHasORBonus = true;
+								break;
 							}
 						}
 
@@ -23073,7 +23057,7 @@ int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 	int iSum = 0;
 	foreach_(const CvPropertySource* pSource, GC.getPropertyInfo(eProperty).getPropertyManipulators()->getSources())
 	{
-		if (pSource->isActive(const_cast<CvGameObjectCity*>(getGameObject())))
+		if (pSource->isActive(getGameObject()))
 		{
 			iSum += pSource->getSourcePredict(getGameObject(), getPropertiesConst()->getValueByProperty(eProperty));
 		}
@@ -23733,15 +23717,15 @@ bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) cons
 
 void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building, CvUnit* unit) const
 {
-	for (int promoTypeIdx = 0; promoTypeIdx < building.getNumFreePromoTypes(); ++promoTypeIdx)
+	foreach_(const FreePromoTypes& freePromoType, building.getFreePromoTypes())
 	{
-		const FreePromoTypes& freePromoType = building.getFreePromoType(promoTypeIdx);
 		if (freePromoType.ePromotion != NO_PROMOTION &&
 			((GC.getPromotionInfo(freePromoType.ePromotion).isEquipment() && canEquip(unit, freePromoType.ePromotion)) ||
 				unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)))
 		{
 			if (!freePromoType.m_pExprFreePromotionCondition ||
-				freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObject())))
+				//freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObject())))
+				freePromoType.m_pExprFreePromotionCondition->evaluate(unit->getGameObject()))
 			{
 				unit->setHasPromotion(freePromoType.ePromotion, true);
 			}

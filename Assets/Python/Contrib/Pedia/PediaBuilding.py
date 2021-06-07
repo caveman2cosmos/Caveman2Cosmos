@@ -307,14 +307,10 @@ class PediaBuilding:
 			screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
 			bPlus = True
 		i = 0
-		while True:
-			iType = CvTheBuildingInfo.getPrereqAndTechs(i)
-			if iType > -1:
-				screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
-				bPlus = True
-				i += 1
-			else:
-				break
+		for iType in CvTheBuildingInfo.getPrereqAndTechs():
+			screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
+			bPlus = True
+			i += 1
 		# Religion Req
 		szChild = PF + "REL"
 		iType = CvTheBuildingInfo.getPrereqReligion()
@@ -337,11 +333,9 @@ class PediaBuilding:
 		szChild = PF + "BONUS"
 		iType = CvTheBuildingInfo.getPrereqAndBonus()
 		nOr = 0
-		for i in xrange(CvTheBuildingInfo.getNumPrereqOrBonuses()):
-			iCheck = CvTheBuildingInfo.getPrereqOrBonuses(i)
-			if iCheck > -1:
-				aList1.append(iCheck)
-				nOr += 1
+		for iCheck in CvTheBuildingInfo.getPrereqOrBonuses():
+			aList1.append(iCheck)
+			nOr += 1
 		if bPlus:
 			if iType != -1 or nOr:
 				screen.attachLabel(panelName, "", szAnd)

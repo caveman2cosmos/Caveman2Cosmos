@@ -43,19 +43,9 @@ PropertyTypes CvPropertySource::getProperty() const
 	return m_eProperty;
 }
 
-void CvPropertySource::setProperty(PropertyTypes eProperty)
-{
-	m_eProperty = eProperty;
-}
-
 GameObjectTypes CvPropertySource::getObjectType() const
 {
 	return m_eObjectType;
-}
-
-void CvPropertySource::setObjectType(GameObjectTypes eObjectType)
-{
-	m_eObjectType = eObjectType;
 }
 
 RelationTypes CvPropertySource::getRelation() const
@@ -63,19 +53,9 @@ RelationTypes CvPropertySource::getRelation() const
 	return m_eRelation;
 }
 
-void CvPropertySource::setRelation(RelationTypes eRelation)
-{
-	m_eRelation = eRelation;
-}
-
 int CvPropertySource::getRelationData() const
 {
 	return m_iRelationData;
-}
-
-void CvPropertySource::setRelationData(int iRelationData)
-{
-	m_iRelationData = iRelationData;
 }
 
 bool CvPropertySource::isActive(const CvGameObject* pObject) const
@@ -171,7 +151,7 @@ CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty)
 {
 }
 
-CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty, IntExpr* pAmountPerTurn)
+CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty, const IntExpr* pAmountPerTurn)
 	: CvPropertySource(eProperty)
 	, m_pAmountPerTurn(pAmountPerTurn)
 {

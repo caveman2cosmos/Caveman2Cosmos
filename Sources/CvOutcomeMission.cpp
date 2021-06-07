@@ -36,7 +36,7 @@ CvOutcomeMission::~CvOutcomeMission()
 	SAFE_DELETE(m_pUnitCondition);
 }
 
-//IntExpr* CvOutcomeMission::getCost()
+//const IntExpr* CvOutcomeMission::getCost() const
 //{
 //	return m_iCost;
 //}
