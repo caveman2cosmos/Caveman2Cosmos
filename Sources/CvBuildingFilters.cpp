@@ -184,7 +184,7 @@ bool BuildingFilterIsMilitary::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 		|| buildingInfo.getFreePromotion_3() != NO_PROMOTION
 		|| buildingInfo.getNumUnitCombatRetrainTypes() > 0
 		|| buildingInfo.getNumUnitCombatProdModifiers() > 0
-		|| buildingInfo.getNumFreePromoTypes() > 0
+		|| !buildingInfo.getFreePromoTypes().empty()
 		|| buildingInfo.getNumUnitCombatOngoingTrainingDurations() > 0
 		|| buildingInfo.isAnyUnitCombatFreeExperience()
 		|| buildingInfo.isAnyDomainFreeExperience();

@@ -1,5 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvInfos.h"
 
 //
 // Python interface for info classes (formerly structs)
@@ -27,7 +28,7 @@ void CyInfoPythonInterface1()
 		;
 
 	python::class_<CvScalableInfo>("CvScalableInfo")
-		.def("getScale", &CvScalableInfo::getScale, "float  ()")
+		.def("getScale", &CvScalableInfo::getScale, "float ()")
 		;
 
 	python::class_<CvSpecialistInfo, python::bases<CvInfoBase> >("CvSpecialistInfo")
@@ -89,13 +90,11 @@ void CyInfoPythonInterface1()
 
 		.def("getDomainExtraMoves", &CvTechInfo::getDomainExtraMoves, "int (int i)")
 		.def("getFlavorValue", &CvTechInfo::getFlavorValue, "int (int i)")
-		.def("getPrereqOrTechs", &CvTechInfo::getPrereqOrTechs, "int (int i)")
-		.def("getPrereqAndTechs", &CvTechInfo::getPrereqAndTechs, "int (int i)")
+		.def("getPrereqOrTechs", &CvTechInfo::cyGetPrereqOrTechs)
+		.def("getPrereqAndTechs", &CvTechInfo::cyGetPrereqAndTechs)
 
 		.def("isCommerceFlexible", &CvTechInfo::isCommerceFlexible, "bool (int i)")
 		.def("isTerrainTrade", &CvTechInfo::isTerrainTrade, "bool (int i)")
-
-
 
 		.def("getNumPrereqBuildings", &CvTechInfo::getNumPrereqBuildings, "int ()")
 		.def("getPrereqBuildingType", &CvTechInfo::getPrereqBuildingType, "int (int i)")
@@ -161,7 +160,6 @@ void CyInfoPythonInterface1()
 		.def("isTarget", &CvMissionInfo::isTarget, "bool ()")
 		.def("isBuild", &CvMissionInfo::isBuild, "bool ()")
 		.def("getVisible", &CvMissionInfo::getVisible, "bool ()")
-
 		;
 
 	python::class_<CvActionInfo>("CvActionInfo")
@@ -233,8 +231,8 @@ void CyInfoPythonInterface1()
 		.def("isHiddenNationality", &CvUnitInfo::isHiddenNationality, "bool ()")
 
 		// Arrays
-		.def("getPrereqAndTechs", &CvUnitInfo::getPrereqAndTechs, "int (int i)")
-		.def("getPrereqOrBonuses", &CvUnitInfo::getPrereqOrBonuses, "int (int i)")
+		.def("getPrereqAndTechs", &CvUnitInfo::cyGetPrereqAndTechs)
+		.def("getPrereqOrBonuses", &CvUnitInfo::cyGetPrereqOrBonuses)
 		.def("getFlavorValue", &CvUnitInfo::getFlavorValue, "int (int i)")
 		.def("getBonusProductionModifier", &CvUnitInfo::getBonusProductionModifier, "int (int i)")
 
@@ -242,7 +240,6 @@ void CyInfoPythonInterface1()
 
 		.def("getPrereqAndBuilding", &CvUnitInfo::getPrereqAndBuilding, "int (int i)")
 		.def("getNumPrereqAndBuildings", &CvUnitInfo::getNumPrereqAndBuildings, "int ()")
-
 
 		.def("getUnitUpgrade", &CvUnitInfo::getUnitUpgrade, "int (int i)")
 		.def("getNumUnitUpgrades", &CvUnitInfo::getNumUnitUpgrades, "int ()")
@@ -258,8 +255,6 @@ void CyInfoPythonInterface1()
 		//.def("getFeatureImpassable", &CvUnitInfo::getFeatureImpassable, "bool (int i)")
 		.def("getUnitNames", &CvUnitInfo::getUnitNames, "string (int i)")
 		//TB SubCombat Mod begin  TB Combat Mods Begin
-		//integers
-		//booleans
 		//boolean vectors
 		.def("isSubCombatType", &CvUnitInfo::isSubCombatType, "int (int i)")
 		.def("isQualifiedPromotionType", &CvUnitInfo::isQualifiedPromotionType, "bool (int i)")
@@ -269,7 +264,6 @@ void CyInfoPythonInterface1()
 
 	python::class_<CvSpecialUnitInfo, python::bases<CvInfoBase> >("CvSpecialUnitInfo")
 		.def("isValid", &CvSpecialUnitInfo::isValid, "bool ()")
-
 		;
 
 	python::class_<CvCivicOptionInfo, python::bases<CvInfoBase> >("CvCivicOptionInfo")
@@ -316,7 +310,6 @@ void CyInfoPythonInterface1()
 
 		.def("isBuildingOnlyHealthy", &CvCivicInfo::isBuildingOnlyHealthy, "bool ()")
 		.def("isStateReligion", &CvCivicInfo::isStateReligion, "bool ()")
-
 
 		// Arrays
 
@@ -421,7 +414,6 @@ void CyInfoPythonInterface1()
 		.def("getArtDefineTag", &CvBuildingInfo::getArtDefineTag, "string ()")
 		.def("getMovie", &CvBuildingInfo::getMovie, "string ()")
 
-
 		// Arrays
 
 		.def("getYieldChange", &CvBuildingInfo::getYieldChange, "int (int i)")
@@ -440,9 +432,9 @@ void CyInfoPythonInterface1()
 		.def("getBonusProductionModifier", &CvBuildingInfo::getBonusProductionModifier, "int (int i)")
 		.def("getDomainFreeExperience", &CvBuildingInfo::getDomainFreeExperience, "int (int i)")
 		.def("getDomainProductionModifier", &CvBuildingInfo::getDomainProductionModifier, "int (int i)")
-		.def("getPrereqAndTechs", &CvBuildingInfo::getPrereqAndTechs, "int (int i)")
-		.def("getPrereqOrBonuses", &CvBuildingInfo::getPrereqOrBonuses, "int (int i)")
-		.def("getPrereqOrVicinityBonuses", &CvBuildingInfo::getPrereqOrVicinityBonuses, "int (int i)")
+		.def("getPrereqAndTechs", &CvBuildingInfo::cyGetPrereqAndTechs)
+		.def("getPrereqOrBonuses", &CvBuildingInfo::cyGetPrereqOrBonuses)
+		.def("getPrereqOrVicinityBonuses", &CvBuildingInfo::cyGetPrereqOrVicinityBonuses)
 		.def("getPrereqOrRawVicinityBonuses", &CvBuildingInfo::cyGetPrereqOrRawVicinityBonuses)
 		
 		.def("getNumPrereqOrBonuses", &CvBuildingInfo::getNumPrereqOrBonuses, "int ()")

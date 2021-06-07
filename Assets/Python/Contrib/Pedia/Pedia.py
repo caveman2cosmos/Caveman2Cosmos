@@ -1598,14 +1598,10 @@ class Pedia:
 		else:
 			iEra = CvTechInfo.getEra() + 1
 		i = 0
-		while True:
-			CvTechInfo = GC.getTechInfo(CvItsInfo.getPrereqAndTechs(i))
-			if CvTechInfo == None:
-				break
-			iEraTemp = CvTechInfo.getEra() + 1
+		for iType in CvItsInfo.getPrereqAndTechs():
+			iEraTemp = GC.getTechInfo(iType).getEra() + 1
 			if iEraTemp > iEra:
 				iEra = iEraTemp
-			i += 1
 		return iEra
 
 	# Interaction Functions

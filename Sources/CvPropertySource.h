@@ -23,14 +23,11 @@ public:
 	CvPropertySource();
 	explicit CvPropertySource(PropertyTypes eProperty);
 	virtual ~CvPropertySource();
+
 	PropertyTypes getProperty() const;
-	void setProperty(PropertyTypes eProperty);
 	GameObjectTypes getObjectType() const;
-	void setObjectType(GameObjectTypes eObjectType);
 	RelationTypes getRelation() const;
-	void setRelation(RelationTypes eRelation);
 	int getRelationData() const;
-	void setRelationData(int iRelationData);
 
 	virtual bool isActive(const CvGameObject* pObject) const;
 
@@ -50,7 +47,7 @@ protected:
 	GameObjectTypes m_eObjectType;
 	RelationTypes m_eRelation;
 	int m_iRelationData;
-	BoolExpr* m_pExprActive;
+	const BoolExpr* m_pExprActive;
 };
 
 
@@ -59,7 +56,7 @@ class CvPropertySourceConstant : public CvPropertySource
 public:
 	CvPropertySourceConstant();
 	explicit CvPropertySourceConstant(PropertyTypes eProperty);
-	CvPropertySourceConstant(PropertyTypes eProperty, IntExpr* pAmountPerTurn);
+	CvPropertySourceConstant(PropertyTypes eProperty, const IntExpr* pAmountPerTurn);
 
 	int getAmountPerTurn(const CvGameObject* pObject) const;
 
@@ -76,7 +73,7 @@ public:
 	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
-	IntExpr* m_pAmountPerTurn;
+	const IntExpr* m_pAmountPerTurn;
 };
 
 class CvPropertySourceConstantLimited : public CvPropertySource
@@ -155,7 +152,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp);
 
-	virtual void getCheckSum(unsigned int& iSum) const;
+	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	AttributeTypes m_eAttribute;
