@@ -1073,15 +1073,15 @@ class Pedia:
 							elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
 								bonuslist[bonus] = iTechLoc
 						
-					for j in range(CvBuildingInfo.getNumExtraFreeBonuses()):
-						if CvBuildingInfo.getExtraFreeBonus(j) == bonus:
-							bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
-							if GC.getTechInfo(bonusTechReq) != None:
-								bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
-								if bonuslist[bonus] == -1:
-									bonuslist[bonus] = iTechLoc
-								elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
-									bonuslist[bonus] = iTechLoc					
+				for bonuses in range(CvBuildingInfo.getNumExtraFreeBonuses()):
+					if CvBuildingInfo.getExtraFreeBonus(bonuses) == bonus:
+						bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
+						if GC.getTechInfo(bonusTechReq) != None:
+							bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+							if bonuslist[bonus] == -1:
+								bonuslist[bonus] = iTechLoc
+							elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
+								bonuslist[bonus] = iTechLoc					
 			
 			#<Bonus>BONUS_X
 			iBuildingBonusReq = CvBuildingInfo.getPrereqAndBonus()
