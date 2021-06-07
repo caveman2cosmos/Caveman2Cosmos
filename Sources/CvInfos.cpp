@@ -7886,7 +7886,6 @@ CvSpawnInfo::~CvSpawnInfo()
 
 bool CvSpawnInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	CvString szTextVal2;
 
@@ -8062,7 +8061,7 @@ void CvSpawnInfo::copyNonDefaults(CvSpawnInfo* pClassInfo)
 	// not yet implemented
 }
 
-BoolExpr* CvSpawnInfo::getSpawnCondition() const
+const BoolExpr* CvSpawnInfo::getSpawnCondition() const
 {
 	return m_pExprSpawnCondition;
 }
@@ -8251,7 +8250,7 @@ int CvSpawnInfo::getRateOverride() const
 	return m_iRateOverride;
 }
 
-void CvSpawnInfo::getCheckSum(unsigned int &iSum) const
+void CvSpawnInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eUnitType);
 	CheckSum(iSum, m_ePrereqTechType);
@@ -33868,14 +33867,14 @@ CvPropertyInfo::CvPropertyInfo() :
 
 CvPropertyInfo::~CvPropertyInfo()
 {
-	for (int i=0; i<(int)m_aPropertyBuildings.size(); i++)
+	foreach_(const PropertyBuilding& propBuilding, m_aPropertyBuildings)
 	{
-		GC.removeDelayedResolution((int*)&(m_aPropertyBuildings[i].eBuilding));
+		GC.removeDelayedResolution((int*)&propBuilding.eBuilding);
 	}
 
-	for (int i=0; i<(int)m_aPropertyPromotions.size(); i++)
+	foreach_(const PropertyPromotion& propPromotion, m_aPropertyPromotions)
 	{
-		GC.removeDelayedResolution((int*)&(m_aPropertyPromotions[i].ePromotion));
+		GC.removeDelayedResolution((int*)&propPromotion.ePromotion);
 	}
 }
 
@@ -34027,9 +34026,9 @@ bool CvPropertyInfo::read(CvXMLLoadUtility* pXML)
 
 void CvPropertyInfo::copyNonDefaults(const CvPropertyInfo* pClassInfo)
 {
-	int iDefault = 0;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const int iDefault = 0;
+	const CvString cDefault = CvString::format("").GetCString();
+	const CvWString wDefault = CvWString::format(L"").GetCString();
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
@@ -34092,7 +34091,7 @@ void CvPropertyInfo::copyNonDefaults(const CvPropertyInfo* pClassInfo)
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators);
 }
 
-void CvPropertyInfo::getCheckSum(unsigned int& iSum) const
+void CvPropertyInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bSourceDrain);
 	CheckSum(iSum, m_bOAType);
@@ -34112,18 +34111,18 @@ void CvPropertyInfo::getCheckSum(unsigned int& iSum) const
 		}
 	}
 
-	for (int i=0; i<(int)m_aPropertyBuildings.size(); i++)
+	foreach_(const PropertyBuilding& propBuilding, m_aPropertyBuildings)
 	{
-		CheckSum(iSum, m_aPropertyBuildings[i].iMinValue);
-		CheckSum(iSum, m_aPropertyBuildings[i].iMaxValue);
-		CheckSum(iSum, (int)m_aPropertyBuildings[i].eBuilding);
+		CheckSum(iSum, propBuilding.iMinValue);
+		CheckSum(iSum, propBuilding.iMaxValue);
+		CheckSum(iSum, (int)propBuilding.eBuilding);
 	}
 
-	for (int i=0; i<(int)m_aPropertyPromotions.size(); i++)
+	foreach_(const PropertyPromotion& propPromotion, m_aPropertyPromotions)
 	{
-		CheckSum(iSum, m_aPropertyPromotions[i].iMinValue);
-		CheckSum(iSum, m_aPropertyPromotions[i].iMaxValue);
-		CheckSum(iSum, (int)m_aPropertyPromotions[i].ePromotion);
+		CheckSum(iSum, propPromotion.iMinValue);
+		CheckSum(iSum, propPromotion.iMaxValue);
+		CheckSum(iSum, (int)propPromotion.ePromotion);
 	}
 
 	m_PropertyManipulators.getCheckSum(iSum);

@@ -52,8 +52,8 @@ protected:
 	RelationTypes m_eTargetRelation;
 	int m_iTargetRelationData;
 	GameObjectTypes m_eTargetObjectType;
-	BoolExpr* m_pExprActive;
-	BoolExpr* m_pExprTargetCondition;
+	const BoolExpr* m_pExprActive;
+	const BoolExpr* m_pExprTargetCondition;
 };
 
 

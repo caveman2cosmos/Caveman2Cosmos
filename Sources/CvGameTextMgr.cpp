@@ -20537,13 +20537,13 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 		}
 
 
-		BoolExpr* pExpr = GC.getUnitInfo(eUnit).getTrainCondition();
+		const BoolExpr* pExpr = GC.getUnitInfo(eUnit).getTrainCondition();
 		if (pExpr)
 		{
 			bool bEval = false;
 			if (pCity)
 			{
-				bEval = pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject())); // Const wegcasten ist hier ok da evaluate nicht wirklich etwas ändert
+				bEval = pExpr->evaluate(pCity->getGameObject());
 			}
 			if (!bEval)
 			{
@@ -22420,7 +22420,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	{
 		foreach_(const FreePromoTypes& pFreePromo, kBuilding.getFreePromoTypes())
 		{
-			BoolExpr* pExpr = pFreePromo.m_pExprFreePromotionCondition;
+			const BoolExpr* pExpr = pFreePromo.m_pExprFreePromotionCondition;
 			if (pExpr)
 			{
 				const PromotionTypes ePromo = pFreePromo.ePromotion;
@@ -23586,14 +23586,13 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	for (int i=0; i<GC.getNumPropertyInfos(); i++)
 	{
 		const CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)i);
-		int iNum = kInfo.getNumPropertyBuildings();
-		for (int j=0; j<iNum; j++)
+		foreach_(const PropertyBuilding& propBuilding, kInfo.getPropertyBuildings())
 		{
-			if (kInfo.getPropertyBuilding(j).eBuilding == eBuilding)
+			if (propBuilding.eBuilding == eBuilding)
 			{
 				szBuffer.append(NEWLINE);
-				int iMinVal = kInfo.getPropertyBuilding(j).iMinValue;
-				int iMaxVal = kInfo.getPropertyBuilding(j).iMaxValue;
+				int iMinVal = propBuilding.iMinValue;
+				int iMaxVal = propBuilding.iMaxValue;
 				int iOpMin = kInfo.getOperationalRangeMin();
 				int iOpMax = kInfo.getOperationalRangeMax();
 				if (iMinVal < iOpMin - 5*(iOpMax - iOpMin))
@@ -24316,8 +24315,8 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			szBuffer.append(gDLL->getText("TXT_KEY_PROJECTHELP_NO_NUKES"));
 		}
 
-		BoolExpr* pExpr = kBuilding.getConstructCondition();
-		if (pExpr && (!pCity || !pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject()))))
+		const BoolExpr* pExpr = kBuilding.getConstructCondition();
+		if (pExpr && (!pCity || !pExpr->evaluate(pCity->getGameObject())))
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
 			pExpr->buildDisplayString(szBuffer);

@@ -151,7 +151,7 @@ CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty)
 {
 }
 
-CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty, IntExpr* pAmountPerTurn)
+CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty, const IntExpr* pAmountPerTurn)
 	: CvPropertySource(eProperty)
 	, m_pAmountPerTurn(pAmountPerTurn)
 {

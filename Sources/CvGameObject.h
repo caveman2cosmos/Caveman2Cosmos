@@ -39,12 +39,12 @@ public:
 	virtual void foreachOn(GameObjectTypes eType, bst::function<void (const CvGameObject*)> func) const;
 	virtual void foreachNear(GameObjectTypes eType, bst::function<void (const CvGameObject*)> func, int iDistance) const;
 	virtual void foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void (const CvGameObject*)> func, int iData = 0) const;
-	virtual void foreachRelatedCond(GameObjectTypes eType, RelationTypes eRelation, bst::function<void (const CvGameObject*)> func, BoolExpr* pExpr = NULL, int iData = 0) const;
+	virtual void foreachRelatedCond(GameObjectTypes eType, RelationTypes eRelation, bst::function<void (const CvGameObject*)> func, const BoolExpr* pExpr = NULL, int iData = 0) const;
 	virtual void enumerate(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType) const;
 	virtual void enumerateOn(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType) const;
 	virtual void enumerateNear(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, int iDistance) const;
 	virtual void enumerateRelated(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, int iData = 0) const;
-	virtual void enumerateRelatedCond(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, BoolExpr* pExpr = NULL, int iData = 0) const;
+	virtual void enumerateRelatedCond(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, const BoolExpr* pExpr = NULL, int iData = 0) const;
 
 	typedef bst::function<void (const CvPropertyManipulators*)> ManipCallbackFn;
 	virtual void foreachManipulator(ManipCallbackFn func) const = 0;

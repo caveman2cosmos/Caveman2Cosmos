@@ -6179,7 +6179,7 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 				continue;
 			}
 
-			BoolExpr* pCondition = spawnInfo.getSpawnCondition();
+			const BoolExpr* pCondition = spawnInfo.getSpawnCondition();
 
 			if (pCondition && !pCondition->evaluate(pPlot->getGameObject()))
 			{
