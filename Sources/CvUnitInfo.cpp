@@ -2685,7 +2685,7 @@ bool CvUnitInfo::isSubCombatType(int i) const
 	return find(m_aiSubCombatTypes.begin(), m_aiSubCombatTypes.end(), i) != m_aiSubCombatTypes.end();
 }
 
-std::vector<int>& CvUnitInfo::getSubCombatTypes()
+const std::vector<int>& CvUnitInfo::getSubCombatTypes() const
 {
 	return m_aiSubCombatTypes;
 }

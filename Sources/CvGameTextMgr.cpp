@@ -23591,8 +23591,8 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			if (propBuilding.eBuilding == eBuilding)
 			{
 				szBuffer.append(NEWLINE);
-				int iMinVal = kInfo.getPropertyBuilding(j).iMinValue;
-				int iMaxVal = kInfo.getPropertyBuilding(j).iMaxValue;
+				int iMinVal = propBuilding.iMinValue;
+				int iMaxVal = propBuilding.iMaxValue;
 				int iOpMin = kInfo.getOperationalRangeMin();
 				int iOpMax = kInfo.getOperationalRangeMax();
 				if (iMinVal < iOpMin - 5*(iOpMax - iOpMin))

@@ -2317,7 +2317,7 @@ public:
 	void copyNonDefaults(CvUnitInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
-	std::vector<int>& getSubCombatTypes();
+	const std::vector<int>& getSubCombatTypes() const;
 
 private:
 	CvPropertyManipulators m_PropertyManipulators;
