@@ -1159,11 +1159,6 @@ int CyGame::getHighToLowCounter() const
 	return m_pGame.getHighToLowCounter();
 }
 
-bool CyGame::cheatCodesEnabled() const
-{
-	return gDLL->getChtLvl() > 0;
-}
-
 void CyGame::setVictoryValid(int iVictory, bool bNewVal)
 {
 	m_pGame.setVictoryValid((VictoryTypes)iVictory, bNewVal);

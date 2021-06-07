@@ -75,7 +75,8 @@ class CvFinanceAdvisor:
 		screen.setLabel("FinAdv_Header", "", uFontEdge + TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_TITLE",()), 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 0, 0)
 		screen.setText("FinAdv_Exit", "", uFontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
-		if GAME.isDebugMode():
+		import DebugUtils
+		if DebugUtils.isAnyDebugMode():
 			DD = "FinAdv_DebugDD"
 			screen.addDropDownBoxGFC(DD, 8, 0, 300, eWidGen, -1, -1, FontTypes.GAME_FONT)
 			for iPlayerX in range(GC.getMAX_PLAYERS()):
