@@ -1093,6 +1093,82 @@ class Pedia:
 				bonusTechLocList.append(0)
 		if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
 			print CvBuildingInfo.getType()+" - Earliest OR raw vicinity bonus prereq late!"
+			
+	def checkTechRequirementLocation(self, CvBuildingInfo):
+		#Main tech requirement
+		TechMainReq = CvBuildingInfo.getPrereqAndTech()
+		if GC.getTechInfo(TechMainReq) != None:
+			iTechMainLoc = GC.getTechInfo(TechMainReq).getGridX()
+			iTechMainRow = GC.getTechInfo(TechMainReq).getGridY()
+		else:
+			iTechMainLoc = 0
+			iTechMainRow = 0
+			
+		#Tech Type requirement
+		TechTypeLocList = []
+		TechTypeRowList = []
+		for techType in CvBuildingInfo.getPrereqAndTechs():
+			TechTypeReq = techType
+			if GC.getTechInfo(TechTypeReq) > -1:
+				TechTypeLocList.append(GC.getTechInfo(TechTypeReq).getGridX())
+				TechTypeRowList.append(GC.getTechInfo(TechTypeReq).getGridY())
+			else:
+				TechTypeLocList.append(0)
+				TechTypeRowList.append(0)
+		if len(TechTypeLocList) > 0 and len(TechTypeRowList) > 0:
+			iTechTypeLoc = max(TechTypeLocList)
+			for t in xrange(len(TechTypeLocList)):
+				if TechTypeLocList[t] == max(TechTypeLocList):
+					iTechTypeRow = TechTypeRowList[t]
+		else:
+			iTechTypeLoc = 0
+			iTechTypeRow = 0
+		
+		#Tech requirement as defined in special building infos (core tech)
+		iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
+		if iSpecialBuilding != -1:
+			TechSpecialReq = GC.getSpecialBuildingInfo(iSpecialBuilding).getTechPrereq()
+			if TechSpecialReq != -1:
+				iTechSpecialLoc = GC.getTechInfo(TechSpecialReq).getGridX()
+				iTechSpecialRow = GC.getTechInfo(TechSpecialReq).getGridY()
+			elif TechSpecialReq == -1:
+				iTechSpecialLoc = 0
+				iTechSpecialRow = 0
+		else:
+			iTechSpecialLoc = 0
+			iTechSpecialRow = 0
+		
+		#tech requirement derived from location of religion in tech tree
+		iRelPrereq1 = CvBuildingInfo.getPrereqReligion()
+		iRelPrereq2 = CvBuildingInfo.getReligionType()
+		iRelPrereq3 = CvBuildingInfo.getPrereqStateReligion()
+		if iRelPrereq1 != -1 or iRelPrereq2 != -1 or iRelPrereq3 != -1:
+			iReligionBuilding = max(iRelPrereq1, iRelPrereq2, iRelPrereq3)
+			if iReligionBuilding != -1:
+				TechReligionReq = GC.getReligionInfo(iReligionBuilding).getTechPrereq()
+				if TechReligionReq != -1:
+					iTechReligionLoc = GC.getTechInfo(TechReligionReq).getGridX()
+					iTechReligionRow = GC.getTechInfo(TechReligionReq).getGridY()
+			elif iReligionBuilding == -1:
+				iTechReligionLoc = 0
+				iTechReligionRow = 0
+		else:
+			iTechReligionLoc = 0
+			iTechReligionRow = 0
+
+		#Pick most advanced tech
+		iTechLoc = max(iTechMainLoc, iTechTypeLoc, iTechSpecialLoc, iTechReligionLoc)
+		if iTechLoc == iTechMainLoc:
+			iTechRow = iTechMainRow
+		if iTechLoc == iTechTypeLoc:
+			iTechRow = iTechTypeRow
+		elif iTechLoc == iTechSpecialLoc:			
+			iTechRow = iTechSpecialRow
+		elif iTechLoc == iTechReligionLoc:
+			iTechRow = iTechReligionRow
+			
+		return iTechLoc, iTechRow
+		
 
 	def getBuildingList(self, iBuildingType):
 		aList = []				
@@ -1107,79 +1183,11 @@ class Pedia:
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			
-			#Main tech requirement
-			TechMainReq = CvBuildingInfo.getPrereqAndTech()
-			if GC.getTechInfo(TechMainReq) != None:
-				iTechMainLoc = GC.getTechInfo(TechMainReq).getGridX()
-				iTechMainRow = GC.getTechInfo(TechMainReq).getGridY()
-			else:
-				iTechMainLoc = 0
-				iTechMainRow = 0
-				
-			#Tech Type requirement
-			TechTypeLocList = []
-			TechTypeRowList = []
-			for techType in CvBuildingInfo.getPrereqAndTechs():
-				TechTypeReq = techType
-				if GC.getTechInfo(TechTypeReq) > -1:
-					TechTypeLocList.append(GC.getTechInfo(TechTypeReq).getGridX())
-					TechTypeRowList.append(GC.getTechInfo(TechTypeReq).getGridY())
-				else:
-					TechTypeLocList.append(0)
-					TechTypeRowList.append(0)
-			if len(TechTypeLocList) > 0 and len(TechTypeRowList) > 0:
-				iTechTypeLoc = max(TechTypeLocList)
-				for t in xrange(len(TechTypeLocList)):
-					if TechTypeLocList[t] == max(TechTypeLocList):
-						iTechTypeRow = TechTypeRowList[t]
-			else:
-				iTechTypeLoc = 0
-				iTechTypeRow = 0
-			
-			#Tech requirement as defined in special building infos (core tech)
-			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
-			if iSpecialBuilding != -1:
-				TechSpecialReq = GC.getSpecialBuildingInfo(iSpecialBuilding).getTechPrereq()
-				if TechSpecialReq != -1:
-					iTechSpecialLoc = GC.getTechInfo(TechSpecialReq).getGridX()
-					iTechSpecialRow = GC.getTechInfo(TechSpecialReq).getGridY()
-				elif TechSpecialReq == -1:
-					iTechSpecialLoc = 0
-					iTechSpecialRow = 0
-			else:
-				iTechSpecialLoc = 0
-				iTechSpecialRow = 0
-			
-			#tech requirement derived from location of religion in tech tree
-			iRelPrereq1 = CvBuildingInfo.getPrereqReligion()
-			iRelPrereq2 = CvBuildingInfo.getReligionType()
-			iRelPrereq3 = CvBuildingInfo.getPrereqStateReligion()
-			if iRelPrereq1 != -1 or iRelPrereq2 != -1 or iRelPrereq3 != -1:
-				iReligionBuilding = max(iRelPrereq1, iRelPrereq2, iRelPrereq3)
-				if iReligionBuilding != -1:
-					TechReligionReq = GC.getReligionInfo(iReligionBuilding).getTechPrereq()
-					if TechReligionReq != -1:
-						iTechReligionLoc = GC.getTechInfo(TechReligionReq).getGridX()
-						iTechReligionRow = GC.getTechInfo(TechReligionReq).getGridY()
-				elif iReligionBuilding == -1:
-					iTechReligionLoc = 0
-					iTechReligionRow = 0
-			else:
-				iTechReligionLoc = 0
-				iTechReligionRow = 0
+			#Check location of building on X and Y grid.
+			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
+			iTechRow = self.checkTechRequirementLocation(CvBuildingInfo)[1]
 
-			#Pick most advanced tech
-			iTechLoc = max(iTechMainLoc, iTechTypeLoc, iTechSpecialLoc, iTechReligionLoc)
-			if iTechLoc == iTechMainLoc:
-				iTechRow = iTechMainRow
-			if iTechLoc == iTechTypeLoc:
-				iTechRow = iTechTypeRow
-			elif iTechLoc == iTechSpecialLoc:			
-				iTechRow = iTechSpecialRow
-			elif iTechLoc == iTechReligionLoc:
-				iTechRow = iTechReligionRow		
-
-			#Check if building needs bonus before is available
+			#Check if building needs bonus before is available	
 			self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
 			
 			#Finds if earliest resource producer tech requirement and tech enable of resource are in same column
