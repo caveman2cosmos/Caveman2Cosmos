@@ -138,6 +138,7 @@ class CvModLoadControlInfo;
 class CvMapInfo;
 
 #include "CvInfoReplacements.h"
+#include "CvInfoArray.h"
 #include "GlobalDefines.h"
 #include <stack>
 
@@ -145,7 +146,6 @@ extern CvDLLUtilityIFaceBase* gDLL;
 
 class cvInternalGlobals : bst::noncopyable
 {
-//	friend class CvDLLUtilityIFace;
 	friend class CvXMLLoadUtility;
 public:
 
@@ -264,7 +264,7 @@ public:
 	template<class T>
 	void removeDelayedResolutionVector(const std::vector<T>& vector)
 	{
-		foreach_(T type, vector)
+		foreach_(const T& type, vector)
 			removeDelayedResolution((int*)&type);
 	}
 	void copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTypeOther);
@@ -912,8 +912,8 @@ protected:
 	typedef std::map<int*,std::pair<CvString,CvString> > DelayedResolutionMap;
 	DelayedResolutionMap m_delayedResolutionMap;
 
-	std::vector<CvColorInfo*> m_paColorInfo;
-	std::vector<CvPlayerColorInfo*> m_paPlayerColorInfo;
+	CvInfoArray<CvColorInfo> m_paColorInfo;
+	CvInfoArray<CvPlayerColorInfo> m_paPlayerColorInfo;
 	std::vector<CvAdvisorInfo*> m_paAdvisorInfo;
 	std::vector<CvInfoBase*> m_paHints;
 	std::vector<CvMainMenuInfo*> m_paMainMenus;
