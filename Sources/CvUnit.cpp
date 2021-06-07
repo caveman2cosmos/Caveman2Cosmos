@@ -3026,12 +3026,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 			}
 		}
-
-		//OutputDebugString("UI interaction - unit attacked 1\n");
-		GET_PLAYER(pDefender->getOwner()).setTurnHadUIInteraction(true);
-
 		FAssertMsg(pDefender != NULL, "Defender is not assigned a valid value");
-
 		FAssertMsg(plot()->isFighting(), "Current unit instance plot is not fighting as expected");
 		FAssertMsg(pPlot->isFighting(), "pPlot is not fighting as expected");
 
@@ -6513,10 +6508,6 @@ void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int de
 			AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true);
 		}
 	}
-
-	//OutputDebugString("UI interaction - unit attacked 2\n");
-	GET_PLAYER(pDefender->getOwner()).setTurnHadUIInteraction(true);
-
 	FAssertMsg(plot()->isFighting(), "Current unit instance plot is not fighting as expected");
 	FAssertMsg(pPlot->isFighting(), "pPlot is not fighting as expected");
 

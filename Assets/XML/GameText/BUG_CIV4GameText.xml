@@ -4165,10 +4165,18 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__AUTOENDDECISIONLESSTURNS_TEXT</Tag>
-		<English>Auto-end turns with no decisions</English>
+		<English>Auto-end decision-less turns</English>
 		<French>Fin de tours automatique sans décisions</French>
 		<Spanish>Finalizar turno automáticamente si no hay decisiones</Spanish>
 		<Russian>Àâòîçàâåðøåíèå õîäà áåç ðåøåíèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__AUTOENDTURNDELAY_HOVER</Tag>
+		<English>Delay before turn is automatically ended when using the above option or not using the vanilla game option to wait at end of turn.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__AUTOENDTURNDELAY_TEXT</Tag>
+		<English>Auto-end turn delay</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__ENABLEGRAPHICALPAGING_HOVER</Tag>

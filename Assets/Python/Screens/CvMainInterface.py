@@ -1224,6 +1224,8 @@ class CvMainInterface:
 				szOutput = self.szSystemWaiting
 			elif CyIF.shouldDisplayEndTurn():
 				szOutput = ReminderEventManager.g_turnReminderTexts
+				if not szOutput:
+					szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_END_TURN", ())
 			elif CyIF.shouldDisplayWaitingYou():
 				szOutput = self.szSystemWaitingForYou
 				self.iWaitingCounter += 1
