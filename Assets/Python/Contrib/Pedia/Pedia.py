@@ -783,14 +783,43 @@ class Pedia:
 			CvUnitInfo = GC.getUnitInfo(i)
 			CvBonusInfo = GC.getBonusInfo(CvUnitInfo.getPrereqAndBonus())
 			
+			#Main tech
 			TechReq = CvUnitInfo.getPrereqAndTech()
 			try:
-				iTechLoc = GC.getTechInfo(TechReq).getGridX()
-				iTechRow = GC.getTechInfo(TechReq).getGridY()
+				iTechMainLoc = GC.getTechInfo(TechReq).getGridX()
+				iTechMainRow = GC.getTechInfo(TechReq).getGridY()
 			except:
-				iTechLoc = 0
-				iTechRow = 0
+				iTechMainLoc = 0
+				iTechMainRow = 0
 				
+			#Tech Type requirement
+			TechTypeLocList = []
+			TechTypeRowList = []
+			for techType in CvUnitInfo.getPrereqAndTechs():
+				TechTypeReq = techType
+				if GC.getTechInfo(TechTypeReq) > -1:
+					TechTypeLocList.append(GC.getTechInfo(TechTypeReq).getGridX())
+					TechTypeRowList.append(GC.getTechInfo(TechTypeReq).getGridY())
+				else:
+					TechTypeLocList.append(0)
+					TechTypeRowList.append(0)
+			if len(TechTypeLocList) > 0 and len(TechTypeRowList) > 0:
+				iTechTypeLoc = max(TechTypeLocList)
+				for t in xrange(len(TechTypeLocList)):
+					if TechTypeLocList[t] == max(TechTypeLocList):
+						iTechTypeRow = TechTypeRowList[t]
+			else:
+				iTechTypeLoc = 0
+				iTechTypeRow = 0
+				
+			#Pick most advanced tech
+			iTechLoc = max(iTechMainLoc, iTechTypeLoc)
+			if iTechLoc == iTechMainLoc:
+				iTechRow = iTechMainRow
+			if iTechLoc == iTechTypeLoc:
+				iTechRow = iTechTypeRow
+				
+			#<BonusType>Bonus_X
 			iUnitBonusReq = CvUnitInfo.getPrereqAndBonus()			
 			if GC.getBonusInfo(iUnitBonusReq) != None:
 				bonusTechReq = GC.getBonusInfo(iUnitBonusReq).getTechCityTrade()
@@ -801,6 +830,7 @@ class Pedia:
 				if bonusTechLoc > iTechLoc:
 					print CvUnitInfo.getType()+" - Singular AND bonus prereq late!"
 					
+			#<PrereqBonuses>
 			bonusTechLocList = []
 			for bonusOr in CvUnitInfo.getPrereqOrBonuses():
 				bonusTechReq = GC.getBonusInfo(bonusOr).getTechCityTrade()
@@ -811,7 +841,7 @@ class Pedia:
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
 				print CvUnitInfo.getType()+" - Earliest OR bonus prereq late!"
 				
-			
+			#Write down info about units with upgrades
 			if bCheckUnitUpgrades and CvUnitInfo.getNumUnitUpgrades() > 0:
 				iCost = CvUnitInfo.getProductionCost()
 				for u in xrange(CvUnitInfo.getNumUnitUpgrades()):
@@ -1085,6 +1115,26 @@ class Pedia:
 			else:
 				iTechMainLoc = 0
 				iTechMainRow = 0
+				
+			#Tech Type requirement
+			TechTypeLocList = []
+			TechTypeRowList = []
+			for techType in CvBuildingInfo.getPrereqAndTechs():
+				TechTypeReq = techType
+				if GC.getTechInfo(TechTypeReq) > -1:
+					TechTypeLocList.append(GC.getTechInfo(TechTypeReq).getGridX())
+					TechTypeRowList.append(GC.getTechInfo(TechTypeReq).getGridY())
+				else:
+					TechTypeLocList.append(0)
+					TechTypeRowList.append(0)
+			if len(TechTypeLocList) > 0 and len(TechTypeRowList) > 0:
+				iTechTypeLoc = max(TechTypeLocList)
+				for t in xrange(len(TechTypeLocList)):
+					if TechTypeLocList[t] == max(TechTypeLocList):
+						iTechTypeRow = TechTypeRowList[t]
+			else:
+				iTechTypeLoc = 0
+				iTechTypeRow = 0
 			
 			#Tech requirement as defined in special building infos (core tech)
 			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
@@ -1119,9 +1169,11 @@ class Pedia:
 				iTechReligionRow = 0
 
 			#Pick most advanced tech
-			iTechLoc = max(iTechMainLoc, iTechSpecialLoc, iTechReligionLoc)
+			iTechLoc = max(iTechMainLoc, iTechTypeLoc, iTechSpecialLoc, iTechReligionLoc)
 			if iTechLoc == iTechMainLoc:
 				iTechRow = iTechMainRow
+			if iTechLoc == iTechTypeLoc:
+				iTechRow = iTechTypeRow
 			elif iTechLoc == iTechSpecialLoc:			
 				iTechRow = iTechSpecialRow
 			elif iTechLoc == iTechReligionLoc:
@@ -1142,7 +1194,7 @@ class Pedia:
 							elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
 								bonuslist[bonus] = iTechLoc
 						
-				for bonuses in range(CvBuildingInfo.getNumExtraFreeBonuses()):
+				for bonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 					if CvBuildingInfo.getExtraFreeBonus(bonuses) == bonus:
 						bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
 						if GC.getTechInfo(bonusTechReq) != None:
