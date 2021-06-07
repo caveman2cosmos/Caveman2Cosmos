@@ -778,6 +778,7 @@ class Pedia:
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
+		bCheckUnitUpgrades = 0 #This lists all units that can upgrade, it is spammy in logs
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
 			CvBonusInfo = GC.getBonusInfo(CvUnitInfo.getPrereqAndBonus())
@@ -801,20 +802,18 @@ class Pedia:
 					print CvUnitInfo.getType()+" - Singular AND bonus prereq late!"
 					
 			bonusTechLocList = []
-			for bonusOr in xrange(25):
-				if CvUnitInfo.getPrereqOrBonuses(bonusOr) != -1:
-					bonusTechReq = GC.getBonusInfo(CvUnitInfo.getPrereqOrBonuses(bonusOr)).getTechCityTrade()
-					if GC.getTechInfo(bonusTechReq) != None:
-						bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
-						bonusTechLocList.append(bonusTechLoc)
-					else:
-						bonusTechLoc = 0
-						bonusTechLocList.append(bonusTechLoc)
+			for bonusOr in CvUnitInfo.getPrereqOrBonuses():
+				bonusTechReq = GC.getBonusInfo(bonusOr).getTechCityTrade()
+				if bonusTechReq > -1:
+					bonusTechLocList.append(GC.getTechInfo(bonusTechReq).getGridX())
+				else:
+					bonusTechLocList.append(0)
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
 				print CvUnitInfo.getType()+" - Earliest OR bonus prereq late!"
 				
-			iCost = CvUnitInfo.getProductionCost()
-			if 0: #CvUnitInfo.getNumUnitUpgrades() > 0:
+			
+			if bCheckUnitUpgrades and CvUnitInfo.getNumUnitUpgrades() > 0:
+				iCost = CvUnitInfo.getProductionCost()
 				for u in xrange(CvUnitInfo.getNumUnitUpgrades()):
 					upgradedDesc = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getType()
 					upgradedCost = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getProductionCost()
@@ -999,13 +998,16 @@ class Pedia:
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, GC.getBuildingInfo)
 
 	def getBuildingList(self, iBuildingType):
-		aList = []
-		#bonuslist = [-1]*GC.getNumBonusInfos() Checking if earliest resource producer is unlocked on resource tech reveal is slow.
+		aList = []		
 		bonusTechLocList = []
 		aListDict = {}		
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
+		bCheckBonusManufacturerTech = 0 #Checking if tech earliest bonus manufacturer is on bonus tech reveal is slow.
+		if bCheckBonusManufacturerTech:
+			bonuslist = [-1]*GC.getNumBonusInfos()
+			
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			TechMainReq = CvBuildingInfo.getPrereqAndTech()
@@ -1060,7 +1062,7 @@ class Pedia:
 				iTechRow = iTechReligionRow				
 			
 			#Finds if earliest resource producer tech requirement and tech enable of resource are in same column
-			if 0:
+			if bCheckBonusManufacturerTech:
 				for bonus in xrange(GC.getNumBonusInfos()):
 					if CvBuildingInfo.getFreeBonus() == bonus:
 						bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
@@ -1115,28 +1117,23 @@ class Pedia:
 					print CvBuildingInfo.getType()+" - Singular AND raw vicinity bonus prereq late!"
 				
 			#<PrereqBonuses>
-			for bonusOr in xrange(CvBuildingInfo.getNumPrereqOrBonuses()):
-				bonusTechReq = GC.getBonusInfo(CvBuildingInfo.getPrereqOrBonuses(bonusOr)).getTechCityTrade()
-				if GC.getTechInfo(bonusTechReq) != None:
-					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
-					bonusTechLocList.append(bonusTechLoc)
+			for bonusOr in CvBuildingInfo.getPrereqOrBonuses():
+				bonusTechReq = GC.getBonusInfo(bonusOr).getTechCityTrade()
+				if bonusTechReq > -1:
+					bonusTechLocList.append(GC.getTechInfo(bonusTechReq).getGridX())
 				else:
-					bonusTechLoc = 0
-					bonusTechLocList.append(bonusTechLoc)
+					bonusTechLocList.append(0)
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
 				print CvBuildingInfo.getType()+" - Earliest OR bonus prereq late!"
 			bonusTechLocList = []
 			
 			#<PrereqVicinityBonuses>
-			for bonusOrVic in xrange(25):
-				if CvBuildingInfo.getPrereqOrVicinityBonuses(bonusOrVic) != -1:
-					bonusTechReq = GC.getBonusInfo(CvBuildingInfo.getPrereqOrVicinityBonuses(bonusOrVic)).getTechCityTrade()
-					if GC.getTechInfo(bonusTechReq) != None:
-						bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
-						bonusTechLocList.append(bonusTechLoc)
-					else:
-						bonusTechLoc = 0
-						bonusTechLocList.append(bonusTechLoc)
+			for bonusOrVic in CvBuildingInfo.getPrereqOrVicinityBonuses():
+				bonusTechReq = GC.getBonusInfo(bonusOrVic).getTechCityTrade()
+				if bonusTechReq > -1:
+					bonusTechLocList.append(GC.getTechInfo(bonusTechReq).getGridX())
+				else:
+					bonusTechLocList.append(0)
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
 				print CvBuildingInfo.getType()+" - Earliest OR vicinity bonus prereq late!"
 			bonusTechLocList = []
@@ -1173,7 +1170,7 @@ class Pedia:
 			key = aList[i]
 			aList[i] = aListDict[key]
 			
-		if 0:
+		if bCheckBonusManufacturerTech:
 			for bonustype in xrange(len(bonuslist)):
 				if bonuslist[bonustype] != -1 and GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()) != None and not GC.getBonusInfo(bonustype).getConstAppearance() > 0:
 					if bonuslist[bonustype] - GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX() != 0:
