@@ -136,6 +136,7 @@ struct IDValueMap
 	{
 		python::list list = python::list();
 		foreach_(const pair_t& pair, m_map)
+			list.append(std::make_pair((int)pair.first, (int)pair.second));
 		return list;
 	}
 
