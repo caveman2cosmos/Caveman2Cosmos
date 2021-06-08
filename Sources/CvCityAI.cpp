@@ -925,11 +925,6 @@ void CvCityAI::AI_chooseProduction()
 	// only clear the dirty bit if we actually do a check, multiple items might be queued
 	AI_setChooseProductionDirty(false);
 
-	if (GC.getUSE_AI_CHOOSE_PRODUCTION_CALLBACK() && Cy::call<bool>(PYGameModule, "AI_chooseProduction", Cy::Args() << this))
-	{
-		return;
-	}
-
 	bool bInhibitUnits = false;
 	if (isHuman() && isProductionAutomated())
 	{
@@ -953,7 +948,6 @@ void CvCityAI::AI_chooseProduction()
 		{
 			pWaterArea = NULL;
 		}
-
 		bWaterDanger = player.AI_getWaterDanger(plot(), 4) > 0;
 	}
 
