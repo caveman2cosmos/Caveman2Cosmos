@@ -29,30 +29,6 @@
 			</PropertyManipulators>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_THERMODYNAMICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_HOT_AIR_BALLOON</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BALLOON_WARFARE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_ZEPPELINS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
@@ -5229,13 +5205,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
 					<TechCommerce>
