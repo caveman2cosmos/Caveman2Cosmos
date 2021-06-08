@@ -3535,12 +3535,6 @@
 						<iCommerce>5</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MEGAWORMHOLES</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iMilitaryProductionModifier>-35</iMilitaryProductionModifier>
 			<FreeSpecialistCounts>
@@ -5232,17 +5226,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SECURITY_CENTER</BuildingType>
 			</PrereqInCityBuildings>
@@ -5269,17 +5252,6 @@
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SECURITY_CENTER</BuildingType>
 			</PrereqInCityBuildings>
@@ -5580,17 +5552,6 @@
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iHappiness>-3</iHappiness>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GRAVITY_CROWD_CONTROL</BuildingType>
 			</ReplacementBuildings>
@@ -9317,12 +9278,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SPACETIME_ECONOMICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_MULTIDIMENSIONAL_TIME</PrereqTech>
 					<TechCommerce>
 						<iCommerce>5</iCommerce>
@@ -9352,14 +9307,6 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iHappiness>3</iHappiness>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ATEMPORAL_BEINGS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
 			</PrereqInCityBuildings>
