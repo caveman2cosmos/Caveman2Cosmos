@@ -155,20 +155,6 @@
 	</ElementType>
 	<ElementType name="TechType" content="textOnly"/>
 	<ElementType name="iModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="TechHappinessType" content="eltOnly">
-		<element type="TechType" minOccurs="0" maxOccurs="*"/>
-		<element type="iModifier" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="TechHappinessTypes" content="eltOnly">
-		<element type="TechHappinessType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="TechHealthType" content="eltOnly">
-		<element type="TechType" minOccurs="0" maxOccurs="*"/>
-		<element type="iModifier" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="TechHealthTypes" content="eltOnly">
-		<element type="TechHealthType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<!--Arrays -->
 	<ElementType name="LocalSpecialistYieldChange" content="eltOnly">
 		<element type="SpecialistType"/>

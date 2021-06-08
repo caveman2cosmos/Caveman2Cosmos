@@ -15,9 +15,6 @@ GameUtils = BugGameUtils.getDispatcher()
 def isVictoryTest():
 	return GameUtils.isVictoryTest()
 
-def isPlayerResearch(argsList):
-	return GameUtils.isPlayerResearch(argsList)
-
 def createBarbarianUnits():
 	return GameUtils.createBarbarianUnits()
 
@@ -57,9 +54,6 @@ def updateColoredPlots():
 def unitCannotMoveInto(argsList):
 	return GameUtils.unitCannotMoveInto(argsList)
 
-def cannotHandleAction(argsList):
-	return GameUtils.cannotHandleAction(argsList)
-
 def canBuild(argsList):
 	return GameUtils.canBuild(argsList)
 
@@ -96,19 +90,9 @@ def cannotConstruct(argsList):
 def cannotMaintain(argsList):
 	return GameUtils.cannotMaintain(argsList)
 
-def AI_chooseTech(argsList):
-	return GameUtils.AI_chooseTech(argsList)
-
-def AI_chooseProduction(argsList):
-	return GameUtils.AI_chooseProduction(argsList)
-
 def AI_unitUpdate(argsList):
 	'AI moves units - return 0 to let AI handle it, return 1 to say that it was handled in python'
 	return GameUtils.AI_unitUpdate(argsList)
-
-def AI_doDiplo(argsList):
-	'AI decides does diplomacy for the turn - return 0 to let AI handle it, return 1 to say that it was handled in python'
-	return GameUtils.AI_doDiplo(argsList)
 
 def calculateScore(argsList):
 	return GameUtils.calculateScore(argsList)
@@ -116,29 +100,11 @@ def calculateScore(argsList):
 def doHolyCity():
 	return GameUtils.doHolyCity()
 
-def doResearch(argsList):
-	return GameUtils.doResearch(argsList)
-
 def doGoody(argsList):
 	return GameUtils.doGoody(argsList)
 
-def doGrowth(argsList):
-	return GameUtils.doGrowth(argsList)
-
-def doProduction(argsList):
-	return GameUtils.doProduction(argsList)
-
-def doCulture(argsList):
-	return GameUtils.doCulture(argsList)
-
-def doPlotCulture(argsList):
-	return GameUtils.doPlotCulture(argsList)
-
 def doReligion(argsList):
 	return GameUtils.doReligion(argsList)
-
-def doGreatPeople(argsList):
-	return GameUtils.doGreatPeople(argsList)
 
 def doMeltdown(argsList):
 	return GameUtils.doMeltdown(argsList)
@@ -151,9 +117,6 @@ def doPillageGold(argsList):
 
 def doCityCaptureGold(argsList):
 	return GameUtils.doCityCaptureGold(argsList)
-
-def citiesDestroyFeatures(argsList):
-	return GameUtils.citiesDestroyFeatures(argsList)
 
 def canFoundCitiesOnWater(argsList):
 	return GameUtils.canFoundCitiesOnWater(argsList)

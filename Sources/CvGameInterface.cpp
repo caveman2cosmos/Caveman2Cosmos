@@ -1299,14 +1299,11 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 
 void CvGame::selectedCitiesGameNetMessage(int eMessage, int iData2, int iData3, int iData4, bool bOption, bool bAlt, bool bShift, bool bCtrl) const
 {
-	CLLNode<IDInfo>* pSelectedCityNode;
-	CvCity* pSelectedCity;
-
-	pSelectedCityNode = gDLL->getInterfaceIFace()->headSelectedCitiesNode();
+	CLLNode<IDInfo>* pSelectedCityNode = gDLL->getInterfaceIFace()->headSelectedCitiesNode();
 
 	while (pSelectedCityNode != NULL)
 	{
-		pSelectedCity = ::getCity(pSelectedCityNode->m_data);
+		CvCity* pSelectedCity = ::getCity(pSelectedCityNode->m_data);
 		pSelectedCityNode = gDLL->getInterfaceIFace()->nextSelectedCitiesNode(pSelectedCityNode);
 
 		if (pSelectedCity != NULL && pSelectedCity->getOwner() == getActivePlayer())
@@ -1341,25 +1338,10 @@ bool CvGame::canHandleAction(int iAction, CvPlot* pPlot, bool bTestVisible, bool
 {
 	PROFILE_FUNC();
 
-	CvSelectionGroup* pSelectedGroup;
-	CvUnit* pHeadSelectedUnit;
-	CvPlot* pMissionPlot;
-	bool bShift = gDLL->shiftKey();
-
-	if(GC.getUSE_CANNOT_HANDLE_ACTION_CALLBACK())
+	if (GC.getActionInfo(iAction).getControlType() != NO_CONTROL
+	&& canDoControl((ControlTypes)GC.getActionInfo(iAction).getControlType()))
 	{
-		if (Cy::call<bool>(PYGameModule, "cannotHandleAction", Cy::Args() << pPlot << iAction << bTestVisible))
-		{
-			return false;
-		}
-	}
-
-	if (GC.getActionInfo(iAction).getControlType() != NO_CONTROL)
-	{
-		if (canDoControl((ControlTypes)(GC.getActionInfo(iAction).getControlType())))
-		{
-			return true;
-		}
+		return true;
 	}
 
 	if (gDLL->getInterfaceIFace()->isCitySelection())
@@ -1367,65 +1349,53 @@ bool CvGame::canHandleAction(int iAction, CvPlot* pPlot, bool bTestVisible, bool
 		return false; // XXX hack!
 	}
 
-	pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
-	if (pHeadSelectedUnit != NULL)
+	if (pHeadSelectedUnit != NULL && pHeadSelectedUnit->getOwner() == getActivePlayer()
+	&& (isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || GET_PLAYER(pHeadSelectedUnit->getOwner()).isTurnActive()))
 	{
-		if (pHeadSelectedUnit->getOwner() == getActivePlayer())
+		CvSelectionGroup* pSelectedInterfaceList = gDLL->getInterfaceIFace()->getSelectionList();
+
+		if (GC.getActionInfo(iAction).getMissionType() != NO_MISSION)
 		{
-			if (isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || GET_PLAYER(pHeadSelectedUnit->getOwner()).isTurnActive())
+			CvPlot* pMissionPlot = NULL;
+
+			if (gDLL->getInterfaceIFace()->mirrorsSelectionGroup())
 			{
-				CvSelectionGroup* pSelectedInterfaceList = gDLL->getInterfaceIFace()->getSelectionList();
+				CvSelectionGroup* pSelectedGroup = pHeadSelectedUnit->getGroup();
 
-				if (GC.getActionInfo(iAction).getMissionType() != NO_MISSION)
+				if (pPlot != NULL)
 				{
-					if (gDLL->getInterfaceIFace()->mirrorsSelectionGroup())
-					{
-						pSelectedGroup = pHeadSelectedUnit->getGroup();
-
-						if (pPlot != NULL)
-						{
-							pMissionPlot = pPlot;
-						}
-						else if (bShift)
-						{
-							pMissionPlot = pSelectedGroup->lastMissionPlot();
-						}
-						else
-						{
-							pMissionPlot = NULL;
-						}
-
-						if ((pMissionPlot == NULL) || !(pMissionPlot->isVisible(pHeadSelectedUnit->getTeam(), false)))
-						{
-							pMissionPlot = pSelectedGroup->plot();
-						}
-
-					}
-					else
-					{
-						pMissionPlot = pSelectedInterfaceList->plot();
-					}
-
-					if (pSelectedInterfaceList->canStartMission(GC.getActionInfo(iAction).getMissionType(), GC.getActionInfo(iAction).getMissionData(), -1, pMissionPlot, bTestVisible, bUseCache))
-					{
-						return true;
-					}
+					pMissionPlot = pPlot;
+				}
+				else if (gDLL->shiftKey())
+				{
+					pMissionPlot = pSelectedGroup->lastMissionPlot();
 				}
 
-				if (GC.getActionInfo(iAction).getCommandType() != NO_COMMAND)
+				if (pMissionPlot == NULL || !pMissionPlot->isVisible(pHeadSelectedUnit->getTeam(), false))
 				{
-					if (pSelectedInterfaceList->canDoCommand(((CommandTypes)(GC.getActionInfo(iAction).getCommandType())), GC.getActionInfo(iAction).getCommandData(), -1, bTestVisible, bUseCache))
-					{
-						return true;
-					}
-				}
-
-				if (gDLL->getInterfaceIFace()->canDoInterfaceMode(((InterfaceModeTypes)GC.getActionInfo(iAction).getInterfaceModeType()), pSelectedInterfaceList))
-				{
-					return true;
+					pMissionPlot = pSelectedGroup->plot();
 				}
 			}
+			else pMissionPlot = pSelectedInterfaceList->plot();
+
+
+			if (pSelectedInterfaceList->canStartMission(GC.getActionInfo(iAction).getMissionType(), GC.getActionInfo(iAction).getMissionData(), -1, pMissionPlot, bTestVisible, bUseCache))
+			{
+				return true;
+			}
+		}
+
+		if (GC.getActionInfo(iAction).getCommandType() != NO_COMMAND
+		&& pSelectedInterfaceList->canDoCommand((CommandTypes)GC.getActionInfo(iAction).getCommandType(), GC.getActionInfo(iAction).getCommandData(), -1, bTestVisible, bUseCache))
+		{
+			return true;
+		}
+
+		if (gDLL->getInterfaceIFace()->canDoInterfaceMode((InterfaceModeTypes)GC.getActionInfo(iAction).getInterfaceModeType(), pSelectedInterfaceList))
+		{
+			return true;
 		}
 	}
 

@@ -21032,45 +21032,6 @@ void CvGameTextMgr::setBuildingActualEffects(CvWStringBuffer &szBuffer, CvWStrin
 }
 
 
-void buildingHelpTechModifiers(/*in out*/ CvWStringBuffer& szBuffer, const IDValueMap<TechTypes, int>& modifierArray, const PlayerTypes ePlayer, const TeamTypes eTeam, const char* const textKeyKnown, const char* const textKeyUnknown, const int symbolCharPositive, const int symbolCharNegative)
-{
-	// tepid argument for using iterator instead of indexing: https://stackoverflow.com/a/776629/6402065
-	// TODO: test that on this compiler
-	foreach_(const TechModifier& pair, modifierArray)
-	{
-		const TechTypes& tech = pair.first;
-		const int& modifier = pair.second;
-		if (modifier > 0)
-		{
-			szBuffer.append(NEWLINE);
-			if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(tech))
-			{
-				szBuffer.append(gDLL->getText(textKeyKnown, modifier, gDLL->getSymbolID(symbolCharPositive), GC.getTechInfo(tech).getTextKeyWide()));
-			}
-			else szBuffer.append(gDLL->getText(textKeyUnknown, modifier, gDLL->getSymbolID(symbolCharPositive), GC.getTechInfo(tech).getTextKeyWide()));
-		}
-		else if (modifier < 0)
-		{
-			szBuffer.append(NEWLINE);
-			if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(tech))
-			{
-				szBuffer.append(gDLL->getText(textKeyKnown, -modifier, gDLL->getSymbolID(symbolCharNegative), GC.getTechInfo(tech).getTextKeyWide()));
-			}
-			else szBuffer.append(gDLL->getText(textKeyUnknown, -modifier, gDLL->getSymbolID(symbolCharNegative), GC.getTechInfo(tech).getTextKeyWide()));
-		}
-	}
-}
-
-void buildingHelpTechAndSpecialistModifiers(/* in out*/ CvWStringBuffer& szBuffer, const CvBuildingInfo& kBuilding, const PlayerTypes ePlayer, const TeamTypes eTeam)
-{
-	buildingHelpTechModifiers(szBuffer, kBuilding.getTechHappinessTypes(), ePlayer, eTeam,
-		"TXT_KEY_BUILDINGHELP_TECH_HAPPINESS_TYPE_KNOWN", "TXT_KEY_BUILDINGHELP_TECH_HAPPINESS_TYPE",
-		HAPPY_CHAR, UNHAPPY_CHAR);
-	buildingHelpTechModifiers(szBuffer, kBuilding.getTechHealthTypes(), ePlayer, eTeam,
-		"TXT_KEY_BUILDINGHELP_TECH_HEALTH_TYPE_KNOWN", "TXT_KEY_BUILDINGHELP_TECH_HEALTH_TYPE",
-		HEALTHY_CHAR, UNHEALTHY_CHAR);
-}
-
 /*
  * Calls new function below without displaying actual effects.
  */
@@ -21517,8 +21478,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion(), szBuffer);
 		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion_2(), szBuffer);
 		setFreePromoBuildingHelp((PromotionTypes)kBuilding.getFreePromotion_3(), szBuffer);
-
-		buildingHelpTechAndSpecialistModifiers(szBuffer, kBuilding, ePlayer, eTeam);
 	}
 
 	if (kBuilding.isProvidesFreshWater())
@@ -22403,9 +22362,8 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	{
 		if (kBuilding.getTechOutbreakLevelChange(iI) != 0)
 		{
-			TechTypes eTech = ((TechTypes)iI);
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_TECH_OUTBREAK_LEVEL_CHANGE", GC.getTechInfo(eTech).getDescription(), kBuilding.getTechOutbreakLevelChange(iI)));
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_TECH_OUTBREAK_LEVEL_CHANGE", GC.getTechInfo(static_cast<TechTypes>(iI)).getDescription(), kBuilding.getTechOutbreakLevelChange(iI)));
 		}
 	}
 
@@ -22895,21 +22853,22 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
 		{
-			if (GC.getGame().canEverResearch((TechTypes)iTech))
+			const TechTypes eTech = static_cast<TechTypes>(iTech);
+			if (GC.getGame().canEverResearch(eTech))
 			{
 				if (kBuilding.isAnyTechCommerceChanges())
 				{
 					if (bCivilopediaText)
 					{
-						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo((TechTypes)iTech).getType()).GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
-					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech((TechTypes)iTech))
+					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
 					{
-						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
 					else
 					{
-						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
 					setCommerceChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechCommerceChangeArray(iTech), false, true);
 				}
@@ -22917,15 +22876,15 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				{
 					if (bCivilopediaText)
 					{
-						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo((TechTypes)iTech).getType()).GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
-					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech((TechTypes)iTech))
+					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
 					{
-						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
 					else
 					{
-						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
 					setYieldChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechYieldChangeArray(iTech), false, true);
 				}
@@ -22947,7 +22906,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 								szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_TURN_CITIZENS_INTO", iChange, CvWString(GC.getSpecialistInfo((SpecialistTypes)iSpecialist).getType()).GetCString(), GC.getSpecialistInfo((SpecialistTypes) iSpecialist).getTextKeyWide()));
 							}
 							szBuffer.append(gDLL->getText("TXT_KEY_WITH"));
-							szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getTechInfo((TechTypes)iTech).getType()).GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+							szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
 							szBuffer.append(szTempBuffer);
 						}
 					}
@@ -22957,15 +22916,15 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				{
 					if (bCivilopediaText)
 					{
-						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo((TechTypes)iTech).getType()).GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
-					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech((TechTypes)iTech))
+					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
 					{
-						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
 					else
 					{
-						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
 					setCommerceChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechCommerceModifierArray(iTech), true, true);
 				}
@@ -22974,35 +22933,35 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				{
 					if (bCivilopediaText)
 					{
-						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo((TechTypes)iTech).getType()).GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+						szTempBuffer.Format(L"%s<link=%s>%s</link>", gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
-					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech((TechTypes)iTech))
+					else if (GC.getGame().getActivePlayer() != NO_PLAYER && ePlayer != NO_PLAYER && GET_TEAM(eTeam).isHasTech(eTech))
 					{
-						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+						szTempBuffer.Format(SETCOLR L"%s%s" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
 					else
 					{
-						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
+						szTempBuffer.Format(L"%s%s", gDLL->getText("TXT_KEY_WITH").GetCString(), GC.getTechInfo(eTech).getDescription());
 					}
 					setYieldChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechYieldModifierArray(iTech), true, true);
 				}
 
-				if (kBuilding.getTechHealthChanges(iTech) != 0)
+				if (kBuilding.getTechHealth(eTech) != 0)
 				{
-					szFirstBuffer.Format(L"%s%c+%d%c%s ", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getTechHealthChanges(iTech)), (((kBuilding.getTechHealthChanges(iTech) > 0) ? gDLL->getSymbolID(HEALTHY_CHAR): gDLL->getSymbolID(UNHEALTHY_CHAR))), gDLL->getText("TXT_KEY_WITH").GetCString());
-					szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getTechInfo((TechTypes)iTech).getType()).GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
-					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (kBuilding.getTechHealthChanges(iTech) != iLast));
-					iLast = kBuilding.getTechHealthChanges(iTech);
+					szFirstBuffer.Format(L"%s%c+%d%c%s ", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getTechHealth(eTech)), kBuilding.getTechHealth(eTech) > 0 ? gDLL->getSymbolID(HEALTHY_CHAR): gDLL->getSymbolID(UNHEALTHY_CHAR), gDLL->getText("TXT_KEY_WITH").GetCString());
+					szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
+					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (kBuilding.getTechHealth(eTech) != iLast));
+					iLast = kBuilding.getTechHealth(eTech);
 				}
 
 				iLast = 0;
 
-				if (kBuilding.getTechHappinessChanges(iTech) != 0)
+				if (kBuilding.getTechHappiness(eTech) != 0)
 				{
-					szFirstBuffer.Format(L"%s%c+%d%c%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getTechHappinessChanges(iTech)), (((kBuilding.getTechHappinessChanges(iTech) > 0) ? gDLL->getSymbolID(HAPPY_CHAR): gDLL->getSymbolID(UNHAPPY_CHAR))), gDLL->getText("TXT_KEY_WITH").GetCString());
-					szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getTechInfo((TechTypes)iTech).getType()).GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
-					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (kBuilding.getTechHappinessChanges(iTech) != iLast));
-					iLast = kBuilding.getTechHappinessChanges(iTech);
+					szFirstBuffer.Format(L"%s%c+%d%c%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getTechHappiness(eTech)), kBuilding.getTechHappiness(eTech) > 0 ? gDLL->getSymbolID(HAPPY_CHAR): gDLL->getSymbolID(UNHAPPY_CHAR), gDLL->getText("TXT_KEY_WITH").GetCString());
+					szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription());
+					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (kBuilding.getTechHappiness(eTech) != iLast));
+					iLast = kBuilding.getTechHappiness(eTech);
 				}
 			}
 		}
@@ -27685,9 +27644,9 @@ void CvGameTextMgr::buildBuildingTechHappinessChangesString(CvWStringBuffer &szB
 {
 	CvWString szTempBuffer;
 	CvWString szFirstBuffer;
-	if (GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHappinessChanges(eTech) != 0)
+	if (GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHappiness(eTech) != 0)
 	{
-		szTempBuffer.Format(L"%s%c+%d%c%s<link=%s>%s</link>", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHappinessChanges(eTech)), (((GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHappinessChanges(eTech) > 0) ? gDLL->getSymbolID(HAPPY_CHAR): gDLL->getSymbolID(UNHAPPY_CHAR))), gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
+		szTempBuffer.Format(L"%s%c+%d%c%s<link=%s>%s</link>", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHappiness(eTech)), (((GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHappiness(eTech) > 0) ? gDLL->getSymbolID(HAPPY_CHAR): gDLL->getSymbolID(UNHAPPY_CHAR))), gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
 		setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", true);
 	}
 }
@@ -27696,9 +27655,9 @@ void CvGameTextMgr::buildBuildingTechHealthChangesString(CvWStringBuffer &szBuff
 {
 	CvWString szTempBuffer;
 	CvWString szFirstBuffer;
-	if (GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHealthChanges(eTech) != 0)
+	if (GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHealth(eTech) != 0)
 	{
-		szTempBuffer.Format(L"%s%c+%d%c%s<link=%s>%s</link>", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHealthChanges(eTech)), (((GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHealthChanges(eTech) > 0) ? gDLL->getSymbolID(HEALTHY_CHAR): gDLL->getSymbolID(UNHEALTHY_CHAR))), gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
+		szTempBuffer.Format(L"%s%c+%d%c%s<link=%s>%s</link>", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHealth(eTech)), (((GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHealth(eTech) > 0) ? gDLL->getSymbolID(HEALTHY_CHAR): gDLL->getSymbolID(UNHEALTHY_CHAR))), gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
 		setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", true);
 	}
 }
