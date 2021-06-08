@@ -1190,7 +1190,7 @@ class Pedia:
 			#Check if Happiness Types techs don't appear before building can be unlocked or after is obsoleted
 			for pair in CvBuildingInfo.getTechHappinessTypes():
 				try:
-					iTech = pair.first
+					iTech = pair.id
 					iTechHTLoc = GC.getTechInfo(iTech).getGridX()
 				except:
 					iTech = -1
@@ -1198,7 +1198,7 @@ class Pedia:
 				if GC.getTechInfo(iTech) != None and iTechHTLoc <= iTechLoc:
 					print CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Happiness Types early tech: "+str(iTechHTLoc)+" "+GC.getTechInfo(iTech).getType()
 				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechHTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
-					print CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Happiness Types late tech: "+str(iTechHTLoc)+" "+GC.getTechInfo(iTech).getType()
+					print CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Happiness Types late tech: "+str(iTechHTLoc)+" "+GC.getTechInfo(iTech).getType()
 
 			#Check if building needs bonus before is available	
 			self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
