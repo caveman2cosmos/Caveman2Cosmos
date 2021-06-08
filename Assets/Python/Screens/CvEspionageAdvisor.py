@@ -163,7 +163,8 @@ class TheScreen:
 			screen.show("EA_Col_Tab1")
 			self.drawSpyvSpyTab(screen)
 
-		if GAME.isDebugMode():
+		import DebugUtils
+		if DebugUtils.isAnyDebugMode():
 			screen.addDropDownBoxGFC("DebugDropdown", 22, 0, 300, iWidGen, 554, -1, iFontTitle)
 			for j in range(GC.getMAX_PC_PLAYERS()):
 				if GC.getPlayer(j).isAlive():

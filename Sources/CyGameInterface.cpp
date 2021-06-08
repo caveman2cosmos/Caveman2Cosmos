@@ -291,7 +291,6 @@ void CyGamePythonInterface()
 		.def("getDiplomaticVictoryAchieved", &CyGame::getDiplomaticVictoryAchieved, "bool ()")
 		.def("getCutLosersCounter", &CyGame::getCutLosersCounter)
 		.def("getHighToLowCounter", &CyGame::getHighToLowCounter)
-		.def("cheatCodesEnabled", &CyGame::cheatCodesEnabled)
 		.def("setVictoryValid", &CyGame::setVictoryValid, "(int iVictoryType, bool bNewVal)")
 
 		.def("isModderGameOption", &CyGame::isModderGameOption, "bool ()")

@@ -209,7 +209,8 @@ class CvInfoScreen:
 		screen.hide("VS_Tab_Act3")
 
 		# Debug DropDown
-		if self.bDebug:
+		import DebugUtils
+		if DebugUtils.isAnyDebugMode():
 			DD = "Info_DebugDD"
 			screen.addDropDownBoxGFC(DD, 8, 0, 300, eWidGen, 1, 2, FontTypes.GAME_FONT)
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):

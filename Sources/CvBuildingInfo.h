@@ -479,10 +479,12 @@ public:
 	//int getNumTechHappinessTypes() const;
 	int getTechHappiness(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHappinessTypes() const { return m_aTechHappinessTypes; }
+	const python::list cyGetTechHappinessTypes() const { return m_aTechHappinessTypes.makeList(); }
 
 	//int getNumTechHealthTypes() const;
 	int getTechHealthType(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHealthTypes() const { return m_aTechHealthTypes; }
+	const python::list cyGetTechHealthTypes() const { return m_aTechHealthTypes.makeList(); }
 
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
