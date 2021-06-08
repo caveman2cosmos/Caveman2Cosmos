@@ -9398,14 +9398,11 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	int iPop = getPopulation();
 	iAngryPop += range((iUnhappy + iBad) - (iHappy + iGood), 0, iPop) - range(iUnhappy - iHappy, 0, iPop);
 
-	if (kBuilding.getTechHappinessChanges(NO_TECH) != 0)
+	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessTypes())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
 		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI))
-			{
-				addGoodOrBad(kBuilding.getTechHappinessChanges(iI), iGood, iBad);
-			}
+			addGoodOrBad(modifier.second, iGood, iBad);
 		}
 	}
 
@@ -9458,7 +9455,7 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
  *
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding)
+int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding) const
 {
 	int iGood = 0, iBad = 0, iSpoiledFood = 0, iStarvation = 0;
 	return getAdditionalHealthByBuilding(eBuilding, iGood, iBad, iSpoiledFood, iStarvation);
@@ -9471,7 +9468,7 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding)
  * Doesn't reset iGood, iBad, iSpoiledFood, iStarvation to zero.
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iSpoiledFood, int& iStarvation)
+int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iSpoiledFood, int& iStarvation) const
 {
 	PROFILE_FUNC();
 

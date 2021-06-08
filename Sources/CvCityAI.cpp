@@ -14736,7 +14736,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		|| kBuilding.getCommerceHappiness(NO_COMMERCE) > 0
 		|| kBuilding.getBonusHappinessChanges(NO_BONUS) > 0
 		|| kBuilding.getBuildingHappinessChanges(NO_BUILDING) > 0
-		|| kBuilding.getTechHappinessChanges(NO_TECH) > 0
 		|| GET_PLAYER(getOwner()).getExtraBuildingHappiness(eBuilding) > 0)
 		{
 			return true;

@@ -22994,12 +22994,13 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 				iLast = 0;
 
-				if (kBuilding.getTechHappinessChanges(iTech) != 0)
+				const int techHappiness = kBuilding.getTechHappiness((TechTypes)iTech);
+				if (techHappiness != 0)
 				{
-					szFirstBuffer.Format(L"%s%c+%d%c%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getTechHappinessChanges(iTech)), (((kBuilding.getTechHappinessChanges(iTech) > 0) ? gDLL->getSymbolID(HAPPY_CHAR): gDLL->getSymbolID(UNHAPPY_CHAR))), gDLL->getText("TXT_KEY_WITH").GetCString());
+					szFirstBuffer.Format(L"%s%c+%d%c%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(techHappiness), (techHappiness > 0 ? gDLL->getSymbolID(HAPPY_CHAR): gDLL->getSymbolID(UNHAPPY_CHAR)), gDLL->getText("TXT_KEY_WITH").GetCString());
 					szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getTechInfo((TechTypes)iTech).getType()).GetCString(), GC.getTechInfo((TechTypes)iTech).getDescription());
-					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (kBuilding.getTechHappinessChanges(iTech) != iLast));
-					iLast = kBuilding.getTechHappinessChanges(iTech);
+					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", techHappiness != iLast);
+					iLast = techHappiness;
 				}
 			}
 		}
@@ -27682,9 +27683,10 @@ void CvGameTextMgr::buildBuildingTechHappinessChangesString(CvWStringBuffer &szB
 {
 	CvWString szTempBuffer;
 	CvWString szFirstBuffer;
-	if (GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHappinessChanges(eTech) != 0)
+	const int techHappiness = GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHappiness(eTech);
+	if (techHappiness != 0)
 	{
-		szTempBuffer.Format(L"%s%c+%d%c%s<link=%s>%s</link>", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHappinessChanges(eTech)), (((GC.getBuildingInfo((BuildingTypes)iBuildingType).getTechHappinessChanges(eTech) > 0) ? gDLL->getSymbolID(HAPPY_CHAR): gDLL->getSymbolID(UNHAPPY_CHAR))), gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
+		szTempBuffer.Format(L"%s%c+%d%c%s<link=%s>%s</link>", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(techHappiness), (techHappiness > 0 ? gDLL->getSymbolID(HAPPY_CHAR): gDLL->getSymbolID(UNHAPPY_CHAR)), gDLL->getText("TXT_KEY_WITH").GetCString(), CvWString(GC.getBuildingInfo((BuildingTypes)iBuildingType).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iBuildingType).getDescription());
 		setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", true);
 	}
 }
