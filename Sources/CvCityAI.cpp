@@ -7912,7 +7912,7 @@ int CvCityAI::AI_getTargetSize() const
 }
 
 
-void CvCityAI::AI_getYieldMultipliers(int& iFoodMultiplier, int& iProductionMultiplier, int& iCommerceMultiplier, int& iDesiredFoodChange)
+void CvCityAI::AI_getYieldMultipliers(int& iFoodMultiplier, int& iProductionMultiplier, int& iCommerceMultiplier, int& iDesiredFoodChange) const
 {
 	iFoodMultiplier = 100;
 	iCommerceMultiplier = 100;
