@@ -3246,14 +3246,6 @@
 				<BuildingType>BUILDING_STOCKMARKET</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>21150</iCost>
-			<TechCommerceModifiers>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_DERIVATIVES</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-			</TechCommerceModifiers>
 			<iGlobalTradeRoutes>3</iGlobalTradeRoutes>
 			<iAsset>7</iAsset>
 			<Flavors>
@@ -3589,12 +3581,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_GEOLOGY</TechType>
-					<iModifier>1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_GEOLOGY</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iAreaHappiness>1</iAreaHappiness>
 			<FreePromotion>PROMOTION_SENTRY</FreePromotion>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
@@ -3779,12 +3771,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_FLINTLOCK</TechType>
-					<iModifier>1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_FLINTLOCK</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iAreaHappiness>1</iAreaHappiness>
 			<FreePromotion>PROMOTION_SHOCK</FreePromotion>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
@@ -4010,12 +4002,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_SEXTANT</TechType>
-					<iModifier>1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_SEXTANT</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iAreaHappiness>1</iAreaHappiness>
 			<FreePromotion>PROMOTION_SEA_HUNTER1</FreePromotion>
 			<iFoodKept>30</iFoodKept>
@@ -4199,12 +4191,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_DRUG_TRADE</TechType>
-					<iModifier>1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_DRUG_TRADE</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iAreaHappiness>1</iAreaHappiness>
 			<FreePromotion>PROMOTION_TACTICS</FreePromotion>
 			<iEspionageDefense>30</iEspionageDefense>
@@ -11648,16 +11640,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_IDEOGRAMS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>

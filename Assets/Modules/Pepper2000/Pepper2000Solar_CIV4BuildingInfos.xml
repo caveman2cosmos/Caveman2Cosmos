@@ -2193,14 +2193,6 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_ANTIMATTER_HARVESTER</FreeBuilding>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MERCURY_COLONY</BuildingType>
 				<BuildingType>BUILDING_SOLAR_EFFECT</BuildingType>

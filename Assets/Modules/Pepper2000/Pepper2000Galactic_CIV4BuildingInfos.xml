@@ -759,14 +759,6 @@
 				<iCommerce>175</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_PARTICLE_GENETICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
 			</PrereqInCityBuildings>
@@ -2148,14 +2140,6 @@
 				<iYield>50</iYield>
 				<iYield>15</iYield>
 			</YieldChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_COMPACT_WORMHOLES</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
@@ -2596,13 +2580,6 @@
 			</YieldChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
-					<TechYield>
-						<iYield>0</iYield>
-						<iYield>10</iYield>
-					</TechYield>
-				</TechYieldChange>
-				<TechYieldChange>
 					<PrereqTech>TECH_INDUCED_SUPERNOVA</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
@@ -2886,16 +2863,6 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_EXOTIC_STARS</PrereqTech>
-					<TechYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>5</iYield>
-					</TechYield>
-				</TechYieldChange>
-			</TechYieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPTURED_NEUTRON_STAR</BuildingType>
 			</PrereqInCityBuildings>

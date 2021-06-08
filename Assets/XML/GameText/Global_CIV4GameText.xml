@@ -17094,6 +17094,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Menú inicial</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_SYSTEM_END_TURN</Tag>
+		<English>Press &lt;ENTER> to end turn...</English>
+		<French>Appuyez sur &lt;ENTRER> pour finir votre tour...</French>
+		<German>Runde beenden mit &lt;EINGABETASTE> ...</German>
+		<Italian>Premi &lt;INVIO> per terminare il turno...</Italian>
+		<Spanish>Pulsar &lt;INTRO> para terminar el turno...</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_GAME_PAUSED</Tag>
 		<!-- Human Player Alias -->
 		<English>Game Paused by %s1</English>

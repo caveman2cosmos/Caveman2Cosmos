@@ -52,6 +52,7 @@ class BugGeneralOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addTextDropdown(screen, right, right, "MainInterface__UnitIconSize", True)
 		self.addCheckbox(screen, right, "MainInterface__UseAIPathing")
 		self.addCheckbox(screen, right, "MainInterface__AutoEndDecisionlessTurns")
+		self.addIntDropdown(screen, right, right, "MainInterface__AutoEndTurnDelay", True)
 		self.addCheckbox(screen, right, "MainInterface__MinimizeAITurnSlices")
 		self.addCheckbox(screen, right, "MainInterface__InverseShiftForQueueing")
 

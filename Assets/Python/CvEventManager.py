@@ -448,8 +448,10 @@ class CvEventManager:
 							DebugUtils.initWonderMovie()
 							return 1
 						elif key == InputTypes.KB_Z:
-							CyInterface().addImmediateMessage("Dll Debug Mode: %s" %(not GAME.isDebugMode()), "AS2D_GOODY_MAP")
+							bNewState = not GAME.isDebugMode()
+							CyInterface().addImmediateMessage("Dll Debug Mode: " + str(bNewState), "AS2D_GOODY_MAP")
 							GAME.toggleDebugMode()
+							CvScreensInterface.mainInterface.bDebugMode = bNewState
 							return 1
 						elif key == InputTypes.KB_E:
 							DebugUtils.initEffectViewer(px, py)
