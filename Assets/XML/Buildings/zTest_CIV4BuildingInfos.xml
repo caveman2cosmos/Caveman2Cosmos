@@ -253,34 +253,5 @@
 				</TechHealthChange>
 			</TechHealthChanges>
 		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ZZZTEST2</Type>
-			<Description>TXT_ZZZTEST2</Description>
-			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<PrereqTech>TECH_NOMADISM</PrereqTech>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<PrereqTech>TECH_ARCHERY</PrereqTech>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
-		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
