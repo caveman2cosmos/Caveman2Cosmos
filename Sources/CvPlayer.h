@@ -339,7 +339,7 @@ public:
 	int calculateTotalCommerce() const;
 
 	bool canEverResearch(TechTypes eTech) const;
-	bool canResearch(TechTypes eTech = NO_TECH) const;
+	bool canResearch(TechTypes eTech) const;
 	TechTypes getCurrentResearch() const;
 	bool isCurrentResearchRepeat() const;
 	bool isNoResearchAvailable() const;
