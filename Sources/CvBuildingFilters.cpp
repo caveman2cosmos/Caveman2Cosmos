@@ -113,7 +113,7 @@ bool BuildingFilterIsHappiness::isFilteredBuilding(const CvPlayer *pPlayer, CvCi
 		return pCity->getAdditionalHappinessByBuilding(eBuilding) > 0;
 	}
 	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
-	foreach_(const TechModifier& modifier, buildingInfo.getTechHappinessTypes())
+	foreach_(const TechModifier& modifier, buildingInfo.getTechHappinessChanges())
 	{
 		if (modifier.second > 0)
 			return true;
@@ -130,7 +130,7 @@ bool BuildingFilterIsHealth::isFilteredBuilding(const CvPlayer *pPlayer, CvCity 
 		return pCity->getAdditionalHealthByBuilding(eBuilding) > 0;
 	}
 	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
-	foreach_(const TechModifier& modifier, buildingInfo.getTechHealthTypes())
+	foreach_(const TechModifier& modifier, buildingInfo.getTechHealthChanges())
 	{
 		if (modifier.second > 0)
 			return true;
@@ -147,7 +147,7 @@ bool BuildingFilterIsUnhappiness::isFilteredBuilding(const CvPlayer *pPlayer, Cv
 		return pCity->getAdditionalHappinessByBuilding(eBuilding) < 0;
 	}
 	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
-	foreach_(const TechModifier& modifier, buildingInfo.getTechHappinessTypes())
+	foreach_(const TechModifier& modifier, buildingInfo.getTechHappinessChanges())
 	{
 		if (modifier.second < 0)
 			return true;
@@ -164,7 +164,7 @@ bool BuildingFilterIsUnhealthiness::isFilteredBuilding(const CvPlayer *pPlayer, 
 		return pCity->getAdditionalHealthByBuilding(eBuilding) < 0;
 	}
 	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
-	foreach_(const TechModifier& modifier, buildingInfo.getTechHealthTypes())
+	foreach_(const TechModifier& modifier, buildingInfo.getTechHealthChanges())
 	{
 		if (modifier.second < 0)
 			return true;

@@ -338,7 +338,6 @@ public:
 	int calculateResearchRate(TechTypes eTech = NO_TECH) const;
 	int calculateTotalCommerce() const;
 
-	bool isResearch() const;
 	bool canEverResearch(TechTypes eTech) const;
 	bool canResearch(TechTypes eTech) const;
 	TechTypes getCurrentResearch() const;

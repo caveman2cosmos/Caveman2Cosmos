@@ -297,8 +297,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		}
 	}
 
-	if (Cy::call<bool>(PYGameModule, "citiesDestroyFeatures", Cy::Args(iX, iY))
-	&& pPlot->getFeatureType() != NO_FEATURE && pPlot->getFeatureType() != GC.getFEATURE_FLOOD_PLAINS()
+	if (pPlot->getFeatureType() != NO_FEATURE && pPlot->getFeatureType() != GC.getFEATURE_FLOOD_PLAINS()
 	&& (GC.getFeatureInfo(pPlot->getFeatureType()).getPopDestroys() == 0 || GC.getFeatureInfo(pPlot->getFeatureType()).getPopDestroys() == 1))
 	{
 		pPlot->setFeatureType(NO_FEATURE);
@@ -5342,12 +5341,12 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeExtraCityDefenseRecoverySpeedModifier(kBuilding.getCityDefenseRecoverySpeedModifier() * iChange);
 	}
 
-	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessTypes())
+	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessChanges())
 	{
 		changeTechHappiness(modifier.first, modifier.second * iChange);
 	}
 
-	foreach_(const TechModifier& modifier, kBuilding.getTechHealthTypes())
+	foreach_(const TechModifier& modifier, kBuilding.getTechHealthChanges())
 	{
 		changeTechHealth(modifier.first, modifier.second * iChange);
 	}
@@ -9398,14 +9397,11 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	int iPop = getPopulation();
 	iAngryPop += range((iUnhappy + iBad) - (iHappy + iGood), 0, iPop) - range(iUnhappy - iHappy, 0, iPop);
 
-	if (kBuilding.getTechHappinessChanges(NO_TECH) != 0)
+	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessChanges())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
 		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI))
-			{
-				addGoodOrBad(kBuilding.getTechHappinessChanges(iI), iGood, iBad);
-			}
+			addGoodOrBad(modifier.second, iGood, iBad);
 		}
 	}
 
@@ -9572,14 +9568,11 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 		}
 	}
 
-	if (kBuilding.getTechHealthChanges(NO_TECH) != 0)
+	foreach_(const TechModifier& modifier, kBuilding.getTechHealthChanges())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
 		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI))
-			{
-				addGoodOrBad(kBuilding.getTechHealthChanges(iI), iGood, iBad);
-			}
+			addGoodOrBad(modifier.second, iGood, iBad);
 		}
 	}
 
@@ -16331,10 +16324,6 @@ const std::vector< std::pair<float, float> >& CvCity::getWallOverridePoints() co
 
 void CvCity::doGrowth()
 {
-	if (GC.getUSE_CAN_DO_GROWTH_CALLBACK() && Cy::call<bool>(PYGameModule, "doGrowth", Cy::Args() << this))
-	{
-		return;
-	}
 	const int iDiff = foodDifference();
 	changeFood(iDiff);
 	changeFoodKept(iDiff);
@@ -16370,11 +16359,6 @@ void CvCity::doGrowth()
 void CvCity::doCulture()
 {
 	PROFILE_FUNC();
-
-	if (GC.getUSE_CAN_DO_CULTURE_CALLBACK() && Cy::call<bool>(PYGameModule, "doCulture", Cy::Args() << this))
-	{
-		return;
-	}
 	changeCultureTimes100(getOwner(), getCommerceRateTimes100(COMMERCE_CULTURE), false, true);
 }
 
@@ -16383,11 +16367,6 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 {
 	PROFILE_FUNC();
 
-	if (GC.getUSE_CAN_DO_PLOT_CULTURE_CALLBACK()
-	&& Cy::call<bool>(PYGameModule, "doPlotCulture", Cy::Args() << this << bUpdate << ePlayer << iCultureRate))
-	{
-		return;
-	}
 	FAssert(NO_PLAYER != ePlayer);
 
 	const int iCulture = getCultureTimes100(ePlayer);
@@ -16571,11 +16550,6 @@ bool CvCity::doCheckProduction()
 
 void CvCity::doProduction(bool bAllowNoProduction)
 {
-	if (GC.getUSE_CAN_DO_PRODUCTION_CALLBACK() && Cy::call<bool>(PYGameModule, "doProduction", Cy::Args() << this))
-	{
-		return;
-	}
-
 	if (!isHuman() || isProductionAutomated())
 	{
 		//	Koshling - with the unit contracting system we only build units to contractual
@@ -16871,10 +16845,6 @@ void CvCity::doReligion()
 
 void CvCity::doGreatPeople()
 {
-	if (GC.getUSE_CAN_DO_GREATPEOPLE_CALLBACK() && Cy::call<bool>(PYGameModule, "doGreatPeople", Cy::Args() << this))
-	{
-		return;
-	}
 	if (isDisorder())
 	{
 		return;

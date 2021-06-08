@@ -103,7 +103,7 @@ class CvCivicsScreen:
 		self.Y_MID_STAT_BAR = y = Y_STAT_BAR + (H_STAT_BAR - H_EDGE)/2 - 6
 
 		# Caching
-		self.bDebug = bDebug = GAME.isDebugMode()
+		self.bDebug = GAME.isDebugMode()
 		self.iPlayer = iPlayer = GAME.getActivePlayer()
 		self.iPlayerAct = iPlayer
 		self.setActivePlayer(iPlayer)
@@ -157,7 +157,8 @@ class CvCivicsScreen:
 		screen.setImageButton("CivicDisplay", "Art/Interface/Buttons/general/scroll.dds", 8, 0, H_EDGE - 8, H_EDGE - 8, eWidGen, 1, 1)
 
 		# Debug
-		if GAME.isDebugMode():
+		import DebugUtils
+		if DebugUtils.isAnyDebugMode():
 			DD = "Civic_DebugDD"
 			screen.addDropDownBoxGFC(DD, H_EDGE, 0, 300, eWidGen, 1, 1, FontTypes.GAME_FONT)
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):

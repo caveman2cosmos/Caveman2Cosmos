@@ -153,8 +153,8 @@ class CvReligionScreen:
 		screen.setLabel(self.HEADER_NAME, "Background", u"<font=4b>" + localText.getText("TXT_KEY_RELIGION_SCREEN_TITLE", ()).upper() + u"</font>", 1<<2, self.X_SCREEN, self.Y_TITLE, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# Make the scrollable areas for the city list...
-
-		if (CyGame().isDebugMode()):
+		import DebugUtils
+		if DebugUtils.isAnyDebugMode():
 			self.szDropdownName = self.DEBUG_DROPDOWN_ID
 			screen.addDropDownBoxGFC(self.szDropdownName, 22, 12, 300, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			for j in range(GC.getMAX_PLAYERS()):

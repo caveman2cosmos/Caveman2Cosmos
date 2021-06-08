@@ -23,12 +23,6 @@
 				<iYield>150</iYield>
 			</YieldChanges>
 			<iHealth>-30</iHealth>
-			<TechHealthChanges>
-				<TechHealthChange>
-					<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
-			</TechHealthChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

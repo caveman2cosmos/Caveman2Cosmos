@@ -12,10 +12,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>USE_IS_PLAYER_RESEARCH_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>USE_CANNOT_DO_CIVIC_CALLBACK</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
@@ -41,10 +37,6 @@
 	</Define>
 	<Define>
 		<DefineName>USE_GET_BUILDING_COST_MOD_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>USE_CANNOT_HANDLE_ACTION_CALLBACK</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
@@ -91,7 +83,6 @@
 		<DefineName>USE_ON_UNIT_LOST_CALLBACK</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
-	<!--Afforess Additions-->
 	<Define>
 		<DefineName>USE_CAN_DO_MELTDOWN_CALLBACK</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
@@ -101,35 +92,11 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>USE_CAN_DO_GROWTH_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>USE_CAN_DO_CULTURE_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>USE_CAN_DO_PLOT_CULTURE_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>USE_CAN_DO_PRODUCTION_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>USE_CAN_DO_RELIGION_CALLBACK</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>USE_CAN_DO_GREATPEOPLE_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>USE_CAN_RAZE_CITY_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>USE_CAN_DO_RESEARCH_CALLBACK</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
@@ -140,17 +107,4 @@
 		<DefineName>USE_AI_UPDATE_UNIT_CALLBACK</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
-	<Define>
-		<DefineName>USE_AI_CHOOSE_PRODUCTION_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>USE_AI_DO_DIPLO_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>USE_AI_BESTTECH_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<!--Afforess Additions End -->
 </Civ4Defines>

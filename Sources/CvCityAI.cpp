@@ -925,11 +925,6 @@ void CvCityAI::AI_chooseProduction()
 	// only clear the dirty bit if we actually do a check, multiple items might be queued
 	AI_setChooseProductionDirty(false);
 
-	if (GC.getUSE_AI_CHOOSE_PRODUCTION_CALLBACK() && Cy::call<bool>(PYGameModule, "AI_chooseProduction", Cy::Args() << this))
-	{
-		return;
-	}
-
 	bool bInhibitUnits = false;
 	if (isHuman() && isProductionAutomated())
 	{
@@ -953,7 +948,6 @@ void CvCityAI::AI_chooseProduction()
 		{
 			pWaterArea = NULL;
 		}
-
 		bWaterDanger = player.AI_getWaterDanger(plot(), 4) > 0;
 	}
 
@@ -14719,7 +14713,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_HAPPY) != 0)
 	{
-		foreach_(const TechModifier& modifier, kBuilding.getTechHappinessTypes())
+		foreach_(const TechModifier& modifier, kBuilding.getTechHappinessChanges())
 		{
 			if (GET_TEAM(getTeam()).isHasTech(modifier.first) && modifier.second > 0)
 			{
@@ -14736,7 +14730,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		|| kBuilding.getCommerceHappiness(NO_COMMERCE) > 0
 		|| kBuilding.getBonusHappinessChanges(NO_BONUS) > 0
 		|| kBuilding.getBuildingHappinessChanges(NO_BUILDING) > 0
-		|| kBuilding.getTechHappinessChanges(NO_TECH) > 0
 		|| GET_PLAYER(getOwner()).getExtraBuildingHappiness(eBuilding) > 0)
 		{
 			return true;
@@ -14744,7 +14737,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_HEALTHY) != 0)
 	{
-		foreach_(const TechModifier& modifier, kBuilding.getTechHealthTypes())
+		foreach_(const TechModifier& modifier, kBuilding.getTechHealthChanges())
 		{
 			if (GET_TEAM(getTeam()).isHasTech(modifier.first) && modifier.second > 0)
 			{
@@ -14757,7 +14750,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		|| kBuilding.isNoUnhealthyPopulation()
 		|| kBuilding.isBuildingOnlyHealthy()
 		|| kBuilding.getBonusHealthChanges(NO_BONUS) > 0
-		|| kBuilding.getTechHealthChanges(NO_TECH) > 0
 		|| kBuilding.getHealthPercentPerPopulation() > 0
 		|| GET_PLAYER(getOwner()).getExtraBuildingHealth(eBuilding) > 0)
 		{

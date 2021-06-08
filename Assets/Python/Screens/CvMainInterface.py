@@ -96,7 +96,6 @@ class CvMainInterface:
 		# Cache Game Status
 		self.bNetworkMP		= GAME.isNetworkMultiPlayer()
 		self.bMultiPlayer	= GAME.isGameMultiPlayer()
-		self.bDebugMode		= GAME.isDebugMode()
 		# Cache Game Options
 		self.GO_REVOLUTION			= GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION)
 		self.GO_PICK_RELIGION		= GAME.isOption(GameOptionTypes.GAMEOPTION_PICK_RELIGION)
@@ -106,6 +105,7 @@ class CvMainInterface:
 		self.GO_ONE_CITY_CHALLENGE	= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 		# First pass initialization.
 		if self.bInitialize:
+			self.bDebugMode = GAME.isDebugMode()
 			# FOV
 			if MainOpt.isRememberFieldOfView():
 				self.iField_View = int(MainOpt.getFieldOfView())
@@ -1224,6 +1224,8 @@ class CvMainInterface:
 				szOutput = self.szSystemWaiting
 			elif CyIF.shouldDisplayEndTurn():
 				szOutput = ReminderEventManager.g_turnReminderTexts
+				if not szOutput:
+					szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_END_TURN", ())
 			elif CyIF.shouldDisplayWaitingYou():
 				szOutput = self.szSystemWaitingForYou
 				self.iWaitingCounter += 1

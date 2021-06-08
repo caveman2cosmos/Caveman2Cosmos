@@ -2280,6 +2280,7 @@ void CvGame::update()
 		//	on significant events (discovery of mountaineering by someone,
 		//	terra-forming leading to water<->land transformations, etc.)
 		ensureChokePointsEvaluated();
+		gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
 		// Toffer - Attempt to fix the lack of unit cycle process on load
 		gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
 	}
@@ -2354,10 +2355,8 @@ again:
 	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
 	const CvPlayerAI& kActivePlayer = GET_PLAYER(getActivePlayer());
 
-	if (getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false)
-	&& (!kActivePlayer.isTurnActive() || kActivePlayer.isAutoMoves())
-	&& !kActivePlayer.hasBusyUnit()
-	&& !isGameMultiPlayer()
+	if (!isGameMultiPlayer() && getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false)
+	&& (!kActivePlayer.isTurnActive() || kActivePlayer.isAutoMoves() && kActivePlayer.isOption(PLAYEROPTION_QUICK_MOVES))
 	// Toffer - isAlive check is needed for the "you have been defeated" popups to appear as they should.
 	// Without it the game will just pass turns between the AI's without ever refreshing your screen, making it seem like the game freezed the moment you were defeated.
 	&& kActivePlayer.isAlive())
@@ -4584,11 +4583,11 @@ void CvGame::setFinalInitialized(bool bNewValue)
 	OutputDebugString("Setting FinalInitialized: Start");
 	PROFILE_FUNC();
 
-	if (isFinalInitialized() != bNewValue)
+	if (m_bFinalInitialized != bNewValue)
 	{
 		m_bFinalInitialized = bNewValue;
 
-		if (isFinalInitialized())
+		if (bNewValue)
 		{
 			updatePlotGroups();
 
