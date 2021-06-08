@@ -5305,12 +5305,12 @@
 			<iCost>830</iCost>
 			<ObsoleteTech>TECH_UTOPIA_DESTINY</ObsoleteTech>
 			<iHappiness>-5</iHappiness>
-			<TechHappinessTypes>
-				<TechHappinessType>
+			<TechHappinessChanges>
+				<TechHappinessChange>
 					<PrereqTech>TECH_MINORITY_RIGHTS</PrereqTech>
 					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GENETIC_PROFILING</BuildingType>
 			</ReplacementBuildings>

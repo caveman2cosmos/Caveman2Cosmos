@@ -6554,12 +6554,12 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<ObsoleteTech>TECH_CODE_OF_LAWS</ObsoleteTech>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_SACRIFICE_CULT</TechType>
-					<iModifier>1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iWarWearinessModifier>-15</iWarWearinessModifier>
 			<PropertyManipulators>
 				<PropertySource>
@@ -15014,32 +15014,32 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_HUMANISM</TechType>
-					<iModifier>-5</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_ENLIGHTENMENT</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_EMANCIPATION</TechType>
-					<iModifier>-2</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_LABOR_UNIONS</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_COMMUNISM</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_MINORITY_RIGHTS</TechType>
-					<iModifier>-5</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_HUMANISM</PrereqTech>
+					<iHappiness>-5</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ENLIGHTENMENT</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_EMANCIPATION</PrereqTech>
+					<iHappiness>-2</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_COMMUNISM</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_MINORITY_RIGHTS</PrereqTech>
+					<iHappiness>-5</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>

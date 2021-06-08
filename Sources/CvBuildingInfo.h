@@ -367,12 +367,6 @@ public:
 	int getBonusCommercePercentChanges(int i, int j) const;
 	int* getBonusCommercePercentChangesArray(int i) const;
 
-	int getTechHappinessChanges(int i) const;
-	int* m_piTechHappinessChanges;
-
-	int getTechHealthChanges(int i) const;
-	int* m_piTechHealthChanges;
-
 	int getTechCommerceChange(int i, int j) const;
 	int* getTechCommerceChangeArray(int i) const;
 
@@ -482,7 +476,7 @@ public:
 	const python::list cyGetTechHappinessTypes() const { return m_aTechHappinessTypes.makeList(); }
 
 	//int getNumTechHealthTypes() const;
-	int getTechHealthType(TechTypes eTech) const;
+	int getTechHealth(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHealthTypes() const { return m_aTechHealthTypes; }
 	const python::list cyGetTechHealthTypes() const { return m_aTechHealthTypes.makeList(); }
 

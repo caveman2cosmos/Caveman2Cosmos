@@ -9397,14 +9397,11 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	int iPop = getPopulation();
 	iAngryPop += range((iUnhappy + iBad) - (iHappy + iGood), 0, iPop) - range(iUnhappy - iHappy, 0, iPop);
 
-	if (kBuilding.getTechHappinessChanges(NO_TECH) != 0)
+	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessTypes())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
 		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI))
-			{
-				addGoodOrBad(kBuilding.getTechHappinessChanges(iI), iGood, iBad);
-			}
+			addGoodOrBad(modifier.second, iGood, iBad);
 		}
 	}
 
@@ -9571,14 +9568,11 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 		}
 	}
 
-	if (kBuilding.getTechHealthChanges(NO_TECH) != 0)
+	foreach_(const TechModifier& modifier, kBuilding.getTechHealthTypes())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
 		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI))
-			{
-				addGoodOrBad(kBuilding.getTechHealthChanges(iI), iGood, iBad);
-			}
+			addGoodOrBad(modifier.second, iGood, iBad);
 		}
 	}
 
