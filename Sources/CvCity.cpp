@@ -5341,12 +5341,12 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeExtraCityDefenseRecoverySpeedModifier(kBuilding.getCityDefenseRecoverySpeedModifier() * iChange);
 	}
 
-	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessTypes())
+	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessChanges())
 	{
 		changeTechHappiness(modifier.first, modifier.second * iChange);
 	}
 
-	foreach_(const TechModifier& modifier, kBuilding.getTechHealthTypes())
+	foreach_(const TechModifier& modifier, kBuilding.getTechHealthChanges())
 	{
 		changeTechHealth(modifier.first, modifier.second * iChange);
 	}
@@ -9397,7 +9397,7 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	int iPop = getPopulation();
 	iAngryPop += range((iUnhappy + iBad) - (iHappy + iGood), 0, iPop) - range(iUnhappy - iHappy, 0, iPop);
 
-	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessTypes())
+	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessChanges())
 	{
 		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
 		{
@@ -9568,7 +9568,7 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 		}
 	}
 
-	foreach_(const TechModifier& modifier, kBuilding.getTechHealthTypes())
+	foreach_(const TechModifier& modifier, kBuilding.getTechHealthChanges())
 	{
 		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
 		{

@@ -991,6 +991,8 @@
 		<element type="TechSpecialistChanges" minOccurs="0"/>
 		<element type="TechCommerceModifiers" minOccurs="0"/>
 		<element type="TechYieldModifiers" minOccurs="0"/>
+		<element type="TechHappinessChanges" minOccurs="0"/>
+		<element type="TechHealthChanges" minOccurs="0"/>
 		<!-- Technology Affected Buildings: END -->
 		<element type="bDCMNukesOkay" minOccurs="0"/>
 		<element type="iDCMAirbombMission" minOccurs="0"/>

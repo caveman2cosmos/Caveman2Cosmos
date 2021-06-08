@@ -470,15 +470,15 @@ public:
 	int getNumTechOutbreakLevelChanges() const;
 	int getTechOutbreakLevelChange(int iTech) const;
 
-	//int getNumTechHappinessTypes() const;
+	//int getNumTechHappinessChanges() const;
 	int getTechHappiness(TechTypes eTech) const;
-	const IDValueMap<TechTypes, int>& getTechHappinessTypes() const { return m_aTechHappinessTypes; }
-	const python::list cyGetTechHappinessTypes() const { return m_aTechHappinessTypes.makeList(); }
+	const IDValueMap<TechTypes, int>& getTechHappinessChanges() const { return m_aTechHappinessChanges; }
+	const python::list cyGetTechHappinessChanges() const { return m_aTechHappinessChanges.makeList(); }
 
-	//int getNumTechHealthTypes() const;
+	//int getNumTechHealthChanges() const;
 	int getTechHealth(TechTypes eTech) const;
-	const IDValueMap<TechTypes, int>& getTechHealthTypes() const { return m_aTechHealthTypes; }
-	const python::list cyGetTechHealthTypes() const { return m_aTechHealthTypes.makeList(); }
+	const IDValueMap<TechTypes, int>& getTechHealthChanges() const { return m_aTechHealthChanges; }
+	const python::list cyGetTechHealthChanges() const { return m_aTechHealthChanges.makeList(); }
 
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
@@ -877,8 +877,8 @@ protected:
 	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
-	IDValueMap<TechTypes, int> m_aTechHappinessTypes;
-	IDValueMap<TechTypes, int> m_aTechHealthTypes;
+	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
+	IDValueMap<TechTypes, int> m_aTechHealthChanges;
 
 	int** m_ppaiLocalSpecialistYieldChange;
 	int** m_ppaiLocalSpecialistCommerceChange;
