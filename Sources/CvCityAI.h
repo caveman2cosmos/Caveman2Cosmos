@@ -108,7 +108,7 @@ public:
 
 	bool AI_avoidGrowth();
 	bool AI_ignoreGrowth();
-	int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove);
+	int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove) const;
 
 	//	KOSHLING - initialisation called on every city prior to performing unit mission allocation logic
 	//	This allows caches that will remain valid for the processing of the current turn's units to be cleared
@@ -335,16 +335,14 @@ protected:
 	bool AI_foodAvailable(int iExtra = 0) const;
 
 public:
-	int AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false);
+	int AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false) const;
 protected:
 #ifdef YIELD_VALUE_CACHING
 	virtual void AI_NoteWorkerChange();
 	virtual void AI_NoteSpecialistChange();
-
-	int AI_yieldValueWithCache(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization, bool bSpecialist);
 #endif
-	int AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false);
-	int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false);
+	int AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false) const;
+	int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false) const;
 
 	int AI_experienceWeight() const;
 	int AI_buildUnitProb() const;
@@ -388,9 +386,9 @@ private:
 	int	GetBuildingValue(BuildingTypes eType, int iFocusFlags, int threshold, bool bMaximizeFlaggedValue, bool bIgnoreCanConstruct = false);
 	bool buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags) const;
 	void CalculateAllBuildingValues(int iFocusFlags);
-	int happynessValue(int iAddedHappyness, int iBaseHappinessLevel, int iBaseHealthLevel);
+	int happynessValue(int iAddedHappyness, int iBaseHappinessLevel, int iBaseHealthLevel) const;
 	int healthValue(int iAddedHealth, int iUseHappinessLevel, int iBaseHealthLevel, int iBaseFoodDifference) const;
-	int worstWorkedPlotValue();
+	int worstWorkedPlotValue() const;
 	//	Evaluate a building we are considering building here in terms of its
 	//	effect on properties
 	int buildingPropertiesValue(const CvBuildingInfo& kBuilding) const;
@@ -409,7 +407,7 @@ private:
 	void ClearYieldValueCacheImpl();
 	virtual void CheckYieldValueCache(char* label);
 
-	yieldCache yieldValueCache;
+	mutable yieldCache yieldValueCache;
 	static int yieldValueCacheHits;
 	static int yieldValueCacheReads;
 #endif

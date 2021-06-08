@@ -641,7 +641,7 @@ bool CvCityAI::AI_ignoreGrowth()
 }
 
 
-int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove)
+int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove) const
 {
 	PROFILE_FUNC();
 
@@ -10563,7 +10563,7 @@ int CvCityAI::yieldValueCacheHits = 0;
 int CvCityAI::yieldValueCacheReads = 0;
 #endif
 
-int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization)
+int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization) const
 {
 #ifdef YIELD_VALUE_CACHING
 #ifdef _DEBUG
@@ -10695,7 +10695,7 @@ int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoi
 }
 
 
-int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization)
+int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization) const
 {
 	PROFILE_FUNC();
 
@@ -11247,7 +11247,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 }
 
 
-int CvCityAI::AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation)
+int CvCityAI::AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation) const
 {
 	PROFILE_FUNC();
 
@@ -14111,7 +14111,7 @@ int CvCityAI::AI_getPromotionValue(PromotionTypes ePromotion) const
 	return iValue;
 }
 
-SpecialistTypes CvCity::getBestSpecialist(int iExtra)
+SpecialistTypes CvCity::getBestSpecialist(int iExtra) const
 {
 	int iBestValue = 0;
 	SpecialistTypes eBestSpecialist = NO_SPECIALIST;
@@ -14119,7 +14119,7 @@ SpecialistTypes CvCity::getBestSpecialist(int iExtra)
 	{
 		if (isSpecialistValid((SpecialistTypes)iI, iExtra))
 		{
-			int iValue = AI_specialistValue((SpecialistTypes)iI, false, false);
+			const int iValue = AI_specialistValue((SpecialistTypes)iI, false, false);
 			if (iValue > iBestValue)
 			{
 				iBestValue = iValue;
@@ -17535,7 +17535,7 @@ bool CvCityAI::AI_chooseHealerUnit(int iMinNeeded)
 	return bSuccessful;
 }
 
-int CvCityAI::happynessValue(int iAddedHappyness, int iBaseHappinessLevel, int iBaseHealthLevel)
+int CvCityAI::happynessValue(int iAddedHappyness, int iBaseHappinessLevel, int iBaseHealthLevel) const
 {
 	bool bIsNegative = false;
 
@@ -17652,7 +17652,7 @@ int CvCityAI::healthValue(int iAddedHealth, int iUseHappinessLevel, int iBaseHea
 	return iValue;
 }
 
-int CvCityAI::worstWorkedPlotValue()
+int CvCityAI::worstWorkedPlotValue() const
 {
 	int iWorstPlotValue = MAX_INT;
 
@@ -17662,11 +17662,11 @@ int CvCityAI::worstWorkedPlotValue()
 		{
 			if (isWorkingPlot(iI))
 			{
-				CvPlot* pLoopPlot = getCityIndexPlot(iI);
+				const CvPlot* pLoopPlot = getCityIndexPlot(iI);
 
 				if (pLoopPlot != NULL)
 				{
-					int iValue = AI_plotValue(pLoopPlot, false, /*bRemove*/ false, /*bIgnoreFood*/ false, false);
+					const int iValue = AI_plotValue(pLoopPlot, false, /*bRemove*/ false, /*bIgnoreFood*/ false, false);
 
 					if (iValue < iWorstPlotValue)
 					{

@@ -17,12 +17,6 @@ class CvDLLEntity;
 class CvPlot;
 class CvPlotGroup;
 
-//	KOSHLING - Cache yield values where possible
-#define YIELD_VALUE_CACHING
-
-//	Enable canTrain results to be cached within a (caller)defined scope
-#define CAN_TRAIN_CACHING
-
 // BUG - start
 void addGoodOrBad(int iValue, int& iGood, int& iBad);
 void subtractGoodOrBad(int iValue, int& iGood, int& iBad);
@@ -1477,13 +1471,13 @@ public:
 	int getMinimumDefenseLevel() const;
 	void setMinimumDefenseLevel(int iNewValue);
 
-	SpecialistTypes getBestSpecialist(int iExtra);
+	SpecialistTypes getBestSpecialist(int iExtra) const;
 
 	int getNumPopulationEmployed() const;
 	void setNumPopulationEmployed(int iNewValue);
 	void changeNumPopulationEmployed(int iNewValue);
 
-	void removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeopleRate, int& iHappiness, int& iHealthiness, int*& aiYields, int*& aiCommerces);
+	void removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeopleRate, int& iHappiness, int& iHealthiness, int*& aiYields, int*& aiCommerces) const;
 
 	void changeHealthPercentPerPopulation(int iChange);
 	int calculatePopulationHealth() const;
@@ -1503,7 +1497,7 @@ public:
 	virtual bool AI_isEmphasizeAvoidAngryCitizens() const = 0;
 	virtual bool AI_isEmphasizeAvoidUnhealthyCitizens() const = 0;
 
-	virtual int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false) = 0;
+	virtual int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false) const = 0;
 
 	virtual int AI_getMilitaryProductionRateRank() const = 0;
 	virtual int AI_getNavalMilitaryProductionRateRank() const = 0;
@@ -1527,7 +1521,7 @@ public:
 	virtual void AI_assignWorkingPlots() = 0;
 	virtual void AI_updateAssignWork() = 0;
 	virtual bool AI_avoidGrowth() = 0;
-	virtual int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove) = 0;
+	virtual int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove) const = 0;
 	virtual void AI_chooseProduction() = 0;
 	//	KOSHLING - initialisation called on every city prior to performing unit mission allocation logic
 	//	This allows caches that will remian valid for the procesign of teh current turn's units to be cleared

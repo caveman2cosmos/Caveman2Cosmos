@@ -22167,7 +22167,7 @@ void CvCity::changeNumPopulationEmployed(int iChange)
 	FASSERT_NOT_NEGATIVE(getNumPopulationEmployed())
 }
 
-void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeopleRate, int& iHappiness, int& iHealthiness, int*& aiYields, int*& aiCommerces)
+void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeopleRate, int& iHappiness, int& iHealthiness, int*& aiYields, int*& aiCommerces) const
 {
 	PROFILE_FUNC();
 
