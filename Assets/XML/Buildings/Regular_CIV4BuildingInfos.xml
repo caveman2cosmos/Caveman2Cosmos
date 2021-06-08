@@ -5552,12 +5552,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<iHappiness>-1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -8940,12 +8934,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<TechHealthChanges>
-				<TechHealthChange>
-					<PrereqTech>TECH_MOLECULAR_MEDICINE</PrereqTech>
-					<iHealth>2</iHealth>
-				</TechHealthChange>
-			</TechHealthChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -25008,12 +24996,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<iHappiness>-1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -34512,12 +34494,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<iHappiness>-1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -36096,12 +36072,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_SENTIENT_EARTH</PrereqTech>
-					<iHappiness>1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
@@ -44075,12 +44045,6 @@
 				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>234</iCost>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_LEISURE</PrereqTech>
-					<iHappiness>1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
@@ -44600,12 +44564,6 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_ANDROIDS</PrereqTech>
-					<iHappiness>1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_ECOLOGY</PrereqTech>
@@ -49525,12 +49483,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<iHappiness>-1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -53243,12 +53195,6 @@
 				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>475</iCost>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_LEISURE</PrereqTech>
-					<iHappiness>1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
@@ -61978,12 +61924,6 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-					<iHappiness>1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<PropertyManipulators>
 				<PropertySource>
@@ -73697,12 +73637,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_TOURISM</PrereqTech>
-					<iHappiness>1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iPower>1</iPower>
 			<iConquestProb>30</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -85561,12 +85495,6 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<iHappiness>-1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>

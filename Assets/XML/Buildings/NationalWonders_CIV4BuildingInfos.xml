@@ -1565,18 +1565,6 @@
 			<iGlobalHealth>1</iGlobalHealth>
 			<TechHealthChanges>
 				<TechHealthChange>
-					<PrereqTech>TECH_RAILROAD</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
-				<TechHealthChange>
-					<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
-				<TechHealthChange>
-					<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
-				<TechHealthChange>
 					<PrereqTech>TECH_ANDROIDS</PrereqTech>
 					<iHealth>1</iHealth>
 				</TechHealthChange>

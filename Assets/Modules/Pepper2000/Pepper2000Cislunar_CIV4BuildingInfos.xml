@@ -22,12 +22,6 @@
 				<iYield>150</iYield>
 			</YieldChanges>
 			<iHealth>-5</iHealth>
-			<TechHealthChanges>
-				<TechHealthChange>
-					<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
-			</TechHealthChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
