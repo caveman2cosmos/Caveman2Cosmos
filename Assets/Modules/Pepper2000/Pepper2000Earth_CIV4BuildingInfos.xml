@@ -5308,7 +5308,7 @@
 			<TechHappinessChanges>
 				<TechHappinessChange>
 					<PrereqTech>TECH_MINORITY_RIGHTS</PrereqTech>
-					<iModifier>-1</iModifier>
+					<iHappiness>-1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
 			<ReplacementBuildings>
