@@ -785,10 +785,10 @@ class Pedia:
 			
 			#Main tech
 			TechReq = CvUnitInfo.getPrereqAndTech()
-			try:
+			if TechReq != -1:
 				iTechMainLoc = GC.getTechInfo(TechReq).getGridX()
 				iTechMainRow = GC.getTechInfo(TechReq).getGridY()
-			except:
+			else:
 				iTechMainLoc = 0
 				iTechMainRow = 0
 				
@@ -848,9 +848,9 @@ class Pedia:
 					upgradedDesc = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getType()
 					upgradedCost = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getProductionCost()
 					upgradedTech = GC.getTechInfo(GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getPrereqAndTech())
-					try:
+					if upgradedTech != -1:
 						upgradedTechLoc = upgradedTech.getGridX()
-					except:
+					else:
 						upgradedTechLoc = 0		
 					dist = upgradedTechLoc - iTechLoc
 					costdiff = upgradedCost - iCost
@@ -948,10 +948,10 @@ class Pedia:
 			TechReq = CvPromotionInfo.getTechPrereq()
 			iPromotionType = self.getPromotionType(CvPromotionInfo)
 			
-			try:
+			if TechReq != -1:
 				iTechLoc = GC.getTechInfo(TechReq).getGridX()
 				iTechRow = GC.getTechInfo(TechReq).getGridY()
-			except:
+			else:
 				iTechLoc = 0
 				iTechRow = 0
 			
@@ -1189,12 +1189,8 @@ class Pedia:
 			
 			#Check if Happiness Changes techs don't appear before building can be unlocked or after is obsoleted
 			for pair in CvBuildingInfo.getTechHappinessChanges():
-				try:
-					iTech = pair.id
-					iTechTLoc = GC.getTechInfo(iTech).getGridX()
-				except:
-					iTech = -1
-					iTechTLoc = 0				
+				iTech = pair.id
+				iTechTLoc = GC.getTechInfo(iTech).getGridX()	
 				if GC.getTechInfo(iTech) != None and iTechTLoc <= iTechLoc:
 					print CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Happiness Changes early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType()
 				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
@@ -1202,12 +1198,8 @@ class Pedia:
 					
 			#Check if Health Changes techs don't appear before building can be unlocked or after is obsoleted
 			for pair in CvBuildingInfo.getTechHealthChanges():
-				try:
-					iTech = pair.id
-					iTechTLoc = GC.getTechInfo(iTech).getGridX()
-				except:
-					iTech = -1
-					iTechTLoc = 0				
+				iTech = pair.id
+				iTechTLoc = GC.getTechInfo(iTech).getGridX()	
 				if GC.getTechInfo(iTech) != None and iTechTLoc <= iTechLoc:
 					print CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Health Types Changes tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType()
 				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
@@ -1402,10 +1394,10 @@ class Pedia:
 			szName = CvBonusInfo.getDescription()
 			TechReq = CvBonusInfo.getTechReveal()
 			
-			try:
+			if TechReq != -1:
 				iTechLoc = GC.getTechInfo(TechReq).getGridX()
 				iTechRow = GC.getTechInfo(TechReq).getGridY()
-			except:
+			else:
 				iTechLoc = 0
 				iTechRow = 0
 			
@@ -1652,11 +1644,11 @@ class Pedia:
 			else:
 				pass
 			
-			try:
+			if TechReq != -1:
 				iTechLoc = GC.getTechInfo(TechReq).getGridX()
 				iTechRow = GC.getTechInfo(TechReq).getGridY()
-			except:
-				iTechLoc = 0	
+			else:
+				iTechLoc = 0
 				iTechRow = 0				
 			
 			if item:
