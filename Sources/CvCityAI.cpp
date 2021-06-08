@@ -14713,7 +14713,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_HAPPY) != 0)
 	{
-		foreach_(const TechModifier& modifier, kBuilding.getTechHappinessTypes())
+		foreach_(const TechModifier& modifier, kBuilding.getTechHappinessChanges())
 		{
 			if (GET_TEAM(getTeam()).isHasTech(modifier.first) && modifier.second > 0)
 			{
@@ -14737,7 +14737,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_HEALTHY) != 0)
 	{
-		foreach_(const TechModifier& modifier, kBuilding.getTechHealthTypes())
+		foreach_(const TechModifier& modifier, kBuilding.getTechHealthChanges())
 		{
 			if (GET_TEAM(getTeam()).isHasTech(modifier.first) && modifier.second > 0)
 			{

@@ -1627,24 +1627,24 @@ int CvBuildingInfo::getTechOutbreakLevelChange(int iTech) const
 	return 0;
 }
 
-//int CvBuildingInfo::getNumTechHappinessTypes() const
+//int CvBuildingInfo::getNumTechHappinessChanges() const
 //{
-//	return (int)m_aTechHappinessTypes.size();
+//	return (int)m_aTechHappinessChanges.size();
 //}
 
 int CvBuildingInfo::getTechHappiness(TechTypes eTech) const
 {
-	return m_aTechHappinessTypes.getValue(eTech);
+	return m_aTechHappinessChanges.getValue(eTech);
 }
 
-//int CvBuildingInfo::getNumTechHealthTypes() const
+//int CvBuildingInfo::getNumTechHealthChanges() const
 //{
-//	return m_aTechHealthTypes.size();
+//	return m_aTechHealthChanges.size();
 //}
 
 int CvBuildingInfo::getTechHealth(TechTypes eTech) const
 {
-	return m_aTechHealthTypes.getValue(eTech);
+	return m_aTechHealthChanges.getValue(eTech);
 }
 
 bool CvBuildingInfo::isHurry(int i) const
@@ -2212,8 +2212,8 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aUnitCombatOngoingTrainingDurations);
 	CheckSumC(iSum, m_aAfflictionOutbreakLevelChanges);
 	CheckSumC(iSum, m_aTechOutbreakLevelChanges);
-	CheckSumC(iSum, m_aTechHappinessTypes);
-	CheckSumC(iSum, m_aTechHealthTypes);
+	CheckSumC(iSum, m_aTechHappinessChanges);
+	CheckSumC(iSum, m_aTechHealthChanges);
 	CheckSumC(iSum, m_aiFreeTraitTypes);
 	CheckSumC(iSum, m_aExtraFreeBonuses);
 	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
@@ -3706,8 +3706,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalPairVector<TechModifierArray, TechTypes, int>(&m_aTechOutbreakLevelChanges, L"TechOutbreakLevelChanges");
 
-	m_aTechHappinessTypes.read(pXML, L"TechHappinessChanges");
-	m_aTechHealthTypes.read(pXML, L"TechHealthChanges");
+	m_aTechHappinessChanges.read(pXML, L"TechHappinessChanges");
+	m_aTechHealthChanges.read(pXML, L"TechHealthChanges");
 
 	//Arrays
 	pXML->SetVariableListTagPair(&m_pabHurry, L"Hurrys", GC.getNumHurryInfos());
@@ -5057,8 +5057,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	m_aTechHappinessTypes.copyNonDefaults(pClassInfo->getTechHappinessTypes());
-	m_aTechHealthTypes.copyNonDefaults(pClassInfo->getTechHealthTypes());
+	m_aTechHappinessChanges.copyNonDefaults(pClassInfo->getTechHappinessChanges());
+	m_aTechHealthChanges.copyNonDefaults(pClassInfo->getTechHealthChanges());
 
 	//Arrays
 	for ( int i = 0; i < GC.getNumHurryInfos(); i++ )
