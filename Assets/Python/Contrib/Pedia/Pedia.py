@@ -1188,17 +1188,32 @@ class Pedia:
 			iTechRow = self.checkTechRequirementLocation(CvBuildingInfo)[1]
 			
 			#Check if Happiness Types techs don't appear before building can be unlocked or after is obsoleted
+			"""
 			for pair in CvBuildingInfo.getTechHappinessTypes():
 				try:
 					iTech = pair.id
-					iTechHTLoc = GC.getTechInfo(iTech).getGridX()
+					iTechTLoc = GC.getTechInfo(iTech).getGridX()
 				except:
 					iTech = -1
-					iTechHTLoc = 0				
-				if GC.getTechInfo(iTech) != None and iTechHTLoc <= iTechLoc:
-					print CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Happiness Types early tech: "+str(iTechHTLoc)+" "+GC.getTechInfo(iTech).getType()
-				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechHTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
-					print CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Happiness Types late tech: "+str(iTechHTLoc)+" "+GC.getTechInfo(iTech).getType()
+					iTechTLoc = 0				
+				if GC.getTechInfo(iTech) != None and iTechTLoc <= iTechLoc:
+					print CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Happiness Types early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType()
+				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
+					print CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Happiness Types late tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType()
+			"""
+					
+			#Check if Health Types techs don't appear before building can be unlocked or after is obsoleted
+			for pair in CvBuildingInfo.getTechHealthTypes():
+				try:
+					iTech = pair.id
+					iTechTLoc = GC.getTechInfo(iTech).getGridX()
+				except:
+					iTech = -1
+					iTechTLoc = 0				
+				if GC.getTechInfo(iTech) != None and iTechTLoc <= iTechLoc:
+					print CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Health Types early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType()
+				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
+					print CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Health Types late tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType()
 
 			#Check if building needs bonus before is available	
 			self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
