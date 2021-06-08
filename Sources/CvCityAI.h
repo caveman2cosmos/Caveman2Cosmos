@@ -201,7 +201,7 @@ public:
 
 	int AI_getGoodTileCount() const;
 	int AI_countWorkedPoorTiles() const;
-	int AI_getTargetSize();
+	int AI_getTargetSize() const;
 	void AI_getYieldMultipliers();
 
 	BuildTypes AI_getBestBuild(int iIndex) const;

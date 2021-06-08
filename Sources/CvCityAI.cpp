@@ -7884,16 +7884,13 @@ int CvCityAI::AI_countWorkedPoorTiles() const
 	return iWorkedPoorTileCount;
 }
 
-int CvCityAI::AI_getTargetSize()
+int CvCityAI::AI_getTargetSize() const
 {
 	PROFILE_FUNC();
 
 	const CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	int iTargetSize = AI_getGoodTileCount();
 
-	/********************************************************************************/
-	/*	Better Evaluation							09.03.2010		Fuyu		    */
-	/********************************************************************************/
 	int iHappyAdjust = 0;
 	int iHealthAdjust = 0;
 	if (getProductionBuilding() != NO_BUILDING)
@@ -7901,15 +7898,7 @@ int CvCityAI::AI_getTargetSize()
 		iHappyAdjust += getAdditionalHappinessByBuilding(getProductionBuilding());
 		iHealthAdjust += getAdditionalHealthByBuilding(getProductionBuilding());
 	}
-	/********************************************************************************/
-	/*	BE	END																		*/
-	/********************************************************************************/
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                      09/02/10                         jdog5000 & Fuyu      */
-	/*                                                                                              */
-	/* City AI                                                                                      */
-	/************************************************************************************************/
-		//iTargetSize = std::min(iTargetSize, 2 + getPopulation() + goodHealth() - badHealth() + getEspionageHealthCounter() + std::max(0, iHealthAdjust));
+
 	iTargetSize -= std::max(0, (iTargetSize - (1 + getPopulation() + goodHealth() - badHealth() + getEspionageHealthCounter() + std::max(0, iHealthAdjust))) / 2);
 
 	if (iTargetSize < getPopulation())
@@ -7919,9 +7908,6 @@ int CvCityAI::AI_getTargetSize()
 
 	// Target city size should not be perturbed by espionage, other short term effects
 	iTargetSize = std::min(iTargetSize, getPopulation() + (happyLevel() - unhappyLevel() + getEspionageHappinessCounter() + std::max(0, iHappyAdjust)));
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                       END                                                  */
-	/************************************************************************************************/
 
 	if (kPlayer.getAdvancedStartPoints() >= 0)
 	{
