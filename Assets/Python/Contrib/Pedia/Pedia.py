@@ -1186,6 +1186,16 @@ class Pedia:
 			#Check location of building on X and Y grid.
 			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
 			iTechRow = self.checkTechRequirementLocation(CvBuildingInfo)[1]
+			
+			#Check if Happiness Types techs don't appear before building can be unlocked or after is obsoleted
+			for pair in CvBuildingInfo.getTechHappinessTypes():
+				iTech = pair.first
+				iValue = pair.second
+				iTechHTLoc = GC.getTechInfo(iTech).getGridX()
+				if iTechHTLoc < iTechLoc:
+					print CvBuildingInfo.getType()+"Tech unlock: "+str(iTechLoc)+" Happiness Types early tech: "+str(iTechHTLoc)+" "+GC.getTechInfo(iTech).getType()
+				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechHTLoc > GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
+					print CvBuildingInfo.getType()+"Tech unlock: "+str(iTechLoc)+" Happiness Types late tech: "+str(iTechHTLoc)+" "+GC.getTechInfo(iTech).getType()
 
 			#Check if building needs bonus before is available	
 			self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
