@@ -1187,6 +1187,7 @@ class Pedia:
 			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
 			iTechRow = self.checkTechRequirementLocation(CvBuildingInfo)[1]
 			
+			"""
 			#Check if Happiness Changes techs don't appear before building can be unlocked or after is obsoleted
 			for pair in CvBuildingInfo.getTechHappinessChanges():
 				iTech = pair.id
@@ -1199,11 +1200,27 @@ class Pedia:
 			#Check if Health Changes techs don't appear before building can be unlocked or after is obsoleted
 			for pair in CvBuildingInfo.getTechHealthChanges():
 				iTech = pair.id
-				iTechTLoc = GC.getTechInfo(iTech).getGridX()	
+				iTechTLoc = GC.getTechInfo(iTech).getGridX()
 				if GC.getTechInfo(iTech) != None and iTechTLoc <= iTechLoc:
-					print CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Health Types Changes tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType()
+					print CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Health Changes early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType()
 				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 					print CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Health Changes late tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType()
+			"""
+			
+			if CvBuildingInfo.isAnyTechYieldChanges():
+				iTechMod = 0
+				while iTechMod < GC.getNumTechInfos():
+					i = 0
+					while i < YieldTypes.NUM_YIELD_TYPES:
+						if CvBuildingInfo.getTechYieldChange(iTechMod, i):
+							iTechMLoc = GC.getTechInfo(iTechMod).getGridX()
+							if GC.getTechInfo(iTechMod) != None and iTechMLoc <= iTechLoc:
+								print CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Yield Changes early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType()
+							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
+								print CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Yield Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType()
+						i += 1
+					iTechMod += 1
+
 
 			#Check if building needs bonus before is available	
 			self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
