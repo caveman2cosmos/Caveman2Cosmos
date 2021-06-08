@@ -5113,7 +5113,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	m_aTechHappinessTypes.copyNonDefaults(pClassInfo->getTechHealthTypes());
+	m_aTechHappinessTypes.copyNonDefaults(pClassInfo->getTechHappinessTypes());
 	m_aTechHealthTypes.copyNonDefaults(pClassInfo->getTechHealthTypes());
 
 	//Arrays
