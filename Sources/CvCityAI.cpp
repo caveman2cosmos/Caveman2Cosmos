@@ -8167,7 +8167,7 @@ void CvCityAI::AI_getYieldMultipliers(int& iFoodMultiplier, int& iProductionMult
 
 
 namespace {
-	struct BuildsImprovement
+	const struct BuildsImprovement
 	{
 		BuildsImprovement(ImprovementTypes improvement) : improvement(improvement) {}
 		bool operator()(const BuildTypes buildType) const
@@ -8175,10 +8175,10 @@ namespace {
 			if (buildType == NO_BUILD) return false;
 			return GC.getBuildInfo(buildType).getImprovement() == improvement;
 		}
-		ImprovementTypes improvement;
+		const ImprovementTypes improvement;
 	};
 
-	struct BuildsAnyImprovement
+	const struct BuildsAnyImprovement
 	{
 		bool operator()(const BuildTypes buildType) const
 		{
@@ -8190,7 +8190,7 @@ namespace {
 
 //
 // Only used for improvement upgrading.
-int CvCityAI::AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange)
+int CvCityAI::AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange) const
 {
 	FAssert(eImprovement != NO_IMPROVEMENT);
 
