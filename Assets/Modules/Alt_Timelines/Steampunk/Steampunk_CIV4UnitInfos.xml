@@ -801,7 +801,7 @@
 			<iCost>590</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iWorkRate>400</iWorkRate>
+			<iWorkRate>310</iWorkRate>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_COPPER_WARES</BonusType>
