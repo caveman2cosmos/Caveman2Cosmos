@@ -1501,11 +1501,6 @@ void CvGame::handleAction(int iAction)
 
 bool CvGame::canDoControl(ControlTypes eControl) const
 {
-	if (Cy::call<bool>(PYGameModule, "cannotHandleAction", Cy::Args() << eControl))
-	{
-		return false;
-	}
-
 	switch (eControl)
 	{
 	case CONTROL_SELECTYUNITTYPE:
