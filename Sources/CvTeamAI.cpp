@@ -31,13 +31,6 @@ void CvTeamAI::freeStatics()
 	SAFE_DELETE_ARRAY(m_aTeams);
 }
 
-// inlined for performance reasons
-DllExport CvTeamAI& CvTeamAI::getTeamNonInl(TeamTypes eTeam)
-{
-	return getTeam(eTeam);
-}
-
-
 // Public Functions...
 
 CvTeamAI::CvTeamAI()
