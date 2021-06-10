@@ -1494,7 +1494,7 @@ class Pedia:
 							
 							aImprovementUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
 							aBonusImprovementUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
-							aFinalImpUpgradelYield = [0]*YieldTypes.NUM_YIELD_TYPES							
+							aFinalImpUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES							
 							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES): # Food, Production, Commerce
 								aBonusYield[iYield] = CvBonusInfo.getYieldChange(iYield) # Bonus yields
 								aImprovementYield[iYield] = CvImprovementInfo.getYieldChange(iYield) # Improvement yields
@@ -1502,15 +1502,29 @@ class Pedia:
 								aFinalYield[iYield] = aBonusYield[iYield] + aImprovementYield[iYield] + aBonusImprovementYield[iYield]
 								
 								CvImprovementUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade())
-								if CvImprovementInfo.getImprovementUpgrade() != -1 and CvImprovementUpgradeInfo.isImprovementBonusTrade(iBonus):									
+								if CvImprovementInfo.getImprovementUpgrade() != -1 and CvImprovementUpgradeInfo.isImprovementBonusTrade(iBonus):
 									aImprovementUpgradeYield[iYield] = CvImprovementUpgradeInfo.getYieldChange(iYield)
 									aBonusImprovementUpgradeYield[iYield] = CvImprovementUpgradeInfo.getImprovementBonusYield(iBonus, iYield)
-									aFinalImpUpgradelYield[iYield] = aBonusYield[iYield] + aImprovementUpgradeYield[iYield] + aBonusImprovementUpgradeYield[iYield]
-							if CvImprovementInfo.getImprovementUpgrade() != -1 and CvImprovementUpgradeInfo.isImprovementBonusTrade(iBonus):
-								print CvImprovementInfo.getType()+" with "+CvBonusInfo.getType()+": F/P/C -> "+str(aFinalYield)+" upgrade: "+CvImprovementUpgradeInfo.getType()+": F/P/C -> "+str(aFinalImpUpgradelYield)
+									aFinalImpUpgradeYield[iYield] = aBonusYield[iYield] + aImprovementUpgradeYield[iYield] + aBonusImprovementUpgradeYield[iYield]
 
-								
-			
+							# Upgrades
+							if (CvImprovementInfo.getImprovementUpgrade() != -1 and CvImprovementUpgradeInfo.isImprovementBonusTrade(iBonus)) and (aFinalImpUpgradeYield[0]-aFinalYield[0] < 0 or aFinalImpUpgradeYield[1]-aFinalYield[1] < 0 or aFinalImpUpgradeYield[2]-aFinalYield[2] < 0):
+								print CvImprovementInfo.getType()+" with "+CvBonusInfo.getType()+": F/P/C -> "+str(aFinalYield)+" upgrade: "+CvImprovementUpgradeInfo.getType()+": F/P/C -> "+str((aFinalImpUpgradeYield, (aFinalImpUpgradeYield[0]-aFinalYield[0], aFinalImpUpgradeYield[1]-aFinalYield[1], aFinalImpUpgradeYield[2]-aFinalYield[2])))
+							
+							# Alt upgrades
+							for i in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):								
+								CvImprovementAltUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(i))
+								if CvImprovementAltUpgradeInfo.isImprovementBonusTrade(iBonus):
+									aImprovementAltUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
+									aBonusImprovementAltUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
+									aFinalImpAltUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
+									for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+										aImprovementAltUpgradeYield[iYield] = CvImprovementAltUpgradeInfo.getYieldChange(iYield)
+										aBonusImprovementAltUpgradeYield[iYield] = CvImprovementAltUpgradeInfo.getImprovementBonusYield(iBonus, iYield)
+										aFinalImpAltUpgradeYield[iYield] = aBonusYield[iYield] + aImprovementAltUpgradeYield[iYield] + aBonusImprovementAltUpgradeYield[iYield]
+									if (aFinalImpAltUpgradeYield[0]-aFinalYield[0] < 0 or aFinalImpAltUpgradeYield[1]-aFinalYield[1] < 0 or aFinalImpAltUpgradeYield[2]-aFinalYield[2] < 0):
+										print CvImprovementInfo.getType()+" with "+CvBonusInfo.getType()+": F/P/C -> "+str(aFinalYield)+" Alt upgrade: "+CvImprovementAltUpgradeInfo.getType()+": F/P/C -> "+str((aFinalImpAltUpgradeYield, (aFinalImpAltUpgradeYield[0]-aFinalYield[0], aFinalImpAltUpgradeYield[1]-aFinalYield[1], aFinalImpAltUpgradeYield[2]-aFinalYield[2])))
+
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
 				if not iType:
 					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+": "+szName, iBonus)

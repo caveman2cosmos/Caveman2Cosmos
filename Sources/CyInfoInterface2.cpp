@@ -190,9 +190,11 @@ void CyInfoPythonInterface2()
 		.def("getYieldChange", &CvImprovementInfo::getYieldChange, "int (int i)")
 		.def("getRiverSideYieldChange", &CvImprovementInfo::getRiverSideYieldChange, "int (int i)")
 		.def("getIrrigatedYieldChange", &CvImprovementInfo::getIrrigatedYieldChange, "int (int i)")
+		.def("getAlternativeImprovementUpgradeType", &CvImprovementInfo::getAlternativeImprovementUpgradeType, "int (int i)")
 
 		.def("getTerrainMakesValid", &CvImprovementInfo::getTerrainMakesValid, "bool (int i)")
 		.def("getFeatureMakesValid", &CvImprovementInfo::getFeatureMakesValid, "bool (int i)")
+		.def("isAlternativeImprovementUpgradeType", &CvImprovementInfo::isAlternativeImprovementUpgradeType, "bool (int i)")
 
 		.def("getImprovementBonusYield", &CvImprovementInfo::getImprovementBonusYield, "int (int i, int j)")
 		.def("isImprovementBonusMakesValid", &CvImprovementInfo::isImprovementBonusMakesValid, "bool (int i)")
