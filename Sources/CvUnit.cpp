@@ -222,6 +222,7 @@ CvUnit::~CvUnit()
 	SAFE_DELETE_ARRAY(m_aiExtraVisibilityIntensityRange);
 	SAFE_DELETE_ARRAY(m_aiExtraVisibilityIntensitySameTile);
 	SAFE_DELETE_ARRAY(m_aiNegatesInvisibleCount);
+	SAFE_DELETE(m_commander);
 }
 
 
@@ -30524,7 +30525,11 @@ void CvUnit::setCommander(bool bNewVal)
 			}
 		}
 	}
-	else m_commander = NULL;
+	else
+	{
+		delete m_commander;
+		m_commander = NULL;
+	}
 }
 
 void CvUnit::nullUsedCommander()
