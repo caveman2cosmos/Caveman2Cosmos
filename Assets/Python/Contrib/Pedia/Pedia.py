@@ -1486,17 +1486,28 @@ class Pedia:
 					CvImprovementInfo = GC.getImprovementInfo(CvImprovement)
 					if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0 or CvImprovementInfo.getImprovementPillage() != -1: # Only care about improvements, that can upgrade or downgrade.
 						if CvImprovementInfo.isImprovementBonusTrade(iBonus) and not CvImprovementInfo.isActsAsCity(): # Only care about improvements, that can improve bonus
-							#Purge old data
+							#Zero out data
 							aBonusYield = [0]*YieldTypes.NUM_YIELD_TYPES
 							aImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
 							aBonusImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
 							aFinalYield = [0]*YieldTypes.NUM_YIELD_TYPES
+							
+							aImprovementUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
+							aBonusImprovementUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
+							aFinalImpUpgradelYield = [0]*YieldTypes.NUM_YIELD_TYPES							
 							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES): # Food, Production, Commerce
 								aBonusYield[iYield] = CvBonusInfo.getYieldChange(iYield) # Bonus yields
 								aImprovementYield[iYield] = CvImprovementInfo.getYieldChange(iYield) # Improvement yields
 								aBonusImprovementYield[iYield] = CvImprovementInfo.getImprovementBonusYield(iBonus, iYield) # Bonus-Improvement coupling yields
 								aFinalYield[iYield] = aBonusYield[iYield] + aImprovementYield[iYield] + aBonusImprovementYield[iYield]
-							print "Improvement "+CvImprovementInfo.getType()+" on Bonus "+CvBonusInfo.getType()+" has F/P/C Productivity: "+str((aBonusYield,aImprovementYield,aBonusImprovementYield,aFinalYield))
+								
+								CvImprovementUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade())
+								if CvImprovementInfo.getImprovementUpgrade() != -1 and CvImprovementUpgradeInfo.isImprovementBonusTrade(iBonus):									
+									aImprovementUpgradeYield[iYield] = CvImprovementUpgradeInfo.getYieldChange(iYield)
+									aBonusImprovementUpgradeYield[iYield] = CvImprovementUpgradeInfo.getImprovementBonusYield(iBonus, iYield)
+									aFinalImpUpgradelYield[iYield] = aBonusYield[iYield] + aImprovementUpgradeYield[iYield] + aBonusImprovementUpgradeYield[iYield]
+							if CvImprovementInfo.getImprovementUpgrade() != -1 and CvImprovementUpgradeInfo.isImprovementBonusTrade(iBonus):
+								print CvImprovementInfo.getType()+" with "+CvBonusInfo.getType()+": F/P/C -> "+str(aFinalYield)+" upgrade: "+CvImprovementUpgradeInfo.getType()+": F/P/C -> "+str(aFinalImpUpgradelYield)
 
 								
 			
