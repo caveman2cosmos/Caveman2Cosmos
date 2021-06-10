@@ -73,8 +73,8 @@ public:
 	bool isGoldenAge() const;
 
 	bool isFighting() const;
-	int maxHitPoints() const;
-	int currHitPoints() const;
+	int getMaxHP() const;
+	int getHP() const;
 	bool isHurt() const;
 	bool isDead() const;
 	void setBaseCombatStr(int iCombat);

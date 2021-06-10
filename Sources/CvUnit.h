@@ -894,9 +894,8 @@ public:
 	DllExport bool isDefending() const;
 	bool isCombat() const;
 
-	int withdrawalHP(int maxHitPoints, int iAttackerEarly) const;
+	int withdrawalHP(int iMaxHitPoints, int iAttackerEarly) const;
 	DllExport int maxHitPoints() const;
-	int currHitPoints() const;
 	bool isHurt() const;
 	DllExport bool isDead() const;
 
@@ -2723,7 +2722,8 @@ public:
 	int getExtraMaxHP() const;
 	void changeExtraMaxHP(int iChange);
 	void setExtraMaxHP(int iChange);
-	int maxHPTotal() const;
+	int getMaxHP() const;
+	int getHP() const;
 	int HPValueTotalPreCheck() const;
 	int getSMHPValue() const;
 	void setSMHPValue();
