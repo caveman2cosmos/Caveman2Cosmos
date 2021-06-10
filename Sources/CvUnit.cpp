@@ -204,22 +204,18 @@ m_Properties(this)
 	}
 }
 
-
 CvUnit::~CvUnit()
 {
-	if ( !isUsingDummyEntities() )
+	if (!isUsingDummyEntities())
 	{
-		if (!gDLL->GetDone() && GC.IsGraphicsInitialized())						// don't need to remove entity when the app is shutting down, or crash can occur
+		// Don't need to remove entity when the app is shutting down, or crash can occur
+		if (!gDLL->GetDone() && GC.IsGraphicsInitialized())
 		{
 			gDLL->getEntityIFace()->RemoveUnitFromBattle(this);
-			CvDLLEntity::removeEntity();		// remove entity from engine
+			CvDLLEntity::removeEntity(); // remove entity from engine
 		}
-
-		CvDLLEntity::destroyEntity();			// delete CvUnitEntity and detach from us
+		CvDLLEntity::destroyEntity(); // delete CvUnitEntity and detach from us
 	}
-
-	uninit();
-
 	SAFE_DELETE_ARRAY(m_aiExtraDomainModifier);
 	SAFE_DELETE_ARRAY(m_aiExtraVisibilityIntensity);
 	SAFE_DELETE_ARRAY(m_aiExtraInvisibilityIntensity);
@@ -228,16 +224,24 @@ CvUnit::~CvUnit()
 	SAFE_DELETE_ARRAY(m_aiNegatesInvisibleCount);
 }
 
+
 bool CvUnit::isUsingDummyEntities() const
 {
 	const CvEntity* entity = getEntity();
 
-	return (entity != NULL && g_dummyEntity == entity);// || (m_eUnitType == 701);
+	return entity != NULL && g_dummyEntity == entity;
 }
 
 void CvUnit::reloadEntity(bool bForceLoad)
 {
-	bool	bNeedsRealEntity = !g_bUseDummyEntities || bForceLoad || (plot() != NULL && plot()->isActiveVisible(false) && (plot()->getCenterUnit() == this || getOwner() == GC.getGame().getActivePlayer()));
+	const bool bNeedsRealEntity = 
+	(
+		!g_bUseDummyEntities || bForceLoad
+		||
+		plot() != NULL && plot()->isActiveVisible(false)
+		&&
+		(plot()->getCenterUnit() == this || getOwner() == GC.getGame().getActivePlayer())
+	);
 
 	//OutputDebugString(CvString::format("reloadEntity for %08lx\n", this).c_str());
 	if ( !IsSelected() )
@@ -287,15 +291,10 @@ void CvUnit::reloadEntity(bool bForceLoad)
 					OutputDebugString(CvString::format("Dummy unit entity usage: %d, real %d\n", g_dummyUsage, g_numEntities).c_str());
 				}
 			}
-			else
+			else if ( plot() != NULL ) //create new one
 			{
-				//create new one
-				if ( plot() != NULL )
-				{
-					CvDLLEntity::createUnitEntity(this);		// create and attach entity to unit
-
-					bGraphicsSetup = false;
-				}
+				CvDLLEntity::createUnitEntity(this);		// create and attach entity to unit
+				bGraphicsSetup = false;
 			}
 		}
 
@@ -500,17 +499,11 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	}
 }
 
-void CvUnit::uninit() { }
-
 
 // FUNCTION: reset()
 // Initializes data members that are serialized.
 void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstructorCall, bool bIdentityChange)
 {
-	//--------------------------------
-	// Uninit class
-	uninit();
-
 	clearCityOfOrigin();
 
 	m_iHealUnitCombatCount = 0;
