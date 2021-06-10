@@ -151,6 +151,8 @@ DECLARE_FLAGS(ECacheAccess::flags);
 #define PATHFINDING_CACHE
 #define PATHFINDING_VALIDITY_CACHE
 #define DISCOVERY_TECH_CACHE
+#define YIELD_VALUE_CACHING // KOSHLING - Cache yield values where possible
+#define CAN_TRAIN_CACHING  // Enable canTrain results to be cached within a (caller) defined scope
 
 //
 // Profiler

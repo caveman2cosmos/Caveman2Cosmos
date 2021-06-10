@@ -7,6 +7,7 @@
 
 #include "CvDLLEntity.h"
 #include "CvGameObject.h"
+#include "CvUnitComponents.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
@@ -499,7 +500,6 @@ public:
 
 	void reloadEntity(bool bForceLoad = false);
 	void init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOwner, int iX, int iY, DirectionTypes eFacingDirection, int iBirthmark);
-	void uninit();
 	void changeIdentity(UnitTypes eUnit);
 	void reset(int iID = 0, UnitTypes eUnit = NO_UNIT, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false, bool bIdentityChange = false);
 	void setupGraphical();
@@ -584,18 +584,15 @@ public:
 	//SAD
 	int surroundedDefenseModifier(const CvPlot *pPlot, const CvUnit *pDefender) const;
 
-	int getCanMovePeaksCount() const;
 	bool isCanMovePeaks() const;
 	void changeCanMovePeaksCount(int iChange);
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
-	int getCanLeadThroughPeaksCount() const;
 	bool isCanLeadThroughPeaks() const;
 	void changeCanLeadThroughPeaksCount(int iChange);
 
 	DllExport PlayerTypes getNationality() const;
 	void setNationality(PlayerTypes eNewNationality);
-	void combatWon(CvUnit* pLoser, bool bAttacking);
 
 	int interceptionChance(const CvPlot* pPlot) const;
 
@@ -610,18 +607,13 @@ public:
 	void setCommander(bool bNewVal);
 	void nullUsedCommander(); //delete m_pUsedCommander
 	void clearCommanderCache() ; //	Should be called prior to each turn
+	UnitCompCommander* getCommanderComp() const;
 
 	CvUnit* getUsedCommander() const;
 
-	//for commander units:
 	int controlPointsLeft() const;
 	int controlPoints() const;
 	int commandRange() const;
-	//from promotions:
-	int getExtraControlPoints() const; //control
-	void changeExtraControlPoints(int iChange);
-	int getExtraCommandRange() const; //command
-	void changeExtraCommandRange(int iChange);
 
 	int getZoneOfControlCount() const;
 	bool isZoneOfControl() const;
@@ -1846,7 +1838,7 @@ protected:
 	PlayerTypes m_eNationality;
 	CombatResult m_combatResult;
 	int m_iSleepTimer;
-	bool m_bCommander;
+	UnitCompCommander* m_commander;
 	int m_iZoneOfControlCount;
 
 	bool m_bAutoPromoting;
@@ -1854,10 +1846,6 @@ protected:
 	IDInfo m_shadowUnit;
 	TechTypes m_eDesiredDiscoveryTech;
 	//Great Commanders... By KillmePlease
-	int m_iExtraControlPoints;
-	int m_iExtraCommandRange;
-	//auxillary members:
-	int m_iControlPointsLeft;
 	int m_iCommanderID; //id of commander. used for game save/load
 	mutable int m_iCommanderCacheTurn;
 	mutable int m_iCachedCommander;

@@ -3,6 +3,7 @@
 #include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
+#include "CvImprovementInfo.h"
 #include "CvMap.h"
 #include "CvMapExternal.h"
 #include "CvPlayerAI.h"
