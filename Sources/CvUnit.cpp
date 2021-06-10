@@ -30503,61 +30503,40 @@ CvUnit* CvUnit::getCommander() const
 {
 	PROFILE_FUNC();
 
-	//	This routine gets called a HUGE number of times per turn (100s of millions in large games!)
+	// This routine gets called a HUGE number of times per turn (100s of millions in large games!)
 	//	so short-circuit the most common case of the unit having no commander when we can
 	//	Similarly protect against calls during initialization of a unit (before it has a plot set)
-	if ( m_iCachedCommander == NO_COMMANDER_ID || plot() == NULL )
+	if (m_iCachedCommander == NO_COMMANDER_ID || plot() == NULL)
 	{
 		return NULL;
 	}
-
 	CvUnit* pBestCommander = getUsedCommander();
-	if (pBestCommander != NULL)	//return already used one if it is not dead.
-	{
-		if (pBestCommander->plot() != NULL)//Recently destroyed commanders could cause a crash here without this protection.
-		{
-			int iDistance = plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY());
 
-			if (pBestCommander->controlPointsLeft() > 0 && iDistance <= pBestCommander->commandRange())
+	if (pBestCommander != NULL) //return already used one if it is not dead.
+	{
+		// Recently destroyed commanders could cause a crash here without this protection.
+		if (pBestCommander->plot() != NULL && pBestCommander->controlPointsLeft() > 0
+		&& plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->commandRange())
+		{
+			return pBestCommander;
+		}
+		// The one we used would have been the cached one so will have to search again
+		pBestCommander = NULL;
+		m_iCommanderCacheTurn = -1;
+	}
+
+	if (m_iCommanderCacheTurn == GC.getGame().getGameTurn())
+	{
+		pBestCommander = GET_PLAYER(getOwner()).getUnit(m_iCachedCommander);
+		if (pBestCommander != NULL)
+		{
+			// Guard against this being called during the death of said GC!
+			if (pBestCommander->plot() != NULL && pBestCommander->controlPointsLeft() > 0
+			&& plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->commandRange())
 			{
 				return pBestCommander;
 			}
-			else
-			{
-				pBestCommander = NULL;
-				m_iCommanderCacheTurn = -1;	//	the one we used would have been the cached one so will be to search again
-			}
-		}
-		else
-		{
 			pBestCommander = NULL;
-			m_iCommanderCacheTurn = -1;	//	the one we used would have been the cached one so will be to search again
-		}
-	}
-
-	if ( m_iCommanderCacheTurn == GC.getGame().getGameTurn() )
-	{
-		pBestCommander = GET_PLAYER(getOwner()).getUnit(m_iCachedCommander);
-		if ( pBestCommander != NULL )
-		{
-			//	Guard against this being called during the death of said GC!
-			if ( pBestCommander->plot() != NULL )
-			{
-				int iDistance = plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY());
-
-				if (pBestCommander->controlPointsLeft() > 0 && iDistance <= pBestCommander->commandRange())
-				{
-					return pBestCommander;
-				}
-				else
-				{
-					pBestCommander = NULL;
-				}
-			}
-			else
-			{
-				pBestCommander = NULL;
-			}
 		}
 	}
 
@@ -30569,22 +30548,27 @@ CvUnit* CvUnit::getCommander() const
 		for (int i=0; i < (int)kPlayer.Commanders.size(); i++)		//loop through player's commanders
 		{
 			CvUnit* pCommander = kPlayer.Commanders[i];
+
+			if (pCommander->controlPointsLeft() <= 0)
+			{
+				continue;
+			}
 			const CvPlot* pCommPlot = pCommander->plot();
+
 			if (pCommPlot == NULL)
 			{
 				FErrorMsg("Commander Should Exist!");
 				continue;
 			}
-			int iDistance = plotDistance(pCommPlot->getX(), pCommPlot->getY(), getX(), getY());
+			const int iDistance = plotDistance(pCommPlot->getX(), pCommPlot->getY(), getX(), getY());
 
-			if (pCommander->controlPointsLeft() <= 0 || iDistance > pCommander->commandRange())
+			if (iDistance > pCommander->commandRange())
 			{
 				continue;
 			}
-
-			if (pBestCommander == NULL ||
-				//best commander is at shorter distance, or at same distance but has more XP:
-				(iBestCommanderDistance < iDistance || (iBestCommanderDistance == iDistance && pCommander->getExperience() > pBestCommander->getExperience())))
+			if (pBestCommander == NULL
+			// Best commander is at shorter distance, or at same distance but has more XP:
+			|| (iBestCommanderDistance < iDistance || iBestCommanderDistance == iDistance && pCommander->getExperience() > pBestCommander->getExperience()))
 			{
 				pBestCommander = pCommander;
 				iBestCommanderDistance = iDistance;
@@ -30597,12 +30581,11 @@ CvUnit* CvUnit::getCommander() const
 	//	gave rise to the odds calculation
 
 	//Perhaps do not cache commanders because it causes an OOS error to do so?  AIs make abortive odds calcs as well do they not?
-	if ( !isHuman() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+	if (!isHuman() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		m_iCommanderCacheTurn = GC.getGame().getGameTurn();
 		m_iCachedCommander = (pBestCommander == NULL ? NO_COMMANDER_ID : pBestCommander->getID());
 	}
-
 	return pBestCommander;
 }
 
