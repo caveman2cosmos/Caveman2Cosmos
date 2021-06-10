@@ -20972,7 +20972,7 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 /*
  * Adds the actual effects of adding a building to the city.
  */
-void CvGameTextMgr::setBuildingActualEffects(CvWStringBuffer &szBuffer, CvWString& szStart, BuildingTypes eBuilding, CvCity* pCity, bool bNewLine)
+void CvGameTextMgr::setBuildingActualEffects(CvWStringBuffer &szBuffer, const CvWString& szStart, BuildingTypes eBuilding, const CvCity* pCity, bool bNewLine)
 {
 	if (NULL != pCity)
 	{

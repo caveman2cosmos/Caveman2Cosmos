@@ -499,7 +499,6 @@ public:
 
 	void reloadEntity(bool bForceLoad = false);
 	void init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOwner, int iX, int iY, DirectionTypes eFacingDirection, int iBirthmark);
-	void uninit();
 	void changeIdentity(UnitTypes eUnit);
 	void reset(int iID = 0, UnitTypes eUnit = NO_UNIT, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false, bool bIdentityChange = false);
 	void setupGraphical();

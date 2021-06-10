@@ -2194,7 +2194,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 	szBuffer.assign(CvWString::format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getActionInfo(widgetDataStruct.m_iData1).getHotKeyDescription().c_str()));
 
-	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if (pHeadSelectedUnit != NULL)
 	{
@@ -2414,15 +2414,17 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					GAMETEXT.setReligionHelpCity(szBuffer, eReligion, pMissionCity, false, true);
 				}
 			}
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_CURE)
 			{
 				PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData()));
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_CURE_AFFLICTION_LINE", GC.getPromotionLineInfo(eAfflictionLine).getDescription()));
 			}
+#endif
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_SPREAD_CORPORATION)
 			{
-				CorporationTypes eCorporation = ((CorporationTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData()));
+				const CorporationTypes eCorporation = ((CorporationTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData()));
 
 				if (pMissionCity != NULL)
 				{
@@ -2607,11 +2609,6 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 				}
 			}
-			/************************************************************************************************/
-			/* Afforess	                  Start		 12/31/09                                                */
-			/*                                                                                              */
-			/*                                                                                              */
-			/************************************************************************************************/
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_HURRY_FOOD)
 			{
 				if (pMissionCity != NULL)
@@ -2659,10 +2656,6 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 				}
 			}
-			/************************************************************************************************/
-			/* Afforess	                     END                                                            */
-			/************************************************************************************************/
-
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_TRADE)
 			{
 				if (pMissionCity != NULL)
