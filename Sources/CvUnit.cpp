@@ -756,9 +756,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 
 	m_iSleepTimer = 0;
 	//@MOD Commanders: reset parameters
-	m_iExtraCommandRange = 0;
-	m_iExtraControlPoints = 0;
-	m_iControlPointsLeft = 0;
 	m_iCommanderID = -1;
 	m_iCommanderCacheTurn = -1;
 	m_eOriginalOwner = eOwner;
@@ -768,7 +765,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_eNewSMNotSpecialCargo = NO_SPECIALUNIT;
 	m_eSpecialUnit = NO_SPECIALUNIT;
 	m_eSleepType = NO_MISSION;
-	m_bCommander = false;
 	m_iZoneOfControlCount = 0;
 	m_iExcileCount = 0;
 	m_iPassageCount = 0;
@@ -820,6 +816,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraGatherHerdCount = 0;
 	m_bIsArmed = false;
 	m_eCurrentBuildUpType = NO_PROMOTIONLINE;
+	m_commander = NULL;
 
 	m_eCapturingUnit.reset();
 	m_combatUnit.reset();
@@ -1437,7 +1434,10 @@ void CvUnit::doTurn()
 	FAssertMsg(!isDead(), "isDead did not return false as expected");
 	FAssertMsg(getGroup() != NULL, "getGroup() is not expected to be equal with NULL");
 
-	m_iControlPointsLeft = controlPoints();	//restore control points for commander
+	if (isCommander())
+	{
+		m_commander->restoreControlPoints();
+	}
 	gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 	m_iCommanderID = -1;	//reset used commander for combat units
 
@@ -22786,8 +22786,14 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	//	mountains, and ability to lead a stack through mountains
 	changeCanLeadThroughPeaksCount((kPromotion.isCanLeadThroughPeaks()) ? iChange : 0);
 
-	changeExtraControlPoints(kPromotion.getControlPoints() * iChange);
-	changeExtraCommandRange(kPromotion.getCommandRange() * iChange);
+	// Toffer - Assume promotions with commander stats can only be gained by commanders.
+	//	If assumption is wrong, we'll need setCommander(true) to go through all promotions the unit has,
+	//	and apply commander specific stats at that point.
+	if (isCommander())
+	{
+		m_commander->changeControlPoints(kPromotion.getControlPoints() * iChange);
+		m_commander->changeCommandRange(kPromotion.getCommandRange() * iChange);
+	}
 
 	changeImmuneToFirstStrikesCount((kPromotion.isImmuneToFirstStrikes()) ? iChange : 0);
 
@@ -23603,13 +23609,21 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCanLeadThroughPeaksCount);
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSleepTimer);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraControlPoints);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCommandRange);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iControlPointsLeft);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iCommanderID);			//id will be used later on player initialization to get m_pUsedCommander pointer
+
+	// SAVEBRERAK - Toffer - Cleanup commander mess.
+	int iExtraControlPoints = 0;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraControlPoints, "m_iExtraControlPoints");
+	int iExtraCommandRange = 0;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraCommandRange, "m_iExtraCommandRange");
+	int iControlPointsLeft = 0;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iControlPointsLeft, "m_iControlPointsLeft");
+
+	WRAPPER_READ(wrapper, "CvUnit", &m_iCommanderID); //id will be used later on player initialization to get m_pUsedCommander pointer
 
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOriginalOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &m_bCommander);
+
+	bool bCommander = false;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bCommander, "m_bCommander");
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoPromoting);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoUpgrading);
@@ -25115,6 +25129,17 @@ void CvUnit::read(FDataStreamBase* pStream)
 			}
 		}
 	}
+
+	// Toffer - Initialize Components
+	if (bCommander)
+	{
+		m_commander = new UnitCompCommander();
+
+		m_commander->changeControlPoints(iExtraControlPoints + m_pUnitInfo->getControlPoints());
+		m_commander->changeControlPointsLeft(iControlPointsLeft - m_commander->getControlPoints());
+
+		m_commander->changeCommandRange(iExtraCommandRange + m_pUnitInfo->getCommandRange());
+	}
 }
 
 
@@ -25166,13 +25191,17 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCanLeadThroughPeaksCount);
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSleepTimer);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraControlPoints);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCommandRange);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iControlPointsLeft);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iCommanderID);	//-1 means there is no used commander
+
+	// SAVEBRERAK - Toffer - Cleanup commander mess.
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getControlPoints() - m_pUnitInfo->getControlPoints(), "m_iExtraControlPoints");
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getCommandRange() - m_pUnitInfo->getCommandRange(), "m_iExtraCommandRange");
+	WRAPPER_WRITE(wrapper, "CvUnit", );
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getControlPointsLeft(), "m_iControlPointsLeft");
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iCommanderID); //-1 means there is no used commander
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_eOriginalOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_bCommander);
+
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isCommander(), "m_bCommander");
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoPromoting);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoUpgrading);
@@ -30586,12 +30615,12 @@ void CvUnit::tryUseCommander()
 		pCommander = getCommander();
 	}
 
-	if (pCommander != NULL)	//commander is used when any unit under his command fights in combat
+	if (pCommander != NULL) //commander is used when any unit under his command fights in combat
 	{
-		pCommander->m_iControlPointsLeft -= 1;
+		pCommander->m_commander->changeControlPointsLeft(-1);
 		m_iCommanderID = pCommander->getID();
 
-		if ( pCommander->m_iControlPointsLeft <= 0 )
+		if (pCommander->m_commander->getControlPointsLeft() <= 0)
 		{
 			FlushCombatStrCache(NULL);
 		}
@@ -30600,19 +30629,23 @@ void CvUnit::tryUseCommander()
 
 bool CvUnit::isCommander() const
 {
-	return m_bCommander;
+	return m_commander != NULL;
+}
+
+UnitCompCommander* CvUnit::getCommanderComp() const
+{
+	return m_commander;
 }
 
 void CvUnit::setCommander(bool bNewVal)
 {
-	if (m_bCommander == bNewVal) return;
-
-	m_bCommander = bNewVal;
+	if (isCommander() == bNewVal) return;
 
 	if (bNewVal)
 	{
+		m_commander = new UnitCompCommander(m_pUnitInfo);
+
 		GET_PLAYER(getOwner()).Commanders.push_back(this);
-		m_iControlPointsLeft = controlPoints();
 
 		for (int iI = 0; iI < m_pUnitInfo->getNumSubCombatTypes(); iI++)
 		{
@@ -30624,6 +30657,7 @@ void CvUnit::setCommander(bool bNewVal)
 			}
 		}
 	}
+	else m_commander = NULL;
 }
 
 void CvUnit::nullUsedCommander()
@@ -30638,50 +30672,22 @@ CvUnit* CvUnit::getUsedCommander() const
 
 void CvUnit::clearCommanderCache()
 {
-	if (!GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS))
-	{
-		m_iCachedCommander = NO_COMMANDER_ID;
-	}
-	else
-	{
-		m_iCachedCommander = -1;
-	}
-}
-
-int CvUnit::getExtraControlPoints() const	//control points
-{
-	return m_iExtraControlPoints;
-}
-
-void CvUnit::changeExtraControlPoints(int iChange)
-{
-	m_iExtraControlPoints += iChange;
-	m_iControlPointsLeft += iChange;
+	m_iCachedCommander = GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) ? -1 : NO_COMMANDER_ID;
 }
 
 int CvUnit::controlPoints() const
 {
-	return m_pUnitInfo->getControlPoints() + getExtraControlPoints();
+	return m_commander->getControlPoints();
 }
 
 int CvUnit::controlPointsLeft() const
 {
-	return m_iControlPointsLeft;
-}
-
-int CvUnit::getExtraCommandRange() const	//command range
-{
-	return m_iExtraCommandRange;
-}
-
-void CvUnit::changeExtraCommandRange(int iChange)
-{
-	m_iExtraCommandRange += iChange;
+	return m_commander->getControlPointsLeft();
 }
 
 int CvUnit::commandRange() const
 {
-	return m_pUnitInfo->getCommandRange() + getExtraCommandRange();
+	return m_commander->getCommandRange();
 }
 
 int CvUnit::interceptionChance(const CvPlot* pPlot) const
