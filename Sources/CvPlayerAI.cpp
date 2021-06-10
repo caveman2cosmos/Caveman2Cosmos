@@ -4265,15 +4265,7 @@ int CvPlayerAI::AI_goldTarget() const
 
 TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAsync, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor) const
 {
-
 	PROFILE("CvPlayerAI::AI_bestTech");
-
-	// Don't bother with expensive evaluations if we cannot do any research anyway (barbarians before the first barb city for example)
-	if (getAdvancedStartPoints() < 0)
-	{
-		return NO_TECH;
-	}
-
 	logBBAI("Begin best tech evaluation..." );
 
 	int iValue;

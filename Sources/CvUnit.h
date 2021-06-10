@@ -584,18 +584,15 @@ public:
 	//SAD
 	int surroundedDefenseModifier(const CvPlot *pPlot, const CvUnit *pDefender) const;
 
-	int getCanMovePeaksCount() const;
 	bool isCanMovePeaks() const;
 	void changeCanMovePeaksCount(int iChange);
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
-	int getCanLeadThroughPeaksCount() const;
 	bool isCanLeadThroughPeaks() const;
 	void changeCanLeadThroughPeaksCount(int iChange);
 
 	DllExport PlayerTypes getNationality() const;
 	void setNationality(PlayerTypes eNewNationality);
-	void combatWon(CvUnit* pLoser, bool bAttacking);
 
 	int interceptionChance(const CvPlot* pPlot) const;
 
