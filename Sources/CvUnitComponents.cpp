@@ -13,7 +13,7 @@ UnitCompCommander::~UnitCompCommander() { }
 
 UnitCompCommander::UnitCompCommander(CvUnitInfo* unitInfo) // Used when unit becomes commander
 {
-	m_iControlPoints = unitInfo->getControlPoints():
+	m_iControlPoints = unitInfo->getControlPoints();
 	m_iControlPointsLeft = m_iControlPoints;
 
 	m_iCommandRange = unitInfo->getCommandRange();
