@@ -10664,20 +10664,14 @@ int CvUnit::spreadCorporationCost(CorporationTypes eCorporation, const CvCity* p
 
 		for (int iCorp = 0; iCorp < GC.getNumCorporationInfos(); ++iCorp)
 		{
-			if (iCorp != eCorporation)
+			if (iCorp != eCorporation && pCity->isActiveCorporation((CorporationTypes)iCorp)
+			&& GC.getGame().isCompetingCorporation(eCorporation, (CorporationTypes)iCorp))
 			{
-				if (pCity->isActiveCorporation((CorporationTypes)iCorp))
-				{
-					if (GC.getGame().isCompetingCorporation(eCorporation, (CorporationTypes)iCorp))
-					{
-						iCost *= 100 + GC.getCorporationInfo((CorporationTypes)iCorp).getSpreadFactor();
-						iCost /= 100;
-					}
-				}
+				iCost *= 100 + GC.getCorporationInfo((CorporationTypes)iCorp).getSpreadFactor();
+				iCost /= 100;
 			}
 		}
 	}
-
 	return iCost;
 }
 
@@ -19770,15 +19764,15 @@ void CvUnit::changeUpgradeDiscount(int iChange)
 
 int CvUnit::getExperiencePercent() const
 {
-	if (!isCommander())
-	{
-		const CvUnit* pCommander = getCommander();
-		if (pCommander != NULL)
-			return m_iExperiencePercent + pCommander->getExperiencePercent();
-	}
-	else
+	if (isCommander())
 	{
 		return 0; // Afforess - Great Commanders can not gain XP faster
+	}
+	const CvUnit* pCommander = getCommander();
+
+	if (pCommander != NULL)
+	{
+		return m_iExperiencePercent + pCommander->getExperiencePercent();
 	}
 	return m_iExperiencePercent;
 
@@ -19812,21 +19806,11 @@ void CvUnit::changeKamikazePercent(int iChange)
 
 DirectionTypes CvUnit::getFacingDirection(bool checkLineOfSightProperty) const
 {
-	if (checkLineOfSightProperty)
+	if (checkLineOfSightProperty && !m_pUnitInfo->isLineOfSight())
 	{
-		if (m_pUnitInfo->isLineOfSight())
-		{
-			return m_eFacingDirection; //only look in facing direction
-		}
-		else
-		{
-			return NO_DIRECTION; //look in all directions
-		}
+		return NO_DIRECTION; //look in all directions
 	}
-	else
-	{
-		return m_eFacingDirection;
-	}
+	return m_eFacingDirection; //only look in facing direction
 }
 
 void CvUnit::setFacingDirection(DirectionTypes eFacingDirection)
@@ -20182,32 +20166,21 @@ PlayerTypes CvUnit::getVisualOwner(TeamTypes eForTeam) const
 	{
 		eForTeam = GC.getGame().getActiveTeam();
 	}
-	//TBMaybeproblem : Barbarian player and barbarian team here is noted as 50, and also in the enums list BUT they've been changed to 45.  Should BARBARIAN_TEAM be now changed to 45?  There could be some very unfortunate side effects from this.
-	if (getTeam() != eForTeam && eForTeam != BARBARIAN_TEAM)
-	{
-		if (isHiddenNationality())
-		{
-			if (!plot()->isCity(true, getTeam()))
-			{
-				return BARBARIAN_PLAYER;
-			}
-		}
-	}
 
+	if (getTeam() != eForTeam && eForTeam != BARBARIAN_TEAM && isHiddenNationality() && !plot()->isCity(true, getTeam()))
+	{
+		return BARBARIAN_PLAYER;
+	}
 	return getOwner();
 }
 
 
 PlayerTypes CvUnit::getCombatOwner(TeamTypes eForTeam, const CvPlot* pPlot) const
 {
-	if (eForTeam != NO_TEAM && getTeam() != eForTeam && eForTeam != BARBARIAN_TEAM)
+	if (eForTeam != NO_TEAM && getTeam() != eForTeam && eForTeam != BARBARIAN_TEAM && isAlwaysHostile(pPlot))
 	{
-		if (isAlwaysHostile(pPlot))
-		{
-			return BARBARIAN_PLAYER;
-		}
+		return BARBARIAN_PLAYER;
 	}
-
 	return getOwner();
 }
 
@@ -20255,7 +20228,7 @@ const UnitTypes CvUnit::getLeaderUnitType() const
 
 void CvUnit::setLeaderUnitType(UnitTypes leaderUnitType)
 {
-	if(m_eLeaderUnitType != leaderUnitType)
+	if (m_eLeaderUnitType != leaderUnitType)
 	{
 		m_eLeaderUnitType = leaderUnitType;
 		reloadEntity();
@@ -20279,25 +20252,19 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 	{
 		if (bAttacking)
 		{
-			if (GC.getLogging())
+			if (GC.getLogging() && GC.getGame().isDebugMode())
 			{
-				if (gDLL->getChtLvl() > 0)
-				{
-					// Log info about this combat...
-					char szOut[1024];
-					sprintf( szOut, "*** KOMBAT!\n     ATTACKER: Player %d Unit %d (%S's %S), CombatStrength=%d\n     DEFENDER: Player %d Unit %d (%S's %S), CombatStrength=%d\n",
-						getOwner(), getID(), GET_PLAYER(getOwner()).getName(), getName().GetCString(), currCombatStr(NULL, NULL),
-						pCombatUnit->getOwner(), pCombatUnit->getID(), GET_PLAYER(pCombatUnit->getOwner()).getName(), pCombatUnit->getName().GetCString(), pCombatUnit->currCombatStr(pCombatUnit->plot(), this));
-					gDLL->messageControlLog(szOut);
-				}
+				// Log info about this combat...
+				char szOut[1024];
+				sprintf( szOut, "*** KOMBAT!\n     ATTACKER: Player %d Unit %d (%S's %S), CombatStrength=%d\n     DEFENDER: Player %d Unit %d (%S's %S), CombatStrength=%d\n",
+					getOwner(), getID(), GET_PLAYER(getOwner()).getName(), getName().GetCString(), currCombatStr(NULL, NULL),
+					pCombatUnit->getOwner(), pCombatUnit->getID(), GET_PLAYER(pCombatUnit->getOwner()).getName(), pCombatUnit->getName().GetCString(), pCombatUnit->currCombatStr(pCombatUnit->plot(), this));
+				gDLL->messageControlLog(szOut);
 			}
 
-			if (showSeigeTower(pCombatUnit)) // K-Mod
+			if (showSeigeTower(pCombatUnit) && !isUsingDummyEntities()  && isInViewport())
 			{
-				if ( !isUsingDummyEntities()  && isInViewport())
-				{
-					CvDLLEntity::SetSiegeTower(true);
-				}
+				CvDLLEntity::SetSiegeTower(true);
 			}
 			if (!bStealthAttack && !bStealthDefense)
 			{
@@ -20308,16 +20275,13 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 				setCombatFirstStrikes(stealthStrikesTotal());
 			}
 		}
+		else if (bStealthDefense)
+		{
+			setCombatFirstStrikes(stealthStrikesTotal());
+		}
 		else
 		{
-			if (bStealthDefense)
-			{
-				setCombatFirstStrikes(stealthStrikesTotal());
-			}
-			else
-			{
-				setCombatFirstStrikes((pCombatUnit->immuneToFirstStrikes()) ? 0 : (firstStrikes() + GC.getGame().getSorenRandNum(chanceFirstStrikes() + 1, "First Strike")));
-			}
+			setCombatFirstStrikes((pCombatUnit->immuneToFirstStrikes()) ? 0 : (firstStrikes() + GC.getGame().getSorenRandNum(chanceFirstStrikes() + 1, "First Strike")));
 		}
 
 		FAssertMsg(getCombatUnit() == NULL, "Combat Unit is not expected to be assigned");
@@ -20349,36 +20313,33 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 		setCombatStuns(0);
 		//TB Combat Mod end
 	}
-	else
+	else if (getCombatUnit() != NULL)
 	{
-		if(getCombatUnit() != NULL)
+		FAssertMsg(getCombatUnit() != NULL, "getCombatUnit() is not expected to be equal with NULL");
+		FAssertMsg(plot()->isFighting(), "plot()->isFighting is expected to be true");
+		m_bCombatFocus = false;
+		m_combatUnit.reset();
+		setCombatFirstStrikes(0);
+		//TB Combat Mod begin
+		setCombatPowerShots(0);
+		setCombatKnockbacks(0);
+		setCombatRepels(0);
+		setCombatStuns(0);
+		//TB Combat mod end
+
+		if (IsSelected())
 		{
-			FAssertMsg(getCombatUnit() != NULL, "getCombatUnit() is not expected to be equal with NULL");
-			FAssertMsg(plot()->isFighting(), "plot()->isFighting is expected to be true");
-			m_bCombatFocus = false;
-			m_combatUnit.reset();
-			setCombatFirstStrikes(0);
-			//TB Combat Mod begin
-			setCombatPowerShots(0);
-			setCombatKnockbacks(0);
-			setCombatRepels(0);
-			setCombatStuns(0);
-			//TB Combat mod end
+			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+		}
 
-			if (IsSelected())
-			{
-				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-			}
+		if (plot() == gDLL->getInterfaceIFace()->getSelectionPlot())
+		{
+			gDLL->getInterfaceIFace()->setDirty(PlotListButtons_DIRTY_BIT, true);
+		}
 
-			if (plot() == gDLL->getInterfaceIFace()->getSelectionPlot())
-			{
-				gDLL->getInterfaceIFace()->setDirty(PlotListButtons_DIRTY_BIT, true);
-			}
-
-			if ( !isUsingDummyEntities()  && isInViewport())
-			{
-				CvDLLEntity::SetSiegeTower(false);
-			}
+		if ( !isUsingDummyEntities()  && isInViewport())
+		{
+			CvDLLEntity::SetSiegeTower(false);
 		}
 	}
 
@@ -20411,15 +20372,13 @@ CvUnit* CvUnit::getTransportUnit() const
 
 bool CvUnit::isCargo() const
 {
-	return (getTransportUnit() != NULL);
+	return getTransportUnit() != NULL;
 }
 
 
 void CvUnit::setTransportUnit(CvUnit* pTransportUnit)
 {
-	CvUnit* pOldTransportUnit;
-
-	pOldTransportUnit = getTransportUnit();
+	CvUnit* pOldTransportUnit = getTransportUnit();
 
 	if (pOldTransportUnit != pTransportUnit)
 	{
@@ -20576,7 +20535,7 @@ const CvWString CvUnit::getName(uint uiForm) const
 		return getDescription(uiForm);
 	}
 
-	else if (isDescInName())
+	if (isDescInName())
 	{
 		return m_szName;
 	}
@@ -20646,7 +20605,7 @@ int CvUnit::getTerrainDoubleMoveCount(TerrainTypes eIndex) const
 bool CvUnit::isTerrainDoubleMove(TerrainTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
-	return (getTerrainDoubleMoveCount(eIndex) > 0);
+	return getTerrainDoubleMoveCount(eIndex) > 0;
 }
 
 
@@ -20703,10 +20662,7 @@ int CvUnit::getExtraTerrainWorkPercent(TerrainTypes eIndex) const
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
-	int iBaseAmount = (info == NULL ? 0 : info->m_iExtraTerrainWorkPercent);
-	iBaseAmount += (info == NULL ? 0 : info->m_iTerrainWorkPercent);
-
-	return iBaseAmount;
+	return info == NULL ? 0 : info->m_iExtraTerrainWorkPercent + info->m_iTerrainWorkPercent;
 }
 
 //ls612: Terrain Work Modifiers
@@ -20716,9 +20672,7 @@ int CvUnit::getTerrainWorkPercent(TerrainTypes eIndex) const
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
-	int iBaseAmount = (info == NULL ? 0 : info->m_iTerrainWorkPercent);
-
-	return iBaseAmount;
+	return info == NULL ? 0 : info->m_iTerrainWorkPercent;
 }
 
 void CvUnit::changeExtraTerrainWorkPercent(TerrainTypes eIndex, int iChange)
@@ -20742,10 +20696,7 @@ int CvUnit::getExtraFeatureWorkPercent(FeatureTypes eIndex) const
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
-	int iBaseAmount = (info == NULL ? 0 : info->m_iExtraFeatureWorkPercent);
-	iBaseAmount += (info == NULL ? 0 : info->m_iFeatureWorkPercent);
-
-	return iBaseAmount;
+	return info == NULL ? 0 : info->m_iExtraFeatureWorkPercent + info->m_iFeatureWorkPercent;
 }
 
 int CvUnit::getFeatureWorkPercent(FeatureTypes eIndex) const
@@ -20754,9 +20705,7 @@ int CvUnit::getFeatureWorkPercent(FeatureTypes eIndex) const
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
-	int iBaseAmount = (info == NULL ? 0 : info->m_iFeatureWorkPercent);
-
-	return iBaseAmount;
+	return info == NULL ? 0 : info->m_iFeatureWorkPercent;
 }
 
 void CvUnit::changeExtraFeatureWorkPercent(FeatureTypes eIndex, int iChange)
@@ -20778,14 +20727,8 @@ int CvUnit::getExtraBuildWorkPercent(BuildTypes eIndex) const
 	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eIndex)
 
 	std::map<short, short>::const_iterator itr = m_extraBuildWorkPercent.find((short)eIndex);
-	if ( itr == m_extraBuildWorkPercent.end() )
-	{
-		return 0;
-	}
-	else
-	{
-		return (itr->second);
-	}
+
+	return itr == m_extraBuildWorkPercent.end() ? 0 : itr->second;
 }
 
 void CvUnit::changeExtraBuildWorkPercent(BuildTypes eIndex, int iChange)
@@ -20831,10 +20774,7 @@ int CvUnit::buildWorkPercent(BuildTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eIndex)
 
-	int iBaseAmount = m_pUnitInfo->getBuildWorkRateModifierType(eIndex);
-	iBaseAmount += getExtraBuildWorkPercent(eIndex);
-
-	return iBaseAmount;
+	return m_pUnitInfo->getBuildWorkRateModifierType(eIndex) + getExtraBuildWorkPercent(eIndex);
 }
 
 
