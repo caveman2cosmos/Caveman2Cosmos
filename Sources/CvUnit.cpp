@@ -30643,7 +30643,9 @@ void CvUnit::setCommander(bool bNewVal)
 
 	if (bNewVal)
 	{
-		m_commander = new UnitCompCommander(m_pUnitInfo);
+		m_commander = new UnitCompCommander();
+		m_commander->changeControlPoints(m_pUnitInfo->getControlPoints());
+		m_commander->changeCommandRange(m_pUnitInfo->getCommandRange());
 
 		GET_PLAYER(getOwner()).Commanders.push_back(this);
 

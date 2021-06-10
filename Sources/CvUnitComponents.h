@@ -7,7 +7,6 @@ class UnitCompCommander
 {
 public:
 	UnitCompCommander();
-	UnitCompCommander(CvUnitInfo* unitInfo);
 	~UnitCompCommander();
 
 	void changeControlPoints(const int iChange);
