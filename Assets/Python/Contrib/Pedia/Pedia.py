@@ -1465,7 +1465,7 @@ class Pedia:
 
 	def getBonusList(self, iType):
 		aList = []
-		ListDict = {}		
+		ListDict = {}
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
 		for iBonus in xrange(GC.getNumBonusInfos()):
@@ -1479,6 +1479,26 @@ class Pedia:
 			else:
 				iTechLoc = 0
 				iTechRow = 0
+			
+			#Check total productivity: from resource, improvement and improvement+resource coupling.
+			if CvBonusInfo.getConstAppearance() > 0: # Only care about map resources
+				for CvImprovement in xrange(GC.getNumImprovementInfos()):
+					CvImprovementInfo = GC.getImprovementInfo(CvImprovement)
+					if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0 or CvImprovementInfo.getImprovementPillage() != -1: # Only care about improvements, that can upgrade or downgrade.
+						if CvImprovementInfo.isImprovementBonusTrade(iBonus) and not CvImprovementInfo.isActsAsCity(): # Only care about improvements, that can improve bonus
+							#Purge old data
+							aBonusYield = [0]*YieldTypes.NUM_YIELD_TYPES
+							aImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
+							aBonusImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
+							aFinalYield = [0]*YieldTypes.NUM_YIELD_TYPES
+							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES): # Food, Production, Commerce
+								aBonusYield[iYield] = CvBonusInfo.getYieldChange(iYield) # Bonus yields
+								aImprovementYield[iYield] = CvImprovementInfo.getYieldChange(iYield) # Improvement yields
+								aBonusImprovementYield[iYield] = CvImprovementInfo.getImprovementBonusYield(iBonus, iYield) # Bonus-Improvement coupling yields
+								aFinalYield[iYield] = aBonusYield[iYield] + aImprovementYield[iYield] + aBonusImprovementYield[iYield]
+							print "Improvement "+CvImprovementInfo.getType()+" on Bonus "+CvBonusInfo.getType()+" has F/P/C Productivity: "+str((aBonusYield,aImprovementYield,aBonusImprovementYield,aFinalYield))
+
+								
 			
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
 				if not iType:
