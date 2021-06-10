@@ -28,7 +28,7 @@ class PediaBonus:
 
 		self.S_ICON = S_ICON = H_TOP_ROW - 6
 
-		self.X_STATS = X_COL_1 + S_ICON - 8
+		self.X_STATS = X_COL_1 + S_ICON
 		self.Y_STATS = Y_TOP_ROW + H_TOP_ROW / 12
 		self.W_STATS = (W_COL_1 - S_ICON) / 2
 
@@ -152,9 +152,9 @@ class PediaBonus:
 			iYieldChange = CvTheBonusInfo.getYieldChange(k)
 			if iYieldChange:
 				if iYieldChange < 0:
-					szChange = " <color=255,0,0,255>"
+					szChange += " <color=255,0,0,255>"
 				else:
-					szChange = " <color=0,230,0,255>"
+					szChange += " <color=0,230,0,255>"
 				szChange += "%d%s" %(iYieldChange, unichr(8483 + k))
 		iHappiness = CvTheBonusInfo.getHappiness()
 		iHealth = CvTheBonusInfo.getHealth()
