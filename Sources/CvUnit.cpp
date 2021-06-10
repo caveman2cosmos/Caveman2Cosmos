@@ -25186,14 +25186,16 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSleepTimer);
 
 	// SAVEBRERAK - Toffer - Cleanup commander mess.
-	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getControlPoints() - m_pUnitInfo->getControlPoints(), "m_iExtraControlPoints");
-	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getCommandRange() - m_pUnitInfo->getCommandRange(), "m_iExtraCommandRange");
-	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getControlPointsLeft(), "m_iControlPointsLeft");
+	const bool bCommander = isCommander();
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bCommander ? m_commander->getControlPoints() - m_pUnitInfo->getControlPoints() : 0), "m_iExtraControlPoints");
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bCommander ? m_commander->getCommandRange() - m_pUnitInfo->getCommandRange() : 0), "m_iExtraCommandRange");
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bCommander ? m_commander->getControlPointsLeft() : 0), "m_iControlPointsLeft");
+
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCommanderID); //-1 means there is no used commander
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_eOriginalOwner);
 
-	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isCommander(), "m_bCommander");
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", bCommander, "m_bCommander");
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoPromoting);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoUpgrading);
