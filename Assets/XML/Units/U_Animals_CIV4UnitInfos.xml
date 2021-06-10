@@ -23543,7 +23543,12 @@
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
 					<iChance>10</iChance>
 					<UnitType>UNIT_SUBDUED_ZEBRA</UnitType>
-					<bUnitToCity><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SEDENTARY_LIFESTYLE</ID></Has></bUnitToCity>
+					<bUnitToCity>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
+						</Has>
+					</bUnitToCity>
 					<Yields>
 						<iYield>1</iYield>
 						<iYield>1</iYield>

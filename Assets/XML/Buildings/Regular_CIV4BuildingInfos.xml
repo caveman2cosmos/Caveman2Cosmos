@@ -3502,13 +3502,6 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_VIRTUAL_SOCIETY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
@@ -4247,38 +4240,6 @@
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCULPTURE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_AESTHETICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_PERSPECTIVE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_OIL_PAINTING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_ROMANTICISM</PrereqTech>
 					<TechCommerce>
@@ -5027,14 +4988,6 @@
 						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<Flavors>
 				<Flavor>
@@ -5552,12 +5505,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<iHappiness>-1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -8686,13 +8633,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_DROIDS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_SPECIES_UPLIFTING</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
@@ -8940,12 +8880,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<TechHealthChanges>
-				<TechHealthChange>
-					<PrereqTech>TECH_MOLECULAR_MEDICINE</PrereqTech>
-					<iHealth>2</iHealth>
-				</TechHealthChange>
-			</TechHealthChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -9448,12 +9382,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_ECOLOGY</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -9820,12 +9754,12 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_SACRIFICE_CULT</TechType>
-					<iModifier>1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iWarWearinessModifier>-10</iWarWearinessModifier>
 			<Flavors>
 				<Flavor>
@@ -10774,16 +10708,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_FIRE_MAKING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
@@ -10828,14 +10752,6 @@
 			<FreeBonus>BONUS_BRASS_INSTRUMENTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
@@ -10956,14 +10872,6 @@
 			<FreeBonus>BONUS_BRASS_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_AESTHETICS</PrereqTech>
 					<TechCommerce>
@@ -12630,14 +12538,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_AESTHETICS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
@@ -13537,14 +13437,6 @@
 						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<Flavors>
 				<Flavor>
@@ -13870,22 +13762,6 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SCRIPTURES</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LITERATURE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_AESTHETICS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
@@ -14161,12 +14037,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_ECOLOGY</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -16332,24 +16208,6 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_AESTHETICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_LEAD_INGOTS</BonusType>
@@ -18107,14 +17965,6 @@
 						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<Flavors>
 				<Flavor>
@@ -19090,21 +18940,7 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -19716,12 +19552,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_ECOLOGY</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -22708,14 +22544,6 @@
 						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<Flavors>
 				<Flavor>
@@ -24740,20 +24568,6 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_CLIMATE_MODELS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_VOLCANOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_AUGMENTED_REALITY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
@@ -25008,12 +24822,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<iHappiness>-1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -25735,14 +25543,6 @@
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_PAPER</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -27519,14 +27319,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_AESTHETICS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
@@ -28574,13 +28366,6 @@
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -31101,14 +30886,6 @@
 						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<Flavors>
 				<Flavor>
@@ -32018,13 +31795,6 @@
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_GENETICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 					<TechCommerce>
@@ -34512,12 +34282,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<iHappiness>-1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -34773,24 +34537,6 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_AESTHETICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_DYE</BonusType>
@@ -34913,14 +34659,6 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_AESTHETICS</PrereqTech>
 					<TechCommerce>
@@ -35355,14 +35093,6 @@
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_PAPER</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -36086,22 +35816,6 @@
 				<BuildingType>BUILDING_RANGER_STATION</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_TOURISM</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_SENTIENT_EARTH</PrereqTech>
-					<iHappiness>1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
@@ -38150,14 +37864,6 @@
 						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<Flavors>
 				<Flavor>
@@ -39927,12 +39633,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_ECOLOGY</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -42027,14 +41733,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_AESTHETICS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
@@ -43487,14 +43185,6 @@
 						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<Flavors>
 				<Flavor>
@@ -43567,12 +43257,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_ECOLOGY</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -44075,12 +43765,6 @@
 				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>234</iCost>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_LEISURE</PrereqTech>
-					<iHappiness>1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
@@ -44269,24 +43953,6 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_AESTHETICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<iConquestProb>80</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<Properties>
@@ -44406,24 +44072,6 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_AESTHETICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<iConquestProb>80</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
@@ -44544,14 +44192,6 @@
 						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<Flavors>
 				<Flavor>
@@ -44600,12 +44240,6 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_ANDROIDS</PrereqTech>
-					<iHappiness>1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_ECOLOGY</PrereqTech>
@@ -47033,12 +46667,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_ECOLOGY</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -47099,12 +46733,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_ECOLOGY</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -49029,13 +48663,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_METAMATERIALS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
@@ -49074,13 +48701,6 @@
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_ANDROIDS</PrereqTech>
-					<TechYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYield>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -49525,12 +49145,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<iHappiness>-1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -50898,12 +50512,6 @@
 			<FreeBonus>BONUS_MICROGENERATORS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_PERSONALIZED_HEALTH</PrereqTech>
-					<TechCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_ASTEROID_MINING</PrereqTech>
 					<TechCommerce>
@@ -52976,22 +52584,6 @@
 				<iCommerce>2</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<FreePromotion>PROMOTION_MOBILITY</FreePromotion>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
@@ -53243,12 +52835,6 @@
 				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>475</iCost>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_LEISURE</PrereqTech>
-					<iHappiness>1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
@@ -53356,13 +52942,6 @@
 				<TechCommerceChange>
 					<PrereqTech>TECH_BIOMATERIALS</PrereqTech>
 					<TechCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BIOLOGICAL_WARFARE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
@@ -59229,12 +58808,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_ECOLOGY</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -59300,12 +58879,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_ECOLOGY</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -59785,12 +59364,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_ECOLOGY</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -61978,12 +61557,6 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-					<iHappiness>1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<PropertyManipulators>
 				<PropertySource>
@@ -63354,24 +62927,6 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_AESTHETICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_LEAD_INGOTS</BonusType>
@@ -63572,14 +63127,6 @@
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_PAPER</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -64734,12 +64281,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_ECOLOGY</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -67424,13 +66971,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_3D_MODELLING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
@@ -69253,14 +68793,6 @@
 						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<Flavors>
 				<Flavor>
@@ -69502,14 +69034,6 @@
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_PAPER</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -73547,12 +73071,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_MYSTICISM</TechType>
-					<iModifier>1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_MYSTICISM</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<FreePromotion>PROMOTION_MAMMOTH_HUNTER1</FreePromotion>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<Flavors>
@@ -73697,12 +73221,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_TOURISM</PrereqTech>
-					<iHappiness>1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iPower>1</iPower>
 			<iConquestProb>30</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -75714,14 +75232,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
@@ -76493,13 +76003,6 @@
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_GENESIS_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -80056,12 +79559,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_ECOLOGY</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -83283,16 +82786,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<ObsoleteTech>TECH_MILITARY_TRAINING</ObsoleteTech>
 			<iCost>86</iCost>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
@@ -84382,14 +83875,6 @@
 						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<Flavors>
 				<Flavor>
@@ -84516,14 +84001,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_WHALE_OIL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Properties>
 				<Property>
@@ -85561,12 +85038,6 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<TechHappinessChanges>
-				<TechHappinessChange>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<iHappiness>-1</iHappiness>
-				</TechHappinessChange>
-			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>

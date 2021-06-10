@@ -155,20 +155,6 @@
 	</ElementType>
 	<ElementType name="TechType" content="textOnly"/>
 	<ElementType name="iModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="TechHappinessType" content="eltOnly">
-		<element type="TechType" minOccurs="0" maxOccurs="*"/>
-		<element type="iModifier" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="TechHappinessTypes" content="eltOnly">
-		<element type="TechHappinessType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="TechHealthType" content="eltOnly">
-		<element type="TechType" minOccurs="0" maxOccurs="*"/>
-		<element type="iModifier" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="TechHealthTypes" content="eltOnly">
-		<element type="TechHealthType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<!--Arrays -->
 	<ElementType name="LocalSpecialistYieldChange" content="eltOnly">
 		<element type="SpecialistType"/>
@@ -1005,6 +991,8 @@
 		<element type="TechSpecialistChanges" minOccurs="0"/>
 		<element type="TechCommerceModifiers" minOccurs="0"/>
 		<element type="TechYieldModifiers" minOccurs="0"/>
+		<element type="TechHappinessChanges" minOccurs="0"/>
+		<element type="TechHealthChanges" minOccurs="0"/>
 		<!-- Technology Affected Buildings: END -->
 		<element type="bDCMNukesOkay" minOccurs="0"/>
 		<element type="iDCMAirbombMission" minOccurs="0"/>

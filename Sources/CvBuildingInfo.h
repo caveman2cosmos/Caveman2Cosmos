@@ -367,12 +367,6 @@ public:
 	int getBonusCommercePercentChanges(int i, int j) const;
 	int* getBonusCommercePercentChangesArray(int i) const;
 
-	int getTechHappinessChanges(int i) const;
-	int* m_piTechHappinessChanges;
-
-	int getTechHealthChanges(int i) const;
-	int* m_piTechHealthChanges;
-
 	int getTechCommerceChange(int i, int j) const;
 	int* getTechCommerceChangeArray(int i) const;
 
@@ -476,13 +470,15 @@ public:
 	int getNumTechOutbreakLevelChanges() const;
 	int getTechOutbreakLevelChange(int iTech) const;
 
-	//int getNumTechHappinessTypes() const;
+	//int getNumTechHappinessChanges() const;
 	int getTechHappiness(TechTypes eTech) const;
-	const IDValueMap<TechTypes, int>& getTechHappinessTypes() const { return m_aTechHappinessTypes; }
+	const IDValueMap<TechTypes, int>& getTechHappinessChanges() const { return m_aTechHappinessChanges; }
+	const python::list cyGetTechHappinessChanges() const { return m_aTechHappinessChanges.makeList(); }
 
-	//int getNumTechHealthTypes() const;
-	int getTechHealthType(TechTypes eTech) const;
-	const IDValueMap<TechTypes, int>& getTechHealthTypes() const { return m_aTechHealthTypes; }
+	//int getNumTechHealthChanges() const;
+	int getTechHealth(TechTypes eTech) const;
+	const IDValueMap<TechTypes, int>& getTechHealthChanges() const { return m_aTechHealthChanges; }
+	const python::list cyGetTechHealthChanges() const { return m_aTechHealthChanges.makeList(); }
 
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
@@ -881,8 +877,8 @@ protected:
 	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
-	IDValueMap<TechTypes, int> m_aTechHappinessTypes;
-	IDValueMap<TechTypes, int> m_aTechHealthTypes;
+	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
+	IDValueMap<TechTypes, int> m_aTechHealthChanges;
 
 	int** m_ppaiLocalSpecialistYieldChange;
 	int** m_ppaiLocalSpecialistCommerceChange;

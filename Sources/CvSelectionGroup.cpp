@@ -2037,7 +2037,7 @@ bool CvSelectionGroup::startMission()
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	if ((getNumUnits() > 0) && (headMissionQueueNode() != NULL))
+	if (getNumUnits() > 0 && headMissionQueueNode() != NULL)
 	{
 		if (bAction && isHuman() && plot()->isVisibleToWatchingHuman())
 		{
@@ -2055,9 +2055,8 @@ bool CvSelectionGroup::startMission()
 			{
 				if (getOwner() == GC.getGame().getActivePlayer() && IsSelected())
 				{
-					gDLL->getInterfaceIFace()->changeCycleSelectionCounter((GET_PLAYER(getOwner()).isOption(PLAYEROPTION_QUICK_MOVES)) ? 1 : 2);
+					gDLL->getInterfaceIFace()->changeCycleSelectionCounter(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_QUICK_MOVES) ? 1 : 2);
 				}
-
 				deleteMissionQueueNode(headMissionQueueNode());
 			}
 			else if (getActivityType() == ACTIVITY_MISSION)
@@ -2586,7 +2585,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 						(headMissionQueueNode()->m_data.eMissionType == MISSION_ROUTE_TO) ||
 						(headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_UNIT))
 					{
-						gDLL->getInterfaceIFace()->changeCycleSelectionCounter((GET_PLAYER(getOwner()).isOption(PLAYEROPTION_QUICK_MOVES)) ? 1 : 2);
+						gDLL->getInterfaceIFace()->changeCycleSelectionCounter(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_QUICK_MOVES) ? 1 : 2);
 					}
 				}
 /************************************************************************************************/
@@ -4889,37 +4888,26 @@ void CvSelectionGroup::updateMissionTimer(int iSteps)
 {
 	PROFILE_FUNC();
 
-	CvUnit* pTargetUnit;
-	CvPlot* pTargetPlot;
-	int iTime;
+	int iTime = 0;
 
-	if (!isHuman() && !showMoves())
-	{
-		iTime = 0;
-	}
-	else if (headMissionQueueNode() != NULL)
+	if ((isHuman() || showMoves()) && headMissionQueueNode() != NULL)
 	{
 		iTime = GC.getMissionInfo((MissionTypes)(headMissionQueueNode()->m_data.eMissionType)).getTime();
 
-		if ((headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO) ||
-// BUG - Sentry Actions - start
+		if (headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO ||
 #ifdef _MOD_SENTRY
-				(headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_SENTRY) ||
+				headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_SENTRY ||
 #endif
-// BUG - Sentry Actions - end
-				(headMissionQueueNode()->m_data.eMissionType == MISSION_ROUTE_TO) ||
-				(headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_UNIT))
+				headMissionQueueNode()->m_data.eMissionType == MISSION_ROUTE_TO ||
+				headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_UNIT)
 		{
+			CvPlot* pTargetPlot = NULL;
 			if (headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_UNIT)
 			{
-				pTargetUnit = GET_PLAYER((PlayerTypes)headMissionQueueNode()->m_data.iData1).getUnit(headMissionQueueNode()->m_data.iData2);
+				CvUnit* pTargetUnit = GET_PLAYER((PlayerTypes)headMissionQueueNode()->m_data.iData1).getUnit(headMissionQueueNode()->m_data.iData2);
 				if (pTargetUnit != NULL)
 				{
 					pTargetPlot = pTargetUnit->plot();
-				}
-				else
-				{
-					pTargetPlot = NULL;
 				}
 			}
 			else
@@ -4937,16 +4925,22 @@ void CvSelectionGroup::updateMissionTimer(int iSteps)
 			}
 		}
 
-		if (isHuman() && (isAutomated() || (GET_PLAYER((GC.getGame().isNetworkMultiPlayer()) ? getOwner() : GC.getGame().getActivePlayer()).isOption(PLAYEROPTION_QUICK_MOVES))))
+		if (isHuman())
 		{
-			iTime = std::min(iTime, 1);
+			if (isAutomated() || GET_PLAYER((GC.getGame().isNetworkMultiPlayer()) ? getOwner() : GC.getGame().getActivePlayer()).isOption(PLAYEROPTION_QUICK_MOVES))
+			{
+				if (!GC.getGame().isGameMultiPlayer() && getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false))
+				{
+					iTime = 0;
+				}
+				else iTime = std::min(iTime, 1);
+			}
+		}
+		else if (!GC.getGame().isGameMultiPlayer() && getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false))
+		{
+			iTime = 0;
 		}
 	}
-	else
-	{
-		iTime = 0;
-	}
-
 	setMissionTimer(iTime);
 }
 

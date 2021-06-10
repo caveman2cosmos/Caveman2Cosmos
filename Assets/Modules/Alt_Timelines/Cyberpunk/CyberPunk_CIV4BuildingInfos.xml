@@ -124,44 +124,6 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_FLASH_MEMORY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MICROMECHANICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BRAIN_MACHINE_INTERFACE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>

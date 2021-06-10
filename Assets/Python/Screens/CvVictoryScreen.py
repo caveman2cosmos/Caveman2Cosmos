@@ -165,6 +165,7 @@ class CvVictoryScreen:
 			fPopPercent = 0.0
 			iTotalPop = 1
 
+		bDebugModeDLL = GAME.isDebugMode()
 		iBestPopTeam = -1
 		iBestPop = 0
 		for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
@@ -172,7 +173,7 @@ class CvVictoryScreen:
 				continue
 			CyTeamX = GC.getTeam(iTeamX)
 			if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-				if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+				if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 					iPop = CyTeamX.getTotalPopulation()
 					if iPop > iBestPop:
 						iBestPop = iPop
@@ -188,7 +189,7 @@ class CvVictoryScreen:
 				continue
 			CyTeamX = GC.getTeam(iTeamX)
 			if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-				if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+				if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 					iScore = GAME.getTeamScore(iTeamX)
 					if iScore > iBestScore:
 						iBestScore = iScore
@@ -206,7 +207,7 @@ class CvVictoryScreen:
 			if iTeamX == iTeamAct:
 				continue
 			if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-				if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+				if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 					teamLand = CyTeamX.getTotalLand()
 					if teamLand > iBestLand:
 						iBestLand = teamLand
@@ -242,7 +243,7 @@ class CvVictoryScreen:
 			if iTeamX == iTeamAct:
 				continue
 			if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-				if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+				if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 					teamCulture = CyTeamX.countTotalCulture()
 					if teamCulture > iBestCulture:
 						iBestCulture = teamCulture
@@ -265,7 +266,7 @@ class CvVictoryScreen:
 						CyPlayerX = GC.getPlayer(iPlayerX)
 						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.hasBuilding(i):
 							iUNTeam = CyPlayerX.getTeam()
-							if iUNTeam == iTeamAct or GAME.isDebugMode() or CyTeam.isHasMet(iUNTeam):
+							if iUNTeam == iTeamAct or bDebugModeDLL or CyTeam.isHasMet(iUNTeam):
 								bUnknown = False
 							break
 
@@ -296,7 +297,8 @@ class CvVictoryScreen:
 		screen.addPanel(self.getNextWidgetName(), "", "", False, False, 0, self.Y_TOP_PAGE - 6, xRes, self.H_PAGE + 6, PanelStyles.PANEL_STYLE_BLUE50)
 
 		# civ picker dropdown
-		if GAME.isDebugMode():
+		import DebugUtils
+		if DebugUtils.isAnyDebugMode():
 			screen.addDropDownBoxGFC("VictoryScreenDropdownWidget", 22, 0, 300, eWidGen, 1, 2, FontTypes.GAME_FONT)
 			for j in xrange(GC.getMAX_PLAYERS()):
 				if GC.getPlayer(j).isAlive():
@@ -537,7 +539,7 @@ class CvVictoryScreen:
 						if iTeamX == iTeamAct: continue
 						CyTeamX = GC.getTeam(iTeamX)
 						if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-							if iTeamX != iTeamAct and iTeamX != iBestTeam and CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+							if iTeamX != iTeamAct and iTeamX != iBestTeam and CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 								iRow = screen.appendTableRow(szTable)
 								screen.setTableText(szTable, 0, iRow, ufont2b + CyTeamX.getName() + ":", "", eWidGen, 1, 2, 1<<0)
 								screen.setTableText(szTable, 1, iRow, ufont2b + str(CyTeamX.getTotalVictoryScore()), "", eWidGen, 1, 2, 1<<0)
@@ -675,7 +677,7 @@ class CvVictoryScreen:
 					if iTeamX == iTeamAct: continue
 					CyTeamX = GC.getTeam(iTeamX)
 					if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-						if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+						if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 							teamBuilding = 0
 							for i in xrange(GC.getNumBuildingInfos()):
 								if GC.getBuildingInfo(i).getVictoryThreshold(iLoopVC) > 0:
@@ -701,7 +703,7 @@ class CvVictoryScreen:
 					if iTeamX == iTeamAct: continue
 					CyTeamX = GC.getTeam(iTeamX)
 					if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-						if (CyTeam.isHasMet(iTeamX) or GAME.isDebugMode()) and self.isApolloBuiltbyTeam(CyTeamX):
+						if (CyTeam.isHasMet(iTeamX) or bDebugModeDLL) and self.isApolloBuiltbyTeam(CyTeamX):
 							teamProject = 0
 							for i in xrange(GC.getNumProjectInfos()):
 								if GC.getProjectInfo(i).getVictoryThreshold(iLoopVC) > 0:
@@ -832,7 +834,7 @@ class CvVictoryScreen:
 					for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 						CyPlayerX = GC.getPlayer(iPlayerX)
 						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and not CyPlayerX.isNPC():
-							if iPlayerX != iActivePlayer and (CyTeam.isHasMet(CyPlayerX.getTeam()) or GAME.isDebugMode()):
+							if iPlayerX != iActivePlayer and (CyTeam.isHasMet(CyPlayerX.getTeam()) or bDebugModeDLL):
 								theirBestCities = self.getListCultureCities(iPlayerX, CvVictoryInfo)[0:iNumCultureCities]
 
 								iTotalCulture = 0
