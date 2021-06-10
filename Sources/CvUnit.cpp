@@ -204,22 +204,18 @@ m_Properties(this)
 	}
 }
 
-
 CvUnit::~CvUnit()
 {
-	if ( !isUsingDummyEntities() )
+	if (!isUsingDummyEntities())
 	{
-		if (!gDLL->GetDone() && GC.IsGraphicsInitialized())						// don't need to remove entity when the app is shutting down, or crash can occur
+		// Don't need to remove entity when the app is shutting down, or crash can occur
+		if (!gDLL->GetDone() && GC.IsGraphicsInitialized())
 		{
 			gDLL->getEntityIFace()->RemoveUnitFromBattle(this);
-			CvDLLEntity::removeEntity();		// remove entity from engine
+			CvDLLEntity::removeEntity(); // remove entity from engine
 		}
-
-		CvDLLEntity::destroyEntity();			// delete CvUnitEntity and detach from us
+		CvDLLEntity::destroyEntity(); // delete CvUnitEntity and detach from us
 	}
-
-	uninit();
-
 	SAFE_DELETE_ARRAY(m_aiExtraDomainModifier);
 	SAFE_DELETE_ARRAY(m_aiExtraVisibilityIntensity);
 	SAFE_DELETE_ARRAY(m_aiExtraInvisibilityIntensity);
@@ -228,16 +224,24 @@ CvUnit::~CvUnit()
 	SAFE_DELETE_ARRAY(m_aiNegatesInvisibleCount);
 }
 
+
 bool CvUnit::isUsingDummyEntities() const
 {
 	const CvEntity* entity = getEntity();
 
-	return (entity != NULL && g_dummyEntity == entity);// || (m_eUnitType == 701);
+	return entity != NULL && g_dummyEntity == entity;
 }
 
 void CvUnit::reloadEntity(bool bForceLoad)
 {
-	bool	bNeedsRealEntity = !g_bUseDummyEntities || bForceLoad || (plot() != NULL && plot()->isActiveVisible(false) && (plot()->getCenterUnit() == this || getOwner() == GC.getGame().getActivePlayer()));
+	const bool bNeedsRealEntity = 
+	(
+		!g_bUseDummyEntities || bForceLoad
+		||
+		plot() != NULL && plot()->isActiveVisible(false)
+		&&
+		(plot()->getCenterUnit() == this || getOwner() == GC.getGame().getActivePlayer())
+	);
 
 	//OutputDebugString(CvString::format("reloadEntity for %08lx\n", this).c_str());
 	if ( !IsSelected() )
@@ -287,15 +291,10 @@ void CvUnit::reloadEntity(bool bForceLoad)
 					OutputDebugString(CvString::format("Dummy unit entity usage: %d, real %d\n", g_dummyUsage, g_numEntities).c_str());
 				}
 			}
-			else
+			else if ( plot() != NULL ) //create new one
 			{
-				//create new one
-				if ( plot() != NULL )
-				{
-					CvDLLEntity::createUnitEntity(this);		// create and attach entity to unit
-
-					bGraphicsSetup = false;
-				}
+				CvDLLEntity::createUnitEntity(this);		// create and attach entity to unit
+				bGraphicsSetup = false;
 			}
 		}
 
@@ -500,17 +499,11 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	}
 }
 
-void CvUnit::uninit() { }
-
 
 // FUNCTION: reset()
 // Initializes data members that are serialized.
 void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstructorCall, bool bIdentityChange)
 {
-	//--------------------------------
-	// Uninit class
-	uninit();
-
 	clearCityOfOrigin();
 
 	m_iHealUnitCombatCount = 0;
@@ -763,9 +756,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 
 	m_iSleepTimer = 0;
 	//@MOD Commanders: reset parameters
-	m_iExtraCommandRange = 0;
-	m_iExtraControlPoints = 0;
-	m_iControlPointsLeft = 0;
 	m_iCommanderID = -1;
 	m_iCommanderCacheTurn = -1;
 	m_eOriginalOwner = eOwner;
@@ -775,7 +765,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_eNewSMNotSpecialCargo = NO_SPECIALUNIT;
 	m_eSpecialUnit = NO_SPECIALUNIT;
 	m_eSleepType = NO_MISSION;
-	m_bCommander = false;
 	m_iZoneOfControlCount = 0;
 	m_iExcileCount = 0;
 	m_iPassageCount = 0;
@@ -827,6 +816,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraGatherHerdCount = 0;
 	m_bIsArmed = false;
 	m_eCurrentBuildUpType = NO_PROMOTIONLINE;
+	m_commander = NULL;
 
 	m_eCapturingUnit.reset();
 	m_combatUnit.reset();
@@ -1444,7 +1434,10 @@ void CvUnit::doTurn()
 	FAssertMsg(!isDead(), "isDead did not return false as expected");
 	FAssertMsg(getGroup() != NULL, "getGroup() is not expected to be equal with NULL");
 
-	m_iControlPointsLeft = controlPoints();	//restore control points for commander
+	if (isCommander())
+	{
+		m_commander->restoreControlPoints();
+	}
 	gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 	m_iCommanderID = -1;	//reset used commander for combat units
 
@@ -22793,8 +22786,14 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	//	mountains, and ability to lead a stack through mountains
 	changeCanLeadThroughPeaksCount((kPromotion.isCanLeadThroughPeaks()) ? iChange : 0);
 
-	changeExtraControlPoints(kPromotion.getControlPoints() * iChange);
-	changeExtraCommandRange(kPromotion.getCommandRange() * iChange);
+	// Toffer - Assume promotions with commander stats can only be gained by commanders.
+	//	If assumption is wrong, we'll need setCommander(true) to go through all promotions the unit has,
+	//	and apply commander specific stats at that point.
+	if (isCommander())
+	{
+		m_commander->changeControlPoints(kPromotion.getControlPoints() * iChange);
+		m_commander->changeCommandRange(kPromotion.getCommandRange() * iChange);
+	}
 
 	changeImmuneToFirstStrikesCount((kPromotion.isImmuneToFirstStrikes()) ? iChange : 0);
 
@@ -23610,13 +23609,21 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCanLeadThroughPeaksCount);
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSleepTimer);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraControlPoints);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCommandRange);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iControlPointsLeft);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iCommanderID);			//id will be used later on player initialization to get m_pUsedCommander pointer
+
+	// SAVEBRERAK - Toffer - Cleanup commander mess.
+	int iExtraControlPoints = 0;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraControlPoints, "m_iExtraControlPoints");
+	int iExtraCommandRange = 0;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraCommandRange, "m_iExtraCommandRange");
+	int iControlPointsLeft = 0;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iControlPointsLeft, "m_iControlPointsLeft");
+
+	WRAPPER_READ(wrapper, "CvUnit", &m_iCommanderID); //id will be used later on player initialization to get m_pUsedCommander pointer
 
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOriginalOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &m_bCommander);
+
+	bool bCommander = false;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bCommander, "m_bCommander");
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoPromoting);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoUpgrading);
@@ -25122,6 +25129,17 @@ void CvUnit::read(FDataStreamBase* pStream)
 			}
 		}
 	}
+
+	// Toffer - Initialize Components
+	if (bCommander)
+	{
+		m_commander = new UnitCompCommander();
+
+		m_commander->changeControlPoints(iExtraControlPoints + m_pUnitInfo->getControlPoints());
+		m_commander->changeControlPointsLeft(iControlPointsLeft - m_commander->getControlPoints());
+
+		m_commander->changeCommandRange(iExtraCommandRange + m_pUnitInfo->getCommandRange());
+	}
 }
 
 
@@ -25173,13 +25191,16 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCanLeadThroughPeaksCount);
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSleepTimer);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraControlPoints);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCommandRange);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iControlPointsLeft);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iCommanderID);	//-1 means there is no used commander
+
+	// SAVEBRERAK - Toffer - Cleanup commander mess.
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getControlPoints() - m_pUnitInfo->getControlPoints(), "m_iExtraControlPoints");
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getCommandRange() - m_pUnitInfo->getCommandRange(), "m_iExtraCommandRange");
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getControlPointsLeft(), "m_iControlPointsLeft");
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iCommanderID); //-1 means there is no used commander
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_eOriginalOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_bCommander);
+
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isCommander(), "m_bCommander");
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoPromoting);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoUpgrading);
@@ -30481,61 +30502,40 @@ CvUnit* CvUnit::getCommander() const
 {
 	PROFILE_FUNC();
 
-	//	This routine gets called a HUGE number of times per turn (100s of millions in large games!)
+	// This routine gets called a HUGE number of times per turn (100s of millions in large games!)
 	//	so short-circuit the most common case of the unit having no commander when we can
 	//	Similarly protect against calls during initialization of a unit (before it has a plot set)
-	if ( m_iCachedCommander == NO_COMMANDER_ID || plot() == NULL )
+	if (m_iCachedCommander == NO_COMMANDER_ID || plot() == NULL)
 	{
 		return NULL;
 	}
-
 	CvUnit* pBestCommander = getUsedCommander();
-	if (pBestCommander != NULL)	//return already used one if it is not dead.
-	{
-		if (pBestCommander->plot() != NULL)//Recently destroyed commanders could cause a crash here without this protection.
-		{
-			int iDistance = plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY());
 
-			if (pBestCommander->controlPointsLeft() > 0 && iDistance <= pBestCommander->commandRange())
+	if (pBestCommander != NULL) //return already used one if it is not dead.
+	{
+		// Recently destroyed commanders could cause a crash here without this protection.
+		if (pBestCommander->plot() != NULL && pBestCommander->controlPointsLeft() > 0
+		&& plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->commandRange())
+		{
+			return pBestCommander;
+		}
+		// The one we used would have been the cached one so will have to search again
+		pBestCommander = NULL;
+		m_iCommanderCacheTurn = -1;
+	}
+
+	if (m_iCommanderCacheTurn == GC.getGame().getGameTurn())
+	{
+		pBestCommander = GET_PLAYER(getOwner()).getUnit(m_iCachedCommander);
+		if (pBestCommander != NULL)
+		{
+			// Guard against this being called during the death of said GC!
+			if (pBestCommander->plot() != NULL && pBestCommander->controlPointsLeft() > 0
+			&& plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->commandRange())
 			{
 				return pBestCommander;
 			}
-			else
-			{
-				pBestCommander = NULL;
-				m_iCommanderCacheTurn = -1;	//	the one we used would have been the cached one so will be to search again
-			}
-		}
-		else
-		{
 			pBestCommander = NULL;
-			m_iCommanderCacheTurn = -1;	//	the one we used would have been the cached one so will be to search again
-		}
-	}
-
-	if ( m_iCommanderCacheTurn == GC.getGame().getGameTurn() )
-	{
-		pBestCommander = GET_PLAYER(getOwner()).getUnit(m_iCachedCommander);
-		if ( pBestCommander != NULL )
-		{
-			//	Guard against this being called during the death of said GC!
-			if ( pBestCommander->plot() != NULL )
-			{
-				int iDistance = plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY());
-
-				if (pBestCommander->controlPointsLeft() > 0 && iDistance <= pBestCommander->commandRange())
-				{
-					return pBestCommander;
-				}
-				else
-				{
-					pBestCommander = NULL;
-				}
-			}
-			else
-			{
-				pBestCommander = NULL;
-			}
 		}
 	}
 
@@ -30547,22 +30547,27 @@ CvUnit* CvUnit::getCommander() const
 		for (int i=0; i < (int)kPlayer.Commanders.size(); i++)		//loop through player's commanders
 		{
 			CvUnit* pCommander = kPlayer.Commanders[i];
+
+			if (pCommander->controlPointsLeft() <= 0)
+			{
+				continue;
+			}
 			const CvPlot* pCommPlot = pCommander->plot();
+
 			if (pCommPlot == NULL)
 			{
 				FErrorMsg("Commander Should Exist!");
 				continue;
 			}
-			int iDistance = plotDistance(pCommPlot->getX(), pCommPlot->getY(), getX(), getY());
+			const int iDistance = plotDistance(pCommPlot->getX(), pCommPlot->getY(), getX(), getY());
 
-			if (pCommander->controlPointsLeft() <= 0 || iDistance > pCommander->commandRange())
+			if (iDistance > pCommander->commandRange())
 			{
 				continue;
 			}
-
-			if (pBestCommander == NULL ||
-				//best commander is at shorter distance, or at same distance but has more XP:
-				(iBestCommanderDistance < iDistance || (iBestCommanderDistance == iDistance && pCommander->getExperience() > pBestCommander->getExperience())))
+			if (pBestCommander == NULL
+			// Best commander is at shorter distance, or at same distance but has more XP:
+			|| (iBestCommanderDistance < iDistance || iBestCommanderDistance == iDistance && pCommander->getExperience() > pBestCommander->getExperience()))
 			{
 				pBestCommander = pCommander;
 				iBestCommanderDistance = iDistance;
@@ -30575,12 +30580,11 @@ CvUnit* CvUnit::getCommander() const
 	//	gave rise to the odds calculation
 
 	//Perhaps do not cache commanders because it causes an OOS error to do so?  AIs make abortive odds calcs as well do they not?
-	if ( !isHuman() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+	if (!isHuman() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		m_iCommanderCacheTurn = GC.getGame().getGameTurn();
 		m_iCachedCommander = (pBestCommander == NULL ? NO_COMMANDER_ID : pBestCommander->getID());
 	}
-
 	return pBestCommander;
 }
 
@@ -30593,12 +30597,12 @@ void CvUnit::tryUseCommander()
 		pCommander = getCommander();
 	}
 
-	if (pCommander != NULL)	//commander is used when any unit under his command fights in combat
+	if (pCommander != NULL) //commander is used when any unit under his command fights in combat
 	{
-		pCommander->m_iControlPointsLeft -= 1;
+		pCommander->m_commander->changeControlPointsLeft(-1);
 		m_iCommanderID = pCommander->getID();
 
-		if ( pCommander->m_iControlPointsLeft <= 0 )
+		if (pCommander->m_commander->getControlPointsLeft() <= 0)
 		{
 			FlushCombatStrCache(NULL);
 		}
@@ -30607,19 +30611,25 @@ void CvUnit::tryUseCommander()
 
 bool CvUnit::isCommander() const
 {
-	return m_bCommander;
+	return m_commander != NULL;
+}
+
+UnitCompCommander* CvUnit::getCommanderComp() const
+{
+	return m_commander;
 }
 
 void CvUnit::setCommander(bool bNewVal)
 {
-	if (m_bCommander == bNewVal) return;
-
-	m_bCommander = bNewVal;
+	if (isCommander() == bNewVal) return;
 
 	if (bNewVal)
 	{
+		m_commander = new UnitCompCommander();
+		m_commander->changeControlPoints(m_pUnitInfo->getControlPoints());
+		m_commander->changeCommandRange(m_pUnitInfo->getCommandRange());
+
 		GET_PLAYER(getOwner()).Commanders.push_back(this);
-		m_iControlPointsLeft = controlPoints();
 
 		for (int iI = 0; iI < m_pUnitInfo->getNumSubCombatTypes(); iI++)
 		{
@@ -30631,6 +30641,7 @@ void CvUnit::setCommander(bool bNewVal)
 			}
 		}
 	}
+	else m_commander = NULL;
 }
 
 void CvUnit::nullUsedCommander()
@@ -30645,50 +30656,22 @@ CvUnit* CvUnit::getUsedCommander() const
 
 void CvUnit::clearCommanderCache()
 {
-	if (!GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS))
-	{
-		m_iCachedCommander = NO_COMMANDER_ID;
-	}
-	else
-	{
-		m_iCachedCommander = -1;
-	}
-}
-
-int CvUnit::getExtraControlPoints() const	//control points
-{
-	return m_iExtraControlPoints;
-}
-
-void CvUnit::changeExtraControlPoints(int iChange)
-{
-	m_iExtraControlPoints += iChange;
-	m_iControlPointsLeft += iChange;
+	m_iCachedCommander = GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) ? -1 : NO_COMMANDER_ID;
 }
 
 int CvUnit::controlPoints() const
 {
-	return m_pUnitInfo->getControlPoints() + getExtraControlPoints();
+	return m_commander->getControlPoints();
 }
 
 int CvUnit::controlPointsLeft() const
 {
-	return m_iControlPointsLeft;
-}
-
-int CvUnit::getExtraCommandRange() const	//command range
-{
-	return m_iExtraCommandRange;
-}
-
-void CvUnit::changeExtraCommandRange(int iChange)
-{
-	m_iExtraCommandRange += iChange;
+	return m_commander->getControlPointsLeft();
 }
 
 int CvUnit::commandRange() const
 {
-	return m_pUnitInfo->getCommandRange() + getExtraCommandRange();
+	return m_commander->getCommandRange();
 }
 
 int CvUnit::interceptionChance(const CvPlot* pPlot) const

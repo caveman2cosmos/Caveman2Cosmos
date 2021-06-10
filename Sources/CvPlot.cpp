@@ -11909,7 +11909,7 @@ void CvPlot::setLayoutStateToCurrent()
 
 //------------------------------------------------------------------------------------------------
 
-void CvPlot::getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked)
+void CvPlot::getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked) const
 {
 	eType = NO_IMPROVEMENT;
 	bWorked = false;
@@ -11946,7 +11946,7 @@ void CvPlot::getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked)
 	}
 }
 
-void CvPlot::getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked)
+void CvPlot::getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked) const
 {
 	eType = NO_BONUS;
 	bImproved = false;
@@ -11979,7 +11979,7 @@ void CvPlot::getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWor
 	}
 }
 
-bool CvPlot::shouldUsePlotBuilder()
+bool CvPlot::shouldUsePlotBuilder() const
 {
 	bool bBonusImproved; bool bBonusWorked; bool bImprovementWorked;
 	BonusTypes eBonusType;

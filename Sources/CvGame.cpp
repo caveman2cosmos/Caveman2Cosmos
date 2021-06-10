@@ -10,6 +10,7 @@
 #include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvInfos.h"
+#include "CvImprovementInfo.h"
 #include "CvMap.h"
 #include "CvMapGenerator.h"
 #include "CvMessageControl.h"
