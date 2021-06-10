@@ -197,10 +197,10 @@ void CvCityAI::AI_reset()
 	m_iCityThreat = -1;
 }
 
-void CvCityAI::SendLog(CvWString function, CvWString message)
+void CvCityAI::SendLog(CvWString function, CvWString message) const
 {
 	//WIP, wrapper of the new FLB logger, to create correct payload for this class
-	CvWString aiType = "CvCityAI";
+	//CvWString aiType = "CvCityAI";
 	
 	
 	//logAIJson(aiType,this->getName(), function,  message);
@@ -11369,7 +11369,8 @@ int CvCityAI::AI_buildUnitProb() const
 	}
 	return iProb;
 }
-bool CvCityAI::AI_checkIrrigationSpread(CvPlot* pPlot)
+
+bool CvCityAI::AI_checkIrrigationSpread(const CvPlot* pPlot) const
 {
 	bool bEmphasizeIrrigation = false;
 	if (pPlot->isIrrigated() || pPlot->isFreshWater() && pPlot->canHavePotentialIrrigation())
@@ -11436,7 +11437,8 @@ bool CvCityAI::AI_checkIrrigationSpread(CvPlot* pPlot)
 	}
 	return bEmphasizeIrrigation;
 }
-void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority)
+
+void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const
 {
 	if (plotInfo != NULL)
 	{

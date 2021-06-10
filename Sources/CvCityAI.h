@@ -98,7 +98,7 @@ public:
 	void AI_init();
 	void AI_uninit();
 	void AI_reset();
-	void SendLog(CvWString function, CvWString message);
+	void SendLog(CvWString function, CvWString message) const;
 
 	void AI_doTurn();
 
@@ -345,8 +345,8 @@ protected:
 
 	int AI_experienceWeight() const;
 	int AI_buildUnitProb() const;
-	bool AI_checkIrrigationSpread(CvPlot* pPlot);
-	void AI_newbestPlotBuild(CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority);
+	bool AI_checkIrrigationSpread(const CvPlot* pPlot) const;
+	void AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const;
 
 	void AI_bestPlotBuild(CvPlot* pPlot, int& piBestValue, BuildTypes& peBestBuild, int iFoodPriority, int iProductionPriority, int
 	                      iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange);
