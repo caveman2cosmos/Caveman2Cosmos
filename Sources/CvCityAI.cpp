@@ -197,10 +197,10 @@ void CvCityAI::AI_reset()
 	m_iCityThreat = -1;
 }
 
-void CvCityAI::SendLog(CvWString function, CvWString message)
+void CvCityAI::SendLog(CvWString function, CvWString message) const
 {
 	//WIP, wrapper of the new FLB logger, to create correct payload for this class
-	CvWString aiType = "CvCityAI";
+	//CvWString aiType = "CvCityAI";
 	
 	
 	//logAIJson(aiType,this->getName(), function,  message);
@@ -641,7 +641,7 @@ bool CvCityAI::AI_ignoreGrowth()
 }
 
 
-int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove)
+int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove) const
 {
 	PROFILE_FUNC();
 
@@ -7878,16 +7878,13 @@ int CvCityAI::AI_countWorkedPoorTiles() const
 	return iWorkedPoorTileCount;
 }
 
-int CvCityAI::AI_getTargetSize()
+int CvCityAI::AI_getTargetSize() const
 {
 	PROFILE_FUNC();
 
 	const CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	int iTargetSize = AI_getGoodTileCount();
 
-	/********************************************************************************/
-	/*	Better Evaluation							09.03.2010		Fuyu		    */
-	/********************************************************************************/
 	int iHappyAdjust = 0;
 	int iHealthAdjust = 0;
 	if (getProductionBuilding() != NO_BUILDING)
@@ -7895,15 +7892,7 @@ int CvCityAI::AI_getTargetSize()
 		iHappyAdjust += getAdditionalHappinessByBuilding(getProductionBuilding());
 		iHealthAdjust += getAdditionalHealthByBuilding(getProductionBuilding());
 	}
-	/********************************************************************************/
-	/*	BE	END																		*/
-	/********************************************************************************/
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                      09/02/10                         jdog5000 & Fuyu      */
-	/*                                                                                              */
-	/* City AI                                                                                      */
-	/************************************************************************************************/
-		//iTargetSize = std::min(iTargetSize, 2 + getPopulation() + goodHealth() - badHealth() + getEspionageHealthCounter() + std::max(0, iHealthAdjust));
+
 	iTargetSize -= std::max(0, (iTargetSize - (1 + getPopulation() + goodHealth() - badHealth() + getEspionageHealthCounter() + std::max(0, iHealthAdjust))) / 2);
 
 	if (iTargetSize < getPopulation())
@@ -7913,9 +7902,6 @@ int CvCityAI::AI_getTargetSize()
 
 	// Target city size should not be perturbed by espionage, other short term effects
 	iTargetSize = std::min(iTargetSize, getPopulation() + (happyLevel() - unhappyLevel() + getEspionageHappinessCounter() + std::max(0, iHappyAdjust)));
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                       END                                                  */
-	/************************************************************************************************/
 
 	if (kPlayer.getAdvancedStartPoints() >= 0)
 	{
@@ -7926,7 +7912,7 @@ int CvCityAI::AI_getTargetSize()
 }
 
 
-void CvCityAI::AI_getYieldMultipliers(int& iFoodMultiplier, int& iProductionMultiplier, int& iCommerceMultiplier, int& iDesiredFoodChange)
+void CvCityAI::AI_getYieldMultipliers(int& iFoodMultiplier, int& iProductionMultiplier, int& iCommerceMultiplier, int& iDesiredFoodChange) const
 {
 	iFoodMultiplier = 100;
 	iCommerceMultiplier = 100;
@@ -8181,7 +8167,7 @@ void CvCityAI::AI_getYieldMultipliers(int& iFoodMultiplier, int& iProductionMult
 
 
 namespace {
-	struct BuildsImprovement
+	const struct BuildsImprovement
 	{
 		BuildsImprovement(ImprovementTypes improvement) : improvement(improvement) {}
 		bool operator()(const BuildTypes buildType) const
@@ -8189,10 +8175,10 @@ namespace {
 			if (buildType == NO_BUILD) return false;
 			return GC.getBuildInfo(buildType).getImprovement() == improvement;
 		}
-		ImprovementTypes improvement;
+		const ImprovementTypes improvement;
 	};
 
-	struct BuildsAnyImprovement
+	const struct BuildsAnyImprovement
 	{
 		bool operator()(const BuildTypes buildType) const
 		{
@@ -8204,7 +8190,7 @@ namespace {
 
 //
 // Only used for improvement upgrading.
-int CvCityAI::AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange)
+int CvCityAI::AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange) const
 {
 	FAssert(eImprovement != NO_IMPROVEMENT);
 
@@ -10557,7 +10543,7 @@ int CvCityAI::yieldValueCacheHits = 0;
 int CvCityAI::yieldValueCacheReads = 0;
 #endif
 
-int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization)
+int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization) const
 {
 #ifdef YIELD_VALUE_CACHING
 #ifdef _DEBUG
@@ -10689,7 +10675,7 @@ int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoi
 }
 
 
-int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization)
+int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization) const
 {
 	PROFILE_FUNC();
 
@@ -11241,7 +11227,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 }
 
 
-int CvCityAI::AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation)
+int CvCityAI::AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation) const
 {
 	PROFILE_FUNC();
 
@@ -11383,7 +11369,8 @@ int CvCityAI::AI_buildUnitProb() const
 	}
 	return iProb;
 }
-bool CvCityAI::AI_checkIrrigationSpread(CvPlot* pPlot)
+
+bool CvCityAI::AI_checkIrrigationSpread(const CvPlot* pPlot) const
 {
 	bool bEmphasizeIrrigation = false;
 	if (pPlot->isIrrigated() || pPlot->isFreshWater() && pPlot->canHavePotentialIrrigation())
@@ -11450,7 +11437,8 @@ bool CvCityAI::AI_checkIrrigationSpread(CvPlot* pPlot)
 	}
 	return bEmphasizeIrrigation;
 }
-void CvCityAI::AI_newbestPlotBuild(CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority)
+
+void CvCityAI::AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const
 {
 	if (plotInfo != NULL)
 	{
@@ -14105,7 +14093,7 @@ int CvCityAI::AI_getPromotionValue(PromotionTypes ePromotion) const
 	return iValue;
 }
 
-SpecialistTypes CvCity::getBestSpecialist(int iExtra)
+SpecialistTypes CvCity::getBestSpecialist(int iExtra) const
 {
 	int iBestValue = 0;
 	SpecialistTypes eBestSpecialist = NO_SPECIALIST;
@@ -14113,7 +14101,7 @@ SpecialistTypes CvCity::getBestSpecialist(int iExtra)
 	{
 		if (isSpecialistValid((SpecialistTypes)iI, iExtra))
 		{
-			int iValue = AI_specialistValue((SpecialistTypes)iI, false, false);
+			const int iValue = AI_specialistValue((SpecialistTypes)iI, false, false);
 			if (iValue > iBestValue)
 			{
 				iBestValue = iValue;
@@ -17527,7 +17515,7 @@ bool CvCityAI::AI_chooseHealerUnit(int iMinNeeded)
 	return bSuccessful;
 }
 
-int CvCityAI::happynessValue(int iAddedHappyness, int iBaseHappinessLevel, int iBaseHealthLevel)
+int CvCityAI::happynessValue(int iAddedHappyness, int iBaseHappinessLevel, int iBaseHealthLevel) const
 {
 	bool bIsNegative = false;
 
@@ -17644,7 +17632,7 @@ int CvCityAI::healthValue(int iAddedHealth, int iUseHappinessLevel, int iBaseHea
 	return iValue;
 }
 
-int CvCityAI::worstWorkedPlotValue()
+int CvCityAI::worstWorkedPlotValue() const
 {
 	int iWorstPlotValue = MAX_INT;
 
@@ -17654,11 +17642,11 @@ int CvCityAI::worstWorkedPlotValue()
 		{
 			if (isWorkingPlot(iI))
 			{
-				CvPlot* pLoopPlot = getCityIndexPlot(iI);
+				const CvPlot* pLoopPlot = getCityIndexPlot(iI);
 
 				if (pLoopPlot != NULL)
 				{
-					int iValue = AI_plotValue(pLoopPlot, false, /*bRemove*/ false, /*bIgnoreFood*/ false, false);
+					const int iValue = AI_plotValue(pLoopPlot, false, /*bRemove*/ false, /*bIgnoreFood*/ false, false);
 
 					if (iValue < iWorstPlotValue)
 					{
