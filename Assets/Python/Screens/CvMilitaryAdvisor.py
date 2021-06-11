@@ -334,7 +334,7 @@ class CvMilitaryAdvisor:
 								szTxt1 = szTxt1[:-2]
 
 							if CyUnit.isHurt():
-								fPercentHP = float(CyUnit.currHitPoints()) / CyUnit.maxHitPoints()
+								fPercentHP = float(CyUnit.getHP()) / CyUnit.getMaxHP()
 								fStrength = strengthBase * fPercentHP
 								szTxt2 = " %.1f" % fStrength
 								if szTxt2[-1] == "0":

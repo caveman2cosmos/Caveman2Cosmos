@@ -470,7 +470,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 		iPlayerW = CyUnitW.getOwner()
 
 		if iActivePlayer in (iPlayerW, CyUnitL.getOwner()):
-			fHealthW = CyUnitW.baseCombatStr() * CyUnitW.currHitPoints() / float(CyUnitW.maxHitPoints())
+			fHealthW = CyUnitW.baseCombatStr() * CyUnitW.getHP() / float(CyUnitW.getMaxHP())
 			zsBattleLocn = self.getUnitLocation(CyUnitW)
 
 			if iPlayerW == iActivePlayer:

@@ -274,6 +274,7 @@
     <ClCompile Include="CvTeamAI.cpp" />
     <ClCompile Include="CvUnit.cpp" />
     <ClCompile Include="CvUnitAI.cpp" />
+    <ClCompile Include="CvUnitComponents.cpp" />
     <ClCompile Include="CvUnitFilters.cpp" />
     <ClCompile Include="CvUnitGrouping.cpp" />
     <ClCompile Include="CvUnitInfo.cpp" />
@@ -453,6 +454,7 @@
     <ClInclude Include="CvTeamAI.h" />
     <ClInclude Include="CvUnit.h" />
     <ClInclude Include="CvUnitAI.h" />
+    <ClInclude Include="CvUnitComponents.h" />
     <ClInclude Include="CvUnitFilters.h" />
     <ClInclude Include="CvUnitGrouping.h" />
     <ClInclude Include="CvUnitList.h" />

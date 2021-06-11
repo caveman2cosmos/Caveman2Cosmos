@@ -252,6 +252,9 @@
     <ClCompile Include="CvUnitAI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CvUnitComponents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="CvUnitFilters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -762,6 +765,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvUnitAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CvUnitComponents.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvUnitFilters.h">
