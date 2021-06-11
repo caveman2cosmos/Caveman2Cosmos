@@ -8862,7 +8862,7 @@
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
-				<iYieldChange>7</iYieldChange>
+				<iYieldChange>8</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
@@ -8933,13 +8933,6 @@
 			<ImprovementPillage>IMPROVEMENT_WORKSHOP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementUpgrade>
 			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 					<TechYields>
