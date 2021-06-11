@@ -187,6 +187,12 @@
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_ARTIFICIAL_EVOLUTION</PrereqTech>
+					<TechYields>
+						<iYield>2</iYield>
+					</TechYields>
+				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Hunting Preserve -> Wildlife Sanctuary Era -->
@@ -335,12 +341,6 @@
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_ARTIFICIAL_EVOLUTION</PrereqTech>
-					<TechYields>
-						<iYield>2</iYield>
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -596,14 +596,6 @@
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
-					<TechYields>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_ARTIFICIAL_EVOLUTION</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -1159,22 +1151,6 @@
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_LUMBERJACK</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-					<TechYields>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_TRADE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Fruit Gathering Camp -> Fruit Picker -->
 		<ImprovementInfo>
@@ -1336,7 +1312,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ORCHARD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ORCHARD</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -1579,15 +1555,7 @@
 					<TechYields>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_TRADE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
+				</TechYieldChange>				
 			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Grape Gathering Camp -> Grape Picker -->
@@ -1638,7 +1606,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
@@ -1872,15 +1840,7 @@
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
+				</TechYieldChange>				
 				<TechYieldChange>
 					<PrereqTech>TECH_DERIVATIVES</PrereqTech>
 					<TechYields>
@@ -2106,24 +2066,6 @@
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_LUMBERJACK</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_TRADE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Plant Gathering Camp-> Plant Picking Camp -->
 		<ImprovementInfo>
@@ -3235,7 +3177,7 @@
 			<YieldChanges>
 				<iYieldChange>15</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>6</iYieldChange>
+				<iYieldChange>7</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
@@ -4094,12 +4036,6 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
-					<TechYields>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
 					<PrereqTech>TECH_CLOUD_PATTERNS</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
@@ -4829,7 +4765,7 @@
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>5</iYieldChange>
+				<iYieldChange>6</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bPeakMakesValid>1</bPeakMakesValid>
@@ -5385,13 +5321,6 @@
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_COAL_MINING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -6340,6 +6269,13 @@
 			<ImprovementUpgrade>IMPROVEMENT_MODERN_MINE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
+					<PrereqTech>TECH_GEOLOGY</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -6676,13 +6612,6 @@
 			<ImprovementPillage>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_SHAFT_MINE</ImprovementUpgrade>
 			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_GEOLOGY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 					<TechYields>
@@ -7894,6 +7823,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -7984,6 +7914,14 @@
 			<!-- Other improvements also can upgrade to Lumberjack: Fruit and Plant Picking Camps -->
 			<ImprovementUpgrade>IMPROVEMENT_LUMBERMILL</ImprovementUpgrade>
 			<TechYieldChanges>
+				<TechYieldChange>
+					<PrereqTech>TECH_TRADE</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 					<TechYields>
@@ -8127,6 +8065,21 @@
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_TOWN</ImprovementPillage>
 			<TechYieldChanges>
+				<TechYieldChange>
+					<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_CONSUMERISM</PrereqTech>
 					<TechYields>
@@ -8282,28 +8235,29 @@
 			<ImprovementUpgrade>IMPROVEMENT_SUBURBS</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
+					<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_ECONOMICS</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
+				</TechYieldChange>				
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
@@ -8394,8 +8348,8 @@
 			</PrereqNatureYields>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
-				<iYieldChange>7</iYieldChange>
+				<iYieldChange>3</iYieldChange>
+				<iYieldChange>8</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
@@ -8431,28 +8385,20 @@
 			<ImprovementUpgrade>IMPROVEMENT_TOWN</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
+					<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_ENGINEERING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
+				</TechYieldChange>				
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
@@ -8544,7 +8490,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>5</iYieldChange>
+				<iYieldChange>6</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
@@ -8579,20 +8525,13 @@
 			<ImprovementUpgrade>IMPROVEMENT_VILLAGE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+					<PrereqTech>TECH_TRADE</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>
+				</TechYieldChange>				
 			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Cottage -> Hamlet Era -->
@@ -8643,31 +8582,6 @@
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_HAMLET</ImprovementUpgrade>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_MASONRY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_TRADE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Manufacturing Complex | End -->
 		<ImprovementInfo>
@@ -8682,7 +8596,7 @@
 			<YieldChanges>
 				<iYieldChange>-3</iYieldChange>
 				<iYieldChange>10</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
@@ -8862,7 +8776,7 @@
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
-				<iYieldChange>7</iYieldChange>
+				<iYieldChange>9</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
@@ -8934,13 +8848,6 @@
 			<ImprovementUpgrade>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
 					<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -8949,14 +8856,6 @@
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_CONSUMERISM</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9115,13 +9014,6 @@
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12570,8 +12462,8 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_EXTRACTION_FACILITY</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>4</iYieldChange>
-				<iYieldChange>4</iYieldChange>
+				<iYieldChange>5</iYieldChange>
+				<iYieldChange>5</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
@@ -12728,15 +12620,7 @@
 						<iYield>1</iYield>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
+				</TechYieldChange>				
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
