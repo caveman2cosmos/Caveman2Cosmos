@@ -223,6 +223,7 @@ CvUnit::~CvUnit()
 	SAFE_DELETE_ARRAY(m_aiExtraVisibilityIntensitySameTile);
 	SAFE_DELETE_ARRAY(m_aiNegatesInvisibleCount);
 	SAFE_DELETE(m_commander);
+	SAFE_DELETE(m_worker);
 }
 
 
@@ -336,7 +337,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	// Init saved data
 	reset(iID, eUnit, eOwner);
 
-	if ( eOwner != NO_PLAYER && eUnitAI == UNITAI_SUBDUED_ANIMAL)
+	if (eOwner != NO_PLAYER && eUnitAI == UNITAI_SUBDUED_ANIMAL)
 	{
 		GET_PLAYER(eOwner).NoteAnimalSubdued();
 	}
@@ -356,11 +357,9 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	//GC.getGame().logOOSSpecial(13, getID(), iX, iY);
 	setXY(iX, iY, false, true, false, false, true);
 
-	CvCity* pCity;
 	if (plot()->getPlotCity() != NULL)
 	{
-		pCity = plot()->getPlotCity();
-		setCityOfOrigin(pCity);
+		setCityOfOrigin(plot()->getPlotCity());
 	}
 
 	//TB OOS fix - POSSIBLE that this represents a fix but I consider it a longshot since they should really mean the same thing (-1)
@@ -378,6 +377,10 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 
 	if (!isTempUnit())
 	{
+		if (m_pUnitInfo->getNumBuilds() > 0)
+		{
+			m_worker = new UnitCompWorker();
+		}
 		const int iNumNames = m_pUnitInfo->getNumUnitNames();
 
 		if (GC.getGame().getUnitCreatedCount(getUnitType()) < iNumNames)
@@ -817,7 +820,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraGatherHerdCount = 0;
 	m_bIsArmed = false;
 	m_eCurrentBuildUpType = NO_PROMOTIONLINE;
-	m_commander = NULL;
 
 	m_eCapturingUnit.reset();
 	m_combatUnit.reset();
@@ -893,6 +895,10 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	}
 	m_pPlayerInvestigated = NO_PLAYER;
 	m_Properties.clear();
+
+	// Toffer - UnitComponents
+	m_commander = NULL;
+	m_worker = NULL;
 }
 
 

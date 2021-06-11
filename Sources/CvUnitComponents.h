@@ -2,10 +2,9 @@
 // CvUnitComponents.h
 #ifndef UNIT_COMPONENTS_H
 #define UNIT_COMPONENTS_H
+
 //------------------------------------------------------------------------------------------------------
-//
 //  CLASS: UnitCompCommander
-//
 //------------------------------------------------------------------------------------------------------
 class UnitCompCommander
 {
@@ -28,9 +27,16 @@ private:
 	short m_iCommandRange;
 };
 //------------------------------------------------------------------------------------------------------
-//
-//  CLASS: X
-//
+//  CLASS: UnitCompWorker
 //------------------------------------------------------------------------------------------------------
+class UnitCompWorker
+{
+public:
+	UnitCompWorker();
+	~UnitCompWorker();
+
+private:
+	
+};
 
 #endif

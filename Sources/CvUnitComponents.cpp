@@ -3,7 +3,7 @@
 //  CLASS: UnitCompCommander
 //
 //------------------------------------------------------------------------------------------------------
-UnitCompCommander::UnitCompCommander() // Used when loading save
+UnitCompCommander::UnitCompCommander()
 {
 	m_iControlPoints = 0;
 	m_iControlPointsLeft = 0;
@@ -35,6 +35,10 @@ void UnitCompCommander::changeCommandRange(const int iChange)
 
 //------------------------------------------------------------------------------------------------------
 //
-//  CLASS: X
+//  CLASS: UnitCompWorker
 //
 //------------------------------------------------------------------------------------------------------
+UnitCompWorker::UnitCompWorker()
+{
+}
+UnitCompWorker::~UnitCompWorker() { }
