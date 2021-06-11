@@ -39232,7 +39232,7 @@ void CvUnit::processLoadedSpecialUnit(bool bChange, SpecialUnitTypes eSpecialUni
 
 bool CvUnit::hasBuild(BuildTypes eBuild) const
 {
-	return m_pUnitInfo->getBuilds(eBuild) || isExtraBuild(eBuild);
+	return m_pUnitInfo->hasBuild(eBuild) || isExtraBuild(eBuild);
 }
 
 bool CvUnit::isExtraBuild(BuildTypes eBuild) const

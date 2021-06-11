@@ -19197,16 +19197,9 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 
 		//Worker details
-		iCount = 0;
+		iCount = kUnit.getNumBuilds();
 
-		for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
-		{
-			if (kUnit.getBuilds(iI))
-			{
-				iCount++;
-			}
-		}
-		if (iCount > ((GC.getNumBuildInfos() * 3) / 4))
+		if (iCount > 32)
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_IMPROVE_PLOTS"));
@@ -19214,14 +19207,11 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		else
 		{
 			bFirst = true;
-			for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
+			for (int iI = 0; iI < iCount; ++iI)
 			{
-				if (kUnit.getBuilds(iI))
-				{
-					szTempBuffer.Format(L"%s%s ", NEWLINE, gDLL->getText("TXT_KEY_UNITHELP_CAN").c_str());
-					setListHelp(szBuffer, szTempBuffer, GC.getBuildInfo((BuildTypes) iI).getDescription(), L", ", bFirst);
-					bFirst = false;
-				}
+				szTempBuffer.Format(L"%s%s ", NEWLINE, gDLL->getText("TXT_KEY_UNITHELP_CAN").c_str());
+				setListHelp(szBuffer, szTempBuffer, GC.getBuildInfo((BuildTypes)kUnit.getBuild(iI)).getDescription(), L", ", bFirst);
+				bFirst = false;
 			}
 		}
 

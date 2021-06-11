@@ -1384,12 +1384,8 @@
 	</ElementType>
 	<ElementType name="BuildType" content="textOnly"/>
 	<ElementType name="bBuild" content="textOnly" dt:type="boolean"/>
-	<ElementType name="Build" content="eltOnly">
-		<element type="BuildType"/>
-		<element type="bBuild"/>
-	</ElementType>
 	<ElementType name="Builds" content="eltOnly">
-		<element type="Build" minOccurs="0" maxOccurs="*"/>
+		<element type="BuildType"/>
 	</ElementType>
 	<ElementType name="ReligionType" content="textOnly"/>
 	<ElementType name="iReligionSpread" content="textOnly" dt:type="int"/>

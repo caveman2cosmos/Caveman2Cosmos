@@ -2246,6 +2246,10 @@ public:
 
 	bool isPrereqOrCivics(int i) const;
 
+	int getBuild(int i) const;
+	short getNumBuilds() const;
+	bool hasBuild(int i) const;
+
 	int getPrereqAndBuilding(int i) const;
 	int getNumPrereqAndBuildings() const;
 	bool isPrereqAndBuilding(int i) const;
@@ -2274,7 +2278,6 @@ public:
 	bool getDefenderUnitCombat(int i) const;
 	bool getUnitAIType(int i) const;
 	bool getNotUnitAIType(int i) const;
-	bool getBuilds(int i) const;
 	bool getGreatPeoples(int i) const;
 
 	int getBuildings(int i) const;
@@ -2407,6 +2410,7 @@ protected:
 	int m_iPrereqAndTech;
 	int m_iPrereqAndBonus;
 
+	std::vector<int> m_workerBuilds;
 	std::vector<int> m_aiPrereqAndBuildings;
 	std::vector<int> m_aiPrereqOrBuildings;
 
@@ -2502,7 +2506,6 @@ protected:
 	bool* m_pbDefenderUnitCombat;
 	bool* m_pbUnitAIType;
 	bool* m_pbNotUnitAIType;
-	bool* m_pbBuilds;
 	bool* m_pbGreatPeoples;
 	std::vector<int> m_pbBuildings;
 	bool* m_pbTerrainNative;
