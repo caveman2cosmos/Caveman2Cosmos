@@ -39269,7 +39269,7 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 	{
 		if (bChange)
 		{
-			if (m_worker == NULL)
+			if (!isWorker())
 			{
 				m_worker = new UnitCompWorker();
 			}
@@ -39295,7 +39295,7 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 			m_aiOldExtraBuildTypes.clear();
 			// ! Toffer
 
-			if (m_aiExtraBuildTypes.size() == 0 && m_pUnitInfo->getNumBuilds() == 0)
+			if (m_aiExtraBuildTypes.size() == 0 && m_pUnitInfo->getNumBuilds() == 0 && isWorker())
 			{
 				delete m_worker;
 				m_worker = NULL;
@@ -41601,4 +41601,9 @@ void CvUnit::defineReligion()
 ReligionTypes CvUnit::getReligion() const
 {
 	return m_eReligionType;
+}
+
+bool CvUnit::isWorker() const
+{
+	return m_worker != NULL;
 }

@@ -1798,6 +1798,8 @@ public:
 
 	PlayerTypes m_eOriginalOwner;
 
+	bool isWorker() const;
+
 protected:
 	bool m_bMADEnabled;
 	int m_iMADTargetPlotX;
