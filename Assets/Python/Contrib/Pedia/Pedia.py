@@ -1761,6 +1761,7 @@ class Pedia:
 		for i in xrange(numInfos):
 			item = getInfo(i)
 
+			# Tech requirement of infotype - they are always singular.
 			if getInfo == GC.getImprovementInfo:
 				TechReq = item.getPrereqTech()
 			elif getInfo == GC.getCivicInfo or getInfo == GC.getBuildInfo:
@@ -1768,12 +1769,25 @@ class Pedia:
 			else:
 				pass
 			
+			# Xgrid of tech requirement
 			if TechReq != -1:
 				iTechLoc = GC.getTechInfo(TechReq).getGridX()
 				iTechRow = GC.getTechInfo(TechReq).getGridY()
 			else:
 				iTechLoc = 0
-				iTechRow = 0				
+				iTechRow = 0	
+
+			# Check if improvement tech yield boosts happen between unlock and upgrade.			
+			if getInfo == GC.getImprovementInfo:				
+				CvImprovementInfo = getInfo(i)
+				if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0 or CvImprovementInfo.getImprovementPillage() != -1: #Only those, that can upgrade, or are top of upgrade chain
+					aTechBoost = []
+					for iTech in xrange(GC.getNumTechInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							if CvImprovementInfo.getTechYieldChanges(iTech, iYield) != 0:
+								aTechBoost.append(GC.getTechInfo(iTech).getGridX())
+					if aTechBoost and iTechLoc > min(aTechBoost):
+						print CvImprovementInfo.getType()+" Xgrid: "+str(iTechLoc)+" Tech boosts location: "+str(aTechBoost)
 			
 			if item:
 				bValid = True
