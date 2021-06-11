@@ -3,13 +3,21 @@
 //  CLASS: UnitCompCommander
 //
 //------------------------------------------------------------------------------------------------------
-UnitCompCommander::UnitCompCommander()
+UnitCompCommander::UnitCompCommander() // Used when loading save
 {
 	m_iControlPoints = 0;
 	m_iControlPointsLeft = 0;
 	m_iCommandRange = 0;
 }
 UnitCompCommander::~UnitCompCommander() { }
+
+UnitCompCommander::UnitCompCommander(CvUnitInfo* unitInfo) // Used when unit becomes commander
+{
+	m_iControlPoints = unitInfo->getControlPoints();
+	m_iControlPointsLeft = m_iControlPoints;
+
+	m_iCommandRange = unitInfo->getCommandRange();
+}
 
 void UnitCompCommander::changeControlPoints(const int iChange)
 {

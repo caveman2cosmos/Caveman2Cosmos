@@ -11,6 +11,7 @@ class UnitCompCommander
 public:
 	UnitCompCommander();
 	~UnitCompCommander();
+	UnitCompCommander(CvUnitInfo* unitInfo);
 
 	void changeControlPoints(const int iChange);
 	void changeControlPointsLeft(const int iChange);

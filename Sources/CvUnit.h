@@ -663,7 +663,7 @@ public:
 	void setCommander(bool bNewVal);
 	void nullUsedCommander(); //delete m_pUsedCommander
 	void clearCommanderCache() ; //	Should be called prior to each turn
-	UnitCompCommander* getCommanderComp() const;
+	//UnitCompCommander* getCommanderComp() const;
 
 	CvUnit* getUsedCommander() const;
 

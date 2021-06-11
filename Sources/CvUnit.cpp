@@ -30360,10 +30360,12 @@ bool CvUnit::isCommander() const
 	return m_commander != NULL;
 }
 
+/* Toffer - May need this one at some point... maybe
 UnitCompCommander* CvUnit::getCommanderComp() const
 {
 	return m_commander;
 }
+*/
 
 void CvUnit::setCommander(bool bNewVal)
 {
@@ -30371,9 +30373,7 @@ void CvUnit::setCommander(bool bNewVal)
 
 	if (bNewVal)
 	{
-		m_commander = new UnitCompCommander();
-		m_commander->changeControlPoints(m_pUnitInfo->getControlPoints());
-		m_commander->changeCommandRange(m_pUnitInfo->getCommandRange());
+		m_commander = new UnitCompCommander(m_pUnitInfo);
 
 		GET_PLAYER(getOwner()).Commanders.push_back(this);
 
