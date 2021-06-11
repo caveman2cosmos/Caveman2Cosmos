@@ -1489,6 +1489,7 @@ class Pedia:
 							#Zero out data
 							aBonusYield = [0]*YieldTypes.NUM_YIELD_TYPES
 							aImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
+							aTechImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
 							aBonusImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
 							aFinalYield = [0]*YieldTypes.NUM_YIELD_TYPES
 							
@@ -1499,7 +1500,12 @@ class Pedia:
 								aBonusYield[iYield] = CvBonusInfo.getYieldChange(iYield) # Bonus yields
 								aImprovementYield[iYield] = CvImprovementInfo.getYieldChange(iYield) # Improvement yields
 								aBonusImprovementYield[iYield] = CvImprovementInfo.getImprovementBonusYield(iBonus, iYield) # Bonus-Improvement coupling yields
-								aFinalYield[iYield] = aBonusYield[iYield] + aImprovementYield[iYield] + aBonusImprovementYield[iYield]
+								
+								for iTech in xrange(GC.getNumTechInfos()):  # Find techs, that boost base improvement
+									if CvImprovementInfo.getTechYieldChanges(iTech, iYield) != 0:
+										aTechImprovementYield[iYield] += CvImprovementInfo.getTechYieldChanges(iTech, iYield)
+								
+								aFinalYield[iYield] = aBonusYield[iYield] + aImprovementYield[iYield] + aTechImprovementYield[iYield] + aBonusImprovementYield[iYield]
 								
 								CvImprovementUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade())
 								if CvImprovementInfo.getImprovementUpgrade() != -1 and CvImprovementUpgradeInfo.isImprovementBonusTrade(iBonus):
@@ -1508,7 +1514,7 @@ class Pedia:
 									aFinalImpUpgradeYield[iYield] = aBonusYield[iYield] + aImprovementUpgradeYield[iYield] + aBonusImprovementUpgradeYield[iYield]
 
 							# Upgrades
-							if (CvImprovementInfo.getImprovementUpgrade() != -1 and CvImprovementUpgradeInfo.isImprovementBonusTrade(iBonus)) and (aFinalImpUpgradeYield[0]-aFinalYield[0] < 0 or aFinalImpUpgradeYield[1]-aFinalYield[1] < 0 or aFinalImpUpgradeYield[2]-aFinalYield[2] < 0):
+							if (CvImprovementInfo.getImprovementUpgrade() != -1 and CvImprovementUpgradeInfo.isImprovementBonusTrade(iBonus)) and (aFinalImpUpgradeYield[0] < aFinalYield[0] or aFinalImpUpgradeYield[1] < aFinalYield[1] or aFinalImpUpgradeYield[2] < aFinalYield[2]):
 								print CvImprovementInfo.getType()+" with "+CvBonusInfo.getType()+": F/P/C -> "+str(aFinalYield)+" upgrade: "+CvImprovementUpgradeInfo.getType()+": F/P/C -> "+str((aFinalImpUpgradeYield, (aFinalImpUpgradeYield[0]-aFinalYield[0], aFinalImpUpgradeYield[1]-aFinalYield[1], aFinalImpUpgradeYield[2]-aFinalYield[2])))
 							
 							# Alt upgrades
@@ -1522,7 +1528,7 @@ class Pedia:
 										aImprovementAltUpgradeYield[iYield] = CvImprovementAltUpgradeInfo.getYieldChange(iYield)
 										aBonusImprovementAltUpgradeYield[iYield] = CvImprovementAltUpgradeInfo.getImprovementBonusYield(iBonus, iYield)
 										aFinalImpAltUpgradeYield[iYield] = aBonusYield[iYield] + aImprovementAltUpgradeYield[iYield] + aBonusImprovementAltUpgradeYield[iYield]
-									if (aFinalImpAltUpgradeYield[0]-aFinalYield[0] < 0 or aFinalImpAltUpgradeYield[1]-aFinalYield[1] < 0 or aFinalImpAltUpgradeYield[2]-aFinalYield[2] < 0):
+									if (aFinalImpAltUpgradeYield[0] < aFinalYield[0] or aFinalImpAltUpgradeYield[1] < aFinalYield[1] or aFinalImpAltUpgradeYield[2] < aFinalYield[2]):
 										print CvImprovementInfo.getType()+" with "+CvBonusInfo.getType()+": F/P/C -> "+str(aFinalYield)+" Alt upgrade: "+CvImprovementAltUpgradeInfo.getType()+": F/P/C -> "+str((aFinalImpAltUpgradeYield, (aFinalImpAltUpgradeYield[0]-aFinalYield[0], aFinalImpAltUpgradeYield[1]-aFinalYield[1], aFinalImpAltUpgradeYield[2]-aFinalYield[2])))
 
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
