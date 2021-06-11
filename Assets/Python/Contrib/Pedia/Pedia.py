@@ -1781,13 +1781,28 @@ class Pedia:
 			if getInfo == GC.getImprovementInfo:				
 				CvImprovementInfo = getInfo(i)
 				if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0 or CvImprovementInfo.getImprovementPillage() != -1: #Only those, that can upgrade, or are top of upgrade chain
-					aTechBoost = []
-					for iTech in xrange(GC.getNumTechInfos()):
+					aTechBoost = []					
+					CvImprovementUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade())
+					iImpUpgradeTechLoc = 0
+					if CvImprovementUpgradeInfo != None: # Main upgrade
+						iImpUpgradeTechLoc = GC.getTechInfo(CvImprovementUpgradeInfo.getPrereqTech()).getGridX()					
+					for iTech in xrange(GC.getNumTechInfos()):  # Find techs, that boost base improvement
 						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 							if CvImprovementInfo.getTechYieldChanges(iTech, iYield) != 0:
 								aTechBoost.append(GC.getTechInfo(iTech).getGridX())
-					if aTechBoost and iTechLoc > min(aTechBoost):
+					if aTechBoost and iTechLoc >= min(aTechBoost):
 						print CvImprovementInfo.getType()+" Xgrid: "+str(iTechLoc)+" Tech boosts location: "+str(aTechBoost)
+					if iImpUpgradeTechLoc and aTechBoost and iImpUpgradeTechLoc <= max(aTechBoost):
+						print CvImprovementInfo.getType()+" Xgrid: "+str(iTechLoc)+" Tech boosts location: "+str(aTechBoost)+" Upgrade: "+CvImprovementUpgradeInfo.getType()+": "+str(iImpUpgradeTechLoc)
+						
+					#Alt upgrades
+					for i in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):								
+						CvImprovementAltUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(i))
+						iImpAltUpgradeTechLoc = 0
+						if CvImprovementAltUpgradeInfo != None: # Alt upgrade
+							iImpAltUpgradeTechLoc = GC.getTechInfo(CvImprovementAltUpgradeInfo.getPrereqTech()).getGridX()
+							if iImpAltUpgradeTechLoc and aTechBoost and iImpAltUpgradeTechLoc <= max(aTechBoost):
+								print CvImprovementInfo.getType()+" Xgrid: "+str(iTechLoc)+" Tech boosts location: "+str(aTechBoost)+" Alt Upgrade: "+CvImprovementAltUpgradeInfo.getType()+": "+str(iImpAltUpgradeTechLoc)
 			
 			if item:
 				bValid = True
