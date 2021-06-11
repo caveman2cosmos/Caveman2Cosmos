@@ -1767,7 +1767,7 @@ class Pedia:
 			elif getInfo == GC.getCivicInfo or getInfo == GC.getBuildInfo:
 				TechReq = item.getTechPrereq()
 			else:
-				pass
+				TechReq = -1
 			
 			# Xgrid of tech requirement
 			if TechReq != -1:
@@ -1803,16 +1803,38 @@ class Pedia:
 							iImpAltUpgradeTechLoc = GC.getTechInfo(CvImprovementAltUpgradeInfo.getPrereqTech()).getGridX()
 							if iImpAltUpgradeTechLoc and aTechBoost and iImpAltUpgradeTechLoc <= max(aTechBoost):
 								print CvImprovementInfo.getType()+" Xgrid: "+str(iTechLoc)+" Tech boosts location: "+str(aTechBoost)+" Alt Upgrade: "+CvImprovementAltUpgradeInfo.getType()+": "+str(iImpAltUpgradeTechLoc)
+					
+					#Improvement yield with all techs
+					aBaseImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
+					aBaseUpgradeImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
+					aTechImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
+					aTotalImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES): # Food, Production, Commerce
+						aBaseImprovementYield[iYield] = CvImprovementInfo.getYieldChange(iYield) # Improvement yields
+						for iTech in xrange(GC.getNumTechInfos()):  # Find techs, that boost base improvement
+							if CvImprovementInfo.getTechYieldChanges(iTech, iYield) != 0:
+								aTechImprovementYield[iYield] += CvImprovementInfo.getTechYieldChanges(iTech, iYield)
+						aTotalImprovementYield[iYield] = aBaseImprovementYield[iYield] + aTechImprovementYield[iYield]
+						if CvImprovementUpgradeInfo != None: # Main upgrade
+							aBaseUpgradeImprovementYield[iYield] = CvImprovementUpgradeInfo.getYieldChange(iYield)
+					
+					if CvImprovementUpgradeInfo != None and (aTotalImprovementYield[0] > aBaseUpgradeImprovementYield[0] or aTotalImprovementYield[1] > aBaseUpgradeImprovementYield[1] or aTotalImprovementYield[2] > aBaseUpgradeImprovementYield[2]):
+						print CvImprovementInfo.getType()+" Total F/P/C: "+str(aTotalImprovementYield)+", "+CvImprovementUpgradeInfo.getType()+" Upgrade F/P/C: "+str(aBaseUpgradeImprovementYield)
+						
+					for i in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
+						aBaseAltUpgradeImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
+						CvImprovementAltUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(i))
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							aBaseAltUpgradeImprovementYield[iYield] = CvImprovementAltUpgradeInfo.getYieldChange(iYield)
+						if aTotalImprovementYield[0] > aBaseAltUpgradeImprovementYield[0] or aTotalImprovementYield[1] > aBaseAltUpgradeImprovementYield[1] or aTotalImprovementYield[2] > aBaseAltUpgradeImprovementYield[2]:
+							print CvImprovementInfo.getType()+" Total F/P/C: "+str(aTotalImprovementYield)+", "+CvImprovementAltUpgradeInfo.getType()+" Alt Upgrade F/P/C: "+str(aBaseAltUpgradeImprovementYield)
+					
+							
+					
 			
 			if item:
-				bValid = True
-				try:
-					bValid = not item.isGraphicalOnly()
-				except:
-					pass
-				if (bValid):
-					ListDict[(iTechLoc, iTechRow, item.getDescription())] = (str(iTechLoc)+": "+item.getDescription(), i)
-					list.append((iTechLoc, iTechRow, item.getDescription()))
+				ListDict[(iTechLoc, iTechRow, item.getDescription())] = (str(iTechLoc)+": "+item.getDescription(), i)
+				list.append((iTechLoc, iTechRow, item.getDescription()))
 		list.sort()
 		for i in xrange(len(list)):
 			key = list[i]
