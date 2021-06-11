@@ -1134,7 +1134,7 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 		// First assess damage from excess first strike rounds
 		if (iOurFirstStrikesTimes2 > iTheirFirstStrikesTimes2)
 		{
-			pDefender->AI_setPredictedHitPoints(std::max(0,pDefender->currHitPoints() - ((iOurFirstStrikesTimes2-iTheirFirstStrikesTimes2)*iDamageToThem*iBaseOdds)/200));
+			pDefender->AI_setPredictedHitPoints(std::max(0,pDefender->getHP() - ((iOurFirstStrikesTimes2-iTheirFirstStrikesTimes2)*iDamageToThem*iBaseOdds)/200));
 
 			getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender, bSamePlot);
 			iBaseOdds = 100 - iTheirOdds/10;
@@ -1150,7 +1150,7 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 		}
 		else if (iOurFirstStrikesTimes2 < iTheirFirstStrikesTimes2)
 		{
-			AI_setPredictedHitPoints(std::max(0,currHitPoints() - ((iTheirFirstStrikesTimes2-iOurFirstStrikesTimes2)*iDamageToUs*(100-iBaseOdds))/200));
+			AI_setPredictedHitPoints(std::max(0,getHP() - ((iTheirFirstStrikesTimes2-iOurFirstStrikesTimes2)*iDamageToUs*(100-iBaseOdds))/200));
 
 			iOurStrength = ((getDomainType() == DOMAIN_AIR) ? airCurrCombatStr(NULL) : currCombatStr(NULL,NULL));
 			iOurFirepower = ((getDomainType() == DOMAIN_AIR) ? iOurStrength : currFirepower(NULL,NULL));
@@ -1170,10 +1170,10 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 	}
 	//TB Combat Mods End
 
-	const int iHitLimitThem = pDefender->maxHitPoints() - combatLimit(pDefender);
+	const int iHitLimitThem = pDefender->getMaxHP() - combatLimit(pDefender);
 
-	int iNeededRoundsUs = (std::max(0, pDefender->currHitPoints() - iHitLimitThem) + iDamageToThem - 1 ) / iDamageToThem;
-	int iNeededRoundsThem = (std::max(0, currHitPoints()) + iDamageToUs - 1 ) / iDamageToUs;
+	int iNeededRoundsUs = (std::max(0, pDefender->getHP() - iHitLimitThem) + iDamageToThem - 1 ) / iDamageToThem;
+	int iNeededRoundsThem = (std::max(0, getHP()) + iDamageToUs - 1 ) / iDamageToUs;
 
 #if 0
 	if (getDomainType() != DOMAIN_AIR)
@@ -1208,15 +1208,15 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 			//	will be diluted less (down to around this amount)
 			int iWinnerBaseLossPercent = 0;
 
-			if (pDefender->currHitPoints() != 0)
+			if (pDefender->getHP() != 0)
 			{
-				iWinnerBaseLossPercent += 100 - (100*iNeededRoundsThem*iDamageToThem)/pDefender->currHitPoints();
+				iWinnerBaseLossPercent += 100 - (100*iNeededRoundsThem*iDamageToThem)/pDefender->getHP();
 			}
 			iDamageToThem -= (iDamageToThem*iWinnerBaseLossPercent)/100;
 
-			FAssert(pDefender->currHitPoints() > iNeededRoundsThem*iDamageToThem);
+			FAssert(pDefender->getHP() > iNeededRoundsThem*iDamageToThem);
 
-			pDefender->AI_setPredictedHitPoints(pDefender->currHitPoints() - iNeededRoundsThem*iDamageToThem);
+			pDefender->AI_setPredictedHitPoints(pDefender->getHP() - iNeededRoundsThem*iDamageToThem);
 		}
 
 		iTheirStrength *= 100 + 100 * iRoundsDiff / std::max(1, iNeededRoundsThem);
@@ -1236,12 +1236,12 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 				//	so see how much the base prediction is for the attacker, then reduce the damage to the attacker by the
 				//	amount they have left (as a percentage of where they started) since their attacks as rounds go on
 				//	will be diluted less (down to around this amount)
-				const int iWinnerBaseLossPercent = 100 - 100 * iNeededRoundsUs * iDamageToUs / currHitPoints();
+				const int iWinnerBaseLossPercent = 100 - 100 * iNeededRoundsUs * iDamageToUs / getHP();
 
 				iDamageToUs -= iDamageToUs * iWinnerBaseLossPercent / 100;
 			}
 			// If iRoundsDiff == 0 both units can wind up at a notional 0 HP so cannot assert left over HP in that case
-			AI_setPredictedHitPoints(std::max(0,currHitPoints() - iNeededRoundsUs*iDamageToUs));
+			AI_setPredictedHitPoints(std::max(0,getHP() - iNeededRoundsUs*iDamageToUs));
 		}
 
 		iOurStrength *= 100 - 100 * iRoundsDiff / std::max(1, iNeededRoundsUs);
@@ -1517,7 +1517,7 @@ int CvUnitAI::AI_sacrificeValue(const CvPlot* pPlot) const
 			iValue += 25000;
 		}
 		iValue /= std::max(1, (1 + m_pUnitInfo->getProductionCost()));
-		iValue *= maxHitPoints() - getDamage();
+		iValue *= getMaxHP() - getDamage();
 		return iValue / 100;
 	}
 	int iValue = 128 * currEffectiveStr(pPlot, ((pPlot == NULL) ? NULL : this));
@@ -10006,30 +10006,27 @@ void CvUnitAI::AI_attackAirMove()
 		}
 	}
 
-	if( getDamage() > 0 )
+	if (getDamage() > 0)
 	{
-		if (((100*currHitPoints()) / maxHitPoints()) < 40)
+		if (100*getHP() / getMaxHP() < 40)
 		{
 			getGroup()->pushMission(MISSION_SKIP);
 			return;
 		}
-		else
+		const int iSearchRange = airRange();
+		foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 		{
-			const int iSearchRange = airRange();
-			foreach_(const CvPlot* pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
+			if (bestInterceptor(pLoopPlot) != NULL)
 			{
-				if (bestInterceptor(pLoopPlot) != NULL)
-				{
-					bSkiesClear = false;
-					break;
-				}
+				bSkiesClear = false;
+				break;
 			}
+		}
 
-			if (!bSkiesClear)
-			{
-				getGroup()->pushMission(MISSION_SKIP);
-				return;
-			}
+		if (!bSkiesClear)
+		{
+			getGroup()->pushMission(MISSION_SKIP);
+			return;
 		}
 	}
 /********************************************************************************/
@@ -13518,7 +13515,7 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 
 	foreach_(CvUnit* pLoopUnit, pGroup->units())
 	{
-		int iDamageThreshold = pLoopUnit->maxHitPoints() * iDamagePercent / 100;
+		int iDamageThreshold = pLoopUnit->getMaxHP() * iDamagePercent / 100;
 
 		if (NO_UNIT != getLeaderUnitType())
 		{
@@ -25403,7 +25400,7 @@ bool CvUnitAI::AI_nukeRange(int iRange)
 						if (isEnemy(pLoopUnit->getTeam()))
 						{
 							iEnemyCount++;
-							if (pLoopUnit->getDamage() * 2 > pLoopUnit->maxHitPoints())
+							if (pLoopUnit->getDamage() * 2 > pLoopUnit->getMaxHP())
 							{
 								iDamagedEnemyCount++;
 							}
@@ -26233,7 +26230,7 @@ bool CvUnitAI::AI_airAttackDamagedSkip()
 		return false;
 	}
 
-	bool bSkip = (currHitPoints() * 100 / maxHitPoints() < 40);
+	bool bSkip = (getHP() * 100 / getMaxHP() < 40);
 	if (!bSkip)
 	{
 		int iSearchRange = airRange();
@@ -29152,7 +29149,7 @@ void CvUnitAI::AI_autoAirStrike()
 	//Heal
 	if( getDamage() > 0 )
 	{
-		if (((100*currHitPoints()) / maxHitPoints()) < 50)
+		if (100*getHP() / getMaxHP() < 50)
 		{
 			getGroup()->pushMission(MISSION_SKIP);
 			return;
@@ -31539,7 +31536,7 @@ bool CvUnitAI::AI_isNegativePropertyUnit() const
 int CvUnitAI::getMyAggression(int iAttackProb) const
 {
 	int iAggression = m_pUnitInfo->getAggression() + getLevel() - 1;
-	iAggression *= maxHitPoints() - getDamage();
+	iAggression *= getMaxHP() - getDamage();
 	iAggression /= 100;
 	iAggression *= iAttackProb;
 	return iAggression / 100;
