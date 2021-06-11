@@ -2959,24 +2959,6 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementUpgrade>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_LUNAR_TOURISM</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_MEDIUM</Type>
@@ -2990,7 +2972,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>5</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
@@ -3062,52 +3044,7 @@
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
-					<TechYields>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_LUNAR_MEGASTRUCTURES</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
+				</TechYieldChange>				
 			</TechYieldChanges>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -3188,15 +3125,7 @@
 			<ImprovementUpgrade>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_LUNAR_MEGASTRUCTURES</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
+					<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3216,8 +3145,8 @@
 			<bActsAsCity>0</bActsAsCity>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>9</iYieldChange>
+				<iYieldChange>2</iYieldChange>
+				<iYieldChange>10</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
@@ -3280,6 +3209,20 @@
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementPillage>
 			<TechYieldChanges>
+				<TechYieldChange>
+					<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
+					<TechYields>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_LUNAR_MEGASTRUCTURES</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
 					<TechYields>

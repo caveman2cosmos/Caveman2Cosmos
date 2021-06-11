@@ -3386,7 +3386,7 @@
 		<BuildInfo>
 			<Type>BUILD_SUBURBS</Type>
 			<Description>TXT_KEY_BUILD_SUBURBS</Description>
-			<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
+			<PrereqTech>TECH_GAS_LIGHTING</PrereqTech>
 			<iTime>1200</iTime>
 			<iCost>400</iCost>
 			<bKill>0</bKill>
@@ -3647,7 +3647,7 @@
 		<BuildInfo>
 			<Type>BUILD_TOWN</Type>
 			<Description>TXT_KEY_BUILD_TOWN</Description>
-			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
+			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<ObsoleteTech>TECH_ATOMIC_LIFESTYLE</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>200</iCost>
@@ -3909,7 +3909,7 @@
 		<BuildInfo>
 			<Type>BUILD_VILLAGE</Type>
 			<Description>TXT_KEY_BUILD_VILLAGE</Description>
-			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<ObsoleteTech>TECH_INDUSTRIAL_LIFESTYLE</ObsoleteTech>
 			<iTime>800</iTime>
 			<iCost>100</iCost>
@@ -4164,7 +4164,7 @@
 		<BuildInfo>
 			<Type>BUILD_HAMLET</Type>
 			<Description>TXT_KEY_BUILD_HAMLET</Description>
-			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
 			<iCost>50</iCost>
@@ -4238,7 +4238,7 @@
 		<BuildInfo>
 			<Type>BUILD_COTTAGE</Type>
 			<Description>TXT_KEY_BUILD_COTTAGE</Description>
-			<PrereqTech>TECH_POTTERY</PrereqTech>
+			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
 			<iCost>25</iCost>
