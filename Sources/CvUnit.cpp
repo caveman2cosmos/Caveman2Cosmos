@@ -39269,10 +39269,15 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 	{
 		if (bChange)
 		{
+			if (m_worker == NULL)
+			{
+				m_worker = new UnitCompWorker();
+			}
 			m_aiExtraBuildTypes.push_back((int)eBuild);
 		}
 		else
 		{
+			// Toffer - This can't be faster than just doing an erase of the element with the build id; can it?
 			std::vector<int> m_aiOldExtraBuildTypes;
 			for (unsigned int iI = 0; iI < m_aiExtraBuildTypes.size(); iI++)
 			{
@@ -39288,6 +39293,13 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 				m_aiExtraBuildTypes.push_back(m_aiOldExtraBuildTypes[iI]);
 			}
 			m_aiOldExtraBuildTypes.clear();
+			// ! Toffer
+
+			if (m_aiExtraBuildTypes.size() == 0 && m_pUnitInfo->getNumBuilds() == 0)
+			{
+				delete m_worker;
+				m_worker = NULL;
+			}
 		}
 	}
 }
