@@ -48,5 +48,29 @@ void UnitCompCommander::changeCommandRange(const int iChange)
 //------------------------------------------------------------------------------------------------------
 UnitCompWorker::UnitCompWorker()
 {
+	m_iHillsWorkModifier = 0;
+	m_iPeaksWorkModifier = 0;
 }
 UnitCompWorker::~UnitCompWorker() { }
+
+UnitCompWorker::UnitCompWorker(CvUnitInfo* unitInfo) // Used when unit becomes commander
+{
+	m_iHillsWorkModifier = unitInfo->getHillsWorkModifier();
+	m_iPeaksWorkModifier = unitInfo->getPeaksWorkModifier();
+}
+
+void UnitCompWorker::changeHillsWorkModifier(const int iChange)
+{
+	m_iHillsWorkModifier += iChange;
+}
+
+void UnitCompWorker::changePeaksWorkModifier(const int iChange)
+{
+	m_iPeaksWorkModifier += iChange;
+}
+
+//------------------------------------------------------------------------------------------------------
+//
+//  CLASS: UnitCompWorker
+//
+//------------------------------------------------------------------------------------------------------

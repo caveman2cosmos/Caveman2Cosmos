@@ -35,9 +35,16 @@ class UnitCompWorker
 public:
 	UnitCompWorker();
 	~UnitCompWorker();
+	UnitCompWorker(CvUnitInfo* unitInfo);
+
+	void changeHillsWorkModifier(const int iChange);
+	void changePeaksWorkModifier(const int iChange);
+	inline short getHillsWorkModifier() const { return m_iHillsWorkModifier; }
+	inline short getPeaksWorkModifier() const { return m_iPeaksWorkModifier; }
 
 private:
-	
+	short m_iHillsWorkModifier;
+	short m_iPeaksWorkModifier;
 };
 
 #endif

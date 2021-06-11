@@ -1532,14 +1532,8 @@ public:
 	int getExtraHillsDefensePercent() const;
 	void changeExtraHillsDefensePercent(int iChange);
 
-	//Team Project (4)
 	//WorkRateMod
-	int getExtraHillsWorkPercent() const;
-	void changeExtraHillsWorkPercent(int iChange);
 	int hillsWorkModifier() const;
-
-	int getExtraPeaksWorkPercent() const;
-	void changeExtraPeaksWorkPercent(int iChange);
 	int peaksWorkModifier() const;
 
 	int getCollateralDamageProtection() const;
@@ -2092,11 +2086,7 @@ protected:
 	int m_iExtraCityDefensePercent;
 	int m_iExtraHillsAttackPercent;
 	int m_iExtraHillsDefensePercent;
-	//Team Project (4)
-	//WorkRateMod
-	int m_iExtraHillsWorkPercent;
-	int m_iExtraPeaksWorkPercent;
-	//
+
 	int m_iRevoltProtection;
 	int m_iCollateralDamageProtection;
 	int m_iPillageChange;
