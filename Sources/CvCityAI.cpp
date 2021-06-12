@@ -9571,7 +9571,7 @@ void CvCityAI::AI_doEmphasize()
 /* 	City Defenders						24.07.2010				Fuyu			*/
 /********************************************************************************/
 //Fuyu bIgnoreNotUnitAIs
-bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds, int iUnitStrength, int iPriorityOverride, CvUnitSelectionCriteria* criteria)
+bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds, int iUnitStrength, int iPriorityOverride, const CvUnitSelectionCriteria* criteria)
 {//Adding a unit type direct selection here...
 #ifdef USE_UNIT_TENDERING
 	//	Have we already contracted for a unit?
