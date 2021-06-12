@@ -1280,12 +1280,20 @@ class Pedia:
 			#Check location of building on X and Y grid.
 			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
 			iTechRow = self.checkTechRequirementLocation(CvBuildingInfo)[1]
+			
+			#Check if free building has tech requirement
+			if CvBuildingInfo.getFreeBuilding() != None:
+				CvFreeBuilding = GC.getBuildingInfo(CvBuildingInfo.getFreeBuilding())
+				if CvFreeBuilding != None:
+					iFreeBuildingTechLoc = self.checkTechRequirementLocation(CvFreeBuilding)[0]
+					if iFreeBuildingTechLoc == 0:
+						print CvBuildingInfo.getType()+" has free building with no tech "+CvFreeBuilding.getType()
 
 			#Check if various tech modifications aren't earlier than building most advanced tech requirement or later than building obsoletion XGrid
-			self.checkTechMods(iTechLoc, CvBuildingInfo)
+			#self.checkTechMods(iTechLoc, CvBuildingInfo)
 			
 			#Check if building needs bonus before is available	
-			self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
+			#self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
 			
 			#Finds if earliest resource producer tech requirement and tech enable of resource are in same column
 			if bCheckBonusManufacturerTech:
