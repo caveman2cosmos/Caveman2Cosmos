@@ -30386,17 +30386,17 @@ void CvUnit::clearCommanderCache()
 
 int CvUnit::controlPoints() const
 {
-	return m_commander->getControlPoints();
+	return m_commander != NULL ? m_commander->getControlPoints() : 0;
 }
 
 int CvUnit::controlPointsLeft() const
 {
-	return m_commander->getControlPointsLeft();
+	return m_commander != NULL ? m_commander->getControlPointsLeft() : 0;
 }
 
 int CvUnit::commandRange() const
 {
-	return m_commander->getCommandRange();
+	return m_commander != NULL ? m_commander->getCommandRange() : 0;
 }
 
 int CvUnit::interceptionChance(const CvPlot* pPlot) const
