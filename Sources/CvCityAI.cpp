@@ -8357,9 +8357,8 @@ void CvCityAI::AI_markBestBuildValuesStale()
 	m_bestBuildValuesStale = true;
 }
 
-std::vector<int> CvCityAI::AI_calculateOutputRatio(int food, int production, int commerce)
+const std::vector<int> CvCityAI::AI_calculateOutputRatio(int food, int production, int commerce) const
 {
-
 	std::vector<int> ratios = std::vector<int>(NUM_YIELD_TYPES);
 	
 	const int totalOutput = std::max(1, food + production + commerce);
@@ -8377,16 +8376,14 @@ std::vector<int> CvCityAI::AI_calculateOutputRatio(int food, int production, int
 
 void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vector<plotInfo> &currentYieldList)
 {
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	bool bIgnoreFeature = false;
-	const int activeWorkerMissions = kPlayer.AI_plotTargetMissionAIs(plot, MISSIONAI_BUILD);
+	const int activeWorkerMissions = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(plot, MISSIONAI_BUILD);
 	if (activeWorkerMissions > 0)
 	{		
-		BuildTypes eBuild = NO_BUILD;
 		// This check is necessary to stop oscillation which can result
 		// when best build changes food situation for city, changing the best build. making sure worker completes the ongoing build
 		// this gets the build action with the shortest remaining build-time
-		eBuild = GetShortestBuildTimeOnPlot(plot);	
+		const BuildTypes eBuild = GetShortestBuildTimeOnPlot(plot);	
 		if (eBuild != NO_BUILD)
 		{
 			//get plot-improvement that build generates
@@ -8412,11 +8409,10 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vecto
 	
 	if(currentYieldList[iPlotCounter].currentBonus != NO_BONUS && currentYieldList[iPlotCounter].currentImprovement != NO_IMPROVEMENT)
 	{
-		CvImprovementInfo *currentImprovement = &GC.getImprovementInfo(currentYieldList[iPlotCounter].currentImprovement);
-		currentYieldList[iPlotCounter].bonusImproved = currentImprovement->isUniversalTradeBonusProvider();
+		const CvImprovementInfo& currentImprovement = GC.getImprovementInfo(currentYieldList[iPlotCounter].currentImprovement);
+		currentYieldList[iPlotCounter].bonusImproved = currentImprovement.isUniversalTradeBonusProvider();
 	}
-	
-	
+
 	//if plot does not have active worker mission, take existing yield
 	for (int yieldTypes = 0; yieldTypes < NUM_YIELD_TYPES; yieldTypes++)
 	{
@@ -8427,15 +8423,13 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vecto
 	if (currentYieldList[iPlotCounter].bonusImproved) currentYieldList[iPlotCounter].yieldValue += 1000;
 }
 
-void CvCityAI::AI_getBestPlotValue(std::vector<int> &ratios,int iPlotCounter, CvPlot *plot, std::vector<plotInfo> &optimalYieldList, int iDesiredFoodChange)
+void CvCityAI::AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo> &optimalYieldList, int iDesiredFoodChange) const
 {
-	BuildTypes eBuild = NO_BUILD;
-
 	bool bIgnoreFeature = false;
 	
 	AI_newbestPlotBuild(plot, &optimalYieldList[iPlotCounter], ratios[YIELD_FOOD], ratios[YIELD_PRODUCTION], ratios[YIELD_COMMERCE]);
 	
-	eBuild = optimalYieldList[iPlotCounter].currentBuild;
+	const BuildTypes eBuild = optimalYieldList[iPlotCounter].currentBuild;
 	if(eBuild != NO_BUILD)
 	{
 		optimalYieldList[iPlotCounter].currentImprovement = static_cast<ImprovementTypes>(GC.getBuildInfo(eBuild).getImprovement());
@@ -8526,7 +8520,7 @@ void CvCityAI::AI_updateBestBuild()
 		currentYieldList[iPlotCounter].owned = true;
 		if (loopedPlot->getWorkingCity() == this) currentYieldList[iPlotCounter].worked = true;
 		
-		AI_getCurrentPlotValue(iPlotCounter,loopedPlot, currentYieldList);
+		AI_getCurrentPlotValue(iPlotCounter, loopedPlot, currentYieldList);
 		AI_getBestPlotValue(ratios, iPlotCounter, loopedPlot, optimalYieldList, iDesiredFoodChange);
 	}
 	for(int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++)
