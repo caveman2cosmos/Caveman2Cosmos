@@ -1252,7 +1252,7 @@ bool CvUnitInfo::isPrereqOrCivics(int i) const
 }
 
 
-int CvUnitInfo::getBuild(int i) const
+BuildTypes CvUnitInfo::getBuild(int i) const
 {
 	return m_workerBuilds[i];
 }
@@ -1260,9 +1260,9 @@ short CvUnitInfo::getNumBuilds() const
 {
 	return m_workerBuilds.size();
 }
-bool CvUnitInfo::hasBuild(int i) const
+bool CvUnitInfo::hasBuild(BuildTypes e) const
 {
-	return find(m_workerBuilds.begin(), m_workerBuilds.end(), i) != m_workerBuilds.end();
+	return algo::contains(m_workerBuilds, e);
 }
 
 int CvUnitInfo::getNumPrereqAndBuildings() const
