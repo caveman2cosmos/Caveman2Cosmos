@@ -2857,16 +2857,18 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				}
 			}
 
-			if (pUnit->hillsWorkModifier() > 0)
+			if (pUnit->isWorker())
 			{
-				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_WORK", pUnit->hillsWorkModifier()));
-			}
-
-			if (pUnit->peaksWorkModifier() > 0)
-			{
-				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", pUnit->peaksWorkModifier()));
+				if (pUnit->hillsWorkModifier() > 0)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_WORK", pUnit->hillsWorkModifier()));
+				}
+				if (pUnit->peaksWorkModifier() > 0)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", pUnit->peaksWorkModifier()));
+				}
 			}
 
 			//Strength in Numbers offered support
@@ -13567,8 +13569,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		iHillsDefensePercent += promo.getHillsDefensePercent();
 		iWorkRate += promo.getWorkRatePercent();
 		iHillsWorkPercent += promo.getHillsWorkPercent();
-		iHillsWorkPercent += promo.getHillsWorkModifierChange();
-		iPeaksWorkPercent += promo.getPeaksWorkModifierChange();
+		iPeaksWorkPercent += promo.getPeaksWorkPercent();
 		iRevoltProtection += promo.getRevoltProtection();
 		iCollateralDamageProtection += promo.getCollateralDamageProtection();
 		iPillageChange += promo.getPillageChange();
@@ -15783,19 +15784,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	//	Improvement upgrade rate modifier
 	if (GC.getCivicInfo(eCivic).getImprovementUpgradeRateModifier() != 0)
 	{
-		bFirst = true;
-
-		for (iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
-		{
-			if (GC.getImprovementInfo((ImprovementTypes)iI).getImprovementUpgrade() != NO_IMPROVEMENT)
-			{
-				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_CIVICHELP_IMPROVEMENT_UPGRADE", GC.getCivicInfo(eCivic).getImprovementUpgradeRateModifier()).c_str());
-				CvWString szImprovement;
-				szImprovement.Format(L"<link=%s>%s</link>", CvWString(GC.getImprovementInfo((ImprovementTypes)iI).getType()).GetCString(), GC.getImprovementInfo((ImprovementTypes)iI).getDescription());
-				setListHelp(szHelpText, szFirstBuffer, szImprovement, L", ", bFirst);
-				bFirst = false;
-			}
-		}
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_IMPROVEMENT_UPGRADE", GC.getCivicInfo(eCivic).getImprovementUpgradeRateModifier()));
 	}
 
 	//	Military unit production modifier
@@ -19197,16 +19187,9 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 
 		//Worker details
-		iCount = 0;
+		iCount = kUnit.getNumBuilds();
 
-		for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
-		{
-			if (kUnit.getBuilds(iI))
-			{
-				iCount++;
-			}
-		}
-		if (iCount > ((GC.getNumBuildInfos() * 3) / 4))
+		if (iCount > 32)
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_IMPROVE_PLOTS"));
@@ -19214,14 +19197,11 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		else
 		{
 			bFirst = true;
-			for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
+			for (int iI = 0; iI < iCount; ++iI)
 			{
-				if (kUnit.getBuilds(iI))
-				{
-					szTempBuffer.Format(L"%s%s ", NEWLINE, gDLL->getText("TXT_KEY_UNITHELP_CAN").c_str());
-					setListHelp(szBuffer, szTempBuffer, GC.getBuildInfo((BuildTypes) iI).getDescription(), L", ", bFirst);
-					bFirst = false;
-				}
+				szTempBuffer.Format(L"%s%s ", NEWLINE, gDLL->getText("TXT_KEY_UNITHELP_CAN").c_str());
+				setListHelp(szBuffer, szTempBuffer, GC.getBuildInfo((BuildTypes)kUnit.getBuild(iI)).getDescription(), L", ", bFirst);
+				bFirst = false;
 			}
 		}
 
@@ -29582,7 +29562,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CAPTURE_RESISTANCE_MODIFIER", info.getCaptureResistanceModifierChange()));
 	}
 
-	if (info.getHillsWorkModifierChange() != 0)
+	if (info.getPeaksWorkPercent() != 0)
 	{
 		if (bFirstDisplay)
 		{
@@ -29591,19 +29571,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_WORK", info.getHillsWorkModifierChange()));
-	}
-
-	if (info.getPeaksWorkModifierChange() != 0)
-	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", info.getPeaksWorkModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", info.getPeaksWorkPercent()));
 	}
 
 	if (info.getBreakdownChanceChange() != 0)

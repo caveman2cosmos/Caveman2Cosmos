@@ -305,9 +305,7 @@
 	<ElementType name="iCaptureResistanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iCaptureResistanceModifierChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iHillsWorkModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iHillsWorkModifierChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iPeaksWorkModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iPeaksWorkModifierChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iBreakdownChance" content="textOnly" dt:type="int"/>
 	<ElementType name="iBreakdownChanceChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iBreakdownDamage" content="textOnly" dt:type="int"/>
@@ -1384,12 +1382,8 @@
 	</ElementType>
 	<ElementType name="BuildType" content="textOnly"/>
 	<ElementType name="bBuild" content="textOnly" dt:type="boolean"/>
-	<ElementType name="Build" content="eltOnly">
-		<element type="BuildType"/>
-		<element type="bBuild"/>
-	</ElementType>
 	<ElementType name="Builds" content="eltOnly">
-		<element type="Build" minOccurs="0" maxOccurs="*"/>
+		<element type="BuildType"/>
 	</ElementType>
 	<ElementType name="ReligionType" content="textOnly"/>
 	<ElementType name="iReligionSpread" content="textOnly" dt:type="int"/>
@@ -1537,7 +1531,6 @@
 	<ElementType name="iAnimalCombat" content="textOnly" dt:type="int"/>
 	<ElementType name="iHillsAttack" content="textOnly" dt:type="int"/>
 	<ElementType name="iHillsDefense" content="textOnly" dt:type="int"/>
-	<ElementType name="iHillsWork" content="textOnly" dt:type="int"/>
 	<ElementType name="iWorkRateModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iKamikazePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iRevoltProtection" content="textOnly" dt:type="int"/>
@@ -2498,8 +2491,6 @@
 		<element type="FeatureWorkRateModifierChangeTypes" minOccurs="0"/>
 		<element type="BuildWorkRateModifierChangeTypes" minOccurs="0"/>
 		<element type="AddsBuildTypes" minOccurs="0"/>
-		<element type="iHillsWorkModifierChange" minOccurs="0"/>
-		<element type="iPeaksWorkModifierChange" minOccurs="0"/>
 		<element type="iCaptureProbabilityModifierChange" minOccurs="0"/>
 		<element type="iCaptureResistanceModifierChange" minOccurs="0"/>
 		<element type="iBreakdownChanceChange" minOccurs="0"/>
@@ -2593,7 +2584,8 @@
 		<element type="iCityDefense" minOccurs="0"/>
 		<element type="iHillsAttack" minOccurs="0"/>
 		<element type="iHillsDefense" minOccurs="0"/>
-		<element type="iHillsWork" minOccurs="0"/>
+		<element type="iHillsWorkModifier" minOccurs="0"/>
+		<element type="iPeaksWorkModifier" minOccurs="0"/>
 		<element type="iWorkRateModifier" minOccurs="0"/>
 		<element type="iKamikazePercent" minOccurs="0"/>
 		<element type="iRevoltProtection" minOccurs="0"/>
@@ -2964,7 +2956,8 @@
 		<element type="iCityDefense" minOccurs="0"/>
 		<element type="iHillsAttack" minOccurs="0"/>
 		<element type="iHillsDefense" minOccurs="0"/>
-		<element type="iHillsWork" minOccurs="0"/>
+		<element type="iHillsWorkModifier" minOccurs="0"/>
+		<element type="iPeaksWorkModifier" minOccurs="0"/>
 		<element type="iWorkRateModifier" minOccurs="0"/>
 		<element type="iRevoltProtection" minOccurs="0"/>
 		<element type="iCollateralDamageProtection" minOccurs="0"/>
@@ -3029,8 +3022,6 @@
 		<element type="iPoisonProbabilityModifierChange" minOccurs="0"/>
 		<element type="iCaptureProbabilityModifierChange" minOccurs="0"/>
 		<element type="iCaptureResistanceModifierChange" minOccurs="0"/>
-		<element type="iHillsWorkModifierChange" minOccurs="0"/>
-		<element type="iPeaksWorkModifierChange" minOccurs="0"/>
 		<element type="iBreakdownChanceChange" minOccurs="0"/>
 		<element type="iBreakdownDamageChange" minOccurs="0"/>
 		<element type="iTauntChange" minOccurs="0"/>

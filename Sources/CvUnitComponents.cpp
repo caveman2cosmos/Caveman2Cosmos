@@ -11,6 +11,14 @@ UnitCompCommander::UnitCompCommander() // Used when loading save
 }
 UnitCompCommander::~UnitCompCommander() { }
 
+UnitCompCommander::UnitCompCommander(CvUnitInfo* unitInfo) // Used when unit becomes commander
+{
+	m_iControlPoints = unitInfo->getControlPoints();
+	m_iControlPointsLeft = m_iControlPoints;
+
+	m_iCommandRange = unitInfo->getCommandRange();
+}
+
 void UnitCompCommander::changeControlPoints(const int iChange)
 {
 	m_iControlPoints += iChange;
@@ -35,6 +43,34 @@ void UnitCompCommander::changeCommandRange(const int iChange)
 
 //------------------------------------------------------------------------------------------------------
 //
-//  CLASS: X
+//  CLASS: UnitCompWorker
+//
+//------------------------------------------------------------------------------------------------------
+UnitCompWorker::UnitCompWorker()
+{
+	m_iHillsWorkModifier = 0;
+	m_iPeaksWorkModifier = 0;
+}
+UnitCompWorker::~UnitCompWorker() { }
+
+UnitCompWorker::UnitCompWorker(CvUnitInfo* unitInfo) // Used when unit becomes commander
+{
+	m_iHillsWorkModifier = unitInfo->getHillsWorkModifier();
+	m_iPeaksWorkModifier = unitInfo->getPeaksWorkModifier();
+}
+
+void UnitCompWorker::changeHillsWorkModifier(const int iChange)
+{
+	m_iHillsWorkModifier += iChange;
+}
+
+void UnitCompWorker::changePeaksWorkModifier(const int iChange)
+{
+	m_iPeaksWorkModifier += iChange;
+}
+
+//------------------------------------------------------------------------------------------------------
+//
+//  CLASS: UnitCompWorker
 //
 //------------------------------------------------------------------------------------------------------

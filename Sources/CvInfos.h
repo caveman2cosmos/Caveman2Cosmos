@@ -760,13 +760,12 @@ public:
 	int getEnduranceChange() const;
 	int getRoundStunProbChange() const;
 	int getPoisonProbabilityModifierChange() const;
-	//Team Project (3)
+
 	int getCaptureProbabilityModifierChange() const;
 	int getCaptureResistanceModifierChange() const;
-	//Team Project (4)
+
 	//WorkRateMod
-	int getHillsWorkModifierChange() const;
-	int getPeaksWorkModifierChange() const;
+	int getPeaksWorkPercent() const;
 	//
 	int getBreakdownChanceChange() const;
 	int getBreakdownDamageChange() const;
@@ -1272,13 +1271,12 @@ protected:
 	int m_iEnduranceChange;
 	int m_iRoundStunProbChange;
 	int m_iPoisonProbabilityModifierChange;
-	//Team Project (3)
+
 	int m_iCaptureProbabilityModifierChange;
 	int m_iCaptureResistanceModifierChange;
-	//Team Project (4)
+
 	//WorkRateMod
-	int m_iHillsWorkModifierChange;
-	int m_iPeaksWorkModifierChange;
+	int m_iPeaksWorkPercent;
 
 	int m_iBreakdownChanceChange;
 	int m_iBreakdownDamageChange;
@@ -2246,6 +2244,11 @@ public:
 
 	bool isPrereqOrCivics(int i) const;
 
+	const std::vector<BuildTypes>& getBuilds() const { return m_workerBuilds; }
+	BuildTypes getBuild(int i) const;
+	short getNumBuilds() const;
+	bool hasBuild(BuildTypes e) const;
+
 	int getPrereqAndBuilding(int i) const;
 	int getNumPrereqAndBuildings() const;
 	bool isPrereqAndBuilding(int i) const;
@@ -2274,7 +2277,6 @@ public:
 	bool getDefenderUnitCombat(int i) const;
 	bool getUnitAIType(int i) const;
 	bool getNotUnitAIType(int i) const;
-	bool getBuilds(int i) const;
 	bool getGreatPeoples(int i) const;
 
 	int getBuildings(int i) const;
@@ -2407,6 +2409,7 @@ protected:
 	int m_iPrereqAndTech;
 	int m_iPrereqAndBonus;
 
+	std::vector<BuildTypes> m_workerBuilds;
 	std::vector<int> m_aiPrereqAndBuildings;
 	std::vector<int> m_aiPrereqOrBuildings;
 
@@ -2502,7 +2505,6 @@ protected:
 	bool* m_pbDefenderUnitCombat;
 	bool* m_pbUnitAIType;
 	bool* m_pbNotUnitAIType;
-	bool* m_pbBuilds;
 	bool* m_pbGreatPeoples;
 	std::vector<int> m_pbBuildings;
 	bool* m_pbTerrainNative;
@@ -8965,8 +8967,7 @@ public:
 	int getPoisonProbabilityModifierChange() const;
 	int getCaptureProbabilityModifierChange() const;
 	int getCaptureResistanceModifierChange() const;
-	int getHillsWorkModifierChange() const;
-	int getPeaksWorkModifierChange() const;
+	int getPeaksWorkPercent() const;
 	int getBreakdownChanceChange() const;
 	int getBreakdownDamageChange() const;
 	int getTauntChange() const;
@@ -9329,8 +9330,7 @@ protected:
 	int m_iPoisonProbabilityModifierChange;
 	int m_iCaptureProbabilityModifierChange;
 	int m_iCaptureResistanceModifierChange;
-	int m_iHillsWorkModifierChange;
-	int m_iPeaksWorkModifierChange;
+	int m_iPeaksWorkPercent;
 	int m_iBreakdownChanceChange;
 	int m_iBreakdownDamageChange;
 	int m_iTauntChange;

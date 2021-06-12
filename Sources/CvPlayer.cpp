@@ -10136,20 +10136,17 @@ void CvPlayer::changeWorkerSpeedModifier(int iChange)
 
 // BUG - Partial Builds - start
 /*
- * Returns the work rate for the first unit that can build <eBuild>.
+ * Returns the work rate for the best available unit that can build <eBuild> the fastest.
  */
 int CvPlayer::getWorkRate(BuildTypes eBuild) const
 {
-	int iRate = 0;
 	int iBestScore = 0;
-
+	int iRate = 0;
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
-
-		if (kUnit.getBuilds(eBuild))
+		if (GC.getUnitInfo((UnitTypes)iI).hasBuild(eBuild))
 		{
-			const int iUnitRate = kUnit.getWorkRate();
+			const int iUnitRate = GC.getUnitInfo((UnitTypes)iI).getWorkRate();
 			int iScore = 0;
 
 			if (getUnitCount((UnitTypes)iI) > 0)
@@ -10189,7 +10186,7 @@ int CvPlayer::getImprovementUpgradeRateModifier() const
 
 void CvPlayer::changeImprovementUpgradeRateModifier(int iChange)
 {
-	m_iImprovementUpgradeRateModifier = (m_iImprovementUpgradeRateModifier + iChange);
+	m_iImprovementUpgradeRateModifier += iChange;
 }
 
 
@@ -10201,7 +10198,7 @@ int CvPlayer::getMilitaryProductionModifier() const
 
 void CvPlayer::changeMilitaryProductionModifier(int iChange)
 {
-	m_iMilitaryProductionModifier = (m_iMilitaryProductionModifier + iChange);
+	m_iMilitaryProductionModifier += iChange;
 }
 
 
@@ -10213,7 +10210,7 @@ int CvPlayer::getSpaceProductionModifier() const
 
 void CvPlayer::changeSpaceProductionModifier(int iChange)
 {
-	m_iSpaceProductionModifier = (m_iSpaceProductionModifier + iChange);
+	m_iSpaceProductionModifier += iChange;
 }
 
 
@@ -10225,17 +10222,13 @@ int CvPlayer::getCityDefenseModifier() const
 
 void CvPlayer::changeCityDefenseModifier(int iChange)
 {
-	m_iCityDefenseModifier = (m_iCityDefenseModifier + iChange);
+	m_iCityDefenseModifier += iChange;
 }
 
 
 bool CvPlayer::isNonStateReligionCommerce() const
 {
-	if (m_iNonStateReligionCommerceCount > 0)
-	{
-		return true;
-	}
-	return false;
+	return m_iNonStateReligionCommerceCount > 0;
 }
 
 void CvPlayer::changeNonStateReligionCommerce(int iNewValue)
@@ -10253,11 +10246,7 @@ void CvPlayer::changeNonStateReligionCommerce(int iNewValue)
 
 bool CvPlayer::isUpgradeAnywhere() const
 {
-	if(m_iUpgradeAnywhereCount > 0)
-	{
-		return true;
-	}
-	return false;
+	return m_iUpgradeAnywhereCount > 0;
 }
 
 void CvPlayer::changeUpgradeAnywhere(int iNewValue)
@@ -29689,14 +29678,14 @@ bool CvPlayer::canHaveBuilder(BuildTypes eBuild) const
 	if (!hasSuitableUnit)
 	{
 		// Could we build one?
-		for(int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			if ( GC.getUnitInfo((UnitTypes)iI).getBuilds(eBuild) && canTrain((UnitTypes)iI) )
+			if (GC.getUnitInfo((UnitTypes)iI).hasBuild(eBuild) && canTrain((UnitTypes)iI))
 			{
 				hasSuitableUnit = true;
+				break;
 			}
 		}
-
 		m_canHaveBuilder[eBuild] = hasSuitableUnit;
 	}
 	return hasSuitableUnit;

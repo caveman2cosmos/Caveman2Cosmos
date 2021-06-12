@@ -70,82 +70,55 @@
 		<UnitInfo>
 			<Type>UNIT_WORKER</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MACHU_PICCHU</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORKANIMAL</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MACHU_PICCHU</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORKBUFFALO</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MACHU_PICCHU</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORKMULE</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MACHU_PICCHU</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORKELEPHANT</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MACHU_PICCHU</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORKLLAMA</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MACHU_PICCHU</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORKCAMEL</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MACHU_PICCHU</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORKER_INDUSTRIAL</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MACHU_PICCHU</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORKER_MODERN</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MACHU_PICCHU</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>
 		</UnitInfo>
 	</UnitInfos>
