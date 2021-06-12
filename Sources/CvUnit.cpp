@@ -873,7 +873,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_szName.clear();
 	m_szScriptData = "";
 
-	m_aiExtraBuildTypes.clear();
+	m_aeExtraBuildTypes.clear();
 	m_aExtraAidChanges.clear();
 
 	if (!bConstructorCall)
@@ -12832,19 +12832,8 @@ int CvUnit::visibilityRange(const CvPlot* pPlot) const
 
 
 int CvUnit::baseMoves() const
-{/************************************************************************************************/
-/* Afforess	                  Start		 07/16/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-	return (m_pUnitInfo->getMoves() + getExtraMoves() + GET_TEAM(getTeam()).getExtraMoves(getDomainType()));
-*/
+{
 	return (m_pUnitInfo->getMoves() + getExtraMoves() + (getDomainType() != DOMAIN_AIR ? GET_TEAM(getTeam()).getExtraMoves(getDomainType()) : 0));
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 }
 
 int CvUnit::maxMoves() const
@@ -12914,28 +12903,32 @@ int CvUnit::nukeRange() const
 	return m_pUnitInfo->getNukeRange();
 }
 
+namespace CvUnitInternal
+{
+	bool canBuildRoute(const std::vector<BuildTypes>& aBuilds, const CvTeam& team)
+	{
+		foreach_(const BuildTypes eBuild, aBuilds)
+		{
+			const CvBuildInfo& info = GC.getBuildInfo(eBuild);
+			if (info.getRoute() > NO_ROUTE && team.isHasTech((TechTypes)info.getTechPrereq()))
+			{
+				const TechTypes obsoleteTech = (TechTypes)info.getObsoleteTech();
+				if (obsoleteTech == NO_TECH || !team.isHasTech(obsoleteTech))
+					return true;
+			}
+		}
+		return false;
+	}
+}
 
 bool CvUnit::canBuildRoute() const
 {
-	if (isWorker())
-	{
-		// Toffer - ToDo
-		//	- Should limit loop to only UnitInfo builds and the extra builds for this unit.
-		//	- Both are vectors and are both referenced in the CvUnit::hasBuild() function.
-		for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
-		{
-			if (GC.getBuildInfo((BuildTypes)iI).getRoute() != NO_ROUTE && hasBuild((BuildTypes)iI)
-			&& GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes)iI).getTechPrereq()))
-			{
-				if (GC.getBuildInfo((BuildTypes)iI).getObsoleteTech() == NO_TECH
-				|| !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes)iI).getObsoleteTech()))
-				{
-					return true;
-				}
-			}
-		}
-	}
-	return false;
+	if (!isWorker())
+		return false;
+
+	const CvTeam& team = GET_TEAM(getTeam());
+	return CvUnitInternal::canBuildRoute(m_aeExtraBuildTypes, team)
+		|| CvUnitInternal::canBuildRoute(m_pUnitInfo->getBuilds(), team);
 }
 
 BuildTypes CvUnit::getBuildType() const
@@ -13067,7 +13060,7 @@ bool CvUnit::isNoBadGoodies() const
 
 bool CvUnit::isOnlyDefensive() const
 {
-	int iCount = getOnlyDefensiveCount();
+	int iCount = m_iOnlyDefensiveCount;
 	if (m_pUnitInfo->isOnlyDefensive())
 	{
 		iCount++;
@@ -17098,7 +17091,9 @@ CvPlot* CvUnit::plot() const
 {
 	//FAssertMsg(isInViewport(), "Can't get plot of unit that is not in the viewport");
 	//FAssertMsg(!isUsingDummyEntities(), "Can't get plot of unit that is using dummy entities");
-	return GC.getMap().plotSorenINLINE(getX(), getY());
+	CvPlot* plot = GC.getMap().plotSorenINLINE(getX(), getY());
+	FAssert(plot != NULL);
+	return plot;
 }
 
 CvPlot* CvUnit::plotExternal() const
@@ -25030,7 +25025,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	//	Right now it's just characteristics that affect what a unit might
 	//	be able to move through that matter, so its unit class + certain promotions
 
-	m_aiExtraBuildTypes.clear();
+	m_aeExtraBuildTypes.clear();
 	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		if ( isHasPromotion((PromotionTypes)iI))
@@ -39220,30 +39215,23 @@ void CvUnit::processLoadedSpecialUnit(bool bChange, SpecialUnitTypes eSpecialUni
 
 bool CvUnit::hasBuild(BuildTypes eBuild) const
 {
-	return m_pUnitInfo->hasBuild(eBuild) || isExtraBuild(eBuild);
+	return m_pUnitInfo->hasBuild(eBuild) || algo::contains(m_aeExtraBuildTypes, eBuild);
 }
 
-bool CvUnit::isExtraBuild(BuildTypes eBuild) const
-{
-	for (int iI = 0; iI < getNumExtraBuildTypes(); iI++)
-	{
-		if (eBuild == (BuildTypes)getExtraBuildType(iI))
-		{
-			return true;
-		}
-	}
-	return false;
-}
+//bool CvUnit::isExtraBuild(BuildTypes eBuild) const
+//{
+//	return algo::contains(m_aeExtraBuildTypes, eBuild);
+//}
 
-int CvUnit::getExtraBuildType(int i) const
-{
-	return m_aiExtraBuildTypes[i];
-}
+//BuildTypes CvUnit::getExtraBuildType(int i) const
+//{
+//	return m_aeExtraBuildTypes[i];
+//}
 
-int CvUnit::getNumExtraBuildTypes() const
-{
-	return (int)m_aiExtraBuildTypes.size();
-}
+//int CvUnit::getNumExtraBuildTypes() const
+//{
+//	return (int)m_aeExtraBuildTypes.size();
+//}
 
 void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 {
@@ -39255,29 +39243,13 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 			{
 				m_worker = new UnitCompWorker();
 			}
-			m_aiExtraBuildTypes.push_back((int)eBuild);
+			m_aeExtraBuildTypes.push_back(eBuild);
 		}
 		else
 		{
-			// Toffer - This can't be faster than just doing an erase of the element with the build id; can it?
-			std::vector<int> m_aiOldExtraBuildTypes;
-			for (unsigned int iI = 0; iI < m_aiExtraBuildTypes.size(); iI++)
-			{
-				if (m_aiExtraBuildTypes[iI] != ((int)eBuild))
-				{
-					m_aiOldExtraBuildTypes.push_back(m_aiExtraBuildTypes[iI]);
-				}
-			}
-			m_aiExtraBuildTypes.clear();
+			algo::remove(m_aeExtraBuildTypes, eBuild);
 
-			for (unsigned int iI = 0; iI < m_aiOldExtraBuildTypes.size(); iI++)
-			{
-				m_aiExtraBuildTypes.push_back(m_aiOldExtraBuildTypes[iI]);
-			}
-			m_aiOldExtraBuildTypes.clear();
-			// ! Toffer
-
-			if (m_aiExtraBuildTypes.size() == 0 && m_pUnitInfo->getNumBuilds() == 0 && isWorker())
+			if (m_aeExtraBuildTypes.size() == 0 && m_pUnitInfo->getNumBuilds() == 0 && isWorker())
 			{
 				delete m_worker;
 				m_worker = NULL;
@@ -39288,17 +39260,12 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 
 bool CvUnit::isExcile() const
 {
-	int iCount = getExcileCount();
+	int iCount = m_iExcileCount;
 	if (m_pUnitInfo->isExcile())
 	{
 		iCount++;
 	}
 	return (iCount > 0);
-}
-
-int CvUnit::getExcileCount() const
-{
-	return m_iExcileCount;
 }
 
 void CvUnit::changeExcileCount(int iChange)
@@ -39308,17 +39275,12 @@ void CvUnit::changeExcileCount(int iChange)
 
 bool CvUnit::isPassage() const
 {
-	int iCount = getPassageCount();
+	int iCount = m_iPassageCount;
 	if (m_pUnitInfo->isPassage())
 	{
 		iCount++;
 	}
 	return (iCount > 0);
-}
-
-int CvUnit::getPassageCount() const
-{
-	return m_iPassageCount;
 }
 
 void CvUnit::changePassageCount(int iChange)
@@ -39328,17 +39290,12 @@ void CvUnit::changePassageCount(int iChange)
 
 bool CvUnit::isNoNonOwnedCityEntry() const
 {
-	int iCount = getNoNonOwnedCityEntryCount();
+	int iCount = m_iNoNonOwnedCityEntryCount;
 	if (m_pUnitInfo->isNoNonOwnedCityEntry())
 	{
 		iCount++;
 	}
 	return (iCount > 0);
-}
-
-int CvUnit::getNoNonOwnedCityEntryCount() const
-{
-	return m_iNoNonOwnedCityEntryCount;
 }
 
 void CvUnit::changeNoNonOwnedCityEntryCount(int iChange)
@@ -39348,17 +39305,12 @@ void CvUnit::changeNoNonOwnedCityEntryCount(int iChange)
 
 bool CvUnit::isBarbCoExist() const
 {
-	int iCount = getBarbCoExistCount();
+	int iCount = m_iBarbCoExistCount;
 	if (m_pUnitInfo->isBarbCoExist())
 	{
 		iCount++;
 	}
 	return (iCount > 0);
-}
-
-int CvUnit::getBarbCoExistCount() const
-{
-	return m_iBarbCoExistCount;
 }
 
 void CvUnit::changeBarbCoExistCount(int iChange)
@@ -39368,17 +39320,12 @@ void CvUnit::changeBarbCoExistCount(int iChange)
 
 bool CvUnit::isBlendIntoCity() const
 {
-	int iCount = getBlendIntoCityCount();
+	int iCount = m_iBlendIntoCityCount;
 	if (m_pUnitInfo->isBlendIntoCity())
 	{
 		iCount++;
 	}
 	return (iCount > 0 || (isAnimal() && canAnimalIgnoresCities()));
-}
-
-int CvUnit::getBlendIntoCityCount() const
-{
-	return m_iBlendIntoCityCount;
 }
 
 void CvUnit::changeBlendIntoCityCount(int iChange)
@@ -39388,17 +39335,12 @@ void CvUnit::changeBlendIntoCityCount(int iChange)
 
 bool CvUnit::isUpgradeAnywhere() const
 {
-	int iCount = getUpgradeAnywhereCount();
+	int iCount = m_iUpgradeAnywhereCount;
 	if (m_pUnitInfo->isUpgradeAnywhere())
 	{
 		iCount++;
 	}
 	return (iCount > 0);
-}
-
-int CvUnit::getUpgradeAnywhereCount() const
-{
-	return m_iUpgradeAnywhereCount;
 }
 
 void CvUnit::changeUpgradeAnywhereCount(int iChange)
@@ -39419,45 +39361,35 @@ int CvUnit::visibilityIntensityTotal(InvisibleTypes eInvisibleType) const
 
 	if (plot() != NULL)
 	{
-		TerrainTypes eTerrain = plot()->getTerrainType();
+		const TerrainTypes eTerrain = plot()->getTerrainType();
 		if (eTerrain != NO_TERRAIN)
 		{
 			iAmount += extraVisibleTerrain(eInvisibleType, eTerrain);
 		}
-		eTerrain = NO_TERRAIN;
 		if (plot()->isAsPeak())
 		{
-			eTerrain = GC.getTERRAIN_PEAK();
+			iAmount += extraVisibleTerrain(eInvisibleType, GC.getTERRAIN_PEAK());
 		}
 		else if (plot()->isHills())
 		{
-			eTerrain = GC.getTERRAIN_HILL();
-		}
-		if (eTerrain != NO_TERRAIN)
-		{
-			iAmount += extraVisibleTerrain(eInvisibleType, eTerrain);
+			iAmount += extraVisibleTerrain(eInvisibleType, GC.getTERRAIN_HILL());
 		}
 		const FeatureTypes eFeature = plot()->getFeatureType();
 		if (eFeature != NO_FEATURE)
 		{
 			iAmount += extraVisibleFeature(eInvisibleType, eFeature);
 		}
-		ImprovementTypes eImprovement = plot()->getImprovementType();
+		const ImprovementTypes eImprovement = plot()->getImprovementType();
 		if (eImprovement != NO_IMPROVEMENT)
 		{
 			iAmount += extraVisibleImprovement(eInvisibleType, eImprovement);
 		}
-		eImprovement = NO_IMPROVEMENT;
 		if (plot()->isCity(true))
 		{
-			eImprovement = GC.getIMPROVEMENT_CITY();
-		}
-		if (eImprovement != NO_IMPROVEMENT)
-		{
-			iAmount += extraVisibleImprovement(eInvisibleType, eImprovement);
+			iAmount += extraVisibleImprovement(eInvisibleType, GC.getIMPROVEMENT_CITY());
 		}
 	}
-	return std::max(0,iAmount);
+	return std::max(0, iAmount);
 }
 
 int CvUnit::getExtraVisibilityIntensityType(InvisibleTypes eIndex) const
@@ -39479,13 +39411,10 @@ int CvUnit::getExtraVisibilityIntensityType(InvisibleTypes eIndex) const
 void CvUnit::changeExtraVisibilityIntensityType(InvisibleTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eIndex)
-	if (iChange !=0)
+	if (iChange != 0)
 	{
 		deleteVisibility();
-	}
-	m_aiExtraVisibilityIntensity[eIndex] += iChange;
-	if (iChange !=0)
-	{
+		m_aiExtraVisibilityIntensity[eIndex] += iChange;
 		addVisibility();
 	}
 }
@@ -39528,42 +39457,32 @@ int CvUnit::invisibilityIntensityTotal(InvisibleTypes eInvisibleType, bool bAbil
 
 	if (plot() != NULL)
 	{
-		TerrainTypes eTerrain = plot()->getTerrainType();
+		const TerrainTypes eTerrain = plot()->getTerrainType();
 		if (eTerrain != NO_TERRAIN)
 		{
 			iAmount += extraInvisibleTerrain(eInvisibleType, eTerrain);
 		}
-		eTerrain = NO_TERRAIN;
 		if (plot()->isAsPeak())
 		{
-			eTerrain = GC.getTERRAIN_PEAK();
+			iAmount += extraInvisibleTerrain(eInvisibleType, GC.getTERRAIN_PEAK());
 		}
 		else if (plot()->isHills())
 		{
-			eTerrain = GC.getTERRAIN_HILL();
-		}
-		if (eTerrain != NO_TERRAIN)
-		{
-			iAmount += extraInvisibleTerrain(eInvisibleType, eTerrain);
+			iAmount += extraInvisibleTerrain(eInvisibleType, GC.getTERRAIN_HILL());
 		}
 		const FeatureTypes eFeature = plot()->getFeatureType();
 		if (eFeature != NO_FEATURE)
 		{
 			iAmount += extraInvisibleFeature(eInvisibleType, eFeature);
 		}
-		ImprovementTypes eImprovement = plot()->getImprovementType();
+		const ImprovementTypes eImprovement = plot()->getImprovementType();
 		if (eImprovement != NO_IMPROVEMENT)
 		{
 			iAmount += extraInvisibleImprovement(eInvisibleType, eImprovement);
 		}
-		eImprovement = NO_IMPROVEMENT;
 		if (plot()->isCity(true))
 		{
-			eImprovement = GC.getIMPROVEMENT_CITY();
-		}
-		if (eImprovement != NO_IMPROVEMENT)
-		{
-			iAmount += extraInvisibleImprovement(eInvisibleType, eImprovement);
+			iAmount += extraInvisibleImprovement(eInvisibleType, GC.getIMPROVEMENT_CITY());
 		}
 	}
 	return std::max(0,iAmount);
@@ -39624,42 +39543,32 @@ int CvUnit::visibilityIntensityRangeTotal(InvisibleTypes eInvisibleType) const
 
 	if (plot() != NULL)
 	{
-		TerrainTypes eTerrain = plot()->getTerrainType();
+		const TerrainTypes eTerrain = plot()->getTerrainType();
 		if (eTerrain != NO_TERRAIN)
 		{
 			iAmount += extraVisibleTerrainRange(eInvisibleType, eTerrain);
 		}
-		eTerrain = NO_TERRAIN;
 		if (plot()->isAsPeak())
 		{
-			eTerrain = GC.getTERRAIN_PEAK();
+			iAmount += extraVisibleTerrainRange(eInvisibleType, GC.getTERRAIN_PEAK());
 		}
 		else if (plot()->isHills())
 		{
-			eTerrain = GC.getTERRAIN_HILL();
-		}
-		if (eTerrain != NO_TERRAIN)
-		{
-			iAmount += extraVisibleTerrainRange(eInvisibleType, eTerrain);
+			iAmount += extraVisibleTerrainRange(eInvisibleType, GC.getTERRAIN_HILL());
 		}
 		const FeatureTypes eFeature = plot()->getFeatureType();
 		if (eFeature != NO_FEATURE)
 		{
 			iAmount += extraVisibleFeatureRange(eInvisibleType, eFeature);
 		}
-		ImprovementTypes eImprovement = plot()->getImprovementType();
+		const ImprovementTypes eImprovement = plot()->getImprovementType();
 		if (eImprovement != NO_IMPROVEMENT)
 		{
 			iAmount += extraVisibleImprovementRange(eInvisibleType, eImprovement);
 		}
-		eImprovement = NO_IMPROVEMENT;
 		if (plot()->isCity(true))
 		{
-			eImprovement = GC.getIMPROVEMENT_CITY();
-		}
-		if (eImprovement != NO_IMPROVEMENT)
-		{
-			iAmount += extraVisibleImprovementRange(eInvisibleType, eImprovement);
+			iAmount += extraVisibleImprovementRange(eInvisibleType, GC.getIMPROVEMENT_CITY());
 		}
 	}
 	return iAmount;
@@ -39678,10 +39587,7 @@ void CvUnit::changeExtraVisibilityIntensityRangeType(InvisibleTypes eIndex, int 
 	if (iChange != 0)
 	{
 		deleteVisibility();
-	}
-	m_aiExtraVisibilityIntensityRange[eIndex] += iChange;
-	if (iChange != 0)
-	{
+		m_aiExtraVisibilityIntensityRange[eIndex] += iChange;
 		addVisibility();
 	}
 }
@@ -39704,10 +39610,7 @@ void CvUnit::changeExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex, i
 	if (iChange != 0)
 	{
 		deleteVisibility();
-	}
-	m_aiExtraVisibilityIntensitySameTile[eIndex] += iChange;
-	if (iChange != 0)
-	{
+		m_aiExtraVisibilityIntensitySameTile[eIndex] += iChange;
 		addVisibility();
 	}
 }
@@ -40803,11 +40706,6 @@ void CvUnit::reveal()
 bool CvUnit::isRevealed() const
 {
 	return m_bRevealed;
-}
-
-int CvUnit::getOnlyDefensiveCount() const
-{
-	return m_iOnlyDefensiveCount;
 }
 
 void CvUnit::changeOnlyDefensiveCount(int iChange)
