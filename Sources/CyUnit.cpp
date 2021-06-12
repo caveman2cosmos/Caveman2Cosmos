@@ -212,14 +212,14 @@ bool CyUnit::isFighting() const
 	return m_pUnit ? m_pUnit->isFighting() : false;
 }
 
-int CyUnit::maxHitPoints() const
+int CyUnit::getMaxHP() const
 {
-	return m_pUnit ? m_pUnit->maxHitPoints() : -1;
+	return m_pUnit ? m_pUnit->getMaxHP() : -1;
 }
 
-int CyUnit::currHitPoints() const
+int CyUnit::getHP() const
 {
-	return m_pUnit ? m_pUnit->currHitPoints() : -1;
+	return m_pUnit ? m_pUnit->getHP() : -1;
 }
 
 bool CyUnit::isHurt() const

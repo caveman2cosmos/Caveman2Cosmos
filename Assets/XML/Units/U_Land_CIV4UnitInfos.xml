@@ -32583,42 +32583,15 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREEFARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROW_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NATURE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_TREEFARM</BuildType>
+				<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
+				<BuildType>BUILD_PLANT_JUNGLE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
+				<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+				<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+				<BuildType>BUILD_GROW_FOREST</BuildType>
+				<BuildType>BUILD_NATURE_PRESERVE</BuildType>
 			</Builds>
 			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<BonusType>BONUS_FIREARMS</BonusType>
@@ -32731,50 +32704,17 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREEFARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROW_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NATURE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYBRID_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SANITIZE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_TREEFARM</BuildType>
+				<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
+				<BuildType>BUILD_PLANT_JUNGLE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
+				<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+				<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+				<BuildType>BUILD_GROW_FOREST</BuildType>
+				<BuildType>BUILD_NATURE_PRESERVE</BuildType>
+				<BuildType>BUILD_HYBRID_FOREST</BuildType>
+				<BuildType>BUILD_SANITIZE</BuildType>
 			</Builds>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<BonusType>BONUS_FIREARMS</BonusType>

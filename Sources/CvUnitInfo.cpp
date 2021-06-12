@@ -173,7 +173,6 @@ m_pbDefenderUnitCombat(NULL),
 m_piFlankingStrikeUnit(NULL),
 m_pbUnitAIType(NULL),
 m_pbNotUnitAIType(NULL),
-m_pbBuilds(NULL),
 m_piReligionSpreads(NULL),
 m_piCorporationSpreads(NULL),
 m_piTerrainPassableTech(NULL),
@@ -341,7 +340,6 @@ CvUnitInfo::~CvUnitInfo()
 	SAFE_DELETE_ARRAY(m_piFlankingStrikeUnit);
 	SAFE_DELETE_ARRAY(m_pbUnitAIType);
 	SAFE_DELETE_ARRAY(m_pbNotUnitAIType);
-	SAFE_DELETE_ARRAY(m_pbBuilds);
 	SAFE_DELETE_ARRAY(m_piReligionSpreads);
 	SAFE_DELETE_ARRAY(m_piCorporationSpreads);
 	SAFE_DELETE_ARRAY(m_piTerrainPassableTech);
@@ -1253,6 +1251,20 @@ bool CvUnitInfo::isPrereqOrCivics(int i) const
 	return m_pbPrereqOrCivics ? m_pbPrereqOrCivics[i] : false;
 }
 
+
+int CvUnitInfo::getBuild(int i) const
+{
+	return m_workerBuilds[i];
+}
+short CvUnitInfo::getNumBuilds() const
+{
+	return m_workerBuilds.size();
+}
+bool CvUnitInfo::hasBuild(int i) const
+{
+	return find(m_workerBuilds.begin(), m_workerBuilds.end(), i) != m_workerBuilds.end();
+}
+
 int CvUnitInfo::getNumPrereqAndBuildings() const
 {
 	return (int)m_aiPrereqAndBuildings.size();
@@ -1321,7 +1333,7 @@ int CvUnitInfo::getSupersedingUnit(int i) const
 }
 short CvUnitInfo::getNumSupersedingUnits() const
 {
-	return (int)m_aiSupersedingUnits.size();
+	return m_aiSupersedingUnits.size();
 }
 bool CvUnitInfo::isSupersedingUnit(int i) const
 {
@@ -1481,12 +1493,6 @@ bool CvUnitInfo::getNotUnitAIType(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, i)
 	return m_pbNotUnitAIType ? m_pbNotUnitAIType[i] : false;
-}
-
-bool CvUnitInfo::getBuilds(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), i)
-	return m_pbBuilds ? m_pbBuilds[i] : false;
 }
 
 int CvUnitInfo::getReligionSpreads(int i) const
@@ -3910,6 +3916,7 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 	//CheckSumI(iSum, m_iGroupDefinitions, m_piUnitGroupRequired);
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqOrCivics);
 
+	CheckSumC(iSum, m_workerBuilds);
 	CheckSumC(iSum, m_aiPrereqAndBuildings);
 	CheckSumC(iSum, m_aiPrereqOrBuildings);
 
@@ -3924,7 +3931,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piFlankingStrikeUnit);
 	CheckSumI(iSum, NUM_UNITAI_TYPES, m_pbUnitAIType);
 	CheckSumI(iSum, NUM_UNITAI_TYPES, m_pbNotUnitAIType);
-	CheckSumI(iSum, GC.getNumBuildInfos(), m_pbBuilds);
 	CheckSumI(iSum, GC.getNumReligionInfos(), m_piReligionSpreads);
 	CheckSumI(iSum, GC.getNumCorporationInfos(), m_piCorporationSpreads);
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_piTerrainPassableTech);
@@ -4338,8 +4344,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pbUnitAIType, L"UnitAIs", NUM_UNITAI_TYPES);
 	pXML->SetVariableListTagPair(&m_pbNotUnitAIType, L"NotUnitAIs", NUM_UNITAI_TYPES);
 
-	pXML->SetVariableListTagPair(&m_pbBuilds, L"Builds", GC.getNumBuildInfos());
-
 	pXML->SetVariableListTagPair(&m_piReligionSpreads, L"ReligionSpreads", GC.getNumReligionInfos(),-1);
 	pXML->SetVariableListTagPair(&m_piCorporationSpreads, L"CorporationSpreads", GC.getNumCorporationInfos(), -1);
 
@@ -4414,6 +4418,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqCorporation");
 	m_iPrereqCorporation = pXML->GetInfoClass(szTextVal);
 
+	pXML->SetOptionalVector(&m_workerBuilds, L"Builds");
 	pXML->SetOptionalVector(&m_aiPrereqAndBuildings, L"PrereqAndBuildings");
 	pXML->SetOptionalVector(&m_aiPrereqOrBuildings, L"PrereqOrBuildings");
 
@@ -5341,18 +5346,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumBuildInfos(); i++)
-	{
-		if ( getBuilds(i) == bDefault && pClassInfo->getBuilds(i) != bDefault)
-		{
-			if ( NULL == m_pbBuilds )
-			{
-				CvXMLLoadUtility::InitList(&m_pbBuilds,GC.getNumBuildInfos(),bDefault);
-			}
-			m_pbBuilds[i] = pClassInfo->getBuilds(i);
-		}
-	}
-
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_pbBuildings, pClassInfo->m_pbBuildings);
 
 	for ( int i = 0; i < GC.getNumReligionInfos(); i++)
@@ -5569,8 +5562,11 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_iStateReligion == iTextDefault ) m_iStateReligion = pClassInfo->getStateReligion();
 	if ( m_iPrereqReligion == iTextDefault ) m_iPrereqReligion = pClassInfo->getPrereqReligion();
 	if ( m_iPrereqCorporation == iTextDefault ) m_iPrereqCorporation = pClassInfo->getPrereqCorporation();
+
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_workerBuilds, pClassInfo->m_workerBuilds);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiPrereqAndBuildings, pClassInfo->m_aiPrereqAndBuildings);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiPrereqOrBuildings, pClassInfo->m_aiPrereqOrBuildings);
+
 	if ( m_iPrereqAndTech == iTextDefault ) m_iPrereqAndTech = pClassInfo->getPrereqAndTech();
 	if ( m_iPrereqAndBonus == iTextDefault ) m_iPrereqAndBonus = pClassInfo->getPrereqAndBonus();
 

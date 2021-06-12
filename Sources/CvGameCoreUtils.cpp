@@ -761,10 +761,10 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 	// Needed rounds = round_up(health/damage)
 	//////
 
-	iDefenderHitLimit = pDefender->maxHitPoints() - pAttacker->combatLimit(pDefender);
+	iDefenderHitLimit = pDefender->getMaxHP() - pAttacker->combatLimit(pDefender);
 
-	iNeededRoundsAttacker = (std::max(0, pDefender->currHitPoints() - iDefenderHitLimit) + iDamageToDefender - 1 ) / iDamageToDefender;
-	iNeededRoundsDefender = (pAttacker->currHitPoints() + iDamageToAttacker - 1 ) / iDamageToAttacker;
+	iNeededRoundsAttacker = (std::max(0, pDefender->getHP() - iDefenderHitLimit) + iDamageToDefender - 1 ) / iDamageToDefender;
+	iNeededRoundsDefender = (pAttacker->getHP() + iDamageToAttacker - 1 ) / iDamageToAttacker;
 	iMaxRounds = iNeededRoundsAttacker + iNeededRoundsDefender - 1;
 
 	// calculate possible first strikes distribution.
@@ -1074,18 +1074,18 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 		}
 	}
 
-	iDefenderHitLimit = pDefender->maxHitPoints() - pAttacker->combatLimit(pDefender);
+	iDefenderHitLimit = pDefender->getMaxHP() - pAttacker->combatLimit(pDefender);
 
-	//iNeededRoundsAttacker = (std::max(0, pDefender->currHitPoints() - iDefenderHitLimit) + iDamageToDefender - (((pAttacker->combatLimit())==GC.getMAX_HIT_POINTS())?1:0) ) / iDamageToDefender;
-	iNeededRoundsAttacker = (pDefender->currHitPoints() - pDefender->maxHitPoints() + pAttacker->combatLimit(pDefender) - (((pAttacker->combatLimit(pDefender))==pDefender->maxHitPoints())?1:0))/iDamageToDefender + 1;
+	//iNeededRoundsAttacker = (std::max(0, pDefender->getHP() - iDefenderHitLimit) + iDamageToDefender - (((pAttacker->combatLimit())==GC.getMAX_HIT_POINTS())?1:0) ) / iDamageToDefender;
+	iNeededRoundsAttacker = (pDefender->getHP() - pDefender->getMaxHP() + pAttacker->combatLimit(pDefender) - (((pAttacker->combatLimit(pDefender))==pDefender->getMaxHP())?1:0))/iDamageToDefender + 1;
 	//TB Combat Mods begin
-	int iNeededRoundsDefender = (pAttacker->currHitPoints() + iDamageToAttacker - 1 ) / iDamageToAttacker;
+	int iNeededRoundsDefender = (pAttacker->getHP() + iDamageToAttacker - 1 ) / iDamageToAttacker;
 	//TB Combat Mods end
 
-	int N_D = (std::max(0, pDefender->currHitPoints() - iDefenderHitLimit) + iDamageToDefender - (((pAttacker->combatLimit(pDefender))==pDefender->maxHitPoints())?1:0) ) / iDamageToDefender;
+	int N_D = (std::max(0, pDefender->getHP() - iDefenderHitLimit) + iDamageToDefender - (((pAttacker->combatLimit(pDefender))==pDefender->getMaxHP())?1:0) ) / iDamageToDefender;
 
-	//int N_A = (pAttacker->currHitPoints() + iDamageToAttacker - 1 ) / iDamageToAttacker;  //same as next line
-	int N_A = (pAttacker->currHitPoints() - 1)/iDamageToAttacker + 1;
+	//int N_A = (pAttacker->getHP() + iDamageToAttacker - 1 ) / iDamageToAttacker;  //same as next line
+	int N_A = (pAttacker->getHP() - 1)/iDamageToAttacker + 1;
 
 
 	//int iRetreatOdds = std::max((pAttacker->withdrawalProbability()),100);

@@ -52,50 +52,17 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_LUNAR_HABITATION_COMPLEX</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_OUTPOST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MARTIAN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_LUNAR_HABITATION_COMPLEX</BuildType>
+				<BuildType>BUILD_LUNAR_BASE</BuildType>
+				<BuildType>BUILD_LUNAR_OUTPOST</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
+				<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
+				<BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
+				<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_MARTIAN_MINE</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
@@ -2340,50 +2307,17 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MARTIAN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MARTIAN_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_MARS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
+				<BuildType>BUILD_MARTIAN_MINE</BuildType>
+				<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
+				<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
+				<BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
+				<BuildType>BUILD_MARTIAN_FARM</BuildType>
+				<BuildType>BUILD_TERRAFORM_MARS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
@@ -2441,22 +2375,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VENUS_SURFACE_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VENUS_AERIAL_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
+				<BuildType>BUILD_VENUS_SURFACE_MINE</BuildType>
+				<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_VENUS_AERIAL_FARM</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_VENUS_CARBONWORKS</BuildingType>
@@ -2515,10 +2437,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_ORBITAL_TRAJECTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ORBITAL_TRAJECTORY</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
@@ -2581,10 +2500,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SOLAR_TRAJECTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SOLAR_TRAJECTORY</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HOUSING_WORKING_CLASS</BuildingType>
@@ -2764,26 +2680,11 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ASTEROID_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_ASTEROID_MINE</BuildType>
+				<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
+				<BuildType>BUILD_CISLUNAR_BASE</BuildType>
+				<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -2889,74 +2790,23 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MERCURY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MERCURY_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ASTEROID_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SATELLITE_STATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ARCOLOGY_MOON</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_TRADING_POST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_FLOATING_CITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_LUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_LUNAR_ARCOLOGY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PARATERRAFORMED_ASTEROID</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUN_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_MERCURY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_MERCURY_COLONY</BuildType>
+				<BuildType>BUILD_ASTEROID_MINE</BuildType>
+				<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
+				<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
+				<BuildType>BUILD_SATELLITE_STATION</BuildType>
+				<BuildType>BUILD_ARCOLOGY_MOON</BuildType>
+				<BuildType>BUILD_CISLUNAR_BASE</BuildType>
+				<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
+				<BuildType>BUILD_SOLAR_TRADING_POST</BuildType>
+				<BuildType>BUILD_JOVIAN_SCOOP</BuildType>
+				<BuildType>BUILD_JOVIAN_FLOATING_CITY</BuildType>
+				<BuildType>BUILD_JOVIAN_LUNAR_BASE</BuildType>
+				<BuildType>BUILD_JOVIAN_LUNAR_ARCOLOGY</BuildType>
+				<BuildType>BUILD_PARATERRAFORMED_ASTEROID</BuildType>
+				<BuildType>BUILD_SUN_SCOOP</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -3062,78 +2912,24 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_COMPACT_WORMHOLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ASTEROID_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MERCURY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MERCURY_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_TRADING_POST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_FLOATING_CITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_LUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_LUNAR_ARCOLOGY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PARATERRAFORMED_ASTEROID</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUN_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SATELLITE_STATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ARCOLOGY_MOON</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COMPACT_WORMHOLE</BuildType>
+				<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_ASTEROID_MINE</BuildType>
+				<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
+				<BuildType>BUILD_MERCURY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_MERCURY_COLONY</BuildType>
+				<BuildType>BUILD_SOLAR_TRADING_POST</BuildType>
+				<BuildType>BUILD_JOVIAN_SCOOP</BuildType>
+				<BuildType>BUILD_JOVIAN_FLOATING_CITY</BuildType>
+				<BuildType>BUILD_JOVIAN_LUNAR_BASE</BuildType>
+				<BuildType>BUILD_JOVIAN_LUNAR_ARCOLOGY</BuildType>
+				<BuildType>BUILD_PARATERRAFORMED_ASTEROID</BuildType>
+				<BuildType>BUILD_SUN_SCOOP</BuildType>
+				<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
+				<BuildType>BUILD_SATELLITE_STATION</BuildType>
+				<BuildType>BUILD_ARCOLOGY_MOON</BuildType>
+				<BuildType>BUILD_CISLUNAR_BASE</BuildType>
+				<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -3240,182 +3036,50 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MEGAWORMHOLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ASPATIAL_ROUTE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ASTEROID_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MERCURY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MERCURY_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_TRADING_POST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_FLOATING_CITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_LUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_LUNAR_ARCOLOGY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PARATERRAFORMED_ASTEROID</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUN_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ARCOLOGY_MOON</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORMHOLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_TRADING_POST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUPERNOVA_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORMED_PLANET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ARTIFICIAL_PLANET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STAR_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BLUE_SUPERGIANT_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BIOTIC_NEUTRON_STAR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NEUTRON_STAR_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HELIOFORMED_BROWN_DWARF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_NEUTRON_STAR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERGALACTIC_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUPERCLUSTER_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_OBSERVABLE_UNIVERSE_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PARALLEL_UNIVERSE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DYSON_SPHERE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERGALACTIC_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BIOTIC_GALAXY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TRUE_VACUUM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COSMIC_EXPANSION_NODE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_RESEARCH_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERGALACTIC_RESEARCH_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DISTANT_RESEARCH_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLACE_GALAXY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MEGAWORMHOLE</BuildType>
+				<BuildType>BUILD_ASPATIAL_ROUTE</BuildType>
+				<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_ASTEROID_MINE</BuildType>
+				<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
+				<BuildType>BUILD_MERCURY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_MERCURY_COLONY</BuildType>
+				<BuildType>BUILD_SOLAR_TRADING_POST</BuildType>
+				<BuildType>BUILD_JOVIAN_SCOOP</BuildType>
+				<BuildType>BUILD_JOVIAN_FLOATING_CITY</BuildType>
+				<BuildType>BUILD_JOVIAN_LUNAR_BASE</BuildType>
+				<BuildType>BUILD_JOVIAN_LUNAR_ARCOLOGY</BuildType>
+				<BuildType>BUILD_PARATERRAFORMED_ASTEROID</BuildType>
+				<BuildType>BUILD_SUN_SCOOP</BuildType>
+				<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
+				<BuildType>BUILD_ARCOLOGY_MOON</BuildType>
+				<BuildType>BUILD_CISLUNAR_BASE</BuildType>
+				<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
+				<BuildType>BUILD_WORMHOLE</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_TRADING_POST</BuildType>
+				<BuildType>BUILD_SUPERNOVA_MINE</BuildType>
+				<BuildType>BUILD_TERRAFORMED_PLANET</BuildType>
+				<BuildType>BUILD_ARTIFICIAL_PLANET</BuildType>
+				<BuildType>BUILD_STAR_SCOOP</BuildType>
+				<BuildType>BUILD_BLUE_SUPERGIANT_COLONY</BuildType>
+				<BuildType>BUILD_BIOTIC_NEUTRON_STAR</BuildType>
+				<BuildType>BUILD_NEUTRON_STAR_COLONY</BuildType>
+				<BuildType>BUILD_HELIOFORMED_BROWN_DWARF</BuildType>
+				<BuildType>BUILD_TERRAFORM_NEUTRON_STAR</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_COLONY</BuildType>
+				<BuildType>BUILD_INTERGALACTIC_COLONY</BuildType>
+				<BuildType>BUILD_SUPERCLUSTER_COLONY</BuildType>
+				<BuildType>BUILD_OBSERVABLE_UNIVERSE_COLONY</BuildType>
+				<BuildType>BUILD_PARALLEL_UNIVERSE</BuildType>
+				<BuildType>BUILD_DYSON_SPHERE</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_BASE</BuildType>
+				<BuildType>BUILD_INTERGALACTIC_BASE</BuildType>
+				<BuildType>BUILD_BIOTIC_GALAXY</BuildType>
+				<BuildType>BUILD_TRUE_VACUUM</BuildType>
+				<BuildType>BUILD_COSMIC_EXPANSION_NODE</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_RESEARCH_BASE</BuildType>
+				<BuildType>BUILD_INTERGALACTIC_RESEARCH_BASE</BuildType>
+				<BuildType>BUILD_DISTANT_RESEARCH_BASE</BuildType>
+				<BuildType>BUILD_PLACE_GALAXY</BuildType>
 			</Builds>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
@@ -3531,62 +3195,20 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_HYPERLANE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ASPATIAL_ROUTE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_HYPERSPACE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_PAST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_FUTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_BRANESPACE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TIME_MANIFOLD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DISTANT_PAST_CITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DISTANT_FUTURE_CITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PARALLEL_UNIVERSE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BRANE_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BRANE_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SPIRITUAL_REALM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYPERSPACE_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HYPERLANE</BuildType>
+				<BuildType>BUILD_ASPATIAL_ROUTE</BuildType>
+				<BuildType>BUILD_TERRAFORM_HYPERSPACE</BuildType>
+				<BuildType>BUILD_TERRAFORM_PAST</BuildType>
+				<BuildType>BUILD_TERRAFORM_FUTURE</BuildType>
+				<BuildType>BUILD_TERRAFORM_BRANESPACE</BuildType>
+				<BuildType>BUILD_TIME_MANIFOLD</BuildType>
+				<BuildType>BUILD_DISTANT_PAST_CITY</BuildType>
+				<BuildType>BUILD_DISTANT_FUTURE_CITY</BuildType>
+				<BuildType>BUILD_PARALLEL_UNIVERSE</BuildType>
+				<BuildType>BUILD_BRANE_FACTORY</BuildType>
+				<BuildType>BUILD_BRANE_FARM</BuildType>
+				<BuildType>BUILD_SPIRITUAL_REALM</BuildType>
+				<BuildType>BUILD_HYPERSPACE_BUNKER</BuildType>
 			</Builds>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
@@ -4543,10 +4165,7 @@
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -6112,10 +5731,7 @@
 			<iWorkRate>1000</iWorkRate>
 			<iAsset>1</iAsset>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -6429,10 +6045,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_PLACE_ASTEROID</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLACE_ASTEROID</BuildType>
 			</Builds>
 			<Buildings>
 				<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
@@ -6507,10 +6120,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_PLACE_ASTEROID</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLACE_ASTEROID</BuildType>
 			</Builds>
 			<Buildings>
 				<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
@@ -6596,66 +6206,21 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_WORMHOLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_TRADING_POST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUPERNOVA_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORMED_PLANET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ARTIFICIAL_PLANET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STAR_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BLUE_SUPERGIANT_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BIOTIC_NEUTRON_STAR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NEUTRON_STAR_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HELIOFORMED_BROWN_DWARF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_NEUTRON_STAR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DYSON_SPHERE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_RESEARCH_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WORMHOLE</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_TRADING_POST</BuildType>
+				<BuildType>BUILD_SUPERNOVA_MINE</BuildType>
+				<BuildType>BUILD_TERRAFORMED_PLANET</BuildType>
+				<BuildType>BUILD_ARTIFICIAL_PLANET</BuildType>
+				<BuildType>BUILD_STAR_SCOOP</BuildType>
+				<BuildType>BUILD_BLUE_SUPERGIANT_COLONY</BuildType>
+				<BuildType>BUILD_BIOTIC_NEUTRON_STAR</BuildType>
+				<BuildType>BUILD_NEUTRON_STAR_COLONY</BuildType>
+				<BuildType>BUILD_HELIOFORMED_BROWN_DWARF</BuildType>
+				<BuildType>BUILD_TERRAFORM_NEUTRON_STAR</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_COLONY</BuildType>
+				<BuildType>BUILD_DYSON_SPHERE</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_BASE</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_RESEARCH_BASE</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
@@ -9789,22 +9354,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_LUNAR_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_LUNAR_PATH</BuildType>
+				<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
+				<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
+				<BuildType>BUILD_LUNAR_MINE</BuildType>
 			</Builds>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<PrereqAndBuildings>
@@ -9859,58 +9412,19 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_LUNAR_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_ARCOLOGY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_MOON</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_LUNAR_PATH</BuildType>
+				<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
+				<BuildType>BUILD_LUNAR_MINE</BuildType>
+				<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
+				<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
+				<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
+				<BuildType>BUILD_LUNAR_ARCOLOGY</BuildType>
+				<BuildType>BUILD_TERRAFORM_MOON</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LUNAR_DROID_FACTORY</BuildingType>

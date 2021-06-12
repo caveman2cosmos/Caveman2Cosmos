@@ -140,7 +140,7 @@ class WoodlandCycle:
 
 				for CyUnit in plot.units():
 					if CyUnit.canFight():
-						iHP = CyUnit.currHitPoints()
+						iHP = CyUnit.getHP()
 						iDamage = 5 + GAME.getSorenRandNum(29, "Ouch")
 						if iHP > iDamage:
 							CyUnit.changeDamage(iDamage, -1)
