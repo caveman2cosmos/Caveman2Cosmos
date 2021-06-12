@@ -678,16 +678,7 @@ int CvUnitInfo::getEvasionProbability() const
 
 int CvUnitInfo::getWithdrawalProbability() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT) && m_iWithdrawalProbability > 0)
-	{
-		if (hasUnitCombat(GC.getUNITCOMBAT_WILD()))
-		{
-			return 0;
-		}
-		return (m_iWithdrawalProbability / 2);
-	}
-
-	return m_iWithdrawalProbability;
+	return GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT) ? m_iWithdrawalProbability : m_iWithdrawalProbability / 2;
 }
 
 int CvUnitInfo::getCollateralDamage() const
@@ -4471,6 +4462,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	//pXML->GetChildXmlValByName(&m_iNukeInterceptionRange, L"iNukeInterceptionRange");
 	pXML->GetOptionalChildXmlValByName(&m_iEvasionProbability, L"iEvasionProbability");
 	pXML->GetOptionalChildXmlValByName(&m_iWithdrawalProbability, L"iWithdrawalProb");
+	if (m_iWithdrawalProbability < 0) m_iWithdrawalProbability = 0;
 	pXML->GetOptionalChildXmlValByName(&m_iCollateralDamage, L"iCollateralDamage");
 	pXML->GetOptionalChildXmlValByName(&m_iCollateralDamageLimit, L"iCollateralDamageLimit");
 	pXML->GetOptionalChildXmlValByName(&m_iCollateralDamageMaxUnits, L"iCollateralDamageMaxUnits");
@@ -5603,6 +5595,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	//if ( m_iNukeInterceptionRange == iDefault ) m_iNukeInterceptionRange = pClassInfo->getNukeInterceptionRange();
 	if ( m_iEvasionProbability == iDefault ) m_iEvasionProbability = pClassInfo->getEvasionProbability();
 	if ( m_iWithdrawalProbability == iDefault ) m_iWithdrawalProbability = pClassInfo->m_iWithdrawalProbability;
+	if (m_iWithdrawalProbability < 0) m_iWithdrawalProbability = 0;
 	if ( m_iCollateralDamage == iDefault ) m_iCollateralDamage = pClassInfo->getCollateralDamage();
 	if ( m_iCollateralDamageLimit == iDefault ) m_iCollateralDamageLimit = pClassInfo->getCollateralDamageLimit();
 	if ( m_iCollateralDamageMaxUnits == iDefault ) m_iCollateralDamageMaxUnits = pClassInfo->getCollateralDamageMaxUnits();
