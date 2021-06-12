@@ -7685,12 +7685,6 @@ int CvCityAI::AI_clearFeatureValue(int iIndex) const
 	return -iValue;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      07/25/09                                jdog5000      */
-/*                                                                                              */
-/* Debug                                                                                        */
-/************************************************************************************************/
-
 namespace {
 	// Score a BuildType on a plot for how many turns it takes to build it
 	int score_build_type(const BuildTypes buildType, const CvPlot* plot)
@@ -8250,7 +8244,7 @@ int CvCityAI::AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImpr
 	}
 	iValue += iMilitaryValue;
 
-	ImprovementTypes eFinalUpgrade = finalImprovementUpgrade(eImprovement);
+	const ImprovementTypes eFinalUpgrade = finalImprovementUpgrade(eImprovement);
 	FAssert(eFinalUpgrade != NO_IMPROVEMENT);
 
 	int yields[NUM_YIELD_TYPES];
@@ -8343,7 +8337,7 @@ int CvCityAI::AI_countBestBuilds(const CvArea* pArea) const
 
 	return iCount;
 }
-BuildTypes CvCityAI::GetShortestBuildTimeOnPlot(CvPlot* plot) const
+BuildTypes CvCityAI::GetShortestBuildTimeOnPlot(const CvPlot* plot) const
 {
 	return scoring::min_score(plot->units()
 		| filtered(CvUnit::fn::getBuildType() != NO_BUILD)
@@ -8374,7 +8368,7 @@ const std::vector<int> CvCityAI::AI_calculateOutputRatio(int food, int productio
 	return ratios;
 }
 
-void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vector<plotInfo> &currentYieldList)
+void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const
 {
 	bool bIgnoreFeature = false;
 	const int activeWorkerMissions = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(plot, MISSIONAI_BUILD);
@@ -13051,7 +13045,7 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 		m_aiSpecialYieldMultiplier[iI] = 0;
 	}
 
-	UnitTypes eProductionUnit = getProductionUnit();
+	const UnitTypes eProductionUnit = getProductionUnit();
 	if (eProductionUnit != NO_UNIT)
 	{
 		if (GC.getUnitInfo(eProductionUnit).getDefaultUnitAIType() == UNITAI_WORKER_SEA)
@@ -13067,7 +13061,7 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 		}
 	}
 
-	BuildingTypes eProductionBuilding = getProductionBuilding();
+	const BuildingTypes eProductionBuilding = getProductionBuilding();
 	if (eProductionBuilding != NO_BUILDING)
 	{
 		if (isWorldWonder(eProductionBuilding) || isProductionProject())

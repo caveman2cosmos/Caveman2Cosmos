@@ -201,7 +201,6 @@ public:
 
 	BuildTypes AI_getBestBuild(int iIndex) const;
 	int AI_countBestBuilds(const CvArea* pArea) const;
-	BuildTypes GetShortestBuildTimeOnPlot(CvPlot* plot) const;
 	void AI_updateBestBuild();
 
 	virtual int AI_cityValue() const;
@@ -333,6 +332,7 @@ protected:
 	void AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int iDesiredFoodChange) const;
 	void AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const;
 	const std::vector<int> AI_calculateOutputRatio(int food, int production, int commerce) const;
+	BuildTypes GetShortestBuildTimeOnPlot(const CvPlot* plot) const;
 
 public:
 	int AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false) const;
@@ -355,7 +355,6 @@ protected:
 	void AI_getYieldMultipliers(int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange) const;
 
 	int tradeRouteValue(const CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const;
-
 
 	void AI_buildGovernorChooseProduction();
 
