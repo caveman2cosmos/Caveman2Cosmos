@@ -19672,12 +19672,12 @@ void CvUnit::changeExtraHillsDefensePercent(int iChange)
 //WorkRateMod
 int CvUnit::hillsWorkModifier() const
 {
-	return m_worker->getHillsWorkModifier();
+	return m_worker != NULL ? m_worker->getHillsWorkModifier() : 0;
 }
 
 int CvUnit::peaksWorkModifier() const
 {
-	return m_worker->getPeaksWorkModifier();
+	return m_worker != NULL ? m_worker->getPeaksWorkModifier() : 0;
 }
 
 int CvUnit::getCollateralDamageProtection() const
