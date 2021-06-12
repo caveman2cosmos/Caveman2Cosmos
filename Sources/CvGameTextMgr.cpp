@@ -15782,19 +15782,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	//	Improvement upgrade rate modifier
 	if (GC.getCivicInfo(eCivic).getImprovementUpgradeRateModifier() != 0)
 	{
-		bFirst = true;
-
-		for (iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
-		{
-			if (GC.getImprovementInfo((ImprovementTypes)iI).getImprovementUpgrade() != NO_IMPROVEMENT)
-			{
-				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_CIVICHELP_IMPROVEMENT_UPGRADE", GC.getCivicInfo(eCivic).getImprovementUpgradeRateModifier()).c_str());
-				CvWString szImprovement;
-				szImprovement.Format(L"<link=%s>%s</link>", CvWString(GC.getImprovementInfo((ImprovementTypes)iI).getType()).GetCString(), GC.getImprovementInfo((ImprovementTypes)iI).getDescription());
-				setListHelp(szHelpText, szFirstBuffer, szImprovement, L", ", bFirst);
-				bFirst = false;
-			}
-		}
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_IMPROVEMENT_UPGRADE", GC.getCivicInfo(eCivic).getImprovementUpgradeRateModifier()));
 	}
 
 	//	Military unit production modifier
