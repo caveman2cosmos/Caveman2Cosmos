@@ -13567,8 +13567,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		iHillsDefensePercent += promo.getHillsDefensePercent();
 		iWorkRate += promo.getWorkRatePercent();
 		iHillsWorkPercent += promo.getHillsWorkPercent();
-		iHillsWorkPercent += promo.getHillsWorkModifierChange();
-		iPeaksWorkPercent += promo.getPeaksWorkModifierChange();
+		iPeaksWorkPercent += promo.getPeaksWorkPercent();
 		iRevoltProtection += promo.getRevoltProtection();
 		iCollateralDamageProtection += promo.getCollateralDamageProtection();
 		iPillageChange += promo.getPillageChange();
@@ -29572,7 +29571,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CAPTURE_RESISTANCE_MODIFIER", info.getCaptureResistanceModifierChange()));
 	}
 
-	if (info.getHillsWorkModifierChange() != 0)
+	if (info.getPeaksWorkPercent() != 0)
 	{
 		if (bFirstDisplay)
 		{
@@ -29581,19 +29580,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			bFirstDisplay = false;
 		}
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_WORK", info.getHillsWorkModifierChange()));
-	}
-
-	if (info.getPeaksWorkModifierChange() != 0)
-	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", info.getPeaksWorkModifierChange()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", info.getPeaksWorkPercent()));
 	}
 
 	if (info.getBreakdownChanceChange() != 0)

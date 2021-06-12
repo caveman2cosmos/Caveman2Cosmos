@@ -22124,6 +22124,7 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	if (isWorker())
 	{
 		m_worker->changeHillsWorkModifier(kUnitCombat.getHillsWorkPercent() * iChange);//no merge/split
+		m_worker->changePeaksWorkModifier(kUnitCombat.getPeaksWorkPercent() * iChange);//no merge/split
 		setInfoBarDirty(true);
 	}
 	changeExtraWorkPercent(kUnitCombat.getWorkRatePercent() * iChange);//no merge/split
@@ -22199,13 +22200,7 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	changeExtraPoisonProbabilityModifier(kUnitCombat.getPoisonProbabilityModifierChange() * iChange);//no merge/split
 	changeExtraCaptureProbabilityModifier(kUnitCombat.getCaptureProbabilityModifierChange() * iChange);//no merge/split
 	changeExtraCaptureResistanceModifier(kUnitCombat.getCaptureResistanceModifierChange() * iChange);//no merge/split
-	// Assume only worker units can get the relevant promotions, if not then we'll need a retroactive unitComp late init function.
-	if (isWorker())
-	{
-		m_worker->changeHillsWorkModifier(kUnitCombat.getHillsWorkModifierChange() * iChange);//no merge/split
-		m_worker->changePeaksWorkModifier(kUnitCombat.getPeaksWorkModifierChange() * iChange);//no merge/split
-		setInfoBarDirty(true);
-	}
+
 	changeExtraBreakdownChance(kUnitCombat.getBreakdownChanceChange() * iChange);//no merge/split (larger/smaller just more/less survivable)
 	changeExtraBreakdownDamage(kUnitCombat.getBreakdownDamageChange() * iChange);//no merge/split
 	changeExtraTaunt(kUnitCombat.getTauntChange() * iChange);//no merge/split
@@ -22857,6 +22852,7 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	if (isWorker())
 	{
 		m_worker->changeHillsWorkModifier(kPromotion.getHillsWorkPercent() * iChange);
+		m_worker->changePeaksWorkModifier(kPromotion.getPeaksWorkPercent() * iChange);
 		setInfoBarDirty(true);
 	}
 	changeRevoltProtection(kPromotion.getRevoltProtection() * iChange);
@@ -22890,13 +22886,6 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	{
 		changeExtraWorkPercent(kPromotion.getWorkRatePercent() * iChange);
 		bSMrecalc = true;
-	}
-	// Assume only worker units can get the relevant promotions, if not then we'll need a retroactive unitComp late init function.
-	if (isWorker())
-	{
-		m_worker->changeHillsWorkModifier(kPromotion.getHillsWorkModifierChange() * iChange);
-		m_worker->changePeaksWorkModifier(kPromotion.getPeaksWorkModifierChange() * iChange);
-		setInfoBarDirty(true);
 	}
 	// ! ls612
 

@@ -760,13 +760,12 @@ public:
 	int getEnduranceChange() const;
 	int getRoundStunProbChange() const;
 	int getPoisonProbabilityModifierChange() const;
-	//Team Project (3)
+
 	int getCaptureProbabilityModifierChange() const;
 	int getCaptureResistanceModifierChange() const;
-	//Team Project (4)
+
 	//WorkRateMod
-	int getHillsWorkModifierChange() const;
-	int getPeaksWorkModifierChange() const;
+	int getPeaksWorkPercent() const;
 	//
 	int getBreakdownChanceChange() const;
 	int getBreakdownDamageChange() const;
@@ -1272,13 +1271,12 @@ protected:
 	int m_iEnduranceChange;
 	int m_iRoundStunProbChange;
 	int m_iPoisonProbabilityModifierChange;
-	//Team Project (3)
+
 	int m_iCaptureProbabilityModifierChange;
 	int m_iCaptureResistanceModifierChange;
-	//Team Project (4)
+
 	//WorkRateMod
-	int m_iHillsWorkModifierChange;
-	int m_iPeaksWorkModifierChange;
+	int m_iPeaksWorkPercent;
 
 	int m_iBreakdownChanceChange;
 	int m_iBreakdownDamageChange;
@@ -8968,8 +8966,7 @@ public:
 	int getPoisonProbabilityModifierChange() const;
 	int getCaptureProbabilityModifierChange() const;
 	int getCaptureResistanceModifierChange() const;
-	int getHillsWorkModifierChange() const;
-	int getPeaksWorkModifierChange() const;
+	int getPeaksWorkPercent() const;
 	int getBreakdownChanceChange() const;
 	int getBreakdownDamageChange() const;
 	int getTauntChange() const;
@@ -9332,8 +9329,7 @@ protected:
 	int m_iPoisonProbabilityModifierChange;
 	int m_iCaptureProbabilityModifierChange;
 	int m_iCaptureResistanceModifierChange;
-	int m_iHillsWorkModifierChange;
-	int m_iPeaksWorkModifierChange;
+	int m_iPeaksWorkPercent;
 	int m_iBreakdownChanceChange;
 	int m_iBreakdownDamageChange;
 	int m_iTauntChange;

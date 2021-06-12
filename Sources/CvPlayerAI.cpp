@@ -32227,8 +32227,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-//Team Project (4)
-//WorkRateMod
+	//WorkRateMod
 	iTemp = kPromotion.getHillsWorkPercent();
 
 	if (iTemp != 0)
@@ -32243,21 +32242,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	iTemp = kPromotion.getHillsWorkModifierChange();
-
-	if (iTemp != 0)
-	{
-		if (eUnitAI == UNITAI_WORKER)
-		{
-			iValue += (iTemp / 2);
-		}
-		else
-		{
-			iValue++;
-		}
-	}
-
-	iTemp = kPromotion.getPeaksWorkModifierChange();
+	iTemp = kPromotion.getPeaksWorkPercent();
 	//Note: this could use some further development (particularly in ensuring that the unit CAN go onto peaks)
 	if (iTemp != 0)
 	{
@@ -36984,8 +36969,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-//Team Project (4)
-//WorkRateMod
+	//WorkRateMod
 	iTemp = kUnitCombat.getHillsWorkPercent();
 
 	if (iTemp != 0)
@@ -37000,21 +36984,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-	iTemp = kUnitCombat.getHillsWorkModifierChange();
-
-	if (iTemp != 0)
-	{
-		if (eUnitAI == UNITAI_WORKER)
-		{
-			iValue += (iTemp / 2);
-		}
-		else
-		{
-			iValue++;
-		}
-	}
-
-	iTemp = kUnitCombat.getPeaksWorkModifierChange();
+	iTemp = kUnitCombat.getPeaksWorkPercent();
 	//Note: this could use some further development (particularly in ensuring that the unit CAN go onto peaks)
 	if (iTemp != 0)
 	{

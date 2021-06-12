@@ -10853,7 +10853,7 @@
 			<TechPrereq>TECH_MINING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HILL_WORKER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iHillsWork>20</iHillsWork>
+			<iHillsWorkModifier>20</iHillsWorkModifier>
 			<TerrainWorks>
 				<TerrainWork>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
@@ -10870,7 +10870,7 @@
 			<TechPrereq>TECH_IRON_WORKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HILL_WORKER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iHillsWork>20</iHillsWork>
+			<iHillsWorkModifier>20</iHillsWorkModifier>
 			<TerrainWorks>
 				<TerrainWork>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
@@ -10887,7 +10887,7 @@
 			<TechPrereq>TECH_MOUNTAINEERING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HILL_WORKER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<iHillsWork>20</iHillsWork>
+			<iHillsWorkModifier>20</iHillsWorkModifier>
 			<TerrainWorks>
 				<TerrainWork>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
