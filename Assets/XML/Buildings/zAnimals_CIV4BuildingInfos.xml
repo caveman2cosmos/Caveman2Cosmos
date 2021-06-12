@@ -23,7 +23,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_STORIES_REQUIRE</Type>
@@ -35,7 +35,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_STORIES</ArtDefineTag>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
