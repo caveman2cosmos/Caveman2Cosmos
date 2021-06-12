@@ -6493,7 +6493,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	return std::max(0, iValue);
 }
 
-int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield)
+int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield) const
 {
 	int iValue = tradeRouteValue(kBuilding, eYield, bForeignTrade);
 
@@ -9637,7 +9637,7 @@ bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds,
 	return false;
 }
 
-bool CvCityAI::AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, CvUnitSelectionCriteria* criteria, UnitTypes eUnitType)
+bool CvCityAI::AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, const CvUnitSelectionCriteria* criteria, UnitTypes eUnitType)
 {
 	UnitTypes	eBestUnit = NO_UNIT;
 
@@ -9663,17 +9663,7 @@ bool CvCityAI::AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, C
 	{
 		if (gCityLogLevel >= 2)
 		{
-			CvString	unitAIType;
-
-			if (eUnitAI != NO_UNITAI)
-			{
-				unitAIType = GC.getUnitAIInfo(eUnitAI).getType();
-			}
-			else
-			{
-				unitAIType = "NO_UNITAI";
-			}
-
+			const CvString unitAIType(eUnitAI != NO_UNITAI ? GC.getUnitAIInfo(eUnitAI).getType() : "NO_UNITAI");
 			logBBAI("      City %S pop %d builds unit of AIType: %s at priority %d (reason: %s)", getName().GetCString(), getPopulation(), unitAIType.c_str(), m_iTempBuildPriority, reason);
 		}
 
@@ -9760,7 +9750,7 @@ bool CvCityAI::AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightA
 	return false;
 }
 
-bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseChance, UnitTypes* eBestSpreadUnit, int* iBestSpreadUnitValue)
+bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseChance, UnitTypes* eBestSpreadUnit, int* iBestSpreadUnitValue) const
 {
 	const CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	const CvTeamAI& kTeam = GET_TEAM(getTeam());
@@ -16655,7 +16645,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	}
 }
 
-int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate)
+int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate) const
 {
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
