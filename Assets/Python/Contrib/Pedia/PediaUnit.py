@@ -361,11 +361,18 @@ class PediaUnit:
 
 		# Promotions
 		aList0 = []
+		aList1 = []
 		for k in xrange(GC.getNumPromotionInfos()):
 			if CvTheUnitInfo.isQualifiedPromotionType(k):
 				CvPromotionInfo = GC.getPromotionInfo(k)
 				if not CvPromotionInfo.isGraphicalOnly():
 					aList0.append((CvPromotionInfo.getButton(), k))
+			if CvTheUnitInfo.getFreePromotions(k):
+				CvPromotionInfo = GC.getPromotionInfo(k)
+				for j in xrange(CvPromotionInfo.getNumAddsBuildTypes()):
+					iBuild = CvPromotionInfo.getAddsBuildType(j)
+					aList1.append((GC.getBuildInfo(iBuild).getButton(), iBuild))
+
 		if aList0:
 			screen.addPanel(aName(), "", "", False, False, X_COL_1, Y_BOT_ROW_2, W_PEDIA_PAGE, H_BOT_ROW, ePnlBlue50)
 			Pnl = aName()
@@ -390,12 +397,11 @@ class PediaUnit:
 			Y_BOT_ROW_3 += H_BOT_ROW
 
 		# Builds
-		aList0 = []
 		for k in xrange(CvTheUnitInfo.getNumBuilds()):
 			iBuild = CvTheUnitInfo.getBuild(k)
-			aList0.append((GC.getBuildInfo(iBuild).getButton(), iBuild))
+			aList1.append((GC.getBuildInfo(iBuild).getButton(), iBuild))
 
-		if aList0:
+		if aList1:
 			Pnl = aName()
 			screen.addPanel(Pnl, "", "", False, True, X_COL_1, Y_BOT_ROW_3, W_PEDIA_PAGE, H_BOT_ROW, ePnlBlue50)
 			szText = szfont3b + TRNSLTR.getText("TXT_KEY_PEDIA_BUILD", ())
@@ -406,7 +412,7 @@ class PediaUnit:
 			x = 4
 			y = H_SCROLL / 2 - 12
 			szChild = PF + "BUILD"
-			for BTN, iBuild in aList0:
+			for BTN, iBuild in aList1:
 				screen.setImageButtonAt(szChild + str(iBuild), Pnl, BTN, x, -2, S_BOT_ROW, S_BOT_ROW, eWidGen, 1, 1)
 				x += S_BOT_ROW + 4
 			screen.hide(Pnl)

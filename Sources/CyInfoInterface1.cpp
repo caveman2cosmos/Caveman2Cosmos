@@ -151,6 +151,8 @@ void CyInfoPythonInterface1()
 
 		.def("isEquipment", &CvPromotionInfo::isEquipment, "bool ()")
 		.def("isAffliction", &CvPromotionInfo::isAffliction, "bool ()")
+		.def("getAddsBuildType", &CvPromotionInfo::getAddsBuildType, "int (int i)")
+		.def("getNumAddsBuildTypes", &CvPromotionInfo::getNumAddsBuildTypes, "int ()")
 		;
 
 	python::class_<CvMissionInfo, python::bases<CvInfoBase> >("CvMissionInfo")
@@ -253,6 +255,7 @@ void CyInfoPythonInterface1()
 		.def("getBuildings", &CvUnitInfo::getBuildings, "int (int i)")
 		.def("getHasBuilding", &CvUnitInfo::getHasBuilding, "bool (int i)")
 		.def("getNumBuildings", &CvUnitInfo::getNumBuildings, "int ()")
+		.def("getFreePromotions", &CvUnitInfo::getFreePromotions, "bool (int i)")
 		//.def("getTerrainImpassable", &CvUnitInfo::getTerrainImpassable, "bool (int i)")
 		//.def("getFeatureImpassable", &CvUnitInfo::getFeatureImpassable, "bool (int i)")
 		.def("getUnitNames", &CvUnitInfo::getUnitNames, "string (int i)")
