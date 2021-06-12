@@ -164,7 +164,7 @@ class WBUnitScreen:
 				continue
 			elif sType == "MISSION_BUILD":
 				for j in xrange(GC.getNumBuildInfos()):
-					if UnitInfo.getBuilds(j):
+					if UnitInfo.hasBuild(j):
 						lData1.append(j)
 			elif sType == "MISSION_SPREAD":
 				for j in xrange(GC.getNumReligionInfos()):

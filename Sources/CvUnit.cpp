@@ -223,6 +223,7 @@ CvUnit::~CvUnit()
 	SAFE_DELETE_ARRAY(m_aiExtraVisibilityIntensitySameTile);
 	SAFE_DELETE_ARRAY(m_aiNegatesInvisibleCount);
 	SAFE_DELETE(m_commander);
+	SAFE_DELETE(m_worker);
 }
 
 
@@ -336,7 +337,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	// Init saved data
 	reset(iID, eUnit, eOwner);
 
-	if ( eOwner != NO_PLAYER && eUnitAI == UNITAI_SUBDUED_ANIMAL)
+	if (eOwner != NO_PLAYER && eUnitAI == UNITAI_SUBDUED_ANIMAL)
 	{
 		GET_PLAYER(eOwner).NoteAnimalSubdued();
 	}
@@ -356,11 +357,9 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	//GC.getGame().logOOSSpecial(13, getID(), iX, iY);
 	setXY(iX, iY, false, true, false, false, true);
 
-	CvCity* pCity;
 	if (plot()->getPlotCity() != NULL)
 	{
-		pCity = plot()->getPlotCity();
-		setCityOfOrigin(pCity);
+		setCityOfOrigin(plot()->getPlotCity());
 	}
 
 	//TB OOS fix - POSSIBLE that this represents a fix but I consider it a longshot since they should really mean the same thing (-1)
@@ -378,6 +377,10 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 
 	if (!isTempUnit())
 	{
+		if (m_pUnitInfo->getNumBuilds() > 0)
+		{
+			m_worker = new UnitCompWorker();
+		}
 		const int iNumNames = m_pUnitInfo->getNumUnitNames();
 
 		if (GC.getGame().getUnitCreatedCount(getUnitType()) < iNumNames)
@@ -707,8 +710,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraHillsAttackPercent = 0;
 	m_iExtraHillsDefensePercent = 0;
 
-	m_iExtraHillsWorkPercent = 0;
-	m_iExtraPeaksWorkPercent = 0;
 	m_iExtraWorkPercent = 0;
 
 	m_iRevoltProtection = 0;
@@ -817,7 +818,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraGatherHerdCount = 0;
 	m_bIsArmed = false;
 	m_eCurrentBuildUpType = NO_PROMOTIONLINE;
-	m_commander = NULL;
 
 	m_eCapturingUnit.reset();
 	m_combatUnit.reset();
@@ -893,6 +893,10 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	}
 	m_pPlayerInvestigated = NO_PLAYER;
 	m_Properties.clear();
+
+	// Toffer - UnitComponents
+	m_commander = NULL;
+	m_worker = NULL;
 }
 
 
@@ -12913,27 +12917,24 @@ int CvUnit::nukeRange() const
 
 bool CvUnit::canBuildRoute() const
 {
-	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+	if (isWorker())
 	{
-		if (GC.getBuildInfo((BuildTypes)iI).getRoute() != NO_ROUTE)
+		// Toffer - ToDo
+		//	- Should limit loop to only UnitInfo builds and the extra builds for this unit.
+		//	- Both are vectors and are both referenced in the CvUnit::hasBuild() function.
+		for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 		{
-			if (hasBuild((BuildTypes)iI))
+			if (GC.getBuildInfo((BuildTypes)iI).getRoute() != NO_ROUTE && hasBuild((BuildTypes)iI)
+			&& GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes)iI).getTechPrereq()))
 			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBuildInfo((BuildTypes)iI).getTechPrereq())))
+				if (GC.getBuildInfo((BuildTypes)iI).getObsoleteTech() == NO_TECH
+				|| !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes)iI).getObsoleteTech()))
 				{
-					if (GC.getBuildInfo((BuildTypes)iI).getObsoleteTech() == NO_TECH)
-					{
-						return true;
-					}
-					else if (!GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBuildInfo((BuildTypes)iI).getObsoleteTech())))
-					{
-						return true;
-					}
+					return true;
 				}
 			}
 		}
 	}
-
 	return false;
 }
 
@@ -19675,46 +19676,15 @@ void CvUnit::changeExtraHillsDefensePercent(int iChange)
 	}
 }
 
-//Team Project (4)
 //WorkRateMod
-int CvUnit::getExtraHillsWorkPercent() const
-{
-	return m_iExtraHillsWorkPercent;
-}
-
-void CvUnit::changeExtraHillsWorkPercent(int iChange)
-{
-	if (iChange != 0)
-	{
-		m_iExtraHillsWorkPercent += iChange;
-
-		setInfoBarDirty(true);
-	}
-}
-
 int CvUnit::hillsWorkModifier() const
 {
-	return (m_pUnitInfo->getHillsWorkModifier() + getExtraHillsWorkPercent());
-}
-
-int CvUnit::getExtraPeaksWorkPercent() const
-{
-	return m_iExtraPeaksWorkPercent;
-}
-
-void CvUnit::changeExtraPeaksWorkPercent(int iChange)
-{
-	if (iChange != 0)
-	{
-		m_iExtraPeaksWorkPercent += iChange;
-
-		setInfoBarDirty(true);
-	}
+	return m_worker->getHillsWorkModifier();
 }
 
 int CvUnit::peaksWorkModifier() const
 {
-	return (m_pUnitInfo->getPeaksWorkModifier() + getExtraPeaksWorkPercent());
+	return m_worker->getPeaksWorkModifier();
 }
 
 int CvUnit::getCollateralDamageProtection() const
@@ -22150,7 +22120,13 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	changeExtraCityDefensePercent(kUnitCombat.getCityDefensePercent() * iChange);//no merge/split
 	changeExtraHillsAttackPercent(kUnitCombat.getHillsAttackPercent() * iChange);//no merge/split
 	changeExtraHillsDefensePercent(kUnitCombat.getHillsDefensePercent() * iChange);//no merge/split
-	changeExtraHillsWorkPercent(kUnitCombat.getHillsWorkPercent() * iChange);//no merge/split
+	// Assume only worker units can get the relevant promotions, if not then we'll need a retroactive unitComp late init function.
+	if (isWorker())
+	{
+		m_worker->changeHillsWorkModifier(kUnitCombat.getHillsWorkPercent() * iChange);//no merge/split
+		m_worker->changePeaksWorkModifier(kUnitCombat.getPeaksWorkPercent() * iChange);//no merge/split
+		setInfoBarDirty(true);
+	}
 	changeExtraWorkPercent(kUnitCombat.getWorkRatePercent() * iChange);//no merge/split
 	changeRevoltProtection(kUnitCombat.getRevoltProtection() * iChange);// merge/split
 	changeCollateralDamageProtection(kUnitCombat.getCollateralDamageProtection() * iChange);//no merge/split
@@ -22224,8 +22200,7 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	changeExtraPoisonProbabilityModifier(kUnitCombat.getPoisonProbabilityModifierChange() * iChange);//no merge/split
 	changeExtraCaptureProbabilityModifier(kUnitCombat.getCaptureProbabilityModifierChange() * iChange);//no merge/split
 	changeExtraCaptureResistanceModifier(kUnitCombat.getCaptureResistanceModifierChange() * iChange);//no merge/split
-	changeExtraHillsWorkPercent(kUnitCombat.getHillsWorkModifierChange() * iChange);//no merge/split
-	changeExtraPeaksWorkPercent(kUnitCombat.getPeaksWorkModifierChange() * iChange);//no merge/split
+
 	changeExtraBreakdownChance(kUnitCombat.getBreakdownChanceChange() * iChange);//no merge/split (larger/smaller just more/less survivable)
 	changeExtraBreakdownDamage(kUnitCombat.getBreakdownDamageChange() * iChange);//no merge/split
 	changeExtraTaunt(kUnitCombat.getTauntChange() * iChange);//no merge/split
@@ -22873,7 +22848,13 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	changeExtraCityDefensePercent(kPromotion.getCityDefensePercent() * iChange);
 	changeExtraHillsAttackPercent(kPromotion.getHillsAttackPercent() * iChange);
 	changeExtraHillsDefensePercent(kPromotion.getHillsDefensePercent() * iChange);
-	changeExtraHillsWorkPercent(kPromotion.getHillsWorkPercent() * iChange);
+	// Assume only worker units can get the relevant promotions, if not then we'll need a retroactive unitComp late init function.
+	if (isWorker())
+	{
+		m_worker->changeHillsWorkModifier(kPromotion.getHillsWorkPercent() * iChange);
+		m_worker->changePeaksWorkModifier(kPromotion.getPeaksWorkPercent() * iChange);
+		setInfoBarDirty(true);
+	}
 	changeRevoltProtection(kPromotion.getRevoltProtection() * iChange);
 	changeCollateralDamageProtection(kPromotion.getCollateralDamageProtection() * iChange);
 	changePillageChange(kPromotion.getPillageChange() * iChange);
@@ -22906,8 +22887,6 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 		changeExtraWorkPercent(kPromotion.getWorkRatePercent() * iChange);
 		bSMrecalc = true;
 	}
-	changeExtraHillsWorkPercent(kPromotion.getHillsWorkModifierChange() * iChange);
-	changeExtraPeaksWorkPercent(kPromotion.getPeaksWorkModifierChange() * iChange);
 	// ! ls612
 
 	changeExtraCombatModifierPerSizeMore(kPromotion.getCombatModifierPerSizeMoreChange() * iChange);//no merge/split
@@ -23580,7 +23559,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraHillsAttackPercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraHillsDefensePercent);
 	//ls612: Work Modifiers
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraHillsWorkPercent);
+	int iExtraHillsWorkPercent = 0;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraHillsWorkPercent, "m_iExtraHillsWorkPercent");
+
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraWorkPercent);
 	// SVN 10973 08-13-2019 Fix for already corrupted worker extra work rate
 	// Because no promotion or unitcombat class defines iWorkRateModifier yet, we can set it to zero for now.
@@ -24579,8 +24560,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	}
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPeaksWorkPercent);
-	//
+	int iExtraPeaksWorkPercent = 0;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraPeaksWorkPercent, "m_iExtraPeaksWorkPercent");
+
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraBreakdownChance);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraBreakdownDamage);
 
@@ -25012,10 +24994,34 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplierSM);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
 
+	//bool bWorker = false;
+	//WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bWorker, "bWorker");
+
 	WRAPPER_READ_OBJECT_END(wrapper);
+
+	// Toffer - Initialize Components
+	if (bCommander)
+	{
+		m_commander = new UnitCompCommander();
+
+		m_commander->changeControlPoints(iExtraControlPoints + m_pUnitInfo->getControlPoints());
+		m_commander->changeControlPointsLeft(iControlPointsLeft - m_commander->getControlPoints());
+
+		m_commander->changeCommandRange(iExtraCommandRange + m_pUnitInfo->getCommandRange());
+	}
+	// SAVEBREAK - Toffer - "bWorker" will be enough when backward compatibility is removed.
+	if (/*bWorker ||*/ m_pUnitInfo->getNumBuilds() > 0)
+	{
+		m_worker = new UnitCompWorker();
+
+		m_worker->changeHillsWorkModifier(iExtraHillsWorkPercent + m_pUnitInfo->getHillsWorkModifier());
+		m_worker->changePeaksWorkModifier(iExtraPeaksWorkPercent + m_pUnitInfo->getPeaksWorkModifier());
+	}
 
 	//Example of how to skip an outdated and unnecessary save element (at least for ints and bools)
 	/*WRAPPER_SKIP_ELEMENT(wrapper,"CvUnit",&m_bHiddenNationality, SAVE_VALUE_ANY);*/
+
+	// Post Process
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		setSMValues(true);
@@ -25023,7 +25029,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	//	Zobrist characteristic hashes are not serialized so recalculate
 	//	Right now it's just characteristics that affect what a unit might
 	//	be able to move through that matter, so its unit class + certain promotions
-
 
 	m_aiExtraBuildTypes.clear();
 	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -25053,17 +25058,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 				m_movementCharacteristicsHash ^= GC.getUnitCombatInfo((UnitCombatTypes)iI).getZobristValue();
 			}
 		}
-	}
-
-	// Toffer - Initialize Components
-	if (bCommander)
-	{
-		m_commander = new UnitCompCommander();
-
-		m_commander->changeControlPoints(iExtraControlPoints + m_pUnitInfo->getControlPoints());
-		m_commander->changeControlPointsLeft(iControlPointsLeft - m_commander->getControlPoints());
-
-		m_commander->changeCommandRange(iExtraCommandRange + m_pUnitInfo->getCommandRange());
 	}
 }
 
@@ -25117,7 +25111,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSleepTimer);
 
-	// SAVEBRERAK - Toffer - Cleanup commander mess.
+	// SAVEBRERAK - Toffer - Cleanup unit-component mess.
 	const bool bCommander = isCommander();
 	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bCommander ? m_commander->getControlPoints() - m_pUnitInfo->getControlPoints() : 0), "m_iExtraControlPoints");
 	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bCommander ? m_commander->getCommandRange() - m_pUnitInfo->getCommandRange() : 0), "m_iExtraCommandRange");
@@ -25159,7 +25153,9 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraHillsAttackPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraHillsDefensePercent);
 	//ls612: Work Modifiers
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraHillsWorkPercent);
+	const bool bWorker = isWorker();
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getHillsWorkModifier() - m_pUnitInfo->getHillsWorkModifier() : 0), "m_iExtraHillsWorkPercent");
+
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraWorkPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRevoltProtection);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCollateralDamageProtection);
@@ -25544,13 +25540,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraDefenseCombatModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRetrainsAvailable);
 	//TB Combat Mods end
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 16.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: New Tag Definition                                                               **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
+
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDefensiveVictoryMoveCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iFreeDropCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iOffensiveVictoryMoveCount);
@@ -25572,16 +25562,13 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iVictoryAdjacentHeal);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iVictoryStackHeal);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bSurvivor);
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
-//Team Project (3)
+
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCaptureProbabilityModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCaptureResistanceModifier);
-//Team Project (4)
+
 	//WorkRateMod
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumBuildInfos(); iI++)
+	for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
 	{
 		if ( getExtraBuildWorkPercent((BuildTypes)iI) != 0 )
 		{
@@ -25589,9 +25576,8 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraBuildWorkPercent((BuildTypes)iI), "extraBuildWorkPercent");
 		}
 	}
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getPeaksWorkModifier() - m_pUnitInfo->getPeaksWorkModifier() : 0), "m_iExtraPeaksWorkPercent");
 
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPeaksWorkPercent);
-	//
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraBreakdownChance);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraBreakdownDamage);
 
@@ -25901,6 +25887,8 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplierSM);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
+
+	//WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isWorker(), "bWorker");
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -30354,10 +30342,12 @@ bool CvUnit::isCommander() const
 	return m_commander != NULL;
 }
 
+/* Toffer - May need this one at some point... maybe
 UnitCompCommander* CvUnit::getCommanderComp() const
 {
 	return m_commander;
 }
+*/
 
 void CvUnit::setCommander(bool bNewVal)
 {
@@ -30365,9 +30355,7 @@ void CvUnit::setCommander(bool bNewVal)
 
 	if (bNewVal)
 	{
-		m_commander = new UnitCompCommander();
-		m_commander->changeControlPoints(m_pUnitInfo->getControlPoints());
-		m_commander->changeCommandRange(m_pUnitInfo->getCommandRange());
+		m_commander = new UnitCompCommander(m_pUnitInfo);
 
 		GET_PLAYER(getOwner()).Commanders.push_back(this);
 
@@ -39232,7 +39220,7 @@ void CvUnit::processLoadedSpecialUnit(bool bChange, SpecialUnitTypes eSpecialUni
 
 bool CvUnit::hasBuild(BuildTypes eBuild) const
 {
-	return m_pUnitInfo->getBuilds(eBuild) || isExtraBuild(eBuild);
+	return m_pUnitInfo->hasBuild(eBuild) || isExtraBuild(eBuild);
 }
 
 bool CvUnit::isExtraBuild(BuildTypes eBuild) const
@@ -39263,10 +39251,15 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 	{
 		if (bChange)
 		{
+			if (!isWorker())
+			{
+				m_worker = new UnitCompWorker();
+			}
 			m_aiExtraBuildTypes.push_back((int)eBuild);
 		}
 		else
 		{
+			// Toffer - This can't be faster than just doing an erase of the element with the build id; can it?
 			std::vector<int> m_aiOldExtraBuildTypes;
 			for (unsigned int iI = 0; iI < m_aiExtraBuildTypes.size(); iI++)
 			{
@@ -39282,6 +39275,13 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 				m_aiExtraBuildTypes.push_back(m_aiOldExtraBuildTypes[iI]);
 			}
 			m_aiOldExtraBuildTypes.clear();
+			// ! Toffer
+
+			if (m_aiExtraBuildTypes.size() == 0 && m_pUnitInfo->getNumBuilds() == 0 && isWorker())
+			{
+				delete m_worker;
+				m_worker = NULL;
+			}
 		}
 	}
 }
@@ -41583,4 +41583,9 @@ void CvUnit::defineReligion()
 ReligionTypes CvUnit::getReligion() const
 {
 	return m_eReligionType;
+}
+
+bool CvUnit::isWorker() const
+{
+	return m_worker != NULL;
 }
