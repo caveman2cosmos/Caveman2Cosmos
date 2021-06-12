@@ -23864,21 +23864,18 @@
 		<BuildingInfo>
 			<Type>BUILDING_EIFFEL_TOWER</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSAMERICA_PYRAMID</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_INSURANCE_OFFICE</BuildingType>
 				<BuildingType>BUILDING_BLOCKCHAIN_FINANCIAL_SERVICES</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HNIC</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_HOCKEY_RINK</BuildingType>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<GlobalBuildingExtraCommerces>

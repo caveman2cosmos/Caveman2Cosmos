@@ -909,7 +909,9 @@ public:
 
 	bool isAnimal() const;
 	bool isNoBadGoodies() const;
+
 	bool isOnlyDefensive() const;
+	void changeOnlyDefensiveCount(int iChange);
 
 	bool hasRBombardForceAbility() const;
 	int getRBombardForceAbilityCount() const;
@@ -1803,7 +1805,7 @@ protected:
 	int m_iDCMBombRange;
 	int m_iDCMBombAccuracy;
 	int m_iHealUnitCombatCount;
-	std::vector<int> m_aiExtraBuildTypes;
+	std::vector<BuildTypes> m_aeExtraBuildTypes;
 
 	DomainTypes m_eNewDomainCargo;
 	SpecialUnitTypes m_eNewSpecialCargo;
@@ -2832,33 +2834,27 @@ public:
 	void processLoadedSpecialUnit(bool bChange, SpecialUnitTypes eSpecialUnit);
 
 	bool hasBuild(BuildTypes eBuild) const;
-	bool isExtraBuild(BuildTypes eBuild) const;
-	int getExtraBuildType(int i) const;
-	int getNumExtraBuildTypes() const;
+	//bool isExtraBuild(BuildTypes eBuild) const;
+	//BuildTypes getExtraBuildType(int i) const;
+	//int getNumExtraBuildTypes() const;
 	void changeExtraBuildType(bool bChange, BuildTypes eBuild);
 
 	bool isExcile() const;
-	int getExcileCount() const;
 	void changeExcileCount(int iChange);
 
 	bool isPassage() const;
-	int getPassageCount() const;
 	void changePassageCount(int iChange);
 
 	bool isNoNonOwnedCityEntry() const;
-	int getNoNonOwnedCityEntryCount() const;
 	void changeNoNonOwnedCityEntryCount(int iChange);
 
 	bool isBarbCoExist() const;
-	int getBarbCoExistCount() const;
 	void changeBarbCoExistCount(int iChange);
 
 	bool isBlendIntoCity() const;
-	int getBlendIntoCityCount() const;
 	void changeBlendIntoCityCount(int iChange);
 
 	bool isUpgradeAnywhere() const;
-	int getUpgradeAnywhereCount() const;
 	void changeUpgradeAnywhereCount(int iChange);
 
 	bool hasVisibilityType(InvisibleTypes eInvisibleType) const;
@@ -2984,9 +2980,6 @@ public:
 
 	void reveal();
 	bool isRevealed() const;
-
-	int getOnlyDefensiveCount() const;
-	void changeOnlyDefensiveCount(int iChange);
 
 	void doSetDefaultStatuses();
 

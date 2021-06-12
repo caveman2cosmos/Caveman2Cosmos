@@ -2244,9 +2244,10 @@ public:
 
 	bool isPrereqOrCivics(int i) const;
 
-	int getBuild(int i) const;
+	const std::vector<BuildTypes>& getBuilds() const { return m_workerBuilds; }
+	BuildTypes getBuild(int i) const;
 	short getNumBuilds() const;
-	bool hasBuild(int i) const;
+	bool hasBuild(BuildTypes e) const;
 
 	int getPrereqAndBuilding(int i) const;
 	int getNumPrereqAndBuildings() const;
@@ -2408,7 +2409,7 @@ protected:
 	int m_iPrereqAndTech;
 	int m_iPrereqAndBonus;
 
-	std::vector<int> m_workerBuilds;
+	std::vector<BuildTypes> m_workerBuilds;
 	std::vector<int> m_aiPrereqAndBuildings;
 	std::vector<int> m_aiPrereqOrBuildings;
 
