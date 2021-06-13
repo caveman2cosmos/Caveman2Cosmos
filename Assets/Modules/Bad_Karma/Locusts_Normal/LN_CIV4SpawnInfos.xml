@@ -7,8 +7,8 @@
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
@@ -27,8 +27,8 @@
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>600</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
@@ -47,8 +47,8 @@
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>800</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
@@ -67,8 +67,8 @@
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>1200</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>

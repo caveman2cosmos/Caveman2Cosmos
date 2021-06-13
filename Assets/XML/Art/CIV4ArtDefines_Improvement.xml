@@ -661,15 +661,6 @@
 			<Button>Art/Interface/Buttons/TerrainFeatures/button_savanna.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_CRASHED_PROBE</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>0.75</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/Wreckage/Wreckage.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,4,3</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_INDIGENOUS_COMMUNITY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.35</fScale>

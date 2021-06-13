@@ -1,5 +1,6 @@
 #include "CvGameCoreDLL.h"
-
+#include "CvInfos.h"
+#include "CvImprovementInfo.h"
 //
 // Python interface for info classes (formerly structs)
 // These are simple enough to be exposed directly - no wrappers
@@ -10,7 +11,6 @@ void CyInfoPythonInterface2()
 	OutputDebugString("Python Extension Module - CyInfoPythonInterface2\n");
 
 	python::class_<CvRouteModelInfo, python::bases<CvInfoBase> >("CvRouteModelInfo")
-
 	;
 
 	python::class_<CvCivilizationInfo, python::bases<CvInfoBase> >("CvCivilizationInfo")
@@ -18,7 +18,6 @@ void CyInfoPythonInterface2()
 		.def("getArtStyleType", &CvCivilizationInfo::getArtStyleType, "int ()")
 		.def("getNumCityNames", &CvCivilizationInfo::getNumCityNames, "int ()")
 		.def("getNumLeaders", &CvCivilizationInfo::getNumLeaders, "int ()")
-
 
 		.def("isAIPlayable", &CvCivilizationInfo::isAIPlayable, "bool ()")
 		.def("isPlayable", &CvCivilizationInfo::isPlayable, "bool ()")
@@ -150,14 +149,10 @@ void CyInfoPythonInterface2()
 		// Arrays
 		.def("getYieldChange", &CvRouteInfo::getYieldChange, "int (int i)")
 		.def("getTechMovementChange", &CvRouteInfo::getTechMovementChange, "int (int i)")
-		.def("getPrereqOrBonus", &CvRouteInfo::getPrereqOrBonus, "int (int i)")
+		.def("getPrereqOrBonuses", &CvRouteInfo::cyGetPrereqOrBonuses)
 	;
 
 	python::class_<CvImprovementBonusInfo, python::bases<CvInfoBase> >("CvImprovementBonusInfo")
-
-
-
-		// Arrays
 		.def("getYieldChange", &CvImprovementBonusInfo::getYieldChange, "int (int i)")
 	;
 
@@ -192,7 +187,6 @@ void CyInfoPythonInterface2()
 		.def("getPrereqNatureYield", &CvImprovementInfo::getPrereqNatureYield, "int (int i)")
 		.def("getYieldChange", &CvImprovementInfo::getYieldChange, "int (int i)")
 		.def("getRiverSideYieldChange", &CvImprovementInfo::getRiverSideYieldChange, "int (int i)")
-		.def("getHillsYieldChange", &CvImprovementInfo::getHillsYieldChange, "int (int i)")
 		.def("getIrrigatedYieldChange", &CvImprovementInfo::getIrrigatedYieldChange, "int (int i)")
 
 		.def("getTerrainMakesValid", &CvImprovementInfo::getTerrainMakesValid, "bool (int i)")
@@ -278,13 +272,11 @@ void CyInfoPythonInterface2()
 		// Arrays
 		.def("getYieldChange", &CvFeatureInfo::getYieldChange, "int (int i)")
 		.def("getRiverYieldChange", &CvFeatureInfo::getRiverYieldChange, "int (int i)")
-		.def("getHillsYieldChange", &CvFeatureInfo::getHillsYieldChange, "int (int i)")
 
 		.def("isTerrain", &CvFeatureInfo::isTerrain, "bool (int i)")
 	;
 
 	python::class_<CvCommerceInfo, python::bases<CvInfoBase> >("CvCommerceInfo")
 		.def("getChar", &CvCommerceInfo::getChar, "int ()")
-
 	;
 }

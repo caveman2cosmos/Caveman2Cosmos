@@ -7,7 +7,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_HELP</Help>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EMANCIPATION_PROCLAMATION</ArtDefineTag>
@@ -17,16 +16,15 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
-			<iCost>150</iCost>
+			<iCost>1310</iCost>
 			<FreeBuilding>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</FreeBuilding>
 			<iHappinessPercentPerPopulation>5</iHappinessPercentPerPopulation>
-			<iAIWeight>1000</iAIWeight>
+			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>

@@ -1,10 +1,8 @@
 ## Ruff StatusDump
 
 from CvPythonExtensions import *
-import autolog
 import time
 import BugCore
-import string
 import BugFile
 
 GC = CyGlobalContext()
@@ -135,7 +133,7 @@ class StatusDumpEvent(AbstractStatusDumpEvent):
 		return TRNSLTR.getText("TXT_KEY_TIME_AD", (iYear,))
 
 	def _getGameTurn(self):
-		zcurrturn = GAME.getElapsedGameTurns() + 1 + BugAutolog.get4000BCTurn()
+		zcurrturn = GAME.getElapsedGameTurns() + 1 + BugAutolog.getStartDateTurn()
 		zmaxturn = GAME.getMaxTurns()
 		if zmaxturn:
 			return "%i/%i" % (zcurrturn, zmaxturn)

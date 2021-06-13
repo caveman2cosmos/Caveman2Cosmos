@@ -76,10 +76,10 @@ class CvDomesticAdvisor:
 
 		if self.bInitialize:
 			# Creates Dictionaries we couldn't on init.
-			iYellow	= GC.getInfoTypeForString("COLOR_YELLOW")
-			iRed	= GC.getInfoTypeForString("COLOR_RED")
-			iGreen	= GC.getInfoTypeForString("COLOR_GREEN")
-			iBlue	= GC.getInfoTypeForString("COLOR_BLUE")
+			iYellow	= GC.getCOLOR_YELLOW()
+			iRed	= GC.getCOLOR_RED()
+			iGreen	= GC.getCOLOR_GREEN()
+			iBlue	= GC.getCOLOR_BLUE()
 			iCyan	= GC.getInfoTypeForString("COLOR_CYAN")
 			self.iRed = iRed
 
@@ -114,28 +114,27 @@ class CvDomesticAdvisor:
 			self.bonusCorpCommerces = {}
 			for eCorp in xrange(GC.getNumCorporationInfos()):
 				info = GC.getCorporationInfo(eCorp)
-				for i in xrange(GC.getNUM_CORPORATION_PREREQ_BONUSES()):
-					eBonus = info.getPrereqBonus(i)
-					if eBonus > -0:
-						for eYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-							iYieldValue = info.getYieldProduced(eYield)
-							if iYieldValue != 0:
-								if not self.bonusCorpYields.has_key(eBonus):
-									self.bonusCorpYields[eBonus] = {}
-								if not self.bonusCorpYields[eBonus].has_key(eYield):
-									self.bonusCorpYields[eBonus][eYield] = {}
-								if not self.bonusCorpYields[eBonus][eYield].has_key(eCorp):
-									self.bonusCorpYields[eBonus][eYield][eCorp] = iYieldValue
+				for eBonus in info.getPrereqBonuses():
 
-						for eCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-							iCommerceValue = info.getCommerceProduced(eCommerce)
-							if iCommerceValue != 0:
-								if not self.bonusCorpCommerces.has_key(eBonus):
-									self.bonusCorpCommerces[eBonus] = {}
-								if not self.bonusCorpCommerces[eBonus].has_key(eCommerce):
-									self.bonusCorpCommerces[eBonus][eCommerce] = {}
-								if not self.bonusCorpCommerces[eBonus][eCommerce].has_key(eCorp):
-									self.bonusCorpCommerces[eBonus][eCommerce][eCorp] = iCommerceValue
+					for eYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						iYieldValue = info.getYieldProduced(eYield)
+						if iYieldValue != 0:
+							if not self.bonusCorpYields.has_key(eBonus):
+								self.bonusCorpYields[eBonus] = {}
+							if not self.bonusCorpYields[eBonus].has_key(eYield):
+								self.bonusCorpYields[eBonus][eYield] = {}
+							if not self.bonusCorpYields[eBonus][eYield].has_key(eCorp):
+								self.bonusCorpYields[eBonus][eYield][eCorp] = iYieldValue
+
+					for eCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						iCommerceValue = info.getCommerceProduced(eCommerce)
+						if iCommerceValue != 0:
+							if not self.bonusCorpCommerces.has_key(eBonus):
+								self.bonusCorpCommerces[eBonus] = {}
+							if not self.bonusCorpCommerces[eBonus].has_key(eCommerce):
+								self.bonusCorpCommerces[eBonus][eCommerce] = {}
+							if not self.bonusCorpCommerces[eBonus][eCommerce].has_key(eCorp):
+								self.bonusCorpCommerces[eBonus][eCommerce][eCorp] = iCommerceValue
 
 			# Special Class variables
 			aMap = {
@@ -208,7 +207,7 @@ class CvDomesticAdvisor:
 				"COMMERCE_"
 			]
 			for i in xrange(YieldTypes.NUM_YIELD_TYPES):
-				COLUMNS_LIST.append((aList[i] + "BASE", 40, "int", "getBaseYieldRate", None, i, "B" + self.yieldIcons[i]))
+				COLUMNS_LIST.append((aList[i] + "BASE", 40, "int", "getPlotYield", None, i, "B" + self.yieldIcons[i]))
 				COLUMNS_LIST.append((aList[i] + "GRANK_BASE", 42, "int", None, self.findGlobalBaseYieldRateRank, i, "B" + self.yieldIcons[i] + "g"))
 				COLUMNS_LIST.append((aList[i] + "GRANK", 40, "int", None, self.findGlobalYieldRateRank, i, self.yieldIcons[i] + "g"))
 				COLUMNS_LIST.append((aList[i] + "NRANK_BASE", 42, "int", "findBaseYieldRateRank", None, i, "B" + self.yieldIcons[i] + "n"))
@@ -706,16 +705,16 @@ class CvDomesticAdvisor:
 
 	def calculateWhipOverflow(self, city, szKey, arg):
 
-		if city.canHurry(self.HURRY_TYPE_POP, False):
-			iOverflow = city.hurryProduction(self.HURRY_TYPE_POP) - city.productionLeft()
-			if CityScreenOpt.isWhipAssistOverflowCountCurrentProduction():
-				iOverflow += city.getCurrentProductionDifference(True, False)
-			iMaxOverflow = min(city.getProductionNeeded(), iOverflow)
-			iOverflowGold = max(0, iOverflow - iMaxOverflow) * GC.getDefineINT("MAXED_UNIT_GOLD_PERCENT") / 100
-			iOverflow =  100 * iMaxOverflow / city.getBaseYieldRateModifier(GC.getInfoTypeForString("YIELD_PRODUCTION"), city.getProductionModifier())
-			return unicode(iOverflow), unicode(iOverflowGold)
-		else:
+		if not city.canHurry(self.HURRY_TYPE_POP, False):
 			return self.objectNotPossible, self.objectNotPossible
+
+		iOverflow = city.hurryProduction(self.HURRY_TYPE_POP) - city.productionLeft()
+		if CityScreenOpt.isWhipAssistOverflowCountCurrentProduction():
+			iOverflow += city.getCurrentProductionDifference(True, False)
+		iMaxOverflow = city.getMaxProductionOverflow()
+		iOverflowGold = max(0, iOverflow - iMaxOverflow) * GC.getDefineINT("MAXED_UNIT_GOLD_PERCENT") / 100
+		iOverflow = 100 * iMaxOverflow / city.getBaseYieldRateModifier(YieldTypes.YIELD_PRODUCTION, 0)
+		return unicode(iOverflow), unicode(iOverflowGold)
 
 	def calculateWhipAnger(self, city, szKey, arg):
 		iAnger = city.getHurryAngerTimer()
@@ -972,11 +971,11 @@ class CvDomesticAdvisor:
 
 	def findGlobalBaseYieldRateRank(self, CyCity, szKey, arg):
 
-		y = CyCity.getBaseYieldRate(arg)
+		y = CyCity.getPlotYield(arg)
 		aList = []
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 			for CyCity in GC.getPlayer(iPlayerX).cities():
-				aList.append(CyCity.getBaseYieldRate(arg))
+				aList.append(CyCity.getPlotYield(arg))
 
 		return len([i for i in aList if i > y]) + 1
 
@@ -1083,19 +1082,19 @@ class CvDomesticAdvisor:
 					elif type == "Spaceship":
 						if not CyCity.isPower():
 							if info.isPower():
-								value = CyCity.getBaseYieldRate(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
+								value = CyCity.getPlotYield(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
 								if value > bestData:
 									bestOrder = iType
 									bestData = value
 
 						if CyCity.findBaseYieldRateRank(YieldTypes.YIELD_PRODUCTION) < 12:
-							value = CyCity.getBaseYieldRate(YieldTypes.YIELD_PRODUCTION) * 2 * info.getYieldModifier(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
+							value = CyCity.getPlotYield(YieldTypes.YIELD_PRODUCTION) * 2 * info.getYieldModifier(YieldTypes.YIELD_PRODUCTION) / float(info.getProductionCost())
 							if value > bestData:
 								bestOrder = iType
 								bestData = value
 
 						if CyCity.findBaseYieldRateRank(YieldTypes.YIELD_COMMERCE) < CyPlayer.getNumCities() / 2:
-							value = CyCity.getBaseYieldRate(YieldTypes.YIELD_COMMERCE) * info.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH) / float(info.getProductionCost())
+							value = CyCity.getPlotYield(YieldTypes.YIELD_COMMERCE) * info.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH) / float(info.getProductionCost())
 							if value > bestData:
 								bestOrder = iType
 								bestData = value

@@ -163,7 +163,7 @@ class PediaBuild:
 		aList = []
 		for i in range(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
-			bCapable = CvUnitInfo.getBuilds(iTheBuild)
+			bCapable = CvUnitInfo.hasBuild(BuildTypes(iTheBuild))
 			if bCapable:
 				BTN = CvUnitInfo.getButton()
 				aList.append((BTN, i))

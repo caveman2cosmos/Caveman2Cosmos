@@ -473,14 +473,14 @@ CvGameObjectPlot* CvGameObjectPlot::getPlot() const
 
 void CvGameObject::foreachOn(GameObjectTypes eType, bst::function<void(const CvGameObject*)> func) const
 {
-	CvGameObjectPlot* pPlot = getPlot();
+	const CvGameObjectPlot* pPlot = getPlot();
 	if (pPlot)
 		pPlot->foreachOn(eType, func);
 }
 
 void CvGameObject::foreachNear(GameObjectTypes eType, bst::function<void(const CvGameObject*)> func, int iDistance) const
 {
-	CvGameObjectPlot* pPlot = getPlot();
+	const CvGameObjectPlot* pPlot = getPlot();
 	if (pPlot)
 		pPlot->foreachNear(eType, func, iDistance);
 }
@@ -502,13 +502,13 @@ void CvGameObject::foreachRelated(GameObjectTypes eType, RelationTypes eRelation
 }
 
 // helper function to call function if expression true
-void callFuncIf(const CvGameObject* pObject, BoolExpr* pExpr, bst::function<void (const CvGameObject*)> func)
+void callFuncIf(const CvGameObject* pObject, const BoolExpr* pExpr, bst::function<void (const CvGameObject*)> func)
 {
 	if (pExpr->evaluate(pObject))
 		func(pObject);
 }
 
-void CvGameObject::foreachRelatedCond(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(const CvGameObject*)> func, BoolExpr* pExpr, int iData) const
+void CvGameObject::foreachRelatedCond(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(const CvGameObject*)> func, const BoolExpr* pExpr, int iData) const
 {
 	if (pExpr)
 	{
@@ -546,7 +546,7 @@ void CvGameObject::enumerateRelated(std::vector<const CvGameObject*>& kEnum, Gam
 	foreachRelated(eType, eRelation, bst::bind(addToVector, _1, &kEnum), iData);
 }
 
-void CvGameObject::enumerateRelatedCond(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, BoolExpr* pExpr, int iData) const
+void CvGameObject::enumerateRelatedCond(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, const BoolExpr* pExpr, int iData) const
 {
 	foreachRelatedCond(eType, eRelation, bst::bind(addToVector, _1, &kEnum), pExpr, iData);
 }
@@ -565,17 +565,9 @@ void CvGameObjectPlot::foreachOn(GameObjectTypes eType, bst::function<void(const
 
 void CvGameObjectPlot::foreachNear(GameObjectTypes eType, bst::function<void(const CvGameObject*)> func, int iDistance) const
 {
-	const int iPlotX = m_pPlot->getX();
-	const int iPlotY = m_pPlot->getY();
-
-	for (int iX=iPlotX - iDistance; iX <= iPlotX + iDistance; iX++)
+	foreach_(const CvPlot* pPlot, m_pPlot->rect(iDistance, iDistance))
 	{
-		for (int iY=iPlotY - iDistance; iY <= iPlotY + iDistance; iY++)
-		{
-			CvPlot* pPlot = GC.getMap().plot(iX, iY);
-			if (pPlot)
-				pPlot->getGameObject()->foreachOn(eType, func);
-		}
+		pPlot->getGameObject()->foreachOn(eType, func);
 	}
 }
 
@@ -588,7 +580,7 @@ void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 			const int iRoutes = m_pCity->getTradeRoutes();
 			for (int i=0; i<iRoutes; i++)
 			{
-				CvCity* pTradeCity = m_pCity->getTradeCity(i);
+				const CvCity* pTradeCity = m_pCity->getTradeCity(i);
 				if (pTradeCity)
 				{
 					func(pTradeCity->getGameObject());
@@ -755,22 +747,21 @@ void CvGameObject::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 {
 	//CvString szBuffer;
-	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
-	const int iNum = kInfo.getNumPropertyBuildings();
 	//TB Combat Mods (disease special manifestation and removal system)
 	//const PropertyTypes eDiseaseType = GC.getPROPERTY_DISEASE();
 
 	//if (eProperty != eDiseaseType)
 	//{
 	//
-	if (!GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS) || !kInfo.isOAType())
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	if (!GC.getPropertyInfo(eProperty).isOAType() || !GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+#endif
 	{
 		//TB Combat Mods end
 		if (!GET_PLAYER(m_pCity->getOwner()).isNPC())
 		{
-			for (int i=0; i<iNum; i++)
+			foreach_(const PropertyBuilding& kBuilding, GC.getPropertyInfo(eProperty).getPropertyBuildings())
 			{
-				const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
 				const bool bHasBuilding = m_pCity->getNumActiveBuilding(kBuilding.eBuilding) > 0;
 				const bool bInRange = (iNewValue >= kBuilding.iMinValue) && (iNewValue <= kBuilding.iMaxValue);
 				if (!bInRange)
@@ -812,12 +803,8 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 {
 	PROFILE_FUNC();
 
-	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
-	const int iNum = kInfo.getNumPropertyPromotions();
-
-	for (int i=0; i<iNum; i++)
+	foreach_(const PropertyPromotion& kPromotion, GC.getPropertyInfo(eProperty).getPropertyPromotions())
 	{
-		const PropertyPromotion& kPromotion = kInfo.getPropertyPromotion(i);
 		const bool bHasPromotion = m_pUnit->isHasPromotion(kPromotion.ePromotion);
 		const bool bInRange = (iNewValue >= kPromotion.iMinValue) && (iNewValue <= kPromotion.iMaxValue);
 		if (!bInRange)
@@ -833,11 +820,15 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 			PromotionRequirements::flags promoFlags = PromotionRequirements::IgnoreHas;
 			if (GC.getPromotionInfo(kPromotion.ePromotion).isEquipment())
 				promoFlags |= PromotionRequirements::Equip;
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 			if(GC.getPromotionInfo(kPromotion.ePromotion).isAffliction())
 				promoFlags |= PromotionRequirements::Afflict;
-
-			if (!GC.getPromotionInfo(kPromotion.ePromotion).isEquipment() &&
-				!GC.getPromotionInfo(kPromotion.ePromotion).isAffliction())
+#endif
+			if (!GC.getPromotionInfo(kPromotion.ePromotion).isEquipment()
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+				&& !GC.getPromotionInfo(kPromotion.ePromotion).isAffliction()
+#endif
+				)
 			{
 				promoFlags |= PromotionRequirements::Promote;
 			}
@@ -871,7 +862,6 @@ bool CvGameObjectPlayer::isTag(TagTypes eTag) const
 	{
 		case TAG_ANARCHY:
 			return m_pPlayer->isAnarchy();
-			break;
 	}
 	return false;
 }

@@ -1729,7 +1729,6 @@ void CvNetChooseMergeUnit::Execute()
 
 			int iTotalGroupOffset = 1;
 			int iTotalQualityOffset = 0;
-			bool bSet = false;
 			pUnit1->setFortifyTurns(0);
 			pUnit2->setFortifyTurns(0);
 			pUnit3->setFortifyTurns(0);
@@ -1745,6 +1744,7 @@ void CvNetChooseMergeUnit::Execute()
 						{
 							pkMergedUnit->setHasPromotion(ePromotion, true, true);
 						}
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 						else if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isAffliction())
 						{
 							if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
@@ -1752,6 +1752,7 @@ void CvNetChooseMergeUnit::Execute()
 								pkMergedUnit->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
 							}
 						}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 						else if (pUnit1->isPromotionFree(ePromotion) || pUnit2->isPromotionFree(ePromotion) || pUnit3->isPromotionFree(ePromotion))
 						{
 							pkMergedUnit->setHasPromotion(ePromotion, true, true);
@@ -1885,8 +1886,6 @@ void CvNetConfirmSplitUnit::Execute()
 
 			int iTotalGroupOffset = -1;
 			int iTotalQualityOffset = 0;
-			bool bHasAdjusted = false;
-			bool bSet = false;
 			pUnit0->setFortifyTurns(0);
 			for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 			{
@@ -1899,6 +1898,7 @@ void CvNetConfirmSplitUnit::Execute()
 						{
 							pUnit1->setHasPromotion(ePromotion, true, true);
 						}
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 						else if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isAffliction())
 						{
 							if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
@@ -1908,6 +1908,7 @@ void CvNetConfirmSplitUnit::Execute()
 								pUnit3->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
 							}
 						}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 						else if (pUnit0->isPromotionFree(ePromotion) || GC.getPromotionInfo(ePromotion).isEquipment())
 						{
 							pUnit1->setHasPromotion(ePromotion, true, true);

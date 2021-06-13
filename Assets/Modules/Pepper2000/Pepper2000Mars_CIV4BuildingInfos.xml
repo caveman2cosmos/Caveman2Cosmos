@@ -5,7 +5,6 @@
 			<Type>BUILDING_MARS_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_MARS_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -24,12 +23,6 @@
 				<iYield>150</iYield>
 			</YieldChanges>
 			<iHealth>-30</iHealth>
-			<TechHealthChanges>
-				<TechHealthChange>
-					<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
-			</TechHealthChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -44,7 +37,6 @@
 			<Type>BUILDING_MARS_CITY</Type>
 			<Description>TXT_KEY_BUILDING_MARS_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -94,7 +86,6 @@
 			<Type>BUILDING_MARS_METRO</Type>
 			<Description>TXT_KEY_BUILDING_MARS_METRO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_METRO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_METRO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_METRO</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -139,7 +130,6 @@
 			<Type>BUILDING_MARS_MEGACITY</Type>
 			<Description>TXT_KEY_BUILDING_MARS_MEGACITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_MEGACITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_MEGACITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_MEGACITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -177,7 +167,6 @@
 			<Type>BUILDING_MARS_ARCOLOGY</Type>
 			<Description>TXT_KEY_BUILDING_MARS_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_ARCOLOGY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_ARCOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_ARCOLOGY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -216,7 +205,6 @@
 			<Type>BUILDING_MARTIAN_COMMUNICATION_BEACON</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_COMMUNICATION_BEACON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_COMMUNICATION_BEACON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_COMMUNICATION_BEACON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_COMMUNICATION_BEACON</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -233,15 +221,14 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_EXPANDED_HABITAT</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_EXPANDED_HABITAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_EXPANDED_HABITAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_EXPANDED_HABITAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_EXPANDED_HABITAT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -266,7 +253,6 @@
 			<Type>BUILDING_MARTIAN_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SOLAR_ARRAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_SOLAR_ARRAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_SOLAR_ARRAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -280,16 +266,15 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_HYDROPONICS</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_HYDROPONICS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_HYDROPONICS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_HYDROPONICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_HYDROPONICS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -319,7 +304,6 @@
 			<Type>BUILDING_MARS_RADIATION</Type>
 			<Description>TXT_KEY_BUILDING_MARS_RADIATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_RADIATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_RADIATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_RADIATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -336,9 +320,9 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<iHealth>3</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -351,7 +335,6 @@
 			<Type>BUILDING_MARS_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_MARS_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -368,9 +351,9 @@
 				<iYield>1</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_MARTIAN_ROCKS</Bonus>
 			<FreeBonus>BONUS_MARTIAN_MANUFACTURED_GOODS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -389,7 +372,6 @@
 			<Type>BUILDING_MARS_MINE</Type>
 			<Description>TXT_KEY_BUILDING_MARS_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_MINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -406,9 +388,9 @@
 				<iYield>0</iYield>
 				<iYield>30</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_MARTIAN_ROCKS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -416,7 +398,6 @@
 			<Type>BUILDING_MARS_BIOFACTORY</Type>
 			<Description>TXT_KEY_BUILDING_MARS_BIOFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_BIOFACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_BIOFACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_BIOFACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -475,7 +456,6 @@
 			<Type>BUILDING_MARS_HYDROPONICS</Type>
 			<Description>TXT_KEY_BUILDING_MARS_HYDROPONICS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_HYDROPONICS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_HYDROPONICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_HYDROPONICS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -501,10 +481,8 @@
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -519,7 +497,6 @@
 			<Type>BUILDING_MARS_HITECH</Type>
 			<Description>TXT_KEY_BUILDING_MARS_HITECH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_HITECH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_HITECH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_HITECH</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -554,7 +531,6 @@
 			<Type>BUILDING_MARS_MAGLEV</Type>
 			<Description>TXT_KEY_BUILDING_MARS_MAGLEV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_MAGLEV_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_MAGLEV_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_MAGLEV</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -569,9 +545,9 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_MARTIAN_MANUFACTURED_GOODS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -580,7 +556,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MARS_CYCLER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_CYCLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_CYCLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_CYCLER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MARS_CYCLER</MovieDefineTag>
@@ -603,7 +578,6 @@
 			<Type>BUILDING_MARS_CYCLER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_MARS_CYCLER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_CYCLER_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_CYCLER_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_CYCLER_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -628,7 +602,6 @@
 			<Type>BUILDING_MARTIAN_CAVES</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_CAVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_CAVES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_CAVES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_CAVES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -654,7 +627,6 @@
 			<Type>BUILDING_MARTIAN_FUSION_PLANT</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_FUSION_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_FUSION_PLANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_FUSION_PLANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_FUSION_PLANT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -686,17 +658,14 @@
 			</TechYieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARTIAN_DEUTERIUM_MINE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_WATER</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_WATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_WATER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_WATER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_WATER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -710,9 +679,9 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_CARBON_DIOXIDE_ICE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -720,7 +689,6 @@
 			<Type>BUILDING_MARTIAN_GEOLOGY_LAB</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_GEOLOGY_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_GEOLOGY_LAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_GEOLOGY_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_GEOLOGY_LAB</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -747,7 +715,6 @@
 			<Type>BUILDING_MARTIAN_ASTEROID_MINE</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ASTEROID_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ASTEROID_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_ASTEROID_MINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ASTEROID_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -768,7 +735,6 @@
 			<Type>BUILDING_MARTIAN_LFTR</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_LFTR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_LFTR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_LFTR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_LFTR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -794,7 +760,6 @@
 			<Type>BUILDING_MARTIAN_AREOTHERMAL</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_AREOTHERMAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_AREOTHERMAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_AREOTHERMAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_AREOTHERMAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -819,7 +784,6 @@
 			<Type>BUILDING_MARS_TRADE</Type>
 			<Description>TXT_KEY_BUILDING_MARS_TRADE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_TRADE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_TRADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_TRADE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -834,15 +798,14 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_SEA</Type>
 			<Description>TXT_KEY_BUILDING_MARS_SEA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_SEA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_SEA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_SEA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -897,7 +860,6 @@
 			<Type>BUILDING_MARS_MONUMENT</Type>
 			<Description>TXT_KEY_BUILDING_MARS_MONUMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_MONUMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_MONUMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_MONUMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -913,9 +875,9 @@
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
@@ -940,7 +902,6 @@
 			<Type>BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -966,10 +927,8 @@
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_CYBERNETIC_CHLOROPLASTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -977,7 +936,6 @@
 			<Type>BUILDING_MARTIAN_DEUTERIUM_EXPORTER</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_EXPORTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_EXPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_DEUTERIUM_EXPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -992,16 +950,13 @@
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_DNT_IMPORTER</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_DNT_IMPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_DNT_IMPORTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_DNT_IMPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_DNT_IMPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1027,10 +982,8 @@
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_DIAMOND_NANOTHREADS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -1038,7 +991,6 @@
 			<Type>BUILDING_MARTIAN_DEUTERIUM_MINE</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_MINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_DEUTERIUM_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1052,15 +1004,14 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ENTERTAINMENT_COMPLEX</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ENTERTAINMENT_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ENTERTAINMENT_COMPLEX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_ENTERTAINMENT_COMPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ENTERTAINMENT_COMPLEX</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1077,15 +1028,14 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<iHappiness>5</iHappiness>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_GOVERNMENT</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_GOVERNMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_GOVERNMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_GOVERNMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_GOVERNMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1098,9 +1048,9 @@
 			<iFreeSpecialist>1</iFreeSpecialist>
 			<PrereqCultureLevel>CULTURELEVEL_ELEGANT</PrereqCultureLevel>
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1114,7 +1064,6 @@
 			<Type>BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1140,10 +1089,8 @@
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_NOVUS_CHEMICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -1151,7 +1098,6 @@
 			<Type>BUILDING_MARTIAN_RARE_MINERAL_EXPORTER</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_RARE_MINERAL_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_RARE_MINERAL_EXPORTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_RARE_MINERAL_EXPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_RARE_MINERAL_EXPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1166,16 +1112,13 @@
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SIMULATED_WORLD</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_SIMULATED_WORLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SIMULATED_WORLD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_SIMULATED_WORLD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_SIMULATED_WORLD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1192,9 +1135,9 @@
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
 			<iHappiness>3</iHappiness>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1207,7 +1150,6 @@
 			<Type>BUILDING_MARTIAN_SKYSCRAPER</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_SKYSCRAPER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SKYSCRAPER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_SKYSCRAPER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_SKYSCRAPER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1228,15 +1170,14 @@
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ALGAE_FARM</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ALGAE_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ALGAE_FARM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_ALGAE_FARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ALGAE_FARM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1264,7 +1205,6 @@
 			<Type>BUILDING_MARTIAN_BROADBAND</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_BROADBAND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_BROADBAND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_BROADBAND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_BROADBAND</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1288,15 +1228,14 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ZOO</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ZOO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ZOO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_ZOO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ZOO</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1314,16 +1253,13 @@
 			<iHappiness>2</iHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_ECO</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SKYHOOK</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_SKYHOOK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SKYHOOK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_SKYHOOK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_SKYHOOK</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1343,10 +1279,8 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -1362,7 +1296,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PHOBOS_INDUSTRIAL_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PHOBOS_INDUSTRIAL_COMPLEX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PHOBOS_INDUSTRIAL_COMPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PHOBOS_INDUSTRIAL_COMPLEX</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PHOBOS_INDUSTRIAL_COMPLEX</MovieDefineTag>
@@ -1378,15 +1311,14 @@
 				<iYield>120</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_MARS_MINE</FreeBuilding>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SPACEPORT</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_SPACEPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SPACEPORT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_SPACEPORT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_SPACEPORT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1399,15 +1331,14 @@
 			<CommerceChanges>
 				<iCommerce>500</iCommerce>
 			</CommerceChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_VERTICAL_FARM</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_VERTICAL_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_VERTICAL_FARM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_VERTICAL_FARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_VERTICAL_FARM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1427,10 +1358,8 @@
 			<iHealth>1</iHealth>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -1451,7 +1380,6 @@
 			<Type>BUILDING_MARTIAN_FROST_CANNON</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_FROST_CANNON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_FROST_CANNON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_FROST_CANNON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_FROST_CANNON</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1478,7 +1406,6 @@
 			<Type>BUILDING_MARTIAN_HOTEL</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_HOTEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_HOTEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_HOTEL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1505,7 +1432,6 @@
 			<Type>BUILDING_MARTIAN_GARDEN</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_GARDEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_GARDEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_GARDEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_GARDEN</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1524,10 +1450,8 @@
 			<iHealth>1</iHealth>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARTIAN_WATER</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1540,7 +1464,6 @@
 			<Type>BUILDING_MARS_ECO</Type>
 			<Description>TXT_KEY_BUILDING_MARS_ECO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_ECO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_ECO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_ECO</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1552,9 +1475,9 @@
 			</MapCategoryTypes>
 			<iHappiness>1</iHappiness>
 			<iHealth>2</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1572,7 +1495,6 @@
 			<Type>BUILDING_MARTIAN_ALBEDO_REDUCTION</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ALBEDO_REDUCTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ALBEDO_REDUCTION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_ALBEDO_REDUCTION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ALBEDO_REDUCTION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1586,15 +1508,14 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_AMMONIA_BOMBARDMENT</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_AMMONIA_BOMBARDMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_AMMONIA_BOMBARDMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_AMMONIA_BOMBARDMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_AMMONIA_BOMBARDMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1609,16 +1530,13 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_CFC_GENERATOR</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_CFC_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_CFC_GENERATOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_CFC_GENERATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_CFC_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1632,9 +1550,9 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -1648,7 +1566,6 @@
 			<Type>BUILDING_MARTIAN_CO2_SUBLIMATION</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_CO2_SUBLIMATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_CO2_SUBLIMATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_CO2_SUBLIMATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_CO2_SUBLIMATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1661,15 +1578,14 @@
 			<YieldChanges>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_NOMAD</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_NOMAD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_NOMAD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_NOMAD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_NOMAD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1687,15 +1603,14 @@
 				<iYield>60</iYield>
 			</YieldChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ECOPOIESIS_REACTOR</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ECOPOIESIS_REACTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ECOPOIESIS_REACTOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_ECOPOIESIS_REACTOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ECOPOIESIS_REACTOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1709,9 +1624,9 @@
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<iHealth>1</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1734,7 +1649,6 @@
 			<Type>BUILDING_MARTIAN_MAGNETIC_FIELD_GENERATOR</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_MAGNETIC_FIELD_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_MAGNETIC_FIELD_GENERATOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_MAGNETIC_FIELD_GENERATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_MAGNETIC_FIELD_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1749,10 +1663,8 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_HITECH</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1765,7 +1677,6 @@
 			<Type>BUILDING_MARTIAN_MASS_DRIVER</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_MASS_DRIVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_MASS_DRIVER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_MASS_DRIVER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_MASS_DRIVER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1785,16 +1696,13 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1808,15 +1716,14 @@
 				<iYield>0</iYield>
 				<iYield>60</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_FARM</Type>
 			<Description>TXT_KEY_BUILDING_MARS_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_FARM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_FARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_FARM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1834,10 +1741,8 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_ECO</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_MARTIAN_CROPS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -1845,7 +1750,6 @@
 			<Type>BUILDING_MARTIAN_CLAYTRONIC_CITY</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_CLAYTRONIC_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_CLAYTRONIC_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_CLAYTRONIC_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_CLAYTRONIC_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1868,7 +1772,6 @@
 			<Type>BUILDING_MARTIAN_STARPORT</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_STARPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_STARPORT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_STARPORT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_STARPORT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1898,7 +1801,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_URBAN_MARS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_URBAN_MARS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_URBAN_MARS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_URBAN_MARS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_URBAN_MARS</MovieDefineTag>
@@ -1945,7 +1847,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MARS_TERRA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_TERRA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_TERRA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_TERRA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MARS_TERRA</MovieDefineTag>
@@ -2004,7 +1905,6 @@
 			<Type>BUILDING_MARS_TERRA_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_MARS_TERRA_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_TERRA_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARS_TERRA_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_TERRA_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2040,7 +1940,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_RING_OF_MARS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RING_OF_MARS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RING_OF_MARS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RING_OF_MARS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RING_OF_MARS</MovieDefineTag>
@@ -2082,7 +1981,6 @@
 			<Type>BUILDING_MARTIAN_DEFENSE</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN_DEFENSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_DEFENSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_DEFENSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_DEFENSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2109,7 +2007,6 @@
 			<Type>BUILDING_TERAVERSE</Type>
 			<Description>TXT_KEY_BUILDING_TERAVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERAVERSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERAVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERAVERSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>

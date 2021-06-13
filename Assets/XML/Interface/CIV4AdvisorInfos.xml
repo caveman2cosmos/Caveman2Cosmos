@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Soren Johnson (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Interface Mode -->
+<Civ4AdvisorInfos xmlns="x-schema:../Schema/C2C_CIV4InterfaceSchema.xml">
+	<AdvisorInfos>
+		<AdvisorInfo>
+			<Type>ADVISOR_MILITARY</Type>
+			<Description>TXT_KEY_ADVISOR_MILITARY</Description>
+			<EventCodes>
+				<iEnableCode>50</iEnableCode>
+				<iDisableCode>51</iDisableCode>
+			</EventCodes>
+		</AdvisorInfo>
+		<AdvisorInfo>
+			<Type>ADVISOR_RELIGION</Type>
+			<Description>TXT_KEY_ADVISOR_RELIGION</Description>
+			<EventCodes>
+				<iEnableCode>20</iEnableCode>
+				<iDisableCode>21</iDisableCode>
+			</EventCodes>
+		</AdvisorInfo>
+		<AdvisorInfo>
+			<Type>ADVISOR_ECONOMY</Type>
+			<Description>TXT_KEY_ADVISOR_ECONOMY</Description>
+			<EventCodes>
+				<iEnableCode>40</iEnableCode>
+				<iDisableCode>41</iDisableCode>
+			</EventCodes>
+		</AdvisorInfo>
+		<AdvisorInfo>
+			<Type>ADVISOR_SCIENCE</Type>
+			<Description>TXT_KEY_ADVISOR_SCIENCE</Description>
+			<EventCodes>
+				<iEnableCode>60</iEnableCode>
+				<iDisableCode>61</iDisableCode>
+			</EventCodes>
+			<EventCodes>
+				<iEnableCode>80</iEnableCode>
+				<iDisableCode>81</iDisableCode>
+			</EventCodes>
+		</AdvisorInfo>
+		<AdvisorInfo>
+			<Type>ADVISOR_CULTURE</Type>
+			<Description>TXT_KEY_ADVISOR_CULTURE</Description>
+			<EventCodes>
+				<iEnableCode>30</iEnableCode>
+				<iDisableCode>31</iDisableCode>
+			</EventCodes>
+		</AdvisorInfo>
+		<AdvisorInfo>
+			<Type>ADVISOR_GROWTH</Type>
+			<Description>TXT_KEY_ADVISOR_GROWTH</Description>
+			<EventCodes>
+				<iEnableCode>70</iEnableCode>
+				<iDisableCode>71</iDisableCode>
+			</EventCodes>
+		</AdvisorInfo>
+	</AdvisorInfos>
+</Civ4AdvisorInfos>

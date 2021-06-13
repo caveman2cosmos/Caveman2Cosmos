@@ -5,7 +5,6 @@
 			<Type>BUILDING_PLANETARY_BASE</Type>
 			<Description>TXT_KEY_BUILDING_PLANETARY_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLANETARY_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PLANETARY_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PLANETARY_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -25,7 +24,6 @@
 			<Type>BUILDING_ORBITAL_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_ORBITAL_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ORBITAL_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -49,7 +47,6 @@
 			<Type>BUILDING_BISHOP_RING_REGULAR</Type>
 			<Description>TXT_KEY_BUILDING_BISHOP_RING_REGULAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BISHOP_RING_REGULAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BISHOP_RING_REGULAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISHOP_RING_REGULAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -90,7 +87,6 @@
 			<Type>BUILDING_MCKENDREE_CYLINDER</Type>
 			<Description>TXT_KEY_BUILDING_MCKENDREE_CYLINDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MCKENDREE_CYLINDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MCKENDREE_CYLINDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MCKENDREE_CYLINDER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -125,7 +121,6 @@
 			<Type>BUILDING_SOLAR_ARRAY_INNER</Type>
 			<Description>TXT_KEY_BUILDING_SOLAR_ARRAY_INNER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_ARRAY_INNER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLAR_ARRAY_INNER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_ARRAY_INNER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -162,7 +157,6 @@
 			<Type>BUILDING_SOLAR_ARRAY_OUTER</Type>
 			<Description>TXT_KEY_BUILDING_SOLAR_ARRAY_OUTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_ARRAY_OUTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLAR_ARRAY_OUTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_ARRAY_OUTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -214,7 +208,6 @@
 			<Type>BUILDING_SOLAR_ARRAY_TRANSNEPTUNIAN</Type>
 			<Description>TXT_KEY_BUILDING_SOLAR_ARRAY_TRANSNEPTUNIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_ARRAY_TRANSNEPTUNIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLAR_ARRAY_TRANSNEPTUNIAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_ARRAY_TRANSNEPTUNIAN</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -251,7 +244,6 @@
 			<Type>BUILDING_DEEP_SPACE_ASSEMBLER</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_ASSEMBLER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_ASSEMBLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_ASSEMBLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_ASSEMBLER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -278,7 +270,6 @@
 			<Type>BUILDING_DEEP_SPACE_HYDROPONICS</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_HYDROPONICS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_HYDROPONICS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_HYDROPONICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_HYDROPONICS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -303,7 +294,6 @@
 			<Type>BUILDING_DEEP_SPACE_TELESCOPE</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_TELESCOPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_TELESCOPE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_TELESCOPE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_TELESCOPE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -325,7 +315,6 @@
 			<Type>BUILDING_ORBITAL_BASE</Type>
 			<Description>TXT_KEY_BUILDING_ORBITAL_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ORBITAL_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -391,7 +380,6 @@
 			<Type>BUILDING_HOUSING_MANAGEMENT</Type>
 			<Description>TXT_KEY_BUILDING_HOUSING_MANAGEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSING_MANAGEMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HOUSING_MANAGEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_MANAGEMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -420,7 +408,6 @@
 			<Type>BUILDING_HOUSING_WORKING_CLASS</Type>
 			<Description>TXT_KEY_BUILDING_HOUSING_WORKING_CLASS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSING_WORKING_CLASS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HOUSING_WORKING_CLASS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_WORKING_CLASS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -448,7 +435,6 @@
 			<Type>BUILDING_DEEP_SPACE_PLASTEEL_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_PLASTEEL_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_PLASTEEL_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_PLASTEEL_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_PLASTEEL_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -476,7 +462,6 @@
 			<Type>BUILDING_DEEP_SPACE_SOCIAL_ENGINEERING</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_SOCIAL_ENGINEERING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_SOCIAL_ENGINEERING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_SOCIAL_ENGINEERING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_SOCIAL_ENGINEERING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -517,7 +502,6 @@
 			<Type>BUILDING_ORBITAL_VR</Type>
 			<Description>TXT_KEY_BUILDING_ORBITAL_VR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_VR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ORBITAL_VR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_VR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -551,7 +535,6 @@
 			<Type>BUILDING_DEEP_SPACE_DOCKING_BAY</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_DOCKING_BAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_DOCKING_BAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_DOCKING_BAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_DOCKING_BAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -574,7 +557,6 @@
 			<Type>BUILDING_DEEP_SPACE_RECONAISSANCE</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_RECONAISSANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_RECONAISSANCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_RECONAISSANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_RECONAISSANCE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -599,7 +581,6 @@
 			<Type>BUILDING_SICKBAY</Type>
 			<Description>TXT_KEY_BUILDING_SICKBAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SICKBAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SICKBAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SICKBAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -625,7 +606,6 @@
 			<Type>BUILDING_CONSCIOUS_SPACE_STATION</Type>
 			<Description>TXT_KEY_BUILDING_CONSCIOUS_SPACE_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONSCIOUS_SPACE_STATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CONSCIOUS_SPACE_STATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CONSCIOUS_SPACE_STATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -654,7 +634,6 @@
 			<Type>BUILDING_BIOFORMING_STUDIO</Type>
 			<Description>TXT_KEY_BUILDING_BIOFORMING_STUDIO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIOFORMING_STUDIO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BIOFORMING_STUDIO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIOFORMING_STUDIO</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -726,7 +705,6 @@
 			<Type>BUILDING_INDUSTRIALIZED_ASTEROID</Type>
 			<Description>TXT_KEY_BUILDING_INDUSTRIALIZED_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INDUSTRIALIZED_ASTEROID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_INDUSTRIALIZED_ASTEROID_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INDUSTRIALIZED_ASTEROID</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -756,7 +734,6 @@
 			<Type>BUILDING_DEEP_SPACE_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -785,7 +762,6 @@
 			<Type>BUILDING_FOCUS_SUN</Type>
 			<Description>TXT_KEY_BUILDING_FOCUS_SUN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOCUS_SUN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FOCUS_SUN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FOCUS_SUN</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -820,7 +796,6 @@
 			<Type>BUILDING_COLONY_ECOSYSTEM</Type>
 			<Description>TXT_KEY_BUILDING_COLONY_ECOSYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COLONY_ECOSYSTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COLONY_ECOSYSTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COLONY_ECOSYSTEM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -868,7 +843,6 @@
 			<Type>BUILDING_DEEP_SPACE_DEFENSES</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_DEFENSES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_DEFENSES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_DEFENSES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_DEFENSES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -894,7 +868,6 @@
 			<Type>BUILDING_JOVIAN_TROJAN_MINING</Type>
 			<Description>TXT_KEY_BUILDING_JOVIAN_TROJAN_MINING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JOVIAN_TROJAN_MINING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JOVIAN_TROJAN_MINING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JOVIAN_TROJAN_MINING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -921,7 +894,6 @@
 			<Type>BUILDING_ORBITAL_DEFENSES</Type>
 			<Description>TXT_KEY_BUILDING_ORBITAL_DEFENSES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_DEFENSES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ORBITAL_DEFENSES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_DEFENSES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -949,7 +921,6 @@
 			<Type>BUILDING_ORBITAL_SPACECRAFT_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_ORBITAL_SPACECRAFT_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_SPACECRAFT_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ORBITAL_SPACECRAFT_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_SPACECRAFT_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -984,7 +955,6 @@
 			<Type>BUILDING_FUSION_CORE</Type>
 			<Description>TXT_KEY_BUILDING_FUSION_CORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FUSION_CORE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FUSION_CORE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FUSION_CORE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1021,7 +991,6 @@
 			<Type>BUILDING_ORGANIC_VOLATILE_EXTRACTION</Type>
 			<Description>TXT_KEY_BUILDING_ORGANIC_VOLATILE_EXTRACTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORGANIC_VOLATILE_EXTRACTION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ORGANIC_VOLATILE_EXTRACTION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORGANIC_VOLATILE_EXTRACTION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1044,7 +1013,6 @@
 			<Type>BUILDING_DEEP_SPACE_MAGLEV</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_MAGLEV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_MAGLEV_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_MAGLEV_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_MAGLEV</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1067,7 +1035,6 @@
 			<Type>BUILDING_DEEP_SPACE_CLOAKING</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_CLOAKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_CLOAKING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_CLOAKING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_CLOAKING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1130,7 +1097,6 @@
 			<Type>BUILDING_DEEP_SPACE_PRISON</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_PRISON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_PRISON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_PRISON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_PRISON</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1160,7 +1126,6 @@
 			<Type>BUILDING_DEEP_SPACE_SECURITY</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_SECURITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_SECURITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_SECURITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_SECURITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1193,7 +1158,6 @@
 			<Type>BUILDING_CIRCULAR_ECONOMY</Type>
 			<Description>TXT_KEY_BUILDING_CIRCULAR_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIRCULAR_ECONOMY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CIRCULAR_ECONOMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CIRCULAR_ECONOMY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1217,7 +1181,6 @@
 			<Type>BUILDING_DEEP_SPACE_FARM</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_FARM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_FARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_FARM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1241,7 +1204,6 @@
 			<Type>BUILDING_ANTIMATTER_RESEARCH_CENTER</Type>
 			<Description>TXT_KEY_BUILDING_ANTIMATTER_RESEARCH_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANTIMATTER_RESEARCH_CENTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANTIMATTER_RESEARCH_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANTIMATTER_RESEARCH_CENTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1263,7 +1225,6 @@
 			<Type>BUILDING_DEEP_SPACE_MEGAFACTORY</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_MEGAFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_MEGAFACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_MEGAFACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_MEGAFACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1294,7 +1255,6 @@
 			<Type>BUILDING_RECREATED_ECOSYSTEM</Type>
 			<Description>TXT_KEY_BUILDING_RECREATED_ECOSYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RECREATED_ECOSYSTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RECREATED_ECOSYSTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RECREATED_ECOSYSTEM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1331,7 +1291,6 @@
 			<Type>BUILDING_CLAYTRONIC_DEEP_SPACE</Type>
 			<Description>TXT_KEY_BUILDING_CLAYTRONIC_DEEP_SPACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLAYTRONIC_DEEP_SPACE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CLAYTRONIC_DEEP_SPACE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CLAYTRONIC_DEEP_SPACE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1356,7 +1315,6 @@
 			<Type>BUILDING_SUN_SCOOP</Type>
 			<Description>TXT_KEY_BUILDING_SUN_SCOOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SUN_SCOOP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SUN_SCOOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SUN_SCOOP</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1388,7 +1346,6 @@
 			<Type>BUILDING_SUN_SCOOP_POWER_PLANT</Type>
 			<Description>TXT_KEY_BUILDING_SUN_SCOOP_POWER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SUN_SCOOP_POWER_PLANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SUN_SCOOP_POWER_PLANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SUN_SCOOP_POWER_PLANT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1416,7 +1373,6 @@
 			<Type>BUILDING_DEEP_SPACE_HOTEL</Type>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_HOTEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_HOTEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_HOTEL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1452,7 +1408,6 @@
 			<Type>BUILDING_SOLAR_IMPORTER_EXPORTER</Type>
 			<Description>TXT_KEY_BUILDING_SOLAR_IMPORTER_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_IMPORTER_EXPORTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLAR_IMPORTER_EXPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_IMPORTER_EXPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1481,7 +1436,6 @@
 			<Type>BUILDING_ALIEN_SIGNAL_DECODER</Type>
 			<Description>TXT_KEY_BUILDING_ALIEN_SIGNAL_DECODER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALIEN_SIGNAL_DECODER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ALIEN_SIGNAL_DECODER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ALIEN_SIGNAL_DECODER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1516,7 +1470,6 @@
 			<Type>BUILDING_PLANET_EXOTIC_ARCHITECTURE</Type>
 			<Description>TXT_KEY_BUILDING_PLANET_EXOTIC_ARCHITECTURE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLANET_EXOTIC_ARCHITECTURE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PLANET_EXOTIC_ARCHITECTURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PLANET_EXOTIC_ARCHITECTURE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1552,7 +1505,6 @@
 			<Type>BUILDING_SOLAR_QUANTUM_THRUSTER</Type>
 			<Description>TXT_KEY_BUILDING_SOLAR_QUANTUM_THRUSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_QUANTUM_THRUSTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLAR_QUANTUM_THRUSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_QUANTUM_THRUSTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1575,7 +1527,6 @@
 			<Type>BUILDING_TEMPERATURE_REGULATOR</Type>
 			<Description>TXT_KEY_BUILDING_TEMPERATURE_REGULATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TEMPERATURE_REGULATOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TEMPERATURE_REGULATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPERATURE_REGULATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1600,7 +1551,6 @@
 			<Type>BUILDING_COLD_FUSION2</Type>
 			<Description>TXT_KEY_BUILDING_COLD_FUSION2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COLD_FUSION2_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COLD_FUSION2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COLD_FUSION2</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1622,7 +1572,6 @@
 			<Type>BUILDING_ASCENDED_PLANET</Type>
 			<Description>TXT_KEY_BUILDING_ASCENDED_PLANET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASCENDED_PLANET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASCENDED_PLANET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASCENDED_PLANET</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1668,7 +1617,6 @@
 			<Type>BUILDING_COMPUTRONIUM_ASTEROID</Type>
 			<Description>TXT_KEY_BUILDING_COMPUTRONIUM_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COMPUTRONIUM_ASTEROID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COMPUTRONIUM_ASTEROID_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COMPUTRONIUM_ASTEROID</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1695,7 +1643,6 @@
 			<Type>BUILDING_MICROVAC</Type>
 			<Description>TXT_KEY_BUILDING_MICROVAC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MICROVAC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MICROVAC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MICROVAC</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1724,7 +1671,6 @@
 			<Type>BUILDING_PETAVERSE</Type>
 			<Description>TXT_KEY_BUILDING_PETAVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PETAVERSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PETAVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PETAVERSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1756,7 +1702,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_EDEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EDEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EDEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EDEN</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1819,7 +1764,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HALO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HALO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HALO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HALO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HALO</MovieDefineTag>
@@ -1842,7 +1786,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_LASER_STARWAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LASER_STARWAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LASER_STARWAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LASER_STARWAY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LASER_STARWAY</MovieDefineTag>
@@ -1880,7 +1823,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BRACEWELL_PROBES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BRACEWELL_PROBES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BRACEWELL_PROBES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BRACEWELL_PROBES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BRACEWELL_PROBES</MovieDefineTag>
@@ -1907,7 +1849,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SOLAR_CORE_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_CORE_PROBE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLAR_CORE_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_CORE_PROBE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_CORE_PROBE</MovieDefineTag>
@@ -1946,7 +1887,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GRAND_UNIFICATION_ACCELERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRAND_UNIFICATION_ACCELERATOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GRAND_UNIFICATION_ACCELERATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_UNIFICATION_ACCELERATOR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GRAND_UNIFICATION_ACCELERATOR</MovieDefineTag>
@@ -2005,7 +1945,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_DYSON_SPHERE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_DYSON_SPHERE</MovieDefineTag>
@@ -2049,7 +1988,6 @@
 			<Type>BUILDING_SOLAR_DYSON_SPHERE_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_DYSON_SPHERE_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2076,7 +2014,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SOLAR_MATRIOSHKA_BRAIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_MATRIOSHKA_BRAIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLAR_MATRIOSHKA_BRAIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_MATRIOSHKA_BRAIN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_MATRIOSHKA_BRAIN</MovieDefineTag>
@@ -2122,7 +2059,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE</MovieDefineTag>
@@ -2159,7 +2095,6 @@
 			<Type>BUILDING_FUSION_CANDLE</Type>
 			<Description>TXT_KEY_BUILDING_FUSION_CANDLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FUSION_CANDLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FUSION_CANDLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FUSION_CANDLE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2200,7 +2135,6 @@
 			<Type>BUILDING_MERCURY_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_MERCURY_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MERCURY_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MERCURY_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MERCURY_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2235,7 +2169,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MERCURY_ANTIMATTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MERCURY_ANTIMATTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MERCURY_ANTIMATTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MERCURY_ANTIMATTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MERCURY_ANTIMATTER</MovieDefineTag>
@@ -2260,14 +2193,6 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_ANTIMATTER_HARVESTER</FreeBuilding>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MERCURY_COLONY</BuildingType>
 				<BuildingType>BUILDING_SOLAR_EFFECT</BuildingType>
@@ -2279,7 +2204,6 @@
 			<Type>BUILDING_MERCURY_CITY</Type>
 			<Description>TXT_KEY_BUILDING_MERCURY_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MERCURY_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MERCURY_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MERCURY_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2311,7 +2235,6 @@
 			<Type>BUILDING_MERCURY_COMET_BOMBARDMENT</Type>
 			<Description>TXT_KEY_BUILDING_MERCURY_COMET_BOMBARDMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MERCURY_COMET_BOMBARDMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MERCURY_COMET_BOMBARDMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MERCURY_COMET_BOMBARDMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2340,7 +2263,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MERCURY_SUNSHADE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MERCURY_SUNSHADE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MERCURY_SUNSHADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MERCURY_SUNSHADE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MERCURY_SUNSHADE</MovieDefineTag>
@@ -2378,7 +2300,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_MERCURY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_MERCURY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_MERCURY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_MERCURY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_MERCURY</MovieDefineTag>
@@ -2408,7 +2329,6 @@
 			<Type>BUILDING_ASTEROID_INTERIOR_CITY</Type>
 			<Description>TXT_KEY_BUILDING_ASTEROID_INTERIOR_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_INTERIOR_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASTEROID_INTERIOR_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_INTERIOR_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2445,7 +2365,6 @@
 			<Type>BUILDING_CERES_TRADING_POST</Type>
 			<Description>TXT_KEY_BUILDING_CERES_TRADING_POST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CERES_TRADING_POST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CERES_TRADING_POST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CERES_TRADING_POST</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2473,7 +2392,6 @@
 			<Type>BUILDING_ASTEROID_PIRATE_BASE</Type>
 			<Description>TXT_KEY_BUILDING_ASTEROID_PIRATE_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_PIRATE_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASTEROID_PIRATE_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_PIRATE_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2505,7 +2423,6 @@
 			<Type>BUILDING_ASTEROID_WATER_SHIELD</Type>
 			<Description>TXT_KEY_BUILDING_ASTEROID_WATER_SHIELD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_WATER_SHIELD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASTEROID_WATER_SHIELD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_WATER_SHIELD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2531,7 +2448,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MARTIAN_SUPPLY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SUPPLY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MARTIAN_SUPPLY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_SUPPLY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MARTIAN_SUPPLY</MovieDefineTag>
@@ -2596,7 +2512,6 @@
 			<Type>BUILDING_INTER_ASTEROID_CITY</Type>
 			<Description>TXT_KEY_BUILDING_INTER_ASTEROID_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTER_ASTEROID_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_INTER_ASTEROID_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTER_ASTEROID_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2629,7 +2544,6 @@
 			<Type>BUILDING_ASTEROID_EPITAXY_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_ASTEROID_EPITAXY_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_EPITAXY_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASTEROID_EPITAXY_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_EPITAXY_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2682,7 +2596,6 @@
 			<Type>BUILDING_SHELLWORLD</Type>
 			<Description>TXT_KEY_BUILDING_SHELLWORLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHELLWORLD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SHELLWORLD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHELLWORLD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2716,7 +2629,6 @@
 			<Type>BUILDING_SHELL_WORLD_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_SHELL_WORLD_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHELL_WORLD_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SHELL_WORLD_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHELL_WORLD_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2751,7 +2663,6 @@
 			<Type>BUILDING_SHELL_WORLD_FLIGHT</Type>
 			<Description>TXT_KEY_BUILDING_SHELL_WORLD_FLIGHT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHELL_WORLD_FLIGHT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SHELL_WORLD_FLIGHT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHELL_WORLD_FLIGHT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2788,7 +2699,6 @@
 			<Type>BUILDING_SHELL_WORLD_HANGING_CITY</Type>
 			<Description>TXT_KEY_BUILDING_SHELL_WORLD_HANGING_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHELL_WORLD_HANGING_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SHELL_WORLD_HANGING_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHELL_WORLD_HANGING_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2823,7 +2733,6 @@
 			<Type>BUILDING_SHELL_WORLD_LIGHTING</Type>
 			<Description>TXT_KEY_BUILDING_SHELL_WORLD_LIGHTING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHELL_WORLD_LIGHTING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SHELL_WORLD_LIGHTING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHELL_WORLD_LIGHTING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2855,7 +2764,6 @@
 			<Type>BUILDING_SHELL_WORLD_SPACEPORT</Type>
 			<Description>TXT_KEY_BUILDING_SHELL_WORLD_SPACEPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHELL_WORLD_SPACEPORT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SHELL_WORLD_SPACEPORT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHELL_WORLD_SPACEPORT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2893,7 +2801,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_CERES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_CERES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_CERES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_CERES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_CERES</MovieDefineTag>
@@ -2928,7 +2835,6 @@
 			<Type>BUILDING_CALLISTO_RESUPPLY_BASE</Type>
 			<Description>TXT_KEY_BUILDING_CALLISTO_RESUPPLY_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CALLISTO_RESUPPLY_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CALLISTO_RESUPPLY_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CALLISTO_RESUPPLY_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2960,7 +2866,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_CALLISTO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_CALLISTO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_CALLISTO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_CALLISTO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_CALLISTO</MovieDefineTag>
@@ -2990,7 +2895,6 @@
 			<Type>BUILDING_CALLISTO_NITROGEN_GENERATOR</Type>
 			<Description>TXT_KEY_BUILDING_CALLISTO_NITROGEN_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CALLISTO_NITROGEN_GENERATOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CALLISTO_NITROGEN_GENERATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CALLISTO_NITROGEN_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3017,7 +2921,6 @@
 			<Type>BUILDING_CALLISTO_NOBLE_GAS</Type>
 			<Description>TXT_KEY_BUILDING_CALLISTO_NOBLE_GAS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CALLISTO_NOBLE_GAS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CALLISTO_NOBLE_GAS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CALLISTO_NOBLE_GAS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3044,7 +2947,6 @@
 			<Type>BUILDING_CALLISTO_FLOATING_CONTINENT</Type>
 			<Description>TXT_KEY_BUILDING_CALLISTO_FLOATING_CONTINENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CALLISTO_FLOATING_CONTINENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CALLISTO_FLOATING_CONTINENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CALLISTO_FLOATING_CONTINENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3075,7 +2977,6 @@
 			<Type>BUILDING_SULPHUR_HEXAFLOURIDE</Type>
 			<Description>TXT_KEY_BUILDING_SULPHUR_HEXAFLOURIDE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SULPHUR_HEXAFLOURIDE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SULPHUR_HEXAFLOURIDE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SULPHUR_HEXAFLOURIDE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3102,7 +3003,6 @@
 			<Type>BUILDING_EUROPA_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_EUROPA_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EUROPA_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EUROPA_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EUROPA_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3138,7 +3038,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_EUROPA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_EUROPA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_EUROPA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_EUROPA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_EUROPA</MovieDefineTag>
@@ -3177,7 +3076,6 @@
 			<Type>BUILDING_EUROPA_CITY</Type>
 			<Description>TXT_KEY_BUILDING_EUROPA_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EUROPA_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EUROPA_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EUROPA_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3210,7 +3108,6 @@
 			<Type>BUILDING_EUROPA_ECOSYSTEM</Type>
 			<Description>TXT_KEY_BUILDING_EUROPA_ECOSYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EUROPA_ECOSYSTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EUROPA_ECOSYSTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EUROPA_ECOSYSTEM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3241,7 +3138,6 @@
 			<Type>BUILDING_VERTICAL_REEF</Type>
 			<Description>TXT_KEY_BUILDING_VERTICAL_REEF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VERTICAL_REEF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VERTICAL_REEF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VERTICAL_REEF</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3278,7 +3174,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_GANYMEDE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_GANYMEDE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_GANYMEDE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_GANYMEDE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_GANYMEDE</MovieDefineTag>
@@ -3308,7 +3203,6 @@
 			<Type>BUILDING_IO_BASE</Type>
 			<Description>TXT_KEY_BUILDING_IO_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IO_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_IO_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_IO_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3338,7 +3232,6 @@
 			<Type>BUILDING_IO_GEOTHERMAL</Type>
 			<Description>TXT_KEY_BUILDING_IO_GEOTHERMAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IO_GEOTHERMAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_IO_GEOTHERMAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_IO_GEOTHERMAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3376,7 +3269,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_JOVIAN_MAGNETOSPHERE_POWER_PLANT</MovieDefineTag>
@@ -3408,7 +3300,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_JUPITER_CORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JUPITER_CORE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JUPITER_CORE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JUPITER_CORE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_JUPITER_CORE</MovieDefineTag>
@@ -3444,7 +3335,6 @@
 			<Type>BUILDING_JOVIAN_ANTIMATTER_HARVESTER</Type>
 			<Description>TXT_KEY_BUILDING_JOVIAN_ANTIMATTER_HARVESTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JOVIAN_ANTIMATTER_HARVESTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JOVIAN_ANTIMATTER_HARVESTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JOVIAN_ANTIMATTER_HARVESTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3490,7 +3380,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_JUPITER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_JUPITER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_JUPITER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_JUPITER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_JUPITER</MovieDefineTag>
@@ -3527,7 +3416,6 @@
 			<Type>BUILDING_SATURN_CLOUD_CITY</Type>
 			<Description>TXT_KEY_BUILDING_SATURN_CLOUD_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SATURN_CLOUD_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SATURN_CLOUD_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SATURN_CLOUD_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3562,7 +3450,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_RHEA_MILITARY_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RHEA_MILITARY_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RHEA_MILITARY_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RHEA_MILITARY_BASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RHEA_MILITARY_BASE</MovieDefineTag>
@@ -3592,7 +3479,6 @@
 			<Type>BUILDING_SATURN_RING_ICE_MINE</Type>
 			<Description>TXT_KEY_BUILDING_SATURN_RING_ICE_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SATURN_RING_ICE_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SATURN_RING_ICE_MINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SATURN_RING_ICE_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3620,7 +3506,6 @@
 			<Type>BUILDING_RING_OF_SATURN_HOTEL</Type>
 			<Description>TXT_KEY_BUILDING_RING_OF_SATURN_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RING_OF_SATURN_HOTEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RING_OF_SATURN_HOTEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RING_OF_SATURN_HOTEL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3652,7 +3537,6 @@
 			<Type>BUILDING_ENCELADUS_BASE</Type>
 			<Description>TXT_KEY_BUILDING_ENCELADUS_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENCELADUS_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ENCELADUS_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENCELADUS_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3684,7 +3568,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_SATURN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_SATURN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_SATURN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_SATURN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_SATURN</MovieDefineTag>
@@ -3715,7 +3598,6 @@
 			<Type>BUILDING_URANUS_FLOATING_CITY</Type>
 			<Description>TXT_KEY_BUILDING_URANUS_FLOATING_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_URANUS_FLOATING_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_URANUS_FLOATING_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_URANUS_FLOATING_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3752,7 +3634,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_URANUS_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_URANUS_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_URANUS_MINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_URANUS_MINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_URANUS_MINE</MovieDefineTag>
@@ -3784,7 +3665,6 @@
 			<Type>BUILDING_LOW_G_SPORTS_ARENA</Type>
 			<Description>TXT_KEY_BUILDING_LOW_G_SPORTS_ARENA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LOW_G_SPORTS_ARENA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LOW_G_SPORTS_ARENA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LOW_G_SPORTS_ARENA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3812,7 +3692,6 @@
 			<Type>BUILDING_UMBRIEL_BASE</Type>
 			<Description>TXT_KEY_BUILDING_UMBRIEL_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UMBRIEL_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_UMBRIEL_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UMBRIEL_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3847,7 +3726,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_TITANIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_TITANIA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_TITANIA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_TITANIA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_TITANIA</MovieDefineTag>
@@ -3883,7 +3761,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_OBERON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_OBERON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_OBERON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_OBERON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_OBERON</MovieDefineTag>
@@ -3917,7 +3794,6 @@
 			<Type>BUILDING_OBERON_HEATING</Type>
 			<Description>TXT_KEY_BUILDING_OBERON_HEATING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OBERON_HEATING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_OBERON_HEATING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OBERON_HEATING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3947,7 +3823,6 @@
 			<Type>BUILDING_OBERON_MAGNETIC_FIELD</Type>
 			<Description>TXT_KEY_BUILDING_OBERON_MAGNETIC_FIELD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OBERON_MAGNETIC_FIELD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_OBERON_MAGNETIC_FIELD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OBERON_MAGNETIC_FIELD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3975,7 +3850,6 @@
 			<Type>BUILDING_URANIAN_SF6</Type>
 			<Description>TXT_KEY_BUILDING_URANIAN_SF6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_URANIAN_SF6_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_URANIAN_SF6_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_URANIAN_SF6</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4004,7 +3878,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_URANUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_URANUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_URANUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_URANUS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_URANUS</MovieDefineTag>
@@ -4038,7 +3911,6 @@
 			<Type>BUILDING_TRITON_BASE</Type>
 			<Description>TXT_KEY_BUILDING_TRITON_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRITON_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TRITON_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRITON_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4071,7 +3943,6 @@
 			<Type>BUILDING_TRITON_GEOTHERMAL</Type>
 			<Description>TXT_KEY_BUILDING_TRITON_GEOTHERMAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRITON_GEOTHERMAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TRITON_GEOTHERMAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRITON_GEOTHERMAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4100,7 +3971,6 @@
 			<Type>BUILDING_TRITON_HEAT_RING</Type>
 			<Description>TXT_KEY_BUILDING_TRITON_HEAT_RING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRITON_HEAT_RING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TRITON_HEAT_RING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRITON_HEAT_RING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4129,7 +3999,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_TRITON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_TRITON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_TRITON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_TRITON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_TRITON</MovieDefineTag>
@@ -4161,7 +4030,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TRITON_MILITARY_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRITON_MILITARY_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TRITON_MILITARY_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRITON_MILITARY_BASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRITON_MILITARY_BASE</MovieDefineTag>
@@ -4205,7 +4073,6 @@
 			<Type>BUILDING_NEPTUNE_WIND_TURBINE</Type>
 			<Description>TXT_KEY_BUILDING_NEPTUNE_WIND_TURBINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEPTUNE_WIND_TURBINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NEPTUNE_WIND_TURBINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEPTUNE_WIND_TURBINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4233,7 +4100,6 @@
 			<Type>BUILDING_NEPTUNE_VOLATILE_MINE</Type>
 			<Description>TXT_KEY_BUILDING_NEPTUNE_VOLATILE_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEPTUNE_VOLATILE_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NEPTUNE_VOLATILE_MINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEPTUNE_VOLATILE_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4271,7 +4137,6 @@
 			<Type>BUILDING_NEPTUNE_CHANDELIER_CITY</Type>
 			<Description>TXT_KEY_BUILDING_NEPTUNE_CHANDELIER_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEPTUNE_CHANDELIER_CITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NEPTUNE_CHANDELIER_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEPTUNE_CHANDELIER_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4313,7 +4178,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NEPTUNE_ORBITAL_RING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEPTUNE_ORBITAL_RING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NEPTUNE_ORBITAL_RING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEPTUNE_ORBITAL_RING</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NEPTUNE_ORBITAL_RING</MovieDefineTag>
@@ -4348,7 +4212,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_NEPTUNE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_NEPTUNE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_NEPTUNE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_NEPTUNE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_NEPTUNE</MovieDefineTag>
@@ -4385,7 +4248,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ERIS_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ERIS_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ERIS_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ERIS_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ERIS_COLONY</MovieDefineTag>
@@ -4427,7 +4289,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MAKEMAKE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAKEMAKE_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MAKEMAKE_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAKEMAKE_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAKEMAKE_COLONY</MovieDefineTag>
@@ -4470,7 +4331,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HAUMEA_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAUMEA_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HAUMEA_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HAUMEA_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HAUMEA_COLONY</MovieDefineTag>
@@ -4513,7 +4373,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_PLUTO_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLUTO_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PLUTO_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PLUTO_BASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PLUTO_BASE</MovieDefineTag>
@@ -4555,7 +4414,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_PLUTO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_PLUTO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_PLUTO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_PLUTO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_PLUTO</MovieDefineTag>
@@ -4590,7 +4448,6 @@
 			<Type>BUILDING_KBO_OUTPOST</Type>
 			<Description>TXT_KEY_BUILDING_KBO_OUTPOST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KBO_OUTPOST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KBO_OUTPOST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KBO_OUTPOST</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4636,7 +4493,6 @@
 			<Type>BUILDING_KUIPER_BELT_TETHER</Type>
 			<Description>TXT_KEY_BUILDING_KUIPER_BELT_TETHER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KUIPER_BELT_TETHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KUIPER_BELT_TETHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KUIPER_BELT_TETHER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4667,7 +4523,6 @@
 			<Type>BUILDING_KUIPER_BELT_GEOTHERMAL</Type>
 			<Description>TXT_KEY_BUILDING_KUIPER_BELT_GEOTHERMAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KUIPER_BELT_GEOTHERMAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KUIPER_BELT_GEOTHERMAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KUIPER_BELT_GEOTHERMAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4696,7 +4551,6 @@
 			<Type>BUILDING_KUIPER_BELT_FUSION</Type>
 			<Description>TXT_KEY_BUILDING_KUIPER_BELT_FUSION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KUIPER_BELT_FUSION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KUIPER_BELT_FUSION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KUIPER_BELT_FUSION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4725,7 +4579,6 @@
 			<Type>BUILDING_SLOW_INTERSTELLAR_VESSEL</Type>
 			<Description>TXT_KEY_BUILDING_SLOW_INTERSTELLAR_VESSEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLOW_INTERSTELLAR_VESSEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SLOW_INTERSTELLAR_VESSEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SLOW_INTERSTELLAR_VESSEL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4759,7 +4612,6 @@
 			<Type>BUILDING_KUIPER_BELT_INTERSTELLAR_SUPPLY</Type>
 			<Description>TXT_KEY_BUILDING_KUIPER_BELT_INTERSTELLAR_SUPPLY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KUIPER_BELT_INTERSTELLAR_SUPPLY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KUIPER_BELT_INTERSTELLAR_SUPPLY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KUIPER_BELT_INTERSTELLAR_SUPPLY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4796,7 +4648,6 @@
 			<Type>BUILDING_HILLS_CLOUD_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_HILLS_CLOUD_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HILLS_CLOUD_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HILLS_CLOUD_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HILLS_CLOUD_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4840,7 +4691,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SEDNA_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SEDNA_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SEDNA_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEDNA_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SEDNA_COLONY</MovieDefineTag>
@@ -4887,7 +4737,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PLANET_NINE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLANET_NINE_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PLANET_NINE_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PLANET_NINE_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PLANET_NINE_COLONY</MovieDefineTag>

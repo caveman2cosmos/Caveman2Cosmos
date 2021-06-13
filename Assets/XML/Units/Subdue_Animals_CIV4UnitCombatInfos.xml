@@ -83,7 +83,7 @@
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>6</Constant>
 									</Adapt>
-									</iCommerce>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
@@ -194,7 +194,7 @@
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>10</Constant>
 									</Adapt>
-									</iCommerce>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
@@ -393,7 +393,7 @@
 			<Type>UNITCOMBAT_WHALE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_WHALE</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/whales.dds</Button>
-<!--
+			<!--
 			<Actions>
 				<Action>
 					<MissionType>MISSION_ANIMAL_STUDY</MissionType>

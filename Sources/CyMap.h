@@ -48,7 +48,6 @@ public:
 	CyArea* findBiggestArea(bool bWater);
 
 	int getMapFractalFlags();
-	bool findWater(CyPlot* pPlot, int iRange, bool bFreshWater);
 	bool isPlot(int iX, int iY);
 	int numPlots();
 	int plotNum(int iX, int iY);
@@ -84,10 +83,10 @@ public:
 	CyPlot* sPlot(int iX, int iY) ;
 	CyPlot* pointToPlot(float fX, float fY);
 
-	int getIndexAfterLastArea();
 	int getNumAreas();
 	int getNumLandAreas();
 	CyArea* getArea(int iID);
+	python::list areas() const;
 	void recalculateAreas();
 	void resetPathDistance();
 

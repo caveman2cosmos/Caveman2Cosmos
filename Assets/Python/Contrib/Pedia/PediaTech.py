@@ -54,7 +54,7 @@ class PediaTech:
 		eWidJuToBuilding	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
 		eWidJuToDerTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH
 		eWidJuToProject		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT
-		eWidJuToReqTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_REQUIRED_TECH
+		#eWidJuToReqTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_REQUIRED_TECH
 		eWidJuToUnit		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT
 		ePnlBlue50	= PanelStyles.PANEL_STYLE_BLUE50
 		eFontTitle	= FontTypes.TITLE_FONT
@@ -201,20 +201,13 @@ class PediaTech:
 		n = 0
 		szChild = PF + "TECH"
 		# Tech Req
-		NUM_AND_TECH_PREREQS = GC.getNUM_AND_TECH_PREREQS()
-		NUM_OR_TECH_PREREQS = GC.getNUM_OR_TECH_PREREQS()
-
-		for i in range(NUM_AND_TECH_PREREQS):
-			iType = CvTheTechInfo.getPrereqAndTechs(i)
-			if iType != -1:
-				aList1.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
-				n += 1
+		for iType in CvTheTechInfo.getPrereqAndTechs():
+			aList1.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
+			n += 1
 		nOr = 0
-		for i in range(NUM_OR_TECH_PREREQS):
-			iType = CvTheTechInfo.getPrereqOrTechs(i)
-			if iType != -1:
-				aList2.append(iType)
-				nOr += 1
+		for iType in CvTheTechInfo.getPrereqOrTechs():
+			aList2.append(iType)
+			nOr += 1
 		if aList2:
 			if nOr > 1:
 				aList1.append(braL)
@@ -280,7 +273,7 @@ class PediaTech:
 			x = 4
 			y = H_SCROLL / 2 - 12
 			for entry in aList1:
-				NAME = entry[0]
+				#NAME = entry[0]
 				if entry[0] == "TXT":
 					x += entry[3]
 					screen.setLabelAt(aName(), Pnl, entry[1], entry[2], x, y, 0, eFontTitle, eWidGen, 0, 0)
@@ -296,17 +289,11 @@ class PediaTech:
 		for i in range(GC.getNumTechInfos()):
 			CvTechInfo = GC.getTechInfo(i)
 
-			for n in range(NUM_OR_TECH_PREREQS):
-				iType = CvTechInfo.getPrereqOrTechs(n)
-				if iType == -1:
-					break
+			for iType in CvTechInfo.getPrereqOrTechs():
 				if iType == iTheTech:
 					screen.attachImageButton(Pnl, "", CvTechInfo.getButton(), enumGBS, eWidJuToDerTech, i, 1, False)
 
-			for n in range(NUM_AND_TECH_PREREQS):
-				iType = CvTechInfo.getPrereqAndTechs(n)
-				if iType == -1:
-					break
+			for iType in CvTechInfo.getPrereqAndTechs():
 				if iType == iTheTech:
 					screen.attachImageButton(Pnl, "", CvTechInfo.getButton(), enumGBS, eWidJuToDerTech, i, 1, False)
 

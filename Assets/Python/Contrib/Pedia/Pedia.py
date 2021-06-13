@@ -1,11 +1,7 @@
 # Pedia overhauled by Toffer90 for Caveman2Cosmos.
 
 from CvPythonExtensions import *
-from string import split
-
-import ScreenInput
 import HandleInputUtil
-
 import UnitUpgradesGraph
 
 GC = CyGlobalContext()
@@ -153,6 +149,7 @@ class Pedia:
 		szCatWorldUnits			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_HERO", ())
 		szCatAnimals			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_ANIMALS", ())
 		szCatCulturalUnits		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_CULTURAL_UNITS", ())
+		szCatSpreadUnits		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SPREAD_UNITS", ())
 		szCatMiscUnits			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_MISC_UNITS", ())
 		szCatUnitTree			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_UNIT_UPGRADES", ())
 		szCatUnitCombat			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT", ())
@@ -169,6 +166,7 @@ class Pedia:
 		szCatSpecialBuildings	= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BUILDINGS_SPECIAL", ())
 		szCatRelBuildings		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS", ())
 		szCatAniBuildings		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_ANIMALISTIC_BUILDINGS", ())
+		szCatSpaceBuildings		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SPACE_BUILDINGS", ())
 		szCatBuildingTree		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BUILDING_TREE", ())
 		szCatProjects			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_PROJECT", ())
 		szCatSpecialists		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SPECIALIST", ())
@@ -178,6 +176,7 @@ class Pedia:
 		szCatBonusesMap			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BONUS_MAP", ())
 		szCatBonusesMan			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED", ())
 		szCatBonusesCult		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BONUS_CULTURE", ())
+		szCatBonusesTech		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BONUS_GENMOD", ())
 		szCatImprovements		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT", ())
 		szCatRoutes				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_ROUTES", ())
 		szCatCivs				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_CIV", ())
@@ -237,10 +236,10 @@ class Pedia:
 		szTechSubCatList = list(szEraList)
 		szTechSubCatList.append(szChronology)
 		PEDIA_SUB_CONCEPTS 		= [szCatConcepts, szCatConceptsNew, szCatStrategy, szCatShortcuts, szCatHints, szCatEras]
-		PEDIA_SUB_UNITS_2		= [szCatWorldUnits, szCatCulturalUnits, szCatAnimals, szCatMiscUnits]
+		PEDIA_SUB_UNITS_2		= [szCatWorldUnits, szCatCulturalUnits, szCatAnimals, szCatSpreadUnits, szCatMiscUnits]
 		PEDIA_SUB_PROMOTIONS	= [szCatPromotions, szCatBuildUp, szCatStatus, szCatEquipment, szCatAffliction]
-		PEDIA_SUB_BUILDINGS_2	= [szCatNationalWonders, szCatGreatWonders, szCatGroupWonders, szCatSpecialBuildings, szCatC2CCutures, szCatRelBuildings, szCatAniBuildings]
-		PEDIA_SUB_BONUSES		= [szCatBonusesMap, szCatBonusesMan, szCatBonusesCult]
+		PEDIA_SUB_BUILDINGS_2	= [szCatNationalWonders, szCatGreatWonders, szCatGroupWonders, szCatSpecialBuildings, szCatC2CCutures, szCatRelBuildings, szCatAniBuildings, szCatSpaceBuildings]
+		PEDIA_SUB_BONUSES		= [szCatBonusesMap, szCatBonusesMan, szCatBonusesCult, szCatBonusesTech]
 		PEDIA_SUB_LANDSCAPE		= [szCatTerrains, szCatFeatures, szCatNaturalWonders, szCatImprovements, szCatRoutes]
 		PEDIA_SUB_LEADERSHIP	= [szCatCivs, szCatLeaders, szCatTraits, szCatCivics, szCatReligions]
 		PEDIA_SUB_SPECIAL		= [szCatUnitCombat, szCatSpecialists, szCatProjects, szCatCorporations, szCatBuilds]
@@ -314,6 +313,7 @@ class Pedia:
 			szCatWorldUnits			: self.placeWorldUnits,
 			szCatAnimals			: self.placeAnimals,
 			szCatCulturalUnits		: self.placeCulturalUnits,
+			szCatSpreadUnits		: self.placeSpreadUnits,
 			szCatMiscUnits			: self.placeMiscUnits,
 			szCatUnitCombat			: self.placeUnitCombats,
 			szCatPromotions			: self.placePromotions,
@@ -329,6 +329,7 @@ class Pedia:
 			szCatSpecialBuildings	: self.placeSpeBuildings,
 			szCatRelBuildings		: self.placeRelBuildings,
 			szCatAniBuildings		: self.placeAniBuildings,
+			szCatSpaceBuildings		: self.placeSpaceBuildings,
 			szCatProjects			: self.placeProjects,
 			szCatSpecialists		: self.placeSpecialists,
 			szCatTerrains			: self.placeTerrains,
@@ -345,6 +346,7 @@ class Pedia:
 			szCatRoutes				: self.placeRoutes,
 			szCatBonusesMan			: self.placeManufacturedBonuses,
 			szCatBonusesCult		: self.placeCulturalBonuses,
+			szCatBonusesTech		: self.placeTechnoculturalBonuses,
 			szCatBuildingTree		: self.placeBuildingTree,
 			szCatUnitTree			: self.placeUnitTree,
 			szCatPromotionTree		: self.placePromotionTree,
@@ -472,13 +474,17 @@ class Pedia:
 			else:
 				iBonusClassType = None
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
-			aListAI = [UnitAITypes.UNITAI_MISSIONARY, UnitAITypes.UNITAI_PROPHET, UnitAITypes.UNITAI_ARTIST, UnitAITypes.UNITAI_SCIENTIST]
+			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
+			iCost = CvUnitInfo.getProductionCost()
 			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42): # 42 = UNITAI_SUBDUED_ANIMAL
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[2]
-			elif (iDefaultUnitAIType in aListAI) or (CvUnitInfo.getSpecialUnitType() == GC.getInfoTypeForString("SPECIALUNIT_CAPTIVE")):
+			elif (iDefaultUnitAIType in aListAI):
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[3]
+			elif iCost <= 0:
+				iCategory = self.PEDIA_UNITS_2
+				szSubCat = self.mapSubCat.get(iCategory)[4]
 			elif CvUnitInfo.getMaxGlobalInstances() == 1: ## World Unit
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[0]
@@ -534,11 +540,14 @@ class Pedia:
 				if CvBonusInfo.getConstAppearance() > 0:
 					## Map resource
 					szSubCat = self.mapSubCat.get(iCategory)[0]
-				elif CvBonusInfo.getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE"):
+				elif CvBonusInfo.getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE") and CvBonusInfo.getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_GENMODS"):
 					## Manufactured resource
 					szSubCat = self.mapSubCat.get(iCategory)[1]
-				else: ## Culture resource
+				elif CvBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_CULTURE"):
+					## Culture resource
 					szSubCat = self.mapSubCat.get(iCategory)[2]
+				else: ## Genmod resource
+					szSubCat = self.mapSubCat.get(iCategory)[3]
 				print "Selected: %s", CvBonusInfo.getDescription()
 
 		elif iCategory == self.PEDIA_LANDSCAPE:
@@ -735,30 +744,35 @@ class Pedia:
 	# Unit Lists
 	def placeUnits(self):
 		print "Creating item list for category: Units"
-		self.aList = self.getSortedUnitList(False, False, False, False)
+		self.aList = self.getSortedUnitList(False, False, False, False, False)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
 
 	def placeWorldUnits(self):
 		print "Creating item list for category: Heroes"
-		self.aList = self.getSortedUnitList(True, False, False, False)
+		self.aList = self.getSortedUnitList(True, False, False, False, False)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
 
 	def placeAnimals(self):
 		print "Creating item list for category: Animals"
-		self.aList = self.getSortedUnitList(False, True, False, False)
+		self.aList = self.getSortedUnitList(False, True, False, False, False)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
 
 	def placeCulturalUnits(self):
-		print "Creating item list for category: Animals"
-		self.aList = self.getSortedUnitList(False, False, True, False)
+		print "Creating item list for category: Cultural"
+		self.aList = self.getSortedUnitList(False, False, True, False, False)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
 
+	def placeSpreadUnits(self):
+		print "Creating item list for category: Corporate/Religion spreading Units"
+		self.aList = self.getSortedUnitList(False, False, False, True, False)
+		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
+		
 	def placeMiscUnits(self):
 		print "Creating item list for category: Misc Units"
-		self.aList = self.getSortedUnitList(False, False, False, True)
+		self.aList = self.getSortedUnitList(False, False, False, False, True)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
 
-	def getSortedUnitList(self, bWorld, bAnimals, bCultural, bMisc):
+	def getSortedUnitList(self, bWorld, bAnimals, bCultural, bSpread, bMisc):
 		aList = []
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
@@ -771,13 +785,19 @@ class Pedia:
 			else:
 				iBonusClassType = None
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
-			aListAI = [UnitAITypes.UNITAI_MISSIONARY, UnitAITypes.UNITAI_PROPHET, UnitAITypes.UNITAI_ARTIST, UnitAITypes.UNITAI_SCIENTIST]
+			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
+			iCost = CvUnitInfo.getProductionCost()
 			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42): # 42 = UNITAI_SUBDUED_ANIMAL
 				if bAnimals:
 					bValid = True
 				else:
 					continue
-			elif (iDefaultUnitAIType in aListAI) or (CvUnitInfo.getSpecialUnitType() == GC.getInfoTypeForString("SPECIALUNIT_CAPTIVE")):
+			elif (iDefaultUnitAIType in aListAI):
+				if bSpread:
+					bValid = True
+				else:
+					continue
+			elif iCost <= 0:
 				if bMisc:
 					bValid = True
 				else:
@@ -792,7 +812,7 @@ class Pedia:
 					bValid = True
 				else:
 					continue
-			elif bWorld or bAnimals or bCultural or bMisc:
+			elif bWorld or bAnimals or bCultural or bSpread or bMisc:
 				continue
 			elif szSubCat == self.szCatAllEras:
 				bValid = True
@@ -900,6 +920,11 @@ class Pedia:
 		print "Category: Animalistic Buildings"
 		self.aList = self.getBuildingList(6)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, GC.getBuildingInfo)
+		
+	def placeSpaceBuildings(self):
+		print "Category: Space Buildings"
+		self.aList = self.getBuildingList(7)
+		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, GC.getBuildingInfo)
 
 	def getBuildingList(self, iBuildingType):
 		aList = []
@@ -929,6 +954,9 @@ class Pedia:
 	def getBuildingType(self, CvBuildingInfo, iBuilding):
 		szStrat = CvBuildingInfo.getDescription()
 		iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
+		
+		if not CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")):
+			return 7
 		if iSpecialBuilding != -1:
 			if iSpecialBuilding == GC.getInfoTypeForString("SPECIALBUILDING_C2C_CULTURE"):
 				return 4
@@ -1043,15 +1071,24 @@ class Pedia:
 		print "Category: Culture Bonuses"
 		self.aList = self.getBonusList(2)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, GC.getBonusInfo)
+		
+	def placeTechnoculturalBonuses(self):
+		print "Category: Genmod Bonuses"
+		self.aList = self.getBonusList(3)
+		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, GC.getBonusInfo)
 
 	def getBonusList(self, iType):
 		aList = []
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
+		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
 				if not iType:
+					aList.append((szName, iBonus))
+			elif BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS:
+				if iType == 3:
 					aList.append((szName, iBonus))
 			elif BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE:
 				if iType == 2:
@@ -1085,12 +1122,6 @@ class Pedia:
 	def placeLeaders(self):
 		print "Category: Leaders"
 		self.aList = self.getSortedList(GC.getNumLeaderHeadInfos(), GC.getLeaderHeadInfo)
-		list = self.aList
-		listCopy = list[:]
-		for item in listCopy:
-			if item[1] == GC.getDefineINT("BARBARIAN_LEADER"):
-				list.remove(item)
-		self.aList = list
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_LEADER, GC.getLeaderHeadInfo)
 
 	def getLeaderList(self):
@@ -1279,19 +1310,18 @@ class Pedia:
 
 	def getItsEra(self, CvItsInfo):
 		CvTechInfo = GC.getTechInfo(CvItsInfo.getPrereqAndTech())
-		if CvTechInfo == None:
+		iCost = GC.getTechInfo(CvItsInfo.getProductionCost())
+		if CvTechInfo == None and iCost < 1:
 			iEra = 0
+		elif CvTechInfo == None and iCost >= 1:
+			iEra = 1
 		else:
 			iEra = CvTechInfo.getEra() + 1
 		i = 0
-		while True:
-			CvTechInfo = GC.getTechInfo(CvItsInfo.getPrereqAndTechs(i))
-			if CvTechInfo == None:
-				break
-			iEraTemp = CvTechInfo.getEra() + 1
+		for iType in CvItsInfo.getPrereqAndTechs():
+			iEraTemp = GC.getTechInfo(iType).getEra() + 1
 			if iEraTemp > iEra:
 				iEra = iEraTemp
-			i += 1
 		return iEra
 
 	# Interaction Functions

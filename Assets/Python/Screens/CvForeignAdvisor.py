@@ -45,13 +45,12 @@ class CvForeignAdvisor:
 			else:
 				aBonusList2.append(iBonus)
 		self.aBonusTuple = [aBonusList0, aBonusList1, aBonusList2]
-		self.bDebug = bDebug = GAME.isDebugMode()
 		self.aColMap = aColMap = {
-			"WHITE"			: GC.getInfoTypeForString("COLOR_WHITE"),
-			"YELLOW"		: GC.getInfoTypeForString("COLOR_YELLOW"),
-			"RED"			: GC.getInfoTypeForString("COLOR_RED"),
-			"GREEN"			: GC.getInfoTypeForString("COLOR_GREEN"),
-			"BLUE"			: GC.getInfoTypeForString("COLOR_BLUE"),
+			"WHITE"			: GC.getCOLOR_WHITE(),
+			"YELLOW"		: GC.getCOLOR_YELLOW(),
+			"RED"			: GC.getCOLOR_RED(),
+			"GREEN"			: GC.getCOLOR_GREEN(),
+			"BLUE"			: GC.getCOLOR_BLUE(),
 			"CYAN"			: GC.getInfoTypeForString("COLOR_CYAN"),
 			"CITY_GREEN"	: GC.getInfoTypeForString("COLOR_CITY_GREEN")
 		}
@@ -179,7 +178,8 @@ class CvForeignAdvisor:
 		self.iTeam = iTeam = GAME.getActiveTeam()
 		self.CyTeam = GC.getTeam(iTeam)
 
-		if bDebug:
+		import DebugUtils
+		if DebugUtils.isAnyDebugMode():
 			DDB = "FA_DebugDD"
 			screen.addDropDownBoxGFC(DDB, 22, 0, 300, eWidGen, 1, 1, FontTypes.GAME_FONT)
 			for iPlayerX in range(GC.getMAX_PC_PLAYERS()):
@@ -1455,7 +1455,7 @@ class CvForeignAdvisor:
 
 
 	def onClose(self):
-		del self.CyPlayer, self.iPlayer, self.CyTeam, self.iTeam, self.iResID, self.bDebug, self.InputData, \
+		del self.CyPlayer, self.iPlayer, self.CyTeam, self.iTeam, self.iResID, self.InputData, \
 			self.xRes, self.yRes, self.xMid, self.yMid, self.H_EDGE_PANEL, self.HILITE_SQUARE, \
 			self.aFontList, self.aBonusTuple, self.selectedLeaders, self.hasMet, self.tuCity, \
 			self.aColMap, self.aSmileyList, self.aDealMap, self.aRelationList, self.bRandomPers, \

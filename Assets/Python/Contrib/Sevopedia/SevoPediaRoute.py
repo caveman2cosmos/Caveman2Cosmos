@@ -1,8 +1,6 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-import CvUtil
-import ScreenInput
 import string
 
 # globals
@@ -151,10 +149,7 @@ class SevoPediaRoute:
 		if (iPrereq >= 0):
 			bFirst = False
 			screen.attachImageButton(panelName, "", gc.getBonusInfo(iPrereq).getButton(), GenericButtonSizes.BUTTON_SIZE_46, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, iPrereq, -1, False)
-		nOr = 0
-		for j in range(gc.getNUM_UNIT_PREREQ_OR_BONUSES()):
-			if (RouteInfo.getPrereqOrBonus(j) > -1):
-				nOr += 1
+		nOr = len(RouteInfo.getPrereqOrBonuses())
 		szLeftDelimeter = ""
 		szRightDelimeter = ""
 		if (not bFirst):
@@ -166,14 +161,12 @@ class SevoPediaRoute:
 		if len(szLeftDelimeter) > 0:
 			screen.attachLabel(panelName, "", szLeftDelimeter)
 		bFirst = True
-		for j in range(gc.getNUM_UNIT_PREREQ_OR_BONUSES()):
-			eBonus = RouteInfo.getPrereqOrBonus(j)
-			if (eBonus > -1):
-				if (not bFirst):
-					screen.attachLabel(panelName, "", localText.getText("TXT_KEY_OR", ()))
-				else:
-					bFirst = False
-				screen.attachImageButton(panelName, "", gc.getBonusInfo(eBonus).getButton(), GenericButtonSizes.BUTTON_SIZE_46, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, eBonus, -1, False)
+		for eBonus in RouteInfo.getPrereqOrBonuses():
+			if not bFirst:
+				screen.attachLabel(panelName, "", localText.getText("TXT_KEY_OR", ()))
+			else:
+				bFirst = False
+			screen.attachImageButton(panelName, "", gc.getBonusInfo(eBonus).getButton(), GenericButtonSizes.BUTTON_SIZE_46, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, eBonus, -1, False)
 		if len(szRightDelimeter) > 0:
 			screen.attachLabel(panelName, "", szRightDelimeter)
 

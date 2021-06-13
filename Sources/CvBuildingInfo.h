@@ -11,6 +11,9 @@
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+#include "CvPython.h"
+#include "IDValuemap.h"
+
 class BoolExpr;
 class CvArtInfoBuilding;
 class CvArtInfoMovie;
@@ -226,7 +229,10 @@ public:
 	bool isAnyUnitCombatFreeExperience() const { return m_piUnitCombatFreeExperience != NULL; }
 	bool isAnyDomainFreeExperience() const { return m_piDomainFreeExperience != NULL; }
 	int getDomainProductionModifier(int i) const;
-	int getPrereqAndTechs(int i) const;
+
+	const std::vector<TechTypes>& getPrereqAndTechs() const;
+	const python::list cyGetPrereqAndTechs() const;
+
 	int getBuildingHappinessChanges(int i) const;
 	int getPrereqNumOfBuilding(int i) const;
 
@@ -303,8 +309,12 @@ public:
 	int getHealthPercentPerPopulation() const		{ return m_iHealthPercentPerPopulation; }
 
 	int getUnitProductionModifier(int i) const;
-	int getPrereqOrVicinityBonuses(int i) const;
-	const std::vector<BonusTypes> getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
+
+	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const { return m_piPrereqOrVicinityBonuses; }
+	const python::list cyGetPrereqOrVicinityBonuses() const { return Cy::makeList(m_piPrereqOrVicinityBonuses); }
+
+	const std::vector<BonusTypes>& getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
+	const python::list cyGetPrereqOrRawVicinityBonuses() const { return Cy::makeList(m_aePrereqOrRawVicinityBonuses); }
 
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
@@ -356,12 +366,6 @@ public:
 
 	int getBonusCommercePercentChanges(int i, int j) const;
 	int* getBonusCommercePercentChangesArray(int i) const;
-
-	int getTechHappinessChanges(int i) const;
-	int* m_piTechHappinessChanges;
-
-	int getTechHealthChanges(int i) const;
-	int* m_piTechHealthChanges;
 
 	int getTechCommerceChange(int i, int j) const;
 	int* getTechCommerceChangeArray(int i) const;
@@ -431,11 +435,6 @@ public:
 	bool isDamageAttackerCapable() const;
 	bool isQuarantine() const;
 
-	//boolean vectors without delayed resolution
-	//int getFreePromoType(int i) const;
-	//int getNumFreePromoTypes() const;
-	//bool isFreePromoType(int i);
-
 	int getUnitCombatRetrainType(int i) const;
 	int getNumUnitCombatRetrainTypes() const;
 	bool isUnitCombatRetrainType(int i) const;
@@ -471,13 +470,15 @@ public:
 	int getNumTechOutbreakLevelChanges() const;
 	int getTechOutbreakLevelChange(int iTech) const;
 
-	int getNumTechHappinessTypes() const;
-	int getTechHappinessType(int iTech) const;
-	const TechModifierArray& getTechHappinessTypeArray() const { return m_aTechHappinessTypes; }
+	//int getNumTechHappinessChanges() const;
+	int getTechHappiness(TechTypes eTech) const;
+	const IDValueMap<TechTypes, int>& getTechHappinessChanges() const { return m_aTechHappinessChanges; }
+	const python::list cyGetTechHappinessChanges() const { return m_aTechHappinessChanges.makeList(); }
 
-	int getNumTechHealthTypes() const;
-	int getTechHealthType(int iTech) const;
-	const TechModifierArray& getTechHealthTypeArray() const { return m_aTechHealthTypes; }
+	//int getNumTechHealthChanges() const;
+	int getTechHealth(TechTypes eTech) const;
+	const IDValueMap<TechTypes, int>& getTechHealthChanges() const { return m_aTechHealthChanges; }
+	const python::list cyGetTechHealthChanges() const { return m_aTechHealthChanges.makeList(); }
 
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
@@ -491,14 +492,10 @@ public:
 
 	int getMaxPopAllowed() const;
 
-	//BoolExpr* getFreePromotionCondition();
+	//cost BoolExpr* getFreePromotionCondition();
 	//Struct
-	int getNumFreePromoTypes() const;
-	//FreePromoTypes& getFreePromoType(int iPromotion);
-	const FreePromoTypes& getFreePromoType(int iPromotion) const;
-
-	int getNumFreeTraitTypes() const;
-	int getFreeTraitType(int iIndex) const;
+	const std::vector<FreePromoTypes>& getFreePromoTypes() const { return m_aFreePromoTypes; }
+	const std::vector<TraitTypes>& getFreeTraitTypes() const { return m_aiFreeTraitTypes; }
 
 	int getNumHealUnitCombatTypes() const;
 	const HealUnitCombat& getHealUnitCombatType(int iUnitCombat) const;
@@ -520,13 +517,13 @@ public:
 
 	bool readPass3();
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	bool isNewCityFree(CvGameObject* pObject);
+	bool isNewCityFree(const CvGameObject* pObject);
 
-	BoolExpr* getConstructCondition() const;
+	const BoolExpr* getConstructCondition() const;
 
 	int getVictoryThreshold(int i) const;
 
@@ -587,7 +584,7 @@ protected:
 	bool m_bZoneOfControl;
 	bool m_bProtectedCulture;
 
-	int* m_piPrereqOrVicinityBonuses;
+	std::vector<BonusTypes> m_piPrereqOrVicinityBonuses;
 	std::vector<BonusTypes> m_aePrereqOrRawVicinityBonuses;
 	int* m_piUnitProductionModifier;
 	bool* m_pbPrereqOrCivics;
@@ -628,6 +625,8 @@ public:
 	//Alberts2 PrereqBonuses
 	int getNumPrereqOrBonuses() const;
 	BonusTypes getPrereqOrBonuses(int i) const;
+	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
+	const python::list cyGetPrereqOrBonuses() const;
 
 protected:
 	int m_iVictoryPrereq;
@@ -775,7 +774,7 @@ protected:
 	CvString m_szArtDefineTag;
 	CvString m_szMovieDefineTag;
 
-	int* m_piPrereqAndTechs;
+	std::vector<TechTypes> m_piPrereqAndTechs;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;
@@ -820,8 +819,8 @@ protected:
 	CvProperties m_PrereqPlayerMinProperties;
 	CvProperties m_PrereqPlayerMaxProperties;
 
-	BoolExpr* m_pExprNewCityFree;
-	BoolExpr* m_pExprConstructCondition;
+	const BoolExpr* m_pExprNewCityFree;
+	const BoolExpr* m_pExprConstructCondition;
 
 	std::vector<BuildingCommerceChange> m_aGlobalBuildingCommerceChanges;
 
@@ -878,29 +877,28 @@ protected:
 	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
-	TechModifierArray m_aTechHappinessTypes;
-	TechModifierArray m_aTechHealthTypes;
+	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
+	IDValueMap<TechTypes, int> m_aTechHealthChanges;
 
 	int** m_ppaiLocalSpecialistYieldChange;
 	int** m_ppaiLocalSpecialistCommerceChange;
 
 	std::vector<int> m_aiPrereqInCityBuildings;
 	std::vector<int> m_vPrereqNotInCityBuildings;
-	std::vector<int> m_aePrereqOrBonuses;
+	std::vector<BonusTypes> m_aePrereqOrBonuses;
 	std::vector<int> m_vPrereqOrBuilding;
 	std::vector<int> m_vReplacementBuilding;
 	std::vector<int> m_vReplacedBuilding;
 
-protected:
 	bool* m_pabHurry;
 
 	int m_iMaxPopAllowed;
 
 	/*
-	BoolExpr* m_pExprFreePromotionCondition;*/
+	const BoolExpr* m_pExprFreePromotionCondition;*/
 	//Structs
 	std::vector<FreePromoTypes> m_aFreePromoTypes;
-	std::vector<int> m_aiFreeTraitTypes;
+	std::vector<TraitTypes> m_aiFreeTraitTypes;
 	std::vector<HealUnitCombat> m_aHealUnitCombatTypes;
 	std::vector<EnabledCivilizations> m_aEnabledCivilizationTypes;
 	std::vector<BonusAidModifiers> m_aBonusAidModifiers;

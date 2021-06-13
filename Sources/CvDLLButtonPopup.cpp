@@ -9,6 +9,7 @@
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvMessageControl.h"
@@ -877,12 +878,7 @@ void CvDLLButtonPopup::OnFocus(CvPopup* pPopup, CvPopupInfo &info)
 	}
 
 	PlayerTypes ePlayer = GC.getGame().getActivePlayer();
-	if ( ePlayer != NO_PLAYER )
-	{
-		//OutputDebugString("UI interaction - popup focus\n");
-		FAssert(GET_PLAYER(ePlayer).isHuman());
-		GET_PLAYER(ePlayer).setTurnHadUIInteraction(true);
-	}
+	FAssert(GET_PLAYER(ePlayer).isHuman());
 
 	switch (info.getButtonPopupType())
 	{
@@ -990,183 +986,221 @@ void CvDLLButtonPopup::OnFocus(CvPopup* pPopup, CvPopupInfo &info)
 // returns false if popup is not launched
 bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
-	bool bLaunched = false;
-
-	//OutputDebugString("UI interaction - launch popup\n");
 	GET_PLAYER(GC.getGame().getActivePlayer()).setTurnHadUIInteraction(true);
 
 	switch (info.getButtonPopupType())
 	{
-	case BUTTONPOPUP_TEXT:
-		bLaunched = launchTextPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CHOOSEPRODUCTION:
-		bLaunched = launchProductionPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CHANGERELIGION:
-		bLaunched = launchChangeReligionPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CHOOSEELECTION:
-		bLaunched = launchChooseElectionPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_DIPLOVOTE:
-		bLaunched = launchDiploVotePopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_RAZECITY:
-		bLaunched = launchRazeCityPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_DISBANDCITY:
-		bLaunched = launchDisbandCityPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CHOOSETECH:
-		bLaunched = launchChooseTechPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CHANGECIVIC:
-		bLaunched = launchChangeCivicsPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_ALARM:
-		bLaunched = launchAlarmPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_DECLAREWARMOVE:
-		bLaunched = launchDeclareWarMovePopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CONFIRMCOMMAND:
-		bLaunched = launchConfirmCommandPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_LOADUNIT:
-		bLaunched = launchLoadUnitPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_LEADUNIT:
-		bLaunched = launchLeadUnitPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_DOESPIONAGE:
-		bLaunched = launchDoEspionagePopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_DOESPIONAGE_TARGET:
-		bLaunched = launchDoEspionageTargetPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_MAIN_MENU:
-		bLaunched = launchMainMenuPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CONFIRM_MENU:
-		bLaunched = launchConfirmMenu(pPopup, info);
-		break;
-	case BUTTONPOPUP_PYTHON_SCREEN:
-		bLaunched = launchPythonScreen(pPopup, info);
-		break;
-	case BUTTONPOPUP_DEAL_CANCELED:
-		bLaunched = launchCancelDeal(pPopup, info);
-		break;
-	case BUTTONPOPUP_PYTHON:
-		bLaunched = launchPythonPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_DETAILS:
-		bLaunched = launchDetailsPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_ADMIN:
-		bLaunched = launchAdminPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_ADMIN_PASSWORD:
-		bLaunched = launchAdminPasswordPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_EXTENDED_GAME:
-		bLaunched = launchExtendedGamePopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_DIPLOMACY:
-		bLaunched = launchDiplomacyPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_ADDBUDDY:
-		bLaunched = launchAddBuddyPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_FORCED_DISCONNECT:
-		bLaunched = launchForcedDisconnectPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_PITBOSS_DISCONNECT:
-		bLaunched = launchPitbossDisconnectPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_KICKED:
-		bLaunched = launchKickedPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_VASSAL_DEMAND_TRIBUTE:
-		bLaunched = launchVassalDemandTributePopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_VASSAL_GRANT_TRIBUTE:
-		bLaunched = launchVassalGrantTributePopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_EVENT:
-		bLaunched = launchEventPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_FREE_COLONY:
-		bLaunched = launchFreeColonyPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_LAUNCH:
-		bLaunched = launchLaunchPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_FOUND_RELIGION:
-		bLaunched = launchFoundReligionPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_GET_SAVE_FORMAT:
-		bLaunched = launchGetSaveFormatPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_SAVE_INFO_LOST:
-		bLaunched = launchGetSaveInfoLostPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_MODIFIER_RECALCULATION:
-		bLaunched = launchModifierRecalculationPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_NAME_LIST:
-		bLaunched = launchNameListPopup(pPopup, info);
-		break;
-/************************************************************************************************/
-/* Afforess	                  Start		 09/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	case BUTTONPOPUP_INVASION:
-		bLaunched = invasionPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_SELECT_UNIT:
-		bLaunched = launchSelectShadowUnitPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_SELECT_DISCOVERY_TECH:
-		bLaunched = launchSelectDiscoveryTechPopup(pPopup, info);
-		break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	case BUTTONPOPUP_CHOOSE_BUILDUP:
-		bLaunched = launchChooseBuildUpPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CHOOSE_TRAIT:
-		bLaunched = launchChooseTraitPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CHOOSE_TRAIT_NEGATIVE:
-		bLaunched = launchChooseTraitPopupNegative(pPopup, info);
-		break;
-	//ls612: Viewport Goto
-	case BUTTONPOPUP_GOTO_CITY:
-		bLaunched = launchGoToCityPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CHOOSE_MERGE_UNIT:
-		bLaunched = launchSelectMergeUnitPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CONFIRM_SPLIT_UNIT:
-		bLaunched = launchConfirmSplitUnitPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_IMPROVEMENT_UPGRADE_OPTIONS:
-		bLaunched = launchImprovementUpgradeOptionsPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CHOOSE_ARREST_UNIT:
-		bLaunched = launchSelectArrestUnitPopup(pPopup, info);
-		break;
-	case BUTTONPOPUP_CONFIRM_AMBUSH:
-		bLaunched = launchConfirmAmbushPopup(pPopup, info);
-		break;
-	default:
-		FAssert(false);
-		break;
+		case BUTTONPOPUP_TEXT:
+		{
+			return launchTextPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CHOOSEPRODUCTION:
+		{
+			return launchProductionPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CHANGERELIGION:
+		{
+			return launchChangeReligionPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CHOOSEELECTION:
+		{
+			return launchChooseElectionPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_DIPLOVOTE:
+		{
+			return launchDiploVotePopup(pPopup, info);
+		}
+		case BUTTONPOPUP_RAZECITY:
+		{
+			return launchRazeCityPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_DISBANDCITY:
+		{
+			return launchDisbandCityPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CHOOSETECH:
+		{
+			return launchChooseTechPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CHANGECIVIC:
+		{
+			return launchChangeCivicsPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_ALARM:
+		{
+			return launchAlarmPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_DECLAREWARMOVE:
+		{
+			return launchDeclareWarMovePopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CONFIRMCOMMAND:
+		{
+			return launchConfirmCommandPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_LOADUNIT:
+		{
+			return launchLoadUnitPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_LEADUNIT:
+		{
+			return launchLeadUnitPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_DOESPIONAGE:
+		{
+			return launchDoEspionagePopup(pPopup, info);
+		}
+		case BUTTONPOPUP_DOESPIONAGE_TARGET:
+		{
+			return launchDoEspionageTargetPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_MAIN_MENU:
+		{
+			return launchMainMenuPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CONFIRM_MENU:
+		{
+			return launchConfirmMenu(pPopup, info);
+		}
+		case BUTTONPOPUP_PYTHON_SCREEN:
+		{
+			return launchPythonScreen(pPopup, info);
+		}
+		case BUTTONPOPUP_DEAL_CANCELED:
+		{
+			return launchCancelDeal(pPopup, info);
+		}
+		case BUTTONPOPUP_PYTHON:
+		{
+			return launchPythonPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_DETAILS:
+		{
+			return launchDetailsPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_ADMIN:
+		{
+			return launchAdminPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_ADMIN_PASSWORD:
+		{
+			return launchAdminPasswordPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_EXTENDED_GAME:
+		{
+			return launchExtendedGamePopup(pPopup, info);
+		}
+		case BUTTONPOPUP_DIPLOMACY:
+		{
+			return launchDiplomacyPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_ADDBUDDY:
+		{
+			return launchAddBuddyPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_FORCED_DISCONNECT:
+		{
+			return launchForcedDisconnectPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_PITBOSS_DISCONNECT:
+		{
+			return launchPitbossDisconnectPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_KICKED:
+		{
+			return launchKickedPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_VASSAL_DEMAND_TRIBUTE:
+		{
+			return launchVassalDemandTributePopup(pPopup, info);
+		}
+		case BUTTONPOPUP_VASSAL_GRANT_TRIBUTE:
+		{
+			return launchVassalGrantTributePopup(pPopup, info);
+		}
+		case BUTTONPOPUP_EVENT:
+		{
+			return launchEventPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_FREE_COLONY:
+		{
+			return launchFreeColonyPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_LAUNCH:
+		{
+			return launchLaunchPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_FOUND_RELIGION:
+		{
+			return launchFoundReligionPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_GET_SAVE_FORMAT:
+		{
+			return launchGetSaveFormatPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_SAVE_INFO_LOST:
+		{
+			return launchGetSaveInfoLostPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_MODIFIER_RECALCULATION:
+		{
+			return launchModifierRecalculationPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_NAME_LIST:
+		{
+			return launchNameListPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_INVASION:
+		{
+			return invasionPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_SELECT_UNIT:
+		{
+			return launchSelectShadowUnitPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_SELECT_DISCOVERY_TECH:
+		{
+			return launchSelectDiscoveryTechPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CHOOSE_BUILDUP:
+		{
+			return launchChooseBuildUpPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CHOOSE_TRAIT:
+		{
+			return launchChooseTraitPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CHOOSE_TRAIT_NEGATIVE:
+		{
+			return launchChooseTraitPopupNegative(pPopup, info);
+		}
+		case BUTTONPOPUP_GOTO_CITY:
+		{
+			return launchGoToCityPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CHOOSE_MERGE_UNIT:
+		{
+			return launchSelectMergeUnitPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CONFIRM_SPLIT_UNIT:
+		{
+			return launchConfirmSplitUnitPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_IMPROVEMENT_UPGRADE_OPTIONS:
+		{
+			return launchImprovementUpgradeOptionsPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CHOOSE_ARREST_UNIT:
+		{
+			return launchSelectArrestUnitPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_CONFIRM_AMBUSH:
+		{
+			return launchConfirmAmbushPopup(pPopup, info);
+		}
+		default: FAssert(false);
 	}
-	return (bLaunched);
+	return false;
 }
 
 
@@ -1479,7 +1513,6 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		for (size_t projectIdx = 0; projectIdx < projects.size(); projectIdx++)
 		{
 			const ProjectBuildItem& projectBuildItem = projects[projectIdx];
-			const CvProjectInfo& unitInfo = GC.getProjectInfo(projectBuildItem.type);
 
 			// Retrieve the Index
 			if (projectBuildItem.type != eProductionProject && pCity->canCreate((ProjectTypes)projectBuildItem.type))
@@ -2170,7 +2203,7 @@ bool CvDLLButtonPopup::launchDoEspionagePopup(CvPopup* pPopup, CvPopupInfo &info
 					int iCost = GET_PLAYER(pUnit->getOwner()).getEspionageMissionCost((EspionageMissionTypes) iLoop, pPlot->getOwner(), pPlot, -1, pUnit);
 					if (iCost > 0)
 					{
-						CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", GC.getEspionageMissionInfo((EspionageMissionTypes) iLoop).getTextKeyWide(), iCost);
+						CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_COST", GC.getEspionageMissionInfo((EspionageMissionTypes) iLoop).getTextKeyWide(), iCost);
 						gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, ARTFILEMGR.getInterfaceArtInfo("ESPIONAGE_BUTTON")->getPath(), iLoop, WIDGET_HELP_ESPIONAGE_COST, iLoop, -1);
 					}
 				}
@@ -2223,7 +2256,7 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 				{
 					const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iBuilding);
 					const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iBuilding, pUnit);
-					CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kBuilding.getDescription(), iCost);
+					CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_COST", kBuilding.getDescription(), iCost);
 					gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kBuilding.getButton(), iBuilding, WIDGET_HELP_ESPIONAGE_COST, eMission, iBuilding);
 				}
 			}
@@ -2243,7 +2276,7 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 					{
 						const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo((SpecialistTypes)iSpecialist);
 						const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iSpecialist, pUnit);
-						CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kSpecialist.getDescription(), iCost);
+						CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_COST", kSpecialist.getDescription(), iCost);
 						gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kSpecialist.getButton(), iSpecialist, WIDGET_HELP_ESPIONAGE_COST, eMission, iSpecialist);
 					}
 				}
@@ -2260,7 +2293,7 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 				if (GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getProjectCount((ProjectTypes)iProject) > 0)
 				{
 					int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iProject, pUnit);
-					CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", GC.getProjectInfo((ProjectTypes)iProject).getDescription(), iCost);
+					CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_COST", GC.getProjectInfo((ProjectTypes)iProject).getDescription(), iCost);
 					gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, GC.getProjectInfo((ProjectTypes)iProject).getButton(), iProject, WIDGET_HELP_ESPIONAGE_COST, eMission, iProject);
 				}
 			}
@@ -2274,7 +2307,7 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 			{
 				const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iTech, pUnit);
 				const CvTechInfo& kTech = GC.getTechInfo((TechTypes)iTech);
-				CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kTech.getDescription(), iCost);
+				CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_COST", kTech.getDescription(), iCost);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kTech.getButton(), iTech, WIDGET_HELP_ESPIONAGE_COST, eMission, iTech);
 			}
 		}
@@ -2287,7 +2320,7 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 			{
 				const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iCivic, pUnit);
 				const CvCivicInfo& kCivic = GC.getCivicInfo((CivicTypes)iCivic);
-				CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kCivic.getDescription(), iCost);
+				CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_COST", kCivic.getDescription(), iCost);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kCivic.getButton(), iCivic, WIDGET_HELP_ESPIONAGE_COST, eMission, iCivic);
 			}
 		}
@@ -2300,7 +2333,7 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 			{
 				const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iReligion, pUnit);
 				const CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)iReligion);
-				CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kReligion.getDescription(), iCost);
+				CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_COST", kReligion.getDescription(), iCost);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kReligion.getButton(), iReligion, WIDGET_HELP_ESPIONAGE_COST, eMission, iReligion);
 			}
 		}
@@ -2318,7 +2351,7 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 			{
 				const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iReligion, pUnit);
 				const CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)iReligion);
-				CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kReligion.getDescription(), iCost);
+				CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_COST", kReligion.getDescription(), iCost);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kReligion.getButton(), iReligion, WIDGET_HELP_ESPIONAGE_COST, eMission, iReligion);
 			}
 		}
@@ -2331,7 +2364,7 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 			{
 				const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iCorp, pUnit);
 				const CvCorporationInfo& kCorp = GC.getCorporationInfo((CorporationTypes)iCorp);
-				CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", kCorp.getDescription(), iCost);
+				CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_COST", kCorp.getDescription(), iCost);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kCorp.getButton(), iCorp, WIDGET_HELP_ESPIONAGE_COST, eMission, iCorp);
 			}
 		}
@@ -3401,7 +3434,7 @@ bool CvDLLButtonPopup::launchImprovementUpgradeOptionsPopup(CvPopup* pPopup, CvP
 	const CvImprovementInfo& kImprovement = GC.getImprovementInfo((ImprovementTypes)iCurrentImprovement);
 	const TeamTypes eTeam = GET_PLAYER(GC.getGame().getActivePlayer()).getTeam();
 
-	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_IMPROVEMENT_UPGRADE_OPTIONS"));
+	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_IMPROVEMENTHELP_UPGRADE_OPTIONS"));
 
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
@@ -3431,7 +3464,7 @@ bool CvDLLButtonPopup::launchImprovementUpgradeOptionsPopup(CvPopup* pPopup, CvP
 			}
 		}
 	}
-	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_IMPROVEMENT_UPGRADE_NO"), NULL, GC.getNumImprovementInfos(), WIDGET_GENERAL);
+	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_IMPROVEMENTHELP_UPGRADE_NO"), NULL, GC.getNumImprovementInfos(), WIDGET_GENERAL);
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false);
 
 	return true;

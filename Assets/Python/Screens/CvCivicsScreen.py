@@ -103,7 +103,7 @@ class CvCivicsScreen:
 		self.Y_MID_STAT_BAR = y = Y_STAT_BAR + (H_STAT_BAR - H_EDGE)/2 - 6
 
 		# Caching
-		self.bDebug = bDebug = GAME.isDebugMode()
+		self.bDebug = GAME.isDebugMode()
 		self.iPlayer = iPlayer = GAME.getActivePlayer()
 		self.iPlayerAct = iPlayer
 		self.setActivePlayer(iPlayer)
@@ -126,7 +126,7 @@ class CvCivicsScreen:
 		screen.addPanel("StatPanel", "", "", True, True, 0, Y_STAT_BAR, xRes, H_STAT_BAR, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 		screen.addPanel("BottomPanel", "", "", True, False, 0, yRes - H_EDGE, xRes, H_EDGE, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 
-		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_CIVIC_SCREEN_UPKEEP", (self.CyPlayer.getCivicUpkeep(self.currentCivics, True), ))
+		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_CIVICHELP_SCREEN_UPKEEP", (self.CyPlayer.getCivicUpkeep(self.currentCivics, True), ))
 		screen.setLabel("", "", szTxt, 1<<2, xMid, 2, 0, eFontTitle, eWidGen, 1, 1)
 		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
 		screen.setText("CivicExit", "", szTxt, 1<<1, xRes - 8, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
@@ -157,7 +157,8 @@ class CvCivicsScreen:
 		screen.setImageButton("CivicDisplay", "Art/Interface/Buttons/general/scroll.dds", 8, 0, H_EDGE - 8, H_EDGE - 8, eWidGen, 1, 1)
 
 		# Debug
-		if GAME.isDebugMode():
+		import DebugUtils
+		if DebugUtils.isAnyDebugMode():
 			DD = "Civic_DebugDD"
 			screen.addDropDownBoxGFC(DD, H_EDGE, 0, 300, eWidGen, 1, 1, FontTypes.GAME_FONT)
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
@@ -392,7 +393,7 @@ class CvCivicsScreen:
 				CyPlayer = self.CyPlayer
 				font = self.aFontList[0]
 				iTurns = CyPlayer.getCivicAnarchyLength(self.currentCivics)
-				szTxt = TRNSLTR.getText("TXT_KEY_CIVIC_SCREEN_UPKEEP", (CyPlayer.getCivicUpkeep(self.currentCivics, True), ))
+				szTxt = TRNSLTR.getText("TXT_KEY_CIVICHELP_SCREEN_UPKEEP", (CyPlayer.getCivicUpkeep(self.currentCivics, True), ))
 				screen.setLabel("CivicsUpkeepText", "", font + szTxt, 1<<2, self.xMid, self.Y_STAT_BAR + 8, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 1)
 				szTxt = TRNSLTR.getText("TXT_KEY_ANARCHY_TURNS", (iTurns, ))
 				y = self.yRes - self.H_EDGE - 16

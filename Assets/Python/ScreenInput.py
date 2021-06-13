@@ -1,7 +1,5 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
-import CvUtil
-
 
 # Class to decipher and make screen input easy to read...
 class ScreenInput:

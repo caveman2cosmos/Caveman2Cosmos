@@ -8,8 +8,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -21,8 +20,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_ASIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -34,8 +32,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_EUROPEAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -47,8 +44,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -65,8 +61,7 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -78,8 +73,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -91,8 +85,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_OCEANIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -104,8 +97,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -122,8 +114,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -151,8 +142,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -180,8 +170,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -209,8 +198,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -238,8 +226,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -267,8 +254,7 @@
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -296,8 +282,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -325,8 +310,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -355,8 +339,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -429,8 +412,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_ASIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -503,8 +485,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_EUROPEAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -577,8 +558,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -656,8 +636,7 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -730,8 +709,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -804,8 +782,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_OCEANIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -878,8 +855,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -955,8 +931,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -969,8 +944,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_ASIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -983,8 +957,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_EUROPEAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -997,8 +970,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1016,8 +988,7 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1030,8 +1001,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1044,8 +1014,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_OCEANIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1058,8 +1027,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
+			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1077,7 +1045,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ABORIGINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ABORIGINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ABORIGINE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1114,7 +1081,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AINU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AINU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AINU_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1145,7 +1111,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AKA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AKA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AKA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1181,7 +1146,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AKKADIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AKKADIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AKKAD_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1212,7 +1176,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AMERICAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMERICAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1232,7 +1195,7 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<iCost>800</iCost>
+			<iCost>3480</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1449,7 +1412,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ANASAZI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ANASAZI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANASAZI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1486,7 +1448,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_APACHE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_APACHE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_APACHE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1523,7 +1484,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ARABIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ARABIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARABIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1582,7 +1542,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ARAWAK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ARAWAK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARAWAK_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1614,7 +1573,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ARGENTINIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ARGENTINIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARGENTINIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1646,7 +1604,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ARMENIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ARMENIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARMENIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1677,7 +1634,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ASHANTI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ASHANTI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASHANTI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1708,7 +1664,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ASSYRIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ASSYRIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASSYRIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1749,7 +1704,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ATHENIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ATHENIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ATHENIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1781,7 +1735,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AUSTRALIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AUSTRALIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AUSTRALIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1820,7 +1773,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AUSTRIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AUSTRIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AUSTRIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1857,7 +1809,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AYMARA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AYMARA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AYMARA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1894,7 +1845,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AZTEC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AZTEC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AZTEC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1945,7 +1895,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BABYLONIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BABYLONIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BABYLONIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1996,7 +1945,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BANDANESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BANDANESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BANDANESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2028,7 +1976,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BASQUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BASQUE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BASQUE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2059,7 +2006,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BELGIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BELGIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BELGIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2090,7 +2036,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BENGALI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BENGALI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BENGALI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2127,7 +2072,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BENIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BENIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BENIN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2164,7 +2108,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BERBER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BERBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BERBER_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2201,7 +2144,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BLACKFOOT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BLACKFOOT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BLACKFOOT_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2232,7 +2174,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BRAZILIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BRAZILIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BRAZILIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2276,7 +2217,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BULGARIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BULGARIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BULGARIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2307,7 +2247,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BURMESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BURMESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BURMESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2344,7 +2283,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BYZANTINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BYZANTINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BYZANTINE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2377,7 +2315,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CALIFORNIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CALIFORNIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CALIFORNIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2410,7 +2347,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CANADIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CANADIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CANADIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2464,7 +2400,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CANTONESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CANTONESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CANTONESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2495,7 +2430,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CARIB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CARIB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CARIB_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2527,7 +2461,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CARTHAGINIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CARTHAGINIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CARTHAGINIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2565,7 +2498,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CELTIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CELTIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CELTIC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2628,7 +2560,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2655,7 +2586,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CEYLONESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CEYLONESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CEYLONESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2687,7 +2617,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHAM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHAM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHAM_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2724,7 +2653,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHEROKEE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHEROKEE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHEROKEE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2761,7 +2689,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHEYENNE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHEYENNE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHEYENNE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2802,7 +2729,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHINESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHINESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHINESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2899,7 +2825,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHIPPEWA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHIPPEWA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHIPPEWA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2930,7 +2855,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHOLA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHOLA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHOLA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2961,7 +2885,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHUMASH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHUMASH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHUMASH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2993,7 +2916,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_COLOMBIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_COLOMBIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COLOMBIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3025,7 +2947,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_COMANCHE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_COMANCHE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COMANCHE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3066,7 +2987,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CONFEDERATES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CONFEDERATES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CONFEDERATE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3105,7 +3025,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CREE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CREE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CREE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3136,7 +3055,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CROATIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CROATIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROATIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3167,7 +3085,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CUBAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CUBAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CUBAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3199,7 +3116,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_DAHOMEY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_DAHOMEY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DAHOMEY_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3231,7 +3147,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_DANISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_DANISH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DANISH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3262,7 +3177,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_DENE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_DENE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DENE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3305,7 +3219,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_DUTCH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_DUTCH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DUTCH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3348,7 +3261,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_DZUNGAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_DZUNGAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DZUNGAR_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3389,13 +3301,12 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_EGYPTIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_EGYPTIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -3413,7 +3324,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3458,7 +3369,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ENGLISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ENGLISH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENGLISH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3554,7 +3464,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_EPIRUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_EPIRUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EPIRUS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3585,7 +3494,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ETHIOPIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ETHIOPIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ETHIOPIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3628,7 +3536,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_FIJIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_FIJIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIJIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3660,7 +3567,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_FINNISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_FINNISH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FINNISH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3691,7 +3597,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_FRANKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_FRANKS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FRANKS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3722,7 +3627,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_FRENCH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_FRENCH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FRENCH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3821,7 +3725,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_FULANI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_FULANI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FULANI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3858,7 +3761,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GERMAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GERMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GERMAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3929,7 +3831,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GHANA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GHANA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GHANA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3960,7 +3861,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GOTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GOTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOTH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3991,7 +3891,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GREEK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GREEK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GREEK_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4072,7 +3971,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ROMANI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ROMANI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GYPSY_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4103,7 +4001,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HAIDA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HAIDA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HAIDA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4141,7 +4038,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HAITIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HAITIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HAITIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4175,7 +4071,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HAUSA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HAUSA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HAUSA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4206,7 +4101,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HAWAIIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HAWAIIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HAWAIIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4238,7 +4132,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HERERO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HERERO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HERERO_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4275,7 +4168,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HITTITE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HITTITE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HITTITE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4306,7 +4198,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HOLY_ROMAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HOLY_ROMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HOLYROMAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4355,7 +4246,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HOPI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HOPI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HOPI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4392,7 +4282,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HUASTEC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HUASTEC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HUASTEC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4423,7 +4312,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HUN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HUN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HUN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4464,7 +4352,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HUNGARIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HUNGARIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HUNGARIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4495,7 +4382,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HURON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HURON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HURON_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4532,7 +4418,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ICELANDIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ICELANDIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ICELANDIC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4564,7 +4449,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_INCAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_INCAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INCAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4607,7 +4491,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_INDIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_INDIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INDIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4625,7 +4508,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>1104</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4674,7 +4557,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_INDONESIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_INDONESIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INDONESIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4711,7 +4593,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_INUIT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_INUIT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INUIT_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4748,7 +4629,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_IRISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_IRISH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_IRISH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4780,7 +4660,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_IROQUOIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_IROQUOIS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_IROQUOIS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4817,7 +4696,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ISRAELI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ISRAELI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ISRAELI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4864,7 +4742,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ITALIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ITALIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ITALIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4901,7 +4778,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_JAMAICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_JAMAICAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JAMAICAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4935,7 +4811,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_JAPANESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_JAPANESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JAPANESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -4999,7 +4874,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_JIVARO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_JIVARO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JIVARO_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5036,7 +4910,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_JOMON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_JOMON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JOMON_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5068,7 +4941,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_JORDANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_JORDANIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JORDANIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5105,7 +4977,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_JOSEON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_JOSEON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JOSEON_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5136,7 +5007,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KANEM_BORNU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KANEM_BORNU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KANEMBORNU_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5167,7 +5037,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KHMER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KHMER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KHMER_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5214,7 +5083,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KLAMATH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KLAMATH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KLAMATH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5245,7 +5113,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KONGOLESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KONGOLESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KONGOLESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5276,7 +5143,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KONJO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KONJO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KONJO_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5313,7 +5179,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KOREAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KOREAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KOREAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5360,7 +5225,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LIANGZHU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LIANGZHU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LIANGZHU_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5391,7 +5255,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LUBA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LUBA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LUBA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5428,7 +5291,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LYDIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LYDIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LYDIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5459,7 +5321,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MACEDONIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MACEDONIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MACEDONIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5490,7 +5351,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MALAYSIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MALAYSIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MALAYSIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5521,7 +5381,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MALINESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MALINESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MALINESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5566,7 +5425,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MANCHURIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MANCHURIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MANCHURIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5597,7 +5455,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MANDAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MANDAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MANDAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5628,7 +5485,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MAORI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MAORI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAORI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5660,7 +5516,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MAPUCHE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MAPUCHE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAPUCHE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5691,7 +5546,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MASAI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MASAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MASAI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5728,7 +5582,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MASSAGETAE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MASSAGETAE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MASSAGETAE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5759,7 +5612,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MAYAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MAYAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAYAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5810,7 +5662,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MERINA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MERINA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MERINA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5848,7 +5699,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MEXICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MEXICAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MEXICAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5886,7 +5736,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MINOAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MINOAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MINOAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5924,7 +5773,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MISSISSIPPIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MISSISSIPPIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MISSISSIPPI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5955,7 +5803,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MIXTEC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MIXTEC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MIXTEC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -5986,7 +5833,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MOCHE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MOCHE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MOCHE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6005,7 +5851,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6024,7 +5870,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MONGOLIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MONGOLIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MONGOLIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6065,7 +5910,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MOROCCAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MOROCCAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MOROCCAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6096,7 +5940,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MUGHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MUGHAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MUGHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6139,7 +5982,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MUTAPA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MUTAPA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MUTAPA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6176,7 +6018,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NAMA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NAMA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NAMA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6207,7 +6048,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NAVAJO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NAVAJO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NAVAJO_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6244,7 +6084,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NAZCA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NAZCA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NAZCA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6281,7 +6120,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6289,7 +6127,90 @@
 			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_NEANDERTHAL_EMBASSY</MovieDefineTag>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_STONE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_CAVES</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_ARCH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_ARCH2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM1</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM3</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM4</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_ARCH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_ARCH2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM1</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM3</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM4</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_ARCH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_ARCH2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM1</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM3</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM4</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 			</PrereqNotInCityBuildings>
@@ -6307,7 +6228,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NEPALESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NEPALESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEPAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6344,7 +6264,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NEW_ZEALANDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NEW_ZEALANDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEWZEALAND_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6377,7 +6296,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NOK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NOK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NOK_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6408,7 +6326,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NOOTKA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NOOTKA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NOOTKA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6445,7 +6362,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NORWEGIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NORWEGIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NORWEGIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6476,7 +6392,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NUBIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NUBIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NUBIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6507,7 +6422,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_OLMEC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_OLMEC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLMEC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6544,7 +6458,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_OTTOMAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_OTTOMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OTTOMAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6593,7 +6506,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PAKISTANI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PAKISTANI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PAKISTANI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6624,7 +6536,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PAPUAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PAPUAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PAPUAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6661,7 +6572,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PARTHIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PARTHIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PARTHIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6692,7 +6602,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PERSIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PERSIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PERSIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6757,7 +6666,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PHOENICIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PHOENICIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PHOENICAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6789,7 +6697,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PICTISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PICTISH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PICTISH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6820,7 +6727,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PIMA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PIMA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PIMA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6851,7 +6757,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_POLISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_POLISH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POLISH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6888,7 +6793,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_POLYNESIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_POLYNESIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POLYNESIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6919,7 +6823,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PORTUGUESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PORTUGUESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PORTUGUESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6950,7 +6853,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PRUSSIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PRUSSIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PRUSSIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6981,7 +6883,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_QIANG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_QIANG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QUANG_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7012,7 +6913,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_QUECHUA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_QUECHUA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QUECHUA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7030,7 +6930,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>3480</iCost>
+			<iCost>1104</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7049,7 +6949,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_RAPA_NUI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_RAPA_NUI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAPANUI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7087,7 +6986,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_RHODESIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_RHODESIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RHODESIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7119,7 +7017,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ROMAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ROMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ROMAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7196,7 +7093,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ROXOLANI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ROXOLANI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ROXOLANI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7227,7 +7123,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_RUSSIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_RUSSIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RUSSIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7300,7 +7195,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SAMI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SAMI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SAMI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7351,7 +7245,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SAMOAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SAMOAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SAMOAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7383,7 +7276,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SASSANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SASSANIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SASSANIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7420,7 +7312,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SAXON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SAXON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SAXON_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7451,7 +7342,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SCOTTISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SCOTTISH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCOTTISH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7494,7 +7384,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SCYTHIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SCYTHIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCYTHIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7526,7 +7415,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SEMINOLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SEMINOLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEMINOLE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7563,7 +7451,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SHANG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SHANG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHANG_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7575,7 +7462,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7594,7 +7481,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SIAMESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SIAMESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SIAMESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7641,7 +7527,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SIBERIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SIBERIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SIBERIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7680,7 +7565,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SIOUX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SIOUX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SIOUX_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7721,7 +7605,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SLOVAKIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SLOVAKIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SLOVAK_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7752,7 +7635,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SOMALI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SOMALI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOMALI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7784,7 +7666,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SONGHAI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SONGHAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SONGHAI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7815,7 +7696,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SOUTH_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SOUTH_AFRICAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOUTHAFRICAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7847,7 +7727,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SOVIET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SOVIET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOVIET_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7890,7 +7769,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SPANISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SPANISH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SPANISH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7939,7 +7817,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SPARTAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SPARTAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SPARTAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -7970,13 +7847,12 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SUMERIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SUMERIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SUMERIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -7988,7 +7864,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>708</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -8007,7 +7883,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SWAHILI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SWAHILI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SWAHILI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8038,7 +7913,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SWAZI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SWAZI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SWAZI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8069,7 +7943,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SWISS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SWISS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SWISS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8120,7 +7993,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SYRIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SYRIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SYRIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8132,7 +8004,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>836</iCost>
+			<iCost>876</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -8151,7 +8023,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TAHITIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TAHITIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TAHITIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8183,7 +8054,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TAIWANESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TAIWANESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TAIWANESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8215,7 +8085,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TAMIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TAMIL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TAMIL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8252,7 +8121,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TARASCAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TARASCAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TARASCAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8284,7 +8152,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TEXAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TEXAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEXAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8316,7 +8183,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_THAI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_THAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_THAI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8353,7 +8219,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TIBETAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TIBETAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TIBETAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8396,7 +8261,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TIMURID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TIMURID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TIMURID_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8427,7 +8291,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TLATILCO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TLATILCO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TLATILCO_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8458,7 +8321,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TLAXCALTEC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TLAXCALTEC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TLAXCALTEC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8489,7 +8351,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TOLTEC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TOLTEC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TOLTEC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8520,7 +8381,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TONGAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TONGAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TONGAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8552,7 +8412,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TOTONAC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TOTONAC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TOTONAC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8583,7 +8442,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TROJAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TROJAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TROJAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8614,7 +8472,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TUAREG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TUAREG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TUAREG_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8651,7 +8508,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TUPI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TUPI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TUPI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8688,7 +8544,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TURKMEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TURKMEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TURKMEN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8719,7 +8574,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_UIGHUR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_UIGHUR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UIGHUR_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8750,7 +8604,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_VENETIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_VENETIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENETIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8782,7 +8635,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_VENEZUELAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_VENEZUELAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENEZUELAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8813,7 +8665,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_VIETNAMESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_VIETNAMESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VIETNAMESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8831,7 +8682,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>4260</iCost>
+			<iCost>4440</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -8850,7 +8701,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_VIKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_VIKING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VIKING_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8903,7 +8753,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_WAYANA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_WAYANA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WAYANA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8934,7 +8783,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_WELSH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_WELSH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WELSH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -8965,7 +8813,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_XIONGNU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_XIONGNU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_XIONGNU_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9006,7 +8853,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_YAGHAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_YAGHAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_YAGHAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9038,7 +8884,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_YAMATO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_YAMATO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_YAMATO_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9070,7 +8915,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_YANOMAMI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_YANOMAMI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_YANOMAMI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9101,7 +8945,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_YEMENI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_YEMENI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_YEMEN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9132,7 +8975,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ZAPOTEC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ZAPOTEC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZAPOTEC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9175,7 +9017,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ZULU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ZULU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZULU_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9218,7 +9059,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ZUNI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ZUNI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZUNI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9249,7 +9089,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ABBASID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ABBASID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ABBASID_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9281,7 +9120,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ADENAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ADENAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ADENA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9313,7 +9151,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AFGHAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AFGHAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AFGHAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9345,7 +9182,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AKSUMITE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AKSUMITE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AKSUMITE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9377,7 +9213,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ALACALUFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ALACALUFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ALACALUFE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9409,7 +9244,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ALBANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ALBANIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ALBANIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9441,7 +9275,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ALEMANNIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ALEMANNIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ALEMANNI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9473,7 +9306,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ALGERIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ALGERIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ALGIER_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9505,7 +9337,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AMIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AMIS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMIS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9537,7 +9368,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ANDAMANESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ANDAMANESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANDAMANESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9569,7 +9399,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ANGOLAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ANGOLAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANGOLAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9601,7 +9430,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ARAGONESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ARAGONESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARAGON_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9633,7 +9461,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AVARIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AVARIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AVARS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9665,7 +9492,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ARVERNIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ARVERNIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AVERNI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9678,7 +9504,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9697,7 +9523,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AZANDE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AZANDE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AZANDE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9729,7 +9554,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BAHRAINI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BAHRAINI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BAHRAIN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9761,7 +9585,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BACTRIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BACTRIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BACTRIC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9793,7 +9616,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BANGLADESHI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BANGLADESHI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BANGLADESH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9825,7 +9647,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BASHKIR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BASHKIR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BASHKIR_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9857,7 +9678,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BATAVIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BATAVIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BATAVI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9889,7 +9709,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BATEK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BATEK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BATEK_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9921,7 +9740,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BAVARIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BAVARIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BAVARIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9953,7 +9771,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BEDOUIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BEDOUIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEDOUIN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -9985,7 +9802,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BELIZEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BELIZEAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BELIZE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10017,7 +9833,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BOLIVIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BOLIVIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BOLIVIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10049,7 +9864,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BRETON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BRETON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BRETON_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10081,7 +9895,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BRITON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BRITON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BRITON_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10113,7 +9926,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BURGUNDIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BURGUNDIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BURGUNDI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10145,7 +9957,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CAMBEBA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CAMBEBA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAMBEBA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10177,7 +9988,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CANARI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CANARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CANARI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10209,7 +10019,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CAPAYAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CAPAYAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAPAYAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10241,7 +10050,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CARAL_SUPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CARAL_SUPE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CARAL_SUPE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10273,7 +10081,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CATALONIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CATALONIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CATALONIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10286,7 +10093,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>836</iCost>
+			<iCost>876</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10305,7 +10112,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CELTIBERIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CELTIBERIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CELTIBERIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10337,7 +10143,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHACHAPOYA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHACHAPOYA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHACHAPOYA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10369,7 +10174,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHAVIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHAVIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHAVIN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10401,7 +10205,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHECHEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHECHEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHECHENIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10433,7 +10236,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHILEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHILEAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHILEAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10465,7 +10267,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHIMU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHIMU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHIMU_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10497,7 +10298,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KHWARAZMIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KHWARAZMIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHORESM_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10529,7 +10329,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CZECH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CZECH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CZECH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10561,7 +10360,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_DACIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_DACIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DACIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10593,7 +10391,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_DAYAK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_DAYAK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DAYAK_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10625,7 +10422,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_DRAVIDIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_DRAVIDIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRAVIDIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10657,7 +10453,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ECUADORIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ECUADORIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ECUADORIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10689,7 +10484,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ESTONIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ESTONIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ESTONIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10721,7 +10515,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ETRUSCAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ETRUSCAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ETRUSCAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10753,7 +10546,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_FATIMID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_FATIMID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FATIMID_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10785,7 +10577,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_FLEMISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_FLEMISH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLEMISH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10817,7 +10608,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_FUEGIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_FUEGIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FUEGIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10849,7 +10639,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_FURAWI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_FURAWI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FURAWI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10881,7 +10670,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GALATIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GALATIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALATIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10913,7 +10701,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GAUCHO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GAUCHO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAUCHO_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10945,7 +10732,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GEORGIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GEORGIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GEORGIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -10977,7 +10763,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GHURID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GHURID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GHURID_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11009,7 +10794,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GOKTURK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GOKTURK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOKTURK_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11041,7 +10825,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KIPCHAK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KIPCHAK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOLDEN_HORDE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11073,7 +10856,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHAMORRAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHAMORRAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GUAM_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11105,7 +10887,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GUANCHES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GUANCHES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GUANCHES_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11137,7 +10918,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GUARANI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GUARANI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GUARANI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11169,7 +10949,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GUATEMALAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GUATEMALAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GUATEMALA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11201,7 +10980,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GUYANESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GUYANESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GUYANA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11233,7 +11011,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HELVETIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HELVETIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HELVETII_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11265,7 +11042,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HEMUDU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HEMUDU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HEMUDU_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11297,7 +11073,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HIMYARITE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HIMYARITE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HIMYARITE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11329,7 +11104,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HONGKONGER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HONGKONGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HONGKONG_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11361,7 +11135,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HOPEWELL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HOPEWELL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HOPEWELL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11393,7 +11166,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HURRIANS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HURRIANS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HURRIANS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11425,7 +11197,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HYKSOSI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HYKSOSI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYKSOSI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11457,7 +11228,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ILLYRIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ILLYRIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ILLYRIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11489,7 +11259,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ILOCANO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ILOCANO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ILOCANO_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11521,7 +11290,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_INDUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_INDUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INDUS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11553,7 +11321,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_IRANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_IRANIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_IRANIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11585,7 +11352,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_IRAQI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_IRAQI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_IRAQUI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11617,7 +11383,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_JAVANESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_JAVANESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JAVANESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11649,7 +11414,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_JUTE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_JUTE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JUTES_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11681,7 +11445,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KENYAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KENYAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KENYAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11713,7 +11476,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KHAZAKH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KHAZAKH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KHAZAK_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11745,7 +11507,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KHAZAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KHAZAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KHAZARS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11777,7 +11538,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KHITAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KHITAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KHITAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11809,7 +11569,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KILLKE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KILLKE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KILLKE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11841,7 +11600,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KITARAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KITARAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KITARA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11873,7 +11631,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KOGI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KOGI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KOGI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11905,7 +11662,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KURDISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KURDISH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KURDISH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11937,7 +11693,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KUSHITE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KUSHITE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KUSH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11969,7 +11724,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KUSHAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KUSHAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KUSHAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12001,7 +11755,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KUWAITI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KUWAITI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KUWAIT_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12033,7 +11786,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LATVIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LATVIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LATVIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12065,7 +11817,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LA_PLATAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LA_PLATAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LA_PLATA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12097,7 +11848,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LEBANESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LEBANESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LEBANON_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12129,7 +11879,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LIBYAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LIBYAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LIBYAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12161,7 +11910,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LITHUANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LITHUANIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LITHUANIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12193,7 +11941,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LONGOBARDIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LONGOBARDIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LONGOBARDI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12225,7 +11972,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LULE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LULE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LULE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12238,7 +11984,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>836</iCost>
+			<iCost>876</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -12257,7 +12003,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LUNDA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LUNDA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LUNDA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12289,7 +12034,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LUSITANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LUSITANIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LUSITANI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12321,7 +12065,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MALAGASY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MALAGASY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MALAGASY_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12353,7 +12096,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MAMELUK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MAMELUK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMELUKS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12385,7 +12127,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MANI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MANI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MANI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12417,7 +12158,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MEDIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MEDIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MEDES_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12449,7 +12189,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MELANESIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MELANESIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MELANESIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12481,7 +12220,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MICRONESIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MICRONESIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MICRONESIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12513,7 +12251,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MING_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12545,7 +12282,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MITTANNI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MITTANNI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MITTANNI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12577,7 +12313,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MOCOVI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MOCOVI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MOCOVI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12609,7 +12344,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MOHAWK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MOHAWK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MOHAWK_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12641,7 +12375,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MOLLO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MOLLO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MOLLO_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12673,7 +12406,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MUISCA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MUISCA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MUISCA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12705,7 +12437,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MARIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MARIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MURRI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12737,7 +12468,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NABATEANS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NABATEANS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NABATEANS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12769,7 +12499,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NAHUA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NAHUA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NAHUA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12801,7 +12530,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NIGERIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NIGERIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NIGERIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12833,7 +12561,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NOONGAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NOONGAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NOONGAR_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12865,7 +12592,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NORMAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NORMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NORMAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12897,7 +12623,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NUMIDIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NUMIDIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NUMIDIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12929,7 +12654,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ODAWA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ODAWA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ODAWA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12961,7 +12685,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_OMANI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_OMANI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OMAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -12993,7 +12716,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_OPHIR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_OPHIR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OPHIR_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13025,7 +12747,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ORANG_ASLI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ORANG_ASLI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORANG_ASLI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13057,7 +12778,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PAIUTE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PAIUTE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PAIUTE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13089,7 +12809,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PALESTINIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PALESTINIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALESTINIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13121,7 +12840,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PANAMAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PANAMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PANAMAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13153,7 +12871,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PARAGUAYAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PARAGUAYAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PARAGUAYAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13185,7 +12902,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PASHTUN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PASHTUN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PASHTUN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13217,7 +12933,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PERUVIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PERUVIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PERUVIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13249,7 +12964,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_FILIPINO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_FILIPINO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PHILIPINO_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13281,7 +12995,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PHILISTINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PHILISTINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PHILISTINE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13313,7 +13026,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PILAGA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PILAGA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PILAGA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13345,7 +13057,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_POVERTY_POINT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_POVERTY_POINT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POVERTY_POINT_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13377,7 +13088,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_POYA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_POYA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POYA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13409,7 +13119,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PUELCHE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PUELCHE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PUELCHE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13422,7 +13131,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13441,7 +13150,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PUNTIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PUNTIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PUNTIC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13473,7 +13181,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_QIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_QIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QIN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13505,7 +13212,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_QING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_QING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QING_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13537,7 +13243,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_QUEBECKER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_QUEBECKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QUEBEC_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13569,7 +13274,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_QUERANDI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_QUERANDI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QUERANDI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13601,7 +13305,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_QULLA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_QULLA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QULLA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13633,7 +13336,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_RED_OCHER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_RED_OCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RED_OCHER_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13665,7 +13367,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SABBATEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SABBATEAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SABBATEAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13697,7 +13398,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SAFAVID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SAFAVID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SAFAVIDS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13729,7 +13429,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SAFFARID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SAFFARID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SAFFARID_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13761,7 +13460,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SAKA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SAKA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SAKA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13793,7 +13491,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SARMATIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SARMATIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SARMATIANS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13825,7 +13522,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SELJUK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SELJUK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SELJUKS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13857,7 +13553,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SEMANG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SEMANG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEMANG_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13889,7 +13584,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SENEGALI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SENEGALI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SENEGALI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13921,7 +13615,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SENNAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SENNAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SENNAR_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13953,7 +13646,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SERBIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SERBIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SERBIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -13985,7 +13677,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SICAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SICAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14017,7 +13708,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SICILIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SICILIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SICILIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14049,7 +13739,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SINTASHTA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SINTASHTA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SINTASHTA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14081,7 +13770,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SLOVENIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SLOVENIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SLOVENIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14113,7 +13801,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SUDANESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SUDANESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SUDANESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14145,7 +13832,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SUNDANESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SUNDANESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SUNDANESE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14177,7 +13863,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SURINAMESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SURINAMESE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SURINAM_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14209,7 +13894,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SWEDISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SWEDISH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SWEDISH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14241,7 +13925,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TAGALOG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TAGALOG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TAGALOG_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14273,7 +13956,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TAIRONA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TAIRONA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TAIRONA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14305,7 +13987,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TAJIK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TAJIK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TAJIKS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14337,7 +14018,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TANG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TANG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TANG_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14369,7 +14049,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TANZANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TANZANIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TANZANIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14401,7 +14080,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TASMANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TASMANIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TASMANIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14433,7 +14111,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TATAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TATAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TATARS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14465,7 +14142,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_THRACIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_THRACIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_THRACIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14497,7 +14173,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_THREE_KINGDOMS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_THREE_KINGDOMS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_THREE_KINGDOMS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14529,7 +14204,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TIWI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TIWI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TIWI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14561,7 +14235,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TOBA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TOBA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TOBA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14593,7 +14266,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TRANSOXANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TRANSOXANIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRANSOXANIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14625,7 +14297,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TUCANO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TUCANO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TUCANO_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14657,7 +14328,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TUNGUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TUNGUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TUNGUS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14670,7 +14340,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>836</iCost>
+			<iCost>876</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14689,7 +14359,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TUNISIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TUNISIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TUNISIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14721,7 +14390,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TURKISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TURKISH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TURKISH_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14753,7 +14421,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_UKRAINIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_UKRAINIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UKRAINIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14785,7 +14452,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_URUGUAYAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_URUGUAYAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_URUGUAYAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14817,7 +14483,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_UZBEK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_UZBEK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UZBEKS_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14849,7 +14514,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_VALDIVIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_VALDIVIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VALDIVIA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14881,7 +14545,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_VANATUAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_VANATUAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VANATU_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14913,7 +14576,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_VANDAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_VANDAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VANDAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14945,7 +14607,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SAUDI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SAUDI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SAUDI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -14977,7 +14638,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_WALLACHIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_WALLACHIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WALLACHIAN_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -15009,7 +14669,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_WARAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_WARAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WARAY_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -15041,7 +14700,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_WARI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_WARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WARI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -15073,7 +14731,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_WAYUU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_WAYUU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WAYUU_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -15105,7 +14762,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_XIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_XIA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_XIA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -15137,7 +14793,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_XIANBEI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_XIANBEI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_XIANBEI_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -15169,7 +14824,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_YAGUA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_YAGUA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_YAGUA_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -15201,7 +14855,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_YOLNGU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_YOLNGU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_YOLNGU_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -15233,7 +14886,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ZANZIBARI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ZANZIBARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZANZIBAR_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -15265,7 +14917,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ZENU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ZENU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZENU_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -15297,7 +14948,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ZIMBABWEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ZIMBABWEAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZIMBABWE_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>

@@ -5,7 +5,6 @@
 			<Type>BUILDING_CISLUNAR_STATION</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_STATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_STATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_STATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -23,12 +22,6 @@
 				<iYield>150</iYield>
 			</YieldChanges>
 			<iHealth>-5</iHealth>
-			<TechHealthChanges>
-				<TechHealthChange>
-					<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
-			</TechHealthChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
@@ -52,7 +45,6 @@
 			<Type>BUILDING_CISLUNAR_STORM_SHELTER</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_STORM_SHELTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_STORM_SHELTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_STORM_SHELTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_STORM_SHELTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -78,7 +70,6 @@
 			<Type>BUILDING_CISLUNAR_TELESCOPE</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_TELESCOPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_TELESCOPE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_TELESCOPE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_TELESCOPE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -97,7 +88,6 @@
 			<Type>BUILDING_CISLUNAR_AGRICULTURAL_LAB</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_AGRICULTURAL_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_AGRICULTURAL_LAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_AGRICULTURAL_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_AGRICULTURAL_LAB</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -148,7 +138,6 @@
 			<Type>BUILDING_CISLUNAR_MATERIALS_LAB</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_MATERIALS_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_MATERIALS_LAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_MATERIALS_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_MATERIALS_LAB</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -195,7 +184,6 @@
 			<Type>BUILDING_CISLUNAR_SATELLITE_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SATELLITE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SATELLITE_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_SATELLITE_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SATELLITE_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -217,7 +205,6 @@
 			<Type>BUILDING_CISLUNAR_SUPPLY_BASE</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SUPPLY_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SUPPLY_BASE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_SUPPLY_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SUPPLY_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -269,7 +256,6 @@
 			<Type>BUILDING_CISLUNAR_EMP</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_EMP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_EMP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_EMP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_EMP</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -293,7 +279,6 @@
 			<Type>BUILDING_CISLUNAR_GOV</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_GOV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_GOV_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_GOV_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_GOV</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -369,7 +354,6 @@
 			<Type>BUILDING_CISLUNAR_VR</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_VR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_VR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_VR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_VR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -401,7 +385,6 @@
 			<Type>BUILDING_SPACE_JUNK</Type>
 			<Description>TXT_KEY_BUILDING_SPACE_JUNK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPACE_JUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SPACE_JUNK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SPACE_JUNK</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -422,7 +405,6 @@
 			<Type>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -447,7 +429,6 @@
 			<Type>BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -485,7 +466,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_DRYDOCK</Description>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<Strategy>TXT_KEY_BUILDING_ORBITAL_DRYDOCK_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_DRYDOCK</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_DRYDOCK_PEDIA</Civilopedia>
@@ -525,7 +505,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_LABS</Description>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<Strategy>TXT_KEY_BUILDING_ORBITAL_LABS_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_LABS</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_LABS_PEDIA</Civilopedia>
@@ -550,7 +529,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_FACTORY</Description>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<Strategy>TXT_KEY_BUILDING_ORBITAL_FACTORY_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_FACTORY</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_FACTORY_PEDIA</Civilopedia>
@@ -588,7 +566,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA</Description>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<Strategy>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ZERO_G_SPORTS_ARENA</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Civilopedia>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA_PEDIA</Civilopedia>
@@ -607,7 +584,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB</Description>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<Strategy>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEROG_MEDICAL_LAB</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Civilopedia>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB_PEDIA</Civilopedia>
@@ -626,7 +602,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION</Description>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<Strategy>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_MICROSATELLITE_CONSTELLATION</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Civilopedia>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
@@ -645,7 +620,6 @@
 			<Type>BUILDING_DOCKING_BAY</Type>
 			<Description>TXT_KEY_BUILDING_DOCKING_BAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DOCKING_BAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DOCKING_BAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DOCKING_BAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -684,7 +658,6 @@
 			<Type>BUILDING_AEROGEL_SHIELDING</Type>
 			<Description>TXT_KEY_BUILDING_AEROGEL_SHIELDING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AEROGEL_SHIELDING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AEROGEL_SHIELDING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AEROGEL_SHIELDING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -713,7 +686,6 @@
 			<Type>BUILDING_INFLATABLE_HABITAT</Type>
 			<Description>TXT_KEY_BUILDING_INFLATABLE_HABITAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INFLATABLE_HABITAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_INFLATABLE_HABITAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INFLATABLE_HABITAT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -732,7 +704,6 @@
 			<Type>BUILDING_CISLUNAR_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SOLAR_ARRAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_SOLAR_ARRAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SOLAR_ARRAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -752,7 +723,6 @@
 			<Type>BUILDING_CISLUNAR_ION_CANNON</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ION_CANNON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ION_CANNON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_ION_CANNON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_ION_CANNON</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -775,7 +745,6 @@
 			<Type>BUILDING_TURBOLIFT</Type>
 			<Description>TXT_KEY_BUILDING_TURBOLIFT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TURBOLIFT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TURBOLIFT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TURBOLIFT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -798,7 +767,6 @@
 			<Type>BUILDING_CISLUNAR_REFUELING_STATION</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_REFUELING_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_REFUELING_STATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_REFUELING_STATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_REFUELING_STATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -832,7 +800,6 @@
 			<Type>BUILDING_CISLUNAR_ASTEROID_MINE</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ASTEROID_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ASTEROID_MINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_ASTEROID_MINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_ASTEROID_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -860,7 +827,6 @@
 			<Type>BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -880,7 +846,6 @@
 			<Type>BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -909,7 +874,6 @@
 			<Type>BUILDING_CISLUNAR_SHIELDING</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SHIELDING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SHIELDING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_SHIELDING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SHIELDING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -930,7 +894,6 @@
 			<Type>BUILDING_CISLUNAR_CLOAKING</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_CLOAKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_CLOAKING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_CLOAKING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_CLOAKING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -967,7 +930,6 @@
 			<Type>BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -996,7 +958,6 @@
 			<Type>BUILDING_CISLUNAR_HOTEL</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_HOTEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_HOTEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_HOTEL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1037,7 +998,6 @@
 			<Type>BUILDING_BIG_BANG_OBSERVATORY</Type>
 			<Description>TXT_KEY_BUILDING_BIG_BANG_OBSERVATORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIG_BANG_OBSERVATORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BIG_BANG_OBSERVATORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIG_BANG_OBSERVATORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1061,7 +1021,6 @@
 			<Type>BUILDING_CISLUNAR_BIOFACTORY</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_BIOFACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_BIOFACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_BIOFACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_BIOFACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1097,7 +1056,6 @@
 			<Type>BUILDING_CISLUNAR_SPACEPORT</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SPACEPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SPACEPORT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_SPACEPORT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SPACEPORT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1130,7 +1088,6 @@
 			<Type>BUILDING_ADVANCED_COOLING_SYSTEM</Type>
 			<Description>TXT_KEY_BUILDING_ADVANCED_COOLING_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ADVANCED_COOLING_SYSTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ADVANCED_COOLING_SYSTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ADVANCED_COOLING_SYSTEM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1153,7 +1110,6 @@
 			<Type>BUILDING_CISLUNAR_ORGANIC_COLONY</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ORGANIC_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ORGANIC_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_ORGANIC_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_ORGANIC_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1194,7 +1150,6 @@
 			<Type>BUILDING_ORBITAL_ACCELERATOR</Type>
 			<Description>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_ACCELERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1216,7 +1171,6 @@
 			<Type>BUILDING_CISLUNAR_SOCIAL_ENGINEERING</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SOCIAL_ENGINEERING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SOCIAL_ENGINEERING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_SOCIAL_ENGINEERING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SOCIAL_ENGINEERING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1262,7 +1216,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NANOSATELLITE_CONSTELLATION</Description>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
-			<Strategy>TXT_KEY_BUILDING_NANOSATELLITE_CONSTELLATION_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_NANOSATELLITE_CONSTELLATION</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Civilopedia>TXT_KEY_BUILDING_NANOSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
@@ -1282,7 +1235,6 @@
 			<Type>BUILDING_CRYONIC_BODY_STORAGE</Type>
 			<Description>TXT_KEY_BUILDING_CRYONIC_BODY_STORAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRYONIC_BODY_STORAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CRYONIC_BODY_STORAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CRYONIC_BODY_STORAGE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1312,7 +1264,6 @@
 			<Type>BUILDING_CISLUNAR_BIOLOGICAL_CORE</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_BIOLOGICAL_CORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_BIOLOGICAL_CORE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_BIOLOGICAL_CORE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_BIOLOGICAL_CORE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1340,7 +1291,6 @@
 			<Type>BUILDING_CISLUNAR_ONEILL_CYLINDER</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ONEILL_CYLINDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ONEILL_CYLINDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_ONEILL_CYLINDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_ONEILL_CYLINDER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1367,7 +1317,6 @@
 			<Type>BUILDING_CISLUNAR_DEFENSES</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_DEFENSES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_DEFENSES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_DEFENSES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_DEFENSES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1393,7 +1342,6 @@
 			<Type>BUILDING_CISLUNAR_SECURITY</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SECURITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SECURITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_SECURITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SECURITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1425,7 +1373,6 @@
 			<Type>BUILDING_CISLUNAR_QUANTUM_THRUSTERS</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_QUANTUM_THRUSTERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_QUANTUM_THRUSTERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_QUANTUM_THRUSTERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_QUANTUM_THRUSTERS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1451,7 +1398,6 @@
 			<Type>BUILDING_NUCLEAR_DAMPER</Type>
 			<Description>TXT_KEY_BUILDING_NUCLEAR_DAMPER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NUCLEAR_DAMPER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NUCLEAR_DAMPER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NUCLEAR_DAMPER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1474,7 +1420,6 @@
 			<Type>BUILDING_DYSON_HARROP_SATELLITE</Type>
 			<Description>TXT_KEY_BUILDING_DYSON_HARROP_SATELLITE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DYSON_HARROP_SATELLITE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DYSON_HARROP_SATELLITE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DYSON_HARROP_SATELLITE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1498,7 +1443,6 @@
 			<Type>BUILDING_CISLUNAR_CLAYTRONIC</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_CLAYTRONIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_CLAYTRONIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_CLAYTRONIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_CLAYTRONIC</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1522,7 +1466,6 @@
 			<Type>BUILDING_TRASH_ATOMIZER</Type>
 			<Description>TXT_KEY_BUILDING_TRASH_ATOMIZER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRASH_ATOMIZER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TRASH_ATOMIZER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRASH_ATOMIZER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1548,7 +1491,6 @@
 			<Type>BUILDING_WORMHOLE_TO_EARTH</Type>
 			<Description>TXT_KEY_BUILDING_WORMHOLE_TO_EARTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORMHOLE_TO_EARTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WORMHOLE_TO_EARTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WORMHOLE_TO_EARTH</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1574,7 +1516,6 @@
 			<Type>BUILDING_CISLUNAR_BLACK_HOLE</Type>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_BLACK_HOLE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1597,7 +1538,6 @@
 			<Type>BUILDING_DILATON_GENERATOR</Type>
 			<Description>TXT_KEY_BUILDING_DILATON_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DILATON_GENERATOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DILATON_GENERATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DILATON_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1624,7 +1564,6 @@
 			<Type>BUILDING_GIGAVERSE</Type>
 			<Description>TXT_KEY_BUILDING_GIGAVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIGAVERSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GIGAVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GIGAVERSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1656,7 +1595,6 @@
 			<Type>BUILDING_METAMORPHIC_CISLUNAR_STATION</Type>
 			<Description>TXT_KEY_BUILDING_METAMORPHIC_CISLUNAR_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAMORPHIC_CISLUNAR_STATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_METAMORPHIC_CISLUNAR_STATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METAMORPHIC_CISLUNAR_STATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1682,7 +1620,6 @@
 			<Type>BUILDING_FOOD_REPLICATOR</Type>
 			<Description>TXT_KEY_BUILDING_FOOD_REPLICATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOOD_REPLICATOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FOOD_REPLICATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FOOD_REPLICATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1705,7 +1642,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PLANET_CLOUD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLANET_CLOUD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PLANET_CLOUD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PLANET_CLOUD</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PLANET_CLOUD</MovieDefineTag>
@@ -1753,7 +1689,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_PRISON</Description>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<Strategy>TXT_KEY_BUILDING_ORBITAL_PRISON_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_PRISON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ORBITAL_PRISON</MovieDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -1776,7 +1711,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENERGY_BEAM_NETWORK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ENERGY_BEAM_NETWORK</MovieDefineTag>
@@ -1806,7 +1740,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_ANTIMATTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CISLUNAR_ANTIMATTER</MovieDefineTag>
@@ -1832,7 +1765,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SOLAR_SATELLITES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CISLUNAR_SOLAR_SATELLITES</MovieDefineTag>
@@ -1867,7 +1799,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINING_COMPLEX</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ASTEROID_MINING_COMPLEX</MovieDefineTag>
@@ -1907,7 +1838,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_L5_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_L5_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_L5_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_L5_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_L5_COLONY</MovieDefineTag>
@@ -1945,7 +1875,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_INTERPLANETARY_TRANSPORT_NETWORK</MovieDefineTag>
@@ -1978,7 +1907,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ELYSIUM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELYSIUM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELYSIUM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELYSIUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ELYSIUM</MovieDefineTag>
@@ -2023,7 +1951,6 @@
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ZEUS_CANNON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEUS_CANNON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ZEUS_CANNON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEUS_CANNON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ZEUS_CANNON</MovieDefineTag>

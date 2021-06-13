@@ -19,7 +19,7 @@
 			You can safely modify this list to change the color dropdown menus
 			for color options. You can change the text displayed in the menus by
 			adding translations for your new colors to Colors_CIV4GameText.xml
-			in the XML/Text directory. 
+			in the XML/Text directory.
 		-->
 		<arg name="colors" type="tuple">
 			"COLOR_RED",
@@ -103,7 +103,6 @@
 		<tab module="BugSystemOptionsTab"/>
 		<tab module="BugCreditsOptionsTab"/>
 	</screen>
-	<load mod="Female Missionaries"/>
 	<load mod="CaptureSlaves"/>
 	<load mod="MasterModList"/>
 	<load mod="Partisan"/>

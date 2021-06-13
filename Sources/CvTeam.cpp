@@ -3,6 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvImprovementInfo.h"
 #include "CvCity.h"
 #include "CvDeal.h"
 #include "CvDiploParameters.h"
@@ -2080,18 +2081,15 @@ bool CvTeam::isUnitBonusEnabledByTech(const CvUnitInfo& unit, const bool bNoWorl
 		}
 	}
 	bool bMet = true;
-	for (int iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++iI)
+	foreach_(const BonusTypes ePrereqBonus, unit.getPrereqOrBonuses())
 	{
-		if (NO_BONUS != unit.getPrereqOrBonuses(iI))
+		if (isHasTech((TechTypes)GC.getBonusInfo(ePrereqBonus).getTechCityTrade())
+		&& (!bNoWorldBonuses || GC.getBonusInfo(ePrereqBonus).getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE")))
 		{
-			if (isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(iI)).getTechCityTrade())
-			&& (!bNoWorldBonuses || GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(iI)).getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE")))
-			{
-				bMet = true;
-				break;
-			}
-			bMet = false;
+			bMet = true;
+			break;
 		}
+		bMet = false;
 	}
 	return bMet;
 }
@@ -5481,7 +5479,6 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 					{
 						if (GET_PLAYER((PlayerTypes)iI).isAlive())
 						{
-
 							if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 							{
 								szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_FIRST_TO_TECH", GET_PLAYER(ePlayer).getNameKey(), GC.getTechInfo(eIndex).getTextKeyWide());
@@ -5531,10 +5528,12 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 								if (pCity != NULL)
 								{
-
-									const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DISCOVERED_BONUS", GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey());
-									AddDLLMessage(pLoopPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_INFO,
-										GC.getBonusInfo(eBonus).getButton(), GC.getCOLOR_WHITE(), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
+									AddDLLMessage(
+										pLoopPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+										gDLL->getText("TXT_KEY_MISC_YOU_DISCOVERED_BONUS", GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey()),
+										"AS2D_DISCOVERBONUS", MESSAGE_TYPE_INFO, GC.getBonusInfo(eBonus).getButton(),
+										GC.getCOLOR_WHITE(), pLoopPlot->getX(), pLoopPlot->getY(), true, true
+									);
 								}
 							}
 						}
@@ -5589,23 +5588,10 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 				}
 			}
 
-
-			if (bNewValue)
+			if (bNewValue && bAnnounce && GC.getGame().isFinalInitialized() && !gDLL->GetWorldBuilderMode()
+			&& GET_PLAYER(ePlayer).getCurrentResearch() == NO_TECH && ePlayer == GC.getGame().getActivePlayer())
 			{
-				if (bAnnounce)
-				{
-					if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
-					{
-						FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
-						if (GET_PLAYER(ePlayer).isResearch() && (GET_PLAYER(ePlayer).getCurrentResearch() == NO_TECH))
-						{
-							if (ePlayer == GC.getGame().getActivePlayer())
-							{
-								GET_PLAYER(ePlayer).chooseTech(0, gDLL->getText("TXT_KEY_MISC_WHAT_TO_RESEARCH_NEXT"));
-							}
-						}
-					}
-				}
+				GET_PLAYER(ePlayer).chooseTech(0, gDLL->getText("TXT_KEY_MISC_WHAT_TO_RESEARCH_NEXT"));
 			}
 
 			if (getID() == GC.getGame().getActiveTeam())
@@ -6065,8 +6051,8 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
-		changeTechExtraBuildingHappiness((BuildingTypes)iI, GC.getBuildingInfo((BuildingTypes)iI).getTechHappinessChanges(eTech) * iChange);
-		changeTechExtraBuildingHealth((BuildingTypes)iI, GC.getBuildingInfo((BuildingTypes)iI).getTechHealthChanges(eTech) * iChange);
+		changeTechExtraBuildingHappiness((BuildingTypes)iI, GC.getBuildingInfo((BuildingTypes)iI).getTechHappiness(eTech) * iChange);
+		changeTechExtraBuildingHealth((BuildingTypes)iI, GC.getBuildingInfo((BuildingTypes)iI).getTechHealth(eTech) * iChange);
 	}
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
@@ -7416,15 +7402,13 @@ int64_t CvTeam::getTotalVictoryScore() const
 	int64_t iTotalVictoryScore = 0;
 
 	int64_t globalCulture = 0;
-	int globalThreeCityCulture = 0;
 	int globalPopulation = 0;
 	int globalWonderScore = 0;
 
 	int teamWonderScore = 0;
-	int tempScore = 0;
 
 	int totalTeamReligion = 0;
-	int totalTeamLegendaryCities = 0;
+	int totalTeamMonumentalCities = 0;
 
 	int64_t globalPowerHistory = 0;
 	int64_t teamPowerHistory = 0;
@@ -7495,7 +7479,7 @@ int64_t CvTeam::getTotalVictoryScore() const
 		}
 	}
 
-	// Get the number of legendary cities owned by this team
+	// Get the number of monumental cities owned by this team
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -7506,7 +7490,7 @@ int64_t CvTeam::getTotalVictoryScore() const
 				// -2 is correct.  We need -1 to change from 'total num' to 'last index', and -1 to get the top level.
 				if (pLoopCity->getCultureLevel() > GC.getNumCultureLevelInfos() - 2)
 				{
-					totalTeamLegendaryCities++;
+					totalTeamMonumentalCities++;
 				}
 			}
 		}
@@ -7547,10 +7531,10 @@ int64_t CvTeam::getTotalVictoryScore() const
 		}
 	}
 
-	// Add the legendary cities component
-	if (totalTeamLegendaryCities > 0)
+	// Add the monumental cities component
+	if (totalTeamMonumentalCities > 0)
 	{
-		iTotalVictoryScore += (30 * totalTeamLegendaryCities);
+		iTotalVictoryScore += (30 * totalTeamMonumentalCities);
 	}
 
 	// Add the Power component
@@ -7623,7 +7607,6 @@ void CvTeam::changeBuildingYieldChange(BuildingTypes eIndex1, YieldTypes eIndex2
 
 	if (iChange != 0)
 	{
-		const int iOldValue = getBuildingYieldChange(eIndex1, eIndex2);
 		m_ppiBuildingYieldChange[eIndex1][eIndex2] += iChange;
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -7632,7 +7615,7 @@ void CvTeam::changeBuildingYieldChange(BuildingTypes eIndex1, YieldTypes eIndex2
 			{
 				algo::for_each(GET_PLAYER((PlayerTypes)iI).cities()
 					| filtered(CvCity::fn::hasFullyActiveBuilding(eIndex1)),
-					CvCity::fn::changeBaseYieldRate(eIndex2, getBuildingYieldChange(eIndex1, eIndex2))
+					CvCity::fn::changeExtraYield(eIndex2, getBuildingYieldChange(eIndex1, eIndex2))
 				);
 			}
 		}
@@ -7962,6 +7945,7 @@ void CvTeam::recalculateModifiers()
 		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
 			m_ppiBuildingCommerceChange[iI][iJ] = 0;
+			m_ppiBuildingCommerceModifier[iI][iJ] = 0;
 		}
 		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{
@@ -7971,10 +7955,6 @@ void CvTeam::recalculateModifiers()
 		for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
 		{
 			m_ppiBuildingSpecialistChange[iI][iJ] = 0;
-		}
-		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
-		{
-			m_ppiBuildingCommerceModifier[iI][iJ] = 0;
 		}
 	}
 
@@ -7986,6 +7966,11 @@ void CvTeam::recalculateModifiers()
 	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
 	{
 		m_aiExtraMoves[iI] = 0;
+	}
+
+	for (int iI = 0, num = GC.getNumRouteInfos(); iI < num; iI++)
+	{
+		m_paiRouteChange[iI] = 0;
 	}
 	// Recalculate player modifiers
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)

@@ -176,6 +176,8 @@ public:
 	bool isInViewport() const;
 	CyPlot* cloneToViewport() const;
 
+	python::list rect(int halfWid, int halfHgt) const;
+
 private:
 	CvPlot* m_pPlot;
 	bool	m_bIsInViewportSpace;

@@ -10,7 +10,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NAITERUKOB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NAITERUKOB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NAITERUKOB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NAITERUKOB</ArtDefineTag>
 			<MapCategoryTypes>
@@ -76,7 +75,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NGAI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NGAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NGAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAI</ArtDefineTag>
 			<MapCategoryTypes>
@@ -137,7 +135,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NGAINANYOKE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NGAINANYOKE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NGAINANYOKE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINANYOKE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -204,7 +201,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NGAINAROK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NGAINAROK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NGAINAROK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINAROK</ArtDefineTag>
 			<MapCategoryTypes>
@@ -276,7 +272,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NGAINAROK_COW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NGAINAROK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NGAINAROK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINAROK_COW</ArtDefineTag>
 			<MapCategoryTypes>
@@ -317,7 +312,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NGAINAROK_PIG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NGAINAROK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NGAINAROK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINAROK_PIG</ArtDefineTag>
 			<MapCategoryTypes>
@@ -358,7 +352,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NGAINAROK_SHEEP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NGAINAROK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NGAINAROK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINAROK_SHEEP</ArtDefineTag>
 			<MapCategoryTypes>
@@ -398,7 +391,6 @@
 			<Type>BUILDING_NGAI_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_NGAI_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NGAI_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NGAI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLDOINYO</ArtDefineTag>
 			<MapCategoryTypes>

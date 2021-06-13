@@ -54,7 +54,6 @@ class BugOptionsTab:
 	def createTab(self, screen):
 		"Creates and returns the options tab"
 		screen.attachTabItem(self.tab, self.getTitle())
-		return self.tab
 
 	# Creates and returns the options tab panel with Exit and Help buttons
 	def createMainPanel(self, screen):

@@ -5320,7 +5320,7 @@ You can add the following items to a node or production:
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/NationalEpic/Crescent_NationalEpic/ishtargate.nif</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA,ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
-		<Scale>0.66</Scale>
+			<Scale>0.66</Scale>
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_NATIONAL_EPIC">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/NationalEpic/Asia_NationalEpic/NationalEpic.nif</Attribute>

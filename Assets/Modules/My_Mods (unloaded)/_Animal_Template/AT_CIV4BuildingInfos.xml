@@ -1,13 +1,12 @@
 <?xml version="1.0"?>
-	<!-- Modified by Strategyonly -->
-	<!-- ###################################################################################### -->
+<!-- Modified by Strategyonly -->
+<!-- ###################################################################################### -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_CROW_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_CROW_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -51,7 +50,6 @@
 			<Type>BUILDING_CROW_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_CROW_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -63,7 +61,6 @@
 			<Type>BUILDING_CROW_STORY</Type>
 			<Description>TXT_KEY_BUILDING_CROW_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_STORY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -99,7 +96,6 @@
 			<Type>BUILDING_CROW_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_CROW_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_STORIES</ArtDefineTag>
 			<MapCategoryTypes>
@@ -136,7 +132,6 @@
 			<Type>BUILDING_CROW_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_CROW_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_STORIES</ArtDefineTag>
 			<MapCategoryTypes>

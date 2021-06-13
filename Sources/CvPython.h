@@ -11,8 +11,6 @@
 #include "CyArgsList.h"
 #include "CvGlobals.h"
 
-class cvInternalGlobals;
-
 #define FPythonAssert(expr, moduleName, functionName) FAssertMsg(expr, CvString::format("%s.%s", moduleName, functionName).c_str()) 
 
 #define DECLARE_PY_WRAPPER(_wrapper, _class)			\
@@ -45,6 +43,15 @@ namespace Cy											\
 
 namespace Cy
 {
+	template <class Item_>
+	const python::list makeList(const std::vector<Item_>& vector)
+	{
+		python::list list = python::list();
+		foreach_(const Item_& i, vector)
+			list.append((int)i);
+		return list;
+	}
+
 	template < class Ty_ >
 	struct base_type
 	{

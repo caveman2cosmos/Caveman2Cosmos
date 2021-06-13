@@ -285,11 +285,6 @@ void CyCity::changeProduction(int iChange)
 	m_pCity->changeProduction(iChange);
 }
 
-int CyCity::getProductionModifier() const
-{
-	return m_pCity->getProductionModifier();
-}
-
 int CyCity::getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const
 {
 	return m_pCity->getCurrentProductionDifference(
@@ -565,7 +560,8 @@ CyArea* CyCity::area() const
 
 CyArea* CyCity::waterArea() const
 {
-	return new CyArea(m_pCity->waterArea());
+	CvArea* waterArea = m_pCity->waterArea();
+	return waterArea ? new CyArea(waterArea) : NULL;
 }
 
 CyPlot* CyCity::getRallyPlot() const
@@ -873,6 +869,11 @@ int CyCity::getFoodKept() const
 	return m_pCity->getFoodKept();
 }
 
+int CyCity::getMaxProductionOverflow() const
+{
+	return m_pCity->getMaxProductionOverflow();
+}
+
 int CyCity::getOverflowProduction() const
 {
 	return m_pCity->getOverflowProduction();
@@ -1138,14 +1139,9 @@ int CyCity::getSeaPlotYield(int /*YieldTypes*/ eIndex) const
 	return m_pCity->getSeaPlotYield((YieldTypes) eIndex);
 }
 
-int CyCity::getBaseYieldRate(int /*YieldTypes*/ eIndex) const
+int CyCity::getPlotYield(int /*YieldTypes*/ eIndex) const
 {
-	return m_pCity->getBaseYieldRate((YieldTypes)eIndex);
-}
-
-void CyCity::changeBaseYieldRate(int /*YieldTypes*/ eIndex, int iNewValue)
-{
-	m_pCity->changeBaseYieldRate((YieldTypes)eIndex, iNewValue);
+	return m_pCity->getPlotYield((YieldTypes)eIndex);
 }
 
 int CyCity::getBaseYieldRateModifier(int /*YieldTypes*/ eIndex, int iExtra) const

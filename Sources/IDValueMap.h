@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef IDVALUEMAP_H
+#define IDVALUEMAP_H
+
 //  $Header:
 //------------------------------------------------------------------------------------------------
 //
@@ -8,100 +11,151 @@
 //  PURPOSE: A simple mapping from ID to value as a
 //
 //------------------------------------------------------------------------------------------------
-#ifndef IDVALUEMAP_H
-#define IDVALUEMAP_H
 
-class CvXMLLoadUtility;
+#include "CvGlobals.h"
+#include "CvXMLLoadUtility.h"
 
 // The maps are assumed to be small, so a vector of pairs is used
-template <class ValueType, ValueType& defaultValue>
-class IDValueMap
-{
-public:
-	// Call this method with the XML set to the parent node
-	void read(CvXMLLoadUtility* pXML)
-	{
-		CvString szTextVal;
-		m_map.clear();
-		if (pXML->TryMoveToXmlFirstChild())
-		{
-			do
-			{
-				if (pXML->TryMoveToXmlFirstChild())
-				{
-					pXML->GetXmlVal(szTextVal);
-					const int iID = GC.getOrCreateInfoTypeForString(szTextVal);
-					ValueType val = defaultValue;
-					pXML->GetNextXmlVal(&val);
-					setValue(iID, val);
 
-					pXML->MoveToXmlParent();
-				}
-			} while (pXML->TryMoveToXmlNextSibling());
+template <class ID_, class Value_, Value_ defaultValue = static_cast<Value_>(0)>
+struct IDValueMap
+{
+	typedef std::pair<ID_, Value_> pair_t;
+
+	void read(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName)
+	{
+		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
+		{
+			m_map.clear();
+			if (pXML->TryMoveToXmlFirstChild())
+			{
+				do
+				{
+					if (pXML->TryMoveToXmlFirstChild())
+					{
+						CvString szTextVal;
+						pXML->GetXmlVal(szTextVal);
+						const ID_ type = (ID_)GC.getOrCreateInfoTypeForString(szTextVal);
+						Value_ value = defaultValue;
+						pXML->GetNextXmlVal(&value);
+						m_map.push_back(std::make_pair(type, value));
+						pXML->MoveToXmlParent();
+					}
+				} while (pXML->TryMoveToXmlNextSibling());
+				pXML->MoveToXmlParent();
+			}
 			pXML->MoveToXmlParent();
 		}
 	}
 
-	void copyNonDefaults(const IDValueMap<ValueType, defaultValue>* pMap)
+	void readWithDelayedResolution(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName)
 	{
-		for (unsigned int i = 0; i < pMap->m_map.size(); i++)
+		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
 		{
-			bool bNotFound = true;
-			const int iID = pMap->m_map[i].first;
-			for (unsigned int j = 0; j < m_map.size(); j++)
+			m_map.clear();
+			const int iNumSibs = pXML->GetXmlChildrenNumber();
+
+			if (iNumSibs > 0)
 			{
-				if (iID == m_map[j].first)
+				m_map.resize(iNumSibs);
+
+				if (pXML->TryMoveToXmlFirstChild())
 				{
-					bNotFound = false;
-					break;
+					foreach_(pair_t& pair, m_map)
+					{
+						CvString szTextVal;
+						if (pXML->GetChildXmlVal(szTextVal))
+						{
+							Value_ modifier = defaultValue;
+							pXML->GetNextXmlVal(&modifier);
+							pair = std::make_pair((ID_)-1, modifier);
+							GC.addDelayedResolution((int*)&pair.first, szTextVal);
+							pXML->MoveToXmlParent();
+						}
+						if (!pXML->TryMoveToXmlNextSibling())
+						{
+							break;
+						}
+					}
+					pXML->MoveToXmlParent();
 				}
 			}
-			if (bNotFound)
+			pXML->MoveToXmlParent();
+		}
+	}
+
+	void copyNonDefaults(const IDValueMap<ID_, Value_, defaultValue>& other)
+	{
+		foreach_(const pair_t& otherPair, other)
+		{
+			if (!hasValue(otherPair.first))
 			{
-				m_map.push_back(std::make_pair(iID, pMap->m_map[i].second));
+				m_map.push_back(std::make_pair(otherPair.first, otherPair.second));
 			}
 		}
 	}
 
-	void getCheckSum(unsigned int& iSum) const
+	void copyNonDefaultDelayedResolution(const IDValueMap<ID_, Value_, defaultValue>& other)
 	{
-		for (unsigned int i = 0; i < m_map.size(); i++)
+		if (m_map.empty())
 		{
-			CheckSum(iSum, m_map[i].first);
-			CheckSum(iSum, m_map[i].second);
+			const std::vector<pair_t>& otherVector = other.m_map;
+			const int num = otherVector.size();
+			m_map.resize(num);
+			for (int i = 0; i < num; i++)
+			{
+				m_map[i] = std::make_pair((ID_)-1, otherVector[i].second);
+				GC.copyNonDefaultDelayedResolution((int*)&m_map[i].first, (int*)&otherVector[i].first);
+			}
 		}
 	}
 
-	ValueType getValue(int iID) const
+	void removeDelayedResolution()
 	{
-		for (unsigned int i = 0; i < m_map.size(); i++)
-			if (m_map[i].first == iID)
-				return m_map[i].second;
+		foreach_(const pair_t& pair, m_map)
+			GC.removeDelayedResolution((int*)&pair.first);
+	}
+
+	Value_ getValue(ID_ id) const
+	{
+		foreach_(const pair_t& pair, m_map)
+			if (pair.first == id)
+				return pair.second;
 		return defaultValue;
 	}
 
-	void setValue(int iID, ValueType val)
+	bool hasValue(ID_ type) const
 	{
-		for (unsigned int i = 0; i < m_map.size(); i++)
-		{
-			if (m_map[i].first == iID)
-			{
-				m_map[i].second = val;
-				return;
-			}
-		}
-		m_map.push_back(std::make_pair(iID, val));
+		foreach_(const pair_t& pair, m_map)
+			if (pair.first == type)
+				return true;
+		return false;
 	}
 
+	const python::list makeList() const
+	{
+		python::list list = python::list();
+		foreach_(const pair_t& pair, m_map)
+			list.append(std::make_pair((int)pair.first, (int)pair.second));
+		return list;
+	}
+
+	typedef typename std::vector<pair_t>::iterator        iterator;
+	typedef typename std::vector<pair_t>::const_iterator  const_iterator;
+
+	iterator begin() { return m_map.begin(); }
+	iterator end()   { return m_map.end(); }
+
+	const_iterator begin() const { return m_map.begin(); }
+	const_iterator end() const   { return m_map.end(); }
 
 protected:
-	std::vector<std::pair<int, ValueType> > m_map;
+	std::vector<pair_t> m_map;
 };
 
-extern int g_iPercentDefault;
-extern int g_iModifierDefault;
+typedef std::pair<TechTypes, int> TechModifier;
 
-typedef IDValueMap<int, g_iPercentDefault> IDValueMapPercent;
-typedef IDValueMap<int, g_iModifierDefault> IDValueMapModifier;
+typedef IDValueMap<int, int, 100> IDValueMapPercent;
+typedef IDValueMap<int, int, 0> IDValueMapModifier;
 
 #endif

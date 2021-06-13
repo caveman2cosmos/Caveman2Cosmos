@@ -10,7 +10,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SHINTO_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHINTO_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SHINTO_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_TEMPLE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -71,7 +70,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SHINTO_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHINTO_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SHINTO_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_MONASTERY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -132,7 +130,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SHINTO_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHINTO_CATHEDRAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SHINTO_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_CATHEDRAL</ArtDefineTag>
 			<MapCategoryTypes>
@@ -209,7 +206,6 @@
 			<Type>BUILDING_SHINTO_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_SHINTO_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHINTO_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SHINTO_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_SHRINE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -259,7 +255,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MATSUMOTO_CASTLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MATSUMOTO_CASTLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MATSUMOTO_CASTLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MATSUMOTO_CASTLE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -320,7 +315,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ITSUKUSHIMA_SHRINE</ArtDefineTag>
 			<MapCategoryTypes>

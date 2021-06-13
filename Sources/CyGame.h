@@ -303,7 +303,6 @@ public:
 
 	int getCutLosersCounter() const;
 	int getHighToLowCounter() const;
-	bool cheatCodesEnabled() const;
 	void setVictoryValid(int iVictory, bool bNewVal);
 
 	bool isModderGameOption(int /*ModderGameOptionTypes*/ eIndex) const;

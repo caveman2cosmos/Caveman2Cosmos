@@ -12,9 +12,6 @@ GAME = GC.getGame()
 class CvGameUtils:
 
 	def __init__(self):
-		self.reset()
-
-	def reset(self):
 		# Cache
 		self.fScoreFreeMod = GC.getDefineINT("SCORE_FREE_PERCENT") / 100.0
 		self.SCORE_POPULATION_FACTOR = GC.getDefineINT("SCORE_POPULATION_FACTOR")
@@ -39,10 +36,6 @@ class CvGameUtils:
 
 	def isVictoryTest(self):
 		return GAME.getElapsedGameTurns() > 10
-
-	def isPlayerResearch(self, argsList):
-		ePlayer = argsList[0]
-		return True
 
 	def createBarbarianUnits(self):
 		return False
@@ -96,12 +89,6 @@ class CvGameUtils:
 		iUnitId = argsList[1]
 		iPlotX = argsList[2]
 		iPlotY = argsList[3]
-		return False
-
-	def cannotHandleAction(self, argsList):
-		pPlot = argsList[0]
-		iAction = argsList[1]
-		bTestVisible = argsList[2]
 		return False
 
 	def canBuild(self, argsList):
@@ -225,21 +212,8 @@ class CvGameUtils:
 				bFound = True
 		return False
 
-	def AI_chooseTech(self, argsList):
-		ePlayer = argsList[0]
-		bFree = argsList[1]
-		return TechTypes.NO_TECH
-
-	def AI_chooseProduction(self, argsList):
-		pCity = argsList[0]
-		return False
-
 	def AI_unitUpdate(self, argsList):
 		pUnit = argsList[0]
-		return False
-
-	def AI_doDiplo(self, argsList):
-		ePlayer = argsList[0]
 		return False
 
 	def calculateScore(self, argsList):
@@ -323,28 +297,8 @@ class CvGameUtils:
 	def doHolyCity(self):
 		return False
 
-	def doResearch(self, argsList):
-		#ePlayer = argsList[0]
-		return False
-
 	def doGoody(self, argsList):
 		#ePlayer, pPlot, pUnit, = argsList
-		return False
-
-	def doGrowth(self, argsList):
-		#pCity = argsList[0]
-		return False
-
-	def doProduction(self, argsList):
-		#pCity = argsList[0]
-		return False
-
-	def doCulture(self, argsList):
-		#pCity = argsList[0]
-		return False
-
-	def doPlotCulture(self, argsList):
-		#pCity, bUpdate, ePlayer, iCultureRate, = argsList
 		return False
 
 	def doReligion(self, argsList):
@@ -353,10 +307,6 @@ class CvGameUtils:
 
 	def cannotSpreadReligion(self, argsList):
 		#iOwner, iUnitID, iReligion, iX, iY = argsList[0]
-		return False
-
-	def doGreatPeople(self, argsList):
-		#pCity = argsList[0]
 		return False
 
 	def doMeltdown(self, argsList):
@@ -413,11 +363,6 @@ class CvGameUtils:
 
 		return int(gold)
 
-
-	def citiesDestroyFeatures(self, argsList):
-		#iX, iY = argsList
-		return True
-
 	def canFoundCitiesOnWater(self, argsList):
 		#iX, iY = argsList
 		return False
@@ -434,14 +379,6 @@ class CvGameUtils:
 	def canPickPlot(self, argsList):
 		#pPlot = argsList[0]
 		return true
-
-	def getUnitCostMod(self, argsList):
-		#iPlayer, iUnit = argsList
-		return -1
-
-	def getBuildingCostMod(self, argsList):
-		#iPlayer, iCityID, iBuilding = argsList
-		return -1
 
 	def canUpgradeAnywhere(self, argsList):
 		#pUnit = argsList
