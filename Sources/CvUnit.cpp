@@ -17330,24 +17330,19 @@ void CvUnit::changeDamagePercent(int iChange, PlayerTypes ePlayer)
 
 int CvUnit::getMoves() const
 {
-	int iMoves = m_iMoves;
-
-	iMoves *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitMovementPercent() + 100;
-	iMoves /= 100;
-
-	return iMoves;
+	return m_iMoves;
 }
 
 
 void CvUnit::setMoves(int iNewValue)
 {
-	if (getMoves() != iNewValue)
+	if (m_iMoves != iNewValue)
 	{
 		CvPlot* pPlot = plot();
 
 		m_iMoves = iNewValue;
 
-		FASSERT_NOT_NEGATIVE(getMoves())
+		FASSERT_NOT_NEGATIVE(m_iMoves)
 
 		if (getTeam() == GC.getGame().getActiveTeam())
 		{
@@ -17374,7 +17369,7 @@ void CvUnit::setMoves(int iNewValue)
 
 void CvUnit::changeMoves(int iChange)
 {
-	setMoves(getMoves() + iChange);
+	setMoves(m_iMoves + iChange);
 }
 
 

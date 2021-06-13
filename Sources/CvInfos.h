@@ -3865,7 +3865,6 @@ public:
 	int getOccupationTimePopulationPercent() const;
 	int getVictoryDelayPercent() const;
 	int getNumTurnIncrements() const;
-	int getUnitMovementPercent() const;
 
 	const GameTurnInfo& getGameTurnInfo(int iIndex) const;
 	const CvDateIncrement& getDateIncrement(int iIndex) const;
@@ -3909,8 +3908,6 @@ protected:
 	int m_iOccupationTimePopulationPercent;
 	int m_iVictoryDelayPercent;
 	int m_iNumTurnIncrements;
-	// Afforess 12/13/09
-	int m_iUnitMovementPercent;
 
 	CvString m_szGameSpeedName;
 	GameTurnInfo* m_pGameTurnInfo;
