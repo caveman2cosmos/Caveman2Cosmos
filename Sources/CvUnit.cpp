@@ -1301,6 +1301,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			}
 		}
 		finishMoves();
+		m_iDamage = getMaxHP(); // Toffer - Makes isDead() True
 
 		if (IsSelected() && gDLL->getInterfaceIFace()->getLengthSelectionList() == 1)
 		{
