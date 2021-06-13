@@ -30839,10 +30839,13 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	//end mod
 
 	//@MOD Commanders: control points promotion AI value
-	iTemp = kPromotion.getControlPoints();
-	if (iTemp != 0 && pUnit != NULL)
+	if (pUnit != NULL)
 	{
-		iValue += iTemp * (100 + 25 * pUnit->plot()->getNumUnits());
+		iTemp = kPromotion.getControlPoints();
+		if (iTemp != 0)
+		{
+			iValue += iTemp * (100 + 25 * pUnit->plot()->getNumUnits());
+		}
 	}
 	//end mod
 
