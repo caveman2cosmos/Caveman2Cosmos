@@ -43373,7 +43373,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iBaseHurry>25</iBaseHurry>
 			<iHurryMultiplier>2</iHurryMultiplier>
 			<iAsset>1</iAsset>
@@ -44027,7 +44026,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<bWorkerTrade>1</bWorkerTrade>
 			<iBaseHurry>100</iBaseHurry>
 			<iHurryMultiplier>5</iHurryMultiplier>
@@ -44216,7 +44214,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<UnitMeshGroups>
 				<iGroupSize>4</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -44284,7 +44281,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iWorkRate>90</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
