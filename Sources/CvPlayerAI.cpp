@@ -13263,7 +13263,7 @@ int CvPlayerAI::AI_plotTargetMissionAIsInternalinCargoVolume(const CvPlot* pPlot
 	return iCount;
 }
 
-int CvPlayerAI::AI_plotTargetMissionAIsinCargoVolume(CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup, int iRange, int* piClosest) const
+int CvPlayerAI::AI_plotTargetMissionAIsinCargoVolume(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup, int iRange, int* piClosest) const
 {
 	PROFILE_FUNC();
 
@@ -13368,7 +13368,7 @@ int CvPlayerAI::AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMis
 			PlotMissionTargetMap& plotMissionTargetMap = m_missionTargetCache[eMissionAI];
 
 			//	Since we have to walk all the groups now anyway populate the full cache map for this missionAI
-			foreach_(CvSelectionGroup* pLoopSelectionGroup, groups())
+			foreach_(const CvSelectionGroup* pLoopSelectionGroup, groups())
 			{
 				const MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
 
