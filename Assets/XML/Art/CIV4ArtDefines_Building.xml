@@ -31124,36 +31124,6 @@
 			<Button>Art/Interface/Buttons/Buildings/cannibalism.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CANNIBALISM_BAD_I</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/worldview_cannibalism_dowside_1.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CANNIBALISM_BAD_II</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/worldview_cannibalism_dowside_2.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CANNIBALISM_BAD_III</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/worldview_cannibalism_dowside_3.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DISEASE_KURU</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
