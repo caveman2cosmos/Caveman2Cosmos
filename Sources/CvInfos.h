@@ -2205,11 +2205,6 @@ public:
 	bool getDCMAirBomb5() const;
 	bool getDCMFighterEngage() const;
 
-	bool isCanBeRebel() const;
-	bool isCanRebelCapture() const;
-	bool isCannotDefect() const;
-	bool isCanQuellRebellion() const;
-
 	float getUnitMaxSpeed() const;
 	float getUnitPadTime() const;
 
@@ -2464,10 +2459,6 @@ protected:
 	bool m_bFreeDrop;
 	bool m_bNoRevealMap;
 	bool m_bInquisitor;
-	bool m_bCanBeRebel;
-	bool m_bCanRebelCapture;
-	bool m_bCannotDefect;
-	bool m_bCanQuellRebellion;
 
 	//ls612: Can't enter non-Owned cities
 	bool m_bNoNonOwnedEntry;

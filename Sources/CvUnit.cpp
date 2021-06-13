@@ -13139,43 +13139,12 @@ bool CvUnit::isFound() const
 	return m_pUnitInfo->isFound();
 }
 
-/********************************************************************************/
-/**		REVOLUTION_MOD							1/1/08				DPII		*/
-/**																				*/
-/**		 																		*/
-/********************************************************************************/
-/*
-bool CvUnit::isCanBeRebel() const
-{
-	return GC.getUnitInfo(getUnitType()).isCanBeRebel();
-}
-
-bool CvUnit::isCanRebelCapture() const
-{
-	return GC.getUnitInfo(getUnitType()).isCanRebelCapture();
-}
-
-bool CvUnit::isCannotDefect() const
-{
-	return GC.getUnitInfo(getUnitType()).isCannotDefect();
-}
-
-bool CvUnit::isCanQuellRebellion() const
-{
-	return GC.getUnitInfo(getUnitType()).isCanQuellRebellion();
-}
-*/
-/********************************************************************************/
-/**		REVOLUTION_MOD							END								*/
-/********************************************************************************/
-
 bool CvUnit::isGoldenAge() const
 {
 	if (isDelayedDeath())
 	{
 		return false;
 	}
-
 	return m_pUnitInfo->isGoldenAge();
 }
 
