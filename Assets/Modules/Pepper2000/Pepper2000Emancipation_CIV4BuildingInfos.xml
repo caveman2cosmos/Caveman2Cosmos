@@ -142,24 +142,6 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CANNIBALISM_BAD_I</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CANNIBALISM_BAD_II</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CANNIBALISM_BAD_III</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_HUMAN_SACRIFICE_ALTAR</Type>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 		</BuildingInfo>
