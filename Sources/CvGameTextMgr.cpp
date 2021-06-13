@@ -17809,14 +17809,14 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 /*
 	//TBGRIDX
 	int iX = 0;
-	if ((TechTypes)GC.getUnitInfo(eUnit).getPrereqAndTech() != -1)
-		iX = GC.getTechInfo((TechTypes)GC.getUnitInfo(eUnit).getPrereqAndTech()).getGridX();
+	if ((TechTypes)kUnit.getPrereqAndTech() != -1)
+		iX = GC.getTechInfo((TechTypes)kUnit.getPrereqAndTech()).getGridX();
 	 
-	TechTypes eMostAdvancedTech = (TechTypes)GC.getUnitInfo(eUnit).getPrereqAndTech();
+	TechTypes eMostAdvancedTech = (TechTypes)kUnit.getPrereqAndTech();
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		TechTypes tTech = (TechTypes)iI;
-		if (algo::contains(GC.getUnitInfo(eUnit).getPrereqAndTechs(), tTech))
+		if (algo::contains(kUnit.getPrereqAndTechs(), tTech))
 		{
 			if (GC.getTechInfo(tTech).getGridX() > iX)
 			{
@@ -18040,7 +18040,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		bFirst = true;
 		for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
-			if (kUnit.getUnitAttackModifier(iI) == GC.getUnitInfo(eUnit).getUnitDefenseModifier(iI))
+			if (kUnit.getUnitAttackModifier(iI) == kUnit.getUnitDefenseModifier(iI))
 			{
 				if (kUnit.getUnitAttackModifier(iI) != 0)
 				{
@@ -18278,7 +18278,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 		if (kUnit.getWithdrawalProbability() > 0)
 		{
-			if(GC.getUnitInfo(eUnit).isSpy())
+			if(kUnit.isSpy())
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_ESCAPE_SPY", kUnit.getWithdrawalProbability()));
@@ -18534,7 +18534,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		if (kUnit.getCollateralDamage() > 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_COLLATERAL_DAMAGE_REVDCM", 100 * kUnit.getCollateralDamageLimit() / GC.getMAX_HIT_POINTS(), GC.getUnitInfo(eUnit).getCollateralDamageMaxUnits()));
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_COLLATERAL_DAMAGE_REVDCM", 100 * kUnit.getCollateralDamageLimit() / GC.getMAX_HIT_POINTS(), kUnit.getCollateralDamageMaxUnits()));
 		}
 
 		//Flanking
@@ -18848,7 +18848,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		//Afflict on Attack
 		for (int iI = 0; iI < kUnit.getNumAfflictOnAttackTypes(); ++iI)
 		{
-			PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)GC.getUnitInfo(eUnit).getAfflictOnAttackType(iI).eAfflictionLine);
+			PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)kUnit.getAfflictOnAttackType(iI).eAfflictionLine);
 			int iProbability = kUnit.getAfflictOnAttackType(iI).iProbability;
 			if (kUnit.getAfflictOnAttackType(iI).iImmediate > 0)
 			{
@@ -19331,7 +19331,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		//Espionage
 		if (kUnit.getEspionagePoints() > 0)
 		{
-			int iEspionage = GC.getUnitInfo(eUnit).getEspionagePoints();
+			int iEspionage = kUnit.getEspionagePoints();
 			if (NO_GAMESPEED != game.getGameSpeedType())
 			{
 				iEspionage *= GC.getGameSpeedInfo(game.getGameSpeedType()).getUnitGreatWorkPercent();
@@ -20369,7 +20369,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 			for (int iI = 0; iI < kUnit.getNumSubCombatTypes(); iI++)
 			{
-				UnitCombatTypes eSubCombatType = (UnitCombatTypes)GC.getUnitInfo(eUnit).getSubCombatType(iI);
+				UnitCombatTypes eSubCombatType = (UnitCombatTypes)kUnit.getSubCombatType(iI);
 
 				if (game.isValidByGameOption(GC.getUnitCombatInfo(eSubCombatType)))
 				{
@@ -28361,7 +28361,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
-		if(info.isSpy())
+		if (info.isSpy())
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT_SPY", info.getInterceptChange()));
