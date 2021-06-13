@@ -17091,7 +17091,9 @@ CvPlot* CvUnit::plot() const
 {
 	//FAssertMsg(isInViewport(), "Can't get plot of unit that is not in the viewport");
 	//FAssertMsg(!isUsingDummyEntities(), "Can't get plot of unit that is using dummy entities");
-	return GC.getMap().plotSorenINLINE(getX(), getY());
+	CvPlot* plot = GC.getMap().plotSorenINLINE(getX(), getY());
+	FAssert(plot != NULL);
+	return plot;
 }
 
 CvPlot* CvUnit::plotExternal() const
