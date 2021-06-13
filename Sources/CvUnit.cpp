@@ -710,8 +710,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraHillsAttackPercent = 0;
 	m_iExtraHillsDefensePercent = 0;
 
-	m_iExtraWorkPercent = 0;
-
 	m_iRevoltProtection = 0;
 	m_iCollateralDamageProtection = 0;
 	m_iPillageChange = 0;
@@ -19557,22 +19555,6 @@ void CvUnit::changeExtraCombatPercent(int iChange)
 	}
 }
 
-//ls612: Work Rate Modifiers
-int CvUnit::getExtraWorkPercent() const
-{
-	return m_iExtraWorkPercent;
-}
-
-void CvUnit::changeExtraWorkPercent(int iChange)
-{
-	if (iChange != 0)
-	{
-		m_iExtraWorkPercent += iChange;
-
-		setInfoBarDirty(true);
-	}
-}
-
 int CvUnit::getExtraCityAttackPercent() const
 {
 	if (!isCommander())
@@ -19675,6 +19657,12 @@ int CvUnit::peaksWorkModifier() const
 {
 	return m_worker != NULL ? m_worker->getPeaksWorkModifier() : 0;
 }
+
+int CvUnit::getWorkModifier() const
+{
+	return m_worker != NULL ? m_worker->getWorkModifier() : 0;
+}
+
 
 int CvUnit::getCollateralDamageProtection() const
 {
@@ -22109,14 +22097,27 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	changeExtraCityDefensePercent(kUnitCombat.getCityDefensePercent() * iChange);//no merge/split
 	changeExtraHillsAttackPercent(kUnitCombat.getHillsAttackPercent() * iChange);//no merge/split
 	changeExtraHillsDefensePercent(kUnitCombat.getHillsDefensePercent() * iChange);//no merge/split
-	// Assume only worker units can get the relevant promotions, if not then we'll need a retroactive unitComp late init function.
+	// Assume only worker units can get the relevant unit combats, if not then we'll need a retroactive unitComp late init function.
 	if (isWorker())
 	{
-		m_worker->changeHillsWorkModifier(kUnitCombat.getHillsWorkPercent() * iChange);//no merge/split
-		m_worker->changePeaksWorkModifier(kUnitCombat.getPeaksWorkPercent() * iChange);//no merge/split
-		setInfoBarDirty(true);
+		bool bChanged = false;
+		if (kUnitCombat.getHillsWorkPercent() != 0)
+		{
+			m_worker->changeHillsWorkModifier(kUnitCombat.getHillsWorkPercent() * iChange);
+			bChanged = true;
+		}
+		if (kUnitCombat.getPeaksWorkPercent() != 0)
+		{
+			m_worker->changePeaksWorkModifier(kUnitCombat.getPeaksWorkPercent() * iChange);
+			bChanged = true;
+		}
+		if (kUnitCombat.getWorkRatePercent() != 0)
+		{
+			m_worker->changeWorkModifier(kUnitCombat.getWorkRatePercent() * iChange);
+			bChanged = true;
+		}
+		if (bChanged) setInfoBarDirty(true);
 	}
-	changeExtraWorkPercent(kUnitCombat.getWorkRatePercent() * iChange);//no merge/split
 	changeRevoltProtection(kUnitCombat.getRevoltProtection() * iChange);// merge/split
 	changeCollateralDamageProtection(kUnitCombat.getCollateralDamageProtection() * iChange);//no merge/split
 	changePillageChange(kUnitCombat.getPillageChange() * iChange);//no merge/split
@@ -22840,9 +22841,23 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	// Assume only worker units can get the relevant promotions, if not then we'll need a retroactive unitComp late init function.
 	if (isWorker())
 	{
-		m_worker->changeHillsWorkModifier(kPromotion.getHillsWorkPercent() * iChange);
-		m_worker->changePeaksWorkModifier(kPromotion.getPeaksWorkPercent() * iChange);
-		setInfoBarDirty(true);
+		bool bChanged = false;
+		if (kPromotion.getHillsWorkPercent() != 0)
+		{
+			m_worker->changeHillsWorkModifier(kPromotion.getHillsWorkPercent() * iChange);
+			bChanged = true;
+		}
+		if (kPromotion.getPeaksWorkPercent() != 0)
+		{
+			m_worker->changePeaksWorkModifier(kPromotion.getPeaksWorkPercent() * iChange);
+			bChanged = true;
+		}
+		if (kPromotion.getWorkRatePercent() != 0)
+		{
+			m_worker->changeWorkModifier(kPromotion.getWorkRatePercent() * iChange);
+			bChanged = true;
+		}
+		if (bChanged) setInfoBarDirty(true);
 	}
 	changeRevoltProtection(kPromotion.getRevoltProtection() * iChange);
 	changeCollateralDamageProtection(kPromotion.getCollateralDamageProtection() * iChange);
@@ -22873,8 +22888,6 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	//ls612: WorkRateMod
 	if (kPromotion.getWorkRatePercent() != 0)
 	{
-		changeExtraWorkPercent(kPromotion.getWorkRatePercent() * iChange);
-		bSMrecalc = true;
 	}
 	// ! ls612
 
@@ -23547,14 +23560,12 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCityDefensePercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraHillsAttackPercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraHillsDefensePercent);
-	//ls612: Work Modifiers
+
 	int iExtraHillsWorkPercent = 0;
 	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraHillsWorkPercent, "m_iExtraHillsWorkPercent");
+	int iExtraWorkPercent = 0;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraWorkPercent, "m_iExtraWorkPercent");
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraWorkPercent);
-	// SVN 10973 08-13-2019 Fix for already corrupted worker extra work rate
-	// Because no promotion or unitcombat class defines iWorkRateModifier yet, we can set it to zero for now.
-	m_iExtraWorkPercent = 0;
 	WRAPPER_READ(wrapper, "CvUnit", &m_iRevoltProtection);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCollateralDamageProtection);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iPillageChange);
@@ -25005,6 +25016,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 		m_worker->changeHillsWorkModifier(iExtraHillsWorkPercent + m_pUnitInfo->getHillsWorkModifier());
 		m_worker->changePeaksWorkModifier(iExtraPeaksWorkPercent + m_pUnitInfo->getPeaksWorkModifier());
+		m_worker->changeWorkModifier(iExtraWorkPercent);
 	}
 
 	//Example of how to skip an outdated and unnecessary save element (at least for ints and bools)
@@ -25141,11 +25153,11 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCityDefensePercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraHillsAttackPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraHillsDefensePercent);
-	//ls612: Work Modifiers
+
 	const bool bWorker = isWorker();
 	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getHillsWorkModifier() - m_pUnitInfo->getHillsWorkModifier() : 0), "m_iExtraHillsWorkPercent");
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getWorkModifier() : 0), "m_iExtraWorkPercent");
 
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraWorkPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRevoltProtection);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCollateralDamageProtection);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iPillageChange);
@@ -38317,64 +38329,41 @@ int CvUnit::workRate(bool bMax) const
 	{
 		return 0;
 	}
-	iRate *= std::max(0, 100 + GET_PLAYER(getOwner()).getWorkerSpeedModifier());
-	iRate /= 100;
+	int iWorkMod = getWorkModifier() + GET_PLAYER(getOwner()).getWorkerSpeedModifier();
 
-	if (!isHuman() && !isNPC())
-	{
-		iRate *= std::max(0, (GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorkRateModifier() + 100));
-		iRate /= 100;
-	}
-
-	if (plot() != NULL)
+	const CvPlot* pPlot = plot();
+	if (pPlot != NULL)
 	{
 		for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 		{
-			if (plot()->getFeatureType() == (FeatureTypes)iI)
+			if (pPlot->getFeatureType() == (FeatureTypes)iI)
 			{
-				const int iValue = featureWorkPercent((FeatureTypes)iI);
-
-				if (iValue != 0)
-				{
-					iRate *= 100 + iValue;
-					iRate /= 100;
-				}
+				iWorkMod += featureWorkPercent((FeatureTypes)iI);
 			}
 		}
-		{
-			const int iValue = terrainWorkPercent(plot()->getTerrainType());
-
-			if (iValue != 0)
-			{
-				iRate *= 100 + iValue;
-				iRate /= 100;
-			}
-		}
+		iWorkMod += terrainWorkPercent(pPlot->getTerrainType());
 		{
 			const BuildTypes eBuild = getBuildType();
 
 			if (eBuild != NO_BUILD)
 			{
-				iRate *= 100 + buildWorkPercent(eBuild);
-				iRate /= 100;
+				iWorkMod += buildWorkPercent(eBuild);
 			}
 		}
-		if (plot()->isHills())
-		{
-			iRate *= 100 + hillsWorkModifier();
-			iRate /= 100;
-		}
-		else if (plot()->isAsPeak())
-		{
-			iRate *= 100 + peaksWorkModifier();
-			iRate /= 100;
-		}
 
-		if (getExtraWorkPercent() != 0)
+		if (pPlot->isHills())
 		{
-			iRate *= 100 + getExtraWorkPercent();
-			iRate /= 100;
+			iWorkMod += hillsWorkModifier();
 		}
+		else if (pPlot->isAsPeak())
+		{
+			iWorkMod += peaksWorkModifier();
+		}
+		iRate = getModifiedIntValue(iRate, iWorkMod);
+	}
+	if (!isHuman() && !isNPC())
+	{
+		iRate = getModifiedIntValue(iRate, GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorkRateModifier());
 	}
 	return iRate;
 }
