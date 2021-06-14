@@ -4059,9 +4059,9 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 
 	for (int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
 	{
-		bool bValid = false;
+		bool bValid = iNumSelectableTypes == -1;
 
-		if (iNumSelectableTypes != -1)
+		if (!bValid)
 		{
 			for (int iJ = 0; iJ < iNumSelectableTypes; iJ++)
 			{
@@ -4071,10 +4071,6 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 					break;
 				}
 			}
-		}
-		else
-		{
-			bValid = true;
 		}
 
 		if (bValid && (bNoWeighting || aiUnitAIVal[iI] > 0))
@@ -4103,23 +4099,17 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 			{
 				int iUnitValue;
 
-				UnitTypes eUnit = AI_bestUnitAI(((UnitAITypes)iI), iUnitValue, bAsync, bNoRand, criteria);
+				UnitTypes eUnit = AI_bestUnitAI((UnitAITypes)iI, iUnitValue, bAsync, bNoRand, criteria);
 
-				if (eUnit != NO_UNIT)
+				if (eUnit != NO_UNIT && AI_meetsUnitSelectionCriteria(eUnit, criteria) && iUnitValue > iBestUnitValue)
 				{
-					if (AI_meetsUnitSelectionCriteria(eUnit, criteria))
+					iBestValue = aiUnitAIVal[iI];
+					eBestUnit = eUnit;
+					if (peBestUnitAI != NULL)
 					{
-						if (iUnitValue > iBestUnitValue)
-						{
-							iBestValue = aiUnitAIVal[iI];
-							eBestUnit = eUnit;
-							if (peBestUnitAI != NULL)
-							{
-								*peBestUnitAI = ((UnitAITypes)iI);
-							}
-							iBestUnitValue = iUnitValue;
-						}
+						*peBestUnitAI = ((UnitAITypes)iI);
 					}
+					iBestUnitValue = iUnitValue;
 				}
 			}
 		}
@@ -9639,7 +9629,7 @@ bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds,
 
 bool CvCityAI::AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, const CvUnitSelectionCriteria* criteria, UnitTypes eUnitType)
 {
-	UnitTypes	eBestUnit = NO_UNIT;
+	UnitTypes eBestUnit = NO_UNIT;
 
 	if (eUnitType == NO_UNIT)
 	{

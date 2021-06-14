@@ -177,7 +177,7 @@ bool CvUnitAI::AI_update()
 
 	FAssertMsg(isGroupHead(), "isGroupHead is expected to be true"); // XXX is this a good idea???
 
-	if(GC.getUSE_AI_UPDATE_UNIT_CALLBACK() && Cy::call<bool>(PYGameModule, "AI_unitUpdate", Cy::Args() << this))
+	if (GC.getUSE_AI_UPDATE_UNIT_CALLBACK() && Cy::call<bool>(PYGameModule, "AI_unitUpdate", Cy::Args() << this))
 	{
 		return false;
 	}

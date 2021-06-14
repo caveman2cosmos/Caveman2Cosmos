@@ -1203,12 +1203,10 @@ bool CvTeam::canDeclareWar(TeamTypes eTeam) const
 	{
 		return false;
 	}
-
 	if (!isHasMet(eTeam) || isAtWar(eTeam) || isForcePeace(eTeam))
 	{
 		return false;
 	}
-
 	for (int i = 0; i < MAX_PC_TEAMS; ++i)
 	{
 		if (i != eTeam && i != getID() && GET_TEAM(eTeam).isVassal((TeamTypes)i) && isForcePeace((TeamTypes)i))
@@ -1216,17 +1214,10 @@ bool CvTeam::canDeclareWar(TeamTypes eTeam) const
 			return false;
 		}
 	}
-
 	if (!canChangeWarPeace(eTeam, true))
 	{
 		return false;
 	}
-
-	if (GC.getUSE_CAN_DECLARE_WAR_CALLBACK() && !Cy::call<bool>(PYGameModule, "canDeclareWar", Cy::Args() << getID() << eTeam))
-	{
-		return false;
-	}
-
 	return true;
 }
 
@@ -1241,39 +1232,14 @@ bool CvTeam::canDeclareWar(TeamTypes eTeam) const
 /// this overlapping second function.
 bool CvTeam::canEventuallyDeclareWar(TeamTypes eTeam) const
 {
-	if (eTeam == getID())
+	if (eTeam == getID() || !isAlive() || !GET_TEAM(eTeam).isAlive())
 	{
 		return false;
 	}
-
-	if (!isAlive() || !GET_TEAM(eTeam).isAlive())
+	if (isAtWar(eTeam) || !isHasMet(eTeam) || !canChangeWarPeace(eTeam, true))
 	{
 		return false;
 	}
-
-	if (isAtWar(eTeam))
-	{
-		return false;
-	}
-
-	if (!isHasMet(eTeam))
-	{
-		return false;
-	}
-
-	if (!canChangeWarPeace(eTeam, true))
-	{
-		return false;
-	}
-
-	if(GC.getUSE_CAN_DECLARE_WAR_CALLBACK())
-	{
-		if (!Cy::call<bool>(PYGameModule, "canDeclareWar", Cy::Args() << getID() << eTeam))
-		{
-			return false;
-		}
-	}
-
 	return true;
 }
 

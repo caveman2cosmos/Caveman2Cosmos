@@ -6178,7 +6178,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		{
 			FAssert(ePlotTeam != NO_TEAM);
 
-			if (!(GET_TEAM(getTeam()).canDeclareWar(ePlotTeam)))
+			if (!GET_TEAM(getTeam()).canDeclareWar(ePlotTeam))
 			{
 				return false;
 			}
@@ -6190,19 +6190,9 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 					return false;
 				}
 			}
-			else
+			else if (!GET_TEAM(getTeam()).AI_isSneakAttackReady(ePlotTeam) || !getGroup()->AI_isDeclareWar(pPlot))
 			{
-				if (GET_TEAM(getTeam()).AI_isSneakAttackReady(ePlotTeam))
-				{
-					if (!(getGroup()->AI_isDeclareWar(pPlot)))
-					{
-						return false;
-					}
-				}
-				else
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 	}
@@ -6214,7 +6204,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		if (plot()->isAsPeak())
 		{
 			//	Can this unit move through peaks regardless?
-			if ( isCanMovePeaks() )
+			if (isCanMovePeaks())
 			{
 				bValid = true;
 			}
@@ -6224,26 +6214,23 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 				bValid = plot()->getHasMountainLeader(getTeam());
 			}
 		}
-		if (pPlot->isAsPeak())
+		//Check the impassible tile
+		if (!bValid)
 		{
-			//Check the impassible tile
-			if (!bValid)
+			if (pPlot->isAsPeak())
 			{
-				//	Can this unit move through peaks regardless?
-				if ( isCanMovePeaks() )
+				// Can this unit move through peaks regardless?
+				if (isCanMovePeaks())
 				{
 					bValid = true;
 				}
 				else
 				{
-					//	If not we need a peak leader to be present
+					// If not we need a peak leader to be present
 					bValid = pPlot->getHasMountainLeader(getTeam());
 				}
 			}
-		}
-		if (!bValid)
-		{
-			if (!canMoveImpassable())
+			if (!bValid && !canMoveImpassable())
 			{
 				return false;
 			}
@@ -6320,30 +6307,13 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		}
 	}
 	//City Minimum Defense Level
-	if (!bHasCheckedCityEntry && !bIgnoreLocation && pPlot->getPlotCity() != NULL && !isSpy() && !isBlendIntoCity() && !(isBarbCoExist() && pPlot->isHominid()))
+	if (!bHasCheckedCityEntry && !bIgnoreLocation && pPlot->getPlotCity() != NULL && !isSpy()
+	&& !isBlendIntoCity() && (!isBarbCoExist() || !pPlot->isHominid())
+	&& GET_TEAM(GET_PLAYER(getCombatOwner(pPlot->getTeam(), pPlot)).getTeam()).isAtWar(pPlot->getTeam())
+	&& !pPlot->getPlotCity()->isDirectAttackable() && !canIgnoreNoEntryLevel())
 	{
-		if (GET_TEAM(GET_PLAYER(getCombatOwner(pPlot->getTeam(),pPlot)).getTeam()).isAtWar(pPlot->getTeam()))
-		{
-			if ( !pPlot->getPlotCity()->isDirectAttackable() && !canIgnoreNoEntryLevel())
-			{
-				return false;
-			}
-		}
+		return false;
 	}
-
-	if (GC.getUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK())
-	{
-		// Python Override
-		if (Cy::call<bool>(PYGameModule, "unitCannotMoveInto", Cy::Args()
-			<< getOwner()
-			<< getID()
-			<< pPlot->getX()
-			<< pPlot->getY()))
-		{
-			return false;
-		}
-	}
-
 	return true;
 }
 
@@ -10390,24 +10360,14 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 {
 	PROFILE_FUNC();
 
-	if (eReligion == NO_RELIGION)
-	{
-		return false;
-	}
-
-	if (m_pUnitInfo->getReligionSpreads(eReligion) <= 0)
+	if (eReligion == NO_RELIGION || m_pUnitInfo->getReligionSpreads(eReligion) <= 0)
 	{
 		return false;
 	}
 
 	CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity == NULL)
-	{
-		return false;
-	}
-
-	if (pCity->isHasReligion(eReligion))
+	if (pCity == NULL || pCity->isHasReligion(eReligion))
 	{
 		return false;
 	}
@@ -10424,41 +10384,26 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 		return false;
 	}
 
-	if (GC.getUSE_CANNOT_SPREAD_RELIGION_CALLBACK()
-
-	&& Cy::call<bool>(PYGameModule, "cannotSpreadReligion", Cy::Args()
-		<< getOwner() 
-		<< getID()
-		<< (int)eReligion
-		<< pPlot->getX()
-		<< pPlot->getY())
-
-	) return false;
-
 	// TB Prophet Mod
 	if (AI_getUnitAIType() != UNITAI_MISSIONARY)
 	{
-		if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
+		if (!GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS)
+		|| GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS) && GET_PLAYER(getOwner()).hasHolyCity())
 		{
-			bool istechqual = GC.getGame().isOption(GAMEOPTION_PICK_RELIGION);
+			return false;
+		}
 
-			if (!istechqual)
-			{
-				const TechTypes ePreqTech = (TechTypes)GC.getReligionInfo(eReligion).getTechPrereq();
+		if (!GC.getGame().isOption(GAMEOPTION_PICK_RELIGION))
+		{
+			const TechTypes ePreqTech = (TechTypes)GC.getReligionInfo(eReligion).getTechPrereq();
 
-				if (GC.getGame().isTechDiscovered(ePreqTech)
-				&& (GET_TEAM(getTeam()).isHasTech(ePreqTech) || GC.getGame().getGameTurn() > GC.getGame().getTechGameTurnDiscovered(ePreqTech) + 1))
-				{
-					istechqual = true;
-				}
-			}
-
-			if (!istechqual || GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS) && GET_PLAYER(getOwner()).hasHolyCity())
+			if (!GC.getGame().isTechDiscovered(ePreqTech)
+			|| !GET_TEAM(getTeam()).isHasTech(ePreqTech)
+			&& GC.getGame().getGameTurn() <= GC.getGame().getTechGameTurnDiscovered(ePreqTech) + 1)
 			{
 				return false;
 			}
 		}
-		else return false;
 	}
 	// ! TB Prophet Mod
 
@@ -12324,7 +12269,12 @@ int CvUnit::getStackExperienceToGive(int iNumUnits) const
 
 int CvUnit::upgradePrice(UnitTypes eUnit) const
 {
-	if(GC.getUSE_UPGRADE_UNIT_PRICE_CALLBACK())
+	if (isNPC())
+	{
+		return 0;
+	}
+
+	if (GC.getUSE_UPGRADE_UNIT_PRICE_CALLBACK())
 	{
 		int iResult = Cy::call<int>(PYGameModule, "getUpgradePriceOverride", Cy::Args()
 			<< getOwner()
@@ -12336,12 +12286,6 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 			return iResult;
 		}
 	}
-
-	if (isNPC())
-	{
-		return 0;
-	}
-
 	int iBasePrice = GET_PLAYER(getOwner()).getProductionNeeded(eUnit) - GET_PLAYER(getOwner()).getProductionNeeded(getUnitType());
 	int iPrice = iBasePrice * GC.getUNIT_UPGRADE_COST_PER_PRODUCTION();
 	iPrice /= 100;
