@@ -6,6 +6,7 @@
 							when you choose your game speed when starting a new game.
 			Type		= Defines what Civ IV calls the game speed, e.g. GAMESPEED_EPIC.
 * Integer Tags:
+				iSpeedPercent			= Generic speed scale
 				iAnarchyPercent			= From tinkering, it seems to be how long cities revolt. It doesn't seem to have any effect that I can see on anarchy when switching governments or religions. Normal is 100
 				iBarbPercent			= The rate at which barbarians appear. Normal is 100
 				iBuildPercent			= How fast tile improvements are built. Normal is 100
@@ -51,6 +52,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_ETERNITY</Type>
 			<Description>TXT_KEY_GAMESPEED_ETERNITY</Description>
 			<Help>TXT_KEY_GAMESPEED_ETERNITY_HELP</Help>
+			<iSpeedPercent>1000</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>1000</iGrowthPercent>
 			<iTrainPercent>1000</iTrainPercent>
@@ -149,6 +151,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_EONS</Type>
 			<Description>TXT_KEY_GAMESPEED_EONS</Description>
 			<Help>TXT_KEY_GAMESPEED_EONS_HELP</Help>
+			<iSpeedPercent>800</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>800</iGrowthPercent>
 			<iTrainPercent>800</iTrainPercent>
@@ -247,6 +250,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_SNAIL</Type>
 			<Description>TXT_KEY_GAMESPEED_SNAIL</Description>
 			<Help>TXT_KEY_GAMESPEED_SNAIL_HELP</Help>
+			<iSpeedPercent>600</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>600</iGrowthPercent>
 			<iTrainPercent>600</iTrainPercent>
@@ -345,6 +349,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_MARATHON</Type>
 			<Description>TXT_KEY_GAMESPEED_MARATHON</Description>
 			<Help>TXT_KEY_GAMESPEED_MARATHON_HELP</Help>
+			<iSpeedPercent>400</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>400</iGrowthPercent>
 			<iTrainPercent>400</iTrainPercent>
@@ -443,6 +448,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_EPIC</Type>
 			<Description>TXT_KEY_GAMESPEED_EPIC</Description>
 			<Help>TXT_KEY_GAMESPEED_EPIC_HELP</Help>
+			<iSpeedPercent>300</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>300</iGrowthPercent>
 			<iTrainPercent>300</iTrainPercent>
@@ -541,6 +547,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_LONG</Type>
 			<Description>TXT_KEY_GAMESPEED_LONG</Description>
 			<Help>TXT_KEY_GAMESPEED_LONG_HELP</Help>
+			<iSpeedPercent>200</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>200</iGrowthPercent>
 			<iTrainPercent>200</iTrainPercent>
@@ -639,6 +646,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_NORMAL</Type>
 			<Description>TXT_KEY_GAMESPEED_NORMAL</Description>
 			<Help>TXT_KEY_GAMESPEED_NORMAL_HELP</Help>
+			<iSpeedPercent>100</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
@@ -737,6 +745,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_BLITZ</Type>
 			<Description>TXT_KEY_GAMESPEED_BLITZ</Description>
 			<Help>TXT_KEY_GAMESPEED_BLITZ_HELP</Help>
+			<iSpeedPercent>50</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>50</iGrowthPercent>
 			<iTrainPercent>50</iTrainPercent>
@@ -835,6 +844,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_ULTRAFAST</Type>
 			<Description>TXT_KEY_GAMESPEED_ULTRAFAST</Description>
 			<Help>TXT_KEY_GAMESPEED_ULTRAFAST_HELP</Help>
+			<iSpeedPercent>25</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>25</iGrowthPercent>
 			<iTrainPercent>25</iTrainPercent>
@@ -940,6 +950,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_ETERNITY</Description>
 			<Help>TXT_KEY_GAMESPEED_ETERNITY_HELP</Help>
+			<iSpeedPercent>1000</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>1000</iGrowthPercent>
 			<iTrainPercent>1400</iTrainPercent>
@@ -1045,6 +1056,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_EONS</Description>
 			<Help>TXT_KEY_GAMESPEED_EONS_HELP</Help>
+			<iSpeedPercent>800</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>800</iGrowthPercent>
 			<iTrainPercent>1120</iTrainPercent>
@@ -1150,6 +1162,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_SNAIL</Description>
 			<Help>TXT_KEY_GAMESPEED_SNAIL_HELP</Help>
+			<iSpeedPercent>600</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>600</iGrowthPercent>
 			<iTrainPercent>840</iTrainPercent>
@@ -1255,6 +1268,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_MARATHON</Description>
 			<Help>TXT_KEY_GAMESPEED_MARATHON_HELP</Help>
+			<iSpeedPercent>400</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>400</iGrowthPercent>
 			<iTrainPercent>560</iTrainPercent>
@@ -1360,6 +1374,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_EPIC</Description>
 			<Help>TXT_KEY_GAMESPEED_EPIC_HELP</Help>
+			<iSpeedPercent>300</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>300</iGrowthPercent>
 			<iTrainPercent>420</iTrainPercent>
@@ -1465,6 +1480,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_LONG</Description>
 			<Help>TXT_KEY_GAMESPEED_LONG_HELP</Help>
+			<iSpeedPercent>200</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>200</iGrowthPercent>
 			<iTrainPercent>280</iTrainPercent>
@@ -1570,6 +1586,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_NORMAL</Description>
 			<Help>TXT_KEY_GAMESPEED_NORMAL_HELP</Help>
+			<iSpeedPercent>100</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>140</iTrainPercent>
@@ -1675,6 +1692,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_BLITZ</Description>
 			<Help>TXT_KEY_GAMESPEED_BLITZ_HELP</Help>
+			<iSpeedPercent>50</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>50</iGrowthPercent>
 			<iTrainPercent>70</iTrainPercent>
@@ -1780,6 +1798,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_ULTRAFAST</Description>
 			<Help>TXT_KEY_GAMESPEED_ULTRAFAST_HELP</Help>
+			<iSpeedPercent>25</iSpeedPercent>
 			<iHurryPercent>100</iHurryPercent>
 			<iGrowthPercent>25</iGrowthPercent>
 			<iTrainPercent>35</iTrainPercent>

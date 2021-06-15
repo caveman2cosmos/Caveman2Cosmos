@@ -13238,6 +13238,7 @@ void CvHandicapInfo::copyNonDefaults(const CvHandicapInfo* pClassInfo)
 //
 //------------------------------------------------------------------------------------------------------
 CvGameSpeedInfo::CvGameSpeedInfo() :
+m_iSpeedPercent(0),
 m_iGrowthPercent(0),
 m_iTrainPercent(0),
 m_iConstructPercent(0),
@@ -13277,6 +13278,11 @@ m_bEndDatesCalculated(false)
 CvGameSpeedInfo::~CvGameSpeedInfo()
 {
 	SAFE_DELETE_ARRAY(m_pGameTurnInfo);
+}
+
+int CvGameSpeedInfo::getSpeedPercent() const
+{
+	return m_iSpeedPercent;
 }
 
 int CvGameSpeedInfo::getGrowthPercent() const
@@ -13428,14 +13434,11 @@ int CvGameSpeedInfo::getPercent(int iID) const
 
 bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
 	}
-
-	int j, iTempVal;
-
+	pXML->GetOptionalChildXmlValByName(&m_iSpeedPercent, L"iSpeedPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iGrowthPercent, L"iGrowthPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iTrainPercent, L"iTrainPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iConstructPercent, L"iConstructPercent");
@@ -13467,9 +13470,10 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 		if (pXML->TryMoveToXmlFirstChild(L"GameTurnInfo"))
 		{
 			allocateGameTurnInfos(getNumTurnIncrements());
+			int iTempVal;
 
 			// loop through each tag
-			for (j=0;j<getNumTurnIncrements();j++)
+			for (int j = 0; j < getNumTurnIncrements(); j++)
 			{
 				CvDateIncrement inc;
 				pXML->GetOptionalChildXmlValByName(&iTempVal, L"iMonthIncrement");
@@ -13509,6 +13513,7 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
+	if (m_iSpeedPercent == iDefault) m_iSpeedPercent = pClassInfo->getSpeedPercent();
 	if (getGrowthPercent() == iDefault) m_iGrowthPercent = pClassInfo->getGrowthPercent();
 	if (getTrainPercent() == iDefault) m_iTrainPercent = pClassInfo->getTrainPercent();
 	if (getConstructPercent() == iDefault) m_iConstructPercent = pClassInfo->getConstructPercent();
@@ -13550,6 +13555,7 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 
 void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
 {
+	CheckSum(iSum, m_iSpeedPercent);
 	CheckSum(iSum, m_iGrowthPercent);
 	CheckSum(iSum, m_iTrainPercent);
 	CheckSum(iSum, m_iConstructPercent);

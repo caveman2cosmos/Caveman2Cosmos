@@ -46,6 +46,7 @@
 	<ElementType name="TargetCondition"/>
 	<ElementType name="AttributeType" content="textOnly"/>
 	<ElementType name="iAmountPerTurn"/>
+	<ElementType name="iSpeedPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iGrowthPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iInhibitionPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iDistance" content="textOnly" dt:type="int"/>
@@ -1378,6 +1379,7 @@
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
+		<element type="iSpeedPercent" minOccurs="0"/>
 		<element type="iGrowthPercent" minOccurs="0"/>
 		<element type="iTrainPercent" minOccurs="0"/>
 		<element type="iConstructPercent" minOccurs="0"/>

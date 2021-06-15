@@ -1153,7 +1153,7 @@ bool CvCity::isRecentlyAcquired() const
 	(
 		(GC.getGame().getGameTurn() - getGameTurnAcquired())
 		<
-		12 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() / 100
+		12 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100
 	);
 }
 
@@ -13735,7 +13735,7 @@ bool CvCity::isBuildingProductionDecay(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return isHuman() && getProductionBuilding() != eIndex && getBuildingProduction(eIndex) > 0
-		&& 100 * getBuildingProductionTime(eIndex) >= GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+		&& 100 * getBuildingProductionTime(eIndex) >= GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 }
 
 /*
@@ -13755,7 +13755,7 @@ int CvCity::getBuildingProductionDecay(BuildingTypes eIndex) const
 int CvCity::getBuildingProductionDecayTurns(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	return std::max(0, (GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() + 99) / 100 - getBuildingProductionTime(eIndex)) + 1;
+	return std::max(0, (GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() + 99) / 100 - getBuildingProductionTime(eIndex)) + 1;
 }
 // BUG - Production Decay - end
 
@@ -13880,7 +13880,7 @@ bool CvCity::isUnitProductionDecay(UnitTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return isHuman() && getProductionUnit() != eIndex && getUnitProduction(eIndex) > 0
-		&& 100 * getUnitProductionTime(eIndex) >= GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+		&& 100 * getUnitProductionTime(eIndex) >= GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 }
 
 /*
@@ -13891,7 +13891,7 @@ int CvCity::getUnitProductionDecay(UnitTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	const int iProduction = getUnitProduction(eIndex);
-	return iProduction - ((iProduction * GC.getUNIT_PRODUCTION_DECAY_PERCENT()) / 100);
+	return iProduction - iProduction * GC.getUNIT_PRODUCTION_DECAY_PERCENT() / 100;
 }
 
 /*
@@ -13900,7 +13900,7 @@ int CvCity::getUnitProductionDecay(UnitTypes eIndex) const
 int CvCity::getUnitProductionDecayTurns(UnitTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	return std::max(0, (GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent() + 99) / 100 - getUnitProductionTime(eIndex)) + 1;
+	return std::max(0, (GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() + 99) / 100 - getUnitProductionTime(eIndex)) + 1;
 }
 // BUG - Production Decay - end
 
@@ -16580,7 +16580,7 @@ void CvCity::doDecay()
 
 				if (isHuman())
 				{
-					const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+					const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 					if (100 * getBuildingProductionTime(eBuilding) > GC.getBUILDING_PRODUCTION_DECAY_TIME()* iGameSpeedPercent)
 					{
 						const int iProduction = getBuildingProduction(eBuilding);
@@ -16607,7 +16607,7 @@ void CvCity::doDecay()
 
 				if (isHuman())
 				{
-					const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+					const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 					if (100 * getUnitProductionTime(eUnit) > GC.getUNIT_PRODUCTION_DECAY_TIME() * iGameSpeedPercent)
 					{
 						const int iProduction = getUnitProduction(eUnit);
@@ -16688,7 +16688,7 @@ void CvCity::doReligion()
 								(
 									GC.getRELIGION_SPREAD_RAND()
 									*
-									GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent()
+									GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
 									/
 									100
 								);
@@ -16741,7 +16741,7 @@ void CvCity::doReligion()
 						(
 							GC.getRELIGION_SPREAD_RAND()
 							*
-							GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent()
+							GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
 							/
 							100
 						);
@@ -19962,7 +19962,7 @@ int CvCity::getLandmarkAnger() const
 		iAnger++;
 	}
 	int iDivisor = std::max(1, GC.getLANDMARK_ANGER_DIVISOR());
-	iDivisor *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent();
+	iDivisor *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iDivisor /= 100;
 
 	iAnger += getLandmarkAngerTimer() / std::max(1, iDivisor);
@@ -21664,7 +21664,7 @@ void CvCity::doCorporation()
 
 			logBBAI("  City (%S) Has Rand Threshold of %d for Corporation %S", getName().GetCString(), iRandThreshold, GC.getCorporationInfo((CorporationTypes)iI).getDescription());
 			int iRand = GC.getCORPORATION_SPREAD_RAND();
-			iRand *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+			iRand *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 			iRand /= 100;
 			iRand = GC.getGame().getSorenRandNum(iRand, "Corporation Spread");
 			if (iRand < iRandThreshold)
@@ -21717,7 +21717,7 @@ void CvCity::doCorporation()
 				const int iRand =
 				(
 					GC.getCORPORATION_SPREAD_RAND()
-					* GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent()
+					* GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
 					/ 100
 				);
 				if (GC.getGame().getSorenRandNum(iRand, "Corporation Decay") < iDiff)
@@ -21897,7 +21897,7 @@ void CvCity::doWarWeariness()
 	if (getEventAnger() > 0)
 	{
 		int iTurnCheck = 10;
-		iTurnCheck *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
+		iTurnCheck *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 		iTurnCheck /= 100;
 		if (GC.getGame().getElapsedGameTurns() % iTurnCheck == 0)
 		{
