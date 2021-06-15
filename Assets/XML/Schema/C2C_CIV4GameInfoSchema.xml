@@ -594,7 +594,6 @@
 	<ElementType name="Name" content="textOnly"/>
 	<ElementType name="iFreeWinsVsBarbs" content="textOnly" dt:type="int"/>
 	<ElementType name="iAnimalAttackProb" content="textOnly" dt:type="int"/>
-	<ElementType name="iStartingLocPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitUpkeepPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxColonyMaintenance" content="textOnly" dt:type="int"/>
@@ -666,7 +665,6 @@
 		<element type="Help" minOccurs="0"/>
 		<element type="iFreeWinsVsBarbs" minOccurs="0"/>
 		<element type="iAnimalAttackProb" minOccurs="0"/>
-		<element type="iStartingLocPercent" minOccurs="0"/>
 		<element type="iAdvancedStartPointsMod" minOccurs="0"/>
 		<element type="iGold" minOccurs="0"/>
 		<element type="iUnitUpkeepPercent" minOccurs="0"/>

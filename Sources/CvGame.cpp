@@ -1126,8 +1126,8 @@ void setBestStartingPlotFromSet(CvPlayerAI* playerX, std::vector<CvPlot*>& start
 
 	for (uint16_t iJ = 0; iJ < startingPlots.size(); iJ++)
 	{
-		int iValue = startingPlots[iJ]->getFoundValue(playerX->getID());
-		iValue += GC.getGame().getSorenRandNum(500 + iValue/50, "Randomize Starting Location");
+		const int iValue = startingPlots[iJ]->getFoundValue(playerX->getID()) + GC.getGame().getSorenRandNum(500 + iValue/50, "Randomize Starting Location");
+
 		if (iValue > iBestValue)
 		{
 			iBestValue = iValue;
@@ -1143,18 +1143,19 @@ void setBestStartingPlotFromSet(CvPlayerAI* playerX, std::vector<CvPlot*>& start
 void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 {
 	PROFILE_FUNC();
+	gDLL->callUpdater(); // allow window updates during launch
 
 	if (!bScenario && !bMapScript)
 	{
-		// Python override - Most mapscripts overide
+		// Python override - Some mapscripts overide
 		bool bAssignStartingPlots = false;
-		if (Cy::call_override(GC.getMap().getMapScript(), "assignStartingPlots", bAssignStartingPlots)
-		&& bAssignStartingPlots)
+
+		if (Cy::call_override(GC.getMap().getMapScript(), "assignStartingPlots", bAssignStartingPlots) && bAssignStartingPlots)
 		{
+			gDLL->callUpdater();
 			return;
 		}
 	}
-
 	std::vector<CvPlayerAI*> alivePlayers;
 	{
 		bool bAllDone = true;
@@ -1172,6 +1173,7 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 				}
 			}
 		}
+		gDLL->callUpdater();
 		if (bAllDone)
 		{
 			return;
@@ -1186,8 +1188,6 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 	{
 		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			gDLL->callUpdater(); // allow window updates during launch
-
 			CvPlot* pPlot = GC.getMap().plotByIndex(iI);
 
 			if (pPlot->isStartingPlot())
@@ -1212,9 +1212,9 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 				startingPlots.push_back(pPlot);
 			}
 		}
+		gDLL->callUpdater();
 	}
-	std::vector<CvPlayerAI*> aliveAIs;
-	//std::vector< std::pair<int, CvPlayerAI*> > aliveHumans;
+	std::vector<CvPlayerAI*> playersWaiting;
 
 	for (int iI = 0; iI < iNumPlayers; iI++)
 	{
@@ -1222,60 +1222,18 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 
 		if (playerX->getStartingPlot() == NULL)
 		{
-			/* Toffer - disabled the difficulty factor
-			if (playerX->isHuman())
-			{
-				aliveHumans.push_back(std::make_pair(GC.getHandicapInfo(playerX->getHandicapType()).getStartingLocationPercent(), playerX));
-			}
-			else*/ aliveAIs.push_back(playerX);
+			playersWaiting.push_back(playerX);
 		}
 	}
-	//std::sort(aliveHumans.begin(), aliveHumans.end());
-	algo::random_shuffle(aliveAIs, SorenRand("start plot assignment order shuffle"));
+	algo::random_shuffle(playersWaiting, SorenRand("start plot assignment order shuffle"));
 
-	const int iNumAIs = aliveAIs.size();
-	//const int iNumHumans = aliveHumans.size();
-
-	//int iOrder = 0;
-	int iCountAI = 0;
-	/*
-	for (int iI = 0; iI < iNumHumans; iI++)
-	{
-		iOrder++;
-		if (!aliveAIs.empty())
-		{
-			const int iMyOrder = (iNumHumans + iNumAIs) * aliveHumans[iI].first / 100;
-			if (iOrder < iMyOrder)
-			{
-				while (iNumAIs > iCountAI && iOrder < iMyOrder)
-				{
-					if (!startingPlots.empty())
-					{
-						setBestStartingPlotFromSet(aliveAIs[iCountAI], startingPlots);
-					}
-					else aliveAIs[iCountAI]->setStartingPlot(aliveAIs[iCountAI]->findStartingPlot(bScenario), true);
-
-					iCountAI++;
-					iOrder++;
-				}
-			}
-		}
-		if (!startingPlots.empty())
-		{
-			setBestStartingPlotFromSet(aliveHumans[iI].second, startingPlots);
-		}
-		else aliveHumans[iI].second->setStartingPlot(aliveHumans[iI].second->findStartingPlot(bScenario), true);
-	}
-	*/
-	while (iNumAIs > iCountAI)
+	for (int iI = playersWaiting.size() - 1; iI > -1; iI--)
 	{
 		if (!startingPlots.empty())
 		{
-			setBestStartingPlotFromSet(aliveAIs[iCountAI], startingPlots);
+			setBestStartingPlotFromSet(playersWaiting[iI], startingPlots);
 		}
-		else aliveAIs[iCountAI]->setStartingPlot(aliveAIs[iCountAI]->findStartingPlot(bScenario), true);
-
-		iCountAI++;
+		else playersWaiting[iI]->setStartingPlot(playersWaiting[iI]->findStartingPlot(bScenario), true);
 	}
 }
 
