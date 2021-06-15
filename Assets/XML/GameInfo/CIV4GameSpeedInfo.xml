@@ -7,7 +7,6 @@
 			Type		= Defines what Civ IV calls the game speed, e.g. GAMESPEED_EPIC.
 * Integer Tags:
 				iSpeedPercent			= Generic speed scale
-				iAnarchyPercent			= From tinkering, it seems to be how long cities revolt. It doesn't seem to have any effect that I can see on anarchy when switching governments or religions. Normal is 100
 				iBarbPercent			= The rate at which barbarians appear. Normal is 100
 				iBuildPercent			= How fast tile improvements are built. Normal is 100
 				iConstructPercent		= How fast buildings (barracks, National Epic, Pyramids etc but not projects such as The Internet) are built. Normal is 100
@@ -60,7 +59,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>1000</iBuildPercent>
 			<iImprovementPercent>1000</iImprovementPercent>
 			<iGreatPeoplePercent>1000</iGreatPeoplePercent>
-			<iAnarchyPercent>1000</iAnarchyPercent>
 			<iBarbPercent>1000</iBarbPercent>
 			<iFeatureProductionPercent>1000</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>1000</iUnitDiscoverPercent>
@@ -158,7 +156,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>800</iBuildPercent>
 			<iImprovementPercent>800</iImprovementPercent>
 			<iGreatPeoplePercent>800</iGreatPeoplePercent>
-			<iAnarchyPercent>800</iAnarchyPercent>
 			<iBarbPercent>800</iBarbPercent>
 			<iFeatureProductionPercent>800</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>800</iUnitDiscoverPercent>
@@ -256,7 +253,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>600</iBuildPercent>
 			<iImprovementPercent>600</iImprovementPercent>
 			<iGreatPeoplePercent>600</iGreatPeoplePercent>
-			<iAnarchyPercent>600</iAnarchyPercent>
 			<iBarbPercent>600</iBarbPercent>
 			<iFeatureProductionPercent>600</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>600</iUnitDiscoverPercent>
@@ -354,7 +350,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>400</iBuildPercent>
 			<iImprovementPercent>400</iImprovementPercent>
 			<iGreatPeoplePercent>400</iGreatPeoplePercent>
-			<iAnarchyPercent>400</iAnarchyPercent>
 			<iBarbPercent>400</iBarbPercent>
 			<iFeatureProductionPercent>400</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>400</iUnitDiscoverPercent>
@@ -452,7 +447,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>300</iBuildPercent>
 			<iImprovementPercent>300</iImprovementPercent>
 			<iGreatPeoplePercent>300</iGreatPeoplePercent>
-			<iAnarchyPercent>300</iAnarchyPercent>
 			<iBarbPercent>300</iBarbPercent>
 			<iFeatureProductionPercent>300</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>300</iUnitDiscoverPercent>
@@ -550,7 +544,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>200</iBuildPercent>
 			<iImprovementPercent>200</iImprovementPercent>
 			<iGreatPeoplePercent>200</iGreatPeoplePercent>
-			<iAnarchyPercent>200</iAnarchyPercent>
 			<iBarbPercent>200</iBarbPercent>
 			<iFeatureProductionPercent>200</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>200</iUnitDiscoverPercent>
@@ -648,7 +641,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
-			<iAnarchyPercent>100</iAnarchyPercent>
 			<iBarbPercent>100</iBarbPercent>
 			<iFeatureProductionPercent>100</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>100</iUnitDiscoverPercent>
@@ -746,7 +738,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>50</iBuildPercent>
 			<iImprovementPercent>50</iImprovementPercent>
 			<iGreatPeoplePercent>50</iGreatPeoplePercent>
-			<iAnarchyPercent>50</iAnarchyPercent>
 			<iBarbPercent>50</iBarbPercent>
 			<iFeatureProductionPercent>50</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>50</iUnitDiscoverPercent>
@@ -844,7 +835,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>25</iBuildPercent>
 			<iImprovementPercent>25</iImprovementPercent>
 			<iGreatPeoplePercent>25</iGreatPeoplePercent>
-			<iAnarchyPercent>25</iAnarchyPercent>
 			<iBarbPercent>25</iBarbPercent>
 			<iFeatureProductionPercent>25</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>25</iUnitDiscoverPercent>
@@ -949,7 +939,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>1400</iBuildPercent>
 			<iImprovementPercent>1400</iImprovementPercent>
 			<iGreatPeoplePercent>1000</iGreatPeoplePercent>
-			<iAnarchyPercent>1000</iAnarchyPercent>
 			<iBarbPercent>1000</iBarbPercent>
 			<iFeatureProductionPercent>1400</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>1000</iUnitDiscoverPercent>
@@ -1054,7 +1043,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>1120</iBuildPercent>
 			<iImprovementPercent>1120</iImprovementPercent>
 			<iGreatPeoplePercent>800</iGreatPeoplePercent>
-			<iAnarchyPercent>800</iAnarchyPercent>
 			<iBarbPercent>800</iBarbPercent>
 			<iFeatureProductionPercent>1120</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>800</iUnitDiscoverPercent>
@@ -1159,7 +1147,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>840</iBuildPercent>
 			<iImprovementPercent>840</iImprovementPercent>
 			<iGreatPeoplePercent>600</iGreatPeoplePercent>
-			<iAnarchyPercent>600</iAnarchyPercent>
 			<iBarbPercent>600</iBarbPercent>
 			<iFeatureProductionPercent>840</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>600</iUnitDiscoverPercent>
@@ -1264,7 +1251,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>560</iBuildPercent>
 			<iImprovementPercent>560</iImprovementPercent>
 			<iGreatPeoplePercent>400</iGreatPeoplePercent>
-			<iAnarchyPercent>400</iAnarchyPercent>
 			<iBarbPercent>400</iBarbPercent>
 			<iFeatureProductionPercent>560</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>400</iUnitDiscoverPercent>
@@ -1369,7 +1355,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>420</iBuildPercent>
 			<iImprovementPercent>420</iImprovementPercent>
 			<iGreatPeoplePercent>300</iGreatPeoplePercent>
-			<iAnarchyPercent>300</iAnarchyPercent>
 			<iBarbPercent>300</iBarbPercent>
 			<iFeatureProductionPercent>420</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>300</iUnitDiscoverPercent>
@@ -1474,7 +1459,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>280</iBuildPercent>
 			<iImprovementPercent>280</iImprovementPercent>
 			<iGreatPeoplePercent>200</iGreatPeoplePercent>
-			<iAnarchyPercent>200</iAnarchyPercent>
 			<iBarbPercent>200</iBarbPercent>
 			<iFeatureProductionPercent>280</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>200</iUnitDiscoverPercent>
@@ -1579,7 +1563,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>140</iBuildPercent>
 			<iImprovementPercent>140</iImprovementPercent>
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
-			<iAnarchyPercent>100</iAnarchyPercent>
 			<iBarbPercent>100</iBarbPercent>
 			<iFeatureProductionPercent>140</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>100</iUnitDiscoverPercent>
@@ -1684,7 +1667,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>70</iBuildPercent>
 			<iImprovementPercent>70</iImprovementPercent>
 			<iGreatPeoplePercent>50</iGreatPeoplePercent>
-			<iAnarchyPercent>50</iAnarchyPercent>
 			<iBarbPercent>50</iBarbPercent>
 			<iFeatureProductionPercent>70</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>50</iUnitDiscoverPercent>
@@ -1789,7 +1771,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>35</iBuildPercent>
 			<iImprovementPercent>35</iImprovementPercent>
 			<iGreatPeoplePercent>25</iGreatPeoplePercent>
-			<iAnarchyPercent>25</iAnarchyPercent>
 			<iBarbPercent>25</iBarbPercent>
 			<iFeatureProductionPercent>35</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>25</iUnitDiscoverPercent>

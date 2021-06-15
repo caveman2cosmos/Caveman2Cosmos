@@ -9192,53 +9192,45 @@ void CvPlayer::foundCorporation(CorporationTypes eCorporation)
 
 int CvPlayer::getCivicAnarchyLength(CivicTypes* paeNewCivics) const
 {
-	int iTotalAnarchyLength = 0;
-	int iI;
-
-	int iMaxAnarchy = getMaxAnarchyTurns();
-	if ((iMaxAnarchy < 1) || (isGoldenAge()))
+	if (isGoldenAge())
 	{
 		return 0;
 	}
+	const int iMaxAnarchy = getMaxAnarchyTurns();
 
-	int iCount = 0;
-	int iAnarchyLength;
-	bool bPolicy;
-	for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+	if (iMaxAnarchy < 1)
 	{
-		if (paeNewCivics[iI] != getCivics((CivicOptionTypes)iI))
+		return 0;
+	}
+	int iTotalAnarchyLength = 0;
+	int iCount = 0;
+	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+	{
+		if (paeNewCivics[iI] != getCivics((CivicOptionTypes)iI) && !GC.getCivicInfo(paeNewCivics[iI]).isPolicy())
 		{
-			iAnarchyLength = GC.getCivicInfo(paeNewCivics[iI]).getAnarchyLength();
-			bPolicy = GC.getCivicInfo(paeNewCivics[iI]).isPolicy();
-			if (iAnarchyLength > 0 && !bPolicy)
+			const int iAnarchyLength = GC.getCivicInfo(paeNewCivics[iI]).getAnarchyLength();
+
+			if (iAnarchyLength > 0)
 			{
 				iCount += 1;
-				iTotalAnarchyLength += (iAnarchyLength * 100);
+				iTotalAnarchyLength += iAnarchyLength * 100;
 			}
 		}
 	}
 
-	if (iCount > 0)
-	{
-		if (iCount > 1)
-		{ // Quantity discount when changing more than 1 civic at a time.
-			iTotalAnarchyLength -= (iTotalAnarchyLength * (iCount * GC.getDefineINT("CIVIC_ANARCHY_QTY_DISCOUNT"))) / 100;
-		} // CIVIC_ANARCHY_QTY_DISCOUNT: A global define that should be in the range 0-100.
-
-		iTotalAnarchyLength *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
-		iTotalAnarchyLength /= 100;
-
-		iTotalAnarchyLength += getNumCities() * GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent();
-	}
-	else
+	if (iCount <= 0)
 	{
 		return 0;
 	}
+	if (iCount > 1)
+	{ // Quantity discount when changing more than 1 civic at a time.
+		iTotalAnarchyLength -= (iTotalAnarchyLength * (iCount * GC.getDefineINT("CIVIC_ANARCHY_QTY_DISCOUNT"))) / 100;
+	} // CIVIC_ANARCHY_QTY_DISCOUNT: A global define that should be in the range 0-100.
 
-	if (iTotalAnarchyLength < 100)
-	{
-		return 0;
-	}
+	iTotalAnarchyLength *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+	iTotalAnarchyLength /= 100;
+
+	iTotalAnarchyLength += getNumCities() * GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent();
 
 	iTotalAnarchyLength *= getAnarchyModifier() + 100;
 	iTotalAnarchyLength /= 100;
@@ -9249,43 +9241,31 @@ int CvPlayer::getCivicAnarchyLength(CivicTypes* paeNewCivics) const
 	iTotalAnarchyLength *= GC.getEraInfo(getCurrentEra()).getAnarchyPercent();
 	iTotalAnarchyLength /= 100;
 
-
 	if (isRebel())
 	{
 		iTotalAnarchyLength /= 2;
 	}
-
-	if (iTotalAnarchyLength < 100)
-	{
-		return 0;
-	}
-
 	iTotalAnarchyLength /= 100;
 
-	int iFinal = range(iTotalAnarchyLength , getMinAnarchyTurns(), iMaxAnarchy);
-	iFinal = std::max(1,iFinal);
-
-	return iFinal;
+	return std::max(1, range(iTotalAnarchyLength , getMinAnarchyTurns(), iMaxAnarchy));
 }
 
 
 int CvPlayer::getReligionAnarchyLength() const
 {
-	int iAnarchyLength;
-
-	if (getMaxAnarchyTurns() == 0)
-	{
-		return 0;
-	}
-
 	if (isGoldenAge())
 	{
 		return 0;
 	}
+	const int iMaxAnarchy = getMaxAnarchyTurns();
 
-	iAnarchyLength = GC.getDefineINT("BASE_RELIGION_ANARCHY_LENGTH");
+	if (iMaxAnarchy < 1)
+	{
+		return 0;
+	}
+	int iAnarchyLength = GC.getDefineINT("BASE_RELIGION_ANARCHY_LENGTH");
 
-	iAnarchyLength *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
+	iAnarchyLength *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iAnarchyLength /= 100;
 
 	iAnarchyLength += (getNumCities() * GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent() / 100);
@@ -9303,18 +9283,10 @@ int CvPlayer::getReligionAnarchyLength() const
 	//TB Traits begin
 	if (getReligiousAnarchyModifier() !=0)
 	{
-		iAnarchyLength += ((iAnarchyLength * getReligiousAnarchyModifier())/100);
+		iAnarchyLength += iAnarchyLength * getReligiousAnarchyModifier() / 100;
 	}
 	//TB Traits end
-	int iMaxAnarchy;
-	if (getMaxAnarchyTurns() > 0)
-	{
-		iMaxAnarchy = getMaxAnarchyTurns();
-	}
-	else
-	{
-		iMaxAnarchy = MAX_INT;
-	}
+
 	return range(iAnarchyLength, getMinAnarchyTurns(), iMaxAnarchy);
 }
 
@@ -16356,12 +16328,9 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 			iProdCost = GET_TEAM(getTeam()).getResearchCost(eTech);
 		}
 
-		if (NO_TECH != eTech)
+		if (NO_TECH != eTech && canStealTech(eTargetPlayer, eTech))
 		{
-			if (canStealTech(eTargetPlayer, eTech))
-			{
-				iMissionCost = iBaseMissionCost + ((100 + kMission.getBuyTechCostFactor()) * iProdCost) / 100;
-			}
+			iMissionCost = iBaseMissionCost + ((100 + kMission.getBuyTechCostFactor()) * iProdCost) / 100;
 		}
 	}
 	else if (kMission.getSwitchCivicCostFactor() > 0)
@@ -16381,12 +16350,9 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 			}
 		}
 
-		if (NO_CIVIC != eCivic)
+		if (NO_CIVIC != eCivic && canForceCivics(eTargetPlayer, eCivic))
 		{
-			if (canForceCivics(eTargetPlayer, eCivic))
-			{
-				iMissionCost = iBaseMissionCost + (kMission.getSwitchCivicCostFactor() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent()) / 10000;
-			}
+			iMissionCost = iBaseMissionCost + kMission.getSwitchCivicCostFactor() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 10000;
 		}
 	}
 	else if (kMission.getSwitchReligionCostFactor() > 0)
@@ -16406,32 +16372,17 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 			}
 		}
 
-		if (NO_RELIGION != eReligion)
+		if (NO_RELIGION != eReligion && canForceReligion(eTargetPlayer, eReligion))
 		{
-			if (canForceReligion(eTargetPlayer, eReligion))
-			{
-				iMissionCost = iBaseMissionCost + (kMission.getSwitchReligionCostFactor() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent()) / 10000;
-			}
+			iMissionCost = iBaseMissionCost + kMission.getSwitchReligionCostFactor() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 10000;
 		}
 	}
 	else if (kMission.getDestroyUnitCostFactor() > 0)
 	{
-/************************************************************************************************/
-/* SUPER_SPIES							 RevolutionDCM												  */
-/************************************************************************************************/
-		//RevolutionDCM start
-		//Assassinate
-		if (NULL != pSpyUnit)
+		if (NULL != pSpyUnit && pSpyUnit->canAssassin(pPlot, false))
 		{
-			if (pSpyUnit->canAssassin(pPlot, false))
-			{
-				iMissionCost = iBaseMissionCost * kMission.getDestroyUnitCostFactor();
-			}
+			iMissionCost = iBaseMissionCost * kMission.getDestroyUnitCostFactor();
 		}
-		//RevolutionDCM end
-/************************************************************************************************/
-/* SUPER_SPIES							 END												  */
-/************************************************************************************************/
 	}
 	else if (kMission.getDestroyProjectCostFactor() > 0)
 	{
@@ -16587,14 +16538,9 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 		// Player anarchy timer: can't add more turns of anarchy to player already in the midst of it
 		if (!GET_PLAYER(eTargetPlayer).isAnarchy())
 		{
-			iMissionCost = (iBaseMissionCost * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent()) / 100;
+			iMissionCost = iBaseMissionCost * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
 		}
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 07/12/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	else if (kMission.getSabatogeResearchCostFactor() > 0)
 	{
 		if (GET_PLAYER(eTargetPlayer).getCurrentResearch() != NO_TECH)
@@ -16623,22 +16569,20 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 				}
 			}
 
-			if (NO_RELIGION != eReligion)
+			if (NO_RELIGION != eReligion && pCity->isHasReligion(eReligion) && !pCity->isHolyCity(eReligion))
 			{
-				if (pCity->isHasReligion(eReligion) && !pCity->isHolyCity(eReligion))
+				iMissionCost = iBaseMissionCost + kMission.getRemoveReligionsCostFactor() * pCity->getPopulation() / pCity->getNonHolyReligionCount();
+
+				if (pCity->getNonHolyReligionCount() == 1)
 				{
-					iMissionCost = iBaseMissionCost + (kMission.getRemoveReligionsCostFactor() * pCity->getPopulation() / pCity->getNonHolyReligionCount());
-					if (pCity->getNonHolyReligionCount() == 1)
-					{
-						iMissionCost *= 2;
-					}
-					iMissionCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
-					iMissionCost /= 100;
-					if (GET_PLAYER(eTargetPlayer).getStateReligion() == eReligion)
-					{
-						iMissionCost *= 2;
-					}
+					iMissionCost *= 2;
 				}
+				if (GET_PLAYER(eTargetPlayer).getStateReligion() == eReligion)
+				{
+					iMissionCost *= 2;
+				}
+				iMissionCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+				iMissionCost /= 100;
 			}
 		}
 	}
@@ -16660,24 +16604,19 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 				}
 			}
 
-			if (NO_CORPORATION != eCorporation)
+			if (NO_CORPORATION != eCorporation && pCity->isActiveCorporation(eCorporation)&& GC.getGame().getHeadquarters(eCorporation) != pCity)
 			{
-				if (pCity->isActiveCorporation(eCorporation)&& GC.getGame().getHeadquarters(eCorporation) != pCity)
+				iMissionCost = iBaseMissionCost + (kMission.getRemoveCorporationsCostFactor() * pCity->getPopulation() / pCity->getCorporationCount());
+
+				if (GC.getGame().getHeadquarters(eCorporation) != NULL && GC.getGame().getHeadquarters(eCorporation)->getOwner() == eTargetPlayer)
 				{
-					iMissionCost = iBaseMissionCost + (kMission.getRemoveCorporationsCostFactor() * pCity->getPopulation() / pCity->getCorporationCount());
-					iMissionCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
-					iMissionCost /= 100;
-					if (GC.getGame().getHeadquarters(eCorporation) != NULL && GC.getGame().getHeadquarters(eCorporation)->getOwner() == eTargetPlayer)
-					{
-						iMissionCost *= 2;
-					}
+					iMissionCost *= 2;
 				}
+				iMissionCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+				iMissionCost /= 100;
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	else if (kMission.isPassive())
 	{
 		iMissionCost = (iBaseMissionCost * (100 + GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getEspionagePointsAgainstTeam(getTeam()))) / 100;
@@ -17206,7 +17145,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 	// Player Anarchy
 	if (NO_PLAYER != eTargetPlayer && kMission.getPlayerAnarchyCounter() > 0)
 	{
-		GET_PLAYER(eTargetPlayer).changeAnarchyTurns(kMission.getPlayerAnarchyCounter() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent() / 100);
+		GET_PLAYER(eTargetPlayer).changeAnarchyTurns(kMission.getPlayerAnarchyCounter() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100);
 		bSomethingHappened = true;
 		strcpy(szSound, "AS2D_REVOLTSTART");
 		szBuffer = bCaught ?
