@@ -9,11 +9,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Used by exe... -->
-		<DefineName>USE_FINISH_TEXT_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>USE_ON_UNIT_SET_XY_CALLBACK</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
