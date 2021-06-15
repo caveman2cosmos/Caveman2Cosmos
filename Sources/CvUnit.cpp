@@ -16981,8 +16981,6 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	//TBSET
 	setHasAnyInvisibility();
 
-	// report event to Python, along with some other key state
-	CvEventReporter::getInstance().unitSetXY(pNewPlot, this);
 	/*GC.getGame().logOOSSpecial(5, getID(), iX, iY);*/
 }
 
