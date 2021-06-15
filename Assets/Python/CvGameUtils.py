@@ -174,13 +174,6 @@ class CvGameUtils:
 		score += temp
 		return int(score)
 
-	def doHolyCity(self):
-		return False
-
-	def doGoody(self, argsList):
-		#ePlayer, pPlot, pUnit, = argsList
-		return False
-
 	def doPillageGold(self, argsList):
 		CyPlot, CyUnit, = argsList
 
@@ -537,28 +530,3 @@ class CvGameUtils:
 					sText += "\n" + CyTranslator().getText("TXT_KEY_CIVICS_SCREEN_NO_UPKEEP", ())
 				return sText
 		return ""
-
-	def getUpgradePriceOverride(self, argsList):
-		iPlayer, iUnit, iUnitTypeUpgrade = argsList
-
-		CyPlayer = GC.getPlayer(iPlayer)
-
-		if GC.getTeam(CyPlayer.getTeam()).isHasTech(self.iRapidPrototyping) and CyPlayer.hasBonus(self.iReplicators):
-
-			price = self.BASE_UNIT_UPGRADE_COST
-			iHammerDif = CyPlayer.getUnitProductionNeeded(iUnitTypeUpgrade) - CyPlayer.getUnitProductionNeeded(iUnit)
-			if iHammerDif > 0:
-				price += iHammerDif * self.UNIT_UPGRADE_COST_PER_PRODUCTION
-
-			if not CyPlayer.isHuman():
-				CvHandicap = GC.getHandicapInfo(GC.getGame().getHandicapType())
-				fModAI = CvHandicap.getAIUnitUpgradePercent() / 100.0
-				fModAI *= (CvHandicap.getAIPerEraModifier() * CyPlayer.getCurrentEra() + 100) / 100.0
-				if fModAI < 0:
-					fModAI = 0
-				price *= fModAI
-				price -= price * CyPlayer.getUnit(iUnit).getUpgradeDiscount() / 100.0
-			if price < 2:
-				return 0
-			return int(price/2.0)
-		return -1

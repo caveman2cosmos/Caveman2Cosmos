@@ -6457,52 +6457,41 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 
 void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 {
-	{
-		bool result = false;
-		if (Cy::call_optional(PYGameModule, "doGoody", Cy::Args() << getID() << pPlot << pUnit, result) && result)
-		{
-			return;
-		}
-	}
-
 	FAssertMsg(pPlot->isGoody(), "pPlot->isGoody is expected to be true");
-	std::vector<GoodyTypes> aGoodies;
+	FAssertMsg(!isNPC(), "NPC's shouldn't try to pop goodies");
 
 	pPlot->removeGoody();
-	if (!isNPC())
+	std::vector<GoodyTypes> aGoodies;
+
+	for (int iI = 0; iI < GC.getHandicapInfo(getHandicapType()).getNumGoodies(); iI++)
 	{
-		for (int iI = 0; iI < GC.getHandicapInfo(getHandicapType()).getNumGoodies(); iI++)
+		if (GC.getHandicapInfo(getHandicapType()).getNumGoodies() > 0)
 		{
-			if (GC.getHandicapInfo(getHandicapType()).getNumGoodies() > 0)
+			const GoodyTypes eGoody = (GoodyTypes)GC.getHandicapInfo(getHandicapType()).getGoodies(iI);
+			if (canReceiveGoody(pPlot, eGoody, pUnit))
 			{
-				GoodyTypes eGoody = (GoodyTypes)GC.getHandicapInfo(getHandicapType()).getGoodies(iI);
-				if (canReceiveGoody(pPlot, eGoody, pUnit))
-				{
-					aGoodies.push_back(eGoody);
-				}
+				aGoodies.push_back(eGoody);
 			}
 		}
+	}
+	{
+		const GoodyTypes eGoody = aGoodies[GC.getGame().getSorenRandNum(aGoodies.size(), "Select Goody Type")];
 
-		GoodyTypes ptGoody = aGoodies[
-		GC.getGame().getSorenRandNum(aGoodies.size(), "Select Goody Type")];
+		receiveGoody(pPlot, eGoody, pUnit);
 
-		receiveGoody(pPlot, ptGoody, pUnit);
-
-		FASSERT_BOUNDS(0, GC.getNumGoodyInfos(), ptGoody)
+		FASSERT_BOUNDS(0, GC.getNumGoodyInfos(), eGoody)
 
 		// Python Event
-		CvEventReporter::getInstance().goodyReceived(getID(), pPlot, pUnit, ptGoody);
+		CvEventReporter::getInstance().goodyReceived(getID(), pPlot, pUnit, eGoody);
+	}
 
-	//Team Project (6)
-		if (hasExtraGoody())
-		{
-			GoodyTypes ptGoody2 = aGoodies[
-			GC.getGame().getSorenRandNum(aGoodies.size(), "Select Goody Type 2")];
-			receiveGoody(pPlot, ptGoody2, pUnit);
+	if (hasExtraGoody())
+	{
+		const GoodyTypes eGoody = aGoodies[GC.getGame().getSorenRandNum(aGoodies.size(), "Select Goody Type 2")];
+		receiveGoody(pPlot, eGoody, pUnit);
 
-			// Python Event
-			CvEventReporter::getInstance().goodyReceived(getID(), pPlot, pUnit, ptGoody2);
-		}
+		// Python Event
+		CvEventReporter::getInstance().goodyReceived(getID(), pPlot, pUnit, eGoody);
 	}
 }
 

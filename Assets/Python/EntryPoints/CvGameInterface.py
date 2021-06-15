@@ -30,12 +30,6 @@ def AI_unitUpdate(argsList):
 def calculateScore(argsList):
 	return GameUtils.calculateScore(argsList)
 
-def doHolyCity():
-	return GameUtils.doHolyCity()
-
-def doGoody(argsList):
-	return GameUtils.doGoody(argsList)
-
 def doPillageGold(argsList):
 	return GameUtils.doPillageGold(argsList)
 
@@ -48,6 +42,3 @@ def canPickPlot(argsList):
 # Called by exe
 def getWidgetHelp(argsList):
 	return GameUtils.getWidgetHelp(argsList)
-
-def getUpgradePriceOverride(argsList):
-	return GameUtils.getUpgradePriceOverride(argsList)
