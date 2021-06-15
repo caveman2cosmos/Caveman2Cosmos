@@ -1365,7 +1365,6 @@
 	<ElementType name="iCulturePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iEventChancePerTurn" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iOccupationTurnsPopulationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="GameSpeedInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -1391,7 +1390,6 @@
 		<element type="iUnitHurryPercent" minOccurs="0"/>
 		<element type="iUnitTradePercent" minOccurs="0"/>
 		<element type="iUnitGreatWorkPercent" minOccurs="0"/>
-		<element type="iOccupationTurnsPopulationPercent" minOccurs="0"/>
 		<element type="iTraitGainPercent" minOccurs="0"/>
 		<element type="GameTurnInfos" minOccurs="0"/>
 	</ElementType>

@@ -3848,7 +3848,6 @@ public:
 	int getUnitHurryPercent() const;
 	int getUnitTradePercent() const;
 	int getUnitGreatWorkPercent() const;
-	int getOccupationTimePopulationPercent() const;
 	int getNumTurnIncrements() const;
 
 	const GameTurnInfo& getGameTurnInfo(int iIndex) const;
@@ -3887,7 +3886,6 @@ protected:
 	int m_iUnitHurryPercent;
 	int m_iUnitTradePercent;
 	int m_iUnitGreatWorkPercent;
-	int m_iOccupationTimePopulationPercent;
 	int m_iNumTurnIncrements;
 
 	CvString m_szGameSpeedName;
