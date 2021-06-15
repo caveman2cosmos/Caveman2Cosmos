@@ -1126,7 +1126,8 @@ void setBestStartingPlotFromSet(CvPlayerAI* playerX, std::vector<CvPlot*>& start
 
 	for (uint16_t iJ = 0; iJ < startingPlots.size(); iJ++)
 	{
-		const int iValue = startingPlots[iJ]->getFoundValue(playerX->getID()) + GC.getGame().getSorenRandNum(500 + iValue/50, "Randomize Starting Location");
+		int iValue = startingPlots[iJ]->getFoundValue(playerX->getID());
+		iValue += GC.getGame().getSorenRandNum(500 + iValue/50, "Randomize Starting Location");
 
 		if (iValue > iBestValue)
 		{
@@ -1226,6 +1227,7 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 		}
 	}
 	algo::random_shuffle(playersWaiting, SorenRand("start plot assignment order shuffle"));
+	gDLL->callUpdater();
 
 	for (int iI = playersWaiting.size() - 1; iI > -1; iI--)
 	{
@@ -1235,6 +1237,7 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 		}
 		else playersWaiting[iI]->setStartingPlot(playersWaiting[iI]->findStartingPlot(bScenario), true);
 	}
+	gDLL->callUpdater();
 }
 
 // Swaps starting locations until we have reached the optimal closeness between teams
