@@ -573,7 +573,7 @@ class CvEventManager:
 
 		CvGameSpeedInfo = GC.getGameSpeedInfo(GAME.getGameSpeedType())
 		self.iTrainPrcntGS = CvGameSpeedInfo.getTrainPercent()
-		self.iVictoryDelayPrcntGS = CvGameSpeedInfo.getVictoryDelayPercent()
+		self.iGameSpeedPercent = CvGameSpeedInfo.getSpeedPercent()
 		# Find special buildings built where by whom.
 		mapBuildingType = self.mapBuildingType
 		aList0 = [ # Only meant for world wonders
@@ -748,7 +748,7 @@ class CvEventManager:
 					CyPlayer.changeGold(CyPlayer.getGold()//200)
 
 				elif KEY == "CYRUS_CYLINDER":
-					if not iGameTurn % (4*self.iVictoryDelayPrcntGS/100 + 1):
+					if not iGameTurn % (4*self.iGameSpeedPercent/100 + 1):
 						iTeam = CyPlayer.getTeam()
 						iDiv = iGameTurn * 2
 						for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
@@ -771,8 +771,8 @@ class CvEventManager:
 		# Aging Animals
 		if not CyPlayer.isNPC() or CyPlayer.isHominid():
 			return
-		bMinor = not iGameTurn % (16 * self.iVictoryDelayPrcntGS / 100 + 1)
-		bMajor = not iGameTurn % (128 * self.iVictoryDelayPrcntGS / 100)
+		bMinor = not iGameTurn % (16 * self.iGameSpeedPercent / 100 + 1)
+		bMajor = not iGameTurn % (128 * self.iGameSpeedPercent / 100)
 
 		if bMinor or bMajor:
 			for CyUnit in CyPlayer.units():
@@ -2730,7 +2730,7 @@ class CvEventManager:
 							CyCity.setFood(CyCity.getFoodKept())
 
 				elif KEY == "BIODOME":
-					if not self.aBiodomeList or GAME.getGameTurn() % (4*self.iVictoryDelayPrcntGS/100 + 1):
+					if not self.aBiodomeList or GAME.getGameTurn() % (4*self.iGameSpeedPercent/100 + 1):
 						continue
 					CyPlayer = GC.getPlayer(iPlayer)
 					iX = CyCity.getX()

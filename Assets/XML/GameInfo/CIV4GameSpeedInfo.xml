@@ -63,7 +63,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>1000</iUnitHurryPercent>
 			<iUnitTradePercent>1000</iUnitTradePercent>
 			<iUnitGreatWorkPercent>1000</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>1000</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>100</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>4000</iTraitGainPercent>
 			<Percents>
@@ -158,7 +157,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>800</iUnitHurryPercent>
 			<iUnitTradePercent>800</iUnitTradePercent>
 			<iUnitGreatWorkPercent>800</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>800</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>80</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>3200</iTraitGainPercent>
 			<Percents>
@@ -253,7 +251,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>600</iUnitHurryPercent>
 			<iUnitTradePercent>600</iUnitTradePercent>
 			<iUnitGreatWorkPercent>600</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>600</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>60</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>2400</iTraitGainPercent>
 			<Percents>
@@ -348,7 +345,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>400</iUnitHurryPercent>
 			<iUnitTradePercent>400</iUnitTradePercent>
 			<iUnitGreatWorkPercent>400</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>400</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>40</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>1600</iTraitGainPercent>
 			<Percents>
@@ -443,7 +439,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>300</iUnitHurryPercent>
 			<iUnitTradePercent>300</iUnitTradePercent>
 			<iUnitGreatWorkPercent>300</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>300</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>30</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>1200</iTraitGainPercent>
 			<Percents>
@@ -538,7 +533,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>200</iUnitHurryPercent>
 			<iUnitTradePercent>200</iUnitTradePercent>
 			<iUnitGreatWorkPercent>200</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>200</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>20</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>800</iTraitGainPercent>
 			<Percents>
@@ -633,7 +627,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>100</iUnitHurryPercent>
 			<iUnitTradePercent>100</iUnitTradePercent>
 			<iUnitGreatWorkPercent>100</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>100</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>10</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>400</iTraitGainPercent>
 			<Percents>
@@ -728,7 +721,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>50</iUnitHurryPercent>
 			<iUnitTradePercent>50</iUnitTradePercent>
 			<iUnitGreatWorkPercent>50</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>50</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>5</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>200</iTraitGainPercent>
 			<Percents>
@@ -823,7 +815,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>25</iUnitHurryPercent>
 			<iUnitTradePercent>25</iUnitTradePercent>
 			<iUnitGreatWorkPercent>25</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>25</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>2</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>100</iTraitGainPercent>
 			<Percents>
@@ -925,7 +916,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>1400</iUnitHurryPercent>
 			<iUnitTradePercent>1000</iUnitTradePercent>
 			<iUnitGreatWorkPercent>1000</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>1000</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>100</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>4000</iTraitGainPercent>
 			<Percents>
@@ -1027,7 +1017,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>1120</iUnitHurryPercent>
 			<iUnitTradePercent>800</iUnitTradePercent>
 			<iUnitGreatWorkPercent>800</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>800</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>80</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>3200</iTraitGainPercent>
 			<Percents>
@@ -1129,7 +1118,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>840</iUnitHurryPercent>
 			<iUnitTradePercent>600</iUnitTradePercent>
 			<iUnitGreatWorkPercent>600</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>600</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>60</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>2400</iTraitGainPercent>
 			<Percents>
@@ -1231,7 +1219,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>560</iUnitHurryPercent>
 			<iUnitTradePercent>400</iUnitTradePercent>
 			<iUnitGreatWorkPercent>400</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>400</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>40</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>1600</iTraitGainPercent>
 			<Percents>
@@ -1333,7 +1320,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>420</iUnitHurryPercent>
 			<iUnitTradePercent>300</iUnitTradePercent>
 			<iUnitGreatWorkPercent>300</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>300</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>30</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>1200</iTraitGainPercent>
 			<Percents>
@@ -1435,7 +1421,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>280</iUnitHurryPercent>
 			<iUnitTradePercent>200</iUnitTradePercent>
 			<iUnitGreatWorkPercent>200</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>200</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>20</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>800</iTraitGainPercent>
 			<Percents>
@@ -1537,7 +1522,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>140</iUnitHurryPercent>
 			<iUnitTradePercent>100</iUnitTradePercent>
 			<iUnitGreatWorkPercent>100</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>100</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>10</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>400</iTraitGainPercent>
 			<Percents>
@@ -1639,7 +1623,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>70</iUnitHurryPercent>
 			<iUnitTradePercent>50</iUnitTradePercent>
 			<iUnitGreatWorkPercent>50</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>50</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>5</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>200</iTraitGainPercent>
 			<Percents>
@@ -1741,7 +1724,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iUnitHurryPercent>35</iUnitHurryPercent>
 			<iUnitTradePercent>25</iUnitTradePercent>
 			<iUnitGreatWorkPercent>25</iUnitGreatWorkPercent>
-			<iVictoryDelayPercent>25</iVictoryDelayPercent>
 			<iOccupationTurnsPopulationPercent>2</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>100</iTraitGainPercent>
 			<Percents>

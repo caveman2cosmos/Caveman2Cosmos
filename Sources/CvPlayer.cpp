@@ -14720,7 +14720,7 @@ int64_t CvPlayer::getTreasuryUpkeep() const
 
 	// Scale by gamespeed as gold is worth less on slower speeds, expected treasury size is different.
 	iUpkeep *= 100;
-	iUpkeep /= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent();
+	iUpkeep /= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 
 	return iUpkeep;
 }

@@ -4211,7 +4211,7 @@ int CvPlayerAI::AI_goldTarget() const
 		iGold /= 100;
 
 		const int eventmult = GC.getGame().isOption(GAMEOPTION_NO_EVENTS) ? 10 : 6;
-		const int speedmult = (eventmult * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent());
+		const int speedmult = eventmult * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 		const int turnmult = iMultiplier * GC.getGame().getElapsedGameTurns();
 
 		iGold += (turnmult / speedmult);

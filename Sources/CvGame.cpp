@@ -3192,7 +3192,7 @@ int CvGame::victoryDelay(VictoryTypes eVictory) const
 {
 	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), eVictory)
 
-	return GC.getVictoryInfo(eVictory).getVictoryDelayTurns() * GC.getGameSpeedInfo(getGameSpeedType()).getVictoryDelayPercent() / 100;
+	return GC.getVictoryInfo(eVictory).getVictoryDelayTurns() * GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 100;
 }
 
 
@@ -6493,7 +6493,7 @@ void CvGame::doGlobalWarming()
 		int iGlobalWarmingProb = 
 		(
 			100 * (GC.getDefineINT("GLOBAL_WARMING_PROB") - iGlobalWarmingDefense)
-			/ GC.getGameSpeedInfo(getGameSpeedType()).getVictoryDelayPercent()
+			/ GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent()
 		);
 
 		for (int iI = 0; iI < iGlobalWarmingValue; iI++)
@@ -6607,7 +6607,7 @@ void CvGame::doGlobalWarming()
 	const int iNuclearWinterValue = getNukesExploded() * GC.getDefineINT("GLOBAL_WARMING_NUKE_WEIGHT") / 100;
 	if (iNuclearWinterValue > 0)
 	{
-		const int iNuclearWinterProb = GC.getDefineINT("NUCLEAR_WINTER_PROB") * 100 / GC.getGameSpeedInfo(getGameSpeedType()).getVictoryDelayPercent();
+		const int iNuclearWinterProb = GC.getDefineINT("NUCLEAR_WINTER_PROB") * 100 / GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent();
 
 		for (int iI = 0; iI < iNuclearWinterValue; iI++)
 		{
@@ -7594,17 +7594,13 @@ void CvGame::testVictory()
 				{
 					if (getMercyRuleCounter() == 0)
 					{
-						//Ten Turns remain!
-						int iTurns = 10;
-						iTurns *= GC.getGameSpeedInfo(getGameSpeedType()).getVictoryDelayPercent();
-						iTurns /= 100;
-						setMercyRuleCounter(iTurns);
-						//Inform Players
+						// Ten Turns remain! (on normal gamespeed)
+						setMercyRuleCounter(GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 10);
+						// Inform Players
 						for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 						{
 							if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 							{
-
 								if (GET_PLAYER((PlayerTypes)iI).getTeam() == eBestTeam)
 								{
 									AddDLLMessage(
