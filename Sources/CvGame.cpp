@@ -1195,7 +1195,7 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 				if (bScenario)
 				{
 					// Only scenarios assign starting plots to players.
-					// Check if the starting plot is already assign a player.
+					// Check if the starting plot is already assigned any players.
 					for (int iJ = 0; iJ < iNumPlayers; iJ++)
 					{
 						if (alivePlayers[iJ]->getStartingPlot() == pPlot)
@@ -1214,7 +1214,7 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 		}
 	}
 	std::vector<CvPlayerAI*> aliveAIs;
-	std::vector< std::pair<int, CvPlayerAI*> > aliveHumans;
+	//std::vector< std::pair<int, CvPlayerAI*> > aliveHumans;
 
 	for (int iI = 0; iI < iNumPlayers; iI++)
 	{
@@ -1222,20 +1222,23 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 
 		if (playerX->getStartingPlot() == NULL)
 		{
+			/* Toffer - disabled the difficulty factor
 			if (playerX->isHuman())
 			{
 				aliveHumans.push_back(std::make_pair(GC.getHandicapInfo(playerX->getHandicapType()).getStartingLocationPercent(), playerX));
 			}
-			else aliveAIs.push_back(playerX);
+			else*/ aliveAIs.push_back(playerX);
 		}
 	}
-	std::sort(aliveHumans.begin(), aliveHumans.end());
+	//std::sort(aliveHumans.begin(), aliveHumans.end());
+	algo::random_shuffle(aliveAIs, SorenRand("start plot assignment order shuffle"));
 
 	const int iNumAIs = aliveAIs.size();
-	const int iNumHumans = aliveHumans.size();
+	//const int iNumHumans = aliveHumans.size();
 
-	int iOrder = 0;
+	//int iOrder = 0;
 	int iCountAI = 0;
+	/*
 	for (int iI = 0; iI < iNumHumans; iI++)
 	{
 		iOrder++;
@@ -1263,6 +1266,7 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 		}
 		else aliveHumans[iI].second->setStartingPlot(aliveHumans[iI].second->findStartingPlot(bScenario), true);
 	}
+	*/
 	while (iNumAIs > iCountAI)
 	{
 		if (!startingPlots.empty())
