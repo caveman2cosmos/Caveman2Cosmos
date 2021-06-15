@@ -3271,10 +3271,7 @@ bool CvCity::canMaintain(ProcessTypes eProcess, bool bContinue) const
 		return false;
 	}
 
-	if (
-		GC.getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK()
-	&&
-		Cy::call<bool>(
+	if (Cy::call<bool>(
 			PYGameModule, "cannotMaintain", Cy::Args()
 			<< const_cast<CvCity*>(this) << eProcess << bContinue
 		)

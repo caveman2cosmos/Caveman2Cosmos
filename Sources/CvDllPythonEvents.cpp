@@ -843,14 +843,11 @@ void CvDllPythonEvents::reportUnitSetXY(CvPlot* pPlot, CvUnit* pUnit)
 
 void CvDllPythonEvents::reportUnitCreated(CvUnit* pUnit)
 {
-	if (GC.getUSE_ON_UNIT_CREATED_CALLBACK())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitCreated")
-			.arg("pUnit", pUnit);
-		postEvent(eventData, "unitCreated");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitCreated")
+		.arg("pUnit", pUnit);
+	postEvent(eventData, "unitCreated");
 }
 
 void CvDllPythonEvents::reportUnitBuilt(CvCity *pCity, CvUnit* pUnit)
