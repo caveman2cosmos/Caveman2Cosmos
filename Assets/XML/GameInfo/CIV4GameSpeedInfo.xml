@@ -6,21 +6,16 @@
 							when you choose your game speed when starting a new game.
 			Type		= Defines what Civ IV calls the game speed, e.g. GAMESPEED_EPIC.
 * Integer Tags:
-				iAnarchyPercent			= From tinkering, it seems to be how long cities revolt. It doesn't seem to have any effect that I can see on anarchy when switching governments or religions. Normal is 100
+				iSpeedPercent			= Generic speed scale
 				iBarbPercent			= The rate at which barbarians appear. Normal is 100
 				iBuildPercent			= How fast tile improvements are built. Normal is 100
 				iConstructPercent		= How fast buildings (barracks, National Epic, Pyramids etc but not projects such as The Internet) are built. Normal is 100
 				iCreatePercent			= How fast projects are built. Normal is 100
 				iCulturePercent			= How fast cultural borders expand. Normal is 100
 				iFeatureProductionPercent = Amount of hammers produced when forests or jungles are chopped, possible other effects. Normal is 100
-				iGoldenAgePercent		= How long golden ages last. Normal is 100
 				iGreatPeoplePercent		= How many points are needed to get a great person. Normal is 100
 				iGrowthPercent			= How fast the population of cities grow. Normal is 100
-				iHurryConscriptAngerPercent = How long unhappiness from hurrying or drafting lasts. Normal is 100
-				iHurryPercent			= Amount of gold or population needed to hurry production. Normal is 100
 				iImprovementPercent		= How fast tile improvements upgrade to the next level (eg cottages to hamlets). Normal is 100
-				iOccupationTurnsPopulationPercent = The percentage of the city population size that is added as turns of revolt after city capture.
-													It is added on top of the minimum number of turns defined in GlobalDefines.xml as BASE_REVOLT_OCCUPATION_TURNS.
 				iResearchPercent		= How fast technologies are researched. Normal is 100
 				iTrainPercent			= How fast units (warriors, settlers etc) are built. Normal is 100
 				iTurnsPerIncrement		= Number of turns that this year increment level lasts
@@ -51,7 +46,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_ETERNITY</Type>
 			<Description>TXT_KEY_GAMESPEED_ETERNITY</Description>
 			<Help>TXT_KEY_GAMESPEED_ETERNITY_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>1000</iSpeedPercent>
 			<iGrowthPercent>1000</iGrowthPercent>
 			<iTrainPercent>1000</iTrainPercent>
 			<iConstructPercent>1000</iConstructPercent>
@@ -60,17 +55,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>1000</iBuildPercent>
 			<iImprovementPercent>1000</iImprovementPercent>
 			<iGreatPeoplePercent>1000</iGreatPeoplePercent>
-			<iAnarchyPercent>1000</iAnarchyPercent>
 			<iBarbPercent>1000</iBarbPercent>
 			<iFeatureProductionPercent>1000</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>1000</iUnitDiscoverPercent>
 			<iUnitHurryPercent>1000</iUnitHurryPercent>
 			<iUnitTradePercent>1000</iUnitTradePercent>
 			<iUnitGreatWorkPercent>1000</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>1000</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>1000</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>1000</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>100</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>4000</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -149,7 +139,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_EONS</Type>
 			<Description>TXT_KEY_GAMESPEED_EONS</Description>
 			<Help>TXT_KEY_GAMESPEED_EONS_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>800</iSpeedPercent>
 			<iGrowthPercent>800</iGrowthPercent>
 			<iTrainPercent>800</iTrainPercent>
 			<iConstructPercent>800</iConstructPercent>
@@ -158,17 +148,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>800</iBuildPercent>
 			<iImprovementPercent>800</iImprovementPercent>
 			<iGreatPeoplePercent>800</iGreatPeoplePercent>
-			<iAnarchyPercent>800</iAnarchyPercent>
 			<iBarbPercent>800</iBarbPercent>
 			<iFeatureProductionPercent>800</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>800</iUnitDiscoverPercent>
 			<iUnitHurryPercent>800</iUnitHurryPercent>
 			<iUnitTradePercent>800</iUnitTradePercent>
 			<iUnitGreatWorkPercent>800</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>800</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>800</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>800</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>80</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>3200</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -247,7 +232,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_SNAIL</Type>
 			<Description>TXT_KEY_GAMESPEED_SNAIL</Description>
 			<Help>TXT_KEY_GAMESPEED_SNAIL_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>600</iSpeedPercent>
 			<iGrowthPercent>600</iGrowthPercent>
 			<iTrainPercent>600</iTrainPercent>
 			<iConstructPercent>600</iConstructPercent>
@@ -256,17 +241,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>600</iBuildPercent>
 			<iImprovementPercent>600</iImprovementPercent>
 			<iGreatPeoplePercent>600</iGreatPeoplePercent>
-			<iAnarchyPercent>600</iAnarchyPercent>
 			<iBarbPercent>600</iBarbPercent>
 			<iFeatureProductionPercent>600</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>600</iUnitDiscoverPercent>
 			<iUnitHurryPercent>600</iUnitHurryPercent>
 			<iUnitTradePercent>600</iUnitTradePercent>
 			<iUnitGreatWorkPercent>600</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>600</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>600</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>600</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>60</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>2400</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -345,7 +325,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_MARATHON</Type>
 			<Description>TXT_KEY_GAMESPEED_MARATHON</Description>
 			<Help>TXT_KEY_GAMESPEED_MARATHON_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>400</iSpeedPercent>
 			<iGrowthPercent>400</iGrowthPercent>
 			<iTrainPercent>400</iTrainPercent>
 			<iConstructPercent>400</iConstructPercent>
@@ -354,17 +334,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>400</iBuildPercent>
 			<iImprovementPercent>400</iImprovementPercent>
 			<iGreatPeoplePercent>400</iGreatPeoplePercent>
-			<iAnarchyPercent>400</iAnarchyPercent>
 			<iBarbPercent>400</iBarbPercent>
 			<iFeatureProductionPercent>400</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>400</iUnitDiscoverPercent>
 			<iUnitHurryPercent>400</iUnitHurryPercent>
 			<iUnitTradePercent>400</iUnitTradePercent>
 			<iUnitGreatWorkPercent>400</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>400</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>400</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>400</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>40</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>1600</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -443,7 +418,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_EPIC</Type>
 			<Description>TXT_KEY_GAMESPEED_EPIC</Description>
 			<Help>TXT_KEY_GAMESPEED_EPIC_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>300</iSpeedPercent>
 			<iGrowthPercent>300</iGrowthPercent>
 			<iTrainPercent>300</iTrainPercent>
 			<iConstructPercent>300</iConstructPercent>
@@ -452,17 +427,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>300</iBuildPercent>
 			<iImprovementPercent>300</iImprovementPercent>
 			<iGreatPeoplePercent>300</iGreatPeoplePercent>
-			<iAnarchyPercent>300</iAnarchyPercent>
 			<iBarbPercent>300</iBarbPercent>
 			<iFeatureProductionPercent>300</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>300</iUnitDiscoverPercent>
 			<iUnitHurryPercent>300</iUnitHurryPercent>
 			<iUnitTradePercent>300</iUnitTradePercent>
 			<iUnitGreatWorkPercent>300</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>300</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>300</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>300</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>30</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>1200</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -541,7 +511,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_LONG</Type>
 			<Description>TXT_KEY_GAMESPEED_LONG</Description>
 			<Help>TXT_KEY_GAMESPEED_LONG_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>200</iSpeedPercent>
 			<iGrowthPercent>200</iGrowthPercent>
 			<iTrainPercent>200</iTrainPercent>
 			<iConstructPercent>200</iConstructPercent>
@@ -550,17 +520,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>200</iBuildPercent>
 			<iImprovementPercent>200</iImprovementPercent>
 			<iGreatPeoplePercent>200</iGreatPeoplePercent>
-			<iAnarchyPercent>200</iAnarchyPercent>
 			<iBarbPercent>200</iBarbPercent>
 			<iFeatureProductionPercent>200</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>200</iUnitDiscoverPercent>
 			<iUnitHurryPercent>200</iUnitHurryPercent>
 			<iUnitTradePercent>200</iUnitTradePercent>
 			<iUnitGreatWorkPercent>200</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>200</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>200</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>200</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>20</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>800</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -639,7 +604,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_NORMAL</Type>
 			<Description>TXT_KEY_GAMESPEED_NORMAL</Description>
 			<Help>TXT_KEY_GAMESPEED_NORMAL_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>100</iSpeedPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -648,17 +613,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
-			<iAnarchyPercent>100</iAnarchyPercent>
 			<iBarbPercent>100</iBarbPercent>
 			<iFeatureProductionPercent>100</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>100</iUnitDiscoverPercent>
 			<iUnitHurryPercent>100</iUnitHurryPercent>
 			<iUnitTradePercent>100</iUnitTradePercent>
 			<iUnitGreatWorkPercent>100</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>100</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>100</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>100</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>10</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>400</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -737,7 +697,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_BLITZ</Type>
 			<Description>TXT_KEY_GAMESPEED_BLITZ</Description>
 			<Help>TXT_KEY_GAMESPEED_BLITZ_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>50</iSpeedPercent>
 			<iGrowthPercent>50</iGrowthPercent>
 			<iTrainPercent>50</iTrainPercent>
 			<iConstructPercent>50</iConstructPercent>
@@ -746,17 +706,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>50</iBuildPercent>
 			<iImprovementPercent>50</iImprovementPercent>
 			<iGreatPeoplePercent>50</iGreatPeoplePercent>
-			<iAnarchyPercent>50</iAnarchyPercent>
 			<iBarbPercent>50</iBarbPercent>
 			<iFeatureProductionPercent>50</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>50</iUnitDiscoverPercent>
 			<iUnitHurryPercent>50</iUnitHurryPercent>
 			<iUnitTradePercent>50</iUnitTradePercent>
 			<iUnitGreatWorkPercent>50</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>50</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>50</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>50</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>5</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>200</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -835,7 +790,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<Type>GAMESPEED_ULTRAFAST</Type>
 			<Description>TXT_KEY_GAMESPEED_ULTRAFAST</Description>
 			<Help>TXT_KEY_GAMESPEED_ULTRAFAST_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>25</iSpeedPercent>
 			<iGrowthPercent>25</iGrowthPercent>
 			<iTrainPercent>25</iTrainPercent>
 			<iConstructPercent>25</iConstructPercent>
@@ -844,17 +799,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>25</iBuildPercent>
 			<iImprovementPercent>25</iImprovementPercent>
 			<iGreatPeoplePercent>25</iGreatPeoplePercent>
-			<iAnarchyPercent>25</iAnarchyPercent>
 			<iBarbPercent>25</iBarbPercent>
 			<iFeatureProductionPercent>25</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>25</iUnitDiscoverPercent>
 			<iUnitHurryPercent>25</iUnitHurryPercent>
 			<iUnitTradePercent>25</iUnitTradePercent>
 			<iUnitGreatWorkPercent>25</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>25</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>25</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>25</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>2</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>100</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -940,7 +890,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_ETERNITY</Description>
 			<Help>TXT_KEY_GAMESPEED_ETERNITY_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>1000</iSpeedPercent>
 			<iGrowthPercent>1000</iGrowthPercent>
 			<iTrainPercent>1400</iTrainPercent>
 			<iConstructPercent>1400</iConstructPercent>
@@ -949,17 +899,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>1400</iBuildPercent>
 			<iImprovementPercent>1400</iImprovementPercent>
 			<iGreatPeoplePercent>1000</iGreatPeoplePercent>
-			<iAnarchyPercent>1000</iAnarchyPercent>
 			<iBarbPercent>1000</iBarbPercent>
 			<iFeatureProductionPercent>1400</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>1000</iUnitDiscoverPercent>
 			<iUnitHurryPercent>1400</iUnitHurryPercent>
 			<iUnitTradePercent>1000</iUnitTradePercent>
 			<iUnitGreatWorkPercent>1000</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>1000</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>1000</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>1000</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>100</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>4000</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -1045,7 +990,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_EONS</Description>
 			<Help>TXT_KEY_GAMESPEED_EONS_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>800</iSpeedPercent>
 			<iGrowthPercent>800</iGrowthPercent>
 			<iTrainPercent>1120</iTrainPercent>
 			<iConstructPercent>1120</iConstructPercent>
@@ -1054,17 +999,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>1120</iBuildPercent>
 			<iImprovementPercent>1120</iImprovementPercent>
 			<iGreatPeoplePercent>800</iGreatPeoplePercent>
-			<iAnarchyPercent>800</iAnarchyPercent>
 			<iBarbPercent>800</iBarbPercent>
 			<iFeatureProductionPercent>1120</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>800</iUnitDiscoverPercent>
 			<iUnitHurryPercent>1120</iUnitHurryPercent>
 			<iUnitTradePercent>800</iUnitTradePercent>
 			<iUnitGreatWorkPercent>800</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>800</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>800</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>800</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>80</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>3200</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -1150,7 +1090,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_SNAIL</Description>
 			<Help>TXT_KEY_GAMESPEED_SNAIL_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>600</iSpeedPercent>
 			<iGrowthPercent>600</iGrowthPercent>
 			<iTrainPercent>840</iTrainPercent>
 			<iConstructPercent>840</iConstructPercent>
@@ -1159,17 +1099,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>840</iBuildPercent>
 			<iImprovementPercent>840</iImprovementPercent>
 			<iGreatPeoplePercent>600</iGreatPeoplePercent>
-			<iAnarchyPercent>600</iAnarchyPercent>
 			<iBarbPercent>600</iBarbPercent>
 			<iFeatureProductionPercent>840</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>600</iUnitDiscoverPercent>
 			<iUnitHurryPercent>840</iUnitHurryPercent>
 			<iUnitTradePercent>600</iUnitTradePercent>
 			<iUnitGreatWorkPercent>600</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>600</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>600</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>600</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>60</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>2400</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -1255,7 +1190,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_MARATHON</Description>
 			<Help>TXT_KEY_GAMESPEED_MARATHON_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>400</iSpeedPercent>
 			<iGrowthPercent>400</iGrowthPercent>
 			<iTrainPercent>560</iTrainPercent>
 			<iConstructPercent>560</iConstructPercent>
@@ -1264,17 +1199,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>560</iBuildPercent>
 			<iImprovementPercent>560</iImprovementPercent>
 			<iGreatPeoplePercent>400</iGreatPeoplePercent>
-			<iAnarchyPercent>400</iAnarchyPercent>
 			<iBarbPercent>400</iBarbPercent>
 			<iFeatureProductionPercent>560</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>400</iUnitDiscoverPercent>
 			<iUnitHurryPercent>560</iUnitHurryPercent>
 			<iUnitTradePercent>400</iUnitTradePercent>
 			<iUnitGreatWorkPercent>400</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>400</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>400</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>400</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>40</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>1600</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -1360,7 +1290,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_EPIC</Description>
 			<Help>TXT_KEY_GAMESPEED_EPIC_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>300</iSpeedPercent>
 			<iGrowthPercent>300</iGrowthPercent>
 			<iTrainPercent>420</iTrainPercent>
 			<iConstructPercent>420</iConstructPercent>
@@ -1369,17 +1299,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>420</iBuildPercent>
 			<iImprovementPercent>420</iImprovementPercent>
 			<iGreatPeoplePercent>300</iGreatPeoplePercent>
-			<iAnarchyPercent>300</iAnarchyPercent>
 			<iBarbPercent>300</iBarbPercent>
 			<iFeatureProductionPercent>420</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>300</iUnitDiscoverPercent>
 			<iUnitHurryPercent>420</iUnitHurryPercent>
 			<iUnitTradePercent>300</iUnitTradePercent>
 			<iUnitGreatWorkPercent>300</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>300</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>300</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>300</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>30</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>1200</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -1465,7 +1390,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_LONG</Description>
 			<Help>TXT_KEY_GAMESPEED_LONG_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>200</iSpeedPercent>
 			<iGrowthPercent>200</iGrowthPercent>
 			<iTrainPercent>280</iTrainPercent>
 			<iConstructPercent>280</iConstructPercent>
@@ -1474,17 +1399,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>280</iBuildPercent>
 			<iImprovementPercent>280</iImprovementPercent>
 			<iGreatPeoplePercent>200</iGreatPeoplePercent>
-			<iAnarchyPercent>200</iAnarchyPercent>
 			<iBarbPercent>200</iBarbPercent>
 			<iFeatureProductionPercent>280</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>200</iUnitDiscoverPercent>
 			<iUnitHurryPercent>280</iUnitHurryPercent>
 			<iUnitTradePercent>200</iUnitTradePercent>
 			<iUnitGreatWorkPercent>200</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>200</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>200</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>200</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>20</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>800</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -1570,7 +1490,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_NORMAL</Description>
 			<Help>TXT_KEY_GAMESPEED_NORMAL_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>100</iSpeedPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>140</iTrainPercent>
 			<iConstructPercent>140</iConstructPercent>
@@ -1579,17 +1499,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>140</iBuildPercent>
 			<iImprovementPercent>140</iImprovementPercent>
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
-			<iAnarchyPercent>100</iAnarchyPercent>
 			<iBarbPercent>100</iBarbPercent>
 			<iFeatureProductionPercent>140</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>100</iUnitDiscoverPercent>
 			<iUnitHurryPercent>140</iUnitHurryPercent>
 			<iUnitTradePercent>100</iUnitTradePercent>
 			<iUnitGreatWorkPercent>100</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>100</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>100</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>100</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>10</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>400</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -1675,7 +1590,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_BLITZ</Description>
 			<Help>TXT_KEY_GAMESPEED_BLITZ_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>50</iSpeedPercent>
 			<iGrowthPercent>50</iGrowthPercent>
 			<iTrainPercent>70</iTrainPercent>
 			<iConstructPercent>70</iConstructPercent>
@@ -1684,17 +1599,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>70</iBuildPercent>
 			<iImprovementPercent>70</iImprovementPercent>
 			<iGreatPeoplePercent>50</iGreatPeoplePercent>
-			<iAnarchyPercent>50</iAnarchyPercent>
 			<iBarbPercent>50</iBarbPercent>
 			<iFeatureProductionPercent>70</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>50</iUnitDiscoverPercent>
 			<iUnitHurryPercent>70</iUnitHurryPercent>
 			<iUnitTradePercent>50</iUnitTradePercent>
 			<iUnitGreatWorkPercent>50</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>50</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>50</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>50</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>5</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>200</iTraitGainPercent>
 			<Percents>
 				<Percent>
@@ -1780,7 +1690,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			</ReplacementCondition>
 			<Description>TXT_KEY_GAMESPEED_ULTRAFAST</Description>
 			<Help>TXT_KEY_GAMESPEED_ULTRAFAST_HELP</Help>
-			<iHurryPercent>100</iHurryPercent>
+			<iSpeedPercent>25</iSpeedPercent>
 			<iGrowthPercent>25</iGrowthPercent>
 			<iTrainPercent>35</iTrainPercent>
 			<iConstructPercent>35</iConstructPercent>
@@ -1789,17 +1699,12 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iBuildPercent>35</iBuildPercent>
 			<iImprovementPercent>35</iImprovementPercent>
 			<iGreatPeoplePercent>25</iGreatPeoplePercent>
-			<iAnarchyPercent>25</iAnarchyPercent>
 			<iBarbPercent>25</iBarbPercent>
 			<iFeatureProductionPercent>35</iFeatureProductionPercent>
 			<iUnitDiscoverPercent>25</iUnitDiscoverPercent>
 			<iUnitHurryPercent>35</iUnitHurryPercent>
 			<iUnitTradePercent>25</iUnitTradePercent>
 			<iUnitGreatWorkPercent>25</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>25</iGoldenAgePercent>
-			<iHurryConscriptAngerPercent>25</iHurryConscriptAngerPercent>
-			<iVictoryDelayPercent>25</iVictoryDelayPercent>
-			<iOccupationTurnsPopulationPercent>2</iOccupationTurnsPopulationPercent>
 			<iTraitGainPercent>100</iTraitGainPercent>
 			<Percents>
 				<Percent>

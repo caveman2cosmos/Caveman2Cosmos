@@ -1,7 +1,5 @@
 //------------------------------------------------------------------------------------------------------
-//
 //  CLASS: UnitCompCommander
-//
 //------------------------------------------------------------------------------------------------------
 UnitCompCommander::UnitCompCommander() // Used when loading save
 {
@@ -42,14 +40,13 @@ void UnitCompCommander::changeCommandRange(const int iChange)
 }
 
 //------------------------------------------------------------------------------------------------------
-//
 //  CLASS: UnitCompWorker
-//
 //------------------------------------------------------------------------------------------------------
 UnitCompWorker::UnitCompWorker()
 {
 	m_iHillsWorkModifier = 0;
 	m_iPeaksWorkModifier = 0;
+	m_iWorkModifier = 0;
 }
 UnitCompWorker::~UnitCompWorker() { }
 
@@ -57,6 +54,7 @@ UnitCompWorker::UnitCompWorker(CvUnitInfo* unitInfo) // Used when unit becomes c
 {
 	m_iHillsWorkModifier = unitInfo->getHillsWorkModifier();
 	m_iPeaksWorkModifier = unitInfo->getPeaksWorkModifier();
+	m_iWorkModifier = 0;
 }
 
 void UnitCompWorker::changeHillsWorkModifier(const int iChange)
@@ -69,8 +67,11 @@ void UnitCompWorker::changePeaksWorkModifier(const int iChange)
 	m_iPeaksWorkModifier += iChange;
 }
 
+void UnitCompWorker::changeWorkModifier(const int iChange)
+{
+	m_iWorkModifier += iChange;
+}
+
 //------------------------------------------------------------------------------------------------------
-//
-//  CLASS: UnitCompWorker
-//
+//  CLASS: X
 //------------------------------------------------------------------------------------------------------

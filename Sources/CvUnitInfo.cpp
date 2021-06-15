@@ -159,10 +159,6 @@ m_bAlwaysHostile(false),
 m_bFreeDrop(false),
 m_bNoRevealMap(false),
 m_bInquisitor(false),
-m_bCanBeRebel(false),
-m_bCanRebelCapture(false),
-m_bCannotDefect(false),
-m_bCanQuellRebellion(false),
 m_bNoNonOwnedEntry(false),
 m_iLeaderPromotion(NO_PROMOTION),
 m_fUnitMaxSpeed(0.0f),
@@ -678,16 +674,7 @@ int CvUnitInfo::getEvasionProbability() const
 
 int CvUnitInfo::getWithdrawalProbability() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT) && m_iWithdrawalProbability > 0)
-	{
-		if (hasUnitCombat(GC.getUNITCOMBAT_WILD()))
-		{
-			return 0;
-		}
-		return (m_iWithdrawalProbability / 2);
-	}
-
-	return m_iWithdrawalProbability;
+	return GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT) ? m_iWithdrawalProbability : m_iWithdrawalProbability / 2;
 }
 
 int CvUnitInfo::getCollateralDamage() const
@@ -746,7 +733,6 @@ int CvUnitInfo::getSpecialCargo() const
 	{
 		return m_iSMSpecialCargo;
 	}
-
 	return m_iSpecialCargo;
 }
 
@@ -852,11 +838,6 @@ int CvUnitInfo::getAdvisorType() const
 	return m_iAdvisorType;
 }
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain																*/
-/********************************************************************************/
 int CvUnitInfo::getMaxStartEra() const
 {
 	return m_iMaxStartEra;
@@ -881,9 +862,6 @@ int CvUnitInfo::getNotGameOption() const
 {
 	return m_iNotGameOption;
 }
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
 int CvUnitInfo::getHolyCity() const
 {
@@ -1131,59 +1109,20 @@ bool CvUnitInfo::isAlwaysHostile() const
 	return m_bAlwaysHostile;
 }
 
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 bool CvUnitInfo::isFreeDrop() const
 {
 	return m_bFreeDrop;
 }
-
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 
 bool CvUnitInfo::isNoRevealMap() const
 {
 	return m_bNoRevealMap;
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD								 01/01/08						DPII		  */
-/*																							  */
-/* CoreComponent																				*/
-/************************************************************************************************/
 bool CvUnitInfo::isInquisitor() const
 {
 	return m_bInquisitor;
 }
-
-bool CvUnitInfo::isCanBeRebel() const
-{
-	return m_bCanBeRebel;
-}
-
-bool CvUnitInfo::isCanRebelCapture() const
-{
-	return m_bCanRebelCapture;
-}
-
-bool CvUnitInfo::isCannotDefect() const
-{
-	return m_bCannotDefect;
-}
-
-bool CvUnitInfo::isCanQuellRebellion() const
-{
-	return m_bCanQuellRebellion;
-}
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 
 //ls612: Can't enter non-Owned cities
 bool CvUnitInfo::isNoNonOwnedEntry() const
@@ -1252,7 +1191,7 @@ bool CvUnitInfo::isPrereqOrCivics(int i) const
 }
 
 
-int CvUnitInfo::getBuild(int i) const
+BuildTypes CvUnitInfo::getBuild(int i) const
 {
 	return m_workerBuilds[i];
 }
@@ -1260,9 +1199,9 @@ short CvUnitInfo::getNumBuilds() const
 {
 	return m_workerBuilds.size();
 }
-bool CvUnitInfo::hasBuild(int i) const
+bool CvUnitInfo::hasBuild(BuildTypes e) const
 {
-	return find(m_workerBuilds.begin(), m_workerBuilds.end(), i) != m_workerBuilds.end();
+	return algo::contains(m_workerBuilds, e);
 }
 
 int CvUnitInfo::getNumPrereqAndBuildings() const
@@ -2039,8 +1978,7 @@ void CvUnitInfo::setEraSubCombat()
 	{
 		return;
 	}
-	int iI;
-	for (iI=0; iI < getNumSubCombatTypes(); iI++)
+	for (int iI=0; iI < getNumSubCombatTypes(); iI++)
 	{
 		if (GC.getUnitCombatInfo((UnitCombatTypes)getSubCombatType(iI)).getEra() != NO_ERA)
 		{
@@ -2350,7 +2288,6 @@ int CvUnitInfo::getPoisonProbabilityModifier() const
 	return m_iPoisonProbabilityModifier;
 }
 
-//Team Project (3)
 int CvUnitInfo::getCaptureProbabilityModifier() const
 {
 	return m_iCaptureProbabilityModifier;
@@ -2360,8 +2297,7 @@ int CvUnitInfo::getCaptureResistanceModifier() const
 {
 	return m_iCaptureResistanceModifier;
 }
-//Team Project (4)
-//WorkRateMod
+
 int CvUnitInfo::getHillsWorkModifier() const
 {
 	return m_iHillsWorkModifier;
@@ -3630,8 +3566,6 @@ const InvisibilityArray& CvUnitInfo::getVisibilityIntensityRangeTypes() const
 	return m_aVisibilityIntensityRangeTypes;
 }
 
-//Team Project (4)
-	//WorkRateMod
 int CvUnitInfo::getNumTerrainWorkRateModifierTypes() const
 {
 	return m_aTerrainWorkRateModifierTypes.size();
@@ -3890,10 +3824,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_bFreeDrop);
 	CheckSum(iSum, m_bNoRevealMap);
 	CheckSum(iSum, m_bInquisitor);
-	CheckSum(iSum, m_bCanBeRebel);
-	CheckSum(iSum, m_bCanRebelCapture);
-	CheckSum(iSum, m_bCannotDefect);
-	CheckSum(iSum, m_bCanQuellRebellion);
 
 	CheckSum(iSum, m_bNoNonOwnedEntry);
 
@@ -4018,11 +3948,10 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iEndurance);
 	CheckSum(iSum, m_iRoundStunProb);
 	CheckSum(iSum, m_iPoisonProbabilityModifier);
-//Team Project (3)
+
 	CheckSum(iSum, m_iCaptureProbabilityModifier);
 	CheckSum(iSum, m_iCaptureResistanceModifier);
-//Team Project (4)
-//WorkRateMod
+
 	CheckSum(iSum, m_iHillsWorkModifier);
 	CheckSum(iSum, m_iPeaksWorkModifier);
 
@@ -4244,16 +4173,13 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 //
 bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 {
-
-	CvString szTextVal;
-	CvString szTextVal2;
 	if (!CvHotkeyInfo::read(pXML))
 	{
 		return false;
 	}
+	CvString szTextVal;
+	CvString szTextVal2;
 
-	int j=0;				//loop counter
-	int k=0;				//loop counter
 	int iIndexVal;
 
 	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
@@ -4282,7 +4208,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SeeInvisible");
 	std::vector<CvString> tokens;
 	szTextVal.getTokens(",", tokens);
-	for(int i=0;i<(int)tokens.size();i++)
+	for (int i=0;i<(int)tokens.size();i++)
 	{
 		const int iInvisibleType = pXML->GetInfoClass(tokens[i]);
 		if(iInvisibleType != NO_INVISIBLE)
@@ -4331,10 +4257,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bFreeDrop, L"bFreeDrop");
 	pXML->GetOptionalChildXmlValByName(&m_bNoRevealMap, L"bNoRevealMap");
 	pXML->GetOptionalChildXmlValByName(&m_bInquisitor, L"bInquisitor");
-	pXML->GetOptionalChildXmlValByName(&m_bCanBeRebel, L"bCanBeRebel");
-	pXML->GetOptionalChildXmlValByName(&m_bCanRebelCapture, L"bCanRebelCapture");
-	pXML->GetOptionalChildXmlValByName(&m_bCannotDefect, L"bCannotDefect");
-	pXML->GetOptionalChildXmlValByName(&m_bCanQuellRebellion, L"bCanQuellRebellion");
 
 	//ls612: Can't enter non-Owned cities
 	pXML->GetOptionalChildXmlValByName(&m_bNoNonOwnedEntry, L"bOnlyFriendlyEntry");
@@ -4471,6 +4393,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	//pXML->GetChildXmlValByName(&m_iNukeInterceptionRange, L"iNukeInterceptionRange");
 	pXML->GetOptionalChildXmlValByName(&m_iEvasionProbability, L"iEvasionProbability");
 	pXML->GetOptionalChildXmlValByName(&m_iWithdrawalProbability, L"iWithdrawalProb");
+	if (m_iWithdrawalProbability < 0) m_iWithdrawalProbability = 0;
 	pXML->GetOptionalChildXmlValByName(&m_iCollateralDamage, L"iCollateralDamage");
 	pXML->GetOptionalChildXmlValByName(&m_iCollateralDamageLimit, L"iCollateralDamageLimit");
 	pXML->GetOptionalChildXmlValByName(&m_iCollateralDamageMaxUnits, L"iCollateralDamageMaxUnits");
@@ -4540,7 +4463,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 		if (pXML->TryMoveToXmlFirstChild(L"UnitMeshGroup"))
 		{
-			for ( k = 0; k < iIndexVal; k++ )
+			for (int k = 0; k < iIndexVal; k++ )
 			{
 				pXML->GetChildXmlValByName( &m_piUnitGroupRequired[k], L"iRequired");
 				if (pXML->GetOptionalChildXmlValByName(szTextVal, L"EarlyArtDefineTag"))
@@ -4702,11 +4625,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iEndurance, L"iEndurance");
 	pXML->GetOptionalChildXmlValByName(&m_iRoundStunProb, L"iRoundStunProb");
 	pXML->GetOptionalChildXmlValByName(&m_iPoisonProbabilityModifier, L"iPoisonProbabilityModifier");
-//Team Project (3)
+
 	pXML->GetOptionalChildXmlValByName(&m_iCaptureProbabilityModifier, L"iCaptureProbabilityModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iCaptureResistanceModifier, L"iCaptureResistanceModifier");
-//Team Project (4)
-//WorkRateMod
+
 	pXML->GetOptionalChildXmlValByName(&m_iHillsWorkModifier, L"iHillsWorkModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iPeaksWorkModifier, L"iPeaksWorkModifier");
 
@@ -5164,8 +5086,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalPairVector<InvisibilityArray, InvisibleTypes, int>(&m_aInvisibilityIntensityTypes, L"InvisibilityIntensityTypes");
 
-//Team Project (4)
-		//WorkRateMod
 	pXML->SetOptionalPairVector<TerrainModifierArray, TerrainTypes, int>(&m_aTerrainWorkRateModifierTypes, L"TerrainWorkRateModifierTypes");
 
 	pXML->SetOptionalPairVector<FeatureModifierArray, FeatureTypes, int>(&m_aFeatureWorkRateModifierTypes, L"FeatureWorkRateModifierTypes");
@@ -5212,17 +5132,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	{
 		updateArtDefineButton();
 	}
-
-	//	Auto-correct units that are animals but don't have the naimal AI set as their default
-	//	(this situation currently confuses the AI so disallow it)
-	//TB Animal Search note: THIS will have to be unwritted to allow for multiple animal AI types!!!  leaving alone for now but WILL be removed eventually
-	// Alberts2 Commented this out to allow Animals with a different AI
-	//if ( isAnimal() && getDefaultUnitAIType() != UNITAI_ANIMAL )
-	//{
-	//	FErrorMsg(CvString::format("Auto-corrected: UnitAI not set to UNITAI_ANIMAL for animal unit %s", m_szType.c_str()).c_str());
-	//	m_iDefaultUnitAIType = UNITAI_ANIMAL;
-	//}
-
 	return true;
 }
 
@@ -5603,6 +5512,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	//if ( m_iNukeInterceptionRange == iDefault ) m_iNukeInterceptionRange = pClassInfo->getNukeInterceptionRange();
 	if ( m_iEvasionProbability == iDefault ) m_iEvasionProbability = pClassInfo->getEvasionProbability();
 	if ( m_iWithdrawalProbability == iDefault ) m_iWithdrawalProbability = pClassInfo->m_iWithdrawalProbability;
+	if (m_iWithdrawalProbability < 0) m_iWithdrawalProbability = 0;
 	if ( m_iCollateralDamage == iDefault ) m_iCollateralDamage = pClassInfo->getCollateralDamage();
 	if ( m_iCollateralDamageLimit == iDefault ) m_iCollateralDamageLimit = pClassInfo->getCollateralDamageLimit();
 	if ( m_iCollateralDamageMaxUnits == iDefault ) m_iCollateralDamageMaxUnits = pClassInfo->getCollateralDamageMaxUnits();
@@ -5664,17 +5574,8 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 		m_pExprTrainCondition = pClassInfo->m_pExprTrainCondition;
 		pClassInfo->m_pExprTrainCondition = NULL;
 	}
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes: Adapted to C2C by Thunderbrd															**/
-/*****************************************************************************************************/
+
 	if ( m_bFreeDrop == bDefault ) m_bFreeDrop = pClassInfo->isFreeDrop();
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 
 	//TB Combat Mods Begin  TB SubCombat Mod begin
 	if ( m_iPursuit == iDefault ) m_iPursuit = pClassInfo->m_iPursuit;
@@ -5718,11 +5619,10 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_iEndurance == iDefault ) m_iEndurance = pClassInfo->getEndurance();
 	if ( m_iRoundStunProb == iDefault ) m_iRoundStunProb = pClassInfo->getRoundStunProb();
 	if ( m_iPoisonProbabilityModifier == iDefault ) m_iPoisonProbabilityModifier = pClassInfo->getPoisonProbabilityModifier();
-	//Team Project (3)
+
 	if ( m_iCaptureProbabilityModifier == iDefault ) m_iCaptureProbabilityModifier = pClassInfo->getCaptureProbabilityModifier();
 	if ( m_iCaptureResistanceModifier == iDefault ) m_iCaptureResistanceModifier = pClassInfo->getCaptureResistanceModifier();
-//Team Project (4)
-//WorkRateMod
+
 	if ( m_iHillsWorkModifier == iDefault ) m_iHillsWorkModifier = pClassInfo->getHillsWorkModifier();
 	if ( m_iPeaksWorkModifier == iDefault ) m_iPeaksWorkModifier = pClassInfo->getPeaksWorkModifier();
 
@@ -5987,8 +5887,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 		}
 	}
 
-	//Team Project (4)
-		//WorkRateMod
 	if (getNumTerrainWorkRateModifierTypes()==0)
 	{
 		for (int i=0; i < pClassInfo->getNumTerrainWorkRateModifierTypes(); i++)
@@ -6146,13 +6044,9 @@ void CvUnitInfo::copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtili
 			}
 		}
 	}
-	else
-	{
-		if (bOver)
-		{
-			SAFE_DELETE_ARRAY(m_piFlankingStrikeUnit);
-		}
-	}
+	else if (bOver) SAFE_DELETE_ARRAY(m_piFlankingStrikeUnit);
+
+
 	if (pClassInfo->m_piUnitAttackModifier != NULL)
 	{
 		for (int i = 0; i < GC.getNumUnitInfos(); i++)
@@ -6167,13 +6061,9 @@ void CvUnitInfo::copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtili
 			}
 		}
 	}
-	else
-	{
-		if (bOver)
-		{
-			SAFE_DELETE_ARRAY(m_piUnitAttackModifier);
-		}
-	}
+	else if (bOver) SAFE_DELETE_ARRAY(m_piUnitAttackModifier);
+
+
 	if (pClassInfo->m_piUnitDefenseModifier != NULL)
 	{
 		for (int i = 0; i < GC.getNumUnitInfos(); i++)
@@ -6188,13 +6078,9 @@ void CvUnitInfo::copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtili
 			}
 		}
 	}
-	else
-	{
-		if (bOver)
-		{
-			SAFE_DELETE_ARRAY(m_piUnitDefenseModifier);
-		}
-	}
+	else if (bOver) SAFE_DELETE_ARRAY(m_piUnitDefenseModifier);
+
+
 	if (bOver || m_iUnitCaptureType == -1 && pClassInfo->getUnitCaptureType() != -1)
 	{
 		m_iUnitCaptureType = pClassInfo->getUnitCaptureType();
@@ -6228,7 +6114,7 @@ bool CvUnitInfo::hasUnitCombat(UnitCombatTypes eUnitCombat) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat)
 
-	if ( m_abHasCombatType == NULL )
+	if (m_abHasCombatType == NULL)
 	{
 		m_abHasCombatType = new bool[GC.getNumUnitCombatInfos()];
 		memset(m_abHasCombatType, 0, GC.getNumUnitCombatInfos());
@@ -6251,7 +6137,6 @@ bool CvUnitInfo::hasUnitCombat(UnitCombatTypes eUnitCombat) const
 			}
 		}
 	}
-
 	return m_abHasCombatType[eUnitCombat];
 }
 
@@ -6349,46 +6234,24 @@ int CvUnitInfo::getTotalModifiedAirCombatStrength100() const
 }
 int CvUnitInfo::getApproaching0Return(int i) const
 {
-	if (i > 10)
-	{
-		return i;
-	}
-	else if (i > 0)
-	{
-		return 9;
-	}
-	else if (i > -10)
-	{
-		return 8;
-	}
-	else if (i > -20)
-	{
-		return 7;
-	}
-	else if (i > -40)
-	{
-		return 6;
-	}
-	else if (i > -80)
-	{
-		return 5;
-	}
-	else if (i > -160)
-	{
-		return 4;
-	}
-	else if (i > -320)
-	{
-		return 3;
-	}
-	else if (i > -640)
-	{
-		return 2;
-	}
-	else
-	{
-		return 1;
-	}
+	if (i > 10) return i;
+
+	if (i > 0) return 9;
+
+	if (i > -10) return 8;
+
+	if (i > -20) return 7;
+
+	if (i > -40) return 6;
+
+	if (i > -80) return 5;
+
+	if (i > -160) return 4;
+
+	if (i > -320) return 3;
+
+	if (i > -640) return 2;
+
 	return 1;
 }
 

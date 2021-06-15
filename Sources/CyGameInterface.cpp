@@ -78,9 +78,6 @@ void CyGamePythonInterface()
 		.def("isModem", &CyGame::isModem, "bool () - Using a modem? ")
 		.def("setModem", &CyGame::setModem, "void (bool bModem) - Use a modem! (or don't)")
 
-		.def("reviveActivePlayer", &CyGame::reviveActivePlayer, "void ()")
-		.def("revivePlayer", &CyGame::revivePlayer, "void ()")
-
 		.def("getGameTurn", &CyGame::getGameTurn, "int () - current game turn")
 		.def("setGameTurn", &CyGame::setGameTurn, "void (iNewValue) - set current game turn")
 		.def("getTurnYear", &CyGame::getTurnYear, "int (iGameTurn) - turn Time")

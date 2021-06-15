@@ -2450,13 +2450,14 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	{
 		return false;
 	}
+	const CvImprovementInfo& pInfo = GC.getImprovementInfo(eImprovement);
+	const FeatureTypes eFeature = getFeatureType();
 
 	// Feature forbids
-	if (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isNoImprovement())
+	if (eFeature != NO_FEATURE && GC.getFeatureInfo(eFeature).isNoImprovement() && !pInfo.getFeatureMakesValid(eFeature))
 	{
 		return false;
 	}
-	const CvImprovementInfo& pInfo = GC.getImprovementInfo(eImprovement);
 
 	if (!bPotential && eTeam != NO_TEAM && !GET_TEAM(eTeam).isHasTech((TechTypes)pInfo.getPrereqTech()))
 	{
@@ -2544,7 +2545,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 
 	if(pInfo.isNoFreshWater() && isFreshWater()
 	|| pInfo.isRequiresFlatlands() && !isFlatlands()
-	|| pInfo.isRequiresFeature() && getFeatureType() == NO_FEATURE
+	|| pInfo.isRequiresFeature() && eFeature == NO_FEATURE
 	// Special canal condition
 	|| pInfo.isCanMoveSeaUnits() && !isCoastalLand())
 	{
@@ -2571,7 +2572,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 		{
 			bValid = true;
 		}
-		else if (getFeatureType() != NO_FEATURE && pInfo.getFeatureMakesValid(getFeatureType()))
+		else if (eFeature != NO_FEATURE && pInfo.getFeatureMakesValid(eFeature))
 		{
 			bValid = true;
 		}
@@ -10733,12 +10734,13 @@ void CvPlot::doFeature()
 
 	if (getFeatureType() != NO_FEATURE)
 	{
-		if(GC.getFeatureInfo(getFeatureType()).getDisappearanceProbability() > 0
-		&& GC.getFeatureInfo(getFeatureType()).getDisappearanceProbability() > GC.getGame().getSorenRandNum(
-			10000 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent() / 100, "Feature Disappearance"))
-		{
-			setFeatureType(NO_FEATURE);
-		}
+		if (GC.getFeatureInfo(getFeatureType()).getDisappearanceProbability() > 0
+		&&  GC.getFeatureInfo(getFeatureType()).getDisappearanceProbability() >
+			(
+				GC.getGame().getSorenRandNum(100 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(), "Feature Disappearance")
+			)
+		) setFeatureType(NO_FEATURE);
+
 		return;
 	}
 
@@ -10787,8 +10789,7 @@ void CvPlot::doFeature()
 			}
 
 			if(iProbability > 0
-			&& iProbability > GC.getGame().getSorenRandNum(
-				10000 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent() / 100, "Feature Growth"))
+			&& iProbability > GC.getGame().getSorenRandNum(100 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(), "Feature Growth"))
 			{
 				setFeatureType((FeatureTypes)iI);
 				// Afforess 2/9/10 - Feature Sound Effect

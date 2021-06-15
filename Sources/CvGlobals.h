@@ -1987,7 +1987,12 @@ public:
 	DllExport int getUSE_FINISH_TEXT_CALLBACK()
 	{
 		PROXY_TRACK("getUSE_FINISH_TEXT_CALLBACK");
-		return gGlobals->getUSE_FINISH_TEXT_CALLBACK();
+		// Toffer - Change this to true to make exe call String finishText([String,]) within CvTranslator.py.
+		//	text handled by the exe will be sent as input to the python function line by line
+		//	and the string it gets in return will replace whatever it sent in.
+		//	Not sure we can actually use this for anythin, I think it's mostly a weird way to alter exe tooltip text.
+		//	Maybe there's some text hardcoded in the exe we can change through this, though I doubt that.
+		return false;
 	}
 	DllExport int getMAX_CIV_PLAYERS()
 	{

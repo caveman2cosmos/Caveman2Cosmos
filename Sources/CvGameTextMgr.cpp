@@ -2857,16 +2857,18 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				}
 			}
 
-			if (pUnit->hillsWorkModifier() > 0)
+			if (pUnit->isWorker())
 			{
-				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_WORK", pUnit->hillsWorkModifier()));
-			}
-
-			if (pUnit->peaksWorkModifier() > 0)
-			{
-				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", pUnit->peaksWorkModifier()));
+				if (pUnit->hillsWorkModifier() > 0)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HILLS_WORK", pUnit->hillsWorkModifier()));
+				}
+				if (pUnit->peaksWorkModifier() > 0)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_PEAKS_WORK", pUnit->peaksWorkModifier()));
+				}
 			}
 
 			//Strength in Numbers offered support
@@ -15782,19 +15784,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	//	Improvement upgrade rate modifier
 	if (GC.getCivicInfo(eCivic).getImprovementUpgradeRateModifier() != 0)
 	{
-		bFirst = true;
-
-		for (iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
-		{
-			if (GC.getImprovementInfo((ImprovementTypes)iI).getImprovementUpgrade() != NO_IMPROVEMENT)
-			{
-				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_CIVICHELP_IMPROVEMENT_UPGRADE", GC.getCivicInfo(eCivic).getImprovementUpgradeRateModifier()).c_str());
-				CvWString szImprovement;
-				szImprovement.Format(L"<link=%s>%s</link>", CvWString(GC.getImprovementInfo((ImprovementTypes)iI).getType()).GetCString(), GC.getImprovementInfo((ImprovementTypes)iI).getDescription());
-				setListHelp(szHelpText, szFirstBuffer, szImprovement, L", ", bFirst);
-				bFirst = false;
-			}
-		}
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_IMPROVEMENT_UPGRADE", GC.getCivicInfo(eCivic).getImprovementUpgradeRateModifier()));
 	}
 
 	//	Military unit production modifier
@@ -17818,14 +17809,14 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 /*
 	//TBGRIDX
 	int iX = 0;
-	if ((TechTypes)GC.getUnitInfo(eUnit).getPrereqAndTech() != -1)
-		iX = GC.getTechInfo((TechTypes)GC.getUnitInfo(eUnit).getPrereqAndTech()).getGridX();
+	if ((TechTypes)kUnit.getPrereqAndTech() != -1)
+		iX = GC.getTechInfo((TechTypes)kUnit.getPrereqAndTech()).getGridX();
 	 
-	TechTypes eMostAdvancedTech = (TechTypes)GC.getUnitInfo(eUnit).getPrereqAndTech();
+	TechTypes eMostAdvancedTech = (TechTypes)kUnit.getPrereqAndTech();
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		TechTypes tTech = (TechTypes)iI;
-		if (algo::contains(GC.getUnitInfo(eUnit).getPrereqAndTechs(), tTech))
+		if (algo::contains(kUnit.getPrereqAndTechs(), tTech))
 		{
 			if (GC.getTechInfo(tTech).getGridX() > iX)
 			{
@@ -18049,7 +18040,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		bFirst = true;
 		for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
-			if (kUnit.getUnitAttackModifier(iI) == GC.getUnitInfo(eUnit).getUnitDefenseModifier(iI))
+			if (kUnit.getUnitAttackModifier(iI) == kUnit.getUnitDefenseModifier(iI))
 			{
 				if (kUnit.getUnitAttackModifier(iI) != 0)
 				{
@@ -18287,7 +18278,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 		if (kUnit.getWithdrawalProbability() > 0)
 		{
-			if(GC.getUnitInfo(eUnit).isSpy())
+			if(kUnit.isSpy())
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_ESCAPE_SPY", kUnit.getWithdrawalProbability()));
@@ -18543,7 +18534,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		if (kUnit.getCollateralDamage() > 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_COLLATERAL_DAMAGE_REVDCM", 100 * kUnit.getCollateralDamageLimit() / GC.getMAX_HIT_POINTS(), GC.getUnitInfo(eUnit).getCollateralDamageMaxUnits()));
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_COLLATERAL_DAMAGE_REVDCM", 100 * kUnit.getCollateralDamageLimit() / GC.getMAX_HIT_POINTS(), kUnit.getCollateralDamageMaxUnits()));
 		}
 
 		//Flanking
@@ -18857,7 +18848,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		//Afflict on Attack
 		for (int iI = 0; iI < kUnit.getNumAfflictOnAttackTypes(); ++iI)
 		{
-			PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)GC.getUnitInfo(eUnit).getAfflictOnAttackType(iI).eAfflictionLine);
+			PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)kUnit.getAfflictOnAttackType(iI).eAfflictionLine);
 			int iProbability = kUnit.getAfflictOnAttackType(iI).iProbability;
 			if (kUnit.getAfflictOnAttackType(iI).iImmediate > 0)
 			{
@@ -19340,7 +19331,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		//Espionage
 		if (kUnit.getEspionagePoints() > 0)
 		{
-			int iEspionage = GC.getUnitInfo(eUnit).getEspionagePoints();
+			int iEspionage = kUnit.getEspionagePoints();
 			if (NO_GAMESPEED != game.getGameSpeedType())
 			{
 				iEspionage *= GC.getGameSpeedInfo(game.getGameSpeedType()).getUnitGreatWorkPercent();
@@ -20378,7 +20369,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 			for (int iI = 0; iI < kUnit.getNumSubCombatTypes(); iI++)
 			{
-				UnitCombatTypes eSubCombatType = (UnitCombatTypes)GC.getUnitInfo(eUnit).getSubCombatType(iI);
+				UnitCombatTypes eSubCombatType = (UnitCombatTypes)kUnit.getSubCombatType(iI);
 
 				if (game.isValidByGameOption(GC.getUnitCombatInfo(eSubCombatType)))
 				{
@@ -21451,12 +21442,42 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_IN_CITY", CvWString(GC.getBuildingInfo(eFreeBuilding).getType()).GetCString(), GC.getBuildingInfo(eFreeBuilding).getTextKeyWide()));
 	}
+	
+	bFirst = true;
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+	{
+		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+
+		if (GC.getBuildingInfo(eLoopBuilding).getFreeBuilding() == eBuilding
+		&& (pCity == NULL || pCity->canConstruct(eLoopBuilding, false, true)))
+		{
+			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_GIVEN_FREE").c_str());
+			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
+			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+			bFirst = false;
+		}
+	}
 
 	const BuildingTypes eFreeAreaBuilding = static_cast<BuildingTypes>(kBuilding.getFreeAreaBuilding());
 	if (eFreeAreaBuilding != NO_BUILDING)
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_IN_AREA", CvWString(GC.getBuildingInfo(eFreeAreaBuilding).getType()).GetCString(), GC.getBuildingInfo(eFreeAreaBuilding).getTextKeyWide()));
+	}
+
+	bFirst = true;
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+	{
+		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+
+		if (GC.getBuildingInfo(eLoopBuilding).getFreeAreaBuilding() == eBuilding
+		&& (pCity == NULL || pCity->canConstruct(eLoopBuilding, false, true)))
+		{
+			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_GIVEN_FREE_AREA").c_str());
+			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
+			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+			bFirst = false;
+		}
 	}
 
 	if (!bRelDisabled)
@@ -28340,7 +28361,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			szBuffer.append(info.getDescription());
 			bFirstDisplay = false;
 		}
-		if(info.isSpy())
+		if (info.isSpy())
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_INTERCEPT_SPY", info.getInterceptChange()));
@@ -35449,39 +35470,32 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 		szBuffer.append(NEWLINE);
 	}
 
-	if (kMission.getSwitchCivicCostFactor() > 0)
+
+	if (NO_PLAYER != eTargetPlayer)
 	{
-		if (NO_PLAYER != eTargetPlayer)
+		if (kMission.getSwitchCivicCostFactor() > 0)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_HELP_SWITCH_CIVIC", GET_PLAYER(eTargetPlayer).getNameKey(), GC.getCivicInfo((CivicTypes)iExtraData).getTextKeyWide()));
 			szBuffer.append(NEWLINE);
 		}
-	}
 
-	if (kMission.getSwitchReligionCostFactor() > 0)
-	{
-		if (NO_PLAYER != eTargetPlayer)
+		if (kMission.getSwitchReligionCostFactor() > 0)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_HELP_SWITCH_CIVIC", GET_PLAYER(eTargetPlayer).getNameKey(), GC.getReligionInfo((ReligionTypes)iExtraData).getTextKeyWide()));
 			szBuffer.append(NEWLINE);
 		}
-	}
 
-	if (kMission.getPlayerAnarchyCounter() > 0)
-	{
-		if (NO_PLAYER != eTargetPlayer)
+		if (kMission.getPlayerAnarchyCounter() > 0)
 		{
-			int iTurns = (kMission.getPlayerAnarchyCounter() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent()) / 100;
+			const int iTurns = kMission.getPlayerAnarchyCounter() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
+
 			szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_HELP_ANARCHY", GET_PLAYER(eTargetPlayer).getNameKey(), iTurns));
 			szBuffer.append(NEWLINE);
 		}
-	}
 
-	if (kMission.getCounterespionageNumTurns() > 0 && kMission.getCounterespionageMod() > 0)
-	{
-		if (NO_PLAYER != eTargetPlayer)
+		if (kMission.getCounterespionageNumTurns() > 0 && kMission.getCounterespionageMod() > 0)
 		{
-			int iTurns = (kMission.getCounterespionageNumTurns() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent()) / 100;
+			const int iTurns = kMission.getCounterespionageNumTurns() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
 
 			szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_HELP_COUNTERESPIONAGE", kMission.getCounterespionageMod(), GET_PLAYER(eTargetPlayer).getCivilizationAdjectiveKey(), iTurns));
 			szBuffer.append(NEWLINE);

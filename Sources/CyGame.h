@@ -83,9 +83,6 @@ public:
 	bool isModem() const;
 	void setModem(bool bModem);
 
-	void reviveActivePlayer();
-	void revivePlayer(int /*PlayerTypes*/ iPlayer);
-
 	int getNumHumanPlayers() const;
 	int getGameTurn() const;
 	void setGameTurn(int iNewValue);

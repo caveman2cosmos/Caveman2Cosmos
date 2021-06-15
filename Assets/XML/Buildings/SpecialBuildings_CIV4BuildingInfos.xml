@@ -13846,73 +13846,24 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+					<iHappiness>-2</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_HUMANISM</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CANNIBALISM_BAD_I</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_I</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<iHappiness>-1</iHappiness>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_I</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CANNIBALISM_BAD_II</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_II</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<iHappiness>-2</iHappiness>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_II</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CANNIBALISM_BAD_III</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_III</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqTech>TECH_HUMANISM</PrereqTech>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<iHappiness>-1</iHappiness>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_III</ArtDefineTag>
 		</BuildingInfo>
 		<!-- Should be given by python when butchering units.
 		<BuildingInfo>
@@ -14004,6 +13955,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ROUTE_66_TERMINUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROUTE_66_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_ROUTE_66_TERMINUS_HELP</Help>
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
 			<iTradeRoutes>3</iTradeRoutes>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
@@ -14980,6 +14932,10 @@
 					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_FACTORY</BuildingType>
+					<iProductionModifier>-100</iProductionModifier>
+				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -15179,12 +15135,6 @@
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<iProductionModifier>-100</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_WV_SLAVERY</ArtDefineTag>
@@ -15217,6 +15167,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVERY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
 			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
 			<iHappiness>-3</iHappiness>
 			<bAutoBuild>1</bAutoBuild>

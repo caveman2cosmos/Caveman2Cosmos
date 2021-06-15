@@ -60,8 +60,8 @@ class PediaUnit:
 		eWidJuToUnit		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT
 		eWidJuToPromo		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION
 		eWidJuToCivic		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC
-		ePnlBlue50		= PanelStyles.PANEL_STYLE_BLUE50
-		eFontTitle		= FontTypes.TITLE_FONT
+		ePnlBlue50			= PanelStyles.PANEL_STYLE_BLUE50
+		eFontTitle			= FontTypes.TITLE_FONT
 
 		szfontEdge, szfont4b, szfont4, szfont3b, szfont3, szfont2b, szfont2 = self.main.aFontList
 
@@ -75,11 +75,12 @@ class PediaUnit:
 		Y_TOP_ROW_2 = Y_TOP_ROW_1 + H_TOP_ROW
 		Y_BOT_ROW_1 = self.Y_BOT_ROW
 		Y_BOT_ROW_2 = Y_BOT_ROW_1 - H_BOT_ROW
+		Y_BOT_ROW_3 = Y_BOT_ROW_2 - H_BOT_ROW
 		W_COL_1 = self.W_COL_1
 		W_COL_2 = self.W_COL_2
 		W_COL_3 = self.W_COL_3
 		W_PEDIA_PAGE = self.W_PEDIA_PAGE
-		H_ROW_2 = H_TOP_ROW * 3 + H_BOT_ROW
+		H_ROW_2 = H_TOP_ROW * 3
 		S_BOT_ROW = self.S_BOT_ROW
 
 		szText = CvTheUnitInfo.getDescription()
@@ -356,14 +357,22 @@ class PediaUnit:
 		else:
 			H_ROW_2 += H_BOT_ROW
 			Y_BOT_ROW_2 += H_BOT_ROW
+			Y_BOT_ROW_3 += H_BOT_ROW
 
 		# Promotions
 		aList0 = []
+		aList1 = []
 		for k in xrange(GC.getNumPromotionInfos()):
 			if CvTheUnitInfo.isQualifiedPromotionType(k):
 				CvPromotionInfo = GC.getPromotionInfo(k)
 				if not CvPromotionInfo.isGraphicalOnly():
 					aList0.append((CvPromotionInfo.getButton(), k))
+			if CvTheUnitInfo.getFreePromotions(k):
+				CvPromotionInfo = GC.getPromotionInfo(k)
+				for j in xrange(CvPromotionInfo.getNumAddsBuildTypes()):
+					iBuild = CvPromotionInfo.getAddsBuildType(j)
+					aList1.append((GC.getBuildInfo(iBuild).getButton(), iBuild))
+
 		if aList0:
 			screen.addPanel(aName(), "", "", False, False, X_COL_1, Y_BOT_ROW_2, W_PEDIA_PAGE, H_BOT_ROW, ePnlBlue50)
 			Pnl = aName()
@@ -383,6 +392,31 @@ class PediaUnit:
 				else:
 					screen.setImageButtonAt(szChild + str(iPromo), Pnl, BTN, x, y1, aSize, aSize, eWidGen, 1, 1)
 				i += 1
+		else:
+			H_ROW_2 += H_BOT_ROW
+			Y_BOT_ROW_3 += H_BOT_ROW
+
+		# Builds
+		for k in xrange(CvTheUnitInfo.getNumBuilds()):
+			iBuild = CvTheUnitInfo.getBuild(k)
+			aList1.append((GC.getBuildInfo(iBuild).getButton(), iBuild))
+
+		if aList1:
+			Pnl = aName()
+			screen.addPanel(Pnl, "", "", False, True, X_COL_1, Y_BOT_ROW_3, W_PEDIA_PAGE, H_BOT_ROW, ePnlBlue50)
+			szText = szfont3b + TRNSLTR.getText("TXT_KEY_PEDIA_BUILD", ())
+			screen.setLabelAt(aName(), Pnl, szText, 1<<2, W_PEDIA_PAGE / 2, 2, 0, eFontTitle, eWidGen, 0, 0)
+			Pnl = aName()
+			screen.addScrollPanel(Pnl, "", X_COL_1 - 2, Y_BOT_ROW_3 + 24,W_PEDIA_PAGE + 4, H_SCROLL, ePnlBlue50)
+			screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
+			x = 4
+			y = H_SCROLL / 2 - 12
+			szChild = PF + "BUILD"
+			for BTN, iBuild in aList1:
+				screen.setImageButtonAt(szChild + str(iBuild), Pnl, BTN, x, -2, S_BOT_ROW, S_BOT_ROW, eWidGen, 1, 1)
+				x += S_BOT_ROW + 4
+			screen.hide(Pnl)
+			screen.show(Pnl)
 		else:
 			H_ROW_2 += H_BOT_ROW
 
