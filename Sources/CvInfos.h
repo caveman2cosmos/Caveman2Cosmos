@@ -3850,7 +3850,6 @@ public:
 	int getUnitTradePercent() const;
 	int getUnitGreatWorkPercent() const;
 	int getGoldenAgePercent() const;
-	int getHurryPercent() const;
 	int getHurryConscriptAngerPercent() const;
 	int getOccupationTimePopulationPercent() const;
 	int getVictoryDelayPercent() const;
@@ -3894,7 +3893,6 @@ protected:
 	int m_iUnitTradePercent;
 	int m_iUnitGreatWorkPercent;
 	int m_iGoldenAgePercent;
-	int m_iHurryPercent;
 	int m_iHurryConscriptAngerPercent;
 	int m_iOccupationTimePopulationPercent;
 	int m_iVictoryDelayPercent;

@@ -605,7 +605,6 @@
 	<ElementType name="iUnitTradePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitGreatWorkPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iGoldenAgePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iHurryPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iHurryConscriptAngerPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iRevolutionIndexPercent" content="textOnly" dt:type="int"/>
@@ -1397,7 +1396,6 @@
 		<element type="iUnitTradePercent" minOccurs="0"/>
 		<element type="iUnitGreatWorkPercent" minOccurs="0"/>
 		<element type="iGoldenAgePercent" minOccurs="0"/>
-		<element type="iHurryPercent" minOccurs="0"/>
 		<element type="iHurryConscriptAngerPercent" minOccurs="0"/>
 		<element type="iOccupationTurnsPopulationPercent" minOccurs="0"/>
 		<element type="iVictoryDelayPercent" minOccurs="0"/>
