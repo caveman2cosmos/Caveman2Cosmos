@@ -13253,7 +13253,6 @@ m_iUnitDiscoverPercent(0),
 m_iUnitHurryPercent(0),
 m_iUnitTradePercent(0),
 m_iUnitGreatWorkPercent(0),
-m_iGoldenAgePercent(0),
 m_iHurryConscriptAngerPercent(0),
 m_iOccupationTimePopulationPercent(0),
 m_iVictoryDelayPercent(0),
@@ -13353,11 +13352,6 @@ int CvGameSpeedInfo::getUnitGreatWorkPercent() const
 	return m_iUnitGreatWorkPercent;
 }
 
-int CvGameSpeedInfo::getGoldenAgePercent() const
-{
-	return m_iGoldenAgePercent;
-}
-
 int CvGameSpeedInfo::getHurryConscriptAngerPercent() const
 {
 	return m_iHurryConscriptAngerPercent;
@@ -13441,7 +13435,6 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iUnitHurryPercent, L"iUnitHurryPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitTradePercent, L"iUnitTradePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitGreatWorkPercent, L"iUnitGreatWorkPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iGoldenAgePercent, L"iGoldenAgePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iHurryConscriptAngerPercent, L"iHurryConscriptAngerPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iOccupationTimePopulationPercent, L"iOccupationTurnsPopulationPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iVictoryDelayPercent, L"iVictoryDelayPercent");
@@ -13514,7 +13507,6 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 	if (getUnitHurryPercent() == iDefault) m_iUnitHurryPercent = pClassInfo->getUnitHurryPercent();
 	if (getUnitTradePercent() == iDefault) m_iUnitTradePercent = pClassInfo->getUnitTradePercent();
 	if (getUnitGreatWorkPercent() == iDefault) m_iUnitGreatWorkPercent = pClassInfo->getUnitGreatWorkPercent();
-	if (getGoldenAgePercent() == iDefault) m_iGoldenAgePercent = pClassInfo->getGoldenAgePercent();
 	if (getHurryConscriptAngerPercent() == iDefault) m_iHurryConscriptAngerPercent = pClassInfo->getHurryConscriptAngerPercent();
 	if (getOccupationTimePopulationPercent() == iDefault) m_iOccupationTimePopulationPercent = pClassInfo->getOccupationTimePopulationPercent();
 	if (getVictoryDelayPercent() == iDefault) m_iVictoryDelayPercent = pClassInfo->getVictoryDelayPercent();
@@ -13554,7 +13546,6 @@ void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iUnitHurryPercent);
 	CheckSum(iSum, m_iUnitTradePercent);
 	CheckSum(iSum, m_iUnitGreatWorkPercent);
-	CheckSum(iSum, m_iGoldenAgePercent);
 	CheckSum(iSum, m_iHurryConscriptAngerPercent);
 	CheckSum(iSum, m_iOccupationTimePopulationPercent);
 	CheckSum(iSum, m_iVictoryDelayPercent);

@@ -3185,7 +3185,7 @@ int CvGame::calculateReligionPercent(ReligionTypes eReligion) const
 
 int CvGame::goldenAgeLength() const
 {
-	return GC.getGOLDEN_AGE_LENGTH() * GC.getGameSpeedInfo(getGameSpeedType()).getGoldenAgePercent() / 100;
+	return GC.getGOLDEN_AGE_LENGTH() * GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 100;
 }
 
 int CvGame::victoryDelay(VictoryTypes eVictory) const
