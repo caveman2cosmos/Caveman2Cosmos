@@ -25,14 +25,8 @@ class CvGameUtils:
 		self.CAPTURE_GOLD_RAND2 = GC.getDefineINT("CAPTURE_GOLD_RAND2")
 		self.CAPTURE_GOLD_MAX_TURNS = GC.getDefineINT("CAPTURE_GOLD_MAX_TURNS")
 
-		self.BASE_UNIT_UPGRADE_COST = GC.getDefineINT("BASE_UNIT_UPGRADE_COST")
-		self.UNIT_UPGRADE_COST_PER_PRODUCTION = GC.getDefineINT("UNIT_UPGRADE_COST_PER_PRODUCTION")
-
 		self.iNationalMint = GC.getInfoTypeForString("BUILDING_NATIONAL_MINT")
 		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_CASTLE")
-
-		self.iReplicators = GC.getInfoTypeForString("BONUS_REPLICATORS")
-		self.iRapidPrototyping = GC.getInfoTypeForString("TECH_RAPID_PROTOTYPING")
 
 	def isVictoryTest(self):
 		return GAME.getElapsedGameTurns() > 10
