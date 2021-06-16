@@ -151,8 +151,6 @@ class Dispatcher:
 
 		# setup defaults
 		self._setDefault("updateColoredPlots", False)
-		self._setDefault("doHolyCity", False)
-		self._setDefault("doGoody", False)
 		self._setDefault("canPickPlot", True)
 
 	def _createCallback(self, name, func, default=None, log=None):

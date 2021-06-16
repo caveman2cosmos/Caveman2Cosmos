@@ -50,7 +50,6 @@ class CvEventManager:
 			'ModNetMessage'				: self.onModNetMessage,
 			'Init'						: self.onInit,
 #			'UnInit'					: self.onUnInit,
-#			'Update'					: self.onUpdate,
 #			'OnSave'					: self.onSaveGame,
 #			'OnPreSave'					: self.onPreSave,
 			'OnLoad'					: self.onLoadGame,
@@ -89,7 +88,6 @@ class CvEventManager:
 #			'cityHurry'					: self.onCityHurry,
 #			'selectionGroupPushMission'	: self.onSelectionGroupPushMission,
 #			'unitMove'					: self.onUnitMove,
-#			'unitSetXY'					: self.onUnitSetXY,
 			'unitCreated'				: self.onUnitCreated,
 			'unitBuilt'					: self.onUnitBuilt,
 			'unitKilled'				: self.onUnitKilled,
@@ -2012,12 +2010,6 @@ class CvEventManager:
 	'''
 
 
-	''' Disabled in PythonCallbackDefines.xml (USE_ON_UNIT_SET_XY_CALLBACK = False)
-	def onUnitSetXY(self, argsList):
-		pPlot, pUnit = argsList
-	'''
-
-
 	def onUnitCreated(self, argsList): # Enabled in PythonCallbackDefines.xml (USE_ON_UNIT_CREATED_CALLBACK = True)
 		CyUnit, = argsList
 
@@ -2122,7 +2114,7 @@ class CvEventManager:
 			CyUnit.setLeaderUnitType(-1)
 
 
-	''' Disabled in PythonCallbackDefines.xml (USE_ON_UNIT_LOST_CALLBACK = False)
+	'''
 	def onUnitLost(self, argsList):
 		CyUnit, = argsList
 	'''
@@ -2178,9 +2170,8 @@ class CvEventManager:
 			CyUnitOld, CyUnitNew, iPrice = argsList
 			print "%s Upgraded %s to %s" %(GC.getPlayer(CyUnitOld.getOwner()).getCivilizationDescription(0), CyUnitOld.getName(), CyUnitNew.getName())
 
-	''' Disabled in PythonCallbackDefines.xml (USE_ON_UNIT_SELECTED_CALLBACK = False)
+	''' Might be useful
 	def onUnitSelected(self, argsList):
-		print ("onUnitSelected", argsList)
 		CyUnit = argsList[0]
 	'''
 
@@ -2795,13 +2786,6 @@ class CvEventManager:
 			OOSLogger.writeLog()
 			self.bNetworkMP = False
 
-
-	''' Disabled in PythonCallbackDefines.xml (USE_ON_UPDATE_CALLBACK = False)
-	def onUpdate(self, argsList):
-		print ("onUpdate", argsList)
-		'Called every frame'
-		fDeltaTime = argsList[0]
-	'''
 
 #################### TRIGGERED EVENTS ##################
 

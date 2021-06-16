@@ -12228,37 +12228,25 @@ bool CvUnit::giveExperience()
 
 	if (pPlot)
 	{
-		int iNumUnits = canGiveExperience(pPlot);
+		const int iNumUnits = canGiveExperience(pPlot);
 		if (iNumUnits > 0)
 		{
-			int iTotalExperience = getStackExperienceToGive(iNumUnits);
-
-			int iMinExperiencePerUnit = iTotalExperience / iNumUnits;
-			int iRemainder = iTotalExperience % iNumUnits;
+			const int iTotalExperience = getStackExperienceToGive(iNumUnits);
+			const int iMinExperiencePerUnit = iTotalExperience / iNumUnits;
 
 			int i = 0;
 			foreach_(CvUnit* pUnit, pPlot->units())
 			{
-				if (pUnit != this &&
-					pUnit->getOwner() == getOwner() &&
-					!pUnit->isTrap() &&
-					!pUnit->isCommander() &&
-					pUnit->canAcquirePromotionAny())
+				if (pUnit != this && pUnit->getOwner() == getOwner() && !pUnit->isTrap()
+				&& !pUnit->isCommander() && pUnit->canAcquirePromotionAny())
 				{
-					pUnit->changeExperience(i < iRemainder ? iMinExperiencePerUnit+1 : iMinExperiencePerUnit);
-					//	Koshling - testing promotion readiness here is uneccessary since CvUnit::doTurn
-					//	will do it.  It is alo now dangerous to do it here (or indeed anywhere but controlled
-					//	places) becaue it is not thread-safe and needs to run strictly on the main thread
-					//pUnit->testPromotionReady();
+					pUnit->changeExperience(i < (iTotalExperience % iNumUnits) ? iMinExperiencePerUnit + 1 : iMinExperiencePerUnit);
 				}
-
 				i++;
 			}
-
 			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -12273,22 +12261,7 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 	{
 		return 0;
 	}
-
-	if (GC.getUSE_UPGRADE_UNIT_PRICE_CALLBACK())
-	{
-		int iResult = Cy::call<int>(PYGameModule, "getUpgradePriceOverride", Cy::Args()
-			<< getOwner()
-			<< getID()
-			<< eUnit
-			);
-		if (iResult >= 0)
-		{
-			return iResult;
-		}
-	}
-	int iBasePrice = GET_PLAYER(getOwner()).getProductionNeeded(eUnit) - GET_PLAYER(getOwner()).getProductionNeeded(getUnitType());
-	int iPrice = iBasePrice * GC.getUNIT_UPGRADE_COST_PER_PRODUCTION();
-	iPrice /= 100;
+	int iPrice = GC.getUNIT_UPGRADE_COST_PER_PRODUCTION() * (GET_PLAYER(getOwner()).getProductionNeeded(eUnit) - GET_PLAYER(getOwner()).getProductionNeeded(getUnitType()));
 
 	if (!isHuman() && !isNPC())
 	{
@@ -12299,8 +12272,10 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 		iPrice /= 100;
 	}
 
-	iPrice = iPrice * (100 + GET_PLAYER(getOwner()).getUnitUpgradePriceModifier()) / 100;
-	iPrice -= ((iPrice * getUpgradeDiscount()) / 100);
+	iPrice = getModifiedIntValue(iPrice, GET_PLAYER(getOwner()).getUnitUpgradePriceModifier());
+	iPrice -= iPrice * getUpgradeDiscount();
+
+	iPrice /= 100;
 
 	//ls612: Upgrade price is now dependent on the level of a unit
 	//if (iPrice != 0)
@@ -16981,8 +16956,6 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	//TBSET
 	setHasAnyInvisibility();
 
-	// report event to Python, along with some other key state
-	CvEventReporter::getInstance().unitSetXY(pNewPlot, this);
 	/*GC.getGame().logOOSSpecial(5, getID(), iX, iY);*/
 }
 
