@@ -1,11 +1,12 @@
 #include "CvGameCoreDLL.h"
+#include "CvPython.h"
 #include "CyCity.h"
 #include "CyGlobalContext.h"
 #include "CyPlayer.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
-#include "Win32.h"
 #include "SCyDebug.h"
+#include "Win32.h"
 
 
 void CyCityPythonInterface1(python::class_<CyCity>& x);
@@ -42,7 +43,43 @@ void CyPropertiesPythonInterface();
 
 DllExport void DLLPublishToPython()
 {
-	OutputDebugString("Publishing to Python: Start");
+	OutputDebugString("Publishing to Python: Start\n");
+
+	Cy::registerPyIntConverterForType<TechTypes>();
+	Cy::registerPyIntConverterForType<BuildingTypes>();
+	Cy::registerPyIntConverterForType<MultiplayerOptionTypes>();
+	Cy::registerPyIntConverterForType<CorporationTypes>();
+	Cy::registerPyIntConverterForType<GameOptionTypes>();
+	Cy::registerPyIntConverterForType<PlayerTypes>();
+	Cy::registerPyIntConverterForType<VictoryTypes>();
+	Cy::registerPyIntConverterForType<VoteTypes>();
+	Cy::registerPyIntConverterForType<VoteSourceTypes>();
+	Cy::registerPyIntConverterForType<ReligionTypes>();
+	Cy::registerPyIntConverterForType<ImprovementTypes>();
+	Cy::registerPyIntConverterForType<CivilizationTypes>();
+	Cy::registerPyIntConverterForType<TeamTypes>();
+	Cy::registerPyIntConverterForType<ProjectTypes>();
+	Cy::registerPyIntConverterForType<SpecialUnitTypes>();
+	Cy::registerPyIntConverterForType<CivicOptionTypes>();
+	Cy::registerPyIntConverterForType<CivicTypes>();
+	Cy::registerPyIntConverterForType<SpecialBuildingTypes>();
+	Cy::registerPyIntConverterForType<ControlTypes>();
+	Cy::registerPyIntConverterForType<ForceControlTypes>();
+	Cy::registerPyIntConverterForType<EventTriggerTypes>();
+	Cy::registerPyIntConverterForType<LeaderHeadTypes>();
+	Cy::registerPyIntConverterForType<CultureLevelTypes>();
+	Cy::registerPyIntConverterForType<ReplayMessageTypes>();
+	Cy::registerPyIntConverterForType<ModderGameOptionTypes>();
+	Cy::registerPyIntConverterForType<UnitTypes>();
+	Cy::registerPyIntConverterForType<YieldTypes>();
+	Cy::registerPyIntConverterForType<CultureLevelTypes>();
+	Cy::registerPyIntConverterForType<CommerceTypes>();
+	Cy::registerPyIntConverterForType<ColorTypes>();
+	Cy::registerPyIntConverterForType<EraTypes>();
+	Cy::registerPyIntConverterForType<ForceControlTypes>();
+	Cy::registerPyIntConverterForType<BonusTypes>();
+	Cy::registerPyIntConverterForType<HurryTypes>();
+	Cy::registerPyIntConverterForType<MapTypes>();
 
 	CyEnumsPythonInterface();
 	CyGamePythonInterface();
@@ -92,5 +129,5 @@ DllExport void DLLPublishToPython()
 	
 	Win32::pythonPublish();
 
-	OutputDebugString("Publishing to Python: End");
+	OutputDebugString("Publishing to Python: End\n");
 }
