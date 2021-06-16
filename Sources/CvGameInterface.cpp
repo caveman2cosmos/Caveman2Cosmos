@@ -669,7 +669,7 @@ void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwi
 		return;
 	}
 
-	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if ((pHeadSelectedUnit == NULL) || (!bForceAcceptCurrent && !(pHeadSelectedUnit->getGroup()->readyToSelect(true))))
 	{
