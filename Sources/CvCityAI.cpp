@@ -4059,9 +4059,9 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 
 	for (int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
 	{
-		bool bValid = false;
+		bool bValid = iNumSelectableTypes == -1;
 
-		if (iNumSelectableTypes != -1)
+		if (!bValid)
 		{
 			for (int iJ = 0; iJ < iNumSelectableTypes; iJ++)
 			{
@@ -4071,10 +4071,6 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 					break;
 				}
 			}
-		}
-		else
-		{
-			bValid = true;
 		}
 
 		if (bValid && (bNoWeighting || aiUnitAIVal[iI] > 0))
@@ -4103,23 +4099,17 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 			{
 				int iUnitValue;
 
-				UnitTypes eUnit = AI_bestUnitAI(((UnitAITypes)iI), iUnitValue, bAsync, bNoRand, criteria);
+				UnitTypes eUnit = AI_bestUnitAI((UnitAITypes)iI, iUnitValue, bAsync, bNoRand, criteria);
 
-				if (eUnit != NO_UNIT)
+				if (eUnit != NO_UNIT && AI_meetsUnitSelectionCriteria(eUnit, criteria) && iUnitValue > iBestUnitValue)
 				{
-					if (AI_meetsUnitSelectionCriteria(eUnit, criteria))
+					iBestValue = aiUnitAIVal[iI];
+					eBestUnit = eUnit;
+					if (peBestUnitAI != NULL)
 					{
-						if (iUnitValue > iBestUnitValue)
-						{
-							iBestValue = aiUnitAIVal[iI];
-							eBestUnit = eUnit;
-							if (peBestUnitAI != NULL)
-							{
-								*peBestUnitAI = ((UnitAITypes)iI);
-							}
-							iBestUnitValue = iUnitValue;
-						}
+						*peBestUnitAI = ((UnitAITypes)iI);
 					}
+					iBestUnitValue = iUnitValue;
 				}
 			}
 		}
@@ -6493,7 +6483,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	return std::max(0, iValue);
 }
 
-int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield)
+int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield) const
 {
 	int iValue = tradeRouteValue(kBuilding, eYield, bForeignTrade);
 
@@ -7685,12 +7675,6 @@ int CvCityAI::AI_clearFeatureValue(int iIndex) const
 	return -iValue;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      07/25/09                                jdog5000      */
-/*                                                                                              */
-/* Debug                                                                                        */
-/************************************************************************************************/
-
 namespace {
 	// Score a BuildType on a plot for how many turns it takes to build it
 	int score_build_type(const BuildTypes buildType, const CvPlot* plot)
@@ -8250,7 +8234,7 @@ int CvCityAI::AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImpr
 	}
 	iValue += iMilitaryValue;
 
-	ImprovementTypes eFinalUpgrade = finalImprovementUpgrade(eImprovement);
+	const ImprovementTypes eFinalUpgrade = finalImprovementUpgrade(eImprovement);
 	FAssert(eFinalUpgrade != NO_IMPROVEMENT);
 
 	int yields[NUM_YIELD_TYPES];
@@ -8343,7 +8327,7 @@ int CvCityAI::AI_countBestBuilds(const CvArea* pArea) const
 
 	return iCount;
 }
-BuildTypes CvCityAI::GetShortestBuildTimeOnPlot(CvPlot* plot) const
+BuildTypes CvCityAI::GetShortestBuildTimeOnPlot(const CvPlot* plot) const
 {
 	return scoring::min_score(plot->units()
 		| filtered(CvUnit::fn::getBuildType() != NO_BUILD)
@@ -8357,9 +8341,8 @@ void CvCityAI::AI_markBestBuildValuesStale()
 	m_bestBuildValuesStale = true;
 }
 
-std::vector<int> CvCityAI::AI_calculateOutputRatio(int food, int production, int commerce)
+const std::vector<int> CvCityAI::AI_calculateOutputRatio(int food, int production, int commerce) const
 {
-
 	std::vector<int> ratios = std::vector<int>(NUM_YIELD_TYPES);
 	
 	const int totalOutput = std::max(1, food + production + commerce);
@@ -8375,18 +8358,16 @@ std::vector<int> CvCityAI::AI_calculateOutputRatio(int food, int production, int
 	return ratios;
 }
 
-void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vector<plotInfo> &currentYieldList)
+void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const
 {
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	bool bIgnoreFeature = false;
-	const int activeWorkerMissions = kPlayer.AI_plotTargetMissionAIs(plot, MISSIONAI_BUILD);
+	const int activeWorkerMissions = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(plot, MISSIONAI_BUILD);
 	if (activeWorkerMissions > 0)
 	{		
-		BuildTypes eBuild = NO_BUILD;
 		// This check is necessary to stop oscillation which can result
 		// when best build changes food situation for city, changing the best build. making sure worker completes the ongoing build
 		// this gets the build action with the shortest remaining build-time
-		eBuild = GetShortestBuildTimeOnPlot(plot);	
+		const BuildTypes eBuild = GetShortestBuildTimeOnPlot(plot);	
 		if (eBuild != NO_BUILD)
 		{
 			//get plot-improvement that build generates
@@ -8412,11 +8393,10 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vecto
 	
 	if(currentYieldList[iPlotCounter].currentBonus != NO_BONUS && currentYieldList[iPlotCounter].currentImprovement != NO_IMPROVEMENT)
 	{
-		CvImprovementInfo *currentImprovement = &GC.getImprovementInfo(currentYieldList[iPlotCounter].currentImprovement);
-		currentYieldList[iPlotCounter].bonusImproved = currentImprovement->isUniversalTradeBonusProvider();
+		const CvImprovementInfo& currentImprovement = GC.getImprovementInfo(currentYieldList[iPlotCounter].currentImprovement);
+		currentYieldList[iPlotCounter].bonusImproved = currentImprovement.isUniversalTradeBonusProvider();
 	}
-	
-	
+
 	//if plot does not have active worker mission, take existing yield
 	for (int yieldTypes = 0; yieldTypes < NUM_YIELD_TYPES; yieldTypes++)
 	{
@@ -8427,15 +8407,13 @@ void CvCityAI::AI_getCurrentPlotValue(int iPlotCounter, CvPlot* plot, std::vecto
 	if (currentYieldList[iPlotCounter].bonusImproved) currentYieldList[iPlotCounter].yieldValue += 1000;
 }
 
-void CvCityAI::AI_getBestPlotValue(std::vector<int> &ratios,int iPlotCounter, CvPlot *plot, std::vector<plotInfo> &optimalYieldList, int iDesiredFoodChange)
+void CvCityAI::AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo> &optimalYieldList, int iDesiredFoodChange) const
 {
-	BuildTypes eBuild = NO_BUILD;
-
 	bool bIgnoreFeature = false;
 	
 	AI_newbestPlotBuild(plot, &optimalYieldList[iPlotCounter], ratios[YIELD_FOOD], ratios[YIELD_PRODUCTION], ratios[YIELD_COMMERCE]);
 	
-	eBuild = optimalYieldList[iPlotCounter].currentBuild;
+	const BuildTypes eBuild = optimalYieldList[iPlotCounter].currentBuild;
 	if(eBuild != NO_BUILD)
 	{
 		optimalYieldList[iPlotCounter].currentImprovement = static_cast<ImprovementTypes>(GC.getBuildInfo(eBuild).getImprovement());
@@ -8526,7 +8504,7 @@ void CvCityAI::AI_updateBestBuild()
 		currentYieldList[iPlotCounter].owned = true;
 		if (loopedPlot->getWorkingCity() == this) currentYieldList[iPlotCounter].worked = true;
 		
-		AI_getCurrentPlotValue(iPlotCounter,loopedPlot, currentYieldList);
+		AI_getCurrentPlotValue(iPlotCounter, loopedPlot, currentYieldList);
 		AI_getBestPlotValue(ratios, iPlotCounter, loopedPlot, optimalYieldList, iDesiredFoodChange);
 	}
 	for(int iPlotCounter = 1; iPlotCounter < getNumCityPlots(); iPlotCounter++)
@@ -9583,7 +9561,7 @@ void CvCityAI::AI_doEmphasize()
 /* 	City Defenders						24.07.2010				Fuyu			*/
 /********************************************************************************/
 //Fuyu bIgnoreNotUnitAIs
-bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds, int iUnitStrength, int iPriorityOverride, CvUnitSelectionCriteria* criteria)
+bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds, int iUnitStrength, int iPriorityOverride, const CvUnitSelectionCriteria* criteria)
 {//Adding a unit type direct selection here...
 #ifdef USE_UNIT_TENDERING
 	//	Have we already contracted for a unit?
@@ -9649,9 +9627,9 @@ bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds,
 	return false;
 }
 
-bool CvCityAI::AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, CvUnitSelectionCriteria* criteria, UnitTypes eUnitType)
+bool CvCityAI::AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, const CvUnitSelectionCriteria* criteria, UnitTypes eUnitType)
 {
-	UnitTypes	eBestUnit = NO_UNIT;
+	UnitTypes eBestUnit = NO_UNIT;
 
 	if (eUnitType == NO_UNIT)
 	{
@@ -9675,17 +9653,7 @@ bool CvCityAI::AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, C
 	{
 		if (gCityLogLevel >= 2)
 		{
-			CvString	unitAIType;
-
-			if (eUnitAI != NO_UNITAI)
-			{
-				unitAIType = GC.getUnitAIInfo(eUnitAI).getType();
-			}
-			else
-			{
-				unitAIType = "NO_UNITAI";
-			}
-
+			const CvString unitAIType(eUnitAI != NO_UNITAI ? GC.getUnitAIInfo(eUnitAI).getType() : "NO_UNITAI");
 			logBBAI("      City %S pop %d builds unit of AIType: %s at priority %d (reason: %s)", getName().GetCString(), getPopulation(), unitAIType.c_str(), m_iTempBuildPriority, reason);
 		}
 
@@ -9772,7 +9740,7 @@ bool CvCityAI::AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightA
 	return false;
 }
 
-bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseChance, UnitTypes* eBestSpreadUnit, int* iBestSpreadUnitValue)
+bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseChance, UnitTypes* eBestSpreadUnit, int* iBestSpreadUnitValue) const
 {
 	const CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	const CvTeamAI& kTeam = GET_TEAM(getTeam());
@@ -13057,7 +13025,7 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 		m_aiSpecialYieldMultiplier[iI] = 0;
 	}
 
-	UnitTypes eProductionUnit = getProductionUnit();
+	const UnitTypes eProductionUnit = getProductionUnit();
 	if (eProductionUnit != NO_UNIT)
 	{
 		if (GC.getUnitInfo(eProductionUnit).getDefaultUnitAIType() == UNITAI_WORKER_SEA)
@@ -13073,7 +13041,7 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 		}
 	}
 
-	BuildingTypes eProductionBuilding = getProductionBuilding();
+	const BuildingTypes eProductionBuilding = getProductionBuilding();
 	if (eProductionBuilding != NO_BUILDING)
 	{
 		if (isWorldWonder(eProductionBuilding) || isProductionProject())
@@ -16667,7 +16635,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	}
 }
 
-int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate)
+int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate) const
 {
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());

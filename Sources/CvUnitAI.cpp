@@ -177,7 +177,8 @@ bool CvUnitAI::AI_update()
 
 	FAssertMsg(isGroupHead(), "isGroupHead is expected to be true"); // XXX is this a good idea???
 
-	if(GC.getUSE_AI_UPDATE_UNIT_CALLBACK() && Cy::call<bool>(PYGameModule, "AI_unitUpdate", Cy::Args() << this))
+	// Toffer - will have to look into the python code DH made for this for immigrant units, it might be useful
+	if (false && Cy::call<bool>(PYGameModule, "AI_unitUpdate", Cy::Args() << this))
 	{
 		return false;
 	}
@@ -28032,104 +28033,62 @@ bool CvUnitAI::AI_caravan(bool bAnyCity)
 {
 	PROFILE_FUNC();
 
-	CvPlot* endTurnPlot = NULL;
-	bool bHurry;
-	int iTurnsLeft;
-	int iPathTurns;
-	int iValue;
-	int iNumCities = GET_PLAYER(getOwner()).getNumCities();
-
+	if (getUnitInfo().getProductionCost() < 0)
+	{
+		return false; // Avoid using Great People
+	}
+	const int iNumCities = GET_PLAYER(getOwner()).getNumCities();
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
 
-	//Avoid using Great People
-	if (getUnitInfo().getProductionCost() < 0)
-	{
-		return false;
-	}
-
 	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
-		if ((pLoopCity->area() == area()) && AI_plotValid(pLoopCity->plot()))
+		if (pLoopCity->area() == area() && AI_plotValid(pLoopCity->plot()) && canHurry(pLoopCity->plot())
+		&& !pLoopCity->plot()->isVisibleEnemyUnit(this))
 		{
-			if ( canHurry(pLoopCity->plot()))
+			int iPathTurns;
+			if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
 			{
-				if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))
+				if (bAnyCity
+				|| pLoopCity->findPopulationRank() >= iNumCities * 2 / 3
+				&& pLoopCity->getPopulation() < GET_PLAYER(getOwner()).getTotalPopulation() * 2 / (3 * iNumCities))
 				{
-					if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
+					const int iTurnsLeft = pLoopCity->getProductionTurnsLeft() - iPathTurns;
+
+					const int iMinTurns = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 50;
+
+					if (iTurnsLeft > iMinTurns && iTurnsLeft > iBestValue)
 					{
-						bHurry = false;
-
-						if (!bAnyCity)
-						{
-							if (pLoopCity->findPopulationRank() >= ((iNumCities * 2) / 3))
-							{
-								int iPopulation = pLoopCity->getPopulation();
-								int iEmpirePop = GET_PLAYER(getOwner()).getTotalPopulation();
-								int iAvgPop = iEmpirePop / iNumCities;
-								if (iPopulation < ((iAvgPop * 2) / 3))
-								{
-									bHurry = true;
-								}
-							}
-						}
-
-						if (bHurry || bAnyCity)
-						{
-							iTurnsLeft = pLoopCity->getProductionTurnsLeft();
-
-							iTurnsLeft -= iPathTurns;
-							int iMinTurns = 2;
-							iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
-							iMinTurns /= 100;
-							if (iTurnsLeft > iMinTurns)
-							{
-								iValue = iTurnsLeft;
-
-								if (iValue > iBestValue)
-								{
-									iBestValue = iValue;
-									pBestPlot = pLoopCity->plot();
-								}
-							}
-						}
+						iBestValue = iTurnsLeft;
+						pBestPlot = pLoopCity->plot();
 					}
 				}
 			}
 		}
 	}
 
-	if (pBestPlot != NULL)
+	if (pBestPlot == NULL)
 	{
-		if (!atPlot(pBestPlot))
+		return false;
+	}
+	if (!atPlot(pBestPlot))
+	{
+		int iPathTurns;
+		if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
 		{
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
+			CvPlot* endTurnPlot = getPathEndTurnPlot();
+			if (endTurnPlot != NULL)
 			{
-				endTurnPlot = getPathEndTurnPlot();
-				if (endTurnPlot != NULL)
-				{
-					return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_HURRY, pBestPlot);
-				}
-				else
-				{
-					getGroup()->pushMission(MISSION_SKIP);
-					return true;
-				}
+				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_HURRY, pBestPlot);
 			}
-			else
-			{
-				getGroup()->pushMission(MISSION_SKIP,-1,-1,0,false,false,MISSIONAI_WAIT_FOR_ESCORT);
-				return true;
-			}
-		}
-		else
-		{
-			getGroup()->pushMission(MISSION_HURRY);
+			getGroup()->pushMission(MISSION_SKIP);
 			return true;
 		}
+		getGroup()->pushMission(MISSION_SKIP,-1,-1,0,false,false,MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
 	}
-
-	return false;
+	getGroup()->pushMission(MISSION_HURRY);
+	return true;
 }
 
 bool CvUnitAI::AI_hurryFood()

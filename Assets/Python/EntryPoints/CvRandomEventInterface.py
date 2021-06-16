@@ -7280,19 +7280,10 @@ def doRemoveWVCannibalism(argsList):
 			print "[INFO] doRemoveWVCannibalism(args) happened for a player with no cities"
 		else:
 			iType0 = GC.getInfoTypeForString("BUILDING_CANNIBALISM")
-			iType1 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_I")
-			iType2 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_II")
-			iType3 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_III")
 			for CyCity in CyPlayer.cities():
 				CyCity.setNumRealBuilding(iType, 0)
 				if iType0 > -1:
 					CyCity.setNumRealBuilding(iType0, 0)
-				if iType1 > -1:
-					CyCity.setNumRealBuilding(iType1, 0)
-				if iType2 > -1:
-					CyCity.setNumRealBuilding(iType2, 0)
-				if iType3 > -1:
-					CyCity.setNumRealBuilding(iType3, 0)
 
 			if iPlayer == GC.getGame().getActivePlayer():
 				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MSG_NO_CANNIBALISM", ()))

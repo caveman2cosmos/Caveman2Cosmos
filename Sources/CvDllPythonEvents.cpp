@@ -378,19 +378,6 @@ void CvDllPythonEvents::reportInit()
 	postEvent(eventData, "Init");
 }
 
-void CvDllPythonEvents::reportUpdate(float fDeltaTime)
-{
-	if (GC.getUSE_ON_UPDATE_CALLBACK())
-	{
-		EventArgs eventData;
-		eventData
-			.no_json()
-			.arg("event", "Update")
-			.arg("fDeltaTime", fDeltaTime);
-		postEvent(eventData, "Update");
-	}
-}
-
 void CvDllPythonEvents::reportUnInit()
 {
 	EventArgs eventData;
@@ -828,29 +815,13 @@ void CvDllPythonEvents::reportUnitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOl
 	postEvent(eventData, "unitMove");
 }
 
-void CvDllPythonEvents::reportUnitSetXY(CvPlot* pPlot, CvUnit* pUnit)
-{
-	if (GC.getUSE_ON_UNIT_SET_XY_CALLBACK())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitSetXY")
-			.arg("pPlot", pPlot)
-			.arg("pUnit", pUnit);
-		postEvent(eventData, "unitSetXY");
-	}
-}
-
 void CvDllPythonEvents::reportUnitCreated(CvUnit* pUnit)
 {
-	if (GC.getUSE_ON_UNIT_CREATED_CALLBACK())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitCreated")
-			.arg("pUnit", pUnit);
-		postEvent(eventData, "unitCreated");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitCreated")
+		.arg("pUnit", pUnit);
+	postEvent(eventData, "unitCreated");
 }
 
 void CvDllPythonEvents::reportUnitBuilt(CvCity *pCity, CvUnit* pUnit)
@@ -888,14 +859,11 @@ void CvDllPythonEvents::reportUnitCaptured(PlayerTypes eFromPlayer, UnitTypes eU
 
 void CvDllPythonEvents::reportUnitLost(CvUnit* pUnit)
 {
-	if (GC.getUSE_ON_UNIT_LOST_CALLBACK())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitLost")
-			.arg("pUnit", pUnit);
-		postEvent(eventData, "unitLost");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitLost")
+		.arg("pUnit", pUnit);
+	postEvent(eventData, "unitLost");
 }
 
 void CvDllPythonEvents::reportUnitPromoted(CvUnit* pUnit, PromotionTypes ePromotion)
@@ -923,14 +891,11 @@ void CvDllPythonEvents::reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, i
 
 void CvDllPythonEvents::reportUnitSelected(CvUnit* pUnit)
 {
-	if (GC.getUSE_ON_UNIT_SELECTED_CALLBACK())
-	{
-		EventArgs eventData;
-		eventData
-			.arg("event", "unitSelected")
-			.arg("pUnit", pUnit);
-		postEvent(eventData, "unitSelected");
-	}
+	EventArgs eventData;
+	eventData
+		.arg("event", "unitSelected")
+		.arg("pUnit", pUnit);
+	postEvent(eventData, "unitSelected");
 }
 
 void CvDllPythonEvents::reportUnitRename(CvUnit *pUnit)

@@ -1811,6 +1811,7 @@
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bSpy>1</bSpy>
+			<bNoRevealMap>1</bNoRevealMap>
 			<bCounterSpy>1</bCounterSpy>
 			<bInvisible>1</bInvisible>
 			<UnitUpgrades>
@@ -1876,6 +1877,7 @@
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bSpy>1</bSpy>
+			<bNoRevealMap>1</bNoRevealMap>
 			<bInvestigate>1</bInvestigate>
 			<bCounterSpy>1</bCounterSpy>
 			<bInvisible>1</bInvisible>
@@ -1947,6 +1949,7 @@
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bSpy>1</bSpy>
+			<bNoRevealMap>1</bNoRevealMap>
 			<bInvestigate>1</bInvestigate>
 			<bCounterSpy>1</bCounterSpy>
 			<bInvisible>1</bInvisible>
@@ -2029,6 +2032,7 @@
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bSpy>1</bSpy>
+			<bNoRevealMap>1</bNoRevealMap>
 			<bStealPlans>1</bStealPlans>
 			<bInvestigate>1</bInvestigate>
 			<bCounterSpy>1</bCounterSpy>
@@ -2130,6 +2134,7 @@
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bSpy>1</bSpy>
+			<bNoRevealMap>1</bNoRevealMap>
 			<bSabotage>1</bSabotage>
 			<bDestroy>1</bDestroy>
 			<bStealPlans>1</bStealPlans>
@@ -36257,7 +36262,6 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_PRODIGY</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SPY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -36276,6 +36280,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bGoldenAge>1</bGoldenAge>
+			<bNoRevealMap>1</bNoRevealMap>
 			<bInvisible>1</bInvisible>
 			<UnitAIs>
 				<UnitAI>
@@ -43373,7 +43378,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iBaseHurry>25</iBaseHurry>
 			<iHurryMultiplier>2</iHurryMultiplier>
 			<iAsset>1</iAsset>
@@ -44027,7 +44031,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<bWorkerTrade>1</bWorkerTrade>
 			<iBaseHurry>100</iBaseHurry>
 			<iHurryMultiplier>5</iHurryMultiplier>
@@ -44216,7 +44219,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<UnitMeshGroups>
 				<iGroupSize>4</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -44284,7 +44286,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iWorkRate>90</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>

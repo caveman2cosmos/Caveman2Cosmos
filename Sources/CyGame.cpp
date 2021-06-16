@@ -250,16 +250,6 @@ void CyGame::setModem(bool bModem)
 	m_pGame.setModem(bModem);
 }
 
-void CyGame::reviveActivePlayer()
-{
-	m_pGame.reviveActivePlayer();
-}
-
-void CyGame::revivePlayer(PlayerTypes iPlayer)
-{
-	m_pGame.reviveActivePlayer(iPlayer);
-}
-
 int CyGame::getNumHumanPlayers() const
 {
 	return m_pGame.getNumHumanPlayers();
