@@ -1324,10 +1324,6 @@
 	<ElementType name="bRemoveAfterSet" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bQuick" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bInquisitor" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bCanBeRebel" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bCanRebelCapture" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bCannotDefect" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bCanQuellRebellion" content="textOnly" dt:type="boolean"/>
 	<!-- ls612: No Non-Owned Entry -->
 	<ElementType name="bOnlyFriendlyEntry" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bWorkerTrade" content="textOnly" dt:type="boolean"/>

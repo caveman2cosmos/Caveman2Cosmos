@@ -165,11 +165,6 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 			return false;
 		}
 
-		if (!ReadGlobalDefines("xml\\PythonCallbackDefines.xml", cache))
-		{
-			return false;
-		}
-
 		//	Parallel maps
 		if (!ReadGlobalDefines("xml\\ParallelMaps_GlobalDefines.xml", cache))
 		{
@@ -230,18 +225,6 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 					return false;
 				}
 			}
-
-			std::vector<CvString> aszModularFiles;
-			gDLL->enumerateFiles(aszModularFiles, "modules\\*_PythonCallbackDefines.xml");
-
-			foreach_(const CvString& szFile, aszModularFiles)
-			{
-				if (!ReadGlobalDefines(szFile, cache))
-				{
-					OutputDebugString("Setting Global Defines: End\n");
-					return false;
-				}
-			}
 		}
 	/************************************************************************************************/
 	/* MODULAR_LOADING_CONTROL                 11/15/07                                MRGENIE      */
@@ -250,9 +233,9 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 	/************************************************************************************************/
 		else
 		{
-			std::vector<CvString> aszFiles;		
+			std::vector<CvString> aszFiles;
 			CvXMLLoadUtilitySetMod* pModEnumVector = new CvXMLLoadUtilitySetMod;
-			//aszFiles.reserve(10000);
+
 			pModEnumVector->loadModControlArray(aszFiles, "globaldefines");
 
 			foreach_(const CvString& szFile, aszFiles)
@@ -264,22 +247,8 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 					return false;
 				}
 			}
-
-			std::vector<CvString> aszModularFiles;
-			//aszModularFiles.reserve(10000);
-			pModEnumVector->loadModControlArray(aszModularFiles, "pythoncallbackdefines");
 			SAFE_DELETE(pModEnumVector);
-
-			foreach_(const CvString& szFile, aszModularFiles)
-			{
-				if (!ReadGlobalDefines(szFile, cache))
-				{
-					OutputDebugString("Setting Global Defines: End\n");
-					return false;
-				}
-			}
 			aszFiles.clear();
-			aszModularFiles.clear();
 		}
 	/************************************************************************************************/
 	/* MODULAR_LOADING_CONTROL                 END                                                  */

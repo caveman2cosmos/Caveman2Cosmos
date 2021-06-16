@@ -21040,11 +21040,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_UPGRADE</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Growth for[SPACE]</English>
-		<French>[ICON_BULLET]%D1_Mod%% de croissance pour[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Mod%% Wachstum für[SPACE]</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% miglioramento sulla crescita[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod%% al crecimiento por[SPACE]</Spanish>
+		<English>[ICON_BULLET]%D1_Mod%% Growth Speed for Improvements</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_YIELD_CHANGE</Tag>

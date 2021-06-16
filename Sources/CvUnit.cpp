@@ -710,8 +710,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iExtraHillsAttackPercent = 0;
 	m_iExtraHillsDefensePercent = 0;
 
-	m_iExtraWorkPercent = 0;
-
 	m_iRevoltProtection = 0;
 	m_iCollateralDamageProtection = 0;
 	m_iPillageChange = 0;
@@ -1301,6 +1299,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			}
 		}
 		finishMoves();
+		m_iDamage = getMaxHP(); // Toffer - Makes isDead() True
 
 		if (IsSelected() && gDLL->getInterfaceIFace()->getLengthSelectionList() == 1)
 		{
@@ -6179,7 +6178,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		{
 			FAssert(ePlotTeam != NO_TEAM);
 
-			if (!(GET_TEAM(getTeam()).canDeclareWar(ePlotTeam)))
+			if (!GET_TEAM(getTeam()).canDeclareWar(ePlotTeam))
 			{
 				return false;
 			}
@@ -6191,19 +6190,9 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 					return false;
 				}
 			}
-			else
+			else if (!GET_TEAM(getTeam()).AI_isSneakAttackReady(ePlotTeam) || !getGroup()->AI_isDeclareWar(pPlot))
 			{
-				if (GET_TEAM(getTeam()).AI_isSneakAttackReady(ePlotTeam))
-				{
-					if (!(getGroup()->AI_isDeclareWar(pPlot)))
-					{
-						return false;
-					}
-				}
-				else
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 	}
@@ -6215,7 +6204,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		if (plot()->isAsPeak())
 		{
 			//	Can this unit move through peaks regardless?
-			if ( isCanMovePeaks() )
+			if (isCanMovePeaks())
 			{
 				bValid = true;
 			}
@@ -6225,26 +6214,23 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 				bValid = plot()->getHasMountainLeader(getTeam());
 			}
 		}
-		if (pPlot->isAsPeak())
+		//Check the impassible tile
+		if (!bValid)
 		{
-			//Check the impassible tile
-			if (!bValid)
+			if (pPlot->isAsPeak())
 			{
-				//	Can this unit move through peaks regardless?
-				if ( isCanMovePeaks() )
+				// Can this unit move through peaks regardless?
+				if (isCanMovePeaks())
 				{
 					bValid = true;
 				}
 				else
 				{
-					//	If not we need a peak leader to be present
+					// If not we need a peak leader to be present
 					bValid = pPlot->getHasMountainLeader(getTeam());
 				}
 			}
-		}
-		if (!bValid)
-		{
-			if (!canMoveImpassable())
+			if (!bValid && !canMoveImpassable())
 			{
 				return false;
 			}
@@ -6321,30 +6307,13 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		}
 	}
 	//City Minimum Defense Level
-	if (!bHasCheckedCityEntry && !bIgnoreLocation && pPlot->getPlotCity() != NULL && !isSpy() && !isBlendIntoCity() && !(isBarbCoExist() && pPlot->isHominid()))
+	if (!bHasCheckedCityEntry && !bIgnoreLocation && pPlot->getPlotCity() != NULL && !isSpy()
+	&& !isBlendIntoCity() && (!isBarbCoExist() || !pPlot->isHominid())
+	&& GET_TEAM(GET_PLAYER(getCombatOwner(pPlot->getTeam(), pPlot)).getTeam()).isAtWar(pPlot->getTeam())
+	&& !pPlot->getPlotCity()->isDirectAttackable() && !canIgnoreNoEntryLevel())
 	{
-		if (GET_TEAM(GET_PLAYER(getCombatOwner(pPlot->getTeam(),pPlot)).getTeam()).isAtWar(pPlot->getTeam()))
-		{
-			if ( !pPlot->getPlotCity()->isDirectAttackable() && !canIgnoreNoEntryLevel())
-			{
-				return false;
-			}
-		}
+		return false;
 	}
-
-	if (GC.getUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK())
-	{
-		// Python Override
-		if (Cy::call<bool>(PYGameModule, "unitCannotMoveInto", Cy::Args()
-			<< getOwner()
-			<< getID()
-			<< pPlot->getX()
-			<< pPlot->getY()))
-		{
-			return false;
-		}
-	}
-
 	return true;
 }
 
@@ -10391,24 +10360,14 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 {
 	PROFILE_FUNC();
 
-	if (eReligion == NO_RELIGION)
-	{
-		return false;
-	}
-
-	if (m_pUnitInfo->getReligionSpreads(eReligion) <= 0)
+	if (eReligion == NO_RELIGION || m_pUnitInfo->getReligionSpreads(eReligion) <= 0)
 	{
 		return false;
 	}
 
 	CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity == NULL)
-	{
-		return false;
-	}
-
-	if (pCity->isHasReligion(eReligion))
+	if (pCity == NULL || pCity->isHasReligion(eReligion))
 	{
 		return false;
 	}
@@ -10425,41 +10384,26 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 		return false;
 	}
 
-	if (GC.getUSE_CANNOT_SPREAD_RELIGION_CALLBACK()
-
-	&& Cy::call<bool>(PYGameModule, "cannotSpreadReligion", Cy::Args()
-		<< getOwner() 
-		<< getID()
-		<< (int)eReligion
-		<< pPlot->getX()
-		<< pPlot->getY())
-
-	) return false;
-
 	// TB Prophet Mod
 	if (AI_getUnitAIType() != UNITAI_MISSIONARY)
 	{
-		if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
+		if (!GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS)
+		|| GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS) && GET_PLAYER(getOwner()).hasHolyCity())
 		{
-			bool istechqual = GC.getGame().isOption(GAMEOPTION_PICK_RELIGION);
+			return false;
+		}
 
-			if (!istechqual)
-			{
-				const TechTypes ePreqTech = (TechTypes)GC.getReligionInfo(eReligion).getTechPrereq();
+		if (!GC.getGame().isOption(GAMEOPTION_PICK_RELIGION))
+		{
+			const TechTypes ePreqTech = (TechTypes)GC.getReligionInfo(eReligion).getTechPrereq();
 
-				if (GC.getGame().isTechDiscovered(ePreqTech)
-				&& (GET_TEAM(getTeam()).isHasTech(ePreqTech) || GC.getGame().getGameTurn() > GC.getGame().getTechGameTurnDiscovered(ePreqTech) + 1))
-				{
-					istechqual = true;
-				}
-			}
-
-			if (!istechqual || GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS) && GET_PLAYER(getOwner()).hasHolyCity())
+			if (!GC.getGame().isTechDiscovered(ePreqTech)
+			|| !GET_TEAM(getTeam()).isHasTech(ePreqTech)
+			&& GC.getGame().getGameTurn() <= GC.getGame().getTechGameTurnDiscovered(ePreqTech) + 1)
 			{
 				return false;
 			}
 		}
-		else return false;
 	}
 	// ! TB Prophet Mod
 
@@ -12284,37 +12228,25 @@ bool CvUnit::giveExperience()
 
 	if (pPlot)
 	{
-		int iNumUnits = canGiveExperience(pPlot);
+		const int iNumUnits = canGiveExperience(pPlot);
 		if (iNumUnits > 0)
 		{
-			int iTotalExperience = getStackExperienceToGive(iNumUnits);
-
-			int iMinExperiencePerUnit = iTotalExperience / iNumUnits;
-			int iRemainder = iTotalExperience % iNumUnits;
+			const int iTotalExperience = getStackExperienceToGive(iNumUnits);
+			const int iMinExperiencePerUnit = iTotalExperience / iNumUnits;
 
 			int i = 0;
 			foreach_(CvUnit* pUnit, pPlot->units())
 			{
-				if (pUnit != this &&
-					pUnit->getOwner() == getOwner() &&
-					!pUnit->isTrap() &&
-					!pUnit->isCommander() &&
-					pUnit->canAcquirePromotionAny())
+				if (pUnit != this && pUnit->getOwner() == getOwner() && !pUnit->isTrap()
+				&& !pUnit->isCommander() && pUnit->canAcquirePromotionAny())
 				{
-					pUnit->changeExperience(i < iRemainder ? iMinExperiencePerUnit+1 : iMinExperiencePerUnit);
-					//	Koshling - testing promotion readiness here is uneccessary since CvUnit::doTurn
-					//	will do it.  It is alo now dangerous to do it here (or indeed anywhere but controlled
-					//	places) becaue it is not thread-safe and needs to run strictly on the main thread
-					//pUnit->testPromotionReady();
+					pUnit->changeExperience(i < (iTotalExperience % iNumUnits) ? iMinExperiencePerUnit + 1 : iMinExperiencePerUnit);
 				}
-
 				i++;
 			}
-
 			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -12325,27 +12257,11 @@ int CvUnit::getStackExperienceToGive(int iNumUnits) const
 
 int CvUnit::upgradePrice(UnitTypes eUnit) const
 {
-	if(GC.getUSE_UPGRADE_UNIT_PRICE_CALLBACK())
-	{
-		int iResult = Cy::call<int>(PYGameModule, "getUpgradePriceOverride", Cy::Args()
-			<< getOwner()
-			<< getID()
-			<< eUnit
-			);
-		if (iResult >= 0)
-		{
-			return iResult;
-		}
-	}
-
 	if (isNPC())
 	{
 		return 0;
 	}
-
-	int iBasePrice = GET_PLAYER(getOwner()).getProductionNeeded(eUnit) - GET_PLAYER(getOwner()).getProductionNeeded(getUnitType());
-	int iPrice = iBasePrice * GC.getUNIT_UPGRADE_COST_PER_PRODUCTION();
-	iPrice /= 100;
+	int iPrice = GC.getUNIT_UPGRADE_COST_PER_PRODUCTION() * (GET_PLAYER(getOwner()).getProductionNeeded(eUnit) - GET_PLAYER(getOwner()).getProductionNeeded(getUnitType()));
 
 	if (!isHuman() && !isNPC())
 	{
@@ -12356,8 +12272,10 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 		iPrice /= 100;
 	}
 
-	iPrice = iPrice * (100 + GET_PLAYER(getOwner()).getUnitUpgradePriceModifier()) / 100;
-	iPrice -= ((iPrice * getUpgradeDiscount()) / 100);
+	iPrice = getModifiedIntValue(iPrice, GET_PLAYER(getOwner()).getUnitUpgradePriceModifier());
+	iPrice -= iPrice * getUpgradeDiscount();
+
+	iPrice /= 100;
 
 	//ls612: Upgrade price is now dependent on the level of a unit
 	//if (iPrice != 0)
@@ -13140,43 +13058,12 @@ bool CvUnit::isFound() const
 	return m_pUnitInfo->isFound();
 }
 
-/********************************************************************************/
-/**		REVOLUTION_MOD							1/1/08				DPII		*/
-/**																				*/
-/**		 																		*/
-/********************************************************************************/
-/*
-bool CvUnit::isCanBeRebel() const
-{
-	return GC.getUnitInfo(getUnitType()).isCanBeRebel();
-}
-
-bool CvUnit::isCanRebelCapture() const
-{
-	return GC.getUnitInfo(getUnitType()).isCanRebelCapture();
-}
-
-bool CvUnit::isCannotDefect() const
-{
-	return GC.getUnitInfo(getUnitType()).isCannotDefect();
-}
-
-bool CvUnit::isCanQuellRebellion() const
-{
-	return GC.getUnitInfo(getUnitType()).isCanQuellRebellion();
-}
-*/
-/********************************************************************************/
-/**		REVOLUTION_MOD							END								*/
-/********************************************************************************/
-
 bool CvUnit::isGoldenAge() const
 {
 	if (isDelayedDeath())
 	{
 		return false;
 	}
-
 	return m_pUnitInfo->isGoldenAge();
 }
 
@@ -17069,8 +16956,6 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	//TBSET
 	setHasAnyInvisibility();
 
-	// report event to Python, along with some other key state
-	CvEventReporter::getInstance().unitSetXY(pNewPlot, this);
 	/*GC.getGame().logOOSSpecial(5, getID(), iX, iY);*/
 }
 
@@ -17331,24 +17216,19 @@ void CvUnit::changeDamagePercent(int iChange, PlayerTypes ePlayer)
 
 int CvUnit::getMoves() const
 {
-	int iMoves = m_iMoves;
-
-	iMoves *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitMovementPercent() + 100;
-	iMoves /= 100;
-
-	return iMoves;
+	return m_iMoves;
 }
 
 
 void CvUnit::setMoves(int iNewValue)
 {
-	if (getMoves() != iNewValue)
+	if (m_iMoves != iNewValue)
 	{
 		CvPlot* pPlot = plot();
 
 		m_iMoves = iNewValue;
 
-		FASSERT_NOT_NEGATIVE(getMoves())
+		FASSERT_NOT_NEGATIVE(m_iMoves)
 
 		if (getTeam() == GC.getGame().getActiveTeam())
 		{
@@ -17375,7 +17255,7 @@ void CvUnit::setMoves(int iNewValue)
 
 void CvUnit::changeMoves(int iChange)
 {
-	setMoves(getMoves() + iChange);
+	setMoves(m_iMoves + iChange);
 }
 
 
@@ -19563,22 +19443,6 @@ void CvUnit::changeExtraCombatPercent(int iChange)
 	}
 }
 
-//ls612: Work Rate Modifiers
-int CvUnit::getExtraWorkPercent() const
-{
-	return m_iExtraWorkPercent;
-}
-
-void CvUnit::changeExtraWorkPercent(int iChange)
-{
-	if (iChange != 0)
-	{
-		m_iExtraWorkPercent += iChange;
-
-		setInfoBarDirty(true);
-	}
-}
-
 int CvUnit::getExtraCityAttackPercent() const
 {
 	if (!isCommander())
@@ -19674,13 +19538,19 @@ void CvUnit::changeExtraHillsDefensePercent(int iChange)
 //WorkRateMod
 int CvUnit::hillsWorkModifier() const
 {
-	return m_worker->getHillsWorkModifier();
+	return m_worker != NULL ? m_worker->getHillsWorkModifier() : 0;
 }
 
 int CvUnit::peaksWorkModifier() const
 {
-	return m_worker->getPeaksWorkModifier();
+	return m_worker != NULL ? m_worker->getPeaksWorkModifier() : 0;
 }
+
+int CvUnit::getWorkModifier() const
+{
+	return m_worker != NULL ? m_worker->getWorkModifier() : 0;
+}
+
 
 int CvUnit::getCollateralDamageProtection() const
 {
@@ -22115,14 +21985,27 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	changeExtraCityDefensePercent(kUnitCombat.getCityDefensePercent() * iChange);//no merge/split
 	changeExtraHillsAttackPercent(kUnitCombat.getHillsAttackPercent() * iChange);//no merge/split
 	changeExtraHillsDefensePercent(kUnitCombat.getHillsDefensePercent() * iChange);//no merge/split
-	// Assume only worker units can get the relevant promotions, if not then we'll need a retroactive unitComp late init function.
+	// Assume only worker units can get the relevant unit combats, if not then we'll need a retroactive unitComp late init function.
 	if (isWorker())
 	{
-		m_worker->changeHillsWorkModifier(kUnitCombat.getHillsWorkPercent() * iChange);//no merge/split
-		m_worker->changePeaksWorkModifier(kUnitCombat.getPeaksWorkPercent() * iChange);//no merge/split
-		setInfoBarDirty(true);
+		bool bChanged = false;
+		if (kUnitCombat.getHillsWorkPercent() != 0)
+		{
+			m_worker->changeHillsWorkModifier(kUnitCombat.getHillsWorkPercent() * iChange);
+			bChanged = true;
+		}
+		if (kUnitCombat.getPeaksWorkPercent() != 0)
+		{
+			m_worker->changePeaksWorkModifier(kUnitCombat.getPeaksWorkPercent() * iChange);
+			bChanged = true;
+		}
+		if (kUnitCombat.getWorkRatePercent() != 0)
+		{
+			m_worker->changeWorkModifier(kUnitCombat.getWorkRatePercent() * iChange);
+			bChanged = true;
+		}
+		if (bChanged) setInfoBarDirty(true);
 	}
-	changeExtraWorkPercent(kUnitCombat.getWorkRatePercent() * iChange);//no merge/split
 	changeRevoltProtection(kUnitCombat.getRevoltProtection() * iChange);// merge/split
 	changeCollateralDamageProtection(kUnitCombat.getCollateralDamageProtection() * iChange);//no merge/split
 	changePillageChange(kUnitCombat.getPillageChange() * iChange);//no merge/split
@@ -22846,9 +22729,23 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	// Assume only worker units can get the relevant promotions, if not then we'll need a retroactive unitComp late init function.
 	if (isWorker())
 	{
-		m_worker->changeHillsWorkModifier(kPromotion.getHillsWorkPercent() * iChange);
-		m_worker->changePeaksWorkModifier(kPromotion.getPeaksWorkPercent() * iChange);
-		setInfoBarDirty(true);
+		bool bChanged = false;
+		if (kPromotion.getHillsWorkPercent() != 0)
+		{
+			m_worker->changeHillsWorkModifier(kPromotion.getHillsWorkPercent() * iChange);
+			bChanged = true;
+		}
+		if (kPromotion.getPeaksWorkPercent() != 0)
+		{
+			m_worker->changePeaksWorkModifier(kPromotion.getPeaksWorkPercent() * iChange);
+			bChanged = true;
+		}
+		if (kPromotion.getWorkRatePercent() != 0)
+		{
+			m_worker->changeWorkModifier(kPromotion.getWorkRatePercent() * iChange);
+			bChanged = true;
+		}
+		if (bChanged) setInfoBarDirty(true);
 	}
 	changeRevoltProtection(kPromotion.getRevoltProtection() * iChange);
 	changeCollateralDamageProtection(kPromotion.getCollateralDamageProtection() * iChange);
@@ -22876,13 +22773,6 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 		changeCargoVolumeModifier(kPromotion.getSMCargoVolumeModifierChange() * iChange);
 		bSMrecalc = true;
 	}
-	//ls612: WorkRateMod
-	if (kPromotion.getWorkRatePercent() != 0)
-	{
-		changeExtraWorkPercent(kPromotion.getWorkRatePercent() * iChange);
-		bSMrecalc = true;
-	}
-	// ! ls612
 
 	changeExtraCombatModifierPerSizeMore(kPromotion.getCombatModifierPerSizeMoreChange() * iChange);//no merge/split
 	changeExtraCombatModifierPerSizeLess(kPromotion.getCombatModifierPerSizeLessChange() * iChange);//no merge/split
@@ -23553,14 +23443,12 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCityDefensePercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraHillsAttackPercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraHillsDefensePercent);
-	//ls612: Work Modifiers
+
 	int iExtraHillsWorkPercent = 0;
 	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraHillsWorkPercent, "m_iExtraHillsWorkPercent");
+	int iExtraWorkPercent = 0;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraWorkPercent, "m_iExtraWorkPercent");
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraWorkPercent);
-	// SVN 10973 08-13-2019 Fix for already corrupted worker extra work rate
-	// Because no promotion or unitcombat class defines iWorkRateModifier yet, we can set it to zero for now.
-	m_iExtraWorkPercent = 0;
 	WRAPPER_READ(wrapper, "CvUnit", &m_iRevoltProtection);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCollateralDamageProtection);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iPillageChange);
@@ -25011,6 +24899,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 		m_worker->changeHillsWorkModifier(iExtraHillsWorkPercent + m_pUnitInfo->getHillsWorkModifier());
 		m_worker->changePeaksWorkModifier(iExtraPeaksWorkPercent + m_pUnitInfo->getPeaksWorkModifier());
+		m_worker->changeWorkModifier(iExtraWorkPercent);
 	}
 
 	//Example of how to skip an outdated and unnecessary save element (at least for ints and bools)
@@ -25147,11 +25036,11 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCityDefensePercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraHillsAttackPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraHillsDefensePercent);
-	//ls612: Work Modifiers
+
 	const bool bWorker = isWorker();
 	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getHillsWorkModifier() - m_pUnitInfo->getHillsWorkModifier() : 0), "m_iExtraHillsWorkPercent");
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getWorkModifier() : 0), "m_iExtraWorkPercent");
 
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraWorkPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRevoltProtection);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCollateralDamageProtection);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iPillageChange);
@@ -30388,17 +30277,17 @@ void CvUnit::clearCommanderCache()
 
 int CvUnit::controlPoints() const
 {
-	return m_commander->getControlPoints();
+	return m_commander != NULL ? m_commander->getControlPoints() : 0;
 }
 
 int CvUnit::controlPointsLeft() const
 {
-	return m_commander->getControlPointsLeft();
+	return m_commander != NULL ? m_commander->getControlPointsLeft() : 0;
 }
 
 int CvUnit::commandRange() const
 {
-	return m_commander->getCommandRange();
+	return m_commander != NULL ? m_commander->getCommandRange() : 0;
 }
 
 int CvUnit::interceptionChance(const CvPlot* pPlot) const
@@ -38323,64 +38212,41 @@ int CvUnit::workRate(bool bMax) const
 	{
 		return 0;
 	}
-	iRate *= std::max(0, 100 + GET_PLAYER(getOwner()).getWorkerSpeedModifier());
-	iRate /= 100;
+	int iWorkMod = getWorkModifier() + GET_PLAYER(getOwner()).getWorkerSpeedModifier();
 
-	if (!isHuman() && !isNPC())
-	{
-		iRate *= std::max(0, (GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorkRateModifier() + 100));
-		iRate /= 100;
-	}
-
-	if (plot() != NULL)
+	const CvPlot* pPlot = plot();
+	if (pPlot != NULL)
 	{
 		for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 		{
-			if (plot()->getFeatureType() == (FeatureTypes)iI)
+			if (pPlot->getFeatureType() == (FeatureTypes)iI)
 			{
-				const int iValue = featureWorkPercent((FeatureTypes)iI);
-
-				if (iValue != 0)
-				{
-					iRate *= 100 + iValue;
-					iRate /= 100;
-				}
+				iWorkMod += featureWorkPercent((FeatureTypes)iI);
 			}
 		}
-		{
-			const int iValue = terrainWorkPercent(plot()->getTerrainType());
-
-			if (iValue != 0)
-			{
-				iRate *= 100 + iValue;
-				iRate /= 100;
-			}
-		}
+		iWorkMod += terrainWorkPercent(pPlot->getTerrainType());
 		{
 			const BuildTypes eBuild = getBuildType();
 
 			if (eBuild != NO_BUILD)
 			{
-				iRate *= 100 + buildWorkPercent(eBuild);
-				iRate /= 100;
+				iWorkMod += buildWorkPercent(eBuild);
 			}
 		}
-		if (plot()->isHills())
-		{
-			iRate *= 100 + hillsWorkModifier();
-			iRate /= 100;
-		}
-		else if (plot()->isAsPeak())
-		{
-			iRate *= 100 + peaksWorkModifier();
-			iRate /= 100;
-		}
 
-		if (getExtraWorkPercent() != 0)
+		if (pPlot->isHills())
 		{
-			iRate *= 100 + getExtraWorkPercent();
-			iRate /= 100;
+			iWorkMod += hillsWorkModifier();
 		}
+		else if (pPlot->isAsPeak())
+		{
+			iWorkMod += peaksWorkModifier();
+		}
+		iRate = getModifiedIntValue(iRate, iWorkMod);
+	}
+	if (!isHuman() && !isNPC())
+	{
+		iRate = getModifiedIntValue(iRate, GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorkRateModifier());
 	}
 	return iRate;
 }

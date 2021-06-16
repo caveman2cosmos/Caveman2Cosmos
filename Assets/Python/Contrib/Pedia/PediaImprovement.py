@@ -331,7 +331,7 @@ class PediaImprovement:
 				aValidList.append((szChild + str(i) + "|" + str(n), GC.getTerrainInfo(i).getButton()))
 				n += 1
 		if CvTheImproveInfo.isHillsMakesValid():
-			aValidList.append((szChild + str(nTerrains - 1) + "|" + str(n), GC.getTerrainInfo(nTerrains - 1).getButton()))
+			aValidList.append((szChild + str(GC.getInfoTypeForString("TERRAIN_HILL")) + "|" + str(n), "Art/Interface/Buttons/BaseTerrain/Hill.dds"))
 			n += 1
 
 		szChild = PF + "FEATURE"
