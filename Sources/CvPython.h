@@ -406,7 +406,7 @@ namespace Cy
 	{
 		namespace from_python
 		{
-			struct PyIntArgFromPython
+			struct PyIntArg
 			{
 				static void* convertible(PyObject* obj)
 				{
