@@ -391,37 +391,35 @@ namespace Cy
 
 	std::vector<StackFrame> get_stack_trace();
 
-	template <typename T>
-	static void registerPyIntConverterForType()
+	namespace call_policy
 	{
-		// int arg from python to T
-		python::converter::registry::push_back(
-			&custom_converter::from_python::PyIntArg::convertible,
-			&custom_converter::from_python::PyIntArg::construct<T>,
-			python::type_id<T>()
-		);
-	}
-
-	namespace custom_converter
-	{
-		namespace from_python
+		const struct PyIntConverter
 		{
-			struct PyIntArg
+			template <typename T>
+			static void registerForType()
 			{
-				static void* convertible(PyObject* obj)
-				{
-					return PyInt_Check(obj) ? obj : NULL;
-				}
+				python::converter::registry::push_back(&convertible, &argFromPython<T>, python::type_id<T>());
+				python::converter::registry::insert(returnToPython, python::type_id<T>());
+			}
 
-				template <typename T>
-				static void construct(PyObject* obj, python::converter::rvalue_from_python_stage1_data* data)
-				{
-					void* const storage = ((python::converter::rvalue_from_python_storage<int>*)data)->storage.bytes;
-					new (storage)T(static_cast<T>(PyInt_AS_LONG(obj)));
-					data->convertible = storage;
-				}
-			};
-		}
+			static void* convertible(PyObject* obj)
+			{
+				return PyInt_Check(obj) ? obj : NULL;
+			}
+
+			template <typename T>
+			static void argFromPython(PyObject* obj, python::converter::rvalue_from_python_stage1_data* data)
+			{
+				void* const storage = reinterpret_cast<python::converter::rvalue_from_python_storage<int>*>(data)->storage.bytes;
+				new (storage) T(static_cast<T>(PyInt_AS_LONG(obj)));
+				data->convertible = storage;
+			}
+
+			static PyObject* returnToPython(const void* x)
+			{
+				return PyInt_FromLong(*(static_cast<const long*>(x)));
+			}
+		};
 	}
 }
 
