@@ -1292,7 +1292,7 @@ class Pedia:
 			"""
 			
 			#Check if Commerce Change Double Time is on wonders and not on regular or -1 cost buildings
-			for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+			for iYield in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				if CvBuildingInfo.getCommerceChangeDoubleTime(iYield) != 0 and not (isWorldWonder(i) or isNationalWonder(i) or  CvBuildingInfo.getHolyCity() != -1):
 					print CvBuildingInfo.getType()+" has commerce change double time"
 
