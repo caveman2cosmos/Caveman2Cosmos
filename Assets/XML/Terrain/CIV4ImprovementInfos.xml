@@ -4787,6 +4787,7 @@
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_BAUXITE_ORE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4798,6 +4799,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_COAL</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4809,6 +4811,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_COPPER_ORE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4820,6 +4823,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_GOLD_ORE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4831,6 +4835,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_IRON_ORE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4841,6 +4846,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_SILVER_ORE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4852,6 +4858,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_URANIUM</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4863,6 +4870,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_SULPHUR</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4874,6 +4882,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_LEAD_ORE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4885,6 +4894,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_RUBIES</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4896,6 +4906,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_SAPPHIRES</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4907,6 +4918,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_DIAMOND</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4918,6 +4930,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_PLATINUM_ORE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4929,6 +4942,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_TIN_ORE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4940,6 +4954,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_TITANIUM_ORE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4951,6 +4966,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_JADE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4962,6 +4978,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_MARBLE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4973,6 +4990,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_STONE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -4983,6 +5001,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_OBSIDIAN</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -5005,6 +5024,7 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_MANGANESE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>1000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
