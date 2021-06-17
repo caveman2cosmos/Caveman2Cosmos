@@ -176,8 +176,6 @@ public:
 	void setModem(bool bModem);
 
 	DllExport void reviveActivePlayer();
-	void reviveActivePlayer(PlayerTypes iPlayer);
-
 	DllExport int getNumHumanPlayers();
 
 	DllExport int getGameTurn();

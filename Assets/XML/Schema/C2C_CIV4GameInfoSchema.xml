@@ -46,6 +46,7 @@
 	<ElementType name="TargetCondition"/>
 	<ElementType name="AttributeType" content="textOnly"/>
 	<ElementType name="iAmountPerTurn"/>
+	<ElementType name="iSpeedPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iGrowthPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iInhibitionPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iDistance" content="textOnly" dt:type="int"/>
@@ -594,7 +595,6 @@
 	<ElementType name="Name" content="textOnly"/>
 	<ElementType name="iFreeWinsVsBarbs" content="textOnly" dt:type="int"/>
 	<ElementType name="iAnimalAttackProb" content="textOnly" dt:type="int"/>
-	<ElementType name="iStartingLocPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitUpkeepPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxColonyMaintenance" content="textOnly" dt:type="int"/>
@@ -604,9 +604,6 @@
 	<ElementType name="iUnitHurryPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitTradePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitGreatWorkPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iGoldenAgePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iHurryPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iHurryConscriptAngerPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iRevolutionIndexPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iHealthBonus" content="textOnly" dt:type="int"/>
@@ -666,7 +663,6 @@
 		<element type="Help" minOccurs="0"/>
 		<element type="iFreeWinsVsBarbs" minOccurs="0"/>
 		<element type="iAnimalAttackProb" minOccurs="0"/>
-		<element type="iStartingLocPercent" minOccurs="0"/>
 		<element type="iAdvancedStartPointsMod" minOccurs="0"/>
 		<element type="iGold" minOccurs="0"/>
 		<element type="iUnitUpkeepPercent" minOccurs="0"/>
@@ -1367,10 +1363,8 @@
 	<ElementType name="iImprovementPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iGreatPeoplePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iCulturePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iAnarchyPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iEventChancePerTurn" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iOccupationTurnsPopulationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="GameSpeedInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -1380,6 +1374,7 @@
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
+		<element type="iSpeedPercent" minOccurs="0"/>
 		<element type="iGrowthPercent" minOccurs="0"/>
 		<element type="iTrainPercent" minOccurs="0"/>
 		<element type="iConstructPercent" minOccurs="0"/>
@@ -1389,18 +1384,12 @@
 		<element type="iImprovementPercent" minOccurs="0"/>
 		<element type="iGreatPeoplePercent" minOccurs="0"/>
 		<element type="iCulturePercent" minOccurs="0"/>
-		<element type="iAnarchyPercent" minOccurs="0"/>
 		<element type="iBarbPercent" minOccurs="0"/>
 		<element type="iFeatureProductionPercent" minOccurs="0"/>
 		<element type="iUnitDiscoverPercent" minOccurs="0"/>
 		<element type="iUnitHurryPercent" minOccurs="0"/>
 		<element type="iUnitTradePercent" minOccurs="0"/>
 		<element type="iUnitGreatWorkPercent" minOccurs="0"/>
-		<element type="iGoldenAgePercent" minOccurs="0"/>
-		<element type="iHurryPercent" minOccurs="0"/>
-		<element type="iHurryConscriptAngerPercent" minOccurs="0"/>
-		<element type="iOccupationTurnsPopulationPercent" minOccurs="0"/>
-		<element type="iVictoryDelayPercent" minOccurs="0"/>
 		<element type="iTraitGainPercent" minOccurs="0"/>
 		<element type="GameTurnInfos" minOccurs="0"/>
 	</ElementType>
@@ -1673,6 +1662,7 @@
 	<ElementType name="AudioUnitVictoryScript" content="textOnly"/>
 	<ElementType name="AudioUnitDefeatScript" content="textOnly"/>
 	<ElementType name="iAdvancedStartPoints" content="textOnly" dt:type="int"/>
+	<ElementType name="iAnarchyPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="EraInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
