@@ -1282,12 +1282,19 @@ class Pedia:
 			iTechRow = self.checkTechRequirementLocation(CvBuildingInfo)[1]
 			
 			#Check if free building has tech requirement
+			"""
 			if CvBuildingInfo.getFreeBuilding() != None:
 				CvFreeBuilding = GC.getBuildingInfo(CvBuildingInfo.getFreeBuilding())
 				if CvFreeBuilding != None:
 					iFreeBuildingTechLoc = self.checkTechRequirementLocation(CvFreeBuilding)[0]
 					if iFreeBuildingTechLoc == 0:
 						print CvBuildingInfo.getType()+" has free building with no tech "+CvFreeBuilding.getType()
+			"""
+			
+			#Check if Commerce Change Double Time is on wonders and not on regular or -1 cost buildings
+			for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+				if CvBuildingInfo.getCommerceChangeDoubleTime(iYield) != 0 and not (isWorldWonder(i) or isNationalWonder(i) or  CvBuildingInfo.getHolyCity() != -1):
+					print CvBuildingInfo.getType()+" has commerce change double time"
 
 			#Check if various tech modifications aren't earlier than building most advanced tech requirement or later than building obsoletion XGrid
 			#self.checkTechMods(iTechLoc, CvBuildingInfo)
