@@ -2205,11 +2205,6 @@ public:
 	bool getDCMAirBomb5() const;
 	bool getDCMFighterEngage() const;
 
-	bool isCanBeRebel() const;
-	bool isCanRebelCapture() const;
-	bool isCannotDefect() const;
-	bool isCanQuellRebellion() const;
-
 	float getUnitMaxSpeed() const;
 	float getUnitPadTime() const;
 
@@ -2464,10 +2459,6 @@ protected:
 	bool m_bFreeDrop;
 	bool m_bNoRevealMap;
 	bool m_bInquisitor;
-	bool m_bCanBeRebel;
-	bool m_bCanRebelCapture;
-	bool m_bCannotDefect;
-	bool m_bCanQuellRebellion;
 
 	//ls612: Can't enter non-Owned cities
 	bool m_bNoNonOwnedEntry;
@@ -3679,7 +3670,6 @@ public:
 
 	int getFreeWinsVsBarbs() const;
 	int getAnimalAttackProb() const;
-	int getStartingLocationPercent() const;
 	int getAdvancedStartPointsMod() const;
 	int getStartingGold() const;
 	int getUnitUpkeepPercent() const;
@@ -3758,7 +3748,6 @@ private:
 protected:
 	int m_iFreeWinsVsBarbs;
 	int m_iAnimalAttackProb;
-	int m_iStartingLocationPercent;
 	int m_iAdvancedStartPointsMod;
 	int m_iStartingGold;
 	int m_iUnitUpkeepPercent;
@@ -3844,6 +3833,7 @@ public:
 	CvGameSpeedInfo();
 	virtual ~CvGameSpeedInfo();
 
+	int getSpeedPercent() const;
 	int getGrowthPercent() const;
 	int getTrainPercent() const;
 	int getConstructPercent() const;
@@ -3852,20 +3842,13 @@ public:
 	int getBuildPercent() const;
 	int getImprovementPercent() const;
 	int getGreatPeoplePercent() const;
-	int getAnarchyPercent() const;
 	int getBarbPercent() const;
 	int getFeatureProductionPercent() const;
 	int getUnitDiscoverPercent() const;
 	int getUnitHurryPercent() const;
 	int getUnitTradePercent() const;
 	int getUnitGreatWorkPercent() const;
-	int getGoldenAgePercent() const;
-	int getHurryPercent() const;
-	int getHurryConscriptAngerPercent() const;
-	int getOccupationTimePopulationPercent() const;
-	int getVictoryDelayPercent() const;
 	int getNumTurnIncrements() const;
-	int getUnitMovementPercent() const;
 
 	const GameTurnInfo& getGameTurnInfo(int iIndex) const;
 	const CvDateIncrement& getDateIncrement(int iIndex) const;
@@ -3888,6 +3871,7 @@ public:
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 
+	int m_iSpeedPercent;
 	int m_iGrowthPercent;
 	int m_iTrainPercent;
 	int m_iConstructPercent;
@@ -3896,21 +3880,13 @@ protected:
 	int m_iBuildPercent;
 	int m_iImprovementPercent;
 	int m_iGreatPeoplePercent;
-	int m_iAnarchyPercent;
 	int m_iBarbPercent;
 	int m_iFeatureProductionPercent;
 	int m_iUnitDiscoverPercent;
 	int m_iUnitHurryPercent;
 	int m_iUnitTradePercent;
 	int m_iUnitGreatWorkPercent;
-	int m_iGoldenAgePercent;
-	int m_iHurryPercent;
-	int m_iHurryConscriptAngerPercent;
-	int m_iOccupationTimePopulationPercent;
-	int m_iVictoryDelayPercent;
 	int m_iNumTurnIncrements;
-	// Afforess 12/13/09
-	int m_iUnitMovementPercent;
 
 	CvString m_szGameSpeedName;
 	GameTurnInfo* m_pGameTurnInfo;

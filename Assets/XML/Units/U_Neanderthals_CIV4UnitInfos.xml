@@ -1936,7 +1936,6 @@
 			<iCost>96</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iWorkRate>200</iWorkRate>
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
@@ -3466,7 +3465,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iBaseHurry>20</iBaseHurry>
 			<iHurryMultiplier>2</iHurryMultiplier>
 			<iAsset>1</iAsset>

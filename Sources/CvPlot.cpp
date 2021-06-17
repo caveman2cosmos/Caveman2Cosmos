@@ -2470,11 +2470,12 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	{
 		return false;
 	}
+	const BonusTypes eBonus = getBonusType(eTeam);
 
 	// Special upgrade rule
-	if (bUpgradeCheck && getImprovementType() != NO_IMPROVEMENT && getBonusType() != NO_BONUS
-	&& GC.getImprovementInfo(getImprovementType()).isImprovementBonusMakesValid(getBonusType())
-	&& !pInfo.isImprovementBonusMakesValid(getBonusType()))
+	if (bUpgradeCheck && getImprovementType() != NO_IMPROVEMENT && eBonus != NO_BONUS
+	&& GC.getImprovementInfo(getImprovementType()).isImprovementBonusTrade(eBonus)
+	&& !pInfo.isImprovementBonusTrade(eBonus))
 	{
 		// Upgrading would remove access to bonus, bad upgrade.
 		return false;
@@ -2526,12 +2527,21 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	{
 		return false;
 	}
-	/*-------------------------------------------------------*\
-	| Special makeValid rule for bonuses; bonus access is key |
-	\*-------------------------------------------------------*/
-	if (getBonusType(eTeam) != NO_BONUS && pInfo.isImprovementBonusMakesValid(getBonusType(eTeam)))
+
+	/*---------------------------------------------*\
+	| Special rule for bonuses; bonus access is key |
+	\*---------------------------------------------*/
+	if (eBonus != NO_BONUS)
 	{
-		return true;
+		// Normal make-valid handling.
+		if (pInfo.isImprovementBonusMakesValid(eBonus))
+		{
+			if (pInfo.isImprovementBonusTrade(eBonus))
+			{
+				return true;
+			}
+			bValid = true;
+		}
 	}
 	/*--------------------*\
 	| General invalidators |
@@ -2576,8 +2586,8 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 		{
 			bValid = true;
 		}
-		else if (getBonusType(eTeam) != NO_BONUS && pInfo.isImprovementObsoleteBonusMakesValid(getBonusType(eTeam))
-		&& GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBonusInfo(getBonusType(eTeam)).getTechObsolete()))
+		else if (eBonus != NO_BONUS && pInfo.isImprovementObsoleteBonusMakesValid(eBonus)
+		&& GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBonusInfo(eBonus).getTechObsolete()))
 		{
 			bValid = true;
 		}
@@ -2777,7 +2787,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 	}
 	// Tech requirements are not checked here - they are checked in CvPlayer::canBuild()
 
-	if (bIncludePythonOverrides && GC.getUSE_CAN_BUILD_CALLBACK())
+	if (bIncludePythonOverrides)
 	{
 		const int lResult = canBuildFromPython(eBuild, ePlayer);
 
@@ -10734,12 +10744,13 @@ void CvPlot::doFeature()
 
 	if (getFeatureType() != NO_FEATURE)
 	{
-		if(GC.getFeatureInfo(getFeatureType()).getDisappearanceProbability() > 0
-		&& GC.getFeatureInfo(getFeatureType()).getDisappearanceProbability() > GC.getGame().getSorenRandNum(
-			10000 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent() / 100, "Feature Disappearance"))
-		{
-			setFeatureType(NO_FEATURE);
-		}
+		if (GC.getFeatureInfo(getFeatureType()).getDisappearanceProbability() > 0
+		&&  GC.getFeatureInfo(getFeatureType()).getDisappearanceProbability() >
+			(
+				GC.getGame().getSorenRandNum(100 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(), "Feature Disappearance")
+			)
+		) setFeatureType(NO_FEATURE);
+
 		return;
 	}
 
@@ -10788,8 +10799,7 @@ void CvPlot::doFeature()
 			}
 
 			if(iProbability > 0
-			&& iProbability > GC.getGame().getSorenRandNum(
-				10000 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent() / 100, "Feature Growth"))
+			&& iProbability > GC.getGame().getSorenRandNum(100 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(), "Feature Growth"))
 			{
 				setFeatureType((FeatureTypes)iI);
 				// Afforess 2/9/10 - Feature Sound Effect

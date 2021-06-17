@@ -1518,10 +1518,6 @@ public:
 	int getExtraCombatPercent() const;
 	void changeExtraCombatPercent(int iChange);
 
-	//ls612: Work Rate Modifiers
-	int getExtraWorkPercent() const;
-	void changeExtraWorkPercent(int iChange);
-
 	int getExtraCityAttackPercent() const;
 	void changeExtraCityAttackPercent(int iChange);
 
@@ -1535,6 +1531,8 @@ public:
 	void changeExtraHillsDefensePercent(int iChange);
 
 	//WorkRateMod
+	//ls612: Work Rate Modifiers
+	int getWorkModifier() const;
 	int hillsWorkModifier() const;
 	int peaksWorkModifier() const;
 
@@ -2082,8 +2080,6 @@ protected:
 	int m_iSameTileHeal;
 	int m_iAdjacentTileHeal;
 	int m_iExtraCombatPercent;
-	//ls612: Work Rate Modifiers
-	int m_iExtraWorkPercent;
 	int m_iExtraCityAttackPercent;
 	int m_iExtraCityDefensePercent;
 	int m_iExtraHillsAttackPercent;

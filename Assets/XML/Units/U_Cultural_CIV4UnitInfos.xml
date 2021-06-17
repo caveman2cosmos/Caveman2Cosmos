@@ -45458,7 +45458,6 @@
 			<iCost>220</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iWorkRate>200</iWorkRate>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>

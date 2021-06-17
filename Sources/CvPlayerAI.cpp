@@ -4211,7 +4211,7 @@ int CvPlayerAI::AI_goldTarget() const
 		iGold /= 100;
 
 		const int eventmult = GC.getGame().isOption(GAMEOPTION_NO_EVENTS) ? 10 : 6;
-		const int speedmult = (eventmult * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent());
+		const int speedmult = eventmult * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 		const int turnmult = iMultiplier * GC.getGame().getElapsedGameTurns();
 
 		iGold += (turnmult / speedmult);
@@ -13263,7 +13263,7 @@ int CvPlayerAI::AI_plotTargetMissionAIsInternalinCargoVolume(const CvPlot* pPlot
 	return iCount;
 }
 
-int CvPlayerAI::AI_plotTargetMissionAIsinCargoVolume(CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup, int iRange, int* piClosest) const
+int CvPlayerAI::AI_plotTargetMissionAIsinCargoVolume(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup, int iRange, int* piClosest) const
 {
 	PROFILE_FUNC();
 
@@ -13368,7 +13368,7 @@ int CvPlayerAI::AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMis
 			PlotMissionTargetMap& plotMissionTargetMap = m_missionTargetCache[eMissionAI];
 
 			//	Since we have to walk all the groups now anyway populate the full cache map for this missionAI
-			foreach_(CvSelectionGroup* pLoopSelectionGroup, groups())
+			foreach_(const CvSelectionGroup* pLoopSelectionGroup, groups())
 			{
 				const MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
 
@@ -21481,7 +21481,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 
 	//Proportional to #turns in the game...
 	//(AI evaluation will generally assume proper game speed scaling!)
-	int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent();
+	const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 
 	int iValue = GC.getGame().getSorenRandNum(kEvent.getAIValue(), "AI Event choice");
 	iValue += (getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, false) + getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, true)) / 2;
@@ -21654,28 +21654,26 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		iCityTurnValue += aiCommerceYields[COMMERCE_CULTURE] * 1;
 		iCityTurnValue += aiCommerceYields[COMMERCE_ESPIONAGE] * 2;
 
-		iValue += (iCityTurnValue * 20 * iGameSpeedPercent) / 100;
+		iValue += iCityTurnValue * 20 * iGameSpeedPercent / 100;
 
 		iValue += kEvent.getFood();
 		iValue += kEvent.getFoodPercent() / 4;
 		iValue += kEvent.getPopulationChange() * 30;
 		iValue -= kEvent.getRevoltTurns() * (12 + iCityPopulation * 16);
-		iValue -= (kEvent.getHurryAnger() * 6 * GC.getHURRY_ANGER_DIVISOR() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent()) / 100;
+		iValue -= kEvent.getHurryAnger() * 6 * GC.getHURRY_ANGER_DIVISOR() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
 		iValue += kEvent.getHappyTurns() * 10;
 		iValue += kEvent.getCulture() / 2;
 	}
 	else if (!kEvent.isOtherPlayerCityEffect())
 	{
-		int iPerTurnValue = 0;
-		iPerTurnValue += iNumCities * ((iHappy * 4) + (kEvent.getHappy() * 8));
-		iPerTurnValue += iNumCities * ((iHealth * 3) + (kEvent.getHealth() * 6));
+		const int iPerTurnValue = iNumCities * (iHappy * 4 + kEvent.getHappy() * 8 + iHealth * 3 + kEvent.getHealth() * 6);
 
-		iValue += (iPerTurnValue * 20 * iGameSpeedPercent) / 100;
+		iValue += iPerTurnValue * 20 * iGameSpeedPercent / 100;
 
 		iValue += (kEvent.getFood() * iNumCities);
 		iValue += (kEvent.getFoodPercent() * iNumCities) / 4;
 		iValue += (kEvent.getPopulationChange() * iNumCities * 40);
-		iValue -= (iNumCities * kEvent.getHurryAnger() * 6 * GC.getHURRY_ANGER_DIVISOR() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent()) / 100;
+		iValue -= iNumCities * kEvent.getHurryAnger() * 6 * GC.getHURRY_ANGER_DIVISOR() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
 		iValue += iNumCities * kEvent.getHappyTurns() * 10;
 		iValue += iNumCities * kEvent.getCulture() / 2;
 	}
@@ -30839,10 +30837,13 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	//end mod
 
 	//@MOD Commanders: control points promotion AI value
-	iTemp = kPromotion.getControlPoints();
-	if (iTemp != 0 && pUnit != NULL)
+	if (pUnit != NULL)
 	{
-		iValue += iTemp * (100 + 25 * pUnit->plot()->getNumUnits());
+		iTemp = kPromotion.getControlPoints();
+		if (iTemp != 0)
+		{
+			iValue += iTemp * (100 + 25 * pUnit->plot()->getNumUnits());
+		}
 	}
 	//end mod
 
