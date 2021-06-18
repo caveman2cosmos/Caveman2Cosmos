@@ -393,31 +393,44 @@ namespace Cy
 
 	namespace call_policy
 	{
+		template <typename T>
+		void registerAllowPyIntAsType()
+		{
+			python::converter::registry::push_back(&PyIntConverter::convertible, &PyIntConverter::fromPython<T>, python::type_id<T>());
+			python::converter::registry::insert(PyIntConverter::toPython, python::type_id<T>());
+			python::converter::registry::insert(ContainerConverter<std::vector<T> >::toPython, python::type_id<std::vector<T> >());
+		}
+
 		const struct PyIntConverter
 		{
-			template <typename T>
-			static void registerForType()
-			{
-				python::converter::registry::push_back(&convertible, &argFromPython<T>, python::type_id<T>());
-				python::converter::registry::insert(returnToPython, python::type_id<T>());
-			}
-
 			static void* convertible(PyObject* obj)
 			{
-				return PyInt_Check(obj) ? obj : NULL;
+				return PyInt_Check(obj) ? obj : nullptr;
 			}
 
 			template <typename T>
-			static void argFromPython(PyObject* obj, python::converter::rvalue_from_python_stage1_data* data)
+			static void fromPython(PyObject* obj, python::converter::rvalue_from_python_stage1_data* data)
 			{
 				void* const storage = reinterpret_cast<python::converter::rvalue_from_python_storage<int>*>(data)->storage.bytes;
 				new (storage) T(static_cast<T>(PyInt_AS_LONG(obj)));
 				data->convertible = storage;
 			}
 
-			static PyObject* returnToPython(const void* x)
+			static PyObject* toPython(const void* p)
 			{
-				return PyInt_FromLong(*(static_cast<const long*>(x)));
+				return PyInt_FromLong(*static_cast<const long*>(p));  
+			}
+		};
+
+		template <typename Container_T>
+		struct ContainerConverter
+		{
+			static PyObject* toPython(const void* p)
+			{
+				python::list l = python::list();
+				foreach_(const Container_T::value_type& i, *static_cast<const Container_T*>(p))
+					l += python::handle<>(PyInt_FromLong(static_cast<long>(i)));
+				return l.ptr();
 			}
 		};
 	}
