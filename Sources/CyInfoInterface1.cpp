@@ -481,6 +481,7 @@ void CyInfoPythonInterface1()
 		.def("getNumPopulationEmployed", &CvBuildingInfo::getNumPopulationEmployed, "int")
 
 		.def("isCommerceFlexible", &CvBuildingInfo::isCommerceFlexible, "bool (int i)")
+		.def("isCommerceChangeOriginalOwner", &CvBuildingInfo::isCommerceChangeOriginalOwner, "bool (int i)")
 		.def("isPrereqInCityBuilding", &CvBuildingInfo::isPrereqInCityBuilding, "bool (int i)")
 
 		.def("getBonusYieldModifier", &CvBuildingInfo::getBonusYieldModifier, "int (int i, int j)")
