@@ -26717,7 +26717,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_WRITING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>35</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
