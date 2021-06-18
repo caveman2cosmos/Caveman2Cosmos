@@ -1292,13 +1292,13 @@ class Pedia:
 			"""
 			
 			#Check if Commerce Change Double Time is on wonders and not on regular or -1 cost buildings
-			for iYield in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-				if CvBuildingInfo.getCommerceChangeDoubleTime(iYield) != 0 and not (isWorldWonder(i) or isNationalWonder(i) or  CvBuildingInfo.getHolyCity() != -1):
+			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and not (isWorldWonder(i) or isNationalWonder(i) or  CvBuildingInfo.getHolyCity() != -1):
 					print CvBuildingInfo.getType()+" has commerce change double time"
 					
 			#Check if CommerceChangeOriginalOwners is on buildings with flat commerce changes
-			for iYield in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-				if CvBuildingInfo.isCommerceChangeOriginalOwner(iYield) and CvBuildingInfo.getCommerceChange(iYield) == 0:
+			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+				if CvBuildingInfo.isCommerceChangeOriginalOwner(iCommerce) and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
 					print CvBuildingInfo.getType()+" has CommerceChangeOriginalOwners but no flat commerce change"
 
 			#Check if various tech modifications aren't earlier than building most advanced tech requirement or later than building obsoletion XGrid
