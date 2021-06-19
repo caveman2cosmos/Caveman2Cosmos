@@ -11597,11 +11597,12 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 
 			for (int iI = 0; iI < GC.getCivilizationInfo(getCivilizationType()).getNumCivilizationBuildings(); iI++)
 			{
+				pNewCapitalCity->setNumRealBuilding((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuilding(iI), 1);
+
 				if (pOldCapitalCity != NULL)
 				{
 					pOldCapitalCity->setNumRealBuilding((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuilding(iI), 0);
 				}
-				pNewCapitalCity->setNumRealBuilding((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuilding(iI), 1);
 			}
 		}
 		else  m_iCapitalCityID = FFreeList::INVALID_INDEX;
