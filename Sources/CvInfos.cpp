@@ -19252,7 +19252,6 @@ int CvProjectInfo::getVictoryMinThreshold(int i) const
 	{
 		return m_piVictoryMinThreshold[i];
 	}
-
 	return getVictoryThreshold(i);
 }
 
