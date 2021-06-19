@@ -13256,9 +13256,6 @@ m_iUnitGreatWorkPercent(0),
 m_iNumTurnIncrements(0),
 m_pGameTurnInfo(NULL),
 m_bEndDatesCalculated(false)
-//TB GameSpeed begin
-,m_iTraitGainPercent(0)
-//TB GameSpeed end
 {
 }
 
@@ -13384,13 +13381,6 @@ void CvGameSpeedInfo::allocateGameTurnInfos(int iSize)
 	m_pGameTurnInfo = new GameTurnInfo[iSize];
 }
 
-//TB GameSpeed begin
-int CvGameSpeedInfo::getTraitGainPercent() const
-{
-	return m_iTraitGainPercent;
-}
-//TB GameSpeed end
-
 int CvGameSpeedInfo::getPercent(int iID) const
 {
 	return m_Percent.getValue(iID);
@@ -13451,15 +13441,10 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 					break;
 				}
 			}
-
 			pXML->MoveToXmlParent();
 		}
-
 		pXML->MoveToXmlParent();
 	}
-
-	pXML->GetOptionalChildXmlValByName(&m_iTraitGainPercent, L"iTraitGainPercent");
-
 	m_Percent.read(pXML, L"Percents");
 
 	return true;
@@ -13498,9 +13483,6 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 			m_aIncrements[j] = pClassInfo->getDateIncrement(j);
 		}
 	}
-	//TB GameSpeed begin
-	if (getTraitGainPercent() == iDefault) m_iTraitGainPercent = pClassInfo->getTraitGainPercent();
-	//TB GameSpeed end
 
 	m_Percent.copyNonDefaults(pClassInfo->m_Percent);
 }
@@ -13529,11 +13511,6 @@ void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
 		CheckSum(iSum, m_pGameTurnInfo[j].iNumGameTurnsPerIncrement);
 		CheckSum(iSum, m_aIncrements[j].m_iIncrementDay);
 	}
-
-	//TB GameSpeed begin
-	CheckSum(iSum, m_iTraitGainPercent);
-	//TB GameSpeed end
-
 	CheckSumC(iSum, m_Percent);
 }
 

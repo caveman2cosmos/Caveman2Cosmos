@@ -104,10 +104,8 @@ void UnitCompWorker::setExtraBuild(BuildTypes eBuild, bool bNewValue)
 void UnitCompWorker::changeExtraWorkModForBuild(const BuildTypes eBuild, const short iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild)
-	if (iChange == 0)
-	{
-		return;
-	}
+	if (iChange == 0) return;
+
 	std::map<BuildTypes, short>::const_iterator itr = m_extraWorkModForBuild.find(eBuild);
 
 	if (itr == m_extraWorkModForBuild.end())
