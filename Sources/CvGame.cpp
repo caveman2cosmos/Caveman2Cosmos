@@ -119,6 +119,7 @@ void CvGame::init(HandicapTypes eHandicap)
 
 	m_mapRand.init(GC.getInitCore().getMapRandSeed() % 73637381);
 	m_sorenRand.init(GC.getInitCore().getSyncRandSeed() % 52319761);
+	logOOSSpecial(50, -1, -1, -1);
 
 	//--------------------------------
 	// Init non-saved data
@@ -348,6 +349,7 @@ void CvGame::init(HandicapTypes eHandicap)
 			makeSpecialBuildingValid((SpecialBuildingTypes)iI);
 		}
 	}
+	logOOSSpecial(100, -1, -1, -1);
 
 	for (int iI = MAX_PC_PLAYERS; iI < MAX_PLAYERS-1; iI++)
 	{
@@ -11770,8 +11772,8 @@ void CvGame::logOOSSpecial(int iLocID, int iVar, int iVar2, int iVar3)
 		TCHAR szFile[1024];
 		sprintf(szFile, "OOSSpecialLogger - Player %d - Set %d.log", getActivePlayer(), getGameTurn()/50);
 		TCHAR szOut[1024];
-		sprintf(szOut, "iLocID %d - iVar %d - iVar2 %d - iVar3 %d", iLocID, iVar, iVar2, iVar3);
-		gDLL->logMsg(szFile,szOut, false, false);
+		sprintf(szOut, "iLocID %d - iVar %d - iVar2 %d - iVar3 %d\n\tmapRand %d\n\tSorenRand %d", iLocID, iVar, iVar2, iVar3, getMapRand().getSeed(), getSorenRand().getSeed());
+		gDLL->logMsg(szFile, szOut, false, false);
 	}
 }
 

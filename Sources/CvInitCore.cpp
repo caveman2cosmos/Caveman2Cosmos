@@ -613,6 +613,7 @@ void CvInitCore::resetGame()
 void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType)
 {
 	OutputDebugString("Reseting Game with Source: Start");
+	GC.getGame().logOOSSpecial(11, (int)bClear, (int)bSaveGameType, -1);
 
 	FAssertMsg(pSource, "Passed null pointer to CvInitCore::resetGame");
 	FAssertMsg(!bClear || !bSaveGameType, "Should not be clearing data while trying to preserve gametype info in CvInitCore::resetGame");
@@ -678,6 +679,7 @@ void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType
 		setSyncRandSeed(pSource->getSyncRandSeed());
 		setMapRandSeed(pSource->getMapRandSeed());
 	}
+	GC.getGame().logOOSSpecial(12, -1, -1, -1);
 
 	OutputDebugString("Reseting Game with Source: End");
 }
@@ -688,6 +690,7 @@ void CvInitCore::resetPlayers()
 	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
 		resetPlayer((PlayerTypes)i);
+		GC.getGame().logOOSSpecial(13, i, -1, -1);
 	}
 	OutputDebugString("Reseting Players: End/n");
 }
@@ -697,6 +700,7 @@ void CvInitCore::resetPlayers(CvInitCore * pSource, bool bClear, bool bSaveSlotI
 	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
 		resetPlayer((PlayerTypes)i, pSource, bClear, bSaveSlotInfo);
+		GC.getGame().logOOSSpecial(14, i, -1, -1);
 	}
 }
 
@@ -811,6 +815,7 @@ void CvInitCore::resetPlayer(PlayerTypes eID, CvInitCore * pSource, bool bClear,
 
 CvWString CvInitCore::getMapScriptName() const
 {
+	GC.getGame().logOOSSpecial(15, -1, -1, -1);
 	if (gDLL->getTransferredMap())
 	{
 		if (!getWBMapScript())
