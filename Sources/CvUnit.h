@@ -1530,11 +1530,11 @@ public:
 	int getExtraHillsDefensePercent() const;
 	void changeExtraHillsDefensePercent(int iChange);
 
-	//WorkRateMod
-	//ls612: Work Rate Modifiers
+	// WorkRateMod
 	int getWorkModifier() const;
 	int hillsWorkModifier() const;
 	int peaksWorkModifier() const;
+	int getExtraWorkModForBuild(const BuildTypes eBuild) const;
 
 	int getCollateralDamageProtection() const;
 	void changeCollateralDamageProtection(int iChange);
@@ -1634,19 +1634,12 @@ public:
 	int getExtraFeatureDefensePercent(FeatureTypes eIndex) const;
 	void changeExtraFeatureDefensePercent(FeatureTypes eIndex, int iChange);
 
-	//ls612: Terrain Work Modifiers
-//Team Project (4)
-//WorkRateMod
 	int getTerrainWorkPercent(TerrainTypes eIndex) const;
-	//void changeTerrainWorkPercent (TerrainTypes eIndex, int iChange);
 	int getFeatureWorkPercent(FeatureTypes eIndex) const;
-	//void changeFeatureWorkPercent(FeatureTypes eIndex, int iChange);
 	int getExtraTerrainWorkPercent(TerrainTypes eIndex) const;
 	void changeExtraTerrainWorkPercent (TerrainTypes eIndex, int iChange);
 	int getExtraFeatureWorkPercent(FeatureTypes eIndex) const;
 	void changeExtraFeatureWorkPercent(FeatureTypes eIndex, int iChange);
-	int getExtraBuildWorkPercent(BuildTypes eIndex) const;
-	void changeExtraBuildWorkPercent(BuildTypes eIndex, int iChange);
 	int terrainWorkPercent(TerrainTypes eIndex) const;
 	int featureWorkPercent(FeatureTypes eIndex) const;
 	int buildWorkPercent(BuildTypes eIndex) const;
@@ -2135,8 +2128,6 @@ protected:
 	int* m_aiExtraVisibilityIntensityRange;
 	int* m_aiNegatesInvisibleCount;
 	int* m_aiExtraVisibilityIntensitySameTile;
-
-	std::map<short, short> m_extraBuildWorkPercent;
 
 	CvWString m_szName;
 	CvString m_szScriptData;

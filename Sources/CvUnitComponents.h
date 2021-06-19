@@ -48,12 +48,16 @@ public:
 	bool hasExtraBuild(const BuildTypes eBuild) const;
 	const std::vector<BuildTypes>& getExtraBuilds() const { return m_extraBuilds; }
 
+	void changeExtraWorkModForBuild(const BuildTypes eBuild, const short iChange);
+	int getExtraWorkModForBuild(const BuildTypes eBuild) const;
+
 private:
 	short m_iWorkModifier;
 	short m_iHillsWorkModifier;
 	short m_iPeaksWorkModifier;
 
 	std::vector<BuildTypes> m_extraBuilds;
+	std::map<BuildTypes, short> m_extraWorkModForBuild;
 };
 //------------------------------------------------------------------------------------------------------
 //  CLASS: X

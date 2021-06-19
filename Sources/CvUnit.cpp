@@ -19547,6 +19547,11 @@ int CvUnit::getWorkModifier() const
 	return m_worker != NULL ? m_worker->getWorkModifier() : 0;
 }
 
+int CvUnit::getExtraWorkModForBuild(const BuildTypes eBuild) const
+{
+	return m_worker != NULL ? m_worker->getExtraWorkModForBuild(eBuild) : 0;
+}
+
 
 int CvUnit::getCollateralDamageProtection() const
 {
@@ -20553,31 +20558,6 @@ void CvUnit::changeExtraFeatureWorkPercent(FeatureTypes eIndex, int iChange)
 	}
 }
 
-int CvUnit::getExtraBuildWorkPercent(BuildTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eIndex)
-
-	std::map<short, short>::const_iterator itr = m_extraBuildWorkPercent.find((short)eIndex);
-
-	return itr == m_extraBuildWorkPercent.end() ? 0 : itr->second;
-}
-
-void CvUnit::changeExtraBuildWorkPercent(BuildTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eIndex)
-
-	if (iChange != 0)
-	{
-		m_extraBuildWorkPercent[eIndex] += iChange;
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-		{
-			setSMBaseWorkRate();
-		}
-
-		setInfoBarDirty(true);
-	}
-}
-
 //get totals
 int CvUnit::terrainWorkPercent(TerrainTypes eIndex) const
 {
@@ -20605,7 +20585,7 @@ int CvUnit::buildWorkPercent(BuildTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eIndex)
 
-	return m_pUnitInfo->getBuildWorkRateModifierType(eIndex) + getExtraBuildWorkPercent(eIndex);
+	return m_pUnitInfo->getBuildWorkRateModifierType(eIndex) + getExtraWorkModForBuild(eIndex);
 }
 
 
@@ -22000,6 +21980,11 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 			m_worker->changeWorkModifier(kUnitCombat.getWorkRatePercent() * iChange);
 			bChanged = true;
 		}
+		for (int iI = 0; iI < kUnitCombat.getNumBuildWorkChangeModifiers(); iI++)
+		{
+			m_worker->changeExtraWorkModForBuild((BuildTypes)kUnitCombat.getBuildWorkChangeModifier(iI).eBuild, kUnitCombat.getBuildWorkChangeModifier(iI).iModifier * iChange);
+			bChanged = true;
+		}
 		if (bChanged) setInfoBarDirty(true);
 	}
 	changeRevoltProtection(kUnitCombat.getRevoltProtection() * iChange);// merge/split
@@ -22284,11 +22269,6 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	for (iI = 0; iI < kUnitCombat.getNumTerrainWorkChangeModifiers(); iI++)
 	{
 		changeExtraTerrainWorkPercent(((TerrainTypes)kUnitCombat.getTerrainWorkChangeModifier(iI).eTerrain), kUnitCombat.getTerrainWorkChangeModifier(iI).iModifier * iChange);
-	}
-
-	for (iI = 0; iI < kUnitCombat.getNumBuildWorkChangeModifiers(); iI++)
-	{
-		changeExtraBuildWorkPercent(((BuildTypes)kUnitCombat.getBuildWorkChangeModifier(iI).eBuild), kUnitCombat.getBuildWorkChangeModifier(iI).iModifier * iChange);
 	}
 
 	for (iI = 0; iI < kUnitCombat.getNumFeatureAttackChangeModifiers(); iI++)
@@ -22741,6 +22721,14 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 			m_worker->changeWorkModifier(kPromotion.getWorkRatePercent() * iChange);
 			bChanged = true;
 		}
+		for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+		{
+			if (kPromotion.getBuildWorkRateModifierChangeType(iI) != 0)
+			{
+				m_worker->changeExtraWorkModForBuild((BuildTypes)iI, kPromotion.getBuildWorkRateModifierChangeType(iI) * iChange);
+				bChanged = true;
+			}
+		}
 		if (bChanged) setInfoBarDirty(true);
 	}
 	changeRevoltProtection(kPromotion.getRevoltProtection() * iChange);
@@ -22851,10 +22839,9 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 		changeExtraTerrainAttackPercent(((TerrainTypes)iI), (kPromotion.getTerrainAttackPercent(iI) * iChange));
 		changeExtraTerrainDefensePercent(((TerrainTypes)iI), (kPromotion.getTerrainDefensePercent(iI) * iChange));
 
-		// ls612: WorkRateMod
-		//changeTerrainWorkPercent(((TerrainTypes)iI), (kPromotion.getTerrainWorkPercent(iI) * iChange));
 		changeExtraTerrainWorkPercent(((TerrainTypes)iI), (kPromotion.getTerrainWorkPercent(iI) * iChange));
 		changeExtraTerrainWorkPercent(((TerrainTypes)iI), (kPromotion.getTerrainWorkRateModifierChangeType(iI) * iChange));
+
 		changeTerrainDoubleMoveCount(((TerrainTypes)iI), ((kPromotion.getTerrainDoubleMove(iI)) ? iChange : 0));
 		changeExtraWithdrawOnTerrainType(((TerrainTypes)iI), (kPromotion.getWithdrawOnTerrainTypeChange(iI) * iChange));
 	}
@@ -22864,18 +22851,11 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 		changeExtraFeatureAttackPercent(((FeatureTypes)iI), (kPromotion.getFeatureAttackPercent(iI) * iChange));
 		changeExtraFeatureDefensePercent(((FeatureTypes)iI), (kPromotion.getFeatureDefensePercent(iI) * iChange));
 
-		// ls612: WorkRateMod
-		//changeFeatureWorkPercent(((FeatureTypes)iI), (kPromotion.getFeatureWorkPercent(iI) * iChange));
 		changeExtraFeatureWorkPercent(((FeatureTypes)iI), (kPromotion.getFeatureWorkPercent(iI) * iChange));
 		changeExtraFeatureWorkPercent(((FeatureTypes)iI), (kPromotion.getFeatureWorkRateModifierChangeType(iI) * iChange));
+
 		changeFeatureDoubleMoveCount(((FeatureTypes)iI), ((kPromotion.getFeatureDoubleMove(iI)) ? iChange : 0));
 		changeExtraWithdrawOnFeatureType(((FeatureTypes)iI), (kPromotion.getWithdrawOnFeatureTypeChange(iI) * iChange));
-	}
-
-	//WorkRateMod
-	for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
-	{
-		changeExtraBuildWorkPercent(((BuildTypes)iI), (kPromotion.getBuildWorkRateModifierChangeType(iI) * iChange));
 	}
 
 	for (iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
@@ -24431,14 +24411,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumBuildInfos(); iI++)
-	{
-		if ( g_paiTempExtraBuildWorkPercent[iI] != 0 )
-		{
-			m_extraBuildWorkPercent[iI] = (short)g_paiTempExtraBuildWorkPercent[iI];
-		}
-	}
-
 	int iExtraPeaksWorkPercent = 0;
 	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraPeaksWorkPercent, "m_iExtraPeaksWorkPercent");
 
@@ -24891,13 +24863,22 @@ void CvUnit::read(FDataStreamBase* pStream)
 	// Toffer - Maybe a unit without builds were given builds in xml since this game was saved?
 	//	If all builds are removed from a unit in xml since save, and the unit doesn't have extra builds from promotions,
 	//	then an uneeded worker component will be initialized for this unit, won't cause any real harm though.
-	if (bWorker || m_pUnitInfo->getNumBuilds() > 0)
+	if (/*bWorker ||*/ m_pUnitInfo->getNumBuilds() > 0)
 	{
 		m_worker = new UnitCompWorker();
 
 		m_worker->changeHillsWorkModifier(iExtraHillsWorkPercent + m_pUnitInfo->getHillsWorkModifier());
 		m_worker->changePeaksWorkModifier(iExtraPeaksWorkPercent + m_pUnitInfo->getPeaksWorkModifier());
 		m_worker->changeWorkModifier(iExtraWorkPercent);
+
+		// SAVEBREAK - Toffer - see storage method of m_unitProductionMod in CvCity.
+		for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+		{
+			if (g_paiTempExtraBuildWorkPercent[iI] != 0)
+			{
+				m_worker->changeExtraWorkModForBuild(static_cast<BuildTypes>(iI), (short)g_paiTempExtraBuildWorkPercent[iI]);
+			}
+		}
 	}
 
 	//Example of how to skip an outdated and unnecessary save element (at least for ints and bools)
@@ -25449,10 +25430,10 @@ void CvUnit::write(FDataStreamBase* pStream)
 	//	Use condensed format now - only save non-default array elements
 	for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
 	{
-		if ( getExtraBuildWorkPercent((BuildTypes)iI) != 0 )
+		if (getExtraWorkModForBuild((BuildTypes)iI) != 0)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasBuildInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraBuildWorkPercent((BuildTypes)iI), "extraBuildWorkPercent");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraWorkModForBuild((BuildTypes)iI), "extraBuildWorkPercent");
 		}
 	}
 	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getPeaksWorkModifier() - m_pUnitInfo->getPeaksWorkModifier() : 0), "m_iExtraPeaksWorkPercent");
