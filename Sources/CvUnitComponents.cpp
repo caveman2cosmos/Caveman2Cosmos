@@ -48,7 +48,10 @@ UnitCompWorker::UnitCompWorker()
 	m_iPeaksWorkModifier = 0;
 	m_iWorkModifier = 0;
 }
-UnitCompWorker::~UnitCompWorker() { }
+UnitCompWorker::~UnitCompWorker()
+{
+	m_extraBuilds.clear(); // Toffer - Not sure if this is needed, or even the correct way to free memory from vector...
+}
 
 UnitCompWorker::UnitCompWorker(CvUnitInfo* unitInfo) // Used when unit becomes commander
 {
@@ -70,6 +73,31 @@ void UnitCompWorker::changePeaksWorkModifier(const int iChange)
 void UnitCompWorker::changeWorkModifier(const int iChange)
 {
 	m_iWorkModifier += iChange;
+}
+
+bool UnitCompWorker::hasExtraBuild(const BuildTypes eBuild) const
+{
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild)
+	return find(m_extraBuilds.begin(), m_extraBuilds.end(), eBuild) != m_extraBuilds.end();
+}
+
+void UnitCompWorker::setExtraBuild(BuildTypes eBuild, bool bNewValue)
+{
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild)
+
+	std::vector<BuildTypes>::iterator itr = find(m_extraBuilds.begin(), m_extraBuilds.end(), eBuild);
+
+	if (bNewValue)
+	{
+		if (itr == m_extraBuilds.end())
+		{
+			m_extraBuilds.push_back(eBuild);
+		}
+	}
+	else if (itr != m_extraBuilds.end())
+	{
+		m_extraBuilds.erase(itr);
+	}
 }
 
 //------------------------------------------------------------------------------------------------------

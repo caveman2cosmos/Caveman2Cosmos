@@ -1803,7 +1803,6 @@ protected:
 	int m_iDCMBombRange;
 	int m_iDCMBombAccuracy;
 	int m_iHealUnitCombatCount;
-	std::vector<BuildTypes> m_aeExtraBuildTypes;
 
 	DomainTypes m_eNewDomainCargo;
 	SpecialUnitTypes m_eNewSpecialCargo;
@@ -2830,9 +2829,6 @@ public:
 	void processLoadedSpecialUnit(bool bChange, SpecialUnitTypes eSpecialUnit);
 
 	bool hasBuild(BuildTypes eBuild) const;
-	//bool isExtraBuild(BuildTypes eBuild) const;
-	//BuildTypes getExtraBuildType(int i) const;
-	//int getNumExtraBuildTypes() const;
 	void changeExtraBuildType(bool bChange, BuildTypes eBuild);
 
 	bool isExcile() const;

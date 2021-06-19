@@ -871,7 +871,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_szName.clear();
 	m_szScriptData = "";
 
-	m_aeExtraBuildTypes.clear();
 	m_aExtraAidChanges.clear();
 
 	if (!bConstructorCall)
@@ -12841,11 +12840,10 @@ namespace CvUnitInternal
 
 bool CvUnit::canBuildRoute() const
 {
-	if (!isWorker())
-		return false;
+	if (!isWorker()) return false;
 
 	const CvTeam& team = GET_TEAM(getTeam());
-	return CvUnitInternal::canBuildRoute(m_aeExtraBuildTypes, team)
+	return CvUnitInternal::canBuildRoute(m_worker->getExtraBuilds(), team)
 		|| CvUnitInternal::canBuildRoute(m_pUnitInfo->getBuilds(), team);
 }
 
@@ -24890,8 +24888,10 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 		m_commander->changeCommandRange(iExtraCommandRange + m_pUnitInfo->getCommandRange());
 	}
-	// SAVEBREAK - Toffer - "bWorker" will be enough when backward compatibility is removed.
-	if (/*bWorker ||*/ m_pUnitInfo->getNumBuilds() > 0)
+	// Toffer - Maybe a unit without builds were given builds in xml since this game was saved?
+	//	If all builds are removed from a unit in xml since save, and the unit doesn't have extra builds from promotions,
+	//	then an uneeded worker component will be initialized for this unit, won't cause any real harm though.
+	if (bWorker || m_pUnitInfo->getNumBuilds() > 0)
 	{
 		m_worker = new UnitCompWorker();
 
@@ -24912,15 +24912,15 @@ void CvUnit::read(FDataStreamBase* pStream)
 	//	Right now it's just characteristics that affect what a unit might
 	//	be able to move through that matter, so its unit class + certain promotions
 
-	m_aeExtraBuildTypes.clear();
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
-		if ( isHasPromotion((PromotionTypes)iI))
+		if (isHasPromotion((PromotionTypes)iI))
 		{
-			if (GC.getPromotionInfo((PromotionTypes)iI).changesMoveThroughPlots() )
+			if (GC.getPromotionInfo((PromotionTypes)iI).changesMoveThroughPlots())
 			{
 				m_movementCharacteristicsHash ^= GC.getPromotionInfo((PromotionTypes)iI).getZobristValue();
 			}
+			// Toffer - Perhaps just as well to not store this data in the save... Mandatory recalc for one variable.
 			for (int iJ = 0; iJ < GC.getPromotionInfo((PromotionTypes)iI).getNumAddsBuildTypes(); iJ++)
 			{
 				if ((BuildTypes)GC.getPromotionInfo((PromotionTypes)iI).getAddsBuildType(iJ) != NO_BUILD)
@@ -24933,12 +24933,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
-		if (isHasUnitCombat((UnitCombatTypes)iI))
+		if (isHasUnitCombat((UnitCombatTypes)iI) && GC.getUnitCombatInfo((UnitCombatTypes)iI).changesMoveThroughPlots())
 		{
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).changesMoveThroughPlots())
-			{
-				m_movementCharacteristicsHash ^= GC.getUnitCombatInfo((UnitCombatTypes)iI).getZobristValue();
-			}
+			m_movementCharacteristicsHash ^= GC.getUnitCombatInfo((UnitCombatTypes)iI).getZobristValue();
 		}
 	}
 }
@@ -39079,23 +39076,8 @@ void CvUnit::processLoadedSpecialUnit(bool bChange, SpecialUnitTypes eSpecialUni
 
 bool CvUnit::hasBuild(BuildTypes eBuild) const
 {
-	return m_pUnitInfo->hasBuild(eBuild) || algo::contains(m_aeExtraBuildTypes, eBuild);
+	return isWorker() && (m_pUnitInfo->hasBuild(eBuild) || m_worker->hasExtraBuild(eBuild));
 }
-
-//bool CvUnit::isExtraBuild(BuildTypes eBuild) const
-//{
-//	return algo::contains(m_aeExtraBuildTypes, eBuild);
-//}
-
-//BuildTypes CvUnit::getExtraBuildType(int i) const
-//{
-//	return m_aeExtraBuildTypes[i];
-//}
-
-//int CvUnit::getNumExtraBuildTypes() const
-//{
-//	return (int)m_aeExtraBuildTypes.size();
-//}
 
 void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 {
@@ -39107,13 +39089,13 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 			{
 				m_worker = new UnitCompWorker();
 			}
-			m_aeExtraBuildTypes.push_back(eBuild);
+			m_worker->setExtraBuild(eBuild, true);
 		}
-		else
+		else if (isWorker())
 		{
-			algo::remove(m_aeExtraBuildTypes, eBuild);
+			m_worker->setExtraBuild(eBuild, false);
 
-			if (m_aeExtraBuildTypes.size() == 0 && m_pUnitInfo->getNumBuilds() == 0 && isWorker())
+			if (m_pUnitInfo->getNumBuilds() == 0 && m_worker->getExtraBuilds().size() == 0)
 			{
 				delete m_worker;
 				m_worker = NULL;
