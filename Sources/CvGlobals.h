@@ -146,6 +146,7 @@ extern CvDLLUtilityIFaceBase* gDLL;
 
 class cvInternalGlobals : bst::noncopyable
 {
+	friend class CvGlobals;
 	friend class CvXMLLoadUtility;
 public:
 
@@ -155,6 +156,7 @@ public:
 	cvInternalGlobals();
 	virtual ~cvInternalGlobals();
 
+private:
 	void init();
 	void uninit();
 	void clearTypesMap();
@@ -165,15 +167,15 @@ public:
 	FMPIManager*& getFMPMgrPtr()	 					{ return m_pFMPMgr; }
 	CvPortal& getPortal() const 						{ return *m_portal; }
 	CvSetupData& getSetupData() const 					{ return *m_setupData; }
-	CvInitCore& getInitCore() const 					{ return *m_initCore; }
-	CvInitCore& getLoadedInitCore() const 				{ return *m_loadedInitCore; }
 	CvInitCore& getIniInitCore() const 					{ return *m_iniInitCore; }
 	CvMessageCodeTranslator& getMessageCodes() const 	{ return *m_messageCodes; }
 	CvStatsReporter& getStatsReporter() const 			{ return *m_statsReporter; }
 	CvStatsReporter* getStatsReporterPtr() const 		{ return m_statsReporter; }
 	CvInterface& getInterface() const 					{ return *m_interface; }
 	CvInterface* getInterfacePtr() const 				{ return m_interface; }
-
+public:
+	CvInitCore& getInitCore() const 					{ return *m_initCore; }
+	CvInitCore& getLoadedInitCore() const 				{ return *m_loadedInitCore; }
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
@@ -250,11 +252,13 @@ public:
 
 	// returns the infos index, use this when searching for an info type string
 	int getInfoTypeForString(const char* szType, bool hideAssert = false) const;
+protected:
 	void setInfoTypeFromString(const char* szType, int idx);
 	void logInfoTypeMap(const char* tagMsg = "");
 	void infoTypeFromStringReset();
-	void addToInfosVectors(void *infoVector);
 	void infosReset();
+public:
+	void addToInfoArrays(void* infos);
 	void cacheInfoTypes();
 	int getOrCreateInfoTypeForString(const char* szType);
 
@@ -380,7 +384,7 @@ public:
 	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const;
 
 	int getNumBonusInfos() const;
-	const std::vector<CvBonusInfo*>& getBonusInfos() const;
+	const CvInfoArray<CvBonusInfo>& getBonusInfos() const { return m_paBonusInfo; }
 	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const;
 
 	int getNumFeatureInfos() const;
@@ -492,7 +496,7 @@ public:
 private:
 	void registerUnitAI(const char* szType, int enumVal);
 	void registerMission(const char* szType, int enumVal);
-public:
+protected:
 	void registerUnitAIs();
 	void registerAIScales();
 	void registerGameObjects();
@@ -504,6 +508,7 @@ public:
 	void registerPropertyInteractions();
 	void registerPropertyPropagators();
 	void registerMissions();
+public:
 
 	CvInfoBase& getAttitudeInfo(AttitudeTypes eAttitudeNum) const;
 
@@ -760,18 +765,21 @@ public:
 
 	////////////// END DEFINES //////////////////
 
-	void setDLLProfiler(FProfiler* prof);
-	FProfiler* getDLLProfiler() const;
-	void enableDLLProfiler(bool bEnable);
-	bool isDLLProfilerEnabled() const;
-	const char* alternateProfileSampleName() const;
-
 	bool IsGraphicsInitialized() const;
 	void SetGraphicsInitialized(bool bVal);
 
-	//
-	// additional accessors for initting globals
-	//
+	bool isDLLProfilerEnabled() const;
+
+	uint32_t getAssetCheckSum() const;
+
+	void setIsBug();
+
+protected:
+	void setDLLProfiler(FProfiler* prof);
+	FProfiler* getDLLProfiler() const;
+	void enableDLLProfiler(bool bEnable);
+	const char* alternateProfileSampleName() const;
+
 	void setInterface(CvInterface* pVal);
 	void setDiplomacyScreen(CvDiplomacyScreen* pVal);
 	void setMPDiplomacyScreen(CMPDiplomacyScreen* pVal);
@@ -790,13 +798,9 @@ public:
 	void setBorderFinder(FAStar* pVal);
 	void setAreaFinder(FAStar* pVal);
 	void setPlotGroupFinder(FAStar* pVal);
-	void setIsBug();
-
-	uint32_t getAssetCheckSum() const;
 
 	void deleteInfoArrays();
 
-protected:
 	bool m_bGraphicsInitialized;
 	bool m_bDLLProfiler;
 	bool m_bLogging;
@@ -856,8 +860,6 @@ protected:
 	DirectionTypes* m_aeTurnRightDirection;	// [NUM_DIRECTION_TYPES];
 	DirectionTypes m_aaeXYDirection[DIRECTION_DIAMETER][DIRECTION_DIAMETER];
 
-	std::vector<CvInterfaceModeInfo*> m_paInterfaceModeInfo;
-
 	/***********************************************************************************************************************
 	Globals loaded from XML
 	************************************************************************************************************************/
@@ -904,7 +906,7 @@ protected:
 	// all type strings are upper case and are kept in this hash map for fast lookup, Moose
 	typedef stdext::hash_map<const char* /* type */, int /* info index */, SZStringHash> InfosMap;
 	InfosMap m_infosMap;
-	std::vector<std::vector<CvInfoBase *> *> m_aInfoVectors;
+	std::vector<CvInfoArray<CvInfoBase>*> m_aInfoArrays;
 
 	int m_iLastTypeID; // last generic type ID assigned (for type strings that do not have an assigned info class)
 
@@ -912,11 +914,12 @@ protected:
 	typedef std::map<int*,std::pair<CvString,CvString> > DelayedResolutionMap;
 	DelayedResolutionMap m_delayedResolutionMap;
 
+	std::vector<CvInterfaceModeInfo*> m_paInterfaceModeInfo;
 	CvInfoArray<CvColorInfo> m_paColorInfo;
 	CvInfoArray<CvPlayerColorInfo> m_paPlayerColorInfo;
-	std::vector<CvAdvisorInfo*> m_paAdvisorInfo;
-	std::vector<CvInfoBase*> m_paHints;
-	std::vector<CvMainMenuInfo*> m_paMainMenus;
+	CvInfoArray<CvAdvisorInfo> m_paAdvisorInfo;
+	CvInfoArray<CvInfoBase> m_paHints;
+	CvInfoArray<CvMainMenuInfo> m_paMainMenus;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
 /*                                                                                              */
@@ -930,136 +933,107 @@ protected:
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-	std::vector<CvTerrainInfo*> m_paTerrainInfo;
-	CvInfoReplacements<CvTerrainInfo> m_TerrainInfoReplacements;
-	std::vector<CvLandscapeInfo*> m_paLandscapeInfo;
+	CvInfoArray<CvTerrainInfo> m_paTerrainInfo;
+	CvInfoArray<CvLandscapeInfo> m_paLandscapeInfo;
 	int m_iActiveLandscapeID;
-	std::vector<CvWorldInfo*> m_paWorldInfo;
-	CvInfoReplacements<CvWorldInfo> m_WorldInfoReplacements;
-	std::vector<CvClimateInfo*> m_paClimateInfo;
-	std::vector<CvSeaLevelInfo*> m_paSeaLevelInfo;
-	std::vector<CvYieldInfo*> m_paYieldInfo;
-	std::vector<CvCommerceInfo*> m_paCommerceInfo;
-	std::vector<CvRouteInfo*> m_paRouteInfo;
-	CvInfoReplacements<CvRouteInfo> m_RouteInfoReplacements;
-	std::vector<CvFeatureInfo*> m_paFeatureInfo;
-	CvInfoReplacements<CvFeatureInfo> m_FeatureInfoReplacements;
-	std::vector<CvBonusClassInfo*> m_paBonusClassInfo;
-	CvInfoReplacements<CvBonusClassInfo> m_BonusClassInfoReplacements;
-	std::vector<CvBonusInfo*> m_paBonusInfo;
-	CvInfoReplacements<CvBonusInfo> m_BonusInfoReplacements;
-	std::vector<CvImprovementInfo*> m_paImprovementInfo;
-	CvInfoReplacements<CvImprovementInfo> m_ImprovementInfoReplacements;
-	std::vector<CvGoodyInfo*> m_paGoodyInfo;
-	std::vector<CvBuildInfo*> m_paBuildInfo;
-	CvInfoReplacements<CvBuildInfo> m_BuildInfoReplacements;
-	std::vector<CvHandicapInfo*> m_paHandicapInfo;
-	CvInfoReplacements<CvHandicapInfo> m_HandicapInfoReplacements;
-	std::vector<CvGameSpeedInfo*> m_paGameSpeedInfo;
-	CvInfoReplacements<CvGameSpeedInfo> m_GameSpeedInfoReplacements;
-	std::vector<CvTurnTimerInfo*> m_paTurnTimerInfo;
-	std::vector<CvCivilizationInfo*> m_paCivilizationInfo;
-	CvInfoReplacements<CvCivilizationInfo> m_CivilizationInfoReplacements;
+	CvInfoArray<CvWorldInfo> m_paWorldInfo;
+	CvInfoArray<CvClimateInfo> m_paClimateInfo;
+	CvInfoArray<CvSeaLevelInfo> m_paSeaLevelInfo;
+	CvInfoArray<CvYieldInfo> m_paYieldInfo;
+	CvInfoArray<CvCommerceInfo> m_paCommerceInfo;
+	CvInfoArray<CvRouteInfo> m_paRouteInfo;
+	CvInfoArray<CvFeatureInfo> m_paFeatureInfo;
+	CvInfoArray<CvBonusClassInfo> m_paBonusClassInfo;
+	CvInfoArray<CvBonusInfo> m_paBonusInfo;
+	CvInfoArray<CvImprovementInfo> m_paImprovementInfo;
+	CvInfoArray<CvGoodyInfo> m_paGoodyInfo;
+	CvInfoArray<CvBuildInfo> m_paBuildInfo;
+	CvInfoArray<CvHandicapInfo> m_paHandicapInfo;
+	CvInfoArray<CvGameSpeedInfo> m_paGameSpeedInfo;
+	CvInfoArray<CvTurnTimerInfo> m_paTurnTimerInfo;
+	CvInfoArray<CvCivilizationInfo> m_paCivilizationInfo;
 	int m_iNumPlayableCivilizationInfos;
 	int m_iNumAIPlayableCivilizationInfos;
-	std::vector<CvLeaderHeadInfo*> m_paLeaderHeadInfo;
-	CvInfoReplacements<CvLeaderHeadInfo> m_LeaderHeadInfoReplacements;
-	std::vector<CvTraitInfo*> m_paTraitInfo;
-	CvInfoReplacements<CvTraitInfo> m_TraitInfoReplacements;
-	std::vector<CvCursorInfo*> m_paCursorInfo;
-	std::vector<CvThroneRoomCamera*> m_paThroneRoomCamera;
-	std::vector<CvThroneRoomInfo*> m_paThroneRoomInfo;
-	std::vector<CvThroneRoomStyleInfo*> m_paThroneRoomStyleInfo;
-	std::vector<CvSlideShowInfo*> m_paSlideShowInfo;
-	std::vector<CvSlideShowRandomInfo*> m_paSlideShowRandomInfo;
-	std::vector<CvWorldPickerInfo*> m_paWorldPickerInfo;
-	std::vector<CvSpaceShipInfo*> m_paSpaceShipInfo;
-	std::vector<CvProcessInfo*> m_paProcessInfo;
-	CvInfoReplacements<CvProcessInfo> m_ProcessInfoReplacements;
-	std::vector<CvVoteInfo*> m_paVoteInfo;
-	std::vector<CvProjectInfo*> m_paProjectInfo;
-	CvInfoReplacements<CvProjectInfo> m_ProjectInfoReplacements;
-	std::vector<CvBuildingInfo*> m_paBuildingInfo;
-	CvInfoReplacements<CvBuildingInfo> m_BuildingInfoReplacements;
-	std::vector<CvSpecialBuildingInfo*> m_paSpecialBuildingInfo;
-	CvInfoReplacements<CvSpecialBuildingInfo> m_SpecialBuildingInfoReplacements;
-	std::vector<CvUnitInfo*> m_paUnitInfo;
-	CvInfoReplacements<CvUnitInfo> m_UnitInfoReplacements;
-	std::vector<CvSpawnInfo*> m_paSpawnInfo;
-	CvInfoReplacements<CvSpawnInfo> m_SpawnInfoReplacements;
-	std::vector<CvSpecialUnitInfo*> m_paSpecialUnitInfo;
-	std::vector<CvInfoBase*> m_paConceptInfo;
-	std::vector<CvInfoBase*> m_paNewConceptInfo;
-	std::vector<CvInfoBase*> m_paCityTabInfo;
-	std::vector<CvInfoBase*> m_paCalendarInfo;
-	std::vector<CvInfoBase*> m_paSeasonInfo;
-	std::vector<CvInfoBase*> m_paMonthInfo;
-	std::vector<CvInfoBase*> m_paDenialInfo;
-	std::vector<CvInvisibleInfo*> m_paInvisibleInfo;
-	std::vector<CvVoteSourceInfo*> m_paVoteSourceInfo;
-	std::vector<CvUnitCombatInfo*> m_paUnitCombatInfo;
-	std::vector<CvPromotionLineInfo*> m_paPromotionLineInfo;
-	std::vector<CvIdeaClassInfo*> m_paIdeaClassInfo;
-	std::vector<CvIdeaInfo*> m_paIdeaInfo;
-	std::vector<CvInfoBase*> m_paDomainInfo;
-	std::vector<CvInfoBase*> m_paUnitAIInfos;
-	std::vector<CvInfoBase*> m_paAttitudeInfos;
-	std::vector<CvInfoBase*> m_paMemoryInfos;
-	std::vector<CvInfoBase*> m_paFeatInfos;
-	std::vector<CvGameOptionInfo*> m_paGameOptionInfos;
-	std::vector<CvMPOptionInfo*> m_paMPOptionInfos;
-	std::vector<CvForceControlInfo*> m_paForceControlInfos;
-	std::vector<CvPlayerOptionInfo*> m_paPlayerOptionInfos;
-	std::vector<CvGraphicOptionInfo*> m_paGraphicOptionInfos;
-	std::vector<CvSpecialistInfo*> m_paSpecialistInfo;
-	CvInfoReplacements<CvSpecialistInfo> m_SpecialistInfoReplacements;
-	std::vector<CvEmphasizeInfo*> m_paEmphasizeInfo;
-	std::vector<CvUpkeepInfo*> m_paUpkeepInfo;
-	std::vector<CvCultureLevelInfo*> m_paCultureLevelInfo;
-	CvInfoReplacements<CvCultureLevelInfo> m_CultureLevelInfoReplacements;
-	std::vector<CvReligionInfo*> m_paReligionInfo;
-	CvInfoReplacements<CvReligionInfo> m_ReligionInfoReplacements;
-	std::vector<CvCorporationInfo*> m_paCorporationInfo;
-	CvInfoReplacements<CvCorporationInfo> m_CorporationInfoReplacements;
-	std::vector<CvActionInfo*> m_paActionInfo;
-	std::vector<CvMissionInfo*> m_paMissionInfo;
-	std::vector<CvControlInfo*> m_paControlInfo;
-	std::vector<CvCommandInfo*> m_paCommandInfo;
-	std::vector<CvAutomateInfo*> m_paAutomateInfo;
-	std::vector<CvPromotionInfo*> m_paPromotionInfo;
-	CvInfoReplacements<CvPromotionInfo> m_PromotionInfoReplacements;
-	std::vector<CvTechInfo*> m_paTechInfo;
-	CvInfoReplacements<CvTechInfo> m_TechInfoReplacements;
-	std::vector<CvCivicOptionInfo*> m_paCivicOptionInfo;
-	std::vector<CvCivicInfo*> m_paCivicInfo;
-	CvInfoReplacements<CvCivicInfo> m_CivicInfoReplacements;
+	CvInfoArray<CvLeaderHeadInfo> m_paLeaderHeadInfo;
+	CvInfoArray<CvTraitInfo> m_paTraitInfo;
+	CvInfoArray<CvCursorInfo> m_paCursorInfo;
+	CvInfoArray<CvThroneRoomCamera> m_paThroneRoomCamera;
+	CvInfoArray<CvThroneRoomInfo> m_paThroneRoomInfo;
+	CvInfoArray<CvThroneRoomStyleInfo> m_paThroneRoomStyleInfo;
+	CvInfoArray<CvSlideShowInfo> m_paSlideShowInfo;
+	CvInfoArray<CvSlideShowRandomInfo> m_paSlideShowRandomInfo;
+	CvInfoArray<CvWorldPickerInfo> m_paWorldPickerInfo;
+	CvInfoArray<CvSpaceShipInfo> m_paSpaceShipInfo;
+	CvInfoArray<CvProcessInfo> m_paProcessInfo;
+	CvInfoArray<CvVoteInfo> m_paVoteInfo;
+	CvInfoArray<CvProjectInfo> m_paProjectInfo;
+	CvInfoArray<CvBuildingInfo> m_paBuildingInfo;
+	CvInfoArray<CvSpecialBuildingInfo> m_paSpecialBuildingInfo;
+	CvInfoArray<CvUnitInfo> m_paUnitInfo;
+	CvInfoArray<CvSpawnInfo> m_paSpawnInfo;
+	CvInfoArray<CvSpecialUnitInfo> m_paSpecialUnitInfo;
+	CvInfoArray<CvInfoBase> m_paConceptInfo;
+	CvInfoArray<CvInfoBase> m_paNewConceptInfo;
+	CvInfoArray<CvInfoBase> m_paCityTabInfo;
+	CvInfoArray<CvInfoBase> m_paCalendarInfo;
+	CvInfoArray<CvInfoBase> m_paSeasonInfo;
+	CvInfoArray<CvInfoBase> m_paMonthInfo;
+	CvInfoArray<CvInfoBase> m_paDenialInfo;
+	CvInfoArray<CvInvisibleInfo> m_paInvisibleInfo;
+	CvInfoArray<CvVoteSourceInfo> m_paVoteSourceInfo;
+	CvInfoArray<CvUnitCombatInfo> m_paUnitCombatInfo;
+	CvInfoArray<CvPromotionLineInfo> m_paPromotionLineInfo;
+	CvInfoArray<CvIdeaClassInfo> m_paIdeaClassInfo;
+	CvInfoArray<CvIdeaInfo> m_paIdeaInfo;
+	CvInfoArray<CvInfoBase> m_paDomainInfo;
+	CvInfoArray<CvInfoBase> m_paUnitAIInfos;
+	CvInfoArray<CvInfoBase> m_paAttitudeInfos;
+	CvInfoArray<CvInfoBase> m_paMemoryInfos;
+	CvInfoArray<CvInfoBase> m_paFeatInfos;
+	CvInfoArray<CvGameOptionInfo> m_paGameOptionInfos;
+	CvInfoArray<CvMPOptionInfo> m_paMPOptionInfos;
+	CvInfoArray<CvForceControlInfo> m_paForceControlInfos;
+	CvInfoArray<CvPlayerOptionInfo> m_paPlayerOptionInfos;
+	CvInfoArray<CvGraphicOptionInfo> m_paGraphicOptionInfos;
+	CvInfoArray<CvSpecialistInfo> m_paSpecialistInfo;
+	CvInfoArray<CvEmphasizeInfo> m_paEmphasizeInfo;
+	CvInfoArray<CvUpkeepInfo> m_paUpkeepInfo;
+	CvInfoArray<CvCultureLevelInfo> m_paCultureLevelInfo;
+	CvInfoArray<CvReligionInfo> m_paReligionInfo;
+	CvInfoArray<CvCorporationInfo> m_paCorporationInfo;
+	CvInfoArray<CvActionInfo> m_paActionInfo;
+	CvInfoArray<CvMissionInfo> m_paMissionInfo;
+	CvInfoArray<CvControlInfo> m_paControlInfo;
+	CvInfoArray<CvCommandInfo> m_paCommandInfo;
+	CvInfoArray<CvAutomateInfo> m_paAutomateInfo;
+	CvInfoArray<CvPromotionInfo> m_paPromotionInfo;
+	CvInfoArray<CvTechInfo> m_paTechInfo;
+	CvInfoArray<CvCivicOptionInfo> m_paCivicOptionInfo;
+	CvInfoArray<CvCivicInfo> m_paCivicInfo;
 	std::vector<CvDiplomacyInfo*> m_paDiplomacyInfo;
-	std::vector<CvEraInfo*> m_aEraInfo;	// [NUM_ERA_TYPES];
-	CvInfoReplacements<CvEraInfo> m_EraInfoReplacements;
-	std::vector<CvHurryInfo*> m_paHurryInfo;
-	std::vector<CvVictoryInfo*> m_paVictoryInfo;
-	std::vector<CvRouteModelInfo*> m_paRouteModelInfo;
-	std::vector<CvRiverModelInfo*> m_paRiverModelInfo;
-	std::vector<CvWaterPlaneInfo*> m_paWaterPlaneInfo;
-	std::vector<CvTerrainPlaneInfo*> m_paTerrainPlaneInfo;
-	std::vector<CvCameraOverlayInfo*> m_paCameraOverlayInfo;
-	std::vector<CvAnimationPathInfo*> m_paAnimationPathInfo;
-	std::vector<CvAnimationCategoryInfo*> m_paAnimationCategoryInfo;
-	std::vector<CvEntityEventInfo*> m_paEntityEventInfo;
-	std::vector<CvUnitFormationInfo*> m_paUnitFormationInfo;
-	std::vector<CvEffectInfo*> m_paEffectInfo;
-	std::vector<CvAttachableInfo*> m_paAttachableInfo;
-	std::vector<CvQuestInfo*> m_paQuestInfo;
-	std::vector<CvTutorialInfo*> m_paTutorialInfo;
-	std::vector<CvEventTriggerInfo*> m_paEventTriggerInfo;
-	CvInfoReplacements<CvEventTriggerInfo> m_EventTriggerInfoReplacements;
-	std::vector<CvEventInfo*> m_paEventInfo;
-	CvInfoReplacements<CvEventInfo> m_EventInfoReplacements;
-	std::vector<CvEspionageMissionInfo*> m_paEspionageMissionInfo;
-	std::vector<CvUnitArtStyleTypeInfo*> m_paUnitArtStyleTypeInfo;
-	std::vector<CvPropertyInfo*> m_paPropertyInfo;
-	std::vector<CvOutcomeInfo*> m_paOutcomeInfo;
-	std::vector<CvMapInfo*> m_paMapInfo;
+	CvInfoArray<CvEraInfo> m_aEraInfo;	// [NUM_ERA_TYPES];
+	CvInfoArray<CvHurryInfo> m_paHurryInfo;
+	CvInfoArray<CvVictoryInfo> m_paVictoryInfo;
+	CvInfoArray<CvRouteModelInfo> m_paRouteModelInfo;
+	CvInfoArray<CvRiverModelInfo> m_paRiverModelInfo;
+	CvInfoArray<CvWaterPlaneInfo> m_paWaterPlaneInfo;
+	CvInfoArray<CvTerrainPlaneInfo> m_paTerrainPlaneInfo;
+	CvInfoArray<CvCameraOverlayInfo> m_paCameraOverlayInfo;
+	CvInfoArray<CvAnimationPathInfo> m_paAnimationPathInfo;
+	CvInfoArray<CvAnimationCategoryInfo> m_paAnimationCategoryInfo;
+	CvInfoArray<CvEntityEventInfo> m_paEntityEventInfo;
+	CvInfoArray<CvUnitFormationInfo> m_paUnitFormationInfo;
+	CvInfoArray<CvEffectInfo> m_paEffectInfo;
+	CvInfoArray<CvAttachableInfo> m_paAttachableInfo;
+	CvInfoArray<CvQuestInfo> m_paQuestInfo;
+	CvInfoArray<CvTutorialInfo> m_paTutorialInfo;
+	CvInfoArray<CvEventTriggerInfo> m_paEventTriggerInfo;
+	CvInfoArray<CvEventInfo> m_paEventInfo;
+	CvInfoArray<CvEspionageMissionInfo> m_paEspionageMissionInfo;
+	CvInfoArray<CvUnitArtStyleTypeInfo> m_paUnitArtStyleTypeInfo;
+	CvInfoArray<CvPropertyInfo> m_paPropertyInfo;
+	CvInfoArray<CvOutcomeInfo> m_paOutcomeInfo;
+	CvInfoArray<CvMapInfo> m_paMapInfo;
 
 	//////////////////////////////////////////////////////////////////////////
 	// GLOBAL TYPES

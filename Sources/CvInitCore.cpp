@@ -156,7 +156,6 @@ void CvInitCore::reset(GameMode eMode)
 	{
 		setDefaults();
 	}
-	CvXMLLoadUtility::RemoveTGAFiller();
 	OutputDebugString("Reseting InitCore: End\n");
 }
 
