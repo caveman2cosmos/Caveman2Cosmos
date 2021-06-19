@@ -4992,7 +4992,7 @@ void CvTeam::changeVictoryCountdown(VictoryTypes eIndex, int iChange)
 int CvTeam::getVictoryDelay(VictoryTypes eVictory) const
 {
 	const int iDelay = GC.getGame().victoryDelay(eVictory);
-	if (iDelay < 1) return 0;
+	if (iDelay < 1) return iDelay;
 
 	int iExtraDelayPercent = 0;
 	for (int iProject = 0; iProject < GC.getNumProjectInfos(); ++iProject)
@@ -5007,12 +5007,13 @@ int CvTeam::getVictoryDelay(VictoryTypes eVictory) const
 
 		const int iCount = getProjectCount((ProjectTypes)iProject);
 
+		// Toffer - Only increase the delay from this.
 		if (iCount >= iMinThreshold && iCount < victoryThreshold)
 		{
 			iExtraDelayPercent += (victoryThreshold - iCount) * kProject.getVictoryDelayPercent() / victoryThreshold;
 		}
 	}
-	return GC.getGame().victoryDelay(eVictory) * (100 + iExtraDelayPercent) / 100;
+	return iDelay * (100 + iExtraDelayPercent) / 100;
 }
 
 void CvTeam::setCanLaunch(VictoryTypes eVictory, bool bCan)
