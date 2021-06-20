@@ -1622,20 +1622,10 @@ int CvBuildingInfo::getTechOutbreakLevelChange(int iTech) const
 	return 0;
 }
 
-//int CvBuildingInfo::getNumTechHappinessChanges() const
-//{
-//	return (int)m_aTechHappinessChanges.size();
-//}
-
 int CvBuildingInfo::getTechHappiness(TechTypes eTech) const
 {
 	return m_aTechHappinessChanges.getValue(eTech);
 }
-
-//int CvBuildingInfo::getNumTechHealthChanges() const
-//{
-//	return m_aTechHealthChanges.size();
-//}
 
 int CvBuildingInfo::getTechHealth(TechTypes eTech) const
 {
