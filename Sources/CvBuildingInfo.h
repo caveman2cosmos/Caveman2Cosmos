@@ -234,7 +234,7 @@ public:
 	const python::list cyGetPrereqAndTechs() const;
 
 	const IDValueMap<BuildingTypes, int>& getBuildingHappinessChanges() const { return m_aBuildingHappinessChanges; }
-	int getBuildingHappinessChanges(BuildingTypes e) const;
+	//int getBuildingHappinessChanges(BuildingTypes e) const;
 
 	int getFlavorValue(int i) const;
 	int getImprovementFreeSpecialist(int i) const;
