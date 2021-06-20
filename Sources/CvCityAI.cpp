@@ -5119,13 +5119,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						iValue += (-iGlobalWarWearinessModifer * iHappyModifier) / 16;
 					}
 
-					for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+					foreach_(const BuildingModifier2& pair, kBuilding.getBuildingHappinessChanges())
 					{
-						const int iBuildingHappinessChanges = kBuilding.getBuildingHappinessChanges(iI);
-						if (iBuildingHappinessChanges != 0)
-						{
-							iValue += (iBuildingHappinessChanges * (kOwner.getBuildingCount((BuildingTypes)iI) - getNumRealBuilding((BuildingTypes)iI)) * 8);
-						}
+						iValue += (pair.second * (kOwner.getBuildingCount(pair.first) - getNumRealBuilding(pair.first)) * 8);
 					}
 
 					if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
@@ -14685,7 +14681,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		|| kBuilding.getGlobalWarWearinessModifier() < 0
 		|| kBuilding.getCommerceHappiness(NO_COMMERCE) > 0
 		|| kBuilding.getBonusHappinessChanges(NO_BONUS) > 0
-		|| kBuilding.getBuildingHappinessChanges(NO_BUILDING) > 0
+		|| !kBuilding.getBuildingHappinessChanges().empty()
 		|| GET_PLAYER(getOwner()).getExtraBuildingHappiness(eBuilding) > 0)
 		{
 			return true;
@@ -15377,13 +15373,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					iValue -= iGlobalWarWearinessModifer * iHappyModifier / 16;
 				}
 
-				for (int iI = 0; iI < iNumBuildings; iI++)
+				foreach_(const BuildingModifier2& pair, kBuilding.getBuildingHappinessChanges())
 				{
-					const int iBuildingHappinessChanges = kBuilding.getBuildingHappinessChanges(iI);
-					if (iBuildingHappinessChanges != 0)
-					{
-						iValue += (iBuildingHappinessChanges * (kOwner.getBuildingCount((BuildingTypes)iI) - getNumRealBuilding((BuildingTypes)iI)) * 8);
-					}
+					iValue += (pair.second * (kOwner.getBuildingCount(pair.first) - getNumRealBuilding(pair.first)) * 8);
 				}
 
 				if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))

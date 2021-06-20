@@ -233,14 +233,16 @@ public:
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
 	const python::list cyGetPrereqAndTechs() const;
 
-	int getBuildingHappinessChanges(int i) const;
-	int getPrereqNumOfBuilding(int i) const;
+	const IDValueMap<BuildingTypes, int>& getBuildingHappinessChanges() const { return m_aBuildingHappinessChanges; }
+	int getBuildingHappinessChanges(BuildingTypes e) const;
 
 	int getFlavorValue(int i) const;
 	int getImprovementFreeSpecialist(int i) const;
 
 	bool isCommerceFlexible(int i) const;
 	bool isCommerceChangeOriginalOwner(int i) const;
+
+	int getPrereqNumOfBuilding(int i) const;
 
 	int getPrereqOrBuilding(const int i) const;
 	short getNumPrereqOrBuilding() const;
@@ -613,6 +615,7 @@ private:
 	int* m_piBuildingProductionModifier;
 	int* m_piGlobalBuildingProductionModifier;
 	int* m_piGlobalBuildingCostModifier;
+	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;
 	int* m_piBuildingHappinessChanges;
 	int* m_piPrereqNumOfBuilding;
 

@@ -192,7 +192,6 @@ m_piBonusProductionModifier(NULL),
 m_piUnitCombatFreeExperience(NULL),
 m_piDomainFreeExperience(NULL),
 m_piDomainProductionModifier(NULL),
-m_piBuildingHappinessChanges(NULL),
 m_piPrereqNumOfBuilding(NULL),
 m_piFlavorValue(NULL),
 m_piImprovementFreeSpecialist(NULL),
@@ -358,7 +357,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piUnitCombatFreeExperience);
 	SAFE_DELETE_ARRAY(m_piDomainFreeExperience);
 	SAFE_DELETE_ARRAY(m_piDomainProductionModifier);
-	SAFE_DELETE_ARRAY(m_piBuildingHappinessChanges);
 	SAFE_DELETE_ARRAY(m_piPrereqNumOfBuilding);
 	SAFE_DELETE_ARRAY(m_piFlavorValue);
 	SAFE_DELETE_ARRAY(m_piImprovementFreeSpecialist);
@@ -745,15 +743,10 @@ const python::list CvBuildingInfo::cyGetPrereqAndTechs() const
 	return Cy::makeList(m_piPrereqAndTechs);
 }
 
-int CvBuildingInfo::getBuildingHappinessChanges(int i) const
+int CvBuildingInfo::getBuildingHappinessChanges(BuildingTypes e) const
 {
-	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
-
-	if (i == NO_BUILDING)
-	{
-		return m_piBuildingHappinessChanges ? 1 : 0;
-	}
-	return m_piBuildingHappinessChanges ? m_piBuildingHappinessChanges[i] : 0;
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), e)
+	return m_aBuildingHappinessChanges.getValue(e);
 }
 
 int CvBuildingInfo::getPrereqNumOfBuilding(int i) const
@@ -1976,6 +1969,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, NUM_DOMAIN_TYPES, m_piDomainFreeExperience);
 	CheckSumI(iSum, NUM_DOMAIN_TYPES, m_piDomainProductionModifier);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piBuildingHappinessChanges);
+	CheckSumC(iSum, m_aBuildingHappinessChanges);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piPrereqNumOfBuilding);
 	CheckSumI(iSum, GC.getNumFlavorTypes(), m_piFlavorValue);
 	CheckSumI(iSum, GC.getNumImprovementInfos(), m_piImprovementFreeSpecialist);
@@ -3720,6 +3714,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_piVictoryThreshold, L"VictoryThresholds",  GC.getNumVictoryInfos());
 
+	m_aBuildingHappinessChanges.readWithDelayedResolution(pXML, L"BuildingHappinessChanges");
+
 	return true;
 }
 
@@ -3775,8 +3771,6 @@ bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
 
 		pXML->MoveToXmlParent();
 	}
-
-	pXML->SetVariableListTagPair(&m_piBuildingHappinessChanges, L"BuildingHappinessChanges",  GC.getNumBuildingInfos());
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ProductionContinueBuilding");
 	m_iProductionContinueBuilding = pXML->GetInfoClass(szTextVal);
@@ -5102,6 +5096,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			m_piVictoryThreshold[i] = pClassInfo->getVictoryThreshold(i);
 		}
 	}
+	m_aBuildingHappinessChanges.copyNonDefaultDelayedResolution(pClassInfo->getBuildingHappinessChanges());
 }
 
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
@@ -5135,25 +5130,6 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	else if (bOver)
 	{
 		SAFE_DELETE_ARRAY(m_piPrereqNumOfBuilding);
-	}
-
-	if (pClassInfo->m_piBuildingHappinessChanges != NULL)
-	{
-		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
-		{
-			if (bOver || getBuildingHappinessChanges(j) == iDefault && pClassInfo->getBuildingHappinessChanges(j) != iDefault)
-			{
-				if (m_piBuildingHappinessChanges == NULL)
-				{
-					CvXMLLoadUtility::InitList(&m_piBuildingHappinessChanges,GC.getNumBuildingInfos(),iDefault);
-				}
-				m_piBuildingHappinessChanges[j] = pClassInfo->getBuildingHappinessChanges(j);
-			}
-		}
-	}
-	else if (bOver)
-	{
-		SAFE_DELETE_ARRAY(m_piBuildingHappinessChanges);
 	}
 
 	for (int j = 0; j < GC.getNumBuildingInfos(); j++)
