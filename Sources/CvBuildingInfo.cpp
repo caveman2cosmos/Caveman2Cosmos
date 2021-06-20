@@ -431,6 +431,8 @@ CvBuildingInfo::~CvBuildingInfo()
 	{
 		GC.removeDelayedResolution((int*)&(m_vReplacementBuilding[i]));
 	}
+
+	m_aBuildingHappinessChanges.removeDelayedResolution();
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
@@ -1968,7 +1970,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatFreeExperience);
 	CheckSumI(iSum, NUM_DOMAIN_TYPES, m_piDomainFreeExperience);
 	CheckSumI(iSum, NUM_DOMAIN_TYPES, m_piDomainProductionModifier);
-	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piBuildingHappinessChanges);
 	CheckSumC(iSum, m_aBuildingHappinessChanges);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piPrereqNumOfBuilding);
 	CheckSumI(iSum, GC.getNumFlavorTypes(), m_piFlavorValue);
