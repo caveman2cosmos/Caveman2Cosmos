@@ -11597,11 +11597,12 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 
 			for (int iI = 0; iI < GC.getCivilizationInfo(getCivilizationType()).getNumCivilizationBuildings(); iI++)
 			{
+				pNewCapitalCity->setNumRealBuilding((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuilding(iI), 1);
+
 				if (pOldCapitalCity != NULL)
 				{
 					pOldCapitalCity->setNumRealBuilding((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuilding(iI), 0);
 				}
-				pNewCapitalCity->setNumRealBuilding((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuilding(iI), 1);
 			}
 		}
 		else  m_iCapitalCityID = FFreeList::INVALID_INDEX;
@@ -30296,7 +30297,7 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 		iY--;
 		iY = std::max(1, iY);
 	}
-	return iPromoThreshold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTraitGainPercent() / 100;
+	return iPromoThreshold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 25;
 }
 
 int64_t CvPlayer::getLeaderLevelupCultureToEarn() const

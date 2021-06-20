@@ -3860,10 +3860,6 @@ public:
 
 	int getPercent(int iID) const;
 
-	//TB GameSpeed begin
-	int getTraitGainPercent() const;
-	//TB GameSpeed end
-
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvGameSpeedInfo* pClassInfo);
 	void getCheckSum(unsigned int& iSum) const;
@@ -3892,9 +3888,6 @@ protected:
 	GameTurnInfo* m_pGameTurnInfo;
 	std::vector<CvDateIncrement> m_aIncrements;
 	bool m_bEndDatesCalculated;
-	//TB GameSpeed begin
-	int m_iTraitGainPercent;
-	//TB GameSpeed end
 
 	IDValueMapPercent m_Percent;
 };

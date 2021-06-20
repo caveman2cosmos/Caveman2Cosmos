@@ -3115,7 +3115,7 @@ class CvMainInterface:
 				if CyCity.isHasCorporation(i):
 					n = 0
 					while True:
-						iPrereq = GC.getCorporationInfo(i).getPrereqBonus(n)
+						iPrereq = GC.getCorporationInfo(i).getPrereqBonuses(n)
 						if iPrereq > -1:
 							if iPrereq == iBonus:
 								szRightBuffer += u'%c' %(GC.getCorporationInfo(i).getChar())

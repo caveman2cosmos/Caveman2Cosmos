@@ -447,11 +447,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
@@ -1665,11 +1660,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>100</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_HIT_SINGLES</BonusType>
@@ -7394,11 +7384,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -10565,11 +10550,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -10597,11 +10577,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
@@ -12659,11 +12634,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_BUDDHISM</ReligionType>
@@ -12792,11 +12762,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_BUDDHISM</ReligionType>
@@ -13851,12 +13816,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
@@ -15297,11 +15256,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>100</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>7</iAsset>
 			<Flavors>
@@ -15396,11 +15350,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iDefense>50</iDefense>
 			<iBombardDefense>20</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -17594,11 +17543,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
@@ -17669,11 +17613,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
@@ -17847,11 +17786,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
@@ -18295,11 +18229,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
@@ -20136,11 +20065,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_FUR</BonusType>
@@ -20989,11 +20913,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
@@ -21049,11 +20968,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -22446,11 +22360,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -22576,11 +22485,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -22901,11 +22805,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -25085,11 +24984,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
@@ -26823,7 +26717,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_WRITING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>35</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -27376,11 +27270,6 @@
 				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>100</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_CALCULATORS</BonusType>
@@ -30096,11 +29985,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>1000</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_ALCOHOL</BonusType>
@@ -32127,11 +32011,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
@@ -35000,11 +34879,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -36544,11 +36418,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<iAsset>4</iAsset>
@@ -37453,11 +37322,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_HELLENISM</ReligionType>
@@ -37586,11 +37450,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_HELLENISM</ReligionType>
@@ -38544,11 +38403,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_HINDUISM</ReligionType>
@@ -38602,11 +38456,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_HINDUISM</ReligionType>
@@ -38751,11 +38600,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -39487,11 +39331,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>100</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
@@ -41355,12 +41194,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
@@ -41836,11 +41669,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ISLAM</ReligionType>
@@ -41981,11 +41809,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ISLAM</ReligionType>
@@ -42249,11 +42072,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -42753,11 +42571,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_JUDAISM</ReligionType>
@@ -42898,11 +42711,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_JUDAISM</ReligionType>
@@ -42962,11 +42770,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
@@ -44094,11 +43897,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -45386,11 +45184,6 @@
 				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_POETRY</PrereqTech>
@@ -45742,9 +45535,6 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_TOBACCO</BonusType>
@@ -46097,11 +45887,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_PHONOGRAPHS</BonusType>
@@ -46826,11 +46611,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -48275,11 +48055,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -50687,11 +50462,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
@@ -53157,11 +52927,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -53206,11 +52971,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iWarWearinessModifier>-25</iWarWearinessModifier>
 			<iAsset>3</iAsset>
@@ -53251,11 +53011,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COFFEE</BonusType>
@@ -53559,11 +53314,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>100</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
@@ -53695,11 +53445,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>100</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_OSTRICH_FEATHERS</BonusType>
@@ -53931,11 +53676,6 @@
 				<iCommerce>5</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>100</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>200</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
@@ -56088,11 +55828,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
@@ -56920,11 +56655,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_DYE</BonusType>
@@ -58669,11 +58399,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iHealthPercentPerPopulation>25</iHealthPercentPerPopulation>
 			<iMaintenanceModifier>30</iMaintenanceModifier>
 			<iAsset>5</iAsset>
@@ -59265,11 +58990,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>4</iAsset>
 			<Flavors>
@@ -62292,11 +62012,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -62517,11 +62232,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_FUR</BonusType>
@@ -63174,11 +62884,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>1000</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
@@ -63736,11 +63441,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>100</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -63777,11 +63477,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -65288,11 +64983,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_HIT_MOVIES</BonusType>
@@ -67229,11 +66919,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -67704,11 +67389,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -67807,11 +67487,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_HEMP</BonusType>
@@ -68882,11 +68557,6 @@
 				<iCommerce>3</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -69212,11 +68882,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
@@ -69297,11 +68962,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_SCULPTURES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_3D_PRINTING</PrereqTech>
@@ -69867,11 +69527,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
@@ -71386,11 +71041,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -72307,11 +71957,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -72541,11 +72186,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -73432,11 +73072,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_TOYS</BonusType>
@@ -74288,11 +73923,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -75826,11 +75456,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_TOYS</BonusType>
@@ -76576,11 +76201,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_TAOISM</ReligionType>
@@ -76711,11 +76331,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_TAOISM</ReligionType>
@@ -77823,11 +77438,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_KEMETISM</ReligionType>
@@ -77879,11 +77489,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_KEMETISM</ReligionType>
@@ -77998,11 +77603,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
@@ -78125,11 +77725,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -78549,11 +78144,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
@@ -79510,11 +79100,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
@@ -79879,11 +79464,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_TOYS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -81184,11 +80764,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
@@ -81251,11 +80826,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>5</iAsset>
 			<Flavors>
 				<Flavor>
@@ -81290,11 +80860,6 @@
 				<iCommerce>25</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
@@ -81881,11 +81446,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -82380,11 +81940,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>100</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<CommerceHappinesses>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -82513,11 +82068,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -83233,11 +82783,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>100</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_HIT_SINGLES</BonusType>
@@ -84804,11 +84349,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_COFFEE</BonusType>
@@ -85615,11 +85155,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
@@ -85749,11 +85284,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
@@ -86517,11 +86047,6 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>168</iCost>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
