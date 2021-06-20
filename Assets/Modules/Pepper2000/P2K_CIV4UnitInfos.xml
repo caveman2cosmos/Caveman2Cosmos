@@ -9355,6 +9355,7 @@
 			</UnitAIs>
 			<Builds>
 				<BuildType>BUILD_LUNAR_PATH</BuildType>
+				<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
 				<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
 				<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
 				<BuildType>BUILD_LUNAR_MINE</BuildType>
