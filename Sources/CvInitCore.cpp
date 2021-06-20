@@ -370,6 +370,7 @@ PlayerTypes CvInitCore::getAvailableSlot()
 
 void CvInitCore::reassignPlayer(PlayerTypes eOldID, PlayerTypes eNewID)
 {
+	GC.getGame().logOOSSpecial(13, (int)eOldID, (int)eNewID, -1);
 	/* Toffer - Not really much point in not allowing empty slots inbetween taken slots.
 	//	This is called by the exe upon creating a new game to give players a lower player slot index if one is available.
 	FASSERT_BOUNDS(0, 0, eOldID);
@@ -690,7 +691,6 @@ void CvInitCore::resetPlayers()
 	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
 		resetPlayer((PlayerTypes)i);
-		GC.getGame().logOOSSpecial(13, i, -1, -1);
 	}
 	OutputDebugString("Reseting Players: End/n");
 }
@@ -1200,6 +1200,7 @@ void CvInitCore::setType(GameType eType)
 		{
 			for (int i = 0; i < MAX_PC_PLAYERS; i++)
 			{
+				GC.getGame().logOOSSpecial(16, i, -1, -1);
 				GET_PLAYER((PlayerTypes)i).updateHuman();
 			}
 		}
@@ -1233,6 +1234,7 @@ void CvInitCore::setMode(GameMode eMode)
 		{
 			for (int i = 0; i < MAX_PC_PLAYERS; i++)
 			{
+				GC.getGame().logOOSSpecial(17, i, -1, -1);
 				GET_PLAYER((PlayerTypes)i).updateHuman();
 			}
 		}
@@ -1439,6 +1441,7 @@ void CvInitCore::setTeam(PlayerTypes eID, TeamTypes eTeam)
 
 		if(CvPlayerAI::areStaticsInitialized())
 		{
+			GC.getGame().logOOSSpecial(18, (int)eID, (int)eTeam, -1);
 			GET_PLAYER(eID).updateTeamType();
 		}
 	}
