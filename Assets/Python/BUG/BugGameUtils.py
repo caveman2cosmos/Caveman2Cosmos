@@ -150,8 +150,7 @@ class Dispatcher:
 				self._createCallback(name, BugUtil.bindFunction(self._baseUtils, name), None, self._log)
 
 		# setup defaults
-		self._setDefault("updateColoredPlots", False)
-		self._setDefault("canPickPlot", True)
+		#self._setDefault("updateColoredPlots", False) # Toffer - Left one example.
 
 	def _createCallback(self, name, func, default=None, log=None):
 		if log is None:

@@ -18369,6 +18369,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Modo Ataque aéreo</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_DOTMAP</Tag>
+		<English>Dot map mode</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_DOTMAP_HELP</Tag>
+		<English>[ICON_BULLET]Resize: Shift+X</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_REBASE</Tag>
 		<English>Rebase Mode</English>
 		<French>Réaffecter</French>

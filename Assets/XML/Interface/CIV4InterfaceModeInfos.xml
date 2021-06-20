@@ -352,9 +352,9 @@
 			<Button>,Art/Interface/Buttons/Actions/Rebase.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,6</Button>
 		</InterfaceModeInfo>
 		<InterfaceModeInfo>
-			<Type>INTERFACEMODE_PYTHON_PICK_PLOT</Type>
-			<Description></Description>
-			<Help/>
+			<Type>INTERFACEMODE_DOTMAP</Type>
+			<Description>TXT_KEY_INTERFACEMODE_DOTMAP</Description>
+			<Help>TXT_KEY_INTERFACEMODE_DOTMAP_HELP</Help>
 			<CursorType>CURSOR_PING</CursorType>
 			<Mission>NONE</Mission>
 			<bVisible>0</bVisible>
