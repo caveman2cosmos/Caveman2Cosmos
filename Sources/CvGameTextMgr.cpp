@@ -26450,19 +26450,20 @@ void CvGameTextMgr::setReligionHelp(CvWStringBuffer &szBuffer, ReligionTypes eRe
 	{
 		szBuffer.append(CvWString::format(SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), religion.getDescription()));
 	}
-
 	setCommerceChangeHelp(szBuffer, gDLL->getText("TXT_KEY_RELIGION_HOLY_CITY").c_str(), L": ", L"", religion.getHolyCityCommerceArray());
 	setCommerceChangeHelp(szBuffer, gDLL->getText("TXT_KEY_RELIGION_ALL_CITIES").c_str(), L": ", L"", religion.getStateReligionCommerceArray());
 
-	if (!bCivilopedia)
+	if (religion.getTechPrereq() != NO_TECH)
 	{
-		if (religion.getTechPrereq() != NO_TECH)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_RELIGION_FOUNDED_FIRST", GC.getTechInfo((TechTypes)religion.getTechPrereq()).getTextKeyWide()));
-		}
+		szBuffer.append(NEWLINE);
+		szBuffer.append(
+			gDLL->getText(
+				"TXT_KEY_RELIGION_FOUNDED_FIRST",
+				CvWString(GC.getTechInfo((TechTypes)religion.getTechPrereq()).getType()).GetCString(),
+				GC.getTechInfo((TechTypes)religion.getTechPrereq()).getTextKeyWide()
+			)
+		);
 	}
-
 	const UnitTypes eFreeUnit = (UnitTypes) religion.getFreeUnit();
 
 	if (eFreeUnit != NO_UNIT)
