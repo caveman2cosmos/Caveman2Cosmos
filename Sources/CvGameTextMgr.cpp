@@ -23319,19 +23319,16 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		iLast = 0;
 
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+		foreach_(const BuildingModifier2& pair, kBuilding.getBuildingHappinessChanges())
 		{
-			if (kBuilding.getBuildingHappinessChanges(iI) != 0)
-			{
-				// Use absolute value with unhappy face
-				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_HAPPINESS_CHANGE", abs(kBuilding.getBuildingHappinessChanges(iI)),
-					((kBuilding.getBuildingHappinessChanges(iI) > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))).c_str());
+			// Use absolute value with unhappy face
+			szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_HAPPINESS_CHANGE", abs(pair.second),
+				(pair.second > 0 ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))).c_str());
 
-				CvWString szBuilding;
-				szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iI).getDescription());
-				setListHelp(szBuffer, szTempBuffer, szBuilding, L", ", (kBuilding.getBuildingHappinessChanges(iI) != iLast));
-				iLast = kBuilding.getBuildingHappinessChanges(iI);
-			}
+			CvWString szBuilding;
+			szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(pair.first).getType()).GetCString(), GC.getBuildingInfo(pair.first).getDescription());
+			setListHelp(szBuffer, szTempBuffer, szBuilding, L", ", (pair.second != iLast));
+			iLast = pair.second;
 		}
 	}
 

@@ -9220,16 +9220,9 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	addGoodOrBad(getBuildingHappyChange(eBuilding), iGood, iBad);
 
 	// Other Building
-	if (kBuilding.getBuildingHappinessChanges(NO_BUILDING) != 0)
+	foreach_(const BuildingModifier2& pair, kBuilding.getBuildingHappinessChanges())
 	{
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			const int iBuildingHappinessChanges = kBuilding.getBuildingHappinessChanges(iI);
-			if (iBuildingHappinessChanges != 0)
-			{
-				addGoodOrBad(iBuildingHappinessChanges * (getNumActiveBuilding((BuildingTypes)iI) + (eBuilding == (BuildingTypes)iI ? 1 : 0)), iGood, iBad);
-			}
-		}
+		addGoodOrBad(pair.second * (getNumActiveBuilding(pair.first) + (eBuilding == pair.first ? 1 : 0)), iGood, iBad);
 	}
 
 	// Player Building
