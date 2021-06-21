@@ -34,6 +34,9 @@ import BugUtil, NaturalWonders
 class MapConstants:
 	def __init__(self):
 		print "Initializing MapConstants"
+		GAME = CyGlobalContext().getGame()
+		print "Random number 0-999 = " + str(GAME.getSorenRandNum(1000, "0-999"))
+		print "Random number 0-999 = " + str(GAME.getSorenRandNum(1000, "0-999"))
 		# Percentage of land squares to be Hills.
 		self.HillPercent = 0.26
 
@@ -374,6 +377,10 @@ class MapConstants:
 			self.optionsString += "Allow New World = True\n"
 		else:
 			self.optionsString += "Allow New World = False\n"
+
+		GAME = CyGlobalContext().getGame()
+		print "Random number 0-999 = " + str(GAME.getSorenRandNum(1000, "0-999"))
+		print "Random number 0-999 = " + str(GAME.getSorenRandNum(1000, "0-999"))
 
 
 	def AdaptToGameOptions(self):
