@@ -60,6 +60,12 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 	xRes = SR.x
 	yRes = SR.y
 
+	# Enforce certain structure
+	szTxt = szTxt.replace("\n</color>", "</color>\n")
+	# Remove whitespace at the very end.
+	while szTxt[-1:] in ("\n", "\r", "\t", " "):
+		szTxt = szTxt[:-1]
+
 	# Remove font literals
 	i1 = szTxt.find("<font=")
 	if i1 > -1:
