@@ -8982,7 +8982,7 @@ void CvGame::logDebugMsg(char* format, ...)
 
 		static char buf[2048];
 		_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
-		gDLL->logMsg(szOut, buf);
+		gDLL->logMsg(szOut, buf, false, false);
 	}
 }
 
