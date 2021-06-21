@@ -483,9 +483,12 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 		*/
 	}
+	logOOSSpecial(101, -1, -1, -1);
 	AI_init();
+	logOOSSpecial(102, -1, -1, -1);
 
 	doUpdateCacheOnTurn();
+	logOOSSpecial(103, -1, -1, -1);
 }
 
 //
@@ -494,6 +497,7 @@ void CvGame::init(HandicapTypes eHandicap)
 void CvGame::setInitialItems()
 {
 	PROFILE_FUNC();
+	logOOSSpecial(110, -1, -1, -1);
 
 	initFreeState();
 	assignStartingPlots();
@@ -503,6 +507,7 @@ void CvGame::setInitialItems()
 		Cy::call("CvCultureLinkInterface", "assignCulturallyLinkedStarts");
 	}
 	normalizeStartingPlots();
+	logOOSSpecial(111, -1, -1, -1);
 
 	// BarbarianWorld
 	if (!isOption(GAMEOPTION_NO_BARBARIANS) && isOption(GAMEOPTION_BARBARIAN_WORLD))
@@ -539,6 +544,7 @@ void CvGame::setInitialItems()
 		addLandmarkSigns();
 		updateInitialSigns();
 	}
+	logOOSSpecial(120, -1, -1, -1);
 }
 
 

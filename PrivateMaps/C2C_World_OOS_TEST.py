@@ -3968,11 +3968,10 @@ mo = MapOptions()
 
 def getNumCustomMapOptions():
 	if mo.bfirstRun:
-		print "Preparing World Map Script"
-		GC = CyGlobalContext()
-		GAME = GC.getGame()
-		print "Random number 0-99 = " + str(GAME.getSorenRandNum(100, "0-99"))
-		print "Random number 0-99 = " + str(GAME.getSorenRandNum(100, "0-99"))
+		print "\nPreparing World Map Script"
+		GAME = CyGlobalContext().getGame()
+		print "Random number 0-999 = " + str(GAME.getSorenRandNum(1000, "0-999"))
+		print "Random number 0-999 = " + str(GAME.getSorenRandNum(1000, "0-999"))
 		mo.loadMapOptionDefaults()
 	return 8
 
@@ -4239,18 +4238,15 @@ def getWrapY():
 
 
 def beforeGeneration():
-	print "", "Preparing World map script generation"
-	GC = CyGlobalContext()
-	GAME = GC.getGame()
-	print "Random number 0-99 = " + str(GAME.getSorenRandNum(100, "0-99"))
-	print "Random number 0-99 = " + str(GAME.getSorenRandNum(100, "0-99"))
+	print "\nPreparing World map script generation"
+	GAME = CyGlobalContext().getGame()
+	print "Random number 0-999 = " + str(GAME.getSorenRandNum(1000, "0-999"))
+	print "Random number 0-999 = " + str(GAME.getSorenRandNum(1000, "0-999"))
 	global mc
 	if mc is None:
 		print "Initializing World map script"
 		mc = MapConstants()
 		mc.initInGameOptions()
-		print "Random number 0-99 = " + str(GAME.getSorenRandNum(100, "0-99"))
-		print "Random number 0-99 = " + str(GAME.getSorenRandNum(100, "0-99"))
 	mc.AdaptToGameOptions()
 	PySeed()
 
@@ -4259,9 +4255,6 @@ def generatePlotTypes():
 	timer0 = BugUtil.Timer('World Generation')
 	GC = CyGlobalContext()
 	GAME = GC.getGame()
-	print "generatePlotTypes()"
-	print "Random number 0-99 = " + str(GAME.getSorenRandNum(100, "0-99"))
-	print "Random number 0-99 = " + str(GAME.getSorenRandNum(100, "0-99"))
 	global em, cm, tm, lm, rm, pb
 	pb = PangaeaBreaker()
 	print "Generate Elevation Map"
@@ -4328,6 +4321,7 @@ def generateTerrainTypes():
 	print "\n", "Generating Terrain Types"
 	timer = BugUtil.Timer('Generate Terrain Types')
 
+	GC = CyGlobalContext()
 	terrDesert		= GC.getInfoTypeForString("TERRAIN_DESERT")
 	terrSaltFlats	= GC.getInfoTypeForString("TERRAIN_SALT_FLATS")
 	terrDunes		= GC.getInfoTypeForString("TERRAIN_DUNES")
@@ -4457,6 +4451,7 @@ def addLakes():
 def addFeatures():
 	print "\n", "Generating Feature Types"
 	timer = BugUtil.Timer('Generate Feature Types')
+	GC = CyGlobalContext()
 	MAP = GC.getMap()
 	mapRand = GC.getGame().getMapRand()
 	bGoodyHuts = True

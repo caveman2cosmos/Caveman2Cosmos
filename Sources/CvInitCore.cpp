@@ -815,14 +815,10 @@ void CvInitCore::resetPlayer(PlayerTypes eID, CvInitCore * pSource, bool bClear,
 
 CvWString CvInitCore::getMapScriptName() const
 {
-	GC.getGame().logOOSSpecial(15, -1, -1, -1);
-	if (gDLL->getTransferredMap())
+	if (gDLL->getTransferredMap() && !getWBMapScript())
 	{
-		if (!getWBMapScript())
-		{
-			// If it's a transferred Python file, we have to hack in the transferred extension
-			return ( m_szMapScriptName + CvWString(MAP_TRANSFER_EXT) );
-		}
+		// If it's a transferred Python file, we have to hack in the transferred extension
+		return m_szMapScriptName + CvWString(MAP_TRANSFER_EXT);
 	}
 	return m_szMapScriptName;
 }
