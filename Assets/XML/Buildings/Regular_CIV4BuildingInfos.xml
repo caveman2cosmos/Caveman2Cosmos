@@ -8086,6 +8086,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BREEDING_BEAVER</BuildingType>
+			</ReplacementBuildings>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9395,6 +9398,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
+			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -11423,7 +11429,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<VicinityBonus>BONUS_RABBIT</VicinityBonus>
+			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
@@ -11612,7 +11618,7 @@
 			<bRiver>1</bRiver>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_SHRIMP</VicinityBonus>
+				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -11897,7 +11903,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<VicinityBonus>BONUS_CRAB</VicinityBonus>
+			<VicinityBonus>BONUS_CORN</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -12017,7 +12023,7 @@
 			<bWater>1</bWater>
 			<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_CLAM</VicinityBonus>
+				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -12128,7 +12134,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<VicinityBonus>BONUS_DEER</VicinityBonus>
+			<VicinityBonus>BONUS_HORSE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -17334,6 +17340,9 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_PELTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BREEDING_CHINCHILLA</BuildingType>
+			</ReplacementBuildings>
 			<TechHappinessChanges>
 				<TechHappinessChange>
 					<PrereqTech>TECH_ECOLOGY</PrereqTech>
@@ -32190,6 +32199,9 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_PELTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BREEDING_FOX</BuildingType>
+			</ReplacementBuildings>
 			<TechHappinessChanges>
 				<TechHappinessChange>
 					<PrereqTech>TECH_ECOLOGY</PrereqTech>
@@ -51866,6 +51878,9 @@
 					<iHappiness>-1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BREEDING_MINK</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
 			</PrereqInCityBuildings>
@@ -54857,7 +54872,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
-			<ObsoleteTech>TECH_POULTRY_DOMESTICATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>15</iCost>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -64133,6 +64148,9 @@
 					<iHappiness>-1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BREEDING_RABBIT</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
 			</PrereqInCityBuildings>
@@ -64168,6 +64186,9 @@
 					<iHappiness>-1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BREEDING_RACCOON</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
 			</PrereqInCityBuildings>
@@ -69056,6 +69077,9 @@
 					<iHappiness>-1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BREEDING_SEA_OTTER</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
 			</PrereqInCityBuildings>
