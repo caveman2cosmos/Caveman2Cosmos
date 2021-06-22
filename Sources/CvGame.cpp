@@ -119,7 +119,6 @@ void CvGame::init(HandicapTypes eHandicap)
 
 	m_mapRand.init(GC.getInitCore().getMapRandSeed() % 73637381);
 	m_sorenRand.init(GC.getInitCore().getSyncRandSeed() % 52319761);
-	logOOSSpecial(50, -1, -1, -1);
 
 	//--------------------------------
 	// Init non-saved data
@@ -483,12 +482,10 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 		*/
 	}
-	logOOSSpecial(101, -1, -1, -1);
+	logOOSSpecial(200, -1, -1, -1);
 	AI_init();
-	logOOSSpecial(102, -1, -1, -1);
 
 	doUpdateCacheOnTurn();
-	logOOSSpecial(103, -1, -1, -1);
 }
 
 //
@@ -497,7 +494,6 @@ void CvGame::init(HandicapTypes eHandicap)
 void CvGame::setInitialItems()
 {
 	PROFILE_FUNC();
-	logOOSSpecial(110, -1, -1, -1);
 
 	initFreeState();
 	assignStartingPlots();
@@ -507,7 +503,6 @@ void CvGame::setInitialItems()
 		Cy::call("CvCultureLinkInterface", "assignCulturallyLinkedStarts");
 	}
 	normalizeStartingPlots();
-	logOOSSpecial(111, -1, -1, -1);
 
 	// BarbarianWorld
 	if (!isOption(GAMEOPTION_NO_BARBARIANS) && isOption(GAMEOPTION_BARBARIAN_WORLD))
@@ -544,7 +539,6 @@ void CvGame::setInitialItems()
 		addLandmarkSigns();
 		updateInitialSigns();
 	}
-	logOOSSpecial(120, -1, -1, -1);
 }
 
 
@@ -8989,6 +8983,7 @@ void CvGame::logDebugMsg(char* format, ...)
 
 void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive)
 {
+	logOOSSpecial(101, (int)eNewPlayer, (int)eLeader, (eCiv));
 	// Reset names for recycled player slot
 	CvWString szEmptyString = L"";
 	const LeaderHeadTypes eOldLeader = GET_PLAYER(eNewPlayer).getLeaderType();
@@ -9046,6 +9041,7 @@ void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, Civiliza
 	GC.getInitCore().setSlotStatus(eNewPlayer, SS_COMPUTER);
 	GC.getInitCore().setColor(eNewPlayer, eColor);
 	GET_PLAYER(eNewPlayer).initInGame(eNewPlayer, bSetAlive);
+	logOOSSpecial(110, (int)eNewPlayer, (int)eLeader, (eCiv));
 }
 
 void CvGame::changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman )

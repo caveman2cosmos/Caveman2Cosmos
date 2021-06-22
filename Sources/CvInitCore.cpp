@@ -370,7 +370,6 @@ PlayerTypes CvInitCore::getAvailableSlot()
 
 void CvInitCore::reassignPlayer(PlayerTypes eOldID, PlayerTypes eNewID)
 {
-	GC.getGame().logOOSSpecial(13, (int)eOldID, (int)eNewID, -1);
 	/* Toffer - Not really much point in not allowing empty slots inbetween taken slots.
 	//	This is called by the exe upon creating a new game to give players a lower player slot index if one is available.
 	FASSERT_BOUNDS(0, 0, eOldID);
@@ -614,7 +613,6 @@ void CvInitCore::resetGame()
 void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType)
 {
 	OutputDebugString("Reseting Game with Source: Start");
-	GC.getGame().logOOSSpecial(11, (int)bClear, (int)bSaveGameType, -1);
 
 	FAssertMsg(pSource, "Passed null pointer to CvInitCore::resetGame");
 	FAssertMsg(!bClear || !bSaveGameType, "Should not be clearing data while trying to preserve gametype info in CvInitCore::resetGame");
@@ -680,7 +678,6 @@ void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType
 		setSyncRandSeed(pSource->getSyncRandSeed());
 		setMapRandSeed(pSource->getMapRandSeed());
 	}
-	GC.getGame().logOOSSpecial(12, -1, -1, -1);
 
 	OutputDebugString("Reseting Game with Source: End");
 }
@@ -700,7 +697,6 @@ void CvInitCore::resetPlayers(CvInitCore * pSource, bool bClear, bool bSaveSlotI
 	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
 		resetPlayer((PlayerTypes)i, pSource, bClear, bSaveSlotInfo);
-		GC.getGame().logOOSSpecial(14, i, -1, -1);
 	}
 }
 
@@ -1196,7 +1192,6 @@ void CvInitCore::setType(GameType eType)
 		{
 			for (int i = 0; i < MAX_PC_PLAYERS; i++)
 			{
-				GC.getGame().logOOSSpecial(16, i, -1, -1);
 				GET_PLAYER((PlayerTypes)i).updateHuman();
 			}
 		}
@@ -1226,11 +1221,10 @@ void CvInitCore::setMode(GameMode eMode)
 	{
 		m_eMode = eMode;
 
-		if(CvPlayerAI::areStaticsInitialized())
+		if (CvPlayerAI::areStaticsInitialized())
 		{
 			for (int i = 0; i < MAX_PC_PLAYERS; i++)
 			{
-				GC.getGame().logOOSSpecial(17, i, -1, -1);
 				GET_PLAYER((PlayerTypes)i).updateHuman();
 			}
 		}
@@ -1433,13 +1427,15 @@ void CvInitCore::setTeam(PlayerTypes eID, TeamTypes eTeam)
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eID);
 	if (getTeam(eID) != eTeam)
 	{
+		GC.getGame().logOOSSpecial(121, (int)eID, (int)eTeam, -1);
 		m_aeTeam[eID] = eTeam;
 
-		if(CvPlayerAI::areStaticsInitialized())
+		if (CvPlayerAI::areStaticsInitialized())
 		{
-			GC.getGame().logOOSSpecial(18, (int)eID, (int)eTeam, -1);
+			GC.getGame().logOOSSpecial(122, (int)eID, (int)eTeam, -1);
 			GET_PLAYER(eID).updateTeamType();
 		}
+		GC.getGame().logOOSSpecial(123, (int)eID, (int)eTeam, -1);
 	}
 }
 
