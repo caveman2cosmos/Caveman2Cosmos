@@ -7504,7 +7504,8 @@ void CvGame::testVictory()
 {
 	PROFILE_FUNC();
 
-	if (getVictory() != NO_VICTORY || getGameState() == GAMESTATE_EXTENDED || !Cy::call<bool>(PYGameModule, "isVictoryTest"))
+	if (getVictory() != NO_VICTORY || getGameState() == GAMESTATE_EXTENDED
+	|| getElapsedGameTurns() <= GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 10)
 	{
 		return;
 	}

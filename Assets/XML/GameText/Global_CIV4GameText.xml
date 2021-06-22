@@ -18369,6 +18369,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Modo Ataque aéreo</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_DOTMAP</Tag>
+		<English>Dot map mode</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACEMODE_DOTMAP_HELP</Tag>
+		<English>[ICON_BULLET]Resize: Shift+X</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_REBASE</Tag>
 		<English>Rebase Mode</English>
 		<French>Réaffecter</French>
@@ -28538,7 +28546,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_FOUNDED_FIRST</Tag>
-		<English>[ICON_BULLET]Founded by First to Discover [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Founded by First to Discover [LINK=%s1]%s2[\LINK]</English>
 		<French>[ICON_BULLET]Religion fondée par le premier à découvrir : [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Durch den ersten Entdecker der Technologie [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] gegründet</German>
 		<Italian>[ICON_BULLET]Fondato dalla prima civilità che scopre [NUM1:il:la:i:le] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Italian>

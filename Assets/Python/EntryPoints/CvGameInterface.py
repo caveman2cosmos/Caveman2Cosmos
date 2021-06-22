@@ -12,12 +12,6 @@ import BugGameUtils
 
 GameUtils = BugGameUtils.getDispatcher()
 
-def isVictoryTest():
-	return GameUtils.isVictoryTest()
-
-def updateColoredPlots():
-	return GameUtils.updateColoredPlots()
-
 def canBuild(argsList):
 	return GameUtils.canBuild(argsList)
 
@@ -35,9 +29,6 @@ def doPillageGold(argsList):
 
 def doCityCaptureGold(argsList):
 	return GameUtils.doCityCaptureGold(argsList)
-
-def canPickPlot(argsList):
-	return GameUtils.canPickPlot(argsList)
 
 # Called by exe
 def getWidgetHelp(argsList):

@@ -132,6 +132,11 @@ struct IDValueMap
 		return false;
 	}
 
+	bool empty() const
+	{
+		return m_map.empty();
+	}
+
 	const python::list makeList() const
 	{
 		python::list list = python::list();
@@ -153,6 +158,7 @@ protected:
 	std::vector<pair_t> m_map;
 };
 
+typedef std::pair<BuildingTypes, int> BuildingModifier2;
 typedef std::pair<TechTypes, int> TechModifier;
 
 typedef IDValueMap<int, int, 100> IDValueMapPercent;

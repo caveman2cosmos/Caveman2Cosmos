@@ -430,7 +430,7 @@ bool CvUnitInfo::isUnlimitedException() const
 // When NO_PLAYER - Any units requiring a civ specific building are considered civ units, all others are not.
 bool CvUnitInfo::isCivilizationUnit(const PlayerTypes ePlayer) const
 {
-	// Not the most elegant solution for exluding or including neanderthal units for startin unit selection,
+	// Not the most elegant solution for exluding or including neanderthal units for starting unit selection,
 	// nor the best way to stop barbarians from spawning neanderthal units. But good enough for now.
 	const bool bCivUnit = ePlayer != NO_PLAYER;
 

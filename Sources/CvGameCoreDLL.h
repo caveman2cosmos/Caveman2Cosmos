@@ -253,11 +253,12 @@ using bst::bind;
 #include <boost/python/list.hpp>
 #include <boost/python/tuple.hpp>
 #include <boost/python/class.hpp>
-#include <boost/python/manage_new_object.hpp>
-#include <boost/python/return_value_policy.hpp>
 #include <boost/python/object.hpp>
 #include <boost/python/def.hpp>
 #include <boost/python/enum.hpp>
+#include <boost/python/manage_new_object.hpp>
+#include <boost/python/return_value_policy.hpp>
+#include <boost/python/to_python_converter.hpp>
 namespace python = boost::python;
 #endif
 
