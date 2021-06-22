@@ -1427,15 +1427,12 @@ void CvInitCore::setTeam(PlayerTypes eID, TeamTypes eTeam)
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eID);
 	if (getTeam(eID) != eTeam)
 	{
-		GC.getGame().logOOSSpecial(121, (int)eID, (int)eTeam, -1);
 		m_aeTeam[eID] = eTeam;
 
 		if (CvPlayerAI::areStaticsInitialized())
 		{
-			GC.getGame().logOOSSpecial(122, (int)eID, (int)eTeam, -1);
 			GET_PLAYER(eID).updateTeamType();
 		}
-		GC.getGame().logOOSSpecial(123, (int)eID, (int)eTeam, -1);
 	}
 }
 

@@ -348,7 +348,6 @@ void CvGame::init(HandicapTypes eHandicap)
 			makeSpecialBuildingValid((SpecialBuildingTypes)iI);
 		}
 	}
-	logOOSSpecial(100, -1, -1, -1);
 
 	for (int iI = MAX_PC_PLAYERS; iI < MAX_PLAYERS-1; iI++)
 	{
@@ -482,7 +481,6 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 		*/
 	}
-	logOOSSpecial(200, -1, -1, -1);
 	AI_init();
 
 	doUpdateCacheOnTurn();
@@ -8983,19 +8981,16 @@ void CvGame::logDebugMsg(char* format, ...)
 
 void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive)
 {
-	logOOSSpecial(101, (int)eNewPlayer, (int)eLeader, (int)eCiv);
 	// Reset names for recycled player slot
 	CvWString szEmptyString = L"";
 	const LeaderHeadTypes eOldLeader = GET_PLAYER(eNewPlayer).getLeaderType();
 
-	logOOSSpecial(102, (int)eNewPlayer, (int)eLeader, (int)eCiv);
 	if (eOldLeader != NO_LEADER && eOldLeader != eLeader)
 	{
 		GC.getInitCore().setLeaderName(eNewPlayer, szEmptyString);
 	}
 	const CivilizationTypes eOldCiv = GET_PLAYER(eNewPlayer).getCivilizationType();
 
-	logOOSSpecial(103, (int)eNewPlayer, (int)eLeader, (int)eCiv);
 	if (eOldCiv != NO_CIVILIZATION && eOldCiv != eCiv)
 	{
 		GC.getInitCore().setCivAdjective(eNewPlayer, szEmptyString);
@@ -9005,7 +9000,6 @@ void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, Civiliza
 	// Get valid player color
 	PlayerColorTypes eColor = (PlayerColorTypes)GC.getCivilizationInfo(eCiv).getDefaultPlayerColor();
 
-	logOOSSpecial(104, (int)eNewPlayer, (int)eLeader, (int)eCiv);
 	if (!GET_PLAYER(eNewPlayer).isNPC())
 	{
 		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -9038,15 +9032,14 @@ void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, Civiliza
 			}
 		}
 	}
-	logOOSSpecial(105, (int)eNewPlayer, (int)eLeader, (int)eCiv);
 	// init new player
 	GC.getInitCore().setLeader(eNewPlayer, eLeader);
 	GC.getInitCore().setCiv(eNewPlayer, eCiv);
 	GC.getInitCore().setSlotStatus(eNewPlayer, SS_COMPUTER);
 	GC.getInitCore().setColor(eNewPlayer, eColor);
-	logOOSSpecial(106, (int)eNewPlayer, (int)eLeader, (int)eCiv);
+	logOOSSpecial(100, (int)eNewPlayer, (int)eLeader, (int)eCiv);
 	GET_PLAYER(eNewPlayer).initInGame(eNewPlayer, bSetAlive);
-	logOOSSpecial(110, (int)eNewPlayer, (int)eLeader, (int)eCiv);
+	logOOSSpecial(200, (int)eNewPlayer, (int)eLeader, (int)eCiv);
 }
 
 void CvGame::changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman )

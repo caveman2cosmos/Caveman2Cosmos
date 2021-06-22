@@ -472,6 +472,7 @@ void CvPlayer::init(PlayerTypes eID)
 //
 void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 {
+	GC.getGame().logOOSSpecial(101, (int)eID, (int)bSetAlive, -1);
 	//--------------------------------
 	// Init saved data
 	reset(eID);
@@ -497,6 +498,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 	// Init other game data
 	FAssert(getTeam() != NO_TEAM);
 
+	GC.getGame().logOOSSpecial(102, (int)eID, (int)bSetAlive, -1);
 	// Some effects on team necessary if this is the only member of the team
 	int iOtherTeamMembers = 0;
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -514,6 +516,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		GET_TEAM(getTeam()).init(getTeam());
 		GET_TEAM(getTeam()).resetPlotAndCityData();
 	}
+	GC.getGame().logOOSSpecial(103, (int)eID, (int)bSetAlive, (int)bTeamInit);
 
 	if (bTeamInit || GET_TEAM(getTeam()).getNumMembers() == iOtherTeamMembers)
 	{
@@ -526,6 +529,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		{
 			setAlive(true);
 		}
+		GC.getGame().logOOSSpecial(103, (int)eID, (int)bSetAlive, -1);
 		if (GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES) && !isNPC() && !isMinorCiv())
 		{
 			LeaderHeadTypes eBestPersonality = NO_LEADER;
@@ -557,6 +561,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 				setPersonalityType(eBestPersonality);
 			}
 		}
+		GC.getGame().logOOSSpecial(104, (int)eID, (int)bSetAlive, -1);
 		changeBaseFreeUnitUpkeepCivilian(GC.getBASE_FREE_UNITS_UPKEEP_CIVILIAN());
 		changeBaseFreeUnitUpkeepMilitary(GC.getBASE_FREE_UNITS_UPKEEP_MILITARY());
 		changeFreeUnitUpkeepCivilianPopPercent(GC.getBASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP());
@@ -564,6 +569,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		changeTradeRoutes(GC.getINITIAL_TRADE_ROUTES());
 		changeStateReligionHappiness(GC.getINITIAL_STATE_RELIGION_HAPPINESS());
 		changeNonStateReligionHappiness(GC.getINITIAL_NON_STATE_RELIGION_HAPPINESS());
+		GC.getGame().logOOSSpecial(105, (int)eID, (int)bSetAlive, -1);
 
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
@@ -583,6 +589,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 				processTrait((TraitTypes)iI, 1);
 			}
 		}
+		GC.getGame().logOOSSpecial(106, (int)eID, (int)bSetAlive, -1);
 
 		if (!isNPC() && canLeaderPromote())
 		{
@@ -594,6 +601,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		}
 		updateMaxAnarchyTurns();
 		updateMinAnarchyTurns();
+		GC.getGame().logOOSSpecial(107, (int)eID, (int)bSetAlive, -1);
 
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
@@ -611,6 +619,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		{
 			resetTriggerFired((EventTriggerTypes)iI);
 		}
+		GC.getGame().logOOSSpecial(108, (int)eID, (int)bSetAlive, -1);
 
 		for (int iI = 0; iI < GC.getNumEventInfos(); iI++)
 		{
@@ -637,9 +646,9 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 					}
 				}
 			}
-
 			resetEventOccured((EventTypes)iI, false);
 		}
+		GC.getGame().logOOSSpecial(109, (int)eID, (int)bSetAlive, -1);
 
 		for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
@@ -650,9 +659,12 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		}
 	}
 	resetPlotAndCityData();
+	GC.getGame().logOOSSpecial(110, (int)eID, (int)bSetAlive, -1);
 	setDoNotBotherStatus(NO_PLAYER);
 	m_UnitList.init();
+	GC.getGame().logOOSSpecial(111, (int)eID, (int)bSetAlive, -1);
 	AI_init();
+	GC.getGame().logOOSSpecial(112, (int)eID, (int)bSetAlive, -1);
 }
 
 //
@@ -12105,7 +12117,7 @@ void CvPlayer::setNewPlayerAlive(bool bNewValue)
 {
 	if (isAlive() != bNewValue)
 	{
-		GC.getGame().logOOSSpecial(111, (int)bNewValue, -1, -1);
+		GC.getGame().logOOSSpecial(201, (int)bNewValue, -1, -1);
 		m_bAlive = bNewValue;
 
 		GET_TEAM(getTeam()).changeAliveCount((isAlive()) ? 1 : -1);
@@ -12185,7 +12197,7 @@ void CvPlayer::setNewPlayerAlive(bool bNewValue)
 		}
 
 		GC.getGame().setScoreDirty(true);
-		GC.getGame().logOOSSpecial(120, (int)bNewValue, -1, -1);
+		GC.getGame().logOOSSpecial(202, (int)bNewValue, -1, -1);
 	}
 }
 
