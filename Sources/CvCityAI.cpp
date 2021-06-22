@@ -4935,17 +4935,13 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 						iValue += kBuilding.getLineOfSight() * 15;
 
-						for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+						foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatExtraStrength())
 						{
-							const UnitCombatTypes combatType = static_cast<UnitCombatTypes>(iI);
-							if (kBuilding.getUnitCombatExtraStrength(iI) != 0)
-							{
-								const int iValidUnitCount = algo::count_all(
-									plot()->units() | filtered(CvUnit::fn::getTeam() == getTeam())
-									| filtered(CvUnit::fn::getUnitCombatType() == combatType)
-								);
-								iValue += iValidUnitCount * kBuilding.getUnitCombatExtraStrength(iI) / 6;
-							}
+							const int iValidUnitCount = algo::count_all(
+								plot()->units() | filtered(CvUnit::fn::getTeam() == getTeam())
+								| filtered(CvUnit::fn::getUnitCombatType() == modifier.first)
+							);
+							iValue += iValidUnitCount * modifier.second / 6;
 						}
 
 						bool bDefense = (area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE);
@@ -14635,7 +14631,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.isNukeImmune() ||
 			GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && kBuilding.isZoneOfControl() ||
 			kBuilding.getLineOfSight() > 0 ||
-			kBuilding.getUnitCombatExtraStrength(NO_UNITCOMBAT) > 0 ||
+			!kBuilding.getUnitCombatExtraStrength().empty() ||
 			kBuilding.getAdjacentDamagePercent() > 0 ||
 			kBuilding.isProtectedCulture() ||
 			kBuilding.getOccupationTimeModifier() > 0 ||
@@ -15193,31 +15189,19 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					}
 					iValue += kBuilding.getLineOfSight() * 15;
 
-					for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+					foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatExtraStrength())
 					{
-						if (kBuilding.getUnitCombatExtraStrength(iI) != 0)
+						foreach_(const CvUnit * pLoopUnit, plot()->units())
 						{
-							int iValidUnitCount = 0;
-							foreach_(const CvUnit * pLoopUnit, plot()->units())
+							if (pLoopUnit->getTeam() == eTeam)
 							{
-								if (pLoopUnit->getTeam() == eTeam)
+								if (pLoopUnit->getUnitCombatType() == modifier.first
+								//TB - May cause some unexpected imbalance though it could also imbalance to bypass... a place to watch
+								|| algo::contains(pLoopUnit->getUnitInfo().getSubCombatTypes(), (int)modifier.first))
 								{
-									if (pLoopUnit->getUnitCombatType() != iI)
-									{
-										//TB - May cause some unexpected imbalance though it could also imbalance to bypass... a place to watch
-										for (int iJ = 0; iJ < pLoopUnit->getUnitInfo().getNumSubCombatTypes(); iJ++)
-										{
-											if (pLoopUnit->getUnitInfo().getSubCombatType(iJ) == iI)
-											{
-												iValidUnitCount++;
-												break;
-											}
-										}
-									}
-									else iValidUnitCount++;
+									iValue += modifier.second / 6;
 								}
 							}
-							iValue += iValidUnitCount * kBuilding.getUnitCombatExtraStrength(iI) / 6;
 						}
 					}
 

@@ -5123,9 +5123,9 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changeBuildingGoodHappiness(iTechBuildingHappiness * iChange);
 		}
 
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+		foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatExtraStrength())
 		{
-			changeUnitCombatExtraStrength((UnitCombatTypes)iI, kBuilding.getUnitCombatExtraStrength(iI) * iChange);
+			changeUnitCombatExtraStrength(modifier.first, modifier.second * iChange);
 		}
 
 		if (!bReligiously)

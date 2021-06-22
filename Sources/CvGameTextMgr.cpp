@@ -23213,18 +23213,14 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	if (!bRelDisabled)
 	{
 		iLast = 0;
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); ++iI)
+		foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatExtraStrength())
 		{
-			if (kBuilding.getUnitCombatExtraStrength(iI) != 0)
-			{
-				int iUnitCombatExtraStrength = kBuilding.getUnitCombatExtraStrength(iI);
-				szFirstBuffer.Format(L"%s%c%s%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), (iUnitCombatExtraStrength > 0 ? L"+" : L""), iUnitCombatExtraStrength, gDLL->getText("TXT_KEY_BUILDINGHELP_UNITCOMBAT_EXTRA_STRENGTH").c_str());
-				szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription());
-				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (iUnitCombatExtraStrength != iLast));
-				if (iLast != iUnitCombatExtraStrength)
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_IN_CITY"));
-				iLast = iUnitCombatExtraStrength;
-			}
+			szFirstBuffer.Format(L"%s%c%s%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), (modifier.second > 0 ? L"+" : L""), modifier.second, gDLL->getText("TXT_KEY_BUILDINGHELP_UNITCOMBAT_EXTRA_STRENGTH").c_str());
+			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo(modifier.first).getType()).GetCString(), GC.getUnitCombatInfo(modifier.first).getDescription());
+			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (modifier.second != iLast));
+			if (iLast != modifier.second)
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_IN_CITY"));
+			iLast = modifier.second;
 		}
 /*
 		iLast = 0;

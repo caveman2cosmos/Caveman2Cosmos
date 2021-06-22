@@ -401,7 +401,7 @@ public:
 	int getTechYieldModifier(int i, int j) const;
 	int* getTechYieldModifierArray(int i) const;
 
-	int getUnitCombatExtraStrength(int i) const;
+	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
 
 	int getCommerceAttacks(int i) const;
 	int* getCommerceAttacksArray() const;
@@ -755,7 +755,6 @@ private:
 	bool* m_pabHurry;
 
 	int* m_piCommerceAttacks;
-	int* m_piUnitCombatExtraStrength;
 	int* m_piBonusDefenseChanges;
 	int* m_piBuildingProductionModifier;
 	int* m_piGlobalBuildingProductionModifier;
@@ -836,6 +835,7 @@ private:
 	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
+	IDValueMap<UnitCombatTypes, int> m_aUnitCombatExtraStrength;
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;

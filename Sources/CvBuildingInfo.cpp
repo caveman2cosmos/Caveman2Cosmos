@@ -250,7 +250,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_piGlobalBuildingProductionModifier(NULL)
 ,m_piGlobalBuildingCostModifier(NULL)
 ,m_piBonusDefenseChanges(NULL)
-,m_piUnitCombatExtraStrength(NULL)
 ,m_piCommerceAttacks(NULL)
 //New Multidimensional Integer Arrays
 ,m_ppaiTechCommerceChange(NULL)
@@ -376,7 +375,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piBuildingProductionModifier);
 	SAFE_DELETE_ARRAY(m_piGlobalBuildingProductionModifier);
 	SAFE_DELETE_ARRAY(m_piGlobalBuildingCostModifier);
-	SAFE_DELETE_ARRAY(m_piUnitCombatExtraStrength);
 	SAFE_DELETE_ARRAY(m_piCommerceAttacks);
 	SAFE_DELETE_ARRAY2(m_ppaiBonusCommerceModifier, GC.getNumBonusInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiBonusYieldChanges, GC.getNumBonusInfos());
@@ -1209,7 +1207,7 @@ int CvBuildingInfo::getImprovementYieldChanges(int i, int j) const
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
 	return (m_ppiImprovementYieldChanges && m_ppiImprovementYieldChanges[i]) ? m_ppiImprovementYieldChanges[i][j] : 0;
 }
-
+/*
 int CvBuildingInfo::getUnitCombatExtraStrength(int i) const
 {
 	FASSERT_BOUNDS(NO_UNITCOMBAT, GC.getNumUnitCombatInfos(), i)
@@ -1220,7 +1218,7 @@ int CvBuildingInfo::getUnitCombatExtraStrength(int i) const
 	}
 	return m_piUnitCombatExtraStrength ? m_piUnitCombatExtraStrength[i] : 0;
 }
-
+*/
 //TB Combat Mods (Buildings) begin
 
 UnitTypes CvBuildingInfo::getPropertySpawnUnit() const
@@ -2057,7 +2055,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aUnitProductionModifier);
 	CheckSumC(iSum, m_piPrereqOrVicinityBonuses);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusDefenseChanges);
-	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatExtraStrength);
+	CheckSumC(iSum, m_aUnitCombatExtraStrength);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piCommerceAttacks);
 
 	for(int i = 0; i < GC.getNumTechInfos(); i++)
@@ -2941,7 +2939,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pbPrereqOrImprovement, L"PrereqOrImprovement", GC.getNumImprovementInfos());
 	pXML->SetVariableListTagPair(&m_pbPrereqOrFeature, L"PrereqOrFeature", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_piBonusDefenseChanges, L"BonusDefenseChanges", GC.getNumBonusInfos());
-	pXML->SetVariableListTagPair(&m_piUnitCombatExtraStrength, L"UnitCombatExtraStrengths", GC.getNumUnitCombatInfos());
+	m_aUnitCombatExtraStrength.read(pXML, L"UnitCombatExtraStrengths");
 
 	if (pXML->TryMoveToXmlFirstChild(L"CommerceAttacks"))
 	{
@@ -4400,17 +4398,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (!m_iCoastalDistanceMaintenanceModifier) m_iCoastalDistanceMaintenanceModifier = pClassInfo->getCoastalDistanceMaintenanceModifier();
 	if (!m_iConnectedCityMaintenanceModifier) m_iConnectedCityMaintenanceModifier = pClassInfo->getConnectedCityMaintenanceModifier();
 
-	for ( int j = 0; j < GC.getNumUnitCombatInfos(); j++)
-	{
-		if ( getUnitCombatExtraStrength(j) == iDefault && pClassInfo->getUnitCombatExtraStrength(j) != iDefault)
-		{
-			if ( NULL == m_piUnitCombatExtraStrength )
-			{
-				CvXMLLoadUtility::InitList(&m_piUnitCombatExtraStrength,GC.getNumUnitCombatInfos(),iDefault);
-			}
-			m_piUnitCombatExtraStrength[j] = pClassInfo->getUnitCombatExtraStrength(j);
-		}
-	}
+	m_aUnitCombatExtraStrength.copyNonDefaults(pClassInfo->getUnitCombatExtraStrength());
 
 	for ( int j = 0; j < NUM_COMMERCE_TYPES; j++)
 	{
