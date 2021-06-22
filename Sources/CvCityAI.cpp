@@ -5947,33 +5947,23 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 
-					if (kBuilding.getBuildingProductionModifier(NO_BUILDING) != 0)
+					foreach_(const BuildingModifier2& modifier, kBuilding.getBuildingProductionModifiers())
 					{
-						int buildingProductionModifierValue = 0;
-						for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+						const BuildingTypes eLoopBuilding = modifier.first;
+						if (canConstruct(eLoopBuilding))
 						{
-							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Building1");
-
-							if (kBuilding.getBuildingProductionModifier(iI) != 0)
+							const int iModifier = modifier.second;
+							if (iModifier > -100)
 							{
-								const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-								if (canConstruct(eLoopBuilding))
-								{
-									const int iModifier = kBuilding.getBuildingProductionModifier(iI);
-									const int iOriginalCost = getHurryCost(eLoopBuilding);
-									if (iModifier > -100)
-									{
-										const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
-										buildingProductionModifierValue += (iOriginalCost - iNewCost) / 10;
-									}
-									else
-									{//If the modifier is less than -100, avoid it like the plague
-										buildingProductionModifierValue -= 100;
-									}
-								}
+								const int iOriginalCost = getHurryCost(eLoopBuilding);
+								const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
+								iValue += (iOriginalCost - iNewCost) / 10;
+							}
+							else
+							{//If the modifier is less than -100, avoid it like the plague
+								iValue -= 100;
 							}
 						}
-						iValue += buildingProductionModifierValue;
 					}
 
 					if (kBuilding.getGlobalBuildingProductionModifier(NO_BUILDING) != 0)
@@ -16179,31 +16169,23 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					}
 				}
 
-				if (kBuilding.getBuildingProductionModifier(NO_BUILDING) != 0)
+				foreach_(const BuildingModifier2& modifier, kBuilding.getBuildingProductionModifiers())
 				{
-					int buildingProductionModifierValue = 0;
-					for (int iI = 0; iI < iNumBuildings; iI++)
+					const BuildingTypes eLoopBuilding = modifier.first;
+					if (canConstruct(eLoopBuilding))
 					{
-						if (kBuilding.getBuildingProductionModifier(iI) != 0)
+						const int iModifier = modifier.second;
+						if (iModifier > -100)
 						{
-							const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-							if (canConstruct(eLoopBuilding))
-							{
-								const int iModifier = kBuilding.getBuildingProductionModifier(iI);
-								const int iOriginalCost = getHurryCost(eLoopBuilding);
-								if (iModifier > -100)
-								{
-									const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
-									buildingProductionModifierValue += (iOriginalCost - iNewCost) / 10;
-								}
-								else
-								{//If the modifier is less than -100, avoid it like the plague
-									buildingProductionModifierValue -= 100;
-								}
-							}
+							const int iOriginalCost = getHurryCost(eLoopBuilding);
+							const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
+							iValue += (iOriginalCost - iNewCost) / 10;
+						}
+						else
+						{//If the modifier is less than -100, avoid it like the plague
+							iValue -= 100;
 						}
 					}
-					iValue += buildingProductionModifierValue;
 				}
 
 				if (kBuilding.getGlobalBuildingProductionModifier(NO_BUILDING) != 0)

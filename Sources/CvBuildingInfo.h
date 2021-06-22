@@ -346,7 +346,7 @@ public:
 	bool isPrereqOrImprovement(int i) const;
 	bool isPrereqOrFeature(int i) const;
 
-	int getBuildingProductionModifier(int i) const;
+	const IDValueMap<BuildingTypes, int>& getBuildingProductionModifiers() const { return m_aBuildingProductionModifier; }
 	int getGlobalBuildingProductionModifier(int i) const;
 	int getGlobalBuildingCostModifier(int i) const;
 	int getBonusDefenseChanges(int i) const;
@@ -837,6 +837,7 @@ private:
 	TechModifierArray m_aTechOutbreakLevelChanges;
 	IDValueMap<UnitCombatTypes, int> m_aUnitCombatExtraStrength;
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
+	IDValueMap<BuildingTypes, int> m_aBuildingProductionModifier;
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;
 	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;
