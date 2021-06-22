@@ -1488,6 +1488,8 @@ class Pedia:
 		ListDict = {}
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
+		bCheckProductivity = 0 # Checking productivity of improvements is slow
+		bCheckPotentialReplacements = 0 # Checking potential replacements is slow
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
@@ -1501,7 +1503,7 @@ class Pedia:
 				iTechRow = 0
 			
 			#Check total productivity: from resource, improvement and improvement+resource coupling.
-			if CvBonusInfo.getConstAppearance() > 0: # Only care about map resources
+			if bCheckProductivity and CvBonusInfo.getConstAppearance() > 0: # Only care about map resources
 				for CvImprovement in xrange(GC.getNumImprovementInfos()):
 					CvImprovementInfo = GC.getImprovementInfo(CvImprovement)
 					if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0 or CvImprovementInfo.getImprovementPillage() != -1: # Only care about improvements, that can upgrade or downgrade.
@@ -1551,6 +1553,50 @@ class Pedia:
 									if (aFinalImpAltUpgradeYield[0] < aFinalYield[0] or aFinalImpAltUpgradeYield[1] < aFinalYield[1] or aFinalImpAltUpgradeYield[2] < aFinalYield[2]):
 										print CvImprovementInfo.getType()+" with "+CvBonusInfo.getType()+": F/P/C -> "+str(aFinalYield)+" Alt upgrade: "+CvImprovementAltUpgradeInfo.getType()+": F/P/C -> "+str((aFinalImpAltUpgradeYield, (aFinalImpAltUpgradeYield[0]-aFinalYield[0], aFinalImpAltUpgradeYield[1]-aFinalYield[1], aFinalImpAltUpgradeYield[2]-aFinalYield[2])))
 
+			#Check replacements of bonus producers
+			if bCheckPotentialReplacements and (CvBonusInfo.getConstAppearance() == 0 and not (( BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE) or (BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS))): # Check Manufactured bonuses, that aren't Culture or Techno-culture types.
+				aNumBonusManufacturers = [] # Count manufacturers and add their locations
+				aBuildingObsoletions = [] # List xgrid of manufacturer tech obsoletions
+				for iBuilding in xrange(GC.getNumBuildingInfos()): # Collect statistics about buildings - location of producer and its obsoletion
+					CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+					if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")) and not isWorldWonder(iBuilding) and not isNationalWonder(iBuilding) and CvBuildingInfo.getProductionCost() != -1: # Exclude wonders, special, and space based
+						if CvBuildingInfo.getFreeBonus() == iBonus:	
+							aNumBonusManufacturers.append(self.checkTechRequirementLocation(CvBuildingInfo)[0])	
+							if CvBuildingInfo.getObsoleteTech() != -1:
+								iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()						
+								aBuildingObsoletions.append(iObsoleteTechLoc)
+							else:
+								aBuildingObsoletions.append(999) #Never obsolete	
+							
+						for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
+							if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
+								aNumBonusManufacturers.append(self.checkTechRequirementLocation(CvBuildingInfo)[0])	
+								if CvBuildingInfo.getObsoleteTech() != -1:
+									iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()						
+									aBuildingObsoletions.append(iObsoleteTechLoc)
+								else:
+									aBuildingObsoletions.append(999) #Never obsolete
+				
+				# Only if we have two or more manufacturers, if any resource producers obsoletes, and if they are in different tech tree locations
+				if len(aNumBonusManufacturers) > 1 and min(aBuildingObsoletions) < 999 and min(aNumBonusManufacturers) != max(aNumBonusManufacturers):
+					for iBuilding in xrange(GC.getNumBuildingInfos()):				
+						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+						if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")) and not isWorldWonder(iBuilding) and not isNationalWonder(iBuilding) and CvBuildingInfo.getProductionCost() != -1: # Exclude wonders, special, and space based
+							aBuildingReplacements = [] # List building replacements
+							iObsoleteTechLoc = 999 # Never obsolete					
+							if CvBuildingInfo.getObsoleteTech() != -1:
+								iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()							
+							for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+								CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
+								aBuildingReplacements.append(CvBuildingReplacement.getType())
+							
+							if not isWorldWonder(iBuilding) and not isNationalWonder(iBuilding) and CvBuildingInfo.getProductionCost() != -1: # Exclude wonders and special
+								if CvBuildingInfo.getFreeBonus() == iBonus:						
+									print CvBonusInfo.getType()+" "+str(self.checkTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
+								for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
+									if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
+										print CvBonusInfo.getType()+" "+str(self.checkTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
+							
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
 				if not iType:
 					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+": "+szName, iBonus)
