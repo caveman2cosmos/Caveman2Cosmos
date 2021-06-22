@@ -249,7 +249,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_piBuildingProductionModifier(NULL)
 ,m_piGlobalBuildingProductionModifier(NULL)
 ,m_piGlobalBuildingCostModifier(NULL)
-,m_piUnitProductionModifier(NULL)
 ,m_piBonusDefenseChanges(NULL)
 ,m_piUnitCombatExtraStrength(NULL)
 ,m_piCommerceAttacks(NULL)
@@ -373,7 +372,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pbPrereqAndTerrain);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrImprovement);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrFeature);
-	SAFE_DELETE_ARRAY(m_piUnitProductionModifier);
 	SAFE_DELETE_ARRAY(m_piBonusDefenseChanges);
 	SAFE_DELETE_ARRAY(m_piBuildingProductionModifier);
 	SAFE_DELETE_ARRAY(m_piGlobalBuildingProductionModifier);
@@ -433,6 +431,7 @@ CvBuildingInfo::~CvBuildingInfo()
 	}
 
 	m_aBuildingHappinessChanges.removeDelayedResolution();
+	m_aUnitProductionModifier.removeDelayedResolution();
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
@@ -1006,7 +1005,7 @@ int CvBuildingInfo::getBonusDefenseChanges(int i) const
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_piBonusDefenseChanges ? m_piBonusDefenseChanges[i] : 0;
 }
-
+/*
 int CvBuildingInfo::getUnitProductionModifier(int i) const
 {
 	FASSERT_BOUNDS(NO_UNIT, GC.getNumUnitInfos(), i)
@@ -1017,7 +1016,7 @@ int CvBuildingInfo::getUnitProductionModifier(int i) const
 	}
 	return m_piUnitProductionModifier ? m_piUnitProductionModifier[i] : 0;
 }
-
+*/
 int CvBuildingInfo::getBuildingProductionModifier(int i) const
 {
 	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
@@ -2055,7 +2054,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piGlobalBuildingProductionModifier);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piGlobalBuildingCostModifier);
 
-	CheckSumI(iSum, GC.getNumUnitInfos(), m_piUnitProductionModifier);
+	CheckSumC(iSum, m_aUnitProductionModifier);
 	CheckSumC(iSum, m_piPrereqOrVicinityBonuses);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusDefenseChanges);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatExtraStrength);
@@ -3184,34 +3183,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	if (pXML->TryMoveToXmlFirstChild(L"UnitProductionModifiers"))
-	{
-		const int iNumSibs = pXML->GetXmlChildrenNumber();
-		int iTemp = false;
-		if (iNumSibs > 0)
-		{
-			if (pXML->TryMoveToXmlFirstChild())
-			{
-				for (int i = 0; i < iNumSibs; i++)
-				{
-					if (pXML->GetChildXmlVal(szTextVal))
-					{
-						m_aszUnitProdModforPass3.push_back(szTextVal);
-						pXML->GetNextXmlVal(&iTemp);
-						m_aiUnitProdModforPass3.push_back(iTemp);
-						pXML->MoveToXmlParent();
-					}
-					if (!pXML->TryMoveToXmlNextSibling())
-					{
-						break;
-					}
-				}
-				pXML->MoveToXmlParent();
-			}
-		}
-		pXML->MoveToXmlParent();
-	}
-
 	pXML->SetOptionalVector(&m_piPrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
 	pXML->SetOptionalVector(&m_aePrereqOrRawVicinityBonuses, L"PrereqRawVicinityBonuses");
 
@@ -3706,6 +3677,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_piVictoryThreshold, L"VictoryThresholds",  GC.getNumVictoryInfos());
 
 	m_aBuildingHappinessChanges.readWithDelayedResolution(pXML, L"BuildingHappinessChanges");
+	m_aUnitProductionModifier.readWithDelayedResolution(pXML, L"UnitProductionModifiers");
 
 	return true;
 }
@@ -3820,26 +3792,6 @@ bool CvBuildingInfo::readPass3()
 		}
 		m_aszPrereqAndCivicsforPass3.clear();
 		m_abPrereqAndCivicsforPass3.clear();
-	}
-
-	m_piUnitProductionModifier = new int[GC.getNumUnitInfos()];
-    for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-	{
-		m_piUnitProductionModifier[iI] = 0;
-	}
-	if (!m_aiUnitProdModforPass3.empty() && !m_aszUnitProdModforPass3.empty())
-	{
-		const int iNumLoad = m_aiUnitProdModforPass3.size();
-		for(int iI = 0; iI < iNumLoad; iI++)
-		{
-			const int iTempIndex = GC.getInfoTypeForString(m_aszUnitProdModforPass3[iI]);
-			if (iTempIndex >= 0 && iTempIndex < GC.getNumUnitInfos())
-			{
-				m_piUnitProductionModifier[iTempIndex] = m_aiUnitProdModforPass3[iI];
-			}
-		}
-		m_aszUnitProdModforPass3.clear();
-		m_aiUnitProdModforPass3.clear();
 	}
 
 	if (m_aszExtraXMLforPass3.size() < 1)
@@ -5088,6 +5040,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 	m_aBuildingHappinessChanges.copyNonDefaultDelayedResolution(pClassInfo->getBuildingHappinessChanges());
+	m_aUnitProductionModifier.copyNonDefaultDelayedResolution(pClassInfo->getUnitProductionModifiers());
 }
 
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
