@@ -1489,7 +1489,7 @@ class Pedia:
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
 		bCheckProductivity = 0 # Checking productivity of improvements is slow
-		bCheckPotentialReplacements = 0 # Checking potential replacements is slow
+		bCheckPotentialReplacements = 1 # Checking potential replacements is slow
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
@@ -1559,7 +1559,7 @@ class Pedia:
 				aBuildingObsoletions = [] # List xgrid of manufacturer tech obsoletions
 				for iBuilding in xrange(GC.getNumBuildingInfos()): # Collect statistics about buildings - location of producer and its obsoletion
 					CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-					if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")) and not isWorldWonder(iBuilding) and not isNationalWonder(iBuilding) and CvBuildingInfo.getProductionCost() != -1: # Exclude wonders, special, and space based
+					if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")): # Exclude space based
 						if CvBuildingInfo.getFreeBonus() == iBonus:	
 							aNumBonusManufacturers.append(self.checkTechRequirementLocation(CvBuildingInfo)[0])	
 							if CvBuildingInfo.getObsoleteTech() != -1:
@@ -1577,11 +1577,11 @@ class Pedia:
 								else:
 									aBuildingObsoletions.append(999) #Never obsolete
 				
-				# Only if we have two or more manufacturers, if any resource producers obsoletes, and if they are in different tech tree locations
-				if len(aNumBonusManufacturers) > 1 and min(aBuildingObsoletions) < 999 and min(aNumBonusManufacturers) != max(aNumBonusManufacturers):
+				# Check if any obsoletes
+				if len(aNumBonusManufacturers) > 0 and min(aBuildingObsoletions) < 999:
 					for iBuilding in xrange(GC.getNumBuildingInfos()):				
 						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-						if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")) and not isWorldWonder(iBuilding) and not isNationalWonder(iBuilding) and CvBuildingInfo.getProductionCost() != -1: # Exclude wonders, special, and space based
+						if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")): # Exclude space based
 							aBuildingReplacements = [] # List building replacements
 							iObsoleteTechLoc = 999 # Never obsolete					
 							if CvBuildingInfo.getObsoleteTech() != -1:
@@ -1590,12 +1590,11 @@ class Pedia:
 								CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
 								aBuildingReplacements.append(CvBuildingReplacement.getType())
 							
-							if not isWorldWonder(iBuilding) and not isNationalWonder(iBuilding) and CvBuildingInfo.getProductionCost() != -1: # Exclude wonders and special
-								if CvBuildingInfo.getFreeBonus() == iBonus:						
+							if CvBuildingInfo.getFreeBonus() == iBonus:						
+								print CvBonusInfo.getType()+" "+str(self.checkTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
+							for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
+								if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
 									print CvBonusInfo.getType()+" "+str(self.checkTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
-								for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-									if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
-										print CvBonusInfo.getType()+" "+str(self.checkTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
 							
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
 				if not iType:
