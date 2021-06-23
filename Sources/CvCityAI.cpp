@@ -5872,42 +5872,38 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 					iValue += forcedTradeRoutesValue;
-					if (kBuilding.getUnitProductionModifier(NO_UNIT) != 0)
+					foreach_(const UnitModifier2& modifier, kBuilding.getUnitProductionModifiers())
 					{
 						int unitProductionModifierValue = 0;
-						for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-						{
-							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Unit");
-							UnitTypes eLoopUnit = (UnitTypes)iI;
+						const UnitTypes eLoopUnit = modifier.first;
 
-							const int iModifier = kBuilding.getUnitProductionModifier(iI);
-							if (iModifier != 0 && canTrain(eLoopUnit))
+						if (canTrain(eLoopUnit))
+						{
+							const int iModifier = modifier.second;
+							const UnitAITypes eUnitAI = (UnitAITypes)GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
+							const UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType((DomainTypes)GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
+
+							int iBuildCost = 0;
+							if (eBestUnit == NO_UNIT)
 							{
-								UnitAITypes eUnitAI = (UnitAITypes)GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
-
-								UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType((DomainTypes)GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
-
-								int iBuildCost = 0;
-								if (eBestUnit == NO_UNIT)
-								{
-									iBuildCost = GC.getUnitInfo(eLoopUnit).getProductionCost();
-								}
-								else
-								{
-									int	iBestUnitAIValue = kOwner.AI_unitValue(eBestUnit, eUnitAI, area());
-									int	iThisUnitAIValue = kOwner.AI_unitValue(eLoopUnit, eUnitAI, area());
-
-									//	Value as cost of production of the unit we can build scaled by their relative AI value (non-linear - we're squaring the ratio)
-									int	iComparisonToBestFactor = (10 * iThisUnitAIValue) / std::max(1, iBestUnitAIValue);
-
-									iBuildCost = (iComparisonToBestFactor * iComparisonToBestFactor * GC.getUnitInfo(eBestUnit).getProductionCost()) / 100;
-								}
-								unitProductionModifierValue += (iBuildCost * 2 * iModifier) / 100;
+								iBuildCost = GC.getUnitInfo(eLoopUnit).getProductionCost();
 							}
-						}
-						if (bIsHighProductionCity)
-						{
-							unitProductionModifierValue *= 3; // adding 10% and 20% is same as adding 30% or 3 * 10%
+							else
+							{
+								int	iBestUnitAIValue = kOwner.AI_unitValue(eBestUnit, eUnitAI, area());
+								int	iThisUnitAIValue = kOwner.AI_unitValue(eLoopUnit, eUnitAI, area());
+
+								//	Value as cost of production of the unit we can build scaled by their relative AI value (non-linear - we're squaring the ratio)
+								int	iComparisonToBestFactor = (10 * iThisUnitAIValue) / std::max(1, iBestUnitAIValue);
+
+								iBuildCost = (iComparisonToBestFactor * iComparisonToBestFactor * GC.getUnitInfo(eBestUnit).getProductionCost()) / 100;
+							}
+							int iTempValue = (iBuildCost * 2 * iModifier) / 100;
+							if (bIsHighProductionCity)
+							{
+								iTempValue *= 3; // adding 10% and 20% is same as adding 30% or 3 * 10%
+							}
+							unitProductionModifierValue += iTempValue;
 						}
 
 						iValue += unitProductionModifierValue;
@@ -16128,38 +16124,35 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						}
 					}
 				}
-				if (kBuilding.getUnitProductionModifier(NO_UNIT) != 0)
+				foreach_(const UnitModifier2& modifier, kBuilding.getUnitProductionModifiers())
 				{
 					int unitProductionModifierValue = 0;
-					for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+					const UnitTypes eLoopUnit = modifier.first;
+					if (canTrain(eLoopUnit))
 					{
-						const UnitTypes eLoopUnit = (UnitTypes)iI;
-						const int iModifier = kBuilding.getUnitProductionModifier(iI);
+						const int iModifier = modifier.second;
+						const UnitAITypes eUnitAI = (UnitAITypes)GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
+						const UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType((DomainTypes)GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
 
-						if (iModifier != 0 && canTrain(eLoopUnit))
+						int iBuildCost = GC.getUnitInfo(eLoopUnit).getProductionCost();
+
+						if (eBestUnit != NO_UNIT)
 						{
-							const UnitAITypes eUnitAI = (UnitAITypes)GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
-							const UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType((DomainTypes)GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
-
-							int iBuildCost = GC.getUnitInfo(eLoopUnit).getProductionCost();
-
-							if (eBestUnit != NO_UNIT)
-							{
-								// Value as cost of production of the unit we can build scaled by their relative AI value (non-linear - we're squaring the ratio)
-								const int iComparisonToBestFactor =
-									(
-										10 * kOwner.AI_unitValue(eLoopUnit, eUnitAI, pArea)
-										/
-										std::max(1, kOwner.AI_unitValue(eBestUnit, eUnitAI, pArea))
-										);
-								iBuildCost = iComparisonToBestFactor * iComparisonToBestFactor * iBuildCost / 100;
-							}
-							unitProductionModifierValue += iBuildCost * iModifier / 50;
+							// Value as cost of production of the unit we can build scaled by their relative AI value (non-linear - we're squaring the ratio)
+							const int iComparisonToBestFactor =
+								(
+									10 * kOwner.AI_unitValue(eLoopUnit, eUnitAI, pArea)
+									/
+									std::max(1, kOwner.AI_unitValue(eBestUnit, eUnitAI, pArea))
+									);
+							iBuildCost = iComparisonToBestFactor * iComparisonToBestFactor * iBuildCost / 100;
 						}
-					}
-					if (bIsHighProductionCity)
-					{
-						unitProductionModifierValue *= 3;
+						int iTempValue = iBuildCost * iModifier / 50;
+						if (bIsHighProductionCity)
+						{
+							iTempValue *= 3;
+						}
+						unitProductionModifierValue += iTempValue;
 					}
 
 					iValue += unitProductionModifierValue;
