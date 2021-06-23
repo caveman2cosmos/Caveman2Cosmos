@@ -1489,7 +1489,7 @@ class Pedia:
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
 		bCheckProductivity = 0 # Checking productivity of improvements is slow
-		bCheckPotentialReplacements = 1 # Checking potential replacements is slow
+		bCheckPotentialReplacements = 0 # Checking potential replacements is slow
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
@@ -1829,6 +1829,7 @@ class Pedia:
 		list = []
 		ListDict = {}				
 			
+		bCheckImprovements = 0 # This improvement checking function is slow
 		for i in xrange(numInfos):
 			item = getInfo(i)
 
@@ -1849,7 +1850,7 @@ class Pedia:
 				iTechRow = 0	
 
 			# Check if improvement tech yield boosts happen between unlock and upgrade.			
-			if getInfo == GC.getImprovementInfo:				
+			if bCheckImprovements and getInfo == GC.getImprovementInfo:				
 				CvImprovementInfo = getInfo(i)
 				if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0 or CvImprovementInfo.getImprovementPillage() != -1: #Only those, that can upgrade, or are top of upgrade chain
 					aTechBoost = []					
@@ -1900,8 +1901,14 @@ class Pedia:
 						if aTotalImprovementYield[0] > aBaseAltUpgradeImprovementYield[0] or aTotalImprovementYield[1] > aBaseAltUpgradeImprovementYield[1] or aTotalImprovementYield[2] > aBaseAltUpgradeImprovementYield[2]:
 							print CvImprovementInfo.getType()+" Total F/P/C: "+str(aTotalImprovementYield)+", "+CvImprovementAltUpgradeInfo.getType()+" Alt Upgrade F/P/C: "+str(aBaseAltUpgradeImprovementYield)
 					
-							
-					
+			# List of civics
+			if getInfo == GC.getCivicInfo:
+				CvCivicInfo = getInfo(i)
+				if TechReq == -1:
+					TechReq = "None"
+				else:
+					TechReq = GC.getTechInfo(TechReq).getDescription()
+				print GC.getCivicOptionInfo(CvCivicInfo.getCivicOptionType()).getDescription()+" "+CvCivicInfo.getDescription()+" "+TechReq+" "+str(iTechLoc)
 			
 			if item:
 				ListDict[(iTechLoc, iTechRow, item.getDescription())] = (str(iTechLoc)+": "+item.getDescription(), i)
