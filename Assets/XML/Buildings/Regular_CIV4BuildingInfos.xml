@@ -12820,7 +12820,7 @@
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ANIMAL_HUSBANDRY</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>74</iCost>
 			<YieldChanges>
 				<iYield>5</iYield>
