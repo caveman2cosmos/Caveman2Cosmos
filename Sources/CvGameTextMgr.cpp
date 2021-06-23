@@ -23121,31 +23121,26 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 
-		if (kBuilding.getGlobalBuildingProductionModifier(NO_BUILDING) != 0)
+		iLast = 0;
+		bool bGlobal = false;
+		foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingProductionModifiers())
 		{
-			iLast = 0;
-			bool bGlobal = false;
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
-			{
-				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+			const BuildingTypes eLoopBuilding = modifier.first;
 
-				if (GC.getGame().canEverConstruct(eLoopBuilding))
-				{
-					if (kBuilding.getGlobalBuildingProductionModifier(iI) != 0)
-					{
-						if (bGlobal && kBuilding.getGlobalBuildingProductionModifier(iI) != iLast)
-							szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL"));
-						bGlobal = true;
-						szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getGlobalBuildingProductionModifier(iI)), (kBuilding.getGlobalBuildingProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_SLOW")).c_str());
-						szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-						setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (kBuilding.getGlobalBuildingProductionModifier(iI) != iLast));
-						iLast = kBuilding.getGlobalBuildingProductionModifier(iI);
-					}
-				}
+			if (GC.getGame().canEverConstruct(eLoopBuilding))
+			{
+				if (bGlobal && modifier.second != iLast)
+					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL"));
+				bGlobal = true;
+				szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(modifier.second), (modifier.second > 0 ? gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_SLOW")).c_str());
+				szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
+				setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (modifier.second != iLast));
+				iLast = modifier.second;
 			}
-			if (bGlobal)
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL"));
 		}
+		if (bGlobal)
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL"));
+
 		//City Growth Speed Modifier
 
 		if (kBuilding.getPopulationgrowthratepercentage() != 0)

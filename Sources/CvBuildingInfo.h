@@ -347,7 +347,7 @@ public:
 	bool isPrereqOrFeature(int i) const;
 
 	const IDValueMap<BuildingTypes, int>& getBuildingProductionModifiers() const { return m_aBuildingProductionModifier; }
-	int getGlobalBuildingProductionModifier(int i) const;
+	const IDValueMap<BuildingTypes, int>& getGlobalBuildingProductionModifiers() const { return m_aGlobalBuildingProductionModifier; }
 	int getGlobalBuildingCostModifier(int i) const;
 	int getBonusDefenseChanges(int i) const;
 
@@ -756,10 +756,7 @@ private:
 
 	int* m_piCommerceAttacks;
 	int* m_piBonusDefenseChanges;
-	int* m_piBuildingProductionModifier;
-	int* m_piGlobalBuildingProductionModifier;
 	int* m_piGlobalBuildingCostModifier;
-	int* m_piBuildingHappinessChanges;
 	int* m_piPrereqNumOfBuilding;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
@@ -838,6 +835,7 @@ private:
 	IDValueMap<UnitCombatTypes, int> m_aUnitCombatExtraStrength;
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
 	IDValueMap<BuildingTypes, int> m_aBuildingProductionModifier;
+	IDValueMap<BuildingTypes, int> m_aGlobalBuildingProductionModifier;
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;
 	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;

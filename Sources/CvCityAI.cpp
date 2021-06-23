@@ -5966,37 +5966,27 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 
-					if (kBuilding.getGlobalBuildingProductionModifier(NO_BUILDING) != 0)
+					foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingProductionModifiers())
 					{
-						int globalBuildingProductionModifierValue = 0;
-						for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+						const BuildingTypes eLoopBuilding = modifier.first;
+						if (kOwner.canConstruct(eLoopBuilding))
 						{
-							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Building2");
+							const int iModifier = modifier.second;
 
-							if (kBuilding.getGlobalBuildingProductionModifier(iI) != 0)
+							if (iModifier > -100)
 							{
-								const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-								if (kOwner.canConstruct(eLoopBuilding))
-								{
-									const int iModifier = kBuilding.getGlobalBuildingProductionModifier(iI);
-									const int iOriginalCost = getHurryCost(eLoopBuilding);
-
-									if (iModifier > -100)
-									{
-										const int iCount = count_if(kOwner.cities(),
-											CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
-										);
-										const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
-										globalBuildingProductionModifierValue += ((iOriginalCost - iNewCost) * iCount) / 10;
-									}
-									else
-									{//If the modifier is less than -100, avoid it like the plague
-										globalBuildingProductionModifierValue -= 100;
-									}
-								}
+								const int iCount = count_if(kOwner.cities(),
+									CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
+								);
+								const int iOriginalCost = getHurryCost(eLoopBuilding);
+								const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
+								iValue += ((iOriginalCost - iNewCost) * iCount) / 10;
+							}
+							else
+							{//If the modifier is less than -100, avoid it like the plague
+								iValue -= 100;
 							}
 						}
-						iValue += globalBuildingProductionModifierValue;
 					}
 
 					if (kBuilding.getGlobalBuildingCostModifier(NO_BUILDING) != 0)
@@ -16188,35 +16178,27 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					}
 				}
 
-				if (kBuilding.getGlobalBuildingProductionModifier(NO_BUILDING) != 0)
+				foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingProductionModifiers())
 				{
-					int globalBuildingProductionModifierValue = 0;
-					for (int iI = 0; iI < iNumBuildings; iI++)
+					const BuildingTypes eLoopBuilding = modifier.first;
+					if (canConstruct(eLoopBuilding))
 					{
-						if (kBuilding.getGlobalBuildingProductionModifier(iI) != 0)
-						{
-							const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-							if (canConstruct(eLoopBuilding))
-							{
-								const int iModifier = kBuilding.getGlobalBuildingProductionModifier(iI);
-								const int iOriginalCost = getHurryCost(eLoopBuilding);
+						const int iModifier = modifier.second;
+						const int iOriginalCost = getHurryCost(eLoopBuilding);
 
-								if (iModifier > -100)
-								{
-									const int iCount = count_if(kOwner.cities(),
-										CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
-									);
-									const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
-									globalBuildingProductionModifierValue += ((iOriginalCost - iNewCost) * iCount) / 10;
-								}
-								else
-								{//If the modifier is less than -100, avoid it like the plague
-									globalBuildingProductionModifierValue -= 100;
-								}
-							}
+						if (iModifier > -100)
+						{
+							const int iCount = count_if(kOwner.cities(),
+								CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
+							);
+							const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
+							iValue += ((iOriginalCost - iNewCost) * iCount) / 10;
+						}
+						else
+						{//If the modifier is less than -100, avoid it like the plague
+							iValue -= 100;
 						}
 					}
-					iValue += globalBuildingProductionModifierValue;
 				}
 
 				if (kBuilding.getGlobalBuildingCostModifier(NO_BUILDING) != 0)
