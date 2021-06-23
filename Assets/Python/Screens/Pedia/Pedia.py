@@ -1907,8 +1907,8 @@ class Pedia:
 				if TechReq == -1:
 					TechReq = "None"
 				else:
-					TechReq = GC.getTechInfo(TechReq).getDescription()
-				print GC.getCivicOptionInfo(CvCivicInfo.getCivicOptionType()).getDescription()+" "+CvCivicInfo.getDescription()+" "+TechReq+" "+str(iTechLoc)
+					TechReq = GC.getTechInfo(TechReq).getType()
+				print GC.getCivicOptionInfo(CvCivicInfo.getCivicOptionType()).getType()+" "+CvCivicInfo.getType()+" "+TechReq+" "+str(iTechLoc)
 			
 			if item:
 				ListDict[(iTechLoc, iTechRow, item.getDescription())] = (str(iTechLoc)+": "+item.getDescription(), i)
