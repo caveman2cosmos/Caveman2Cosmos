@@ -1329,6 +1329,12 @@ class Pedia:
 							elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
 								bonuslist[bonus] = iTechLoc
 								
+			#Check if building obsoletion isn't too close to tech unlock.
+			if CvBuildingInfo.getObsoleteTech() != -1:
+				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+				if iObsoleteTechLoc - iTechLoc <= 5:
+					print CvBuildingInfo.getType()+" Unlock: "+str(iTechLoc)+" Obsoletion: "+str(iObsoleteTechLoc)+" Difference: "+str(iObsoleteTechLoc - iTechLoc)
+								
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
 			if iBuildingType != -1:
