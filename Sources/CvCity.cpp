@@ -5415,10 +5415,9 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeDomainProductionModifier((DomainTypes)iI, kBuilding.getDomainProductionModifier(iI) * iChange);
 	}
 
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	foreach_(const UnitModifier2& modifier, kBuilding.getUnitProductionModifiers())
 	{
-		PROFILE("CvCity::processBuilding.UniClasses");
-		changeUnitProductionModifier(((UnitTypes)iI), kBuilding.getUnitProductionModifier(iI) * iChange);
+		changeUnitProductionModifier(modifier.first, modifier.second * iChange);
 	}
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{

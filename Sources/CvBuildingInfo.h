@@ -332,7 +332,8 @@ public:
 	int getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const;
 	int getNumGlobalBuildingCommerceChanges() const;
 
-	int getUnitProductionModifier(int i) const;
+	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
+	//int getUnitProductionModifier(int i) const;
 
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
@@ -363,9 +364,6 @@ public:
 
 	std::vector<CvString> m_aszPrereqAndCivicsforPass3;
 	std::vector<bool> m_abPrereqAndCivicsforPass3;
-
-	std::vector<CvString> m_aszUnitProdModforPass3;
-	std::vector<int> m_aiUnitProdModforPass3;
 
 	int getReplacementBuilding(const int i) const;
 	short getNumReplacementBuilding() const;
@@ -757,8 +755,6 @@ private:
 	bool* m_pabHurry;
 
 	int* m_piCommerceAttacks;
-
-	int* m_piUnitProductionModifier;
 	int* m_piUnitCombatExtraStrength;
 	int* m_piBonusDefenseChanges;
 	int* m_piBuildingProductionModifier;
@@ -840,6 +836,7 @@ private:
 	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
+	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;
 	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;
