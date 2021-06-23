@@ -17518,7 +17518,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAGINOTLINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAGINOTLINE</MovieDefineTag>
-			<ObsoleteTech>TECH_MECHANIZED_WARFARE</ObsoleteTech>
+			<ObsoleteTech>TECH_MODERN_WARFARE</ObsoleteTech>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
