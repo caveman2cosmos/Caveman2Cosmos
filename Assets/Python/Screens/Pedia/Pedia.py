@@ -1329,11 +1329,27 @@ class Pedia:
 							elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
 								bonuslist[bonus] = iTechLoc
 								
-			#Check if building obsoletion isn't too close to tech unlock.
+			# Check if building obsoletion isn't too close to tech unlock.
 			if CvBuildingInfo.getObsoleteTech() != -1:
 				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
 				if iObsoleteTechLoc - iTechLoc <= 5:
 					print CvBuildingInfo.getType()+" Unlock: "+str(iTechLoc)+" Obsoletion: "+str(iObsoleteTechLoc)+" Difference: "+str(iObsoleteTechLoc - iTechLoc)
+					
+			# Check obsoletion of replacements
+			if CvBuildingInfo.getObsoleteTech() != -1:
+				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+			else:
+				iObsoleteTechLoc = 999
+			for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+				CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
+				iReplacTechLoc = self.checkTechRequirementLocation(CvBuildingReplacement)[0]
+				if CvBuildingReplacement.getObsoleteTech() != -1:
+					iReplacObsoleteTechLoc = GC.getTechInfo(CvBuildingReplacement.getObsoleteTech()).getGridX()
+				else:
+					iReplacObsoleteTechLoc = 999
+				
+				if iObsoleteTechLoc <= iReplacTechLoc:
+					print CvBuildingInfo.getType()+": "+str(iTechLoc)+"/"+str(iObsoleteTechLoc)+" -> "+CvBuildingReplacement.getType()+": "+str(iReplacTechLoc)+"/"+str(iReplacObsoleteTechLoc)
 								
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
