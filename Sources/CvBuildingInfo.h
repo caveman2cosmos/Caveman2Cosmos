@@ -346,8 +346,8 @@ public:
 	bool isPrereqOrImprovement(int i) const;
 	bool isPrereqOrFeature(int i) const;
 
-	int getBuildingProductionModifier(int i) const;
-	int getGlobalBuildingProductionModifier(int i) const;
+	const IDValueMap<BuildingTypes, int>& getBuildingProductionModifiers() const { return m_aBuildingProductionModifier; }
+	const IDValueMap<BuildingTypes, int>& getGlobalBuildingProductionModifiers() const { return m_aGlobalBuildingProductionModifier; }
 	int getGlobalBuildingCostModifier(int i) const;
 	int getBonusDefenseChanges(int i) const;
 
@@ -401,7 +401,7 @@ public:
 	int getTechYieldModifier(int i, int j) const;
 	int* getTechYieldModifierArray(int i) const;
 
-	int getUnitCombatExtraStrength(int i) const;
+	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
 
 	int getCommerceAttacks(int i) const;
 	int* getCommerceAttacksArray() const;
@@ -755,12 +755,8 @@ private:
 	bool* m_pabHurry;
 
 	int* m_piCommerceAttacks;
-	int* m_piUnitCombatExtraStrength;
 	int* m_piBonusDefenseChanges;
-	int* m_piBuildingProductionModifier;
-	int* m_piGlobalBuildingProductionModifier;
 	int* m_piGlobalBuildingCostModifier;
-	int* m_piBuildingHappinessChanges;
 	int* m_piPrereqNumOfBuilding;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
@@ -836,7 +832,10 @@ private:
 	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
+	IDValueMap<UnitCombatTypes, int> m_aUnitCombatExtraStrength;
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
+	IDValueMap<BuildingTypes, int> m_aBuildingProductionModifier;
+	IDValueMap<BuildingTypes, int> m_aGlobalBuildingProductionModifier;
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;
 	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;
