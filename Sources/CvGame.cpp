@@ -107,6 +107,9 @@ CvGame::~CvGame()
 
 void CvGame::init(HandicapTypes eHandicap)
 {
+	logOOSSpecial(198, -1, -1, -1);
+	GC.getInitCore().endGameSetup();
+	logOOSSpecial(199, -1, -1, -1);
 	//--------------------------------
 	// Init saved data
 	reset(eHandicap);
@@ -484,6 +487,7 @@ void CvGame::init(HandicapTypes eHandicap)
 	AI_init();
 
 	doUpdateCacheOnTurn();
+	logOOSSpecial(201, -1, -1, -1);
 }
 
 //
@@ -492,6 +496,7 @@ void CvGame::init(HandicapTypes eHandicap)
 void CvGame::setInitialItems()
 {
 	PROFILE_FUNC();
+	logOOSSpecial(202, -1, -1, -1);
 
 	initFreeState();
 	assignStartingPlots();
@@ -537,6 +542,7 @@ void CvGame::setInitialItems()
 		addLandmarkSigns();
 		updateInitialSigns();
 	}
+	logOOSSpecial(203, -1, -1, -1);
 }
 
 

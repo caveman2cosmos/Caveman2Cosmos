@@ -485,11 +485,10 @@ void CvInitCore::reassignPlayer(PlayerTypes eOldID, PlayerTypes eNewID)
 	*/
 }
 
-void CvInitCore::closeInactiveSlots()
+void CvInitCore::endGameSetup()
 {
 	// Open inactive slots mean different things to different game modes and types...
 	// Let's figure out what they mean for us
-
 	for (int i = 0; i < MAX_PC_PLAYERS; i++)
 	{
 		const PlayerTypes eID = static_cast<PlayerTypes>(i);
@@ -515,13 +514,22 @@ void CvInitCore::closeInactiveSlots()
 			gDLL->sendPlayerInfo(eID);
 		}
 	}
+
+	// Toffer - Not all NPC slots are in use, so just close them all at this point.
 	for (int i = MAX_PC_PLAYERS; i < MAX_PLAYERS; i++)
 	{
 		const PlayerTypes eID = static_cast<PlayerTypes>(i);
+		GC.getGame().logOOSSpecial(666, i, (int)m_aeSlotStatus[eID], (int)m_aeSlotClaim[eID]);
 		m_aeSlotStatus[eID] = SS_CLOSED;
 		m_aeSlotClaim[eID] = SLOTCLAIM_UNASSIGNED;
 	}
 }
+
+
+// Toffer - Only called for host when starting a MP game, called by exe.
+//	Be careful of what you add to this one, OOS alert.
+//	Moved its content to endGameSetup() above, which is called shortly after for all players.
+void CvInitCore::closeInactiveSlots() { }
 
 void CvInitCore::reopenInactiveSlots()
 {
@@ -729,7 +737,6 @@ void CvInitCore::resetPlayer(PlayerTypes eID)
 
 
 		// Slot data
-
 		if (eID < MAX_PC_PLAYERS)
 		{
 			m_aeSlotStatus[eID] = SS_CLOSED;

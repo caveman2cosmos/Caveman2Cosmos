@@ -279,6 +279,7 @@ public:
 	unsigned int getSavegameAssetCheckSum() const;
 	void calculateAssetCheckSum();
 	void checkVersions();
+	void endGameSetup();
 
 // BUG - EXE/DLL Paths - start
 	// EF: should these be CvWString?
