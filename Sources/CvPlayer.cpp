@@ -6991,19 +6991,14 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 		return false;
 	}
 
-	const int numBuildingInfos = GC.getNumBuildingInfos();
-
-	if (kBuilding.getPrereqNumOfBuilding(NO_BUILDING) > 0)
+	foreach_(const BuildingModifier2& modifier, kBuilding.getPrereqNumOfBuildings())
 	{
-		for (int iI = 0; iI < numBuildingInfos; iI++)
-		{
-			const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eBuildingX = modifier.first;
 
-			if (!currentTeam.isObsoleteBuilding(eBuildingX)
-			&& getBuildingCount(eBuildingX) < getBuildingPrereqBuilding(eBuilding, eBuildingX, 0))
-			{
-				return false;
-			}
+		if (!currentTeam.isObsoleteBuilding(eBuildingX)
+		&& getBuildingCount(eBuildingX) < getBuildingPrereqBuilding(eBuilding, eBuildingX, 0))
+		{
+			return false;
 		}
 	}
 
@@ -7058,21 +7053,18 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 			return false;
 		}
 
-		if (kBuilding.getPrereqNumOfBuilding(NO_BUILDING) > 0)
+		foreach_(const BuildingModifier2& modifier, kBuilding.getPrereqNumOfBuildings())
 		{
-			for (int iI = 0; iI < numBuildingInfos; iI++)
-			{
-				const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iI);
+			const BuildingTypes eBuildingX = modifier.first;
 
-				if (!currentTeam.isObsoleteBuilding(eBuildingX)
-				&& getBuildingCount(eBuildingX) < getBuildingPrereqBuilding(eBuilding, eBuildingX, bContinue ? 0 : getBuildingMaking(eBuilding)))
+			if (!currentTeam.isObsoleteBuilding(eBuildingX)
+			&& getBuildingCount(eBuildingX) < getBuildingPrereqBuilding(eBuilding, eBuildingX, bContinue ? 0 : getBuildingMaking(eBuilding)))
+			{
+				if (probabilityEverConstructable != NULL)
 				{
-					if (probabilityEverConstructable != NULL)
-					{
-						*probabilityEverConstructable = 20;
-					}
-					return false;
+					*probabilityEverConstructable = 20;
 				}
+				return false;
 			}
 		}
 
