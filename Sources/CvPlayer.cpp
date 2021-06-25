@@ -12104,7 +12104,6 @@ void CvPlayer::setNewPlayerAlive(bool bNewValue)
 {
 	if (isAlive() != bNewValue)
 	{
-		GC.getGame().logOOSSpecial(201, (int)bNewValue, -1, -1);
 		m_bAlive = bNewValue;
 
 		GET_TEAM(getTeam()).changeAliveCount((isAlive()) ? 1 : -1);
@@ -12184,7 +12183,6 @@ void CvPlayer::setNewPlayerAlive(bool bNewValue)
 		}
 
 		GC.getGame().setScoreDirty(true);
-		GC.getGame().logOOSSpecial(202, (int)bNewValue, -1, -1);
 	}
 }
 
