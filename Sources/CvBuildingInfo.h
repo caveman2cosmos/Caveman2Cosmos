@@ -29,12 +29,54 @@ public:
 	CvBuildingInfo();
 	virtual ~CvBuildingInfo();
 
+	bool isPrereqPower() const						{ return m_bPrereqPower; }
+	bool isApplyFreePromotionOnMove() const			{ return m_bApplyFreePromotionOnMove; }
+	bool isNoEnemyPillagingIncome() const			{ return m_bNoEnemyPillagingIncome; }
+	bool isProvidesFreshWater() const				{ return m_bProvidesFreshWater; }
+	bool isForceAllTradeRoutes() const				{ return m_bForceAllTradeRoutes; }
+	bool isForceNoPrereqScaling() const				{ return m_bForceNoPrereqScaling; }
+	bool isPrereqWar() const						{ return m_bPrereqWar; }
+	bool isRequiresActiveCivics() const				{ return m_bRequiresActiveCivics; }
+	bool isZoneOfControl() const					{ return m_bZoneOfControl; }
+	bool isProtectedCulture() const					{ return m_bProtectedCulture; }
+	bool isNoLimit() const							{ return m_bNoLimit; }
+	bool isTeamShare() const						{ return m_bTeamShare; }
+	bool isAutoBuild() const						{ return m_bAutoBuild; }
+	bool isWater() const							{ return m_bWater; }
+	bool isRiver() const							{ return m_bRiver; }
+	bool isFreshWater() const						{ return m_bFreshWater; }
+	bool isPower() const							{ return m_bPower; }
+	bool isDirtyPower() const						{ return m_bDirtyPower; }
+	bool isAreaCleanPower() const					{ return m_bAreaCleanPower; }
+	bool isOrbital() const							{ return m_bOrbital; }
+	bool isOrbitalInfrastructure() const			{ return m_bOrbitalInfrastructure; }
+	bool isNoHolyCity() const						{ return m_bNoHolyCity; }
+	bool isAreaBorderObstacle() const				{ return m_bAreaBorderObstacle; }
+	bool isForceTeamVoteEligible() const			{ return m_bForceTeamVoteEligible; }
+	bool isCapital() const							{ return m_bCapital; }
+	bool isGovernmentCenter() const					{ return m_bGovernmentCenter; }
+	bool isGoldenAge() const						{ return m_bGoldenAge; }
+	bool isMapCentering() const						{ return m_bMapCentering; }
+	bool isNoUnhappiness() const					{ return m_bNoUnhappiness; }
+	bool isNoUnhealthyPopulation() const			{ return m_bNoUnhealthyPopulation; }
+	bool isBuildingOnlyHealthy() const				{ return m_bBuildingOnlyHealthy; }
+	bool isNeverCapture() const						{ return m_bNeverCapture; }
+	bool isNukeImmune() const						{ return m_bNukeImmune; }
+	bool isCenterInCity() const						{ return m_bCenterInCity; }
+	bool needStateReligionInCity() const			{ return m_bStateReligionInCity; }
+	bool isAllowsNukes() const						{ return m_bAllowsNukes; }
+	bool isDamageToAttackerIgnoresArmor() const;
+	bool isDamageAllAttackers() const;
+	bool isDamageAttackerCapable() const;
+	bool isQuarantine() const;
+	bool getNotShowInCity() const;
+	bool EnablesOtherBuildings() const;
+	bool EnablesUnits() const;
+
 	int getMaxGlobalInstances() const				{ return m_iMaxGlobalInstances; }
 	int getMaxTeamInstances() const					{ return m_iMaxTeamInstances; }
 	int getMaxPlayerInstances() const				{ return m_iMaxPlayerInstances; }
 	int getExtraPlayerInstances() const				{ return m_iExtraPlayerInstances; }
-	bool isNoLimit() const							{ return m_bNoLimit; }
-
 	int getVictoryPrereq() const					{ return m_iVictoryPrereq; }
 	int getFreeStartEra() const						{ return m_iFreeStartEra; }
 	int getMaxStartEra() const						{ return m_iMaxStartEra; }
@@ -45,9 +87,6 @@ public:
 	int getFreeBonus() const						{ return m_iFreeBonus; }
 	int getNumFreeBonuses() const					{ return m_iNumFreeBonuses; }
 	int getNumExtraFreeBonuses() const				{ return m_aExtraFreeBonuses.size(); }
-	BonusTypes getExtraFreeBonus(int i) const;
-	int getExtraFreeBonusNum(int i) const;
-	bool hasExtraFreeBonus(BonusTypes eBonus) const;
 	int getFreeBuilding() const						{ return m_iFreeBuilding; }
 	int getFreeAreaBuilding() const					{ return m_iFreeAreaBuilding; }
 	int getFreePromotion() const					{ return m_iFreePromotion; }
@@ -97,11 +136,8 @@ public:
 	int getPowerValue() const						{ return m_iPowerValue * 100; }
 	int getSpecialBuildingType() const				{ return m_iSpecialBuildingType; }
 	int getAdvisorType() const						{ return m_iAdvisorType; }
-
-	// REVDCM CanConstruct 2/16/10 by phungus420
 	int getPrereqGameOption() const					{ return m_iPrereqGameOption; }
 	int getNotGameOption() const					{ return m_iNotGameOption; }
-
 	int getHolyCity() const							{ return m_iHolyCity; }
 	int getReligionType() const						{ return m_iReligionType; }
 	int getPrereqStateReligion() const				{ return m_iStateReligion; }
@@ -115,7 +151,6 @@ public:
 	int getGreatPeopleRateChange() const			{ return m_iGreatPeopleRateChange; }
 	int getConquestProbability() const				{ return m_iConquestProbability; }
 	int getMaintenanceModifier() const				{ return m_iMaintenanceModifier; }
-	//DPII < Maintenance Modifiers >
 	int getGlobalMaintenanceModifier() const		{ return m_iGlobalMaintenanceModifier; }
 	int getAreaMaintenanceModifier() const			{ return m_iAreaMaintenanceModifier; }
 	int getOtherAreaMaintenanceModifier() const		{ return m_iOtherAreaMaintenanceModifier; }
@@ -123,7 +158,6 @@ public:
 	int getNumCitiesMaintenanceModifier() const		{ return m_iNumCitiesMaintenanceModifier; }
 	int getCoastalDistanceMaintenanceModifier() const { return m_iCoastalDistanceMaintenanceModifier; }
 	int getConnectedCityMaintenanceModifier() const	{ return m_iConnectedCityMaintenanceModifier; }
-	//DPII < Maintenance Modifiers >
 	int getWarWearinessModifier() const				{ return m_iWarWearinessModifier; }
 	int getGlobalWarWearinessModifier() const		{ return m_iGlobalWarWearinessModifier; }
 	int getEnemyWarWearinessModifier() const		{ return m_iEnemyWarWearinessModifier; }
@@ -133,57 +167,88 @@ public:
 	int getGlobalHealth() const						{ return m_iGlobalHealth; }
 	int getGlobalPopulationChange() const			{ return m_iGlobalPopulationChange; }
 	int getFreeTechs() const						{ return m_iFreeTechs; }
-	TechTypes getFreeSpecialTech() const			{ return m_eFreeSpecialTech; }
 	int getDefenseModifier() const					{ return m_iDefenseModifier; }
 	int getBombardDefenseModifier() const			{ return m_iBombardDefenseModifier; }
 	int getAllCityDefenseModifier() const			{ return m_iAllCityDefenseModifier; }
 	int getEspionageDefenseModifier() const			{ return m_iEspionageDefenseModifier; }
-
-	// REVDCM Building Effects 4/09/10 by phungus420
 	int getUnitUpgradePriceModifier() const			{ return m_iUnitUpgradePriceModifier; }
 	int getRevIdxLocal() const						{ return m_iRevIdxLocal; }
 	int getRevIdxNational() const					{ return m_iRevIdxNational; }
 	int getRevIdxDistanceModifier() const			{ return m_iRevIdxDistanceModifier; }
-
 	int getMissionType() const						{ return m_iMissionType; }
 	void setMissionType(int iNewType)				{ m_iMissionType = iNewType; }
 	int getVoteSourceType() const					{ return m_iVoteSourceType; }
+	int getDCMAirbombMission() const				{ return m_iDCMAirbombMission; }
+	int getFreePromotion_2() const					{ return m_iFreePromotion_2; }
+	int getFreePromotion_3() const					{ return m_iFreePromotion_3; }
+	int getPrereqVicinityBonus() const				{ return m_iPrereqVicinityBonus; }
+	int getPrereqRawVicinityBonus() const			{ return m_iPrereqRawVicinityBonus; }
+	int getGlobalPopulationgrowthratepercentage() const { return m_iGlobalPopulationgrowthratepercentage; }
+	int getPopulationgrowthratepercentage() const	{ return m_iPopulationgrowthratepercentage; }
+	int getPillageGoldModifier() const				{ return m_iPillageGoldModifier; }
+	int getWorldTradeRoutes() const					{ return m_iWorldTradeRoutes; }
+	int getLineOfSight() const						{ return m_iLineOfSight; }
+	int getInflationModifier() const				{ return m_iInflationModifier; }
+	int getInvasionChance() const					{ return m_iInvasionChance; }
+	int getAdjacentDamagePercent() const			{ return m_iAdjacentDamagePercent; }
+	int getPrereqPopulation() const					{ return m_iPrereqPopulation; }
+	int getProductionContinueBuilding() const		{ return m_iProductionContinueBuilding; }
+	int getPrereqCultureLevel() const				{ return m_iPrereqCultureLevel; }
+	int getWorkableRadius() const					{ return m_iWorkableRadius; }
+	int getPrereqAnyoneBuilding() const				{ return m_iPrereqAnyoneBuilding; }
+	int getExtendsBuilding() const					{ return m_iExtendsBuilding; }
+	int getObsoletesToBuilding() const				{ return m_iObsoletesToBuilding; }
+	int getOccupationTimeModifier() const			{ return m_iOccupationTimeModifier; }
+	int getNoEntryDefenseLevel() const;
+	int getNumUnitFullHeal() const					{ return m_iNumUnitFullHeal; }
+	int getNumPopulationEmployed() const			{ return m_iNumPopulationEmployed; }
+	int getHappinessPercentPerPopulation() const	{ return m_iHappinessPercentPerPopulation; }
+	int getHealthPercentPerPopulation() const		{ return m_iHealthPercentPerPopulation; }
+	int getLinePriority() const;
+	int getOutbreakBase() const;
+	int getOvercomeBase() const;
+	int getTradeCommunicability() const;
+#ifdef STRENGTH_IN_NUMBERS
+	int getFrontSupportPercentModifier() const			{ return m_iFrontSupportPercentModifier; }
+	int getShortRangeSupportPercentModifier() const		{ return m_iShortRangeSupportPercentModifier; }
+	int getMediumRangeSupportPercentModifier() const	{ return m_iMediumRangeSupportPercentModifier; }
+	int getLongRangeSupportPercentModifier() const		{ return m_iLongRangeSupportPercentModifier; }
+	int getFlankSupportPercentModifier() const			{ return m_iFlankSupportPercentModifier; }
+#endif
+	int getNationalCaptureProbabilityModifier() const;
+	int getNationalCaptureResistanceModifier() const;
+	int getLocalCaptureProbabilityModifier() const;
+	int getLocalCaptureResistanceModifier() const;
+	int getLocalDynamicDefense() const;
+	int getRiverDefensePenalty() const;
+	int getLocalRepel() const;
+	int getMinDefense() const;
+	int getBuildingDefenseRecoverySpeedModifier() const;
+	int getCityDefenseRecoverySpeedModifier() const;
+	int getDamageAttackerChance() const;
+	int getDamageToAttacker() const;
+	int getMaxPopulationAllowed() const;
+	int getMaxPopulationChange() const;
+	int getInsidiousness() const;
+	int getInvestigation() const;
+	int getPopulationChange() const;
+	int getOneTimePopulationPercentLoss() const;
+	int getMaxPopAllowed() const;
 
 	float getVisibilityPriority() const				{ return m_fVisibilityPriority; }
 
-	bool isTeamShare() const						{ return m_bTeamShare; }
-	bool isAutoBuild() const						{ return m_bAutoBuild; }
-	bool isWater() const							{ return m_bWater; }
-	bool isRiver() const							{ return m_bRiver; }
-	bool isFreshWater() const						{ return m_bFreshWater; }
-	bool isPower() const							{ return m_bPower; }
-	bool isDirtyPower() const						{ return m_bDirtyPower; }
-	bool isAreaCleanPower() const					{ return m_bAreaCleanPower; }
-	bool isOrbital() const							{ return m_bOrbital; }
-	bool isOrbitalInfrastructure() const			{ return m_bOrbitalInfrastructure; }
-	bool isNoHolyCity() const						{ return m_bNoHolyCity; }
-	bool isAreaBorderObstacle() const				{ return m_bAreaBorderObstacle; }
-	bool isForceTeamVoteEligible() const			{ return m_bForceTeamVoteEligible; }
-	bool isCapital() const							{ return m_bCapital; }
-	// DCM 04/19/09 Johny Smith
-	// Dale - AB: Bombing START
-	int getDCMAirbombMission() const				{ return m_iDCMAirbombMission; }
-	// Dale - AB: Bombing END
-	bool isGovernmentCenter() const					{ return m_bGovernmentCenter; }
-	bool isGoldenAge() const						{ return m_bGoldenAge; }
-	bool isMapCentering() const						{ return m_bMapCentering; }
-	bool isNoUnhappiness() const					{ return m_bNoUnhappiness; }
-	bool isNoUnhealthyPopulation() const			{ return m_bNoUnhealthyPopulation; }
-	bool isBuildingOnlyHealthy() const				{ return m_bBuildingOnlyHealthy; }
-	bool isNeverCapture() const						{ return m_bNeverCapture; }
-	bool isNukeImmune() const						{ return m_bNukeImmune; }
-	bool isCenterInCity() const						{ return m_bCenterInCity; }
-	bool needStateReligionInCity() const			{ return m_bStateReligionInCity; }
-	bool isAllowsNukes() const						{ return m_bAllowsNukes; }
+	TechTypes getFreeSpecialTech() const			{ return m_eFreeSpecialTech; }
+	UnitTypes getPropertySpawnUnit() const;
+	PropertyTypes getPropertySpawnProperty() const;
+	PromotionLineTypes getPromotionLineType() const;
 
 	const TCHAR* getConstructSound() const			{ return m_szConstructSound; }
 	const TCHAR* getArtDefineTag() const			{ return m_szArtDefineTag; }
 	const TCHAR* getMovieDefineTag() const			{ return m_szMovieDefineTag; }
+	const TCHAR* getButton() const;
+	const TCHAR* getMovie() const;
+	const CvArtInfoBuilding* getArtInfo() const;
+	const CvArtInfoMovie* getMovieInfo() const;
 
 	int getYieldChange(int i) const;
 	int* getYieldChangeArray() const;
@@ -233,14 +298,16 @@ public:
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
 	const python::list cyGetPrereqAndTechs() const;
 
-	int getBuildingHappinessChanges(int i) const;
-	int getPrereqNumOfBuilding(int i) const;
+	const IDValueMap<BuildingTypes, int>& getBuildingHappinessChanges() const { return m_aBuildingHappinessChanges; }
+	//int getBuildingHappinessChanges(BuildingTypes e) const;
 
 	int getFlavorValue(int i) const;
 	int getImprovementFreeSpecialist(int i) const;
 
 	bool isCommerceFlexible(int i) const;
 	bool isCommerceChangeOriginalOwner(int i) const;
+
+	int getPrereqNumOfBuilding(int i) const;
 
 	int getPrereqOrBuilding(const int i) const;
 	short getNumPrereqOrBuilding() const;
@@ -265,69 +332,24 @@ public:
 	int getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const;
 	int getNumGlobalBuildingCommerceChanges() const;
 
-	const CvArtInfoBuilding* getArtInfo() const;
-	const CvArtInfoMovie* getMovieInfo() const;
-	const TCHAR* getButton() const;
-	const TCHAR* getMovie() const;
+	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
+	//int getUnitProductionModifier(int i) const;
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	int getFreePromotion_2() const					{ return m_iFreePromotion_2; }
-	int getFreePromotion_3() const					{ return m_iFreePromotion_3; }
-	int getPrereqVicinityBonus() const				{ return m_iPrereqVicinityBonus; }
-	int getPrereqRawVicinityBonus() const			{ return m_iPrereqRawVicinityBonus; }
-	int getGlobalPopulationgrowthratepercentage() const { return m_iGlobalPopulationgrowthratepercentage; }
-	int getPopulationgrowthratepercentage() const	{ return m_iPopulationgrowthratepercentage; }
-	bool isPrereqPower() const						{ return m_bPrereqPower; }
-	bool isApplyFreePromotionOnMove() const			{ return m_bApplyFreePromotionOnMove; }
-	bool isNoEnemyPillagingIncome() const			{ return m_bNoEnemyPillagingIncome; }
-	bool isProvidesFreshWater() const				{ return m_bProvidesFreshWater; }
-	bool isForceAllTradeRoutes() const				{ return m_bForceAllTradeRoutes; }
-	bool isForceNoPrereqScaling() const				{ return m_bForceNoPrereqScaling; }
-	bool isPrereqWar() const						{ return m_bPrereqWar; }
-	bool isRequiresActiveCivics() const				{ return m_bRequiresActiveCivics; }
-	bool isZoneOfControl() const					{ return m_bZoneOfControl; }
-	bool isProtectedCulture() const					{ return m_bProtectedCulture; }
-	int getPillageGoldModifier() const				{ return m_iPillageGoldModifier; }
-	int getWorldTradeRoutes() const					{ return m_iWorldTradeRoutes; }
-	int getLineOfSight() const						{ return m_iLineOfSight; }
-	int getInflationModifier() const				{ return m_iInflationModifier; }
-	int getInvasionChance() const					{ return m_iInvasionChance; }
-	int getAdjacentDamagePercent() const			{ return m_iAdjacentDamagePercent; }
-	int getPrereqPopulation() const					{ return m_iPrereqPopulation; }
-	int getProductionContinueBuilding() const		{ return m_iProductionContinueBuilding; }
-	int getPrereqCultureLevel() const				{ return m_iPrereqCultureLevel; }
-	int getWorkableRadius() const					{ return m_iWorkableRadius; }
-	int getPrereqAnyoneBuilding() const				{ return m_iPrereqAnyoneBuilding; }
-	int getExtendsBuilding() const					{ return m_iExtendsBuilding; }
-	int getObsoletesToBuilding() const				{ return m_iObsoletesToBuilding; }
-	int getOccupationTimeModifier() const			{ return m_iOccupationTimeModifier; }
-	int getNoEntryDefenseLevel() const;
-	int getNumUnitFullHeal() const					{ return m_iNumUnitFullHeal; }
-	int getNumPopulationEmployed() const			{ return m_iNumPopulationEmployed; }
-	int getHappinessPercentPerPopulation() const	{ return m_iHappinessPercentPerPopulation; }
-	int getHealthPercentPerPopulation() const		{ return m_iHealthPercentPerPopulation; }
-
-	int getUnitProductionModifier(int i) const;
-
-	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const { return m_piPrereqOrVicinityBonuses; }
-	const python::list cyGetPrereqOrVicinityBonuses() const { return Cy::makeList(m_piPrereqOrVicinityBonuses); }
-
-	const std::vector<BonusTypes>& getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
-	const python::list cyGetPrereqOrRawVicinityBonuses() const { return Cy::makeList(m_aePrereqOrRawVicinityBonuses); }
+	BonusTypes getExtraFreeBonus(int i) const;
+	int getExtraFreeBonusNum(int i) const;
+	bool hasExtraFreeBonus(BonusTypes eBonus) const;
 
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
-
 	bool isPrereqOrTerrain(int i) const;
 	bool isPrereqAndTerrain(int i) const;
 	bool isPrereqOrImprovement(int i) const;
 	bool isPrereqOrFeature(int i) const;
-	int  getBuildingProductionModifier(int i) const;
-	int  getGlobalBuildingProductionModifier(int i) const;
-	int  getGlobalBuildingCostModifier(int i) const;
 
-	int  getBonusDefenseChanges(int i) const;
+	const IDValueMap<BuildingTypes, int>& getBuildingProductionModifiers() const { return m_aBuildingProductionModifier; }
+	const IDValueMap<BuildingTypes, int>& getGlobalBuildingProductionModifiers() const { return m_aGlobalBuildingProductionModifier; }
+	int getGlobalBuildingCostModifier(int i) const;
+	int getBonusDefenseChanges(int i) const;
 
 	std::vector<CvString> m_aszPrereqOrCivicsforPass3;
 	std::vector<bool> m_abPrereqOrCivicsforPass3;
@@ -342,9 +364,6 @@ public:
 
 	std::vector<CvString> m_aszPrereqAndCivicsforPass3;
 	std::vector<bool> m_abPrereqAndCivicsforPass3;
-
-	std::vector<CvString> m_aszUnitProdModforPass3;
-	std::vector<int> m_aiUnitProdModforPass3;
 
 	int getReplacementBuilding(const int i) const;
 	short getNumReplacementBuilding() const;
@@ -382,58 +401,10 @@ public:
 	int getTechYieldModifier(int i, int j) const;
 	int* getTechYieldModifierArray(int i) const;
 
-	int getUnitCombatExtraStrength(int i) const;
+	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
 
 	int getCommerceAttacks(int i) const;
 	int* getCommerceAttacksArray() const;
-
-	const CvProperties* getProperties() const { return &m_Properties; }
-	const CvProperties* getPropertiesAllCities() const { return &m_PropertiesAllCities; }
-	const CvProperties* getPrereqMinProperties() const { return &m_PrereqMinProperties; }
-	const CvProperties* getPrereqMaxProperties() const { return &m_PrereqMaxProperties; }
-	const CvProperties* getPrereqPlayerMinProperties() const { return &m_PrereqPlayerMinProperties; }
-	const CvProperties* getPrereqPlayerMaxProperties() const { return &m_PrereqPlayerMaxProperties; }
-
-	//TB Combat Mods (Buildings) begin
-	UnitTypes getPropertySpawnUnit() const;
-	PropertyTypes getPropertySpawnProperty() const;
-	PromotionLineTypes getPromotionLineType() const;
-	//TechTypes getFreeSpecialTech() const;
-	//integers
-	int getLinePriority() const;
-	int getOutbreakBase() const;
-	int getOvercomeBase() const;
-	int getTradeCommunicability() const;
-#ifdef STRENGTH_IN_NUMBERS
-	int getFrontSupportPercentModifier() const			{ return m_iFrontSupportPercentModifier; }
-	int getShortRangeSupportPercentModifier() const		{ return m_iShortRangeSupportPercentModifier; }
-	int getMediumRangeSupportPercentModifier() const	{ return m_iMediumRangeSupportPercentModifier; }
-	int getLongRangeSupportPercentModifier() const		{ return m_iLongRangeSupportPercentModifier; }
-	int getFlankSupportPercentModifier() const			{ return m_iFlankSupportPercentModifier; }
-#endif
-	int getNationalCaptureProbabilityModifier() const;
-	int getNationalCaptureResistanceModifier() const;
-	int getLocalCaptureProbabilityModifier() const;
-	int getLocalCaptureResistanceModifier() const;
-	int getLocalDynamicDefense() const;
-	int getRiverDefensePenalty() const;
-	int getLocalRepel() const;
-	int getMinDefense() const;
-	int getBuildingDefenseRecoverySpeedModifier() const;
-	int getCityDefenseRecoverySpeedModifier() const;
-	int getDamageAttackerChance() const;
-	int getDamageToAttacker() const;
-	int getMaxPopulationAllowed() const;
-	int getMaxPopulationChange() const;
-	int getInsidiousness() const;
-	int getInvestigation() const;
-	int getPopulationChange() const;
-	int getOneTimePopulationPercentLoss() const;
-	//Booleans
-	bool isDamageToAttackerIgnoresArmor() const;
-	bool isDamageAllAttackers() const;
-	bool isDamageAttackerCapable() const;
-	bool isQuarantine() const;
 
 	int getUnitCombatRetrainType(int i) const;
 	int getNumUnitCombatRetrainTypes() const;
@@ -448,7 +419,6 @@ public:
 	bool isMapType(int i) const;
 	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
 
-	//integer vectors with pairing method without delayed resolution
 	int getNumUnitCombatRepelModifiers() const;
 	int getUnitCombatRepelModifier(int iUnitCombat, bool bForLoad = false) const;
 
@@ -470,16 +440,6 @@ public:
 	int getNumTechOutbreakLevelChanges() const;
 	int getTechOutbreakLevelChange(int iTech) const;
 
-	//int getNumTechHappinessChanges() const;
-	int getTechHappiness(TechTypes eTech) const;
-	const IDValueMap<TechTypes, int>& getTechHappinessChanges() const { return m_aTechHappinessChanges; }
-	const python::list cyGetTechHappinessChanges() const { return m_aTechHappinessChanges.makeList(); }
-
-	//int getNumTechHealthChanges() const;
-	int getTechHealth(TechTypes eTech) const;
-	const IDValueMap<TechTypes, int>& getTechHealthChanges() const { return m_aTechHealthChanges; }
-	const python::list cyGetTechHealthChanges() const { return m_aTechHealthChanges.makeList(); }
-
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
 	bool isAnyLocalSpecialistYieldChanges() const { return m_ppaiLocalSpecialistYieldChange; }
@@ -490,10 +450,6 @@ public:
 
 	bool isHurry(int i) const;
 
-	int getMaxPopAllowed() const;
-
-	//cost BoolExpr* getFreePromotionCondition();
-	//Struct
 	const std::vector<FreePromoTypes>& getFreePromoTypes() const { return m_aFreePromoTypes; }
 	const std::vector<TraitTypes>& getFreeTraitTypes() const { return m_aiFreeTraitTypes; }
 
@@ -506,28 +462,10 @@ public:
 	int getNumAidRateChanges() const;
 	const AidRateChanges& getAidRateChange(int iIndex) const;
 
-	//Bool vector utilizing delayed resolution
 	int getNumEnabledCivilizationTypes() const;
 	const EnabledCivilizations& getEnabledCivilizationType(int iIndex) const;
-	//TB Combat Mods (Buildings) end
-
-	bool EnablesOtherBuildings() const;
-	bool isFreeBonusOfBuilding(BonusTypes eBonus) const;
-	bool EnablesUnits() const;
-
-	bool readPass3();
-
-	void getCheckSum(uint32_t& iSum) const;
-
-	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
-
-	bool isNewCityFree(const CvGameObject* pObject);
-
-	const BoolExpr* getConstructCondition() const;
 
 	int getVictoryThreshold(int i) const;
-
-	bool getNotShowInCity() const;
 
 	bool isAnySpecialistYieldChanges() const		{ return m_ppaiSpecialistYieldChange != NULL; }
 	bool isAnySpecialistCommerceChanges() const		{ return m_ppaiSpecialistCommerceChange != NULL; }
@@ -542,11 +480,97 @@ public:
 	bool isAnyVicinityBonusYieldChanges() const		{ return m_ppaiVicinityBonusYieldChanges != NULL; }
 	bool isAnyBonusCommercePercentChanges() const	{ return m_ppaiBonusCommercePercentChanges != NULL; }
 
-protected:
+	int getNumPrereqOrBonuses() const;
+	BonusTypes getPrereqOrBonuses(int i) const;
+	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
+	const python::list cyGetPrereqOrBonuses() const;
+
+	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const { return m_piPrereqOrVicinityBonuses; }
+	const python::list cyGetPrereqOrVicinityBonuses() const { return Cy::makeList(m_piPrereqOrVicinityBonuses); }
+
+	const std::vector<BonusTypes>& getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
+	const python::list cyGetPrereqOrRawVicinityBonuses() const { return Cy::makeList(m_aePrereqOrRawVicinityBonuses); }
+
+	int getTechHappiness(TechTypes eTech) const;
+	const IDValueMap<TechTypes, int>& getTechHappinessChanges() const { return m_aTechHappinessChanges; }
+	const python::list cyGetTechHappinessChanges() const { return m_aTechHappinessChanges.makeList(); }
+
+	int getTechHealth(TechTypes eTech) const;
+	const IDValueMap<TechTypes, int>& getTechHealthChanges() const { return m_aTechHealthChanges; }
+	const python::list cyGetTechHealthChanges() const { return m_aTechHealthChanges.makeList(); }
+
+	//cost BoolExpr* getFreePromotionCondition();
+
+	bool isFreeBonusOfBuilding(BonusTypes eBonus) const;
+
+	bool isNewCityFree(const CvGameObject* pObject);
+
+	const BoolExpr* getConstructCondition() const;
+
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
+
+	const CvProperties* getProperties() const { return &m_Properties; }
+	const CvProperties* getPropertiesAllCities() const { return &m_PropertiesAllCities; }
+	const CvProperties* getPrereqMinProperties() const { return &m_PrereqMinProperties; }
+	const CvProperties* getPrereqMaxProperties() const { return &m_PrereqMaxProperties; }
+	const CvProperties* getPrereqPlayerMinProperties() const { return &m_PrereqPlayerMinProperties; }
+	const CvProperties* getPrereqPlayerMaxProperties() const { return &m_PrereqPlayerMaxProperties; }
+
+	bool read(CvXMLLoadUtility* pXML);
+	bool readPass2(CvXMLLoadUtility* pXML);
+	bool readPass3();
+	void copyNonDefaults(CvBuildingInfo* pClassInfo);
+	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
+	void getCheckSum(uint32_t& iSum) const;
+
+private:
 	void setNotShowInCity();
 
 	bool m_bNoLimit;
 	bool m_bNotShowInCity;
+	bool m_bPrereqPower;
+	bool m_bApplyFreePromotionOnMove;
+	bool m_bNoEnemyPillagingIncome;
+	bool m_bProvidesFreshWater;
+	bool m_bForceAllTradeRoutes;
+	bool m_bForceNoPrereqScaling;
+	bool m_bPrereqWar;
+	bool m_bRequiresActiveCivics;
+	bool m_bZoneOfControl;
+	bool m_bProtectedCulture;
+	bool m_bTeamShare;
+	bool m_bWater;
+	bool m_bRiver;
+	bool m_bPower;
+	bool m_bFreshWater;
+	bool m_bDirtyPower;
+	bool m_bAreaCleanPower;
+	bool m_bOrbital;
+	bool m_bOrbitalInfrastructure;
+	bool m_bNoHolyCity;
+	bool m_bAreaBorderObstacle;
+	bool m_bForceTeamVoteEligible;
+	bool m_bCapital;
+	bool m_bGovernmentCenter;
+	bool m_bGoldenAge;
+	bool m_bMapCentering;
+	bool m_bNoUnhappiness;
+	bool m_bNoUnhealthyPopulation;
+	bool m_bBuildingOnlyHealthy;
+	bool m_bNeverCapture;
+	bool m_bNukeImmune;
+	bool m_bCenterInCity;
+	bool m_bStateReligionInCity;
+	bool m_bAllowsNukes;
+	bool m_bDamageToAttackerIgnoresArmor;
+	bool m_bDamageAllAttackers;
+	bool m_bDamageAttackerCapable;
+	bool m_bAutoBuild;
+	bool m_bQuarantine;
+	mutable bool m_bEnablesOtherBuildingsCalculated;
+	mutable bool m_bEnablesOtherBuildingsValue;
+	mutable bool m_bEnablesUnitsCalculated;
+	mutable bool m_bEnablesUnits;
 
 	int m_iFreePromotion_2;
 	int m_iFreePromotion_3;
@@ -573,62 +597,6 @@ protected:
 	int m_iNumPopulationEmployed;
 	int m_iHappinessPercentPerPopulation;
 	int m_iHealthPercentPerPopulation;
-	bool m_bPrereqPower;
-	bool m_bApplyFreePromotionOnMove;
-	bool m_bNoEnemyPillagingIncome;
-	bool m_bProvidesFreshWater;
-	bool m_bForceAllTradeRoutes;
-	bool m_bForceNoPrereqScaling;
-	bool m_bPrereqWar;
-	bool m_bRequiresActiveCivics;
-	bool m_bZoneOfControl;
-	bool m_bProtectedCulture;
-
-	std::vector<BonusTypes> m_piPrereqOrVicinityBonuses;
-	std::vector<BonusTypes> m_aePrereqOrRawVicinityBonuses;
-	int* m_piUnitProductionModifier;
-	bool* m_pbPrereqOrCivics;
-	bool* m_pbPrereqAndCivics;
-
-	int* m_piCommerceAttacks;
-
-	bool* m_pbPrereqOrTerrain;
-	bool* m_pbPrereqAndTerrain;
-	bool* m_pbPrereqOrImprovement;
-	bool* m_pbPrereqOrFeature;
-	int* m_piBonusDefenseChanges;
-	int** m_ppaiBonusCommerceModifier;
-	int* m_piUnitCombatExtraStrength;
-	int** m_ppaiTechCommerceChange;
-	int** m_ppaiTechYieldChange;
-	int** m_ppaiTechSpecialistChange;
-	int** m_ppaiTechCommerceModifier;
-	int** m_ppaiTechYieldModifier;
-	int** m_ppiImprovementYieldChanges;
-	int** m_ppaiBonusYieldChanges;
-	int** m_ppaiBonusCommercePercentChanges;
-	int** m_ppaiVicinityBonusYieldChanges;
-
-private:
-	int* m_piBuildingProductionModifier;
-	int* m_piGlobalBuildingProductionModifier;
-	int* m_piGlobalBuildingCostModifier;
-	int* m_piBuildingHappinessChanges;
-	int* m_piPrereqNumOfBuilding;
-
-	CvPropertyManipulators m_PropertyManipulators;
-
-public:
-	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBuildingInfo* pClassInfo);
-	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-	//Alberts2 PrereqBonuses
-	int getNumPrereqOrBonuses() const;
-	BonusTypes getPrereqOrBonuses(int i) const;
-	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
-	const python::list cyGetPrereqOrBonuses() const;
-
-protected:
 	int m_iVictoryPrereq;
 	int m_iFreeStartEra;
 	int m_iMaxStartEra;
@@ -638,8 +606,6 @@ protected:
 	int m_iPowerBonus;
 	int m_iFreeBonus;
 	int m_iNumFreeBonuses;
-	std::vector<std::pair<BonusTypes,int> > m_aExtraFreeBonuses;
-
 	int m_iFreeBuilding;
 	int m_iFreeAreaBuilding;
 	int m_iFreePromotion;
@@ -689,10 +655,8 @@ protected:
 	int m_iPowerValue;
 	int m_iSpecialBuildingType;
 	int m_iAdvisorType;
-
 	int m_iPrereqGameOption;
 	int m_iNotGameOption;
-
 	int m_iHolyCity;
 	int m_iReligionType;
 	int m_iStateReligion;
@@ -706,7 +670,6 @@ protected:
 	int m_iGreatPeopleRateChange;
 	int m_iConquestProbability;
 	int m_iMaintenanceModifier;
-	//DPII < Maintenance Modifier >
 	int m_iGlobalMaintenanceModifier;
 	int m_iAreaMaintenanceModifier;
 	int m_iOtherAreaMaintenanceModifier;
@@ -714,7 +677,6 @@ protected:
 	int m_iNumCitiesMaintenanceModifier;
 	int m_iCoastalDistanceMaintenanceModifier;
 	int m_iConnectedCityMaintenanceModifier;
-	//DPII < Maintenance Modifier >
 	int m_iWarWearinessModifier;
 	int m_iGlobalWarWearinessModifier;
 	int m_iEnemyWarWearinessModifier;
@@ -724,17 +686,14 @@ protected:
 	int m_iGlobalHealth;
 	int m_iGlobalPopulationChange;
 	int m_iFreeTechs;
-	TechTypes m_eFreeSpecialTech;
 	int m_iDefenseModifier;
 	int m_iBombardDefenseModifier;
 	int m_iAllCityDefenseModifier;
 	int m_iEspionageDefenseModifier;
-
 	int m_iUnitUpgradePriceModifier;
 	int m_iRevIdxLocal;
 	int m_iRevIdxNational;
 	int m_iRevIdxDistanceModifier;
-
 	int m_iMissionType;
 	int m_iVoteSourceType;
 	int m_iDCMAirbombMission;
@@ -742,39 +701,63 @@ protected:
 	int m_iMaxTeamInstances;
 	int m_iMaxPlayerInstances;
 	int m_iExtraPlayerInstances;
+	int m_iLinePriority;
+	int m_iOutbreakBase;
+	int m_iOvercomeBase;
+	int m_iTradeCommunicability;
+#ifdef STRENGTH_IN_NUMBERS
+	int m_iFrontSupportPercentModifier;
+	int m_iShortRangeSupportPercentModifier;
+	int m_iMediumRangeSupportPercentModifier;
+	int m_iLongRangeSupportPercentModifier;
+	int m_iFlankSupportPercentModifier;
+#endif
+	int m_iNationalCaptureProbabilityModifier;
+	int m_iNationalCaptureResistanceModifier;
+	int m_iLocalCaptureProbabilityModifier;
+	int m_iLocalCaptureResistanceModifier;
+	int m_iLocalDynamicDefense;
+	int m_iRiverDefensePenalty;
+	int m_iLocalRepel;
+	int m_iMinDefense;
+	int m_iBuildingDefenseRecoverySpeedModifier;
+	int m_iCityDefenseRecoverySpeedModifier;
+	int m_iDamageAttackerChance;
+	int m_iDamageToAttacker;
+	int m_iMaxPopulationAllowed;
+	int m_iMaxPopulationChange;
+	int m_iInsidiousness;
+	int m_iInvestigation;
+	int m_iPopulationChange;
+	int m_iOneTimePopulationPercentLoss;
+	int m_iMaxPopAllowed;
 
 	float m_fVisibilityPriority;
 
-	bool m_bTeamShare;
-	bool m_bWater;
-	bool m_bRiver;
-	bool m_bPower;
-	bool m_bFreshWater;
-	bool m_bDirtyPower;
-	bool m_bAreaCleanPower;
-	bool m_bOrbital;
-	bool m_bOrbitalInfrastructure;
-	bool m_bNoHolyCity;
-	bool m_bAreaBorderObstacle;
-	bool m_bForceTeamVoteEligible;
-	bool m_bCapital;
-	bool m_bGovernmentCenter;
-	bool m_bGoldenAge;
-	bool m_bMapCentering;
-	bool m_bNoUnhappiness;
-	bool m_bNoUnhealthyPopulation;
-	bool m_bBuildingOnlyHealthy;
-	bool m_bNeverCapture;
-	bool m_bNukeImmune;
-	bool m_bCenterInCity;
-	bool m_bStateReligionInCity;
-	bool m_bAllowsNukes;
+	TechTypes m_eFreeSpecialTech;
+	UnitTypes m_ePropertySpawnUnit;
+	PropertyTypes m_ePropertySpawnProperty;
+	PromotionLineTypes m_ePromotionLineType;
+	//TechTypes m_eFreeSpecialTech;
 
 	CvString m_szConstructSound;
 	CvString m_szArtDefineTag;
 	CvString m_szMovieDefineTag;
 
-	std::vector<TechTypes> m_piPrereqAndTechs;
+	bool* m_pbPrereqOrCivics;
+	bool* m_pbPrereqAndCivics;
+	bool* m_pbPrereqOrTerrain;
+	bool* m_pbPrereqAndTerrain;
+	bool* m_pbPrereqOrImprovement;
+	bool* m_pbPrereqOrFeature;
+	bool* m_pbCommerceFlexible;
+	bool* m_pbCommerceChangeOriginalOwner;
+	bool* m_pabHurry;
+
+	int* m_piCommerceAttacks;
+	int* m_piBonusDefenseChanges;
+	int* m_piGlobalBuildingCostModifier;
+	int* m_piPrereqNumOfBuilding;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;
@@ -805,12 +788,60 @@ protected:
 	int* m_piImprovementFreeSpecialist;
 	int* m_piVictoryThreshold;
 
-	bool* m_pbCommerceFlexible;
-	bool* m_pbCommerceChangeOriginalOwner;
-
+	int** m_ppaiBonusCommerceModifier;
+	int** m_ppaiTechCommerceChange;
+	int** m_ppaiTechYieldChange;
+	int** m_ppaiTechSpecialistChange;
+	int** m_ppaiTechCommerceModifier;
+	int** m_ppaiTechYieldModifier;
+	int** m_ppiImprovementYieldChanges;
+	int** m_ppaiBonusYieldChanges;
+	int** m_ppaiBonusCommercePercentChanges;
+	int** m_ppaiVicinityBonusYieldChanges;
 	int** m_ppaiSpecialistYieldChange;
 	int** m_ppaiSpecialistCommerceChange;
 	int** m_ppaiBonusYieldModifier;
+	int** m_ppaiLocalSpecialistYieldChange;
+	int** m_ppaiLocalSpecialistCommerceChange;
+
+	std::vector<BonusTypes> m_piPrereqOrVicinityBonuses;
+	std::vector<BonusTypes> m_aePrereqOrRawVicinityBonuses;
+	std::vector<TechTypes> m_piPrereqAndTechs;
+	//std::vector<int> m_aiFreePromoTypes;
+	std::vector<int> m_aiUnitCombatRetrainTypes;
+	std::vector<int> m_aiMayDamageAttackingUnitCombatTypes;
+	std::vector<int> m_aiMapTypes;
+	std::vector<int> m_aiPrereqInCityBuildings;
+	std::vector<int> m_vPrereqNotInCityBuildings;
+	std::vector<BonusTypes> m_aePrereqOrBonuses;
+	std::vector<int> m_vPrereqOrBuilding;
+	std::vector<int> m_vReplacementBuilding;
+	std::vector<int> m_vReplacedBuilding;
+	std::vector<FreePromoTypes> m_aFreePromoTypes;
+	std::vector<TraitTypes> m_aiFreeTraitTypes;
+	std::vector<EnabledCivilizations> m_aEnabledCivilizationTypes;
+
+	std::vector<HealUnitCombat> m_aHealUnitCombatTypes;
+	std::vector<BonusAidModifiers> m_aBonusAidModifiers;
+	std::vector<AidRateChanges> m_aAidRateChanges;
+	std::vector<BuildingCommerceChange> m_aGlobalBuildingCommerceChanges;
+	UnitCombatModifierArray m_aUnitCombatRepelModifiers;
+	UnitCombatModifierArray m_aUnitCombatRepelAgainstModifiers;
+	UnitCombatModifierArray m_aUnitCombatDefenseAgainstModifiers;
+	UnitCombatModifierArray m_aUnitCombatProdModifiers;
+	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
+	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
+	TechModifierArray m_aTechOutbreakLevelChanges;
+	IDValueMap<UnitCombatTypes, int> m_aUnitCombatExtraStrength;
+	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
+	IDValueMap<BuildingTypes, int> m_aBuildingProductionModifier;
+	IDValueMap<BuildingTypes, int> m_aGlobalBuildingProductionModifier;
+	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
+	IDValueMap<TechTypes, int> m_aTechHealthChanges;
+	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;
+	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
+
+	CvPropertyManipulators m_PropertyManipulators;
 
 	CvProperties m_Properties;
 	CvProperties m_PropertiesAllCities;
@@ -821,96 +852,7 @@ protected:
 
 	const BoolExpr* m_pExprNewCityFree;
 	const BoolExpr* m_pExprConstructCondition;
-
-	std::vector<BuildingCommerceChange> m_aGlobalBuildingCommerceChanges;
-
-	//TB Combat Mods (Buildings) begin
-	UnitTypes m_ePropertySpawnUnit;
-	PropertyTypes m_ePropertySpawnProperty;
-	PromotionLineTypes m_ePromotionLineType;
-	//TechTypes m_eFreeSpecialTech;
-
-	int m_iLinePriority;
-	int m_iOutbreakBase;
-	int m_iOvercomeBase;
-	int m_iTradeCommunicability;
-#ifdef STRENGTH_IN_NUMBERS
-	int m_iFrontSupportPercentModifier;
-	int m_iShortRangeSupportPercentModifier;
-	int m_iMediumRangeSupportPercentModifier;
-	int m_iLongRangeSupportPercentModifier;
-	int m_iFlankSupportPercentModifier;
-#endif
-	int m_iNationalCaptureProbabilityModifier;
-	int m_iNationalCaptureResistanceModifier;
-	int m_iLocalCaptureProbabilityModifier;
-	int m_iLocalCaptureResistanceModifier;
-	int m_iLocalDynamicDefense;
-	int m_iRiverDefensePenalty;
-	int m_iLocalRepel;
-	int m_iMinDefense;
-	int m_iBuildingDefenseRecoverySpeedModifier;
-	int m_iCityDefenseRecoverySpeedModifier;
-	int m_iDamageAttackerChance;
-	int m_iDamageToAttacker;
-	int m_iMaxPopulationAllowed;
-	int m_iMaxPopulationChange;
-	int m_iInsidiousness;
-	int m_iInvestigation;
-	int m_iPopulationChange;
-	int m_iOneTimePopulationPercentLoss;
-
-	bool m_bDamageToAttackerIgnoresArmor;
-	bool m_bDamageAllAttackers;
-	bool m_bDamageAttackerCapable;
-	bool m_bQuarantine;
-	//boolean vectors without delayed resolution
-	//std::vector<int> m_aiFreePromoTypes;
-	std::vector<int> m_aiUnitCombatRetrainTypes;
-	std::vector<int> m_aiMayDamageAttackingUnitCombatTypes;
-	std::vector<int> m_aiMapTypes;
-	//integer vectors with pairing without delayed resolution
-	UnitCombatModifierArray m_aUnitCombatRepelModifiers;
-	UnitCombatModifierArray m_aUnitCombatRepelAgainstModifiers;
-	UnitCombatModifierArray m_aUnitCombatDefenseAgainstModifiers;
-	UnitCombatModifierArray m_aUnitCombatProdModifiers;
-	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
-	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
-	TechModifierArray m_aTechOutbreakLevelChanges;
-	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
-	IDValueMap<TechTypes, int> m_aTechHealthChanges;
-
-	int** m_ppaiLocalSpecialistYieldChange;
-	int** m_ppaiLocalSpecialistCommerceChange;
-
-	std::vector<int> m_aiPrereqInCityBuildings;
-	std::vector<int> m_vPrereqNotInCityBuildings;
-	std::vector<BonusTypes> m_aePrereqOrBonuses;
-	std::vector<int> m_vPrereqOrBuilding;
-	std::vector<int> m_vReplacementBuilding;
-	std::vector<int> m_vReplacedBuilding;
-
-	bool* m_pabHurry;
-
-	int m_iMaxPopAllowed;
-
-	/*
-	const BoolExpr* m_pExprFreePromotionCondition;*/
-	//Structs
-	std::vector<FreePromoTypes> m_aFreePromoTypes;
-	std::vector<TraitTypes> m_aiFreeTraitTypes;
-	std::vector<HealUnitCombat> m_aHealUnitCombatTypes;
-	std::vector<EnabledCivilizations> m_aEnabledCivilizationTypes;
-	std::vector<BonusAidModifiers> m_aBonusAidModifiers;
-	std::vector<AidRateChanges> m_aAidRateChanges;
-	//TB Combat Mods (Buildings) end
-
-	bool m_bAutoBuild;
-
-	mutable bool m_bEnablesOtherBuildingsCalculated;
-	mutable bool m_bEnablesOtherBuildingsValue;
-	mutable bool m_bEnablesUnitsCalculated;
-	mutable bool m_bEnablesUnits;
+	//const BoolExpr* m_pExprFreePromotionCondition;
 };
 
 #endif

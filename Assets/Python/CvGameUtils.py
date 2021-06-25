@@ -12,7 +12,6 @@ GAME = GC.getGame()
 class CvGameUtils:
 
 	def __init__(self):
-		# Cache
 		self.fScoreFreeMod = GC.getDefineINT("SCORE_FREE_PERCENT") / 100.0
 		self.SCORE_POPULATION_FACTOR = GC.getDefineINT("SCORE_POPULATION_FACTOR")
 		self.SCORE_LAND_FACTOR = GC.getDefineINT("SCORE_LAND_FACTOR")
@@ -28,12 +27,6 @@ class CvGameUtils:
 		self.iNationalMint = GC.getInfoTypeForString("BUILDING_NATIONAL_MINT")
 		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_CASTLE")
 
-	def isVictoryTest(self):
-		return GAME.getElapsedGameTurns() > 10
-
-	def updateColoredPlots(self):
-		return False
-
 	def canBuild(self, argsList):
 		iX, iY, iBuild, iPlayer = argsList
 
@@ -48,7 +41,7 @@ class CvGameUtils:
 					return 1
 				return 0
 
-		return -1	# Returning 0 means "No", 1 or greater means "Yes", and negative numbers means "continue this evaluation on the dll side".
+		return -1 # Returning 0 means "No", 1 or greater means "Yes", and negative numbers means "continue this evaluation on the dll side".
 
 	def cannotMaintain(self, argsList):
 		CyCity, iProcess, bContinue, = argsList
@@ -212,10 +205,6 @@ class CvGameUtils:
 			CvUtil.sendMessage(CyTranslator().getText("TXT_KEY_MISC_PILLAGED_CITY_CAPTURED", (int(gold), CyCity.getName())), iOwnerNew, 10, '', ColorTypes(10))
 
 		return int(gold)
-
-	def canPickPlot(self, argsList):
-		#pPlot = argsList[0]
-		return true
 
 	def getWidgetHelp(self, argsList):
 		eWidgetType, iData1, iData2, bOption = argsList

@@ -54,7 +54,6 @@ class PediaTech:
 		eWidJuToBuilding	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
 		eWidJuToDerTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH
 		eWidJuToProject		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT
-		#eWidJuToReqTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_REQUIRED_TECH
 		eWidJuToUnit		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT
 		ePnlBlue50	= PanelStyles.PANEL_STYLE_BLUE50
 		eFontTitle	= FontTypes.TITLE_FONT

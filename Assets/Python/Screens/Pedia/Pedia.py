@@ -273,7 +273,7 @@ class Pedia:
 		import PediaLeader
 		import SevoPediaSpecialist
 		import PediaProject
-		import SevoPediaReligion
+		import PediaReligion
 		import PediaCorporation
 		import PediaBuild
 		import PediaTrait
@@ -295,7 +295,7 @@ class Pedia:
 			szCatLeaders			: PediaLeader.PediaLeader(self, H_BOT_ROW),
 			szCatTraits				: PediaTrait.Page(self, H_BOT_ROW),
 			szCatCivics				: PediaCivic.Page(self, H_BOT_ROW),
-			szCatReligions			: SevoPediaReligion.SevoPediaReligion(self),
+			szCatReligions			: PediaReligion.Page(self, H_BOT_ROW),
 			szCatCorporations		: PediaCorporation.PediaCorporation(self, H_BOT_ROW),
 			szCatRoutes				: SevoPediaRoute.SevoPediaRoute(self),
 			PEDIA_BONUSES			: PediaBonus.PediaBonus(self, H_BOT_ROW),
@@ -1526,6 +1526,8 @@ class Pedia:
 					self.tooltip.handle(screen, CyGameTextMgr().parseLeaderTraits(ID, -1, False, False))
 				elif "BUILD" in szSplit:
 					self.tooltip.handle(screen, GC.getBuildInfo(ID).getDescription())
+				elif "RELIGION" in szSplit:
+					self.tooltip.handle(screen, CyGameTextMgr().parseReligionInfo(ID, False))
 				elif "CONCEPT" in szSplit:
 					self.tooltip.handle(screen, GC.getConceptInfo(ID).getDescription())
 				elif "CONCEPT_NEW" in szSplit:
@@ -1650,6 +1652,8 @@ class Pedia:
 				self.pediaJump(self.PEDIA_LEADERSHIP, "Leader", ID)
 			elif "BUILD" in szSplit:
 				self.pediaJump(self.PEDIA_SPECIAL, "Build", ID)
+			elif "RELIGION" in szSplit:
+				self.pediaJump(self.PEDIA_LEADERSHIP, "Religion", ID)
 			elif "CONCEPT" in szSplit:
 				self.pediaJump(self.PEDIA_CONCEPTS, "", ID)
 			elif "CONCEPT_NEW" in szSplit:

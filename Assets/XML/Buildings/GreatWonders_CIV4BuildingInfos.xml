@@ -595,11 +595,6 @@
 			</TechTypes>
 			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			<iCost>1296</iCost>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -661,11 +656,6 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<StateReligionCommerces>
 				<iCommerce>1</iCommerce>
 			</StateReligionCommerces>
@@ -1356,11 +1346,6 @@
 			</CommerceModifiers>
 			<FreeBonus>BONUS_HIT_MUSICALS</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iAsset>18</iAsset>
@@ -2512,11 +2497,6 @@
 			<SpecialistExtraCommerces>
 				<iCommerce>1</iCommerce>
 			</SpecialistExtraCommerces>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
@@ -4865,11 +4845,6 @@
 			</CommerceModifiers>
 			<FreeBonus>BONUS_HIT_MOVIES</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_CELEBRITY</SpecialistType>
@@ -8066,11 +8041,6 @@
 			</CommerceModifiers>
 			<FreeBonus>BONUS_HIT_SINGLES</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
 					<SpecialistType>SPECIALIST_CELEBRITY</SpecialistType>
@@ -10564,11 +10534,6 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SPY</SpecialistType>
@@ -10767,11 +10732,6 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iCost>6780</iCost>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iGlobalExperience>2</iGlobalExperience>
@@ -10940,11 +10900,6 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iGlobalSpaceProductionModifier>25</iGlobalSpaceProductionModifier>
@@ -11417,11 +11372,6 @@
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bPower>1</bPower>
@@ -11457,11 +11407,6 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7080</iCost>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<VictoryPrereq>VICTORY_DIPLOMATIC</VictoryPrereq>
@@ -17573,7 +17518,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAGINOTLINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAGINOTLINE</MovieDefineTag>
-			<ObsoleteTech>TECH_MECHANIZED_WARFARE</ObsoleteTech>
+			<ObsoleteTech>TECH_MODERN_WARFARE</ObsoleteTech>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>

@@ -107,6 +107,7 @@ CvGame::~CvGame()
 
 void CvGame::init(HandicapTypes eHandicap)
 {
+	GC.getInitCore().endGameSetup();
 	//--------------------------------
 	// Init saved data
 	reset(eHandicap);
@@ -7504,7 +7505,8 @@ void CvGame::testVictory()
 {
 	PROFILE_FUNC();
 
-	if (getVictory() != NO_VICTORY || getGameState() == GAMESTATE_EXTENDED || !Cy::call<bool>(PYGameModule, "isVictoryTest"))
+	if (getVictory() != NO_VICTORY || getGameState() == GAMESTATE_EXTENDED
+	|| getElapsedGameTurns() <= GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 10)
 	{
 		return;
 	}
@@ -8962,19 +8964,20 @@ bool CvGame::hasSkippedSaveChecksum() const
 	return gDLL->hasSkippedSaveChecksum();
 }
 
-void CvGame::logDebugMsg(char* format, ...)
+void CvGame::logNetMsgData(char* format, ...)
 {
-#ifdef _DEBUG
-	TCHAR szOut[1024];
-	if (getActivePlayer() != -1)
-		sprintf(szOut, "Player %d - Multiplayer Game Log.log", getActivePlayer());
-	else
-		sprintf(szOut, "Pitboss Multiplayer Game Log.log");
+	if (isNetworkMultiPlayer())
+	{
+		TCHAR szOut[1024];
+		if (getActivePlayer() != -1)
+			sprintf(szOut, "Player %d - Multiplayer Game Log.log", getActivePlayer());
+		else
+			sprintf(szOut, "Pitboss Multiplayer Game Log.log");
 
-	static char buf[2048];
-	_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
-	gDLL->logMsg(szOut, buf);
-#endif
+		static char buf[2048];
+		_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
+		gDLL->logMsg(szOut, buf, false, false);
+	}
 }
 
 
@@ -11765,13 +11768,13 @@ void CvGame::toggleAnyoneHasUnitZoneOfControl()
 
 void CvGame::logOOSSpecial(int iLocID, int iVar, int iVar2, int iVar3)
 {
-	if (GC.isXMLLogging() || isNetworkMultiPlayer())
+	if (isNetworkMultiPlayer())
 	{
 		TCHAR szFile[1024];
-		sprintf(szFile, "OOSSpecialLogger - Player %d - Set %d.log", getActivePlayer(), getGameTurn()/50);
+		sprintf(szFile, "OOSSpecialLogger - Player %d - Set %d.log", getActivePlayer(), isFinalInitialized() ? getGameTurn()/50 : -1);
 		TCHAR szOut[1024];
-		sprintf(szOut, "iLocID %d - iVar %d - iVar2 %d - iVar3 %d", iLocID, iVar, iVar2, iVar3);
-		gDLL->logMsg(szFile,szOut, false, false);
+		sprintf(szOut, "iLocID %d - iVar %d - iVar2 %d - iVar3 %d\n\tmapRand %d\n\tSorenRand %d", iLocID, iVar, iVar2, iVar3, getMapRand().getSeed(), getSorenRand().getSeed());
+		gDLL->logMsg(szFile, szOut, false, false);
 	}
 }
 

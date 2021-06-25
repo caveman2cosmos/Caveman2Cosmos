@@ -109,7 +109,6 @@
 	<!--Textual References-->
 	<ElementType name="GenericCategory" content="textOnly"/>
 	<!--Integers-->
-	<ElementType name="iTraitGainPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iNationalCaptureProbabilityModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iNationalCaptureResistanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iInsidiousness" content="textOnly" dt:type="int"/>
@@ -1390,7 +1389,6 @@
 		<element type="iUnitHurryPercent" minOccurs="0"/>
 		<element type="iUnitTradePercent" minOccurs="0"/>
 		<element type="iUnitGreatWorkPercent" minOccurs="0"/>
-		<element type="iTraitGainPercent" minOccurs="0"/>
 		<element type="GameTurnInfos" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="GameSpeedInfos" content="eltOnly">

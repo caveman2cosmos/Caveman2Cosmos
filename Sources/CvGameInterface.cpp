@@ -42,10 +42,7 @@ void CvGame::updateColoredPlots()
 	{
 		gDLL->getEngineIFace()->clearColoredPlots(PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 	}
-	if (Cy::call<bool>(PYGameModule, "updateColoredPlots"))
-	{
-		return;
-	}
+
 	// City circles for debugging
 	if (isDebugMode())
 	{
@@ -2450,41 +2447,38 @@ CvPlot* CvGame::getNewHighlightPlot() const
 
 ColorTypes CvGame::getPlotHighlightColor(CvPlot* pPlot) const
 {
-	ColorTypes eColor = NO_COLOR;
+	if (pPlot == NULL) return NO_COLOR;
 
-	if (pPlot != NULL)
+	if (gDLL->GetWorldBuilderMode())
 	{
-		eColor = (ColorTypes) GC.getInfoTypeForString("COLOR_GREEN");
-		if (!gDLL->GetWorldBuilderMode())
+		return (ColorTypes) GC.getInfoTypeForString("COLOR_GREEN");
+	}
+	switch (gDLL->getInterfaceIFace()->getInterfaceMode())
+	{
+		case INTERFACEMODE_PING:
+		case INTERFACEMODE_SIGN:
 		{
-			switch (gDLL->getInterfaceIFace()->getInterfaceMode())
+			if (pPlot->isRevealed(getActiveTeam(), true))
 			{
-			case INTERFACEMODE_PING:
-			case INTERFACEMODE_SIGN:
-				if (!pPlot->isRevealed(getActiveTeam(), true))
-				{
-					eColor = NO_COLOR;
-				}
-				break;
-			case INTERFACEMODE_PYTHON_PICK_PLOT:
-				if (!pPlot->isRevealed(getActiveTeam(), true) || !Cy::call<bool>(PYGameModule, "canPickPlot", Cy::Args() << pPlot))
-				{
-					eColor = NO_COLOR;
-				}
-				break;
-			case INTERFACEMODE_SAVE_PLOT_NIFS:
-				eColor = (ColorTypes) GC.getInfoTypeForString("COLOR_DARK_GREY");
-				break;
-			default:
-				if (!gDLL->getInterfaceIFace()->getSelectionList()->canDoInterfaceModeAt(gDLL->getInterfaceIFace()->getInterfaceMode(), pPlot))
-				{
-					eColor = (ColorTypes) GC.getInfoTypeForString("COLOR_DARK_GREY");
-				}
-				break;
+				return (ColorTypes) GC.getInfoTypeForString("COLOR_GREEN");
 			}
 		}
+		case INTERFACEMODE_DOTMAP: break;
+
+		case INTERFACEMODE_SAVE_PLOT_NIFS:
+		{
+			return (ColorTypes) GC.getInfoTypeForString("COLOR_DARK_GREY");
+		}
+		default:
+		{
+			if (gDLL->getInterfaceIFace()->getSelectionList()->canDoInterfaceModeAt(gDLL->getInterfaceIFace()->getInterfaceMode(), pPlot))
+			{
+				return (ColorTypes) GC.getInfoTypeForString("COLOR_GREEN");
+			}
+			return (ColorTypes) GC.getInfoTypeForString("COLOR_DARK_GREY");
+		}
 	}
-	return eColor;
+	return NO_COLOR;
 }
 
 void CvGame::loadBuildQueue(const CvString& strItem) const

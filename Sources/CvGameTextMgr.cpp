@@ -23060,44 +23060,33 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_LESS_WORLD_TRADE", -kBuilding.getWorldTradeRoutes()));
 		}
 
-		if (kBuilding.getUnitProductionModifier(NO_UNIT) != 0)
+		foreach_(const UnitModifier2& modifier, kBuilding.getUnitProductionModifiers())
 		{
 			CvWString szUnit;
 
-			for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+			if (GC.getGame().canEverTrain(modifier.first))
 			{
-				if (GC.getGame().canEverTrain((UnitTypes) iI) && kBuilding.getUnitProductionModifier(iI) != 0)
-				{
-					szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getUnitProductionModifier(iI)),
-						(kBuilding.getUnitProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_UNITHELP_CLASS_PRODUCTION_FAST_MOD") : gDLL->getText("TXT_KEY_UNITHELP_CLASS_PRODUCTION_SLOW_MOD")).c_str());
+				szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(modifier.second),
+					(modifier.second > 0 ? gDLL->getText("TXT_KEY_UNITHELP_CLASS_PRODUCTION_FAST_MOD") : gDLL->getText("TXT_KEY_UNITHELP_CLASS_PRODUCTION_SLOW_MOD")).c_str());
 
-					szUnit.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitInfo((UnitTypes) iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes) iI).getDescription());
+				szUnit.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitInfo(modifier.first).getType()).GetCString(), GC.getUnitInfo(modifier.first).getDescription());
 
-					setListHelp(szBuffer, szFirstBuffer, szUnit, L", ", (kBuilding.getUnitProductionModifier(iI) != iLast));
-					iLast = kBuilding.getUnitProductionModifier(iI);
-				}
+				setListHelp(szBuffer, szFirstBuffer, szUnit, L", ", (modifier.second != iLast));
+				iLast = modifier.second;
 			}
 		}
 
 		CvWString szBuilding;
 
-		if (kBuilding.getBuildingProductionModifier(NO_BUILDING) != 0)
+		iLast = 0;
+		foreach_(const BuildingModifier2& modifier, kBuilding.getBuildingProductionModifiers())
 		{
-			iLast = 0;
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+			if (GC.getGame().canEverConstruct(modifier.first))
 			{
-				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-
-				if (GC.getGame().canEverConstruct(eLoopBuilding))
-				{
-					if (kBuilding.getBuildingProductionModifier(iI) != 0)
-					{
-						szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getBuildingProductionModifier(iI)), (kBuilding.getBuildingProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_SLOW")).c_str());
-						szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-						setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (kBuilding.getBuildingProductionModifier(iI) != iLast));
-						iLast = kBuilding.getBuildingProductionModifier(iI);
-					}
-				}
+				szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(modifier.second), (modifier.second > 0 ? gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_SLOW")).c_str());
+				szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(modifier.first).getType()).GetCString(), GC.getBuildingInfo(modifier.first).getDescription());
+				setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (modifier.second != iLast));
+				iLast = modifier.second;
 			}
 		}
 
@@ -23132,31 +23121,26 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 
-		if (kBuilding.getGlobalBuildingProductionModifier(NO_BUILDING) != 0)
+		iLast = 0;
+		bool bGlobal = false;
+		foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingProductionModifiers())
 		{
-			iLast = 0;
-			bool bGlobal = false;
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
-			{
-				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+			const BuildingTypes eLoopBuilding = modifier.first;
 
-				if (GC.getGame().canEverConstruct(eLoopBuilding))
-				{
-					if (kBuilding.getGlobalBuildingProductionModifier(iI) != 0)
-					{
-						if (bGlobal && kBuilding.getGlobalBuildingProductionModifier(iI) != iLast)
-							szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL"));
-						bGlobal = true;
-						szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getGlobalBuildingProductionModifier(iI)), (kBuilding.getGlobalBuildingProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_SLOW")).c_str());
-						szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-						setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (kBuilding.getGlobalBuildingProductionModifier(iI) != iLast));
-						iLast = kBuilding.getGlobalBuildingProductionModifier(iI);
-					}
-				}
+			if (GC.getGame().canEverConstruct(eLoopBuilding))
+			{
+				if (bGlobal && modifier.second != iLast)
+					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL"));
+				bGlobal = true;
+				szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(modifier.second), (modifier.second > 0 ? gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_SLOW")).c_str());
+				szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
+				setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (modifier.second != iLast));
+				iLast = modifier.second;
 			}
-			if (bGlobal)
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL"));
 		}
+		if (bGlobal)
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL"));
+
 		//City Growth Speed Modifier
 
 		if (kBuilding.getPopulationgrowthratepercentage() != 0)
@@ -23216,18 +23200,14 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	if (!bRelDisabled)
 	{
 		iLast = 0;
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); ++iI)
+		foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatExtraStrength())
 		{
-			if (kBuilding.getUnitCombatExtraStrength(iI) != 0)
-			{
-				int iUnitCombatExtraStrength = kBuilding.getUnitCombatExtraStrength(iI);
-				szFirstBuffer.Format(L"%s%c%s%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), (iUnitCombatExtraStrength > 0 ? L"+" : L""), iUnitCombatExtraStrength, gDLL->getText("TXT_KEY_BUILDINGHELP_UNITCOMBAT_EXTRA_STRENGTH").c_str());
-				szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription());
-				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (iUnitCombatExtraStrength != iLast));
-				if (iLast != iUnitCombatExtraStrength)
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_IN_CITY"));
-				iLast = iUnitCombatExtraStrength;
-			}
+			szFirstBuffer.Format(L"%s%c%s%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), (modifier.second > 0 ? L"+" : L""), modifier.second, gDLL->getText("TXT_KEY_BUILDINGHELP_UNITCOMBAT_EXTRA_STRENGTH").c_str());
+			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo(modifier.first).getType()).GetCString(), GC.getUnitCombatInfo(modifier.first).getDescription());
+			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (modifier.second != iLast));
+			if (iLast != modifier.second)
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_IN_CITY"));
+			iLast = modifier.second;
 		}
 /*
 		iLast = 0;
@@ -23319,19 +23299,16 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		iLast = 0;
 
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+		foreach_(const BuildingModifier2& pair, kBuilding.getBuildingHappinessChanges())
 		{
-			if (kBuilding.getBuildingHappinessChanges(iI) != 0)
-			{
-				// Use absolute value with unhappy face
-				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_HAPPINESS_CHANGE", abs(kBuilding.getBuildingHappinessChanges(iI)),
-					((kBuilding.getBuildingHappinessChanges(iI) > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))).c_str());
+			// Use absolute value with unhappy face
+			szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_HAPPINESS_CHANGE", abs(pair.second),
+				(pair.second > 0 ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))).c_str());
 
-				CvWString szBuilding;
-				szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iI).getDescription());
-				setListHelp(szBuffer, szTempBuffer, szBuilding, L", ", (kBuilding.getBuildingHappinessChanges(iI) != iLast));
-				iLast = kBuilding.getBuildingHappinessChanges(iI);
-			}
+			CvWString szBuilding;
+			szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(pair.first).getType()).GetCString(), GC.getBuildingInfo(pair.first).getDescription());
+			setListHelp(szBuffer, szTempBuffer, szBuilding, L", ", (pair.second != iLast));
+			iLast = pair.second;
 		}
 	}
 
@@ -26450,19 +26427,20 @@ void CvGameTextMgr::setReligionHelp(CvWStringBuffer &szBuffer, ReligionTypes eRe
 	{
 		szBuffer.append(CvWString::format(SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), religion.getDescription()));
 	}
-
 	setCommerceChangeHelp(szBuffer, gDLL->getText("TXT_KEY_RELIGION_HOLY_CITY").c_str(), L": ", L"", religion.getHolyCityCommerceArray());
 	setCommerceChangeHelp(szBuffer, gDLL->getText("TXT_KEY_RELIGION_ALL_CITIES").c_str(), L": ", L"", religion.getStateReligionCommerceArray());
 
-	if (!bCivilopedia)
+	if (religion.getTechPrereq() != NO_TECH)
 	{
-		if (religion.getTechPrereq() != NO_TECH)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_RELIGION_FOUNDED_FIRST", GC.getTechInfo((TechTypes)religion.getTechPrereq()).getTextKeyWide()));
-		}
+		szBuffer.append(NEWLINE);
+		szBuffer.append(
+			gDLL->getText(
+				"TXT_KEY_RELIGION_FOUNDED_FIRST",
+				CvWString(GC.getTechInfo((TechTypes)religion.getTechPrereq()).getType()).GetCString(),
+				GC.getTechInfo((TechTypes)religion.getTechPrereq()).getTextKeyWide()
+			)
+		);
 	}
-
 	const UnitTypes eFreeUnit = (UnitTypes) religion.getFreeUnit();
 
 	if (eFreeUnit != NO_UNIT)
@@ -36067,220 +36045,189 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 		if (pMouseOverPlot != NULL)
 		{
 			const CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
-			if (pHeadSelectedCity != NULL)
+
+			if (pHeadSelectedCity != NULL && pMouseOverPlot->getWorkingCity() == pHeadSelectedCity
+			&& pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true))
 			{
-				if (pMouseOverPlot->getWorkingCity() == pHeadSelectedCity)
-				{
-					if (pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true))
-					{
-						setPlotHelp(strHelp, pMouseOverPlot);
-					}
-				}
+				setPlotHelp(strHelp, pMouseOverPlot);
 			}
 		}
+		return;
 	}
-	else
+
+	if (pCity != NULL)
 	{
-		if (pCity != NULL)
-		{
-			setCityBarHelp(strHelp, pCity);
-		}
-		else if (pFlagPlot != NULL)
-		{
-			setPlotListHelp(strHelp, pFlagPlot, false, true);
-		}
-		if (strHelp.isEmpty())
-		{
-			if (pMouseOverPlot != NULL)
-			{
-				if ((pMouseOverPlot == gDLL->getInterfaceIFace()->getGotoPlot()) || bAlt)
-				{
-					if (pMouseOverPlot->isVisiblePotentialEnemyDefender(gDLL->getInterfaceIFace()->getSelectionList()->getHeadUnit()))
-					/*if (pMouseOverPlot->isActiveVisible(true))*/
-					{
+		setCityBarHelp(strHelp, pCity);
+	}
+	else if (pFlagPlot != NULL)
+	{
+		setPlotListHelp(strHelp, pFlagPlot, false, true);
+	}
 
-						setCombatPlotHelp(strHelp, pMouseOverPlot);
+	if (strHelp.isEmpty() && pMouseOverPlot != NULL
+	&& (bAlt || pMouseOverPlot == gDLL->getInterfaceIFace()->getGotoPlot())
+	&& pMouseOverPlot->isVisiblePotentialEnemyDefender(gDLL->getInterfaceIFace()->getSelectionList()->getHeadUnit()))
+	{
+		setCombatPlotHelp(strHelp, pMouseOverPlot);
+	}
+
+	if (strHelp.isEmpty() && pMouseOverPlot != NULL && pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true))
+	{
+		if (pMouseOverPlot->isActiveVisible(true))
+		{
+			setPlotListHelp(strHelp, pMouseOverPlot, true, false);
+
+			if (!strHelp.isEmpty())
+			{
+				strHelp.append(L"\n");
+			}
+		}
+		setPlotHelp(strHelp, pMouseOverPlot);
+	}
+
+	if (pMouseOverPlot != NULL && pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true)
+	&& pMouseOverPlot->isActiveVisible(true) && pMouseOverPlot->getTeam() != NO_TEAM
+	&& gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL
+	&& GET_TEAM(pMouseOverPlot->getTeam()).isAtWar(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getTeam())
+	&& !gDLL->getInterfaceIFace()->getHeadSelectedUnit()->canMoveInto(pMouseOverPlot))
+	{
+		CvWString szTempBuffer;
+		szTempBuffer.clear();
+		if (pMouseOverPlot->isCity())
+		{
+			int iMinimumDefenseLevel = MAX_INT;
+			BuildingTypes eBestBuilding = NO_BUILDING;
+
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			{
+				const BuildingTypes eType = static_cast<BuildingTypes>(iI);
+
+				if (pMouseOverPlot->getPlotCity()->getNumActiveBuilding(eType) > 0)
+				{
+					const int iNoEntryDefense = GC.getBuildingInfo(eType).getNoEntryDefenseLevel();
+
+					if(iNoEntryDefense > 0 && iNoEntryDefense < iMinimumDefenseLevel)
+					{
+						iMinimumDefenseLevel = iNoEntryDefense;
+						eBestBuilding = eType;
 					}
 				}
 			}
-		}
-
-		if (strHelp.isEmpty())
-		{
-			if (pMouseOverPlot != NULL)
+			if (pMouseOverPlot->getPlotCity()->getExtraMinDefense() > iMinimumDefenseLevel)
 			{
-				if (pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true))
+				iMinimumDefenseLevel = pMouseOverPlot->getPlotCity()->getExtraMinDefense();
+			}
+			if (eBestBuilding != NO_BUILDING
+			&& pMouseOverPlot->getPlotCity()->getDefenseModifier(false) > iMinimumDefenseLevel
+			&& !gDLL->getInterfaceIFace()->getHeadSelectedUnit()->canIgnoreNoEntryLevel())
+			{
+				szTempBuffer.clear();
+				szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_MAX_CITY_DEFENSES", pMouseOverPlot->getPlotCity()->getNameKey(), GC.getBuildingInfo(eBestBuilding).getDescription(), GC.getBuildingInfo(eBestBuilding).getDescription(), iMinimumDefenseLevel));
+			}
+		}
+		else if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
+		{
+			// Fort ZoC
+			const PlayerTypes eDefender = gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->controlsAdjacentZOCSource(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getTeam());
+			if (eDefender != NO_PLAYER)
+			{
+				const CvPlot* pZoneOfControl = gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner());
+				const CvPlot* pForwardZoneOfControl = pMouseOverPlot->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner());
+				if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL
+				&& pZoneOfControl == pMouseOverPlot->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner(), pZoneOfControl))
 				{
-					if (pMouseOverPlot->isActiveVisible(true))
-					{
-						setPlotListHelp(strHelp, pMouseOverPlot, true, false);
-
-						if (!strHelp.isEmpty())
-						{
-							strHelp.append(L"\n");
-						}
-					}
-
-					setPlotHelp(strHelp, pMouseOverPlot);
+					szTempBuffer.clear();
+					szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_FORT_ZOC"));
 				}
+			}
+			// City ZoC
+			if (gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->isInCityZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()) && pMouseOverPlot->isInCityZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()))
+			{
+				szTempBuffer.clear();
+				szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_CITY_ZOC"));
+			}
+			// Promotion ZoC
+			if (gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->isInUnitZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()) && pMouseOverPlot->isInUnitZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()))
+			{
+				szTempBuffer.clear();
+				szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_UNIT_ZOC"));
 			}
 		}
 
-		if (pMouseOverPlot != NULL)
+		if (szTempBuffer != L"")
 		{
-			if (pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true))
-			{
-				if (pMouseOverPlot->isActiveVisible(true))
-				{
-					if (pMouseOverPlot->getTeam() != NO_TEAM)
-					{
-						if (gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL)
-						{
-							if (GET_TEAM(pMouseOverPlot->getTeam()).isAtWar(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getTeam()))
-							{
-								if( !gDLL->getInterfaceIFace()->getHeadSelectedUnit()->canMoveInto(pMouseOverPlot))
-								{
-									CvWString szTempBuffer;
-									szTempBuffer.clear();
-									if (pMouseOverPlot->isCity())
-									{
-										int iMinimumDefenseLevel = MAX_INT;
-										BuildingTypes eBestBuilding = NO_BUILDING;
-										for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-										{
-											if (pMouseOverPlot->getPlotCity()->getNumActiveBuilding((BuildingTypes)iI) > 0)
-											{
-												if (GC.getBuildingInfo((BuildingTypes)iI).getNoEntryDefenseLevel() > 0)
-												{
-													if (GC.getBuildingInfo((BuildingTypes)iI).getNoEntryDefenseLevel() < iMinimumDefenseLevel)
-													{
-														iMinimumDefenseLevel = GC.getBuildingInfo((BuildingTypes)iI).getNoEntryDefenseLevel();
-														eBestBuilding = (BuildingTypes)iI;
-													}
-												}
-											}
-										}
-										if (pMouseOverPlot->getPlotCity()->getExtraMinDefense() > iMinimumDefenseLevel)
-										{
-											iMinimumDefenseLevel = pMouseOverPlot->getPlotCity()->getExtraMinDefense();
-										}
-										if (pMouseOverPlot->getPlotCity()->getDefenseModifier(false) > iMinimumDefenseLevel && eBestBuilding != NO_BUILDING)
-										{
-											if (!gDLL->getInterfaceIFace()->getHeadSelectedUnit()->canIgnoreNoEntryLevel())
-											{
-												szTempBuffer.clear();
-												szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_MAX_CITY_DEFENSES", pMouseOverPlot->getPlotCity()->getNameKey(), GC.getBuildingInfo(eBestBuilding).getDescription(), GC.getBuildingInfo(eBestBuilding).getDescription(), iMinimumDefenseLevel));
-											}
-										}
-									}
-									else
-									{
-										if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
-										{
-											// Fort ZoC
-											const PlayerTypes eDefender = gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->controlsAdjacentZOCSource(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getTeam());
-											if (eDefender != NO_PLAYER)
-											{
-												const CvPlot* pZoneOfControl = gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner());
-												const CvPlot* pForwardZoneOfControl = pMouseOverPlot->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner());
-												if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL
-												&& pZoneOfControl == pMouseOverPlot->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner(), pZoneOfControl))
-												{
-													szTempBuffer.clear();
-													szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_FORT_ZOC"));
-												}
-											}
-											// City ZoC
-											if (gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->isInCityZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()) && pMouseOverPlot->isInCityZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()))
-											{
-												szTempBuffer.clear();
-												szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_CITY_ZOC"));
-											}
-											// Promotion ZoC
-											if (gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->isInUnitZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()) && pMouseOverPlot->isInUnitZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()))
-											{
-												szTempBuffer.clear();
-												szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_UNIT_ZOC"));
-											}
-										}
-									}
-
-									if (szTempBuffer != L"")
-									{
-										strHelp.assign(szTempBuffer);
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-
-		const InterfaceModeTypes eInterfaceMode = gDLL->getInterfaceIFace()->getInterfaceMode();
-		if (eInterfaceMode != INTERFACEMODE_SELECTION)
-		{
-			CvWString szTempBuffer;
-			szTempBuffer.Format(SETCOLR L"%s" ENDCOLR NEWLINE, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getInterfaceModeInfo(eInterfaceMode).getDescription());
-
-			switch (eInterfaceMode)
-			{
-			case INTERFACEMODE_REBASE:
-				getRebasePlotHelp(pMouseOverPlot, szTempBuffer);
-				break;
-
-			case INTERFACEMODE_NUKE:
-				getNukePlotHelp(pMouseOverPlot, szTempBuffer);
-				break;
-
-			case INTERFACEMODE_SHADOW_UNIT:
-				{
-					const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
-					if (NULL != pHeadSelectedUnit && pMouseOverPlot != NULL)
-					{
-						const CvUnit* pShadowUnit = pMouseOverPlot->getCenterUnit();
-						if (!pHeadSelectedUnit->getGroup()->canDoInterfaceModeAt(eInterfaceMode, pMouseOverPlot))
-						{
-							strHelp.clear();
-							if (pShadowUnit != NULL)
-							{
-								const int iValidShadowUnits = algo::count_if(pMouseOverPlot->units(), bind(CvUnit::canShadowAt, pHeadSelectedUnit, pMouseOverPlot, _1));
-								if (iValidShadowUnits == 0)
-								{
-									bool bFirst = true;
-									if (pShadowUnit->baseMoves() > pHeadSelectedUnit->baseMoves())
-									{
-										strHelp.append(gDLL->getText("TXT_KEY_CAN_NOT_AUTOMATE_PROTECT_NOT_FAST_ENOUGH", pShadowUnit->getNameKey(), pHeadSelectedUnit->getNameKey(), pShadowUnit->baseMoves(), pShadowUnit->getNameKey()));
-										bFirst = false;
-									}
-									if (pShadowUnit->getTeam() != pHeadSelectedUnit->getTeam())
-									{
-										if (!bFirst)
-											strHelp.append(L"\n");
-										strHelp.append(gDLL->getText("TXT_KEY_CAN_NOT_AUTOMATE_PROTECT_DIFFERENT_TEAM", pShadowUnit->getNameKey()));
-										bFirst = false;
-									}
-									if (pShadowUnit == pHeadSelectedUnit)
-									{
-										if (!bFirst)
-											strHelp.append(L"\n");
-										strHelp.append(gDLL->getText("TXT_KEY_CAN_NOT_AUTOMATE_PROTECT_YOURSELF"));
-										bFirst = false;
-									}
-								}
-							}
-						}
-					}
-				}
-				break;
-
-			default:
-				break;
-			}
-
-			szTempBuffer += strHelp.getCString();
 			strHelp.assign(szTempBuffer);
 		}
+	}
+
+	const InterfaceModeTypes eInterfaceMode = gDLL->getInterfaceIFace()->getInterfaceMode();
+	if (eInterfaceMode != INTERFACEMODE_SELECTION)
+	{
+		CvWString szTempBuffer;
+		szTempBuffer.Format(SETCOLR L"%s" ENDCOLR NEWLINE, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getInterfaceModeInfo(eInterfaceMode).getDescription());
+
+		switch (eInterfaceMode)
+		{
+		case INTERFACEMODE_REBASE:
+			getRebasePlotHelp(pMouseOverPlot, szTempBuffer);
+			break;
+
+		case INTERFACEMODE_NUKE:
+			getNukePlotHelp(pMouseOverPlot, szTempBuffer);
+			break;
+
+		case INTERFACEMODE_SHADOW_UNIT:
+			{
+				const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+				if (NULL != pHeadSelectedUnit && pMouseOverPlot != NULL)
+				{
+					const CvUnit* pShadowUnit = pMouseOverPlot->getCenterUnit();
+					if (!pHeadSelectedUnit->getGroup()->canDoInterfaceModeAt(eInterfaceMode, pMouseOverPlot))
+					{
+						strHelp.clear();
+						if (pShadowUnit != NULL)
+						{
+							const int iValidShadowUnits = algo::count_if(pMouseOverPlot->units(), bind(CvUnit::canShadowAt, pHeadSelectedUnit, pMouseOverPlot, _1));
+							if (iValidShadowUnits == 0)
+							{
+								bool bFirst = true;
+								if (pShadowUnit->baseMoves() > pHeadSelectedUnit->baseMoves())
+								{
+									strHelp.append(gDLL->getText("TXT_KEY_CAN_NOT_AUTOMATE_PROTECT_NOT_FAST_ENOUGH", pShadowUnit->getNameKey(), pHeadSelectedUnit->getNameKey(), pShadowUnit->baseMoves(), pShadowUnit->getNameKey()));
+									bFirst = false;
+								}
+								if (pShadowUnit->getTeam() != pHeadSelectedUnit->getTeam())
+								{
+									if (!bFirst)
+										strHelp.append(L"\n");
+									strHelp.append(gDLL->getText("TXT_KEY_CAN_NOT_AUTOMATE_PROTECT_DIFFERENT_TEAM", pShadowUnit->getNameKey()));
+									bFirst = false;
+								}
+								if (pShadowUnit == pHeadSelectedUnit)
+								{
+									if (!bFirst)
+										strHelp.append(L"\n");
+									strHelp.append(gDLL->getText("TXT_KEY_CAN_NOT_AUTOMATE_PROTECT_YOURSELF"));
+									bFirst = false;
+								}
+							}
+						}
+					}
+				}
+			}
+			break;
+
+		default:
+			if (!CvWString(GC.getInterfaceModeInfo(eInterfaceMode).getHelp()).empty())
+			{
+				szTempBuffer.append(GC.getInterfaceModeInfo(eInterfaceMode).getHelp());
+				szTempBuffer.append(NEWLINE);
+			}
+			break;
+		}
+		szTempBuffer.append(NEWLINE);
+		szTempBuffer += strHelp.getCString();
+		strHelp.assign(szTempBuffer);
 	}
 }
 
