@@ -519,7 +519,6 @@ void CvInitCore::endGameSetup()
 	for (int i = MAX_PC_PLAYERS; i < MAX_PLAYERS; i++)
 	{
 		const PlayerTypes eID = static_cast<PlayerTypes>(i);
-		GC.getGame().logOOSSpecial(666, i, (int)m_aeSlotStatus[eID], (int)m_aeSlotClaim[eID]);
 		m_aeSlotStatus[eID] = SS_CLOSED;
 		m_aeSlotClaim[eID] = SLOTCLAIM_UNASSIGNED;
 	}

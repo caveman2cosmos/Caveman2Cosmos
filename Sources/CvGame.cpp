@@ -107,9 +107,7 @@ CvGame::~CvGame()
 
 void CvGame::init(HandicapTypes eHandicap)
 {
-	logOOSSpecial(198, -1, -1, -1);
 	GC.getInitCore().endGameSetup();
-	logOOSSpecial(199, -1, -1, -1);
 	//--------------------------------
 	// Init saved data
 	reset(eHandicap);
@@ -487,7 +485,6 @@ void CvGame::init(HandicapTypes eHandicap)
 	AI_init();
 
 	doUpdateCacheOnTurn();
-	logOOSSpecial(201, -1, -1, -1);
 }
 
 //
@@ -496,7 +493,6 @@ void CvGame::init(HandicapTypes eHandicap)
 void CvGame::setInitialItems()
 {
 	PROFILE_FUNC();
-	logOOSSpecial(202, -1, -1, -1);
 
 	initFreeState();
 	assignStartingPlots();
@@ -542,7 +538,6 @@ void CvGame::setInitialItems()
 		addLandmarkSigns();
 		updateInitialSigns();
 	}
-	logOOSSpecial(203, -1, -1, -1);
 }
 
 
@@ -9043,9 +9038,7 @@ void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, Civiliza
 	GC.getInitCore().setCiv(eNewPlayer, eCiv);
 	GC.getInitCore().setSlotStatus(eNewPlayer, SS_COMPUTER);
 	GC.getInitCore().setColor(eNewPlayer, eColor);
-	logOOSSpecial(100, (int)eNewPlayer, (int)eLeader, (int)eCiv);
 	GET_PLAYER(eNewPlayer).initInGame(eNewPlayer, bSetAlive);
-	logOOSSpecial(200, (int)eNewPlayer, (int)eLeader, (int)eCiv);
 }
 
 void CvGame::changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman )
