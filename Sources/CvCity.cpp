@@ -1642,7 +1642,7 @@ void CvCity::doAutobuild()
 			}
 			else if (kBuilding.getPrereqNumOfBuilding(NO_BUILDING) > 0
 			// Toffer - World wonder autobuilds should never be auto-removed.
-			&& kBuilding.getMaxGlobalInstances() == -1)
+			&& kBuilding.getMaxGlobalInstances() == 0)
 			{
 				// Special rule meant for adopted cultures, hopefully it won't affect other autobuilds in an irrational way.
 				for (int iJ = 0; iJ < iNumBuildingInfos; iJ++)
