@@ -10190,7 +10190,7 @@ void CvGame::doFlexibleDifficulty()
 			if (iTurns <= 0 || bFlexDiffForAI && !kPlayer.isHuman())
 			{
 				iTurns = GC.getDefineINT("DEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS", 25);
-				iTurns *= GC.getGameSpeedInfo(getGameSpeedType()).getResearchPercent();
+				iTurns *= GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent();
 				iTurns /= 100;
 			}
 

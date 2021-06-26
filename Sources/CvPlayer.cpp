@@ -16521,7 +16521,7 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 	{
 		if (GET_TEAM(getTeam()).getCounterespionageTurnsLeftAgainstTeam(GET_PLAYER(eTargetPlayer).getTeam()) <= 0)
 		{
-			iMissionCost = (iBaseMissionCost * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent()) / 100;
+			iMissionCost = iBaseMissionCost * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
 		}
 	}
 	else if (kMission.getPlayerAnarchyCounter() > 0)
@@ -16610,11 +16610,11 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 	}
 	else if (kMission.isPassive())
 	{
-		iMissionCost = (iBaseMissionCost * (100 + GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getEspionagePointsAgainstTeam(getTeam()))) / 100;
+		iMissionCost = iBaseMissionCost * (100 + GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getEspionagePointsAgainstTeam(getTeam())) / 100;
 	}
 	else
 	{
-		iMissionCost = (iBaseMissionCost * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent()) / 100;
+		iMissionCost = iBaseMissionCost * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
 	}
 
 	if (iMissionCost < 0)
@@ -17151,9 +17151,9 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 
 		if (NO_TEAM != eTargetTeam)
 		{
-			const int iTurns = kMission.getCounterespionageNumTurns() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent() / 100;
+			const int iTurns = kMission.getCounterespionageNumTurns() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
 			GET_TEAM(getTeam()).changeCounterespionageTurnsLeftAgainstTeam(eTargetTeam, iTurns);
-			GET_TEAM(getTeam()).changeCounterespionageModAgainstTeam(eTargetTeam, (kMission.getCounterespionageMod() + (5 * (pSpyUnit != NULL ? pSpyUnit->currInterceptionProbability() : 0))));
+			GET_TEAM(getTeam()).changeCounterespionageModAgainstTeam(eTargetTeam, kMission.getCounterespionageMod() + (pSpyUnit != NULL ? 5 * pSpyUnit->currInterceptionProbability() : 0));
 			bSomethingHappened = true;
 		}
 	}

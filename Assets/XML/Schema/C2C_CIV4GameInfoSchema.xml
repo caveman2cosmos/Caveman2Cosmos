@@ -1377,7 +1377,6 @@
 		<element type="iTrainPercent" minOccurs="0"/>
 		<element type="iConstructPercent" minOccurs="0"/>
 		<element type="iCreatePercent" minOccurs="0"/>
-		<element type="iResearchPercent" minOccurs="0"/>
 		<element type="iBuildPercent" minOccurs="0"/>
 		<element type="iImprovementPercent" minOccurs="0"/>
 		<element type="iGreatPeoplePercent" minOccurs="0"/>
