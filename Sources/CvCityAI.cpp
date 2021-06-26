@@ -4426,7 +4426,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			// We can actually build the building
 			&& canConstruct(eBuilding)
 			// Automated production doesn't look at buildings with prerequisites?
-			&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0))
+			&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuildings().empty()))
 		{
 			// Toffer - ToDo - Change iValue type to int64_t,
 			//	or reduce scoring as it gets dangerously close to overflowing as it is.

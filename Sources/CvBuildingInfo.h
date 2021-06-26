@@ -299,7 +299,6 @@ public:
 	const python::list cyGetPrereqAndTechs() const;
 
 	const IDValueMap<BuildingTypes, int>& getBuildingHappinessChanges() const { return m_aBuildingHappinessChanges; }
-	//int getBuildingHappinessChanges(BuildingTypes e) const;
 
 	int getFlavorValue(int i) const;
 	int getImprovementFreeSpecialist(int i) const;
@@ -307,7 +306,8 @@ public:
 	bool isCommerceFlexible(int i) const;
 	bool isCommerceChangeOriginalOwner(int i) const;
 
-	int getPrereqNumOfBuilding(int i) const;
+	int getPrereqNumOfBuilding(BuildingTypes e) const;
+	const IDValueMap<BuildingTypes, int>& getPrereqNumOfBuildings() const { return m_aPrereqNumOfBuilding; }
 
 	int getPrereqOrBuilding(const int i) const;
 	short getNumPrereqOrBuilding() const;
@@ -757,7 +757,6 @@ private:
 	int* m_piCommerceAttacks;
 	int* m_piBonusDefenseChanges;
 	int* m_piGlobalBuildingCostModifier;
-	int* m_piPrereqNumOfBuilding;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;
@@ -836,6 +835,7 @@ private:
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
 	IDValueMap<BuildingTypes, int> m_aBuildingProductionModifier;
 	IDValueMap<BuildingTypes, int> m_aGlobalBuildingProductionModifier;
+	IDValueMap<BuildingTypes, int> m_aPrereqNumOfBuilding;
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;
 	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;
