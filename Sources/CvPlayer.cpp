@@ -603,7 +603,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 
 		for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 		{
-			setCivics(((CivicOptionTypes)iI), ((CivicTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(iI))));
+			setCivics((CivicOptionTypes)iI, (CivicTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(iI));
 		}
 
 		// Reset all triggers at first, set those whose events have fired in next block
@@ -637,7 +637,6 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 					}
 				}
 			}
-
 			resetEventOccured((EventTypes)iI, false);
 		}
 
@@ -7723,10 +7722,12 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 	{
 		changeExtraBuildingHappiness(pair.first, pair.second * iChange);
 	}
-
+	foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingProductionModifiers())
+	{
+		changeBuildingProductionModifier(modifier.first, modifier.second * iChange);
+	}
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		changeBuildingProductionModifier((BuildingTypes)iI, kBuilding.getGlobalBuildingProductionModifier(iI) * iChange);
 		changeBuildingCostModifier((BuildingTypes)iI, kBuilding.getGlobalBuildingCostModifier(iI) * iChange);
 	}
 

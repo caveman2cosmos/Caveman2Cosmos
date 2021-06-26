@@ -623,7 +623,7 @@ public:
 
 	bool hasSkippedSaveChecksum() const;
 
-	void logDebugMsg(char* format, ...);
+	void logNetMsgData(char* format, ...);
 
 	void addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive = true);
 	void changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman );

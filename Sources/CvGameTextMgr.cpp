@@ -23063,44 +23063,33 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_LESS_WORLD_TRADE", -kBuilding.getWorldTradeRoutes()));
 		}
 
-		if (kBuilding.getUnitProductionModifier(NO_UNIT) != 0)
+		foreach_(const UnitModifier2& modifier, kBuilding.getUnitProductionModifiers())
 		{
 			CvWString szUnit;
 
-			for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+			if (GC.getGame().canEverTrain(modifier.first))
 			{
-				if (GC.getGame().canEverTrain((UnitTypes) iI) && kBuilding.getUnitProductionModifier(iI) != 0)
-				{
-					szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getUnitProductionModifier(iI)),
-						(kBuilding.getUnitProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_UNITHELP_CLASS_PRODUCTION_FAST_MOD") : gDLL->getText("TXT_KEY_UNITHELP_CLASS_PRODUCTION_SLOW_MOD")).c_str());
+				szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(modifier.second),
+					(modifier.second > 0 ? gDLL->getText("TXT_KEY_UNITHELP_CLASS_PRODUCTION_FAST_MOD") : gDLL->getText("TXT_KEY_UNITHELP_CLASS_PRODUCTION_SLOW_MOD")).c_str());
 
-					szUnit.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitInfo((UnitTypes) iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes) iI).getDescription());
+				szUnit.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitInfo(modifier.first).getType()).GetCString(), GC.getUnitInfo(modifier.first).getDescription());
 
-					setListHelp(szBuffer, szFirstBuffer, szUnit, L", ", (kBuilding.getUnitProductionModifier(iI) != iLast));
-					iLast = kBuilding.getUnitProductionModifier(iI);
-				}
+				setListHelp(szBuffer, szFirstBuffer, szUnit, L", ", (modifier.second != iLast));
+				iLast = modifier.second;
 			}
 		}
 
 		CvWString szBuilding;
 
-		if (kBuilding.getBuildingProductionModifier(NO_BUILDING) != 0)
+		iLast = 0;
+		foreach_(const BuildingModifier2& modifier, kBuilding.getBuildingProductionModifiers())
 		{
-			iLast = 0;
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+			if (GC.getGame().canEverConstruct(modifier.first))
 			{
-				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-
-				if (GC.getGame().canEverConstruct(eLoopBuilding))
-				{
-					if (kBuilding.getBuildingProductionModifier(iI) != 0)
-					{
-						szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getBuildingProductionModifier(iI)), (kBuilding.getBuildingProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_SLOW")).c_str());
-						szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-						setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (kBuilding.getBuildingProductionModifier(iI) != iLast));
-						iLast = kBuilding.getBuildingProductionModifier(iI);
-					}
-				}
+				szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(modifier.second), (modifier.second > 0 ? gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_SLOW")).c_str());
+				szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(modifier.first).getType()).GetCString(), GC.getBuildingInfo(modifier.first).getDescription());
+				setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (modifier.second != iLast));
+				iLast = modifier.second;
 			}
 		}
 
@@ -23135,31 +23124,26 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 
-		if (kBuilding.getGlobalBuildingProductionModifier(NO_BUILDING) != 0)
+		iLast = 0;
+		bool bGlobal = false;
+		foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingProductionModifiers())
 		{
-			iLast = 0;
-			bool bGlobal = false;
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
-			{
-				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+			const BuildingTypes eLoopBuilding = modifier.first;
 
-				if (GC.getGame().canEverConstruct(eLoopBuilding))
-				{
-					if (kBuilding.getGlobalBuildingProductionModifier(iI) != 0)
-					{
-						if (bGlobal && kBuilding.getGlobalBuildingProductionModifier(iI) != iLast)
-							szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL"));
-						bGlobal = true;
-						szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getGlobalBuildingProductionModifier(iI)), (kBuilding.getGlobalBuildingProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_SLOW")).c_str());
-						szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-						setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (kBuilding.getGlobalBuildingProductionModifier(iI) != iLast));
-						iLast = kBuilding.getGlobalBuildingProductionModifier(iI);
-					}
-				}
+			if (GC.getGame().canEverConstruct(eLoopBuilding))
+			{
+				if (bGlobal && modifier.second != iLast)
+					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL"));
+				bGlobal = true;
+				szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(modifier.second), (modifier.second > 0 ? gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVICHELP_BUILDING_PRODUCTION_SLOW")).c_str());
+				szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
+				setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (modifier.second != iLast));
+				iLast = modifier.second;
 			}
-			if (bGlobal)
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL"));
 		}
+		if (bGlobal)
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL"));
+
 		//City Growth Speed Modifier
 
 		if (kBuilding.getPopulationgrowthratepercentage() != 0)
@@ -23219,18 +23203,14 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	if (!bRelDisabled)
 	{
 		iLast = 0;
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); ++iI)
+		foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatExtraStrength())
 		{
-			if (kBuilding.getUnitCombatExtraStrength(iI) != 0)
-			{
-				int iUnitCombatExtraStrength = kBuilding.getUnitCombatExtraStrength(iI);
-				szFirstBuffer.Format(L"%s%c%s%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), (iUnitCombatExtraStrength > 0 ? L"+" : L""), iUnitCombatExtraStrength, gDLL->getText("TXT_KEY_BUILDINGHELP_UNITCOMBAT_EXTRA_STRENGTH").c_str());
-				szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)iI).getDescription());
-				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (iUnitCombatExtraStrength != iLast));
-				if (iLast != iUnitCombatExtraStrength)
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_IN_CITY"));
-				iLast = iUnitCombatExtraStrength;
-			}
+			szFirstBuffer.Format(L"%s%c%s%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), (modifier.second > 0 ? L"+" : L""), modifier.second, gDLL->getText("TXT_KEY_BUILDINGHELP_UNITCOMBAT_EXTRA_STRENGTH").c_str());
+			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo(modifier.first).getType()).GetCString(), GC.getUnitCombatInfo(modifier.first).getDescription());
+			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (modifier.second != iLast));
+			if (iLast != modifier.second)
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_IN_CITY"));
+			iLast = modifier.second;
 		}
 /*
 		iLast = 0;
