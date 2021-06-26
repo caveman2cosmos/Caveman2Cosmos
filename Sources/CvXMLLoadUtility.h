@@ -498,12 +498,8 @@ public:
 /**																								**/
 /**								Defines Function for Use in .cpp								**/
 /*************************************************************************************************/
-	// acquire a list of unknown length of String data from a Child setup in a String (typically for Pass 3 Use)
-	void SetStringWithChildList(int* iNumEntries, std::vector<CvString>* aszXMLLoad);
 	// acquire a list of unknown length of String data from a Child setup in an Array of INTs
 	void SetIntWithChildList(int* iNumEntries, int** piXMLLoad);
-	// acquire a list of known length of String data from a Child setup true values in an Array of BOOLs
-	void SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad);
 /*************************************************************************************************/
 /**	New Tag Defs							END													**/
 /*************************************************************************************************/
@@ -719,8 +715,6 @@ public:
 	// Returns true if the dependency list is satisfied, false if not.
 	inline bool CheckDependency();
 
-	static void RemoveTGAFiller();
-
 	static void showXMLError(const char* const format, ...);
 
 	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
@@ -789,19 +783,10 @@ private:
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
+public:
 	template <class T>
 	void LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* szFileRoot, const char* szFileDirectory, const wchar_t* szXmlPath, bool bTwoPass, CvInfoReplacements<T>* pReplacements = NULL);
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 05/13/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	/*
-	template <class T>
-	void LoadGlobalClassInfoModular(std::vector<T*>& aInfos, const char* szFileRoot, const char* szFileDirectory, const char* szXmlPath, bool bTwoPass);*/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
+private:
 	void SetDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfos, const wchar_t* szTagName);
 	void LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfos, const char* szFileRoot, const char* szFileDirectory, const wchar_t* szXmlPath, bool bUseCaching);
 
