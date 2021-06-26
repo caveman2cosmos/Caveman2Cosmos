@@ -1360,7 +1360,6 @@
 	<ElementType name="iCreatePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iBuildPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iImprovementPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iGreatPeoplePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iCulturePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iEventChancePerTurn" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbPercent" content="textOnly" dt:type="int"/>
@@ -1379,7 +1378,6 @@
 		<element type="iCreatePercent" minOccurs="0"/>
 		<element type="iBuildPercent" minOccurs="0"/>
 		<element type="iImprovementPercent" minOccurs="0"/>
-		<element type="iGreatPeoplePercent" minOccurs="0"/>
 		<element type="iCulturePercent" minOccurs="0"/>
 		<element type="iBarbPercent" minOccurs="0"/>
 		<element type="iFeatureProductionPercent" minOccurs="0"/>
@@ -1659,6 +1657,7 @@
 	<ElementType name="AudioUnitDefeatScript" content="textOnly"/>
 	<ElementType name="iAdvancedStartPoints" content="textOnly" dt:type="int"/>
 	<ElementType name="iAnarchyPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iGreatPeoplePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="EraInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>

@@ -611,7 +611,7 @@ void stopProfilingDLL(bool longLived)
 #endif
 }
 
-// Toffer - Square root with integer math, OOS safe.
+// Toffer - Square root with integer math.
 int intSqrt(unsigned int iValue, const bool bTreatNegAsPos)
 {
 	unsigned int iRem = 0;
@@ -689,6 +689,18 @@ int intPow(const int x, const int p)
 }
 
 int getModifiedIntValue(const int iValue, const int iMod)
+{
+	if (iMod > 0)
+	{
+		return iValue * (100 + iMod) / 100;
+	}
+	if (iMod < 0)
+	{
+		return iValue * 100 / (100 - iMod);
+	}
+	return iValue;
+}
+int64_t getModifiedIntValue64(const int64_t iValue, const int iMod)
 {
 	if (iMod > 0)
 	{

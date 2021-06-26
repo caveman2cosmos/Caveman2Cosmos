@@ -3839,7 +3839,6 @@ public:
 	int getCreatePercent() const;
 	int getBuildPercent() const;
 	int getImprovementPercent() const;
-	int getGreatPeoplePercent() const;
 	int getBarbPercent() const;
 	int getFeatureProductionPercent() const;
 	int getUnitDiscoverPercent() const;
@@ -3871,7 +3870,6 @@ protected:
 	int m_iCreatePercent;
 	int m_iBuildPercent;
 	int m_iImprovementPercent;
-	int m_iGreatPeoplePercent;
 	int m_iBarbPercent;
 	int m_iFeatureProductionPercent;
 	int m_iUnitDiscoverPercent;
