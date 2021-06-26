@@ -3834,7 +3834,6 @@ public:
 	virtual ~CvGameSpeedInfo();
 
 	int getSpeedPercent() const;
-	int getGrowthPercent() const;
 	int getTrainPercent() const;
 	int getConstructPercent() const;
 	int getCreatePercent() const;
@@ -3868,7 +3867,6 @@ public:
 protected:
 
 	int m_iSpeedPercent;
-	int m_iGrowthPercent;
 	int m_iTrainPercent;
 	int m_iConstructPercent;
 	int m_iCreatePercent;

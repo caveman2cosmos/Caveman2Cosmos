@@ -1854,13 +1854,12 @@ void CvPlayer::setupGraphical()
 void CvPlayer::initFreeState()
 {
 	setGold(0);
-
 	int iGold = GC.getHandicapInfo(getHandicapType()).getStartingGold() + GC.getEraInfo(GC.getGame().getStartEra()).getStartingGold();
-	iGold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent();
+
+	iGold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iGold /= 100;
 
 	changeGold(iGold);
-
 	clearResearchQueue();
 }
 
@@ -6301,7 +6300,10 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 	if (iGold != 0)
 	{
 		iGold += GC.getGame().getSorenRandNum(GC.getGoodyInfo(eGoody).getGoldRand1(), "Goody Gold 1") + GC.getGame().getSorenRandNum(GC.getGoodyInfo(eGoody).getGoldRand2(), "Goody Gold 2");
-		iGold  = (iGold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent()) / 100;
+
+		iGold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+		iGold /= 100;
+
 		changeGold(iGold);
 
 		szBuffer += gDLL->getText("TXT_KEY_MISC_RECEIVED_GOLD", iGold);
@@ -6317,7 +6319,7 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 		{
 			iResearch += GC.getGame().getSorenRandNum(GC.getGoodyInfo(eGoody).getGoldRand1(), "Goody Gold 1") + GC.getGame().getSorenRandNum(GC.getGoodyInfo(eGoody).getGoldRand2(), "Goody Gold 2");
 
-			iTotalResearch = ((GET_TEAM(getTeam()).getResearchCost(eTech) * iResearch)/100);
+			iTotalResearch = GET_TEAM(getTeam()).getResearchCost(eTech) * iResearch / 100;
 			GET_TEAM(getTeam()).changeResearchProgress(eTech, iTotalResearch, getID());
 
 			szBuffer += gDLL->getText("TXT_KEY_MISC_RECEIVED_RESEARCH", iTotalResearch, GC.getTechInfo(eTech).getTextKeyWide());
@@ -16470,7 +16472,7 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 		// Buy City
 		if (NULL != pCity)
 		{
-			iMissionCost = iBaseMissionCost + (kMission.getBuyCityCostFactor() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent()) / 10000;
+			iMissionCost = iBaseMissionCost + kMission.getBuyCityCostFactor() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 10000;
 		}
 	}
 	else if (kMission.getCityInsertCultureCostFactor() > 0)
@@ -16486,12 +16488,10 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 	}
 	else if (kMission.isDestroyImprovement())
 	{
-		if (NULL != pPlot && !pPlot->isCity())
+		if (NULL != pPlot && !pPlot->isCity()
+		&& (pPlot->getImprovementType() != NO_IMPROVEMENT || pPlot->getRouteType() != NO_ROUTE))
 		{
-			if (pPlot->getImprovementType() != NO_IMPROVEMENT || pPlot->getRouteType() != NO_ROUTE)
-			{
-				iMissionCost = (iBaseMissionCost * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getBuildPercent()) / 100;
-			}
+			iMissionCost = (iBaseMissionCost * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getBuildPercent()) / 100;
 		}
 	}
 	else if (kMission.getCityPoisonWaterCounter() > 0)
@@ -22590,45 +22590,35 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 		for (int iEvent = 0; iEvent < GC.getNumEventInfos(); ++iEvent)
 		{
+			const int iFollowupChance = kEvent.getAdditionalEventChance(iEvent);
+
 			if (0 == kEvent.getAdditionalEventTime(iEvent))
 			{
-				if (kEvent.getAdditionalEventChance(iEvent) > 0)
+				if (iFollowupChance > 0 && canDoEvent((EventTypes)iEvent, *pTriggeredData)
+				&& GC.getGame().getSorenRandNum(100, "Additional Event") < iFollowupChance)
 				{
-					if (canDoEvent((EventTypes)iEvent, *pTriggeredData))
-					{
-						if (GC.getGame().getSorenRandNum(100, "Additional Event") < kEvent.getAdditionalEventChance(iEvent))
-						{
-							applyEvent((EventTypes)iEvent, iEventTriggeredId, false);
-						}
-					}
+					applyEvent((EventTypes)iEvent, iEventTriggeredId, false);
 				}
 			}
-			else
+			else if (iFollowupChance < 1 || GC.getGame().getSorenRandNum(100, "Additional Event 2") < iFollowupChance)
 			{
-				bool bSetTimer = true;
-				if (kEvent.getAdditionalEventChance(iEvent) > 0)
+				EventTriggeredData kTriggered = *pTriggeredData;
+				kTriggered.m_iTurn =
+				(
+					GC.getGame().getGameTurn()
+					+
+					kEvent.getAdditionalEventTime((EventTypes)iEvent)
+					*
+					GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100
+				);
+				const EventTriggeredData* pExistingTriggered = getEventCountdown((EventTypes)iEvent);
+
+				if (NULL != pExistingTriggered)
 				{
-					if (GC.getGame().getSorenRandNum(100, "Additional Event 2") >= kEvent.getAdditionalEventChance(iEvent))
-					{
-						bSetTimer = false;
-					}
+					kTriggered.m_iTurn = std::min(kTriggered.m_iTurn, pExistingTriggered->m_iTurn);
 				}
-
-				if (bSetTimer)
-				{
-					EventTriggeredData kTriggered = *pTriggeredData;
-					kTriggered.m_iTurn = (GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent() * kEvent.getAdditionalEventTime((EventTypes)iEvent)) / 100 + GC.getGame().getGameTurn();
-
-					const EventTriggeredData* pExistingTriggered = getEventCountdown((EventTypes)iEvent);
-
-					if (NULL != pExistingTriggered)
-					{
-						kTriggered.m_iTurn = std::min(kTriggered.m_iTurn, pExistingTriggered->m_iTurn);
-					}
-
-					setEventCountdown((EventTypes)iEvent, kTriggered);
-					bDeleteTrigger = false;
-				}
+				setEventCountdown((EventTypes)iEvent, kTriggered);
+				bDeleteTrigger = false;
 			}
 		}
 
@@ -24984,7 +24974,7 @@ int CvPlayer::getNewCityProductionValue() const
 	iValue *= 100 + GC.getDefineINT("NEW_CITY_BUILDING_VALUE_MODIFIER");
 	iValue /= 100;
 
-	iValue += (GC.getDefineINT("ADVANCED_START_CITY_COST") * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent()) / 100;
+	iValue += GC.getDefineINT("ADVANCED_START_CITY_COST") * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
 
 	const int iPopulation = GC.getINITIAL_CITY_POPULATION() + GC.getEraInfo(GC.getGame().getStartEra()).getFreePopulation();
 	for (int i = 1; i <= iPopulation; ++i)
@@ -24999,7 +24989,7 @@ int CvPlayer::getGrowthThreshold(int iPopulation) const
 {
 	int iThreshold = GC.getDefineINT("BASE_CITY_GROWTH_THRESHOLD") + iPopulation * GC.getDefineINT("CITY_GROWTH_MULTIPLIER");
 
-	iThreshold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent();
+	iThreshold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iThreshold /= 100;
 
 	iThreshold *= GC.getEraInfo(getCurrentEra()).getGrowthPercent();

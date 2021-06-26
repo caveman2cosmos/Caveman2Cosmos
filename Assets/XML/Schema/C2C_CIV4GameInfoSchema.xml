@@ -1374,7 +1374,6 @@
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="iSpeedPercent" minOccurs="0"/>
-		<element type="iGrowthPercent" minOccurs="0"/>
 		<element type="iTrainPercent" minOccurs="0"/>
 		<element type="iConstructPercent" minOccurs="0"/>
 		<element type="iCreatePercent" minOccurs="0"/>

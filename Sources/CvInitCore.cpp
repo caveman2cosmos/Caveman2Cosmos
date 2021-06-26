@@ -1630,7 +1630,7 @@ void CvInitCore::resetAdvancedStartPoints()
 
 	if (NO_GAMESPEED != getGameSpeed())
 	{
-		iPoints *= GC.getGameSpeedInfo(getGameSpeed()).getGrowthPercent();
+		iPoints *= GC.getGameSpeedInfo(getGameSpeed()).getSpeedPercent();
 		iPoints /= 100;
 	}
 

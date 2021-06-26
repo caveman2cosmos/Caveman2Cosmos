@@ -11748,14 +11748,6 @@ int CvGame::getBaseMissileUnitIncrementsbyCargoVolume() const
 	return std::max(1, iBase);
 }
 
-bool CvGame::isEarlyGame() const
-{
-	int iEarlyTurnThreshold = GC.getDefineINT("EARLY_GAME_TURN_THRESHOLD", 50);
-	iEarlyTurnThreshold *= GC.getGameSpeedInfo(getGameSpeedType()).getGrowthPercent();
-	iEarlyTurnThreshold /= 100;
-	return getElapsedGameTurns() < iEarlyTurnThreshold;
-}
-
 bool CvGame::isAnyoneHasUnitZoneOfControl() const
 {
 	return m_bAnyoneHasUnitZoneOfControl;

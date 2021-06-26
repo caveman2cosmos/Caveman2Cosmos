@@ -2625,7 +2625,7 @@ def getHelpGreed1(argsList):
 	CyPlayerOther = GC.getPlayer(data.eOtherPlayer)
 	iBonus = GC.getMap().plot(data.iPlotX, data.iPlotY).getBonusType(CyPlayer.getTeam())
 
-	iTurns = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+	iTurns = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 
 	return TRNSLTR.getText("TXT_KEY_EVENT_GREED_HELP_1", (CyPlayerOther.getCivilizationShortDescriptionKey(), GC.getBonusInfo(iBonus).getTextKey(), iTurns))
 
@@ -2637,7 +2637,7 @@ def expireGreed1(argsList):
 	if iOwner == -1 or iOwner == data.ePlayer:
 		return False
 
-	if GAME.getGameTurn() >= data.iTurn + GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent():
+	if GAME.getGameTurn() >= data.iTurn + GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent():
 		return True
 
 	if iOwner != data.eOtherPlayer:
