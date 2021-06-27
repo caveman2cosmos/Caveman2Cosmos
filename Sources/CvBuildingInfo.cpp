@@ -93,10 +93,8 @@ m_iAssetValue(0),
 m_iPowerValue(0),
 m_iSpecialBuildingType(NO_SPECIALBUILDING),
 m_iAdvisorType(NO_ADVISOR),
-
 m_iPrereqGameOption(NO_GAMEOPTION),
 m_iNotGameOption(NO_GAMEOPTION),
-
 m_iHolyCity(NO_RELIGION),
 m_iReligionType(NO_RELIGION),
 m_iStateReligion(NO_RELIGION),
@@ -110,7 +108,6 @@ m_iGreatPeopleUnitType(NO_UNIT),
 m_iGreatPeopleRateChange(0),
 m_iConquestProbability(50),
 m_iMaintenanceModifier(0),
-//DPII < Maintenance Modifier >
 m_iGlobalMaintenanceModifier(0),
 m_iAreaMaintenanceModifier(0),
 m_iOtherAreaMaintenanceModifier(0),
@@ -118,7 +115,6 @@ m_iDistanceMaintenanceModifier(0),
 m_iNumCitiesMaintenanceModifier(0),
 m_iCoastalDistanceMaintenanceModifier(0),
 m_iConnectedCityMaintenanceModifier(0),
-//DPII < Maintenance Modifier >
 m_iWarWearinessModifier(0),
 m_iGlobalWarWearinessModifier(0),
 m_iEnemyWarWearinessModifier(0),
@@ -133,12 +129,10 @@ m_iDefenseModifier(0),
 m_iBombardDefenseModifier(0),
 m_iAllCityDefenseModifier(0),
 m_iEspionageDefenseModifier(0),
-
 m_iUnitUpgradePriceModifier(0),
 m_iRevIdxLocal(0),
 m_iRevIdxNational(0),
 m_iRevIdxDistanceModifier(0),
-
 m_iMissionType(NO_MISSION),
 m_iVoteSourceType(NO_VOTESOURCE),
 m_fVisibilityPriority(0.0f),
@@ -238,8 +232,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_bZoneOfControl(false)
 ,m_bProtectedCulture(false)
 //New Boolean Arrays
-,m_pbPrereqOrCivics(NULL)
-,m_pbPrereqAndCivics(NULL)
 ,m_pbPrereqOrTerrain(NULL)
 ,m_pbPrereqAndTerrain(NULL)
 ,m_pbPrereqOrImprovement(NULL)
@@ -356,13 +348,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piImprovementFreeSpecialist);
 	SAFE_DELETE_ARRAY(m_pbCommerceFlexible);
 	SAFE_DELETE_ARRAY(m_pbCommerceChangeOriginalOwner);
-	SAFE_DELETE_ARRAY2(m_ppaiSpecialistYieldChange, GC.getNumSpecialistInfos());
-	SAFE_DELETE_ARRAY2(m_ppaiSpecialistCommerceChange, GC.getNumSpecialistInfos());
-	SAFE_DELETE_ARRAY2(m_ppaiLocalSpecialistYieldChange, GC.getNumSpecialistInfos());
-	SAFE_DELETE_ARRAY2(m_ppaiLocalSpecialistCommerceChange, GC.getNumSpecialistInfos());
-	SAFE_DELETE_ARRAY2(m_ppaiBonusYieldModifier, GC.getNumSpecialistInfos());
-	SAFE_DELETE_ARRAY(m_pbPrereqOrCivics);
-	SAFE_DELETE_ARRAY(m_pbPrereqAndCivics);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrTerrain);
 	SAFE_DELETE_ARRAY(m_pbPrereqAndTerrain);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrImprovement);
@@ -370,6 +355,12 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piBonusDefenseChanges);
 	SAFE_DELETE_ARRAY(m_piGlobalBuildingCostModifier);
 	SAFE_DELETE_ARRAY(m_piCommerceAttacks);
+	SAFE_DELETE_ARRAY(m_pabHurry);
+	SAFE_DELETE_ARRAY2(m_ppaiSpecialistYieldChange, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiSpecialistCommerceChange, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiLocalSpecialistYieldChange, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiLocalSpecialistCommerceChange, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiBonusYieldModifier, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiBonusCommerceModifier, GC.getNumBonusInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiBonusYieldChanges, GC.getNumBonusInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiBonusCommercePercentChanges, GC.getNumBonusInfos());
@@ -382,45 +373,17 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY2(m_ppiImprovementYieldChanges, GC.getNumImprovementInfos());
 	SAFE_DELETE(m_pExprNewCityFree);
 	SAFE_DELETE(m_pExprConstructCondition);
-
-	//TB Building Tags
-	SAFE_DELETE_ARRAY(m_pabHurry);
 	//SAFE_DELETE(m_pExprFreePromotionCondition);
 
-	for (int i = 0; i < (int)m_aEnabledCivilizationTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aEnabledCivilizationTypes[i]));
-	}
-
-	for (int i = 0; i < (int)m_aAidRateChanges.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aAidRateChanges[i]));
-	}
-
-	for (int i = 0; i < (int)m_aiFreeTraitTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiFreeTraitTypes[i]));
-	}
-
-	for (int i = 0; i < (int)m_aiPrereqInCityBuildings.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiPrereqInCityBuildings[i]));
-	}
-
-	for (int i = 0; i < (int)m_vPrereqNotInCityBuildings.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_vPrereqNotInCityBuildings[i]));
-	}
-
-	for (int i=0; i<(int)m_vPrereqOrBuilding.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_vPrereqOrBuilding[i]));
-	}
-
-	for (int i=0; i<(int)m_vReplacementBuilding.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_vReplacementBuilding[i]));
-	}
+	GC.removeDelayedResolutionVector(m_aEnabledCivilizationTypes);
+	GC.removeDelayedResolutionVector(m_aAidRateChanges);
+	GC.removeDelayedResolutionVector(m_aiFreeTraitTypes);
+	GC.removeDelayedResolutionVector(m_aiPrereqInCityBuildings);
+	GC.removeDelayedResolutionVector(m_vPrereqNotInCityBuildings);
+	GC.removeDelayedResolutionVector(m_vPrereqOrBuilding);
+	GC.removeDelayedResolutionVector(m_vReplacementBuilding);
+	GC.removeDelayedResolutionVector(m_vPrereqOrCivics);
+	GC.removeDelayedResolutionVector(m_vPrereqAndCivics);
 
 	m_aBuildingHappinessChanges.removeDelayedResolution();
 	m_aUnitProductionModifier.removeDelayedResolution();
@@ -944,26 +907,17 @@ int CvBuildingInfo::getNoEntryDefenseLevel() const
 	return m_iNoEntryDefenseLevel;
 }
 
-
-bool CvBuildingInfo::isPrereqOrCivics(int i) const
+bool CvBuildingInfo::isPrereqOrCivics(CivicTypes eCivic) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i)
-	return m_pbPrereqOrCivics ? m_pbPrereqOrCivics[i] : false;
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
+	return algo::contains(m_vPrereqOrCivics, eCivic);
 }
 
-bool CvBuildingInfo::isPrereqAndCivics(int i) const
+bool CvBuildingInfo::isPrereqAndCivics(CivicTypes eCivic) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i)
-	return m_pbPrereqAndCivics ? m_pbPrereqAndCivics[i] : false;
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
+	return algo::contains(m_vPrereqAndCivics, eCivic);
 }
-
-//This is for the readpass3
-int CvBuildingInfo::isPrereqOrCivicsVectorSize() const						{return m_aszPrereqOrCivicsforPass3.size();}
-CvString CvBuildingInfo::isPrereqOrCivicsNamesVectorElement(int i) const	{return m_aszPrereqOrCivicsforPass3[i];}
-int CvBuildingInfo::isPrereqOrCivicsValuesVectorElement(int i) const		{return m_abPrereqOrCivicsforPass3[i];}
-int CvBuildingInfo::isPrereqAndCivicsVectorSize() const						{return m_aszPrereqAndCivicsforPass3.size();}
-CvString CvBuildingInfo::isPrereqAndCivicsNamesVectorElement(int i) const	{return m_aszPrereqAndCivicsforPass3[i];}
-int CvBuildingInfo::isPrereqAndCivicsValuesVectorElement(int i) const		{return m_abPrereqAndCivicsforPass3[i];}
 
 bool CvBuildingInfo::isPrereqOrTerrain(int i) const
 {
@@ -1999,9 +1953,8 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bPrereqWar);
 	CheckSum(iSum, m_bRequiresActiveCivics);
 	CheckSum(iSum, m_bZoneOfControl);
-
-	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqOrCivics);
-	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqAndCivics);
+	CheckSumC(iSum, m_vPrereqOrCivics);
+	CheckSumC(iSum, m_vPrereqAndCivics);
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbPrereqOrTerrain);
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbPrereqAndTerrain);
 	CheckSumI(iSum, GC.getNumImprovementInfos(), m_pbPrereqOrImprovement);
@@ -2009,7 +1962,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aBuildingProductionModifier);
 	CheckSumC(iSum, m_aGlobalBuildingProductionModifier);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piGlobalBuildingCostModifier);
-
 	CheckSumC(iSum, m_aUnitProductionModifier);
 	CheckSumC(iSum, m_piPrereqOrVicinityBonuses);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusDefenseChanges);
@@ -2079,7 +2031,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iMediumRangeSupportPercentModifier);
 	CheckSum(iSum, m_iLongRangeSupportPercentModifier);
 	CheckSum(iSum, m_iFlankSupportPercentModifier);
-#endif
+#endif // STRENGTH_IN_NUMBERS
 	CheckSum(iSum, m_iNationalCaptureProbabilityModifier);
 	CheckSum(iSum, m_iNationalCaptureResistanceModifier);
 	CheckSum(iSum, m_iLocalCaptureProbabilityModifier);
@@ -2302,7 +2254,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_iCivicOption = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"GreatPeopleUnitType");
-	m_aszExtraXMLforPass3.push_back(szTextVal);
+	GC.addDelayedResolution((int*)&m_iGreatPeopleUnitType, szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"DiploVoteType");
 	m_iVoteSourceType = pXML->GetInfoClass(szTextVal);
@@ -3077,68 +3029,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	if (pXML->TryMoveToXmlFirstChild(L"PrereqOrCivics"))
-	{
-		const int iNumSibs = pXML->GetXmlChildrenNumber();
-		bool bTemp = false;
-		if (iNumSibs > 0)
-		{
-			if (pXML->TryMoveToXmlFirstChild())
-			{
-				for (int i = 0; i < iNumSibs; i++)
-				{
-					if (pXML->GetChildXmlVal(szTextVal))
-					{
-                        m_aszPrereqOrCivicsforPass3.push_back(szTextVal);
-                        pXML->GetNextXmlVal(&bTemp);
-                        m_abPrereqOrCivicsforPass3.push_back(bTemp);
-						pXML->MoveToXmlParent();
-					}
-
-					if (!pXML->TryMoveToXmlNextSibling())
-					{
-						break;
-					}
-				}
-
-				pXML->MoveToXmlParent();
-			}
-		}
-
-		pXML->MoveToXmlParent();
-	}
-
-	if (pXML->TryMoveToXmlFirstChild(L"PrereqAndCivics"))
-	{
-		const int iNumSibs = pXML->GetXmlChildrenNumber();
-		bool bTemp = false;
-		if (iNumSibs > 0)
-		{
-			if (pXML->TryMoveToXmlFirstChild())
-			{
-				for (int i = 0; i < iNumSibs; i++)
-				{
-					if (pXML->GetChildXmlVal(szTextVal))
-					{
-						m_aszPrereqAndCivicsforPass3.push_back(szTextVal);
-						pXML->GetNextXmlVal(&bTemp);
-						m_abPrereqAndCivicsforPass3.push_back(bTemp);
-						pXML->MoveToXmlParent();
-					}
-
-					if (!pXML->TryMoveToXmlNextSibling())
-					{
-						break;
-					}
-				}
-
-				pXML->MoveToXmlParent();
-			}
-		}
-
-		pXML->MoveToXmlParent();
-	}
-
+	pXML->SetOptionalVectorWithDelayedResolution(m_vPrereqOrCivics, L"PrereqOrCivics");
+	pXML->SetOptionalVectorWithDelayedResolution(m_vPrereqAndCivics, L"PrereqAndCivics");
 	pXML->SetOptionalVector(&m_piPrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
 	pXML->SetOptionalVector(&m_aePrereqOrRawVicinityBonuses, L"PrereqRawVicinityBonuses");
 
@@ -3426,7 +3318,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	}
 	//TB Combat Mods (Buildings) begin
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PropertySpawnUnit");
-	m_aszExtraXMLforPass3.push_back(szTextVal);
+	GC.addDelayedResolution((int*)&m_ePropertySpawnUnit, szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PropertySpawnProperty");
 	m_ePropertySpawnProperty = (PropertyTypes) pXML->GetInfoClass(szTextVal);
@@ -3444,7 +3336,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMediumRangeSupportPercentModifier, L"iMediumRangeSupportPercentModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iLongRangeSupportPercentModifier, L"iLongRangeSupportPercentModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iFlankSupportPercentModifier, L"iFlankSupportPercentModifier");
-#endif
+#endif // STRENGTH_IN_NUMBERS
 	pXML->GetOptionalChildXmlValByName(&m_iNationalCaptureProbabilityModifier, L"iNationalCaptureProbabilityModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iNationalCaptureResistanceModifier, L"iNationalCaptureResistanceModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iLocalCaptureProbabilityModifier, L"iLocalCaptureProbabilityModifier");
@@ -3711,55 +3603,6 @@ bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
 
 bool CvBuildingInfo::readPass3()
 {
-	m_pbPrereqOrCivics = new bool[GC.getNumCivicInfos()];
-	for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
-	{
-		m_pbPrereqOrCivics[iI] = false;
-	}
-	if (!m_abPrereqOrCivicsforPass3.empty() && !m_aszPrereqOrCivicsforPass3.empty())
-	{
-		const int iNumLoad = m_abPrereqOrCivicsforPass3.size();
-		for(int iI = 0; iI < iNumLoad; iI++)
-		{
-			//FAssertMsg(GC.getInfoTypeForString(m_aszPrereqOrCivicsforPass3[iI]) >= 0, L"Warning, about to leak memory in CvBuildingInfo::readPass3");
-			const int iTempIndex = GC.getInfoTypeForString(m_aszPrereqOrCivicsforPass3[iI]);
-			if (iTempIndex >= 0 && iTempIndex < GC.getNumCivicInfos())
-				m_pbPrereqOrCivics[iTempIndex] = m_abPrereqOrCivicsforPass3[iI];
-		}
-		m_aszPrereqOrCivicsforPass3.clear();
-		m_abPrereqOrCivicsforPass3.clear();
-	}
-
-	m_pbPrereqAndCivics = new bool[GC.getNumCivicInfos()];
-    for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
-	{
-		m_pbPrereqAndCivics[iI] = false;
-	}
-	if (!m_abPrereqAndCivicsforPass3.empty() && !m_aszPrereqAndCivicsforPass3.empty())
-	{
-		const int iNumLoad = m_abPrereqAndCivicsforPass3.size();
-		for(int iI = 0; iI < iNumLoad; iI++)
-		{
-			//FAssertMsg(GC.getInfoTypeForString(m_aszPrereqAndCivicsforPass3[iI]) >= 0, L"Warning, about to leak memory in CvBuildingInfo::readPass3");
-			const int iTempIndex = GC.getInfoTypeForString(m_aszPrereqAndCivicsforPass3[iI]);
-			if (iTempIndex >= 0 && iTempIndex < GC.getNumCivicInfos())
-				m_pbPrereqAndCivics[iTempIndex] = m_abPrereqAndCivicsforPass3[iI];
-		}
-		m_aszPrereqAndCivicsforPass3.clear();
-		m_abPrereqAndCivicsforPass3.clear();
-	}
-
-	if (m_aszExtraXMLforPass3.size() < 1)
-	{
-		FAssert(false);
-		return false;
-	}
-	m_iGreatPeopleUnitType = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
-
-	m_ePropertySpawnUnit = (UnitTypes) GC.getInfoTypeForString(m_aszExtraXMLforPass3[1]);
-
-	m_aszExtraXMLforPass3.clear();
-
 	const int iCount = getNumReplacementBuilding();
 	if (iCount > 0)
 	{
@@ -4756,18 +4599,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			}
 		}
 	}
-	//These are done differently because of the ReadPass3
-	for ( int i = 0; i < pClassInfo->isPrereqOrCivicsVectorSize(); i++ )
-	{
-		m_abPrereqOrCivicsforPass3.push_back(pClassInfo->isPrereqOrCivicsValuesVectorElement(i));
-		m_aszPrereqOrCivicsforPass3.push_back(pClassInfo->isPrereqOrCivicsNamesVectorElement(i));
-	}
-
-	for ( int i = 0; i < pClassInfo->isPrereqAndCivicsVectorSize(); i++ )
-	{
-		m_abPrereqAndCivicsforPass3.push_back(pClassInfo->isPrereqAndCivicsValuesVectorElement(i));
-		m_aszPrereqAndCivicsforPass3.push_back(pClassInfo->isPrereqAndCivicsNamesVectorElement(i));
-	}
+	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqOrCivics, pClassInfo->getPrereqOrCivics());
+	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqAndCivics, pClassInfo->getPrereqAndCivics());
 
 	m_Properties.copyNonDefaults(pClassInfo->getProperties());
 	m_PropertiesAllCities.copyNonDefaults(pClassInfo->getPropertiesAllCities());

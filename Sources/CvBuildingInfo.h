@@ -339,8 +339,12 @@ public:
 	int getExtraFreeBonusNum(int i) const;
 	bool hasExtraFreeBonus(BonusTypes eBonus) const;
 
-	bool isPrereqOrCivics(int iCivic) const;
-	bool isPrereqAndCivics(int iCivic) const;
+	bool isPrereqOrCivics(CivicTypes eCivic) const;
+	const std::vector<CivicTypes>& getPrereqOrCivics() const { return m_vPrereqOrCivics; }
+
+	bool isPrereqAndCivics(CivicTypes eCivic) const;
+	const std::vector<CivicTypes>& getPrereqAndCivics() const { return m_vPrereqAndCivics; }
+
 	bool isPrereqOrTerrain(int i) const;
 	bool isPrereqAndTerrain(int i) const;
 	bool isPrereqOrImprovement(int i) const;
@@ -350,20 +354,6 @@ public:
 	const IDValueMap<BuildingTypes, int>& getGlobalBuildingProductionModifiers() const { return m_aGlobalBuildingProductionModifier; }
 	int getGlobalBuildingCostModifier(int i) const;
 	int getBonusDefenseChanges(int i) const;
-
-	std::vector<CvString> m_aszPrereqOrCivicsforPass3;
-	std::vector<bool> m_abPrereqOrCivicsforPass3;
-
-	int isPrereqOrCivicsVectorSize() const;
-	CvString isPrereqOrCivicsNamesVectorElement(int i) const;
-	int isPrereqOrCivicsValuesVectorElement(int i) const;
-
-	int isPrereqAndCivicsVectorSize() const;
-	CvString isPrereqAndCivicsNamesVectorElement(int i) const;
-	int isPrereqAndCivicsValuesVectorElement(int i) const;
-
-	std::vector<CvString> m_aszPrereqAndCivicsforPass3;
-	std::vector<bool> m_abPrereqAndCivicsforPass3;
 
 	int getReplacementBuilding(const int i) const;
 	short getNumReplacementBuilding() const;
@@ -744,8 +734,8 @@ private:
 	CvString m_szArtDefineTag;
 	CvString m_szMovieDefineTag;
 
-	bool* m_pbPrereqOrCivics;
-	bool* m_pbPrereqAndCivics;
+	std::vector<CivicTypes> m_vPrereqOrCivics;
+	std::vector<CivicTypes> m_vPrereqAndCivics;
 	bool* m_pbPrereqOrTerrain;
 	bool* m_pbPrereqAndTerrain;
 	bool* m_pbPrereqOrImprovement;

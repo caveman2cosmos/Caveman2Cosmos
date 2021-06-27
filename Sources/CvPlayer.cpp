@@ -6757,12 +6757,12 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 			return false;
 		}
 
-		if (kUnit.isPrereqOrCivics((int)NO_CIVIC))
+		if (!kUnit.getPrereqOrCivics().empty())
 		{
 			bool bValid = false;
-			for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
+			foreach_(const CivicTypes prereqOrCivic, kUnit.getPrereqOrCivics())
 			{
-				if (kUnit.isPrereqOrCivics(iI) && isCivic(CivicTypes(iI)))
+				if (isCivic(prereqOrCivic))
 				{
 					bValid = true;
 					break;
@@ -26738,43 +26738,24 @@ DenialTypes CvPlayer::AI_militaryUnitTrade(const CvUnit* pUnit, PlayerTypes ePla
 
 bool CvPlayer::hasValidCivics(BuildingTypes eBuilding) const
 {
-	int iI;
-	bool bValidOrCivic = false;
+	foreach_(const CivicTypes prereqAndCivic, GC.getBuildingInfo(eBuilding).getPrereqAndCivics())
+	{
+		if (!isCivic(prereqAndCivic))
+		{
+			return false;
+		}
+	}
 	bool bNoReqOrCivic = true;
-	bool bValidAndCivic = true;
-	bool bReqAndCivic = true;
-	for (iI = 0; iI < GC.getNumCivicInfos(); iI++)
+	foreach_(const CivicTypes prereqOrCivic, GC.getBuildingInfo(eBuilding).getPrereqOrCivics())
 	{
-		if (GC.getBuildingInfo(eBuilding).isPrereqOrCivics(iI))
+		bNoReqOrCivic = false;
+		if (isCivic(prereqOrCivic))
 		{
-			bNoReqOrCivic = false;
-			if (isCivic(CivicTypes(iI)))
-			{
-				bValidOrCivic = true;
-			}
-		}
-
-		if (GC.getBuildingInfo(eBuilding).isPrereqAndCivics(iI))
-		{
-			bReqAndCivic = true;
-			if (!isCivic(CivicTypes(iI)))
-			{
-				bValidAndCivic = false;
-			}
+			return true;
 		}
 	}
 
-	if (!bNoReqOrCivic && !bValidOrCivic)
-	{
-		return false;
-	}
-
-	if (bReqAndCivic && !bValidAndCivic)
-	{
-		return false;
-	}
-
-	return true;
+	return bNoReqOrCivic;
 }
 
 

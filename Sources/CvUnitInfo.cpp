@@ -163,7 +163,6 @@ m_bNoNonOwnedEntry(false),
 m_iLeaderPromotion(NO_PROMOTION),
 m_fUnitMaxSpeed(0.0f),
 m_fUnitPadTime(0.0f),
-m_pbPrereqOrCivics(NULL),
 m_pbTargetUnitCombat(NULL),
 m_pbDefenderUnitCombat(NULL),
 m_piFlankingStrikeUnit(NULL),
@@ -330,7 +329,6 @@ m_bGatherHerd(false)
 //------------------------------------------------------------------------------------------------------
 CvUnitInfo::~CvUnitInfo()
 {
-	SAFE_DELETE_ARRAY(m_pbPrereqOrCivics);
 	SAFE_DELETE_ARRAY(m_pbTargetUnitCombat);
 	SAFE_DELETE_ARRAY(m_pbDefenderUnitCombat);
 	SAFE_DELETE_ARRAY(m_piFlankingStrikeUnit);
@@ -1177,17 +1175,10 @@ bool CvUnitInfo::canAcquireExperience() const
 // BUG - Unit Experience - end
 
 
-// Arrays
-
-bool CvUnitInfo::isPrereqOrCivics(int i) const
+bool CvUnitInfo::isPrereqOrCivics(CivicTypes eCivic) const
 {
-	FASSERT_BOUNDS(NO_CIVIC, GC.getNumCivicInfos(), i)
-
-	if (i == NO_CIVIC)
-	{
-		return m_pbPrereqOrCivics != NULL;
-	}
-	return m_pbPrereqOrCivics ? m_pbPrereqOrCivics[i] : false;
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
+	return algo::contains(m_vPrereqOrCivics, eCivic);
 }
 
 
@@ -3844,18 +3835,15 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 	CheckSumI(iSum, NUM_DOMAIN_TYPES, m_piDomainModifier);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusProductionModifier);
 	//CheckSumI(iSum, m_iGroupDefinitions, m_piUnitGroupRequired);
-	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqOrCivics);
-
+	CheckSumC(iSum, m_vPrereqOrCivics);
 	CheckSumC(iSum, m_workerBuilds);
 	CheckSumC(iSum, m_aiPrereqAndBuildings);
 	CheckSumC(iSum, m_aiPrereqOrBuildings);
-
 	CheckSumC(iSum, m_aiTargetUnit);
 	CheckSumC(iSum, m_aiDefendAgainstUnit);
 	CheckSumC(iSum, m_aiSupersedingUnits);
 	CheckSumC(iSum, m_aiUnitUpgrades);
 	CheckSumC(iSum, m_aiUnitUpgradeChain);
-
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_pbTargetUnitCombat);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_pbDefenderUnitCombat);
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piFlankingStrikeUnit);
@@ -4318,8 +4306,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"NotGameOption");
 	m_iNotGameOption = pXML->GetInfoClass(szTextVal);
 
-	pXML->SetVariableListTagPair(&m_pbPrereqOrCivics, L"PrereqOrCivics", GC.getNumCivicInfos());
-
+	pXML->SetOptionalVector(&m_vPrereqOrCivics, L"PrereqOrCivics");
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiTargetUnit, L"UnitTargets");
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiDefendAgainstUnit, L"DefendAgainstUnit");
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiSupersedingUnits, L"SupersedingUnits");
@@ -5429,19 +5416,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumCivicInfos(); i++)
-	{
-		if ( isPrereqOrCivics(i) == bDefault && pClassInfo->isPrereqOrCivics(i) != bDefault)
-		{
-			if ( NULL == m_pbPrereqOrCivics )
-			{
-				CvXMLLoadUtility::InitList(&m_pbPrereqOrCivics,GC.getNumCivicInfos(),bDefault);
-			}
-			m_pbPrereqOrCivics[i] = pClassInfo->isPrereqOrCivics(i);
-		}
-	}
-
-	//Struct Vector
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_vPrereqOrCivics, pClassInfo->getPrereqOrCivics());
 	GC.copyNonDefaultDelayedResolutionVector(m_aiTargetUnit, pClassInfo->m_aiTargetUnit);
 	GC.copyNonDefaultDelayedResolutionVector(m_aiDefendAgainstUnit, pClassInfo->m_aiDefendAgainstUnit);
 	GC.copyNonDefaultDelayedResolutionVector(m_aiSupersedingUnits, pClassInfo->m_aiSupersedingUnits);

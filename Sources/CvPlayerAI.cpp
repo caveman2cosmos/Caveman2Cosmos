@@ -14335,40 +14335,37 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 						bool bHasMultipleEnablingCivicCategories = false;
 						CivicOptionTypes eEnablingCategory = NO_CIVICOPTION;
 
-						for (int iJ = 0; iJ < GC.getNumCivicInfos(); iJ++)
+						foreach_(const CivicTypes prereqAndCivic, GC.getBuildingInfo(eLoopBuilding).getPrereqAndCivics())
 						{
-							if (GC.getBuildingInfo(eLoopBuilding).isPrereqAndCivics(iJ))
+							if (eEnablingCategory == NO_CIVICOPTION)
 							{
-								if (eEnablingCategory == NO_CIVICOPTION)
+								eEnablingCategory = (CivicOptionTypes)GC.getCivicInfo(prereqAndCivic).getCivicOptionType();
+							}
+							else
+							{
+								bHasMultipleEnablingCivicCategories = true;
+							}
+
+							if (eCivic != prereqAndCivic)
+							{
+								if (kCivic.getCivicOptionType() == GC.getCivicInfo(prereqAndCivic).getCivicOptionType())
 								{
-									eEnablingCategory = (CivicOptionTypes)GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType();
+									bValidCivicsWith = false;
+									bValidCivicsWithout = (!bCivicOptionVacuum && eCurrentCivic == prereqAndCivic);
 								}
 								else
 								{
-									bHasMultipleEnablingCivicCategories = true;
-								}
-
-								if (eCivic != iJ)
-								{
-									if (kCivic.getCivicOptionType() == GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType())
+									if (!isCivic(prereqAndCivic))
 									{
 										bValidCivicsWith = false;
-										bValidCivicsWithout = (!bCivicOptionVacuum && eCurrentCivic == iJ);
-									}
-									else
-									{
-										if (!isCivic((CivicTypes)iJ))
-										{
-											bValidCivicsWith = false;
-											bValidCivicsWithout = false;
-										}
+										bValidCivicsWithout = false;
 									}
 								}
-								else
-								{
-									bCivicIsEnabler = true;
-									bValidCivicsWithout = false;
-								}
+							}
+							else
+							{
+								bCivicIsEnabler = true;
+								bValidCivicsWithout = false;
 							}
 						}
 						//Make sure we have the correct prereq Or Civics. We need just one
@@ -14376,38 +14373,35 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 						{
 							bool bHasOrCivicReq = false;
 
-							for (int iJ = 0; iJ < GC.getNumCivicInfos(); iJ++)
+							foreach_(const CivicTypes prereqOrCivic, GC.getBuildingInfo(eLoopBuilding).getPrereqOrCivics())
 							{
-								if (GC.getBuildingInfo(eLoopBuilding).isPrereqOrCivics(iJ))
+								if (eEnablingCategory == NO_CIVICOPTION)
 								{
-									if (eEnablingCategory == NO_CIVICOPTION)
-									{
-										eEnablingCategory = (CivicOptionTypes)GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType();
-									}
-									else
-									{
-										bHasMultipleEnablingCivicCategories = true;
-									}
+									eEnablingCategory = (CivicOptionTypes)GC.getCivicInfo(prereqOrCivic).getCivicOptionType();
+								}
+								else
+								{
+									bHasMultipleEnablingCivicCategories = true;
+								}
 
-									bHasOrCivicReq = true;
+								bHasOrCivicReq = true;
 
-									if (kCivic.getCivicOptionType() != GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType())
+								if (kCivic.getCivicOptionType() != GC.getCivicInfo(eCivic).getCivicOptionType())
+								{
+									if (isCivic(prereqOrCivic))
 									{
-										if (isCivic((CivicTypes)iJ))
-										{
-											bValidWithout = true;
-											bValidWith = true;
-										}
-									}
-									else if (eCivic == (CivicTypes)iJ)
-									{
+										bValidWithout = true;
 										bValidWith = true;
-										bCivicIsEnabler = true;
 									}
-									else
-									{
-										bValidWithout |= (!bCivicOptionVacuum && eCurrentCivic == iJ);
-									}
+								}
+								else if (eCivic == prereqOrCivic)
+								{
+									bValidWith = true;
+									bCivicIsEnabler = true;
+								}
+								else
+								{
+									bValidWithout |= (!bCivicOptionVacuum && eCurrentCivic == iJ);
 								}
 							}
 

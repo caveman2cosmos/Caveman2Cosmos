@@ -2237,7 +2237,8 @@ public:
 	int getFeaturePassableTech(int i) const;
 	int getFlankingStrikeUnit(int i) const;
 
-	bool isPrereqOrCivics(int i) const;
+	bool isPrereqOrCivics(CivicTypes eCivic) const;
+	const std::vector<CivicTypes>& getPrereqOrCivics() const { return m_vPrereqOrCivics; }
 
 	const std::vector<BuildTypes>& getBuilds() const { return m_workerBuilds; }
 	BuildTypes getBuild(int i) const;
@@ -2490,7 +2491,7 @@ protected:
 	int* m_piFeaturePassableTech;
 	int* m_piFlankingStrikeUnit;
 
-	bool* m_pbPrereqOrCivics;
+	std::vector<CivicTypes> m_vPrereqOrCivics;
 
 	bool* m_pbTargetUnitCombat;
 	bool* m_pbDefenderUnitCombat;

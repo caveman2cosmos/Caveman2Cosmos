@@ -17085,7 +17085,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 
 		if (GC.getGame().canEverConstruct(eLoopBuilding))
 		{
-			if ((GC.getBuildingInfo(eLoopBuilding).isPrereqOrCivics(eCivic) || GC.getBuildingInfo(eLoopBuilding).isPrereqAndCivics(eCivic)))
+			if (GC.getBuildingInfo(eLoopBuilding).isPrereqOrCivics(eCivic) || GC.getBuildingInfo(eLoopBuilding).isPrereqAndCivics(eCivic))
 			{
 				CvWString szBuilding;
 				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_CIVICHELP_UNLOCKS_BUILDING").c_str());
@@ -17107,7 +17107,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 				if (GC.getGame().canEverConstruct(eLoopBuilding))
 				{
 					bool bObsolete = false;
-					CivicTypes eCurCivic = GET_PLAYER(GC.getGame().getActivePlayer()).getCivics((CivicOptionTypes)GC.getCivicInfo(eCivic).getCivicOptionType());
+					const CivicTypes eCurCivic = GET_PLAYER(GC.getGame().getActivePlayer()).getCivics((CivicOptionTypes)GC.getCivicInfo(eCivic).getCivicOptionType());
 					if (GC.getBuildingInfo(eLoopBuilding).isPrereqAndCivics(eCurCivic))
 					{
 						bObsolete = true;
@@ -17115,17 +17115,14 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 					else if (GC.getBuildingInfo(eLoopBuilding).isPrereqOrCivics(eCurCivic) && !GC.getBuildingInfo(eLoopBuilding).isPrereqOrCivics(eCivic))
 					{
 						bObsolete = true;
-						for (int iJ = 0; iJ < GC.getNumCivicInfos(); iJ++)
+						foreach_(const CivicTypes prereqOrCivic, GC.getBuildingInfo(eLoopBuilding).getPrereqOrCivics())
 						{
-							if (iJ != eCurCivic && iJ != eCivic)
+							if (prereqOrCivic != eCurCivic && prereqOrCivic != eCivic)
 							{
-								if (GC.getBuildingInfo(eLoopBuilding).isPrereqOrCivics((CivicTypes)iJ))
+								if (GET_PLAYER(GC.getGame().getActivePlayer()).isCivic(prereqOrCivic))
 								{
-									if (GET_PLAYER(GC.getGame().getActivePlayer()).isCivic((CivicTypes)iJ))
-									{
-										bObsolete = false;
-										break;
-									}
+									bObsolete = false;
+									break;
 								}
 							}
 						}
@@ -20759,32 +20756,29 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 					}
 				}
 				bFirst = true;
-				for (iI = 0; iI < GC.getNumCivicInfos(); ++iI)
+				foreach_(const CivicTypes prereqOrCivic, GC.getUnitInfo(eUnit).getPrereqOrCivics())
 				{
-					if (GC.getUnitInfo(eUnit).isPrereqOrCivics(CivicTypes(iI)))
+					const bool civicActive = (pCity == NULL ?
+						(GC.getGame().getActivePlayer() != NO_PLAYER && GET_PLAYER(GC.getGame().getActivePlayer()).isCivic(prereqOrCivic)) :
+						GET_PLAYER(pCity->getOwner()).isCivic(prereqOrCivic));
+
+					const CvWString prefix = gDLL->getText("TXT_KEY_REVERT_COLOR") + gDLL->getText("TXT_KEY_REQUIRES_NO_WARNING");
+					CvWString desc = GC.getCivicInfo(prereqOrCivic).getDescription();
+
+					const CvWString separator = gDLL->getText("TXT_KEY_REVERT_COLOR") + gDLL->getText("TXT_KEY_OR");
+
+					if (!civicActive)
 					{
-						bool civicActive = (pCity == NULL ?
-							(GC.getGame().getActivePlayer() != NO_PLAYER && GET_PLAYER(GC.getGame().getActivePlayer()).isCivic(CivicTypes(iI))) :
-							GET_PLAYER(pCity->getOwner()).isCivic(CivicTypes(iI)));
-
-						CvWString prefix = gDLL->getText("TXT_KEY_REVERT_COLOR") + gDLL->getText("TXT_KEY_REQUIRES_NO_WARNING");
-						CvWString desc = GC.getCivicInfo((CivicTypes(iI))).getDescription();
-
-						CvWString separator = gDLL->getText("TXT_KEY_REVERT_COLOR") + gDLL->getText("TXT_KEY_OR");
-
-						if (!civicActive)
-						{
-							desc = gDLL->getText("TXT_KEY_SET_WARNING_COLOR") + desc;
-						}
-						else
-						{
-							desc = gDLL->getText("TXT_KEY_POSITIVE_COLOR") + desc;
-						}
-
-						szTempBuffer.Format(L"%s%s", NEWLINE, prefix.c_str());
-						setListHelp(szBuffer,szTempBuffer, desc.c_str(), separator.c_str(), bFirst);
-						bFirst = false;
+						desc = gDLL->getText("TXT_KEY_SET_WARNING_COLOR") + desc;
 					}
+					else
+					{
+						desc = gDLL->getText("TXT_KEY_POSITIVE_COLOR") + desc;
+					}
+
+					szTempBuffer.Format(L"%s%s", NEWLINE, prefix.c_str());
+					setListHelp(szBuffer, szTempBuffer, desc.c_str(), separator.c_str(), bFirst);
+					bFirst = false;
 				}
 
 				if (GC.getUnitInfo(eUnit).isStateReligion())
@@ -23961,32 +23955,29 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 	bool civicRequirementsAllMet = true;
 	{
 		bool bLastCivicWasMet = false;
-		for (int iI = 0; iI < GC.getNumCivicInfos(); ++iI)
+		foreach_(const CivicTypes prereqAndCivic, kBuilding.getPrereqAndCivics())
 		{
-			if (kBuilding.isPrereqAndCivics(CivicTypes(iI)))
+			if (GC.getGame().getActivePlayer() == NO_PLAYER || !GET_PLAYER(GC.getGame().getActivePlayer()).isCivic(prereqAndCivic))
 			{
-				if (GC.getGame().getActivePlayer() == NO_PLAYER || !GET_PLAYER(GC.getGame().getActivePlayer()).isCivic((CivicTypes)iI))
+				if (bLastCivicWasMet && !bFirst)
 				{
-					if (bLastCivicWasMet && !bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_SET_WARNING_COLOR").c_str());
-					}
-					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getCivicInfo((CivicTypes(iI))).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
-					bLastCivicWasMet = false;
-					civicRequirementsAllMet = false;
+					szBuffer.append(gDLL->getText("TXT_KEY_SET_WARNING_COLOR").c_str());
 				}
-				else
-				{
-					if (!bLastCivicWasMet && !bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_REVERT_COLOR").c_str());
-					}
-					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_NO_WARNING").c_str());
-					setListHelp(szBuffer, szTempBuffer, GC.getCivicInfo((CivicTypes(iI))).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
-					bLastCivicWasMet = true;
-				}
-				bFirst = false;
+				setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getCivicInfo(prereqAndCivic).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
+				bLastCivicWasMet = false;
+				civicRequirementsAllMet = false;
 			}
+			else
+			{
+				if (!bLastCivicWasMet && !bFirst)
+				{
+					szBuffer.append(gDLL->getText("TXT_KEY_REVERT_COLOR").c_str());
+				}
+				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_NO_WARNING").c_str());
+				setListHelp(szBuffer, szTempBuffer, GC.getCivicInfo(prereqAndCivic).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
+				bLastCivicWasMet = true;
+			}
+			bFirst = false;
 		}
 	}
 
@@ -23996,23 +23987,20 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		const CvWString separator = gDLL->getText("TXT_KEY_REVERT_COLOR") + gDLL->getText("TXT_KEY_OR");
 		bool bCivicORRequirementMet = false;
 
-		for (int iI = 0; iI < GC.getNumCivicInfos(); ++iI)
+		foreach_(const CivicTypes prereqOrCivic, kBuilding.getPrereqOrCivics())
 		{
-			if (kBuilding.isPrereqOrCivics(CivicTypes(iI)))
+			CvWString desc = GC.getCivicInfo(prereqOrCivic).getDescription();
+
+			if (GC.getGame().getActivePlayer() != NO_PLAYER && GET_PLAYER(GC.getGame().getActivePlayer()).isCivic(prereqOrCivic))
 			{
-				CvWString desc = GC.getCivicInfo((CivicTypes(iI))).getDescription();
-
-				if (GC.getGame().getActivePlayer() != NO_PLAYER && GET_PLAYER(GC.getGame().getActivePlayer()).isCivic(CivicTypes(iI)))
-				{
-					desc = gDLL->getText("TXT_KEY_POSITIVE_COLOR") + desc;
-					bCivicORRequirementMet= true;
-				}
-				else desc = gDLL->getText("TXT_KEY_SET_WARNING_COLOR") + desc;
-
-				szTempBuffer.Format(L"%s%s", NEWLINE, prefix.c_str());
-				setListHelp(szBuffer,szTempBuffer, desc.c_str(), separator.c_str(), bFirst);
-				bFirst = false;
+				desc = gDLL->getText("TXT_KEY_POSITIVE_COLOR") + desc;
+				bCivicORRequirementMet = true;
 			}
+			else desc = gDLL->getText("TXT_KEY_SET_WARNING_COLOR") + desc;
+
+			szTempBuffer.Format(L"%s%s", NEWLINE, prefix.c_str());
+			setListHelp(szBuffer, szTempBuffer, desc.c_str(), separator.c_str(), bFirst);
+			bFirst = false;
 		}
 		civicRequirementsAllMet &= (bFirst || bCivicORRequirementMet);
 	}
