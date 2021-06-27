@@ -40,7 +40,7 @@ def getGameSpeedMod():
 	global gameSpeedMod
 	if gameSpeedMod == None:
 		CvGameSpeedInfo = GC.getGameSpeedInfo(GAME.getGameSpeedType())
-		gameSpeedMod = CvGameSpeedInfo.getGrowthPercent()
+		gameSpeedMod = CvGameSpeedInfo.getSpeedPercent()
 		gameSpeedMod += CvGameSpeedInfo.getTrainPercent()
 		gameSpeedMod += CvGameSpeedInfo.getConstructPercent()
 		gameSpeedMod = 300.0 / gameSpeedMod
@@ -588,7 +588,7 @@ def computeBribeCosts(CyCity):
 	fBaseCost = (iRevIdx + 16*localRevIdx + 3*CyCity.getNumRevolts(iPlayer)) * (iPop**1.1)/8.0
 
 	fMod = (1 + CyPlayer.getCurrentEra() - 9 / (8.1 + iPop**1.3)) / 3
-	fMod *= GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent() / 100.0
+	fMod *= GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent() / 100.0
 
 	if not CyPlayer.isHuman():
 		fMod /= 2

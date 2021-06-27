@@ -359,8 +359,6 @@ public:
 
 	void loadPirateShip(CvUnit* pUnit);
 
-	bool isEarlyGame() const;
-
 	bool isAnyoneHasUnitZoneOfControl() const;
 	void toggleAnyoneHasUnitZoneOfControl();
 	//TB OOSSPECIAL
@@ -623,7 +621,7 @@ public:
 
 	bool hasSkippedSaveChecksum() const;
 
-	void logDebugMsg(char* format, ...);
+	void logNetMsgData(char* format, ...);
 
 	void addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive = true);
 	void changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman );
