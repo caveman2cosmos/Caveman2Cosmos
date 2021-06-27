@@ -3760,17 +3760,29 @@ bool CvBuildingInfo::readPass3()
 
 	m_aszExtraXMLforPass3.clear();
 
-	const int iCount = getNumReplacementBuilding();
+	int iCount = getNumReplacementBuilding();
 	if (iCount > 0)
 	{
+		// Toffer - Prune self reference, to make the code XML idiot proof.
+		//	A building was once set to replace itself, it caused an infinite loop in the canBuild logic used for MODDEROPTION_HIDE_REPLACED_BUILDINGS.
+		//	Instead of doing a self reference check in all loops for this vector I thought it more clean to just prune it here.
 		const int iId = GC.getInfoTypeForString(getType());
+
+		std::vector<int>::iterator itr = find(m_vReplacementBuilding.begin(), m_vReplacementBuilding.end(), iId);
+		while (itr != m_vReplacementBuilding.end())
+		{
+			FErrorMsg(CvString::format("%s is set to replace itself!!", getType()).c_str())
+			m_vReplacementBuilding.erase(itr);
+			iCount--;
+			itr = find(m_vReplacementBuilding.begin(), m_vReplacementBuilding.end(), iId);
+		}
+
 		// Toffer - As good a place as any to make this derived cache
 		for (int i = 0; i < iCount; i++)
 		{
 			GC.getBuildingInfo((BuildingTypes)getReplacementBuilding(i)).setReplacedBuilding(iId);
 		}
 	}
-
 	return true;
 }
 

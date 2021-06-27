@@ -1563,6 +1563,7 @@ void CvCity::doTurn()
 	// ONEVENT - Do turn
 	CvEventReporter::getInstance().cityDoTurn(this, getOwner());
 
+	/*
 #ifdef _DEBUG
 	{
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
@@ -1603,7 +1604,6 @@ void CvCity::doTurn()
 			FAssert(iCount == getPlotYield((YieldTypes)iI) + getExtraYield((YieldTypes)iI));
 		}
 
-		/*
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
 			FAssert(getBuildingCommerce((CommerceTypes)iI) >= 0);
@@ -1617,9 +1617,9 @@ void CvCity::doTurn()
 		{
 			FAssert(isNoBonus((BonusTypes)iI) || getNumBonuses((BonusTypes)iI) >= ((isConnectedToCapital()) ? (GET_PLAYER(getOwner()).getBonusImport((BonusTypes)iI) - GET_PLAYER(getOwner()).getBonusExport((BonusTypes)iI)) : 0));
 		}
-		*/
 	}
 #endif
+	*/
 }
 
 void CvCity::doAutobuild()
@@ -3144,6 +3144,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		for (int iI = 0; iI < kBuilding.getNumReplacementBuilding(); ++iI)
 		{
 			const BuildingTypes eReplacement = (BuildingTypes)kBuilding.getReplacementBuilding(iI);
+
 			if (getNumActiveBuilding(eReplacement) > 0
 			// Toffer - This is not the right place to do HIDE_REPLACED_BUILDINGS...
 			//	Should be an interface only thing.
