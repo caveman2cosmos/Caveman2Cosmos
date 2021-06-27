@@ -13239,14 +13239,11 @@ void CvHandicapInfo::copyNonDefaults(const CvHandicapInfo* pClassInfo)
 //------------------------------------------------------------------------------------------------------
 CvGameSpeedInfo::CvGameSpeedInfo() :
 m_iSpeedPercent(0),
-m_iGrowthPercent(0),
 m_iTrainPercent(0),
 m_iConstructPercent(0),
 m_iCreatePercent(0),
-m_iResearchPercent(0),
 m_iBuildPercent(0),
 m_iImprovementPercent(0),
-m_iGreatPeoplePercent(0),
 m_iBarbPercent(0),
 m_iFeatureProductionPercent(0),
 m_iUnitDiscoverPercent(0),
@@ -13276,11 +13273,6 @@ int CvGameSpeedInfo::getSpeedPercent() const
 	return m_iSpeedPercent;
 }
 
-int CvGameSpeedInfo::getGrowthPercent() const
-{
-	return m_iGrowthPercent;
-}
-
 int CvGameSpeedInfo::getTrainPercent() const
 {
 	return m_iTrainPercent;
@@ -13296,11 +13288,6 @@ int CvGameSpeedInfo::getCreatePercent() const
 	return m_iCreatePercent;
 }
 
-int CvGameSpeedInfo::getResearchPercent() const
-{
-	return m_iResearchPercent;
-}
-
 int CvGameSpeedInfo::getBuildPercent() const
 {
 	return m_iBuildPercent;
@@ -13309,11 +13296,6 @@ int CvGameSpeedInfo::getBuildPercent() const
 int CvGameSpeedInfo::getImprovementPercent() const
 {
 	return m_iImprovementPercent;
-}
-
-int CvGameSpeedInfo::getGreatPeoplePercent() const
-{
-	return m_iGreatPeoplePercent;
 }
 
 int CvGameSpeedInfo::getBarbPercent() const
@@ -13393,14 +13375,11 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 	pXML->GetOptionalChildXmlValByName(&m_iSpeedPercent, L"iSpeedPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iGrowthPercent, L"iGrowthPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iTrainPercent, L"iTrainPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iConstructPercent, L"iConstructPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iCreatePercent, L"iCreatePercent");
-	pXML->GetOptionalChildXmlValByName(&m_iResearchPercent, L"iResearchPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iBuildPercent, L"iBuildPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iImprovementPercent, L"iImprovementPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iGreatPeoplePercent, L"iGreatPeoplePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iBarbPercent, L"iBarbPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureProductionPercent, L"iFeatureProductionPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitDiscoverPercent, L"iUnitDiscoverPercent");
@@ -13457,14 +13436,11 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
 	if (m_iSpeedPercent == iDefault) m_iSpeedPercent = pClassInfo->getSpeedPercent();
-	if (getGrowthPercent() == iDefault) m_iGrowthPercent = pClassInfo->getGrowthPercent();
 	if (getTrainPercent() == iDefault) m_iTrainPercent = pClassInfo->getTrainPercent();
 	if (getConstructPercent() == iDefault) m_iConstructPercent = pClassInfo->getConstructPercent();
 	if (getCreatePercent() == iDefault) m_iCreatePercent = pClassInfo->getCreatePercent();
-	if (getResearchPercent() == iDefault) m_iResearchPercent = pClassInfo->getResearchPercent();
 	if (getBuildPercent() == iDefault) m_iBuildPercent = pClassInfo->getBuildPercent();
 	if (getImprovementPercent() == iDefault) m_iImprovementPercent = pClassInfo->getImprovementPercent();
-	if (getGreatPeoplePercent() == iDefault) m_iGreatPeoplePercent = pClassInfo->getGreatPeoplePercent();
 	if (getBarbPercent() == iDefault) m_iBarbPercent = pClassInfo->getBarbPercent();
 	if (getFeatureProductionPercent() == iDefault) m_iFeatureProductionPercent = pClassInfo->getFeatureProductionPercent();
 	if (getUnitDiscoverPercent() == iDefault) m_iUnitDiscoverPercent = pClassInfo->getUnitDiscoverPercent();
@@ -13490,14 +13466,11 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, m_iSpeedPercent);
-	CheckSum(iSum, m_iGrowthPercent);
 	CheckSum(iSum, m_iTrainPercent);
 	CheckSum(iSum, m_iConstructPercent);
 	CheckSum(iSum, m_iCreatePercent);
-	CheckSum(iSum, m_iResearchPercent);
 	CheckSum(iSum, m_iBuildPercent);
 	CheckSum(iSum, m_iImprovementPercent);
-	CheckSum(iSum, m_iGreatPeoplePercent);
 	CheckSum(iSum, m_iBarbPercent);
 	CheckSum(iSum, m_iFeatureProductionPercent);
 	CheckSum(iSum, m_iUnitDiscoverPercent);

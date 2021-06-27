@@ -359,8 +359,6 @@ public:
 
 	void loadPirateShip(CvUnit* pUnit);
 
-	bool isEarlyGame() const;
-
 	bool isAnyoneHasUnitZoneOfControl() const;
 	void toggleAnyoneHasUnitZoneOfControl();
 	//TB OOSSPECIAL
