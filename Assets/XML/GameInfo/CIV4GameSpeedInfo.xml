@@ -7,7 +7,6 @@
 			Type		= Defines what Civ IV calls the game speed, e.g. GAMESPEED_EPIC.
 * Integer Tags:
 				iSpeedPercent			= Generic speed scale
-				iBarbPercent			= The rate at which barbarians appear. Normal is 100
 				iBuildPercent			= How fast tile improvements are built. Normal is 100
 				iConstructPercent		= How fast buildings (barracks, National Epic, Pyramids etc but not projects such as The Internet) are built. Normal is 100
 				iCreatePercent			= How fast projects are built. Normal is 100
@@ -46,7 +45,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>1000</iCreatePercent>
 			<iBuildPercent>1000</iBuildPercent>
 			<iImprovementPercent>1000</iImprovementPercent>
-			<iBarbPercent>1000</iBarbPercent>
 			<iFeatureProductionPercent>1000</iFeatureProductionPercent>
 			<iUnitHurryPercent>1000</iUnitHurryPercent>
 			<Percents>
@@ -132,7 +130,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>800</iCreatePercent>
 			<iBuildPercent>800</iBuildPercent>
 			<iImprovementPercent>800</iImprovementPercent>
-			<iBarbPercent>800</iBarbPercent>
 			<iFeatureProductionPercent>800</iFeatureProductionPercent>
 			<iUnitHurryPercent>800</iUnitHurryPercent>
 			<Percents>
@@ -218,7 +215,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>600</iCreatePercent>
 			<iBuildPercent>600</iBuildPercent>
 			<iImprovementPercent>600</iImprovementPercent>
-			<iBarbPercent>600</iBarbPercent>
 			<iFeatureProductionPercent>600</iFeatureProductionPercent>
 			<iUnitHurryPercent>600</iUnitHurryPercent>
 			<Percents>
@@ -304,7 +300,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>400</iCreatePercent>
 			<iBuildPercent>400</iBuildPercent>
 			<iImprovementPercent>400</iImprovementPercent>
-			<iBarbPercent>400</iBarbPercent>
 			<iFeatureProductionPercent>400</iFeatureProductionPercent>
 			<iUnitHurryPercent>400</iUnitHurryPercent>
 			<Percents>
@@ -390,7 +385,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>300</iCreatePercent>
 			<iBuildPercent>300</iBuildPercent>
 			<iImprovementPercent>300</iImprovementPercent>
-			<iBarbPercent>300</iBarbPercent>
 			<iFeatureProductionPercent>300</iFeatureProductionPercent>
 			<iUnitHurryPercent>300</iUnitHurryPercent>
 			<Percents>
@@ -476,7 +470,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>200</iCreatePercent>
 			<iBuildPercent>200</iBuildPercent>
 			<iImprovementPercent>200</iImprovementPercent>
-			<iBarbPercent>200</iBarbPercent>
 			<iFeatureProductionPercent>200</iFeatureProductionPercent>
 			<iUnitHurryPercent>200</iUnitHurryPercent>
 			<Percents>
@@ -562,7 +555,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>100</iCreatePercent>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iBarbPercent>100</iBarbPercent>
 			<iFeatureProductionPercent>100</iFeatureProductionPercent>
 			<iUnitHurryPercent>100</iUnitHurryPercent>
 			<Percents>
@@ -648,7 +640,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>50</iCreatePercent>
 			<iBuildPercent>50</iBuildPercent>
 			<iImprovementPercent>50</iImprovementPercent>
-			<iBarbPercent>50</iBarbPercent>
 			<iFeatureProductionPercent>50</iFeatureProductionPercent>
 			<iUnitHurryPercent>50</iUnitHurryPercent>
 			<Percents>
@@ -734,7 +725,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>25</iCreatePercent>
 			<iBuildPercent>25</iBuildPercent>
 			<iImprovementPercent>25</iImprovementPercent>
-			<iBarbPercent>25</iBarbPercent>
 			<iFeatureProductionPercent>25</iFeatureProductionPercent>
 			<iUnitHurryPercent>25</iUnitHurryPercent>
 			<Percents>
@@ -827,7 +817,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>1400</iCreatePercent>
 			<iBuildPercent>1400</iBuildPercent>
 			<iImprovementPercent>1400</iImprovementPercent>
-			<iBarbPercent>1000</iBarbPercent>
 			<iFeatureProductionPercent>1400</iFeatureProductionPercent>
 			<iUnitHurryPercent>1400</iUnitHurryPercent>
 			<Percents>
@@ -920,7 +909,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>1120</iCreatePercent>
 			<iBuildPercent>1120</iBuildPercent>
 			<iImprovementPercent>1120</iImprovementPercent>
-			<iBarbPercent>800</iBarbPercent>
 			<iFeatureProductionPercent>1120</iFeatureProductionPercent>
 			<iUnitHurryPercent>1120</iUnitHurryPercent>
 			<Percents>
@@ -1013,7 +1001,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>840</iCreatePercent>
 			<iBuildPercent>840</iBuildPercent>
 			<iImprovementPercent>840</iImprovementPercent>
-			<iBarbPercent>600</iBarbPercent>
 			<iFeatureProductionPercent>840</iFeatureProductionPercent>
 			<iUnitHurryPercent>840</iUnitHurryPercent>
 			<Percents>
@@ -1106,7 +1093,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>560</iCreatePercent>
 			<iBuildPercent>560</iBuildPercent>
 			<iImprovementPercent>560</iImprovementPercent>
-			<iBarbPercent>400</iBarbPercent>
 			<iFeatureProductionPercent>560</iFeatureProductionPercent>
 			<iUnitHurryPercent>560</iUnitHurryPercent>
 			<Percents>
@@ -1199,7 +1185,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>420</iCreatePercent>
 			<iBuildPercent>420</iBuildPercent>
 			<iImprovementPercent>420</iImprovementPercent>
-			<iBarbPercent>300</iBarbPercent>
 			<iFeatureProductionPercent>420</iFeatureProductionPercent>
 			<iUnitHurryPercent>420</iUnitHurryPercent>
 			<Percents>
@@ -1292,7 +1277,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>280</iCreatePercent>
 			<iBuildPercent>280</iBuildPercent>
 			<iImprovementPercent>280</iImprovementPercent>
-			<iBarbPercent>200</iBarbPercent>
 			<iFeatureProductionPercent>280</iFeatureProductionPercent>
 			<iUnitHurryPercent>280</iUnitHurryPercent>
 			<Percents>
@@ -1385,7 +1369,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>140</iCreatePercent>
 			<iBuildPercent>140</iBuildPercent>
 			<iImprovementPercent>140</iImprovementPercent>
-			<iBarbPercent>100</iBarbPercent>
 			<iFeatureProductionPercent>140</iFeatureProductionPercent>
 			<iUnitHurryPercent>140</iUnitHurryPercent>
 			<Percents>
@@ -1478,7 +1461,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>70</iCreatePercent>
 			<iBuildPercent>70</iBuildPercent>
 			<iImprovementPercent>70</iImprovementPercent>
-			<iBarbPercent>50</iBarbPercent>
 			<iFeatureProductionPercent>70</iFeatureProductionPercent>
 			<iUnitHurryPercent>70</iUnitHurryPercent>
 			<Percents>
@@ -1571,7 +1553,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iCreatePercent>35</iCreatePercent>
 			<iBuildPercent>35</iBuildPercent>
 			<iImprovementPercent>35</iImprovementPercent>
-			<iBarbPercent>25</iBarbPercent>
 			<iFeatureProductionPercent>35</iFeatureProductionPercent>
 			<iUnitHurryPercent>35</iUnitHurryPercent>
 			<Percents>

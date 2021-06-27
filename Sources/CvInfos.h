@@ -3839,7 +3839,6 @@ public:
 	int getCreatePercent() const;
 	int getBuildPercent() const;
 	int getImprovementPercent() const;
-	int getBarbPercent() const;
 	int getFeatureProductionPercent() const;
 	int getUnitHurryPercent() const;
 	int getNumTurnIncrements() const;
@@ -3867,7 +3866,6 @@ protected:
 	int m_iCreatePercent;
 	int m_iBuildPercent;
 	int m_iImprovementPercent;
-	int m_iBarbPercent;
 	int m_iFeatureProductionPercent;
 	int m_iUnitHurryPercent;
 	int m_iNumTurnIncrements;
