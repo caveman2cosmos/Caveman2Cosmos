@@ -28,9 +28,9 @@
 //
 //------------------------------------------------------------------------------------------------------
 CvBuildingInfo::CvBuildingInfo() :
-m_iMaxGlobalInstances(-1),
-m_iMaxTeamInstances(-1),
-m_iMaxPlayerInstances(-1),
+m_iMaxGlobalInstances(0),
+m_iMaxTeamInstances(0),
+m_iMaxPlayerInstances(0),
 m_iExtraPlayerInstances(0),
 m_piVictoryThreshold(NULL),
 m_iDCMAirbombMission(0),
@@ -3625,10 +3625,10 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pabHurry, L"Hurrys", GC.getNumHurryInfos());
 	//TB Combat Mods (Buildings) end
 
-	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iMaxTeamInstances, L"iMaxTeamInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iExtraPlayerInstances, L"iExtraPlayerInstances", 0);
+	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances");
+	pXML->GetOptionalChildXmlValByName(&m_iMaxTeamInstances, L"iMaxTeamInstances");
+	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances");
+	pXML->GetOptionalChildXmlValByName(&m_iExtraPlayerInstances, L"iExtraPlayerInstances");
 
 	pXML->SetVariableListTagPair(&m_piVictoryThreshold, L"VictoryThresholds",  GC.getNumVictoryInfos());
 
@@ -4980,9 +4980,9 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrBonuses, pClassInfo->m_aePrereqOrBonuses);
 	}
 
-	if (getMaxGlobalInstances() == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
-	if (getMaxTeamInstances() == -1) m_iMaxTeamInstances = pClassInfo->getMaxTeamInstances();
-	if (getMaxPlayerInstances() == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
+	if (getMaxGlobalInstances() == 0) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
+	if (getMaxTeamInstances() == 0) m_iMaxTeamInstances = pClassInfo->getMaxTeamInstances();
+	if (getMaxPlayerInstances() == 0) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 	if (getExtraPlayerInstances() == 0) m_iExtraPlayerInstances = pClassInfo->getExtraPlayerInstances();
 
 	for ( int i = 0; i < GC.getNumVictoryInfos(); i++ )

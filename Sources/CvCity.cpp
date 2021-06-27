@@ -1641,7 +1641,7 @@ void CvCity::doAutobuild()
 				}
 			}
 			// Toffer - World wonder autobuilds should never be auto-removed.
-			else if (kBuilding.getMaxGlobalInstances() == -1)
+			else if (kBuilding.getMaxGlobalInstances() == 0)
 			{
 				// Special rule meant for adopted cultures, hopefully it won't affect other autobuilds in an irrational way.
 				foreach_(const BuildingModifier2& modifier, kBuilding.getPrereqNumOfBuildings())

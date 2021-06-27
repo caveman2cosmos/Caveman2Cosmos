@@ -802,7 +802,7 @@ class Pedia:
 					bValid = True
 				else:
 					continue
-			elif CvUnitInfo.getMaxGlobalInstances() != -1:
+			elif CvUnitInfo.getMaxGlobalInstances() > 0:
 				if bWorld:
 					bValid = True
 				else:

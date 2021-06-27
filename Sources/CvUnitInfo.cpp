@@ -29,8 +29,8 @@
 //
 //------------------------------------------------------------------------------------------------------
 CvUnitInfo::CvUnitInfo() :
-m_iMaxGlobalInstances(-1),
-m_iMaxPlayerInstances(-1),
+m_iMaxGlobalInstances(0),
+m_iMaxPlayerInstances(0),
 m_bUnlimitedException(false),
 m_iInstanceCostModifier(0),
 m_iDCMBombRange(0),
@@ -4182,10 +4182,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	int iIndexVal;
 
-	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_bUnlimitedException, L"bUnlimitedException", false);
-	pXML->GetOptionalChildXmlValByName(&m_iInstanceCostModifier, L"iInstanceCostModifier", 0);
+	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances");
+	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances");
+	pXML->GetOptionalChildXmlValByName(&m_bUnlimitedException, L"bUnlimitedException");
+	pXML->GetOptionalChildXmlValByName(&m_iInstanceCostModifier, L"iInstanceCostModifier");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Special");
 	m_iSpecialUnitType = pXML->GetInfoClass(szTextVal);
@@ -5144,8 +5144,8 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	const int iTextDefault = -1;
 	const CvString cDefault = CvString::format("").GetCString();
 
-	if ( m_iMaxGlobalInstances == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
-	if ( m_iMaxPlayerInstances == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
+	if ( m_iMaxGlobalInstances == 0) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
+	if ( m_iMaxPlayerInstances == 0) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 	if ( m_bUnlimitedException == false) m_bUnlimitedException = pClassInfo->isUnlimitedException();
 	if ( m_iInstanceCostModifier == 0) m_iInstanceCostModifier = pClassInfo->getInstanceCostModifier();
 	if ( m_iSpecialUnitType == iTextDefault )	m_iSpecialUnitType = pClassInfo->getSpecialUnitType();
