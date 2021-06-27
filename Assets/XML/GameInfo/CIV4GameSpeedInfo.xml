@@ -11,13 +11,12 @@
 				iBuildPercent			= How fast tile improvements are built. Normal is 100
 				iConstructPercent		= How fast buildings (barracks, National Epic, Pyramids etc but not projects such as The Internet) are built. Normal is 100
 				iCreatePercent			= How fast projects are built. Normal is 100
-				iCulturePercent			= How fast cultural borders expand. Normal is 100
 				iFeatureProductionPercent = Amount of hammers produced when forests or jungles are chopped, possible other effects. Normal is 100
 				iImprovementPercent		= How fast tile improvements upgrade to the next level (eg cottages to hamlets). Normal is 100
 				iTrainPercent			= How fast units (warriors, settlers etc) are built. Normal is 100
-				iUnitGreatWorkPercent	= Amount or culture produced by great artists' great work ability. Normal is 100
 				iUnitHurryPercent		= Amount of hammers produced by units that can hurry productions of buildings. Normal is 100
 				iUnitTradePercent		= Amount of gold produced by units that have the trade mission ability. Normal is 100
+
 				iMonthIncrement			= Number Months that pass each turn
 				iDayIncrement			= Number Days that pass each turn
 				iTurnsPerIncrement		= Number of turns that this year increment level lasts
@@ -52,7 +51,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>1000</iFeatureProductionPercent>
 			<iUnitHurryPercent>1000</iUnitHurryPercent>
 			<iUnitTradePercent>1000</iUnitTradePercent>
-			<iUnitGreatWorkPercent>1000</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -140,7 +138,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>800</iFeatureProductionPercent>
 			<iUnitHurryPercent>800</iUnitHurryPercent>
 			<iUnitTradePercent>800</iUnitTradePercent>
-			<iUnitGreatWorkPercent>800</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -228,7 +225,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>600</iFeatureProductionPercent>
 			<iUnitHurryPercent>600</iUnitHurryPercent>
 			<iUnitTradePercent>600</iUnitTradePercent>
-			<iUnitGreatWorkPercent>600</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -316,7 +312,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>400</iFeatureProductionPercent>
 			<iUnitHurryPercent>400</iUnitHurryPercent>
 			<iUnitTradePercent>400</iUnitTradePercent>
-			<iUnitGreatWorkPercent>400</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -404,7 +399,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>300</iFeatureProductionPercent>
 			<iUnitHurryPercent>300</iUnitHurryPercent>
 			<iUnitTradePercent>300</iUnitTradePercent>
-			<iUnitGreatWorkPercent>300</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -492,7 +486,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>200</iFeatureProductionPercent>
 			<iUnitHurryPercent>200</iUnitHurryPercent>
 			<iUnitTradePercent>200</iUnitTradePercent>
-			<iUnitGreatWorkPercent>200</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -580,7 +573,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>100</iFeatureProductionPercent>
 			<iUnitHurryPercent>100</iUnitHurryPercent>
 			<iUnitTradePercent>100</iUnitTradePercent>
-			<iUnitGreatWorkPercent>100</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -668,7 +660,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>50</iFeatureProductionPercent>
 			<iUnitHurryPercent>50</iUnitHurryPercent>
 			<iUnitTradePercent>50</iUnitTradePercent>
-			<iUnitGreatWorkPercent>50</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -756,7 +747,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>25</iFeatureProductionPercent>
 			<iUnitHurryPercent>25</iUnitHurryPercent>
 			<iUnitTradePercent>25</iUnitTradePercent>
-			<iUnitGreatWorkPercent>25</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -851,7 +841,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>1400</iFeatureProductionPercent>
 			<iUnitHurryPercent>1400</iUnitHurryPercent>
 			<iUnitTradePercent>1000</iUnitTradePercent>
-			<iUnitGreatWorkPercent>1000</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -946,7 +935,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>1120</iFeatureProductionPercent>
 			<iUnitHurryPercent>1120</iUnitHurryPercent>
 			<iUnitTradePercent>800</iUnitTradePercent>
-			<iUnitGreatWorkPercent>800</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1041,7 +1029,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>840</iFeatureProductionPercent>
 			<iUnitHurryPercent>840</iUnitHurryPercent>
 			<iUnitTradePercent>600</iUnitTradePercent>
-			<iUnitGreatWorkPercent>600</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1136,7 +1123,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>560</iFeatureProductionPercent>
 			<iUnitHurryPercent>560</iUnitHurryPercent>
 			<iUnitTradePercent>400</iUnitTradePercent>
-			<iUnitGreatWorkPercent>400</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1231,7 +1217,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>420</iFeatureProductionPercent>
 			<iUnitHurryPercent>420</iUnitHurryPercent>
 			<iUnitTradePercent>300</iUnitTradePercent>
-			<iUnitGreatWorkPercent>300</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1326,7 +1311,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>280</iFeatureProductionPercent>
 			<iUnitHurryPercent>280</iUnitHurryPercent>
 			<iUnitTradePercent>200</iUnitTradePercent>
-			<iUnitGreatWorkPercent>200</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1421,7 +1405,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>140</iFeatureProductionPercent>
 			<iUnitHurryPercent>140</iUnitHurryPercent>
 			<iUnitTradePercent>100</iUnitTradePercent>
-			<iUnitGreatWorkPercent>100</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1516,7 +1499,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>70</iFeatureProductionPercent>
 			<iUnitHurryPercent>70</iUnitHurryPercent>
 			<iUnitTradePercent>50</iUnitTradePercent>
-			<iUnitGreatWorkPercent>50</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
@@ -1611,7 +1593,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iFeatureProductionPercent>35</iFeatureProductionPercent>
 			<iUnitHurryPercent>35</iUnitHurryPercent>
 			<iUnitTradePercent>25</iUnitTradePercent>
-			<iUnitGreatWorkPercent>25</iUnitGreatWorkPercent>
 			<Percents>
 				<Percent>
 					<ID>ADAPT_DEFAULT</ID>
