@@ -89,9 +89,7 @@ void CyInfoPythonInterface2()
 	python::class_<CvGameSpeedInfo, python::bases<CvInfoBase> >("CvGameSpeedInfo")
 
 		.def("getSpeedPercent", &CvGameSpeedInfo::getSpeedPercent, "int ()")
-		.def("getTrainPercent", &CvGameSpeedInfo::getTrainPercent, "int ()")
-		.def("getConstructPercent", &CvGameSpeedInfo::getConstructPercent, "int ()")
-		.def("getBuildPercent", &CvGameSpeedInfo::getBuildPercent, "int ()")
+		.def("getHammerCostPercent", &CvGameSpeedInfo::getHammerCostPercent, "int ()")
 
 		.def("getNumTurnIncrements", &CvGameSpeedInfo::getNumTurnIncrements, "int ()")
 		.def("getGameTurnInfo", &CvGameSpeedInfo::getGameTurnInfo, python::return_value_policy<python::reference_existing_object>(), "GameTurnInfo ()")

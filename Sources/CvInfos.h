@@ -3834,13 +3834,7 @@ public:
 	virtual ~CvGameSpeedInfo();
 
 	int getSpeedPercent() const;
-	int getTrainPercent() const;
-	int getConstructPercent() const;
-	int getCreatePercent() const;
-	int getBuildPercent() const;
-	int getImprovementPercent() const;
-	int getFeatureProductionPercent() const;
-	int getUnitHurryPercent() const;
+	int getHammerCostPercent() const;
 	int getNumTurnIncrements() const;
 
 	const GameTurnInfo& getGameTurnInfo(int iIndex) const;
@@ -3861,13 +3855,6 @@ public:
 protected:
 
 	int m_iSpeedPercent;
-	int m_iTrainPercent;
-	int m_iConstructPercent;
-	int m_iCreatePercent;
-	int m_iBuildPercent;
-	int m_iImprovementPercent;
-	int m_iFeatureProductionPercent;
-	int m_iUnitHurryPercent;
 	int m_iNumTurnIncrements;
 
 	CvString m_szGameSpeedName;

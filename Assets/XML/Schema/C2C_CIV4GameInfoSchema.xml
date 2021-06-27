@@ -604,8 +604,6 @@
 	<ElementType name="iUnitUpkeepPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxColonyMaintenance" content="textOnly" dt:type="int"/>
 	<ElementType name="iCivicUpkeepPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iFeatureProductionPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnitHurryPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iRevolutionIndexPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iHealthBonus" content="textOnly" dt:type="int"/>
@@ -1360,11 +1358,6 @@
 	<ElementType name="CivicInfos" content="eltOnly">
 		<element type="CivicInfo" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="iTrainPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iConstructPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iCreatePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iBuildPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iImprovementPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iEventChancePerTurn" content="textOnly" dt:type="int"/>
 
 	<ElementType name="GameSpeedInfo" content="eltOnly">
@@ -1377,13 +1370,6 @@
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="iSpeedPercent" minOccurs="0"/>
-		<element type="iTrainPercent" minOccurs="0"/>
-		<element type="iConstructPercent" minOccurs="0"/>
-		<element type="iCreatePercent" minOccurs="0"/>
-		<element type="iBuildPercent" minOccurs="0"/>
-		<element type="iImprovementPercent" minOccurs="0"/>
-		<element type="iFeatureProductionPercent" minOccurs="0"/>
-		<element type="iUnitHurryPercent" minOccurs="0"/>
 		<element type="GameTurnInfos" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="GameSpeedInfos" content="eltOnly">
@@ -1660,6 +1646,11 @@
 	<ElementType name="iAnarchyPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iGreatPeoplePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iCulturePercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iImprovementPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iTrainPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iConstructPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iCreatePercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iBuildPercent" content="textOnly" dt:type="int"/>
 
 	<ElementType name="EraInfo" content="eltOnly">
 		<element type="Type"/>

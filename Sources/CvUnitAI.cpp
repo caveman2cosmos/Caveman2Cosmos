@@ -1852,7 +1852,7 @@ void CvUnitAI::AI_settleMove()
 		}
 
 		if (iAreaBestFoundValue == 0 && iOtherBestFoundValue == 0
-		&& GC.getGame().getGameTurn() - getGameTurnCreated() > intSqrt(GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()))
+		&& GC.getGame().getGameTurn() - getGameTurnCreated() > intSqrt(GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent()))
 		{
 			if (NULL != getTransportUnit())
 			{
@@ -11143,7 +11143,7 @@ void CvUnitAI::AI_InfiltratorMove()
 			&& (
 				GC.getGame().getSorenRandNum(
 					5 +
-					7 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getBuildPercent() / 100,
+					7 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100,
 					"Leave city to pillage"
 				) == 0
 			) && AI_pillageRange(1, 20))
@@ -11157,7 +11157,7 @@ void CvUnitAI::AI_InfiltratorMove()
 			{
 				// Only enact when it is a long build that has been heavily invested into already
 				const int iEstTurns = plot()->getPlotCity()->getProductionNeeded() / iProduction;
-				const int iLongBuild = 1 + 6 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() / 100;
+				const int iLongBuild = 1 + 6 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100;
 
 				if (iEstTurns >= iLongBuild)
 				{

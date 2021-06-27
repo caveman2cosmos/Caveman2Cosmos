@@ -104,7 +104,7 @@ class CityDemolish:
 		iconGold = self.iconGold
 		fGoldMod = 0.09
 		fGoldMod *= GC.getDefineINT("BUILDING_PRODUCTION_PERCENT") / 100.0
-		fFactorGS = self.CvGameSpeedInfo.getConstructPercent() / 100.0
+		fFactorGS = self.CvGameSpeedInfo.getHammerCostPercent() / 100.0
 		fGoldMod *= fFactorGS
 		self.fGoldMod = fGoldMod
 		# Build List
@@ -273,7 +273,7 @@ class CityDemolish:
 					CyMessageControl().sendModNetMessage(905, iPlayer, iCity, -1, UNIT)
 
 			# Merchants
-			fModifierGS = self.CvGameSpeedInfo.getTrainPercent() / 100.0
+			fModifierGS = self.CvGameSpeedInfo.getHammerCostPercent() / 100.0
 			aMerchantList = [
 				GC.getInfoTypeForString("UNIT_FREIGHT"),
 				GC.getInfoTypeForString("UNIT_SUPPLY_TRAIN"),
