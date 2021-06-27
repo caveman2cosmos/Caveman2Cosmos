@@ -4140,7 +4140,7 @@ int CvPlayerAI::AI_goldTarget() const
 	if (GC.getGame().getElapsedGameTurns() >= 40 || getNumCities() > 3)
 	{
 		int iMultiplier = 0;
-		iMultiplier += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
+		iMultiplier += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 		iMultiplier += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
 		iMultiplier += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
 		iMultiplier += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAITrainPercent();
@@ -9165,10 +9165,7 @@ int CvPlayerAI::AI_maxGoldTrade(PlayerTypes ePlayer) const
 
 		if (iGoldRate < 0)
 		{
-			iMaxGold = std::min(
-				iMaxGold,
-				iGold + iGoldRate * 10 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent() / 100
-			);
+			iMaxGold = std::min(iMaxGold, iGold + iGoldRate * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 10);
 		}
 		iMaxGold *= 100 + calculateInflationRate();
 		iMaxGold /= 100;
@@ -17513,12 +17510,8 @@ void CvPlayerAI::AI_doCommerce()
 
 	const int iTargetTurns =
 	(
-		std::max
-		(
-			3, 4 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent() / 100
-		)
+		std::max(3, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 25)
 	);
-
 	const bool bFlexResearch	= isCommerceFlexible(COMMERCE_RESEARCH);
 	const bool bFlexCulture		= isCommerceFlexible(COMMERCE_CULTURE);
 	const bool bFlexEspionage	= isCommerceFlexible(COMMERCE_ESPIONAGE);
@@ -18252,7 +18245,7 @@ void CvPlayerAI::AI_doCivics()
 											iTechPathLen *= GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
 											iTechPathLen /= 100;
 
-											iTechPathLen *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
+											iTechPathLen *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 											iTechPathLen /= 100;
 
 											iTechPathLen *= GC.getEraInfo(GC.getGame().getStartEra()).getResearchPercent();

@@ -13239,20 +13239,13 @@ void CvHandicapInfo::copyNonDefaults(const CvHandicapInfo* pClassInfo)
 //------------------------------------------------------------------------------------------------------
 CvGameSpeedInfo::CvGameSpeedInfo() :
 m_iSpeedPercent(0),
-m_iGrowthPercent(0),
 m_iTrainPercent(0),
 m_iConstructPercent(0),
 m_iCreatePercent(0),
-m_iResearchPercent(0),
 m_iBuildPercent(0),
 m_iImprovementPercent(0),
-m_iGreatPeoplePercent(0),
-m_iBarbPercent(0),
 m_iFeatureProductionPercent(0),
-m_iUnitDiscoverPercent(0),
 m_iUnitHurryPercent(0),
-m_iUnitTradePercent(0),
-m_iUnitGreatWorkPercent(0),
 m_iNumTurnIncrements(0),
 m_pGameTurnInfo(NULL),
 m_bEndDatesCalculated(false)
@@ -13276,11 +13269,6 @@ int CvGameSpeedInfo::getSpeedPercent() const
 	return m_iSpeedPercent;
 }
 
-int CvGameSpeedInfo::getGrowthPercent() const
-{
-	return m_iGrowthPercent;
-}
-
 int CvGameSpeedInfo::getTrainPercent() const
 {
 	return m_iTrainPercent;
@@ -13296,11 +13284,6 @@ int CvGameSpeedInfo::getCreatePercent() const
 	return m_iCreatePercent;
 }
 
-int CvGameSpeedInfo::getResearchPercent() const
-{
-	return m_iResearchPercent;
-}
-
 int CvGameSpeedInfo::getBuildPercent() const
 {
 	return m_iBuildPercent;
@@ -13311,39 +13294,14 @@ int CvGameSpeedInfo::getImprovementPercent() const
 	return m_iImprovementPercent;
 }
 
-int CvGameSpeedInfo::getGreatPeoplePercent() const
-{
-	return m_iGreatPeoplePercent;
-}
-
-int CvGameSpeedInfo::getBarbPercent() const
-{
-	return m_iBarbPercent;
-}
-
 int CvGameSpeedInfo::getFeatureProductionPercent() const
 {
 	return m_iFeatureProductionPercent;
 }
 
-int CvGameSpeedInfo::getUnitDiscoverPercent() const
-{
-	return m_iUnitDiscoverPercent;
-}
-
 int CvGameSpeedInfo::getUnitHurryPercent() const
 {
 	return m_iUnitHurryPercent;
-}
-
-int CvGameSpeedInfo::getUnitTradePercent() const
-{
-	return m_iUnitTradePercent;
-}
-
-int CvGameSpeedInfo::getUnitGreatWorkPercent() const
-{
-	return m_iUnitGreatWorkPercent;
 }
 
 int CvGameSpeedInfo::getNumTurnIncrements() const
@@ -13393,20 +13351,13 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 	pXML->GetOptionalChildXmlValByName(&m_iSpeedPercent, L"iSpeedPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iGrowthPercent, L"iGrowthPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iTrainPercent, L"iTrainPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iConstructPercent, L"iConstructPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iCreatePercent, L"iCreatePercent");
-	pXML->GetOptionalChildXmlValByName(&m_iResearchPercent, L"iResearchPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iBuildPercent, L"iBuildPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iImprovementPercent, L"iImprovementPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iGreatPeoplePercent, L"iGreatPeoplePercent");
-	pXML->GetOptionalChildXmlValByName(&m_iBarbPercent, L"iBarbPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureProductionPercent, L"iFeatureProductionPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iUnitDiscoverPercent, L"iUnitDiscoverPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitHurryPercent, L"iUnitHurryPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iUnitTradePercent, L"iUnitTradePercent");
-	pXML->GetOptionalChildXmlValByName(&m_iUnitGreatWorkPercent, L"iUnitGreatWorkPercent");
 
 	if (pXML->TryMoveToXmlFirstChild(L"GameTurnInfos"))
 	{
@@ -13457,20 +13408,13 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
 	if (m_iSpeedPercent == iDefault) m_iSpeedPercent = pClassInfo->getSpeedPercent();
-	if (getGrowthPercent() == iDefault) m_iGrowthPercent = pClassInfo->getGrowthPercent();
 	if (getTrainPercent() == iDefault) m_iTrainPercent = pClassInfo->getTrainPercent();
 	if (getConstructPercent() == iDefault) m_iConstructPercent = pClassInfo->getConstructPercent();
 	if (getCreatePercent() == iDefault) m_iCreatePercent = pClassInfo->getCreatePercent();
-	if (getResearchPercent() == iDefault) m_iResearchPercent = pClassInfo->getResearchPercent();
 	if (getBuildPercent() == iDefault) m_iBuildPercent = pClassInfo->getBuildPercent();
 	if (getImprovementPercent() == iDefault) m_iImprovementPercent = pClassInfo->getImprovementPercent();
-	if (getGreatPeoplePercent() == iDefault) m_iGreatPeoplePercent = pClassInfo->getGreatPeoplePercent();
-	if (getBarbPercent() == iDefault) m_iBarbPercent = pClassInfo->getBarbPercent();
 	if (getFeatureProductionPercent() == iDefault) m_iFeatureProductionPercent = pClassInfo->getFeatureProductionPercent();
-	if (getUnitDiscoverPercent() == iDefault) m_iUnitDiscoverPercent = pClassInfo->getUnitDiscoverPercent();
 	if (getUnitHurryPercent() == iDefault) m_iUnitHurryPercent = pClassInfo->getUnitHurryPercent();
-	if (getUnitTradePercent() == iDefault) m_iUnitTradePercent = pClassInfo->getUnitTradePercent();
-	if (getUnitGreatWorkPercent() == iDefault) m_iUnitGreatWorkPercent = pClassInfo->getUnitGreatWorkPercent();
 
 	if (getNumTurnIncrements() == iDefault)
 	{
@@ -13490,20 +13434,13 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, m_iSpeedPercent);
-	CheckSum(iSum, m_iGrowthPercent);
 	CheckSum(iSum, m_iTrainPercent);
 	CheckSum(iSum, m_iConstructPercent);
 	CheckSum(iSum, m_iCreatePercent);
-	CheckSum(iSum, m_iResearchPercent);
 	CheckSum(iSum, m_iBuildPercent);
 	CheckSum(iSum, m_iImprovementPercent);
-	CheckSum(iSum, m_iGreatPeoplePercent);
-	CheckSum(iSum, m_iBarbPercent);
 	CheckSum(iSum, m_iFeatureProductionPercent);
-	CheckSum(iSum, m_iUnitDiscoverPercent);
 	CheckSum(iSum, m_iUnitHurryPercent);
-	CheckSum(iSum, m_iUnitTradePercent);
-	CheckSum(iSum, m_iUnitGreatWorkPercent);
 
 	for (int j = 0; j < m_iNumTurnIncrements; j++)
 	{

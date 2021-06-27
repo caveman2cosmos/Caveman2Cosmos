@@ -4426,7 +4426,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			// We can actually build the building
 			&& canConstruct(eBuilding)
 			// Automated production doesn't look at buildings with prerequisites?
-			&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0))
+			&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuildings().empty()))
 		{
 			// Toffer - ToDo - Change iValue type to int64_t,
 			//	or reduce scoring as it gets dangerously close to overflowing as it is.
@@ -5821,9 +5821,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					if (kBuilding.getGlobalPopulationChange() != 0)
 					{
 						// "Food to grow" divided by "food per turn" (min 1 per turn)
-						int	iGrowthTurns = growthThreshold() / std::max(1, foodDifference(false));
+						const int iGrowthTurns = growthThreshold() / std::max(1, foodDifference(false));
 
-						int	iValueMultiplier = 400 * iNumCities * iGrowthTurns / (20 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent());
+						const int iValueMultiplier = 20 * iNumCities * iGrowthTurns / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 
 						iValue += kBuilding.getGlobalPopulationChange() * iValueMultiplier;
 					}
@@ -6935,10 +6935,14 @@ int CvCityAI::AI_neededDefenders()
 		);
 	}
 
+	const int iTurn = GC.getGame().getGameTurn();
+	const int iTurnsThreshold = 8 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
+
 	const CvPlayerAI& player = GET_PLAYER(getOwner());
 	int iDefenders = 1;
+	const bool bCapital = isCapital();
 
-	if (!GC.getGame().isEarlyGame() && (hasActiveWorldWonder() || isCapital() || isHolyCity()))
+	if (iTurn > iTurnsThreshold && (bCapital || hasActiveWorldWonder() || isHolyCity()))
 	{
 		iDefenders++;
 
@@ -6965,20 +6969,21 @@ int CvCityAI::AI_neededDefenders()
 		iDefenders++;
 	}
 
-	if (!GC.getGame().isEarlyGame() && (GC.getGame().getGameTurn() - getGameTurnAcquired()) < 10)
+	// If city recently aquired, 80 turns on eternity, 8 turns on Normal, 4 turns on Blitz.
+	if (iTurn > 2 * iTurnsThreshold && iTurn - getGameTurnAcquired() <= iTurnsThreshold)
 	{
 		iDefenders = std::max(2, iDefenders);
 
 		// When on the offensive, halve defenders.
 		if ((area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE || area()->getAreaAIType(getTeam()) == AREAAI_MASSING)
-			&& !hasActiveWorldWonder() && !isHolyCity())
+		&& !hasActiveWorldWonder() && !isHolyCity())
 		{
 			iDefenders /= 2;
 		}
 
 		if (AI_isDanger())
 		{
-			iDefenders++;
+			iDefenders += 3;
 		}
 
 		if (bDefenseWar)
@@ -7005,7 +7010,7 @@ int CvCityAI::AI_neededDefenders()
 
 	if (player.AI_isDoVictoryStrategy(AI_VICTORY_SPACE3))
 	{
-		if (isCapital() || isProductionProject())
+		if (bCapital || isProductionProject())
 		{
 			iDefenders += 4;
 
@@ -7015,7 +7020,7 @@ int CvCityAI::AI_neededDefenders()
 			}
 		}
 
-		if (isCapital() && player.AI_isDoVictoryStrategy(AI_VICTORY_SPACE4))
+		if (bCapital && player.AI_isDoVictoryStrategy(AI_VICTORY_SPACE4))
 		{
 			iDefenders += 6;
 		}

@@ -1650,7 +1650,7 @@ void CvUnitAI::AI_settleMove()
 	if (GET_PLAYER(getOwner()).getNumCities() == 0)
 	{
 		// Afforess & Fuyu - Check for Good City Sites Near Starting Location
-		const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
+		const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 		const int iMaxFoundTurn = iGameSpeedPercent / 100;
 
 		if (canMove() && !GET_PLAYER(getOwner()).AI_isPlotCitySite(plot()) && GC.getGame().getElapsedGameTurns() <= iMaxFoundTurn)

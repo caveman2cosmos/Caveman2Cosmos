@@ -4715,10 +4715,10 @@ int getTreatyLength()
 {
 	int iResult = GC.getDefineINT("PEACE_TREATY_LENGTH");
 
-	iResult *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent();
+	iResult *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iResult /= 100;
 
-	return std::max(1,iResult);
+	return std::max(1, iResult);
 }
 
 void CvChecksum::add(int i)
