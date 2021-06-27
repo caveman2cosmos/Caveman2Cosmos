@@ -15,7 +15,6 @@
 				iFeatureProductionPercent = Amount of hammers produced when forests or jungles are chopped, possible other effects. Normal is 100
 				iImprovementPercent		= How fast tile improvements upgrade to the next level (eg cottages to hamlets). Normal is 100
 				iTrainPercent			= How fast units (warriors, settlers etc) are built. Normal is 100
-				iUnitDiscoverPercent	= Amount of beakers produced by great people when used to rush a technology. Normal is 100
 				iUnitGreatWorkPercent	= Amount or culture produced by great artists' great work ability. Normal is 100
 				iUnitHurryPercent		= Amount of hammers produced by units that can hurry productions of buildings. Normal is 100
 				iUnitTradePercent		= Amount of gold produced by units that have the trade mission ability. Normal is 100
@@ -51,7 +50,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>1000</iImprovementPercent>
 			<iBarbPercent>1000</iBarbPercent>
 			<iFeatureProductionPercent>1000</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>1000</iUnitDiscoverPercent>
 			<iUnitHurryPercent>1000</iUnitHurryPercent>
 			<iUnitTradePercent>1000</iUnitTradePercent>
 			<iUnitGreatWorkPercent>1000</iUnitGreatWorkPercent>
@@ -140,7 +138,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>800</iImprovementPercent>
 			<iBarbPercent>800</iBarbPercent>
 			<iFeatureProductionPercent>800</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>800</iUnitDiscoverPercent>
 			<iUnitHurryPercent>800</iUnitHurryPercent>
 			<iUnitTradePercent>800</iUnitTradePercent>
 			<iUnitGreatWorkPercent>800</iUnitGreatWorkPercent>
@@ -229,7 +226,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>600</iImprovementPercent>
 			<iBarbPercent>600</iBarbPercent>
 			<iFeatureProductionPercent>600</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>600</iUnitDiscoverPercent>
 			<iUnitHurryPercent>600</iUnitHurryPercent>
 			<iUnitTradePercent>600</iUnitTradePercent>
 			<iUnitGreatWorkPercent>600</iUnitGreatWorkPercent>
@@ -318,7 +314,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>400</iImprovementPercent>
 			<iBarbPercent>400</iBarbPercent>
 			<iFeatureProductionPercent>400</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>400</iUnitDiscoverPercent>
 			<iUnitHurryPercent>400</iUnitHurryPercent>
 			<iUnitTradePercent>400</iUnitTradePercent>
 			<iUnitGreatWorkPercent>400</iUnitGreatWorkPercent>
@@ -407,7 +402,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>300</iImprovementPercent>
 			<iBarbPercent>300</iBarbPercent>
 			<iFeatureProductionPercent>300</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>300</iUnitDiscoverPercent>
 			<iUnitHurryPercent>300</iUnitHurryPercent>
 			<iUnitTradePercent>300</iUnitTradePercent>
 			<iUnitGreatWorkPercent>300</iUnitGreatWorkPercent>
@@ -496,7 +490,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>200</iImprovementPercent>
 			<iBarbPercent>200</iBarbPercent>
 			<iFeatureProductionPercent>200</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>200</iUnitDiscoverPercent>
 			<iUnitHurryPercent>200</iUnitHurryPercent>
 			<iUnitTradePercent>200</iUnitTradePercent>
 			<iUnitGreatWorkPercent>200</iUnitGreatWorkPercent>
@@ -585,7 +578,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>100</iImprovementPercent>
 			<iBarbPercent>100</iBarbPercent>
 			<iFeatureProductionPercent>100</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>100</iUnitDiscoverPercent>
 			<iUnitHurryPercent>100</iUnitHurryPercent>
 			<iUnitTradePercent>100</iUnitTradePercent>
 			<iUnitGreatWorkPercent>100</iUnitGreatWorkPercent>
@@ -674,7 +666,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>50</iImprovementPercent>
 			<iBarbPercent>50</iBarbPercent>
 			<iFeatureProductionPercent>50</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>50</iUnitDiscoverPercent>
 			<iUnitHurryPercent>50</iUnitHurryPercent>
 			<iUnitTradePercent>50</iUnitTradePercent>
 			<iUnitGreatWorkPercent>50</iUnitGreatWorkPercent>
@@ -763,7 +754,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>25</iImprovementPercent>
 			<iBarbPercent>25</iBarbPercent>
 			<iFeatureProductionPercent>25</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>25</iUnitDiscoverPercent>
 			<iUnitHurryPercent>25</iUnitHurryPercent>
 			<iUnitTradePercent>25</iUnitTradePercent>
 			<iUnitGreatWorkPercent>25</iUnitGreatWorkPercent>
@@ -859,7 +849,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>1400</iImprovementPercent>
 			<iBarbPercent>1000</iBarbPercent>
 			<iFeatureProductionPercent>1400</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>1000</iUnitDiscoverPercent>
 			<iUnitHurryPercent>1400</iUnitHurryPercent>
 			<iUnitTradePercent>1000</iUnitTradePercent>
 			<iUnitGreatWorkPercent>1000</iUnitGreatWorkPercent>
@@ -955,7 +944,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>1120</iImprovementPercent>
 			<iBarbPercent>800</iBarbPercent>
 			<iFeatureProductionPercent>1120</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>800</iUnitDiscoverPercent>
 			<iUnitHurryPercent>1120</iUnitHurryPercent>
 			<iUnitTradePercent>800</iUnitTradePercent>
 			<iUnitGreatWorkPercent>800</iUnitGreatWorkPercent>
@@ -1051,7 +1039,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>840</iImprovementPercent>
 			<iBarbPercent>600</iBarbPercent>
 			<iFeatureProductionPercent>840</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>600</iUnitDiscoverPercent>
 			<iUnitHurryPercent>840</iUnitHurryPercent>
 			<iUnitTradePercent>600</iUnitTradePercent>
 			<iUnitGreatWorkPercent>600</iUnitGreatWorkPercent>
@@ -1147,7 +1134,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>560</iImprovementPercent>
 			<iBarbPercent>400</iBarbPercent>
 			<iFeatureProductionPercent>560</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>400</iUnitDiscoverPercent>
 			<iUnitHurryPercent>560</iUnitHurryPercent>
 			<iUnitTradePercent>400</iUnitTradePercent>
 			<iUnitGreatWorkPercent>400</iUnitGreatWorkPercent>
@@ -1243,7 +1229,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>420</iImprovementPercent>
 			<iBarbPercent>300</iBarbPercent>
 			<iFeatureProductionPercent>420</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>300</iUnitDiscoverPercent>
 			<iUnitHurryPercent>420</iUnitHurryPercent>
 			<iUnitTradePercent>300</iUnitTradePercent>
 			<iUnitGreatWorkPercent>300</iUnitGreatWorkPercent>
@@ -1339,7 +1324,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>280</iImprovementPercent>
 			<iBarbPercent>200</iBarbPercent>
 			<iFeatureProductionPercent>280</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>200</iUnitDiscoverPercent>
 			<iUnitHurryPercent>280</iUnitHurryPercent>
 			<iUnitTradePercent>200</iUnitTradePercent>
 			<iUnitGreatWorkPercent>200</iUnitGreatWorkPercent>
@@ -1435,7 +1419,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>140</iImprovementPercent>
 			<iBarbPercent>100</iBarbPercent>
 			<iFeatureProductionPercent>140</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>100</iUnitDiscoverPercent>
 			<iUnitHurryPercent>140</iUnitHurryPercent>
 			<iUnitTradePercent>100</iUnitTradePercent>
 			<iUnitGreatWorkPercent>100</iUnitGreatWorkPercent>
@@ -1531,7 +1514,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>70</iImprovementPercent>
 			<iBarbPercent>50</iBarbPercent>
 			<iFeatureProductionPercent>70</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>50</iUnitDiscoverPercent>
 			<iUnitHurryPercent>70</iUnitHurryPercent>
 			<iUnitTradePercent>50</iUnitTradePercent>
 			<iUnitGreatWorkPercent>50</iUnitGreatWorkPercent>
@@ -1627,7 +1609,6 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 			<iImprovementPercent>35</iImprovementPercent>
 			<iBarbPercent>25</iBarbPercent>
 			<iFeatureProductionPercent>35</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>25</iUnitDiscoverPercent>
 			<iUnitHurryPercent>35</iUnitHurryPercent>
 			<iUnitTradePercent>25</iUnitTradePercent>
 			<iUnitGreatWorkPercent>25</iUnitGreatWorkPercent>

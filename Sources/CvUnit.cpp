@@ -10810,18 +10810,15 @@ TechTypes CvUnit::getDiscoveryTech() const
 
 int CvUnit::getDiscoverResearch(TechTypes eTech) const
 {
-	int iResearch;
+	int iResearch = m_pUnitInfo->getBaseDiscover() + m_pUnitInfo->getDiscoverMultiplier() * GET_TEAM(getTeam()).getTotalPopulation();
 
-	iResearch = (m_pUnitInfo->getBaseDiscover() + (m_pUnitInfo->getDiscoverMultiplier() * GET_TEAM(getTeam()).getTotalPopulation()));
-
-	iResearch *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitDiscoverPercent();
+	iResearch *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iResearch /= 100;
 
     if (eTech != NO_TECH)
     {
         iResearch = std::min(GET_TEAM(getTeam()).getResearchLeft(eTech), iResearch);
     }
-
 	return std::max(0, iResearch);
 }
 

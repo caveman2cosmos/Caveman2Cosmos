@@ -13246,7 +13246,6 @@ m_iBuildPercent(0),
 m_iImprovementPercent(0),
 m_iBarbPercent(0),
 m_iFeatureProductionPercent(0),
-m_iUnitDiscoverPercent(0),
 m_iUnitHurryPercent(0),
 m_iUnitTradePercent(0),
 m_iUnitGreatWorkPercent(0),
@@ -13306,11 +13305,6 @@ int CvGameSpeedInfo::getBarbPercent() const
 int CvGameSpeedInfo::getFeatureProductionPercent() const
 {
 	return m_iFeatureProductionPercent;
-}
-
-int CvGameSpeedInfo::getUnitDiscoverPercent() const
-{
-	return m_iUnitDiscoverPercent;
 }
 
 int CvGameSpeedInfo::getUnitHurryPercent() const
@@ -13382,7 +13376,6 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iImprovementPercent, L"iImprovementPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iBarbPercent, L"iBarbPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureProductionPercent, L"iFeatureProductionPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iUnitDiscoverPercent, L"iUnitDiscoverPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitHurryPercent, L"iUnitHurryPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitTradePercent, L"iUnitTradePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitGreatWorkPercent, L"iUnitGreatWorkPercent");
@@ -13443,7 +13436,6 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 	if (getImprovementPercent() == iDefault) m_iImprovementPercent = pClassInfo->getImprovementPercent();
 	if (getBarbPercent() == iDefault) m_iBarbPercent = pClassInfo->getBarbPercent();
 	if (getFeatureProductionPercent() == iDefault) m_iFeatureProductionPercent = pClassInfo->getFeatureProductionPercent();
-	if (getUnitDiscoverPercent() == iDefault) m_iUnitDiscoverPercent = pClassInfo->getUnitDiscoverPercent();
 	if (getUnitHurryPercent() == iDefault) m_iUnitHurryPercent = pClassInfo->getUnitHurryPercent();
 	if (getUnitTradePercent() == iDefault) m_iUnitTradePercent = pClassInfo->getUnitTradePercent();
 	if (getUnitGreatWorkPercent() == iDefault) m_iUnitGreatWorkPercent = pClassInfo->getUnitGreatWorkPercent();
@@ -13473,7 +13465,6 @@ void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iImprovementPercent);
 	CheckSum(iSum, m_iBarbPercent);
 	CheckSum(iSum, m_iFeatureProductionPercent);
-	CheckSum(iSum, m_iUnitDiscoverPercent);
 	CheckSum(iSum, m_iUnitHurryPercent);
 	CheckSum(iSum, m_iUnitTradePercent);
 	CheckSum(iSum, m_iUnitGreatWorkPercent);

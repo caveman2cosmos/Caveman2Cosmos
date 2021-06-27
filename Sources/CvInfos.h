@@ -3841,7 +3841,6 @@ public:
 	int getImprovementPercent() const;
 	int getBarbPercent() const;
 	int getFeatureProductionPercent() const;
-	int getUnitDiscoverPercent() const;
 	int getUnitHurryPercent() const;
 	int getUnitTradePercent() const;
 	int getUnitGreatWorkPercent() const;
@@ -3872,7 +3871,6 @@ protected:
 	int m_iImprovementPercent;
 	int m_iBarbPercent;
 	int m_iFeatureProductionPercent;
-	int m_iUnitDiscoverPercent;
 	int m_iUnitHurryPercent;
 	int m_iUnitTradePercent;
 	int m_iUnitGreatWorkPercent;
