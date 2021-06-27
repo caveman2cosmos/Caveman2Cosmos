@@ -10948,30 +10948,19 @@ bool CvUnit::hurry()
 
 int CvUnit::getTradeGold(const CvPlot* pPlot) const
 {
-	CvCity* pCapitalCity;
-	CvCity* pCity;
-	int iGold;
+	CvCity* pCity = pPlot->getPlotCity();
 
-	pCity = pPlot->getPlotCity();
-	pCapitalCity = GET_PLAYER(pPlot->getOwner()).getCapitalCity();
-	CvCity* pOriginCity = getCityOfOrigin();
-
-	if (pCity == NULL)
+	if (pCity == NULL || pCity == getCityOfOrigin())
 	{
 		return 0;
 	}
-
-	if (pCity == pOriginCity)
-	{
-		return 0;
-	}
+	CvCity* pCapitalCity = GET_PLAYER(pPlot->getOwner()).getCapitalCity();
 
 	int iMult = m_pUnitInfo->getTradeMultiplier();
 
+	int iGold = m_pUnitInfo->getBaseTrade() + iMult * ((pCapitalCity != NULL) ? pCity->calculateTradeProfit(pCapitalCity) : 0);
 
-	iGold = (m_pUnitInfo->getBaseTrade() + ( iMult * ((pCapitalCity != NULL) ? pCity->calculateTradeProfit(pCapitalCity) : 0)));
-
-	iGold *= ((pPlot->getOwner() != getOwner()) ? iMult : 1);
+	iGold *= (pPlot->getOwner() != getOwner() ? iMult : 1);
 
 	iGold *= pCity->getPopulation();
 	iGold /= 10;
@@ -10984,14 +10973,10 @@ int CvUnit::getTradeGold(const CvPlot* pPlot) const
 		iGold /= iMaxDistance;
 	}
 
-	iGold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitTradePercent();
-	iGold /= 100;
+	iGold = getModifiedIntValue(iGold, GC.getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() + GET_TEAM(getTeam()).getTradeMissionModifier());
 
-	iGold *= (GET_TEAM(getTeam()).getTradeMissionModifier() + 100);
+	iGold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iGold /= 100;
-
-	int iTradeModifier = (GC.getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() * iGold)/100;
-	iGold += iTradeModifier;
 
 	return std::max(0, iGold);
 }

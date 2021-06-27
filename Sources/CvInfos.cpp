@@ -13247,7 +13247,6 @@ m_iImprovementPercent(0),
 m_iBarbPercent(0),
 m_iFeatureProductionPercent(0),
 m_iUnitHurryPercent(0),
-m_iUnitTradePercent(0),
 m_iNumTurnIncrements(0),
 m_pGameTurnInfo(NULL),
 m_bEndDatesCalculated(false)
@@ -13311,11 +13310,6 @@ int CvGameSpeedInfo::getUnitHurryPercent() const
 	return m_iUnitHurryPercent;
 }
 
-int CvGameSpeedInfo::getUnitTradePercent() const
-{
-	return m_iUnitTradePercent;
-}
-
 int CvGameSpeedInfo::getNumTurnIncrements() const
 {
 	return m_iNumTurnIncrements;
@@ -13371,7 +13365,6 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iBarbPercent, L"iBarbPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureProductionPercent, L"iFeatureProductionPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitHurryPercent, L"iUnitHurryPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iUnitTradePercent, L"iUnitTradePercent");
 
 	if (pXML->TryMoveToXmlFirstChild(L"GameTurnInfos"))
 	{
@@ -13430,7 +13423,6 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 	if (getBarbPercent() == iDefault) m_iBarbPercent = pClassInfo->getBarbPercent();
 	if (getFeatureProductionPercent() == iDefault) m_iFeatureProductionPercent = pClassInfo->getFeatureProductionPercent();
 	if (getUnitHurryPercent() == iDefault) m_iUnitHurryPercent = pClassInfo->getUnitHurryPercent();
-	if (getUnitTradePercent() == iDefault) m_iUnitTradePercent = pClassInfo->getUnitTradePercent();
 
 	if (getNumTurnIncrements() == iDefault)
 	{
@@ -13458,7 +13450,6 @@ void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iBarbPercent);
 	CheckSum(iSum, m_iFeatureProductionPercent);
 	CheckSum(iSum, m_iUnitHurryPercent);
-	CheckSum(iSum, m_iUnitTradePercent);
 
 	for (int j = 0; j < m_iNumTurnIncrements; j++)
 	{

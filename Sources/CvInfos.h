@@ -3842,7 +3842,6 @@ public:
 	int getBarbPercent() const;
 	int getFeatureProductionPercent() const;
 	int getUnitHurryPercent() const;
-	int getUnitTradePercent() const;
 	int getNumTurnIncrements() const;
 
 	const GameTurnInfo& getGameTurnInfo(int iIndex) const;
@@ -3871,7 +3870,6 @@ protected:
 	int m_iBarbPercent;
 	int m_iFeatureProductionPercent;
 	int m_iUnitHurryPercent;
-	int m_iUnitTradePercent;
 	int m_iNumTurnIncrements;
 
 	CvString m_szGameSpeedName;

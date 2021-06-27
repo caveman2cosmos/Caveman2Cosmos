@@ -600,7 +600,6 @@
 	<ElementType name="iCivicUpkeepPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iFeatureProductionPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitHurryPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnitTradePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iRevolutionIndexPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iHealthBonus" content="textOnly" dt:type="int"/>
@@ -1360,6 +1359,7 @@
 	<ElementType name="iImprovementPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iEventChancePerTurn" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbPercent" content="textOnly" dt:type="int"/>
+
 	<ElementType name="GameSpeedInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -1378,16 +1378,17 @@
 		<element type="iBarbPercent" minOccurs="0"/>
 		<element type="iFeatureProductionPercent" minOccurs="0"/>
 		<element type="iUnitHurryPercent" minOccurs="0"/>
-		<element type="iUnitTradePercent" minOccurs="0"/>
 		<element type="GameTurnInfos" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="GameSpeedInfos" content="eltOnly">
 		<element type="GameSpeedInfo" maxOccurs="*"/>
 	</ElementType>
+
 	<ElementType name="iBaseTime" content="textOnly" dt:type="int"/>
 	<ElementType name="iCityBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iFirstTurnMultiplier" content="textOnly" dt:type="int"/>
+
 	<ElementType name="TurnTimerInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>

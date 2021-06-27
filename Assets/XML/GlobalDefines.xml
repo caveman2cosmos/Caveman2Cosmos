@@ -1729,7 +1729,7 @@
 	</Define>
 	<Define>
 		<DefineName>TRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT</DefineName>
-		<iDefineIntVal>-70</iDefineIntVal>
+		<iDefineIntVal>-200</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CIVIC_ANARCHY_QTY_DISCOUNT</DefineName>
