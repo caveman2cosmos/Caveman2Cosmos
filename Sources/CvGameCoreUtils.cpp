@@ -480,7 +480,7 @@ bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 		return true;
 	}
 
-	const SpecialBuildingTypes eSpecial = (SpecialBuildingTypes)info.getSpecialBuildingType();
+	const SpecialBuildingTypes eSpecial = info.getSpecialBuilding();
 	if (NO_SPECIALBUILDING != eSpecial && GC.getSpecialBuildingInfo(eSpecial).getTechPrereq() == eTech)
 	{
 		return true;
@@ -529,7 +529,7 @@ bool isNationalWonder(BuildingTypes building)
 
 bool isNationalWonderGroup(BuildingTypes building)
 {
-	const SpecialBuildingTypes eSpecialBuilding = static_cast<SpecialBuildingTypes>(GC.getBuildingInfo(building).getSpecialBuildingType());
+	const SpecialBuildingTypes eSpecialBuilding = GC.getBuildingInfo(building).getSpecialBuilding();
 	return eSpecialBuilding != NO_SPECIALBUILDING && GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() > 0;
 }
 
@@ -551,7 +551,7 @@ int limitedWonderLimit(BuildingTypes eBuilding)
 	iCount += kBuilding.getMaxTeamInstances();
 	iCount += kBuilding.getMaxPlayerInstances();
 
-	const SpecialBuildingTypes eSpecialBuilding = static_cast<SpecialBuildingTypes>(kBuilding.getSpecialBuildingType());
+	const SpecialBuildingTypes eSpecialBuilding = kBuilding.getSpecialBuilding();
 	if (eSpecialBuilding != NO_SPECIALBUILDING)
 	{
 		iCount += GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances();

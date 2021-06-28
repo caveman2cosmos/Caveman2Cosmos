@@ -2157,7 +2157,7 @@ bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible)
 			const BuildingTypes eBuildingX = (BuildingTypes)kUnit.getPrereqAndBuilding(iI);
 			if (!GET_TEAM(getTeam()).isObsoleteBuilding(eBuildingX) && getNumActiveBuilding(eBuildingX) == 0)
 			{
-				SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo(eBuildingX).getSpecialBuildingType();
+				const SpecialBuildingTypes eSpecialBuilding = GC.getBuildingInfo(eBuildingX).getSpecialBuilding();
 
 				if (eSpecialBuilding == NO_SPECIALBUILDING || !pPlayer.isSpecialBuildingNotRequired(eSpecialBuilding))
 				{
@@ -5489,7 +5489,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changeGreatPeopleUnitRate(eGreatPeopleUnit, kBuilding.getGreatPeopleRateChange() * iChange);
 		}
 
-		const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)kBuilding.getSpecialBuildingType();
+		const SpecialBuildingTypes eSpecialBuilding = kBuilding.getSpecialBuilding();
 		if (eSpecialBuilding != NO_SPECIALBUILDING)
 		{
 			GET_PLAYER(getOwner()).changeBuildingGroupCount(eSpecialBuilding, iChange);
@@ -13627,7 +13627,7 @@ bool CvCity::isActiveCorporation(CorporationTypes eCorporation) const
 
 	if (GC.getCorporationInfo(eCorporation).getObsoleteTech() != NO_TECH)
 	{
-		if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getCorporationInfo(eCorporation).getObsoleteTech()))
+		if (GET_TEAM(getTeam()).isHasTech(GC.getCorporationInfo(eCorporation).getObsoleteTech()))
 		{
 			return false;
 		}
@@ -15579,7 +15579,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 			GET_PLAYER(getOwner()).changeBuildingMaking(buildingType, 1);
 
-			const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo(buildingType).getSpecialBuildingType();
+			const SpecialBuildingTypes eSpecialBuilding = GC.getBuildingInfo(buildingType).getSpecialBuilding();
 			if (eSpecialBuilding != NO_SPECIALBUILDING)
 			{
 				GET_PLAYER(getOwner()).changeBuildingGroupMaking(eSpecialBuilding, 1);
@@ -15903,7 +15903,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 		GET_PLAYER(getOwner()).changeBuildingMaking(eConstructBuilding, -1);
 
-		const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo(eConstructBuilding).getSpecialBuildingType();
+		const SpecialBuildingTypes eSpecialBuilding = GC.getBuildingInfo(eConstructBuilding).getSpecialBuilding();
 		if (eSpecialBuilding != NO_SPECIALBUILDING)
 		{
 			GET_PLAYER(getOwner()).changeBuildingGroupMaking(eSpecialBuilding, -1);
@@ -20900,7 +20900,7 @@ BuildTypes CvCity::findChopBuild(FeatureTypes eFeature) const
 			if (kBuild.isFeatureRemove(eFeature) &&
 				kBuild.getFeatureProduction(eFeature) != 0 &&
 				GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getTechPrereq()) &&
-				(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech())))
+				(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech(kBuild.getObsoleteTech())))
 			{
 				return (BuildTypes)iI;
 			}
@@ -22559,7 +22559,7 @@ void CvCity::recalculateModifiers()
 
 			// Toffer - Xml changes may have invalidated a building the city have; hence bValid.
 
-			const bool bObsolete = info.getObsoleteTech() < 0 ? false : GET_TEAM(getTeam()).isHasTech((TechTypes)info.getObsoleteTech());
+			const bool bObsolete = info.getObsoleteTech() < 0 ? false : GET_TEAM(getTeam()).isHasTech(info.getObsoleteTech());
 			bool bValid = 
 			(
 				!bObsolete
@@ -23220,7 +23220,7 @@ void CvCity::doOutbreakCheck(PromotionLineTypes eAfflictionLine)
 
 	if (GC.getPromotionLineInfo(eAfflictionLine).getObsoleteTech() != NO_TECH)
 	{
-		if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getPromotionLineInfo(eAfflictionLine).getObsoleteTech())))
+		if (GET_TEAM(getTeam()).isHasTech(GC.getPromotionLineInfo(eAfflictionLine).getObsoleteTech()))
 		{
 			return;
 		}

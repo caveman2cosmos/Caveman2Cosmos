@@ -13143,7 +13143,7 @@ int CvCityAI::AI_countNumImprovableBonuses(bool bIncludeNeutral, TechTypes eExtr
 							//	makes no sense for the same tech to boh enable and obsolete a build.  However, we DO need to check that
 							//	we do not ALREADY have an obsoleting tech
 							if (kBuild.getTechPrereq() == eExtraTech &&
-								(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech())))
+								(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech(kBuild.getObsoleteTech())))
 							{
 								iCount++;
 								break;
