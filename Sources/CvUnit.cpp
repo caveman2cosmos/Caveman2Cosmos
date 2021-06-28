@@ -10515,7 +10515,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 /************************************************************************************************/
 	if (GC.getCorporationInfo(eCorporation).getObsoleteTech() != NO_TECH)
 	{
-		if (GET_TEAM(GET_PLAYER(pCity->getOwner()).getTeam()).isHasTech((TechTypes)GC.getCorporationInfo(eCorporation).getObsoleteTech()))
+		if (GET_TEAM(GET_PLAYER(pCity->getOwner()).getTeam()).isHasTech(GC.getCorporationInfo(eCorporation).getObsoleteTech()))
 		{
 			return false;
 		}
@@ -12829,7 +12829,7 @@ namespace CvUnitInternal
 			const CvBuildInfo& info = GC.getBuildInfo(eBuild);
 			if (info.getRoute() > NO_ROUTE && team.isHasTech((TechTypes)info.getTechPrereq()))
 			{
-				const TechTypes obsoleteTech = (TechTypes)info.getObsoleteTech();
+				const TechTypes obsoleteTech = info.getObsoleteTech();
 				if (obsoleteTech == NO_TECH || !team.isHasTech(obsoleteTech))
 					return true;
 			}
@@ -20826,7 +20826,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 
-	if (kPromotion.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+	if (kPromotion.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech(kPromotion.getObsoleteTech()))
 	{
 		return false;
 	}
@@ -33985,7 +33985,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 	if (GC.getPromotionInfo(ePromotion).getObsoleteTech() != NO_TECH)
 	{// TB Debug: was
 		//if ((GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getPromotionInfo(ePromotion).getTechPrereq()))))
-		if ((GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getPromotionInfo(ePromotion).getObsoleteTech()))))
+		if (GET_TEAM(getTeam()).isHasTech(GC.getPromotionInfo(ePromotion).getObsoleteTech()))
 		{
 			if (bPromo && !bIsFreePromotion)
 			{
@@ -34688,7 +34688,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 
 	if (GC.getPromotionInfo(eEquipment).getObsoleteTech() != NO_TECH)
 	{
-		if ((GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getPromotionInfo(eEquipment).getObsoleteTech()))))
+		if (GET_TEAM(getTeam()).isHasTech(GC.getPromotionInfo(eEquipment).getObsoleteTech()))
 		{
 			return false;
 		}

@@ -91,7 +91,7 @@ m_iTradeRouteModifier(0),
 m_iForeignTradeRouteModifier(0),
 m_iAssetValue(0),
 m_iPowerValue(0),
-m_iSpecialBuildingType(NO_SPECIALBUILDING),
+m_eSpecialBuilding(NO_SPECIALBUILDING),
 m_iAdvisorType(NO_ADVISOR),
 
 m_iPrereqGameOption(NO_GAMEOPTION),
@@ -1816,7 +1816,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iForeignTradeRouteModifier);
 	CheckSum(iSum, m_iAssetValue);
 	CheckSum(iSum, m_iPowerValue);
-	CheckSum(iSum, m_iSpecialBuildingType);
+	CheckSum(iSum, m_eSpecialBuilding);
 	CheckSum(iSum, m_iAdvisorType);
 	CheckSum(iSum, m_iPrereqGameOption);
 	CheckSum(iSum, m_iNotGameOption);
@@ -2198,7 +2198,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SpecialBuildingType");
-	m_iSpecialBuildingType = pXML->GetInfoClass(szTextVal);
+	m_eSpecialBuilding = static_cast<SpecialBuildingTypes>(pXML->GetInfoClass(szTextVal));
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Advisor");
 	m_iAdvisorType = pXML->GetInfoClass(szTextVal);
@@ -2245,13 +2245,13 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_iVictoryPrereq = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeStartEra");
-	m_iFreeStartEra = pXML->GetInfoClass(szTextVal);
+	m_iFreeStartEra = static_cast<EraTypes>(pXML->GetInfoClass(szTextVal));
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"MaxStartEra");
 	m_iMaxStartEra = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
-	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
+	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
 	m_iPrereqAndTech = pXML->GetInfoClass(szTextVal);
@@ -3794,7 +3794,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	CvHotkeyInfo::copyNonDefaults(pClassInfo);
 
-	if (getSpecialBuildingType() == iTextDefault) m_iSpecialBuildingType = pClassInfo->getSpecialBuildingType();
+	if (getSpecialBuilding() == iTextDefault) m_eSpecialBuilding = pClassInfo->getSpecialBuilding();
 	if (getAdvisorType() == iTextDefault) m_iAdvisorType = pClassInfo->getAdvisorType();
 
 	if (isNoLimit() == bDefault) m_bNoLimit = pClassInfo->isNoLimit();

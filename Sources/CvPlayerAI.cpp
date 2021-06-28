@@ -5762,7 +5762,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 #ifdef USE_BOTH_TECHBUILDING_EVALUATIONS
 				int iBuildingValue = 0;
 
-				if (kLoopBuilding.getSpecialBuildingType() != NO_SPECIALBUILDING)
+				if (kLoopBuilding.getSpecialBuilding() != NO_SPECIALBUILDING)
 				{
 					iBuildingValue += ((bCapitalAlone) ? 100 : 25);
 				}

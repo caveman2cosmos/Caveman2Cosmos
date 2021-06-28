@@ -470,9 +470,9 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 		{
 			return false;
 		}
-		if ((TechTypes)kPromotion.getObsoleteTech() != NO_TECH)
+		if (kPromotion.getObsoleteTech() != NO_TECH)
 		{
-			if (kTeam.isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+			if (kTeam.isHasTech(kPromotion.getObsoleteTech()))
 			{
 				return false;
 			}
@@ -643,9 +643,9 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 		{
 			return false;
 		}
-		if ((TechTypes)kPromotion.getObsoleteTech() != NO_TECH)
+		if (kPromotion.getObsoleteTech() != NO_TECH)
 		{
-			if (kTeam.isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+			if (kTeam.isHasTech(kPromotion.getObsoleteTech()))
 			{
 				return false;
 			}
@@ -802,9 +802,9 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 		{
 			return false;
 		}
-		if ((TechTypes)kPromotion.getObsoleteTech() != NO_TECH)
+		if (kPromotion.getObsoleteTech() != NO_TECH)
 		{
-			if (kTeam.isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+			if (kTeam.isHasTech(kPromotion.getObsoleteTech()))
 			{
 				return false;
 			}
@@ -959,9 +959,9 @@ bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 		{
 			return false;
 		}
-		if ((TechTypes)kPromotion.getObsoleteTech() != NO_TECH)
+		if (kPromotion.getObsoleteTech() != NO_TECH)
 		{
-			if (kTeam.isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+			if (kTeam.isHasTech(kPromotion.getObsoleteTech()))
 			{
 				return false;
 			}

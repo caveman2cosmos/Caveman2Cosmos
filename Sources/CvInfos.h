@@ -667,19 +667,13 @@ public:
 	bool getTerrainDoubleMove(int i) const;
 	bool getFeatureDoubleMove(int i) const;
 	bool getUnitCombat(int i) const;
-
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	bool isCanMovePeaks() const;
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
 	bool isCanLeadThroughPeaks() const;
 	int getNumPromotionOverwrites() const;
 	PromotionTypes getPromotionOverwrites(int iI) const;
-	int getObsoleteTech() const;
+	TechTypes getObsoleteTech() const;
 	int getControlPoints() const;
 	int getCommandRange() const;
 	bool isZoneOfControl() const;
@@ -687,7 +681,7 @@ public:
 	int getPowerMultiplier() const;
 	int getIgnoreTerrainDamage() const;
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -1095,7 +1089,7 @@ protected:
 	bool m_bCanLeadThroughPeaks;
 	int m_iNumPromotionOverwrites;
 	int* m_piPromotionOverwrites;
-	int m_iObsoleteTech;
+	TechTypes m_iObsoleteTech;
 	int m_iControlPoints;
 	int m_iCommandRange;
 	bool m_bZoneOfControl;
@@ -3316,14 +3310,13 @@ private:
 class CvSpecialBuildingInfo :
 	public CvInfoBase
 {
-
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
 
 	CvSpecialBuildingInfo();
 	virtual ~CvSpecialBuildingInfo();
 
-	int getObsoleteTech() const;
+	TechTypes getObsoleteTech() const;
 	int getTechPrereq() const;
 	int getTechPrereqAnyone() const;
 	int getMaxPlayerInstances() const;
@@ -3334,12 +3327,12 @@ public:
 
 	void copyNonDefaults(const CvSpecialBuildingInfo* pClassInfo);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 
-	int m_iObsoleteTech;
+	TechTypes m_iObsoleteTech;
 	int m_iTechPrereq;
 	int m_iTechPrereqAnyone;
 	int m_iMaxPlayerInstances;
@@ -3944,20 +3937,12 @@ public:
 	int getRoute() const;
 	int getTerrainChange() const;
 	int getFeatureChange() const;
-	/************************************************************************************************/
-	/* Afforess					  Start		 05/25/10											   */
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
-	int getObsoleteTech() const;
+	TechTypes getObsoleteTech() const;
 	bool isMine() const;
 	bool isNoTechCanRemoveWithNoProductionGain(int i) const;
 	bool isDisabled() const;
 	bool isHideObsoleteExempt() const;
 	void setDisabled(bool bNewVal);
-	/************************************************************************************************/
-	/* Afforess						 END															*/
-	/************************************************************************************************/
 	DllExport int getEntityEvent() const;
 	DllExport int getMissionType() const;
 	void setMissionType(int iNewType);
@@ -3997,31 +3982,21 @@ public:
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
+	bool m_bMine;
+	bool m_bDisabled;
+	bool m_bHideObsoleteExempt;
+	bool m_bKill;
 
 	int m_iTime;
 	int m_iCost;
 	int m_iTechPrereq;
 	int m_iImprovement;
 	int m_iRoute;
-	/************************************************************************************************/
-	/* Afforess					  Start		 05/25/10											   */
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
 	int m_iTerrainChange;
 	int m_iFeatureChange;
-	int m_iObsoleteTech;
-	bool m_bMine;
-	bool m_bDisabled;
-	bool m_bHideObsoleteExempt;
-	bool* m_pabNoTechCanRemoveWithNoProductionGain;
-	/************************************************************************************************/
-	/* Afforess						 END															*/
-	/************************************************************************************************/
+	TechTypes m_iObsoleteTech;
 	int m_iEntityEvent;
 	int m_iMissionType;
-
-	bool m_bKill;
 
 	// Arrays
 
@@ -4030,6 +4005,7 @@ protected:
 	int* m_paiFeatureProduction;
 
 	bool* m_pabFeatureRemove;
+	bool* m_pabNoTechCanRemoveWithNoProductionGain;
 
 	std::vector<int> m_aiPrereqBonusTypes;
 	std::vector<int> m_aiMapTypes;
@@ -5620,7 +5596,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	int getObsoleteTech() const;
+	TechTypes getObsoleteTech() const;
 	int getSpread() const;
 	int getHealth() const;
 	int getHappiness() const;
@@ -5667,7 +5643,7 @@ protected:
 	int m_iMissionType;
 	int m_iBonusProduced;
 
-	int m_iObsoleteTech;
+	TechTypes m_iObsoleteTech;
 	int m_iSpread;
 	int m_iHealth;
 	int m_iHappiness;

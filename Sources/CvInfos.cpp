@@ -2805,7 +2805,7 @@ int CvPromotionInfo::getNumPromotionOverwrites() const
 	return m_iNumPromotionOverwrites;
 }
 
-int CvPromotionInfo::getObsoleteTech() const
+TechTypes CvPromotionInfo::getObsoleteTech() const
 {
 	if (m_iObsoleteTech == NO_TECH)
 	{
@@ -5095,7 +5095,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	//	mountains, and ability to lead a stack through mountains
 	pXML->GetOptionalChildXmlValByName(&m_bCanLeadThroughPeaks, L"bCanLeadThroughPeaks");
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
-	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
+	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
 	pXML->GetOptionalChildXmlValByName(&m_iControlPoints, L"iControlPoints");
 	pXML->GetOptionalChildXmlValByName(&m_iCommandRange, L"iCommandRange");
 	pXML->GetOptionalChildXmlValByName(&m_bZoneOfControl, L"bZoneOfControl");
@@ -11387,17 +11387,17 @@ CvSpecialBuildingInfo::CvSpecialBuildingInfo() :
 //------------------------------------------------------------------------------------------------------
 CvSpecialBuildingInfo::~CvSpecialBuildingInfo() { }
 
-int CvSpecialBuildingInfo::getObsoleteTech( void ) const
+TechTypes CvSpecialBuildingInfo::getObsoleteTech() const
 {
 	return m_iObsoleteTech;
 }
 
-int CvSpecialBuildingInfo::getTechPrereq( void ) const
+int CvSpecialBuildingInfo::getTechPrereq() const
 {
 	return m_iTechPrereq;
 }
 
-int CvSpecialBuildingInfo::getTechPrereqAnyone( void ) const
+int CvSpecialBuildingInfo::getTechPrereqAnyone() const
 {
 	return m_iTechPrereqAnyone;
 }
@@ -11407,25 +11407,24 @@ int CvSpecialBuildingInfo::getMaxPlayerInstances() const
 	return m_iMaxPlayerInstances;
 }
 
-bool CvSpecialBuildingInfo::isValid( void ) const
+bool CvSpecialBuildingInfo::isValid() const
 {
 	return m_bValid;
 }
 
-// Arrays
-
 bool CvSpecialBuildingInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
 	}
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
-	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
+	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
+
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
 	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
+
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereqAnyone");
 	m_iTechPrereqAnyone = pXML->GetInfoClass(szTextVal);
 
@@ -11451,7 +11450,7 @@ void CvSpecialBuildingInfo::copyNonDefaults(const CvSpecialBuildingInfo* pClassI
 	if (isValid() == bDefault) m_bValid = pClassInfo->isValid();
 }
 
-void CvSpecialBuildingInfo::getCheckSum(unsigned int& iSum) const
+void CvSpecialBuildingInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iObsoleteTech);
 	CheckSum(iSum, m_iTechPrereq);
@@ -13679,7 +13678,7 @@ int CvBuildInfo::getFeatureChange() const
 	return m_iFeatureChange;
 }
 
-int CvBuildInfo::getObsoleteTech() const
+TechTypes CvBuildInfo::getObsoleteTech() const
 {
 	return m_iObsoleteTech;
 }
@@ -13836,7 +13835,7 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bKill, L"bKill");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
-	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
+	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ImprovementType");
 	m_iImprovement = pXML->GetInfoClass(szTextVal);
@@ -20128,7 +20127,7 @@ const TCHAR* CvCorporationInfo::getSound() const
 	return m_szSound;
 }
 
-int CvCorporationInfo::getObsoleteTech() const
+TechTypes CvCorporationInfo::getObsoleteTech() const
 {
 	return m_iObsoleteTech;
 }
@@ -20319,7 +20318,7 @@ bool CvCorporationInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(m_szSound, L"Sound");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
-	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
+	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqGameOption");
 	m_iPrereqGameOption = pXML->GetInfoClass(szTextVal);

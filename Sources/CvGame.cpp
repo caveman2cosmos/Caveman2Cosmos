@@ -11155,7 +11155,7 @@ void CvGame::doFoundCorporation(CorporationTypes eCorporation, bool bForce)
 	}
 	int iBestSpread = getSorenRandNum(GC.getDefineINT("RAND_CORPORATION_BEST_SPREAD"), "Corporation Founding Best Spread");
 	CvCity* pBestCity = NULL;
-	const TechTypes eObsoleteTech = (TechTypes)GC.getCorporationInfo(eCorporation).getObsoleteTech();
+	const TechTypes eObsoleteTech = GC.getCorporationInfo(eCorporation).getObsoleteTech();
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
