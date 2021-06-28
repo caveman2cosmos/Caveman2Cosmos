@@ -3919,20 +3919,10 @@ public:
 	int getRoute() const;
 	int getTerrainChange() const;
 	int getFeatureChange() const;
-	/************************************************************************************************/
-	/* Afforess					  Start		 05/25/10											   */
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
 	int getObsoleteTech() const;
-	bool isMine() const;
 	bool isNoTechCanRemoveWithNoProductionGain(int i) const;
 	bool isDisabled() const;
-	bool isHideObsoleteExempt() const;
 	void setDisabled(bool bNewVal);
-	/************************************************************************************************/
-	/* Afforess						 END															*/
-	/************************************************************************************************/
 	DllExport int getEntityEvent() const;
 	DllExport int getMissionType() const;
 	void setMissionType(int iNewType);
@@ -3978,21 +3968,11 @@ protected:
 	int m_iTechPrereq;
 	int m_iImprovement;
 	int m_iRoute;
-	/************************************************************************************************/
-	/* Afforess					  Start		 05/25/10											   */
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
 	int m_iTerrainChange;
 	int m_iFeatureChange;
 	int m_iObsoleteTech;
-	bool m_bMine;
 	bool m_bDisabled;
-	bool m_bHideObsoleteExempt;
 	bool* m_pabNoTechCanRemoveWithNoProductionGain;
-	/************************************************************************************************/
-	/* Afforess						 END															*/
-	/************************************************************************************************/
 	int m_iEntityEvent;
 	int m_iMissionType;
 
