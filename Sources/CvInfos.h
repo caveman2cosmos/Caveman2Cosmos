@@ -683,8 +683,6 @@ public:
 	int getControlPoints() const;
 	int getCommandRange() const;
 	bool isZoneOfControl() const;
-	int getAssetMultiplier() const;
-	int getPowerMultiplier() const;
 	int getIgnoreTerrainDamage() const;
 
 	void getCheckSum(unsigned int& iSum) const;
@@ -1099,8 +1097,6 @@ protected:
 	int m_iControlPoints;
 	int m_iCommandRange;
 	bool m_bZoneOfControl;
-	int m_iAssetMultiplier;
-	int m_iPowerMultiplier;
 	int m_iIgnoreTerrainDamage;
 	int m_zobristValue;
 public:
@@ -8819,8 +8815,6 @@ public:
 	BonusTypes getCulture() const;
 	EraTypes getEra() const;
 	// integers
-	int getAssetMultiplier() const;
-	int getPowerMultiplier() const;
 	int getVisibilityChange() const;
 	int getMovesChange() const;
 	int getMoveDiscountChange() const;
@@ -9180,8 +9174,6 @@ protected:
 	BonusTypes m_eCulture;
 	EraTypes m_eEra;
 	//Integers
-	int m_iAssetMultiplier;
-	int m_iPowerMultiplier;
 	int m_iIgnoreTerrainDamage;
 	int m_zobristValue;
 	int m_iVisibilityChange;

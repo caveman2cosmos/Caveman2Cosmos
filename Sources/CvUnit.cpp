@@ -415,12 +415,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			GET_PLAYER(getOwner()).changeNumMilitaryUnits(1);
 		}
 
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-		{
-			GET_PLAYER(getOwner()).changeAssets(assetValueTotal());
-			GET_PLAYER(getOwner()).changeUnitPower(getPowerValueTotal());
-		}
-
 		doSetUnitCombats();
 		doSetFreePromotions(true);
 		doSetDefaultStatuses();
@@ -436,8 +430,8 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		}
 		else
 		{
-			GET_PLAYER(getOwner()).changeAssets(assetValueTotal());
-			GET_PLAYER(getOwner()).changeUnitPower(getPowerValueTotal());
+			GET_PLAYER(getOwner()).changeAssets(m_pUnitInfo->getAssetValue());
+			GET_PLAYER(getOwner()).changeUnitPower(m_pUnitInfo->getPowerValue());
 		}
 		//--------------------------------
 		// Init non-saved data
@@ -676,8 +670,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iUpkeepModifier = 0;
 	m_iUpkeepMultiplierSM = 0;
 	m_iUpkeep100 = 0;
-	m_iExtraPowerValue = 0;
-	m_iExtraAssetValue = 0;
 	m_iSMAssetValue = 0;
 	m_iSMPowerValue = 0;
 	m_iSMHPValue = 0;
@@ -16286,18 +16278,17 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	// If a unit moves we need to flush any combat str cache entries relating to it
 	FlushCombatStrCache(this);
 
+	/*
 	// OOS!! Temporary for Out-of-Sync madness debugging...
 	if (GC.getLogging())
 	{
 		PROFILE("CvUnit::setXY.OOSLogging");
 
-		if (gDLL->getChtLvl() > 0)
-		{
-			char szOut[1024];
-			sprintf(szOut, "Player %d Unit %d (%S's %S) moving from %d:%d to %d:%d\n", eMyPlayer, getID(), myPlayer.getNameKey(), getName().GetCString(), getX(), getY(), iX, iY);
-			gDLL->messageControlLog(szOut);
-		}
+		char szOut[1024];
+		sprintf(szOut, "Player %d Unit %d (%S's %S) moving from %d:%d to %d:%d\n", eMyPlayer, getID(), myPlayer.getNameKey(), getName().GetCString(), getX(), getY(), iX, iY);
+		gDLL->messageControlLog(szOut);
 	}
+	*/
 
 	if (isFighting())
 	{
@@ -22784,26 +22775,6 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	}
 #endif
 
-	int iAsset = m_pUnitInfo->getAssetValue();
-	int iModifier = kPromotion.getAssetMultiplier();
-	if (iModifier != 0)
-	{
-		iAsset *= iModifier;
-		iAsset /= 100;
-		changeExtraAssetValue(iAsset * iChange);
-		bSMrecalc = true;
-	}
-
-	int iPower = m_pUnitInfo->getPowerValue();
-	iModifier = kPromotion.getPowerMultiplier();
-	if (iModifier != 0)
-	{
-		iPower *= iModifier;
-		iPower /= 100;
-		changeExtraPowerValue(iPower * iChange);
-		bSMrecalc = true;
-	}
-
 	if (kPromotion.isZoneOfControl())
 	{
 		changeZoneOfControlCount(iChange > 0 ? 1 : -1);
@@ -24480,8 +24451,10 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, (int*)&m_eNewSpecialCargo);
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, (int*)&m_eNewSMSpecialCargo);
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, (int*)&m_eNewSMNotSpecialCargo);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPowerValue);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraAssetValue);
+	// SAVEBREAK - Toffer - Remove
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraPowerValue, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraAssetValue, SAVE_VALUE_TYPE_INT);
+	// ! SAVEBREAK
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraQuality);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraGroup);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraSize);
@@ -25461,8 +25434,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, m_eNewSpecialCargo);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, m_eNewSMSpecialCargo);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, m_eNewSMNotSpecialCargo);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPowerValue);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraAssetValue);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraQuality);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraGroup);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraSize);
@@ -37788,96 +37759,26 @@ void CvUnit::setSMHPValue()
 	FASSERT_NOT_NEGATIVE(m_iSMHPValue)
 }
 
-int CvUnit::getExtraPowerValue() const
-{
-	return m_iExtraPowerValue;
-}
-
-void CvUnit::changeExtraPowerValue(int iChange)
-{
-	GET_PLAYER(getOwner()).changePower(iChange);
-	m_iExtraPowerValue += iChange;
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		setSMPowerValue();
-	}
-}
-
 int CvUnit::getPowerValueTotal() const
 {
-	int iPower = 0;
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) || getSMPowerValue() == 0)
-	{
-		iPower = getSMPowerValueTotalBase();
-	}
-	else
-	{
-		iPower = getSMPowerValue();
-	}
-	return std::max(1, iPower);
-}
-
-int CvUnit::getSMPowerValueTotalBase() const
-{
-	return std::max(1, m_pUnitInfo->getPowerValue() + getExtraPowerValue());
-}
-
-int CvUnit::getSMPowerValue() const
-{
-	return m_iSMPowerValue;
+	return GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) ? m_iSMPowerValue : m_pUnitInfo->getPowerValue();
 }
 
 void CvUnit::setSMPowerValue(bool bForLoad)
 {
 	const int oldSMPowerValue = m_iSMPowerValue;
-	const int m_iSMPowerValue = applySMRank(
-		getSMPowerValueTotalBase(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER()
-		);
+	const int m_iSMPowerValue = applySMRank(m_pUnitInfo->getPowerValue(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 	FASSERT_NOT_NEGATIVE(m_iSMPowerValue)
 	if (!bForLoad)
 	{
 		const int iChange = m_iSMPowerValue - oldSMPowerValue;
-		GET_PLAYER(getOwner()).changePower(iChange);
-	}
-}
-
-int CvUnit::getExtraAssetValue() const
-{
-	return m_iExtraAssetValue;
-}
-
-void CvUnit::changeExtraAssetValue(int iChange)
-{
-	GET_PLAYER(getOwner()).changeAssets(iChange);
-	m_iExtraAssetValue += iChange;
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		setSMAssetValue();
+		GET_PLAYER(getOwner()).changeUnitPower(iChange);
 	}
 }
 
 int CvUnit::assetValueTotal() const
 {
-	int iAsset = 0;
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) || getSMAssetValue() == 0)
-	{
-		iAsset = assetValueTotalPreCheck();
-	}
-	else
-	{
-		iAsset = getSMAssetValue();
-	}
-	return std::max(1, iAsset);
-}
-
-int CvUnit::assetValueTotalPreCheck() const
-{
-	return std::max(1, m_pUnitInfo->getAssetValue() + getExtraAssetValue());
-}
-
-int CvUnit::getSMAssetValue() const
-{
-	return m_iSMAssetValue;
+	return GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) ? m_iSMAssetValue : m_pUnitInfo->getAssetValue();
 }
 
 void CvUnit::setSMAssetValue(bool bForLoad)
@@ -37886,7 +37787,7 @@ void CvUnit::setSMAssetValue(bool bForLoad)
 	if (offsetValue != -15) // Special Case for size cat undefined units
 	{
 		const int oldSMAssetValue = m_iSMAssetValue;
-		m_iSMAssetValue = applySMRank(assetValueTotalPreCheck(), offsetValue, GC.getSIZE_MATTERS_MOST_MULTIPLIER());
+		m_iSMAssetValue = applySMRank(m_pUnitInfo->getAssetValue(), offsetValue, GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 		if (!bForLoad)
 		{
 			const int iChange = m_iSMAssetValue - oldSMAssetValue;

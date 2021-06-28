@@ -314,8 +314,6 @@
 	<ElementType name="iTauntChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxHP" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxHPChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iAssetMultiplierPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iPowerMultiplierPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iQualityBase" content="textOnly" dt:type="int"/>
 	<ElementType name="iGroupBase" content="textOnly" dt:type="int"/>
 	<ElementType name="iSizeBase" content="textOnly" dt:type="int"/>
@@ -2368,8 +2366,6 @@
 		<element type="PrereqPlotBonusTypes" minOccurs="0"/>
 		<element type="PrereqLocalBuildingTypes" minOccurs="0"/>
 		<element type="DistanceAttackCommunicabilityTypeChanges" minOccurs="0"/>
-		<element type="iAssetMultiplierPercent" minOccurs="0"/>
-		<element type="iPowerMultiplierPercent" minOccurs="0"/>
 		<element type="iLevelPrereq" minOccurs="0"/>
 		<element type="ReplacesUnitCombat" minOccurs="0"/>
 		<element type="bZeroesXP" minOccurs="0"/>
@@ -2925,8 +2921,6 @@
 		<element type="VisibleFeatureRangeChanges" minOccurs="0"/>
 		<element type="VisibleImprovementRangeChanges" minOccurs="0"/>
 		<element type="DistanceAttackCommunicabilityTypeChanges" minOccurs="0"/>
-		<element type="iAssetMultiplierPercent" minOccurs="0"/>
-		<element type="iPowerMultiplierPercent" minOccurs="0"/>
 		<element type="iVisibilityChange" minOccurs="0"/>
 		<element type="iMovesChange" minOccurs="0"/>
 		<element type="iMoveDiscountChange" minOccurs="0"/>
