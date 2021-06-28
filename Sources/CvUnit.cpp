@@ -16720,23 +16720,11 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		{
 			if (atWar(getTeam(), GET_PLAYER(pNewPlot->getOwner()).getTeam()))
 			{
-				long lPillageGold = 0;
+				int iPillageGold = Cy::call<int>(PYGameModule, "doPillageGold", Cy::Args() << pNewPlot << this);
+
+				if (iPillageGold > 0)
 				{
-					CyPlot* pyPlot = new CyPlot(pNewPlot);
-					CyUnit* pyUnit = new CyUnit(this);
-
-					CyArgsList argsList;
-					argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));	// pass in plot class
-					argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));	// pass in unit class
-
-					gDLL->getPythonIFace()->callFunction(PYGameModule, "doPillageGold", argsList.makeFunctionArgs(), &lPillageGold);
-
-					delete pyPlot; // python fxn must not hold on to this pointer
-					delete pyUnit; // python fxn must not hold on to this pointer
-				}
-				if (lPillageGold > 0)
-				{
-					const int iPillageGold = lPillageGold * getPillageChange() / 100;
+					iPillageGold = iPillageGold * getPillageChange() / 100;
 					myPlayer.changeGold(iPillageGold);
 
 					AddDLLMessage(
