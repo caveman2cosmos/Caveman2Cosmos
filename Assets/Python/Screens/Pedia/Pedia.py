@@ -1511,7 +1511,7 @@ class Pedia:
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
 		bCheckProductivity = 0 # Checking productivity of improvements is slow
-		bCheckPotentialReplacements = 0 # Checking potential replacements is slow
+		bCheckPotentialReplacements = 1 # Checking potential replacements is slow
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
@@ -1599,8 +1599,8 @@ class Pedia:
 								else:
 									aBuildingObsoletions.append(999) #Never obsolete
 				
-				# Check if any obsoletes
-				if len(aNumBonusManufacturers) > 0 and min(aBuildingObsoletions) < 999:
+				# Check all bonus producers
+				if len(aNumBonusManufacturers) > 0:
 					for iBuilding in xrange(GC.getNumBuildingInfos()):				
 						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 						if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")): # Exclude space based
@@ -1614,9 +1614,14 @@ class Pedia:
 							
 							if CvBuildingInfo.getFreeBonus() == iBonus:						
 								print CvBonusInfo.getType()+" "+str(self.checkTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
+								if len(aNumBonusManufacturers) == 1 and (isWorldWonder(iBuilding) or isNationalWonder(iBuilding)):								
+									print "Wonder Bonus: "+CvBonusInfo.getType()+" "+CvBuildingInfo.getType()
+								
 							for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 								if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
 									print CvBonusInfo.getType()+" "+str(self.checkTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
+									if len(aNumBonusManufacturers) == 1 and (isWorldWonder(iBuilding) or isNationalWonder(iBuilding)):								
+										print "Wonder Bonus: "+CvBonusInfo.getType()+" "+CvBuildingInfo.getType()
 							
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
 				if not iType:
