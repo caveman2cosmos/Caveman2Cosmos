@@ -104,16 +104,6 @@ public:
 	void getCheckSum(uint32_t& iSum) const;
 
 private:
-	friend void CyPropertiesPythonInterface();
-
-	// Python variants with non-strict enum typing (don't use these in C++ code)
-	int _getProperty(int index) const { return static_cast<int>(getProperty(index)); }
-	int _getValueByProperty(int eProp) const { return getValueByProperty(static_cast<PropertyTypes>(eProp)); }
-	int _getChangeByProperty(int eProp) const { return getChangeByProperty(static_cast<PropertyTypes>(eProp)); }
-	void _setValueByProperty(int eProp, int iVal) { setValueByProperty(static_cast<PropertyTypes>(eProp), iVal); }
-	void _changeValueByProperty(int eProp, int iChange) { changeValueByProperty(static_cast<PropertyTypes>(eProp), iChange); }
-
-private:
 	struct PropertyValue
 	{
 		PropertyValue(PropertyTypes prop = NO_PROPERTY, int value = 0) : prop(prop), value(value) {}
