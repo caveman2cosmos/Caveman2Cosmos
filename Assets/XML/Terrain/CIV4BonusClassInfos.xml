@@ -44,5 +44,10 @@
 			<Type>BONUSCLASS_GENMODS</Type>
 			<iUniqueRange>0</iUniqueRange>
 		</BonusClassInfo>
+		<!-- Represents resources, that are produced by wonder building and nothing else (similar to Culture and Genmods) -->
+		<BonusClassInfo>
+			<Type>BONUSCLASS_WONDER</Type>
+			<iUniqueRange>0</iUniqueRange>
+		</BonusClassInfo>
 	</BonusClassInfos>
 </Civ4BonusClassInfos>
