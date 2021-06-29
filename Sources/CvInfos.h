@@ -3951,9 +3951,7 @@ public:
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
-	bool m_bMine;
 	bool m_bDisabled;
-	bool m_bHideObsoleteExempt;
 	bool m_bKill;
 
 	int m_iTime;
