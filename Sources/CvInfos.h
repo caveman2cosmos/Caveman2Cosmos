@@ -3909,10 +3909,8 @@ public:
 	int getTerrainChange() const;
 	int getFeatureChange() const;
 	TechTypes getObsoleteTech() const;
-	bool isMine() const;
 	bool isNoTechCanRemoveWithNoProductionGain(int i) const;
 	bool isDisabled() const;
-	bool isHideObsoleteExempt() const;
 	void setDisabled(bool bNewVal);
 	DllExport int getEntityEvent() const;
 	DllExport int getMissionType() const;

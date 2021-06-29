@@ -13494,9 +13494,7 @@ m_pabFeatureRemove(NULL)
 ,m_iTerrainChange(NO_TERRAIN)
 ,m_iFeatureChange(NO_FEATURE)
 ,m_iObsoleteTech(NO_TECH)
-,m_bMine(false)
 ,m_bDisabled(false)
-,m_bHideObsoleteExempt(false)
 { }
 
 //------------------------------------------------------------------------------------------------------
@@ -13555,11 +13553,6 @@ int CvBuildInfo::getRoute() const
 	return m_iRoute;
 }
 
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/13/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvBuildInfo::getTerrainChange() const
 {
 	return m_iTerrainChange;
@@ -13575,34 +13568,19 @@ TechTypes CvBuildInfo::getObsoleteTech() const
 	return m_iObsoleteTech;
 }
 
-bool CvBuildInfo::isMine() const
-{
-	return m_bMine;
-}
-
 bool CvBuildInfo::isDisabled() const
 {
 	return m_bDisabled;
 }
-
-bool CvBuildInfo::isHideObsoleteExempt() const
-{
-	return m_bHideObsoleteExempt;
-}
-
 void CvBuildInfo::setDisabled(bool bNewVal)
 {
 	m_bDisabled = bNewVal;
 }
-
 bool CvBuildInfo::isNoTechCanRemoveWithNoProductionGain(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
 	return m_pabNoTechCanRemoveWithNoProductionGain ? m_pabNoTechCanRemoveWithNoProductionGain[i] : false;
 }
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
 
 int CvBuildInfo::getEntityEvent() const
 {
@@ -13739,9 +13717,6 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FeatureChange");
 	m_iFeatureChange = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(&m_bMine, L"bMine");
-	pXML->GetOptionalChildXmlValByName(&m_bHideObsoleteExempt, L"bHideObsoleteExempt");
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"EntityEvent");
 	m_iEntityEvent = pXML->GetInfoClass(szTextVal);
 
@@ -13828,21 +13803,11 @@ void CvBuildInfo::copyNonDefaults(const CvBuildInfo* pClassInfo)
 
 	if (getImprovement() == iTextDefault) m_iImprovement = pClassInfo->getImprovement();
 	if (getRoute() == iTextDefault) m_iRoute = pClassInfo->getRoute();
-	/************************************************************************************************/
-	/* JOOYO_ADDON, Added by Jooyo, 06/13/09														*/
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
 	if (getTerrainChange() == iTextDefault) m_iTerrainChange = pClassInfo->getTerrainChange();
 	if (getFeatureChange() == iTextDefault) m_iFeatureChange = pClassInfo->getFeatureChange();
 	//TB Team Project
 	if (getObsoleteTech() == iTextDefault) m_iObsoleteTech = pClassInfo->getObsoleteTech();
 
-	if (isMine() == bDefault) m_bMine = pClassInfo->isMine();
-	if (isHideObsoleteExempt() == bDefault) m_bHideObsoleteExempt = pClassInfo->isHideObsoleteExempt();
-	/************************************************************************************************/
-	/* JOOYO_ADDON						  END													 */
-	/************************************************************************************************/
 	if (getEntityEvent() == iTextDefault) m_iEntityEvent = pClassInfo->getEntityEvent();
 
 	for ( int i = 0; i < GC.getNumFeatureInfos(); i++)
@@ -13874,9 +13839,7 @@ void CvBuildInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iTerrainChange);
 	CheckSum(iSum, m_iFeatureChange);
 	CheckSum(iSum, m_iObsoleteTech);
-	CheckSum(iSum, m_bMine);
 	CheckSum(iSum, m_bDisabled);
-	CheckSum(iSum, m_bHideObsoleteExempt);
 
 	CheckSum(iSum, m_iEntityEvent);
 	CheckSum(iSum, m_iMissionType);

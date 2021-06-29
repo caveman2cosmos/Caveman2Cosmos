@@ -2792,11 +2792,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		pNewCity->conscript(true);
 	}
 
-	const bool bConquestCanRaze = bConquest && Cy::call<bool>(PYGameModule, "canRazeCity", Cy::Args() << getID() << pNewCity);
-
 	//	Don't bother with plot group caklculations if they are immediately to b superseded by
 	//	an auto raze
-	if (bUpdatePlotGroups && (!bConquestCanRaze || !pNewCity->isAutoRaze()))
+	if (bUpdatePlotGroups && (!bConquest || !pNewCity->isAutoRaze()))
 	{
 		PROFILE("CvPlayer::acquireCity.UpdatePlotGroups");
 
@@ -2831,7 +2829,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	SAFE_DELETE_ARRAY(paiBuildingOriginalOwner);
 	SAFE_DELETE_ARRAY(paiBuildingOriginalTime);
 
-	if (!bConquestCanRaze)
+	if (!bConquest)
 	{
 		// Silences double ask for accepting new city from Revolution mod
 		if (!bTrade && !GC.getGame().isOption(GAMEOPTION_REVOLUTION))

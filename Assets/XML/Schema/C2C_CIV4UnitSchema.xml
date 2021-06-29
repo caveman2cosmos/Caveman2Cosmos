@@ -152,7 +152,6 @@
 	<ElementType name="bCtrlDown" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iHotKeyPriority" content="textOnly" dt:type="int"/>
 	<ElementType name="bRestoreLand" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bMine" content="textOnly" dt:type="boolean"/>
 	<ElementType name="HotKeyAlt" content="textOnly"/>
 	<ElementType name="bAltDownAlt" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bShiftDownAlt" content="textOnly" dt:type="boolean"/>
@@ -171,7 +170,6 @@
 		<element type="iTime" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
 		<element type="bKill" minOccurs="0"/>
-		<element type="bHideObsoleteExempt" minOccurs="0"/>
 		<element type="ObsoleteTech" minOccurs="0"/>
 		<element type="PrereqBonusTypes" minOccurs="0"/>
 		<element type="ImprovementType" minOccurs="0"/>
@@ -190,7 +188,6 @@
 		<element type="Button" minOccurs="0" maxOccurs="*"/>
 		<element type="iOrderPriority" minOccurs="0"/>
 		<element type="bRestoreLand" minOccurs="0"/>
-		<element type="bMine" minOccurs="0"/>
 		<element type="bGraphicalOnly" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="BuildInfos" content="eltOnly">
@@ -422,7 +419,6 @@
 	<ElementType name="bRBombardDirect" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRBombardForceAbility" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRBombardPrereq" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bHideObsoleteExempt" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bSMLoadSame" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bForMilitary" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bForNavalMilitary" content="textOnly" dt:type="boolean"/>

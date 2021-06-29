@@ -104,7 +104,6 @@
 		<tab module="BugCreditsOptionsTab"/>
 	</screen>
 	<load mod="CaptureSlaves"/>
-	<load mod="MasterModList"/>
 	<load mod="Partisan"/>
 	<load mod="InitMilitaryPromos"/>
 	<load mod="NaturalWonders"/>

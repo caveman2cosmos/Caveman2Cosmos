@@ -85,7 +85,6 @@ class ANewDawnSettings:
 		elif protocol == CANBUILD_EVENT_ID:
 			GC.getBuildInfo(data2).setDisabled(data3)
 
-
 #####################################################
 # Module level functions defined in RoMSettings.xml #
 #####################################################

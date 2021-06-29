@@ -2505,7 +2505,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildMountMine.dds</Button>
-			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Early Mountain Mine -> Mountain Mine -->
 		<BuildInfo>
@@ -2522,7 +2521,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
-			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Core Mine | End -->
 		<BuildInfo>
@@ -3019,7 +3017,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildModernMine.dds</Button>
-			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Shaft Mine -> Modern Mine Era -->
 		<BuildInfo>
@@ -3030,7 +3027,6 @@
 			<iTime>800</iTime>
 			<iCost>30</iCost>
 			<bKill>0</bKill>
-			<bHideObsoleteExempt>1</bHideObsoleteExempt>
 			<ImprovementType>IMPROVEMENT_SHAFT_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
 			<FeatureStructs>
@@ -3053,7 +3049,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Explosives.dds</Button>
-			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Mine -> Shaft Mine Era -->
 		<BuildInfo>
@@ -3085,7 +3080,6 @@
 			<HotKey>KB_M</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildMine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,7</Button>
-			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Quarry -> Core Mine Era -->
 		<BuildInfo>
