@@ -2803,7 +2803,7 @@ int CvPromotionInfo::getNumPromotionOverwrites() const
 	return m_iNumPromotionOverwrites;
 }
 
-int CvPromotionInfo::getObsoleteTech() const
+TechTypes CvPromotionInfo::getObsoleteTech() const
 {
 	if (m_iObsoleteTech == NO_TECH)
 	{
@@ -5083,7 +5083,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	//	mountains, and ability to lead a stack through mountains
 	pXML->GetOptionalChildXmlValByName(&m_bCanLeadThroughPeaks, L"bCanLeadThroughPeaks");
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
-	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
+	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
 	pXML->GetOptionalChildXmlValByName(&m_iControlPoints, L"iControlPoints");
 	pXML->GetOptionalChildXmlValByName(&m_iCommandRange, L"iCommandRange");
 	pXML->GetOptionalChildXmlValByName(&m_bZoneOfControl, L"bZoneOfControl");
@@ -11369,7 +11369,7 @@ CvSpecialBuildingInfo::CvSpecialBuildingInfo() :
 //------------------------------------------------------------------------------------------------------
 CvSpecialBuildingInfo::~CvSpecialBuildingInfo() { }
 
-int CvSpecialBuildingInfo::getObsoleteTech() const
+TechTypes CvSpecialBuildingInfo::getObsoleteTech() const
 {
 	return m_iObsoleteTech;
 }
@@ -11394,20 +11394,19 @@ bool CvSpecialBuildingInfo::isValid() const
 	return m_bValid;
 }
 
-// Arrays
-
 bool CvSpecialBuildingInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
 	}
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
-	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
+	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
+
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
 	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
+
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereqAnyone");
 	m_iTechPrereqAnyone = pXML->GetInfoClass(szTextVal);
 
@@ -13564,7 +13563,7 @@ int CvBuildInfo::getFeatureChange() const
 	return m_iFeatureChange;
 }
 
-int CvBuildInfo::getObsoleteTech() const
+TechTypes CvBuildInfo::getObsoleteTech() const
 {
 	return m_iObsoleteTech;
 }
@@ -13706,7 +13705,7 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bKill, L"bKill");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
-	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
+	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ImprovementType");
 	m_iImprovement = pXML->GetInfoClass(szTextVal);
@@ -19982,7 +19981,7 @@ const TCHAR* CvCorporationInfo::getSound() const
 	return m_szSound;
 }
 
-int CvCorporationInfo::getObsoleteTech() const
+TechTypes CvCorporationInfo::getObsoleteTech() const
 {
 	return m_iObsoleteTech;
 }
@@ -20173,7 +20172,7 @@ bool CvCorporationInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(m_szSound, L"Sound");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
-	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
+	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqGameOption");
 	m_iPrereqGameOption = pXML->GetInfoClass(szTextVal);

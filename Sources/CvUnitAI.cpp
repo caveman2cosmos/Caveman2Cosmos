@@ -1474,7 +1474,7 @@ UnitAITypes CvUnitAI::AI_getUnitAIType() const
 	{
 		FErrorMsg("Unit has no UnitAI!");
 
-		((CvUnitAI*)this)->m_eUnitAIType = (UnitAITypes)m_pUnitInfo->getDefaultUnitAIType();
+		((CvUnitAI*)this)->m_eUnitAIType = m_pUnitInfo->getDefaultUnitAIType();
 
 		area()->changeNumAIUnits(getOwner(), m_eUnitAIType, 1);
 		GET_PLAYER(getOwner()).AI_changeNumAIUnits(m_eUnitAIType, 1);

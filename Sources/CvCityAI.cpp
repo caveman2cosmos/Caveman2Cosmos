@@ -4249,9 +4249,9 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 						continue;
 					}
 					bool bFound = false;
-					for (int iK = 0; iK < unit.getNumSubCombatTypes(); iK++)
+					foreach_(const UnitCombatTypes eSubCombat, unit.getSubCombatTypes())
 					{
-						if (GC.getPromotionInfo((PromotionTypes)iJ).getUnitCombat(unit.getSubCombatType(iK)))
+						if (GC.getPromotionInfo((PromotionTypes)iJ).getUnitCombat(eSubCombat))
 						{
 							iPromotionValue += 15;
 							bFound = true;
@@ -5368,17 +5368,15 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								{
 									PROFILE("CalculateAllBuildingValues.IsUnitPrereq");
 
-									if (kUnit.getDefaultUnitAIType() != NO_UNITAI && kOwner.AI_totalAreaUnitAIs(area(), ((UnitAITypes)(kUnit.getDefaultUnitAIType()))) == 0)
+									if (kUnit.getDefaultUnitAIType() != NO_UNITAI && kOwner.AI_totalAreaUnitAIs(area(), kUnit.getDefaultUnitAIType()) == 0)
 									{
 										iValue += iNumCitiesInArea;
 									}
-									//This forces the AI to build necessary buildings for units.
-
-									UnitAITypes eUnitAI = (UnitAITypes)(kUnit.getDefaultUnitAIType());
 
 									int iAllowedUnitsValue = 0;
 
-									switch (eUnitAI)
+									// This forces the AI to build necessary buildings for units.
+									switch (kUnit.getDefaultUnitAIType())
 									{
 									case UNITAI_UNKNOWN:
 										break;
@@ -5876,8 +5874,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						if (canTrain(eLoopUnit))
 						{
 							const int iModifier = modifier.second;
-							const UnitAITypes eUnitAI = (UnitAITypes)GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
-							const UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType((DomainTypes)GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
+							const UnitAITypes eUnitAI = GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
+							const UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType(GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
 
 							int iBuildCost = 0;
 							if (eBestUnit == NO_UNIT)
@@ -6072,7 +6070,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						{
 							// BBAI TODO: Smarter monastary construction, better support for mods
 
-							if (kOwner.AI_totalAreaUnitAIs(area(), ((UnitAITypes)(GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()))) == 0)
+							if (kOwner.AI_totalAreaUnitAIs(area(), GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()) == 0)
 							{
 								religiousBuildingValue += iNumCitiesInArea;
 							}
@@ -13143,7 +13141,7 @@ int CvCityAI::AI_countNumImprovableBonuses(bool bIncludeNeutral, TechTypes eExtr
 							//	makes no sense for the same tech to boh enable and obsolete a build.  However, we DO need to check that
 							//	we do not ALREADY have an obsoleting tech
 							if (kBuild.getTechPrereq() == eExtraTech &&
-								(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech())))
+								(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech(kBuild.getObsoleteTech())))
 							{
 								iCount++;
 								break;
@@ -13991,9 +13989,9 @@ int CvCityAI::AI_getPromotionValue(PromotionTypes ePromotion) const
 			else
 			{
 				//TB SubCombat Mod Begin
-				for (int iJ = 0; iJ < kUnit.getNumSubCombatTypes(); iJ++)
+				foreach_(const UnitCombatTypes eSubCombat, kUnit.getSubCombatTypes())
 				{
-					if (GC.getPromotionInfo(ePromotion).getUnitCombat((UnitCombatTypes)kUnit.getSubCombatType(iJ)))
+					if (GC.getPromotionInfo(ePromotion).getUnitCombat(eSubCombat))
 					{
 						bUnitCanGetPromotion = true;
 						break;
@@ -15172,7 +15170,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							{
 								if (pLoopUnit->getUnitCombatType() == modifier.first
 								//TB - May cause some unexpected imbalance though it could also imbalance to bypass... a place to watch
-								|| algo::contains(pLoopUnit->getUnitInfo().getSubCombatTypes(), (int)modifier.first))
+								|| algo::contains(pLoopUnit->getUnitInfo().getSubCombatTypes(), modifier.first))
 								{
 									iValue += modifier.second / 6;
 								}
@@ -15593,17 +15591,15 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							{
 								PROFILE("CalculateAllBuildingValues.IsUnitPrereq");
 
-								if (kUnit.getDefaultUnitAIType() != NO_UNITAI && kOwner.AI_totalAreaUnitAIs(pArea, ((UnitAITypes)(kUnit.getDefaultUnitAIType()))) == 0)
+								if (kUnit.getDefaultUnitAIType() != NO_UNITAI && kOwner.AI_totalAreaUnitAIs(pArea, kUnit.getDefaultUnitAIType()) == 0)
 								{
 									iValue += iNumCitiesInArea;
 								}
-								//This forces the AI to build necessary buildings for units.
-
-								UnitAITypes eUnitAI = (UnitAITypes)(kUnit.getDefaultUnitAIType());
 
 								int unitsEnabledValue = 0;
 
-								switch (eUnitAI)
+								//This forces the AI to build necessary buildings for units.
+								switch (kUnit.getDefaultUnitAIType())
 								{
 								case UNITAI_UNKNOWN:
 									break;
@@ -16090,8 +16086,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					if (canTrain(eLoopUnit))
 					{
 						const int iModifier = modifier.second;
-						const UnitAITypes eUnitAI = (UnitAITypes)GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
-						const UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType((DomainTypes)GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
+						const UnitAITypes eUnitAI = GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
+						const UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType(GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
 
 						int iBuildCost = GC.getUnitInfo(eLoopUnit).getProductionCost();
 
@@ -16275,7 +16271,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					{
 						// BBAI TODO: Smarter monastary construction, better support for mods
 
-						if (kOwner.AI_totalAreaUnitAIs(pArea, (UnitAITypes)GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()) == 0)
+						if (kOwner.AI_totalAreaUnitAIs(pArea, GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()) == 0)
 						{
 							religiousBuildingValue += iNumCitiesInArea;
 						}
